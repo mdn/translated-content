@@ -34,9 +34,9 @@ original_slug: Web/HTTP/FAQ_sur_le_préchargement_des_liens
 <pre class="eval">&lt;meta http-equiv="Link" content="&amp;lt;/images/big.jpeg&amp;gt;; rel=prefetch"&gt;
 </pre>
 
-<p>Le format pour l’en-tête <code>Link:</code>est décrit dans le <a class="external" href="http://tools.ietf.org/html/rfc2068" title="http://tools.ietf.org/html/rfc2068">RFC 2068</a> section 19.6.2.4.</p>
+<p>Le format pour l’en-tête <code>Link:</code>est décrit dans le <a class="external" href="http://tools.ietf.org/html/rfc2068">RFC 2068</a> section 19.6.2.4.</p>
 
-<div class="note">Note : Nous avons intentionnellement pris pour référence une version dépassée de la spécification HTTP/1.1 car la plus récente <a class="external" href="http://tools.ietf.org/html/rfc2616" title="http://tools.ietf.org/html/rfc2616">RFC 2616</a> ne décrit pas l’en-tête <code>Link:</code>. Bien que les en-têtes <code>Link:</code> ne fassent pas partie du standard révisé, ils sont toujours utilisés en pratique par les serveurs, pour renseigner les feuilles de styles CSS. Donc nous faisons usage de la même fonction ici.</div>
+<div class="note">Note : Nous avons intentionnellement pris pour référence une version dépassée de la spécification HTTP/1.1 car la plus récente <a class="external" href="http://tools.ietf.org/html/rfc2616">RFC 2616</a> ne décrit pas l’en-tête <code>Link:</code>. Bien que les en-têtes <code>Link:</code> ne fassent pas partie du standard révisé, ils sont toujours utilisés en pratique par les serveurs, pour renseigner les feuilles de styles CSS. Donc nous faisons usage de la même fonction ici.</div>
 
 <p>Le navigateur surveille toutes ces cibles et met en attente chaque requête unique qui doit ensuite être préchargée quand le navigateur est disponible. Il peut y avoir de multiples cibles par page, ainsi on peut comprendre l'utilité de précharger de multiples documents. Par exemple, le document suivant peut contenir plusieurs images lourdes.</p>
 

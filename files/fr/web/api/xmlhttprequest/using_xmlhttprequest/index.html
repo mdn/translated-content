@@ -35,7 +35,7 @@ oReq.send();</pre>
 
 <h2 id="Gérer_les_réponses">Gérer les réponses</h2>
 
-<p><span style="line-height: 1.5;">Il existe plusieurs types </span><a href="http://www.w3.org/TR/XMLHttpRequest2/#response" title="http://www.w3.org/TR/XMLHttpRequest2/#response">d'attributs de réponse</a><span style="line-height: 1.5;"> définies par la spécification W3C pour XMLHttpRequest. Ceci indique que le client faisant l'objet XMLHttpRequest des informations importantes sur l'état ​​de la réponse. Certains cas où, traitant de types de réponse non-texte peuvent impliquer une certaine manipulation et l'analyse comme indiqué dans les sections suivantes.</span></p>
+<p><span style="line-height: 1.5;">Il existe plusieurs types </span><a href="http://www.w3.org/TR/XMLHttpRequest2/#response">d'attributs de réponse</a><span style="line-height: 1.5;"> définies par la spécification W3C pour XMLHttpRequest. Ceci indique que le client faisant l'objet XMLHttpRequest des informations importantes sur l'état ​​de la réponse. Certains cas où, traitant de types de réponse non-texte peuvent impliquer une certaine manipulation et l'analyse comme indiqué dans les sections suivantes.</span></p>
 
 <h3 id="Analyser_et_manipuler_la_propriété_responseXML">Analyser et manipuler la propriété <code>responseXML</code></h3>
 
@@ -72,7 +72,7 @@ oReq.overrideMimeType("text/plain; charset=x-user-defined");
 /* ... */
 </pre>
 
-<p>La Spécification XMLHttpRequest Niveau 2 ajoute de nouveaux <a href="http://www.w3.org/TR/XMLHttpRequest2/#the-responsetype-attribute" title="http://www.w3.org/TR/XMLHttpRequest2/#the-responsetype-attribute">attributs responseType</a> qui permettent d'envoyer et de recevoir des données binaires plus facilement.</p>
+<p>La Spécification XMLHttpRequest Niveau 2 ajoute de nouveaux <a href="http://www.w3.org/TR/XMLHttpRequest2/#the-responsetype-attribute">attributs responseType</a> qui permettent d'envoyer et de recevoir des données binaires plus facilement.</p>
 
 <pre class="brush:js">var oReq = new XMLHttpRequest();
 
@@ -91,7 +91,7 @@ oReq.send();
 
 <p><code>XMLHttpRequest</code> fournit la possibilité d'écouter différents évènements qui peuvent se produire pendant que la requête est traitée. Cela inclu des notifications de progression périodiques, des notifications d'erreur, ainsi de suite.</p>
 
-<p>Le support des évènements de progression DOM de <code>XMLHttpRequest</code> suit l'API web <a href="http://dev.w3.org/2006/webapi/progress/Progress.html" title="http://dev.w3.org/2006/webapi/progress/Progress.html">de spécifications des évènements de progression</a>: ils implémentent l'interface {{domxref("ProgressEvent")}}.</p>
+<p>Le support des évènements de progression DOM de <code>XMLHttpRequest</code> suit l'API web <a href="http://dev.w3.org/2006/webapi/progress/Progress.html">de spécifications des évènements de progression</a>: ils implémentent l'interface {{domxref("ProgressEvent")}}.</p>
 
 <pre class="brush:js">var oReq = new XMLHttpRequest();
 
@@ -724,7 +724,7 @@ oReq.send(null);</pre>
 
 <h3 id="XMLHttpRequests_stoppées">XMLHttpRequests stoppées</h3>
 
-<p>Si vous vous retrouvez avec une XMLHttpRequest ayant <code style="font-size: 14px;">status=0</code> et <code style="font-size: 14px;">statusText=null</code>, cela signifie que la requête n'a pas été autorisée à être effectuée. Elle a été <code style="font-size: 14px;"><a href="http://www.w3.org/TR/XMLHttpRequest/#dom-xmlhttprequest-unsent" title="http://www.w3.org/TR/XMLHttpRequest/#dom-xmlhttprequest-unsent">UNSENT</a></code>. Une cause probable est lorsque <a href="http://www.w3.org/TR/XMLHttpRequest/#xmlhttprequest-origin" style="line-height: 1.5; text-decoration: underline; outline: dotted 1px; outline-offset: 0pt;">l'origine <code style="font-size: 14px;">XMLHttpRequest</code> </a><span style="line-height: 1.5;"> (lors de la création de l'objet XMLHttpRequest) a changé quand l'objet XMLHttpRequest est déjà </span><span style="font-family: courier new,andale mono,monospace; line-height: normal;">open()</span><span style="line-height: 1.5;">. Ce cas peut se produire par exemple lorsque l'on a une XMLHttpRequest qui est lancée sur un évènement onunload d'une fenêtre: l'objet XMLHttpRequest est en fait créé lorsque la fenêtre sur le point de se fermer est toujours là, et la demande est envoyée (c'est à dire </span><span style="font-family: courier new,andale mono,monospace; line-height: normal;">open()</span><span style="line-height: 1.5;">) lorsque cette fenêtre a perdu son focus et une autre fenêtre a potentiellement pris le focus. La manière d'éviter ce problème est de fixer un écouteur sur l'évènement </span><span style="line-height: 1.5;">"activate" </span><span style="line-height: 1.5;">de la nouvelle fenêtre qui se lance quand l'ancienne fenêtre a son événement "unload" lancé.</span></p>
+<p>Si vous vous retrouvez avec une XMLHttpRequest ayant <code style="font-size: 14px;">status=0</code> et <code style="font-size: 14px;">statusText=null</code>, cela signifie que la requête n'a pas été autorisée à être effectuée. Elle a été <code style="font-size: 14px;"><a href="http://www.w3.org/TR/XMLHttpRequest/#dom-xmlhttprequest-unsent">UNSENT</a></code>. Une cause probable est lorsque <a href="http://www.w3.org/TR/XMLHttpRequest/#xmlhttprequest-origin" style="line-height: 1.5; text-decoration: underline; outline: dotted 1px; outline-offset: 0pt;">l'origine <code style="font-size: 14px;">XMLHttpRequest</code> </a><span style="line-height: 1.5;"> (lors de la création de l'objet XMLHttpRequest) a changé quand l'objet XMLHttpRequest est déjà </span><span style="font-family: courier new,andale mono,monospace; line-height: normal;">open()</span><span style="line-height: 1.5;">. Ce cas peut se produire par exemple lorsque l'on a une XMLHttpRequest qui est lancée sur un évènement onunload d'une fenêtre: l'objet XMLHttpRequest est en fait créé lorsque la fenêtre sur le point de se fermer est toujours là, et la demande est envoyée (c'est à dire </span><span style="font-family: courier new,andale mono,monospace; line-height: normal;">open()</span><span style="line-height: 1.5;">) lorsque cette fenêtre a perdu son focus et une autre fenêtre a potentiellement pris le focus. La manière d'éviter ce problème est de fixer un écouteur sur l'évènement </span><span style="line-height: 1.5;">"activate" </span><span style="line-height: 1.5;">de la nouvelle fenêtre qui se lance quand l'ancienne fenêtre a son événement "unload" lancé.</span></p>
 
 <h2 id="Utiliser_XMLHttpRequest_depuis_un_module_JavaScript_un_composant_XPCOM">Utiliser XMLHttpRequest depuis un module JavaScript / un composant XPCOM</h2>
 
@@ -751,6 +751,6 @@ var oReq = new XMLHttpRequest();</pre>
  <li><a href="http://developer.apple.com/internet/webcontent/xmlhttpreq.html">Apple developers' reference</a></li>
  <li><a href="http://jibbering.com/2002/4/httprequest.html">"Using the XMLHttpRequest Object" (jibbering.com)</a></li>
  <li><a href="http://www.w3.org/TR/XMLHttpRequest/">The XMLHttpRequest Object: W3C Specification</a></li>
- <li><a href="http://dev.w3.org/2006/webapi/progress/Progress.html" title="http://dev.w3.org/2006/webapi/progress/Progress.html">Web Progress Events specification</a></li>
+ <li><a href="http://dev.w3.org/2006/webapi/progress/Progress.html">Web Progress Events specification</a></li>
  <li><a href="https://developer.mozilla.org/fr/docs/Web/API/XMLHttpRequest">XMLHttpRequest (Référence Web API)</a></li>
 </ol>
