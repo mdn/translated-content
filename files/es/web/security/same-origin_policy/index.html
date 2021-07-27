@@ -100,14 +100,14 @@ original_slug: Web/Security/Same-origin_politica
 <ul>
  <li>Las escrituras Cross-origin<em> </em>normalmente se permiten. Como ejemplo tenemos los enlaces, redirecciones y envíos de formulario. Algunas peticiones HTTP raramente usadas requieren <a href="/en-US/docs/HTTP/Access_control_CORS#Preflighted_requests" title="HTTP/Access_control_CORS#Preflighted_requests">preflight</a>.</li>
  <li>La integración Cross-origin (<em>embedding) </em>normalmente se permite. Los ejemplos se listan debajo.</li>
- <li>Las lecturas Cross-origin habitualmente no se permiten, pero el acceso de lectura es a menudo filtrado mediante integración. Por ejemplo, puedes leer el ancho y el alto de una imagen integrada, las acciones de un script integrado, o la <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=629094" title="https://grepular.com/Abusing_HTTP_Status_Codes_to_Expose_Private_Information">disponibilidad de un recurso integrado</a>.</li>
+ <li>Las lecturas Cross-origin habitualmente no se permiten, pero el acceso de lectura es a menudo filtrado mediante integración. Por ejemplo, puedes leer el ancho y el alto de una imagen integrada, las acciones de un script integrado, o la <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=629094">disponibilidad de un recurso integrado</a>.</li>
 </ul>
 
 <p>Aquí hay algunos ejemplos de recursos que pueden ser orígen cruzado incrustado:</p>
 
 <ul>
  <li>JavaScript con <code>&lt;script src="..."&gt;&lt;/script&gt;</code>. Los mensajes de error para errores de sintaxis están solo disponibles para scripts de mismo origen.</li>
- <li>CSS con <code>&lt;link rel="stylesheet" href="..."&gt;</code>. Debido a las <a href="http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html" title="http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html">reglas de sintaxis relajadas</a> de CSS, un CSS de origen cruzado requiere de una cabecera <code>Content-Type</code> correcta. Las restricciones varían según el navegador: <a href="http://msdn.microsoft.com/en-us/library/ie/gg622939%28v=vs.85%29.aspx" title="http://msdn.microsoft.com/en-us/library/ie/gg622939%28v=vs.85%29.aspx">IE</a>, <a href="http://www.mozilla.org/security/announce/2010/mfsa2010-46.html" title="http://www.mozilla.org/security/announce/2010/mfsa2010-46.html">Firefox</a>, <a href="http://code.google.com/p/chromium/issues/detail?id=9877" title="http://code.google.com/p/chromium/issues/detail?id=9877">Chrome</a>, <a href="http://support.apple.com/kb/HT4070" title="http://support.apple.com/kb/HT4070">Safari</a> (bajar hasta CVE-2010-0051) y <a href="http://www.opera.com/support/kb/view/943/" title="http://www.opera.com/support/kb/view/943/">Opera</a>.</li>
+ <li>CSS con <code>&lt;link rel="stylesheet" href="..."&gt;</code>. Debido a las <a href="http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html" title="http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html">reglas de sintaxis relajadas</a> de CSS, un CSS de origen cruzado requiere de una cabecera <code>Content-Type</code> correcta. Las restricciones varían según el navegador: <a href="http://msdn.microsoft.com/en-us/library/ie/gg622939%28v=vs.85%29.aspx" title="http://msdn.microsoft.com/en-us/library/ie/gg622939%28v=vs.85%29.aspx">IE</a>, <a href="http://www.mozilla.org/security/announce/2010/mfsa2010-46.html" title="http://www.mozilla.org/security/announce/2010/mfsa2010-46.html">Firefox</a>, <a href="http://code.google.com/p/chromium/issues/detail?id=9877" title="http://code.google.com/p/chromium/issues/detail?id=9877">Chrome</a>, <a href="http://support.apple.com/kb/HT4070">Safari</a> (bajar hasta CVE-2010-0051) y <a href="http://www.opera.com/support/kb/view/943/">Opera</a>.</li>
  <li>Imágeness con {{htmlelement("img")}}. Los formatos de imagen soportados incluyen PNG, JPEG, GIF, BMP, SVG, ...</li>
  <li>Archivos multimedia con {{htmlelement("video")}} y {{htmlelement("audio")}}.</li>
  <li>Plug-ins con <a href="/en-US/docs/HTML/Element/object" title="HTML/Element/object"><code>&lt;object&gt;</code></a>, <a href="/en-US/docs/HTML/Element/embed" title="HTML/Element/embed"><code>&lt;embed&gt;</code></a> y <a href="/en-US/docs/HTML/Element/applet" title="HTML/Element/applet"><code>&lt;applet&gt;</code></a>.</li>
@@ -122,7 +122,7 @@ original_slug: Web/Security/Same-origin_politica
 <h3 id="Cómo_bloquear_el_acceso_de_origen_cruzado">Cómo bloquear el acceso de origen cruzado</h3>
 
 <ul>
- <li>Para prevenir escrituras de orígen cruzado, comprobar un token imposible de adivinar en la petición, conocido como token <a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29" title="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29">Cross-Site Request Forgery (CSRF)</a>. Debes prevenir lecturas de orígen cruzado de páginas que conozcan este token.</li>
+ <li>Para prevenir escrituras de orígen cruzado, comprobar un token imposible de adivinar en la petición, conocido como token <a href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_%28CSRF%29">Cross-Site Request Forgery (CSRF)</a>. Debes prevenir lecturas de orígen cruzado de páginas que conozcan este token.</li>
  <li>Para prevenir lecturas de origen cruzado de un recurso, asegurar que no es incrustable. Frecuentemente es necesario prevenir incrustaciones debido a que al incrustar un recurso siempre se filtra alguna información sobre él.</li>
  <li>Para prevenir incrustaciones de origen cruzado, asegurar que tu recurso no puede ser interpretado como uno de los formatos incrustables de arriba. El navegador no respeta el <code>Content-Type</code> en muchos casos. Por ejemplo, si señalas una etiqueta <code>&lt;script&gt;</code> en un documento HTML, el navegador tratará de interpretar el HTML como JavaScript. Cuando tu recurso no es un punto de entrada a tu sitio, puedes usar también un token CSRF para prevenir el incrustamiento.</li>
 </ul>
@@ -255,8 +255,8 @@ original_slug: Web/Security/Same-origin_politica
 <h2 id="Ver_también">Ver también</h2>
 
 <ul>
- <li><a href="http://www.w3.org/Security/wiki/Same_Origin_Policy" title="http://www.w3.org/Security/wiki/Same_Origin_Policy">Política </a><a href="/en-US/docs/Same-origin_policy_for_file:_URIs" title="Same-origin policy for file: URIs">Same-Origin para file: URIs</a></li>
- <li><a href="http://www.w3.org/Security/wiki/Same_Origin_Policy" title="http://www.w3.org/Security/wiki/Same_Origin_Policy">Política Same-Origin en W3C</a></li>
+ <li><a href="http://www.w3.org/Security/wiki/Same_Origin_Policy">Política </a><a href="/en-US/docs/Same-origin_policy_for_file:_URIs" title="Same-origin policy for file: URIs">Same-Origin para file: URIs</a></li>
+ <li><a href="http://www.w3.org/Security/wiki/Same_Origin_Policy">Política Same-Origin en W3C</a></li>
 </ul>
 
 <div class="originaldocinfo">
