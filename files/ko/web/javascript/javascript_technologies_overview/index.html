@@ -51,33 +51,33 @@ translation_of: Web/JavaScript/JavaScript_technologies_overview
 
 <h3 id="WebIDL">WebIDL</h3>
 
-<p><a class="external" href="https://heycam.github.io/webidl/" title="http://dev.w3.org/2006/webapi/WebIDL/">WebIDL 명세</a>는 DOM 기술과 ECMAScript 사이를 연결하는 역할을 합니다.</p>
+<p><a class="external" href="https://heycam.github.io/webidl/">WebIDL 명세</a>는 DOM 기술과 ECMAScript 사이를 연결하는 역할을 합니다.</p>
 
 <h3 id="DOM의_핵심">DOM의 핵심</h3>
 
 <p>DOM(Document Object Model)은 HTML, XHTML, XML 문서의 객체를 나타내고 상호작용하기 위한, <strong>언어에 제약되지 않는</strong> 크로스 플랫폼 협약입니다. DOM 트리의 객체는 해당 객체의 메서드를 사용해 조작할 수 있습니다. {{glossary("W3C")}}는 HTML와 XML 문서를 객체로 추상화하는 Core Document Object Model을 표준화하고, 추상화를 조작하기 위한 방법도 정의합니다. DOM에 정의된 내용 중 일부는 다음과 같습니다.</p>
 
 <ul>
- <li>문서 구조, 트리 모델, <a class="external" href="https://dom.spec.whatwg.org/" title="http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html">DOM core</a>의 DOM Event Architecture: {{domxref("Node")}}, {{domxref("Element")}}, {{domxref("DocumentFragment")}}, {{domxref("Document")}}, {{domxref("DOMImplementation")}}, {{domxref("Event")}}, {{domxref("EventTarget")}}, …</li>
- <li>덜 엄격한 DOM Event Architecture 정의, <a class="external" href="https://w3c.github.io/uievents/" title="http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html">DOM events</a>에 속하는 특정 이벤트.</li>
- <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html">DOM Traversal</a>, <a class="external" href="https://dom.spec.whatwg.org/#ranges" title="http://html5.org/specs/dom-range.html">DOM Range</a> 등</li>
+ <li>문서 구조, 트리 모델, <a class="external" href="https://dom.spec.whatwg.org/">DOM core</a>의 DOM Event Architecture: {{domxref("Node")}}, {{domxref("Element")}}, {{domxref("DocumentFragment")}}, {{domxref("Document")}}, {{domxref("DOMImplementation")}}, {{domxref("Event")}}, {{domxref("EventTarget")}}, …</li>
+ <li>덜 엄격한 DOM Event Architecture 정의, <a class="external" href="https://w3c.github.io/uievents/">DOM events</a>에 속하는 특정 이벤트.</li>
+ <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html">DOM Traversal</a>, <a class="external" href="https://dom.spec.whatwg.org/#ranges">DOM Range</a> 등</li>
 </ul>
 
 <p>ECMAScript의 관점에서, DOM 명세에 정의된 객체는 "호스트 객체"라고 부릅니다.</p>
 
 <h3 id="HTML_DOM">HTML DOM</h3>
 
-<p>웹 마크업 언어인 <a class="external" href="http://www.whatwg.org/html" title="http://www.whatwg.org/html">HTML</a>은 DOM 코어에 정의된 추상화 개념에 엘리먼트의 <em>의미</em>를 더한 레이어라고 할 수 있겠다. HTML DOM은 HTML 엘리먼트의 <code>className</code> 같은 속성과 {{ domxref("document.body") }} 같은 API도 포함한다.</p>
+<p>웹 마크업 언어인 <a class="external" href="http://www.whatwg.org/html">HTML</a>은 DOM 코어에 정의된 추상화 개념에 엘리먼트의 <em>의미</em>를 더한 레이어라고 할 수 있겠다. HTML DOM은 HTML 엘리먼트의 <code>className</code> 같은 속성과 {{ domxref("document.body") }} 같은 API도 포함한다.</p>
 
 <p>HTML 명세는 문서의 제약도 정의한다. 예를들어 순서가 없는 리스트를 나타내는 <code>ul</code> 의 모든 자식들은 리스트 요소를 나타내는 <code>li</code> 엘리먼트여야 한다. 또한 표준에 정의되지 않은 엘리먼트와 속성을 사용하는것도 금지된다.</p>
 
 <h2 id="알아둘만한_다른_API">알아둘만한 다른 API</h2>
 
 <ul>
- <li>setTimeout 과 setInterval 함수는 HTML 표준의 <a class="external" href="http://www.whatwg.org/html/#window" title="http://www.whatwg.org/html/#window">Window</a> 인터페이스에 처음으로 정의되었다.</li>
- <li><a class="external" href="http://dev.w3.org/2006/webapi/XMLHttpRequest-2/" title="http://dev.w3.org/2006/webapi/XMLHttpRequest-2/">XMLHttpRequest</a>는 비동기적 HTTP 요청을 보낼 수 있게 해주는 API이다.</li>
+ <li>setTimeout 과 setInterval 함수는 HTML 표준의 <a class="external" href="http://www.whatwg.org/html/#window">Window</a> 인터페이스에 처음으로 정의되었다.</li>
+ <li><a class="external" href="http://dev.w3.org/2006/webapi/XMLHttpRequest-2/">XMLHttpRequest</a>는 비동기적 HTTP 요청을 보낼 수 있게 해주는 API이다.</li>
  <li><a class="external" href="http://dev.w3.org/csswg/cssom/">CSS Object Model</a>는 CSS 규칙을 오브젝트처럼 다룰 수 있도록 추상화 해준다.</li>
  <li><a class="external" href="http://www.whatwg.org/specs/web-workers/current-work/">WebWorkers</a>는 병렬 처리를 가능하게 하는 API이다.</li>
  <li><a class="external" href="http://www.whatwg.org/C/#network">WebSockets</a>는 양방향 저수준 통신을 가능하게 하는 API이다.</li>
- <li><a class="external" href="http://www.whatwg.org/html/#2dcontext" title="http://www.whatwg.org/html/#2dcontext">Canvas 2D Context</a>는 canvas 엘리먼트에 그릴 수 있게 해주는 API이다.</li>
+ <li><a class="external" href="http://www.whatwg.org/html/#2dcontext">Canvas 2D Context</a>는 canvas 엘리먼트에 그릴 수 있게 해주는 API이다.</li>
 </ul>
