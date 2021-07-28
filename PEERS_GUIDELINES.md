@@ -85,33 +85,24 @@ The review teams for each locale are:
 
 ## Synchronization with the en-US document structure
 
-Before unfreezing the Tier 1 locales, we made an update to synchronize all the
-localized document tree structures with the `en-US` tree structure (English
-slugs only), to make the documentation easier to manage. This resulted in two
-new buckets of documents being created for each locale, existing as
-subdirectories of each local folder:
-
-- `orphaned` — documents that are not associated with any parent `en-US` page.
-- `conflicting` — documents with duplicate translations in existence (e.g.
-  localized once under the existing `en-US` slug, and then again under a
-  localized slug). The duplicate(s) are put in this folder.
+Periodically we synchronize all the localized document tree structures with the
+`en-US` tree structure (English slugs only), to make the documentation easier
+to manage. When documents are removed from `en-US` it results in `orphaned`
+documents within a sub-directory of each locale folder.
 
 Active locale maintenance teams are invited to spend some time exploring the
-orphaned and conflicting documents, to see whether any of this work is worth
-keeping (either adding to, or merging with an existing document in, the main
-tree), or whether it can just be deleted.
+orphaned documents, to see whether any of this work is worth keeping (either
+adding to, or merging with an existing document in, the main tree), or whether
+it can just be deleted.
 
 ### Periodic synchronization updates
 
-We run a GitHub action every day to update the localized documentation and keep
+We run a GitHub Action every day to update the localized documentation and keep
 it in sync with the `en-US` tree structure, for example if documents are deleted
 for, or moved to a different location, in the tree.
 
-When a synchronization occurs:
-
-- Tier 1 (active) locale maintenance teams are given two weeks to decide what to
-  do with the affected documents in their locales to keep things in sync.
-- Tier 2 (frozen) locales have the affected documents deleted/moved immediately.
+When a synchronization occurs maintenance teams are given two weeks to decide
+ what to do with the affected documents in their locales to keep things in sync.
 
 Note: Conflicting docs are often created during the sync operation when `en-US`
 documents get merged — for example if `Foo/Bar` becomes just a section inside
