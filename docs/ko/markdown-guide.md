@@ -29,5 +29,5 @@ html 형식에서 md로 형식으로 변경한 뒤 commit을 해주세요. `존�
 # MDN ko locale Markdown 번역에 대한 일반 지침 (리뷰어)
 
 1. `존재하는 파일에 대한 변경 (존재하는 파일이 .html 확장자일 경우)`에 대해서는 `squash and merge`가 아닌 `rebase and merge`를 진행해야합니다. 
-2. Git History가 유지되는지 확인해주세요.
+2. 파일에 대한 Git History가 유지되는지 확인해주세요.
 3. commit의 개수는 최소가 되어야 합니다.
