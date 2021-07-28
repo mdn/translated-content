@@ -9,7 +9,7 @@ which is hosted within the [MDN Organization](https://github.com/mdn) on GitHub.
 
 [Guidelines for peers can be found here](PEERS_GUIDELINES.md).
 
-## Tier 1 locales
+## Locales
 
 Before we go any further, you should be aware that we are only accepting updates
 to active locales — this means locales that have active community maintenance
