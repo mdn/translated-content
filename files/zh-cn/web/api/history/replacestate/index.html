@@ -33,7 +33,7 @@ history<span class="punctuation token">.</span><span class="function token">push
 
 <pre class="brush: js line-numbers language-js"><code class="language-js">history<span class="punctuation token">.</span><span class="function token">replaceState</span><span class="punctuation token">(</span>stateObj<span class="punctuation token">,</span> <span class="string token">""</span><span class="punctuation token">,</span> <span class="string token">"bar2.html"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
 
-<p>这会让URL栏显示 <span class="nowiki">http://mozilla.org/bar2.html</span>, 但是不会刷新 <code>bar2.html</code>  页面 甚至不会检查bar2.html 是否存在</p>
+<p>这会让URL栏显示 <span class="nowiki">http://mozilla.org/bar2.html</span>, 但是不会加载 <code>bar2.html</code>  页面，甚至不会检查bar2.html 是否存在</p>
 
 <p>假设用户跳转到 <span class="nowiki">http://www.microsoft.com</span>, 然后点击返回按钮.这时, URL 栏将会显示 <span class="nowiki">http://mozilla.org/bar2.html 页面. 如果用户此时点击返回按钮, URL栏将会显示 http://mozilla.org/foo.html 页面, 最终绕过了 bar.html 页面.</span></p>
 
