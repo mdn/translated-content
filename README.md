@@ -61,9 +61,9 @@ bit more to consider.
 To begin with, get the basic required tooling set up, as described in the
 [content repo Setup section](https://github.com/mdn/content#setup).
 
-Now you need to fork and clone both the 
-[content repo](https://github.com/mdn/content) and the translated-content repo 
-(this repo).
+Now you need to fork and clone both the
+ [content repo](https://github.com/mdn/content)
+ and the translated-content repo (this repo).
 
 ### Content repo setup
 
