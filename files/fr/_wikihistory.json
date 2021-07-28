@@ -14910,13 +14910,6 @@
       "loella16"
     ]
   },
-  "Web/API/DoubleRange": {
-    "modified": "2020-11-11T19:01:25.656Z",
-    "contributors": [
-      "JNa0",
-      "Voulto"
-    ]
-  },
   "Web/API/EffectTiming": {
     "modified": "2019-03-23T22:28:24.754Z",
     "contributors": [
@@ -18354,6 +18347,13 @@
       "Voulto"
     ]
   },
+  "Web/API/MediaTrackConstraints": {
+    "modified": "2020-11-11T19:01:25.656Z",
+    "contributors": [
+      "JNa0",
+      "Voulto"
+    ]
+  },
   "Web/API/Media_Streams_API": {
     "modified": "2020-10-15T21:25:08.658Z",
     "contributors": [
@@ -20046,12 +20046,6 @@
       "fscholz",
       "khalid32",
       "Feugy"
-    ]
-  },
-  "Web/API/ULongRange": {
-    "modified": "2020-10-15T22:35:00.304Z",
-    "contributors": [
-      "Voulto"
     ]
   },
   "Web/API/URL": {
@@ -22019,13 +22013,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/WorkerGlobalScope/close": {
-    "modified": "2020-10-15T21:36:58.427Z",
-    "contributors": [
-      "Arzak656",
-      "jean-pierre.gay"
-    ]
-  },
   "Web/API/WorkerGlobalScope/console": {
     "modified": "2020-10-15T22:26:34.613Z",
     "contributors": [
@@ -22054,13 +22041,6 @@
   },
   "Web/API/WorkerGlobalScope/navigator": {
     "modified": "2020-10-15T21:33:53.933Z",
-    "contributors": [
-      "Arzak656",
-      "jean-pierre.gay"
-    ]
-  },
-  "Web/API/WorkerGlobalScope/onclose": {
-    "modified": "2020-10-15T21:33:54.728Z",
     "contributors": [
       "Arzak656",
       "jean-pierre.gay"
@@ -43394,6 +43374,20 @@
       "Pitux"
     ]
   },
+  "conflicting/Web/API/DedicatedWorkerGlobalScope/close": {
+    "modified": "2020-10-15T21:36:58.427Z",
+    "contributors": [
+      "Arzak656",
+      "jean-pierre.gay"
+    ]
+  },
+  "conflicting/Web/API/DedicatedWorkerGlobalScope/close_ad209d73ce2abfe0e3fe136acf40e5b4": {
+    "modified": "2020-10-15T21:33:54.728Z",
+    "contributors": [
+      "Arzak656",
+      "jean-pierre.gay"
+    ]
+  },
   "conflicting/Web/API/Document/createEvent": {
     "modified": "2020-10-15T21:37:47.725Z",
     "contributors": [
@@ -43488,6 +43482,12 @@
     "contributors": [
       "fscholz",
       "Kalwyn"
+    ]
+  },
+  "conflicting/Web/API/MediaTrackConstraints": {
+    "modified": "2020-10-15T22:35:00.304Z",
+    "contributors": [
+      "Voulto"
     ]
   },
   "conflicting/Web/API/Node": {

@@ -3565,6 +3565,7 @@
 /fr/docs/Web/API/Document_Object_Model/window	/fr/docs/Web/API/Window
 /fr/docs/Web/API/Document_object_model/Utilisation_du_DOM_Level_1_Core_du_W3C	/fr/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core
 /fr/docs/Web/API/Document_object_model/Utilisation_du_DOM_Level_1_Core_du_W3C/Exemple	/fr/docs/Web/API/Document_object_model/Using_the_W3C_DOM_Level_1_Core/Example
+/fr/docs/Web/API/DoubleRange	/fr/docs/Web/API/MediaTrackConstraints
 /fr/docs/Web/API/Element.activeElement	/fr/docs/Web/API/Document/activeElement
 /fr/docs/Web/API/Element.addEventListener	/fr/docs/Web/API/EventTarget/addEventListener
 /fr/docs/Web/API/Element.appendChild	/fr/docs/Web/API/Node/appendChild
@@ -3742,6 +3743,7 @@
 /fr/docs/Web/API/Selection_API	/fr/docs/conflicting/Web/API/Selection
 /fr/docs/Web/API/ServiceWorkerState	/fr/docs/orphaned/Web/API/ServiceWorkerState
 /fr/docs/Web/API/Storage/LocalStorage	/fr/docs/conflicting/Web/API/Window/localStorage
+/fr/docs/Web/API/ULongRange	/fr/docs/conflicting/Web/API/MediaTrackConstraints
 /fr/docs/Web/API/URL.createObjectURL	/fr/docs/Web/API/URL/createObjectURL
 /fr/docs/Web/API/URLUtilsReadOnly	/fr/docs/orphaned/Web/API/URLUtilsReadOnly
 /fr/docs/Web/API/WebGLRenderingContext/activer	/fr/docs/Web/API/WebGLRenderingContext/enable
@@ -3819,6 +3821,8 @@
 /fr/docs/Web/API/Worker.postMessage	/fr/docs/Web/API/Worker/postMessage
 /fr/docs/Web/API/Worker.terminate	/fr/docs/Web/API/Worker/terminate
 /fr/docs/Web/API/Worker/Functions_and_classes_available_to_workers	/fr/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers
+/fr/docs/Web/API/WorkerGlobalScope/close	/fr/docs/conflicting/Web/API/DedicatedWorkerGlobalScope/close
+/fr/docs/Web/API/WorkerGlobalScope/onclose	/fr/docs/conflicting/Web/API/DedicatedWorkerGlobalScope/close_ad209d73ce2abfe0e3fe136acf40e5b4
 /fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest	/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
 /fr/docs/Web/API/console.log	/fr/docs/Web/API/Console/log
 /fr/docs/Web/API/console.time	/fr/docs/Web/API/Console/time
