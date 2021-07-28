@@ -22,6 +22,10 @@ html 형식에서 md로 형식으로 변경한 뒤 commit을 해주세요. `존�
 > 참고
 > `git log --follow (파일)` 로 해당 파일의 git history를 볼 수 있습니다.
 
+## 그 이외의 경우 (이미 md 파일이 존재하거나, 해당 번역 페이지가 없는 경우)
+
+일반 PR 방식대로 진행합니다.
+
 # MDN ko locale Markdown 번역에 대한 일반 지침 (리뷰어)
 
 1. `존재하는 파일에 대한 변경 (존재하는 파일이 .html 확장자일 경우)`에 대해서는 `squash and merge`가 아닌 `rebase and merge`를 진행해야합니다. 
