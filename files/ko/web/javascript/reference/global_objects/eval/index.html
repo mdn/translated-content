@@ -122,7 +122,7 @@ console.log(runCodeWithDateFunction(
 
 <p>위 코드는 삼중 중첩 함수를 사용하기 때문에 매우 비효율적으로 보일 수 있지만, 이 방법의 이점을 우선 살펴봅시다.</p>
 
-<p>1. <code>runCodeWithDateFunction</code>에 문자열로 전달된 코드를 최소화<sup>minify</sup>할 수 있다.</p>
+<p>1. <code>runCodeWithDateFunction</code>에 문자열로 전달된 코드를 최소화할 수 있다.</p>
 
 <p>2. Function call overhead is minimal, making the far smaller code size well worth the benefit</p>
 
@@ -206,7 +206,7 @@ elt.addEventListener("click", function() { ... } , false); </pre>
 
 <p><code>eval()</code>을 호출하려는 문자열에 코드가 아니라 데이터가 포함되어 있다면(예를 들어 <code>"[1, 2, 3]"</code>과 같은 배열), 대신 JavaScript의 문법 일부를 이용해 문자열로 데이터를 표현할 수 있는 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON">JSON</a>을 사용하는 것을 고려해 보세요. <a href="/en-US/docs/Downloading_JSON_and_JavaScript_in_extensions">Downloading JSON and JavaScript in extensions</a>도 참고해 보세요.</p>
 
-<p>JSON 문법은 JavaScript 문법에 비해 제약이 있기 때문에, 유효한 JavaScript 리터럴이 JSON으로 변환되지 않는 경우도 있습니다. 예를 들어, JSON에서는 배열이나 객체를 콤마로 끝낼 수 없고, 객체 리터럴에서 속성명(키)은 반드시  따옴표로 감싸야 합니다. 나중에 JSON으로 파싱할 문자열을 생성할 때는 JSON 직렬 변환기<sup>JSON serializer</sup>를 사용하여야 합니다.</p>
+<p>JSON 문법은 JavaScript 문법에 비해 제약이 있기 때문에, 유효한 JavaScript 리터럴이 JSON으로 변환되지 않는 경우도 있습니다. 예를 들어, JSON에서는 배열이나 객체를 콤마로 끝낼 수 없고, 객체 리터럴에서 속성명(키)은 반드시  따옴표로 감싸야 합니다. 나중에 JSON으로 파싱할 문자열을 생성할 때는 JSON 직렬 변환기를 사용하여야 합니다.</p>
 
 <h3 id="코드_대신_데이터_전달하기">코드 대신 데이터 전달하기</h3>
 

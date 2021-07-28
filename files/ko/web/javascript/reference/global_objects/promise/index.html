@@ -27,7 +27,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise
  <li>거부(<em>rejected)</em>: 연산이 실패함.</li>
 </ul>
 
-<p>대기 중인 프로미스는 값과 함께 <em>이행할</em> 수도, 어떤 이유(오류)로 인해 <em>거부</em>될 수 있습니다. 이행이나 거부될 때, 프로미스에 연결한 처리기는 그 프로미스의 <code>then</code> 메서드에 의해 대기열에 오릅니다. 이미 이행했거나 거부된 프로미스에 연결한 처리기도 호출하므로, 비동기 연산과 처리기 연결 사이에 경합 조건<sup>race condition</sup>은 없습니다.</p>
+<p>대기 중인 프로미스는 값과 함께 <em>이행할</em> 수도, 어떤 이유(오류)로 인해 <em>거부</em>될 수 있습니다. 이행이나 거부될 때, 프로미스에 연결한 처리기는 그 프로미스의 <code>then</code> 메서드에 의해 대기열에 오릅니다. 이미 이행했거나 거부된 프로미스에 연결한 처리기도 호출하므로, 비동기 연산과 처리기 연결 사이에 경합 조건은 없습니다.</p>
 
 <p>{{jsxref("Promise.prototype.then()")}} 및 {{jsxref("Promise.prototype.catch()")}} 메서드의 반환 값은 다른 프로미스이므로, 서로 연결할 수 있습니다.</p>
 

@@ -42,9 +42,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 
 <h2 id="설명">설명</h2>
 
-<p><code>defineProperty</code>는 객체의 속성을 정교하게 추가하거나 수정할 수 있습니다. 할당을 통해 속성을 추가하는 일반적인 방법을 사용하면 속성 열거<sup>enumeration</sup>({{jsxref("Statements/for...in", "for...in")}} 반복문이나 {{jsxref("Object.keys")}} 메서드)를 통해 노출되어 값을 변경하거나 {{jsxref("Operators/delete", "delete")}} 연산자로 삭제할 수 있습니다. <code>defineProperty</code>를 사용하면 이런 부분을 상세하게 조절할 수 있습니다. <code>Object.defineProperty()</code>로 추가한 속성은 기본적으로 불변합니다.</p>
+<p><code>defineProperty</code>는 객체의 속성을 정교하게 추가하거나 수정할 수 있습니다. 할당을 통해 속성을 추가하는 일반적인 방법을 사용하면 속성 열거({{jsxref("Statements/for...in", "for...in")}} 반복문이나 {{jsxref("Object.keys")}} 메서드)를 통해 노출되어 값을 변경하거나 {{jsxref("Operators/delete", "delete")}} 연산자로 삭제할 수 있습니다. <code>defineProperty</code>를 사용하면 이런 부분을 상세하게 조절할 수 있습니다. <code>Object.defineProperty()</code>로 추가한 속성은 기본적으로 불변합니다.</p>
 
-<p>속성 서술자<sup>property descriptors</sup>는 객체로 나타내며 데이터 서술자<sup>data descriptors</sup>와 접근자 서술자<sup>accessor descriptors</sup>의 두 가지 유형을 갖습니다. 데이터 서술자는 값을 가지는 속성으로, 덮어쓰거나 쓸 수 없습니다. 접근자 서술자는 접근자<sup>getter</sup>-설정자<sup>setter</sup> 한 쌍을 가지는 속성입니다. 서술자는 두 유형 중 하나여야 하며, 동시에 두 유형일 수는 없습니다.</p>
+<p>속성 서술자는 객체로 나타내며 데이터 서술자(data descriptors)와 접근자 서술자(accessor descriptors)의 두 가지 유형을 갖습니다. 데이터 서술자는 값을 가지는 속성으로, 덮어쓰거나 쓸 수 없습니다. 접근자 서술자는 접근자(getter)-설정자(setter) 한 쌍을 가지는 속성입니다. 서술자는 두 유형 중 하나여야 하며, 동시에 두 유형일 수는 없습니다.</p>
 
 <p>데이터 서술자와 접근자 서술자 모두 객체이며 다음과 같은 키를 공유합니다.</p>
 
