@@ -7,6 +7,8 @@
 1. 확장자 변경
 2. 내용 변경
 
+다음 [PR](https://github.com/mdn/translated-content/pull/1771)은 모범적인 PR입니다.
+
 ### 확장자 변경
 
 이전 html 파일의 Git History 유지를 위해 확장자만 먼저 .html에서 .md로 변경한 후 commit을 해주세요. 확장자 변경 작업이 없을 경우 Git History가 소멸됩니다. 예시는 [확장자 변경 PR](https://github.com/mdn/translated-content/pull/1769/commits/c7937cf2194d218d98394cd7f5f8acebd2e88aa0)를 참고해주세요.
