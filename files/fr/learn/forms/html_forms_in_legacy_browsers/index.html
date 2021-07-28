@@ -6,7 +6,7 @@ original_slug: Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers
 ---
 <div>{{LearnSidebar}}{{PreviousMenuNext("Web/Guide/HTML/Formulaires/Sending_forms_through_JavaScript", "Web/Guide/HTML/Formulaires/Apparence_des_formulaires_HTML", "Web/Guide/HTML/Formulaires")}}</div>
 
-<p class="summary">Tout développeur apprend très rapidement (parfois difficilement) que le Web est un endroit assez inconfortable. Le pire des fléaux est le « navigateur historique ». Oui, admettons‑le, si on dit « navigateur historique », nous pensons tous aux anciennes versions d'Internet Explorer ... mais elles sont loin d'être les seules. Les premières versions de Firefox, comme la <a href="http://www.mozilla.org/en-US/firefox/organizations/" title="http://www.mozilla.org/en-US/firefox/organizations/">version ESR,</a> sont aussi des « navigateurs historiques ». Et dans le monde du mobile ? Quand ni le navigateur ni l'OS ne peut être mis à jour? Oui, il y a beaucoup de vieux smartphones Android ou des iPhones dont le navigateur par défaut n'est pas à jour. Ceux-ci sont aussi des « navigateurs historiques ».</p>
+<p class="summary">Tout développeur apprend très rapidement (parfois difficilement) que le Web est un endroit assez inconfortable. Le pire des fléaux est le « navigateur historique ». Oui, admettons‑le, si on dit « navigateur historique », nous pensons tous aux anciennes versions d'Internet Explorer ... mais elles sont loin d'être les seules. Les premières versions de Firefox, comme la <a href="http://www.mozilla.org/en-US/firefox/organizations/">version ESR,</a> sont aussi des « navigateurs historiques ». Et dans le monde du mobile ? Quand ni le navigateur ni l'OS ne peut être mis à jour? Oui, il y a beaucoup de vieux smartphones Android ou des iPhones dont le navigateur par défaut n'est pas à jour. Ceux-ci sont aussi des « navigateurs historiques ».</p>
 
 <p>Malheureusement, parcourir cette jungle est une facette du métier. Mais opportunément, il existe quelques astuces pour nous aider à résoudre 80 % des problèmes causés par ces vieilles versions de navigateur.</p>
 
@@ -21,7 +21,7 @@ original_slug: Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers
  <li>Microsoft : <a href="http://msdn.microsoft.com/en-us/library/ff410218%28v=vs.85%29.aspx" rel="external">Documentation sur la prise en charge de la norme par Internet Explorer</a></li>
  <li>WebKit : comme il y a plusieurs versions de ce moteur, les choses se compliquent :
   <ul>
-   <li><a href="https://www.webkit.org/blog/" rel="external" title="https://www.webkit.org/blog/">le Blog WebKit</a> et <a href="http://planet.webkit.org/" rel="external">Planet WebKit</a> rassemblent les meilleurs articles par les déveoppeurs WebKit.</li>
+   <li><a href="https://www.webkit.org/blog/" rel="external">le Blog WebKit</a> et <a href="http://planet.webkit.org/" rel="external">Planet WebKit</a> rassemblent les meilleurs articles par les déveoppeurs WebKit.</li>
    <li><a href="https://www.chromestatus.com/features">l</a>e site État de la p<a href="https://www.chromestatus.com/features">lateforme Chrome</a> est aussi importante.</li>
    <li>ainsi que le<a href="https://developer.apple.com/technologies/safari/" rel="external"> site web Apple .</a></li>
   </ul>
@@ -32,7 +32,7 @@ original_slug: Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers
 
 <ul>
  <li><a href="http://caniuse.com" rel="external">Can I Use</a> a des informations sur la prise en charge des techniques avancées. </li>
- <li><a href="http://www.quirksmode.org" rel="external" title="http://www.quirksmode.org">Quirks Mode</a> est une surprenante ressource sur la compatibilité des divers navigateurs. <a href="http://www.quirksmode.org/mobile/" rel="external" title="http://www.quirksmode.org/mobile/">La partie sur les mobiles</a> est la meilleure actuellement disponible.</li>
+ <li><a href="http://www.quirksmode.org" rel="external">Quirks Mode</a> est une surprenante ressource sur la compatibilité des divers navigateurs. <a href="http://www.quirksmode.org/mobile/" rel="external">La partie sur les mobiles</a> est la meilleure actuellement disponible.</li>
  <li><a href="http://positioniseverything.net/" rel="external">Position Is Everything</a> est la meilleure ressource disponible sur les bogues de rendu dans les navigateurs historiques et leur solution de contournement (le cas échéant).</li>
  <li><a href="http://mobilehtml5.org" rel="external">Mobile HTML5</a> dispose d'informations de compatibilité pour une large gamme de navigateurs pour mobiles, et pas seulement pour le « top 5 » (y compris Nokia, Amazon et Blackberry).</li>
 </ul>
@@ -45,7 +45,7 @@ original_slug: Web/Guide/HTML/Formulaires/HTML_forms_in_legacy_browsers
 
 <h3 id="La_simplification_élégante_est_la_meilleure_amie_du_développeur_Web">La simplification élégante est la meilleure amie du développeur Web</h3>
 
-<p><a href="http://www.sitepoint.com/progressive-enhancement-graceful-degradation-choice/" rel="external" title="http://www.sitepoint.com/progressive-enhancement-graceful-degradation-choice/">Une simplification élégante et des améliorations progressives</a> sont des modèles de développement qui permettent de construire des grands projets prenant en charge une large gamme de navigateurs simultanément. Quand vous créez quelque chose pour un navigateur moderne, et que vous voudriez être sûrs que, l'un l'autre, il fonctionne sur des navigateurs historiques, vous faites de la simplification élégante.</p>
+<p><a href="http://www.sitepoint.com/progressive-enhancement-graceful-degradation-choice/" rel="external">Une simplification élégante et des améliorations progressives</a> sont des modèles de développement qui permettent de construire des grands projets prenant en charge une large gamme de navigateurs simultanément. Quand vous créez quelque chose pour un navigateur moderne, et que vous voudriez être sûrs que, l'un l'autre, il fonctionne sur des navigateurs historiques, vous faites de la simplification élégante.</p>
 
 <p>Voyons quelques exemples relatifs aux formulaires en HTML.</p>
 
@@ -163,7 +163,7 @@ input.button {
 
 <p>Dans de nombreux cas, une bonne prothèse d'émulation (« polyfill ») peut aider en fournissant une API manquante. Un « <a href="http://remysharp.com/2010/10/08/what-is-a-polyfill/" rel="external">polyfill »</a> est un petit morceau de JavaScript qui « remplit un trou » dans les fonctionnalités des navigateurs historiques. Bien qu'ils puissent être utilisés pour améliorer la prise en charge de n'importe quelle fonctionnalité, leur utilisation dans le JavaScript est moins risquée que dans les CSS ou le HTML ; il existe de nombreux cas où JavaScript peut casser (problèmes de réseau, conflits de script, etc.). Mais avec le JavaScript, à condition de travailler avec un JavaScript non obstructif, si les polyfills manquent, ce ne sera pas grave.</p>
 
-<p>La meilleure façon de remplir un trou d'API manquante consiste à utiliser la bibliothèque <a href="http://modernizr.com" rel="external" title="http://modernizr.com">Modernizr</a> et son projet dérivé : <a href="http://yepnopejs.com" rel="external">YepNope</a>. Modernizr est une bibliothèque qui vous permet de tester la disponibilité d'une fonctionnalité pour une action en accord. YepNope est une bibliothèqe de chargements conditionnels.</p>
+<p>La meilleure façon de remplir un trou d'API manquante consiste à utiliser la bibliothèque <a href="http://modernizr.com" rel="external">Modernizr</a> et son projet dérivé : <a href="http://yepnopejs.com" rel="external">YepNope</a>. Modernizr est une bibliothèque qui vous permet de tester la disponibilité d'une fonctionnalité pour une action en accord. YepNope est une bibliothèqe de chargements conditionnels.</p>
 
 <p>Voici un exemple :</p>
 
@@ -189,7 +189,7 @@ input.button {
 <p>L'équipe de Modernizr fait une maintenance opportune de grande liste de « <a href="https://github.com/Modernizr/Modernizr/wiki/HTML5-Cross-Browser-Polyfills" rel="external">polyfills »</a>. Prenez celui dont vous avez besoin.</p>
 
 <div class="note">
-<p><strong>Note :</strong> Modernizr a d'autres fonctionnalités remarquables pour faciliter le traitement du JavaScript non obstructif et les tecniques de simplifications élégantes. Prenez connaissance de <a href="http://modernizr.com/docs/" rel="external" title="http://modernizr.com/docs/"> la documentation de Modernizr</a>.</p>
+<p><strong>Note :</strong> Modernizr a d'autres fonctionnalités remarquables pour faciliter le traitement du JavaScript non obstructif et les tecniques de simplifications élégantes. Prenez connaissance de <a href="http://modernizr.com/docs/" rel="external"> la documentation de Modernizr</a>.</p>
 </div>
 
 <h3 id="Faites_attention_aux_performances">Faites attention aux performances</h3>

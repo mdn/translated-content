@@ -24,7 +24,7 @@ original_slug: Mozilla/Firefox/Versions/7
 <h4 id="Canvas">Canvas</h4>
 
 <ul>
- <li>Dans le cadre du <a class="external" href="http://blog.mozilla.com/joe/2011/04/26/introducing-the-azure-project/" title="http://blog.mozilla.com/joe/2011/04/26/introducing-the-azure-project/">projet Azure</a>, le Backend Azure Direct2D <a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=651858">a été implémenté</a> et améliore considérablement les performances des canvas 2D.</li>
+ <li>Dans le cadre du <a class="external" href="http://blog.mozilla.com/joe/2011/04/26/introducing-the-azure-project/">projet Azure</a>, le Backend Azure Direct2D <a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=651858">a été implémenté</a> et améliore considérablement les performances des canvas 2D.</li>
  <li>La spécification de valeurs invalides lors de l'appel de <code>setTransform()</code>, <code>bezierCurveTo()</code> ou <code>arcTo()</code> ne renvoie plus d'exception, ces appels sont à présent ignorés silencieusement.</li>
  <li>La méthode <a class="internal" href="https://developer.mozilla.org/en-US/docs/DOM/CanvasRenderingContext2D#isPointInPath()" title="en/DOM/CanvasRenderingContext2D#isPointInPath()"><code>isPointInPath()</code></a> considère maintenant correctement la matrice de transformation lors de la comparaison du point spécifié au tracé en cours.</li>
  <li>L'appel de <code>strokeRect()</code> avec une largeur et une hauteur de zéro n'a désormais plus aucun effet.</li>
@@ -83,7 +83,7 @@ original_slug: Mozilla/Firefox/Versions/7
 
 <ul>
  <li>la préférence <code>network.websocket.max-connections</code> est utilisée pour déterminer le nombre maximum de connexions à WebSocket qui peuvent être ouvertes en même temps. La valeur par défaut est 200.</li>
- <li>La version 8 du protocole WebSocket (comme spécifié par <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-10" title="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-10">IETF draft 10</a>) est maintenant utilisé à la place de la version 7 du protocole utilisé par Firefox 6.</li>
+ <li>La version 8 du protocole WebSocket (comme spécifié par <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-10">IETF draft 10</a>) est maintenant utilisé à la place de la version 7 du protocole utilisé par Firefox 6.</li>
  <li>L'API WebSocket est maintenant disponible sur Firefox Mobile.</li>
 </ul>
 
@@ -103,7 +103,7 @@ original_slug: Mozilla/Firefox/Versions/7
 <h3 id="XML">XML</h3>
 
 <ul>
- <li>En plus de la précédente prise en charge de <code>text/xsl</code>, les feuilles de style XSLT peuvent désormais utiliser les médias Internet officiels (MIME) de type <code>application/xslt+xml</code> (dans la <a class="external" href="http://www.w3.org/TR/xml-stylesheet/" title="http://www.w3.org/TR/xml-stylesheet/">feuille de style d'instruction de traitement</a> ou le <a class="external" href="http://tools.ietf.org/html/rfc5988">champ d'en-tête HTTP Link</a>).</li>
+ <li>En plus de la précédente prise en charge de <code>text/xsl</code>, les feuilles de style XSLT peuvent désormais utiliser les médias Internet officiels (MIME) de type <code>application/xslt+xml</code> (dans la <a class="external" href="http://www.w3.org/TR/xml-stylesheet/">feuille de style d'instruction de traitement</a> ou le <a class="external" href="http://tools.ietf.org/html/rfc5988">champ d'en-tête HTTP Link</a>).</li>
 </ul>
 </div>
 
@@ -231,7 +231,7 @@ original_slug: Mozilla/Firefox/Versions/7
 <h3 id="Autres_changements">Autres changements</h3>
 
 <ul>
- <li>La structure de la fenêtre de la bibliothèque (<code>places.xul</code>) <a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=588027" title="https://bugzilla.mozilla.org/show_bug.cgi?id=588027">a été nettoyée</a>. Cela <a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=677417">pourrait casser les extensions</a> et les thèmes</li>
+ <li>La structure de la fenêtre de la bibliothèque (<code>places.xul</code>) <a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=588027">a été nettoyée</a>. Cela <a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=677417">pourrait casser les extensions</a> et les thèmes</li>
  <li>L'apparence de la fenêtre d'aperçu avant impression <a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=663028">a été modernisé</a> et les auteurs de thèmes sont invités à avoir le même style en utilisant les pseudo-éléments CSS {{cssxref("::-moz-page")}}, {{cssxref("::-moz-page-sequence")}} et {{cssxref("::-moz-scrolled-page-sequence")}}</li>
 </ul>
 
