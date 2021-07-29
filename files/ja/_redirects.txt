@@ -2169,7 +2169,7 @@
 /ja/docs/DevNews:20080805	/ja/docs/orphaned/DevNews/20080805
 /ja/docs/Developing_Mozilla	/ja/docs/orphaned/Developing_Mozilla
 /ja/docs/Developing_add-ons	/ja/docs/orphaned/Developing_add-ons
-/ja/docs/DragDrop	/ja/docs/conflicting/Web/API/HTML_Drag_and_Drop_API
+/ja/docs/DragDrop	/ja/docs/Web/API/HTML_Drag_and_Drop_API
 /ja/docs/DragDrop/DataTransfer	/ja/docs/Web/API/DataTransfer
 /ja/docs/DragDrop/DataTransfer/getData	/ja/docs/Web/API/DataTransfer/getData
 /ja/docs/DragDrop/DataTransfer/setData	/ja/docs/Web/API/DataTransfer/setData

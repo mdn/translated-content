@@ -48249,13 +48249,6 @@
       "dextra"
     ]
   },
-  "conflicting/Web/API/HTML_Drag_and_Drop_API": {
-    "modified": "2019-03-23T23:58:01.198Z",
-    "contributors": [
-      "wbamberg",
-      "Piro"
-    ]
-  },
   "conflicting/Web/API/MediaStream_Recording_API": {
     "modified": "2020-07-14T12:31:37.308Z",
     "contributors": [
