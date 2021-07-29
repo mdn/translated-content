@@ -48249,14 +48249,6 @@
       "dextra"
     ]
   },
-  "conflicting/Web/API/MediaStream_Recording_API": {
-    "modified": "2020-07-14T12:31:37.308Z",
-    "contributors": [
-      "safejourney-art",
-      "FujiHaruka",
-      "chikoski"
-    ]
-  },
   "conflicting/Web/API/MouseEvent/button": {
     "modified": "2019-03-23T23:48:11.013Z",
     "contributors": [
