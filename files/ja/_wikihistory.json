@@ -33374,7 +33374,11 @@
     "modified": "2020-05-04T12:39:54.645Z",
     "contributors": [
       "Uemmra3",
-      "silverskyvicto"
+      "silverskyvicto",
+      "mfuji09",
+      "SphinxKnight",
+      "nonki777",
+      "Yuuki Takahashi"
     ]
   },
   "Web/Guide/Mobile": {
@@ -48413,15 +48417,6 @@
       "kohei.yoshino",
       "Mgjbot",
       "Okome"
-    ]
-  },
-  "conflicting/Web/Guide/Introduction_to_Web_development": {
-    "modified": "2019-03-24T00:07:37.444Z",
-    "contributors": [
-      "mfuji09",
-      "SphinxKnight",
-      "nonki777",
-      "Yuuki Takahashi"
     ]
   },
   "conflicting/Web/HTTP/Headers/User-Agent/Firefox": {
