@@ -23,10 +23,10 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
  </tbody>
 </table>
 
-<p>Сейчас мы сосредоточимся на виджетах форм, встроенных в браузеры, но поскольку формы HTML остаются несколько ограниченными и особенности их реализации различаются для разных браузеров, веб-разработчики иногда создают собственные виджеты форм - прочтите статью <a href="https://developer.mozilla.org/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets" title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets">Как создать собственную форму</a> позже в данном модуле для более подробного изучения.</p>
+<p>Сейчас мы сосредоточимся на виджетах форм, встроенных в браузеры, но поскольку формы HTML остаются несколько ограниченными и особенности их реализации различаются для разных браузеров, веб-разработчики иногда создают собственные виджеты форм - прочтите статью <a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls" title="/en-US/docs/HTML/Forms/How_to_build_custom_form_widgets">Как создать собственную форму</a> позже в данном модуле для более подробного изучения.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Большая часть признаков обсуждаемых в этой статье имеют широкую поддержку в браузерах; мы отметим исключения из этого правила. Если вы хотите больше точных сведений, вам следует обратиться к <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Forms">HTML forms element reference, </a>и в частости к нашей обширной ссылке <a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt; types.</a></p>
+<p><strong>Note</strong>: Большая часть признаков обсуждаемых в этой статье имеют широкую поддержку в браузерах; мы отметим исключения из этого правила. Если вы хотите больше точных сведений, вам следует обратиться к <a href="/en-US/docs/Web/HTML/Element#forms">HTML forms element reference, </a>и в частости к нашей обширной ссылке <a href="/en-US/docs/Web/HTML/Element/input">&lt;input&gt; types.</a></p>
 </div>
 
 <h2 id="Стандартные_атрибуты">Стандартные атрибуты</h2>
@@ -75,7 +75,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 <p>Текстовые поля {{htmlelement("input")}}  являются самыми базовыми виджетами форм. Эти поля наиболее удобны для пользовательского ввода различной информации. Однако, некоторые текстовые поля отличаются от данного и используются для специфических нужд. Мы уже видели несколько простых примеров.</p>
 
 <div class="note">
-<p><strong>Note</strong>: HTML form text fields are simple plain text input controls. This means that you cannot use them to perform <a href="/en-US/docs/Rich-Text_Editing_in_Mozilla" title="/en-US/docs/Rich-Text_Editing_in_Mozilla">rich editing</a> (bold, italic, etc.). All rich text editors you'll encounter out there are custom widgets created with HTML, CSS, and JavaScript.</p>
+<p><strong>Note</strong>: HTML form text fields are simple plain text input controls. This means that you cannot use them to perform <a href="/en-US/docs/Web/Guide/HTML/Editable_content/Rich-Text_Editing_in_Mozilla" title="/en-US/docs/Rich-Text_Editing_in_Mozilla">rich editing</a> (bold, italic, etc.). All rich text editors you'll encounter out there are custom widgets created with HTML, CSS, and JavaScript.</p>
 </div>
 
 <p>Все текстовые поля имеют общие атрибуты:</p>
@@ -83,8 +83,8 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 <ul>
  <li>Они могут быть помечены как {{htmlattrxref("readonly","input")}} (пользователь не может изменять начальное значение) или даже {{htmlattrxref("disabled","input")}} начальное значение никогда не посылается вместе с остальными данными формами).</li>
  <li>Они могут иметь атрибут {{htmlattrxref("placeholder","input")}}; это текст, который появляется внутри теста поля формы и кратко описывает, для чего используется данная форма.</li>
- <li>Существуют общие характеристики {{htmlattrxref("size","input")}} (физический размер поля) и <a href="/en-US/docs/HTML/Element/input#attr-maxlength" title="/en-US/docs/HTML/Element/input#attr-maxlength">длину</a> (максимальное количество символов, которые может ввести пользователь).</li>
- <li>Они могут быть определены с помощью <a href="/en-US/docs/HTML/Element/input#attr-spellcheck" title="/en-US/docs/HTML/Element/input#attr-spellcheck">spell checking</a>, если браузер поддерживает данную функцию.</li>
+ <li>Существуют общие характеристики {{htmlattrxref("size","input")}} (физический размер поля) и <a href="/en-US/docs/Web/HTML/Element/input#attr-maxlength" title="/en-US/docs/HTML/Element/input#attr-maxlength">длину</a> (максимальное количество символов, которые может ввести пользователь).</li>
+ <li>Они могут быть определены с помощью <a href="/en-US/docs/Web/HTML/Element/input#attr-spellcheck" title="/en-US/docs/HTML/Element/input#attr-spellcheck">spell checking</a>, если браузер поддерживает данную функцию.</li>
 </ul>
 
 <div class="note">
@@ -105,7 +105,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 
 <p>Однострочное текстовое поле имеет только одно настоящее ограничение: если вы вводите текст с разрывами строки, браузер удаляет эти разрывы строк перед отправкой данных.</p>
 
-<p><img alt="Screenshots of single line text fields on several platforms." src="/files/4273/all-single-line-text-field.png" style="height: 235px; width: 655px;"></p>
+<p><img alt="Screenshots of single line text fields on several platforms." src="all-single-line-text-field.png"></p>
 
 <p>HTML5 enhances the basic single line text field by adding special values for the {{htmlattrxref("type","input")}} attribute. Those values still turn an {{HTMLElement("input")}} element into a single line text field but they add a few extra constraints and features to the field.</p>
 
@@ -117,14 +117,14 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 
 <p>Когда используется этот <code>type</code>, пользователь должен ввести в поле валидный адрес электронной почты; любое другое содержание будет отображено браузером при отправке формы как ошибка. Заметьте, что это проверка ошибок на стороне клиента, выполняемая браузером:</p>
 
-<p><img alt="An invalid email input showing the message Please enter an email address." src="https://mdn.mozillademos.org/files/14781/email-invalid.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<p><img alt="An invalid email input showing the message Please enter an email address." src="email-invalid.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p>It's also possible to let the user type several e-mail addresses into the same input (separated by commas) by including the {{htmlattrxref("multiple","input")}} attribute.</p>
 
 <p>On some devices (especially on mobile), a different virtual keypad might be presented that is more suitable for entering email addresses.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can find out more about form validation in the article <a href="/en-US/docs/Learn/HTML/Forms/Form_validation">Form data validation</a>.</p>
+<p><strong>Note</strong>: You can find out more about form validation in the article <a href="/en-US/docs/Learn/Forms/Form_validation">Form data validation</a>.</p>
 </div>
 
 <h4 id="Password_field">Password field</h4>
@@ -147,7 +147,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 
 <p>The main difference between a text field and a search field is how the browser styles it — often, search fields are rendered with rounded corners, and/or given an "x" to press to clear the entered value. However, there is another added feature worth noting: their values can be automatically saved to be auto completed across multiple pages on the same site.</p>
 
-<p><img alt="Screenshots of search fields on several platforms." src="/files/4269/all-search-field.png" style="height: 235px; width: 655px;"></p>
+<p><img alt="Screenshots of search fields on several platforms." src="all-search-field.png"></p>
 
 <h4 id="Phone_number_field">Phone number field</h4>
 
@@ -168,7 +168,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 <div class="note"><strong>Note:</strong> Just because the URL is well-formed doesn't necessarily mean that it refers to a location that actually exists.</div>
 
 <div class="note">
-<p><strong>Note</strong>: Fields that have special constraints and are in error prevent the form from being sent; in addition, they can be styled so as to make the error clear. We will discuss this in detail in the article: <a href="/en-US/docs/HTML/Forms/Data_form_validation" title="/en-US/docs/HTML/Forms/Data_form_validation">Data form validation</a>.</p>
+<p><strong>Note</strong>: Fields that have special constraints and are in error prevent the form from being sent; in addition, they can be styled so as to make the error clear. We will discuss this in detail in the article: <a href="/en-US/docs/Learn/Forms/Form_validation" title="/en-US/docs/HTML/Forms/Data_form_validation">Data form validation</a>.</p>
 </div>
 
 <h3 id="Multi-line_text_fields">Multi-line text fields</h3>
@@ -179,7 +179,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 
 <p>The main difference between a textarea and a regular single line text field is that users are allowed to type text that includes hard line breaks (i.e. pressing return).</p>
 
-<p><img alt="Screenshots of multi-lines text fields on several platforms." src="/files/4271/all-multi-lines-text-field.png" style="height: 330px; width: 745px;"></p>
+<p><img alt="Screenshots of multi-lines text fields on several platforms." src="all-multi-lines-text-field.png"></p>
 
 <div class="note">
 <p><strong>Note</strong>: You can find an example of a multi-line text field on GitHub at <a href="https://github.com/mdn/learning-area/blob/master/html/forms/native-form-widgets/multi-line-text-field.html">multi-line-text-field.html</a> (<a href="https://mdn.github.io/learning-area/html/forms/native-form-widgets/multi-line-text-field.html">see it live also</a>). Have a look at it, and notice how in most browsers, the text area is given a drag handle on the bottom right to allow the user to resize it. This resizing ability can be turned off by setting the text area's {{cssxref("resize")}} property to <code>none</code> using <a href="/en-US/docs/Learn/CSS">CSS</a>.</p>
@@ -257,7 +257,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
   &lt;/optgroup&gt;
 &lt;/select&gt;</pre>
 
-<p><img alt="Screenshots of single line select box on several platforms." src="/files/4517/all-select.png" style="height: 636px; width: 887px;"></p>
+<p><img alt="Screenshots of single line select box on several platforms." src="all-select.png"></p>
 
 <p>If an {{HTMLElement("option")}} element is set with a <code>value</code> attribute, that attribute's value is sent when the form is submitted. If the <code>value</code> attribute is omitted, the content of the {{HTMLElement("option")}} element is used as the select box's value.</p>
 
@@ -275,7 +275,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
   &lt;option&gt;Lemon&lt;/option&gt;
 &lt;/select&gt;</pre>
 
-<p><img alt="Screenshots of multi-lines select box on several platforms." src="/files/4559/all-multi-lines-select.png" style="height: 531px; width: 734px;"></p>
+<p><img alt="Screenshots of multi-lines select box on several platforms." src="all-multi-lines-select.png"></p>
 
 <div class="note"><strong>Note:</strong> All browsers that support the {{HTMLElement("select")}} element also support the {{htmlattrxref("multiple","select")}} attribute on it.</div>
 
@@ -300,9 +300,9 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
   &lt;option&gt;Pear&lt;/option&gt;
 &lt;/datalist&gt;</pre>
 
-<div class="note"><strong>Note:</strong> According to <a href="http://www.w3.org/TR/html5/common-input-element-attributes.html#attr-input-list" rel="external" title="http://www.w3.org/TR/html5/common-input-element-attributes.html#attr-input-list">the HTML specification</a>, the {{htmlattrxref("list","input")}} attribute and the {{HTMLElement("datalist")}} element can be used with any kind of widget requiring a user input. However, it is unclear how it should work with controls other than text (color or date for example), and different browsers behave differently from case to case. Because of that, be cautious using this feature with anything but text fields.</div>
+<div class="note"><strong>Note:</strong> According to <a href="https://www.w3.org/TR/html5/common-input-element-attributes.html#attr-input-list" rel="external">the HTML specification</a>, the {{htmlattrxref("list","input")}} attribute and the {{HTMLElement("datalist")}} element can be used with any kind of widget requiring a user input. However, it is unclear how it should work with controls other than text (color or date for example), and different browsers behave differently from case to case. Because of that, be cautious using this feature with anything but text fields.</div>
 
-<div><img alt="Screenshots of datalist on several platforms." src="/files/4593/all-datalist.png" style="height: 329px; width: 437px;"></div>
+<div><img alt="Screenshots of datalist on several platforms." src="all-datalist.png"></div>
 
 <div></div>
 
@@ -336,11 +336,11 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
  <tbody>
   <tr>
    <th scope="row">Safari 6</th>
-   <td><img alt="Screenshot of the datalist element fallback with Safari on Mac OS" src="/files/4583/datalist-safari.png" style="height: 32px; width: 495px;"></td>
+   <td><img alt="Screenshot of the datalist element fallback with Safari on Mac OS" src="datalist-safari.png"></td>
   </tr>
   <tr>
    <th scope="row">Firefox 18</th>
-   <td><img alt="Screenshot of the datalist element with Firefox on Mac OS" src="/files/4581/datalist-firefox-macos.png" style="height: 102px; width: 353px;"></td>
+   <td><img alt="Screenshot of the datalist element with Firefox on Mac OS" src="datalist-firefox-macos.png"></td>
   </tr>
  </tbody>
 </table>
@@ -368,7 +368,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
 
 <p>Including the <code>checked</code> attribute makes the checkbox checked automatically when the page loads.</p>
 
-<p><img alt="Screenshots of check boxes on several platforms." src="/files/4595/all-checkbox.png" style="height: 198px; width: 352px;"></p>
+<p><img alt="Screenshots of check boxes on several platforms." src="all-checkbox.png"></p>
 
 <h3 id="Radio_button">Radio button</h3>
 
@@ -396,7 +396,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
   &lt;/ul&gt;
 &lt;/fieldset&gt;</pre>
 
-<p><img alt="Screenshots of radio buttons on several platforms." src="/files/4597/all-radio.png" style="height: 198px; width: 352px;"></p>
+<p><img alt="Screenshots of radio buttons on several platforms." src="all-radio.png"></p>
 
 <h2 id="Buttons">Buttons</h2>
 
@@ -448,7 +448,7 @@ original_slug: Learn/HTML/Forms/Стандартные_виджеты_форм
  <li>With {{HTMLElement("button")}} elements, it's possible to have a value different than the button's label (by setting it inside a <code>value</code> attribute). This isn't reliable in versions of Internet Explorer prior to IE 8.</li>
 </ul>
 
-<p><img alt="Screenshots of buttons on several platforms." src="/files/4599/all-buttons.png" style="height: 235px; width: 464px;"></p>
+<p><img alt="Screenshots of buttons on several platforms." src="all-buttons.png"></p>
 
 <p>Technically speaking, there is almost no difference between a button defined with the {{HTMLElement("button")}} element or the {{HTMLElement("input")}} element. The only noticeable difference is the label of the button itself. Within an {{HTMLElement("input")}} element, the label can only be character data, whereas in a {{HTMLElement("button")}} element, the label can be HTML, so it can be styled accordingly.</p>
 
@@ -569,7 +569,7 @@ beans.oninput = function() {
 
 <h3 id="File_picker">File picker</h3>
 
-<p>HTML forms are able to send files to a server; this specific action is detailed in the article <a href="/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data" title="/en-US/docs/HTML/Forms/Sending_and_retrieving_form_data">Sending and retrieving form data</a>. The file picker widget is how the user can choose one or more files to send.</p>
+<p>HTML forms are able to send files to a server; this specific action is detailed in the article <a href="/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data" title="/en-US/docs/HTML/Forms/Sending_and_retrieving_form_data">Sending and retrieving form data</a>. The file picker widget is how the user can choose one or more files to send.</p>
 
 <p>To create a file picker widget, you use the {{HTMLElement("input")}} element with its {{htmlattrxref("type","input")}} attribute set to <code>file</code>. The types of files that are accepted can be constrained using the {{htmlattrxref("accept","input")}} attribute. In addition, if you want to let the user pick more than one file, you can do so by adding the {{htmlattrxref("multiple","input")}} attribute.</p>
 
@@ -606,7 +606,7 @@ beans.oninput = function() {
 
 <pre class="notranslate">http://foo.com?pos.x=123&amp;pos.y=456</pre>
 
-<p>This is a very convenient way to build a "hot map". How these values are sent and retrieved is detailed in the <a href="/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data" title="/en-US/docs/HTML/Forms/Sending_and_retrieving_form_data"><span>Sending and retrieving form data</span></a> article.</p>
+<p>This is a very convenient way to build a "hot map". How these values are sent and retrieved is detailed in the <a href="/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data" title="/en-US/docs/HTML/Forms/Sending_and_retrieving_form_data"><span>Sending and retrieving form data</span></a> article.</p>
 
 <h3 id="Meters_and_progress_bars">Meters and progress bars</h3>
 
@@ -668,8 +668,8 @@ beans.oninput = function() {
 <p>To dig into the different form widgets, there are some useful external resources you should check out:</p>
 
 <ul>
- <li><a href="http://wufoo.com/html5/" rel="external" title="http://wufoo.com/html5/">The Current State of HTML5 Forms</a> by Wufoo</li>
- <li><a href="http://www.quirksmode.org/html5/inputs.html" rel="external" title="http://www.quirksmode.org/html5/inputs.html">HTML5 Tests - inputs</a> on Quirksmode (also <a href="http://www.quirksmode.org/html5/inputs_mobile.html" rel="external" title="http://www.quirksmode.org/html5/inputs_mobile.html">available for mobile</a> browsers)</li>
+ <li><a href="http://wufoo.com/html5/" rel="external">The Current State of HTML5 Forms</a> by Wufoo</li>
+ <li><a href="https://www.quirksmode.org/html5/inputs.html" rel="external">HTML5 Tests - inputs</a> on Quirksmode (also <a href="https://www.quirksmode.org/html5/inputs_mobile.html" rel="external">available for mobile</a> browsers)</li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/HTML/Forms/How_to_structure_an_HTML_form", "Learn/HTML/Forms/Sending_and_retrieving_form_data", "Learn/HTML/Forms")}}</p>
@@ -677,15 +677,15 @@ beans.oninput = function() {
 <h2 id="In_this_module">In this module</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form">Your first HTML form</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form">How to structure an HTML form</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/The_native_form_widgets">The native form widgets</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data">Sending form data</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Form_validation">Form data validation</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/How_to_build_custom_form_widgets">How to build custom form widgets</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript">Sending forms through JavaScript</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/HTML_forms_in_legacy_browsers">HTML forms in legacy browsers</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Styling_HTML_forms">Styling HTML forms</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms">Advanced styling for HTML forms</a></li>
- <li><a href="/en-US/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets">Property compatibility table for form widgets</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Your_first_form">Your first HTML form</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/How_to_structure_a_web_form">How to structure an HTML form</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Basic_native_form_controls">The native form widgets</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data">Sending form data</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Form_validation">Form data validation</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/How_to_build_custom_form_controls">How to build custom form widgets</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Sending_forms_through_JavaScript">Sending forms through JavaScript</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/HTML_forms_in_legacy_browsers">HTML forms in legacy browsers</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Styling_web_forms">Styling HTML forms</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Advanced_form_styling">Advanced styling for HTML forms</a></li>
+ <li><a href="/en-US/docs/Learn/Forms/Property_compatibility_table_for_form_controls">Property compatibility table for form widgets</a></li>
 </ul>

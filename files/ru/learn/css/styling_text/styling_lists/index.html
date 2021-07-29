@@ -8,14 +8,14 @@ original_slug: Learn/CSS/Styling_text/Стилизация_списков
 
 <div>{{PreviousMenuNext("Learn/CSS/Styling_text/Fundamentals", "Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text")}}</div>
 
-<p class="summary"><a href="/en-US/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists">Списки</a>, по-большому счету, ведут себя также как любой другой текст, но существуют некоторые специфичные настройки CSS, о которых вы должны знать. В этой статье они все описываются.</p>
+<p class="summary"><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists">Списки</a>, по-большому счету, ведут себя также как любой другой текст, но существуют некоторые специфичные настройки CSS, о которых вы должны знать. В этой статье они все описываются.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">Требования:</th>
    <td>
-    <p>Базовая компьютерная грамотность, основы HTML (изучите <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Введение в HTML</a>), основы CSS (изучите <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS">Введение в CSS</a>), <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">CSS основы по тексту и шрифтам.</a></p>
+    <p>Базовая компьютерная грамотность, основы HTML (изучите <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Введение в HTML</a>), основы CSS (изучите <a href="/en-US/docs/Learn/CSS/First_steps">Введение в CSS</a>), <a href="/en-US/docs/Learn/CSS/Styling_text/Fundamentals">CSS основы по тексту и шрифтам.</a></p>
    </td>
   </tr>
   <tr>
@@ -27,7 +27,7 @@ original_slug: Learn/CSS/Styling_text/Стилизация_списков
 
 <h2 id="Пример_простого_списка">Пример простого списка</h2>
 
-<p>Для начала, давайте взглянем на пример простого списка. В данной статье мы рассмотрим ненумерованный, нумерованный и описательный списки  — все они имеют аналогичные свойства стилизации, но некоторые имеют свои специальные свойства. Не стилизованный пример <a href="http://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html">доступен на Github</a> (проверьте также <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/unstyled-list.html">источник кода</a>.)</p>
+<p>Для начала, давайте взглянем на пример простого списка. В данной статье мы рассмотрим ненумерованный, нумерованный и описательный списки  — все они имеют аналогичные свойства стилизации, но некоторые имеют свои специальные свойства. Не стилизованный пример <a href="https://mdn.github.io/learning-area/css/styling-text/styling-lists/unstyled-list.html">доступен на Github</a> (проверьте также <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/unstyled-list.html">источник кода</a>.)</p>
 
 <p>HTML для нашего примера списка представлен ниже:</p>
 
@@ -83,7 +83,7 @@ paragraph for reference, paragraph for reference, paragraph for reference.&lt;/p
 
 <h2 id="Управление_интервалами_списков">Управление интервалами списков</h2>
 
-<p>При оформлении списков, вам необходимо настроить их стили так, чтоб они сохраняли то же вертикальное расстояние, что и окружающие их элементы (такие как параграфы и изображения; иногда называемые вертикальным ритмом) и то же расстояние по горизонтали как и между собой (посмотреть <a href="http://mdn.github.io/learning-area/css/styling-text/styling-lists/">законченный стилизированный пример</a> на Github, а также <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/index.html">найти исходный код</a>.)</p>
+<p>При оформлении списков, вам необходимо настроить их стили так, чтоб они сохраняли то же вертикальное расстояние, что и окружающие их элементы (такие как параграфы и изображения; иногда называемые вертикальным ритмом) и то же расстояние по горизонтали как и между собой (посмотреть <a href="https://mdn.github.io/learning-area/css/styling-text/styling-lists/">законченный стилизированный пример</a> на Github, а также <a href="https://github.com/mdn/learning-area/blob/master/css/styling-text/styling-lists/index.html">найти исходный код</a>.)</p>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">CSS, используемый для оформления текста и интервалов, выглядит следующим образом:</span></span></p>
 
@@ -148,7 +148,7 @@ dd {
 
 <p>Это даёт нам следующий вид:</p>
 
-<p><img alt="an ordered list with the bullet points set to appear outside the list item text." src="https://mdn.mozillademos.org/files/12962/outer-bullets.png" style="border-style: solid; border-width: 1px; display: block; height: 119px; margin: 0px auto; width: 376px;"></p>
+<p><img alt="an ordered list with the bullet points set to appear outside the list item text." src="outer-bullets.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Вы можете найти гораздо больше опций, заглянув на справочную страницу {{cssxref ("list-style-type")}}.</span></span></p>
 
@@ -163,7 +163,7 @@ dd {
   list-style-position: inside;
 }</pre>
 
-<p><img alt="an ordered list with the bullet points set to appear inside the list item text." src="https://mdn.mozillademos.org/files/12958/inner-bullets.png" style="border-style: solid; border-width: 1px; display: block; height: 123px; margin: 0px auto; width: 370px;"></p>
+<p><img alt="an ordered list with the bullet points set to appear inside the list item text." src="inner-bullets.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h3 id="Использование_пользовательского_изображения_как_маркер">Использование пользовательского изображения как маркер</h3>
 
@@ -173,7 +173,7 @@ dd {
   list-style-image: url(star.svg);
 }</pre>
 
-<p><span class="tlid-translation translation" lang="ru"><span title="">Однако это свойство немного ограничено с точки зрения управления позициями</span></span>, размерами (и т.д.) маркеров. <span class="tlid-translation translation" lang="ru"><span title="">Вам лучше использовать семейство свойств {{cssxref ("background")}}, о которых вы узнаете намного больше в модуле </span></span><a href="/en-US/docs/Learn/CSS/Styling_boxes">Styling boxes</a><span class="tlid-translation translation" lang="ru"><span title="">.</span> <span title="">А пока вот вам образец для дегустации!</span></span></p>
+<p><span class="tlid-translation translation" lang="ru"><span title="">Однако это свойство немного ограничено с точки зрения управления позициями</span></span>, размерами (и т.д.) маркеров. <span class="tlid-translation translation" lang="ru"><span title="">Вам лучше использовать семейство свойств {{cssxref ("background")}}, о которых вы узнаете намного больше в модуле </span></span><a href="/en-US/docs/Learn/CSS/Building_blocks">Styling boxes</a><span class="tlid-translation translation" lang="ru"><span title="">.</span> <span title="">А пока вот вам образец для дегустации!</span></span></p>
 
 <p>В нашем законченном примере мы оформили неупорядоченный список следующим образом (<span class="tlid-translation translation" lang="ru"><span title="">поверх того, что вы уже видели выше</span></span>):</p>
 
@@ -207,7 +207,7 @@ ul li {
 
 <p>Это даёт нам следующий результат:</p>
 
-<p><img alt="an unordered list with the bullet points set as little star images" src="https://mdn.mozillademos.org/files/16226/list_formatting.png" style="border-style: solid; border-width: 1px; display: block; height: 106px; margin: 0px auto; width: 124px;"></p>
+<p><img alt="an unordered list with the bullet points set as little star images" src="list_formatting.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
 <h3 id="короткая_запись_list-style">короткая запись list-style</h3>
 
@@ -386,5 +386,5 @@ window.addEventListener("load", drawOutput);
  <li><a href="/en-US/docs/Learn/CSS/Styling_text/Styling_lists">Стилизация списков</a></li>
  <li><a href="/en-US/docs/Learn/CSS/Styling_text/Styling_links">Стилизация ссылок</a></li>
  <li><a href="/en-US/docs/Learn/CSS/Styling_text/Web_fonts">Веб-шрифты</a></li>
- <li><a href="/en-US/Learn/CSS/Styling_text/Typesetting_a_homepage">Вёрстка домашней страницы общественной школы</a></li>
+ <li><a href="/en-US/docs/Learn/CSS/Styling_text/Typesetting_a_homepage">Вёрстка домашней страницы общественной школы</a></li>
 </ul>

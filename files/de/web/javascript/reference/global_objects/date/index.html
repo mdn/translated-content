@@ -39,7 +39,7 @@ new Date(<var>year</var>, <var>monthIndex</var> [, <var>day</var> [, <var>hour <
 
 <dl>
  <dt><code>dateString</code></dt>
- <dd>String der ein Datum repräsentiert. Der String muss in einem Format vorliegen, der von der {{jsxref("Date.parse()")}} Methode eingelesen werden kann (<a class="external" href="http://tools.ietf.org/html/rfc2822#page-14" title="http://tools.ietf.org/html/rfc2822#page-14">IETF-compliant RFC 2822 Zeitstempel</a> und auch eine <a href="http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15">Version von ISO8601</a>).
+ <dd>String der ein Datum repräsentiert. Der String muss in einem Format vorliegen, der von der {{jsxref("Date.parse()")}} Methode eingelesen werden kann (<a class="external" href="http://tools.ietf.org/html/rfc2822#page-14">IETF-compliant RFC 2822 Zeitstempel</a> und auch eine <a href="http://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15">Version von ISO8601</a>).
  <p><strong>Anmerkung:</strong> Von dem Einlesen eines Zeitstempel-Strings durch den <code>Date</code> Konstruktor (und <code>Date.parse</code>, denn diese Funktion ist äquivalent) wird stark abgeraten, wegen der Unterschiede in den Browsern und Inkonsistenzen. Die Unterstützung für RFC 2822 formatierte Strings ist nur eine Konvention. Unterstützung für ISO 8601 formatierte Strings unterscheidet sich in den Strings mit nur einem Datum (z. B. "1970-01-01") werden nur als UTC behandelt und nicht als lokales Daten.</p>
  </dd>
 </dl>

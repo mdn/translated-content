@@ -16,7 +16,7 @@ original_slug: Web/JavaScript/Reference/Operators/可选链
 ---
 <div>{{JSSidebar("Operators")}}</div>
 
-<p><strong>可选链</strong>操作符( <strong><code>?.</code></strong> )允许读取位于连接对象链深处的属性的值，而不必明确验证链中的每个引用是否有效。<code>?.</code> 操作符的功能类似于 <code>.</code> 链式操作符，不同之处在于，在引用为空(<a href="https://wiki.developer.mozilla.org/en-US/docs/Glossary/nullish">nullish</a> ) ({{JSxRef("null")}} 或者 {{JSxRef("undefined")}}) 的情况下不会引起错误，该表达式短路返回值是 <code>undefined</code>。与函数调用一起使用时，如果给定的函数不存在，则返回 <code>undefined</code>。</p>
+<p><strong>可选链</strong>操作符( <strong><code>?.</code></strong> )允许读取位于连接对象链深处的属性的值，而不必明确验证链中的每个引用是否有效。<code>?.</code> 操作符的功能类似于 <code>.</code> 链式操作符，不同之处在于，在引用为空(<a href="/zh-CN/docs/Glossary/nullish">nullish</a> ) ({{JSxRef("null")}} 或者 {{JSxRef("undefined")}}) 的情况下不会引起错误，该表达式短路返回值是 <code>undefined</code>。与函数调用一起使用时，如果给定的函数不存在，则返回 <code>undefined</code>。</p>
 
 <p>当尝试访问可能不存在的对象属性时，可选链操作符将会使表达式更短、更简明。在探索一个对象的内容时，如果不能确定哪些属性必定存在，可选链操作符也是很有帮助的。</p>
 

@@ -25,7 +25,7 @@ original_slug: Learn/HTML/Введение_в_HTML/Начало_работы
  <tbody>
   <tr>
    <th scope="row">Необходимые знания:</th>
-   <td>Умение работать с компьютером, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">наличие необходимого ПО</a>, базовые знания о <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">работе с файлами</a>.</td>
+   <td>Умение работать с компьютером, <a href="/ru/docs/Learn/Getting_started_with_the_web/Installing_basic_software">наличие необходимого ПО</a>, базовые знания о <a href="/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files">работе с файлами</a>.</td>
   </tr>
   <tr>
    <th scope="row">Цель:</th>
@@ -63,7 +63,7 @@ original_slug: Learn/HTML/Введение_в_HTML/Начало_работы
  <li><strong>Элемент:</strong> открывающий тег + закрывающий тег + содержимое = элемент.</li>
 </ol>
 
-<h3 id="Активное_изучение_создание_вашего_первого_HTML_элемента">Активное изучение: создание вашего первого HTML элемента</h3>
+<h3 id="active_learning_adding_attributes_to_an_element">Активное изучение: создание вашего первого HTML элемента</h3>
 
 <p>Отредактируйте строку текста ниже в поле <em>Ввод</em>, обернув её тегами <code>&lt;em&gt;</code> и <code>&lt;/em&gt;</code> (вставьте <code>&lt;em&gt;</code> перед строкой, чтобы <em>указать начало элемента</em>, и <code>&lt;/em&gt;</code> после неё, чтобы <em>указать конец элемента</em>) — эти действия должны выделить строку текста курсивом! Вы можете видеть изменения в реальном времени в поле <em>Вывод</em>.</p>
 
@@ -193,8 +193,6 @@ textarea.onkeyup = function(){
 
 <h3 id="Вложенные_элементы">Вложенные элементы</h3>
 
-<h3 id="Nesting_elements" class="hidden">Nesting_elements</h3>
-
 <p>Вы также можете вкладывать элементы внутрь других элементов — это называется <strong>вложенностью</strong>. Если мы хотим подчеркнуть, что наш кот <strong>очень</strong> сердитый, мы можем заключить слово "очень" в элемент {{htmlelement("strong")}} , который означает, что это слово крайне важно в данном контексте:</p>
 
 <pre class="brush: html notranslate">&lt;p&gt;Мой кот &lt;strong&gt;очень&lt;/strong&gt;  сердитый.&lt;/p&gt;</pre>
@@ -205,9 +203,7 @@ textarea.onkeyup = function(){
 
 <p>Элементы должны открываться и закрываться правильно таким образом, чтобы явно находиться внутри или снаружи друг друга. Если они перекрываются так, как в примере выше, то ваш браузер попытается «додумать» за вас, что вы имели в виду, и вы получите непредсказуемый результат. Так что не делайте так!</p>
 
-<h3 id="Блочные_и_строчные_элементы">Блочные и строчные элементы</h3>
-
-<h3 id="Block_versus_inline_elements" class="hidden">Block versus inline elements</h3>
+<h3 id="Block_versus_inline_elements">Блочные и строчные элементы</h3>
 
 <p>Существует две важных категории элементов в HTML, которые вам стоит знать — элементы блочного уровня и строчные элементы.</p>
 
@@ -223,25 +219,23 @@ textarea.onkeyup = function(){
 &lt;p&gt;четвёртый&lt;/p&gt;&lt;p&gt;пятый&lt;/p&gt;&lt;p&gt;шестой&lt;/p&gt;
 </pre>
 
-<p>{{htmlelement("em")}} — это строчный элемент, так что, как вы здесь видите, первые три элемента находятся на одной строке друг с другом без пробелов между ними. С другой стороны, {{htmlelement("p")}} — это элемент блочного уровня, так что каждый элемент находится на новой строке, с пространством выше и ниже каждого (этот интервал определяется <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS">CSS-оформлением</a> по умолчанию, которое браузеры применяют к абзацам).</p>
+<p>{{htmlelement("em")}} — это строчный элемент, так что, как вы здесь видите, первые три элемента находятся на одной строке друг с другом без пробелов между ними. С другой стороны, {{htmlelement("p")}} — это элемент блочного уровня, так что каждый элемент находится на новой строке, с пространством выше и ниже каждого (этот интервал определяется <a href="/en-US/docs/Learn/CSS/First_steps">CSS-оформлением</a> по умолчанию, которое браузеры применяют к абзацам).</p>
 
 <p>{{ EmbedLiveSample('Block_versus_inline_elements', 700, 200, "", "") }}</p>
 
 <div class="note">
-<p><strong>Примечание</strong>: HTML5 переопределил категории элементов в HTML: смотрите <a href="http://www.whatwg.org/specs/web-apps/current-work/complete/section-index.html#element-content-categories">Категории типов содержимого элементов</a>. Хотя эти определения точнее и однозначнее, чем те, которые были раньше, их гораздо сложнее понять, чем «блочный» и «строчный», поэтому мы будем придерживаться их в этом разделе.</p>
+<p><strong>Примечание</strong>: HTML5 переопределил категории элементов в HTML: смотрите <a href="https://www.whatwg.org/specs/web-apps/current-work/complete/section-index.html#element-content-categories">Категории типов содержимого элементов</a>. Хотя эти определения точнее и однозначнее, чем те, которые были раньше, их гораздо сложнее понять, чем «блочный» и «строчный», поэтому мы будем придерживаться их в этом разделе.</p>
 </div>
 
 <div class="note">
-<p><strong>Примечание</strong>: Не путайте термины «блочный» и «строчный», используемые в этом разделе, с одноимёнными <a href="/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model#Types_of_CSS_boxes">типами отображения в CSS</a>. Хотя по умолчанию они коррелируют, смена типа отображения в CSS не меняет категорию элемента и не влияет на то, во что его можно вкладывать и что можно вкладывать в него. Эта довольно частая путаница — одна из причин, почему HTML5 отказался от этих терминов.</p>
+<p><strong>Примечание</strong>: Не путайте термины «блочный» и «строчный», используемые в этом разделе, с одноимёнными <a href="/ru/docs/Learn/CSS/Building_blocks/The_box_model#экскурс_внутренний_и_внешний_типы_отображения">типами отображения в CSS</a>. Хотя по умолчанию они коррелируют, смена типа отображения в CSS не меняет категорию элемента и не влияет на то, во что его можно вкладывать и что можно вкладывать в него. Эта довольно частая путаница — одна из причин, почему HTML5 отказался от этих терминов.</p>
 </div>
 
 <div class="note">
 <p><strong>Примечание</strong>: вам могут пригодиться справочники, включающие списки блочных и строчных элементов — смотри <a href="/en-US/docs/Web/HTML/Block-level_elements">Элементы блочного уровня</a> и <a href="/en-US/docs/Web/HTML/Inline_elements">Строчные элементы</a>.</p>
 </div>
 
-<h3 id="Пустые_элементы">Пустые элементы</h3>
-
-<h3 id="Empty_elements" class="hidden">Empty elements</h3>
+<h3 id="Empty_elements">Пустые элементы</h3>
 
 <p>Не все элементы соответствуют вышеупомянутому шаблону: открывающий тег, контент, закрывающий тег. Некоторые элементы состоят из одного тега и обычно используются для вставки чего-либо в то место документа, где размещены. Например, элемент {{htmlelement("img")}} вставляет картинку на страницу в том самом месте, где он расположен:</p>
 
@@ -259,7 +253,7 @@ textarea.onkeyup = function(){
 
 <p>У элементов также могут быть атрибуты, которые выглядят так:</p>
 
-<p><img alt='&amp;amp;amp;lt;p class="editor-note">My cat is very grumpy&amp;amp;amp;lt;/p>' src="https://mdn.mozillademos.org/files/9345/grumpy-cat-attribute-small.png" style="display: block; height: 156px; margin: 0px auto; width: 1287px;"></p>
+<p><img alt='&amp;amp;amp;lt;p class="editor-note">My cat is very grumpy&amp;amp;amp;lt;/p>' src="grumpy-cat-attribute-small.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Атрибуты содержат дополнительную информацию об элементе, которая, по вашему мнению, не должна отображаться в содержимом элемента. В данном случае атрибут <code>class</code> позволяет вам дать элементу идентификационное имя, которое в дальнейшем может быть использовано для обращения к элементу с информацией о стиле и прочими вещами.</p>
 
@@ -272,8 +266,6 @@ textarea.onkeyup = function(){
 </ol>
 
 <h3 id="Активное_изучение_Добавление_атрибутов_в_элемент">Активное изучение: Добавление атрибутов в элемент</h3>
-
-<h3 id="Active_learning_Adding_attributes_to_an_element" class="hidden">Active learning: Adding attributes to an element</h3>
 
 <p>Возьмём для примера элемент {{htmlelement("a")}} — означает anchor (якорь) и делает текст внутри него гиперссылкой. Может иметь несколько атрибутов, вот несколько из них:</p>
 
@@ -408,9 +400,7 @@ textarea.onkeyup = function(){
 
 <p>{{ EmbedLiveSample('Playable_code2', 700, 400, "", "", "hide-codepen-jsfiddle") }}</p>
 
-<h3 id="Булевые_атрибуты">Булевые атрибуты</h3>
-
-<h3 id="Boolean_attributes" class="hidden">Boolean attributes</h3>
+<h3 id="Boolean_attributes">Булевые атрибуты</h3>
 
 <p>Иногда вы будете видеть атрибуты, написанные без значения — это совершенно допустимо.  Такие атрибуты называются булевые, и они могут иметь только одно значение, которое в основном совпадает с его именем. В качестве примера возьмём атрибут {{htmlattrxref("disabled", "input")}}, который можно назначить для формирования элементов ввода, если вы хотите, чтобы они были отключены (неактивны), так что пользователь не может вводить какие-либо данные в них.</p>
 
@@ -427,9 +417,7 @@ textarea.onkeyup = function(){
 
 <p>{{ EmbedLiveSample('Boolean_attributes', 700, 100, "", "", "hide-codepen-jsfiddle") }}</p>
 
-<h3 id="Опускание_кавычек_вокруг_значений_атрибутов">Опускание кавычек вокруг значений атрибутов</h3>
-
-<h3 id="Omitting_quotes_around_attribute_values" class="hidden">Omitting quotes around attribute values</h3>
+<h3 id="Omitting_quotes_around_attribute_values">Опускание кавычек вокруг значений атрибутов</h3>
 
 <p>Осматриваясь во всемирной сети, вы будете встречать различные незнакомые способы написания разметки, включая написание значений атрибутов без кавычек. Это допустимо при определённых условиях, но разрушит вашу разметку при других. Например, возвращаясь к нашему упражнению с гиперссылкой, мы можем написать основной вариант только с атрибутом <code>href</code> так:</p>
 
@@ -447,8 +435,6 @@ textarea.onkeyup = function(){
 
 <h3 id="Одинарные_или_двойные_кавычки">Одинарные или двойные кавычки?</h3>
 
-<h3 id="Single_or_double_quotes" class="hidden">Single or double quotes?</h3>
-
 <p>В этой статье вы заметите, что все атрибуты заключены в двойные кавычки. Однако, вы можете видеть одинарные кавычки в HTML документах других людей. Это исключительно дело вкуса, и вы можете свободно выбирать, какие из них предпочитаете. Обе следующие строки эквивалентны:</p>
 
 <pre class="brush: html notranslate">&lt;a href="http://www.example.com"&gt;Ссылка к моему примеру.&lt;/a&gt;
@@ -463,7 +449,7 @@ textarea.onkeyup = function(){
 
 <pre class="brush: html notranslate">&lt;a href="http://www.example.com" title="Isn't this fun?"&gt;A link to my example.&lt;/a&gt;</pre>
 
-<p>Если вы хотите вставить кавычки того же типа, то вы должны использовать <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#Entity_references_Including_special_characters_in_HTML">объекты HTML</a>. Например, это работать не будет:</p>
+<p>Если вы хотите вставить кавычки того же типа, то вы должны использовать <a href="/ru/docs/Learn/HTML/Introduction_to_HTML/Getting_started#entity_references_including_special_characters_in_html">объекты HTML</a>. Например, это работать не будет:</p>
 
 <pre class="example-bad brush: html notranslate">&lt;a href='http://www.example.com' title='Isn't this fun?'&gt;A link to my example.&lt;/a&gt;</pre>
 
@@ -503,8 +489,6 @@ textarea.onkeyup = function(){
 
 <h3 id="Активное_изучение_Добавление_элементов_в_ваш_HTML-документ">Активное изучение: Добавление элементов в ваш HTML-документ</h3>
 
-<h3 id="Active_learning_Adding_some_features_to_an_HTML_document" class="hidden">Active learning: Adding some features to an HTML document</h3>
-
 <p>Если вы хотите поэкспериментировать с написанием HTML на своём компьютере, то можете:</p>
 
 <ol>
@@ -527,8 +511,8 @@ textarea.onkeyup = function(){
  <li>Добавьте заголовок страницы сразу за открывающим тегом {{htmlelement("body")}}. Текст должен находиться между открывающим тегом <code>&lt;h1&gt;</code> и закрывающим <code>&lt;/h1&gt;</code> .</li>
  <li>Напишите в параграфе о чём-нибудь, что кажется вам интересным.</li>
  <li>Выделите важные слова, обернув их в открывающий тег <code>&lt;strong&gt;</code> и закрывающий <code>&lt;/strong&gt;</code></li>
- <li>Добавьте ссылку на свой абзац так, как <a href="/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Active_learning_Adding_attributes_to_an_element">объяснено ранее в статье</a>.</li>
- <li>Добавьте изображение в свой документ под абзацем, как <a href="/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Empty_elements">объяснено ранее в статье</a>. Если сможете использовать другую картинку (со своего компьютера или из интернета). Вы большой молодец!</li>
+ <li>Добавьте ссылку на свой абзац так, как <a href="/ru/docs/Learn/HTML/Introduction_to_HTML/Getting_started#active_learning_adding_attributes_to_an_element">объяснено ранее в статье</a>.</li>
+ <li>Добавьте изображение в свой документ под абзацем, как <a href="/ru/docs/Learn/HTML/Introduction_to_HTML/Getting_started#empty_elements">объяснено ранее в статье</a>. Если сможете использовать другую картинку (со своего компьютера или из интернета). Вы большой молодец!</li>
 </ul>
 
 <p>Если вы запутались, всегда можно запустить пример сначала кнопкой <em>Сбросить</em>. Сдаётесь — посмотрите ответ, нажав на <em>Показать решение</em>.</p>
@@ -660,8 +644,6 @@ textarea.onkeyup = function(){
 
 <h3 id="Пробелы_в_HTML">Пробелы в HTML</h3>
 
-<h3 id="Whitespace_in_HTML" class="hidden">Whitespace in HTML</h3>
-
 <p>Вы могли заметить, что в примерах кода из этой статьи много пробелов. Это вовсе не обязательно — следующие два примера эквивалентны:</p>
 
 <pre class="brush: html notranslate">&lt;p&gt;Собаки глупы.&lt;/p&gt;
@@ -671,9 +653,7 @@ textarea.onkeyup = function(){
 
 <p>Не важно, сколько пустого места вы используете в разметке (что может включать пробелы и сдвиги строк): браузер при анализе кода сократит всё пустое место до одного пробела. Зачем использовать много пробелов? Ответ: это доступность для понимания — гораздо легче разобраться, что происходит в вашем коде, если он удобно отформатирован, а не просто собран вместе в одном большом беспорядке. В нашем коде каждый вложенный элемент сдвинут на два пробела относительно элемента, в котором он находится. Вы можете использовать любое форматирование (в частности, количество пробелов для отступа), но лучше придерживаться одного стиля.</p>
 
-<h2 id="Ссылки_на_сущности_Включение_специальных_символов_в_HTML">Ссылки на сущности: Включение специальных символов в HTML</h2>
-
-<h2 id="Entity_references_Including_special_characters_in_HTML" class="hidden">Entity references: Including special characters in HTML</h2>
+<h2 id="Entity_references_Including_special_characters_in_HTML">Ссылки на сущности: Включение специальных символов в HTML</h2>
 
 <p>В HTML символы <code>&lt;</code>, <code>&gt;</code>, <code>"</code>, <code>'</code> и <code>&amp;</code> являются специальными. Они являются частью самого синтаксиса HTML. Так как же включить в текст один из этих специальных символов? Например, если вы хотите использовать амперсанд или знак «меньше» и не интерпретировать его как код.</p>
 
@@ -724,9 +704,7 @@ textarea.onkeyup = function(){
 <p><strong>Примечание</strong>: Таблица всех доступных в  HTML символов-мнемоников — в Википедии: <a class="external text" href="http://en.wikipedia.org/wiki/List_of_XML_and_HTML_character_entity_references" rel="nofollow">List of XML and HTML character entity references</a>.</p>
 </div>
 
-<h2 id="HTML_комментарии">HTML комментарии</h2>
-
-<h2 id="HTML_comments" class="hidden">HTML comments</h2>
+<h2 id="HTML_comments">HTML комментарии</h2>
 
 <p>В HTML, как и в большинстве языков программирования, есть возможность писать комментарии в коде. Комментарии игнорируются обозревателем и не видны пользователю, их добавляют для того, чтобы пояснить, как работает написанный код, что делают отдельные его части и т. д. Такая практика полезна, если вы возвращаетесь к коду, который давно не видели или когда хотите передать его кому-то другому.</p>
 

@@ -26,7 +26,7 @@ var odkodowaneDane = window.atob(zakodowaneDane); // odkodowywanie ciągu ("Hell
 <p><code>btoa()</code> jest także dostępne dla komponentów XPCOM zaimplementowanych w JavaScript, nawet jeżeli <a href="/pl/docs/DOM/window" title="DOM/window"><code>window</code></a> nie jest globalnym obiektem w komponencie.</p>
 <h2 id="Ciągi_Unicode">Ciągi Unicode</h2>
 <p>W większości przeglądarek odwołanie się do <code>window.btoa()</code> z ciągiem Unicode spowoduje wystąpienie wyjątku <code>Character Out Of Range</code>.</p>
-<p>Aby tego uniknąć, rozważ ten model odnotowany przez <a class="external" href="http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html" title="http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html">Johana Sundströma</a>:</p>
+<p>Aby tego uniknąć, rozważ ten model odnotowany przez <a class="external" href="http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html">Johana Sundströma</a>:</p>
 <pre class="brush:js">function utf8_to_b64( str ) {
     return window.btoa(encodeURIComponent( escape( str )));
 }

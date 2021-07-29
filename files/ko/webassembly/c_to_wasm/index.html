@@ -68,7 +68,7 @@ int main(int argc, char ** argv) {
 <p>이제 WebAssembly를 지원하는 브라우저에서 <code>hello.html</code>을 로드해야합니다. Firefox 52+ 및 Chrome 57+, 최신 Opera에서 기본적으로 활성화됩니다 (about:config 또는 <code>javascript.options.wasm</code> 플래그를 활성화하여 Firefox 47+에서 wasm 코드를 실행하거나 Chrome (51+) 및 Opera (38+) <em>chrome://flags</em>로 이동하여 Experimental WebAssembly 플래그를 사용하도록 설정합니다.)</p>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: 생성된 HTML 파일 (<code>hello.html</code>) 을 로컬 하드(예: <code>file://your_path/hello.html</code>)에서 직접 읽으려고 하면 wasm의 동기, 비동기 패치(fetch)라인에 따라 에러메시지가 표시됩니다. HTTP 서버로 HTML파일을 실행해야 합니다. — <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server">로컬 테스팅 서버를 셋업하는 방법</a>을 참고하세요.</p>
+<p><strong>Note</strong>: 생성된 HTML 파일 (<code>hello.html</code>) 을 로컬 하드(예: <code>file://your_path/hello.html</code>)에서 직접 읽으려고 하면 wasm의 동기, 비동기 패치(fetch)라인에 따라 에러메시지가 표시됩니다. HTTP 서버로 HTML파일을 실행해야 합니다. — <a href="/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server">로컬 테스팅 서버를 셋업하는 방법</a>을 참고하세요.</p>
 </div>
 
 <p>모든 것이 계획대로 작동했다면 Emscripten 콘솔의 "Hello world" 출력이 웹 페이지와 브라우저의 JavaScript 콘솔에 나타나야 합니다. 축하합니다. WebAssembly에 C를 컴파일하고 브라우저에서 실행했습니다!</p>

@@ -300,7 +300,7 @@ translation_of: Web/HTML/Element/input
 
 <table>
  <caption>
- <p>{{htmlelement('input')}}元素的属性包括<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes">全局HTML属性</a>和以下属性：</p>
+ <p>{{htmlelement('input')}}元素的属性包括<a href="/zh-CN/docs/Web/HTML/Global_attributes">全局HTML属性</a>和以下属性：</p>
 
  <table>
   <thead>
@@ -434,12 +434,12 @@ translation_of: Web/HTML/Element/input
     <td>当表单控件为空时，控件中显示的内容</td>
    </tr>
    <tr>
-    <td><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Attributes/readonly">readonly</a></td>
+    <td><a href="/zh-CN/docs/Web/HTML/Attributes/readonly">readonly</a></td>
     <td>绝大部分</td>
     <td>布尔值。存在时表示控件的值不可编辑</td>
    </tr>
    <tr>
-    <td><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Attributes/required">required</a></td>
+    <td><a href="/zh-CN/docs/Web/HTML/Attributes/required">required</a></td>
     <td>绝大部分</td>
     <td>布尔值。表示此值为必填项或者提交表单前必须先检查该值</td>
    </tr>
@@ -556,7 +556,7 @@ translation_of: Web/HTML/Element/input
  </dd>
  <dt>{{ htmlattrdef("checked") }}</dt>
  <dd>如果该元素的<strong>type</strong>属性的值为<span style="font-family: courier new;">radio或者</span><span style="font-family: courier new;">checkbox</span>,则该布尔属性的存在与否表明了该控件是否是默认选择状态。
- <p>If present on a <code>checkbox</code> type, it indicates that the checkbox is checked by default (when the page loads). It does <em>not</em> indicate whether this checkbox is currently checked: if the checkbox’s state is changed, this content attribute does not reflect the change. (Only the <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement"><code>HTMLInputElement</code>’s <code>checked</code> IDL attribute</a> is updated.)</p>
+ <p>If present on a <code>checkbox</code> type, it indicates that the checkbox is checked by default (when the page loads). It does <em>not</em> indicate whether this checkbox is currently checked: if the checkbox’s state is changed, this content attribute does not reflect the change. (Only the <a href="/zh-CN/docs/Web/API/HTMLInputElement"><code>HTMLInputElement</code>’s <code>checked</code> IDL attribute</a> is updated.)</p>
 
  <div class="note">
  <p><strong>Note:</strong> Unlike other input controls, a checkboxes and radio buttons value are only included in the submitted data if they are currently <code>checked</code>. If they are, the name and the value(s) of the checked controls are submitted.</p>
@@ -672,7 +672,7 @@ translation_of: Web/HTML/Element/input
 
 <p>Per the specifications, the <code>list</code> attribute is not supported by the <code>hidden</code>, <code>password</code>, <code>checkbox</code>, <code>radio</code>, <code>file</code>, or any of the button types.</p>
 
-<p>Depending on the browser, the user may see a custom color palette suggested, tic marks along a range, or even a input that opens like a select but allows for non-listed values. Check out the <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Element/datalist#Browser_compatibility">browser compatibility table</a> for the other input types.</p>
+<p>Depending on the browser, the user may see a custom color palette suggested, tic marks along a range, or even a input that opens like a select but allows for non-listed values. Check out the <a href="/zh-CN/docs/Web/HTML/Element/datalist#Browser_compatibility">browser compatibility table</a> for the other input types.</p>
 
 <p>See the {{htmlelement('datalist')}} element.</p>
 
@@ -687,7 +687,7 @@ translation_of: Web/HTML/Element/input
  <dd>
  <p>Valid for <code>text</code>, <code>search</code>, <code>url</code>, <code>tel</code>, <code>email</code>, and <code>password</code>, it defines the minimum number of characters (as UTF-16 code units) the user can enter into the entry field. This must be an non-negative integer value smaller than or equal to the value specified by <code>maxlength</code>. If no <code>minlength</code> is specified, or an invalid value is specified, the input has no minimum length.</p>
 
- <p>The input will fail <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long, preventing form submission. See {{anch("Client-side validation")}} for more information.</p>
+ <p>The input will fail <a href="/zh-CN/docs/Web/Guide/HTML/HTML5/Constraint_validation">constraint validation</a> if the length of the text entered into the field is fewer than <code>minlength</code> UTF-16 code units long, preventing form submission. See {{anch("Client-side validation")}} for more information.</p>
  </dd>
  <dt>{{ htmlattrdef("multiple") }}{{ HTMLVersionInline(5) }}</dt>
  <dd>This Boolean attribute indicates whether the user can enter more than one value.这个属性指示用户能否输入多个值。这个属性仅在<strong>type</strong>属性为email或file的时候生效 ; 否则被忽视.</dd>
@@ -726,7 +726,7 @@ translation_of: Web/HTML/Element/input
  <dt>{{ htmlattrdef("usemap") }} {{ HTMLVersionInline(4) }} only, {{ obsoleteGeneric("inline", "HTML5") }}</dt>
  <dd>作为图像映射的{{ HTMLElement("map") }}元素的名称.</dd>
  <dt>{{ htmlattrdef("value") }}</dt>
- <dd>控件的初始值. 此属性是可选的，除非<strong>type</strong> 属性是<code>radio</code>或<code>checkbox</code><span style="font-family: courier new;">。</span>注意，当重新加载页面时，如果在重新加载之前更改了值，<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186" title="https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186">Gecko和IE将忽略HTML源代码中指定的值</a>。</dd>
+ <dd>控件的初始值. 此属性是可选的，除非<strong>type</strong> 属性是<code>radio</code>或<code>checkbox</code><span style="font-family: courier new;">。</span>注意，当重新加载页面时，如果在重新加载之前更改了值，<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186">Gecko和IE将忽略HTML源代码中指定的值</a>。</dd>
  <dt>{{ htmlattrdef("width") }} {{ HTMLVersionInline(5) }}</dt>
  <dd>如果<strong>type</strong>属性的值是<span style="font-family: courier new;">image，这个属性定义了按钮图片的宽度。</span></dd>
  <dt>
@@ -820,7 +820,7 @@ translation_of: Web/HTML/Element/input
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/CSS/:placeholder-shown" title="The :placeholder-shown CSS pseudo-class represents any &lt;input> or &lt;textarea> element that is currently displaying placeholder text."><code>:placeholder-shown</code></a></td>
-   <td>Element that is currently displaying <a class="external" href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-placeholder" rel="noopener">placeholder text</a>, including input elements with the <a href="#htmlattrdefplaceholder">placeholder</a> attribute present that has, as of yet, no value.</td>
+   <td>Element that is currently displaying <a class="external" href="/zh-CN/docs/Web/HTML/Element/input#attr-placeholder" rel="noopener">placeholder text</a>, including input elements with the <a href="#htmlattrdefplaceholder">placeholder</a> attribute present that has, as of yet, no value.</td>
   </tr>
   <tr>
    <td><a href="/en-US/docs/Web/CSS/:default" title="The :default CSS pseudo-class selects form elements that are the default in a group of related elements."><code>:default</code></a></td>

@@ -36,7 +36,7 @@ Content-Type: text/html
 
 <h2 id="MIME_type_vs_DOCTYPE">MIME type vs DOCTYPE</h2>
 
-<p>HTML5 이전에는 <a href="http://www.w3.org/TR/html4/" title="http://www.w3.org/TR/html4/">HTML 4.01</a> 과 <a href="http://www.w3.org/TR/xhtml1/">XHTML 1.0</a>  두개의 표준이 두개의 문법으로 분리되어 정의되었습니다. XHTML1 표준에는, XHTML을 사용하기 위해서는 특별한 DOCTYPE을 정의해야 한다고 명시되어있습니다. 하지만 브라우저들은 이 표준을 구현하지 않았고 반대로 HTML5 표준에서 다음과 같이 결정되었습니다. "<strong>content-type을 text/html로  전송한다면 XHTML을 사용하지 않는 것이다."</strong></p>
+<p>HTML5 이전에는 <a href="http://www.w3.org/TR/html4/">HTML 4.01</a> 과 <a href="http://www.w3.org/TR/xhtml1/">XHTML 1.0</a>  두개의 표준이 두개의 문법으로 분리되어 정의되었습니다. XHTML1 표준에는, XHTML을 사용하기 위해서는 특별한 DOCTYPE을 정의해야 한다고 명시되어있습니다. 하지만 브라우저들은 이 표준을 구현하지 않았고 반대로 HTML5 표준에서 다음과 같이 결정되었습니다. "<strong>content-type을 text/html로  전송한다면 XHTML을 사용하지 않는 것이다."</strong></p>
 
 <p>대신, 적절한 MIME 타입은 <code>Content-Type</code> HTTP 헤더에 정의 되어 있어야 합니다. 만약 &lt;meta http-equiv=…&gt; 같은  메타테그에 MIME 타입을 넣었다면 그것은 무시되고 <code>text/html로 간주됩니다.</code>.</p>
 

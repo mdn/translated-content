@@ -60,9 +60,6 @@
 /ru/docs/Firefox_3.5_для_разработчика	/ru/docs/Mozilla/Firefox/Releases/3.5
 /ru/docs/Firefox_3_for_developers	/ru/docs/Mozilla/Firefox/Releases/3
 /ru/docs/Firefox_3_для_разработчика	/ru/docs/Mozilla/Firefox/Releases/3
-/ru/docs/Firefox_addons_developer_guide/Introduction_to_XUL—How_to_build_a_more_intuitive_UI-redirect-1	/ru/docs/Firefox_addons_developer_guide/Introduction_to_XUL—How_to_build_a_more_intuitive_UI
-/ru/docs/Firefox_addons_developer_guide/Знакомство_с_дополнениями	/ru/docs/Firefox_addons_developer_guide/Introduction_to_Extensions
-/ru/docs/Firefox_addons_developer_guide/Технологии_используемые_при_разработке_расширений	/ru/docs/Firefox_addons_developer_guide/Technologies_used_in_developing_extensions
 /ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Заключение	/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
 /ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Обнаружение_столкновений	/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
 /ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Переместить_мяч	/ru/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball
@@ -104,11 +101,9 @@
 /ru/docs/JavaScript	/ru/docs/Web/JavaScript
 /ru/docs/JavaScript/A_re-introduction_to_JavaScript	/ru/docs/Web/JavaScript/A_re-introduction_to_JavaScript
 /ru/docs/JavaScript/Data_structures	/ru/docs/Web/JavaScript/Data_structures
-/ru/docs/JavaScript/ECMAScript_5_support_in_Mozilla	/ru/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_5_support_in_Mozilla
 /ru/docs/JavaScript/Guide	/ru/docs/Web/JavaScript/Guide
 /ru/docs/JavaScript/Guide/Functions	/ru/docs/Web/JavaScript/Guide/Functions
 /ru/docs/JavaScript/Guide/Functions-redirect-1	/ru/docs/Web/JavaScript/Guide/Functions
-/ru/docs/JavaScript/Guide/LiveConnect_Overview	/ru/docs/Web/JavaScript/Guide/LiveConnect_Overview
 /ru/docs/JavaScript/Guide/Regular_Expressions	/ru/docs/Web/JavaScript/Guide/Regular_Expressions
 /ru/docs/JavaScript/Guide/Regular_Expressions-redirect-1	/ru/docs/Web/JavaScript/Guide/Regular_Expressions
 /ru/docs/JavaScript/Guide/Statements	/ru/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
@@ -123,9 +118,6 @@
 /ru/docs/JavaScript/Guide_ru/Замыкания	/ru/docs/Web/JavaScript/Closures
 /ru/docs/JavaScript/Language_Resources	/ru/docs/Web/JavaScript/Language_Resources
 /ru/docs/JavaScript/Memory_Management	/ru/docs/Web/JavaScript/Memory_Management
-/ru/docs/JavaScript/New_in_JavaScript	/ru/docs/Web/JavaScript/New_in_JavaScript
-/ru/docs/JavaScript/New_in_JavaScript/1.8.5	/ru/docs/Web/JavaScript/New_in_JavaScript/1.8.5
-/ru/docs/JavaScript/New_in_JavaScript/Новое_в_JavaScript_1.6	/ru/docs/Web/JavaScript/New_in_JavaScript/1.6
 /ru/docs/JavaScript/Reference	/ru/docs/Web/JavaScript/Reference
 /ru/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode	/ru/docs/Web/JavaScript/Reference/Strict_mode
 /ru/docs/JavaScript/Reference/Global_Objects	/ru/docs/Web/JavaScript/Reference/Global_Objects
@@ -136,7 +128,6 @@
 /ru/docs/JavaScript/Reference/Global_Objects/Array/some	/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/some
 /ru/docs/JavaScript/Reference/Global_Objects/Date	/ru/docs/Web/JavaScript/Reference/Global_Objects/Date
 /ru/docs/JavaScript/Reference/Global_Objects/Date/toLocaleDateString	/ru/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString
-/ru/docs/JavaScript/Reference/Global_Objects/Iterator	/ru/docs/Web/JavaScript/Reference/Global_Objects/Iterator
 /ru/docs/JavaScript/Reference/Global_Objects/Math	/ru/docs/Web/JavaScript/Reference/Global_Objects/Math
 /ru/docs/JavaScript/Reference/Global_Objects/Math/abs	/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/abs
 /ru/docs/JavaScript/Reference/Global_Objects/Math/acos	/ru/docs/Web/JavaScript/Reference/Global_Objects/Math/acos
@@ -288,7 +279,6 @@
 /ru/docs/Mozilla/Add-ons/WebExtensions/Интернационализация	/ru/docs/Mozilla/Add-ons/WebExtensions/Internationalization
 /ru/docs/Mozilla/Add-ons/WebExtensions/модификация_веб_страницы	/ru/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 /ru/docs/Plugins/План	/ru/docs/Plugins/Roadmap
-/ru/docs/QA/Kak_pomoch_testirovat	/ru/docs/QA/Как_помочь_тестировать
 /ru/docs/Quirks_Mode_and_Standards_Mode	/ru/docs/Web/HTML/Quirks_Mode_and_Standards_Mode
 /ru/docs/SVG_In_HTML_Introduction	/ru/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction
 /ru/docs/Sample_.htaccess_file	/ru/docs/Learn/Server-side/Apache_Configuration_htaccess
@@ -384,8 +374,6 @@
 /ru/docs/Web/API/document.designMode	/ru/docs/Web/API/Document/designMode
 /ru/docs/Web/API/document.execCommand	/ru/docs/Web/API/Document/execCommand
 /ru/docs/Web/API/document.querySelector	/ru/docs/Web/API/Document/querySelector
-/ru/docs/Web/API/navigator.id	/ru/docs/Web/API/Navigator/id
-/ru/docs/Web/API/navigator.id.request	/ru/docs/Web/API/IdentityManager/request
 /ru/docs/Web/API/range.getBoundingClientRect	/ru/docs/Web/API/Range/getBoundingClientRect
 /ru/docs/Web/API/Видимость_страницы_API	/ru/docs/Web/API/Page_Visibility_API
 /ru/docs/Web/Apps/Fundamentals/Audio_and_video_delivery	/ru/docs/Web/Guide/Audio_and_video_delivery
@@ -551,7 +539,6 @@
 /ru/docs/Web/HTTP/Заголовки/X-XSS-Protection	/ru/docs/Web/HTTP/Headers/X-XSS-Protection
 /ru/docs/Web/HTTP/Куки	/ru/docs/Web/HTTP/Cookies
 /ru/docs/Web/HTTP/Кэширование	/ru/docs/Web/HTTP/Caching
-/ru/docs/Web/JavaScript/ECMAScript_5_support_in_Mozilla	/ru/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_5_support_in_Mozilla
 /ru/docs/Web/JavaScript/Guide/Closures	/ru/docs/Web/JavaScript/Closures
 /ru/docs/Web/JavaScript/Guide/EventLoop	/ru/docs/Web/JavaScript/EventLoop
 /ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain	/ru/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
@@ -565,14 +552,12 @@
 /ru/docs/Web/JavaScript/Guide_ru/Expressions_and_Operators	/ru/docs/Web/JavaScript/Guide/Expressions_and_Operators
 /ru/docs/Web/JavaScript/Guide_ru/Functions	/ru/docs/Web/JavaScript/Guide/Functions
 /ru/docs/Web/JavaScript/Guide_ru/Inheritance_and_the_prototype_chain_ru	/ru/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
-/ru/docs/Web/JavaScript/Guide_ru/LiveConnect_Overview	/ru/docs/Web/JavaScript/Guide/LiveConnect_Overview
 /ru/docs/Web/JavaScript/Guide_ru/Regular_Expressions	/ru/docs/Web/JavaScript/Guide/Regular_Expressions
 /ru/docs/Web/JavaScript/Guide_ru/Statements	/ru/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /ru/docs/Web/JavaScript/Guide_ru/Values,_variables,_and_literals	/ru/docs/Web/JavaScript/Guide/Grammar_and_types
 /ru/docs/Web/JavaScript/Guide_ru/Working_with_Objects	/ru/docs/Web/JavaScript/Guide/Working_with_Objects
 /ru/docs/Web/JavaScript/Guide_ru/Замыкания	/ru/docs/Web/JavaScript/Closures
 /ru/docs/Web/JavaScript/JavaScript_шеллы	/ru/docs/Web/JavaScript/Shells
-/ru/docs/Web/JavaScript/New_in_JavaScript/Новое_в_JavaScript_1.6	/ru/docs/Web/JavaScript/New_in_JavaScript/1.6
 /ru/docs/Web/JavaScript/Reference/Classes/Class_fields	/ru/docs/Web/JavaScript/Reference/Classes/Public_class_fields
 /ru/docs/Web/JavaScript/Reference/Classes/Приватные_поля_класса	/ru/docs/Web/JavaScript/Reference/Classes/Private_class_fields
 /ru/docs/Web/JavaScript/Reference/Errors/Переменные_скрывают_аргумент	/ru/docs/Web/JavaScript/Reference/Errors/Var_hides_argument
@@ -707,10 +692,7 @@
 /ru/docs/XPath/Funkcje/floor	/ru/docs/Web/XPath/Functions/floor
 /ru/docs/XSLT	/ru/docs/Web/XSLT
 /ru/docs/en	/en-US/
-/ru/docs/kak_soobschit_o_zavisshem_Firefox	/ru/docs/Как_сообщить_о_зависшем_Firefox
-/ru/docs/nsIOutputStream:writeFrom	/ru/docs/nsIOutputStream/writeFrom
 /ru/docs/Заглавная_страница	/ru/docs/Web
-/ru/docs/Новое_в_JavaScript_1.6	/ru/docs/Web/JavaScript/New_in_JavaScript/1.6
 /ru/docs/Повторное_введение_в_JavaScript	/ru/docs/Web/JavaScript/A_re-introduction_to_JavaScript
 /ru/docs/Руководство_по_JavaScript_1.5	/ru/docs/Web/JavaScript/Guide
 /ru/docs/Руководство_по_JavaScript_1.5/Операторы	/ru/docs/Web/JavaScript/Reference/Operators
@@ -718,7 +700,6 @@
 /ru/docs/Руководство_по_JavaScript_1.5/Операторы/Специальные_операторы/Оператор_get	/ru/docs/Web/JavaScript/Reference/Operators
 /ru/docs/Руководство_по_JavaScript_1.5/Функции	/ru/docs/Web/JavaScript/Guide/Functions
 /ru/docs/Руководство_по_JavaScript_1.5:Функции	/ru/docs/Web/JavaScript/Guide/Functions
-/ru/docs/Руководство_разработчика_дополнений_Firefox	/ru/docs/Firefox_addons_developer_guide
 /ru/docs/Словарь	/ru/docs/Glossary
 /ru/docs/Словарь/404	/ru/docs/Glossary/404
 /ru/docs/Словарь/502	/ru/docs/Glossary/502
