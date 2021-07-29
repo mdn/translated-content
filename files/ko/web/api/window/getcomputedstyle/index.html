@@ -63,7 +63,7 @@ para.textContent = 'My computed font-size is ' + compStyles.getPropertyValue('fo
 
 <h2 id="defaultView"><code>defaultView</code></h2>
 
-<p>온라인의 많은 코드 샘플중에서, <code>getComputedStyle</code>은 <code>document.defaultView</code>객체에서 사용됩니다만, 대개의 경우에는 <code>getComputedStyle</code>은 <code>window</code>객체에도 존재하므로 <code>document.defaultView</code>객체에서 사용하는 패턴은 필요하지 않습니다. <code>defaultView</code>패턴은 (1) window 스펙을 작성하고 싶지 않은 사람들과 (2) Java에서도 사용할 수있는 API를 만드는 것의 조합이었을 가능성이 큽니다. 그러나 <code>defaultView</code>의 메소드를 사용해야만하는 <a href="https://github.com/jquery/jquery/pull/524#issuecomment-2241183" title="https://github.com/jquery/jquery/pull/524#issuecomment-2241183">경우</a>가 하나 있습니다. Firefox 3.6을 사용하여 프레임 스타일(framed styles)에 액세스하는 경우입니다.</p>
+<p>온라인의 많은 코드 샘플중에서, <code>getComputedStyle</code>은 <code>document.defaultView</code>객체에서 사용됩니다만, 대개의 경우에는 <code>getComputedStyle</code>은 <code>window</code>객체에도 존재하므로 <code>document.defaultView</code>객체에서 사용하는 패턴은 필요하지 않습니다. <code>defaultView</code>패턴은 (1) window 스펙을 작성하고 싶지 않은 사람들과 (2) Java에서도 사용할 수있는 API를 만드는 것의 조합이었을 가능성이 큽니다. 그러나 <code>defaultView</code>의 메소드를 사용해야만하는 <a href="https://github.com/jquery/jquery/pull/524#issuecomment-2241183">경우</a>가 하나 있습니다. Firefox 3.6을 사용하여 프레임 스타일(framed styles)에 액세스하는 경우입니다.</p>
 
 <h2 id="의사요소_사용하기">의사요소 사용하기</h2>
 

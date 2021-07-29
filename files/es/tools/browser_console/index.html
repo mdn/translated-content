@@ -110,7 +110,7 @@ clearBtn.addEventListener('mouseover', function() {
 
 <h4 id="Caracteristicas_Adicionales_Disponibles">Caracteristicas Adicionales Disponibles</h4>
 
-<p>Para los <a href="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/index.html" title="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/index.html">Complementos SDK</a>, la consola API está disponible automaticamente. A continuación se muestra un ejemplo de complemento que registra un error cuando el usuario hace click en un widget:</p>
+<p>Para los <a href="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/index.html">Complementos SDK</a>, la consola API está disponible automaticamente. A continuación se muestra un ejemplo de complemento que registra un error cuando el usuario hace click en un widget:</p>
 
 <pre class="brush: js">widget = require("sdk/widget").Widget({
   id: "an-error-happened",
@@ -124,13 +124,13 @@ function logError() {
   console.error("something went wrong!");
 }</pre>
 
-<p>Si uested <a href="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/tutorials/installation.html" title="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/tutorials/installation.html">construye este como un archivo XPI</a>, entonces abra la consola del navegador, y entonces abra el archivo XPI en Firefox e instalelo, verá una etiqueta widget con el mensaje "Error!" en la barra del complemento:</p>
+<p>Si uested <a href="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/tutorials/installation.html">construye este como un archivo XPI</a>, entonces abra la consola del navegador, y entonces abra el archivo XPI en Firefox e instalelo, verá una etiqueta widget con el mensaje "Error!" en la barra del complemento:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/5937/browser-console-addon.png" style="display: block; margin-left: auto; margin-right: auto;">Haga click en el icono. verá un mensaje como este aparecer en la consola del navegador:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/5851/browser-console-addon-output.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
-<p>Para complementos basados unicamente en SDK, al mensaje se le antepone el nombre del complemento ("log-error"), haciendolo mas facil de encontrar todos los mensajes de este complemento utilizando la caja de busqueda del <a href="/en-US/docs/Tools/Web_Console#Filtering_and_searching" title="/en-US/docs/Tools/Web_Console#Filtering_and_searching">"Filtro de salida"</a>. Por default, solo los mensajes de error son registrados en la consola, aunque <a href="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/console.html#Logging%20Levels" title="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/console.html#Logging%20Levels">usted puede cambiar este comportamiento en preferencias del navegador</a>.</p>
+<p>Para complementos basados unicamente en SDK, al mensaje se le antepone el nombre del complemento ("log-error"), haciendolo mas facil de encontrar todos los mensajes de este complemento utilizando la caja de busqueda del <a href="/en-US/docs/Tools/Web_Console#Filtering_and_searching" title="/en-US/docs/Tools/Web_Console#Filtering_and_searching">"Filtro de salida"</a>. Por default, solo los mensajes de error son registrados en la consola, aunque <a href="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/console.html#Logging%20Levels">usted puede cambiar este comportamiento en preferencias del navegador</a>.</p>
 
 <h2 id="Consola_de_línea_de_comandos_del_Navegador">Consola de línea de comandos del Navegador</h2>
 
