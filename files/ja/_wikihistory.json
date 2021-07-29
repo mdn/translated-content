@@ -27919,13 +27919,21 @@
   "Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images": {
     "modified": "2020-09-05T23:29:58.757Z",
     "contributors": [
-      "mfuji09"
+      "mfuji09",
+      "mrstork",
+      "ethertank",
+      "sii"
     ]
   },
   "Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds": {
     "modified": "2019-03-18T21:28:58.186Z",
     "contributors": [
-      "sutara79"
+      "sutara79",
+      "tacamula",
+      "teoli",
+      "ethertank",
+      "Potappo",
+      "Piro"
     ]
   },
   "Web/CSS/CSS_Basic_User_Interface": {
@@ -48334,24 +48342,6 @@
     "modified": "2019-03-23T23:49:43.648Z",
     "contributors": [
       "Marsf"
-    ]
-  },
-  "conflicting/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images": {
-    "modified": "2019-03-23T23:37:28.021Z",
-    "contributors": [
-      "mrstork",
-      "ethertank",
-      "sii"
-    ]
-  },
-  "conflicting/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds": {
-    "modified": "2019-03-24T00:01:58.302Z",
-    "contributors": [
-      "tacamula",
-      "teoli",
-      "ethertank",
-      "Potappo",
-      "Piro"
     ]
   },
   "conflicting/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property": {
