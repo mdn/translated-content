@@ -27919,13 +27919,21 @@
   "Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images": {
     "modified": "2020-09-05T23:29:58.757Z",
     "contributors": [
-      "mfuji09"
+      "mfuji09",
+      "mrstork",
+      "ethertank",
+      "sii"
     ]
   },
   "Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds": {
     "modified": "2019-03-18T21:28:58.186Z",
     "contributors": [
-      "sutara79"
+      "sutara79",
+      "tacamula",
+      "teoli",
+      "ethertank",
+      "Potappo",
+      "Piro"
     ]
   },
   "Web/CSS/CSS_Basic_User_Interface": {
@@ -48253,14 +48261,6 @@
       "dextra"
     ]
   },
-  "conflicting/Web/API/MediaStream_Recording_API": {
-    "modified": "2020-07-14T12:31:37.308Z",
-    "contributors": [
-      "safejourney-art",
-      "FujiHaruka",
-      "chikoski"
-    ]
-  },
   "conflicting/Web/API/MouseEvent/button": {
     "modified": "2019-03-23T23:48:11.013Z",
     "contributors": [
@@ -48268,13 +48268,6 @@
       "khalid32",
       "Mgjbot",
       "Luna8bit"
-    ]
-  },
-  "conflicting/Web/API/Navigator": {
-    "modified": "2019-03-23T23:49:38.988Z",
-    "contributors": [
-      "Marsf",
-      "Okome"
     ]
   },
   "conflicting/Web/API/URL": {
@@ -48300,19 +48293,6 @@
       "hamasaki",
       "ethertank",
       "suzukaze"
-    ]
-  },
-  "conflicting/Web/API/Web_Storage_API": {
-    "modified": "2019-03-24T00:12:14.185Z",
-    "contributors": [
-      "Uemmra3",
-      "khalid32",
-      "ethertank",
-      "woby",
-      "Potappo",
-      "Marsf",
-      "Shoot",
-      "Mgjbot"
     ]
   },
   "conflicting/Web/API/Window/moveTo": {
@@ -48368,24 +48348,6 @@
       "Marsf"
     ]
   },
-  "conflicting/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images": {
-    "modified": "2019-03-23T23:37:28.021Z",
-    "contributors": [
-      "mrstork",
-      "ethertank",
-      "sii"
-    ]
-  },
-  "conflicting/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds": {
-    "modified": "2019-03-24T00:01:58.302Z",
-    "contributors": [
-      "tacamula",
-      "teoli",
-      "ethertank",
-      "Potappo",
-      "Piro"
-    ]
-  },
   "conflicting/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property": {
     "modified": "2019-03-23T23:49:29.579Z",
     "contributors": [
@@ -48397,20 +48359,6 @@
       "Taken Bot",
       "Shimono",
       "DaViD83"
-    ]
-  },
-  "conflicting/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox": {
-    "modified": "2019-03-18T21:27:26.555Z",
-    "contributors": [
-      "mfuji09",
-      "chrisdavidmills",
-      "EmptyPond"
-    ]
-  },
-  "conflicting/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox": {
-    "modified": "2019-03-23T22:40:47.383Z",
-    "contributors": [
-      "yyss"
     ]
   },
   "conflicting/Web/CSS/Media_Queries/Using_media_queries": {
@@ -48428,13 +48376,6 @@
     "modified": "2019-01-16T15:49:24.673Z",
     "contributors": [
       "Marsf"
-    ]
-  },
-  "conflicting/Web/CSS/box-ordinal-group": {
-    "modified": "2019-03-23T22:52:36.740Z",
-    "contributors": [
-      "mfuji09",
-      "shide55"
     ]
   },
   "conflicting/Web/CSS/float": {
@@ -48483,24 +48424,6 @@
       "kohei.yoshino",
       "Mgjbot",
       "Okome"
-    ]
-  },
-  "conflicting/Web/HTML/Global_attributes": {
-    "modified": "2019-03-18T20:53:18.763Z",
-    "contributors": [
-      "ksugimori",
-      "Wind1808"
-    ]
-  },
-  "conflicting/Web/HTML/Global_attributes/spellcheck": {
-    "modified": "2019-03-23T23:54:31.754Z",
-    "contributors": [
-      "teoli",
-      "Mgjbot",
-      "Marsf",
-      "Level",
-      "Omnisilver",
-      "Taken"
     ]
   },
   "conflicting/Web/HTTP/Headers/User-Agent/Firefox": {
