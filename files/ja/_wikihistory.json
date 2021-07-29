@@ -48475,24 +48475,6 @@
       "Yuuki Takahashi"
     ]
   },
-  "conflicting/Web/HTML/Global_attributes": {
-    "modified": "2019-03-18T20:53:18.763Z",
-    "contributors": [
-      "ksugimori",
-      "Wind1808"
-    ]
-  },
-  "conflicting/Web/HTML/Global_attributes/spellcheck": {
-    "modified": "2019-03-23T23:54:31.754Z",
-    "contributors": [
-      "teoli",
-      "Mgjbot",
-      "Marsf",
-      "Level",
-      "Omnisilver",
-      "Taken"
-    ]
-  },
   "conflicting/Web/HTTP/Headers/User-Agent/Firefox": {
     "modified": "2019-03-23T23:58:03.561Z",
     "contributors": [
