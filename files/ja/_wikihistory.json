@@ -48283,19 +48283,6 @@
       "suzukaze"
     ]
   },
-  "conflicting/Web/API/Web_Storage_API": {
-    "modified": "2019-03-24T00:12:14.185Z",
-    "contributors": [
-      "Uemmra3",
-      "khalid32",
-      "ethertank",
-      "woby",
-      "Potappo",
-      "Marsf",
-      "Shoot",
-      "Mgjbot"
-    ]
-  },
   "conflicting/Web/API/Window/moveTo": {
     "modified": "2019-03-23T22:33:34.460Z",
     "contributors": [

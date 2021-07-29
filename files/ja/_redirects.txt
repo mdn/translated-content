@@ -1210,7 +1210,7 @@
 /ja/docs/DOM/DOM_Reference/Examples	/ja/docs/Web/API/Document_Object_Model/Examples
 /ja/docs/DOM/DOM_Reference/Introduction	/ja/docs/Web/API/Document_Object_Model/Introduction
 /ja/docs/DOM/DOM_Reference/Preface	/ja/docs/Web/API/Document_Object_Model
-/ja/docs/DOM/DOM_Storage	/ja/docs/conflicting/Web/API/Web_Storage_API
+/ja/docs/DOM/DOM_Storage	/ja/docs/Web/API/Web_Storage_API
 /ja/docs/DOM/DOM_event_reference/compositionend	/ja/docs/Web/API/Element/compositionend_event
 /ja/docs/DOM/DOM_event_reference/compositionstart	/ja/docs/Web/API/Element/compositionstart_event
 /ja/docs/DOM/DOM_event_reference/input	/ja/docs/Web/API/HTMLElement/input_event
@@ -1313,7 +1313,7 @@
 /ja/docs/DOM/SVGFontElement	/ja/docs/Web/API/SVGFontElement
 /ja/docs/DOM/SVGTextElement	/ja/docs/Web/API/SVGTextElement
 /ja/docs/DOM/Selection/collapseToStart	/ja/docs/Web/API/Selection/collapseToStart
-/ja/docs/DOM/Storage	/ja/docs/conflicting/Web/API/Web_Storage_API
+/ja/docs/DOM/Storage	/ja/docs/Web/API/Web_Storage_API
 /ja/docs/DOM/TouchList	/ja/docs/Web/API/TouchList
 /ja/docs/DOM/Touch_events	/ja/docs/Web/API/Touch_events
 /ja/docs/DOM/UserProximityEvent	/ja/docs/Web/API/UserProximityEvent
@@ -1674,7 +1674,7 @@
 /ja/docs/DOM/window.updateCommands	/ja/docs/Web/API/Window/updateCommands
 /ja/docs/DOM/window.window	/ja/docs/Web/API/Window/window
 /ja/docs/DOM/セレクタを使用した_DOM_要素の指定	/ja/docs/Web/API/Node/cloneNode
-/ja/docs/DOM:Storage	/ja/docs/conflicting/Web/API/Web_Storage_API
+/ja/docs/DOM:Storage	/ja/docs/Web/API/Web_Storage_API
 /ja/docs/DOM:document	/ja/docs/Web/API/Document
 /ja/docs/DOM:document.URL	/ja/docs/Web/API/Document/URL
 /ja/docs/DOM:document.activeElement	/ja/docs/Web/API/Document/activeElement
