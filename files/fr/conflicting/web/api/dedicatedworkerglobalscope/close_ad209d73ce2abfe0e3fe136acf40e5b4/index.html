@@ -1,0 +1,44 @@
+---
+title: WorkerGlobalScope.onclose
+slug: >-
+  conflicting/Web/API/DedicatedWorkerGlobalScope/close_ad209d73ce2abfe0e3fe136acf40e5b4
+translation_of: Web/API/WorkerGlobalScope/onclose
+original_slug: Web/API/WorkerGlobalScope/onclose
+---
+<p>{{APIRef("Web Workers API")}}{{obsolete_header}}</p>
+
+<div class="blockIndicator warning">
+<p><strong>Non-standard</strong></p>
+
+<p>Cette fonctionnalité n'est ni standard, ni en voie de standardisation. Ne l'utilisez pas pour des sites accessibles sur le Web: elle ne fonctionnera pas pour tout utilisateur. Il peut également y avoir d'importantes incompatibilités entre les implémentations et son comportement peut être modifié dans le futur.</p>
+</div>
+
+<h2 id="Résumé">Résumé</h2>
+
+<p>La propriété <strong><code>onclose</code></strong> de l'interface {{domxref("WorkerGlobalScope")}} représente un {{event("Event_handlers", "event handler")}} à appeler lorsque l'événement {{event("close")}} survient et se propage à travers le {{domxref("Worker")}}.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre>self.onclose = function() { ... };</pre>
+
+<h2 id="Exemple">Exemple</h2>
+
+<p>L'extrait de code suivant montre la création d'un gestionnaire <code>onclose</code> placé au sein d'un worker :</p>
+
+<pre class="brush: js">self.onclose = function() {
+  console.log('Your worker instance has been closed');
+}</pre>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<p>Cette fonctionnalité n'est défini dans plus aucune spécification.</p>
+
+<h2 id="Compatibilité_des_naviguateurs">Compatibilité des naviguateurs</h2>
+
+
+
+<p>{{Compat("api.WorkerGlobalScope.onclose")}}</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<p>L'interface {{domxref("WorkerGlobalScope")}} à laquelle elle appartient.</p>

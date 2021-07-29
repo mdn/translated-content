@@ -59,7 +59,7 @@ translation_of: Web/API/File/Using_files_from_web_applications
 
 <h3 id="Añadir_dinámicamente_un_listener_tipo_change">Añadir dinámicamente un listener tipo change</h3>
 
-<p>Si tu campo input ha sido creado usando una libreria JavaScript como <a class="external" href="http://www.jquery.com/" title="http://www.jquery.com/">jQuery</a>, se necesitará usar {{ domxref("element.addEventListener()") }} para añadir el manejador de eventos tipo change, como en el ejemplo siguiente:</p>
+<p>Si tu campo input ha sido creado usando una libreria JavaScript como <a class="external" href="http://www.jquery.com/">jQuery</a>, se necesitará usar {{ domxref("element.addEventListener()") }} para añadir el manejador de eventos tipo change, como en el ejemplo siguiente:</p>
 
 <pre class="deki-transform">var inputElement = document.getElementById("inputField");
 inputElement.addEventListener("change", handleFiles, false);
@@ -188,7 +188,7 @@ function dragover(e) {
 
 <p>A continuación establecemos el <a href="/en/DOM/FileReader" title="en/DOM/FileReader"><code>FileReader</code></a> para controlar la carga de la imagen de forma asíncrona y enlazarla con el elemento <code>img</code>. Después de crear el nuevo objeto <code>FileReader</code>, configuramos su función <code>onload</code>, luego llamamos a <code>readAsDataURL()</code> para comenzar la operación de lectura en segundo plano. Cuando el contenido completo de la imagen ha sido cargado, se convierte a  <code>data:</code> URL, el cuál es pasado al callback <code>onload</code>. Nuestra implementación de esta rutina simplemente establece el atributo <code>src</code> del elemento <code>img</code> cargado, cuyo resultado es la imagen apareciendo en la miniatura en la pantalla del usuario.</p>
 
-<p>Este ejemplo el objeto blob URLs para mostrar las miniaturas de las imágenes. Además, se muestra otra información del archivo incluyendo sus nombres y tamaños. Tú puedes <a href="/samples/domref/file-click-demo.html" title="https://developer.mozilla.org/samples/domref/file-click-demo.html">ver el ejemplo</a> (tenga en cuenta que se requiere una versión <a class="external" href="http://nightly.mozilla.org/" title="http://nightly.mozilla.org/">Nghtly</a> de Firefox del 23 de september 23 o mas reciente, o Firefox 4.0 beta 7).</p>
+<p>Este ejemplo el objeto blob URLs para mostrar las miniaturas de las imágenes. Además, se muestra otra información del archivo incluyendo sus nombres y tamaños. Tú puedes <a href="/samples/domref/file-click-demo.html" title="https://developer.mozilla.org/samples/domref/file-click-demo.html">ver el ejemplo</a> (tenga en cuenta que se requiere una versión <a class="external" href="http://nightly.mozilla.org/">Nghtly</a> de Firefox del 23 de september 23 o mas reciente, o Firefox 4.0 beta 7).</p>
 
 <p>El HTML que representa la interfaz es::</p>
 

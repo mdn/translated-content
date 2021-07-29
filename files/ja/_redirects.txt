@@ -357,14 +357,14 @@
 /ja/docs/CSS/Media	/ja/docs/Web/CSS/@media
 /ja/docs/CSS/Media/Visual	/ja/docs/Web/CSS/@media
 /ja/docs/CSS/Media_queries	/ja/docs/Web/CSS/Media_queries
-/ja/docs/CSS/Multiple_backgrounds	/ja/docs/conflicting/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
+/ja/docs/CSS/Multiple_backgrounds	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /ja/docs/CSS/Other_Resources	/ja/docs/conflicting/Web/CSS_eb0c7d23f84df658710ebb6b4bdec8ea
 /ja/docs/CSS/Privacy_and_the_:visited_selector	/ja/docs/Web/CSS/Privacy_and_the_:visited_selector
 /ja/docs/CSS/Pseudo-classes	/ja/docs/Web/CSS/Pseudo-classes
 /ja/docs/CSS/Pseudo-elements	/ja/docs/Web/CSS/Pseudo-elements
 /ja/docs/CSS/Pseudo-elements-redirect-1	/ja/docs/Web/CSS/Pseudo-elements
 /ja/docs/CSS/Replaced_element	/ja/docs/Web/CSS/Replaced_element
-/ja/docs/CSS/Scaling_background_images	/ja/docs/conflicting/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
+/ja/docs/CSS/Scaling_background_images	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
 /ja/docs/CSS/Shorthand_properties	/ja/docs/Web/CSS/Shorthand_properties
 /ja/docs/CSS/Specificity	/ja/docs/Web/CSS/Specificity
 /ja/docs/CSS/Syntax	/ja/docs/Web/CSS/Syntax
@@ -372,7 +372,7 @@
 /ja/docs/CSS/Tutorials/Using_CSS_animations	/ja/docs/Web/CSS/CSS_Animations/Using_CSS_animations
 /ja/docs/CSS/Tutorials/Using_CSS_flexible_boxes	/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /ja/docs/CSS/Tutorials/Using_CSS_gradients	/ja/docs/Web/CSS/CSS_Images/Using_CSS_gradients
-/ja/docs/CSS/Tutorials/Using_CSS_multiple_backgrounds	/ja/docs/conflicting/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
+/ja/docs/CSS/Tutorials/Using_CSS_multiple_backgrounds	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /ja/docs/CSS/Tutorials/Using_CSS_transforms	/ja/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms
 /ja/docs/CSS/Tutorials/Using_CSS_transitions	/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions
 /ja/docs/CSS/Type_selectors	/ja/docs/Web/CSS/Type_selectors
@@ -391,7 +391,7 @@
 /ja/docs/CSS/Using_CSS_flexible_boxes	/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
 /ja/docs/CSS/Using_CSS_gradients	/ja/docs/Web/CSS/CSS_Images/Using_CSS_gradients
 /ja/docs/CSS/Using_CSS_multi-column_layouts	/ja/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts
-/ja/docs/CSS/Using_CSS_multiple_backgrounds	/ja/docs/conflicting/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
+/ja/docs/CSS/Using_CSS_multiple_backgrounds	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /ja/docs/CSS/Using_CSS_transforms	/ja/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms
 /ja/docs/CSS/Using_CSS_transitions	/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions
 /ja/docs/CSS/Using_media_queries_from_code	/ja/docs/Web/CSS/Media_Queries/Testing_media_queries
@@ -602,7 +602,7 @@
 /ja/docs/CSS/word-wrap	/ja/docs/Web/CSS/overflow-wrap
 /ja/docs/CSS/writing-mode	/ja/docs/Web/CSS/writing-mode
 /ja/docs/CSS/z-index	/ja/docs/Web/CSS/z-index
-/ja/docs/CSS/複数の背景	/ja/docs/conflicting/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
+/ja/docs/CSS/複数の背景	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /ja/docs/CSS3_Columns	/ja/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts
 /ja/docs/CSS:-moz-appearance	/ja/docs/Web/CSS/appearance
 /ja/docs/CSS:-moz-background-clip	/ja/docs/Web/CSS/background-clip
@@ -1210,7 +1210,7 @@
 /ja/docs/DOM/DOM_Reference/Examples	/ja/docs/Web/API/Document_Object_Model/Examples
 /ja/docs/DOM/DOM_Reference/Introduction	/ja/docs/Web/API/Document_Object_Model/Introduction
 /ja/docs/DOM/DOM_Reference/Preface	/ja/docs/Web/API/Document_Object_Model
-/ja/docs/DOM/DOM_Storage	/ja/docs/conflicting/Web/API/Web_Storage_API
+/ja/docs/DOM/DOM_Storage	/ja/docs/Web/API/Web_Storage_API
 /ja/docs/DOM/DOM_event_reference/compositionend	/ja/docs/Web/API/Element/compositionend_event
 /ja/docs/DOM/DOM_event_reference/compositionstart	/ja/docs/Web/API/Element/compositionstart_event
 /ja/docs/DOM/DOM_event_reference/input	/ja/docs/Web/API/HTMLElement/input_event
@@ -1313,7 +1313,7 @@
 /ja/docs/DOM/SVGFontElement	/ja/docs/Web/API/SVGFontElement
 /ja/docs/DOM/SVGTextElement	/ja/docs/Web/API/SVGTextElement
 /ja/docs/DOM/Selection/collapseToStart	/ja/docs/Web/API/Selection/collapseToStart
-/ja/docs/DOM/Storage	/ja/docs/conflicting/Web/API/Web_Storage_API
+/ja/docs/DOM/Storage	/ja/docs/Web/API/Web_Storage_API
 /ja/docs/DOM/TouchList	/ja/docs/Web/API/TouchList
 /ja/docs/DOM/Touch_events	/ja/docs/Web/API/Touch_events
 /ja/docs/DOM/UserProximityEvent	/ja/docs/Web/API/UserProximityEvent
@@ -1674,7 +1674,7 @@
 /ja/docs/DOM/window.updateCommands	/ja/docs/Web/API/Window/updateCommands
 /ja/docs/DOM/window.window	/ja/docs/Web/API/Window/window
 /ja/docs/DOM/セレクタを使用した_DOM_要素の指定	/ja/docs/Web/API/Node/cloneNode
-/ja/docs/DOM:Storage	/ja/docs/conflicting/Web/API/Web_Storage_API
+/ja/docs/DOM:Storage	/ja/docs/Web/API/Web_Storage_API
 /ja/docs/DOM:document	/ja/docs/Web/API/Document
 /ja/docs/DOM:document.URL	/ja/docs/Web/API/Document/URL
 /ja/docs/DOM:document.activeElement	/ja/docs/Web/API/Document/activeElement
@@ -1891,8 +1891,8 @@
 /ja/docs/DOM:window.window	/ja/docs/Web/API/Window/window
 /ja/docs/DOMParser	/ja/docs/Web/API/DOMParser
 /ja/docs/DOM_Client_Object_Cross-Reference	/ja/docs/Web/API/Document_Object_Model
-/ja/docs/DOM_Client_Object_Cross-Reference/navigator	/ja/docs/conflicting/Web/API/Navigator
-/ja/docs/DOM_Client_Object_Cross-Reference:navigator	/ja/docs/conflicting/Web/API/Navigator
+/ja/docs/DOM_Client_Object_Cross-Reference/navigator	/ja/docs/Web/API/Navigator
+/ja/docs/DOM_Client_Object_Cross-Reference:navigator	/ja/docs/Web/API/Navigator
 /ja/docs/DOM_Implementation_and_Scriptability	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/DOM_Inspector	/ja/docs/orphaned/Tools/Add-ons/DOM_Inspector
 /ja/docs/DOM_Inspector/Internals	/ja/docs/orphaned/Tools/Add-ons/DOM_Inspector/Internals
@@ -2169,7 +2169,7 @@
 /ja/docs/DevNews:20080805	/ja/docs/orphaned/DevNews/20080805
 /ja/docs/Developing_Mozilla	/ja/docs/orphaned/Developing_Mozilla
 /ja/docs/Developing_add-ons	/ja/docs/orphaned/Developing_add-ons
-/ja/docs/DragDrop	/ja/docs/conflicting/Web/API/HTML_Drag_and_Drop_API
+/ja/docs/DragDrop	/ja/docs/Web/API/HTML_Drag_and_Drop_API
 /ja/docs/DragDrop/DataTransfer	/ja/docs/Web/API/DataTransfer
 /ja/docs/DragDrop/DataTransfer/getData	/ja/docs/Web/API/DataTransfer/getData
 /ja/docs/DragDrop/DataTransfer/setData	/ja/docs/Web/API/DataTransfer/setData
@@ -2250,7 +2250,7 @@
 /ja/docs/Glossary/Constant（定数）	/ja/docs/Glossary/Constant
 /ja/docs/Glossary/DTD	/ja/docs/Glossary/Doctype
 /ja/docs/Glossary/Gaia	/ja/docs/orphaned/Glossary/Gaia
-/ja/docs/Glossary/Global_attribute	/ja/docs/conflicting/Web/HTML/Global_attributes
+/ja/docs/Glossary/Global_attribute	/ja/docs/Web/HTML/Global_attributes
 /ja/docs/Glossary/Header	/ja/docs/Glossary/HTTP_header
 /ja/docs/Glossary/Modern_web_apps	/ja/docs/orphaned/Glossary/Modern_web_apps
 /ja/docs/Glossary/POP3	/ja/docs/Glossary/POP
@@ -3658,7 +3658,7 @@
 /ja/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/ja/docs/orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 /ja/docs/Web/API/LinkStyle	/ja/docs/orphaned/Web/API/LinkStyle
 /ja/docs/Web/API/LocalMediaStream	/ja/docs/orphaned/Web/API/LocalMediaStream
-/ja/docs/Web/API/MediaRecorder_API	/ja/docs/conflicting/Web/API/MediaStream_Recording_API
+/ja/docs/Web/API/MediaRecorder_API	/ja/docs/Web/API/MediaStream_Recording_API
 /ja/docs/Web/API/Navigator.getUserMedia	/ja/docs/Web/API/Navigator/getUserMedia
 /ja/docs/Web/API/Navigator/javaEnabled	/ja/docs/orphaned/Web/API/NavigatorPlugins/javaEnabled
 /ja/docs/Web/API/Navigator/registerContentHandler	/ja/docs/orphaned/Web/API/Navigator/registerContentHandler
@@ -3833,7 +3833,13 @@
 /ja/docs/Web/API/WindowTimers/setTimeout	/ja/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
 /ja/docs/Web/API/WorkerGlobalScope/caches	/ja/docs/Web/API/WindowOrWorkerGlobalScope/caches
 /ja/docs/Web/API/XMLHttpRequest/openRequest	/ja/docs/orphaned/Web/API/XMLHttpRequest/openRequest
+/ja/docs/Web/API/XRHandedness	/ja/docs/conflicting/Web/API/XRInputSource/handedness
+/ja/docs/Web/API/XRReferenceSpaceEventInit	/ja/docs/conflicting/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent
+/ja/docs/Web/API/XRReferenceSpaceEventInit/referenceSpace	/ja/docs/conflicting/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent_0f733d39fd3094010931f093b9045686
+/ja/docs/Web/API/XRReferenceSpaceEventInit/transform	/ja/docs/conflicting/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent_7dfb381c892055a0c91980d537a86c6b
+/ja/docs/Web/API/XRReferenceSpaceType	/ja/docs/Web/API/XRSession/requestReferenceSpace
 /ja/docs/Web/API/XRSessionMode	/ja/docs/orphaned/Web/API/XRSessionMode
+/ja/docs/Web/API/XRTargetRayMode	/ja/docs/conflicting/Web/API/XRInputSource/targetRayMode
 /ja/docs/Web/API/console.dir	/ja/docs/Web/API/Console/dir
 /ja/docs/Web/API/console.log	/ja/docs/Web/API/Console/log
 /ja/docs/Web/API/console.time	/ja/docs/Web/API/Console/time
@@ -4093,7 +4099,7 @@
 /ja/docs/Web/CSS/-moz-border-radius-bottomright	/ja/docs/Web/CSS/border-bottom-right-radius
 /ja/docs/Web/CSS/-moz-border-radius-topleft	/ja/docs/Web/CSS/border-top-width
 /ja/docs/Web/CSS/-moz-border-radius-topright	/ja/docs/Web/CSS/border-top-right-radius
-/ja/docs/Web/CSS/-moz-box-ordinal-group	/ja/docs/conflicting/Web/CSS/box-ordinal-group
+/ja/docs/Web/CSS/-moz-box-ordinal-group	/ja/docs/Web/CSS/box-ordinal-group
 /ja/docs/Web/CSS/-moz-cell	/ja/docs/Web/CSS/cursor
 /ja/docs/Web/CSS/-moz-column-width	/ja/docs/Web/CSS/column-width
 /ja/docs/Web/CSS/-moz-context-menu	/ja/docs/Web/CSS/cursor
@@ -4130,13 +4136,13 @@
 /ja/docs/Web/CSS/Background_Backup	/ja/docs/Web/CSS/background
 /ja/docs/Web/CSS/Block_formatting_context	/ja/docs/Web/Guide/CSS/Block_formatting_context
 /ja/docs/Web/CSS/CSS_Background_and_Borders	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders
-/ja/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds	/ja/docs/conflicting/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
+/ja/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
 /ja/docs/Web/CSS/CSS_Colors	/en-US/docs/Web/CSS/CSS_Color
-/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Advanced_layouts_with_flexbox	/ja/docs/conflicting/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
-/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins	/ja/docs/conflicting/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
+/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Advanced_layouts_with_flexbox	/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
+/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins	/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 /ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_CSS_flexible_boxes	/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
-/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_flexbox_to_lay_out_web_applications	/ja/docs/conflicting/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
+/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Using_flexbox_to_lay_out_web_applications	/ja/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
 /ja/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained	/ja/docs/Web/CSS/CSS_Flow_Layout/Intro_to_formatting_contexts
 /ja/docs/Web/CSS/CSS_Masks	/ja/docs/Web/CSS/CSS_Masking
 /ja/docs/Web/CSS/CSS_Reference	/ja/docs/Web/CSS/Reference
@@ -4181,7 +4187,7 @@
 /ja/docs/Web/CSS/Reference/@viewport/user-zoom	/ja/docs/Web/CSS/@viewport
 /ja/docs/Web/CSS/Reference/@viewport/zoom	/ja/docs/Web/CSS/@viewport
 /ja/docs/Web/CSS/Reference/Mozilla_Extensions	/ja/docs/Web/CSS/Mozilla_Extensions
-/ja/docs/Web/CSS/Scaling_background_images	/ja/docs/conflicting/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
+/ja/docs/Web/CSS/Scaling_background_images	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
 /ja/docs/Web/CSS/Understanding_z_index	/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index
 /ja/docs/Web/CSS/Understanding_z_index/Adding_z-index	/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
 /ja/docs/Web/CSS/Understanding_z_index/Stacking_and_float	/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
@@ -4197,7 +4203,7 @@
 /ja/docs/Web/CSS/Using_CSS_variables	/ja/docs/Web/CSS/Using_CSS_custom_properties
 /ja/docs/Web/CSS/Using_media_queries_from_code	/ja/docs/Web/CSS/Media_Queries/Testing_media_queries
 /ja/docs/Web/CSS/Using_multi-column_layouts	/ja/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts
-/ja/docs/Web/CSS/Using_multiple_backgrounds	/ja/docs/conflicting/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
+/ja/docs/Web/CSS/Using_multiple_backgrounds	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /ja/docs/Web/CSS/attr	/ja/docs/Web/CSS/attr()
 /ja/docs/Web/CSS/aural	/ja/docs/Web/CSS/@media/aural
 /ja/docs/Web/CSS/auto	/ja/docs/Web/CSS/width
@@ -4274,7 +4280,7 @@
 /ja/docs/Web/CSS/var	/ja/docs/Web/CSS/var()
 /ja/docs/Web/CSS/visible	/ja/docs/Web/CSS/visibility
 /ja/docs/Web/CSS/word-wrap	/ja/docs/Web/CSS/overflow-wrap
-/ja/docs/Web/CSS/複数の背景	/ja/docs/conflicting/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
+/ja/docs/Web/CSS/複数の背景	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /ja/docs/Web/Compatibility_FAQ	/ja/docs/orphaned/Web/Compatibility_FAQ
 /ja/docs/Web/Compatibility_FAQ/Broken_Table_Layout.html	/ja/docs/orphaned/Web/Compatibility_FAQ/Broken_Table_Layout.html
 /ja/docs/Web/Compatibility_FAQ/Cut_Off_Text.html	/ja/docs/orphaned/Web/Compatibility_FAQ/Cut_Off_Text.html
@@ -4371,7 +4377,7 @@
 /ja/docs/Web/Guide/CSS/Getting_started/Why_use_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /ja/docs/Web/Guide/CSS/Getting_started/Why_use_CSS?	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /ja/docs/Web/Guide/CSS/Media_queries	/ja/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries
-/ja/docs/Web/Guide/CSS/Scaling_background_images	/ja/docs/conflicting/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
+/ja/docs/Web/Guide/CSS/Scaling_background_images	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
 /ja/docs/Web/Guide/CSS/Testing_media_queries	/ja/docs/Web/CSS/Media_Queries/Testing_media_queries
 /ja/docs/Web/Guide/CSS/Understanding_z_index	/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index
 /ja/docs/Web/Guide/CSS/Understanding_z_index/Adding_z-index	/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
@@ -4386,7 +4392,7 @@
 /ja/docs/Web/Guide/CSS/Using_CSS_transforms	/ja/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms
 /ja/docs/Web/Guide/CSS/Using_CSS_transitions	/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions
 /ja/docs/Web/Guide/CSS/Using_multi-column_layouts	/ja/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts
-/ja/docs/Web/Guide/CSS/Using_multiple_backgrounds	/ja/docs/conflicting/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
+/ja/docs/Web/Guide/CSS/Using_multiple_backgrounds	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /ja/docs/Web/Guide/DOM	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/Web/Guide/DOM/Events/Touch_events	/ja/docs/Web/API/Touch_events
 /ja/docs/Web/Guide/DOM/Events/Touch_events/Supporting_both_TouchEvent_and_MouseEvent	/ja/docs/Web/API/Touch_events/Supporting_both_TouchEvent_and_MouseEvent

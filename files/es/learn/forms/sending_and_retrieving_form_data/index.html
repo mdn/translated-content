@@ -27,7 +27,7 @@ original_slug: Learn/HTML/Forms/Sending_and_retrieving_form_data
 
 <h3 id="Sobre_la_arquitectura_cliente_servidor">Sobre la arquitectura cliente / servidor</h3>
 
-<p>La web se basa en una arquitectura cliente / servidor muy básica que se puede resumir de la siguiente manera: un cliente (normalmente un navegador Web) envía una petición a un servidor (la mayoría de las veces un servidor web como <a href="http://httpd.apache.org/" rel="external" title="http://www.apache.org/">Apache</a> , <a href="http://nginx.com/" rel="external" title="http://nginx.com/">Nginx</a> , <a href="http://www.iis.net/" rel="external" title="http://www.iis.net/">IIS</a> , <a href="http://tomcat.apache.org/" rel="external" title="http://tomcat.apache.org/">Tomcat</a> , etc.), utilizando el <a href="/en-US/docs/HTTP" title="/en-US/docs/HTTP">protocolo HTTP</a> . El servidor responde a la solicitud utilizando el mismo protocolo.</p>
+<p>La web se basa en una arquitectura cliente / servidor muy básica que se puede resumir de la siguiente manera: un cliente (normalmente un navegador Web) envía una petición a un servidor (la mayoría de las veces un servidor web como <a href="http://httpd.apache.org/" rel="external" title="http://www.apache.org/">Apache</a> , <a href="http://nginx.com/" rel="external" title="http://nginx.com/">Nginx</a> , <a href="http://www.iis.net/" rel="external">IIS</a> , <a href="http://tomcat.apache.org/" rel="external">Tomcat</a> , etc.), utilizando el <a href="/en-US/docs/HTTP" title="/en-US/docs/HTTP">protocolo HTTP</a> . El servidor responde a la solicitud utilizando el mismo protocolo.</p>
 
 <p><img alt="Un esquema básico de la arquitectura cliente Web / servidor" src="/files/4291/client-server.png" style="display: block; height: 141px; margin: 0px auto; width: 400px;"></p>
 
@@ -144,7 +144,7 @@ decir = Hi &amp; a = mamá</pre>
 
 <h4 id="Visualización_de_peticiones_HTTP">Visualización de peticiones HTTP</h4>
 
-<p>Las peticiones HTTP nunca se muestran al usuario (si quieres verlos, es necesario utilizar herramientas como el <a href="/en-US/docs/Tools/Network_Monitor">Monitor de red Firefox</a> o las <a href="https://developers.google.com/chrome-developer-tools/" title="https://developers.google.com/chrome-developer-tools/">herramientas de desarrollo de Chrome</a> ). A modo de ejemplo, los datos del formulario se muestran a continuación en la pestaña de Chrome red:</p>
+<p>Las peticiones HTTP nunca se muestran al usuario (si quieres verlos, es necesario utilizar herramientas como el <a href="/en-US/docs/Tools/Network_Monitor">Monitor de red Firefox</a> o las <a href="https://developers.google.com/chrome-developer-tools/">herramientas de desarrollo de Chrome</a> ). A modo de ejemplo, los datos del formulario se muestran a continuación en la pestaña de Chrome red:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/14691/network-monitor.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
@@ -211,14 +211,14 @@ if __name__ == "__main__":
 
 <h4 id="Otros_lenguajes_y_frameworks">Otros lenguajes y frameworks</h4>
 
-<p>Hay muchas otras tecnologías del lado del servidor que puede utilizar para el manejo de formularios, incluyendo <a href="/en-US/docs/" title="/en-US/docs/">Perl</a> , <a href="/en-US/docs/" title="/en-US/docs/">Java</a> , <a href="http://www.microsoft.com/net" title="http://www.microsoft.com/net">.Net</a> , <a href="/en-US/docs/" title="/en-US/docs/">Rubí</a> , etc. Sólo tiene que elegir el que más le guste. Dicho esto, vale la pena señalar que es muy raro de usar estas tecnologías directamente porque esto puede ser complicado. Es más común el uso de uno de los muchos marcos de trabajo para un manejo más fácil del código, tales como:</p>
+<p>Hay muchas otras tecnologías del lado del servidor que puede utilizar para el manejo de formularios, incluyendo <a href="/en-US/docs/" title="/en-US/docs/">Perl</a> , <a href="/en-US/docs/" title="/en-US/docs/">Java</a> , <a href="http://www.microsoft.com/net">.Net</a> , <a href="/en-US/docs/" title="/en-US/docs/">Rubí</a> , etc. Sólo tiene que elegir el que más le guste. Dicho esto, vale la pena señalar que es muy raro de usar estas tecnologías directamente porque esto puede ser complicado. Es más común el uso de uno de los muchos marcos de trabajo para un manejo más fácil del código, tales como:</p>
 
 <ul>
- <li><a href="http://symfony.com/" rel="external" title="http://symfony.com/">Symfony</a> para PHP</li>
+ <li><a href="http://symfony.com/" rel="external">Symfony</a> para PHP</li>
  <li><a href="/en-US/docs/Learn/Server-side/Django" rel="external" title="https://www.djangoproject.com/">Django</a> para Python (un poco más pesado que el <a href="http://flask.pocoo.org/">frasco</a> , pero con más herramientas y opciones).</li>
  <li><a href="/en-US/docs/Learn/Server-side/Express_Nodejs">Express</a> de Node.js</li>
- <li><a href="http://rubyonrails.org/" rel="external" title="http://rubyonrails.org/">Ruby on Rails</a> Ruby</li>
- <li><a href="http://grails.org/" rel="external" title="http://grails.org/">Grails</a> para Java</li>
+ <li><a href="http://rubyonrails.org/" rel="external">Ruby on Rails</a> Ruby</li>
+ <li><a href="http://grails.org/" rel="external">Grails</a> para Java</li>
  <li>etc.</li>
 </ul>
 
@@ -284,15 +284,15 @@ if __name__ == "__main__":
 
 <h3 id="Inyección_SQL">Inyección SQL</h3>
 
-<p>La inyección de SQL es un tipo de ataque que intenta realizar acciones en una base de datos utilizada por el sitio web de destino. Esto normalmente implica el envío de una petición SQL con la esperanza de que el servidor la ejecutará (por lo general cuando el servidor de aplicaciones intenta almacenar los datos enviados por un usuario). Esto es en realidad <a href="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project" rel="external" title="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project">uno de los principales vectores de ataque contra los sitios web </a> .</p>
+<p>La inyección de SQL es un tipo de ataque que intenta realizar acciones en una base de datos utilizada por el sitio web de destino. Esto normalmente implica el envío de una petición SQL con la esperanza de que el servidor la ejecutará (por lo general cuando el servidor de aplicaciones intenta almacenar los datos enviados por un usuario). Esto es en realidad <a href="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project" rel="external">uno de los principales vectores de ataque contra los sitios web </a> .</p>
 
-<p>Las consecuencias pueden ser terribles, que van desde la pérdida de datos o hasta que los ataques  tomen el control de la infraestructura de todo el sitio web mediante el uso de una escalada de privilegios. Esta es una amenaza muy seria y nunca debe almacenar los datos enviados por un usuario sin realizar alguna sanitización (por ejemplo, mediante el uso <code><a href="http://www.php.net/manual/en/function.mysql-real-escape-string.php" rel="external" title="http://www.php.net/manual/en/function.mysql-real-escape-string.php">mysql_real_escape_string()</a></code>de una infraestructura de PHP / MySQL).</p>
+<p>Las consecuencias pueden ser terribles, que van desde la pérdida de datos o hasta que los ataques  tomen el control de la infraestructura de todo el sitio web mediante el uso de una escalada de privilegios. Esta es una amenaza muy seria y nunca debe almacenar los datos enviados por un usuario sin realizar alguna sanitización (por ejemplo, mediante el uso <code><a href="http://www.php.net/manual/en/function.mysql-real-escape-string.php" rel="external">mysql_real_escape_string()</a></code>de una infraestructura de PHP / MySQL).</p>
 
 <h3 id="Inyección_de_cabecera_HTTP_y_la_inyección_de_correo_electrónico">Inyección de cabecera HTTP y la inyección de correo electrónico</h3>
 
 <p>Este tipo de ataques pueden ocurrir cuando su aplicación se basa cabeceras HTTP o mensajes de correo electrónico basado en la entrada de datos por un usuario en un formulario. Estos no dañan directamente su servidor o afectan a sus usuarios, pero son una puerta abierta a problemas más profundos tales como el secuestro de sesión o ataques de phishing.</p>
 
-<p>Estos ataques son en su mayoría en silencio, y pueden volver a su servidor en un <a href="http://en.wikipedia.org/wiki/Zombie_(computer_science)" rel="exernal" title="http://en.wikipedia.org/wiki/Zombie_(computer_science)">zombi</a> .</p>
+<p>Estos ataques son en su mayoría en silencio, y pueden volver a su servidor en un <a href="http://en.wikipedia.org/wiki/Zombie_(computer_science)" rel="exernal">zombi</a> .</p>
 
 <h3 id="Sea_paranoico_Nunca_confíe_en_sus_usuarios">Sea paranoico: Nunca confíe en sus usuarios</h3>
 
@@ -322,8 +322,8 @@ if __name__ == "__main__":
 
 <ul>
  <li><a href="/en-US/docs/Learn/Server-side/First_steps">programación web del lado del servidor primeros pasos</a></li>
- <li><a href="https://www.owasp.org/index.php/Main_Page" rel="external" title="https://www.owasp.org/index.php/Main_Page">El Proyecto Open Web Application Security (OWASP)</a></li>
- <li><a href="http://shiflett.org/" rel="external" title="http://shiflett.org/">el blog de Chris Shiflett sobre Seguridad en PHP</a></li>
+ <li><a href="https://www.owasp.org/index.php/Main_Page" rel="external">El Proyecto Open Web Application Security (OWASP)</a></li>
+ <li><a href="http://shiflett.org/" rel="external">el blog de Chris Shiflett sobre Seguridad en PHP</a></li>
 </ul>
 
 <p>{{PreviousMenuNext ( "Aprende / html / Formularios / The_native_form_widgets", "Saber / html / Formularios / Form_validation", "Aprender / html / Forms")}}</p>
