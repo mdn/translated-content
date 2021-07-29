@@ -48258,13 +48258,6 @@
       "Luna8bit"
     ]
   },
-  "conflicting/Web/API/Navigator": {
-    "modified": "2019-03-23T23:49:38.988Z",
-    "contributors": [
-      "Marsf",
-      "Okome"
-    ]
-  },
   "conflicting/Web/API/URL": {
     "modified": "2019-03-23T23:31:44.426Z",
     "contributors": [
