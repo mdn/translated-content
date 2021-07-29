@@ -95,12 +95,6 @@ orphaned documents, to see whether any of this work is worth keeping (either
 adding to, or merging with an existing document in, the main tree), or whether
 it can just be deleted.
 
-### Periodic synchronization updates
-
-We run a GitHub Action every day to update the localized documentation and keep
-it in sync with the `en-US` tree structure, for example if documents are deleted
-for, or moved to a different location, in the tree.
-
 When a synchronization occurs maintenance teams are given two weeks to decide
  what to do with the affected documents in their locales to keep things in sync.
 
@@ -114,7 +108,7 @@ redirect, but `Foo` already exists.
 
 ## Activating a locale
 
-To activate a locale you must apply in writing with the following information:
+To activate a locale you must apply with the following information:
 
 ### Your locale
 
