@@ -48357,20 +48357,6 @@
       "DaViD83"
     ]
   },
-  "conflicting/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox": {
-    "modified": "2019-03-18T21:27:26.555Z",
-    "contributors": [
-      "mfuji09",
-      "chrisdavidmills",
-      "EmptyPond"
-    ]
-  },
-  "conflicting/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox": {
-    "modified": "2019-03-23T22:40:47.383Z",
-    "contributors": [
-      "yyss"
-    ]
-  },
   "conflicting/Web/CSS/Media_Queries/Using_media_queries": {
     "modified": "2019-03-24T00:02:57.940Z",
     "contributors": [
