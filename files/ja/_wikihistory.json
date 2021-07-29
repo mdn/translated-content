@@ -40864,6 +40864,148 @@
       "teoli"
     ]
   },
+  "Web/JavaScript/Reference/Global_Objects/Map": {
+    "modified": "2020-11-06T12:58:07.510Z",
+    "contributors": [
+      "mfuji09",
+      "mpcjazz",
+      "eltociear",
+      "kachick",
+      "dlwe",
+      "BuminMacintosh",
+      "woodmix",
+      "daikiueda",
+      "YuichiNukiyama",
+      "PandaNoir",
+      "lv7777",
+      "Hixhi",
+      "ocha"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Map/@@iterator": {
+    "modified": "2020-11-06T02:35:29.985Z",
+    "contributors": [
+      "mfuji09",
+      "mpcjazz",
+      "Kisaragi",
+      "SphinxKnight",
+      "shide55"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Map/@@species": {
+    "modified": "2020-11-06T05:22:22.573Z",
+    "contributors": [
+      "mfuji09",
+      "SphinxKnight",
+      "shide55"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag": {
+    "modified": "2020-10-15T21:39:55.689Z",
+    "contributors": [
+      "mfuji09",
+      "Kisaragi",
+      "YuichiNukiyama"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Map/Map": {
+    "modified": "2020-11-06T12:31:37.635Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Map/clear": {
+    "modified": "2020-11-06T05:11:45.291Z",
+    "contributors": [
+      "mfuji09",
+      "segayuu",
+      "SphinxKnight",
+      "shide55"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Map/delete": {
+    "modified": "2020-11-06T02:41:53.398Z",
+    "contributors": [
+      "mfuji09",
+      "mpcjazz",
+      "segayuu",
+      "SphinxKnight",
+      "shide55"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Map/entries": {
+    "modified": "2020-10-17T09:59:44.238Z",
+    "contributors": [
+      "mfuji09",
+      "segayuu",
+      "woodmix",
+      "shide55"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Map/forEach": {
+    "modified": "2020-10-17T09:19:37.508Z",
+    "contributors": [
+      "mfuji09",
+      "u_7cc",
+      "woodmix",
+      "shide55"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Map/get": {
+    "modified": "2020-10-16T22:01:27.590Z",
+    "contributors": [
+      "mfuji09",
+      "yuta0801",
+      "segayuu",
+      "SphinxKnight",
+      "ledsun",
+      "shide55"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Map/has": {
+    "modified": "2020-10-16T21:43:06.831Z",
+    "contributors": [
+      "mfuji09",
+      "segayuu",
+      "SphinxKnight",
+      "shide55"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Map/keys": {
+    "modified": "2020-11-06T04:31:09.409Z",
+    "contributors": [
+      "mfuji09",
+      "SphinxKnight",
+      "shide55"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Map/set": {
+    "modified": "2020-10-16T21:36:15.305Z",
+    "contributors": [
+      "mfuji09",
+      "mpcjazz",
+      "isdh",
+      "SphinxKnight",
+      "mayuowww",
+      "shide55"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Map/size": {
+    "modified": "2020-11-06T12:27:52.241Z",
+    "contributors": [
+      "mfuji09",
+      "SphinxKnight",
+      "shide55"
+    ]
+  },
+  "Web/JavaScript/Reference/Global_Objects/Map/values": {
+    "modified": "2020-11-06T02:54:38.454Z",
+    "contributors": [
+      "mfuji09",
+      "woodmix",
+      "shide55"
+    ]
+  },
   "Web/JavaScript/Reference/Global_Objects/Math": {
     "modified": "2020-10-15T21:13:37.581Z",
     "contributors": [
@@ -52237,148 +52379,6 @@
     "modified": "2020-10-15T22:31:40.722Z",
     "contributors": [
       "mfuji09"
-    ]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
-    "modified": "2020-11-06T12:58:07.510Z",
-    "contributors": [
-      "mfuji09",
-      "mpcjazz",
-      "eltociear",
-      "kachick",
-      "dlwe",
-      "BuminMacintosh",
-      "woodmix",
-      "daikiueda",
-      "YuichiNukiyama",
-      "PandaNoir",
-      "lv7777",
-      "Hixhi",
-      "ocha"
-    ]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@iterator": {
-    "modified": "2020-11-06T02:35:29.985Z",
-    "contributors": [
-      "mfuji09",
-      "mpcjazz",
-      "Kisaragi",
-      "SphinxKnight",
-      "shide55"
-    ]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@species": {
-    "modified": "2020-11-06T05:22:22.573Z",
-    "contributors": [
-      "mfuji09",
-      "SphinxKnight",
-      "shide55"
-    ]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag": {
-    "modified": "2020-10-15T21:39:55.689Z",
-    "contributors": [
-      "mfuji09",
-      "Kisaragi",
-      "YuichiNukiyama"
-    ]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/Map": {
-    "modified": "2020-11-06T12:31:37.635Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/clear": {
-    "modified": "2020-11-06T05:11:45.291Z",
-    "contributors": [
-      "mfuji09",
-      "segayuu",
-      "SphinxKnight",
-      "shide55"
-    ]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/delete": {
-    "modified": "2020-11-06T02:41:53.398Z",
-    "contributors": [
-      "mfuji09",
-      "mpcjazz",
-      "segayuu",
-      "SphinxKnight",
-      "shide55"
-    ]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/entries": {
-    "modified": "2020-10-17T09:59:44.238Z",
-    "contributors": [
-      "mfuji09",
-      "segayuu",
-      "woodmix",
-      "shide55"
-    ]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/forEach": {
-    "modified": "2020-10-17T09:19:37.508Z",
-    "contributors": [
-      "mfuji09",
-      "u_7cc",
-      "woodmix",
-      "shide55"
-    ]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/get": {
-    "modified": "2020-10-16T22:01:27.590Z",
-    "contributors": [
-      "mfuji09",
-      "yuta0801",
-      "segayuu",
-      "SphinxKnight",
-      "ledsun",
-      "shide55"
-    ]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/has": {
-    "modified": "2020-10-16T21:43:06.831Z",
-    "contributors": [
-      "mfuji09",
-      "segayuu",
-      "SphinxKnight",
-      "shide55"
-    ]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/keys": {
-    "modified": "2020-11-06T04:31:09.409Z",
-    "contributors": [
-      "mfuji09",
-      "SphinxKnight",
-      "shide55"
-    ]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/set": {
-    "modified": "2020-10-16T21:36:15.305Z",
-    "contributors": [
-      "mfuji09",
-      "mpcjazz",
-      "isdh",
-      "SphinxKnight",
-      "mayuowww",
-      "shide55"
-    ]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/size": {
-    "modified": "2020-11-06T12:27:52.241Z",
-    "contributors": [
-      "mfuji09",
-      "SphinxKnight",
-      "shide55"
-    ]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/values": {
-    "modified": "2020-11-06T02:54:38.454Z",
-    "contributors": [
-      "mfuji09",
-      "woodmix",
-      "shide55"
     ]
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/WeakSet/clear": {
