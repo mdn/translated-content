@@ -3084,6 +3084,7 @@
 /fr/docs/Mozilla/Add-ons/WebExtensions/Incompatibilités_Chrome	/fr/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
 /fr/docs/Mozilla/Add-ons/WebExtensions/Intercepter_requêtes_HTTP	/fr/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests
 /fr/docs/Mozilla/Add-ons/WebExtensions/Travailler_avec_l_API_Tabs	/fr/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API
+/fr/docs/Mozilla/Add-ons/WebExtensions/Using_the_JavaScript_APIs	/fr/docs/Mozilla/Add-ons/WebExtensions/API
 /fr/docs/Mozilla/Add-ons/WebExtensions/construction_extension_cross_browser	/fr/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
 /fr/docs/Mozilla/Add-ons/WebExtensions/extension_des_outils_de_developpement	/fr/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools
 /fr/docs/Mozilla/Add-ons/WebExtensions/inserer_en_toute_securite_du_contenu_externe_dans_une_page	/fr/docs/Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page
