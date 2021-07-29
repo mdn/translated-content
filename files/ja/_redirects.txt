@@ -4099,7 +4099,7 @@
 /ja/docs/Web/CSS/-moz-border-radius-bottomright	/ja/docs/Web/CSS/border-bottom-right-radius
 /ja/docs/Web/CSS/-moz-border-radius-topleft	/ja/docs/Web/CSS/border-top-width
 /ja/docs/Web/CSS/-moz-border-radius-topright	/ja/docs/Web/CSS/border-top-right-radius
-/ja/docs/Web/CSS/-moz-box-ordinal-group	/ja/docs/conflicting/Web/CSS/box-ordinal-group
+/ja/docs/Web/CSS/-moz-box-ordinal-group	/ja/docs/Web/CSS/box-ordinal-group
 /ja/docs/Web/CSS/-moz-cell	/ja/docs/Web/CSS/cursor
 /ja/docs/Web/CSS/-moz-column-width	/ja/docs/Web/CSS/column-width
 /ja/docs/Web/CSS/-moz-context-menu	/ja/docs/Web/CSS/cursor
