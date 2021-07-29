@@ -1,10 +1,10 @@
 ---
-title: 'Link types: noopener'
+title: 'Types de liens : noopener'
 slug: Web/HTML/Link_types/noopener
 browser-compat: html.elements.a.rel.noopener
 translation_of: 'Web/HTML/Link_types/noopener'
 ---
-<p>Le mot-clé <strong><code>noopener</code></strong> de l'attribut <code><a href="/fr/docs/Web/HTML/Attributes/rel">rel</a></code> des éléments {{HTMLElement("a")}}, {{HTMLElement("area")}} et {{HTMLElement("form")}} indique au navigateur de naviguer vers la ressource cible sans donner accès au document précédent au nouveau contexte de navigation, en n'indiquant pas la propriété {{DOMxRef("Window.opener")}} sur la nouvelle fenêtre (il retourne <code>null</code>).</p>
+<p>Le mot-clé <strong><code>noopener</code></strong> de l'attribut <code><a href="/fr/docs/Web/HTML/Attributes/rel">rel</a></code> des éléments {{HTMLElement("a")}}, {{HTMLElement("area")}} et {{HTMLElement("form")}} indique au navigateur d'ouvrir la ressource cible sans donner d'accès au document précédent au nouveau contexte de navigation qui sera créé, en n'indiquant pas la propriété {{DOMxRef("Window.opener")}} sur la nouvelle fenêtre (il retourne <code>null</code>).</p>
 
 <p>Ceci est tout spécialement utile lors de l'ouverture de liens non vérifiés/fiables, afin de s'assurer qu'ils ne peuvent pas trafiquer le document d'origine via la propriété {{DOMxRef("Window.opener")}} (pour plus de détails, voir <a href="https://mathiasbynens.github.io/rel-noopener/">cet article en anglais concernant <code>rel=noopener</code></a>), lorsque l'en-tête HTTP <code>Referer</code> est fourni (à moins que <code>noreferrer</code> soit également utilisé).</p>
 
