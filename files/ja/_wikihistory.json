@@ -48269,14 +48269,6 @@
       "ethertank"
     ]
   },
-  "conflicting/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL": {
-    "modified": "2019-01-16T13:04:17.114Z",
-    "contributors": [
-      "fscholz",
-      "ethertank",
-      "yyss"
-    ]
-  },
   "conflicting/Web/API/WebSockets_API": {
     "modified": "2019-03-23T23:32:19.540Z",
     "contributors": [

@@ -3788,7 +3788,7 @@
 /ja/docs/Web/API/WebGL_API/Animating_objects_with_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 /ja/docs/Web/API/WebGL_API/Animating_textures_in_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
 /ja/docs/Web/API/WebGL_API/Creating_3D_objects_using_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
-/ja/docs/Web/API/WebGL_API/Cross-Domain_Textures	/ja/docs/conflicting/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
+/ja/docs/Web/API/WebGL_API/Cross-Domain_Textures	/ja/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 /ja/docs/Web/API/WebGL_API/Getting_started_with_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /ja/docs/Web/API/WebGL_API/Lighting_in_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 /ja/docs/Web/API/WebGL_API/Using_shaders_to_apply_color_in_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
@@ -4899,7 +4899,7 @@
 /ja/docs/Web/WebGL/Animating_objects_with_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 /ja/docs/Web/WebGL/Animating_textures_in_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
 /ja/docs/Web/WebGL/Creating_3D_objects_using_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
-/ja/docs/Web/WebGL/Cross-Domain_Textures	/ja/docs/conflicting/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
+/ja/docs/Web/WebGL/Cross-Domain_Textures	/ja/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 /ja/docs/Web/WebGL/Getting_started_with_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /ja/docs/Web/WebGL/Lighting_in_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 /ja/docs/Web/WebGL/Using_shaders_to_apply_color_in_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
@@ -4967,7 +4967,7 @@
 /ja/docs/WebGL/Animating_objects_with_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 /ja/docs/WebGL/Animating_textures_in_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL
 /ja/docs/WebGL/Creating_3D_objects_using_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
-/ja/docs/WebGL/Cross-Domain_Textures	/ja/docs/conflicting/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
+/ja/docs/WebGL/Cross-Domain_Textures	/ja/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 /ja/docs/WebGL/Getting_started_with_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /ja/docs/WebGL/Lighting_in_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 /ja/docs/WebGL/Using_shaders_to_apply_color_in_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
