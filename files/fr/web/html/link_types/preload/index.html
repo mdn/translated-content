@@ -1,0 +1,220 @@
+---
+title: 'Types de liens : preload'
+slug: Web/HTML/Link_types/preload
+browser-compat: html.elements.link.rel.preload
+translation_of: 'Web/HTML/Link_types/preload'
+---
+<div>{{HTMLSidebar}}</div>
+
+<p>La valeur <code>preload</code> de l'attribut {{htmlattrxref("rel", "link")}} de l'élément {{htmlelement("link")}} permet de déclarer des requêtes à analyser dans la partie {{htmlelement("head")}} du HTML de la page, en spécifiant les ressources dont votre page va avoir besoin dans peu de temps, et qu'il serait souhaitable de charger le plus tôt possible, avant que le rendu de la page par le navigateur ne commence. Cela permet de s'assurer que les ressources sont disponibles plus tôt et qu'elles auront moins de chances de bloquer le rendu de la page, ce qui améliore les performances.</p>
+
+
+<h2 id="the_basics">Les bases</h2>
+
+<p>Pour charger un fichier CSS permettant de styler une page, on utilise le plus souvent l'élément <code>&lt;link&gt;</code> de la manière suivante :</p>
+
+<pre class="brush: html">&lt;link rel="stylesheet" href="styles/main.css"&gt;</pre>
+
+<p>Ici, nous allons utiliser la valeur <code>preload</code> sur l'attribut <code>rel</code>, ce qui transformera l'élément <code>&lt;link&gt;</code> en outil de préchargement utilisable pour n'importe quelle ressource. Nous devrons aussi indiquer :</p>
+
+<ul>
+  <li>le chemin de la ressource dans l'attribut {{htmlattrxref("href", "link")}} ;</li>
+  <li>le type de ressource dans l'attribut {{htmlattrxref("as", "link")}} ;</li>
+</ul>
+
+<p>Voici un exemple simple (voir nos <a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/js-and-css">fichiers JS et CSS d'exemple</a> et le <a href="https://mdn.github.io/html-examples/link-rel-preload/js-and-css/">résultat obtenu</a>) :</p>
+
+<pre class="brush: html">&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Exemple de préchargement JS et CSS&lt;/title&gt;
+
+  &lt;link rel="preload" href="style.css" as="style"&gt;
+  &lt;link rel="preload" href="main.js" as="script"&gt;
+
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;h1&gt;Balles rebondissantes&lt;/h1&gt;
+  &lt;canvas&gt;&lt;/canvas&gt;
+
+  &lt;script src="main.js" defer&gt;&lt;/script&gt;
+&lt;/body&gt;</pre>
+
+<p>Dans l'exemple ci-dessus, nous préchargeons nos fichiers CSS et JavaScript afin qu'ils puissent être disponible dès qu'ils sont nécessaire pour le rendu de la page. Cet exemple est trivial, car le navigateur va probablement découvrir en même temps les balises de préchargement, le <code>&lt;link rel="stylesheet"&gt;</code> et le <code>&lt;script&gt;</code>, mais le bénéfice sera bien plus visible si les ressources sont plus nombreuses, plus lourdes et chargées à différents endroits. Par exemple :</p>
+
+<ul>
+  <li>les ressources qui sont chargées depuis un fichier CSS, comme certaines polices et images ;</li>
+  <li>les ressources inclues par des fichiers JavaScript, comme des fichiers JSON, d'autres scripts importés ou des services web ;</li>
+  <li>les fichiers image et vidéos plus importants ;</li>
+</ul>
+
+<p><code>preload</code> dispose aussi d'autres avantages. L'utilisation de l'attribut <code>as</code> pour spécifier le type de contenu à précharger permet au navigateur de :</p>
+
+<ul>
+  <li>prioriser les ressources se chargeant avec davantage de précision ;</li>
+  <li>les stocker dans le cache pour de futures requêtes, ce qui permet de réutiliser les ressources si c'est pertinent ;</li>
+  <li>appliquer la bonne <a href="/fr/docs/Web/HTTP/CSP">stratégie de sécurité du contenu</a> aux ressources ;</li>
+  <li>mettre en place les bons en-têtes de requêtes {{HTTPHeader("Accept")}} pour les ressources ;</li>
+</ul>
+
+<h3 id="what_types_of_content_can_be_preloaded">Quels types de contenu peuvent être préchargés ?</h3>
+
+<p>De nombreux différents types de contenu peuvent être préchargés. Les valeurs possibles de l'attribut <code>as</code> sont les suivantes :</p>
+
+<ul>
+  <li><code>audio</code> : fichier audio, typiquement intégré avec l'élément {{htmlelement("audio")}} ;</li>
+  <li><code>document</code> : un document HTML destiné à être embarqué dans une {{htmlelement("frame")}} ou dans une {{htmlelement("iframe")}} ;</li>
+  <li><code>embed</code> : une ressource à embarquer dans un élément {{htmlelement("embed")}} ;</li>
+  <li><code>fetch</code> : une ressource accessible via une requête <code>fetch</code> ou <code>XHR</code>, comme un <code>ArrayBuffer</code> ou un fichier JSON ;</li>
+  <li><code>font</code> : un fichier de police ;</li>
+  <li><code>image</code> : un fichier image ;</li>
+  <li><code>object</code> : une ressource à embarquer à l'intérieur d'un élément {{htmlelement("object")}} ;</li>
+  <li><code>script</code> : un fichier JavaScript ;</li>
+  <li><code>style</code> : une feuille de styles CSS ;</li>
+  <li><code>track</code> : un fichier WebVTT ;</li>
+  <li><code>worker</code> : un <i lang="en">web worker</i> JavaScript ou un <i lang="en">worker</i> partagé ;</li>
+  <li><code>video</code> : un fichier vidéo, typiquement intégré avec l'élément {{htmlelement("video")}}.</li>
+</ul>
+
+<div class="note">
+  <p><strong>Note :</strong> le préchargement de l'élément <code>video</code> est inclut dans la spécification <i lang="en">Preload</i> mais n'est pas encore implémenté par les navigateurs.</p>
+</div>
+
+<div class="note">
+<p><strong>Note :</strong> pour davantage de détails sur ces valeurs et sur la façon dont la spécification <i lang="en">Preload</i> prévoit de les traiter, consultez <a href="https://w3c.github.io/preload/#link-element-extensions"><i lang="en">link element extensions</i> (en anglais)</a>. Notez également que la liste complète des valeurs acceptées par l'attribut <code>as</code> est déterminé par la spécification <i lang="en">Fetch</i> — voir la spécification <a href="https://fetch.spec.whatwg.org/#concept-request-destination"><i lang="en">request destinations</i> (en anglais)</a>.</p>
+</div>
+
+<h2 id="including_a_mime_type">Inclure un type MIME</h2>
+
+<p>Les éléments <code>&lt;link&gt;</code> peuvent accepter un attribut {{htmlattrxref("type", "link")}}, contenant which contains the MIME type of the resource the element points to. This is especially useful when preloading resources — the browser will use the <code>type</code> attribute value to work out if it supports that resource, and will only download it if so, ignoring it if not.</p>
+
+<p>You can see an example of this in our video example (see the <a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/video">full source code</a>, and also <a href="https://mdn.github.io/html-examples/link-rel-preload/video/">the live version</a>), a code snippet from which is shown below. And while this code won’t actually cause preloading in any browsers — because video preloading isn’t yet supported in any browsers — it still illustrates the core behavior behind preloading in general.</p>
+
+<pre class="brush: html">&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Video preload example&lt;/title&gt;
+
+  &lt;link rel="preload" href="sintel-short.mp4" as="video" type="video/mp4"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;video controls&gt;
+    &lt;source src="sintel-short.mp4" type="video/mp4"&gt;
+    &lt;source src="sintel-short.webm" type="video/webm"&gt;
+    &lt;p&gt;Your browser doesn't support HTML5 video. Here is a &lt;a href="sintel-short.mp4"&gt;link to the video&lt;/a&gt; instead.&lt;/p&gt;
+  &lt;/video&gt;
+&lt;/body&gt;</pre>
+
+<p>The code in the example above causes the <code>video/mp4</code> video to be preloaded only in supporting browsers — and for users who have <code>video/mp4</code> support in their browsers, causes the <code>video/mp4</code> video to actually be used (since it’s the first {{htmlelement("source")}} specified). That makes the video player hopefully smoother/more responsive for users who have <code>video/mp4</code> support in their browsers.</p>
+
+<p>Note that for users whose browsers have both <code>video/mp4</code> and <code>video/webm</code> support, if in that code a <code>&lt;link rel="preload" href="sintel-short.webm" as="video" type="video/webm"&gt;</code> element were also specified, then <em>both</em> the <code>video/mp4</code> and <code>video/webm</code> videos would be preloaded — even though only one of them would actually be used.</p>
+
+<p>Therefore, specifying preloading for multiple types of the same resource is discouraged. Instead, the best practice is to specify preloading only for the type the majority of your users are likely to actually use. That’s why the code in the example above doesn’t specify preloading for the <code>video/webm</code> video.</p>
+
+<p>However, the lack of preloading doesn’t prevent the <code>video/webm</code> video from actually being used by those who need it: for users whose browsers don’t have <code>video/mp4</code> support but do have <code>video/webm</code> support, the code in the example above does still cause the <code>video/webm</code> video to be used — but it does so without also causing it to also be preloaded unnecessarily for the majority of other users.</p>
+
+<h2 id="CORS-enabled_fetches">CORS-enabled fetches</h2>
+
+<p>When preloading resources that are fetched with <a href="/en-US/docs/Web/HTTP/CORS">CORS</a> enabled (e.g. <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code>, <code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> or <a href="/en-US/docs/Web/CSS/@font-face">fonts</a>), special care needs to be taken to setting the {{htmlattrxref("crossorigin","link")}} attribute on your <code><a href="/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> element. The attribute needs to be set to match the resource's CORS and credentials mode, even when the fetch is not cross-origin.</p>
+
+<p>As mentioned above, one interesting case where this applies is font files. Because of various reasons, these have to be fetched using anonymous-mode CORS (see <a href="https://drafts.csswg.org/css-fonts/#font-fetching-requirements">Font fetching requirements</a>).</p>
+
+<p>Let's use this case as an example. You can see the full <a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/fonts">example source code on GitHub</a> (<a href="https://mdn.github.io/html-examples/link-rel-preload/fonts/">also see it live</a>):</p>
+
+<pre class="brush: html">&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Web font example&lt;/title&gt;
+
+  &lt;link rel="preload" href="fonts/cicle_fina-webfont.woff2" as="font" type="font/woff2" crossorigin&gt;
+  &lt;link rel="preload" href="fonts/zantroke-webfont.woff2" as="font" type="font/woff2" crossorigin&gt;
+
+  &lt;link href="style.css" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  …
+&lt;/body&gt;</pre>
+
+<p>Not only are we providing the MIME type hints in the <code>type</code> attributes, but we are also providing the <code>crossorigin</code> attribute to make sure the preload's CORS mode matches the eventual font resource request.</p>
+
+<h2 id="Including_media">Including media</h2>
+
+<p>One nice feature of <code>&lt;link&gt;</code> elements is their ability to accept {{htmlattrxref("media", "link")}} attributes. These can accept <a href="/en-US/docs/Web/CSS/@media#media_types">media types</a> or full-blown <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media queries</a>, allowing you to do responsive preloading!</p>
+
+<p>Let's look at an example (see it on GitHub — <a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/media">source code</a>, <a href="https://mdn.github.io/html-examples/link-rel-preload/media/">live example</a>):</p>
+
+<pre class="brush: html">&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;title&gt;Responsive preload example&lt;/title&gt;
+
+  &lt;link rel="preload" href="bg-image-narrow.png" as="image" media="(max-width: 600px)"&gt;
+  &lt;link rel="preload" href="bg-image-wide.png" as="image" media="(min-width: 601px)"&gt;
+
+  &lt;link rel="stylesheet" href="main.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;header&gt;
+    &lt;h1&gt;My site&lt;/h1&gt;
+  &lt;/header&gt;
+
+  &lt;script&gt;
+    var mediaQueryList = window.matchMedia("(max-width: 600px)");
+    var header = document.querySelector('header');
+
+    if (mediaQueryList.matches) {
+      header.style.backgroundImage = 'url(bg-image-narrow.png)';
+    } else {
+      header.style.backgroundImage = 'url(bg-image-wide.png)';
+    }
+  &lt;/script&gt;
+&lt;/body&gt;</pre>
+
+<p>We include <code>media</code> attributes on our <code>&lt;link&gt;</code> elements so that a narrow image is preloaded if the user has a narrow viewport, and a wider image is loaded if they have a wide viewport. We use {{domxref("Window.matchMedia")}} / {{domxref("MediaQueryList")}} to do this (see <a href="/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries">Testing media queries</a> for more).</p>
+
+<p>This makes it much more likely that the font will be available for the page render, cutting down on FOUT (flash of unstyled text).</p>
+
+<p>This doesn't have to be limited to images, or even files of the same type — think big! You could perhaps preload and display a simple SVG diagram if the user is on a narrow screen where bandwidth and CPU is potentially more limited, or preload a complex chunk of JavaScript then use it to render an interactive 3D model if the user's resources are more plentiful.</p>
+
+<h2 id="Scripting_and_preloads">Scripting and preloads</h2>
+
+<p>Another nice thing about these preloads is that you can execute them with script. For example, here we create a {{domxref("HTMLLinkElement")}} instance, then attach it to the DOM:</p>
+
+<pre class="brush: js">var preloadLink = document.createElement(&quot;link&quot;);
+preloadLink.href = &quot;myscript.js&quot;;
+preloadLink.rel = &quot;preload&quot;;
+preloadLink.as = &quot;script&quot;;
+document.head.appendChild(preloadLink);
+</pre>
+
+<p>This means that the browser will preload the <code>myscript.js</code> file, but not actually use it yet. To use it, you could do this:</p>
+
+<pre class="brush: js">var preloadedScript = document.createElement(&quot;script&quot;);
+preloadedScript.src = &quot;myscript.js&quot;;
+document.body.appendChild(preloadedScript);
+</pre>
+
+<p>This is useful when you want to preload a script, but then defer execution until exactly when you need it.</p>
+
+<h2 id="Other_resource_preloading_mechanisms">Other resource preloading mechanisms</h2>
+
+<p>Other preloading features exist, but none are quite as fit for purpose as <code>&lt;link rel="preload"&gt;</code> :</p>
+
+<ul>
+	<li><code>&lt;link rel="prefetch"&gt;</code> has been supported in browsers for a long time, but it is intended for prefetching resources that will be used in the <strong><em>next</em></strong> navigation/page load (e.g. when you go to the next page). This is fine, but isn't useful for the current page! In addition, browsers will give <code>prefetch</code> resources a lower priority than <code>preload</code> ones — the current page is more important than the next. See <a href="/en-US/docs/Web/HTTP/Link_prefetching_FAQ">Link prefetching FAQ</a> for more details ;</li>
+	<li><code>&lt;link rel="prerender"&gt;</code> renders a specified webpage in the background, speeding up its load if the user navigates to it. Because of the potential to waste users bandwidth, Chrome treats <code>prerender</code> as a <a href="https://developers.google.com/web/updates/2018/07/nostate-prefetch">NoState prefetch</a> instead ;</li>
+	<li><code>&lt;link rel="subresource"&gt;</code> {{non-standard_inline}} was supported in Chrome a while ago, and was intended to tackle the same issue as <code>preload</code>, but it had a problem: there was no way to work out a priority for the items (<code>as</code> didn't exist back then), so they all got fetched with fairly low priority ;</li>
+	<li>There are a number of script-based resource loaders out there, but they don't have any power over the browser's fetch prioritization queue, and are subject to much the same performance problems ;</li>
+</ul>
+
+<h2 id="Specifications">Specifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="Browser_compatibility">Browser compatibility</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+	<li><a href="https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/">Preload: What Is It Good For?</a> by Yoav Weiss</li>
+</ul>
