@@ -48379,21 +48379,6 @@
       "yyss"
     ]
   },
-  "conflicting/Tools/Debugger/How_to/Search": {
-    "modified": "2020-07-16T22:35:10.949Z",
-    "contributors": [
-      "wbamberg",
-      "yyss"
-    ]
-  },
-  "conflicting/Tools/Debugger/How_to/Set_Watch_Expressions": {
-    "modified": "2020-07-16T22:35:13.080Z",
-    "contributors": [
-      "wbamberg",
-      "yyss",
-      "SatoshiOhata"
-    ]
-  },
   "conflicting/Tools/Memory/Basic_operations": {
     "modified": "2020-07-16T22:36:28.978Z",
     "contributors": [

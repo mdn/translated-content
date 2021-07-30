@@ -3362,8 +3362,8 @@
 /ja/docs/Tools/CSS_Coverage	/ja/docs/orphaned/Tools/CSS_Coverage
 /ja/docs/Tools/Debugger/How_to/Black_box_a_source	/ja/docs/Tools/Debugger/How_to/Ignore_a_source
 /ja/docs/Tools/Debugger/How_to/Break_on_a_DOM_event	/ja/docs/Tools/Debugger/Break_on_DOM_mutation
-/ja/docs/Tools/Debugger/How_to/Examine,_modify,_and_watch_variables	/ja/docs/conflicting/Tools/Debugger/How_to/Set_Watch_Expressions
-/ja/docs/Tools/Debugger/How_to/Search_and_filter	/ja/docs/conflicting/Tools/Debugger/How_to/Search
+/ja/docs/Tools/Debugger/How_to/Examine,_modify,_and_watch_variables	/ja/docs/Tools/Debugger/How_to/Set_Watch_Expressions
+/ja/docs/Tools/Debugger/How_to/Search_and_filter	/ja/docs/Tools/Debugger/How_to/Search
 /ja/docs/Tools/Debugger/Keyboard_shortcuts	/ja/docs/orphaned/Tools/Debugger/Keyboard_shortcuts
 /ja/docs/Tools/Debugger/Limitations_of_the_new_debugger	/ja/docs/orphaned/Tools/Debugger/Limitations_of_the_new_debugger
 /ja/docs/Tools/Debugger_(before_Firefox_52)	/ja/docs/orphaned/Tools/Debugger_(before_Firefox_52)
