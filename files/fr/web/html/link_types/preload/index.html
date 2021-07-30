@@ -87,13 +87,13 @@ translation_of: 'Web/HTML/Link_types/preload'
 
 <h2 id="including_a_mime_type">Inclure un type MIME</h2>
 
-<p>Les éléments <code>&lt;link&gt;</code> peuvent accepter un attribut {{htmlattrxref("type", "link")}}, contenant which contains the MIME type of the resource the element points to. This is especially useful when preloading resources — the browser will use the <code>type</code> attribute value to work out if it supports that resource, and will only download it if so, ignoring it if not.</p>
+<p>Les éléments <code>&lt;link&gt;</code> peuvent accepter un attribut {{htmlattrxref("type", "link")}}, contenant le type MIME de la ressource vers laquelle pointe le document. Ceci est tout spécialement utile lorsque l'on effectue un préchargement des ressources – le navigateur utilisera alors l'attribut <code>type</code> pour vérifier s'il prend en charge la ressource et la télécharger si c'est le cas, ou l'ignorer dans le cas contraire.</p>
 
-<p>You can see an example of this in our video example (see the <a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/video">full source code</a>, and also <a href="https://mdn.github.io/html-examples/link-rel-preload/video/">the live version</a>), a code snippet from which is shown below. And while this code won’t actually cause preloading in any browsers — because video preloading isn’t yet supported in any browsers — it still illustrates the core behavior behind preloading in general.</p>
+<p>Vous pouvez voir un exemple de ce fonctionnement dans notre vidéo d'exemple (voir le <a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/video">code source complet</a> ou la <a href="https://mdn.github.io/html-examples/link-rel-preload/video/">version exécutable en direct</a>), utilisant le bout de code proposé ci-dessous. À noter que si ce code ne lancera pas de préchargement effectif sur aucun navigateur – le préchargement des vidéos n'est encore implémenté sur aucun navigateur – cela permet d'illustrer le fonctionnement général du préchargement.</p>
 
 <pre class="brush: html">&lt;head&gt;
   &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;Video preload example&lt;/title&gt;
+  &lt;title&gt;Exemple de préchargement de vidéo&lt;/title&gt;
 
   &lt;link rel="preload" href="sintel-short.mp4" as="video" type="video/mp4"&gt;
 &lt;/head&gt;
@@ -101,11 +101,11 @@ translation_of: 'Web/HTML/Link_types/preload'
   &lt;video controls&gt;
     &lt;source src="sintel-short.mp4" type="video/mp4"&gt;
     &lt;source src="sintel-short.webm" type="video/webm"&gt;
-    &lt;p&gt;Your browser doesn't support HTML5 video. Here is a &lt;a href="sintel-short.mp4"&gt;link to the video&lt;/a&gt; instead.&lt;/p&gt;
+    &lt;p&gt;Votre navigateur ne prend pas en charge les vidéos HTML5. Voici un &lt;a href="sintel-short.mp4"&gt;lien vers le fichier vidéo en remplacement&lt;/a&gt;.&lt;/p&gt;
   &lt;/video&gt;
 &lt;/body&gt;</pre>
 
-<p>The code in the example above causes the <code>video/mp4</code> video to be preloaded only in supporting browsers — and for users who have <code>video/mp4</code> support in their browsers, causes the <code>video/mp4</code> video to actually be used (since it’s the first {{htmlelement("source")}} specified). That makes the video player hopefully smoother/more responsive for users who have <code>video/mp4</code> support in their browsers.</p>
+<p>Le code de l'exemple ci-dessus permet le préchargement de la <code>video/mp4</code> uniquement sur les navigateurs qui prennent en charge cette fonctionnalité et pour les personnes ayant un navigateur prenant en charge le format <code>video/mp4</code> (car ce format est le premier élément {{htmlelement("source")}} spécifié). Cela devrait rendre le lecteur vidéo plus agréable et  That makes the video player hopefully smoother/more responsive for users who have <code>video/mp4</code> support in their browsers.</p>
 
 <p>Note that for users whose browsers have both <code>video/mp4</code> and <code>video/webm</code> support, if in that code a <code>&lt;link rel="preload" href="sintel-short.webm" as="video" type="video/webm"&gt;</code> element were also specified, then <em>both</em> the <code>video/mp4</code> and <code>video/webm</code> videos would be preloaded — even though only one of them would actually be used.</p>
 
