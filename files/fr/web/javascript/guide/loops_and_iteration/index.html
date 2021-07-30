@@ -14,7 +14,7 @@ original_slug: Web/JavaScript/Guide/Boucles_et_itération
 
 <p>Les boucles permettent de répéter des actions simplement et rapidement. Une boucle peut être vue comme une version informatique de « copier N lignes » ou de « faire X fois quelque chose ». Par exemple, en JavaScript, on pourrait traduire « Faire 5 pas vers l'est » avec cette boucle :</p>
 
-<pre class="brush: js notranslate">for (let pas = 0; pas &lt; 5; pas++) {
+<pre class="brush: js">for (let pas = 0; pas &lt; 5; pas++) {
   // Ceci sera exécuté 5 fois
   // À chaque éxécution, la variable "pas" augmentera de 1
   // Lorsque'elle sera arrivée à 5, le boucle se terminera.
@@ -41,7 +41,7 @@ original_slug: Web/JavaScript/Guide/Boucles_et_itération
 
 <p>Une boucle {{jsxref("statements/for", "for")}} répète des instructions jusqu'à ce qu'une condition donnée ne soit plus vérifiée. La boucle <code>for</code> JavaScript ressemble beaucoup à celle utilisée en C ou en Java. Une boucle <code>for</code> s'utilise de la façon suivante :</p>
 
-<pre class="syntaxbox notranslate">for ([expressionInitiale]; [condition]; [expressionIncrément])
+<pre class="syntaxbox">for ([expressionInitiale]; [condition]; [expressionIncrément])
   instruction
 </pre>
 
@@ -59,7 +59,7 @@ original_slug: Web/JavaScript/Guide/Boucles_et_itération
 
 <p>La fonction suivante contient une instruction <code>for</code> qui compte le nombre d'options sélectionnées dans une liste déroulante (ici, un objet {{HTMLElement("select")}} permettant une sélection multiple). L'instruction <code>for</code> déclare une variable <code>i</code> et l'initialise à zéro. Elle vérifie que <code>i</code> est bien inférieur au nombre d'options et, pour chaque option, effectue un test conditionnel pour savoir si l'option est sélectionnée puis passe à l'option suivante en incrémentant la variable <code>i</code> pour chaque itération.</p>
 
-<pre class="brush: html notranslate">&lt;form name="selectForm"&gt;
+<pre class="brush: html">&lt;form name="selectForm"&gt;
   &lt;p&gt;
     &lt;label for="typesMusique"&gt;Veuillez choisir des genres musicaux, puis cliquez :&lt;/label&gt;
     &lt;select id="typesMusique" name="typesMusique" multiple="multiple"&gt;
@@ -97,7 +97,7 @@ btn.addEventListener("click", function(){
 
 <p>L'instruction {{jsxref("statements/do...while", "do...while")}} permet de répéter un ensemble d'instructions jusqu'à ce qu'une condition donnée ne soit plus vérifiée. (<em>NdT</em> : littéralement « do...while » signifie « faire... tant que »). Une instruction <code>do...while</code> s'utilise de la façon suivante :</p>
 
-<pre class="syntaxbox notranslate">do
+<pre class="syntaxbox">do
   instruction
 while (condition);
 </pre>
@@ -108,7 +108,7 @@ while (condition);
 
 <p>Dans l'exemple qui suit, la boucle <code>do</code> est exécutée au moins une fois et répétée jusqu'à ce que <code>i</code> ne soit plus inférieur à 5.</p>
 
-<pre class="brush: js bad-exemple notranslate">let i = 0;
+<pre class="brush: js">let i = 0;
 do {
   i += 1;
   console.log(i);
@@ -118,7 +118,7 @@ do {
 
 <p>Une instruction {{jsxref("statements/while", "while")}} permet d'exécuter une instruction tant qu'une condition donnée est vérifiée. Cette instruction <code>while</code> s'utilise de la façon suivante :</p>
 
-<pre class="syntaxbox notranslate">while (condition)
+<pre class="syntaxbox">while (condition)
   instruction
 </pre>
 
@@ -132,7 +132,7 @@ do {
 
 <p>La boucle <code>while</code> qui suit permet d'effectuer des itérations tant que <code>n</code> est inférieur à 3 :</p>
 
-<pre class="brush: js notranslate">let n = 0;
+<pre class="brush: js">let n = 0;
 let x = 0;
 while (n &lt; 3) {
   n++;
@@ -154,7 +154,7 @@ while (n &lt; 3) {
 
 <p>Attention à éviter les boucles infinies. Il faut bien s'assurer que la condition utilisée dans la boucle ne soit plus vérifiée à un moment donné. Si la condition est toujours vérifiée, la boucle se répétera sans jamais s'arrêter. Dans l'exemple qui suit, les instructions contenues dans la boucle <code>while</code> s'exécutent sans discontinuer car la condition est toujours vérifiée :</p>
 
-<pre class="brush: js notranslate">while (true) {
+<pre class="brush: js">while (true) {
   console.log("Coucou monde !");
 }</pre>
 
@@ -164,7 +164,7 @@ while (n &lt; 3) {
 
 <p>On utilise un label de la façon suivante :</p>
 
-<pre class="syntaxbox notranslate">label:
+<pre class="syntaxbox">label:
   instruction
 </pre>
 
@@ -174,7 +174,7 @@ while (n &lt; 3) {
 
 <p>Dans cet exemple, on utilise un label <code>memoBoucle</code> pour identifier une boucle <code>while</code>.</p>
 
-<pre class="brush: js notranslate">memoBoucle:
+<pre class="brush: js">memoBoucle:
 while (memo == true) {
   faireQQC();
 }</pre>
@@ -205,7 +205,7 @@ while (memo == true) {
 
 <p>Dans l'exemple qui suit, on itère sur un tableau grâce à une boucle jusqu'à trouver un élément dont la valeur est <code>valeurTest </code>:</p>
 
-<pre class="brush: js notranslate">for (i = 0; i &lt; a.length; i++) {
+<pre class="brush: js">for (i = 0; i &lt; a.length; i++) {
   if (a[i] === valeurTest) {
     break;
   }
@@ -215,7 +215,7 @@ while (memo == true) {
 
 <p>Ici, on utilise <code>break</code> des deux façons : avec une instruction représentée par un label et sans.</p>
 
-<pre class="brush: js notranslate">let x = 0;
+<pre class="brush: js">let x = 0;
 let z = 0;
 labelAnnuleBoucle: while (true) {
   console.log("Boucle externe : " + x);
@@ -253,7 +253,7 @@ labelAnnuleBoucle: while (true) {
 
 <p>Dans l'exemple qui suit, on utilise une boucle <code>while</code> avec une instruction <code>continue</code> qui est exécutée lorsque <code>i</code> vaut 3. Ici, <code>n</code> prendra donc les valeurs 1, 3, 7 et 12.</p>
 
-<pre class="brush: js notranslate">let i = 0;
+<pre class="brush: js">let i = 0;
 let n = 0;
 while (i &lt; 5) {
   i++;
@@ -273,7 +273,7 @@ while (i &lt; 5) {
 
 <p>Si <code>continue</code> utilisait l'étiquette <code>vérifIetJ</code>, le programme continuerait au début de l'instruction <code>vérifIetJ</code></p>
 
-<pre class="brush: js notranslate">let i = 0;
+<pre class="brush: js">let i = 0;
 let j = 8;
 
 vérifIetJ: while (i &lt; 4) {
@@ -296,7 +296,7 @@ vérifIetJ: while (i &lt; 4) {
 
 <p>L'instruction {{jsxref("statements/for...in","for...in")}} permet d'itérer sur l'ensemble des propriétés énumérables d'un objet. Pour chaque propriété, JavaScript exécutera l'instruction indiquée. Cette instruction s'utilise de la façon suivante :</p>
 
-<pre class="syntaxbox notranslate">for (variable in objet) {
+<pre class="syntaxbox">for (variable in objet) {
   instruction
 }
 </pre>
@@ -305,7 +305,7 @@ vérifIetJ: while (i &lt; 4) {
 
 <p>La fonction suivante prend comme argument un objet et le nom de cet objet. Elle parcourt ensuite les propriétés de l'objet et renvoie une chaîne de caractères qui liste les propriétés avec leurs noms et leurs valeurs respectives :</p>
 
-<pre class="brush: js notranslate">function afficherProps(obj, nomObj) {
+<pre class="brush: js">function afficherProps(obj, nomObj) {
   var result = "";
   for (var i in obj) {
     result += nomObj + "." + i + " = " + obj[i] + "\n";
@@ -317,7 +317,7 @@ vérifIetJ: while (i &lt; 4) {
 
 <p>Pour un objet <code>voiture</code> dont les propriétés sont <code>fabricant</code> et <code>modèle</code>, <code>result</code> serait :</p>
 
-<pre class="brush: js notranslate">voiture.fabricant = Ford
+<pre class="brush: js">voiture.fabricant = Ford
 voiture.modèle = Mustang
 </pre>
 
@@ -329,13 +329,13 @@ voiture.modèle = Mustang
 
 <p>L'instruction {{jsxref("statements/for...of","for...of")}} crée une boucle qui fonctionne avec <a href="/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration">les objets itérables</a> (qui incluent {{jsxref("Array")}}, {{jsxref("Map")}}, {{jsxref("Set")}}, l'objet <code><a href="/fr/docs/Web/JavaScript/Reference/Fonctions/arguments">arguments</a></code>, etc.). La boucle appelle un mécanisme d'itération propre à l'objet utilisé et elle parcourt l'objet et les valeurs de ses différentes propriétés.</p>
 
-<pre class="syntaxbox notranslate">for (<em>variable</em> of <em>objet</em>) {
+<pre class="syntaxbox">for (<em>variable</em> of <em>objet</em>) {
   <em>instruction
 </em>}</pre>
 
 <p>Dans l'exemple suivant, on illustre la différence entre une boucle <code>for...of</code> et une boucle <code><a href="/fr/docs/Web/JavaScript/Reference/Instructions/for...in">for...in</a></code>.  <code>for...in</code> parcourt les noms des propriétés d'un objet alors que <code>for...of</code> parcourt les <strong>valeurs</strong> des propriétés :</p>
 
-<pre class="brush:js notranslate">let arr = [3, 5, 7];
+<pre class="brush:js">let arr = [3, 5, 7];
 arr.toto = "coucou";
 
 for (let i in arr) {

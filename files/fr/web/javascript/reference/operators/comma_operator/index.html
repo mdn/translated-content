@@ -35,7 +35,7 @@ original_slug: Web/JavaScript/Reference/Opérateurs/L_opérateur_virgule
 
 <p>SI on a un tableau à 2 dimensions appelé <code>monTableau</code>, qui possède 10 éléments ayant chacun 10 éléments, on peut utiliser le code suivant avec l'opérateur virgule afin d'incrémenter deux variables (<code>i</code> et <code>j</code>) à la fois. Attention, la virgule utilisée au sein de l'instruction <code>var</code> <strong>n'est pas</strong> l'opérateur virgule (car il ne peut exister au sein d'une expression) ; ici c'est un caractère spécial de l'instruction {{jsxref("Instructions/var","var")}}. Le code qui suit affiche les éléments présents sur la diagonale de cette matrice :</p>
 
-<pre class="brush:js;highlight:[1]">for (var i = 0, j = 9; i &lt;= 9; i++, j--){
+<pre class="brush:js">for (var i = 0, j = 9; i &lt;= 9; i++, j--){
   console.log("monTableau[" + i + "][" + j + "] = " + monTableau[i][j]);
 }</pre>
 

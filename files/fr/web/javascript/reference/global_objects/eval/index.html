@@ -65,7 +65,7 @@ eval(expression.toString());
   (0, eval)('x + y'); // un autre exemple d'appel indirect.
 }</pre>
 
-<h2 id="Nutiliser_eval_quen_dernier_recours_!"><a name="dont-use-it">N'utiliser <code>eval()</code> qu'en dernier recours !</a></h2>
+<h2 id="Nutiliser_eval_quen_dernier_recours_!">N'utiliser <code>eval()</code> qu'en dernier recours !</h2>
 
 <p><code>eval()</code> est une fonction dangereuse qui exécute le code passé en argument avec les privilèges de l'environnement appelant. Si <code>eval()</code> est utilisée avec une chaîne construite de façon mal intentionnée, cela pourra entraîner l'exécution d'un code malveillant sur la machine de l'utilisateur avec les permissions données au site ou au module complémentaire. À un niveau encore plus critique, du code tiers pourrait ainsi consulter la portée dans laquelle <code>eval()</code> a été invoquée. Cela peut permettre des attaques qui n'auraient pas été rendues possible en utilisant un objet {{jsxref("Function")}}.</p>
 

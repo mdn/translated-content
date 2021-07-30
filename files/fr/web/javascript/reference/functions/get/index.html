@@ -50,7 +50,7 @@ original_slug: Web/JavaScript/Reference/Fonctions/get
 
 <p>Ce code va créer une pseudo-propriété <code>dernier</code> de l'objet <code>o</code> qui va retourner la dernière entrée du tableau <code>o.journal </code>:</p>
 
-<pre class="deki-transform">var o = {
+<pre class="brush: js">var o = {
   get dernier() {
     if (this.journal.length &gt; 0) {
       return this.journal[this.journal.length - 1];
@@ -68,7 +68,7 @@ console.log(o.dernier); // "actu"
 
 <h3 id="Supprimer_un_accesseur_avec_l'opérateur_delete">Supprimer un accesseur avec l'opérateur <code>delete</code></h3>
 
-<pre class="eval deki-transform">delete o.dernier;
+<pre class="brush: js">delete o.dernier;
 </pre>
 
 <h3 id="Définir_un_accesseur_sur_des_objets_existants_grâce_à_defineProperty">Définir un accesseur sur des objets existants grâce à <code>defineProperty</code></h3>

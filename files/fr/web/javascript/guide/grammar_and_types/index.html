@@ -62,7 +62,7 @@ typeof Früh; // undefined car JavaScript est sensible à la casse
 <p>Les variables sont utilisées comme des noms symboliques désignant les valeurs utilisées dans l'application. Les noms des variables sont appelés <em>identifiants</em>. Ces identifiants doivent respecter certaines règles.</p>
 
 <p>Un identifiant JavaScript doit commencer par une lettre, un tiret bas (_) ou un symbole dollar ($). Les caractères qui suivent peuvent être des chiffres (0 à 9).<br>
- <u>À noter</u>: puisque Javascript est sensible aux majuscules et minuscules: les lettres peuvent comprendre les caractères de « A » à « Z » (en majuscule) mais aussi les caractères  de « a » à « z » (en minuscule).</p>
+À noter : puisque Javascript est sensible aux majuscules et minuscules: les lettres peuvent comprendre les caractères de « A » à « Z » (en majuscule) mais aussi les caractères  de « a » à « z » (en minuscule).</p>
 
 <p>On peut aussi utiliser la plupart lettres Unicode ou ISO 8859-1 (comme å et ü, pour plus de détails, voir <a href="https://mathiasbynens.be/notes/javascript-identifiers-es6">ce billet de blog, en anglais</a>) au sein des identifiants. Il est également possible d'utiliser les \uXXXX <a href="#littéraux chaînes">séquences d'échappement Unicode</a> comme caractères dans les identifiants.</p>
 
@@ -125,7 +125,7 @@ a + 2; // NaN</pre>
 <pre class="brush: js">var n = null;
 console.log(n * 32); // Le log affichera 0</pre>
 
-<h3 id="Les_portées_de_variables"><a name="Portées">Les portées de variables</a></h3>
+<h3 id="Les_portées_de_variables">Les portées de variables</h3>
 
 <p>Lorsqu'une variable est déclarée avec <code>var</code> en dehors des fonctions, elle est appelée variable <em>global</em>e car elle est disponible pour tout le code contenu dans le document. Lorsqu'une variable est déclarée dans une fonction, elle est appelée variable <em>locale</em> car elle n'est disponible qu'au sein de cette fonction.</p>
 
@@ -214,7 +214,7 @@ var machin = function() {
 }
 </pre>
 
-<h3 id="Les_variables_globales"><a name="Globales">Les variables globales</a></h3>
+<h3 id="Les_variables_globales">Les variables globales</h3>
 
 <p>Les variables globales sont en réalité des propriétés de l'<em>objet global</em>. Dans les pages web, l'objet global est {{domxref("window")}}, et on peut donc accéder ou modifier la valeur de variables globales en utilisant la syntaxe suivante : <code>window.<em>variable</em></code> .</p>
 
@@ -346,7 +346,7 @@ y = 42 + " est la réponse"; // "42 est la réponse"
  <li><a href="#littéraux chaînes">Littéraux de chaînes de caractères</a></li>
 </ul>
 
-<h3 id="Les_littéraux_de_tableaux"><a name="littéraux tableaux">Les littéraux de tableaux</a></h3>
+<h3 id="Les_littéraux_de_tableaux">Les littéraux de tableaux</h3>
 
 <p>Un littéral de tableau est une liste de zéro ou plusieurs expressions, dont chacune représente l'élément d'un tableau, encadrées par des crochets (<code>[]</code>). Lorsqu'un tableau est créé à partir d'un littéral, il est initialisé avec les valeurs spécifiées qui sont ses éléments, sa longueur correspondant au nombre d'arguments donnés.</p>
 
@@ -393,7 +393,7 @@ y = 42 + " est la réponse"; // "42 est la réponse"
 
 <p>Comprendre le fonctionnement des virgules supplémentaires est important. Cependant, lorsque vous écrivez du code, veillez, dès que c'est possible, à déclarer les éléments manquants avec <code>undefined</code> : cela améliorera la lisibilité de votre code et il sera ainsi plus facile à maintenir.</p>
 
-<h3 id="Les_littéraux_booléens"><a name="littéraux booléens">Les littéraux booléens</a></h3>
+<h3 id="Les_littéraux_booléens">Les littéraux booléens</h3>
 
 <p>Le type booléen possède deux valeurs littérales : <code>true</code> et <code>false</code>.</p>
 
@@ -420,7 +420,7 @@ y = 42 + " est la réponse"; // "42 est la réponse"
 
 <p>Pour plus d'informations, voir <a href="/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale#Littéraux_numériques">les littéraux numériques dans la grammaire lexicale de JavaScript</a>.</p>
 
-<h3 id="Les_littéraux_de_nombres_décimaux"><a name="littéraux décimaux">Les littéraux de nombres décimaux</a></h3>
+<h3 id="Les_littéraux_de_nombres_décimaux">Les littéraux de nombres décimaux</h3>
 
 <p>Un littéral de nombre décimal peut être composé de ces différentes parties :</p>
 
@@ -447,7 +447,7 @@ y = 42 + " est la réponse"; // "42 est la réponse"
 .3333333333333333333
 </pre>
 
-<h3 id="Les_littéraux_d'objets"><a name="littéraux objets">Les littéraux d'objets</a></h3>
+<h3 id="Les_littéraux_d'objets">Les littéraux d'objets</h3>
 
 <p>Un littéral d'objet - ou 'objet littéral' - est une liste de zéro ou plusieurs propriétés définies par des paires de noms/valeurs. Ces paires sont délimitées par des accolades (<code>{}</code>). N'utilisez pas un tel littéral en début d'instruction. En effet, l'accolade ouvrante sera mal interprétée (début de bloc) et causera une erreur ou un comportement incohérent.</p>
 
@@ -524,7 +524,7 @@ console.log(toto["2"]); // deux
 
 <pre class="brush: js">var re = /ab+c/;</pre>
 
-<h3 id="Les_littéraux_de_chaînes_de_caractères"><a name="littéraux chaînes">Les littéraux de chaînes de caractères</a></h3>
+<h3 id="Les_littéraux_de_chaînes_de_caractères">Les littéraux de chaînes de caractères</h3>
 
 <p>Un littéral de chaîne de caractères consiste en zéro ou plusieurs caractères encadrés par des guillemets droits doubles (<code>"</code>) ou des guillemets droits simples (<code>'</code>). Une chaîne de caractères doit être encadrée par des symboles du même type (guillemets droits doubles ou guillemets droits simples) :</p>
 

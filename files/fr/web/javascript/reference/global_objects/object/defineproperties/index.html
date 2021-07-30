@@ -90,7 +90,7 @@ Object.defineProperties(obj, {
 
 <p>Si on considère un environnement <em>pur</em> où tous les noms et toutes les propriétés font référence à leurs valeurs initiales, <code>Object.defineProperties</code> est quasiment équivalent à l'implémentation suivante en JavaScript (voir la note liée à <code>isCallable</code>) :</p>
 
-<pre class="brush: js;highlight:[8]">function defineProperties(obj, properties) {
+<pre class="brush: js">function defineProperties(obj, properties) {
   function convertToDescriptor(desc) {
     function hasProperty(obj, prop) {
       return Object.prototype.hasOwnProperty.call(obj, prop);

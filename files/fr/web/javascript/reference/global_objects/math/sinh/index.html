@@ -47,7 +47,7 @@ Math.sinh(1) // 1.1752011936438014</pre>
 
 <p>Si cette fonction n'est pas disponible, elle peut être émulée en utilisant la fonction {{jsxref("Math.exp()")}}<code> :</code></p>
 
-<pre class="brush: js  language-js">Math.sinh = Math.sinh || function(x){
+<pre class="brush: js">Math.sinh = Math.sinh || function(x){
     return (Math.exp(x) - Math.exp(-x)) / 2;
 };</pre>
 
