@@ -99,7 +99,7 @@ translation_of: Web/JavaScript/Guide/Introduction
 
 <p>Pour commencer à développer en JavaScript, c'est très simple : il suffit d'avoir un navigateur web récent. Ce guide inclut certaines fonctionnalités de JavaScript qui ne sont disponibles que dans les dernières versions de Firefox, il est donc recommandé d'utiliser une version de Firefox à jour pour essayer les exemples fournis.</p>
 
-<p>Deux outils faisant partie de Firefox seront utiles pour expérimenter et tester du code JavaScript : la console web et l'ardoise JavaScript.</p>
+<p>L'outil Web Console intégré à Firefox est utile pour expérimenter avec JavaScript. Vous pouvez l'utiliser selon deux modes : le mode de saisie à une ligne et le mode de saisie multiligne.</p>
 
 <h3 id="La_console_web">La console web</h3>
 
@@ -109,19 +109,22 @@ translation_of: Web/JavaScript/Guide/Introduction
 
 <p><img alt="Console web" src="https://mdn.mozillademos.org/files/16569/2019-04-04_00-15-29.png" style="display: block; height: 1824px; margin-left: auto; margin-right: auto; width: 2784px;"></p>
 
-<h3 id="Lardoise_JavaScript">L'ardoise JavaScript</h3>
 
-<p>La console est pratique quand il s'agit d'exécuter des instructions ligne par ligne. Cependant dès qu'on souhaite exécuter un script plus complexe de plusieurs lignes, la console devient vite limitée. Pour ça, on pourra utiliser <a href="/fr/docs/Outils/Ardoise">l'ardoise JavaScript</a>.</p>
+<p>La console fonctionne exactement de la même manière que <code>eval</code> : la dernière expression saisie est retournée. Pour simplifier, on peut imaginer que chaque fois qu'une expression est saisie dans la console, elle est en fait entourée de <code>console.log</code> autour de <code>eval</code>, comme suit:</p>
 
-<p>Pour accéder à l'ardoise JavaScript, dans le menu « Développement », sélectionner « Ardoise JavaScript » (via la barre d'outils, sélectionner « Outils », « Développement web » puis « Ardoise JavaScript »). Cela ouvrira une fenêtre séparée qui est un éditeur qui permet d'écrire et d'exécuter du code JavaScript dans le navigateur. Il est aussi possible de sauvegarder les scripts saisis dans l'ardoise dans des fichiers et de charger des scripts depuis les fichiers.</p>
+<pre class="brush: js">function saluer(votreNom) {
+  alert(&quot;Hello &quot; + votreNom)
+}
+console.log(eval('3 + 5'))
+</pre>
 
-<p>Si vous utilisez le bouton « Afficher », le code contenu dans l'ardoise sera exécuté par le navigateur et le résultat sera affiché sous forme d'un commentaire à la suite du code :</p>
+<h3 id="EditeurMultiligne">Le mode éditeur multiligne</h3>
 
-<p><img alt="capture d'écran de l'ardoise JS" src="https://mdn.mozillademos.org/files/10263/ardoise.png" style="display: block; height: 503px; margin-left: auto; margin-right: auto; width: 637px;"></p>
+<p>La console est pratique quand il s'agit d'exécuter des instructions ligne par ligne. Cependant dès qu'on souhaite exécuter un script plus complexe de plusieurs lignes, la console devient vite limitée. Pour ça, on pourra utiliser <a href="/fr/docs/Tools/Web_Console/The_command_line_interpreter#le_mode_%C3%A9diteur_multiligne">le mode éditeur multiligne</a>.</p>
 
 <h3 id="Coucou_monde_hello_world">Coucou monde (<em>hello world</em>)</h3>
 
-<p>Pour commencer à écrire du JavaScript, ouvrez votre console web ou l'ardoise JavaScript et écrivez votre premier « <em>Hello world</em> » en JavaScript.</p>
+<p>Pour commencer à écrire du JavaScript, ouvrez votre console web en mode éditeur multiligne et écrivez votre premier « <em>Hello world</em> » en JavaScript.</p>
 
 <pre class="brush: js">function saluer(utilisateur) {
   return "Bonjour " + utilisateur;
