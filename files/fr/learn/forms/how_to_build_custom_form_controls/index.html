@@ -95,9 +95,9 @@ original_slug: >-
 <p>Dans notre exemple, les spécifications manquantes sont évidentes et nous les traiterons, mais cela peut devenir un problème réel sur de nouveaux widgets exotiques, pour lesquels personne n'a la moindre idée de ce qu'est le bon comportement. Il est donc toujours bon de passer du temps à l'étape conception, car si vous définissez pauvrement le comportement, ou si vous oubliez de le définir, il sera très difficile de le redéfinir une fois les utilisateurs habitués. Si vous avez des doutes, demandez l'avis des autres, et si vous avez le budget pour cela, n'hésitez pas à <a href="https://fr.wikipedia.org/wiki/Test_utilisateur">faire des tests utilisateur</a>. Ce processus est appelé UX Design <span class="CLPzrc Y0NH2b">(<strong>U</strong>ser e<strong>X</strong>perience)</span>. Si vous voulez en savoir plus sur ce sujet, vous devriez consulter les ressources utiles suivantes :</p>
 
 <ul>
- <li><a href="http://www.uxmatters.com/" rel="external" title="http://www.uxmatters.com/">UXMatters.com</a></li>
- <li><a href="http://uxdesign.com/" rel="external" title="http://uxdesign.com/">UXDesign.com</a></li>
- <li><a href="http://uxdesign.smashingmagazine.com/" rel="external" title="http://uxdesign.smashingmagazine.com/">The UX Design section of SmashingMagazine</a></li>
+ <li><a href="http://www.uxmatters.com/" rel="external">UXMatters.com</a></li>
+ <li><a href="http://uxdesign.com/" rel="external">UXDesign.com</a></li>
+ <li><a href="http://uxdesign.smashingmagazine.com/" rel="external">The UX Design section of SmashingMagazine</a></li>
 </ul>
 
 <div class="note">
@@ -351,7 +351,7 @@ original_slug: >-
  <li>Le script ne se charge pas. La chose est très courante, en particulier dans le domaine des mobiles pour lesquels le réseau n'est pas sûr.</li>
  <li>Le script est bogué. Il faut toujours prendre en considération cette éventualité.</li>
  <li>Le script est en conflit avec un autre script tierce‑partie. Cela peut se produire avec des suites de scripts ou n'importe quel marque page utilisé par l'utilisateur.</li>
- <li>Le script est en conflit avec, ou est affecté par un extension de navigateur  (comme l'extension « <a href="https://addons.mozilla.org/fr/firefox/addon/noscript/">No script</a> » de Firefox ou « <a href="https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn" rel="external" title="https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn">Scripts »</a> de Chrome).</li>
+ <li>Le script est en conflit avec, ou est affecté par un extension de navigateur  (comme l'extension « <a href="https://addons.mozilla.org/fr/firefox/addon/noscript/">No script</a> » de Firefox ou « <a href="https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn" rel="external">Scripts »</a> de Chrome).</li>
  <li>L'utilisateur utilise un navigateur ancien et l'une des fonctions dont vous avez besoin n'est pas prise en charge. Cela se produira fréquemment lorsque vous utiliserez des API de pointe.s.</li>
 </ul>
 
@@ -734,7 +734,7 @@ window.addEventListener('load', function () {
 
 <p>Nous venons de faire quelque chose qui fonctionne, même si nous sommes loin d'avoir une boîte de sélection avec toutes les fonctionnalités, elle fonctionne parfaitement. Mais ce que nous avons fait n'est rien de plus que de jouer avec les DOM. Elle n'a pas de sémantique réelle, et même si elle ressemble à une boîte de sélection, du point de vue du navigateur, ce n'en est pas une, de sorte que les technologies d'assistance ne pourront pas comprendre que c'est une boîte de sélection. Bref, cette jolie nouvelle boîte de sélection n'est pas accessible !</p>
 
-<p>Heureusement, il existe une solution et elle s'appelle <a href="/en-US/docs/Accessibility/ARIA" title="/en-US/docs/Accessibility/ARIA">ARIA</a>. ARIA signifie « Accessible Rich Internet Application » et c'est une<a href="http://www.w3.org/TR/wai-aria/" rel="external" title="http://www.w3.org/TR/wai-aria/"> norme W3C </a>spécialement conçue pour ce que nous faisons ici : rendre accessibles les applications web et les widgets personnalisés. Il s'agit essentiellement d'un ensemble d'attributs qui étendent le HTML afin que nous puissions mieux décrire les rôles, les états et les propriétés comme si l'élément que nous venons de concevoir était l'élément natif pour lequel il essaie de passer. L'utilisation de ces attributs est très simple, alors faisons-le.</p>
+<p>Heureusement, il existe une solution et elle s'appelle <a href="/en-US/docs/Accessibility/ARIA" title="/en-US/docs/Accessibility/ARIA">ARIA</a>. ARIA signifie « Accessible Rich Internet Application » et c'est une<a href="http://www.w3.org/TR/wai-aria/" rel="external"> norme W3C </a>spécialement conçue pour ce que nous faisons ici : rendre accessibles les applications web et les widgets personnalisés. Il s'agit essentiellement d'un ensemble d'attributs qui étendent le HTML afin que nous puissions mieux décrire les rôles, les états et les propriétés comme si l'élément que nous venons de concevoir était l'élément natif pour lequel il essaie de passer. L'utilisation de ces attributs est très simple, alors faisons-le.</p>
 
 <h3 id="L'attribut_role">L'attribut <code>role</code></h3>
 
@@ -786,7 +786,7 @@ window.addEventListener('load', function () {
   highlightOption(select, optionList[index]);
 };</pre>
 
-<p>Voici le résultat final de toutes ces modifications (vous obtiendrez un meilleur ressenti en les testant avec une technique d'assistance comme <a href="http://www.nvda-project.org/" rel="external" title="http://www.nvda-project.org/">NVDA</a> ou <a href="http://www.apple.com/accessibility/voiceover/" rel="external" title="http://www.apple.com/accessibility/voiceover/">VoiceOver</a>) :</p>
+<p>Voici le résultat final de toutes ces modifications (vous obtiendrez un meilleur ressenti en les testant avec une technique d'assistance comme <a href="http://www.nvda-project.org/" rel="external">NVDA</a> ou <a href="http://www.apple.com/accessibility/voiceover/" rel="external">VoiceOver</a>) :</p>
 
 <table>
  <thead>
@@ -811,9 +811,9 @@ window.addEventListener('load', function () {
 <p>Voici quelques bibliothèques à prendre en considération avant de coder les vôtres :</p>
 
 <ul>
- <li><a href="http://jqueryui.com/" rel="external" title="http://jqueryui.com/">jQuery UI</a></li>
- <li><a href="https://github.com/marghoobsuleman/ms-Dropdown" rel="external" title="https://github.com/marghoobsuleman/ms-Dropdown">msDropDown</a></li>
- <li><a href="http://www.emblematiq.com/lab/niceforms/" rel="external" title="http://www.emblematiq.com/lab/niceforms/">Nice Forms</a></li>
+ <li><a href="http://jqueryui.com/" rel="external">jQuery UI</a></li>
+ <li><a href="https://github.com/marghoobsuleman/ms-Dropdown" rel="external">msDropDown</a></li>
+ <li><a href="http://www.emblematiq.com/lab/niceforms/" rel="external">Nice Forms</a></li>
  <li><a href="https://www.google.fr/search?q=HTML+custom+form+controls&amp;ie=utf-8&amp;oe=utf-8&amp;aq=t&amp;rls=org.mozilla:fr:official&amp;client=firefox-a" rel="external" title="https://www.google.fr/search?q=HTML+custom+form+controls&amp;ie=utf-8&amp;oe=utf-8&amp;aq=t&amp;rls=org.mozilla:fr:official&amp;client=firefox-a">et beaucoup d'autres…</a></li>
 </ul>
 

@@ -3,7 +3,7 @@ title: 構造化複製アルゴリズム
 slug: Web/API/Web_Workers_API/Structured_clone_algorithm
 translation_of: Web/API/Web_Workers_API/Structured_clone_algorithm
 ---
-<p><strong>構造化複製アルゴリズム </strong>は複雑な JavaScript オブジェクトをコピーするためのアルゴリズムです。これは {{domxref("Worker.postMessage()", "postMessage()")}} を介して <a href="/en-US/docs/Web/API/Worker">Worker</a> と送受信するとき、<a href="/en-US/docs/Glossary/IndexedDB">IndexedDB</a> にオブジェクトを格納するとき、<a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm$edit#See_Also">他の API</a> のためにオブジェクトをコピーするときなど、データ転送時に内部で用いられています。無限ループを避けるため、以前にアクセスした参照のマップを保持しながら、入力オブジェクトを再帰処理することで複製していきます。</p>
+<p><strong>構造化複製アルゴリズム </strong>は複雑な JavaScript オブジェクトをコピーするためのアルゴリズムです。これは {{domxref("Worker.postMessage()", "postMessage()")}} を介して <a href="/en-US/docs/Web/API/Worker">Worker</a> と送受信するとき、<a href="/en-US/docs/Glossary/IndexedDB">IndexedDB</a> にオブジェクトを格納するとき、<a href="/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm$edit#See_Also">他の API</a> のためにオブジェクトをコピーするときなど、データ転送時に内部で用いられています。無限ループを避けるため、以前にアクセスした参照のマップを保持しながら、入力オブジェクトを再帰処理することで複製していきます。</p>
 
 <h2 id="構造化複製で動作しないもの">構造化複製で動作しないもの</h2>
 
@@ -13,7 +13,7 @@ translation_of: Web/API/Web_Workers_API/Structured_clone_algorithm
  <li>以下に挙げるオブジェクトのパラメーターは保持されません。
   <ul>
    <li><a href="/en/JavaScript/Reference/Global_Objects/RegExp" title="en/JavaScript/Reference/Global Objects/regexp"><code>RegExp</code></a> オブジェクトの <code>lastIndex</code> フィールドは保持されません。</li>
-   <li>プロパティ記述子、セッター、ゲッター (もしくは同様のメタデータ系機能) は複製されません。たとえば、オブジェクトに <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor">プロパティ記述子</a> を使用して読み取り専用にしている場合でも、複製したものではデフォルトの条件である読み取り/書き込みに変わります。</li>
+   <li>プロパティ記述子、セッター、ゲッター (もしくは同様のメタデータ系機能) は複製されません。たとえば、オブジェクトに <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor">プロパティ記述子</a> を使用して読み取り専用にしている場合でも、複製したものではデフォルトの条件である読み取り/書き込みに変わります。</li>
    <li>プロトタイプチェーンは探索、複製されません。</li>
   </ul>
  </li>
@@ -42,7 +42,7 @@ translation_of: Web/API/Web_Workers_API/Structured_clone_algorithm
    <td></td>
   </tr>
   <tr>
-   <td><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/String">String</a> オブジェクト</td>
+   <td><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/String">String</a> オブジェクト</td>
    <td></td>
   </tr>
   <tr>
