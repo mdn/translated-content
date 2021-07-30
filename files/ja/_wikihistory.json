@@ -48574,12 +48574,6 @@
       "ukyo"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory": {
-    "modified": "2020-10-15T21:58:32.155Z",
-    "contributors": [
-      "ukyo"
-    ]
-  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table": {
     "modified": "2020-10-15T21:58:31.479Z",
     "contributors": [
