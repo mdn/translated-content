@@ -38,7 +38,7 @@ original_slug: Web/CSS/Requêtes_média/Utiliser_les_Media_queries
 <p><strong>Note :</strong> Lorsqu'une feuille de style est attachée à un élément {{HTMLElement("link")}} comportant une requếte média, cette feuille de style <a href="http://scottjehl.github.com/CSS-Download-Tests/">sera toujours téléchargée</a>, même si la requête renvoie <code>false</code>. Toutefois, le contenu de cette feuille n'est pas appliquée tant que le résultat de la requête ne devient pas <code>true</code>.</p>
 </div>
 
-<h3 id="Types_de_média"><a id="types" name="types">Types de média</a></h3>
+<h3 id="media_types">Types de média</h3>
 
 <p>Un type de média définit une catégorie générale d'appareil. Le type de média est optionnel dans une requête média, sauf si celle-ci utilise les opérateurs logiques <code>not</code> ou <code>only</code>. Par défaut, le type de média utilisé est <code>all</code>.</p>
 
@@ -55,7 +55,7 @@ original_slug: Web/CSS/Requêtes_média/Utiliser_les_Media_queries
 
 <div class="note"><strong>Note : Les types de média dépréciés</strong> CSS2.1 et <a href="https://drafts.csswg.org/mediaqueries-3/#background">Media Queries 3</a> ont défini plusieurs types additionnels (<code>tty</code>, <code>tv</code>, <code>projection</code>, <code>handheld</code>, <code>braille</code>, <code>embossed</code>, and <code>aural</code>) qui ont ensuite été dépréciés avec <a href="http://dev.w3.org/csswg/mediaqueries/#media-types">Media Queries 4</a>. Ces types ne doivent donc plus être utilisés. Le type <code>aural</code> a été remplacé par le type <code>speech</code>.</div>
 
-<h3 id="Caractéristiques_média_media_features"><a id="caractéristiques" name="caractéristiques">Caractéristiques média (<em>media features</em>)</a></h3>
+<h3 id="media_features">Caractéristiques média</h3>
 
 <p>Les caractéristiques média décrivent certaines caractéristiques spécifiques de l'agent utilisateur, de l'appareil d'affichage ou de l'environnement. Les expressions de caractéristique média testent leur présence ou leur valeur. Chaque expression de caractéristique doit être entourée de parenthèses.</p>
 
