@@ -3467,8 +3467,8 @@
 /ja/docs/Web-e/Guide/CSS/Understanding_z_index/Stacking_context_example_3	/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3
 /ja/docs/Web-e/Guide/CSS/Understanding_z_index/Stacking_without_z-index	/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
 /ja/docs/Web-e/Guide/CSS/Understanding_z_index/The_stacking_context	/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
-/ja/docs/Web/API/AbstractWorker	/ja/docs/orphaned/Web/API/AbstractWorker
-/ja/docs/Web/API/AbstractWorker/onerror	/ja/docs/orphaned/Web/API/AbstractWorker/onerror
+/ja/docs/Web/API/AbstractWorker	/ja/docs/Web/API/Worker
+/ja/docs/Web/API/AbstractWorker/onerror	/ja/docs/Web/API/Worker/onerror
 /ja/docs/Web/API/Ambient_Light_Events	/ja/docs/orphaned/Web/API/Ambient_Light_Events
 /ja/docs/Web/API/Apps.mgmt.addEventListener	/ja/docs/Web/API/EventTarget/addEventListener
 /ja/docs/Web/API/Apps.mgmt.removeEventListener	/ja/docs/Web/API/EventTarget/removeEventListener

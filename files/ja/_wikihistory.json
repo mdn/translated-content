@@ -25307,6 +25307,12 @@
       "lv7777"
     ]
   },
+  "Web/API/Worker/onerror": {
+    "modified": "2020-10-15T22:02:48.424Z",
+    "contributors": [
+      "chikoski"
+    ]
+  },
   "Web/API/Worker/onmessageerror": {
     "modified": "2020-10-15T22:32:23.209Z",
     "contributors": [
@@ -51002,18 +51008,6 @@
     "modified": "2019-03-23T23:15:45.631Z",
     "contributors": [
       "shinnn"
-    ]
-  },
-  "orphaned/Web/API/AbstractWorker": {
-    "modified": "2020-10-15T22:02:41.214Z",
-    "contributors": [
-      "chikoski"
-    ]
-  },
-  "orphaned/Web/API/AbstractWorker/onerror": {
-    "modified": "2020-10-15T22:02:48.424Z",
-    "contributors": [
-      "chikoski"
     ]
   },
   "orphaned/Web/API/Ambient_Light_Events": {
