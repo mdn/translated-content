@@ -340,7 +340,7 @@
 /ja/docs/CSS/Getting_Started/Color	/ja/docs/Learn/CSS/Building_blocks/Values_and_units#color
 /ja/docs/CSS/Getting_Started/Content	/ja/docs/Learn/CSS/Howto/Generated_content
 /ja/docs/CSS/Getting_Started/How_CSS_works	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
-/ja/docs/CSS/Getting_Started/JavaScript	/ja/docs/conflicting/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
+/ja/docs/CSS/Getting_Started/JavaScript	/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 /ja/docs/CSS/Getting_Started/Layout	/ja/docs/Learn/CSS/CSS_layout
 /ja/docs/CSS/Getting_Started/Lists	/ja/docs/Learn/CSS/Styling_text/Styling_lists
 /ja/docs/CSS/Getting_Started/Media	/ja/docs/Web/Progressive_web_apps/Responsive/Media_types
@@ -3448,7 +3448,7 @@
 /ja/docs/Web-d/Guide/CSS/Getting_started/Color	/ja/docs/Learn/CSS/Building_blocks/Values_and_units#color
 /ja/docs/Web-d/Guide/CSS/Getting_started/Content	/ja/docs/Learn/CSS/Howto/Generated_content
 /ja/docs/Web-d/Guide/CSS/Getting_started/How_CSS_works	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
-/ja/docs/Web-d/Guide/CSS/Getting_started/JavaScript	/ja/docs/conflicting/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
+/ja/docs/Web-d/Guide/CSS/Getting_started/JavaScript	/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 /ja/docs/Web-d/Guide/CSS/Getting_started/Layout	/ja/docs/Learn/CSS/CSS_layout
 /ja/docs/Web-d/Guide/CSS/Getting_started/Lists	/ja/docs/Learn/CSS/Styling_text/Styling_lists
 /ja/docs/Web-d/Guide/CSS/Getting_started/Media	/ja/docs/Web/Progressive_web_apps/Responsive/Media_types
@@ -4138,7 +4138,7 @@
 /ja/docs/Web/CSS/Getting_started/Color	/ja/docs/Learn/CSS/Building_blocks/Values_and_units#color
 /ja/docs/Web/CSS/Getting_started/Content	/ja/docs/Learn/CSS/Howto/Generated_content
 /ja/docs/Web/CSS/Getting_started/How_CSS_works	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
-/ja/docs/Web/CSS/Getting_started/JavaScript	/ja/docs/conflicting/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
+/ja/docs/Web/CSS/Getting_started/JavaScript	/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 /ja/docs/Web/CSS/Getting_started/Layout	/ja/docs/Learn/CSS/CSS_layout
 /ja/docs/Web/CSS/Getting_started/Lists	/ja/docs/Learn/CSS/Styling_text/Styling_lists
 /ja/docs/Web/CSS/Getting_started/Media	/ja/docs/Web/Progressive_web_apps/Responsive/Media_types
@@ -4336,7 +4336,7 @@
 /ja/docs/Web/Guide/CSS/Getting_started/Color	/ja/docs/Learn/CSS/Building_blocks/Values_and_units#color
 /ja/docs/Web/Guide/CSS/Getting_started/Content	/ja/docs/Learn/CSS/Howto/Generated_content
 /ja/docs/Web/Guide/CSS/Getting_started/How_CSS_works	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
-/ja/docs/Web/Guide/CSS/Getting_started/JavaScript	/ja/docs/conflicting/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
+/ja/docs/Web/Guide/CSS/Getting_started/JavaScript	/ja/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
 /ja/docs/Web/Guide/CSS/Getting_started/Layout	/ja/docs/Learn/CSS/CSS_layout
 /ja/docs/Web/Guide/CSS/Getting_started/Lists	/ja/docs/Learn/CSS/Styling_text/Styling_lists
 /ja/docs/Web/Guide/CSS/Getting_started/Media	/ja/docs/Web/Progressive_web_apps/Responsive/Media_types
