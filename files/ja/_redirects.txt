@@ -1899,8 +1899,6 @@
 /ja/docs/DOM_Inspector_FAQ	/ja/docs/orphaned/Tools/Add-ons/DOM_Inspector/DOM_Inspector_FAQ
 /ja/docs/DOM_Levels	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/DOM_improvements_in_Firefox_3	/ja/docs/Mozilla/Firefox/Releases/3/DOM_improvements
-/ja/docs/DebNews	/ja/docs/orphaned/DebNews
-/ja/docs/DebNews/20081118	/ja/docs/orphaned/DevNews/20081118
 /ja/docs/Deer_Park	/ja/docs/Mozilla/Firefox/Releases/1.5
 /ja/docs/Detecting_device_orientation	/ja/docs/Web/Events/Detecting_device_orientation
 /ja/docs/Determining_the_dimensions_of_elements	/ja/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements
