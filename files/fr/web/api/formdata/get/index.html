@@ -1,82 +1,66 @@
 ---
 title: FormData.get()
 slug: Web/API/FormData/get
-tags:
-  - API
-  - FormData
-  - Méthode
-  - Reference
-  - XHR
-  - XMLHttpRequest
-  - get
 translation_of: Web/API/FormData/get
+browser-compat: api.FormData.get
 ---
 <p>{{APIRef("XMLHttpRequest")}}</p>
 
-<p>La méthode <code>get()</code> de l'interface {{domxref("FormData")}} renvoie la première valeur associée à une clé donnée dans un objet <code>FormData</code>. Si vous attendez plusieurs valeurs et que vous les voulez toutes, utilisez plutôt la méthode {{domxref("FormData.getAll()", "getAll()")}}.</p>
+<p>La méthode <strong><code>get()</code></strong> de l'interface <a href="/fr/docs/Web/API/FormData"><code>FormData</code></a> renvoie la première valeur associée à une clé donnée dans un objet <code>FormData</code>. Si vous souhaitez manipuler plusieurs valeurs et les récupérer intégralement, utilisez plutôt la méthode <a href="/fr/docs/Web/API/FormData/getAll"><code>getAll()</code></a>.</p>
 
 <div class="note">
-<p><strong>Note</strong> : Cette méthode est disponible dans les <a href="/fr/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
+  <p><strong>Note : </strong> Cette méthode est disponible dans les <a href="/fr/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
 </div>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+<h2 id="syntax">Syntaxe</h2>
 
-<pre class="syntaxbox">formData.get(name);</pre>
+<pre class="brush: js">formData.get(name);</pre>
 
-<h3 id="append_Parameters" name="append()_Parameters">Paramètres</h3>
+<h3 id="append_Parameters">Paramètres</h3>
 
 <dl>
  <dt><code>name</code></dt>
- <dd>Un {{domxref("USVString")}} représentant le nom de la clé que vous souhaitez retrouver.</dd>
+ <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/USVString"><code>USVString</code></a> représentant le nom de la clé que vous souhaitez retrouver.</dd>
 </dl>
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+<h3 id="Return_value">Valeur de retour</h3>
 
-<p>Un {{domxref("FormDataEntryValue")}} contenant la valeur. Si la clé n'existe pas, la méthode renvoie null.</p>
+<p>Un objet <a href="/fr/docs/Web/API/FormDataEntryValue"><code>FormDataEntryValue</code></a> contenant la valeur. Si la clé n'existe pas, la méthode renvoie <code>null</code>.</p>
 
-<h2 id="Exemple">Exemple</h2>
+<h2 id="example">Exemple</h2>
 
 <p>La ligne suivante crée un objet <code>FormData</code> vide :</p>
 
-<pre class="brush: js">var formData = new FormData();</pre>
+<pre class="brush: js">
+var formData = new FormData();
+</pre>
 
-<p>Si nous ajoutons deux valeurs <code>username</code> en utilisant {{domxref("FormData.append")}}:</p>
+<p>Si nous ajoutons deux valeurs <code>username</code> en utilisant <a href="/fr/docs/Web/API/FormData/append"><code>FormData.append</code></a> :</p>
 
-<pre class="brush: js">formData.append('username', 'Chris');
-formData.append('username', 'Bob');</pre>
+<pre class="brush: js">
+formData.append('username', 'Chris');
+formData.append('username', 'Bob');
+</pre>
 
-<p>La fonction suivante <code>get()</code> peut uniquement retrouner la première valeur <code>username</code> annexée :</p>
+<p>L'appel suivant à <code>get()</code> renverra uniquement la première valeur <code>username</code> indexée :</p>
 
-<pre class="brush: js">formData.get('username'); // Returns "Chris"</pre>
+<pre class="brush: js">
+formData.get('username'); // Renvoie "Chris"
+</pre>
 
-<h2 id="Spécifications">Spécifications</h2>
+<h2 id="specifications">Spécifications</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('XMLHttpRequest','#dom-formdata-get','get()')}}</td>
-   <td>{{Spec2('XMLHttpRequest')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
 
+<p>{{Compat}}</p>
 
-
-<p>{{Compat("api.FormData.get")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
+<h2 id="see_also">Voir aussi</h2>
 
 <ul>
- <li>{{domxref("XMLHTTPRequest")}}</li>
+ <li><a href="/fr/docs/Web/API/XMLHttpRequest"><code>XMLHTTPRequest</code></a></li>
  <li><a href="/fr/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest" title="Using XMLHttpRequest">Utiliser XMLHttpRequest</a></li>
- <li><a href="/fr/docs/Web/API/FormData/Utilisation_objets_FormData" title="DOM/XMLHttpRequest/FormData/Using_FormData_objects">Utiliser les objets FormData</a></li>
- <li>{{HTMLElement("Form")}}</li>
+ <li><a href="/fr/docs/Web/API/FormData/Using_FormData_Objects" title="DOM/XMLHttpRequest/FormData/Using_FormData_objects">Utiliser les objets <code>FormData</code></a></li>
+ <li><a href="/fr/docs/Web/HTML/Element/Form"><code>&lt;form&gt;</code></a></li>
 </ul>
