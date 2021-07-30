@@ -1559,7 +1559,7 @@
 /ja/docs/DOM/window.directories	/ja/docs/Web/API/Window/directories
 /ja/docs/DOM/window.document	/ja/docs/Web/API/Window/document
 /ja/docs/DOM/window.dump	/ja/docs/Web/API/Window/dump
-/ja/docs/DOM/window.escape	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/escape
+/ja/docs/DOM/window.escape	/ja/docs/Web/JavaScript/Reference/Global_Objects/escape
 /ja/docs/DOM/window.find	/ja/docs/Web/API/Window/find
 /ja/docs/DOM/window.focus	/ja/docs/Web/API/Window/focus
 /ja/docs/DOM/window.forward	/ja/docs/Web/API/Window/forward
@@ -1670,7 +1670,7 @@
 /ja/docs/DOM/window.stop	/ja/docs/Web/API/Window/stop
 /ja/docs/DOM/window.toolbar	/ja/docs/Web/API/Window/toolbar
 /ja/docs/DOM/window.top	/ja/docs/Web/API/Window/top
-/ja/docs/DOM/window.unescape	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/unescape
+/ja/docs/DOM/window.unescape	/ja/docs/Web/JavaScript/Reference/Global_Objects/unescape
 /ja/docs/DOM/window.updateCommands	/ja/docs/Web/API/Window/updateCommands
 /ja/docs/DOM/window.window	/ja/docs/Web/API/Window/window
 /ja/docs/DOM/セレクタを使用した_DOM_要素の指定	/ja/docs/Web/API/Node/cloneNode
@@ -1790,7 +1790,7 @@
 /ja/docs/DOM:window.directories	/ja/docs/Web/API/Window/directories
 /ja/docs/DOM:window.document	/ja/docs/Web/API/Window/document
 /ja/docs/DOM:window.dump	/ja/docs/Web/API/Window/dump
-/ja/docs/DOM:window.escape	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/escape
+/ja/docs/DOM:window.escape	/ja/docs/Web/JavaScript/Reference/Global_Objects/escape
 /ja/docs/DOM:window.find	/ja/docs/Web/API/Window/find
 /ja/docs/DOM:window.focus	/ja/docs/Web/API/Window/focus
 /ja/docs/DOM:window.forward	/ja/docs/Web/API/Window/forward
@@ -1886,7 +1886,7 @@
 /ja/docs/DOM:window.stop	/ja/docs/Web/API/Window/stop
 /ja/docs/DOM:window.toolbar	/ja/docs/Web/API/Window/toolbar
 /ja/docs/DOM:window.top	/ja/docs/Web/API/Window/top
-/ja/docs/DOM:window.unescape	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/unescape
+/ja/docs/DOM:window.unescape	/ja/docs/Web/JavaScript/Reference/Global_Objects/unescape
 /ja/docs/DOM:window.updateCommands	/ja/docs/Web/API/Window/updateCommands
 /ja/docs/DOM:window.window	/ja/docs/Web/API/Window/window
 /ja/docs/DOMParser	/ja/docs/Web/API/DOMParser
@@ -3801,7 +3801,7 @@
 /ja/docs/Web/API/Window/URL	/ja/docs/conflicting/Web/API/URL
 /ja/docs/Web/API/Window/arguments	/ja/docs/orphaned/Working_with_windows_in_chrome_code
 /ja/docs/Web/API/Window/dispatchEvent	/ja/docs/Web/API/EventTarget/dispatchEvent
-/ja/docs/Web/API/Window/escape	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/escape
+/ja/docs/Web/API/Window/escape	/ja/docs/Web/JavaScript/Reference/Global_Objects/escape
 /ja/docs/Web/API/Window/getAttention	/ja/docs/orphaned/Web/API/Window/getAttention
 /ja/docs/Web/API/Window/onafterprint	/ja/docs/Web/API/WindowEventHandlers/onafterprint
 /ja/docs/Web/API/Window/onblur	/ja/docs/Web/API/GlobalEventHandlers/onblur
@@ -3820,7 +3820,7 @@
 /ja/docs/Web/API/Window/restore	/ja/docs/conflicting/Web/API/Window/moveTo
 /ja/docs/Web/API/Window/setInterval	/ja/docs/Web/API/WindowOrWorkerGlobalScope/setInterval
 /ja/docs/Web/API/Window/setTimeout	/ja/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
-/ja/docs/Web/API/Window/unescape	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/unescape
+/ja/docs/Web/API/Window/unescape	/ja/docs/Web/JavaScript/Reference/Global_Objects/unescape
 /ja/docs/Web/API/Window/vrdisplaydisconnected_event	/ja/docs/Web/API/Window/vrdisplaydisconnect_event
 /ja/docs/Web/API/WindowBase64	/ja/docs/Web/API/WindowOrWorkerGlobalScope
 /ja/docs/Web/API/WindowBase64/Base64_encoding_and_decoding	/ja/docs/Glossary/Base64
@@ -3965,7 +3965,7 @@
 /ja/docs/Web/API/window.directories	/ja/docs/Web/API/Window/directories
 /ja/docs/Web/API/window.document	/ja/docs/Web/API/Window/document
 /ja/docs/Web/API/window.dump	/ja/docs/Web/API/Window/dump
-/ja/docs/Web/API/window.escape	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/escape
+/ja/docs/Web/API/window.escape	/ja/docs/Web/JavaScript/Reference/Global_Objects/escape
 /ja/docs/Web/API/window.find	/ja/docs/Web/API/Window/find
 /ja/docs/Web/API/window.focus	/ja/docs/Web/API/Window/focus
 /ja/docs/Web/API/window.forward	/ja/docs/Web/API/Window/forward
@@ -4069,7 +4069,7 @@
 /ja/docs/Web/API/window.stop	/ja/docs/Web/API/Window/stop
 /ja/docs/Web/API/window.toolbar	/ja/docs/Web/API/Window/toolbar
 /ja/docs/Web/API/window.top	/ja/docs/Web/API/Window/top
-/ja/docs/Web/API/window.unescape	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/unescape
+/ja/docs/Web/API/window.unescape	/ja/docs/Web/JavaScript/Reference/Global_Objects/unescape
 /ja/docs/Web/API/window.updateCommands	/ja/docs/Web/API/Window/updateCommands
 /ja/docs/Web/API/window.window	/ja/docs/Web/API/Window/window
 /ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_button_role	/ja/docs/Web/Accessibility/ARIA/Roles/button_role

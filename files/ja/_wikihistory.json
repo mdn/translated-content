@@ -48580,24 +48580,6 @@
       "ukyo"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/escape": {
-    "modified": "2019-03-23T23:51:01.376Z",
-    "contributors": [
-      "teoli",
-      "AshfaqHossain",
-      "ethertank",
-      "Potappo"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/unescape": {
-    "modified": "2019-03-23T23:51:01.509Z",
-    "contributors": [
-      "fscholz",
-      "AshfaqHossain",
-      "ethertank",
-      "Potappo"
-    ]
-  },
   "conflicting/Web/JavaScript/Reference/Lexical_grammar": {
     "modified": "2019-12-24T12:46:59.479Z",
     "contributors": [
