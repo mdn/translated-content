@@ -48600,12 +48600,6 @@
       "yyss"
     ]
   },
-  "orphaned/About": {
-    "modified": "2019-01-16T15:27:01.463Z",
-    "contributors": [
-      "Anonymous"
-    ]
-  },
   "orphaned/Bugzilla-ja": {
     "modified": "2019-03-24T00:01:53.796Z",
     "contributors": [
@@ -50753,12 +50747,6 @@
       "Marsf"
     ]
   },
-  "orphaned/My_Chrome_Oven": {
-    "modified": "2019-01-16T15:09:45.270Z",
-    "contributors": [
-      "Anonymous"
-    ]
-  },
   "orphaned/New_in_JavaScript_1.8": {
     "modified": "2019-03-24T00:06:00.366Z",
     "contributors": [
@@ -52429,36 +52417,6 @@
     "contributors": [
       "fscholz",
       "ethertank"
-    ]
-  },
-  "orphaned/XPCOM_Part_1": {
-    "modified": "2019-01-16T15:08:49.567Z",
-    "contributors": [
-      "Anonymous"
-    ]
-  },
-  "orphaned/XPCOM_Part_2": {
-    "modified": "2019-01-16T15:09:12.487Z",
-    "contributors": [
-      "Anonymous"
-    ]
-  },
-  "orphaned/XPCOM_Part_3": {
-    "modified": "2019-01-16T15:09:49.009Z",
-    "contributors": [
-      "Anonymous"
-    ]
-  },
-  "orphaned/XPCOM_Part_4": {
-    "modified": "2019-01-16T15:09:40.057Z",
-    "contributors": [
-      "Anonymous"
-    ]
-  },
-  "orphaned/XPCOM_Part_5": {
-    "modified": "2019-01-16T15:10:16.878Z",
-    "contributors": [
-      "Anonymous"
     ]
   },
   "orphaned/XPCOM_components_list": {

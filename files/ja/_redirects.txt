@@ -110,7 +110,6 @@
 /ja/docs/ARIA:_Accessible_Rich_Internet_Applications	/ja/docs/Web/Accessibility/ARIA
 /ja/docs/A_re-introduction_to_JavaScript	/ja/docs/Web/JavaScript/A_re-introduction_to_JavaScript
 /ja/docs/Aardvark_(external)	https://addons.mozilla.org/ja/firefox/addon/4111
-/ja/docs/About	/ja/docs/orphaned/About
 /ja/docs/About_JavaScript	/ja/docs/Web/JavaScript/About_JavaScript
 /ja/docs/About_WOFF	/ja/docs/Web/Guide/WOFF
 /ja/docs/About_the_Document_Object_Model	/ja/docs/Web/API/Document_Object_Model
@@ -3238,7 +3237,6 @@
 /ja/docs/Mozilla/Firefox/Releases/Firefox_47_for_developers	/ja/docs/Mozilla/Firefox/Releases/47
 /ja/docs/Mozilla_Addons_FAQ_(external)	https://addons.mozilla.org/faq.php
 /ja/docs/Mozmill	/ja/docs/orphaned/Mozmill
-/ja/docs/My_Chrome_Oven	/ja/docs/orphaned/My_Chrome_Oven
 /ja/docs/NPAPI/Constants	/ja/docs/Plugins/Guide/Constants
 /ja/docs/NPAPI:Constants	/ja/docs/Plugins/Guide/Constants
 /ja/docs/Namespace	/ja/docs/Glossary/Namespace
@@ -5004,11 +5002,6 @@
 /ja/docs/XMLHttpRequest/timeout	/ja/docs/Web/API/XMLHttpRequest/timeout
 /ja/docs/XMLSerializer	/ja/docs/Web/API/XMLSerializer
 /ja/docs/XML_Introduction	/ja/docs/Web/XML/XML_Introduction
-/ja/docs/XPCOM_Part_1	/ja/docs/orphaned/XPCOM_Part_1
-/ja/docs/XPCOM_Part_2	/ja/docs/orphaned/XPCOM_Part_2
-/ja/docs/XPCOM_Part_3	/ja/docs/orphaned/XPCOM_Part_3
-/ja/docs/XPCOM_Part_4	/ja/docs/orphaned/XPCOM_Part_4
-/ja/docs/XPCOM_Part_5	/ja/docs/orphaned/XPCOM_Part_5
 /ja/docs/XPCOM_components_list	/ja/docs/orphaned/XPCOM_components_list
 /ja/docs/XPCOM_plans	/ja/docs/orphaned/XPCOM_plans
 /ja/docs/XPInstall_API_Reference/InstallTrigger_Object	/ja/docs/Web/API/InstallTrigger
