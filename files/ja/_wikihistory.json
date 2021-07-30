@@ -51933,40 +51933,6 @@
       "silverskyvicto"
     ]
   },
-  "orphaned/Web/HTML/Element/command": {
-    "modified": "2020-10-15T21:25:54.776Z",
-    "contributors": [
-      "mfuji09",
-      "yyss"
-    ]
-  },
-  "orphaned/Web/HTML/Element/element": {
-    "modified": "2020-10-18T09:43:39.755Z",
-    "contributors": [
-      "mfuji09",
-      "masa100"
-    ]
-  },
-  "orphaned/Web/HTML/Element/isindex": {
-    "modified": "2020-12-02T06:54:17.873Z",
-    "contributors": [
-      "mfuji09",
-      "yyss"
-    ]
-  },
-  "orphaned/Web/HTML/Element/listing": {
-    "modified": "2020-10-15T21:26:18.688Z",
-    "contributors": [
-      "mfuji09",
-      "yyss"
-    ]
-  },
-  "orphaned/Web/HTML/Element/multicol": {
-    "modified": "2020-10-15T22:02:51.939Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "orphaned/Web/HTML/Global_attributes/dropzone": {
     "modified": "2020-12-07T13:17:08.707Z",
     "contributors": [

@@ -4448,17 +4448,12 @@
 /ja/docs/Web/HTML/Element/Input1/week	/ja/docs/Web/HTML/Element/input/week
 /ja/docs/Web/HTML/Element/Script1	/ja/docs/Web/HTML/Element/Script
 /ja/docs/Web/HTML/Element/Video/canplay_event	/ja/docs/Web/API/HTMLMediaElement/canplay_event
-/ja/docs/Web/HTML/Element/command	/ja/docs/orphaned/Web/HTML/Element/command
-/ja/docs/Web/HTML/Element/element	/ja/docs/orphaned/Web/HTML/Element/element
 /ja/docs/Web/HTML/Element/h1	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/HTML/Element/h2	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/HTML/Element/h3	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/HTML/Element/h4	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/HTML/Element/h5	/ja/docs/Web/HTML/Element/Heading_Elements
 /ja/docs/Web/HTML/Element/h6	/ja/docs/Web/HTML/Element/Heading_Elements
-/ja/docs/Web/HTML/Element/isindex	/ja/docs/orphaned/Web/HTML/Element/isindex
-/ja/docs/Web/HTML/Element/listing	/ja/docs/orphaned/Web/HTML/Element/listing
-/ja/docs/Web/HTML/Element/multicol	/ja/docs/orphaned/Web/HTML/Element/multicol
 /ja/docs/Web/HTML/Element/video/waiting_event	/ja/docs/Web/API/HTMLMediaElement/waiting_event
 /ja/docs/Web/HTML/Focus_management_in_HTML	/ja/docs/Web/API/Document/hasFocus
 /ja/docs/Web/HTML/Forms	/ja/docs/Learn/Forms
