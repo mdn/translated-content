@@ -48372,22 +48372,6 @@
       "mantaroh"
     ]
   },
-  "conflicting/Mozilla/Developer_guide": {
-    "modified": "2019-03-23T23:49:07.432Z",
-    "contributors": [
-      "teoli",
-      "Kohei",
-      "Mgjbot"
-    ]
-  },
-  "conflicting/Mozilla/Developer_guide/How_to_Submit_a_Patch": {
-    "modified": "2019-01-16T15:43:30.635Z",
-    "contributors": [
-      "Shoot",
-      "Kohei",
-      "Mgjbot"
-    ]
-  },
   "conflicting/Mozilla/Firefox/Releases": {
     "modified": "2020-07-16T22:35:56.505Z",
     "contributors": [
