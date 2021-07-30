@@ -1213,7 +1213,6 @@
 /ja/docs/DOM/DOM_event_reference/compositionend	/ja/docs/Web/API/Element/compositionend_event
 /ja/docs/DOM/DOM_event_reference/compositionstart	/ja/docs/Web/API/Element/compositionstart_event
 /ja/docs/DOM/DOM_event_reference/input	/ja/docs/Web/API/HTMLElement/input_event
-/ja/docs/DOM/DeviceLightEvent.value	/ja/docs/orphaned/Web/API/DeviceLightEvent/value
 /ja/docs/DOM/Document.querySelector	/ja/docs/Web/API/Document/querySelector
 /ja/docs/DOM/Document.scripts	/ja/docs/Web/API/Document/scripts
 /ja/docs/DOM/Element.hasAttributes	/ja/docs/Web/API/Element/hasAttributes
@@ -1611,7 +1610,6 @@
 /ja/docs/DOM/window.onblur	/ja/docs/Web/API/GlobalEventHandlers/onblur
 /ja/docs/DOM/window.onchange	/ja/docs/Web/API/GlobalEventHandlers/onchange
 /ja/docs/DOM/window.onclick	/ja/docs/Web/API/GlobalEventHandlers/onclick
-/ja/docs/DOM/window.ondevicelight	/ja/docs/orphaned/Web/API/Window/ondevicelight
 /ja/docs/DOM/window.onhashchange	/ja/docs/Web/API/WindowEventHandlers/onhashchange
 /ja/docs/DOM/window.onmouseup	/ja/docs/Web/API/GlobalEventHandlers/onmouseup
 /ja/docs/DOM/window.onresize	/ja/docs/Web/API/GlobalEventHandlers/onresize
@@ -3469,7 +3467,6 @@
 /ja/docs/Web-e/Guide/CSS/Understanding_z_index/The_stacking_context	/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 /ja/docs/Web/API/AbstractWorker	/ja/docs/Web/API/Worker
 /ja/docs/Web/API/AbstractWorker/onerror	/ja/docs/Web/API/Worker/onerror
-/ja/docs/Web/API/Ambient_Light_Events	/ja/docs/orphaned/Web/API/Ambient_Light_Events
 /ja/docs/Web/API/Apps.mgmt.addEventListener	/ja/docs/Web/API/EventTarget/addEventListener
 /ja/docs/Web/API/Apps.mgmt.removeEventListener	/ja/docs/Web/API/EventTarget/removeEventListener
 /ja/docs/Web/API/AudioBufferSourceNode.onended	/ja/docs/Web/API/AudioScheduledSourceNode/onended
@@ -3523,9 +3520,6 @@
 /ja/docs/Web/API/Coordinates	/ja/docs/Web/API/GeolocationCoordinates
 /ja/docs/Web/API/DOMLocator	/ja/docs/orphaned/Web/API/DOMLocator
 /ja/docs/Web/API/DeviceAcceleration	/ja/docs/Web/API/DeviceMotionEventAcceleration
-/ja/docs/Web/API/DeviceLightEvent	/ja/docs/orphaned/Web/API/DeviceLightEvent
-/ja/docs/Web/API/DeviceLightEvent.value	/ja/docs/orphaned/Web/API/DeviceLightEvent/value
-/ja/docs/Web/API/DeviceLightEvent/value	/ja/docs/orphaned/Web/API/DeviceLightEvent/value
 /ja/docs/Web/API/DeviceProximityEvent/max	/ja/docs/orphaned/Web/API/DeviceProximityEvent/max
 /ja/docs/Web/API/DeviceProximityEvent/min	/ja/docs/orphaned/Web/API/DeviceProximityEvent/min
 /ja/docs/Web/API/DeviceProximityEvent/value	/ja/docs/orphaned/Web/API/DeviceProximityEvent/value
@@ -3801,7 +3795,6 @@
 /ja/docs/Web/API/Window/onblur	/ja/docs/Web/API/GlobalEventHandlers/onblur
 /ja/docs/Web/API/Window/onchange	/ja/docs/Web/API/GlobalEventHandlers/onchange
 /ja/docs/Web/API/Window/onclick	/ja/docs/Web/API/GlobalEventHandlers/onclick
-/ja/docs/Web/API/Window/ondevicelight	/ja/docs/orphaned/Web/API/Window/ondevicelight
 /ja/docs/Web/API/Window/ondeviceproximity	/ja/docs/orphaned/Web/API/Window/ondeviceproximity
 /ja/docs/Web/API/Window/onfocus	/ja/docs/Web/API/GlobalEventHandlers/onfocus
 /ja/docs/Web/API/Window/oninstall	/ja/docs/Web/API/Window/onappinstalled
@@ -4005,7 +3998,6 @@
 /ja/docs/Web/API/window.onchange	/ja/docs/Web/API/GlobalEventHandlers/onchange
 /ja/docs/Web/API/window.onclick	/ja/docs/Web/API/GlobalEventHandlers/onclick
 /ja/docs/Web/API/window.onclose	/ja/docs/Web/API/GlobalEventHandlers/onclose
-/ja/docs/Web/API/window.ondevicelight	/ja/docs/orphaned/Web/API/Window/ondevicelight
 /ja/docs/Web/API/window.onfocus	/ja/docs/Web/API/GlobalEventHandlers/onfocus
 /ja/docs/Web/API/window.onhashchange	/ja/docs/Web/API/WindowEventHandlers/onhashchange
 /ja/docs/Web/API/window.onkeydown	/ja/docs/Web/API/GlobalEventHandlers/onkeydown
@@ -4953,7 +4945,6 @@
 /ja/docs/WebAPI/Managing_screen_orientation	/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation
 /ja/docs/WebAPI/Network_Information	/ja/docs/Web/API/Network_Information_API
 /ja/docs/WebAPI/Proximity	/ja/docs/Web/API/Proximity_Events
-/ja/docs/WebAPI/Using_Light_Events	/ja/docs/orphaned/Web/API/Ambient_Light_Events
 /ja/docs/WebAPI/Using_Web_Notifications	/ja/docs/Web/API/Notifications_API/Using_the_Notifications_API
 /ja/docs/WebAPI/Using_geolocation	/ja/docs/Web/API/Geolocation_API
 /ja/docs/WebGL	/ja/docs/Web/API/WebGL_API
