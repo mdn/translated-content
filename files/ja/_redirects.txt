@@ -1466,7 +1466,7 @@
 /ja/docs/DOM/element.setAttributeNS	/ja/docs/Web/API/Element/setAttributeNS
 /ja/docs/DOM/element.setAttributeNode	/ja/docs/Web/API/Element/setAttributeNode
 /ja/docs/DOM/element.setAttributeNodeNS	/ja/docs/Web/API/Element/setAttributeNodeNS
-/ja/docs/DOM/element.style	/ja/docs/orphaned/Web/API/ElementCSSInlineStyle/style
+/ja/docs/DOM/element.style	/ja/docs/Web/API/HTMLElement/style
 /ja/docs/DOM/element.tabIndex	/ja/docs/Web/API/HTMLElement/tabIndex
 /ja/docs/DOM/element.tagName	/ja/docs/Web/API/Element/tagName
 /ja/docs/DOM/element.title	/ja/docs/Web/API/HTMLElement/title
@@ -3571,7 +3571,7 @@
 /ja/docs/Web/API/GlobalFetch	/en-US/docs/Web/API/WindowOrWorkerGlobalScope
 /ja/docs/Web/API/GlobalFetch/fetch	/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch
 /ja/docs/Web/API/HTMLElement/forceSpellCheck	/ja/docs/orphaned/Web/API/HTMLElement/forceSpellCheck
-/ja/docs/Web/API/HTMLElement/style	/ja/docs/orphaned/Web/API/ElementCSSInlineStyle/style
+/ja/docs/Web/API/HTMLElement/style	/ja/docs/orphaned/Web/API/HTMLElement/style
 /ja/docs/Web/API/HTMLFormElement.acceptCharset	/ja/docs/Web/API/HTMLFormElement/acceptCharset
 /ja/docs/Web/API/HTMLFormElement.action	/ja/docs/Web/API/HTMLFormElement/action
 /ja/docs/Web/API/HTMLFormElement.elements	/ja/docs/Web/API/HTMLFormElement/elements
