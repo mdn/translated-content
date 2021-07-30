@@ -48557,17 +48557,6 @@
       "RobinEgg"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/JSON": {
-    "modified": "2019-03-24T00:17:38.651Z",
-    "contributors": [
-      "fscholz",
-      "twe",
-      "dynamis",
-      "maco81",
-      "Taken",
-      "RobinEgg"
-    ]
-  },
   "conflicting/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance": {
     "modified": "2020-10-15T21:58:31.243Z",
     "contributors": [

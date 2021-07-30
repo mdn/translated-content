@@ -3433,7 +3433,7 @@
 /ja/docs/Using_files_from_web_applications	/ja/docs/Web/API/File/Using_files_from_web_applications
 /ja/docs/Using_geolocation	/ja/docs/Web/API/Geolocation_API
 /ja/docs/Using_gradients	/ja/docs/Web/CSS/CSS_Images/Using_CSS_gradients
-/ja/docs/Using_native_JSON	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/JSON
+/ja/docs/Using_native_JSON	/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON
 /ja/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/ja/docs/Web/XSLT/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations
 /ja/docs/Using_the_W3C_DOM_Level_1_Core	/ja/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core
 /ja/docs/Using_the_Web_Console	/ja/docs/Tools/Web_Console
