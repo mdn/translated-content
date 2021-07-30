@@ -3495,7 +3495,6 @@
 /ja/docs/Web/API/AudioContext/decodeAudioData	/ja/docs/Web/API/BaseAudioContext/decodeAudioData
 /ja/docs/Web/API/AudioContext/destination	/ja/docs/Web/API/BaseAudioContext/destination
 /ja/docs/Web/API/AudioContext/listener	/ja/docs/Web/API/BaseAudioContext/listener
-/ja/docs/Web/API/AudioContext/mozAudioChannelType	/ja/docs/orphaned/Web/API/AudioContext/mozAudioChannelType
 /ja/docs/Web/API/AudioContext/onstatechange	/ja/docs/Web/API/BaseAudioContext/onstatechange
 /ja/docs/Web/API/AudioContext/sampleRate	/ja/docs/Web/API/BaseAudioContext/sampleRate
 /ja/docs/Web/API/AudioContext/state	/ja/docs/Web/API/BaseAudioContext/state
