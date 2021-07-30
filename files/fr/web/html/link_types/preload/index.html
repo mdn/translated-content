@@ -111,19 +111,19 @@ translation_of: 'Web/HTML/Link_types/preload'
 
 <p>En conclusion, il est déconseillé de précharger de multiple formats pour la même ressource. La bonne pratique est plutôt de précharger uniquement le type de média qu'utilise la majorité des personnes qui visitent votre site. C'est pourquoi le code fourni en exemple ne précharge pas la vidéo au format <code>video/webm</code>.</p>
 
-<p>However, the lack of preloading doesn’t prevent the <code>video/webm</code> video from actually being used by those who need it: for users whose browsers don’t have <code>video/mp4</code> support but do have <code>video/webm</code> support, the code in the example above does still cause the <code>video/webm</code> video to be used — but it does so without also causing it to also be preloaded unnecessarily for the majority of other users.</p>
+<p>Cependant, l'absence de préchargement n'empêche pas la vidéo <code>video/webm</code> d'être utilisée par les personnes qui en ont besoin : pour les navigateurs qui ne prennent pas en charge le format <code>video/mp4</code> mais qui prennent en charge le format <code>video/webm</code> alors le code de l'exemple permettra toujours d'utiliser la vidéo au format <code>video/webm</code> — cela évitera simplement de précharger inutilement une ressource pour la plupart des navigateurs.</p>
 
-<h2 id="CORS-enabled_fetches">CORS-enabled fetches</h2>
+<h2 id="cors-enabled_fetches">Analyse de l'activation du <i lang="en">CORS</i></h2>
 
-<p>When preloading resources that are fetched with <a href="/en-US/docs/Web/HTTP/CORS">CORS</a> enabled (e.g. <code><a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code>, <code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> or <a href="/en-US/docs/Web/CSS/@font-face">fonts</a>), special care needs to be taken to setting the {{htmlattrxref("crossorigin","link")}} attribute on your <code><a href="/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></code> element. The attribute needs to be set to match the resource's CORS and credentials mode, even when the fetch is not cross-origin.</p>
+<p>Lors du préchargement des ressources analysées par des fonctions activant le <a href="/fr/docs/Web/HTTP/CORS">CORS</a> (partage des ressources entre origines multiples), comme par exemple <code><a href="/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch">fetch()</a></code>, <code><a href="/fr/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> ou <a href="/fr/docs/Web/CSS/@font-face">fonts</a>), une attention particulière doit être portée à la mise en place de l'attribut {{htmlattrxref("crossorigin","link")}} sur l'élément <code><a href="/fr/docs/Web/HTML/Element/link">&lt;link&gt;</a></code>. L'attribut à besoin d'être mis en place pour faire correspondre le <i lang="en">CORS</i> de la ressource et le mode d'identification, même s'il ne s'agit pas d'une ressource ayant une origine différente de celle de la page.</p>
 
-<p>As mentioned above, one interesting case where this applies is font files. Because of various reasons, these have to be fetched using anonymous-mode CORS (see <a href="https://drafts.csswg.org/css-fonts/#font-fetching-requirements">Font fetching requirements</a>).</p>
+<p>Comme mentionné ci-dessus, un cas de figure intéressant est celui qui s'applique aux fichiers de polices. Pour plusieurs raisons, celles-ci doivent être analysées en utilisant le mode anonyme du <i lang="en">CORS</i> (voir cet article en anglais : <a href="https://drafts.csswg.org/css-fonts/#font-fetching-requirements"><i lang="en">Font fetching requirements</i></a>).</p>
 
-<p>Let's use this case as an example. You can see the full <a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/fonts">example source code on GitHub</a> (<a href="https://mdn.github.io/html-examples/link-rel-preload/fonts/">also see it live</a>):</p>
+<p>Voici un cas d'utilisation. Vous trouverez <a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/fonts">le code source complet sur GitHub</a> ainsi qu'une <a href="https://mdn.github.io/html-examples/link-rel-preload/fonts/">démonstration</a> :</p>
 
 <pre class="brush: html">&lt;head&gt;
   &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;Web font example&lt;/title&gt;
+  &lt;title&gt;Exemple de préchargement de police Web&lt;/title&gt;
 
   &lt;link rel="preload" href="fonts/cicle_fina-webfont.woff2" as="font" type="font/woff2" crossorigin&gt;
   &lt;link rel="preload" href="fonts/zantroke-webfont.woff2" as="font" type="font/woff2" crossorigin&gt;
@@ -134,17 +134,17 @@ translation_of: 'Web/HTML/Link_types/preload'
   …
 &lt;/body&gt;</pre>
 
-<p>Not only are we providing the MIME type hints in the <code>type</code> attributes, but we are also providing the <code>crossorigin</code> attribute to make sure the preload's CORS mode matches the eventual font resource request.</p>
+<p>En plus de fournir un type MIME avec l'attribut <code>type</code>, ce code utilise un attribut <code>crossorigin</code> afin de s'assurer que le préchargement du <i lang="en">CORS</i> correspond à la requête de chargement de la police.</p>
 
-<h2 id="Including_media">Including media</h2>
+<h2 id="including_media">Inclure des médias</h2>
 
-<p>One nice feature of <code>&lt;link&gt;</code> elements is their ability to accept {{htmlattrxref("media", "link")}} attributes. These can accept <a href="/en-US/docs/Web/CSS/@media#media_types">media types</a> or full-blown <a href="/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">media queries</a>, allowing you to do responsive preloading!</p>
+<p>Une autre belle fonctionnalité de l'élément <code>&lt;link&gt;</code> concerne leur capacité à accepter les attributs {{htmlattrxref("media", "link")}}. Il peut accepter les requêtes de <a href="/fr/docs/Web/CSS/@media#media_types">types de médias</a> ou encore des <a href="/fr/docs/Web/CSS/Media_Queries/Using_media_queries"><i lang="en">media queries</i></a> complètes, ce qui vous permet de faire du préchargement <i lang="en">responsive</i> !</p>
 
-<p>Let's look at an example (see it on GitHub — <a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/media">source code</a>, <a href="https://mdn.github.io/html-examples/link-rel-preload/media/">live example</a>):</p>
+<p>Voici un exemple. Vous pouvez consulter son <a href="https://github.com/mdn/html-examples/tree/master/link-rel-preload/media">code source sur GitHub</a> ou étudier un <a href="https://mdn.github.io/html-examples/link-rel-preload/media/">exemple de démonstration</a> :</p>
 
 <pre class="brush: html">&lt;head&gt;
   &lt;meta charset="utf-8"&gt;
-  &lt;title&gt;Responsive preload example&lt;/title&gt;
+  &lt;title&gt;Exemple de préchargement responsive&lt;/title&gt;
 
   &lt;link rel="preload" href="bg-image-narrow.png" as="image" media="(max-width: 600px)"&gt;
   &lt;link rel="preload" href="bg-image-wide.png" as="image" media="(min-width: 601px)"&gt;
@@ -153,7 +153,7 @@ translation_of: 'Web/HTML/Link_types/preload'
 &lt;/head&gt;
 &lt;body&gt;
   &lt;header&gt;
-    &lt;h1&gt;My site&lt;/h1&gt;
+    &lt;h1&gt;Mon site&lt;/h1&gt;
   &lt;/header&gt;
 
   &lt;script&gt;
@@ -168,15 +168,15 @@ translation_of: 'Web/HTML/Link_types/preload'
   &lt;/script&gt;
 &lt;/body&gt;</pre>
 
-<p>We include <code>media</code> attributes on our <code>&lt;link&gt;</code> elements so that a narrow image is preloaded if the user has a narrow viewport, and a wider image is loaded if they have a wide viewport. We use {{domxref("Window.matchMedia")}} / {{domxref("MediaQueryList")}} to do this (see <a href="/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries">Testing media queries</a> for more).</p>
+<p>Dans cet exemple nous incluons les attributs <code>media</code> dans notre élément <code>&lt;link&gt;</code> pour qu'une image plus fine soit préchargée si la personne visitant le site dispose d'un écran plus petit, et pour qu'une image plus large soit chargée sur les écrans plus larges. Pour cela, nous utilisons {{domxref("Window.matchMedia")}} et {{domxref("MediaQueryList")}} (consultez la page <a href="/fr/docs/Web/CSS/Media_Queries/Testing_media_queries">Tester les requêtes média en JavaScript</a> pour en savoir plus).</p>
 
-<p>This makes it much more likely that the font will be available for the page render, cutting down on FOUT (flash of unstyled text).</p>
+<p>Cela augmente les chances que la police sera disponible lors du rendu de la page, et diminue les risques de <i lang="en">FOUT</i> (pour <i lang="en">flash of unstyled text</i>, soit « flash de texte stylé » en français).</p>
 
-<p>This doesn't have to be limited to images, or even files of the same type — think big! You could perhaps preload and display a simple SVG diagram if the user is on a narrow screen where bandwidth and CPU is potentially more limited, or preload a complex chunk of JavaScript then use it to render an interactive 3D model if the user's resources are more plentiful.</p>
+<p>Il sera dommage de limiter le préchargement aux images, voyez plus loin ! On pourrait imaginer de précharger l'affichage d'un diagramme SVG si le visiteur se trouve sur un petit écran avec une bande passante ou une disponibilité CPU plus limitée, ou encore de précharger des morceaux de JavaScript complexes utilisés pour faire fonctionner une modélisation 3D interactive uniquement si les ressources du visiteur sont suffisantes.</p>
 
-<h2 id="Scripting_and_preloads">Scripting and preloads</h2>
+<h2 id="scripting_and_preloads">Scripts et préchargement</h2>
 
-<p>Another nice thing about these preloads is that you can execute them with script. For example, here we create a {{domxref("HTMLLinkElement")}} instance, then attach it to the DOM:</p>
+<p>Une autre fonctionnalité notable est la possibilité d'exécuter le préchargement à l'aide d'un script. Par exemple, voici la création d'une instance {{domxref("HTMLLinkElement")}} qui est ensuite attachée au <i lang="en">DOM</i> :</p>
 
 <pre class="brush: js">var preloadLink = document.createElement(&quot;link&quot;);
 preloadLink.href = &quot;myscript.js&quot;;
@@ -185,36 +185,38 @@ preloadLink.as = &quot;script&quot;;
 document.head.appendChild(preloadLink);
 </pre>
 
-<p>This means that the browser will preload the <code>myscript.js</code> file, but not actually use it yet. To use it, you could do this:</p>
+<p>Cela signifie que le navigateur va précharger le fichier <code>myscript.js</code>, mais ne va pas réellement l'utiliser directement. Pour l'utiliser, vous pouvez faire ceci :</p>
 
 <pre class="brush: js">var preloadedScript = document.createElement(&quot;script&quot;);
 preloadedScript.src = &quot;myscript.js&quot;;
 document.body.appendChild(preloadedScript);
 </pre>
 
-<p>This is useful when you want to preload a script, but then defer execution until exactly when you need it.</p>
+<p>C'est utile lorsque vous voulez précharger un script mais repousser son exécution au moment exact où vous en avez réellement besoin.</p>
 
-<h2 id="Other_resource_preloading_mechanisms">Other resource preloading mechanisms</h2>
+<h2 id="other_resource_preloading_mechanisms">Autres ressources concernant les mécanismes de préchargement</h2>
 
-<p>Other preloading features exist, but none are quite as fit for purpose as <code>&lt;link rel="preload"&gt;</code> :</p>
+<p>D'autres fonctionnalités de préchargement sont disponibles, mais sachez qu'aucune d'entre elle n'est aussi adaptée à l'objectif recherché que <code>&lt;link rel="preload"&gt;</code>. En voici la liste :</p>
 
 <ul>
-	<li><code>&lt;link rel="prefetch"&gt;</code> has been supported in browsers for a long time, but it is intended for prefetching resources that will be used in the <strong><em>next</em></strong> navigation/page load (e.g. when you go to the next page). This is fine, but isn't useful for the current page! In addition, browsers will give <code>prefetch</code> resources a lower priority than <code>preload</code> ones — the current page is more important than the next. See <a href="/en-US/docs/Web/HTTP/Link_prefetching_FAQ">Link prefetching FAQ</a> for more details ;</li>
-	<li><code>&lt;link rel="prerender"&gt;</code> renders a specified webpage in the background, speeding up its load if the user navigates to it. Because of the potential to waste users bandwidth, Chrome treats <code>prerender</code> as a <a href="https://developers.google.com/web/updates/2018/07/nostate-prefetch">NoState prefetch</a> instead ;</li>
-	<li><code>&lt;link rel="subresource"&gt;</code> {{non-standard_inline}} was supported in Chrome a while ago, and was intended to tackle the same issue as <code>preload</code>, but it had a problem: there was no way to work out a priority for the items (<code>as</code> didn't exist back then), so they all got fetched with fairly low priority ;</li>
-	<li>There are a number of script-based resource loaders out there, but they don't have any power over the browser's fetch prioritization queue, and are subject to much the same performance problems ;</li>
+  <li><code>&lt;link rel="prefetch"&gt;</code> est pris en charge depuis longtemps par les navigateurs, mais est destinée à la pré-analyse des ressources qui vont être utilisées lors de la <strong><em>prochaine</em></strong> page visitée/chargée (par exempel lorsque vous vous rendrez sur une autre page du site). C'est une bonne chose, mais ce n'est pas utile pour la page en cours de chargement ! Par ailleurs, les navigateurs donnent une priorité plus faible à <code>prefetch</code> qu'à <code>preload</code> — la page courante est prioritaire par rapport à la page suivante. Consultez la <a href="/fr/docs/Web/HTTP/Link_prefetching_FAQ">FAQ sur le préchargement des liens</a> pour plus de détails ;</li>
+  <li><code>&lt;link rel="prerender"&gt;</code> effectue le rendu une page spécifiée en arrière-plan, ce qui permet d'accèlerer son chargement si la personne vistant le site se rend sur cette page par la suite. Du fait du gaspillage potentiel de bande passante pour les visiteurs (on charge des éléments sans savoir si on en aura besoin), Chrome traite l'instruction <code>prerender</code> comme une instruction <a href="https://developers.google.com/web/updates/2018/07/nostate-prefetch">NoState prefetch</a> ;</li>
+  <li><code>&lt;link rel="subresource"&gt;</code> {{non-standard_inline}} était pris en charge par Chrome il y a quelques temps et était destiné à gérer la même chose que <code>preload</code>, mais il y avait un problème : il n'y avait aucun moyen de définir une priorité sur les éléments à charger (<code>as</code> n'existait pas encore), donc toutes les ressources étaient chargées avec la même priorité (la plus faible) ;</li>
+  <li>Il y a un grand nombre de scripts de chargements de ressources disponibles un peu partout, mais aucun ne peut avoir la puissance d'un file de priorisation gérée directement par le navigateur. De plus, ces scripts sont sujets à des problèmes de performances similaires.</li>
 </ul>
 
-<h2 id="Specifications">Specifications</h2>
+<h2 id="specifications">Spécifications</h2>
 
 <p>{{Specifications}}</p>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
 
 <p>{{Compat}}</p>
 
-<h2 id="See_also">See also</h2>
+<h2 id="see_also">Voir aussi</h2>
 
 <ul>
-	<li><a href="https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/">Preload: What Is It Good For?</a> by Yoav Weiss</li>
+  <li>
+    <a href="https://www.smashingmagazine.com/2016/02/preload-what-is-it-good-for/"><i lang="en">Preload: What Is It Good For?</i></a> par Yoav Weiss (en anglais)
+  </li>
 </ul>
