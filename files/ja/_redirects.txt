@@ -3529,7 +3529,6 @@
 /ja/docs/Web/API/Document/domConfig	/ja/docs/Web/API/Document
 /ja/docs/Web/API/Document/inputEncoding	/ja/docs/Web/API/Document/characterSet
 /ja/docs/Web/API/Document/onselectionchange	/ja/docs/Web/API/GlobalEventHandlers/onselectionchange
-/ja/docs/Web/API/DocumentOrShadowRoot	/ja/docs/orphaned/Web/API/DocumentOrShadowRoot
 /ja/docs/Web/API/DocumentOrShadowRoot/activeElement	/ja/docs/Web/API/Document/activeElement
 /ja/docs/Web/API/DocumentOrShadowRoot/caretPositionFromPoint	/ja/docs/Web/API/Document/caretPositionFromPoint
 /ja/docs/Web/API/DocumentOrShadowRoot/elementFromPoint	/ja/docs/Web/API/Document/elementFromPoint
@@ -3537,7 +3536,6 @@
 /ja/docs/Web/API/DocumentOrShadowRoot/fullscreenElement	/ja/docs/Web/API/Document/fullscreenElement
 /ja/docs/Web/API/DocumentOrShadowRoot/getAnimations	/ja/docs/Web/API/Document/getAnimations
 /ja/docs/Web/API/DocumentOrShadowRoot/getSelection	/ja/docs/Web/API/Document/getSelection
-/ja/docs/Web/API/DocumentOrShadowRoot/msElementsFromRect	/ja/docs/orphaned/Web/API/DocumentOrShadowRoot/msElementsFromRect
 /ja/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/ja/docs/Web/API/Document/pointerLockElement
 /ja/docs/Web/API/DocumentOrShadowRoot/styleSheets	/ja/docs/Web/API/Document/styleSheets
 /ja/docs/Web/API/Document_Object_Model/Events	/ja/docs/orphaned/Web/API/Document_Object_Model/Events
