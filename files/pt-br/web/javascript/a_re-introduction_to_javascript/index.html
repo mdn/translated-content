@@ -121,7 +121,7 @@ false
 false
 </pre>
 
-<div class="note"><strong>Nota:</strong> As funções <a href="/en/JavaScript/Reference/Global_Objects/parseInt" title="en/JavaScript/Reference/Global Objects/parseInt"><code>parseInt()</code></a> e <code><a href="/en/JavaScript/Reference/Global_Objects/parseFloat" title="en/JavaScript/Reference/Global Objects/parseFloat">parseFloat()</a></code> fazem a conversão da string até alcançarem um caracter que não é válido para o formato numérico especificado, então elas retornam o número convertido até aquele ponto. Contudo, o operador "+" simplesmente converte a string em <code>NaN</code>  se tiver algum caracter inválido nela. Apenas tente por si mesmo converter a string "10.2abc" usando cada um desses métodos <span style="line-height: 1.5;">no console </span><span style="line-height: 1.5;">e entenderá melhor essas diferenças.</span></div>
+<div class="note"><strong>Nota:</strong> As funções <a href="/en/JavaScript/Reference/Global_Objects/parseInt" title="en/JavaScript/Reference/Global Objects/parseInt"><code>parseInt()</code></a> e <code><a href="/en/JavaScript/Reference/Global_Objects/parseFloat" title="en/JavaScript/Reference/Global Objects/parseFloat">parseFloat()</a></code> fazem a conversão da string até alcançarem um caracter que não é válido para o formato numérico especificado, então elas retornam o número convertido até aquele ponto. Contudo, o operador "+" simplesmente converte a string em <code>NaN</code> se tiver algum caracter inválido nela. Apenas tente por si mesmo converter a string "10.2abc" usando cada um desses métodos <span style="line-height: 1.5;">no console </span><span style="line-height: 1.5;">e entenderá melhor essas diferenças.</span></div>
 
 <h2 id="Strings">Strings</h2>
 
@@ -440,7 +440,7 @@ undefined
 }
 </pre>
 
-<p>Aqui nós estamos declarando duas variáveis. A atribuição na parte do meio do laço <code>for</code> é também testada — se for verdadeira, o laço continuara. Uma vez que o <code>i</code> é incrementado toda vez, os itens do array serão atribuiídos a variável item sequencialmente. A iteração é finalizada quando item "falsy" é encontrado (tal como o <code>undefined</code>, false ou zero).</p>
+<p>Aqui nós estamos declarando duas variáveis. A atribuição na parte do meio do laço <code>for</code> é também testada — se for verdadeira, o laço continuará. Uma vez que o <code>i</code> é incrementado toda vez, os itens do array serão atribuídos a variável item sequencialmente. A iteração é finalizada quando item "falsy" é encontrado (tal como o <code>undefined</code>, false ou zero).</p>
 
 <p>Note que esse truque só deveria ser usado em vetores que você sabe não conter valores "falsy" (vetores de objeto ou nós <a href="/en/DOM" title="en/DOM">DOM</a> por exemplo). Se você iterar sobre dados numéricos que possam ter o 0 ou sobre dados string que possam ter uma string vazia, você deveria usar a segunda forma como alternativa.</p>
 
@@ -492,11 +492,11 @@ undefined
   </tr>
   <tr>
    <td><code>a.reverse()</code></td>
-   <td>Reverte o vetor</td>
+   <td>Reverte o vetor.</td>
   </tr>
   <tr>
    <td><code>a.shift()</code></td>
-   <td>Remove e retorna o primeiro item</td>
+   <td>Remove e retorna o primeiro item.</td>
   </tr>
   <tr>
    <td><code>a.slice(start, end)</code></td>
