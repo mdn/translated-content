@@ -3519,7 +3519,6 @@
 /ja/docs/Web/API/ChildNode	/ja/docs/orphaned/Web/API/ChildNode
 /ja/docs/Web/API/ChildNode/after	/ja/docs/orphaned/Web/API/ChildNode/after
 /ja/docs/Web/API/ChildNode/before	/ja/docs/orphaned/Web/API/ChildNode/before
-/ja/docs/Web/API/ChildNode/remove	/ja/docs/orphaned/Web/API/ChildNode/remove
 /ja/docs/Web/API/ChildNode/replaceWith	/ja/docs/orphaned/Web/API/ChildNode/replaceWith
 /ja/docs/Web/API/Console.error	/ja/docs/Web/API/Console/error
 /ja/docs/Web/API/Coordinates	/ja/docs/Web/API/GeolocationCoordinates

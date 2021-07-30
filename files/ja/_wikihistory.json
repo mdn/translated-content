@@ -51129,16 +51129,6 @@
       "Shirasu"
     ]
   },
-  "orphaned/Web/API/ChildNode/remove": {
-    "modified": "2020-10-15T21:51:39.796Z",
-    "contributors": [
-      "Potappo",
-      "kenji-yamasaki",
-      "mfuji09",
-      "isdh",
-      "chikoski"
-    ]
-  },
   "orphaned/Web/API/ChildNode/replaceWith": {
     "modified": "2020-10-17T04:41:48.425Z",
     "contributors": [
