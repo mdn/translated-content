@@ -10,13 +10,13 @@ translation_of: Web/CSS/list-style-type
 ---
 <div>{{CSSRef}}</div>
 
-<p> <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS">CSS</a> 属性 <code>list-style-type</code> 可以设置列表元素的 marker（比如圆点、符号、或者自定义计数器样式）。</p>
+<p> <a href="/zh-CN/docs/Web/CSS">CSS</a> 属性 <code>list-style-type</code> 可以设置列表元素的 marker（比如圆点、符号、或者自定义计数器样式）。</p>
 
 <div>{{EmbedInteractiveExample("pages/css/list-style-type.html")}}</div>
 
 
 
-<p>The <a href="https://wiki.developer.mozilla.org/en-US/docs/CSS/color_value" title="color">color</a> of the marker will be the same as the computed color of the element it applies to.</p>
+<p>The <a href="/zh-CN/docs/CSS/color_value" title="color">color</a> of the marker will be the same as the computed color of the element it applies to.</p>
 
 <p>只有几个元素 ({{HTMLElement("li")}} 和 {{HTMLElement("summary")}}) 的默认值为 <code>display: list-item</code>。 但是， <code>list-style-type</code> 属性可以应用在任何 {{cssxref("display")}} 的值为 <code>list-item</code> 的元素上。此外，由于这个属性是可继承的，它可以设置在父元素上 (通常是 {{HTMLElement("ol")}} 或 {{HTMLElement("ul")}}) 以便应用于所有子元素({{HTMLElement("li")}})。</p>
 
@@ -49,10 +49,10 @@ list-style-type: unset;
 <p>list-style-type 的属性值可以是以下任意一项:</p>
 
 <ul>
- <li>a <code><a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/CSS/list-style-type$edit#%3Ccustom-ident%3E">&lt;custom-ident&gt;</a></code> value</li>
- <li>a <code><a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/CSS/list-style-type$edit#symbols()">symbols()</a></code> value</li>
- <li>a <code><a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/CSS/list-style-type$edit#%3Cstring%3E">&lt;string&gt;</a></code> value</li>
- <li>the keyword <code><a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/CSS/list-style-type$edit#none">none</a></code>.</li>
+ <li>a <code><a href="/zh-CN/docs/Web/CSS/list-style-type$edit#%3Ccustom-ident%3E">&lt;custom-ident&gt;</a></code> value</li>
+ <li>a <code><a href="/zh-CN/docs/Web/CSS/list-style-type$edit#symbols()">symbols()</a></code> value</li>
+ <li>a <code><a href="/zh-CN/docs/Web/CSS/list-style-type$edit#%3Cstring%3E">&lt;string&gt;</a></code> value</li>
+ <li>the keyword <code><a href="/zh-CN/docs/Web/CSS/list-style-type$edit#none">none</a></code>.</li>
 </ul>
 
 <h3 id="取值">取值</h3>
@@ -499,7 +499,7 @@ ol.shortcut {
 
 <h2 id="Accessibility_concerns">Accessibility concerns</h2>
 
-<p>The <a href="https://help.apple.com/voiceover/info/guide/">VoiceOver</a> screen reader has an issue where unordered lists with a <code>list-style-type</code>value of <code>none</code> applied to them will not be announced as a list. To address this, add a <a href="https://en.wikipedia.org/wiki/Zero-width_space">zero-width space</a> as <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/content">pseudo content</a> before each list item to ensure the list is announced properly. This ensures the design is unaffected by the bug fix and that list items are not improperly described.</p>
+<p>The <a href="https://help.apple.com/voiceover/info/guide/">VoiceOver</a> screen reader has an issue where unordered lists with a <code>list-style-type</code>value of <code>none</code> applied to them will not be announced as a list. To address this, add a <a href="https://en.wikipedia.org/wiki/Zero-width_space">zero-width space</a> as <a href="/zh-CN/docs/Web/CSS/content">pseudo content</a> before each list item to ensure the list is announced properly. This ensures the design is unaffected by the bug fix and that list items are not improperly described.</p>
 
 <pre class="notranslate"><code>ul {
   list-style: none;
@@ -511,7 +511,7 @@ ul li::before {
 
 <ul>
  <li><a href="https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/">VoiceOver and list-style-type: none – Unfettered Thoughts</a></li>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways">MDN Understanding WCAG, Guideline 1.3 explanations</a></li>
+ <li><a href="/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways">MDN Understanding WCAG, Guideline 1.3 explanations</a></li>
  <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html" rel="noopener">Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0</a></li>
 </ul>
 

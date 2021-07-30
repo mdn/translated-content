@@ -77,7 +77,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 <p><strong>提示：</strong>当Cookie的过期时间被设定时，设定的日期和时间只与客户端相关，而不是服务端。</p>
 </div>
 
-<p>如果您的站点对用户进行身份验证，则每当用户进行身份验证时，它都应重新生成并重新发送会话 Cookie，甚至是已经存在的会话 Cookie。此技术有助于防止<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Security/Types_of_attacks#Session_fixation">会话固定攻击（session fixation attacks）</a>，在该攻击中第三方可以重用用户的会话。</p>
+<p>如果您的站点对用户进行身份验证，则每当用户进行身份验证时，它都应重新生成并重新发送会话 Cookie，甚至是已经存在的会话 Cookie。此技术有助于防止<a href="/zh-CN/docs/Web/Security/Types_of_attacks#Session_fixation">会话固定攻击（session fixation attacks）</a>，在该攻击中第三方可以重用用户的会话。</p>
 
 <h3 id="限制访问_Cookie">限制访问 Cookie</h3>
 
@@ -89,7 +89,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 <p>从 Chrome 52 和 Firefox 52 开始，不安全的站点（<code>http:</code>）无法使用Cookie的 <code>Secure</code> 标记。</p>
 </div>
 
-<p>JavaScript {{domxref("Document.cookie")}} API 无法访问带有 <code>HttpOnly</code> 属性的cookie；此类 Cookie 仅作用于服务器。例如，持久化服务器端会话的 Cookie 不需要对 JavaScript 可用，而应具有 <code>HttpOnly</code> 属性。此预防措施有助于缓解<a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/Security/Types_of_attacks#Cross-site_scripting_(XSS)">跨站点脚本（XSS）</a>攻击。</p>
+<p>JavaScript {{domxref("Document.cookie")}} API 无法访问带有 <code>HttpOnly</code> 属性的cookie；此类 Cookie 仅作用于服务器。例如，持久化服务器端会话的 Cookie 不需要对 JavaScript 可用，而应具有 <code>HttpOnly</code> 属性。此预防措施有助于缓解<a href="/zh-CN/docs/Web/Security/Types_of_attacks#Cross-site_scripting_(XSS)">跨站点脚本（XSS）</a>攻击。</p>
 
 <p>示例：</p>
 
@@ -149,7 +149,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 
 <p>cookie 机制的使得服务器无法确认 cookie 是在安全来源上设置的，甚至无法确定 cookie 最初是在哪里设置的。</p>
 
-<p>子域上的易受攻击的应用程序可以使用 Domain 属性设置 cookie，从而可以访问所有其他子域上的该 cookie。会话固定攻击中可能会滥用此机制。有关主要缓解方法，请参阅<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Security/Types_of_attacks#Session_fixation">会话劫持（ session fixation）</a>。</p>
+<p>子域上的易受攻击的应用程序可以使用 Domain 属性设置 cookie，从而可以访问所有其他子域上的该 cookie。会话固定攻击中可能会滥用此机制。有关主要缓解方法，请参阅<a href="/zh-CN/docs/Web/Security/Types_of_attacks#Session_fixation">会话劫持（ session fixation）</a>。</p>
 
 <p>但是，作为<a href="https://en.wikipedia.org/wiki/Defense_in_depth_(computing)">深度防御措施</a>，可以使用 cookie 前缀来断言有关 cookie 的特定事实。有两个前缀可用：</p>
 
@@ -166,7 +166,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 <p>在应用程序服务器上，Web 应用程序<strong>必须</strong>检查完整的 cookie 名称，包括前缀 —— 用户代理程序在从请求的 {{HTTPHeader("Cookie")}} 标头中发送前缀之前，<strong>不会</strong>从 cookie 中剥离前缀。</p>
 </div>
 
-<p>有关 cookie 前缀和浏览器支持的当前状态的更多信息，请参阅 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#Cookie_prefixes">Prefixes section of the Set-Cookie reference article</a>。</p>
+<p>有关 cookie 前缀和浏览器支持的当前状态的更多信息，请参阅 <a href="/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#Cookie_prefixes">Prefixes section of the Set-Cookie reference article</a>。</p>
 
 <h4 id="JavaScript_通过_Document.cookie_访问_Cookie">JavaScript 通过 Document.cookie 访问 Cookie</h4>
 
@@ -193,7 +193,7 @@ console.log(document.cookie);
 
 <ul>
  <li>使用 <code>HttpOnly</code> 属性可防止通过 JavaScript 访问 cookie 值。</li>
- <li>用于敏感信息（例如指示身份验证）的 Cookie 的生存期应较短，并且 <code>SameSite</code> 属性设置为<code>Strict</code> 或 <code>Lax</code>。（请参见上方的 <a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/HTTP/Cookies$edit#">SameSite Cookie</a>。）在<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie#Browser_compatibility">支持 SameSite 的浏览器</a>中，这样做的作用是确保不与跨域请求一起发送身份验证 cookie，因此，这种请求实际上不会向应用服务器进行身份验证。</li>
+ <li>用于敏感信息（例如指示身份验证）的 Cookie 的生存期应较短，并且 <code>SameSite</code> 属性设置为<code>Strict</code> 或 <code>Lax</code>。（请参见上方的 <a href="/zh-CN/docs/Web/HTTP/Cookies$edit#">SameSite Cookie</a>。）在<a href="/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#Browser_compatibility">支持 SameSite 的浏览器</a>中，这样做的作用是确保不与跨域请求一起发送身份验证 cookie，因此，这种请求实际上不会向应用服务器进行身份验证。</li>
 </ul>
 
 <h3 id="会话劫持和_XSS">会话劫持和 XSS</h3>
@@ -272,9 +272,9 @@ console.log(document.cookie);
 
 <h2 id="在浏览器中存储信息的其他方式">在浏览器中存储信息的其他方式</h2>
 
-<p>在浏览器中存储数据的另一种方法是 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Web Storage API</a>。<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage">window.sessionStorage</a> 和<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Window/localStorage">window.localStorage</a> 属性与持续时间中的会话和永久 cookie 相对应，但是存储限制比 cookie大，并且永远不会发送到服务器。</p>
+<p>在浏览器中存储数据的另一种方法是 <a href="/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Web Storage API</a>。<a href="/zh-CN/docs/Web/API/Window/sessionStorage">window.sessionStorage</a> 和<a href="/zh-CN/docs/Web/API/Window/localStorage">window.localStorage</a> 属性与持续时间中的会话和永久 cookie 相对应，但是存储限制比 cookie大，并且永远不会发送到服务器。</p>
 
-<p>可以使用 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API">IndexedDB API</a> 或基于它构建的库来存储更多结构化的数据。</p>
+<p>可以使用 <a href="/zh-CN/docs/Web/API/IndexedDB_API">IndexedDB API</a> 或基于它构建的库来存储更多结构化的数据。</p>
 
 <h2 id="了解更多">了解更多</h2>
 

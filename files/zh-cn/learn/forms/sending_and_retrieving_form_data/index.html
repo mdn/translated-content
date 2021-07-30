@@ -36,7 +36,7 @@ original_slug: Learn/HTML/Forms/Sending_and_retrieving_form_data
 
 <h3 id="客户端服务器体系结构">客户端/服务器体系结构</h3>
 
-<p>web基于非常基本的客户端/服务器体系结构，可以总结如下:客户端(通常是web浏览器)向服务器发送请求(大多数情况下是<a href="http://httpd.apache.org/" rel="external" title="http://httpd.apache.org/">Apache</a>、<a href="http://nginx.com/" rel="external" title="http://nginx.com/">Nginx</a>、<a href="http://www.iis.net/" rel="external" title="http://www.iis.net/">IIS</a>、<a href="http://tomcat.apache.org/" rel="external" title="http://tomcat.apache.org/">Tomcat</a>等web服务器)，使用<a href="/en-US/docs/HTTP" title="/en-US/docs/HTTP">HTTP 协议</a>。服务器使用相同的协议来回答请求。</p>
+<p>web基于非常基本的客户端/服务器体系结构，可以总结如下:客户端(通常是web浏览器)向服务器发送请求(大多数情况下是<a href="http://httpd.apache.org/" rel="external">Apache</a>、<a href="http://nginx.com/" rel="external">Nginx</a>、<a href="http://www.iis.net/" rel="external">IIS</a>、<a href="http://tomcat.apache.org/" rel="external">Tomcat</a>等web服务器)，使用<a href="/en-US/docs/HTTP" title="/en-US/docs/HTTP">HTTP 协议</a>。服务器使用相同的协议来回答请求。</p>
 
 <p><img alt="A basic schema of the Web client/server architecture" src="/files/4291/client-server.png" style="display: block; height: 141px; margin: 0px auto; width: 400px;"></p>
 
@@ -158,7 +158,7 @@ say=Hi&amp;to=Mom</pre>
 
 <h4 id="查看HTTP请求">查看HTTP请求</h4>
 
-<p>HTTP请求永远不会显示给用户(如果您想要看到它们，您需要使用诸如<a href="/en-US/docs/Tools/Network_Monitor">Firefox Network Monitor</a>或<a href="https://developers.google.com/chrome-developer-tools/" title="https://developers.google.com/chrome-developer-tools/">Chrome Developer Tools</a>之类的工具)。例如，您的表单数据将显示在Chrome网络选项卡中：</p>
+<p>HTTP请求永远不会显示给用户(如果您想要看到它们，您需要使用诸如<a href="/en-US/docs/Tools/Network_Monitor">Firefox Network Monitor</a>或<a href="https://developers.google.com/chrome-developer-tools/">Chrome Developer Tools</a>之类的工具)。例如，您的表单数据将显示在Chrome网络选项卡中：</p>
 
 <ol>
  <li>按下 F12</li>
@@ -237,7 +237,7 @@ if __name__ == "__main__":
 
 <h4 id="其他语言和框架">其他语言和框架</h4>
 
-<p>还有许多其他的服务器端技术可以用于表单处理，包括<a href="/en-US/docs/" title="/en-US/docs/">Perl</a>、<a href="/en-US/docs/" title="/en-US/docs/">Java</a>、 <a href="http://www.microsoft.com/net" title="http://www.microsoft.com/net">.Net</a>、<a href="/en-US/docs/" title="/en-US/docs/">Ruby</a>等。只挑你最喜欢的用就好。话虽如此，但值得注意的是，直接使用这些技术并不常见，因为这可能很棘手。更常见的是使用许多优秀的框架，这些框架使处理表单变得更容易，例如：</p>
+<p>还有许多其他的服务器端技术可以用于表单处理，包括<a href="/en-US/docs/" title="/en-US/docs/">Perl</a>、<a href="/en-US/docs/" title="/en-US/docs/">Java</a>、 <a href="http://www.microsoft.com/net">.Net</a>、<a href="/en-US/docs/" title="/en-US/docs/">Ruby</a>等。只挑你最喜欢的用就好。话虽如此，但值得注意的是，直接使用这些技术并不常见，因为这可能很棘手。更常见的是使用许多优秀的框架，这些框架使处理表单变得更容易，例如：</p>
 
 <ul>
  <li><a href="https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django" rel="external">Django</a> for Python （比<a href="http://flask.pocoo.org/">Flask</a>要重量级一些，但是有更多的工具和选项。）</li>
@@ -311,7 +311,7 @@ if __name__ == "__main__":
 
 <p>SQL 注入是一种试图在目标web站点使用的数据库上执行操作的攻击类型。这通常包括发送一个SQL请求，希望服务器能够执行它（通常发生在应用服务器试图存储由用户发送的数据时）。这实际上是<a href="https://www.owasp.org/index.php/Category:OWASP_Top_Ten_Project">攻击网站的主要途径之一</a>。 </p>
 
-<p>其后果可能是可怕的，从数据丢失到通过使用特权升级控制整个网站基础设施的攻击。这是一个非常严重的威胁，您永远不应该存储用户发送的数据，而不执行一些清理工作(例如，在php/mysql基础设施上使用<code><a href="http://www.php.net/manual/en/function.mysql-real-escape-string.php" rel="external" title="http://www.php.net/manual/en/function.mysql-real-escape-string.php">mysql_real_escape_string()</a></code>。</p>
+<p>其后果可能是可怕的，从数据丢失到通过使用特权升级控制整个网站基础设施的攻击。这是一个非常严重的威胁，您永远不应该存储用户发送的数据，而不执行一些清理工作(例如，在php/mysql基础设施上使用<code><a href="http://www.php.net/manual/en/function.mysql-real-escape-string.php" rel="external">mysql_real_escape_string()</a></code>。</p>
 
 <h3 id="HTTP数据头注入和电子邮件注入">HTTP数据头注入和电子邮件注入</h3>
 
@@ -347,8 +347,8 @@ if __name__ == "__main__":
 
 <ul>
  <li><a href="/en-US/docs/Learn/Server-side/First_steps">Server-side website programming first steps</a></li>
- <li><a href="https://www.owasp.org/index.php/Main_Page" rel="external" title="https://www.owasp.org/index.php/Main_Page">The Open Web Application Security Project (OWASP)</a></li>
- <li><a href="http://shiflett.org/" rel="external" title="http://shiflett.org/">Chris Shiflett's blog about PHP Security</a></li>
+ <li><a href="https://www.owasp.org/index.php/Main_Page" rel="external">The Open Web Application Security Project (OWASP)</a></li>
+ <li><a href="http://shiflett.org/" rel="external">Chris Shiflett's blog about PHP Security</a></li>
 </ul>
 
 <p>{{PreviousMenuNext("Learn/HTML/Forms/The_native_form_widgets", "Learn/HTML/Forms/Form_validation", "Learn/HTML/Forms")}}</p>

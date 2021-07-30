@@ -186,20 +186,20 @@ Do this whatever happened before</pre>
 
 <h2 id="Promise_rejection_events" name="Promise_rejection_events">Promise の失敗イベント</h2>
 
-<p>Promise が失敗するたびに、グローバルスコープ(通常 {{domxref("window")}} オブジェクトか、Web Worker 内ならば <a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/Worker" title="Worker インターフェイス of the Web Workers API represents a background task that can be created via script, which can send messages back to its creator."><code>Worker</code></a> か Worker ベースのインターフェイスをもつオブジェクト)に以下の 2 つのイベントのどちらかが送られます:</p>
+<p>Promise が失敗するたびに、グローバルスコープ(通常 {{domxref("window")}} オブジェクトか、Web Worker 内ならば <a href="/ja/docs/Web/API/Worker" title="Worker インターフェイス of the Web Workers API represents a background task that can be created via script, which can send messages back to its creator."><code>Worker</code></a> か Worker ベースのインターフェイスをもつオブジェクト)に以下の 2 つのイベントのどちらかが送られます:</p>
 
 <dl>
- <dt><a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/Window/rejectionhandled_event" title="The rejectionhandled event is sent to the script's global scope (usually window but also Worker) whenever a JavaScript Promise is rejected but after the promise rejection has been handled."><code>rejectionhandled</code></a></dt>
+ <dt><a href="/ja/docs/Web/API/Window/rejectionhandled_event" title="The rejectionhandled event is sent to the script's global scope (usually window but also Worker) whenever a JavaScript Promise is rejected but after the promise rejection has been handled."><code>rejectionhandled</code></a></dt>
  <dd>Promise が失敗したとき、それが <code>reject</code> 関数などによって処理されたあとに送られる。</dd>
- <dt><a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/Window/unhandledrejection_event" title="The unhandledrejection event is sent to the global scope of a script when a JavaScript Promise that has no rejection handler is rejected; typically, this is the window, but may also be a Worker."><code>unhandledrejection</code></a></dt>
+ <dt><a href="/ja/docs/Web/API/Window/unhandledrejection_event" title="The unhandledrejection event is sent to the global scope of a script when a JavaScript Promise that has no rejection handler is rejected; typically, this is the window, but may also be a Worker."><code>unhandledrejection</code></a></dt>
  <dd>Promise が失敗して、ハンドラーが存在しないときに送られる。</dd>
 </dl>
 
-<p>いずれの場合でも、イベントオブジェクト( <a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/PromiseRejectionEvent" title="PromiseRejectionEvent インターフェイス represents events which are sent to the global script context when JavaScript Promises are rejected."><code>PromiseRejectionEvent</code></a> 型)は失敗した Promise を表す <a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/PromiseRejectionEvent/promise" title="The PromiseRejectionEvent interface's promise read-only property indicates the JavaScript Promise which was rejected. You can examine the event's PromiseRejectionEvent.reason property to learn why the promise was rejected."><code>promise</code></a> プロパティと、その Promise が失敗した理由を表す <a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/PromiseRejectionEvent/reason" title="The read-only PromiseRejection property reason read-only property is any JavaScript value or Object which provides the reason passed into Promise.reject(). This in theory provides information about why the promise was rejected."><code>reason</code></a> プロパティを持ちます。</p>
+<p>いずれの場合でも、イベントオブジェクト( <a href="/ja/docs/Web/API/PromiseRejectionEvent" title="PromiseRejectionEvent インターフェイス represents events which are sent to the global script context when JavaScript Promises are rejected."><code>PromiseRejectionEvent</code></a> 型)は失敗した Promise を表す <a href="/ja/docs/Web/API/PromiseRejectionEvent/promise" title="The PromiseRejectionEvent interface's promise read-only property indicates the JavaScript Promise which was rejected. You can examine the event's PromiseRejectionEvent.reason property to learn why the promise was rejected."><code>promise</code></a> プロパティと、その Promise が失敗した理由を表す <a href="/ja/docs/Web/API/PromiseRejectionEvent/reason" title="The read-only PromiseRejection property reason read-only property is any JavaScript value or Object which provides the reason passed into Promise.reject(). This in theory provides information about why the promise was rejected."><code>reason</code></a> プロパティを持ちます。</p>
 
 <p>これらのイベントを使えば、Promise のエラーハンドラーのフォールバックを指定することができ、また Promise を管理する際の問題をデバッグするのにも役立ちます。これらのイベントのハンドラーはコンテキストごとにグローバルであり、どこから発生したかに関わらず、すべてのエラーは同じイベントハンドラーによって処理されます。</p>
 
-<p>特に便利なケースとして、{{Glossary("Node.js")}} 用のコードを書いているときにプロジェクト内のモジュールで Promise が失敗しハンドルされないことがよくあります。これらは Node.js の実行環境によりコンソールに出力されます。これらの失敗を分析したりハンドラーを設定したいとき、あるいは単にコンソールがこれらで埋め尽くされないようにしたいとき、以下のように <a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/Window/unhandledrejection_event" title="The unhandledrejection event is sent to the global scope of a script when a JavaScript Promise that has no rejection handler is rejected; typically, this is the window, but may also be a Worker."><code>unhandledrejection</code></a> イベントのハンドラーを追加することができます。</p>
+<p>特に便利なケースとして、{{Glossary("Node.js")}} 用のコードを書いているときにプロジェクト内のモジュールで Promise が失敗しハンドルされないことがよくあります。これらは Node.js の実行環境によりコンソールに出力されます。これらの失敗を分析したりハンドラーを設定したいとき、あるいは単にコンソールがこれらで埋め尽くされないようにしたいとき、以下のように <a href="/ja/docs/Web/API/Window/unhandledrejection_event" title="The unhandledrejection event is sent to the global scope of a script when a JavaScript Promise that has no rejection handler is rejected; typically, this is the window, but may also be a Worker."><code>unhandledrejection</code></a> イベントのハンドラーを追加することができます。</p>
 
 <pre class="brush: js notranslate">window.addEventListener("unhandledrejection", event =&gt; {
   /* ここで該当の Promise を event.promise で、失敗の理由を
@@ -208,7 +208,7 @@ Do this whatever happened before</pre>
   event.preventDefault();
 }, false);</pre>
 
-<p>イベントの <a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/Event/preventDefault" title="The Event interface's preventDefault() method tells the user agent that if the event does not get explicitly handled, its default action should not be taken as it normally would be."><code>preventDefault()</code></a> メソッドを呼び出すことによって、失敗した Promise がハンドルされないときの JavaScript の実行環境のデフォルトの動作を防ぐことができます。特に Node.js がそうですが、通常はデフォルトの動作ではエラーがコンソールに出力されます。</p>
+<p>イベントの <a href="/ja/docs/Web/API/Event/preventDefault" title="The Event interface's preventDefault() method tells the user agent that if the event does not get explicitly handled, its default action should not be taken as it normally would be."><code>preventDefault()</code></a> メソッドを呼び出すことによって、失敗した Promise がハンドルされないときの JavaScript の実行環境のデフォルトの動作を防ぐことができます。特に Node.js がそうですが、通常はデフォルトの動作ではエラーがコンソールに出力されます。</p>
 
 <p>当然ながら理想的には、これらのイベントを捨てる前に失敗した Promise を調べて、いずれもコードのバグによるものではないことを確かめるべきです。</p>
 
@@ -216,7 +216,7 @@ Do this whatever happened before</pre>
 
 <p>{{jsxref("Promise")}} はコンストラクタを使って 1 から作ることもできます。これは古い API をラップする場合にのみ必要となるはずです。</p>
 
-<p>理想的には、すべての非同期関数は Promise を返すはずですが、残念ながら API の中にはいまだに古いやり方で成功/失敗用のコールバックを渡しているものがあります。典型的な例としては <a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/WindowTimers/setTimeout" title="The documentation about this has not yet been written; please consider contributing!"><code>setTimeout()</code></a> 関数があります。</p>
+<p>理想的には、すべての非同期関数は Promise を返すはずですが、残念ながら API の中にはいまだに古いやり方で成功/失敗用のコールバックを渡しているものがあります。典型的な例としては <a href="/ja/docs/Web/API/WindowTimers/setTimeout" title="The documentation about this has not yet been written; please consider contributing!"><code>setTimeout()</code></a> 関数があります。</p>
 
 <pre class="brush: js notranslate">setTimeout(() =&gt; saySomething("10 seconds passed"), 10*1000);
 </pre>
@@ -270,7 +270,7 @@ for (const f of [func1, func2, func3]) {
 
 <h2 id="Timing" name="Timing">タイミング</h2>
 
-<p>想定外の事態とならないよう、たとえすでに resolve された Promise であっても、<code><a href="https://wiki.developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code> に渡される関数が同期的に呼ばれることはありません。</p>
+<p>想定外の事態とならないよう、たとえすでに resolve された Promise であっても、<code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/then">then()</a></code> に渡される関数が同期的に呼ばれることはありません。</p>
 
 <pre class="brush: js notranslate">Promise.resolve().then(() =&gt; console.log(2));
 console.log(1); // 1, 2
@@ -341,13 +341,13 @@ doSomething().then(function(result) {
 
 <p>(イベントとコールバックのような) Promise とタスクが予知できない順序で発火するような状況に陥る場合、Promise が条件付きで作成されて Promise の状態をチェックしたり帳尻合わせしたりするマイクロタスクを利用できることがあります。</p>
 
-<p>マイクロタスクでこの問題を解決できると考えたなら、<a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/HTML_DOM_API/Microtask_guide">microtask guide</a> を見て、関数をマイクロタスクでキューに入れる <a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/WindowOrWorkerGlobalScope/queueMicrotask" title="The queueMicrotask() method, which is exposed on the Window or Worker interface, queues a microtask to be executed at a safe time prior to control returning to the browser's event loop."><code>queueMicrotask()</code></a> の使い方を学んでください。</p>
+<p>マイクロタスクでこの問題を解決できると考えたなら、<a href="/ja/docs/Web/API/HTML_DOM_API/Microtask_guide">microtask guide</a> を見て、関数をマイクロタスクでキューに入れる <a href="/ja/docs/Web/API/WindowOrWorkerGlobalScope/queueMicrotask" title="The queueMicrotask() method, which is exposed on the Window or Worker interface, queues a microtask to be executed at a safe time prior to control returning to the browser's event loop."><code>queueMicrotask()</code></a> の使い方を学んでください。</p>
 
 <h2 id="See_also" name="See_also">関連項目</h2>
 
 <ul>
  <li>{{jsxref("Promise.then()")}}</li>
- <li><a href="https://wiki.developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Statements/async_function"><code>async</code>/<code>await</code></a></li>
+ <li><a href="/ja/docs/Web/JavaScript/Reference/Statements/async_function"><code>async</code>/<code>await</code></a></li>
  <li><a href="http://promisesaplus.com/">Promises/A+ specification</a></li>
  <li><a href="https://medium.com/@ramsunvtech/promises-of-promise-part-1-53f769245a53">Venkatraman.R - JS Promise (Part 1, Basics)</a></li>
  <li><a href="https://medium.com/@ramsunvtech/js-promise-part-2-q-js-when-js-and-rsvp-js-af596232525c#.dzlqh6ski">Venkatraman.R - JS Promise (Part 2 - Using Q.js, When.js and RSVP.js)</a></li>

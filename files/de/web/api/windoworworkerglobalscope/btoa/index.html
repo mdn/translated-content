@@ -34,7 +34,7 @@ var decodedData = window.atob(encodedData); // Zeichenkette dekodieren
 
 <p>In den meisten Browsern verursacht ein Aufruf von <code>window.btoa()</code> mit einer Unicode-Zeichenkette eine "Character Out Of Range"-Exception ("Zeichen außerhalb des zulässigen Wertebereichs").</p>
 
-<p>Das kann mithilfe eines solchen Code-Schemas vermieden werden (beigesteuert von <a class="external" href="http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html" title="http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html">Johan Sundström</a>):</p>
+<p>Das kann mithilfe eines solchen Code-Schemas vermieden werden (beigesteuert von <a class="external" href="http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html">Johan Sundström</a>):</p>
 
 <pre class="brush:js">function utf8_to_b64(str) {
     return window.btoa(unescape(encodeURIComponent(str)));
