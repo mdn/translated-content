@@ -28,7 +28,7 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 
 <p>减少一个页面引用的文件数量可以降低在下载一个页面的过程中需要的<a href="https://developer.mozilla.org/en-US/docs/HTTP">HTTP</a>请求数量，从而减少这些请求的收发时间。</p>
 
-<p>根据其缓存设置，浏览器可能会为每个所引用的文件发送一个带 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Headers/If-Modified-Since">If-Modified-Since</a> 的请求给网络服务器，以查询这些文件自上次加载后是否有被修改。查询引用文件上次修改时间会花费太多时间，导致网页首屏延迟，这是因为在渲染页面之前浏览器必须确认每个文件的修改时间。</p>
+<p>根据其缓存设置，浏览器可能会为每个所引用的文件发送一个带 <a href="/zh-CN/docs/Web/HTTP/Headers/If-Modified-Since">If-Modified-Since</a> 的请求给网络服务器，以查询这些文件自上次加载后是否有被修改。查询引用文件上次修改时间会花费太多时间，导致网页首屏延迟，这是因为在渲染页面之前浏览器必须确认每个文件的修改时间。</p>
 
 <p>If you use background images a lot in your CSS, you can reduce the number of HTTP lookups needed by combining the images into one, known as an image sprite. Then you just apply the same image each time you need it for a background and adjust the x/y coordinates appropriately. This technique works best with elements that will have limited dimensions, and will not work for every use of a background image. However, the fewer HTTP requests and single image caching can help reduce page-load time.</p>
 
@@ -90,7 +90,7 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 
 <h3 id="Chunk_your_content" name="Chunk_your_content">给内容分块</h3>
 
-<p>使用 table 布局是一种不应该再采用的传统方法，而应运用 <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats">floats</a>, <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning">positioning</a>, <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox">flexbox</a>, 或 <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Grids">grids</a> 来布局。</p>
+<p>使用 table 布局是一种不应该再采用的传统方法，而应运用 <a href="/zh-CN/docs/Learn/CSS/CSS_layout/Floats">floats</a>, <a href="/zh-CN/docs/Learn/CSS/CSS_layout/Positioning">positioning</a>, <a href="/zh-CN/docs/Learn/CSS/CSS_layout/Flexbox">flexbox</a>, 或 <a href="/zh-CN/docs/Learn/CSS/CSS_layout/Grids">grids</a> 来布局。</p>
 
 <p>当然，table 仍是不失为一种有效的展示表格数据的方式。为了帮助浏览器更快速的渲染你的页面，你应该避免嵌套 table。</p>
 
@@ -110,7 +110,7 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>table</span><span class="punctuation token">&gt;</span></span>...<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>table</span><span class="punctuation token">&gt;</span></span>
 <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>table</span><span class="punctuation token">&gt;</span></span>...<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>table</span><span class="punctuation token">&gt;</span></span></code></pre>
 
-<p>可参见 <a href="https://www.w3.org/TR/css-flexbox-1/" title="https://www.w3.org/TR/css-flexbox-1/">CSS Flexible Box Layout</a> 和 <a href="https://www.w3.org/TR/css-grid-1/" title="https://www.w3.org/TR/css-grid-1/">CSS Grid Layout</a> 规范。</p>
+<p>可参见 <a href="https://www.w3.org/TR/css-flexbox-1/">CSS Flexible Box Layout</a> 和 <a href="https://www.w3.org/TR/css-grid-1/">CSS Grid Layout</a> 规范。</p>
 
 <h3 id="Minify_and_compress_SVG_assets">Minify and compress SVG assets</h3>
 
@@ -193,8 +193,8 @@ original_slug: Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages
 
 <ul>
  <li>书籍： <a href="http://www.websiteoptimization.com/">"Speed Up Your Site" by Andy King</a></li>
- <li>非常棒、讲的很全 <a class="external external-icon" href="http://developer.yahoo.com/performance/rules.html" title="http://developer.yahoo.com/performance/rules.html">Best Practices for Speeding Up Your Web Site</a> (Yahoo!)</li>
- <li>用来分析和优化的工具: <a href="https://developers.google.com/speed/pagespeed/" title="https://developers.google.com/speed/pagespeed/">Google PageSpeed Tools</a></li>
+ <li>非常棒、讲的很全 <a class="external external-icon" href="http://developer.yahoo.com/performance/rules.html">Best Practices for Speeding Up Your Web Site</a> (Yahoo!)</li>
+ <li>用来分析和优化的工具: <a href="https://developers.google.com/speed/pagespeed/">Google PageSpeed Tools</a></li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Tools/Paint_Flashing_Tool">Paint Flashing Tool</a></li>
 </ul>
 

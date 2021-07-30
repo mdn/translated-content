@@ -129,7 +129,7 @@ translation_of: Web/HTTP/Status
    <td>
     <p><span id="result_box" lang="ru"><span>"</span></span><span class="short_text" id="result_box" lang="ru"><span class="alt-edited">Множественный выбор</span></span>"<span lang="ru"><span>. </span></span>Этот код ответа присылается, когда з<span lang="ru"><span>апрос</span> <span>имеет более чем</span> <span>один из возможных</span> <span>ответов</span><span>.</span> И <span>User-agent </span><span>или</span> <span>пользователь должен</span> <span>выбрать один из ответов</span><span>. </span></span>Не существует стандартизированного способа выбора одного из полученных ответов.</p>
    </td>
-   <td>HTTP/1.0 and later</td>
+   <td>HTTP/1.0 и выше</td>
   </tr>
   <tr>
    <td id="301">301</td>
@@ -137,7 +137,7 @@ translation_of: Web/HTTP/Status
    <td>
     <p>"Перемещён на постоянной основе". Этот код ответа значит, что <span id="result_box" lang="ru"><span>URI </span><span>запрашиваемого</span> <span>ресурса</span> <span>был изменён</span><span>.</span> <span>Возможно,</span> <span>новый</span> <span>URI </span></span><span lang="ru"><span>будет </span></span>предоставлен <span lang="ru"><span>в ответе.</span></span></p>
    </td>
-   <td>HTTP/0.9 and later</td>
+   <td>HTTP/0.9 и выше</td>
   </tr>
   <tr>
    <td id="302">302</td>
@@ -145,37 +145,37 @@ translation_of: Web/HTTP/Status
    <td>
     <p>"Найдено". Этот код ответа значит, что запрошенный ресурс <em>временно изменён</em>. <span id="result_box" lang="ru"><span>Новые</span> <span>изменения в</span> <span>URI</span> <span>могут быть</span></span> доступны в <span id="result_box" lang="ru"><span>будущем</span></span>. <span id="result_box" lang="ru"><span>Таким образом,</span> этот<span> </span><span>URI,</span> <span>должен</span> <span>быть использован</span> <span>клиентом</span> <span>в</span> <span>будущих запросах</span><span>.</span></span></p>
    </td>
-   <td>HTTP/0.9 and later</td>
+   <td>HTTP/0.9 и выше</td>
   </tr>
   <tr>
    <td id="303">303</td>
    <td>See Other</td>
    <td>"Просмотр других ресурсов". Этот код ответа присылается, чтобы направлять клиента для получения запрашиваемого ресурса в другой URI с запросом GET.</td>
-   <td>HTTP/0.9 and 1.1</td>
+   <td>HTTP/0.9 и 1.1</td>
   </tr>
   <tr>
    <td id="304">304</td>
    <td>Not Modified</td>
    <td>"Не модифицировано". Используется для кеширования. Это код ответа значит, что запрошенный ресурс не был изменён. Таким образом, клиент может продолжать использовать кешированную версию ответа.</td>
-   <td>HTTP/0.9 and later</td>
+   <td>HTTP/0.9 и выше</td>
   </tr>
   <tr>
    <td id="305">305</td>
    <td>Use Proxy</td>
    <td>"Использовать прокси". Это означает, что запрошенный ресурс должен быть доступен через прокси. Этот код ответа в основном не поддерживается из соображений безопасности.</td>
-   <td>HTTP/1.1 only</td>
+   <td>Только HTTP/1.1</td>
   </tr>
   <tr>
    <td id="306">306</td>
    <td>Switch Proxy</td>
    <td>Больше не использовать. Изначально подразумевалось, что " последующие запросы должны использовать указанный прокси."</td>
-   <td>HTTP/1.1 only</td>
+   <td>Только HTTP/1.1</td>
   </tr>
   <tr>
    <td id="307">307</td>
    <td>Temporary Redirect</td>
    <td>"Временное перенаправление". Сервер отправил этот ответ, чтобы клиент получил запрошенный ресурс на другой URL-адрес с тем же методом, который использовал предыдущий запрос. Данный код имеет ту же семантику, что код ответа <code>302 Found</code>, за исключением того, что агент пользователя не должен изменять используемый метод HTTP: если в первом запросе использовался <code>POST</code>, то во втором запросе также должен использоваться <code>POST</code>.</td>
-   <td>HTTP/1.1 only</td>
+   <td>Только HTTP/1.1</td>
   </tr>
   <tr>
    <td id="308">308</td>
@@ -185,7 +185,7 @@ translation_of: Web/HTTP/Status
 
     <div class="note"><strong>Примечание:</strong> Это экспериментальный код ответа, Спецификация которого в настоящее время находится в черновом виде.</div>
    </td>
-   <td><a class="external" href="http://greenbytes.de/tech/webdav/draft-reschke-http-status-308-07.html" title="http://greenbytes.de/tech/webdav/draft-reschke-http-status-308-07.html">draft-reschke-http-status-308</a></td>
+   <td><a class="external" href="http://greenbytes.de/tech/webdav/draft-reschke-http-status-308-07.html">draft-reschke-http-status-308</a></td>
   </tr>
   <tr>
    <th colspan="4"><em>Клиентские</em></th>
@@ -194,37 +194,37 @@ translation_of: Web/HTTP/Status
    <td id="400">400</td>
    <td>Bad Request</td>
    <td>"Плохой запрос". Этот ответ означает, что сервер не понимает запрос из-за неверного синтаксиса. </td>
-   <td>HTTP/0.9 and later</td>
+   <td>HTTP/0.9 и выше</td>
   </tr>
   <tr>
    <td id="401">401</td>
    <td>Unauthorized</td>
    <td>"Неавторизованно". Для получения запрашиваемого ответа нужна аутентификация. Статус похож на статус 403, но,в этом случае, аутентификация возможна. </td>
-   <td>HTTP/0.9 and later</td>
+   <td>HTTP/0.9 и выше</td>
   </tr>
   <tr>
    <td id="402">402</td>
    <td>Payment Required</td>
    <td>"Необходима оплата". Этот код ответа зарезервирован для будущего использования. Первоначальная цель для создания этого когда была в использовании его для цифровых платёжных систем(на данный момент не используется).</td>
-   <td>HTTP/0.9 and 1.1</td>
+   <td>HTTP/0.9 и 1.1</td>
   </tr>
   <tr>
    <td id="403">403</td>
    <td>Forbidden</td>
    <td>"Запрещено". У клиента нет прав доступа к содержимому, поэтому сервер отказывается дать надлежащий ответ. </td>
-   <td>HTTP/0.9 and later</td>
+   <td>HTTP/0.9 и выше</td>
   </tr>
   <tr>
    <td id="404">404</td>
    <td>Not Found</td>
    <td>"Не найден". Сервер не может найти запрашиваемый ресурс. Код этого ответа, наверно, самый известный из-за частоты его появления в вебе. </td>
-   <td>HTTP/0.9 and later</td>
+   <td>HTTP/0.9 и выше</td>
   </tr>
   <tr>
    <td id="405">405</td>
    <td>Method Not Allowed</td>
    <td>"Метод не разрешён". Сервер знает о запрашиваемом методе, но он был деактивирован и не может быть использован. Два обязательных метода,  <code>GET</code> и <code>HEAD</code>,  никогда не должны быть деактивированы и не должны возвращать этот код ошибки.</td>
-   <td>HTTP/1.1 only</td>
+   <td>Только HTTP/1.1</td>
   </tr>
   <tr>
    <td id="406">406</td>
@@ -232,19 +232,19 @@ translation_of: Web/HTTP/Status
    <td>
     <p>Этот ответ отсылается, когда веб сервер после выполнения <a href="/en/HTTP/Content_negotiation#Server-driven_negotiation" title="https://developer.mozilla.org/en/HTTP/Content_negotiation#Server-driven_negotiation">server-driven content negotiation</a>, не нашёл контента, отвечающего критериям, полученным из user agent.</p>
    </td>
-   <td>HTTP/1.1 only</td>
+   <td>Только HTTP/1.1</td>
   </tr>
   <tr>
    <td id="407">407</td>
    <td>Proxy Authentication Required</td>
    <td>Этот код ответа аналогичен коду 401, только аутентификация требуется для прокси сервера.</td>
-   <td>HTTP/1.1 only</td>
+   <td>Только HTTP/1.1</td>
   </tr>
   <tr>
    <td id="408">408</td>
    <td>Request Timeout</td>
-   <td>Ответ с таким кодом может прийти, даже без предшествующего запроса. Он означает, что сервер хотел бы отключить это неиспользуемое соединение. Этот метод используется все чаще с тех пор, как некоторые браузеры, вроде Chrome и IE9, стали использовать <a class="external" href="http://www.belshe.com/2011/02/10/the-era-of-browser-preconnect/" title="http://www.belshe.com/2011/02/10/the-era-of-browser-preconnect/">HTTP механизмы предварительного соединения</a> для ускорения сёрфинга  (смотрите {{ bug(634278) }}, будущей реализации этого механизма в Firefox). Также учитывайте, что некоторые серверы прерывают соединения не отправляя подобных сообщений.</td>
-   <td>HTTP/1.1 only</td>
+   <td>Ответ с таким кодом может прийти, даже без предшествующего запроса. Он означает, что сервер хотел бы отключить это неиспользуемое соединение. Этот метод используется все чаще с тех пор, как некоторые браузеры, вроде Chrome и IE9, стали использовать <a class="external" href="http://www.belshe.com/2011/02/10/the-era-of-browser-preconnect/">HTTP механизмы предварительного соединения</a> для ускорения сёрфинга  (смотрите {{ bug(634278) }}, будущей реализации этого механизма в Firefox). Также учитывайте, что некоторые серверы прерывают соединения не отправляя подобных сообщений.</td>
+   <td>Только HTTP/1.1</td>
   </tr>
   <tr>
    <td id="409">409</td>
@@ -252,7 +252,7 @@ translation_of: Web/HTTP/Status
    <td>
     <p>Этот ответ отсылается, когда запрос конфликтует с текущим состоянием сервера.</p>
    </td>
-   <td>HTTP/1.1 only</td>
+   <td>Только HTTP/1.1</td>
   </tr>
   <tr>
    <td id="410">410</td>
@@ -260,7 +260,7 @@ translation_of: Web/HTTP/Status
    <td>
     <p>Этот ответ отсылается, когда запрашиваемый контент удалён с сервера.</p>
    </td>
-   <td>HTTP/1.1 only</td>
+   <td>Только HTTP/1.1</td>
   </tr>
   <tr>
    <td id="411">411</td>
@@ -268,13 +268,13 @@ translation_of: Web/HTTP/Status
    <td>
     <p>Запрос отклонён, потому что сервер требует указание заголовка <code>Content-Length</code>, но он не указан.</p>
    </td>
-   <td>HTTP/1.1 only</td>
+   <td>Только HTTP/1.1</td>
   </tr>
   <tr>
    <td id="412">412</td>
    <td>Precondition Failed</td>
    <td>Клиент указал в своих заголовках условия, которые сервер не может выполнить</td>
-   <td>HTTP/1.1 only</td>
+   <td>Только HTTP/1.1</td>
   </tr>
   <tr>
    <td id="413">413</td>
@@ -282,31 +282,31 @@ translation_of: Web/HTTP/Status
    <td>
     <p>Размер запроса превышает лимит, объявленный сервером. Сервер может закрыть соединение, вернув заголовок <code>Retry-After</code></p>
    </td>
-   <td>HTTP/1.1 only</td>
+   <td>Только HTTP/1.1</td>
   </tr>
   <tr>
    <td id="414">414</td>
    <td>Request-URI Too Long</td>
    <td>URI запрашиваемый клиентом слишком длинный для того, чтобы сервер смог его обработать</td>
-   <td>HTTP/1.1 only</td>
+   <td>Только HTTP/1.1</td>
   </tr>
   <tr>
    <td id="415">415</td>
    <td>Unsupported Media Type</td>
    <td>Медиа формат запрашиваемых данных не поддерживается сервером, поэтому запрос отклонён</td>
-   <td>HTTP/1.1 only</td>
+   <td>Только HTTP/1.1</td>
   </tr>
   <tr>
    <td id="416">416</td>
    <td>Requested Range Not Satisfiable</td>
    <td>Диапазон указанный заголовком запроса <code>Range</code> не может быть выполнен; возможно, он выходит за пределы переданного URI</td>
-   <td>HTTP/1.1 only</td>
+   <td>Только HTTP/1.1</td>
   </tr>
   <tr>
    <td id="417">417</td>
    <td>Expectation Failed</td>
    <td>Этот код ответа означает, что ожидание, полученное из заголовка запроса <code>Expect</code>, не может быть выполнено сервером.</td>
-   <td>HTTP/1.1 only</td>
+   <td>Только HTTP/1.1</td>
   </tr>
   <tr>
    <th colspan="4"><em>Серверные</em></th>
@@ -315,37 +315,37 @@ translation_of: Web/HTTP/Status
    <td id="500">500</td>
    <td>Internal Server Error</td>
    <td>"Внутренняя ошибка сервера". Сервер столкнулся с ситуацией, которую он не знает как обработать. </td>
-   <td>HTTP/0.9 and later</td>
+   <td>HTTP/0.9 и выше</td>
   </tr>
   <tr>
    <td id="501">501</td>
    <td>Not Implemented</td>
    <td>"Не выполнено". Метод запроса не поддерживается сервером и не может быть обработан. Единственные методы, которые сервера должны поддерживать (и, соответственно, не должны возвращать этот код) -  <code>GET</code> и <code>HEAD</code>.</td>
-   <td>HTTP/0.9 and later</td>
+   <td>HTTP/0.9 и выше</td>
   </tr>
   <tr>
    <td id="502">502</td>
    <td>Bad Gateway</td>
    <td>"Плохой шлюз". Эта ошибка означает что сервер, во время работы в качестве шлюза для получения ответа, нужного для обработки запроса, получил недействительный (недопустимый) ответ. </td>
-   <td>HTTP/0.9 and later</td>
+   <td>HTTP/0.9 и выше</td>
   </tr>
   <tr>
    <td id="503">503</td>
    <td>Service Unavailable</td>
    <td>"Сервис недоступен". Сервер не готов обрабатывать запрос. Зачастую причинами являются отключение сервера или то, что он перегружен. Обратите внимание, что вместе с этим ответом удобная для пользователей(user-friendly) страница должна отправлять объяснение проблемы.  Этот ответ должен использоваться для временных условий и <code>Retry-After:</code> HTTP-заголовок должен, если возможно, содержать  предполагаемое время до восстановления сервиса. Веб-мастер также должен позаботиться о заголовках, связанных с кешем, которые отправляются вместе с этим ответом, так как эти ответы, связанные с временными условиями, обычно не должны кешироваться. </td>
-   <td>HTTP/0.9 and later</td>
+   <td>HTTP/0.9 и выше</td>
   </tr>
   <tr>
    <td id="504">504</td>
    <td>Gateway Timeout</td>
    <td>Этот ответ об ошибке предоставляется, когда сервер действует как шлюз и не может получить ответ вовремя.</td>
-   <td>HTTP/1.1 only</td>
+   <td>Только HTTP/1.1</td>
   </tr>
   <tr>
    <td id="505">505</td>
    <td>HTTP Version Not Supported</td>
    <td>"HTTP-версия не поддерживается". HTTP-версия, используемая в запросе, не поддерживается сервером.</td>
-   <td>HTTP/1.1 only</td>
+   <td>Только HTTP/1.1</td>
   </tr>
  </tbody>
 </table>

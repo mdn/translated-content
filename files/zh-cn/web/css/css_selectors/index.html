@@ -24,23 +24,23 @@ translation_of: Web/CSS/CSS_Selectors
 <h2 id="基本选择器">基本选择器</h2>
 
 <dl>
- <dt><a href="/zh-CN/docs/Web/CSS/Universal_selectors">通用选择器</a>（<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors">Universal selector</a>）</dt>
+ <dt><a href="/zh-CN/docs/Web/CSS/Universal_selectors">通用选择器</a>（<a href="/zh-CN/docs/Web/CSS/Universal_selectors">Universal selector</a>）</dt>
  <dd>选择所有元素。（可选）可以将其限制为特定的名称空间或所有名称空间。<br>
  <strong>语法：</strong><code>*</code> <code><var>ns</var>|*</code> <code>*|*</code><br>
  <strong>例子：</strong><code>*</code> 将匹配文档的所有元素。</dd>
- <dt><a href="/zh-CN/docs/Web/CSS/Type_selectors">元素选择器</a>（<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/Type_selectors">Type selector</a>）</dt>
+ <dt><a href="/zh-CN/docs/Web/CSS/Type_selectors">元素选择器</a>（<a href="/zh-CN/docs/Web/CSS/Type_selectors">Type selector</a>）</dt>
  <dd>按照给定的节点名称，选择所有匹配的元素。<br>
  <strong>语法：</strong><code><var>elementname</var></code><br>
  <strong>例子：</strong><code>input</code> 匹配任何 {{HTMLElement( "input" )}} 元素。</dd>
- <dt><a href="/zh-CN/docs/Web/CSS/Class_selectors">类选择器</a>（<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/Class_selectors">Class selector</a>）</dt>
+ <dt><a href="/zh-CN/docs/Web/CSS/Class_selectors">类选择器</a>（<a href="/zh-CN/docs/Web/CSS/Class_selectors">Class selector</a>）</dt>
  <dd>按照给定的 <code>class</code> 属性的值，选择所有匹配的元素。<br>
  <strong>语法</strong>：<code>.<var>classname</var></code><br>
  <strong>例子</strong>：<code>.index</code> 匹配任何 <code>class</code> 属性中含有 "index" 类的元素。</dd>
- <dt><a href="/zh-CN/docs/Web/CSS/ID_selectors">ID 选择器</a>（<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/ID_selectors">ID selector</a>）</dt>
+ <dt><a href="/zh-CN/docs/Web/CSS/ID_selectors">ID 选择器</a>（<a href="/zh-CN/docs/Web/CSS/ID_selectors">ID selector</a>）</dt>
  <dd>按照 <code>id</code> 属性选择一个与之匹配的元素。需要注意的是，一个文档中，每个 ID 属性都应当是唯一的。<br>
  <strong>语法：</strong><code>#<var>idname</var></code><br>
  <strong>例子：</strong><code>#toc</code> 匹配 ID 为 "toc" 的元素。</dd>
- <dt><a href="/zh-CN/docs/Web/CSS/Attribute_selectors">属性选择器</a>（<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors">Attribute selector</a>）</dt>
+ <dt><a href="/zh-CN/docs/Web/CSS/Attribute_selectors">属性选择器</a>（<a href="/zh-CN/docs/Web/CSS/Attribute_selectors">Attribute selector</a>）</dt>
  <dd>按照给定的属性，选择所有匹配的元素。<br>
  <strong>语法：</strong><code>[<var>attr</var>]</code> <code>[<var>attr</var>=<var>value</var>]</code> <code>[<var>attr</var>~=<var>value</var>]</code> <code>[<var>attr</var>|=<var>value</var>]</code> <code>[<var>attr</var>^=<var>value</var>]</code> <code>[<var>attr</var>$=<var>value</var>]</code> <code>[<var>attr</var>*=<var>value</var>]</code><br>
  <strong>例子：</strong><code>[autoplay]</code> 选择所有具有 <code>autoplay</code> 属性的元素（不论这个属性的值是什么）。</dd>
@@ -49,7 +49,7 @@ translation_of: Web/CSS/CSS_Selectors
 <h2 id="分组选择器（Grouping_selectors）">分组选择器（Grouping selectors）</h2>
 
 <dl>
- <dt><a href="/zh-CN/docs/Web/CSS/Selector_list">选择器列表</a>（<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/Selector_list">Selector list</a>）</dt>
+ <dt><a href="/zh-CN/docs/Web/CSS/Selector_list">选择器列表</a>（<a href="/zh-CN/docs/Web/CSS/Selector_list">Selector list</a>）</dt>
  <dd><code>,</code> 是将不同的选择器组合在一起的方法，它选择所有能被列表中的任意一个选择器选中的节点。<br>
  <strong>语法</strong>：<code style="white-space: nowrap;"><var>A</var>, <var>B</var></code><br>
  <strong>示例</strong>：<code>div, span</code> 会同时匹配 {{HTMLElement("span")}} 元素和 {{HTMLElement("div")}} 元素。</dd>
@@ -58,19 +58,19 @@ translation_of: Web/CSS/CSS_Selectors
 <h2 id="组合器（Combinators）">组合器（Combinators）</h2>
 
 <dl>
- <dt><a href="/zh-CN/docs/Web/CSS/Descendant_selectors">后代组合器</a>（<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/Descendant_combinator">Descendant combinator</a>）</dt>
+ <dt><a href="/zh-CN/docs/Web/CSS/Descendant_selectors">后代组合器</a>（<a href="/zh-CN/docs/Web/CSS/Descendant_combinator">Descendant combinator</a>）</dt>
  <dd><code> </code>（空格）组合器选择前一个元素的后代节点。<br>
  <strong>语法：</strong><code style="white-space: nowrap;"><var>A</var> <var>B</var></code><br>
  <strong>例子：</strong><code>div span</code> 匹配所有位于任意 {{HTMLElement("div")}} 元素之内的 {{HTMLElement("span")}} 元素。</dd>
- <dt><a href="/zh-CN/docs/Web/CSS/Child_selectors">直接子代组合器</a>（<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator">Child combinator</a>）</dt>
+ <dt><a href="/zh-CN/docs/Web/CSS/Child_selectors">直接子代组合器</a>（<a href="/zh-CN/docs/Web/CSS/Child_combinator">Child combinator</a>）</dt>
  <dd><code>&gt;</code> 组合器选择前一个元素的直接子代的节点。<br>
  <strong>语法</strong>：<code><var>A</var> &gt; <var>B</var></code><br>
  <strong>例子</strong>：<code>ul &gt; li</code> 匹配直接嵌套在 {{HTMLElement("ul")}} 元素内的所有 {{HTMLElement("li")}} 元素。</dd>
- <dt><a href="/zh-CN/docs/Web/CSS/General_sibling_selectors">一般兄弟组合器</a>（<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/General_sibling_combinator">General sibling combinator</a>）</dt>
+ <dt><a href="/zh-CN/docs/Web/CSS/General_sibling_selectors">一般兄弟组合器</a>（<a href="/zh-CN/docs/Web/CSS/General_sibling_combinator">General sibling combinator</a>）</dt>
  <dd><code>~</code> 组合器选择兄弟元素，也就是说，后一个节点在前一个节点后面的任意位置，并且共享同一个父节点。<br>
  <strong>语法</strong>：<code><var>A</var> ~ <var>B</var></code><br>
  <strong>例子</strong>：<code>p ~ span</code> 匹配同一父元素下，{{HTMLElement("p")}} 元素后的所有 {{HTMLElement("span")}} 元素。</dd>
- <dt><a href="/zh-CN/docs/Web/CSS/Adjacent_sibling_selectors">紧邻兄弟组合器</a>（<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/Adjacent_sibling_combinator">Adjacent sibling combinator</a>）</dt>
+ <dt><a href="/zh-CN/docs/Web/CSS/Adjacent_sibling_selectors">紧邻兄弟组合器</a>（<a href="/zh-CN/docs/Web/CSS/Adjacent_sibling_combinator">Adjacent sibling combinator</a>）</dt>
  <dd><code>+</code> 组合器选择相邻元素，即后一个元素紧跟在前一个之后，并且共享同一个父节点。<br>
  <strong>语法：</strong><code><var>A</var> + <var>B</var></code><br>
  <strong>例子：</strong><code>h2 + p</code> 会匹配所有紧邻在 {{HTMLElement("h2")}} 元素后的 {{HTMLElement("p")}} 元素。</dd>

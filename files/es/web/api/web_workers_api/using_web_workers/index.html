@@ -293,13 +293,13 @@ for (var i = 0; i &lt; uInt8Array.length; ++i) {
 worker.postMessage(uInt8Array.buffer, [uInt8Array.buffer]);
 </pre>
 
-<p>Para más información sobre los objetos transferibles, <a class="external" href="http://updates.html5rocks.com/2011/12/Transferable-Objects-Lightning-Fast" title="http://updates.html5rocks.com/2011/12/Transferable-Objects-Lightning-Fast">visita HTML5Rocks</a> .</p>
+<p>Para más información sobre los objetos transferibles, <a class="external" href="http://updates.html5rocks.com/2011/12/Transferable-Objects-Lightning-Fast">visita HTML5Rocks</a> .</p>
 
 <h2 id="Spawning_subworkers">Spawning subworkers</h2>
 
 <p>Workers may spawn more workers if they wish.  So-called subworkers must be hosted within the same origin as the parent page.  Also, the URIs for subworkers are resolved relative to the parent worker's location rather than that of the owning page.  This makes it easier for workers to keep track of where their dependencies are.</p>
 
-<p>Subworkers are currently not supported in Chrome. See <a class="external" href="http://code.google.com/p/chromium/issues/detail?id=31666" title="http://code.google.com/p/chromium/issues/detail?id=31666">crbug.com/31666</a> .</p>
+<p>Subworkers are currently not supported in Chrome. See <a class="external" href="http://code.google.com/p/chromium/issues/detail?id=31666">crbug.com/31666</a> .</p>
 
 <h2 id="Embedded_workers">Embedded workers</h2>
 
@@ -549,7 +549,7 @@ onmessage = function(event) {
    <td>{{CompatSafari(5.1)}}</td>
   </tr>
   <tr>
-   <td>Passing data using  <a class="external" href="http://www.w3.org/html/wg/drafts/html/master/infrastructure.html#transferable-objects" title="http://dev.w3.org/html5/spec/common-dom-interfaces.html#transferable-objects">transferable objects</a></td>
+   <td>Passing data using  <a class="external" href="http://www.w3.org/html/wg/drafts/html/master/infrastructure.html#transferable-objects">transferable objects</a></td>
    <td>17 {{ property_prefix("webkit") }}<br>
     {{CompatChrome(21)}}</td>
    <td>{{CompatGeckoDesktop(18)}}</td>
@@ -610,7 +610,7 @@ onmessage = function(event) {
    <td>---</td>
   </tr>
   <tr>
-   <td>Passing data using  <a class="external" href="http://www.w3.org/html/wg/drafts/html/master/infrastructure.html#transferable-objectshtml#transferable-objects" title="http://dev.w3.org/html5/spec/common-dom-interfaces.html#transferable-objects">transferable objects</a></td>
+   <td>Passing data using  <a class="external" href="http://www.w3.org/html/wg/drafts/html/master/infrastructure.html#transferable-objectshtml#transferable-objects">transferable objects</a></td>
    <td>---</td>
    <td></td>
    <td>18</td>
@@ -629,6 +629,6 @@ onmessage = function(event) {
  <li><code><a class="internal" href="/en/DOM/Worker" title="En/DOM/Worker">Worker</a></code> interface</li>
  <li><code><a class="internal" href="/en/DOM/SharedWorker" title="En/DOM/SharedWorker">SharedWorker</a></code> interface</li>
  <li><a href="/en/DOM/Worker/Functions_available_to_workers" title="En/DOM/Worker/Functions available to workers">Functions available to workers</a></li>
- <li><a class="external" href="http://www.html5rocks.com/en/tutorials/workers/basics/#toc-enviornment-subworkers" title="http://www.html5rocks.com/en/tutorials/workers/basics/#toc-enviornment-subworkers">HTML5Rocks - The Basics of Web Workers</a></li>
+ <li><a class="external" href="http://www.html5rocks.com/en/tutorials/workers/basics/#toc-enviornment-subworkers">HTML5Rocks - The Basics of Web Workers</a></li>
  <li><a class="external" href="http://code.google.com/p/chromium/issues/detail?id=127990" title="Chrome has Problems with many workers">Chrome has problems when using too many worker</a></li>
 </ul>
