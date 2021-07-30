@@ -4273,7 +4273,6 @@
 /ja/docs/Web/Compatibility_FAQ/Underline_Color_Diffrence.html	/ja/docs/orphaned/Web/Compatibility_FAQ/Underline_Color_Diffrence.html
 /ja/docs/Web/Events/Activate	/ja/docs/Web/API/Element/DOMActivate_event
 /ja/docs/Web/Events/DOMContentLoaded	/ja/docs/Web/API/Window/DOMContentLoaded_event
-/ja/docs/Web/Events/Index	/ja/docs/orphaned/Web/Events/Index
 /ja/docs/Web/Events/abort	/ja/docs/Web/API/HTMLMediaElement/abort_event
 /ja/docs/Web/Events/abort_(ProgressEvent)	/ja/docs/Web/API/XMLHttpRequest/abort_event
 /ja/docs/Web/Events/audiostart	/ja/docs/Web/API/SpeechRecognition/audiostart_event
