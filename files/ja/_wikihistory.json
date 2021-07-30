@@ -16319,6 +16319,20 @@
       "Wind1808"
     ]
   },
+  "Web/API/HTMLElement/style": {
+    "modified": "2020-10-15T21:16:29.287Z",
+    "contributors": [
+      "mfuji09",
+      "mikimhk",
+      "Uemmra3",
+      "momdo",
+      "fscholz",
+      "jsx",
+      "Shoot",
+      "Marsf",
+      "Okome"
+    ]
+  },
   "Web/API/HTMLElement/title": {
     "modified": "2020-10-15T21:19:51.638Z",
     "contributors": [
@@ -51146,26 +51160,6 @@
       "dskmori",
       "keeponbeat",
       "mikamikuh"
-    ]
-  },
-  "orphaned/Web/API/ElementCSSInlineStyle": {
-    "modified": "2020-10-15T22:32:46.972Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "orphaned/Web/API/ElementCSSInlineStyle/style": {
-    "modified": "2020-10-15T21:16:29.287Z",
-    "contributors": [
-      "mfuji09",
-      "mikimhk",
-      "Uemmra3",
-      "momdo",
-      "fscholz",
-      "jsx",
-      "Shoot",
-      "Marsf",
-      "Okome"
     ]
   },
   "orphaned/Web/API/HTMLElement/forceSpellCheck": {

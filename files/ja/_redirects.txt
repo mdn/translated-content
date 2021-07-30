@@ -1466,7 +1466,7 @@
 /ja/docs/DOM/element.setAttributeNS	/ja/docs/Web/API/Element/setAttributeNS
 /ja/docs/DOM/element.setAttributeNode	/ja/docs/Web/API/Element/setAttributeNode
 /ja/docs/DOM/element.setAttributeNodeNS	/ja/docs/Web/API/Element/setAttributeNodeNS
-/ja/docs/DOM/element.style	/ja/docs/orphaned/Web/API/ElementCSSInlineStyle/style
+/ja/docs/DOM/element.style	/ja/docs/Web/API/HTMLElement/style
 /ja/docs/DOM/element.tabIndex	/ja/docs/orphaned/Web/API/HTMLOrForeignElement/tabIndex
 /ja/docs/DOM/element.tagName	/ja/docs/Web/API/Element/tagName
 /ja/docs/DOM/element.title	/ja/docs/Web/API/HTMLElement/title
@@ -1748,7 +1748,7 @@
 /ja/docs/DOM:element.setAttributeNS	/ja/docs/Web/API/Element/setAttributeNS
 /ja/docs/DOM:element.setAttributeNode	/ja/docs/Web/API/Element/setAttributeNode
 /ja/docs/DOM:element.setAttributeNodeNS	/ja/docs/Web/API/Element/setAttributeNodeNS
-/ja/docs/DOM:element.style	/ja/docs/orphaned/Web/API/ElementCSSInlineStyle/style
+/ja/docs/DOM:element.style	/ja/docs/Web/API/HTMLElement/style
 /ja/docs/DOM:element.tagName	/ja/docs/Web/API/Element/tagName
 /ja/docs/DOM:event	/ja/docs/Web/API/Event
 /ja/docs/DOM:event.altKey	/ja/docs/Web/API/MouseEvent/altKey
@@ -3548,8 +3548,6 @@
 /ja/docs/Web/API/Element/accessKey	/ja/docs/Web/API/HTMLElement/accessKey
 /ja/docs/Web/API/Element/currentStyle	/ja/docs/orphaned/Web/API/Element/currentStyle
 /ja/docs/Web/API/Element/name	/ja/docs/conflicting/Web/API
-/ja/docs/Web/API/ElementCSSInlineStyle	/ja/docs/orphaned/Web/API/ElementCSSInlineStyle
-/ja/docs/Web/API/ElementCSSInlineStyle/style	/ja/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /ja/docs/Web/API/Event/button	/ja/docs/conflicting/Web/API/MouseEvent/button
 /ja/docs/Web/API/Event/createEvent	/ja/docs/Web/API/Document/createEvent
 /ja/docs/Web/API/EventHandler	/ja/docs/orphaned/Web/Guide/Events/Event_handlers
@@ -3577,7 +3575,6 @@
 /ja/docs/Web/API/HTMLElement/focus	/ja/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /ja/docs/Web/API/HTMLElement/forceSpellCheck	/ja/docs/orphaned/Web/API/HTMLElement/forceSpellCheck
 /ja/docs/Web/API/HTMLElement/nonce	/ja/docs/orphaned/Web/API/HTMLOrForeignElement/nonce
-/ja/docs/Web/API/HTMLElement/style	/ja/docs/orphaned/Web/API/ElementCSSInlineStyle/style
 /ja/docs/Web/API/HTMLElement/tabIndex	/ja/docs/orphaned/Web/API/HTMLOrForeignElement/tabIndex
 /ja/docs/Web/API/HTMLFormElement.acceptCharset	/ja/docs/Web/API/HTMLFormElement/acceptCharset
 /ja/docs/Web/API/HTMLFormElement.action	/ja/docs/Web/API/HTMLFormElement/action
