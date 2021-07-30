@@ -1400,7 +1400,7 @@
 /ja/docs/DOM/element.appendChild	/ja/docs/Web/API/Node/appendChild
 /ja/docs/DOM/element.attributes	/ja/docs/Web/API/Element/attributes
 /ja/docs/DOM/element.baseURIObject	/ja/docs/Web/API/Node
-/ja/docs/DOM/element.blur	/ja/docs/orphaned/Web/API/HTMLOrForeignElement/blur
+/ja/docs/DOM/element.blur	/ja/docs/Web/API/HTMLElement/blur
 /ja/docs/DOM/element.childNodes	/ja/docs/Web/API/Node/childNodes
 /ja/docs/DOM/element.classList	/ja/docs/Web/API/Element/classList
 /ja/docs/DOM/element.className	/ja/docs/Web/API/Element/className
@@ -1413,7 +1413,7 @@
 /ja/docs/DOM/element.dir	/ja/docs/Web/API/HTMLElement/dir
 /ja/docs/DOM/element.dispatchEvent	/ja/docs/Web/API/EventTarget/dispatchEvent
 /ja/docs/DOM/element.firstChild	/ja/docs/Web/API/Node/firstChild
-/ja/docs/DOM/element.focus	/ja/docs/orphaned/Web/API/HTMLOrForeignElement/focus
+/ja/docs/DOM/element.focus	/ja/docs/Web/API/HTMLElement/focus
 /ja/docs/DOM/element.getAttribute	/ja/docs/Web/API/Element/getAttribute
 /ja/docs/DOM/element.getAttributeNS	/ja/docs/Web/API/Element/getAttributeNS
 /ja/docs/DOM/element.getAttributeNode	/ja/docs/Web/API/Element/getAttributeNode
@@ -1467,7 +1467,7 @@
 /ja/docs/DOM/element.setAttributeNode	/ja/docs/Web/API/Element/setAttributeNode
 /ja/docs/DOM/element.setAttributeNodeNS	/ja/docs/Web/API/Element/setAttributeNodeNS
 /ja/docs/DOM/element.style	/ja/docs/Web/API/HTMLElement/style
-/ja/docs/DOM/element.tabIndex	/ja/docs/orphaned/Web/API/HTMLOrForeignElement/tabIndex
+/ja/docs/DOM/element.tabIndex	/ja/docs/Web/API/HTMLElement/tabIndex
 /ja/docs/DOM/element.tagName	/ja/docs/Web/API/Element/tagName
 /ja/docs/DOM/element.title	/ja/docs/Web/API/HTMLElement/title
 /ja/docs/DOM/event	/ja/docs/Web/API/Event
@@ -3570,12 +3570,7 @@
 /ja/docs/Web/API/Geolocation/Using_geolocation	/ja/docs/Web/API/Geolocation_API
 /ja/docs/Web/API/GlobalFetch	/en-US/docs/Web/API/WindowOrWorkerGlobalScope
 /ja/docs/Web/API/GlobalFetch/fetch	/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch
-/ja/docs/Web/API/HTMLElement/blur	/ja/docs/orphaned/Web/API/HTMLOrForeignElement/blur
-/ja/docs/Web/API/HTMLElement/dataset	/ja/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
-/ja/docs/Web/API/HTMLElement/focus	/ja/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /ja/docs/Web/API/HTMLElement/forceSpellCheck	/ja/docs/orphaned/Web/API/HTMLElement/forceSpellCheck
-/ja/docs/Web/API/HTMLElement/nonce	/ja/docs/orphaned/Web/API/HTMLOrForeignElement/nonce
-/ja/docs/Web/API/HTMLElement/tabIndex	/ja/docs/orphaned/Web/API/HTMLOrForeignElement/tabIndex
 /ja/docs/Web/API/HTMLFormElement.acceptCharset	/ja/docs/Web/API/HTMLFormElement/acceptCharset
 /ja/docs/Web/API/HTMLFormElement.action	/ja/docs/Web/API/HTMLFormElement/action
 /ja/docs/Web/API/HTMLFormElement.elements	/ja/docs/Web/API/HTMLFormElement/elements
@@ -3600,12 +3595,7 @@
 /ja/docs/Web/API/HTMLHyperlinkElementUtils/search	/ja/docs/Web/API/HTMLAnchorElement/search
 /ja/docs/Web/API/HTMLHyperlinkElementUtils/toString	/ja/docs/Web/API/HTMLAnchorElement/toString
 /ja/docs/Web/API/HTMLHyperlinkElementUtils/username	/ja/docs/Web/API/HTMLAnchorElement/username
-/ja/docs/Web/API/HTMLOrForeignElement	/ja/docs/orphaned/Web/API/HTMLOrForeignElement
-/ja/docs/Web/API/HTMLOrForeignElement/blur	/ja/docs/orphaned/Web/API/HTMLOrForeignElement/blur
-/ja/docs/Web/API/HTMLOrForeignElement/dataset	/ja/docs/orphaned/Web/API/HTMLOrForeignElement/dataset
-/ja/docs/Web/API/HTMLOrForeignElement/focus	/ja/docs/orphaned/Web/API/HTMLOrForeignElement/focus
-/ja/docs/Web/API/HTMLOrForeignElement/nonce	/ja/docs/orphaned/Web/API/HTMLOrForeignElement/nonce
-/ja/docs/Web/API/HTMLOrForeignElement/tabIndex	/ja/docs/orphaned/Web/API/HTMLOrForeignElement/tabIndex
+/ja/docs/Web/API/HTMLOrForeignElement	/ja/docs/Web/API/HTMLElement
 /ja/docs/Web/API/HTMLTableElement.align	/ja/docs/Web/API/HTMLTableElement/align
 /ja/docs/Web/API/HTMLTableElement.bgColor	/ja/docs/Web/API/HTMLTableElement/bgColor
 /ja/docs/Web/API/HTMLTableElement.border	/ja/docs/Web/API/HTMLTableElement/border
@@ -3882,11 +3872,11 @@
 /ja/docs/Web/API/document.write	/ja/docs/Web/API/Document/write
 /ja/docs/Web/API/document.writeln	/ja/docs/Web/API/Document/writeln
 /ja/docs/Web/API/document.xmlVersion	/ja/docs/Web/API/Document/xmlVersion
-/ja/docs/Web/API/element.blur	/ja/docs/orphaned/Web/API/HTMLOrForeignElement/blur
+/ja/docs/Web/API/element.blur	/ja/docs/Web/API/HTMLElement/blur
 /ja/docs/Web/API/element.className	/ja/docs/Web/API/Element/className
 /ja/docs/Web/API/element.clientTop	/ja/docs/Web/API/Element/clientTop
 /ja/docs/Web/API/element.dir	/ja/docs/Web/API/HTMLElement/dir
-/ja/docs/Web/API/element.focus	/ja/docs/orphaned/Web/API/HTMLOrForeignElement/focus
+/ja/docs/Web/API/element.focus	/ja/docs/Web/API/HTMLElement/focus
 /ja/docs/Web/API/element.getAttribute	/ja/docs/Web/API/Element/getAttribute
 /ja/docs/Web/API/element.getBoundingClientRect	/ja/docs/Web/API/Element/getBoundingClientRect
 /ja/docs/Web/API/element.hasAttribute	/ja/docs/Web/API/Element/hasAttribute

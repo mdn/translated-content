@@ -1,11 +1,11 @@
 ---
-title: HTMLOrForeignElement.dataset
-slug: orphaned/Web/API/HTMLOrForeignElement/dataset
+title: HTMLElement.dataset
+slug: Web/API/HTMLElement/dataset
 tags:
   - API
   - HTML DOM
   - HTMLElement
-  - HTMLOrForeignElement
+  - HTMLElement
   - Property
   - Read-only
   - Reference
@@ -16,12 +16,11 @@ tags:
   - dataset
   - プロパティ
   - 読取専用
-translation_of: Web/API/HTMLOrForeignElement/dataset
-original_slug: Web/API/HTMLOrForeignElement/dataset
+translation_of: Web/API/HTMLElement/dataset
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary"><strong><code>dataset</code></strong> は {{DOMxRef("HTMLOrForeignElement")}} インターフェイスのプロパティで、要素に設定されたすべての<a href="/ja/docs/Web/HTML/Global_attributes#attr-data-*">カスタムデータ属性</a> (<code>data-*</code>) への読み取り/書き込みアクセスを提供します。</span> このアクセスは、 HTML と DOM の両方の中で利用できます。これは {{domxref("DOMString")}} のマップ ({{domxref("DOMStringMap")}}) で、1つのカスタムデータ属性が1つのエントリに対応します。なお、 <code>dataset</code> プロパティ自体は読み取ることができますが、直接書き込むことはできません。代わりに、すべての書き込みは <code>dataset</code> 内の個々のプロパティに対して行われる必要があり、それはデータ属性を表します。また、 HTML の <strong><code>data-</code></strong><em>属性</em>とそれに対応する DOM <code>dataset.</code><em>プロパティ</em>　は同じ名前を共有しませんが、次のように常に近いものになります。</p>
+<p><span class="seoSummary"><strong><code>dataset</code></strong> は {{DOMxRef("HTMLElement")}} インターフェイスのプロパティで、要素に設定されたすべての<a href="/ja/docs/Web/HTML/Global_attributes#attr-data-*">カスタムデータ属性</a> (<code>data-*</code>) への読み取り/書き込みアクセスを提供します。</span> このアクセスは、 HTML と DOM の両方の中で利用できます。これは {{domxref("DOMString")}} のマップ ({{domxref("DOMStringMap")}}) で、1つのカスタムデータ属性が1つのエントリに対応します。なお、 <code>dataset</code> プロパティ自体は読み取ることができますが、直接書き込むことはできません。代わりに、すべての書き込みは <code>dataset</code> 内の個々のプロパティに対して行われる必要があり、それはデータ属性を表します。また、 HTML の <strong><code>data-</code></strong><em>属性</em>とそれに対応する DOM <code>dataset.</code><em>プロパティ</em>　は同じ名前を共有しませんが、次のように常に近いものになります。</p>
 
 <ul>
  <li>HTML のカスタムデータ属性の名前は、 <code>data-</code> で始まります。 文字、数字、およびダッシュ (<code>-</code>)、ドット (<code>.</code>)、コロン (<code>:</code>)、アンダースコア (<code>_</code>) のみを含める必要がありますが、 ASCII 大文字の <code>A</code> から <code>Z</code> は使用できません。</li>
@@ -136,7 +135,7 @@ el.dataset.someDataAttr = 'mydata';
 
 <p>{{Compat("api.HTMLElement.dataset")}}</p>
 
-<div class="hidden">Please change the compat macro's paramter to <code>api.HTMLOrForeignElement.dataset</code> after BCD is updated.</div>
+<div class="hidden">Please change the compat macro's paramter to <code>api.HTMLElement.dataset</code> after BCD is updated.</div>
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 
