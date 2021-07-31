@@ -338,7 +338,7 @@ original_slug: Learn/Forms/How_to_build_custom_form_widgets
  <li>スクリプトが読み込まれません。これはよくあるケースのひとつであり、特にネットワークの信頼性が低いモバイル環境で発生します。</li>
  <li>スクリプトに不具合があります。この可能性は常に考慮すべきです。</li>
  <li>スクリプトがサードパーティのスクリプトと競合しています。これは、トラッキングのスクリプトやユーザーが使用するブックマークレットとの間で発生する可能性があります。</li>
- <li>スクリプトがブラウザーの拡張機能 (Firefox の <a href="https://addons.mozilla.org/fr/firefox/addon/noscript/" rel="external" title="https://addons.mozilla.org/fr/firefox/addon/noscript/">NoScript</a> 拡張機能や Chrome の <a href="https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn" rel="external">NotScripts</a> 拡張機能など) と競合したり、拡張機能の影響を受けたりしています。</li>
+ <li>スクリプトがブラウザーの拡張機能 (Firefox の <a href="https://addons.mozilla.org/fr/firefox/addon/noscript/" rel="external">NoScript</a> 拡張機能や Chrome の <a href="https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn" rel="external">NotScripts</a> 拡張機能など) と競合したり、拡張機能の影響を受けたりしています。</li>
  <li>ユーザーが古いブラウザーを使用しており、必要な機能のいずれかがサポートされていません。これは、最先端の API を使用するときに頻繁に発生します。</li>
  <li>ユーザーは JavaScript が完全にダウンロード、解析、実行される前にコンテンツを操作します。</li>
 </ul>
@@ -703,7 +703,7 @@ window.addEventListener('load', function () {
 
 <p>フル機能のセレクトボックスとはかけ離れていますが動作するものはできましたし、よく動作しています。しかし、私たちが行ってきたことは DOM の操作にすぎません。これには実際のセマンティクスがなく、またセレクトボックスのように見えていてもブラウザーの視点からはそうではないため、支援技術はそれがセレクトボックスであるとは理解できません。つまり、このきれいなセレクトボックスはアクセシブルではありません!</p>
 
-<p>幸いなことに解決策があり、それは <a href="/ja/docs/Accessibility/ARIA" title="Accessibility/ARIA">ARIA</a> と呼ばれます。ARIA は "Accessible Rich Internet Application" を表し、その <a href="http://www.w3.org/TR/wai-aria/" rel="external" title="http://www.w3.org/TR/wai-aria/">W3C 仕様</a> は私たちがここで行っていることに特化して設計されています: ウェブアプリケーションやカスタムコントロールをアクセシブルにします。これは基本的には、私たちが作り出した要素がネイティブコントロールとして通るかのように、役割や状態や特性をより説明できるようにするために HTML を拡張する属性のセットです。これらの属性の使用はとても簡単ですので、行ってみましょう。</p>
+<p>幸いなことに解決策があり、それは <a href="/ja/docs/Accessibility/ARIA" title="Accessibility/ARIA">ARIA</a> と呼ばれます。ARIA は "Accessible Rich Internet Application" を表し、その <a href="http://www.w3.org/TR/wai-aria/" rel="external">W3C 仕様</a> は私たちがここで行っていることに特化して設計されています: ウェブアプリケーションやカスタムコントロールをアクセシブルにします。これは基本的には、私たちが作り出した要素がネイティブコントロールとして通るかのように、役割や状態や特性をより説明できるようにするために HTML を拡張する属性のセットです。これらの属性の使用はとても簡単ですので、行ってみましょう。</p>
 
 <h3 id="The_role_attribute" name="The_role_attribute"><code>role</code> 属性</h3>
 
@@ -757,7 +757,7 @@ window.addEventListener('load', function () {
 
 <p>スクリーンリーダーにオフスクリーンselectに焦点をあてて他のスタイルを無視するようにした法が簡単に見えますが、これはアクセシブルな解決策ではありません。スクリーンリーダーは盲目の人だけのものではありません。低視力や、完全な視力の人もこれを使います。このため、スクリーンリーダーをオフスクリーン要素だけに焦点をあてるようにはできません。</p>
 
-<p>以下がこれらの変更を施した最終結果です (<a href="http://www.nvda-project.org/" rel="external">NVDA</a> や <a href="http://www.apple.com/accessibility/voiceover/" rel="external" title="http://www.apple.com/accessibility/voiceover/">VoiceOver</a> などの支援技術でコントロールを使用してみても、よい感触を得られるでしょう):</p>
+<p>以下がこれらの変更を施した最終結果です (<a href="http://www.nvda-project.org/" rel="external">NVDA</a> や <a href="http://www.apple.com/accessibility/voiceover/" rel="external">VoiceOver</a> などの支援技術でコントロールを使用してみても、よい感触を得られるでしょう):</p>
 
 <table>
  <thead>
