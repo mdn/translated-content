@@ -4638,7 +4638,6 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/DisplayNames	/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Error/Prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Error
 /ja/docs/Web/JavaScript/Reference/Global_Objects/EvalError/Prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/EvalError
-/ja/docs/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/cleanupSome	/ja/docs/orphaned/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/cleanupSome
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Float32Array_temp	/ja/docs/Web/JavaScript/Reference/Global_objects/Float32Array
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Float64Array_temp	/ja/docs/Web/JavaScript/Reference/Global_objects/Float64Array
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Function/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Function
