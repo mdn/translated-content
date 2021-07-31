@@ -36,11 +36,11 @@ original_slug: Web/HTTP/Access_control_CORS
 
 <h2 id="什么情况下需要_CORS_？">什么情况下需要 CORS ？</h2>
 
-<p>这份 <a class="external external-icon" href="http://www.w3.org/TR/cors/" title="http://www.w3.org/TR/cors/">cross-origin sharing standard</a> 允许在下列场景中使用跨站点 HTTP 请求：</p>
+<p>这份 <a class="external external-icon" href="http://www.w3.org/TR/cors/">cross-origin sharing standard</a> 允许在下列场景中使用跨站点 HTTP 请求：</p>
 
 <ul>
  <li>前文提到的由 {{domxref("XMLHttpRequest")}} 或 <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch</a> 发起的跨源 HTTP 请求。</li>
- <li>Web 字体 (CSS 中通过<code> @font-face </code>使用跨源字体资源)，<a class="external external-icon" href="https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements" title="https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements">因此，网站就可以发布 TrueType 字体资源，并只允许已授权网站进行跨站调用</a>。</li>
+ <li>Web 字体 (CSS 中通过<code> @font-face </code>使用跨源字体资源)，<a class="external external-icon" href="https://www.w3.org/TR/css-fonts-3/#font-fetching-requirements">因此，网站就可以发布 TrueType 字体资源，并只允许已授权网站进行跨站调用</a>。</li>
  <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL">WebGL 贴图</a></li>
  <li>使用 <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/drawImage">drawImage</a></code> 将 Images/video 画面绘制到 canvas</li>
 </ul>
@@ -258,7 +258,7 @@ Access-Control-Allow-Methods: POST, GET, OPTIONS
 Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
 Access-Control-Max-Age: 86400</code></pre>
 
-<p><font face="Open Sans, Arial, sans-serif">首部字段</font><code><font face="Open Sans, Arial, sans-serif"> </font>Access-Control-Allow-Methods </code>表明服务器允许客户端使用<code> </code><code>POST,</code> <code>GET </code>和 <code>OPTIONS</code> 方法发起请求。该字段与 <a class="external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.7" title="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.7">HTTP/1.1 Allow: response header</a> 类似，但仅限于在需要访问控制的场景中使用。</p>
+<p><font face="Open Sans, Arial, sans-serif">首部字段</font><code><font face="Open Sans, Arial, sans-serif"> </font>Access-Control-Allow-Methods </code>表明服务器允许客户端使用<code> </code><code>POST,</code> <code>GET </code>和 <code>OPTIONS</code> 方法发起请求。该字段与 <a class="external" href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.7">HTTP/1.1 Allow: response header</a> 类似，但仅限于在需要访问控制的场景中使用。</p>
 
 <p>首部字段 <code>Access-Control-Allow-Headers </code>表明服务器允许请求中携带字段 <code><code>X-PINGOTHER </code></code>与<code><code> Content-Type</code></code>。<font face="Open Sans, Arial, sans-serif">与</font><code><code><font face="Open Sans, Arial, sans-serif"> </font></code></code><code>Access-Control-Allow-Methods </code>一样，<code><code>Access-Control-Allow-Headers</code></code> 的值为逗号分割的列表。</p>
 
