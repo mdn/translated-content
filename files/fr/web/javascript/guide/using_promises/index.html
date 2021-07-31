@@ -12,7 +12,7 @@ original_slug: Web/JavaScript/Guide/Utiliser_les_promesses
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Le_modèle_objet_JavaScript_en_détails", "Web/JavaScript/Guide/iterateurs_et_generateurs")}}</div>
 
-<p class="summary">Une promesse est un objet ({{jsxref("Promise")}}) qui représente la complétion ou l'échec d'une opération asynchrone. La plupart du temps, on « consomme » des promesses et c'est donc ce que nous verrons dans la première partie de ce guide pour ensuite expliquer comment les créer.</p>
+<p>Une promesse est un objet ({{jsxref("Promise")}}) qui représente la complétion ou l'échec d'une opération asynchrone. La plupart du temps, on « consomme » des promesses et c'est donc ce que nous verrons dans la première partie de ce guide pour ensuite expliquer comment les créer.</p>
 
 <p>En résumé, une promesse est un objet qui est renvoyé et auquel on attache des <em>callbacks</em> plutôt que de passer des <em>callbacks</em> à une fonction. Ainsi, au lieu d'avoir une fonction qui prend deux <em>callbacks</em> en arguments :</p>
 
@@ -130,7 +130,7 @@ const promise2 = promise.then(successCallback, failureCallback);
 </pre>
 
 <div class="warning">
-<p><strong>Important :</strong> cela implique que les fonctions asynchrones renvoient toutes des promesses, sinon les <em>callbacks</em> ne pourront être chaînés et les erreurs ne seront pas interceptées (les fonctions fléchées ont une valeur de retour implicite si les accolades ne sont pas utilisées : <code>() =&gt; x</code> est synonyme de <code>() =&gt; { return x; }</code>).</p>
+<p><strong>Attention :</strong> cela implique que les fonctions asynchrones renvoient toutes des promesses, sinon les <em>callbacks</em> ne pourront être chaînés et les erreurs ne seront pas interceptées (les fonctions fléchées ont une valeur de retour implicite si les accolades ne sont pas utilisées : <code>() =&gt; x</code> est synonyme de <code>() =&gt; { return x; }</code>).</p>
 </div>
 
 <h3 id="Chaînage_après_un_catch">Chaînage après un catch</h3>
