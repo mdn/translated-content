@@ -11,7 +11,7 @@ original_slug: Web/JavaScript/Guide/Métaprogrammation
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/iterateurs_et_generateurs","Web/JavaScript/Guide/Modules")}}</div>
 
-<p class="summary">À partir d'ECMAScript 2015, JavaScript fournit les objets natifs {{jsxref("Proxy")}} et {{jsxref("Reflect")}}. Ces objets permettent d'intercepter et de définir des comportements spécifiques pour certaines opérations fondamentales du langage (par exemple la recherche d'une propriété, l'affectation, l'énumération, l'appel d'une fonction, etc.). Grâce à ces deux objets, il est possible d'interagir avec le langage lui-même (on parle alors de métaprogrammation).</p>
+<p>À partir d'ECMAScript 2015, JavaScript fournit les objets natifs {{jsxref("Proxy")}} et {{jsxref("Reflect")}}. Ces objets permettent d'intercepter et de définir des comportements spécifiques pour certaines opérations fondamentales du langage (par exemple la recherche d'une propriété, l'affectation, l'énumération, l'appel d'une fonction, etc.). Grâce à ces deux objets, il est possible d'interagir avec le langage lui-même (on parle alors de métaprogrammation).</p>
 
 <h2 id="Les_proxies">Les proxies</h2>
 
@@ -29,7 +29,7 @@ console.log(p.a, p.b); // 1, 42
 <p>Ici, l'objet <code>Proxy</code> définit une <em>cible</em> (ici c'est un objet vide) et un gestionnaire (<em>handler</em>) qui implémente une <em>trappe</em> pour l'opération <em>get</em>. Ainsi, l'objet qui est « proxyfié » ne renverra pas <code>undefined</code> lorsqu'on tentera d'accéder à une propriété qui n'est pas définie, à la place le nombre 42 sera renvoyé.</p>
 
 <div class="note">
-<p>D'autres exemples sont disponibles sur la page de l'objet {{jsxref("Proxy")}}.</p>
+<p><strong>Note :</strong> D'autres exemples sont disponibles sur la page de l'objet {{jsxref("Proxy")}}.</p>
 </div>
 
 <h3 id="Terminologie">Terminologie</h3>

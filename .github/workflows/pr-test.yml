@@ -67,10 +67,10 @@ jobs:
           # Now, this gets used by the `git diff ...` inside get-diff-action.
           git config --global core.quotePath false
 
-      - uses: technote-space/get-diff-action@v4.1.1
+      - uses: technote-space/get-diff-action@v4.2
         id: git_diff_content
         with:
-          PATTERNS: files/**/*.html
+          PATTERNS: files/**/*.+(html|md)
           SET_ENV_NAME: GIT_DIFF_CONTENT
 
       - name: Build changed content
@@ -168,7 +168,7 @@ jobs:
           name: build
           path: ${{ env.BUILD_OUT_ROOT }}
 
-      - uses: technote-space/get-diff-action@v4.1.1
+      - uses: technote-space/get-diff-action@v4.2
         with:
           PATTERNS: files/**/*.+(png|jpeg|jpg|gif|svg|webp)
           ABSOLUTE: true

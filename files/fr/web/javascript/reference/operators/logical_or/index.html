@@ -44,7 +44,7 @@ translation-of: Web/JavaScript/Reference/Operators/Logical_OR
 
 <p>L'expression utilisant un OU logique est évaluée de gauche à droite. Le moteur cherche s'il est possible d'utiliser un court-circuit de la façon suivante :</p>
 
-<p><code>(une expression équivalente à vrai) &amp;&amp; <var>expr</var></code> sera court-circuité pour fournir directement le résultat de l'expression équivalente à vrai.</p>
+<p><code>(une expression équivalente à vrai) || <var>expr</var></code> sera court-circuité pour fournir directement le résultat de l'expression équivalente à vrai.</p>
 
 <p>Cette notion de court-circuit indique que la partie <code><var>expr</var></code> ci-avant <strong>n'est pas évaluée</strong>, tout effet de bord lié à cette évaluation n'aura pas lieu (par exemple, si <code><var>expr</var></code> est un appel de fonction, la fonction n'est pas appelée). Ce fonctionnement a lieu, car la valeur du résultat peut d'office être déterminée par l'évaluation du premier opérande. Par exemple :</p>
 
