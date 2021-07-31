@@ -108,7 +108,7 @@ clearBtn.addEventListener('mouseover', function() {
 
 <h4 id="Bonus_Features_Available">Bonus Features Available</h4>
 
-<p>For <a href="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/index.html" title="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/index.html">Add-on SDK</a> add-ons, the console API is available automatically. Here's an example add-on that just logs an error when the user clicks a widget:</p>
+<p>For <a href="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/index.html">Add-on SDK</a> add-ons, the console API is available automatically. Here's an example add-on that just logs an error when the user clicks a widget:</p>
 
 <pre class="brush: js notranslate">widget = require("sdk/widget").Widget({
   id: "an-error-happened",
@@ -122,13 +122,13 @@ function logError() {
   console.error("something went wrong!");
 }</pre>
 
-<p>If you <a href="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/tutorials/installation.html" title="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/tutorials/installation.html">build this as an XPI file</a>, then open the Browser Console, then open the XPI file in Firefox and install it, you'll see a widget labeled "Error!" in the Add-on bar:</p>
+<p>If you <a href="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/tutorials/installation.html">build this as an XPI file</a>, then open the Browser Console, then open the XPI file in Firefox and install it, you'll see a widget labeled "Error!" in the Add-on bar:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/5937/browser-console-addon.png" style="display: block; margin-left: auto; margin-right: auto;">Click the icon. You'll see output like this in the Browser Console:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/5851/browser-console-addon-output.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
 
-<p>For Add-on SDK-based add-ons only, the message is prefixed with the name of the add-on ("log-error"), making it easy to find all messages from this add-on using the <a href="/en-US/docs/Tools/Web_Console#Filtering_and_searching" title="/en-US/docs/Tools/Web_Console#Filtering_and_searching">"Filter output"</a> search box. By default, only error messages are logged to the console, although <a href="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/console.html#Logging%20Levels" title="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/console.html#Logging%20Levels">you can change this in the browser's preferences</a>.</p>
+<p>For Add-on SDK-based add-ons only, the message is prefixed with the name of the add-on ("log-error"), making it easy to find all messages from this add-on using the <a href="/en-US/docs/Tools/Web_Console#Filtering_and_searching" title="/en-US/docs/Tools/Web_Console#Filtering_and_searching">"Filter output"</a> search box. By default, only error messages are logged to the console, although <a href="https://addons.mozilla.org/en-US/developers/docs/sdk/latest/dev-guide/console.html#Logging%20Levels">you can change this in the browser's preferences</a>.</p>
 
 <h2 id="浏览器控制台命令行">浏览器控制台命令行</h2>
 

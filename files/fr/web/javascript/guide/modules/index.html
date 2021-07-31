@@ -41,7 +41,7 @@ translation_of: Web/JavaScript/Guide/Modules
 
 <p>Ces opérations sont assez simples mais nous les avons choisies pour nous concentrer plutôt sur le fonctionnement des modules.</p>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Note :</strong> Si vous souhaitez télécharger les exemples et les exécuter en local, vous devrez utiliser un serveur web local.</p>
 </div>
 
@@ -55,7 +55,7 @@ modules/
     canvas.mjs
     square.mjs</pre>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Note :</strong> Tous les exemples de ce guide suivent la même structure.</p>
 </div>
 
@@ -79,8 +79,8 @@ modules/
  </li>
 </ul>
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> Pour les modules JavaScript natifs, l'extension <code>.mjs</code> a son importance car elle permet d'importer des fichiers avec un type MIME <code>javascript/esm</code> (on pourra utiliser une autre extension qui fournira le type MIME <code>application/javascript</code>) afin d'éviter les erreurs liées à la vérification des types MIME. L'extension <code>.mjs</code> est notamment utile afin de distinguer plus clairement les scripts « classiques » des modules et pourra être exploitée par d'autres outils. Pour plus de détails, voir <a href="https://v8.dev/features/modules#mjs">cette note de Google</a>.</p>
+<div class="note">
+<p><strong>Note :</strong> Pour les modules JavaScript natifs, l'extension <code>.mjs</code> a son importance car elle permet d'importer des fichiers avec un type MIME <code>javascript/esm</code> (on pourra utiliser une autre extension qui fournira le type MIME <code>application/javascript</code>) afin d'éviter les erreurs liées à la vérification des types MIME. L'extension <code>.mjs</code> est notamment utile afin de distinguer plus clairement les scripts « classiques » des modules et pourra être exploitée par d'autres outils. Pour plus de détails, voir <a href="https://v8.dev/features/modules#mjs">cette note de Google</a>.</p>
 </div>
 
 <h2 id="Exporter_des_fonctionnalités">Exporter des fonctionnalités</h2>
@@ -129,8 +129,8 @@ export function draw(ctx, length, x, y, color) {
 
 <p>Vous pouvez voir ces lignes dans <code><a href="https://github.com/mdn/js-examples/blob/master/modules/basic-modules/main.js">main.mjs</a></code>.</p>
 
-<div class="blockIndicator note">
-<p><strong>Note </strong>: Pour certains systèmes de module, on peut omettre l'extension de fichier et le point (c'est-à-dire qu'on peut écrire  <code>'/modules/square'</code>). <u>Cela ne fonctionne pas pour les modules JavaScript !</u></p>
+<div class="note">
+<p><strong>Note :</strong> Pour certains systèmes de module, on peut omettre l'extension de fichier et le point (c'est-à-dire qu'on peut écrire <code>'/modules/square'</code>). Cela ne fonctionne pas pour les modules JavaScript !</p>
 </div>
 
 <p>Une fois les fonctionnalités importées dans le script, vous pouvez utiliser les valeurs dans votre script. Dans <code>main.mjs</code>, après les lignes d'import, on trouvera :</p>
@@ -155,8 +155,8 @@ reportPerimeter(square1.length, reportList);
 
 <p>Les instructions <code>import</code> et <code>export</code> ne peuvent être utilisées qu'à l'intérieur de modules et pas à l'intérieur de scripts « classiques ».</p>
 
-<div class="blockIndicator note">
-<p><strong>Note </strong>: Il est aussi possible d'importer des modules dans des scripts qui sont déclarés en incise si on indique bien <code>type="module"</code>. On pourra donc écrire <code>&lt;script type="module"&gt; //code du script utilisant les modules ici &lt;/script&gt;</code>.</p>
+<div class="note">
+<p><strong>Note :</strong> Il est aussi possible d'importer des modules dans des scripts qui sont déclarés en incise si on indique bien <code>type="module"</code>. On pourra donc écrire <code>&lt;script type="module"&gt; //code du script utilisant les modules ici &lt;/script&gt;</code>.</p>
 </div>
 
 <h2 id="Différences_entre_les_modules_et_les_scripts_«_classiques_»">Différences entre les modules et les scripts « classiques »</h2>
@@ -194,8 +194,8 @@ reportPerimeter(square1.length, reportList);
 
 <pre class="brush: js">import {default as randomSquare} from './modules/square.mjs';</pre>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong> : Pour en savoir plus sur le renommage des objets exportés, voir ci-après {{anch("Renommage des imports et des exports")}}.</p>
+<div class="note">
+<p><strong>Note :</strong> Pour en savoir plus sur le renommage des objets exportés, voir ci-après {{anch("Renommage des imports et des exports")}}.</p>
 </div>
 
 <h2 id="Gestion_des_conflits_de_nommage">Gestion des conflits de nommage</h2>
@@ -364,8 +364,8 @@ export { Circle } from './shapes/circle.mjs';</pre>
 
 <p>On récupère ainsi l'ensemble des exports de chaque module et on les rend disponibles via <code>shapes.mjs</code>.</p>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong> : Cette notation ne permet que de rediriger les exports via le fichier. Les objets importés/exportés n'existent pas vraiment dans <code>shapes.mjs</code> et on ne peut donc pas écrire de code <em>utile</em> qui les manipule.</p>
+<div class="note">
+<p><strong>Note :</strong> Cette notation ne permet que de rediriger les exports via le fichier. Les objets importés/exportés n'existent pas vraiment dans <code>shapes.mjs</code> et on ne peut donc pas écrire de code <em>utile</em> qui les manipule.</p>
 </div>
 
 <p>Dans le fichier <code>main.mjs</code>, on pourra alors remplacer :</p>

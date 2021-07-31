@@ -9,10 +9,10 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/escape
 ---
 <div>{{jsSidebar("Objects")}}</div>
 
-<div class="warning"><strong>Attention !</strong> Bien que <code>escape(…)</code> ne soit pas strictement obsolète (au sens où elle n'a pas été retirée des standards), elle est définie au sein de <a href="https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers">l'Annexe B</a> du standard ECMA-262 qui commence par :
+<div class="warning"><p><strong>Attention :</strong> Bien que <code>escape(…)</code> ne soit pas strictement obsolète (au sens où elle n'a pas été retirée des standards), elle est définie au sein de <a href="https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers">l'Annexe B</a> du standard ECMA-262 qui commence par :
 
 <blockquote>… L'ensemble des fonctionnalités et comportements définis dans cette annexe possède une ou plusieurs caractéristiques indésirables. En l'absence d'une utilisation historique, ces fonctionnalités seraient retirés de la spécification. …<br>
-… Les développeurs ne devraient pas utiliser ces fonctionnalités et comportements ou présupposer qu'elles existent lors de l'écriture de nouveau code ECMAScript. …</blockquote>
+… Les développeurs ne devraient pas utiliser ces fonctionnalités et comportements ou présupposer qu'elles existent lors de l'écriture de nouveau code ECMAScript. …</blockquote></p>
 </div>
 
 <p>La fonction <code><strong>escape()</strong></code> permet de renvoyer une nouvelle chaîne de caractères dont certains caractères ont été remplacés par leur séquence d'échappement hexadécimale. Cette méthode est obsolète et il est donc conseillé d'utiliser {{jsxref("encodeURI")}} ou {{jsxref("encodeURIComponent")}} à la place.</p>

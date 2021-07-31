@@ -12,11 +12,11 @@ original_slug: Web/API/WebSockets_API/Escribiendo_servidor_WebSocket
 
 <p>Si deseas utilizar la API WebSocket, es conveniente si tienes un servidor. En este artículo te mostraré como puedes escribir uno en C#. Tú puedes hacer esto en cualquier lenguaje del lado del servidor, pero para mantener las cosas simples y más comprensibles, elegí el lenguaje de Microsoft<span style="line-height: 1.5;">.</span></p>
 
-<p>Este servidor se ajusta a <a href="http://tools.ietf.org/html/rfc6455" title="http://tools.ietf.org/html/rfc6455">RFC 6455</a> por lo que solo manejará las conexiones de Chrome version 16, Firefox 11, IE 10 and superiores.</p>
+<p>Este servidor se ajusta a <a href="http://tools.ietf.org/html/rfc6455">RFC 6455</a> por lo que solo manejará las conexiones de Chrome version 16, Firefox 11, IE 10 and superiores.</p>
 
 <h2 id="Primeros_pasos">Primeros pasos</h2>
 
-<p>WebSocket se comunica a través de conexiones <a href="https://es.wikipedia.org/wiki/Transmission_Control_Protocol" title="https://es.wikipedia.org/wiki/Transmission_Control_Protocol">TCP (Transmission Control Protocol)</a>, afortunadamente C# tiene una clase <a href="http://msdn.microsoft.com/es-es/library/system.net.sockets.tcplistener.aspx" title="http://msdn.microsoft.com/en-us/library/system.net.sockets.tcplistener.aspx">TcpListener</a> la cual hace lo que su nombre sugiere. Esta se encuentra en el namespace <em>System.Net.Sockets</em>.</p>
+<p>WebSocket se comunica a través de conexiones <a href="https://es.wikipedia.org/wiki/Transmission_Control_Protocol">TCP (Transmission Control Protocol)</a>, afortunadamente C# tiene una clase <a href="http://msdn.microsoft.com/es-es/library/system.net.sockets.tcplistener.aspx">TcpListener</a> la cual hace lo que su nombre sugiere. Esta se encuentra en el namespace <em>System.Net.Sockets</em>.</p>
 
 <div class="note">
 <p><span style="line-height: 1.572;">Es una buena idea usar la instrucción <code>using</code></span><span style="line-height: 1.572;"> para escribir menos. Eso significa que no tendrás que re escribir el namespace de nuevo en cada ocasión.</span></p>
@@ -38,7 +38,7 @@ original_slug: Web/API/WebSockets_API/Escribiendo_servidor_WebSocket
 
 <ul>
  <li><code><span style="line-height: 1.572;">Start()</span></code></li>
- <li><span style="line-height: 1.572;">S<code>ystem.Net.Sockets.<a href="http://msdn.microsoft.com/en-us/library/system.net.sockets.tcpclient.aspx" title="http://msdn.microsoft.com/en-us/library/system.net.sockets.tcpclient.aspx">TcpClient</a> AcceptTcpClient()</code><br>
+ <li><span style="line-height: 1.572;">S<code>ystem.Net.Sockets.<a href="http://msdn.microsoft.com/en-us/library/system.net.sockets.tcpclient.aspx">TcpClient</a> AcceptTcpClient()</code><br>
   Espera por una conexión TCP, la acepta y la devuelve como un objeto TcpClient.</span></li>
 </ul>
 
@@ -67,7 +67,7 @@ class Server {
 <p>Métodos:</p>
 
 <ul>
- <li><code>System.Net.Sockets.<a href="http://msdn.microsoft.com/en-us/library/system.net.sockets.networkstream.aspx" title="http://msdn.microsoft.com/en-us/library/system.net.sockets.networkstream.aspx">NetworkStream</a> GetStream()</code><br>
+ <li><code>System.Net.Sockets.<a href="http://msdn.microsoft.com/en-us/library/system.net.sockets.networkstream.aspx">NetworkStream</a> GetStream()</code><br>
   Obtiene el stream del canal de comunicación. Ambos lados del canal tienen capacidad de lectura y escritura.</li>
 </ul>
 
@@ -208,7 +208,7 @@ if (Regex.IsMatch(data, "^GET")) {
 </table>
 
 <p>FIN: Puedes enviar tu mensaje en marcos, pero ahora debe mantener las cosas simples.<br>
- <span style="line-height: 1.572;">Opcode </span><em>0x1</em><span style="line-height: 1.572;"> significa que es un texto. </span><a href="http://tools.ietf.org/html/rfc6455#section-5.2" style="line-height: 1.572;" title="http://tools.ietf.org/html/rfc6455#section-5.2">Lista completa de Opcodes</a></p>
+ <span style="line-height: 1.572;">Opcode </span><em>0x1</em><span style="line-height: 1.572;"> significa que es un texto. </span><a href="http://tools.ietf.org/html/rfc6455#section-5.2" style="line-height: 1.572;">Lista completa de Opcodes</a></p>
 
 <p>- 131:</p>
 
@@ -241,5 +241,3 @@ for (int i = 0; i &lt; encoded.Length; i++) {
 <ul>
  <li><a href="/es/docs/WebSockets/Writing_WebSocket_servers">Escribiendo servidores WebSocket</a></li>
 </ul>
-
-<div id="cke_pastebin" style="position: absolute; top: 2209.23px; width: 1px; height: 1px; overflow: hidden; left: -1000px;"> </div>

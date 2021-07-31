@@ -186,7 +186,7 @@ Rectangle.prototype.largeurProto = 25;</pre>
 <p>{{SeeCompatTable}}</p>
 
 <div class="warning">
-<p><strong>Attention !</strong> Les déclarations de champs publics et privés sont une <a href="https://github.com/tc39/proposal-class-fields">fonctionnalité expérimentale actuellement proposée pour être intégrée dans le standard ECMAScript</a>. Elle n'est pas implémentée par la majorité des navigateurs mais on peut émuler cette fonctionnalité en utilisant un système de compilation tel que <a href="https://babeljs.io/">Babel</a>.</p>
+<p><strong>Attention :</strong> Les déclarations de champs publics et privés sont une <a href="https://github.com/tc39/proposal-class-fields">fonctionnalité expérimentale actuellement proposée pour être intégrée dans le standard ECMAScript</a>. Elle n'est pas implémentée par la majorité des navigateurs mais on peut émuler cette fonctionnalité en utilisant un système de compilation tel que <a href="https://babeljs.io/">Babel</a>.</p>
 </div>
 
 <h4 id="Déclarations_de_champs_publics">Déclarations de champs publics</h4>
@@ -393,9 +393,9 @@ class Truc extends calculetteMixin(aleatoireMixin(Toto)) { }
 
 <p>{{Compat("javascript.classes")}}</p>
 
-<h2 id="Utilisation_via_l'ardoise_dans_Firefox">Utilisation via l'ardoise dans Firefox</h2>
+<h2 id="Utilisation_via_l'éditeur_multiligne_dans_Firefox">Utilisation via l'éditeur multiligne dans Firefox</h2>
 
-<p>Une classe ne peut pas être redéfinie. Si vous testez votre code via l'ardoise JavaScript de Firefox (Outils &gt; Développement web &gt; Ardoise JavaScript) et que vous exécutez à plusieurs reprises votre code avec la définition d'une classe, vous obtiendrez une exception SyntaxError : <em>redeclaration of let &lt;class-name&gt;</em>.</p>
+<p>Une classe ne peut pas être redéfinie. Si vous testez votre code via l'éditeur multiligne JavaScript de Firefox (Outils &gt; Développement web &gt; Editeur multiligne JavaScript) et que vous exécutez à plusieurs reprises votre code avec la définition d'une classe, vous obtiendrez une exception SyntaxError : <em>redeclaration of let &lt;class-name&gt;</em>.</p>
 
 <p>Pour relancer une définition, il faut utiliser le menu Exécuter &gt; Recharger et exécuter. À ce sujet, voir le bug {{bug("1428672")}}.</p>
 

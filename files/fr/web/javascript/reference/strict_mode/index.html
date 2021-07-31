@@ -22,8 +22,7 @@ translation_of: Web/JavaScript/Reference/Strict_mode
 
 <p>Voir la page <a href="/fr/docs/Web/JavaScript/Reference/Strict_mode/Passer_au_mode_strict">Passer au mode strict</a> pour plus de détails quant à la migration d'une base de code non-stricte vers une base de code compatible avec le mode strict.</p>
 
-<div class="callout-box">
-<p><strong>Note :</strong> Le mode non strict (celui actif par défaut) est parfois appelé « <em>sloppy mode</em> » en anglais. Bien que ce ne soit pas la dénomination officielle, on la rencontre occasionnellement.</p>
+<div class="note"><p><strong>Note :</strong> Le mode non strict (celui actif par défaut) est parfois appelé « <em>sloppy mode</em> » en anglais. Bien que ce ne soit pas la dénomination officielle, on la rencontre occasionnellement.</p>
 </div>
 
 <h2 id="Invoquer_le_mode_strict">Invoquer le mode strict</h2>
@@ -116,7 +115,7 @@ var o = { p: 1, p: 2 }; // !!! erreur de syntaxe
 </pre>
 
 <div class="note">
-<p>Cela n'est plus le cas avec ECMAScript 2015 ({{bug(1041128)}}).</p>
+<p><strong>Note :</strong> Cela n'est plus le cas avec ECMAScript 2015 ({{bug(1041128)}}).</p>
 </div>
 
 <p>Cinquièmement, le mode strict requiert que les noms de paramètres de fonction soient uniques. En mode non-strict, le dernier argument dupliqué cache les arguments précédents ayant le même nom. Ces arguments précédents demeurent disponibles via <code>arguments[i]</code>, ils ne sont donc pas complètement inaccessibles. Pourtant, cette cachette n'a guère de sens et n'est probablement pas souhaitable (cela pourrait cacher une faute de frappe, par exemple). Donc en mode strict, les doublons de noms d'arguments sont une erreur de syntaxe :</p>
