@@ -39,19 +39,19 @@ tags:
    <td><span style="font-family: courier new;">&lt;input type="URL"&gt;</span></td>
    <td>值必须是绝对的URL, 即，是下面的某一种:
     <ul>
-     <li>a valid URI (as defined in <a class="external" href="http://www.ietf.org/rfc/rfc3986.txt" title="http://www.ietf.org/rfc/rfc3986.txt">RFC 3986</a>)</li>
-     <li>a valid IRI, without a query component (as defined in <a class="external" href="http://www.ietf.org/rfc/rfc3987.txt" title="http://www.ietf.org/rfc/rfc3987.txt">RFC 3987</a>)</li>
-     <li>a valid IRI, with a query component without any unescaped non-ASCII character (as defined in <a class="external" href="http://www.ietf.org/rfc/rfc3987.txt" title="http://www.ietf.org/rfc/rfc3987.txt">RFC 3987</a>)</li>
-     <li>a valid IRI, and the character set for the document is UTF-8 or UTF-16 (as defined in <a class="external" href="http://www.ietf.org/rfc/rfc3987.txt" title="http://www.ietf.org/rfc/rfc3987.txt">RFC 3987</a>)</li>
+     <li>a valid URI (as defined in <a class="external" href="http://www.ietf.org/rfc/rfc3986.txt">RFC 3986</a>)</li>
+     <li>a valid IRI, without a query component (as defined in <a class="external" href="http://www.ietf.org/rfc/rfc3987.txt">RFC 3987</a>)</li>
+     <li>a valid IRI, with a query component without any unescaped non-ASCII character (as defined in <a class="external" href="http://www.ietf.org/rfc/rfc3987.txt">RFC 3987</a>)</li>
+     <li>a valid IRI, and the character set for the document is UTF-8 or UTF-16 (as defined in <a class="external" href="http://www.ietf.org/rfc/rfc3987.txt">RFC 3987</a>)</li>
     </ul>
    </td>
    <td><strong>Type mismatch </strong>constraint violation</td>
   </tr>
   <tr>
    <td> <span style="font-family: courier new;">&lt;input type="email"&gt;</span></td>
-   <td>The value must follow the <a class="external" href="http://www.ietf.org/rfc/std/std68.txt" title="http://www.ietf.org/rfc/std/std68.txt">ABNF</a> production: <code>1*( atext / "." ) "@" ldh-str 1*( "." ldh-str )</code> where:
+   <td>The value must follow the <a class="external" href="http://www.ietf.org/rfc/std/std68.txt">ABNF</a> production: <code>1*( atext / "." ) "@" ldh-str 1*( "." ldh-str )</code> where:
     <ul>
-     <li><code>atext</code> is defined in <a class="external" href="http://tools.ietf.org/html/rfc5322" title="http://tools.ietf.org/html/rfc5322">RFC 5322</a>, i.e., a US-ASCII letter (<span style="font-family: courier new;">A</span> to <span style="font-family: courier new;">Z</span> and <span style="font-family: courier new;">a</span>-<span style="font-family: courier new;">z</span>), a digit (<span style="font-family: courier new;">0</span> to <span style="font-family: courier new;">9</span>) or one of the following<span style="font-family: courier new;">! # $ % &amp; ' * + - / = ? ` { } | ~ </span>special character,</li>
+     <li><code>atext</code> is defined in <a class="external" href="http://tools.ietf.org/html/rfc5322">RFC 5322</a>, i.e., a US-ASCII letter (<span style="font-family: courier new;">A</span> to <span style="font-family: courier new;">Z</span> and <span style="font-family: courier new;">a</span>-<span style="font-family: courier new;">z</span>), a digit (<span style="font-family: courier new;">0</span> to <span style="font-family: courier new;">9</span>) or one of the following<span style="font-family: courier new;">! # $ % &amp; ' * + - / = ? ` { } | ~ </span>special character,</li>
      <li><code>ldh-str</code> is defined in <a class="external" href="http://www.apps.ietf.org/rfc/rfc1034.html#sec-3.5">RFC 1034</a>, i.e., US-ASCII letters, mixed with digits and <span style="font-family: courier new;">-</span> grouped in words separated by a dot (<span style="font-family: courier new;">.</span>).</li>
     </ul>
 
@@ -82,7 +82,7 @@ tags:
   <tr>
    <td>{{ htmlattrxref("pattern", "input") }}</td>
    <td>text, search, url, tel, email, password</td>
-   <td>A <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" title="https://developer.mozilla.org/en/JavaScript/Guide/Regular_Expressions">JavaScript regular expression</a> (compiled with the <a class="external" href="http://www.ecma-international.org/publications/standards/Ecma-262.htm" title="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript 5</a> <code title="">global</code>, <code title="">ignoreCase</code>, and <code title="">multiline</code> flags <em>disabled)</em></td>
+   <td>A <a href="/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" title="https://developer.mozilla.org/en/JavaScript/Guide/Regular_Expressions">JavaScript regular expression</a> (compiled with the <a class="external" href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript 5</a> <code title="">global</code>, <code title="">ignoreCase</code>, and <code title="">multiline</code> flags <em>disabled)</em></td>
    <td>输入的值必须匹配设置的模式。</td>
    <td><strong>Pattern mismatch</strong> constraint violation</td>
   </tr>
