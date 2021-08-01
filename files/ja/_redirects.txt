@@ -3550,7 +3550,6 @@
 /ja/docs/Web/API/HTMLFormElement.reset	/ja/docs/Web/API/HTMLFormElement/reset
 /ja/docs/Web/API/HTMLFormElement.submit	/ja/docs/Web/API/HTMLFormElement/submit
 /ja/docs/Web/API/HTMLFormElement.target	/ja/docs/Web/API/HTMLFormElement/target
-/ja/docs/Web/API/HTMLHyperlinkElementUtils	/ja/docs/orphaned/Web/API/HTMLHyperlinkElementUtils
 /ja/docs/Web/API/HTMLHyperlinkElementUtils/hash	/ja/docs/Web/API/HTMLAnchorElement/hash
 /ja/docs/Web/API/HTMLHyperlinkElementUtils/host	/ja/docs/Web/API/HTMLAnchorElement/host
 /ja/docs/Web/API/HTMLHyperlinkElementUtils/hostname	/ja/docs/Web/API/HTMLAnchorElement/hostname
