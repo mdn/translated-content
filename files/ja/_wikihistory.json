@@ -18943,6 +18943,31 @@
       "Potappo"
     ]
   },
+  "Web/API/Navigator/Online_and_offline_events": {
+    "modified": "2019-03-23T23:53:08.504Z",
+    "contributors": [
+      "chrisdavidmills",
+      "ethertank",
+      "Marsf",
+      "Mgjbot",
+      "Koyamak"
+    ]
+  },
+  "Web/API/Navigator/onLine": {
+    "modified": "2020-10-15T21:16:47.171Z",
+    "contributors": [
+      "isdh",
+      "ryutamaki",
+      "yyss",
+      "dextra",
+      "fscholz",
+      "khalid32",
+      "ethertank",
+      "Potappo",
+      "Norah",
+      "Mgjbot"
+    ]
+  },
   "Web/API/Navigator/oscpu": {
     "modified": "2020-10-15T21:16:44.807Z",
     "contributors": [
@@ -51167,37 +51192,6 @@
     "contributors": [
       "fscholz",
       "nshimizu"
-    ]
-  },
-  "orphaned/Web/API/NavigatorOnLine": {
-    "modified": "2019-03-23T23:00:36.403Z",
-    "contributors": [
-      "fscholz"
-    ]
-  },
-  "orphaned/Web/API/NavigatorOnLine/Online_and_offline_events": {
-    "modified": "2019-03-23T23:53:08.504Z",
-    "contributors": [
-      "chrisdavidmills",
-      "ethertank",
-      "Marsf",
-      "Mgjbot",
-      "Koyamak"
-    ]
-  },
-  "orphaned/Web/API/NavigatorOnLine/onLine": {
-    "modified": "2020-10-15T21:16:47.171Z",
-    "contributors": [
-      "isdh",
-      "ryutamaki",
-      "yyss",
-      "dextra",
-      "fscholz",
-      "khalid32",
-      "ethertank",
-      "Potappo",
-      "Norah",
-      "Mgjbot"
     ]
   },
   "orphaned/Web/API/NavigatorPlugins": {

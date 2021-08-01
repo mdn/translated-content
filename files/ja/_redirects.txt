@@ -1594,7 +1594,7 @@
 /ja/docs/DOM/window.navigator.language	/ja/docs/orphaned/Web/API/NavigatorLanguage/language
 /ja/docs/DOM/window.navigator.mimeTypes	/ja/docs/orphaned/Web/API/NavigatorPlugins/mimeTypes
 /ja/docs/DOM/window.navigator.mozIsLocallyAvailable	/ja/docs/Web/API/Navigator/mozIsLocallyAvailable
-/ja/docs/DOM/window.navigator.onLine	/ja/docs/orphaned/Web/API/NavigatorOnLine/onLine
+/ja/docs/DOM/window.navigator.onLine	/ja/docs/Web/API/Navigator/onLine
 /ja/docs/DOM/window.navigator.oscpu	/ja/docs/Web/API/Navigator/oscpu
 /ja/docs/DOM/window.navigator.platform	/ja/docs/orphaned/Web/API/NavigatorID/platform
 /ja/docs/DOM/window.navigator.plugins	/ja/docs/orphaned/Web/API/NavigatorPlugins/plugins
@@ -1819,7 +1819,7 @@
 /ja/docs/DOM:window.navigator.language	/ja/docs/orphaned/Web/API/NavigatorLanguage/language
 /ja/docs/DOM:window.navigator.mimeTypes	/ja/docs/orphaned/Web/API/NavigatorPlugins/mimeTypes
 /ja/docs/DOM:window.navigator.mozIsLocallyAvailable	/ja/docs/Web/API/Navigator/mozIsLocallyAvailable
-/ja/docs/DOM:window.navigator.onLine	/ja/docs/orphaned/Web/API/NavigatorOnLine/onLine
+/ja/docs/DOM:window.navigator.onLine	/ja/docs/Web/API/Navigator/onLine
 /ja/docs/DOM:window.navigator.oscpu	/ja/docs/Web/API/Navigator/oscpu
 /ja/docs/DOM:window.navigator.platform	/ja/docs/orphaned/Web/API/NavigatorID/platform
 /ja/docs/DOM:window.navigator.plugins	/ja/docs/orphaned/Web/API/NavigatorPlugins/plugins
@@ -3222,7 +3222,7 @@
 /ja/docs/Notification_object/title	/ja/docs/Web/API/Notification/title
 /ja/docs/NsIDOMHTMLMediaElement	/ja/docs/orphaned/NsIDOMHTMLMediaElement
 /ja/docs/Offline_resources_in_Firefox/Using_audio_and_video_in_Firefox	/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
-/ja/docs/Online_and_offline_events	/ja/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
+/ja/docs/Online_and_offline_events	/ja/docs/Web/API/Navigator/Online_and_offline_events
 /ja/docs/Other_JavaScript_tools	/ja/docs/Tools
 /ja/docs/Parsing_and_serializing_XML	/ja/docs/Web/Guide/Parsing_and_serializing_XML
 /ja/docs/Participating_in_the_Mozilla_project	/ja/docs/orphaned/Participating_in_the_Mozilla_project
@@ -3618,9 +3618,8 @@
 /ja/docs/Web/API/NavigatorLanguage.languages	/ja/docs/orphaned/Web/API/NavigatorLanguage/languages
 /ja/docs/Web/API/NavigatorLanguage/language	/ja/docs/orphaned/Web/API/NavigatorLanguage/language
 /ja/docs/Web/API/NavigatorLanguage/languages	/ja/docs/orphaned/Web/API/NavigatorLanguage/languages
-/ja/docs/Web/API/NavigatorOnLine	/ja/docs/orphaned/Web/API/NavigatorOnLine
-/ja/docs/Web/API/NavigatorOnLine/Online_and_offline_events	/ja/docs/orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
-/ja/docs/Web/API/NavigatorOnLine/onLine	/ja/docs/orphaned/Web/API/NavigatorOnLine/onLine
+/ja/docs/Web/API/NavigatorOnLine/Online_and_offline_events	/ja/docs/Web/API/Navigator/Online_and_offline_events
+/ja/docs/Web/API/NavigatorOnLine/onLine	/ja/docs/Web/API/Navigator/onLine
 /ja/docs/Web/API/NavigatorPlugins	/ja/docs/orphaned/Web/API/NavigatorPlugins
 /ja/docs/Web/API/NavigatorPlugins/javaEnabled	/ja/docs/orphaned/Web/API/NavigatorPlugins/javaEnabled
 /ja/docs/Web/API/NavigatorPlugins/mimeTypes	/ja/docs/orphaned/Web/API/NavigatorPlugins/mimeTypes
@@ -3936,7 +3935,7 @@
 /ja/docs/Web/API/window.navigator.appName	/ja/docs/orphaned/Web/API/NavigatorID/appName
 /ja/docs/Web/API/window.navigator.battery	/ja/docs/Web/API/Navigator/battery
 /ja/docs/Web/API/window.navigator.language	/ja/docs/orphaned/Web/API/NavigatorLanguage/language
-/ja/docs/Web/API/window.navigator.onLine	/ja/docs/orphaned/Web/API/NavigatorOnLine/onLine
+/ja/docs/Web/API/window.navigator.onLine	/ja/docs/Web/API/Navigator/onLine
 /ja/docs/Web/API/window.navigator.oscpu	/ja/docs/Web/API/Navigator/oscpu
 /ja/docs/Web/API/window.navigator.platform	/ja/docs/orphaned/Web/API/NavigatorID/platform
 /ja/docs/Web/API/window.navigator.plugins	/ja/docs/orphaned/Web/API/NavigatorPlugins/plugins
