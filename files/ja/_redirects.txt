@@ -1527,7 +1527,7 @@
 /ja/docs/DOM/tableRow.rowIndex	/ja/docs/Web/API/HTMLTableRowElement/rowIndex
 /ja/docs/DOM/treeWalker	/ja/docs/Web/API/treeWalker
 /ja/docs/DOM/window	/ja/docs/Web/API/Window
-/ja/docs/DOM/window.URL	/ja/docs/conflicting/Web/API/URL
+/ja/docs/DOM/window.URL	/ja/docs/Web/API/URL
 /ja/docs/DOM/window.URL.createObjectURL	/ja/docs/Web/API/URL/createObjectURL
 /ja/docs/DOM/window.URL.revokeObjectURL	/ja/docs/Web/API/URL/revokeObjectURL
 /ja/docs/DOM/window.alert	/ja/docs/Web/API/Window/alert
@@ -3737,7 +3737,7 @@
 /ja/docs/Web/API/Web_Video_Text_Tracks_Format	/ja/docs/Web/API/WebVTT_API
 /ja/docs/Web/API/Window.dispatchEvent	/ja/docs/Web/API/EventTarget/dispatchEvent
 /ja/docs/Web/API/Window.onafterprint	/ja/docs/Web/API/WindowEventHandlers/onafterprint
-/ja/docs/Web/API/Window/URL	/ja/docs/conflicting/Web/API/URL
+/ja/docs/Web/API/Window/URL	/ja/docs/Web/API/URL
 /ja/docs/Web/API/Window/arguments	/ja/docs/orphaned/Working_with_windows_in_chrome_code
 /ja/docs/Web/API/Window/dispatchEvent	/ja/docs/Web/API/EventTarget/dispatchEvent
 /ja/docs/Web/API/Window/escape	/ja/docs/Web/JavaScript/Reference/Global_Objects/escape
@@ -3878,7 +3878,7 @@
 /ja/docs/Web/API/range.setStart	/ja/docs/Web/API/Range/setStart
 /ja/docs/Web/API/tableRow.insertCell	/ja/docs/Web/API/HTMLTableRowElement/insertCell
 /ja/docs/Web/API/tableRow.rowIndex	/ja/docs/Web/API/HTMLTableRowElement/rowIndex
-/ja/docs/Web/API/window.URL	/ja/docs/conflicting/Web/API/URL
+/ja/docs/Web/API/window.URL	/ja/docs/Web/API/URL
 /ja/docs/Web/API/window.URL.createObjectURL	/ja/docs/Web/API/URL/createObjectURL
 /ja/docs/Web/API/window.URL.revokeObjectURL	/ja/docs/Web/API/URL/revokeObjectURL
 /ja/docs/Web/API/window.alert	/ja/docs/Web/API/Window/alert
