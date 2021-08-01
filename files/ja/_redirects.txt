@@ -1473,7 +1473,7 @@
 /ja/docs/DOM/event	/ja/docs/Web/API/Event
 /ja/docs/DOM/event.altKey	/ja/docs/Web/API/MouseEvent/altKey
 /ja/docs/DOM/event.bubbles	/ja/docs/Web/API/Event/bubbles
-/ja/docs/DOM/event.button	/ja/docs/conflicting/Web/API/MouseEvent/button
+/ja/docs/DOM/event.button	/ja/docs/Web/API/MouseEvent/button
 /ja/docs/DOM/event.cancelable	/ja/docs/Web/API/Event/cancelable
 /ja/docs/DOM/event.initEvent	/ja/docs/Web/API/Event/initEvent
 /ja/docs/DOM/event.preventDefault	/ja/docs/Web/API/Event/preventDefault
@@ -1753,7 +1753,7 @@
 /ja/docs/DOM:event	/ja/docs/Web/API/Event
 /ja/docs/DOM:event.altKey	/ja/docs/Web/API/MouseEvent/altKey
 /ja/docs/DOM:event.bubbles	/ja/docs/Web/API/Event/bubbles
-/ja/docs/DOM:event.button	/ja/docs/conflicting/Web/API/MouseEvent/button
+/ja/docs/DOM:event.button	/ja/docs/Web/API/MouseEvent/button
 /ja/docs/DOM:event.cancelable	/ja/docs/Web/API/Event/cancelable
 /ja/docs/DOM:event.initEvent	/ja/docs/Web/API/Event/initEvent
 /ja/docs/DOM:event.preventDefault	/ja/docs/Web/API/Event/preventDefault
@@ -3516,7 +3516,7 @@
 /ja/docs/Web/API/Element/accessKey	/ja/docs/Web/API/HTMLElement/accessKey
 /ja/docs/Web/API/Element/currentStyle	/ja/docs/orphaned/Web/API/Element/currentStyle
 /ja/docs/Web/API/Element/name	/ja/docs/conflicting/Web/API
-/ja/docs/Web/API/Event/button	/ja/docs/conflicting/Web/API/MouseEvent/button
+/ja/docs/Web/API/Event/button	/ja/docs/Web/API/MouseEvent/button
 /ja/docs/Web/API/Event/createEvent	/ja/docs/Web/API/Document/createEvent
 /ja/docs/Web/API/EventHandler	/ja/docs/orphaned/Web/Guide/Events/Event_handlers
 /ja/docs/Web/API/EventTarget.addEventListener	/ja/docs/Web/API/EventTarget/addEventListener
