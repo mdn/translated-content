@@ -48393,13 +48393,6 @@
       "mantaroh"
     ]
   },
-  "conflicting/Mozilla/Firefox/Releases": {
-    "modified": "2020-07-16T22:35:56.505Z",
-    "contributors": [
-      "wbamberg",
-      "yyss"
-    ]
-  },
   "conflicting/Tools/Memory/Basic_operations": {
     "modified": "2020-07-16T22:36:28.978Z",
     "contributors": [
