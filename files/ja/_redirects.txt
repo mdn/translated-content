@@ -3719,7 +3719,7 @@
 /ja/docs/Web/API/WebGL_API/Lighting_in_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Lighting_in_WebGL
 /ja/docs/Web/API/WebGL_API/Using_shaders_to_apply_color_in_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 /ja/docs/Web/API/WebGL_API/Using_textures_in_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
-/ja/docs/Web/API/WebSockets_API/WebSockets_reference	/ja/docs/conflicting/Web/API/WebSockets_API
+/ja/docs/Web/API/WebSockets_API/WebSockets_reference	/ja/docs/Web/API/WebSockets_API
 /ja/docs/Web/API/WebVR_API/WebVR_concepts	/ja/docs/Web/API/WebVR_API/Concepts
 /ja/docs/Web/API/Web_Video_Text_Tracks_Format	/ja/docs/Web/API/WebVTT_API
 /ja/docs/Web/API/Window.dispatchEvent	/ja/docs/Web/API/EventTarget/dispatchEvent
@@ -4890,10 +4890,10 @@
 /ja/docs/WebGL/WebGL_best_practices	/ja/docs/Web/API/WebGL_API/WebGL_best_practices
 /ja/docs/WebSockets	/ja/docs/Web/API/WebSockets_API
 /ja/docs/WebSockets-840092-dup	/ja/docs/Web/API/WebSockets_API
-/ja/docs/WebSockets-840092-dup/WebSockets_reference	/ja/docs/conflicting/Web/API/WebSockets_API
+/ja/docs/WebSockets-840092-dup/WebSockets_reference	/ja/docs/Web/API/WebSockets_API
 /ja/docs/WebSockets-840092-dup/Writing_WebSocket_client_applications	/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications
 /ja/docs/WebSockets-840092-dup/Writing_WebSocket_servers	/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_servers
-/ja/docs/WebSockets/WebSockets_reference	/ja/docs/conflicting/Web/API/WebSockets_API
+/ja/docs/WebSockets/WebSockets_reference	/ja/docs/Web/API/WebSockets_API
 /ja/docs/WebSockets/Writing_WebSocket_client_applications	/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications
 /ja/docs/Web_Content_Accessibility_Guidelines_1.0	/ja/docs/orphaned/Web_Content_Accessibility_Guidelines_1.0
 /ja/docs/Web_Developer_Extension_(external)	https://addons.mozilla.org/ja/firefox/addon/60

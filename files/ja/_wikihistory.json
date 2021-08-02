@@ -48447,14 +48447,6 @@
       "ethertank"
     ]
   },
-  "conflicting/Web/API/WebSockets_API": {
-    "modified": "2019-03-23T23:32:19.540Z",
-    "contributors": [
-      "hamasaki",
-      "ethertank",
-      "suzukaze"
-    ]
-  },
   "conflicting/Web/API/Window/moveTo": {
     "modified": "2019-03-23T22:33:34.460Z",
     "contributors": [
