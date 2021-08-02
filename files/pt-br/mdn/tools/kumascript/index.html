@@ -15,7 +15,7 @@ translation_of: MDN/Tools/KumaScript
 ---
 <div>{{MDNSidebar}}</div><h2 id="Overview">Overview</h2>
 
-<p><span class="seoSummary">On the <a href="/en-US/docs/MDN/Kuma">Kuma</a> platform that powers MDN, the template system for automating aspects of content on the wiki is called <a class="link-https" href="https://github.com/mdn/kumascript">KumaScript</a>. KumaScript is powered by server-side JavaScript, implemented using <a class="external" href="https://nodejs.org/en/" title="https://nodejs.org/en/">Node.js</a>.</span> This article provides basic information on how to use KumaScript.</p>
+<p><span class="seoSummary">On the <a href="/en-US/docs/MDN/Kuma">Kuma</a> platform that powers MDN, the template system for automating aspects of content on the wiki is called <a class="link-https" href="https://github.com/mdn/kumascript">KumaScript</a>. KumaScript is powered by server-side JavaScript, implemented using <a class="external" href="https://nodejs.org/en/">Node.js</a>.</span> This article provides basic information on how to use KumaScript.</p>
 
 <p>For a detailed overview and Q&amp;A of KumaScript, watch the MDN dev team's <a href="https://vreplay.mozilla.com/replay/showRecordDetails.html?sortBy=date&amp;viewCount=1&amp;currentPage=1&amp;groupBy=combo&amp;roomFilter=&amp;usernameFilter=&amp;searchFilter=&amp;usernameFullFilter=&amp;myManager=-1&amp;adminManager=0&amp;webCast=0&amp;command=&amp;recId=1082&amp;auxMessage=&amp;auxMessage1=&amp;lang=en&amp;langChanged=&amp;tenantFilter=&amp;securityTab=">KumaScript Fireside Chat</a> (the meeting starts at 10 minutes into the video). KumaScript replaced DekiScript, which was the template language for MindTouch, the previous platform used by MDN.</p>
 
@@ -81,7 +81,7 @@ Hello #2</pre>
 
 <p>The data from this macro is available in template code as an object in the <code>$0</code> argument (e.g., <code>$0.Alpha</code>, <code>$0.Beta</code>, <code>$0.Foo</code>). This also allows you to express complex data structures in macro parameters that are hard or impossible to do with a simple list of parameters.</p>
 
-<p>Note that this parameter style is very picky — it must adhere to <a href="http://json.org/" title="http://json.org/">JSON syntax</a> exactly, which has some requirements about escaping characters that are easy to miss (e.g., all forward slashes are escaped). When in doubt, <a href="http://jsonlint.com/">try running your JSON through a validator</a>.</p>
+<p>Note that this parameter style is very picky — it must adhere to <a href="http://json.org/">JSON syntax</a> exactly, which has some requirements about escaping characters that are easy to miss (e.g., all forward slashes are escaped). When in doubt, <a href="http://jsonlint.com/">try running your JSON through a validator</a>.</p>
 
 <h4 id="How_to_write_in_text">How to write "\{{" in text</h4>
 
