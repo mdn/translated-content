@@ -2394,7 +2394,7 @@
 /ja/docs/HTML/Forms/The_native_form_widgets	/ja/docs/Learn/Forms/Basic_native_form_controls
 /ja/docs/HTML/Global_attributes	/ja/docs/Web/HTML/Global_attributes
 /ja/docs/HTML/HTML5	/ja/docs/orphaned/Web/Guide/HTML/HTML5
-/ja/docs/HTML/HTML5/Forms_in_HTML5	/ja/docs/orphaned/Learn/HTML/Forms/HTML5_updates
+/ja/docs/HTML/HTML5/Forms_in_HTML5	/ja/docs/Learn/Forms/HTML5_input_types
 /ja/docs/HTML/HTML5/HTML5_Tags_List	/ja/docs/Web/HTML/Element
 /ja/docs/HTML/HTML5/HTML5_Thematic_Classification	/ja/docs/orphaned/Web/Guide/HTML/HTML5
 /ja/docs/HTML/HTML5/HTML5_element_list	/ja/docs/Web/HTML/Element
@@ -4432,11 +4432,11 @@
 /ja/docs/Web/HTML/Forms/Sending_forms_through_JavaScript	/ja/docs/Learn/Forms/Sending_forms_through_JavaScript
 /ja/docs/Web/HTML/Forms/Styling_HTML_forms	/ja/docs/Learn/Forms/Styling_web_forms
 /ja/docs/Web/HTML/Forms/The_native_form_widgets	/ja/docs/Learn/Forms/Basic_native_form_controls
-/ja/docs/Web/HTML/Forms_in_HTML	/ja/docs/orphaned/Learn/HTML/Forms/HTML5_updates
+/ja/docs/Web/HTML/Forms_in_HTML	/ja/docs/Learn/Forms/HTML5_input_types
 /ja/docs/Web/HTML/Global_attributes/dropzone	/ja/docs/orphaned/Web/HTML/Global_attributes/dropzone
 /ja/docs/Web/HTML/HTML5	/ja/docs/orphaned/Web/Guide/HTML/HTML5
 /ja/docs/Web/HTML/HTML5/Constraint_validation	/ja/docs/orphaned/Web/Guide/HTML/HTML5/Constraint_validation
-/ja/docs/Web/HTML/HTML5/Forms_in_HTML5	/ja/docs/orphaned/Learn/HTML/Forms/HTML5_updates
+/ja/docs/Web/HTML/HTML5/Forms_in_HTML5	/ja/docs/Learn/Forms/HTML5_input_types
 /ja/docs/Web/HTML/HTML5/HTML5_Thematic_Classification	/ja/docs/orphaned/Web/Guide/HTML/HTML5
 /ja/docs/Web/HTML/HTML5/HTML5_element_list	/ja/docs/Web/HTML/Element
 /ja/docs/Web/HTML/HTML5/HTML5_のフォーム	/ja/docs/Learn/Forms
