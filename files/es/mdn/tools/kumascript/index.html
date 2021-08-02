@@ -10,7 +10,7 @@ original_slug: MDN/Tools/Introduction_to_KumaScript
 
 <h2 id="Vistazo_general">Vistazo general</h2>
 
-<p>En el verano de 2012, MDN  cambió a una nueva plataforma wiki llamada <a class="link-https" href="https://wiki.mozilla.org/MDN/Kuma" title="https://wiki.mozilla.org/MDN/Kuma">Kuma</a>. Esta reemplaza el lenguaje de plantilla <a class="external" href="http://developer.mindtouch.com/en/docs/DekiScript" title="http://developer.mindtouch.com/en/docs/DekiScript">DekiScript</a> con un nuevo sistema llamado <a class="link-https" href="https://github.com/mozilla/kumascript" title="https://github.com/mozilla/kumascript">KumaScript</a>. KumaScript se alimenta de JavaScript del lado del servidor, usando <a class="external" href="http://nodejs.org/" title="http://nodejs.org/">Node.js</a>. Este artículo provee informaciónde cómo usar KumaScript y cómo actualizar scripts migrados parcialmente desde MindTouch.</p>
+<p>En el verano de 2012, MDN  cambió a una nueva plataforma wiki llamada <a class="link-https" href="https://wiki.mozilla.org/MDN/Kuma" title="https://wiki.mozilla.org/MDN/Kuma">Kuma</a>. Esta reemplaza el lenguaje de plantilla <a class="external" href="http://developer.mindtouch.com/en/docs/DekiScript" title="http://developer.mindtouch.com/en/docs/DekiScript">DekiScript</a> con un nuevo sistema llamado <a class="link-https" href="https://github.com/mozilla/kumascript" title="https://github.com/mozilla/kumascript">KumaScript</a>. KumaScript se alimenta de JavaScript del lado del servidor, usando <a class="external" href="http://nodejs.org/">Node.js</a>. Este artículo provee informaciónde cómo usar KumaScript y cómo actualizar scripts migrados parcialmente desde MindTouch.</p>
 
 <p>Para detalles y preguntas frecuentes sobre KumaScript, mira el <a href="https://vreplay.mozilla.com/replay/showRecordDetails.html?sortBy=date&amp;viewCount=1&amp;currentPage=1&amp;groupBy=combo&amp;roomFilter=&amp;usernameFilter=&amp;searchFilter=&amp;usernameFullFilter=&amp;myManager=-1&amp;adminManager=0&amp;webCast=0&amp;command=&amp;recId=1082&amp;auxMessage=&amp;auxMessage1=&amp;lang=en&amp;langChanged=&amp;tenantFilter=&amp;securityTab=" style="line-height: 1.5;">KumaScript Fireside Chat</a> del equipo de desarrolladores<span style="line-height: 1.5;"> MDN</span><span style="line-height: 1.5;">.</span></p>
 
@@ -33,7 +33,7 @@ original_slug: MDN/Tools/Introduction_to_KumaScript
 
 <h2 id="Aspectos_básicos">Aspectos básicos</h2>
 
-<p>KumaScript funciona permitiendo a <em>wiki de confianza</em> escribir <a class="link-https" href="https://github.com/visionmedia/ejs" title="https://github.com/visionmedia/ejs">plantillas JavaScript ensambladas</a>. Estas plantillas pueden ser invocadas en el contenido del documento por cualquier editor <em>wiki</em> mediante el uso de <a class="link-https" href="/en-US/docs/KumaTests/hello_test?raw=1" title="/en-US/docs/KumaTests/hello_test?raw=1">macros</a>.</p>
+<p>KumaScript funciona permitiendo a <em>wiki de confianza</em> escribir <a class="link-https" href="https://github.com/visionmedia/ejs">plantillas JavaScript ensambladas</a>. Estas plantillas pueden ser invocadas en el contenido del documento por cualquier editor <em>wiki</em> mediante el uso de <a class="link-https" href="/en-US/docs/KumaTests/hello_test?raw=1" title="/en-US/docs/KumaTests/hello_test?raw=1">macros</a>.</p>
 
 <table style="display: block;">
  <tbody>
@@ -97,7 +97,7 @@ Hello #2</pre>
 
 <p>Los datos de esta macro estarán disponibles en un código de plantilla como un objeto en el argumento <code>$0</code> (por ejemplo, <code>$0.Alpha</code>, <code>$0.Beta</code>, <code>$0.Foo</code>). Esto también te permite expresar estructuras de datos complejos en los parámetros de macro que son difíciles o imposibles de hacer con una simple lista de parámetros.</p>
 
-<p>Nota que el estilo de este parámetro es muy complejo. Se debe adherir exactamente a la <a href="http://json.org/" title="http://json.org/">sintaxis JSON</a>, que tiene algunas exigencias escurridizas que son fáciles de pasar por alto (por ejemplo, todas las barras (/) llevan escapes). Cuando haya dudas, <a href="http://jsonlint.com/" title="http://jsonlint.com/">intenta ejecutar tu JSON con un validador</a>.</p>
+<p>Nota que el estilo de este parámetro es muy complejo. Se debe adherir exactamente a la <a href="http://json.org/" title="http://json.org/">sintaxis JSON</a>, que tiene algunas exigencias escurridizas que son fáciles de pasar por alto (por ejemplo, todas las barras (/) llevan escapes). Cuando haya dudas, <a href="http://jsonlint.com/">intenta ejecutar tu JSON con un validador</a>.</p>
 
 <h4 id="Cómo_escribir">Cómo escribir "\{{"</h4>
 
@@ -107,7 +107,7 @@ Hello #2</pre>
 
 <h3 id="Sintaxis_de_la_plantilla">Sintaxis de la plantilla</h3>
 
-<p>Las plantillas KumaScript son procesadas por un <a class="link-https" href="https://github.com/visionmedia/ejs" title="https://github.com/visionmedia/ejs">motor de plantillas JavaScript ensamblado</a> con estas simples reglas:</p>
+<p>Las plantillas KumaScript son procesadas por un <a class="link-https" href="https://github.com/visionmedia/ejs">motor de plantillas JavaScript ensamblado</a> con estas simples reglas:</p>
 
 <ul>
  <li>La mayoría del texto es tratado como salida e incluido en el flujo de salida.</li>
@@ -127,7 +127,7 @@ Hello #&lt;%= i %&gt;
 
   <p>Nota como el JS está contenido entre <code>&lt;% ... %&gt;</code>, y la salida va en el espacio entre <code>%&gt; ... &lt;%</code>. El bucle <em>for</em> en JS puede comenzar en un bloque <code>&lt;% %&gt;</code> , luego el flujo de salida, y terminar en un segundo bloque JS <code>&lt;% %&gt;</code>.</p>
  </li>
- <li>For more details on EJS syntax, <a class="link-https" href="https://github.com/visionmedia/ejs" title="https://github.com/visionmedia/ejs">check out the upstream module documentation</a>.</li>
+ <li>For more details on EJS syntax, <a class="link-https" href="https://github.com/visionmedia/ejs">check out the upstream module documentation</a>.</li>
 </ul>
 
 <h2 id="Características_avanzadas">Características avanzadas</h2>
@@ -136,7 +136,7 @@ Hello #&lt;%= i %&gt;
 
 <h3 id="Variables_de_entorno">Variables de entorno</h3>
 
-<p>Cuando la wiki hace una llamada al servicio KumaScript, <a class="link-https" href="https://github.com/mozilla/kuma/blob/master/apps/wiki/kumascript.py#L130" title="https://github.com/mozilla/kuma/blob/master/apps/wiki/views.py#L537">pasa por una part del contexto del documento actual</a> que KumaScript pone a disposición de las plantillas como variables:</p>
+<p>Cuando la wiki hace una llamada al servicio KumaScript, <a class="link-https" href="https://github.com/mozilla/kuma/blob/master/apps/wiki/kumascript.py#L130">pasa por una part del contexto del documento actual</a> que KumaScript pone a disposición de las plantillas como variables:</p>
 
 <dl>
  <dt><code>env.path</code></dt>
@@ -214,7 +214,7 @@ Hello #&lt;%= i %&gt;
 
 <h4 id="Métodos_incorporados">Métodos incorporados</h4>
 
-<p>Es probable que esta documentación mantenida manualmente quede desactualizada con respecto al código. Teniendo en cuanta eso, <a class="link-https" href="https://github.com/mozilla/kumascript/blob/master/lib/kumascript/api.js#L208" title="https://github.com/mozilla/kumascript/blob/master/lib/kumascript/api.js#L208">siempre puedes verificar el último estado de las APIs incorporadas en la fuente de KumaScript</a>. Pero hay una selección de métodos útiles expuestos a plantillas:</p>
+<p>Es probable que esta documentación mantenida manualmente quede desactualizada con respecto al código. Teniendo en cuanta eso, <a class="link-https" href="https://github.com/mozilla/kumascript/blob/master/lib/kumascript/api.js#L208">siempre puedes verificar el último estado de las APIs incorporadas en la fuente de KumaScript</a>. Pero hay una selección de métodos útiles expuestos a plantillas:</p>
 
 <dl>
  <dt><code>md5(string)</code></dt>
@@ -229,7 +229,7 @@ Hello #&lt;%= i %&gt;
  <dt><code>cacheFn(key, timeout, function_to_cache)</code></dt>
  <dd>Usando la key y duración de entrada de caché proporcionadas, cachea los resultados de la función proporcionada. Prioriza el valor de <code>env.cache_control</code> para invalidar el cache en <code>no-cache</code>, que puede ser enviado por un usuario logueado  que tipee shift-refresh.</dd>
  <dt><code>request</code></dt>
- <dd>Acceso al <a class="link-https" href="https://github.com/mikeal/request" title="https://github.com/mikeal/request"><code>mikeal/request</code></a>, una librería para hacer consultas HTTP. Usar este módulo en las plantillas KumaScriptno es muy amigable, así que quizá desees envolver uso en APIs de módulo que simplifiquen las cosas.</dd>
+ <dd>Acceso al <a class="link-https" href="https://github.com/mikeal/request"><code>mikeal/request</code></a>, una librería para hacer consultas HTTP. Usar este módulo en las plantillas KumaScriptno es muy amigable, así que quizá desees envolver uso en APIs de módulo que simplifiquen las cosas.</dd>
 </dl>
 
 <h4 id="Módulos_de_API_incorporados">Módulos de API incorporados</h4>
@@ -334,7 +334,7 @@ El resultado de 2 + 2 = &lt;%= math_lib.add(2, 2) %&gt;
 
 <p>To find examples of templates that have already been repaired, <a class="link-https" href="/en-US/docs/tag/ks-fixed" title="/en-US/docs/tag/ks-fixed">check here</a>: <a class="link-https" href="/en-US/docs/tag/ks-fixed" rel="freelink">/en...s/tag/ks-fixed</a>.</p>
 
-<p>Check the <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=714804">template usage stats bug</a> file attachments to help prioritize templates to fix. If you know your way around <code>gzip</code> and <code>grep</code>, <a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=591545" title="https://bugzilla.mozilla.org/attachment.cgi?id=591545">this attachment</a> (a 1.5MB tab-delimited file listing template/document pairs) can help tell you what templates are used on which pages.</p>
+<p>Check the <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=714804">template usage stats bug</a> file attachments to help prioritize templates to fix. If you know your way around <code>gzip</code> and <code>grep</code>, <a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=591545">this attachment</a> (a 1.5MB tab-delimited file listing template/document pairs) can help tell you what templates are used on which pages.</p>
 
 <p>As you repair templates, please uncheck the "Template" review checkbox and add the tag "ks-fixed", which will keep the above lists accurate.</p>
 
@@ -657,5 +657,5 @@ if ($1 &amp;&amp; string.length($1)) {
 <ul>
  <li><a href="/en-US/docs/Project:Getting_started_with_Kuma" title="Getting started with Kuma">Getting started with Kuma</a></li>
  <li><a href="/en-US/docs/Project:KumaScript_reference" title="Project:en/KumaScript reference">KumaScript reference</a></li>
- <li><a class="link-https" href="https://wiki.mozilla.org/MDN/Kuma" title="https://wiki.mozilla.org/MDN/Kuma">Kuma wiki</a></li>
+ <li><a class="link-https" href="https://wiki.mozilla.org/MDN/Kuma">Kuma wiki</a></li>
 </ul>
