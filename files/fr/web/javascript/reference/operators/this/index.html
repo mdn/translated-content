@@ -16,8 +16,6 @@ original_slug: Web/JavaScript/Reference/Opérateurs/L_opérateur_this
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-this.html")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="syntaxbox">this</pre>
@@ -42,7 +40,7 @@ console.log(window.b); // "MDN"
 console.log(b);        // "MDN"
 </pre>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Note :</strong> Il est également possible d'accéder au contexte global avec la propriété {{jsxref("globalThis")}} quel que soit le contexte utilisé pour l'exécution.</p>
 </div>
 
@@ -75,7 +73,7 @@ f2() === undefined; // true
 
 <p>En mode strict, la valeur de <code>this</code> est conservée (il reste le même) entre le moment de sa définition et l'entrée dans le contexte d'exécution. S'il n'est pas défini, il reste <code>undefined</code>. Il pourrait être défini avec n'importe quelle autre valeur, telle que <code>null</code> ou <code>42</code> ou <code>"Je ne suis pas this"</code>.</p>
 
-<div class="note"><strong>Note :</strong> Dans ce deuxième exemple,<code>this</code> vaut {{jsxref("undefined")}} car <code>f2</code> a été appelé sans « base » (ex. : <code>window.f2()</code>). Cette fonctionnalité ne fut pas correctement implémentée dans certains navigateurs aux débuts du mode strict, en effet, certains renvoyaient alors l'objet <code>window</code>.</div>
+<div class="note"><p><strong>Note :</strong> Dans ce deuxième exemple,<code>this</code> vaut {{jsxref("undefined")}} car <code>f2</code> a été appelé sans « base » (ex. : <code>window.f2()</code>). Cette fonctionnalité ne fut pas correctement implémentée dans certains navigateurs aux débuts du mode strict, en effet, certains renvoyaient alors l'objet <code>window</code>.</p></div>
 
 <h3 id="call_et_apply"><code>call</code> et <code>apply</code></h3>
 
@@ -279,7 +277,7 @@ console.log(o.phase, o.moduleRéel); // logs -0.78 1.4142
 <p>Lorsqu'une fonction est utilisée comme constructeur (c'est-à-dire qu'elle est invoquée avec le mot-clé {{jsxref("Opérateurs/L_opérateur_new","new")}}), le <code>this</code> correspondant sera lié au nouvel objet en train d'être construit.</p>
 
 <div class="note">
-<p><strong>Note : </strong>Par défaut, un constructeur renverra l'objet auquel <code>this</code> fait référence. Cependant si la valeur de retour du constructeur est définie et est un objet, ce sera elle qui sera renvoyée (sinon ce sera la valeur de <code>this</code>).</p>
+<p><strong>Note :</strong> Par défaut, un constructeur renverra l'objet auquel <code>this</code> fait référence. Cependant si la valeur de retour du constructeur est définie et est un objet, ce sera elle qui sera renvoyée (sinon ce sera la valeur de <code>this</code>).</p>
 </div>
 
 <pre class="brush:js">/*

@@ -11,7 +11,7 @@ original_slug: Web/JavaScript/Guide/Expressions_régulières
 ---
 <p>{{jsSidebar("JavaScript Guide")}}{{PreviousNext("Web/JavaScript/Guide/Formatage_du_texte", "Web/JavaScript/Guide/Collections_indexées")}}</p>
 
-<p class="summary">Les expressions rationnelles sont des motifs utilisés pour correspondre à certaines combinaisons de caractères au sein de chaînes de caractères. En JavaScript, les expressions rationnelles sont également des objets. Ces motifs sont utilisés avec les méthodes {{jsxref("RegExp.exec", "exec")}} et {{jsxref("RegExp.test", "test")}} de {{jsxref("RegExp")}}, et avec les méthodes {{jsxref("String.match", "match")}}, {{jsxref("String.matchAll", "matchAll")}}, {{jsxref("String.replace", "replace")}}, {{jsxref("String.search", "search")}} et {{jsxref("String.split", "split")}} de {{jsxref("String")}}. Ce chapitre explique comment utiliser les expressions rationnelles en JavaScript (aussi appelées expressions régulières ou « <em>RegExp</em> »).</p>
+<p>Les expressions rationnelles sont des motifs utilisés pour correspondre à certaines combinaisons de caractères au sein de chaînes de caractères. En JavaScript, les expressions rationnelles sont également des objets. Ces motifs sont utilisés avec les méthodes {{jsxref("RegExp.exec", "exec")}} et {{jsxref("RegExp.test", "test")}} de {{jsxref("RegExp")}}, et avec les méthodes {{jsxref("String.match", "match")}}, {{jsxref("String.matchAll", "matchAll")}}, {{jsxref("String.replace", "replace")}}, {{jsxref("String.search", "search")}} et {{jsxref("String.split", "split")}} de {{jsxref("String")}}. Ce chapitre explique comment utiliser les expressions rationnelles en JavaScript (aussi appelées expressions régulières ou « <em>RegExp</em> »).</p>
 
 <h2 id="Créer_une_expression_rationnelle">Créer une expression rationnelle</h2>
 
@@ -83,7 +83,7 @@ original_slug: Web/JavaScript/Guide/Expressions_régulières
  </thead>
  <tbody>
   <tr>
-   <td><a href="#special-backslash" id="special-backslash" name="special-backslash"><code>\</code></a></td>
+   <td><code>\</code></td>
    <td>
     <p>Correspond selon les règles suivantes :<br>
      <br>
@@ -95,7 +95,7 @@ original_slug: Web/JavaScript/Guide/Expressions_régulières
    </td>
   </tr>
   <tr>
-   <td><a href="#special-caret" id="special-caret" name="special-caret"><code>^</code></a></td>
+   <td><code>^</code></td>
    <td>Correspond au début la séquence. Si le marqueur (<em>flag</em>) de lignes multiples vaut <code>true</code>, il correspondra également immédiatement après un caractère de saut de ligne.<br>
     <br>
     Ainsi, <code>/^A/</code> ne correspond pas au 'A' de "un A", mais correspond au 'A' de "Arceau".<br>
@@ -103,7 +103,7 @@ original_slug: Web/JavaScript/Guide/Expressions_régulières
     Le caractère '<code>^</code>' possède un sens différent lorsqu'il est utilisé dans un motif d'ensemble de caractères. Voir les <a href="#special-negated-character-set">compléments sur les ensembles de caractères </a>pour plus de détails et d'exemples.</td>
   </tr>
   <tr>
-   <td><a href="#special-dollar" id="special-dollar" name="special-dollar"><code>$</code></a></td>
+   <td><code>$</code></td>
    <td>
     <p>Correspond à la fin de la séquence. Si le marqueur (<em>flag</em>) de lignes multiples vaut true, il correspondra également immédiatement avant un caractère de saut de ligne.</p>
 
@@ -111,7 +111,7 @@ original_slug: Web/JavaScript/Guide/Expressions_régulières
    </td>
   </tr>
   <tr>
-   <td><a href="#special-asterisk" id="special-asterisk" name="special-asterisk"><code>*</code></a></td>
+   <td><code>*</code></td>
    <td>
     <p>Correspond à l'expression précédente qui est répétée 0 ou plusieurs fois. Équivalent à <code>{0,}</code></p>
 
@@ -119,7 +119,7 @@ original_slug: Web/JavaScript/Guide/Expressions_régulières
    </td>
   </tr>
   <tr>
-   <td><a href="#special-plus" id="special-plus" name="special-plus"><code>+</code></a></td>
+   <td><code>+</code></td>
    <td>
     <p>Correspond à l'expression précédente qui est répétée une ou plusieurs fois. C'est équivalent à <code>{1,}</code>.</p>
 
@@ -127,7 +127,7 @@ original_slug: Web/JavaScript/Guide/Expressions_régulières
    </td>
   </tr>
   <tr>
-   <td><a href="#special-questionmark" id="special-questionmark" name="special-questionmark"><code>?</code></a></td>
+   <td><code>?</code></td>
    <td>Correspond à l'expression précédente qui est présente une fois ou pas du tout. C'est équivalent à <code>{0,1}</code>.<br>
     <br>
     Ainsi, <code>/e?le?/</code> correspond au 'el' dans "gel" et au 'le' dans "angle" mais aussi au 'l' dans "Oslo".<br>
@@ -137,7 +137,7 @@ original_slug: Web/JavaScript/Guide/Expressions_régulières
     Ce symbole est également utilisé dans les tests de présence autour de l'expression, décrits par les lignes <code>x(?=y)</code> et <code>x(?!y)</code> de ce tableau.</td>
   </tr>
   <tr>
-   <td><a href="#special-dot" id="special-dot" name="special-dot"><code>.</code></a></td>
+   <td><code>.</code></td>
    <td>
     <p>Par défaut, (Le point) correspond à n'importe quel caractère excepté un caractère de saut de ligne.</p>
 
@@ -147,7 +147,7 @@ original_slug: Web/JavaScript/Guide/Expressions_régulières
    </td>
   </tr>
   <tr>
-   <td><a href="#special-capturing-parentheses" id="special-capturing-parentheses" name="special-capturing-parentheses"><code>(x)</code></a></td>
+   <td><code>(x)</code></td>
    <td>
     <p>Correspond à 'x' et garde la correspondance en mémoire. Les parenthèses permettent de <em>capturer </em>l'expression dans un « groupe ».<br>
      <br>
@@ -155,11 +155,11 @@ original_slug: Web/JavaScript/Guide/Expressions_régulières
    </td>
   </tr>
   <tr>
-   <td><a href="#special-non-capturing-parentheses" id="special-non-capturing-parentheses" name="special-non-capturing-parentheses"><code>(?:x)</code></a></td>
+   <td><code>(?:x)</code></td>
    <td>Correspond à 'x' mais ne garde pas la correspondance en mémoire. Les parenthèses ne <em>capturent</em> pas l'expression et permettent d'utiliser des sous-expressions d'une expression régulière pour travailler plus finement. L'expression <code>/(?:zoo){1,2}/</code> sans parenthèses non-capturantes <code>les caractères {1,2}</code> ne s'appliqueraient qu'au dernier 'o' de 'zoo'. Avec les parenthèses capturantes, <code>{1,2}</code> s'applique au mot entier 'zoo'. Pour plus d'informations, voir <a href="#parentheses">Utiliser les parenthèses</a> ci-après.</td>
   </tr>
   <tr>
-   <td><a href="#special-lookahead" id="special-lookahead" name="special-lookahead"><code>x(?=y)</code></a></td>
+   <td><code>x(?=y)</code></td>
    <td>
     <p>Correspond à 'x' seulement s'il est suivi de 'y'. On appelle cela un test de succession (<em>lookahead</em>).</p>
 
@@ -167,7 +167,7 @@ original_slug: Web/JavaScript/Guide/Expressions_régulières
    </td>
   </tr>
   <tr>
-   <td><a href="#special-negated-look-ahead" id="special-negated-look-ahead" name="special-negated-look-ahead"><code>x(?!y)</code></a></td>
+   <td><code>x(?!y)</code></td>
    <td>
     <p>Correspond à 'x' seulement si 'x' n'est pas suivi de 'y'.</p>
 
@@ -195,7 +195,7 @@ original_slug: Web/JavaScript/Guide/Expressions_régulières
    </td>
   </tr>
   <tr>
-   <td><a href="#special-or" id="special-or" name="special-or"><code>x|y</code></a></td>
+   <td><code>x|y</code></td>
    <td>
     <p>Correspond à 'x' ou 'y'.</p>
 
@@ -203,7 +203,7 @@ original_slug: Web/JavaScript/Guide/Expressions_régulières
    </td>
   </tr>
   <tr>
-   <td><a href="#special-quantifier" id="special-quantifier" name="special-quantifier"><code>{n}</code></a></td>
+   <td><code>{n}</code></td>
    <td>Correspond pour exactement n occurences de l'expression précédente. N doit être un entier positif.<br>
     <br>
     Ainsi, <code>/a{2}/</code> ne correspond pas au 'a' de "Mozilla" mais correspond à tous les 'a' de "Mozilaa" et aux deux premiers 'a' de "Mozillaaa".</td>
@@ -217,7 +217,7 @@ original_slug: Web/JavaScript/Guide/Expressions_régulières
    </td>
   </tr>
   <tr>
-   <td><a href="#special-quantifier-range" id="special-quantifier-range" name="special-quantifier-range"><code>{n,m}</code></a></td>
+   <td><code>{n,m}</code></td>
    <td>
     <p>Lorsque <code>n</code> et <code>m</code> sont des entiers positifs, cela correspond à au moins <code>n</code> occurences de l'expression précédente et à au plus <code>m</code> occurrences. Lorsque <code>m</code> n'est pas utilisé, la valeur par défaut correspondante sera l'infini.</p>
 
@@ -225,13 +225,13 @@ original_slug: Web/JavaScript/Guide/Expressions_régulières
    </td>
   </tr>
   <tr>
-   <td><a href="#special-character-set" id="special-character-set" name="special-character-set"><code>[xyz]</code></a></td>
+   <td><code>[xyz]</code></td>
    <td>Un ensemble de caractère. Ce type de motif correspond pour n'importe quel caractètre présent entre les crochets, y compris les <a href="/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Les_caractères_d'échappement">séquences d'échappement</a>. Les caractères spéciaux comme le point (.) et l'astérisque ne sont pas considérés comme spéciaux au sein d'un ensemble et n'ont donc pas besoin d'être échappés. Il est possible de donner un ensemble sur un intervalle de caractères en utilisant un tiret (-), comme le montre l'exemple qui suit.<br>
     <br>
     Le motif <code>[a-d]</code>, aura les mêmes correspondances que <code>[abcd]</code>, correspondant au 'b' de "bulle" et au 'c' de "ciel". Les motifis <code>/[a-z.]+/ </code>et <code>/[\w.]+/</code> correspondront pour la chaîne entirère : "Adre.ss.e".</td>
   </tr>
   <tr>
-   <td><a href="#special-negated-character-set" id="special-negated-character-set" name="special-negated-character-set"><code>[^xyz]</code></a></td>
+   <td><code>[^xyz]</code></td>
    <td>
     <p>Exclusion d'un ensemble de caractères. Cela correspond à tout ce qui n'est pas compris entre crochets. Il est possible de fournir un intervalle de caractères en utilisant un tiret (-). Les autres règles qui s'appliquent pour l'ensemble de caractères (ci-avant) s'appliquent également ici.</p>
 
@@ -239,11 +239,11 @@ original_slug: Web/JavaScript/Guide/Expressions_régulières
    </td>
   </tr>
   <tr>
-   <td><a href="#special-backspace" id="special-backspace" name="special-backspace"><code>[\b]</code></a></td>
+   <td><code>[\b]</code></td>
    <td>Correspond pour un retour arrière (U+0008). (À ne pas confondre avec <code>\b</code>.)</td>
   </tr>
   <tr>
-   <td><a href="#special-word-boundary" id="special-word-boundary" name="special-word-boundary"><code>\b</code></a></td>
+   <td><code>\b</code></td>
    <td>
     <p>Correspond à la position d'uneAfter the <em>limite de mot</em>. Une limite de mot correspond à la position où un caractère d'un mot n'est pas suivi ou précédé d'un autre caractère de mot. Il faut savoir que la limite correspondante n'est pas incluse dans le résultat. Autrement dit, la longueur d'une telle correspondance est nulle. (À ne pas confondre avec <code>[\b]</code>.)</p>
 
@@ -259,7 +259,7 @@ original_slug: Web/JavaScript/Guide/Expressions_régulières
    </td>
   </tr>
   <tr>
-   <td><a href="#special-non-word-boundary" id="special-non-word-boundary" name="special-non-word-boundary"><code>\B</code></a></td>
+   <td><code>\B</code></td>
    <td>
     <p>Correspond à une "non-<em>limite de mot</em>". Cela correspond pour les cas suivants :</p>
 
@@ -275,7 +275,7 @@ original_slug: Web/JavaScript/Guide/Expressions_régulières
    </td>
   </tr>
   <tr>
-   <td><a href="#special-control" id="special-control" name="special-control"><code>\c<em>X</em></code></a></td>
+   <td><code>\c<em>X</em></code></td>
    <td>
     <p>Étant donné un caractère <em>X</em> compris entre A et Z, cela correspond au caractère de contrôle dans une chaîne de caractères.</p>
 
@@ -283,7 +283,7 @@ original_slug: Web/JavaScript/Guide/Expressions_régulières
    </td>
   </tr>
   <tr>
-   <td><a href="#special-digit" id="special-digit" name="special-digit"><code>\d</code></a></td>
+   <td><code>\d</code></td>
    <td>
     <p>Correspond à un chiffre et est équivalent à <code>[0-9]</code>.</p>
 
@@ -291,7 +291,7 @@ original_slug: Web/JavaScript/Guide/Expressions_régulières
    </td>
   </tr>
   <tr>
-   <td><a href="#special-non-digit" id="special-non-digit" name="special-non-digit"><code>\D</code></a></td>
+   <td><code>\D</code></td>
    <td>
     <p>Correspond à tout caractère qui n'est pas un chiffre et est équivalent à<code> [^0-9]</code>.</p>
 
@@ -299,19 +299,19 @@ original_slug: Web/JavaScript/Guide/Expressions_régulières
    </td>
   </tr>
   <tr>
-   <td><a href="#special-form-feed" id="special-form-feed" name="special-form-feed"><code>\f</code></a></td>
+   <td><code>\f</code></td>
    <td>Correspond à un saut de page (U+000C).</td>
   </tr>
   <tr>
-   <td><a href="#special-line-feed" id="special-line-feed" name="special-line-feed"><code>\n</code></a></td>
+   <td><code>\n</code></td>
    <td>Correspond à un saut de ligne (U+000A).</td>
   </tr>
   <tr>
-   <td><a href="#special-carriage-return" id="special-carriage-return" name="special-carriage-return"><code>\r</code></a></td>
+   <td><code>\r</code></td>
    <td>Correspond à un retour chariot (U+000D).</td>
   </tr>
   <tr>
-   <td><a href="#special-white-space" id="special-white-space" name="special-white-space"><code>\s</code></a></td>
+   <td><code>\s</code></td>
    <td>
     <p>Correspond à un blanc (cela comprend les espace, tabulation, saut de ligne ou saut de page). C'est équivalent à <code>[ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>.</p>
 
@@ -319,7 +319,7 @@ original_slug: Web/JavaScript/Guide/Expressions_régulières
    </td>
   </tr>
   <tr>
-   <td><a href="#special-non-white-space" id="special-non-white-space" name="special-non-white-space"><code>\S</code></a></td>
+   <td><code>\S</code></td>
    <td>
     <p>Correspond à un caractère qui n'est pas un blanc. C'est équivalent à <code>[^ \f\n\r\t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]</code>.</p>
 
@@ -327,15 +327,15 @@ original_slug: Web/JavaScript/Guide/Expressions_régulières
    </td>
   </tr>
   <tr>
-   <td><a href="#special-tab" id="special-tab" name="special-tab"><code>\t</code></a></td>
+   <td><code>\t</code></td>
    <td>Correspond à une tabulation (U+0009).</td>
   </tr>
   <tr>
-   <td><a href="#special-vertical-tab" id="special-vertical-tab" name="special-vertical-tab"><code>\v</code></a></td>
+   <td><code>\v</code></td>
    <td>Correspond à une tabulation verticale (U+000B).</td>
   </tr>
   <tr>
-   <td><a href="#special-word" id="special-word" name="special-word"><code>\w</code></a></td>
+   <td><code>\w</code></td>
    <td>
     <p>Correspond à n'importe quel caractère alphanumérique, y compris le tiret bas. C'est équivalent à <code>[A-Za-z0-9_]</code>.</p>
 
@@ -343,7 +343,7 @@ original_slug: Web/JavaScript/Guide/Expressions_régulières
    </td>
   </tr>
   <tr>
-   <td><a href="#special-non-word" id="special-non-word" name="special-non-word"><code>\W</code></a></td>
+   <td><code>\W</code></td>
    <td>
     <p>Correspond à n'importe quel caractère n'étant pas un caractère de mot. Cela est équivalent à <code>[^A-Za-z0-9_]</code>.</p>
 
@@ -351,7 +351,7 @@ original_slug: Web/JavaScript/Guide/Expressions_régulières
    </td>
   </tr>
   <tr>
-   <td><a href="#special-backreference" id="special-backreference" name="special-backreference"><code>\<em>n</em></code></a></td>
+   <td><code>\n</code></td>
    <td>
     <p>Soit <em>n</em> un entier strictement positif, cela fait référence au groupe de la n-ième expression entre parenthèses (en comptant les parenthèses ouvrantes).</p>
 
@@ -359,15 +359,15 @@ original_slug: Web/JavaScript/Guide/Expressions_régulières
    </td>
   </tr>
   <tr>
-   <td><a href="#special-null" id="special-null" name="special-null"><code>\0</code></a></td>
+   <td><code>\0</code></td>
    <td>Correspond au caractère NULL (U+0000). Il ne doit pas être suivi d'un autre chiffre car <code>\0&lt;chiffres&gt;</code> est une <a href="/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Les_caractères_d'échappement">séquence d'échappement</a> pour les nombres en notation octale (si besoin d'utiliser un chiffre ensuite, on pourra utiliser la forme <code>\x00</code>, cf. ci-après).</td>
   </tr>
   <tr>
-   <td><a href="#special-hex-escape" id="special-hex-escape" name="special-hex-escape"><code>\xhh</code></a></td>
+   <td><code>\xhh</code></td>
    <td>Correspond au caractère dont le code hexadécimal est hh (deux chiffres hexadécimaux).</td>
   </tr>
   <tr>
-   <td><a href="#special-unicode-escape" id="special-unicode-escape" name="special-unicode-escape"><code>\uhhhh</code></a></td>
+   <td><code>\uhhhh</code></td>
    <td>Correspond au caractère dont le code est hhhh (quatre chiffres hexadécimaux).</td>
   </tr>
   <tr>
@@ -391,7 +391,7 @@ original_slug: Web/JavaScript/Guide/Expressions_régulières
 <p><strong>Note :</strong> Voir la page sur la méthode <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/replace">String.replace</a></code> pour plus d'informations.</p>
 </div>
 
-<h3 id="Utiliser_les_parenthèses"><a id="parentheses" name="parentheses">Utiliser les parenthèses</a></h3>
+<h3 id="Utiliser_les_parenthèses">Utiliser les parenthèses</h3>
 
 <p>Les parenthèses encadrant une partie du motif de l'expression régulière peuvent être utilisées pour garder en mémoire les correspondances. Cela pourra être utile pour réutiliser la correspondance trouvée.</p>
 
@@ -548,7 +548,7 @@ console.log(newstr);
 
 <p>Cela affichera "toto, Titi".</p>
 
-<h3 id="Effectuer_des_recherches_avancées_en_utilisant_les_marqueurs_flags"><a id="recherches_flag" name="recherches_flag">Effectuer des recherches avancées en utilisant les marqueurs (<em>flags</em>)</a></h3>
+<h3 id="Effectuer_des_recherches_avancées_en_utilisant_les_marqueurs_flags">Effectuer des recherches avancées en utilisant les marqueurs (<em>flags</em>)</h3>
 
 <p>Les expressions rationnelles peuvent être utilisées avec des marqueurs optionnels permettant des recherches globales et/ou ne respectant pas la casse. Ces marqueurs peuvent être utilisés séparement ou ensemble, quel que soit l'ordre. Ils font partie de l'expression régulière.</p>
 
