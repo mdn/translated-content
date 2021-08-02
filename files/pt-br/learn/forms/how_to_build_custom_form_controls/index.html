@@ -311,7 +311,7 @@ original_slug: Web/Guide/HTML/Forms/How_to_build_custom_form_widgets
 </div>
 
 <div class="note">
-<p><strong>Note:</strong> Creating reusable widgets is something that can be a bit tricky. The <a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html" rel="external" title="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html">W3C Web Component draft</a> is one of the answers to this specific issue. <a href="http://x-tags.org/" rel="external">The X-Tag project</a> is a test implementation of this specification; we encourage you to take a look at it.</p>
+<p><strong>Note:</strong> Creating reusable widgets is something that can be a bit tricky. The <a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html" rel="external">W3C Web Component draft</a> is one of the answers to this specific issue. <a href="http://x-tags.org/" rel="external">The X-Tag project</a> is a test implementation of this specification; we encourage you to take a look at it.</p>
 </div>
 
 <h3 id="Why_isn't_it_working">Why isn't it working?</h3>
@@ -323,7 +323,7 @@ original_slug: Web/Guide/HTML/Forms/How_to_build_custom_form_widgets
  <li>The script is not loading. This is one of the most common cases, especially in the mobile world where the network is not very reliable.</li>
  <li>The script is buggy. You should always consider this possibility.</li>
  <li>The script is in conflict with a third party script. This can happen with tracking scripts or any bookmarklets the user uses.</li>
- <li>The script is in conflict with, or is affected by, a browser extension (such as Firefox's <a href="https://addons.mozilla.org/fr/firefox/addon/noscript/" rel="external" title="https://addons.mozilla.org/fr/firefox/addon/noscript/">NoScript</a> extension or Chrome's <a href="https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn" rel="external">NotScripts</a> extension).</li>
+ <li>The script is in conflict with, or is affected by, a browser extension (such as Firefox's <a href="https://addons.mozilla.org/fr/firefox/addon/noscript/" rel="external">NoScript</a> extension or Chrome's <a href="https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn" rel="external">NotScripts</a> extension).</li>
  <li>The user is using a legacy browser, and one of the features you require is not supported. This will happen frequently when you make use of cutting-edge APIs.</li>
 </ul>
 
@@ -404,7 +404,7 @@ original_slug: Web/Guide/HTML/Forms/How_to_build_custom_form_widgets
 
 <p>In the code we are about to build, we will use the standard DOM API to do all the work we need. However, although DOM API support has gotten much better in browsers, there are always issues with legacy browsers (especially with good old Internet Explorer).</p>
 
-<p>If you want to avoid trouble with legacy browsers, there are two ways to do so: using a dedicated framework such as <a href="http://jquery.com/" rel="external" title="http://jquery.com/">jQuery</a>, <a href="https://github.com/julienw/dollardom" rel="external" title="https://github.com/julienw/dollardom">$dom</a>, <a href="http://prototypejs.org/" rel="external" title="http://prototypejs.org/">prototype</a>, <a href="http://dojotoolkit.org/" rel="external" title="http://dojotoolkit.org/">Dojo</a>, <a href="http://yuilibrary.com/" rel="external" title="http://yuilibrary.com/">YUI</a>, or the like, or by polyfilling the missing feature you want to use (which can easily be done through conditional loading, with the <a href="http://yepnopejs.com/" rel="external">yepnope</a> library for example).</p>
+<p>If you want to avoid trouble with legacy browsers, there are two ways to do so: using a dedicated framework such as <a href="http://jquery.com/" rel="external" title="http://jquery.com/">jQuery</a>, <a href="https://github.com/julienw/dollardom" rel="external" title="https://github.com/julienw/dollardom">$dom</a>, <a href="http://prototypejs.org/" rel="external" title="http://prototypejs.org/">prototype</a>, <a href="http://dojotoolkit.org/" rel="external" title="http://dojotoolkit.org/">Dojo</a>, <a href="http://yuilibrary.com/" rel="external">YUI</a>, or the like, or by polyfilling the missing feature you want to use (which can easily be done through conditional loading, with the <a href="http://yepnopejs.com/" rel="external">yepnope</a> library for example).</p>
 
 <p>The features we plan to use are the following (ordered from the riskiest to the safest):</p>
 
@@ -731,7 +731,7 @@ window.addEventListener('load', function () {
   highlightOption(select, optionList[index]);
 };</pre>
 
-<p>Here is the final result of all these changes (you'll get a better feel for this by trying it with an assistive technology such as <a href="http://www.nvda-project.org/" rel="external" title="http://www.nvda-project.org/">NVDA</a> or <a href="http://www.apple.com/accessibility/voiceover/" rel="external">VoiceOver</a>):</p>
+<p>Here is the final result of all these changes (you'll get a better feel for this by trying it with an assistive technology such as <a href="http://www.nvda-project.org/" rel="external">NVDA</a> or <a href="http://www.apple.com/accessibility/voiceover/" rel="external">VoiceOver</a>):</p>
 
 <table>
  <thead>
