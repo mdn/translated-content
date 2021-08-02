@@ -3133,7 +3133,6 @@
 /ja/docs/MDN/Contribute/Tools/Page_moving	/ja/docs/orphaned/MDN/Tools/Page_moving
 /ja/docs/MDN/Contribute/Tools/Page_regeneration	/ja/docs/orphaned/MDN/Tools/Page_regeneration
 /ja/docs/MDN/Contribute/Tools/Page_watching	/ja/docs/orphaned/MDN/Tools/Page_watching
-/ja/docs/MDN/Contribute/Tools/Revision_dashboard	/ja/docs/orphaned/MDN/Tools/Revision_dashboard
 /ja/docs/MDN/Contribute/Tools/Sample_server	/ja/docs/MDN/Tools/Sample_server
 /ja/docs/MDN/Contribute/Tools/Search	/ja/docs/orphaned/MDN/Tools/Search
 /ja/docs/MDN/Contribute/Tools/Template_editing	/ja/docs/orphaned/MDN/Tools/Template_editing
@@ -3158,7 +3157,6 @@
 /ja/docs/MDN/Tools/Page_moving	/ja/docs/orphaned/MDN/Tools/Page_moving
 /ja/docs/MDN/Tools/Page_regeneration	/ja/docs/orphaned/MDN/Tools/Page_regeneration
 /ja/docs/MDN/Tools/Page_watching	/ja/docs/orphaned/MDN/Tools/Page_watching
-/ja/docs/MDN/Tools/Revision_dashboard	/ja/docs/orphaned/MDN/Tools/Revision_dashboard
 /ja/docs/MDN/Tools/Search	/ja/docs/orphaned/MDN/Tools/Search
 /ja/docs/MDN/Tools/Template_editing	/ja/docs/orphaned/MDN/Tools/Template_editing
 /ja/docs/MDN/Troubleshooting	/ja/docs/orphaned/MDN/Troubleshooting
