@@ -1590,14 +1590,11 @@
 /ja/docs/DOM/window.navigator.buildID	/ja/docs/Web/API/Navigator/buildID
 /ja/docs/DOM/window.navigator.cookieEnabled	/ja/docs/Web/API/Navigator/cookieEnabled
 /ja/docs/DOM/window.navigator.isLocallyAvailable	/ja/docs/Web/API/Navigator/mozIsLocallyAvailable
-/ja/docs/DOM/window.navigator.javaEnabled	/ja/docs/orphaned/Web/API/NavigatorPlugins/javaEnabled
 /ja/docs/DOM/window.navigator.language	/ja/docs/orphaned/Web/API/NavigatorLanguage/language
-/ja/docs/DOM/window.navigator.mimeTypes	/ja/docs/orphaned/Web/API/NavigatorPlugins/mimeTypes
 /ja/docs/DOM/window.navigator.mozIsLocallyAvailable	/ja/docs/Web/API/Navigator/mozIsLocallyAvailable
 /ja/docs/DOM/window.navigator.onLine	/ja/docs/Web/API/Navigator/onLine
 /ja/docs/DOM/window.navigator.oscpu	/ja/docs/Web/API/Navigator/oscpu
 /ja/docs/DOM/window.navigator.platform	/ja/docs/orphaned/Web/API/NavigatorID/platform
-/ja/docs/DOM/window.navigator.plugins	/ja/docs/orphaned/Web/API/NavigatorPlugins/plugins
 /ja/docs/DOM/window.navigator.product	/ja/docs/orphaned/Web/API/NavigatorID/product
 /ja/docs/DOM/window.navigator.productSub	/ja/docs/Web/API/Navigator/productSub
 /ja/docs/DOM/window.navigator.registerContentHandler	/ja/docs/orphaned/Web/API/Navigator/registerContentHandler
@@ -1815,14 +1812,11 @@
 /ja/docs/DOM:window.navigator.buildID	/ja/docs/Web/API/Navigator/buildID
 /ja/docs/DOM:window.navigator.cookieEnabled	/ja/docs/Web/API/Navigator/cookieEnabled
 /ja/docs/DOM:window.navigator.isLocallyAvailable	/ja/docs/Web/API/Navigator/mozIsLocallyAvailable
-/ja/docs/DOM:window.navigator.javaEnabled	/ja/docs/orphaned/Web/API/NavigatorPlugins/javaEnabled
 /ja/docs/DOM:window.navigator.language	/ja/docs/orphaned/Web/API/NavigatorLanguage/language
-/ja/docs/DOM:window.navigator.mimeTypes	/ja/docs/orphaned/Web/API/NavigatorPlugins/mimeTypes
 /ja/docs/DOM:window.navigator.mozIsLocallyAvailable	/ja/docs/Web/API/Navigator/mozIsLocallyAvailable
 /ja/docs/DOM:window.navigator.onLine	/ja/docs/Web/API/Navigator/onLine
 /ja/docs/DOM:window.navigator.oscpu	/ja/docs/Web/API/Navigator/oscpu
 /ja/docs/DOM:window.navigator.platform	/ja/docs/orphaned/Web/API/NavigatorID/platform
-/ja/docs/DOM:window.navigator.plugins	/ja/docs/orphaned/Web/API/NavigatorPlugins/plugins
 /ja/docs/DOM:window.navigator.product	/ja/docs/orphaned/Web/API/NavigatorID/product
 /ja/docs/DOM:window.navigator.productSub	/ja/docs/Web/API/Navigator/productSub
 /ja/docs/DOM:window.navigator.registerContentHandler	/ja/docs/orphaned/Web/API/Navigator/registerContentHandler
@@ -3600,7 +3594,6 @@
 /ja/docs/Web/API/LocalMediaStream	/ja/docs/orphaned/Web/API/LocalMediaStream
 /ja/docs/Web/API/MediaRecorder_API	/ja/docs/Web/API/MediaStream_Recording_API
 /ja/docs/Web/API/Navigator.getUserMedia	/ja/docs/Web/API/Navigator/getUserMedia
-/ja/docs/Web/API/Navigator/javaEnabled	/ja/docs/orphaned/Web/API/NavigatorPlugins/javaEnabled
 /ja/docs/Web/API/Navigator/registerContentHandler	/ja/docs/orphaned/Web/API/Navigator/registerContentHandler
 /ja/docs/Web/API/Navigator/userAgent	/ja/docs/orphaned/Web/API/NavigatorID/userAgent
 /ja/docs/Web/API/NavigatorConcurrentHardware	/ja/docs/orphaned/Web/API/NavigatorConcurrentHardware
@@ -3618,10 +3611,6 @@
 /ja/docs/Web/API/NavigatorLanguage/languages	/ja/docs/orphaned/Web/API/NavigatorLanguage/languages
 /ja/docs/Web/API/NavigatorOnLine/Online_and_offline_events	/ja/docs/Web/API/Navigator/Online_and_offline_events
 /ja/docs/Web/API/NavigatorOnLine/onLine	/ja/docs/Web/API/Navigator/onLine
-/ja/docs/Web/API/NavigatorPlugins	/ja/docs/orphaned/Web/API/NavigatorPlugins
-/ja/docs/Web/API/NavigatorPlugins/javaEnabled	/ja/docs/orphaned/Web/API/NavigatorPlugins/javaEnabled
-/ja/docs/Web/API/NavigatorPlugins/mimeTypes	/ja/docs/orphaned/Web/API/NavigatorPlugins/mimeTypes
-/ja/docs/Web/API/NavigatorPlugins/plugins	/ja/docs/orphaned/Web/API/NavigatorPlugins/plugins
 /ja/docs/Web/API/NavigatorStorage	/ja/docs/orphaned/Web/API/NavigatorStorage
 /ja/docs/Web/API/NavigatorStorage/storage	/ja/docs/orphaned/Web/API/NavigatorStorage/storage
 /ja/docs/Web/API/Node.appendChild	/ja/docs/Web/API/Node/appendChild
@@ -3936,7 +3925,6 @@
 /ja/docs/Web/API/window.navigator.onLine	/ja/docs/Web/API/Navigator/onLine
 /ja/docs/Web/API/window.navigator.oscpu	/ja/docs/Web/API/Navigator/oscpu
 /ja/docs/Web/API/window.navigator.platform	/ja/docs/orphaned/Web/API/NavigatorID/platform
-/ja/docs/Web/API/window.navigator.plugins	/ja/docs/orphaned/Web/API/NavigatorPlugins/plugins
 /ja/docs/Web/API/window.navigator.product	/ja/docs/orphaned/Web/API/NavigatorID/product
 /ja/docs/Web/API/window.navigator.productSub	/ja/docs/Web/API/Navigator/productSub
 /ja/docs/Web/API/window.navigator.registerContentHandler	/ja/docs/orphaned/Web/API/Navigator/registerContentHandler
