@@ -25978,6 +25978,24 @@
       "Wind1808"
     ]
   },
+  "Web/API/XRReferenceSpaceEventInit": {
+    "modified": "2020-11-08T02:10:47.628Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/API/XRReferenceSpaceEventInit/referenceSpace": {
+    "modified": "2020-11-08T19:13:54.683Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/API/XRReferenceSpaceEventInit/transform": {
+    "modified": "2020-11-08T19:23:29.842Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
   "Web/API/XRRigidTransform": {
     "modified": "2020-12-09T01:29:36.634Z",
     "contributors": [
@@ -48469,24 +48487,6 @@
   },
   "conflicting/Web/API/XRInputSource/targetRayMode": {
     "modified": "2020-12-08T09:23:22.538Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "conflicting/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent": {
-    "modified": "2020-11-08T02:10:47.628Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "conflicting/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent_0f733d39fd3094010931f093b9045686": {
-    "modified": "2020-11-08T19:13:54.683Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "conflicting/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent_7dfb381c892055a0c91980d537a86c6b": {
-    "modified": "2020-11-08T19:23:29.842Z",
     "contributors": [
       "Wind1808"
     ]
