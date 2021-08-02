@@ -3611,7 +3611,6 @@
 /ja/docs/Web/API/NavigatorLanguage/languages	/ja/docs/orphaned/Web/API/NavigatorLanguage/languages
 /ja/docs/Web/API/NavigatorOnLine/Online_and_offline_events	/ja/docs/Web/API/Navigator/Online_and_offline_events
 /ja/docs/Web/API/NavigatorOnLine/onLine	/ja/docs/Web/API/Navigator/onLine
-/ja/docs/Web/API/NavigatorPlugins	/ja/docs/orphaned/Web/API/NavigatorPlugins
 /ja/docs/Web/API/NavigatorStorage	/ja/docs/orphaned/Web/API/NavigatorStorage
 /ja/docs/Web/API/NavigatorStorage/storage	/ja/docs/orphaned/Web/API/NavigatorStorage/storage
 /ja/docs/Web/API/Node.appendChild	/ja/docs/Web/API/Node/appendChild
