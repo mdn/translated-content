@@ -33,7 +33,7 @@ translation_of: Web/HTTP/Link_prefetching_FAQ
 <pre class="eval">&lt;meta http-equiv="Link" content="&lt;/images/big.jpeg&gt;; rel=prefetch"&gt;
 </pre>
 
-<p><code>Link:</code> header 的格式在 <a class="external" href="http://tools.ietf.org/html/rfc5988" title="http://tools.ietf.org/html/rfc5988">RFC 5988</a> section 5 中有所描述。</p>
+<p><code>Link:</code> header 的格式在 <a class="external" href="http://tools.ietf.org/html/rfc5988">RFC 5988</a> section 5 中有所描述。</p>
 
 <p>浏览器检查所有这些预取提示，并将每一个独立的请求排到队列之中，然后浏览器空闲时将对这些请求进行预取。每个页面都可以有多个预取提示，因为预取多个文档是合理的。例如，未来要访问的页面可能包含多张大图。</p>
 
@@ -55,7 +55,7 @@ translation_of: Web/HTTP/Link_prefetching_FAQ
 
 <h3 id="How_is_browser_idle_time_determined.3F" name="How_is_browser_idle_time_determined.3F">浏览器的空闲时间是如何确定的？</h3>
 
-<p>在目前(Moilla 1.2)，空闲时间的确定是通过 <code>nsIWebProgressListener</code> API 实现的。我们在顶层 <code>nsIWebProgress 对象</code> ("@<a class="linkification-ext external" href="http://mozilla.org/docloaderservice;1" title="Linkification: http://mozilla.org/docloaderservice;1">mozilla.org/docloaderservice;1</a>") 上附加了一个监听器。通过监听器，我们能够收到文档开始和停止的通知，从而将最后一个文档停止到下一个文档开始之间的间隔作为空闲时间的近似值。最后一个文档停止的通知大致会在顶层文档的 onLoad 方法即将被触发时发出。此时即是开始预取的时间点。如果一个子文档包含了预取提示，这些预取操作将会等到最顶层文档和其子文档完成加载后才会开始进行。</p>
+<p>在目前(Moilla 1.2)，空闲时间的确定是通过 <code>nsIWebProgressListener</code> API 实现的。我们在顶层 <code>nsIWebProgress 对象</code> ("@<a class="linkification-ext external" href="http://mozilla.org/docloaderservice;1">mozilla.org/docloaderservice;1</a>") 上附加了一个监听器。通过监听器，我们能够收到文档开始和停止的通知，从而将最后一个文档停止到下一个文档开始之间的间隔作为空闲时间的近似值。最后一个文档停止的通知大致会在顶层文档的 onLoad 方法即将被触发时发出。此时即是开始预取的时间点。如果一个子文档包含了预取提示，这些预取操作将会等到最顶层文档和其子文档完成加载后才会开始进行。</p>
 
 <h3 id="What_happens_if_I_click_on_a_link_while_something_is_being_prefetched.3F" name="What_happens_if_I_click_on_a_link_while_something_is_being_prefetched.3F">资源正在被预载时点击了某个链接会发生什么？</h3>
 
@@ -112,7 +112,7 @@ translation_of: Web/HTTP/Link_prefetching_FAQ
 
 <h3 id="Privacy_implications" name="Privacy_implications">隐私问题</h3>
 
-<p>除了上面已经提到的引用和URL跟随含义外，预取通常会导致访问预取站点的cookie。 （例如，如果您使用google amazon，则google结果页面将预取www.amazon.com，从而导致amazon cookie来回发送。您可以在Firefox中阻止第三方cookie，请参参阅 <a class="external" href="http://support.mozilla.com/en-US/kb/Disabling%20third%20party%20cookies" title="http://support.mozilla.com/en-US/kb/Disabling third party cookies">Disabling third party cookies</a>。）</p>
+<p>除了上面已经提到的引用和URL跟随含义外，预取通常会导致访问预取站点的cookie。 （例如，如果您使用google amazon，则google结果页面将预取www.amazon.com，从而导致amazon cookie来回发送。您可以在Firefox中阻止第三方cookie，请参参阅 <a class="external" href="http://support.mozilla.com/en-US/kb/Disabling%20third%20party%20cookies">Disabling third party cookies</a>。）</p>
 
 <h3 id="What_about....3F" name="What_about....3F">关于...？</h3>
 

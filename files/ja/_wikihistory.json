@@ -18943,6 +18943,31 @@
       "Potappo"
     ]
   },
+  "Web/API/Navigator/Online_and_offline_events": {
+    "modified": "2019-03-23T23:53:08.504Z",
+    "contributors": [
+      "chrisdavidmills",
+      "ethertank",
+      "Marsf",
+      "Mgjbot",
+      "Koyamak"
+    ]
+  },
+  "Web/API/Navigator/onLine": {
+    "modified": "2020-10-15T21:16:47.171Z",
+    "contributors": [
+      "isdh",
+      "ryutamaki",
+      "yyss",
+      "dextra",
+      "fscholz",
+      "khalid32",
+      "ethertank",
+      "Potappo",
+      "Norah",
+      "Mgjbot"
+    ]
+  },
   "Web/API/Navigator/oscpu": {
     "modified": "2020-10-15T21:16:44.807Z",
     "contributors": [
@@ -50386,145 +50411,6 @@
       "silverskyvicto"
     ]
   },
-  "orphaned/MDN/Editor": {
-    "modified": "2020-09-30T15:41:49.390Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "silverskyvicto",
-      "wbamberg",
-      "dskmori",
-      "hamasaki",
-      "Uemmra3",
-      "momoi",
-      "hina03110630@gmail.com"
-    ]
-  },
-  "orphaned/MDN/Editor/Basics": {
-    "modified": "2020-09-30T15:41:49.746Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "silverskyvicto",
-      "wbamberg",
-      "Uemmra3",
-      "lv7777"
-    ]
-  },
-  "orphaned/MDN/Editor/Basics/Attachments": {
-    "modified": "2020-09-30T15:41:50.574Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "wbamberg",
-      "Uemmra3"
-    ]
-  },
-  "orphaned/MDN/Editor/Basics/Page_controls": {
-    "modified": "2020-09-30T15:41:49.981Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "Uemmra3"
-    ]
-  },
-  "orphaned/MDN/Editor/Basics/Page_info": {
-    "modified": "2020-09-30T15:41:49.875Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "SphinxKnight",
-      "Uemmra3"
-    ]
-  },
-  "orphaned/MDN/Editor/Basics/Tags": {
-    "modified": "2020-09-30T15:41:50.439Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "Uemmra3"
-    ]
-  },
-  "orphaned/MDN/Editor/Basics/Toolbar": {
-    "modified": "2020-09-30T15:41:50.320Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "Uemmra3"
-    ]
-  },
-  "orphaned/MDN/Editor/Images": {
-    "modified": "2020-09-30T15:41:51.174Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "Uemmra3"
-    ]
-  },
-  "orphaned/MDN/Editor/Keyboard_shortcuts": {
-    "modified": "2020-09-30T15:41:51.348Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "silverskyvicto",
-      "wbamberg",
-      "Uemmra3"
-    ]
-  },
-  "orphaned/MDN/Editor/Links": {
-    "modified": "2020-09-30T15:41:50.990Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "SphinxKnight",
-      "silverskyvicto",
-      "fscholz",
-      "Wind1808",
-      "wbamberg",
-      "Uemmra3"
-    ]
-  },
-  "orphaned/MDN/Editor/Redirects": {
-    "modified": "2020-09-30T15:41:49.574Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "wbamberg",
-      "Uemmra3",
-      "hamasaki",
-      "nshimizu",
-      "mantaroh"
-    ]
-  },
-  "orphaned/MDN/Editor/Source_mode": {
-    "modified": "2020-09-30T15:41:51.827Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "silverskyvicto",
-      "Wind1808",
-      "wbamberg",
-      "dskmori",
-      "Uemmra3"
-    ]
-  },
-  "orphaned/MDN/Editor/Syntax_highlighting": {
-    "modified": "2020-09-30T15:41:50.678Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "chan_gami"
-    ]
-  },
-  "orphaned/MDN/Editor/Tables": {
-    "modified": "2020-09-30T15:41:51.584Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "wbamberg",
-      "Uemmra3"
-    ]
-  },
   "orphaned/MDN/Kuma/Server_charts": {
     "modified": "2020-09-28T14:48:43.333Z",
     "contributors": [
@@ -50632,16 +50518,6 @@
       "chrisdavidmills",
       "mfuji09",
       "silverskyvicto",
-      "wbamberg",
-      "Uemmra3",
-      "hamasaki"
-    ]
-  },
-  "orphaned/MDN/Tools/Revision_dashboard": {
-    "modified": "2020-09-30T16:50:21.567Z",
-    "contributors": [
-      "chrisdavidmills",
-      "dlwe",
       "wbamberg",
       "Uemmra3",
       "hamasaki"
@@ -51089,14 +50965,6 @@
       "momoi"
     ]
   },
-  "orphaned/Web/API/ChildNode/after": {
-    "modified": "2020-10-17T21:33:51.563Z",
-    "contributors": [
-      "dskmori",
-      "Potappo",
-      "Shirasu"
-    ]
-  },
   "orphaned/Web/API/ChildNode/before": {
     "modified": "2020-10-17T03:58:22.731Z",
     "contributors": [
@@ -51155,12 +51023,6 @@
   },
   "orphaned/Web/API/HTMLElement/forceSpellCheck": {
     "modified": "2020-10-15T22:22:28.662Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "orphaned/Web/API/HTMLHyperlinkElementUtils": {
-    "modified": "2020-10-15T22:23:06.944Z",
     "contributors": [
       "Wind1808"
     ]
@@ -51306,70 +51168,6 @@
     "contributors": [
       "fscholz",
       "nshimizu"
-    ]
-  },
-  "orphaned/Web/API/NavigatorOnLine": {
-    "modified": "2019-03-23T23:00:36.403Z",
-    "contributors": [
-      "fscholz"
-    ]
-  },
-  "orphaned/Web/API/NavigatorOnLine/Online_and_offline_events": {
-    "modified": "2019-03-23T23:53:08.504Z",
-    "contributors": [
-      "chrisdavidmills",
-      "ethertank",
-      "Marsf",
-      "Mgjbot",
-      "Koyamak"
-    ]
-  },
-  "orphaned/Web/API/NavigatorOnLine/onLine": {
-    "modified": "2020-10-15T21:16:47.171Z",
-    "contributors": [
-      "isdh",
-      "ryutamaki",
-      "yyss",
-      "dextra",
-      "fscholz",
-      "khalid32",
-      "ethertank",
-      "Potappo",
-      "Norah",
-      "Mgjbot"
-    ]
-  },
-  "orphaned/Web/API/NavigatorPlugins": {
-    "modified": "2019-03-23T23:01:18.262Z",
-    "contributors": [
-      "fscholz"
-    ]
-  },
-  "orphaned/Web/API/NavigatorPlugins/javaEnabled": {
-    "modified": "2019-03-23T23:49:36.507Z",
-    "contributors": [
-      "fscholz",
-      "Hasilt",
-      "Potappo"
-    ]
-  },
-  "orphaned/Web/API/NavigatorPlugins/mimeTypes": {
-    "modified": "2019-03-23T23:49:36.040Z",
-    "contributors": [
-      "fscholz",
-      "AshfaqHossain",
-      "Potappo"
-    ]
-  },
-  "orphaned/Web/API/NavigatorPlugins/plugins": {
-    "modified": "2019-03-23T23:49:27.584Z",
-    "contributors": [
-      "wbamberg",
-      "yoko0827",
-      "fscholz",
-      "khalid32",
-      "ethertank",
-      "Potappo"
     ]
   },
   "orphaned/Web/API/NavigatorStorage": {
@@ -52154,12 +51952,6 @@
     "modified": "2019-03-23T22:21:22.661Z",
     "contributors": [
       "YuichiNukiyama"
-    ]
-  },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/FinalizationRegistry/cleanupSome": {
-    "modified": "2020-10-15T22:31:40.722Z",
-    "contributors": [
-      "mfuji09"
     ]
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/WeakSet/clear": {
