@@ -135,7 +135,7 @@ document.getElementById('size-16').onclick = size16;
 
 <p>O JavaScript não oferece uma maneira nativa de fazer isso, mas é possível emular métodos privados usando closures. Métodos privados não são somente úteis para restringir acesso ao código: eles também oferecem uma maneira eficaz de gerenciar seu namespace global, evitando que métodos não essenciais baguncem a interface pública do seu código.</p>
 
-<p>Veja como definir algumas funções públicas que acessam funções e variáveis privadas, usando closures que também é conhecido como <a class="external" href="http://www.google.com/search?q=javascript+module+pattern" title="http://www.google.com/search?q=javascript+module+pattern">module pattern</a>:</p>
+<p>Veja como definir algumas funções públicas que acessam funções e variáveis privadas, usando closures que também é conhecido como <a class="external" href="http://www.google.com/search?q=javascript+module+pattern">module pattern</a>:</p>
 
 <pre class="brush: js">var Counter = (function() {
   var privateCounter = 0;
