@@ -26,7 +26,7 @@ HTMLElement.nonce = <em>nonce</em></pre>
 
 <h3 id="访问nonce属性值">访问nonce属性值</h3>
 
-<p>以前，并不是所有的浏览器都支持 <code>nonce</code> IDL属性，因此在实际应用场景中，尝试使用<code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Element/getAttribute">getAttribute</a></code> 作为备选：</p>
+<p>以前，并不是所有的浏览器都支持 <code>nonce</code> IDL属性，因此在实际应用场景中，尝试使用<code><a href="/zh-CN/docs/Web/API/Element/getAttribute">getAttribute</a></code> 作为备选：</p>
 
 <pre class="notranslate">let nonce = script['nonce'] || script.getAttribute('nonce');</pre>
 

@@ -20,7 +20,7 @@ translation_of: Web/CSS/@charset
 <p>Da es mehrere Möglichkeiten gibt, die Zeichenkodierung eines Stylesheets anzugeben, versucht der Browser die folgenden Methoden in der angegebenen Reihenfolge (und stoppt, sobald eine ein Ergebnis zurückliefert):</p>
 
 <ol>
- <li>Der Wert des <a href="http://de.wikipedia.org/wiki/Byte_Order_Mark" title="http://en.wikipedia.org/wiki/Byte_order_mark">Unicode Bytereihenfolge</a> Zeichens, das am Anfang der Datei gesetzt ist.</li>
+ <li>Der Wert des <a href="http://de.wikipedia.org/wiki/Byte_Order_Mark">Unicode Bytereihenfolge</a> Zeichens, das am Anfang der Datei gesetzt ist.</li>
  <li>Der Wert, der durch das <code>charset</code> Attribut des <code>Content-Type:</code> HTTP-Headers angegeben wurde oder das Äquivalent hierzu im Protokoll, das verwendet wird, um das Stylesheet zu übertragen.</li>
  <li>Die <code>@charset</code> CSS At-Regel.</li>
  <li>Benutze die Zeichenkodierung, die durch das referenzierte Dokument angegeben wird: Das <code>charset</code> Attribut des {{ HTMLElement("link") }} Elements. Diese Methode ist veraltet in HTML5 und darf nicht verwendet werden.</li>

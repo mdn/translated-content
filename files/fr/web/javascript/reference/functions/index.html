@@ -72,14 +72,8 @@ original_slug: Web/JavaScript/Reference/Fonctions
 <dl>
  <dt><code>nom</code></dt>
  <dd>Le nom de la fonction.</dd>
-</dl>
-
-<dl>
  <dt><code>param</code></dt>
  <dd>Le nom d'un argument à passer à la fonction (une fonction pouvant avoir jusqu'à 255 arguments).</dd>
-</dl>
-
-<dl>
  <dt><code>instructions</code></dt>
  <dd>Les instructions qui forment le corps de la fonction.</dd>
 </dl>
@@ -96,9 +90,6 @@ original_slug: Web/JavaScript/Reference/Fonctions
 <dl>
  <dt><code>nom</code></dt>
  <dd>Le nom de la fonction. Il est facultatif, auquel cas la fonction devient une fonction anonyme.</dd>
-</dl>
-
-<dl>
  <dt><code>param</code></dt>
  <dd>Le nom d'un argument à passer à la fonction.</dd>
  <dt><code>instructions</code></dt>
@@ -141,14 +132,8 @@ original_slug: Web/JavaScript/Reference/Fonctions
 <dl>
  <dt><code>nom</code></dt>
  <dd>Le nom de la fonction.</dd>
-</dl>
-
-<dl>
  <dt><code>param</code></dt>
  <dd>Le nom d'un argument à passer à la fonction.</dd>
-</dl>
-
-<dl>
  <dt><code>instructions</code></dt>
  <dd>Les instructions qui forment le corps de la fonction.</dd>
 </dl>
@@ -164,9 +149,6 @@ original_slug: Web/JavaScript/Reference/Fonctions
 <dl>
  <dt><code>nom</code></dt>
  <dd>Le nom de la fonction. Ce paramètre peut être omis, auquel cas la fonction sera une fonction anonyme.</dd>
-</dl>
-
-<dl>
  <dt><code>param</code></dt>
  <dd>Le nom d'un argument à passer à la fonction.</dd>
  <dt><code>instructions</code></dt>
@@ -203,11 +185,8 @@ param =&gt; expression
 </pre>
 
 <dl>
- <dt><code>arg1, arg2, ... arg<em>N</em></code></dt>
+ <dt><code>arg1, arg2, ... argN</code></dt>
  <dd>Plusieurs (zéro ou plus) noms qui seront utilisés par la fonction comme noms d'arguments formels. Chaque nom doit être une chaîne de caractères valide au sens d'un identifiant JavaScript ou alors être une liste de telles chaînes séparées par des virgules. On aura les exemples suivants : "<code>x</code>", "<code>laValeur</code>", ou "<code>a,b</code>".</dd>
-</dl>
-
-<dl>
  <dt><code>corpsDeLaFonction</code></dt>
  <dd>Une chaîne de caractères contenant les instructions JavaScript définissant la fonction.</dd>
 </dl>
@@ -231,9 +210,6 @@ param =&gt; expression
 <dl>
  <dt><code>arg1, arg2, ... arg<em>N</em></code></dt>
  <dd>Plusieurs (zéro ou plus) noms qui seront utilisés par la fonction comme noms d'arguments formels. Chaque nom doit être une chaîne de caractères valide au sens d'un identifiant JavaScript ou alors être une liste de telles chaînes séparées par des virgules. On aura les exemples suivants : "<code>x</code>", "<code>theValue</code>", ou "<code>a,b</code>".</dd>
-</dl>
-
-<dl>
  <dt><code>corpsFonction</code></dt>
  <dd>Une chaîne de caractères contenant les instructions JavaScript définissant la fonction.</dd>
 </dl>
@@ -351,9 +327,7 @@ fin :3
 
 <p>Il est possible d'imbriquer une fonction au sein d'une fonction. La fonction imbriquée (interne) est privée par rapport à la fonction (externe) qui la contient. Cela forme ce qu'on appelle une fermeture (<em>closure</em> en anglais).</p>
 
-<dl>
- <dd>Une fermeture est une expression (généralement une fonction) possédant des variables libres ainsi qu'un environnement qui lie ces variable (autrement dit qui « ferme » l'expression).</dd>
-</dl>
+<p>Une fermeture est une expression (généralement une fonction) possédant des variables libres ainsi qu'un environnement qui lie ces variable (autrement dit qui « ferme » l'expression).</p>
 
 <p>Étant donné qu'une fonction imbriquée est une fermeture, cela signifie que la fonction imbriquée peut « hériter » des arguments et des variables de la fonction qui la contient. En d'autres termes, la fonction interne contient la portée de la fonction externe.</p>
 

@@ -18,18 +18,18 @@ translation_of: Web/CSS/color_value
 ---
 <p>{{CSSRef}}</p>
 
-<p><a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/CSS_Types">数据类型</a> <code>&lt;color&gt;</code> 表示一种<a class="external" href="http://en.wikipedia.org/wiki/SRGB" title="http://en.wikipedia.org/wiki/SRGB">标准RGB色彩空间（sRGB color space）</a>的颜色。一个颜色可以包括一个<a href="https://en.wikipedia.org/wiki/Alpha_compositing">alpha通道</a>透明度值，来表明颜色如何与它的背景色<a class="external" href="http://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending" title="http://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending">混合（composite）</a>。</p>
+<p><a href="/zh-CN/docs/Web/CSS">CSS</a> <a href="/zh-CN/docs/Web/CSS/CSS_Types">数据类型</a> <code>&lt;color&gt;</code> 表示一种<a class="external" href="http://en.wikipedia.org/wiki/SRGB">标准RGB色彩空间（sRGB color space）</a>的颜色。一个颜色可以包括一个<a href="https://en.wikipedia.org/wiki/Alpha_compositing">alpha通道</a>透明度值，来表明颜色如何与它的背景色<a class="external" href="http://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending">混合（composite）</a>。</p>
 
 <p>一个<code>&lt;color&gt;</code>可以以如下方式定义：</p>
 
 <ul>
  <li>使用一个关键字（比如<code>blue</code>或<code>transparent</code>）</li>
- <li>使用<a class="external" href="http://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation" title="http://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation">RGB立体坐标（RGB cubic-coordinate）</a>系统（以“#”加十六进制或者 <code>rgb()</code> 和 <code>rgba()</code> 函数表达式的形式）</li>
- <li>使用<a class="external" href="http://en.wikipedia.org/wiki/HSL_and_HSV" title="http://en.wikipedia.org/wiki/HSL_and_HSV">HSL圆柱坐标（HSL cylindrical-coordinate）</a>系统（以 <code>hsl()</code> 和 <code>hsla()</code> 函数表达式的形式）</li>
+ <li>使用<a class="external" href="http://en.wikipedia.org/wiki/RGB_color_model#Geometric_representation">RGB立体坐标（RGB cubic-coordinate）</a>系统（以“#”加十六进制或者 <code>rgb()</code> 和 <code>rgba()</code> 函数表达式的形式）</li>
+ <li>使用<a class="external" href="http://en.wikipedia.org/wiki/HSL_and_HSV">HSL圆柱坐标（HSL cylindrical-coordinate）</a>系统（以 <code>hsl()</code> 和 <code>hsla()</code> 函数表达式的形式）</li>
 </ul>
 
 <div class="blockIndicator note">
-<p><strong>注意：</strong>本文章详细描述了<code>&lt;color&gt;</code>数据类型。如要了解更多关于在HTML中使用颜色的信息，请参阅<a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/HTML/Applying_color">使用CSS为HTML元素应用颜色</a>。</p>
+<p><strong>注意：</strong>本文章详细描述了<code>&lt;color&gt;</code>数据类型。如要了解更多关于在HTML中使用颜色的信息，请参阅<a href="/zh-CN/docs/Web/HTML/Applying_color">使用CSS为HTML元素应用颜色</a>。</p>
 </div>
 
 <h2 id="语法">语法</h2>
@@ -37,7 +37,7 @@ translation_of: Web/CSS/color_value
 <p><code>&lt;color&gt;</code>可以以以下方式指定。</p>
 
 <div class="blockIndicator note">
-<p><strong>注意：</strong>尽管 CSS 颜色值被精确定义，但在不同的输出设备上仍然有可能显示不一。它们大多数是不可被校准的，而且有些浏览器不支持输出设备的<a class="external" href="http://en.wikipedia.org/wiki/ICC_profile" title="http://en.wikipedia.org/wiki/ICC_profile">色彩配置（color profile）</a>。</p>
+<p><strong>注意：</strong>尽管 CSS 颜色值被精确定义，但在不同的输出设备上仍然有可能显示不一。它们大多数是不可被校准的，而且有些浏览器不支持输出设备的<a class="external" href="http://en.wikipedia.org/wiki/ICC_profile">色彩配置（color profile）</a>。</p>
 </div>
 
 <h3 id="颜色关键字">颜色关键字</h3>
@@ -68,7 +68,7 @@ translation_of: Web/CSS/color_value
 <p>注意：可接受的关键字列表在CSS的演变过程中发生了改变：</p>
 
 <ul>
- <li>CSS 标准 1 只接受 16 个基本颜色，称为<em>VGA颜色</em>，因为它们来源于 <a class="external" href="http://en.wikipedia.org/wiki/VGA" title="http://en.wikipedia.org/wiki/VGA">VGA</a> 显卡所显示的颜色集合而被称为 <em>VGA colors</em> （视频图形阵列色彩）。</li>
+ <li>CSS 标准 1 只接受 16 个基本颜色，称为<em>VGA颜色</em>，因为它们来源于 <a class="external" href="http://en.wikipedia.org/wiki/VGA">VGA</a> 显卡所显示的颜色集合而被称为 <em>VGA colors</em> （视频图形阵列色彩）。</li>
  <li>CSS 标准 2 增加了 <code>orange</code> 关键字。</li>
  <li>从一开始，浏览器接受其它的颜色，由于一些早期浏览器是 X11 应用程序，这些颜色大多数是 X11 命名的颜色列表，虽然有一点不同。SVG 1.0 是首个正式定义这些关键字的标准；CSS 色彩标准 3 也正式定义了这些关键字。它们经常被称作<em>扩张的颜色关键字</em>， <em>X11 颜色</em>或 <em>SVG 颜色</em> 。</li>
  <li>CSS颜色标准 4 添加可<code>rebeccapurple</code>关键字来<a href="https://codepen.io/trezy/post/honoring-a-great-man">纪念web先锋Eric Meyer</a>。</li>
@@ -979,7 +979,7 @@ translation_of: Web/CSS/color_value
 <p><strong>注意兼容性：</strong>为避免未预料的行为，比如{{cssxref("gradient")}}中，the current CSS spec states that <code>transparent</code> should be calculated in the <a href="https://www.w3.org/TR/2012/CR-css3-images-20120417/#color-stop-syntax">alpha-premultiplied color space</a>. 但是，注意旧的浏览器可能将其作为alpha值为0的黑色。</p>
 </div>
 
-<div class="note"><strong>过去的注释：</strong><code>transparent</code> 关键字在 CSS Level 2 (Revision 1) 中不是一个真实的颜色。它是一个特殊的关键字，可以代替一个普通的 <code>&lt;color&gt;</code> 值用于两个 CSS 属性中： {{ Cssxref("background") }} 和 {{ Cssxref("border") }}。本质上使用它可以覆盖一个继承的单色。随着经由<a class="external" href="http://en.wikipedia.org/wiki/Alpha_compositing" title="http://en.wikipedia.org/wiki/Alpha_compositing">阿尔法通道（alpha channels）</a>透明度的支持，<code>transparent</code> 在 CSS Colors Level 3 中被重新定义为一个真实的颜色，允许在任何一个需要 <code>&lt;color&gt;</code> 值的地方使用，像 {{ Cssxref("color") }} 属性。</div>
+<div class="note"><strong>过去的注释：</strong><code>transparent</code> 关键字在 CSS Level 2 (Revision 1) 中不是一个真实的颜色。它是一个特殊的关键字，可以代替一个普通的 <code>&lt;color&gt;</code> 值用于两个 CSS 属性中： {{ Cssxref("background") }} 和 {{ Cssxref("border") }}。本质上使用它可以覆盖一个继承的单色。随着经由<a class="external" href="http://en.wikipedia.org/wiki/Alpha_compositing">阿尔法通道（alpha channels）</a>透明度的支持，<code>transparent</code> 在 CSS Colors Level 3 中被重新定义为一个真实的颜色，允许在任何一个需要 <code>&lt;color&gt;</code> 值的地方使用，像 {{ Cssxref("color") }} 属性。</div>
 
 <h3 id="currentColor_关键字"><code>currentColor</code> 关键字</h3>
 
@@ -1019,7 +1019,7 @@ translation_of: Web/CSS/color_value
  <dt>十六进制符号：<code>#RRGGBB[AA] </code></dt>
  <dd><code>R</code>（红）、<code>G</code>（绿）、<code>B</code> （蓝）和<code>A</code> （alpha）是十六进制字符（0–9、A–F）。<code>A</code>是可选的。比如，<code>#ff0000</code>等价于<code>#ff0000ff</code>。</dd>
  <dt>十六进制符号：<code>#RGB[A]</code></dt>
- <dd><code>R</code>（红）、<code>G</code>（绿）、<code>B</code> （蓝）和<code>A</code> （alpha）是十六进制字符（0–9、A–F）。<code>A</code>是可选的。三位数符号（<code>#RGB</code>）是六位数形式（<code>#RRGGBB</code>）的减缩版。比如，<code>#f09</code>和<code>#ff0099</code>表示同一颜色。类似地，六位数符号（<code>#RGBA</code>）是八位数形式（<code>#RRGGBBAA</code>）的减缩版。比如，<code>#0f38</code>和<code>#00ff3388</code>表示相同颜色。</dd>
+ <dd><code>R</code>（红）、<code>G</code>（绿）、<code>B</code> （蓝）和<code>A</code> （alpha）是十六进制字符（0–9、A–F）。<code>A</code>是可选的。三位数符号（<code>#RGB</code>）是六位数形式（<code>#RRGGBB</code>）的减缩版。比如，<code>#f09</code>和<code>#ff0099</code>表示同一颜色。类似地，四位数符号（<code>#RGBA</code>）是八位数形式（<code>#RRGGBBAA</code>）的减缩版。比如，<code>#0f38</code>和<code>#00ff3388</code>表示相同颜色。</dd>
  <dt>函数符： <code>rgb[a](R, G, B[, A])</code></dt>
  <dd><code>R</code>（红）、<code>G</code>（绿）、<code>B</code> （蓝）可以是{{cssxref("&lt;number&gt;")}}（数字），或者{{cssxref("&lt;percentage&gt;")}}（百分比），255相当于100%。<code>A</code>（alpha）可以是<code>0</code>到<code>1</code>之间的数字，或者百分比，数字<code>1</code>相当于<code>100%</code>（完全不透明）。</dd>
  <dt>函数符：<code>rgb[a](R G B[ / A])</code></dt>
@@ -1051,7 +1051,7 @@ translation_of: Web/CSS/color_value
 
 <h3 id="系统颜色">系统颜色</h3>
 
-<p>In <em>forced colors mode</em> (detectable with the <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/@media/forced-colors">forced-colors</a> media query), most colors are restricted into a user- and browser-defined palette. These system colors are exposed by the following keywords, which can be used to ensure that the rest of the page integrates well with the restricted palette. These values may also be used in other contexts, but are not widely supported by browsers. </p>
+<p>In <em>forced colors mode</em> (detectable with the <a href="/zh-CN/docs/Web/CSS/@media/forced-colors">forced-colors</a> media query), most colors are restricted into a user- and browser-defined palette. These system colors are exposed by the following keywords, which can be used to ensure that the rest of the page integrates well with the restricted palette. These values may also be used in other contexts, but are not widely supported by browsers. </p>
 
 <p>The keywords in the following list are defined by the CSS Color Module Level 4 specification.</p>
 
@@ -1366,7 +1366,7 @@ translation_of: Web/CSS/color_value
 
 <h2 id="Accessibility_considerations">Accessibility considerations</h2>
 
-<p>Some people have difficulty distinguishing colors. The <a class="external external-icon" href="https://www.w3.org/TR/WCAG/#visual-audio-contrast">WCAG 2.0</a> recommendation strongly advises against using color as the only means of conveying a specific message, action, or result. See <a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">Color and color contrast</a> for more information.</p>
+<p>Some people have difficulty distinguishing colors. The <a class="external external-icon" href="https://www.w3.org/TR/WCAG/#visual-audio-contrast">WCAG 2.0</a> recommendation strongly advises against using color as the only means of conveying a specific message, action, or result. See <a href="/zh-CN/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">Color and color contrast</a> for more information.</p>
 
 <h2 id="示例">示例</h2>
 

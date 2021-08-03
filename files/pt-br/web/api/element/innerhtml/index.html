@@ -110,7 +110,7 @@ el.innerHTML = name; // inofensivo, nesse caso
 name = "&lt;script&gt;alert('I am John in an annoying alert!')&lt;/script&gt;";
 el.innerHTML = name; // inofensivo, nesse caso</pre>
 
-<p>Embora isso talvez se pareça como um ataque  {{interwiki("wikipedia", "cross-site scripting")}}, o resultado é inofensivo. O HTML5 especifica que uma tag {{HTMLElement("script")}}, inserida via <code>innerHTML</code>, <a href="http://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0" title="http://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0">não deve ser executada</a>.</p>
+<p>Embora isso talvez se pareça como um ataque  {{interwiki("wikipedia", "cross-site scripting")}}, o resultado é inofensivo. O HTML5 especifica que uma tag {{HTMLElement("script")}}, inserida via <code>innerHTML</code>, <a href="http://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0">não deve ser executada</a>.</p>
 
 <p>No entanto, há formas de se executar JavaScript sem usar elementos {{HTMLElement("script")}}, por isso ainda há um risco de segurança sempre que você usa <code>innerHTML</code> para definir uma string sobre a qual você não tem controle. Por exemplo:</p>
 
@@ -143,6 +143,6 @@ el.innerHTML = name; // exibe uma caixa de alerta</pre>
 <ul>
  <li><a class="external" href="http://innerdom.sourceforge.net/"><code>innerDOM</code></a> - Para aqueles que desejam aderir aos padrões, aqui oferece um conjunto de funções JavaScript para serializar ou analisar XML, de modo a configurar o conteúdo do elemento definido como uma string(s) através do DOM ou recuperando o conteúdo do elemento obtido a partir do DOM como uma string.</li>
  <li><a href="/en-US/docs/DOM/Element.insertAdjacentHTML" title="/en-US/docs/DOM/Element.insertAdjacentHTML">insertAdjacentHTML</a> - Uma alternativa para o innerHTML, permitindo você anexar um novo HTML, ao invés de trocá-la.</li>
- <li><a class="external" href="http://code.google.com/p/jssaxparser/" title="http://code.google.com/p/jssaxparser/">jssaxparser</a> - Uma solução mais robusta (embora mais pesada) do innerDOM (suporta análise com namespaces, atributos com aspas simples, seções CDATA, etc.), esse é o analisador SAX2 quando usado com seu manipulador de conteúdo DOM. (Oferece String para DOM; DOM para String é <a class="external" href="http://code.assembla.com/brettz9/subversion/nodes/DOMToString" title="http://code.assembla.com/brettz9/subversion/nodes/DOMToString">significantemente mais fácil</a>)</li>
- <li>Considerações de eficiência: Em <a class="external" href="http://www.quirksmode.org/dom/innerhtml.html" title="http://www.quirksmode.org/dom/innerhtml.html">quirksmode</a></li>
+ <li><a class="external" href="http://code.google.com/p/jssaxparser/">jssaxparser</a> - Uma solução mais robusta (embora mais pesada) do innerDOM (suporta análise com namespaces, atributos com aspas simples, seções CDATA, etc.), esse é o analisador SAX2 quando usado com seu manipulador de conteúdo DOM. (Oferece String para DOM; DOM para String é <a class="external" href="http://code.assembla.com/brettz9/subversion/nodes/DOMToString">significantemente mais fácil</a>)</li>
+ <li>Considerações de eficiência: Em <a class="external" href="http://www.quirksmode.org/dom/innerhtml.html">quirksmode</a></li>
 </ul>

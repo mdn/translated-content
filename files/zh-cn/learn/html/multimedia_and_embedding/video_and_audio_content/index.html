@@ -73,13 +73,13 @@ translation_of: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 
 <h4 id="媒体文件的内容">媒体文件的内容</h4>
 
-<p>我们先来快速的了解一下术语。像 MP3、MP4、WebM这些术语叫做<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Media/Formats/Containers">容器格式</a>。他们定义了构成媒体文件的音频轨道和视频轨道的储存结构，其中还包含描述这个媒体文件的元数据，以及用于编码的编码译码器等等。</p>
+<p>我们先来快速的了解一下术语。像 MP3、MP4、WebM这些术语叫做<a href="/zh-CN/docs/Web/Media/Formats/Containers">容器格式</a>。他们定义了构成媒体文件的音频轨道和视频轨道的储存结构，其中还包含描述这个媒体文件的元数据，以及用于编码的编码译码器等等。</p>
 
 <p>一个格式为 WebM 的电影包含视频轨道，音频轨道和文本轨道，其中视频轨道包含一个主视频轨道和一个可选的 Angle 轨道；音频轨道包含英语和西班牙语的音频轨道，还有一个英语评论的音频轨道；文字轨道包含英语和西班牙语的字幕轨道，如下图所示：</p>
 
 <p><img alt="Diagram conceptualizing the contents of a media file at the track level." src="https://mdn.mozillademos.org/files/16898/ContainersAndTracks.svg"></p>
 
-<p>为了编解码器（codec）编码媒体，容器中的音频和视频轨道以适合的格式保存。音频轨道和视频轨道使用不同的格式。每个音频轨道都使用<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Media/Formats/Audio_codecs">音频编解码器</a>进行编码，而视频轨道则使用（您可能已经猜到了）<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs">视频编解码器</a>进行编码。如前所述，不同的浏览器支持不同的视频和音频格式，以及不同的容器格式（如MP3、MP4和WebM，这些格式又可以包含不同类型的视频和音频）。</p>
+<p>为了编解码器（codec）编码媒体，容器中的音频和视频轨道以适合的格式保存。音频轨道和视频轨道使用不同的格式。每个音频轨道都使用<a href="/zh-CN/docs/Web/Media/Formats/Audio_codecs">音频编解码器</a>进行编码，而视频轨道则使用（您可能已经猜到了）<a href="/zh-CN/docs/Web/Media/Formats/Video_codecs">视频编解码器</a>进行编码。如前所述，不同的浏览器支持不同的视频和音频格式，以及不同的容器格式（如MP3、MP4和WebM，这些格式又可以包含不同类型的视频和音频）。</p>
 
 <p>例如:</p>
 
