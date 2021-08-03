@@ -964,7 +964,7 @@
 /ja/docs/Core_JavaScript_1.5_Reference/Operators/Special_Operators/function_Operator	/ja/docs/Web/JavaScript/Reference/Operators/function
 /ja/docs/Core_JavaScript_1.5_Reference/Operators/Special_Operators/new_Operator	/ja/docs/Web/JavaScript/Reference/Operators/new
 /ja/docs/Core_JavaScript_1.5_Reference/Operators/Special_Operators/this_Operator	/ja/docs/Web/JavaScript/Reference/Operators/this
-/ja/docs/Core_JavaScript_1.5_Reference/Reserved_Words	/ja/docs/conflicting/Web/JavaScript/Reference/Lexical_grammar
+/ja/docs/Core_JavaScript_1.5_Reference/Reserved_Words	/ja/docs/Web/JavaScript/Reference/Lexical_grammar
 /ja/docs/Core_JavaScript_1.5_Reference/Statements	/ja/docs/Web/JavaScript/Reference/Statements
 /ja/docs/Core_JavaScript_1.5_Reference/Statements/block	/ja/docs/Web/JavaScript/Reference/Statements/block
 /ja/docs/Core_JavaScript_1.5_Reference/Statements/break	/ja/docs/Web/JavaScript/Reference/Statements/break
@@ -1161,7 +1161,7 @@
 /ja/docs/Core_JavaScript_1.5_Reference:Operators:Special_Operators:function_Operator	/ja/docs/Web/JavaScript/Reference/Operators/function
 /ja/docs/Core_JavaScript_1.5_Reference:Operators:Special_Operators:new_Operator	/ja/docs/Web/JavaScript/Reference/Operators/new
 /ja/docs/Core_JavaScript_1.5_Reference:Operators:Special_Operators:this_Operator	/ja/docs/Web/JavaScript/Reference/Operators/this
-/ja/docs/Core_JavaScript_1.5_Reference:Reserved_Words	/ja/docs/conflicting/Web/JavaScript/Reference/Lexical_grammar
+/ja/docs/Core_JavaScript_1.5_Reference:Reserved_Words	/ja/docs/Web/JavaScript/Reference/Lexical_grammar
 /ja/docs/Core_JavaScript_1.5_Reference:Statements	/ja/docs/Web/JavaScript/Reference/Statements
 /ja/docs/Core_JavaScript_1.5_Reference:Statements:block	/ja/docs/Web/JavaScript/Reference/Statements/block
 /ja/docs/Core_JavaScript_1.5_Reference:Statements:break	/ja/docs/Web/JavaScript/Reference/Statements/break
@@ -2932,7 +2932,7 @@
 /ja/docs/JavaScript/Reference/Operators2/Special_Operators/new_Operator	/ja/docs/Web/JavaScript/Reference/Operators/new
 /ja/docs/JavaScript/Reference/Operators2/Special_Operators/this_Operator	/ja/docs/Web/JavaScript/Reference/Operators/this
 /ja/docs/JavaScript/Reference/Operators2/Special_Operators/typeof_Operator	/ja/docs/Web/JavaScript/Reference/Operators/typeof
-/ja/docs/JavaScript/Reference/Reserved_Words	/ja/docs/conflicting/Web/JavaScript/Reference/Lexical_grammar
+/ja/docs/JavaScript/Reference/Reserved_Words	/ja/docs/Web/JavaScript/Reference/Lexical_grammar
 /ja/docs/JavaScript/Reference/Statements	/ja/docs/Web/JavaScript/Reference/Statements
 /ja/docs/JavaScript/Reference/Statements/block	/ja/docs/Web/JavaScript/Reference/Statements/block
 /ja/docs/JavaScript/Reference/Statements/break	/ja/docs/Web/JavaScript/Reference/Statements/break
@@ -4734,7 +4734,7 @@
 /ja/docs/Web/JavaScript/Reference/Operators/Spread_operator	/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax
 /ja/docs/Web/JavaScript/Reference/Operators/get	/ja/docs/Web/JavaScript/Reference/Functions/get
 /ja/docs/Web/JavaScript/Reference/Properties_Index	/ja/docs/Web/JavaScript/Reference
-/ja/docs/Web/JavaScript/Reference/Reserved_Words	/ja/docs/conflicting/Web/JavaScript/Reference/Lexical_grammar
+/ja/docs/Web/JavaScript/Reference/Reserved_Words	/ja/docs/Web/JavaScript/Reference/Lexical_grammar
 /ja/docs/Web/JavaScript/Reference/Statements/default	/ja/docs/Web/JavaScript/Reference/Statements/switch
 /ja/docs/Web/JavaScript/Reference/Statements/yield	/ja/docs/Web/JavaScript/Reference/Operators/yield
 /ja/docs/Web/JavaScript/Reference/arrow_functions	/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions
@@ -5327,7 +5327,7 @@
 /ja/docs/dummySlug/Reference/Operators/this	/ja/docs/Web/JavaScript/Reference/Operators/this
 /ja/docs/dummySlug/Reference/Operators/typeof	/ja/docs/Web/JavaScript/Reference/Operators/typeof
 /ja/docs/dummySlug/Reference/Operators/void	/ja/docs/Web/JavaScript/Reference/Operators/void
-/ja/docs/dummySlug/Reference/Reserved_Words	/ja/docs/conflicting/Web/JavaScript/Reference/Lexical_grammar
+/ja/docs/dummySlug/Reference/Reserved_Words	/ja/docs/Web/JavaScript/Reference/Lexical_grammar
 /ja/docs/dummySlug/Reference/Statements	/ja/docs/Web/JavaScript/Reference/Statements
 /ja/docs/dummySlug/Reference/Statements/block	/ja/docs/Web/JavaScript/Reference/Statements/block
 /ja/docs/dummySlug/Reference/Statements/break	/ja/docs/Web/JavaScript/Reference/Statements/break
