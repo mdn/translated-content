@@ -48538,14 +48538,6 @@
       "Marsf"
     ]
   },
-  "conflicting/Web/CSS/float": {
-    "modified": "2019-03-24T00:02:58.592Z",
-    "contributors": [
-      "ethertank",
-      "sosleepy",
-      "Marsf"
-    ]
-  },
   "conflicting/Web/CSS/url()": {
     "modified": "2020-10-15T21:22:36.291Z",
     "contributors": [

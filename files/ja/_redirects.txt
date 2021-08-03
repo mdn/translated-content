@@ -533,7 +533,6 @@
 /ja/docs/CSS/max-width	/ja/docs/Web/CSS/max-width
 /ja/docs/CSS/min-height	/ja/docs/Web/CSS/min-height
 /ja/docs/CSS/min-width	/ja/docs/Web/CSS/min-width
-/ja/docs/CSS/none	/ja/docs/conflicting/Web/CSS/float
 /ja/docs/CSS/normal	/ja/docs/Web/CSS/font-variant
 /ja/docs/CSS/number	/ja/docs/Web/CSS/number
 /ja/docs/CSS/opacity	/ja/docs/Web/CSS/opacity
@@ -4165,7 +4164,6 @@
 /ja/docs/Web/CSS/max	/ja/docs/Web/CSS/max()
 /ja/docs/Web/CSS/min	/ja/docs/Web/CSS/min()
 /ja/docs/Web/CSS/minmax	/ja/docs/Web/CSS/minmax()
-/ja/docs/Web/CSS/none	/ja/docs/conflicting/Web/CSS/float
 /ja/docs/Web/CSS/normal	/ja/docs/Web/CSS/font-variant
 /ja/docs/Web/CSS/paint	/ja/docs/orphaned/Web/CSS/paint()
 /ja/docs/Web/CSS/paint()	/ja/docs/orphaned/Web/CSS/paint()
