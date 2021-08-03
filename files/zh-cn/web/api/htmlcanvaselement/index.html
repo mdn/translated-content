@@ -32,7 +32,7 @@ translation_of: Web/API/HTMLCanvasElement
  <dt>{{domxref("HTMLCanvasElement.captureStream()")}} {{experimental_inline}}</dt>
  <dd>返回{{domxref("CanvasCaptureMediaStream")}} ，它是对画布表面的实时视频捕获。</dd>
  <dt>{{domxref("HTMLCanvasElement.getContext()")}}</dt>
- <dd>返回画布上的绘图上下文；如果不支持上下文ID，则返回null。 绘图上下文可让您在画布上绘图。 调用getContext传入<code>"2d"</code> 可以返回一个{{domxref("CanvasRenderingContext2D")}}对象，也可以传入<code>"webgl"</code>（或<code>"experimental-webgl"</code>）返回一个{{domxref("WebGLRenderingContext")}} 对象。 此上下文仅在实现<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/WebGL">WebGL</a>的浏览器上可用。</dd>
+ <dd>返回画布上的绘图上下文；如果不支持上下文ID，则返回null。 绘图上下文可让您在画布上绘图。 调用getContext传入<code>"2d"</code> 可以返回一个{{domxref("CanvasRenderingContext2D")}}对象，也可以传入<code>"webgl"</code>（或<code>"experimental-webgl"</code>）返回一个{{domxref("WebGLRenderingContext")}} 对象。 此上下文仅在实现<a href="/zh-CN/docs/Web/WebGL">WebGL</a>的浏览器上可用。</dd>
  <dt>{{domxref("HTMLCanvasElement.toDataURL()")}}</dt>
  <dd>返回一个数据URL，该URL包含由类型参数指定的格式的图像（默认为<code>png</code>）。 返回的图像分辨率为96dpi。</dd>
  <dt>{{domxref("HTMLCanvasElement.toBlob()")}}</dt>
@@ -48,14 +48,14 @@ translation_of: Web/API/HTMLCanvasElement
 
 <h2 id="事件">事件</h2>
 
-<p>使用<code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>监听这些事件。</p>
+<p>使用<code><a href="/zh-CN/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>监听这些事件。</p>
 
 <dl>
- <dt><code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event">webglcontextcreationerror</a></code></dt>
+ <dt><code><a href="/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event">webglcontextcreationerror</a></code></dt>
  <dd>如果用户代理无法创建<code>WebGLRenderingContext</code> 或<code>WebGL2RenderingContext</code> 上下文，则触发该事件。</dd>
- <dt><code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/webglcontextlost_event">webglcontextlost</a></code></dt>
+ <dt><code><a href="/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextlost_event">webglcontextlost</a></code></dt>
  <dd>如果用户代理检测到与<code>WebGLRenderingContext</code> 或<code>WebGL2RenderingContext</code> 对象关联的绘图缓冲区已丢失，则触发此事件。</dd>
- <dt><code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event">webglcontextrestored</a></code></dt>
+ <dt><code><a href="/zh-CN/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event">webglcontextrestored</a></code></dt>
  <dd>如果用户代理为<code>WebGLRenderingContext</code> 或<code>WebGL2RenderingContext</code> 对象恢复绘图缓冲区，则触发该事件。</dd>
 </dl>
 
@@ -82,10 +82,6 @@ translation_of: Web/API/HTMLCanvasElement
 </table>
 
 <h2 id="浏览器支持">浏览器支持</h2>
-
-<div class="hidden">
-<p>此页面上的兼容性表是根据结构化数据生成的。 如果您想提供数据，请查看<a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>并向我们发送请求请求</p>
-</div>
 
 <p>{{Compat("api.HTMLCanvasElement")}}</p>
 

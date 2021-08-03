@@ -11,7 +11,7 @@ translation_of: Learn/CSS/Building_blocks/Debugging_CSS
  <tbody>
   <tr>
    <th scope="row">必备条件:</th>
-   <td>会使用计算机、<a href="https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software">安装基础软件</a>、基本了解<a href="https://developer.mozilla.org/zh-CN/Learn/Getting_started_with_the_web/Dealing_with_files">文件处理</a>、有 HTML 基础（请参考<a href="https://wiki.developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML"> HTML 导论</a>）、了解 CSS 工作（请参考 <a href="https://wiki.developer.mozilla.org/zh-CN/docs/Learn/CSS/First_steps">CSS first steps</a>）。</td>
+   <td>会使用计算机、<a href="https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software">安装基础软件</a>、基本了解<a href="https://developer.mozilla.org/zh-CN/Learn/Getting_started_with_the_web/Dealing_with_files">文件处理</a>、有 HTML 基础（请参考<a href="/zh-CN/docs/Learn/HTML/Introduction_to_HTML"> HTML 导论</a>）、了解 CSS 工作（请参考 <a href="/zh-CN/docs/Learn/CSS/First_steps">CSS first steps</a>）。</td>
   </tr>
   <tr>
    <th scope="row">目标:</th>
@@ -22,19 +22,19 @@ translation_of: Learn/CSS/Building_blocks/Debugging_CSS
 
 <h2 id="如何使用浏览器开发者工具">如何使用浏览器开发者工具</h2>
 
-<p><a href="https://wiki.developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> 解释了如何在不同的浏览器和平台上打开这些工具。你可能会选择大部分时间在某个浏览器上开发去熟悉里面的工具，不过你还是有必要了解如何在其它浏览器中打开同样的工具。要是你看到多个浏览器间不同的渲染结果，这就会很方便了。</p>
+<p><a href="/zh-CN/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> 解释了如何在不同的浏览器和平台上打开这些工具。你可能会选择大部分时间在某个浏览器上开发去熟悉里面的工具，不过你还是有必要了解如何在其它浏览器中打开同样的工具。要是你看到多个浏览器间不同的渲染结果，这就会很方便了。</p>
 
-<p>你还会发现，不同的浏览器弹出开发者工具时会选择把重点放到不同的区域。例如，Firefox 有不错的工具用来可视化处理 CSS 布局，让你能够检查和编辑 <a href="https://wiki.developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Grid Layouts</a>、<a href="https://wiki.developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts">Flexbox</a>、<a href="https://wiki.developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes">Shapes</a>。不过，浏览器都有类似的基础工具用来检查作用于页面元素的 CSS 属性和值，并对它们进行更改。</p>
+<p>你还会发现，不同的浏览器弹出开发者工具时会选择把重点放到不同的区域。例如，Firefox 有不错的工具用来可视化处理 CSS 布局，让你能够检查和编辑 <a href="/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">Grid Layouts</a>、<a href="/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_Flexbox_layouts">Flexbox</a>、<a href="/zh-CN/docs/Tools/Page_Inspector/How_to/Edit_CSS_shapes">Shapes</a>。不过，浏览器都有类似的基础工具用来检查作用于页面元素的 CSS 属性和值，并对它们进行更改。</p>
 
 <p>我们这节课会重点看用于处理 CSS 的开发者工具中的一些有用特性。为此，我会用<a href="https://mdn.github.io/css-examples/learn/inspecting/inspecting.html">一个示例</a>。想跟着学习的话，就在新标签页加载该网页吧，并打开开发者工具（上述文章对该工具有描述）。</p>
 
 <h2 id="比较_DOM_和_View_Source">比较 DOM 和 View Source</h2>
 
-<p>刚接触开发者工具的人可能会在这个地方产生失误：网页源码（或服务器端的 HTML 文件）显示的和开发者工具的 <a href="https://wiki.developer.mozilla.org/en-US/docs/Tools/Page_Inspector/UI_Tour#HTML_pane">HTML Pane</a> 显示的相比起来不太一样。通过 View Source，内容看起来差不多，然而一些差异还是存在的。</p>
+<p>刚接触开发者工具的人可能会在这个地方产生失误：网页源码（或服务器端的 HTML 文件）显示的和开发者工具的 <a href="/zh-CN/docs/Tools/Page_Inspector/UI_Tour#HTML_pane">HTML Pane</a> 显示的相比起来不太一样。通过 View Source，内容看起来差不多，然而一些差异还是存在的。</p>
 
 <p>浏览器在渲染的 DOM 中已为你纠正了一些错误的 HTML 部分。如果你错误地闭合了元素（比如开始标签是<code>&lt;h2&gt;</code>，结束标签是<code>&lt;/h3&gt;</code>。），浏览器会尽力弄清你的意图，之后DOM中的HTML就以 <code>&lt;h2&gt;</code> 起始，以 <code>&lt;/h2&gt;</code> 结束了。浏览器还会处理好 HTML 文档， JavaScript 做出的更改都会由 DOM 表现出来。</p>
 
-<p>相比之下，View Source 就是服务器端的 HTML 源码。DevTools 内的 <a href="https://wiki.developer.mozilla.org/en-US/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#HTML_tree">HTML tree</a> 展示了浏览器任意时间的渲染结果，让你深入理解正在发生什么。</p>
+<p>相比之下，View Source 就是服务器端的 HTML 源码。DevTools 内的 <a href="/zh-CN/docs/Tools/Page_Inspector/How_to/Examine_and_edit_HTML#HTML_tree">HTML tree</a> 展示了浏览器任意时间的渲染结果，让你深入理解正在发生什么。</p>
 
 <h2 id="审查_CSS">审查 CSS</h2>
 

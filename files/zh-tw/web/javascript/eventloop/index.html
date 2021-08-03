@@ -70,7 +70,7 @@ console.log(bar(7));
 
 <h3 id="零延遲（Zero_delays）">零延遲（Zero delays）</h3>
 
-<p>「零延遲」並非意味著回呼函式（callback function）會在 0 毫秒之後立刻執行。當使用延遲 0 毫秒參數來呼叫 {{domxref("WindowTimers.setTimeout", "setTimeout")}} 函式並非示程式會過了該段時間就會執行，而是會參考佇列中等待的訊息數量。<br>
+<p>「零延遲」並非意味著回呼函式（callback function）會在 0 毫秒之後立刻執行。當使用延遲 0 毫秒參數來呼叫 {{domxref("WindowTimers.setTimeout", "setTimeout")}} 函式並非是程式會過了該段時間就會執行，而是會參考佇列中等待的訊息數量。<br>
  在下面範例中，「this is just a message」會寫在 setTimeout 的回呼訊息被執行之前，因為該時間段參數是要求執行環境處理所需的最少等待時間，而非一個保證時間。</p>
 
 <pre class="brush: js">(function() {

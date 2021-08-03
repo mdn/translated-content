@@ -47,7 +47,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Array/splice
 
 <h2 id="示例">示例</h2>
 
-<h3 id="从第_2_位开始删除_0_个元素，插入“drum”">从第 2 位开始删除 0 个元素，插入“drum”</h3>
+<h3 id="从索引_2_的位置开始删除_0_个元素，插入“drum”">从索引 2 的位置开始删除 0 个元素，插入“drum”</h3>
 
 <pre class="brush: js">var myFish = ["angel", "clown", "mandarin", "sturgeon"];
 var removed = myFish.splice(2, 0, "drum");
@@ -56,7 +56,7 @@ var removed = myFish.splice(2, 0, "drum");
 // 被删除的元素: [], 没有元素被删除
 </pre>
 
-<h3 id="从第_2_位开始删除_0_个元素，插入“drum”_和_guitar">从第 2 位开始删除 0 个元素，插入“drum” 和 "guitar"</h3>
+<h3 id="从索引_2_的位置开始删除_0_个元素，插入“drum”_和_guitar">从索引 2 的位置开始删除 0 个元素，插入“drum” 和 "guitar"</h3>
 
 <pre class="brush: js">var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
 var removed = myFish.splice(2, 0, 'drum', 'guitar');
@@ -65,7 +65,7 @@ var removed = myFish.splice(2, 0, 'drum', 'guitar');
 // 被删除的元素: [], 没有元素被删除
 </pre>
 
-<h3 id="从第_3_位开始删除_1_个元素">从第 3 位开始删除 1 个元素</h3>
+<h3 id="从索引_3_的位置开始删除_1_个元素">从索引 3 的位置开始删除 1 个元素</h3>
 
 <pre class="brush: js">var myFish = ['angel', 'clown', 'drum', 'mandarin', 'sturgeon'];
 var removed = myFish.splice(3, 1);
@@ -74,7 +74,7 @@ var removed = myFish.splice(3, 1);
 // 被删除的元素: ["mandarin"]
 </pre>
 
-<h3 id="从第_2_位开始删除_1_个元素，插入“trumpet”">从第 2 位开始删除 1 个元素，插入“trumpet”</h3>
+<h3 id="从索引_2_的位置开始删除_1_个元素，插入“trumpet”">从索引 2 的位置开始删除 1 个元素，插入“trumpet”</h3>
 
 <pre class="brush: js">var myFish = ['angel', 'clown', 'drum', 'sturgeon'];
 var removed = myFish.splice(2, 1, "trumpet");
@@ -83,7 +83,7 @@ var removed = myFish.splice(2, 1, "trumpet");
 // 被删除的元素: ["drum"]
 </pre>
 
-<h3 id="从第_0_位开始删除_2_个元素，插入parrot、anemone和blue">从第 0 位开始删除 2 个元素，插入"parrot"、"anemone"和"blue"</h3>
+<h3 id="从索引_0_的位置开始删除_2_个元素，插入parrot、anemone和blue">从索引 0 的位置开始删除 2 个元素，插入"parrot"、"anemone"和"blue"</h3>
 
 <pre class="brush: js">var myFish = ['angel', 'clown', 'trumpet', 'sturgeon'];
 var removed = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
@@ -92,7 +92,7 @@ var removed = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
 // 被删除的元素: ["angel", "clown"]
 </pre>
 
-<h3 id="从第_2_位开始删除_2_个元素">从第 2 位开始删除 2 个元素</h3>
+<h3 id="从索引_2_的位置位开始删除_2_个元素">从索引 2 的位置开始删除 2 个元素</h3>
 
 <pre class="brush: js">var myFish = ['parrot', 'anemone', 'blue', 'trumpet', 'sturgeon'];
 var removed = myFish.splice(myFish.length - 3, 2);
@@ -101,7 +101,7 @@ var removed = myFish.splice(myFish.length - 3, 2);
 // 被删除的元素: ["blue", "trumpet"]
 </pre>
 
-<h3 id="从倒数第_2_位开始删除_1_个元素">从倒数第 2 位开始删除 1 个元素</h3>
+<h3 id="从索引_-2_的位置开始删除_1_个元素">从索引 -2 的位置开始删除 1 个元素</h3>
 
 <pre class="brush: js">var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
 var removed = myFish.splice(-2, 1);
@@ -109,7 +109,7 @@ var removed = myFish.splice(-2, 1);
 // 运算后的 myFish: ["angel", "clown", "sturgeon"]
 // 被删除的元素: ["mandarin"]</pre>
 
-<h3 id="从第_2_位开始删除所有元素">从第 2 位开始删除所有元素</h3>
+<h3 id="从索引_2_的位置开始删除所有元素">从索引 2 的位置开始删除所有元素</h3>
 
 <pre class="brush: js">var myFish = ['angel', 'clown', 'mandarin', 'sturgeon'];
 var removed = myFish.splice(2);

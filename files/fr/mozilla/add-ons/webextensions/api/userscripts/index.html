@@ -25,7 +25,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/userScripts
 </ul>
 
 <div class="blockIndicator warning">
-<p>Cette API requiert la présence de la clé <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">user_scripts</a></code> dans le manifest.json, même si aucun script API n'est spécifié. Par exemple, <code>user_scripts: {}</code>.</p>
+<p>Cette API requiert la présence de la clé <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">user_scripts</a></code> dans le manifest.json, même si aucun script API n'est spécifié. Par exemple, <code>user_scripts: {}</code>.</p>
 </div>
 
 <p>Pour utiliser l'API, appelez <code>{{WebExtAPIRef("userScripts.register","register()")}}</code> en passant un objet définissant les scripts à enregistrer. La méthode renvoie une promesse qui est résolue par un objet  <code>{{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}}</code>.</p>
@@ -55,7 +55,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/userScripts
 
 <dl>
  <dt>{{WebExtAPIRef("userScripts.onBeforeScript")}}</dt>
- <dd>Un événement disponible pour le script API, enregistré dans <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">"user_scripts"</a></code>, qui s'exécute avant qu'un script utilisateur ne s'exécute. Utilisez-le pour déclencher l'exportation des API supplémentaires fournies par le script API, afin qu'elles soient disponibles pour le script utilisateur.</dd>
+ <dd>Un événement disponible pour le script API, enregistré dans <code><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts">"user_scripts"</a></code>, qui s'exécute avant qu'un script utilisateur ne s'exécute. Utilisez-le pour déclencher l'exportation des API supplémentaires fournies par le script API, afin qu'elles soient disponibles pour le script utilisateur.</dd>
 </dl>
 
 <h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
@@ -65,6 +65,6 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/userScripts
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/Working_with_userScripts">Working with <code>userScripts</code></a></li>
+ <li><a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/Working_with_userScripts">Working with <code>userScripts</code></a></li>
  <li>{{WebExtAPIRef("contentScripts","browser.contentScripts")}}</li>
 </ul>

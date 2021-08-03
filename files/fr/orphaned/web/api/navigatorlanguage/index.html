@@ -1,0 +1,62 @@
+---
+title: NavigatorLanguage
+slug: orphaned/Web/API/NavigatorLanguage
+translation_of: Web/API/NavigatorLanguage
+original_slug: Web/API/NavigatorLanguage
+---
+<div>{{APIRef("HTML DOM")}}</div>
+
+<p><code><strong>NavigatorLanguage</strong></code> contient les méthodes et les propriétés de la langue du navigateur.</p>
+
+<p>Il n'y a pas d'objet de type <code>NavigatorLanguage</code>, mais d'autres interfaces comme {{domxref("Navigator")}} ou {{domxref("WorkerNavigator")}} l'implémentent.</p>
+
+<h2 id="Propriété">Propriété</h2>
+
+<p><em>L'interface <code>NavigatorLanguage</code></em><em> n'hérite d'aucune propriété.</em></p>
+
+<dl>
+ <dt>{{domxref("NavigatorLanguage.language")}} {{readonlyInline}}</dt>
+ <dd>Retourne une {{domxref("DOMString")}} représentant la langue préférée de l'utilisateur, généralement la langue de l'interface utilisateur du navigateur. La valeur <code>null</code> est retournée quand la langue est inconnue.</dd>
+ <dt>{{domxref("NavigatorLanguage.languages")}} {{readonlyInline}}</dt>
+ <dd>Retourne un tableau de {{domxref("DOMString")}} représentant les langues connu de l'utilisateur par ordre de préférence.</dd>
+</dl>
+
+<h2 id="Méthodes">Méthodes</h2>
+
+<p><em>L'interface <code>NavigatorLanguage</code> n'implémente et n'hérite d'aucune méthode.</em></p>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Spécifications</th>
+   <th scope="col">Status</th>
+   <th scope="col">Commentaire</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', '#navigatorlanguage', 'NavigatorLanguage')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td>Depuis la <em>snapshot</em> {{SpecName('HTML5 W3C')}}, la propriété <code>languages</code> a été ajoutée.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML5 W3C', '#navigatorlanguage', 'NavigatorLanguage')}}</td>
+   <td>{{Spec2('HTML5 W3C')}}</td>
+   <td>Spécification initiale; <em>snapshot</em> de la version anticipé {{SpecName('HTML WHATWG')}}.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+
+
+<p>{{Compat("api.NavigatorLanguage")}}</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li>L'interface {{domxref("Navigator")}} qui l'implémente.</li>
+</ul>

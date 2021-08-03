@@ -136,7 +136,7 @@ var promise = import("module-name");//这是一个处于第三阶段的提案。
  <li>当被导入的模块有副作用（这里说的副作用，可以理解为模块中会直接运行的代码），这些副作用只有在触发了某些条件才被需要时。（原则上来说，模块不能有副作用，但是很多时候，你无法控制你所依赖的模块的内容）</li>
 </ul>
 
-<p>请不要滥用动态导入（只有在必要情况下采用）。静态框架能更好的初始化依赖，而且更有利于静态分析工具和<a href="https://wiki.developer.mozilla.org/en-US/docs/Glossary/Tree_shaking">tree shaking</a>发挥作用</p>
+<p>请不要滥用动态导入（只有在必要情况下采用）。静态框架能更好的初始化依赖，而且更有利于静态分析工具和<a href="/zh-CN/docs/Glossary/Tree_shaking">tree shaking</a>发挥作用</p>
 
 <p>关键字import可以像调用函数一样来动态的导入模块。以这种方式调用，将返回一个 <code>promise</code>。</p>
 

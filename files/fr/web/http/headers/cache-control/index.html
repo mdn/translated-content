@@ -84,14 +84,14 @@ Cache-Control: stale-if-error=&lt;seconds&gt;
 <p>Une réponse est normalement mise en cache par le navigateur si</p>
 
 <ul>
- <li>il a un code de statut de <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Status/301">301</a></code>, <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Status/302">302</a></code>, <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Status/307">307</a></code>, <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Status/308">308</a></code>, or <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Status/410">410</a></code> <strong>et</strong></li>
+ <li>il a un code de statut de <code><a href="/fr/docs/Web/HTTP/Status/301">301</a></code>, <code><a href="/fr/docs/Web/HTTP/Status/302">302</a></code>, <code><a href="/fr/docs/Web/HTTP/Status/307">307</a></code>, <code><a href="/fr/docs/Web/HTTP/Status/308">308</a></code>, or <code><a href="/fr/docs/Web/HTTP/Status/410">410</a></code> <strong>et</strong></li>
  <li><code>Cache-Control</code> n'a pas de <code>no-store</code>, ou <em>s'il s'agit d'un mandataire</em>, il n'a pas d'adresse <code>privée</code> <strong>et</strong></li>
- <li><code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Authorization">Authorization</a></code> n'est pas fixée</li>
+ <li><code><a href="/fr/docs/Web/HTTP/Headers/Authorization">Authorization</a></code> n'est pas fixée</li>
  <li>soit
   <ul>
-   <li>a un code de statut de <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Status/301">301</a></code>, <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Status/302">302</a></code>, <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Status/307">307</a></code>, <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Status/308">308</a></code>, ou <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Status/410">410</a></code> <strong>ou</strong></li>
+   <li>a un code de statut de <code><a href="/fr/docs/Web/HTTP/Status/301">301</a></code>, <code><a href="/fr/docs/Web/HTTP/Status/302">302</a></code>, <code><a href="/fr/docs/Web/HTTP/Status/307">307</a></code>, <code><a href="/fr/docs/Web/HTTP/Status/308">308</a></code>, ou <code><a href="/fr/docs/Web/HTTP/Status/410">410</a></code> <strong>ou</strong></li>
    <li>a un <code>public</code>, <code>max-age</code> ou <code>s-maxage</code> dans <code>Cache-Control</code> <strong>ou</strong></li>
-   <li>a <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expires">Expires</a></code> fixé</li>
+   <li>a <code><a href="/fr/docs/Web/HTTP/Headers/Expires">Expires</a></code> fixé</li>
   </ul>
  </li>
 </ul>
@@ -149,7 +149,7 @@ Cache-Control: stale-if-error=&lt;seconds&gt;
  <dt><code>no-transform</code></dt>
  <dd>Aucune conversion ou transformation ne devraient être réalisée sur la ressource. Ainsi, les en-tête <code>Content-Encoding</code>, <code>Content-Range</code> et <code>Content-Type</code> ne devraient jamais être modifiés par un proxy (serveur mandataire). Un proxy non-transparent pourrait, en l'absence de cet en-tête, convertir ou compresser (avec pertes) des images pour réduire la place occupée en cache ou diminuer le volume de données à transférer sur un lien lent.</dd>
  <dt><code>only-if-cached</code></dt>
- <dd>Réglé par le <em>client </em>pour indiquer "ne pas utiliser le réseau" pour la réponse. Le cache doit soit répondre en utilisant une réponse stockée, soit répondre avec un code d'état <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Status/504">504</a></code>. Les en-têtes conditionnels tels que <code>If-None-Match</code> ne doivent pas être définis. Il n'y a aucun effet si <code>only-if-cached</code> est défini par un serveur dans le cadre d'une réponse.</dd>
+ <dd>Réglé par le <em>client </em>pour indiquer "ne pas utiliser le réseau" pour la réponse. Le cache doit soit répondre en utilisant une réponse stockée, soit répondre avec un code d'état <code><a href="/fr/docs/Web/HTTP/Status/504">504</a></code>. Les en-têtes conditionnels tels que <code>If-None-Match</code> ne doivent pas être définis. Il n'y a aucun effet si <code>only-if-cached</code> est défini par un serveur dans le cadre d'une réponse.</dd>
 </dl>
 
 <h2 id="Exemples">Exemples</h2>
@@ -231,7 +231,7 @@ Cache-Control: no-cache, max-age=0, stale-while-revalidate=300
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/HTTP/Caching_FAQ">HTTP Caching FAQ</a></li>
+ <li><a href="/fr/docs/Web/HTTP/Caching_FAQ">HTTP Caching FAQ</a></li>
  <li><a href="https://www.mnot.net/cache_docs/">Caching Tutorial for Web Authors and Webmasters</a></li>
  <li>Guide: <em><a href="https://csswizardry.com/2019/03/cache-control-for-civilians"><code>Cache-Control</code> for civilians</a></em></li>
  <li>{{HTTPHeader("Age")}}</li>

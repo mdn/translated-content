@@ -245,7 +245,7 @@ console.log(tbl.get(1)());  // 42</pre>
  </li>
 </ol>
 
-<p>这段代码获取获取了存储在表格中的每一个函数引用，然后实例化它们从而将它们拥有的值打印到控制台——注意每一各函数引用是如何使用<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get">Table.prototype.get()</a>函数获取的以及在其后面增加一对小括号从而真正的调用该函数。</p>
+<p>这段代码获取获取了存储在表格中的每一个函数引用，然后实例化它们从而将它们拥有的值打印到控制台——注意每一个函数引用是如何使用<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/get">Table.prototype.get()</a>函数获取的以及在其后面增加一对小括号从而真正的调用该函数。</p>
 
 <div class="note">
 <p><strong>注</strong>：你可以在<a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html">table.html</a> (<a href="https://mdn.github.io/webassembly-examples/js-api-examples/table.html">或实时查看运行</a>)找到我们完整的示例——这个版本使用了<code><a href="https://github.com/mdn/webassembly-examples/blob/master/wasm-utils.js">fetchAndInstantiate()</a></code>函数。</p>

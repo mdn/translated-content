@@ -19,7 +19,7 @@ original_slug: Web/JavaScript/Tableaux_typés
 
 <p>Afin de permettre une meilleure efficacité et une meilleure flexibilité, l'implémentation des tableaux typés JavaScript est séparée entre : les <strong>tampons de mémoire (<em>buffers</em>)</strong> d'une part et <strong>les vues (<em>views</em>)</strong> d'autre part. Un tampon de mémoire, implémenté avec l'objet {{jsxref("ArrayBuffer")}}, est un objet qui représente un fragment de données, il n'a pas de format à proprement parler et n'offre aucune fonctionnalité pour accéder à son contenu. Afin d'accéder à la mémoire contenue dans le tampon, on doit utiliser une vue. Une vue fournit un contexte (c'est-à-dire un type de donnée, un emplacement pour le début de la lecture (<em>offset</em>) et un nombre d'éléments ; c'est ce contexte qui permet de définir le tableau typé.</p>
 
-<p><img alt="Typed arrays in an ArrayBuffer" src="https://mdn.mozillademos.org/files/8629/typed_arrays.png" style="height: 278px; width: 666px;"></p>
+<p><img alt="Typed arrays in an ArrayBuffer" src="https://mdn.mozillademos.org/files/8629/typed_arrays.png"></p>
 
 <h3 id="ArrayBuffer"><code>ArrayBuffer</code></h3>
 
@@ -123,7 +123,7 @@ let vueMontant = new Float32Array(buffer, 20, 1);</pre>
 
 <p>On peut ensuite accéder au montant lié à un utilisateur, par exemple, avec <code>vueMontant[0]</code>.</p>
 
-<div class="note"><strong>Note :</strong> <a href="https://fr.wikipedia.org/wiki/Alignement_en_m%C3%A9moire">L'alignement des structures de données</a> dans une structure C dépend de la plate-forme. Il est donc nécessaire de prendre des précautions quant au format attendu.</div>
+<div class="note"><p><strong>Note :</strong> <a href="https://fr.wikipedia.org/wiki/Alignement_en_m%C3%A9moire">L'alignement des structures de données</a> dans une structure C dépend de la plate-forme. Il est donc nécessaire de prendre des précautions quant au format attendu.</p></div>
 
 <h3 id="Convertir_un_tableau_typé_en_un_tableau_normal">Convertir un tableau typé en un tableau normal</h3>
 

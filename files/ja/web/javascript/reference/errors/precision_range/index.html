@@ -12,7 +12,7 @@ translation_of: Web/JavaScript/Reference/Errors/Precision_range
 
 <p>JavaScript の例外 "precision is out of range" は、 <code>toFixed</code> または <code>toPrecision</code> に 0 から 20 (または 21) までの範囲外の数値が渡された場合に発生します。</p>
   
-<h2 id="Message">メッセージ</h2>
+<h2 id="Message">エラーメッセージ</h2>
 
 <pre class="brush: js">RangeError: The number of fractional digits is out of range (Edge)
 RangeError: The precision is out of range (Edge)
@@ -22,11 +22,11 @@ RangeError: toFixed() digits argument must be between 0 and 20 (Chrome)
 RangeError: toPrecision() argument must be between 1 and 21 (Chrome)
 </pre>
 
-<h2 id="Error_type">エラー種別</h2>
+<h2 id="Error_type">エラーの種類</h2>
 
 <p>{{jsxref("RangeError")}}</p>
 
-<h2 id="What_went_wrong">原因</h2>
+<h2 id="What_went_wrong">エラーの原因</h2>
 
 <p>これらのメソッドのいずれかで、 範囲外の精度を引数を使用しています。</p>
 
@@ -79,7 +79,7 @@ RangeError: toPrecision() argument must be between 1 and 21 (Chrome)
 1234.5.toPrecision(101);    // RangeError
 </pre>
 
-<h3 id="Valid_cases">有効なケース</h3>
+<h3 id="Valid_cases">有効な場合</h3>
 
 <pre class="brush: js example-good">77.1234.toExponential(4); // 7.7123e+1
 77.1234.toExponential(2); // 7.71e+1

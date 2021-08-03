@@ -7,43 +7,57 @@ tags:
   - Method
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/abs
+browser-compat: javascript.builtins.Math.abs
 ---
+
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary"><strong><code>Math.abs()</code></strong> 함수는 주어진 숫자의 절대값을 반환합니다.</span> 즉,</p>
-
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.abs</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnalign="left left"><mtr><mtd><mi>x</mi></mtd><mtd><mtext>if</mtext><mspace width="1em"></mspace><mi>x</mi><mo>&gt;</mo><mn>0</mn></mtd></mtr><mtr><mtd><mi>0</mi></mtd><mtd><mtext>if</mtext><mspace width="1em"></mspace><mi>x</mi><mo>=</mo><mn>0</mn></mtd></mtr><mtr><mtd><mo>-</mo><mi>x</mi></mtd><mtd><mtext>if</mtext><mspace width="1em"></mspace><mi>x</mi><mo>&lt;</mo><mn>0</mn></mtd></mtr></mtable></mrow></mrow><annotation encoding="TeX">{\mathtt{\operatorname{Math.abs}(x)}} = {|x|} = \begin{cases} x &amp; \text{if} \quad x \geq 0 \\ -x &amp; \text{if} \quad x &lt; 0 \end{cases} </annotation></semantics></math></p>
+<p>
+  <strong><code>Math.abs()</code></strong> 함수는 주어진 숫자의 절대값을
+  반환합니다. <code>x</code>가 양수이거나 0이라면 <code>x</code>를 리턴하고,
+  <code>x</code>가 음수라면 <code>x</code>의 반대값, 즉 양수를 반환합니다.
+</p>
 
 <div>{{EmbedInteractiveExample("pages/js/math-abs.html")}}</div>
 
+<h2 id="Syntax">구문</h2>
 
+<pre class="brush: js">Math.abs(<var>x</var>)</pre>
 
-<h2 id="구문">구문</h2>
-
-<pre class="syntaxbox">Math.abs(<var>x</var>)</pre>
-
-<h3 id="매개변수">매개변수</h3>
+<h3 id="Parameters">매개변수</h3>
 
 <dl>
- <dt><code>x</code></dt>
- <dd>숫자.</dd>
+  <dt>
+    <code><var>x</var></code>
+  </dt>
+  <dd>숫자.</dd>
 </dl>
 
-<h3 id="반환_값">반환 값</h3>
+<h3 id="Return_value">반환 값</h3>
 
 <p>주어진 숫자의 절대값.</p>
 
-<h2 id="설명">설명</h2>
+<h2 id="Description">설명</h2>
 
-<p><code>abs()</code>는 <code>Math</code>의 정적 메서드이므로, 사용자가 생성한 <code>Math</code> 객체의 메서드로 호출할 수 없고 항상 <code>Math.abs()</code>를 사용해야 합니다. (<code>Math</code>는 생성자가 아닙니다)</p>
+<p>
+  <code>abs()</code>는 <code>Math</code>의 정적 메서드이므로, 사용자가 생성한
+  <code>Math</code> 객체의 메서드로 호출할 수 없고 항상
+  <code>Math.abs()</code>를 사용해야 합니다. (<code>Math</code>는 생성자가
+  아닙니다)
+</p>
 
-<h2 id="예제">예제</h2>
+<h2 id="Examples">예제</h2>
 
-<h3 id="Math.abs()의_작동_방식"><code>Math.abs()</code>의 작동 방식</h3>
+<h3 id="Behavior_of_Math.abs">Math.abs()의 작동 방식</h3>
 
-<p>빈 객체, 하나 이상의 요소를 가진 배열, 숫자가 아닌 문자열, {{jsxref("undefined")}}나 빈 매개변수를 받으면 {{jsxref("NaN")}}을 반환합니다. {{jsxref("null")}}, 빈 문자열이나 빈 배열을 제공하면 0을 반환합니다.</p>
+<p>
+  빈 객체, 하나 이상의 요소를 가진 배열, 숫자가 아닌 문자열,
+  {{jsxref("undefined")}}나 빈 매개변수를 받으면 {{jsxref("NaN")}}을 반환합니다.
+  {{jsxref("null")}}, 빈 문자열이나 빈 배열을 제공하면 0을 반환합니다.
+</p>
 
-<pre class="brush: js" dir="rtl">Math.abs('-1');     // 1
+<pre class="brush: js">
+Math.abs('-1');     // 1
 Math.abs(-2);       // 2
 Math.abs(null);     // 0
 Math.abs('');       // 0
@@ -55,50 +69,20 @@ Math.abs('string'); // NaN
 Math.abs();         // NaN
 </pre>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.2.1', 'Math.abs')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.abs', 'Math.abs')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.abs', 'Math.abs')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+<h2 id="Browser_compatibility">브라우저 호환성</h2>
 
+<p>{{Compat}}</p>
 
-
-<p>{{Compat("javascript.builtins.Math.abs")}}</p>
-
-<h2 id="같이_보기">같이 보기</h2>
+<h2 id="See_also">같이 보기</h2>
 
 <ul>
- <li>{{jsxref("Math.ceil()")}}</li>
- <li>{{jsxref("Math.floor()")}}</li>
- <li>{{jsxref("Math.round()")}}</li>
- <li>{{jsxref("Math.sign()")}}</li>
- <li>{{jsxref("Math.trunc()")}}</li>
+  <li>{{jsxref("Math.ceil()")}}</li>
+  <li>{{jsxref("Math.floor()")}}</li>
+  <li>{{jsxref("Math.round()")}}</li>
+  <li>{{jsxref("Math.sign()")}}</li>
+  <li>{{jsxref("Math.trunc()")}}</li>
 </ul>

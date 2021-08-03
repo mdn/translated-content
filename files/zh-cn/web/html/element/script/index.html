@@ -10,7 +10,7 @@ tags:
   - 网络
 translation_of: Web/HTML/Element/script
 ---
-<pre class="syntaxbox notranslate"><strong>HTML <code>&lt;script&gt;</code> 元素</strong>用于嵌入或引用可执行脚本。这通常用作嵌入或者指向 JavaScript 代码。<code>&lt;script&gt;</code> 元素也能在其他语言中使用，比如 <a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/API/WebGL_API">WebGL</a> 的 GLSL 着色器语言。</pre>
+<pre class="syntaxbox notranslate"><strong>HTML <code>&lt;script&gt;</code> 元素</strong>用于嵌入或引用可执行脚本。这通常用作嵌入或者指向 JavaScript 代码。<code>&lt;script&gt;</code> 元素也能在其他语言中使用，比如 <a href="/zh-CN/docs/Web/API/WebGL_API">WebGL</a> 的 GLSL 着色器语言。</pre>
 
 <table class="properties">
  <tbody>
@@ -53,7 +53,7 @@ translation_of: Web/HTML/Element/script
 
 <dl>
  <dd>对于普通脚本，如果存在 <code>async</code> 属性，那么普通脚本会被并行请求，并尽快解析和执行。</dd>
- <dd>对于<a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Modules">模块脚本</a>，如果存在 <code>async</code> 属性，那么脚本及其所有依赖都会在延缓队列中执行，因此它们会被并行请求，并尽快解析和执行。</dd>
+ <dd>对于<a href="/zh-CN/docs/Web/JavaScript/Guide/Modules">模块脚本</a>，如果存在 <code>async</code> 属性，那么脚本及其所有依赖都会在延缓队列中执行，因此它们会被并行请求，并尽快解析和执行。</dd>
  <dd>该属性能够消除解析阻塞的 Javascript。解析阻塞的 Javascript 会导致浏览器必须加载并且执行脚本，之后才能继续解析。<code>defer</code> 在这一点上也有类似的作用。</dd>
  <dd>这是个布尔属性：布尔属性的存在意味着 true 值，布尔属性的缺失意味着 false 值。</dd>
  <dd>关于浏览器支持请参见{{anch("浏览器兼容性")}}。另可参见文章<a href="/en-US/docs/Games/Techniques/Async_scripts">asm.js的异步脚本</a>。</dd>

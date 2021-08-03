@@ -17,12 +17,12 @@ translation_of: Web/API/ServiceWorkerRegistration/showNotification
 <p><span class="seoSummary">La méthode <strong><code>showNotification()</code></strong> de l'interface {{domxref("ServiceWorkerRegistration")}} crée une notification dans un service worker actif.</span></p>
 
 <div class="note">
-<p><strong>Note</strong>: Cette fonctionnalité est disponible dans les <a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
+<p><strong>Note</strong>: Cette fonctionnalité est disponible dans les <a href="/fr/docs/Web/API/Web_Workers_API">Web Workers</a>.</p>
 </div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox notranslate"><em>​serviceWorkerRegistration</em>.showNotification(<em>title</em>, [<em>options</em>])</pre>
+<pre class="syntaxbox"><em>​serviceWorkerRegistration</em>.showNotification(<em>title</em>, [<em>options</em>])</pre>
 
 <h3 id="Paramètres">Paramètres</h3>
 
@@ -34,7 +34,7 @@ translation_of: Web/API/ServiceWorkerRegistration/showNotification
  <ul>
   <li><code>actions</code>: Un tableau de {{domxref ("NotificationAction")}} représentant les actions disponibles pour l'utilisateur lorsque la notification est présentée. Ce sont des options parmi lesquelles l'utilisateur peut choisir pour agir sur l'action dans le contexte de la notification elle-même. Le nom de l'action est envoyé au gestionnaire de notifications du service worker pour lui faire savoir que l'action a été sélectionnée par l'utilisateur. Les membres du tableau doivent être un objet. Il peut contenir les valeurs suivantes:
    <ul>
-    <li>action: Une {{domxref("DOMString")}}  représentant <span class="tlid-translation translation" lang="fr"><span title="">une action utilisateur à afficher sur la notification</span></span>.</li>
+    <li>action: Une {{domxref("DOMString")}}  représentant une action utilisateur à afficher sur la notification.</li>
     <li>title: Une {{domxref("DOMString")}} contenant le texte d'action à montrer à l'utilisateur.</li>
     <li>icon: Une {{domxref("USVString")}} contenant l'URL d'une icône à afficher avec l'action.</li>
    </ul>
@@ -45,13 +45,13 @@ translation_of: Web/API/ServiceWorkerRegistration/showNotification
   <li><code>dir</code>: La direction dans laquelle afficher la notification. La valeur par défaut est <code>auto</code>, qui adopte simplement le comportement du paramètre de langue du navigateur, mais vous pouvez remplacer ce comportement en définissant les valeurs de <code>ltr</code> et <code>rtl</code> (bien que la plupart des navigateurs semblent ignorer ces paramètres.)</li>
   <li><code>icon</code>: Une {{domxref ("USVString")}} contenant l'URL d'une icône à afficher dans la notification.</li>
   <li><code>image</code>: Une {{domxref ("USVString")}} contenant l'URL d'une image à afficher dans la notification.</li>
-  <li><code>lang</code>: La langue de la notification, telle que spécifiée à l'aide d'un {{domxref ("DOMString")}} représentant une <a href="http://www.rfc-editor.org/rfc/bcp/bcp47.txt">balise de langue BCP 47</a>. Consultez la page des <a href="http://www.sitepoint.com/web-foundations/iso-2-letter-language-codes/">codes de langue à 2 lettres ISO</a> de Sitepoint pour une référence simple.</li>
+  <li><code>lang</code>: La langue de la notification, telle que spécifiée à l'aide d'un {{domxref ("DOMString")}} représentant une <a href="https://www.rfc-editor.org/rfc/bcp/bcp47.txt">balise de langue BCP 47</a>. Consultez la page des <a href="http://www.sitepoint.com/web-foundations/iso-2-letter-language-codes/">codes de langue à 2 lettres ISO</a> de Sitepoint pour une référence simple.</li>
   <li><code>renotify</code>: Un {{domxref ("Boolean", "Booléen")}} spécifiant si l'utilisateur doit être notifié après qu'une nouvelle notification remplace l'ancienne. La valeur par défaut est <code>false</code>, ce qui signifie qu'ils ne seront pas notifiés.</li>
   <li><code>requireInteraction</code>: Un {{domxref ("Boolean", "Booléen")}} indiquant qu'une notification doit rester active jusqu'à ce que l'utilisateur clique dessus ou la rejette, plutôt que de se fermer automatiquement. La valeur par défaut est <code>false</code>.</li>
   <li><code>silent</code>: Un {{domxref ("Boolean", "Booléen")}} spécifiant si la notification est silencieuse (aucun son ni vibration émis), quels que soient les paramètres de l'appareil. La valeur par défaut est <code>false</code>, ce qui signifie qu'il ne sera pas silencieux.</li>
   <li><code>tag</code>: Un {{domxref ("DOMString")}} représentant un tag d'identification pour la notification.</li>
   <li><code>timestamp</code>: Un {{domxref ("DOMTimeStamp")}} représentant l'heure à laquelle la notification a été créée. Il peut être utilisé pour indiquer l'heure à laquelle une notification est réelle. Par exemple, cela peut se produire dans le passé lorsqu'une notification est utilisée pour un message qui n'a pas pu être envoyé immédiatement parce que l'appareil était hors ligne, ou dans le futur pour une réunion sur le point de commencer.</li>
-  <li><code>vibrate</code>: Un <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Guide/API/Vibration#Vibration_patterns">modèle de vibration</a> que le matériel de vibration de l'appareil émet avec la notification. Un modèle de vibration peut être un réseau avec aussi peu qu'un membre. Les valeurs sont des temps en millisecondes où les indices pairs (0, 2, 4, etc.) indiquent la durée de vibration et les indices impairs indiquent la durée de la pause. Par exemple, [300, 100, 400] vibrerait 300 ms, mettrait en pause 100 ms, puis vibrerait 400 ms.</li>
+  <li><code>vibrate</code>: Un <a href="/fr/docs/Web/Guide/API/Vibration#Vibration_patterns">modèle de vibration</a> que le matériel de vibration de l'appareil émet avec la notification. Un modèle de vibration peut être un réseau avec aussi peu qu'un membre. Les valeurs sont des temps en millisecondes où les indices pairs (0, 2, 4, etc.) indiquent la durée de vibration et les indices impairs indiquent la durée de la pause. Par exemple, [300, 100, 400] vibrerait 300 ms, mettrait en pause 100 ms, puis vibrerait 400 ms.</li>
  </ul>
  </dd>
 </dl>
@@ -62,7 +62,7 @@ translation_of: Web/API/ServiceWorkerRegistration/showNotification
 
 <h2 id="Exemples">Exemples</h2>
 
-<pre class="brush: js notranslate">navigator.serviceWorker.register('sw.js')
+<pre class="brush: js">navigator.serviceWorker.register('sw.js')
 
 function showNotification() {
   Notification.requestPermission((result) =&gt; {

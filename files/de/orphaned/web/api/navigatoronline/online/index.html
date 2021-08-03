@@ -1,0 +1,191 @@
+---
+title: NavigatorOnLine.onLine
+slug: orphaned/Web/API/NavigatorOnLine/onLine
+tags:
+  - API
+  - DOM
+  - Dokumentation
+  - Eigenschaft
+  - Navigation
+  - NavigatorOnLine
+  - Offline
+  - Online
+  - Reference
+  - WebAPI
+translation_of: Web/API/NavigatorOnLine/onLine
+original_slug: Web/API/NavigatorOnLine/onLine
+---
+<div>{{ApiRef("HTML DOM")}}</div>
+
+<p>Diese Eigenschaft gibt einen Wahrheitswert (Bool-Wert) zurück, der Auskunft gibt, ob der Browser eine Internetverbindung aufbauen konnte. Dieser Wert wird immer dann aktualisiert, wenn eine neue Verbindung vom Browser angefordert wurde (durch Script- oder Benutzeraktionen). Es wird "false" zurückgegeben, wenn der letzte Versuch, eine Verbindung aufzubauen, fehlgeschlagen ist.</p>
+
+<p><strong>Einige Browser implementieren diese Funktion verschieden.</strong></p>
+
+<p><span style="line-height: 1.5;">Für <em>Chrome</em> und <em>Safari</em> gilt, dass wenn keine Verbindung zum LAN oder Router aufgebaut wurde, der Browser "offline" ist. Andernfalls ist der Browser "online". Das bedeutet, dass aus dem Online-Status nicht die tatsächliche Verbindung erkennbar ist. Wenn der Rückgabewert "false" ist, dann ist mit Sicherheit keine Verbindung vorhanden. Wenn der Wert aber "true" ist, muss dies keine tatsächliche Verbindung zum Internet bedeuten. Auch kann die Ausführung innerhalb einer <em>Virtuellen Maschine </em>den Wert verfälschen. Für weitere Informationen kann dieser HTML5-Rocks Artikel hilfreich sein (in Englisch): <a href="http://www.html5rocks.com/en/mobile/workingoffthegrid/">Working Off the Grid with HTML5 Offline</a></span></p>
+
+<p><em>Firefox</em> und der<em> Internet Explorer</em> können diesen Wert auch durch die Funktion des "Offline-Modus" verändern. Dann wird auch "false" zurückgegeben, unabhängig vom tatsächlichen Status.</p>
+
+<p>Bis Firefox 41 wurde in allen anderen Fällen "true" zurückgegeben. Seit Version 41 kann der tatsächliche Verbindungsstatus erkannt werden, wenn Firefox auf OS X oder Windows installiert ist.</p>
+
+<p>Es sind auch folgende Ereignisse verfügbar, mit denen unmittelbar auf Änderungen des "OnLine"-Wertes reagiert werden kann.</p>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/document.ononline"><code>window.ononline</code></a></li>
+ <li><a href="/en-US/docs/Web/API/document.onoffline"><code>window.onoffline</code></a></li>
+</ul>
+
+<h2 id="sect1"> </h2>
+
+<h2 id="Syntax">Syntax</h2>
+
+<pre class="syntaxbox"><em>online</em> = <em>window</em>.navigator.onLine;
+</pre>
+
+<h3 id="Value">Value</h3>
+
+<p><font face="Consolas, Liberation Mono, Courier, monospace">Der Rückgabewert ist vom Typ "boolean", kann also <em>true</em> oder <em>false</em> sein.</font></p>
+
+<h2 id="sect2"> </h2>
+
+<h2 id="Beispiel">Beispiel</h2>
+
+<p>Hier das <a href="http://html5-demos.appspot.com/static/navigator.onLine.html">Live-Beispiel</a></p>
+
+<p>Um zu bestimmen, ob der Browser mit dem Internet verbunden ist, müssen Sie den Wert von <code>window.navigator.onLine</code> wie folgt verwenden:</p>
+
+<pre class="brush: js">if (navigator.onLine) {
+  console.log('Verbunden');
+} else {
+  console.log('Getrennt');
+}</pre>
+
+<p>Wenn der Browser <code>onLine</code> nicht kennt, wird <em>false</em> oder <em>undefiniert</em> zurückgegeben.</p>
+
+<p>Um auf dir Veränderung des Status direkt reagieren zu können, verwenden Sie <code><a href="/en-US/docs/DOM/element.addEventListener">addEventListener</a></code> für die Ereignisse <code>window.ononline</code> und <code>window.onoffline;</code> wie in diesem Beispiel:</p>
+
+<pre class="brush: js">window.addEventListener("offline", function(e) { console.log("Nicht Verbunden"); });
+
+window.addEventListener("online", function(e) { console.log("Verbunden"); });
+</pre>
+
+<h2 id="sect3"> </h2>
+
+<h2 id="Spezifikationen">Spezifikationen</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("HTML WHATWG", "browsers.html#navigator.online", "navigator.onLine")}}</td>
+   <td>{{Spec2("HTML WHATWG")}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="sect4"> </h2>
+
+<h2 id="Browserkompatibilität">Browserkompatibilität</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Funktion</th>
+   <th>Chrome</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Einfache Umsetzung</td>
+   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
+   <td>{{CompatGeckoDesktop(1.9.1)}}<sup>[2]</sup><br>
+    {{CompatGeckoDesktop(2.0)}}<sup>[4]</sup></td>
+   <td>8<sup>[3]</sup></td>
+   <td>{{CompatNo}}<sup>[2]</sup></td>
+   <td>5.0.4</td>
+  </tr>
+  <tr>
+   <td>on {{domxref("WorkerNavigator")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoDesktop(29)}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Funktion</th>
+   <th>Android</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>BlackBerry</th>
+  </tr>
+  <tr>
+   <td>Einfache Umsetzung</td>
+   <td>2.2<sup>[5]</sup></td>
+   <td>{{CompatGeckoMobile(1.9.1)}}<sup>[2]</sup></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>
+    <p>7<br>
+     10</p>
+   </td>
+  </tr>
+  <tr>
+   <td>on {{domxref("WorkerNavigator")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile(29)}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Vorherige Versionen von Chrome geben true unmittelbar nach den öffnen des Tabs zurück. Erst nach der nächsten Netzwerkaktivität wird der richtige Wert zurückgegeben.  Windows: 11, Mac: 14, Chrome OS: 13, Linux: Liefert immer true zurück. Siehe auch <a href="http://crbug.com/7469">crbug.com/7469</a>.</p>
+
+<p>[2] Seit Firefox 4 und Opera 11.10 wird false unabhängig von der tatsächlichen Verbindung zurückgegeben, wenn der "offline"-Modus des Browsers aktiviert wurde. </p>
+
+<p>[3] Im Internet Explorer 8 werden die "online"- and "offline"-Ereignisse duch document.body ausgelöst; seit dem IE 9 werden diese auch von <code>window</code> ausgelöst.</p>
+
+<p>[4] Seit Firefox 41, auf OS X und Windows, wird der tatsächliche Verbindungstatus zurückgegeben, solange der "offline"-Modus nicht aktivert wurde.</p>
+
+<p>[5] Fehler in der WebView-Komponenten, siehe auch: <a href="http://code.google.com/p/android/issues/detail?id=16760">bug 16760</a>.</p>
+
+<h2 id="sect5"> </h2>
+
+<h2 id="Hinweise">Hinweise</h2>
+
+<p>Für weitere Informationen, siehe auch die  <a href="/en-US/docs/Online_and_offline_events">Online/Offline‎</a>-Ereignisse </p>
+
+<h2 id="sect6"> </h2>
+
+<h2 id="Verweise">Verweise</h2>
+
+<ul>
+ <li><a href="http://www.html5rocks.com/en/mobile/workingoffthegrid.html">HTML5 Rocks: Working Off the Grid With HTML5 Offline</a></li>
+ <li><a href="http://www.html5rocks.com/en/tutorials/offline/whats-offline/">HTML5 Rocks: "Offline": What does it mean and why should I care?</a></li>
+ <li><a href="http://hacks.mozilla.org/2010/01/offline-web-applications/">Mozilla Blog: Offline Web Applications</a></li>
+</ul>

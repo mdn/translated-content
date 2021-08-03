@@ -74,7 +74,7 @@ translation_of: Web/HTML/Element/keygen
 
 <p>DSA 鍵では <code>keyparams</code> 引数で、鍵の生成処理で使用する DSA PQG 引数を指定します。<code>pqg</code> 引数の値は、IETF <a class="link-ftp" href="ftp://ftp.rfc-editor.org/in-notes/rfc3279.txt">RFC 3279</a> で定めている DSS 引数を DER で符号化したものを、BASE64 で符号化したものです。ユーザーは DSA 鍵のサイズを、DSA 標準で定義されているサイズから1つ選択できます。</p>
 
-<p>EC 鍵では <code>keyparams</code> 引数で、鍵が生成される楕円曲線の名前を指定します。これは通常、<a class="external" href="http://mxr.mozilla.org/mozilla-central/source/security/manager/ssl/src/nsKeygenHandler.cpp?mark=179-185,187-206,208-227,229-256#177" title="http://mxr.mozilla.org/mozilla-central/source/security/manager/ssl/src/nsKeygenHandler.cpp?mark=179-185,187-206,208-227,229-256#177">nsKeygenHandler.cpp</a> 内のテーブル由来の文字列です。(ここに名前がある曲線の一部だけが、実際に個々のブラウザーでサポートされている可能性がある点に注意してください) <code>keyparams</code> 引数文字列が認識できない曲線名である場合は、ユーザーが選択した鍵強度 (低、中、高) に基づいて曲線が選択されます。高強度は "<code>secp384r1</code>"、中強度は "<code>secp256r1</code>" です。(注記: 鍵強度の種類数の選択、各強度の既定値、ユーザーに選択肢を提示する UI は仕様の範囲外です)</p>
+<p>EC 鍵では <code>keyparams</code> 引数で、鍵が生成される楕円曲線の名前を指定します。これは通常、<a class="external" href="http://mxr.mozilla.org/mozilla-central/source/security/manager/ssl/src/nsKeygenHandler.cpp?mark=179-185,187-206,208-227,229-256#177">nsKeygenHandler.cpp</a> 内のテーブル由来の文字列です。(ここに名前がある曲線の一部だけが、実際に個々のブラウザーでサポートされている可能性がある点に注意してください) <code>keyparams</code> 引数文字列が認識できない曲線名である場合は、ユーザーが選択した鍵強度 (低、中、高) に基づいて曲線が選択されます。高強度は "<code>secp384r1</code>"、中強度は "<code>secp256r1</code>" です。(注記: 鍵強度の種類数の選択、各強度の既定値、ユーザーに選択肢を提示する UI は仕様の範囲外です)</p>
 
 <p><code>&lt;keygen&gt;</code> 要素は、HTML フォーム内のみで有効です。この要素は、ユーザーが鍵のサイズを選択するために提示するいくつかの選択肢をもたらします。選択の UI はメニュー、ラジオボタン、あるいは他に利用可能な何かになるでしょう。ブラウザーは、使用可能な鍵強度をいくつか提示します。現在は、強と中の 2 種類の強度を提供しています。ユーザーのブラウザーが暗号処理ハードウェア (例えば "スマートカード") をサポートするように設定されている場合は、どこへ鍵を生成するか (例えばスマートカードに、あるいはソフトウェアで生成してディスクへ保存) の選択肢も与えられるかもしれません。</p>
 
@@ -118,7 +118,5 @@ SignedPublicKeyAndChallenge ::= SEQUENCE {
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<p class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</p>
 
 <p>{{Compat("html.elements.keygen")}}</p>

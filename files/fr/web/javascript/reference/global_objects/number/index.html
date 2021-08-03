@@ -44,11 +44,11 @@ b instanceof Number; // donnera false</pre>
  <dt>{{jsxref("Number.EPSILON")}}</dt>
  <dd>Le plus petit intervalle entre deux valeurs qu'il est possible de représenter en JavaScript.</dd>
  <dt>{{jsxref("Number.MAX_SAFE_INTEGER")}}</dt>
- <dd>La valeur entière maximale qu'on peut représenter en JavaScript (<code>2<sup>53</sup> - 1</code>).</dd>
+ <dd>La valeur entière maximale qu'on peut représenter en JavaScript (<code>2^53 - 1</code>).</dd>
  <dt>{{jsxref("Number.MAX_VALUE")}}</dt>
  <dd>La valeur numérique maximale qu'on peut représenter en JavaScript.</dd>
  <dt>{{jsxref("Number.MIN_SAFE_INTEGER")}}</dt>
- <dd>La valeur entière minimale qu'on peut représenter en JavaScript (<code>-(2<sup>53</sup> - 1)</code>).</dd>
+ <dd>La valeur entière minimale qu'on peut représenter en JavaScript (<code>-(2^53 - 1)</code>).</dd>
  <dt>{{jsxref("Number.MIN_VALUE")}}</dt>
  <dd>La plus petite valeur qu'on peut représenter en JavaScript, c'est-à-dire le plus petit nombre positif (le nombre le plus près de zéro qui n'est pas égal à zéro et qu'on peut représenter en JavaScript).</dd>
  <dt>{{jsxref("Number.NaN")}}</dt>
@@ -71,9 +71,9 @@ b instanceof Number; // donnera false</pre>
  <dt>{{jsxref("Number.isInteger()")}}</dt>
  <dd>Cette méthode permet de déterminer si la valeur passée en argument est un entier.</dd>
  <dt>{{jsxref("Number.isSafeInteger()")}}</dt>
- <dd>Cette méthode permet de déterminer si la valeur passée en argument peut correctement être représentée comme un entier en JavaScript (savoir si elle est comprise entre <code>-(2<sup>53</sup> - 1)</code> et <code>2<sup>53</sup> - 1</code>).</dd>
- <dt><s class="obsoleteElement">{{jsxref("Number.toInteger()")}} {{obsolete_inline}}</s></dt>
- <dd><s class="obsoleteElement">Cette méthode est utilisée afin d'évaluer et de convertir la valeur passée en argument en entier (ou en l'{{jsxref("Infinity", "infini","",1)}}). Cette méthode a été supprimée.</s></dd>
+ <dd>Cette méthode permet de déterminer si la valeur passée en argument peut correctement être représentée comme un entier en JavaScript (savoir si elle est comprise entre <code>-(2^53 - 1)</code> et <code>2^53 - 1</code>).</dd>
+ <dt>{{jsxref("Number.toInteger()")}} {{obsolete_inline}}</dt>
+ <dd>Cette méthode est utilisée afin d'évaluer et de convertir la valeur passée en argument en entier (ou en l'{{jsxref("Infinity", "infini","",1)}}). Cette méthode a été supprimée.</dd>
  <dt>{{jsxref("Number.parseFloat()", "Number.parseFloat(<var>string</var>)")}}</dt>
  <dd>Cette méthode correspond à la méthode {{jsxref("parseFloat", "parseFloat()")}} de l'objet global.</dd>
  <dt>{{jsxref("Number.parseInt()", "Number.parseInt(<var>string</var>, [<var>radix</var>])")}}</dt>
@@ -120,8 +120,8 @@ var nonNumérique = Number.NaN;
 
 <p>Dans l'exemple suivant, on illustre les valeurs numériques maximales et minimales (exclues) qu'on peut représenter avec un nombre en JavaScript (pour plus de détails, <a href="https://tc39.github.io/ecma262/#sec-ecmascript-language-types-number-type">voir le chapitre 6.1.6 du standard ECMAScript</a>) :</p>
 
-<pre class="brush: js notranslate">var biggestInt = 9007199254740992; //Number.MAX_SAFE_INTEGER+1 (2<sup>53</sup>-1)
-var smallestInt = -9007199254740992; //Number.MIN_SAFE_INTEGER-1 -(2<sup>53</sup>-1)
+<pre class="brush: js notranslate">var biggestInt = 9007199254740992; //Number.MAX_SAFE_INTEGER+1 (2^53-1)
+var smallestInt = -9007199254740992; //Number.MIN_SAFE_INTEGER-1 -(2^53-1)
 </pre>
 
 <p>Lorsqu'on analyse et convertit des données JSON, les valeurs en dehors de cet intervalle peuvent entraîner des erreurs ou des corruptions de valeurs lors de leurs conversions. Selon les objets qu'on souhaite représenter, on peut utiliser {{jsxref("String")}} dans certains cas pour représenter certaines valeurs.</p>
@@ -152,7 +152,7 @@ Number("-Infinity";) // -Infinity
 </pre>
 
 <div class="note">
-<p><strong>Note  :</strong> On pourra également convertir <code>null</code> en <code>0</code> grâce à <code>Number</code> : <code>Number(null)</code> donnera <code>0</code>.</p>
+<p><strong>Note :</strong> On pourra également convertir <code>null</code> en <code>0</code> grâce à <code>Number</code> : <code>Number(null)</code> donnera <code>0</code>.</p>
 </div>
 
 <h2 id="Spécifications">Spécifications</h2>

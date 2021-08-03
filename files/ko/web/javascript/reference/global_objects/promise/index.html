@@ -13,7 +13,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise
 
 <p><strong><code>Promise</code></strong> 객체는 비동기 작업이 맞이할 미래의 완료 또는 실패와 그 결과 값을 나타냅니다.</p>
 
-<p>Promise의 작동 방식과 Promise 사용 방법에 대해 알아보려면 먼저 <a href="https://wiki.developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Using_promises">Promise 사용 방법</a>을 읽어 보십시오.</p>
+<p>Promise의 작동 방식과 Promise 사용 방법에 대해 알아보려면 먼저 <a href="/ko/docs/Web/JavaScript/Guide/Using_promises">Promise 사용 방법</a>을 읽어 보십시오.</p>
 
 <h2 id="설명">설명</h2>
 
@@ -107,16 +107,18 @@ myFirstPromise.then((successMessage) =&gt; {
 
 <h3 id="고급_예제">고급 예제</h3>
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;button id="btn"&gt;프로미스 만들기!&lt;/button&gt;
-&lt;div id="log"&gt;&lt;/div&gt;</pre>
-</div>
-
 <p>다음의 작은 예제는 <code>Promise</code>의 동작 방식을 보여줍니다. <code>testPromise()</code> 함수는 {{HTMLElement("button")}}을 클릭할 때마다 호출되며, {{domxref("window.setTimeout()")}}을 사용해 1~3초의 무작위 간격 이후 프로미스 횟수(1부터 시작하는 숫자)로 이행하는 프로미스를 생성합니다. <code>Promise()</code> 생성자는 프로미스를 만드는 데 쓰입니다.</p>
 
 <p>프로미스 이행은 {{jsxref("Promise.prototype.then()","p1.then()")}}을 사용하는 이행 콜백 세트를 통해 단순히 로그에 남습니다. 약간의 로그를 통해, 함수의 동기 부분이 비동기적 프로미스의 완료와 어떻게 분리되어 있는지 확인할 수 있습니다.</p>
 
-<pre class="brush: js notranslate">'use strict';
+<h4>HTML</h4>
+
+<pre class="brush: html">&lt;button id="btn"&gt;프로미스 만들기!&lt;/button&gt;
+&lt;div id="log"&gt;&lt;/div&gt;</pre>
+
+<h4>JavaScript</h4>
+
+<pre class="brush: js">'use strict';
 var promiseCount = 0;
 
 function testPromise() {
@@ -159,17 +161,15 @@ function testPromise() {
     log.insertAdjacentHTML('beforeend', thisPromiseCount +
         ') 프로미스 생성 (&lt;small&gt;동기적 코드 종료&lt;/small&gt;)&lt;br/&gt;');
 }
-</pre>
 
-<div class="hidden">
-<pre class="brush: js notranslate">if ("Promise" in window) {
+if ("Promise" in window) {
   var btn = document.getElementById("btn");
   btn.addEventListener("click", testPromise);
 } else {
   log = document.getElementById('log');
   log.innerHTML = "Live example not available as your browser doesn't support the &lt;code&gt;Promise&lt;code&gt; interface.";
-}</pre>
-</div>
+}
+</pre>
 
 <p>이 예제는 버튼을 클릭하면 실행됩니다. <code>Promise</code>를 지원하는 브라우저가 필요합니다. 짧은 시간 안에 버튼을 여러 번 클릭하여, 서로 다른 프로미스가 번갈아 이행되는 것을 볼 수도 있습니다.</p>
 

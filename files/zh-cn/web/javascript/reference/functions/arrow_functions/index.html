@@ -95,9 +95,9 @@ elements.map(({ "length": lengthFooBArX }) =&gt; lengthFooBArX); // [8, 6, 7, 9]
 <p>在箭头函数出现之前，每一个新函数根据它是被如何调用的来定义这个函数的this值：</p>
 
 <ul>
- <li>如果是该函数是一个构造函数，this指针指向一个新的对象</li>
+ <li>如果该函数是一个构造函数，this指针指向一个新的对象</li>
  <li>在严格模式下的函数调用下，this指向<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">undefined</span></font></li>
- <li>如果是该函数是一个对象的方法，则它的this指针指向这个对象</li>
+ <li>如果该函数是一个对象的方法，则它的this指针指向这个对象</li>
  <li>等等</li>
 </ul>
 

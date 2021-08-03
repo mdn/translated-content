@@ -30,7 +30,13 @@ translation_of: Web/HTTP/Headers/Cache-Control
 
 <h2 id="语法">语法</h2>
 
-<p>指令不区分大小写，并且具有可选参数，可以用令牌或者带引号的字符串语法。多个指令以逗号分隔。</p>
+<p>指令格式具有以下有效规则：</p>
+
+<ul>
+ <li>不区分大小写，但建议使用小写。</li>
+ <li>多个指令以逗号分隔。</li>
+ <li>具有可选参数，可以用令牌或者带引号的字符串语法。</li>
+</ul>
 
 <h3 id="缓存请求指令">缓存请求指令</h3>
 
@@ -75,7 +81,7 @@ Cache-control: stale-if-error=&lt;seconds&gt;
 
 <dl>
  <dt><code>public</code></dt>
- <dd>表明响应可以被任何对象（包括：发送请求的客户端，代理服务器，等等）缓存，即使是通常不可缓存的内容。（例如：1.该响应没有<code>max-age</code>指令或<code>Expires</code>消息头；2. 该响应对应的请求方法是 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST">POST</a> 。）</dd>
+ <dd>表明响应可以被任何对象（包括：发送请求的客户端，代理服务器，等等）缓存，即使是通常不可缓存的内容。（例如：1.该响应没有<code>max-age</code>指令或<code>Expires</code>消息头；2. 该响应对应的请求方法是 <a href="/zh-CN/docs/Web/HTTP/Methods/POST">POST</a> 。）</dd>
  <dt><code>private</code></dt>
  <dd>表明响应只能被单个用户缓存，不能作为共享缓存（即代理服务器不能缓存它）。私有缓存可以缓存响应内容，比如：对应用户的本地浏览器。</dd>
  <dt><code>no-cache</code></dt>
@@ -138,30 +144,41 @@ Cache-control: stale-if-error=&lt;seconds&gt;
 
 <h3 id="需要重新验证">需要重新验证</h3>
 
-<p>指定 <code>no-cache</code> 或 <code>max-age=0</code> 表示客户端可以缓存资源，每次使用缓存资源前都必须重新验证其有效性。这意味着每次都会发起 HTTP 请求，但当缓存内容仍有效时可以跳过 HTTP 响应体的下载。</p>
+<p>指定 <code>no-cache</code> 或 <code>max-age=0, must-revalidate</code> 表示客户端可以缓存资源，每次使用缓存资源前都必须重新验证其有效性。这意味着每次都会发起 HTTP 请求，但当缓存内容仍有效时可以跳过 HTTP 响应体的下载。</p>
 
-<pre>Cache-Control: no-cache
-Cache-Control: max-age=0</pre>
+<pre class="brush: http">Cache-Control: no-cache</pre>
+
+<pre class="brush: http">Cache-Control: max-age=0, must-revalidate</pre>
+
+<p><strong>注意</strong>: 如果服务器关闭或失去连接，下面的指令可能会造成使用缓存。</p>
+
+<pre class="brush: http">Cache-Control: max-age=0</pre>
 
 <h2 id="规范">规范</h2>
 
 <table class="standard-table">
- <tbody>
+ <thead>
   <tr>
    <th scope="col">Specification</th>
-   <th scope="col">Title</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{RFC(8246, "HTTP Immutable Responses")}}</td>
+   <td><span class="spec-RFC">IETF RFC</span></td>
+   <td></td>
   </tr>
   <tr>
-   <td>{{RFC("7234")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Caching</td>
+   <td>{{RFC(7234, "Hypertext Transfer Protocol (HTTP/1.1): Caching")}}</td>
+   <td><span class="spec-RFC">IETF RFC</span></td>
+   <td></td>
   </tr>
   <tr>
-   <td>{{RFC("5861")}}</td>
-   <td>HTTP Cache-Control Extensions for Stale Content</td>
-  </tr>
-  <tr>
-   <td><a href="https://tools.ietf.org/html/draft-mcmanus-immutable-00">draft-mcmanus-immutable-00</a></td>
-   <td>HTTP Immutable Responses</td>
+   <td>{{RFC(5861, "HTTP Cache-Control Extensions for Stale Content")}}</td>
+   <td><span class="spec-RFC">IETF RFC</span></td>
+   <td>Initial definition</td>
   </tr>
  </tbody>
 </table>
@@ -173,9 +190,9 @@ Cache-Control: max-age=0</pre>
 <h2 id="参见">参见</h2>
 
 <ul>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Caching_FAQ">HTTP Caching FAQ</a></li>
+ <li><a href="/zh-CN/docs/Web/HTTP/Caching">HTTP Caching FAQ</a></li>
  <li><a href="https://www.mnot.net/cache_docs/">Caching Tutorial for Web Authors and Webmasters</a></li>
- <li>Guide: <em><a href="https://csswizardry.com/2019/03/cache-control-for-civilians"><code>Cache-Control</code> for civilians</a></em></li>
+ <li>Guide: <em><a href="https://csswizardry.com/2019/03/cache-control-for-civilians"><code>Cache-Control</code> for civilians</a></em></li>
  <li>{{HTTPHeader("Age")}}</li>
  <li>{{HTTPHeader("Expires")}}</li>
  <li>{{HTTPHeader("Pragma")}}</li>

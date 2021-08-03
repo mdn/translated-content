@@ -5799,30 +5799,6 @@
       "sh7dm"
     ]
   },
-  "Web/API/Body": {
-    "modified": "2020-10-15T22:06:24.327Z",
-    "contributors": [
-      "RickBrown"
-    ]
-  },
-  "Web/API/Body/arrayBuffer": {
-    "modified": "2020-10-15T22:12:53.458Z",
-    "contributors": [
-      "SerzN1"
-    ]
-  },
-  "Web/API/Body/formData": {
-    "modified": "2020-10-15T22:14:02.669Z",
-    "contributors": [
-      "Aparin"
-    ]
-  },
-  "Web/API/Body/json": {
-    "modified": "2020-10-15T22:06:25.317Z",
-    "contributors": [
-      "dasha_hshr"
-    ]
-  },
   "Web/API/BroadcastChannel": {
     "modified": "2020-10-15T22:08:52.446Z",
     "contributors": [
@@ -6464,13 +6440,6 @@
     "modified": "2020-10-15T22:08:25.066Z",
     "contributors": [
       "ivanson"
-    ]
-  },
-  "Web/API/ChildNode": {
-    "modified": "2019-03-23T22:51:21.900Z",
-    "contributors": [
-      "untritt",
-      "pantherCZ"
     ]
   },
   "Web/API/Clients": {
@@ -9054,32 +9023,6 @@
       "alexs_havelev"
     ]
   },
-  "Web/API/HTMLOrForeignElement/dataset": {
-    "modified": "2020-10-15T21:56:06.529Z",
-    "contributors": [
-      "YozhEzhi",
-      "masterbox06",
-      "BitChap",
-      "motan",
-      "iamvector",
-      "hunty",
-      "almostbergman",
-      "FlowerDeLuce"
-    ]
-  },
-  "Web/API/HTMLOrForeignElement/nonce": {
-    "modified": "2020-10-15T22:22:30.878Z",
-    "contributors": [
-      "ellizii"
-    ]
-  },
-  "Web/API/HTMLOrForeignElement/tabIndex": {
-    "modified": "2019-03-18T21:11:41.012Z",
-    "contributors": [
-      "DianaGalter",
-      "Tanya_Agisheva"
-    ]
-  },
   "Web/API/HTMLScriptElement": {
     "modified": "2020-10-15T22:20:14.865Z",
     "contributors": [
@@ -9383,12 +9326,6 @@
     "modified": "2020-10-15T22:21:03.336Z",
     "contributors": [
       "Dzvonek"
-    ]
-  },
-  "Web/API/LocalMediaStream": {
-    "modified": "2019-03-23T22:18:51.568Z",
-    "contributors": [
-      "sosnovskyas"
     ]
   },
   "Web/API/Location": {
@@ -9779,117 +9716,6 @@
       "AlexAlex"
     ]
   },
-  "Web/API/NavigatorID": {
-    "modified": "2020-10-15T21:36:43.124Z",
-    "contributors": [
-      "fscholz",
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorID/appCodeName": {
-    "modified": "2019-03-23T22:54:11.399Z",
-    "contributors": [
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorID/appName": {
-    "modified": "2019-03-23T22:54:41.758Z",
-    "contributors": [
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorID/appVersion": {
-    "modified": "2019-03-23T22:54:32.102Z",
-    "contributors": [
-      "FordSoft",
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorID/platform": {
-    "modified": "2020-10-15T21:36:42.389Z",
-    "contributors": [
-      "mqqza",
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorID/product": {
-    "modified": "2019-03-23T22:54:26.372Z",
-    "contributors": [
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorID/taintEnabled": {
-    "modified": "2020-10-15T21:36:42.862Z",
-    "contributors": [
-      "fscholz",
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorID/userAgent": {
-    "modified": "2019-05-31T01:04:23.816Z",
-    "contributors": [
-      "Grawl",
-      "patsuckow",
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorLanguage": {
-    "modified": "2019-03-23T22:54:36.204Z",
-    "contributors": [
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorLanguage/language": {
-    "modified": "2020-05-02T05:07:32.288Z",
-    "contributors": [
-      "leshkin",
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorLanguage/languages": {
-    "modified": "2019-03-23T22:54:22.153Z",
-    "contributors": [
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorOnLine": {
-    "modified": "2019-03-23T22:54:40.457Z",
-    "contributors": [
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorOnLine/onLine": {
-    "modified": "2019-03-23T22:54:19.762Z",
-    "contributors": [
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorPlugins": {
-    "modified": "2019-03-23T22:54:31.545Z",
-    "contributors": [
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorPlugins/javaEnabled": {
-    "modified": "2019-03-23T22:54:23.717Z",
-    "contributors": [
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorPlugins/mimeTypes": {
-    "modified": "2019-03-23T22:54:19.236Z",
-    "contributors": [
-      "nik3402",
-      "torbasow",
-      "AlexAlex"
-    ]
-  },
-  "Web/API/NavigatorPlugins/plugins": {
-    "modified": "2019-03-23T22:54:18.720Z",
-    "contributors": [
-      "AlexAlex"
-    ]
-  },
   "Web/API/NetworkInformation": {
     "modified": "2019-03-23T22:54:09.237Z",
     "contributors": [
@@ -9967,12 +9793,6 @@
     "modified": "2019-03-23T22:53:36.038Z",
     "contributors": [
       "BodyCount",
-      "AlexAlex"
-    ]
-  },
-  "Web/API/Node/getUserData": {
-    "modified": "2019-03-23T22:53:29.815Z",
-    "contributors": [
       "AlexAlex"
     ]
   },
@@ -10330,12 +10150,6 @@
     "modified": "2019-03-23T22:51:16.207Z",
     "contributors": [
       "Xnoyer"
-    ]
-  },
-  "Web/API/RenderingContext": {
-    "modified": "2020-01-03T11:02:10.593Z",
-    "contributors": [
-      "5GameMaker"
     ]
   },
   "Web/API/Request": {
@@ -20065,100 +19879,6 @@
       "fullfs"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Map": {
-    "modified": "2020-10-15T21:31:18.471Z",
-    "contributors": [
-      "altpoint",
-      "AndreyGlyan",
-      "fanich37",
-      "Dzvonek",
-      "teryaew",
-      "xobotyi",
-      "akmil",
-      "SphinxKnight",
-      "WispProxy",
-      "dtretyakov"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/@@species": {
-    "modified": "2019-03-23T22:09:16.930Z",
-    "contributors": [
-      "WispProxy",
-      "ahtohbi4"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/clear": {
-    "modified": "2019-03-23T22:11:36.456Z",
-    "contributors": [
-      "thepocp"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/delete": {
-    "modified": "2020-10-15T21:50:15.883Z",
-    "contributors": [
-      "xobotyi",
-      "ahtohbi4",
-      "vesai"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/entries": {
-    "modified": "2019-09-29T09:44:45.397Z",
-    "contributors": [
-      "evvs",
-      "rsarov",
-      "ahtohbi4"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/forEach": {
-    "modified": "2020-10-15T21:49:44.007Z",
-    "contributors": [
-      "swa1ps",
-      "trueanqu",
-      "SomeoneDeployMe"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/get": {
-    "modified": "2020-10-15T21:55:36.338Z",
-    "contributors": [
-      "dimon4ezzz",
-      "AndreyLipin",
-      "ahtohbi4"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/has": {
-    "modified": "2019-03-23T22:18:58.841Z",
-    "contributors": [
-      "Ignat86"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/keys": {
-    "modified": "2019-03-23T22:09:06.332Z",
-    "contributors": [
-      "ahtohbi4"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/set": {
-    "modified": "2019-07-08T16:59:23.175Z",
-    "contributors": [
-      "elrostov",
-      "InoY",
-      "ahtohbi4"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/size": {
-    "modified": "2020-11-28T13:51:01.575Z",
-    "contributors": [
-      "ialexi-bl",
-      "Yumeiro",
-      "reilag"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/values": {
-    "modified": "2019-03-23T22:09:12.314Z",
-    "contributors": [
-      "ahtohbi4"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Math": {
     "modified": "2020-10-15T21:26:14.248Z",
     "contributors": [
@@ -25381,6 +25101,37 @@
       "a-chepugov"
     ]
   },
+  "orphaned/Web/API/Body": {
+    "modified": "2020-10-15T22:06:24.327Z",
+    "contributors": [
+      "RickBrown"
+    ]
+  },
+  "orphaned/Web/API/Body/arrayBuffer": {
+    "modified": "2020-10-15T22:12:53.458Z",
+    "contributors": [
+      "SerzN1"
+    ]
+  },
+  "orphaned/Web/API/Body/formData": {
+    "modified": "2020-10-15T22:14:02.669Z",
+    "contributors": [
+      "Aparin"
+    ]
+  },
+  "orphaned/Web/API/Body/json": {
+    "modified": "2020-10-15T22:06:25.317Z",
+    "contributors": [
+      "dasha_hshr"
+    ]
+  },
+  "orphaned/Web/API/ChildNode": {
+    "modified": "2019-03-23T22:51:21.900Z",
+    "contributors": [
+      "untritt",
+      "pantherCZ"
+    ]
+  },
   "orphaned/Web/API/ChildNode/remove": {
     "modified": "2019-03-23T22:51:25.031Z",
     "contributors": [
@@ -25423,6 +25174,32 @@
       "teoli"
     ]
   },
+  "orphaned/Web/API/HTMLOrForeignElement/dataset": {
+    "modified": "2020-10-15T21:56:06.529Z",
+    "contributors": [
+      "YozhEzhi",
+      "masterbox06",
+      "BitChap",
+      "motan",
+      "iamvector",
+      "hunty",
+      "almostbergman",
+      "FlowerDeLuce"
+    ]
+  },
+  "orphaned/Web/API/HTMLOrForeignElement/nonce": {
+    "modified": "2020-10-15T22:22:30.878Z",
+    "contributors": [
+      "ellizii"
+    ]
+  },
+  "orphaned/Web/API/HTMLOrForeignElement/tabIndex": {
+    "modified": "2019-03-18T21:11:41.012Z",
+    "contributors": [
+      "DianaGalter",
+      "Tanya_Agisheva"
+    ]
+  },
   "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
     "modified": "2020-08-02T03:41:34.455Z",
     "contributors": [
@@ -25430,6 +25207,129 @@
       "S-le",
       "chrisdavidmills",
       "curdwithraisins"
+    ]
+  },
+  "orphaned/Web/API/LocalMediaStream": {
+    "modified": "2019-03-23T22:18:51.568Z",
+    "contributors": [
+      "sosnovskyas"
+    ]
+  },
+  "orphaned/Web/API/NavigatorID": {
+    "modified": "2020-10-15T21:36:43.124Z",
+    "contributors": [
+      "fscholz",
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorID/appCodeName": {
+    "modified": "2019-03-23T22:54:11.399Z",
+    "contributors": [
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorID/appName": {
+    "modified": "2019-03-23T22:54:41.758Z",
+    "contributors": [
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorID/appVersion": {
+    "modified": "2019-03-23T22:54:32.102Z",
+    "contributors": [
+      "FordSoft",
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorID/platform": {
+    "modified": "2020-10-15T21:36:42.389Z",
+    "contributors": [
+      "mqqza",
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorID/product": {
+    "modified": "2019-03-23T22:54:26.372Z",
+    "contributors": [
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorID/taintEnabled": {
+    "modified": "2020-10-15T21:36:42.862Z",
+    "contributors": [
+      "fscholz",
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorID/userAgent": {
+    "modified": "2019-05-31T01:04:23.816Z",
+    "contributors": [
+      "Grawl",
+      "patsuckow",
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorLanguage": {
+    "modified": "2019-03-23T22:54:36.204Z",
+    "contributors": [
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorLanguage/language": {
+    "modified": "2020-05-02T05:07:32.288Z",
+    "contributors": [
+      "leshkin",
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorLanguage/languages": {
+    "modified": "2019-03-23T22:54:22.153Z",
+    "contributors": [
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorOnLine": {
+    "modified": "2019-03-23T22:54:40.457Z",
+    "contributors": [
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorOnLine/onLine": {
+    "modified": "2019-03-23T22:54:19.762Z",
+    "contributors": [
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorPlugins": {
+    "modified": "2019-03-23T22:54:31.545Z",
+    "contributors": [
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorPlugins/javaEnabled": {
+    "modified": "2019-03-23T22:54:23.717Z",
+    "contributors": [
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorPlugins/mimeTypes": {
+    "modified": "2019-03-23T22:54:19.236Z",
+    "contributors": [
+      "nik3402",
+      "torbasow",
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/NavigatorPlugins/plugins": {
+    "modified": "2019-03-23T22:54:18.720Z",
+    "contributors": [
+      "AlexAlex"
+    ]
+  },
+  "orphaned/Web/API/Node/getUserData": {
+    "modified": "2019-03-23T22:53:29.815Z",
+    "contributors": [
+      "AlexAlex"
     ]
   },
   "orphaned/Web/API/Notation": {
@@ -25492,6 +25392,12 @@
     "modified": "2020-10-15T22:33:11.540Z",
     "contributors": [
       "mechtool"
+    ]
+  },
+  "orphaned/Web/API/RenderingContext": {
+    "modified": "2020-01-03T11:02:10.593Z",
+    "contributors": [
+      "5GameMaker"
     ]
   },
   "orphaned/Web/API/ServiceWorkerState": {
@@ -25695,6 +25601,100 @@
     "modified": "2020-10-15T22:21:51.709Z",
     "contributors": [
       "AliaksandrZahorski"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
+    "modified": "2020-10-15T21:31:18.471Z",
+    "contributors": [
+      "altpoint",
+      "AndreyGlyan",
+      "fanich37",
+      "Dzvonek",
+      "teryaew",
+      "xobotyi",
+      "akmil",
+      "SphinxKnight",
+      "WispProxy",
+      "dtretyakov"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@species": {
+    "modified": "2019-03-23T22:09:16.930Z",
+    "contributors": [
+      "WispProxy",
+      "ahtohbi4"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/clear": {
+    "modified": "2019-03-23T22:11:36.456Z",
+    "contributors": [
+      "thepocp"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/delete": {
+    "modified": "2020-10-15T21:50:15.883Z",
+    "contributors": [
+      "xobotyi",
+      "ahtohbi4",
+      "vesai"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/entries": {
+    "modified": "2019-09-29T09:44:45.397Z",
+    "contributors": [
+      "evvs",
+      "rsarov",
+      "ahtohbi4"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/forEach": {
+    "modified": "2020-10-15T21:49:44.007Z",
+    "contributors": [
+      "swa1ps",
+      "trueanqu",
+      "SomeoneDeployMe"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/get": {
+    "modified": "2020-10-15T21:55:36.338Z",
+    "contributors": [
+      "dimon4ezzz",
+      "AndreyLipin",
+      "ahtohbi4"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/has": {
+    "modified": "2019-03-23T22:18:58.841Z",
+    "contributors": [
+      "Ignat86"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/keys": {
+    "modified": "2019-03-23T22:09:06.332Z",
+    "contributors": [
+      "ahtohbi4"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/set": {
+    "modified": "2019-07-08T16:59:23.175Z",
+    "contributors": [
+      "elrostov",
+      "InoY",
+      "ahtohbi4"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/size": {
+    "modified": "2020-11-28T13:51:01.575Z",
+    "contributors": [
+      "ialexi-bl",
+      "Yumeiro",
+      "reilag"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/values": {
+    "modified": "2019-03-23T22:09:12.314Z",
+    "contributors": [
+      "ahtohbi4"
     ]
   },
   "orphaned/Web/JavaScript/Reference/Global_Objects/Math/Метод_Math.max()_": {

@@ -3540,19 +3540,6 @@
       "limkukhyun"
     ]
   },
-  "Web/API/Body": {
-    "modified": "2020-10-15T22:07:57.321Z",
-    "contributors": [
-      "alattalatta",
-      "RickBrown"
-    ]
-  },
-  "Web/API/Body/json": {
-    "modified": "2020-10-15T22:07:55.949Z",
-    "contributors": [
-      "ldss3sang"
-    ]
-  },
   "Web/API/BroadcastChannel": {
     "modified": "2020-10-15T22:17:58.054Z",
     "contributors": [
@@ -3799,18 +3786,6 @@
   },
   "Web/API/CharacterData": {
     "modified": "2020-10-15T22:10:05.669Z",
-    "contributors": [
-      "cs09g"
-    ]
-  },
-  "Web/API/ChildNode": {
-    "modified": "2020-10-15T22:04:53.961Z",
-    "contributors": [
-      "cs09g"
-    ]
-  },
-  "Web/API/ChildNode/before": {
-    "modified": "2020-10-15T22:10:12.463Z",
     "contributors": [
       "cs09g"
     ]
@@ -5347,24 +5322,6 @@
       "chlgusrb14747"
     ]
   },
-  "Web/API/HTMLOrForeignElement/dataset": {
-    "modified": "2020-10-15T21:56:46.705Z",
-    "contributors": [
-      "Kaben",
-      "alattalatta",
-      "jyhwng",
-      "KimSejune"
-    ]
-  },
-  "Web/API/HTMLOrForeignElement/tabIndex": {
-    "modified": "2019-03-23T23:42:52.929Z",
-    "contributors": [
-      "fscholz",
-      "jsx",
-      "teoli",
-      "Netaras"
-    ]
-  },
   "Web/API/HTMLSelectElement": {
     "modified": "2020-10-15T22:30:22.387Z",
     "contributors": [
@@ -5849,42 +5806,6 @@
     "modified": "2020-10-15T22:21:13.721Z",
     "contributors": [
       "dragmove"
-    ]
-  },
-  "Web/API/NavigatorID": {
-    "modified": "2020-10-15T22:04:17.452Z",
-    "contributors": [
-      "fscholz",
-      "SSJ-unclear"
-    ]
-  },
-  "Web/API/NavigatorLanguage": {
-    "modified": "2020-10-15T21:59:32.837Z",
-    "contributors": [
-      "alattalatta",
-      "teoli"
-    ]
-  },
-  "Web/API/NavigatorLanguage/language": {
-    "modified": "2019-03-18T21:46:11.388Z",
-    "contributors": [
-      "yuj25"
-    ]
-  },
-  "Web/API/NavigatorOnLine": {
-    "modified": "2020-10-15T21:59:06.261Z",
-    "contributors": [
-      "alattalatta",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/NavigatorOnLine/Online_and_offline_events": {
-    "modified": "2019-03-23T23:51:10.400Z",
-    "contributors": [
-      "chrisdavidmills",
-      "teoli",
-      "Jeongkyu",
-      "조경빈"
     ]
   },
   "Web/API/NetworkInformation": {
@@ -14219,78 +14140,6 @@
       "supermanWannaBe"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Map": {
-    "modified": "2020-10-15T21:50:09.238Z",
-    "contributors": [
-      "Chloe-HyunJoo",
-      "alattalatta",
-      "younghoh",
-      "KaironMoon",
-      "echo304",
-      "dragmove"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag": {
-    "modified": "2020-10-15T22:04:19.848Z",
-    "contributors": [
-      "Seok.Heo"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/Map": {
-    "modified": "2020-10-15T22:26:33.491Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/clear": {
-    "modified": "2020-10-15T22:09:01.449Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/delete": {
-    "modified": "2020-10-15T22:09:03.155Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/entries": {
-    "modified": "2020-10-15T22:09:02.936Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/forEach": {
-    "modified": "2020-10-15T22:20:31.940Z",
-    "contributors": [
-      "JaeWorld"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/get": {
-    "modified": "2020-10-15T22:15:40.628Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/has": {
-    "modified": "2020-10-15T22:15:44.379Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/set": {
-    "modified": "2020-10-15T22:15:44.384Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
-  "Web/JavaScript/Reference/Global_Objects/Map/size": {
-    "modified": "2020-10-15T22:04:26.274Z",
-    "contributors": [
-      "Gren",
-      "Seok.Heo"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Math": {
     "modified": "2020-10-15T21:38:50.083Z",
     "contributors": [
@@ -18269,6 +18118,31 @@
       "hyeonseok"
     ]
   },
+  "orphaned/Web/API/Body": {
+    "modified": "2020-10-15T22:07:57.321Z",
+    "contributors": [
+      "alattalatta",
+      "RickBrown"
+    ]
+  },
+  "orphaned/Web/API/Body/json": {
+    "modified": "2020-10-15T22:07:55.949Z",
+    "contributors": [
+      "ldss3sang"
+    ]
+  },
+  "orphaned/Web/API/ChildNode": {
+    "modified": "2020-10-15T22:04:53.961Z",
+    "contributors": [
+      "cs09g"
+    ]
+  },
+  "orphaned/Web/API/ChildNode/before": {
+    "modified": "2020-10-15T22:10:12.463Z",
+    "contributors": [
+      "cs09g"
+    ]
+  },
   "orphaned/Web/API/ChildNode/remove": {
     "modified": "2020-10-15T22:10:05.225Z",
     "contributors": [
@@ -18318,6 +18192,24 @@
       "connorshea"
     ]
   },
+  "orphaned/Web/API/HTMLOrForeignElement/dataset": {
+    "modified": "2020-10-15T21:56:46.705Z",
+    "contributors": [
+      "Kaben",
+      "alattalatta",
+      "jyhwng",
+      "KimSejune"
+    ]
+  },
+  "orphaned/Web/API/HTMLOrForeignElement/tabIndex": {
+    "modified": "2019-03-23T23:42:52.929Z",
+    "contributors": [
+      "fscholz",
+      "jsx",
+      "teoli",
+      "Netaras"
+    ]
+  },
   "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
     "modified": "2020-12-08T00:45:03.205Z",
     "contributors": [
@@ -18331,6 +18223,42 @@
       "nacyot",
       "fscholz",
       "JoonghunPark"
+    ]
+  },
+  "orphaned/Web/API/NavigatorID": {
+    "modified": "2020-10-15T22:04:17.452Z",
+    "contributors": [
+      "fscholz",
+      "SSJ-unclear"
+    ]
+  },
+  "orphaned/Web/API/NavigatorLanguage": {
+    "modified": "2020-10-15T21:59:32.837Z",
+    "contributors": [
+      "alattalatta",
+      "teoli"
+    ]
+  },
+  "orphaned/Web/API/NavigatorLanguage/language": {
+    "modified": "2019-03-18T21:46:11.388Z",
+    "contributors": [
+      "yuj25"
+    ]
+  },
+  "orphaned/Web/API/NavigatorOnLine": {
+    "modified": "2020-10-15T21:59:06.261Z",
+    "contributors": [
+      "alattalatta",
+      "chrisdavidmills"
+    ]
+  },
+  "orphaned/Web/API/NavigatorOnLine/Online_and_offline_events": {
+    "modified": "2019-03-23T23:51:10.400Z",
+    "contributors": [
+      "chrisdavidmills",
+      "teoli",
+      "Jeongkyu",
+      "조경빈"
     ]
   },
   "orphaned/Web/API/OffscreenCanvas/toBlob": {
@@ -18607,6 +18535,78 @@
     "modified": "2020-10-15T22:12:31.982Z",
     "contributors": [
       "alattalatta"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
+    "modified": "2020-10-15T21:50:09.238Z",
+    "contributors": [
+      "Chloe-HyunJoo",
+      "alattalatta",
+      "younghoh",
+      "KaironMoon",
+      "echo304",
+      "dragmove"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag": {
+    "modified": "2020-10-15T22:04:19.848Z",
+    "contributors": [
+      "Seok.Heo"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/Map": {
+    "modified": "2020-10-15T22:26:33.491Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/clear": {
+    "modified": "2020-10-15T22:09:01.449Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/delete": {
+    "modified": "2020-10-15T22:09:03.155Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/entries": {
+    "modified": "2020-10-15T22:09:02.936Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/forEach": {
+    "modified": "2020-10-15T22:20:31.940Z",
+    "contributors": [
+      "JaeWorld"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/get": {
+    "modified": "2020-10-15T22:15:40.628Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/has": {
+    "modified": "2020-10-15T22:15:44.379Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/set": {
+    "modified": "2020-10-15T22:15:44.384Z",
+    "contributors": [
+      "alattalatta"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map/size": {
+    "modified": "2020-10-15T22:04:26.274Z",
+    "contributors": [
+      "Gren",
+      "Seok.Heo"
     ]
   },
   "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {

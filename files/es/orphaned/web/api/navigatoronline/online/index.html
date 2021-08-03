@@ -1,0 +1,167 @@
+---
+title: Navigator.onLine
+slug: orphaned/Web/API/NavigatorOnLine/onLine
+translation_of: Web/API/NavigatorOnLine/onLine
+original_slug: Web/API/NavigatorOnLine/onLine
+---
+<div>{{ApiRef("HTML DOM")}}</div>
+
+<p>Retorna el estado en línea del navegador. La propiedad retorna un valor booleano,  <code>true</code> significa <strong>en línea</strong> y <code>false</code> significa <strong>desconectado</strong>. La propiedad envía actualizaciones siempre que el navegador tenga la capacidad de conectarse a los cambios de red. La actualización se produce cuando un usuario sigue un enlace o cuando un script pide una pagina remota. Por ejemplo, la propiedad debe retornar <code>false</code> cuando los usuarios hacen clic en un enlace poco después de perder la conexión a internet.</p>
+
+<p>Los navegadores implementan esta propiedad de forma diferente.</p>
+
+<p>En Chrome y Safari, si el navegador no puede conectarse a la red de area local (LAN) o al router, está <code>desconectado</code>; todas las otras condiciones retornan <code>true</code>. Así que puedes suponer que el navegador esta desconectado cuando retorna un valor <code>false</code>, no puedes suponer que un valor <code>true</code> signifique que el navegador puede acceder a internet. Podrías estar recibiendo falsos positivos, como en los casos en el que el ordenador este ejecutando un software de virtualización que tiene los adaptadores ethernet virtuales siempre "conectados". Por lo tanto, si tu quieres determinar el estado en linea de el navegador, tu debes desarrollar medios adicionales para comprobarlo. Para más información, consulte el artículo HTML5 Rocks article, <a href="http://www.html5rocks.com/en/mobile/workingoffthegrid.html"> Working Off the Grid</a>.</p>
+
+<p>En Firefox e Internet Explorer, cambiando el navegador al modo desconectado envía un valor <code>false</code>. Hasta Firefox 41, todas las demás condiciones retornaban un valor <code>true</code>; desde Firefox 41, en OS X y Windows, el valor sigue la actual conectividad de red.</p>
+
+<p>Puedes ver los cambios en el estado de red escuchando los eventos <code><a href="/en-US/docs/Web/API/document.ononline">window.ononline</a> y </code><code><a href="https://developer.mozilla.org/en-US/docs/Web/API/document.onoffline">window.onoffline</a>.</code></p>
+
+<h2 id="Sintaxis">Sintaxis</h2>
+
+<pre class="syntaxbox"><em>online</em> = <em>window</em>.navigator.onLine;
+</pre>
+
+<h3 id="Valor">Valor</h3>
+
+<p><code>online</code> es booleano <code>true</code> o <code>false</code>.</p>
+
+<h2 id="Ejemplo">Ejemplo</h2>
+
+<p>Ver <a href="http://html5-demos.appspot.com/static/navigator.onLine.html">ejemplo en linea</a>.</p>
+
+<p>Para comprobar que estas es linea, consulte <code>window.navigator.onLine</code>, como en el siguiente ejemplo: </p>
+
+<pre class="brush: js">if (navigator.onLine) {
+  console.log('online');
+} else {
+  console.log('offline');
+}</pre>
+
+<p>Si el navegador no soporta <code>navigator.onLine</code> el ejemplo anterior siempre devolvera <code>false</code>/<code>undefined</code>.</p>
+
+<p>Para ver los cambios en el estado de la red, use <code><a href="/es/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> para escuchar los eventos <code>window.ononline</code> y <code>window.onoffline</code>, como en el siguiente ejemplo:</p>
+
+<pre class="brush: js">window.addEventListener('offline', function(e) { console.log('offline'); });
+
+window.addEventListener('online', function(e) { console.log('online'); });
+</pre>
+
+<h2 id="Especificaciones">Especificaciones</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Especificación</th>
+   <th scope="col">Estado</th>
+   <th scope="col">Comentario</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName("HTML WHATWG", "browsers.html#navigator.online", "navigator.onLine")}}</td>
+   <td>{{Spec2("HTML WHATWG")}}</td>
+   <td>Initial definition</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilidad_de_navegadores">Compatibilidad de navegadores</h2>
+
+<p>{{CompatibilityTable}}</p>
+
+<div id="compat-desktop">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Chrome</th>
+   <th>Edge</th>
+   <th>Firefox (Gecko)</th>
+   <th>Internet Explorer</th>
+   <th>Opera</th>
+   <th>Safari (WebKit)</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>{{CompatVersionUnknown}}<sup>[1]</sup></td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoDesktop(1.9.1)}}<sup>[2]</sup><br>
+    {{CompatGeckoDesktop(2.0)}}<sup>[4]</sup></td>
+   <td>8<sup>[3]</sup></td>
+   <td>{{CompatNo}}<sup>[2]</sup></td>
+   <td>5.0.4</td>
+  </tr>
+  <tr>
+   <td>on {{domxref("WorkerNavigator")}}</td>
+   <td>Yes</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoDesktop(29)}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<div id="compat-mobile">
+<table class="compat-table">
+ <tbody>
+  <tr>
+   <th>Feature</th>
+   <th>Android</th>
+   <th>Edge</th>
+   <th>Firefox Mobile (Gecko)</th>
+   <th>IE Phone</th>
+   <th>Opera Mobile</th>
+   <th>Safari Mobile</th>
+   <th>BlackBerry</th>
+  </tr>
+  <tr>
+   <td>Basic support</td>
+   <td>2.2<sup>[5]</sup></td>
+   <td>{{CompatVersionUnknown}}</td>
+   <td>{{CompatGeckoMobile(1.9.1)}}<sup>[2]</sup></td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>
+    <p>7<br>
+     10</p>
+   </td>
+  </tr>
+  <tr>
+   <td>on {{domxref("WorkerNavigator")}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatGeckoMobile(29)}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+   <td>{{CompatUnknown}}</td>
+  </tr>
+ </tbody>
+</table>
+</div>
+
+<p>[1] Earlier versions of Chrome incorrectly return <code>true</code> when a tab is first opened, but it starts reporting the correct connectivity status after the first network event. Windows: 11, Mac: 14, Chrome OS: 13, Linux: Always returns <code>true</code>. For history, see <a href="http://crbug.com/7469">crbug.com/7469</a>.</p>
+
+<p>[2] Since Firefox 4, and Opera 11.10, the browser returns <code>true</code> when "Work Offline" mode is disabled and <code>false</code> when it is enabled, regardless of actual connectivity.</p>
+
+<p>[3] in Internet Explorer 8 "online" and "offline" events are raised on the <code>document.body</code>; under IE 9 they are raised on both <code>document.body</code> and <code>window</code>.</p>
+
+<p>[4] Since Firefox 41, on OS X and Windows, the returned values follow the actual network connectivity, unless "Work offline" mode is selected (where it will always return <code>false</code>).</p>
+
+<p>[5] Faulty in a WebView component, see Issue <a href="http://code.google.com/p/android/issues/detail?id=16760">bug 16760</a>.</p>
+
+<h2 id="Notas">Notas</h2>
+
+<p>See <a href="/en-US/docs/Online_and_offline_events">Online/Offline Events‎</a> for a more detailed description of this property as well as new offline-related features introduced in Firefox 3.</p>
+
+<h2 id="Véase_también">Véase también</h2>
+
+<ul>
+ <li><a href="http://www.html5rocks.com/en/mobile/workingoffthegrid.html">HTML5 Rocks: Working Off the Grid With HTML5 Offline</a></li>
+ <li><a href="http://www.html5rocks.com/en/tutorials/offline/whats-offline/">HTML5 Rocks: "Offline": What does it mean and why should I care?</a></li>
+ <li><a href="http://hacks.mozilla.org/2010/01/offline-web-applications/">Mozilla Blog: Offline Web Applications</a></li>
+</ul>

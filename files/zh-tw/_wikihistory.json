@@ -2922,19 +2922,6 @@
       "flyinglimao"
     ]
   },
-  "Web/API/Body": {
-    "modified": "2020-10-15T22:10:19.507Z",
-    "contributors": [
-      "RickBrown"
-    ]
-  },
-  "Web/API/Body/json": {
-    "modified": "2020-10-15T22:10:18.425Z",
-    "contributors": [
-      "xstar",
-      "eyeccc"
-    ]
-  },
   "Web/API/CSSStyleDeclaration": {
     "modified": "2019-03-23T22:30:39.103Z",
     "contributors": [
@@ -3116,12 +3103,6 @@
   },
   "Web/API/CharacterData": {
     "modified": "2019-03-23T22:30:36.282Z",
-    "contributors": [
-      "jackblackevo"
-    ]
-  },
-  "Web/API/ChildNode": {
-    "modified": "2019-03-23T22:30:29.724Z",
     "contributors": [
       "jackblackevo"
     ]
@@ -4033,12 +4014,6 @@
       "NoobTW"
     ]
   },
-  "Web/API/HTMLOrForeignElement/dataset": {
-    "modified": "2019-03-18T21:38:45.005Z",
-    "contributors": [
-      "willynpi"
-    ]
-  },
   "Web/API/HTMLSelectElement": {
     "modified": "2019-03-23T22:18:47.753Z",
     "contributors": [
@@ -4226,20 +4201,6 @@
   },
   "Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers": {
     "modified": "2019-03-23T23:51:06.175Z",
-    "contributors": [
-      "chrisdavidmills",
-      "teoli",
-      "Coolcd"
-    ]
-  },
-  "Web/API/NavigatorOnLine": {
-    "modified": "2019-03-23T22:02:07.853Z",
-    "contributors": [
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/NavigatorOnLine/Online_and_offline_events": {
-    "modified": "2019-03-23T23:51:04.713Z",
     "contributors": [
       "chrisdavidmills",
       "teoli",
@@ -7117,15 +7078,6 @@
       "SolomonKang"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Map": {
-    "modified": "2020-10-15T21:51:34.887Z",
-    "contributors": [
-      "othree",
-      "tainenko",
-      "jackblackevo",
-      "jsgao0"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Math": {
     "modified": "2020-10-15T21:38:29.906Z",
     "contributors": [
@@ -8653,6 +8605,25 @@
       "MashKao"
     ]
   },
+  "orphaned/Web/API/Body": {
+    "modified": "2020-10-15T22:10:19.507Z",
+    "contributors": [
+      "RickBrown"
+    ]
+  },
+  "orphaned/Web/API/Body/json": {
+    "modified": "2020-10-15T22:10:18.425Z",
+    "contributors": [
+      "xstar",
+      "eyeccc"
+    ]
+  },
+  "orphaned/Web/API/ChildNode": {
+    "modified": "2019-03-23T22:30:29.724Z",
+    "contributors": [
+      "jackblackevo"
+    ]
+  },
   "orphaned/Web/API/Detecting_device_orientation": {
     "modified": "2019-03-23T23:27:03.486Z",
     "contributors": [
@@ -8672,6 +8643,12 @@
       "jackblackevo"
     ]
   },
+  "orphaned/Web/API/HTMLOrForeignElement/dataset": {
+    "modified": "2019-03-18T21:38:45.005Z",
+    "contributors": [
+      "willynpi"
+    ]
+  },
   "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
     "modified": "2019-03-18T20:39:41.131Z",
     "contributors": [
@@ -8680,6 +8657,20 @@
       "birdca",
       "foxbrush",
       "thomaschen"
+    ]
+  },
+  "orphaned/Web/API/NavigatorOnLine": {
+    "modified": "2019-03-23T22:02:07.853Z",
+    "contributors": [
+      "chrisdavidmills"
+    ]
+  },
+  "orphaned/Web/API/NavigatorOnLine/Online_and_offline_events": {
+    "modified": "2019-03-23T23:51:04.713Z",
+    "contributors": [
+      "chrisdavidmills",
+      "teoli",
+      "Coolcd"
     ]
   },
   "orphaned/Web/API/ParentNode": {
@@ -9081,6 +9072,15 @@
     "contributors": [
       "teoli",
       "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
+    "modified": "2020-10-15T21:51:34.887Z",
+    "contributors": [
+      "othree",
+      "tainenko",
+      "jackblackevo",
+      "jsgao0"
     ]
   },
   "orphaned/Web/Reference": {

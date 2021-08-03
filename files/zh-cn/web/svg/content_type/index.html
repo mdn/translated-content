@@ -38,7 +38,7 @@ translation_of: Web/SVG/Content_type
 
  <pre>anything ::= Char*</pre>
 
- <p>在这里，<a href="http://www.w3.org/TR/2008/REC-xml-20081126/#NT-Char" title="http://www.w3.org/TR/2008/REC-xml-20081126/#NT-Char">Char</a> 表示一个字符，XML 1.0 第2.2节中定义了它。</p>
+ <p>在这里，<a href="http://www.w3.org/TR/2008/REC-xml-20081126/#NT-Char">Char</a> 表示一个字符，XML 1.0 第2.2节中定义了它。</p>
  </dd>
 </dl>
 
@@ -47,7 +47,7 @@ translation_of: Web/SVG/Content_type
 <dl>
  <dt>&lt;clock-value&gt;</dt>
  <dd>
- <p>时钟值的句法与<a href="http://www.w3.org/TR/2001/REC-smil-animation-20010904/" title="http://www.w3.org/TR/2001/REC-smil-animation-20010904/">SMIL Animation</a>规范中写的句法相同。在这里重放一下时钟值的语法：</p>
+ <p>时钟值的句法与<a href="http://www.w3.org/TR/2001/REC-smil-animation-20010904/">SMIL Animation</a>规范中写的句法相同。在这里重放一下时钟值的语法：</p>
 
  <pre>Clock-val         ::= Full-clock-val | Partial-clock-val | Timecount-val
 Full-clock-val    ::= Hours ":" Minutes ":" Seconds ("." Fraction)?
@@ -96,7 +96,7 @@ DIGIT             ::= [0-9]
  <dd>
  <p>基本类型&lt;color&gt;是一个CSS2兼容的规范，针对sRGB颜色空间的颜色。&lt;color&gt;应用在SVG的属性 {{SVGAttr("color")}} 上，也是属性{{SVGAttr("fill")}}、属性{{SVGAttr("stroke")}}、属性{{SVGAttr("stop-color")}}、属性 {{SVGAttr("flood-color")}}和属性{{SVGAttr("lighting-color")}}的定义的组成部分，&lt;color&gt;还提供了可选的基于ICC的颜色规范。</p>
 
- <p>SVG支持所有的定义在<a href="http://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#value-def-color" title="http://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#value-def-color">CSS2句法和基本数据类型</a>中的&lt;color&gt;供选择的句法，而且还支持<a href="http://www.w3.org/TR/css3-color/" title="http://www.w3.org/TR/css3-color/">CSS Color Module Level 3</a>中的&lt;color&gt;句法（取决于编译器）。</p>
+ <p>SVG支持所有的定义在<a href="http://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#value-def-color">CSS2句法和基本数据类型</a>中的&lt;color&gt;供选择的句法，而且还支持<a href="http://www.w3.org/TR/css3-color/">CSS Color Module Level 3</a>中的&lt;color&gt;句法（取决于编译器）。</p>
 
  <p>一个&lt;color&gt;可以是一个关键词，或者一个数字化的RGB规范。</p>
 
@@ -111,7 +111,7 @@ DIGIT             ::= [0-9]
 hexdigit ::= [0-9A-Fa-f]
 </pre>
 
- <p>在这里，color-keyword要于匹配列于<a href="http://www.w3.org/TR/css3-color/" title="http://www.w3.org/TR/css3-color/">CSS Color Module Level 3</a>中的颜色关键词（大小写不敏感）中的一个，要么匹配列于<a href="http://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors" title="http://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors">对颜色的用户参考</a>中的一个。</p>
+ <p>在这里，color-keyword要于匹配列于<a href="http://www.w3.org/TR/css3-color/">CSS Color Module Level 3</a>中的颜色关键词（大小写不敏感）中的一个，要么匹配列于<a href="http://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors">对颜色的用户参考</a>中的一个。</p>
 
  <p>SVG DOM对&lt;color&gt;的定义，CSS中也做了同样的定义。SVG对颜色的扩展，包括指定基于ICC的颜色的能力，可以使用DOM接口{{domxref("SVGColor")}}来表现。</p>
  </dd>
@@ -218,7 +218,7 @@ hexdigit ::= [0-9A-Fa-f]
   <li>非本地<em>IRI</em>引用，在这里<em>IRI</em>引用必须包含一个<code>&lt;absoluteIRI&gt;</code>或<code>&lt;relativeIRI&gt;。</code></li>
  </ul>
 
- <p>欲了解完整的SVG中的IRI引用的规范请阅读<a href="http://www.w3.org/TR/SVG/linking.html#IRIReference" title="http://www.w3.org/TR/SVG/linking.html#IRIReference">SVG 1.1 (2nd Edition): IRI references</a>。</p>
+ <p>欲了解完整的SVG中的IRI引用的规范请阅读<a href="http://www.w3.org/TR/SVG/linking.html#IRIReference">SVG 1.1 (2nd Edition): IRI references</a>。</p>
  </dd>
 </dl>
 
@@ -231,7 +231,7 @@ hexdigit ::= [0-9A-Fa-f]
 
  <pre>length ::= number (~"em" | ~"ex" | ~"px" | ~"in" | ~"cm" | ~"mm" | ~"pt" | ~"pc")?</pre>
 
- <p>请阅读<a href="http://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#length-units" title="http://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#length-units">CSS2规范</a> 以了解单位标识符的意义。</p>
+ <p>请阅读<a href="http://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#length-units">CSS2规范</a> 以了解单位标识符的意义。</p>
 
  <p>在CSS2中定义的长度属性，必须提供单位标识符。而SVG专用属性的长度值以及它们对应的外观属性，长度单位标识符是可选的。如果没有提供单位标识符，长度值代表当前用户坐标系统中的一段距离。对于外观属性，无论是定义在SVG1.1还是定义在CSS2中，长度单位标识符必须是小写的。</p>
 
@@ -324,7 +324,7 @@ hexdigit ::= [0-9A-Fa-f]
 <dl>
  <dt>&lt;paint&gt;</dt>
  <dd>
- <p>属性{{SVGAttr("fill")}}和属性{{SVGAttr("stroke")}}的值，是涂色类型的规范，用在要对一个给定元素填充或描边的时候。SVG规范的<a href="http://www.w3.org/TR/SVG/painting.html#SpecifyingPaint" title="http://www.w3.org/TR/SVG/painting.html#SpecifyingPaint">Specifying paint</a>章节中描述了&lt;paint&gt;可用的选项以及句法。</p>
+ <p>属性{{SVGAttr("fill")}}和属性{{SVGAttr("stroke")}}的值，是涂色类型的规范，用在要对一个给定元素填充或描边的时候。SVG规范的<a href="http://www.w3.org/TR/SVG/painting.html#SpecifyingPaint">Specifying paint</a>章节中描述了&lt;paint&gt;可用的选项以及句法。</p>
 
  <p>在SVG DOM内部，&lt;paint&gt;值用{{domxref("SVGPaint")}}对象表达。</p>
  </dd>
