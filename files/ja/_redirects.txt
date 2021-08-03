@@ -3357,7 +3357,7 @@
 /ja/docs/Tools/Page_Inspector/How_to/Work_with_animations/Animations_examples	/ja/docs/Tools/Page_Inspector/How_to/Work_with_animations/Animation_inspector_example:_CSS_transitions
 /ja/docs/Tools/Page_Inspector/Keyboard_shortcuts	/ja/docs/orphaned/Tools/Page_Inspector/Keyboard_shortcuts
 /ja/docs/Tools/Page_Inspector/Style_panel	/ja/docs/Tools/Page_Inspector
-/ja/docs/Tools/Performance/Profiler_walkthrough	/ja/docs/conflicting/Tools/Performance/Call_Tree
+/ja/docs/Tools/Performance/Profiler_walkthrough	/ja/docs/Tools/Performance/Call_Tree
 /ja/docs/Tools/Profiler	/ja/docs/conflicting/Tools/Performance
 /ja/docs/Tools/Release_notes	/ja/docs/conflicting/Mozilla/Firefox/Releases
 /ja/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE_clone	/ja/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE
