@@ -10,38 +10,37 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/charAt
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/charAt
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>charAt()</strong></code> renvoie une nouvelle chaîne contenant le caractère (ou, plus précisément, le point de code UTF-16)  à la position indiquée en argument.</p>
+La méthode **`charAt()`** renvoie une nouvelle chaîne contenant le caractère (ou, plus précisément, le point de code UTF-16)  à la position indiquée en argument.
 
-<div>{{EmbedInteractiveExample("pages/js/string-charat.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-charat.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>str</var>.charAt(<var>index</var>)</pre>
+    str.charAt(index)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>index</code></dt>
- <dd>Un entier entre 0 et la longueur de la chaîne - 1. Si aucun index n'est fourni (ce qui correspond à fournir {{jsxref("undefined")}}) ou si l'index ne peut pas être converti en entier, la recherche sera effectuée à l'index 0 et le premier caractère sera donc renvoyé.</dd>
-</dl>
+- `index`
+  - : Un entier entre 0 et la longueur de la chaîne - 1. Si aucun index n'est fourni (ce qui correspond à fournir {{jsxref("undefined")}}) ou si l'index ne peut pas être converti en entier, la recherche sera effectuée à l'index 0 et le premier caractère sera donc renvoyé.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une chaîne de caractères qui représente le point de code UTF-16 à la position indiquée. Si la position est dehors de la chaîne, ce sera une chaîne vide.</p>
+Une chaîne de caractères qui représente le point de code UTF-16 à la position indiquée. Si la position est dehors de la chaîne, ce sera une chaîne vide.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Les caractères d'une chaîne sont indexés de la gauche vers la droite. L'indice du premier caractère est 0 et l'indice du dernier caractère est la longueur de la chaîne moins un (par exemple, si on a une chaîne <code>toto</code>, le dernier caractère de la chaine aura l'indice <code>toto.length - 1</code>). Si l'indice fourni est en dehors de cet intervalle, la méthode renverra une chaîne vide. Si aucun indice n'est fourni, la valeur par défaut utilisée sera 0.</p>
+Les caractères d'une chaîne sont indexés de la gauche vers la droite. L'indice du premier caractère est 0 et l'indice du dernier caractère est la longueur de la chaîne moins un (par exemple, si on a une chaîne `toto`, le dernier caractère de la chaine aura l'indice `toto.length - 1`). Si l'indice fourni est en dehors de cet intervalle, la méthode renverra une chaîne vide. Si aucun indice n'est fourni, la valeur par défaut utilisée sera 0.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Afficher_les_caractères_situés_à_différentes_positions_d'une_chaîne">Afficher les caractères situés à différentes positions d'une chaîne</h3>
+### Afficher les caractères situés à différentes positions d'une chaîne
 
-<p>L'exemple suivant affiche les caractères à différentes positions de la chaîne "<code>Coucou tout le monde</code>" :</p>
+L'exemple suivant affiche les caractères à différentes positions de la chaîne "`Coucou tout le monde`" :
 
-<pre class="brush:js">var uneChaîne = "Coucou tout le monde";
+```js
+var uneChaîne = "Coucou tout le monde";
 
 console.log("La caractère d'indice 0 est '" + uneChaîne.charAt(0)   + "'");
 console.log("La caractère d'indice 1 est '" + uneChaîne.charAt(1)   + "'");
@@ -49,24 +48,26 @@ console.log("La caractère d'indice 2 est '" + uneChaîne.charAt(2)   + "'");
 console.log("La caractère d'indice 3 est '" + uneChaîne.charAt(3)   + "'");
 console.log("La caractère d'indice 4 est '" + uneChaîne.charAt(4)   + "'");
 console.log("La caractère d'indice 999 est '" + uneChaîne.charAt(999) + "'");
-</pre>
+```
 
-<p>Ces lignes afficheront respectivement :</p>
+Ces lignes afficheront respectivement :
 
-<pre class="brush: js">La caractère d'indice 0 est 'C'
+```js
+La caractère d'indice 0 est 'C'
 La caractère d'indice 1 est 'o'
 La caractère d'indice 2 est 'u'
 La caractère d'indice 3 est 'c'
 La caractère d'indice 4 est 'o'
 La caractère d'indice 999 est ''
-</pre>
+```
 
-<h3 id="Obtenir_des_caractères_complets">Obtenir des caractères complets</h3>
+### Obtenir des caractères complets
 
-<p>Le code qui suit permet de s'assurer qu'on récupère des caractères complets et ce même si la chaîne de caractères contient des caractères en dehors du plan multilingue de base (BMP) (qui sont donc représentés sur deux unités de code/codets) :</p>
+Le code qui suit permet de s'assurer qu'on récupère des caractères complets et ce même si la chaîne de caractères contient des caractères en dehors du plan multilingue de base (BMP) (qui sont donc représentés sur deux unités de code/codets) :
 
-<pre class="brush:js">var str = 'A \uD87E\uDC04 Z'; // On pourrait aussi utiliser un caractère hors du BMP directement
-for (var i=0, chr; i &lt; str.length; i++) {
+```js
+var str = 'A \uD87E\uDC04 Z'; // On pourrait aussi utiliser un caractère hors du BMP directement
+for (var i=0, chr; i < str.length; i++) {
   if ((chr = getWholeChar(str, i)) === false) {
     continue;
   } // On adapte cette ligne pour chaque boucle, en passant la chaîne de caractères
@@ -81,24 +82,24 @@ function getWholeChar(str, i) {
   if (Number.isNaN(code)) {
     return ''; // la position n'a pas pu être trouvée
   }
-  if (code &lt; 0xD800 || code &gt; 0xDFFF) {
+  if (code < 0xD800 || code > 0xDFFF) {
     return str.charAt(i);
   }
 
   // On traite ici le demi codet supérieur (high surrogate)
   // La borne supérieure du test pourrait être 0xDB7F afin de prendre en compte
   // les demi-codets privés comme des caractères uniques
-  if (0xD800 &lt;= code &amp;&amp; code &lt;= 0xDBFF) {
-    if (str.length &lt;= (i+1))  {
+  if (0xD800 <= code && code <= 0xDBFF) {
+    if (str.length <= (i+1))  {
       throw 'le demi-codet supérieur n'est pas suivi par un demi-codet inférieur';
     }
     var next = str.charCodeAt(i+1);
-      if (0xDC00 &gt; next || next &gt; 0xDFFF) {
+      if (0xDC00 > next || next > 0xDFFF) {
         throw 'le demi-codet supérieur n'est pas suivi par un demi-codet inférieur';
       }
       return str.charAt(i)+str.charAt(i+1);
   }
-  // on gère le demi codet inférieur (0xDC00 &lt;= code &amp;&amp; code &lt;= 0xDFFF)
+  // on gère le demi codet inférieur (0xDC00 <= code && code <= 0xDFFF)
   if (i === 0) {
     throw 'le demi-codet inférieur n'est pas précédé d'un demi-codet supérieur';
   }
@@ -106,20 +107,20 @@ function getWholeChar(str, i) {
 
   // (la borne supérieure pourrait être modifiée en 0xDB7F afin de traiter
   // les demi-codets supérieurs privés comme des caractètres uniques)
-  if (0xD800 &gt; prev || prev &gt; 0xDBFF) {
+  if (0xD800 > prev || prev > 0xDBFF) {
     throw 'le demi-codet inférieur n'est pas précédé d'un demi-codet supérieur';
   }
   // on peut passer des demis codets inférieurs comme deuxième composant
   // d'une paire déjà traitée
   return false;
 }
+```
 
-</pre>
+Dans un environnement ECMAScript 2016 qui permet d'utiliser l'affectation par décomposition, on peut obtenir une version plus succincte et flexible :
 
-<p>Dans un environnement ECMAScript 2016 qui permet d'utiliser l'affectation par décomposition, on peut obtenir une version plus succincte et flexible :</p>
-
-<pre class="brush: js">var str = 'A\uD87E\uDC04Z'; // We could also use a non-BMP character directly
-for (var i=0, chr; i &lt; str.length; i++) {
+```js
+var str = 'A\uD87E\uDC04Z'; // We could also use a non-BMP character directly
+for (var i=0, chr; i < str.length; i++) {
   [chr, i] = getWholeCharAndI(str, i);
   // Adapt this line at the top of each loop, passing in the whole string and
   // the current iteration and returning an array with the individual character
@@ -134,23 +135,23 @@ function getWholeCharAndI(str, i) {
   if (Number.isNaN(code)) {
     return ''; // Position not found
   }
-  if (code &lt; 0xD800 || code &gt; 0xDFFF) {
+  if (code < 0xD800 || code > 0xDFFF) {
     return [str.charAt(i), i]; // Normal character, keeping 'i' the same
   }
 
   // High surrogate (could change last hex to 0xDB7F to treat high private
   // surrogates as single characters)
-  if (0xD800 &lt;= code &amp;&amp; code &lt;= 0xDBFF) {
-    if (str.length &lt;= (i+1))  {
+  if (0xD800 <= code && code <= 0xDBFF) {
+    if (str.length <= (i+1))  {
       throw 'High surrogate without following low surrogate';
     }
     var next = str.charCodeAt(i+1);
-      if (0xDC00 &gt; next || next &gt; 0xDFFF) {
+      if (0xDC00 > next || next > 0xDFFF) {
         throw 'High surrogate without following low surrogate';
       }
       return [str.charAt(i)+str.charAt(i+1), i+1];
   }
-  // Low surrogate (0xDC00 &lt;= code &amp;&amp; code &lt;= 0xDFFF)
+  // Low surrogate (0xDC00 <= code && code <= 0xDFFF)
   if (i === 0) {
     throw 'Low surrogate without preceding high surrogate';
   }
@@ -158,18 +159,20 @@ function getWholeCharAndI(str, i) {
 
   // (could change last hex to 0xDB7F to treat high private surrogates
   // as single characters)
-  if (0xD800 &gt; prev || prev &gt; 0xDBFF) {
+  if (0xD800 > prev || prev > 0xDBFF) {
     throw 'Low surrogate without preceding high surrogate';
   }
   // Return the next character instead (and increment)
   return [str.charAt(i+1), i+1];
-}</pre>
+}
+```
 
-<h3 id="Créer_une_version_de_charAt_qui_permet_de_supporter_des_caractères_hors_du_plan_basique_multilingue_(BMP)">Créer une version de <code>charAt</code> qui permet de supporter des caractères hors du plan basique multilingue (BMP)</h3>
+### Créer une version de `charAt` qui permet de supporter des caractères hors du plan basique multilingue (BMP)
 
-<p>Si on souhaite récupérer les paires de codets des caractères hors du plan classique, on peut utiliser le code suivant :</p>
+Si on souhaite récupérer les paires de codets des caractères hors du plan classique, on peut utiliser le code suivant :
 
-<pre class="brush: js">function fixedCharAt (str, idx) {
+```js
+function fixedCharAt (str, idx) {
   var ret = '';
   str += '';
   var end = str.length;
@@ -177,70 +180,46 @@ function getWholeCharAndI(str, i) {
   var surrogatePairs = /[\uD800-\uDBFF][\uDC00-\uDFFF]/g;
   while ((surrogatePairs.exec(str)) != null) {
     var li = surrogatePairs.lastIndex;
-    if (li - 2 &lt; idx) {
+    if (li - 2 < idx) {
       idx++;
     } else {
       break;
     }
   }
 
-  if (idx &gt;= end || idx &lt; 0) {
+  if (idx >= end || idx < 0) {
     return '';
   }
 
   ret += str.charAt(idx);
 
-  if (/[\uD800-\uDBFF]/.test(ret) &amp;&amp; /[\uDC00-\uDFFF]/.test(str.charAt(idx+1))) {
+  if (/[\uD800-\uDBFF]/.test(ret) && /[\uDC00-\uDFFF]/.test(str.charAt(idx+1))) {
     // On avance d'un puisque l'un des caractères fait partie de la paire
     ret += str.charAt(idx+1);
   }
   return ret;
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.4.4', 'String.prototype.charAt')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.charat', 'String.prototype.charAt')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.charat', 'String.prototype.charAt')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | État                         | Commentaires        |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
+| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}         | Définition initiale |
+| {{SpecName('ES5.1', '#sec-15.5.4.4', 'String.prototype.charAt')}}                     | {{Spec2('ES5.1')}}     |                     |
+| {{SpecName('ES6', '#sec-string.prototype.charat', 'String.prototype.charAt')}}     | {{Spec2('ES6')}}         |                     |
+| {{SpecName('ESDraft', '#sec-string.prototype.charat', 'String.prototype.charAt')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.String.charAt")}}</p>
+{{Compat("javascript.builtins.String.charAt")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("String.prototype.indexOf()")}}</li>
- <li>{{jsxref("String.prototype.lastIndexOf()")}}</li>
- <li>{{jsxref("String.prototype.charCodeAt()")}}</li>
- <li>{{jsxref("String.prototype.codePointAt()")}}</li>
- <li>{{jsxref("String.prototype.split()")}}</li>
- <li>{{jsxref("String.fromCodePoint()")}}</li>
- <li><a href="https://mathiasbynens.be/notes/javascript-unicode">JavaScript a un problème avec Unicode</a>, billet de Mathias Bynens (en anglais)</li>
-</ul>
+- {{jsxref("String.prototype.indexOf()")}}
+- {{jsxref("String.prototype.lastIndexOf()")}}
+- {{jsxref("String.prototype.charCodeAt()")}}
+- {{jsxref("String.prototype.codePointAt()")}}
+- {{jsxref("String.prototype.split()")}}
+- {{jsxref("String.fromCodePoint()")}}
+- [JavaScript a un problème avec Unicode](https://mathiasbynens.be/notes/javascript-unicode), billet de Mathias Bynens (en anglais)

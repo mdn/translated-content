@@ -10,65 +10,58 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/baseName
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/baseName
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La propriété <strong><code>Intl.Locale.prototype.baseName</code></strong> renvoie un extrait de la chaîne de caractères représentant l'objet <code>Locale</code>. Cet extrait contient les informations essentielles à propos de l'objet <code>Locale</code>.</p>
+La propriété **`Intl.Locale.prototype.baseName`** renvoie un extrait de la chaîne de caractères représentant l'objet `Locale`. Cet extrait contient les informations essentielles à propos de l'objet `Locale`.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Un objet <code>Intl.Locale</code> représente une locale ainsi que des options qui lui sont associées. La propriété <code>baseName</code> renvoie des informations essentielles quant à la locale sous la forme d'une chaîne de caractères. Cette chaîne est un extrait de la représentation textuelle complète de l'objet <code>Locale</code>. Cet extrait contient notamment la langue, le script utilisé ainsi que la région (s'ils sont disponibles).</p>
+Un objet `Intl.Locale` représente une locale ainsi que des options qui lui sont associées. La propriété `baseName` renvoie des informations essentielles quant à la locale sous la forme d'une chaîne de caractères. Cette chaîne est un extrait de la représentation textuelle complète de l'objet `Locale`. Cet extrait contient notamment la langue, le script utilisé ainsi que la région (s'ils sont disponibles).
 
-<p>Si on utilise <a href="https://www.unicode.org/reports/tr35/#Identifiers">la grammaire Unicode</a>, <code>baseName</code> renvoie la sous-séquence <code>language ["-" script] ["-" region] *("-" variant)</code>.</p>
+Si on utilise [la grammaire Unicode](https://www.unicode.org/reports/tr35/#Identifiers), `baseName` renvoie la sous-séquence `language ["-" script] ["-" region] *("-" variant)`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Exemple_simple">Exemple simple</h3>
+### Exemple simple
 
-<pre class="brush: js">let myLoc = new Intl.Locale("fr-Latn-CA"); // Sets locale to Candanian French
+```js
+let myLoc = new Intl.Locale("fr-Latn-CA"); // Sets locale to Candanian French
 console.log(myLoc.toString()); // Prints out "fr-Latn-CA-u-ca-gregory"
-console.log(myLoc.baseName); // Prints out "fr-Latn-CA"</pre>
+console.log(myLoc.baseName); // Prints out "fr-Latn-CA"
+```
 
-<h3 id="Exemple_avec_certaines_options">Exemple avec certaines options</h3>
+### Exemple avec certaines options
 
-<pre class="brush: js">// Sets language to Japanese, region to Japan,
+```js
+// Sets language to Japanese, region to Japan,
 
 // calendar to Gregorian, hour cycle to 24 hours
 let japan = new Intl.Locale("ja-JP-u-ca-gregory-hc-24");
 console.log(japan.toString()); // Prints out "ja-JP-u-ca-gregory-hc-h24"
-console.log(japan.baseName); // Prints out "ja-JP"</pre>
+console.log(japan.baseName); // Prints out "ja-JP"
+```
 
-<h3 id="Exemple_avec_options_qui_surchargent">Exemple avec options qui surchargent</h3>
+### Exemple avec options qui surchargent
 
-<pre class="brush: js">// Input string indicates language as Dutch and region as Belgium,
+```js
+// Input string indicates language as Dutch and region as Belgium,
 
 // but options object overrides the region and sets it to the Netherlands
 let dutch = new Intl.Locale("nl-Latn-BE", {region: "NL"});
 
-console.log(dutch.baseName); // Prints out "nl-Latn-NL"</pre>
+console.log(dutch.baseName); // Prints out "nl-Latn-NL"
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td><a href="https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.baseName">Proposition pour <code>Intl.Locale.prototype.baseName</code></a></td>
-   <td>Proposition de niveau 3</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                        | État                    | Commentaires |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------- | ------------ |
+| [Proposition pour `Intl.Locale.prototype.baseName`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.baseName) | Proposition de niveau 3 |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<div>{{Compat("javascript.builtins.Intl.Locale.baseName")}}</div>
+{{Compat("javascript.builtins.Intl.Locale.baseName")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Locale", "Intl.Locale")}}</li>
-</ul>
+- {{jsxref("Locale", "Intl.Locale")}}

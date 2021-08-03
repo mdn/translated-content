@@ -10,73 +10,52 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/slice
 original_slug: Web/JavaScript/Reference/Objets_globaux/ArrayBuffer/slice
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>slice()</strong></code> renvoie un nouvel <code>ArrayBuffer</code> dont le contenu est une copie des octets du <code>ArrayBuffer</code> courant, contenus entre <code>début</code> (compris) et <code>fin</code> (non-compris).</p>
+La méthode **`slice()`** renvoie un nouvel `ArrayBuffer` dont le contenu est une copie des octets du `ArrayBuffer` courant, contenus entre `début` (compris) et `fin` (non-compris).
 
-<div>{{EmbedInteractiveExample("pages/js/arraybuffer-slice.html")}}</div>
+{{EmbedInteractiveExample("pages/js/arraybuffer-slice.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">arraybuffer.slice(début[, fin])</pre>
+    arraybuffer.slice(début[, fin])
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>début</code></dt>
- <dd>Indice (numérotation commençant à zéro) de l'octet à partir duquel découper le tableau.</dd>
- <dt><code>fin</code></dt>
- <dd>Indice de l'octet auquel finir la découpe du tableau. Si ce paramètre n'est pas fourni, le nouvel <code>ArrayBuffer</code> contiendra tous les octets entre <code>début </code>et la fin du <code>ArrayBuffer</code> courant. L'intervalle défini par les valeurs <code>début</code> et <code>fin</code> est réduit à un intervalle valide pour le tableau courant si nécessaire. Si la longueur du nouveau tableau <code>ArrayBuffer</code> sera négative, l'intervalle est réduit à zéro.</dd>
-</dl>
+- `début`
+  - : Indice (numérotation commençant à zéro) de l'octet à partir duquel découper le tableau.
+- `fin`
+  - : Indice de l'octet auquel finir la découpe du tableau. Si ce paramètre n'est pas fourni, le nouvel `ArrayBuffer` contiendra tous les octets entre `début `et la fin du `ArrayBuffer` courant. L'intervalle défini par les valeurs `début` et `fin` est réduit à un intervalle valide pour le tableau courant si nécessaire. Si la longueur du nouveau tableau `ArrayBuffer` sera négative, l'intervalle est réduit à zéro.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un nouvel objet <code>ArrayBuffer</code>.</p>
+Un nouvel objet `ArrayBuffer`.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code>slice</code> copie les octets contenus jusqu'au (au sens exclusif) paramètre <code>fin</code>. Si le paramètre <code>début </code>ou  <code>fin</code> est négatif, il fera référence à l'indice à partir de la fin du tableau et non pas à l'indice à partir du début du tableau.</p>
+La méthode `slice` copie les octets contenus jusqu'au (au sens exclusif) paramètre `fin`. Si le paramètre `début `ou  `fin` est négatif, il fera référence à l'indice à partir de la fin du tableau et non pas à l'indice à partir du début du tableau.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Copier_un_ArrayBuffer">Copier un <code>ArrayBuffer</code></h3>
+### Copier un `ArrayBuffer`
 
-<pre class="brush: js">var buf1 = new ArrayBuffer(8);
-var buf2 = buf1.slice(0)</pre>
+```js
+var buf1 = new ArrayBuffer(8);
+var buf2 = buf1.slice(0)
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Typed Array')}}</td>
-   <td>{{Spec2('Typed Array')}}</td>
-   <td>Remplacée dans EMCAScript 6.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-arraybuffer.prototype.slice', 'ArrayBuffer.prototype.slice')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Définition initiale au sein d'un standard ECMA.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-arraybuffer.prototype.slice', 'ArrayBuffer.prototype.slice')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | Statut                           | Commentaires                                    |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------- |
+| {{SpecName('Typed Array')}}                                                                                     | {{Spec2('Typed Array')}} | Remplacée dans EMCAScript 6.                    |
+| {{SpecName('ES6', '#sec-arraybuffer.prototype.slice', 'ArrayBuffer.prototype.slice')}}     | {{Spec2('ES6')}}             | Définition initiale au sein d'un standard ECMA. |
+| {{SpecName('ESDraft', '#sec-arraybuffer.prototype.slice', 'ArrayBuffer.prototype.slice')}} | {{Spec2('ESDraft')}}     |                                                 |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.ArrayBuffer.slice")}}</p>
+{{Compat("javascript.builtins.ArrayBuffer.slice")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("ArrayBuffer")}}</li>
-</ul>
+- {{jsxref("ArrayBuffer")}}

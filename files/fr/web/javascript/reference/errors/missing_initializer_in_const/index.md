@@ -8,53 +8,55 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Missing_initializer_in_const
 original_slug: Web/JavaScript/Reference/Erreurs/Missing_initializer_in_const
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="syntaxbox">SyntaxError: Const must be initalized (Edge)
-SyntaxError: missing = in const declaration (Firefox)
-SyntaxError: Missing initializer in const declaration (Chrome)
-</pre>
+    SyntaxError: Const must be initalized (Edge)
+    SyntaxError: missing = in const declaration (Firefox)
+    SyntaxError: Missing initializer in const declaration (Chrome)
 
-<h2 id="Type_d'erreur">Type d'erreur</h2>
+## Type d'erreur
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="Quel_est_le_problème">Quel est le problème ?</h2>
+## Quel est le problème ?
 
-<p>Une constante est une valeur qui ne peut pas être modifiée par le programme pendant l'exécution. Elle ne peut pas être changée avec une réaffectation ou une redéclaration. En JavaScript, les constantes sont déclarées grâce au mot-clé <code><a href="/fr/docs/Web/JavaScript/Reference/Instructions/const">const</a></code>. Il est également nécessaire de fournir une valeur d'initialisation dans l'instruction où on déclare la constante (ce qui est logique vu qu'on ne peut pas la modifier ensuite).</p>
+Une constante est une valeur qui ne peut pas être modifiée par le programme pendant l'exécution. Elle ne peut pas être changée avec une réaffectation ou une redéclaration. En JavaScript, les constantes sont déclarées grâce au mot-clé [`const`](/fr/docs/Web/JavaScript/Reference/Instructions/const). Il est également nécessaire de fournir une valeur d'initialisation dans l'instruction où on déclare la constante (ce qui est logique vu qu'on ne peut pas la modifier ensuite).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Valeur_d'initialisation_manquante">Valeur d'initialisation manquante</h3>
+### Valeur d'initialisation manquante
 
-<p>À la différence de <code>var</code> ou de <code>let</code>, il est nécessaire d'indiquer une valeur lors de la déclaration. Si aucune valeur n'est indiquée, une exception sera levée :</p>
+À la différence de `var` ou de `let`, il est nécessaire d'indiquer une valeur lors de la déclaration. Si aucune valeur n'est indiquée, une exception sera levée :
 
-<pre class="brush: js example-bad">const COLUMNS;
-// SyntaxError: missing = in const declaration</pre>
+```js example-bad
+const COLUMNS;
+// SyntaxError: missing = in const declaration
+```
 
-<h3 id="Résoudre_le_problème">Résoudre le problème</h3>
+### Résoudre le problème
 
-<p>On a le choix entre plusieurs options pour résoudre ce problème. Il faut comprendre le rôle de la constante en question.</p>
+On a le choix entre plusieurs options pour résoudre ce problème. Il faut comprendre le rôle de la constante en question.
 
-<h4 id="Ajouter_une_valeur_constante">Ajouter une valeur constante</h4>
+#### Ajouter une valeur constante
 
-<p>On peut indiquer la valeur de la constante dans la même instruction :</p>
+On peut indiquer la valeur de la constante dans la même instruction :
 
-<pre class="brush: js example-good">const COLONNES = 80;</pre>
+```js example-good
+const COLONNES = 80;
+```
 
-<h4 id="const_let_ou_var"><code>const</code>, <code>let</code> ou <code>var</code> ?</h4>
+#### `const`, `let` ou `var` ?
 
-<p><code>const</code> ne doit pas être utilisé si on ne souhaite pas déclarer de constante. Peut-être qu'on souhaite simplement déclarer une variable avec une portée de bloc grâce à <code><a href="/fr/docs/Web/JavaScript/Reference/Instructions/let">let</a></code> ou une variable globale avec <code><a href="/fr/docs/Web/JavaScript/Reference/Instructions/var">var</a></code>. Ces deux instructions ne nécessitent pas de valeur initiale.</p>
+`const` ne doit pas être utilisé si on ne souhaite pas déclarer de constante. Peut-être qu'on souhaite simplement déclarer une variable avec une portée de bloc grâce à [`let`](/fr/docs/Web/JavaScript/Reference/Instructions/let) ou une variable globale avec [`var`](/fr/docs/Web/JavaScript/Reference/Instructions/var). Ces deux instructions ne nécessitent pas de valeur initiale.
 
-<pre class="brush: js example-good">let colonnes;
-</pre>
+```js example-good
+let colonnes;
+```
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><code><a href="/fr/docs/Web/JavaScript/Reference/Instructions/const">const</a></code></li>
- <li><code><a href="/fr/docs/Web/JavaScript/Reference/Instructions/let">let</a></code></li>
- <li><code><a href="/fr/docs/Web/JavaScript/Reference/Instructions/var">var</a></code></li>
-</ul>
+- [`const`](/fr/docs/Web/JavaScript/Reference/Instructions/const)
+- [`let`](/fr/docs/Web/JavaScript/Reference/Instructions/let)
+- [`var`](/fr/docs/Web/JavaScript/Reference/Instructions/var)

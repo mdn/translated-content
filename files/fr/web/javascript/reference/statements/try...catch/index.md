@@ -8,65 +8,61 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/try...catch
 original_slug: Web/JavaScript/Reference/Instructions/try...catch
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>L'instruction <strong><code>try...catch</code></strong> regroupe des instructions à exécuter et définit une réponse si l'une de ces instructions provoque une exception.</p>
+L'instruction **`try...catch`** regroupe des instructions à exécuter et définit une réponse si l'une de ces instructions provoque une exception.
 
-<div>{{EmbedInteractiveExample("pages/js/statement-trycatch.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-trycatch.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">try {
-   <em>instructions_try</em>
-}
-[catch (<em>exception_var_1</em> if <em>condition_1</em>) { // non-standard
-   <em>instructions_catch_1</em>
-}]
-...
-[catch (<em>exception_var_2</em>) {
-   <em>instructions_catch_2</em>
-}]
-[finally {
-   <em>instructions_finally</em>
-}]
-</pre>
+    try {
+       instructions_try
+    }
+    [catch (exception_var_1 if condition_1) { // non-standard
+       instructions_catch_1
+    }]
+    ...
+    [catch (exception_var_2) {
+       instructions_catch_2
+    }]
+    [finally {
+       instructions_finally
+    }]
 
-<dl>
- <dt><code>instructions_try</code></dt>
- <dd>Les instructions qu'on souhaite exécuter.</dd>
- <dt><code>instructions_catch_1</code>, <code>instructions_catch_2</code></dt>
- <dd>Les instructions à exécuter si une exception est levée dans le bloc <code>try</code>.</dd>
- <dt><code>exception_var_1</code>, <code>exception_var_2</code></dt>
- <dd>Un identifiant qui permet de récupérer la valeur de l'exception associée à la clause <code>catch</code>.</dd>
- <dt><code>condition_1</code></dt>
- <dd>Une expression conditionnelle.</dd>
- <dt><code>instructions_finally</code></dt>
- <dd>Les instructions à exécuter une fois que l'instruction <code>try</code> est terminée. Ces instructions s'exécuteront, qu'il y ait eu une exception ou non.</dd>
-</dl>
+- `instructions_try`
+  - : Les instructions qu'on souhaite exécuter.
+- `instructions_catch_1`, `instructions_catch_2`
+  - : Les instructions à exécuter si une exception est levée dans le bloc `try`.
+- `exception_var_1`, `exception_var_2`
+  - : Un identifiant qui permet de récupérer la valeur de l'exception associée à la clause `catch`.
+- `condition_1`
+  - : Une expression conditionnelle.
+- `instructions_finally`
+  - : Les instructions à exécuter une fois que l'instruction `try` est terminée. Ces instructions s'exécuteront, qu'il y ait eu une exception ou non.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>L'instruction <code>try</code> est composée d'un bloc <code>try</code> contenant une ou plusieurs instructions, d'au moins une clause <code>catch</code> ou d'une clause <code>finally</code> ou des deux. On peut donc avoir les trois formes suivantes pour cette instruction :</p>
+L'instruction `try` est composée d'un bloc `try` contenant une ou plusieurs instructions, d'au moins une clause `catch` ou d'une clause `finally` ou des deux. On peut donc avoir les trois formes suivantes pour cette instruction :
 
-<ol>
- <li><code>try...catch</code></li>
- <li><code>try...finally</code></li>
- <li><code>try...catch...finally</code></li>
-</ol>
+1.  `try...catch`
+2.  `try...finally`
+3.  `try...catch...finally`
 
-<p>Une clause <code>catch</code> contient les instructions à exécuter si une exception est levée par une instruction du bloc <code>try</code>. On souhaite généralement que le bloc <code>try</code> se déroule sans problème. Si toutefois une erreur se produit, on veut pouvoir contrôler ce qui se passe et on transmet donc le contrôle au bloc <code>catch</code>. Si une instruction contenue dans le bloc <code>try</code> (ou une fonction appelée depuis le bloc <code>try</code>) renvoie une exception, le contrôle sera immédiatement passé à la clause <code>catch</code>. Si aucune exception n'est levée, la clause <code>catch</code> ne sera pas utilisée.</p>
+Une clause `catch` contient les instructions à exécuter si une exception est levée par une instruction du bloc `try`. On souhaite généralement que le bloc `try` se déroule sans problème. Si toutefois une erreur se produit, on veut pouvoir contrôler ce qui se passe et on transmet donc le contrôle au bloc `catch`. Si une instruction contenue dans le bloc `try` (ou une fonction appelée depuis le bloc `try`) renvoie une exception, le contrôle sera immédiatement passé à la clause `catch`. Si aucune exception n'est levée, la clause `catch` ne sera pas utilisée.
 
-<p>La clause <code>finally</code> s'exécute après le bloc <code>try</code> et après le bloc <code>catch</code> (si celui-ci a été déclenché) mais avant les instructions qui suivent. Les instructions de cette clause sont toujours exécutées, qu'il y ait eu ou non une exception de déclenchée et/ou d'interceptée.</p>
+La clause `finally` s'exécute après le bloc `try` et après le bloc `catch` (si celui-ci a été déclenché) mais avant les instructions qui suivent. Les instructions de cette clause sont toujours exécutées, qu'il y ait eu ou non une exception de déclenchée et/ou d'interceptée.
 
-<p>Il est possible d'imbriquer plusieurs instructions <code>try</code>. Si un <code>try</code> imbriqué ne possède pas de clause <code>catch</code>, la clause <code>catch</code> du <code>try</code> du niveau supérieur sera utilisée (et ainsi de suite).</p>
+Il est possible d'imbriquer plusieurs instructions `try`. Si un `try` imbriqué ne possède pas de clause `catch`, la clause `catch` du `try` du niveau supérieur sera utilisée (et ainsi de suite).
 
-<p>Pour plus d'informations sur les exceptions et les erreurs en JavaScript, voir le chapitre du <a href="/fr/docs/Web/JavaScript/Guide/Instructions#Les_instructions_utilis.C3.A9es_pour_les_exceptions">Guide JavaScript</a> correspondant.</p>
+Pour plus d'informations sur les exceptions et les erreurs en JavaScript, voir le chapitre du [Guide JavaScript](/fr/docs/Web/JavaScript/Guide/Instructions#Les_instructions_utilis.C3.A9es_pour_les_exceptions) correspondant.
 
-<h3 id="Clause_catch_inconditionnelle">Clause <code>catch</code> inconditionnelle</h3>
+### Clause `catch` inconditionnelle
 
-<p>Lorsqu'une seule clause <code>catch</code> inconditionnelle est utilisée, le bloc <code>catch</code> est utilisée pour n'importe quelle exception qui est levée. Ainsi, dans le fragment de code qui suit, pour toute exception produite, le contrôle de l'exécution passera à la clause <code>catch</code>.</p>
+Lorsqu'une seule clause `catch` inconditionnelle est utilisée, le bloc `catch` est utilisée pour n'importe quelle exception qui est levée. Ainsi, dans le fragment de code qui suit, pour toute exception produite, le contrôle de l'exécution passera à la clause `catch`.
 
-<pre class="brush: js">try {
+```js
+try {
    throw "monException"; // génère une exception
 }
 catch (e) {
@@ -75,19 +71,20 @@ catch (e) {
    logErreurs(e); // on transfère l'objet de l'exception à une méthode
                   // gestionnaire
 }
-</pre>
+```
 
-<p>La clause <code>catch</code> définit un identifiant (dans l'exemple précédent, c'est <code>e</code>) qui contient la valeur définie par l'instruction <code>throw</code>. Ce bloc <code>catch</code> est en quelque sorte unique en JavaScript car l'identifiant est créé lors de l'entrée dans le bloc <code>catch</code>, la valeur est alors ajoutée à la portée courant et la durée de vie de l'identifiant est limitée au bloc <code>catch</code>. Une fois que le bloc <code>catch</code> a été exécuté, l'identifiant n'est plus disponible.</p>
+La clause `catch` définit un identifiant (dans l'exemple précédent, c'est `e`) qui contient la valeur définie par l'instruction `throw`. Ce bloc `catch` est en quelque sorte unique en JavaScript car l'identifiant est créé lors de l'entrée dans le bloc `catch`, la valeur est alors ajoutée à la portée courant et la durée de vie de l'identifiant est limitée au bloc `catch`. Une fois que le bloc `catch` a été exécuté, l'identifiant n'est plus disponible.
 
-<h3 id="Clauses_catch_conditionnelles">Clauses <code>catch</code> conditionnelles</h3>
+### Clauses `catch` conditionnelles
 
-<p>{{non-standard_header}}</p>
+{{non-standard_header}}
 
-<p>Il est aussi possible d'utiliser une ou plusieurs clauses <code>catch</code> conditionnelles afin de gérer des exceptions spécifiques. Dans ce cas, selon l'exception produite, la clause <code>catch</code> appropriée sera utilisée. Dans l'exemple qui suit, le code contenu dans le bloc <code>try</code> peut produire trois exceptions : {{jsxref("TypeError")}}, {{jsxref("RangeError")}}, et {{jsxref("EvalError")}}. Lorsqu'une exception se produit, le contrôle de l'exécution est passé à la clause <code>catch</code> correspondante. SI l'exception qui est déclenchée ne correspond à aucune des conditions, le contrôle passera à la clause <code>catch</code> non-conditionnelle si elle est trouvée..</p>
+Il est aussi possible d'utiliser une ou plusieurs clauses `catch` conditionnelles afin de gérer des exceptions spécifiques. Dans ce cas, selon l'exception produite, la clause `catch` appropriée sera utilisée. Dans l'exemple qui suit, le code contenu dans le bloc `try` peut produire trois exceptions : {{jsxref("TypeError")}}, {{jsxref("RangeError")}}, et {{jsxref("EvalError")}}. Lorsqu'une exception se produit, le contrôle de l'exécution est passé à la clause `catch` correspondante. SI l'exception qui est déclenchée ne correspond à aucune des conditions, le contrôle passera à la clause `catch` non-conditionnelle si elle est trouvée..
 
-<p>Si on utilise une clause <code>catch</code> inconditionnelle avec une ou plusieurs clauses <code>catch</code> conditionnelles, la clause inconditionnelle doit être spécifiée en dernière. Si ce n'est pas le cas, la clause <code>catch</code> inconditionnelle interceptera tous les types d'exceptions avant les autres clauses.</p>
+Si on utilise une clause `catch` inconditionnelle avec une ou plusieurs clauses `catch` conditionnelles, la clause inconditionnelle doit être spécifiée en dernière. Si ce n'est pas le cas, la clause `catch` inconditionnelle interceptera tous les types d'exceptions avant les autres clauses.
 
-<pre class="brush: js">try {
+```js
+try {
     maRoutine(); // peut déclencher trois types d'exceptions
 } catch (e if e instanceof TypeError) {
     // les instructions pour gérer TypeError
@@ -98,11 +95,12 @@ catch (e) {
 } catch (e) {
     // les instructions pour gérer les autres exceptions
 }
-</pre>
+```
 
-<p>Dans le fragment de code qui suit, on aura le même fonctionnement mais en utilisant uniquement des fonctionnalités standard (selon ECMAScript). Ce code est plus long mais fonctionne pour tous les environnements conformes à ECMAScript :</p>
+Dans le fragment de code qui suit, on aura le même fonctionnement mais en utilisant uniquement des fonctionnalités standard (selon ECMAScript). Ce code est plus long mais fonctionne pour tous les environnements conformes à ECMAScript :
 
-<pre class="brush: js">try {
+```js
+try {
     maRoutine(); // may throw three types of exceptions
 } catch (e) {
     if (e instanceof TypeError) {
@@ -115,30 +113,33 @@ catch (e) {
        // les instructions pour gérer les autres exceptions
     }
 }
-</pre>
+```
 
-<h3 id="L'identifiant_de_l'exception">L'identifiant de l'exception</h3>
+### L'identifiant de l'exception
 
-<p>Lorsqu'une exception est levée dans le bloc <code>try</code>, <em><code>exception_var</code></em> (par exemple le <code>e</code> dans « <code>catch (e)</code> ») contient la valeur définie par l'instruction {{jsxref("Instructions/throw","throw")}}. Cet identifiant peut être utilisé pour accéder aux propriétés de l'objet et ainsi obtenir des informations sur l'exception qui a eu lieu. Cet identifiant est local à la clause <code>catch</code>, il est créé lorsqu'on rentre dans la clause <code>catch</code> et n'est plus disponible une fois que la clause a fini son exécution.</p>
+Lorsqu'une exception est levée dans le bloc `try`, _`exception_var`_ (par exemple le `e` dans « `catch (e)` ») contient la valeur définie par l'instruction {{jsxref("Instructions/throw","throw")}}. Cet identifiant peut être utilisé pour accéder aux propriétés de l'objet et ainsi obtenir des informations sur l'exception qui a eu lieu. Cet identifiant est local à la clause `catch`, il est créé lorsqu'on rentre dans la clause `catch` et n'est plus disponible une fois que la clause a fini son exécution.
 
-<pre class="brush: js">function isValidJSON(txt){
+```js
+function isValidJSON(txt){
   try {
     JSON.parse(txt);
     return true;
   } catch {
     return false;
   }
-}</pre>
+}
+```
 
-<h3 id="La_clause_finally">La clause <code>finally</code></h3>
+### La clause `finally`
 
-<p>La clause <code>finally</code> contient les instructions à exécuter après que les instructions du bloc <code>try</code> et éventuellement celles de la clause <code>catch</code> aient été exécutées mais avant que les instructions suivant l'instruction <code>try</code> soient exécutées. La clause <code>finally</code> est exécutée dans tous les cas (si on a eu une exception ou non). Si une exception est levée et qu'il n'y a pas de clause <code>catch</code>, les instructions de la clause <code>finally</code> sont tout de même exécutées.</p>
+La clause `finally` contient les instructions à exécuter après que les instructions du bloc `try` et éventuellement celles de la clause `catch` aient été exécutées mais avant que les instructions suivant l'instruction `try` soient exécutées. La clause `finally` est exécutée dans tous les cas (si on a eu une exception ou non). Si une exception est levée et qu'il n'y a pas de clause `catch`, les instructions de la clause `finally` sont tout de même exécutées.
 
-<p>Cela peut paraître étrange qu'un bloc de code qui s'exécute même lorsqu'il y a une exception… Il faut comprendre que le code qui suit le bloc try...catch ne sera <strong>pas</strong> exécuté. Aussi, le bloc <code>finally</code> permet de contenir toutes les instructions de clôture/nettoyage nécessaire. On évite donc de dupliquer ce code qui doit toujours être utilisé.</p>
+Cela peut paraître étrange qu'un bloc de code qui s'exécute même lorsqu'il y a une exception… Il faut comprendre que le code qui suit le bloc try...catch ne sera **pas** exécuté. Aussi, le bloc `finally` permet de contenir toutes les instructions de clôture/nettoyage nécessaire. On évite donc de dupliquer ce code qui doit toujours être utilisé.
 
-<p>La clause <code>finally</code> peut être utilisée afin d'exécuter les actions nécessaires pour que le script « échoue correctement » en cas d'erreur. On peut par exemple tirer parti de <code>finally</code> pour fermer un flux, libérer une ressource, etc. Dans l'exemple suivant, exécuté côté serveur, le script accède à un fichier. Si une exception se produit lorsque le fichier est ouvert, la clause <code>finally</code> permet de fermer le fichier avant que le script échoue. Le code contenu dans le bloc <code>finally</code> sera exécuté même si on a une instruction <code>return</code> dans la section <code>try</code> ou dans la section <code>catch</code>.</p>
+La clause `finally` peut être utilisée afin d'exécuter les actions nécessaires pour que le script « échoue correctement » en cas d'erreur. On peut par exemple tirer parti de `finally` pour fermer un flux, libérer une ressource, etc. Dans l'exemple suivant, exécuté côté serveur, le script accède à un fichier. Si une exception se produit lorsque le fichier est ouvert, la clause `finally` permet de fermer le fichier avant que le script échoue. Le code contenu dans le bloc `finally` sera exécuté même si on a une instruction `return` dans la section `try` ou dans la section `catch`.
 
-<pre class="brush: js">ouvrirMonFichier()
+```js
+ouvrirMonFichier()
 try {
    // on utilise une ressource
    écrireDansMonFichier(mesDonnées);
@@ -146,15 +147,16 @@ try {
 finally {
    fermerMonFichier(); // on ferme toujours la ressource
 }
-</pre>
+```
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Blocs_try_imbriqués">Blocs <code>try</code> imbriqués</h3>
+### Blocs `try` imbriqués
 
-<p>Tout d'abord, on utilise ce fragment de code, qui produit le résultat suivant :</p>
+Tout d'abord, on utilise ce fragment de code, qui produit le résultat suivant :
 
-<pre class="brush: js">try {
+```js
+try {
   try {
     throw new Error("oups");
   }
@@ -169,11 +171,12 @@ catch (ex) {
 // Produira dans la console :
 // "finally"
 // "externe" "oups"
-</pre>
+```
 
-<p>Et maintenant, si on a déjà intercepté l'exception avec une clause <code>catch</code> dans le bloc imbriqué :</p>
+Et maintenant, si on a déjà intercepté l'exception avec une clause `catch` dans le bloc imbriqué :
 
-<pre class="brush: js">try {
+```js
+try {
   try {
     throw new Error("oups");
   }
@@ -191,11 +194,12 @@ catch (ex) {
 // Produira dans la console:
 // "interne" "oups"
 // "finally"
-</pre>
+```
 
-<p>Ensuite, si on propage l'erreur à nouveau :</p>
+Ensuite, si on propage l'erreur à nouveau :
 
-<pre class="brush: js">try {
+```js
+try {
   try {
     throw new Error("oups");
   }
@@ -215,15 +219,16 @@ catch (ex) {
 // "interne" "oups"
 // "finally"
 // "externe" "oups"
-</pre>
+```
 
-<p>Toute exception ne sera interceptée qu'une seule fois par le bloc <code>catch</code> le plus « proche » à moins qu'elle ne soit retransmise à nouveau. Bien entendu, toute exception qui aura été levée par le bloc interne (il se peut que les instructions d'une clause catch provoquent une erreur) sera interceptée par le bloc externe.</p>
+Toute exception ne sera interceptée qu'une seule fois par le bloc `catch` le plus « proche » à moins qu'elle ne soit retransmise à nouveau. Bien entendu, toute exception qui aura été levée par le bloc interne (il se peut que les instructions d'une clause catch provoquent une erreur) sera interceptée par le bloc externe.
 
-<h3 id="Valeur_de_retour_et_bloc_finally">Valeur de retour et bloc <code>finally</code></h3>
+### Valeur de retour et bloc `finally`
 
-<p>Lorsque le bloc <code>finally</code> renvoie une valeur, c'est cette valeur qui devient la valeur de retour pour l'ensemble du bloc <code>try-catch-finally</code> et ce, peu importe, s'il y a des instructions {{jsxref("Instructions/return","return")}} dans les blocs <code>try</code> et <code>catch</code>. Cela inclue également les exceptions levées dans le bloc <code>catch</code> :</p>
+Lorsque le bloc `finally` renvoie une valeur, c'est cette valeur qui devient la valeur de retour pour l'ensemble du bloc `try-catch-finally` et ce, peu importe, s'il y a des instructions {{jsxref("Instructions/return","return")}} dans les blocs `try` et `catch`. Cela inclue également les exceptions levées dans le bloc `catch` :
 
-<pre class="brush: js">try {
+```js
+try {
   try {
     throw new Error("oups");
   }
@@ -243,49 +248,24 @@ catch (ex) {
 // Produira dans la console :
 // "interne" "oups"
 // "finally"
-</pre>
+```
 
-<p>Le "oups" externe n'est pas renvoyé car l'instruction <code>return</code> est utilisée dans la clause <code>finally</code> du bloc interne. Cela aurait également été le cas avec n'importe quelle valeur renvoyée par le bloc <code>catch</code>.</p>
+Le "oups" externe n'est pas renvoyé car l'instruction `return` est utilisée dans la clause `finally` du bloc interne. Cela aurait également été le cas avec n'importe quelle valeur renvoyée par le bloc `catch`.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.4</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-12.14', 'instruction try')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-try-statement', 'Instruction try')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-try-statement', 'try statement')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Points ne faisant pas partie du standard ECMA-262 actuel : utilisation de plusieurs clauses catch et de plusieurs clauses conditionnelles (extension liée à SpiderMonkey, correspondant à JavaScript 1.5).</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                         | Commentaires                                                                                                                                                                                               |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ES3')}}                                                             | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.4                                                                                                                                                       |
+| {{SpecName('ES5.1', '#sec-12.14', 'instruction try')}}             | {{Spec2('ES5.1')}}     |                                                                                                                                                                                                            |
+| {{SpecName('ES6', '#sec-try-statement', 'Instruction try')}}     | {{Spec2('ES6')}}         |                                                                                                                                                                                                            |
+| {{SpecName('ESDraft', '#sec-try-statement', 'try statement')}} | {{Spec2('ESDraft')}} | Points ne faisant pas partie du standard ECMA-262 actuel : utilisation de plusieurs clauses catch et de plusieurs clauses conditionnelles (extension liée à SpiderMonkey, correspondant à JavaScript 1.5). |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.statements.try_catch")}}</p>
+{{Compat("javascript.statements.try_catch")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Error")}}</li>
- <li>{{jsxref("Instructions/throw", "throw")}}</li>
-</ul>
+- {{jsxref("Error")}}
+- {{jsxref("Instructions/throw", "throw")}}

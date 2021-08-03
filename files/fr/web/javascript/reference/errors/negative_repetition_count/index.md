@@ -8,39 +8,39 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Negative_repetition_count
 original_slug: Web/JavaScript/Reference/Erreurs/Negative_repetition_count
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="syntaxbox">RangeError: argument out of range (Edge)
-RangeError: repeat count must be non-negative (Firefox)
-RangeError: Invalid count value (Chrome)
-</pre>
+    RangeError: argument out of range (Edge)
+    RangeError: repeat count must be non-negative (Firefox)
+    RangeError: Invalid count value (Chrome)
 
-<h2 id="Type_d'erreur">Type d'erreur</h2>
+## Type d'erreur
 
-<p>{{jsxref("RangeError")}}</p>
+{{jsxref("RangeError")}}
 
-<h2 id="Quel_est_le_problème">Quel est le problème ?</h2>
+## Quel est le problème ?
 
-<p>La méthode {{jsxref("String.prototype.repeat()")}} a été utilisée avec un argument négatif. Or, cet argument doit être compris dans l'intervalle [0, +∞).</p>
+La méthode {{jsxref("String.prototype.repeat()")}} a été utilisée avec un argument négatif. Or, cet argument doit être compris dans l'intervalle \[0, +∞).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Exemples_invalides">Exemples invalides</h3>
+### Exemples invalides
 
-<pre class="brush: js example-bad">'abc'.repeat(-1); // RangeError </pre>
+```js example-bad
+'abc'.repeat(-1); // RangeError 
+```
 
-<h3 id="Exemples_valides">Exemples valides</h3>
+### Exemples valides
 
-<pre class="brush: js example-good">'abc'.repeat(0);    // ''
+```js example-good
+'abc'.repeat(0);    // ''
 'abc'.repeat(1);    // 'abc'
 'abc'.repeat(2);    // 'abcabc'
 'abc'.repeat(3.5);  // 'abcabcabc' (converti en entier)
-</pre>
+```
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("String.prototype.repeat()")}}</li>
-</ul>
+- {{jsxref("String.prototype.repeat()")}}

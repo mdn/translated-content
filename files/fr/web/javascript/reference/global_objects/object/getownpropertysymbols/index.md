@@ -10,36 +10,35 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertySymbols
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/getOwnPropertySymbols
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>Object.getOwnPropertySymbols()</strong></code> renvoie un tableau contenant tous les symboles des propriétés trouvées directement sur un objet donné.</p>
+La méthode **`Object.getOwnPropertySymbols()`** renvoie un tableau contenant tous les symboles des propriétés trouvées directement sur un objet donné.
 
-<div>{{EmbedInteractiveExample("pages/js/object-getownpropertysymbols.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-getownpropertysymbols.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Object.getOwnPropertySymbols(<var>obj</var>)</pre>
+    Object.getOwnPropertySymbols(obj)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>L'objet dont on souhaite lister les symboles des propriétés propres.</dd>
-</dl>
+- `obj`
+  - : L'objet dont on souhaite lister les symboles des propriétés propres.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un tableau des symboles trouvés directement sur l'objet passé en argument.</p>
+Un tableau des symboles trouvés directement sur l'objet passé en argument.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>De la même façon que {{jsxref("Object.getOwnPropertyNames()")}}, il est possible d'avoir la liste des symboles des propriétés d'un objet donné sous forme d'un tableau. La méthode {{jsxref("Object.getOwnPropertyNames()")}} ne contiendra uniquement que les propriétés « nommées » d'un objet et non pas les propriétés uniquement accessibles via un symbole.</p>
+De la même façon que {{jsxref("Object.getOwnPropertyNames()")}}, il est possible d'avoir la liste des symboles des propriétés d'un objet donné sous forme d'un tableau. La méthode {{jsxref("Object.getOwnPropertyNames()")}} ne contiendra uniquement que les propriétés « nommées » d'un objet et non pas les propriétés uniquement accessibles via un symbole.
 
-<p>Par défaut, aucun objet ne possède de propriété accessible via un symbole à l'état initial. Ainsi, <code>Object.getOwnPropertySymbols()</code> renvoie un tableau vide sauf si des propriétés nommées avec des symboles ont été définies pour l'objet.</p>
+Par défaut, aucun objet ne possède de propriété accessible via un symbole à l'état initial. Ainsi, `Object.getOwnPropertySymbols()` renvoie un tableau vide sauf si des propriétés nommées avec des symboles ont été définies pour l'objet.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var obj = {};
+```js
+var obj = {};
 var a = Symbol("a");
 var b = Symbol.for("b");
 
@@ -51,37 +50,20 @@ var objectSymboles = Object.getOwnPropertySymbols(obj);
 console.log(objectSymboles.length); // 2
 console.log(objectSymboles)         // [Symbol(a), Symbol(b)]
 console.log(objectSymboles[0])      // Symbol(a)
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-object.getownpropertysymbols', 'Object.getOwnPropertySymbols')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.getownpropertysymbols', 'Object.getOwnPropertySymbols')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                | État                         | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-object.getownpropertysymbols', 'Object.getOwnPropertySymbols')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-object.getownpropertysymbols', 'Object.getOwnPropertySymbols')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Object.getOwnPropertySymbols")}}</p>
+{{Compat("javascript.builtins.Object.getOwnPropertySymbols")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
- <li>{{jsxref("Symbol")}}</li>
-</ul>
+- {{jsxref("Object.getOwnPropertyNames()")}}
+- {{jsxref("Symbol")}}

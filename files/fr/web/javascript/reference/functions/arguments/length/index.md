@@ -10,82 +10,56 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions/arguments/length
 original_slug: Web/JavaScript/Reference/Fonctions/arguments/length
 ---
-<div>{{jsSideBar("Functions")}}</div>
+{{jsSideBar("Functions")}}
 
-<p>La propriété <strong><code>arguments.length</code></strong> contient le nombre d'arguments passés à la fonction.</p>
+La propriété **`arguments.length`** contient le nombre d'arguments passés à la fonction.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">arguments.length</pre>
+    arguments.length
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La propriété <code>arguments.length</code> fournit le nombre d'arguments qui ont été passés à la fonction. Cette quantité peut être inférieure ou supérieure au nombre de paramètres explicitement déclarés dans la définition de la fonction (voir également {{jsxref("Function.length")}}).</p>
+La propriété `arguments.length` fournit le nombre d'arguments qui ont été passés à la fonction. Cette quantité peut être inférieure ou supérieure au nombre de paramètres explicitement déclarés dans la définition de la fonction (voir également {{jsxref("Function.length")}}).
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<h3 id="Utiliser_arguments.length">Utiliser <code>arguments.length</code></h3>
+### Utiliser `arguments.length`
 
-<p>Dans cet exemple, on définit une fonction qui permet d'additionner plusieurs nombres.</p>
+Dans cet exemple, on définit une fonction qui permet d'additionner plusieurs nombres.
 
-<pre class="brush: js">function somme(x /*, y, z, ...*/) {
+```js
+function somme(x /*, y, z, ...*/) {
    x = Number(x);
-   for (var i = 1; i &lt; arguments.length; i++) {
+   for (var i = 1; i < arguments.length; i++) {
       x += Number(arguments[i]);
    }
    return x;
 }
-</pre>
+```
 
-<pre class="brush: js">résultat = somme(3, 4, 5);        // renvoie 12
+```js
+résultat = somme(3, 4, 5);        // renvoie 12
 résultat = somme(3, 4);           // renvoie 7
 résultat = somme(103, 104, 105);  // renvoie 312
-</pre>
+```
 
-<div class="note">
-<p><strong>Note :</strong> <code>arguments.length</code> ne doit pas être confondu avec {{jsxref("Function.length")}}.</p>
-</div>
+> **Note :** `arguments.length` ne doit pas être confondu avec {{jsxref("Function.length")}}.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale. Implémentée par JavaScript 1.1</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-10.6', 'Arguments Object')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                         | Commentaires                                        |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                         | {{Spec2('ES1')}}         | Définition initiale. Implémentée par JavaScript 1.1 |
+| {{SpecName('ES5.1', '#sec-10.6', 'Arguments Object')}}                                         | {{Spec2('ES5.1')}}     |                                                     |
+| {{SpecName('ES6', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}}     | {{Spec2('ES6')}}         |                                                     |
+| {{SpecName('ESDraft', '#sec-arguments-exotic-objects', 'Arguments Exotic Objects')}} | {{Spec2('ESDraft')}} |                                                     |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("javascript.functions.arguments.length")}}
 
-<p>{{Compat("javascript.functions.arguments.length")}}</p>
+## Voir aussi
 
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>{{jsxref("Function")}}</li>
- <li>{{jsxref("Function.length")}}</li>
-</ul>
+- {{jsxref("Function")}}
+- {{jsxref("Function.length")}}

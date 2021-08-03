@@ -10,34 +10,33 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/values
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/values
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>Object.values()</strong></code> renvoie un tableau contenant les valeurs des propriétés propres énumérables d'un objet dont l'ordre est le même que celui obtenu avec une boucle {{jsxref("Instructions/for...in", "for...in")}} (la boucle <code>for-in</code> est différente car elle parcourt également les propriétés héritées).</p>
+La méthode **`Object.values()`** renvoie un tableau contenant les valeurs des propriétés propres énumérables d'un objet dont l'ordre est le même que celui obtenu avec une boucle {{jsxref("Instructions/for...in", "for...in")}} (la boucle `for-in` est différente car elle parcourt également les propriétés héritées).
 
-<div>{{EmbedInteractiveExample("pages/js/object-values.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-values.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Object.values(<var>obj</var>)</pre>
+    Object.values(obj)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>L'objet dont on souhaite connaître les valeurs des propriétés propres énumérables.</dd>
-</dl>
+- `obj`
+  - : L'objet dont on souhaite connaître les valeurs des propriétés propres énumérables.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un tableau dont les éléments sont les valeurs des propriétés énumérables de l'objet passé en argument.</p>
+Un tableau dont les éléments sont les valeurs des propriétés énumérables de l'objet passé en argument.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p><code>Object.values()</code> renvoie un tableau dont les éléments sont les valeurs des propriétés énumérables directement rattachées à l'objet passé en argument. L'ordre du tableau est le même que celui obtenu lorsqu'on parcourt les propriétés manuellement.</p>
+`Object.values()` renvoie un tableau dont les éléments sont les valeurs des propriétés énumérables directement rattachées à l'objet passé en argument. L'ordre du tableau est le même que celui obtenu lorsqu'on parcourt les propriétés manuellement.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var obj = { toto: "truc", machin: 42 };
+```js
+var obj = { toto: "truc", machin: 42 };
 console.log(Object.values(obj)); // ['truc', 42]
 
 // un objet semblable à un tableau
@@ -60,45 +59,28 @@ console.log(Object.values(mon_obj)); // ['truc']
 // un argument de type primitif sera
 // converti en un objet
 console.log(Object.values("toto")); // ['t', 'o', 't', 'o']
-</pre>
+```
 
-<h2 id="Prothèse_d'émulation_(polyfill)">Prothèse d'émulation (<em>polyfill</em>)</h2>
+## Prothèse d'émulation (_polyfill_)
 
-<p>Afin d'ajouter le support pour <code>Object.values</code> dans des environnements plus anciens qui ne supportent pas la méthode nativement, vous pouvez utiliser une prothèse comme celle proposée sur le dépôt <a href="https://github.com/tc39/proposal-object-values-entries">tc39/proposal-object-values-entries</a> ou sur le dépôt <a href="https://github.com/es-shims/Object.values">es-shims/Object.values</a>.</p>
+Afin d'ajouter le support pour `Object.values` dans des environnements plus anciens qui ne supportent pas la méthode nativement, vous pouvez utiliser une prothèse comme celle proposée sur le dépôt [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) ou sur le dépôt [es-shims/Object.values](https://github.com/es-shims/Object.values).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.values', 'Object.values')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES8', '#sec-object.values', 'Object.values')}}</td>
-   <td>{{Spec2('ES8')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                         | Commentaires         |
+| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{SpecName('ESDraft', '#sec-object.values', 'Object.values')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ES8', '#sec-object.values', 'Object.values')}}         | {{Spec2('ES8')}}         | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Object.values")}}</p>
+{{Compat("javascript.builtins.Object.values")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement">Énumérabilité et rattachement des propriétés</a></li>
- <li>{{jsxref("Object.keys()")}}</li>
- <li>{{jsxref("Object.entries()")}}</li>
- <li>{{jsxref("Object.prototype.propertyIsEnumerable()")}}</li>
- <li>{{jsxref("Object.create()")}}</li>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
-</ul>
+- [Énumérabilité et rattachement des propriétés](/fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement)
+- {{jsxref("Object.keys()")}}
+- {{jsxref("Object.entries()")}}
+- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
+- {{jsxref("Object.create()")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}

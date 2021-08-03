@@ -11,52 +11,49 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/forEach
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/forEach
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>forEach()</strong></code> exécute une fonction donnée sur chaque élément clé-valeur de l'objet <code>Map</code> dans l'ordre d'insertion.</p>
+La méthode **`forEach()`** exécute une fonction donnée sur chaque élément clé-valeur de l'objet `Map` dans l'ordre d'insertion.
 
-<div>{{EmbedInteractiveExample("pages/js/map-prototype-foreach.html")}}</div>
+{{EmbedInteractiveExample("pages/js/map-prototype-foreach.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>maMap</em>.forEach(<em>callback</em>[, <em>thisArg</em>])</pre>
+    maMap.forEach(callback[, thisArg])
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>La fonction à exécuter pour chaque élément.</dd>
- <dt><code>thisArg</code></dt>
- <dd>La valeur à utiliser comme contexte <code>this</code> lors de l'exécution de <code>callback</code>.</dd>
-</dl>
+- `callback`
+  - : La fonction à exécuter pour chaque élément.
+- `thisArg`
+  - : La valeur à utiliser comme contexte `this` lors de l'exécution de `callback`.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>{{jsxref("undefined")}}</p>
+{{jsxref("undefined")}}
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code>forEach</code> exécute la fonction <code>callback</code> donnée sur chacune des clés qui existe. Elle n'est pas appelée pour les clés qui ont été supprimées. En revanche, elle est appelée pour les valeurs qui sont présentes mais qui sont égales à <code>undefined</code>.</p>
+La méthode `forEach` exécute la fonction `callback` donnée sur chacune des clés qui existe. Elle n'est pas appelée pour les clés qui ont été supprimées. En revanche, elle est appelée pour les valeurs qui sont présentes mais qui sont égales à `undefined`.
 
-<p><code>callback</code> est appelé avec <strong>trois arguments</strong> :</p>
+`callback` est appelé avec **trois arguments** :
 
-<ul>
- <li>la <strong>valeur de l'élément</strong></li>
- <li>la <strong>clé de l'élément</strong></li>
- <li>l'objet <strong><code>Map</code> parcouru</strong></li>
-</ul>
+- la **valeur de l'élément**
+- la **clé de l'élément**
+- l'objet **`Map` parcouru**
 
-<p>Si un argument <code>thisArg</code> est fourni à la méthode <code>forEach</code>, il sera passé au <code>callback</code> quand il sera appelé et celui-ci l'utilisera comme valeur <code>this</code>. Dans les autres cas, la valeur <code>undefined</code> sera utilisée comme contexte <code>this</code>. La valeur <code>this</code> observée par la fonction <code>callback</code> est déterminée selon <a href="/fr/docs/JavaScript/Reference/Opérateurs/Opérateurs_spéciaux/L'opérateur_this">les règles appliquées à l'opérateur <code>this</code></a>.</p>
+Si un argument `thisArg` est fourni à la méthode `forEach`, il sera passé au `callback` quand il sera appelé et celui-ci l'utilisera comme valeur `this`. Dans les autres cas, la valeur `undefined` sera utilisée comme contexte `this`. La valeur `this` observée par la fonction `callback` est déterminée selon [les règles appliquées à l'opérateur `this`](/fr/docs/JavaScript/Reference/Opérateurs/Opérateurs_spéciaux/L'opérateur_this).
 
-<p>Chacune des valeurs sera traitée une fois sauf si celle-ci a été supprimée puis réajoutée avant la fin de <code>forEach</code>. <code>callback</code> n'est pas appelé pour les valeurs qui sont supprimés avant le passage de la fonction. Les valeurs qui sont ajoutées avant que <code>forEach</code> ait parcouru l'ensemble seront traitées.</p>
+Chacune des valeurs sera traitée une fois sauf si celle-ci a été supprimée puis réajoutée avant la fin de `forEach`. `callback` n'est pas appelé pour les valeurs qui sont supprimés avant le passage de la fonction. Les valeurs qui sont ajoutées avant que `forEach` ait parcouru l'ensemble seront traitées.
 
-<p><code>forEach</code> exécute la fonction <code>callback</code> une fois pour chaque élément de l'objet <code>Map</code> : il ne renvoie pas de valeur.</p>
+`forEach` exécute la fonction `callback` une fois pour chaque élément de l'objet `Map` : il ne renvoie pas de valeur.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Le fragment de code suivant enregistre une ligne pour chaque élément d'un objet<code> Map </code>:</p>
+Le fragment de code suivant enregistre une ligne pour chaque élément d'un objet` Map `:
 
-<pre class="brush:js">function logMapElements(valeur, clé, map) {
+```js
+function logMapElements(valeur, clé, map) {
     console.log(`map.get('${clé}') = ${value}`);
 }
 
@@ -66,37 +63,20 @@ new Map([["toto", 3], ["truc", {}], ["bidule", undefined]]).forEach(logMapElemen
 // "map.get('toto') = 3"
 // "map.get('truc') = [object Object]"
 // "map.get('bidule') = undefined"
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-map.prototype.foreach', 'Map.prototype.forEach')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-map.prototype.foreach', 'Map.prototype.forEach')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-map.prototype.foreach', 'Map.prototype.forEach')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-map.prototype.foreach', 'Map.prototype.forEach')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Map.forEach")}}</p>
+{{Compat("javascript.builtins.Map.forEach")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Set.prototype.forEach()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Set.prototype.forEach()")}}

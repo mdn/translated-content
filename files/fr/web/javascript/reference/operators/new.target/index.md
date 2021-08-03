@@ -8,42 +8,44 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/new.target
 original_slug: Web/JavaScript/Reference/Opérateurs/new.target
 ---
-<div>{{JSSidebar("Operators")}}</div>
+{{JSSidebar("Operators")}}
 
-<p>La syntaxe<strong> <code>new.target</code></strong> est disponible dans toutes les fonctions et permet entre autres de tester si une fonction ou un constructeur a été appelé avec <code>new</code>. Dans les constructeurs, il fait référence au constructeur invoqué par <code><a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_new">new</a></code>. Dans les appels de fonction « normaux », <code>new.target</code> vaut {{jsxref("undefined")}}.</p>
+La syntaxe** `new.target`** est disponible dans toutes les fonctions et permet entre autres de tester si une fonction ou un constructeur a été appelé avec `new`. Dans les constructeurs, il fait référence au constructeur invoqué par [`new`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_new). Dans les appels de fonction « normaux », `new.target` vaut {{jsxref("undefined")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-newtarget.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-newtarget.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">new.target</pre>
+    new.target
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La syntaxe <code>new.target</code> se compose du mot-clé <code>new</code>, suivi d'un point puis d'un nom de propriété (ici <code>target</code>). Généralement et par ailleurs, <code>new.</code> est utilisé comme contexte pour accéder à une propriété. Ici, <code>new.</code> ne fait pas réellement référence à un objet. Dans les appels de constructeurs, <code>new.target</code> fait référence au constructeur qui a été appelé par <code>new</code>. Cette syntaxe permet donc de récupérer cette valeur.</p>
+La syntaxe `new.target` se compose du mot-clé `new`, suivi d'un point puis d'un nom de propriété (ici `target`). Généralement et par ailleurs, `new.` est utilisé comme contexte pour accéder à une propriété. Ici, `new.` ne fait pas réellement référence à un objet. Dans les appels de constructeurs, `new.target` fait référence au constructeur qui a été appelé par `new`. Cette syntaxe permet donc de récupérer cette valeur.
 
-<p><code>new.target</code> est une méta-propriété, disponible pour toutes les fonctions. Dans <a href="/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es">les fonctions fléchées</a>, <code>new.target</code> fait référence au <code>new.target</code> de la fonction englobante.</p>
+`new.target` est une méta-propriété, disponible pour toutes les fonctions. Dans [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es), `new.target` fait référence au `new.target` de la fonction englobante.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utilisation_de_new.target_dans_les_appels_de_fonction">Utilisation de <code>new.target</code> dans les appels de fonction</h3>
+### Utilisation de `new.target` dans les appels de fonction
 
-<p>Utilisé dans les appels de fonctions « classiques » (autrement dit pour les fonctions qui ne sont pas des constructeurs), <code>new.target</code> vaut {{jsxref("undefined")}}. Cela permet de détecter si une fonction a été appelée comme constructeur avec <code><a href="/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_new">new</a></code> :</p>
+Utilisé dans les appels de fonctions « classiques » (autrement dit pour les fonctions qui ne sont pas des constructeurs), `new.target` vaut {{jsxref("undefined")}}. Cela permet de détecter si une fonction a été appelée comme constructeur avec [`new`](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_new) :
 
-<pre class="brush: js">function Toto(){
+```js
+function Toto(){
   if (!new.target) throw "Toto() doit être appelé avec new"
   console.log("Toto instancié avec new");
 }
 
 new Toto(); // affiche "Toto instancié avec new" dans la console
 Toto(); // lève l'exception avec "Toto doit être appelé avec new"
-</pre>
+```
 
-<h3 id="Utilisation_de_new.target_dans_les_constructeurs">Utilisation de <code>new.target</code> dans les constructeurs</h3>
+### Utilisation de `new.target` dans les constructeurs
 
-<p>Utilisés dans les appels de constructeurs de classe, <code>new.target</code> fait référence au constructeur utilisé directement avec <code>new</code>. C'est également le cas quand le constructeur est présent dans une classe parente et est délégué depuis le constructeur fils :</p>
+Utilisés dans les appels de constructeurs de classe, `new.target` fait référence au constructeur utilisé directement avec `new`. C'est également le cas quand le constructeur est présent dans une classe parente et est délégué depuis le constructeur fils :
 
-<pre class="brush: js">class A {
+```js
+class A {
   constructor() {
     console.log(new.target.name);
   }
@@ -68,40 +70,23 @@ class D extends C {
 
 var c = new C(); // function C()
 var d = new D(); // function D()
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-built-in-function-objects', 'Built-in Function Objects')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-built-in-function-objects', 'Built-in Function Objects')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | État                         | Commentaire          |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-built-in-function-objects', 'Built-in Function Objects')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-built-in-function-objects', 'Built-in Function Objects')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.operators.new_target")}}</p>
+{{Compat("javascript.operators.new_target")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Fonctions">Les fonctions</a></li>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Classes">Les classes</a></li>
- <li><code><a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_new">new</a></code></li>
- <li><code><a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this">this</a></code></li>
- <li><a href="https://tech.mozfr.org/post/2015/08/12/ES6-en-details-%3A-les-sous-classes-et-l-heritage">Cet article sur les classes traduit en français</a></li>
-</ul>
+- [Les fonctions](/fr/docs/Web/JavaScript/Reference/Fonctions)
+- [Les classes](/fr/docs/Web/JavaScript/Reference/Classes)
+- [`new`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_new)
+- [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this)
+- [Cet article sur les classes traduit en français](https://tech.mozfr.org/post/2015/08/12/ES6-en-details-%3A-les-sous-classes-et-l-heritage)

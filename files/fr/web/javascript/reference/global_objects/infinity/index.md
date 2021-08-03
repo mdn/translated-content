@@ -7,74 +7,51 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Infinity
 original_slug: Web/JavaScript/Reference/Objets_globaux/Infinity
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<p>La propriété globale <strong><code>Infinity</code></strong> est une valeur numérique représentant l'infini.</p>
+La propriété globale **`Infinity`** est une valeur numérique représentant l'infini.
 
-<p>{{js_property_attributes(0,0,0)}}</p>
+{{js_property_attributes(0,0,0)}}
 
-<div>{{EmbedInteractiveExample("pages/js/globalprops-infinity.html")}}</div>
+{{EmbedInteractiveExample("pages/js/globalprops-infinity.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Infinity</pre>
+    Infinity
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p><code>Infinity</code> est une propriété de <em>l'objet global</em> , c'est-à-dire qu'elle est accessible globalement.</p>
+`Infinity` est une propriété de _l'objet global_ , c'est-à-dire qu'elle est accessible globalement.
 
-<p>La valeur initiale d'<code>Infinity</code> est {{jsxref("Number.POSITIVE_INFINITY")}}. La valeur <code>Infinity</code> (infinité positive) est une valeur plus grande que n'importe quel nombre. Cette valeur se comporte comme l'infini mathématique ; par exemple, tout ce qui est multiplié par <code>Infinity</code> vaut <code>Infinity</code>, et tout ce qui est divisé par <code>Infinity</code> vaut 0.</p>
+La valeur initiale d'`Infinity` est {{jsxref("Number.POSITIVE_INFINITY")}}. La valeur `Infinity` (infinité positive) est une valeur plus grande que n'importe quel nombre. Cette valeur se comporte comme l'infini mathématique ; par exemple, tout ce qui est multiplié par `Infinity` vaut `Infinity`, et tout ce qui est divisé par `Infinity` vaut 0.
 
-<p>D'après la spécification ECMAScript 5, <code>Infinity</code> est en lecture seule.</p>
+D'après la spécification ECMAScript 5, `Infinity` est en lecture seule.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">console.log(Infinity);          // Infinity
+```js
+console.log(Infinity);          // Infinity
 console.log(Infinity + 1);      // Infinity
 console.log(Math.pow(10, 1000)); // Infinity
 console.log(Math.log(0));       // -Infinity
-console.log(1 / Infinity);      // 0</pre>
+console.log(1 / Infinity);      // 0
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.3</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.1.1.2', 'Infinity')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-value-properties-of-the-global-object-infinity', 'Infinity')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-value-properties-of-the-global-object-infinity', 'Infinity')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | État                         | Commentaires                                         |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                                 | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.3 |
+| {{SpecName('ES5.1', '#sec-15.1.1.2', 'Infinity')}}                                                     | {{Spec2('ES5.1')}}     |                                                      |
+| {{SpecName('ES6', '#sec-value-properties-of-the-global-object-infinity', 'Infinity')}}     | {{Spec2('ES6')}}         |                                                      |
+| {{SpecName('ESDraft', '#sec-value-properties-of-the-global-object-infinity', 'Infinity')}} | {{Spec2('ESDraft')}} |                                                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Infinity")}}</p>
+{{Compat("javascript.builtins.Infinity")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Number.NEGATIVE_INFINITY")}}</li>
- <li>{{jsxref("Number.POSITIVE_INFINITY")}}</li>
- <li>{{jsxref("Number.isFinite")}}</li>
-</ul>
+- {{jsxref("Number.NEGATIVE_INFINITY")}}
+- {{jsxref("Number.POSITIVE_INFINITY")}}
+- {{jsxref("Number.isFinite")}}

@@ -7,88 +7,96 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Conditional_Operator
 original_slug: Web/JavaScript/Reference/Opérateurs/L_opérateur_conditionnel
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>L'<strong>opérateur (ternaire) conditionnel</strong> est le seul opérateur JavaScript qui comporte trois opérandes. Cet opérateur est fréquemment utilisé comme raccourci pour la déclaration de {{jsxref("Instructions/if...else")}}.</p>
+L'**opérateur (ternaire) conditionnel** est le seul opérateur JavaScript qui comporte trois opérandes. Cet opérateur est fréquemment utilisé comme raccourci pour la déclaration de {{jsxref("Instructions/if...else")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-conditionaloperators.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-conditionaloperators.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>condition</em> ? <em>exprSiVrai</em> : <em>exprSiFaux</em> </pre>
+    condition ? exprSiVrai : exprSiFaux
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>condition</code></dt>
- <dd>Une expression qui est évaluée en un booléen (<code>true</code> ou <code>false</code>).</dd>
- <dt><code>exprSiVrai</code></dt>
- <dd>Une expression qui est évaluée si la condition est équivalente à <code>true</code> (<em>truthy</em>)</dd>
- <dt><code>exprSiFaux</code></dt>
- <dd>Une expression qui est évaluée si la condition est équivalente à <code>false</code> (<em>falsy</em>).</dd>
-</dl>
+- `condition`
+  - : Une expression qui est évaluée en un booléen (`true` ou `false`).
+- `exprSiVrai`
+  - : Une expression qui est évaluée si la condition est équivalente à `true` (_truthy_)
+- `exprSiFaux`
+  - : Une expression qui est évaluée si la condition est équivalente à `false` (_falsy_).
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>SI <code>condition</code> vaut <code>true</code>, l'opérateur renverra la valeur d'<code>exprSiVrai;</code> dans le cas contraire, il renverra la valeur de <code>exprSiFaux</code>. Par exemple, on peut afficher un message différent en fonction d'une variable <code>estMembre</code> avec cette déclaration :</p>
+SI `condition` vaut `true`, l'opérateur renverra la valeur d'`exprSiVrai;` dans le cas contraire, il renverra la valeur de `exprSiFaux`. Par exemple, on peut afficher un message différent en fonction d'une variable `estMembre` avec cette déclaration :
 
-<pre class="brush: js">"Le prix est : " + (estMembre ? "15 €" : "30 €")
-</pre>
+```js
+"Le prix est : " + (estMembre ? "15 €" : "30 €")
+```
 
-<p>On peut également affecter des variables dont la valeur dépendra du test :</p>
+On peut également affecter des variables dont la valeur dépendra du test :
 
-<pre class="brush: js">var elvisLives = Math.PI &gt; 4 ? "Yep" : "Nope";</pre>
+```js
+var elvisLives = Math.PI > 4 ? "Yep" : "Nope";
+```
 
-<p>On peut enchaîner plusieurs évaluations ternaires l'une à la suite de l'autre (cet opérateur se propage de la gauche vers la droite) :</p>
+On peut enchaîner plusieurs évaluations ternaires l'une à la suite de l'autre (cet opérateur se propage de la gauche vers la droite) :
 
-<pre class="brush: js">var premierControle = false,
+```js
+var premierControle = false,
     secondControle = false,
     acces = premierControle ? "Accès refusé" : secondControle ? "Accès refusé" : "Accès autorisé";
 
-console.log(acces); // "Accès autorisé"</pre>
+console.log(acces); // "Accès autorisé"
+```
 
-<p>Il est également possible d'utiliser cet opérateur pour effectuer l'une ou l'autre expression selon le cas de figure qui se présente :</p>
+Il est également possible d'utiliser cet opérateur pour effectuer l'une ou l'autre expression selon le cas de figure qui se présente :
 
-<pre class="brush: js">var stop = false, age = 16;
+```js
+var stop = false, age = 16;
 
-age &gt; 18 ? location.assign("continue.html") : stop = true;
-</pre>
+age > 18 ? location.assign("continue.html") : stop = true;
+```
 
-<p>en utilisant l'{{jsxref("Opérateurs/L_opérateur_virgule","opérateur virgule")}}, on peut même y placer plusieurs instructions (attention toutefois à la lisibilité et à se demander si un {{jsxref("Instructions/if...else","if...else")}} n'est pas plus approprié).</p>
+en utilisant l'{{jsxref("Opérateurs/L_opérateur_virgule","opérateur virgule")}}, on peut même y placer plusieurs instructions (attention toutefois à la lisibilité et à se demander si un {{jsxref("Instructions/if...else","if...else")}} n'est pas plus approprié).
 
-<pre class="brush: js">var stop = false, age = 23;
+```js
+var stop = false, age = 23;
 
-age &gt; 18 ? (
+age > 18 ? (
     console.log("OK, accès autorisé."),
     location.assign("continue.html")
 ) : (
     stop = true,
     console.log("Accès refusé !")
 );
-</pre>
+```
 
-<p>De la même façon, on peut effectuer plusieurs opérations, encadrées par des parenthèses, avant d'affecter le résultat de l'opérateur à une variable. Conformément à l'opérateur virgule, ce sera <strong><em>la dernière valeur qui sera affectée</em></strong>. Ici aussi, attention à la lisibilité du code relativement à un <code>if...else</code>.</p>
+De la même façon, on peut effectuer plusieurs opérations, encadrées par des parenthèses, avant d'affecter le résultat de l'opérateur à une variable. Conformément à l'opérateur virgule, ce sera **_la dernière valeur qui sera affectée_**. Ici aussi, attention à la lisibilité du code relativement à un `if...else`.
 
-<pre class="brush: js">var age = 16;
+```js
+var age = 16;
 
-var url = age &gt; 18 ? (
+var url = age > 18 ? (
     console.log("Accès autorisé."),
     // console.log renvoie "undefined", mais cela importe peu car
     // ce n'est pas le dernier élément de l'expression
-    "continue.html" // la valeur à affecter si âge &gt; 18
+    "continue.html" // la valeur à affecter si âge > 18
 ) : (
     console.log("Accès refusé !"),
     // etc.
-    "stop.html" // la valeur à affecter si âge &lt;= 18
+    "stop.html" // la valeur à affecter si âge <= 18
 );
 
-location.assign(url); // "stop.html"</pre>
+location.assign(url); // "stop.html"
+```
 
-<h3 id="Utiliser_l'opérateur_ternaire_dans_la_valeur_de_retour">Utiliser l'opérateur ternaire dans la valeur de retour</h3>
+### Utiliser l'opérateur ternaire dans la valeur de retour
 
-<p>On peut utiliser l'opérateur ternaire (voire une imbrication de celui-ci) pour remplacer certaines formulations avec <code>if...else</code> où <code>return</code> est la seule instruction utilisée :</p>
+On peut utiliser l'opérateur ternaire (voire une imbrication de celui-ci) pour remplacer certaines formulations avec `if...else` où `return` est la seule instruction utilisée :
 
-<pre class="brush: js">var func1 = function( .. ) {
+```js
+var func1 = function( .. ) {
   if (condition1) { return valeur1 }
   else if (condition2) { return valeur2 }
   else if (condition3) { return valeur3 }
@@ -100,47 +108,23 @@ var func2 = function( .. ) {
        : condition2 ? valeur2
        : condition3 ? valeur3
        :              valeur4
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-conditional-operator', 'Conditional Operator')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-conditional-operator', 'Conditional Operator')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-11.12', 'The conditional operator')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1', '#sec-11.12', 'The conditional operator')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale, implémentée avec JavaScript 1.0.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | Statut                       | Commentaires                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-conditional-operator', 'Conditional Operator')}} | {{Spec2('ESDraft')}} |                                                       |
+| {{SpecName('ES6', '#sec-conditional-operator', 'Conditional Operator')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ES5.1', '#sec-11.12', 'The conditional operator')}}                 | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES1', '#sec-11.12', 'The conditional operator')}}                     | {{Spec2('ES1')}}         | Définition initiale, implémentée avec JavaScript 1.0. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.operators.conditional")}}</p>
+{{Compat("javascript.operators.conditional")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'instruction {{jsxref("Instructions/if...else","if...else")}}</li>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Optional_chaining">Le chaînage optionnel</a></li>
-</ul>
+- L'instruction {{jsxref("Instructions/if...else","if...else")}}
+- [Le chaînage optionnel](/fr/docs/Web/JavaScript/Reference/Operators/Optional_chaining)

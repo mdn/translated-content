@@ -11,57 +11,55 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/toSource
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/toSource
 ---
-<div>{{JSRef}}{{Non-standard_header}}</div>
+{{JSRef}}{{Non-standard_header}}
 
-<p>La méthode <strong><code>toSource()</code></strong> renvoie une chaine de caractères représentant le code source du tableau.</p>
+La méthode **`toSource()`** renvoie une chaine de caractères représentant le code source du tableau.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>arr</var>.toSource()</pre>
+    arr.toSource()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une chaîne de caractères qui représente le code source du tableau.</p>
+Une chaîne de caractères qui représente le code source du tableau.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code>toSource()</code> renvoie les valeurs suivantes :</p>
+La méthode `toSource()` renvoie les valeurs suivantes :
 
-<ul>
- <li>Pour l'objet {{jsxref("Array")}} natif, <code>toSource()</code> renvoie la chaîne de caractères suivante indiquant que le code source n'est pas disponible :
+- Pour l'objet {{jsxref("Array")}} natif, `toSource()` renvoie la chaîne de caractères suivante indiquant que le code source n'est pas disponible :
 
-  <pre class="brush: js">function Array() {
-    [native code]
-}
-</pre>
- </li>
- <li>Pour les instances d'{{jsxref("Array")}}, <code>toSource()</code> renvoie une chaîne représentant le code source.</li>
-</ul>
+  ```js
+    function Array() {
+        [native code]
+    }
+    ```
 
-<p>Cette méthode est habituellement appelée en interne par le moteur JavaScript et n'est pas utilisée explicitement dans du code. Il est cependant possible d'appeler <code>toSource()</code> lors du débogage pour examiner le contenu d'un tableau.</p>
+- Pour les instances d'{{jsxref("Array")}}, `toSource()` renvoie une chaîne représentant le code source.
 
-<h2 id="Exemples">Exemples</h2>
+Cette méthode est habituellement appelée en interne par le moteur JavaScript et n'est pas utilisée explicitement dans du code. Il est cependant possible d'appeler `toSource()` lors du débogage pour examiner le contenu d'un tableau.
 
-<h3 id="Examiner_le_code_source_d'un_tableau">Examiner le code source d'un tableau</h3>
+## Exemples
 
-<p>Pour examiner le code source d'un tableau :</p>
+### Examiner le code source d'un tableau
 
-<pre class="brush: js">var alpha = new Array("a", "b", "c");
+Pour examiner le code source d'un tableau :
+
+```js
+var alpha = new Array("a", "b", "c");
 alpha.toSource();
 // renvoie ["a", "b", "c"]
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Ne fait partie d'aucun standard. Implémenté dans JavaScript 1.3.</p>
+Ne fait partie d'aucun standard. Implémenté dans JavaScript 1.3.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Array.toSource")}}</p>
+{{Compat("javascript.builtins.Array.toSource")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Object.prototype.toSource()")}}</li>
- <li>{{jsxref("Array.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("Array.prototype.toString()")}}

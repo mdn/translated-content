@@ -10,91 +10,73 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/preventExtensions
 original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/preventExtensions
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode statique <code><strong>Reflect.preventExtensions()</strong></code> permet d'empêcher d'ajouter de nouvelles propriétés à un objet. Cette méthode est semblable à la méthode {{jsxref("Object.preventExtensions()")}} (modulo <a href="#diffs">quelques différences</a>).</p>
+La méthode statique **`Reflect.preventExtensions()`** permet d'empêcher d'ajouter de nouvelles propriétés à un objet. Cette méthode est semblable à la méthode {{jsxref("Object.preventExtensions()")}} (modulo [quelques différences](#diffs)).
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-preventextensions.html")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-preventextensions.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Reflect.preventExtensions(<em>cible</em>)
-</pre>
+    Reflect.preventExtensions(cible)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>cible</code></dt>
- <dd>L'objet cible dont on veut empêcher l'ajout d'autres propriétés.</dd>
-</dl>
+- `cible`
+  - : L'objet cible dont on veut empêcher l'ajout d'autres propriétés.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un {{jsxref("Boolean","booléen","",1)}} qui indique si l'interdiction a bien été mise en place sur l'objet cible.</p>
+Un {{jsxref("Boolean","booléen","",1)}} qui indique si l'interdiction a bien été mise en place sur l'objet cible.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>Une erreur {{jsxref("TypeError")}} si <code>cible</code> n'est pas un {{jsxref("Object")}}.</p>
+Une erreur {{jsxref("TypeError")}} si `cible` n'est pas un {{jsxref("Object")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code>Reflect.preventExtensions</code> permet d'empêcher l'ajout de nouvelles propriétés sur un objet. Cette méthode est semblable à {{jsxref("Object.preventExtensions()")}}.</p>
+La méthode `Reflect.preventExtensions` permet d'empêcher l'ajout de nouvelles propriétés sur un objet. Cette méthode est semblable à {{jsxref("Object.preventExtensions()")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_Reflect.preventExtensions()">Utiliser <code>Reflect.preventExtensions()</code></h3>
+### Utiliser `Reflect.preventExtensions()`
 
-<p>Voir aussi {{jsxref("Object.preventExtensions()")}}.</p>
+Voir aussi {{jsxref("Object.preventExtensions()")}}.
 
-<pre class="brush: js">// Par défaut les objets sont extensibles
+```js
+// Par défaut les objets sont extensibles
 var vide = {};
 Reflect.isExtensible(vide); // === true
 
 // ...mais cela peut être modifié
 Reflect.preventExtensions(vide);
 Reflect.isExtensible(vide); // === false
-</pre>
+```
 
-<h3 id="Différences_avec_Object.preventExtensions()">Différences avec <code>Object.preventExtensions()</code></h3>
+### Différences avec `Object.preventExtensions()`
 
-<p>Si le premier argument de cette méthode n'est pas un objet (autrement dit c'est une valeur primitive), cela provoquera une {{jsxref("TypeError")}}. {{jsxref("Object.preventExtensions()")}}, quant à elle, convertira l'argument passé en un objet.</p>
+Si le premier argument de cette méthode n'est pas un objet (autrement dit c'est une valeur primitive), cela provoquera une {{jsxref("TypeError")}}. {{jsxref("Object.preventExtensions()")}}, quant à elle, convertira l'argument passé en un objet.
 
-<pre class="brush: js">Reflect.preventExtensions(1);
+```js
+Reflect.preventExtensions(1);
 // TypeError: 1 is not an object
 
 Object.preventExtensions(1);
 // 1
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-reflect.preventextensions', 'Reflect.preventExtensions')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-reflect.preventextensions', 'Reflect.preventExtensions')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-reflect.preventextensions', 'Reflect.preventExtensions')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-reflect.preventextensions', 'Reflect.preventExtensions')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Reflect.preventExtensions")}}</p>
+{{Compat("javascript.builtins.Reflect.preventExtensions")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li>{{jsxref("Object.isExtensible()")}}</li>
-</ul>
+- {{jsxref("Reflect")}}
+- {{jsxref("Object.isExtensible()")}}

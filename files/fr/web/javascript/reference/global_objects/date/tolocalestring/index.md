@@ -12,47 +12,50 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/toLocaleString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>toLocaleString()</strong></code> renvoie une chaine de caractères représentant la date selon une locale. Les arguments <code>locales</code> et <code>options</code> permettent aux applications de définir le langage à utiliser pour les conventions de format et permettent de personnaliser le comportement de la fonction. Les anciennes implémentations ignorent ces arguments, la locale utilisée et le format de la chaine dépendent uniquement de l'implémentation.</p>
+La méthode **`toLocaleString()`** renvoie une chaine de caractères représentant la date selon une locale. Les arguments `locales` et `options` permettent aux applications de définir le langage à utiliser pour les conventions de format et permettent de personnaliser le comportement de la fonction. Les anciennes implémentations ignorent ces arguments, la locale utilisée et le format de la chaine dépendent uniquement de l'implémentation.
 
-<div>{{EmbedInteractiveExample("pages/js/date-tolocalestring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-tolocalestring.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>dateObj.toLocaleString([locales [, options]])</var></pre>
+    dateObj.toLocaleString([locales [, options]])
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Voir le tableau de <a href="#compat" title="#Compatibilit.C3.A9_des_navigateurs">compatibilité des navigateurs</a> afin de déterminer quels navigateurs respectent les arguments <code>locales</code> et <code>options</code> ainsi que l'exemple <a href="#check">Vérifier le support des arguments <code>locales</code> et <code>options</code></a> qui permet de détecter cette fonctionnalité.</p>
+Voir le tableau de [compatibilité des navigateurs](#compat "#Compatibilit.C3.A9_des_navigateurs") afin de déterminer quels navigateurs respectent les arguments `locales` et `options` ainsi que l'exemple [Vérifier le support des arguments `locales` et `options`](#check) qui permet de détecter cette fonctionnalité.
 
-<p>{{page('fr/docs/Web/JavaScript/Reference/Objets_globaux/DateTimeFormat','Paramètres')}}</p>
+{{page('fr/docs/Web/JavaScript/Reference/Objets_globaux/DateTimeFormat','Paramètres')}}
 
-<p>La valeur par défaut de chacun des composants de la date-heure vaut {{jsxref("undefined")}}, mais si les propriétés <code>weekday</code>, <code>year</code>, <code>month</code>, <code>day</code>, <code>hour</code>, <code>minute</code>, <code>second</code> sont toutes {{jsxref("undefined")}},  alors  <code>weekday</code>, <code>year</code>, <code>month</code>, <code>day</code>, <code>hour</code>, <code>minute</code> et <code>second</code> sont supposés être "numeric".</p>
+La valeur par défaut de chacun des composants de la date-heure vaut {{jsxref("undefined")}}, mais si les propriétés `weekday`, `year`, `month`, `day`, `hour`, `minute`, `second` sont toutes {{jsxref("undefined")}},  alors  `weekday`, `year`, `month`, `day`, `hour`, `minute` et `second` sont supposés être "numeric".
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une chaîne de caractères représentant la date indiquée selon des conventions de locales spécifiques.</p>
+Une chaîne de caractères représentant la date indiquée selon des conventions de locales spécifiques.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_toLocaleString()">Utiliser <code>toLocaleString()</code></h3>
+### Utiliser `toLocaleString()`
 
-<p>Voici un usage simple qui ne définit pas de locale : une chaine de caractères dans une locale et avec des options par défaut est renvoyée.</p>
+Voici un usage simple qui ne définit pas de locale : une chaine de caractères dans une locale et avec des options par défaut est renvoyée.
 
-<pre class="brush:js">var date = new Date(Date.UTC(2014, 11, 21, 3, 0, 0));
+```js
+var date = new Date(Date.UTC(2014, 11, 21, 3, 0, 0));
 
 // toLocaleString() sans argument, on utilise donc
 // les valeurs par défaut (de l'implémentation)
 // pour la locale, et le fuseau horaire
 date.toLocaleString();
-// → "21/12/2014 04:00:00" si exécuté dans une locale fr et le fuseau horaire CEST</pre>
+// → "21/12/2014 04:00:00" si exécuté dans une locale fr et le fuseau horaire CEST
+```
 
-<h3 id="Vérifier_le_support_des_arguments_locales_et_options">Vérifier le support des arguments <code>locales</code> et <code>options</code></h3>
+### Vérifier le support des arguments `locales` et `options`
 
-<p>Les arguments <code>locales</code> et <code>options</code> ne sont pas encore supportés par tous les navigateurs. Afin de vérifier si l'implementation utilisée les supporte, vous pouvez utiliser le pré-requis suivant : les locales incorrectes sont rejetées avec une exception {{jsxref("RangeError")}} :</p>
+Les arguments `locales` et `options` ne sont pas encore supportés par tous les navigateurs. Afin de vérifier si l'implementation utilisée les supporte, vous pouvez utiliser le pré-requis suivant : les locales incorrectes sont rejetées avec une exception {{jsxref("RangeError")}} :
 
-<pre class="brush: js">function toLocaleStringSupportsLocales() {
+```js
+function toLocaleStringSupportsLocales() {
     try {
         new Date().toLocaleString("i");
     } catch (e) {
@@ -60,13 +63,14 @@ date.toLocaleString();
     }
     return false;
 }
-</pre>
+```
 
-<h3 id="Utiliser_locales">Utiliser <code>locales</code></h3>
+### Utiliser `locales`
 
-<p>Cet exemple montre quelques variations dues aux formats de dates localisés. Afin d'obtenir le langage utilisé au sein de l'interface utilisateur de votre application, vérifiez de bien fournir ce langage (et éventuellement des locales de recours) en utilisant l'argument <code>locales</code> :</p>
+Cet exemple montre quelques variations dues aux formats de dates localisés. Afin d'obtenir le langage utilisé au sein de l'interface utilisateur de votre application, vérifiez de bien fournir ce langage (et éventuellement des locales de recours) en utilisant l'argument `locales` :
 
-<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+```js
+var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // les formats qui suivent se basent sur le
 // fuseau horaire CEST
@@ -97,13 +101,14 @@ console.log(date.toLocaleString("ja-JP-u-ca-japanese"));
 // il est possible de fournir un langage de recours (ici l'indonésien)
 console.log(date.toLocaleString(["ban", "id"]));
 // → "20/12/2012 04.00.00"
-</pre>
+```
 
-<h3 id="Utiliser_options">Utiliser <code>options</code></h3>
+### Utiliser `options`
 
-<p>Les résultats fournis par <code>toLocaleString()</code> peuvent être personnalisés grâce à l'argument <code>options</code> :</p>
+Les résultats fournis par `toLocaleString()` peuvent être personnalisés grâce à l'argument `options` :
 
-<pre class="brush: js">var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
+```js
+var date = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));
 
 // obtenir le jour de la semaine avec une date longue
 var options = {weekday: "long", year: "numeric", month: "long", day: "numeric"};
@@ -119,83 +124,45 @@ console.log(date.toLocaleString("en-US", options));
 // parfois, même les USA ont besoin d'avoir une heure sur 24h
 console.log(date.toLocaleString("en-US", {hour12: false}));
 // → "12/19/2012, 19:00:00"
-</pre>
+```
 
-<h3 id="Comparaison_des_dates_formatées_et_des_valeurs_statiques">Comparaison des dates formatées et des valeurs statiques</h3>
+### Comparaison des dates formatées et des valeurs statiques
 
-<p>La plupart du temps, le format renvoyé par <code>toLocaleString()</code> est cohérent. Toutefois, cela peut évoluer à l'avenir et n'est pas garanti pour l'ensemble des langues (de telles variations sont souhaitables et permises par la spécification). Ainsi, IE et Edge ajoutent des caractères de contrôle bidirectionnels autour des dates afin que le texte produit ait une directionalité cohérente avec le texte avec lequel elles seront concaténées.</p>
+La plupart du temps, le format renvoyé par `toLocaleString()` est cohérent. Toutefois, cela peut évoluer à l'avenir et n'est pas garanti pour l'ensemble des langues (de telles variations sont souhaitables et permises par la spécification). Ainsi, IE et Edge ajoutent des caractères de contrôle bidirectionnels autour des dates afin que le texte produit ait une directionalité cohérente avec le texte avec lequel elles seront concaténées.
 
-<p>Aussi, mieux vaut ne pas comparer un résultat fourni par <code>format()</code> avec une valeur statique :</p>
+Aussi, mieux vaut ne pas comparer un résultat fourni par `format()` avec une valeur statique :
 
-<pre class="brush: js; example-bad">"1.1.2019, 01:00:00" === new Date("2019-01-01T00:00:00.000000Z").toLocaleString();
+```js example-bad
+"1.1.2019, 01:00:00" === new Date("2019-01-01T00:00:00.000000Z").toLocaleString();
 // true pour Firefox et les autres
 // false pour IE et Edge
-</pre>
+```
 
-<div class="blockIndicator note">
-<p><strong>Note :</strong> Voir aussi ce fil <a href="https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results">StackOverflow</a> pour plus de détails et d'exemples.</p>
-</div>
+> **Note :** Voir aussi ce fil [StackOverflow](https://stackoverflow.com/questions/25574963/ies-tolocalestring-has-strange-characters-in-results) pour plus de détails et d'exemples.
 
-<h2 id="Performance">Performance</h2>
+## Performance
 
-<p>Quand vous formatez d'importants volumes de dates, il est préférable de créer un objet {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}} et d'utiliser la fonction fournie via la propriété {{jsxref("DateTimeFormat.prototype.format", "format")}}.</p>
+Quand vous formatez d'importants volumes de dates, il est préférable de créer un objet {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}} et d'utiliser la fonction fournie via la propriété {{jsxref("DateTimeFormat.prototype.format", "format")}}.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.5', 'Date.prototype.toLocaleString')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.tolocalestring', 'Date.prototype.toLocaleString')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.tolocalestring', 'Date.prototype.toLocaleString')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int 1.0', '#sec-13.3.1', 'Date.prototype.toLocaleString')}}</td>
-   <td>{{Spec2('ES Int 1.0')}}</td>
-   <td>Définition des arguments <code>locales</code> et <code>options</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int 2.0', '#sec-13.3.1', 'Date.prototype.toLocaleString')}}</td>
-   <td>{{Spec2('ES Int 2.0')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#sec-Date.prototype.toLocaleString', 'Date.prototype.toLocaleString')}}</td>
-   <td>{{Spec2('ES Int Draft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                        | État                             | Commentaires                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                                             | {{Spec2('ES1')}}             | Définition initiale. Implémentée avec JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.9.5.5', 'Date.prototype.toLocaleString')}}                                     | {{Spec2('ES5.1')}}         |                                                       |
+| {{SpecName('ES6', '#sec-date.prototype.tolocalestring', 'Date.prototype.toLocaleString')}}             | {{Spec2('ES6')}}             |                                                       |
+| {{SpecName('ESDraft', '#sec-date.prototype.tolocalestring', 'Date.prototype.toLocaleString')}}         | {{Spec2('ESDraft')}}     |                                                       |
+| {{SpecName('ES Int 1.0', '#sec-13.3.1', 'Date.prototype.toLocaleString')}}                                 | {{Spec2('ES Int 1.0')}} | Définition des arguments `locales` et `options`.      |
+| {{SpecName('ES Int 2.0', '#sec-13.3.1', 'Date.prototype.toLocaleString')}}                                 | {{Spec2('ES Int 2.0')}} |                                                       |
+| {{SpecName('ES Int Draft', '#sec-Date.prototype.toLocaleString', 'Date.prototype.toLocaleString')}} | {{Spec2('ES Int Draft')}} |                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Date.toLocaleString")}}</p>
+{{Compat("javascript.builtins.Date.toLocaleString")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}</li>
- <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
- <li>{{jsxref("Date.prototype.toLocaleTimeString()")}}</li>
- <li>{{jsxref("Date.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxref("Date.prototype.toLocaleDateString()")}}
+- {{jsxref("Date.prototype.toLocaleTimeString()")}}
+- {{jsxref("Date.prototype.toString()")}}

@@ -10,45 +10,43 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/defineSetter
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<div class="warning">
-<p><strong>Attention :</strong> Cette fonctionnalité est dépréciée et il est préférable d'utiliser l'API {{jsxref("Object.defineProperty()")}} et <a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Initialisateur_objet">la syntaxe d'initialisation d'objets</a>. Toutefois, <code>__defineGetter__</code> est largement utilisée sur le Web et est implémentée. Il est donc peu probable que les navigateurs retirent cette méthode.</p>
-</div>
+> **Attention :** Cette fonctionnalité est dépréciée et il est préférable d'utiliser l'API {{jsxref("Object.defineProperty()")}} et [la syntaxe d'initialisation d'objets](/fr/docs/Web/JavaScript/Reference/Opérateurs/Initialisateur_objet). Toutefois, `__defineGetter__` est largement utilisée sur le Web et est implémentée. Il est donc peu probable que les navigateurs retirent cette méthode.
 
-<p>La méthode <code><strong>__defineSetter__</strong></code> permet de lier une propriété d'un objet à une fonction qui sera exécutée pour toute tentative de définition/changement de cette propriété.</p>
+La méthode **`__defineSetter__`** permet de lier une propriété d'un objet à une fonction qui sera exécutée pour toute tentative de définition/changement de cette propriété.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>obj</var>.__defineSetter__(<var>prop</var>, <var>fun</var>)</pre>
+    obj.__defineSetter__(prop, fun)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>prop</code></dt>
- <dd>Une chaîne de caractères qui contient le nom de la propriété qu'on souhaite lier à la fonction.</dd>
- <dt><code>fun</code></dt>
- <dd>Une fonction à appeler pour chaque modification de la propriété. Cette fonction prend la forme suivante :
- <pre class="brush: js">function(<var>val</var>) { . . . }</pre>
+- `prop`
+  - : Une chaîne de caractères qui contient le nom de la propriété qu'on souhaite lier à la fonction.
+- `fun`
 
- <dl>
-  <dt><code>val</code></dt>
-  <dd>Un alias pour la variable contenant la nouvelle valeur qu'on souhaite affecter à <code>prop</code>.</dd>
- </dl>
- </dd>
-</dl>
+  - : Une fonction à appeler pour chaque modification de la propriété. Cette fonction prend la forme suivante :
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+    ```js
+        function(val) { . . . }
+        ```
 
-<p>{{jsxref("undefined")}}.</p>
+    - `val`
+      - : Un alias pour la variable contenant la nouvelle valeur qu'on souhaite affecter à `prop`.
 
-<h2 id="Description">Description</h2>
+### Valeur de retour
 
-<p>La méthode <code>__defineSetter__</code> permet de définir un {{jsxref("Opérateurs/L_opérateur_set", "mutateur", "", 1)}} sur un objet pré-existant.</p>
+{{jsxref("undefined")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Description
 
-<pre class="brush: js">// Méthode non-standard et dépréciée
+La méthode `__defineSetter__` permet de définir un {{jsxref("Opérateurs/L_opérateur_set", "mutateur", "", 1)}} sur un objet pré-existant.
+
+## Exemples
+
+```js
+// Méthode non-standard et dépréciée
 
 var o = {};
 o.__defineSetter__('valeur', function(val) { this.uneAutreValeur = val; });
@@ -75,38 +73,42 @@ Object.defineProperty(o, 'valeur', {
 o.valeur = 5;
 console.log(o.valeur); // undefined
 console.log(o.uneAutreValeur); // 5
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
 <table class="spectable standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.prototype.__defineSetter__', 'Object.prototype.__defineSetter__()')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Incluse dans l'annexe normative pour les fonctionnalités historiques liées aux navigateurs web (la spécification codifie ce qui est déjà présent dans les différentes implémentations).</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">État</th>
+      <th scope="col">Commentaires</th>
+    </tr>
+    <tr>
+      <td>
+        {{SpecName('ESDraft', '#sec-object.prototype.__defineSetter__', 'Object.prototype.__defineSetter__()')}}
+      </td>
+      <td>{{Spec2('ESDraft')}}</td>
+      <td>
+        Incluse dans l'annexe normative pour les fonctionnalités historiques
+        liées aux navigateurs web (la spécification codifie ce qui est déjà
+        présent dans les différentes implémentations).
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Object.defineSetter")}}</p>
+{{Compat("javascript.builtins.Object.defineSetter")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Object.prototype.defineGetter","Object.prototype.__defineGetter__()")}}</li>
- <li>L'opérateur {{jsxref("Opérateurs/L_opérateur_set", "set")}}</li>
- <li>{{jsxref("Object.defineProperty()")}}</li>
- <li>{{jsxref("Object.prototype.lookupGetter","Object.prototype.__lookupGetter__()")}}</li>
- <li>{{jsxref("Object.prototype.lookupSetter","Object.prototype.__lookupSetter__()")}}</li>
- <li><a href="/fr/docs/Web/JavaScript/Guide/Utiliser_les_objets#D.C3.A9finir_des_getters_et_setters">Guide JavaScript : Définir des getters et setters</a></li>
- <li><a href="https://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/">[Billet de blog] Deprecation of __defineGetter__ and __defineSetter__</a> (en anglais)</li>
- <li>{{bug(647423)}}</li>
-</ul>
+- {{jsxref("Object.prototype.defineGetter","Object.prototype.__defineGetter__()")}}
+- L'opérateur {{jsxref("Opérateurs/L_opérateur_set", "set")}}
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Object.prototype.lookupGetter","Object.prototype.__lookupGetter__()")}}
+- {{jsxref("Object.prototype.lookupSetter","Object.prototype.__lookupSetter__()")}}
+- [Guide JavaScript : Définir des getters et setters](/fr/docs/Web/JavaScript/Guide/Utiliser_les_objets#D.C3.A9finir_des_getters_et_setters)
+- [\[Billet de blog\] Deprecation of \_\_defineGetter\_\_ and \_\_defineSetter\_\_](https://whereswalden.com/2010/04/16/more-spidermonkey-changes-ancient-esoteric-very-rarely-used-syntax-for-creating-getters-and-setters-is-being-removed/) (en anglais)
+- {{bug(647423)}}

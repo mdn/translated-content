@@ -11,29 +11,30 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/minimize
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/minimize
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>Intl.Locale.prototype.minimize()</code></strong> tente de retirer les informations qui auraient pu être ajoutée à une locale lors d'un appel à {{jsxref("Locale/maximize", "Locale.maximize()")}}.</p>
+La méthode **`Intl.Locale.prototype.minimize()`** tente de retirer les informations qui auraient pu être ajoutée à une locale lors d'un appel à {{jsxref("Locale/maximize", "Locale.maximize()")}}.
 
-<p>{{EmbedInteractiveExample("pages/js/intl-locale-prototype-minimize.html")}}</p>
+{{EmbedInteractiveExample("pages/js/intl-locale-prototype-minimize.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><code><em>locale</em>.minimize()</code></pre>
+    locale.minimize()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une instance {{jsxref("Locale", "Locale")}} dont la propriété <code>baseName</code> renvoie le résultat de l'exécution de <a href="https://www.unicode.org/reports/tr35/#Likely_Subtags">l'algorithme de suppression des composantes probables</a> sur <code><em>locale.baseName</em></code>. </p>
+Une instance {{jsxref("Locale", "Locale")}} dont la propriété `baseName` renvoie le résultat de l'exécution de [l'algorithme de suppression des composantes probables](https://www.unicode.org/reports/tr35/#Likely_Subtags) sur `locale.baseName`.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Cette méthode effectue l'opération inverse de {{jsxref("Locale/maximize", "maximize()")}}, en retirant les fragments de langue/script ou de région qui sont superflus. Ainsi, <code>"en-Latn"</code> pourra être minimisé en <code>"en"</code> car l'anglais s'écrit uniquement à l'aide de l'alphabet latin.</p>
+Cette méthode effectue l'opération inverse de {{jsxref("Locale/maximize", "maximize()")}}, en retirant les fragments de langue/script ou de région qui sont superflus. Ainsi, `"en-Latn"` pourra être minimisé en `"en"` car l'anglais s'écrit uniquement à l'aide de l'alphabet latin.
 
-<p><code>minimize()</code> ne modifie pas les éventuelles extensions décrites dans la chaîne de locale (après le <code>"-u"</code>) ou via l'objet de configuration (elle ne modifie donc pas les valeurs de {{jsxref("Locale/hourCycle", "Locale.hourCycle")}}, {{jsxref("Locale/calendar", "Locale.calendar")}} et {{jsxref("Locale/numeric", "Locale.numeric")}}).</p>
+`minimize()` ne modifie pas les éventuelles extensions décrites dans la chaîne de locale (après le `"-u"`) ou via l'objet de configuration (elle ne modifie donc pas les valeurs de {{jsxref("Locale/hourCycle", "Locale.hourCycle")}}, {{jsxref("Locale/calendar", "Locale.calendar")}} et {{jsxref("Locale/numeric", "Locale.numeric")}}).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">let maLocale = new Intl.Locale("fr-Latn-FR", {hourCycle: "h24", calendar: "gregory"});
+```js
+let maLocale = new Intl.Locale("fr-Latn-FR", {hourCycle: "h24", calendar: "gregory"});
 console.log(maLocale.baseName); // Affiche "fr-Latn-FR"
 console.log(maLocale.toString()); // Affiche "fr-Latn-FR-u-ca-gregory-hc-h24"
 let maLocMinimized = maLocale.minimize();
@@ -44,34 +45,20 @@ console.log(maLocMinimized.baseName);
 
 console.log(maLocMinimized.toString());
 // Affiche "fr-u-ca-gregory-hc-h24". On voit ici que les extensions
-// (décrites après "-u") restent inchangées.</pre>
+// (décrites après "-u") restent inchangées.
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.minimize">Proposition pour <code>Intl.Locale.prototype.minimize()</code></a></td>
-   <td></td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                          | État | Commentaires |
+| -------------------------------------------------------------------------------------------------------------------------------------- | ---- | ------------ |
+| [Proposition pour `Intl.Locale.prototype.minimize()`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.minimize) |      |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Intl.Locale.minimize")}}</p>
+{{Compat("javascript.builtins.Intl.Locale.minimize")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Locale", "Intl.Locale")}}</li>
- <li>{{jsxref("Locale/baseName", "Intl.Locale.baseName")}}</li>
-</ul>
+- {{jsxref("Locale", "Intl.Locale")}}
+- {{jsxref("Locale/baseName", "Intl.Locale.baseName")}}

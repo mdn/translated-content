@@ -11,74 +11,48 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toGMTString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/toGMTString
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p>La méthode <code><strong>toGMTString()</strong></code> convertit une date en une chaîne de caractères, en utilisant les conventions Internet pour GMT. Le format exact de la valeur renvoyée par <code>toGMTString()</code> varie en fonction de la plateforme et du navigateur web. En général, le texte produit est formaté pour être lisible par un humain.</p>
+La méthode **`toGMTString()`** convertit une date en une chaîne de caractères, en utilisant les conventions Internet pour GMT. Le format exact de la valeur renvoyée par `toGMTString()` varie en fonction de la plateforme et du navigateur web. En général, le texte produit est formaté pour être lisible par un humain.
 
-<div class="note">
-<p><strong>Note :</strong> <code>toGMTString()</code> est obsolète et ne doit plus être utilisé. Il existe encore uniquementpour des questions de compatibilité. La méthode {{jsxref("Date.prototype.toUTCString", "toUTCString()")}} doit être utilisée à la place.</p>
-</div>
+> **Note :** `toGMTString()` est obsolète et ne doit plus être utilisé. Il existe encore uniquementpour des questions de compatibilité. La méthode {{jsxref("Date.prototype.toUTCString", "toUTCString()")}} doit être utilisée à la place.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>dateObj</var>.toGMTString()</pre>
+    dateObj.toGMTString()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une chaîne de caractères représentant la date indiquée selon la convention internet pour GMT (<em>Greenwich Mean Time</em>).</p>
+Une chaîne de caractères représentant la date indiquée selon la convention internet pour GMT (_Greenwich Mean Time_).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_toGMTString()">Utiliser <code>toGMTString()</code></h3>
+### Utiliser `toGMTString()`
 
-<p>Dans cet exemple, la méthode <code>toGMTString()</code> convertit la date vers GMT (UTC) en utilisant la différence avec le fuseau horaire du système d'exploitation. Elle renvoie une chaîne de caractères similaire à celle de l'exemple. La forme exacte de cette chaîne de caractères dépend de la plateforme.</p>
+Dans cet exemple, la méthode `toGMTString()` convertit la date vers GMT (UTC) en utilisant la différence avec le fuseau horaire du système d'exploitation. Elle renvoie une chaîne de caractères similaire à celle de l'exemple. La forme exacte de cette chaîne de caractères dépend de la plateforme.
 
-<pre class="brush: js">var aujourdhui = new Date();
+```js
+var aujourdhui = new Date();
 var str = aujourdhui.toGMTString();  // Obsolète ! Utilisez toUTCString()
 
 console.log(str);               // Mon, 18 Dec 1995 17:28:35 GMT
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale et déjà déclarée comme dépréciée. Implémentée avec JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-B.2.6', 'Date.prototype.toGMTString')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Définie dans l'annexe informative sur la compatibilité.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.togmtstring', 'Date.prototype.toGMTString')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Définie dans l'annexe normative sur les fonctionnalités additionnelles des navigateurs web.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.togmtstring', 'Date.prototype.toGMTString')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Définie dans l'annexe normative sur les fonctionnalités additionnelles des navigateurs web.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | État                         | Commentaires                                                                                |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                             | {{Spec2('ES1')}}         | Définition initiale et déjà déclarée comme dépréciée. Implémentée avec JavaScript 1.0.      |
+| {{SpecName('ES5.1', '#sec-B.2.6', 'Date.prototype.toGMTString')}}                             | {{Spec2('ES5.1')}}     | Définie dans l'annexe informative sur la compatibilité.                                     |
+| {{SpecName('ES6', '#sec-date.prototype.togmtstring', 'Date.prototype.toGMTString')}}     | {{Spec2('ES6')}}         | Définie dans l'annexe normative sur les fonctionnalités additionnelles des navigateurs web. |
+| {{SpecName('ESDraft', '#sec-date.prototype.togmtstring', 'Date.prototype.toGMTString')}} | {{Spec2('ESDraft')}} | Définie dans l'annexe normative sur les fonctionnalités additionnelles des navigateurs web. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Date.toGMTString")}}</p>
+{{Compat("javascript.builtins.Date.toGMTString")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
- <li>{{jsxref("Date.prototype.toTimeString()")}}</li>
- <li>{{jsxref("Date.prototype.toUTCString()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.toLocaleDateString()")}}
+- {{jsxref("Date.prototype.toTimeString()")}}
+- {{jsxref("Date.prototype.toUTCString()")}}

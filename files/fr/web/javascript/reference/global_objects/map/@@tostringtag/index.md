@@ -11,44 +11,29 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La propriété <strong><code>Map[@@toStringTag]</code></strong> vaut "Map" initialement.</p>
+La propriété **`Map[@@toStringTag]`** vaut "Map" initialement.
 
-<div>{{EmbedInteractiveExample("pages/js/map-prototype-@@tostringtag.html")}}</div>
+{{EmbedInteractiveExample("pages/js/map-prototype-@@tostringtag.html")}}{{js_property_attributes(0,0,1)}}
 
-<div>{{js_property_attributes(0,0,1)}}</div>
+## Syntaxe
 
-<h2 id="Syntaxe">Syntaxe</h2>
+    Map[Symbol.toStringTag]
 
-<pre class="syntaxbox">Map[Symbol.toStringTag]</pre>
+## Exemple
 
-<h2 id="Exemple">Exemple</h2>
+```js
+Object.prototype.toString.call(new Map()) // "[object Map]"
+```
 
-<pre class="brush:js">Object.prototype.toString.call(new Map()) // "[object Map]"</pre>
+## Spécifications
 
-<h2 id="Spécifications">Spécifications</h2>
+| Spécification                                                                                                            | État                         | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-map.prototype-@@tostringtag', 'Map.prototype[@@toStringTag]')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-map.prototype-@@tostringtag', 'Map.prototype[@@toStringTag]')}} | {{Spec2('ESDraft')}} |                      |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-map.prototype-@@tostringtag', 'Map.prototype[@@toStringTag]')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-map.prototype-@@tostringtag', 'Map.prototype[@@toStringTag]')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+## Compatibilité des navigateurs
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<p>{{Compat("javascript.builtins.Map.@@toStringTag")}}</p>
+{{Compat("javascript.builtins.Map.@@toStringTag")}}

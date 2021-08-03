@@ -11,69 +11,63 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/defineProperties
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>Object.defineProperties()</strong></code> permet de définir ou de modifier les propriétés d'un objet directement sur celui-ci. La valeur renvoyée est l'objet modifié.</p>
+La méthode **`Object.defineProperties()`** permet de définir ou de modifier les propriétés d'un objet directement sur celui-ci. La valeur renvoyée est l'objet modifié.
 
-<div>{{EmbedInteractiveExample("pages/js/object-defineproperties.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-defineproperties.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Object.defineProperties(<var>obj</var>, <var>props</var>)</pre>
+    Object.defineProperties(obj, props)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>L'objet dont on souhaite modifier ou définir certaines propriétés.</dd>
- <dt><code>props</code></dt>
- <dd>Un objet dont les propriétés propres et énumérables sont des descripteurs de propriétés pour les propriétés à définir ou à modifier. Les descripteurs de propriétés peuvent avoir deux formes (voir {{jsxref("Object.defineProperty()")}} pour plus d'informations) : un descripteur de donnée ou un descripteur d'accesseur. Les descripteurs de donnée et d'accesseur peuvent avoir les clés suivantes :
- <dl>
-  <dt><code>configurable</code></dt>
-  <dd><code>true</code> si et seulement si le type de ce descripteur peut être modifié et si la propriété peut être supprimée de l'objet.<br>
-  <strong>Par défaut : <code>false</code>.</strong></dd>
-  <dt><code>enumerable</code></dt>
-  <dd><code>true</code> si et seulement si la propriété doit être listée lors des énumérations de propriétés de l'objet (quand on liste les propriétés pour une boucle par exemple).<br>
-  <strong>Par défaut : <code>false</code>.</strong></dd>
- </dl>
+- `obj`
+  - : L'objet dont on souhaite modifier ou définir certaines propriétés.
+- `props`
 
- <p>Un descripteur de donnée pourra avoir les clés suivantes :</p>
+  - : Un objet dont les propriétés propres et énumérables sont des descripteurs de propriétés pour les propriétés à définir ou à modifier. Les descripteurs de propriétés peuvent avoir deux formes (voir {{jsxref("Object.defineProperty()")}} pour plus d'informations) : un descripteur de donnée ou un descripteur d'accesseur. Les descripteurs de donnée et d'accesseur peuvent avoir les clés suivantes :
 
- <dl>
-  <dt><code>value</code></dt>
-  <dd>La valeur associée à la propriété. Cela peut être n'importe quelle valeur valide en JavaScript (un nombre, un objet, etc.).<br>
-  <strong>Par défaut : {{jsxref("undefined")}}.</strong></dd>
-  <dt><code>writable</code></dt>
-  <dd><code>true</code> si et seulement si la valeur associée à la propriété peut être modifiée par un {{jsxref("Opérateurs/Opérateurs_d_affectation", "opérateur d'affectation", "", 1)}}.<br>
-  <strong>Par défaut : <code>false</code>.</strong></dd>
- </dl>
+    - `configurable`
+      - : `true` si et seulement si le type de ce descripteur peut être modifié et si la propriété peut être supprimée de l'objet.
+        **Par défaut : `false`.**
+    - `enumerable`
+      - : `true` si et seulement si la propriété doit être listée lors des énumérations de propriétés de l'objet (quand on liste les propriétés pour une boucle par exemple).
+        **Par défaut : `false`.**
 
- <p>Un descripteur d'accesseur pourra avoir les clés suivantes :</p>
+    Un descripteur de donnée pourra avoir les clés suivantes :
 
- <dl>
-  <dt><code>get</code></dt>
-  <dd>Une fonction utilisée comme accesseur pour la propriété ou {{jsxref("undefined")}} s'il n'y a pas d'accesseur. La fonction renvoyée sera utilisée comme valeur pour la propriété.<br>
-  <strong>Par défaut : {{jsxref("undefined")}}.</strong></dd>
-  <dt><code>set</code></dt>
-  <dd>Une fonction utilisée comme mutateur pour la propriété ou {{jsxref("undefined")}} s'il n'y a pas de mutateur. La fonction qui sera utilisée ensuite recevra la nouvelle valeur à affecter à la propriété comme argument.<br>
-  <strong>Par défaut : {{jsxref("undefined")}}.</strong></dd>
- </dl>
+    - `value`
+      - : La valeur associée à la propriété. Cela peut être n'importe quelle valeur valide en JavaScript (un nombre, un objet, etc.).
+        **Par défaut : {{jsxref("undefined")}}.**
+    - `writable`
+      - : `true` si et seulement si la valeur associée à la propriété peut être modifiée par un {{jsxref("Opérateurs/Opérateurs_d_affectation", "opérateur d'affectation", "", 1)}}.
+        **Par défaut : `false`.**
 
- <p>Si un descripteur ne possède aucune clé parmi <code>value</code>, <code>writable</code>, <code>get</code> et <code>set</code>, il sera considéré comme un descripteur de donnée. Si un descripteur possède à la fois les clés <code>value</code>/<code>writable</code> et <code>get</code>/<code>set</code>, une exception sera levée.</p>
- </dd>
-</dl>
+    Un descripteur d'accesseur pourra avoir les clés suivantes :
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+    - `get`
+      - : Une fonction utilisée comme accesseur pour la propriété ou {{jsxref("undefined")}} s'il n'y a pas d'accesseur. La fonction renvoyée sera utilisée comme valeur pour la propriété.
+        **Par défaut : {{jsxref("undefined")}}.**
+    - `set`
+      - : Une fonction utilisée comme mutateur pour la propriété ou {{jsxref("undefined")}} s'il n'y a pas de mutateur. La fonction qui sera utilisée ensuite recevra la nouvelle valeur à affecter à la propriété comme argument.
+        **Par défaut : {{jsxref("undefined")}}.**
 
-<p>L'objet passé à la fonction, éventuellement modifié.</p>
+    Si un descripteur ne possède aucune clé parmi `value`, `writable`, `get` et `set`, il sera considéré comme un descripteur de donnée. Si un descripteur possède à la fois les clés `value`/`writable` et `get`/`set`, une exception sera levée.
 
-<h2 id="Description">Description</h2>
+### Valeur de retour
 
-<p><code>Object.defineProperties</code> permet principalement de définir toutes les propriétés  de l'objet <code>obj </code>correspondant aux propriétés énumérable de <code>props</code>.</p>
+L'objet passé à la fonction, éventuellement modifié.
 
-<h2 id="Exemples">Exemples</h2>
+## Description
 
-<pre class="brush: js">var obj = {};
+`Object.defineProperties` permet principalement de définir toutes les propriétés  de l'objet `obj `correspondant aux propriétés énumérable de `props`.
+
+## Exemples
+
+```js
+var obj = {};
 Object.defineProperties(obj, {
   "propriété1": {
     value: true,
@@ -84,13 +78,15 @@ Object.defineProperties(obj, {
     writable: false
   }
   // etc.
-});</pre>
+});
+```
 
-<h2 id="Prothèse_d'émulation_(polyfill)">Prothèse d'émulation (<em>polyfill</em>)</h2>
+## Prothèse d'émulation (_polyfill_)
 
-<p>Si on considère un environnement <em>pur</em> où tous les noms et toutes les propriétés font référence à leurs valeurs initiales, <code>Object.defineProperties</code> est quasiment équivalent à l'implémentation suivante en JavaScript (voir la note liée à <code>isCallable</code>) :</p>
+Si on considère un environnement _pur_ où tous les noms et toutes les propriétés font référence à leurs valeurs initiales, `Object.defineProperties` est quasiment équivalent à l'implémentation suivante en JavaScript (voir la note liée à `isCallable`) :
 
-<pre class="brush: js">function defineProperties(obj, properties) {
+```js
+function defineProperties(obj, properties) {
   function convertToDescriptor(desc) {
     function hasProperty(obj, prop) {
       return Object.prototype.hasOwnProperty.call(obj, prop);
@@ -119,18 +115,18 @@ Object.defineProperties(obj, {
     if ( hasProperty(desc, "get") ) {
       var g = desc.get;
 
-      if (!isCallable(g) &amp;&amp; typeof g !== "undefined")
+      if (!isCallable(g) && typeof g !== "undefined")
         throw new TypeError("bad get");
       d.get = g;
     }
     if ( hasProperty(desc, "set") ) {
       var s = desc.set;
-      if (!isCallable(s) &amp;&amp; typeof s !== "undefined")
+      if (!isCallable(s) && typeof s !== "undefined")
         throw new TypeError("bad set");
       d.set = s;
     }
 
-    if (("get" in d || "set" in d) &amp;&amp; ("value" in d || "writable" in d))
+    if (("get" in d || "set" in d) && ("value" in d || "writable" in d))
       throw new TypeError("identity-confused descriptor");
 
     return d;
@@ -144,52 +140,30 @@ Object.defineProperties(obj, {
   var keys = Object.keys(properties);
   var descs = [];
 
-  for (var i = 0; i &lt; keys.length; i++)
+  for (var i = 0; i < keys.length; i++)
     descs.push([keys[i], convertToDescriptor(properties[keys[i]])]);
 
-  for (var i = 0; i &lt; descs.length; i++)
+  for (var i = 0; i < descs.length; i++)
     Object.defineProperty(obj, descs[i][0], descs[i][1]);
 
   return obj;
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.7', 'Object.defineProperties')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Définition initiale. Implémentée par JavaScript 1.8.5</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.defineproperties', 'Object.defineProperties')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.defineproperties', 'Object.defineProperties')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | État                         | Commentaires                                          |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.2.3.7', 'Object.defineProperties')}}                     | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée par JavaScript 1.8.5 |
+| {{SpecName('ES6', '#sec-object.defineproperties', 'Object.defineProperties')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-object.defineproperties', 'Object.defineProperties')}} | {{Spec2('ESDraft')}} |                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Object.defineProperties")}}</p>
+{{Compat("javascript.builtins.Object.defineProperties")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Object.defineProperty()")}}</li>
- <li>{{jsxref("Object.keys()")}}</li>
- <li><a href="/fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement">Détention et énumération des propriétés</a></li>
-</ul>
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Object.keys()")}}
+- [Détention et énumération des propriétés](/fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement)

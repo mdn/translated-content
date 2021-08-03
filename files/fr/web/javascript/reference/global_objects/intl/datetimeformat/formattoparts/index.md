@@ -13,66 +13,65 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatToParts
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/DateTimeFormat/formatToParts
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>Intl.DateTimeFormat.prototype.formatToParts()</code></strong> permet de mettre en forme des chaînes de caractères avec des informations temporelles selon la locale utilisée.</p>
+La méthode **`Intl.DateTimeFormat.prototype.formatToParts()`** permet de mettre en forme des chaînes de caractères avec des informations temporelles selon la locale utilisée.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Intl.DateTimeFormat.prototype.formatToParts(date)</pre>
+    Intl.DateTimeFormat.prototype.formatToParts(date)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>date</code> {{optional_inline}}</dt>
- <dd>La date qu'on souhaite mettre en forme.</dd>
-</dl>
+- `date` {{optional_inline}}
+  - : La date qu'on souhaite mettre en forme.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un tableau ({{jsxref("Array")}}) d'objets qui contiennent les composants de la date mis en forme.</p>
+Un tableau ({{jsxref("Array")}}) d'objets qui contiennent les composants de la date mis en forme.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code>formatToParts()</code> est utile lorsqu'on souhaite mettre en forme des dates de façon personnalisée. Elle renvoie un tableau d'objets qui contiennent les fragments spécifiques à la locale, à partir desquels on peut construire des chaînes tout en conservant les parties spécifique à la locale. La structure de l'objet renvoyé par la méthode est semblable à celle-ci :</p>
+La méthode `formatToParts()` est utile lorsqu'on souhaite mettre en forme des dates de façon personnalisée. Elle renvoie un tableau d'objets qui contiennent les fragments spécifiques à la locale, à partir desquels on peut construire des chaînes tout en conservant les parties spécifique à la locale. La structure de l'objet renvoyé par la méthode est semblable à celle-ci :
 
-<pre class="brush: js">[
+```js
+[
   { type: "day", value: "17" },
   { type: "weekday", value "Monday" }
-]</pre>
+]
+```
 
-<p>Les types possibles sont :</p>
+Les types possibles sont :
 
-<dl>
- <dt><code>day</code></dt>
- <dd>La chaîne utilisée pour désigner le jour, par exemple <code>"17"</code>.</dd>
- <dt><code>dayPeriod</code></dt>
- <dd>La chaîne utilisée pour désigner le moment de la journée, par exemple <code>"AM"</code> (qui désigne la matinée, avant midi) ou <code>"PM"</code> (qui désigne l'après-midi).</dd>
- <dt><code>era</code></dt>
- <dd>La chaîne utilisée pour l'ère (par exemple <code>"BC"</code> ou <code>"AD"</code>).</dd>
- <dt><code>hour</code></dt>
- <dd>La chaîne utilisée pour l'heure (par exemple <code>"3"</code> or <code>"03"</code>).</dd>
- <dt><code>literal</code></dt>
- <dd>La chaîne utilisée pour séparée le jour de l'heure (par exemple <code>"</code> <code>:</code> <code>,</code> <code>/</code> <code>"</code>).</dd>
- <dt><code>minute</code></dt>
- <dd>La chaîne utilisée pour les minutes (par exemple <code>"00"</code>).</dd>
- <dt><code>month</code></dt>
- <dd>La chaîne utilisée pour le mois (par exemple <code>"12"</code>).</dd>
- <dt><code>second</code></dt>
- <dd>La chaîne utilisée pour les secondes (par exemple <code>"02"</code>).</dd>
- <dt><code>timeZoneName</code></dt>
- <dd>La chaîne utilisée pour désigner le fuseau horaire (par exemple <code>"UTC"</code>).</dd>
- <dt><code>weekday</code></dt>
- <dd>La chaîne de caractères utilisée pour le jour de la semaine, par exemple <code>"M"</code>, <code>"Monday"</code> ou <code>"Montag"</code>.</dd>
- <dt><code>year</code></dt>
- <dd>La chaîne utilisée pour désigner l'année (par exemple <code>"2012"</code> ou <code>"96"</code>).</dd>
-</dl>
+- `day`
+  - : La chaîne utilisée pour désigner le jour, par exemple `"17"`.
+- `dayPeriod`
+  - : La chaîne utilisée pour désigner le moment de la journée, par exemple `"AM"` (qui désigne la matinée, avant midi) ou `"PM"` (qui désigne l'après-midi).
+- `era`
+  - : La chaîne utilisée pour l'ère (par exemple `"BC"` ou `"AD"`).
+- `hour`
+  - : La chaîne utilisée pour l'heure (par exemple `"3"` or `"03"`).
+- `literal`
+  - : La chaîne utilisée pour séparée le jour de l'heure (par exemple `"` `:` `,` `/` `"`).
+- `minute`
+  - : La chaîne utilisée pour les minutes (par exemple `"00"`).
+- `month`
+  - : La chaîne utilisée pour le mois (par exemple `"12"`).
+- `second`
+  - : La chaîne utilisée pour les secondes (par exemple `"02"`).
+- `timeZoneName`
+  - : La chaîne utilisée pour désigner le fuseau horaire (par exemple `"UTC"`).
+- `weekday`
+  - : La chaîne de caractères utilisée pour le jour de la semaine, par exemple `"M"`, `"Monday"` ou `"Montag"`.
+- `year`
+  - : La chaîne utilisée pour désigner l'année (par exemple `"2012"` ou `"96"`).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p><code>DateTimeFormat</code> produit des chaînes localisées opaques qui ne peuvent pas être manipulées directement :</p>
+`DateTimeFormat` produit des chaînes localisées opaques qui ne peuvent pas être manipulées directement :
 
-<pre class="brush: js">var date = Date.UTC(2012, 11, 17, 3, 0, 42);
+```js
+var date = Date.UTC(2012, 11, 17, 3, 0, 42);
 
 var formatter = new Intl.DateTimeFormat("en-us", {
   weekday: 'long',
@@ -88,11 +87,12 @@ var formatter = new Intl.DateTimeFormat("en-us", {
 
 formatter.format(date);
 // "Monday, 12/17/2012, 3:00:42 AM"
-</pre>
+```
 
-<p>Cependant, pour de nombreuses interfaces utilisateur, on peut vouloir personnaliser la mise en forme de cette chaîne de caractères. La méthode <code>formatToParts</code> permet une mise en forme dans le souci de la locale en manipulant les différentes composantes :</p>
+Cependant, pour de nombreuses interfaces utilisateur, on peut vouloir personnaliser la mise en forme de cette chaîne de caractères. La méthode `formatToParts` permet une mise en forme dans le souci de la locale en manipulant les différentes composantes :
 
-<pre class="brush: js">formatter.formatToParts(date);
+```js
+formatter.formatToParts(date);
 
 // return value:
 [
@@ -112,54 +112,43 @@ formatter.format(date);
   { type: 'literal', value: ' '      },
   { type: 'dayPeriod', value: 'AM'     }
 ]
-</pre>
+```
 
-<p>L'information étant décomposée, on peut alors la mettre en forme et la recomposée de façon adaptée :</p>
+L'information étant décomposée, on peut alors la mettre en forme et la recomposée de façon adaptée :
 
-<pre class="brush: js">var dateString = formatter.formatToParts(date).map(({type, value}) =&gt; {
+```js
+var dateString = formatter.formatToParts(date).map(({type, value}) => {
   switch (type) {
-    case 'dayPeriod': return `&lt;strong&gt;${value}&lt;/strong&gt;`;
+    case 'dayPeriod': return `<strong>${value}</strong>`;
     default : return value;
   }
-}).reduce((string, part) =&gt; string + part);
+}).reduce((string, part) => string + part);
 
 console.log(formatter.format(date));
 // "Monday, 12/17/2012, 3:00:42 AM"
 
 console.log(dateString);
-// "Monday, 12/17/2012, 3:00:42 &lt;strong&gt;AM&lt;/strong&gt;"</pre>
+// "Monday, 12/17/2012, 3:00:42 <strong>AM</strong>"
+```
 
-<h2 id="Prothèse_démulation_polyfill">Prothèse d'émulation (<em>polyfill</em>)</h2>
+## Prothèse d'émulation (_polyfill_)
 
-<p>Une prothèse de cette fonctionnalité est disponible sur le dépôt décrivant <a href="https://github.com/zbraniecki/proposal-intl-formatToParts">la proposition de fonctionnalité</a>.</p>
+Une prothèse de cette fonctionnalité est disponible sur le dépôt décrivant [la proposition de fonctionnalité](https://github.com/zbraniecki/proposal-intl-formatToParts).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#sec-Intl.DateTimeFormat.prototype.formatToParts', 'Intl.DateTimeFormat.prototype.formatToParts')}}</td>
-   <td>{{Spec2('ES Int Draft')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                                            | État                             | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName('ES Int Draft', '#sec-Intl.DateTimeFormat.prototype.formatToParts', 'Intl.DateTimeFormat.prototype.formatToParts')}} | {{Spec2('ES Int Draft')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Intl.DateTimeFormat.formatToParts")}}</p>
+{{Compat("javascript.builtins.Intl.DateTimeFormat.formatToParts")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}</li>
- <li>{{jsxref("DateTimeFormat.format", "Intl.DateTimeFormat.prototype.format")}}</li>
- <li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
- <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
- <li>{{jsxref("Date.prototype.toLocaleTimeString()")}}</li>
-</ul>
+- {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
+- {{jsxref("DateTimeFormat.format", "Intl.DateTimeFormat.prototype.format")}}
+- {{jsxref("Date.prototype.toLocaleString()")}}
+- {{jsxref("Date.prototype.toLocaleDateString()")}}
+- {{jsxref("Date.prototype.toLocaleTimeString()")}}

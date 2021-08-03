@@ -9,70 +9,62 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/InternalError
 original_slug: Web/JavaScript/Reference/Objets_globaux/InternalError
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p>L'objet <strong><code>InternalError</code></strong> indique qu'une erreur liée au moteur JavaScript s'est produite. Par exemple <strong>"InternalError </strong>: Niveau de récursion trop important".</p>
+L'objet **`InternalError`** indique qu'une erreur liée au moteur JavaScript s'est produite. Par exemple **"InternalError** : Niveau de récursion trop important".
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">new InternalError([<var>message</var>[, <var>fileName</var>[, <var>lineNumber</var>]]])</pre>
+    new InternalError([message[, fileName[, lineNumber]]])
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>message</code></dt>
- <dd>Paramètre optionnel. Une description de l'erreur compréhensible pour un être humain.</dd>
- <dt><code>fileName</code> {{Non-standard_inline}}</dt>
- <dd>Paramètre optionnel. Le nom du fichier contenant le code à l'origine de l'erreur.</dd>
- <dt><code>lineNumber</code> {{Non-standard_inline}}</dt>
- <dd>Paramètre optionnel. Le numéro de la ligne du code à l'origine de l'erreur.</dd>
-</dl>
+- `message`
+  - : Paramètre optionnel. Une description de l'erreur compréhensible pour un être humain.
+- `fileName` {{Non-standard_inline}}
+  - : Paramètre optionnel. Le nom du fichier contenant le code à l'origine de l'erreur.
+- `lineNumber` {{Non-standard_inline}}
+  - : Paramètre optionnel. Le numéro de la ligne du code à l'origine de l'erreur.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Une exception <code>InternalError</code> est levée à chaque fois qu'il se produit une erreur interne au moteur JavaScript.</p>
+Une exception `InternalError` est levée à chaque fois qu'il se produit une erreur interne au moteur JavaScript.
 
-<p>Le plus souvent, cette exception se produit lorsque quelque chose atteint un niveau trop élévé. Par exemple :</p>
+Le plus souvent, cette exception se produit lorsque quelque chose atteint un niveau trop élévé. Par exemple :
 
-<ul>
- <li>trop de cas dans une construction switch,</li>
- <li>trop de parenthèses au sein d'une expression rationnelle,</li>
- <li>un tableau littéral trop grand,</li>
- <li>trop de niveaux de récursion.</li>
-</ul>
+- trop de cas dans une construction switch,
+- trop de parenthèses au sein d'une expression rationnelle,
+- un tableau littéral trop grand,
+- trop de niveaux de récursion.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<dl>
- <dt>{{jsxref("InternalError.prototype")}}</dt>
- <dd>Permet l'ajout de nouvelles propriétés à un objet <code>InternalError</code>.</dd>
-</dl>
+- {{jsxref("InternalError.prototype")}}
+  - : Permet l'ajout de nouvelles propriétés à un objet `InternalError`.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p>L'objet global <code>InternalError</code> ne contient pas de méthode propre. En revanche, il hérite de certaines méthodes via sa chaîne de prototypes.</p>
+L'objet global `InternalError` ne contient pas de méthode propre. En revanche, il hérite de certaines méthodes via sa chaîne de prototypes.
 
-<h2 id="Instances_de_InternalError">Instances de <code>InternalError</code></h2>
+## Instances de `InternalError`
 
-<h3 id="Propriétés_2">Propriétés</h3>
+### Propriétés
 
-<div>{{page("/fr/docs/JavaScript/Reference/Objets_globaux/InternalError/prototype","Properties")}}</div>
+{{page("/fr/docs/JavaScript/Reference/Objets_globaux/InternalError/prototype","Properties")}}
 
-<h3 id="Méthodes_2">Méthodes</h3>
+### Méthodes
 
-<div>{{page("/fr/docs/JavaScript/Reference/Objets_globaux/InternalError/prototype","Methods")}}</div>
+{{page("/fr/docs/JavaScript/Reference/Objets_globaux/InternalError/prototype","Methods")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cet objet ne fait partie d'aucune spécification.</p>
+Cet objet ne fait partie d'aucune spécification.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.InternalError")}}</p>
+{{Compat("javascript.builtins.InternalError")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Error")}}</li>
- <li>{{jsxref("InternalError.prototype")}}</li>
-</ul>
+- {{jsxref("Error")}}
+- {{jsxref("InternalError.prototype")}}

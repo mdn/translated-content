@@ -10,74 +10,50 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/valueOf
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number/valueOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>valueOf()</strong></code> renvoie la valeur primitive correspondant à celle représentée par l'objet {{jsxref("Number")}}.</p>
+La méthode **`valueOf()`** renvoie la valeur primitive correspondant à celle représentée par l'objet {{jsxref("Number")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/number-valueof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-valueof.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>objetNumber</var>.valueOf()</pre>
+    objetNumber.valueOf()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un nombre qui représente la valeur primitive de l'objet {{jsxref("Number")}}.</p>
+Un nombre qui représente la valeur primitive de l'objet {{jsxref("Number")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Cette méthode est généralement utilisée de façon interne au moteur JavaScript et n'est pas utilisée de façon explicite dans du code JavaScript.</p>
+Cette méthode est généralement utilisée de façon interne au moteur JavaScript et n'est pas utilisée de façon explicite dans du code JavaScript.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_valueOf">Utiliser <code>valueOf</code></h3>
+### Utiliser `valueOf`
 
-<pre class="brush:js">var numObj = new Number(10);
+```js
+var numObj = new Number(10);
 console.log(typeof numObj); // object
 
 var num = numObj.valueOf();
 console.log(num);           // 10
 console.log(typeof num);    // number
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.7.4.4', 'Number.prototype.valueOf')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-number.prototype.valueof', 'Number.prototype.valueOf')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.prototype.valueof', 'Number.prototype.valueOf')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                         | Commentaires                                          |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                         | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.7.4.4', 'Number.prototype.valueOf')}}                         | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-number.prototype.valueof', 'Number.prototype.valueOf')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-number.prototype.valueof', 'Number.prototype.valueOf')}} | {{Spec2('ESDraft')}} |                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Number.valueOf")}}</p>
+{{Compat("javascript.builtins.Number.valueOf")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Number.prototype.toSource()")}}</li>
-</ul>
+- {{jsxref("Number.prototype.toSource()")}}

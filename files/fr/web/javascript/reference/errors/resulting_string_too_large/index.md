@@ -8,43 +8,42 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Resulting_string_too_large
 original_slug: Web/JavaScript/Reference/Erreurs/Resulting_string_too_large
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="syntaxbox">RangeError: argument out of range (Edge)
-RangeError: repeat count must be less than infinity and not overflow maximum string size (Firefox)
-RangeError: Invalid count value (Chrome)
-</pre>
+    RangeError: argument out of range (Edge)
+    RangeError: repeat count must be less than infinity and not overflow maximum string size (Firefox)
+    RangeError: Invalid count value (Chrome)
 
-<h2 id="Type_d'erreur">Type d'erreur</h2>
+## Type d'erreur
 
-<p>{{jsxref("RangeError")}}</p>
+{{jsxref("RangeError")}}
 
-<h2 id="Quel_est_le_problème">Quel est le problème ?</h2>
+## Quel est le problème ?
 
-<p>La méthode {{jsxref("String.prototype.repeat()")}}, qui permet de répéter une chaîne de caractères, a été utilisée avec un argument qui n'est pas compris entre 0 et {{jsxref("Infinity")}} (exclue) (ce qui correspond à l'intervalle [0, +∞))</p>
+La méthode {{jsxref("String.prototype.repeat()")}}, qui permet de répéter une chaîne de caractères, a été utilisée avec un argument qui n'est pas compris entre 0 et {{jsxref("Infinity")}} (exclue) (ce qui correspond à l'intervalle \[0, +∞))
 
-<p>La chaîne de caractères crée par cette méthode ne doit pas dépasser la taille maximale d'une chaîne. Cette taille varie selon le moteur JavaScript. Pour Firefox (SpiderMonkey), la taille maximale d'une chaîne de caractères vaut 2^28-1 (<code>0xFFFFFFF</code>).</p>
+La chaîne de caractères crée par cette méthode ne doit pas dépasser la taille maximale d'une chaîne. Cette taille varie selon le moteur JavaScript. Pour Firefox (SpiderMonkey), la taille maximale d'une chaîne de caractères vaut 2^28-1 (`0xFFFFFFF`).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Exemples_invalides">Exemples invalides</h3>
+### Exemples invalides
 
-<pre class="brush: js example-bad">'abc'.repeat(Infinity); // RangeError
+```js example-bad
+'abc'.repeat(Infinity); // RangeError
 'a'.repeat(2**28);      // RangeError
-</pre>
+```
 
-<h3 id="Exemples_valides">Exemples valides</h3>
+### Exemples valides
 
-<pre class="brush: js example-good">'abc'.repeat(0);    // ''
+```js example-good
+'abc'.repeat(0);    // ''
 'abc'.repeat(1);    // 'abc'
 'abc'.repeat(2);    // 'abcabc'
 'abc'.repeat(3.5);  // 'abcabcabc' (count will be converted to integer)
-</pre>
+```
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("String.prototype.repeat()")}}</li>
-</ul>
+- {{jsxref("String.prototype.repeat()")}}

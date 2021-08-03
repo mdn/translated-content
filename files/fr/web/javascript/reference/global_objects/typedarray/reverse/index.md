@@ -12,56 +12,40 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/reverse
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/reverse
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>reverse()</strong></code> inverse les éléments d'un tableau. Le premier élément du tableau typé devient le dernier, le dernier élément devient le premier et ainsi de suite. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.reverse()")}}<em>.</em> Dans le reste de cet article <em>TypedArray</em> correspond à un des <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray">types de tableaux typés</a>.</p>
+La méthode **`reverse()`** inverse les éléments d'un tableau. Le premier élément du tableau typé devient le dernier, le dernier élément devient le premier et ainsi de suite. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.reverse()")}}_._ Dans le reste de cet article _TypedArray_ correspond à un des [types de tableaux typés](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-reverse.html")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-reverse.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>typedarray</var>.reverse();</pre>
+    typedarray.reverse();
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Le tableau typé dont les éléments ont été inversés.</p>
+Le tableau typé dont les éléments ont été inversés.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var uint8 = new Uint8Array([1, 2, 3]);
+```js
+var uint8 = new Uint8Array([1, 2, 3]);
 uint8.reverse();
 
 console.log(uint8); // Uint8Array [3, 2, 1]
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-%typedarray%.prototype.reverse', 'TypedArray.prototype.reverse')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.reverse', 'TypedArray.prototype.reverse')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                | État                         | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-%typedarray%.prototype.reverse', 'TypedArray.prototype.reverse')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.reverse', 'TypedArray.prototype.reverse')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.TypedArray.reverse")}}</p>
+{{Compat("javascript.builtins.TypedArray.reverse")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Array.prototype.reverse()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.reverse()")}}

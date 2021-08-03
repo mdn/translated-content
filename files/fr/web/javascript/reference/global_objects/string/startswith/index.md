@@ -12,73 +12,56 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/startsWith
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/startsWith
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>startsWith()</strong></code> renvoie un booléen indiquant si la chaine de caractères commence par la deuxième chaine de caractères fournie en argument.</p>
+La méthode **`startsWith()`** renvoie un booléen indiquant si la chaine de caractères commence par la deuxième chaine de caractères fournie en argument.
 
-<div>{{EmbedInteractiveExample("pages/js/string-startswith.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-startswith.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>str</var>.startsWith(<var>chaîneRecherchée</var> [, <var>position</var>]);</pre>
+    str.startsWith(chaîneRecherchée [, position]);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>chaîneRecherchée</code></dt>
- <dd>Les caractères à rechercher au début de la chaine de caractères.</dd>
- <dt><code>position</code> {{optional_inline}}</dt>
- <dd>La position à laquelle commencer la recherche de <code><var>chaîneRecherchée</var></code> ; par défaut 0.</dd>
-</dl>
+- `chaîneRecherchée`
+  - : Les caractères à rechercher au début de la chaine de caractères.
+- `position` {{optional_inline}}
+  - : La position à laquelle commencer la recherche de `chaîneRecherchée` ; par défaut 0.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p><code>true</code> si la chaîne de caractères commence avec la sous-chaîne en argument, <code>false</code> sinon</p>
+`true` si la chaîne de caractères commence avec la sous-chaîne en argument, `false` sinon
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Cette méthode permet de savoir si une chaine de caractères commence avec une autre chaine de caractères (comme pour les autres méthodes fonctionnant avec les chaînes de caractères, cette méthode est sensible à la casse).</p>
+Cette méthode permet de savoir si une chaine de caractères commence avec une autre chaine de caractères (comme pour les autres méthodes fonctionnant avec les chaînes de caractères, cette méthode est sensible à la casse).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush:js;">var str = "Être, ou ne pas être : telle est la question.";
+```js
+var str = "Être, ou ne pas être : telle est la question.";
 
 console.log(str.startsWith("Être"));         // true
 console.log(str.startsWith("pas être"));     // false
-console.log(str.startsWith("pas être", 12)); // true</pre>
+console.log(str.startsWith("pas être", 12)); // true
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-string.prototype.startswith', 'String.prototype.startsWith')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.startswith', 'String.prototype.startsWith')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | État                         | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-string.prototype.startswith', 'String.prototype.startsWith')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-string.prototype.startswith', 'String.prototype.startsWith')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.String.startsWith")}}</p>
+{{Compat("javascript.builtins.String.startsWith")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("String.prototype.endsWith()")}}</li>
- <li>{{jsxref("String.prototype.includes()")}}</li>
- <li>{{jsxref("String.prototype.indexOf()")}}</li>
- <li>{{jsxref("String.prototype.lastIndexOf()")}}</li>
- <li><a href="https://github.com/mathiasbynens/String.prototype.startsWith">Prothèse (<em>polyfill</em>) de Mathias Bynens</a></li>
-</ul>
+- {{jsxref("String.prototype.endsWith()")}}
+- {{jsxref("String.prototype.includes()")}}
+- {{jsxref("String.prototype.indexOf()")}}
+- {{jsxref("String.prototype.lastIndexOf()")}}
+- [Prothèse (_polyfill_) de Mathias Bynens](https://github.com/mathiasbynens/String.prototype.startsWith)

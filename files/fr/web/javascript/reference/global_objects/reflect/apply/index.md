@@ -10,47 +10,47 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/apply
 original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/apply
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode statique <code><strong>Reflect</strong></code><strong><code>.apply()</code></strong> permet d'appeler une fonction cible avec des arguments donnés.</p>
+La méthode statique **`Reflect`\*\***`.apply()`\*\* permet d'appeler une fonction cible avec des arguments donnés.
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-apply.html")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-apply.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Reflect.apply(cible, argumentThis, listeArguments)
-</pre>
+    Reflect.apply(cible, argumentThis, listeArguments)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>cible</code></dt>
- <dd>La fonction cible à appeler.</dd>
- <dt><code>argumentThis</code></dt>
- <dd>La valeur fournie pour <code>this</code> lors de l'appel à <em><code>cible</code></em>.</dd>
- <dt><code>listeArguments</code></dt>
- <dd>Un objet semblable à un tableau qui définit les arguments à passer à <em><code>cible</code></em>. S'il vaut {{jsxref("null")}} ou {{jsxref("undefined")}}, aucun argument ne sera passé.</dd>
-</dl>
+- `cible`
+  - : La fonction cible à appeler.
+- `argumentThis`
+  - : La valeur fournie pour `this` lors de l'appel à _`cible`_.
+- `listeArguments`
+  - : Un objet semblable à un tableau qui définit les arguments à passer à _`cible`_. S'il vaut {{jsxref("null")}} ou {{jsxref("undefined")}}, aucun argument ne sera passé.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Le résultat de l'appel de la fonction cible indiquée avec la valeur <code>this</code> et les arguments indiqués.</p>
+Le résultat de l'appel de la fonction cible indiquée avec la valeur `this` et les arguments indiqués.
 
-<h3 id="Exceptions_levées">Exceptions levées</h3>
+### Exceptions levées
 
-<p>Une exception {{jsxref("TypeError")}}, si <em>cible</em> ne peut pas être appelée.</p>
+Une exception {{jsxref("TypeError")}}, si _cible_ ne peut pas être appelée.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Avec ES5, on utilise généralement {{jsxref("Function.prototype.apply()")}} pour appeler une fonction avec une valeur <code>this</code> donnée et des arguments donnés.</p>
+Avec ES5, on utilise généralement {{jsxref("Function.prototype.apply()")}} pour appeler une fonction avec une valeur `this` donnée et des arguments donnés.
 
-<pre class="brush: js">Function.prototype.apply.call(Math.floor, undefined, [1.75]);</pre>
+```js
+Function.prototype.apply.call(Math.floor, undefined, [1.75]);
+```
 
-<p><code>Reflect.apply</code> permet de rendre cela plus concis et facile à comprendre.</p>
+`Reflect.apply` permet de rendre cela plus concis et facile à comprendre.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">Reflect.apply(Math.floor, undefined, [1.75]);
+```js
+Reflect.apply(Math.floor, undefined, [1.75]);
 // 1;
 
 Reflect.apply(String.fromCharCode, undefined, [104, 101, 108, 108, 111]);
@@ -61,37 +61,20 @@ Reflect.apply(RegExp.prototype.exec, /ab/, ["confabulation"]).index;
 
 Reflect.apply("".charAt, "poneys", [3]);
 // "e"
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-reflect.apply', 'Reflect.apply')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-reflect.apply', 'Reflect.apply')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                         | Commentaires         |
+| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-reflect.apply', 'Reflect.apply')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-reflect.apply', 'Reflect.apply')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Reflect.apply")}}</p>
+{{Compat("javascript.builtins.Reflect.apply")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li>{{jsxref("Function.prototype.apply()")}}</li>
-</ul>
+- {{jsxref("Reflect")}}
+- {{jsxref("Function.prototype.apply()")}}

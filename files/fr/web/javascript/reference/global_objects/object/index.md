@@ -9,173 +9,146 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Le constructeur <code><strong>Object</strong></code> crée un wrapper d'objet.</p>
+Le constructeur **`Object`** crée un wrapper d'objet.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">// Initialisateur d'objet ou littéral { [ <em>paireNomValeur1</em>[, <em>paireN<var>omValeur2</var></em>[,
- ...<em>paireNomValeurN</em>] ] ] }
+    // Initialisateur d'objet ou littéral { [ paireNomValeur1[, paireNomValeur2[,
+     ...paireNomValeurN] ] ] }
 
-// Appelé comme un constructeur
-new Object([<var>valeur</var>])</pre>
+    // Appelé comme un constructeur
+    new Object([valeur])
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>paireNomValeur1, paireNomValeur2, ... paireNomValeurN</code></dt>
- <dd>Paires de noms (chaînes) et de valeurs (toutes valeurs) où le nom est séparé de la valeur par deux points (:).</dd>
- <dt><code>valeur</code></dt>
- <dd>Toute valeur.</dd>
-</dl>
+- `paireNomValeur1, paireNomValeur2, ... paireNomValeurN`
+  - : Paires de noms (chaînes) et de valeurs (toutes valeurs) où le nom est séparé de la valeur par deux points (:).
+- `valeur`
+  - : Toute valeur.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Le constructeur <code>Object</code> crée un wrapper d'objet pour la valeur donnée. Si la valeur est {{jsxref("null")}} ou {{jsxref("undefined")}}, il créera et retournera un objet vide, sinon, il retournera un objet du Type qui correspond à la valeur donnée. Si la valeur est déjà un objet, le constructeur retournera cette valeur.</p>
+Le constructeur `Object` crée un wrapper d'objet pour la valeur donnée. Si la valeur est {{jsxref("null")}} ou {{jsxref("undefined")}}, il créera et retournera un objet vide, sinon, il retournera un objet du Type qui correspond à la valeur donnée. Si la valeur est déjà un objet, le constructeur retournera cette valeur.
 
-<p>Lorsqu'il n'est pas appelé dans un contexte constructeur, <code>Object</code> se comporte de façon identique à <code>new Object()</code>.</p>
+Lorsqu'il n'est pas appelé dans un contexte constructeur, `Object` se comporte de façon identique à `new Object()`.
 
-<p>Voir aussi <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Initialisateur_objet">initialisateur d'objet / syntaxe de littéral</a>.</p>
+Voir aussi [initialisateur d'objet / syntaxe de littéral](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Initialisateur_objet).
 
-<h2 id="Propriétés_du_constructeur_Object">Propriétés du constructeur <code>Object</code></h2>
+## Propriétés du constructeur `Object`
 
-<dl>
- <dt><code>Object.length</code></dt>
- <dd>A une valeur de 1.</dd>
- <dt>{{jsxref("Object.prototype")}}</dt>
- <dd>Permet l'ajout de propriétés à tous les objets de type Object.</dd>
-</dl>
+- `Object.length`
+  - : A une valeur de 1.
+- {{jsxref("Object.prototype")}}
+  - : Permet l'ajout de propriétés à tous les objets de type Object.
 
-<h2 id="Méthodes_du_constructeur_Object">Méthodes du constructeur <code>Object</code></h2>
+## Méthodes du constructeur `Object`
 
-<dl>
- <dt>{{jsxref("Object.assign()")}}</dt>
- <dd>Copie les valeurs de toutes propriétés propres énumérables depuis un ou plusieurs objets source dans un objet cible.</dd>
- <dt>{{jsxref("Object.create()")}}</dt>
- <dd>Crée un nouvel objet avec le prototype d'objet et les propriétés indiqués.</dd>
- <dt>{{jsxref("Object.defineProperty()")}}</dt>
- <dd>Ajoute à un objet la propriété nommée décrite par le descripteur donné.</dd>
- <dt>{{jsxref("Object.defineProperties()")}}</dt>
- <dd>Ajoute à un objet les propriétés nommées décrites par les descripteurs donnés.</dd>
- <dt>{{jsxref("Object.entries()")}}</dt>
- <dd>Retourne un tableau contenant les paires <code>[clé, valeur]</code> des propriétés énumérables propres (c'est-à-dire directement rattachées à l'objet) de l'objet donné et dont les clés sont des chaînes de caractères.</dd>
- <dt>{{jsxref("Object.freeze()")}}</dt>
- <dd>Gèle un objet : un autre code ne peut ni détruire ni changer aucune propriété.</dd>
- <dt>{{jsxref("Object.fromEntries()")}}</dt>
- <dd>Renvoie un nouvel objet à partir d'un itérable contenant des paires de clés-valeurs (l'opération duale de {{jsxref("Object.entries")}}).</dd>
- <dt>{{jsxref("Object.getOwnPropertyDescriptor()")}}</dt>
- <dd>Retourne un descripteur de propriété pour une propriété nommée d'un objet.</dd>
- <dt>{{jsxref("Object.getOwnPropertyDescriptors()")}}</dt>
- <dd>Retourne un objet contenant tous les descripteurs des propriétés propres d'un objet.</dd>
- <dt>{{jsxref("Object.getOwnPropertyNames()")}}</dt>
- <dd>Retourne un tableau contenant les noms de toutes les propriétés énumérables et non énumérables <strong>propres</strong> de l'objet donné.</dd>
- <dt>{{jsxref("Object.getOwnPropertySymbols()")}}</dt>
- <dd>Retourne un tableau de toutes les propriétés symboles trouvées directement dans un objet donné.</dd>
- <dt>{{jsxref("Object.getPrototypeOf()")}}</dt>
- <dd>Retourne le prototype de l'objet indiqué.</dd>
- <dt>{{jsxref("Object.is()")}}</dt>
- <dd>Détermine si deux valeurs sont la même valeur. Considère comme égales toutes les valeurs NaN (ce qui diffère à la fois de la Comparaison d'Égalité Abstraite et de la Comparaison d'Égalité Stricte).</dd>
- <dt>{{jsxref("Object.isExtensible()")}}</dt>
- <dd>Détermine si l'extension d'un objet est permise.</dd>
- <dt>{{jsxref("Object.isFrozen()")}}</dt>
- <dd>Détermine si un objet a été gelé.</dd>
- <dt>{{jsxref("Object.isSealed()")}}</dt>
- <dd>Détermine si un objet est scellé.</dd>
- <dt>{{jsxref("Object.keys()")}}</dt>
- <dd>Retourne un tableau contenant les noms de toutes les propriétés énumérables <strong>propres</strong> de l'objet donné.</dd>
- <dt>{{jsxref("Object.preventExtensions()")}}</dt>
- <dd>Empêche toute extension de l'objet.</dd>
- <dt>{{jsxref("Object.seal()")}}</dt>
- <dd>Empêche un autre code de détruire les propriétés d'un objet.</dd>
- <dt>{{jsxref("Object.setPrototypeOf()")}}</dt>
- <dd>Définit le prototype d'un objet (c-à-d, la propriété interne <code>[[Prototype]]</code>).</dd>
- <dt>{{jsxref("Object.values()")}}</dt>
- <dd>Retourne le tableau des valeurs énumérables propres de l'objet donné dont les clés sont des chaînes de caractères.</dd>
-</dl>
+- {{jsxref("Object.assign()")}}
+  - : Copie les valeurs de toutes propriétés propres énumérables depuis un ou plusieurs objets source dans un objet cible.
+- {{jsxref("Object.create()")}}
+  - : Crée un nouvel objet avec le prototype d'objet et les propriétés indiqués.
+- {{jsxref("Object.defineProperty()")}}
+  - : Ajoute à un objet la propriété nommée décrite par le descripteur donné.
+- {{jsxref("Object.defineProperties()")}}
+  - : Ajoute à un objet les propriétés nommées décrites par les descripteurs donnés.
+- {{jsxref("Object.entries()")}}
+  - : Retourne un tableau contenant les paires `[clé, valeur]` des propriétés énumérables propres (c'est-à-dire directement rattachées à l'objet) de l'objet donné et dont les clés sont des chaînes de caractères.
+- {{jsxref("Object.freeze()")}}
+  - : Gèle un objet : un autre code ne peut ni détruire ni changer aucune propriété.
+- {{jsxref("Object.fromEntries()")}}
+  - : Renvoie un nouvel objet à partir d'un itérable contenant des paires de clés-valeurs (l'opération duale de {{jsxref("Object.entries")}}).
+- {{jsxref("Object.getOwnPropertyDescriptor()")}}
+  - : Retourne un descripteur de propriété pour une propriété nommée d'un objet.
+- {{jsxref("Object.getOwnPropertyDescriptors()")}}
+  - : Retourne un objet contenant tous les descripteurs des propriétés propres d'un objet.
+- {{jsxref("Object.getOwnPropertyNames()")}}
+  - : Retourne un tableau contenant les noms de toutes les propriétés énumérables et non énumérables **propres** de l'objet donné.
+- {{jsxref("Object.getOwnPropertySymbols()")}}
+  - : Retourne un tableau de toutes les propriétés symboles trouvées directement dans un objet donné.
+- {{jsxref("Object.getPrototypeOf()")}}
+  - : Retourne le prototype de l'objet indiqué.
+- {{jsxref("Object.is()")}}
+  - : Détermine si deux valeurs sont la même valeur. Considère comme égales toutes les valeurs NaN (ce qui diffère à la fois de la Comparaison d'Égalité Abstraite et de la Comparaison d'Égalité Stricte).
+- {{jsxref("Object.isExtensible()")}}
+  - : Détermine si l'extension d'un objet est permise.
+- {{jsxref("Object.isFrozen()")}}
+  - : Détermine si un objet a été gelé.
+- {{jsxref("Object.isSealed()")}}
+  - : Détermine si un objet est scellé.
+- {{jsxref("Object.keys()")}}
+  - : Retourne un tableau contenant les noms de toutes les propriétés énumérables **propres** de l'objet donné.
+- {{jsxref("Object.preventExtensions()")}}
+  - : Empêche toute extension de l'objet.
+- {{jsxref("Object.seal()")}}
+  - : Empêche un autre code de détruire les propriétés d'un objet.
+- {{jsxref("Object.setPrototypeOf()")}}
+  - : Définit le prototype d'un objet (c-à-d, la propriété interne `[[Prototype]]`).
+- {{jsxref("Object.values()")}}
+  - : Retourne le tableau des valeurs énumérables propres de l'objet donné dont les clés sont des chaînes de caractères.
 
-<h2 id="Instances_d'Object_et_objet_de_prototype_Object">Instances d'<code>Object</code> et objet de prototype <code>Object</code></h2>
+## Instances d'`Object` et objet de prototype `Object`
 
-<p>Tous les objets en JavaScript descendent d'<code>Object</code> ; tous les objets héritent des méthodes et des propriétés de {{jsxref("Object.prototype")}}, même si elles peuvent être surchargées. Par exemple, d'autres prototypes de constructeurs surchargent la propriété du <code>constructor</code> et fournissent leurs propres méthodes <code>toString()</code>. Les changements apportés à l'objet de prototype <code>Object</code> sont propagées à tous les objets, à moins que les propriétés et méthodes auxquelles s'appliquent ces changements ne soient surchargées plus loin dans la chaîne de prototypes.</p>
+Tous les objets en JavaScript descendent d'`Object` ; tous les objets héritent des méthodes et des propriétés de {{jsxref("Object.prototype")}}, même si elles peuvent être surchargées. Par exemple, d'autres prototypes de constructeurs surchargent la propriété du `constructor` et fournissent leurs propres méthodes `toString()`. Les changements apportés à l'objet de prototype `Object` sont propagées à tous les objets, à moins que les propriétés et méthodes auxquelles s'appliquent ces changements ne soient surchargées plus loin dans la chaîne de prototypes.
 
-<h3 id="Propriétés">Propriétés</h3>
+### Propriétés
 
-<div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype', 'Properties') }}</div>
+{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype', 'Properties') }}
 
-<h3 id="Méthodes">Méthodes</h3>
+### Méthodes
 
-<div>{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype', 'Methods') }}</div>
+{{page('/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype', 'Methods') }}
 
-<h2 id="Suppression_d'une_propriété_dans_un_objet">Suppression d'une propriété dans un objet</h2>
+## Suppression d'une propriété dans un objet
 
-<p>Il n'y a aucune méthode dans un Object lui-même pour supprimer ses propres propriétés (par exemple, comme <a href="/fr-Fr/docs/Web/JavaScript/Reference/Global_Objects/Map/delete">Map.prototype.delete()</a>). Pour ce faire, il faut utiliser l'<a href="/fr-Fr/docs/Web/JavaScript/Reference/Operators/delete">opérateur delete</a>.</p>
+Il n'y a aucune méthode dans un Object lui-même pour supprimer ses propres propriétés (par exemple, comme [Map.prototype.delete()](/fr-Fr/docs/Web/JavaScript/Reference/Global_Objects/Map/delete)). Pour ce faire, il faut utiliser l'[opérateur delete](/fr-Fr/docs/Web/JavaScript/Reference/Operators/delete).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utilisation_d'Object_avec_les_types_undefined_et_null">Utilisation d'<code>Object</code> avec les types <code>undefined</code> et <code>null</code></h3>
+### Utilisation d'`Object` avec les types `undefined` et `null`
 
-<p>Les exemples suivants stockent un <code>Object</code> vide dans <code>o</code> :</p>
+Les exemples suivants stockent un `Object` vide dans `o` :
 
-<pre class="brush: js">var o = new Object();
-</pre>
+```js
+var o = new Object();
+```
 
-<pre class="brush: js">var o = new Object(undefined);
-</pre>
+```js
+var o = new Object(undefined);
+```
 
-<pre class="brush: js">var o = new Object(null);
-</pre>
+```js
+var o = new Object(null);
+```
 
-<h3 id="Utilisation_d'Object_pour_créer_des_objets_Boolean">Utilisation d'<code>Object</code> pour créer des objets <code>Boolean</code></h3>
+### Utilisation d'`Object` pour créer des objets `Boolean`
 
-<p>Les exemples suivants stockent des objets {{jsxref("Boolean")}} dans <code>o</code> :</p>
+Les exemples suivants stockent des objets {{jsxref("Boolean")}} dans `o` :
 
-<pre class="brush: js">// Équivalent à : o = new Boolean(true);
+```js
+// Équivalent à : o = new Boolean(true);
 var o = new Object(true);
-</pre>
+```
 
-<pre class="brush: js">// Équivalent à : o = new Boolean(false);
+```js
+// Équivalent à : o = new Boolean(false);
 var o = new Object(Boolean());
+```
 
-</pre>
+## Spécifications
 
-<h2 id="Spécifications">Spécifications</h2>
+| Spécification                                                                | Statut                       | Commentaire                                                                            |
+| ---------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------- |
+| {{SpecName('ES1')}}                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée par JavaScript 1.0.                                   |
+| {{SpecName('ES5.1', '#sec-15.2', 'Object')}}                 | {{Spec2('ES5.1')}}     |                                                                                        |
+| {{SpecName('ES6', '#sec-object-objects', 'Object')}}         | {{Spec2('ES6')}}         | Ajout de Object.assign, Object.getOwnPropertySymbols, Object.setPrototypeOf, Object.is |
+| {{SpecName('ESDraft', '#sec-object-objects', 'Object')}} | {{Spec2('ESDraft')}} | Ajout de Object.entries, de Object.values et de Object.getOwnPropertyDescriptors.      |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale. Implémentée par JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2', 'Object')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object-objects', 'Object')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Ajout de Object.assign, Object.getOwnPropertySymbols, Object.setPrototypeOf, Object.is</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object-objects', 'Object')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Ajout de Object.entries, de Object.values et de Object.getOwnPropertyDescriptors.</td>
-  </tr>
- </tbody>
-</table>
+## Compatibilité des navigateurs
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+{{Compat("javascript.builtins.Object")}}
 
-<p>{{Compat("javascript.builtins.Object")}}</p>
+## Voir aussi
 
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Initialisateur_objet">Initialisateur d'objet</a></li>
-</ul>
+- [Initialisateur d'objet](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Initialisateur_objet)

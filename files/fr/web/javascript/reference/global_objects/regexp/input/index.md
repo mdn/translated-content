@@ -10,49 +10,47 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/input
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/input
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p>La propriété non-standard <strong><code>input</code></strong> est une propriété statique de l'expression rationnelle qui contient la chaîne de caractères sur laquelle est effectuée la recherche de correspondances. <code>RegExp.$_</code> est un alias de cette propriété.</p>
+La propriété non-standard **`input`** est une propriété statique de l'expression rationnelle qui contient la chaîne de caractères sur laquelle est effectuée la recherche de correspondances. `RegExp.$_` est un alias de cette propriété.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>RegExp</var>.input
-RegExp.$_
-</pre>
+    RegExp.input
+    RegExp.$_
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La propriété <code>input</code> est statique. Ce n'est pas la propriété d'une instance d'expression rationnelle. Cette propriété doit toujours être utilisée avec la syntaxe <code>RegExp.input</code> ou <code>RegExp.$_.</code></p>
+La propriété `input` est statique. Ce n'est pas la propriété d'une instance d'expression rationnelle. Cette propriété doit toujours être utilisée avec la syntaxe `RegExp.input` ou `RegExp.$_.`
 
-<p>La valeur de la propriété <code><strong>input</strong></code> est modifiée à chaque fois que la chaîne sur laquelle on recherche est modifiée et qu'il y a une correspondance.</p>
+La valeur de la propriété **`input`** est modifiée à chaque fois que la chaîne sur laquelle on recherche est modifiée et qu'il y a une correspondance.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_input_et__">Utiliser <code>input</code> et <code>$_</code></h3>
+### Utiliser `input` et `$_`
 
-<pre class="brush: js">var re = /coucou/g;
+```js
+var re = /coucou/g;
 re.test("coucou toi !");
 RegExp.input;         // "coucou toi !"
 re.test("toto");      // nouveau test, pas de correspondance
 RegExp.$_;            // "coucou toi !"
 re.test("coucou monde !"); // nouveau test avec correspondance
 RegExp.$_;            // "coucou monde !"
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette propriété n'est pas standard. Elle ne fait partie d'aucune spécification.</p>
+Cette propriété n'est pas standard. Elle ne fait partie d'aucune spécification.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.RegExp.input")}}</p>
+{{Compat("javascript.builtins.RegExp.input")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{non-standard_inline}} {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}</li>
- <li>{{non-standard_inline}} {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}</li>
- <li>{{non-standard_inline}} {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}</li>
- <li>{{non-standard_inline}} {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}</li>
- <li>{{non-standard_inline}} {{jsxref("RegExp.n", "RegExp.$1-$9")}}</li>
-</ul>
+- {{non-standard_inline}} {{jsxref("RegExp.lastMatch", "RegExp.lastMatch ($&amp;)")}}
+- {{non-standard_inline}} {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
+- {{non-standard_inline}} {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
+- {{non-standard_inline}} {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
+- {{non-standard_inline}} {{jsxref("RegExp.n", "RegExp.$1-$9")}}

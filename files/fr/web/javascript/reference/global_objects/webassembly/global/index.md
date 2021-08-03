@@ -12,58 +12,57 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Global
 original_slug: Web/JavaScript/Reference/Objets_globaux/WebAssembly/Global
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Un objet <strong><code>WebAssembly.Global</code></strong> représente une instance d'une variable globale, accessible depuis le code JavaScript et importable/exportable pour un ou plusieurs modules WebAssembly ({{jsxref("WebAssembly.Module")}}). Cela permet de lier dynamiquement plusieurs modules.</p>
+Un objet **`WebAssembly.Global`** représente une instance d'une variable globale, accessible depuis le code JavaScript et importable/exportable pour un ou plusieurs modules WebAssembly ({{jsxref("WebAssembly.Module")}}). Cela permet de lier dynamiquement plusieurs modules.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox notranslate">var maGlobale = new WebAssembly.Global(<em>descripteur</em>, <em>valeur</em>);</pre>
+    var maGlobale = new WebAssembly.Global(descripteur, valeur);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>descripteur</code></dt>
- <dd>Un dictionnaire <code>GlobalDescriptor</code> qui contient deux propriétés :
- <ul>
-  <li><code>value</code> : une valeur {{domxref("USVString")}} qui représente le type de donnée de la variable globale. Ce type peut être <code>i32</code>, <code>i64</code>, <code>f32</code> ou <code>f64</code>.</li>
-  <li><code>mutable</code> : un booléen qui indique si la variable globale peut être modifiée ou non. Par défaut, cette propriété vaut <code>false</code>.</li>
- </ul>
- </dd>
- <dt><code>valeur</code></dt>
- <dd>La valeur que la variable doit contenir. Ce peut être n'importe quelle valeur qui respecte le type de donnée de la variable. Si aucune valeur n'est indiquée, c'est une valeur nulle typée qui est utilisée, tel qu'indiqué dans l'<a href="https://webassembly.github.io/spec/js-api/#defaultvalue">algorithme <code>DefaultValue</code></a>.</dd>
-</dl>
+- `descripteur`
 
-<h2 id="Propriétés">Propriétés</h2>
+  - : Un dictionnaire `GlobalDescriptor` qui contient deux propriétés :
 
-<p>Aucune.</p>
+    - `value` : une valeur {{domxref("USVString")}} qui représente le type de donnée de la variable globale. Ce type peut être `i32`, `i64`, `f32` ou `f64`.
+    - `mutable` : un booléen qui indique si la variable globale peut être modifiée ou non. Par défaut, cette propriété vaut `false`.
 
-<h2 id="Instances_de_WebAssembly.Global">Instances de <code>WebAssembly.Global</code></h2>
+- `valeur`
+  - : La valeur que la variable doit contenir. Ce peut être n'importe quelle valeur qui respecte le type de donnée de la variable. Si aucune valeur n'est indiquée, c'est une valeur nulle typée qui est utilisée, tel qu'indiqué dans l'[algorithme `DefaultValue`](https://webassembly.github.io/spec/js-api/#defaultvalue).
 
-<p>Toutes les instances de <code>Global</code> héritent du <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/prototype">prototype </a>du constructeur <code>Global()</code>. Ce prototype peut être modifié afin d'avoir un impact sur l'ensemble des instances de <code>Global</code>.</p>
+## Propriétés
 
-<h3 id="Propriétés_des_instances">Propriétés des instances</h3>
+Aucune.
 
-<p>{{page('/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/prototype', 'Propriétés')}}</p>
+## Instances de `WebAssembly.Global`
 
-<h3 id="Méthodes_des_instances">Méthodes des instances</h3>
+Toutes les instances de `Global` héritent du [prototype ](/en-US/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/prototype)du constructeur `Global()`. Ce prototype peut être modifié afin d'avoir un impact sur l'ensemble des instances de `Global`.
 
-<p>{{page('/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/prototype', 'Méthodes')}}</p>
+### Propriétés des instances
 
-<h2 id="Exemples">Exemples</h2>
+{{page('/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/prototype', 'Propriétés')}}
 
-<p>Dans l'exemple suivant, on montre comment créer une nouvelle instance globale grâce au constructeur <code>WebAssembly.Global()</code>. Cette instance globale est définie avec le type <code>i32</code> et est indiquée comme modifiable. Sa valeur initiale est 0.</p>
+### Méthodes des instances
 
-<p>On change ensuite la valeur de la variable globale en la passant à 42 grâce à la propriété <code>Global.value</code> puis en la passant à 43 grâce à la fonction <code>incGlobal()</code> qui a été exportée depuis le module <code>global.wasm</code> (cette fonction ajoute 1 à n'imorte quelle valeur puis renvoie cette nouvelle valeur).</p>
+{{page('/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Global/prototype', 'Méthodes')}}
 
-<pre class="brush: js notranslate">const output = document.getElementById('output');
+## Exemples
+
+Dans l'exemple suivant, on montre comment créer une nouvelle instance globale grâce au constructeur `WebAssembly.Global()`. Cette instance globale est définie avec le type `i32` et est indiquée comme modifiable. Sa valeur initiale est 0.
+
+On change ensuite la valeur de la variable globale en la passant à 42 grâce à la propriété `Global.value` puis en la passant à 43 grâce à la fonction `incGlobal()` qui a été exportée depuis le module `global.wasm` (cette fonction ajoute 1 à n'imorte quelle valeur puis renvoie cette nouvelle valeur).
+
+```js
+const output = document.getElementById('output');
 
 function assertEq(msg, got, expected) {
     output.innerHTML += `Testing ${msg}: `;
     if (got !== expected)
-        output.innerHTML += `FAIL!&lt;br&gt;Got: ${got}&lt;br&gt;Expected: ${expected}&lt;br&gt;`;
+        output.innerHTML += `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
     else
-        output.innerHTML += `SUCCESS! Got: ${got}&lt;br&gt;`;
+        output.innerHTML += `SUCCESS! Got: ${got}<br>`;
 }
 
 assertEq("WebAssembly.Global exists", typeof WebAssembly.Global, "function");
@@ -71,46 +70,30 @@ assertEq("WebAssembly.Global exists", typeof WebAssembly.Global, "function");
 const global = new WebAssembly.Global({value:'i32', mutable:true}, 0);
 
 WebAssembly.instantiateStreaming(fetch('global.wasm'), { js: { global } })
-.then(({instance}) =&gt; {
+.then(({instance}) => {
     assertEq("getting initial value from wasm", instance.exports.getGlobal(), 0);
     global.value = 42;
     assertEq("getting JS-updated value from wasm", instance.exports.getGlobal(), 42);
     instance.exports.incGlobal();
     assertEq("getting wasm-updated value from JS", global.value, 43);
-});</pre>
+});
+```
 
-<div class="note">
-<p><strong>Note :</strong> Cet exemple est<a href="https://mdn.github.io/webassembly-examples/js-api-examples/global.html"> utilisable sur GitHub</a> et <a href="https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html">son code source est également disponible</a>.</p>
-</div>
+> **Note :** Cet exemple est[ utilisable sur GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html) et [son code source est également disponible](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebAssembly JS', '#globals', 'WebAssembly.Global()')}}</td>
-   <td>{{Spec2('WebAssembly JS')}}</td>
-   <td>Brouillon de spécification initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                                 | Commentaires                         |
+| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------ |
+| {{SpecName('WebAssembly JS', '#globals', 'WebAssembly.Global()')}} | {{Spec2('WebAssembly JS')}} | Brouillon de spécification initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.WebAssembly.Global")}}</p>
+{{Compat("javascript.builtins.WebAssembly.Global")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/WebAssembly">Page principale pour la section WebAssembly de MDN</a></li>
- <li><a href="/fr/docs/WebAssembly/Concepts">Concepts WebAssembly</a></li>
- <li><a href="/fr/docs/WebAssembly/Using_the_JavaScript_API">Utiliser l'API JavaScript WebAssembly</a></li>
- <li><a href="https://github.com/WebAssembly/mutable-global/blob/master/proposals/mutable-global/Overview.md">La proposition pour l'import/export de variables globales modifiables</a></li>
-</ul>
+- [Page principale pour la section WebAssembly de MDN](/fr/docs/WebAssembly)
+- [Concepts WebAssembly](/fr/docs/WebAssembly/Concepts)
+- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [La proposition pour l'import/export de variables globales modifiables](https://github.com/WebAssembly/mutable-global/blob/master/proposals/mutable-global/Overview.md)

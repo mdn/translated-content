@@ -7,45 +7,42 @@ tags:
   - Language feature
   - Operator
   - Reference
-translation-of: Web/JavaScript/Reference/Operators/Left_shift_assignment
 browser-compat: javascript.operators.left_shift_assignment
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>L'opérateur de décalage à gauche et d'affectation (<code>&lt;&lt;=</code>) décale la séquence de bits représentée par l'opérande gauche d'autant de bits qu'indiqué par l'opérande droit puis affecte le résultat obtenu à la variable représentée par l'opérande gauche.</p>
+L'opérateur de décalage à gauche et d'affectation (`<<=`) décale la séquence de bits représentée par l'opérande gauche d'autant de bits qu'indiqué par l'opérande droit puis affecte le résultat obtenu à la variable représentée par l'opérande gauche.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-left-shift-assignment.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-left-shift-assignment.html")}}
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">
-<strong>Opérateur :</strong> x &lt;&lt;= y
-<strong>Signification :</strong>  x   = x &lt;&lt; y
-</pre>
+```js
+Opérateur : x <<= y
+Signification :  x   = x << y
+```
 
-<h2 id="examples">Exemples</h2>
+## Exemples
 
-<h3 id="using_left_shift_assignment">Utiliser l'opérateur de décalage à gauche et d'affectation</h3>
+### Utiliser l'opérateur de décalage à gauche et d'affectation
 
-<pre class="brush: js">
+```js
 let a = 5;
 // 00000000000000000000000000000101
 
-a &lt;&lt;= 2; // 20
+a <<= 2; // 20
 // 00000000000000000000000000010100
-</pre>
+```
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment">Les opérateurs d'affectation dans le guide JavaScript</a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Left_shift">L'opérateur de décalage à gauche binaire</a></li>
-</ul>
+- [Les opérateurs d'affectation dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment)
+- [L'opérateur de décalage à gauche binaire](/fr/docs/Web/JavaScript/Reference/Operators/Left_shift)

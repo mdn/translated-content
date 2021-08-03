@@ -10,49 +10,42 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>L'objet <strong><code>Intl.DisplayNames</code></strong> est un constructeur d'objets qui permettent de fournir des traductions des noms de langues, régions et systèmes d'écriture.</p>
+L'objet **`Intl.DisplayNames`** est un constructeur d'objets qui permettent de fournir des traductions des noms de langues, régions et systèmes d'écriture.
 
-<div>{{EmbedInteractiveExample("pages/js/intl-displaynames.html")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-displaynames.html")}}
 
+## Constructeur
 
+- [`Intl.DisplayNames()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames)
+  - : Crée un nouvel objet `Intl.DisplayNames`.
 
-<h2 id="Constructeur">Constructeur</h2>
+## Méthodes statiques
 
-<dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/DisplayNames"><code>Intl.DisplayNames()</code></a></dt>
- <dd>Crée un nouvel objet <code>Intl.DisplayNames</code>.</dd>
-</dl>
+- [`Intl.DisplayNames.supportedLocalesOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/supportedLocalesOf)
+  - : Retourne un tableau contenant les langues fournies qui sont supportées sans avoir à se rabattre sur la langue locale par défaut au moment de l'exécution.
 
-<h2 id="Méthodes_statiques">Méthodes statiques</h2>
+## Méthodes des instances
 
-<dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/supportedLocalesOf"><code>Intl.DisplayNames.supportedLocalesOf()</code></a></dt>
- <dd>Retourne un tableau contenant les langues fournies qui sont supportées sans avoir à se rabattre sur la langue locale par défaut au moment de l'exécution.</dd>
-</dl>
+- [`Intl.DisplayNames.prototype.of()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of)
+  - : Cette méthodes reçoit un `code` et retourne une chaine à partir sur la langue et les options fournies lors de l'instanciation de [`Intl.DisplayNames`](#).
+- [`Intl.DisplayNames.prototype.resolvedOptions()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/resolvedOptions)
+  - : Retourne un nouvel objet dont les propriété feflètent la langue et les options de formattage calculées lors de l'initialisation de l'objet.
 
-<h2 id="Méthodes_des_instances">Méthodes des instances</h2>
+## Exemples
 
-<dl>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of"><code>Intl.DisplayNames.prototype.of()</code></a></dt>
- <dd>Cette méthodes reçoit un <code>code</code> et retourne une chaine à partir sur la langue et les options fournies lors de l'instanciation de <a href="#"><code>Intl.DisplayNames</code></a>.</dd>
- <dt><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/resolvedOptions"><code>Intl.DisplayNames.prototype.resolvedOptions()</code></a></dt>
- <dd>Retourne un nouvel objet dont les propriété feflètent la langue et les options de formattage calculées lors de l'initialisation de l'objet.</dd>
-</dl>
+### Affichage des noms de régions
 
-<h2 id="Exemples">Exemples</h2>
+Pour créer un objet `Intl.DisplayNames` pour une langue et obtenir le nom correspondant à un code de région dans cette langue.
 
-<h3 id="Affichage_des_noms_de_régions">Affichage des noms de régions</h3>
-
-<p>Pour créer un objet <code>Intl.DisplayNames</code> pour une langue et obtenir le nom correspondant à un code de région dans cette langue.</p>
-
-<pre class="brush: js notranslate">// Obtenir le nom d'une région en anglais
+```js
+// Obtenir le nom d'une région en anglais
 let nomsRégions = new Intl.DisplayNames(['en'], {type: 'region'});
 nomsRégions.of('419'); // "Latin America"
 nomsRégions.of('BZ');  // "Belize"
 nomsRégions.of('US');  // "United States"
-nomsRégions.of('BA');  // "Bosnia &amp; Herzegovina"
+nomsRégions.of('BA');  // "Bosnia & Herzegovina"
 nomsRégions.of('MM');  // "Myanmar (Burma)"
 
 // Obtenir le nom d'une région en chinois traditionnel
@@ -61,13 +54,15 @@ nomsRégions.of('419'; // "拉丁美洲"
 nomsRégions.of('BZ'); // "貝里斯"
 nomsRégions.of('US'); // "美國"
 nomsRégions.of('BA'); // "波士尼亞與赫塞哥維納"
-nomsRégions.of('MM'); // "緬甸"</pre>
+nomsRégions.of('MM'); // "緬甸"
+```
 
-<h3 id="Affichage_des_noms_de_langues">Affichage des noms de langues</h3>
+### Affichage des noms de langues
 
-<p>Pour créer un objet <code>Intl.DisplayNames</code> pour une langue et obtenir le nom correspondant à un code de langue (possiblement suivi d'un code de système d'écriture ou de région) dans cette langue.</p>
+Pour créer un objet `Intl.DisplayNames` pour une langue et obtenir le nom correspondant à un code de langue (possiblement suivi d'un code de système d'écriture ou de région) dans cette langue.
 
-<pre class="brush: js notranslate">// Obtenir le nom d'une langue en anglais
+```js
+// Obtenir le nom d'une langue en anglais
 let nomsLangues= new Intl.DisplayNames(['en'], {type: 'language'});
 nomsLangues.of('fr');      // "French"
 nomsLangues.of('de');      // "German"
@@ -80,15 +75,17 @@ nomsLangues.of('zh-TW');   // "Chinese (Taiwan)"
 nomsLangues = new Intl.DisplayNames(['zh-Hant'], {type: 'language'});
 nomsLangues.of('fr'); // "法文"
 nomsLangues.of('zh'); // "中文"
-nomsLangues.of('de'); // "德文"</pre>
+nomsLangues.of('de'); // "德文"
+```
 
-<h3 id="Affichage_des_noms_de_systèmes_décriture">Affichage des noms de systèmes d'écriture</h3>
+### Affichage des noms de systèmes d'écriture
 
-<p>To create an <code>Intl.DisplayNames</code> for a locale and get the display name for a script code.</p>
+To create an `Intl.DisplayNames` for a locale and get the display name for a script code.
 
-<p>Pour créer un objet <code>Intl.DisplayNames</code> pour une langue et obtenir le nom correspondant à un code de système d'écriture dans cette langue.</p>
+Pour créer un objet `Intl.DisplayNames` pour une langue et obtenir le nom correspondant à un code de système d'écriture dans cette langue.
 
-<pre class="brush: js notranslate">// Obtenir le nom d'un système d'écriture en anglais
+```js
+// Obtenir le nom d'un système d'écriture en anglais
 let nomsSystèmes = new Intl.DisplayNames(['en'], {type: 'script'});
 nomsSystèmes.of('Latn'); // "Latin"
 nomsSystèmes.of('Arab'); // "Arabic"
@@ -98,13 +95,15 @@ nomsSystèmes.of('Kana'); // "Katakana"
 nomsSystèmes = new Intl.DisplayNames(['zh-Hant'], {type: 'script'});
 nomsSystèmes.of('Latn'); // "拉丁文"
 nomsSystèmes.of('Arab'); // "阿拉伯文"
-nomsSystèmes.of('Kana'); // "片假名"</pre>
+nomsSystèmes.of('Kana'); // "片假名"
+```
 
-<h3 id="Affichage_des_noms_de_devises">Affichage des noms de devises</h3>
+### Affichage des noms de devises
 
-<p>Pour créer un objet <code>Intl.DisplayNames</code> pour une langue et obtenir le nom correspondant au code d'une devise.</p>
+Pour créer un objet `Intl.DisplayNames` pour une langue et obtenir le nom correspondant au code d'une devise.
 
-<pre class="brush: js notranslate">// Obtenir le nom d'une devise in English
+```js
+// Obtenir le nom d'une devise in English
 let nomsDevises = new Intl.DisplayNames(['en'], {type: 'currency'});
 nomsDevises.of('USD'); // "US Dollar"
 nomsDevises.of('EUR'); // "Euro"
@@ -116,29 +115,19 @@ nomsDevises = new Intl.DisplayNames(['zh-Hant'], {type: 'currency'});
 nomsDevises.of('USD'); // "美元"
 nomsDevises.of('EUR'); // "歐元"
 nomsDevises.of('TWD'); // "新台幣"
-nomsDevises.of('CNY'); // "人民幣"</pre>
+nomsDevises.of('CNY'); // "人民幣"
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Intl.DisplayNames', '#intl-displaynames-objects', 'DisplayNames')}}</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            |
+| -------------------------------------------------------------------------------------------------------- |
+| {{SpecName('Intl.DisplayNames', '#intl-displaynames-objects', 'DisplayNames')}} |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Intl.DisplayNames")}}</p>
+{{Compat("javascript.builtins.Intl.DisplayNames")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Intl")}}</li>
-</ul>
+- {{jsxref("Intl")}}

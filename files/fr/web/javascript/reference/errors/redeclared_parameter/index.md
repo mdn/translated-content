@@ -8,56 +8,53 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Redeclared_parameter
 original_slug: Web/JavaScript/Reference/Erreurs/Redeclared_parameter
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="syntaxbox">SyntaxError: Let/Const redeclaration (Edge)
-SyntaxError: redeclaration of formal parameter "x" (Firefox)
-SyntaxError: Identifier "x" has already been declared (Chrome)
-</pre>
+    SyntaxError: Let/Const redeclaration (Edge)
+    SyntaxError: redeclaration of formal parameter "x" (Firefox)
+    SyntaxError: Identifier "x" has already been declared (Chrome)
 
-<h2 id="Type_d'erreur">Type d'erreur</h2>
+## Type d'erreur
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="Quel_est_le_problème">Quel est le problème ?</h2>
+## Quel est le problème ?
 
-<p>Le même nom de variable est présent comme paramètre de la fonction et dans une affectation <code><a href="/fr/docs/Web/JavaScript/Reference/Instructions/let">let</a></code> au sein du corps de cette fonction et il n'est pas possible de redéclarer la même variable dans la même fonction ou dans le même bloc avec <code>let</code>.</p>
+Le même nom de variable est présent comme paramètre de la fonction et dans une affectation [`let`](/fr/docs/Web/JavaScript/Reference/Instructions/let) au sein du corps de cette fonction et il n'est pas possible de redéclarer la même variable dans la même fonction ou dans le même bloc avec `let`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans le fragment de code qui suit, la variable <code>arg</code> redéclare l'argument passé à la fonction.</p>
+Dans le fragment de code qui suit, la variable `arg` redéclare l'argument passé à la fonction.
 
-<pre class="brush: js example-bad">function f(arg) {
+```js example-bad
+function f(arg) {
   let arg = "toto";
 }
 
 // SyntaxError: redeclaration of formal parameter "arg"
-</pre>
+```
 
-<p>Si on souhaite changer la valeur de <code>arg</code> dans le corps de la fonction, c'est possible mais il ne faut pas la redéclarer. Autrement dit, on peut retirer le mot-clé <code>let</code>. Si on souhaite plutôt créer une nouvelle variable, mieux vaudra utiliser un autre nom afin d'éviter les conflits avec les noms des paramètres existants.</p>
+Si on souhaite changer la valeur de `arg` dans le corps de la fonction, c'est possible mais il ne faut pas la redéclarer. Autrement dit, on peut retirer le mot-clé `let`. Si on souhaite plutôt créer une nouvelle variable, mieux vaudra utiliser un autre nom afin d'éviter les conflits avec les noms des paramètres existants.
 
-<pre class="brush: js example-good">function f(arg) {
+```js example-good
+function f(arg) {
   arg = "toto";
 }
 
 function f(arg) {
   let truc = "toto";
 }
-</pre>
+```
 
-<h2 id="Notes_de_compatibilité">Notes de compatibilité</h2>
+## Notes de compatibilité
 
-<ul>
- <li>Avant Firefox 49 {{geckoRelease(49)}}, cela provoquait une exception {{jsxref("TypeError")}} ({{bug(1275240)}}).</li>
-</ul>
+- Avant Firefox 49 {{geckoRelease(49)}}, cela provoquait une exception {{jsxref("TypeError")}} ({{bug(1275240)}}).
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><code><a href="/fr/docs/Web/JavaScript/Reference/Instructions/let">let</a></code></li>
- <li><code><a href="/fr/docs/Web/JavaScript/Reference/Instructions/const">const</a></code></li>
- <li><code><a href="/fr/docs/Web/JavaScript/Reference/Instructions/var">var</a></code></li>
- <li><a href="/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Déclarations">Déclarer des variables</a> dans le <a href="/fr/docs/Web/JavaScript/Guide">guide JavaScript</a></li>
-</ul>
+- [`let`](/fr/docs/Web/JavaScript/Reference/Instructions/let)
+- [`const`](/fr/docs/Web/JavaScript/Reference/Instructions/const)
+- [`var`](/fr/docs/Web/JavaScript/Reference/Instructions/var)
+- [Déclarer des variables](/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Déclarations) dans le [guide JavaScript](/fr/docs/Web/JavaScript/Guide)

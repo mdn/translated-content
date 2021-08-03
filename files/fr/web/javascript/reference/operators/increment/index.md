@@ -6,65 +6,65 @@ tags:
   - Language feature
   - Operator
   - Reference
-browser-compat: javascript.operators.increment
 translation_of: Web/JavaScript/Reference/Operators/Increment
+browser-compat: javascript.operators.increment
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>L'opérateur d'incrémentation (<code>++</code>) permet d'incrémenter (c'est-à-dire d'ajouter un) à son opérande et de renvoyer une valeur qui est le résultat avant ou après la modification.</p>
+L'opérateur d'incrémentation (`++`) permet d'incrémenter (c'est-à-dire d'ajouter un) à son opérande et de renvoyer une valeur qui est le résultat avant ou après la modification.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-increment.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-increment.html")}}
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">
-<strong>Opérateur :</strong> <var>x</var>++ ou ++<var>x</var>
-</pre>
+```js
+Opérateur : x++ ou ++x
+```
 
-<h2 id="description">Description</h2>
+## Description
 
-<p>Utilisé comme suffixe (l'opérateur étant placé après l'opérande), comme dans <code><var>x</var>++</code>, l'opérateur incrémentera la valeur et renverra la valeur avant l'incrément.</p>
+Utilisé comme suffixe (l'opérateur étant placé après l'opérande), comme dans `x++`, l'opérateur incrémentera la valeur et renverra la valeur avant l'incrément.
 
-<p>Utilisé comme préfixe (l'opérateur étant placé avant l'opérande), comme dans <code>++<var>x</var></code>, l'opérateur incrémentera la valeur et renverra la valeur après l'incrément.</p>
+Utilisé comme préfixe (l'opérateur étant placé avant l'opérande), comme dans `++x`, l'opérateur incrémentera la valeur et renverra la valeur après l'incrément.
 
-<h2 id="examples">Exemples</h2>
+## Exemples
 
-<h3 id="postfix_increment">Incrément en suffixe</h3>
+### Incrément en suffixe
 
-<pre class="brush: js">let x = 3;
+```js
+let x = 3;
 let y = x++;
 
 // y = 3
 // x = 4
-</pre>
+```
 
-<h3 id="prefix_increment">Incrément en préfixe</h3>
+### Incrément en préfixe
 
-<pre class="brush: js">let a = 2;
+```js
+let a = 2;
 let b = ++a;
 
 // a = 3
 // b = 3
-</pre>
+```
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Addition">Opérateur d'addition</a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Subtraction">Opérateur de soustraction</a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Division">Opérateur de division</a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Multiplication">Opérateur de multiplication</a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Remainder">Opérateur de reste</a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation">Opérateur d'exponentiation</a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Decrement">Opérateur de décrémentation</a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Unary_negation">Opérateur de négation unaire</a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Unary_plus">Opérateur de plus unaire</a></li>
-</ul>
+- [Opérateur d'addition](/fr/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Opérateur de soustraction](/fr/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [Opérateur de division](/fr/docs/Web/JavaScript/Reference/Operators/Division)
+- [Opérateur de multiplication](/fr/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [Opérateur de reste](/fr/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Opérateur d'exponentiation](/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [Opérateur de décrémentation](/fr/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [Opérateur de négation unaire](/fr/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [Opérateur de plus unaire](/fr/docs/Web/JavaScript/Reference/Operators/Unary_plus)

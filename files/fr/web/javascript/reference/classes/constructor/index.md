@@ -9,24 +9,27 @@ tags:
 translation_of: Web/JavaScript/Reference/Classes/constructor
 browser-compat: javascript.classes.constructor
 ---
-<div>{{jsSidebar("Classes")}}</div>
+{{jsSidebar("Classes")}}
 
-<p>La méthode <strong><code>constructor</code></strong> est une méthode qui est utilisée pour créer et initialiser un objet lorsqu'on utilise le mot clé <a href="/fr/docs/Web/JavaScript/Reference/Statements/class"><code>class</code></a>.</p>
+La méthode **`constructor`** est une méthode qui est utilisée pour créer et initialiser un objet lorsqu'on utilise le mot clé [`class`](/fr/docs/Web/JavaScript/Reference/Statements/class).
 
-<div>{{EmbedInteractiveExample("pages/js/classes-constructor.html")}}</div>
+{{EmbedInteractiveExample("pages/js/classes-constructor.html")}}
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">constructor() { ... }
+```js
+constructor() { ... }
 constructor(argument0) { ... }
 constructor(argument0, argument1) { ... }
-constructor(argument0, argument1, ... , argumentN) { ... }</pre>
+constructor(argument0, argument1, ... , argumentN) { ... }
+```
 
-<h2 id="description">Description</h2>
+## Description
 
-<p>Un constructeur vous permet de fournir toute initialisation personnalisée qui doit être effectuée avant que toute autre méthode puisse être appelée sur un objet instancié.</p>
+Un constructeur vous permet de fournir toute initialisation personnalisée qui doit être effectuée avant que toute autre méthode puisse être appelée sur un objet instancié.
 
-<pre class="brush: js">class Person {
+```js
+class Person {
   constructor(name) {
     this.name = name;
   }
@@ -38,21 +41,27 @@ constructor(argument0, argument1, ... , argumentN) { ... }</pre>
 
 const otto = new Person('Otto');
 
-otto.introduce();</pre>
+otto.introduce();
+```
 
-<p>Si vous ne fournissez pas votre propre constructeur, alors un constructeur par défaut sera fourni pour vous. Si votre classe est une classe de base, le constructeur par défaut est vide :</p>
+Si vous ne fournissez pas votre propre constructeur, alors un constructeur par défaut sera fourni pour vous. Si votre classe est une classe de base, le constructeur par défaut est vide :
 
-<pre class="brush: js">constructor() {}</pre>
+```js
+constructor() {}
+```
 
-<p>Si votre classe est une classe dérivée, le constructeur par défaut appelle le constructeur parent, en transmettant tous les arguments qui ont été fournis :</p>
+Si votre classe est une classe dérivée, le constructeur par défaut appelle le constructeur parent, en transmettant tous les arguments qui ont été fournis :
 
-<pre class="brush: js">constructor(...args) {
+```js
+constructor(...args) {
   super(...args);
-}</pre>
+}
+```
 
-<p>Cela permet à un code comme celui-ci de fonctionner :</p>
+Cela permet à un code comme celui-ci de fonctionner :
 
-<pre class="brush: js">class ValidationError extends Error {
+```js
+class ValidationError extends Error {
   printCustomerMessage() {
     return `La validation a échoué :-( (détails : ${this.message})`;
   }
@@ -68,13 +77,15 @@ try {
     console.log('Erreur inconnue', error);
     throw error;
   }
-}</pre>
+}
+```
 
-<p>La classe <code>ValidationError</code> n'a pas besoin d'un constructeur explicite, car elle n'a pas besoin de faire d'initialisation personnalisée. Le constructeur par défaut se charge alors d'initialiser le parent <code>Error</code> à partir de l'argument qui lui est fourni.</p>
+La classe `ValidationError` n'a pas besoin d'un constructeur explicite, car elle n'a pas besoin de faire d'initialisation personnalisée. Le constructeur par défaut se charge alors d'initialiser le parent `Error` à partir de l'argument qui lui est fourni.
 
-<p>Cependant, si vous fournissez votre propre constructeur, et que votre classe dérive d'une certaine classe parente, alors vous devez appeler explicitement le constructeur de la classe parente en utilisant <code>super</code>. Par exemple :</p>
+Cependant, si vous fournissez votre propre constructeur, et que votre classe dérive d'une certaine classe parente, alors vous devez appeler explicitement le constructeur de la classe parente en utilisant `super`. Par exemple :
 
-<pre class="brush: js">class ValidationError extends Error {
+```js
+class ValidationError extends Error {
   constructor(message) {
     super(message);  // appelle le constructeur de la classe parent
     this.name = 'ValidationError';
@@ -96,17 +107,19 @@ try {
     console.log('Unknown error', error);
     throw error;
   }
-}</pre>
+}
+```
 
-<p>Il ne peut y avoir qu'une seule méthode spéciale portant le nom « <code>constructor</code> » dans une classe. Avoir plus d'une occurrence d'une méthode <code>constructor</code> dans une classe lancera une erreur <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError"><code>SyntaxError</code></a>.</p>
+Il ne peut y avoir qu'une seule méthode spéciale portant le nom « `constructor` » dans une classe. Avoir plus d'une occurrence d'une méthode `constructor` dans une classe lancera une erreur [`SyntaxError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError).
 
-<h2 id="examples">Exemples</h2>
+## Exemples
 
-<h3 id="using_the_constructor_method">Utilisation de la méthode du <code>constructor</code></h3>
+### Utilisation de la méthode du `constructor`
 
-<p>Cet extrait de code est tiré de l'<a href="https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html">échantillon de classes</a> (<a href="https://googlechrome.github.io/samples/classes-es6/index.html">démo en direct</a>).</p>
+Cet extrait de code est tiré de l'[échantillon de classes](https://github.com/GoogleChrome/samples/blob/gh-pages/classes-es6/index.html) ([démo en direct](https://googlechrome.github.io/samples/classes-es6/index.html)).
 
-<pre class="brush: js">class Square extends Polygon {
+```js
+class Square extends Polygon {
   constructor(length) {
     // Ici, on appelle le constructeur de la classe parente avec des longueurs
     // fournies pour la largeur et la hauteur du polygone.
@@ -124,13 +137,15 @@ try {
     this.height = value**0.5;
     this.width = value**0.5;
   }
-}</pre>
+}
+```
 
-<h3 id="another_example">Un autre exemple</h3>
+### Un autre exemple
 
-<p>Ici, le prototype de la classe <code>Square</code> est modifié — mais le constructeur de sa classe de base <code>Polygon</code> est toujours appelé lorsqu'une nouvelle instance d'un carré est créée.</p>
+Ici, le prototype de la classe `Square` est modifié — mais le constructeur de sa classe de base `Polygon` est toujours appelé lorsqu'une nouvelle instance d'un carré est créée.
 
-<pre class="brush: js">class Polygon {
+```js
+class Polygon {
     constructor() {
         this.name = "Polygone";
     }
@@ -150,23 +165,21 @@ console.log(Object.getPrototypeOf(Square.prototype) === Polygon.prototype); //fa
 console.log(Object.getPrototypeOf(Square.prototype) === Rectangle.prototype); //true
 
 let newInstance = new Square();
-console.log(newInstance.name); // Polygone</pre>
+console.log(newInstance.name); // Polygone
+```
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/super"><code>super()</code></a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/class">Expression <code>class</code></a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Statements/class">Déclaration <code>class</code></a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Classes"><code>Classes</code></a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor">Object.prototype.constructor</a>
-  </li>
-</ul>
+- [`super()`](/fr/docs/Web/JavaScript/Reference/Operators/super)
+- [Expression `class`](/fr/docs/Web/JavaScript/Reference/Operators/class)
+- [Déclaration `class`](/fr/docs/Web/JavaScript/Reference/Statements/class)
+- [`Classes`](/fr/docs/Web/JavaScript/Reference/Classes)
+- [Object.prototype.constructor](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)

@@ -8,64 +8,65 @@ tags:
 translation_of: Web/JavaScript/Reference/Classes/Public_class_fields
 original_slug: Web/JavaScript/Reference/Classes/Class_fields
 ---
-<div>{{JsSidebar("Classes")}}{{SeeCompatTable}}</div>
+{{JsSidebar("Classes")}}{{SeeCompatTable}}
 
-<div class="note">
-<p><strong>Note :</strong> Cette page décrit des fonctionnalités expérimentales.</p>
+> **Note :** Cette page décrit des fonctionnalités expérimentales.
+>
+> Les déclarations de champs, tant publics que privés, sont [une fonctionnalité expérimentale (étape 3)](https://github.com/tc39/proposal-class-fields) proposée au [TC39](https://tc39.github.io/beta/), le comité des standards JavaScript.
+>
+> La prise en charge dans les navigateurs est limitée, mais cette fonctionnalité peut être utilisée à travers une étape de contruction avec des systèmes tels que [Babel](https://babeljs.io/). Voir [l'information de compatibilité](/fr/docs/Web/JavaScript/Reference/Classes/Class_fields$edit#Browser_compatibility) ci-dessous.
 
-<p>Les déclarations de champs, tant publics que privés, sont <a href="https://github.com/tc39/proposal-class-fields">une fonctionnalité expérimentale (étape 3)</a> proposée au <a href="https://tc39.github.io/beta/">TC39</a>, le comité des standards JavaScript.</p>
+Les champs publics, tant statiques que d'instance, sont des propriétés qui peuvent être écrites, et qui sont énumérables et configurables. En tant que telles, à la différence de leurs contreparties privées, elles participent à l'héritage du prototype.
 
-<p>La prise en charge dans les navigateurs est limitée, mais cette fonctionnalité peut être utilisée à travers une étape de contruction avec des systèmes tels que <a href="https://babeljs.io/">Babel</a>. Voir <a href="/fr/docs/Web/JavaScript/Reference/Classes/Class_fields$edit#Browser_compatibility">l'information de compatibilité</a> ci-dessous.</p>
-</div>
+## Syntaxe
 
-<p>Les champs publics, tant statiques que d'instance, sont des propriétés qui peuvent être écrites, et qui sont énumérables et configurables. En tant que telles, à la différence de leurs contreparties privées, elles participent à l'héritage du prototype.</p>
+    class ClasseAvecChampDInstance {
+      champDInstance = 'champ d\'instance'
+    }
 
-<h2 id="Syntaxe">Syntaxe</h2>
+    class ClasseAvecChampStatique {
+      static champStatique = 'champ statique'
+    }
 
-<pre class="syntaxbox notranslate">class ClasseAvecChampDInstance {
-  champDInstance = 'champ d\'instance'
-}
+    class ClasseAvecMethodeDInstancePublique {
+      methodePublique() {
+        return 'hello world'
+      }
+    }
 
+## Exemples
+
+### Champs statiques publics
+
+Les champs statiques publics sont utiles lorsque vous voulez qu'un champ n'existe qu'une seule fois par classe, pas dans chaque instance que vous créez. Cela est utile pour des caches, une configuration fixe, ou tout autres données dont vous n'avez pas besoin qu'elles soient répliquées à travers les instances.
+
+Les champs statiques publics sont déclarés en utilisant le mot-clé `static`. Ils sont ajoutés au constructeur de la classe au moment de l'évaluation de la classe en utilisant {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}. On y accède à nouveau à partir du constructeur de la classe.
+
+```js
 class ClasseAvecChampStatique {
-  static champStatique = 'champ statique'
-}
-
-class ClasseAvecMethodeDInstancePublique {
-  methodePublique() {
-    return 'hello world'
-  }
-}
-</pre>
-
-<h2 id="Exemples">Exemples</h2>
-
-<h3 id="Champs_statiques_publics">Champs statiques publics</h3>
-
-<p>Les champs statiques publics sont utiles lorsque vous voulez qu'un champ n'existe qu'une seule fois par classe, pas dans chaque instance que vous créez. Cela est utile pour des caches, une configuration fixe, ou tout autres données dont vous n'avez pas besoin qu'elles soient répliquées à travers les instances.</p>
-
-<p>Les champs statiques publics sont déclarés en utilisant le mot-clé <code>static</code>. Ils sont ajoutés au constructeur de la classe au moment de l'évaluation de la classe en utilisant {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}. On y accède à nouveau à partir du constructeur de la classe.</p>
-
-<pre class="brush: js notranslate">class ClasseAvecChampStatique {
   static champStatique = 'champ statique'
 }
 
 console.log(ClasseAvecChampStatique.champStatique)
 // affichage attendu : "champ statique"​
-</pre>
+```
 
-<p>Les champs sans initialiseur sont initialisés à <code>undefined</code>.</p>
+Les champs sans initialiseur sont initialisés à `undefined`.
 
-<pre class="brush: js notranslate">class ClasseAvecChampStatique {
+```js
+class ClasseAvecChampStatique {
   static champStatique
 }
 
 console.assert(ClasseAvecChampStatique.hasOwnProperty('champStatique'))
 console.log(ClasseAvecChampStatique.champStatique)
-// affichage attendu : "undefined"</pre>
+// affichage attendu : "undefined"
+```
 
-<p>Les champs statiques publics ne sont pas réinitialisés dans les sous-classes, mais on peut y accéder via la chaîne de prototypes.</p>
+Les champs statiques publics ne sont pas réinitialisés dans les sous-classes, mais on peut y accéder via la chaîne de prototypes.
 
-<pre class="brush: js notranslate">class ClasseAvecChampStatique {
+```js
+class ClasseAvecChampStatique {
   static champStatiqueDeBase = 'champ de base'
 }
 
@@ -77,11 +78,13 @@ console.log(SousClasseAvecChampStatique.sousChampStatique)
 // affichage attendu : "champ de la sous-classe"
 
 console.log(SousClasseAvecChampStatique.champStatiqueDeBase)
-// affichage attendu : "champ de base"</pre>
+// affichage attendu : "champ de base"
+```
 
-<p>Lors de l'initialisation des champs, <code>this</code> fait référence au constructeur de la classe. Vous pouvez aussi le référencer par son nom, et utiliser <code>super</code> pour obtenir le constructeur de la superclasse (s'il en existe un) :</p>
+Lors de l'initialisation des champs, `this` fait référence au constructeur de la classe. Vous pouvez aussi le référencer par son nom, et utiliser `super` pour obtenir le constructeur de la superclasse (s'il en existe un) :
 
-<pre class="brush: js notranslate">class ClasseAvecChampStatique {
+```js
+class ClasseAvecChampStatique {
   static champStatiqueDeBase = 'champ statique de base'
   static autreChampStatiqueDeBase = this.champStatiqueDeBase
 
@@ -97,36 +100,41 @@ console.log(ClasseAvecChampStatique.autreChampStatiqueDeBase)
 
 console.log(SousClasseAvecChampStatique.sousChampStatique)
 // affichage attendu : "affichage de la méthode statique de base"
-</pre>
+```
 
-<h3 id="Champs_dinstance_publics">Champs d'instance publics</h3>
+### Champs d'instance publics
 
-<p>Les champs d'instance publics existent dans chaque instance créée d'une classe. En déclarant un champ public, vous pouvez vous assurer que le champ est toujours présent, et que la définition de la classe est davantage auto-documentée.</p>
+Les champs d'instance publics existent dans chaque instance créée d'une classe. En déclarant un champ public, vous pouvez vous assurer que le champ est toujours présent, et que la définition de la classe est davantage auto-documentée.
 
-<p>Les champs d'instance publics sont ajoutés grâce à {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}, soit au moment de la construction dans la classe de base (avant que le corps du constructeur ne soit exécuté), soit juste après le retour de <code>super()</code> dans une sous-classe.</p>
+Les champs d'instance publics sont ajoutés grâce à {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}, soit au moment de la construction dans la classe de base (avant que le corps du constructeur ne soit exécuté), soit juste après le retour de `super()` dans une sous-classe.
 
-<pre class="brush: js notranslate">class ClasseAvecChampDInstance {
+```js
+class ClasseAvecChampDInstance {
   champDInstance = 'champ d\'instance'
 }
 
 const instance = new ClasseAvecChampDInstance()
 console.log(instance.champDInstance)
-// affichage attendu : "champ d'instance"</pre>
+// affichage attendu : "champ d'instance"
+```
 
-<p>Les champs sans initialiseur sont initialisés à <code>undefined</code>.</p>
+Les champs sans initialiseur sont initialisés à `undefined`.
 
-<pre class="brush: js notranslate">class ClasseAvecChampDInstance {
+```js
+class ClasseAvecChampDInstance {
   champdDInstance
 }
 
 const instance = new ClasseAvecChampDInstance()
 console.assert(instance.hasOwnProperty('champDInstance'))
 console.log(instance.champDInstance);
-// affichage attendu : "undefined"</pre>
+// affichage attendu : "undefined"
+```
 
-<p>À l'instar des propriétés, les noms de champ peuvent être calculés :</p>
+À l'instar des propriétés, les noms de champ peuvent être calculés :
 
-<pre class="brush: js notranslate">const PREFIXE = 'prefixe';
+```js
+const PREFIXE = 'prefixe';
 
 class ClasseAvecNomDeChampCalcule {
     [`${PREFIXE}Champ`] = 'champ préfixé'
@@ -134,11 +142,13 @@ class ClasseAvecNomDeChampCalcule {
 
 const instance = new ClasseAvecNomDeChampCalcule()
 console.log(instance.prefixeChamp)
-// affichage attendu : "champ préfixé"</pre>
+// affichage attendu : "champ préfixé"
+```
 
-<p>Lors de l'initialisation des champs, <code>this</code> fait référence à l'instance en cours de construction. Tout comme dans les méthodes d'instance publiques, si vous êtes dans une sous-classe, vous pouvez accéder au prototype de la superclasse en utilisant <code>super</code>.</p>
+Lors de l'initialisation des champs, `this` fait référence à l'instance en cours de construction. Tout comme dans les méthodes d'instance publiques, si vous êtes dans une sous-classe, vous pouvez accéder au prototype de la superclasse en utilisant `super`.
 
-<pre class="brush: js notranslate">class ClasseAvecChampDInstance {
+```js
+class ClasseAvecChampDInstance {
   champDInstanceDeBase = 'champ de base'
   autreChampDInstanceDeBase = this.champDInstanceDeBase
   methodeDInstanceDeBase() { return 'affichage de la méthode de base' }
@@ -155,30 +165,34 @@ console.log(base.autreChampDInstanceDeBase)
 // affichage attendu : "champ de base"
 
 console.log(sous.sousChampDInstance)
-// affichage attendu : "affichage de la méthode de base"</pre>
+// affichage attendu : "affichage de la méthode de base"
+```
 
-<h3 id="Méthodes_publiques">Méthodes publiques</h3>
+### Méthodes publiques
 
-<h4 id="Méthodes_statiques_publiques">Méthodes statiques publiques</h4>
+#### Méthodes statiques publiques
 
-<p>Le mot-clé <code><strong>static</strong></code> définit une méthode statique pour une classe. Les méthodes statiques ne sont pas appelées dans les instances de la classe. A la place, elles le sont dans la classe elle-même. Ce sont souvent des méthodes utilitaires, comme des fonctions pour créer ou cloner des objets.</p>
+Le mot-clé **`static`** définit une méthode statique pour une classe. Les méthodes statiques ne sont pas appelées dans les instances de la classe. A la place, elles le sont dans la classe elle-même. Ce sont souvent des méthodes utilitaires, comme des fonctions pour créer ou cloner des objets.
 
-<pre class="brush: js notranslate">class ClasseAvecMethodeStatique {
+```js
+class ClasseAvecMethodeStatique {
   static methodeStatique() {
     return 'la méthode statique a été appelée.';
   }
 }
 
 console.log(ClasseAvecMethodeStatique.methodeStatique());
-// affichage attendu : "la méthode statique a été appelée."</pre>
+// affichage attendu : "la méthode statique a été appelée."
+```
 
-<p>Les méthodes statiques sont ajoutées au constructeur de la classe grâce à {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}} au moment de l'évaluation de la classe. Ces méthodes peuvent être écrites, ne sont pas énumérables et sont configurables.</p>
+Les méthodes statiques sont ajoutées au constructeur de la classe grâce à {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}} au moment de l'évaluation de la classe. Ces méthodes peuvent être écrites, ne sont pas énumérables et sont configurables.
 
-<h4 id="Méthodes_dinstance_publiques">Méthodes d'instance publiques</h4>
+#### Méthodes d'instance publiques
 
-<p>Comme leur nom l'implique, les méthodes d'instance publiques sont des fonctions disponibles dans les instances de la classe.</p>
+Comme leur nom l'implique, les méthodes d'instance publiques sont des fonctions disponibles dans les instances de la classe.
 
-<pre class="brush: js notranslate">class ClasseAvecMethodeDInstancePublique {
+```js
+class ClasseAvecMethodeDInstancePublique {
   methodePublique() {
     return 'hello world'
   }
@@ -186,21 +200,25 @@ console.log(ClasseAvecMethodeStatique.methodeStatique());
 
 const instance = new ClasseAvecMethodeDInstancePublique()
 console.log(instance.methodePublique())
-// affichage attendu : "hello worl​d"</pre>
+// affichage attendu : "hello worl​d"
+```
 
-<p>Les méthodes d'instance publiques sont ajoutées au prototype au moment de l'évaluation de la classe en utilisant {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}. Elles peuvent être écrites, ne sont pas énumérables et sont configurables.</p>
+Les méthodes d'instance publiques sont ajoutées au prototype au moment de l'évaluation de la classe en utilisant {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}}. Elles peuvent être écrites, ne sont pas énumérables et sont configurables.
 
-<p>Vous pouvez utiliser des fonctions génératrices, asynchrones et génératrices asynchrones.</p>
+Vous pouvez utiliser des fonctions génératrices, asynchrones et génératrices asynchrones.
 
-<pre class="brush: js notranslate">class ClasseAvecMethodesFantaisie {
+```js
+class ClasseAvecMethodesFantaisie {
   *methodeGeneratrice() { }
   async methodeAsynchrone() { }
   async *methodeGeneratriceAsynchrone() { }
-}</pre>
+}
+```
 
-<p>A l'intérieur des méthodes d'instance, <code>this</code> fait référence à l'instance elle-même. Dans les sous-classes, <code>super</code> vous donne accès au prototype de la superclasse, ce qui vous permet d'appeler les méthodes de la superclasse.</p>
+A l'intérieur des méthodes d'instance, `this` fait référence à l'instance elle-même. Dans les sous-classes, `super` vous donne accès au prototype de la superclasse, ce qui vous permet d'appeler les méthodes de la superclasse.
 
-<pre class="brush: js notranslate">class ClasseDeBase {
+```js
+class ClasseDeBase {
   msg = 'hello world'
   methodePubliqueDeBase() {
     return this.msg
@@ -216,11 +234,12 @@ class SousClasse extends ClasseDeBase {
 const instance = new SousClasse()
 console.log(instance.sousMethodePublique())
 // affichage attendu : "hello worl​d"
-</pre>
+```
 
-<p>Les accesseurs et les mutateurs sont des méthodes spéciales qui sont liées à une propriété de classe, et sont appelées lorsqu'on accède à cette propriété ou qu'on la définit. Utilisez la syntaxe <a href="https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Functions/get">get</a> et <a href="https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Functions/set">set</a> pour déclarer un accesseur ou un mutateur publique d'une instance.</p>
+Les accesseurs et les mutateurs sont des méthodes spéciales qui sont liées à une propriété de classe, et sont appelées lorsqu'on accède à cette propriété ou qu'on la définit. Utilisez la syntaxe [get](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Functions/get) et [set](https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Functions/set) pour déclarer un accesseur ou un mutateur publique d'une instance.
 
-<pre class="brush: js notranslate">class ClasseAvecGetSet {
+```js
+class ClasseAvecGetSet {
   #msg = 'hello world'
   get msg() {
     return this.#msg
@@ -237,29 +256,18 @@ console.log(instance.msg);
 instance.msg = 'gâteau';
 console.log(instance.msg);
 // affichage attendu : "hello gâteau"
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Public and private instance fields', '#prod-FieldDefinition', 'FieldDefinition')}}</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                |
+| ---------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('Public and private instance fields', '#prod-FieldDefinition', 'FieldDefinition')}} |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.classes.public_class_fields")}}</p>
+{{Compat("javascript.classes.public_class_fields")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html">The Semantics of All JS Class Elements</a></li>
-</ul>
+- [The Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)

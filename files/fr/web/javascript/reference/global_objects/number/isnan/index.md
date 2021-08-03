@@ -10,36 +10,35 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isNaN
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number/isNaN
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>Number.isNaN()</code></strong> permet de déterminer si la valeur passée en argument est {{jsxref("NaN")}}, avec un type {{jsxref("Number")}}. Cette version est plus robuste que la méthode de l'objet global {{jsxref("isNaN")}}.</p>
+La méthode **`Number.isNaN()`** permet de déterminer si la valeur passée en argument est {{jsxref("NaN")}}, avec un type {{jsxref("Number")}}. Cette version est plus robuste que la méthode de l'objet global {{jsxref("isNaN")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/number-isnan.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/number-isnan.html", "taller")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Number.isNaN(<var>valeurÀTester</var>)</pre>
+    Number.isNaN(valeurÀTester)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code><em>valeurÀTester</em></code></dt>
- <dd>La valeur qu'on souhaite comparer à {{jsxref("NaN")}}.</dd>
-</dl>
+- `valeurÀTester`
+  - : La valeur qu'on souhaite comparer à {{jsxref("NaN")}}.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un booléen qui indique si la valeur fournie en argument est {{jsxref("NaN")}}.</p>
+Un booléen qui indique si la valeur fournie en argument est {{jsxref("NaN")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Les deux opérateurs d'égalité, {{jsxref("Opérateurs/Opérateurs_de_comparaison", "==", "#.C3.89galit.C3.A9_simple_(.3D.3D)")}} et {{jsxref("Opérateurs/Opérateurs_de_comparaison", "===", "#.C3.89galit.C3.A9_stricte_(.3D.3D.3D)")}}, renvoient <code>false</code> pour vérifier que {{jsxref("NaN")}} <em>est</em> NaN. La fonction <code>Number.isNaN</code> est nécessaire pour distinguer ce cas. Le résultat de cette comparaison sera différent avec les autres méthodes de comparaisons en JavaScript.</p>
+Les deux opérateurs d'égalité, {{jsxref("Opérateurs/Opérateurs_de_comparaison", "==", "#.C3.89galit.C3.A9_simple_(.3D.3D)")}} et {{jsxref("Opérateurs/Opérateurs_de_comparaison", "===", "#.C3.89galit.C3.A9_stricte_(.3D.3D.3D)")}}, renvoient `false` pour vérifier que {{jsxref("NaN")}} _est_ NaN. La fonction `Number.isNaN` est nécessaire pour distinguer ce cas. Le résultat de cette comparaison sera différent avec les autres méthodes de comparaisons en JavaScript.
 
-<p>En effet, la fonction globale {{jsxref("isNaN")}} convertit l'argument en un nombre.  <code>Number.isNaN</code> ne convertit pas l'argument. Cela signifie qu'on peut passer des valeurs qui, normalement, seraient converties en NaN, mais qui ne sont pas NaN. Cela signifie également que, uniquement lorsque la méthode sera utilisée avec des nombres qui valent <code>NaN</code>, elle renverra <code>true</code>.</p>
+En effet, la fonction globale {{jsxref("isNaN")}} convertit l'argument en un nombre.  `Number.isNaN` ne convertit pas l'argument. Cela signifie qu'on peut passer des valeurs qui, normalement, seraient converties en NaN, mais qui ne sont pas NaN. Cela signifie également que, uniquement lorsque la méthode sera utilisée avec des nombres qui valent `NaN`, elle renverra `true`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush:js;">Number.isNaN(NaN); // true
+```js
+Number.isNaN(NaN); // true
 Number.isNaN(Number.NaN); // true
 Number.isNaN(0 / 0); // true
 
@@ -56,46 +55,32 @@ Number.isNaN("37.37");
 Number.isNaN("");
 Number.isNaN(" ");
 Number.isNaN("NaN");
-Number.isNaN("blabla"); // ex : cette valeur aurait rendu true avec la méthode isNaN de l'objet global</pre>
+Number.isNaN("blabla"); // ex : cette valeur aurait rendu true avec la méthode isNaN de l'objet global
+```
 
-<h2 id="Prothèse_d'émulation_(polyfill)">Prothèse d'émulation (<em>polyfill</em>)</h2>
+## Prothèse d'émulation (_polyfill_)
 
-<p>La fonction suivant fonctionne car <code>NaN</code> est la seule valeur JavaScript qui n'est pas égale à elle-même.</p>
+La fonction suivant fonctionne car `NaN` est la seule valeur JavaScript qui n'est pas égale à elle-même.
 
-<pre class="brush: js">Number.isNaN = Number.isNaN || function(value) {
-    return typeof value === "number" &amp;&amp; isNaN(value);
-}</pre>
+```js
+Number.isNaN = Number.isNaN || function(value) {
+    return typeof value === "number" && isNaN(value);
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-number.isnan', 'Number.isnan')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.isnan', 'Number.isnan')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | État                         | Commentaires         |
+| -------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-number.isnan', 'Number.isnan')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-number.isnan', 'Number.isnan')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Number.isNaN")}}</p>
+{{Compat("javascript.builtins.Number.isNaN")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'objet {{jsxref("Number")}} auquel appartient cette méthode.</li>
- <li>La méthode {{jsxref("Objets_globaux/Object/is", "Object.is")}} qui permet d'effectuer des comparaisons sur l'égalité de valeur</li>
- <li>La méthode {{jsxref("isNaN")}} de l'objet global</li>
-</ul>
+- L'objet {{jsxref("Number")}} auquel appartient cette méthode.
+- La méthode {{jsxref("Objets_globaux/Object/is", "Object.is")}} qui permet d'effectuer des comparaisons sur l'égalité de valeur
+- La méthode {{jsxref("isNaN")}} de l'objet global

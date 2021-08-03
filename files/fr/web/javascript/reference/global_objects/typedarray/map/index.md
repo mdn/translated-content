@@ -12,103 +12,86 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/map
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/map
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>map()</strong></code> crée un nouveau tableau typé dont les éléments sont les images des éléments du tableau typé courant par une fonction donnée. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.map()")}}<em>.</em> <em>TypedArray</em> est utilisé ici de façon générique pour représenter <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray">l'un des types de tableaux typés possibles</a>.</p>
+La méthode **`map()`** crée un nouveau tableau typé dont les éléments sont les images des éléments du tableau typé courant par une fonction donnée. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.map()")}}_._ _TypedArray_ est utilisé ici de façon générique pour représenter [l'un des types de tableaux typés possibles](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-map.html")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-map.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>typedarray</var>.map(<var>callback</var>[, <var>thisArg</var>])</pre>
+    typedarray.map(callback[, thisArg])
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>La fonction qui renvoie l'élément à placer dans le nouveau tableau typé. Cette fonction utilise trois arguments :
- <dl>
-  <dt><code>valeurCourante</code></dt>
-  <dd>La valeur de l'élément du tableau typé courant, celui traité par la fonction.</dd>
-  <dt><code>indice</code></dt>
-  <dd>L'indice de l'élément du tableau typé en cours de traitement.</dd>
-  <dt><code>tableauTypé</code></dt>
-  <dd>Le tableau typé sur lequel <code>map()</code> a été appelée.</dd>
- </dl>
- </dd>
- <dt><code>thisArg</code></dt>
- <dd>Paramètre optionnel. La valeur à utiliser pour <code>this</code> lors de l'appel à <code>callback</code>.</dd>
-</dl>
+- `callback`
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+  - : La fonction qui renvoie l'élément à placer dans le nouveau tableau typé. Cette fonction utilise trois arguments :
 
-<p>Un nouveau tableau typé.</p>
+    - `valeurCourante`
+      - : La valeur de l'élément du tableau typé courant, celui traité par la fonction.
+    - `indice`
+      - : L'indice de l'élément du tableau typé en cours de traitement.
+    - `tableauTypé`
+      - : Le tableau typé sur lequel `map()` a été appelée.
 
-<h2 id="Description">Description</h2>
+- `thisArg`
+  - : Paramètre optionnel. La valeur à utiliser pour `this` lors de l'appel à `callback`.
 
-<p>La méthode <code>map()</code> appelle la fonction <code>callback()</code> passée en argument une fois pour chaque élément du tableau typé pour construire un nouveau tableau à partir des résultats de la fonction. Les appels à callback sont effectués dans l'ordre du tableau typé. <code>callback()</code> n'est appelée que pour les éléments du tableaux qui ont une valeur, elle n'est pas appelée pour les éléments qui sont indéfinis ou qui ont été supprimés.</p>
+### Valeur de retour
 
-<p><code>callback()</code> est appelée avec trois arguments : la valeur de l'élément, l'indice de cet élément et enfin le tableau typé courant.</p>
+Un nouveau tableau typé.
 
-<p>Si un paramètre <code>thisArg</code> est fourni pour <code>map()</code>, il sera passé à <code>callback</code> pour les différents appels et servira de valeur <code>this</code>. Par défaut, la valeur {{jsxref("undefined")}} sera passée à la fonction pour la valeur <code>this</code>. Par ailleurs, la valeur de <code>this</code> accessible depuis la fonction <code>callback</code> est déterminée selon <a href="/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this">les règles usuelles déterminant la valeur <code>this</code> au sein d'une fonction</a>.</p>
+## Description
 
-<p><code>map()</code> ne modifie pas le tableau typé sur lequel elle a été appelée (indirectement, c'est la fonction <code>callback</code> qui pourra éventuellement modifier le tableau).</p>
+La méthode `map()` appelle la fonction `callback()` passée en argument une fois pour chaque élément du tableau typé pour construire un nouveau tableau à partir des résultats de la fonction. Les appels à callback sont effectués dans l'ordre du tableau typé. `callback()` n'est appelée que pour les éléments du tableaux qui ont une valeur, elle n'est pas appelée pour les éléments qui sont indéfinis ou qui ont été supprimés.
 
-<p>La liste des éléments parcourus par <code>map()</code> est définie avant la première invocation de la fonction <code>callback</code>. Les éléments qui sont ajoutés au tableau typé après le début de l'appel de <code>map()</code> (grâce à la fonction <code>callback</code> par exemple) ne seront pas visités. Si des éléments existants du tableau typé ont modifiés ou supprimés, la valeur fournie à la fonction <code>callback</code> sera leur valeur au moment où <code>map()</code> les visite - les éléments supprimés ne seront pas traités par la fonction.</p>
+`callback()` est appelée avec trois arguments : la valeur de l'élément, l'indice de cet élément et enfin le tableau typé courant.
 
-<h2 id="Exemples">Exemples</h2>
+Si un paramètre `thisArg` est fourni pour `map()`, il sera passé à `callback` pour les différents appels et servira de valeur `this`. Par défaut, la valeur {{jsxref("undefined")}} sera passée à la fonction pour la valeur `this`. Par ailleurs, la valeur de `this` accessible depuis la fonction `callback` est déterminée selon [les règles usuelles déterminant la valeur `this` au sein d'une fonction](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this).
 
-<h3 id="Obtenir_un_tableau_typé_des_racines_carrées_des_éléments_d'un_premier_tableau_typé">Obtenir un tableau typé des racines carrées des éléments d'un premier tableau typé</h3>
+`map()` ne modifie pas le tableau typé sur lequel elle a été appelée (indirectement, c'est la fonction `callback` qui pourra éventuellement modifier le tableau).
 
-<p>Dans l'exemple suivant, on crée un nouveau tableau typé dont les éléments seront les racines carrées respectives des éléments d'un tableau typé existant.</p>
+La liste des éléments parcourus par `map()` est définie avant la première invocation de la fonction `callback`. Les éléments qui sont ajoutés au tableau typé après le début de l'appel de `map()` (grâce à la fonction `callback` par exemple) ne seront pas visités. Si des éléments existants du tableau typé ont modifiés ou supprimés, la valeur fournie à la fonction `callback` sera leur valeur au moment où `map()` les visite - les éléments supprimés ne seront pas traités par la fonction.
 
-<pre class="brush: js">var nombres = new Uint8Array([1, 4, 9]);
+## Exemples
+
+### Obtenir un tableau typé des racines carrées des éléments d'un premier tableau typé
+
+Dans l'exemple suivant, on crée un nouveau tableau typé dont les éléments seront les racines carrées respectives des éléments d'un tableau typé existant.
+
+```js
+var nombres = new Uint8Array([1, 4, 9]);
 var racines = nombres.map(Math.sqrt);
 // racines vaut désormais Uint8Array [1, 2, 3],
 // nombres vaut toujours Uint8Array [1, 4, 9]
-</pre>
+```
 
-<h3 id="Utiliser_map()_avec_une_fonction_qui_prend_un_argument">Utiliser <code>map()</code> avec une fonction qui prend un argument</h3>
+### Utiliser `map()` avec une fonction qui prend un argument
 
-<p>Ici, on illustre comment une fonction utilisant un argument peut être utilisée avec <code>map()</code>. Cet argument recevra automatiquement la valeur de chaque élément du tableau typé au fur et à mesure du parcours.</p>
+Ici, on illustre comment une fonction utilisant un argument peut être utilisée avec `map()`. Cet argument recevra automatiquement la valeur de chaque élément du tableau typé au fur et à mesure du parcours.
 
-<pre class="brush: js">var nombres = new Uint8Array([1, 4, 9]);
+```js
+var nombres = new Uint8Array([1, 4, 9]);
 var doubles = nombres.map(function(num) {
   return num * 2;
 });
 // doubles vaut désormais Uint8Array [2, 8, 18]
 // nombres vaut toujours Uint8Array [1, 4, 9]
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-%typedarray%.prototype.map', 'TypedArray.prototype.map')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.map', 'TypedArray.prototype.map')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-%typedarray%.prototype.map', 'TypedArray.prototype.map')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.map', 'TypedArray.prototype.map')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.TypedArray.map")}}</p>
+{{Compat("javascript.builtins.TypedArray.map")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("TypedArray.prototype.filter()")}}</li>
- <li>{{jsxref("Array.prototype.map()")}}</li>
-</ul>
+- {{jsxref("TypedArray.prototype.filter()")}}
+- {{jsxref("Array.prototype.map()")}}

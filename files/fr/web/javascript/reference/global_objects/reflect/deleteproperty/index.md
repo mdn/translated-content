@@ -10,41 +10,39 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/deleteProperty
 original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/deleteProperty
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode statique <code><strong>Reflect</strong></code><strong><code>.deleteProperty()</code></strong> permet de supprimer des propriétés. Il agit comme l'opérateur <a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_delete"><code>delete</code></a>.</p>
+La méthode statique **`Reflect`\*\***`.deleteProperty()`\*\* permet de supprimer des propriétés. Il agit comme l'opérateur [`delete`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_delete).
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-deleteproperty.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-deleteproperty.html", "taller")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Reflect.deleteProperty(<var>cible</var>, <var>cléPropriété</var>)
-</pre>
+    Reflect.deleteProperty(cible, cléPropriété)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>cible</code></dt>
- <dd>L'objet cible sur lequel on souhaite supprimer la propriété.</dd>
- <dt><code>cléPropriété</code></dt>
- <dd>Le nom de la propriété à supprimer.</dd>
-</dl>
+- `cible`
+  - : L'objet cible sur lequel on souhaite supprimer la propriété.
+- `cléPropriété`
+  - : Le nom de la propriété à supprimer.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un {{jsxref("Boolean","booléen","",1)}} qui indique si la suppression de la propriété s'est bien passée.</p>
+Un {{jsxref("Boolean","booléen","",1)}} qui indique si la suppression de la propriété s'est bien passée.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>Une erreur {{jsxref("TypeError")}} si <code>cible</code> n'est pas un {{jsxref("Object")}}.</p>
+Une erreur {{jsxref("TypeError")}} si `cible` n'est pas un {{jsxref("Object")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code>Reflect.deleteProperty</code> permet de supprimer une propriété d'un objet. Elle renvoie un {{jsxref("Boolean")}} qui indique si la propriété a été supprimée correctement. Cette méthode est très proche de l'opérateur <a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_delete"><code>delete</code></a>.</p>
+La méthode `Reflect.deleteProperty` permet de supprimer une propriété d'un objet. Elle renvoie un {{jsxref("Boolean")}} qui indique si la propriété a été supprimée correctement. Cette méthode est très proche de l'opérateur [`delete`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_delete).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var obj = { x: 1, y: 2 };
+```js
+var obj = { x: 1, y: 2 };
 Reflect.deleteProperty(obj, "x"); // true
 obj; // { y: 2 }
 
@@ -57,37 +55,20 @@ Reflect.deleteProperty({}, "toto"); // true
 
 // Renvoie false si une propriété n'est pas configurable
 Reflect.deleteProperty(Object.freeze({toto: 1}),"toto"); // false
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-reflect.deleteproperty', 'Reflect.deleteProperty')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-reflect.deleteproperty', 'Reflect.deleteProperty')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | État                         | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-reflect.deleteproperty', 'Reflect.deleteProperty')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-reflect.deleteproperty', 'Reflect.deleteProperty')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Reflect.deleteProperty")}}</p>
+{{Compat("javascript.builtins.Reflect.deleteProperty")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_delete">Opérateur <code>delete</code></a></li>
-</ul>
+- {{jsxref("Reflect")}}
+- [Opérateur `delete`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_delete)

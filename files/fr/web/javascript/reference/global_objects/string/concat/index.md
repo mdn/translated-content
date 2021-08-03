@@ -10,36 +10,35 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/concat
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/concat
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>concat()</strong></code> combine le texte de plusieurs chaînes avec la chaîne appelante et renvoie la nouvelle chaîne ainsi formée.</p>
+La méthode **`concat()`** combine le texte de plusieurs chaînes avec la chaîne appelante et renvoie la nouvelle chaîne ainsi formée.
 
-<div>{{EmbedInteractiveExample("pages/js/string-concat.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-concat.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox notranslate"><var>str</var>.concat(<var>string2</var>[, <var>string</var>3, ..., <var>stringN</var>])</pre>
+    str.concat(string2[, string3, ..., stringN])
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>string2...string<em>N</em></code></dt>
- <dd>Chaînes de caractères à concaténer ensemble.</dd>
-</dl>
+- `string2...stringN`
+  - : Chaînes de caractères à concaténer ensemble.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une nouvelle chaîne de caractères qui contient la concaténation des chaînes de caractères fournies.</p>
+Une nouvelle chaîne de caractères qui contient la concaténation des chaînes de caractères fournies.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La fonction <code>concat()</code> renvoie une nouvelle chaîne correspondant à la concaténation des différents arguments avec la chaîne courante. La chaîne courante est celle sur laquelle a été appelée la méthode <code>concat()</code>. Si les valeurs passées en arguments ne sont pas des chaînes de caractères, elles sont automatiquement converties en chaînes (grâce à leur méthode <code>toString()</code> avant la concaténation).</p>
+La fonction `concat()` renvoie une nouvelle chaîne correspondant à la concaténation des différents arguments avec la chaîne courante. La chaîne courante est celle sur laquelle a été appelée la méthode `concat()`. Si les valeurs passées en arguments ne sont pas des chaînes de caractères, elles sont automatiquement converties en chaînes (grâce à leur méthode `toString()` avant la concaténation).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>L'exemple suivant combine plusieurs chaînes afin d'en former une nouvelle.</p>
+L'exemple suivant combine plusieurs chaînes afin d'en former une nouvelle.
 
-<pre class="brush: js notranslate">var coucou = "Bonjour ";
+```js
+var coucou = "Bonjour ";
 console.log(coucou.concat("Tristan,", " bonne journée."));
 
 /* Bonjour Tristan, bonne journée. */
@@ -52,52 +51,26 @@ var salutation = ['Bonjour', ' ', 'Alfred', ' ', '!'];
 "".concat(null); // "null"
 "".concat(true); // "true"
 "".concat(4, 5); // "45"
+```
 
-</pre>
+## Performance
 
-<h2 id="Performance">Performance</h2>
+Il est fortement recommandé d'utiliser les {{jsxref("Opérateurs/Opérateurs_d_affectation", "opérateurs d'affectation", "", 1)}} (+, +=) plutôt que la méthode `concat()` pour des raisons de performance.
 
-<p>Il est fortement recommandé d'utiliser les {{jsxref("Opérateurs/Opérateurs_d_affectation", "opérateurs d'affectation", "", 1)}} (+, +=) plutôt que la méthode <code>concat()</code> pour des raisons de performance.</p>
+## Spécifications
 
-<h2 id="Spécifications">Spécifications</h2>
+| Spécification                                                                                                | État                         | Commentaires                                          |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.2. |
+| {{SpecName('ES5.1', '#sec-15.5.4.6', 'String.prototype.concat')}}                     | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-string.prototype.concat', 'String.prototype.concat')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-string.prototype.concat', 'String.prototype.concat')}} | {{Spec2('ESDraft')}} |                                                       |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.2.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.4.6', 'String.prototype.concat')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.concat', 'String.prototype.concat')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.concat', 'String.prototype.concat')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+## Compatibilité des navigateurs
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+{{Compat("javascript.builtins.String.concat")}}
 
-<p>{{Compat("javascript.builtins.String.concat")}}</p>
+## Voir aussi
 
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>{{jsxref("Array.prototype.concat()")}}</li>
- <li>{{jsxref("Opérateurs/Opérateurs_d_affectation", "Les opérateurs d'affectation", "", 1)}}</li>
-</ul>
+- {{jsxref("Array.prototype.concat()")}}
+- {{jsxref("Opérateurs/Opérateurs_d_affectation", "Les opérateurs d'affectation", "", 1)}}

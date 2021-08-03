@@ -10,84 +10,58 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCFullYear
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setUTCFullYear
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>setUTCFullYear()</strong></code> définit l'année complête pour la date, selon UTC.</p>
+La méthode **`setUTCFullYear()`** définit l'année complête pour la date, selon UTC.
 
-<div>{{EmbedInteractiveExample("pages/js/date-setutcfullyear.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-setutcfullyear.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>dateObj</var>.setUTCFullYear(valeurAnnée[, valeurMois[, valeurJour]])</pre>
+    dateObj.setUTCFullYear(valeurAnnée[, valeurMois[, valeurJour]])
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>valeurAnnée</code></dt>
- <dd>Un entier indiquant la valeur numérique d'une année, par exemple, 1995.</dd>
- <dt><code>valeurMois</code></dt>
- <dd>Paramètre optionnel, un entier entre 0 et 11 représentant les mois de janvier à décembre.</dd>
- <dt><code>valeurJour</code></dt>
- <dd>Paramètre optionnel, un entier entre 1 et 31 représentant le jour du mois. Si le paramètre <code>valeurJour</code> est utilisé, il est également nécessaire d'indiquer <code>valeurMois</code>.</dd>
-</dl>
+- `valeurAnnée`
+  - : Un entier indiquant la valeur numérique d'une année, par exemple, 1995.
+- `valeurMois`
+  - : Paramètre optionnel, un entier entre 0 et 11 représentant les mois de janvier à décembre.
+- `valeurJour`
+  - : Paramètre optionnel, un entier entre 1 et 31 représentant le jour du mois. Si le paramètre `valeurJour` est utilisé, il est également nécessaire d'indiquer `valeurMois`.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Le nombre de millisecondes écoulées entre le premier janvier 1970 minuit, UTC et la date mise à jour.</p>
+Le nombre de millisecondes écoulées entre le premier janvier 1970 minuit, UTC et la date mise à jour.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Si les paramètres <code>valeurMois</code> et <code>valeurJour</code> ne sont pas utilisés, les valeurs renvoyées par les méthodes {{jsxref("Objets_globaux/Date/getUTCMonth", "getUTCMonth()")}} et {{jsxref("Objets_globaux/Date/getUTCDate", "getUTCDate()")}} seront utilisées.</p>
+Si les paramètres `valeurMois` et `valeurJour` ne sont pas utilisés, les valeurs renvoyées par les méthodes {{jsxref("Objets_globaux/Date/getUTCMonth", "getUTCMonth()")}} et {{jsxref("Objets_globaux/Date/getUTCDate", "getUTCDate()")}} seront utilisées.
 
-<p>Si un des paramètres indiqué est en dehors des limites attendues, <code>setUTCFullYear()</code> tentera de mettre à jour la date en conséquence. Ainsi si on utilise la valeur 15 pour <code>valeurMois</code>, l'année sera incrémentée de 1 (année + 1), et 3 sera utilisé pour le mois.</p>
+Si un des paramètres indiqué est en dehors des limites attendues, `setUTCFullYear()` tentera de mettre à jour la date en conséquence. Ainsi si on utilise la valeur 15 pour `valeurMois`, l'année sera incrémentée de 1 (année + 1), et 3 sera utilisé pour le mois.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_setUTCFullYear()">Utiliser <code>setUTCFullYear()</code></h3>
+### Utiliser `setUTCFullYear()`
 
-<pre class="brush: js">var leGrandJour = new Date();
+```js
+var leGrandJour = new Date();
 leGrandJour.setUTCFullYear(1997);
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.3.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.41', 'Date.prototype.setUTCFullYear')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.setutcfullyear', 'Date.prototype.setUTCFullYear')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.setutcfullyear', 'Date.prototype.setUTCFullYear')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                | État                         | Commentaires                                          |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.3. |
+| {{SpecName('ES5.1', '#sec-15.9.5.41', 'Date.prototype.setUTCFullYear')}}                             | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-date.prototype.setutcfullyear', 'Date.prototype.setUTCFullYear')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-date.prototype.setutcfullyear', 'Date.prototype.setUTCFullYear')}} | {{Spec2('ESDraft')}} |                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Date.setUTCFullYear")}}</p>
+{{Compat("javascript.builtins.Date.setUTCFullYear")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCFullYear()")}}</li>
- <li>{{jsxref("Date.prototype.setFullYear()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCFullYear()")}}
+- {{jsxref("Date.prototype.setFullYear()")}}

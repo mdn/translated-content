@@ -11,28 +11,27 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/PluralRules/select
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>Intl.PluralRules.prototype.select</code></strong> renvoie une chaîne de caractères qui indique la règle de nombre utilisée pour le formatage relatif à la locale.</p>
+La méthode **`Intl.PluralRules.prototype.select`** renvoie une chaîne de caractères qui indique la règle de nombre utilisée pour le formatage relatif à la locale.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><code><var>pluralRule</var>.select(<var>nombre</var>)</code></pre>
+    pluralRule.select(nombre)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>nombre</code></dt>
- <dd>Le nombre pour lequel on souhaite obtenir la règle de nombre associée.</dd>
-</dl>
+- `nombre`
+  - : Le nombre pour lequel on souhaite obtenir la règle de nombre associée.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Cette fonction permet de sélectionner une règle de nombre en fonction de la locale et des options de formatage choisies via un objet {{jsxref("PluralRules")}}.</p>
+Cette fonction permet de sélectionner une règle de nombre en fonction de la locale et des options de formatage choisies via un objet {{jsxref("PluralRules")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js"> new Intl.PluralRules('ar-EG').select(0);
+```js
+ new Intl.PluralRules('ar-EG').select(0);
 // → 'zero'
 
 new Intl.PluralRules('ar-EG').select(1);
@@ -46,31 +45,18 @@ new Intl.PluralRules('ar-EG').select(6);
 
 new Intl.PluralRules('ar-EG').select(18);
 // → 'many'
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td><a href="https://rawgit.com/caridy/intl-plural-rules-spec/master/index.html">Brouillon pour les règles de nombre avec Intl</a></td>
-   <td>{{Spec2('ES Int Draft')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                       | État                             | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| [Brouillon pour les règles de nombre avec Intl](https://rawgit.com/caridy/intl-plural-rules-spec/master/index.html) | {{Spec2('ES Int Draft')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Intl.PluralRules.select")}}</p>
+{{Compat("javascript.builtins.Intl.PluralRules.select")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("PluralRules", "Intl.PluralRules")}}</li>
-</ul>
+- {{jsxref("PluralRules", "Intl.PluralRules")}}

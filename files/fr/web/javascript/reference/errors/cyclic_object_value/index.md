@@ -8,45 +8,47 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Cyclic_object_value
 original_slug: Web/JavaScript/Reference/Erreurs/Cyclic_object_value
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="syntaxbox">TypeError: cyclic object value (Firefox)
-TypeError: Converting circular structure to JSON (Chrome and Opera)
-TypeError: Circular reference in value argument not supported (Edge)
-</pre>
+    TypeError: cyclic object value (Firefox)
+    TypeError: Converting circular structure to JSON (Chrome and Opera)
+    TypeError: Circular reference in value argument not supported (Edge)
 
-<h2 id="Type_d'erreur">Type d'erreur</h2>
+## Type d'erreur
 
-<p>{{jsxref("TypeError")}}</p>
+{{jsxref("TypeError")}}
 
-<h2 id="Quel_est_le_problème">Quel est le problème ?</h2>
+## Quel est le problème ?
 
-<p>Lorsqu'on appelle la méthode {{jsxref("JSON.stringify()")}}, les structures de références cycliques ne peuvent pas être converties en chaîne de caractères car <a href="https://www.json.org/">le format JSON</a> ne prend pas en charge les références (bien qu'<a href="http://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03">un brouillon IETF existe</a>).</p>
+Lorsqu'on appelle la méthode {{jsxref("JSON.stringify()")}}, les structures de références cycliques ne peuvent pas être converties en chaîne de caractères car [le format JSON](https://www.json.org/) ne prend pas en charge les références (bien qu'[un brouillon IETF existe](http://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03)).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Avec une structure circulaire comme la suivante :</p>
+Avec une structure circulaire comme la suivante :
 
-<pre class="brush: js">var a = {};
+```js
+var a = {};
 var b = {};
 a.child = b;
 b.child = a;
-</pre>
+```
 
-<p>{{jsxref("JSON.stringify()")}} échouera :</p>
+{{jsxref("JSON.stringify()")}} échouera :
 
-<pre class="brush: js example-bad">JSON.stringify(a);
+```js example-bad
+JSON.stringify(a);
 // TypeError: cyclic object value
-</pre>
+```
 
-<p>Il est nécessaire de contrôler l'existence de cycles avant la conversion en chaîne de caractères. On peut par exemple fournir une fonction de remplacement comme deuxième argument de la fonction {{jsxref("JSON.stringify()")}}.</p>
+Il est nécessaire de contrôler l'existence de cycles avant la conversion en chaîne de caractères. On peut par exemple fournir une fonction de remplacement comme deuxième argument de la fonction {{jsxref("JSON.stringify()")}}.
 
-<pre class="brush: js">const getCircularReplacer = () =&gt; {
+```js
+const getCircularReplacer = () => {
   const seen = new WeakSet();
-  return (key, value) =&gt; {
-    if (typeof value === "object" &amp;&amp; value !== null) {
+  return (key, value) => {
+    if (typeof value === "object" && value !== null) {
       if (seen.has(value)) {
         return;
       }
@@ -57,13 +59,12 @@ b.child = a;
 };
 
 JSON.stringify(circularReference, getCircularReplacer());
-// {"otherData":123}</pre>
+// {"otherData":123}
+```
 
-<p>On peut également utiliser une bibliothèque ou une fonction utilitaire pour ce scénario. comme <a href="https://github.com/douglascrockford/JSON-js/blob/master/cycle.js">cycle.js</a>.</p>
+On peut également utiliser une bibliothèque ou une fonction utilitaire pour ce scénario. comme [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js).
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("JSON.stringify")}}</li>
- <li><a href="https://github.com/douglascrockford/JSON-js/blob/master/cycle.js">cycle.js</a> qui introduit deux fonctions : <code>JSON.decycle</code> <code>et JSON.retrocycle</code> qui permettent d'encoder et de décoder des structures cycliques en JSON.</li>
-</ul>
+- {{jsxref("JSON.stringify")}}
+- [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js) qui introduit deux fonctions : `JSON.decycle` `et JSON.retrocycle` qui permettent d'encoder et de décoder des structures cycliques en JSON.

@@ -9,28 +9,28 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Getter_only
 original_slug: Web/JavaScript/Reference/Erreurs/Getter_only
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="syntaxbox">TypeError: Assignment to read-only properties is not allowed in strict mode (Edge)
-TypeError: setting getter-only property "x" (Firefox)
-TypeError: Cannot set property "prop" of #&lt;Object&gt; which has only a getter (Chrome)
-</pre>
+    TypeError: Assignment to read-only properties is not allowed in strict mode (Edge)
+    TypeError: setting getter-only property "x" (Firefox)
+    TypeError: Cannot set property "prop" of #<Object> which has only a getter (Chrome)
 
-<h2 id="Type_d'erreur">Type d'erreur</h2>
+## Type d'erreur
 
-<p>{{jsxref("TypeError")}}, uniquement en <a href="/en-US/docs/Web/JavaScript/Reference/Strict_mode">mode strict</a>.</p>
+{{jsxref("TypeError")}}, uniquement en [mode strict](/en-US/docs/Web/JavaScript/Reference/Strict_mode).
 
-<h2 id="Quel_est_le_problème">Quel est le problème ?</h2>
+## Quel est le problème ?
 
-<p>On essaie de fournir une nouvelle valeur pour une propriété qui ne dispose que d'un <a href="/fr/docs/Web/JavaScript/Reference/Fonctions/get">accesseur</a>. Ceci échouera en mode non-strict mais lèvera une exception {{jsxref("TypeError")}} en <a href="/fr/docs/Web/JavaScript/Reference/Strict_mode">mode strict</a>.</p>
+On essaie de fournir une nouvelle valeur pour une propriété qui ne dispose que d'un [accesseur](/fr/docs/Web/JavaScript/Reference/Fonctions/get). Ceci échouera en mode non-strict mais lèvera une exception {{jsxref("TypeError")}} en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans l'exemple qui suit, on voit comment créer un accesseur sur une propriété. En revanche, dans la définition de l'objet, on n'inclut aucun <a href="/fr/docs/Web/JavaScript/Reference/Fonctions/set">mutateur</a> et une exception <code>TypeError</code> sera déclenchée lorsqu'on voudra modifier la propriété <code>temperature</code> pour la passer à <code>30</code>. Pour plus de détails, on pourra consulter la page {{jsxref("Object.defineProperty()")}}.</p>
+Dans l'exemple qui suit, on voit comment créer un accesseur sur une propriété. En revanche, dans la définition de l'objet, on n'inclut aucun [mutateur](/fr/docs/Web/JavaScript/Reference/Fonctions/set) et une exception `TypeError` sera déclenchée lorsqu'on voudra modifier la propriété `temperature` pour la passer à `30`. Pour plus de détails, on pourra consulter la page {{jsxref("Object.defineProperty()")}}.
 
-<pre class="brush: js example-bad">"use strict";
+```js example-bad
+"use strict";
 
 function Archiver() {
   var temperature = null;
@@ -47,11 +47,12 @@ arc.temperature; // 'get!'
 
 arc.temperature = 30;
 // TypeError: setting a property that has only a getter
-</pre>
+```
 
-<p>Pour corriger cette erreur, soit on retire la ligne 16 (où on tente de modifier la propriété) soit on implémente un mutateur, comme ceci :</p>
+Pour corriger cette erreur, soit on retire la ligne 16 (où on tente de modifier la propriété) soit on implémente un mutateur, comme ceci :
 
-<pre class="brush: js example-good highlight[12]">"use strict";
+```js example-good
+"use strict";
 
 function Archiver() {
   var temperature = null;
@@ -75,11 +76,10 @@ var arc = new Archiver();
 arc.temperature; // 'get!'
 arc.temperature = 11;
 arc.temperature = 13;
-arc.getArchive(); // [{ val: 11 }, { val: 13 }]</pre>
+arc.getArchive(); // [{ val: 11 }, { val: 13 }]
+```
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Object.defineProperty()")}}</li>
- <li>{{jsxref("Object.defineProperties()")}}</li>
-</ul>
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Object.defineProperties()")}}

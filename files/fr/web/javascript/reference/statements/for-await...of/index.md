@@ -8,34 +8,32 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/for-await...of
 original_slug: Web/JavaScript/Reference/Instructions/for-await...of
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>L'instruction <strong><code>for await...of</code> </strong>permet de créer une boucle qui parcourt les objets itérables asynchrones de la même façon qu'on parcourt les itérables synchrones (tels que les chaînes de caractères ({{jsxref("String")}}), les tableaux {{jsxref("Array")}}, les objets semblables aux tableaux comme {{jsxref("Fonctions/arguments", "arguments")}} ou {{domxref("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}. Cette instruction invoque un mécanisme d'itération spécifique et les instructions à exécuter pour chaque propriété de l'objet.</p>
+L'instruction **`for await...of` **permet de créer une boucle qui parcourt les objets itérables asynchrones de la même façon qu'on parcourt les itérables synchrones (tels que les chaînes de caractères ({{jsxref("String")}}), les tableaux {{jsxref("Array")}}, les objets semblables aux tableaux comme {{jsxref("Fonctions/arguments", "arguments")}} ou {{domxref("NodeList")}}), {{jsxref("TypedArray")}}, {{jsxref("Map")}}, {{jsxref("Set")}}. Cette instruction invoque un mécanisme d'itération spécifique et les instructions à exécuter pour chaque propriété de l'objet.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">for await (<em>variable</em> of <em>iterable</em>) {
-  <em>instruction
-</em>}
-</pre>
+    for await (variable of iterable) {
+      instruction
+    }
 
-<dl>
- <dt><code>variable</code></dt>
- <dd>À chaque itération, la valeur d'une propriété différente est affectée à <em>variable</em>. Cette variable peut être déclarée avec <code>const</code>, <code>let</code> ou <code>var</code>.</dd>
- <dt><code>iterable</code></dt>
- <dd>Un objet pour lequel on parcourt les propriétés itérables.</dd>
-</dl>
+- `variable`
+  - : À chaque itération, la valeur d'une propriété différente est affectée à _variable_. Cette variable peut être déclarée avec `const`, `let` ou `var`.
+- `iterable`
+  - : Un objet pour lequel on parcourt les propriétés itérables.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Parcourir_des_itérables_asynchrones">Parcourir des itérables asynchrones</h3>
+### Parcourir des itérables asynchrones
 
-<pre class="brush:js">var asyncIterable = {
+```js
+var asyncIterable = {
   [Symbol.asyncIterator]() {
     return {
       i: 0,
       next() {
-        if (this.i &lt; 3) {
+        if (this.i < 3) {
           return Promise.resolve({ value: this.i++, done: false });
         }
 
@@ -53,31 +51,32 @@ original_slug: Web/JavaScript/Reference/Instructions/for-await...of
 // 0
 // 1
 // 2
-</pre>
+```
 
-<h3 id="Parcourir_des_générateurs_asynchrones">Parcourir des générateurs asynchrones</h3>
+### Parcourir des générateurs asynchrones
 
-<p>Les générateurs asynchrones implémentent le protocole d'itérateur asynchrone et on peut donc les parcourir avec <code>for await...of</code>:</p>
+Les générateurs asynchrones implémentent le protocole d'itérateur asynchrone et on peut donc les parcourir avec `for await...of`:
 
-<pre>async function* asyncGenerator() {
-  var i = 0;
-  while (i &lt; 3) {
-    yield i++;
-  }
-}
+    async function* asyncGenerator() {
+      var i = 0;
+      while (i < 3) {
+        yield i++;
+      }
+    }
 
-(async function() {
-  for await (let num of asyncGenerator()) {
-    console.log(num);
-  }
-})();
-// 0
-// 1
-// 2</pre>
+    (async function() {
+      for await (let num of asyncGenerator()) {
+        console.log(num);
+      }
+    })();
+    // 0
+    // 1
+    // 2
 
-<p>Pour prendre un exemple plus concret, on peut parcourir les données fournies par une API avec un générateur asynchrone grâce à <code>for await... of</code>. Dans cet exemple, on commence par créer un itérateur asynchrone à partir d'un flux de données puis on utilise cet itérateur et <code>for await...of</code> afin de calculer la taille de la réponse fournie par l'API :</p>
+Pour prendre un exemple plus concret, on peut parcourir les données fournies par une API avec un générateur asynchrone grâce à `for await... of`. Dans cet exemple, on commence par créer un itérateur asynchrone à partir d'un flux de données puis on utilise cet itérateur et `for await...of` afin de calculer la taille de la réponse fournie par l'API :
 
-<pre class="brush: js">async function* streamAsyncIterator(stream) {
+```js
+async function* streamAsyncIterator(stream) {
   const reader = stream.getReader();
   try {
     while (true) {
@@ -107,33 +106,19 @@ async function getResponseSize(url) {
   console.log(`Taille de la réponse : ${responseSize} octets`);
   return responseSize;
 }
-getResponseSize('https://jsonplaceholder.typicode.com/photos');</pre>
+getResponseSize('https://jsonplaceholder.typicode.com/photos');
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'ECMAScript Language: The for-in, for-of, and for-await-of Statements')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                                                    | État                         | Commentaires |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
+| {{SpecName('ESDraft', '#sec-for-in-and-for-of-statements', 'ECMAScript Language: The for-in, for-of, and for-await-of Statements')}} | {{Spec2('ESDraft')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.statements.for_await_of")}}</p>
+{{Compat("javascript.statements.for_await_of")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Instructions/for...of")}}</li>
-</ul>
+- {{jsxref("Instructions/for...of")}}

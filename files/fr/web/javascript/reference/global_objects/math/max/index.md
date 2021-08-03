@@ -9,104 +9,84 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/max
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/max
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La fonction <code><strong>Math.max()</strong></code> renvoie le plus grand nombre d'une série de 0 ou plusieurs nombres.</p>
+La fonction **`Math.max()`** renvoie le plus grand nombre d'une série de 0 ou plusieurs nombres.
 
-<div>{{EmbedInteractiveExample("pages/js/math-max.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-max.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Math.max([<var>valeur1</var>[,<var>valeur2</var>, ...]]) </pre>
+    Math.max([valeur1[,valeur2, ...]])
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>valeur1, valeur2, ...</code></dt>
- <dd>Des nombres.</dd>
-</dl>
+- `valeur1, valeur2, ...`
+  - : Des nombres.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Le plus grand des nombres passés en arguments. S'il existe un des arguments qui ne peut pas être converti en nombre, c'est {{jsxref("NaN")}} qui sera renvoyé.</p>
+Le plus grand des nombres passés en arguments. S'il existe un des arguments qui ne peut pas être converti en nombre, c'est {{jsxref("NaN")}} qui sera renvoyé.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p><code>max()</code> est une méthode statique de <code>Math</code> et doit toujours être utilisée avec la syntaxe <code>Math.max()</code>, elle ne doit pas être appelée comme la méthode d'un autre objet qui aurait été créé (<code>Math</code> n'est pas un constructeur).</p>
+`max()` est une méthode statique de `Math` et doit toujours être utilisée avec la syntaxe `Math.max()`, elle ne doit pas être appelée comme la méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
 
-<p>Si aucun argument n'est fourni, le résultat sera -{{jsxref("Infinity")}}.</p>
+Si aucun argument n'est fourni, le résultat sera -{{jsxref("Infinity")}}.
 
-<p>Si au moins un des arguments ne peut pas être converti en un nombre, le résultat sera {{jsxref("NaN")}}.</p>
+Si au moins un des arguments ne peut pas être converti en un nombre, le résultat sera {{jsxref("NaN")}}.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<h3 id="Utiliser_Math.max()">Utiliser <code>Math.max()</code></h3>
+### Utiliser `Math.max()`
 
-<pre class="brush: js">Math.max(10, 20);   //  20
+```js
+Math.max(10, 20);   //  20
 Math.max(-10, -20); // -10
 Math.max(-10, 20);  //  20
-</pre>
+```
 
-<h3 id="Obtenir_l'élément_maximum_d'un_tableau">Obtenir l'élément maximum d'un tableau</h3>
+### Obtenir l'élément maximum d'un tableau
 
-<p>La méthode {{jsxref("Array.prototype.reduce()")}} peut être utilisée pour déterminer la valeur maximale d'un tableau de nombre en comparant les valeurs qui se suivent :</p>
+La méthode {{jsxref("Array.prototype.reduce()")}} peut être utilisée pour déterminer la valeur maximale d'un tableau de nombre en comparant les valeurs qui se suivent :
 
-<pre class="brush: js">var arr = [1, 2, 3];
+```js
+var arr = [1, 2, 3];
 var max = arr.reduce(function(a,b) {
   return Math.max(a, b);
-});</pre>
+});
+```
 
-<p>On peut également utiliser {{jsxref("Function.prototype.apply()")}} afin de trouver le maximum parmi un tableau de nombres. <code>getMaxTableau([1,2,3])</code> sera équivalent à <code>Math.max(1, 2, 3)</code>, mais <code>getMaxTableau</code> pourra être utilisé sur des tableaux de n'importe quelle taille.</p>
+On peut également utiliser {{jsxref("Function.prototype.apply()")}} afin de trouver le maximum parmi un tableau de nombres. `getMaxTableau([1,2,3])` sera équivalent à `Math.max(1, 2, 3)`, mais `getMaxTableau` pourra être utilisé sur des tableaux de n'importe quelle taille.
 
-<pre class="brush:js">function getMaxTableau(tableauNumérique) {
+```js
+function getMaxTableau(tableauNumérique) {
     return Math.max.apply(null, tableauNumérique);
-}</pre>
+}
+```
 
-<p>Avec le nouvel {{jsxref("Opérateurs/Affecter_par_décomposition","opérateur de décomposition","","1")}}, on pourra également utiliser cette syntaxe, plus concise et plus simple :</p>
+Avec le nouvel {{jsxref("Opérateurs/Affecter_par_décomposition","opérateur de décomposition","","1")}}, on pourra également utiliser cette syntaxe, plus concise et plus simple :
 
-<pre class="brush: js">var arr = [1, 2, 3];
-var max = Math.max(...arr);</pre>
+```js
+var arr = [1, 2, 3];
+var max = Math.max(...arr);
+```
 
-<p>Attention avec la décomposition et <code>apply()</code> qui pourront échouer s'il y a trop d'éléments dans le tableau (car ceux-ci seront passés en arguments). Pour plus d'informations, consulter <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/apply#Utiliser_apply_et_des_fonctions_natives">Utiliser apply() et les fonctions natives</a>. La méthode proposée avec <code>reduce()</code> n'a pas cette contrainte.</p>
+Attention avec la décomposition et `apply()` qui pourront échouer s'il y a trop d'éléments dans le tableau (car ceux-ci seront passés en arguments). Pour plus d'informations, consulter [Utiliser apply() et les fonctions natives](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/apply#Utiliser_apply_et_des_fonctions_natives). La méthode proposée avec `reduce()` n'a pas cette contrainte.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.2.11', 'Math.max')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.max', 'Math.max')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.max', 'Math.max')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                        | État                         | Commentaires                                          |
+| -------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.2.11', 'Math.max')}} | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-math.max', 'Math.max')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-math.max', 'Math.max')}} | {{Spec2('ESDraft')}} |                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Math.max")}}</p>
+{{Compat("javascript.builtins.Math.max")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Math.min()")}}</li>
-</ul>
+- {{jsxref("Math.min()")}}

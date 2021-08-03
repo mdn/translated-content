@@ -10,30 +10,31 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator
 original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/asyncIterator
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Le symbole connu <code><strong>Symbol.asyncIterator</strong></code> définit l'itérateur asynchrone par défaut d'un objet. Si cette propriété est définie sur un objet, celui-ci est un itérable asynchrone et peut être utilisé avec une boucle <code><a href="/fr/docs/Web/JavaScript/Reference/Instructions/for-await...of">for await...of</a></code>.</p>
+Le symbole connu **`Symbol.asyncIterator`** définit l'itérateur asynchrone par défaut d'un objet. Si cette propriété est définie sur un objet, celui-ci est un itérable asynchrone et peut être utilisé avec une boucle [`for await...of`](/fr/docs/Web/JavaScript/Reference/Instructions/for-await...of).
 
-<p>{{js_property_attributes(0,0,0)}}</p>
+{{js_property_attributes(0,0,0)}}
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Le symbole <code>Symbol.asyncIterator</code> est un symbole natif utilisé pour accéder à la méthode <code>@@asyncIterator</code> d'un objet. Pour qu'un objet soit un itérable asynchrone, il doit avoir une clé <code>Symbol.asyncIterator</code>.</p>
+Le symbole `Symbol.asyncIterator` est un symbole natif utilisé pour accéder à la méthode `@@asyncIterator` d'un objet. Pour qu'un objet soit un itérable asynchrone, il doit avoir une clé `Symbol.asyncIterator`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Itérable_asynchrone_personnalisé">Itérable asynchrone personnalisé</h3>
+### Itérable asynchrone personnalisé
 
-<p>Il est possible de définir son propre itérable en définissant la propriété <code>[Symbol.asyncIterator]</code> d'un objet :</p>
+Il est possible de définir son propre itérable en définissant la propriété `[Symbol.asyncIterator]` d'un objet :
 
-<pre class="brush: js">const myAsyncIterable = new Object();
+```js
+const myAsyncIterable = new Object();
 myAsyncIterable[Symbol.asyncIterator] = async function*() {
     yield "coucou";
     yield "l'itération";
     yield "asynchrone !";
 };
 
-(async () =&gt; {
+(async () => {
     for await (const x of myAsyncIterable) {
         console.log(x);
         // expected output:
@@ -42,38 +43,23 @@ myAsyncIterable[Symbol.asyncIterator] = async function*() {
         //    "asynchrone !"
     }
 })();
-</pre>
+```
 
-<h3 id="Itérables_asynchrones_natifs">Itérables asynchrones natifs</h3>
+### Itérables asynchrones natifs
 
-<p>Il n'existe actuellement pas d'objets JavaScript natifs qui possèdent la clé <code>[Symbol.asyncIterator]</code> par défaut. Toutefois, les flux (<em>Streams</em>) WHATWG pourraient devenir les premiers objets natifs itérables asynchrones.</p>
+Il n'existe actuellement pas d'objets JavaScript natifs qui possèdent la clé `[Symbol.asyncIterator]` par défaut. Toutefois, les flux (_Streams_) WHATWG pourraient devenir les premiers objets natifs itérables asynchrones.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES2018', '#sec-symbol.asynciterator', 'Symbol.asyncIterator')}}</td>
-   <td>{{Spec2('ES2018')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                     | Commentaires |
+| ---------------------------------------------------------------------------------------------------- | ------------------------ | ------------ |
+| {{SpecName('ES2018', '#sec-symbol.asynciterator', 'Symbol.asyncIterator')}} | {{Spec2('ES2018')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{compat("javascript.builtins.Symbol.asyncIterator")}}</p>
+{{compat("javascript.builtins.Symbol.asyncIterator")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration">Les protocoles d'itération</a></li>
- <li><code><a href="/fr/docs/Web/JavaScript/Reference/Instructions/for-await...of">for await... of</a></code></li>
-</ul>
+- [Les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration)
+- [`for await... of`](/fr/docs/Web/JavaScript/Reference/Instructions/for-await...of)

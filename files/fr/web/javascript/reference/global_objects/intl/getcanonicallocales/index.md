@@ -10,61 +10,47 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/getCanonicalLocales
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/getCanonicalLocales
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>Intl.getCanonicalLocales()</code></strong> renvoie un tableau contenant les noms canoniques des locales. Les doublons seront fusionnés et les éléments passés en arguments doivent être des étiquettes de langues valides.</p>
+La méthode **`Intl.getCanonicalLocales()`** renvoie un tableau contenant les noms canoniques des locales. Les doublons seront fusionnés et les éléments passés en arguments doivent être des étiquettes de langues valides.
 
-<div>{{EmbedInteractiveExample("pages/js/intl-getcanonicallocales.html")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-getcanonicallocales.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Intl.getCanonicalLocales(locales)</pre>
+    Intl.getCanonicalLocales(locales)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>locales</code></dt>
- <dd>Une liste de chaînes ({{jsxref("String")}}) dont on veut obtenir les noms canoniques pour les locales correspondantes.</dd>
-</dl>
+- `locales`
+  - : Une liste de chaînes ({{jsxref("String")}}) dont on veut obtenir les noms canoniques pour les locales correspondantes.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un tableau qui contient les noms canoniques des locales.</p>
+Un tableau qui contient les noms canoniques des locales.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">Intl.getCanonicalLocales("EN-US"); // ["en-US"]
+```js
+Intl.getCanonicalLocales("EN-US"); // ["en-US"]
 Intl.getCanonicalLocales(["EN-US", "Fr"]); // ["en-US", "fr"]
 
 Intl.getCanonicalLocales("EN_US");
 // RangeError:'EN_US' is not a structurally valid language tag
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#sec-intl.getcanonicallocales', 'Intl.getCanonicalLocales')}}</td>
-   <td>{{Spec2('ES Int Draft')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | État                             | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName('ES Int Draft', '#sec-intl.getcanonicallocales', 'Intl.getCanonicalLocales')}} | {{Spec2('ES Int Draft')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Intl.getCanonicalLocales")}}</p>
+{{Compat("javascript.builtins.Intl.getCanonicalLocales")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("NumberFormat.supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}</li>
- <li>{{jsxref("DateTimeFormat.supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}</li>
- <li>{{jsxref("Collator.supportedLocalesOf", "Intl.Collator.supportedLocalesOf()")}}</li>
-</ul>
+- {{jsxref("NumberFormat.supportedLocalesOf", "Intl.NumberFormat.supportedLocalesOf()")}}
+- {{jsxref("DateTimeFormat.supportedLocalesOf", "Intl.DateTimeFormat.supportedLocalesOf()")}}
+- {{jsxref("Collator.supportedLocalesOf", "Intl.Collator.supportedLocalesOf()")}}

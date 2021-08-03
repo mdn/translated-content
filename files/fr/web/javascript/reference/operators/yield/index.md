@@ -10,115 +10,80 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/yield
 original_slug: Web/JavaScript/Reference/Opérateurs/yield
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>Le mot-clé <code>yield</code> est utilisé pour suspendre et reprendre une fonction génératrice ({{jsxref("Statements/function*", "function*")}} ou <a href="/fr/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function">une fonction génératrice historique</a>).</p>
+Le mot-clé `yield` est utilisé pour suspendre et reprendre une fonction génératrice ({{jsxref("Statements/function*", "function*")}} ou [une fonction génératrice historique](/fr/docs/Web/JavaScript/Reference/Statements/Legacy_generator_function)).
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-yield.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-yield.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>[[rv =]]</em> yield [[<em>expression</em>]];</pre>
+    [[rv =]] yield [[expression]];
 
-<dl>
- <dt><code>expression</code></dt>
- <dd>Définit la valeur à retourner depuis la fonction génératrice via <a href="/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_«_itérateur_»">le protocole itérateur</a>. Si omise, <code>undefined</code> sera retournée à la place.</dd>
- <dt><code>rv</code></dt>
- <dd>Retourne la valeur optionnelle passée à la méthode <code>next()</code> pour reprendre son exécution.</dd>
-</dl>
+- `expression`
+  - : Définit la valeur à retourner depuis la fonction génératrice via [le protocole itérateur](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_«_itérateur_»). Si omise, `undefined` sera retournée à la place.
+- `rv`
+  - : Retourne la valeur optionnelle passée à la méthode `next()` pour reprendre son exécution.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Le mot-clé <code>yield</code> suspend une fonction génératrice et la valeur de l'expression suivant le mot-clé <code>yield</code> est retournée à l'appelant du générateur. Il peut être vu comme une version générateur du mot-clé <code>return</code>.</p>
+Le mot-clé `yield` suspend une fonction génératrice et la valeur de l'expression suivant le mot-clé `yield` est retournée à l'appelant du générateur. Il peut être vu comme une version générateur du mot-clé `return`.
 
-<p>Le mot-clé <code>yield</code> ne peut être appelé qu'à partir de la fonction génératrice qui le contient. Il ne peut pas être utilisé depuis des fonctions imbriquées ou avec des <em>callbacks</em>.</p>
+Le mot-clé `yield` ne peut être appelé qu'à partir de la fonction génératrice qui le contient. Il ne peut pas être utilisé depuis des fonctions imbriquées ou avec des _callbacks_.
 
-<p>Le mot-clé <code>yield</code> retourne en fait un objet <code>IteratorResult</code> ayant deux propriétés, <code>value</code> et <code>done.</code> La propriété <code>value</code> est le résultat de l'évaluation de l'expression <code>yield</code>, et <code>done</code> est <code>false</code>, indiquant que la fonction génératrice n'est pas complètement terminée.</p>
+Le mot-clé `yield` retourne en fait un objet `IteratorResult` ayant deux propriétés, `value` et `done.` La propriété `value` est le résultat de l'évaluation de l'expression `yield`, et `done` est `false`, indiquant que la fonction génératrice n'est pas complètement terminée.
 
-<p>Une fois suspendue sur une expression <code>yield</code>, l'exécution du code du générateur reste suspendue jusqu'à ce que la méthode <code>next()</code> du générateur soit appelée. Chaque fois que la méthode <code>next()</code> du générateur est appelée, le générateur reprend l'exécution et s'exécute jusqu'à ce qu'elle atteigne l'une des situations suivantes :</p>
+Une fois suspendue sur une expression `yield`, l'exécution du code du générateur reste suspendue jusqu'à ce que la méthode `next()` du générateur soit appelée. Chaque fois que la méthode `next()` du générateur est appelée, le générateur reprend l'exécution et s'exécute jusqu'à ce qu'elle atteigne l'une des situations suivantes :
 
-<ul>
- <li>
-  <p>un <code>yield</code>, ce qui provoque une nouvelle pause du générateur et retourne la nouvelle valeur du générateur ; la prochaine fois que <code>next()</code> sera appelé, l'exécution reprendra à l'instruction immédiatement après le <code>yield</code> ;</p>
- </li>
- <li>
-  <p>{{jsxref ("Statements/throw", "throw")}} est utilisé pour déclencher une exception depuis le générateur ; cela arrête entièrement l'exécution du générateur et l'exécution reprend dans l'appelant, comme c'est normalement le cas lorsqu'une exception est déclenchée ;</p>
- </li>
- <li>
-  <p>la fin de la fonction génératrice est atteinte ; dans ce cas, l'exécution du générateur se termine et un <code>IteratorResult</code> est retourné à l'appelant, dans lequel la valeur est {{jsxref ("undefined")}} et <code>done</code> est <code>true</code> ;</p>
- </li>
- <li>
-  <p>une instruction {{jsxref ("Statements/return", "return")}} est atteinte ; dans ce cas, l'exécution du générateur se termine et un <code>IteratorResult</code> est retourné à l'appelant dans lequel la <code>value</code> est la valeur spécifiée par l'instruction <code>return</code> et <code>done</code> vaut <code>true</code>.</p>
- </li>
-</ul>
+- un `yield`, ce qui provoque une nouvelle pause du générateur et retourne la nouvelle valeur du générateur ; la prochaine fois que `next()` sera appelé, l'exécution reprendra à l'instruction immédiatement après le `yield` ;
+- {{jsxref ("Statements/throw", "throw")}} est utilisé pour déclencher une exception depuis le générateur ; cela arrête entièrement l'exécution du générateur et l'exécution reprend dans l'appelant, comme c'est normalement le cas lorsqu'une exception est déclenchée ;
+- la fin de la fonction génératrice est atteinte ; dans ce cas, l'exécution du générateur se termine et un `IteratorResult` est retourné à l'appelant, dans lequel la valeur est {{jsxref ("undefined")}} et `done` est `true` ;
+- une instruction {{jsxref ("Statements/return", "return")}} est atteinte ; dans ce cas, l'exécution du générateur se termine et un `IteratorResult` est retourné à l'appelant dans lequel la `value` est la valeur spécifiée par l'instruction `return` et `done` vaut `true`.
 
-<p>Si une valeur optionnelle est passée à la méthode <code>next()</code> du générateur, cette valeur devient la valeur retournée par l'opération <code>yield</code> en cours du générateur.</p>
+Si une valeur optionnelle est passée à la méthode `next()` du générateur, cette valeur devient la valeur retournée par l'opération `yield` en cours du générateur.
 
-<p>Entre le chemin de code du générateur, ses opérateurs <code>yield</code>, et la possibilité de spécifier une nouvelle valeur de départ en la passant à {{jsxref ("Generator.prototype.next()")}}, les générateurs offrent énormément de puissance et de contrôle.</p>
+Entre le chemin de code du générateur, ses opérateurs `yield`, et la possibilité de spécifier une nouvelle valeur de départ en la passant à {{jsxref ("Generator.prototype.next()")}}, les générateurs offrent énormément de puissance et de contrôle.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Le code suivant est la déclaration d'un exemple de fonction génératrice :</p>
+Le code suivant est la déclaration d'un exemple de fonction génératrice :
 
-<pre><code>function* compteVentesPommes () {
-  var listeVentes = [3, 7, 5];
-  for (var i = 0; i &lt; listeVentes.length; i++) {
-    yield listeVentes[i];
-  }
-}</code></pre>
+    function* compteVentesPommes () {
+      var listeVentes = [3, 7, 5];
+      for (var i = 0; i < listeVentes.length; i++) {
+        yield listeVentes[i];
+      }
+    }
 
-<p>Une fois qu'une fonction génératrice est définie, elle peut être utilisée en construisant un itérateur comme indiqué.</p>
+Une fois qu'une fonction génératrice est définie, elle peut être utilisée en construisant un itérateur comme indiqué.
 
-<pre><code>var magasinPommes = compteVentesPommes(); // Générateur { }
-console.log(magasinPommes.next()); // { value: 3, done: false }
-console.log(magasinPommes.next()); // { value: 7, done: false }
-console.log(magasinPommes.next()); // { value: 5, done: false }
-console.log(magasinPommes.next()); // { value: undefined, done: true }</code></pre>
+    var magasinPommes = compteVentesPommes(); // Générateur { }
+    console.log(magasinPommes.next()); // { value: 3, done: false }
+    console.log(magasinPommes.next()); // { value: 7, done: false }
+    console.log(magasinPommes.next()); // { value: 5, done: false }
+    console.log(magasinPommes.next()); // { value: undefined, done: true }
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES2015', '#prod-YieldExpression', 'Yield')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#prod-YieldExpression', 'Yield')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | Statut                       | Commentaires         |
+| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#prod-YieldExpression', 'Yield')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#prod-YieldExpression', 'Yield')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.operators.yield")}}</p>
+{{Compat("javascript.operators.yield")}}
 
-<h2 id="Notes_spécifiques_à_Firefox">Notes spécifiques à Firefox</h2>
+## Notes spécifiques à Firefox
 
-<ul>
- <li>À partir de Gecko 29 {{geckoRelease(29)}}, une fonction génératrice terminée ne déclenche plus une {{jsxref("TypeError")}} "generator has already finished". À la place, elle renvoie un objet <code>IteratorResult</code> tel que <code>{ value: undefined, done: true }</code> ({{bug(958951)}}).</li>
- <li>À partir de Gecko 33 {{geckoRelease(33)}}, l'analyse de l'expression <code>yield</code> a été mise à jour afin d'être conforme aux spécifications ES2015 ({{bug(981599)}}):
-  <ul>
-   <li>L'expression après le mot-clé <code>yield</code> est optionnelle et l'omettre ne déclenche plus une {{jsxref("SyntaxError")}} : <code>function* compteVentesPommes() { yield; }</code></li>
-  </ul>
- </li>
-</ul>
+- À partir de Gecko 29 {{geckoRelease(29)}}, une fonction génératrice terminée ne déclenche plus une {{jsxref("TypeError")}} "generator has already finished". À la place, elle renvoie un objet `IteratorResult` tel que `{ value: undefined, done: true }` ({{bug(958951)}}).
+- À partir de Gecko 33 {{geckoRelease(33)}}, l'analyse de l'expression `yield` a été mise à jour afin d'être conforme aux spécifications ES2015 ({{bug(981599)}}):
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+  - L'expression après le mot-clé `yield` est optionnelle et l'omettre ne déclenche plus une {{jsxref("SyntaxError")}} : `function* compteVentesPommes() { yield; }`
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Guide/Le_protocole_iterator">Le protocole itérateur</a></li>
- <li>L'instruction {{jsxref("Instructions/function*", "function*")}}</li>
- <li>L'expression {{jsxref("Opérateurs/function*", "function*")}}</li>
- <li>L'opérateur {{jsxref("Opérateurs/yield*", "yield*")}}</li>
-</ul>
+## Voir aussi
+
+- [Le protocole itérateur](/fr/docs/Web/JavaScript/Guide/Le_protocole_iterator)
+- L'instruction {{jsxref("Instructions/function*", "function*")}}
+- L'expression {{jsxref("Opérateurs/function*", "function*")}}
+- L'opérateur {{jsxref("Opérateurs/yield*", "yield*")}}

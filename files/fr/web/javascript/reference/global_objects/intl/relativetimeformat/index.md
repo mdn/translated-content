@@ -10,74 +10,65 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/RelativeTimeFormat
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>L'objet <strong><code>Intl.RelativeTimeFormat</code></strong> est un constructeur fournissant des objets pour mettre en forme des données temporelles relatives en respectant le format des locales.</p>
+L'objet **`Intl.RelativeTimeFormat`** est un constructeur fournissant des objets pour mettre en forme des données temporelles relatives en respectant le format des locales.
 
-<div>{{EmbedInteractiveExample("pages/js/intl-relativetimeformat.html")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-relativetimeformat.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre>new Intl.RelativeTimeFormat([<var>locales</var>[, <var>options</var>]])</pre>
+    new Intl.RelativeTimeFormat([locales[, options]])
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>locales</code></dt>
- <dd>
- <p>Une chaine de caractères avec un identifiant de langue BCP 47, ou un tableau de ce type de chaine de caractères. Pour le format général et l'interprétation de l'argument <code>locales</code>, voir la page {{jsxref("Objets_globaux/Intl","Intl","#L'identification_et_le_choix_de_la_locale")}}.</p>
- </dd>
- <dt><code>options</code> {{optional_inline}}</dt>
- <dd>
- <p>Optionnel, un objet possédant tout ou partie des propriétés suivantes :</p>
- <dl>
-  <dt><code>localeMatcher</code></dt>
-  <dd>L'algorithme de correspondance à utiliser pour la locale. Les valeurs possibles sont <code>"lookup"</code> et <code>"best fit"</code> ; le défaut est <code>"best fit"</code>. Pour des informations sur cette option, voir la page {{jsxref("Objets_globaux/Intl","Intl","##Choix_de_la_locale")}}.</dd>
-  <dt><code>numeric</code></dt>
-  <dd>Le format du message de sortie. Les valeurs possibles sont <code>"always"</code> (par exemple <code>1 day ago</code>) ou  <code>"auto"</code> (par exemple <code>yesterday</code>). <code>"auto"</code> permet de ne pas toujours avoir de valeurs numériques dans le message produit.</dd>
-  <dt><code>style</code></dt>
-  <dd>La longueur du message internationalisé. Les valeurs possibles sont : <code>"long"</code> (la valeur par défaut) (par exemple : <code>in 1 month</code>), <code>"short"</code> (par exemple : <code>in 1 mo.</code>) ou  <code>"narrow"</code> (par exemple : <code>in 1 mo.</code>). Le style <code>narrow</code> peut être semblable au style <code>short</code> pour certaines locales.</dd>
- </dl>
- </dd>
-</dl>
+- `locales`
+  - : Une chaine de caractères avec un identifiant de langue BCP 47, ou un tableau de ce type de chaine de caractères. Pour le format général et l'interprétation de l'argument `locales`, voir la page {{jsxref("Objets_globaux/Intl","Intl","#L'identification_et_le_choix_de_la_locale")}}.
+- `options` {{optional_inline}}
 
-<h2 id="Description">Description</h2>
+  - : Optionnel, un objet possédant tout ou partie des propriétés suivantes :
 
-<h3 id="Propriétés">Propriétés</h3>
+    - `localeMatcher`
+      - : L'algorithme de correspondance à utiliser pour la locale. Les valeurs possibles sont `"lookup"` et `"best fit"` ; le défaut est `"best fit"`. Pour des informations sur cette option, voir la page {{jsxref("Objets_globaux/Intl","Intl","##Choix_de_la_locale")}}.
+    - `numeric`
+      - : Le format du message de sortie. Les valeurs possibles sont `"always"` (par exemple `1 day ago`) ou  `"auto"` (par exemple `yesterday`). `"auto"` permet de ne pas toujours avoir de valeurs numériques dans le message produit.
+    - `style`
+      - : La longueur du message internationalisé. Les valeurs possibles sont : `"long"` (la valeur par défaut) (par exemple : `in 1 month`), `"short"` (par exemple : `in 1 mo.`) ou  `"narrow"` (par exemple : `in 1 mo.`). Le style `narrow` peut être semblable au style `short` pour certaines locales.
 
-<dl>
- <dt>{{jsxref("RelativeTimeFormat.prototype", "Intl.RelativeTimeFormat.prototype")}}</dt>
- <dd>Cette propriété permet d'ajouter des propriétés à l'ensemble des instances.</dd>
-</dl>
+## Description
 
-<h3 id="Méthodes">Méthodes</h3>
+### Propriétés
 
-<dl>
- <dt>{{jsxref("RelativeTimeFormat.supportedLocalesOf", "Intl.RelativeTimeFormat.supportedLocalesOf()")}}</dt>
- <dd>Cette méthode renvoie un tableau des locales, parmi celles passées en argument, qui sont pris en charge pour le formatage internationalisé des temps relatifs sans qu'il y ait besoin d'utiliser la locale par défaut de l'environnement d'exécution.</dd>
-</dl>
+- {{jsxref("RelativeTimeFormat.prototype", "Intl.RelativeTimeFormat.prototype")}}
+  - : Cette propriété permet d'ajouter des propriétés à l'ensemble des instances.
 
-<h2 id="Les_instances_de_RelativeTimeFormat">Les instances de <code>RelativeTimeFormat</code></h2>
+### Méthodes
 
-<h3 id="Propriétés_2">Propriétés</h3>
+- {{jsxref("RelativeTimeFormat.supportedLocalesOf", "Intl.RelativeTimeFormat.supportedLocalesOf()")}}
+  - : Cette méthode renvoie un tableau des locales, parmi celles passées en argument, qui sont pris en charge pour le formatage internationalisé des temps relatifs sans qu'il y ait besoin d'utiliser la locale par défaut de l'environnement d'exécution.
 
-<p>Les instances de RelativeTimeFormat héritent des propriétés suivantes grâce à leur prototype :</p>
+## Les instances de `RelativeTimeFormat`
 
-<p>{{page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/Intl.RelativeTimeFormat/prototype', 'Propriétés')}}</p>
+### Propriétés
 
-<h3 id="Méthodes_2">Méthodes</h3>
+Les instances de RelativeTimeFormat héritent des propriétés suivantes grâce à leur prototype :
 
-<p>Les instances de <code>RelativeTimeFormat</code> héritent des méthodes suivantes grâce à leur prototype :</p>
+{{page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/Intl.RelativeTimeFormat/prototype', 'Propriétés')}}
 
-<p>{{page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/Intl.RelativeTimeFormat/prototype', 'Méthodes')}}</p>
+### Méthodes
 
-<h2 id="Exemples">Exemples</h2>
+Les instances de `RelativeTimeFormat` héritent des méthodes suivantes grâce à leur prototype :
 
-<h3 id="Utiliser_format">Utiliser <code>format()</code></h3>
+{{page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/Intl.RelativeTimeFormat/prototype', 'Méthodes')}}
 
-<p>L'exemple suivant illustre comment créer un formateur de temps relatif en anglais :</p>
+## Exemples
 
-<pre class="brush: js">// On crée un formateur en anglais en utilisant explicitement
+### Utiliser `format()`
+
+L'exemple suivant illustre comment créer un formateur de temps relatif en anglais :
+
+```js
+// On crée un formateur en anglais en utilisant explicitement
 // les valeurs par défaut.
 const rtf = new Intl.RelativeTimeFormat("en", {
     localeMatcher: "best fit", // autre valeur possible : "lookup"
@@ -87,68 +78,58 @@ const rtf = new Intl.RelativeTimeFormat("en", {
 
 // On formate un temps relatif avec une valeur négative (-1).
 rtf.format(-1, "day");
-// &gt; "1 day ago"
+// > "1 day ago"
 
 // On formate un temps relatif avec une valeur positive (1).
 rtf.format(1, "day");
-// &gt; "in 1 day"</pre>
+// > "in 1 day"
+```
 
-<h3 id="Utiliser_loption_auto">Utiliser l'option <code>auto</code></h3>
+### Utiliser l'option `auto`
 
-<p>Si l'option <code>numeric:auto</code> est passée, on aura la chaîne de caractères <code>yesterday</code> ou <code>tomorrow</code> plutôt que <code>1 day ago</code> ou <code>in 1 day</code>. De cette façon, on peut ne pas avoir de valeur numérique dans la valeur produite.</p>
+Si l'option `numeric:auto` est passée, on aura la chaîne de caractères `yesterday` ou `tomorrow` plutôt que `1 day ago` ou `in 1 day`. De cette façon, on peut ne pas avoir de valeur numérique dans la valeur produite.
 
-<pre class="brush: js">// On crée un formateur en anglais avec l'option
+```js
+// On crée un formateur en anglais avec l'option
 // numeric: "auto".
 const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 
 // On formate un temps relatif avec une valeur négative (-1).
 rtf.format(-1, "day");
-// &gt; "yesterday"
+// > "yesterday"
 
 // On formate un temps relatif avec une valeur positive (1).
 rtf.format(1, "day");
-// &gt; "tomorrow"
-</pre>
+// > "tomorrow"
+```
 
-<h3 id="Utiliser_formatToParts">Utiliser <code>formatToParts()</code></h3>
+### Utiliser `formatToParts()`
 
-<p>L'exemple suivant illustre comment créer un formateur de temps relatif qui renvoie les différents fragments pour exprimer le temps relatif internationalisé.</p>
+L'exemple suivant illustre comment créer un formateur de temps relatif qui renvoie les différents fragments pour exprimer le temps relatif internationalisé.
 
-<pre class="brush: js">const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
+```js
+const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 
 // On crée un temps relatif exprimé en jour.
 rtf.formatToParts(-1, "day");
-// &gt; [{ type: "literal", value: "yesterday"}]
+// > [{ type: "literal", value: "yesterday"}]
 
 rtf.formatToParts(100, "day");
-// &gt; [{ type: "literal", value: "in " },
+// > [{ type: "literal", value: "in " },
       { type: "integer", value: "100", unit: "day" },
       { type: "literal", value: " days" }]
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Etat</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td><a href="https://tc39.es/proposal-intl-relative-time/#sec-intl-relativetimeformat-constructor">Proposition pour le constructeur <code>Intl.RelativeTimeFormat</code></a></td>
-   <td>Proposition de niveau 3</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                      | Etat                    | Commentaires |
+| -------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
+| [Proposition pour le constructeur `Intl.RelativeTimeFormat`](https://tc39.es/proposal-intl-relative-time/#sec-intl-relativetimeformat-constructor) | Proposition de niveau 3 |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Intl.RelativeTimeFormat")}}</p>
+{{Compat("javascript.builtins.Intl.RelativeTimeFormat")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="https://developers.google.com/web/updates/2018/10/intl-relativetimeformat">L'API <code>Intl.RelativeTimeFormat</code>, un billet de Mathias Bynens (en anglais)</a></li>
-</ul>
+- [L'API `Intl.RelativeTimeFormat`, un billet de Mathias Bynens (en anglais)](https://developers.google.com/web/updates/2018/10/intl-relativetimeformat)

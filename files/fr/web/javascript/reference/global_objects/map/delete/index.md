@@ -11,64 +11,46 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/delete
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/delete
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>delete()</code></strong> permet de retirer un élément donné d'un objet <code>Map</code> grâce à sa clé.</p>
+La méthode **`delete()`** permet de retirer un élément donné d'un objet `Map` grâce à sa clé.
 
-<div>{{EmbedInteractiveExample("pages/js/map-prototype-delete.html")}}</div>
+{{EmbedInteractiveExample("pages/js/map-prototype-delete.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>maMap</var>.delete(clé);</pre>
+    maMap.delete(clé);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>clé</code></dt>
- <dd>Ce paramètre obligatoire correspond à la clé de l'élément qu'on souhaite retirer de l'objet <code>Map</code>.</dd>
-</dl>
+- `clé`
+  - : Ce paramètre obligatoire correspond à la clé de l'élément qu'on souhaite retirer de l'objet `Map`.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un booléen. La méthode renvoie <code>true</code> si un élément de l'objet <code>Map</code> a bien été retiré ou <code>false</code> si l'élément n'existe pas.</p>
+Un booléen. La méthode renvoie `true` si un élément de l'objet `Map` a bien été retiré ou `false` si l'élément n'existe pas.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var maMap = new Map();
+```js
+var maMap = new Map();
 maMap.set("truc", "toto");
 
 maMap.delete("truc"); // Renvoie true. La suppression est OK.
 maMap.has("truc");    // Renvoie false. "truc" n'est plus présent.
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-map.prototype.delete', 'Map.prototype.delete')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-map.prototype.delete', 'Map.prototype.delete')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                         | Commentaires         |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-map.prototype.delete', 'Map.prototype.delete')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-map.prototype.delete', 'Map.prototype.delete')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Map.delete")}}</p>
+{{Compat("javascript.builtins.Map.delete")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Map")}}</li>
-</ul>
+- {{jsxref("Map")}}

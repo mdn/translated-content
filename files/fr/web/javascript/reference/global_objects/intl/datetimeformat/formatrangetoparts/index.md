@@ -9,24 +9,25 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRangeToParts
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/DateTimeFormat/formatRangeToParts
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p>La fonction <strong><code>Intl.DateTimeFormat.prototype.formatRangeToParts()</code></strong> permet, selon la locale utilisée, de représenter chaque élément de l'intervalle de dates via <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/prototype">DateTimeFormat</a></code>.</p>
+La fonction **`Intl.DateTimeFormat.prototype.formatRangeToParts()`** permet, selon la locale utilisée, de représenter chaque élément de l'intervalle de dates via [`DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/prototype).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre>Intl.DateTimeFormat.prototype.formatRangeToParts(<var>dateDebut, dateFin</var>)</pre>
+    Intl.DateTimeFormat.prototype.formatRangeToParts(dateDebut, dateFin)
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Usage_basique_de_formatRangeToParts">Usage basique de <code>formatRangeToParts</code></h3>
+### Usage basique de `formatRangeToParts`
 
-<p>Cette fonction reçoit deux <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Dates</a> et retourne un <a href="/en-US/docs/Glossary/array">Array</a> d'objets contenant les élements qui représentent chaque partie de l'intervalle de date formatée, selon la locale utilisée.</p>
+Cette fonction reçoit deux [Dates](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date) et retourne un [Array](/en-US/docs/Glossary/array) d'objets contenant les élements qui représentent chaque partie de l'intervalle de date formatée, selon la locale utilisée.
 
-<pre class="brush: js">let date1 = new Date(Date.UTC(2007, 0, 10, 10, 0, 0));
+```js
+let date1 = new Date(Date.UTC(2007, 0, 10, 10, 0, 0));
 let date2 = new Date(Date.UTC(2007, 0, 10, 11, 0, 0));
-// &gt; 'Wed, 10 Jan 2007 10:00:00 GMT'
-// &gt; 'Wed, 10 Jan 2007 11:00:00 GMT'
+// > 'Wed, 10 Jan 2007 10:00:00 GMT'
+// > 'Wed, 10 Jan 2007 11:00:00 GMT'
 
 let fmt = new Intl.DateTimeFormat("en", {
     hour: 'numeric',
@@ -34,7 +35,7 @@ let fmt = new Intl.DateTimeFormat("en", {
 });
 
 console.log(fmt.formatRange(date1, date2));
-// &gt; '10:00 – 11:00 AM'
+// > '10:00 – 11:00 AM'
 
 fmt.formatRangeToParts(date1, date2);
 // retourne la valeur:
@@ -48,27 +49,15 @@ fmt.formatRangeToParts(date1, date2);
 //   { type: 'minute',    value: '00',  source: "endRange"   },
 //   { type: 'literal',   value: ' ',   source: "shared"     },
 //   { type: 'dayPeriod', value: 'AM',  source: "shared"     }
-// ]</pre>
+// ]
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td><a href="https://rawgit.com/fabalbon/proposal-intl-DateTimeFormat-formatRange/master/out/#datetimeformat-objects">Intl.DateTimeFormat.prototype.formatRange</a></td>
-   <td>Stage 3</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                                                        | Status  | Comment |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | ------- |
+| [Intl.DateTimeFormat.prototype.formatRange](https://rawgit.com/fabalbon/proposal-intl-DateTimeFormat-formatRange/master/out/#datetimeformat-objects) | Stage 3 |         |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-
-
-<p>{{Compat("javascript.builtins.Intl.DateTimeFormat.formatRangeToParts")}}</p>
+{{Compat("javascript.builtins.Intl.DateTimeFormat.formatRangeToParts")}}

@@ -11,43 +11,38 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Generator/throw
 original_slug: Web/JavaScript/Reference/Objets_globaux/Generator/throw
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>throw</strong></code><strong><code>()</code></strong> lève une erreur dans un générateur.</p>
+La méthode **`throw`\*\***`()`\*\* lève une erreur dans un générateur.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>gen</var>.throw(<var>exception</var>)</pre>
+    gen.throw(exception)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>exception</code></dt>
- <dd>L'exception à lever. On préfèrera généralement utiliser un objet qui est une instance d'{{jsxref("Error")}}.</dd>
-</dl>
+- `exception`
+  - : L'exception à lever. On préfèrera généralement utiliser un objet qui est une instance d'{{jsxref("Error")}}.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un {{jsxref("Object")}} avec deux propriétés :</p>
+Un {{jsxref("Object")}} avec deux propriétés :
 
-<ul>
- <li><code>done</code> (un booléen)
+- `done` (un booléen)
 
-  <ul>
-   <li>Qui vaut <code>true</code> lorsque l'itérateur a fini de parcourir la suite. Dans ce cas, <code>value</code> correspondra éventuellement à la valeur de retour de l'itérateur.</li>
-   <li>Qui vaut <code>false</code> si l'itérateur a pu produire la prochaine valeur de la série.</li>
-  </ul>
- </li>
- <li><code>value</code> : une valeur renvoyée par l'itérateur. Lorsque <code>done</code> vaut <code>true</code>, cette valeur peut être absente ou valoir <code>undefined</code>.</li>
-</ul>
+  - Qui vaut `true` lorsque l'itérateur a fini de parcourir la suite. Dans ce cas, `value` correspondra éventuellement à la valeur de retour de l'itérateur.
+  - Qui vaut `false` si l'itérateur a pu produire la prochaine valeur de la série.
 
-<h2 id="Exemples">Exemples</h2>
+- `value` : une valeur renvoyée par l'itérateur. Lorsque `done` vaut `true`, cette valeur peut être absente ou valoir `undefined`.
 
-<h3 id="Utiliser_throw()">Utiliser <code>throw()</code></h3>
+## Exemples
 
-<p>Dans l'exemple suivant, on utilise un générateur simple et on génère une exception grâce à la méthode <code>throw()</code>. Une exception peut être interceptée avec un bloc {{jsxref("Instructions/try...catch","try...catch")}} usuel.</p>
+### Utiliser `throw()`
 
-<pre class="brush: js">function* gen() {
+Dans l'exemple suivant, on utilise un générateur simple et on génère une exception grâce à la méthode `throw()`. Une exception peut être interceptée avec un bloc {{jsxref("Instructions/try...catch","try...catch")}} usuel.
+
+```js
+function* gen() {
   while(true) {
     try {
        yield 42;
@@ -63,36 +58,19 @@ g.next();
 g.throw(new Error("Quelque chose s'est mal passé"));
 // "Erreur interceptée !"
 // { value: 42, done: false }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-generator.prototype.throw', 'Generator.prototype.throw')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-generator.prototype.throw', 'Generator.prototype.throw')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | Statut                       | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-generator.prototype.throw', 'Generator.prototype.throw')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-generator.prototype.throw', 'Generator.prototype.throw')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Generator.throw")}}</p>
+{{Compat("javascript.builtins.Generator.throw")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Instructions/function*","function*")}}</li>
-</ul>
+- {{jsxref("Instructions/function*","function*")}}

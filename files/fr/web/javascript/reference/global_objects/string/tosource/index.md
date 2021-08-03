@@ -11,47 +11,43 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/toSource
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/toSource
 ---
-<div>{{JSRef}} {{Non-standard_header}}</div>
+{{JSRef}} {{Non-standard_header}}
 
-<p>La méthode <code><strong>toSource()</strong></code> permet de renvoyer une chaîne de caractères représentant le code source de l'objet.</p>
+La méthode **`toSource()`** permet de renvoyer une chaîne de caractères représentant le code source de l'objet.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">String.toSource()
-<var>str</var>.toSource()
-</pre>
+    String.toSource()
+    str.toSource()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une chaîne de caractères qui représente le code source de la chaîne de caractères appelante.</p>
+Une chaîne de caractères qui représente le code source de la chaîne de caractères appelante.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code>toSource()</code> renvoie les valeurs suivantes :</p>
+La méthode `toSource()` renvoie les valeurs suivantes :
 
-<ul>
- <li>Pour l'objet natif {{jsxref("String")}}, <code>toSource()</code> renvoie la chaîne de caractère suivante, indiquant que le code source n'est pas disponible :
+- Pour l'objet natif {{jsxref("String")}}, `toSource()` renvoie la chaîne de caractère suivante, indiquant que le code source n'est pas disponible :
 
-  <pre class="brush: js">function String() {
-    [native code]
-}
-</pre>
- </li>
- <li>Pour les instances de {{jsxref("String")}} ou les littéraux de chaînes de caractères, <code>toSource()</code> renvoie une chaîne de caractère représentant le code source.</li>
-</ul>
+  ```js
+    function String() {
+        [native code]
+    }
+    ```
 
-<p>Généralement, cette méthode est appelée par du code interne au moteur JavaScript et n'est pas trouvée dans du code JavaScript externe.</p>
+- Pour les instances de {{jsxref("String")}} ou les littéraux de chaînes de caractères, `toSource()` renvoie une chaîne de caractère représentant le code source.
 
-<h2 id="Spécifications">Spécifications</h2>
+Généralement, cette méthode est appelée par du code interne au moteur JavaScript et n'est pas trouvée dans du code JavaScript externe.
 
-<p>Cette méthode ne fait partie d'aucun standard. Elle a été implémentée avec JavaScript 1.3.</p>
+## Spécifications
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+Cette méthode ne fait partie d'aucun standard. Elle a été implémentée avec JavaScript 1.3.
 
-<p>{{Compat("javascript.builtins.String.toSource")}}</p>
+## Compatibilité des navigateurs
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+{{Compat("javascript.builtins.String.toSource")}}
 
-<ul>
- <li>{{jsxref("Object.prototype.toSource()")}}</li>
-</ul>
+## Voir aussi
+
+- {{jsxref("Object.prototype.toSource()")}}

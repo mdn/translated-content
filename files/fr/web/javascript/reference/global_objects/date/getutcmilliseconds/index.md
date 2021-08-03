@@ -10,73 +10,47 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getUTCMilliseconds
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>getUTCMilliseconds()</code></strong> renvoie les millièmes de secondes pour la date renseignée selon UTC.</p>
+La méthode **`getUTCMilliseconds()`** renvoie les millièmes de secondes pour la date renseignée selon UTC.
 
-<div>{{EmbedInteractiveExample("pages/js/date-getutcmilliseconds.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-getutcmilliseconds.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">dateObj.getUTCMilliseconds()</pre>
+    dateObj.getUTCMilliseconds()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un entier entre 0 et 999 correspondant au nombre de millisecondes pour la date indiquée, selon le temps universel.</p>
+Un entier entre 0 et 999 correspondant au nombre de millisecondes pour la date indiquée, selon le temps universel.
 
-<div class="blockIndicator note">
-<p><strong>Note :</strong> Le résultat de cette méthode n'est pas le temps "Epoch". Si on veut obtenir le nombre de millisecondes depuis le premier janvier 1970, on utilisera la méthode {{jsxref("Date.prototype.getTime()")}}.</p>
-</div>
+> **Note :** Le résultat de cette méthode n'est pas le temps "Epoch". Si on veut obtenir le nombre de millisecondes depuis le premier janvier 1970, on utilisera la méthode {{jsxref("Date.prototype.getTime()")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_getUTCMilliseconds()">Utiliser <code>getUTCMilliseconds()</code></h3>
+### Utiliser `getUTCMilliseconds()`
 
-<p>L'exemple suivant assigne les millièmes de secondes pour la date actuelle à la variable <code>ms</code>.</p>
+L'exemple suivant assigne les millièmes de secondes pour la date actuelle à la variable `ms`.
 
-<pre class="brush: js">var aujourdhui = new Date();
+```js
+var aujourdhui = new Date();
 var ms = aujourdhui.getUTCMilliseconds();
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.3.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.25', 'Date.prototype.getUTCMilliseconds')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.getutcmilliseconds', 'Date.prototype.getUTCMilliseconds')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.getutcmilliseconds', 'Date.prototype.getUTCMilliseconds')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                            | État                         | Commentaires                                          |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                                                 | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.3. |
+| {{SpecName('ES5.1', '#sec-15.9.5.25', 'Date.prototype.getUTCMilliseconds')}}                                     | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-date.prototype.getutcmilliseconds', 'Date.prototype.getUTCMilliseconds')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-date.prototype.getutcmilliseconds', 'Date.prototype.getUTCMilliseconds')}} | {{Spec2('ESDraft')}} |                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Date.getUTCMilliseconds")}}</p>
+{{Compat("javascript.builtins.Date.getUTCMilliseconds")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Date.prototype.getMilliseconds()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCMilliseconds()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getMilliseconds()")}}
+- {{jsxref("Date.prototype.setUTCMilliseconds()")}}

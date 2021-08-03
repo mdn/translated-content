@@ -12,45 +12,42 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/resolvedOptions
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/PluralRules/resolvedOptions
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>Intl.PluralRules.prototype.resolvedOptions()</code></strong> renvoie un nouvel objet dont les propriétés reflètent la locale et les options de formatage relatives aux règles de nombre calculées lors de l'initialisation de l'objet {{jsxref("PluralRules")}}.</p>
+La méthode **`Intl.PluralRules.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés reflètent la locale et les options de formatage relatives aux règles de nombre calculées lors de l'initialisation de l'objet {{jsxref("PluralRules")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><code><var>pluralRule</var>.resolvedOptions()</code></pre>
+    pluralRule.resolvedOptions()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un nouvel objet dont les propriétés reflètent la locale et les options de formatage relatives aux règles de nombre calculées lors de l'initialisation de l'objet {{jsxref("PluralRules")}}.</p>
+Un nouvel objet dont les propriétés reflètent la locale et les options de formatage relatives aux règles de nombre calculées lors de l'initialisation de l'objet {{jsxref("PluralRules")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>L'objet produit possède les propriétés suivantes :</p>
+L'objet produit possède les propriétés suivantes :
 
-<dl>
- <dt><code>locale</code></dt>
- <dd>La balise de langue BCP 47 pour la locale réellement utilisée. Si une extension Unicode a été demandée dans la balise de langue BCP 47 ayant menée à cette locale, les paires clé/valeur qui ont été demandées et qui sont prises en charge dans cette locale sont incluses dans l'objet <code>locale</code>.</dd>
- <dt><code>pluralCategories</code></dt>
- <dd>Un tableau {{jsxref("Array")}} des règles de nombre utilisée pour la langue donnée.</dd>
- <dt><code>type</code></dt>
- <dd>Le type de règle utilisée (<code>cardinal</code> ou <code>ordinal</code>).</dd>
-</dl>
+- `locale`
+  - : La balise de langue BCP 47 pour la locale réellement utilisée. Si une extension Unicode a été demandée dans la balise de langue BCP 47 ayant menée à cette locale, les paires clé/valeur qui ont été demandées et qui sont prises en charge dans cette locale sont incluses dans l'objet `locale`.
+- `pluralCategories`
+  - : Un tableau {{jsxref("Array")}} des règles de nombre utilisée pour la langue donnée.
+- `type`
+  - : Le type de règle utilisée (`cardinal` ou `ordinal`).
 
-<p>Seul l'un de ces deux groupes de propriétés est inclus :</p>
+Seul l'un de ces deux groupes de propriétés est inclus :
 
-<dl>
- <dt><code>minimumIntegerDigits</code>, <code>minimumFractionDigits</code>, <code>maximumFractionDigits</code></dt>
- <dd>Les valeurs fournies pour ces propriétés via l'argument <code>options</code> ou les valeurs par défaut. Ces propriétés sont uniquement présentes si aucunes des propriétés <code>minimumSignificantDigits</code> ou <code>maximumSignificantDigits</code> n'a été fournie dans l'argument <code>options</code>.</dd>
- <dt><code>minimumSignificantDigits</code>, <code>maximumSignificantDigits</code></dt>
- <dd>Les valeurs fournies par ces propriétés via l'argument <code>options</code> ou les valeurs par défaut. Ces propriétés sont uniquement présentes si au moins l'une d'entre elles a été fournie dans l'argument <code>options</code>.</dd>
-</dl>
+- `minimumIntegerDigits`, `minimumFractionDigits`, `maximumFractionDigits`
+  - : Les valeurs fournies pour ces propriétés via l'argument `options` ou les valeurs par défaut. Ces propriétés sont uniquement présentes si aucunes des propriétés `minimumSignificantDigits` ou `maximumSignificantDigits` n'a été fournie dans l'argument `options`.
+- `minimumSignificantDigits`, `maximumSignificantDigits`
+  - : Les valeurs fournies par ces propriétés via l'argument `options` ou les valeurs par défaut. Ces propriétés sont uniquement présentes si au moins l'une d'entre elles a été fournie dans l'argument `options`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_resolvedOptions">Utiliser <code>resolvedOptions()</code></h3>
+### Utiliser `resolvedOptions()`
 
-<pre class="brush: js">var de = new Intl.PluralRules('de-DE');
+```js
+var de = new Intl.PluralRules('de-DE');
 var usedOptions = de.resolvedOptions();
 
 usedOptions.locale;                // "de-DE"
@@ -59,31 +56,18 @@ usedOptions.minimumFractionDigits; // 0
 usedOptions.minimumIntegerDigits;  // 1
 usedOptions.pluralCategories;      // Array [ "one", "other" ]
 usedOptions.type;                  // "cardinal"
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td><a href="https://rawgit.com/caridy/intl-plural-rules-spec/master/index.html">Brouillon pour les règles de nombre avec <code>Intl</code></a></td>
-   <td>Brouillon</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                         | État      | Commentaires         |
+| --------------------------------------------------------------------------------------------------------------------- | --------- | -------------------- |
+| [Brouillon pour les règles de nombre avec `Intl`](https://rawgit.com/caridy/intl-plural-rules-spec/master/index.html) | Brouillon | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Intl.PluralRules.resolvedOptions")}}</p>
+{{Compat("javascript.builtins.Intl.PluralRules.resolvedOptions")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("PluralRules", "Intl.PluralRules")}}</li>
-</ul>
+- {{jsxref("PluralRules", "Intl.PluralRules")}}

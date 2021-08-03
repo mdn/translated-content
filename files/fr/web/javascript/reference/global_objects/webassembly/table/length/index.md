@@ -11,55 +11,42 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/Table/length
 original_slug: Web/JavaScript/Reference/Objets_globaux/WebAssembly/Table/length
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La propriété <code><strong>length</strong></code>, rattachée au prototype de l'objet {{jsxref("WebAssembly.Table")}}, renvoie la longueur du tableau WebAssembly, c'est-à-dire le nombre d'éléments qui y sont stockées.</p>
+La propriété **`length`**, rattachée au prototype de l'objet {{jsxref("WebAssembly.Table")}}, renvoie la longueur du tableau WebAssembly, c'est-à-dire le nombre d'éléments qui y sont stockées.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">table.length;
-</pre>
+    table.length;
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Avec l'instruction qui suit, on crée un tableau WebAssembly avec une taille initiale de 2 éléments et avec une taille maximale de 10.</p>
+Avec l'instruction qui suit, on crée un tableau WebAssembly avec une taille initiale de 2 éléments et avec une taille maximale de 10.
 
-<pre class="brush: js">var table = new WebAssembly.Table({ element: "anyfunc", initial: 2, maximum: 10 });</pre>
+```js
+var table = new WebAssembly.Table({ element: "anyfunc", initial: 2, maximum: 10 });
+```
 
-<p>On peut ensuite étendre le tableau d'un élément :</p>
+On peut ensuite étendre le tableau d'un élément :
 
-<pre class="brush: js">console.log(table.length);   // "2"
+```js
+console.log(table.length);   // "2"
 console.log(table.grow(1));  // "2"
 console.log(table.length);   // "3"
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('WebAssembly JS', '#webassemblytableprototypelength', 'length')}}</td>
-   <td>{{Spec2('WebAssembly JS')}}</td>
-   <td>Brouillon de définition initiale pour WebAssembly.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                                 | Commentaires                                       |
+| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------- |
+| {{SpecName('WebAssembly JS', '#webassemblytableprototypelength', 'length')}} | {{Spec2('WebAssembly JS')}} | Brouillon de définition initiale pour WebAssembly. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.WebAssembly.Table.length")}}</p>
+{{Compat("javascript.builtins.WebAssembly.Table.length")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/WebAssembly">Le portail WebAssembly</a></li>
- <li><a href="/fr/docs/WebAssembly/Concepts">Les concepts relatifs à WebAssembly</a></li>
- <li><a href="/fr/docs/WebAssembly/Using_the_JavaScript_API">Utiliser l'API JavaScript WebAssembly</a></li>
-</ul>
+- [Le portail WebAssembly](/fr/docs/WebAssembly)
+- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
+- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)

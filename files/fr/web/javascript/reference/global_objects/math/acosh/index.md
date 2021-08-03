@@ -10,88 +10,70 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/acosh
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/acosh
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La fonction <code><strong>Math.acosh()</strong></code> renvoie l'arc cosinus hyperbolique d'un nombre.Elle est définie par :</p>
+La fonction **`Math.acosh()`** renvoie l'arc cosinus hyperbolique d'un nombre.Elle est définie par :
 
-<p><math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>≥</mo><mn>1</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.acosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="thinmathspace">arcosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> l'unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>≥</mo><mn>0</mn><mspace width="thickmathspace"></mspace><mtext>tel que</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">cosh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \geq 1, \mathtt{\operatorname{Math.acosh}(x)} = \operatorname{arcosh}(x) = \text{ the unique } \; y \geq 0 \; \text{such that} \; \cosh(y) = x</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mo>∀</mo><mi>x</mi><mo>≥</mo><mn>1</mn><mo>,</mo><mstyle mathvariant="monospace"><mrow><mo lspace="0em" rspace="thinmathspace">Math.acosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mstyle><mo>=</mo><mo lspace="0em" rspace="thinmathspace">arcosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext> l'unique </mtext><mspace width="thickmathspace"></mspace><mi>y</mi><mo>≥</mo><mn>0</mn><mspace width="thickmathspace"></mspace><mtext>tel que</mtext><mspace width="thickmathspace"></mspace><mo lspace="0em" rspace="0em">cosh</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \geq 1, \mathtt{\operatorname{Math.acosh}(x)} = \operatorname{arcosh}(x) = \text{ the unique } \; y \geq 0 \; \text{such that} \; \cosh(y) = x</annotation></semantics></math>
 
-<div>{{EmbedInteractiveExample("pages/js/math-acosh.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-acosh.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Math.acosh(<var>x</var>)</pre>
+    Math.acosh(x)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Un nombre.</dd>
-</dl>
+- `x`
+  - : Un nombre.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>L'arc cosinus hyperbolique du nombre en argument. Si le nombre est inférieur à 1, la valeur renvoyée sera {{jsxref("NaN")}}.</p>
+L'arc cosinus hyperbolique du nombre en argument. Si le nombre est inférieur à 1, la valeur renvoyée sera {{jsxref("NaN")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p><code>acos</code>h étant une méthode statique de <code>Math</code>, il faut l'utiliser avec <code>Math.acosh()</code>, plutôt qu'en faisant appel à une méthode d'un autre objet créé (<code>Math</code> n'est pas un constructeur).</p>
+`acos`h étant une méthode statique de `Math`, il faut l'utiliser avec `Math.acosh()`, plutôt qu'en faisant appel à une méthode d'un autre objet créé (`Math` n'est pas un constructeur).
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<h3 id="Utiliser_Math.acosh()">Utiliser <code>Math.acosh()</code></h3>
+### Utiliser `Math.acosh()`
 
-<pre class="brush:js">Math.acosh(-1);  // NaN
+```js
+Math.acosh(-1);  // NaN
 Math.acosh(0);   // NaN
 Math.acosh(0.5); // NaN
 Math.acosh(1);   // 0
-Math.acosh(2);   // 1.3169578969248166</pre>
+Math.acosh(2);   // 1.3169578969248166
+```
 
-<p>Pour les valeurs strictement inférieures à 1 <code>Math.acosh</code> renvoie {{jsxref("NaN")}}.</p>
+Pour les valeurs strictement inférieures à 1 `Math.acosh` renvoie {{jsxref("NaN")}}.
 
-<h2 id="Prothèse_d'émulation_(polyfill)">Prothèse d'émulation (<em>polyfill</em>)</h2>
+## Prothèse d'émulation (_polyfill_)
 
-<p>Pour tout <math><semantics><mrow><mi>x</mi><mo>≥</mo><mn>1</mn></mrow><annotation encoding="TeX">x \geq 1</annotation></semantics></math>, <math><semantics><mrow><mo lspace="0em" rspace="thinmathspace">arcosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mn>1</mn></mrow></msqrt></mrow><mo>)</mo></mrow></mrow><annotation encoding="TeX">\operatorname {arcosh} (x) = \ln \left(x + \sqrt{x^{2} - 1} \right)</annotation></semantics></math>, on peut donc émuler cette fonction avec le code suivant :</p>
+Pour tout <math><semantics><mrow><mi>x</mi><mo>≥</mo><mn>1</mn></mrow><annotation encoding="TeX">x \geq 1</annotation></semantics></math>, <math><semantics><mrow><mo lspace="0em" rspace="thinmathspace">arcosh</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mrow><mo>(</mo><mrow><mi>x</mi><mo>+</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>-</mo><mn>1</mn></mrow></msqrt></mrow><mo>)</mo></mrow></mrow><annotation encoding="TeX">\operatorname {arcosh} (x) = \ln \left(x + \sqrt{x^{2} - 1} \right)</annotation></semantics></math>, on peut donc émuler cette fonction avec le code suivant :
 
-<pre class="brush: js">function acosh(x) {
+```js
+function acosh(x) {
   return Math.log(x + Math.sqrt(x * x - 1));
 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.acosh', 'Math.acosh')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Définition initiale</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.acosh', 'Math.acosh')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | État                         | Commentaires        |
+| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES6', '#sec-math.acosh', 'Math.acosh')}}         | {{Spec2('ES6')}}         | Définition initiale |
+| {{SpecName('ESDraft', '#sec-math.acosh', 'Math.acosh')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Math.acosh")}}</p>
+{{Compat("javascript.builtins.Math.acosh")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Math.asinh()")}}</li>
- <li>{{jsxref("Math.atanh()")}}</li>
- <li>{{jsxref("Math.cosh()")}}</li>
- <li>{{jsxref("Math.sinh()")}}</li>
- <li>{{jsxref("Math.tanh()")}}</li>
-</ul>
+- {{jsxref("Math.asinh()")}}
+- {{jsxref("Math.atanh()")}}
+- {{jsxref("Math.cosh()")}}
+- {{jsxref("Math.sinh()")}}
+- {{jsxref("Math.tanh()")}}

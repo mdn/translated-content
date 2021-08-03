@@ -13,38 +13,37 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator/resolvedOptions
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Collator/resolvedOptions
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>Intl.Collator.prototype.resolvedOptions()</strong></code> renvoie un nouvel objet dont les propriétés reflètent les options de locale et de collation calculées à l'initialisation de l'objet {{jsxref("Collator")}}.</p>
+La méthode **`Intl.Collator.prototype.resolvedOptions()`** renvoie un nouvel objet dont les propriétés reflètent les options de locale et de collation calculées à l'initialisation de l'objet {{jsxref("Collator")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/intl-collator-prototype-resolvedoptions.html")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-collator-prototype-resolvedoptions.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">collator.resolvedOptions()</pre>
+    collator.resolvedOptions()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un nouvel objet dont les propriétés reflètent les options de locale et de collations calculées lors de l'initialisation de l'objet {{jsxref("Collator")}}.</p>
+Un nouvel objet dont les propriétés reflètent les options de locale et de collations calculées lors de l'initialisation de l'objet {{jsxref("Collator")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>L'objet renvoyé par cette méthode contient les propriétés suivantes :</p>
+L'objet renvoyé par cette méthode contient les propriétés suivantes :
 
-<dl>
- <dt><code>locale</code></dt>
- <dd>La balise de langue BCP 47 qui est réellement utilisée. Si des extensions Unicode étaient fournies avec la balise d'origine et sont supportées pour la locale utilisée, les paires de clés-valeurs seront incluses dans <code>locale</code>.</dd>
- <dt><code>usage</code>,<code>sensitivity</code>, <code>ignorePunctuation</code></dt>
- <dd>Les valeurs demandées pour ces propriétés via l'argument <code>options</code> ou celles utilisées par défaut.</dd>
- <dt><code>collation</code></dt>
- <dd>La valeur demandée pour l'extension Unicode <code>"co"</code> si elle est supportée par la locale utilisée, sinon <code>"default"</code>.</dd>
- <dt><code>numeric</code>, <code>caseFirst</code></dt>
- <dd>Les valeurs demandées pour ces propriétés via l'argument <code>options</code> ou l'utilisation des extensions Unicode <code>"kn"</code> et <code>"kf"</code> ou les valeurs par défaut. Si l'implémentation utilisée ne supporte pas ces propriétés, elles sont omises.</dd>
-</dl>
+- `locale`
+  - : La balise de langue BCP 47 qui est réellement utilisée. Si des extensions Unicode étaient fournies avec la balise d'origine et sont supportées pour la locale utilisée, les paires de clés-valeurs seront incluses dans `locale`.
+- `usage`,`sensitivity`, `ignorePunctuation`
+  - : Les valeurs demandées pour ces propriétés via l'argument `options` ou celles utilisées par défaut.
+- `collation`
+  - : La valeur demandée pour l'extension Unicode `"co"` si elle est supportée par la locale utilisée, sinon `"default"`.
+- `numeric`, `caseFirst`
+  - : Les valeurs demandées pour ces propriétés via l'argument `options` ou l'utilisation des extensions Unicode `"kn"` et `"kf"` ou les valeurs par défaut. Si l'implémentation utilisée ne supporte pas ces propriétés, elles sont omises.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var de = new Intl.Collator('de', { sensitivity: 'base' })
+```js
+var de = new Intl.Collator('de', { sensitivity: 'base' })
 var usedOptions = de.resolvedOptions();
 
 usedOptions.locale;            // "de"
@@ -52,41 +51,21 @@ usedOptions.usage;             // "sort"
 usedOptions.sensitivity;        // "base"
 usedOptions.ignorePunctuation; // false
 usedOptions.collation;         // "default"
-usedOptions.numeric;           // false</pre>
+usedOptions.numeric;           // false
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int 1.0', '#sec-10.3.3', 'Intl.Collator.prototype.resolvedOptions')}}</td>
-   <td>{{Spec2('ES Int 1.0')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int 2.0', '#sec-10.3.3', 'Intl.Collator.prototype.resolvedOptions')}}</td>
-   <td>{{Spec2('ES Int 2.0')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#sec-Intl.Collator.prototype.resolvedOptions', 'Intl.Collator.prototype.resolvedOptions')}}</td>
-   <td>{{Spec2('ES Int Draft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                                    | État                             | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('ES Int 1.0', '#sec-10.3.3', 'Intl.Collator.prototype.resolvedOptions')}}                                                 | {{Spec2('ES Int 1.0')}} | Définition initiale. |
+| {{SpecName('ES Int 2.0', '#sec-10.3.3', 'Intl.Collator.prototype.resolvedOptions')}}                                                 | {{Spec2('ES Int 2.0')}} |                      |
+| {{SpecName('ES Int Draft', '#sec-Intl.Collator.prototype.resolvedOptions', 'Intl.Collator.prototype.resolvedOptions')}} | {{Spec2('ES Int Draft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Intl.Collator.resolvedOptions")}}</p>
+{{Compat("javascript.builtins.Intl.Collator.resolvedOptions")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Collator", "Intl.Collator")}}</li>
-</ul>
+- {{jsxref("Collator", "Intl.Collator")}}

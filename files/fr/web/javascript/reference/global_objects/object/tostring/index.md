@@ -10,41 +10,41 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/toString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/toString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>toString()</strong></code> renvoie une chaîne de caractères représentant l'objet.</p>
+La méthode **`toString()`** renvoie une chaîne de caractères représentant l'objet.
 
-<div>{{EmbedInteractiveExample("pages/js/object-prototype-tostring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-prototype-tostring.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>obj</var>.toString()</pre>
+    obj.toString()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une chaîne de caractères représentant l'objet.</p>
+Une chaîne de caractères représentant l'objet.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Chaque object possède une méthode <code>toString()</code> qui est appelée de façon automatique à chaque fois que l'objet doit être représenté sous forme de texte ou à chaque fois qu'on utilise un objet et que la valeur attendue est une chaîne de caractères. Par défaut, chaque objet qui descend d'<code>Object</code> hérite de la méthode <code>toString()</code>. Si cette méthode n'est pas surchargée, <code>toString()</code> renvoie "[object <em>type</em>]", où <code><em>type</em></code> est le type de l'objet. Par exemple :</p>
+Chaque object possède une méthode `toString()` qui est appelée de façon automatique à chaque fois que l'objet doit être représenté sous forme de texte ou à chaque fois qu'on utilise un objet et que la valeur attendue est une chaîne de caractères. Par défaut, chaque objet qui descend d'`Object` hérite de la méthode `toString()`. Si cette méthode n'est pas surchargée, `toString()` renvoie "\[object _type_]", où `type` est le type de l'objet. Par exemple :
 
-<pre class="brush: js">var o = new Object();
+```js
+var o = new Object();
 o.toString();           // renvoie [object Object]
-</pre>
+```
 
-<div class="note">
-<p><strong>Note :</strong> À partir de JavaScript 1.8.5 <code>toString()</code>, lorsqu'elle est appelée sur {{jsxref("null")}} renvoie <code>[object <em>Null</em>]</code>, et lorsqu'elle est appelée sur {{jsxref("undefined")}} renvoie <code>[object <em>Undefined</em>]</code>, ce qui est conforme à ECMAScript 5 et aux errata qui ont suivis. Voir l'exemple ci-après <a href="#detect">Utiliser <code>toString</code> pour détecter le type d'un objet</a>.</p>
-</div>
+> **Note :** À partir de JavaScript 1.8.5 `toString()`, lorsqu'elle est appelée sur {{jsxref("null")}} renvoie `[object Null]`, et lorsqu'elle est appelée sur {{jsxref("undefined")}} renvoie `[object Undefined]`, ce qui est conforme à ECMAScript 5 et aux errata qui ont suivis. Voir l'exemple ci-après [Utiliser `toString` pour détecter le type d'un objet](#detect).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Surcharger_la_méthode_toString()_par_défaut">Surcharger la méthode <code>toString()</code> par défaut</h3>
+### Surcharger la méthode `toString()` par défaut
 
-<p>Il est possible de surcharger la méthode <code>toString()</code>. La méthode <code>toString()</code> ne prend pas d'argument et doit renvoyer une chaîne de caractères. La méthode <code>toString()</code> peut renvoyer n'importe quelle valeur mais elle sera plus pertinente si elle renvoie des informations sur l'objet courant.</p>
+Il est possible de surcharger la méthode `toString()`. La méthode `toString()` ne prend pas d'argument et doit renvoyer une chaîne de caractères. La méthode `toString()` peut renvoyer n'importe quelle valeur mais elle sera plus pertinente si elle renvoie des informations sur l'objet courant.
 
-<p>Le code qui suit définit un type d'objet <code>Chien</code> et instancie <code>monChien</code>, qui est de type <code>Chien</code> :</p>
+Le code qui suit définit un type d'objet `Chien` et instancie `monChien`, qui est de type `Chien` :
 
-<pre class="brush: js">function Chien(nom, race, couleur, sexe) {
+```js
+function Chien(nom, race, couleur, sexe) {
   this.nom = nom;
   this.race = race;
   this.couleur = couleur;
@@ -52,31 +52,35 @@ o.toString();           // renvoie [object Object]
 }
 
 monChien = new Chien('Gabby', 'Labrador', 'chocolat', 'femelle');
-</pre>
+```
 
-<p>Si on appelle la méthode <code>toString()</code> sur cet objet, on aura le résultat suivant (provenant de la méthode originale, héritée d'{{jsxref("Object")}}) :</p>
+Si on appelle la méthode `toString()` sur cet objet, on aura le résultat suivant (provenant de la méthode originale, héritée d'{{jsxref("Object")}}) :
 
-<pre class="brush: js">monChien.toString(); // renvoie [object Object]
-</pre>
+```js
+monChien.toString(); // renvoie [object Object]
+```
 
-<p>Dans le code qui suit, on surcharge la méthode <code>toString()</code> avec <code>chienToString()</code>. Cette méthode produit une chaîne qui contient l'ensemble des propriétés (race, couleur, sexe, nom) de l'objet :</p>
+Dans le code qui suit, on surcharge la méthode `toString()` avec `chienToString()`. Cette méthode produit une chaîne qui contient l'ensemble des propriétés (race, couleur, sexe, nom) de l'objet :
 
-<pre class="brush: js">Chien.prototype.toString = function chienToString() {
+```js
+Chien.prototype.toString = function chienToString() {
   var ret = 'Le chien ' + this.nom + ' est un ' + this.race + ' ' + this.sexe + ' ' + this.couleur;
   return ret;
 }
-</pre>
+```
 
-<p>En utilisant la fonction ci-avant, à chaque fois que <code>monChien</code> sera utilisé là où on attend une chaîne, le moteur JavaScript appellera automatique la fonction <code>chienToString()</code>qui renverra la chaîne suivante :</p>
+En utilisant la fonction ci-avant, à chaque fois que `monChien` sera utilisé là où on attend une chaîne, le moteur JavaScript appellera automatique la fonction `chienToString()`qui renverra la chaîne suivante :
 
-<pre class="brush: js">Le chien Gabby est un labrador femelle chocolat.
-</pre>
+```js
+Le chien Gabby est un labrador femelle chocolat.
+```
 
-<h3 id="Utiliser_toString()_pour_détecter_le_type_d'un_objet">Utiliser <code>toString()</code> pour détecter le type d'un objet</h3>
+### Utiliser `toString()` pour détecter le type d'un objet
 
-<p><code>toString()</code> peut être utilisée pour tous les objets afin d'obtenir son type. Pour utiliser <code>Object.prototype.toString()</code> avec n'importe quel objet, il sera nécessaire d'appeler {{jsxref("Function.prototype.call()")}} ou {{jsxref("Function.prototype.apply()")}} (pour éviter les versions surchargées).</p>
+`toString()` peut être utilisée pour tous les objets afin d'obtenir son type. Pour utiliser `Object.prototype.toString()` avec n'importe quel objet, il sera nécessaire d'appeler {{jsxref("Function.prototype.call()")}} ou {{jsxref("Function.prototype.apply()")}} (pour éviter les versions surchargées).
 
-<pre class="brush: js">var toString = Object.prototype.toString;
+```js
+var toString = Object.prototype.toString;
 
 toString.call(new Date);    // [object Date]
 toString.call(new String);  // [object String]
@@ -85,49 +89,24 @@ toString.call(Math);        // [object Math]
 // Depuis JavaScript 1.8.5
 toString.call(undefined);   // [object Undefined]
 toString.call(null);        // [object Null]
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.4.2', 'Object.prototype.toString')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Lorsque la méthode est appelée sur {{jsxref("null")}}, elle renvoie <code>[object <em>Null</em>]</code>, et sur {{jsxref( "undefined")}} elle renvoie <code>[object <em>Undefined</em>]</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.prototype.tostring', 'Object.prototype.toString')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.prototype.tostring', 'Object.prototype.toString')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | État                         | Commentaires                                                                                                                                                         |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0.                                                                                                                |
+| {{SpecName('ES5.1', '#sec-15.2.4.2', 'Object.prototype.toString')}}                             | {{Spec2('ES5.1')}}     | Lorsque la méthode est appelée sur {{jsxref("null")}}, elle renvoie `[object Null]`, et sur {{jsxref( "undefined")}} elle renvoie `[object Undefined]` |
+| {{SpecName('ES6', '#sec-object.prototype.tostring', 'Object.prototype.toString')}}         | {{Spec2('ES6')}}         |                                                                                                                                                                      |
+| {{SpecName('ESDraft', '#sec-object.prototype.tostring', 'Object.prototype.toString')}} | {{Spec2('ESDraft')}} |                                                                                                                                                                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Object.toString")}}</p>
+{{Compat("javascript.builtins.Object.toString")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Object.prototype.toSource()")}}</li>
- <li>{{jsxref("Object.prototype.valueOf()")}}</li>
- <li>{{jsxref("Number.prototype.toString()")}}</li>
- <li>{{jsxref("Symbol.toPrimitive")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("Object.prototype.valueOf()")}}
+- {{jsxref("Number.prototype.toString()")}}
+- {{jsxref("Symbol.toPrimitive")}}

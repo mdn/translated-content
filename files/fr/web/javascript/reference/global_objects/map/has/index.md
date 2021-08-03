@@ -11,66 +11,48 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/has
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/has
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>has()</strong></code> renvoie un booléen permettant de déterminer si l'objet <code>Map</code> en question contient la clé donnée.</p>
+La méthode **`has()`** renvoie un booléen permettant de déterminer si l'objet `Map` en question contient la clé donnée.
 
-<div>{{EmbedInteractiveExample("pages/js/map-prototype-has.html")}}</div>
+{{EmbedInteractiveExample("pages/js/map-prototype-has.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>maMap</em>.has(clé);</pre>
+    maMap.has(clé);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>clé</code></dt>
- <dd>Ce paramètre obligatoire correspond à la clé dont on veut savoir si elle appartient à l'objet <code>Map</code>.</dd>
-</dl>
+- `clé`
+  - : Ce paramètre obligatoire correspond à la clé dont on veut savoir si elle appartient à l'objet `Map`.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Cette méthode renvoie un booléen : <code>true</code> si un élément avec cette clé existe au sein de l'objet <code>Map</code> et <code>false</code> sinon.</p>
+Cette méthode renvoie un booléen : `true` si un élément avec cette clé existe au sein de l'objet `Map` et `false` sinon.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var maMap = new Map();
+```js
+var maMap = new Map();
 maMap.set("truc", "toto");
 
 maMap.has("truc");  // renvoie true
 maMap.has("machin");// renvoie false
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-map.prototype.has', 'Map.prototype.has')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-map.prototype.has', 'Map.prototype.has')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-map.prototype.has', 'Map.prototype.has')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-map.prototype.has', 'Map.prototype.has')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Map.has")}}</p>
+{{Compat("javascript.builtins.Map.has")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Map")}}</li>
- <li>{{jsxref("Map.prototype.set()")}}</li>
- <li>{{jsxref("Map.prototype.get()")}}</li>
-</ul>
+- {{jsxref("Map")}}
+- {{jsxref("Map.prototype.set()")}}
+- {{jsxref("Map.prototype.get()")}}

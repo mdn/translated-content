@@ -9,74 +9,73 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/caller
 original_slug: Web/JavaScript/Reference/Objets_globaux/Function/caller
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p>La propriété <code><strong>function.caller</strong></code> renvoie la fonction qui a appelé la fonction donnée. Cette propriété est interdite en mode strict.</p>
+La propriété **`function.caller`** renvoie la fonction qui a appelé la fonction donnée. Cette propriété est interdite en mode strict.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Si la fonction <code>f</code> a été invoquée par du code situé au plus haut niveau, la valeur de <code>f.caller</code> sera {{jsxref("null")}}, sinon, ce sera la fonction qui a appelé <code>f</code>.</p>
+Si la fonction `f` a été invoquée par du code situé au plus haut niveau, la valeur de `f.caller` sera {{jsxref("null")}}, sinon, ce sera la fonction qui a appelé `f`.
 
-<p>Cette propriété remplace la propriété obsolète {{jsxref("Fonctions/arguments/caller", "arguments.caller")}} de l'objet {{jsxref("Fonctions/arguments", "arguments")}}.</p>
+Cette propriété remplace la propriété obsolète {{jsxref("Fonctions/arguments/caller", "arguments.caller")}} de l'objet {{jsxref("Fonctions/arguments", "arguments")}}.
 
-<p>La propriété spéciale <code>__caller__</code> qui renvoyait l'objet qui dans lequel était fait l'appel a été supprimée pour des raisons de sécurités.</p>
+La propriété spéciale `__caller__` qui renvoyait l'objet qui dans lequel était fait l'appel a été supprimée pour des raisons de sécurités.
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<p>Dans une fonction récursive, cette propriété ne peut pas être utilisée pour reconstituer la pile d'appels (<em>call stack</em>). Par exemple, si on a :</p>
+Dans une fonction récursive, cette propriété ne peut pas être utilisée pour reconstituer la pile d'appels (_call stack_). Par exemple, si on a :
 
-<pre class="brush: js">function f(n) { g(n - 1); }
-function g(n) { if (n &gt; 0) { f(n); } else { stop(); } }
+```js
+function f(n) { g(n - 1); }
+function g(n) { if (n > 0) { f(n); } else { stop(); } }
 f(2);
-</pre>
+```
 
-<p>Au moment où <code>stop()</code> est appelé, la pile sera :</p>
+Au moment où `stop()` est appelé, la pile sera :
 
-<pre class="eval">f(2) -&gt; g(1) -&gt; f(1) -&gt; g(0) -&gt; stop()
-</pre>
+    f(2) -> g(1) -> f(1) -> g(0) -> stop()
 
-<p>Et ceci est vrai :</p>
+Et ceci est vrai :
 
-<pre class="eval">stop.caller === g &amp;&amp; f.caller === g &amp;&amp; g.caller === f
-</pre>
+    stop.caller === g && f.caller === g && g.caller === f
 
-<p>Donc si on essaie d'obtenir la pile de cette façon :</p>
+Donc si on essaie d'obtenir la pile de cette façon :
 
-<pre class="brush: js">var f = stop;
+```js
+var f = stop;
 var stack = 'Stack trace:';
 while (f) {
   stack += '\n' + f.name;
   f = f.caller;
 }
-</pre>
+```
 
-<p>la boucle ne s'arrêterait jamais.</p>
+la boucle ne s'arrêterait jamais.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Vérifier_la_valeur_de_la_propriété_caller">Vérifier la valeur de la propriété <code>caller</code></h3>
+### Vérifier la valeur de la propriété `caller`
 
-<p>Dans l'exemple suivant, on verifie la propriété <code>caller</code> de la fonction.</p>
+Dans l'exemple suivant, on verifie la propriété `caller` de la fonction.
 
-<pre class="brush: js">function maFonction() {
+```js
+function maFonction() {
   if (maFonction.caller == null) {
     return 'Fonction appelée au plus haut niveau !';
   } else {
     return 'Fonction appelée par ' + maFonction.caller;
   }
 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Ne fait partie d'aucune spécification. Implémentée avec JavaScript 1.5.</p>
+Ne fait partie d'aucune spécification. Implémentée avec JavaScript 1.5.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Function.caller")}}</p>
+{{Compat("javascript.builtins.Function.caller")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Le bug d'implémentation pour SpiderMonkey {{bug(65683)}}</li>
-</ul>
+- Le bug d'implémentation pour SpiderMonkey {{bug(65683)}}

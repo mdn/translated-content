@@ -9,39 +9,43 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference/Classes
 ---
-<div>{{JsSidebar("Classes")}}</div>
+{{JsSidebar("Classes")}}
 
-<p>Les classes JavaScript ont été introduites avec ECMAScript 2015. Elles sont un « sucre syntaxique » par rapport à l'héritage prototypal. En effet, cette syntaxe n'introduit pas un nouveau modèle d'héritage dans JavaScript ! Elle fournit uniquement une syntaxe plus simple pour créer des objets et manipuler l'héritage.</p>
+Les classes JavaScript ont été introduites avec ECMAScript 2015. Elles sont un « sucre syntaxique » par rapport à l'héritage prototypal. En effet, cette syntaxe n'introduit pas un nouveau modèle d'héritage dans JavaScript ! Elle fournit uniquement une syntaxe plus simple pour créer des objets et manipuler l'héritage.
 
-<h2 id="Définir_des_classes">Définir des classes</h2>
+## Définir des classes
 
-<p>En réalité, les classes sont juste des <a href="/fr/docs/Web/JavaScript/Reference/Fonctions">fonctions</a> spéciales. Ainsi, les classes sont définies de la même façon que les fonctions : par déclaration, ou par expression.</p>
+En réalité, les classes sont juste des [fonctions](/fr/docs/Web/JavaScript/Reference/Fonctions) spéciales. Ainsi, les classes sont définies de la même façon que les fonctions : par déclaration, ou par expression.
 
-<h3 id="Les_déclarations_de_classes">Les déclarations de classes</h3>
+### Les déclarations de classes
 
-<p>Pour utiliser une déclaration de classe simple, on utilisera le mot-clé <code>class</code>, suivi par le nom de la classe que l'on déclare (ici « Rectangle »).</p>
+Pour utiliser une déclaration de classe simple, on utilisera le mot-clé `class`, suivi par le nom de la classe que l'on déclare (ici « Rectangle »).
 
-<pre class="brush: js">class Rectangle {
+```js
+class Rectangle {
   constructor(hauteur, largeur) {
     this.hauteur = hauteur;
     this.largeur = largeur;
   }
-}</pre>
+}
+```
 
-<h4 id="Remontée_des_déclarations_(hoisting)">Remontée des déclarations (<em>hoisting</em>)</h4>
+#### Remontée des déclarations (_hoisting_)
 
-<p><a href="/fr/docs/Web/JavaScript/Reference/Instructions/function">Les déclarations de fonctions</a> sont remontées dans le code. En revanche, ce n'est pas le cas pour les déclarations de classes. Ainsi, il est nécessaire de déclarer la classe avant de l'instancier. Dans le cas contraire, on obtient une {{jsxref("ReferenceError")}} :</p>
+[Les déclarations de fonctions](/fr/docs/Web/JavaScript/Reference/Instructions/function) sont remontées dans le code. En revanche, ce n'est pas le cas pour les déclarations de classes. Ainsi, il est nécessaire de déclarer la classe avant de l'instancier. Dans le cas contraire, on obtient une {{jsxref("ReferenceError")}} :
 
-<pre class="brush: js example-bad">const p = new Rectangle(); // ReferenceError
+```js example-bad
+const p = new Rectangle(); // ReferenceError
 
 class Rectangle {}
-</pre>
+```
 
-<h3 id="Les_expressions_de_classes">Les expressions de classes</h3>
+### Les expressions de classes
 
-<p>Il est possible d'utiliser des expressions de classes, nommées ou anonymes. Si on utilise un nom dans l'expression, ce nom ne sera accessible que depuis le corps de la classe via la propriété {{jsxref("Function.name", "name")}} (cette valeur ne sera pas directement accessible pour les instances).</p>
+Il est possible d'utiliser des expressions de classes, nommées ou anonymes. Si on utilise un nom dans l'expression, ce nom ne sera accessible que depuis le corps de la classe via la propriété {{jsxref("Function.name", "name")}} (cette valeur ne sera pas directement accessible pour les instances).
 
-<pre class="brush: js">// anonyme
+```js
+// anonyme
 let Rectangle = class {
   constructor(hauteur, largeur) {
     this.hauteur = hauteur;
@@ -56,31 +60,30 @@ let Rectangle = class Rectangle {
     this.largeur = largeur;
   }
 };
-</pre>
+```
 
-<div class="note">
-<p><strong>Note :</strong> Les mêmes règles s'appliquent aux expressions de classes en ce qui concerne la remontée (<em>hoisting</em>) des classes (cf. le paragraphe précédent sur les remontées des déclarations de classe).</p>
-</div>
+> **Note :** Les mêmes règles s'appliquent aux expressions de classes en ce qui concerne la remontée (_hoisting_) des classes (cf. le paragraphe précédent sur les remontées des déclarations de classe).
 
-<h2 id="Corps_d'une_classe_et_définition_des_méthodes">Corps d'une classe et définition des méthodes</h2>
+## Corps d'une classe et définition des méthodes
 
-<p>Le corps d'une classe est la partie contenue entre les accolades. C'est dans cette partie que l'on définit les propriétés d'une classe comme ses méthodes et son constructeur.</p>
+Le corps d'une classe est la partie contenue entre les accolades. C'est dans cette partie que l'on définit les propriétés d'une classe comme ses méthodes et son constructeur.
 
-<h3 id="Mode_strict">Mode strict</h3>
+### Mode strict
 
-<p>Le corps des classes, pour les expressions et pour les déclarations de classes, est exécuté en <a href="/fr/docs/Web/JavaScript/Reference/Strict_mode">mode strict</a> (autrement dit, le constructeur, les méthodes statiques, le prototype, les accesseurs (<em>getters</em>) et mutateurs (<em>setters</em>) sont exécutés en mode strict).</p>
+Le corps des classes, pour les expressions et pour les déclarations de classes, est exécuté en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) (autrement dit, le constructeur, les méthodes statiques, le prototype, les accesseurs (_getters_) et mutateurs (_setters_) sont exécutés en mode strict).
 
-<h3 id="Constructeur">Constructeur</h3>
+### Constructeur
 
-<p>La méthode <code><a href="/fr/docs/Web/JavaScript/Reference/Classes/constructor">constructor</a></code> est une méthode spéciale qui permet de créer et d'initialiser les objet créés avec une classe. Il ne peut y avoir qu'une seule méthode avec le nom "constructor" pour une classe donnée. Si la classe contient plusieurs occurences d'une méthode <code>constructor</code>, cela provoquera une exception {{jsxref("SyntaxError")}}.</p>
+La méthode [`constructor`](/fr/docs/Web/JavaScript/Reference/Classes/constructor) est une méthode spéciale qui permet de créer et d'initialiser les objet créés avec une classe. Il ne peut y avoir qu'une seule méthode avec le nom "constructor" pour une classe donnée. Si la classe contient plusieurs occurences d'une méthode `constructor`, cela provoquera une exception {{jsxref("SyntaxError")}}.
 
-<p>Le constructeur ainsi déclaré peut utiliser le mot-clé <code>super</code> afin d'appeler le constructeur de la classe parente.</p>
+Le constructeur ainsi déclaré peut utiliser le mot-clé `super` afin d'appeler le constructeur de la classe parente.
 
-<h3 id="Méthodes_de_prototype">Méthodes de prototype</h3>
+### Méthodes de prototype
 
-<p>Voir aussi les définitions de méthode.</p>
+Voir aussi les définitions de méthode.
 
-<pre class="brush: js">class Rectangle {
+```js
+class Rectangle {
   constructor(hauteur, largeur) {
     this.hauteur = hauteur;
     this.largeur = largeur;
@@ -97,13 +100,15 @@ let Rectangle = class Rectangle {
 
 const carré = new Rectangle(10, 10);
 
-console.log(carré.area);</pre>
+console.log(carré.area);
+```
 
-<h3 id="Méthodes_statiques">Méthodes statiques</h3>
+### Méthodes statiques
 
-<p>Le mot-clé <code><a href="/fr/docs/Web/JavaScript/Reference/Classes/static">static</a></code> permet de définir une méthode statique pour une classe. Les méthodes statiques sont appelées par rapport à la classe entière et non par rapport à une <a href="/fr/docs/Web/JavaScript/Introduction_à_JavaScript_orienté_objet#L'instance">instance</a> donnée (ces méthodes ne peuvent pas être appelées « depuis » une instance). Ces méthodes sont généralement utilisées sous formes d'utilitaires au sein d'applications.</p>
+Le mot-clé [`static`](/fr/docs/Web/JavaScript/Reference/Classes/static) permet de définir une méthode statique pour une classe. Les méthodes statiques sont appelées par rapport à la classe entière et non par rapport à une [instance](/fr/docs/Web/JavaScript/Introduction_à_JavaScript_orienté_objet#L'instance) donnée (ces méthodes ne peuvent pas être appelées « depuis » une instance). Ces méthodes sont généralement utilisées sous formes d'utilitaires au sein d'applications.
 
-<pre class="brush: js">class Point {
+```js
+class Point {
   constructor(x, y) {
     this.x = x;
     this.y = y;
@@ -119,13 +124,15 @@ console.log(carré.area);</pre>
 const p1 = new Point(5, 5);
 const p2 = new Point(10, 10);
 
-console.log(Point.distance(p1, p2));</pre>
+console.log(Point.distance(p1, p2));
+```
 
-<h3 id="Gestion_de_this_pour_le_prototype_et_les_méthodes_statiques">Gestion de <code>this</code> pour le prototype et les méthodes statiques</h3>
+### Gestion de `this` pour le prototype et les méthodes statiques
 
-<p>Lorsqu'une méthode statique ou une méthode liée au prototype est appelée sans valeur <code>this</code>, celle-ci vaudra <code>undefined</code> au sein de la fonction. Il n'y aura pas d'autodétermination de <code>this</code> (<em>autoboxing</em> en anglais). On aura le même résultat si on invoque ces fonctions dans du code non-strict car les fonctions liées aux classes sont exécutées en mode strict.</p>
+Lorsqu'une méthode statique ou une méthode liée au prototype est appelée sans valeur `this`, celle-ci vaudra `undefined` au sein de la fonction. Il n'y aura pas d'autodétermination de `this` (_autoboxing_ en anglais). On aura le même résultat si on invoque ces fonctions dans du code non-strict car les fonctions liées aux classes sont exécutées en mode strict.
 
-<pre class="brush: js">class Animal {
+```js
+class Animal {
   crie() {
     return this;
   }
@@ -141,13 +148,15 @@ crie(); // undefined
 
 Animal.mange(); // class Animal
 let mange = Animal.mange;
-mange(); // undefined</pre>
+mange(); // undefined
+```
 
-<p>Si on écrit le code avec des fonctions traditionnelles plutôt qu'avec des classes et qu'on utilise le mode non-strict, l'autodétermination de <code>this</code> sera faite en fonction du contexte dans lequel la fonction a été appelée. Si la valeur initiale est <code>undefined</code>, <code>this</code> correspondra à l'objet global.</p>
+Si on écrit le code avec des fonctions traditionnelles plutôt qu'avec des classes et qu'on utilise le mode non-strict, l'autodétermination de `this` sera faite en fonction du contexte dans lequel la fonction a été appelée. Si la valeur initiale est `undefined`, `this` correspondra à l'objet global.
 
-<p>L'autodétermination de <code>this</code> n'a pas lieu en mode strict, la valeur <code>this</code> est passée telle quelle.</p>
+L'autodétermination de `this` n'a pas lieu en mode strict, la valeur `this` est passée telle quelle.
 
-<pre class="brush: js">function Animal() { }
+```js
+function Animal() { }
 
 Animal.prototype.crie = function() {
   return this;
@@ -163,75 +172,80 @@ crie(); // l'objet global
 
 let mange = Animal.mange;
 mange(); // l'objet global
-</pre>
+```
 
-<h3 id="Propriétés_des_instances">Propriétés des instances</h3>
+### Propriétés des instances
 
-<p>Les propriétés des instances doivent être définies dans les méthodes de la classe :</p>
+Les propriétés des instances doivent être définies dans les méthodes de la classe :
 
-<pre class="brush: js">class Rectangle {
+```js
+class Rectangle {
   constructor(hauteur, largeur) {
     this.hauteur = hauteur;
     this.largeur = largeur;
   }
-}</pre>
+}
+```
 
-<p>Les propriétés statiques ou les données relatives au prototype doivent être définies en dehors de la déclaration comportant le corps de la classe :</p>
+Les propriétés statiques ou les données relatives au prototype doivent être définies en dehors de la déclaration comportant le corps de la classe :
 
-<pre class="brush: js">Rectangle.largeurStatique = 20;
-Rectangle.prototype.largeurProto = 25;</pre>
+```js
+Rectangle.largeurStatique = 20;
+Rectangle.prototype.largeurProto = 25;
+```
 
-<h3 id="Déclarations_de_champs">Déclarations de champs</h3>
+### Déclarations de champs
 
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<div class="warning">
-<p><strong>Attention :</strong> Les déclarations de champs publics et privés sont une <a href="https://github.com/tc39/proposal-class-fields">fonctionnalité expérimentale actuellement proposée pour être intégrée dans le standard ECMAScript</a>. Elle n'est pas implémentée par la majorité des navigateurs mais on peut émuler cette fonctionnalité en utilisant un système de compilation tel que <a href="https://babeljs.io/">Babel</a>.</p>
-</div>
+> **Attention :** Les déclarations de champs publics et privés sont une [fonctionnalité expérimentale actuellement proposée pour être intégrée dans le standard ECMAScript](https://github.com/tc39/proposal-class-fields). Elle n'est pas implémentée par la majorité des navigateurs mais on peut émuler cette fonctionnalité en utilisant un système de compilation tel que [Babel](https://babeljs.io/).
 
-<h4 id="Déclarations_de_champs_publics">Déclarations de champs publics</h4>
+#### Déclarations de champs publics
 
-<p>En utilisant la syntaxe pour la déclaration des champs, on peut réécrire l'exemple précédent de la façon suivante :</p>
+En utilisant la syntaxe pour la déclaration des champs, on peut réécrire l'exemple précédent de la façon suivante :
 
-<pre class="brush: js">class Rectangle {
+```js
+class Rectangle {
   hauteur = 0;
   largeur;
   constructor(hauteur, largeur) {
     this.hauteur = hauteur;
     this.largeur = largeur;
   }
-}</pre>
+}
+```
 
-<p>En déclarant les champs en préalable, il est plus facile de comprendre la classe dans son ensemble. De plus, on s'assure que les champs soient toujours présents.</p>
+En déclarant les champs en préalable, il est plus facile de comprendre la classe dans son ensemble. De plus, on s'assure que les champs soient toujours présents.
 
-<p>Comme on peut le voir dans cet exemple, les champs peuvent éventuellement être déclarés avec une valeur par défaut.</p>
+Comme on peut le voir dans cet exemple, les champs peuvent éventuellement être déclarés avec une valeur par défaut.
 
-<h4 id="Déclarations_de_champs_privés">Déclarations de champs privés</h4>
+#### Déclarations de champs privés
 
-<p>En utilisant des champs privés, on peut revoir la définition de la façon suivante :</p>
+En utilisant des champs privés, on peut revoir la définition de la façon suivante :
 
-<pre class="brush: js">class Rectangle {
+```js
+class Rectangle {
   #hauteur = 0;
   #largeur;
   constructor(hauteur, largeur){
     this.#hauteur = hauteur;
     this.#largeur = largeur;
   }
-}</pre>
+}
+```
 
-<p>Si on utilise les champs privés hors de la classe, cela génèrera une erreur. Ces champs ne peuvent être lus ou modifiés que depuis le corps de la classe. En évitant d'exposer des éléments à l'extérieur, on s'assure que les portions de code qui consomment cette classe n'utilise pas ses détails internes et on peut alors maintenir la classe dans son ensemble et modifier les détails internes si besoin.</p>
+Si on utilise les champs privés hors de la classe, cela génèrera une erreur. Ces champs ne peuvent être lus ou modifiés que depuis le corps de la classe. En évitant d'exposer des éléments à l'extérieur, on s'assure que les portions de code qui consomment cette classe n'utilise pas ses détails internes et on peut alors maintenir la classe dans son ensemble et modifier les détails internes si besoin.
 
-<div class="note">
-<p><strong>Note :</strong> Les champs privés doivent nécessairement être déclarés en premier dans les déclarations de champ.</p>
-</div>
+> **Note :** Les champs privés doivent nécessairement être déclarés en premier dans les déclarations de champ.
 
-<p>Il n'est pas possible de créer des champs privés <em>a posteriori</em> au moment où on leur affecterait une valeur. Autrement dit, il est possible de déclarer une variable normale au moment voulu lorsqu'on lui affecte une valeur tandis que pour les champs privés, ces derniers doivent être déclarés (éventuellement initialisés) en amont, au début du corps de la classe.</p>
+Il n'est pas possible de créer des champs privés _a posteriori_ au moment où on leur affecterait une valeur. Autrement dit, il est possible de déclarer une variable normale au moment voulu lorsqu'on lui affecte une valeur tandis que pour les champs privés, ces derniers doivent être déclarés (éventuellement initialisés) en amont, au début du corps de la classe.
 
-<h2 id="Créer_une_sous-classe_avec_extends">Créer une sous-classe avec <code>extends</code></h2>
+## Créer une sous-classe avec `extends`
 
-<p>Le mot-clé <code><a href="/fr/docs/Web/JavaScript/Reference/Classes/extends">extends</a></code>, utilisé dans les déclarations ou les expressions de classes, permet de créer une classe qui hérite d'une autre classe (on parle aussi de « sous-classe » ou de « classe-fille »).</p>
+Le mot-clé [`extends`](/fr/docs/Web/JavaScript/Reference/Classes/extends), utilisé dans les déclarations ou les expressions de classes, permet de créer une classe qui hérite d'une autre classe (on parle aussi de « sous-classe » ou de « classe-fille »).
 
-<pre class="brush: js">class Animal {
+```js
+class Animal {
   constructor(nom) {
     this.nom = nom;
   }
@@ -248,13 +262,15 @@ class Chien extends Animal {
   parle() {
     console.log(`${this.nom} aboie.`);
   }
-}</pre>
+}
+```
 
-<p>Si on déclare un constructeur dans une classe fille, on doit utiliser <code>super()</code> avant <code>this</code>.</p>
+Si on déclare un constructeur dans une classe fille, on doit utiliser `super()` avant `this`.
 
-<p>On peut également étendre des classes plus <em>traditionnelles</em> basées sur des constructeurs fonctionnels :</p>
+On peut également étendre des classes plus _traditionnelles_ basées sur des constructeurs fonctionnels :
 
-<pre class="brush: js">function Animal (nom) {
+```js
+function Animal (nom) {
   this.nom = nom;
 }
 Animal.prototype.crie = function () {
@@ -271,11 +287,13 @@ class Chien extends Animal {
 let c = new Chien('Ida');
 c.crie();
 // Ida fait du bruit.
-// Ida aboie.</pre>
+// Ida aboie.
+```
 
-<p>En revanche, les classes ne permettent pas d'étendre des objets classiques non-constructibles. Si on souhaite créer un lien d'héritage en un objet et une classe, on utilisera {{jsxref("Object.setPrototypeOf()")}} :</p>
+En revanche, les classes ne permettent pas d'étendre des objets classiques non-constructibles. Si on souhaite créer un lien d'héritage en un objet et une classe, on utilisera {{jsxref("Object.setPrototypeOf()")}} :
 
-<pre class="brush: js">const Animal = {
+```js
+const Animal = {
   crie() {
     console.log(`${this.nom} fait du bruit.`);
   }
@@ -295,30 +313,34 @@ Object.setPrototypeOf(Chien.prototype, Animal);
 let d = new Chien('Ida');
 d.crie();
 // Ida fait du bruit
-// Ida aboie.</pre>
+// Ida aboie.
+```
 
-<h2 id="Le_symbole_species">Le symbole <code>species</code></h2>
+## Le symbole `species`
 
-<p>Lorsqu'on souhaite renvoyer des objets {{jsxref("Array")}} avec une sous-classe <code>MonArray</code>, on peut utiliser symbole <code>species</code> pour surcharger le constructeur par défaut.</p>
+Lorsqu'on souhaite renvoyer des objets {{jsxref("Array")}} avec une sous-classe `MonArray`, on peut utiliser symbole `species` pour surcharger le constructeur par défaut.
 
-<p>Par exemple, si, lorsqu'on utilise des méthodes comme {{jsxref("Array.map","map()")}} qui renvoient le constructeur par défaut et qu'on veut qu'elles renvoient <code>Array</code> plutôt que <code>MonArray</code>, on utilisera {{jsxref("Symbol.species")}} :</p>
+Par exemple, si, lorsqu'on utilise des méthodes comme {{jsxref("Array.map","map()")}} qui renvoient le constructeur par défaut et qu'on veut qu'elles renvoient `Array` plutôt que `MonArray`, on utilisera {{jsxref("Symbol.species")}} :
 
-<pre class="brush: js">class MonArray extends Array {
+```js
+class MonArray extends Array {
   // On surcharge species
   // avec le constructeur Array du parent
   static get [Symbol.species]() { return Array; }
 }
 let a = new MonArray(1,2,3);
-let mapped = a.map(x =&gt; x * x);
+let mapped = a.map(x => x * x);
 
 console.log(mapped instanceof MonArray); // false
-console.log(mapped instanceof Array);    // true</pre>
+console.log(mapped instanceof Array);    // true
+```
 
-<h2 id="Utiliser_super_pour_la_classe_parente">Utiliser super pour la classe parente</h2>
+## Utiliser super pour la classe parente
 
-<p>Le mot-clé <code><a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/super">super</a></code> est utilisé pour appeler les fonctions rattachées à un objet parent.</p>
+Le mot-clé [`super`](/fr/docs/Web/JavaScript/Reference/Opérateurs/super) est utilisé pour appeler les fonctions rattachées à un objet parent.
 
-<pre class="brush: js">class Chat {
+```js
+class Chat {
   constructor(nom) {
     this.nom = nom;
   }
@@ -334,78 +356,55 @@ class Lion extends Chat {
     console.log(`${this.nom} rugit.`);
   }
 }
-</pre>
+```
 
-<h2 id="Les_mix-ins">Les <em>mix-ins</em></h2>
+## Les _mix-ins_
 
-<p>Les sous-classes abstraites ou <em>mix-ins</em> sont des modèles (<em>templates</em>) pour des classes. Une classe ECMAScript ne peut avoir qu'une seule classe parente et il n'est donc pas possible, par exemple, d'hériter de plusieurs classes dont une classe abstraite. La fonctionnalité dont on souhaite disposer doit être fournie par la classe parente.</p>
+Les sous-classes abstraites ou _mix-ins_ sont des modèles (_templates_) pour des classes. Une classe ECMAScript ne peut avoir qu'une seule classe parente et il n'est donc pas possible, par exemple, d'hériter de plusieurs classes dont une classe abstraite. La fonctionnalité dont on souhaite disposer doit être fournie par la classe parente.
 
-<p>Une fonction peut prendre une classe parente en entrée et renvoyer une classe fille qui étend cette classe parente. Cela peut permettre d'émuler les <em>mix-ins</em> avec ECMAScript.</p>
+Une fonction peut prendre une classe parente en entrée et renvoyer une classe fille qui étend cette classe parente. Cela peut permettre d'émuler les _mix-ins_ avec ECMAScript.
 
-<pre class="brush: js">let calculetteMixin = Base =&gt; class extends Base {
+```js
+let calculetteMixin = Base => class extends Base {
   calc() { }
 };
 
-let aleatoireMixin = Base =&gt; class extends Base {
+let aleatoireMixin = Base => class extends Base {
   randomiseur() { }
 };
-</pre>
+```
 
-<p>Une classe utilisant ces <em>mix-ins</em> peut alors être écrite de cette façon :</p>
+Une classe utilisant ces _mix-ins_ peut alors être écrite de cette façon :
 
-<pre class="brush: js">class Toto { }
+```js
+class Toto { }
 class Truc extends calculetteMixin(aleatoireMixin(Toto)) { }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-class-definitions', 'Class definitions')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2016', '#sec-class-definitions', 'Class definitions')}}</td>
-   <td>{{Spec2('ES2016')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2017', '#sec-class-definitions', 'Class definitions')}}</td>
-   <td>{{Spec2('ES2017')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ES2016', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES2016')}}     |                      |
+| {{SpecName('ES2017', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ES2017')}}     |                      |
+| {{SpecName('ESDraft', '#sec-class-definitions', 'Class definitions')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.classes")}}</p>
+{{Compat("javascript.classes")}}
 
-<h2 id="Utilisation_via_l'éditeur_multiligne_dans_Firefox">Utilisation via l'éditeur multiligne dans Firefox</h2>
+## Utilisation via l'éditeur multiligne dans Firefox
 
-<p>Une classe ne peut pas être redéfinie. Si vous testez votre code via l'éditeur multiligne JavaScript de Firefox (Outils &gt; Développement web &gt; Editeur multiligne JavaScript) et que vous exécutez à plusieurs reprises votre code avec la définition d'une classe, vous obtiendrez une exception SyntaxError : <em>redeclaration of let &lt;class-name&gt;</em>.</p>
+Une classe ne peut pas être redéfinie. Si vous testez votre code via l'éditeur multiligne JavaScript de Firefox (Outils > Développement web > Editeur multiligne JavaScript) et que vous exécutez à plusieurs reprises votre code avec la définition d'une classe, vous obtiendrez une exception SyntaxError : _redeclaration of let \<class-name>_.
 
-<p>Pour relancer une définition, il faut utiliser le menu Exécuter &gt; Recharger et exécuter. À ce sujet, voir le bug {{bug("1428672")}}.</p>
+Pour relancer une définition, il faut utiliser le menu Exécuter > Recharger et exécuter. À ce sujet, voir le bug {{bug("1428672")}}.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Fonctions">Les fonctions</a></li>
- <li>{{jsxref("Instructions/class", "Les déclarations de classes","",1)}}</li>
- <li>{{jsxref("Opérateurs/class", "Les expressions de classes","",1)}}</li>
- <li>{{jsxref("Opérateurs/super", "super")}}</li>
- <li><a href="https://tech.mozfr.org/post/2015/07/29/ES6-en-details-%3A-les-classes">Billet sur les classes (traduction en français)</a></li>
- <li><a href="https://github.com/tc39/proposal-class-fields">Champs publics et privés pour les classes (proposition de niveau 3)</a></li>
-</ul>
+- [Les fonctions](/fr/docs/Web/JavaScript/Reference/Fonctions)
+- {{jsxref("Instructions/class", "Les déclarations de classes","",1)}}
+- {{jsxref("Opérateurs/class", "Les expressions de classes","",1)}}
+- {{jsxref("Opérateurs/super", "super")}}
+- [Billet sur les classes (traduction en français)](https://tech.mozfr.org/post/2015/07/29/ES6-en-details-%3A-les-classes)
+- [Champs publics et privés pour les classes (proposition de niveau 3)](https://github.com/tc39/proposal-class-fields)

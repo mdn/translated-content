@@ -8,25 +8,26 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Grouping
 original_slug: Web/JavaScript/Reference/Opérateurs/Groupement
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>L'opérateur de groupement <code>( )</code> contrôle la précédence de l'évaluation dans les expressions.</p>
+L'opérateur de groupement `( )` contrôle la précédence de l'évaluation dans les expressions.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-groupingoperator.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-groupingoperator.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"> ( )</pre>
+     ( )
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>L'opérateur de groupement consiste en une paire de parenthèses encadrant une expression et permettant de surcharger la <a href="/fr/docs/JavaScript/Reference/Operateurs/Précédence_des_opérateurs">précédence normale des opérateurs </a>afin que les expressions dont la précédence est plus basse soient évaluées avant.</p>
+L'opérateur de groupement consiste en une paire de parenthèses encadrant une expression et permettant de surcharger la [précédence normale des opérateurs ](/fr/docs/JavaScript/Reference/Operateurs/Précédence_des_opérateurs)afin que les expressions dont la précédence est plus basse soient évaluées avant.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Normalement, la multiplication et la division sont prises en compte avant l'addition et la soustraction. On peut changer ce comportement avec l'opérateur de groupement.</p>
+Normalement, la multiplication et la division sont prises en compte avant l'addition et la soustraction. On peut changer ce comportement avec l'opérateur de groupement.
 
-<pre class="brush:js">var a = 1;
+```js
+var a = 1;
 var b = 2;
 var c = 3;
 
@@ -41,48 +42,23 @@ a + (b * c)   // 7
 
 // mathématiquement, cela est équivalent à
 a * c + b * c // 9
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-grouping-operator', 'The Grouping Operator')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-grouping-operator', 'L\'opérateur de groupement')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-11.1.6', 'L\'opérateur de groupement')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1', '#sec-11.1.4','L\'opérateur de groupement')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale, implémentée avec JavaScript 1.0.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | Statut                       | Commentaires                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-grouping-operator', 'The Grouping Operator')}} | {{Spec2('ESDraft')}} |                                                       |
+| {{SpecName('ES6', '#sec-grouping-operator', 'L\'opérateur de groupement')}} | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ES5.1', '#sec-11.1.6', 'L\'opérateur de groupement')}}             | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES1', '#sec-11.1.4','L\'opérateur de groupement')}}                 | {{Spec2('ES1')}}         | Définition initiale, implémentée avec JavaScript 1.0. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.operators.grouping")}}</p>
+{{Compat("javascript.operators.grouping")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/JavaScript/Reference/Operateurs/Précédence_des_opérateurs">Précédence des opérators</a></li>
- <li>{{jsxref("Operators/delete", "delete")}}</li>
- <li>{{jsxref("Operators/typeof", "typeof")}}</li>
-</ul>
+- [Précédence des opérators](/fr/docs/JavaScript/Reference/Operateurs/Précédence_des_opérateurs)
+- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("Operators/typeof", "typeof")}}

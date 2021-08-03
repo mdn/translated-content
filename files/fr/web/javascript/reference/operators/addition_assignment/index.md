@@ -2,65 +2,63 @@
 title: Affectation après addition (+=)
 slug: Web/JavaScript/Reference/Operators/Addition_assignment
 tags:
-- Assignment operator
-- JavaScript
-- Language feature
-- Operator
-- Reference
-translation-of: Web/JavaScript/Reference/Operators/Addition_assignment
+  - Assignment operator
+  - JavaScript
+  - Language feature
+  - Operator
+  - Reference
 browser-compat: javascript.operators.addition_assignment
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>L'opérateur d'addition et d'affectation (<code>+=</code>) calcule la somme ou la concaténation de ses deux opérandes puis affecte le résultat à la variable représentée par l'opérande gauche. C'est le type des opérandes qui détermine s'il y a somme ou concaténation.</p>
+L'opérateur d'addition et d'affectation (`+=`) calcule la somme ou la concaténation de ses deux opérandes puis affecte le résultat à la variable représentée par l'opérande gauche. C'est le type des opérandes qui détermine s'il y a somme ou concaténation.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-addition-assignment.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-addition-assignment.html")}}
 
-<h2 id="syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
-<strong>Opérateur :</strong> x += y
-<strong>Signification :</strong>  x  = x + y
-</pre>
+```js
+Opérateur : x += y
+Signification :  x  = x + y
+```
 
-<h2 id="examples">Exemples</h2>
+## Exemples
 
-<h3 id="using_addition_assignment">Utiliser l'opérateur d'addition et d'affectation</h3>
+### Utiliser l'opérateur d'addition et d'affectation
 
-<pre class="brush: js">
+```js
 let toto = "toto";
 let truc = 5;
 let machin = true;
 
-// nombre + nombre -&gt; addition
+// nombre + nombre -> addition
 truc += 2; // 7
 
-// booléen + nombre -&gt; addition
+// booléen + nombre -> addition
 machin += 1; // 2
 
-// booléen + booléen -&gt; addition
+// booléen + booléen -> addition
 machin += false; // 1
 
-// nombre + chaîne de caractères -&gt; concaténation
+// nombre + chaîne de caractères -> concaténation
 truc += 'toto'; // "5toto"
 
-// chaîne de caractères + booléen -&gt; concaténation
+// chaîne de caractères + booléen -> concaténation
 toto += false // "totofalse"
 
-// chaîne de caractères + chaîne de caractères -&gt; concaténation
-toto += 'truc' // "tototruc"</pre>
+// chaîne de caractères + chaîne de caractères -> concaténation
+toto += 'truc' // "tototruc"
+```
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment">Les opérateurs d'affectation dans le guide JavaScript</a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Addition">L'opérateur d'addition/concaténation</a></li>
-</ul>
+- [Les opérateurs d'affectation dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment)
+- [L'opérateur d'addition/concaténation](/fr/docs/Web/JavaScript/Reference/Operators/Addition)

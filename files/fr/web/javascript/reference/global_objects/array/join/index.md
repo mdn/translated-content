@@ -10,98 +10,71 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/join
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/join
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>join()</strong></code> crée et renvoie une nouvelle chaîne de caractères en concaténant tous les éléments d'un tableau (ou d'<a href="/fr/docs/Web/JavaScript/Guide/Collections_indexées#Manipuler_des_objets_semblables_à_des_tableaux">un objet semblable à un tableau</a>). La concaténation utilise la virgule ou une autre chaîne, fournie en argument, comme séparateur.</p>
+La méthode **`join()`** crée et renvoie une nouvelle chaîne de caractères en concaténant tous les éléments d'un tableau (ou d'[un objet semblable à un tableau](/fr/docs/Web/JavaScript/Guide/Collections_indexées#Manipuler_des_objets_semblables_à_des_tableaux)). La concaténation utilise la virgule ou une autre chaîne, fournie en argument, comme séparateur.
 
-<div>{{EmbedInteractiveExample("pages/js/array-join.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-join.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>arr</var>.join()
-<var>arr</var>.join(<var>séparateur</var>)
-</pre>
+    arr.join()
+    arr.join(séparateur)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>séparateur</code> {{optional_inline}}</dt>
- <dd>Ce paramètre optionnel indique une chaine de caractères pour séparer chaque élément du tableau. Le séparateur est converti en une chaine de caractères si nécessaire. Si ce paramètre n'est pas utilisé, les éléments du tableau seront séparés par une virgule (,). Si ce paramètre est la chaîne vide, les éléments seront accolés les uns aux autres sans espace entre. La valeur par défaut de ce paramètre est <code>","</code>.</dd>
-</dl>
+- `séparateur` {{optional_inline}}
+  - : Ce paramètre optionnel indique une chaine de caractères pour séparer chaque élément du tableau. Le séparateur est converti en une chaine de caractères si nécessaire. Si ce paramètre n'est pas utilisé, les éléments du tableau seront séparés par une virgule (,). Si ce paramètre est la chaîne vide, les éléments seront accolés les uns aux autres sans espace entre. La valeur par défaut de ce paramètre est `","`.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une chaîne de caractères composée de tous les éléments du tableau joints les uns aux autres. Si la longueur du tableau (<code>arr.length</code>) vaut <code>0</code>, c'est la chaîne vide qui est renvoyée. Si le tableau ne contient qu'un élément, sa version texte sera renvoyée sans être suivie du séparateur.</p>
+Une chaîne de caractères composée de tous les éléments du tableau joints les uns aux autres. Si la longueur du tableau (`arr.length`) vaut `0`, c'est la chaîne vide qui est renvoyée. Si le tableau ne contient qu'un élément, sa version texte sera renvoyée sans être suivie du séparateur.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Les différents éléments du tableau sont convertis en une chaîne de caractères puis fusionnés en une seule chaîne. Si un élément vaut <code>undefined</code> ou <code>null</code>, il sera converti en la chaîne vide. Cette fonction est générique et peut donc être utilisée avec <a href="/fr/docs/Web/JavaScript/Guide/Collections_indexées#Manipuler_des_objets_semblables_à_des_tableaux">les objets semblables aux tableaux</a>.</p>
+Les différents éléments du tableau sont convertis en une chaîne de caractères puis fusionnés en une seule chaîne. Si un élément vaut `undefined` ou `null`, il sera converti en la chaîne vide. Cette fonction est générique et peut donc être utilisée avec [les objets semblables aux tableaux](/fr/docs/Web/JavaScript/Guide/Collections_indexées#Manipuler_des_objets_semblables_à_des_tableaux).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Fusionner_un_tableau_de_quatre_façons_différentes">Fusionner un tableau de quatre façons différentes</h3>
+### Fusionner un tableau de quatre façons différentes
 
-<p>L'exemple suivant crée un tableau, <code>a</code>, avec trois éléments, puis joint le tableau à trois reprises : en utilisant le séparateur par défaut, une virgule et un espace, puis un plus, puis avec la chaîne vide.</p>
+L'exemple suivant crée un tableau, `a`, avec trois éléments, puis joint le tableau à trois reprises : en utilisant le séparateur par défaut, une virgule et un espace, puis un plus, puis avec la chaîne vide.
 
-<pre class="brush: js">var a = new Array("Vent","Pluie","Feu");
+```js
+var a = new Array("Vent","Pluie","Feu");
 a.join();      // "Vent,Pluie,Feu"
 a.join(", ");  // "Vent, Pluie, Feu"
 a.join(" + "); // "Vent + Pluie + Feu"
-a.join("");    // "VentPluieFeu"</pre>
+a.join("");    // "VentPluieFeu"
+```
 
-<h3 id="Fusionner_un_objet_semblable_à_un_tableau">Fusionner un objet semblable à un tableau</h3>
+### Fusionner un objet semblable à un tableau
 
-<p>Dans l'exemple suivant, on effectue la fusion sur un objet semblable à un tableau (<code><a href="/fr/docs/Web/JavaScript/Reference/Fonctions/arguments">arguments</a></code>) en appelant {{jsxref("Function.prototype.call")}} sur <code>Array.prototype.join</code>.</p>
+Dans l'exemple suivant, on effectue la fusion sur un objet semblable à un tableau ([`arguments`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments)) en appelant {{jsxref("Function.prototype.call")}} sur `Array.prototype.join`.
 
-<pre class="brush: js">function f(a, b, c) {
+```js
+function f(a, b, c) {
   var s = Array.prototype.join.call(arguments);
   console.log(s);
 }
 f(1, 'a', true); // '1,a,true'
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.5', 'Array.prototype.join')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.join', 'Array.prototype.join')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.join', 'Array.prototype.join')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                         | Commentaires                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.4.4.5', 'Array.prototype.join')}}                 | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-array.prototype.join', 'Array.prototype.join')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-array.prototype.join', 'Array.prototype.join')}} | {{Spec2('ESDraft')}} |                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Array.join")}}</p>
+{{Compat("javascript.builtins.Array.join")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("String.prototype.split()")}}</li>
- <li>{{jsxref("Array.prototype.toString()")}}</li>
- <li>{{jsxref("TypedArray.prototype.join()")}}</li>
-</ul>
+- {{jsxref("String.prototype.split()")}}
+- {{jsxref("Array.prototype.toString()")}}
+- {{jsxref("TypedArray.prototype.join()")}}

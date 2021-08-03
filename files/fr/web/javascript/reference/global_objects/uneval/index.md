@@ -9,34 +9,33 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/uneval
 original_slug: Web/JavaScript/Reference/Objets_globaux/uneval
 ---
-<div>{{jsSidebar("Objects")}}{{Non-standard_header}}</div>
+{{jsSidebar("Objects")}}{{Non-standard_header}}
 
-<p>La fonction <code><strong>uneval()</strong></code> renvoie une chaîne de caractères représentant le code source d'un objet.</p>
+La fonction **`uneval()`** renvoie une chaîne de caractères représentant le code source d'un objet.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">uneval(<var>objet</var>)</pre>
+    uneval(objet)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>objet</code></dt>
- <dd>Une instruction ou une expression JavaScript.</dd>
-</dl>
+- `objet`
+  - : Une instruction ou une expression JavaScript.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une chaîne de caractères qui représente le code source de l'objet indiqué.</p>
+Une chaîne de caractères qui représente le code source de l'objet indiqué.
 
-<div class="note"><p><strong>Note :</strong> Le résultat obtenu ne sera pas une représentation JSON valide de l'objet.</p></div>
+> **Note :** Le résultat obtenu ne sera pas une représentation JSON valide de l'objet.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p><code>uneval()</code> est une fonction disponible au plus haut niveau et n'est rattachée à aucun objet.</p>
+`uneval()` est une fonction disponible au plus haut niveau et n'est rattachée à aucun objet.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush:js">var a = 1;
+```js
+var a = 1;
 uneval(a); // renvoie une chaîne qui contient 1
 
 var b = "1";
@@ -48,21 +47,19 @@ uneval(function toto(){}); // renvoie "(function toto(){})"
 var a = uneval(function toto(){return 'salut'});
 var toto = eval(a);
 toto(); // renvoie "salut"
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette méthode ne fait partie d'aucune spécification.</p>
+Cette méthode ne fait partie d'aucune spécification.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.uneval")}}</p>
+{{Compat("javascript.builtins.uneval")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Objets_globaux/eval", "eval()")}}</li>
- <li>{{jsxref("JSON.stringify()")}}</li>
- <li>{{jsxref("JSON.parse()")}}</li>
- <li>{{jsxref("Object.toSource()")}}</li>
-</ul>
+- {{jsxref("Objets_globaux/eval", "eval()")}}
+- {{jsxref("JSON.stringify()")}}
+- {{jsxref("JSON.parse()")}}
+- {{jsxref("Object.toSource()")}}

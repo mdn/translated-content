@@ -10,48 +10,46 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/lastMatch
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/lastMatch
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p>La propriété non-standard <strong><code>lastMatch</code> </strong>est une propriété statique en lecture seule pour les expressions rationnelles qui contient les caractères de la dernière correspondance. <code>RegExp.$&amp;</code> est un alias pour cette propriété.</p>
+La propriété non-standard **`lastMatch` **est une propriété statique en lecture seule pour les expressions rationnelles qui contient les caractères de la dernière correspondance. `RegExp.$&` est un alias pour cette propriété.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>RegExp</var>.lastMatch
-RegExp['$&amp;']
-</pre>
+    RegExp.lastMatch
+    RegExp['$&']
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La propriété <code>lastMatch</code> est une propriété statique, ce n'est pas une propriété pour chaque objet qui représente une expression rationnelle. Cette propriété doit donc toujours être utilisée avec la syntaxe <code>RegExp.lastMatch</code> ou <code>RegExp['$&amp;'].</code></p>
+La propriété `lastMatch` est une propriété statique, ce n'est pas une propriété pour chaque objet qui représente une expression rationnelle. Cette propriété doit donc toujours être utilisée avec la syntaxe `RegExp.lastMatch` ou `RegExp['$&'].`
 
-<p>La valeur de la propriété <code>lastMatch</code> n'est accessible qu'en lecture seule et est modifiée à chaque fois qu'une correspondance est trouvée.</p>
+La valeur de la propriété `lastMatch` n'est accessible qu'en lecture seule et est modifiée à chaque fois qu'une correspondance est trouvée.
 
-<p>Il n'est pas possible d'utiliser l'alias avec la notation utilisant le point pour accéder à la propriété (<code>RegExp.$&amp;</code>) car le parseur attend une expression avec "&amp;" dans ce cas, ce qui provoque une exception {{jsxref("SyntaxError")}}. Pour utiliser l'alias, on prendra donc la notation <a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres#Notation_avec_crochets">utilisant les crochets</a>.</p>
+Il n'est pas possible d'utiliser l'alias avec la notation utilisant le point pour accéder à la propriété (`RegExp.$&`) car le parseur attend une expression avec "&" dans ce cas, ce qui provoque une exception {{jsxref("SyntaxError")}}. Pour utiliser l'alias, on prendra donc la notation [utilisant les crochets](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres#Notation_avec_crochets).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_lastMatch_et">Utiliser <code>lastMatch</code> et <code>$&amp;</code></h3>
+### Utiliser `lastMatch` et `$&`
 
-<pre class="brush: js">var re = /coucou/g;
+```js
+var re = /coucou/g;
 re.test("coucou toi!");
 RegExp.lastMatch; // "coucou"
-RegExp['$&amp;'];     // "coucou"
-</pre>
+RegExp['$&'];     // "coucou"
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette propriété n'est pas standard. Elle ne fait partie d'aucune spécification.</p>
+Cette propriété n'est pas standard. Elle ne fait partie d'aucune spécification.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.RegExp.lastMatch")}}</p>
+{{Compat("javascript.builtins.RegExp.lastMatch")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{non-standard_inline}} {{jsxref("RegExp.input", "RegExp.input ($_)")}}</li>
- <li>{{non-standard_inline}} {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}</li>
- <li>{{non-standard_inline}} {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}</li>
- <li>{{non-standard_inline}} {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}</li>
- <li>{{non-standard_inline}} {{jsxref("RegExp.n", "RegExp.$1-$9")}}</li>
-</ul>
+- {{non-standard_inline}} {{jsxref("RegExp.input", "RegExp.input ($_)")}}
+- {{non-standard_inline}} {{jsxref("RegExp.lastParen", "RegExp.lastParen ($+)")}}
+- {{non-standard_inline}} {{jsxref("RegExp.leftContext", "RegExp.leftContext ($`)")}}
+- {{non-standard_inline}} {{jsxref("RegExp.rightContext", "RegExp.rightContext ($')")}}
+- {{non-standard_inline}} {{jsxref("RegExp.n", "RegExp.$1-$9")}}

@@ -5,124 +5,132 @@ tags:
   - JavaScript
   - Reference
   - Statement
-browser-compat: javascript.statements.if_else
 translation_of: Web/JavaScript/Reference/Statements/if...else
 original_slug: Web/JavaScript/Reference/Instructions/if...else
+browser-compat: javascript.statements.if_else
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>L'instruction <strong><code>if</code></strong> exécute une instruction si une condition donnée est vraie ou équivalente à vrai. Si la condition n'est pas vérifiée, il est possible d'utiliser une autre instruction.</p>
+L'instruction **`if`** exécute une instruction si une condition donnée est vraie ou équivalente à vrai. Si la condition n'est pas vérifiée, il est possible d'utiliser une autre instruction.
 
-<div>{{EmbedInteractiveExample("pages/js/statement-ifelse.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-ifelse.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">if (<em>condition</em>)
-  <em>statement1</em>
-} else {
-  <em>statement2</em>
-}</pre>
+    if (condition)
+      statement1
+    } else {
+      statement2
+    }
 
-<dl>
-  <dt><code>condition</code></dt>
-  <dd>Une <a href="/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators#expressions">expression</a> qui est évaluée à <code>true</code> ou <code>false</code>.</dd>
-  <dt><code>statement1</code></dt>
-  <dd>L'instruction qui est exécutée si la condition est vérifiée (i.e. est évaluée à <code>true</code>). Cette instruction peut être n'importe quelle instruction valide, y compris une imbrication d'autres instructions <code>if</code>. Pour exécuter plusieurs instructions, on pourra utiliser un <a href="/fr/docs/Web/JavaScript/Reference/Statements/block">bloc d'instructions</a> ({ ... }) qui permet de les regrouper. Pour n'exécuter aucune instruction, on pourra utiliser <a href="/fr/docs/Web/JavaScript/Reference/Statements/Empty">l'instruction vide</a>.</dd>
-  <dt><code>statement2</code></dt>
-  <dd>Si la clause <code>else</code> existe, l'instruction qui est exécutée si la <code>condition</code> est évaluée à <code>false</code>. Comme pour la première, cette instruction peut être n'importe quelle instruction valide : une autre instruction <code>if</code> imbriquée, un bloc d'instruction, une instruction vide, etc.</dd>
-</dl>
+- `condition`
+  - : Une [expression](/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators#expressions) qui est évaluée à `true` ou `false`.
+- `statement1`
+  - : L'instruction qui est exécutée si la condition est vérifiée (i.e. est évaluée à `true`). Cette instruction peut être n'importe quelle instruction valide, y compris une imbrication d'autres instructions `if`. Pour exécuter plusieurs instructions, on pourra utiliser un [bloc d'instructions](/fr/docs/Web/JavaScript/Reference/Statements/block) ({ ... }) qui permet de les regrouper. Pour n'exécuter aucune instruction, on pourra utiliser [l'instruction vide](/fr/docs/Web/JavaScript/Reference/Statements/Empty).
+- `statement2`
+  - : Si la clause `else` existe, l'instruction qui est exécutée si la `condition` est évaluée à `false`. Comme pour la première, cette instruction peut être n'importe quelle instruction valide : une autre instruction `if` imbriquée, un bloc d'instruction, une instruction vide, etc.
 
-<h2 id="description">Description</h2>
+## Description
 
-<p>Plusieurs instructions <code>if...else</code> peuvent être imbriquées afin de créer une structure <code>else if</code> (on notera qu'il n'y a pas de mot-clé <code>elseif</code> en JavaScript).</p>
+Plusieurs instructions `if...else` peuvent être imbriquées afin de créer une structure `else if` (on notera qu'il n'y a pas de mot-clé `elseif` en JavaScript).
 
-<pre class="brush: js">if (<em>condition1</em>)
-  <em>instruction1</em>
-else if (<em>condition2</em>)
-  <em>instruction2</em>
-else if (<em>condition3</em>)
-  <em>instruction3</em>
+```js
+if (condition1)
+  instruction1
+else if (condition2)
+  instruction2
+else if (condition3)
+  instruction3
 ...
 else
-  <em>instructionN</em>
-</pre>
+  instructionN
+```
 
-<p>Si on indente correctement le code, on retrouve la structure exactement équivalente :</p>
+Si on indente correctement le code, on retrouve la structure exactement équivalente :
 
-<pre class="brush: js">if (<em>condition1</em>)
-  <em>instruction1</em>
+```js
+if (condition1)
+  instruction1
 else
-  if (<em>condition2</em>)
-    <em>instruction2</em>
+  if (condition2)
+    instruction2
   else
-    if (<em>condition3</em>)
+    if (condition3)
 ...
-</pre>
+```
 
-<p>Afin d'exécuter plusieurs instructions, on utilisera un {{jsxref("Statements/block","bloc d'instructions","",1)}} (<code>{ ... }</code>) pour regrouper les instructions souhaitées. Utiliser les blocs d'instructions est une bonne façon d'organiser son code, surtout lorsque celui-ci comporte des instructions conditionnelles imbriquées.</p>
+Afin d'exécuter plusieurs instructions, on utilisera un {{jsxref("Statements/block","bloc d'instructions","",1)}} (`{ ... }`) pour regrouper les instructions souhaitées. Utiliser les blocs d'instructions est une bonne façon d'organiser son code, surtout lorsque celui-ci comporte des instructions conditionnelles imbriquées.
 
-<pre class="brush: js">if (<em>condition</em>) {
-  <em>instructions1</em>
+```js
+if (condition) {
+  instructions1
 } else {
-  <em>instructions2</em>
+  instructions2
 }
-</pre>
+```
 
-<p>Attention à ne pas confondre les valeurs booléennes « primitives » <code>true</code> et <code>false</code> avec les valeurs true et false d'un objet <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean"><code>Boolean</code></a>. Toute valeur qui n'est pas <code>false</code>, <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined"><code>undefined</code></a>, <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a>, <code>0</code>, <code>-0</code>, <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN"><code>NaN</code></a> ou la chaîne vide (<code>""</code>), et tout objet, y compris un objet <code>Boolean</code> dont la valeur est <code>false</code>, seront évalués à <code>true</code> lors d'une instruction conditionnelle <code>if</code>. Ainsi :</p>
+Attention à ne pas confondre les valeurs booléennes « primitives » `true` et `false` avec les valeurs true et false d'un objet [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean). Toute valeur qui n'est pas `false`, [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null), `0`, `-0`, [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN) ou la chaîne vide (`""`), et tout objet, y compris un objet `Boolean` dont la valeur est `false`, seront évalués à `true` lors d'une instruction conditionnelle `if`. Ainsi :
 
-<pre class="brush: js">var b = new Boolean(false);
+```js
+var b = new Boolean(false);
 if (b) // la condition sera évaluée à true
-</pre>
+```
 
-<h2 id="examples">Exemples</h2>
+## Exemples
 
-<h3 id="using_if...else">Utiliser <code>if...else</code></h3>
+### Utiliser `if...else`
 
-<pre class="brush: js">if (cipher_char == from_char) {
+```js
+if (cipher_char == from_char) {
   result = result + to_char;
   x++;
 } else {
   result = result + clear_char;
-}</pre>
+}
+```
 
-<h3 id="using_else_if">Utiliser <code>else if</code></h3>
+### Utiliser `else if`
 
-<p>Bien qu'il n'y ait pas de mot-clé elseif dans le langage JavaScript, il est possible d'imbriquer des instructions if...else à la suite les une des autres en plaçant un espace entre else et le début de l'instruction if imbriquée :</p>
+Bien qu'il n'y ait pas de mot-clé elseif dans le langage JavaScript, il est possible d'imbriquer des instructions if...else à la suite les une des autres en plaçant un espace entre else et le début de l'instruction if imbriquée :
 
-<pre class="brush: js">if (x &gt; 50){
+```js
+if (x > 50){
   // faire quelque chose
-} else if (x &gt; 5) {
+} else if (x > 5) {
   // faire autre chose
 } else {
   // faire encore autre chose
-}</pre>
+}
+```
 
-<h3 id="assignment_within_the_conditional_expression">Affectation de variable dans l'expression conditionnelle</h3>
+### Affectation de variable dans l'expression conditionnelle
 
-<p>Il est conseillé de ne pas utiliser d'affectation au sein des expressions conditionnelles. En effet, l'affectation peut être confondue avec un test d'égalité lorsqu'on analyse le code. Il ne faut donc pas utiliser le code suivant (bien qu'il fonctionne) :</p>
+Il est conseillé de ne pas utiliser d'affectation au sein des expressions conditionnelles. En effet, l'affectation peut être confondue avec un test d'égalité lorsqu'on analyse le code. Il ne faut donc pas utiliser le code suivant (bien qu'il fonctionne) :
 
-<pre class="brush: js example-bad">if (x = y) {
+```js example-bad
+if (x = y) {
   /* exécuter les instructions */
-}</pre>
+}
+```
 
-<p>S'il est nécessaire d'effectuer une telle affectation, une pratique courante consiste à ajouter des parenthèses de cette manière afin d'alerter le lecteur du code (exemple à utiliser) :</p>
+S'il est nécessaire d'effectuer une telle affectation, une pratique courante consiste à ajouter des parenthèses de cette manière afin d'alerter le lecteur du code (exemple à utiliser) :
 
-<pre class="brush: js example-good">if ((x = y)) {
+```js example-good
+if ((x = y)) {
   /* exécuter les instructions */
-}</pre>
+}
+```
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
 {{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/JavaScript/Reference/Statements/block">block</a></li>
-  <li><a href="/fr/docs/JavaScript/Reference/Statements/switch">switch</a></li>
-  <li><a href="/fr/docs/JavaScript/Reference/Operators/Conditional_Operator">L'opérateur conditionnel</a></li>
-</ul>
+- [block](/fr/docs/JavaScript/Reference/Statements/block)
+- [switch](/fr/docs/JavaScript/Reference/Statements/switch)
+- [L'opérateur conditionnel](/fr/docs/JavaScript/Reference/Operators/Conditional_Operator)

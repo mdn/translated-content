@@ -10,59 +10,55 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/preventExtensions
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/preventExtensions
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>handler.preventExtensions()</code></strong> est une trappe pour {{jsxref("Object.preventExtensions()")}}.</p>
+La méthode **`handler.preventExtensions()`** est une trappe pour {{jsxref("Object.preventExtensions()")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/proxyhandler-preventextensions.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-preventextensions.html", "taller")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var p = new Proxy(cible, {
+```js
+var p = new Proxy(cible, {
   preventExtensions: function(cible) {
   }
 });
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Le paramètre suivant est passé à la méthode <code>preventExtensions</code>. <code>this</code> est lié au gestionnaire (<em>handler</em>).</p>
+Le paramètre suivant est passé à la méthode `preventExtensions`. `this` est lié au gestionnaire (_handler_).
 
-<dl>
- <dt><code>cible</code></dt>
- <dd>L'objet cible.</dd>
-</dl>
+- `cible`
+  - : L'objet cible.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>La méthode <code>preventExtensions</code> doit renvoyer une valeur booléenne.</p>
+La méthode `preventExtensions` doit renvoyer une valeur booléenne.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code><strong>handler.preventExtensions()</strong></code> est une trappe pour intercepter {{jsxref("Object.preventExtensions()")}}.</p>
+La méthode **`handler.preventExtensions()`** est une trappe pour intercepter {{jsxref("Object.preventExtensions()")}}.
 
-<h3 id="Interceptions">Interceptions</h3>
+### Interceptions
 
-<p>Cette trappe peut intercepter les opérations de :</p>
+Cette trappe peut intercepter les opérations de :
 
-<ul>
- <li>{{jsxref("Object.preventExtensions()")}}</li>
- <li>{{jsxref("Reflect.preventExtensions()")}}</li>
-</ul>
+- {{jsxref("Object.preventExtensions()")}}
+- {{jsxref("Reflect.preventExtensions()")}}
 
-<h3 id="Invariants">Invariants</h3>
+### Invariants
 
-<p>Si les invariants suivants ne sont pas respectés, le proxy renverra une execption {{jsxref("TypeError")}} :</p>
+Si les invariants suivants ne sont pas respectés, le proxy renverra une execption {{jsxref("TypeError")}} :
 
-<ul>
- <li><code>Object.preventExtensions(proxy)</code> ne renvoie <code>true</code> que si <code>Object.isExtensible(proxy)</code> vaut <code>false</code>.</li>
-</ul>
+- `Object.preventExtensions(proxy)` ne renvoie `true` que si `Object.isExtensible(proxy)` vaut `false`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>On intercepte l'appel à {{jsxref("Object.preventExtensions()")}} dans l'exemple suivant :</p>
+On intercepte l'appel à {{jsxref("Object.preventExtensions()")}} dans l'exemple suivant :
 
-<pre class="brush: js">var p = new Proxy({}, {
+```js
+var p = new Proxy({}, {
   preventExtensions: function(cible) {
     console.log("appelé");
     Object.preventExtensions(cible);
@@ -72,50 +68,34 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/preventExte
 
 console.log(Object.preventExtensions(p)); // "appelé"
                                           // true
-</pre>
+```
 
-<p>Le code suivant ne respecte pas l'invariant :</p>
+Le code suivant ne respecte pas l'invariant :
 
-<pre class="brush: js">var p = new Proxy({}, {
+```js
+var p = new Proxy({}, {
   preventExtensions: function(cible) {
     return true;
   }
 });
 
 Object.preventExtensions(p); // TypeError est levée
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-preventextensions', '[[PreventExtensions]]')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-preventextensions', '[[PreventExtensions]]')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                                        | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-preventextensions', '[[PreventExtensions]]')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-preventextensions', '[[PreventExtensions]]')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Proxy.handler.preventExtensions")}}</p>
+{{Compat("javascript.builtins.Proxy.handler.preventExtensions")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Object.preventExtensions()")}}</li>
- <li>{{jsxref("Reflect.preventExtensions()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Object.preventExtensions()")}}
+- {{jsxref("Reflect.preventExtensions()")}}

@@ -10,71 +10,47 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/valueOf
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/valueOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>valueOf()</strong></code> renvoie la valeur primitive de l'objet {{jsxref("String")}}.</p>
+La méthode **`valueOf()`** renvoie la valeur primitive de l'objet {{jsxref("String")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/string-valueof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-valueof.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>str</var>.valueOf()</pre>
+    str.valueOf()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une chaîne de caractères qui représente la valeur primitive d'un objet {{jsxref("String")}}.</p>
+Une chaîne de caractères qui représente la valeur primitive d'un objet {{jsxref("String")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code>valueOf()</code> de <code>String</code> renvoie la valeur primitive de l'objet <code>String</code> sous la forme d'une chaine de caractères. Cette valeur est équivalente à {{jsxref("String.prototype.toString()")}}.</p>
+La méthode `valueOf()` de `String` renvoie la valeur primitive de l'objet `String` sous la forme d'une chaine de caractères. Cette valeur est équivalente à {{jsxref("String.prototype.toString()")}}.
 
-<p>Cette méthode est généralement appelée en interne par JavaScript et non explicitement dans du code.</p>
+Cette méthode est généralement appelée en interne par JavaScript et non explicitement dans du code.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var x = new String("Coucou monde");
+```js
+var x = new String("Coucou monde");
 console.log(x.valueOf()); // affiche "Coucou monde"
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.5.4.3', 'String.prototype.valueOf')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.valueof', 'String.prototype.valueOf')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.valueof', 'String.prototype.valueOf')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                         | Commentaires                                          |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                         | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.5.4.3', 'String.prototype.valueOf')}}                         | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-string.prototype.valueof', 'String.prototype.valueOf')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-string.prototype.valueof', 'String.prototype.valueOf')}} | {{Spec2('ESDraft')}} |                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.String.valueOf")}}</p>
+{{Compat("javascript.builtins.String.valueOf")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("String.prototype.toString()")}}</li>
- <li>{{jsxref("Object.prototype.valueOf()")}}</li>
-</ul>
+- {{jsxref("String.prototype.toString()")}}
+- {{jsxref("Object.prototype.valueOf()")}}

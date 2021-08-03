@@ -8,24 +8,24 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Invalid_assignment_left-hand_side
 original_slug: Web/JavaScript/Reference/Erreurs/Invalid_assignment_left-hand_side
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="syntaxbox">ReferenceError: invalid assignment left-hand side
-</pre>
+    ReferenceError: invalid assignment left-hand side
 
-<h2 id="Type_d'erreur">Type d'erreur</h2>
+## Type d'erreur
 
-<p>{{jsxref("ReferenceError")}}.</p>
+{{jsxref("ReferenceError")}}.
 
-<h2 id="Quel_est_le_problème">Quel est le problème ?</h2>
+## Quel est le problème ?
 
-<p>Un affectation inattendue a eu lieu. Cela peut être dû à un mélange entre <a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_d_affectation">un opérateur d'affectation</a> et <a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_comparaison">un opérateur de comparaison</a>. Un seul signe égal affectera une valeur à une variable alors que les opérateurs <code>==</code> ou <code>===</code> comparent des valeurs entre elles.</p>
+Un affectation inattendue a eu lieu. Cela peut être dû à un mélange entre [un opérateur d'affectation](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_d_affectation) et [un opérateur de comparaison](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_comparaison). Un seul signe égal affectera une valeur à une variable alors que les opérateurs `==` ou `===` comparent des valeurs entre elles.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js example-bad">if (Math.PI = 3 || Math.PI = 4) {
+```js example-bad
+if (Math.PI = 3 || Math.PI = 4) {
   console.log('Nope !');
 }
 // ReferenceError: invalid assignment left-hand side
@@ -34,22 +34,21 @@ var str = 'Hello, '
 += 'is it me '
 += 'you\'re looking for?';
 // ReferenceError: invalid assignment left-hand side
-</pre>
+```
 
-<p>Dans l'instruction <code>if</code>, plutôt qu'une affectation, on voudra plutôt utiliser un opérateur <code>==</code> ou <code>===</code> et l'opérateur de concaténation (+) à la place pour la chaîne.</p>
+Dans l'instruction `if`, plutôt qu'une affectation, on voudra plutôt utiliser un opérateur `==` ou `===` et l'opérateur de concaténation (+) à la place pour la chaîne.
 
-<pre class="brush: js example-good">if (Math.PI == 3 || Math.PI == 4) {
+```js example-good
+if (Math.PI == 3 || Math.PI == 4) {
   console.log('no way!');
 }
 
 var str = 'Hello, '
 + 'from the '
 + 'other side!';
-</pre>
+```
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_d_affectation">Opérateurs d'affectation</a></li>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_comparaison">Opérateurs de comparaison</a></li>
-</ul>
+- [Opérateurs d'affectation](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_d_affectation)
+- [Opérateurs de comparaison](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_comparaison)

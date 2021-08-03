@@ -8,60 +8,58 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Undeclared_var
 original_slug: Web/JavaScript/Reference/Erreurs/Undeclared_var
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="syntaxbox">ReferenceError: assignment to undeclared variable "x" (Firefox)
-ReferenceError: "x" is not defined (Chrome)
-ReferenceError: Variable undefined in strict mode (Edge)
-</pre>
+    ReferenceError: assignment to undeclared variable "x" (Firefox)
+    ReferenceError: "x" is not defined (Chrome)
+    ReferenceError: Variable undefined in strict mode (Edge)
 
-<h2 id="Type_d'erreur">Type d'erreur</h2>
+## Type d'erreur
 
-<p>Une erreur {{jsxref("ReferenceError")}}, uniquement <a href="/fr/docs/Web/JavaScript/Reference/Strict_mode">en mode strict</a>.</p>
+Une erreur {{jsxref("ReferenceError")}}, uniquement [en mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
 
-<h2 id="Quel_est_le_problème">Quel est le problème ?</h2>
+## Quel est le problème ?
 
-<p>Une valeur a été affectée à une variable non-déclarée. Autrement dit, il y a eu une affectation qui n'utilise pas le mot-clé <code><a href="/fr/docs/Web/JavaScript/Reference/Instructions/var">var</a></code>. Il existe certaines différences entre les variables déclarées et les variables non déclarées ce qui peut entraîner des résultats étranges. C'est pour cette raison que le moteur affiche une erreur en mode strict.</p>
+Une valeur a été affectée à une variable non-déclarée. Autrement dit, il y a eu une affectation qui n'utilise pas le mot-clé [`var`](/fr/docs/Web/JavaScript/Reference/Instructions/var). Il existe certaines différences entre les variables déclarées et les variables non déclarées ce qui peut entraîner des résultats étranges. C'est pour cette raison que le moteur affiche une erreur en mode strict.
 
-<p>Trois choses à noter lorsqu'on évoque les variables déclarées/non déclarées :</p>
+Trois choses à noter lorsqu'on évoque les variables déclarées/non déclarées :
 
-<ul>
- <li>Les variables déclarées sont contraintes dans le contexte d'exécution dans lequel elles sont déclarées. Les variables non déclarées sont toujours globales.</li>
- <li>Les variables déclarées sont créées avant que le code soit exécuté. Les variables non déclarées n'existent pas tant que le code qui leur est affecté est exécuté.</li>
- <li>Les variables déclarées sont des propriétés non-configurables de leur contexte d'exécution (la fonction ou l'espace global). Les variables non-déclarées sont configurables (elles peuvent être supprimées).</li>
-</ul>
+- Les variables déclarées sont contraintes dans le contexte d'exécution dans lequel elles sont déclarées. Les variables non déclarées sont toujours globales.
+- Les variables déclarées sont créées avant que le code soit exécuté. Les variables non déclarées n'existent pas tant que le code qui leur est affecté est exécuté.
+- Les variables déclarées sont des propriétés non-configurables de leur contexte d'exécution (la fonction ou l'espace global). Les variables non-déclarées sont configurables (elles peuvent être supprimées).
 
-<p>Pour plus de détails et d'exemple, se référer à la page sur <code><a href="/fr/docs/Web/JavaScript/Reference/Instructions/var">var</a></code>.</p>
+Pour plus de détails et d'exemple, se référer à la page sur [`var`](/fr/docs/Web/JavaScript/Reference/Instructions/var).
 
-<p>Les erreurs à propos des affectations sur les variables non déclarées se produisent uniquement <a href="/fr/docs/Web/JavaScript/Reference/Strict_mode">en mode strict</a>. En mode non-strict, elles sont ignorées silencieusement.</p>
+Les erreurs à propos des affectations sur les variables non déclarées se produisent uniquement [en mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode). En mode non-strict, elles sont ignorées silencieusement.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Exemples_invalides">Exemples invalides</h3>
+### Exemples invalides
 
-<p>Ici, la variable <code>truc</code> n'est pas déclarée :</p>
+Ici, la variable `truc` n'est pas déclarée :
 
-<pre class="brush: js example-bad">function toto() {
+```js example-bad
+function toto() {
   "use strict";
   truc = true;
 }
 toto(); // ReferenceError: assignment to undeclared variable truc
-</pre>
+```
 
-<h3 id="Exemples_valides">Exemples valides</h3>
+### Exemples valides
 
-<p>Afin de déclarer <code>truc</code>, on peut ajouter le mot-clé <code><a href="/fr/docs/Web/JavaScript/Reference/Instructions/var">var</a></code> devant.</p>
+Afin de déclarer `truc`, on peut ajouter le mot-clé [`var`](/fr/docs/Web/JavaScript/Reference/Instructions/var) devant.
 
-<pre class="brush: js example-good">function toto() {
+```js example-good
+function toto() {
   "use strict";
   var truc = true;
 }
-toto();</pre>
+toto();
+```
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Strict_mode">Le mode strict</a></li>
-</ul>
+- [Le mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode)

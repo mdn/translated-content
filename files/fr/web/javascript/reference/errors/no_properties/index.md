@@ -9,35 +9,33 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/No_properties
 original_slug: Web/JavaScript/Reference/Erreurs/No_properties
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="syntaxbox">TypeError: Unable to get property {x} of undefined or null reference (Edge)
-TypeError: null has no properties (Firefox)
-TypeError: undefined has no properties (Firefox)
-</pre>
+    TypeError: Unable to get property {x} of undefined or null reference (Edge)
+    TypeError: null has no properties (Firefox)
+    TypeError: undefined has no properties (Firefox)
 
-<h2 id="Type_d'erreur">Type d'erreur</h2>
+## Type d'erreur
 
-<p>{{jsxref("TypeError")}}.</p>
+{{jsxref("TypeError")}}.
 
-<h2 id="Quel_est_le_problème">Quel est le problème ?</h2>
+## Quel est le problème ?
 
-<p>Les valeurs {{jsxref("null")}} et {{jsxref("undefined")}} n'ont aucunes propriétés auxquelles accéder.</p>
+Les valeurs {{jsxref("null")}} et {{jsxref("undefined")}} n'ont aucunes propriétés auxquelles accéder.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js example-bad">null.toto;
+```js example-bad
+null.toto;
 // TypeError: null has no properties
 
 undefined.truc;
 // TypeError: undefined has no properties
-</pre>
+```
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("null")}}</li>
- <li>{{jsxref("undefined")}}</li>
-</ul>
+- {{jsxref("null")}}
+- {{jsxref("undefined")}}

@@ -13,86 +13,67 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Collator/compare
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>Intl.Collator.prototype.compare()</strong></code> compare deux chaînes de caractères en tenant compte des options spécifiées pour la locale et l'ordre de tri dans l'objet {{jsxref("Collator")}}.</p>
+La méthode **`Intl.Collator.prototype.compare()`** compare deux chaînes de caractères en tenant compte des options spécifiées pour la locale et l'ordre de tri dans l'objet {{jsxref("Collator")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/intl-collator-prototype-compare.html")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-collator-prototype-compare.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">collator.compare(chaine1, chaine2)</pre>
+    collator.compare(chaine1, chaine2)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>chaine1</code>, <code>chaine2</code></dt>
- <dd>Les chaînes de caractères à comparer.</dd>
-</dl>
+- `chaine1`, `chaine2`
+  - : Les chaînes de caractères à comparer.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>L'accesseur <code>compare</code> renvoie un nombre qui indique le résultat de la comparaison entre <code>chaine1</code> et <code>chaine2</code> selon l'ordre de tri de l'objet {{jsxref("Collator")}} : la valeur obtenue sera négative si <code>chaine1</code> précède <code>chaine2</code>, positive si <code>chaine1</code> succède à <code>chaine2</code>, nulle si les deux chaînes sont considérées égales.</p>
+L'accesseur `compare` renvoie un nombre qui indique le résultat de la comparaison entre `chaine1` et `chaine2` selon l'ordre de tri de l'objet {{jsxref("Collator")}} : la valeur obtenue sera négative si `chaine1` précède `chaine2`, positive si `chaine1` succède à `chaine2`, nulle si les deux chaînes sont considérées égales.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_compare_pour_trier_un_tableau">Utiliser <code>compare()</code> pour trier un tableau</h3>
+### Utiliser `compare()` pour trier un tableau
 
-<p>Dans cet exemple, on utilise la fonction de l'accesseur <code>compare</code> pour trier des tableaux. On observe que la fonction est liée à l'objet <code>Collator</code>, on peut donc directement la passer à la méthode {{jsxref("Array.prototype.sort()")}}.</p>
+Dans cet exemple, on utilise la fonction de l'accesseur `compare` pour trier des tableaux. On observe que la fonction est liée à l'objet `Collator`, on peut donc directement la passer à la méthode {{jsxref("Array.prototype.sort()")}}.
 
-<pre class="brush: js">var a = ["Offenbach", "Österreich", "Odenwald"];
+```js
+var a = ["Offenbach", "Österreich", "Odenwald"];
 var collator = new Intl.Collator("de-u-co-phonebk");
 a.sort(collator.compare);
 console.log(a.join(", "));
-// → "Odenwald, Österreich, Offenbach"</pre>
+// → "Odenwald, Österreich, Offenbach"
+```
 
-<h3 id="Utiliser_compare_pour_chercher_dans_un_tableau">Utiliser <code>compare()</code> pour chercher dans un tableau</h3>
+### Utiliser `compare()` pour chercher dans un tableau
 
-<p>Ici, on utilise la fonction de l'accesseur <code>compare</code> pour trouver les chaînes égales à une chaîne donnée parmi un tableau :</p>
+Ici, on utilise la fonction de l'accesseur `compare` pour trouver les chaînes égales à une chaîne donnée parmi un tableau :
 
-<pre class="brush: js">var a = ["Congrès", "congres", "Assemblée", "poisson"];
+```js
+var a = ["Congrès", "congres", "Assemblée", "poisson"];
 var collator = new Intl.Collator("fr", {usage: "search", sensitivity: "base"});
 var s = "congres";
 var matches = a.filter(function (v) {
     return collator.compare(v, s) === 0;
 });
 console.log(matches.join(", "));
-// → "Congrès, congres"</pre>
+// → "Congrès, congres"
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int 1.0', '#sec-10.3.2', 'Intl.Collator.prototype.compare')}}</td>
-   <td>{{Spec2('ES Int 1.0')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int 2.0', '#sec-10.3.2', 'Intl.Collator.prototype.compare')}}</td>
-   <td>{{Spec2('ES Int 2.0')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#sec-Intl.Collator.prototype.compare', 'Intl.Collator.prototype.compare')}}</td>
-   <td>{{Spec2('ES Int Draft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                            | Statut                           | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('ES Int 1.0', '#sec-10.3.2', 'Intl.Collator.prototype.compare')}}                                     | {{Spec2('ES Int 1.0')}} | Définition initiale. |
+| {{SpecName('ES Int 2.0', '#sec-10.3.2', 'Intl.Collator.prototype.compare')}}                                     | {{Spec2('ES Int 2.0')}} |                      |
+| {{SpecName('ES Int Draft', '#sec-Intl.Collator.prototype.compare', 'Intl.Collator.prototype.compare')}} | {{Spec2('ES Int Draft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Intl.Collator.compare")}}</p>
+{{Compat("javascript.builtins.Intl.Collator.compare")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Collator", "Intl.Collator")}}</li>
- <li>{{jsxref("String.prototype.localeCompare()")}}</li>
-</ul>
+- {{jsxref("Collator", "Intl.Collator")}}
+- {{jsxref("String.prototype.localeCompare()")}}

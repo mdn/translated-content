@@ -11,25 +11,26 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/byteLength
 original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/byteLength
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>L'accesseur <strong><code>byteLength</code></strong> est une propriété représentant la longueur, exprimée en octets, de cette vue depuis le début de l'objet {{jsxref("ArrayBuffer")}} ou {{jsxref("SharedArrayBuffer")}} correspondant.</p>
+L'accesseur **`byteLength`** est une propriété représentant la longueur, exprimée en octets, de cette vue depuis le début de l'objet {{jsxref("ArrayBuffer")}} ou {{jsxref("SharedArrayBuffer")}} correspondant.
 
-<div>{{EmbedInteractiveExample("pages/js/dataview-bytelength.html")}}</div>
+{{EmbedInteractiveExample("pages/js/dataview-bytelength.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>dataview</var>.byteLength</pre>
+    dataview.byteLength
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La propriété <code>byteLength</code> est une propriété accesseur/mutateur dont le mutateur vaut  <code>undefined</code>. Cela signifie que cette propriété est en lecture seule. Cette valeur est déterminée lorsque l'objet <code>DataView</code> est construit et ne peut pas être changée. Si <code>DataView</code> ne définit pas de décalage avec <code>byteOffset</code> ou ne spécifie pas <code>byteLength</code>, ce sera la <code>byteLength</code> de l'objet <code>ArrayBuffer</code> ou <code>SharedArrayBuffer </code>référencé qui sera renvoyée.</p>
+La propriété `byteLength` est une propriété accesseur/mutateur dont le mutateur vaut  `undefined`. Cela signifie que cette propriété est en lecture seule. Cette valeur est déterminée lorsque l'objet `DataView` est construit et ne peut pas être changée. Si `DataView` ne définit pas de décalage avec `byteOffset` ou ne spécifie pas `byteLength`, ce sera la `byteLength` de l'objet `ArrayBuffer` ou `SharedArrayBuffer `référencé qui sera renvoyée.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utilisation_de_la_propriété_byteLength">Utilisation de la propriété <code>byteLength</code></h3>
+### Utilisation de la propriété `byteLength`
 
-<pre class="brush:js">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 var dataview = new DataView(buffer);
 dataview.byteLength; // 8 (correspond au byteLength du buffer)
 
@@ -38,38 +39,21 @@ dataview2.byteLength; // 5 (correspond à la longueur utilisée pour la définit
 
 var dataview3 = new DataView(buffer, 2);
 dataview3.byteLength; // 6 (en raison du décalage (offset) pour la construction du DataView)
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-get-dataview.prototype.bytelength', 'DataView.prototype.byteLength')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-get-dataview.prototype.bytelength', 'DataView.prototype.byteLength')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                        | Statut                       | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{SpecName('ES6', '#sec-get-dataview.prototype.bytelength', 'DataView.prototype.byteLength')}}         | {{Spec2('ES6')}}         | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-get-dataview.prototype.bytelength', 'DataView.prototype.byteLength')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.DataView.byteLength")}}</p>
+{{Compat("javascript.builtins.DataView.byteLength")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("DataView")}}</li>
- <li>{{jsxref("ArrayBuffer")}}</li>
- <li>{{jsxref("SharedArrayBuffer")}}</li>
-</ul>
+- {{jsxref("DataView")}}
+- {{jsxref("ArrayBuffer")}}
+- {{jsxref("SharedArrayBuffer")}}

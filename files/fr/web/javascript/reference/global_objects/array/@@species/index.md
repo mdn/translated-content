@@ -10,66 +10,52 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/@@species
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/@@species
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La propriété d'accesseur <code><strong>Array[@@species]</strong></code> renvoie le constructeur <code>Array</code>.</p>
+La propriété d'accesseur **`Array[@@species]`** renvoie le constructeur `Array`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Array[Symbol.species]
-</pre>
+    Array[Symbol.species]
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Le constructeur {{jsxref("Array")}}.</p>
+Le constructeur {{jsxref("Array")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>L'accesseur <code>species</code> renvoie le constructeur par défaut pour les objets <code>Array</code>. Les constructeurs des sous-classes peuvent le surcharger afin de modifier l'affectation du constructeur.</p>
+L'accesseur `species` renvoie le constructeur par défaut pour les objets `Array`. Les constructeurs des sous-classes peuvent le surcharger afin de modifier l'affectation du constructeur.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>La propriété renvoie le constructeur par défaut, dans le cas des objets <code>Array</code>, c'est le constructeur <code>Array</code> :</p>
+La propriété renvoie le constructeur par défaut, dans le cas des objets `Array`, c'est le constructeur `Array` :
 
-<pre class="brush: js">Array[Symbol.species]; // function Array()</pre>
+```js
+Array[Symbol.species]; // function Array()
+```
 
-<p>Pour un objet dérivé, la valeur de <code>species</code> pour une classe <code>MonArray</code> sera le constructeur de cette classe. Vous pouvez surcharger ce comportement afin de renvoyer le constructeur <code>Array</code> :</p>
+Pour un objet dérivé, la valeur de `species` pour une classe `MonArray` sera le constructeur de cette classe. Vous pouvez surcharger ce comportement afin de renvoyer le constructeur `Array` :
 
-<pre class="brush: js">class MonArray extends Array {
+```js
+class MonArray extends Array {
   // On surcharge le symbole species
   // pour renvoyer le constructeur Array parent
   static get [Symbol.species]() { return Array; }
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-get-array-@@species', 'get Array [ @@species ]')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-get-array-@@species', 'get Array [ @@species ]')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES6', '#sec-get-array-@@species', 'get Array [ @@species ]')}}     | {{Spec2('ES6')}}         | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-get-array-@@species', 'get Array [ @@species ]')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Array.@@species")}}</p>
+{{Compat("javascript.builtins.Array.@@species")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Array")}}</li>
- <li>{{jsxref("Symbol.species")}}</li>
-</ul>
+- {{jsxref("Array")}}
+- {{jsxref("Symbol.species")}}

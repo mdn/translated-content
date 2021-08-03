@@ -11,70 +11,55 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/big
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/big
 ---
-<div>{{JSRef}}{{deprecated_header}}</div>
+{{JSRef}}{{deprecated_header}}
 
-<p>La méthode <code><strong>big()</strong></code> crée un élément HTML {{HTMLElement("big")}} qui affichera la chaine de caractères avec une taille de police importante.</p>
+La méthode **`big()`** crée un élément HTML {{HTMLElement("big")}} qui affichera la chaine de caractères avec une taille de police importante.
 
-<div class="note">
-<p><strong>Note :</strong> L'élément <code>&lt;big&gt;</code> a été retiré de <a href="/fr/docs/Web/Guide/HTML/HTML5">HTML5</a> et ne doit pas être utilisé. À la place, les développeurs web doivent utiliser les propriétés <a href="/fr/docs/Web/CSS">CSS</a>.</p>
-</div>
+> **Note :** L'élément `<big>` a été retiré de [HTML5](/fr/docs/Web/Guide/HTML/HTML5) et ne doit pas être utilisé. À la place, les développeurs web doivent utiliser les propriétés [CSS](/fr/docs/Web/CSS).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>str</var>.big()</pre>
+    str.big()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une chaîne de caractères qui représente un élément HTML {{HTMLElement("big")}}.</p>
+Une chaîne de caractères qui représente un élément HTML {{HTMLElement("big")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code>big()</code> place la chaine de caractères dans une balise <code>&lt;big&gt;</code> :<br>
- <code>"&lt;big&gt;str&lt;/big&gt;</code>"</p>
+La méthode `big()` place la chaine de caractères dans une balise `<big>` :
+`"<big>str</big>`"
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>L'exemple suivant montre les méthodes de <code>String</code> pour changer la taille d'une chaine de caractères :</p>
+L'exemple suivant montre les méthodes de `String` pour changer la taille d'une chaine de caractères :
 
-<pre class="brush:js">var chaîneMonde = "Coucou monde";
+```js
+var chaîneMonde = "Coucou monde";
 
-console.log( chaîneMonde.small()     ); // &lt;small&gt;Coucou monde&lt;/small&gt;
-console.log( chaîneMonde.big()       ); // &lt;big&gt;Coucou monde&lt;/big&gt;
-console.log( chaîneMonde.fontsize(7) ); // &lt;fontsize=7&gt;Coucou monde&lt;/fontsize&gt;</pre>
+console.log( chaîneMonde.small()     ); // <small>Coucou monde</small>
+console.log( chaîneMonde.big()       ); // <big>Coucou monde</big>
+console.log( chaîneMonde.fontsize(7) ); // <fontsize=7>Coucou monde</fontsize>
+```
 
-<p>Avec l'objet {{domxref("HTMLElement.style", "element.style")}}, il est possible d'accéder à l'attribut <code>style</code> de l'élément et de le manipuler. Par exemple :</p>
+Avec l'objet {{domxref("HTMLElement.style", "element.style")}}, il est possible d'accéder à l'attribut `style` de l'élément et de le manipuler. Par exemple :
 
-<pre class="brush: js">document.getElementById('idÉlément').style.fontSize = '2em'</pre>
+```js
+document.getElementById('idÉlément').style.fontSize = '2em'
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.big', 'String.prototype.big')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Définition initiale. Implémentée dans JavaScript 1.0. Définie dans l'annexe normative pour les fonctionnalités supplémentaires des navigateurs web.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.big', 'String.prototype.big')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Définie dans l'annexe B (normative) pour les fonctionnalités ECMAScript supplémentaires des navigateurs web.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                         | Commentaires                                                                                                                                        |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ES6', '#sec-string.prototype.big', 'String.prototype.big')}}     | {{Spec2('ES6')}}         | Définition initiale. Implémentée dans JavaScript 1.0. Définie dans l'annexe normative pour les fonctionnalités supplémentaires des navigateurs web. |
+| {{SpecName('ESDraft', '#sec-string.prototype.big', 'String.prototype.big')}} | {{Spec2('ESDraft')}} | Définie dans l'annexe B (normative) pour les fonctionnalités ECMAScript supplémentaires des navigateurs web.                                        |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.String.big")}}</p>
+{{Compat("javascript.builtins.String.big")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("String.prototype.fontsize()")}}</li>
- <li>{{jsxref("String.prototype.small()")}}</li>
-</ul>
+- {{jsxref("String.prototype.fontsize()")}}
+- {{jsxref("String.prototype.small()")}}

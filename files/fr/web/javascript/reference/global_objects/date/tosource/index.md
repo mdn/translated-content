@@ -10,47 +10,43 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toSource
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/toSource
 ---
-<div>{{JSRef}} {{Non-standard_header}}</div>
+{{JSRef}} {{Non-standard_header}}
 
-<p>La méthode <code><strong>toSource()</strong></code> renvoie une chaîne de caractères représentant le code source de l'objet.</p>
+La méthode **`toSource()`** renvoie une chaîne de caractères représentant le code source de l'objet.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>dateObj</var>.toSource()
-Date.toSource()</pre>
+    dateObj.toSource()
+    Date.toSource()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une chaîne de caractères représentant le code source de l'objet date indiqué.</p>
+Une chaîne de caractères représentant le code source de l'objet date indiqué.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code>toSource()</code> renvoie les valeur suivantes :</p>
+La méthode `toSource()` renvoie les valeur suivantes :
 
-<ul>
- <li>Pour l'objet natif {{jsxref("Date")}}, <code>toSource()</code> renvoie la chaîne de caractères suivante, indiquant que le code source n'est pas disponible :</li>
-</ul>
+- Pour l'objet natif {{jsxref("Date")}}, `toSource()` renvoie la chaîne de caractères suivante, indiquant que le code source n'est pas disponible :
 
-<pre class="brush: js">function Date() {
+```js
+function Date() {
     [native code]
-}</pre>
+}
+```
 
-<ul>
- <li>Pour les instances de {{jsxref("Date")}}, <code>toSource()</code> renvoie une chaîne de caractères représentant le code source.</li>
-</ul>
+- Pour les instances de {{jsxref("Date")}}, `toSource()` renvoie une chaîne de caractères représentant le code source.
 
-<p>Cette méthode est habituellement appelée en interne par le moteur JavaScript et non explicitement dans le code d'un script.</p>
+Cette méthode est habituellement appelée en interne par le moteur JavaScript et non explicitement dans le code d'un script.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Ne fait partie d'aucune spécification. Implémentée dans JavaScript 1.3.</p>
+Ne fait partie d'aucune spécification. Implémentée dans JavaScript 1.3.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Date.toSource")}}</p>
+{{Compat("javascript.builtins.Date.toSource")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Object.prototype.toSource()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toSource()")}}

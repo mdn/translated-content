@@ -10,57 +10,43 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/toString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>Intl.Locale.prototype.toString()</code></strong> renvoie <a href="https://www.unicode.org/reports/tr35/#Unicode_locale_identifier">l'identifiant de locale complet</a> pour la locale courante.</p>
+La méthode **`Intl.Locale.prototype.toString()`** renvoie [l'identifiant de locale complet](https://www.unicode.org/reports/tr35/#Unicode_locale_identifier) pour la locale courante.
 
-<p>{{EmbedInteractiveExample("pages/js/intl-locale-prototype-tostring.html")}}</p>
+{{EmbedInteractiveExample("pages/js/intl-locale-prototype-tostring.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><code><em>locale</em>.toString()</code></pre>
+    locale.toString()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>La chaîne de caractères représentant l'identifiant complet de la locale.</p>
+La chaîne de caractères représentant l'identifiant complet de la locale.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Une instance de <code>Locale</code> est une représentation JavaScript d'une locale au sens Unicode. Les informations décrivant une locale donnée (la langue, le système d'écriture, le type de calendrier, etc.) peuvent être encodées en une chaîne de caractères qui est l'identifiant de la locale. Lorsqu'on appelle la méthode <code>toString()</code> sur une instance de <code>Locale</code>, on obtiendra l'identifiant complet de la locale.</p>
+Une instance de `Locale` est une représentation JavaScript d'une locale au sens Unicode. Les informations décrivant une locale donnée (la langue, le système d'écriture, le type de calendrier, etc.) peuvent être encodées en une chaîne de caractères qui est l'identifiant de la locale. Lorsqu'on appelle la méthode `toString()` sur une instance de `Locale`, on obtiendra l'identifiant complet de la locale.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">let maLocale = new Intl.Locale("fr-Latn-FR", {hourCycle: "h24", calendar: "gregory"});
+```js
+let maLocale = new Intl.Locale("fr-Latn-FR", {hourCycle: "h24", calendar: "gregory"});
 console.log(maLocale.baseName); // Affiche "fr-Latn-FR"
 console.log(maLocale.toString()); // Affiche "fr-Latn-FR-u-ca-gregory-hc-h24"
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.toString">Proposition pour <code>Intl.Locale.prototype.toString()</code></a></td>
-   <td>Proposition de niveau 3</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                          | État                    | Commentaires |
+| -------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
+| [Proposition pour `Intl.Locale.prototype.toString()`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.toString) | Proposition de niveau 3 |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Intl.Locale.toString")}}</p>
+{{Compat("javascript.builtins.Intl.Locale.toString")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Locale", "Intl.Locale")}}</li>
- <li>{{jsxref("Locale/baseName", "Intl.Locale.baseName")}}</li>
-</ul>
+- {{jsxref("Locale", "Intl.Locale")}}
+- {{jsxref("Locale/baseName", "Intl.Locale.baseName")}}

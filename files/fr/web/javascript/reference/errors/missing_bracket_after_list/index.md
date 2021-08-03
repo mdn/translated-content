@@ -9,26 +9,26 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Missing_bracket_after_list
 original_slug: Web/JavaScript/Reference/Erreurs/Missing_bracket_after_list
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="syntaxbox">SyntaxError: missing ] after element list
-</pre>
+    SyntaxError: missing ] after element list
 
-<h2 id="Type_d'erreur">Type d'erreur</h2>
+## Type d'erreur
 
-<p>{{jsxref("SyntaxError")}}.</p>
+{{jsxref("SyntaxError")}}.
 
-<h2 id="Quel_est_le_problème">Quel est le problème ?</h2>
+## Quel est le problème ?
 
-<p>Il y a une erreur dans le littéral de tableau qui est uilisé. Il manque un crochet fermant ("<code>]</code>") ou une virgule qui sépare les éléments.</p>
+Il y a une erreur dans le littéral de tableau qui est uilisé. Il manque un crochet fermant ("`]`") ou une virgule qui sépare les éléments.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Littéraux_de_tableaux_incomplets">Littéraux de tableaux incomplets</h3>
+### Littéraux de tableaux incomplets
 
-<pre class="brush: js example-bad">var liste = [1, 2,
+```js example-bad
+var liste = [1, 2,
 
 var instruments = [
   "Ukulele",
@@ -37,11 +37,12 @@ var instruments = [
 };
 
 var data = [{toto: "truc"} {titi: "bidule"}];
-</pre>
+```
 
-<p>Les versions correctes seraient :</p>
+Les versions correctes seraient :
 
-<pre class="brush: js example-good">var liste = [1, 2];
+```js example-good
+var liste = [1, 2];
 
 var instruments = [
  "Ukulele",
@@ -49,10 +50,9 @@ var instruments = [
  "Piano"
 ];
 
-var data = [{toto: "truc"}, {titi: "bidule"}];</pre>
+var data = [{toto: "truc"}, {titi: "bidule"}];
+```
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Array")}}</li>
-</ul>
+- {{jsxref("Array")}}

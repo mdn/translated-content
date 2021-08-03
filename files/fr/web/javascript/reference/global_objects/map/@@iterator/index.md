@@ -12,25 +12,26 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/@@iterator
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/@@iterator
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La valeur initiale de la propriété <code><strong>@@iterator</strong></code> est la même fonction que la valeur initiale de la propriété {{jsxref("Map.prototype.entries()", "entries")}}.</p>
+La valeur initiale de la propriété **`@@iterator`** est la même fonction que la valeur initiale de la propriété {{jsxref("Map.prototype.entries()", "entries")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/map-prototype-@@iterator.html")}}</div>
+{{EmbedInteractiveExample("pages/js/map-prototype-@@iterator.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>maMap</em>[Symbol.iterator]</pre>
+    maMap[Symbol.iterator]
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>La fonction d'itération (le symbole <code>@@iterator</code>) de l'objet, par défaut, c'est la fonction {{jsxref("Map.prototype.entries()","entries()")}}.</p>
+La fonction d'itération (le symbole `@@iterator`) de l'objet, par défaut, c'est la fonction {{jsxref("Map.prototype.entries()","entries()")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_iterator()">Utiliser <code>[@@iterator]()</code></h3>
+### Utiliser `[@@iterator]()`
 
-<pre class="brush:js">var maMap = new Map();
+```js
+var maMap = new Map();
 maMap.set("0", "toto");
 maMap.set(1, "truc");
 maMap.set({}, "bidule");
@@ -40,11 +41,12 @@ var mapIter = myMap[Symbol.iterator]();
 console.log(mapIter.next().value); // ["0", "toto"]
 console.log(mapIter.next().value); // [1, "truc"]
 console.log(mapIter.next().value); // [Object, "bidule"]
-</pre>
+```
 
-<h3 id="Utiliser_iterator()_avec_for..of">Utiliser <code>[@@iterator]()</code> avec <code>for..of</code></h3>
+### Utiliser `[@@iterator]()` avec `for..of`
 
-<pre class="brush:js">var maMap = new Map();
+```js
+var maMap = new Map();
 maMap.set("0", "toto");
 maMap.set(1, "truc");
 maMap.set({}, "bidule");
@@ -52,38 +54,21 @@ maMap.set({}, "bidule");
 for (var v of maMap) {
   console.log(v);
 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-map.prototype-@@iterator', 'Map.prototype[@@iterator]()')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-map.prototype-@@iterator', 'Map.prototype[@@iterator]()')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | État                         | Commentaires        |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES2015', '#sec-map.prototype-@@iterator', 'Map.prototype[@@iterator]()')}} | {{Spec2('ES2015')}}     | Définition initiale |
+| {{SpecName('ESDraft', '#sec-map.prototype-@@iterator', 'Map.prototype[@@iterator]()')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Map.@@iterator")}}</p>
+{{Compat("javascript.builtins.Map.@@iterator")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Map.prototype.entries()")}}</li>
- <li>{{jsxref("Map.prototype.keys()")}}</li>
- <li>{{jsxref("Map.prototype.values()")}}</li>
-</ul>
+- {{jsxref("Map.prototype.entries()")}}
+- {{jsxref("Map.prototype.keys()")}}
+- {{jsxref("Map.prototype.values()")}}

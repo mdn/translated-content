@@ -12,31 +12,29 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/flags
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/flags
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La propriété <strong><code>flags</code></strong> renvoie une chaîne de caractères contenant les <a href="/fr/docs/Web/JavaScript/Guide/Expressions_régulières#Effectuer_des_recherches_avanc.C3.A9es_en_utilisant_les_drapeaux_(flags)">drapeaux (<em>flags</em>)</a> de l'objet {{jsxref("RegExp")}} auquel elle appartient.</p>
+La propriété **`flags`** renvoie une chaîne de caractères contenant les [drapeaux (_flags_)](</fr/docs/Web/JavaScript/Guide/Expressions_régulières#Effectuer_des_recherches_avanc.C3.A9es_en_utilisant_les_drapeaux_(flags)>) de l'objet {{jsxref("RegExp")}} auquel elle appartient.
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-prototype-flags.html")}}</div>
+{{EmbedInteractiveExample("pages/js/regexp-prototype-flags.html")}}{{js_property_attributes(0, 0, 1)}}
 
+## Description
 
+Les drapeaux de la propriété `flags` sont rangés par ordre alphabétique de gauche à droite.
 
-<div>{{js_property_attributes(0, 0, 1)}}</div>
+## Exemples
 
-<h2 id="Description">Description</h2>
+### Utiliser `flags`
 
-<p>Les drapeaux de la propriété <code>flags</code> sont rangés par ordre alphabétique de gauche à droite.</p>
-
-<h2 id="Exemples">Exemples</h2>
-
-<h3 id="Utiliser_flags">Utiliser <code>flags</code></h3>
-
-<pre class="brush: js">/toto/ig.flags;   // "gi"
+```js
+/toto/ig.flags;   // "gi"
 /truc/myu.flags;  // "muy"
-</pre>
+```
 
-<h2 id="Prothèse_d'émulation_(polyfill)">Prothèse d'émulation (<em>polyfill</em>)</h2>
+## Prothèse d'émulation (_polyfill_)
 
-<pre class="brush: js">if (RegExp.prototype.flags === undefined) {
+```js
+if (RegExp.prototype.flags === undefined) {
   Object.defineProperty(RegExp.prototype, 'flags', {
     configurable: true,
     get: function() {
@@ -44,36 +42,19 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/flags
     }
   });
 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-get-regexp.prototype.flags', 'RegExp.prototype.flags')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-get-regexp.prototype.flags', 'RegExp.prototype.flags')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                         | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-get-regexp.prototype.flags', 'RegExp.prototype.flags')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-get-regexp.prototype.flags', 'RegExp.prototype.flags')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.RegExp.flags")}}</p>
+{{Compat("javascript.builtins.RegExp.flags")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("RegExp.prototype.source")}}</li>
-</ul>
+- {{jsxref("RegExp.prototype.source")}}

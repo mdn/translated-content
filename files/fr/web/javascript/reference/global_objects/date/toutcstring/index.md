@@ -10,80 +10,52 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toUTCString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/toUTCString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>toUTCString()</strong></code> convertit une date en une chaîne de caractères, selon le fuseau horaire UTC.</p>
+La méthode **`toUTCString()`** convertit une date en une chaîne de caractères, selon le fuseau horaire UTC.
 
-<div>{{EmbedInteractiveExample("pages/js/date-toutcstring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-toutcstring.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>dateObj</var>.toUTCString()</pre>
+    dateObj.toUTCString()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une chaîne de caractères représentant la date indiquée selon le fuseau horaire UTC.</p>
+Une chaîne de caractères représentant la date indiquée selon le fuseau horaire UTC.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La valeur renvoyée par <code>toUTCString()</code> est un texte au même format que celui renvoyé {{jsxref("Date.prototype.toString()")}} mais sans décalage de fuseau horaire (en UTC).</p>
+La valeur renvoyée par `toUTCString()` est un texte au même format que celui renvoyé {{jsxref("Date.prototype.toString()")}} mais sans décalage de fuseau horaire (en UTC).
 
-<p>Avant ECMAScript 2018, le format de la valeur renvoyée pouvait varier selon les plateformes. La valeur la plus couramment renvoyée était une date formatée selon la RFC 1123, qui est une version mise à jour de la RFC 822.</p>
+Avant ECMAScript 2018, le format de la valeur renvoyée pouvait varier selon les plateformes. La valeur la plus couramment renvoyée était une date formatée selon la RFC 1123, qui est une version mise à jour de la RFC 822.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_toUTCString()">Utiliser <code>toUTCString()</code></h3>
+### Utiliser `toUTCString()`
 
-<pre class="brush: js">var aujourdhui = new Date();
+```js
+var aujourdhui = new Date();
 var UTCstring = aujourdhui.toUTCString();
 // Mon, 03 Jul 2006 21:44:38 GMT
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.3. Le format dépend de l'implémentation.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.42', 'Date.prototype.toUTCString')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.toutcstring', 'Date.prototype.toUTCString')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2018', '#sec-date.prototype.toutcstring', 'Date.prototype.toUTCString')}}</td>
-   <td>{{Spec2('ES2018')}}</td>
-   <td>Première standardisation du format</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.toutcstring', 'Date.prototype.toUTCString')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | État                         | Commentaires                                                                                |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.3. Le format dépend de l'implémentation. |
+| {{SpecName('ES5.1', '#sec-15.9.5.42', 'Date.prototype.toUTCString')}}                         | {{Spec2('ES5.1')}}     |                                                                                             |
+| {{SpecName('ES6', '#sec-date.prototype.toutcstring', 'Date.prototype.toUTCString')}}     | {{Spec2('ES6')}}         |                                                                                             |
+| {{SpecName('ES2018', '#sec-date.prototype.toutcstring', 'Date.prototype.toUTCString')}} | {{Spec2('ES2018')}}     | Première standardisation du format                                                          |
+| {{SpecName('ESDraft', '#sec-date.prototype.toutcstring', 'Date.prototype.toUTCString')}} | {{Spec2('ESDraft')}} |                                                                                             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Date.toUTCString")}}</p>
+{{Compat("javascript.builtins.Date.toUTCString")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
- <li>{{jsxref("Date.prototype.toDateString()")}}</li>
- <li>{{jsxref("Date.prototype.toISOString()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.toLocaleString()")}}
+- {{jsxref("Date.prototype.toDateString()")}}
+- {{jsxref("Date.prototype.toISOString()")}}

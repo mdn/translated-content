@@ -11,39 +11,35 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/dotAll
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/dotAll
 ---
-<p>{{JSRef}}{{Draft}}</p>
+{{JSRef}}{{Draft}}
 
-<p>La propriété <strong><code>dotAll</code></strong> indique si le marqueur "<code>s</code>" est utilisé pour l'expression rationnelle. <code>dotAll</code> est une propriété en lecture seule et qui renseigne à propos de l'expression rationnelle courante.</p>
+La propriété **`dotAll`** indique si le marqueur "`s`" est utilisé pour l'expression rationnelle. `dotAll` est une propriété en lecture seule et qui renseigne à propos de l'expression rationnelle courante.
 
-<p>{{JS_Property_Attributes(0, 0, 1)}}</p>
+{{JS_Property_Attributes(0, 0, 1)}}
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p><code>dotAll</code> est un booléen qui vaut <code>true</code> si le marqueur "<code>s</code>" a été utilisé pour l'expression et <code>false</code> sinon. Le marqueur "<code>s</code>" indique que le caractère spécial point ("<code>.</code>") doit également correspondre aux caractères de saut de ligne (et pour lesquels il ne correspondrait pas s'il n'était pas activé) :</p>
+`dotAll` est un booléen qui vaut `true` si le marqueur "`s`" a été utilisé pour l'expression et `false` sinon. Le marqueur "`s`" indique que le caractère spécial point ("`.`") doit également correspondre aux caractères de saut de ligne (et pour lesquels il ne correspondrait pas s'il n'était pas activé) :
 
-<ul>
- <li>U+000A LINE FEED (LF) ("<code>\n</code>")</li>
- <li>U+000D CARRIAGE RETURN (CR) ("<code>\r</code>")</li>
- <li>U+2028 LINE SEPARATOR</li>
- <li>U+2029 PARAGRAPH SEPARATOR</li>
-</ul>
+- U+000A LINE FEED (LF) ("`\n`")
+- U+000D CARRIAGE RETURN (CR) ("`\r`")
+- U+2028 LINE SEPARATOR
+- U+2029 PARAGRAPH SEPARATOR
 
-<p>Cela signifie ainsi que le point peut correspondre à n'importe quel caractère du plan multilingue de base Unicode (ou <em>Basic Multilingual Plane</em> (BMP)). Si on souhaite également cibler les caractères des plans astraux, il faudra utiliser le marqueur "<code>u</code>" (unicode). En utilisant les deux marqueurs simultanément, on peut alors cibler n'importe quel caractère Unicode.</p>
+Cela signifie ainsi que le point peut correspondre à n'importe quel caractère du plan multilingue de base Unicode (ou _Basic Multilingual Plane_ (BMP)). Si on souhaite également cibler les caractères des plans astraux, il faudra utiliser le marqueur "`u`" (unicode). En utilisant les deux marqueurs simultanément, on peut alors cibler n'importe quel caractère Unicode.
 
-<p>Cette propriété est uniquement accessible en lecture et ne peut pas être modifiée.</p>
+Cette propriété est uniquement accessible en lecture et ne peut pas être modifiée.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.RegExp.dotAll")}}</p>
+{{Compat("javascript.builtins.RegExp.dotAll")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{JSxRef("RegExp.lastIndex")}}</li>
- <li>{{JSxRef("RegExp.prototype.global")}}</li>
- <li>{{JSxRef("RegExp.prototype.ignoreCase")}}</li>
- <li>{{JSxRef("RegExp.prototype.multiline")}}</li>
- <li>{{JSxRef("RegExp.prototype.source")}}</li>
- <li>{{JSxRef("RegExp.prototype.sticky")}}</li>
- <li>{{JSxRef("RegExp.prototype.unicode")}}</li>
-</ul>
+- {{JSxRef("RegExp.lastIndex")}}
+- {{JSxRef("RegExp.prototype.global")}}
+- {{JSxRef("RegExp.prototype.ignoreCase")}}
+- {{JSxRef("RegExp.prototype.multiline")}}
+- {{JSxRef("RegExp.prototype.source")}}
+- {{JSxRef("RegExp.prototype.sticky")}}
+- {{JSxRef("RegExp.prototype.unicode")}}

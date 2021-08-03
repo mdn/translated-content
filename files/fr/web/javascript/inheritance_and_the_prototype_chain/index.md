@@ -10,31 +10,30 @@ tags:
 translation_of: Web/JavaScript/Inheritance_and_the_prototype_chain
 original_slug: Web/JavaScript/Héritage_et_chaîne_de_prototypes
 ---
-<div>{{jsSidebar("Advanced")}}</div>
+{{jsSidebar("Advanced")}}
 
-<p>JavaScript peut prêter à confusion losqu'on est habitué à manipuler des langages de programmation manipulant les classes (tels que Java ou C++). En effet, JavaScript est un langage dynamique et ne possède pas de concept de classe à part entière (le mot-clé <code>class</code> a certes été ajouté avec ES2015 mais il s'agit uniquement de sucre syntaxique, JavaScript continue de reposer sur l'héritage prototypique).</p>
+JavaScript peut prêter à confusion losqu'on est habitué à manipuler des langages de programmation manipulant les classes (tels que Java ou C++). En effet, JavaScript est un langage dynamique et ne possède pas de concept de classe à part entière (le mot-clé `class` a certes été ajouté avec ES2015 mais il s'agit uniquement de sucre syntaxique, JavaScript continue de reposer sur l'héritage prototypique).
 
-<p>En ce qui concerne l'héritage, JavaScript n'utilise qu'une seule structure : les objets. Chaque objet possède une propriété privée qui contient un lien vers un autre objet appelé le <strong>prototype</strong>. Ce prototype possède également son prototype et ainsi de suite, jusqu'à ce qu'un objet ait {{jsxref("null")}} comme prototype. Par définition, <code>null</code> ne possède pas de prototype et est ainsi le dernier maillon de la <strong>chaîne de prototype</strong>.</p>
+En ce qui concerne l'héritage, JavaScript n'utilise qu'une seule structure : les objets. Chaque objet possède une propriété privée qui contient un lien vers un autre objet appelé le **prototype**. Ce prototype possède également son prototype et ainsi de suite, jusqu'à ce qu'un objet ait {{jsxref("null")}} comme prototype. Par définition, `null` ne possède pas de prototype et est ainsi le dernier maillon de la **chaîne de prototype**.
 
-<p>La majorité des objets JavaScript sont des instances de {{jsxref("Object")}} qui est l'avant dernier maillon de la chaîne de prototype.</p>
+La majorité des objets JavaScript sont des instances de {{jsxref("Object")}} qui est l'avant dernier maillon de la chaîne de prototype.
 
-<p>Bien que cette confusion (entre classe et prototype) soit souvent avancée comme l'une des faiblesses de JavaScript, le modèle prototypique est plus puissant que le modèle classique et il est notamment possible de construire un modèle classique à partir d'un modèle prototypique.</p>
+Bien que cette confusion (entre classe et prototype) soit souvent avancée comme l'une des faiblesses de JavaScript, le modèle prototypique est plus puissant que le modèle classique et il est notamment possible de construire un modèle classique à partir d'un modèle prototypique.
 
-<h2 id="Héritage_et_chaîne_de_prototype">Héritage et chaîne de prototype</h2>
+## Héritage et chaîne de prototype
 
-<h3 id="Propriété_héritées">Propriété héritées</h3>
+### Propriété héritées
 
-<p>Les objets JavaScript sont des ensembles dynamiques de propriétés (les propriétés directement rattachées à un objet sont appelées <strong>propriétés en propre (<em>own properties</em>)</strong>). Les objets JavaScript possèdent également un lien vers un objet qui est leur prototype. Lorsqu'on tente d'accéder aux propriétés d'un objet, la propriété sera recherchée d'abord sur l'objet même, puis sur son prototype, puis sur le prototype du prototype et ainsi de suite jusqu'à ce qu'elle soit trouvée ou que la fin de la chaîne de prototype ait été atteinte.</p>
+Les objets JavaScript sont des ensembles dynamiques de propriétés (les propriétés directement rattachées à un objet sont appelées **propriétés en propre (_own properties_)**). Les objets JavaScript possèdent également un lien vers un objet qui est leur prototype. Lorsqu'on tente d'accéder aux propriétés d'un objet, la propriété sera recherchée d'abord sur l'objet même, puis sur son prototype, puis sur le prototype du prototype et ainsi de suite jusqu'à ce qu'elle soit trouvée ou que la fin de la chaîne de prototype ait été atteinte.
 
-<div class="note">
-<p><strong>Note :</strong> Dans la spécification ECMAScript, on utilise la notation <code>unObjet.[[Prototype]]</code> pour faire référence au prototype de <code>unObjet</code>. Depuis ECMAScript 2015, on peut accéder à <code>[[Prototype]]</code> grâce aux accesseurs {{jsxref("Object.getPrototypeOf()")}} et {{jsxref("Object.setPrototypeOf()")}}. Cela est équivalent à la propriété JavaScript <code>__proto__</code> qui était non-standard avant ES2015 mais qui était de fait implémentée par la majorité des navigateurs.</p>
+> **Note :** Dans la spécification ECMAScript, on utilise la notation `unObjet.[[Prototype]]` pour faire référence au prototype de `unObjet`. Depuis ECMAScript 2015, on peut accéder à `[[Prototype]]` grâce aux accesseurs {{jsxref("Object.getPrototypeOf()")}} et {{jsxref("Object.setPrototypeOf()")}}. Cela est équivalent à la propriété JavaScript `__proto__` qui était non-standard avant ES2015 mais qui était de fait implémentée par la majorité des navigateurs.
+>
+> Cette propriété ne devrait pas être confondue avec la propriété `func.prototype` des fonctions qui définissent le `[[Prototype]]` à affecter aux instances des objets créés par cette fonction lorsqu'elle est utilisée comme constructeur. La propriété **`Object.prototype`** représente le prototype de {{jsxref("Object")}}.
 
-<p>Cette propriété ne devrait pas être confondue avec la propriété <code><em>func</em>.prototype</code> des fonctions qui définissent le <code>[[Prototype]]</code> à affecter aux instances des objets créés par cette fonction lorsqu'elle est utilisée comme constructeur. La propriété <code><strong>Object.prototype</strong></code> représente le prototype de {{jsxref("Object")}}.</p>
-</div>
+Voici ce qui se produit lorsqu'on tente d'accéder à une propriété :
 
-<p>Voici ce qui se produit lorsqu'on tente d'accéder à une propriété :</p>
-
-<pre class="brush: js">// On commence par créer un objet o pour lequel la fonction f sera
+```js
+// On commence par créer un objet o pour lequel la fonction f sera
 // son constructeur et lui créera deux propriétés en propre
 // a et b :
 let f = function () {
@@ -57,7 +56,7 @@ f.prototype.c = 4;
 // On a alors atteint la fin de la chaîne de prototype car,
 // par définition, null n'a pas de [[Prototype]].
 // Ainsi, la chaîne complète est ici :
-// {a: 1, b: 2} ---&gt; {b: 3, c: 4} ---&gt; Object.prototype ---&gt; null
+// {a: 1, b: 2} ---> {b: 3, c: 4} ---> Object.prototype ---> null
 
 console.log(o.a); // 1
 // Existe-t-il une propriété 'a' en propre sur o ? Oui, elle vaut 1.
@@ -83,17 +82,18 @@ console.log(o.d); // undefined
 // de propriété 'd' par défaut. On vérifie son prototype.
 // o.[[Prototype]].[[Prototype]].[[Prototype]] est null, on arrête la recherche
 // aucune propriété n'est trouvée, le moteur renvoie undefined.
-</pre>
+```
 
-<p>Lorsquon définit une propriété sur un objet, cela définit une propriété en propre. La seule exception se produit lorsqu'on définit <a href="/fr/docs/Web/JavaScript/Guide/Utiliser_les_objets#Définir_des_accesseurs_et_des_mutateurs_(getters_et_setters)">un accesseur et/ou un mutateur</a> sur une propriété héritée.</p>
+Lorsquon définit une propriété sur un objet, cela définit une propriété en propre. La seule exception se produit lorsqu'on définit [un accesseur et/ou un mutateur](</fr/docs/Web/JavaScript/Guide/Utiliser_les_objets#Définir_des_accesseurs_et_des_mutateurs_(getters_et_setters)>) sur une propriété héritée.
 
-<h3 id="Méthodes_héritées">Méthodes héritées</h3>
+### Méthodes héritées
 
-<p>JavaScript ne possède pas de méthodes au sens des langages de classe. En effet, en JavaScript, toute fonction associée à un objet est également une propriété. Une fonction héritée se comportera comme n'importe quelle autre propriété (y compris pour l'ombrage mentionné ci-avant où on pourra parler de surcharge).</p>
+JavaScript ne possède pas de méthodes au sens des langages de classe. En effet, en JavaScript, toute fonction associée à un objet est également une propriété. Une fonction héritée se comportera comme n'importe quelle autre propriété (y compris pour l'ombrage mentionné ci-avant où on pourra parler de surcharge).
 
-<p>Lorsqu'une fonction héritée est exécutée, la valeur de <a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this"><code>this</code></a> pointe vers l'objet hérité et non vers l'objet prototype qui possède la fonction comme propriété en propre.</p>
+Lorsqu'une fonction héritée est exécutée, la valeur de [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this) pointe vers l'objet hérité et non vers l'objet prototype qui possède la fonction comme propriété en propre.
 
-<pre class="brush: js">var o = {
+```js
+var o = {
   a: 2,
   m: function() {
     return this.a + 1;
@@ -111,32 +111,30 @@ console.log(p.m()); // 5
 // lorsque p.m est appelée, 'this' fait référence à p.
 // Ainsi quand p hérite de m via o,
 // 'this.a' signifie p.a, soit la propriété 'a' de p
+```
 
+## Utiliser les prototypes avec JavaScript
 
-</pre>
+Regardons un peu plus en détail ce qui se déroule en arrière-plan.
 
-<h2 id="Utiliser_les_prototypes_avec_JavaScript">Utiliser les prototypes avec JavaScript</h2>
+> **Note :** Pour tous les exempls suivants, nous vous invitons à ouvrir la "console" de votre navigateur pour y copier/coller/éditer les fragments de code. Pour savoir comment lancer cette console, vous pouvez lire la documentation des navigateurs : [Firefox](/fr/docs/Tools), [Chrome](https://developers.google.com/web/tools/chrome-devtools/), [Edge](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide).
 
-<p>Regardons un peu plus en détail ce qui se déroule en arrière-plan.</p>
+En JavaScript, comme mentionné ci-dessus, les fonctions peuvent avoir des propriétés. Toutes les fonctions ont une propriété spéciale intitulée `prototype`.
 
-<div class="blockIndicator note">
-<p><strong>Note :</strong> Pour tous les exempls suivants, nous vous invitons à ouvrir la "console" de votre navigateur pour y copier/coller/éditer les fragments de code. Pour savoir comment lancer cette console, vous pouvez lire la documentation des navigateurs : <a href="/fr/docs/Tools">Firefox</a>, <a href="https://developers.google.com/web/tools/chrome-devtools/">Chrome</a>, <a href="https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide">Edge</a>.</p>
-</div>
-
-<p>En JavaScript, comme mentionné ci-dessus, les fonctions peuvent avoir des propriétés. Toutes les fonctions ont une propriété spéciale intitulée <code>prototype</code>.</p>
-
-<pre class="brush: js">function faireUnTruc(){}
+```js
+function faireUnTruc(){}
 console.log( faireUnTruc.prototype ); // Object {...}
 // Peu importe comment vous déclarez la fonction.
 // une fonction en JavaScript aura toujours une propriété
 // prototype par défaut.
 var faireUnTruc= function(){};
 console.log(faireUnTruc.prototype); // Object {...}
-</pre>
+```
 
-<p>Comme mentionné avant, <code>faireUnTruc()</code> possède une propriété par défaut <code>prototype</code>. Après avoir exécuté ce code dans une console, la console devrait afficher un objet semblable à :</p>
+Comme mentionné avant, `faireUnTruc()` possède une propriété par défaut `prototype`. Après avoir exécuté ce code dans une console, la console devrait afficher un objet semblable à :
 
-<pre class="brush: js">{
+```js
+{
     constructor: ƒ faireUnTruc(),
     __proto__: {
         constructor: ƒ Object(),
@@ -147,17 +145,21 @@ console.log(faireUnTruc.prototype); // Object {...}
         toString: ƒ toString(),
         valueOf: ƒ valueOf()
     }
-}</pre>
+}
+```
 
-<p>On peut ajouter des propriétés au prototype de <code>faireUnTruc()</code> comme suit :</p>
+On peut ajouter des propriétés au prototype de `faireUnTruc()` comme suit :
 
-<pre class="brush: js">function faireUnTruc(){}
+```js
+function faireUnTruc(){}
 faireUnTruc.prototype.toto = "truc";
-console.log( faireUnTruc.prototype );</pre>
+console.log( faireUnTruc.prototype );
+```
 
-<p>Produira le résultat suivant :</p>
+Produira le résultat suivant :
 
-<pre class="brush: js">{
+```js
+{
     toto: "truc",
     constructor: ƒ faireUnTruc(),
     __proto__: {
@@ -170,21 +172,24 @@ console.log( faireUnTruc.prototype );</pre>
         valueOf: ƒ valueOf()
     }
 }
-</pre>
+```
 
-<p>On peut utiliser l'opérateur <code>new</code> afin de créer une instance de <code>faireUnTruc()</code> basée sur ce prototype. Pour utiliser l'opérateur <code>new</code>, il suffira d'appeler la fonction et de précéder cet appel avec le mot-clé <code>new</code>. Lorsqu'on appelle une fonction avec un opérateur <code>new</code>, celle-ci renvoie un objet qui est une instance de la fonction. On peut ensuite ajouter des propriétés sur cet objet.</p>
+On peut utiliser l'opérateur `new` afin de créer une instance de `faireUnTruc()` basée sur ce prototype. Pour utiliser l'opérateur `new`, il suffira d'appeler la fonction et de précéder cet appel avec le mot-clé `new`. Lorsqu'on appelle une fonction avec un opérateur `new`, celle-ci renvoie un objet qui est une instance de la fonction. On peut ensuite ajouter des propriétés sur cet objet.
 
-<p>Voyons le code qui suit :</p>
+Voyons le code qui suit :
 
-<pre class="brush: js">function faireUnTruc(){}
+```js
+function faireUnTruc(){}
 faireUnTruc.prototype.toto = "truc"; // on ajoute une propriété au prototype
 var uneInstance = new faireUnTruc();
 uneInstance.prop = "une valeur"; // on ajoute une propriété sur l'objet
-console.log(uneInstance);</pre>
+console.log(uneInstance);
+```
 
-<p>Exécuté, ce code produira le résultat suivant dans la console :</p>
+Exécuté, ce code produira le résultat suivant dans la console :
 
-<pre class="brush: js">{
+```js
+{
     prop: "une valeur",
     __proto__: {
         toto: "truc",
@@ -199,19 +204,21 @@ console.log(uneInstance);</pre>
             valueOf: ƒ valueOf()
         }
     }
-}</pre>
+}
+```
 
-<p>Comme nous l'avons vu avant, la valeur de <code>__proto__</code> pour <code>uneInstance</code> est <code>faireUnTruc.prototype</code>. Mais quel est l'intérêt ? Lorsqu'on accède à une propriété de <code>uneInstance</code>, le moteur contrôle d'abord si <code>uneInstance</code> possède cette propriété.</p>
+Comme nous l'avons vu avant, la valeur de `__proto__` pour `uneInstance` est `faireUnTruc.prototype`. Mais quel est l'intérêt ? Lorsqu'on accède à une propriété de `uneInstance`, le moteur contrôle d'abord si `uneInstance` possède cette propriété.
 
-<p>Si <code>uneInstance</code> ne possède pas cette propriété, le moteur contrôlera la propriété sur la propriété <code>__proto__</code> de <code>uneInstance</code> (c'est-à-dire <code>faireUnTruc.prototype</code>). Si la propriété <code>__proto__</code> de <code>uneInstance</code> possède la propriété qu'on recherche, ce sera celle-ci qui sera utilisée.</p>
+Si `uneInstance` ne possède pas cette propriété, le moteur contrôlera la propriété sur la propriété `__proto__` de `uneInstance` (c'est-à-dire `faireUnTruc.prototype`). Si la propriété `__proto__` de `uneInstance` possède la propriété qu'on recherche, ce sera celle-ci qui sera utilisée.
 
-<p>Si <code>__proto__</code> de <code>unTruc</code> ne possède pas la propriété recherchée, le moteur contrôle la propriété <code>__proto__</code> de la propriété <code>__proto__</code> de <code>uneInstance</code>. Par défaut, la propriété <code>__proto__</code> de n'importe quel propriété <code>prototype</code>d'une fonction est  <code>window.Object.prototype</code>. Ainsi, la propriété <code>__proto__</code> de la propriété <code>__proto__</code> de  <code>uneInstance</code> (c'est-à-dire <code>__proto__</code> de <code>faireUnTruc.prototype</code> (c'est-à-dire. <code>Object.prototype</code>)) est contrôlée pour vérifier si la propriété y est présente.</p>
+Si `__proto__` de `unTruc` ne possède pas la propriété recherchée, le moteur contrôle la propriété `__proto__` de la propriété `__proto__` de `uneInstance`. Par défaut, la propriété `__proto__` de n'importe quel propriété `prototype`d'une fonction est  `window.Object.prototype`. Ainsi, la propriété `__proto__` de la propriété `__proto__` de  `uneInstance` (c'est-à-dire `__proto__` de `faireUnTruc.prototype` (c'est-à-dire. `Object.prototype`)) est contrôlée pour vérifier si la propriété y est présente.
 
-<p>Si la propriété n'est pas trouvée sur la propriété <code>__proto__</code> de la propriété <code>__proto__</code> de <code>uneInstance</code>, c'est la proriété <code>__proto__</code> de la propriété <code>__proto__</code> de la propriété <code>__proto__</code> de <code>uneInstance</code> qui est contrôlée. Cependant il y a un problème car la propriété <code>__proto__</code> de la propriété <code>__proto__</code> de la propriété <code>__proto__</code> de <code>unTruc</code> n'existe pas. Autrement dit, toute la chaîne de prototype a été parcouru et on ne peut pas remonter d'un cran sur un autre <code>__proto__</code> et le moteur peut conclure que la propriété n'existe pas pour cet objet et renvoyer <code>undefined</code>.</p>
+Si la propriété n'est pas trouvée sur la propriété `__proto__` de la propriété `__proto__` de `uneInstance`, c'est la proriété `__proto__` de la propriété `__proto__` de la propriété `__proto__` de `uneInstance` qui est contrôlée. Cependant il y a un problème car la propriété `__proto__` de la propriété `__proto__` de la propriété `__proto__` de `unTruc` n'existe pas. Autrement dit, toute la chaîne de prototype a été parcouru et on ne peut pas remonter d'un cran sur un autre `__proto__` et le moteur peut conclure que la propriété n'existe pas pour cet objet et renvoyer `undefined`.
 
-<p>Regardons ce qui se produit dans la console avec un peu de code :</p>
+Regardons ce qui se produit dans la console avec un peu de code :
 
-<pre class="brush: js">function faireUnTruc(){}
+```js
+function faireUnTruc(){}
 faireUnTruc.prototype.toto = "truc";
 var uneInstance = new faireUnTruc();
 uneInstance.prop = "une valeur";
@@ -220,36 +227,40 @@ console.log("uneInstance.toto: " + uneInstance.toto);
 console.log("faireUnTruc.prop: " + faireUnTruc.prop);
 console.log("faireUnTruc.toto: " + faireUnTruc.toto);
 console.log("faireUnTruc.prototype.prop: " + faireUnTruc.prototype.prop);
-console.log("faireUnTruc.prototype.toto:  " + faireUnTruc.prototype.toto);</pre>
+console.log("faireUnTruc.prototype.toto:  " + faireUnTruc.prototype.toto);
+```
 
-<p>Le résultat est le suivant :</p>
+Le résultat est le suivant :
 
-<pre class="brush: js">uneInstance.prop: une valeur
+```js
+uneInstance.prop: une valeur
 uneInstance.toto: truc
 faireUnTruc.prop: undefined
 faireUnTruc.toto: undefined
 faireUnTruc.prototype.prop: undefined
-faireUnTruc.prototype.toto: truc</pre>
+faireUnTruc.prototype.toto: truc
+```
 
-<h2 id="Les_différentes_façons_de_créer_des_objets_et_les_impacts_sur_la_chaîne_de_prototype">Les différentes façons de créer des objets et les impacts sur la chaîne de prototype</h2>
+## Les différentes façons de créer des objets et les impacts sur la chaîne de prototype
 
-<h3 id="Objets_créés_avec_les_raccourcis_syntaxiques_littéraux">Objets créés avec les raccourcis syntaxiques (littéraux)</h3>
+### Objets créés avec les raccourcis syntaxiques (littéraux)
 
-<pre class="brush: js">var o = {a: 1};
+```js
+var o = {a: 1};
 
 // Le nouvel objet possède Object.prototype comme [[Prototype]]
 // o ne possède pas de propriété 'hasOwnProperty' en propre
 // hasOwnProperty est une propriété en propre de Object.prototype.
 // o hérite de hasOwnProperty via Object.prototype
 // Object.prototype possède null comme prototype.
-// o ---&gt; Object.prototype ---&gt; null
+// o ---> Object.prototype ---> null
 
 var b = ['coucou', 'ça va', '?'];
 
 // Les tableaux (Array) héritent de Array.prototype
 // (qui possède les méthodes indexOf, forEach, etc.)
 // La chaîne de prototype est donc :
-// b ---&gt; Array.prototype ---&gt; Object.prototype ---&gt; null
+// b ---> Array.prototype ---> Object.prototype ---> null
 
 function f() {
   return 2;
@@ -258,14 +269,15 @@ function f() {
 // Les fonctions héritent de Function.prototype
 // (qui possède les méthodes call, bind, etc.)
 // La chaîne de prototype est donc
-// f ---&gt; Function.prototype ---&gt; Object.prototype ---&gt; null
-</pre>
+// f ---> Function.prototype ---> Object.prototype ---> null
+```
 
-<h3 id="Objets_créés_avec_un_constructeur">Objets créés avec un constructeur</h3>
+### Objets créés avec un constructeur
 
-<p>En JavaScript, un constructeur est <em>juste</em> une fonction que l'on invoque avec l'opérateur <code><a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_new">new</a></code>.</p>
+En JavaScript, un constructeur est _juste_ une fonction que l'on invoque avec l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_new).
 
-<pre class="brush: js">function Graphe() {
+```js
+function Graphe() {
   this.sommets = [];
   this.arêtes = [];
 }
@@ -279,33 +291,35 @@ Graphe.prototype = {
 var g = new Graphe();
 // g est un objet qui possède les propriétés 'sommets' and 'arêtes' en propre.
 // g.[[Prototype]] est la valeur de Graphe.prototype lorsque "new Graphe()" est exécuté.
-</pre>
+```
 
-<h3 id="Objets_créés_avec_Object.create">Objets créés avec <code>Object.create()</code></h3>
+### Objets créés avec `Object.create()`
 
-<p>ECMAScript 5 a introduit une nouvelle méthode : {{jsxref("Object.create()")}}. Appeler cette méthode crée un nouvel objet et le prototype de cet objet est le premier argument de cette fonction :</p>
+ECMAScript 5 a introduit une nouvelle méthode : {{jsxref("Object.create()")}}. Appeler cette méthode crée un nouvel objet et le prototype de cet objet est le premier argument de cette fonction :
 
-<pre class="brush: js">var a = {a: 1};
-// a ---&gt; Object.prototype ---&gt; null
+```js
+var a = {a: 1};
+// a ---> Object.prototype ---> null
 
 var b = Object.create(a);
-// b ---&gt; a ---&gt; Object.prototype ---&gt; null
+// b ---> a ---> Object.prototype ---> null
 console.log(b.a); // 1 (héritée)
 
 var c = Object.create(b);
-// c ---&gt; b ---&gt; a ---&gt; Object.prototype ---&gt; null
+// c ---> b ---> a ---> Object.prototype ---> null
 
 var d = Object.create(null);
-// d ---&gt; null
+// d ---> null
 console.log(d.hasOwnProperty);
 // undefined, car d n'hérite pas de Object.prototype
-</pre>
+```
 
-<h4 id="Suppression_des_propriétés_avec_delete">Suppression des propriétés avec <code>delete</code></h4>
+#### Suppression des propriétés avec `delete`
 
-<p>L'opérateur <code><a href="/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_delete">delete</a></code> permet de supprimer une propriété directement rattachée à un objet. En revanche, il n'empêchera pas l'exploration de la chaîne de prototype :</p>
+L'opérateur [`delete`](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_delete) permet de supprimer une propriété directement rattachée à un objet. En revanche, il n'empêchera pas l'exploration de la chaîne de prototype :
 
-<pre class="brush: js">let a = {toto: 1};
+```js
+let a = {toto: 1};
 let b = Object.create(a);
 
 console.log(b.toto); // Affiche 1 car c'est une propriété disponible via le prototype
@@ -314,13 +328,15 @@ console.log(b.toto); // Affiche 5, désormais cette propriété existe sur l'obj
 
 delete b.toto;
 console.log(b.toto); // Affiche 1 : la propriété n'est plus disponible sur l'objet mais
-                     // on peut toujours la récupérer via le prototype</pre>
+                     // on peut toujours la récupérer via le prototype
+```
 
-<h3 id="Objets_créés_avec_le_mot-clé_class">Objets créés avec le mot-clé <code>class</code></h3>
+### Objets créés avec le mot-clé `class`
 
-<p>ECMAScript 2015 introduit plusieurs mots-clés destinés à créer du sucre syntaxique pour manipuler des <a href="/fr/docs/Web/JavaScript/Reference/Classes">classes</a>. Ces mots-clés sont {{jsxref("Instructions/class", "class")}}, {{jsxref("Classes/constructor", "constructor")}}, {{jsxref("Classes/static", "static")}}, {{jsxref("Classes/extends", "extends")}} et {{jsxref("Opérateurs/super", "super")}}.</p>
+ECMAScript 2015 introduit plusieurs mots-clés destinés à créer du sucre syntaxique pour manipuler des [classes](/fr/docs/Web/JavaScript/Reference/Classes). Ces mots-clés sont {{jsxref("Instructions/class", "class")}}, {{jsxref("Classes/constructor", "constructor")}}, {{jsxref("Classes/static", "static")}}, {{jsxref("Classes/extends", "extends")}} et {{jsxref("Opérateurs/super", "super")}}.
 
-<pre class="brush: js">'use strict';
+```js
+'use strict';
 
 class Polygone {
   constructor(hauteur, largeur) {
@@ -343,15 +359,16 @@ class Carré extends Polygone {
 }
 
 var carré = new Carré(2);
-</pre>
+```
 
-<h3 id="Performance">Performance</h3>
+### Performance
 
-<p>Le temps de recherche des propriétés sera plus élevé si ces propriétés sont situées plus loin dans la chaîne de prototype. Tenter d'accéder à ces propriétés éloignées pourra avoir un impact négatif sur les performances. De plus, tenter d'accéder à des propriétés inexistantes entraîntera toujours le parcours de l'ensemble de la chaîne de prototype.</p>
+Le temps de recherche des propriétés sera plus élevé si ces propriétés sont situées plus loin dans la chaîne de prototype. Tenter d'accéder à ces propriétés éloignées pourra avoir un impact négatif sur les performances. De plus, tenter d'accéder à des propriétés inexistantes entraîntera toujours le parcours de l'ensemble de la chaîne de prototype.
 
-<p>Lorsqu'on parcourt les propriétés d'un objet, <strong>toutes</strong> les propriétés énumérables situées sur la chaîne de prototype seront parcourues. Pour vérifier si un objet possède une propriété en propre plus que via sa chaîne de prototype, on devra utiliser la méthode <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/hasOwnProperty"><code>hasOwnProperty()</code></a> qui est héritée grâce à <code>Object.prototype</code>. Prenons un exemple concret avec le cas du graphe traité dans un exemple précédent :</p>
+Lorsqu'on parcourt les propriétés d'un objet, **toutes** les propriétés énumérables situées sur la chaîne de prototype seront parcourues. Pour vérifier si un objet possède une propriété en propre plus que via sa chaîne de prototype, on devra utiliser la méthode [`hasOwnProperty()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/hasOwnProperty) qui est héritée grâce à `Object.prototype`. Prenons un exemple concret avec le cas du graphe traité dans un exemple précédent :
 
-<pre class="brush: js">console.log(g.hasOwnProperty('arêtes'));
+```js
+console.log(g.hasOwnProperty('arêtes'));
 // true
 
 console.log(g.hasOwnProperty('nononon'));
@@ -362,36 +379,34 @@ console.log(g.hasOwnProperty('ajoutSommet'));
 
 console.log(g.__proto__.hasOwnProperty('ajoutSommet'));
 // true
-</pre>
+```
 
-<div class="blockIndicator note">
-<p><strong>Note :</strong> Tester si une propriété vaut {{jsxref("undefined")}} ne suffit pas à vérifier la présence de la propriété sur un objet : une propriété peut très bien exister sur un objet mais valoir <code>undefined</code>.</p>
-</div>
+> **Note :** Tester si une propriété vaut {{jsxref("undefined")}} ne suffit pas à vérifier la présence de la propriété sur un objet : une propriété peut très bien exister sur un objet mais valoir `undefined`.
 
-<h3 id="Mauvaise_pratique_étendre_les_prototypes_natifs">Mauvaise pratique : étendre les prototypes natifs</h3>
+### Mauvaise pratique : étendre les prototypes natifs
 
-<p>On peut parfois voir du code qui étend <code>Object.prototype</code> ou l'un des prototypes natifs.</p>
+On peut parfois voir du code qui étend `Object.prototype` ou l'un des prototypes natifs.
 
-<p>Cette technique est intitulée <em>monkey patching </em>et brise l'encapsulation. Bien qu'elle soit utilisée par certains <em>frameworks</em>, il n'existe pas de raison suffisante pour étendre les objets natifs avec des fonctionnalités non-standard.</p>
+Cette technique est intitulée _monkey patching_ et brise l'encapsulation. Bien qu'elle soit utilisée par certains _frameworks_, il n'existe pas de raison suffisante pour étendre les objets natifs avec des fonctionnalités non-standard.
 
-<p>La<strong> seule</strong> raison qui peut prévaloir pour l'extension de prototypes natifs est l'ajout de fonctionnalités JavaScript apparues avec les nouvelles versions des spécifications et moteurs afin d'en disposer dans de plus anciens environnements.</p>
+La **seule** raison qui peut prévaloir pour l'extension de prototypes natifs est l'ajout de fonctionnalités JavaScript apparues avec les nouvelles versions des spécifications et moteurs afin d'en disposer dans de plus anciens environnements.
 
-<h3 id="Résumé_des_méthodes_pour_étendre_la_chaîne_de_prototype">Résumé des méthodes pour étendre la chaîne de prototype</h3>
+### Résumé des méthodes pour étendre la chaîne de prototype
 
-<p>Voici un tableau avec les quatre outils qui permettent d'étendre une chaîne de prototypes avec chacun leurs avantages et leurs inconvénients. Tous les exemples mentionnés permettent de créer le même objet <code>inst</code> (et affichant donc le même résultat dans la console) mais de façon différente.</p>
+Voici un tableau avec les quatre outils qui permettent d'étendre une chaîne de prototypes avec chacun leurs avantages et leurs inconvénients. Tous les exemples mentionnés permettent de créer le même objet `inst` (et affichant donc le même résultat dans la console) mais de façon différente.
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td style="width: 1%;">Nom</td>
-   <td>Exemples</td>
-   <td>Avantages</td>
-   <td style="vertical-align: top; width: 60%;">Inconvénients</td>
-  </tr>
-  <tr>
-   <td>Initialisation</td>
-   <td>
-    <pre class="brush: js">
+  <tbody>
+    <tr>
+      <td style="width: 1%">Nom</td>
+      <td>Exemples</td>
+      <td>Avantages</td>
+      <td style="vertical-align: top; width: 60%">Inconvénients</td>
+    </tr>
+    <tr>
+      <td>Initialisation</td>
+      <td>
+        <pre class="brush: js">
 function toto(){}
 toto.prototype = {
   toto_prop: "toto val"
@@ -403,23 +418,35 @@ truc.prototype = proto;
 var inst = new truc();
 console.log(inst.toto_prop);
 console.log(inst.truc_prop);
-</pre>
-   </td>
-   <td style="vertical-align: top;">Prise en charge par l'ensemble des navigateurs. Cette méthode est très rapide, standard et facilement optimisable.</td>
-   <td>
-    <p>Afin d'utiliser cette méthode, il faut que la fonction ait été initialisée. Pendant cette initialisation, le constructeur peut enregistrer des informations uniques qui doivent être générées pour chaque objet.</p>
-
-    <p>Toutefois, il est possible que ces informations uniques ne soient générées qu'une seule fois.</p>
-
-    <p>De plus, l'initialisation du constructeur peut ajouter des méthodes non souhaitées sur l'objet.</p>
-
-    <p>Cela dit, ces problèmes ne se révèlent que rarement.</p>
-   </td>
-  </tr>
-  <tr>
-   <td><code>Object.create()</code></td>
-   <td style="vertical-align: top;">
-    <pre class="brush: js">
+</pre
+        >
+      </td>
+      <td style="vertical-align: top">
+        Prise en charge par l'ensemble des navigateurs. Cette méthode est très
+        rapide, standard et facilement optimisable.
+      </td>
+      <td>
+        <p>
+          Afin d'utiliser cette méthode, il faut que la fonction ait été
+          initialisée. Pendant cette initialisation, le constructeur peut
+          enregistrer des informations uniques qui doivent être générées pour
+          chaque objet.
+        </p>
+        <p>
+          Toutefois, il est possible que ces informations uniques ne soient
+          générées qu'une seule fois.
+        </p>
+        <p>
+          De plus, l'initialisation du constructeur peut ajouter des méthodes
+          non souhaitées sur l'objet.
+        </p>
+        <p>Cela dit, ces problèmes ne se révèlent que rarement.</p>
+      </td>
+    </tr>
+    <tr>
+      <td><code>Object.create()</code></td>
+      <td style="vertical-align: top">
+        <pre class="brush: js">
 function toto(){}
 toto.prototype = {
   toto_prop: "toto val"
@@ -433,9 +460,9 @@ truc.prototype = proto;
 var inst = new truc();
 console.log(inst.toto_prop);
 console.log(inst.truc_prop);
-</pre>
-
-    <pre class="brush: js">
+</pre
+        >
+        <pre class="brush: js">
 function toto(){}
 toto.prototype = {
   toto_prop: "toto val"
@@ -452,21 +479,37 @@ var proto = Object.create(
 truc.prototype = proto;
 var inst = new truc();
 console.log(inst.toto_prop);
-console.log(inst.truc_prop)</pre>
-   </td>
-   <td>Prise en charge par la majorité des navigateurs actuels. Elle permet de définir directement <code>__proto__</code> en une seule fois et le navigateur peut mieux optimiser l'objet. Elle permet aussi de créer des objets sans prototype avec <code>Object.create(null)</code>.</td>
-   <td style="vertical-align: top;">
-    <p>Cette méthode n'est pas prise en charge par IE8 et les versions antérieures. Toutefois, Microsoft ayant mis un terme au support des systèmes qui utilisent ces navigateurs, ce ne devrait pas être un problème pour la plupart des navigation.</p>
-
-    <p>De plus, la lenteur de l'initialisation de l'objet peut être causer des soucis de performances lorsqu'on utilise un deuxième argument car descripteur de propriété possède un objet rattaché. Lorsqu'on gère des centaines de milliers de descripteurs, cela peut entraîner un certain <em>lag</em>.</p>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>Object.setPrototypeOf()</code></p>
-   </td>
-   <td>
-    <pre class="brush: js">
+console.log(inst.truc_prop)</pre
+        >
+      </td>
+      <td>
+        Prise en charge par la majorité des navigateurs actuels. Elle permet de
+        définir directement <code>__proto__</code> en une seule fois et le
+        navigateur peut mieux optimiser l'objet. Elle permet aussi de créer des
+        objets sans prototype avec <code>Object.create(null)</code>.
+      </td>
+      <td style="vertical-align: top">
+        <p>
+          Cette méthode n'est pas prise en charge par IE8 et les versions
+          antérieures. Toutefois, Microsoft ayant mis un terme au support des
+          systèmes qui utilisent ces navigateurs, ce ne devrait pas être un
+          problème pour la plupart des navigation.
+        </p>
+        <p>
+          De plus, la lenteur de l'initialisation de l'objet peut être causer
+          des soucis de performances lorsqu'on utilise un deuxième argument car
+          descripteur de propriété possède un objet rattaché. Lorsqu'on gère des
+          centaines de milliers de descripteurs, cela peut entraîner un certain
+          <em>lag</em>.
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p><code>Object.setPrototypeOf()</code></p>
+      </td>
+      <td>
+        <pre class="brush: js">
 function toto(){}
 toto.prototype = {
   toto_prop: "toto val"
@@ -482,9 +525,9 @@ truc.prototype = proto;
 var inst = new truc();
 console.log(inst.toto_prop);
 console.log(inst.truc_prop);
-</pre>
-
-    <pre class="brush: js">
+</pre
+        >
+        <pre class="brush: js">
 function toto(){}
 toto.prototype = {
   toto_prop: "toto val"
@@ -498,15 +541,27 @@ proto=Object.setPrototypeOf(
 truc.prototype = proto;
 var inst = new truc();
 console.log(inst.toto_prop);
-console.log(inst.truc_prop)</pre>
-   </td>
-   <td style="vertical-align: top;">Prise en charge par l'ensemble des navigateurs actuels. Elle permet de manipuler dynamiquement le prototype d'un objet et également de rattacher un prototype à un objet qui n'aurait pas de prototype.</td>
-   <td>Cette méthode devrait être dépréciée et possède des performances faibles. En effet, les moteurs tenteront d'optimiser la connaissance de la structure du prototype et cette méthode viendra à l'enconte de ces hypothèses et certains navigateurs pourront même recompiler le code pour le faire fonctionner selon les spécifications. Cette méthode n'est pas prise en charge par IE8 et les versions antérieures.</td>
-  </tr>
-  <tr>
-   <td><code>__proto__</code></td>
-   <td style="vertical-align: top;">
-    <pre class="brush: js">
+console.log(inst.truc_prop)</pre
+        >
+      </td>
+      <td style="vertical-align: top">
+        Prise en charge par l'ensemble des navigateurs actuels. Elle permet de
+        manipuler dynamiquement le prototype d'un objet et également de
+        rattacher un prototype à un objet qui n'aurait pas de prototype.
+      </td>
+      <td>
+        Cette méthode devrait être dépréciée et possède des performances
+        faibles. En effet, les moteurs tenteront d'optimiser la connaissance de
+        la structure du prototype et cette méthode viendra à l'enconte de ces
+        hypothèses et certains navigateurs pourront même recompiler le code pour
+        le faire fonctionner selon les spécifications. Cette méthode n'est pas
+        prise en charge par IE8 et les versions antérieures.
+      </td>
+    </tr>
+    <tr>
+      <td><code>__proto__</code></td>
+      <td style="vertical-align: top">
+        <pre class="brush: js">
 function toto(){}
 toto.prototype = {
   toto_prop: "toto val"
@@ -520,9 +575,9 @@ truc.prototype = proto;
 var inst = new truc();
 console.log(inst.toto_prop);
 console.log(inst.truc_prop);
-</pre>
-
-    <pre class="brush: js">
+</pre
+        >
+        <pre class="brush: js">
 var inst = {
   __proto__: {
     truc_prop: "truc val",
@@ -533,42 +588,59 @@ var inst = {
   }
 };
 console.log(inst.toto_prop);
-console.log(inst.truc_prop)</pre>
-   </td>
-   <td>Prise en charge par l'ensemble des navigateurs actuels (y compris IE11 et ultérieurs). Défiinir __proto__ sur quelque chose qui n'est pas un objet échouera silencieusement.</td>
-   <td>Cette méthode est dépréciée et n'est pas performante car les moteurs tentent d'optimiser les prototypes. Aussi, le modifier ainsi dynamiquement bloque ces optimisations et peut causer la recompilation du code pour qu'il fonctionne selon les spécifications. Cette méthode n'est pas prise en charge par IE10 et les versions antérieures.</td>
-  </tr>
- </tbody>
+console.log(inst.truc_prop)</pre
+        >
+      </td>
+      <td>
+        Prise en charge par l'ensemble des navigateurs actuels (y compris IE11
+        et ultérieurs). Défiinir __proto__ sur quelque chose qui n'est pas un
+        objet échouera silencieusement.
+      </td>
+      <td>
+        Cette méthode est dépréciée et n'est pas performante car les moteurs
+        tentent d'optimiser les prototypes. Aussi, le modifier ainsi
+        dynamiquement bloque ces optimisations et peut causer la recompilation
+        du code pour qu'il fonctionne selon les spécifications. Cette méthode
+        n'est pas prise en charge par IE10 et les versions antérieures.
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="prototype_et_Object.getPrototypeOf"><code>prototype</code> et <code>Object.getPrototypeOf()</code></h2>
+## `prototype` et `Object.getPrototypeOf()`
 
-<p>JavaScript peut prêter à confusion pour les développeurs utilisant Java ou C++. JavaScript est un langage dynamique et les structures peuvent évoluer lors de l'exécution.</p>
+JavaScript peut prêter à confusion pour les développeurs utilisant Java ou C++. JavaScript est un langage dynamique et les structures peuvent évoluer lors de l'exécution.
 
-<p>Vous avez peut-être remarqué que la fonction <code>A</code> possède une propriété spéciale intitulée <code>prototype</code>. Cette propriété spéciale fonctionne avec l'opérateur <code>new</code> Elle permet de copier la référence  l'objet prototype sur la propriété interne <code>[[Prototype]]</code> de la nouvelle instance créée. Ainsi, avec <code>var a1 = new A()</code>, Le moteur JavaScript définira <code>a1.[[Prototype]] = A.prototype</code>. Quand on tente d'accéder à une des propriétés de l'instance, JavaScript vérifie la présence sur l'instance puis analyse son prototype <code>[[Prototype]]</code>. Cela signifie que tout ce qui est défini sur <code>prototype</code> est effectivement partagé par l'ensemble des instances et on peut même modifier <code>prototype</code> en cours de route afin de modifier indirectement l'ensemble des instances.</p>
+Vous avez peut-être remarqué que la fonction `A` possède une propriété spéciale intitulée `prototype`. Cette propriété spéciale fonctionne avec l'opérateur `new` Elle permet de copier la référence  l'objet prototype sur la propriété interne `[[Prototype]]` de la nouvelle instance créée. Ainsi, avec `var a1 = new A()`, Le moteur JavaScript définira `a1.[[Prototype]] = A.prototype`. Quand on tente d'accéder à une des propriétés de l'instance, JavaScript vérifie la présence sur l'instance puis analyse son prototype `[[Prototype]]`. Cela signifie que tout ce qui est défini sur `prototype` est effectivement partagé par l'ensemble des instances et on peut même modifier `prototype` en cours de route afin de modifier indirectement l'ensemble des instances.
 
-<p>Dans l'exemple précédent, si on avait eu <code>var a1 = new A(); var a2 = new A();</code> alors <code>a1.faireUnTruc</code> aurait fait référence à <code>Object.getPrototypeOf(a1).faireUntruc</code> qui est identique à <code>A.prototype.faireUnTruc</code>. Autrement dit <code>Object.getPrototypeOf(a1).faireUnTruc == Object.getPrototypeOf(a2).faireUnTruc == A.prototype.faireUnTruc</code>.</p>
+Dans l'exemple précédent, si on avait eu `var a1 = new A(); var a2 = new A();` alors `a1.faireUnTruc` aurait fait référence à `Object.getPrototypeOf(a1).faireUntruc` qui est identique à `A.prototype.faireUnTruc`. Autrement dit `Object.getPrototypeOf(a1).faireUnTruc == Object.getPrototypeOf(a2).faireUnTruc == A.prototype.faireUnTruc`.
 
-<p>Autrement dit <code>prototype</code> peut être utilisé pour les types et <code>Object.getPrototypeOf()</code> pour les instances.</p>
+Autrement dit `prototype` peut être utilisé pour les types et `Object.getPrototypeOf()` pour les instances.
 
-<p><code>[[Prototype]]</code> est analysé de façon récursive. Ainsi, <code>a1.faireUnTruc</code> correspondra à chercher <code>Object.getPrototypeOf(a1).faireUnTruc</code> puis <code>Object.getPrototypeOf(Object.getPrototypeOf(a1)).faireUnTruc</code> etc., jusqu'à ce qu'elle soit trouvée ou que <code>Object.getPrototypeOf</code>renvoie <code>null</code>.</p>
+`[[Prototype]]` est analysé de façon récursive. Ainsi, `a1.faireUnTruc` correspondra à chercher `Object.getPrototypeOf(a1).faireUnTruc` puis `Object.getPrototypeOf(Object.getPrototypeOf(a1)).faireUnTruc` etc., jusqu'à ce qu'elle soit trouvée ou que `Object.getPrototypeOf`renvoie `null`.
 
-<p>Ainsi, quand on appelle :</p>
+Ainsi, quand on appelle :
 
-<pre class="brush: js">var o = new Toto();</pre>
+```js
+var o = new Toto();
+```
 
-<p>Le moteur JavaScript effectue les étapes suivantes :</p>
+Le moteur JavaScript effectue les étapes suivantes :
 
-<pre class="brush: js">var o = new Object();
+```js
+var o = new Object();
 o.[[Prototype]] = Toto.prototype;
-Toto.call(o);</pre>
+Toto.call(o);
+```
 
-<p>(ou quelque chose qui y ressemble) et si on écrit ensuite :</p>
+(ou quelque chose qui y ressemble) et si on écrit ensuite :
 
-<pre class="brush: js">o.unePropriété;</pre>
+```js
+o.unePropriété;
+```
 
-<p>Le moteur vérifie si <code>o</code> possède une propriété <code>unePropriété</code> en propre. Si ce n'est pas le cas, il vérifie <code>Object.getPrototypeOf(o).unePropriété</code> et ainsi de suite.</p>
+Le moteur vérifie si `o` possède une propriété `unePropriété` en propre. Si ce n'est pas le cas, il vérifie `Object.getPrototypeOf(o).unePropriété` et ainsi de suite.
 
-<h2 id="Conclusion">Conclusion</h2>
+## Conclusion
 
-<p>Il est essentiel de comprendre le modèle d'héritage prototypique avant d'écrire du code complexe qui repose sur ces notions. Il est également préférable d'avoir une idée de la longueur de la chaîne de prototype utilisée pour les différents objets et de fragmenter cette chaîne si besoin afin d'éviter des écueils de performances. Enfin, on veillera à ne pas étendre les prototypes natifs sauf afin d'émuler des nouvelles fonctionnalités qui ne seraient pas disponibles dans l'environnement utilisé.</p>
+Il est essentiel de comprendre le modèle d'héritage prototypique avant d'écrire du code complexe qui repose sur ces notions. Il est également préférable d'avoir une idée de la longueur de la chaîne de prototype utilisée pour les différents objets et de fragmenter cette chaîne si besoin afin d'éviter des écueils de performances. Enfin, on veillera à ne pas étendre les prototypes natifs sauf afin d'émuler des nouvelles fonctionnalités qui ne seraient pas disponibles dans l'environnement utilisé.

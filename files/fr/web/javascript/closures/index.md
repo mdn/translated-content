@@ -7,34 +7,37 @@ tags:
   - JavaScript
 translation_of: Web/JavaScript/Closures
 ---
-<div>{{jsSidebar("Intermediate")}}</div>
+{{jsSidebar("Intermediate")}}
 
-<p>Une <strong>fermeture </strong>est la paire formée d'une fonction et des références à son état environnant (<strong>l'environnement lexical</strong>). En d'autres termes, une fermeture donne accès à la portée d'une fonction externe à partir d'une fonction interne (on dit aussi que la fonction « capture son environnement »). En JavaScript, une fermeture est créée chaque fois qu'une fonction est créée.</p>
+Une **fermeture** est la paire formée d'une fonction et des références à son état environnant (**l'environnement lexical**). En d'autres termes, une fermeture donne accès à la portée d'une fonction externe à partir d'une fonction interne (on dit aussi que la fonction « capture son environnement »). En JavaScript, une fermeture est créée chaque fois qu'une fonction est créée.
 
-<h2 id="Portée">Portée</h2>
+## Portée
 
-<p>Dans l'exemple suivant :</p>
+Dans l'exemple suivant :
 
-<pre class="brush: js">function init() {
+```js
+function init() {
   var nom = "Mozilla"; // nom est une variable locale de init
   function afficheNom() { // afficheNom est une fonction interne de init
     console.log(nom); // ici nom est une variable libre (définie dans la fonction parente)
   }
   afficheNom();
 };
-init();</pre>
+init();
+```
 
-<p>La fonction <code>init</code> créé une variable locale <code>nom</code> et une fonction interne <code>afficheNom</code>. La fonction interne est seulement visible de l'intérieur de <code>init</code>. Contrairement à <code>init</code>, <code>afficheNom</code> ne possède pas de variable locale propre, mais elle utilise la variable <code>nom</code> de la fonction parente (ceci dit <code>afficheNom</code> pourrait utiliser ses variables locales propres si elle en avait).</p>
+La fonction `init` créé une variable locale `nom` et une fonction interne `afficheNom`. La fonction interne est seulement visible de l'intérieur de `init`. Contrairement à `init`, `afficheNom` ne possède pas de variable locale propre, mais elle utilise la variable `nom` de la fonction parente (ceci dit `afficheNom` pourrait utiliser ses variables locales propres si elle en avait).
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/78dg25ax/", "js,result", 250)}}</p>
+{{JSFiddleEmbed("https://jsfiddle.net/78dg25ax/", "js,result", 250)}}
 
-<p>Vous pouvez exécuter le code sur cette <a href="https://jsfiddle.net/4U5VD/">page</a> pour voir son fonctionnement. On a ici un exemple de portée lexicale : en JavaScript, la portée d'une variable est définie par son emplacement dans le code source (elle apparaît de façon <em>lexicale</em>), les fonctions imbriquées ont ainsi accès aux variables déclarées dans les portées parentes.</p>
+Vous pouvez exécuter le code sur cette [page](https://jsfiddle.net/4U5VD/) pour voir son fonctionnement. On a ici un exemple de portée lexicale : en JavaScript, la portée d'une variable est définie par son emplacement dans le code source (elle apparaît de façon _lexicale_), les fonctions imbriquées ont ainsi accès aux variables déclarées dans les portées parentes.
 
-<h2 id="Fermeture">Fermeture</h2>
+## Fermeture
 
-<p>Étudions l'exemple suivant :</p>
+Étudions l'exemple suivant :
 
-<pre class="brush: js">function creerFonction() {
+```js
+function creerFonction() {
   var nom = "Mozilla";
   function afficheNom() {
     console.log(nom);
@@ -44,17 +47,18 @@ init();</pre>
 
 var maFonction = creerFonction();
 maFonction();
-</pre>
+```
 
-<p>Ce code produit le même résultat que l'appel à <code>init()</code> étudié précédemment : "Mozilla" est affiché dans la console. L'intérêt de ce code est qu'une fermeture contenant la fonction <code>afficheNom</code> est renvoyée par la fonction parente, avant d'être exécutée.</p>
+Ce code produit le même résultat que l'appel à `init()` étudié précédemment : "Mozilla" est affiché dans la console. L'intérêt de ce code est qu'une fermeture contenant la fonction `afficheNom` est renvoyée par la fonction parente, avant d'être exécutée.
 
-<p>Le code continue à fonctionner, ce qui peut paraître contre-intuitif au regard de la syntaxe utilisée. Usuellement, les variables locales d'une fonction n'existent que pendant l'exécution d'une fonction. Une fois que <code>creerFonction()</code> a fini son exécution, on aurait pû penser que la variable <code>nom</code> n'est plus accessible. Cependant, le code fonctionne : en JavaScript, la variable est donc accessible d'une certaine façon.</p>
+Le code continue à fonctionner, ce qui peut paraître contre-intuitif au regard de la syntaxe utilisée. Usuellement, les variables locales d'une fonction n'existent que pendant l'exécution d'une fonction. Une fois que `creerFonction()` a fini son exécution, on aurait pû penser que la variable `nom` n'est plus accessible. Cependant, le code fonctionne : en JavaScript, la variable est donc accessible d'une certaine façon.
 
-<p>L'explication est la suivante : <code>maFonction</code> est une fermeture. La fermeture combine la fonction <code>afficheNom</code> et son environnement. Cet environnement est composé de toutes les variables locales accessibles (dans la portée) à la création de la fermeture. Ici <code>maFonction</code> est une fermeture qui contient la fonction <code>afficheNom</code> et une référence à la variable <code>var nom = "Mozilla"</code> qui existait lorsque la fermeture a été créée. L'instance de <code>afficheNom</code> conserve une référence à son environnement lexical, dans lequel <code>nom</code>  existe. Pour cette raison, lorsque <code>maFonction</code> est invoquée, la variable <code>nom</code> reste disponible et "Mozilla" est transmis à <code>console.log</code>.</p>
+L'explication est la suivante : `maFonction` est une fermeture. La fermeture combine la fonction `afficheNom` et son environnement. Cet environnement est composé de toutes les variables locales accessibles (dans la portée) à la création de la fermeture. Ici `maFonction` est une fermeture qui contient la fonction `afficheNom` et une référence à la variable `var nom = "Mozilla"` qui existait lorsque la fermeture a été créée. L'instance de `afficheNom` conserve une référence à son environnement lexical, dans lequel `nom`  existe. Pour cette raison, lorsque `maFonction` est invoquée, la variable `nom` reste disponible et "Mozilla" est transmis à `console.log`.
 
-<p>Voici un exemple un peu plus intéressant—une fonction <code>ajouterA</code> :</p>
+Voici un exemple un peu plus intéressant—une fonction `ajouterA` :
 
-<pre class="brush: js">function ajouterA(x) {
+```js
+function ajouterA(x) {
   return function(y) {
     return x + y;
   };
@@ -65,23 +69,24 @@ var ajouter_10 = ajouterA(10);
 
 console.log(ajouter_5(2));  // 7
 console.log(ajouter_10(2)); // 12
-</pre>
+```
 
-<p>On définit une fonction <code>ajouterA(x)</code> avec un seul argument <code>x</code> et qui renvoie une fonction anonyme. La fonction anonyme a un seul argument <code>y</code>, et renvoie la somme de <code>x</code> et <code>y</code>.</p>
+On définit une fonction `ajouterA(x)` avec un seul argument `x` et qui renvoie une fonction anonyme. La fonction anonyme a un seul argument `y`, et renvoie la somme de `x` et `y`.
 
-<p>La fonction <code>ajouterA</code> permet de créer des fermetures qui font la somme de leur argument et d'un nombre fixé. Dans l'exemple ci-dessus, on crée  <code>ajouter_5</code> et <code>ajouter_10</code>. Elles partagent la même fonction, mais des environnements différents. Dans <code>ajouter_5</code>, <code>x</code> vaut 5 ; dans <code>ajouter_10</code>, <code>x</code> vaut 10.</p>
+La fonction `ajouterA` permet de créer des fermetures qui font la somme de leur argument et d'un nombre fixé. Dans l'exemple ci-dessus, on crée  `ajouter_5` et `ajouter_10`. Elles partagent la même fonction, mais des environnements différents. Dans `ajouter_5`, `x` vaut 5 ; dans `ajouter_10`, `x` vaut 10.
 
-<h2 id="Les_fermetures_en_pratique">Les fermetures en pratique</h2>
+## Les fermetures en pratique
 
-<p>On a vu la théorie décrivant les fermetures. Est-ce qu'elles sont utiles pour autant ? Une fermeture permet d'associer des données (l'environnement) avec une fonction qui agit sur ces données. On peut faire un parallèle avec la programmation orientée objet car les objets permettent d'associer des données (les propriétés) avec des méthodes.</p>
+On a vu la théorie décrivant les fermetures. Est-ce qu'elles sont utiles pour autant ? Une fermeture permet d'associer des données (l'environnement) avec une fonction qui agit sur ces données. On peut faire un parallèle avec la programmation orientée objet car les objets permettent d'associer des données (les propriétés) avec des méthodes.
 
-<p>Ainsi, on peut utiliser une fermeture pour tout endroit où on utiliserait un objet et ce avec une seule méthode.</p>
+Ainsi, on peut utiliser une fermeture pour tout endroit où on utiliserait un objet et ce avec une seule méthode.
 
-<p>Beaucoup de code JavaScript utilisé sur le Web gère des événements : on définit un comportement, puis on l'attache à un événement déclenché par l'utilisateur (tel un clic ou une frappe clavier). Notre code est généralement une fonction de rappel (ou <em>callback</em>) exécutée en réponse à l'événement.</p>
+Beaucoup de code JavaScript utilisé sur le Web gère des événements : on définit un comportement, puis on l'attache à un événement déclenché par l'utilisateur (tel un clic ou une frappe clavier). Notre code est généralement une fonction de rappel (ou _callback_) exécutée en réponse à l'événement.
 
-<p>Voici un exemple concret : si on souhaite ajouter des boutons à une page afin d'ajuster la taille du texte, on pourrait définir la taille de police de l'élément <code>body</code> en pixels, et celles des autres éléments relativement à cette première taille grâce à l'unité <code>em</code> :</p>
+Voici un exemple concret : si on souhaite ajouter des boutons à une page afin d'ajuster la taille du texte, on pourrait définir la taille de police de l'élément `body` en pixels, et celles des autres éléments relativement à cette première taille grâce à l'unité `em` :
 
-<pre class="brush: css">body {
+```css
+body {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 12px;
 }
@@ -92,13 +97,14 @@ h1 {
 h2 {
   font-size: 1.2em;
 }
-</pre>
+```
 
-<p>Les boutons vont ensuite changer la taille de la police de l'élément <code>body</code>, ce changement étant répercuté aux autres éléments grâce aux unités relatives.</p>
+Les boutons vont ensuite changer la taille de la police de l'élément `body`, ce changement étant répercuté aux autres éléments grâce aux unités relatives.
 
-<p>Voici le code JavaScript qui correspond :</p>
+Voici le code JavaScript qui correspond :
 
-<pre class="brush: js">function fabriqueRedimensionneur(taille) {
+```js
+function fabriqueRedimensionneur(taille) {
   return function() {
     document.body.style.fontSize = taille + 'px';
   };
@@ -107,31 +113,34 @@ h2 {
 var taille12 = fabriqueRedimensionneur(12);
 var taille14 = fabriqueRedimensionneur(14);
 var taille16 = fabriqueRedimensionneur(16);
-</pre>
+```
 
-<p><code>taille12</code>, <code>taille14</code>, et <code>taille16</code> sont désormais des fermetures qui peuvent, respectivement, redimensionner le texte de l'élément <code>body</code> à 12, 14, ou 16 pixels. On peut les attacher aux boutons de la façon suivantes :</p>
+`taille12`, `taille14`, et `taille16` sont désormais des fermetures qui peuvent, respectivement, redimensionner le texte de l'élément `body` à 12, 14, ou 16 pixels. On peut les attacher aux boutons de la façon suivantes :
 
-<pre class="brush: js">document.getElementById('taille-12').onclick = taille12;
+```js
+document.getElementById('taille-12').onclick = taille12;
 document.getElementById('taille-14').onclick = taille14;
 document.getElementById('taille-16').onclick = taille16;
-</pre>
+```
 
-<pre class="brush: html">&lt;a href="#" id="taille-12"&gt;12&lt;/a&gt;
-&lt;a href="#" id="taille-14"&gt;14&lt;/a&gt;
-&lt;a href="#" id="taille-16"&gt;16&lt;/a&gt;
-</pre>
+```html
+<a href="#" id="taille-12">12</a>
+<a href="#" id="taille-14">14</a>
+<a href="#" id="taille-16">16</a>
+```
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/vnkuZ/7726", "js,result", 200)}}</p>
+{{JSFiddleEmbed("https://jsfiddle.net/vnkuZ/7726", "js,result", 200)}}
 
-<h2 id="Émuler_des_méthodes_privées_avec_des_fermetures">Émuler des méthodes privées avec des fermetures</h2>
+## Émuler des méthodes privées avec des fermetures
 
-<p>Certains langages de programmation, comme Java, permettent d'avoir des méthodes privées, c'est-à-dire qu'on ne peut les utiliser qu'au sein de la même classe.</p>
+Certains langages de programmation, comme Java, permettent d'avoir des méthodes privées, c'est-à-dire qu'on ne peut les utiliser qu'au sein de la même classe.
 
-<p>JavaScript ne permet pas de faire cela de façon native. En revanche, on peut émuler ce comportement grâce aux fermetures. Les méthodes privées ne sont pas seulement utiles en termes de restriction d'accès au code, elles permettent également de gérer un espace de nom (<em>namespace</em>) global qui isole les méthodes secondaires de l'interface publique du code ainsi rendu plus propre.</p>
+JavaScript ne permet pas de faire cela de façon native. En revanche, on peut émuler ce comportement grâce aux fermetures. Les méthodes privées ne sont pas seulement utiles en termes de restriction d'accès au code, elles permettent également de gérer un espace de nom (_namespace_) global qui isole les méthodes secondaires de l'interface publique du code ainsi rendu plus propre.
 
-<p>Voici comment définir une fonction publique accédant à des fonctions et des variables privées en utilisant des fermetures. Cette façon de procéder est également connue comme le patron de conception <a href="https://en.wikipedia.org/wiki/Module_pattern">module</a> :</p>
+Voici comment définir une fonction publique accédant à des fonctions et des variables privées en utilisant des fermetures. Cette façon de procéder est également connue comme le patron de conception [module](https://en.wikipedia.org/wiki/Module_pattern) :
 
-<pre class="brush: js">var compteur = (function() {
+```js
+var compteur = (function() {
   var compteurPrive = 0;
   function changeValeur(val) {
     compteurPrive += val;
@@ -155,17 +164,18 @@ compteur.increment();
 console.log(compteur.valeur()); /* Affiche 2 */
 compteur.decrement();
 console.log(compteur.valeur()); /* Affiche 1 */
-</pre>
+```
 
-<p>Il y a beaucoup de différences par rapport aux exemples précédents. Au lieu de retourner une simple fonction, on retourne un objet anonyme qui contient 3 fonctions. Et ces 3 fonctions partagent le même environnement. L'objet retourné est affecté à la variable <code>compteur</code>, et les 3 fonctions sont alors accessibles sous les noms <code>compteur.increment</code>, <code>compteur.decrement</code>, et <code>compteur.valeur</code>.</p>
+Il y a beaucoup de différences par rapport aux exemples précédents. Au lieu de retourner une simple fonction, on retourne un objet anonyme qui contient 3 fonctions. Et ces 3 fonctions partagent le même environnement. L'objet retourné est affecté à la variable `compteur`, et les 3 fonctions sont alors accessibles sous les noms `compteur.increment`, `compteur.decrement`, et `compteur.valeur`.
 
-<p>L'environnement partagé vient du corps de la fonction anonyme qui est exécutée dès sa définition complète. L'environnement en question contient deux éléments privés : une variable <code>compteurPrive</code> et une fonction <code>changeValeur</code>. Aucun de ces deux éléments ne peut être utilisé en dehors de la fonction anonyme ; seules les trois fonctions renvoyées par la fonction anonyme sont publiques.</p>
+L'environnement partagé vient du corps de la fonction anonyme qui est exécutée dès sa définition complète. L'environnement en question contient deux éléments privés : une variable `compteurPrive` et une fonction `changeValeur`. Aucun de ces deux éléments ne peut être utilisé en dehors de la fonction anonyme ; seules les trois fonctions renvoyées par la fonction anonyme sont publiques.
 
-<p>Ces trois fonctions publiques sont des fermetures qui partagent le même environnement. Grâce à la portée lexicale, chacune a accès à<code> compteurPrive</code> et à <code>changeValeur</code>.</p>
+Ces trois fonctions publiques sont des fermetures qui partagent le même environnement. Grâce à la portée lexicale, chacune a accès à` compteurPrive` et à `changeValeur`.
 
-<p>On remarquera qu'on définit une fonction anonyme qui crée un compteur puis qu'on l'appelle immédiatement pour assigner le résultat à la variable <code>compteur</code>. On pourrait stocker cette fonction dans une variable puis l'appeler plusieurs fois afin de créer plusieurs compteurs.</p>
+On remarquera qu'on définit une fonction anonyme qui crée un compteur puis qu'on l'appelle immédiatement pour assigner le résultat à la variable `compteur`. On pourrait stocker cette fonction dans une variable puis l'appeler plusieurs fois afin de créer plusieurs compteurs.
 
-<pre class="brush: js">var creerCompteur = function() {
+```js
+var creerCompteur = function() {
   var compteurPrive = 0;
   function changeValeur(val) {
     compteurPrive += val;
@@ -192,23 +202,25 @@ console.log(compteur1.valeur()); /* Affiche 2 */
 compteur1.decrement();
 console.log(compteur1.valeur()); /* Affiche 1 */
 console.log(compteur2.valeur()); /* Affiche 0 */
-</pre>
+```
 
-<p>Ici on peut voir que chacun des deux compteurs est indépendant de l'autre. Un nouvel environnement est instancié à chaque appel <code>creerCompteur()</code>.</p>
+Ici on peut voir que chacun des deux compteurs est indépendant de l'autre. Un nouvel environnement est instancié à chaque appel `creerCompteur()`.
 
-<p>L'utilisation de fermetures permet ainsi de bénéficier de certains concepts liés à la programmation orientée objet comme l'encapsulation et la dissimulation de données.</p>
+L'utilisation de fermetures permet ainsi de bénéficier de certains concepts liés à la programmation orientée objet comme l'encapsulation et la dissimulation de données.
 
-<h2 id="Les_fermetures_et_les_boucles_attention_au_mélange">Les fermetures et les boucles : attention au mélange</h2>
+## Les fermetures et les boucles : attention au mélange
 
-<p>Avant que le mot clé <a href="/fr/docs/Web/JavaScript/Reference/Instructions/let"><code>let</code></a> ne soit introduit avec ECMAScript 2015, un problème se posait fréquemment lorsqu'on manipulait des fermetures au sein d'une boucle. Par exemple :</p>
+Avant que le mot clé [`let`](/fr/docs/Web/JavaScript/Reference/Instructions/let) ne soit introduit avec ECMAScript 2015, un problème se posait fréquemment lorsqu'on manipulait des fermetures au sein d'une boucle. Par exemple :
 
-<pre class="brush: html">&lt;p id="aide"&gt;Des aides seront affichées ici&lt;/p&gt;
-&lt;p&gt;E-mail : &lt;input type="text" id="email" name="email"&gt;&lt;/p&gt;
-&lt;p&gt;Nom : &lt;input type="text" id="nom" name="nom"&gt;&lt;/p&gt;
-&lt;p&gt;Âge : &lt;input type="text" id="âge" name="âge"&gt;&lt;/p&gt;
-</pre>
+```html
+<p id="aide">Des aides seront affichées ici</p>
+<p>E-mail : <input type="text" id="email" name="email"></p>
+<p>Nom : <input type="text" id="nom" name="nom"></p>
+<p>Âge : <input type="text" id="âge" name="âge"></p>
+```
 
-<pre class="brush: js">function afficherAide(aide) {
+```js
+function afficherAide(aide) {
   document.getElementById('aide').innerHTML = aide;
 }
 
@@ -219,7 +231,7 @@ function preparerAide() {
       {'id': 'âge', 'aide': 'Votre âge (plus de 16 ans requis)'}
     ];
 
-  for (var i = 0; i &lt; texteAide.length; i++) {
+  for (var i = 0; i < texteAide.length; i++) {
     var item = texteAide[i];
     document.getElementById(item.id).onfocus = function() {
       afficherAide(item.aide);
@@ -228,17 +240,18 @@ function preparerAide() {
 }
 
 preparerAide();
-</pre>
+```
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/v7gjv/8164/", "", 200)}}</p>
+{{JSFiddleEmbed("https://jsfiddle.net/v7gjv/8164/", "", 200)}}
 
-<p>Lorsqu'on essaie ce code, on s'aperçoit qu'il ne fonctionne pas exactement comme on le souhaitait : en effet, quelque soit le champ sur lequel on se situe, c'est toujours le message d'aide concernant l'âge qui s'affiche.</p>
+Lorsqu'on essaie ce code, on s'aperçoit qu'il ne fonctionne pas exactement comme on le souhaitait : en effet, quelque soit le champ sur lequel on se situe, c'est toujours le message d'aide concernant l'âge qui s'affiche.
 
-<p>La cause de ce problème est que les fonctions attachées à <code>onfocus</code> sont des fermetures qui partagent le même environnement. À chaque itération de boucle, l'environnement de la fermeture créée contient une référence sur la même instance de la variable <code>item</code>. Ainsi, lorsque la fonction de rappel de <code>onfocus</code> est exécutée, la boucle a déjà été effectuée entièrement, et la variable <code>item</code> partagée par les trois fermetures pointe sur le dernier élément de <code>texteAide</code>.</p>
+La cause de ce problème est que les fonctions attachées à `onfocus` sont des fermetures qui partagent le même environnement. À chaque itération de boucle, l'environnement de la fermeture créée contient une référence sur la même instance de la variable `item`. Ainsi, lorsque la fonction de rappel de `onfocus` est exécutée, la boucle a déjà été effectuée entièrement, et la variable `item` partagée par les trois fermetures pointe sur le dernier élément de `texteAide`.
 
-<p>Une solution consiste à utiliser plus de fermetures et à appliquer une fabrique de fonction comme on a vu précédemment :</p>
+Une solution consiste à utiliser plus de fermetures et à appliquer une fabrique de fonction comme on a vu précédemment :
 
-<pre class="brush: js">function afficheAide(aide) {
+```js
+function afficheAide(aide) {
   document.getElementById('aide').innerHTML = aide;
 }
 
@@ -255,18 +268,19 @@ function prepareAide() {
       {'id': 'âge', 'aide': 'Your age (you must be over 16)'}
     ];
 
-  for (var i = 0; i &lt; texteAide.length; i++) {
+  for (var i = 0; i < texteAide.length; i++) {
     var item = texteAide[i];
     document.getElementById(item.id).onfocus = creerCallbackAide(item.aide);
   }
 }
 
 prepareAide();
-</pre>
+```
 
-<p>Voici une autre solution qui permet de ne pas utiliser plus de fermetures :</p>
+Voici une autre solution qui permet de ne pas utiliser plus de fermetures :
 
-<pre class="brush: js">function afficheAide(aide) {
+```js
+function afficheAide(aide) {
   document.getElementById('aide').innerHTML = aide;
 }
 
@@ -277,7 +291,7 @@ function prepareAide() {
       {'id': 'âge', 'aide': 'Votre âge (vous devez être majeur)'}
     ];
 
-  for (var i = 0; i &lt; texteAide.length; i++) {
+  for (var i = 0; i < texteAide.length; i++) {
     let item = texteAide[i];
     document.getElementById(item.id).onfocus = function() {
       afficheAide(item.aide);
@@ -285,15 +299,17 @@ function prepareAide() {
   }
 }
 
-prepareAide();</pre>
+prepareAide();
+```
 
-<p>Dans ce fragment de code, nous avons utilisé <code>let</code> au lieu de <code>var</code> afin que chaque fermeture soit liée avec les variable de bloc.</p>
+Dans ce fragment de code, nous avons utilisé `let` au lieu de `var` afin que chaque fermeture soit liée avec les variable de bloc.
 
-<p>{{JSFiddleEmbed("https://jsfiddle.net/v7gjv/9573/", "", 300)}}</p>
+{{JSFiddleEmbed("https://jsfiddle.net/v7gjv/9573/", "", 300)}}
 
-<p>Autrement, on aurait pu utiliser <code>forEach()</code> afin de parcourir le tableau <code>texteAide</code> et attacher un gestionnaire d'évènement sur chaque {{htmlelement("div")}} :</p>
+Autrement, on aurait pu utiliser `forEach()` afin de parcourir le tableau `texteAide` et attacher un gestionnaire d'évènement sur chaque {{htmlelement("div")}} :
 
-<pre class="brush: js">function afficheAide(aide) {
+```js
+function afficheAide(aide) {
   document.getElementById('aide').innerHTML = aide;
 }
 
@@ -311,17 +327,19 @@ function prepareAide() {
   });
 }
 
-prepareAide();</pre>
+prepareAide();
+```
 
-<h2 id="Les_performances_et_les_fermetures">Les performances et les fermetures</h2>
+## Les performances et les fermetures
 
-<p>Il est mal avisé de créer des fonctions imbriquées et des fermetures sans utilité. En effet, cela peut dégrader les performances en termes de vitesse d'exécution et de consommation de mémoire.</p>
+Il est mal avisé de créer des fonctions imbriquées et des fermetures sans utilité. En effet, cela peut dégrader les performances en termes de vitesse d'exécution et de consommation de mémoire.
 
-<p>Quand, par exemple, on crée un nouvel objet, les méthodes devraient être associées au prototype de l'objet et non pas définies dans le constructeur de l'objet. De cette façon, on évite que les méthodes soient réassignées à chaque fois qu'un nouvel objet est créé.</p>
+Quand, par exemple, on crée un nouvel objet, les méthodes devraient être associées au prototype de l'objet et non pas définies dans le constructeur de l'objet. De cette façon, on évite que les méthodes soient réassignées à chaque fois qu'un nouvel objet est créé.
 
-<p>Voici un exemple de la mauvaise façon de procéder :</p>
+Voici un exemple de la mauvaise façon de procéder :
 
-<pre class="example-bad brush: js">function MonObjet(nom, message) {
+```js example-bad
+function MonObjet(nom, message) {
   this.nom = nom.toString();
   this.message = message.toString();
   this.getNom = function() {
@@ -332,11 +350,12 @@ prepareAide();</pre>
     return this.message;
   };
 }
-</pre>
+```
 
-<p>Le fragment de code précédent ne tire pas partie des avantages des fermetures. Il pourrait être mieux écrit ainsi :</p>
+Le fragment de code précédent ne tire pas partie des avantages des fermetures. Il pourrait être mieux écrit ainsi :
 
-<pre class="brush: js">function MonObjet(nom, message) {
+```js
+function MonObjet(nom, message) {
   this.nom = nom.toString();
   this.message = message.toString();
 }
@@ -348,11 +367,12 @@ MonObjet.prototype = {
     return this.message;
   }
 };
-</pre>
+```
 
-<p>Cependant, redéfinir le prototype est déconseillé, donc encore meilleur serait d'ajouter les méthodes :</p>
+Cependant, redéfinir le prototype est déconseillé, donc encore meilleur serait d'ajouter les méthodes :
 
-<pre class="brush: js">function MonObjet(nom, message) {
+```js
+function MonObjet(nom, message) {
   this.nom = nom.toString();
   this.message = message.toString();
 }
@@ -362,6 +382,6 @@ MonObjet.prototype.getNom = function() {
 MonObjet.prototype.getMessage = function() {
   return this.message;
 };
-</pre>
+```
 
-<p>Les deux derniers exemples permettent de voir que le prototype hérité est partagé par tous les objets construits et que les méthodes n'ont pas besoin d'être reconstruites pour chaque création d'objet. Veuillez consulter la page sur <a href="/fr/docs/Web/JavaScript/Guide/Le_mod%C3%A8le_objet_JavaScript_en_d%C3%A9tails">le modèle objet JavaScript en détails</a> pour plus d'informations.</p>
+Les deux derniers exemples permettent de voir que le prototype hérité est partagé par tous les objets construits et que les méthodes n'ont pas besoin d'être reconstruites pour chaque création d'objet. Veuillez consulter la page sur [le modèle objet JavaScript en détails](/fr/docs/Web/JavaScript/Guide/Le_mod%C3%A8le_objet_JavaScript_en_d%C3%A9tails) pour plus d'informations.

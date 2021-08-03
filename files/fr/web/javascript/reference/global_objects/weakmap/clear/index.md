@@ -11,17 +11,18 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/clear
 original_slug: Web/JavaScript/Reference/Objets_globaux/WeakMap/clear
 ---
-<div>{{JSRef}} {{obsolete_header}}</div>
+{{JSRef}} {{obsolete_header}}
 
-<p>La méthode <code><strong>clear()</strong></code> permettait de retirer tous les éléments d'un objet <code>WeakMap</code> mais celle-ci ne fait plus partie d'ECMAScript.</p>
+La méthode **`clear()`** permettait de retirer tous les éléments d'un objet `WeakMap` mais celle-ci ne fait plus partie d'ECMAScript.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><code><var>wm</var>.clear();</code></pre>
+    wm.clear();
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var wm = new WeakMap();
+```js
+var wm = new WeakMap();
 var obj = {};
 
 wm.set(obj, "toto");
@@ -34,18 +35,16 @@ wm.clear();
 
 wm.has(obj);  // false
 wm.has(window);  // false
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette méthode ne fait partie d'aucune spécification ou brouillon. Cette méthode a fait partie du brouillon ECMAScript 6 jusqu'à la révision 28 (version du 14 octobre 2014) mais a été retiré par la suite. Cette méthode ne fait pas partie du standard final.</p>
+Cette méthode ne fait partie d'aucune spécification ou brouillon. Cette méthode a fait partie du brouillon ECMAScript 6 jusqu'à la révision 28 (version du 14 octobre 2014) mais a été retiré par la suite. Cette méthode ne fait pas partie du standard final.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.WeakMap.clear")}}</p>
+{{Compat("javascript.builtins.WeakMap.clear")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("WeakMap")}}</li>
-</ul>
+- {{jsxref("WeakMap")}}

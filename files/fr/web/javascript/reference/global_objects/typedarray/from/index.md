@@ -12,67 +12,61 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/from
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/from
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>TypedArray.from()</strong></code> crée un nouvel objet {{jsxref("TypedArray", "TypedArray", "#Les_objets_TypedArray")}} à partir d'un objet itérable ou d'un objet semblable à un tableau. Cette méthode est similaire à {{jsxref("Array.from()")}}.</p>
+La méthode **`TypedArray.from()`** crée un nouvel objet {{jsxref("TypedArray", "TypedArray", "#Les_objets_TypedArray")}} à partir d'un objet itérable ou d'un objet semblable à un tableau. Cette méthode est similaire à {{jsxref("Array.from()")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>TypedArray</var>.from(<var>source</var>[, <var>mapFn</var>[,<var> thisArg</var>]])
+    TypedArray.from(source[, mapFn[, thisArg]])
 
-où <var>TypedArray</var> est l'un de :
+    où TypedArray est l'un de :
 
-Int8Array
-Uint8Array
-Uint8ClampedArray
-Int16Array
-Uint16Array
-Int32Array
-Uint32Array
-Float32Array
-Float64Array
-BigInt64Array
-BigUint64Array
-</pre>
+    Int8Array
+    Uint8Array
+    Uint8ClampedArray
+    Int16Array
+    Uint16Array
+    Int32Array
+    Uint32Array
+    Float32Array
+    Float64Array
+    BigInt64Array
+    BigUint64Array
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>source</code></dt>
- <dd>Un objet semblable à un tableau ou un objet itérable, et à partir duquel on souhaite créer un tableau typé.</dd>
- <dt><code>fonctionMap</code></dt>
- <dd>Argument optionnel, une fonction à appliquer à chacun des éléments du tableau.</dd>
- <dt><code>thisArg</code></dt>
- <dd>Argument optionnel. La valeur à utiliser pour <code>this</code> lors de l'exécution de la fonction <code>fonctionMap</code>.</dd>
-</dl>
+- `source`
+  - : Un objet semblable à un tableau ou un objet itérable, et à partir duquel on souhaite créer un tableau typé.
+- `fonctionMap`
+  - : Argument optionnel, une fonction à appliquer à chacun des éléments du tableau.
+- `thisArg`
+  - : Argument optionnel. La valeur à utiliser pour `this` lors de l'exécution de la fonction `fonctionMap`.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une nouvelle instance de {{jsxref("TypedArray")}}.</p>
+Une nouvelle instance de {{jsxref("TypedArray")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p><code><var>TypedArray</var>.from()</code> permet de créer des tableaux typés à partir :</p>
+`TypedArray.from()` permet de créer des tableaux typés à partir :
 
-<ul>
- <li>d'<a href="/fr/docs/Web/JavaScript/Guide/Objets_élémentaires_JavaScript#Manipuler_des_objets_semblables_aux_tableaux">objets semblables à des tableaux</a> (qui disposent d'une propriété <code>length</code> et d'éléments indexés) ou</li>
- <li>d'<a href="/fr/docs/Web/JavaScript/Guide/iterable">objets itérables</a> (par exemple des objets {{jsxref("Map")}} ou {{jsxref("Set")}}).</li>
-</ul>
+- d'[objets semblables à des tableaux](/fr/docs/Web/JavaScript/Guide/Objets_élémentaires_JavaScript#Manipuler_des_objets_semblables_aux_tableaux) (qui disposent d'une propriété `length` et d'éléments indexés) ou
+- d'[objets itérables](/fr/docs/Web/JavaScript/Guide/iterable) (par exemple des objets {{jsxref("Map")}} ou {{jsxref("Set")}}).
 
-<p><code>Array.from</code> possède un paramètre optionnel <code>fonctionMap</code>, qui permet d'exécuter une fonction {{jsxref("Array.prototype.map", "map")}} sur chacun des éléments du tableau typé (ou de l'instance de la classe fille) qui est créé. Autrement dit <code><var>TypedArray</var>.from(obj, fonctionMap, thisArg)</code> correspond exactement à <code><var>TypedArray</var>.from(obj).map(fonctionMap, thisArg)</code>.</p>
+`Array.from` possède un paramètre optionnel `fonctionMap`, qui permet d'exécuter une fonction {{jsxref("Array.prototype.map", "map")}} sur chacun des éléments du tableau typé (ou de l'instance de la classe fille) qui est créé. Autrement dit `TypedArray.from(obj, fonctionMap, thisArg)` correspond exactement à `TypedArray.from(obj).map(fonctionMap, thisArg)`.
 
-<p>Il existe de légères différences entre {{jsxref("Array.from()")}} et <code><var>TypedArray</var>.from()</code> :</p>
+Il existe de légères différences entre {{jsxref("Array.from()")}} et `TypedArray.from()` :
 
-<ul>
- <li>Si la valeur de <code>this</code> passée à <code><var>TypedArray</var>.from</code> n'est pas un constructeur, <code><var>TypedArray</var>.from</code> lèvera une exception {{jsxref("TypeError")}}, tandis que <code>Array.from</code> créera un nouvel objet {{jsxref("Array")}}.</li>
- <li><code><var>TypedArray</var>.from</code> utilise <code>[[Set]]</code> tandis que <code>Array.from</code> utilise <code>[[DefineProperty]]</code>. Ainsi par exemple lorsque des objets {{jsxref("Proxy")}} sont manipulés la première méthode appellera {{jsxref("Objets_globaux/Proxy/handler/set", "handler.set")}} pour créer les nouveaux éléments et la seconde appellera {{jsxref("Objets_globaux/Proxy/handler/defineProperty", "handler.defineProperty")}}.</li>
- <li>Lorsque <code>source</code> est un itérable, <code><var>TypedArray</var>.from</code> va dans un premier temps récupérer toutes ses valeurs, puis initialiser une instance de <code>this</code> à l'aide de leur nombre, et enfin ajouter ces valeurs à l'instance. <code>Array.from</code> ajoute les valeurs au nouvel objet lors du parcours de l'itérateur et ne définit la taille de l'objet qu'en dernière étape.</li>
- <li>Si <code>Array.from</code> reçoit un objet semblable à un tableau qui n'est pas un itérable, les valeurs non définies sont conservées. <code><var>TypedArray</var>.from</code> construit un objet dense en éliminant ces valeurs.</li>
-</ul>
+- Si la valeur de `this` passée à `TypedArray.from` n'est pas un constructeur, `TypedArray.from` lèvera une exception {{jsxref("TypeError")}}, tandis que `Array.from` créera un nouvel objet {{jsxref("Array")}}.
+- `TypedArray.from` utilise `[[Set]]` tandis que `Array.from` utilise `[[DefineProperty]]`. Ainsi par exemple lorsque des objets {{jsxref("Proxy")}} sont manipulés la première méthode appellera {{jsxref("Objets_globaux/Proxy/handler/set", "handler.set")}} pour créer les nouveaux éléments et la seconde appellera {{jsxref("Objets_globaux/Proxy/handler/defineProperty", "handler.defineProperty")}}.
+- Lorsque `source` est un itérable, `TypedArray.from` va dans un premier temps récupérer toutes ses valeurs, puis initialiser une instance de `this` à l'aide de leur nombre, et enfin ajouter ces valeurs à l'instance. `Array.from` ajoute les valeurs au nouvel objet lors du parcours de l'itérateur et ne définit la taille de l'objet qu'en dernière étape.
+- Si `Array.from` reçoit un objet semblable à un tableau qui n'est pas un itérable, les valeurs non définies sont conservées. `TypedArray.from` construit un objet dense en éliminant ces valeurs.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">// Set (objet itérable)
+```js
+// Set (objet itérable)
 var s = new Set([1, 2, 3]);
 Uint8Array.from(s);
 // Uint8Array [ 1, 2, 3 ]
@@ -85,45 +79,28 @@ Int16Array.from("123");
 
 // En utilisant un fonction fléchée en tant que
 // fonctionMap pour manipuler les éléments
-Float32Array.from([1, 2, 3], x =&gt; x + x);
+Float32Array.from([1, 2, 3], x => x + x);
 // Float32Array [ 2, 4, 6 ]
 
 
 // Pour construire une séquence de nombres
-Uint8Array.from({length: 5}, (v, k) =&gt; k);
+Uint8Array.from({length: 5}, (v, k) => k);
 // Uint8Array [ 0, 1, 2, 3, 4 ]
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-%typedarray%.from', '%TypedArray%.from')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-%typedarray%.from', '%TypedArray%.from')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-%typedarray%.from', '%TypedArray%.from')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-%typedarray%.from', '%TypedArray%.from')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.TypedArray.from")}}</p>
+{{Compat("javascript.builtins.TypedArray.from")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("TypedArray.of()")}}</li>
- <li>{{jsxref("Array.from()")}}</li>
- <li>{{jsxref("Array.prototype.map()")}}</li>
-</ul>
+- {{jsxref("TypedArray.of()")}}
+- {{jsxref("Array.from()")}}
+- {{jsxref("Array.prototype.map()")}}

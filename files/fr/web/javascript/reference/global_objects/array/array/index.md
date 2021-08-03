@@ -9,77 +9,69 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/Array
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/Array
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Le constructeur <strong><code>Array()</code></strong> permet de créer des objets {{jsxref("Array")}}.</p>
+Le constructeur **`Array()`** permet de créer des objets {{jsxref("Array")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox notranslate">[<var>element0</var>, <var>element1</var>, ..., <var>elementN</var>]
+    [element0, element1, ..., elementN]
 
-new Array(<var>element0</var>, <var>element1</var>[, ...[, <var>elementN</var>]])
-new Array(<var>longueurTableau</var>)</pre>
+    new Array(element0, element1[, ...[, elementN]])
+    new Array(longueurTableau)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>elementN</code></dt>
- <dd>Un tableau JavaScript est initialisé avec les éléments indiqués à moins qu'un seul argument ne soit passé (cf. <code>longueurTableau</code> ci-après). On notera que ce cas au limite ne s'applique qu'avec le constructeur <code>Array</code>. Si on utilise la forme littérale (avec les crochets), on peut initialiser un tableau avec un seul élément.</dd>
- <dt><code>longueurTableau</code></dt>
- <dd>Si le seul argument passé au constructeur <code>Array</code> est un entier entre 0 et 2^32-1 (inclus), le constructeur renverra un tableau dont la propriété <code>length</code> vaut ce nombre. <strong>Note :</strong> le tableau contiendra des éléments vides (à ne pas confondre avec des éléments qui vaudraient <code>undefined</code>). Si l'argument est un autre nombre, une exception {{jsxref("RangeError")}} sera levée.</dd>
-</dl>
+- `elementN`
+  - : Un tableau JavaScript est initialisé avec les éléments indiqués à moins qu'un seul argument ne soit passé (cf. `longueurTableau` ci-après). On notera que ce cas au limite ne s'applique qu'avec le constructeur `Array`. Si on utilise la forme littérale (avec les crochets), on peut initialiser un tableau avec un seul élément.
+- `longueurTableau`
+  - : Si le seul argument passé au constructeur `Array` est un entier entre 0 et 2^32-1 (inclus), le constructeur renverra un tableau dont la propriété `length` vaut ce nombre. **Note :** le tableau contiendra des éléments vides (à ne pas confondre avec des éléments qui vaudraient `undefined`). Si l'argument est un autre nombre, une exception {{jsxref("RangeError")}} sera levée.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utilisation_de_la_notation_littérale">Utilisation de la notation littérale</h3>
+### Utilisation de la notation littérale
 
-<p>Les tableaux peuvent être créés avec une notation <a href="/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale#Litt%C3%A9raux_de_tableaux">littérale</a> :</p>
+Les tableaux peuvent être créés avec une notation [littérale](/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale#Litt%C3%A9raux_de_tableaux) :
 
-<pre class="brush: js notranslate">let fruits = ['Pomme', 'Banane'];
+```js
+let fruits = ['Pomme', 'Banane'];
 
 console.log(fruits.length); // 2
 console.log(fruits[0]);     // "Pomme"
-</pre>
+```
 
-<h3 id="Utilisation_du_constructeur_avec_un_seul_paramètre">Utilisation du constructeur avec un seul paramètre</h3>
+### Utilisation du constructeur avec un seul paramètre
 
-<p>On peut créer des tableaux grâce au constructeur avec un seul paramètre numérique. On crée alors un tableau dont la propriété <code>length</code> vaut le nombre passé en argument et dont les éléments sont vides.</p>
+On peut créer des tableaux grâce au constructeur avec un seul paramètre numérique. On crée alors un tableau dont la propriété `length` vaut le nombre passé en argument et dont les éléments sont vides.
 
-<pre class="brush: js notranslate">let fruits = new Array(2);
+```js
+let fruits = new Array(2);
 
 console.log(fruits.length); // 2
 console.log(fruits[0]);     // undefined
-</pre>
+```
 
-<h3 id="Utilisation_du_constructeur_avec_plusieurs_paramètres">Utilisation du constructeur avec plusieurs paramètres</h3>
+### Utilisation du constructeur avec plusieurs paramètres
 
-<p>Si on utilise plus d'un argument, un nouveau tableau ({{jsxref("Array")}}) sera construit avec les éléments passés en arguments.</p>
+Si on utilise plus d'un argument, un nouveau tableau ({{jsxref("Array")}}) sera construit avec les éléments passés en arguments.
 
-<pre class="brush: js notranslate">let fruits = new Array('Pomme', 'Banane');
+```js
+let fruits = new Array('Pomme', 'Banane');
 
 console.log(fruits.length); // 2
 console.log(fruits[0]);     // "Pomme"
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array-constructor', 'Array constructor')}}</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                |
+| -------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-array-constructor', 'Array constructor')}} |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Array.Array")}}</p>
+{{Compat("javascript.builtins.Array.Array")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>La classe {{jsxref("Array")}}</li>
-</ul>
+- La classe {{jsxref("Array")}}

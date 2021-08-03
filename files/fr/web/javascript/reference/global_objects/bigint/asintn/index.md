@@ -9,34 +9,33 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/asIntN
 original_slug: Web/JavaScript/Reference/Objets_globaux/BigInt/asIntN
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p>La méthode statique <strong><code>BigInt.asIntN()</code></strong> permet d'écréter un nombre <code>BigInt</code> pour obtenir un entier signé entre 2^(largeur-1) et 2^(largeur-1)-1.</p>
+La méthode statique **`BigInt.asIntN()`** permet d'écréter un nombre `BigInt` pour obtenir un entier signé entre 2^(largeur-1) et 2^(largeur-1)-1.
 
-<div>{{EmbedInteractiveExample("pages/js/bigint-asintn.html")}}</div>
+{{EmbedInteractiveExample("pages/js/bigint-asintn.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">var <var>resultat</var> = BigInt.asIntN(<var>largeur</var>, <var>bigint</var>);</pre>
+    var resultat = BigInt.asIntN(largeur, bigint);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>largeur</code></dt>
- <dd>La quantité de bits disponible pour stocker l'entier.</dd>
- <dt><code>bigint</code></dt>
- <dd>L'entier qu'on souhaite stocker sur le nombre de bits indiqués.</dd>
-</dl>
+- `largeur`
+  - : La quantité de bits disponible pour stocker l'entier.
+- `bigint`
+  - : L'entier qu'on souhaite stocker sur le nombre de bits indiqués.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>La valeur de <code>bigint</code> modulo 2^<code>largeur</code> comme entier signé.</p>
+La valeur de `bigint` modulo 2^`largeur` comme entier signé.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>La méthode <code>BigInt.asIntN()</code> peut être utile pour rester dans une arithmétique sur 64 bits :</p>
+La méthode `BigInt.asIntN()` peut être utile pour rester dans une arithmétique sur 64 bits :
 
-<pre class="brush: js">const max = 2n ** (64n - 1n) - 1n;
+```js
+const max = 2n ** (64n - 1n) - 1n;
 
 BigInt.asIntN(64, max);
 // ↪ 9223372036854775807n
@@ -44,30 +43,19 @@ BigInt.asIntN(64, max);
 BigInt.asIntN(64, max + 1n);
 // ↪ -9223372036854775807n
 // négatif car dépassement sur le nombre de bits
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-  </tr>
-  <tr>
-   <td><a href="https://tc39.github.io/proposal-bigint/#sec-bigint.asintn">BigInt proposal</a></td>
-   <td>Proposition de niveau 3.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | État                     |
+| ---------------------------------------------------------------------------- | ------------------------ |
+| [BigInt proposal](https://tc39.github.io/proposal-bigint/#sec-bigint.asintn) | Proposition de niveau 3. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.BigInt.asIntN")}}</p>
+{{Compat("javascript.builtins.BigInt.asIntN")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{JSxRef("BigInt")}}</li>
- <li>{{JSxRef("BigInt.asUintN()")}}</li>
-</ul>
+- {{JSxRef("BigInt")}}
+- {{JSxRef("BigInt.asUintN()")}}

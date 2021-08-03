@@ -10,56 +10,40 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/size
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/size
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>L'accesseur <code><strong>size</strong></code> est une propriété renvoyant le nombre d'éléments d'un objet {{jsxref("Map")}}.</p>
+L'accesseur **`size`** est une propriété renvoyant le nombre d'éléments d'un objet {{jsxref("Map")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/map-prototype-size.html")}}</div>
+{{EmbedInteractiveExample("pages/js/map-prototype-size.html")}}
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La valeur de <code>size</code> est un entier représentant le nombre d'entrées d'un objet <code>Map</code>. Le mutateur correspond à cette propriété est {{jsxref("undefined")}}, on ne peut pas donc pas modifier cette propriété.</p>
+La valeur de `size` est un entier représentant le nombre d'entrées d'un objet `Map`. Le mutateur correspond à cette propriété est {{jsxref("undefined")}}, on ne peut pas donc pas modifier cette propriété.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<h3 id="Utiliser_size">Utiliser <code>size</code></h3>
+### Utiliser `size`
 
-<pre class="brush:js">var maMap = new Map();
+```js
+var maMap = new Map();
 maMap.set("a", "alpha");
 maMap.set("b", "beta");
 maMap.set("g", "gamma");
 
 maMap.size // 3
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-get-map.prototype.size', 'Map.prototype.size')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-get-map.prototype.size', 'Map.prototype.size')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                         | Commentaires         |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-get-map.prototype.size', 'Map.prototype.size')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-get-map.prototype.size', 'Map.prototype.size')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibliité_des_navigateurs">Compatibliité des navigateurs</h2>
+## Compatibliité des navigateurs
 
-<p>{{Compat("javascript.builtins.Map.size")}}</p>
+{{Compat("javascript.builtins.Map.size")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Map")}}</li>
-</ul>
+- {{jsxref("Map")}}

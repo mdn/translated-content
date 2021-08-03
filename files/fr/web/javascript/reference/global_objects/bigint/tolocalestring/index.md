@@ -12,46 +12,46 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString
 original_slug: Web/JavaScript/Reference/Objets_globaux/BigInt/toLocaleString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>toLocaleString()</code></strong> renvoie une chaîne de caractères représentant le grand entier pour la ou les locale(s) indiquée(s).</p>
+La méthode **`toLocaleString()`** renvoie une chaîne de caractères représentant le grand entier pour la ou les locale(s) indiquée(s).
 
-<div>{{EmbedInteractiveExample("pages/js/bigint-tolocalestring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/bigint-tolocalestring.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><code><em>bigIntObj</em>.toLocaleString(</code><code>[locales [, options]])</code></pre>
+    bigIntObj.toLocaleString([locales [, options]])
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>locales</code> {{optional_inline}}</dt>
- <dd>Une chaine de caractères avec un identifiant de langue BCP 47, ou un tableau de ce type de chaine de caractères. Pour le format général et l'interprétation de l'argument <code>locales</code>. Pour plus de détails quant à la forme et l'interprétation de l'argument <code>locales</code>, on consultera la page {{jsxref("Intl")}}.</dd>
- <dt><code>options</code> {{optional_inline}}</dt>
- <dd>Un objet qui contient des propriétés de configuration. Pour les nombres, consulter {{jsxref("Number.prototype.toLocaleString()")}}, pour les dates, consulter {{jsxref("Date.prototype.toLocaleString()")}}.</dd>
-</dl>
+- `locales` {{optional_inline}}
+  - : Une chaine de caractères avec un identifiant de langue BCP 47, ou un tableau de ce type de chaine de caractères. Pour le format général et l'interprétation de l'argument `locales`. Pour plus de détails quant à la forme et l'interprétation de l'argument `locales`, on consultera la page {{jsxref("Intl")}}.
+- `options` {{optional_inline}}
+  - : Un objet qui contient des propriétés de configuration. Pour les nombres, consulter {{jsxref("Number.prototype.toLocaleString()")}}, pour les dates, consulter {{jsxref("Date.prototype.toLocaleString()")}}.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une chaîne de caractères qui représente le grand entier selon la ou les locales et les options indiquées.</p>
+Une chaîne de caractères qui représente le grand entier selon la ou les locales et les options indiquées.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_toLocaleString()">Utiliser <code>toLocaleString()</code></h3>
+### Utiliser `toLocaleString()`
 
-<p>Voici un exemple d'utilisation simple, sans indiquer de locale ni d'options.</p>
+Voici un exemple d'utilisation simple, sans indiquer de locale ni d'options.
 
-<pre class="brush: js">var bigint = 3500n;
+```js
+var bigint = 3500n;
 
 bigint.toLocaleString();
 // Affichera "3500" en français
-</pre>
+```
 
-<h3 id="Utiliser_locales">Utiliser <code>locales</code></h3>
+### Utiliser `locales`
 
-<p>Cet exemple illustre certaines variations pour la représentation d'une même valeur en fonction des différentes locales. En fonction de la langue utilisée par l'utilisateur et par votre interface, vous pourrez utiliser <code>locales</code> pour indiquer la locale ciblée :</p>
+Cet exemple illustre certaines variations pour la représentation d'une même valeur en fonction des différentes locales. En fonction de la langue utilisée par l'utilisateur et par votre interface, vous pourrez utiliser `locales` pour indiquer la locale ciblée :
 
-<pre class="brush: js">var bigint = 123456789123456789n;
+```js
+var bigint = 123456789123456789n;
 
 // En allemand, on utilise les points pour séparer
 // les milliers
@@ -59,7 +59,7 @@ console.log(bigint.toLocaleString('de-DE'));
 // → 123.456.789.123.456.789
 
 // La plupart des pays arabes utilise
-// des chiffres <a href="https://en.wikipedia.org/wiki/Eastern_Arabic_numerals">hindoux-arabes</a>
+// des chiffres hindoux-arabes
 console.log(bigint.toLocaleString('ar-EG'));
 // → ١٢٣٬٤٥٦٬٧٨٩٬١٢٣٬٤٥٦٬٧٨٩
 
@@ -78,13 +78,14 @@ console.log(bigint.toLocaleString('zh-Hans-CN-u-nu-hanidec'));
 // locale qui sera utilisée en recours (ici l'indonésien)
 console.log(bigint.toLocaleString(['ban', 'id']));
 // → 123.456.789.123.456.789
-</pre>
+```
 
-<h3 id="Utiliser_options">Utiliser <code>options</code></h3>
+### Utiliser `options`
 
-<p>Ici, on personnalise le résultat fourni par <code>toLocaleString()</code> grâce à l'argument <code>options</code> :</p>
+Ici, on personnalise le résultat fourni par `toLocaleString()` grâce à l'argument `options` :
 
-<pre class="brush: js">var bigint = 123456789123456789n;
+```js
+var bigint = 123456789123456789n;
 
 // On utilise un format avec une devise
 console.log(bigint.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' }));
@@ -97,33 +98,22 @@ console.log(bigint.toLocaleString('ja-JP', { style: 'currency', currency: 'JPY' 
 // On limite l'écriture aux trois premiers chiffres significatifs
 console.log(bigint.toLocaleString('en-IN', { maximumSignificantDigits: 3 }));
 // → 1,23,00,00,00,00,00,00,000
-</pre>
+```
 
-<h2 id="Performance">Performance</h2>
+## Performance
 
-<p>Lorsqu'on souhaite mettre en forme une grande quantité de nombres, mieux vaudra créer un objet {{jsxref("NumberFormat")}} et utiliser la fonction fournie par sa propriété {{jsxref("NumberFormat.format")}}.</p>
+Lorsqu'on souhaite mettre en forme une grande quantité de nombres, mieux vaudra créer un objet {{jsxref("NumberFormat")}} et utiliser la fonction fournie par sa propriété {{jsxref("NumberFormat.format")}}.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-  </tr>
-  <tr>
-   <td><code><a href="https://tc39.es/ecma402/#sup-bigint.prototype.tolocalestring">BigInt</a></code></td>
-   <td>Proposition de niveau 3.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                            | État                     |
+| ------------------------------------------------------------------------ | ------------------------ |
+| [`BigInt`](https://tc39.es/ecma402/#sup-bigint.prototype.tolocalestring) | Proposition de niveau 3. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.BigInt.toLocaleString")}}</p>
+{{Compat("javascript.builtins.BigInt.toLocaleString")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("BigInt.toString()")}}</li>
-</ul>
+- {{jsxref("BigInt.toString()")}}

@@ -10,59 +10,55 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/isExtensible
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/isExtensible
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>handler.isExtensible()</code></strong> est une trappe pour intercepter les opérations de {{jsxref("Object.isExtensible()")}}.</p>
+La méthode **`handler.isExtensible()`** est une trappe pour intercepter les opérations de {{jsxref("Object.isExtensible()")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/proxyhandler-isextensible.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-isextensible.html", "taller")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var p = new Proxy(cible, {
+```js
+var p = new Proxy(cible, {
   isExtensible: function(cible) {
   }
 });
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Les paramètres suivants sont passés à la méthode <code>isExtensible</code>. <code>this</code> est ici lié au gestionnaire (<em>handler</em>).</p>
+Les paramètres suivants sont passés à la méthode `isExtensible`. `this` est ici lié au gestionnaire (_handler_).
 
-<dl>
- <dt><code>cible</code></dt>
- <dd>L'objet cible.</dd>
-</dl>
+- `cible`
+  - : L'objet cible.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>La méthode <code>isExtensible</code> doit renvoyer une valeur booléenne.</p>
+La méthode `isExtensible` doit renvoyer une valeur booléenne.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code><strong>handler.isExtensible()</strong></code> est une trappe pour intercepter {{jsxref("Object.isExtensible()")}}.</p>
+La méthode **`handler.isExtensible()`** est une trappe pour intercepter {{jsxref("Object.isExtensible()")}}.
 
-<h3 id="Interceptions">Interceptions</h3>
+### Interceptions
 
-<p>Cette trappe intercepte les opérations suivantes :</p>
+Cette trappe intercepte les opérations suivantes :
 
-<ul>
- <li>{{jsxref("Object.isExtensible()")}}</li>
- <li>{{jsxref("Reflect.isExtensible()")}}</li>
-</ul>
+- {{jsxref("Object.isExtensible()")}}
+- {{jsxref("Reflect.isExtensible()")}}
 
-<h3 id="Invariants">Invariants</h3>
+### Invariants
 
-<p>Si les invariants suivants ne sont pas respectés, le proxy renverra une exception  {{jsxref("TypeError")}} :</p>
+Si les invariants suivants ne sont pas respectés, le proxy renverra une exception  {{jsxref("TypeError")}} :
 
-<ul>
- <li><code>Object.isExtensible(proxy)</code> doit renvoyer la même valeur que <code>Object.isExtensible(cible)</code>.</li>
-</ul>
+- `Object.isExtensible(proxy)` doit renvoyer la même valeur que `Object.isExtensible(cible)`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans l'exemple qui suit, on intercepte {{jsxref("Object.isExtensible()")}}.</p>
+Dans l'exemple qui suit, on intercepte {{jsxref("Object.isExtensible()")}}.
 
-<pre class="brush: js">var p = new Proxy({}, {
+```js
+var p = new Proxy({}, {
   isExtensible: function(cible) {
     console.log("appelée");
     return true;
@@ -71,50 +67,34 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/isExtensibl
 
 console.log(Object.isExtensible(p)); // "appelée"
                                      // true
-</pre>
+```
 
-<p>Le code suivante ne respecte pas l'invariant et entraîne donc une exception.</p>
+Le code suivante ne respecte pas l'invariant et entraîne donc une exception.
 
-<pre class="brush: js">var p = new Proxy({}, {
+```js
+var p = new Proxy({}, {
   isExtensible: function(cible) {
     return false;
   }
 });
 
 Object.isExtensible(p); // TypeError est levée
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-isextensible', '[[IsExtensible]]')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-isextensible', '[[IsExtensible]]')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                            | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-isextensible', '[[IsExtensible]]')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-isextensible', '[[IsExtensible]]')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Proxy.handler.isExtensible")}}</p>
+{{Compat("javascript.builtins.Proxy.handler.isExtensible")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Object.isExtensible()")}}</li>
- <li>{{jsxref("Reflect.isExtensible()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Object.isExtensible()")}}
+- {{jsxref("Reflect.isExtensible()")}}

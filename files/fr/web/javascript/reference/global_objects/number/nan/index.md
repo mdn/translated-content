@@ -9,55 +9,30 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/NaN
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number/NaN
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La propriété <strong><code>Number.NaN</code></strong> représente une valeur qui n'est pas un nombre (en anglais « <em>Not-A-Number</em> » qui donne NaN). Elle est équivalente à {{jsxref("NaN")}}.</p>
+La propriété **`Number.NaN`** représente une valeur qui n'est pas un nombre (en anglais « *Not-A-Number* » qui donne NaN). Elle est équivalente à {{jsxref("NaN")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/number-nan.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-nan.html")}}
 
-<p>Il n'est pas nécessaire de créer un objet {{jsxref("Number")}} pour accéder à cette propriété statique. Il suffit d'utiliser directement <code>Number.NaN</code>.</p>
+Il n'est pas nécessaire de créer un objet {{jsxref("Number")}} pour accéder à cette propriété statique. Il suffit d'utiliser directement `Number.NaN`.
 
-<p>{{js_property_attributes(0,0,0)}}</p>
+{{js_property_attributes(0,0,0)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.7.3.4', 'Number.NaN')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-number.nan', 'Number.NaN')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.nan', 'Number.NaN')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | État                         | Commentaires                                          |
+| ---------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ES1')}}                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.7.3.4', 'Number.NaN')}}         | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-number.nan', 'Number.NaN')}}         | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-number.nan', 'Number.NaN')}} | {{Spec2('ESDraft')}} |                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Number.NaN")}}</p>
+{{Compat("javascript.builtins.Number.NaN")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'objet global {{jsxref("NaN")}} ;</li>
- <li>L'objet {{jsxref("Number")}} auquel appartient cette propriété.</li>
-</ul>
+- L'objet global {{jsxref("NaN")}} ;
+- L'objet {{jsxref("Number")}} auquel appartient cette propriété.

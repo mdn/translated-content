@@ -12,64 +12,63 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/findIndex
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/findIndex
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>findIndex()</strong></code> renvoie un <strong>indice</strong> d'un élément d'un tableau typé si cet élément remplit une condition définie par une fonction de test donnée. S'il n'y a aucun élément satisfaisant, -1 sera renvoyé.</p>
+La méthode **`findIndex()`** renvoie un **indice** d'un élément d'un tableau typé si cet élément remplit une condition définie par une fonction de test donnée. S'il n'y a aucun élément satisfaisant, -1 sera renvoyé.
 
-<p>Voir aussi la méthode {{jsxref("TypedArray.find", "find()")}} qui renvoie la <strong>valeur</strong> de l'élément trouvé (au lieu de son indice).</p>
+Voir aussi la méthode {{jsxref("TypedArray.find", "find()")}} qui renvoie la **valeur** de l'élément trouvé (au lieu de son indice).
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-findindex.html")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-findindex.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>typedarray</var>.findIndex(<var>callback</var>[, <var>thisArg</var>])</pre>
+    typedarray.findIndex(callback[, thisArg])
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>La fonction à exécuter pour chaque valeur du tableau typé. Elle prend trois arguments :
- <dl>
-  <dt><code>élément</code></dt>
-  <dd>L'élément du tableau typé en cours de traitement.</dd>
-  <dt><code>index</code></dt>
-  <dd>L'indice de l'élément du tableau typé en cours de traitement.</dd>
-  <dt><code>array</code></dt>
-  <dd>Le tableau typé sur lequel la méthode <code>findIndex</code> a été appelée.</dd>
- </dl>
- </dd>
- <dt><code>thisArg</code></dt>
- <dd>Paramètre optionnel, l'objet à utiliser en tant que <code>this</code> pour les appels à <code>callback</code>.</dd>
-</dl>
+- `callback`
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+  - : La fonction à exécuter pour chaque valeur du tableau typé. Elle prend trois arguments :
 
-<p>Un indice du tableau pour lequel l'élément remplit la condition décrite par la fonction, <code>-1</code> sinon.</p>
+    - `élément`
+      - : L'élément du tableau typé en cours de traitement.
+    - `index`
+      - : L'indice de l'élément du tableau typé en cours de traitement.
+    - `array`
+      - : Le tableau typé sur lequel la méthode `findIndex` a été appelée.
 
-<h2 id="Description">Description</h2>
+- `thisArg`
+  - : Paramètre optionnel, l'objet à utiliser en tant que `this` pour les appels à `callback`.
 
-<p>La méthode <code>findIndex</code> exécute la fonction <code>callback</code> une fois pour chacun des éléments présent dans le tableau typé jusqu'à ce que <code>callback</code> renvoie une valeur vraie pour un élément. Si un tel élément est trouvé, <code>findIndex</code> retournera immédiatement l'indice de cet élément. Sinon, <code>findIndex</code> renverra -1. <code>callback</code> est appelé uniquement pour les éléments du tableau qui possèdent une valeur, les éléments qui ont été supprimés ou qui n'ont pas de valeur ne sont pas traités.</p>
+### Valeur de retour
 
-<p><code>callback</code> est appelé avec trois arguments : la valeur de l'élément, son indice et le tableau typé qui est parcouru.</p>
+Un indice du tableau pour lequel l'élément remplit la condition décrite par la fonction, `-1` sinon.
 
-<p>Si un paramètre <code>thisArg</code> a été fourni à <code>findIndex</code>, celui-ci sera utilisé en tant que <code>this</code> pour chaque appel de <code>callback</code>. Dans le cas contraire, la valeur {{jsxref("undefined")}} sera utilisée.</p>
+## Description
 
-<p><code>findIndex</code> ne modifie pas le tableau typé sur lequel elle a été appelée.</p>
+La méthode `findIndex` exécute la fonction `callback` une fois pour chacun des éléments présent dans le tableau typé jusqu'à ce que `callback` renvoie une valeur vraie pour un élément. Si un tel élément est trouvé, `findIndex` retournera immédiatement l'indice de cet élément. Sinon, `findIndex` renverra -1. `callback` est appelé uniquement pour les éléments du tableau qui possèdent une valeur, les éléments qui ont été supprimés ou qui n'ont pas de valeur ne sont pas traités.
 
-<p>La liste des éléments traités par <code>findIndex</code> est définie avant le premier appel à <code>callback</code>. Les éléments qui sont ajoutés au tableau typés après que <code>findIndex</code> ait débuté ne sont pas traités par <code>callback</code>. Si un élément est modifié par un appel à <code>callback</code> précédent, la valeur passée à <code>callback</code> lors du traitement sera celle au moment où <code>findIndex</code> traite l'indice de l'élément. Les éléments qui sont supprimés ne sont pas pris en compte.</p>
+`callback` est appelé avec trois arguments : la valeur de l'élément, son indice et le tableau typé qui est parcouru.
 
-<h2 id="Exemples">Exemples</h2>
+Si un paramètre `thisArg` a été fourni à `findIndex`, celui-ci sera utilisé en tant que `this` pour chaque appel de `callback`. Dans le cas contraire, la valeur {{jsxref("undefined")}} sera utilisée.
 
-<p>Dans l'exemple suivant, on utilise la méthode pour trouver l'indice d'un nombre premier dans le tableau typé (ou -1 dans le cas où il n'y a pas de nombre premier) :</p>
+`findIndex` ne modifie pas le tableau typé sur lequel elle a été appelée.
 
-<pre class="brush: js">function estPremier(élément, index, array) {
+La liste des éléments traités par `findIndex` est définie avant le premier appel à `callback`. Les éléments qui sont ajoutés au tableau typés après que `findIndex` ait débuté ne sont pas traités par `callback`. Si un élément est modifié par un appel à `callback` précédent, la valeur passée à `callback` lors du traitement sera celle au moment où `findIndex` traite l'indice de l'élément. Les éléments qui sont supprimés ne sont pas pris en compte.
+
+## Exemples
+
+Dans l'exemple suivant, on utilise la méthode pour trouver l'indice d'un nombre premier dans le tableau typé (ou -1 dans le cas où il n'y a pas de nombre premier) :
+
+```js
+function estPremier(élément, index, array) {
   var début = 2;
-  while (début &lt;= Math.sqrt(élément)) {
-    if (élément % début++ &lt; 1) {
+  while (début <= Math.sqrt(élément)) {
+    if (élément % début++ < 1) {
       return false;
     }
   }
-  return élément &gt; 1;
+  return élément > 1;
 }
 
 var uint8 = new Uint8Array([4, 6, 8, 12]);
@@ -77,37 +76,20 @@ var uint16 = new Uint16Array([4, 6, 7, 12]);
 
 console.log(uint8.findIndex(estPremier)); // -1, non trouvé
 console.log(uint16.findIndex(estPremier)); // 2
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-%typedarray%.prototype.findindex', '%TypedArray%.prototype.findIndex')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.findindex', '%TypedArray%.prototype.findIndex')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                        | État                         | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-%typedarray%.prototype.findindex', '%TypedArray%.prototype.findIndex')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.findindex', '%TypedArray%.prototype.findIndex')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.TypedArray.findIndex")}}</p>
+{{Compat("javascript.builtins.TypedArray.findIndex")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("TypedArray.prototype.find()")}}</li>
- <li>{{jsxref("TypedArray.prototype.indexOf()")}}</li>
-</ul>
+- {{jsxref("TypedArray.prototype.find()")}}
+- {{jsxref("TypedArray.prototype.indexOf()")}}

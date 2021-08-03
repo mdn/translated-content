@@ -10,59 +10,51 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/async_function
 original_slug: Web/JavaScript/Reference/Instructions/async_function
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>La déclaration <code><strong>async function</strong></code> définit une fonction asynchrone qui renvoie un objet {{jsxref("Objets_globaux/AsyncFunction","AsyncFunction")}}. Une fonction asynchrone est une fonction qui s'exécute de façon asynchrone grâce à la boucle d'évènement en utilisant une promesse ({{jsxref("Promise")}}) comme valeur de retour.</p>
+La déclaration **`async function`** définit une fonction asynchrone qui renvoie un objet {{jsxref("Objets_globaux/AsyncFunction","AsyncFunction")}}. Une fonction asynchrone est une fonction qui s'exécute de façon asynchrone grâce à la boucle d'évènement en utilisant une promesse ({{jsxref("Promise")}}) comme valeur de retour.
 
-<div class="noinclude">
-<p>On peut également définir des fonctions asynchrones grâce au constructeur {{jsxref("AsyncFunction")}} et via une {{jsxref("Opérateurs/async_function", "expression de fonction asynchrone","",1)}}.</p>
-</div>
+On peut également définir des fonctions asynchrones grâce au constructeur {{jsxref("AsyncFunction")}} et via une {{jsxref("Opérateurs/async_function", "expression de fonction asynchrone","",1)}}.
 
-<div>{{EmbedInteractiveExample("pages/js/statement-async.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-async.html", "taller")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">async function <em>name</em>([<em>param</em>[, <em>param</em>[, ... <em>param</em>]]]) {
-   <em>instructions</em>
-}
-</pre>
+    async function name([param[, param[, ... param]]]) {
+       instructions
+    }
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>name</code></dt>
- <dd>Le nom de la fonction.</dd>
- <dt><code>param</code></dt>
- <dd>Le nom d'un argument à passer à la fonction.</dd>
- <dt><code>instructions</code></dt>
- <dd>Les instructions qui composent le corps de la fonction.</dd>
-</dl>
+- `name`
+  - : Le nom de la fonction.
+- `param`
+  - : Le nom d'un argument à passer à la fonction.
+- `instructions`
+  - : Les instructions qui composent le corps de la fonction.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une promesse ({{jsxref("Promise")}}) qui sera résolue avec la valeur renvoyée par la fonction asynchrone ou qui sera rompue s'il y a une exception non interceptée émise depuis la fonction asynchrone.</p>
+Une promesse ({{jsxref("Promise")}}) qui sera résolue avec la valeur renvoyée par la fonction asynchrone ou qui sera rompue s'il y a une exception non interceptée émise depuis la fonction asynchrone.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Une fonction <code>async</code> peut contenir une expression {{jsxref("Opérateurs/await", "await")}} qui interrompt l'exécution de la fonction asynchrone et attend la résolution de la promesse passée <code>Promise</code>. La fonction asynchrone reprend ensuite puis renvoie la valeur de résolution.<br>
- <br>
- Le mot-clé <code>await</code> est uniquement valide au sein des fonctions asynchrones. Si ce mot-clé est utilisé en dehors du corps d'une fonction asynchrone, cela provoquera une exception {{jsxref("SyntaxError")}}.</p>
+Une fonction `async` peut contenir une expression {{jsxref("Opérateurs/await", "await")}} qui interrompt l'exécution de la fonction asynchrone et attend la résolution de la promesse passée `Promise`. La fonction asynchrone reprend ensuite puis renvoie la valeur de résolution.
 
-<div class="blockIndicator note">
-<p><strong>Note :</strong> Lorsqu'une fonction aysnchrone est mise en pause, la fonction appelante continue son exécution (car elle a reçu la promesse implicite renvoyée par la fonction <code>async</code>).</p>
-</div>
+Le mot-clé `await` est uniquement valide au sein des fonctions asynchrones. Si ce mot-clé est utilisé en dehors du corps d'une fonction asynchrone, cela provoquera une exception {{jsxref("SyntaxError")}}.
 
-<div class="note">
-<p><strong>Note :</strong> Le but des fonctions <code>async</code>/<code>await</code> est de simplifier l'utilisation synchrone des promesses et d'opérer sur des groupes de promesses. De la même façon que les promesses sont semblables à des <em>callbacks</em> structurés, <code>async</code>/<code>await</code> est semblable à la combinaison des générateurs et des promesses.</p>
-</div>
+> **Note :** Lorsqu'une fonction aysnchrone est mise en pause, la fonction appelante continue son exécution (car elle a reçu la promesse implicite renvoyée par la fonction `async`).
 
-<h2 id="Exemples">Exemples</h2>
+> **Note :** Le but des fonctions `async`/`await` est de simplifier l'utilisation synchrone des promesses et d'opérer sur des groupes de promesses. De la même façon que les promesses sont semblables à des _callbacks_ structurés, `async`/`await` est semblable à la combinaison des générateurs et des promesses.
 
-<h3 id="Exemple_simple">Exemple simple</h3>
+## Exemples
 
-<pre class="brush: js">var resolveAfter2Seconds = function() {
+### Exemple simple
+
+```js
+var resolveAfter2Seconds = function() {
   console.log("Initialisation de la promesse lente");
-  return new Promise(resolve =&gt; {
+  return new Promise(resolve => {
     setTimeout(function() {
       resolve("lente");
       console.log("La promesse lente est terminée");
@@ -72,7 +64,7 @@ original_slug: Web/JavaScript/Reference/Instructions/async_function
 
 var resolveAfter1Second = function() {
   console.log("Initialisation de la promesse rapide");
-  return new Promise(resolve =&gt; {
+  return new Promise(resolve => {
     setTimeout(function() {
       resolve("rapide");
       console.log("La promesse rapide est terminée");
@@ -104,7 +96,7 @@ var concurrentStart = async function() {
 
 var concurrentPromise = function() {
   console.log('==Début concurrentiel avec Promise.all==');
-  return Promise.all([resolveAfter2Seconds(), resolveAfter1Second()]).then((messages) =&gt; {
+  return Promise.all([resolveAfter2Seconds(), resolveAfter1Second()]).then((messages) => {
     console.log(messages[0]); // lente
     console.log(messages[1]); // rapide
   });
@@ -115,8 +107,8 @@ var parallel = async function() {
 
   // Démarre 2 tâches en parallèle et on attend que les deux soient finies
   await Promise.all([
-      (async()=&gt;console.log(await resolveAfter2Seconds()))(),
-      (async()=&gt;console.log(await resolveAfter1Second()))()
+      (async()=>console.log(await resolveAfter2Seconds()))(),
+      (async()=>console.log(await resolveAfter1Second()))()
   ]);
 }
 
@@ -124,8 +116,8 @@ var parallel = async function() {
 // voir les avertissement ci-après !
 var parallelPromise = function() {
   console.log('==Exécution parallèle avec Promise.then==');
-  resolveAfter2Seconds().then((message)=&gt;console.log(message));
-  resolveAfter1Second().then((message)=&gt;console.log(message));
+  resolveAfter2Seconds().then((message)=>console.log(message));
+  resolveAfter1Second().then((message)=>console.log(message));
 }
 
 sequentialStart(); // après 2 secondes, "lente" est affichée, après une
@@ -144,46 +136,48 @@ setTimeout(parallel, 10000); // réellement parallele : après 1 seconde,
 
 // on attend à nouveau
 setTimeout(parallelPromise, 13000); // identique à parallel
-</pre>
+```
 
-<h4 id="await_et_lexécution_parallèle"><code>await</code> et l'exécution parallèle</h4>
+#### `await` et l'exécution parallèle
 
-<p>Dans <code>sequentialStart</code>, l'exécution est arrêtée pendant deux secondes avant le premier <code>await</code> puis encore une autre seconde avant le deuxième <code>await</code>. Le deuxième minuteur n'est pas créé tant que le premier n'est pas écoulé. Le code s'exécute donc au moins en 3 secondes.</p>
+Dans `sequentialStart`, l'exécution est arrêtée pendant deux secondes avant le premier `await` puis encore une autre seconde avant le deuxième `await`. Le deuxième minuteur n'est pas créé tant que le premier n'est pas écoulé. Le code s'exécute donc au moins en 3 secondes.
 
-<p>Avec <code>concurrentStart</code>, les deux minuteurs sont créés puis attendus derrière un <code>await</code> Les minuteurs sont exécutés de façon concurrente. L'ensemble du code se termine donc en au moins 2 secondes plutôt qu'en 3 secondes.<br>
- Toutefois, les appels utilisant  <code>await</code> sont exécutés séquentiellement et la deuxième instruction avec <code>await</code> attendra que la première ait été  traitée. Le minuteur le plus rapide est donc créé juste après le premier.</p>
+Avec `concurrentStart`, les deux minuteurs sont créés puis attendus derrière un `await` Les minuteurs sont exécutés de façon concurrente. L'ensemble du code se termine donc en au moins 2 secondes plutôt qu'en 3 secondes.
+Toutefois, les appels utilisant  `await` sont exécutés séquentiellement et la deuxième instruction avec `await` attendra que la première ait été  traitée. Le minuteur le plus rapide est donc créé juste après le premier.
 
-<p>Si on souhaite avoir deux tâches qui s'exécutent réellement en parallèle, on pourra utiliser  <code>await Promise.all([job1(), job2()])</code> comme illustré ci-avant avec <code>parallel</code>.</p>
+Si on souhaite avoir deux tâches qui s'exécutent réellement en parallèle, on pourra utiliser  `await Promise.all([job1(), job2()])` comme illustré ci-avant avec `parallel`.
 
-<h4 id="asyncawait_Promise.prototype.then_et_la_gestion_des_erreurs"><code>async</code>/<code>await</code>, <code>Promise.prototype.then()</code> et la gestion des erreurs</h4>
+#### `async`/`await`, `Promise.prototype.then()` et la gestion des erreurs
 
-<p>La plupart des fonctions asynchrones peuvent être écrites avec des promesses. Toutefois, les fonctions asynchrones qui utilisent <code>async</code> se prêtent mieux à la gestion des erreurs.</p>
+La plupart des fonctions asynchrones peuvent être écrites avec des promesses. Toutefois, les fonctions asynchrones qui utilisent `async` se prêtent mieux à la gestion des erreurs.
 
-<p><code>concurrentStart</code> et <code>concurrentPromise</code> sont fonctionnellement équivalentes.<br>
- Avec <code>concurrentStart</code>, si l'un des deux appels échoue, l'exception sera immédiatement interceptée et l'exécution de la fonction asynchrone sera interrompue. L'erreur sera propagée à la fonction appelante via la valeur de retour qui est une promesse implicite.<br>
- Pour obtenir les mêmes sécurités avec les promesses, il faut s'assurer que la fonction renvoie une promesse qui gère ce cas d'échec. Pour <code>concurrentPromise</code> cela signifie qu'il faut renvoyer la promesse de <code>Promise.all([]).then()</code>.</p>
+`concurrentStart` et `concurrentPromise` sont fonctionnellement équivalentes.
+Avec `concurrentStart`, si l'un des deux appels échoue, l'exception sera immédiatement interceptée et l'exécution de la fonction asynchrone sera interrompue. L'erreur sera propagée à la fonction appelante via la valeur de retour qui est une promesse implicite.
+Pour obtenir les mêmes sécurités avec les promesses, il faut s'assurer que la fonction renvoie une promesse qui gère ce cas d'échec. Pour `concurrentPromise` cela signifie qu'il faut renvoyer la promesse de `Promise.all([]).then()`.
 
-<p>Bien entendu, il est toutefois possible d'avoir des fonctions asynchrones (avec <code>async</code>) qui gobent des erreurs involontairement. Si on considère la fonction <code>parallel</code> ci-avant, s'il n'y avait eu aucun <code>await</code> ou <code>return</code> pour le résultat de <code>Promise.all([])</code>, aucune erreur n'aurait été propagée.<br>
- Bien que l'exemple <code>parallelPromise</code> paraisse simple, il ne gère aucune erreur du tout. Il aurait fallu utiliser un <code>return </code><code>Promise.all([])</code> analogue.</p>
+Bien entendu, il est toutefois possible d'avoir des fonctions asynchrones (avec `async`) qui gobent des erreurs involontairement. Si on considère la fonction `parallel` ci-avant, s'il n'y avait eu aucun `await` ou `return` pour le résultat de `Promise.all([])`, aucune erreur n'aurait été propagée.
+Bien que l'exemple `parallelPromise` paraisse simple, il ne gère aucune erreur du tout. Il aurait fallu utiliser un ` return ``Promise.all([])` analogue.
 
-<h3 id="Réécrire_une_chaîne_de_promesses_avec_une_fonction_asynchrone">Réécrire une chaîne de promesses avec une fonction asynchrone</h3>
+### Réécrire une chaîne de promesses avec une fonction asynchrone
 
-<p>Lorsqu'on utilise une API qui renvoie des promesses ({{jsxref("Promise")}}), on construit une chaîne de promesses et on divise la fonction en de nombreuses branches :</p>
+Lorsqu'on utilise une API qui renvoie des promesses ({{jsxref("Promise")}}), on construit une chaîne de promesses et on divise la fonction en de nombreuses branches :
 
-<pre class="brush: js">function getProcessedData(url) {
+```js
+function getProcessedData(url) {
   return downloadData(url) // renvoie une promesse
-    .catch(e =&gt; {
+    .catch(e => {
       return downloadFallbackData(url);  // renvoie une promesse
     })
-    .then(v =&gt; {
+    .then(v => {
       return processDataInWorker(v); // renvoie une promesse
     });
 }
-</pre>
+```
 
-<p>Cela peut être réécrit avec une seule fonction asynchrone, de la façon suivante :</p>
+Cela peut être réécrit avec une seule fonction asynchrone, de la façon suivante :
 
-<pre class="brush: js">async function getProcessedData(url) {
+```js
+async function getProcessedData(url) {
   let v;
   try {
     v = await downloadData(url);
@@ -192,17 +186,18 @@ setTimeout(parallelPromise, 13000); // identique à parallel
   }
   return processDataInWorker(v);
 }
-</pre>
+```
 
-<p>On voit dans l'exemple précédent qu'il n'y a pas de <code>await</code> pour l'instruction <code>return</code> car la valeur de retour d'une fonction asynchrone est implicitement enveloppée dans un appel à {{jsxref("Promise.resolve")}}.</p>
+On voit dans l'exemple précédent qu'il n'y a pas de `await` pour l'instruction `return` car la valeur de retour d'une fonction asynchrone est implicitement enveloppée dans un appel à {{jsxref("Promise.resolve")}}.
 
-<h3 id="Différences_entre_return_et_return_await">Différences entre <code>return</code> et <code>return await</code></h3>
+### Différences entre `return` et `return await`
 
-<p>La conversion automatique des valeurs en promesses avec {{jsxref("Promise.resolve")}} ne signifie pas que <code>return await valeurPromesse</code> sera équivalent à <code>return valeurPromesse</code>.</p>
+La conversion automatique des valeurs en promesses avec {{jsxref("Promise.resolve")}} ne signifie pas que `return await valeurPromesse` sera équivalent à `return valeurPromesse`.
 
-<p>Si on reprend l'exemple précédent et qu'on le réécrit avec <code>return await</code> et qu'on intercepte une éventuelle erreur de la promesse :</p>
+Si on reprend l'exemple précédent et qu'on le réécrit avec `return await` et qu'on intercepte une éventuelle erreur de la promesse :
 
-<pre class="brush: js">async function getProcessedData(url) {
+```js
+async function getProcessedData(url) {
   let v;
   try {
      v = await downloadData(url);
@@ -214,45 +209,27 @@ setTimeout(parallelPromise, 13000); // identique à parallel
   } catch(e) {
     return null;
   }
-}</pre>
+}
+```
 
-<p>Si on avait simplement écrit <code>return processDataInWorker(v);</code>, la promesse renvoyée par la fonction aurait déclenché une exception plutôt que d'être résolue avec la valeur <code>null</code>.</p>
+Si on avait simplement écrit `return processDataInWorker(v);`, la promesse renvoyée par la fonction aurait déclenché une exception plutôt que d'être résolue avec la valeur `null`.
 
-<p>Lorsqu'on utilise <code>return toto;</code>, la valeur <code>toto</code> sera immédiatement renvoyée (sans lever d'exception, quel que soit le cas), tandis que <code>return await toto;</code> attendra la résolution de <code>toto</code> ou son échec et lèvera une exception si besoin <strong>avant de parvenir à renvoyer une valeur</strong>.</p>
+Lorsqu'on utilise `return toto;`, la valeur `toto` sera immédiatement renvoyée (sans lever d'exception, quel que soit le cas), tandis que `return await toto;` attendra la résolution de `toto` ou son échec et lèvera une exception si besoin **avant de parvenir à renvoyer une valeur**.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES8', '#sec-async-function-definitions', 'async function')}}</td>
-   <td>{{Spec2('ES8')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                         | Commentaires         |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ES8', '#sec-async-function-definitions', 'async function')}}     | {{Spec2('ES8')}}         | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.statements.async_function")}}</p>
+{{Compat("javascript.statements.async_function")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Operators/async_function", "async function expression")}}</li>
- <li>{{jsxref("AsyncFunction")}} object</li>
- <li>{{jsxref("Operators/await", "await")}}</li>
- <li><a href="http://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/">Créer des décorateurs asynchrones en JavaScript (billet en anglais sur innolitics.com)</a></li>
-</ul>
+- {{jsxref("Operators/async_function", "async function expression")}}
+- {{jsxref("AsyncFunction")}} object
+- {{jsxref("Operators/await", "await")}}
+- [Créer des décorateurs asynchrones en JavaScript (billet en anglais sur innolitics.com)](http://innolitics.com/10x/javascript-decorators-for-promise-returning-functions/)

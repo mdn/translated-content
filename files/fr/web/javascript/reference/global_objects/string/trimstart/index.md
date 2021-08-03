@@ -10,70 +10,58 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/trimStart
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/trimStart
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>trimStart()</strong></code> permet de retirer les blancs au début de la chaîne de caractères. <code>trimLeft()</code> est un synonyme pour cette méthode.</p>
+La méthode **`trimStart()`** permet de retirer les blancs au début de la chaîne de caractères. `trimLeft()` est un synonyme pour cette méthode.
 
-<div>{{EmbedInteractiveExample("pages/js/string-trimstart.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-trimstart.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>str</var>.trimStart();
-<var>str</var>.trimLeft();</pre>
+    str.trimStart();
+    str.trimLeft();
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une nouvelle chaîne de caractères dérivant de la chaîne appelante pour laquelle les blancs en début de chaîne ont été retirés.</p>
+Une nouvelle chaîne de caractères dérivant de la chaîne appelante pour laquelle les blancs en début de chaîne ont été retirés.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code>trimStart()</code> renvoie la chaîne de caractères dont les blancs à gauche ont été retirés. <code>trimStart</code> ne modifie pas la chaîne elle-même.</p>
+La méthode `trimStart()` renvoie la chaîne de caractères dont les blancs à gauche ont été retirés. `trimStart` ne modifie pas la chaîne elle-même.
 
-<h3 id="Synonyme">Synonyme</h3>
+### Synonyme
 
-<p>Pour des raisons de cohérences avec les méthodes préexistantes (telles que {{jsxref("String.prototype.padStart")}}), le nom standard de cette méthode est <code>trimStart</code>. Toutefois, à des fins de compatibilité web, le nom <code>trimLeft</code> sera gardé comme un synonyme. Pour certains moteurs JavaScript, on pourra donc avoir :</p>
+Pour des raisons de cohérences avec les méthodes préexistantes (telles que {{jsxref("String.prototype.padStart")}}), le nom standard de cette méthode est `trimStart`. Toutefois, à des fins de compatibilité web, le nom `trimLeft` sera gardé comme un synonyme. Pour certains moteurs JavaScript, on pourra donc avoir :
 
-<pre class="brush: js">String.prototype.trimLeft.name === "trimStart";</pre>
+```js
+String.prototype.trimLeft.name === "trimStart";
+```
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>L'exemple qui suit illustre comment afficher la chaîne de caractères <code>"toto  "</code> en minuscules :</p>
+L'exemple qui suit illustre comment afficher la chaîne de caractères `"toto "` en minuscules :
 
-<pre class="brush:js">var str = "   toto  ";
+```js
+var str = "   toto  ";
 
 console.log(str.length); // 8
 
 str = str.trimStart();
 console.log(str.length); // 5
 console.log(str);        // "toto  "
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>Proposition pour <code><a href="https://github.com/tc39/proposal-string-left-right-trim/#stringprototypetrimstart--stringprototypetrimend">String.prototype.{trimStart,trimEnd}</a></code></td>
-   <td>Brouillon de niveau 4</td>
-   <td>Attendu pour ES2019</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                                        | État                  | Commentaires        |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | ------------------- |
+| Proposition pour [`String.prototype.{trimStart,trimEnd}`](https://github.com/tc39/proposal-string-left-right-trim/#stringprototypetrimstart--stringprototypetrimend) | Brouillon de niveau 4 | Attendu pour ES2019 |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.String.trimStart")}}</p>
+{{Compat("javascript.builtins.String.trimStart")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("String.prototype.trim()")}}</li>
- <li>{{jsxref("String.prototype.trimEnd()")}}</li>
-</ul>
+- {{jsxref("String.prototype.trim()")}}
+- {{jsxref("String.prototype.trimEnd()")}}

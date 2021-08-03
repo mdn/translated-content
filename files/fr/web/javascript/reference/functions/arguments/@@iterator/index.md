@@ -11,19 +11,20 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions/arguments/@@iterator
 original_slug: Web/JavaScript/Reference/Fonctions/arguments/@@iterator
 ---
-<div>{{jsSidebar("Functions")}}</div>
+{{jsSidebar("Functions")}}
 
-<p>La valeur initiale de la propriété <code><strong>@@iterator</strong></code> est le même objet que la fonction utilisée pour la valeur initiale de la propriété {{jsxref("Array.prototype.values")}}.</p>
+La valeur initiale de la propriété **`@@iterator`** est le même objet que la fonction utilisée pour la valeur initiale de la propriété {{jsxref("Array.prototype.values")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>arguments</var>[Symbol.iterator]()</pre>
+    arguments[Symbol.iterator]()
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_une_boucle_for...of">Utiliser une boucle <code>for...of</code></h3>
+### Utiliser une boucle `for...of`
 
-<pre class="brush: js">function f() {
+```js
+function f() {
   // votre environnement doit supporter les
   // boucles for..of et les variables
   // définies avec let dans les boucles
@@ -32,47 +33,21 @@ original_slug: Web/JavaScript/Reference/Fonctions/arguments/@@iterator
   }
 }
 f('w', 'y', 'k', 'o', 'p');
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-createunmappedargumentsobject', ' CreateUnmappedArgumentsObject')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-createmappedargumentsobject', ' CreateMappedArgumentsObject')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-createunmappedargumentsobject', 'CreateUnmappedArgumentsObject')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-createmappedargumentsobject', 'CreateMappedArgumentsObject')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                | Statut                       | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES6', '#sec-createunmappedargumentsobject', ' CreateUnmappedArgumentsObject')}}     | {{Spec2('ES6')}}         | Définition initiale. |
+| {{SpecName('ES6', '#sec-createmappedargumentsobject', ' CreateMappedArgumentsObject')}}         | {{Spec2('ES6')}}         | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-createunmappedargumentsobject', 'CreateUnmappedArgumentsObject')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ESDraft', '#sec-createmappedargumentsobject', 'CreateMappedArgumentsObject')}}     | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("javascript.functions.arguments.@@iterator")}}
 
-<p>{{Compat("javascript.functions.arguments.@@iterator")}}</p>
+## Voir aussi
 
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>{{jsxref("Array.prototype.values()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.values()")}}

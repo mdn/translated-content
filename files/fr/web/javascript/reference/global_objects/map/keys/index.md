@@ -11,25 +11,26 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/keys
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/keys
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>keys()</strong></code> renvoie un objet <code><a href="/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs">Iterator</a></code> qui contient les clés de chaque élément de l'objet <code>Map</code>, dans leur ordre d'insertion.</p>
+La méthode **`keys()`** renvoie un objet [`Iterator`](/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs) qui contient les clés de chaque élément de l'objet `Map`, dans leur ordre d'insertion.
 
-<div>{{EmbedInteractiveExample("pages/js/map-prototype-keys.html")}}</div>
+{{EmbedInteractiveExample("pages/js/map-prototype-keys.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>maMap</em>.keys()</pre>
+    maMap.keys()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un nouvel objet <code>Iterator</code> {{jsxref("Map")}}.</p>
+Un nouvel objet `Iterator` {{jsxref("Map")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_keys()">Utiliser <code>keys()</code></h3>
+### Utiliser `keys()`
 
-<pre class="brush:js">var maMap = new Map();
+```js
+var maMap = new Map();
 maMap.set("0", "toto");
 maMap.set(1, "truc");
 maMap.set({}, "bidule");
@@ -39,37 +40,20 @@ var mapIter = maMap.keys();
 console.log(mapIter.next().value); // "0"
 console.log(mapIter.next().value); // 1
 console.log(mapIter.next().value); // Object
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-map.prototype.keys', 'Map.prototype.keys')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-map.prototype.keys', 'Map.prototype.keys')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | État                         | Commentaires         |
+| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-map.prototype.keys', 'Map.prototype.keys')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-map.prototype.keys', 'Map.prototype.keys')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Map.keys")}}</p>
+{{Compat("javascript.builtins.Map.keys")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Map.prototype.entries()")}}</li>
- <li>{{jsxref("Map.prototype.values()")}}</li>
-</ul>
+- {{jsxref("Map.prototype.entries()")}}
+- {{jsxref("Map.prototype.values()")}}

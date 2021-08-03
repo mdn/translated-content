@@ -9,28 +9,29 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRange
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/DateTimeFormat/formatRange
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p>La méthode <strong><code>Intl.DateTimeFormat.prototype.formatRange()</code></strong> permet de formater un intervalle de dates de la façon la plus concise en fonction de la <strong><code>locale</code></strong> et des <code><strong>options</strong></code> fournies lors de l'initialisation de l'objet {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}.</p>
+La méthode **`Intl.DateTimeFormat.prototype.formatRange()`** permet de formater un intervalle de dates de la façon la plus concise en fonction de la **`locale`** et des **`options`** fournies lors de l'initialisation de l'objet {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-formatrange.html")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-formatrange.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre>Intl.DateTimeFormat.prototype.formatRange(<var>dateDébut, dateFin</var>)</pre>
+    Intl.DateTimeFormat.prototype.formatRange(dateDébut, dateFin)
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utilisation_simple_de_formatRange">Utilisation simple de <code>formatRange()</code></h3>
+### Utilisation simple de `formatRange()`
 
-<p>Cette méthode reçoit comme arguments deux objets {{jsxref("Date")}} et renvoie l'intervalle de la façon la plus concise possible (selon les options fournies lors de l'instanciation du formateur <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat">Intl.DateTimeFormat</a></code>).</p>
+Cette méthode reçoit comme arguments deux objets {{jsxref("Date")}} et renvoie l'intervalle de la façon la plus concise possible (selon les options fournies lors de l'instanciation du formateur [`Intl.DateTimeFormat`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat)).
 
-<pre class="brush: js">let date1 = new Date(Date.UTC(2007, 0, 10, 10, 0, 0));
+```js
+let date1 = new Date(Date.UTC(2007, 0, 10, 10, 0, 0));
 let date2 = new Date(Date.UTC(2007, 0, 10, 11, 0, 0));
 let date3 = new Date(Date.UTC(2007, 0, 20, 10, 0, 0));
-// &gt; 'Wed, 10 Jan 2007 10:00:00 GMT'
-// &gt; 'Wed, 10 Jan 2007 11:00:00 GMT'
-// &gt; 'Sat, 20 Jan 2007 10:00:00 GMT'
+// > 'Wed, 10 Jan 2007 10:00:00 GMT'
+// > 'Wed, 10 Jan 2007 11:00:00 GMT'
+// > 'Sat, 20 Jan 2007 10:00:00 GMT'
 
 let fmt1 = new Intl.DateTimeFormat("en", {
     year: '2-digit',
@@ -42,9 +43,9 @@ let fmt1 = new Intl.DateTimeFormat("en", {
 console.log(fmt1.format(date1));
 console.log(fmt1.formatRange(date1, date2));
 console.log(fmt1.formatRange(date1, date3));
-// &gt; '1/10/07, 10:00 AM'
-// &gt; '1/10/07, 10:00 – 11:00 AM'
-// &gt; '1/10/07, 10:00 AM – 1/20/07, 10:00 AM'
+// > '1/10/07, 10:00 AM'
+// > '1/10/07, 10:00 – 11:00 AM'
+// > '1/10/07, 10:00 AM – 1/20/07, 10:00 AM'
 
 let fmt2 = new Intl.DateTimeFormat("en", {
     year: 'numeric',
@@ -54,28 +55,17 @@ let fmt2 = new Intl.DateTimeFormat("en", {
 console.log(fmt2.format(date1));
 console.log(fmt2.formatRange(date1, date2));
 console.log(fmt2.formatRange(date1, date3));
-// &gt; 'Jan 10, 2007'
-// &gt; 'Jan 10, 2007'
-// &gt; 'Jan 10 – 20, 2007'
-</pre>
+// > 'Jan 10, 2007'
+// > 'Jan 10, 2007'
+// > 'Jan 10 – 20, 2007'
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td><code><a href="https://rawgit.com/fabalbon/proposal-intl-DateTimeFormat-formatRange/master/out/#datetimeformat-objects">Intl.DateTimeFormat.prototype.formatRange</a></code></td>
-   <td>Brouillon de niveau 3</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                          | État                  | Commentaires |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------- | ------------ |
+| [`Intl.DateTimeFormat.prototype.formatRange`](https://rawgit.com/fabalbon/proposal-intl-DateTimeFormat-formatRange/master/out/#datetimeformat-objects) | Brouillon de niveau 3 |              |
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<p>{{page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/Intl', 'Voir_aussi')}}</p>
+{{page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/Intl', 'Voir_aussi')}}

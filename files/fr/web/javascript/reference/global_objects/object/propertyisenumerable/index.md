@@ -10,62 +10,63 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/propertyIsEnumerable
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>propertyIsEnumerable()</strong></code> renvoie un booléen qui indique si la propriété donnée est énumérable.</p>
+La méthode **`propertyIsEnumerable()`** renvoie un booléen qui indique si la propriété donnée est énumérable.
 
-<div>{{EmbedInteractiveExample("pages/js/object-prototype-propertyisenumerable.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-prototype-propertyisenumerable.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>obj</var>.propertyIsEnumerable(<var>prop</var>)</pre>
+    obj.propertyIsEnumerable(prop)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>prop</code></dt>
- <dd>Le nom de la propriété dont on souhaite savoir si elle est énumérable ou non.</dd>
-</dl>
+- `prop`
+  - : Le nom de la propriété dont on souhaite savoir si elle est énumérable ou non.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un booléen qui indique si la propriété passée en argument est énumérable.</p>
+Un booléen qui indique si la propriété passée en argument est énumérable.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Chaque objet possède une méthode <code>propertyIsEnumerable</code>. Cette méthode est utilisée afin de savoir s'il est possible d'énumérer la propriété donnée au moyen d'une boucle {{jsxref("Instructions/for...in", "for...in")}}. Cela concerne uniquement les propriétés propres à l'objet (celles qui ne sont pas héritées via la chaîne de prototypes). Si un objet ne possède pas la propriété, cette méthode renverra <code>false</code>.</p>
+Chaque objet possède une méthode `propertyIsEnumerable`. Cette méthode est utilisée afin de savoir s'il est possible d'énumérer la propriété donnée au moyen d'une boucle {{jsxref("Instructions/for...in", "for...in")}}. Cela concerne uniquement les propriétés propres à l'objet (celles qui ne sont pas héritées via la chaîne de prototypes). Si un objet ne possède pas la propriété, cette méthode renverra `false`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_propertyIsEnumerable">Utiliser <code>propertyIsEnumerable</code></h3>
+### Utiliser `propertyIsEnumerable`
 
-<p>Dans l'exemple qui suit, on illustre comment utiliser <code>propertyIsEnumerable</code> sur les objets et tableaux :</p>
+Dans l'exemple qui suit, on illustre comment utiliser `propertyIsEnumerable` sur les objets et tableaux :
 
-<pre class="brush: js">var o = {};
+```js
+var o = {};
 var a = [];
 o.prop = 'est énumérable';
 a[0] = 'est énumérable';
 
 o.propertyIsEnumerable('prop');   // renvoie true
 a.propertyIsEnumerable(0);        // renvoie true
-</pre>
+```
 
-<h3 id="Objets_natifs_et_objets_définis_par_l'utilisateur">Objets natifs et objets définis par l'utilisateur</h3>
+### Objets natifs et objets définis par l'utilisateur
 
-<p>Dans l'exemple ci-dessous, on illustre l'énumérabilité des propriétés des objets natifs et celle des objets tiers, définis dans les scripts :</p>
+Dans l'exemple ci-dessous, on illustre l'énumérabilité des propriétés des objets natifs et celle des objets tiers, définis dans les scripts :
 
-<pre class="brush: js">var a = ['est énumérable'];
+```js
+var a = ['est énumérable'];
 
 a.propertyIsEnumerable(0);          // renvoie true
 a.propertyIsEnumerable('length');   // renvoie false
 
 Math.propertyIsEnumerable('random');   // renvoie false
 this.propertyIsEnumerable('Math');     // renvoie false
-</pre>
+```
 
-<h3 id="Propriétés_héritées_et_propriétés_propres">Propriétés héritées et propriétés propres</h3>
+### Propriétés héritées et propriétés propres
 
-<pre class="brush: js">var a = [];
+```js
+var a = [];
 a.propertyIsEnumerable('constructor');         // renvoie false
 
 function premierConstructeur() {
@@ -97,49 +98,24 @@ o.propertyIsEnumerable('propriété');        // renvoie true
 o.propertyIsEnumerable('prototype');   // renvoie false
 o.propertyIsEnumerable('constructor'); // renvoie false
 o.propertyIsEnumerable('premièreMéthode'); // renvoie false
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.4.7', 'Object.prototype.propertyIsEnumerable')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.prototype.propertyisenumerable', 'Object.prototype.propertyIsEnumerable')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.prototype.propertyisenumerable', 'Object.prototype.propertyIsEnumerable')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                        | État                         | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES3')}}                                                                                                                             | {{Spec2('ES3')}}         | Définition initiale. |
+| {{SpecName('ES5.1', '#sec-15.2.4.7', 'Object.prototype.propertyIsEnumerable')}}                                             | {{Spec2('ES5.1')}}     |                      |
+| {{SpecName('ES6', '#sec-object.prototype.propertyisenumerable', 'Object.prototype.propertyIsEnumerable')}}         | {{Spec2('ES6')}}         |                      |
+| {{SpecName('ESDraft', '#sec-object.prototype.propertyisenumerable', 'Object.prototype.propertyIsEnumerable')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Object.propertyIsEnumerable")}}</p>
+{{Compat("javascript.builtins.Object.propertyIsEnumerable")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement">Caractère énumérable et rattachement des propriétés</a></li>
- <li>{{jsxref("Instructions/for...in", "for...in")}}</li>
- <li>{{jsxref("Object.keys()")}}</li>
- <li>{{jsxref("Object.defineProperty()")}}</li>
-</ul>
+- [Caractère énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement)
+- {{jsxref("Instructions/for...in", "for...in")}}
+- {{jsxref("Object.keys()")}}
+- {{jsxref("Object.defineProperty()")}}

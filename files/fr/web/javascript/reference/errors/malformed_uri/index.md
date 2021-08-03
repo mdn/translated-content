@@ -8,60 +8,63 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Malformed_URI
 original_slug: Web/JavaScript/Reference/Erreurs/Malformed_URI
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="syntaxbox">URIError: The URI to be encoded contains invalid character (Edge)
-URIError: malformed URI sequence (Firefox)
-URIError: URI malformed (Chrome)
-</pre>
+    URIError: The URI to be encoded contains invalid character (Edge)
+    URIError: malformed URI sequence (Firefox)
+    URIError: URI malformed (Chrome)
 
-<h2 id="Type_d'erreur">Type d'erreur</h2>
+## Type d'erreur
 
-<p>{{jsxref("URIError")}}</p>
+{{jsxref("URIError")}}
 
-<h2 id="Quel_est_le_problème">Quel est le problème ?</h2>
+## Quel est le problème ?
 
-<p>Il y a eu une erreur lors de l'encodage ou du décodage de l'URI. Un argument fourni à {{jsxref("decodeURI")}}, {{jsxref("encodeURI")}}, {{jsxref("encodeURIComponent")}} ou à {{jsxref("decodeURIComponent")}} n'était pas valide et la fonction concernée n'a pas pu encoder ou décoder la valeur correctement.</p>
+Il y a eu une erreur lors de l'encodage ou du décodage de l'URI. Un argument fourni à {{jsxref("decodeURI")}}, {{jsxref("encodeURI")}}, {{jsxref("encodeURIComponent")}} ou à {{jsxref("decodeURIComponent")}} n'était pas valide et la fonction concernée n'a pas pu encoder ou décoder la valeur correctement.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Encodage">Encodage</h3>
+### Encodage
 
-<p>L'encodage permet de remplacer certains caractères par une, deux, trois voire quatre séquences d'échappement qui représente l'encodage UTF-8 du caractère. Une exception {{jsxref("URIError")}} sera levée si on tente d'encoder un caractère <em>surrogate</em> qui ne fait pas partie d'une paire de codets :</p>
+L'encodage permet de remplacer certains caractères par une, deux, trois voire quatre séquences d'échappement qui représente l'encodage UTF-8 du caractère. Une exception {{jsxref("URIError")}} sera levée si on tente d'encoder un caractère _surrogate_ qui ne fait pas partie d'une paire de codets :
 
-<pre class="brush: js example-bad">encodeURI('\uD800');
+```js example-bad
+encodeURI('\uD800');
 // "URIError: malformed URI sequence"
 
 encodeURI('\uDFFF');
 // "URIError: malformed URI sequence"
-</pre>
+```
 
-<p>En revanche, si on dispose de la paire de codets :</p>
+En revanche, si on dispose de la paire de codets :
 
-<pre class="brush: js example-good">encodeURI('\uD800\uDFFF');
-// "%F0%90%8F%BF"</pre>
+```js example-good
+encodeURI('\uD800\uDFFF');
+// "%F0%90%8F%BF"
+```
 
-<h3 id="Décodage">Décodage</h3>
+### Décodage
 
-<p>Le décodage permet de remplacer chaque séquence d'échappement dans le composant encodé par le caractère qu'elle représente. S'il n'existe aucun caractère correspondant, une exception sera déclenchée :</p>
+Le décodage permet de remplacer chaque séquence d'échappement dans le composant encodé par le caractère qu'elle représente. S'il n'existe aucun caractère correspondant, une exception sera déclenchée :
 
-<pre class="brush: js example-bad">decodeURIComponent('%E0%A4%A');
+```js example-bad
+decodeURIComponent('%E0%A4%A');
 // "URIError: malformed URI sequence"
-</pre>
+```
 
-<p>Avec la valeur d'entrée correcte, on a généralement quelque chose qui ressemble à :</p>
+Avec la valeur d'entrée correcte, on a généralement quelque chose qui ressemble à :
 
-<pre class="brush: js example-good">decodeURIComponent('JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B');
-// "JavaScript_шеллы"</pre>
+```js example-good
+decodeURIComponent('JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B');
+// "JavaScript_шеллы"
+```
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("URIError")}}</li>
- <li>{{jsxref("decodeURI")}}</li>
- <li>{{jsxref("encodeURI")}}</li>
- <li>{{jsxref("encodeURIComponent")}}</li>
- <li>{{jsxref("decodeURIComponent")}}</li>
-</ul>
+- {{jsxref("URIError")}}
+- {{jsxref("decodeURI")}}
+- {{jsxref("encodeURI")}}
+- {{jsxref("encodeURIComponent")}}
+- {{jsxref("decodeURIComponent")}}

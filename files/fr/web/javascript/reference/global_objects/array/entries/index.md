@@ -11,38 +11,40 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/entries
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/entries
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>entries()</strong></code> renvoie un nouvel objet de type  <code><strong>Array Iterator</strong></code> qui contient le couple clef/valeur pour chaque éléments du tableau.</p>
+La méthode **`entries()`** renvoie un nouvel objet de type  **`Array Iterator`** qui contient le couple clef/valeur pour chaque éléments du tableau.
 
-<div>{{EmbedInteractiveExample("pages/js/array-entries.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-entries.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>arr</var>.entries()</pre>
+    arr.entries()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un nouvel objet qui est un itérateur pour {{jsxref("Array")}}.</p>
+Un nouvel objet qui est un itérateur pour {{jsxref("Array")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Parcourir_un_tableau_avec_ses_index_et_éléments">Parcourir un tableau avec ses index et éléments</h3>
+### Parcourir un tableau avec ses index et éléments
 
-<pre class="brush:js">const arr = ["a", "b", "c"];
+```js
+const arr = ["a", "b", "c"];
 for (const [index, element] of arr.entries()) {
   console.log(index, element);
 }
 // 0 "a"
 // 1 "b"
 // 2 "c"
-</pre>
+```
 
-<h3 id="Boucle_for...of">Boucle <code>for...of</code></h3>
+### Boucle `for...of`
 
-<p>On peut avoir le même résultat en utilisant une boucle <a href="/fr/docs/Web/JavaScript/Reference/Instructions/for...of">for...of</a> :</p>
+On peut avoir le même résultat en utilisant une boucle [for...of](/fr/docs/Web/JavaScript/Reference/Instructions/for...of) :
 
-<pre class="brush: js">var arr = ['a', 'b', 'c'];
+```js
+var arr = ['a', 'b', 'c'];
 var eArr = arr.entries();
 
 for (let e of eArr) {
@@ -51,42 +53,25 @@ for (let e of eArr) {
 // [0, 'a']
 // [1, 'b']
 // [2, 'c']
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-array.prototype.entries', 'Array.prototype.entries')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.entries', 'Array.prototype.entries')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | État                         | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-array.prototype.entries', 'Array.prototype.entries')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-array.prototype.entries', 'Array.prototype.entries')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Array.entries")}}</p>
+{{Compat("javascript.builtins.Array.entries")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Array.prototype.keys()")}}</li>
- <li>{{jsxref("Array.prototype.values()")}}</li>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
- <li>{{jsxref("Array.prototype.every()")}}</li>
- <li>{{jsxref("Array.prototype.some()")}}</li>
- <li><code><a href="/fr/docs/Web/JavaScript/Reference/Instructions/for...of">for...of</a></code></li>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration">Les protocoles d'itération</a></li>
-</ul>
+- {{jsxref("Array.prototype.keys()")}}
+- {{jsxref("Array.prototype.values()")}}
+- {{jsxref("Array.prototype.forEach()")}}
+- {{jsxref("Array.prototype.every()")}}
+- {{jsxref("Array.prototype.some()")}}
+- [`for...of`](/fr/docs/Web/JavaScript/Reference/Instructions/for...of)
+- [Les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration)

@@ -10,86 +10,60 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setSeconds
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setSeconds
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>setSeconds()</strong></code> définit les secondes pour la date, selon l'heure locale.</p>
+La méthode **`setSeconds()`** définit les secondes pour la date, selon l'heure locale.
 
-<div>{{EmbedInteractiveExample("pages/js/date-setseconds.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-setseconds.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>dateObj</var>.setSeconds(valeurSecondes[, valeurMs])</pre>
+    dateObj.setSeconds(valeurSecondes[, valeurMs])
 
-<h3 id="Versions_antérieures_à_JavaScript_1.3">Versions antérieures à JavaScript 1.3</h3>
+### Versions antérieures à JavaScript 1.3
 
-<pre class="syntaxbox"><var>dateObj</var>.setSeconds(valeurSecondes)</pre>
+    dateObj.setSeconds(valeurSecondes)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>valeurSecondes</code></dt>
- <dd>Un entier entre 0 et 59.</dd>
- <dt><code>valeurMs</code></dt>
- <dd>Paramètre optionnel, un nombre entre 0 et 999, représentant les millièmes de secondes.</dd>
-</dl>
+- `valeurSecondes`
+  - : Un entier entre 0 et 59.
+- `valeurMs`
+  - : Paramètre optionnel, un nombre entre 0 et 999, représentant les millièmes de secondes.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Le nombre de millisecondes écoulées entre le premier janvier 1970 minuit, UTC et la date mise à jour.</p>
+Le nombre de millisecondes écoulées entre le premier janvier 1970 minuit, UTC et la date mise à jour.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Si le paramètre <code>valeurMs</code> n'est pas utilisé, la valeur renvoyée par la méthode {{jsxref("Date.getMilliseconds", "getMilliseconds()")}} sera utilisée.</p>
+Si le paramètre `valeurMs` n'est pas utilisé, la valeur renvoyée par la méthode {{jsxref("Date.getMilliseconds", "getMilliseconds()")}} sera utilisée.
 
-<p>Si un paramètre utilisé est en dehors des limites attendues, <code>setSeconds()</code> tentera de mettre à jour la date en conséquence. Par exemple, si on utilise la valeur 100 pour <code>valeurSecondes</code>, les minutes de la date seront incrémentées de 1, et 40 sera utilisé pour les secondes.</p>
+Si un paramètre utilisé est en dehors des limites attendues, `setSeconds()` tentera de mettre à jour la date en conséquence. Par exemple, si on utilise la valeur 100 pour `valeurSecondes`, les minutes de la date seront incrémentées de 1, et 40 sera utilisé pour les secondes.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_setSeconds()">Utiliser <code>setSeconds()</code></h3>
+### Utiliser `setSeconds()`
 
-<pre class="brush:js">var leGrandJour = new Date();
+```js
+var leGrandJour = new Date();
 leGrandJour.setSeconds(30)
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.30', 'Date.prototype.setSeconds')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.setseconds', 'Date.prototype.setSeconds')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.setseconds', 'Date.prototype.setSeconds')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | État                         | Commentaires                                          |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.9.5.30', 'Date.prototype.setSeconds')}}                         | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-date.prototype.setseconds', 'Date.prototype.setSeconds')}}         | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-date.prototype.setseconds', 'Date.prototype.setSeconds')}} | {{Spec2('ESDraft')}} |                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Date.setSeconds")}}</p>
+{{Compat("javascript.builtins.Date.setSeconds")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Date.prototype.getSeconds()")}}</li>
- <li>{{jsxref("Date.prototype.setUTCSeconds()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getSeconds()")}}
+- {{jsxref("Date.prototype.setUTCSeconds()")}}

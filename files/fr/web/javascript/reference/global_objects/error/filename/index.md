@@ -11,35 +11,34 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/fileName
 original_slug: Web/JavaScript/Reference/Objets_globaux/Error/fileName
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p>La propriété <code><strong>fileName</strong></code> contient le chemin vers le fichier qui a déclenché l'erreur.</p>
+La propriété **`fileName`** contient le chemin vers le fichier qui a déclenché l'erreur.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Cette propriété non-standard contient le chemin vers le fichier qui a déclenché cette erreur. Si elle est appelée depuis un débugger (les outils de développement de Firefox par exemple), "debugger eval code" sera renvoyé.</p>
+Cette propriété non-standard contient le chemin vers le fichier qui a déclenché cette erreur. Si elle est appelée depuis un débugger (les outils de développement de Firefox par exemple), "debugger eval code" sera renvoyé.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_fileName">Utiliser <code>fileName</code></h3>
+### Utiliser `fileName`
 
-<pre class="brush: js">var e = new Error("Ne peut pas lire la donnée");
+```js
+var e = new Error("Ne peut pas lire la donnée");
 throw e;
 // e.fileName peut ressembler à "file:///C:/exemple.html"
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Ne fait partie d'aucune spécification. Non standard.</p>
+Ne fait partie d'aucune spécification. Non standard.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Error.fileName")}}</p>
+{{Compat("javascript.builtins.Error.fileName")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Error.prototype.stack")}} {{non-standard_inline}}</li>
- <li>{{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}</li>
- <li>{{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}</li>
-</ul>
+- {{jsxref("Error.prototype.stack")}} {{non-standard_inline}}
+- {{jsxref("Error.prototype.columnNumber")}} {{non-standard_inline}}
+- {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}

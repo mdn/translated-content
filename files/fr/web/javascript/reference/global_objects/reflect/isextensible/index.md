@@ -10,43 +10,41 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/isExtensible
 original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/isExtensible
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode statique <code><strong>Reflect.isExtensible()</strong></code> permet de déterminer si un objet est extensible (i.e. si on peut lui ajouter de nouvelles propriétés). Elle est semblable à la méthode {{jsxref("Object.isExtensible()")}} (modulo <a href="#diffs">quelques différences</a>).</p>
+La méthode statique **`Reflect.isExtensible()`** permet de déterminer si un objet est extensible (i.e. si on peut lui ajouter de nouvelles propriétés). Elle est semblable à la méthode {{jsxref("Object.isExtensible()")}} (modulo [quelques différences](#diffs)).
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-isextensible.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-isextensible.html", "taller")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Reflect.isExtensible(<var>cible</var>)
-</pre>
+    Reflect.isExtensible(cible)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>cible</code></dt>
- <dd>L'objet cible dont on souhaite savoir s'il est extensible.</dd>
-</dl>
+- `cible`
+  - : L'objet cible dont on souhaite savoir s'il est extensible.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un {{jsxref("Boolean","booléen", "",1)}} qui indique si la cible est extensible ou non.</p>
+Un {{jsxref("Boolean","booléen", "",1)}} qui indique si la cible est extensible ou non.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>Une erreur {{jsxref("TypeError")}} si <code>cible</code> n'est pas un {{jsxref("Object")}}.</p>
+Une erreur {{jsxref("TypeError")}} si `cible` n'est pas un {{jsxref("Object")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code>Reflect.isExtensible</code> permet de déterminer si un objet est extensible (autrement dit si on peut lui ajouter de nouvelles propriétés). Cette méthode est semblable à la méthode {{jsxref("Object.isExtensible()")}}.</p>
+La méthode `Reflect.isExtensible` permet de déterminer si un objet est extensible (autrement dit si on peut lui ajouter de nouvelles propriétés). Cette méthode est semblable à la méthode {{jsxref("Object.isExtensible()")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_Reflect.isExtensible()">Utiliser <code>Reflect.isExtensible()</code></h3>
+### Utiliser `Reflect.isExtensible()`
 
-<p>Voir aussi {{jsxref("Object.isExtensible()")}}.</p>
+Voir aussi {{jsxref("Object.isExtensible()")}}.
 
-<pre class="brush: js">// Les nouveaux objets sont extensibles.
+```js
+// Les nouveaux objets sont extensibles.
 var vide = {};
 Reflect.isExtensible(vide); // true
 
@@ -63,48 +61,32 @@ Reflect.isExtensible(scellé); // false
 // également non-extensibles.
 var gelé = Object.freeze({});
 Reflect.isExtensible(gelé); // false
-</pre>
+```
 
-<h3 id="Différence_avec_Object.isExtensible()">Différence avec <code>Object.isExtensible()</code></h3>
+### Différence avec `Object.isExtensible()`
 
-<p>Si le premier argument passé à la méthode n'est pas un objet (autrement dit si la valeur est une valeur primitive), cela provoquera une exception {{jsxref("TypeError")}}. La méthode {{jsxref("Object.isExtensible()")}} aurait commencé par convertir l'argument en un objet.</p>
+Si le premier argument passé à la méthode n'est pas un objet (autrement dit si la valeur est une valeur primitive), cela provoquera une exception {{jsxref("TypeError")}}. La méthode {{jsxref("Object.isExtensible()")}} aurait commencé par convertir l'argument en un objet.
 
-<pre class="brush: js">Reflect.isExtensible(1);
+```js
+Reflect.isExtensible(1);
 // TypeError: 1 is not an object
 
 Object.isExtensible(1);
 // false
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-reflect.isextensible', 'Reflect.isExtensible')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-reflect.isextensible', 'Reflect.isExtensible')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                         | Commentaires         |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-reflect.isextensible', 'Reflect.isExtensible')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-reflect.isextensible', 'Reflect.isExtensible')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Reflect.isExtensible")}}</p>
+{{Compat("javascript.builtins.Reflect.isExtensible")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li>{{jsxref("Object.isExtensible()")}}</li>
-</ul>
+- {{jsxref("Reflect")}}
+- {{jsxref("Object.isExtensible()")}}

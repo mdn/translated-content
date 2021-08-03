@@ -11,66 +11,48 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/get
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/get
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>get()</strong></code> renvoie un élément précisé d'un objet <code>Map</code>. Si la valeur associée à la clé fournie est un objet, alors on obtient une référence à cet objet et tous changements apporté à cet objet sera aussi visible à l'intérieur de l'objet <code>Map</code>.</p>
+La méthode **`get()`** renvoie un élément précisé d'un objet `Map`. Si la valeur associée à la clé fournie est un objet, alors on obtient une référence à cet objet et tous changements apporté à cet objet sera aussi visible à l'intérieur de l'objet `Map`.
 
-<div>{{EmbedInteractiveExample("pages/js/map-prototype-get.html")}}</div>
+{{EmbedInteractiveExample("pages/js/map-prototype-get.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox notranslate"><em>maMap</em>.get(clé)</pre>
+    maMap.get(clé)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>clé</code></dt>
- <dd>La clé de l'élément à renvoyer depuis l'objet <code>Map</code>.</dd>
-</dl>
+- `clé`
+  - : La clé de l'élément à renvoyer depuis l'objet `Map`.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>L'élément associée à la clé donnée ou {{jsxref("undefined")}} si la clé ne fait pas partie de l'objet <code>Map</code>.</p>
+L'élément associée à la clé donnée ou {{jsxref("undefined")}} si la clé ne fait pas partie de l'objet `Map`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js notranslate">var maMap = new Map();
+```js
+var maMap = new Map();
 maMap.set("truc", "toto");
 
 maMap.get("truc");     // Renvoie "toto".
 maMap.get("machin");   // Renvoie undefined.
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-map.prototype.get', 'Map.prototype.get')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-map.prototype.get', 'Map.prototype.get')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-map.prototype.get', 'Map.prototype.get')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-map.prototype.get', 'Map.prototype.get')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Map.get")}}</p>
+{{Compat("javascript.builtins.Map.get")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Map")}}</li>
- <li>{{jsxref("Map.prototype.set()")}}</li>
- <li>{{jsxref("Map.prototype.has()")}}</li>
-</ul>
+- {{jsxref("Map")}}
+- {{jsxref("Map.prototype.set()")}}
+- {{jsxref("Map.prototype.has()")}}

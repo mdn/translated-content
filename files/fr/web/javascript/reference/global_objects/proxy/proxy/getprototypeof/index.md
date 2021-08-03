@@ -10,62 +10,58 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getPrototypeOf
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/getPrototypeOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>handler.getPrototypeOf()</code></strong> représente une trappe pour la méthode interne <code>[[GetPrototypeOf]]</code>.</p>
+La méthode **`handler.getPrototypeOf()`** représente une trappe pour la méthode interne `[[GetPrototypeOf]]`.
 
-<div>{{EmbedInteractiveExample("pages/js/proxyhandler-getprototypeof.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-getprototypeof.html", "taller")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var p = new Proxy(obj, {
+```js
+var p = new Proxy(obj, {
   getPrototypeOf(cible) {
   ...
   }
 });
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Le paramètre suivant est passé à la méthode <code>getPrototypeOf</code>. <code>this</code> est lié au gestionnaire.</p>
+Le paramètre suivant est passé à la méthode `getPrototypeOf`. `this` est lié au gestionnaire.
 
-<dl>
- <dt><code>cible</code></dt>
- <dd>L'objet cible.</dd>
-</dl>
+- `cible`
+  - : L'objet cible.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>La méthode <code>getPrototypeOf</code> doit renvoyer un objet ou <code>null</code>.</p>
+La méthode `getPrototypeOf` doit renvoyer un objet ou `null`.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<h3 id="Interceptions">Interceptions</h3>
+### Interceptions
 
-<p>Cette trappe permet d'intercepter les opérations suivantes :</p>
+Cette trappe permet d'intercepter les opérations suivantes :
 
-<ul>
- <li>{{jsxref("Object.getPrototypeOf()")}}</li>
- <li>{{jsxref("Reflect.getPrototypeOf()")}}</li>
- <li>{{jsxref("Object/proto", "__proto__")}}</li>
- <li>{{jsxref("Object.prototype.isPrototypeOf()")}}</li>
- <li>{{jsxref("Opérateurs/instanceof", "instanceof")}}</li>
-</ul>
+- {{jsxref("Object.getPrototypeOf()")}}
+- {{jsxref("Reflect.getPrototypeOf()")}}
+- {{jsxref("Object/proto", "__proto__")}}
+- {{jsxref("Object.prototype.isPrototypeOf()")}}
+- {{jsxref("Opérateurs/instanceof", "instanceof")}}
 
-<h3 id="Invariants">Invariants</h3>
+### Invariants
 
-<p>Si les invariants suivant ne sont pas respectés, le proxy renverra une exception {{jsxref("TypeError")}} :</p>
+Si les invariants suivant ne sont pas respectés, le proxy renverra une exception {{jsxref("TypeError")}} :
 
-<ul>
- <li><code>getPrototypeOf</code> doit renvoyer un objet ou <code>null</code>.</li>
- <li>Si la <code>cible</code> n'est pas extensible, <code>Object.getPrototypeOf(proxy)</code> doit renvoyer la même valeur que <code>Object.getPrototypeOf(cible)</code>.</li>
-</ul>
+- `getPrototypeOf` doit renvoyer un objet ou `null`.
+- Si la `cible` n'est pas extensible, `Object.getPrototypeOf(proxy)` doit renvoyer la même valeur que `Object.getPrototypeOf(cible)`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utilisation_simple">Utilisation simple</h3>
+### Utilisation simple
 
-<pre class="brush: js">var obj = {};
+```js
+var obj = {};
 var proto = {};
 var gestionnaire = {
     getPrototypeOf(cible) {
@@ -77,11 +73,12 @@ var gestionnaire = {
 
 var p = new Proxy(obj, gestionnaire);
 console.log(Object.getPrototypeOf(p) === proto);    // true
-</pre>
+```
 
-<h3 id="Cinq_façons_de_déclencher_la_trappe_getPrototypeOf">Cinq façons de déclencher la trappe <code>getPrototypeOf</code></h3>
+### Cinq façons de déclencher la trappe `getPrototypeOf`
 
-<pre class="brush: js">var obj = {};
+```js
+var obj = {};
 var p = new Proxy(obj, {
     getPrototypeOf(cible) {
         return Array.prototype;
@@ -94,11 +91,12 @@ console.log(
     Array.prototype.isPrototypeOf(p),              // true
     p instanceof Array                             // true
 );
-</pre>
+```
 
-<h3 id="Deux_types_d'exceptions">Deux types d'exceptions</h3>
+### Deux types d'exceptions
 
-<pre class="brush: js">var obj = {};
+```js
+var obj = {};
 var p = new Proxy(obj, {
     getPrototypeOf(cible) {
         return "toto";
@@ -113,39 +111,22 @@ var p = new Proxy(obj, {
     }
 });
 Object.getPrototypeOf(p); // TypeError : on attend la même valeur pour le prototype
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-getprototypeof', '[[GetPrototypeOf]]')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-getprototypeof', '[[GetPrototypeOf]]')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                                | État                         | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-getprototypeof', '[[GetPrototypeOf]]')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-getprototypeof', '[[GetPrototypeOf]]')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Proxy.handler.getPrototypeOf")}}</p>
+{{Compat("javascript.builtins.Proxy.handler.getPrototypeOf")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Object.getPrototypeOf()")}}</li>
- <li>{{jsxref("Reflect.getPrototypeOf()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Object.getPrototypeOf()")}}
+- {{jsxref("Reflect.getPrototypeOf()")}}

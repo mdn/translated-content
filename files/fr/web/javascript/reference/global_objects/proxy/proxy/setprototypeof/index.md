@@ -10,63 +10,59 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/setPrototypeOf
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/setPrototypeOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>handler.setPrototypeOf()</code></strong> est une trappe pour intercepter {{jsxref("Object.setPrototypeOf()")}}.</p>
+La méthode **`handler.setPrototypeOf()`** est une trappe pour intercepter {{jsxref("Object.setPrototypeOf()")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/proxyhandler-setprototypeof.html", "taller", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-setprototypeof.html", "taller", "taller")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var p = new Proxy(cible, {
+```js
+var p = new Proxy(cible, {
   setPrototypeOf: function(cible, prototype) {
   }
 });
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Les paramètres suivants sont passés à la méthode <code>setPrototypeOf</code>. <code>this</code> est lié au gestionnaire.</p>
+Les paramètres suivants sont passés à la méthode `setPrototypeOf`. `this` est lié au gestionnaire.
 
-<dl>
- <dt><code>cible</code></dt>
- <dd>L'objet cible.</dd>
- <dt><code>prototype</code></dt>
- <dd>Le nouveau prototype de l'objet ou <code>null</code>.</dd>
-</dl>
+- `cible`
+  - : L'objet cible.
+- `prototype`
+  - : Le nouveau prototype de l'objet ou `null`.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>La méthode <code>setPrototypeOf</code> renvoie <code>true</code> si la propriété interne <code>[[Prototype]]</code> a bien été modifiée et <code>false</code> sinon.</p>
+La méthode `setPrototypeOf` renvoie `true` si la propriété interne `[[Prototype]]` a bien été modifiée et `false` sinon.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code><strong>handler.setPrototypeOf</strong></code> est une trappe utilisée pour intercepter les opérations de {{jsxref("Object.setPrototypeOf()")}}.</p>
+La méthode **`handler.setPrototypeOf`** est une trappe utilisée pour intercepter les opérations de {{jsxref("Object.setPrototypeOf()")}}.
 
-<h3 id="Interceptions">Interceptions</h3>
+### Interceptions
 
-<p>Cette trappe permet d'intercepter :</p>
+Cette trappe permet d'intercepter :
 
-<ul>
- <li>{{jsxref("Object.setPrototypeOf()")}}</li>
- <li>{{jsxref("Reflect.setPrototypeOf()")}}</li>
-</ul>
+- {{jsxref("Object.setPrototypeOf()")}}
+- {{jsxref("Reflect.setPrototypeOf()")}}
 
-<h3 id="Invariants">Invariants</h3>
+### Invariants
 
-<p>Si les invariants suivants ne sont pas respectés, le proxy renverra une exception {{jsxref("TypeError")}} :</p>
+Si les invariants suivants ne sont pas respectés, le proxy renverra une exception {{jsxref("TypeError")}} :
 
-<ul>
- <li>Si <code>cible</code> n'est pas extensible, le paramètre <code>prototype</code> doit être le même valeur que <code>Object.getPrototypeOf(cible)</code>.</li>
-</ul>
+- Si `cible` n'est pas extensible, le paramètre `prototype` doit être le même valeur que `Object.getPrototypeOf(cible)`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Si on souhaite interdire la définition d'un nouveau prototype pour un objet, on peut utiliser une méthode <code>setPrototypeOf</code> qui renvoie <code>false</code> ou qui génère une exception.</p>
+Si on souhaite interdire la définition d'un nouveau prototype pour un objet, on peut utiliser une méthode `setPrototypeOf` qui renvoie `false` ou qui génère une exception.
 
-<p>Avec cette première approche, toute opération qui voudra modifier le prototype génèrera une exception. On aura par exemple {{jsxref("Object.setPrototypeOf()")}} qui créera et lèvera l'exception <code>TypeError</code>. Si la modification est effectuée par une opération qui ne génère pas d'exception en cas d'échec (comme  {{jsxref("Reflect.setPrototypeOf()")}}), aucune exception ne sera générée.</p>
+Avec cette première approche, toute opération qui voudra modifier le prototype génèrera une exception. On aura par exemple {{jsxref("Object.setPrototypeOf()")}} qui créera et lèvera l'exception `TypeError`. Si la modification est effectuée par une opération qui ne génère pas d'exception en cas d'échec (comme  {{jsxref("Reflect.setPrototypeOf()")}}), aucune exception ne sera générée.
 
-<pre class="brush: js">var handlerReturnsFalse = {
+```js
+var handlerReturnsFalse = {
     setPrototypeOf(target, newProto) {
         return false;
     }
@@ -79,11 +75,12 @@ Object.setPrototypeOf(p1, newProto);
 // lève une TypeError
 Reflect.setPrototypeOf(p1, newProto);
 // renvoie false
-</pre>
+```
 
-<p>Avec cette seconde approche, toute tentative de modification génèrera une exception. On utilisera celle-ci lorsqu'on souhaite qu'une erreur se produisent, y compris pour les opérations qui ne génèrent habituellement pas d'exception ou si on souhaite générer une exception sur mesure.</p>
+Avec cette seconde approche, toute tentative de modification génèrera une exception. On utilisera celle-ci lorsqu'on souhaite qu'une erreur se produisent, y compris pour les opérations qui ne génèrent habituellement pas d'exception ou si on souhaite générer une exception sur mesure.
 
-<pre class="brush: js">var handlerThrows = {
+```js
+var handlerThrows = {
     setPrototypeOf(target, newProto) {
         throw new Error("erreur custom");
     }
@@ -95,39 +92,23 @@ var p2 = new Proxy(target, handlerThrows);
 Object.setPrototypeOf(p2, newProto);
 // lève une exception new Error("erreur custom")
 Reflect.setPrototypeOf(p2, newProto);
-// lève une exception new Error("erreur custom")</pre>
+// lève une exception new Error("erreur custom")
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-setprototypeof-v', '[[SetPrototypeOf]]')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-setprototypeof-v', '[[SetPrototypeOf]]')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                                    | État                         | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-setprototypeof-v', '[[SetPrototypeOf]]')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-setprototypeof-v', '[[SetPrototypeOf]]')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Proxy.handler.setPrototypeOf")}}</p>
+{{Compat("javascript.builtins.Proxy.handler.setPrototypeOf")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Object.setPrototypeOf()")}}</li>
- <li>{{jsxref("Reflect.setPrototypeOf()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Object.setPrototypeOf()")}}
+- {{jsxref("Reflect.setPrototypeOf()")}}

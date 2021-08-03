@@ -11,78 +11,60 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/function*
 original_slug: Web/JavaScript/Reference/Opérateurs/function*
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>Le mot-clé <strong><code>function*</code></strong> peut être utilisé pour définir une fonction génératrice à l'intérieur d'une expression.</p>
+Le mot-clé **`function*`** peut être utilisé pour définir une fonction génératrice à l'intérieur d'une expression.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-functionasteriskexpression.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-functionasteriskexpression.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">function* [<em>nom</em>]([<em>param1</em>[, <em>param2[</em>, ..., <em>paramN</em>]]]) {
-   <em>instructions</em>
-}</pre>
+    function* [nom]([param1[, param2[, ..., paramN]]]) {
+       instructions
+    }
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>nom</code></dt>
- <dd>Le nom de la fonction. Ce paramètre est optionnel, auquel cas la fonction sera une fonction <em>anonyme</em>. Le nom sera local par rapport au corps de la fonction.</dd>
- <dt><code>paramN</code></dt>
- <dd>Le nom d'un argument à passer à la fonction. Une fonction peut avoir jusqu'à 255 arguments.</dd>
- <dt><code>instructions</code></dt>
- <dd>Les instructions qui forment le corps de la fonction.</dd>
-</dl>
+- `nom`
+  - : Le nom de la fonction. Ce paramètre est optionnel, auquel cas la fonction sera une fonction _anonyme_. Le nom sera local par rapport au corps de la fonction.
+- `paramN`
+  - : Le nom d'un argument à passer à la fonction. Une fonction peut avoir jusqu'à 255 arguments.
+- `instructions`
+  - : Les instructions qui forment le corps de la fonction.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Une expression <code>function*</code> est très semblable à une instruction {{jsxref('Instructions/function*', 'function*')}}, elle possède également une syntaxe similaire. La différence principale entre une expression <code>function*</code> et une instruction <code>function*</code> est le nom de la fonction. En effet, dans les expressions, le nom peut être omis pour créer une fonction génératrice<em> anonyme</em>. Voir également le chapitre sur les <a href="/fr/docs/Web/JavaScript/Reference/Fonctions">fonctions</a> pour plus d'informations.</p>
+Une expression `function*` est très semblable à une instruction {{jsxref('Instructions/function*', 'function*')}}, elle possède également une syntaxe similaire. La différence principale entre une expression `function*` et une instruction `function*` est le nom de la fonction. En effet, dans les expressions, le nom peut être omis pour créer une fonction génératrice _anonyme_. Voir également le chapitre sur les [fonctions](/fr/docs/Web/JavaScript/Reference/Fonctions) pour plus d'informations.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>L'exemple qui suit illustre comment définir une génératrice anonyme et l'affecter à une variable <code>x</code>. Cette fonction génèrera le carré de son argument :</p>
+L'exemple qui suit illustre comment définir une génératrice anonyme et l'affecter à une variable `x`. Cette fonction génèrera le carré de son argument :
 
-<pre class="brush: js">var x = function*(y) {
+```js
+var x = function*(y) {
    yield y * y;
 };
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-generator-function-definitions', 'function*')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-generator-function-definitions', 'function*')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                         | Commentaires         |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-generator-function-definitions', 'function*')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-generator-function-definitions', 'function*')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.operators.function_star")}}</p>
+{{Compat("javascript.operators.function_star")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'instruction {{jsxref("Instructions/function*", "function*")}}</li>
- <li>L'objet {{jsxref("GeneratorFunction")}}</li>
- <li><a href="/fr/docs/Web/JavaScript/Guide/The_Iterator_protocol">Le protocole itérateur</a></li>
- <li>{{jsxref("Opérateurs/yield", "yield")}}</li>
- <li>{{jsxref("Opérateurs/yield*", "yield*")}}</li>
- <li>L'objet {{jsxref("Function")}}</li>
- <li>L'instruction {{jsxref("Instructions/function", "function")}}</li>
- <li>L'expression {{jsxref("Opérateurs/L_opérateur_function", "function")}}</li>
- <li>{{jsxref("Fonctions", "Fonctions et portée des fonctions","","1")}}</li>
-</ul>
+- L'instruction {{jsxref("Instructions/function*", "function*")}}
+- L'objet {{jsxref("GeneratorFunction")}}
+- [Le protocole itérateur](/fr/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- {{jsxref("Opérateurs/yield", "yield")}}
+- {{jsxref("Opérateurs/yield*", "yield*")}}
+- L'objet {{jsxref("Function")}}
+- L'instruction {{jsxref("Instructions/function", "function")}}
+- L'expression {{jsxref("Opérateurs/L_opérateur_function", "function")}}
+- {{jsxref("Fonctions", "Fonctions et portée des fonctions","","1")}}

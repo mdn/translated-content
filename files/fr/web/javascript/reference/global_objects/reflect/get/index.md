@@ -10,43 +10,41 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/get
 original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/get
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode statique <code><strong>Reflect.get()</strong></code> est une fonction qui permet d'obtenir une propriété d'un objet cible. Elle fonctionne comme (<code>cible[cléPropriété]</code>) mais sous la forme d'une fonction.</p>
+La méthode statique **`Reflect.get()`** est une fonction qui permet d'obtenir une propriété d'un objet cible. Elle fonctionne comme (`cible[cléPropriété]`) mais sous la forme d'une fonction.
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-get.html")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-get.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Reflect.get(<var>cible</var>, <var>cléPropriété</var>[, <var>récepteur</var>])
-</pre>
+    Reflect.get(cible, cléPropriété[, récepteur])
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>cible</code></dt>
- <dd>L'objet cible dont on souhaite obtenir la propriété.</dd>
- <dt><code>cléPropriété</code></dt>
- <dd>Le nom de la propriété qu'on souhaite obtenir.</dd>
- <dt><code>récepteur</code> {{optional_inline}}</dt>
- <dd>La valeur de <code>this</code> à passer à <code>cible</code> si l'accesseur est utilisé. Lorsqu'on l'utilise avec {{jsxref("Proxy")}}, ce peut être un objet qui hérite de la cible.</dd>
-</dl>
+- `cible`
+  - : L'objet cible dont on souhaite obtenir la propriété.
+- `cléPropriété`
+  - : Le nom de la propriété qu'on souhaite obtenir.
+- `récepteur` {{optional_inline}}
+  - : La valeur de `this` à passer à `cible` si l'accesseur est utilisé. Lorsqu'on l'utilise avec {{jsxref("Proxy")}}, ce peut être un objet qui hérite de la cible.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>La valeur de la propriété.</p>
+La valeur de la propriété.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>Une erreur {{jsxref("TypeError")}} si <code>cible</code> n'est pas un {{jsxref("Object")}}.</p>
+Une erreur {{jsxref("TypeError")}} si `cible` n'est pas un {{jsxref("Object")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code>Reflect.get</code> permet d'obtenir une propriété d'un objet. Elle est équivalent à <a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres">un accesseur de propriété</a> mais sous la forme d'une fonction.</p>
+La méthode `Reflect.get` permet d'obtenir une propriété d'un objet. Elle est équivalent à [un accesseur de propriété](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres) mais sous la forme d'une fonction.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">// Object
+```js
+// Object
 var obj = { x: 1, y: 2 };
 Reflect.get(obj, "x"); // 1
 
@@ -59,37 +57,20 @@ var obj = new Proxy(x, {
   get(t, k, r) { return k + "truc"; }
 });
 Reflect.get(obj, "toto"); // "tototruc"
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-reflect.get', 'Reflect.get')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-reflect.get', 'Reflect.get')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | État                         | Commentaires        |
+| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES2015', '#sec-reflect.get', 'Reflect.get')}} | {{Spec2('ES2015')}}     | Définition initiale |
+| {{SpecName('ESDraft', '#sec-reflect.get', 'Reflect.get')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Reflect.get")}}</p>
+{{Compat("javascript.builtins.Reflect.get")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres">Accesseurs de propriété</a></li>
-</ul>
+- {{jsxref("Reflect")}}
+- [Accesseurs de propriété](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_membres)

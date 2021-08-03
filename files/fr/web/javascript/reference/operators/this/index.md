@@ -8,27 +8,28 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/this
 original_slug: Web/JavaScript/Reference/Opérateurs/L_opérateur_this
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>En JavaScript, <strong>le mot-clé <code>this</code></strong> se comporte légèrement différemment des autres langages de programmation. Son comportement variera également légèrement selon qu'on utilise le <a href="/fr/docs/Web/JavaScript/Reference/Strict_mode">mode strict</a> ou le mode non-strict.</p>
+En JavaScript, **le mot-clé `this`** se comporte légèrement différemment des autres langages de programmation. Son comportement variera également légèrement selon qu'on utilise le [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) ou le mode non-strict.
 
-<p>Dans la plupart des cas, la valeur de <code>this</code> sera déterminée à partir de la façon dont une fonction est appelée. Il n'est pas possible de lui affecter une valeur lors de l'exécution et sa valeur peut être différente à chaque fois que la fonction est appelée. La méthode {{jsxref("Function.prototype.bind()","bind()")}} a été introduite avec ECMAScript 5 pour <a href="#bind">définir la valeur de <code>this</code> pour une fonction, indépendamment de la façon dont elle est appelée</a>. ECMAScript 2015 (ES6) a ajouté <a href="/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es">les fonctions fléchées</a> dans lesquelles <code>this</code> correspond à la valeur du contexte englobant.</p>
+Dans la plupart des cas, la valeur de `this` sera déterminée à partir de la façon dont une fonction est appelée. Il n'est pas possible de lui affecter une valeur lors de l'exécution et sa valeur peut être différente à chaque fois que la fonction est appelée. La méthode {{jsxref("Function.prototype.bind()","bind()")}} a été introduite avec ECMAScript 5 pour [définir la valeur de `this` pour une fonction, indépendamment de la façon dont elle est appelée](#bind). ECMAScript 2015 (ES6) a ajouté [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es) dans lesquelles `this` correspond à la valeur du contexte englobant.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-this.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-this.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">this</pre>
+    this
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>L'objet JavaScript représentant le contexte dans lequel le code courant est exécuté.</p>
+L'objet JavaScript représentant le contexte dans lequel le code courant est exécuté.
 
-<h2 id="Dans_le_contexte_global">Dans le contexte global</h2>
+## Dans le contexte global
 
-<p>Dans le contexte global d'exécution (c'est-à-dire, celui en dehors de toute fonction), <code>this</code> fait référence à l'objet global (qu'on utilise ou non le mode strict).</p>
+Dans le contexte global d'exécution (c'est-à-dire, celui en dehors de toute fonction), `this` fait référence à l'objet global (qu'on utilise ou non le mode strict).
 
-<pre class="brush:js">// Si l'environnement de script est un navigateur,
+```js
+// Si l'environnement de script est un navigateur,
 // l'objet window sera l'objet global
 console.log(this === window); // true
 
@@ -38,19 +39,18 @@ console.log(window.a); // 37
 this.b = "MDN";
 console.log(window.b); // "MDN"
 console.log(b);        // "MDN"
-</pre>
+```
 
-<div class="note">
-<p><strong>Note :</strong> Il est également possible d'accéder au contexte global avec la propriété {{jsxref("globalThis")}} quel que soit le contexte utilisé pour l'exécution.</p>
-</div>
+> **Note :** Il est également possible d'accéder au contexte global avec la propriété {{jsxref("globalThis")}} quel que soit le contexte utilisé pour l'exécution.
 
-<h2 id="Dans_le_contexte_dune_fonction">Dans le contexte d'une fonction</h2>
+## Dans le contexte d'une fonction
 
-<p>S'il est utilisé dans une fonction, la valeur de <code>this</code> dépendra de la façon dont la fonction a été appelée.</p>
+S'il est utilisé dans une fonction, la valeur de `this` dépendra de la façon dont la fonction a été appelée.
 
-<h3 id="Avec_un_appel_simple">Avec un appel simple</h3>
+### Avec un appel simple
 
-<pre class="brush:js">function f1(){
+```js
+function f1(){
   return this;
 }
 
@@ -59,27 +59,29 @@ f1() === window; // true (objet global)
 
 // Côté serveur (ex. Node)
 f1() === global; // true
-</pre>
+```
 
-<p>Dans cet exemple, la valeur de <code>this</code> n'est pas définie lors de l'appel. Le code n'étant pas en mode strict, <code>this</code> doit toujours être un objet et ce sera donc l'objet global (soit {{domxref("Window", "window")}} pour un navigateur).</p>
+Dans cet exemple, la valeur de `this` n'est pas définie lors de l'appel. Le code n'étant pas en mode strict, `this` doit toujours être un objet et ce sera donc l'objet global (soit {{domxref("Window", "window")}} pour un navigateur).
 
-<pre class="brush:js">function f2(){
+```js
+function f2(){
   "use strict"; // on utilise le mode strict
   return this;
 }
 
 f2() === undefined; // true
-</pre>
+```
 
-<p>En mode strict, la valeur de <code>this</code> est conservée (il reste le même) entre le moment de sa définition et l'entrée dans le contexte d'exécution. S'il n'est pas défini, il reste <code>undefined</code>. Il pourrait être défini avec n'importe quelle autre valeur, telle que <code>null</code> ou <code>42</code> ou <code>"Je ne suis pas this"</code>.</p>
+En mode strict, la valeur de `this` est conservée (il reste le même) entre le moment de sa définition et l'entrée dans le contexte d'exécution. S'il n'est pas défini, il reste `undefined`. Il pourrait être défini avec n'importe quelle autre valeur, telle que `null` ou `42` ou `"Je ne suis pas this"`.
 
-<div class="note"><p><strong>Note :</strong> Dans ce deuxième exemple,<code>this</code> vaut {{jsxref("undefined")}} car <code>f2</code> a été appelé sans « base » (ex. : <code>window.f2()</code>). Cette fonctionnalité ne fut pas correctement implémentée dans certains navigateurs aux débuts du mode strict, en effet, certains renvoyaient alors l'objet <code>window</code>.</p></div>
+> **Note :** Dans ce deuxième exemple,`this` vaut {{jsxref("undefined")}} car `f2` a été appelé sans « base » (ex. : `window.f2()`). Cette fonctionnalité ne fut pas correctement implémentée dans certains navigateurs aux débuts du mode strict, en effet, certains renvoyaient alors l'objet `window`.
 
-<h3 id="call_et_apply"><code>call</code> et <code>apply</code></h3>
+### `call` et `apply`
 
-<p>Pour passer <code>this</code> d'un contexte à un autre, on pourra utiliser {{jsxref("Function.prototype.call()", "call()")}} ou {{jsxref("Function.prototype.apply()", "apply()")}} :</p>
+Pour passer `this` d'un contexte à un autre, on pourra utiliser {{jsxref("Function.prototype.call()", "call()")}} ou {{jsxref("Function.prototype.apply()", "apply()")}} :
 
-<pre class="brush: js">// Un objet peut être passé en premier argument
+```js
+// Un objet peut être passé en premier argument
 // de call ou de apply
 var obj = { a: "Toto" };
 
@@ -95,11 +97,12 @@ function whatsThis(arg) {
 whatsThis();          // 'Global' car celui-ci dans la fonction n'est pas défini, il est donc défini par défaut sur l'objet global window
 whatsThis.call(obj);  // "Toto"
 whatsThis.apply(obj); // "Toto"
-</pre>
+```
 
-<p>Lorsque le mot-clé <code>this</code> est utilisé dans le corps d'une fonction, il est possible d'utiliser les méthodes {{jsxref("Function.prototype.call()", "call()")}} ou {{jsxref("Function.prototype.apply()", "apply()")}} pour lier <code>this</code> à un objet donné. Toutes les fonctions héritent de ces méthodes grâce à {{jsxref("Function.prototype")}}.</p>
+Lorsque le mot-clé `this` est utilisé dans le corps d'une fonction, il est possible d'utiliser les méthodes {{jsxref("Function.prototype.call()", "call()")}} ou {{jsxref("Function.prototype.apply()", "apply()")}} pour lier `this` à un objet donné. Toutes les fonctions héritent de ces méthodes grâce à {{jsxref("Function.prototype")}}.
 
-<pre class="brush:js">function ajout(c, d){
+```js
+function ajout(c, d){
   return this.a + this.b + c + d;
 }
 
@@ -114,23 +117,25 @@ ajout.call(o, 5, 7); // 1 + 3 + 5 + 7 = 16
 // lier à 'this', le second paramètre est le tableau dont les
 // les éléments sont les arguments à passer à la fonction
 ajout.apply(o, [10, 20]); // 1 + 3 + 10 + 20 = 34
-</pre>
+```
 
-<p>Note : En mode non-strict, si la valeur à lier à <code>this</code>, passée à <code>call</code> ou <code>apply</code>, n'est pas un objet, le moteur JavaScript tentera de la convertir en un objet grâce à l'opération interne <code>ToObject</code>. Si la valeur est d'un type primitif autre qu'objet, <code>7</code> ou <code>'toto'</code> par exemple, elle sera convertie en un objet grâce au constructeur associé. Ainsi, on aura le nombre <code>7</code> converti en un objet grâce à <code>new Number(7)</code> et la chaîne <code>'toto'</code> convertie en objet grâce à <code>new String('toto')</code>.</p>
+Note : En mode non-strict, si la valeur à lier à `this`, passée à `call` ou `apply`, n'est pas un objet, le moteur JavaScript tentera de la convertir en un objet grâce à l'opération interne `ToObject`. Si la valeur est d'un type primitif autre qu'objet, `7` ou `'toto'` par exemple, elle sera convertie en un objet grâce au constructeur associé. Ainsi, on aura le nombre `7` converti en un objet grâce à `new Number(7)` et la chaîne `'toto'` convertie en objet grâce à `new String('toto')`.
 
-<pre class="brush:js">function truc() {
+```js
+function truc() {
   console.log(Object.prototype.toString.call(this));
 }
 
 truc.call(7);     // [object Number]
 truc.call('foo'); // [object String]
-</pre>
+```
 
-<h3 id="La_méthode_bind">La méthode <code>bind</code></h3>
+### La méthode `bind`
 
-<p>Avec ECMAScript 5, une nouvelle fonction fut introduite : {{jsxref("Function.prototype.bind()")}}. Lorsqu'on appelle <code>f.bind(unObjet)</code>, on crée une nouvelle fonction qui possède le même corps et la même portée que <code>f</code>, mais où <code>this</code> sera lié, de façon permanente, au premier argument passé à <code>bind</code>, quelle que soit la façon dont la méthode est utilisée.</p>
+Avec ECMAScript 5, une nouvelle fonction fut introduite : {{jsxref("Function.prototype.bind()")}}. Lorsqu'on appelle `f.bind(unObjet)`, on crée une nouvelle fonction qui possède le même corps et la même portée que `f`, mais où `this` sera lié, de façon permanente, au premier argument passé à `bind`, quelle que soit la façon dont la méthode est utilisée.
 
-<pre class="brush:js">function f(){
+```js
+function f(){
   return this.a;
 }
 
@@ -142,19 +147,22 @@ console.log(h()); // azerty
 
 var o = {a:37, f:f, g:g, h:h};
 console.log(o.a, o.f(), o.g(), o.h()); // 37, 37, azerty, azerty
-</pre>
+```
 
-<h3 id="Avec_les_fonctions_fléchées">Avec les fonctions fléchées</h3>
+### Avec les fonctions fléchées
 
-<p>En utilisant <a href="/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées">les fonctions fléchées</a>, <code>this</code> correspond à la valeur de <code>this</code> utilisé dans le contexte englobant. Lorsqu'on utilise une fonction fléchée dans du code global, <code>this</code> sera l'objet global :</p>
+En utilisant [les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées), `this` correspond à la valeur de `this` utilisé dans le contexte englobant. Lorsqu'on utilise une fonction fléchée dans du code global, `this` sera l'objet global :
 
-<pre class="brush: js">var objetGlobal = this;
-var toto = (() =&gt; this);
-console.log(toto() === objetGlobal); // true</pre>
+```js
+var objetGlobal = this;
+var toto = (() => this);
+console.log(toto() === objetGlobal); // true
+```
 
-<p>Peu importe la façon dont <code>toto</code> sera appelée, <code>this</code> sera toujours l'objet global. Cela est également valable pour les méthodes d'objet (où généralement <code>this</code> correspond à l'objet courant) ou lorsque <code>call</code>, <code>apply</code> ou <code>bind</code> sont utilisés :</p>
+Peu importe la façon dont `toto` sera appelée, `this` sera toujours l'objet global. Cela est également valable pour les méthodes d'objet (où généralement `this` correspond à l'objet courant) ou lorsque `call`, `apply` ou `bind` sont utilisés :
 
-<pre class="brush: js">// Appelé comme la méthode d'un objet
+```js
+// Appelé comme la méthode d'un objet
 var obj = {toto: toto};
 console.log(obj.toto() === objetGlobal); // true
 
@@ -162,11 +170,13 @@ console.log(obj.toto() === objetGlobal); // true
 console.log(toto.call(obj) === objetGlobal); // true
 // Là on utilise bind
 toto = toto.bind(obj);
-console.log(toto() === objetGlobal); // true</pre>
+console.log(toto() === objetGlobal); // true
+```
 
-<p>Quelle que soit la méthode utilisée le <code>this</code> de <code>toto</code> sera défini avec la valeur qu'il avait lors de la création (dans l'exemple précédent, il s'agit de l'objet global). Cela vaut également pour les fonctions fléchées créées dans d'autres fonctions : <code>this</code> prendra la valeur de <code>this</code> dans le contexte englobant.</p>
+Quelle que soit la méthode utilisée le `this` de `toto` sera défini avec la valeur qu'il avait lors de la création (dans l'exemple précédent, il s'agit de l'objet global). Cela vaut également pour les fonctions fléchées créées dans d'autres fonctions : `this` prendra la valeur de `this` dans le contexte englobant.
 
-<pre class="brush: js">// On crée un objet obj qui a une méthode truc
+```js
+// On crée un objet obj qui a une méthode truc
 // qui renvoie une fonction qui renvoie la
 // valeur de this.
 // La fonction qui est renvoyée est créée sous
@@ -174,7 +184,7 @@ console.log(toto() === objetGlobal); // true</pre>
 // donc fixé de façon permanente avec la valeur
 // de this du contexte englobant.
 var obj = { truc : function() {
-                    var x = (() =&gt; this);
+                    var x = (() => this);
                     return x;
                   }
           };
@@ -195,17 +205,19 @@ var fn2 = obj.truc;
 // Appeler le this de la fonction fléchée dans ce contexte
 // renverra window car c'est le this associé à fn2 (qui
 // correspond au contexte global)
-console.log(fn2()() == window); // true</pre>
+console.log(fn2()() == window); // true
+```
 
-<p>Dans l'exemple précédent, la fonction affectée à <code>obj.truc</code> renvoie une autre fonction créée sous la forme d'une fonction fléchée. Par conséquent, <code>this</code> vaut toujours <code>obj.truc</code> lorsque la fonction est appelée. Lorsque la fonction est renvoyée, <code>this</code> continue de correspondre à la valeur initiale. Dans ce code, <code>this</code> vaut <code>obj</code> et garde cette valeur, même lorsqu'il est appelé plus tard.</p>
+Dans l'exemple précédent, la fonction affectée à `obj.truc` renvoie une autre fonction créée sous la forme d'une fonction fléchée. Par conséquent, `this` vaut toujours `obj.truc` lorsque la fonction est appelée. Lorsque la fonction est renvoyée, `this` continue de correspondre à la valeur initiale. Dans ce code, `this` vaut `obj` et garde cette valeur, même lorsqu'il est appelé plus tard.
 
-<h3 id="En_tant_que_méthode_dun_objet">En tant que méthode d'un objet</h3>
+### En tant que méthode d'un objet
 
-<p>Lorsqu'une fonction est appelée comme méthode d'un objet, <code>this</code> correspondra à l'objet possédant la méthode qu'on appelle.</p>
+Lorsqu'une fonction est appelée comme méthode d'un objet, `this` correspondra à l'objet possédant la méthode qu'on appelle.
 
-<p>Ainsi, dans l'exemple suivant, lorsqu'on appelle <code>o.f()</code>, le <code>this</code> contenu à l'intérieur de la fonction correspond à l'objet <code>o</code>.</p>
+Ainsi, dans l'exemple suivant, lorsqu'on appelle `o.f()`, le `this` contenu à l'intérieur de la fonction correspond à l'objet `o`.
 
-<pre class="brush:js">var o = {
+```js
+var o = {
   prop: 37,
   f: function() {
     return this.prop;
@@ -213,11 +225,12 @@ console.log(fn2()() == window); // true</pre>
 };
 
 console.log(o.f()); // 37
-</pre>
+```
 
-<p>On notera que ce comportement n'est pas du tout affecté par la façon ou l'endroit de la définition de la fonction. Dans l'exemple précédent, on aurait très bien pu définir la fonction plus tard et la rattacher à une propriété de <code>o</code> plutôt que de la déclarer de cette façon. On aura le même résultat en faisant ainsi :</p>
+On notera que ce comportement n'est pas du tout affecté par la façon ou l'endroit de la définition de la fonction. Dans l'exemple précédent, on aurait très bien pu définir la fonction plus tard et la rattacher à une propriété de `o` plutôt que de la déclarer de cette façon. On aura le même résultat en faisant ainsi :
 
-<pre class="brush:js">var o = {prop: 37};
+```js
+var o = {prop: 37};
 
 function indépendante() {
   return this.prop;
@@ -226,35 +239,38 @@ function indépendante() {
 o.f = indépendante;
 
 console.log(o.f()); // 37
-</pre>
+```
 
-<p>On voit ici que ce qui importe est la façon dont la fonction est appelée et non pas la façon dont elle est définie. Ici la fonction est appelée comme une propriété (méthode) de <code>o</code>.</p>
+On voit ici que ce qui importe est la façon dont la fonction est appelée et non pas la façon dont elle est définie. Ici la fonction est appelée comme une propriété (méthode) de `o`.
 
-<p>De la même façon, <code>this</code> n'est affecté que par la référence la plus proche. Autrement dit, dans l'exemple suivant quand on appelle la fonction <code>o.b.g</code>, on appelle la méthode <code>g</code> de l'objet <code>o.b</code>. Ainsi, au moment de l'exécution, <code>this</code> fera référence à <code>o.b</code>. Le fait que cet objet soit une propriété de <code>o</code> n'a aucun impact : seule la référence objet la plus proche compte.</p>
+De la même façon, `this` n'est affecté que par la référence la plus proche. Autrement dit, dans l'exemple suivant quand on appelle la fonction `o.b.g`, on appelle la méthode `g` de l'objet `o.b`. Ainsi, au moment de l'exécution, `this` fera référence à `o.b`. Le fait que cet objet soit une propriété de `o` n'a aucun impact : seule la référence objet la plus proche compte.
 
-<pre class="brush:js">o.b = {g: indépendante, prop: 42};
+```js
+o.b = {g: indépendante, prop: 42};
 console.log(o.b.g()); // 42
-</pre>
+```
 
-<h4 id="this_sur_la_chaîne_de_prototypes_de_lobjet"><code>this</code> sur la chaîne de prototypes de l'objet</h4>
+#### `this` sur la chaîne de prototypes de l'objet
 
-<p>Ce qui a été vu ci-avant est également applicable pour les méthodes qui sont présentes sur la chaîne de prototypes de l'objet. Si une méthode se situe sur la chaîne de prototype, <code>this</code> fera référence à l'objet appelant (de la même façon que si la méthode était une propriété directe de l'objet).</p>
+Ce qui a été vu ci-avant est également applicable pour les méthodes qui sont présentes sur la chaîne de prototypes de l'objet. Si une méthode se situe sur la chaîne de prototype, `this` fera référence à l'objet appelant (de la même façon que si la méthode était une propriété directe de l'objet).
 
-<pre class="brush:js">var o = {f:function(){ return this.a + this.b; }};
+```js
+var o = {f:function(){ return this.a + this.b; }};
 var p = Object.create(o);
 p.a = 1;
 p.b = 4;
 
 console.log(p.f()); // 5
-</pre>
+```
 
-<p>Dans cet exemple, l'objet qui est affecté à la variable <code>p</code> ne possède pas directement la propriété <code>f</code>, il en hérite de par son prototype. Cela n'impacte en rien la détermination de <code>this</code> car la recherche de la propriété <code>f</code> remonte le long de la chaîne de prototype et s'arrête à <code>o</code>. Au début de cette recherche, on a une référence à <code>p.f</code>, aussi <code>this</code> fera référence à l'objet représenté par <code>p</code>. Autrement dit <code>f</code> étant appelé comme une méthode de <code>p</code>, <code>this</code> fera ici référence à <code>p</code>. Cette fonctionnalité fait partie des caractéristiques de l'héritage prototypal de JavaScript.</p>
+Dans cet exemple, l'objet qui est affecté à la variable `p` ne possède pas directement la propriété `f`, il en hérite de par son prototype. Cela n'impacte en rien la détermination de `this` car la recherche de la propriété `f` remonte le long de la chaîne de prototype et s'arrête à `o`. Au début de cette recherche, on a une référence à `p.f`, aussi `this` fera référence à l'objet représenté par `p`. Autrement dit `f` étant appelé comme une méthode de `p`, `this` fera ici référence à `p`. Cette fonctionnalité fait partie des caractéristiques de l'héritage prototypal de JavaScript.
 
-<h4 id="this_dans_un_getter_ou_setter"><code>this</code> dans un <em>getter</em> ou <em>setter</em></h4>
+#### `this` dans un _getter_ ou _setter_
 
-<p>Ici aussi, on a le même principe lorsque la fonction est appelée à partir d'un accesseur (<em>getter</em>) ou d'un mutateur (<em>setter</em>). Une fonction utilisée comme accesseur ou mutateur verra son <code>this</code> lié à l'objet à partir duquel on souhaite accéder/changer la propriété.</p>
+Ici aussi, on a le même principe lorsque la fonction est appelée à partir d'un accesseur (_getter_) ou d'un mutateur (_setter_). Une fonction utilisée comme accesseur ou mutateur verra son `this` lié à l'objet à partir duquel on souhaite accéder/changer la propriété.
 
-<pre class="brush:js">function moduleRéel(){
+```js
+function moduleRéel(){
   return Math.sqrt(this.re * this.re + this.im * this.im);
 }
 
@@ -270,17 +286,16 @@ Object.defineProperty(o, 'moduleRéel', {
     get: moduleRéel, enumerable:true, configurable:true});
 
 console.log(o.phase, o.moduleRéel); // logs -0.78 1.4142
-</pre>
+```
 
-<h3 id="En_tant_que_constructeur">En tant que constructeur</h3>
+### En tant que constructeur
 
-<p>Lorsqu'une fonction est utilisée comme constructeur (c'est-à-dire qu'elle est invoquée avec le mot-clé {{jsxref("Opérateurs/L_opérateur_new","new")}}), le <code>this</code> correspondant sera lié au nouvel objet en train d'être construit.</p>
+Lorsqu'une fonction est utilisée comme constructeur (c'est-à-dire qu'elle est invoquée avec le mot-clé {{jsxref("Opérateurs/L_opérateur_new","new")}}), le `this` correspondant sera lié au nouvel objet en train d'être construit.
 
-<div class="note">
-<p><strong>Note :</strong> Par défaut, un constructeur renverra l'objet auquel <code>this</code> fait référence. Cependant si la valeur de retour du constructeur est définie et est un objet, ce sera elle qui sera renvoyée (sinon ce sera la valeur de <code>this</code>).</p>
-</div>
+> **Note :** Par défaut, un constructeur renverra l'objet auquel `this` fait référence. Cependant si la valeur de retour du constructeur est définie et est un objet, ce sera elle qui sera renvoyée (sinon ce sera la valeur de `this`).
 
-<pre class="brush:js">/*
+```js
+/*
  * Les constructeurs fonctionnent de la façon suivante :
  *
  * function MonConstructeur(){
@@ -316,15 +331,16 @@ function C2(){
 
 o = new C2();
 console.log(o.a); // 38
-</pre>
+```
 
-<p>Dans le dernier exemple (<code>C2</code>), on renvoie un objet lors de la construction. L'objet qui était lié <code>this</code> est alors abandonné. (L'instruction "<code>this.a = 37;</code>" devient alors totalement inutile, bien qu'elle soit exécutée, elle n'aura aucun effet de bord.)</p>
+Dans le dernier exemple (`C2`), on renvoie un objet lors de la construction. L'objet qui était lié `this` est alors abandonné. (L'instruction "`this.a = 37;`" devient alors totalement inutile, bien qu'elle soit exécutée, elle n'aura aucun effet de bord.)
 
-<h3 id="En_tant_que_gestionnaire_dévénement_DOM">En tant que gestionnaire d'événement DOM</h3>
+### En tant que gestionnaire d'événement DOM
 
-<p>Lorsqu'une fonction est utilisée comme gestionnaire d'événement (<em>event handler</em>), le <code>this</code> correspondant prendra la valeur de l'élément ayant déclenché l'événement (certains navigateurs ne suivent pas cette convention et les gestionnaires sont ajoutés dynamiquement avec d'autres méthodes qu'{{domxref("EventTarget.addEventListener()", "addEventListener()")}}).</p>
+Lorsqu'une fonction est utilisée comme gestionnaire d'événement (_event handler_), le `this` correspondant prendra la valeur de l'élément ayant déclenché l'événement (certains navigateurs ne suivent pas cette convention et les gestionnaires sont ajoutés dynamiquement avec d'autres méthodes qu'{{domxref("EventTarget.addEventListener()", "addEventListener()")}}).
 
-<pre class="brush:js">// Lorsque cette fonction est appelée
+```js
+// Lorsque cette fonction est appelée
 // comme listener, l'élément associé
 // sera coloré en bleu
 function bluify(e){
@@ -344,74 +360,48 @@ var elements = document.getElementsByTagName('*');
 
 // On ajout le listener bluify pour réagier au clic
 // Quand on clique sur un élément, il deviendra bleu
-for(var i=0 ; i&lt;elements.length ; i++){
+for(var i=0 ; i<elements.length ; i++){
   elements[i].addEventListener('click', bluify, false);
-}</pre>
+}
+```
 
-<h3 id="En_tant_que_gestionnaire_dévénements_in-line">En tant que gestionnaire d'événements <em>in-line</em></h3>
+### En tant que gestionnaire d'événements _in-line_
 
-<p>Lorsque le code est appelé depuis un gestionnaire d'événement « en ligne » (<em>in-line</em>), la valeur de <code>this</code> correspondra à l'élément du DOM sur lequel on a placé le <em>listener</em>. Ainsi :</p>
+Lorsque le code est appelé depuis un gestionnaire d'événement « en ligne » (_in-line_), la valeur de `this` correspondra à l'élément du DOM sur lequel on a placé le _listener_. Ainsi :
 
-<pre class="brush:js">&lt;button onclick="console.log(this.tagName.toLowerCase());"&gt;
+```js
+<button onclick="console.log(this.tagName.toLowerCase());">
   Afficher this
-&lt;/button&gt;
-</pre>
+</button>
+```
 
-<p>montrera le texte <code>button</code> lorsqu'on cliquera dessus. Attention, seul le code externe verra la valeur de <code>this</code> affectée de cette façon :</p>
+montrera le texte `button` lorsqu'on cliquera dessus. Attention, seul le code externe verra la valeur de `this` affectée de cette façon :
 
-<pre class="brush:js">&lt;button onclick="console.log((function(){return this})());"&gt;
+```js
+<button onclick="console.log((function(){return this})());">
   Afficher le this interne
-&lt;/button&gt;
-</pre>
+</button>
+```
 
-<p>Ici, on utilise <code>this </code>à l'intérieur d'une fonction et il n'est pas défini en amont. Il renvoie donc l'objet global (l'objet <code>window</code> pour un navigateur avec du code non-strict).</p>
+Ici, on utilise `this `à l'intérieur d'une fonction et il n'est pas défini en amont. Il renvoie donc l'objet global (l'objet `window` pour un navigateur avec du code non-strict).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-this-keyword', 'Le mot-clé this')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-this-keyword', 'Le mot-clé this')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-11.1.1', 'Le mot-clé this')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3', '#sec-11.1.1', 'Le mot-clé this')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1', '#sec-11.1.1', 'Le mot-clé this')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.0.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                         | Commentaires                                          |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-this-keyword', 'Le mot-clé this')}} | {{Spec2('ESDraft')}} |                                                       |
+| {{SpecName('ES2015', '#sec-this-keyword', 'Le mot-clé this')}} | {{Spec2('ES2015')}}     |                                                       |
+| {{SpecName('ES5.1', '#sec-11.1.1', 'Le mot-clé this')}}         | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES3', '#sec-11.1.1', 'Le mot-clé this')}}             | {{Spec2('ES3')}}         |                                                       |
+| {{SpecName('ES1', '#sec-11.1.1', 'Le mot-clé this')}}             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.operators.this")}}</p>
+{{Compat("javascript.operators.this")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Strict_mode">Le mode strict</a></li>
- <li><a href="https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&amp;%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes">this &amp; les prototypes objet</a> de Kyle Simpson sur GitHub (en anglais)</li>
- <li><a href="https://dmitripavlutin.com/gentle-explanation-of-this-in-javascript/">Un article explicatif sur <code>this</code> (en anglais)</a></li>
- <li>La propriété {{jsxref("globalThis")}} qui permet d'accéder à l'objet global <code>this</code></li>
-</ul>
+- [Le mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode)
+- [this & les prototypes objet](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20&%20object%20prototypes/README.md#you-dont-know-js-this--object-prototypes) de Kyle Simpson sur GitHub (en anglais)
+- [Un article explicatif sur `this` (en anglais)](https://dmitripavlutin.com/gentle-explanation-of-this-in-javascript/)
+- La propriété {{jsxref("globalThis")}} qui permet d'accéder à l'objet global `this`

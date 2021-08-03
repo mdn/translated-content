@@ -10,60 +10,58 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/resolve
 original_slug: Web/JavaScript/Reference/Objets_globaux/Promise/resolve
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>Promise.resolve(valeur)</strong></code> renvoie un objet {{jsxref("Promise")}} qui est résolu avec la valeur donnée. Si cette valeur est une promesse, la promesse est renvoyée, si la valeur possède une méthode {{jsxref("Promise.then","then")}}, la promesse renvoyée « suivra » cette méthode et prendra son état ; sinon, la promesse renvoyée sera tenue avec la valeur.</p>
+La méthode **`Promise.resolve(valeur)`** renvoie un objet {{jsxref("Promise")}} qui est résolu avec la valeur donnée. Si cette valeur est une promesse, la promesse est renvoyée, si la valeur possède une méthode {{jsxref("Promise.then","then")}}, la promesse renvoyée « suivra » cette méthode et prendra son état ; sinon, la promesse renvoyée sera tenue avec la valeur.
 
-<div>{{EmbedInteractiveExample("pages/js/promise-resolve.html")}}</div>
+{{EmbedInteractiveExample("pages/js/promise-resolve.html")}}
 
-<div class="warning">
-<p><strong>Attention :</strong> <code>Promise.resolve()</code> ne doit pas être appelée sur un objet <em>thenable</em> qui se résout en lui-même. Cela provoquera une récursion infinie et <code>resolve()</code> tentera d'aplatir ce qui ressemble à une promesse imbriquée à l'infini.</p>
-</div>
+> **Attention :** `Promise.resolve()` ne doit pas être appelée sur un objet _thenable_ qui se résout en lui-même. Cela provoquera une récursion infinie et `resolve()` tentera d'aplatir ce qui ressemble à une promesse imbriquée à l'infini.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>Promise.resolve(valeur)</var>;
-Promise.resolve(promesse);
-Promise.resolve(suivant);
-</pre>
+    Promise.resolve(valeur);
+    Promise.resolve(promesse);
+    Promise.resolve(suivant);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>valeur</code></dt>
- <dd>L'argument qu'on souhaite résoudre avec cette promesse (<code>Promise</code>). Cet argument peut être un objet <code>Promise</code> ou un objet avec une méthode <code>then</code> à résoudre à la suite.</dd>
-</dl>
+- `valeur`
+  - : L'argument qu'on souhaite résoudre avec cette promesse (`Promise`). Cet argument peut être un objet `Promise` ou un objet avec une méthode `then` à résoudre à la suite.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une promesse ({{jsxref("Promise")}}) qui est résolue avec la valeur indiquée en argument ou la promesse passée en argument si celui-ci est une promesse.</p>
+Une promesse ({{jsxref("Promise")}}) qui est résolue avec la valeur indiquée en argument ou la promesse passée en argument si celui-ci est une promesse.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La fonction statique <code>Promise.resolve</code> renvoie un objet <code>Promise</code> qui est résolu.</p>
+La fonction statique `Promise.resolve` renvoie un objet `Promise` qui est résolu.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utilisation_de_la_méthode_statique_Promise.resolve">Utilisation de la méthode statique <code>Promise.resolve</code></h3>
+### Utilisation de la méthode statique `Promise.resolve`
 
-<pre class="brush: js">Promise.resolve("Succès").then(function(valeur) {
+```js
+Promise.resolve("Succès").then(function(valeur) {
   console.log(valeur); // "Succès"
 }, function(valeur) {
   // n'est pas appelée
 });
-</pre>
+```
 
-<h3 id="Résoudre_un_tableau">Résoudre un tableau</h3>
+### Résoudre un tableau
 
-<pre class="brush: js">var p = Promise.resolve([1,2,3]);
+```js
+var p = Promise.resolve([1,2,3]);
 p.then(function(v) {
   console.log(v[0]); // 1
 });
-</pre>
+```
 
-<h3 id="Résoudre_une_autre_Promise">Résoudre une autre <code>Promise</code></h3>
+### Résoudre une autre `Promise`
 
-<pre class="brush: js">var original = Promise.resolve(33);
+```js
+var original = Promise.resolve(33);
 var cast = Promise.resolve(original);
 cast.then(function(value) {
   console.log("value: " + value);
@@ -73,13 +71,14 @@ console.log("original === cast ? " + (original === cast));
 // affiche ceci dans la console (dans cet ordre) :
 // original === cast ? true
 // value: 33
-</pre>
+```
 
-<p>L'ordre des traces dans la console est dû au fait que les gestionnaires <code>then()</code> sont appelés de façon asynchrone (plus de détails sur <code>then</code> <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise/then#Valeur_de_retour">dans cet article</a>).</p>
+L'ordre des traces dans la console est dû au fait que les gestionnaires `then()` sont appelés de façon asynchrone (plus de détails sur `then` [dans cet article](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise/then#Valeur_de_retour)).
 
-<h3 id="Résoudre_des_objets_avec_then_et_renvoyer_des_erreurs">Résoudre des objets avec <code>then</code> et renvoyer des erreurs</h3>
+### Résoudre des objets avec `then` et renvoyer des erreurs
 
-<pre class="brush: js">// Résoudre un objet avec then
+```js
+// Résoudre un objet avec then
 var p1 = Promise.resolve({
   then: function(onFulfill, onReject) { onFulfill("tenue !"); }
 });
@@ -118,36 +117,19 @@ p3.then(function(v) {
 }, function(e) {
   // n'est pas appelée
 });
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-promise.reject', 'Promise.reject')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale au sein d'un standard ECMA.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-promise.resolve', 'Promise.resolve')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                         | Commentaires                                    |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------- |
+| {{SpecName('ES2015', '#sec-promise.reject', 'Promise.reject')}}     | {{Spec2('ES2015')}}     | Définition initiale au sein d'un standard ECMA. |
+| {{SpecName('ESDraft', '#sec-promise.resolve', 'Promise.resolve')}} | {{Spec2('ESDraft')}} |                                                 |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Promise.resolve")}}</p>
+{{Compat("javascript.builtins.Promise.resolve")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
-</ul>
+- {{jsxref("Promise")}}

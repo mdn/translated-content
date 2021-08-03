@@ -9,38 +9,35 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/const
 original_slug: Web/JavaScript/Reference/Instructions/const
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>La <strong>déclaration <code>const</code></strong> permet de créer une constante nommée accessible uniquement en lecture. Cela ne signifie pas que la valeur contenue est immuable, uniquement que l'identifiant ne peut pas être réaffecté. Autrement dit la valeur d'une constante ne peut pas être modifiée par des réaffectations ultérieures. Une constante ne peut pas être déclarée à nouveau.</p>
+La **déclaration `const`** permet de créer une constante nommée accessible uniquement en lecture. Cela ne signifie pas que la valeur contenue est immuable, uniquement que l'identifiant ne peut pas être réaffecté. Autrement dit la valeur d'une constante ne peut pas être modifiée par des réaffectations ultérieures. Une constante ne peut pas être déclarée à nouveau.
 
-<div>{{EmbedInteractiveExample("pages/js/statement-const.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-const.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">const <var>nom1</var> = <var>valeur1</var> [, <var>nom2</var> = <var>valeur2</var> [, ... [, <var>nomN</var> = <var>valeurN</var>]]];</pre>
+    const nom1 = valeur1 [, nom2 = valeur2 [, ... [, nomN = valeurN]]];
 
-<dl>
- <dt><code>nomN</code></dt>
- <dd>Le nom de la constante. Ce nom peut être n'importe quel identifiant valide.</dd>
- <dt><code>valeurN</code></dt>
- <dd>La valeur à associer à la constante. Cette valeur peut être n'importe quelle <a href="/fr/docs/Web/JavaScript/Guide/Expressions_et_Opérateurs#new">expression</a> valide (éventuellement <a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_function">une expression de fonction</a>).</dd>
-</dl>
+- `nomN`
+  - : Le nom de la constante. Ce nom peut être n'importe quel identifiant valide.
+- `valeurN`
+  - : La valeur à associer à la constante. Cette valeur peut être n'importe quelle [expression](/fr/docs/Web/JavaScript/Guide/Expressions_et_Opérateurs#new) valide (éventuellement [une expression de fonction](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_function)).
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Cette déclaration permet de créer une constante qui peut être globale ou locale pour la fonction dans laquelle elle a été déclarée. Les constantes font partie de la portée du bloc (comme les variables définies avec <code>let</code>). À la différence des variables définies avec <code>var</code>, les constantes déclarées au niveau global <strong>ne sont pas</strong> des propriétés de l'objet global ({{domxref("window")}} dans le cas du navigateur). Il est nécessaire d'initialiser une constante lors de sa déclaration. Au sein d'une même portée, il est impossible d'avoir une constante qui partage le même nom qu'une variable ou qu'une fonction.</p>
+Cette déclaration permet de créer une constante qui peut être globale ou locale pour la fonction dans laquelle elle a été déclarée. Les constantes font partie de la portée du bloc (comme les variables définies avec `let`). À la différence des variables définies avec `var`, les constantes déclarées au niveau global **ne sont pas** des propriétés de l'objet global ({{domxref("window")}} dans le cas du navigateur). Il est nécessaire d'initialiser une constante lors de sa déclaration. Au sein d'une même portée, il est impossible d'avoir une constante qui partage le même nom qu'une variable ou qu'une fonction.
 
-<p>Attention, la déclaration <code>const</code> crée une référence en lecture seule vers une valeur. Cela ne signifie pas que la valeur référencée ne peut pas être modifiée ! Ainsi, si le contenu de la constante est un objet, l'objet lui-même pourra toujours être modifié.</p>
+Attention, la déclaration `const` crée une référence en lecture seule vers une valeur. Cela ne signifie pas que la valeur référencée ne peut pas être modifiée ! Ainsi, si le contenu de la constante est un objet, l'objet lui-même pourra toujours être modifié.
 
-<div class="note">
-<p><strong>Note :</strong> Les aspects liés à la <a href="/fr/docs/Web/JavaScript/Reference/Instructions/let#Zone_morte_temporaire_(Temporal_Dead_Zone_TDZ)_et_les_erreurs_liées_à_let">zone morte temporelle</a> de <code>let</code> s'appliquent également à <code>const</code>.</p>
-</div>
+> **Note :** Les aspects liés à la [zone morte temporelle](</fr/docs/Web/JavaScript/Reference/Instructions/let#Zone_morte_temporaire_(Temporal_Dead_Zone_TDZ)_et_les_erreurs_liées_à_let>) de `let` s'appliquent également à `const`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Les instructions suivantes illustrent comment fonctionne cette déclaration. On pourra tester ces instructions dans la console afin d'observer le comportement obtenu :</p>
+Les instructions suivantes illustrent comment fonctionne cette déclaration. On pourra tester ces instructions dans la console afin d'observer le comportement obtenu :
 
-<pre class="brush:js">// On définit ma_fav comme une constante
+```js
+// On définit ma_fav comme une constante
 // et on lui affecte la valeur 7
 // Généralement, par convention, les
 // constantes sont en majuscules
@@ -102,40 +99,21 @@ const mon_tableau = [];
 mon_tableau.push("A"); // ["A"]
 // Mais on ne peut pas affecter une nouvelle valeur
 mon_tableau = ["B"]; // lève une exception
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-let-and-const-declarations', 'Déclarations let et const')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Aucune modification.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-let-and-const-declarations', 'Déclarations let et const')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ESDraft', '#sec-let-and-const-declarations', 'Déclarations let et const')}} | {{Spec2('ESDraft')}} | Aucune modification. |
+| {{SpecName('ES2015', '#sec-let-and-const-declarations', 'Déclarations let et const')}} | {{Spec2('ES2015')}}     | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.statements.const")}}</p>
+{{Compat("javascript.statements.const")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Instructions/var","var")}}</li>
- <li>{{jsxref("Instructions/let","let")}}</li>
- <li><a href="/fr/docs/Web/JavaScript/Guide/Valeurs,_variables,_et_littéraux#Constantes">Les constantes dans le guide JavaScript</a></li>
-</ul>
+- {{jsxref("Instructions/var","var")}}
+- {{jsxref("Instructions/let","let")}}
+- [Les constantes dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Valeurs,_variables,_et_littéraux#Constantes)

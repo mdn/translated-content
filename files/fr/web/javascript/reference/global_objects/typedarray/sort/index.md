@@ -12,32 +12,31 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/sort
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>sort()</strong></code> permet de trier numériquement les éléments d'un tableau typé, à même ce tableau. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.sort()")}} en triant les valeurs par ordre numérique plutôt que par ordre lexicographique<em>.</em> Par la suite, <em>TypedArray</em> désigne l'un des <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray">types de tableau typé</a> here.</p>
+La méthode **`sort()`** permet de trier numériquement les éléments d'un tableau typé, à même ce tableau. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.sort()")}} en triant les valeurs par ordre numérique plutôt que par ordre lexicographique*.* Par la suite, _TypedArray_ désigne l'un des [types de tableau typé](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray) here.
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-sort.html")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-sort.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>typedarray</var>.sort([<var>fonctionComparaison</var>])</pre>
+    typedarray.sort([fonctionComparaison])
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>fonctionComparaison</code> {{optional_inline}}</dt>
- <dd>Cette fonction définit l'ordre de tri à appliquer.</dd>
-</dl>
+- `fonctionComparaison` {{optional_inline}}
+  - : Cette fonction définit l'ordre de tri à appliquer.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Le tableau typé trié.</p>
+Le tableau typé trié.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Pour plus d'exemples, voir la page sur la méthode {{jsxref("Array.prototype.sort()")}}.</p>
+Pour plus d'exemples, voir la page sur la méthode {{jsxref("Array.prototype.sort()")}}.
 
-<pre class="brush: js">var nombres = new Uint8Array([40, 1, 5, 200]);
+```js
+var nombres = new Uint8Array([40, 1, 5, 200]);
 nombres.sort();
 // Uint8Array [ 1, 5, 40, 200 ]
 // Contrairement aux tableaux classiques (Array), une fonction
@@ -54,36 +53,19 @@ function comparaisonNombres(a, b) {
 
 nombres.sort(comparaisonNombres);
 // [ 1, 5, 40, 200 ]
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-%typedarray%.prototype.sort', 'TypedArray.prototype.sort')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.sort', 'TypedArray.prototype.sort')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-%typedarray%.prototype.sort', 'TypedArray.prototype.sort')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.sort', 'TypedArray.prototype.sort')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.TypedArray.sort")}}</p>
+{{Compat("javascript.builtins.TypedArray.sort")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Array.prototype.sort()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.sort()")}}

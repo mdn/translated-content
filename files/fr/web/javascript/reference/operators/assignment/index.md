@@ -10,22 +10,22 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Assignment
 original_slug: Web/JavaScript/Reference/Opérateurs/Assignement
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>L'opérateur d'assignement simple (<code>=</code>) est utilisé pour définir la valeur d'une variable. Il est possible d'ajouter une valeur à plusieurs variables en chaînant les variables.</p>
+L'opérateur d'assignement simple (`=`) est utilisé pour définir la valeur d'une variable. Il est possible d'ajouter une valeur à plusieurs variables en chaînant les variables.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-assignment.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-assignment.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox notranslate"><strong>Opérateur :</strong> x = y
-</pre>
+    Opérateur : x = y
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Assignement_simple_et_variables_en_chaînes">Assignement simple et variables en chaînes</h3>
+### Assignement simple et variables en chaînes
 
-<pre class="brush: js notranslate">// On considère les variables suivantes :
+```js
+// On considère les variables suivantes :
 var x = 5;
 var y = 10;
 var z = 25;
@@ -34,29 +34,19 @@ x = y;
 // x est égale à 10
 
 x = y = z;
-// x, y et z sont égales à 25</pre>
+// x, y et z sont égales à 25
+```
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-assignment-operators', 'Assignment operators')}}</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                        |
+| ---------------------------------------------------------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-assignment-operators', 'Assignment operators')}} |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("javascript.operators.assignment")}}
 
+## Voir aussi
 
-<p>{{Compat("javascript.operators.assignment")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li><a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Expressions_et_Opérateurs">Assignment operators in the JS guide</a></li>
-</ul>
+- [Assignment operators in the JS guide](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/Expressions_et_Opérateurs)

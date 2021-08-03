@@ -11,72 +11,58 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/bold
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/bold
 ---
-<div>{{JSRef}}{{deprecated_header}}</div>
+{{JSRef}}{{deprecated_header}}
 
-<p>La méthode <code><strong>bold()</strong></code> crée un élément HTML {{HTMLElement("b")}} qui affiche la chaine de caractères en gras.</p>
+La méthode **`bold()`** crée un élément HTML {{HTMLElement("b")}} qui affiche la chaine de caractères en gras.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>str</var>.bold()</pre>
+    str.bold()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une chaîne de caractères représentant un élément HTML {{HTMLElement("b")}}.</p>
+Une chaîne de caractères représentant un élément HTML {{HTMLElement("b")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code>bold()</code> place la chaine de caractères dans une balise <code>&lt;b&gt;</code> :<br>
- <code>"&lt;b&gt;str&lt;/b&gt;</code>"</p>
+La méthode `bold()` place la chaine de caractères dans une balise `<b>` :
+`"<b>str</b>`"
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>L'exemple suivant utilise des méthodes de <code>String</code> pour changer l'affichage de la chaine de caractères :</p>
+L'exemple suivant utilise des méthodes de `String` pour changer l'affichage de la chaine de caractères :
 
-<pre class="brush:js">var chaîneMonde = "Coucou monde";
+```js
+var chaîneMonde = "Coucou monde";
 
 console.log( chaîneMonde.blink()   );
 console.log( chaîneMonde.bold()    );
 console.log( chaîneMonde.italics() );
-console.log( chaîneMonde.strike()  );</pre>
+console.log( chaîneMonde.strike()  );
+```
 
-<p>Cet exemple produit le même HTML que le code suivant :</p>
+Cet exemple produit le même HTML que le code suivant :
 
-<pre class="brush:html">&lt;blink&gt;Coucou monde&lt;/blink&gt;
-&lt;b&gt;Coucou monde&lt;/b&gt;
-&lt;i&gt;Coucou monde&lt;/i&gt;
-&lt;strike&gt;Coucou monde&lt;/strike&gt;
-</pre>
+```html
+<blink>Coucou monde</blink>
+<b>Coucou monde</b>
+<i>Coucou monde</i>
+<strike>Coucou monde</strike>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.bold', 'String.prototype.bold')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.0. Définie dans l'annexe B (normative) pour les fonctionnalités additionnelles des navigateurs web.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.bold', 'String.prototype.bold')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Définie dans l'annexe B (normative) pour les fonctionnalités additionnelles des navigateurs web.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | État                         | Commentaires                                                                                                                                           |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ES6', '#sec-string.prototype.bold', 'String.prototype.bold')}}     | {{Spec2('ES6')}}         | Définition initiale. Implémentée avec JavaScript 1.0. Définie dans l'annexe B (normative) pour les fonctionnalités additionnelles des navigateurs web. |
+| {{SpecName('ESDraft', '#sec-string.prototype.bold', 'String.prototype.bold')}} | {{Spec2('ESDraft')}} | Définie dans l'annexe B (normative) pour les fonctionnalités additionnelles des navigateurs web.                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.String.bold")}}</p>
+{{Compat("javascript.builtins.String.bold")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("String.prototype.blink()")}}</li>
- <li>{{jsxref("String.prototype.italics()")}}</li>
- <li>{{jsxref("String.prototype.strike()")}}</li>
-</ul>
+- {{jsxref("String.prototype.blink()")}}
+- {{jsxref("String.prototype.italics()")}}
+- {{jsxref("String.prototype.strike()")}}

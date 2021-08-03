@@ -10,40 +10,39 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/freeze
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/freeze
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>Object.freeze()</strong></code> permet de geler un objet, c'est-à-dire qu'on empêche d'ajouter de nouvelles propriétés, de supprimer ou d'éditer des propriétés existantes, y compris en ce qui concerne leur caractère énumérable, configurable ou pour l'accès en écriture. L'objet devient ainsi immuable. La méthode renvoie l'objet ainsi « gelé ».</p>
+La méthode **`Object.freeze()`** permet de geler un objet, c'est-à-dire qu'on empêche d'ajouter de nouvelles propriétés, de supprimer ou d'éditer des propriétés existantes, y compris en ce qui concerne leur caractère énumérable, configurable ou pour l'accès en écriture. L'objet devient ainsi immuable. La méthode renvoie l'objet ainsi « gelé ».
 
-<div>{{EmbedInteractiveExample("pages/js/object-freeze.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-freeze.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Object.freeze(<var>obj</var>)</pre>
+    Object.freeze(obj)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>L'objet à geler.</dd>
-</dl>
+- `obj`
+  - : L'objet à geler.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>L'objet qui a été passé à la fonction.</p>
+L'objet qui a été passé à la fonction.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Rien ne pourra être ajouté ou supprimé dans l'ensemble des propriétés de l'objet gelé. Toute tentative échouera, silencieusement ou via une exception {{jsxref("TypeError")}} (la plupart du temps en {{jsxref("Strict_mode", "mode strict", "", 1)}}).</p>
+Rien ne pourra être ajouté ou supprimé dans l'ensemble des propriétés de l'objet gelé. Toute tentative échouera, silencieusement ou via une exception {{jsxref("TypeError")}} (la plupart du temps en {{jsxref("Strict_mode", "mode strict", "", 1)}}).
 
-<p>Les propriétés qui sont des données ne pourront pas être changées et les attributs <code>writable</code> et <code>configurable</code> vaudront <code>false</code>. Les propriétés qui sont des accesseurs ou des mutateurs fonctionneront de la même façon (et ne changeront pas la valeur associée malgré le fait qu'il n'y ait pas d'erreur). Les propriétés dont les valeurs sont des objets pourront être modifiées si ces objets ne sont pas gelés. Les tableaux peuvent également être gelés ce qui empêche alors d'ajouter ou de retirer des éléments ou de modifier les éléments existants si ceux-ci ne sont pas des objets.</p>
+Les propriétés qui sont des données ne pourront pas être changées et les attributs `writable` et `configurable` vaudront `false`. Les propriétés qui sont des accesseurs ou des mutateurs fonctionneront de la même façon (et ne changeront pas la valeur associée malgré le fait qu'il n'y ait pas d'erreur). Les propriétés dont les valeurs sont des objets pourront être modifiées si ces objets ne sont pas gelés. Les tableaux peuvent également être gelés ce qui empêche alors d'ajouter ou de retirer des éléments ou de modifier les éléments existants si ceux-ci ne sont pas des objets.
 
-<p>La fonction renvoie l'objet passé en argument, elle ne crée pas une copie « gelée ».</p>
+La fonction renvoie l'objet passé en argument, elle ne crée pas une copie « gelée ».
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Geler_des_objets">Geler des objets</h3>
+### Geler des objets
 
-<pre class="brush: js">var obj = {
+```js
+var obj = {
   prop: function (){},
   toto: "truc"
 };
@@ -89,11 +88,12 @@ Object.defineProperty(obj, "toto", { value: "eit" });
 // Les deux instructions suivantes déclencheront une TypeError.
 Object.setPrototypeOf(obj, { x: 20 });
 obj.__proto__ = { x: 20 };
-</pre>
+```
 
-<h3 id="Geler_un_tableau">Geler un tableau</h3>
+### Geler un tableau
 
-<pre class="brush: js">let a = [0];
+```js
+let a = [0];
 Object.freeze(a);
 // Le tableau ne peut plus être modifié
 
@@ -109,26 +109,29 @@ function echec() {
 }
 
 echec();
-</pre>
+```
 
-<p>L'exemple qui suit illustre comment les propriétés qui sont des objets peuvent être éditées (la méthode <code>freeze</code> ne s'applique que sur l'objet courant et de façon superficielle).</p>
+L'exemple qui suit illustre comment les propriétés qui sont des objets peuvent être éditées (la méthode `freeze` ne s'applique que sur l'objet courant et de façon superficielle).
 
-<pre class="brush: js">obj1 = {
+```js
+obj1 = {
   internal: {}
 };
 
 Object.freeze(obj1);
 obj1.internal.a = 'valeurA';
 
-obj1.internal.a // 'valeurA'</pre>
+obj1.internal.a // 'valeurA'
+```
 
-<p class="brush: js">L'objet qui est gelé est immuable mais ce n'est pas nécessairement une constante. Pour obtenir une constante, il faut que l'ensemble des références (directes et indirectes) pointe vers des objets immuables. Les chaînes de caractères, les nombres et les booléens sont toujours immuables. La plupart du temps, on aura besoin de créer des constantes au cas par cas (et non de façon générale).</p>
+L'objet qui est gelé est immuable mais ce n'est pas nécessairement une constante. Pour obtenir une constante, il faut que l'ensemble des références (directes et indirectes) pointe vers des objets immuables. Les chaînes de caractères, les nombres et les booléens sont toujours immuables. La plupart du temps, on aura besoin de créer des constantes au cas par cas (et non de façon générale).
 
-<h3 id="Qu'est-ce_que_le_gel_«_superficiel_»_(shallow_freeze)">Qu'est-ce que le gel « superficiel » ? (<em>shallow freeze</em>)</h3>
+### Qu'est-ce que le gel « superficiel » ? (_shallow freeze_)
 
-<p>Lorsqu'on appelle <code>Object.freeze(monObjet)</code>, le gel ne s'applique qu'aux propriétés directement rattachées à <code>monObjet</code>. L'ajout, la suppression ou la réaffectation ne sont empêchées que sur l'objet directement. Si les valeurs de ces propriétés sont également des objets, ces derniers ne sont pas gelés et on peut leur ajouter/supprimer/réaffecter des valeurs.</p>
+Lorsqu'on appelle `Object.freeze(monObjet)`, le gel ne s'applique qu'aux propriétés directement rattachées à `monObjet`. L'ajout, la suppression ou la réaffectation ne sont empêchées que sur l'objet directement. Si les valeurs de ces propriétés sont également des objets, ces derniers ne sont pas gelés et on peut leur ajouter/supprimer/réaffecter des valeurs.
 
-<pre class="brush: js">var employé = {
+```js
+var employé = {
   nom: "Leroy",
   designation: "Développeur",
   adresse: {
@@ -143,11 +146,12 @@ employé.nom = "John"; // propriété directe, la réaffectation échoue en sile
 employé.adresse.ville = "Paris"; // propriété d'un objet fils : modifiable
 
 console.log(employé.adresse.ville); // affichera Paris
-</pre>
+```
 
-<p class="brush: js">Pour rendre l'objet complètement immuable, on gèle chacun des objets qu'il contient. Voici un exemple simple de fonction pour parcourir les propriétés qui sont des objets et les geler (attention, cela ne gère pas le cas où on a des cycles de références, ce qui entraînerait une boucle infinie).</p>
+Pour rendre l'objet complètement immuable, on gèle chacun des objets qu'il contient. Voici un exemple simple de fonction pour parcourir les propriétés qui sont des objets et les geler (attention, cela ne gère pas le cas où on a des cycles de références, ce qui entraînerait une boucle infinie).
 
-<pre class="brush: js">function deepFreeze(obj) {
+```js
+function deepFreeze(obj) {
 
   // On récupère les noms des propriétés définies sur obj
   var propNames = Object.getOwnPropertyNames(obj);
@@ -155,7 +159,7 @@ console.log(employé.adresse.ville); // affichera Paris
   // On gèle les propriétés avant de geler l'objet
   for(let name of propNames){
     let value = obj[name];
-    obj[name] = value &amp;&amp; typeof value === "object" ?
+    obj[name] = value && typeof value === "object" ?
       deepFreeze(value) : value;
   }
 
@@ -171,82 +175,62 @@ obj2 = {
 
 deepFreeze(obj2);
 obj2.internal.a = 'valeurB'; // échouera silencieusement en mode non-strict
-obj2.internal.a; // null</pre>
+obj2.internal.a; // null
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Pour ES5, si l'argument passé à la méthode n'est pas un objet mais est d'un autre type primitif, cela entraînera une exception {{jsxref("TypeError")}}. Pour ECMAScript 2015 (ES2015), un argument qui n'est pas un objet sera traité comme un objet ordinaire gelé et sera renvoyé tel quel par la méthode.</p>
+Pour ES5, si l'argument passé à la méthode n'est pas un objet mais est d'un autre type primitif, cela entraînera une exception {{jsxref("TypeError")}}. Pour ECMAScript 2015 (ES2015), un argument qui n'est pas un objet sera traité comme un objet ordinaire gelé et sera renvoyé tel quel par la méthode.
 
-<pre class="brush: js">Object.freeze(1);
+```js
+Object.freeze(1);
 // TypeError: 1 is not an object - code ES5
 
 Object.freeze(1);
-// 1                             - code ES2015</pre>
+// 1                             - code ES2015
+```
 
-<p>Geler un {{domxref("ArrayBufferView")}} contenant des éléments entraînera une exception {{jsxref("TypeError")}} car ce sont des vues sur des zones mémoires.</p>
+Geler un {{domxref("ArrayBufferView")}} contenant des éléments entraînera une exception {{jsxref("TypeError")}} car ce sont des vues sur des zones mémoires.
 
-<pre class="brush: js">&gt; Object.freeze(new Uint8Array(0)) // Aucun élément
+```js
+> Object.freeze(new Uint8Array(0)) // Aucun élément
 Uint8Array []
 
-&gt; Object.freeze(new Uint8Array(1)) // Avec des éléments
+> Object.freeze(new Uint8Array(1)) // Avec des éléments
 TypeError: Cannot freeze array buffer views with elements
 
-&gt; Object.freeze(new DataView(new ArrayBuffer(32))) // Aucun élément
+> Object.freeze(new DataView(new ArrayBuffer(32))) // Aucun élément
 DataView {}
 
-&gt; Object.freeze(new Float64Array(new ArrayBuffer(64), 63, 0)) // Aucun élément
+> Object.freeze(new Float64Array(new ArrayBuffer(64), 63, 0)) // Aucun élément
 Float64Array []
 
-&gt; Object.freeze(new Float64Array(new ArrayBuffer(64), 32, 2)) // Avec des éléments
+> Object.freeze(new Float64Array(new ArrayBuffer(64), 32, 2)) // Avec des éléments
 TypeError: Cannot freeze array buffer views with elements
-</pre>
+```
 
-<p>On notera que les trois propriétés standard (<code>buf.byteLength</code>, <code>buf.byteOffset</code> et <code>buf.buffer</code>) sont en lecture seule (comme pour {{jsxref("ArrayBuffer")}} et {{jsxref("SharedArrayBuffer")}}) : il n'y a donc aucune raison de vouloir geler ces propriétés.</p>
+On notera que les trois propriétés standard (`buf.byteLength`, `buf.byteOffset` et `buf.buffer`) sont en lecture seule (comme pour {{jsxref("ArrayBuffer")}} et {{jsxref("SharedArrayBuffer")}}) : il n'y a donc aucune raison de vouloir geler ces propriétés.
 
-<h3 id="Comparaison_avec_Object.seal()">Comparaison avec <code>Object.seal()</code></h3>
+### Comparaison avec `Object.seal()`
 
-<p>Lorsqu'on utilise la méthode <code>Object.freeze()</code>, les propriétés existantes d'un objet deviennent immuables. En revanche, avec {{jsxref("Object.seal()")}}, il est toujours possible de modifier la valeur des propriétés existantes d'un objet scellé.</p>
+Lorsqu'on utilise la méthode `Object.freeze()`, les propriétés existantes d'un objet deviennent immuables. En revanche, avec {{jsxref("Object.seal()")}}, il est toujours possible de modifier la valeur des propriétés existantes d'un objet scellé.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.9', 'Object.freeze')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Définition initiale.<br>
-    Implémentée avec JavaScript 1.8.5</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.freeze', 'Object.freeze')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.freeze', 'Object.freeze')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                         | Commentaires                                           |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------ |
+| {{SpecName('ES5.1', '#sec-15.2.3.9', 'Object.freeze')}}             | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.8.5 |
+| {{SpecName('ES6', '#sec-object.freeze', 'Object.freeze')}}         | {{Spec2('ES6')}}         |                                                        |
+| {{SpecName('ESDraft', '#sec-object.freeze', 'Object.freeze')}} | {{Spec2('ESDraft')}} |                                                        |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Object.freeze")}}</p>
+{{Compat("javascript.builtins.Object.freeze")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Object.isFrozen()")}}</li>
- <li>{{jsxref("Object.preventExtensions()")}}</li>
- <li>{{jsxref("Object.isExtensible()")}}</li>
- <li>{{jsxref("Object.seal()")}}</li>
- <li>{{jsxref("Object.isSealed()")}}</li>
-</ul>
+- {{jsxref("Object.isFrozen()")}}
+- {{jsxref("Object.preventExtensions()")}}
+- {{jsxref("Object.isExtensible()")}}
+- {{jsxref("Object.seal()")}}
+- {{jsxref("Object.isSealed()")}}

@@ -10,62 +10,48 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/@@species
 original_slug: Web/JavaScript/Reference/Objets_globaux/ArrayBuffer/@@species
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La propriété d'accesseur <code><strong>ArrayBuffer[@@species]</strong></code> renvoie le constructeur <code>ArrayBuffer</code>.</p>
+La propriété d'accesseur **`ArrayBuffer[@@species]`** renvoie le constructeur `ArrayBuffer`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">ArrayBuffer[Symbol.species]
-</pre>
+    ArrayBuffer[Symbol.species]
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>L'accesseur <code>species</code> renvoie le constructeur par défaut pour les objets <code>ArrayBuffer</code>. Les constructeurs des sous-classes peuvent surcharger ce symbole pour modifier l'affectation du constructeur.</p>
+L'accesseur `species` renvoie le constructeur par défaut pour les objets `ArrayBuffer`. Les constructeurs des sous-classes peuvent surcharger ce symbole pour modifier l'affectation du constructeur.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>La propriété <code>species</code> renvoie le constructeur par défaut, soit <code>ArrayBuffer</code> dans le cas des objets <code>ArrayBuffer</code> :</p>
+La propriété `species` renvoie le constructeur par défaut, soit `ArrayBuffer` dans le cas des objets `ArrayBuffer` :
 
-<pre class="brush: js">ArrayBuffer[Symbol.species]; // function ArrayBuffer()</pre>
+```js
+ArrayBuffer[Symbol.species]; // function ArrayBuffer()
+```
 
-<p>Pour un objet dérivé (par exemple une classe sur mesure <code>MonArrayBuffer</code>), le symbole <code>species</code> renverra le constructeur <code>MonArrayBuffer</code>. Il est possible de surcharger ce comportement pour renvoyer le constructeur <code>ArrayBuffer</code> :</p>
+Pour un objet dérivé (par exemple une classe sur mesure `MonArrayBuffer`), le symbole `species` renverra le constructeur `MonArrayBuffer`. Il est possible de surcharger ce comportement pour renvoyer le constructeur `ArrayBuffer` :
 
-<pre class="brush: js">class MonArrayBuffer extends ArrayBuffer {
+```js
+class MonArrayBuffer extends ArrayBuffer {
   // On surcharge species pour renvoyer
   // le constructeur parent ArrayBuffer
   static get [Symbol.species]() { return ArrayBuffer; }
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-get-arraybuffer-@@species', 'get ArrayBuffer [ @@species ]')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-get-arraybuffer-@@species', 'get ArrayBuffer [ @@species ]')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | État                         | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{SpecName('ES6', '#sec-get-arraybuffer-@@species', 'get ArrayBuffer [ @@species ]')}}     | {{Spec2('ES6')}}         | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-get-arraybuffer-@@species', 'get ArrayBuffer [ @@species ]')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.ArrayBuffer.@@species")}}</p>
+{{Compat("javascript.builtins.ArrayBuffer.@@species")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("ArrayBuffer")}}</li>
- <li>{{jsxref("Symbol.species")}}</li>
-</ul>
+- {{jsxref("ArrayBuffer")}}
+- {{jsxref("Symbol.species")}}

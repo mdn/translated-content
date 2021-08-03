@@ -10,118 +10,76 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Atomics/and
 original_slug: Web/JavaScript/Reference/Objets_globaux/Atomics/and
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode statique <code><strong>Atomics</strong></code><strong><code>.and()</code></strong> calcule un ET binaire avec une valeur donnée, à un emplacement donné du tableau. Elle renvoie l'ancienne valeur qui était contenue à cet emplacement. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.</p>
+La méthode statique **`Atomics`\*\***`.and()`\*\* calcule un ET binaire avec une valeur donnée, à un emplacement donné du tableau. Elle renvoie l'ancienne valeur qui était contenue à cet emplacement. Cette opération atomique garantit qu'aucune autre opération d'écriture n'est appliquée tant que la valeur modifiée n'est pas écrite.
 
-<div>{{EmbedInteractiveExample("pages/js/atomics-and.html")}}</div>
+{{EmbedInteractiveExample("pages/js/atomics-and.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Atomics.and(typedArray, index, valeur)
-</pre>
+    Atomics.and(typedArray, index, valeur)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>typedArray</code></dt>
- <dd>Un tableau typé entier partagé parmi {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}} ou {{jsxref("Uint32Array")}}.</dd>
- <dt><code>index</code></dt>
- <dd>La position dans <code>typedArray</code> où calculer le ET binaire.</dd>
- <dt><code>valeur</code></dt>
- <dd>Le nombre avec lequel on souhaite calculer le ET binaire.</dd>
-</dl>
+- `typedArray`
+  - : Un tableau typé entier partagé parmi {{jsxref("Int8Array")}}, {{jsxref("Uint8Array")}}, {{jsxref("Int16Array")}}, {{jsxref("Uint16Array")}}, {{jsxref("Int32Array")}} ou {{jsxref("Uint32Array")}}.
+- `index`
+  - : La position dans `typedArray` où calculer le ET binaire.
+- `valeur`
+  - : Le nombre avec lequel on souhaite calculer le ET binaire.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>L'ancienne valeur qui était contenue à (<code>typedArray[index]</code>).</p>
+L'ancienne valeur qui était contenue à (`typedArray[index]`).
 
-<h3 id="Exceptions_levée">Exceptions levée</h3>
+### Exceptions levée
 
-<ul>
- <li>Cette méthode lève {{jsxref("TypeError")}} si le type de <code>typedArray</code> n'est pas un des types entiers autorisés.</li>
- <li>Cette méthode lève {{jsxref("TypeError")}} si <code>typedArray</code> n'est pas tableau typé partagé.</li>
- <li>Cette méthode lève {{jsxref("RangeError")}} si <code>index</code> est en dehors des limites de <code>typedArray</code>.</li>
-</ul>
+- Cette méthode lève {{jsxref("TypeError")}} si le type de `typedArray` n'est pas un des types entiers autorisés.
+- Cette méthode lève {{jsxref("TypeError")}} si `typedArray` n'est pas tableau typé partagé.
+- Cette méthode lève {{jsxref("RangeError")}} si `index` est en dehors des limites de `typedArray`.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Un ET binaire fournit la valeur 1 uniquement si <code>a</code> et <code>b</code> valent 1. La table de vérité pour l'opération ET est :</p>
+Un ET binaire fournit la valeur 1 uniquement si `a` et `b` valent 1. La table de vérité pour l'opération ET est :
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th><code>a</code></th>
-   <th><code>b</code></th>
-   <th><code>a &amp; b</code></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>0</td>
-   <td>0</td>
-   <td>0</td>
-  </tr>
-  <tr>
-   <td>0</td>
-   <td>1</td>
-   <td>0</td>
-  </tr>
-  <tr>
-   <td>1</td>
-   <td>0</td>
-   <td>0</td>
-  </tr>
-  <tr>
-   <td>1</td>
-   <td>1</td>
-   <td>1</td>
-  </tr>
- </tbody>
-</table>
+| `a` | `b` | `a & b` |
+| --- | --- | ------- |
+| 0   | 0   | 0       |
+| 0   | 1   | 0       |
+| 1   | 0   | 0       |
+| 1   | 1   | 1       |
 
-<p>Ainsi, si on calcule le ET binaire de 5 et 1 avec l'instruction <code>5 &amp; 1</code>, cela fournira la valeur <code>0001</code>, qui correspond à 1 en notation décimale.</p>
+Ainsi, si on calcule le ET binaire de 5 et 1 avec l'instruction `5 & 1`, cela fournira la valeur `0001`, qui correspond à 1 en notation décimale.
 
-<pre>5  0101
-1  0001
-   ----
-1  0001</pre>
+    5  0101
+    1  0001
+       ----
+    1  0001
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var sab = new SharedArrayBuffer(1024);
+```js
+var sab = new SharedArrayBuffer(1024);
 var ta = new Uint8Array(sab);
 ta[0] = 5;
 
 Atomics.and(ta, 0, 1); // renvoie 0, l'ancienne valeur
 Atomics.load(ta, 0);   // 1
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-atomics.and', 'Atomics.and')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Définition initiale avec ES2017.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | État                         | Commentaires                     |
+| ---------------------------------------------------------------------------- | ---------------------------- | -------------------------------- |
+| {{SpecName('ESDraft', '#sec-atomics.and', 'Atomics.and')}} | {{Spec2('ESDraft')}} | Définition initiale avec ES2017. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Atomics.and")}}</p>
+{{Compat("javascript.builtins.Atomics.and")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Atomics")}}</li>
- <li>{{jsxref("Atomics.or()")}}</li>
- <li>{{jsxref("Atomics.xor()")}}</li>
-</ul>
+- {{jsxref("Atomics")}}
+- {{jsxref("Atomics.or()")}}
+- {{jsxref("Atomics.xor()")}}

@@ -11,70 +11,50 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/has
 original_slug: Web/JavaScript/Reference/Objets_globaux/WeakSet/has
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>has()</strong></code> renvoie un booléen indiquant si un objet donné est contenu dans l'ensemble<code> WeakSet</code>.</p>
+La méthode **`has()`** renvoie un booléen indiquant si un objet donné est contenu dans l'ensemble` WeakSet`.
 
-<div>{{EmbedInteractiveExample("pages/js/weakset-prototype-has.html")}}</div>
+{{EmbedInteractiveExample("pages/js/weakset-prototype-has.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>ws</var>.has(<var>valeur</var>);</pre>
+    ws.has(valeur);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>valeur</code></dt>
- <dd>Ce paramètre est obligatoire. Il représente l'objet dont on souhaite savoir s'il est, ou non, présent dans l'objet <code>WeakSet</code>.</dd>
-</dl>
+- `valeur`
+  - : Ce paramètre est obligatoire. Il représente l'objet dont on souhaite savoir s'il est, ou non, présent dans l'objet `WeakSet`.
 
-<h3 id="Valeur_renvoyée">Valeur renvoyée</h3>
+### Valeur renvoyée
 
-<dl>
- <dt>Booléen</dt>
- <dd>La méthode renvoie <code>true</code> si l'objet <code>WeakSet </code>contient bien un élément avec la valeur donnée, <code>false </code>sinon.</dd>
-</dl>
+- Booléen
+  - : La méthode renvoie `true` si l'objet `WeakSet `contient bien un élément avec la valeur donnée, `false `sinon.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var ws = new WeakSet();
+```js
+var ws = new WeakSet();
 var obj = {};
 ws.add(window);
 
 mySet.has(window);  // renvoie true
 mySet.has(obj);     // renvoie false
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-weakset.prototype.has', 'WeakSet.prototype.has')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-weakset.prototype.has', 'WeakSet.prototype.has')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-weakset.prototype.has', 'WeakSet.prototype.has')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-weakset.prototype.has', 'WeakSet.prototype.has')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.WeakSet.has")}}</p>
+{{Compat("javascript.builtins.WeakSet.has")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("WeakSet")}}</li>
- <li>{{jsxref("WeakSet.prototype.add()")}}</li>
- <li>{{jsxref("WeakSet.prototype.delete()")}}</li>
-</ul>
+- {{jsxref("WeakSet")}}
+- {{jsxref("WeakSet.prototype.add()")}}
+- {{jsxref("WeakSet.prototype.delete()")}}

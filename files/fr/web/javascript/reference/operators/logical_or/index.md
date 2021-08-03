@@ -8,47 +8,44 @@ tags:
   - Operator
   - Reference
 browser-compat: javascript.operators.logical_or
-translation-of: Web/JavaScript/Reference/Operators/Logical_OR
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>L'opérateur OU logique (<code>||</code>) (disjonction logique) renvoie vrai si et seulement si au moins un de ses opérandes est vrai. Cet opérateur est généralement utilisé avec des valeurs booléennes et, lorsque c'est le cas, il renvoie une valeur booléenne. Toutefois, <code>||</code> peut aussi être utilisé avec des valeurs non-booléennes et, dans ce cas, renverra une valeur non-booléenne.</p>
+L'opérateur OU logique (`||`) (disjonction logique) renvoie vrai si et seulement si au moins un de ses opérandes est vrai. Cet opérateur est généralement utilisé avec des valeurs booléennes et, lorsque c'est le cas, il renvoie une valeur booléenne. Toutefois, `||` peut aussi être utilisé avec des valeurs non-booléennes et, dans ce cas, renverra une valeur non-booléenne.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-logical-or.html", "shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-logical-or.html", "shorter")}}
 
-<h2 id="syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: js">
-<var>expr1</var> || <var>expr2</var>
-</pre>
+```js
+expr1 || expr2
+```
 
-<h2 id="description">Description</h2>
+## Description
 
-<p>Si <code>expr1</code> peut être converti en <code>true</code>, c'est <code>expr1</code> qui sera renvoyé, sinon ce sera <code>expr2</code>.</p>
+Si `expr1` peut être converti en `true`, c'est `expr1` qui sera renvoyé, sinon ce sera `expr2`.
 
-<p>Si une valeur peut être convertie en <code>true</code>, elle peut être qualifiée de <a href="/fr/docs/Glossary/Truthy"><i>truthy</i></a>. Si une valeur peut être convertie en <code>false</code>, on la qualifiera alors de <a href="/fr/docs/Glossary/Falsy"><i>falsy</i></a>.</p>
+Si une valeur peut être convertie en `true`, elle peut être qualifiée de [_truthy_](/fr/docs/Glossary/Truthy). Si une valeur peut être convertie en `false`, on la qualifiera alors de [_falsy_](/fr/docs/Glossary/Falsy).
 
-<p>Parmi les expressions qui peuvent être converties en <code>false</code>, on a :</p>
+Parmi les expressions qui peuvent être converties en `false`, on a :
 
-<ul>
-  <li><code>null</code> ;</li>
-  <li><code>NaN</code> ;</li>
-  <li><code>0</code> ;</li>
-  <li>la chaîne de caractères vide (<code>""</code> ou <code>''</code> ou <code>``</code>) ;</li>
-  <li><code>undefined</code>.</li>
-</ul>
+- `null` ;
+- `NaN` ;
+- `0` ;
+- la chaîne de caractères vide (`""` ou `''` ou ` `` `) ;
+- `undefined`.
 
-<p>Bien que l'opérateur <code>||</code> puisse être utilisé avec des opérandes qui ne soient pas des valeurs booléennes, il reste un opérateur booléen, car sa valeur de retour peut toujours être convertie en <a href="/fr/docs/Web/JavaScript/Data_structures#boolean_type">une valeur primitive booléenne</a>. Pour convertir explicitement la valeur de retour (ou tout expression de façon plus générale) dans sa valeur booléenne correspondante, on pourra utiliser un double <a href="/fr/docs/Web/JavaScript/Reference/Operators/Logical_NOT">opérateur NON (<code>!</code>)</a> ou le constructeur <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean/Boolean"><code>Boolean()</code></a>.</p>
+Bien que l'opérateur `||` puisse être utilisé avec des opérandes qui ne soient pas des valeurs booléennes, il reste un opérateur booléen, car sa valeur de retour peut toujours être convertie en [une valeur primitive booléenne](/fr/docs/Web/JavaScript/Data_structures#boolean_type). Pour convertir explicitement la valeur de retour (ou tout expression de façon plus générale) dans sa valeur booléenne correspondante, on pourra utiliser un double [opérateur NON (`!`)](/fr/docs/Web/JavaScript/Reference/Operators/Logical_NOT) ou le constructeur [`Boolean()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean/Boolean).
 
-<h3 id="short-circuit_evaluation">Évaluation en court-circuit</h3>
+### Évaluation en court-circuit
 
-<p>L'expression utilisant un OU logique est évaluée de gauche à droite. Le moteur cherche s'il est possible d'utiliser un court-circuit de la façon suivante :</p>
+L'expression utilisant un OU logique est évaluée de gauche à droite. Le moteur cherche s'il est possible d'utiliser un court-circuit de la façon suivante :
 
-<p><code>(une expression équivalente à vrai) || <var>expr</var></code> sera court-circuité pour fournir directement le résultat de l'expression équivalente à vrai.</p>
+`(une expression équivalente à vrai) || expr` sera court-circuité pour fournir directement le résultat de l'expression équivalente à vrai.
 
-<p>Cette notion de court-circuit indique que la partie <code><var>expr</var></code> ci-avant <strong>n'est pas évaluée</strong>, tout effet de bord lié à cette évaluation n'aura pas lieu (par exemple, si <code><var>expr</var></code> est un appel de fonction, la fonction n'est pas appelée). Ce fonctionnement a lieu, car la valeur du résultat peut d'office être déterminée par l'évaluation du premier opérande. Par exemple :</p>
+Cette notion de court-circuit indique que la partie `expr` ci-avant **n'est pas évaluée**, tout effet de bord lié à cette évaluation n'aura pas lieu (par exemple, si `expr` est un appel de fonction, la fonction n'est pas appelée). Ce fonctionnement a lieu, car la valeur du résultat peut d'office être déterminée par l'évaluation du premier opérande. Par exemple :
 
-<pre class="brush: js">
+```js
 function A(){
   console.log('A a été appelée');
   return false;
@@ -63,25 +60,25 @@ console.log( B() || A() );
 // affichera "B a été appelée" dans la console via l'appel de la fonction
 // puis affichera true (la valeur du résultat de l'expression avec l'opérateur)
 // on voit que la fonction A n'est pas du tout appelée
-</pre>
+```
 
-<h3 id="operator_precedence">Précédence des opérateurs</h3>
+### Précédence des opérateurs
 
-<p>Les expressions suivantes peuvent sembler équivalentes mais ne le sont pas. En effet, l'opérateur <code>&amp;&amp;</code> est exécuté avant l'opérateur <code>||</code> (voir <a href="/fr/docs/Web/JavaScript/Reference/Operators/Operator_Precedence">l'article sur la précédence des opérateurs</a>).</p>
+Les expressions suivantes peuvent sembler équivalentes mais ne le sont pas. En effet, l'opérateur `&&` est exécuté avant l'opérateur `||` (voir [l'article sur la précédence des opérateurs](/fr/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
 
-<pre class="brush: js">
-true || false &amp;&amp; false      // renvoie true, car &amp;&amp; est exécuté en premier
-(true || false) &amp;&amp; false    // renvoie false, car la précédence par défaut ne s'applique pas
+```js
+true || false && false      // renvoie true, car && est exécuté en premier
+(true || false) && false    // renvoie false, car la précédence par défaut ne s'applique pas
                                     // avec les parenthèses
-</pre>
+```
 
-<h2 id="examples">Exemples</h2>
+## Exemples
 
-<h3 id="using_or">Utiliser le OU logique</h3>
+### Utiliser le OU logique
 
-<p>Le code suivant illustre quelques usages de l'opérateur OU logique <code>||</code>.</p>
+Le code suivant illustre quelques usages de l'opérateur OU logique `||`.
 
-<pre class="brush: js">
+```js
 o1 = true   || true      // t || t renvoie true
 o2 = false  || true      // f || t renvoie true
 o3 = true   || false     // t || f renvoie true
@@ -92,67 +89,67 @@ o7 = 'Chat' || false     // t || f renvoie "Chat"
 o8 = ''     || false     // f || f renvoie false
 o9 = false  || ''        // f || f renvoie ""
 o10 = false || varObject // f || object renvoie varObject
-</pre>
+```
 
-<div class="notecard note">
-  <p><strong>Note :</strong> Si vous utilisez cet opérateur afin de fournir une valeur par défaut à une variable. Soyez conscient⋅e qu'une valeur équivalente à <code>false</code> ne pourra pas être utilisée ainsi. Si vous souhaitez uniquement écarter <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/null"><code>null</code></a> ou <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined"><code>undefined</code></a>, privilégiez l'utilisation de <a href="/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator">l'opérateur de coalescence des nuls</a>.</p>
-</div>
+> **Note :** Si vous utilisez cet opérateur afin de fournir une valeur par défaut à une variable. Soyez conscient⋅e qu'une valeur équivalente à `false` ne pourra pas être utilisée ainsi. Si vous souhaitez uniquement écarter [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null) ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), privilégiez l'utilisation de [l'opérateur de coalescence des nuls](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator).
 
-<h3 id="conversion_rules_for_booleans">Règles de conversion booléennes</h3>
+### Règles de conversion booléennes
 
-<h4 id="converting_and_to_or">Convertir ET en OU</h4>
+#### Convertir ET en OU
 
-<p>L'opération suivante, utilisant des <strong>booléens</strong> :</p>
+L'opération suivante, utilisant des **booléens** :
 
-<pre class="brush: js">bCondition1 &amp;&amp; bCondition2</pre>
+```js
+bCondition1 && bCondition2
+```
 
-<p>sera toujours équivalente à :</p>
+sera toujours équivalente à :
 
-<pre class="brush: js">
+```js
 !(!bCondition1 || !bCondition2)
-</pre>
+```
 
-<h4 id="converting_or_to_and">Convertir OU en ET</h4>
+#### Convertir OU en ET
 
-<p>L'opération suivante, utilisant des <strong>booléens</strong> :</p>
+L'opération suivante, utilisant des **booléens** :
 
-<pre class="brush: js">bCondition1 || bCondition2</pre>
+```js
+bCondition1 || bCondition2
+```
 
-<p>sera toujours équivalente à :</p>
+sera toujours équivalente à :
 
-<pre class="brush: js">
-!(!bCondition1 &amp;&amp; !bCondition2)
-</pre>
+```js
+!(!bCondition1 && !bCondition2)
+```
 
-<h3 id="removing_nested_parentheses">Retrait des parenthèses imbriquées</h3>
+### Retrait des parenthèses imbriquées
 
-<p>Les expressions logiques sont évaluées de gauche à droite, il est donc possible de retirer les parenthèses d'une expression complexe en suivant quelques règles.</p>
+Les expressions logiques sont évaluées de gauche à droite, il est donc possible de retirer les parenthèses d'une expression complexe en suivant quelques règles.
 
-<p>L'opération composite suivante, utilisant des <strong>booléens</strong> :</p>
+L'opération composite suivante, utilisant des **booléens** :
 
-<pre class="brush: js">
-bCondition1 &amp;&amp; (bCondition2 || bCondition3)
-</pre>
+```js
+bCondition1 && (bCondition2 || bCondition3)
+```
 
-<p>sera toujours équivalente à :</p>
+sera toujours équivalente à :
 
-<pre class="brush: js">
-!(!bCondition1 || !bCondition2 &amp;&amp; !bCondition3)
-</pre>
+```js
+!(!bCondition1 || !bCondition2 && !bCondition3)
+```
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator">L'opérateur de coalescence des nuls (<code>??</code>)</a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean"><code>Boolean</code></a></li>
-  <li><a href="/fr/docs/Glossary/Truthy"><i>Truthy</i></a></li>
-  <li><a href="/fr/docs/Glossary/Falsy"><i>Falsy</i></a></li>
-</ul>
+- [L'opérateur de coalescence des nuls (`??`)](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
+- [_Truthy_](/fr/docs/Glossary/Truthy)
+- [_Falsy_](/fr/docs/Glossary/Falsy)

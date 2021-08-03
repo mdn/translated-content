@@ -11,41 +11,40 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/create
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/create
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>Object.create()</strong></code> crée un nouvel objet avec un prototype donné et des propriétés données.</p>
+La méthode **`Object.create()`** crée un nouvel objet avec un prototype donné et des propriétés données.
 
-<div>{{EmbedInteractiveExample("pages/js/object-create.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-create.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Object.create(<var>proto</var>)
-Object.create(proto, <em>objetP</em><var>ropriétés</var>)</pre>
+    Object.create(proto)
+    Object.create(proto, objetPropriétés)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>proto</code></dt>
- <dd>L'objet qui sera le prototype du nouvel objet créé.</dd>
- <dt><code>objetPropriétés</code></dt>
- <dd>Paramètre optionnel. S'il est fourni et qu'il ne vaut pas {{jsxref("undefined")}}, il sera utilisé comme un objet dont les propriétés propres (celles qui ne sont pas héritées par la chaîne de prototypes) et énumérables définiront des descripteurs pour les propriétés à ajouter au nouvel objet, avec les mêmes noms. Ces propriétés correspondent au deuxième argument de {{jsxref("Object.defineProperties()")}}.</dd>
-</dl>
+- `proto`
+  - : L'objet qui sera le prototype du nouvel objet créé.
+- `objetPropriétés`
+  - : Paramètre optionnel. S'il est fourni et qu'il ne vaut pas {{jsxref("undefined")}}, il sera utilisé comme un objet dont les propriétés propres (celles qui ne sont pas héritées par la chaîne de prototypes) et énumérables définiront des descripteurs pour les propriétés à ajouter au nouvel objet, avec les mêmes noms. Ces propriétés correspondent au deuxième argument de {{jsxref("Object.defineProperties()")}}.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un nouvel objet qui dispose du prototype et des propriétés indiquées.</p>
+Un nouvel objet qui dispose du prototype et des propriétés indiquées.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>Cette méthode lève une exception {{jsxref("TypeError")}} si le paramètre <code>objetPropriétés</code> vaut {{jsxref("null")}} ou s'il ne décrit pas des propriétés d'un objet.</p>
+Cette méthode lève une exception {{jsxref("TypeError")}} si le paramètre `objetPropriétés` vaut {{jsxref("null")}} ou s'il ne décrit pas des propriétés d'un objet.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="L'héritage_classique_avec_Object.create()">L'héritage classique avec <code>Object.create()</code></h3>
+### L'héritage classique avec `Object.create()`
 
-<p>Dans l'exemple ci-dessous, on utilise <code>Object.create()</code> afin de réaliser un héritage de classe. Ce modèle ne supporte que l'héritage unique (un objet hérite directement uniquement d'un autre objet) car JavaScript ne gère pas l'héritage multiple.</p>
+Dans l'exemple ci-dessous, on utilise `Object.create()` afin de réaliser un héritage de classe. Ce modèle ne supporte que l'héritage unique (un objet hérite directement uniquement d'un autre objet) car JavaScript ne gère pas l'héritage multiple.
 
-<pre class="brush: js">// Forme, la classe parente
+```js
+// Forme, la classe parente
 function Forme() {
   this.x = 0;
   this.y = 0;
@@ -79,11 +78,12 @@ console.log('une instance de Forme ? ', (rect instanceof Forme));
  // true
 rect.déplacer(1, 1);
 // Affiche 'Forme déplacée.'
-</pre>
+```
 
-<p>Si on souhaite hériter de plusieurs objets, on peut utiliser des <em>mixins</em>.</p>
+Si on souhaite hériter de plusieurs objets, on peut utiliser des _mixins_.
 
-<pre class="brush: js">function MaClasse() {
+```js
+function MaClasse() {
   ClasseParente1.call(this);
   ClasseParente2.call(this);
 }
@@ -95,13 +95,14 @@ MaClasse.prototype.constructor = MaClasse; // On réaffecte le constructeur
 MaClasse.prototype.maMéthode = function() {
   // faire quelque chose
 };
-</pre>
+```
 
-<p>Ici, la méthode {{jsxref("Object.assign()")}} copie les propriétés du prototype de la classe parente (<code>ClassParente2</code>) sur le prototype de la classe fille (<code>MaClasse</code>), les rendant disponibles pour toutes les instances de <code>MaClasse</code>. <code>Object.assign()</code> a été introduit avec ES2015 et <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/assign#Prothèse_d'émulation_(polyfill)">une prothèse d'émulation (polyfill)</a> est disponible. Si le support des navigateurs plus anciens est nécessaire, les méthodes <code><a href="https://api.jquery.com/jQuery.extend/">jQuery.extend()</a></code> ou <code><a href="https://lodash.com/docs/#assign">_.assign()</a></code> (Lodash) peuvent être utilisées.</p>
+Ici, la méthode {{jsxref("Object.assign()")}} copie les propriétés du prototype de la classe parente (`ClassParente2`) sur le prototype de la classe fille (`MaClasse`), les rendant disponibles pour toutes les instances de `MaClasse`. `Object.assign()` a été introduit avec ES2015 et [une prothèse d'émulation (polyfill)](</fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/assign#Prothèse_d'émulation_(polyfill)>) est disponible. Si le support des navigateurs plus anciens est nécessaire, les méthodes [`jQuery.extend()`](https://api.jquery.com/jQuery.extend/) ou [`_.assign()`](https://lodash.com/docs/#assign) (Lodash) peuvent être utilisées.
 
-<h3 id="Utiliser_l'argument_objetPropriétés_avec_Object.create()">Utiliser l'argument <code>objetPropriétés</code> avec <code>Object.create()</code></h3>
+### Utiliser l'argument `objetPropriétés` avec `Object.create()`
 
-<pre class="brush: js">var o;
+```js
+var o;
 
 // on crée un objet avec null
 // comme prototype
@@ -172,44 +173,23 @@ o2 = Object.create({}, {
 
 // Équivalent à
 // o2 = Object.create({p: 42});
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.5', 'Object.create')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.8.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-object.create', 'Object.create')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.create', 'Object.create')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                         | Commentaires                                            |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.2.3.5', 'Object.create')}}             | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.8.5. |
+| {{SpecName('ES2015', '#sec-object.create', 'Object.create')}}     | {{Spec2('ES2015')}}     |                                                         |
+| {{SpecName('ESDraft', '#sec-object.create', 'Object.create')}} | {{Spec2('ESDraft')}} |                                                         |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Object.create")}}</p>
+{{Compat("javascript.builtins.Object.create")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Object.defineProperty()")}}</li>
- <li>{{jsxref("Object.defineProperties()")}}</li>
- <li>{{jsxref("Object.prototype.isPrototypeOf()")}}</li>
- <li>Le billet de John Resig sur <code><a href="https://ejohn.org/blog/objectgetprototypeof/">getPrototypeOf()</a></code> (en anglais)</li>
-</ul>
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Object.defineProperties()")}}
+- {{jsxref("Object.prototype.isPrototypeOf()")}}
+- Le billet de John Resig sur [`getPrototypeOf()`](https://ejohn.org/blog/objectgetprototypeof/) (en anglais)

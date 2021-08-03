@@ -11,125 +11,118 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Uint8Array
 original_slug: Web/JavaScript/Reference/Objets_globaux/Uint8Array
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Le tableau typé <strong><code>Uint8Array</code></strong> représente un tableau d'entiers non signés, représentés sur 8 bits. Les éléments du tableau sont initialisés à <code>0</code>. Une fois que le tableau est construit, on peut manipuler ses différents éléments grâce aux méthodes de l'objet ou grâce à la notation usuelle (avec les crochets).</p>
+Le tableau typé **`Uint8Array`** représente un tableau d'entiers non signés, représentés sur 8 bits. Les éléments du tableau sont initialisés à `0`. Une fois que le tableau est construit, on peut manipuler ses différents éléments grâce aux méthodes de l'objet ou grâce à la notation usuelle (avec les crochets).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">new Uint8Array(); // apparu avec ES2017
-new Uint8Array(longueur);
-new Uint8Array(tableauTypé);
-new Uint8Array(objet);
-new Uint8Array(tampon [, décalage [, longueur]]);</pre>
+    new Uint8Array(); // apparu avec ES2017
+    new Uint8Array(longueur);
+    new Uint8Array(tableauTypé);
+    new Uint8Array(objet);
+    new Uint8Array(tampon [, décalage [, longueur]]);
 
-<p>Pour plus d'informations sur la syntaxe du constructeur et le rôle des différents paramètres, voir la page <em><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Syntaxe">TypedArray</a></em>.</p>
+Pour plus d'informations sur la syntaxe du constructeur et le rôle des différents paramètres, voir la page _[TypedArray](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Syntaxe)_.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<dl>
- <dt>{{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint8Array.BYTES_PER_ELEMENT")}}</dt>
- <dd>Cette propriété renvoie la taille d'un élément du tableau, en octets. En l'occurence, pour <code>Uint8Array</code> ce sera <code>1</code>.</dd>
- <dt>Uint8Array.length</dt>
- <dd>La propriété de longueur statique qui vaut 3. Pour connaître le nombre d'élément, voir {{jsxref("TypedArray.prototype.length", "Uint8Array.prototype.length")}}.</dd>
- <dt>{{jsxref("TypedArray.name", "Uint8Array.name")}}</dt>
- <dd>Cette propriété renvoie la chaîne de caractères correspondant au nom du constructeur. Pour <code>Uint8Array</code> ce sera : "Uint8Array".</dd>
- <dt>{{jsxref("TypedArray.prototype", "Uint8Array.prototype")}}</dt>
- <dd>Le prototype des objets <em>TypedArray</em>.</dd>
-</dl>
+- {{jsxref("TypedArray.BYTES_PER_ELEMENT", "Uint8Array.BYTES_PER_ELEMENT")}}
+  - : Cette propriété renvoie la taille d'un élément du tableau, en octets. En l'occurence, pour `Uint8Array` ce sera `1`.
+- Uint8Array.length
+  - : La propriété de longueur statique qui vaut 3. Pour connaître le nombre d'élément, voir {{jsxref("TypedArray.prototype.length", "Uint8Array.prototype.length")}}.
+- {{jsxref("TypedArray.name", "Uint8Array.name")}}
+  - : Cette propriété renvoie la chaîne de caractères correspondant au nom du constructeur. Pour `Uint8Array` ce sera : "Uint8Array".
+- {{jsxref("TypedArray.prototype", "Uint8Array.prototype")}}
+  - : Le prototype des objets _TypedArray_.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<dl>
- <dt>{{jsxref("TypedArray.from", "Uint8Array.from()")}}</dt>
- <dd>Cette méthode permet de créer un nouvel objet <code>Uint8Array</code> à partir d'un itérable ou d'un objet semblable à un tableau. Voir aussi {{jsxref("Array.from()")}}.</dd>
- <dt>{{jsxref("TypedArray.of", "Uint8Array.of()")}}</dt>
- <dd>Cette méthode permet de créer un nouvel objet <code>Uint8Array</code> à partir d'un nombre variables d'arguments. Voir aussi {{jsxref("Array.of()")}}.</dd>
-</dl>
+- {{jsxref("TypedArray.from", "Uint8Array.from()")}}
+  - : Cette méthode permet de créer un nouvel objet `Uint8Array` à partir d'un itérable ou d'un objet semblable à un tableau. Voir aussi {{jsxref("Array.from()")}}.
+- {{jsxref("TypedArray.of", "Uint8Array.of()")}}
+  - : Cette méthode permet de créer un nouvel objet `Uint8Array` à partir d'un nombre variables d'arguments. Voir aussi {{jsxref("Array.of()")}}.
 
-<h2 id="Prototype_Uint8Array">Prototype <code>Uint8Array</code></h2>
+## Prototype `Uint8Array`
 
-<p>Tous les objets <code>Uint8Array</code> héritent de {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.</p>
+Tous les objets `Uint8Array` héritent de {{jsxref("TypedArray.prototype", "%TypedArray%.prototype")}}.
 
-<h3 id="Propriétés_2">Propriétés</h3>
+### Propriétés
 
-<dl>
- <dt><code>Uint8Array.prototype.constructor</code></dt>
- <dd>Cette propriété renvoie la fonction qui a créé l'instance du prototype. Par défaut, ce sera le constructeur <code>Uint8Array</code>.</dd>
- <dt>{{jsxref("TypedArray.prototype.buffer", "Uint8Array.prototype.buffer")}} {{readonlyInline}}</dt>
- <dd>Cette propriété renvoie l'objet {{jsxref("ArrayBuffer")}} référencé par l'objet <code>Uint8Array</code> Elle est déterminée lors de la construction et est accessible uniquement en <strong>lecture seule</strong>.</dd>
- <dt>{{jsxref("TypedArray.prototype.byteLength", "Uint8Array.prototype.byteLength")}} {{readonlyInline}}</dt>
- <dd>Cette propriété renvoie la longueur, exprimée en octets, de l'objet <code>Uint8Array</code> à partir du début de l'objet {{jsxref("ArrayBuffer")}} correspondant. Elle est déterminée lors de la construction et est accessible uniquement en <strong>lecture seule</strong>.</dd>
- <dt>{{jsxref("TypedArray.prototype.byteOffset", "Uint8Array.prototype.byteOffset")}} {{readonlyInline}}</dt>
- <dd>Cette propriété renvoie le décalage, en nombre d'octets, entre le début du tableau typé courant et du début du {{jsxref("ArrayBuffer")}} correspondant. Elle est déterminée lors de la construction et est accessible uniquement en <strong>lecture seule</strong>.</dd>
- <dt>{{jsxref("TypedArray.prototype.length", "Uint8Array.prototype.length")}} {{readonlyInline}}</dt>
- <dd>Cette propriété renvoie le nombre d'éléments contenus dans le tableau <code>Uint8Array</code>. Elle est déterminée lors de la construction et est accessible uniquement en <strong>lecture seule</strong>.</dd>
-</dl>
+- `Uint8Array.prototype.constructor`
+  - : Cette propriété renvoie la fonction qui a créé l'instance du prototype. Par défaut, ce sera le constructeur `Uint8Array`.
+- {{jsxref("TypedArray.prototype.buffer", "Uint8Array.prototype.buffer")}} {{readonlyInline}}
+  - : Cette propriété renvoie l'objet {{jsxref("ArrayBuffer")}} référencé par l'objet `Uint8Array` Elle est déterminée lors de la construction et est accessible uniquement en **lecture seule**.
+- {{jsxref("TypedArray.prototype.byteLength", "Uint8Array.prototype.byteLength")}} {{readonlyInline}}
+  - : Cette propriété renvoie la longueur, exprimée en octets, de l'objet `Uint8Array` à partir du début de l'objet {{jsxref("ArrayBuffer")}} correspondant. Elle est déterminée lors de la construction et est accessible uniquement en **lecture seule**.
+- {{jsxref("TypedArray.prototype.byteOffset", "Uint8Array.prototype.byteOffset")}} {{readonlyInline}}
+  - : Cette propriété renvoie le décalage, en nombre d'octets, entre le début du tableau typé courant et du début du {{jsxref("ArrayBuffer")}} correspondant. Elle est déterminée lors de la construction et est accessible uniquement en **lecture seule**.
+- {{jsxref("TypedArray.prototype.length", "Uint8Array.prototype.length")}} {{readonlyInline}}
+  - : Cette propriété renvoie le nombre d'éléments contenus dans le tableau `Uint8Array`. Elle est déterminée lors de la construction et est accessible uniquement en **lecture seule**.
 
-<h3 id="Méthodes_2">Méthodes</h3>
+### Méthodes
 
-<dl>
- <dt>{{jsxref("TypedArray.copyWithin", "Uint8Array.prototype.copyWithin()")}}</dt>
- <dd>Copie une suite d'éléments d'un tableau dans le tableau. Voir également {{jsxref("Array.prototype.copyWithin()")}}.</dd>
- <dt>{{jsxref("TypedArray.entries", "Uint8Array.prototype.entries()")}}</dt>
- <dd>Renvoie un nouvel objet <code>Array Iterator</code> qui contient les paires clé/valeur pour chaque indice du tableau. Voir également {{jsxref("Array.prototype.entries()")}}.</dd>
- <dt>{{jsxref("TypedArray.every", "Uint8Array.prototype.every()")}}</dt>
- <dd>Teste si l'ensemble des éléments du tableau remplissent une certaine condition donnée par une fonction de test. Voir également {{jsxref("Array.prototype.every()")}}.</dd>
- <dt>{{jsxref("TypedArray.fill", "Uint8Array.prototype.fill()")}}</dt>
- <dd>Remplit les éléments d'un tableau avec une certaine valeur pour les éléments compris entre un indice de début et un indice de fin. Voir également {{jsxref("Array.prototype.fill()")}}.</dd>
- <dt>{{jsxref("TypedArray.filter", "Uint8Array.prototype.filter()")}}</dt>
- <dd>Crée un nouveau tableau dont tous les éléments proviennent de ce tableau et respectent une condition fournie par une fonction de test. Voir également {{jsxref("Array.prototype.filter()")}}.</dd>
- <dt>{{jsxref("TypedArray.find", "Uint8Array.prototype.find()")}}</dt>
- <dd>Renvoie une valeur trouvée dans le tableau s'il existe un élément du tableau qui satisfait une condition fournie par une fonction de test, s'il n'y a pas de tel élément <code>undefined</code> sera renvoyé. Voir également {{jsxref("Array.prototype.find()")}}.</dd>
- <dt>{{jsxref("TypedArray.findIndex", "Uint8Array.prototype.findIndex()")}}</dt>
- <dd>Renvoie l'indice d'un élément qui satisfait une condition fournie par une fonction de test, si aucun élément ne remplit la condition -1 sera renvoyé. Voir également {{jsxref("Array.prototype.findIndex()")}}.</dd>
- <dt>{{jsxref("TypedArray.forEach", "Uint8Array.prototype.forEach()")}}</dt>
- <dd>Appelle une fonction pour chacun des élément du tableau. Voir également {{jsxref("Array.prototype.forEach()")}}.</dd>
- <dt>{{jsxref("TypedArray.includes", "Uint8Array.prototype.includes()")}}</dt>
- <dd>Détermine si le tableau typé contient un élément donné. Cette méthode renvoie <code>true</code> ou <code>false</code> selon le cas de figure. Voir également {{jsxref("Array.prototype.includes()")}}.</dd>
- <dt>{{jsxref("TypedArray.indexOf", "Uint8Array.prototype.indexOf()")}}</dt>
- <dd>Renvoie le premier indice (le plus petit) d'un élément du tableau qui est égal à la valeur fournie. Si aucun élément ne correspond, la valeur -1 sera renvoyée. Voir également {{jsxref("Array.prototype.indexOf()")}}.</dd>
- <dt>{{jsxref("TypedArray.join", "Uint8Array.prototype.join()")}}</dt>
- <dd>Fusionne l'ensemble des éléments du tableau en une chaîne de caractères. Voir également {{jsxref("Array.prototype.join()")}}.</dd>
- <dt>{{jsxref("TypedArray.keys", "Uint8Array.prototype.keys()")}}</dt>
- <dd>Renvoie un nouvel objet <code>Array Iterator</code> qui contient les clés de chaque indice du tableau. Voir également {{jsxref("Array.prototype.keys()")}}.</dd>
- <dt>{{jsxref("TypedArray.lastIndexOf", "Uint8Array.prototype.lastIndexOf()")}}</dt>
- <dd>Renvoie le dernier indice (le plus élevé) d'un élément du tableau qui est égal à la valeur fournie. Si aucun élément ne correspond, la valeur -1 sera renvoyée. Voir également {{jsxref("Array.prototype.lastIndexOf()")}}.</dd>
- <dt>{{jsxref("TypedArray.map", "Uint8Array.prototype.map()")}}</dt>
- <dd>Crée un nouveau tableau dont les éléments sont les images des éléments du tableau courant par une fonction donnée. Voir également {{jsxref("Array.prototype.map()")}}.</dd>
- <dt>{{jsxref("TypedArray.move", "Uint8Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}</dt>
- <dd>Ancienne version, non-standard, de {{jsxref("TypedArray.copyWithin", "Uint8Array.prototype.copyWithin()")}}.</dd>
- <dt>{{jsxref("TypedArray.reduce", "Uint8Array.prototype.reduce()")}}</dt>
- <dd>Applique une fonction sur un accumulateur et chaque élément du tableau (de gauche à droite) afin de réduire le tableau en une seule valeur. Voir également {{jsxref("Array.prototype.reduce()")}}.</dd>
- <dt>{{jsxref("TypedArray.reduceRight", "Uint8Array.prototype.reduceRight()")}}</dt>
- <dd>Applique une fonction sur un accumulateur et chaque élément du tableau (de droite à gauche) afin de réduire le tableau en une seule valeur. Voir également {{jsxref("Array.prototype.reduceRight()")}}.</dd>
- <dt>{{jsxref("TypedArray.reverse", "Uint8Array.prototype.reverse()")}}</dt>
- <dd>Inverse l'ordre des éléments d'un tableau. Le premier élément du tableau devient le dernier et le dernier devient le premier (et ainsi de suite). Voir également {{jsxref("Array.prototype.reverse()")}}.</dd>
- <dt>{{jsxref("TypedArray.set", "Uint8Array.prototype.set()")}}</dt>
- <dd>Enregistre plusieurs valeurs dans le tableau typé à partir de valeurs d'un autre tableau.</dd>
- <dt>{{jsxref("TypedArray.slice", "Uint8Array.prototype.slice()")}}</dt>
- <dd>Extrait un fragment d'un tableau et renvoie ce fragment. Voir également {{jsxref("Array.prototype.slice()")}}.</dd>
- <dt>{{jsxref("TypedArray.some", "Uint8Array.prototype.some()")}}</dt>
- <dd>Renvoie <code>true</code> si au moins un des éléments remplit une condition donnée par une fonction de test. Voir également {{jsxref("Array.prototype.some()")}}.</dd>
- <dt>{{jsxref("TypedArray.sort", "Uint8Array.prototype.sort()")}}</dt>
- <dd>Trie les éléments du tableau et renvoie ce tableau. Voir également {{jsxref("Array.prototype.sort()")}}.</dd>
- <dt>{{jsxref("TypedArray.subarray", "Uint8Array.prototype.subarray()")}}</dt>
- <dd>Renvoie un nouvel objet <code>Uint8Array</code> qui est le fragment du tableau courant, entre les indices de début et de fin donnés.</dd>
- <dt>{{jsxref("TypedArray.values", "Uint8Array.prototype.values()")}}</dt>
- <dd>Renvoie un nouvel objet <code>Array Iterator</code> qui contient les valeurs correspondantes à chaque indice du tableau. Voir également {{jsxref("Array.prototype.values()")}}.</dd>
- <dt>{{jsxref("TypedArray.toLocaleString", "Uint8Array.prototype.toLocaleString()")}}</dt>
- <dd>Renvoie une chaîne de caractères localisée qui représente le tableau et ses éléments. Voir également {{jsxref("Array.prototype.toLocaleString()")}}.</dd>
- <dt>{{jsxref("TypedArray.toString", "Uint8Array.prototype.toString()")}}</dt>
- <dd>Renvoie une chaîne de caractère qui représente le tableau et ses éléments. Voir également {{jsxref("Array.prototype.toString()")}}.</dd>
- <dt>{{jsxref("TypedArray.@@iterator", "Uint8Array.prototype[@@iterator]()")}}</dt>
- <dd>Renvoie un nouvel objet <code>Array Iterator</code> qui contient les valeurs correspondantes à chaque indice du tableau.</dd>
-</dl>
+- {{jsxref("TypedArray.copyWithin", "Uint8Array.prototype.copyWithin()")}}
+  - : Copie une suite d'éléments d'un tableau dans le tableau. Voir également {{jsxref("Array.prototype.copyWithin()")}}.
+- {{jsxref("TypedArray.entries", "Uint8Array.prototype.entries()")}}
+  - : Renvoie un nouvel objet `Array Iterator` qui contient les paires clé/valeur pour chaque indice du tableau. Voir également {{jsxref("Array.prototype.entries()")}}.
+- {{jsxref("TypedArray.every", "Uint8Array.prototype.every()")}}
+  - : Teste si l'ensemble des éléments du tableau remplissent une certaine condition donnée par une fonction de test. Voir également {{jsxref("Array.prototype.every()")}}.
+- {{jsxref("TypedArray.fill", "Uint8Array.prototype.fill()")}}
+  - : Remplit les éléments d'un tableau avec une certaine valeur pour les éléments compris entre un indice de début et un indice de fin. Voir également {{jsxref("Array.prototype.fill()")}}.
+- {{jsxref("TypedArray.filter", "Uint8Array.prototype.filter()")}}
+  - : Crée un nouveau tableau dont tous les éléments proviennent de ce tableau et respectent une condition fournie par une fonction de test. Voir également {{jsxref("Array.prototype.filter()")}}.
+- {{jsxref("TypedArray.find", "Uint8Array.prototype.find()")}}
+  - : Renvoie une valeur trouvée dans le tableau s'il existe un élément du tableau qui satisfait une condition fournie par une fonction de test, s'il n'y a pas de tel élément `undefined` sera renvoyé. Voir également {{jsxref("Array.prototype.find()")}}.
+- {{jsxref("TypedArray.findIndex", "Uint8Array.prototype.findIndex()")}}
+  - : Renvoie l'indice d'un élément qui satisfait une condition fournie par une fonction de test, si aucun élément ne remplit la condition -1 sera renvoyé. Voir également {{jsxref("Array.prototype.findIndex()")}}.
+- {{jsxref("TypedArray.forEach", "Uint8Array.prototype.forEach()")}}
+  - : Appelle une fonction pour chacun des élément du tableau. Voir également {{jsxref("Array.prototype.forEach()")}}.
+- {{jsxref("TypedArray.includes", "Uint8Array.prototype.includes()")}}
+  - : Détermine si le tableau typé contient un élément donné. Cette méthode renvoie `true` ou `false` selon le cas de figure. Voir également {{jsxref("Array.prototype.includes()")}}.
+- {{jsxref("TypedArray.indexOf", "Uint8Array.prototype.indexOf()")}}
+  - : Renvoie le premier indice (le plus petit) d'un élément du tableau qui est égal à la valeur fournie. Si aucun élément ne correspond, la valeur -1 sera renvoyée. Voir également {{jsxref("Array.prototype.indexOf()")}}.
+- {{jsxref("TypedArray.join", "Uint8Array.prototype.join()")}}
+  - : Fusionne l'ensemble des éléments du tableau en une chaîne de caractères. Voir également {{jsxref("Array.prototype.join()")}}.
+- {{jsxref("TypedArray.keys", "Uint8Array.prototype.keys()")}}
+  - : Renvoie un nouvel objet `Array Iterator` qui contient les clés de chaque indice du tableau. Voir également {{jsxref("Array.prototype.keys()")}}.
+- {{jsxref("TypedArray.lastIndexOf", "Uint8Array.prototype.lastIndexOf()")}}
+  - : Renvoie le dernier indice (le plus élevé) d'un élément du tableau qui est égal à la valeur fournie. Si aucun élément ne correspond, la valeur -1 sera renvoyée. Voir également {{jsxref("Array.prototype.lastIndexOf()")}}.
+- {{jsxref("TypedArray.map", "Uint8Array.prototype.map()")}}
+  - : Crée un nouveau tableau dont les éléments sont les images des éléments du tableau courant par une fonction donnée. Voir également {{jsxref("Array.prototype.map()")}}.
+- {{jsxref("TypedArray.move", "Uint8Array.prototype.move()")}} {{non-standard_inline}} {{unimplemented_inline}}
+  - : Ancienne version, non-standard, de {{jsxref("TypedArray.copyWithin", "Uint8Array.prototype.copyWithin()")}}.
+- {{jsxref("TypedArray.reduce", "Uint8Array.prototype.reduce()")}}
+  - : Applique une fonction sur un accumulateur et chaque élément du tableau (de gauche à droite) afin de réduire le tableau en une seule valeur. Voir également {{jsxref("Array.prototype.reduce()")}}.
+- {{jsxref("TypedArray.reduceRight", "Uint8Array.prototype.reduceRight()")}}
+  - : Applique une fonction sur un accumulateur et chaque élément du tableau (de droite à gauche) afin de réduire le tableau en une seule valeur. Voir également {{jsxref("Array.prototype.reduceRight()")}}.
+- {{jsxref("TypedArray.reverse", "Uint8Array.prototype.reverse()")}}
+  - : Inverse l'ordre des éléments d'un tableau. Le premier élément du tableau devient le dernier et le dernier devient le premier (et ainsi de suite). Voir également {{jsxref("Array.prototype.reverse()")}}.
+- {{jsxref("TypedArray.set", "Uint8Array.prototype.set()")}}
+  - : Enregistre plusieurs valeurs dans le tableau typé à partir de valeurs d'un autre tableau.
+- {{jsxref("TypedArray.slice", "Uint8Array.prototype.slice()")}}
+  - : Extrait un fragment d'un tableau et renvoie ce fragment. Voir également {{jsxref("Array.prototype.slice()")}}.
+- {{jsxref("TypedArray.some", "Uint8Array.prototype.some()")}}
+  - : Renvoie `true` si au moins un des éléments remplit une condition donnée par une fonction de test. Voir également {{jsxref("Array.prototype.some()")}}.
+- {{jsxref("TypedArray.sort", "Uint8Array.prototype.sort()")}}
+  - : Trie les éléments du tableau et renvoie ce tableau. Voir également {{jsxref("Array.prototype.sort()")}}.
+- {{jsxref("TypedArray.subarray", "Uint8Array.prototype.subarray()")}}
+  - : Renvoie un nouvel objet `Uint8Array` qui est le fragment du tableau courant, entre les indices de début et de fin donnés.
+- {{jsxref("TypedArray.values", "Uint8Array.prototype.values()")}}
+  - : Renvoie un nouvel objet `Array Iterator` qui contient les valeurs correspondantes à chaque indice du tableau. Voir également {{jsxref("Array.prototype.values()")}}.
+- {{jsxref("TypedArray.toLocaleString", "Uint8Array.prototype.toLocaleString()")}}
+  - : Renvoie une chaîne de caractères localisée qui représente le tableau et ses éléments. Voir également {{jsxref("Array.prototype.toLocaleString()")}}.
+- {{jsxref("TypedArray.toString", "Uint8Array.prototype.toString()")}}
+  - : Renvoie une chaîne de caractère qui représente le tableau et ses éléments. Voir également {{jsxref("Array.prototype.toString()")}}.
+- {{jsxref("TypedArray.@@iterator", "Uint8Array.prototype[@@iterator]()")}}
+  - : Renvoie un nouvel objet `Array Iterator` qui contient les valeurs correspondantes à chaque indice du tableau.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Différentes façons de construire un objet <code>Uint8Array</code> :</p>
+Différentes façons de construire un objet `Uint8Array` :
 
-<pre class="brush: js">// Construction à partir d'une longueur
+```js
+// Construction à partir d'une longueur
 var uint8 = new Uint8Array(2);
 uint8[0] = 42;
 console.log(uint8[0]); // 42
@@ -153,53 +146,36 @@ var z = new Uint8Array(buffer, 1, 4);
 var iterable = function*(){ yield* [1,2,3]; }();
 var uint8 = new Uint8Array(iterable);
 // Uint8Array[1, 2, 3]
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Typed Array')}}</td>
-   <td>{{Spec2('Typed Array')}}</td>
-   <td>Englobée par ECMAScript 2015.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#table-49', 'TypedArray constructors')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Définition initiale au sein d'un standard ECMA. <code>new</code> est obligatoire.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>ECMAScript 2017 a modifié le constructeur <code>Uint8Array</code> afin qu'il utilise l'opération <code>ToIndex</code> et qu'il puisse être utilisé sans argument.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                             | Commentaires                                                                                                                                |
+| ------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('Typed Array')}}                                                 | {{Spec2('Typed Array')}} | Englobée par ECMAScript 2015.                                                                                                               |
+| {{SpecName('ES6', '#table-49', 'TypedArray constructors')}}     | {{Spec2('ES6')}}             | Définition initiale au sein d'un standard ECMA. `new` est obligatoire.                                                                      |
+| {{SpecName('ESDraft', '#table-49', 'TypedArray constructors')}} | {{Spec2('ESDraft')}}     | ECMAScript 2017 a modifié le constructeur `Uint8Array` afin qu'il utilise l'opération `ToIndex` et qu'il puisse être utilisé sans argument. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Uint8Array")}}</p>
+{{Compat("javascript.builtins.Uint8Array")}}
 
-<h2 id="Notes_de_compatibilité">Notes de compatibilité</h2>
+## Notes de compatibilité
 
-<p>À partir d'ECMAScript 2015 (ES6), <code>Uint8Array</code> doit être utilisé avec {{jsxref("Opérateurs/L_opérateur_new", "new")}}. Appeler un constructeur <code>Uint8Array</code> comme une fonction, sans <code>new</code>, provoquera une exception {{jsxref("TypeError")}}.</p>
+À partir d'ECMAScript 2015 (ES6), `Uint8Array` doit être utilisé avec {{jsxref("Opérateurs/L_opérateur_new", "new")}}. Appeler un constructeur `Uint8Array` comme une fonction, sans `new`, provoquera une exception {{jsxref("TypeError")}}.
 
-<pre class="brush: js example-bad">var dv = Uint8Array([1, 2, 3]);
+```js example-bad
+var dv = Uint8Array([1, 2, 3]);
 // TypeError: calling a builtin Uint8Array constructor
-// without new is forbidden</pre>
+// without new is forbidden
+```
 
-<pre class="brush: js example-good">var dv = new Uint8Array([1, 2, 3]);</pre>
+```js example-good
+var dv = new Uint8Array([1, 2, 3]);
+```
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Tableaux_typés">Les tableaux typés en JavaScript</a></li>
- <li>{{jsxref("ArrayBuffer")}}</li>
- <li>{{jsxref("DataView")}}</li>
-</ul>
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés)
+- {{jsxref("ArrayBuffer")}}
+- {{jsxref("DataView")}}

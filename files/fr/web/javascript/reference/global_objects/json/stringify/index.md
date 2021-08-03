@@ -9,62 +9,55 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 original_slug: Web/JavaScript/Reference/Objets_globaux/JSON/stringify
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>JSON.stringify()</strong></code> convertit une valeur JavaScript en chaîne JSON. Optionnellement, elle peut remplacer des valeurs ou spécifier les propriétés à inclure si un tableau de propriétés a été fourni.</p>
+La méthode **`JSON.stringify()`** convertit une valeur JavaScript en chaîne JSON. Optionnellement, elle peut remplacer des valeurs ou spécifier les propriétés à inclure si un tableau de propriétés a été fourni.
 
-<div>{{EmbedInteractiveExample("pages/js/json-stringify.html")}}</div>
+{{EmbedInteractiveExample("pages/js/json-stringify.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">JSON.stringify( <var>valeur</var>[, <var>remplaçant</var> [, <var>espace</var>]])</pre>
+    JSON.stringify( valeur[, remplaçant [, espace]])
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>valeur</code></dt>
- <dd>La valeur à convertir en chaîne JSON.</dd>
- <dt><code>remplaçant</code> {{optional_inline}}</dt>
- <dd>
- <p>Une fonction qui modifie le processus de transformation ou un tableau de chaînes de caractères et de nombres qui sont utilisés comme liste blanche pour sélectionner/filtrer les propriétés de l'objet à inclure dans la chaîne JSON. Si cette valeur est {{jsxref("null")}} ou n'est pas fournie, toutes les propriétés de l'objet seront inclues dans la chaîne résultante.</p>
- </dd>
- <dt><code>espace</code> {{optional_inline}}</dt>
- <dd>Un objet {{jsxref("String")}} ou {{jsxref("Number")}} qui est utilisé pour insérer des blancs dans la chaîne JSON produite afin de faciliter la lisibilité.</dd>
-</dl>
+- `valeur`
+  - : La valeur à convertir en chaîne JSON.
+- `remplaçant` {{optional_inline}}
+  - : Une fonction qui modifie le processus de transformation ou un tableau de chaînes de caractères et de nombres qui sont utilisés comme liste blanche pour sélectionner/filtrer les propriétés de l'objet à inclure dans la chaîne JSON. Si cette valeur est {{jsxref("null")}} ou n'est pas fournie, toutes les propriétés de l'objet seront inclues dans la chaîne résultante.
+- `espace` {{optional_inline}}
+  - : Un objet {{jsxref("String")}} ou {{jsxref("Number")}} qui est utilisé pour insérer des blancs dans la chaîne JSON produite afin de faciliter la lisibilité.
 
-<ul>
- <li>Si cet argument est un nombre, il indiquera le nombre d'espaces à utiliser pour l'indentation (la valeur est ramenée à 10 si elle dépasse 10).</li>
- <li>Si l'argument est une chaîne, les 10 premiers caractères (ou la chaîne si elle est plus courte) seront utilisés pour les blancs.</li>
- <li>Si le paramètre n'est pas fourni (ou s'il est nul), aucun blanc ne sera utilisé.</li>
-</ul>
+<!---->
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+- Si cet argument est un nombre, il indiquera le nombre d'espaces à utiliser pour l'indentation (la valeur est ramenée à 10 si elle dépasse 10).
+- Si l'argument est une chaîne, les 10 premiers caractères (ou la chaîne si elle est plus courte) seront utilisés pour les blancs.
+- Si le paramètre n'est pas fourni (ou s'il est nul), aucun blanc ne sera utilisé.
 
-<p>Une chaîne de caractères JSON qui représente la valeur indiquée.</p>
+### Valeur de retour
 
-<h3 id="Exceptions">Exceptions</h3>
+Une chaîne de caractères JSON qui représente la valeur indiquée.
 
-<ul>
- <li>Cette méthode lève une exception {{jsxref("TypeError")}} (« <em>cyclic object value</em> ») lorsqu'elle trouve une référence circulaire.</li>
- <li>Cette méthode lève une exception {{jsxref("TypeError")}} (« <em>BigInt value can't be serialized in JSON</em> ») lorsqu'on tente de convertir une valeur {{jsxref("BigInt")}} en une chaîne de caractères JSON.</li>
-</ul>
+### Exceptions
 
-<h2 id="Description">Description</h2>
+- Cette méthode lève une exception {{jsxref("TypeError")}} (« _cyclic object value_ ») lorsqu'elle trouve une référence circulaire.
+- Cette méthode lève une exception {{jsxref("TypeError")}} (« _BigInt value can't be serialized in JSON_ ») lorsqu'on tente de convertir une valeur {{jsxref("BigInt")}} en une chaîne de caractères JSON.
 
-<p>La fonction <code>JSON.stringify()</code> convertit un objet en JSON :</p>
+## Description
 
-<ul>
- <li>L'ordre des propriétés des objets qui ne sont pas des tableaux n'est pas garanti. Par la suite, ne pas supposer que cet ordre soit respecté.</li>
- <li>Les objets {{jsxref("Boolean")}}, {{jsxref("Number")}} et {{jsxref("String")}} sont convertis en leur valeur primitive correspondante, en accord avec la sémantique traditionnelle.</li>
- <li>Si {{jsxref("undefined")}}, une fonction ou un symbole est rencontré lors de la conversion , il est soit omis ( quand il se trouve dans un objet ) ou ramené à {{jsxref("null")}} ( quand il se trouve dans un tableau). <code>JSON.stringify()</code> peut également renvoyer <code>undefined</code> lorsqu'il reçoit des valeurs « brutes » qui ne sont pas objectifiées comme par exemple <code>JSON.stringify(function(){})</code> ou <code>JSON.stringify(undefined)</code>.</li>
- <li>Toutes les propriétés liées aux symboles (cf. {{jsxref("Symbol")}}) seront complètement ignorées , même lorsque la fonction <code>remplaçant</code> est utilisée.</li>
- <li>Les propriétés qui ne sont pas énumérables seront ignorées.</li>
- <li>Les instances de {{jsxref("Date")}} implémentent la fonction <code>toJSON()</code> en renvoyant une chaîne de caractères (identique à celle renvoyée par <code>date.toISOString()</code>). Aussi, les dates sont traitées comme des chaînes de caractères.</li>
- <li>Les nombres {{jsxref("Infinity")}} et {{jsxref("NaN")}}, ainsi que l'objet {{jsxref("null")}} sont traités comme <code>null</code>.</li>
- <li>Pour les autres instances d'objets tels que {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}} et {{jsxref("WeakSet")}}, seules les propriétés énumérables sont sérialisées.</li>
-</ul>
+La fonction `JSON.stringify()` convertit un objet en JSON :
 
-<pre class="brush: js">JSON.stringify({});                        // '{}'
+- L'ordre des propriétés des objets qui ne sont pas des tableaux n'est pas garanti. Par la suite, ne pas supposer que cet ordre soit respecté.
+- Les objets {{jsxref("Boolean")}}, {{jsxref("Number")}} et {{jsxref("String")}} sont convertis en leur valeur primitive correspondante, en accord avec la sémantique traditionnelle.
+- Si {{jsxref("undefined")}}, une fonction ou un symbole est rencontré lors de la conversion , il est soit omis ( quand il se trouve dans un objet ) ou ramené à {{jsxref("null")}} ( quand il se trouve dans un tableau). `JSON.stringify()` peut également renvoyer `undefined` lorsqu'il reçoit des valeurs « brutes » qui ne sont pas objectifiées comme par exemple `JSON.stringify(function(){})` ou `JSON.stringify(undefined)`.
+- Toutes les propriétés liées aux symboles (cf. {{jsxref("Symbol")}}) seront complètement ignorées , même lorsque la fonction `remplaçant` est utilisée.
+- Les propriétés qui ne sont pas énumérables seront ignorées.
+- Les instances de {{jsxref("Date")}} implémentent la fonction `toJSON()` en renvoyant une chaîne de caractères (identique à celle renvoyée par `date.toISOString()`). Aussi, les dates sont traitées comme des chaînes de caractères.
+- Les nombres {{jsxref("Infinity")}} et {{jsxref("NaN")}}, ainsi que l'objet {{jsxref("null")}} sont traités comme `null`.
+- Pour les autres instances d'objets tels que {{jsxref("Map")}}, {{jsxref("Set")}}, {{jsxref("WeakMap")}} et {{jsxref("WeakSet")}}, seules les propriétés énumérables sont sérialisées.
+
+```js
+JSON.stringify({});                        // '{}'
 JSON.stringify(true);                      // 'true'
 JSON.stringify("toto");                    // '"toto"'
 JSON.stringify([1, "false", false]);       // '[1,"false",false]'
@@ -140,28 +133,27 @@ JSON.stringify(Object.create(null, { x: { value: 'x', enumerable: false }, y: { 
 // Échec avec BigInt
 JSON.stringify({x: 2n});
 // TypeError: BigInt value can't be serialized in JSON
-</pre>
+```
 
-<h3 id="L'argument_remplaçant">L'argument <code>remplaçant</code></h3>
+### L'argument `remplaçant`
 
-<p>L'argument <code>remplaçant</code> est une fonction ou un tableau. Si c'est une fonction, elle prend deux paramètres : une clé et la valeur qui est traitée pour être convertie en chaîne. L'objet dans lequel la clé a été trouvée sera fourni comme paramètre <code>this</code> pour la fonction. Cette fonction est d'abord appelée avec une chaîne vide comme clé représentant l'objet à transformer puis elle est appelée sur chaque propriété de l'objet ou du tableau à transformer en chaîne. Cette fonction renvoie la valeur à ajouter à la chaîne JSON :</p>
+L'argument `remplaçant` est une fonction ou un tableau. Si c'est une fonction, elle prend deux paramètres : une clé et la valeur qui est traitée pour être convertie en chaîne. L'objet dans lequel la clé a été trouvée sera fourni comme paramètre `this` pour la fonction. Cette fonction est d'abord appelée avec une chaîne vide comme clé représentant l'objet à transformer puis elle est appelée sur chaque propriété de l'objet ou du tableau à transformer en chaîne. Cette fonction renvoie la valeur à ajouter à la chaîne JSON :
 
-<ul>
- <li>Si la valeur renvoyée est un nombre ({{jsxref("Number")}}), la chaîne correspondante au nombre sera utilisée comme valeur à ajouter à la chaîne pour représenter la valeur de la propriété traitée.</li>
- <li>Si la valeur renvoyée est une chaîne de caractères ({{jsxref("String")}}), cette chaîne sera utilisée pour représenter la valeur de la propriété dans la chaîne JSON.</li>
- <li>Si la valeur renvoyée est un {{jsxref("Boolean")}}, "true" ou "false" sera utilisé pour représenter la valeur de la propriété et sera ajouté à la chaîne JSON.</li>
- <li>Si la valeur renvoyée est <code>null</code>, <code>null</code> sera ajouté à la chaîne JSON.</li>
- <li>Si la valeur renvoyée est un autre objet, cet objet sera, de façon récursive, transformé en une chaîne JSON en appelant la fonction <code>remplaçant</code> sur chaque propriété sauf si l'objet est une fonction auquel cas, rien n'est ajouté à la chaîne JSON.</li>
- <li>Si la valeur renvoyée est {{jsxref("undefined")}}, la propriété ne sera pas incluse dans la chaîne JSON.</li>
-</ul>
+- Si la valeur renvoyée est un nombre ({{jsxref("Number")}}), la chaîne correspondante au nombre sera utilisée comme valeur à ajouter à la chaîne pour représenter la valeur de la propriété traitée.
+- Si la valeur renvoyée est une chaîne de caractères ({{jsxref("String")}}), cette chaîne sera utilisée pour représenter la valeur de la propriété dans la chaîne JSON.
+- Si la valeur renvoyée est un {{jsxref("Boolean")}}, "true" ou "false" sera utilisé pour représenter la valeur de la propriété et sera ajouté à la chaîne JSON.
+- Si la valeur renvoyée est `null`, `null` sera ajouté à la chaîne JSON.
+- Si la valeur renvoyée est un autre objet, cet objet sera, de façon récursive, transformé en une chaîne JSON en appelant la fonction `remplaçant` sur chaque propriété sauf si l'objet est une fonction auquel cas, rien n'est ajouté à la chaîne JSON.
+- Si la valeur renvoyée est {{jsxref("undefined")}}, la propriété ne sera pas incluse dans la chaîne JSON.
 
-<div class="note"><p><strong>Note :</strong> la fonction <code>remplaçant</code> ne peut pas être utilisée pour retirer des valeurs d'un tableau. Si on renvoie <code>undefined</code> ou une fonction, ce sera la valeur <code>null</code> qui sera utilisée.</p></div>
+> **Note :** la fonction `remplaçant` ne peut pas être utilisée pour retirer des valeurs d'un tableau. Si on renvoie `undefined` ou une fonction, ce sera la valeur `null` qui sera utilisée.
 
-<div class="note"><p><strong>Note :</strong> Si on souhaite que la fonction <code>remplaçant</code> distingue un objet dont une propriété a un clé qui est « réellement » une chaîne vide, il faudra avoir un compteur pour le nombre d'itération. Si le compteur indique que la première itération est passée, alors il s'agit bien d'un clé avec une chaîne vide.</p></div>
+> **Note :** Si on souhaite que la fonction `remplaçant` distingue un objet dont une propriété a un clé qui est « réellement » une chaîne vide, il faudra avoir un compteur pour le nombre d'itération. Si le compteur indique que la première itération est passée, alors il s'agit bien d'un clé avec une chaîne vide.
 
-<h4 id="Exemple_avec_une_fonction">Exemple avec une fonction</h4>
+#### Exemple avec une fonction
 
-<pre class="brush: js">function remplaçant(clé, valeur) {
+```js
+function remplaçant(clé, valeur) {
   if (typeof valeur === "string") {
     return undefined;
   }
@@ -170,54 +162,54 @@ JSON.stringify({x: 2n});
 
 var toto = {fondation: "Mozilla", modèle: "boîte", semaine: 45, transport: "bus", mois: 7};
 console.log(JSON.stringify(toto, remplaçant)); // {"semaine":45, "mois":7}
-</pre>
+```
 
-<h4 id="Exemple_avec_un_tableau">Exemple avec un tableau</h4>
+#### Exemple avec un tableau
 
-<p>Si <code>remplaçant</code> est un tableau, les valeurs du tableau indiquent les propriétés de l'objet à inclure dans la chaîne JSON.</p>
+Si `remplaçant` est un tableau, les valeurs du tableau indiquent les propriétés de l'objet à inclure dans la chaîne JSON.
 
-<pre class="brush: js">JSON.stringify(toto, ['semaine', 'mois']);
+```js
+JSON.stringify(toto, ['semaine', 'mois']);
 // '{"semaine":45,"mois":7}', on ne garde que "semaines" et "mois"
-</pre>
+```
 
-<h3 id="L'argument_espace">L'argument <code>espace</code></h3>
+### L'argument `espace`
 
-<p>L'argument <code>espace</code> est utilisé pour contrôler les espacements utilisés dans la chaîne finale.</p>
+L'argument `espace` est utilisé pour contrôler les espacements utilisés dans la chaîne finale.
 
-<ul>
- <li>Si c'est un nombre, les différents niveaux d'indentation auront autant d'espaces qu'indiqué grâce à ce paramètre (jusqu'à 10).</li>
- <li>Si c'est une chaîne, les dix premiers caractères (ou la chaîne complète si elle est plus courte)</li>
-</ul>
+- Si c'est un nombre, les différents niveaux d'indentation auront autant d'espaces qu'indiqué grâce à ce paramètre (jusqu'à 10).
+- Si c'est une chaîne, les dix premiers caractères (ou la chaîne complète si elle est plus courte)
 
-<pre class="brush: js">JSON.stringify({ a: 2 }, null, ' ');
+```js
+JSON.stringify({ a: 2 }, null, ' ');
 // '{
 //  "a": 2
 // }'
-</pre>
+```
 
-<p>Dans l'exemple suivant on utilise la tabulation pour rendre lisible le résultat :</p>
+Dans l'exemple suivant on utilise la tabulation pour rendre lisible le résultat :
 
-<pre class="brush: js">JSON.stringify({ uno: 1, dos: 2 }, null, '\t');
+```js
+JSON.stringify({ uno: 1, dos: 2 }, null, '\t');
 // renverra
 // '{
 //     "uno": 1,
 //     "dos": 2
 // }'
-</pre>
+```
 
-<h3 id="La_fonction_toJSON()">La fonction <code>toJSON()</code></h3>
+### La fonction `toJSON()`
 
-<p>Pour personnaliser la valeur d'un objet lors de sa conversion en JSON, on peut surcharger la méthode <code>toJSON()</code> : la valeur retournée par cette méthode <code>toJSON()</code> sera alors utilisée. <code>JSON.stringify()</code> invoquera la méthode <code>toJSON()</code> de l'objet avec un paramètre :</p>
+Pour personnaliser la valeur d'un objet lors de sa conversion en JSON, on peut surcharger la méthode `toJSON()` : la valeur retournée par cette méthode `toJSON()` sera alors utilisée. `JSON.stringify()` invoquera la méthode `toJSON()` de l'objet avec un paramètre :
 
-<ul>
- <li>Si cet objet est une propriété de donnée, ce sera le nom de la propriété</li>
- <li>Si cet objet est un tableau, ce sera l'indice de l'élément du tableau sous la forme d'une chaîne de caractères</li>
- <li>Une chaîne vide si <code>JSON.stringify()</code> était directement appelé sur l'objet.</li>
-</ul>
+- Si cet objet est une propriété de donnée, ce sera le nom de la propriété
+- Si cet objet est un tableau, ce sera l'indice de l'élément du tableau sous la forme d'une chaîne de caractères
+- Une chaîne vide si `JSON.stringify()` était directement appelé sur l'objet.
 
-<p>Ainsi :</p>
+Ainsi :
 
-<pre class="brush: js">var obj = {
+```js
+var obj = {
   data: 'data',
   toJSON(clef){
     if(clef) {
@@ -236,28 +228,30 @@ JSON.stringify({ obj })
 
 JSON.stringify([ obj ])
 // '["Un objet imbriqué sous la clef '0'"]'
-</pre>
+```
 
-<h3 id="Le_problème_des_références_circulaires">Le problème des références circulaires</h3>
+### Le problème des références circulaires
 
-<p><a href="https://www.json.org/">Le format JSON</a> ne prend pas en charge les références (bien <a href="http://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03">qu'un brouillon IETF existe</a>) et une exception {{jsxref("TypeError")}} sera levée si on tente d'encoder un objet possédant des références circulaires.</p>
+[Le format JSON](https://www.json.org/) ne prend pas en charge les références (bien [qu'un brouillon IETF existe](http://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03)) et une exception {{jsxref("TypeError")}} sera levée si on tente d'encoder un objet possédant des références circulaires.
 
-<pre class="brush: js example-bad">const circularReference = {};
+```js example-bad
+const circularReference = {};
 circularReference.myself = circularReference;
 
 // Sérialiser un objet avec des références circulaires déclenche une "TypeError: cyclic object value"
 JSON.stringify(circularReference);
-</pre>
+```
 
-<p>Pour sérialiser les références circulaires, on peut utiliser une bibliothèque (<a href="https://github.com/douglascrockford/JSON-js/blob/master/cycle.js">cycle.js</a> par exemple) ou implémenter sa propre solution (qui consistera à trouver et à remplacer le cycle par des valeurs sérialisables).</p>
+Pour sérialiser les références circulaires, on peut utiliser une bibliothèque ([cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js) par exemple) ou implémenter sa propre solution (qui consistera à trouver et à remplacer le cycle par des valeurs sérialisables).
 
-<h3 id="Gestion_des_terminateurs_de_ligne">Gestion des terminateurs de ligne</h3>
+### Gestion des terminateurs de ligne
 
-<p>Par le passé, JSON n'était pas un sous-ensemble strict de JavaScript. En effet, en JSON, deux terminateurs de ligne (le caractère de séparation de ligne U+2028 LINE SEPARATOR et le caractère de séparation de paragraphe U+2029 PARAGRAPH SEPARATOR) n'avaient pas besoin d'être échappés dans des données JSON alors qu'ils devaient l'être en JavaScript. Cela a désormais évolué et les deux points de code peuvent apparaître tant en JSON qu'en JavaScript.</p>
+Par le passé, JSON n'était pas un sous-ensemble strict de JavaScript. En effet, en JSON, deux terminateurs de ligne (le caractère de séparation de ligne U+2028 LINE SEPARATOR et le caractère de séparation de paragraphe U+2029 PARAGRAPH SEPARATOR) n'avaient pas besoin d'être échappés dans des données JSON alors qu'ils devaient l'être en JavaScript. Cela a désormais évolué et les deux points de code peuvent apparaître tant en JSON qu'en JavaScript.
 
-<p>Ainsi, si on souhaite avoir une compatibilité avec les anciens moteurs JavaScript, on pourra évaluer ou utiliser les données JSON avec <a href="https://fr.wikipedia.org/wiki/JSONP">JSONP</a> et la fonction utilitaire suivante :</p>
+Ainsi, si on souhaite avoir une compatibilité avec les anciens moteurs JavaScript, on pourra évaluer ou utiliser les données JSON avec [JSONP](https://fr.wikipedia.org/wiki/JSONP) et la fonction utilitaire suivante :
 
-<pre class="brush: js">function jsFriendlyJSONStringify (s) {
+```js
+function jsFriendlyJSONStringify (s) {
     return JSON.stringify(s).
         replace(/\u2028/g, '\\u2028').
         replace(/\u2029/g, '\\u2029');
@@ -270,28 +264,27 @@ var s = {
 
 // dans Firefox, console.log enlève les échappements
 // des caractères Unicode, on utilise donc alert :(
-alert(jsFriendlyJSONStringify(s)); // {"a":"\u2028","b":"\u2029"}</pre>
+alert(jsFriendlyJSONStringify(s)); // {"a":"\u2028","b":"\u2029"}
+```
 
-<div class="note">
-<p><strong>Note :</strong> Les propriétés des objets qui ne sont pas des tableaux ne sont pas transformées en chaînes de caractères selon un ordre particulier. Aussi, l'ordre des données en JSON ne saurait constituer une information utile.</p>
-</div>
+> **Note :** Les propriétés des objets qui ne sont pas des tableaux ne sont pas transformées en chaînes de caractères selon un ordre particulier. Aussi, l'ordre des données en JSON ne saurait constituer une information utile.
 
-<pre class="brush: js">var a = JSON.stringify({toto: "truc", bidule: "machin"});
+```js
+var a = JSON.stringify({toto: "truc", bidule: "machin"});
 // '{"toto":"truc","bidule":"machin"}'
 var b = JSON.stringify({bidule: "machin", toto: "truc"});
 // '{"bidule":"machin","toto":"truc"}'
 console.log(a !== b); // true
-</pre>
+```
 
-<h3 id="Utiliser_JSON.stringify_avec_localStorage">Utiliser <code>JSON.stringify</code> avec localStorage</h3>
+### Utiliser `JSON.stringify` avec localStorage
 
-<p>Dans le cas où on souhaite enregistrer un objet créé par l'utilisateur afin de le restorer plus tard (y compris après que le navigateur ait été fermé), on peut utiliser <code>JSON.stringify</code>.</p>
+Dans le cas où on souhaite enregistrer un objet créé par l'utilisateur afin de le restorer plus tard (y compris après que le navigateur ait été fermé), on peut utiliser `JSON.stringify`.
 
-<div class="warning">
-<p><strong>Attention :</strong> Les fonctions n'ont pas de correspondances en JSON, il ne sera donc pas possible de les enregistrer de cette façon. En revanche, elles peuvent être affichées si elles ont été converties en texte avec la fonction de remplacement. De même, certains objets comme les dates seront transformées en chaîne de caractères après l'utilisation de JSON.parse().</p>
-</div>
+> **Attention :** Les fonctions n'ont pas de correspondances en JSON, il ne sera donc pas possible de les enregistrer de cette façon. En revanche, elles peuvent être affichées si elles ont été converties en texte avec la fonction de remplacement. De même, certains objets comme les dates seront transformées en chaîne de caractères après l'utilisation de JSON.parse().
 
-<pre class="brush: js">// On crée un objet pour l'exemple
+```js
+// On crée un objet pour l'exemple
 var session = {
     'screens' : [],
     'state' : true
@@ -314,54 +307,37 @@ var sessionRestaurée = JSON.parse(localStorage.getItem('session'));
 // La variable sessionRestaurée contient désormais l'objet précédent
 // qui avait été sauvegardé dans localStorage
 console.log(sessionRestaurée);
-</pre>
+```
 
-<h3 id="Chaînes_bien_formées_et_JSON.stringify()">Chaînes bien formées et <code>JSON.stringify()</code></h3>
+### Chaînes bien formées et `JSON.stringify()`
 
-<p>Les moteurs, qui implémentent la spécification sur JSON.stringify() bien formé, transformeront en chaîne de caractères les éléments isolés de paires <em>surrogates</em> via des séquences d'échappement Unicode plutôt que d'utiliser leurs valeurs littérales. Avant cette modification de spécification, <code>JSON.stringify()</code> n'aurait pas encodé les éléments <em>surrogates</em> isolés et les chaînes produites n'étaient pas valides selon UTF-8 ou UTF-16 :</p>
+Les moteurs, qui implémentent la spécification sur JSON.stringify() bien formé, transformeront en chaîne de caractères les éléments isolés de paires _surrogates_ via des séquences d'échappement Unicode plutôt que d'utiliser leurs valeurs littérales. Avant cette modification de spécification, `JSON.stringify()` n'aurait pas encodé les éléments _surrogates_ isolés et les chaînes produites n'étaient pas valides selon UTF-8 ou UTF-16 :
 
-<pre class="brush: js">JSON.stringify("\uD800"); // '"�"'</pre>
+```js
+JSON.stringify("\uD800"); // '"�"'
+```
 
-<p>Avec cette modification, les séquences d'échappement produites permettent d'avoir un contenu UTF-16 ou UTF-8 lisible :</p>
+Avec cette modification, les séquences d'échappement produites permettent d'avoir un contenu UTF-16 ou UTF-8 lisible :
 
-<pre class="brush: js">JSON.stringify("\uD800"); // '"\\ud800"'</pre>
+```js
+JSON.stringify("\uD800"); // '"\\ud800"'
+```
 
-<p>Cette modification est rétrocompatible pour toutes les opérations où le résultat de <code>JSON.stringify()</code> est passé à des API comme <code>JSON.parse()</code> qui acceptent du texte JSON valide. En effet, ces API traiteront les séquences d'échappement de <em>surrogates</em> isolés comme les caractères correspondants. Seul le cas où le code interprète directement le résultat de <code>JSON.stringify()</code> doit être adapté afin de gérer les deux encodages possibles pour ces cas.</p>
+Cette modification est rétrocompatible pour toutes les opérations où le résultat de `JSON.stringify()` est passé à des API comme `JSON.parse()` qui acceptent du texte JSON valide. En effet, ces API traiteront les séquences d'échappement de _surrogates_ isolés comme les caractères correspondants. Seul le cas où le code interprète directement le résultat de `JSON.stringify()` doit être adapté afin de gérer les deux encodages possibles pour ces cas.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.12.3', 'JSON.stringify')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.7.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-json.stringify', 'JSON.stringify')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-json.stringify', 'JSON.stringify')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                         | Commentaires                                          |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.12.3', 'JSON.stringify')}}             | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.7. |
+| {{SpecName('ES6', '#sec-json.stringify', 'JSON.stringify')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-json.stringify', 'JSON.stringify')}} | {{Spec2('ESDraft')}} |                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.JSON.stringify")}}</p>
+{{Compat("javascript.builtins.JSON.stringify")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("JSON.parse()")}}</li>
- <li><a href="https://github.com/douglascrockford/JSON-js/blob/master/cycle.js">cycle.js</a> qui ajoute deux fonctions <code>JSON.decycle</code> et <code>JSON.retrocycle</code> qui permettent d'encoder et de décoder des structures cycliques.</li>
-</ul>
+- {{jsxref("JSON.parse()")}}
+- [cycle.js](https://github.com/douglascrockford/JSON-js/blob/master/cycle.js) qui ajoute deux fonctions `JSON.decycle` et `JSON.retrocycle` qui permettent d'encoder et de décoder des structures cycliques.

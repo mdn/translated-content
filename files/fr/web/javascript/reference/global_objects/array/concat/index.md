@@ -10,63 +10,59 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/concat
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/concat
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>concat()</strong></code> est utilisée afin de fusionner un ou plusieurs tableaux en les concaténant. Cette méthode ne modifie pas les tableaux existants, elle renvoie un nouveau tableau qui est le résultat de l'opération.</p>
+La méthode **`concat()`** est utilisée afin de fusionner un ou plusieurs tableaux en les concaténant. Cette méthode ne modifie pas les tableaux existants, elle renvoie un nouveau tableau qui est le résultat de l'opération.
 
-<div>{{EmbedInteractiveExample("pages/js/array-concat.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-concat.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">let <var>nouveau_tableau</var> = <var>ancien_tableau</var>.concat(<var>valeur1</var>[, <var>valeur2</var>[, ...[, <var>valeurN</var>]]])</pre>
+    let nouveau_tableau = ancien_tableau.concat(valeur1[, valeur2[, ...[, valeurN]]])
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>valeurN</code>{{optional_inline}}</dt>
- <dd>Des tableaux et/ou des valeurs à concaténer dans le nouveau tableau. Si tous les arguments <code>valeurN</code> valent <code>undefined</code>, <code>concat</code> renverra une copie superficielle du tableau sur lequel elle est appelée. Voir ci-après pour plus de détails.</dd>
-</dl>
+- `valeurN`{{optional_inline}}
+  - : Des tableaux et/ou des valeurs à concaténer dans le nouveau tableau. Si tous les arguments `valeurN` valent `undefined`, `concat` renverra une copie superficielle du tableau sur lequel elle est appelée. Voir ci-après pour plus de détails.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une nouvelle instance de {{jsxref("Array")}}.</p>
+Une nouvelle instance de {{jsxref("Array")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code>concat</code> permet de créer un nouveau tableau constitué des éléments de l'objet <code>this</code> sur lequel elle a été appelée, suivis dans l'ordre par, pour chaque paramètre, les éléments de ce paramètre (s'il s'agit d'un tableau) ou le paramètre lui-même (s'il ne s'agit pas d'un tableau). La concaténation ne « déplie » pas les tableaux imbriqués.</p>
+La méthode `concat` permet de créer un nouveau tableau constitué des éléments de l'objet `this` sur lequel elle a été appelée, suivis dans l'ordre par, pour chaque paramètre, les éléments de ce paramètre (s'il s'agit d'un tableau) ou le paramètre lui-même (s'il ne s'agit pas d'un tableau). La concaténation ne « déplie » pas les tableaux imbriqués.
 
-<p>La méthode <code>concat</code> ne modifie pas <code>this</code> ni aucun des tableaux passés en paramètres, mais renvoie une copie qui contient des copies des mêmes éléments combinées que ceux des tableaux originaux. Les éléments des tableaux originaux sont copiés dans le nouveau tableau comme suit :</p>
+La méthode `concat` ne modifie pas `this` ni aucun des tableaux passés en paramètres, mais renvoie une copie qui contient des copies des mêmes éléments combinées que ceux des tableaux originaux. Les éléments des tableaux originaux sont copiés dans le nouveau tableau comme suit :
 
-<ul>
- <li>Pour les références à des objets (et non les objets eux-mêmes) : <code>concat</code> copie ces références dans le nouveaux tableau. Le tableau original et le nouveau tableau feront référence au même objet. C'est-à-dire que si un objet référencé est modifié, ces changements seront visibles tant dans le nouveau que dans les tableaux originaux.</li>
-</ul>
+- Pour les références à des objets (et non les objets eux-mêmes) : `concat` copie ces références dans le nouveaux tableau. Le tableau original et le nouveau tableau feront référence au même objet. C'est-à-dire que si un objet référencé est modifié, ces changements seront visibles tant dans le nouveau que dans les tableaux originaux.
 
-<ul>
- <li>Pour les chaînes, les booléens et les nombres « primitifs » (c'est-à-dire pas les objets {{jsxref("String", "String")}}, {{jsxref("Boolean")}} et {{jsxref("Number", "Number")}}) : <code>concat</code> copie les valeurs des chaînes et des nombres dans le nouveau tableau. (voir <a href="/fr/docs/Web/JavaScript/Structures_de_donn%C3%A9es#Les_types_de_donn%C3%A9es">Les types de données en JavaScript</a>).</li>
-</ul>
+<!---->
 
-<div class="note">
-<p><strong>Note :</strong> La concaténation n'impactera pas les tableaux originaux. Par la suite, toute opération sur le nouveau tableau n'aura aucun effet sur les tableaux d'origine, et vice versa.</p>
-</div>
+- Pour les chaînes, les booléens et les nombres « primitifs » (c'est-à-dire pas les objets {{jsxref("String", "String")}}, {{jsxref("Boolean")}} et {{jsxref("Number", "Number")}}) : `concat` copie les valeurs des chaînes et des nombres dans le nouveau tableau. (voir [Les types de données en JavaScript](/fr/docs/Web/JavaScript/Structures_de_donn%C3%A9es#Les_types_de_donn%C3%A9es)).
 
-<h2 id="Exemples">Exemples</h2>
+> **Note :** La concaténation n'impactera pas les tableaux originaux. Par la suite, toute opération sur le nouveau tableau n'aura aucun effet sur les tableaux d'origine, et vice versa.
 
-<h3 id="Concaténer_deux_tableaux">Concaténer deux tableaux</h3>
+## Exemples
 
-<p>Le code qui suit concatène deux tableaux :</p>
+### Concaténer deux tableaux
 
-<pre class="brush: js">let alpha = ["a", "b", "c"];
+Le code qui suit concatène deux tableaux :
+
+```js
+let alpha = ["a", "b", "c"];
 let numerique = [1, 2, 3];
 
 alpha.concat(numerique);
 // donne : ["a", "b", "c", 1, 2, 3]
-</pre>
+```
 
-<h3 id="Concaténer_trois_tableaux">Concaténer trois tableaux</h3>
+### Concaténer trois tableaux
 
-<p>Le code qui suit concatène trois tableaux :</p>
+Le code qui suit concatène trois tableaux :
 
-<pre class="brush: js">let num1 = [1, 2, 3];
+```js
+let num1 = [1, 2, 3];
 let num2 = [4, 5, 6];
 let num3 = [7, 8, 9];
 
@@ -74,25 +70,27 @@ let nums = num1.concat(num2, num3);
 
 console.log(nums);
 // [1, 2, 3, 4, 5, 6, 7, 8, 9]
-</pre>
+```
 
-<h3 id="Concaténer_des_valeurs_avec_un_tableau">Concaténer des valeurs avec un tableau</h3>
+### Concaténer des valeurs avec un tableau
 
-<p>Le code qui suit ajoute trois valeurs à un tableau :</p>
+Le code qui suit ajoute trois valeurs à un tableau :
 
-<pre class="brush: js">let alpha = ['a', 'b', 'c'];
+```js
+let alpha = ['a', 'b', 'c'];
 
 let alphanumerique = alpha.concat(1, [2, 3]);
 
 console.log(alphanumerique);
 // ['a', 'b', 'c', 1, 2, 3]
-</pre>
+```
 
-<h3 id="Concaténer_des_tableaux_imbriqués">Concaténer des tableaux imbriqués</h3>
+### Concaténer des tableaux imbriqués
 
-<p>Dans le code qui suit, on concatène deux tableaux qui ont plusieurs dimensions et on illustre la conservation des références :</p>
+Dans le code qui suit, on concatène deux tableaux qui ont plusieurs dimensions et on illustre la conservation des références :
 
-<pre class="brush: js">let num1 = [[1]];
+```js
+let num1 = [[1]];
 let num2 = [2, [3]];
 
 let nums = num1.concat(num2);
@@ -104,52 +102,26 @@ console.log(nums);
 num1[0].push(4);
 
 console.log(nums);
-// affichera [[1, 4], 2, [3]]</pre>
+// affichera [[1, 4], 2, [3]]
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.2.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.4', 'Array.prototype.concat')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.concat', 'Array.prototype.concat')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.concat', 'Array.prototype.concat')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | État                         | Commentaires                                          |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ES3')}}                                                                                     | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.2. |
+| {{SpecName('ES5.1', '#sec-15.4.4.4', 'Array.prototype.concat')}}                         | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-array.prototype.concat', 'Array.prototype.concat')}}         | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-array.prototype.concat', 'Array.prototype.concat')}} | {{Spec2('ESDraft')}} |                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Array.concat")}}</p>
+{{Compat("javascript.builtins.Array.concat")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Array.push", "push")}} / {{jsxref("Array.pop", "pop")}} qui permettent d'ajouter/retirer des éléments à partir de la fin du tableau</li>
- <li>{{jsxref("Array.unshift", "unshift")}} / {{jsxref("Array.shift", "shift")}} qui permettent d'ajouter/retirer des éléments à partir du début du tableau</li>
- <li>{{jsxref("Array.splice", "splice")}} qui permet d'ajouter/retirer des éléments à un endroit donné du tableau</li>
- <li>{{jsxref("String.prototype.concat()")}}</li>
- <li>{{jsxref("Symbol.isConcatSpreadable")}} (permet de contrôler la façon dont un tableau est ramené à une valeur)</li>
-</ul>
+- {{jsxref("Array.push", "push")}} / {{jsxref("Array.pop", "pop")}} qui permettent d'ajouter/retirer des éléments à partir de la fin du tableau
+- {{jsxref("Array.unshift", "unshift")}} / {{jsxref("Array.shift", "shift")}} qui permettent d'ajouter/retirer des éléments à partir du début du tableau
+- {{jsxref("Array.splice", "splice")}} qui permet d'ajouter/retirer des éléments à un endroit donné du tableau
+- {{jsxref("String.prototype.concat()")}}
+- {{jsxref("Symbol.isConcatSpreadable")}} (permet de contrôler la façon dont un tableau est ramené à une valeur)

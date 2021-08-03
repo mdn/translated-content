@@ -7,94 +7,69 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/decodeURI
 original_slug: Web/JavaScript/Reference/Objets_globaux/decodeURI
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<p>La méthode <code><strong>decodeURI()</strong></code> permet de décoder un Uniform Resource Identifier (URI) créé par la méthode {{jsxref("encodeURI","encodeURI()")}} ou une méthode similaire.</p>
+La méthode **`decodeURI()`** permet de décoder un Uniform Resource Identifier (URI) créé par la méthode {{jsxref("encodeURI","encodeURI()")}} ou une méthode similaire.
 
-<div>{{EmbedInteractiveExample("pages/js/globalprops-decodeuri.html")}}</div>
+{{EmbedInteractiveExample("pages/js/globalprops-decodeuri.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">decodeURI(<var>encodedURI</var>)</pre>
+    decodeURI(encodedURI)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>encodedURI</code></dt>
- <dd>Un URI complet, encodé.</dd>
-</dl>
+- `encodedURI`
+  - : Un URI complet, encodé.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une nouvelle chaîne de caractères dont certains caractères ont été décodés à partir de l'URI encodée passée en argument.</p>
+Une nouvelle chaîne de caractères dont certains caractères ont été décodés à partir de l'URI encodée passée en argument.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>Cette méthode lève une exception {{jsxref("URIError")}} ("<em>malformed URI sequence"</em>) lorsque la chaîne passée en argument contient des séquences de caractères invalides.</p>
+Cette méthode lève une exception {{jsxref("URIError")}} ("_malformed URI sequence"_) lorsque la chaîne passée en argument contient des séquences de caractères invalides.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Cette méthode remplace chaque séquence d'échappement présente dans l'URI encodée avec le caractère correspondant. Les séquences d'échappement qui n'auraient pas pu être introduites par {{jsxref("encodeURI", "encodeURI()")}} ne seront pas décodées. Le caractère « <code>#</code> » n'est pas décodé au sein des séquences d'échappement.</p>
+Cette méthode remplace chaque séquence d'échappement présente dans l'URI encodée avec le caractère correspondant. Les séquences d'échappement qui n'auraient pas pu être introduites par {{jsxref("encodeURI", "encodeURI()")}} ne seront pas décodées. Le caractère « `#` » n'est pas décodé au sein des séquences d'échappement.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Décoder_une_URL_cyrillique">Décoder une URL cyrillique</h3>
+### Décoder une URL cyrillique
 
-<pre class="brush: js">decodeURI("https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B");
+```js
+decodeURI("https://developer.mozilla.org/ru/docs/JavaScript_%D1%88%D0%B5%D0%BB%D0%BB%D1%8B");
 // "https://developer.mozilla.org/ru/docs/JavaScript_шеллы"
-</pre>
+```
 
-<h3 id="Gérer_les_exceptions">Gérer les exceptions</h3>
+### Gérer les exceptions
 
-<pre class="brush: js">try {
+```js
+try {
   var a = decodeURI('%E0%A4%A');
 } catch(e) {
   console.error(e);
 }
 
 // Cela produira "URIError: malformed URI sequence"
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.1.3.1', 'decodeURI')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-decodeuri-encodeduri', 'decodeURI')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-decodeuri-encodeduri', 'decodeURI')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                         | Commentaires         |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES3')}}                                                                 | {{Spec2('ES3')}}         | Définition initiale. |
+| {{SpecName('ES5.1', '#sec-15.1.3.1', 'decodeURI')}}                     | {{Spec2('ES5.1')}}     |                      |
+| {{SpecName('ES6', '#sec-decodeuri-encodeduri', 'decodeURI')}}         | {{Spec2('ES6')}}         |                      |
+| {{SpecName('ESDraft', '#sec-decodeuri-encodeduri', 'decodeURI')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.decodeURI")}}</p>
+{{Compat("javascript.builtins.decodeURI")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("decodeURIComponent","decodeURIComponent()")}}</li>
- <li>{{jsxref("encodeURI","encodeURI()")}}</li>
- <li>{{jsxref("encodeURIComponent","encodeURIComponent()")}}</li>
-</ul>
+- {{jsxref("decodeURIComponent","decodeURIComponent()")}}
+- {{jsxref("encodeURI","encodeURI()")}}
+- {{jsxref("encodeURIComponent","encodeURIComponent()")}}

@@ -7,53 +7,50 @@ tags:
   - Operator
   - Reference
 browser-compat: javascript.operators.subtraction
-translation-of: Web/JavaScript/Reference/Operators/Subtraction
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>L'opérateur de soustraction (<code>-</code>) effectue la soustraction entre les deux opérandes et fournit la différence obtenue.</p>
+L'opérateur de soustraction (`-`) effectue la soustraction entre les deux opérandes et fournit la différence obtenue.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-subtraction.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-subtraction.html")}}
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">
-<strong>Opérateur :</strong> <var>x</var> - <var>y</var>
-</pre>
+```js
+Opérateur : x - y
+```
 
-<h2 id="examples">Exemples</h2>
+## Exemples
 
-<h3 id="subtraction_with_numbers">Avec des valeurs numériques</h3>
+### Avec des valeurs numériques
 
-<pre class="brush: js">
+```js
 5 - 3     // 2
 3 - 5     // -2
-</pre>
+```
 
-<h3 id="subtraction_with_non-numbers">Avec des valeurs non-numériques</h3>
+### Avec des valeurs non-numériques
 
-<pre class="brush: js">
+```js
 'toto' - 3 // NaN
-</pre>
+```
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Addition">Opérateur d'addition</a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Division">Opérateur de division</a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Multiplication">Opérateur de multiplication</a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Remainder">Opérateur de reste</a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation">Opérateur d'exponentiation</a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Increment">Opérateur d'incrémentation</a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Decrement">Opérateur de décrémentation</a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Unary_negation">Opérateur de négation unaire</a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Unary_plus">Opérateur plus unaire</a></li>
-</ul>
+- [Opérateur d'addition](/fr/docs/Web/JavaScript/Reference/Operators/Addition)
+- [Opérateur de division](/fr/docs/Web/JavaScript/Reference/Operators/Division)
+- [Opérateur de multiplication](/fr/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [Opérateur de reste](/fr/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [Opérateur d'exponentiation](/fr/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [Opérateur d'incrémentation](/fr/docs/Web/JavaScript/Reference/Operators/Increment)
+- [Opérateur de décrémentation](/fr/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [Opérateur de négation unaire](/fr/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [Opérateur plus unaire](/fr/docs/Web/JavaScript/Reference/Operators/Unary_plus)

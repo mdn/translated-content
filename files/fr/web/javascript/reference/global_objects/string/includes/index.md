@@ -10,45 +10,46 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/includes
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/includes
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>includes()</strong></code> détermine si une chaîne de caractères est contenue dans une autre et renvoie <code>true</code> ou <code>false</code> selon le cas de figure.</p>
+La méthode **`includes()`** détermine si une chaîne de caractères est contenue dans une autre et renvoie `true` ou `false` selon le cas de figure.
 
-<div>{{EmbedInteractiveExample("pages/js/string-includes.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-includes.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>str</var>.includes(<var>chaîneRecherchée</var>);
-<var>str</var>.includes(<var>chaîneRecherchée</var>, <var>position</var>);</pre>
+    str.includes(chaîneRecherchée);
+    str.includes(chaîneRecherchée, position);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>chaîneRecherchée</code></dt>
- <dd>Une chaîne à rechercher dans la chaîne courante.</dd>
- <dt><code>position</code> {{optional_inline}}</dt>
- <dd>La position dans la chaîne à partir de laquelle commencera la recherche. La valeur par défaut de <code><var>position</var></code> est 0.</dd>
-</dl>
+- `chaîneRecherchée`
+  - : Une chaîne à rechercher dans la chaîne courante.
+- `position` {{optional_inline}}
+  - : La position dans la chaîne à partir de laquelle commencera la recherche. La valeur par défaut de `position` est 0.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p><code>true</code> si la chaîne de caractères contient la sous-chaîne recherchée, <code>false</code> sinon.</p>
+`true` si la chaîne de caractères contient la sous-chaîne recherchée, `false` sinon.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Cette méthode détermine si une chaîne de caractères est contenue dans une autre.</p>
+Cette méthode détermine si une chaîne de caractères est contenue dans une autre.
 
-<h3 id="Sensibilité_à_la_case">Sensibilité à la case</h3>
+### Sensibilité à la case
 
-<p><code>includes()</code> est sensible à la casse. Par exemple, l'expression suivante nous retournera <code>false</code> :</p>
+`includes()` est sensible à la casse. Par exemple, l'expression suivante nous retournera `false` :
 
-<pre class="brush: js">'Baleine bleue'.includes('baleine'); // false</pre>
+```js
+'Baleine bleue'.includes('baleine'); // false
+```
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_includes">Utiliser <code>includes()</code></h3>
+### Utiliser `includes()`
 
-<pre class="brush:js;">const str = "Être ou ne pas être, telle est la question.";
+```js
+const str = "Être ou ne pas être, telle est la question.";
 
 console.log(str.includes("Être"));       // true
 console.log(str.includes("question"));   // true
@@ -56,15 +57,16 @@ console.log(str.includes("pléonasme"));  // false
 console.log(str.includes("Être", 1));    // false
 console.log(str.includes("ÊTRE"));       // false
 console.log(str.includes(""));       // true
-</pre>
+```
 
-<h2 id="Prothèse_démulation_polyfill">Prothèse d'émulation (<em>polyfill</em>)</h2>
+## Prothèse d'émulation (_polyfill_)
 
-<p>Cette méthode a été ajoutée à la spécification ECMAScript 2015 et n'est peut-être pas encore disponible dans toutes les implémentations JavaScript.</p>
+Cette méthode a été ajoutée à la spécification ECMAScript 2015 et n'est peut-être pas encore disponible dans toutes les implémentations JavaScript.
 
-<p>Cependant, vous pouvez facilement {{Glossary('polyfill')}} cette méthode pour de vieux navigateurs :</p>
+Cependant, vous pouvez facilement {{Glossary('polyfill')}} cette méthode pour de vieux navigateurs :
 
-<pre class="brush: js">if (!String.prototype.includes) {
+```js
+if (!String.prototype.includes) {
   String.prototype.includes = function(search, start) {
     'use strict';
 
@@ -74,53 +76,35 @@ console.log(str.includes(""));       // true
     if (start === undefined) { start = 0; }
     return this.indexOf(search, start) !== -1;
   };
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.includes', 'String.prototype.includes')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.includes', 'String.prototype.includes')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ESDraft', '#sec-string.prototype.includes', 'String.prototype.includes')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ES6', '#sec-string.prototype.includes', 'String.prototype.includes')}}         | {{Spec2('ES6')}}         | Définition initiale. |
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+## Compatibilité du navigateur
 
-<p>{{Compat("javascript.builtins.String.includes")}}</p>
+{{Compat("javascript.builtins.String.includes")}}
 
-<h2 id="String.prototype.contains">String.prototype.contains</h2>
+## String.prototype.contains
 
-<p>Les versions de Firefox allant de Firefox 18 à Firefox 39 utilisent cette méthode avec le nom <code>contains()</code>. Cette méthode a été renommée en <code>includes()</code> via {{bug(1102219)}} pour la raison suivante :</p>
+Les versions de Firefox allant de Firefox 18 à Firefox 39 utilisent cette méthode avec le nom `contains()`. Cette méthode a été renommée en `includes()` via {{bug(1102219)}} pour la raison suivante :
 
-<p>Il a été <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=789036">rapporté</a> que certains sites web utilisant MooTools 1.2 plantaient sur Firefox 17. Cette version de MooTools vérifie que <code>String.prototype.contains()</code> existe bien, et si ce n'est pas le cas, ajoute sa propre fonction similaire. Avec l'introduction de cette fonction dans Firefox 17, le comportement de ce contrôle a changé de telle manière qu'il cause un plantage du code de MooTools implémenté pour <code>String.prototype.contains()</code>. En conséquence, cette implémentation a été <a href="https://hg.mozilla.org/releases/mozilla-aurora/rev/086db97198a8" title="https://bugzilla.mozilla.org/show_bug.cgi?id=793781">désactivée</a> de Firefox 17. <code>String.prototype.contains()</code> est ainsi disponible sur une version ultérieure : Firefox 18 lorsque <a href="https://mootools.net/blog/2013/02/19/mootools-1-2-6-released">MooTools a déclenché la sortie de la version 1.2.6.</a></p>
+Il a été [rapporté](https://bugzilla.mozilla.org/show_bug.cgi?id=789036) que certains sites web utilisant MooTools 1.2 plantaient sur Firefox 17. Cette version de MooTools vérifie que `String.prototype.contains()` existe bien, et si ce n'est pas le cas, ajoute sa propre fonction similaire. Avec l'introduction de cette fonction dans Firefox 17, le comportement de ce contrôle a changé de telle manière qu'il cause un plantage du code de MooTools implémenté pour `String.prototype.contains()`. En conséquence, cette implémentation a été [désactivée](https://hg.mozilla.org/releases/mozilla-aurora/rev/086db97198a8 "https://bugzilla.mozilla.org/show_bug.cgi?id=793781") de Firefox 17. `String.prototype.contains()` est ainsi disponible sur une version ultérieure : Firefox 18 lorsque [MooTools a déclenché la sortie de la version 1.2.6.](https://mootools.net/blog/2013/02/19/mootools-1-2-6-released)
 
-<p>MooTools 1.3 force sa propre version de <code>String.prototype.includes()</code>, les sites Web l'implémentant ne sont donc pas perturbés. Néanmoins, il faut noter que les signatures des méthodes diffèrent entre <a href="https://mootools.net/docs/core/Types/String#String:includes">MooTools 1.3</a> et ECMAScript 2015 (pour le second paramètre). <a href="https://github.com/mootools/mootools-core/blob/master/Docs/Types/String.md#note">MooTools 1.5+ a modifié sa signature afin de prendre en compte le standard de ES2015.</a></p>
+MooTools 1.3 force sa propre version de `String.prototype.includes()`, les sites Web l'implémentant ne sont donc pas perturbés. Néanmoins, il faut noter que les signatures des méthodes diffèrent entre [MooTools 1.3](https://mootools.net/docs/core/Types/String#String:includes) et ECMAScript 2015 (pour le second paramètre). [MooTools 1.5+ a modifié sa signature afin de prendre en compte le standard de ES2015.](https://github.com/mootools/mootools-core/blob/master/Docs/Types/String.md#note)
 
-<p>Dans Firefox 48, la méthode <code>String.prototype.contains()</code> a été retirée. <code>String.prototype.includes()</code> doit être utilisée à la place.</p>
+Dans Firefox 48, la méthode `String.prototype.contains()` a été retirée. `String.prototype.includes()` doit être utilisée à la place.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Array.prototype.includes()")}}</li>
- <li>{{jsxref("TypedArray.prototype.includes()")}}</li>
- <li>{{jsxref("String.prototype.indexOf()")}}</li>
- <li>{{jsxref("String.prototype.lastIndexOf()")}}</li>
- <li>{{jsxref("String.prototype.startsWith()")}}</li>
- <li>{{jsxref("String.prototype.endsWith()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.includes()")}}
+- {{jsxref("TypedArray.prototype.includes()")}}
+- {{jsxref("String.prototype.indexOf()")}}
+- {{jsxref("String.prototype.lastIndexOf()")}}
+- {{jsxref("String.prototype.startsWith()")}}
+- {{jsxref("String.prototype.endsWith()")}}

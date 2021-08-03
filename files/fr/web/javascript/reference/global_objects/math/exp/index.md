@@ -9,85 +9,58 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/exp
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/exp
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La fonction <code><strong>Math.exp()</strong></code> renvoie l'exponentielle d'un nombre (donnée par <code>e^x</code>, où <code>x</code> est la valeur passée en argument et <code>e</code> la valeur du {{jsxref("Objets_globaux/Math/E","nombre d'Euler (parfois appelé constante de Napier)","",1)}}.</p>
+La fonction **`Math.exp()`** renvoie l'exponentielle d'un nombre (donnée par `e^x`, où `x` est la valeur passée en argument et `e` la valeur du {{jsxref("Objets_globaux/Math/E","nombre d'Euler (parfois appelé constante de Napier)","",1)}}.
 
-<div>{{EmbedInteractiveExample("pages/js/math-exp.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-exp.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Math.exp(<var>x</var>)</pre>
+    Math.exp(x)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>x</code></dt>
- <dd>
- <p>Un nombre.</p>
- </dd>
-</dl>
+- `x`
+  - : Un nombre.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>L'exponentielle du nombre passé en argument (<code>e^x</code>).</p>
+L'exponentielle du nombre passé en argument (`e^x`).
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p><code>exp()</code> est une méthode statique de <code>Math</code>, elle doit toujours être utilisée avec la syntaxe <code>Math.exp()</code>, elle ne doit pas être utilisée avec un objet qui aurait été créé (<code>Math</code> n'est pas un constructeur).</p>
+`exp()` est une méthode statique de `Math`, elle doit toujours être utilisée avec la syntaxe `Math.exp()`, elle ne doit pas être utilisée avec un objet qui aurait été créé (`Math` n'est pas un constructeur).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_Math.exp()">Utiliser <code>Math.exp()</code></h3>
+### Utiliser `Math.exp()`
 
-<pre class="brush:js">Math.exp(-1); // 0.36787944117144233
+```js
+Math.exp(-1); // 0.36787944117144233
 Math.exp(0);  // 1
-Math.exp(1);  // 2.718281828459045</pre>
+Math.exp(1);  // 2.718281828459045
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.2.8', 'Math.exp')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.exp', 'Math.exp')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.exp', 'Math.exp')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                        | État                         | Commentaires                                          |
+| -------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.2.8', 'Math.exp')}} | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-math.exp', 'Math.exp')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-math.exp', 'Math.exp')}} | {{Spec2('ESDraft')}} |                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Math.exp")}}</p>
+{{Compat("javascript.builtins.Math.exp")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Math.E")}}</li>
- <li>{{jsxref("Math.expm1()")}}</li>
- <li>{{jsxref("Math.log()")}}</li>
- <li>{{jsxref("Math.log10()")}}</li>
- <li>{{jsxref("Math.log1p()")}}</li>
- <li>{{jsxref("Math.log2()")}}</li>
- <li>{{jsxref("Math.pow()")}}</li>
-</ul>
+- {{jsxref("Math.E")}}
+- {{jsxref("Math.expm1()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.log10()")}}
+- {{jsxref("Math.log1p()")}}
+- {{jsxref("Math.log2()")}}
+- {{jsxref("Math.pow()")}}

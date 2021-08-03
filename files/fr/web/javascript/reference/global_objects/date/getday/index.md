@@ -10,83 +10,58 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getDay
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getDay
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>getDay()</code></strong> renvoie le jour de la semaine pour la date spécifiée selon l'heure locale (0 correspondant à dimanche). Pour obtenir le jour du mois, on utilisera {{jsxref("Date.prototype.getDate()")}}.</p>
+La méthode **`getDay()`** renvoie le jour de la semaine pour la date spécifiée selon l'heure locale (0 correspondant à dimanche). Pour obtenir le jour du mois, on utilisera {{jsxref("Date.prototype.getDate()")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/date-getday.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-getday.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>dateObj</var>.getDay()</pre>
+    dateObj.getDay()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un entier correspondant au jour de la semaine (0 correspondant à dimanche, 1 à lundi, 2 à mardi et ainsi de suite) de la date indiquée selon l'heure locale.</p>
+Un entier correspondant au jour de la semaine (0 correspondant à dimanche, 1 à lundi, 2 à mardi et ainsi de suite) de la date indiquée selon l'heure locale.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_getDay()">Utiliser <code>getDay()</code></h3>
+### Utiliser `getDay()`
 
-<p>La seconde instruction ci-dessous assigne la valeur 1 à <code>jourSemaine</code>, selon la valeur de l'objet <code>Date</code> <code>noel95</code>. Le 25 décembre 1995 est un lundi.</p>
+La seconde instruction ci-dessous assigne la valeur 1 à `jourSemaine`, selon la valeur de l'objet `Date` `noel95`. Le 25 décembre 1995 est un lundi.
 
-<pre class="brush: js">var noel95 = new Date("December 25, 1995 23:15:00");
+```js
+var noel95 = new Date("December 25, 1995 23:15:00");
 var jourSemaine = noel95.getDay();
 
 console.log(jourSemaine); //1
-</pre>
+```
 
-<div class="blockIndicator note">
-<p><strong>Note :</strong> Si besoin, on pourra obtenir le nom complet du jour (<code>"lundi"</code> par exemple) en utilisant la méthode {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}} avec un paramètre <code>options</code>. Ce faisant, il est plus simple d'internationaliser un site ou une application :</p>
+> **Note :** Si besoin, on pourra obtenir le nom complet du jour (`"lundi"` par exemple) en utilisant la méthode {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}} avec un paramètre `options`. Ce faisant, il est plus simple d'internationaliser un site ou une application :
+>
+> ```js
+> var options = { weekday: 'long'};
+> console.log(new Intl.DateTimeFormat('en-US', options).format(Xmas95));
+> // Monday
+> console.log(new Intl.DateTimeFormat('de-DE', options).format(Xmas95));
+> // Montag
+> ```
 
-<pre class="brush: js">var options = { weekday: 'long'};
-console.log(new Intl.DateTimeFormat('en-US', options).format(Xmas95));
-// Monday
-console.log(new Intl.DateTimeFormat('de-DE', options).format(Xmas95));
-// Montag
-</pre>
-</div>
+## Spécifications
 
-<h2 id="Spécifications">Spécifications</h2>
+| Spécification                                                                                            | État                         | Commentaires                                          |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-date.prototype.getday', 'Date.prototype.getDay')}} | {{Spec2('ESDraft')}} |                                                       |
+| {{SpecName('ES6', '#sec-date.prototype.getday', 'Date.prototype.getDay')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ES5.1', '#sec-15.9.5.16', 'Date.prototype.getDay')}}                     | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES1')}}                                                                                 | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.getday', 'Date.prototype.getDay')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.getday', 'Date.prototype.getDay')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.16', 'Date.prototype.getDay')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.0.</td>
-  </tr>
- </tbody>
-</table>
+## Compatibilité des navigateurs
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+{{Compat("javascript.builtins.Date.getDay")}}
 
-<p>{{Compat("javascript.builtins.Date.getDay")}}</p>
+## Voir aussi
 
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>{{jsxref("Date.prototype.getUTCDate()")}}</li>
- <li>{{jsxref("Date.prototype.getUTCDay()")}}</li>
- <li>{{jsxref("Date.prototype.setDate()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCDate()")}}
+- {{jsxref("Date.prototype.getUTCDay()")}}
+- {{jsxref("Date.prototype.setDate()")}}

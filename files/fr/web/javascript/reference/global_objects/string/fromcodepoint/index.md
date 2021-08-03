@@ -11,42 +11,39 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/fromCodePoint
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode statique <strong><code>String.fromCodePoint()</code></strong> renvoie une chaîne de caractères créée à partir d'un suite de codets.</p>
+La méthode statique **`String.fromCodePoint()`** renvoie une chaîne de caractères créée à partir d'un suite de codets.
 
-<div>{{EmbedInteractiveExample("pages/js/string-fromcodepoint.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-fromcodepoint.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">String.fromCodePoint(<var>num1</var>[, ...[, <var>numN</var>]])</pre>
+    String.fromCodePoint(num1[, ...[, numN]])
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>num1, ..., num<em>N</em></code></dt>
- <dd>Une séquence de codets (<em>code points</em>).</dd>
-</dl>
+- `num1, ..., numN`
+  - : Une séquence de codets (_code points_).
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une chaîne de caractères créée à partir de la séquence de codets indiquée.</p>
+Une chaîne de caractères créée à partir de la séquence de codets indiquée.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<ul>
- <li>Une exception {{jsxref("Erreurs/Not_a_codepoint","RangeError")}} est renvoyée si un codet (Unicode) invalide est utilisé (par exemple, on pourra avoir "RangeError: NaN is not a valid code point").</li>
-</ul>
+- Une exception {{jsxref("Erreurs/Not_a_codepoint","RangeError")}} est renvoyée si un codet (Unicode) invalide est utilisé (par exemple, on pourra avoir "RangeError: NaN is not a valid code point").
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p><code>fromCodePoint()</code> étant une méthode statique de {{jsxref("String")}}, elle doit toujours être utilisée avec la syntaxe <code>String.fromCodePoint()</code>, plutôt qu'avec une méthode d'un objet {{jsxref("String")}} qui aurait été créé.</p>
+`fromCodePoint()` étant une méthode statique de {{jsxref("String")}}, elle doit toujours être utilisée avec la syntaxe `String.fromCodePoint()`, plutôt qu'avec une méthode d'un objet {{jsxref("String")}} qui aurait été créé.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_fromCodePoint()">Utiliser <code>fromCodePoint()</code></h3>
+### Utiliser `fromCodePoint()`
 
-<pre class="brush: js">String.fromCodePoint(42);       // "*"
+```js
+String.fromCodePoint(42);       // "*"
 String.fromCodePoint(65, 90);   // "AZ"
 String.fromCodePoint(0x404);    // "\u0404"
 String.fromCodePoint(0x2F804);  // "\uD87E\uDC04"
@@ -59,50 +56,37 @@ String.fromCodePoint(-1);       // RangeError
 String.fromCodePoint(3.14);     // RangeError
 String.fromCodePoint(3e-2);     // RangeError
 String.fromCodePoint(NaN);      // RangeError
-</pre>
+```
 
-<h3 id="Comparaison_avec_fromCharCode()">Comparaison avec <code>fromCharCode()</code></h3>
+### Comparaison avec `fromCharCode()`
 
-<p>La méthode {{jsxref("String.fromCharCode()")}} ne peut pas renvoyer les caractères de l'intervalle 0x010000 à 0X10FFFF avec un seul codet, il est nécessaire de lui fournir la paire décomposée (<em>surrogate pair</em>) pour obtenr un tel caractère :</p>
+La méthode {{jsxref("String.fromCharCode()")}} ne peut pas renvoyer les caractères de l'intervalle 0x010000 à 0X10FFFF avec un seul codet, il est nécessaire de lui fournir la paire décomposée (_surrogate pair_) pour obtenr un tel caractère :
 
-<pre class="brush: js">String.fromCharCode(0xD83C, 0xDF03); // émoji « nuit étoilée »
-String.fromCharCode(55356, 57091);   // équivalent en notation décimale</pre>
+```js
+String.fromCharCode(0xD83C, 0xDF03); // émoji « nuit étoilée »
+String.fromCharCode(55356, 57091);   // équivalent en notation décimale
+```
 
-<p><code>String.fromCodePoint()</code>, en revanche, peut renvoyer les caractères qui s'expriment sur plus d'un codet de 16 bits grâce à leur codet « simple » :</p>
+`String.fromCodePoint()`, en revanche, peut renvoyer les caractères qui s'expriment sur plus d'un codet de 16 bits grâce à leur codet « simple » :
 
-<pre class="brush: js">String.fromCodePoint(0x1F303); // ou 127747 en notation décimale</pre>
+```js
+String.fromCodePoint(0x1F303); // ou 127747 en notation décimale
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-string.fromcodepoint', 'String.fromCodePoint')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.fromcodepoint', 'String.fromCodePoint')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                         | Commentaires        |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES2015', '#sec-string.fromcodepoint', 'String.fromCodePoint')}} | {{Spec2('ES2015')}}     | Définition initiale |
+| {{SpecName('ESDraft', '#sec-string.fromcodepoint', 'String.fromCodePoint')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.String.fromCodePoint")}}</p>
+{{Compat("javascript.builtins.String.fromCodePoint")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("String.fromCharCode()")}}</li>
- <li>{{jsxref("String.prototype.charAt()")}}</li>
- <li>{{jsxref("String.prototype.codePointAt()")}}</li>
- <li>{{jsxref("String.prototype.charCodeAt()")}}</li>
-</ul>
+- {{jsxref("String.fromCharCode()")}}
+- {{jsxref("String.prototype.charAt()")}}
+- {{jsxref("String.prototype.codePointAt()")}}
+- {{jsxref("String.prototype.charCodeAt()")}}
