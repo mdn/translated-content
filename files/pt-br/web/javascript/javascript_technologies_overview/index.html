@@ -49,23 +49,23 @@ translation_of: Web/JavaScript/JavaScript_technologies_overview
 
 <h3 id="WebIDL">WebIDL</h3>
 
-<p>A <a class="external" href="http://dev.w3.org/2006/webapi/WebIDL/" title="http://dev.w3.org/2006/webapi/WebIDL/">Especificação da WebIDL </a>provê a junção entre as tecnologias DOM e o ECMAScript.</p>
+<p>A <a class="external" href="http://dev.w3.org/2006/webapi/WebIDL/">Especificação da WebIDL </a>provê a junção entre as tecnologias DOM e o ECMAScript.</p>
 
 <h3 id="O_núcleo_do_DOM">O núcleo do DOM</h3>
 
 <p>O Document Object Model (DOM) é uma <strong>convenção multiplataforma</strong> e <strong>lndependente de linguagem </strong>para representação e interação com objetos em documentos HTML, XHTML, e XML. Objetos no <strong>DOM tree</strong> (árvore do DOM) podem ser adereçados e manipulados utilizando métodos em objetos. A W3C padroniza o Core Document Object Model (Núcleo do Documento do Modelo de Objeto), o qual define interfaces de agnóstico de linguagem que abstraem documentos HTML e XML como objetos, e também define mecanismos para manipular essa abstração. Entre as definições do DOM, podemos encontrar:</p>
 
 <ul>
- <li>A estrutura do documento, um tree model (modelo de árvore), e a arquitetura do DOM Event (Evento do DOM) no <a class="external" href="http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html" title="http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html">DOM core</a> (núceo do DOM): Node, Element, DocumentFragment, Document, DOMImplementation, Event, EventTarget, …</li>
- <li>Uma definição menos rigorosa do DOM Event Architecture, assim como eventos específicos no <a class="external" href="http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html" title="http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html">DOM events</a>.</li>
- <li>Outras coisas como o <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html">DOM Traversal</a> e o <a class="external" href="http://html5.org/specs/dom-range.html" title="http://html5.org/specs/dom-range.html">DOM Range</a>.</li>
+ <li>A estrutura do documento, um tree model (modelo de árvore), e a arquitetura do DOM Event (Evento do DOM) no <a class="external" href="http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html">DOM core</a> (núceo do DOM): Node, Element, DocumentFragment, Document, DOMImplementation, Event, EventTarget, …</li>
+ <li>Uma definição menos rigorosa do DOM Event Architecture, assim como eventos específicos no <a class="external" href="http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html">DOM events</a>.</li>
+ <li>Outras coisas como o <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html">DOM Traversal</a> e o <a class="external" href="http://html5.org/specs/dom-range.html">DOM Range</a>.</li>
 </ul>
 
 <p>Pela perspectiva do EXMScript, objetos definidos na especificação do DOM são chamados de "host objects".</p>
 
 <h3 id="HTML_DOM">HTML DOM</h3>
 
-<p><a class="external" href="http://www.whatwg.org/html" title="http://www.whatwg.org/html">HTML</a>, a linguagem de marcação da Web, é especificada nos termos do DOM. Situado além dos conceitos de abstração definidos no DOM Core, o HTML também define o <em>significado</em> dos elementos. O HTML DOM inclui coisas como a propriedade <code>className</code> em elementos HTML, ou APIs como {{ domxref("document.body") }}.</p>
+<p><a class="external" href="http://www.whatwg.org/html">HTML</a>, a linguagem de marcação da Web, é especificada nos termos do DOM. Situado além dos conceitos de abstração definidos no DOM Core, o HTML também define o <em>significado</em> dos elementos. O HTML DOM inclui coisas como a propriedade <code>className</code> em elementos HTML, ou APIs como {{ domxref("document.body") }}.</p>
 
 <p>A especificação HTML também define restrições nos objetos; por exemplo, ela requer que todos os filhos de um elemento <code>ul</code>, que representam uma lista desordenada, sejam elementos <code>li</code>, que representem itens de lista. Em linhas gerais, ele também proíbe o uso de elementos e atributos que não estão definidos em um padrão.</p>
 
@@ -74,12 +74,12 @@ translation_of: Web/JavaScript/JavaScript_technologies_overview
 <h2 id="Outras_APIs_de_destaque">Outras APIs de destaque</h2>
 
 <ul>
- <li>As funções setTimeout e setInterval foram inicialmente especificadas na interface <a class="external" href="http://www.whatwg.org/html/#window" title="http://www.whatwg.org/html/#window">Window</a> no Padrão HTML.</li>
- <li><a class="external" href="http://dev.w3.org/2006/webapi/XMLHttpRequest-2/" title="http://dev.w3.org/2006/webapi/XMLHttpRequest-2/">XMLHttpRequest.</a> Possibilita enviar requisições HTTP assíncronas.</li>
+ <li>As funções setTimeout e setInterval foram inicialmente especificadas na interface <a class="external" href="http://www.whatwg.org/html/#window">Window</a> no Padrão HTML.</li>
+ <li><a class="external" href="http://dev.w3.org/2006/webapi/XMLHttpRequest-2/">XMLHttpRequest.</a> Possibilita enviar requisições HTTP assíncronas.</li>
  <li><a class="external" href="http://dev.w3.org/csswg/cssom/">CSS Object Model.</a> O CSSOM é utilizado para abstrair regras CSS como objetos</li>
  <li><a class="external" href="http://www.whatwg.org/specs/web-workers/current-work/">WebWorkers.</a> API que permite computação paralela.</li>
  <li><a class="external" href="http://www.whatwg.org/C/#network">WebSockets.</a> API que permite comunicação bi-direcional de baixo-nível.</li>
- <li><a class="external" href="http://www.whatwg.org/html/#2dcontext" title="http://www.whatwg.org/html/#2dcontext">Canvas 2D Context.</a> API de ilustração (desenho) para o elemento canvas.</li>
+ <li><a class="external" href="http://www.whatwg.org/html/#2dcontext">Canvas 2D Context.</a> API de ilustração (desenho) para o elemento canvas.</li>
 </ul>
 
 <h3 id="Suporte_de_Navegadores">Suporte de Navegadores</h3>

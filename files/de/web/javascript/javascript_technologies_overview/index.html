@@ -42,29 +42,29 @@ original_slug: Web/JavaScript/JavaScript_technologieuebersicht
 
 <h2 id="Internationalization_API">Internationalization API</h2>
 
-<p>Die <a href="http://ecma-international.org/ecma-402/1.0/" title="http://ecma-international.org/ecma-402/1.0/">ECMAScript Internationalization API Specification</a> ist eine Erweiterung zur ECMAScript Sprachspezifikation, welche vom Ecma TC39 Kommittee standardisiert wird. Die Internationalization API bietet Textvergleiche (string Vergleiche), Formatierung von Zahlen, Datum und Zeit für JavaScript Applikationen, und lässt Applikationen die Sprache wählen, um die Funktionalität für die eigenen Bedürfnisse anpassen zu können. Der Standard wurde im Dezember 2012 freigegeben. Der Status über die Implementierung in Webbrowsern ist in der Documentation von <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Intl" title="/en-US/docs/JavaScript/Reference/Global_Objects/Intl"><code>Intl</code> object</a> aufgezeichnet.</p>
+<p>Die <a href="http://ecma-international.org/ecma-402/1.0/">ECMAScript Internationalization API Specification</a> ist eine Erweiterung zur ECMAScript Sprachspezifikation, welche vom Ecma TC39 Kommittee standardisiert wird. Die Internationalization API bietet Textvergleiche (string Vergleiche), Formatierung von Zahlen, Datum und Zeit für JavaScript Applikationen, und lässt Applikationen die Sprache wählen, um die Funktionalität für die eigenen Bedürfnisse anpassen zu können. Der Standard wurde im Dezember 2012 freigegeben. Der Status über die Implementierung in Webbrowsern ist in der Documentation von <a href="/en-US/docs/JavaScript/Reference/Global_Objects/Intl" title="/en-US/docs/JavaScript/Reference/Global_Objects/Intl"><code>Intl</code> object</a> aufgezeichnet.</p>
 
 <h2 id="Die_Web_APIs_und_der_DOM">Die Web APIs und der DOM</h2>
 
 <h3 id="WebIDL">WebIDL</h3>
 
-<p>Die <a class="external" href="http://www.w3.org/TR/WebIDL/" title="http://dev.w3.org/2006/webapi/WebIDL/">WebIDL specification</a> verbindet die DOM Technologien und ECMAScript miteinander.</p>
+<p>Die <a class="external" href="http://www.w3.org/TR/WebIDL/">WebIDL specification</a> verbindet die DOM Technologien und ECMAScript miteinander.</p>
 
 <h3 id="Der_Kern_des_DOM">Der Kern des DOM</h3>
 
 <p>Das Document Object Model (DOM) ist eine plattform- und <strong>sprachunabhängige Konvention</strong> zur Repräsentation und Interaktion mit Objekten in HTML, XHTML und XML Dokumenten. Objekte im <strong>DOM Baum</strong> können über Methoden angesprochen und durch Aufrufen ihrer Methoden verändert werden. Das Core Document Object Model ist von der W3C standardisiert worden. Es definiert sprachspezifische Schnittstellen, welche HTML und XML Dokuments als Objekte abstrahieren und Mechanismen zur Manipulation dieser Abstraktion. Zusätzlich definiert der DOM auch:</p>
 
 <ul>
- <li>Die Dokumentstruktur, ein Baummodell, und die DOM Event Architektur im <a class="external" href="http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html" title="http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html">DOM core</a>: <code>Node</code>, <code>Element</code>, <code>DocumentFragment</code>, <code>Document</code>, <code>DOMImplementation</code>, <code>Event</code>, <code>EventTarget</code>, …</li>
- <li>Eine weniger strenge Definition der DOM Event Architektur und spezifische Events im <a class="external" href="http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html" title="http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html">DOM events</a>.</li>
- <li>Andere Definitionen wie zum Beispiel <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html">DOM Traversal</a> und <a class="external" href="http://html5.org/specs/dom-range.html" title="http://html5.org/specs/dom-range.html">DOM Range</a>.</li>
+ <li>Die Dokumentstruktur, ein Baummodell, und die DOM Event Architektur im <a class="external" href="http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html">DOM core</a>: <code>Node</code>, <code>Element</code>, <code>DocumentFragment</code>, <code>Document</code>, <code>DOMImplementation</code>, <code>Event</code>, <code>EventTarget</code>, …</li>
+ <li>Eine weniger strenge Definition der DOM Event Architektur und spezifische Events im <a class="external" href="http://dev.w3.org/2006/webapi/DOM-Level-3-Events/html/DOM3-Events.html">DOM events</a>.</li>
+ <li>Andere Definitionen wie zum Beispiel <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html">DOM Traversal</a> und <a class="external" href="http://html5.org/specs/dom-range.html">DOM Range</a>.</li>
 </ul>
 
 <p>Aus der Sicht von ECMAScript werden Objekte, die in der DOM Spezifikation definiert sind,  "host objects" genannt.</p>
 
 <h3 id="HTML_DOM">HTML DOM</h3>
 
-<p><a class="external" href="http://www.whatwg.org/html" title="http://www.whatwg.org/html">HTML</a>, die Markup-Sprache im Web, ist mit Bezug auf den DOM definiert. HTML liegt eine Schicht über den abstrakten Konzepten vom DOM Kern und definiert zusätzlich die <em>Bedeutung</em> von Elementen. Der HTML DOM beinhaltet zum Beispiel die <code>className</code> Eigenschaft von HTML Elementen oder APIs wie {{ domxref("document.body") }}.</p>
+<p><a class="external" href="http://www.whatwg.org/html">HTML</a>, die Markup-Sprache im Web, ist mit Bezug auf den DOM definiert. HTML liegt eine Schicht über den abstrakten Konzepten vom DOM Kern und definiert zusätzlich die <em>Bedeutung</em> von Elementen. Der HTML DOM beinhaltet zum Beispiel die <code>className</code> Eigenschaft von HTML Elementen oder APIs wie {{ domxref("document.body") }}.</p>
 
 <p>Die HTML Spezifikation definiert auch Einschränkungen auf Documenten. So müssen zum Beispiel die direkten Kindelemente der ungeordneten Liste <code>ul</code> alle <code>li</code> Elemente sein, welche die Listeneinträge repräsentieren. Im Allgemeinen verbietet die Spezifikation auch die Verwendung von Elementen und Attributen, die nicht im Standard definiert sind.</p>
 
@@ -73,12 +73,12 @@ original_slug: Web/JavaScript/JavaScript_technologieuebersicht
 <h3 id="Andere_APIs">Andere APIs</h3>
 
 <ul>
- <li>Die <code>setTimeout</code> und die <code>setInterval</code> Funktionen wurden zuerst auf dem <code><a class="external" href="http://www.whatwg.org/html/#window" title="http://www.whatwg.org/html/#window">Window</a></code> interface im HTML Standard definiert.</li>
- <li><a class="external" href="https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html" title="http://dev.w3.org/2006/webapi/XMLHttpRequest-2/">XMLHttpRequest.</a> API die das Senden von asynchronen HTTP Request ermöglicht.</li>
+ <li>Die <code>setTimeout</code> und die <code>setInterval</code> Funktionen wurden zuerst auf dem <code><a class="external" href="http://www.whatwg.org/html/#window">Window</a></code> interface im HTML Standard definiert.</li>
+ <li><a class="external" href="https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html">XMLHttpRequest.</a> API die das Senden von asynchronen HTTP Request ermöglicht.</li>
  <li><a class="external" href="http://dev.w3.org/csswg/cssom/">CSS Object Model.</a> Das CSSOM wird zur Abstraktion von CSS Regeln als Objekte verwendet.</li>
  <li><a class="external" href="http://www.whatwg.org/specs/web-workers/current-work/">WebWorkers.</a> API die die Verwendung von paralleler Verarbeitung ermöglicht.</li>
  <li><a class="external" href="http://www.whatwg.org/C/#network">WebSockets.</a> API die eine low-level bidirektionale Kommunikation ermöglicht.</li>
- <li><a class="external" href="http://www.whatwg.org/html/#2dcontext" title="http://www.whatwg.org/html/#2dcontext">Canvas 2D Context.</a> Grafik API für das canvas Element.</li>
+ <li><a class="external" href="http://www.whatwg.org/html/#2dcontext">Canvas 2D Context.</a> Grafik API für das canvas Element.</li>
 </ul>
 
 <h3 id="Webbrowserunterstützung_2">Webbrowserunterstützung</h3>

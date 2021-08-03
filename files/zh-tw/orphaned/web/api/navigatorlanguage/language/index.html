@@ -1,0 +1,65 @@
+---
+title: NavigatorLanguage.language
+slug: orphaned/Web/API/NavigatorLanguage/language
+tags:
+  - API
+  - Language
+  - NavigatorLanguage
+  - Property
+  - Read-only
+  - Reference
+original_slug: Web/API/NavigatorLanguage/language
+---
+<div>{{APIRef("HTML DOM")}}</div>
+
+<p> <strong><code>NavigatorLanguage.language</code></strong> 是一個唯讀的屬性，回傳使用者偏好的語言字串，通常是瀏覽器UI的文字</p>
+
+<h2 id="Syntax">語法</h2>
+
+<pre class="brush: js">const <em>lang</em> = navigator.language
+</pre>
+
+<h3 id="Value"> 值</h3>
+
+<p>一個 {{domxref("DOMString")}}. <em><code>lang</code></em> 儲存一個代表此語言的字串。定義在<a class="external"
+    href="https://tools.ietf.org/rfc/bcp/bcp47.txt">BCP 47</a>。 範例: 合法的語言代碼  "en", "en-US", "fr", "fr-FR", "es-ES", etc.</p>
+
+<p>在 iOS 小於 10.2 的 Safari 國碼是回傳小寫的喲！
+  "en-us", "fr-fr" etc.</p>
+
+<h2 id="Example">範例</h2>
+
+<pre class="brush: js">if (/^en\b/.test(navigator.language)) {
+  doLangSelect(window.navigator.language);
+}
+</pre>
+
+<h2 id="Specifications">規範</h2>
+
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">Specification</th>
+      <th scope="col">Status</th>
+      <th scope="col">Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName('HTML WHATWG', '#dom-navigator-language', 'NavigatorLanguage: language')}}</td>
+      <td>{{Spec2('HTML WHATWG')}}</td>
+      <td>Initial definition</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="Browser_compatibility">瀏覽器相容性</h2>
+
+<p>{{Compat("api.NavigatorLanguage.language")}}</p>
+
+<h2 id="See_also">參見</h2>
+
+<ul>
+  <li>{{domxref("NavigatorLanguage.languages", "navigator.languages")}}</li>
+  <li>{{domxref("navigator")}}</li>
+</ul>

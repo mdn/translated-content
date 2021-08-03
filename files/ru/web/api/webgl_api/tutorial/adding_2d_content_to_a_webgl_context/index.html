@@ -15,7 +15,7 @@ translation_of: Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 
 <h3 id="Инициализация_шейдеров">Инициализация шейдеров</h3>
 
-<p>Шейдеры задаются при помощи языка высокого уровня для программирования шейдеров - <a class="external" href="http://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf" title="http://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf">OpenGL ES Shading Language</a>. Для того, чтобы сделать проще процесс поддержки и обновления нашего контента, мы можем фактически написать наш код, загружающий шейдеры и помещающий их в HTML документ, вместо того, чтобы встраивать его весь в JavaScript. Давайте рассмотрим нашу процедуру <code>initShaders()</code>, которая выполнит эту задачу:</p>
+<p>Шейдеры задаются при помощи языка высокого уровня для программирования шейдеров - <a class="external" href="http://www.khronos.org/registry/gles/specs/2.0/GLSL_ES_Specification_1.0.17.pdf">OpenGL ES Shading Language</a>. Для того, чтобы сделать проще процесс поддержки и обновления нашего контента, мы можем фактически написать наш код, загружающий шейдеры и помещающий их в HTML документ, вместо того, чтобы встраивать его весь в JavaScript. Давайте рассмотрим нашу процедуру <code>initShaders()</code>, которая выполнит эту задачу:</p>
 
 <pre class="brush: js">function initShaders() {
   var fragmentShader = getShader(gl, "shader-fs");
@@ -186,7 +186,7 @@ function initBuffers() {
 
 <h2 id="Операции_над_матрицами">Операции над матрицами</h2>
 
-<p>Операции над матрицами достаточно сложны. Никому бы не хотелось самому писать весь код для работы с ними. К счастью, есть <a class="external" href="http://sylvester.jcoglan.com/" title="http://sylvester.jcoglan.com/">Sylvester</a> - очень удобная библиотека для выполнения операций над векторами и матрицами, написанная на JavaScript.</p>
+<p>Операции над матрицами достаточно сложны. Никому бы не хотелось самому писать весь код для работы с ними. К счастью, есть <a class="external" href="http://sylvester.jcoglan.com/">Sylvester</a> - очень удобная библиотека для выполнения операций над векторами и матрицами, написанная на JavaScript.</p>
 
 <p>Файл <code>glUtils.js</code>, используемый в этом примере, используется большинством примеров на WebGL, размещённых в сети интернет. Никто не знает точно откуда он появился. Он просто используется Sylvester и он даже пополняется методами для построения специальных типов матриц, а также вывода HTML для их отображения.</p>
 
@@ -216,8 +216,8 @@ function setMatrixUniforms() {
 <h2 id="Смотрите_также">Смотрите также</h2>
 
 <ul>
- <li><a class="external" href="http://mathworld.wolfram.com/Matrix.html" title="http://mathworld.wolfram.com/Matrix.html">Матрицы</a> на Wolfram MathWorld</li>
- <li><a class="external" href="http://en.wikipedia.org/wiki/Matrix_(mathematics)" title="http://en.wikipedia.org/wiki/Matrix_(mathematics)">Матрица</a> (Wikipedia)</li>
+ <li><a class="external" href="http://mathworld.wolfram.com/Matrix.html">Матрицы</a> на Wolfram MathWorld</li>
+ <li><a class="external" href="http://en.wikipedia.org/wiki/Matrix_(mathematics)">Матрица</a> (Wikipedia)</li>
 </ul>
 
 <p>{{PreviousNext("Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL", "Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL")}}</p>

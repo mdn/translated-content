@@ -9,7 +9,7 @@ original_slug: Web/HTTP/Заголовки
 ---
 <p>{{ HTTPSidebar }}</p>
 
-<p><span class="seoSummary"><strong>Заголовки HTTP </strong>позволяют клиенту и серверу отправлять дополнительную информацию с HTTP запросом или ответом. В HTTP-заголовке содержится не чувствительное к регистру название, а затем после (<code>:</code>) непосредственно значение.</span> <a href="https://wiki.developer.mozilla.org/en-US/docs/Glossary/Whitespace">Пробелы</a> перед значением игнорируются.</p>
+<p><span class="seoSummary"><strong>Заголовки HTTP </strong>позволяют клиенту и серверу отправлять дополнительную информацию с HTTP запросом или ответом. В HTTP-заголовке содержится не чувствительное к регистру название, а затем после (<code>:</code>) непосредственно значение.</span> <a href="/en-US/docs/Glossary/Whitespace">Пробелы</a> перед значением игнорируются.</p>
 
 <p><span class="tlid-translation translation" lang="ru"><span title="">Пользовательские собственные заголовки исторически использовались с префиксом X, но это соглашение было объявлено устаревшим в июне 2012 года из-за неудобств, вызванных тем, что нестандартные поля стали стандартом в </span></span> <a href="https://tools.ietf.org/html/rfc6648">RFC 6648</a><span class="tlid-translation translation" lang="ru"><span title="">;</span> <span title="">другие перечислены в реестре <a href="http://www.iana.org/assignments/message-headers/perm-headers.html">IANA</a>, исходное содержимое которого было определено в </span></span> <a class="external external-icon" href="http://tools.ietf.org/html/rfc4229">RFC 4229</a>.<span class="tlid-translation translation" lang="ru"><span title=""> IANA также поддерживает <a href="https://www.iana.org/assignments/message-headers/message-headers.xhtml">реестр предлагаемых новых заголовков HTTP</a>.</span></span></p>
 
@@ -21,10 +21,10 @@ original_slug: Web/HTTP/Заголовки
  <li>{{Glossary("General header", "Основные заголовки")}} <span class="tlid-translation translation" lang="ru"><span title="">применяется как к запросам, так и к ответам, но не имеет отношения к данным, передаваемым в теле.</span></span></li>
  <li>{{Glossary("Заголовок запроса", "Заголовки запроса")}} <span class="tlid-translation translation" lang="ru"><span title="">содержит больше информации о ресурсе, который нужно получить, или о клиенте, запрашивающем ресурс</span></span>.</li>
  <li>{{Glossary("Response header", "Заголовки ответа")}} <span class="tlid-translation translation" lang="ru"><span title="">содержат дополнительную информацию об ответе, например его местонахождение, или о сервере, предоставившем его.</span></span></li>
- <li>{{Glossary("Entity header", "Заголовки сущности")}} <span class="tlid-translation translation" lang="ru"><span title="">содержат информацию о теле ресурса, например его </span></span><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Length">длину содержимого </a>или тип <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/SVG/Content_type">MIME</a>.</li>
+ <li>{{Glossary("Entity header", "Заголовки сущности")}} <span class="tlid-translation translation" lang="ru"><span title="">содержат информацию о теле ресурса, например его </span></span><a href="/en-US/docs/Web/HTTP/Headers/Content-Length">длину содержимого </a>или тип <a href="/en-US/docs/Web/SVG/Content_type">MIME</a>.</li>
 </ul>
 
-<p>Заголовки также могут быть сгруппированы согласно тому, как <a href="https://wiki.developer.mozilla.org/en-US/docs/Glossary/Proxy_server">прокси (proxies)</a> обрабатывают их:</p>
+<p>Заголовки также могут быть сгруппированы согласно тому, как <a href="/en-US/docs/Glossary/Proxy_server">прокси (proxies)</a> обрабатывают их:</p>
 
 <ul>
  <li>{{ httpheader("Connection") }}</li>
@@ -116,49 +116,49 @@ original_slug: Web/HTTP/Заголовки
    <td><code><a href="/en-US/docs/HTTP_access_control#Access-Control-Allow-Credentials" title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Allow-Credentials">Access-Control-Allow-Credentials</a></code></td>
    <td></td>
    <td><a href="/en-US/docs/HTTP_access_control" title="En/HTTP access control">HTTP Access Control</a> and <a href="/en-US/docs/Server-Side_Access_Control" title="En/Server-Side Access Control">Server Side Access Control</a>{{ gecko_minversion_inline("1.9.1") }}</td>
-   <td><a class="external" href="http://www.w3.org/TR/cors/" title="http://www.w3.org/TR/cors/">W3C Cross-Origin Resource Sharing</a></td>
+   <td><a class="external" href="http://www.w3.org/TR/cors/">W3C Cross-Origin Resource Sharing</a></td>
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/HTTP_access_control#Access-Control-Allow-Origin" title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Allow-Origin">Access-Control-Allow-Origin</a></code></td>
    <td></td>
    <td><a href="/en-US/docs/HTTP_access_control" title="En/HTTP access control">HTTP Access Control</a> and <a href="/en-US/docs/Server-Side_Access_Control" title="En/Server-Side Access Control">Server Side Access Control</a>{{ gecko_minversion_inline("1.9.1") }}</td>
-   <td><a class="external" href="http://www.w3.org/TR/cors/" title="http://www.w3.org/TR/cors/">W3C Cross-Origin Resource Sharing</a></td>
+   <td><a class="external" href="http://www.w3.org/TR/cors/">W3C Cross-Origin Resource Sharing</a></td>
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/HTTP_access_control#Access-Control-Allow-Methods" title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Allow-Methods">Access-Control-Allow-Methods</a></code></td>
    <td></td>
    <td><a href="/en-US/docs/HTTP_access_control" title="En/HTTP access control">HTTP Access Control</a> and <a href="/en-US/docs/Server-Side_Access_Control" title="En/Server-Side Access Control">Server Side Access Control</a>{{ gecko_minversion_inline("1.9.1") }}</td>
-   <td><a class="external" href="http://www.w3.org/TR/cors/" title="http://www.w3.org/TR/cors/">W3C Cross-Origin Resource Sharing</a></td>
+   <td><a class="external" href="http://www.w3.org/TR/cors/">W3C Cross-Origin Resource Sharing</a></td>
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/HTTP_access_control#Access-Control-Allow-Headers" title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Allow-Headers">Access-Control-Allow-Headers</a></code></td>
    <td></td>
    <td><a href="/en-US/docs/HTTP_access_control" title="En/HTTP access control">HTTP Access Control</a> and <a href="/en-US/docs/Server-Side_Access_Control" title="En/Server-Side Access Control">Server Side Access Control</a>{{ gecko_minversion_inline("1.9.1") }}</td>
-   <td><a class="external" href="http://www.w3.org/TR/cors/" title="http://www.w3.org/TR/cors/">W3C Cross-Origin Resource Sharing</a></td>
+   <td><a class="external" href="http://www.w3.org/TR/cors/">W3C Cross-Origin Resource Sharing</a></td>
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/HTTP_access_control#Access-Control-Max-Age" title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Max-Age">Access-Control-Max-Age</a></code></td>
    <td></td>
    <td><a href="/en-US/docs/HTTP_access_control" title="En/HTTP access control">HTTP Access Control</a> and <a href="/en-US/docs/Server-Side_Access_Control" title="En/Server-Side Access Control">Server Side Access Control</a>{{ gecko_minversion_inline("1.9.1") }}</td>
-   <td><a class="external" href="http://www.w3.org/TR/cors/" title="http://www.w3.org/TR/cors/">W3C Cross-Origin Resource Sharing</a></td>
+   <td><a class="external" href="http://www.w3.org/TR/cors/">W3C Cross-Origin Resource Sharing</a></td>
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/HTTP_access_control#Access-Control-Expose-Header" title="en/HTTP access control#Access-Control-Expose-Header">Access-Control-Expose-Headers</a></code></td>
    <td></td>
    <td><a href="/en-US/docs/HTTP_access_control" title="En/HTTP access control">HTTP Access Control</a> and <a href="/en-US/docs/Server-Side_Access_Control" title="En/Server-Side Access Control">Server Side Access Control</a>{{ gecko_minversion_inline("2") }}</td>
-   <td><a class="external" href="http://www.w3.org/TR/cors/" title="http://www.w3.org/TR/cors/">W3C Cross-Origin Resource Sharing</a></td>
+   <td><a class="external" href="http://www.w3.org/TR/cors/">W3C Cross-Origin Resource Sharing</a></td>
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/HTTP_access_control#Access-Control-Request-Method" title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Request-Method">Access-Control-Request-Method</a></code></td>
    <td></td>
    <td><a href="/en-US/docs/HTTP_access_control" title="En/HTTP access control">HTTP Access Control</a> and <a href="/en-US/docs/Server-Side_Access_Control" title="En/Server-Side Access Control">Server Side Access Control</a>{{ gecko_minversion_inline("1.9.1") }}</td>
-   <td><a class="external" href="http://www.w3.org/TR/cors/" title="http://www.w3.org/TR/cors/">W3C Cross-Origin Resource Sharing</a></td>
+   <td><a class="external" href="http://www.w3.org/TR/cors/">W3C Cross-Origin Resource Sharing</a></td>
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/HTTP_access_control#Access-Control-Request-Headers" title="https://developer.mozilla.org/En/HTTP_access_control#Access-Control-Request-Headers">Access-Control-Request-Headers</a></code></td>
    <td></td>
    <td><a href="/en-US/docs/HTTP_access_control" title="En/HTTP access control">HTTP Access Control</a> and <a href="/en-US/docs/Server-Side_Access_Control" title="En/Server-Side Access Control">Server Side Access Control</a>{{ gecko_minversion_inline("1.9.1") }}</td>
-   <td><a class="external" href="http://www.w3.org/TR/cors/" title="http://www.w3.org/TR/cors/">W3C Cross-Origin Resource Sharing</a></td>
+   <td><a class="external" href="http://www.w3.org/TR/cors/">W3C Cross-Origin Resource Sharing</a></td>
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/Web/HTTP/Headers/Age" title="en/Age">Age</a></code></td>
@@ -248,7 +248,7 @@ original_slug: Web/HTTP/Заголовки
    <td><code><a href="/en-US/docs/Web/HTTP/Headers/Cookie" title="en/Cookie">Cookie</a></code></td>
    <td></td>
    <td></td>
-   <td><a class="external" href="http://www.ietf.org/rfc/rfc2109.txt" title="http://www.ietf.org/rfc/rfc2109.txt">RFC 2109</a></td>
+   <td><a class="external" href="http://www.ietf.org/rfc/rfc2109.txt">RFC 2109</a></td>
   </tr>
   <tr>
    <td><code>DNT</code></td>
@@ -326,7 +326,7 @@ original_slug: Web/HTTP/Заголовки
    <td><code><a href="/en-US/docs/Web/HTTP/Headers/Last-Event-ID" title="en/Last-Event-ID">Last-Event-ID</a></code></td>
    <td>Содержит идентификатор последнего события полученного клиентом от сервера в предыдущем HTTP запросе. Используется для восстановления синхронизации потока <code>text/event-stream</code>.</td>
    <td><a href="/en-US/docs/Server-sent_events" title="en/Server-Sent Events">Server-Sent Events</a></td>
-   <td><a class="external" href="http://dev.w3.org/html5/eventsource/" title="http://dev.w3.org/html5/eventsource/">Server-Sent Events spec</a></td>
+   <td><a class="external" href="http://dev.w3.org/html5/eventsource/">Server-Sent Events spec</a></td>
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/Web/HTTP/Headers/Last-Modified" title="en/Last-Modified">Last-Modified</a></code></td>
@@ -341,7 +341,7 @@ original_slug: Web/HTTP/Заголовки
     <p>For the <code>rel=prefetch</code> case, see <a href="/en-US/docs/Link_prefetching_FAQ" title="en/Link prefetching FAQ">Link Prefetching FAQ</a></p>
    </td>
    <td>
-    <p>Introduced in <a class="external" href="http://tools.ietf.org/html/rfc2068#section-19.6.2.4" title="http://tools.ietf.org/html/rfc2068#section-19.6.2.4">HTTP 1.1's RFC 2068, section 19.6.2.4</a>, it was removed in the final <a class="external" href="http://www.w3.org/Protocols/rfc2616/rfc2616.html" title="http://www.w3.org/Protocols/rfc2616/rfc2616.html">HTTP 1.1 spec</a>, then reintroduced, with some extensions, in <a class="external" href="http://greenbytes.de/tech/webdav/rfc5988.html" title="http://greenbytes.de/tech/webdav/rfc5988.html">RFC 5988</a></p>
+    <p>Introduced in <a class="external" href="http://tools.ietf.org/html/rfc2068#section-19.6.2.4">HTTP 1.1's RFC 2068, section 19.6.2.4</a>, it was removed in the final <a class="external" href="http://www.w3.org/Protocols/rfc2616/rfc2616.html">HTTP 1.1 spec</a>, then reintroduced, with some extensions, in <a class="external" href="http://greenbytes.de/tech/webdav/rfc5988.html">RFC 5988</a></p>
    </td>
   </tr>
   <tr>
@@ -366,7 +366,7 @@ original_slug: Web/HTTP/Заголовки
    <td><code><a href="/en-US/docs/HTTP_access_control#Origin" title="https://developer.mozilla.org/En/HTTP_access_control#Origin">Origin</a></code></td>
    <td></td>
    <td><a href="/en-US/docs/HTTP_access_control" title="En/HTTP access control">HTTP Access Control</a> and <a href="/en-US/docs/Server-Side_Access_Control" title="En/Server-Side Access Control">Server Side Access Control</a>{{ gecko_minversion_inline("1.9.1") }}</td>
-   <td>More recently defined in the <a href="https://fetch.spec.whatwg.org/#http-extensions">Fetch spec</a> (see <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>.) Originally defined in <a class="external" href="http://www.w3.org/TR/cors/" title="http://www.w3.org/TR/cors/">W3C Cross-Origin Resource Sharing</a></td>
+   <td>More recently defined in the <a href="https://fetch.spec.whatwg.org/#http-extensions">Fetch spec</a> (see <a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a>.) Originally defined in <a class="external" href="http://www.w3.org/TR/cors/">W3C Cross-Origin Resource Sharing</a></td>
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/Web/HTTP/Headers/Pragma" title="en/Pragma">Pragma</a></code></td>
@@ -414,31 +414,31 @@ original_slug: Web/HTTP/Заголовки
    <td><code>Sec-Websocket-Extensions</code></td>
    <td></td>
    <td></td>
-   <td> <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07" title="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07">Websockets</a></td>
+   <td> <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07">Websockets</a></td>
   </tr>
   <tr>
    <td><code>Sec-Websocket-Key</code></td>
    <td></td>
    <td></td>
-   <td> <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07" title="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07">Websockets</a></td>
+   <td> <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07">Websockets</a></td>
   </tr>
   <tr>
    <td><code>Sec-Websocket-Origin</code></td>
    <td></td>
    <td></td>
-   <td> <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07" title="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07">Websockets</a></td>
+   <td> <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07">Websockets</a></td>
   </tr>
   <tr>
    <td><code>Sec-Websocket-Protocol</code></td>
    <td></td>
    <td></td>
-   <td> <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07" title="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07">Websockets</a></td>
+   <td> <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07">Websockets</a></td>
   </tr>
   <tr>
    <td><code>Sec-Websocket-Version</code></td>
    <td></td>
    <td></td>
-   <td> <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07" title="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07">Websockets</a></td>
+   <td> <a class="external" href="http://tools.ietf.org/html/draft-ietf-hybi-thewebsocketprotocol-07">Websockets</a></td>
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/Web/HTTP/Headers/Server" title="en/Server">Server</a></code></td>
@@ -450,19 +450,19 @@ original_slug: Web/HTTP/Заголовки
    <td><code><a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie" title="en/Set-Cookie">Set-Cookie</a></code></td>
    <td></td>
    <td></td>
-   <td><a class="external" href="http://www.ietf.org/rfc/rfc2109.txt" title="http://www.ietf.org/rfc/rfc2109.txt">RFC 2109</a></td>
+   <td><a class="external" href="http://www.ietf.org/rfc/rfc2109.txt">RFC 2109</a></td>
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/Web/HTTP/Headers/Set-Cookie2" title="en/Set-Cookie2">Set-Cookie2</a></code></td>
    <td></td>
    <td></td>
-   <td><a class="external" href="http://www.ietf.org/rfc/rfc2965.txt" title="http://www.ietf.org/rfc/rfc2965.txt">RFC 2965</a></td>
+   <td><a class="external" href="http://www.ietf.org/rfc/rfc2965.txt">RFC 2965</a></td>
   </tr>
   <tr>
    <td><code>Strict-Transport-Security</code></td>
    <td></td>
    <td><a href="/en-US/docs/Security/HTTP_Strict_Transport_Security" title="en/Security/HTTP Strict Transport Security">HTTP Strict Transport Security</a></td>
-   <td><a class="external" href="http://tools.ietf.org/html/draft-hodges-strict-transport-sec-02" title="http://tools.ietf.org/html/draft-hodges-strict-transport-sec-02">IETF reference</a></td>
+   <td><a class="external" href="http://tools.ietf.org/html/draft-hodges-strict-transport-sec-02">IETF reference</a></td>
   </tr>
   <tr>
    <td><code>TCN</code></td>
@@ -480,7 +480,7 @@ original_slug: Web/HTTP/Заголовки
    <td><code><a href="/en-US/docs/Web/HTTP/Headers/Trailer" title="en/Trailer">Trailer</a></code></td>
    <td>lists the headers that will be transmitted after the message body, in a trailer block. This allows servers to compute some values, like <code>Content-MD5:</code> while transmitting the data. Note that the <code>Trailer:</code> header must not list the <code>Content-Length:,</code> <code>Trailer:</code> or <code>Transfer-Encoding:</code> headers.</td>
    <td></td>
-   <td><a class="external" href="http://tools.ietf.org/html/rfc2616#section-14.40" title="http://tools.ietf.org/html/rfc2616#section-14.40">RFC 2616, §14.40</a></td>
+   <td><a class="external" href="http://tools.ietf.org/html/rfc2616#section-14.40">RFC 2616, §14.40</a></td>
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/Web/HTTP/Headers/Transfer-Encoding" title="en/Transfer-Encoding">Transfer-Encoding</a></code></td>

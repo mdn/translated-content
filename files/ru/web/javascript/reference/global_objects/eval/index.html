@@ -93,7 +93,7 @@ var result = obj[ propname ];  //  obj[ "a" ] то же, что и obj.a
 
 <h3 id="Используйте_функции_вместо_исполнения_фрагментов_кода">Используйте функции вместо исполнения фрагментов кода</h3>
 
-<p>У JavaScript <a class="external" href="http://en.wikipedia.org/wiki/First-class_function" title="http://en.wikipedia.org/wiki/First-class_function">функции первого класса</a>, что значит, что вы можете передавать функции как аргументы, хранить их в переменных или свойствах объектов и так далее. Многие DOM API созданы с учётом этого, так что вы можете (и вам следует) писать:</p>
+<p>У JavaScript <a class="external" href="http://en.wikipedia.org/wiki/First-class_function">функции первого класса</a>, что значит, что вы можете передавать функции как аргументы, хранить их в переменных или свойствах объектов и так далее. Многие DOM API созданы с учётом этого, так что вы можете (и вам следует) писать:</p>
 
 <pre class="brush: js notranslate">// вместо setTimeout(" ... ", 1000) :
 setTimeout(function() { ... }, 1000);

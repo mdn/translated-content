@@ -10031,13 +10031,6 @@
       "ThePrisoner"
     ]
   },
-  "Mozilla/Firefox/Releases/17/Site_compatibility": {
-    "modified": "2019-01-16T21:49:04.673Z",
-    "contributors": [
-      "wbamberg",
-      "xdelatour"
-    ]
-  },
   "Mozilla/Firefox/Releases/18": {
     "modified": "2019-03-23T23:35:11.165Z",
     "contributors": [
@@ -10045,13 +10038,6 @@
       "tregagnon",
       "FredB",
       "ThePrisoner"
-    ]
-  },
-  "Mozilla/Firefox/Releases/18/Site_compatibility": {
-    "modified": "2019-01-16T21:57:32.133Z",
-    "contributors": [
-      "wbamberg",
-      "xdelatour"
     ]
   },
   "Mozilla/Firefox/Releases/19": {
@@ -10063,13 +10049,6 @@
       "FredB",
       "ThePrisoner",
       "Skoua"
-    ]
-  },
-  "Mozilla/Firefox/Releases/19/Site_compatibility": {
-    "modified": "2019-01-16T21:57:39.651Z",
-    "contributors": [
-      "wbamberg",
-      "xdelatour"
     ]
   },
   "Mozilla/Firefox/Releases/2": {
@@ -10116,26 +10095,12 @@
       "Martial76"
     ]
   },
-  "Mozilla/Firefox/Releases/20/Site_compatibility": {
-    "modified": "2019-01-16T21:58:36.580Z",
-    "contributors": [
-      "wbamberg",
-      "xdelatour"
-    ]
-  },
   "Mozilla/Firefox/Releases/21": {
     "modified": "2019-11-20T21:19:06.767Z",
     "contributors": [
       "wbamberg",
       "tregagnon",
       "Delapouite"
-    ]
-  },
-  "Mozilla/Firefox/Releases/21/Site_compatibility": {
-    "modified": "2019-01-16T21:57:29.270Z",
-    "contributors": [
-      "wbamberg",
-      "xdelatour"
     ]
   },
   "Mozilla/Firefox/Releases/22": {
@@ -10146,13 +10111,6 @@
       "Skoua"
     ]
   },
-  "Mozilla/Firefox/Releases/22/Site_compatibility": {
-    "modified": "2019-01-16T21:57:40.074Z",
-    "contributors": [
-      "wbamberg",
-      "xdelatour"
-    ]
-  },
   "Mozilla/Firefox/Releases/23": {
     "modified": "2019-03-23T22:59:15.612Z",
     "contributors": [
@@ -10161,25 +10119,11 @@
       "ThePrisoner"
     ]
   },
-  "Mozilla/Firefox/Releases/23/Site_compatibility": {
-    "modified": "2019-01-16T21:57:25.542Z",
-    "contributors": [
-      "wbamberg",
-      "xdelatour"
-    ]
-  },
   "Mozilla/Firefox/Releases/24": {
     "modified": "2019-03-23T22:43:17.357Z",
     "contributors": [
       "wbamberg",
       "ThePrisoner"
-    ]
-  },
-  "Mozilla/Firefox/Releases/24/Site_compatibility": {
-    "modified": "2019-01-16T21:57:47.692Z",
-    "contributors": [
-      "wbamberg",
-      "xdelatour"
     ]
   },
   "Mozilla/Firefox/Releases/25": {
@@ -10190,26 +10134,12 @@
       "kohei.yoshino"
     ]
   },
-  "Mozilla/Firefox/Releases/25/Site_Compatibility": {
-    "modified": "2019-01-16T21:57:42.942Z",
-    "contributors": [
-      "wbamberg",
-      "xdelatour"
-    ]
-  },
   "Mozilla/Firefox/Releases/26": {
     "modified": "2020-09-16T08:21:14.333Z",
     "contributors": [
       "Voulto",
       "wbamberg",
       "kohei.yoshino"
-    ]
-  },
-  "Mozilla/Firefox/Releases/26/Site_Compatibility": {
-    "modified": "2019-01-16T21:59:11.115Z",
-    "contributors": [
-      "wbamberg",
-      "xdelatour"
     ]
   },
   "Mozilla/Firefox/Releases/27": {
@@ -10220,26 +10150,12 @@
       "kohei.yoshino"
     ]
   },
-  "Mozilla/Firefox/Releases/27/Site_Compatibility": {
-    "modified": "2019-01-16T21:49:05.193Z",
-    "contributors": [
-      "wbamberg",
-      "xdelatour"
-    ]
-  },
   "Mozilla/Firefox/Releases/28": {
     "modified": "2020-09-30T06:44:33.639Z",
     "contributors": [
       "Voulto",
       "wbamberg",
       "kohei.yoshino"
-    ]
-  },
-  "Mozilla/Firefox/Releases/28/Site_Compatibility": {
-    "modified": "2019-01-16T21:59:08.939Z",
-    "contributors": [
-      "wbamberg",
-      "xdelatour"
     ]
   },
   "Mozilla/Firefox/Releases/29": {
@@ -10249,13 +10165,6 @@
       "wbamberg",
       "Sebastianz",
       "kohei.yoshino"
-    ]
-  },
-  "Mozilla/Firefox/Releases/29/Site_Compatibility": {
-    "modified": "2019-01-16T21:57:45.131Z",
-    "contributors": [
-      "wbamberg",
-      "xdelatour"
     ]
   },
   "Mozilla/Firefox/Releases/3": {
@@ -10378,27 +10287,6 @@
       "fscholz"
     ]
   },
-  "Mozilla/Firefox/Releases/30/Site_Compatibility": {
-    "modified": "2019-01-16T21:57:39.588Z",
-    "contributors": [
-      "wbamberg",
-      "xdelatour"
-    ]
-  },
-  "Mozilla/Firefox/Releases/31": {
-    "modified": "2019-03-23T22:41:00.540Z",
-    "contributors": [
-      "wbamberg",
-      "teoli"
-    ]
-  },
-  "Mozilla/Firefox/Releases/31/Site_Compatibility": {
-    "modified": "2019-01-16T21:57:55.582Z",
-    "contributors": [
-      "wbamberg",
-      "xdelatour"
-    ]
-  },
   "Mozilla/Firefox/Releases/32": {
     "modified": "2019-03-23T22:59:34.596Z",
     "contributors": [
@@ -10413,35 +10301,6 @@
       "Amandine83"
     ]
   },
-  "Mozilla/Firefox/Releases/33": {
-    "modified": "2019-03-23T22:40:55.948Z",
-    "contributors": [
-      "wbamberg",
-      "Sebastianz",
-      "teoli"
-    ]
-  },
-  "Mozilla/Firefox/Releases/33/Site_Compatibility": {
-    "modified": "2019-01-16T21:57:26.981Z",
-    "contributors": [
-      "wbamberg",
-      "xdelatour"
-    ]
-  },
-  "Mozilla/Firefox/Releases/34": {
-    "modified": "2019-03-23T22:42:55.224Z",
-    "contributors": [
-      "wbamberg",
-      "kohei.yoshino"
-    ]
-  },
-  "Mozilla/Firefox/Releases/34/Site_Compatibility": {
-    "modified": "2019-01-16T21:49:04.698Z",
-    "contributors": [
-      "wbamberg",
-      "xdelatour"
-    ]
-  },
   "Mozilla/Firefox/Releases/35": {
     "modified": "2019-12-13T20:33:22.682Z",
     "contributors": [
@@ -10452,56 +10311,6 @@
       "Runatal"
     ]
   },
-  "Mozilla/Firefox/Releases/35/Site_Compatibility": {
-    "modified": "2019-01-16T21:49:04.592Z",
-    "contributors": [
-      "wbamberg",
-      "xdelatour"
-    ]
-  },
-  "Mozilla/Firefox/Releases/36": {
-    "modified": "2019-03-23T22:42:49.784Z",
-    "contributors": [
-      "wbamberg",
-      "Sebastianz",
-      "kohei.yoshino"
-    ]
-  },
-  "Mozilla/Firefox/Releases/36/Site_Compatibility": {
-    "modified": "2019-01-16T21:49:12.998Z",
-    "contributors": [
-      "wbamberg",
-      "xdelatour"
-    ]
-  },
-  "Mozilla/Firefox/Releases/37": {
-    "modified": "2019-03-23T22:42:50.839Z",
-    "contributors": [
-      "wbamberg",
-      "kohei.yoshino"
-    ]
-  },
-  "Mozilla/Firefox/Releases/37/Site_Compatibility": {
-    "modified": "2019-01-16T21:49:07.566Z",
-    "contributors": [
-      "wbamberg",
-      "xdelatour"
-    ]
-  },
-  "Mozilla/Firefox/Releases/38": {
-    "modified": "2019-03-23T22:42:50.499Z",
-    "contributors": [
-      "wbamberg",
-      "teoli"
-    ]
-  },
-  "Mozilla/Firefox/Releases/38/Site_Compatibility": {
-    "modified": "2019-01-16T21:49:04.613Z",
-    "contributors": [
-      "wbamberg",
-      "xdelatour"
-    ]
-  },
   "Mozilla/Firefox/Releases/39": {
     "modified": "2020-09-21T08:17:39.666Z",
     "contributors": [
@@ -10509,13 +10318,6 @@
       "wbamberg",
       "Guillaume-Heras",
       "teoli"
-    ]
-  },
-  "Mozilla/Firefox/Releases/39/Site_Compatibility": {
-    "modified": "2019-01-16T21:49:07.002Z",
-    "contributors": [
-      "wbamberg",
-      "xdelatour"
     ]
   },
   "Mozilla/Firefox/Releases/4": {
@@ -10537,26 +10339,12 @@
       "ov357"
     ]
   },
-  "Mozilla/Firefox/Releases/40/Site_Compatibility": {
-    "modified": "2019-01-16T21:48:27.545Z",
-    "contributors": [
-      "wbamberg",
-      "xdelatour"
-    ]
-  },
   "Mozilla/Firefox/Releases/41": {
     "modified": "2019-03-23T22:49:38.696Z",
     "contributors": [
       "wbamberg",
       "SphinxKnight",
       "Paleno"
-    ]
-  },
-  "Mozilla/Firefox/Releases/41/Site_Compatibility": {
-    "modified": "2019-01-16T21:48:49.107Z",
-    "contributors": [
-      "wbamberg",
-      "xdelatour"
     ]
   },
   "Mozilla/Firefox/Releases/42": {
@@ -10566,13 +10354,6 @@
       "wbamberg",
       "SphinxKnight",
       "syoichi"
-    ]
-  },
-  "Mozilla/Firefox/Releases/42/Site_Compatibility": {
-    "modified": "2019-01-16T21:48:30.986Z",
-    "contributors": [
-      "wbamberg",
-      "xdelatour"
     ]
   },
   "Mozilla/Firefox/Releases/5": {
@@ -10585,50 +10366,12 @@
       "ThePrisoner"
     ]
   },
-  "Mozilla/Firefox/Releases/50": {
-    "modified": "2019-03-23T22:23:32.722Z",
-    "contributors": [
-      "wbamberg",
-      "Xhelas"
-    ]
-  },
-  "Mozilla/Firefox/Releases/59": {
-    "modified": "2019-03-18T21:37:37.649Z",
-    "contributors": [
-      "wbamberg",
-      "julienw"
-    ]
-  },
   "Mozilla/Firefox/Releases/6": {
     "modified": "2019-11-21T00:43:13.867Z",
     "contributors": [
       "wbamberg",
       "tregagnon",
       "ThePrisoner"
-    ]
-  },
-  "Mozilla/Firefox/Releases/63": {
-    "modified": "2019-03-18T21:22:08.997Z",
-    "contributors": [
-      "algorun77"
-    ]
-  },
-  "Mozilla/Firefox/Releases/65": {
-    "modified": "2019-03-18T20:39:08.555Z",
-    "contributors": [
-      "samus35"
-    ]
-  },
-  "Mozilla/Firefox/Releases/68": {
-    "modified": "2019-08-22T13:01:38.971Z",
-    "contributors": [
-      "BuzzRage"
-    ]
-  },
-  "Mozilla/Firefox/Releases/69": {
-    "modified": "2019-08-14T05:59:15.506Z",
-    "contributors": [
-      "Kuzcoo"
     ]
   },
   "Mozilla/Firefox/Releases/7": {
@@ -10639,25 +10382,6 @@
       "tregagnon",
       "FredB",
       "ThePrisoner"
-    ]
-  },
-  "Mozilla/Firefox/Releases/70": {
-    "modified": "2019-09-02T05:07:52.712Z",
-    "contributors": [
-      "pbrosset"
-    ]
-  },
-  "Mozilla/Firefox/Releases/76": {
-    "modified": "2020-05-10T16:11:03.049Z",
-    "contributors": [
-      "tristantheb"
-    ]
-  },
-  "Mozilla/Firefox/Releases/77": {
-    "modified": "2020-05-10T15:53:10.394Z",
-    "contributors": [
-      "tristantheb",
-      "Neku3721"
     ]
   },
   "Mozilla/Firefox/Releases/8": {
@@ -14910,13 +14634,6 @@
       "loella16"
     ]
   },
-  "Web/API/DoubleRange": {
-    "modified": "2020-11-11T19:01:25.656Z",
-    "contributors": [
-      "JNa0",
-      "Voulto"
-    ]
-  },
   "Web/API/EffectTiming": {
     "modified": "2019-03-23T22:28:24.754Z",
     "contributors": [
@@ -18354,6 +18071,13 @@
       "Voulto"
     ]
   },
+  "Web/API/MediaTrackConstraints": {
+    "modified": "2020-11-11T19:01:25.656Z",
+    "contributors": [
+      "JNa0",
+      "Voulto"
+    ]
+  },
   "Web/API/Media_Streams_API": {
     "modified": "2020-10-15T21:25:08.658Z",
     "contributors": [
@@ -18544,62 +18268,6 @@
     "contributors": [
       "nboisteault",
       "Arzak656"
-    ]
-  },
-  "Web/API/NavigatorLanguage": {
-    "modified": "2020-11-13T08:13:18.543Z",
-    "contributors": [
-      "Arzak656"
-    ]
-  },
-  "Web/API/NavigatorLanguage/language": {
-    "modified": "2020-11-13T09:34:12.937Z",
-    "contributors": [
-      "Arzak656"
-    ]
-  },
-  "Web/API/NavigatorLanguage/languages": {
-    "modified": "2020-11-13T11:23:05.443Z",
-    "contributors": [
-      "Arzak656"
-    ]
-  },
-  "Web/API/NavigatorOnLine": {
-    "modified": "2020-10-15T21:33:01.047Z",
-    "contributors": [
-      "Arzak656",
-      "fscholz"
-    ]
-  },
-  "Web/API/NavigatorOnLine/Online_and_offline_events": {
-    "modified": "2019-03-23T23:53:02.447Z",
-    "contributors": [
-      "Suriteka",
-      "chrisdavidmills",
-      "BenoitL",
-      "Mgjbot"
-    ]
-  },
-  "Web/API/NavigatorOnLine/onLine": {
-    "modified": "2020-10-15T21:16:47.165Z",
-    "contributors": [
-      "tomderudder",
-      "thibaultboursier",
-      "nicodel",
-      "fscholz",
-      "teoli",
-      "khalid32",
-      "Mgjbot",
-      "BenoitL"
-    ]
-  },
-  "Web/API/NavigatorStorage": {
-    "modified": "2020-10-15T22:17:55.760Z"
-  },
-  "Web/API/NavigatorStorage/storage": {
-    "modified": "2020-10-15T22:17:55.620Z",
-    "contributors": [
-      "Watilin"
     ]
   },
   "Web/API/Network_Information_API": {
@@ -20102,12 +19770,6 @@
       "fscholz",
       "khalid32",
       "Feugy"
-    ]
-  },
-  "Web/API/ULongRange": {
-    "modified": "2020-10-15T22:35:00.304Z",
-    "contributors": [
-      "Voulto"
     ]
   },
   "Web/API/URL": {
@@ -22075,13 +21737,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/WorkerGlobalScope/close": {
-    "modified": "2020-10-15T21:36:58.427Z",
-    "contributors": [
-      "Arzak656",
-      "jean-pierre.gay"
-    ]
-  },
   "Web/API/WorkerGlobalScope/console": {
     "modified": "2020-10-15T22:26:34.613Z",
     "contributors": [
@@ -22110,13 +21765,6 @@
   },
   "Web/API/WorkerGlobalScope/navigator": {
     "modified": "2020-10-15T21:33:53.933Z",
-    "contributors": [
-      "Arzak656",
-      "jean-pierre.gay"
-    ]
-  },
-  "Web/API/WorkerGlobalScope/onclose": {
-    "modified": "2020-10-15T21:33:54.728Z",
     "contributors": [
       "Arzak656",
       "jean-pierre.gay"
@@ -43450,6 +43098,20 @@
       "Pitux"
     ]
   },
+  "conflicting/Web/API/DedicatedWorkerGlobalScope/close": {
+    "modified": "2020-10-15T21:36:58.427Z",
+    "contributors": [
+      "Arzak656",
+      "jean-pierre.gay"
+    ]
+  },
+  "conflicting/Web/API/DedicatedWorkerGlobalScope/close_ad209d73ce2abfe0e3fe136acf40e5b4": {
+    "modified": "2020-10-15T21:33:54.728Z",
+    "contributors": [
+      "Arzak656",
+      "jean-pierre.gay"
+    ]
+  },
   "conflicting/Web/API/Document/createEvent": {
     "modified": "2020-10-15T21:37:47.725Z",
     "contributors": [
@@ -43544,6 +43206,12 @@
     "contributors": [
       "fscholz",
       "Kalwyn"
+    ]
+  },
+  "conflicting/Web/API/MediaTrackConstraints": {
+    "modified": "2020-10-15T22:35:00.304Z",
+    "contributors": [
+      "Voulto"
     ]
   },
   "conflicting/Web/API/Node": {
@@ -44478,15 +44146,6 @@
       "dexterneo"
     ]
   },
-  "orphaned/Web/API/AbstractWorker/onerror": {
-    "modified": "2020-10-15T21:32:33.262Z",
-    "contributors": [
-      "Arzak656",
-      "wakka27",
-      "jean-pierre.gay",
-      "fscholz"
-    ]
-  },
   "orphaned/Web/API/Ambient_Light_Events": {
     "modified": "2019-03-23T23:28:29.463Z",
     "contributors": [
@@ -44680,6 +44339,62 @@
       "SphinxKnight",
       "teoli",
       "julienw"
+    ]
+  },
+  "orphaned/Web/API/NavigatorLanguage": {
+    "modified": "2020-11-13T08:13:18.543Z",
+    "contributors": [
+      "Arzak656"
+    ]
+  },
+  "orphaned/Web/API/NavigatorLanguage/language": {
+    "modified": "2020-11-13T09:34:12.937Z",
+    "contributors": [
+      "Arzak656"
+    ]
+  },
+  "orphaned/Web/API/NavigatorLanguage/languages": {
+    "modified": "2020-11-13T11:23:05.443Z",
+    "contributors": [
+      "Arzak656"
+    ]
+  },
+  "orphaned/Web/API/NavigatorOnLine": {
+    "modified": "2020-10-15T21:33:01.047Z",
+    "contributors": [
+      "Arzak656",
+      "fscholz"
+    ]
+  },
+  "orphaned/Web/API/NavigatorOnLine/Online_and_offline_events": {
+    "modified": "2019-03-23T23:53:02.447Z",
+    "contributors": [
+      "Suriteka",
+      "chrisdavidmills",
+      "BenoitL",
+      "Mgjbot"
+    ]
+  },
+  "orphaned/Web/API/NavigatorOnLine/onLine": {
+    "modified": "2020-10-15T21:16:47.165Z",
+    "contributors": [
+      "tomderudder",
+      "thibaultboursier",
+      "nicodel",
+      "fscholz",
+      "teoli",
+      "khalid32",
+      "Mgjbot",
+      "BenoitL"
+    ]
+  },
+  "orphaned/Web/API/NavigatorStorage": {
+    "modified": "2020-10-15T22:17:55.760Z"
+  },
+  "orphaned/Web/API/NavigatorStorage/storage": {
+    "modified": "2020-10-15T22:17:55.620Z",
+    "contributors": [
+      "Watilin"
     ]
   },
   "orphaned/Web/API/Node/getUserData": {

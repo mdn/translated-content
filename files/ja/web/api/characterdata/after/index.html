@@ -1,0 +1,85 @@
+---
+title: CharacterData.after()
+slug: Web/API/CharacterData/after
+tags:
+  - API
+  - DOM
+  - Method
+  - Node
+  - Reference
+browser-compat: api.CharacterData.after
+translation_of: Web/API/CharacterData/after
+---
+<div>{{APIRef("DOM")}}</div>
+
+<p><code><strong>CharacterData.after()</strong></code> は、一連の {{domxref("Node")}} または {{domxref("DOMString")}} オブジェクトをこの <code>CharacterData</code> の親ノードの子リストの、この <code>CharacterData</code> の直後に挿入します。 {{domxref("DOMString")}} オブジェクトは {{domxref("Text")}} ノードと等価なノードとして挿入されます。</p>
+
+<h2 id="Syntax">構文</h2>
+
+<pre class="brush: js">
+after(... nodes)
+</pre>
+
+<h3 id="Parameters">引数</h3>
+
+<dl>
+  <dt><code>nodes</code></dt>
+  <dd>挿入する一連の {{domxref("Node")}} または {{domxref("DOMString")}} オブジェクトです。</dd>
+</dl>
+
+<h3 id="Exceptions">例外</h3>
+
+<ul>
+ <li>{{domxref("HierarchyRequestError")}}: ノードを階層内の指定の位置に挿入できません。</li>
+</ul>
+
+<h2 id="Examples">例</h2>
+
+<h3>新しいノードでテキストを挿入</h3>
+
+<p><code>after()</code> メソッドで、 <code>CharacterData</code> ノードの後に新しいノードを挿入することができます。</p>
+
+<pre class="brush: js">
+const h1TextNode = document.getElementsByTagName('h1')[0].firstChild;
+h1TextNode.after(" #h1");
+
+h1TextNode.parentElement.childNodes
+// NodeList [#text "CharacterData.after()", #text " #h1"]
+
+h1TextNode.data;
+// "CharacterData.after()"
+</pre>
+
+<h3>現在のノードにテキストを追加</h3>
+
+<p>現在のノードにテキストを追加したいのであれば、 <a href="/ja/docs/Web/API/CharacterData/appendData"><code>appendData()</code></a> メソッドで現在のノードのデータに追加することができます。</p>
+
+<pre class="brush: js">
+const h1TextNode = document.getElementsByTagName('h1')[0].firstChild;
+h1TextNode.appendData(" #h1");
+
+h1TextNode.parentElement.childNodes;
+// NodeList [#text "CharacterData.after() #h1"]
+
+h1TextNode.data;
+// "CharacterData.after() #h1"
+</pre>
+
+<h2 id="Specification">仕様書</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">関連情報</h2>
+
+<ul>
+  <li>{{domxref("CharacterData.appendData()")}}</li>
+  <li>{{domxref("CharacterData.before()")}}</li>
+  <li>{{domxref("Element.append()")}}</li>
+  <li>{{domxref("Node.appendChild()")}}</li>
+  <li>{{domxref("Element.insertAdjacentElement()")}}</li>
+  <li>{{domxref("NodeList")}}</li>
+ </ul>

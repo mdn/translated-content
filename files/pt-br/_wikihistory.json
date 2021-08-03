@@ -5265,12 +5265,6 @@
       "welingtonms"
     ]
   },
-  "Web/API/FullscreenOptions": {
-    "modified": "2020-10-15T22:15:52.238Z",
-    "contributors": [
-      "TecladistaProd"
-    ]
-  },
   "Web/API/Gamepad_API": {
     "modified": "2020-10-15T22:23:34.951Z",
     "contributors": [
@@ -5860,73 +5854,6 @@
     "modified": "2020-10-15T22:27:50.572Z",
     "contributors": [
       "LucasRuy"
-    ]
-  },
-  "Web/API/NavigatorID": {
-    "modified": "2019-03-23T23:01:42.494Z",
-    "contributors": [
-      "teoli"
-    ]
-  },
-  "Web/API/NavigatorID/platform": {
-    "modified": "2020-10-15T21:27:41.688Z",
-    "contributors": [
-      "GarkGarcia",
-      "teoli",
-      "khalid32",
-      "eliezerb"
-    ]
-  },
-  "Web/API/NavigatorID/userAgent": {
-    "modified": "2020-10-15T21:58:19.578Z",
-    "contributors": [
-      "GarkGarcia",
-      "thedjmarcelo"
-    ]
-  },
-  "Web/API/NavigatorLanguage": {
-    "modified": "2019-03-23T22:03:53.998Z",
-    "contributors": [
-      "teoli"
-    ]
-  },
-  "Web/API/NavigatorLanguage/language": {
-    "modified": "2019-03-23T22:03:54.652Z",
-    "contributors": [
-      "klzns"
-    ]
-  },
-  "Web/API/NavigatorOnLine": {
-    "modified": "2019-03-23T22:02:07.133Z",
-    "contributors": [
-      "marciioluucas",
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/NavigatorOnLine/Online_and_offline_events": {
-    "modified": "2019-03-23T23:39:13.247Z",
-    "contributors": [
-      "chrisdavidmills",
-      "claudiareginadasilvacorrea",
-      "jpalharini"
-    ]
-  },
-  "Web/API/NavigatorOnLine/onLine": {
-    "modified": "2020-10-15T22:15:18.142Z",
-    "contributors": [
-      "renatoluna"
-    ]
-  },
-  "Web/API/NavigatorPlugins": {
-    "modified": "2020-10-15T22:19:29.947Z",
-    "contributors": [
-      "Fernandolrs"
-    ]
-  },
-  "Web/API/NavigatorPlugins/javaEnabled": {
-    "modified": "2020-10-15T22:19:29.661Z",
-    "contributors": [
-      "Fernandolrs"
     ]
   },
   "Web/API/Network_Information_API": {
@@ -16992,6 +16919,12 @@
       "bermarques"
     ]
   },
+  "orphaned/Web/API/FullscreenOptions": {
+    "modified": "2020-10-15T22:15:52.238Z",
+    "contributors": [
+      "TecladistaProd"
+    ]
+  },
   "orphaned/Web/API/HTMLOrForeignElement/blur": {
     "modified": "2020-10-15T22:12:54.970Z",
     "contributors": [
@@ -17023,6 +16956,73 @@
       "camilaavilarinho",
       "guilhermemar",
       "IgorGoncalves"
+    ]
+  },
+  "orphaned/Web/API/NavigatorID": {
+    "modified": "2019-03-23T23:01:42.494Z",
+    "contributors": [
+      "teoli"
+    ]
+  },
+  "orphaned/Web/API/NavigatorID/platform": {
+    "modified": "2020-10-15T21:27:41.688Z",
+    "contributors": [
+      "GarkGarcia",
+      "teoli",
+      "khalid32",
+      "eliezerb"
+    ]
+  },
+  "orphaned/Web/API/NavigatorID/userAgent": {
+    "modified": "2020-10-15T21:58:19.578Z",
+    "contributors": [
+      "GarkGarcia",
+      "thedjmarcelo"
+    ]
+  },
+  "orphaned/Web/API/NavigatorLanguage": {
+    "modified": "2019-03-23T22:03:53.998Z",
+    "contributors": [
+      "teoli"
+    ]
+  },
+  "orphaned/Web/API/NavigatorLanguage/language": {
+    "modified": "2019-03-23T22:03:54.652Z",
+    "contributors": [
+      "klzns"
+    ]
+  },
+  "orphaned/Web/API/NavigatorOnLine": {
+    "modified": "2019-03-23T22:02:07.133Z",
+    "contributors": [
+      "marciioluucas",
+      "chrisdavidmills"
+    ]
+  },
+  "orphaned/Web/API/NavigatorOnLine/Online_and_offline_events": {
+    "modified": "2019-03-23T23:39:13.247Z",
+    "contributors": [
+      "chrisdavidmills",
+      "claudiareginadasilvacorrea",
+      "jpalharini"
+    ]
+  },
+  "orphaned/Web/API/NavigatorOnLine/onLine": {
+    "modified": "2020-10-15T22:15:18.142Z",
+    "contributors": [
+      "renatoluna"
+    ]
+  },
+  "orphaned/Web/API/NavigatorPlugins": {
+    "modified": "2020-10-15T22:19:29.947Z",
+    "contributors": [
+      "Fernandolrs"
+    ]
+  },
+  "orphaned/Web/API/NavigatorPlugins/javaEnabled": {
+    "modified": "2020-10-15T22:19:29.661Z",
+    "contributors": [
+      "Fernandolrs"
     ]
   },
   "orphaned/Web/API/Node/Entendendo_o_uso_do_método_AppendChild-javascript": {

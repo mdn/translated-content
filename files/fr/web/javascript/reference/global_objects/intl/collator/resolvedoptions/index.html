@@ -19,8 +19,6 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Collator/resolvedOpt
 
 <div>{{EmbedInteractiveExample("pages/js/intl-collator-prototype-resolvedoptions.html")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="syntaxbox">collator.resolvedOptions()</pre>
@@ -36,14 +34,11 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Collator/resolvedOpt
 <dl>
  <dt><code>locale</code></dt>
  <dd>La balise de langue BCP 47 qui est réellement utilisée. Si des extensions Unicode étaient fournies avec la balise d'origine et sont supportées pour la locale utilisée, les paires de clés-valeurs seront incluses dans <code>locale</code>.</dd>
- <dt><code>usage</code></dt>
- <dt><code>sensitivity</code></dt>
- <dt><code>ignorePunctuation</code></dt>
+ <dt><code>usage</code>,<code>sensitivity</code>, <code>ignorePunctuation</code></dt>
  <dd>Les valeurs demandées pour ces propriétés via l'argument <code>options</code> ou celles utilisées par défaut.</dd>
  <dt><code>collation</code></dt>
  <dd>La valeur demandée pour l'extension Unicode <code>"co"</code> si elle est supportée par la locale utilisée, sinon <code>"default"</code>.</dd>
- <dt><code>numeric</code></dt>
- <dt><code>caseFirst</code></dt>
+ <dt><code>numeric</code>, <code>caseFirst</code></dt>
  <dd>Les valeurs demandées pour ces propriétés via l'argument <code>options</code> ou l'utilisation des extensions Unicode <code>"kn"</code> et <code>"kf"</code> ou les valeurs par défaut. Si l'implémentation utilisée ne supporte pas ces propriétés, elles sont omises.</dd>
 </dl>
 
