@@ -48593,18 +48593,6 @@
       "RobinEgg"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance": {
-    "modified": "2020-10-15T21:58:31.243Z",
-    "contributors": [
-      "ukyo"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table": {
-    "modified": "2020-10-15T21:58:31.479Z",
-    "contributors": [
-      "ukyo"
-    ]
-  },
   "conflicting/Web/JavaScript/Reference/Lexical_grammar": {
     "modified": "2019-12-24T12:46:59.479Z",
     "contributors": [
