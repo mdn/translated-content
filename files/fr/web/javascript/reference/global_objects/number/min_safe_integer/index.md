@@ -10,62 +10,40 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/MIN_SAFE_INTEGER
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number/MIN_SAFE_INTEGER
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La constante <code><strong>Number.MIN_SAFE_INTEGER</strong></code> représente le plus petit entier représentable correctement en JavaScript (-(2^53 -1)).</p>
+La constante **`Number.MIN_SAFE_INTEGER`** représente le plus petit entier représentable correctement en JavaScript (-(2^53 -1)).
 
-<div class="blockIndicator note">
-<p><strong>Note :</strong> Pour représenter des entiers inférieurs à cette valeur, on pourra utiliser le type {{jsxref("BigInt")}}.</p>
-</div>
+> **Note :** Pour représenter des entiers inférieurs à cette valeur, on pourra utiliser le type {{jsxref("BigInt")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/number-min-safe-integer.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-min-safe-integer.html")}}{{js_property_attributes(0,0,0)}}
 
+## Description
 
+La constante `MIN_SAFE_INTEGER` vaut `-9007199254740991`. Cette valeur provient du fait qu'en JavaScript, les nombres sont représentés [en format à double précision](https://en.wikipedia.org/wiki/Double_precision_floating-point_format) selon la norme [IEEE 754](http://fr.wikipedia.org/wiki/IEEE_754) et on ne peut représenter correctement que les nombres compris entre `-(2^53-1)` et `2^53 -1`. Voir {{jsxref("Number.isSafeInteger()")}} pour plus d'informations.
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+`MIN_SAFE_INTEGER` étant une méthode statique de {{jsxref("Number")}}, il faut utiliser `Number.MIN_SAFE_INTEGER()`et non pas la méthode d'un objet `Number` qui aurait été instancié.
 
-<h2 id="Description">Description</h2>
+## Exemples
 
-<p>La constante <code>MIN_SAFE_INTEGER</code> vaut <code>-9007199254740991</code>. Cette valeur provient du fait qu'en JavaScript, les nombres sont représentés <a href="https://en.wikipedia.org/wiki/Double_precision_floating-point_format">en format à double précision</a> selon la norme <a href="http://fr.wikipedia.org/wiki/IEEE_754">IEEE 754</a> et on ne peut représenter correctement que les nombres compris entre <code>-(2^53-1)</code> et <code>2^53 -1</code>. Voir {{jsxref("Number.isSafeInteger()")}} pour plus d'informations.</p>
-
-<p><code>MIN_SAFE_INTEGER</code> étant une méthode statique de {{jsxref("Number")}}, il faut utiliser <code><code>Number</code>.<code>MIN_SAFE_INTEGER</code>()</code>et non pas la méthode d'un objet <code>Number</code> qui aurait été instancié.</p>
-
-<h2 id="Exemples">Exemples</h2>
-
-<pre class="brush: js">Number.MIN_SAFE_INTEGER // -9007199254740991
+```js
+Number.MIN_SAFE_INTEGER // -9007199254740991
 -Math.pow(2, 53) -1     // -9007199254740991
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-number.min_safe_integer', 'Number.MIN_SAFE_INTEGER')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.min_safe_integer', 'Number.MIN_SAFE_INTEGER')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | État                         | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-number.min_safe_integer', 'Number.MIN_SAFE_INTEGER')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-number.min_safe_integer', 'Number.MIN_SAFE_INTEGER')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Number.MIN_SAFE_INTEGER")}}</p>
+{{Compat("javascript.builtins.Number.MIN_SAFE_INTEGER")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Number.MAX_SAFE_INTEGER")}}</li>
- <li>{{jsxref("Number.isSafeInteger()")}}</li>
- <li>{{jsxref("BigInt")}}</li>
-</ul>
+- {{jsxref("Number.MAX_SAFE_INTEGER")}}
+- {{jsxref("Number.isSafeInteger()")}}
+- {{jsxref("BigInt")}}

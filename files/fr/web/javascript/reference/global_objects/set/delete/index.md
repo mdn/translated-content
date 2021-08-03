@@ -11,83 +11,67 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/delete
 original_slug: Web/JavaScript/Reference/Objets_globaux/Set/delete
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>delete()</strong></code> permet de retirer un élément donné d'un objet <code>Set</code>.</p>
+La méthode **`delete()`** permet de retirer un élément donné d'un objet `Set`.
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-delete.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-delete.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>monSet</var>.delete(<var>valeur</var>);</pre>
+    monSet.delete(valeur);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>valeur</code></dt>
- <dd>Ce paramètre est obligatoire. Il représente la valeur de l'élément qu'on souhaite retirer de l'objet <code>Set</code>.</dd>
-</dl>
+- `valeur`
+  - : Ce paramètre est obligatoire. Il représente la valeur de l'élément qu'on souhaite retirer de l'objet `Set`.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p><code>true</code> si un élément de l'objet <code>Set</code> a été retiré lors de l'opération, <code>false</code> sinon.</p>
+`true` si un élément de l'objet `Set` a été retiré lors de l'opération, `false` sinon.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_la_méthode_delete()">Utiliser la méthode <code>delete()</code></h3>
+### Utiliser la méthode `delete()`
 
-<pre class="brush: js">var monSet = new Set();
+```js
+var monSet = new Set();
 monSet.add("toto");
 
 monSet.delete("truc"); // Renvoie false. Aucun élément "truc" n'a pu être supprimé.
 monSet.delete("toto"); // Renvoie true.  L'élément a pu être supprimé.
 
 monSet.has("toto");    // Renvoie false. L'élément "toto" ne fait plus partie de l'ensemble.
-</pre>
+```
 
-<h3 id="Utiliser_delete()_avec_forEach()">Utiliser <code>delete()</code> avec <code>forEach()</code></h3>
+### Utiliser `delete()` avec `forEach()`
 
-<pre class="brush: js">var objetSet = new Set();
+```js
+var objetSet = new Set();
 objetSet.add({x: 10, y: 20}); // On ajoute un nouvel objet dans l'ensemble
 objetSet.add({x: 20, y: 30}); // On ajoute un nouvel objet dans l'ensemble
 
 // On supprime les points de l'ensemble pour lesquels
 // x est supérieur à 10
 objetSet.forEach(function(point){
-  if(point.x &gt; 10){
+  if(point.x > 10){
     objetSet.delete(point);
   }
-});</pre>
+});
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-set.prototype.delete', 'Set.prototype.delete')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-set.prototype.delete', 'Set.prototype.delete')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                         | Commentaires         |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-set.prototype.delete', 'Set.prototype.delete')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-set.prototype.delete', 'Set.prototype.delete')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Set.delete")}}</p>
+{{Compat("javascript.builtins.Set.delete")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("Set.prototype.clear()")}}</li>
-</ul>
+- {{jsxref("Set")}}
+- {{jsxref("Set.prototype.clear()")}}

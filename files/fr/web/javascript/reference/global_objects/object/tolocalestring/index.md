@@ -9,74 +9,45 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/toLocaleString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/toLocaleString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>toLocaleString()</strong></code> renvoie une chaine de caractères représentant l'objet. Cette méthode est destinée à être surchargée par les objets dérivés à des fins spécifiques pour prendre en compte les locales.</p>
+La méthode **`toLocaleString()`** renvoie une chaine de caractères représentant l'objet. Cette méthode est destinée à être surchargée par les objets dérivés à des fins spécifiques pour prendre en compte les locales.
 
-<div>{{EmbedInteractiveExample("pages/js/object-prototype-tolocalestring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-prototype-tolocalestring.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>obj</var>.toLocaleString()</pre>
+    obj.toLocaleString()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une chaîne de caractères qui représente l'objet en tenant compte de la locale.</p>
+Une chaîne de caractères qui représente l'objet en tenant compte de la locale.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code>toLocaleString</code> renvoie le résultat de l'appel à la méthode {{jsxref("Object.toString", "toString()")}}.</p>
+La méthode `toLocaleString` renvoie le résultat de l'appel à la méthode {{jsxref("Object.toString", "toString()")}}.
 
-<p>Cette fonction est destinée à fournir aux objets une méthode générique <code>toLocaleString</code>, même si tous ne peuvent l'utiliser. Voir la liste ci-dessous.</p>
+Cette fonction est destinée à fournir aux objets une méthode générique `toLocaleString`, même si tous ne peuvent l'utiliser. Voir la liste ci-dessous.
 
-<h3 id="Objets_surchargeant_la_méthode_toLocaleString">Objets surchargeant la méthode toLocaleString</h3>
+### Objets surchargeant la méthode toLocaleString
 
-<ul>
- <li>{{jsxref("Array")}} : {{jsxref("Array.prototype.toLocaleString()")}}</li>
- <li>{{jsxref("Number")}} : {{jsxref("Number.prototype.toLocaleString()")}}</li>
- <li>{{jsxref("Date")}} : {{jsxref("Date.prototype.toLocaleString()")}}</li>
-</ul>
+- {{jsxref("Array")}} : {{jsxref("Array.prototype.toLocaleString()")}}
+- {{jsxref("Number")}} : {{jsxref("Number.prototype.toLocaleString()")}}
+- {{jsxref("Date")}} : {{jsxref("Date.prototype.toLocaleString()")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.4.3', 'Object.prototype.toLocaleString')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.prototype.tolocalestring', 'Object.prototype.toLocaleString')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.prototype.tolocalestring', 'Object.prototype.toLocaleString')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                        | État                         | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{SpecName('ES3')}}                                                                                                             | {{Spec2('ES3')}}         | Définition initiale. |
+| {{SpecName('ES5.1', '#sec-15.2.4.3', 'Object.prototype.toLocaleString')}}                                     | {{Spec2('ES5.1')}}     |                      |
+| {{SpecName('ES6', '#sec-object.prototype.tolocalestring', 'Object.prototype.toLocaleString')}}         | {{Spec2('ES6')}}         |                      |
+| {{SpecName('ESDraft', '#sec-object.prototype.tolocalestring', 'Object.prototype.toLocaleString')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Object.toLocaleString")}}</p>
+{{Compat("javascript.builtins.Object.toLocaleString")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Object.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toString()")}}

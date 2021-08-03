@@ -11,66 +11,48 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/has
 original_slug: Web/JavaScript/Reference/Objets_globaux/WeakMap/has
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>has()</strong></code> renvoie un booléen qui indique s'il existe (ou non) un élément avec une clé donnée au sein de l'objet <code>WeakMap</code>.</p>
+La méthode **`has()`** renvoie un booléen qui indique s'il existe (ou non) un élément avec une clé donnée au sein de l'objet `WeakMap`.
 
-<div>{{EmbedInteractiveExample("pages/js/weakmap-prototype-has.html")}}</div>
+{{EmbedInteractiveExample("pages/js/weakmap-prototype-has.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>wm</var>.has(<var>clé</var>);</pre>
+    wm.has(clé);
 
-<h3 id="Paramètre">Paramètre</h3>
+### Paramètre
 
-<dl>
- <dt><code>clé</code></dt>
- <dd>Ce paramètre est obligatoire. Il correspond à la clé de l'élément dont on souhaite savoir s'il est présent dans l'objet <code>WeakMap</code>.</dd>
-</dl>
+- `clé`
+  - : Ce paramètre est obligatoire. Il correspond à la clé de l'élément dont on souhaite savoir s'il est présent dans l'objet `WeakMap`.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>La méthode renvoie <code>true</code> s'il existe un élément du <code>WeakMap</code> avec la clé donné, <code>false</code> sinon.</p>
+La méthode renvoie `true` s'il existe un élément du `WeakMap` avec la clé donné, `false` sinon.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var wm = new WeakMap();
+```js
+var wm = new WeakMap();
 wm.set(window, "toto");
 
 wm.has(window); // renvoie true
 wm.has("machin");  // renvoie false
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-weakmap.prototype.has', 'WeakMap.prototype.has')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-weakmap.prototype.has', 'WeakMap.prototype.has')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-weakmap.prototype.has', 'WeakMap.prototype.has')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-weakmap.prototype.has', 'WeakMap.prototype.has')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.WeakMap.has")}}</p>
+{{Compat("javascript.builtins.WeakMap.has")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("WeakMap")}}</li>
- <li>{{jsxref("WeakMap.prototype.set()")}}</li>
- <li>{{jsxref("WeakMap.prototype.get()")}}</li>
-</ul>
+- {{jsxref("WeakMap")}}
+- {{jsxref("WeakMap.prototype.set()")}}
+- {{jsxref("WeakMap.prototype.get()")}}

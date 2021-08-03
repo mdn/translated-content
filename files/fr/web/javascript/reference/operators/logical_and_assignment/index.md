@@ -8,71 +8,68 @@ tags:
   - Operator
   - Reference
 browser-compat: javascript.operators.logical_and_assignment
-translation-of: Web/JavaScript/Reference/Operators/Logical_AND_assignment
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>L'opérateur d'affectation après ET logique (<code>x &amp;&amp;= y</code>) n'affecte la valeur de l'opérande droit uniquement si l'opérande gauche est <a href="/fr/docs/Glossary/Truthy">équivalent à vrai (<i>truthy</i>)</a>.</p>
+L'opérateur d'affectation après ET logique (`x &&= y`) n'affecte la valeur de l'opérande droit uniquement si l'opérande gauche est [équivalent à vrai (_truthy_)](/fr/docs/Glossary/Truthy).
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-logical-and-assignment.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-logical-and-assignment.html")}}
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">
-<var>expr1</var> &amp;&amp;= <var>expr2</var>
-</pre>
+```js
+expr1 &&= expr2
+```
 
-<h2 id="description">Description</h2>
+## Description
 
-<h3 id="short-circuit_evaluation">Évaluation en court-circuit</h3>
+### Évaluation en court-circuit
 
-<p>L'opérateur <a href="/fr/docs/Web/JavaScript/Reference/Operators/Logical_AND">ET logique</a> est évalué de gauche à droite et le moteur vérifie s'il peut utiliser un court-circuit avec la régle suivante :</p>
+L'opérateur [ET logique](/fr/docs/Web/JavaScript/Reference/Operators/Logical_AND) est évalué de gauche à droite et le moteur vérifie s'il peut utiliser un court-circuit avec la régle suivante :
 
-<p><code>(une expression équivalente à faux) &amp;&amp; expr</code> sera court-circuitée pour fournir directement l'expression équivalente à faux.</p>
+`(une expression équivalente à faux) && expr` sera court-circuitée pour fournir directement l'expression équivalente à faux.
 
-<p>Ce « court-circuit » indique que <code><var>expr</var></code> <strong>n'est pas évaluée</strong>. Tout effet de bord lié à cette évaluation n'aura pas lieu (par exemple si <code><var>expr</var></code> est un appel de fonction, la fonction n'est pas exécutée).</p>
+Ce « court-circuit » indique que `expr` **n'est pas évaluée**. Tout effet de bord lié à cette évaluation n'aura pas lieu (par exemple si `expr` est un appel de fonction, la fonction n'est pas exécutée).
 
-<p>L'opérateur d'affectation après ET logique utilise également ce court-circuit et <code>x &amp;&amp;= y</code> est donc équivalent à :</p>
+L'opérateur d'affectation après ET logique utilise également ce court-circuit et `x &&= y` est donc équivalent à :
 
-<pre class="brush: js">
-x &amp;&amp; (x = y);
-</pre>
+```js
+x && (x = y);
+```
 
-<p>En revanche, <strong>il n'est pas équivalent</strong> à ce qui suit, et qui effectue quoi qu'il arrive une affectation :</p>
+En revanche, **il n'est pas équivalent** à ce qui suit, et qui effectue quoi qu'il arrive une affectation :
 
-<pre class="brush: js example-bad">
-x = x &amp;&amp; y;
-</pre>
+```js example-bad
+x = x && y;
+```
 
-<h2 id="examples">Exemples</h2>
+## Exemples
 
-<h3 id="using_logical_and_assignment">Utiliser l'affectation après ET logique</h3>
+### Utiliser l'affectation après ET logique
 
-<pre class="brush: js">
+```js
 let x = 0;
 let y = 1;
 
-x &amp;&amp;= 0; // 0
-x &amp;&amp;= 1; // 0
-y &amp;&amp;= 1; // 1
-y &amp;&amp;= 0; // 0
-</pre>
+x &&= 0; // 0
+x &&= 1; // 0
+y &&= 1; // 1
+y &&= 0; // 0
+```
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Logical_AND">L'opérateur ET logique (&amp;&amp;)</a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator">L'opérateur de coalescence des nuls (<code>??</code>)</a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment">L'opérateur d'affectation après ET binaire (<code>&amp;=</code>)</a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean">Le type <code>Boolean</code></a>
-  <li><a href="/fr/docs/Glossary/Truthy"><i>Truthy</i></a></li>
-  <li><a href="/fr/docs/Glossary/Falsy"><i>Falsy</i></a></li>
-</ul>
+- [L'opérateur ET logique (&&)](/fr/docs/Web/JavaScript/Reference/Operators/Logical_AND)
+- [L'opérateur de coalescence des nuls (`??`)](/fr/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [L'opérateur d'affectation après ET binaire (`&=`)](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_AND_assignment)
+- [Le type `Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
+- [_Truthy_](/fr/docs/Glossary/Truthy)
+- [_Falsy_](/fr/docs/Glossary/Falsy)

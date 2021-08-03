@@ -10,43 +10,41 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/AggregateError
 original_slug: Web/JavaScript/Reference/Objets_globaux/AggregateError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>Un objet <code><strong>AggregateError</strong></code> représente une erreur lorsque plusieurs erreurs doivent être agrégées en une seule. Ce type d'exception est levée lorsque plusieurs erreurs sont rapportées par une opération, par exemple avec {{JSxRef("Promise.any()")}} lorsque l'ensemble des promesses qui lui sont passées échouent.</p>
+Un objet **`AggregateError`** représente une erreur lorsque plusieurs erreurs doivent être agrégées en une seule. Ce type d'exception est levée lorsque plusieurs erreurs sont rapportées par une opération, par exemple avec {{JSxRef("Promise.any()")}} lorsque l'ensemble des promesses qui lui sont passées échouent.
 
-<h2 id="Constructeur">Constructeur</h2>
+## Constructeur
 
-<dl>
- <dt><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/AggregateError/AggregateError"><code>AggregateError()</code></a></dt>
- <dd>Crée un nouvel objet <code>AggregateError</code>.</dd>
-</dl>
+- [`AggregateError()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/AggregateError/AggregateError)
+  - : Crée un nouvel objet `AggregateError`.
 
-<h2 id="Propriétés_des_instances">Propriétés des instances</h2>
+## Propriétés des instances
 
-<dl>
- <dt>{{JSxRef("Error.prototype.message", "AggregateError.prototype.message")}}</dt>
- <dd>Le message d'erreur. La valeur par défaut est <code>""</code>.</dd>
- <dt>{{JSxRef("Error.prototype.name", "AggregateError.prototype.name")}}</dt>
- <dd>Le nom de l'erreur. La valeur par défaut est <code>"AggregateError"</code>.</dd>
-</dl>
+- {{JSxRef("Error.prototype.message", "AggregateError.prototype.message")}}
+  - : Le message d'erreur. La valeur par défaut est `""`.
+- {{JSxRef("Error.prototype.name", "AggregateError.prototype.name")}}
+  - : Le nom de l'erreur. La valeur par défaut est `"AggregateError"`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Intercepter_une_erreur_AggregateError">Intercepter une erreur <code>AggregateError</code></h3>
+### Intercepter une erreur `AggregateError`
 
-<pre class="brush: js; notranslate">Promise.any([
+```js
+Promise.any([
   Promise.reject(new Error("une erreur")),
-]).catch(e =&gt; {
+]).catch(e => {
   console.log(e instanceof AggregateError); // true
   console.log(e.message);                   // "All Promises rejected"
   console.log(e.name);                      // "AggregateError"
   console.log(e.errors);                    // [ Error: "une erreur" ]
 });
-</pre>
+```
 
-<h3 id="Créer_un_objet_AggregateError">Créer un objet <code>AggregateError</code></h3>
+### Créer un objet `AggregateError`
 
-<pre class="brush: js; notranslate">try {
+```js
+try {
   throw new AggregateError([
     new Error("une erreur"),
   ], 'Coucou');
@@ -56,29 +54,18 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/AggregateError
   console.log(e.name);                      // "AggregateError"
   console.log(e.errors);                    // [ Error: "une erreur" ]
 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Promise.any', '#sec-aggregate-error-object-structure', 'AggregateError')}}</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('Promise.any', '#sec-aggregate-error-object-structure', 'AggregateError')}} |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.AggregateError")}}</p>
+{{Compat("javascript.builtins.AggregateError")}}
 
-<h2 id="Voir">Voir</h2>
+## Voir
 
-<ul>
- <li>{{JSxRef("Error")}}</li>
-</ul>
+- {{JSxRef("Error")}}

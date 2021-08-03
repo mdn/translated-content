@@ -10,15 +10,16 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Function/displayName
 original_slug: Web/JavaScript/Reference/Objets_globaux/Function/displayName
 ---
-<div>{{JSRef}} {{Non-standard_header}}</div>
+{{JSRef}} {{Non-standard_header}}
 
-<p>La propriété <code><strong>function.displayName</strong></code> renvoie le nom affiché de la fonction.</p>
+La propriété **`function.displayName`** renvoie le nom affiché de la fonction.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Lorsque la propriété <code>displayName</code> est définie, elle renvoie le nom affiché de la fonction :</p>
+Lorsque la propriété `displayName` est définie, elle renvoie le nom affiché de la fonction :
 
-<pre class="brush:js">function faireTruc() { }
+```js
+function faireTruc() { }
 
 console.log(faireTruc.displayName); // "undefined"
 
@@ -27,11 +28,12 @@ var logMessage = function(contenu) { console.log(contenu) };
 logMessage.displayName = 'Afficher les messages dans le journal';
 
 console.log(logMessage.displayName); // "Afficher les messages dans le journal"
-</pre>
+```
 
-<p>Il est possible de définir une fonction avec un nom d'affichage grâce à une {{jsxref("Fonctions", "expression de fonctions","",1)}}:</p>
+Il est possible de définir une fonction avec un nom d'affichage grâce à une {{jsxref("Fonctions", "expression de fonctions","",1)}}:
 
-<pre class="brush:js">var objet = {
+```js
+var objet = {
   uneMéthode: function () {}
 };
 
@@ -42,11 +44,12 @@ console.log(objet.uneMéthode.displayName);
 
 try { uneMéthode } catch(e) { console.log(e); }
 // ReferenceError: uneMéthode is not defined
-</pre>
+```
 
-<p>La propriété <code>displayName</code> peut être changée dynamiquement :</p>
+La propriété `displayName` peut être changée dynamiquement :
 
-<pre class="brush:js">var objet = {
+```js
+var objet = {
   // anonyme
   uneMéthode: function(valeur) {
     this.displayName = "uneMéthode (" + valeur + ")";
@@ -57,24 +60,25 @@ console.log(objet.uneMéthode.displayName); // "undefined"
 
 objet.uneMéthode("123")
 console.log(objet.uneMéthode.displayName); // "uneMéthode (123)"
-</pre>
+```
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>On souhaite généralement utiliser cette propriété dans les consoles et profileurs plutôt que {{jsxref("Function.name", "func.name")}}</p>
+On souhaite généralement utiliser cette propriété dans les consoles et profileurs plutôt que {{jsxref("Function.name", "func.name")}}
 
-<p>Le code suivant devrait afficher quelque chose comme "function Ma Fonction()":</p>
+Le code suivant devrait afficher quelque chose comme "function Ma Fonction()":
 
-<pre class="brush:js">var a = function () { };
+```js
+var a = function () { };
 a.displayName = 'Ma Fonction';
 
 a;
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>N'appartient à aucune spécification.</p>
+N'appartient à aucune spécification.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Function.displayName")}}</p>
+{{Compat("javascript.builtins.Function.displayName")}}

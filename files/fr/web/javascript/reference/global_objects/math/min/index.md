@@ -9,100 +9,77 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/min
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/min
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La fonction <code><strong>Math.min()</strong></code> renvoie le plus petit nombre d'une série de 0 ou plusieurs nombres ou bien {{jsxref("NaN")}} si au moins un des arguments fourni n'est pas un nombre ou ne peut pas être converti en nombre.</p>
+La fonction **`Math.min()`** renvoie le plus petit nombre d'une série de 0 ou plusieurs nombres ou bien {{jsxref("NaN")}} si au moins un des arguments fourni n'est pas un nombre ou ne peut pas être converti en nombre.
 
-<div>{{EmbedInteractiveExample("pages/js/math-min.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-min.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Math.min([<var>valeur1</var>[,<var>valeur2</var>, ...]]) </pre>
+    Math.min([valeur1[,valeur2, ...]])
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>valeur1, valeur2, ...</code></dt>
- <dd>Des nombres.</dd>
-</dl>
+- `valeur1, valeur2, ...`
+  - : Des nombres.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Le plus petit des nombres passés en arguments. S'il existe un argument qui ne peut pas être converti en nombre, c'est {{jsxref("NaN")}} qui sera renvoyé. Le résultat sera {{jsxref("Infinity")}} si aucun paramètre n'est fourni.</p>
+Le plus petit des nombres passés en arguments. S'il existe un argument qui ne peut pas être converti en nombre, c'est {{jsxref("NaN")}} qui sera renvoyé. Le résultat sera {{jsxref("Infinity")}} si aucun paramètre n'est fourni.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p><code>min()</code> est une méthode statique de <code>Math</code>, elle doit toujours être utilisée avec la syntaxe <code>Math.min()</code> et ne doit pas être utilisée comme la méthode d'un objet qui aurait été créé (<code>Math</code> n'est pas un constructeur).</p>
+`min()` est une méthode statique de `Math`, elle doit toujours être utilisée avec la syntaxe `Math.min()` et ne doit pas être utilisée comme la méthode d'un objet qui aurait été créé (`Math` n'est pas un constructeur).
 
-<p>Si aucun argument n'est fourni, le résultat renvoyé par la fonction sera {{jsxref("Infinity")}}.</p>
+Si aucun argument n'est fourni, le résultat renvoyé par la fonction sera {{jsxref("Infinity")}}.
 
-<p>Si au moins un des arguments ne peut pas être converti en un nombre, le résultat sera {{jsxref("NaN")}}.</p>
+Si au moins un des arguments ne peut pas être converti en un nombre, le résultat sera {{jsxref("NaN")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_Math.min()">Utiliser <code>Math.min()</code></h3>
+### Utiliser `Math.min()`
 
-<p>Dans cet exemple, on trouve le minimum de x et y et on affecte cette valeur à z :</p>
+Dans cet exemple, on trouve le minimum de x et y et on affecte cette valeur à z :
 
-<pre class="brush:js">var x = 10, y = -20;
+```js
+var x = 10, y = -20;
 var z = Math.min(x, y);
-</pre>
+```
 
-<h3 id="Ramener_une_valeur_dans_un_intervalle_(clipping)_avec_Math.min()">Ramener une valeur dans un intervalle (<em>clipping</em>) avec <code>Math.min()</code></h3>
+### Ramener une valeur dans un intervalle (_clipping_) avec `Math.min()`
 
-<p><code>Math.min()</code> est souvent utilisée afin de ramener une certaine valeur dans un intervalle donné. Par exemple :</p>
+`Math.min()` est souvent utilisée afin de ramener une certaine valeur dans un intervalle donné. Par exemple :
 
-<pre class="brush:js">var x = f(toto);
+```js
+var x = f(toto);
 
-if (x &gt; limite) {
+if (x > limite) {
   x = limite;
 }
-</pre>
+```
 
-<p>peut s'écrire</p>
+peut s'écrire
 
-<pre class="brush:js">var x = Math.min(f(toto), limite);</pre>
+```js
+var x = Math.min(f(toto), limite);
+```
 
-<div>{{jsxref("Math.max()")}} peut être utilisée de façon semblable pour ramener une valeur vers un minimum d'un intervalle donné.</div>
+{{jsxref("Math.max()")}} peut être utilisée de façon semblable pour ramener une valeur vers un minimum d'un intervalle donné.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.2.12', 'Math.min')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.min', 'Math.min')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.min', 'Math.min')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                        | Statut                       | Commentaires                                          |
+| -------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.2.12', 'Math.min')}} | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-math.min', 'Math.min')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-math.min', 'Math.min')}} | {{Spec2('ESDraft')}} |                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Math.min")}}</p>
+{{Compat("javascript.builtins.Math.min")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Math.max()")}}</li>
-</ul>
+- {{jsxref("Math.max()")}}

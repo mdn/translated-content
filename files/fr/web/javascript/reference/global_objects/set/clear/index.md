@@ -11,23 +11,24 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/clear
 original_slug: Web/JavaScript/Reference/Objets_globaux/Set/clear
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>clear()</strong></code> permet de retirer tous les éléments d'un ensemble <code>Set</code>.</p>
+La méthode **`clear()`** permet de retirer tous les éléments d'un ensemble `Set`.
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-clear.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-clear.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>monSet</var>.clear();</pre>
+    monSet.clear();
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>{{jsxref("undefined")}}.</p>
+{{jsxref("undefined")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var monSet = new Set();
+```js
+var monSet = new Set();
 monSet.add(1);
 monSet.add("toto");
 
@@ -38,37 +39,20 @@ monSet.clear();
 
 monSet.size;       // 0
 monSet.has("truc")  // false
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-set.prototype.clear', 'Set.prototype.clear')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-set.prototype.clear', 'Set.prototype.clear')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                         | Commentaires         |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-set.prototype.clear', 'Set.prototype.clear')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-set.prototype.clear', 'Set.prototype.clear')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Set.clear")}}</p>
+{{Compat("javascript.builtins.Set.clear")}}
 
-<h3 id="Voir_aussi">Voir aussi</h3>
+### Voir aussi
 
-<ul>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("Set.prototype.delete()")}}</li>
-</ul>
+- {{jsxref("Set")}}
+- {{jsxref("Set.prototype.delete()")}}

@@ -10,50 +10,52 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Deprecated_source_map_pragma
 original_slug: Web/JavaScript/Reference/Erreurs/Deprecated_source_map_pragma
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="syntaxbox">Warning: SyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
+    Warning: SyntaxError: Using //@ to indicate sourceURL pragmas is deprecated. Use //# instead
 
-Warning: SyntaxError: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
-</pre>
+    Warning: SyntaxError: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
 
-<h2 id="Type_d'erreur">Type d'erreur</h2>
+## Type d'erreur
 
-<p>Un avertissement prenant la forme d'une exception {{jsxref("SyntaxError")}}. L'exécution du code JavaScript n'est pas interrompue.</p>
+Un avertissement prenant la forme d'une exception {{jsxref("SyntaxError")}}. L'exécution du code JavaScript n'est pas interrompue.
 
-<h2 id="Quel_est_le_problème">Quel est le problème ?</h2>
+## Quel est le problème ?
 
-<p>Une syntaxe dépréciée a été utilisée pour indiquer une correspondance de source (<em>source map</em>) dans le code JavaScript.</p>
+Une syntaxe dépréciée a été utilisée pour indiquer une correspondance de source (_source map_) dans le code JavaScript.
 
-<p>Il arrive souvent que les fichiers sources JavaScript soient combinés et minifiés afin que le transfert depuis le serveur vers le client soit plus efficace. Grâce <a href="http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/">aux correspondances de source (ou <em>source maps</em>)</a>, le débogueur peut utiliser les sources des fichiers correspondants aux fichiers minifiés.</p>
+Il arrive souvent que les fichiers sources JavaScript soient combinés et minifiés afin que le transfert depuis le serveur vers le client soit plus efficace. Grâce [aux correspondances de source (ou _source maps_)](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/), le débogueur peut utiliser les sources des fichiers correspondants aux fichiers minifiés.
 
-<p>La spécification sur cet outil a évolué car il existait un conflit de syntaxe avec IE (après <code>//@cc_on</code>, la correspondance était interprétée comme un test conditionnel de compilation du moteur JScript).<a href="https://msdn.microsoft.com/en-us/library/8ka90k2e%28v=vs.94%29.aspx"> Ce commentaire de compilation conditionnelle</a> pour IE est peu connu mais son existence entraînait des erreurs avec <a href="https://bugs.jquery.com/ticket/13274">jQuery</a> et d'autres bibliothèques.</p>
+La spécification sur cet outil a évolué car il existait un conflit de syntaxe avec IE (après `//@cc_on`, la correspondance était interprétée comme un test conditionnel de compilation du moteur JScript).[ Ce commentaire de compilation conditionnelle](https://msdn.microsoft.com/en-us/library/8ka90k2e%28v=vs.94%29.aspx) pour IE est peu connu mais son existence entraînait des erreurs avec [jQuery](https://bugs.jquery.com/ticket/13274) et d'autres bibliothèques.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Syntaxe_dépréciée">Syntaxe dépréciée</h3>
+### Syntaxe dépréciée
 
-<p>La syntaxe utilisant l'arobase (@) est dépréciée :</p>
+La syntaxe utilisant l'arobase (@) est dépréciée :
 
-<pre class="brush: js example-bad">//@ sourceMappingURL=http://exemple.com/chemin/vers/la/sourcemap.map
-</pre>
+```js example-bad
+//@ sourceMappingURL=http://exemple.com/chemin/vers/la/sourcemap.map
+```
 
-<h3 id="Syntaxe_standard">Syntaxe standard</h3>
+### Syntaxe standard
 
-<p>Il faut utiliser le dièse (#) :</p>
+Il faut utiliser le dièse (#) :
 
-<pre class="brush: js example-good">//# sourceMappingURL=http://exemple.com/chemin/vers/la/sourcemap.map</pre>
+```js example-good
+//# sourceMappingURL=http://exemple.com/chemin/vers/la/sourcemap.map
+```
 
-<p>Autrement, on peut indiquer la correspondance dans un en-tête {{HTTPHeader("SourceMap")}} pour servir le fichier JavaScript afin d'éviter tout commentaire :</p>
+Autrement, on peut indiquer la correspondance dans un en-tête {{HTTPHeader("SourceMap")}} pour servir le fichier JavaScript afin d'éviter tout commentaire :
 
-<pre class="brush: js example-good">X-SourceMap: /path/to/file.js.map</pre>
+```js example-good
+X-SourceMap: /path/to/file.js.map
+```
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Outils/Débogueur/Comment/Utiliser_une_source_map">Comment utiliser les <em>source map</em> – Documentation des outils Firefox</a></li>
- <li><a href="http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/">Introduction to source maps – HTML5 rocks</a></li>
- <li>{{HTTPHeader("SourceMap")}}</li>
-</ul>
+- [Comment utiliser les _source map_ – Documentation des outils Firefox](/fr/docs/Outils/Débogueur/Comment/Utiliser_une_source_map)
+- [Introduction to source maps – HTML5 rocks](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)
+- {{HTTPHeader("SourceMap")}}

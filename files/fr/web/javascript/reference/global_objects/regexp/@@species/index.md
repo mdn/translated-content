@@ -11,64 +11,50 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@species
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/@@species
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La propriété accesseur <code><strong>RegExp[@@species]</strong></code> renvoie le constructeur <code>RegExp</code>.</p>
+La propriété accesseur **`RegExp[@@species]`** renvoie le constructeur `RegExp`.
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-getregexp-@@species.html")}}</div>
+{{EmbedInteractiveExample("pages/js/regexp-getregexp-@@species.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">RegExp[Symbol.species]
-</pre>
+    RegExp[Symbol.species]
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>L'accesseur <code>species</code> renvoie le constructeur par défaut pour les objets <code>RegExp</code>. Les constructeurs des sous-classes peuvent surcharger ce symbole afin de modifier l'affectation du constructeur.</p>
+L'accesseur `species` renvoie le constructeur par défaut pour les objets `RegExp`. Les constructeurs des sous-classes peuvent surcharger ce symbole afin de modifier l'affectation du constructeur.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>La propriété <code>species</code> renvoie le constructeur par défaut, dans le cas des objets <code>RegExp</code>, c'est le constructeur <code>RegExp</code> :</p>
+La propriété `species` renvoie le constructeur par défaut, dans le cas des objets `RegExp`, c'est le constructeur `RegExp` :
 
-<pre class="brush: js">RegExp[Symbol.species]; // function RegExp()</pre>
+```js
+RegExp[Symbol.species]; // function RegExp()
+```
 
-<p>Pour les objets dérivés (par exemple, une classe <code>MaRegExp</code>), la valeur de <code>species</code> sera le constructeur <code>MaRegExp</code>. Il est possible de surcharger ce comportement afin de renvoyer le constructeur parent <code>RegExp</code> :</p>
+Pour les objets dérivés (par exemple, une classe `MaRegExp`), la valeur de `species` sera le constructeur `MaRegExp`. Il est possible de surcharger ce comportement afin de renvoyer le constructeur parent `RegExp` :
 
-<pre class="brush: js">class MaRegExp extends RegExp {
+```js
+class MaRegExp extends RegExp {
   // On surcharge species pour renvoyer
   // le constructeur parent RegExp
   static get [Symbol.species]() { return RegExp; }
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-get-regexp-@@species', 'get RegExp [ @@species ]')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-get-regexp-@@species', 'get RegExp [ @@species ]')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | État                         | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{SpecName('ES6', '#sec-get-regexp-@@species', 'get RegExp [ @@species ]')}}         | {{Spec2('ES6')}}         | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-get-regexp-@@species', 'get RegExp [ @@species ]')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.RegExp.@@species")}}</p>
+{{Compat("javascript.builtins.RegExp.@@species")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("RegExp")}}</li>
- <li>{{jsxref("Symbol.species")}}</li>
-</ul>
+- {{jsxref("RegExp")}}
+- {{jsxref("Symbol.species")}}

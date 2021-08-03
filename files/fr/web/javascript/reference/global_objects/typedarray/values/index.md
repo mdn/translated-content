@@ -13,25 +13,26 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/values
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/values
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>values()</code></strong> renvoie un nouvel objet <code>Array Iterator</code> qui contient les valeurs pour chaque indice du tableau.</p>
+La méthode **`values()`** renvoie un nouvel objet `Array Iterator` qui contient les valeurs pour chaque indice du tableau.
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-values.html")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-values.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>typedArr</var>.values()</pre>
+    typedArr.values()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un nouvel objet <code>Array Iterator</code>.</p>
+Un nouvel objet `Array Iterator`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Parcourir_le_tableau_typé_avec_for...of">Parcourir le tableau typé avec <code>for...of</code></h3>
+### Parcourir le tableau typé avec `for...of`
 
-<pre class="brush: js">var arr = new Uint8Array([10, 20, 30, 40, 50]);
+```js
+var arr = new Uint8Array([10, 20, 30, 40, 50]);
 var eArray = arr.values();
 // prérequis : le navigateur doit supporter les boucles
 // for..of et les variables dont la portée est définie
@@ -39,51 +40,35 @@ var eArray = arr.values();
 for (let n of eArray) {
   console.log(n);
 }
-</pre>
+```
 
-<h3 id="Une_autre_méthode_d'itération">Une autre méthode d'itération</h3>
+### Une autre méthode d'itération
 
-<pre class="brush: js">var arr = new Uint8Array([10, 20, 30, 40, 50]);
+```js
+var arr = new Uint8Array([10, 20, 30, 40, 50]);
 var eArr = arr.values();
 console.log(eArr.next().value); // 10
 console.log(eArr.next().value); // 20
 console.log(eArr.next().value); // 30
 console.log(eArr.next().value); // 40
 console.log(eArr.next().value); // 50
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-%typedarray%.prototype.values', '%TypedArray%.prototype.values()')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.values', '%TypedArray%.prototype.values()')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                    | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-%typedarray%.prototype.values', '%TypedArray%.prototype.values()')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.values', '%TypedArray%.prototype.values()')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.TypedArray.values")}}</p>
+{{Compat("javascript.builtins.TypedArray.values")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Tableaux_typés">Les tableaux typés en JavaScript</a></li>
- <li>{{jsxref("TypedArray")}}</li>
- <li>{{jsxref("TypedArray.prototype.entries()")}}</li>
- <li>{{jsxref("TypedArray.prototype.keys()")}}</li>
- <li>{{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}</li>
-</ul>
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés)
+- {{jsxref("TypedArray")}}
+- {{jsxref("TypedArray.prototype.entries()")}}
+- {{jsxref("TypedArray.prototype.keys()")}}
+- {{jsxref("TypedArray.prototype.@@iterator()", "TypedArray.prototype[@@iterator]()")}}

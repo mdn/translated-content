@@ -7,44 +7,40 @@ tags:
   - Reference
 translation_of: Web/JavaScript/Reference
 ---
-<div>{{JsSidebar}}</div>
+{{JsSidebar}}
 
-<p>Cette partie de la section JavaScript de MDN regroupe plusieurs notions sur le langage JavaScript. En savoir plus <a href="/fr/docs/Web/JavaScript/Reference/A_propos">à propos de cette référence</a>.</p>
+Cette partie de la section JavaScript de MDN regroupe plusieurs notions sur le langage JavaScript. En savoir plus [à propos de cette référence](/fr/docs/Web/JavaScript/Reference/A_propos).
 
-<h2 id="Les_objets_globaux">Les objets globaux</h2>
+## Les objets globaux
 
-<p>Ce chapitre documente l'ensemble des <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux">objets natifs standards JavaScript </a>ainsi que leurs méthodes et leurs propriétés.</p>
+Ce chapitre documente l'ensemble des [objets natifs standards JavaScript ](/fr/docs/Web/JavaScript/Reference/Objets_globaux)ainsi que leurs méthodes et leurs propriétés.
 
-<div>{{page('/fr/docs/Web/JavaScript/Reference/Objets_globaux', 'Objets_globaux_standards_(par_catégorie)')}}</div>
+{{page('/fr/docs/Web/JavaScript/Reference/Objets_globaux', 'Objets_globaux_standards_(par_catégorie)')}}
 
-<h2 id="Les_instructions">Les instructions</h2>
+## Les instructions
 
-<p>Ce chapitre documente les différentes <a href="/fr/docs/Web/JavaScript/Reference/Instructions">instructions et déclarations JavaScript</a>.</p>
+Ce chapitre documente les différentes [instructions et déclarations JavaScript](/fr/docs/Web/JavaScript/Reference/Instructions).
 
-<div>{{page('/fr/docs/Web/JavaScript/Reference/Instructions', 'Instructions_et_déclarations_par_catégorie')}}</div>
+{{page('/fr/docs/Web/JavaScript/Reference/Instructions', 'Instructions_et_déclarations_par_catégorie')}}
 
-<h2 id="Les_expressions_et_opérateurs">Les expressions et opérateurs</h2>
+## Les expressions et opérateurs
 
-<p>Ce chapitre documente l'ensemble des <a href="/fr/docs/JavaScript/Reference/Op%C3%A9rateurs">expressions et opérateurs JavaScript</a>.</p>
+Ce chapitre documente l'ensemble des [expressions et opérateurs JavaScript](/fr/docs/JavaScript/Reference/Op%C3%A9rateurs).
 
-<div>{{page('/fr/docs/JavaScript/Reference/Opérateurs', 'Expressions_et_opérateurs_par_catégorie')}}</div>
+{{page('/fr/docs/JavaScript/Reference/Opérateurs', 'Expressions_et_opérateurs_par_catégorie')}}
 
-<h2 id="Les_fonctions">Les fonctions</h2>
+## Les fonctions
 
-<p>Ce chapitre aborde les manières de travailler avec <a href="/fr/docs/Web/JavaScript/Reference/Fonctions">les fonctions JavaScript</a> pour développer vos applications.</p>
+Ce chapitre aborde les manières de travailler avec [les fonctions JavaScript](/fr/docs/Web/JavaScript/Reference/Fonctions) pour développer vos applications.
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Fonctions/arguments"><code>arguments</code></a></li>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es">Les fonctions fléchées</a></li>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Fonctions/Valeurs_par_défaut_des_arguments">Les paramètres par défaut</a></li>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Fonctions/param%C3%A8tres_du_reste">Les paramètres du reste</a></li>
-</ul>
+- [`arguments`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments)
+- [Les fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es)
+- [Les paramètres par défaut](/fr/docs/Web/JavaScript/Reference/Fonctions/Valeurs_par_défaut_des_arguments)
+- [Les paramètres du reste](/fr/docs/Web/JavaScript/Reference/Fonctions/param%C3%A8tres_du_reste)
 
-<h2 id="Autres_pages_de_référence">Autres pages de référence</h2>
+## Autres pages de référence
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale">Grammaire lexicale de JavaScript</a></li>
- <li><a href="/fr/docs/Web/JavaScript/Structures_de_donn%C3%A9es">Les types de données et les structures de données</a></li>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Strict_mode">Le mode strict</a></li>
- <li><a href="/fr/docs/JavaScript/Reference/Annexes/Fonctionnalités_dépréciées">Les fonctionnalités obsolètes</a></li>
-</ul>
+- [Grammaire lexicale de JavaScript](/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale)
+- [Les types de données et les structures de données](/fr/docs/Web/JavaScript/Structures_de_donn%C3%A9es)
+- [Le mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode)
+- [Les fonctionnalités obsolètes](/fr/docs/JavaScript/Reference/Annexes/Fonctionnalités_dépréciées)

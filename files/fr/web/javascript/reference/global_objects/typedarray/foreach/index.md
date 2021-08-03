@@ -11,61 +11,58 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/forEach
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/forEach
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>forEach()</strong></code> permet d'exécuter une fonction donnée sur chaque élément du tableau. Cette méthode implémente le même algorithme que {{jsxref("Array.prototype.forEach()")}}.</p>
+La méthode **`forEach()`** permet d'exécuter une fonction donnée sur chaque élément du tableau. Cette méthode implémente le même algorithme que {{jsxref("Array.prototype.forEach()")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>tableauTypé</var>.forEach(<var>callback</var>[, <var>thisArg</var>])</pre>
+    tableauTypé.forEach(callback[, thisArg])
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callback</code></dt>
- <dd>La fonction à utiliser pour chaque élément du tableau typé. Elle prend trois arguments :
- <dl>
-  <dt><code>valeurÉlément</code></dt>
-  <dd>La valeur de l'élément traité actuellement.</dd>
-  <dt><code>indiceÉlément</code></dt>
-  <dd>L'indice de l'élément traité actuellement.</dd>
-  <dt><code>tableau</code></dt>
-  <dd>Le tableau parcouru par <code>forEach()</code>.</dd>
- </dl>
- </dd>
- <dt><code>thisArg</code></dt>
- <dd>Optionnel. La valeur utilisée pour <code>this</code> lors de l'appel à <code>callback()</code>.</dd>
-</dl>
+- `callback`
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+  - : La fonction à utiliser pour chaque élément du tableau typé. Elle prend trois arguments :
 
-<p>{{jsxref("undefined")}}.</p>
+    - `valeurÉlément`
+      - : La valeur de l'élément traité actuellement.
+    - `indiceÉlément`
+      - : L'indice de l'élément traité actuellement.
+    - `tableau`
+      - : Le tableau parcouru par `forEach()`.
 
-<h2 id="Description">Description</h2>
+- `thisArg`
+  - : Optionnel. La valeur utilisée pour `this` lors de l'appel à `callback()`.
 
-<p>La méthode <code>forEach()</code> exécute la fonction <code>callback()</code> une fois pour chaque élément présent dans le tableau typé, par ordre d'indice croissant. Cette fonction n'est pas appelée pour les indices sur lesquels les éléments ont été supprimés ou n'ont pas été définis. <code>callback()</code> est cependant appelée pour les éléments qui portent la valeur {{jsxref("undefined")}}.</p>
+### Valeur de retour
 
-<p><code>callback()</code> accepte <strong>trois arguments</strong> :</p>
+{{jsxref("undefined")}}.
 
-<ul>
- <li>la <strong>valeur de l'élément</strong></li>
- <li>l'<strong>indice de l'élément</strong></li>
- <li>le <strong>le tableau typé traversé</strong></li>
-</ul>
+## Description
 
-<p>Si le paramètre <code>thisArg</code> est fourni à <code>forEach()</code>, il sera la valeur du <code>this</code> utilisé par chaque exécution de <code>callback()</code>. Dans le cas contraire, la valeur {{jsxref("undefined")}} sera utilisée par défaut. Pour déterminer la valeur de <code>this</code> véritablement visible par <code>callback()</code> durant son exécution, les règles habituelles pour {{jsxref("Operators/this", "déterminer la valeur de this du point de vue d'une fonction")}} sont appliquées.</p>
+La méthode `forEach()` exécute la fonction `callback()` une fois pour chaque élément présent dans le tableau typé, par ordre d'indice croissant. Cette fonction n'est pas appelée pour les indices sur lesquels les éléments ont été supprimés ou n'ont pas été définis. `callback()` est cependant appelée pour les éléments qui portent la valeur {{jsxref("undefined")}}.
 
-<p>L'ensemble des éléments visités par <code>forEach()</code> est fixé avant le premier appel à <code>callback</code>. Ainsi, les éléments qui sont ajoutés au tableau typé après que l'exécution de <code>forEach()</code> soit lancée ne seront pas traités. Cependant, si la valeur d'un élément à traiter est modifiée pendant l'exécution de <code>forEach()</code>, la valeur passée à <code>callback()</code> sera celle de l'élément au moment où il est traité. Si un élément est supprimé avant d'être visité, il ne sera pas traité.</p>
+`callback()` accepte **trois arguments** :
 
-<p><code>forEach()</code> lance un appel à la fonction <code>callback()</code> pour chaque élément du tableau typé ; à la différence de {{jsxref("TypedArray.prototype.every()", "every()")}} et {{jsxref("TypedArray.prototype.some()", "some()")}} cette méthode renvoie toujours {{jsxref("undefined")}}.</p>
+- la **valeur de l'élément**
+- l'**indice de l'élément**
+- le **le tableau typé traversé**
 
-<h2 id="Exemples">Exemples</h2>
+Si le paramètre `thisArg` est fourni à `forEach()`, il sera la valeur du `this` utilisé par chaque exécution de `callback()`. Dans le cas contraire, la valeur {{jsxref("undefined")}} sera utilisée par défaut. Pour déterminer la valeur de `this` véritablement visible par `callback()` durant son exécution, les règles habituelles pour {{jsxref("Operators/this", "déterminer la valeur de this du point de vue d'une fonction")}} sont appliquées.
 
-<h3 id="Exemple_Affichage_du_contenu_d'un_tableau_typé">Exemple: Affichage du contenu d'un tableau typé</h3>
+L'ensemble des éléments visités par `forEach()` est fixé avant le premier appel à `callback`. Ainsi, les éléments qui sont ajoutés au tableau typé après que l'exécution de `forEach()` soit lancée ne seront pas traités. Cependant, si la valeur d'un élément à traiter est modifiée pendant l'exécution de `forEach()`, la valeur passée à `callback()` sera celle de l'élément au moment où il est traité. Si un élément est supprimé avant d'être visité, il ne sera pas traité.
 
-<p>Le code ci-dessous affiche une ligne pour chaque élément du tableau typé :</p>
+`forEach()` lance un appel à la fonction `callback()` pour chaque élément du tableau typé ; à la différence de {{jsxref("TypedArray.prototype.every()", "every()")}} et {{jsxref("TypedArray.prototype.some()", "some()")}} cette méthode renvoie toujours {{jsxref("undefined")}}.
 
-<pre class="brush:js">function affichageContenuTableau(élément, index, tableau) {
+## Exemples
+
+### Exemple: Affichage du contenu d'un tableau typé
+
+Le code ci-dessous affiche une ligne pour chaque élément du tableau typé :
+
+```js
+function affichageContenuTableau(élément, index, tableau) {
   console.log('a[' + index + '] = ' + élément);
 }
 
@@ -75,39 +72,22 @@ new Uint8Array([0, 1, 2, 3]).forEach(affichageContenuTableau);
 // a[1] = 1
 // a[2] = 2
 // a[3] = 3
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-%typedarray%.prototype.foreach', '%TypedArray%.prototype.forEach')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.foreach', '%TypedArray%.prototype.forEach')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                    | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-%typedarray%.prototype.foreach', '%TypedArray%.prototype.forEach')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.foreach', '%TypedArray%.prototype.forEach')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.TypedArray.forEach")}}</p>
+{{Compat("javascript.builtins.TypedArray.forEach")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("TypedArray.prototype.map()")}}</li>
- <li>{{jsxref("TypedArray.prototype.every()")}}</li>
- <li>{{jsxref("TypedArray.prototype.some()")}}</li>
- <li>{{jsxref("Array.prototype.forEach()")}}</li>
-</ul>
+- {{jsxref("TypedArray.prototype.map()")}}
+- {{jsxref("TypedArray.prototype.every()")}}
+- {{jsxref("TypedArray.prototype.some()")}}
+- {{jsxref("Array.prototype.forEach()")}}

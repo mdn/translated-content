@@ -11,58 +11,47 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/language
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/language
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La propriété <strong><code>Intl.Locale.prototype.language</code></strong> est une propriété fournie via un accesseur qui renvoie la langue associée à la locale.</p>
+La propriété **`Intl.Locale.prototype.language`** est une propriété fournie via un accesseur qui renvoie la langue associée à la locale.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La langue est l'une des caractéristiques majeurs d'une locale. La spécification Unicode indique que l'identifiant de la langue d'une locale est composée de l'identifiant canonique de la langue et de l'identifiant de la réponse (on pourra ainsi distinguer l'anglais britannique de l'anglais américain). Toutefois, la propriété <code>language</code> de {{jsxref("Locale", "Locale")}} renvoie uniquement la composante relative à la langue.</p>
+La langue est l'une des caractéristiques majeurs d'une locale. La spécification Unicode indique que l'identifiant de la langue d'une locale est composée de l'identifiant canonique de la langue et de l'identifiant de la réponse (on pourra ainsi distinguer l'anglais britannique de l'anglais américain). Toutefois, la propriété `language` de {{jsxref("Locale", "Locale")}} renvoie uniquement la composante relative à la langue.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Indiquer_la_langue_via_la_chaîne_décrivant_la_locale">Indiquer la langue via la chaîne décrivant la locale</h3>
+### Indiquer la langue via la chaîne décrivant la locale
 
-<p>Afin de pouvoir représenter une locale Unicode correctement, une chaîne doit commencer par un identifiant de langue. Le principal argument du constructeur {{jsxref("Locale", "Locale")}} doit être un identifiant valide et doit donc contenir la composante liée à la langue.</p>
+Afin de pouvoir représenter une locale Unicode correctement, une chaîne doit commencer par un identifiant de langue. Le principal argument du constructeur {{jsxref("Locale", "Locale")}} doit être un identifiant valide et doit donc contenir la composante liée à la langue.
 
-<pre class="brush: js">let langStr = new Intl.Locale("en-Latn-US");
+```js
+let langStr = new Intl.Locale("en-Latn-US");
 
-console.log(langStr.language); // Affichera "en" dans la console</pre>
+console.log(langStr.language); // Affichera "en" dans la console
+```
 
-<h3 id="Surcharger_la_langue_via_lobjet_de_configuration">Surcharger la langue via l'objet de configuration</h3>
+### Surcharger la langue via l'objet de configuration
 
-<p>Bien que la composante de la langue doive être indiquée dans le premier paramètre, le constructeur {{jsxref("Locale", "Locale")}} prend comme deuxième argument un objet de configuration qui permet de surcharger cette composante.</p>
+Bien que la composante de la langue doive être indiquée dans le premier paramètre, le constructeur {{jsxref("Locale", "Locale")}} prend comme deuxième argument un objet de configuration qui permet de surcharger cette composante.
 
-<pre class="brush: js">let langObj = new Intl.Locale("en-Latn-US", {language: "es"});
+```js
+let langObj = new Intl.Locale("en-Latn-US", {language: "es"});
 
-console.log(langObj.language); // Affichera "es" dans la console</pre>
+console.log(langObj.language); // Affichera "es" dans la console
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.language">Proposition pour <code>Intl.Locale.prototype.language</code></a></td>
-   <td>Proposition de niveau 3</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                        | État                    | Commentaires |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------- | ------------ |
+| [Proposition pour `Intl.Locale.prototype.language`](https://tc39.github.io/proposal-intl-locale/#sec-Intl.Locale.prototype.language) | Proposition de niveau 3 |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<div>{{Compat("javascript.builtins.Intl.Locale.language")}}</div>
+{{Compat("javascript.builtins.Intl.Locale.language")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Locale", "Locale")}}</li>
- <li><a href="https://www.unicode.org/reports/tr35/#unicode_language_subtag_validity">Spécification des extensions Unicode</a></li>
-</ul>
+- {{jsxref("Locale", "Locale")}}
+- [Spécification des extensions Unicode](https://www.unicode.org/reports/tr35/#unicode_language_subtag_validity)

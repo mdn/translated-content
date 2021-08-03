@@ -10,47 +10,43 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/toSource
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number/toSource
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p>La méthode <code><strong>toSource()</strong></code> permet de renvoyer une chaîne de caractère représentant le code source de l'objet.</p>
+La méthode **`toSource()`** permet de renvoyer une chaîne de caractère représentant le code source de l'objet.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">objetNumber.toSource();
-Number.toSource();
-</pre>
+    objetNumber.toSource();
+    Number.toSource();
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une chaîne de caractères représentant le code source de l'objet.</p>
+Une chaîne de caractères représentant le code source de l'objet.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code>toSource()</code> renvoie les valeurs suivantes :</p>
+La méthode `toSource()` renvoie les valeurs suivantes :
 
-<ul>
- <li>Pour l'objet natif {{jsxref("Number")}}, <code>toSource()</code> renvoie la chaîne suivante, indiquant que le code source n'est pas disponible :
+- Pour l'objet natif {{jsxref("Number")}}, `toSource()` renvoie la chaîne suivante, indiquant que le code source n'est pas disponible :
 
-  <pre class="brush: js">function Number() {
-    [native code]
-}
-</pre>
- </li>
- <li>Pour les instances de {{jsxref("Number")}}, <code>toSource()</code> renvoie une chaîne représentant le code source de l'objet.</li>
-</ul>
+  ```js
+    function Number() {
+        [native code]
+    }
+    ```
 
-<p>Cette méthode est généralement appelée par du code interne au moteur JavaScript et n'est pas utilisée dans des scripts JavaScript.</p>
+- Pour les instances de {{jsxref("Number")}}, `toSource()` renvoie une chaîne représentant le code source de l'objet.
 
-<h2 id="Spécifications">Spécifications</h2>
+Cette méthode est généralement appelée par du code interne au moteur JavaScript et n'est pas utilisée dans des scripts JavaScript.
 
-<p>Cette méthode ne fait partie d'aucun standard. Elle a été implémentée avec JavaScript 1.3.</p>
+## Spécifications
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+Cette méthode ne fait partie d'aucun standard. Elle a été implémentée avec JavaScript 1.3.
 
-<p>{{Compat("javascript.builtins.Number.toSource")}}</p>
+## Compatibilité des navigateurs
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+{{Compat("javascript.builtins.Number.toSource")}}
 
-<ul>
- <li>{{jsxref("Object.prototype.toSource()")}}</li>
-</ul>
+## Voir aussi
+
+- {{jsxref("Object.prototype.toSource()")}}

@@ -8,36 +8,35 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/isFinite
 original_slug: Web/JavaScript/Reference/Objets_globaux/isFinite
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<p>La fonction globale <code><strong>isFinite()</strong></code> détermine si la valeur passée en argument est un nombre fini. Si nécessaire, le paramètre est d'abord converti en nombre.</p>
+La fonction globale **`isFinite()`** détermine si la valeur passée en argument est un nombre fini. Si nécessaire, le paramètre est d'abord converti en nombre.
 
-<div>{{EmbedInteractiveExample("pages/js/globalprops-isfinite.html")}}</div>
+{{EmbedInteractiveExample("pages/js/globalprops-isfinite.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">isFinite(<var>valeurÀTester</var>)</pre>
+    isFinite(valeurÀTester)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>valeurÀTester</code></dt>
- <dd>La valeur dont on souhaite savoir si elle est finie ou non.</dd>
-</dl>
+- `valeurÀTester`
+  - : La valeur dont on souhaite savoir si elle est finie ou non.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p><code>false</code> si la valeur passée en argument vaut {{jsxref("Infinity")}} (en positif ou en négatif),{{jsxref("NaN")}} ou {{jsxref("undefined")}}, <code>true</code> sinon.</p>
+`false` si la valeur passée en argument vaut {{jsxref("Infinity")}} (en positif ou en négatif),{{jsxref("NaN")}} ou {{jsxref("undefined")}}, `true` sinon.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p><code>isFinite()</code> est une fonction qui n'est rattachée à aucun objet et qui est disponible au plus haut niveau.</p>
+`isFinite()` est une fonction qui n'est rattachée à aucun objet et qui est disponible au plus haut niveau.
 
-<p>Cette fonction peut être utilisée pour déterminer si un nombre est fini ou non. La fonction <code>isFinite()</code> examine le nombre passé en argument : si celui-ci vaut {{jsxref("NaN")}}, {{jsxref("Infinity")}} (pour l'infini) ou {{jsxref("Infinity","-Infinity")}} (pour l'infini négatif), cette fonction renvoie <code>false</code> sinon elle renvoie <code>true</code>.</p>
+Cette fonction peut être utilisée pour déterminer si un nombre est fini ou non. La fonction `isFinite()` examine le nombre passé en argument : si celui-ci vaut {{jsxref("NaN")}}, {{jsxref("Infinity")}} (pour l'infini) ou {{jsxref("Infinity","-Infinity")}} (pour l'infini négatif), cette fonction renvoie `false` sinon elle renvoie `true`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">isFinite(Infinity);  // false
+```js
+isFinite(Infinity);  // false
 isFinite(NaN);       // false
 isFinite(-Infinity); // false
 
@@ -50,49 +49,24 @@ isFinite(null);      // true, ce qui aurait été false
 
 isFinite("0");       // true ce qui aurait été false
                      // avec la méthode Number.isFinite("0")
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.1.2.5', 'isFinite')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-isfinite-number', 'isFinite')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-isfinite-number', 'isFinite')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | État                         | Commentaires         |
+| -------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2')}}                                                         | {{Spec2('ES3')}}         | Définition initiale. |
+| {{SpecName('ES5.1', '#sec-15.1.2.5', 'isFinite')}}             | {{Spec2('ES5.1')}}     |                      |
+| {{SpecName('ES6', '#sec-isfinite-number', 'isFinite')}}         | {{Spec2('ES6')}}         |                      |
+| {{SpecName('ESDraft', '#sec-isfinite-number', 'isFinite')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.isFinite")}}</p>
+{{Compat("javascript.builtins.isFinite")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Number.isFinite()")}}</li>
- <li>{{jsxref("Number.NaN")}}</li>
- <li>{{jsxref("Number.POSITIVE_INFINITY")}}</li>
- <li>{{jsxref("Number.NEGATIVE_INFINITY")}}</li>
-</ul>
+- {{jsxref("Number.isFinite()")}}
+- {{jsxref("Number.NaN")}}
+- {{jsxref("Number.POSITIVE_INFINITY")}}
+- {{jsxref("Number.NEGATIVE_INFINITY")}}

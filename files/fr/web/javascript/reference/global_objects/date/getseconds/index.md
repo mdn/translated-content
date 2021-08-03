@@ -10,71 +10,47 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/getSeconds
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>getSeconds()</code></strong> renvoie les secondes pour la date renseignée d'après l'heure locale.</p>
+La méthode **`getSeconds()`** renvoie les secondes pour la date renseignée d'après l'heure locale.
 
-<div>{{EmbedInteractiveExample("pages/js/date-getseconds.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-getseconds.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">dateObj.getSeconds()</pre>
+    dateObj.getSeconds()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>La valeur renvoyée par <code>getSeconds()</code> est un entier entre 0 et 59 correspondant au nombre de secondes pour la date donnée selon l'heure locale.</p>
+La valeur renvoyée par `getSeconds()` est un entier entre 0 et 59 correspondant au nombre de secondes pour la date donnée selon l'heure locale.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_getSeconds()">Utiliser <code>getSeconds()</code></h3>
+### Utiliser `getSeconds()`
 
-<p>La seconde instruction ci-dessous assigne la valeur 30 à la variable <code>secondes</code>, selon la valeur de l'objet {{jsxref("Date")}} <code>noel95</code>.</p>
+La seconde instruction ci-dessous assigne la valeur 30 à la variable `secondes`, selon la valeur de l'objet {{jsxref("Date")}} `noel95`.
 
-<pre class="brush: js">var noel95 = new Date("December 25, 1995 23:15:30");
+```js
+var noel95 = new Date("December 25, 1995 23:15:30");
 var secondes = noel95.getSeconds();
 
 console.log(secondes); //30
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.22', 'Date.prototype.getSeconds')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.getseconds', 'Date.prototype.getSeconds')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.getseconds', 'Date.prototype.getSeconds')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | État                         | Commentaires                                          |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.9.5.22', 'Date.prototype.getSeconds')}}                         | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-date.prototype.getseconds', 'Date.prototype.getSeconds')}}         | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-date.prototype.getseconds', 'Date.prototype.getSeconds')}} | {{Spec2('ESDraft')}} |                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Date.getSeconds")}}</p>
+{{Compat("javascript.builtins.Date.getSeconds")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCSeconds()")}}</li>
- <li>{{jsxref("Date.prototype.setSeconds()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCSeconds()")}}
+- {{jsxref("Date.prototype.setSeconds()")}}

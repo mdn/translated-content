@@ -10,43 +10,41 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/setPrototypeOf
 original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/setPrototypeOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>la méthode statique <code><strong>Reflect.setPrototypeOf()</strong></code> est semblable à la méthode {{jsxref("Object.setPrototypeOf()")}} (exception faite de la valeur de retour). Elle permet de définir le prototype (c'est-à-dire la propriété interne <code>[[Prototype]]</code>) d'un objet donné avec un autre objet ou {{jsxref("null")}}. Cette méthode renvoie <code>true</code> si l'opération a réussi et <code>false</code> sinon.</p>
+la méthode statique **`Reflect.setPrototypeOf()`** est semblable à la méthode {{jsxref("Object.setPrototypeOf()")}} (exception faite de la valeur de retour). Elle permet de définir le prototype (c'est-à-dire la propriété interne `[[Prototype]]`) d'un objet donné avec un autre objet ou {{jsxref("null")}}. Cette méthode renvoie `true` si l'opération a réussi et `false` sinon.
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-setprototypeof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-setprototypeof.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Reflect.setPrototypeOf(<var>cible</var>, <var>prototype</var>)
-</pre>
+    Reflect.setPrototypeOf(cible, prototype)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>cible</code></dt>
- <dd>L'objet cible dont on souhaite modifier le prototype.</dd>
- <dt><code>prototype</code></dt>
- <dd>Le nouveau prototype à appliquer à l'objet cible (ça peut être un objet ou {{jsxref("null")}}).</dd>
-</dl>
+- `cible`
+  - : L'objet cible dont on souhaite modifier le prototype.
+- `prototype`
+  - : Le nouveau prototype à appliquer à l'objet cible (ça peut être un objet ou {{jsxref("null")}}).
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un {{jsxref("Boolean","booléen","",1)}} qui indique si le prototype a correctement été modifié.</p>
+Un {{jsxref("Boolean","booléen","",1)}} qui indique si le prototype a correctement été modifié.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>Une erreur {{jsxref("TypeError")}} si <code>cible</code> n'est pas un {{jsxref("Object")}} ou si <code>prototype</code> n'est ni un objet ni {{jsxref("null")}}.</p>
+Une erreur {{jsxref("TypeError")}} si `cible` n'est pas un {{jsxref("Object")}} ou si `prototype` n'est ni un objet ni {{jsxref("null")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code>Reflect.setPrototypeOf</code> permet de modifier le prototype (qui est la valeur de la propriété interne <code>[[Prototype]]</code>) d'un objet donné.</p>
+La méthode `Reflect.setPrototypeOf` permet de modifier le prototype (qui est la valeur de la propriété interne `[[Prototype]]`) d'un objet donné.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_Reflect.setPrototypeOf()">Utiliser <code>Reflect.setPrototypeOf()</code></h3>
+### Utiliser `Reflect.setPrototypeOf()`
 
-<pre class="brush: js">Reflect.setPrototypeOf({}, Object.prototype); // true
+```js
+Reflect.setPrototypeOf({}, Object.prototype); // true
 
 // On peut modifier le [[Prototype]] d'un objet
 // pour que celui-ci soit null.
@@ -61,37 +59,20 @@ Reflect.setPrototypeOf(Object.freeze({}), null); // false
 var target = {};
 var proto = Object.create(target);
 Reflect.setPrototypeOf(target, proto); // false
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-reflect.setprototypeof', 'Reflect.setPrototypeOf')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-reflect.setprototypeof', 'Reflect.setPrototypeOf')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | État                         | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-reflect.setprototypeof', 'Reflect.setPrototypeOf')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-reflect.setprototypeof', 'Reflect.setPrototypeOf')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Reflect.setPrototypeOf")}}</p>
+{{Compat("javascript.builtins.Reflect.setPrototypeOf")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li>{{jsxref("Object.setPrototypeOf()")}}</li>
-</ul>
+- {{jsxref("Reflect")}}
+- {{jsxref("Object.setPrototypeOf()")}}

@@ -9,70 +9,74 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Unexpected_token
 original_slug: Web/JavaScript/Reference/Erreurs/Unexpected_token
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="syntaxbox">SyntaxError: expected expression, got "x"
-SyntaxError: expected property name, got "x"
-SyntaxError: expected target, got "x"
-SyntaxError: expected rest argument name, got "x"
-SyntaxError: expected closing parenthesis, got "x"
-SyntaxError: expected '=&gt;' after argument list, got "x"
-</pre>
+    SyntaxError: expected expression, got "x"
+    SyntaxError: expected property name, got "x"
+    SyntaxError: expected target, got "x"
+    SyntaxError: expected rest argument name, got "x"
+    SyntaxError: expected closing parenthesis, got "x"
+    SyntaxError: expected '=>' after argument list, got "x"
 
-<h2 id="Type_d'erreur">Type d'erreur</h2>
+## Type d'erreur
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="Quel_est_le_problème">Quel est le problème ?</h2>
+## Quel est le problème ?
 
-<p>La syntaxe du langage « attendait » un élément mais quelque chose d'autre est écrit à la place dans le script. Cela peut simplement être dû à une coquille dans le code.</p>
+La syntaxe du langage « attendait » un élément mais quelque chose d'autre est écrit à la place dans le script. Cela peut simplement être dû à une coquille dans le code.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Expression_attendue">Expression attendue</h3>
+### Expression attendue
 
-<p>Lorsqu'on enchaîne des expressions, par exemple, les virgules ne sont pas autorisées en fin d'expression :</p>
+Lorsqu'on enchaîne des expressions, par exemple, les virgules ne sont pas autorisées en fin d'expression :
 
-<pre class="brush: js example-bad">for (let i = 0; i &lt; 5,; ++i) {
+```js example-bad
+for (let i = 0; i < 5,; ++i) {
   console.log(i);
 }
 // SyntaxError: expected expression, got ')'
-</pre>
+```
 
-<p>Pour corriger cette erreur, on peut retirer la virgule superflue ou bien ajouter une autre expression :</p>
+Pour corriger cette erreur, on peut retirer la virgule superflue ou bien ajouter une autre expression :
 
-<pre class="brush: js example-good">for (let i = 0; i &lt; 5; ++i) {
+```js example-good
+for (let i = 0; i < 5; ++i) {
   console.log(i);
 }
-</pre>
+```
 
-<h3 id="Parenthèses_manquantes">Parenthèses manquantes</h3>
+### Parenthèses manquantes
 
-<p>Il peut également arriver que des parenthèses manquent autour des instructions <code>if</code> :</p>
+Il peut également arriver que des parenthèses manquent autour des instructions `if` :
 
-<pre class="brush: js example-bad">function round(n, upperBound, lowerBound){
-  if(n &gt; upperBound) || (n &lt; lowerBound){
+```js example-bad
+function round(n, upperBound, lowerBound){
+  if(n > upperBound) || (n < lowerBound){
     throw 'Number ' + String(n) + ' is more than ' + String(upperBound) + ' or less than ' + String(lowerBound);
-  }else if(n &lt; ((upperBound + lowerBound)/2)){
+  }else if(n < ((upperBound + lowerBound)/2)){
     return lowerBound;
   }else{
     return upperBound;
   }
-} // SyntaxError: expected expression, got '||'</pre>
+} // SyntaxError: expected expression, got '||'
+```
 
-<p>Si on compte les parenthèses ouvrantes et fermantes, c'est correct mais on peut voir que le OU logique (<code>||</code>) n'est contenu au sein d'aucune paire de parenthèses.</p>
+Si on compte les parenthèses ouvrantes et fermantes, c'est correct mais on peut voir que le OU logique (`||`) n'est contenu au sein d'aucune paire de parenthèses.
 
-<p>Pour corriger ce problème, il suffit d'ajouter une paire de parenthèses englobante :</p>
+Pour corriger ce problème, il suffit d'ajouter une paire de parenthèses englobante :
 
-<pre class="brush: js example-good">function round(n, upperBound, lowerBound){
-  if((n &gt; upperBound) || (n &lt; lowerBound)){
+```js example-good
+function round(n, upperBound, lowerBound){
+  if((n > upperBound) || (n < lowerBound)){
     throw 'Number ' + String(n) + ' is more than ' + String(upperBound) + ' or less than ' + String(lowerBound);
-  }else if(n &lt; ((upperBound + lowerBound)/2)){
+  }else if(n < ((upperBound + lowerBound)/2)){
     return lowerBound;
   }else{
     return upperBound;
   }
 }
-</pre>
+```

@@ -8,46 +8,45 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
 original_slug: Web/JavaScript/Reference/Erreurs/Missing_curly_after_property_list
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="syntaxbox">SyntaxError: Expected '}' (Edge)
-SyntaxError: missing } after property list (Firefox)
-</pre>
+    SyntaxError: Expected '}' (Edge)
+    SyntaxError: missing } after property list (Firefox)
 
-<h2 id="Type_d'erreur">Type d'erreur</h2>
+## Type d'erreur
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="Quel_est_le_problème">Quel est le problème ?</h2>
+## Quel est le problème ?
 
-<p>Il y a une coquille dans le <a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Initialisateur_objet">littéral objet</a> utilisé. Cela peut être dû à une accolade manquante ou à une virgule manquante. Il est aussi utile de vérifier que les accolades et les parenthèses sont bien ordonnées. Pour ce type d'erreur, une bonne indentation permet de repérer plus facilement la coquille parmi les lignes de code.</p>
+Il y a une coquille dans le [littéral objet](/fr/docs/Web/JavaScript/Reference/Opérateurs/Initialisateur_objet) utilisé. Cela peut être dû à une accolade manquante ou à une virgule manquante. Il est aussi utile de vérifier que les accolades et les parenthèses sont bien ordonnées. Pour ce type d'erreur, une bonne indentation permet de repérer plus facilement la coquille parmi les lignes de code.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Une_virgule_oubliée">Une virgule oubliée</h3>
+### Une virgule oubliée
 
-<p>Il arrive parfois que ce soit une virgule absente dans le littéral qui entraîne cette erreur :</p>
+Il arrive parfois que ce soit une virgule absente dans le littéral qui entraîne cette erreur :
 
-<pre class="brush: js example-bad">var obj = {
+```js example-bad
+var obj = {
   a: 1,
   b: { maProp: 2 }
   c: 3
 };
-</pre>
+```
 
-<p>La version correcte correspondante est :</p>
+La version correcte correspondante est :
 
-<pre class="brush: js example-good">var obj = {
+```js example-good
+var obj = {
   a: 1,
   b: { maProp: 2 },
   c: 3
 };
-</pre>
+```
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Initialisateur_objet">Les littéraux objets</a></li>
-</ul>
+- [Les littéraux objets](/fr/docs/Web/JavaScript/Reference/Opérateurs/Initialisateur_objet)

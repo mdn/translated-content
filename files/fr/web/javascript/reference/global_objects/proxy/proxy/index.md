@@ -10,73 +10,54 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy
 translation_of_original: Web/JavaScript/Reference/Global_Objects/Proxy/handler
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>L'objet gestionnaire d'un proxy est un objet qui contient les trappes de captures (<em>traps</em>) pour le  {{jsxref("Proxy", "proxy", "", 1)}}.</p>
+L'objet gestionnaire d'un proxy est un objet qui contient les trappes de captures (_traps_) pour le  {{jsxref("Proxy", "proxy", "", 1)}}.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p>Toutes ces trappes sont optionnelles. Si une trappe n'a pas été définie, le comportement par défaut sera de transmettre l'opération à la cible.</p>
+Toutes ces trappes sont optionnelles. Si une trappe n'a pas été définie, le comportement par défaut sera de transmettre l'opération à la cible.
 
-<dl>
- <dt>{{jsxref("Objets_globaux/Proxy/handler/getPrototypeOf", "handler.getPrototypeOf()")}}</dt>
- <dd>Une trappe pour {{jsxref("Object.getPrototypeOf")}}.</dd>
- <dt>{{jsxref("Objets_globaux/Proxy/handler/setPrototypeOf", "handler.setPrototypeOf()")}}</dt>
- <dd>Une trappe pour {{jsxref("Object.setPrototypeOf")}}.</dd>
- <dt>{{jsxref("Objets_globaux/Proxy/handler/isExtensible", "handler.isExtensible()")}}</dt>
- <dd>Une trappe pour {{jsxref("Object.isExtensible")}}.</dd>
- <dt>{{jsxref("Objets_globaux/Proxy/handler/preventExtensions", "handler.preventExtensions()")}}</dt>
- <dd>Une trappe pour {{jsxref("Object.preventExtensions")}}.</dd>
- <dt>{{jsxref("Objets_globaux/Proxy/handler/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}</dt>
- <dd>Une trappe pour {{jsxref("Object.getOwnPropertyDescriptor")}}.</dd>
- <dt>{{jsxref("Objets_globaux/Proxy/handler/defineProperty", "handler.defineProperty()")}}</dt>
- <dd>Une trappe pour {{jsxref("Object.defineProperty")}}.</dd>
- <dt>{{jsxref("Objets_globaux/Proxy/handler/has", "handler.has()")}}</dt>
- <dd>Une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_in", "in")}}.</dd>
- <dt>{{jsxref("Objets_globaux/Proxy/handler/get", "handler.get()")}}</dt>
- <dd>Une trappe pour l'accès aux valeurs des propriétés.</dd>
- <dt>{{jsxref("Objets_globaux/Proxy/handler/set", "handler.set()")}}</dt>
- <dd>Une trappe pour la définition des valeurs des propriétés.</dd>
- <dt>{{jsxref("Objets_globaux/Proxy/handler/deleteProperty", "handler.deleteProperty()")}}</dt>
- <dd>Une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_delete", "delete")}}.</dd>
- <dt>{{jsxref("Objets_globaux/Proxy/handler/ownKeys", "handler.ownKeys()")}}</dt>
- <dd>Une trappe pour {{jsxref("Object.getOwnPropertyNames")}} et {{jsxref("Object.getOwnPropertySymbols")}}.</dd>
- <dt>{{jsxref("Objets_globaux/Proxy/handler/apply", "handler.apply()")}}</dt>
- <dd>Une trappe pour l'appel d'une fonction.</dd>
- <dt>{{jsxref("Objets_globaux/Proxy/handler/construct", "handler.construct()")}}</dt>
- <dd>Une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}}.</dd>
-</dl>
+- {{jsxref("Objets_globaux/Proxy/handler/getPrototypeOf", "handler.getPrototypeOf()")}}
+  - : Une trappe pour {{jsxref("Object.getPrototypeOf")}}.
+- {{jsxref("Objets_globaux/Proxy/handler/setPrototypeOf", "handler.setPrototypeOf()")}}
+  - : Une trappe pour {{jsxref("Object.setPrototypeOf")}}.
+- {{jsxref("Objets_globaux/Proxy/handler/isExtensible", "handler.isExtensible()")}}
+  - : Une trappe pour {{jsxref("Object.isExtensible")}}.
+- {{jsxref("Objets_globaux/Proxy/handler/preventExtensions", "handler.preventExtensions()")}}
+  - : Une trappe pour {{jsxref("Object.preventExtensions")}}.
+- {{jsxref("Objets_globaux/Proxy/handler/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}
+  - : Une trappe pour {{jsxref("Object.getOwnPropertyDescriptor")}}.
+- {{jsxref("Objets_globaux/Proxy/handler/defineProperty", "handler.defineProperty()")}}
+  - : Une trappe pour {{jsxref("Object.defineProperty")}}.
+- {{jsxref("Objets_globaux/Proxy/handler/has", "handler.has()")}}
+  - : Une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_in", "in")}}.
+- {{jsxref("Objets_globaux/Proxy/handler/get", "handler.get()")}}
+  - : Une trappe pour l'accès aux valeurs des propriétés.
+- {{jsxref("Objets_globaux/Proxy/handler/set", "handler.set()")}}
+  - : Une trappe pour la définition des valeurs des propriétés.
+- {{jsxref("Objets_globaux/Proxy/handler/deleteProperty", "handler.deleteProperty()")}}
+  - : Une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_delete", "delete")}}.
+- {{jsxref("Objets_globaux/Proxy/handler/ownKeys", "handler.ownKeys()")}}
+  - : Une trappe pour {{jsxref("Object.getOwnPropertyNames")}} et {{jsxref("Object.getOwnPropertySymbols")}}.
+- {{jsxref("Objets_globaux/Proxy/handler/apply", "handler.apply()")}}
+  - : Une trappe pour l'appel d'une fonction.
+- {{jsxref("Objets_globaux/Proxy/handler/construct", "handler.construct()")}}
+  - : Une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}}.
 
-<p>Certaines trappes non standards sont désormais <a href="/fr/docs/JavaScript/Reference/Annexes/Fonctionnalités_dépréciées#Proxy">obsolètes et ont été supprimées</a>.</p>
+Certaines trappes non standards sont désormais [obsolètes et ont été supprimées](/fr/docs/JavaScript/Reference/Annexes/Fonctionnalités_dépréciées#Proxy).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots', 'Proxy Object Internal Methods and Internal Slots')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots', 'Proxy Object Internal Methods and Internal Slots')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>La trappe pour <code>enumerate</code> a été retirée.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                                                    | État                         | Commentaires                              |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------- |
+| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots', 'Proxy Object Internal Methods and Internal Slots')}} | {{Spec2('ES2015')}}     | Définition initiale.                      |
+| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots', 'Proxy Object Internal Methods and Internal Slots')}} | {{Spec2('ESDraft')}} | La trappe pour `enumerate` a été retirée. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Proxy.handler")}}</p>
+{{Compat("javascript.builtins.Proxy.handler")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
-</ul>
+- {{jsxref("Proxy")}}

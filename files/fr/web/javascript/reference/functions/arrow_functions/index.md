@@ -9,66 +9,62 @@ tags:
 translation_of: Web/JavaScript/Reference/Functions/Arrow_functions
 original_slug: Web/JavaScript/Reference/Fonctions/Fonctions_fléchées
 ---
-<div>{{jsSidebar("Functions")}}</div>
+{{jsSidebar("Functions")}}
 
-<p>Une <strong>expression de fonction fléchée</strong> (<em>arrow function</em> en anglais) permet d’avoir une syntaxe plus courte que <a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_function">les expressions de fonction</a> et ne possède pas ses propres valeurs pour <code><a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this">this</a></code>, <code><a href="/fr/docs/Web/JavaScript/Reference/Fonctions/arguments">arguments</a></code>, <code><a href="/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/super">super</a></code>, ou <code><a href="/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/new.target">new.target</a></code>. Les fonctions fléchées sont souvent <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/name">anonymes</a> et ne sont pas destinées à être utilisées pour déclarer des méthodes.</p>
+Une **expression de fonction fléchée** (_arrow function_ en anglais) permet d’avoir une syntaxe plus courte que [les expressions de fonction](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_function) et ne possède pas ses propres valeurs pour [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this), [`arguments`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments), [`super`](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/super), ou [`new.target`](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/new.target). Les fonctions fléchées sont souvent [anonymes](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/name) et ne sont pas destinées à être utilisées pour déclarer des méthodes.
 
-<div>{{EmbedInteractiveExample("pages/js/functions-arrow.html")}}</div>
+{{EmbedInteractiveExample("pages/js/functions-arrow.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">([param] [, param]) =&gt; {
-   instructions
-}
+    ([param] [, param]) => {
+       instructions
+    }
 
-(param1, param2, …, param2) =&gt; expression
-// équivalent à
-(param1, param2, …, param2) =&gt; {
-  return expression;
-}
+    (param1, param2, …, param2) => expression
+    // équivalent à
+    (param1, param2, …, param2) => {
+      return expression;
+    }
 
-// Parenthèses non nécessaires quand il n'y a qu'un seul argument
-param =&gt; expression
+    // Parenthèses non nécessaires quand il n'y a qu'un seul argument
+    param => expression
 
-// Une fonction sans paramètre peut s'écrire avec un couple
-// de parenthèses
-() =&gt; {
-  instructions
-}
+    // Une fonction sans paramètre peut s'écrire avec un couple
+    // de parenthèses
+    () => {
+      instructions
+    }
 
-// Gestion des <a href="/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">paramètres du reste</a> et <a href="/en-US/docs/Web/JavaScript/Reference/Functions/Default_parameters">paramètres par défaut</a>
-(param1, param2, ...reste) =&gt; {
-  instructions
-}
-(param1 = valeurDefaut1, param2, …, paramN = valeurDefautN) =&gt; {
-  instructions
-}
+    // Gestion des paramètres du reste et paramètres par défaut
+    (param1, param2, ...reste) => {
+      instructions
+    }
+    (param1 = valeurDefaut1, param2, …, paramN = valeurDefautN) => {
+      instructions
+    }
 
-// Gestion de la décomposition pour la liste des paramètres
-let f = ([a, b] = [1, 2], {x: c} = {x: a + b}) =&gt; a + b + c;
-f();
-</pre>
+    // Gestion de la décomposition pour la liste des paramètres
+    let f = ([a, b] = [1, 2], {x: c} = {x: a + b}) => a + b + c;
+    f();
 
-<dl>
- <dt><code>param</code></dt>
- <dd>Le nom d’un argument. S’il n'y a aucun argument, cela doit être indiqué par une paire de parenthèses <code>()</code>. S’il n'y a qu’un argument, les parenthèses ne sont pas nécessaires (ex. : <code>toto =&gt; 1</code>).</dd>
- <dt><code>instructions</code> ou <code>expression</code></dt>
- <dd>Plusieurs instructions doivent être encadrées par des accolades, {}. Une expression simple ne nécessite pas d’accolades. L’expression est également la valeur de retour implicite pour cette fonction.</dd>
-</dl>
+- `param`
+  - : Le nom d’un argument. S’il n'y a aucun argument, cela doit être indiqué par une paire de parenthèses `()`. S’il n'y a qu’un argument, les parenthèses ne sont pas nécessaires (ex. : `toto => 1`).
+- `instructions` ou `expression`
+  - : Plusieurs instructions doivent être encadrées par des accolades, {}. Une expression simple ne nécessite pas d’accolades. L’expression est également la valeur de retour implicite pour cette fonction.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Deux facteurs sont à l’origine de la conception des fonctions fléchées : une syntaxe plus courte et l’absence de <code>this</code> spécifique à la fonction. Sur ce dernier point, cela signifie qu’une fonction fléchée ne lie pas son propre {{jsxref("Opérateurs/L_opérateur_this","this")}} au sein de la fonction (il en va de même avec {{jsxref("Fonctions/arguments","arguments")}}, {{jsxref("Opérateurs/super","super")}} ou {{jsxref("Opérateurs/new.target","new.target")}}).</p>
+Deux facteurs sont à l’origine de la conception des fonctions fléchées : une syntaxe plus courte et l’absence de `this` spécifique à la fonction. Sur ce dernier point, cela signifie qu’une fonction fléchée ne lie pas son propre {{jsxref("Opérateurs/L_opérateur_this","this")}} au sein de la fonction (il en va de même avec {{jsxref("Fonctions/arguments","arguments")}}, {{jsxref("Opérateurs/super","super")}} ou {{jsxref("Opérateurs/new.target","new.target")}}).
 
-<div class="note">
-<p><strong>Note :</strong> Voir aussi l’article sur les fonctions fléchées présent sur <a href="https://tech.mozfr.org/post/2015/06/10/ES6-en-details-%3A-les-fonctions-flechees">https://tech.mozfr.org/post/2015/06/10/ES6-en-details-%3A-les-fonctions-flechees</a> (l’article original en anglais est disponible <a href="https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/">ici</a>).</p>
-</div>
+> **Note :** Voir aussi l’article sur les fonctions fléchées présent sur <https://tech.mozfr.org/post/2015/06/10/ES6-en-details-%3A-les-fonctions-flechees> (l’article original en anglais est disponible [ici](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)).
 
-<h3 id="Syntaxe_plus_courte">Syntaxe plus courte</h3>
+### Syntaxe plus courte
 
-<p>Pour des aspects fonctionnels, la légèreté de la syntaxe est bienvenue. Par exemple :</p>
+Pour des aspects fonctionnels, la légèreté de la syntaxe est bienvenue. Par exemple :
 
-<pre class="brush: js">var a = [
+```js
+var a = [
   "We're up all night 'til the sun",
   "We're up all night to get some",
   "We're up all night for good fun",
@@ -80,22 +76,22 @@ var a2 = a.map(function (s) { return s.length });
 // [31, 30, 31, 31]
 
 // Avec, on a quelque chose de plus concis
-var a3 = a.map( s =&gt; s.length);
-// [31, 30, 31, 31]</pre>
+var a3 = a.map( s => s.length);
+// [31, 30, 31, 31]
+```
 
-<h3 id="Pas_de_this_lié_à_la_fonction">Pas de <code>this</code> lié à la fonction</h3>
+### Pas de `this` lié à la fonction
 
-<p>Jusqu’a l’apparition des fonctions fléchées, chaque nouvelle fonction définissait son propre {{jsxref("Opérateurs/L_opérateur_this","this")}} :</p>
+Jusqu’a l’apparition des fonctions fléchées, chaque nouvelle fonction définissait son propre {{jsxref("Opérateurs/L_opérateur_this","this")}} :
 
-<ul>
- <li>un nouvel objet dans le cas d’un constructeur</li>
- <li><code>undefined</code> dans les appels de fonctions en <a href="/fr/docs/Web/JavaScript/Reference/Strict_mode">mode strict</a></li>
- <li>l’objet courant si la fonction est appelée comme une méthode, etc.</li>
-</ul>
+- un nouvel objet dans le cas d’un constructeur
+- `undefined` dans les appels de fonctions en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode)
+- l’objet courant si la fonction est appelée comme une méthode, etc.
 
-<p>Cela a pu entraîner des confusions lorsqu’on utilisait un style de programmation orientée objet.</p>
+Cela a pu entraîner des confusions lorsqu’on utilisait un style de programmation orientée objet.
 
-<pre class="brush: js">function Personne () {
+```js
+function Personne () {
   // Le constructeur Personne() définit `this` comme lui-même.
   this.age = 0;
 
@@ -107,11 +103,13 @@ var a3 = a.map( s =&gt; s.length);
   }, 1000);
 }
 
-var p = new Personne();</pre>
+var p = new Personne();
+```
 
-<p>Avec ECMAScript 3/5, ce problème a pu être résolu en affectant la valeur de <code>this</code> à une autre variable :</p>
+Avec ECMAScript 3/5, ce problème a pu être résolu en affectant la valeur de `this` à une autre variable :
 
-<pre class="brush: js">function Personne () {
+```js
+function Personne () {
   var that = this;
   that.age = 0;
 
@@ -120,46 +118,52 @@ var p = new Personne();</pre>
     // qui est le contexte souhaité
     that.age++;
   }, 1000);
-}</pre>
+}
+```
 
-<p>Autrement, on aurait pu utiliser une <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/bind">fonction de liaison</a> afin que la bonne valeur <code>this</code> soit passée à la fonction <code>grandir</code>.</p>
+Autrement, on aurait pu utiliser une [fonction de liaison](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Function/bind) afin que la bonne valeur `this` soit passée à la fonction `grandir`.
 
-<p>Les fonctions fléchées ne créent pas de nouveau contexte, elles utilisent la valeur <code>this</code> de leur contexte. Aussi, si le mot-clé <code>this</code> est utilisé dans le corps de la fonction, le moteur recherchera la référence à cette valeur dans une portée parente. Le code qui suit fonctionne ainsi de la façon attendue car le <code>this</code> utilisé dans <code>setInterval</code> est le <code>this</code>de la portée de <code>Personne</code> :</p>
+Les fonctions fléchées ne créent pas de nouveau contexte, elles utilisent la valeur `this` de leur contexte. Aussi, si le mot-clé `this` est utilisé dans le corps de la fonction, le moteur recherchera la référence à cette valeur dans une portée parente. Le code qui suit fonctionne ainsi de la façon attendue car le `this` utilisé dans `setInterval` est le `this`de la portée de `Personne` :
 
-<pre class="brush: js">function Personne () {
+```js
+function Personne () {
   this.age = 0;
 
-  setInterval(() =&gt; {
+  setInterval(() => {
     this.age++;
     // |this| fait bien référence à l'objet personne
   }, 1000);
 }
 
-var p = new Personne();</pre>
+var p = new Personne();
+```
 
-<h4 id="Liens_avec_le_mode_strict">Liens avec le mode strict</h4>
+#### Liens avec le mode strict
 
-<p>Ici <code>this</code> provient du contexte englobant, les règles du <a href="/fr/docs/Web/JavaScript/Reference/Fonctions_et_portee_des_fonctions/Strict_mode">mode strict</a> sont donc ignorées pour ce qui concerne <code>this</code>.</p>
+Ici `this` provient du contexte englobant, les règles du [mode strict](/fr/docs/Web/JavaScript/Reference/Fonctions_et_portee_des_fonctions/Strict_mode) sont donc ignorées pour ce qui concerne `this`.
 
-<pre class="brush: js">var f = () =&gt; {'use strict'; return this};
-f() === window; // ou l'objet global</pre>
+```js
+var f = () => {'use strict'; return this};
+f() === window; // ou l'objet global
+```
 
-<p>Le reste des règles du mode strict sont appliquées normalement.</p>
+Le reste des règles du mode strict sont appliquées normalement.
 
-<h4 id="Appel_via_jsxref(Function.prototype.call())_ou_jsxref(Function.prototype.apply())">Appel via {{jsxref("Function.prototype.call()")}} ou {{jsxref("Function.prototype.apply()")}}</h4>
+#### Appel via {{jsxref("Function.prototype.call()")}} ou {{jsxref("Function.prototype.apply()")}}
 
-<p>Étant donné que <code>this</code> provient du contexte englobant, si on invoque une fonction via la méthode <code>call</code> ou <code>apply</code>, cela ne passera que des arguments mais n’aura aucun effet sur <code>this</code> :</p>
+Étant donné que `this` provient du contexte englobant, si on invoque une fonction via la méthode `call` ou `apply`, cela ne passera que des arguments mais n’aura aucun effet sur `this` :
 
-<pre class="brush: js">var ajouter = {
+```js
+var ajouter = {
   base: 1,
 
   add : function (a) {
-    var f = v =&gt; v + this.base;
+    var f = v => v + this.base;
     return f(a);
   },
 
   addViaCall: function (a) {
-    var f = v =&gt; v + this.base;
+    var f = v => v + this.base;
     var b = {
       base: 2
     };
@@ -172,42 +176,47 @@ console.log(ajouter.add(1));
 
 console.log(ajouter.addViaCall(1));
 // Cela affichera toujours 2
-</pre>
+```
 
-<h4 id="Pas_de_liaison_pour_arguments">Pas de liaison pour <code>arguments</code></h4>
+#### Pas de liaison pour `arguments`
 
-<p>Les fonctions fléchées n’exposent pas d’objet <a href="/fr/docs/Web/JavaScript/Reference/Fonctions/arguments"><code>arguments</code></a> : <code>arguments.length</code>, <code>arguments[0]</code>, <code>arguments[1]</code>, et autres ne font donc pas référence aux arguments passés à la fonction fléchés. Dans ce cas <code>arguments</code> est simplement une référence à la variable de même nom si elle est présente dans la portée englobante :</p>
+Les fonctions fléchées n’exposent pas d’objet [`arguments`](/fr/docs/Web/JavaScript/Reference/Fonctions/arguments) : `arguments.length`, `arguments[0]`, `arguments[1]`, et autres ne font donc pas référence aux arguments passés à la fonction fléchés. Dans ce cas `arguments` est simplement une référence à la variable de même nom si elle est présente dans la portée englobante :
 
-<pre class="brush: js">var arguments = [1, 2, 3];
-var arr = () =&gt; arguments[0];
+```js
+var arguments = [1, 2, 3];
+var arr = () => arguments[0];
 
 arr(); // 1
 
 function toto () {
-  var f = (i) =&gt; arguments[0] + i;
+  var f = (i) => arguments[0] + i;
   // lien implicite avec arguments de toto
   return f(2);
 }
 
-toto(3); // 5</pre>
+toto(3); // 5
+```
 
-<p>Les fonctions fléchées n’ont donc pas leur propre objet <code>arguments</code>, mais dans la plupart des cas, <a href="/fr/docs/Web/JavaScript/Reference/Fonctions/paramètres_du_reste">les paramètres du reste</a> représentent une bonne alternative :</p>
+Les fonctions fléchées n’ont donc pas leur propre objet `arguments`, mais dans la plupart des cas, [les paramètres du reste](/fr/docs/Web/JavaScript/Reference/Fonctions/paramètres_du_reste) représentent une bonne alternative :
 
-<pre class="brush: js">function toto () {
-  var f = (...args) =&gt; args[0];
+```js
+function toto () {
+  var f = (...args) => args[0];
   return f(2);
 }
 
-toto(1); // 2</pre>
+toto(1); // 2
+```
 
-<h4 id="Les_fonctions_fléchées_comme_méthodes">Les fonctions fléchées comme méthodes</h4>
+#### Les fonctions fléchées comme méthodes
 
-<p>Comme indiqué précédemment, les fonctions fléchées sont mieux indiquées pour les fonctions qui ne sont pas des méthodes. Prenons un exemple pour illustrer ce point</p>
+Comme indiqué précédemment, les fonctions fléchées sont mieux indiquées pour les fonctions qui ne sont pas des méthodes. Prenons un exemple pour illustrer ce point
 
-<pre class="brush: js">'use strict';
+```js
+'use strict';
 var objet = {
   i: 10,
-  b: () =&gt; console.log(this.i, this),
+  b: () => console.log(this.i, this),
   c: function() {
     console.log(this.i, this);
   }
@@ -217,95 +226,106 @@ objet.b();
 // affiche undefined, Window (ou l'objet global de l'environnement)
 
 objet.c();
-// affiche 10, Object {...}</pre>
+// affiche 10, Object {...}
+```
 
-<h4 id="Utiliser_prototype">Utiliser <code>prototype</code></h4>
+#### Utiliser `prototype`
 
-<p>Les fonctions fléchées ne possèdent pas de prototype :</p>
+Les fonctions fléchées ne possèdent pas de prototype :
 
-<pre class="brush: js">var Toto = () =&gt; {};
+```js
+var Toto = () => {};
 console.log(Toto.prototype);
-</pre>
+```
 
-<h4 id="Utiliser_le_mot-clé_yield">Utiliser le mot-clé <code>yield</code></h4>
+#### Utiliser le mot-clé `yield`
 
-<p>Le mot-clé <code><a href="/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/yield">yield</a></code> ne peut pas être utilisé dans le corps d’une fonction fléchée (sauf si cela intervient dans une autre fonction, imbriquée dans la fonction fléchée). De fait, les fonctions fléchéees ne peuvent donc pas être utilisées comme générateurs.</p>
+Le mot-clé [`yield`](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/yield) ne peut pas être utilisé dans le corps d’une fonction fléchée (sauf si cela intervient dans une autre fonction, imbriquée dans la fonction fléchée). De fait, les fonctions fléchéees ne peuvent donc pas être utilisées comme générateurs.
 
-<h4 id="Utiliser_le_mot-clé_new">Utiliser le mot-clé <code>new</code></h4>
+#### Utiliser le mot-clé `new`
 
-<p>Les fonctions fléchées ne peuvent pas être utilisées comme constructeurs et lèveront une exception si elles sont utilisées avec le mot-clé <code>new</code>.</p>
+Les fonctions fléchées ne peuvent pas être utilisées comme constructeurs et lèveront une exception si elles sont utilisées avec le mot-clé `new`.
 
-<pre class="brush: js">var Toto = () =&gt; {};
+```js
+var Toto = () => {};
 var toto = new Toto();
-// TypeError: Toto is not a constructor</pre>
+// TypeError: Toto is not a constructor
+```
 
-<h2 id="Gestion_du_corps_de_la_fonction">Gestion du corps de la fonction</h2>
+## Gestion du corps de la fonction
 
-<p>Les fonctions fléchées peuvent avoir une syntaxe concise ou utiliser un bloc d’instructions classique. Cette dernière syntaxe n’a pas de valeur de retour implicite et il faut donc employer l’instruction <code>return</code>.</p>
+Les fonctions fléchées peuvent avoir une syntaxe concise ou utiliser un bloc d’instructions classique. Cette dernière syntaxe n’a pas de valeur de retour implicite et il faut donc employer l’instruction `return`.
 
-<pre class="brush: js">// méthode concise, retour implicite
-var fonction = x =&gt; x * x;
+```js
+// méthode concise, retour implicite
+var fonction = x => x * x;
 
 // bloc classique, retour explicite
-var fonction = (x, y) =&gt; { return x + y; }
-</pre>
+var fonction = (x, y) => { return x + y; }
+```
 
-<h2 id="Renvoyer_des_littéraux_objets">Renvoyer des littéraux objets</h2>
+## Renvoyer des littéraux objets
 
-<p>Attention à bien utiliser les parenthèses lorsqu’on souhaite renvoyer des objets avec des littéraux :</p>
+Attention à bien utiliser les parenthèses lorsqu’on souhaite renvoyer des objets avec des littéraux :
 
-<pre class="brush: js">// fonction() renverra undefined !
-var fonction = () =&gt; { toto: 1 };
+```js
+// fonction() renverra undefined !
+var fonction = () => { toto: 1 };
 
 // SyntaxError
-var fonction2 = () =&gt;  { toto: function () {} };
-</pre>
+var fonction2 = () =>  { toto: function () {} };
+```
 
-<p>En effet, ici, l’analyse de l’expression trouve des blocs d’instructions au lieu de littéraux objets. Pour éviter cet effet indésirable, on pourra encadrer le littéral objet :</p>
+En effet, ici, l’analyse de l’expression trouve des blocs d’instructions au lieu de littéraux objets. Pour éviter cet effet indésirable, on pourra encadrer le littéral objet :
 
-<pre class="brush: js">var fonction = () =&gt; ({ toto: 1 });</pre>
+```js
+var fonction = () => ({ toto: 1 });
+```
 
-<h2 id="Sauts_de_ligne">Sauts de ligne</h2>
+## Sauts de ligne
 
-<p>Il ne peut pas y avoir de saut de ligne entre les paramètres et la flèche d’une fonction fléchée.</p>
+Il ne peut pas y avoir de saut de ligne entre les paramètres et la flèche d’une fonction fléchée.
 
-<pre class="brush: js">var func = ()
-            =&gt; 1; // SyntaxError: expected expression,
-                  //              got '=&gt;'
-</pre>
+```js
+var func = ()
+            => 1; // SyntaxError: expected expression,
+                  //              got '=>'
+```
 
-<h2 id="Ordre_syntaxique">Ordre syntaxique</h2>
+## Ordre syntaxique
 
-<p>La flèche utilisée pour une fonction fléchée n’est pas un opérateur. Les fonctions fléchées ont des règles spécifiques quant à leur place dans la syntaxe et interagissent différemment de la précédence des opérateurs par rapport à une fonction classique :</p>
+La flèche utilisée pour une fonction fléchée n’est pas un opérateur. Les fonctions fléchées ont des règles spécifiques quant à leur place dans la syntaxe et interagissent différemment de la précédence des opérateurs par rapport à une fonction classique :
 
-<pre class="brush: js">let fonctionRappel;
+```js
+let fonctionRappel;
 
 fonctionRappel = fonctionRappel || function () {};
 // OK
 
-fonctionRappel = fonctionRappel || () =&gt; {};
+fonctionRappel = fonctionRappel || () => {};
 // SyntaxError: invalid arrow-function arguments
 
-fonctionRappel = fonctionRappel || (() =&gt; {});
+fonctionRappel = fonctionRappel || (() => {});
 // OK
-</pre>
+```
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">// Une fonction fléchée vide renvoie undefined
-let vide = () =&gt; {};
+```js
+// Une fonction fléchée vide renvoie undefined
+let vide = () => {};
 
-(() =&gt; "tototruc")()
+(() => "tototruc")()
 // exemple d'une fonction immédiatement
 // invoquée (IIFE en anglais) qui renvoie
 // "tototruc"
 
-var simple = a =&gt; a &gt; 15 ? 15 : a;
+var simple = a => a > 15 ? 15 : a;
 simple(16); // 15
 simple(10); // 10
 
-var complexe = (a, b) =&gt; {
-    if (a &gt; b) {
+var complexe = (a, b) => {
+    if (a > b) {
         return a;
     } else {
         return b;
@@ -314,61 +334,44 @@ var complexe = (a, b) =&gt; {
 
 var arr = [5, 6, 13, 0, 1, 18, 23];
 
-var sum = arr.reduce((a, b) =&gt; a + b);
+var sum = arr.reduce((a, b) => a + b);
 // 66
 
-var even = arr.filter(v =&gt; v % 2 == 0);
+var even = arr.filter(v => v % 2 == 0);
 // [6, 0, 18]
 
-var double = arr.map(v =&gt; v * 2);
+var double = arr.map(v => v * 2);
 // [10, 12, 26, 0, 2, 36, 46]
 
 // On peut aussi construire des chaînes
 // de promesses plus concises
-promise.then(a =&gt; {
+promise.then(a => {
     // ...
-}).then(b =&gt; {
+}).then(b => {
     // ...
 });
 
 // Cela permet de visualiser les
 // fonctions sans paramètres
-setTimeout( () =&gt; {
+setTimeout( () => {
     console.log("Et voilà");
-    setTimeout( () =&gt; {
+    setTimeout( () => {
         console.log("ensuite…");
     }, 1);
 }, 1);
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-arrow-function-definitions', 'Arrow Function Definitions')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-arrow-function-definitions', 'Arrow Function Definitions')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-arrow-function-definitions', 'Arrow Function Definitions')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-arrow-function-definitions', 'Arrow Function Definitions')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.functions.arrow_functions")}}</p>
+{{Compat("javascript.functions.arrow_functions")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L’article sur les fonctions fléchées présent sur <a href="https://tech.mozfr.org">https ://tech.mozfr.org</a> (l’article original en anglais est disponible <a href="https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/">ici</a>).</li>
-</ul>
+- L’article sur les fonctions fléchées présent sur [https ://tech.mozfr.org](https://tech.mozfr.org) (l’article original en anglais est disponible [ici](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)).

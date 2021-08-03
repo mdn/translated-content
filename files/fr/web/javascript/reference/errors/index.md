@@ -6,19 +6,17 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors
 original_slug: Web/JavaScript/Reference/Erreurs
 ---
-<p>{{jsSidebar("Errors")}}</p>
+{{jsSidebar("Errors")}}
 
-<p><em>Errare ECMAScript est</em>…<br>
- Vous trouverez ci-après une liste d'erreurs causées par le moteur JavaScript. Ces erreurs peuvent aider à déboguer certains problèmes mais leur signification n'est pas toujours claire. Chacune de ces pages fournit donc des explications et informations supplémentaires à propos de ces erreurs.</p>
+_Errare ECMAScript est_…
+Vous trouverez ci-après une liste d'erreurs causées par le moteur JavaScript. Ces erreurs peuvent aider à déboguer certains problèmes mais leur signification n'est pas toujours claire. Chacune de ces pages fournit donc des explications et informations supplémentaires à propos de ces erreurs.
 
-<p>D'un point de vue technique, chaque erreur est un objet {{jsxref("Error")}} et possède une propriété <code>name</code> (son nom) et une propriété <code>message</code>.</p>
+D'un point de vue technique, chaque erreur est un objet {{jsxref("Error")}} et possède une propriété `name` (son nom) et une propriété `message`.
 
-<h2 id="Liste_d'erreurs">Liste d'erreurs</h2>
+## Liste d'erreurs
 
-<p>{{ListSubPages("/fr/docs/Web/JavaScript/Reference/Erreurs")}}</p>
+{{ListSubPages("/fr/docs/Web/JavaScript/Reference/Erreurs")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Learn/JavaScript/First_steps/What_went_wrong">Qu'est-ce qui a cloché ? Diagnostiquer un problème JavaScript</a> : un tutoriel introductif pour réparer les erreurs JavaScript</li>
-</ul>
+- [Qu'est-ce qui a cloché ? Diagnostiquer un problème JavaScript](/fr/docs/Learn/JavaScript/First_steps/What_went_wrong) : un tutoriel introductif pour réparer les erreurs JavaScript

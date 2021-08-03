@@ -10,96 +10,93 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/any
 original_slug: Web/JavaScript/Reference/Objets_globaux/Promise/any
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>Promise.any()</code></strong> prend comme argument un itérable contenant des objets {{JSxRef("Promise")}} et, dès qu'une des promesses de cet itérable est tenue, renvoie une unique promesse résolue avec la valeur de la promesse résolue. Si aucune promesse de l'itérable n'est tenue (c'est-à-dire si toutes les promesses sont rejetées), la promesse renvoyée est rompue avec un objet {{JSxRef("Objets_globaux/AggregateError", "AggregateError")}} (une nouvelle sous-classe de {{JSxRef("Error")}} qui regroupe un ensemble d'erreurs). Cette méthode fait essentiellement le <em>contraire</em> de {{JSxRef("Promise.all()")}} (qui renvoie une promesse tenue uniquement si toutes les promesses de l'itérable passé en argument ont été tenues).</p>
+La méthode **`Promise.any()`** prend comme argument un itérable contenant des objets {{JSxRef("Promise")}} et, dès qu'une des promesses de cet itérable est tenue, renvoie une unique promesse résolue avec la valeur de la promesse résolue. Si aucune promesse de l'itérable n'est tenue (c'est-à-dire si toutes les promesses sont rejetées), la promesse renvoyée est rompue avec un objet {{JSxRef("Objets_globaux/AggregateError", "AggregateError")}} (une nouvelle sous-classe de {{JSxRef("Error")}} qui regroupe un ensemble d'erreurs). Cette méthode fait essentiellement le _contraire_ de {{JSxRef("Promise.all()")}} (qui renvoie une promesse tenue uniquement si toutes les promesses de l'itérable passé en argument ont été tenues).
 
-<p>{{EmbedInteractiveExample("pages/js/promise-any.html")}}</p>
+{{EmbedInteractiveExample("pages/js/promise-any.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="notranslate">Promise.any(<var>iterable</var>);</pre>
+    Promise.any(iterable);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>iterable</code></dt>
- <dd>Un objet <a href="/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration">itérable</a> tel qu'un tableau ({{JSxRef("Array")}}) contenant des promesses ({{jsxref("Promise")}}).</dd>
-</dl>
+- `iterable`
+  - : Un objet [itérable](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration) tel qu'un tableau ({{JSxRef("Array")}}) contenant des promesses ({{jsxref("Promise")}}).
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<ul>
- <li>Une promesse ({{jsxref("Promise")}}) <strong>déjà résolue</strong> si l'itérable passé en argument est vide.</li>
- <li>Une promesse ({{jsxref("Promise")}}) <strong>résolue en asynchrone</strong> si l'itérable passé en argument ne contient pas de promesses.</li>
- <li>Une promesse ({{jsxref("Promise")}}) <strong>en attente</strong> dans tous les autres cas. La promesse renvoyée est résolue (qu'elle soit tenue ou rompue) <strong>de façon asynchrone</strong> lorsqu'au moins une des promesses de l'itérable est tenue ou si toutes les promesses ont été rompues.</li>
-</ul>
+- Une promesse ({{jsxref("Promise")}}) **déjà résolue** si l'itérable passé en argument est vide.
+- Une promesse ({{jsxref("Promise")}}) **résolue en asynchrone** si l'itérable passé en argument ne contient pas de promesses.
+- Une promesse ({{jsxref("Promise")}}) **en attente** dans tous les autres cas. La promesse renvoyée est résolue (qu'elle soit tenue ou rompue) **de façon asynchrone** lorsqu'au moins une des promesses de l'itérable est tenue ou si toutes les promesses ont été rompues.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Cette méthode est utile afin de renvoyer la première promesse tenue d'un ensemble de promesse. Elle permet de court-circuiter dès qu'une promesse est tenue, sans attendre que les autres promesses soient résolues. Contrairement à {{JSxRef("Promise.all()")}} qui renvoie un tableau avec les valeurs de résolution des promesses, on a ici une seule valeur de résolution (celle de la première promesse tenue). Ce peut être bénéfique lorsqu'on a un ensemble de promesses et qu'on ne souhaite en résoudre qu'une sans se soucier de savoir laquelle des promesses a été tenue en premier.</p>
+Cette méthode est utile afin de renvoyer la première promesse tenue d'un ensemble de promesse. Elle permet de court-circuiter dès qu'une promesse est tenue, sans attendre que les autres promesses soient résolues. Contrairement à {{JSxRef("Promise.all()")}} qui renvoie un tableau avec les valeurs de résolution des promesses, on a ici une seule valeur de résolution (celle de la première promesse tenue). Ce peut être bénéfique lorsqu'on a un ensemble de promesses et qu'on ne souhaite en résoudre qu'une sans se soucier de savoir laquelle des promesses a été tenue en premier.
 
-<p>À la différence de {{JSxRef("Promise.race()")}} qui renvoie la valeur de la première promesse résolue (qu'elle ait été tenue ou rompue), <code>Promise.any()</code> renvoie une promesse avec la valeur de la première promesse <em>tenue</em>. Cette méthode ignore les promesses qui sont rompues jusqu'à obtenir une promesse tenue.</p>
+À la différence de {{JSxRef("Promise.race()")}} qui renvoie la valeur de la première promesse résolue (qu'elle ait été tenue ou rompue), `Promise.any()` renvoie une promesse avec la valeur de la première promesse _tenue_. Cette méthode ignore les promesses qui sont rompues jusqu'à obtenir une promesse tenue.
 
-<h3 id="Une_des_promesses_est_tenue">Une des promesses est tenue</h3>
+### Une des promesses est tenue
 
-<p>La promesse renvoyée par <code>Promise.any()</code> est résolue avec la première valeur résolue de l'itérable, qu'il s'agisse d'une promesse ou non, et que les autres promesses de l'itérable aient échoué ou non.</p>
+La promesse renvoyée par `Promise.any()` est résolue avec la première valeur résolue de l'itérable, qu'il s'agisse d'une promesse ou non, et que les autres promesses de l'itérable aient échoué ou non.
 
-<ul>
- <li>Si une des promesses de l'itérable (non vide) est tenue ou que les valeurs fournies dans l'itérable ne sont pas des promesses, alors la promesse renvoyée par <code>Promise.any()</code> est résolue de façon asynchrone.</li>
-</ul>
+- Si une des promesses de l'itérable (non vide) est tenue ou que les valeurs fournies dans l'itérable ne sont pas des promesses, alors la promesse renvoyée par `Promise.any()` est résolue de façon asynchrone.
 
-<h3 id="Toutes_les_promesses_sont_rompues">Toutes les promesses sont rompues</h3>
+### Toutes les promesses sont rompues
 
-<p>Si toutes les promesses de l'itérable échouent, <code>Promise.any()</code> échoue de asynchrone avec pour valeur d'échec un objet {{JSxRef("Objets_globaux/AggregateError", "AggregateError")}}, qui étend {{JSxRef("Error")}}, et contient une propriété <code>errors</code> qui est un tableau contenant l'ensemble des valeurs d'échec des différentes promesses de l'itérable.</p>
+Si toutes les promesses de l'itérable échouent, `Promise.any()` échoue de asynchrone avec pour valeur d'échec un objet {{JSxRef("Objets_globaux/AggregateError", "AggregateError")}}, qui étend {{JSxRef("Error")}}, et contient une propriété `errors` qui est un tableau contenant l'ensemble des valeurs d'échec des différentes promesses de l'itérable.
 
-<ul>
- <li>Si l'itérable reçu était vide, alors la promesse retournée par cette méthode est rejetée de manière synchrone et la propriété <code>errors</code> de l'objet <code>AggregateError</code> est un tableau vide.</li>
-</ul>
+- Si l'itérable reçu était vide, alors la promesse retournée par cette méthode est rejetée de manière synchrone et la propriété `errors` de l'objet `AggregateError` est un tableau vide.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Première_résolue">Première résolue</h3>
+### Première résolue
 
-<p><code>Promise.any()</code> prend pour valeur de résolution celle de la première promesse résolue, et ce même si une des promesses de l'itérable a échoué avant. Ce comportement est différent de ce {{JSxRef("Promise.race()")}}, qui s'arrête à la première promesse qui se termine avec sa valeur de résolution ou d'échec.</p>
+`Promise.any()` prend pour valeur de résolution celle de la première promesse résolue, et ce même si une des promesses de l'itérable a échoué avant. Ce comportement est différent de ce {{JSxRef("Promise.race()")}}, qui s'arrête à la première promesse qui se termine avec sa valeur de résolution ou d'échec.
 
-<pre class="brush: js notranslate">const pErr = new Promise((resolve, reject) =&gt; {
+```js
+const pErr = new Promise((resolve, reject) => {
   reject("J'échoue toujours");
 });
 
-const pLente = new Promise((resolve, reject) =&gt; {
+const pLente = new Promise((resolve, reject) => {
   setTimeout(resolve, 500, "Éventuellement résolue");
 });
 
-const pRapide = new Promise((resolve, reject) =&gt; {
+const pRapide = new Promise((resolve, reject) => {
   setTimeout(resolve, 100, "Rapidement résolue");
 });
 
-Promise.any([pErr, pLente, pRapide]).then((valeur) =&gt; {
+Promise.any([pErr, pLente, pRapide]).then((valeur) => {
   console.log(valeur);
   // pRapide s'est résolue en premier
 });
-// résultat attendu : "Rapidement résolue"</pre>
+// résultat attendu : "Rapidement résolue"
+```
 
-<h3 id="Échec_avec_AggregateError">Échec avec AggregateError</h3>
+### Échec avec AggregateError
 
-<p><code>Promise.any()</code> échoue avec un objet {{JSxRef("AggregateError")}} si aucun des promesses n'est résolue.</p>
+`Promise.any()` échoue avec un objet {{JSxRef("AggregateError")}} si aucun des promesses n'est résolue.
 
-<pre class="brush: js notranslate">const pErr = new Promise((resolve, reject) =&gt; {
+```js
+const pErr = new Promise((resolve, reject) => {
   reject("J'échoue toujours");
 });
 
-Promise.any([pErr]).catch((err) =&gt; {
+Promise.any([pErr]).catch((err) => {
   console.log(err);
 })
-// résultat attendu : "AggregateError: No Promise in Promise.any was resolved"</pre>
+// résultat attendu : "AggregateError: No Promise in Promise.any was resolved"
+```
 
-<h3 id="Afficher_la_première_image_chargée">Afficher la première image chargée</h3>
+### Afficher la première image chargée
 
-<p>Dans cet exemple, nous avons une fonction qui requête une image et retourne un Blob. Nous utilisons <code>Promise.any()</code> pour requêter plusieurs images et afficher la première qui nous sera disponible (c'est-à-dire dont la promesse sera résolue).</p>
+Dans cet exemple, nous avons une fonction qui requête une image et retourne un Blob. Nous utilisons `Promise.any()` pour requêter plusieurs images et afficher la première qui nous sera disponible (c'est-à-dire dont la promesse sera résolue).
 
-<pre class="brush: js notranslate">function fetchAndDecode(url) {
-  return fetch(url).then(réponse =&gt; {
+```js
+function fetchAndDecode(url) {
+  return fetch(url).then(réponse => {
     if (!réponse.ok)
       throw new Error(`Erreur HTTP ! état : ${response.status}`);
     else
@@ -110,37 +107,36 @@ Promise.any([pErr]).catch((err) =&gt; {
 let café = fetchAndDecode('coffee.jpg');
 let thé = fetchAndDecode('tea.jpg');
 
-Promise.any([café, thé]).then(valeur =&gt; {
+Promise.any([café, thé]).then(valeur => {
   let URLobjet = URL.createObjectURL(valeur);
   let image = document.createElement('img');
   image.src = URLobjet;
   document.body.appendChild(image);
 })
-.catch(e =&gt; {
+.catch(e => {
   console.log(e.message);
-});</pre>
+});
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <td><strong>Spécification</strong></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Promise.any')}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td><strong>Spécification</strong></td>
+    </tr>
+    <tr>
+      <td>{{SpecName('Promise.any')}}</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Promise.any")}}</p>
+{{Compat("javascript.builtins.Promise.any")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{JSxRef("Promise")}}</li>
- <li>{{JSxRef("Promise.all()")}}</li>
- <li>{{JSxRef("Promise.race()")}}</li>
-</ul>
+- {{JSxRef("Promise")}}
+- {{JSxRef("Promise.all()")}}
+- {{JSxRef("Promise.race()")}}

@@ -8,92 +8,59 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/while
 original_slug: Web/JavaScript/Reference/Instructions/while
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>L'instruction <code><strong>while</strong></code> permet de créer une boucle qui s'exécute tant qu'une condition de test est vérifiée. La condition est évaluée avant d'exécuter l'instruction contenue dans la boucle.</p>
+L'instruction **`while`** permet de créer une boucle qui s'exécute tant qu'une condition de test est vérifiée. La condition est évaluée avant d'exécuter l'instruction contenue dans la boucle.
 
-<div>{{EmbedInteractiveExample("pages/js/statement-while.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-while.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">while (<var>condition</var>) instruction</pre>
+    while (condition) instruction
 
-<dl>
- <dt><code>condition</code></dt>
- <dd>Une expression qui est évaluée avant chaque passage dans la boucle. Si cette expression est évaluée à vrai, <code>instruction</code> est exécutée. Lorsque la condition n'est pas vérifiée, l'exécution se poursuit avec l'instruction qui suit la boucle <code>while</code>.</dd>
- <dt><code>instruction</code></dt>
- <dd>Une instruction optionnelle qui doit être exécutée tant que la condition d'entrée est vérifiée. Afin d'exécuter plusieurs instructions au sein de la boucle, on utilisera généralement un {{jsxref("Instructions/bloc","bloc d'instructions","",1)}} (<code>{ ... }</code>) pour les regrouper.<br>
- Note : on pourra utiliser l'instruction <code><a href="/fr/docs/Web/JavaScript/Reference/Instructions/break">break</a></code> afin d'arrêter une boucle avant que la condition soit vérifiée.</dd>
-</dl>
+- `condition`
+  - : Une expression qui est évaluée avant chaque passage dans la boucle. Si cette expression est évaluée à vrai, `instruction` est exécutée. Lorsque la condition n'est pas vérifiée, l'exécution se poursuit avec l'instruction qui suit la boucle `while`.
+- `instruction`
+  - : Une instruction optionnelle qui doit être exécutée tant que la condition d'entrée est vérifiée. Afin d'exécuter plusieurs instructions au sein de la boucle, on utilisera généralement un {{jsxref("Instructions/bloc","bloc d'instructions","",1)}} (`{ ... }`) pour les regrouper.
+    Note : on pourra utiliser l'instruction [`break`](/fr/docs/Web/JavaScript/Reference/Instructions/break) afin d'arrêter une boucle avant que la condition soit vérifiée.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>La boucle <code>while</code> qui suit s'exécute tant que <code>n</code> est strictement inférieur à 3.</p>
+La boucle `while` qui suit s'exécute tant que `n` est strictement inférieur à 3.
 
-<pre class="brush:js">var n = 0;
+```js
+var n = 0;
 var x = 0;
 
-while (n &lt; 3) {
+while (n < 3) {
   n++;
   x += n;
-}</pre>
+}
+```
 
-<p>À chaque itération, la boucle incrémente la valeur de <code>n</code> et l'ajoute à <code>x</code>. Ainsi, <code>x</code> et <code>n</code> prennent les valeurs suivantes :</p>
+À chaque itération, la boucle incrémente la valeur de `n` et l'ajoute à `x`. Ainsi, `x` et `n` prennent les valeurs suivantes :
 
-<ul>
- <li>Après la première itération : <code>n</code> = 1 et <code>x</code> = 1</li>
- <li>Après la deuxième itération : <code>n</code> = 2 et <code>x</code> = 3</li>
- <li>Après la troisième itération : <code>n</code> = 3 et <code>x</code> = 6</li>
-</ul>
+- Après la première itération : `n` = 1 et `x` = 1
+- Après la deuxième itération : `n` = 2 et `x` = 3
+- Après la troisième itération : `n` = 3 et `x` = 6
 
-<p>Une fois que la troisième itération est exécutée, la condition <code>n</code> &lt; 3 n'est plus vérifiée et donc la boucle se termine.</p>
+Une fois que la troisième itération est exécutée, la condition `n` < 3 n'est plus vérifiée et donc la boucle se termine.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-while-statement', 'while statement')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-while-statement', 'while statement')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-12.6.2', 'while statement')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3', '#sec-12.6.2', 'while statement')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1', '#sec-12.6.1', 'while statement')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | Statut                       | Commentaires        |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ESDraft', '#sec-while-statement', 'while statement')}} | {{Spec2('ESDraft')}} |                     |
+| {{SpecName('ES6', '#sec-while-statement', 'while statement')}}     | {{Spec2('ES6')}}         |                     |
+| {{SpecName('ES5.1', '#sec-12.6.2', 'while statement')}}                 | {{Spec2('ES5.1')}}     |                     |
+| {{SpecName('ES3', '#sec-12.6.2', 'while statement')}}                 | {{Spec2('ES3')}}         |                     |
+| {{SpecName('ES1', '#sec-12.6.1', 'while statement')}}                 | {{Spec2('ES1')}}         | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.statements.while")}}</p>
+{{Compat("javascript.statements.while")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Instructions/do...while","do...while")}}</li>
- <li>{{jsxref("Instructions/for", "for")}}</li>
-</ul>
+- {{jsxref("Instructions/do...while","do...while")}}
+- {{jsxref("Instructions/for", "for")}}

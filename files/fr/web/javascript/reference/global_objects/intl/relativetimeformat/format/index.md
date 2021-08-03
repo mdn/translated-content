@@ -10,36 +10,33 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat/format
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/RelativeTimeFormat/format
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}La méthode **`Intl.RelativeTimeFormat.prototype.format()`** permet de formater une valeur avec une unité selon des options de locale et de formatage stockées dans l'objet {{jsxref("RelativeTimeFormat")}}.{{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-format.html")}}
 
-<div>La méthode <strong><code>Intl.RelativeTimeFormat.prototype.format()</code></strong> permet de formater une valeur avec une unité selon des options de locale et de formatage stockées dans l'objet {{jsxref("RelativeTimeFormat")}}.</div>
+## Syntaxe
 
-<div>{{EmbedInteractiveExample("pages/js/intl-relativetimeformat-prototype-format.html")}}</div>
+```js
+RelativeTimeFormat.format(valeur, unite)
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+### Paramètres
 
-<pre class="brush: js"><code>RelativeTimeFormat.format(valeur, unite)</code></pre>
+- `valeur`
+  - : Une valeur numérique qu'on souhaite utiliser pour exprimer un temps relatif dans un message internationalisé.
+- `unite`
+  - : L'unité à utiliser pour le message internationalisé exprimant le temps relatif. Les valeurs possibles pour cet argument sont `"year"` (année), `"quarter"` (trimestre), `"month"` (mois), `"week"` (semaine), `"day"` (jour), `"hour"` (heure), `"minute"` (minute), `"second"` (secondes). Les formes plurielles sont également autorisées.
 
-<h3 id="Paramètres">Paramètres</h3>
+## Description
 
-<dl>
- <dt><code>valeur</code></dt>
- <dd>Une valeur numérique qu'on souhaite utiliser pour exprimer un temps relatif dans un message internationalisé.</dd>
- <dt><code>unite</code></dt>
- <dd>L'unité à utiliser pour le message internationalisé exprimant le temps relatif. Les valeurs possibles pour cet argument sont <code>"year"</code> (année), <code>"quarter"</code> (trimestre), <code>"month"</code> (mois), <code>"week"</code> (semaine), <code>"day"</code> (jour), <code>"hour"</code> (heure), <code>"minute"</code> (minute), <code>"second"</code> (secondes). Les formes plurielles sont également autorisées.</dd>
-</dl>
+La fonction renvoyée par l'accesseur `format` permet de formater une valeur et une unité en une chaîne de caractères en prenant en compte la locale et les options de formatage associées à l'objet {{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat")}} utilisé.
 
-<h2 id="Description">Description</h2>
+## Exemples
 
-<p>La fonction renvoyée par l'accesseur <code>format</code> permet de formater une valeur et une unité en une chaîne de caractères en prenant en compte la locale et les options de formatage associées à l'objet {{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat")}} utilisé.</p>
+### Utilisation simple de `format`
 
-<h2 id="Exemples">Exemples</h2>
+L'exemple suivant illustre comment créer un outil de formatage pour les valeurs de temps relatifs en anglais.
 
-<h3 id="Utilisation_simple_de_format">Utilisation simple de <code>format</code></h3>
-
-<p>L'exemple suivant illustre comment créer un outil de formatage pour les valeurs de temps relatifs en anglais.</p>
-
-<pre class="brush: js">// On crée un outil de formatage pour les valeurs exprimant
+```js
+// On crée un outil de formatage pour les valeurs exprimant
 // les temps relatifs en anglais, avec les valeurs par défaut
 // utilisées explicitement.
 const rtf = new Intl.RelativeTimeFormat("en", {
@@ -50,48 +47,37 @@ const rtf = new Intl.RelativeTimeFormat("en", {
 
 // Formatage d'une valeur relative négative.
 rtf.format(-1, "day");
-// &gt; "1 day ago"
+// > "1 day ago"
 
 // Formatage d'une valeur relative positive.
 rtf.format(1, "day");
-// &gt; "in 1 day"</pre>
+// > "in 1 day"
+```
 
-<h3 id="Utiliser_loption_auto">Utiliser l'option <code>auto</code></h3>
+### Utiliser l'option `auto`
 
-<p>Si on passe l'option <code>numeric:auto</code>, c'est la chaîne de caractères <code>yesterday</code> ou <code>tomorrow</code> qui sera produite (en anglais) plutôt que <code>1 day ago</code> ou <code>in 1 day</code>. Cela permet de n'avoir pas nécessairement une valeur numérique en résultat.</p>
+Si on passe l'option `numeric:auto`, c'est la chaîne de caractères `yesterday` ou `tomorrow` qui sera produite (en anglais) plutôt que `1 day ago` ou `in 1 day`. Cela permet de n'avoir pas nécessairement une valeur numérique en résultat.
 
-<pre class="brush: js">// On crée un formateur en anglais avec l'option
+```js
+// On crée un formateur en anglais avec l'option
 // numeric: "auto".
 const rtf = new Intl.RelativeTimeFormat("en", { numeric: "auto" });
 
 // Formatage d'une valeur relative négative.
 rtf.format(-1, "day");
-// &gt; "yesterday"
+// > "yesterday"
 
 // Formatage d'une valeur relative positive.
 rtf.format(1, "day");
-// &gt; "tomorrow"
-</pre>
+// > "tomorrow"
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="https://tc39.github.io/proposal-intl-relative-time/#sec-Intl.RelativeTimeFormat.prototype.format">Proposition pour <code>Intl.RelativeTime</code></a></td>
-   <td>Proposition de niveau 3</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                            | État                    | Commentaires |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ----------------------- | ------------ |
+| [Proposition pour `Intl.RelativeTime`](https://tc39.github.io/proposal-intl-relative-time/#sec-Intl.RelativeTimeFormat.prototype.format) | Proposition de niveau 3 |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Intl.RelativeTimeFormat.format")}}</p>
+{{Compat("javascript.builtins.Intl.RelativeTimeFormat.format")}}

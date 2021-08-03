@@ -11,62 +11,46 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/byteOffset
 original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/byteOffset
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La propriété <strong><code>byteOffset</code></strong> est un accesseur représentant le décalage, exprimé en octets, entre la vue et le début de l'objet {{jsxref("ArrayBuffer")}} ou {{jsxref("SharedArrayBuffer")}} correspondant.</p>
+La propriété **`byteOffset`** est un accesseur représentant le décalage, exprimé en octets, entre la vue et le début de l'objet {{jsxref("ArrayBuffer")}} ou {{jsxref("SharedArrayBuffer")}} correspondant.
 
-<div>{{EmbedInteractiveExample("pages/js/dataview-byteoffset.html")}}</div>
+{{EmbedInteractiveExample("pages/js/dataview-byteoffset.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>dataview</var>.byteOffset</pre>
+    dataview.byteOffset
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La propriété <code>byteOffset</code> est un accesseur/mutateur dont la fonction du mutateur vaut  <code>undefined</code>. Cela signifie que la propriété n'est accesssible qu'en lecture seule. La valeur de la propriété est définie lors de la construction de l'objet <code>DataView</code> et ne peut pas être modifiée.</p>
+La propriété `byteOffset` est un accesseur/mutateur dont la fonction du mutateur vaut  `undefined`. Cela signifie que la propriété n'est accesssible qu'en lecture seule. La valeur de la propriété est définie lors de la construction de l'objet `DataView` et ne peut pas être modifiée.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utilisation_de_la_propriété_byteOffset">Utilisation de la propriété <code>byteOffset</code></h3>
+### Utilisation de la propriété `byteOffset`
 
-<pre class="brush:js">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 var dataview = new DataView(buffer);
 dataview.byteOffset; // 0 (aucun décalage)
 
 var dataview2 = new DataView(buffer, 3);
 dataview2.byteOffset; // 3 (décalage défini lors de la construction de la vue)
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-get-dataview.prototype.byteoffset', 'DataView.prototype.byteOffset')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-get-dataview.prototype.byteoffset', 'DataView.prototype.byteOffset')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                        | Statut                       | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{SpecName('ES6', '#sec-get-dataview.prototype.byteoffset', 'DataView.prototype.byteOffset')}}         | {{Spec2('ES6')}}         | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-get-dataview.prototype.byteoffset', 'DataView.prototype.byteOffset')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.DataView.byteOffset")}}</p>
+{{Compat("javascript.builtins.DataView.byteOffset")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("DataView")}}</li>
- <li>{{jsxref("ArrayBuffer")}}</li>
- <li>{{jsxref("SharedArrayBuffer")}}</li>
-</ul>
+- {{jsxref("DataView")}}
+- {{jsxref("ArrayBuffer")}}
+- {{jsxref("SharedArrayBuffer")}}

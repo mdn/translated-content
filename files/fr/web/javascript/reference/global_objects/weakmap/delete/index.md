@@ -11,65 +11,47 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakMap/delete
 original_slug: Web/JavaScript/Reference/Objets_globaux/WeakMap/delete
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>delete()</strong></code> retire un élément donné de l'objet {{jsxref("WeakMap")}}.</p>
+La méthode **`delete()`** retire un élément donné de l'objet {{jsxref("WeakMap")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/weakmap-prototype-delete.html")}}</div>
+{{EmbedInteractiveExample("pages/js/weakmap-prototype-delete.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>wm</var>.delete(<var>clé</var>);</pre>
+    wm.delete(clé);
 
-<h3 id="Paramètre">Paramètre</h3>
+### Paramètre
 
-<dl>
- <dt><code>clé</code></dt>
- <dd>Il correspond à la clé de l'élément qu'on souhaite retirer de l'objet <code>WeakMap</code>.</dd>
-</dl>
+- `clé`
+  - : Il correspond à la clé de l'élément qu'on souhaite retirer de l'objet `WeakMap`.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p><code>true</code> si un élément de l'objet <code>WeakMap</code> a bien été retiré, <code>false</code> si la clé n'a pas été trouvée ou si la clé n'est pas un objet.</p>
+`true` si un élément de l'objet `WeakMap` a bien été retiré, `false` si la clé n'a pas été trouvée ou si la clé n'est pas un objet.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var wm = new WeakMap();
+```js
+var wm = new WeakMap();
 wm.set(window, "toto");
 
 wm.delete(window); // Renvoie true. La suppression a bien eu lieu.
 
 wm.has(window);    // Renvoie false. L'objet window n'est plus dans la WeakMap.
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-weakmap.prototype.delete', 'WeakMap.prototype.delete')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-weakmap.prototype.delete', 'WeakMap.prototype.delete')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                         | Commentaires        |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES2015', '#sec-weakmap.prototype.delete', 'WeakMap.prototype.delete')}} | {{Spec2('ES2015')}}     | Définition initiale |
+| {{SpecName('ESDraft', '#sec-weakmap.prototype.delete', 'WeakMap.prototype.delete')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.WeakMap.delete")}}</p>
+{{Compat("javascript.builtins.WeakMap.delete")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("WeakMap")}}</li>
-</ul>
+- {{jsxref("WeakMap")}}

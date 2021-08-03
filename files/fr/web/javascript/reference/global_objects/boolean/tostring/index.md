@@ -10,76 +10,52 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Boolean/toString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Boolean/toString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>toString()</strong></code> renvoie une chaine de caractères correspondant à l'objet <code>Boolean</code> courant.</p>
+La méthode **`toString()`** renvoie une chaine de caractères correspondant à l'objet `Boolean` courant.
 
-<div>{{EmbedInteractiveExample("pages/js/boolean-tostring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/boolean-tostring.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>bool</var>.toString()</pre>
+    bool.toString()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une chaîne de caractères qui représente l'objet {{jsxref("Boolean")}}.</p>
+Une chaîne de caractères qui représente l'objet {{jsxref("Boolean")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>L'objet {{jsxref("Boolean")}} surcharge la méthode <code>toString()</code> de l'objet {{jsxref("Object")}} ; il n'hérite pas de la méthode {{jsxref("Object.prototype.toString()")}}. Pour les objets de type <code>Boolean</code>, la méthode <code>toString()</code> renvoie une chaine de caractère representative de l'objet.</p>
+L'objet {{jsxref("Boolean")}} surcharge la méthode `toString()` de l'objet {{jsxref("Object")}} ; il n'hérite pas de la méthode {{jsxref("Object.prototype.toString()")}}. Pour les objets de type `Boolean`, la méthode `toString()` renvoie une chaine de caractère representative de l'objet.
 
-<p>La méthode <code>toString()</code> est automatiquement appelée quand le <code>Boolean</code> doit être representé comme une texte ou lorsque qu'il est concaténé avec une chaine de caractères.</p>
+La méthode `toString()` est automatiquement appelée quand le `Boolean` doit être representé comme une texte ou lorsque qu'il est concaténé avec une chaine de caractères.
 
-<p>Pour les objets de type <code>Boolean</code> , la fonction native <code>toString()</code> renvoie la chaine de caractère "<code>true</code>" ou "<code>false</code>" en fonction de la valeur de l'objet.</p>
+Pour les objets de type `Boolean` , la fonction native `toString()` renvoie la chaine de caractère "`true`" ou "`false`" en fonction de la valeur de l'objet.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_toString()">Utiliser <code>toString()</code></h3>
+### Utiliser `toString()`
 
-<p>Dans ce code, <code>flag.toString()</code> renvoie "<code>true</code>" :</p>
+Dans ce code, `flag.toString()` renvoie "`true`" :
 
-<pre class="brush: js">var flag = new Boolean(true);
+```js
+var flag = new Boolean(true);
 var maVar = flag.toString();
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.6.4.2', 'Boolean.prototype.toString')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-boolean.prototype.tostring', 'Boolean.prototype.toString')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-boolean.prototype.tostring', 'Boolean.prototype.toString')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | Statut                       | Commentaires                                          |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.6.4.2', 'Boolean.prototype.toString')}}                         | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-boolean.prototype.tostring', 'Boolean.prototype.toString')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-boolean.prototype.tostring', 'Boolean.prototype.toString')}} | {{Spec2('ESDraft')}} |                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Boolean.toString")}}</p>
+{{Compat("javascript.builtins.Boolean.toString")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Object.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toString()")}}

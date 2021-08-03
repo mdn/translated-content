@@ -10,60 +10,60 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/slice
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/slice
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>slice()</code></strong> renvoie un objet tableau, contenant une copie superficielle (<em>shallow copy</em>) d'une portion du tableau d'origine, la portion est définie par un indice de début et un indice de fin (exclus). Le tableau original ne sera pas modifié.</p>
+La méthode **`slice()`** renvoie un objet tableau, contenant une copie superficielle (_shallow copy_) d'une portion du tableau d'origine, la portion est définie par un indice de début et un indice de fin (exclus). Le tableau original ne sera pas modifié.
 
-<div>{{EmbedInteractiveExample("pages/js/array-slice.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-slice.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>arr</var>.slice()
-<var>arr</var>.slice(<em>début</em>)
-<var>arr</var>.slice(<em>début</em>, <em>fin</em>)
-</pre>
+    arr.slice()
+    arr.slice(début)
+    arr.slice(début, fin)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>début</code> {{optional_inline}}</dt>
- <dd>Indice (à partir de zéro) depuis lequel commencer l'extraction. S'il s'agit d'un indice négatif, <code>début</code> indique un décalage depuis la fin de la séquence. Par exemple, <code>slice(-2)</code> extrait les avant-dernier et dernier éléments dans la séquence.<br>
- <br>
- Si <code>début</code> est absent, <code>slice()</code> commencera depuis 0. Si <code>début</code> est supérieur à la taille du tableau, c'est un tableau vide qui sera renvoyé.</dd>
- <dt><code>fin</code> {{optional_inline}}</dt>
- <dd>Indice (à partir de zéro) auquel arrêter l'extraction. <code>slice()</code> extrait jusqu'à cet indice, mais pas l'élément situé en <code>fin</code> lui-même. <code>slice(1,4)</code> extrait du deuxième au quatrième élément (les éléments d'indices 1, 2 et 3). S'il s'agit d'un indice négatif, <code>fin</code> indique un décalage depuis la fin de la séquence. <code>slice(2,-1)</code> extrait du troisième à l'avant-dernier élément dans la séquence. Si <code>fin</code> n'est pas fourni, <code>slice()</code> extraira jusqu'à la fin de la séquence (<code>arr.length</code>). Si <code>fin</code> est supérieur à la longueur de la séquence, <code>slice()</code> fera une extraction jusqu'à la fin de la séquence.</dd>
-</dl>
+- `début` {{optional_inline}}
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+  - : Indice (à partir de zéro) depuis lequel commencer l'extraction. S'il s'agit d'un indice négatif, `début` indique un décalage depuis la fin de la séquence. Par exemple, `slice(-2)` extrait les avant-dernier et dernier éléments dans la séquence.
 
-<p>Un nouveau tableau contenant les éléments extraits.</p>
+    Si `début` est absent, `slice()` commencera depuis 0. Si `début` est supérieur à la taille du tableau, c'est un tableau vide qui sera renvoyé.
 
-<h2 id="Description">Description</h2>
+- `fin` {{optional_inline}}
+  - : Indice (à partir de zéro) auquel arrêter l'extraction. `slice()` extrait jusqu'à cet indice, mais pas l'élément situé en `fin` lui-même. `slice(1,4)` extrait du deuxième au quatrième élément (les éléments d'indices 1, 2 et 3). S'il s'agit d'un indice négatif, `fin` indique un décalage depuis la fin de la séquence. `slice(2,-1)` extrait du troisième à l'avant-dernier élément dans la séquence. Si `fin` n'est pas fourni, `slice()` extraira jusqu'à la fin de la séquence (`arr.length`). Si `fin` est supérieur à la longueur de la séquence, `slice()` fera une extraction jusqu'à la fin de la séquence.
 
-<p><code>slice()</code> ne modifie pas le tableau original, mais renvoie une nouvelle copie du tableau (<em>shallow copy</em> — copie superficielle) dont les éléments sont des copies des éléments extraits du tableau original. Les éléments du tableau original sont copiés dans le nouveau tableau de la manière suivante :</p>
+### Valeur de retour
 
-<ul>
- <li>Pour les références à des objets (et non les objets eux-mêmes), <code>slice()</code> copie ces références dans le nouveau tableau. Tant l'original que le nouveau tableau font référence au même objet. Si un objet référencé est modifié, ces changements sont visibles tant pour le nouveau que pour l'ancien tableau.</li>
- <li>Pour les chaines de caractères, les nombres et les booléens, <code>slice()</code> copie ces chaines de caractères, ces nombres et ces valeurs booléennes dans le nouveau tableau. Les modifications sur ces chaînes, nombres ou booléens dans l'un des tableaux n'affectent pas l'autre tableau (NB : lorsque l'on parle de chaine de caractères, de nombre ou de booléen ici, on parle exclusivement de leur <em>type primitif</em>, pas des <em>objets</em> {{jsxref("String")}}, {{jsxref("Number")}} ou {{jsxref("Boolean")}} — voir par exemple <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/String#Les_différences_entre_les_objets_String_et_le_type_primitif_pour_les_chaînes_de_caractères">différences entre objet String et type primitif pour les chaines de caractères</a>).</li>
-</ul>
+Un nouveau tableau contenant les éléments extraits.
 
-<p>Si un nouvel élément est ajouté à l'un ou l'autre tableau, le second n'est pas affecté.</p>
+## Description
 
-<h2 id="Exemples">Exemples</h2>
+`slice()` ne modifie pas le tableau original, mais renvoie une nouvelle copie du tableau (_shallow copy_ — copie superficielle) dont les éléments sont des copies des éléments extraits du tableau original. Les éléments du tableau original sont copiés dans le nouveau tableau de la manière suivante :
 
-<h3 id="Renvoyer_un_fragment_d'un_tableau_existant">Renvoyer un fragment d'un tableau existant</h3>
+- Pour les références à des objets (et non les objets eux-mêmes), `slice()` copie ces références dans le nouveau tableau. Tant l'original que le nouveau tableau font référence au même objet. Si un objet référencé est modifié, ces changements sont visibles tant pour le nouveau que pour l'ancien tableau.
+- Pour les chaines de caractères, les nombres et les booléens, `slice()` copie ces chaines de caractères, ces nombres et ces valeurs booléennes dans le nouveau tableau. Les modifications sur ces chaînes, nombres ou booléens dans l'un des tableaux n'affectent pas l'autre tableau (NB : lorsque l'on parle de chaine de caractères, de nombre ou de booléen ici, on parle exclusivement de leur _type primitif_, pas des _objets_ {{jsxref("String")}}, {{jsxref("Number")}} ou {{jsxref("Boolean")}} — voir par exemple [différences entre objet String et type primitif pour les chaines de caractères](/fr/docs/Web/JavaScript/Reference/Objets_globaux/String#Les_différences_entre_les_objets_String_et_le_type_primitif_pour_les_chaînes_de_caractères)).
 
-<pre class="brush: js">var fruits = ["Banane", "Orange", "Citron", "Pomme", "Mangue"];
+Si un nouvel élément est ajouté à l'un ou l'autre tableau, le second n'est pas affecté.
+
+## Exemples
+
+### Renvoyer un fragment d'un tableau existant
+
+```js
+var fruits = ["Banane", "Orange", "Citron", "Pomme", "Mangue"];
 var agrumes = fruits.slice(1, 3);
 
-// fruits vaut --&gt; ["Banane", "Orange", "Citron", "Pomme", "Mangue"]
-// agrumes vaut --&gt; ["Orange", "Citron"]</pre>
+// fruits vaut --> ["Banane", "Orange", "Citron", "Pomme", "Mangue"]
+// agrumes vaut --> ["Orange", "Citron"]
+```
 
-<h3 id="Utiliser_slice()">Utiliser <code>slice()</code></h3>
+### Utiliser `slice()`
 
-<p>Dans l'exemple qui suit, <code>slice()</code> crée un nouveau tableau, <code>nouvelleVoiture</code>, à partir de <code>maVoiture</code>. Chacun d'entre eux contient une référence à l'objet <code>maHonda</code>. Lorsque la couleur de <code>maHonda</code> est changée en bordeaux, les deux tableaux reflètent ce changement.</p>
+Dans l'exemple qui suit, `slice()` crée un nouveau tableau, `nouvelleVoiture`, à partir de `maVoiture`. Chacun d'entre eux contient une référence à l'objet `maHonda`. Lorsque la couleur de `maHonda` est changée en bordeaux, les deux tableaux reflètent ce changement.
 
-<pre class="brush: js">// Avec slice, crée nouvelleVoiture depuis maVoiture
+```js
+// Avec slice, crée nouvelleVoiture depuis maVoiture
 var maHonda = { couleur : "rouge", roues : 4, moteur : { cylindres : 4, capacité : 2.2 } };
 var maVoiture = [maHonda, 2, "excellente condition", "achetée en 1997"];
 var nouvelleVoiture = maVoiture.slice(0, 2);
@@ -82,11 +82,12 @@ console.log("La nouvelle couleur de ma Honda est " + maHonda.couleur);
 // Affiche la couleur de maHonda référencées depuis les deux tableaux.
 console.log("maVoiture[0].couleur = " + maVoiture[0].couleur);
 console.log("nouvelleVoiture[0].couleur = " + nouvelleVoiture[0].couleur);
-</pre>
+```
 
-<p>Ce script affichera :</p>
+Ce script affichera :
 
-<pre class="brush: js">maVoiture = [{couleur:"rouge", roues:4, moteur:{cylindres:4, capacité:2.2}}, 2,
+```js
+maVoiture = [{couleur:"rouge", roues:4, moteur:{cylindres:4, capacité:2.2}}, 2,
              "excellente condition", "achetée en 1997"]
 nouvelleVoiture = [{couleur:"rouge", roues:4, moteur:{cylindres:4, capacité:2.2}}, 2]
 maVoiture[0].couleur = rouge
@@ -94,22 +95,24 @@ nouvelleVoiture[0].couleur = rouge
 La nouvelle couleur de ma Honda est bordeaux
 maVoiture[0].couleur = bordeaux
 nouvelleVoiture[0].couleur = bordeaux
-</pre>
+```
 
-<h2 id="Utilisation_avec_les_objets_similaires_aux_tableaux">Utilisation avec les objets similaires aux tableaux</h2>
+## Utilisation avec les objets similaires aux tableaux
 
-<p>La méthode <code>slice()</code> peut aussi être appelée pour convertir des objets/collections similaires à des tableaux, en un nouveau tableau. L'objet {{jsxref("Fonctions/arguments", "arguments")}} d'une fonction est un exemple d'objet similaire à un tableau.</p>
+La méthode `slice()` peut aussi être appelée pour convertir des objets/collections similaires à des tableaux, en un nouveau tableau. L'objet {{jsxref("Fonctions/arguments", "arguments")}} d'une fonction est un exemple d'objet similaire à un tableau.
 
-<pre class="brush: js">function list() {
+```js
+function list() {
   return Array.prototype.slice.call(arguments, 0);
 }
 
 var list1 = list(1, 2, 3); // [1, 2, 3]
-</pre>
+```
 
-<p>Il est possible de lier avec la fonction .<code>call</code> de {{jsxref("Function.prototype")}} et on peut effectuer la réduction avec <code>[].slice.call(arguments)</code> plutôt qu'avec <code>Array.prototype.slice.call</code>. Voici comment on peut simplifier avec {{jsxref("Function.prototype.bind", "bind")}} :</p>
+Il est possible de lier avec la fonction .`call` de {{jsxref("Function.prototype")}} et on peut effectuer la réduction avec `[].slice.call(arguments)` plutôt qu'avec `Array.prototype.slice.call`. Voici comment on peut simplifier avec {{jsxref("Function.prototype.bind", "bind")}} :
 
-<pre class="brush: js">var unboundSlice = Array.prototype.slice;
+```js
+var unboundSlice = Array.prototype.slice;
 var slice = Function.prototype.call.bind(unboundSlice);
 
 function list() {
@@ -117,50 +120,23 @@ function list() {
 }
 
 var list1 = list(1, 2, 3); // [1, 2, 3]
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.2.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.10', 'Array.prototype.slice')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.slice', 'Array.prototype.slice')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.slice', 'Array.prototype.slice')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | État                         | Commentaires                                          |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ES3')}}                                                                                 | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.2. |
+| {{SpecName('ES5.1', '#sec-15.4.4.10', 'Array.prototype.slice')}}                     | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-array.prototype.slice', 'Array.prototype.slice')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-array.prototype.slice', 'Array.prototype.slice')}} | {{Spec2('ESDraft')}} |                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Array.slice")}}</p>
+{{Compat("javascript.builtins.Array.slice")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Function.prototype.call()")}}</li>
- <li>{{jsxref("Function.prototype.bind()")}}</li>
- <li>{{jsxref("Array.prototype.splice()")}}</li>
-</ul>
+- {{jsxref("Function.prototype.call()")}}
+- {{jsxref("Function.prototype.bind()")}}
+- {{jsxref("Array.prototype.splice()")}}

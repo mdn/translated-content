@@ -10,55 +10,52 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/SyntaxError
 original_slug: Web/JavaScript/Reference/Objets_globaux/SyntaxError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>L'objet <code><strong>SyntaxError</strong></code> représente une erreur qui se produit lors de l'interprétation d'un code dont la syntaxe est invalide.</p>
+L'objet **`SyntaxError`** représente une erreur qui se produit lors de l'interprétation d'un code dont la syntaxe est invalide.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Une exception <code>SyntaxError</code> est levée lorsque le moteur JavaScript rencontre des entités lexicales invalide ou dans un ordre invalide par rapport à la grammaire du langage.</p>
+Une exception `SyntaxError` est levée lorsque le moteur JavaScript rencontre des entités lexicales invalide ou dans un ordre invalide par rapport à la grammaire du langage.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><code>new SyntaxError([<var>message</var>[, <var>nomFichier</var>[, <var>numLigne</var>]]])</code></pre>
+    new SyntaxError([message[, nomFichier[, numLigne]]])
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>message</code>{{optional_inline}}</dt>
- <dd>Une description, lisible par un humain, de l'erreur.</dd>
- <dt><code>nomFichier</code> {{optional_inline}}{{non-standard_inline}}</dt>
- <dd>Le nom du fichier contenant le code provoquant l'erreur.</dd>
- <dt><code>numLigne</code> {{optional_inline}}{{non-standard_inline}}</dt>
- <dd>Le numéro de la ligne du code qui a provoqué l'exception.</dd>
-</dl>
+- `message`{{optional_inline}}
+  - : Une description, lisible par un humain, de l'erreur.
+- `nomFichier` {{optional_inline}}{{non-standard_inline}}
+  - : Le nom du fichier contenant le code provoquant l'erreur.
+- `numLigne` {{optional_inline}}{{non-standard_inline}}
+  - : Le numéro de la ligne du code qui a provoqué l'exception.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<dl>
- <dt>{{jsxref("SyntaxError.prototype")}}</dt>
- <dd>Cette méthode permet d'ajouter des propriétés aux instance de <code>SyntaxError</code>.</dd>
-</dl>
+- {{jsxref("SyntaxError.prototype")}}
+  - : Cette méthode permet d'ajouter des propriétés aux instance de `SyntaxError`.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p>L'objet global <code>SyntaxError</code> ne contient pas de méthodes directes. En revanche, il hérite de méthodes grâce à sa chaîne de prototypes.</p>
+L'objet global `SyntaxError` ne contient pas de méthodes directes. En revanche, il hérite de méthodes grâce à sa chaîne de prototypes.
 
-<h2 id="Instances_de_SyntaxError">Instances de <code>SyntaxError</code></h2>
+## Instances de `SyntaxError`
 
-<h3 id="Propriétés_2">Propriétés</h3>
+### Propriétés
 
-<div>{{page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/SyntaxError/prototype', 'Propriétés')}}</div>
+{{page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/SyntaxError/prototype', 'Propriétés')}}
 
-<h3 id="Méthodes_2">Méthodes</h3>
+### Méthodes
 
-<div>{{page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/SyntaxError/prototype', 'Méthodes')}}</div>
+{{page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/SyntaxError/prototype', 'Méthodes')}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Intercepter_une_exception_SyntaxError">Intercepter une exception <code>SyntaxError</code></h3>
+### Intercepter une exception `SyntaxError`
 
-<pre class="brush: js">try {
+```js
+try {
   eval('toto truc');
 } catch (e) {
   console.log(e instanceof SyntaxError); // true
@@ -69,11 +66,12 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/SyntaxError
   console.log(e.columnNumber);           // 4
   console.log(e.stack);                  // "@Scratchpad/1:2:3\n"
 }
-</pre>
+```
 
-<h3 id="Créer_une_exception_SyntaxError">Créer une exception <code>SyntaxError</code></h3>
+### Créer une exception `SyntaxError`
 
-<pre class="brush: js">try {
+```js
+try {
   throw new SyntaxError('Coucou', 'unFichier.js', 10);
 } catch (e) {
   console.log(e instanceof SyntaxError); // true
@@ -84,47 +82,22 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/SyntaxError
   console.log(e.columnNumber);           // 0
   console.log(e.stack);                  // "@Scratchpad/2:11:9\n"
 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.11.6.4', 'SyntaxError')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-syntaxerror', 'SyntaxError')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-syntaxerror', 'SyntaxError')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                        | Statut                       | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{SpecName('ES3')}}                                                                                                             | {{Spec2('ES3')}}         | Définition initiale. |
+| {{SpecName('ES5.1', '#sec-15.11.6.4', 'SyntaxError')}}                                                             | {{Spec2('ES5.1')}}     |                      |
+| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-syntaxerror', 'SyntaxError')}}     | {{Spec2('ES6')}}         |                      |
+| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-syntaxerror', 'SyntaxError')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.SyntaxError")}}</p>
+{{Compat("javascript.builtins.SyntaxError")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Error")}}</li>
- <li>{{jsxref("SyntaxError.prototype")}}</li>
-</ul>
+- {{jsxref("Error")}}
+- {{jsxref("SyntaxError.prototype")}}

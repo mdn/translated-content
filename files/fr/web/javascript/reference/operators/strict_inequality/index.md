@@ -7,42 +7,41 @@ tags:
   - Operator
   - Reference
 browser-compat: javascript.operators.strict_inequality
-translation-of: Web/JavaScript/Reference/Operators/Strict_inequality
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>L'opérateur d'inégalité stricte (<code>!==</code>) vérifie si ses deux opérandes ne sont pas égaux et renvoie un booléen correspondant au résultat. À la différence de <a href="/fr/docs/Web/JavaScript/Reference/Operators/Inequality">l'opérateur d'inégalité</a>, l'opérateur d'inégalité stricte considère toujours des opérandes de types différents comme étant différents.</p>
+L'opérateur d'inégalité stricte (`!==`) vérifie si ses deux opérandes ne sont pas égaux et renvoie un booléen correspondant au résultat. À la différence de [l'opérateur d'inégalité](/fr/docs/Web/JavaScript/Reference/Operators/Inequality), l'opérateur d'inégalité stricte considère toujours des opérandes de types différents comme étant différents.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-strict-inequality.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-strict-inequality.html")}}
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">
+```js
 x !== y
-</pre>
+```
 
-<h2 id="description">Description</h2>
+## Description
 
-<p>L'opérateur d'inégalité stricte vérifie que ses deux opérandes ne sont pas égaux. Il s'agit de la négation de <a href="/fr/docs/Web/JavaScript/Reference/Operators/Strict_equality">l'opérateur d'égalité stricte</a>. Les deux expressions suivantes fourniront toujours le même résultat :</p>
+L'opérateur d'inégalité stricte vérifie que ses deux opérandes ne sont pas égaux. Il s'agit de la négation de [l'opérateur d'égalité stricte](/fr/docs/Web/JavaScript/Reference/Operators/Strict_equality). Les deux expressions suivantes fourniront toujours le même résultat :
 
-<pre class="brush: js">
+```js
 x !== y
 !(x === y)
-</pre>
+```
 
-<p>Pour plus de détails sur l'algorithme de comparaison utilisé, voir <a href="/fr/docs/Web/JavaScript/Reference/Operators/Strict_equality">la page sur l'opérateur d'égalité stricte</a>.</p>
+Pour plus de détails sur l'algorithme de comparaison utilisé, voir [la page sur l'opérateur d'égalité stricte](/fr/docs/Web/JavaScript/Reference/Operators/Strict_equality).
 
-<p>À l'instar de l'opérateur d'égalité stricte, l'opérateur d'inégalité stricte considèrera toujours des opérandes de types différents comme étant différents :</p>
+À l'instar de l'opérateur d'égalité stricte, l'opérateur d'inégalité stricte considèrera toujours des opérandes de types différents comme étant différents :
 
-<pre class="brush: js">
+```js
 3 !== "3"; // true
-</pre>
+```
 
-<h2 id="examples">Exemples</h2>
+## Exemples
 
-<h3 id="comparing_operands_of_the_same_type">Comparaison d'opérandes de même type</h3>
+### Comparaison d'opérandes de même type
 
-<pre class="brush: js">
+```js
 console.log("hello" !== "hello");   // false
 console.log("hello" !== "hola");    // true
 
@@ -53,21 +52,21 @@ console.log(true !== true);         // false
 console.log(true !== false);        // true
 
 console.log(null !== null);         // false
-</pre>
+```
 
-<h3 id="comparing_operands_of_different_types">Comparaison d'opérandes de types différents</h3>
+### Comparaison d'opérandes de types différents
 
-<pre class="brush: js">
+```js
 console.log("3" !== 3);           // true
 
 console.log(true !== 1);          // true
 
 console.log(null !== undefined);  // true
-</pre>
+```
 
-<h3 id="comparing_objects">Comparaison d'objets</h3>
+### Comparaison d'objets
 
-<pre class="brush: js">
+```js
 const objet1 = {
   name: "coucou"
 }
@@ -78,20 +77,18 @@ const objet2 = {
 
 console.log(objet1 !== objet2);  // true
 console.log(objet1 !== objet1);  // false
-</pre>
+```
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Inequality">L'opérateur d'inégalité</a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Equality">L'opérateur d'égalité</a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Strict_equality">L'opérateur d'égalité stricte</a></li>
-</ul>
+- [L'opérateur d'inégalité](/fr/docs/Web/JavaScript/Reference/Operators/Inequality)
+- [L'opérateur d'égalité](/fr/docs/Web/JavaScript/Reference/Operators/Equality)
+- [L'opérateur d'égalité stricte](/fr/docs/Web/JavaScript/Reference/Operators/Strict_equality)

@@ -11,54 +11,56 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@match
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/@@match
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>[@@match]()</code></strong> permet de récupérer les correspondances obtenues lorsqu'on teste une chaîne de caractères par rapport à une expression rationnelle (<em>regexp</em>).</p>
+La méthode **`[@@match]()`** permet de récupérer les correspondances obtenues lorsqu'on teste une chaîne de caractères par rapport à une expression rationnelle (_regexp_).
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-prototype-@@match.html")}}</div>
+{{EmbedInteractiveExample("pages/js/regexp-prototype-@@match.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>regexp</var>[Symbol.match](str)</pre>
+    regexp[Symbol.match](str)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>str</code></dt>
- <dd>La chaîne de caractères ({{jsxref("String")}}) sur laquelle on veut chercher des correspondances.</dd>
-</dl>
+- `str`
+  - : La chaîne de caractères ({{jsxref("String")}}) sur laquelle on veut chercher des correspondances.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un tableau ({{jsxref("Array")}}) qui contient les résultats des correspondances et les groupes capturés grâce aux parenthèse. S'il n'y a aucune correspondance, ce sera {{jsxref("null")}}.</p>
+Un tableau ({{jsxref("Array")}}) qui contient les résultats des correspondances et les groupes capturés grâce aux parenthèse. S'il n'y a aucune correspondance, ce sera {{jsxref("null")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Cette méthode est appelée de façon interne lorsqu'on utilise {{jsxref("String.prototype.match()")}}. Ainsi, les deux exemples qui suivent sont équivalents et le second est la version interne du premier :</p>
+Cette méthode est appelée de façon interne lorsqu'on utilise {{jsxref("String.prototype.match()")}}. Ainsi, les deux exemples qui suivent sont équivalents et le second est la version interne du premier :
 
-<pre class="brush: js">'abc'.match(/a/);
+```js
+'abc'.match(/a/);
 
-/a/[Symbol.match]('abc');</pre>
+/a/[Symbol.match]('abc');
+```
 
-<p>Cette méthode existe afin de permettre d'adapter le comportement de la recherche des correspondances pour les sous-classes de <code>RegExp</code>.</p>
+Cette méthode existe afin de permettre d'adapter le comportement de la recherche des correspondances pour les sous-classes de `RegExp`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Appel_direct">Appel direct</h3>
+### Appel direct
 
-<p>Cette méthode peut être utilisée comme {{jsxref("String.prototype.match()")}} mais avec un objet <code>this</code> différent et un ordre des paramètres également différent.</p>
+Cette méthode peut être utilisée comme {{jsxref("String.prototype.match()")}} mais avec un objet `this` différent et un ordre des paramètres également différent.
 
-<pre class="brush: js">var re = /[0-9]+/g;
+```js
+var re = /[0-9]+/g;
 var str = '2016-01-02';
 var résultat = re[Symbol.match](str);
 console.log(résultat);  // ["2016", "01", "02"]
-</pre>
+```
 
-<h3 id="Utilisation_de_match_avec_une_sous-classe">Utilisation de <code>@@match</code> avec une sous-classe</h3>
+### Utilisation de `@@match` avec une sous-classe
 
-<p>Les sous-classes de {{jsxref("RegExp")}} peuvent surcharger la méthode <code>[@@match]()</code> afin de modifier le comportement.</p>
+Les sous-classes de {{jsxref("RegExp")}} peuvent surcharger la méthode `[@@match]()` afin de modifier le comportement.
 
-<pre class="brush: js">class MaRegExp extends RegExp {
+```js
+class MaRegExp extends RegExp {
   [Symbol.match](str) {
     var résultat = RegExp.prototype[Symbol.match].call(this, str);
     if (!résultat) return null;
@@ -76,41 +78,24 @@ var résultat = str.match(re); // String.prototype.match appelle re[@@match].
 console.log(résultat.group(1)); // 2016
 console.log(résultat.group(2)); // 01
 console.log(résultat.group(3)); // 02
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-regexp.prototype-@@match', 'RegExp.prototype[@@match]')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-regexp.prototype-@@match', 'RegExp.prototype[@@match]')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                         | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES6', '#sec-regexp.prototype-@@match', 'RegExp.prototype[@@match]')}}     | {{Spec2('ES6')}}         | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-regexp.prototype-@@match', 'RegExp.prototype[@@match]')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.RegExp.@@match")}}</p>
+{{Compat("javascript.builtins.RegExp.@@match")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("String.prototype.match()")}}</li>
- <li>{{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}</li>
- <li>{{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}</li>
- <li>{{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}</li>
- <li>{{jsxref("RegExp.prototype.exec()")}}</li>
- <li>{{jsxref("RegExp.prototype.test()")}}</li>
-</ul>
+- {{jsxref("String.prototype.match()")}}
+- {{jsxref("RegExp.prototype.@@replace()", "RegExp.prototype[@@replace]()")}}
+- {{jsxref("RegExp.prototype.@@search()", "RegExp.prototype[@@search]()")}}
+- {{jsxref("RegExp.prototype.@@split()", "RegExp.prototype[@@split]()")}}
+- {{jsxref("RegExp.prototype.exec()")}}
+- {{jsxref("RegExp.prototype.test()")}}

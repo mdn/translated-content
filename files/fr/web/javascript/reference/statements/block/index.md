@@ -6,112 +6,116 @@ tags:
   - Language feature
   - Reference
   - Statement
-browser-compat: javascript.statements.block
 translation_of: Web/JavaScript/Reference/Statements/block
 original_slug: Web/JavaScript/Reference/Instructions/bloc
+browser-compat: javascript.statements.block
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>Une <strong>instruction de bloc</strong> est utilisée afin de grouper zéro ou plusieurs instructions. Le bloc est délimité par une paire d'accolades. On peut éventuellement « étiqueter » un bloc avec un <a href="/fr/docs/Web/JavaScript/Reference/Statements/label">label</a>.</p>
+Une **instruction de bloc** est utilisée afin de grouper zéro ou plusieurs instructions. Le bloc est délimité par une paire d'accolades. On peut éventuellement « étiqueter » un bloc avec un [label](/fr/docs/Web/JavaScript/Reference/Statements/label).
 
-<div>{{EmbedInteractiveExample("pages/js/statement-block.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-block.html", "taller")}}
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="block_statement">Instruction de bloc</h3>
+### Instruction de bloc
 
-<pre class="brush: js">{
-  <em>instruction_1</em>;
-  <em>instruction_2</em>;
+```js
+{
+  instruction_1;
+  instruction_2;
   ...
-  <em>instruction_n</em>;
+  instruction_n;
 }
-</pre>
+```
 
-<h3 id="labelled_block_statement">Instruction de bloc étiquetée</h3>
+### Instruction de bloc étiquetée
 
-<pre class="brush: js">// ou, avec une étiquette :
+```js
+// ou, avec une étiquette :
 label: {
-  <em>instruction_1</em>;
-  <em>instruction_2</em>;
+  instruction_1;
+  instruction_2;
   ...
-  <em>instruction_n</em>;
+  instruction_n;
 }
-</pre>
+```
 
-<dl>
-  <dt><code>instruction_1</code>, <code>instruction_2</code>, <code>instruction_n</code></dt>
-  <dd>Les instructions qu'on souhaite regrouper au sein du bloc.</dd>
-  <dt><code>label</code> {{optional_inline}}</dt>
-  <dd>Une <a href="/fr/docs/Web/JavaScript/Reference/Statements/label">étiquette</a> qui permet une identification visuelle de la cible d'une instruction <code><a href="/fr/docs/Web/JavaScript/Reference/Statements/break">break</a></code>.</dd>
-</dl>
+- `instruction_1`, `instruction_2`, `instruction_n`
+  - : Les instructions qu'on souhaite regrouper au sein du bloc.
+- `label` {{optional_inline}}
+  - : Une [étiquette](/fr/docs/Web/JavaScript/Reference/Statements/label) qui permet une identification visuelle de la cible d'une instruction [`break`](/fr/docs/Web/JavaScript/Reference/Statements/break).
 
-<h2 id="description">Description</h2>
+## Description
 
-<p>Cette instruction est le plus souvent utilisée avec les instructions de contrôle (ex. <a href="/fr/docs/Web/JavaScript/Reference/Statements/if...else"><code>if…else</code></a>, <a href="/fr/docs/Web/JavaScript/Reference/Statements/for"><code>for</code></a>, <a href="/fr/docs/Web/JavaScript/Reference/Statements/while"><code>while</code></a>). On verra ainsi :</p>
+Cette instruction est le plus souvent utilisée avec les instructions de contrôle (ex. [`if…else`](/fr/docs/Web/JavaScript/Reference/Statements/if...else), [`for`](/fr/docs/Web/JavaScript/Reference/Statements/for), [`while`](/fr/docs/Web/JavaScript/Reference/Statements/while)). On verra ainsi :
 
-<pre class="brush: js">while (x &lt; 10) {
+```js
+while (x < 10) {
   x++;
 }
-</pre>
+```
 
-<p>On peut voir dans cet exemple que cette instruction se termine sans point-virgule.</p>
+On peut voir dans cet exemple que cette instruction se termine sans point-virgule.
 
-<p>L'instruction de bloc est souvent appelée <strong>instruction composée (<em>compound statement</em>)</strong> dans d'autres langages. En effet, elle permet d'utiliser plusieurs instructions là où JavaScript n'attend qu'une instruction. C'est une pratique courante que de combiner plusieurs instructions grâce aux blocs. À l'opposé, on peut utiliser une <a href="/fr/docs/Web/JavaScript/Reference/Statements/Empty">instruction vide</a> pour ne rien faire là où JavaScript attend une instruction.</p>
+L'instruction de bloc est souvent appelée **instruction composée (_compound statement_)** dans d'autres langages. En effet, elle permet d'utiliser plusieurs instructions là où JavaScript n'attend qu'une instruction. C'est une pratique courante que de combiner plusieurs instructions grâce aux blocs. À l'opposé, on peut utiliser une [instruction vide](/fr/docs/Web/JavaScript/Reference/Statements/Empty) pour ne rien faire là où JavaScript attend une instruction.
 
-<h2 id="examples">Exemples</h2>
+## Exemples
 
-<h3 id="block_scoping_rules_with_var_or_function_declaration_in_non-strict_mode">Règles de portée pour var ou les déclarations de fonction en mode non-strict</h3>
+### Règles de portée pour var ou les déclarations de fonction en mode non-strict
 
-<p>Les variables déclarées avec <code>var</code> ou créées avec <a href="/fr/docs/Web/JavaScript/Reference/Statements/function">une déclaration de fonction</a> en mode non-strict <strong>n'ont pas une portée limitée au bloc</strong>. Les variables introduites dans un bloc auront la portée de la fonction ou du script englobant ce bloc. Les variables pourront alors être utilisées en dehors du bloc. Autrement dit, une instruction de bloc n'introduit pas une portée :</p>
+Les variables déclarées avec `var` ou créées avec [une déclaration de fonction](/fr/docs/Web/JavaScript/Reference/Statements/function) en mode non-strict **n'ont pas une portée limitée au bloc**. Les variables introduites dans un bloc auront la portée de la fonction ou du script englobant ce bloc. Les variables pourront alors être utilisées en dehors du bloc. Autrement dit, une instruction de bloc n'introduit pas une portée :
 
-<pre class="brush: js example-bad">var x = 1;
+```js example-bad
+var x = 1;
 {
   var x = 2;
 }
 console.log(x); // affiche 2 dans la console
-</pre>
+```
 
-<p>On voit 2 dans la console, car l'instruction <code>var x</code> contenue dans le bloc appartient à la même portée que l'instruction <code>var x</code> située avant le bloc.</p>
+On voit 2 dans la console, car l'instruction `var x` contenue dans le bloc appartient à la même portée que l'instruction `var x` située avant le bloc.
 
-<p>En mode non-strict, les déclarations de fonction à l'intérieur des blocs peuvent se comporter étrangement, il est déconseillé de les utiliser.</p>
+En mode non-strict, les déclarations de fonction à l'intérieur des blocs peuvent se comporter étrangement, il est déconseillé de les utiliser.
 
-<h3 id="block_scoping_rules_with_let_const_or_function_declaration_in_strict_mode">Règles de portée pour let, const ou les déclarations de fonction en mode strict</h3>
+### Règles de portée pour let, const ou les déclarations de fonction en mode strict
 
-<p>En revanche, les identifiants déclarés avec <a href="/fr/docs/Web/JavaScript/Reference/Statements/let"><code>let</code></a> et <a href="/fr/docs/Web/JavaScript/Reference/Statements/const"><code>const</code></a> <strong>possèdent une portée limitée au bloc</strong> :</p>
+En revanche, les identifiants déclarés avec [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) et [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const) **possèdent une portée limitée au bloc** :
 
-<pre class="brush: js">let x = 1;
+```js
+let x = 1;
 {
   let x = 2;
 }
-console.log(x); // affiche 1 dans la console</pre>
+console.log(x); // affiche 1 dans la console
+```
 
-<p>L'instruction <code>x = 2</code> est limitée à la portée du bloc dans laquelle elle est présente.</p>
+L'instruction `x = 2` est limitée à la portée du bloc dans laquelle elle est présente.
 
-<p>Il en va de même pour <code>const</code>:</p>
+Il en va de même pour `const`:
 
-<pre class="brush: js">const c = 1;
+```js
+const c = 1;
 {
   const c = 2;
 }
-console.log(c); // affiche 1, ne déclenche pas de SyntaxError</pre>
+console.log(c); // affiche 1, ne déclenche pas de SyntaxError
+```
 
-<p>L'instruction <code>const c = 2</code> <em>ne déclenche pas</em> <code>SyntaxError: Identifier 'c' has already been declared</code>, car cet identifiant est bien unique pour ce bloc.</p>
+L'instruction `const c = 2` _ne déclenche pas_ `SyntaxError: Identifier 'c' has already been declared`, car cet identifiant est bien unique pour ce bloc.
 
-<p>En <a href="/fr/docs/Web/JavaScript/Reference/Strict_mode">mode strict</a>, à partir de ES2015, les fonctions à l'intérieur des blocs ont une portée qui correspond à ce bloc. Avant ES2015, les fonctions de bloc étaient interdites.</p>
+En [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode), à partir de ES2015, les fonctions à l'intérieur des blocs ont une portée qui correspond à ce bloc. Avant ES2015, les fonctions de bloc étaient interdites.
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Statements/while" ><code>while</code></a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Statements/if...else" ><code>if...else</code></a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Statements/let" ><code>let</code></a></li>
-</ul>
+- [`while`](/fr/docs/Web/JavaScript/Reference/Statements/while)
+- [`if...else`](/fr/docs/Web/JavaScript/Reference/Statements/if...else)
+- [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let)

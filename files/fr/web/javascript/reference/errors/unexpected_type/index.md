@@ -9,36 +9,36 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Unexpected_type
 original_slug: Web/JavaScript/Reference/Erreurs/Unexpected_type
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="syntaxbox">TypeError: Unable to get property {x} of undefined or null reference (Edge)
-TypeError: "x" is (not) "y" (Firefox)
+    TypeError: Unable to get property {x} of undefined or null reference (Edge)
+    TypeError: "x" is (not) "y" (Firefox)
 
-Examples:
-TypeError: "x" is undefined
-TypeError: "x" is null
-TypeError: "undefined" is not an object
-TypeError: "x" is not an object or null
-TypeError: "x" is not a symbol
-</pre>
+    Examples:
+    TypeError: "x" is undefined
+    TypeError: "x" is null
+    TypeError: "undefined" is not an object
+    TypeError: "x" is not an object or null
+    TypeError: "x" is not a symbol
 
-<h2 id="Type_d'erreur">Type d'erreur</h2>
+## Type d'erreur
 
-<p>{{jsxref("TypeError")}}.</p>
+{{jsxref("TypeError")}}.
 
-<h2 id="Quel_est_le_problème">Quel est le problème ?</h2>
+## Quel est le problème ?
 
-<p>Un type inattendu a été rencontré. Cela se produit la plupart du temps avec les valeurs {{jsxref("undefined")}} ou {{jsxref("null")}}.</p>
+Un type inattendu a été rencontré. Cela se produit la plupart du temps avec les valeurs {{jsxref("undefined")}} ou {{jsxref("null")}}.
 
-<p>Certaines méthodes comme {{jsxref("Object.create()")}} ou {{jsxref("Symbol.keyFor()")}} ont des contraintes sur le type de valeur qui peut être passé en argument.</p>
+Certaines méthodes comme {{jsxref("Object.create()")}} ou {{jsxref("Symbol.keyFor()")}} ont des contraintes sur le type de valeur qui peut être passé en argument.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Exemples_invalides">Exemples invalides</h3>
+### Exemples invalides
 
-<pre class="brush: js example-bad">// undefined et null : des valeurs
+```js example-bad
+// undefined et null : des valeurs
 // sur lesquelles la méthode substring
 // ne fonctionnera pas
 var toto = undefined;
@@ -55,20 +55,20 @@ Symbol.keyFor(toto); // TypeError: toto is not a symbol
 
 var toto = "truc"
 Object.create(toto); // TypeError: "toto" is not an object or null
-</pre>
+```
 
-<h3 id="Résoudre_le_problème">Résoudre le problème</h3>
+### Résoudre le problème
 
-<p>Pour résoudre ce problème et écarter les cas où la valeur vaut <code>undefined</code>, on peut par exemple utiliser l'opérateur <code><a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_typeof">typeof</a></code>.</p>
+Pour résoudre ce problème et écarter les cas où la valeur vaut `undefined`, on peut par exemple utiliser l'opérateur [`typeof`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_typeof).
 
-<pre class="brush: js">if (typeof toto !== 'undefined') {
+```js
+if (typeof toto !== 'undefined') {
   // Désormais, on sait que toto est bien
   // défini et on peut poursuivre.
-}</pre>
+}
+```
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("undefined")}}</li>
- <li>{{jsxref("null")}}</li>
-</ul>
+- {{jsxref("undefined")}}
+- {{jsxref("null")}}

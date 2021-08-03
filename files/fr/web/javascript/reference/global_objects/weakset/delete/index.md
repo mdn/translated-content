@@ -11,30 +11,29 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/delete
 original_slug: Web/JavaScript/Reference/Objets_globaux/WeakSet/delete
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>delete()</strong></code> permet de retirer un élément donné d'un objet <code>WeakSet</code>.</p>
+La méthode **`delete()`** permet de retirer un élément donné d'un objet `WeakSet`.
 
-<div>{{EmbedInteractiveExample("pages/js/weakset-prototype-delete.html")}}</div>
+{{EmbedInteractiveExample("pages/js/weakset-prototype-delete.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>ws</var>.delete(<var>valeur</var>);</pre>
+    ws.delete(valeur);
 
-<h3 id="Paramètre">Paramètre</h3>
+### Paramètre
 
-<dl>
- <dt><code>valeur</code></dt>
- <dd>Ce paramètre est obligatoire. Il correspond à l'objet qu'on souhaite retirer de l'ensemble <code>WeakSet</code>.</dd>
-</dl>
+- `valeur`
+  - : Ce paramètre est obligatoire. Il correspond à l'objet qu'on souhaite retirer de l'ensemble `WeakSet`.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p><code>true</code> si un élément de l'objet <code>WeakSet</code> a bien été retiré, <code>false</code> sinon (dans le cas où la clé n'a pas été trouvée ou si la clé n'est pas un objet).</p>
+`true` si un élément de l'objet `WeakSet` a bien été retiré, `false` sinon (dans le cas où la clé n'a pas été trouvée ou si la clé n'est pas un objet).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var ws = new WeakSet();
+```js
+var ws = new WeakSet();
 var obj = {};
 
 ws.add(window);
@@ -43,37 +42,20 @@ ws.delete(obj);    // Renvoie false. Aucun objet obj n'a été trouvé ni retir�
 ws.delete(window); // Renvoie true, l'objet window a pu être retiré.
 
 ws.has(window);    // Renvoie false, window n'appartient plus au WeakSet.
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-weakset.prototype.delete', 'WeakSet.prototype.delete')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-weakset.prototype.delete', 'WeakSet.prototype.delete')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                         | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-weakset.prototype.delete', 'WeakSet.prototype.delete')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-weakset.prototype.delete', 'WeakSet.prototype.delete')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.WeakSet.delete")}}</p>
+{{Compat("javascript.builtins.WeakSet.delete")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("WeakSet")}}</li>
- <li>{{jsxref("WeakSet.prototype.clear()")}}</li>
-</ul>
+- {{jsxref("WeakSet")}}
+- {{jsxref("WeakSet.prototype.clear()")}}

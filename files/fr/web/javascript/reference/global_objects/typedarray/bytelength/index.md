@@ -10,23 +10,24 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/byteLength
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/byteLength
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La propriété <strong><code>byteLength</code></strong> est un accesseur qui représente la longueur, exprimée en octets, du tableau typé à partir du début de l'{{jsxref("ArrayBuffer")}} correspondant.</p>
+La propriété **`byteLength`** est un accesseur qui représente la longueur, exprimée en octets, du tableau typé à partir du début de l'{{jsxref("ArrayBuffer")}} correspondant.
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-bytelength.html")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-bytelength.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>typedarray</var>.byteLength</pre>
+    typedarray.byteLength
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La propriété <code>byteLength</code> est un accesseur dont le mutateur correspondant vaut <code>undefined</code>, ce qui signifie qu'elle n'est accessible qu'en lecture. La valeur de la propriété est déterminée lors de la construction du <em>TypedArray</em> et ne peut pas être modifiée. Si l'objet <em>TypedArray</em> n'utilise pas de <code>byteOffset</code> ou une <code>length</code>, ce sera la propriété <code>length</code> de l'<code>ArrayBuffer</code> référencé par le tableau qui sera renvoyée. <em>TypedArray</em> est l'un des objets <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray">TypedArray</a>.</p>
+La propriété `byteLength` est un accesseur dont le mutateur correspondant vaut `undefined`, ce qui signifie qu'elle n'est accessible qu'en lecture. La valeur de la propriété est déterminée lors de la construction du _TypedArray_ et ne peut pas être modifiée. Si l'objet _TypedArray_ n'utilise pas de `byteOffset` ou une `length`, ce sera la propriété `length` de l'`ArrayBuffer` référencé par le tableau qui sera renvoyée. _TypedArray_ est l'un des objets [TypedArray](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush:js">var tampon = new ArrayBuffer(8);
+```js
+var tampon = new ArrayBuffer(8);
 
 var uint8 = new Uint8Array(tampon);
 uint8.byteLength; // 8 (correspond au byteLength du tampon correspondant)
@@ -36,37 +37,20 @@ uint8.byteLength; // 5 (correspond à la longueur spécifiée dans le constructe
 
 var uint8 = new Uint8Array(tampon, 2);
 uint8.byteLength; // 6 (en raison du décalage utilisé pour la construction du Uint8Array)
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-get-%typedarray%.prototype.bytelength', 'TypedArray.prototype.byteLength')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-get-%typedarray%.prototype.bytelength', 'TypedArray.prototype.byteLength')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES6', '#sec-get-%typedarray%.prototype.bytelength', 'TypedArray.prototype.byteLength')}}         | {{Spec2('ES6')}}         | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-get-%typedarray%.prototype.bytelength', 'TypedArray.prototype.byteLength')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.TypedArray.byteLength")}}</p>
+{{Compat("javascript.builtins.TypedArray.byteLength")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Tableaux_typés">Les tableaux typés en JavaScript</a></li>
- <li>{{jsxref("TypedArray")}}</li>
-</ul>
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés)
+- {{jsxref("TypedArray")}}

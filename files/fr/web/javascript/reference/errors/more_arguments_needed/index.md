@@ -8,43 +8,43 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/More_arguments_needed
 original_slug: Web/JavaScript/Reference/Erreurs/More_arguments_needed
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="syntaxbox">TypeError: argument is not an Object and is not null (Edge)
-TypeError: Object.create requires at least 1 argument, but only 0 were passed
-TypeError: Object.setPrototypeOf requires at least 2 arguments, but only 0 were passed
-TypeError: Object.defineProperties requires at least 1 argument, but only 0 were passed
-</pre>
+    TypeError: argument is not an Object and is not null (Edge)
+    TypeError: Object.create requires at least 1 argument, but only 0 were passed
+    TypeError: Object.setPrototypeOf requires at least 2 arguments, but only 0 were passed
+    TypeError: Object.defineProperties requires at least 1 argument, but only 0 were passed
 
-<h2 id="Type_d'erreur">Type d'erreur</h2>
+## Type d'erreur
 
-<p>{{jsxref("TypeError")}}.</p>
+{{jsxref("TypeError")}}.
 
-<h2 id="Quel_est_le_problème">Quel est le problème ?</h2>
+## Quel est le problème ?
 
-<p>Lors de l'appel de la fonction, il y a eu une erreur due au manque d'argument. La fonction doit recevoir plus de paramètres afin de pouvoir fonctionner.</p>
+Lors de l'appel de la fonction, il y a eu une erreur due au manque d'argument. La fonction doit recevoir plus de paramètres afin de pouvoir fonctionner.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>La méthode {{jsxref("Object.create()")}} nécessite au moins un argument et {{jsxref("Object.setPrototypeOf()")}} requiert deux paramètres :</p>
+La méthode {{jsxref("Object.create()")}} nécessite au moins un argument et {{jsxref("Object.setPrototypeOf()")}} requiert deux paramètres :
 
-<pre class="brush: js example-bad">var obj = Object.create();
+```js example-bad
+var obj = Object.create();
 // TypeError: Object.create requires more than 0 arguments
 
 var obj = Object.setPrototypeOf({});
 // TypeError: Object.setPrototypeOf requires more than 1 argument
-</pre>
+```
 
-<p>On peut corriger cet exemple en utilisant {{jsxref("null")}} comme prototype :</p>
+On peut corriger cet exemple en utilisant {{jsxref("null")}} comme prototype :
 
-<pre class="brush: js example-good">var obj = Object.create(null);
+```js example-good
+var obj = Object.create(null);
 
-var obj = Object.setPrototypeOf({}, null);</pre>
+var obj = Object.setPrototypeOf({}, null);
+```
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Guide/Fonctions">Les fonctions</a></li>
-</ul>
+- [Les fonctions](/fr/docs/Web/JavaScript/Guide/Fonctions)

@@ -11,49 +11,49 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/toSource
 original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/toSource
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p>La méthode <code><strong>toSource()</strong></code> renvoie une chaîne de caractères représentant le code source de l'objet.</p>
+La méthode **`toSource()`** renvoie une chaîne de caractères représentant le code source de l'objet.
 
-<p>L'utilisation de cette méthode est généralement interne au moteur JavaScript.</p>
+L'utilisation de cette méthode est généralement interne au moteur JavaScript.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>Symbol</var>.toSource();
+    Symbol.toSource();
 
-var <var>sym</var> = Symbol();
-<var>sym</var>.toSource();</pre>
+    var sym = Symbol();
+    sym.toSource();
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une chaîne de caractères qui représente le code source de l'objet.</p>
+Une chaîne de caractères qui représente le code source de l'objet.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code>toSource</code> renvoie les valeurs suivantes :</p>
+La méthode `toSource` renvoie les valeurs suivantes :
 
-<ul>
- <li>Pour l'objet <code>Symbol</code> natif, <code>toSource()</code> renvoie la chaîne suivante, indiquant que le code source n'est pas disponible :
+- Pour l'objet `Symbol` natif, `toSource()` renvoie la chaîne suivante, indiquant que le code source n'est pas disponible :
 
-  <pre class="brush:js">"function Symbol() {
-   [native code]
-}"</pre>
- </li>
- <li>Pour les instances de <code>Symbol</code>, <code>toSource()</code> renvoie une chaîne représentant le code source :
-  <pre class="brush: js">"Symbol()"</pre>
- </li>
-</ul>
+  ```js
+    "function Symbol() {
+       [native code]
+    }"
+    ```
 
-<h2 id="Spécifications">Spécifications</h2>
+- Pour les instances de `Symbol`, `toSource()` renvoie une chaîne représentant le code source :
 
-<p>Cette méthode ne fait partie d'aucun standard.</p>
+  ```js
+    "Symbol()"
+    ```
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Spécifications
 
-<p>{{Compat("javascript.builtins.Symbol.toSource")}}</p>
+Cette méthode ne fait partie d'aucun standard.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Compatibilité des navigateurs
 
-<ul>
- <li>{{jsxref("Object.prototype.toSource()")}} {{Non-standard_inline()}}</li>
-</ul>
+{{Compat("javascript.builtins.Symbol.toSource")}}
+
+## Voir aussi
+
+- {{jsxref("Object.prototype.toSource()")}} {{Non-standard_inline()}}

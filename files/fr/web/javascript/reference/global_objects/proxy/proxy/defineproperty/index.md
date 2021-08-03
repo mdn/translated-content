@@ -10,67 +10,63 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/defineProperty
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>handler.defineProperty()</code></strong> est une trappe pour {{jsxref("Object.defineProperty()")}}.</p>
+La méthode **`handler.defineProperty()`** est une trappe pour {{jsxref("Object.defineProperty()")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/proxyhandler-defineproperty.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-defineproperty.html", "taller")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var p = new Proxy(cible, {
+```js
+var p = new Proxy(cible, {
   defineProperty: function(cible, propriété, descripteur) {
   }
 });
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Les paramètres suivants sont passés à la méthode <code>defineProperty</code>. <code>this</code> est ici lié au gestionnaire.</p>
+Les paramètres suivants sont passés à la méthode `defineProperty`. `this` est ici lié au gestionnaire.
 
-<dl>
- <dt><code>cible</code></dt>
- <dd>L'objet cible.</dd>
- <dt><code>propriété</code></dt>
- <dd>Le nom ou le symbole ({{jsxref("Symbol")}}) de la propriété dont on veut modifier la description.</dd>
- <dt><code>descripteur</code></dt>
- <dd>Le descripteur de la propriété qui est à modifier ou à définir.</dd>
-</dl>
+- `cible`
+  - : L'objet cible.
+- `propriété`
+  - : Le nom ou le symbole ({{jsxref("Symbol")}}) de la propriété dont on veut modifier la description.
+- `descripteur`
+  - : Le descripteur de la propriété qui est à modifier ou à définir.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>La méthode <code>defineProperty()</code> doit renvoyer un booléen qui indique si la propriété a correctement été définie sur la cible.</p>
+La méthode `defineProperty()` doit renvoyer un booléen qui indique si la propriété a correctement été définie sur la cible.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code><strong>handler.defineProperty()</strong></code> est une trappe pour {{jsxref("Object.defineProperty()")}}.</p>
+La méthode **`handler.defineProperty()`** est une trappe pour {{jsxref("Object.defineProperty()")}}.
 
-<h3 id="Interceptions">Interceptions</h3>
+### Interceptions
 
-<p>Cette trappe intercepte les opérations suivantes :</p>
+Cette trappe intercepte les opérations suivantes :
 
-<ul>
- <li>{{jsxref("Object.defineProperty()")}}</li>
- <li>{{jsxref("Reflect.defineProperty()")}}</li>
-</ul>
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Reflect.defineProperty()")}}
 
-<h3 id="Invariants">Invariants</h3>
+### Invariants
 
-<p>Si les contraintes d'invariances suivantes ne sont pas respectées, le proxy renverra une exception {{jsxref("TypeError")}} :</p>
+Si les contraintes d'invariances suivantes ne sont pas respectées, le proxy renverra une exception {{jsxref("TypeError")}} :
 
-<ul>
- <li>Une propriété ne peut pas être ajoutée si l'objet cible n'est pas extensible.</li>
- <li>Une propriété ne peut pas être ajoutée ou modifiée pour être rendue non-configurable si elle n'existe pas comme une propriété propre non-configurable de l'objet cible.</li>
- <li>Une propriété ne peut pas être non-configurable s'il existe une propriété correspondante de l'objet cible qui est configurable.</li>
- <li>Si une propriété correspondante existe pour l'objet cible <code>Object.defineProperty(cible, propriété, descripteur)</code> ne lèvera pas d'exception.</li>
- <li>En mode stricte, si le gestionnaire defineProperty renvoie une valeur fausse (dans un contexte booléen), cela entraînera une exception {{jsxref("TypeError")}}.</li>
-</ul>
+- Une propriété ne peut pas être ajoutée si l'objet cible n'est pas extensible.
+- Une propriété ne peut pas être ajoutée ou modifiée pour être rendue non-configurable si elle n'existe pas comme une propriété propre non-configurable de l'objet cible.
+- Une propriété ne peut pas être non-configurable s'il existe une propriété correspondante de l'objet cible qui est configurable.
+- Si une propriété correspondante existe pour l'objet cible `Object.defineProperty(cible, propriété, descripteur)` ne lèvera pas d'exception.
+- En mode stricte, si le gestionnaire defineProperty renvoie une valeur fausse (dans un contexte booléen), cela entraînera une exception {{jsxref("TypeError")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans le code suivant, on piège l'appel à {{jsxref("Object.defineProperty()")}}.</p>
+Dans le code suivant, on piège l'appel à {{jsxref("Object.defineProperty()")}}.
 
-<pre class="brush: js">var p = new Proxy({}, {
+```js
+var p = new Proxy({}, {
   defineProperty: function(target, prop, descriptor) {
     console.log("appelé avec : " + prop);
   }
@@ -78,20 +74,19 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/definePrope
 
 var desc = { configurable: true, enumerable: true, value: 10 };
 Object.defineProperty(p, "a", desc); // "appelé avec : a"
-</pre>
+```
 
-<p>Lorsqu'on appelle {{jsxref("Object.defineProperty()")}} ou {{jsxref("Reflect.defineProperty()")}}, le descripteur passé à la trappe <code>defineProperty</code> doit respecter une contrainte : seules les propriétés suivants sont utilisables, les propriétés non-standards seront ignorées :</p>
+Lorsqu'on appelle {{jsxref("Object.defineProperty()")}} ou {{jsxref("Reflect.defineProperty()")}}, le descripteur passé à la trappe `defineProperty` doit respecter une contrainte : seules les propriétés suivants sont utilisables, les propriétés non-standards seront ignorées :
 
-<ul>
- <li><code>enumerable</code></li>
- <li><code>configurable</code></li>
- <li><code>writable</code></li>
- <li><code>value</code></li>
- <li><code>get</code></li>
- <li><code>set</code></li>
-</ul>
+- `enumerable`
+- `configurable`
+- `writable`
+- `value`
+- `get`
+- `set`
 
-<pre class="brush: js">var p = new Proxy({}, {
+```js
+var p = new Proxy({}, {
   defineProperty(target, prop, descriptor) {
     console.log(descriptor);
     return Reflect.defineProperty(target, prop, descriptor);
@@ -103,39 +98,22 @@ Object.defineProperty(p, "name, {
   type: "custom"
 });
 // { value: "proxy" }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-defineownproperty-p-desc', '[[DefineOwnProperty]]')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-defineownproperty-p-desc', '[[DefineOwnProperty]]')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                                                | État                         | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-defineownproperty-p-desc', '[[DefineOwnProperty]]')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-defineownproperty-p-desc', '[[DefineOwnProperty]]')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Proxy.handler.defineProperty")}}</p>
+{{Compat("javascript.builtins.Proxy.handler.defineProperty")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Object.defineProperty()")}}</li>
- <li>{{jsxref("Reflect.defineProperty()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Reflect.defineProperty()")}}

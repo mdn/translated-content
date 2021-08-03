@@ -10,72 +10,53 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/parseFloat
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number/parseFloat
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>Number.parseFloat()</code></strong> analyse et convertit une chaîne de caractères en un nombre flottant. Cette méthode possède un comportement identique à {{jsxref("parseFloat")}} et fait partie d'ECMAScript 2015 (dans le but de « modulariser » les méthodes globales).</p>
+La méthode **`Number.parseFloat()`** analyse et convertit une chaîne de caractères en un nombre flottant. Cette méthode possède un comportement identique à {{jsxref("parseFloat")}} et fait partie d'ECMAScript 2015 (dans le but de « modulariser » les méthodes globales).
 
-<div>{{EmbedInteractiveExample("pages/js/number-parsefloat.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-parsefloat.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Number.parseFloat(chaîne)</pre>
+    Number.parseFloat(chaîne)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code><var>chaîne</var></code></dt>
- <dd>Une chaîne de caractères qu'on souhaite convertir en nombre flottant.</dd>
-</dl>
+- `chaîne`
+  - : Une chaîne de caractères qu'on souhaite convertir en nombre flottant.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un nombre flottant obtenu à partir de l'analyse de la chaîne de caractères passée en argument. Si le premier caractère de la chaîne ne peut pas être converti en un nombre, la  valeur {{jsxref("NaN")}} sera renvoyée.</p>
+Un nombre flottant obtenu à partir de l'analyse de la chaîne de caractères passée en argument. Si le premier caractère de la chaîne ne peut pas être converti en un nombre, la  valeur {{jsxref("NaN")}} sera renvoyée.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Cette méthode possède les mêmes fonctionnalités que la fonction globale {{jsxref("parseFloat", "parseFloat()")}} :</p>
+Cette méthode possède les mêmes fonctionnalités que la fonction globale {{jsxref("parseFloat", "parseFloat()")}} :
 
-<pre>Number.parseFloat === parseFloat; // true
-</pre>
+    Number.parseFloat === parseFloat; // true
 
-<p>Cette méthode fait partie d'ECMAScript 2015 et notamment de la modularisation de certaines fonctions globales. Pour plus de détails et d'exemples, voir {{jsxref("parseFloat", "parseFloat()")}}.</p>
+Cette méthode fait partie d'ECMAScript 2015 et notamment de la modularisation de certaines fonctions globales. Pour plus de détails et d'exemples, voir {{jsxref("parseFloat", "parseFloat()")}}.
 
-<h2 id="Prothèse_d'émulation_(polyfill)">Prothèse d'émulation (<em>polyfill</em>)</h2>
+## Prothèse d'émulation (_polyfill_)
 
-<pre class="brush: js">if (Number.parseFloat === undefined) {
+```js
+if (Number.parseFloat === undefined) {
     Number.parseFloat = parseFloat;
 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-number.parsefloat', 'Number.parseFloat')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.parsefloat', 'Number.parseFloat')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-number.parsefloat', 'Number.parseFloat')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-number.parsefloat', 'Number.parseFloat')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Number.parseFloat")}}</p>
+{{Compat("javascript.builtins.Number.parseFloat")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'objet {{jsxref("Number")}} auquel appartient cette fonction.</li>
- <li>La méthode globale {{jsxref("parseFloat")}}.</li>
-</ul>
+- L'objet {{jsxref("Number")}} auquel appartient cette fonction.
+- La méthode globale {{jsxref("parseFloat")}}.

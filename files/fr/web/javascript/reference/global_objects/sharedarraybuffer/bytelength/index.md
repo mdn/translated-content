@@ -11,49 +11,37 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/byteLength
 original_slug: Web/JavaScript/Reference/Objets_globaux/SharedArrayBuffer/byteLength
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La propriété d'accesseur <code><strong>byteLength</strong></code> représente la longueur d'un {{jsxref("SharedArrayBuffer")}} exprimée en octets.</p>
+La propriété d'accesseur **`byteLength`** représente la longueur d'un {{jsxref("SharedArrayBuffer")}} exprimée en octets.
 
-<div>{{EmbedInteractiveExample("pages/js/sharedarraybuffer-bytelength.html")}}</div>
+{{EmbedInteractiveExample("pages/js/sharedarraybuffer-bytelength.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>sab</var>.byteLength</pre>
+    sab.byteLength
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La propriété <code>byteLength</code> est une propriété d'accesseur dont le mutateur associé vaut <code>undefined</code>. Autrement dit, cette propriété est en lecture seule. La valeur est établie lorsque le tableau partagé est construit et elle ne peut être modifiée par la suite.</p>
+La propriété `byteLength` est une propriété d'accesseur dont le mutateur associé vaut `undefined`. Autrement dit, cette propriété est en lecture seule. La valeur est établie lorsque le tableau partagé est construit et elle ne peut être modifiée par la suite.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush:js">var sab = new SharedArrayBuffer(1024);
+```js
+var sab = new SharedArrayBuffer(1024);
 sab.byteLength; // 1024
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-get-sharedarraybuffer.prototype.bytelength', 'SharedArrayBuffer.prototype.byteLength')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Définition initiale avec ES2017.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                                | Statut                       | Commentaires                     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------------------- |
+| {{SpecName('ESDraft', '#sec-get-sharedarraybuffer.prototype.bytelength', 'SharedArrayBuffer.prototype.byteLength')}} | {{Spec2('ESDraft')}} | Définition initiale avec ES2017. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.SharedArrayBuffer.byteLength")}}</p>
+{{Compat("javascript.builtins.SharedArrayBuffer.byteLength")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("SharedArrayBuffer")}}</li>
-</ul>
+- {{jsxref("SharedArrayBuffer")}}

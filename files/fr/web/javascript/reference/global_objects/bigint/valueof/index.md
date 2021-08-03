@@ -11,49 +11,39 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/valueOf
 original_slug: Web/JavaScript/Reference/Objets_globaux/BigInt/valueOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>valueOf()</code></strong> renvoie la valeur primitive encapsulée dans un objet {{jsxref("BigInt")}}.</p>
+La méthode **`valueOf()`** renvoie la valeur primitive encapsulée dans un objet {{jsxref("BigInt")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/bigint-valueof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/bigint-valueof.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>bigIntObj</var>.valueOf()</pre>
+    bigIntObj.valueOf()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un grand entier (<em>big int</em>) représentant la valeur primitive de l'objet {{jsxref("BigInt")}} courant.</p>
+Un grand entier (_big int_) représentant la valeur primitive de l'objet {{jsxref("BigInt")}} courant.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_valueOf()">Utiliser <code>valueOf()</code></h3>
+### Utiliser `valueOf()`
 
-<pre class="brush: js">typeof Object(1n); // object
+```js
+typeof Object(1n); // object
 typeof Object(1n).valueOf(); // bigint
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-  </tr>
-  <tr>
-   <td><a href="https://tc39.github.io/proposal-bigint/#sec-bigint.prototype.valueof">Proposition pour <code>BigInt</code></a></td>
-   <td>Proposition de niveau 3</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                     | État                    |
+| ------------------------------------------------------------------------------------------------- | ----------------------- |
+| [Proposition pour `BigInt`](https://tc39.github.io/proposal-bigint/#sec-bigint.prototype.valueof) | Proposition de niveau 3 |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.BigInt.valueOf")}}</p>
+{{Compat("javascript.builtins.BigInt.valueOf")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("BigInt.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("BigInt.prototype.toString()")}}

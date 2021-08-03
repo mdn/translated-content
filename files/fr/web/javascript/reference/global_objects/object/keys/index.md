@@ -11,34 +11,33 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/keys
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/keys
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>Object.keys()</strong></code> renvoie un tableau contenant les noms des propriétés propres à un objet (qui ne sont pas héritées via la chaîne de prototypes) et qui sont énumérables. L'ordre de ce tableau est le même que celui obtenu par une boucle {{jsxref("Instructions/for...in","for...in")}} (à la différence qu'une boucle for-in liste également les propriétés héritées).</p>
+La méthode **`Object.keys()`** renvoie un tableau contenant les noms des propriétés propres à un objet (qui ne sont pas héritées via la chaîne de prototypes) et qui sont énumérables. L'ordre de ce tableau est le même que celui obtenu par une boucle {{jsxref("Instructions/for...in","for...in")}} (à la différence qu'une boucle for-in liste également les propriétés héritées).
 
-<div>{{EmbedInteractiveExample("pages/js/object-keys.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-keys.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Object.keys(<var>obj</var>)</pre>
+    Object.keys(obj)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>L'objet dont on souhaite lister les propriétés propres et énumérables.</dd>
-</dl>
+- `obj`
+  - : L'objet dont on souhaite lister les propriétés propres et énumérables.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un tableau de chaînes de caractères qui sont les noms des propriétés énumérables de l'objet passé en argument.</p>
+Un tableau de chaînes de caractères qui sont les noms des propriétés énumérables de l'objet passé en argument.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p><code>Object.keys()</code> renvoie un tableau dont les éléments sont les chaînes de caractères des noms des propriétés propres et énumérables d<code>'obj</code>. L'ordre des propriétés obtenu est le même que celui obtenu lorsqu'on boucle manuellement sur les propriétés de l'objet.</p>
+`Object.keys()` renvoie un tableau dont les éléments sont les chaînes de caractères des noms des propriétés propres et énumérables d`'obj`. L'ordre des propriétés obtenu est le même que celui obtenu lorsqu'on boucle manuellement sur les propriétés de l'objet.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var arr = ["a", "b", "c"];
+```js
+var arr = ["a", "b", "c"];
 console.log(Object.keys(arr));
 // affichera ['0', '1', '2']
 
@@ -64,61 +63,39 @@ monObjet.toto = 1;
 
 console.log(Object.keys(monObjet));
 // affichera ['toto']
-</pre>
+```
 
-<p>Si on souhaite lister toutes les propriétés, y compris celles qui ne sont pas énumérables, on pourra utiliser {{jsxref("Object.getOwnPropertyNames()")}}.</p>
+Si on souhaite lister toutes les propriétés, y compris celles qui ne sont pas énumérables, on pourra utiliser {{jsxref("Object.getOwnPropertyNames()")}}.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Pour ES5, si l'argument passé à la méthode n'est pas un objet mais une valeur d'un autre type primitif, cela entraînera une exception {{jsxref("TypeError")}}. Pour ES2015 (ES6), un argument qui n'est pas un objet sera d'abord converti en objet.</p>
+Pour ES5, si l'argument passé à la méthode n'est pas un objet mais une valeur d'un autre type primitif, cela entraînera une exception {{jsxref("TypeError")}}. Pour ES2015 (ES6), un argument qui n'est pas un objet sera d'abord converti en objet.
 
-<pre class="brush: js">Object.keys("toto");
+```js
+Object.keys("toto");
 // TypeError: "toto" n'est pas un objet (code ES5)
 
 Object.keys("toto");
-// ["0", "1", "2", "3"]                   (code ES2015)</pre>
+// ["0", "1", "2", "3"]                   (code ES2015)
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.14', 'Object.keys')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Définition initiale.<br>
-    Implémentée avec JavaScript 1.8.5</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-object.keys', 'Object.keys')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.keys', 'Object.keys')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | État                         | Commentaires                                           |
+| ---------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------ |
+| {{SpecName('ES5.1', '#sec-15.2.3.14', 'Object.keys')}}     | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée avec JavaScript 1.8.5 |
+| {{SpecName('ES2015', '#sec-object.keys', 'Object.keys')}} | {{Spec2('ES2015')}}     |                                                        |
+| {{SpecName('ESDraft', '#sec-object.keys', 'Object.keys')}} | {{Spec2('ESDraft')}} |                                                        |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Object.keys")}}</p>
+{{Compat("javascript.builtins.Object.keys")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement">Énumérabilité et possession des propriétés</a></li>
- <li>{{jsxref("Object.prototype.propertyIsEnumerable()")}}</li>
- <li>{{jsxref("Object.create()")}}</li>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
- <li>{{jsxref("Object.values()")}}</li>
- <li>{{jsxref("Object.entries()")}}</li>
-</ul>
+- [Énumérabilité et possession des propriétés](/fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement)
+- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
+- {{jsxref("Object.create()")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}
+- {{jsxref("Object.values()")}}
+- {{jsxref("Object.entries()")}}

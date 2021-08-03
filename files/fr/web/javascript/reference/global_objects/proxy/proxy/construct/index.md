@@ -10,63 +10,59 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/construct
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>handler.construct()</strong></code> est une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}}. Afin que l'opération <code>new</code> puisse être valide sur le proxy correspondant, la cible utilisée doit avoir une méthode interne <code>[[Construct]]</code> (autrement dit, l'instruction <code>new cible</code> doit être valide).</p>
+La méthode **`handler.construct()`** est une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}}. Afin que l'opération `new` puisse être valide sur le proxy correspondant, la cible utilisée doit avoir une méthode interne `[[Construct]]` (autrement dit, l'instruction `new cible` doit être valide).
 
-<div>{{EmbedInteractiveExample("pages/js/proxyhandler-construct.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-construct.html", "taller")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var p = new Proxy(cible, {
+```js
+var p = new Proxy(cible, {
   construct: function(cible, listeArguments, newTarget) {
   }
 });
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Les paramètres suivants sont passés à la méthode <code>construct</code>.  <code>this</code> est ici lié au gestionnaire (<em>handler</em>).</p>
+Les paramètres suivants sont passés à la méthode `construct`.  `this` est ici lié au gestionnaire (_handler_).
 
-<dl>
- <dt><code>cible</code></dt>
- <dd>L'objet cible.</dd>
- <dt><code>listeArguments</code></dt>
- <dd>La liste des arguments passés au constructeur.</dd>
- <dt><code>newTarget</code></dt>
- <dd>Le constructeur originellement appelé.</dd>
-</dl>
+- `cible`
+  - : L'objet cible.
+- `listeArguments`
+  - : La liste des arguments passés au constructeur.
+- `newTarget`
+  - : Le constructeur originellement appelé.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>La méthode <code>construct</code> doit renvoyer un objet.</p>
+La méthode `construct` doit renvoyer un objet.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code><strong>handler.construct()</strong></code> est une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}}.</p>
+La méthode **`handler.construct()`** est une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}}.
 
-<h3 id="Interceptions">Interceptions</h3>
+### Interceptions
 
-<p>Ce trappe intercepte les opérations suivantes :</p>
+Ce trappe intercepte les opérations suivantes :
 
-<ul>
- <li><code>new proxy(...args)</code></li>
- <li>{{jsxref("Reflect.construct()")}}</li>
-</ul>
+- `new proxy(...args)`
+- {{jsxref("Reflect.construct()")}}
 
-<h3 id="Invariants">Invariants</h3>
+### Invariants
 
-<p>Si les invariants suivants ne sont pas respectés, le proxy renverra une exception {{jsxref("TypeError")}} :</p>
+Si les invariants suivants ne sont pas respectés, le proxy renverra une exception {{jsxref("TypeError")}} :
 
-<ul>
- <li>Le résultat doit être un <code>Object</code>.</li>
-</ul>
+- Le résultat doit être un `Object`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans l'exemple qui suit, on piège l'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}}.</p>
+Dans l'exemple qui suit, on piège l'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}}.
 
-<pre class="brush: js">var p = new Proxy(function() {}, {
+```js
+var p = new Proxy(function() {}, {
   construct: function(target, argumentsList) {
     console.log("called: " + argumentsList.join(", "));
     return { value: argumentsList[0] * 10 };
@@ -75,60 +71,46 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/construct
 
 console.log(new p(1).value); // "appel sur : 1"
                              // 10
-</pre>
+```
 
-<p>Dans cette version, on ne respecte pas la contrainte d'invariance :</p>
+Dans cette version, on ne respecte pas la contrainte d'invariance :
 
-<pre class="brush: js">var p = new Proxy(function() {}, {
+```js
+var p = new Proxy(function() {}, {
   construct: function(target, argumentsList) {
     return 1;
   }
 });
 
 new p(); // Une exception TypeError est levée
-</pre>
+```
 
-<p>Dans le code qui suit, le proxy n'est pas correctement initialisé. La cible du proxy doit être un constructeur valide qui puisse être utilisé avec <code>new</code>.</p>
+Dans le code qui suit, le proxy n'est pas correctement initialisé. La cible du proxy doit être un constructeur valide qui puisse être utilisé avec `new`.
 
-<pre class="brush: js">var p = new Proxy({}, {
+```js
+var p = new Proxy({}, {
   construct: function(target, argumentsList, newTarget){
     return {};
   }
 });
 
-new p(); // TypeError: p is not a constructor</pre>
+new p(); // TypeError: p is not a constructor
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-construct-argumentslist-newtarget', '[[Construct]]')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-construct-argumentslist-newtarget', '[[Construct]]')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                                                    | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-construct-argumentslist-newtarget', '[[Construct]]')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-construct-argumentslist-newtarget', '[[Construct]]')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Proxy.handler.construct")}}</p>
+{{Compat("javascript.builtins.Proxy.handler.construct")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>L'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}}</li>
- <li>{{jsxref("Reflect.construct()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- L'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}}
+- {{jsxref("Reflect.construct()")}}

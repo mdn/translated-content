@@ -10,85 +10,73 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/toString
 original_slug: Web/JavaScript/Reference/Objets_globaux/BigInt/toString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>The <strong><code>toString()</code></strong> method returns a string representing the specified {{jsxref("BigInt")}} object. The trailing "n" is not part of the string.</p>
+The **`toString()`** method returns a string representing the specified {{jsxref("BigInt")}} object. The trailing "n" is not part of the string.
 
-<div>{{EmbedInteractiveExample("pages/js/bigint-tostring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/bigint-tostring.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><code><var>bigIntObj</var>.toString([<var>base</var>])</code></pre>
+    bigIntObj.toString([base])
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>base</code>{{optional_inline}}</dt>
- <dd>Ce paramètre optionnel est compris entre 2 et 36 et indique la base à utiliser pour représenter les valeurs numériques.</dd>
-</dl>
+- `base`{{optional_inline}}
+  - : Ce paramètre optionnel est compris entre 2 et 36 et indique la base à utiliser pour représenter les valeurs numériques.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une chaîne de caractères représentant l'objet {{jsxref("BigInt")}} courant.</p>
+Une chaîne de caractères représentant l'objet {{jsxref("BigInt")}} courant.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
- <dt>{{jsxref("RangeError")}}</dt>
- <dd>Si la base fournie comme argument <code>toString()</code> est inférieure à 2 ou supérieure à 36, cela déclenchera une exception {{jsxref("RangeError")}}.</dd>
-</dl>
+- {{jsxref("RangeError")}}
+  - : Si la base fournie comme argument `toString()` est inférieure à 2 ou supérieure à 36, cela déclenchera une exception {{jsxref("RangeError")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>L'objet {{jsxref("BigInt")}} surcharge la méthode <code>toString()</code> de {{jsxref("Object")}}. Il n'hérite pas ou n'utilise pas {{jsxref("Object.prototype.toString()")}}. Pour les objets {{jsxref( "BigInt")}}, la méthode <code>toString()</code> renvoie une représentation textuelle de l'objet dans la base indiquée.</p>
+L'objet {{jsxref("BigInt")}} surcharge la méthode `toString()` de {{jsxref("Object")}}. Il n'hérite pas ou n'utilise pas {{jsxref("Object.prototype.toString()")}}. Pour les objets {{jsxref( "BigInt")}}, la méthode `toString()` renvoie une représentation textuelle de l'objet dans la base indiquée.
 
-<p>La méthode <code>toString()</code> analyse le premier argument qui lui est passé et tente de renvoyer une représentation textuelle dans cette base. Pour les bases supérieures à 10, ce seront les lettres de l'alphabet pour indiquer les chiffres supérieurs à 9. Pour les nombres hexadécimaux (base 16), les lettres <code>a</code> à <code>f</code> sont utilisées par exemple.</p>
+La méthode `toString()` analyse le premier argument qui lui est passé et tente de renvoyer une représentation textuelle dans cette base. Pour les bases supérieures à 10, ce seront les lettres de l'alphabet pour indiquer les chiffres supérieurs à 9. Pour les nombres hexadécimaux (base 16), les lettres `a` à `f` sont utilisées par exemple.
 
-<p>Si l'argument <code>base</code> n'est pas indiquée, ce sera la base 10 qui sera considérée par défaut.</p>
+Si l'argument `base` n'est pas indiquée, ce sera la base 10 qui sera considérée par défaut.
 
-<p>Si <code>bigIntObj</code> est négatif, le signe est conservé, y compris lorsque la base est 2 (dans ce cas, la chaîne renvoyée sera la représentation binaire précédée par un signe <code>-</code> et <strong>non</strong> le complément à deux de <code>bigIntObj</code>).</p>
+Si `bigIntObj` est négatif, le signe est conservé, y compris lorsque la base est 2 (dans ce cas, la chaîne renvoyée sera la représentation binaire précédée par un signe `-` et **non** le complément à deux de `bigIntObj`).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_toString()">Utiliser <code>toString()</code></h3>
+### Utiliser `toString()`
 
-<pre class="brush: js">17n.toString();      // '17'
+```js
+17n.toString();      // '17'
 66n.toString(2);     // '1000010'
 254n.toString(16);   // 'fe'
 -10n.toString(2);    // -1010'
 -0xffn.toString(2);  // '-11111111'
-</pre>
+```
 
-<h3 id="Gestion_du_zéro_négatif_en_BigInt">Gestion du zéro négatif en <code>BigInt</code></h3>
+### Gestion du zéro négatif en `BigInt`
 
-<p>Il n'existe pas de zéro négatif pour <code>BigInt</code> car les entiers ne gèrent pas de concept de zéro négatif. <code>-0.0</code> est un concept relatif à la représentation flottante IEEE et n'est présent que pour le type {{jsxref("Number")}}.</p>
+Il n'existe pas de zéro négatif pour `BigInt` car les entiers ne gèrent pas de concept de zéro négatif. `-0.0` est un concept relatif à la représentation flottante IEEE et n'est présent que pour le type {{jsxref("Number")}}.
 
-<pre class="brush: js">(-0n).toString();      // '0'
-BigInt(-0).toString(); // '0'</pre>
+```js
+(-0n).toString();      // '0'
+BigInt(-0).toString(); // '0'
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-  </tr>
-  <tr>
-   <td><a href="https://tc39.github.io/proposal-bigint/#sec-bigint.prototype.tostring">Proposition pour <code>BigInt</code></a></td>
-   <td>Proposition de niveau 3</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                      | État                    |
+| -------------------------------------------------------------------------------------------------- | ----------------------- |
+| [Proposition pour `BigInt`](https://tc39.github.io/proposal-bigint/#sec-bigint.prototype.tostring) | Proposition de niveau 3 |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.BigInt.toString")}}</p>
+{{Compat("javascript.builtins.BigInt.toString")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("BigInt.prototype.toLocaleString()")}}</li>
- <li>{{jsxref("BigInt.prototype.valueOf()")}}</li>
- <li>{{jsxref("Number.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("BigInt.prototype.toLocaleString()")}}
+- {{jsxref("BigInt.prototype.valueOf()")}}
+- {{jsxref("Number.prototype.toString()")}}

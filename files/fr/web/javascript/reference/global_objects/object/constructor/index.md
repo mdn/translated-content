@@ -10,47 +10,54 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/constructor
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/constructor
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La propriété <code><strong>constructor</strong></code> renvoie une référence à la fonction {{jsxref("Object")}} qui a créé le prototype de l'instance. La valeur de cette propriété est une référence à la fonction elle-même, ce n'est pas une chaîne de caractères représentant le nom de la fonction. Cette valeur est en lecture seule pour les valeurs de types primitifs comme <code>1</code>, <code>true</code> et <code>"test"</code>.</p>
+La propriété **`constructor`** renvoie une référence à la fonction {{jsxref("Object")}} qui a créé le prototype de l'instance. La valeur de cette propriété est une référence à la fonction elle-même, ce n'est pas une chaîne de caractères représentant le nom de la fonction. Cette valeur est en lecture seule pour les valeurs de types primitifs comme `1`, `true` et `"test"`.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Tous les objets héritent d'une propriété <code>constructor</code> de leur prototype (à l'exception de ceux créés avec <code>Object.create(null)</code>). Les objets créés sans constructeur (c'est-à-dire avec des littéraux) auront le constructeur correspondant au type du littéral :</p>
+Tous les objets héritent d'une propriété `constructor` de leur prototype (à l'exception de ceux créés avec `Object.create(null)`). Les objets créés sans constructeur (c'est-à-dire avec des littéraux) auront le constructeur correspondant au type du littéral :
 
-<pre class="brush:js">var o = {};
+```js
+var o = {};
 o.constructor === Object; // true
 
 var a = [];
 a.constructor === Array; // true
 
 var n = new Number(3)
-n.constructor === Number; // true</pre>
+n.constructor === Number; // true
+```
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Afficher_le_constructeur_d'un_objet">Afficher le constructeur d'un objet</h3>
+### Afficher le constructeur d'un objet
 
-<p>L'exemple ci-dessous crée un constructeur <code>Arbre</code>, et un objet de ce type, <code>monArbre</code>. Le script affiche ensuite la propriété <code>constructor</code> de l'objet <code>monArbre</code> :</p>
+L'exemple ci-dessous crée un constructeur `Arbre`, et un objet de ce type, `monArbre`. Le script affiche ensuite la propriété `constructor` de l'objet `monArbre` :
 
-<pre class="brush:js">function Arbre(nom) {
+```js
+function Arbre(nom) {
    this.nom = nom;
 }
 
 var monArbre = new Arbre("Sequoia");
-console.log( "monArbre.constructor vaut " + monArbre.constructor );</pre>
+console.log( "monArbre.constructor vaut " + monArbre.constructor );
+```
 
-<p>Cet exemple produira le résultat suivant :</p>
+Cet exemple produira le résultat suivant :
 
-<pre class="brush:js">monArbre.constructor vaut function Arbre(nom) {
+```js
+monArbre.constructor vaut function Arbre(nom) {
     this.nom = nom;
-}</pre>
+}
+```
 
-<h3 id="Modifier_le_constructeur_d'un_objet">Modifier le constructeur d'un objet</h3>
+### Modifier le constructeur d'un objet
 
-<p>Dans l'exemple suivant, on illustre comment modifier la valeur d'un constructeur pour les objets génériques. Dans l'exemple suivant, seules les valeurs <code>true</code>, <code>1</code> et <code>"test"</code> ne seront pas affectées car leurs constructeurs sont en lecture seule uniquement. Cet exemple montre qu'il ne faut pas se reposer de façon aveugle sur la propriété <code>constructor</code> d'un objet.</p>
+Dans l'exemple suivant, on illustre comment modifier la valeur d'un constructeur pour les objets génériques. Dans l'exemple suivant, seules les valeurs `true`, `1` et `"test"` ne seront pas affectées car leurs constructeurs sont en lecture seule uniquement. Cet exemple montre qu'il ne faut pas se reposer de façon aveugle sur la propriété `constructor` d'un objet.
 
-<pre class="brush:js">function Type () {}
+```js
+function Type () {}
 
 var types = [
   new Array(),
@@ -72,17 +79,18 @@ var types = [
   'test'            // restera tel quel
 ];
 
-for (var i = 0; i &lt; types.length; i++) {
+for (var i = 0; i < types.length; i++) {
   types[i].constructor = Type;
   types[i] = [types[i].constructor, types[i] instanceof Type, types[i].toString()];
 }
 
 console.log(types.join('\n'));
-</pre>
+```
 
-<p>L'exemple produira le résultat suivant :</p>
+L'exemple produira le résultat suivant :
 
-<pre class="brush: js">function Type() {},false,
+```js
+function Type() {},false,
 function Type() {},false,
 function Type() {},false,false
 function Boolean() {
@@ -107,28 +115,31 @@ function Type() {},false,
 function String() {
     [native code]
 },false,test
-</pre>
+```
 
-<h3 id="Modifier_le_constructeur_d'une_fonction">Modifier le constructeur d'une fonction</h3>
+### Modifier le constructeur d'une fonction
 
-<p>La plupart du temps, cette  propriété est utilisée afin de définir une fonction en tant que constructeur, c'est-à-dire qu'on l'appellera avec <code><strong>new</strong></code> et en « attachant » la chaîne de prototypes.</p>
+La plupart du temps, cette  propriété est utilisée afin de définir une fonction en tant que constructeur, c'est-à-dire qu'on l'appellera avec **`new`** et en « attachant » la chaîne de prototypes.
 
-<pre class="brush: js">function Parent() {}
+```js
+function Parent() {}
 Parent.prototype.parentMethod = function parentMethod() {};
 
 function Child() {}
 // on redefinit le prototype de child afin qu'il pointe vers celui de Parent
 Child.prototype = Object.create(Parent.prototype);
 
-Child.prototype.constructor = Child; // on renvoie le constructeur original Child</pre>
+Child.prototype.constructor = Child; // on renvoie le constructeur original Child
+```
 
-<p>Pourquoi faut-il écrire cette dernière ligne ? Eh bien, ça dépend.</p>
+Pourquoi faut-il écrire cette dernière ligne ? Eh bien, ça dépend.
 
-<p>Essayons de définir les cas où il est nécessaire de réaffecter le constructeur original et les cas où c'est superflu.</p>
+Essayons de définir les cas où il est nécessaire de réaffecter le constructeur original et les cas où c'est superflu.
 
-<p>Imaginons que l'objet possède une méthode <code>create()</code> qui lui permette de créer un autre exemplaire :</p>
+Imaginons que l'objet possède une méthode `create()` qui lui permette de créer un autre exemplaire :
 
-<pre class="brush: js">function Parent() {};
+```js
+function Parent() {};
 function CreatedConstructor() {}
 
 CreatedConstructor.prototype = Object.create(Parent.prototype);
@@ -138,13 +149,15 @@ CreatedConstructor.prototype.create = function create() {
 }
 
 new CreatedConstructor().create().create();
-// error undefined is not a function car constructor === Parent</pre>
+// error undefined is not a function car constructor === Parent
+```
 
-<p>Dans l'exemple précédent, on a une exception car le constructeur pointe vers <code>Parent</code>.</p>
+Dans l'exemple précédent, on a une exception car le constructeur pointe vers `Parent`.
 
-<p>Pour éviter cet écueil, il suffit d'affecter le bon constructeur (celui qui sera utilisé ensuite) :</p>
+Pour éviter cet écueil, il suffit d'affecter le bon constructeur (celui qui sera utilisé ensuite) :
 
-<pre class="brush: js">function Parent() {};
+```js
+function Parent() {};
 function CreatedConstructor() {}
 
 CreatedConstructor.prototype = Object.create(Parent.prototype);
@@ -156,11 +169,13 @@ CreatedConstructor.prototype.create = function create() {
 }
 
 new CreatedConstructor().create().create();
-// pas d'exception cette fois-ci</pre>
+// pas d'exception cette fois-ci
+```
 
-<p>Prenons un autre exemple :</p>
+Prenons un autre exemple :
 
-<pre class="brush: js">function ParentWithStatic() {}
+```js
+function ParentWithStatic() {}
 
 ParentWithStatic.startPosition = { x: 0, y:0 };
 ParentWithStatic.getStartPosition = function getStartPosition() {
@@ -185,46 +200,22 @@ Child.prototype.getOffsetByInitialPosition = function getOffsetByInitialPosition
     offsetX: startPosition.x - position.x,
     offsetY: startPosition.y - position.y
   }
-};</pre>
+};
+```
 
-<p>Ici, il faudra conserverr le constructeur parent si on veut que le code fonctionne correctement.</p>
+Ici, il faudra conserverr le constructeur parent si on veut que le code fonctionne correctement.
 
-<p>En résumé, lorsqu'on paramètre manuellement le constructeur, on peut obtenir des résultats sources de confusion. La plupart du temps, la propriété <code>constructor</code> n'est pas utilisée et la réaffecter n'est pas nécessaire.</p>
+En résumé, lorsqu'on paramètre manuellement le constructeur, on peut obtenir des résultats sources de confusion. La plupart du temps, la propriété `constructor` n'est pas utilisée et la réaffecter n'est pas nécessaire.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.4.1', 'Object.prototype.constructor')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.prototype.constructor', 'Object.prototype.constructor')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.prototype.constructor', 'Object.prototype.constructor')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                | Statut                       | Commentaires                                          |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                                     | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.2.4.1', 'Object.prototype.constructor')}}                                 | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-object.prototype.constructor', 'Object.prototype.constructor')}}         | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-object.prototype.constructor', 'Object.prototype.constructor')}} | {{Spec2('ESDraft')}} |                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Object.constructor")}}</p>
+{{Compat("javascript.builtins.Object.constructor")}}

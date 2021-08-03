@@ -10,47 +10,48 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/hasOwnProperty
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>hasOwnProperty()</strong></code> retourne un booléen indiquant si l'objet possède la propriété spécifiée "en propre", sans que celle-ci provienne de la chaîne de prototypes de l'objet.</p>
+La méthode **`hasOwnProperty()`** retourne un booléen indiquant si l'objet possède la propriété spécifiée "en propre", sans que celle-ci provienne de la chaîne de prototypes de l'objet.
 
-<div>{{EmbedInteractiveExample("pages/js/object-prototype-hasownproperty.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-prototype-hasownproperty.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>obj</var>.hasOwnProperty(<var>prop</var>)</pre>
+    obj.hasOwnProperty(prop)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>prop</code></dt>
- <dd>Le nom ({{jsxref("String")}}) ou le symbole ({{jsxref("Symbol")}}) de la propriété à tester.</dd>
-</dl>
+- `prop`
+  - : Le nom ({{jsxref("String")}}) ou le symbole ({{jsxref("Symbol")}}) de la propriété à tester.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un booléen qui indique si l'objet possède ou non la propriété indiquée en argument et que celle-ci est directement rattachée à l'objet (elle ne provient pas de la chaîne de prototypes de l'objet). <code>hasOwnProperty()</code> renvoie <code>true</code> si la propriété existe et que sa valeur est {{jsxref("null")}} ou {{jsxref("undefined")}}.</p>
+Un booléen qui indique si l'objet possède ou non la propriété indiquée en argument et que celle-ci est directement rattachée à l'objet (elle ne provient pas de la chaîne de prototypes de l'objet). `hasOwnProperty()` renvoie `true` si la propriété existe et que sa valeur est {{jsxref("null")}} ou {{jsxref("undefined")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Chaque objet descendant d'{{jsxref("Object")}} hérite de la méthode <code>hasOwnProperty()</code>. Cette méthode peut être utilisée pour déterminer si un objet a la propriété spécifiée en tant que propriété directe de cet objet. Contrairement à l'opérateur {{jsxref("Opérateurs/L_opérateur_in", "in")}}, cette méthode ne vérifie pas la chaîne des prototypes de l'objet. Si l'objet est un tableau ({{jsxref("Array")}}), la méthode <code>hasOwnProperty()</code> pourra être utilisée afin de vérifier la présence d'un index.</p>
+Chaque objet descendant d'{{jsxref("Object")}} hérite de la méthode `hasOwnProperty()`. Cette méthode peut être utilisée pour déterminer si un objet a la propriété spécifiée en tant que propriété directe de cet objet. Contrairement à l'opérateur {{jsxref("Opérateurs/L_opérateur_in", "in")}}, cette méthode ne vérifie pas la chaîne des prototypes de l'objet. Si l'objet est un tableau ({{jsxref("Array")}}), la méthode `hasOwnProperty()` pourra être utilisée afin de vérifier la présence d'un index.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_hasOwnProperty()_pour_tester_l'existence_d'une_propriété">Utiliser <code>hasOwnProperty()</code> pour tester l'existence d'une propriété</h3>
+### Utiliser `hasOwnProperty()` pour tester l'existence d'une propriété
 
-<p>L'exemple suivant détermine si l'objet <code>o</code> contient une propriété appelée <code>prop</code>:</p>
+L'exemple suivant détermine si l'objet `o` contient une propriété appelée `prop`:
 
-<pre class="brush: js">o = new Object();
+```js
+o = new Object();
 o.hasOwnProperty('prop'); // false
 o.prop = 'exists';
-o.hasOwnProperty('prop'); // true</pre>
+o.hasOwnProperty('prop'); // true
+```
 
-<h3 id="Propriétés_directes_et_propriétés_héritées">Propriétés directes et propriétés héritées</h3>
+### Propriétés directes et propriétés héritées
 
-<p>L'exemple suivant illustre la différence entre les propriétés directes et les propriétés héritées à partir de la chaîne de prototypes :</p>
+L'exemple suivant illustre la différence entre les propriétés directes et les propriétés héritées à partir de la chaîne de prototypes :
 
-<pre class="brush: js">o = new Object();
+```js
+o = new Object();
 o.prop = 'exists';
 
 o.hasOwnProperty('prop');
@@ -60,13 +61,15 @@ o.hasOwnProperty('toString');
 // retourne false
 
 o.hasOwnProperty('hasOwnProperty');
-// retourne false</pre>
+// retourne false
+```
 
-<h3 id="Parcourir_les_propriétés_d'un_objet">Parcourir les propriétés d'un objet</h3>
+### Parcourir les propriétés d'un objet
 
-<p>L'exemple suivant montre comment parcourir les propriétés d'un objet sans traiter les propriétés héritées. On notera que la boucle  {{jsxref("Instructions/for...in", "for...in")}} ne prend en compte que les éléments énumérables. Il ne faut donc pas déduire de l'absence de propriétés non-énumérables dans la boucle, que <code>hasOwnProperty()</code> est elle-même strictement restreinte aux éléments énumérables (comme c'est le cas pour {{jsxref("Object.getOwnPropertyNames()")}}) .</p>
+L'exemple suivant montre comment parcourir les propriétés d'un objet sans traiter les propriétés héritées. On notera que la boucle  {{jsxref("Instructions/for...in", "for...in")}} ne prend en compte que les éléments énumérables. Il ne faut donc pas déduire de l'absence de propriétés non-énumérables dans la boucle, que `hasOwnProperty()` est elle-même strictement restreinte aux éléments énumérables (comme c'est le cas pour {{jsxref("Object.getOwnPropertyNames()")}}) .
 
-<pre class="brush: js">var bidule = {
+```js
+var bidule = {
     truc: 'stack'
 };
 
@@ -81,13 +84,15 @@ for (var nom in bidule) {
         console.log(nom);
         // toString ou autre
     }
-}</pre>
+}
+```
 
-<h3 id="hasOwnProperty()_en_tant_que_propriété"><code>hasOwnProperty()</code> en tant que propriété</h3>
+### `hasOwnProperty()` en tant que propriété
 
-<p>JavaScript ne protège pas le nom de propriété <code>hasOwnProperty</code>, ainsi il est possible qu'un objet puisse avoir une propriété avec ce nom, il sera donc nécessaire d'utiliser une version externe de la méthode pour obtenir des résultats corrects.</p>
+JavaScript ne protège pas le nom de propriété `hasOwnProperty`, ainsi il est possible qu'un objet puisse avoir une propriété avec ce nom, il sera donc nécessaire d'utiliser une version externe de la méthode pour obtenir des résultats corrects.
 
-<pre class="brush: js">var toto = {
+```js
+var toto = {
   hasOwnProperty: function() {
     return false;
   },
@@ -102,54 +107,27 @@ toto.hasOwnProperty('truc'); // renvoie toujours false
 
 // On peut aussi utiliser la propriété hasOwnProperty de Object prototype
 Object.prototype.hasOwnProperty.call(toto, 'truc'); // true
-</pre>
+```
 
-<p>La dernière version utilisée permet de ne pas créer d'objet supplémentaire.</p>
+La dernière version utilisée permet de ne pas créer d'objet supplémentaire.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.4.5', 'Object.prototype.hasOwnProperty')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                        | État                         | Commentaires                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ES3')}}                                                                                                             | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.5. |
+| {{SpecName('ES5.1', '#sec-15.2.4.5', 'Object.prototype.hasOwnProperty')}}                                     | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}}         | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-object.prototype.hasownproperty', 'Object.prototype.hasOwnProperty')}} | {{Spec2('ESDraft')}} |                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Object.hasOwnProperty")}}</p>
+{{Compat("javascript.builtins.Object.hasOwnProperty")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement">Caractère énumérable et rattachement des propriétés</a></li>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
- <li>{{jsxref("Instructions/for...in", "for...in")}}</li>
- <li>{{jsxref("Opérateurs/L_opérateur_in", "in")}}</li>
- <li><a href="/fr/docs/Web/JavaScript/Guide/Retours_sur_héritage">Guide JavaScript : Retours sur l'héritage</a></li>
-</ul>
+- [Caractère énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement)
+- {{jsxref("Object.getOwnPropertyNames()")}}
+- {{jsxref("Instructions/for...in", "for...in")}}
+- {{jsxref("Opérateurs/L_opérateur_in", "in")}}
+- [Guide JavaScript : Retours sur l'héritage](/fr/docs/Web/JavaScript/Guide/Retours_sur_héritage)

@@ -11,53 +11,35 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/valueOf
 original_slug: Web/JavaScript/Reference/Objets_globaux/Symbol/valueOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>valueOf()</strong></code> renvoie la valeur primitive correspondant à l'objet <code>Symbol</code>.</p>
+La méthode **`valueOf()`** renvoie la valeur primitive correspondant à l'objet `Symbol`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>Symbol().valueOf();
-</var></pre>
+    Symbol().valueOf();
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>La valeur primitive de l'objet {{jsxref("Symbol")}} indiqué.</p>
+La valeur primitive de l'objet {{jsxref("Symbol")}} indiqué.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code>valueOf</code> de {{jsxref("Symbol")}} renvoie une valeur dont le type est le type primitif symbole à partir de l'objet <code>Symbol</code> donné.</p>
+La méthode `valueOf` de {{jsxref("Symbol")}} renvoie une valeur dont le type est le type primitif symbole à partir de l'objet `Symbol` donné.
 
-<p>JavaScript appelle la méthode <code>valueOf</code> afin de convertir l'objet en une valeur primitive. La plupart du temps, il n'est pas nécessaire d'appeler explicitement la méthode <code>valueOf</code>. JavaScript l'appelle automatiquement dans les cas où une valeur primitive est attendue.</p>
+JavaScript appelle la méthode `valueOf` afin de convertir l'objet en une valeur primitive. La plupart du temps, il n'est pas nécessaire d'appeler explicitement la méthode `valueOf`. JavaScript l'appelle automatiquement dans les cas où une valeur primitive est attendue.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-symbol.prototype.valueof', 'Symbol.prototype.valueOf')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-symbol.prototype.valueof', 'Symbol.prototype.valueOf')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                         | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-symbol.prototype.valueof', 'Symbol.prototype.valueOf')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-symbol.prototype.valueof', 'Symbol.prototype.valueOf')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Symbol.valueOf")}}</p>
+{{Compat("javascript.builtins.Symbol.valueOf")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Object.prototype.valueOf()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.valueOf()")}}

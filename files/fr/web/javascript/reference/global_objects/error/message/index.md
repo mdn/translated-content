@@ -10,64 +10,40 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/message
 original_slug: Web/JavaScript/Reference/Objets_globaux/Error/message
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La propriété <code><strong>message</strong></code> est une description de l'erreur, écrite pour être lue par un humain.</p>
+La propriété **`message`** est une description de l'erreur, écrite pour être lue par un humain.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La propriété contient une brève description de l'erreur si elle est accessible, ou si elle a été définie. <a href="/fr/docs/SpiderMonkey">SpiderMonkey</a> utilise intensivement la propriété <code>message</code> pour les erreurs d'exécution. La propriété <code>message</code>, combinée à la propriété {{jsxref("Error.name", "name")}}, est utilisée par la méthode {{jsxref("Error.prototype.toString()")}} pour créer une représentation de l'erreur sous la forme d'une chaine de caractères.</p>
+La propriété contient une brève description de l'erreur si elle est accessible, ou si elle a été définie. [SpiderMonkey](/fr/docs/SpiderMonkey) utilise intensivement la propriété `message` pour les erreurs d'exécution. La propriété `message`, combinée à la propriété {{jsxref("Error.name", "name")}}, est utilisée par la méthode {{jsxref("Error.prototype.toString()")}} pour créer une représentation de l'erreur sous la forme d'une chaine de caractères.
 
-<p>Par défaut, la propriété <code>message</code> est une chaine de caractères vide, mais ce comportement peut être remplacé pour une instance, en renseignant un message comme premier argument du constructeur {{jsxref("Error")}}.</p>
+Par défaut, la propriété `message` est une chaine de caractères vide, mais ce comportement peut être remplacé pour une instance, en renseignant un message comme premier argument du constructeur {{jsxref("Error")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Déclencher_une_erreur_personnalisée">Déclencher une erreur personnalisée</h3>
+### Déclencher une erreur personnalisée
 
-<pre class="brush: js">var e = new Error("Impossible de lire la donnée");
+```js
+var e = new Error("Impossible de lire la donnée");
 // e.message est "Impossible de lire la donnée"
 throw e;
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.11.4.3', 'Error.prototype.message')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-error.prototype.message', 'Error.prototype.message')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-error.prototype.message', 'Error.prototype.message')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | Statut                       | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{SpecName('ES1')}}                                                                                     | {{Spec2('ES1')}}         | Définition initiale. |
+| {{SpecName('ES5.1', '#sec-15.11.4.3', 'Error.prototype.message')}}                     | {{Spec2('ES5.1')}}     |                      |
+| {{SpecName('ES6', '#sec-error.prototype.message', 'Error.prototype.message')}}     | {{Spec2('ES6')}}         |                      |
+| {{SpecName('ESDraft', '#sec-error.prototype.message', 'Error.prototype.message')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Error.message")}}</p>
+{{Compat("javascript.builtins.Error.message")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Error.prototype.name")}}</li>
- <li>{{jsxref("Error.prototype.toString()")}}</li>
-</ul>
+- {{jsxref("Error.prototype.name")}}
+- {{jsxref("Error.prototype.toString()")}}

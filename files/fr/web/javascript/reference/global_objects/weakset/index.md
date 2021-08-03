@@ -9,24 +9,23 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet
 original_slug: Web/JavaScript/Reference/Objets_globaux/WeakSet
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>L'objet <strong><code>WeakSet</code></strong> permet de créer un ensemble dont les objets sont contenus avec des références <em>faibles</em>.</p>
+L'objet **`WeakSet`** permet de créer un ensemble dont les objets sont contenus avec des références _faibles_.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">new WeakSet([<var>itérable</var>]);</pre>
+    new WeakSet([itérable]);
 
-<h3 id="Paramètre">Paramètre</h3>
+### Paramètre
 
-<dl>
- <dt><code>itérable</code></dt>
- <dd>Si un <a href="/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_.C2.AB_it.C3.A9rable_.C2.BB">objet itérable</a> est présent comme argument, ses éléments seront ajoutés au nouvel objet <code>WeakSet</code>. {{jsxref("null")}} est traité comme {{jsxref("undefined")}}.</dd>
-</dl>
+- `itérable`
+  - : Si un [objet itérable](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_.C2.AB_it.C3.A9rable_.C2.BB) est présent comme argument, ses éléments seront ajoutés au nouvel objet `WeakSet`. {{jsxref("null")}} est traité comme {{jsxref("undefined")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var ws = new WeakSet();
+```js
+var ws = new WeakSet();
 var toto = {};
 var truc = {};
 
@@ -38,49 +37,46 @@ ws.has(truc);  // true
 
 ws.delete(toto); // retire toto de l'ensemble
 ws.has(toto);    // false, toto a été enlevé
-</pre>
+```
 
-<p>On notera que <code>toto !== truc</code>. Bien que ce soient des objets similaires, ce ne sont pas les mêmes objets. Aussi, les deux sont ajoutés à l'ensemble.</p>
+On notera que `toto !== truc`. Bien que ce soient des objets similaires, ce ne sont pas les mêmes objets. Aussi, les deux sont ajoutés à l'ensemble.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Les <code>WeakSet</code> sont des ensembles d'objets. Un objet présent dans un objet <code>WeakSet</code> ne peut apparaître qu'une seule fois, il est unique pour un <code>WeakSet</code> donné.</p>
+Les `WeakSet` sont des ensembles d'objets. Un objet présent dans un objet `WeakSet` ne peut apparaître qu'une seule fois, il est unique pour un `WeakSet` donné.
 
-<p>Les principales différences avec l'objet {{jsxref("Set")}} sont les suivantes :</p>
+Les principales différences avec l'objet {{jsxref("Set")}} sont les suivantes :
 
-<ul>
- <li>Contrairement aux <code>Sets</code>, les <code>WeakSets</code> sont des <strong>ensembles uniquement constitués d'objets </strong>et ne peuvent pas contenir des valeurs de n'importe quel type.</li>
- <li>L'objet <code>WeakSet</code> est <em>faible :</em> Les références vers les objets de l'ensemble sont des références faibles. Si aucune autre référence vers l'objet n'est présente en dehors du <code>WeakSet</code>, l'objet pourra alors être nettoyé par le ramasse-miette. Cela signifie également qu'on ne peut pas lister les objets contenus à un instant donné dans l'ensemble. Les objets <code>WeakSets</code> ne sont pas énumérables.</li>
-</ul>
+- Contrairement aux `Sets`, les `WeakSets` sont des **ensembles uniquement constitués d'objets** et ne peuvent pas contenir des valeurs de n'importe quel type.
+- L'objet `WeakSet` est _faible :_ Les références vers les objets de l'ensemble sont des références faibles. Si aucune autre référence vers l'objet n'est présente en dehors du `WeakSet`, l'objet pourra alors être nettoyé par le ramasse-miette. Cela signifie également qu'on ne peut pas lister les objets contenus à un instant donné dans l'ensemble. Les objets `WeakSets` ne sont pas énumérables.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<dl>
- <dt><code>WeakSet.length</code></dt>
- <dd>La valeur de la propriété <code>length</code> est 0.</dd>
- <dt>{{jsxref("WeakSet.prototype")}}</dt>
- <dd>Cette propriété représente le prototype pour le constructeur <code>WeakSet</code>. Il permet d'ajouter des propriétés pour tous les objets <code>WeakSet</code>.</dd>
-</dl>
+- `WeakSet.length`
+  - : La valeur de la propriété `length` est 0.
+- {{jsxref("WeakSet.prototype")}}
+  - : Cette propriété représente le prototype pour le constructeur `WeakSet`. Il permet d'ajouter des propriétés pour tous les objets `WeakSet`.
 
-<h2 id="Instances_de_WeakSet">Instances de <code>WeakSet</code></h2>
+## Instances de `WeakSet`
 
-<p>Toutes les instances de <code>WeakSet</code> héritent de {{jsxref("WeakSet.prototype")}}.</p>
+Toutes les instances de `WeakSet` héritent de {{jsxref("WeakSet.prototype")}}.
 
-<h3 id="Propriétés_2">Propriétés</h3>
+### Propriétés
 
-<p>{{page('fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakSet/prototype','Propri.C3.A9t.C3.A9s')}}</p>
+{{page('fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakSet/prototype','Propri.C3.A9t.C3.A9s')}}
 
-<h3 id="Méthodes">Méthodes</h3>
+### Méthodes
 
-<p>{{page('fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakSet/prototype','M.C3.A9thodes')}}</p>
+{{page('fr/docs/Web/JavaScript/Reference/Objets_globaux/WeakSet/prototype','M.C3.A9thodes')}}
 
-<h2 id="Exemples_2">Exemples</h2>
+## Exemples
 
-<h3 id="Détecter_les_références_circulaires">Détecter les références circulaires</h3>
+### Détecter les références circulaires
 
-<p>Les fonctions récursives doivent faire attention aux structures de données circulaire qu'elles consommeraient. Les objets <code>WeakSets</code> peuvent être utilisé pour ça :</p>
+Les fonctions récursives doivent faire attention aux structures de données circulaire qu'elles consommeraient. Les objets `WeakSets` peuvent être utilisé pour ça :
 
-<pre class="brush: js">// Appeler un callback sur ce qui est stocké dans un objet
+```js
+// Appeler un callback sur ce qui est stocké dans un objet
 function execRecursively(fn, subject, _refs = null){
   if(!_refs)
     _refs = new WeakSet();
@@ -105,41 +101,24 @@ const toto = {
 };
 
 toto.truc.machin = toto; // Référence circulaire !
-execRecursively(obj =&gt; console.log(obj), toto);
-</pre>
+execRecursively(obj => console.log(obj), toto);
+```
 
-<p>Ici, on a un objet <code>WeakSet</code> qui est créé lors de la première exécution et qui est passé ensuite à chaque appel qui suit (via l'argument interne <code>_refs</code>). Le nombre d'objets ou l'ordre de parcours n'a pas d'importance et un objet <code>WeakSet</code> est donc plus adapté (y compris en termes de performances) qu'un {{jsxref("Set")}}, notamment si un grand nombre d'objets sont concernés.</p>
+Ici, on a un objet `WeakSet` qui est créé lors de la première exécution et qui est passé ensuite à chaque appel qui suit (via l'argument interne `_refs`). Le nombre d'objets ou l'ordre de parcours n'a pas d'importance et un objet `WeakSet` est donc plus adapté (y compris en termes de performances) qu'un {{jsxref("Set")}}, notamment si un grand nombre d'objets sont concernés.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-weakset-objects', 'WeakSet')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-weakset-objects', 'WeakSet')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | État                         | Commentaires         |
+| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-weakset-objects', 'WeakSet')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-weakset-objects', 'WeakSet')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.WeakSet")}}</p>
+{{Compat("javascript.builtins.WeakSet")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Map")}}</li>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("WeakMap")}}</li>
-</ul>
+- {{jsxref("Map")}}
+- {{jsxref("Set")}}
+- {{jsxref("WeakMap")}}

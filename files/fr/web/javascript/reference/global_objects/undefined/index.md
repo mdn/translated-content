@@ -7,71 +7,71 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/undefined
 original_slug: Web/JavaScript/Reference/Objets_globaux/undefined
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<p>La propriété globale <strong><code>undefined</code></strong> représente la valeur <code>undefined</code><em>.</em> Cette valeur est l'<a href="/fr/docs/Web/JavaScript/Structures_de_données#Le_type_ind.C3.A9fini">un des types primitifs de JavaScript</a>.</p>
+La propriété globale **`undefined`** représente la valeur `undefined`_._ Cette valeur est l'[un des types primitifs de JavaScript](/fr/docs/Web/JavaScript/Structures_de_données#Le_type_ind.C3.A9fini).
 
-<p>{{js_property_attributes(0,0,0)}}</p>
+{{js_property_attributes(0,0,0)}}
 
-<div>{{EmbedInteractiveExample("pages/js/globalprops-undefined.html")}}</div>
+{{EmbedInteractiveExample("pages/js/globalprops-undefined.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">undefined</pre>
+    undefined
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p><code>undefined</code> est une propriété de <em>l'objet global</em>, c'est-à-dire qu'elle est accessible globalement. La valeur initiale d'<code>undefined</code> est la valeur primitive <code>undefined</code>.</p>
+`undefined` est une propriété de _l'objet global_, c'est-à-dire qu'elle est accessible globalement. La valeur initiale d'`undefined` est la valeur primitive `undefined`.
 
-<p>Dans les navigateurs modernes, d'après la spécification ECMAScript 5, <code>undefined</code> est une propriété non-configurable et non accessible en écriture. Si, toutefois, elle peut être modifiée dans l'environnement utilisé, il faut éviter de l'écraser.</p>
+Dans les navigateurs modernes, d'après la spécification ECMAScript 5, `undefined` est une propriété non-configurable et non accessible en écriture. Si, toutefois, elle peut être modifiée dans l'environnement utilisé, il faut éviter de l'écraser.
 
-<p>Une variable pour laquelle aucune valeur n'a été assignée sera de type <code>undefined</code>. Une méthode ou instruction renvoie également <code>undefined</code> si la variable à évaluer n'a pas de valeur assignée. Une fonction renvoie <code>undefined</code> si aucune valeur n'a été {{jsxref("Instructions/return", "retournée","",1)}}.</p>
+Une variable pour laquelle aucune valeur n'a été assignée sera de type `undefined`. Une méthode ou instruction renvoie également `undefined` si la variable à évaluer n'a pas de valeur assignée. Une fonction renvoie `undefined` si aucune valeur n'a été {{jsxref("Instructions/return", "retournée","",1)}}.
 
-<div class="warning">
-<p><strong>Attention :</strong> Puisque <code>undefined</code> n'est pas un <a href="/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale#Mots-cl.C3.A9s">mot réservé du langage JavaScript</a>, il peut être utilisé comme <a href="/fr/docs/Web/JavaScript/Guide/Valeurs,_variables,_et_littéraux#Variables">identifiant</a> (nom de variable) dans toute portée autre que la portée globale. Ceci est une très mauvaise idée pour la lisibilité du code et sa maintenabilité.</p>
+> **Attention :** Puisque `undefined` n'est pas un [mot réservé du langage JavaScript](/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale#Mots-cl.C3.A9s), il peut être utilisé comme [identifiant](/fr/docs/Web/JavaScript/Guide/Valeurs,_variables,_et_littéraux#Variables) (nom de variable) dans toute portée autre que la portée globale. Ceci est une très mauvaise idée pour la lisibilité du code et sa maintenabilité.
+>
+> ```js
+> // À NE PAS FAIRE
+>
+> // écrit "toto string" dans la console
+> (function() { var undefined = 'toto'; console.log(undefined, typeof undefined); })();
+>
+> // écrit "toto string" dans la console
+> (function(undefined) { console.log(undefined, typeof undefined); })('toto');
+> ```
 
-<pre class="brush: js">// À NE PAS FAIRE
+## Exemples
 
-// écrit "toto string" dans la console
-(function() { var undefined = 'toto'; console.log(undefined, typeof undefined); })();
+### L'égalité stricte et `undefined`
 
-// écrit "toto string" dans la console
-(function(undefined) { console.log(undefined, typeof undefined); })('toto');
-</pre>
-</div>
+Il est possible d'utiliser `undefined` et les opérateurs stricts pour l''égalité et l'inégalité strictes afin de déterminer si une variable a une valeur affectée. Dans le code qui suit, la variable `x` n'est pas initialisée et la première instruction `if` sera évaluée à `true` (vrai).
 
-<h2 id="Exemples">Exemples</h2>
-
-<h3 id="L'égalité_stricte_et_undefined">L'égalité stricte et <code>undefined</code></h3>
-
-<p>Il est possible d'utiliser <code>undefined</code> et les opérateurs stricts pour l''égalité et l'inégalité strictes afin de déterminer si une variable a une valeur affectée. Dans le code qui suit, la variable <code>x</code> n'est pas initialisée et la première instruction <code>if</code> sera évaluée à <code>true</code> (vrai).</p>
-
-<pre class="brush: js">var x;
+```js
+var x;
 if (x === undefined) {
    // ces instructions seront exécutées
 }
 if (x !== undefined) {
    // ces instructions ne seront pas exécutées
 }
-</pre>
+```
 
-<div class="note">
-<p><strong>Note :</strong> L'opérateur d'égalité stricte doit être utilisé ici plutôt que l'opérateur d'égalité simple. En effet, <code>x == undefined</code> vérifie également si <code>x</code> vaut <code>null</code>, tandis que l'égalité stricte ne le fait pas. <code>null</code> n'est pas équivalent à <code>undefined</code>. Voir la page sur les {{jsxref("Opérateurs/Opérateurs_de_comparaison","opérateurs de comparaison","",1)}} pour plus de détails.</p>
-</div>
+> **Note :** L'opérateur d'égalité stricte doit être utilisé ici plutôt que l'opérateur d'égalité simple. En effet, `x == undefined` vérifie également si `x` vaut `null`, tandis que l'égalité stricte ne le fait pas. `null` n'est pas équivalent à `undefined`. Voir la page sur les {{jsxref("Opérateurs/Opérateurs_de_comparaison","opérateurs de comparaison","",1)}} pour plus de détails.
 
-<h3 id="L'opérateur_typeof_et_undefined">L'opérateur <code>typeof</code> et <code>undefined</code></h3>
+### L'opérateur `typeof` et `undefined`
 
-<p>L'opérateur {{jsxref("Opérateurs/L_opérateur_typeof", "typeof")}} peut également être utilisé :</p>
+L'opérateur {{jsxref("Opérateurs/L_opérateur_typeof", "typeof")}} peut également être utilisé :
 
-<pre class="brush: js">var x;
+```js
+var x;
 if (typeof x == 'undefined') {
    // ces instructions seront exécutées
 }
-</pre>
+```
 
-<p>Une des raisons pour utiliser {{jsxref("Opérateurs/L_opérateur_typeof", "typeof")}} est qu'il ne renverra pas d'erreur si la variable n'a pas été définie :</p>
+Une des raisons pour utiliser {{jsxref("Opérateurs/L_opérateur_typeof", "typeof")}} est qu'il ne renverra pas d'erreur si la variable n'a pas été définie :
 
-<pre class="brush: js">// x n'a pas encore été défini
+```js
+// x n'a pas encore été défini
 if (typeof x === 'undefined') { // donnera true sans erreur
    // ces instructions seront exécutées
 }
@@ -79,13 +79,14 @@ if (typeof x === 'undefined') { // donnera true sans erreur
 if (x === undefined) { // déclenche une ReferenceError
 
 }
-</pre>
+```
 
-<h3 id="L'opérateur_void_et_undefined">L'opérateur <code>void</code> et <code>undefined</code></h3>
+### L'opérateur `void` et `undefined`
 
-<p>L'opérateur {{jsxref("Opérateurs/L_opérateur_void", "void")}} est une troisième solution.</p>
+L'opérateur {{jsxref("Opérateurs/L_opérateur_void", "void")}} est une troisième solution.
 
-<pre class="brush: js">var x;
+```js
+var x;
 if (x === void 0) {
    // ces instructions seront exécutées
 }
@@ -95,40 +96,17 @@ if (y === void 0) {
    // déclenche une ReferenceError: y is not defined
    // (contrairement à `typeof`)
 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1', '#sec-4.3.9', 'undefined')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.3.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.1.1.3', 'undefined')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-undefined', 'undefined')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-undefined', 'undefined')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                            | État                         | Commentaires                                          |
+| ------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ES1', '#sec-4.3.9', 'undefined')}}             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.3. |
+| {{SpecName('ES5.1', '#sec-15.1.1.3', 'undefined')}}     | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-undefined', 'undefined')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-undefined', 'undefined')}} | {{Spec2('ESDraft')}} |                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.undefined")}}</p>
+{{Compat("javascript.builtins.undefined")}}

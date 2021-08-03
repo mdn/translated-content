@@ -9,46 +9,41 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/async_function
 original_slug: Web/JavaScript/Reference/Opérateurs/async_function
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>Le mot-clé <strong><code>async function</code></strong> peut être utilisé pour définir une fonction asynchrone au sein d'une expression.</p>
+Le mot-clé **`async function`** peut être utilisé pour définir une fonction asynchrone au sein d'une expression.
 
-<div class="note">
-<p><strong>Note :</strong> Il est aussi possible de définir une fonction asynchrone en utilisant une <a href="/fr/docs/Web/JavaScript/Reference/Instructions/async_function">instruction <code>async function</code></a>.</p>
-</div>
+> **Note :** Il est aussi possible de définir une fonction asynchrone en utilisant une [instruction `async function`](/fr/docs/Web/JavaScript/Reference/Instructions/async_function).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">async function [<em>name</em>]([<em>param1</em>[, <em>param2[</em>, ..., <em>paramN</em>]]]) {
-   <em>instructions</em>
-}</pre>
+    async function [name]([param1[, param2[, ..., paramN]]]) {
+       instructions
+    }
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>name</code></dt>
- <dd>Le nom de la fonction. Il est facultatif et s'il n'est pas utilisé, la fonction est <em>anonyme</em>. Le nom utilisé est uniquement local pour le corps de la fonction.</dd>
- <dt><code>paramN</code></dt>
- <dd>Le nom d'un argument à passer à la fonction.</dd>
- <dt><code>instructions</code></dt>
- <dd>Les instructions qui composent le corps de la fonction.</dd>
-</dl>
+- `name`
+  - : Le nom de la fonction. Il est facultatif et s'il n'est pas utilisé, la fonction est _anonyme_. Le nom utilisé est uniquement local pour le corps de la fonction.
+- `paramN`
+  - : Le nom d'un argument à passer à la fonction.
+- `instructions`
+  - : Les instructions qui composent le corps de la fonction.
 
-<div class="note">
-<p><strong>Note :</strong> À partir d'ES2015 (ES6), il est aussi possible d'utiliser des <a href="/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es">fonctions fléchées</a> pour les expressions de fonction asynchrone.</p>
-</div>
+> **Note :** À partir d'ES2015 (ES6), il est aussi possible d'utiliser des [fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fl%C3%A9ch%C3%A9es) pour les expressions de fonction asynchrone.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Une expression <code>async function</code> est très proche, et partage quasiment la même syntaxe avec {{jsxref('Instructions/async_function', 'une instruction async function',"",1)}}. La différence principale entre une expression async <code>function</code> et une instruction async <code>function</code> est qu'on peut omettre le nom de la fonction dans les expressions <code>async function</code>. On peut donc utiliser une expression <code>async function</code> afin de créer une <em>IIFE</em> (pour <em>Immediately Invoked Function Expression</em>) qu'on appelle au moment de sa définition. Voir également le chapitre sur <a href="/fr/docs/Web/JavaScript/Reference/Fonctions">les fonctions</a> pour plus d'informations.</p>
+Une expression `async function` est très proche, et partage quasiment la même syntaxe avec {{jsxref('Instructions/async_function', 'une instruction async function',"",1)}}. La différence principale entre une expression async `function` et une instruction async `function` est qu'on peut omettre le nom de la fonction dans les expressions `async function`. On peut donc utiliser une expression `async function` afin de créer une _IIFE_ (pour _Immediately Invoked Function Expression_) qu'on appelle au moment de sa définition. Voir également le chapitre sur [les fonctions](/fr/docs/Web/JavaScript/Reference/Fonctions) pour plus d'informations.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Exemple_simple">Exemple simple</h3>
+### Exemple simple
 
-<pre class="brush: js">function resolveAfter2Seconds(x) {
-  return new Promise(resolve =&gt; {
-    setTimeout(() =&gt; {
+```js
+function resolveAfter2Seconds(x) {
+  return new Promise(resolve => {
+    setTimeout(() => {
       resolve(x);
     }, 2000);
   });
@@ -58,7 +53,7 @@ original_slug: Web/JavaScript/Reference/Opérateurs/async_function
   var a = resolveAfter2Seconds(20);
   var b = resolveAfter2Seconds(30);
   return x + await a + await b;
-})(10).then(v =&gt; {
+})(10).then(v => {
   console.log(v);  // affiche 60 après 2 secondes.
 });
 
@@ -68,48 +63,25 @@ var add = async function(x) {
   return x + a + b;
 };
 
-add(10).then(v =&gt; {
+add(10).then(v => {
   console.log(v);  // affiche 60 après 4 secondes.
 });
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2018', '#sec-async-function-definitions', 'async function')}}</td>
-   <td>{{Spec2('ES2018')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2017', '#sec-async-function-definitions', 'async function')}}</td>
-   <td>{{Spec2('ES2017')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                         | Commentaires         |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ESDraft', '#sec-async-function-definitions', 'async function')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ES2018', '#sec-async-function-definitions', 'async function')}} | {{Spec2('ES2018')}}     |                      |
+| {{SpecName('ES2017', '#sec-async-function-definitions', 'async function')}} | {{Spec2('ES2017')}}     | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.operators.async_function_expression")}}</p>
+{{Compat("javascript.operators.async_function_expression")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Instructions/async_function", "async function")}}</li>
- <li>L'objet {{jsxref("AsyncFunction")}}</li>
- <li>{{jsxref("Opérateurs/await", "await")}}</li>
-</ul>
+- {{jsxref("Instructions/async_function", "async function")}}
+- L'objet {{jsxref("AsyncFunction")}}
+- {{jsxref("Opérateurs/await", "await")}}

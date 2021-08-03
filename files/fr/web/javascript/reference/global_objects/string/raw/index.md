@@ -10,50 +10,46 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/raw
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/raw
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode statique <code><strong>String.raw()</strong></code> est une fonction d'étiquetage (<em>tag function</em>) pour les <a href="/fr/docs/Web/JavaScript/Reference/Littéraux_gabarits#Les_gabarits_étiquetés">gabarits de chaînes de caractères</a> (elle est <a href="https://bugs.chromium.org/p/v8/issues/detail?id=5016">semblable</a> au préfixe <code>r</code> en Python ou au préfixe <code>@</code> en C#). Cette fonction permet d'obtenir la chaîne brute pour un gabarit (les caractères spéciaux ne sont pas pris en compte mais retranscrits tels quels, les séquences d'échappement ne sont pas interprétées et les emplacements (ex. <code>${toto}</code>) sont traités).</p>
+La méthode statique **`String.raw()`** est une fonction d'étiquetage (_tag function_) pour les [gabarits de chaînes de caractères](/fr/docs/Web/JavaScript/Reference/Littéraux_gabarits#Les_gabarits_étiquetés) (elle est [semblable](https://bugs.chromium.org/p/v8/issues/detail?id=5016) au préfixe `r` en Python ou au préfixe `@` en C#). Cette fonction permet d'obtenir la chaîne brute pour un gabarit (les caractères spéciaux ne sont pas pris en compte mais retranscrits tels quels, les séquences d'échappement ne sont pas interprétées et les emplacements (ex. `${toto}`) sont traités).
 
-<div>{{EmbedInteractiveExample("pages/js/string-raw.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-raw.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox notranslate">String.raw(callSite, <em>...substitutions</em>)
+    String.raw(callSite, ...substitutions)
 
-String.raw`gabaritChaîne`
-</pre>
+    String.raw`gabaritChaîne`
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>callSite</code></dt>
- <dd>Un site d'appel bien formé pour un gabarit (<em>call site object</em>) tel que <code>{raw: "string"}</code>.</dd>
- <dt>...substitutions</dt>
- <dd>Paramètre contenant les valeurs à substituer.</dd>
- <dt>gabaritChaîne</dt>
- <dd><a href="/fr/docs/Web/JavaScript/Reference/Gabarit_chaînes_caractères">Un gabarit de chaîne de caractères</a>, éventuellement avec des substitutions (<code>${...}</code>).</dd>
-</dl>
+- `callSite`
+  - : Un site d'appel bien formé pour un gabarit (_call site object_) tel que `{raw: "string"}`.
+- ...substitutions
+  - : Paramètre contenant les valeurs à substituer.
+- gabaritChaîne
+  - : [Un gabarit de chaîne de caractères](/fr/docs/Web/JavaScript/Reference/Gabarit_chaînes_caractères), éventuellement avec des substitutions (`${...}`).
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>La chaîne de caractères brute correspondant à un gabarit donné.</p>
+La chaîne de caractères brute correspondant à un gabarit donné.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<dl>
- <dt>{{jsxref("TypeError")}}</dt>
- <dd>Une exception <code>TypeError</code> est renvoyée si le premier argument n'est pas un objet bien formé.</dd>
-</dl>
+- {{jsxref("TypeError")}}
+  - : Une exception `TypeError` est renvoyée si le premier argument n'est pas un objet bien formé.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Dans la plupart des cas, <code>String.raw()</code> est utilisé avec des gabarits de chaînes de caractères. La première syntaxe, présentée ci-avant est rarement utilisée. En effet, le moteur JavaScript appellera cette forme avec les arguments appropriés, comme pour les <a href="/fr/docs/Web/JavaScript/Reference/Gabarit_chaînes_caractères#Les_gabarits_de_cha.C3.AEnes_.C3.A9tiquett.C3.A9s">fonctions d'étiquetage (<em>tag</em>)</a>.</p>
+Dans la plupart des cas, `String.raw()` est utilisé avec des gabarits de chaînes de caractères. La première syntaxe, présentée ci-avant est rarement utilisée. En effet, le moteur JavaScript appellera cette forme avec les arguments appropriés, comme pour les [fonctions d'étiquetage (_tag_)](/fr/docs/Web/JavaScript/Reference/Gabarit_chaînes_caractères#Les_gabarits_de_cha.C3.AEnes_.C3.A9tiquett.C3.A9s).
 
-<p>La méthode <code>String.raw()</code> est la seule méthode d'étiquetage native pour les chaînes de caractères. Elle fonctionne comme la fonction par défaut pour les gabarits et permet d'effectuer des concaténations. Il est également possible d'implémenter cette méthode avec du code JavaScript.</p>
+La méthode `String.raw()` est la seule méthode d'étiquetage native pour les chaînes de caractères. Elle fonctionne comme la fonction par défaut pour les gabarits et permet d'effectuer des concaténations. Il est également possible d'implémenter cette méthode avec du code JavaScript.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js notranslate">String.raw`Hi\n${2+3}!`;
+```js
+String.raw`Hi\n${2+3}!`;
 // "Hi\n5!", le caractère après "Hi" n'est pas
 // le caractère de nouvelle ligne
 // "\" et "n" sont bien deux caractères distincts
@@ -76,38 +72,21 @@ String.raw`Hi\n${nom}!`;
 // comme une fonction, mais c'est possible :
 String.raw({raw: "test"}, 0, 1, 2);
 // "t0e1s2t"
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-string.raw', 'String.raw')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.raw', 'String.raw')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | État                         | Commentaires         |
+| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-string.raw', 'String.raw')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-string.raw', 'String.raw')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.String.raw")}}</p>
+{{Compat("javascript.builtins.String.raw")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Gabarit_chaînes_caractères">Gabarits de chaînes de caractères</a></li>
- <li>{{jsxref("String")}}</li>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale">Grammaire lexicale JavaScript</a></li>
-</ul>
+- [Gabarits de chaînes de caractères](/fr/docs/Web/JavaScript/Reference/Gabarit_chaînes_caractères)
+- {{jsxref("String")}}
+- [Grammaire lexicale JavaScript](/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale)

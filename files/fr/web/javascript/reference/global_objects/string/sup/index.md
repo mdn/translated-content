@@ -12,64 +12,48 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/sup
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/sup
 ---
-<div>{{JSRef}} {{deprecated_header}}</div>
+{{JSRef}} {{deprecated_header}}
 
-<p>La méthode <code><strong>sup()</strong></code> crée un élément HTML {{HTMLElement("sup")}} qui entraîne l'affichage de la chaîne en exposant.</p>
+La méthode **`sup()`** crée un élément HTML {{HTMLElement("sup")}} qui entraîne l'affichage de la chaîne en exposant.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>str</var>.sup()</pre>
+    str.sup()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une chaîne de caractères représentant un élément HTML {{HTMLElement("sup")}}.</p>
+Une chaîne de caractères représentant un élément HTML {{HTMLElement("sup")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code>sup</code> encapsule une chaîne dans une balise <code>&lt;sup&gt;</code> :<br>
- <code>"&lt;sup&gt;str&lt;/sup&gt;</code>".</p>
+La méthode `sup` encapsule une chaîne dans une balise `<sup>` :
+`"<sup>str</sup>`".
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>L'exemple suivant utilise les méthodes {{jsxref("String.prototype.sub()", "sub()")}} et <code>sup</code> pour mettre en forme une chaîne :</p>
+L'exemple suivant utilise les méthodes {{jsxref("String.prototype.sub()", "sub()")}} et `sup` pour mettre en forme une chaîne :
 
-<pre class="brush: js">var superText = "exposant";
+```js
+var superText = "exposant";
 var subText = "indice";
 
 console.log("Ceci illustre l'affichage d'un texte en " + superText.sup() + ".");
-// Ceci illustre l'affichage d'un texte en &lt;sup&gt;exposant&lt;/sup&gt;.
+// Ceci illustre l'affichage d'un texte en <sup>exposant</sup>.
 console.log("Ceci illustre l'affichage d'un texte en " + subText.sub() + ".");
-Ceci illustre l'affichage d'un texte en &lt;sub&gt;indice&lt;/sub&gt;.
-</pre>
+Ceci illustre l'affichage d'un texte en <sub>indice</sub>.
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.sup', 'String.prototype.sup')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.0. Définie dans l'annexe B (normative) pour les fonctionnalités ECMAScript additionnelles des navigateurs web.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.sup', 'String.prototype.sup')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.0. Définie dans l'annexe B (normative) pour les fonctionnalités ECMAScript additionnelles des navigateurs web.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                         | Commentaires                                                                                                                                                      |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ES6', '#sec-string.prototype.sup', 'String.prototype.sup')}}     | {{Spec2('ES6')}}         | Définition initiale. Implémentée avec JavaScript 1.0. Définie dans l'annexe B (normative) pour les fonctionnalités ECMAScript additionnelles des navigateurs web. |
+| {{SpecName('ESDraft', '#sec-string.prototype.sup', 'String.prototype.sup')}} | {{Spec2('ESDraft')}} | Définition initiale. Implémentée avec JavaScript 1.0. Définie dans l'annexe B (normative) pour les fonctionnalités ECMAScript additionnelles des navigateurs web. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.String.sup")}}</p>
+{{Compat("javascript.builtins.String.sup")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("String.prototype.sub()")}}</li>
-</ul>
+- {{jsxref("String.prototype.sub()")}}

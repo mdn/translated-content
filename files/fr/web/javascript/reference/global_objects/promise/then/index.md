@@ -11,78 +11,70 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Promise/then
 original_slug: Web/JavaScript/Reference/Objets_globaux/Promise/then
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>then()</strong></code> renvoie un objet {{jsxref("Promise")}}. Elle peut prendre jusqu'à deux arguments qui sont deux fonctions <em>callback</em> à utiliser en cas de complétion ou d'échec de la <code>Promise</code>.</p>
+La méthode **`then()`** renvoie un objet {{jsxref("Promise")}}. Elle peut prendre jusqu'à deux arguments qui sont deux fonctions _callback_ à utiliser en cas de complétion ou d'échec de la `Promise`.
 
-<div>{{EmbedInteractiveExample("pages/js/promise-then.html")}}</div>
+{{EmbedInteractiveExample("pages/js/promise-then.html")}}
 
+> **Note :** Si aucun des deux arguments n'est utilisé ou que les objets fournis ne sont pas des fonctions, une nouvelle promesse est créée sans autre gestionnaire supplémentaire. Si le premier argument est absent ou qu'un objet qui n'est pas une fonction est passé, la nouvelle promesse utilisera la fonction de réussite de la promesse originelle. De même, si le deuxième argument n'est pas passé ou que ce n'est pas une fonction, la nouvelle promesse créée utilisera la fonction de rejet de la promesse appelante.
 
+## Syntaxe
 
-<div class="note">
-<p><strong>Note :</strong> Si aucun des deux arguments n'est utilisé ou que les objets fournis ne sont pas des fonctions, une nouvelle promesse est créée sans autre gestionnaire supplémentaire. Si le premier argument est absent ou qu'un objet qui n'est pas une fonction est passé, la nouvelle promesse utilisera la fonction de réussite de la promesse originelle. De même, si le deuxième argument n'est pas passé ou que ce n'est pas une fonction, la nouvelle promesse créée utilisera la fonction de rejet de la promesse appelante.</p>
-</div>
+    p.then(siTenue);
+    p.then(siTenue, siRejetée);
 
-<h2 id="Syntaxe">Syntaxe</h2>
+    p.then((valeur) => {
+        // Promesse tenue
+      }, (raison) => {
+        // Rejet de la promesse
+    });
 
-<pre class="syntaxbox"><var>p.then(siTenue);
-p.then(siTenue, siRejetée)</var>;
+### Paramètres
 
-p.then((valeur) =&gt; {
-    // Promesse tenue
-  }, (raison) =&gt; {
-    // Rejet de la promesse
-});
-</pre>
+<!---->
 
-<h3 id="Paramètres">Paramètres</h3>
+- `siTenue`
+  - : Une {{jsxref("Function","fonction","",1)}} appelée lorsque la `Promise` est tenue. Cette fonction a un seul argument, la `valeur` qui a permis de résoudre la promesse. Si `siTenue` n'est pas une fonction, elle est implicitement remplacée par une fonction « identité » qui renvoie l'argument tel quel.
+- `siRejetée` {{optional_inline}}
+  - : Une {{jsxref("Function","fonction","",1)}} appelée lorsque la `Promise` est rejetée. Cette fonction a un seul argument, la `raison` pour laquelle la promesse a été rejetée. Si `siRejetée` n'est pas une fonction, elle est implicitement remplacée par une fonction qui lève une erreur avec la `raison` passée en argument.
 
-<ul>
-</ul>
+### Valeur de retour
 
-<dl>
- <dt><code>siTenue</code></dt>
- <dd>Une {{jsxref("Function","fonction","",1)}} appelée lorsque la <code>Promise</code> est tenue. Cette fonction a un seul argument, la <code>valeur</code> qui a permis de résoudre la promesse. Si <code>siTenue</code> n'est pas une fonction, elle est implicitement remplacée par une fonction « identité » qui renvoie l'argument tel quel.</dd>
- <dt><code>siRejetée</code> {{optional_inline}}</dt>
- <dd>Une {{jsxref("Function","fonction","",1)}} appelée lorsque la <code>Promise</code> est rejetée. Cette fonction a un seul argument, la <code>raison</code> pour laquelle la promesse a été rejetée. Si <code>siRejetée</code> n'est pas une fonction, elle est implicitement remplacée par une fonction qui lève une erreur avec la <code>raison</code> passée en argument.</dd>
-</dl>
+La méthode `then()` renvoie une promesse ({{jsxref("Promise")}}) en attente de résolution et dont la valeur est déterminée selon les deux fonctions passées en arguments et qui seront appelées de façon asynchrone :
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+- Si `siRejetée` ou `siTenue` lève une exception ou renvoie une promesse rompue, la promesse renvoyée par `then()` est rompue et la valeur fournie est l'exception ou l'explication de la promesse rompue.
+- Si `siRejetée` ou `siTenue` renvoie une promesse tenue ou n'importe quelle autre valeur, la promesse renvoyée est tenue et la valeur de résolution est la même que celle de la promesse tenue.
+- Si `siRejetée` ou `siTenue` renvoie une promesse en attente de résolution, la promesse renvoyée par `then()` sera résolue de la même façon que la promesse renvoyée par le gestionnaire. En fait, dans ce cas, la promesse renvoyée par `then()` est la même que la promesse renvoyée par le gestionnaire (`siTenue` ou `siRejetée`).
 
-<p>La méthode <code>then()</code> renvoie une promesse ({{jsxref("Promise")}}) en attente de résolution et dont la valeur est déterminée selon les deux fonctions passées en arguments et qui seront appelées de façon asynchrone :</p>
+## Description
 
-<ul>
- <li>Si <code>siRejetée</code> ou <code>siTenue</code> lève une exception ou renvoie une promesse rompue, la promesse renvoyée par <code>then()</code> est rompue et la valeur fournie est l'exception ou l'explication de la promesse rompue.</li>
- <li>Si <code>siRejetée</code> ou <code>siTenue</code> renvoie une promesse tenue ou n'importe quelle autre valeur, la promesse renvoyée est tenue et la valeur de résolution est la même que celle de la promesse tenue.</li>
- <li>Si <code>siRejetée</code> ou <code>siTenue</code> renvoie une promesse en attente de résolution, la promesse renvoyée par <code>then()</code> sera résolue de la même façon que la promesse renvoyée par le gestionnaire. En fait, dans ce cas, la promesse renvoyée par <code>then()</code> est la même que la promesse renvoyée par le gestionnaire (<code>siTenue</code> ou <code>siRejetée</code>).</li>
-</ul>
+Comme les méthodes `then()` et {{jsxref("Promise.prototype.catch()")}} renvoient des promesses, on peut enchaîner ces opérations (c'est ce qu'on appelle la _composition_ de promesses, voir l'exemple ci-après).
 
-<h2 id="Description">Description</h2>
+## Exemples
 
-<p>Comme les méthodes <code>then()</code> et {{jsxref("Promise.prototype.catch()")}} renvoient des promesses, on peut enchaîner ces opérations (c'est ce qu'on appelle la <em>composition</em> de promesses, voir l'exemple ci-après).</p>
+### Utilisation de la méthode `then()`
 
-<h2 id="Exemples">Exemples</h2>
-
-<h3 id="Utilisation_de_la_méthode_then()">Utilisation de la méthode <code>then()</code></h3>
-
-<pre class="brush: js">var p1 = new Promise(function(resolve, reject) {
+```js
+var p1 = new Promise(function(resolve, reject) {
   resolve("Succès !");
   // ou
   // reject("Erreur !");
 });
 
-p1.then((valeur) =&gt; {
+p1.then((valeur) => {
   console.log(valeur); // Succès !
-  }, (raison) =&gt; {
+  }, (raison) => {
   console.log(raison); // Erreur !
 });
-</pre>
+```
 
-<h3 id="Composition_-_Chaînage">Composition - Chaînage</h3>
+### Composition - Chaînage
 
-<p>La méthode <code>then()</code> renvoie un objet <code>Promise</code>, ce qui permet d'enchaîner les opération. On peut passer une fonction lambda à then puis utiliser la promesse obtenue pour la passer à la méthode suivante. Dans l'exemple ci-après, on simule un code asynchrone avec la fonction <code>setTimeout</code>.</p>
+La méthode `then()` renvoie un objet `Promise`, ce qui permet d'enchaîner les opération. On peut passer une fonction lambda à then puis utiliser la promesse obtenue pour la passer à la méthode suivante. Dans l'exemple ci-après, on simule un code asynchrone avec la fonction `setTimeout`.
 
-<pre class="brush: js">Promise.resolve("toto")
+```js
+Promise.resolve("toto")
   // 1. Première étape, on reçoit "toto" et on le concatène avec
   //    "truc", ce qui résoud la première étape puis on passe au
   //    deuxième then
@@ -115,11 +107,12 @@ p1.then((valeur) =&gt; {
     // setTimeout retarde l'exécution du code.
     console.log(string);
 });
-</pre>
+```
 
-<p>Lorsqu'une valeur est simplement renvoyée depuis une fonction lambda <code>then</code>, celle-ci renverra <code>Promise.resolve(&lt;la valeur renvoyée par le gestionnaire appelé&gt;)</code>.</p>
+Lorsqu'une valeur est simplement renvoyée depuis une fonction lambda `then`, celle-ci renverra `Promise.resolve(<la valeur renvoyée par le gestionnaire appelé>)`.
 
-<pre class="brush: js">var p2 = new Promise(function(resolve, reject) {
+```js
+var p2 = new Promise(function(resolve, reject) {
   resolve(1);
 });
 
@@ -134,48 +127,55 @@ p2.then(function(valeur) {
 p2.then(function(valeur) {
   console.log(valeur); // 1
 });
-</pre>
+```
 
-<p>Appeler <code>then()</code> renverra une promesse rompue si la fonction lève une exception ou si elle renvoie une promesse rompue.</p>
+Appeler `then()` renverra une promesse rompue si la fonction lève une exception ou si elle renvoie une promesse rompue.
 
-<pre class="brush: js">Promise.resolve()
-  .then( () =&gt; {
+```js
+Promise.resolve()
+  .then( () => {
     // Ici .then() lève une exception
     throw 'Oh zut :( !';
   })
-  .then( () =&gt; {
+  .then( () => {
     console.log( "Ceci n'est pas appelé." );
-  }, raison =&gt; {
+  }, raison => {
     console.error( 'la fonction siRompue est appelée : ' + raison );
-});</pre>
+});
+```
 
-<p>Dans tous les autres cas, un promesse de résolution est renvoyée. Dans l'exemple qui suit, le premier <code>then()</code> renvoie <code>42</code> même si la promesse précédente a été rompue :</p>
+Dans tous les autres cas, un promesse de résolution est renvoyée. Dans l'exemple qui suit, le premier `then()` renvoie `42` même si la promesse précédente a été rompue :
 
-<pre class="brush: js">Promise.reject()
-  .then( () =&gt; 99, () =&gt; 42 ) // la valeur 42 est renvoyée dans une promesse
-  .then( solution =&gt; console.log( 'Résolue avec ' + solution ) ); // Résolue avec 42</pre>
+```js
+Promise.reject()
+  .then( () => 99, () => 42 ) // la valeur 42 est renvoyée dans une promesse
+  .then( solution => console.log( 'Résolue avec ' + solution ) ); // Résolue avec 42
+```
 
-<p>En pratique, il est souvent préférable d'attraper les promesses rompues plutôt que d'utiliser la syntaxe de <code>then()</code> avec deux fonctions :</p>
+En pratique, il est souvent préférable d'attraper les promesses rompues plutôt que d'utiliser la syntaxe de `then()` avec deux fonctions :
 
-<pre class="brush: js">Promise.resolve()
-  .then( () =&gt; {
+```js
+Promise.resolve()
+  .then( () => {
     // .then() renvoie une promesse rompue
     throw 'Oh zut !';
   })
-  .catch( raison =&gt; {
+  .catch( raison => {
     console.error( 'fonction siRompue appelée : ' + raison );
   })
-  .then( () =&gt; {
+  .then( () => {
     console.log("Je suis toujours appelée, même si il y a un souci avant");
-  });</pre>
+  });
+```
 
-<p>Le chaînage peut également être utilisé pour implémenter une fonction utilisant une API basée sur les promesses et encapsuler une autre fonction :</p>
+Le chaînage peut également être utilisé pour implémenter une fonction utilisant une API basée sur les promesses et encapsuler une autre fonction :
 
-<pre class="brush: js">function fetch_current_data() {
+```js
+function fetch_current_data() {
   // L'API fetch renvoie une promesse. Cette fonction
   // expose une API similaire mais lorsque la promesse
   // est tenue, on effectue plus de tâches
-  return fetch("current-data.json").then((response) =&gt; {
+  return fetch("current-data.json").then((response) => {
     if (response.headers.get("content-type") != "application/json") {
       throw new TypeError();
     }
@@ -185,11 +185,12 @@ p2.then(function(valeur) {
               // fetch_current_data().then()
   });
 }
-</pre>
+```
 
-<p>Si le gestionnaire <code><em>siTenue</em></code> renvoie une promesse, la valeur de retour de <code>then()</code> sera alors résolue/rompue par cette promesse.</p>
+Si le gestionnaire `siTenue` renvoie une promesse, la valeur de retour de `then()` sera alors résolue/rompue par cette promesse.
 
-<pre class="brush: js">function resoudrePlusTard(resolve, reject) {
+```js
+function resoudrePlusTard(resolve, reject) {
   setTimeout(function () {
     resolve(10);
   }, 1000);
@@ -228,37 +229,20 @@ p3.then(function(v) {
   console.log("rompue", e);
   // "rompue", 20
 });
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-promise.prototype.then', 'Promise.prototype.then')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale au sein d'un standard ECMA.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-promise.prototype.then', 'Promise.prototype.then')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | État                         | Commentaires                                    |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------- |
+| {{SpecName('ES2015', '#sec-promise.prototype.then', 'Promise.prototype.then')}}     | {{Spec2('ES2015')}}     | Définition initiale au sein d'un standard ECMA. |
+| {{SpecName('ESDraft', '#sec-promise.prototype.then', 'Promise.prototype.then')}} | {{Spec2('ESDraft')}} |                                                 |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Promise.then")}}</p>
+{{Compat("javascript.builtins.Promise.then")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Promise")}}</li>
- <li>{{jsxref("Promise.prototype.catch()")}}</li>
-</ul>
+- {{jsxref("Promise")}}
+- {{jsxref("Promise.prototype.catch()")}}

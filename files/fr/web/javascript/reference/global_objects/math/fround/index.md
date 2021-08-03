@@ -10,40 +10,39 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/fround
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/fround
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La fonction <code><strong>Math.fround()</strong></code> renvoie le nombre flottant à <a class="external" href="https://en.wikipedia.org/wiki/Single_precision" title="link to the wikipedia page on single precision">précision simple</a> sur 32 bits qui est le plus proche du nombre fourni.</p>
+La fonction **`Math.fround()`** renvoie le nombre flottant à [précision simple](https://en.wikipedia.org/wiki/Single_precision "link to the wikipedia page on single precision") sur 32 bits qui est le plus proche du nombre fourni.
 
-<div>{{EmbedInteractiveExample("pages/js/math-fround.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-fround.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Math.fround(<var>x</var>)</pre>
+    Math.fround(x)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Un nombre.</dd>
-</dl>
+- `x`
+  - : Un nombre.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Le nombre flottant à précision simple sur 32 bits qui est le plus proche de la valeur fournie en argument.</p>
+Le nombre flottant à précision simple sur 32 bits qui est le plus proche de la valeur fournie en argument.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Un moteur JavaScript utilise des nombres flottant à précision simple sur 64 bits. Cela permet d'obtenir une précision fine. Toutefois, lorsqu'on manipule des valeurs représentées sur 32 bits (par exemple des valeurs extraites d'un {{jsxref("Float32Array")}}) et qu'on souhaite comparer celles-ci avec des valeurs sur 32 bits, on peut obtenir des inégalités alors que les valeurs semblent identiques.</p>
+Un moteur JavaScript utilise des nombres flottant à précision simple sur 64 bits. Cela permet d'obtenir une précision fine. Toutefois, lorsqu'on manipule des valeurs représentées sur 32 bits (par exemple des valeurs extraites d'un {{jsxref("Float32Array")}}) et qu'on souhaite comparer celles-ci avec des valeurs sur 32 bits, on peut obtenir des inégalités alors que les valeurs semblent identiques.
 
-<p>Pour résoudre ce problème, on peut utiliser <code>Math.fround()</code> afin de transformer un nombre représenté sur 64 bits en un nombre représenté sur 32 bits. Pour le moteur JavaScript, la valeur sera toujours représentée sur 64 bits mais elle aura été « arrondie » à partir du 23e bit de la mantisse. Si le nombre passé en argument se situe en dehors de l'intervalle représentable sur 32 bits, la méthode renverra {{jsxref("Infinity")}} ou <code>-Infinity</code>.</p>
+Pour résoudre ce problème, on peut utiliser `Math.fround()` afin de transformer un nombre représenté sur 64 bits en un nombre représenté sur 32 bits. Pour le moteur JavaScript, la valeur sera toujours représentée sur 64 bits mais elle aura été « arrondie » à partir du 23e bit de la mantisse. Si le nombre passé en argument se situe en dehors de l'intervalle représentable sur 32 bits, la méthode renverra {{jsxref("Infinity")}} ou `-Infinity`.
 
-<p><code>fround </code>étant une méthode statique de <code>Math</code>, il faut utiliser <code>Math.<code>fround</code>()</code> et non pas la méthode d'un autre objet qui aurait été créé (<code>Math</code> n'est pas un constructeur).</p>
+`fround `étant une méthode statique de `Math`, il faut utiliser `Math.fround()` et non pas la méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_Math.fround()">Utiliser <code>Math.fround()</code></h3>
+### Utiliser `Math.fround()`
 
-<pre class="brush: js">Math.fround(0);     // 0
+```js
+Math.fround(0);     // 0
 Math.fround(1);     // 1
 
 // 1.337 ne peut pas être représenté correctement
@@ -51,36 +50,20 @@ Math.fround(1);     // 1
 Math.fround(1.337); // 1.3370000123977661
 
 Math.fround(1.5);   // 1.5
-Math.fround(NaN);   // NaN</pre>
+Math.fround(NaN);   // NaN
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.fround', 'Math.fround')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.fround', 'Math.fround')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | État                         | Commentaires         |
+| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES6', '#sec-math.fround', 'Math.fround')}}     | {{Spec2('ES6')}}         | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-math.fround', 'Math.fround')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Math.fround")}}</p>
+{{Compat("javascript.builtins.Math.fround")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Math.round()")}}</li>
-</ul>
+- {{jsxref("Math.round()")}}

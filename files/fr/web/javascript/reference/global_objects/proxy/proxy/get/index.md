@@ -10,65 +10,61 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/get
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/get
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>handler.get()</code></strong> est une trappe pour intercepter l'accès à la valeur d'une propriété.</p>
+La méthode **`handler.get()`** est une trappe pour intercepter l'accès à la valeur d'une propriété.
 
-<div>{{EmbedInteractiveExample("pages/js/proxyhandler-get.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-get.html", "taller")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var p = new Proxy(cible, {
+```js
+var p = new Proxy(cible, {
   get: function(cible, propriété, récepteur) {
   }
 });
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Les paramètres suivants sont passés à la méthode <code>get</code>. <code>this</code> est lié au gestionnaire.</p>
+Les paramètres suivants sont passés à la méthode `get`. `this` est lié au gestionnaire.
 
-<dl>
- <dt><code>cible</code></dt>
- <dd>L'objet cible.</dd>
- <dt><code>propriété</code></dt>
- <dd>Le nom ou le symbole ({{jsxref("Symbol")}}) de la propriété qu'on souhaite obtenir.</dd>
- <dt><code>récepteur</code></dt>
- <dd>Le proxy ou un objet qui hérite du proxy.</dd>
-</dl>
+- `cible`
+  - : L'objet cible.
+- `propriété`
+  - : Le nom ou le symbole ({{jsxref("Symbol")}}) de la propriété qu'on souhaite obtenir.
+- `récepteur`
+  - : Le proxy ou un objet qui hérite du proxy.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>La méthode <code>get</code> peut renvoyer n'importe quelle valeur.</p>
+La méthode `get` peut renvoyer n'importe quelle valeur.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code><strong>handler.get</strong></code> est une trappe pour intercepter l'accès à une propriété.</p>
+La méthode **`handler.get`** est une trappe pour intercepter l'accès à une propriété.
 
-<h3 id="Interceptions">Interceptions</h3>
+### Interceptions
 
-<p>Cette trappe permet d'intercepter les opérations suivantes :</p>
+Cette trappe permet d'intercepter les opérations suivantes :
 
-<ul>
- <li>l'accès à une propriété : <code>proxy[toto]</code> et <code>proxy.truc</code></li>
- <li>L'accès aux propriétés héritées : <code>Object.create(proxy)[toto]</code></li>
- <li>{{jsxref("Reflect.get()")}}</li>
-</ul>
+- l'accès à une propriété : `proxy[toto]` et `proxy.truc`
+- L'accès aux propriétés héritées : `Object.create(proxy)[toto]`
+- {{jsxref("Reflect.get()")}}
 
-<h3 id="Invariants">Invariants</h3>
+### Invariants
 
-<p>Si les invariants suivants ne sont pas respectés, le proxy renverra une exception {{jsxref("TypeError")}} :</p>
+Si les invariants suivants ne sont pas respectés, le proxy renverra une exception {{jsxref("TypeError")}} :
 
-<ul>
- <li>La valeur renvoyée pour la propriété doit être la même que la valeur de la propriété correspondante de l'objet cible si celle-ci est non-configurable et non accessible en lecture.</li>
- <li>La valeur renvoyée doit valoir <code>undefined</code> si la propriété correspondante de l'objet cible est une propriété d'accesseur non-configurable dont l'attribut [[Get]] vaut <code>undefined</code>.</li>
-</ul>
+- La valeur renvoyée pour la propriété doit être la même que la valeur de la propriété correspondante de l'objet cible si celle-ci est non-configurable et non accessible en lecture.
+- La valeur renvoyée doit valoir `undefined` si la propriété correspondante de l'objet cible est une propriété d'accesseur non-configurable dont l'attribut \[\[Get]] vaut `undefined`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans l'exemple suivant, on intercepte les accès aux propriétés :</p>
+Dans l'exemple suivant, on intercepte les accès aux propriétés :
 
-<pre class="brush: js">var p = new Proxy({}, {
+```js
+var p = new Proxy({}, {
   get: function(cible, propriété, récepteur) {
     console.log("appelée : " + propriété);
     return 10;
@@ -77,11 +73,12 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/get
 
 console.log(p.a); // "appelée : a"
                   // 10
-</pre>
+```
 
-<p>Le code suivant ne respecte pas l'invariant :</p>
+Le code suivant ne respecte pas l'invariant :
 
-<pre class="brush: js">var obj = {};
+```js
+var obj = {};
 Object.defineProperty(obj, "a", {
   configurable: false,
   enumerable: false,
@@ -96,38 +93,21 @@ var p = new Proxy(obj, {
 });
 
 p.a; // exception TypeError levée
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-get-p-receiver', '[[Get]]')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-get-p-receiver', '[[Get]]')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-get-p-receiver', '[[Get]]')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-get-p-receiver', '[[Get]]')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatiblité_des_navigateurs">Compatiblité des navigateurs</h2>
+## Compatiblité des navigateurs
 
-<p>{{Compat("javascript.builtins.Proxy.handler.get")}}</p>
+{{Compat("javascript.builtins.Proxy.handler.get")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Reflect.get()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Reflect.get()")}}

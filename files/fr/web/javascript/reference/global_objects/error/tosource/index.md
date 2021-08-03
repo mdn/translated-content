@@ -11,42 +11,42 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Error/toSource
 original_slug: Web/JavaScript/Reference/Objets_globaux/Error/toSource
 ---
-<div>{{JSRef}} {{non-standard_header}}</div>
+{{JSRef}} {{non-standard_header}}
 
-<p>La méthode <code><strong>toSource()</strong></code> renvoie le code source qui peut générer la même erreur.</p>
+La méthode **`toSource()`** renvoie le code source qui peut générer la même erreur.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>e</em>.toSource()</pre>
+    e.toSource()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une chaîne de caractères qui contient le code source de l'erreur.</p>
+Une chaîne de caractères qui contient le code source de l'erreur.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Appeler la méthode <code>toSource()</code> d'une instance {{jsxref("Error")}} (<a href="/fr/docs/JavaScript/Reference/Objets_globaux/Error#Error_types">Erreurs natives</a> incluses) renverra le code source de l'erreur. Cette chaine de caractères peut être évaluée afin de créer un objet similaire. La chaine de caractères contenant le code source suit la structure du constructeur <code>Error</code>. Par exemple :</p>
+Appeler la méthode `toSource()` d'une instance {{jsxref("Error")}} ([Erreurs natives](/fr/docs/JavaScript/Reference/Objets_globaux/Error#Error_types) incluses) renverra le code source de l'erreur. Cette chaine de caractères peut être évaluée afin de créer un objet similaire. La chaine de caractères contenant le code source suit la structure du constructeur `Error`. Par exemple :
 
-<pre class="brush: js">(new name(message ,fileName, lineNumber))</pre>
+```js
+(new name(message ,fileName, lineNumber))
+```
 
-<p>où ces attributs correspondent aux propriétés respectives de l'instance <code>Error</code>.</p>
+où ces attributs correspondent aux propriétés respectives de l'instance `Error`.
 
-<div class="note"><p><strong>Note :</strong> Les propriétés utilisées par la méthode <code>toSource()</code> dans la création de cette chaine de caractères sont mutables et peuvent ne pas refléter correctement la fonction utilisée pour créer une instance d'erreur ou le nom du fichier ou la ligne à laquelle s'est produite l'erreur originale.</p></div>
+> **Note :** Les propriétés utilisées par la méthode `toSource()` dans la création de cette chaine de caractères sont mutables et peuvent ne pas refléter correctement la fonction utilisée pour créer une instance d'erreur ou le nom du fichier ou la ligne à laquelle s'est produite l'erreur originale.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Ne fait partie d'aucun standard. Implémentée dans JavaScript 1.3.</p>
+Ne fait partie d'aucun standard. Implémentée dans JavaScript 1.3.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Error.toSource")}}</p>
+{{Compat("javascript.builtins.Error.toSource")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}</li>
- <li>{{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}</li>
- <li>{{jsxref("Error.prototype.message")}}</li>
- <li>{{jsxref("Error.prototype.name")}}</li>
- <li>{{jsxref("Object.prototype.toSource()")}} {{non-standard_inline}}</li>
-</ul>
+- {{jsxref("Error.prototype.fileName")}} {{non-standard_inline}}
+- {{jsxref("Error.prototype.lineNumber")}} {{non-standard_inline}}
+- {{jsxref("Error.prototype.message")}}
+- {{jsxref("Error.prototype.name")}}
+- {{jsxref("Object.prototype.toSource()")}} {{non-standard_inline}}

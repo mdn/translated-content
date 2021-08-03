@@ -12,48 +12,44 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/normalize
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/normalize
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>normalize()</strong></code> permet de renvoyer la forme normalisée Unicode d'une chaîne de caractères (si la valeur n'est pas une chaîne de caractères, elle sera convertie).</p>
+La méthode **`normalize()`** permet de renvoyer la forme normalisée Unicode d'une chaîne de caractères (si la valeur n'est pas une chaîne de caractères, elle sera convertie).
 
-<div>{{EmbedInteractiveExample("pages/js/string-normalize.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-normalize.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>str</var>.normalize([<var>form</var>]);</pre>
+    str.normalize([form]);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>form</code></dt>
- <dd>Paramètre optionnel. Une chaîne parmi "NFC", "NFD", "NFKC", ou "NFKD", définissant la forme de normalisation Unicode à utiliser. Si le paramètre n'est pas précisé ou vaut {{jsxref("undefined")}}, la valeur par défaut utilisée sera "<code>NFC</code>".
- <ul>
-  <li><code>NFC</code> - Normalization Form Canonical Composition.</li>
-  <li><code>NFD</code> - Normalization Form Canonical Decomposition.</li>
-  <li><code>NFKC</code> - Normalization Form Compatibility Composition.</li>
-  <li><code>NFKD</code> - Normalization Form Compatibility Decomposition.</li>
- </ul>
- </dd>
-</dl>
+- `form`
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+  - : Paramètre optionnel. Une chaîne parmi "NFC", "NFD", "NFKC", ou "NFKD", définissant la forme de normalisation Unicode à utiliser. Si le paramètre n'est pas précisé ou vaut {{jsxref("undefined")}}, la valeur par défaut utilisée sera "`NFC`".
 
-<p>Une chaîne de caractères qui est le forme Unicode normalisée de la chaîne appelante.</p>
+    - `NFC` - Normalization Form Canonical Composition.
+    - `NFD` - Normalization Form Canonical Decomposition.
+    - `NFKC` - Normalization Form Compatibility Composition.
+    - `NFKD` - Normalization Form Compatibility Decomposition.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Valeur de retour
 
-<dl>
- <dt>{{jsxref("RangeError")}}</dt>
- <dd>Une exception <code>RangeError</code> est envoyée si le paramètre <code>form</code> n'est pas une des valeurs définies ci-avant.</dd>
-</dl>
+Une chaîne de caractères qui est le forme Unicode normalisée de la chaîne appelante.
 
-<h2 id="Description">Description</h2>
+### Exceptions
 
-<p>La méthode <code>normalize()</code> renvoie la forme normalisée Unicode de la chaîne de caractères. Elle n'affecte pas la valeur de la chaîne.</p>
+- {{jsxref("RangeError")}}
+  - : Une exception `RangeError` est envoyée si le paramètre `form` n'est pas une des valeurs définies ci-avant.
 
-<h2 id="Exemples">Exemples</h2>
+## Description
 
-<pre class="brush:js;">// Chaîne initiale
+La méthode `normalize()` renvoie la forme normalisée Unicode de la chaîne de caractères. Elle n'affecte pas la valeur de la chaîne.
+
+## Exemples
+
+```js
+// Chaîne initiale
 
 // U+1E9B: LATIN SMALL LETTER LONG S WITH DOT ABOVE
 // U+0323: COMBINING DOT BELOW
@@ -88,37 +84,20 @@ str.normalize("NFKC"); // "\u1E69"
 // U+0323: COMBINING DOT BELOW
 // U+0307: COMBINING DOT ABOVE
 str.normalize("NFKD"); // "\u0073\u0323\u0307"
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-string.prototype.normalize', 'String.prototype.normalize')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.normalize', 'String.prototype.normalize')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-string.prototype.normalize', 'String.prototype.normalize')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-string.prototype.normalize', 'String.prototype.normalize')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.String.normalize")}}</p>
+{{Compat("javascript.builtins.String.normalize")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="https://www.unicode.org/reports/tr15/">Formes de normalisation Unicode, Annexe n°15 du standard Unicode</a></li>
- <li><a href="https://en.wikipedia.org/wiki/Unicode_equivalence">Équivalence Unicode</a></li>
-</ul>
+- [Formes de normalisation Unicode, Annexe n°15 du standard Unicode](https://www.unicode.org/reports/tr15/)
+- [Équivalence Unicode](https://en.wikipedia.org/wiki/Unicode_equivalence)

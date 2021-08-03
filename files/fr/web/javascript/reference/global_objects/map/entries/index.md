@@ -12,25 +12,26 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/entries
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/entries
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>entries()</code></strong> renvoie un objet <code><a href="/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs#Itérateurs">Iterator</a></code> qui contient les paires <code>[clé, valeur]</code> pour chaque élément de l'objet <code>Map</code>, dans leur ordre d'insertion.</p>
+La méthode **`entries()`** renvoie un objet [`Iterator`](/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs#Itérateurs) qui contient les paires `[clé, valeur]` pour chaque élément de l'objet `Map`, dans leur ordre d'insertion.
 
-<div>{{EmbedInteractiveExample("pages/js/map-prototype-entries.html")}}</div>
+{{EmbedInteractiveExample("pages/js/map-prototype-entries.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>maMap</em>.entries()</pre>
+    maMap.entries()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un nouvel objet <code>Iterator</code> {{jsxref("Map")}}.</p>
+Un nouvel objet `Iterator` {{jsxref("Map")}}.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<h3 id="Utiliser_entries()">Utiliser <code>entries()</code></h3>
+### Utiliser `entries()`
 
-<pre class="brush:js">var maMap = new Map();
+```js
+var maMap = new Map();
 maMap.set("0", "toto");
 maMap.set(1, "truc");
 maMap.set({}, "bidule");
@@ -40,39 +41,20 @@ var mapIter = maMap.entries();
 console.log(mapIter.next().value); // ["0", "toto"]
 console.log(mapIter.next().value); // [1, "truc"]
 console.log(mapIter.next().value); // [Object, "bidule"]
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-map.prototype.entries', 'Map.prototype.entries')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Défintion initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-map.prototype.entries', 'Map.prototype.entries')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | État                         | Commentaires        |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('ES2015', '#sec-map.prototype.entries', 'Map.prototype.entries')}} | {{Spec2('ES2015')}}     | Défintion initiale. |
+| {{SpecName('ESDraft', '#sec-map.prototype.entries', 'Map.prototype.entries')}} | {{Spec2('ESDraft')}} |                     |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Map.entries")}}</p>
+{{Compat("javascript.builtins.Map.entries")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Map.prototype.keys()")}}</li>
- <li>{{jsxref("Map.prototype.values()")}}</li>
-</ul>
+- {{jsxref("Map.prototype.keys()")}}
+- {{jsxref("Map.prototype.values()")}}

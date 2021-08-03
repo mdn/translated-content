@@ -10,69 +10,44 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/toString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/toString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>toString()</code></strong> renvoie une chaine de caractères représentant le tableau spécifié et ses éléments.</p>
+La méthode **`toString()`** renvoie une chaine de caractères représentant le tableau spécifié et ses éléments.
 
-<div>{{EmbedInteractiveExample("pages/js/array-tostring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-tostring.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>arr</var>.toString()</pre>
+    arr.toString()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une chaîne de caractères qui représente les éléments du tableau.</p>
+Une chaîne de caractères qui représente les éléments du tableau.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>L'objet {{jsxref("Array")}} redéfinit la méthode <code>toString</code> d'{{jsxref("Object")}}. Pour les objets <code>Array</code>, la méthode <code>toString()</code> concatène les éléments du tableau et renvoie une chaîne contenant chacun des éléments, séparés par des virgules.</p>
+L'objet {{jsxref("Array")}} redéfinit la méthode `toString` d'{{jsxref("Object")}}. Pour les objets `Array`, la méthode `toString()` concatène les éléments du tableau et renvoie une chaîne contenant chacun des éléments, séparés par des virgules.
 
-<p>JavaScript appelle la méthode <code>toString()</code> automatiquement lorsqu'un tableau doit être représenté par une valeur texte ou lorsqu'on fait référence à un tableau dans une concaténation de chaines de caractères.</p>
+JavaScript appelle la méthode `toString()` automatiquement lorsqu'un tableau doit être représenté par une valeur texte ou lorsqu'on fait référence à un tableau dans une concaténation de chaines de caractères.
 
-<h3 id="Sémantique_d'ECMAScript_5">Sémantique d'ECMAScript 5</h3>
+### Sémantique d'ECMAScript 5
 
-<p>À partir de JavaScript 1.8.5 (Firefox 4), et en cohérence avec la 5e édition d'ECMAScript, la méthode <code>toString()</code> est générique et peut être utilisé avec n'importe quel objet. {{jsxref("Object.prototype.toString()")}} sera appelée, et la valeur résultante sera renvoyée.</p>
+À partir de JavaScript 1.8.5 (Firefox 4), et en cohérence avec la 5e édition d'ECMAScript, la méthode `toString()` est générique et peut être utilisé avec n'importe quel objet. {{jsxref("Object.prototype.toString()")}} sera appelée, et la valeur résultante sera renvoyée.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.2', 'Array.prototype.toString')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.tostring', 'Array.prototype.toString')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.tostring', 'Array.prototype.toString')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                         | Commentaires                                          |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                         | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.4.4.2', 'Array.prototype.toString')}}                         | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-array.prototype.tostring', 'Array.prototype.toString')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-array.prototype.tostring', 'Array.prototype.toString')}} | {{Spec2('ESDraft')}} |                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Array.toString")}}</p>
+{{Compat("javascript.builtins.Array.toString")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Object.prototype.toSource()")}}</li>
- <li>{{jsxref("Array.prototype.join()")}}</li>
-</ul>
+- {{jsxref("Object.prototype.toSource()")}}
+- {{jsxref("Array.prototype.join()")}}

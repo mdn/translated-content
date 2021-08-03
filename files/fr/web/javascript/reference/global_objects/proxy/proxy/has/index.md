@@ -10,64 +10,60 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/has
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/has
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>handler.has()</code></strong> est une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_in", "in")}}.</p>
+La méthode **`handler.has()`** est une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_in", "in")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/proxyhandler-has.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-has.html", "taller")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var p = new Proxy(cible, {
+```js
+var p = new Proxy(cible, {
   has: function(cible, prop) {
   }
 });
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Les paramètres suivants sont passés à la méthode <code>has</code>. <code>this</code> est lié au gestionnaire.</p>
+Les paramètres suivants sont passés à la méthode `has`. `this` est lié au gestionnaire.
 
-<dl>
- <dt><code>cible</code></dt>
- <dd>L'objet cible.</dd>
- <dt><code>prop</code></dt>
- <dd>Le nom ou le symbole ({{jsxref("Symbol")}}) de la propriété dont on veut connaître l'existence.</dd>
-</dl>
+- `cible`
+  - : L'objet cible.
+- `prop`
+  - : Le nom ou le symbole ({{jsxref("Symbol")}}) de la propriété dont on veut connaître l'existence.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>La méthode <code>has</code> doit renvoyer une valeur booléenne.</p>
+La méthode `has` doit renvoyer une valeur booléenne.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code><strong>handler.has</strong></code> est une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_in", "in")}}.</p>
+La méthode **`handler.has`** est une trappe pour l'opérateur {{jsxref("Opérateurs/L_opérateur_in", "in")}}.
 
-<h3 id="Interceptions">Interceptions</h3>
+### Interceptions
 
-<p>Cette trappe permet d'intercepter les opérations suivantes :</p>
+Cette trappe permet d'intercepter les opérations suivantes :
 
-<ul>
- <li>L'accès à une propriété : <code>toto in proxy</code></li>
- <li>L'accès à une propriété héritée : <code>toto in Object.create(proxy)</code></li>
- <li>Accès via l'instruction <code><a href="/fr/docs/Web/JavaScript/Reference/Instructions/with">with</a></code> : <code>with(proxy) { (foo); }</code></li>
- <li>{{jsxref("Reflect.has()")}}</li>
-</ul>
+- L'accès à une propriété : `toto in proxy`
+- L'accès à une propriété héritée : `toto in Object.create(proxy)`
+- Accès via l'instruction [`with`](/fr/docs/Web/JavaScript/Reference/Instructions/with) : `with(proxy) { (foo); }`
+- {{jsxref("Reflect.has()")}}
 
-<h3 id="Invariants">Invariants</h3>
+### Invariants
 
-<p>Si les invariants suivants ne sont pas respectés, le proxy lèvera une exception {{jsxref("TypeError")}} :</p>
+Si les invariants suivants ne sont pas respectés, le proxy lèvera une exception {{jsxref("TypeError")}} :
 
-<ul>
- <li>Une propriété ne peut pas être indiquée comme non-existante s'il existe une propriété correspondante de l'objet cible qui est une propriété propre et non-configurable.</li>
- <li>Une propriété ne peut pas être indiquée comme non-existante s'il existe une propriété correspondante propre sur l'objet cible et que celui-ci n'est pas extensible.</li>
-</ul>
+- Une propriété ne peut pas être indiquée comme non-existante s'il existe une propriété correspondante de l'objet cible qui est une propriété propre et non-configurable.
+- Une propriété ne peut pas être indiquée comme non-existante s'il existe une propriété correspondante propre sur l'objet cible et que celui-ci n'est pas extensible.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans l'exemple qui suit, on intercepte l'opérateur {{jsxref("Opérateurs/L_opérateur_in", "in")}} :</p>
+Dans l'exemple qui suit, on intercepte l'opérateur {{jsxref("Opérateurs/L_opérateur_in", "in")}} :
 
-<pre class="brush: js">var p = new Proxy({}, {
+```js
+var p = new Proxy({}, {
   has: function(cible, prop) {
     console.log("appelée : " + prop);
     return true;
@@ -76,11 +72,12 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/has
 
 console.log("a" in p); // "appelée : a"
                        // true
-</pre>
+```
 
-<p>L'exemple suivant ne respecte pas un invariant :</p>
+L'exemple suivant ne respecte pas un invariant :
 
-<pre class="brush: js">var obj = { a: 10 };
+```js
+var obj = { a: 10 };
 Object.preventExtensions(obj);
 var p = new Proxy(obj, {
   has: function(cible, prop) {
@@ -89,39 +86,22 @@ var p = new Proxy(obj, {
 });
 
 "a" in p; // TypeError levée
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-hasproperty-p', '[[HasProperty]]')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-hasproperty-p', '[[HasProperty]]')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                            | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-hasproperty-p', '[[HasProperty]]')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-hasproperty-p', '[[HasProperty]]')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Proxy.handler.has")}}</p>
+{{Compat("javascript.builtins.Proxy.handler.has")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>L'opérateur {{jsxref("Opérateurs/L_opérateur_in", "in")}}</li>
- <li>{{jsxref("Reflect.has()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- L'opérateur {{jsxref("Opérateurs/L_opérateur_in", "in")}}
+- {{jsxref("Reflect.has()")}}

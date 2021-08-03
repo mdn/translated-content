@@ -12,62 +12,42 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/unicode
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/unicode
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La propriété <strong><code>unicode</code></strong> indique si le drapeau "<code>u</code>" a été utilisé avec l'expression rationnelle. <code>unicode</code> est une propriété en lecture seule et liée à une instance d'expression rationnelle.</p>
+La propriété **`unicode`** indique si le drapeau "`u`" a été utilisé avec l'expression rationnelle. `unicode` est une propriété en lecture seule et liée à une instance d'expression rationnelle.
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-prototype-unicode.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/regexp-prototype-unicode.html", "taller")}}{{js_property_attributes(0, 0, 1)}}
 
+## Description
 
+La valeur d'`unicode` est un {{jsxref("Boolean")}} et vaut `true` si le drapeau "`u`" a été utilisé, sinon `false`. Le drapeau "`u`" permet d'activer les fonctionnalités liées à Unicode. En utilisant le drapeau "u" toute séquence d'échappement représentant un codet Unicode sera interprétée comme telle.
 
-<div>{{js_property_attributes(0, 0, 1)}}</div>
+Cette propriété ne peut pas être modifiée directement.
 
-<h2 id="Description">Description</h2>
+## Exemples
 
-<p>La valeur d'<code>unicode</code> est un {{jsxref("Boolean")}} et vaut <code>true</code> si le drapeau "<code>u</code>" a été utilisé, sinon <code>false</code>. Le drapeau "<code>u</code>" permet d'activer les fonctionnalités liées à Unicode. En utilisant le drapeau "u" toute séquence d'échappement représentant un codet Unicode sera interprétée comme telle.</p>
-
-<p>Cette propriété ne peut pas être modifiée directement.</p>
-
-<h2 id="Exemples">Exemples</h2>
-
-<pre class="brush: js">var regex = new RegExp('\u{61}', 'u');
+```js
+var regex = new RegExp('\u{61}', 'u');
 
 console.log(regex.unicode); // true
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-get-regexp.prototype.unicode', 'RegExp.prototype.unicode')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-get-regexp.prototype.unicode', 'RegExp.prototype.unicode')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-get-regexp.prototype.unicode', 'RegExp.prototype.unicode')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-get-regexp.prototype.unicode', 'RegExp.prototype.unicode')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.RegExp.unicode")}}</p>
+{{Compat("javascript.builtins.RegExp.unicode")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("RegExp.lastIndex")}}</li>
- <li>{{jsxref("RegExp.prototype.global")}}</li>
- <li>{{jsxref("RegExp.prototype.ignoreCase")}}</li>
- <li>{{jsxref("RegExp.prototype.multiline")}}</li>
- <li>{{jsxref("RegExp.prototype.source")}}</li>
- <li>{{jsxref("RegExp.prototype.sticky")}}</li>
-</ul>
+- {{jsxref("RegExp.lastIndex")}}
+- {{jsxref("RegExp.prototype.global")}}
+- {{jsxref("RegExp.prototype.ignoreCase")}}
+- {{jsxref("RegExp.prototype.multiline")}}
+- {{jsxref("RegExp.prototype.source")}}
+- {{jsxref("RegExp.prototype.sticky")}}

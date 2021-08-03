@@ -6,110 +6,104 @@ tags:
   - Language feature
   - Operator
   - Reference
-translation-of: Web/JavaScript/Reference/Operators/Less_than
 browser-compat: javascript.operators.less_than
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>L'opérateur inférieur strict (<code>&lt;</code>) renvoie <code>true</code> si son opérande gauche est strictement inférieur à son opérande droit et <code>false</code> sinon.</p>
+L'opérateur inférieur strict (`<`) renvoie `true` si son opérande gauche est strictement inférieur à son opérande droit et `false` sinon.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-less-than.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-less-than.html")}}
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">
-x &lt; y
-</pre>
+```js
+x < y
+```
 
-<h2 id="description">Description</h2>
+## Description
 
-<p>Les opérandes sont comparés avec l'algorithme de <a href="https://tc39.es/ecma262/#sec-abstract-relational-comparison">comparaison abstraite relationnelle</a> résumé comme suit :</p>
+Les opérandes sont comparés avec l'algorithme de [comparaison abstraite relationnelle](https://tc39.es/ecma262/#sec-abstract-relational-comparison) résumé comme suit :
 
-<ul>
- <li>Tout d'abord, les objets sont convertis en valeurs primitives avec <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive">Symbol.ToPrimitive</a></code> en utilisant le paramètre <code>hint</code> avec la valeur <code>'number'</code>.</li>
- <li>Si les deux valeurs sont des chaînes de caractères, elles sont comparées comme telles selon les valeurs des codes Unicode qu'elles contiennent.</li>
- <li>Sinon, le moteur JavaScript tente de convertir les valeurs primitives non-numériques en valeurs numériques :
-  <ul>
-   <li>Les valeurs booléennes <code>true</code> et <code>false</code> sont respectivement converties en 1 et 0.</li>
-   <li><code>null</code> est converti en 0.</li>
-   <li><code>undefined</code> est converti en <code>NaN</code>.</li>
-   <li>Les chaînes de caractères sont converties en fonction de la valeur qu'elles contiennent et, si elles ne contiennent pas de valeurs numériques, elles sont converties en <code>NaN</code>.</li>
-  </ul>
- </li>
- <li>Si l'une des valeurs vaut <code><a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN">NaN</a></code>, l'opérateur renverra <code>false</code>.</li>
- <li>Sinon, les valeurs sont comparées numériquement.</li>
-</ul>
+- Tout d'abord, les objets sont convertis en valeurs primitives avec [`Symbol.ToPrimitive`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) en utilisant le paramètre `hint` avec la valeur `'number'`.
+- Si les deux valeurs sont des chaînes de caractères, elles sont comparées comme telles selon les valeurs des codes Unicode qu'elles contiennent.
+- Sinon, le moteur JavaScript tente de convertir les valeurs primitives non-numériques en valeurs numériques :
 
-<h2 id="examples">Exemples</h2>
+  - Les valeurs booléennes `true` et `false` sont respectivement converties en 1 et 0.
+  - `null` est converti en 0.
+  - `undefined` est converti en `NaN`.
+  - Les chaînes de caractères sont converties en fonction de la valeur qu'elles contiennent et, si elles ne contiennent pas de valeurs numériques, elles sont converties en `NaN`.
 
-<h3 id="number_to_number_comparison">Comparaison numérique</h3>
+- Si l'une des valeurs vaut [`NaN`](/fr/docs/Web/JavaScript/Reference/Global_Objects/NaN), l'opérateur renverra `false`.
+- Sinon, les valeurs sont comparées numériquement.
 
-<pre class="brush: js">
-console.log(5 &lt; 3);            // false
-console.log(3 &lt; 3);            // false
-console.log(3 &lt; 5);            // true
-</pre>
+## Exemples
 
-<h3 id="number_to_bigint_comparison">Comparaison entre un nombre et un BigInt</h3>
+### Comparaison numérique
 
-<pre class="brush: js">
-console.log(5n &lt; 3);           // false
-console.log(3 &lt; 5n);           // true
-</pre>
+```js
+console.log(5 < 3);            // false
+console.log(3 < 3);            // false
+console.log(3 < 5);            // true
+```
 
-<h3 id="string_to_string_comparison">Comparaison entre chaînes de caractères</h3>
+### Comparaison entre un nombre et un BigInt
 
-<pre class="brush: js">
-console.log("a" &lt; "b");        // true
-console.log("a" &lt; "a");        // false
-console.log("a" &lt; "3");        // false
-</pre>
+```js
+console.log(5n < 3);           // false
+console.log(3 < 5n);           // true
+```
 
-<h3 id="string_to_number_comparison">Comparaison entre nombres et chaînes de caractères</h3>
+### Comparaison entre chaînes de caractères
 
-<pre class="brush: js">
-console.log("5" &lt; 3);          // false
-console.log("3" &lt; 3);          // false
-console.log("3" &lt; 5);          // true
+```js
+console.log("a" < "b");        // true
+console.log("a" < "a");        // false
+console.log("a" < "3");        // false
+```
 
-console.log("coucou" &lt; 5);      // false
-console.log(5 &lt; "coucou");      // false
+### Comparaison entre nombres et chaînes de caractères
 
-console.log("5" &lt; 3n);         // false
-console.log("3" &lt; 5n);         // true
-</pre>
+```js
+console.log("5" < 3);          // false
+console.log("3" < 3);          // false
+console.log("3" < 5);          // true
 
-<h3 id="comparing_boolean_null_undefined_nan">Comparaison avec des booléens, null, undefined, NaN</h3>
+console.log("coucou" < 5);      // false
+console.log(5 < "coucou");      // false
 
-<pre class="brush: js">
-console.log(true &lt; false);     // false
-console.log(false &lt; true);     // true
+console.log("5" < 3n);         // false
+console.log("3" < 5n);         // true
+```
 
-console.log(0 &lt; true);         // true
-console.log(true &lt; 1);         // false
+### Comparaison avec des booléens, null, undefined, NaN
 
-console.log(null &lt; 0);         // false
-console.log(null &lt; 1);         // true
+```js
+console.log(true < false);     // false
+console.log(false < true);     // true
 
-console.log(undefined &lt; 3);    // false
-console.log(3 &lt; undefined);    // false
+console.log(0 < true);         // true
+console.log(true < 1);         // false
 
-console.log(3 &lt; NaN);          // false
-console.log(NaN &lt; 3);          // false
-</pre>
+console.log(null < 0);         // false
+console.log(null < 1);         // true
 
-<h2 id="specifications">Spécifications</h2>
+console.log(undefined < 3);    // false
+console.log(3 < undefined);    // false
 
-<p>{{Specifications}}</p>
+console.log(3 < NaN);          // false
+console.log(NaN < 3);          // false
+```
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Spécifications
 
-<p>{{Compat}}</p>
+{{Specifications}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Compatibilité des navigateurs
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Greater_than">L'opérateur supérieur strict</a></li>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal">L'opérateur supérieur ou égal</a></li>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal">L'opérateur inférieur ou égal</a></li>
-</ul>
+{{Compat}}
+
+## Voir aussi
+
+- [L'opérateur supérieur strict](/fr/docs/Web/JavaScript/Reference/Operators/Greater_than)
+- [L'opérateur supérieur ou égal](/fr/docs/Web/JavaScript/Reference/Operators/Greater_than_or_equal)
+- [L'opérateur inférieur ou égal](/fr/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal)

@@ -11,30 +11,29 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/WeakSet/add
 original_slug: Web/JavaScript/Reference/Objets_globaux/WeakSet/add
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>add()</strong></code> permet d'ajouter un nouvel objet à un objet <code>WeakSet</code>.</p>
+La méthode **`add()`** permet d'ajouter un nouvel objet à un objet `WeakSet`.
 
-<div>{{EmbedInteractiveExample("pages/js/weakset-prototype-add.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/weakset-prototype-add.html", "taller")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>ws</var>.add(<var>valeur</var>);</pre>
+    ws.add(valeur);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>valeur</code></dt>
- <dd>Ce paramètre est obligatoire. Il correspond à l'objet qu'on souhaite ajouter à l'ensemble<code> WeakSet</code>.</dd>
-</dl>
+- `valeur`
+  - : Ce paramètre est obligatoire. Il correspond à l'objet qu'on souhaite ajouter à l'ensemble` WeakSet`.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>L'objet {{jsxref("WeakSet")}}.</p>
+L'objet {{jsxref("WeakSet")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var ws = new WeakSet();
+```js
+var ws = new WeakSet();
 
 ws.add(window); // on ajouter l'objet window à l'objet WeakSet
 
@@ -42,40 +41,23 @@ ws.has(window); // tru
 
 // WeakSet ne peut contenir que des objets
 ws.add(1);
-// TypeError: Invalid value used in weak set -&gt; Chrome
-// TypeError: 1 is not a non-null obect -&gt; Firefox
-</pre>
+// TypeError: Invalid value used in weak set -> Chrome
+// TypeError: 1 is not a non-null obect -> Firefox
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-weakset.prototype.add', 'WeakSet.prototype.add')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-weakset.prototype.add', 'WeakSet.prototype.add')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-weakset.prototype.add', 'WeakSet.prototype.add')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-weakset.prototype.add', 'WeakSet.prototype.add')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.WeakSet.add")}}</p>
+{{Compat("javascript.builtins.WeakSet.add")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("WeakSet")}}</li>
- <li>{{jsxref("WeakSet.prototype.delete()")}}</li>
- <li>{{jsxref("WeakSet.prototype.has()")}}</li>
-</ul>
+- {{jsxref("WeakSet")}}
+- {{jsxref("WeakSet.prototype.delete()")}}
+- {{jsxref("WeakSet.prototype.has()")}}

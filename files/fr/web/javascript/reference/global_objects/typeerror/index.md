@@ -10,55 +10,52 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypeError
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypeError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>L'objet <code><strong>TypeError</strong></code> représente une erreur qui intervient lorsque la valeur n'est pas du type attendu.</p>
+L'objet **`TypeError`** représente une erreur qui intervient lorsque la valeur n'est pas du type attendu.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><code>new TypeError([<var>message</var>[, <var>nomFichier</var>[, <var>numLigne</var>]]])</code></pre>
+    new TypeError([message[, nomFichier[, numLigne]]])
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>message</code></dt>
- <dd>Paramètre optionnel. Une description de l'erreur dans un format compréhensible par un humain.</dd>
- <dt><code>nomFichier</code> {{Non-standard_inline}}</dt>
- <dd>Paramètre optionnel. Le nom du fichier contenant le code qui a causé l'erreur.</dd>
- <dt><code>numLigne</code> {{Non-standard_inline}}</dt>
- <dd>Paramètre optionnel. Le numéro de ligne du code qui a causé l'erreur</dd>
-</dl>
+- `message`
+  - : Paramètre optionnel. Une description de l'erreur dans un format compréhensible par un humain.
+- `nomFichier` {{Non-standard_inline}}
+  - : Paramètre optionnel. Le nom du fichier contenant le code qui a causé l'erreur.
+- `numLigne` {{Non-standard_inline}}
+  - : Paramètre optionnel. Le numéro de ligne du code qui a causé l'erreur
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Une exception <code>TypeError</code> est levée lorsque qu'un argument ou un opérande est utilisé avec une fonction ou un opérateur incompatible avec le type attendu.</p>
+Une exception `TypeError` est levée lorsque qu'un argument ou un opérande est utilisé avec une fonction ou un opérateur incompatible avec le type attendu.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<dl>
- <dt>{{jsxref("TypeError.prototype")}}</dt>
- <dd>Permet d'ajouter des propriétés aux instances de <code>TypeError</code>.</dd>
-</dl>
+- {{jsxref("TypeError.prototype")}}
+  - : Permet d'ajouter des propriétés aux instances de `TypeError`.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p>L'objet global <code>TypeError</code> ne contient pas de méthodes qui lui sont propres. Il possède malgré tout des méthodes héritées via sa chaîne de prototypes.</p>
+L'objet global `TypeError` ne contient pas de méthodes qui lui sont propres. Il possède malgré tout des méthodes héritées via sa chaîne de prototypes.
 
-<h2 id="Instances_de_TypeError">Instances de TypeError</h2>
+## Instances de TypeError
 
-<h3 id="Propriétés_2">Propriétés</h3>
+### Propriétés
 
-<p>{{ page('fr/docs/Web/JavaScript/Reference/Objets_globaux/TypeError/prototype', 'Propri.C3.A9t.C3.A9s') }}</p>
+{{ page('fr/docs/Web/JavaScript/Reference/Objets_globaux/TypeError/prototype', 'Propri.C3.A9t.C3.A9s') }}
 
-<h3 id="Méthodes_2">Méthodes</h3>
+### Méthodes
 
-<p>{{ page('fr/docs/Web/JavaScript/Reference/Objets_globaux/TypeError/prototype', 'M.C3.A9thodes') }}</p>
+{{ page('fr/docs/Web/JavaScript/Reference/Objets_globaux/TypeError/prototype', 'M.C3.A9thodes') }}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Intercepter_une_exception_TypeError">Intercepter une exception <code>TypeError</code></h3>
+### Intercepter une exception `TypeError`
 
-<pre class="brush: js">try {
+```js
+try {
   null.f();
 } catch (e) {
   console.log(e instanceof TypeError); // true
@@ -69,11 +66,12 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/TypeError
   console.log(e.columnNumber);         // 2
   console.log(e.stack);                // "@Scratchpad/2:2:3\n"
 }
-</pre>
+```
 
-<h3 id="Créer_une_exception_TypeError">Créer une exception <code>TypeError</code></h3>
+### Créer une exception `TypeError`
 
-<pre class="brush: js">try {
+```js
+try {
   throw new TypeError('Coucou', "unFichier.js", 10);
 } catch (e) {
   console.log(e instanceof TypeError); // true
@@ -84,47 +82,22 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/TypeError
   console.log(e.columnNumber);         // 0
   console.log(e.stack);                // "@Scratchpad/2:2:9\n"
 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3', '#sec-15.11.6.5', 'TypeError')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.11.6.5', 'TypeError')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-typeerror', 'TypeError')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-typeerror', 'TypeError')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                    | Statut                       | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES3', '#sec-15.11.6.5', 'TypeError')}}                                                             | {{Spec2('ES3')}}         | Définition initiale. |
+| {{SpecName('ES5.1', '#sec-15.11.6.5', 'TypeError')}}                                                             | {{Spec2('ES5.1')}}     |                      |
+| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-typeerror', 'TypeError')}}         | {{Spec2('ES6')}}         |                      |
+| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-typeerror', 'TypeError')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.TypeError")}}</p>
+{{Compat("javascript.builtins.TypeError")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Error")}}</li>
- <li>{{jsxref("TypeError.prototype")}}</li>
-</ul>
+- {{jsxref("Error")}}
+- {{jsxref("TypeError.prototype")}}

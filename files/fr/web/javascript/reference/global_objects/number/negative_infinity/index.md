@@ -9,90 +9,60 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/NEGATIVE_INFINITY
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number/NEGATIVE_INFINITY
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La propriété <code><strong>Number.NEGATIVE_INFINITY</strong></code> représente l'infini négatif.</p>
+La propriété **`Number.NEGATIVE_INFINITY`** représente l'infini négatif.
 
-<div>{{EmbedInteractiveExample("pages/js/number-negative-infinity.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-negative-infinity.html")}}{{js_property_attributes(0,0,0)}}
 
+## Description
 
+La valeur de `Number.NEGATIVE_INFINITY` est égale à l'opposé de la valeur fournie par la propriété {{jsxref("Infinity")}} de l'objet global.
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+Cette valeur se comporte différemment de l'infini mathématique :
 
-<h2 id="Description">Description</h2>
+- Toute valeur positive, y compris {{jsxref("Number.POSITIVE_INFINITY", "POSITIVE_INFINITY")}}, multipliée par `NEGATIVE_INFINITY` sera égale à `NEGATIVE_INFINITY`.
+- Toute valeur négative, y compris `NEGATIVE_INFINITY`, multipliée par `NEGATIVE_INFINITY` sera égale à `POSITIVE_INFINITY`.
+- Zéro multiplié par `NEGATIVE_INFINITY` sera égal à {{jsxref("NaN")}}.
+- NaN multiplié par `NEGATIVE_INFINITY` sera égal à `NaN`.
+- `NEGATIVE_INFINITY`, divisé par n'importe quelle valeur négative, à l'exception de  `NEGATIVE_INFINITY`, sera égal à `POSITIVE_INFINITY`.
+- `NEGATIVE_INFINITY`, divisé par n'importe quelle valeur positive à l'exception de  `POSITIVE_INFINITY`, sera égal à `NEGATIVE_INFINITY`.
+- `NEGATIVE_INFINITY`, divisé par `NEGATIVE_INFINITY` ou `POSITIVE_INFINITY`, sera égal à `NaN`.
+- Tout nombre positif divisé par `NEGATIVE_INFINITY` sera égal au zéro négatif.
+- Tout nombre négatif divisé par `NEGATIVE_INFINITY` sera égal au zéro positif.
 
-<p>La valeur de <code>Number.NEGATIVE_INFINITY</code> est égale à l'opposé de la valeur fournie par la propriété {{jsxref("Infinity")}} de l'objet global.</p>
+La propriété `Number.NEGATIVE_INFINITY` peut être utilisée pour indiquer une erreur sur un test renvoyant normalement un nombre fini. On notera cependant que la méthode {{jsxref("isFinite")}} est plus pertinente dans ce cas.
 
-<p>Cette valeur se comporte différemment de l'infini mathématique :</p>
+`Number.NEGATIVE_INFINITY` est une propriété statique de {{jsxref("Number")}} et on utilisera directement `Number.NEGATIVE_INFINITY` plutôt que comme une propriété d'un objet (instance) {{jsxref("Number")}}.
 
-<ul>
- <li>Toute valeur positive, y compris {{jsxref("Number.POSITIVE_INFINITY", "POSITIVE_INFINITY")}}, multipliée par <code>NEGATIVE_INFINITY</code> sera égale à <code>NEGATIVE_INFINITY</code>.</li>
- <li>Toute valeur négative, y compris <code>NEGATIVE_INFINITY</code>, multipliée par <code>NEGATIVE_INFINITY</code> sera égale à <code>POSITIVE_INFINITY</code>.</li>
- <li>Zéro multiplié par <code>NEGATIVE_INFINITY</code> sera égal à {{jsxref("NaN")}}.</li>
- <li>NaN multiplié par <code>NEGATIVE_INFINITY</code> sera égal à <code>NaN</code>.</li>
- <li><code>NEGATIVE_INFINITY</code>, divisé par n'importe quelle valeur négative, à l'exception de  <code>NEGATIVE_INFINITY</code>, sera égal à <code>POSITIVE_INFINITY</code>.</li>
- <li><code>NEGATIVE_INFINITY</code>, divisé par n'importe quelle valeur positive à l'exception de  <code>POSITIVE_INFINITY</code>, sera égal à <code>NEGATIVE_INFINITY</code>.</li>
- <li><code>NEGATIVE_INFINITY</code>, divisé par <code>NEGATIVE_INFINITY</code> ou <code>POSITIVE_INFINITY</code>, sera égal à <code>NaN</code>.</li>
- <li>Tout nombre positif divisé par <code>NEGATIVE_INFINITY</code> sera égal au zéro négatif.</li>
- <li>Tout nombre négatif divisé par <code>NEGATIVE_INFINITY</code> sera égal au zéro positif.</li>
-</ul>
+## Exemples
 
-<p>La propriété <code>Number.NEGATIVE_INFINITY</code> peut être utilisée pour indiquer une erreur sur un test renvoyant normalement un nombre fini. On notera cependant que la méthode {{jsxref("isFinite")}} est plus pertinente dans ce cas.</p>
+Dans l'exemple qui suit, on affecte une variable inférieure à la valeur numérique minimale à la variable `petitNombre`. Lorsque l'instruction conditionnelle `if` est exécutée, `petitNombre` possède la valeur "`-Infinity`", on modifie donc la valeur de `petitNombre` afin qu'il puisse être géré.
 
-<p><code>Number.NEGATIVE_INFINITY</code> est une propriété statique de {{jsxref("Number")}} et on utilisera directement <code>Number.NEGATIVE_INFINITY</code> plutôt que comme une propriété d'un objet (instance) {{jsxref("Number")}}.</p>
-
-<h2 id="Exemples">Exemples</h2>
-
-<p>Dans l'exemple qui suit, on affecte une variable inférieure à la valeur numérique minimale à la variable <code>petitNombre</code>. Lorsque l'instruction conditionnelle <code>if</code> est exécutée, <code>petitNombre</code> possède la valeur "<code>-Infinity</code>", on modifie donc la valeur de <code>petitNombre</code> afin qu'il puisse être géré.</p>
-
-<pre class="brush:js">var petitNombre = (-Number.MAX_VALUE) * 2
+```js
+var petitNombre = (-Number.MAX_VALUE) * 2
 
 if (petitNombre === Number.NEGATIVE_INFINITY) {
  petitNombre = renvoyerUneValeurFinie();
 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.1.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.7.3.5', 'Number.NEGATIVE_INFINITY')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-number.negative_infinity', 'Number.NEGATIVE_INFINITY')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.negative_infinity', 'Number.NEGATIVE_INFINITY')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                         | Commentaires                                          |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                         | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.1. |
+| {{SpecName('ES5.1', '#sec-15.7.3.5', 'Number.NEGATIVE_INFINITY')}}                         | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-number.negative_infinity', 'Number.NEGATIVE_INFINITY')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-number.negative_infinity', 'Number.NEGATIVE_INFINITY')}} | {{Spec2('ESDraft')}} |                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Number.NEGATIVE_INFINITY")}}</p>
+{{Compat("javascript.builtins.Number.NEGATIVE_INFINITY")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Number.POSITIVE_INFINITY")}}</li>
- <li>{{jsxref("Number.isFinite()")}}</li>
- <li>{{jsxref("Infinity", "Infinity")}}</li>
- <li>{{jsxref("isFinite", "isFinite()")}}</li>
-</ul>
+- {{jsxref("Number.POSITIVE_INFINITY")}}
+- {{jsxref("Number.isFinite()")}}
+- {{jsxref("Infinity", "Infinity")}}
+- {{jsxref("isFinite", "isFinite()")}}

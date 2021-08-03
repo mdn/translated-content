@@ -10,30 +10,29 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/instanceof
 original_slug: Web/JavaScript/Reference/Opérateurs/instanceof
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>L'<strong>opérateur <code>instanceof</code></strong> permet de tester si un objet possède, dans sa chaîne de prototype, la propriété <code>prototype</code> d'un certain constructeur.</p>
+L'**opérateur `instanceof`** permet de tester si un objet possède, dans sa chaîne de prototype, la propriété `prototype` d'un certain constructeur.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-instanceof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-instanceof.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox notranslate"><em>objet</em> instanceof <em>constructeur</em></pre>
+    objet instanceof constructeur
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>objet</code></dt>
- <dd>L'objet qu'on souhaite analyser.</dd>
- <dt><code>constructeur</code></dt>
- <dd>La fonction dont on souhaite vérifier la présence dans la chaîne de prototypes.</dd>
-</dl>
+- `objet`
+  - : L'objet qu'on souhaite analyser.
+- `constructeur`
+  - : La fonction dont on souhaite vérifier la présence dans la chaîne de prototypes.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>L'opérateur <code>instanceof</code> teste la présence de <code>constructeur.prototype</code> dans la chaîne de prototypes d'<code>objet</code>.</p>
+L'opérateur `instanceof` teste la présence de `constructeur.prototype` dans la chaîne de prototypes d'`objet`.
 
-<pre class="brush: js notranslate">function C(){} // Définition du constructeur
+```js
+function C(){} // Définition du constructeur
 function D(){} // Définition d'un autre constructeur
 
 var o = new C();
@@ -59,27 +58,28 @@ D.prototype = new C(); // Utilisation de l'héritage
 var o3 = new D();
 o3 instanceof D; // true
 o3 instanceof C; // true car C.prototype fait partie de la chaîne de o3
-</pre>
+```
 
-<p>À noter que la valeur retournée par <code>instanceof</code> peut être différente suite à un changement de la propriété <code>prototype</code> du constructeur, notamment via la méthode <code>Object.setPrototypeOf()</code>. On peut aussi utiliser la pseudo-propriété <code>__proto__</code> qui n'était pas standard avant ECMAScript 2015.</p>
+À noter que la valeur retournée par `instanceof` peut être différente suite à un changement de la propriété `prototype` du constructeur, notamment via la méthode `Object.setPrototypeOf()`. On peut aussi utiliser la pseudo-propriété `__proto__` qui n'était pas standard avant ECMAScript 2015.
 
-<h3 id="instanceof_dans_dautres_contextes_frames_ou_fenêtres"><code>instanceof</code> dans d'autres contextes (frames ou fenêtres)</h3>
+### `instanceof` dans d'autres contextes (frames ou fenêtres)
 
-<p>Différents niveaux d'intégrations ont différents environnements. Cela signifie que les valeurs retournées sont différentes (objet globaux différents, constructeurs différents, etc.). Cela peut engendrer des résultats inattendus. Par exemple, <code>[] instanceof window.frames[0].Array</code> renverra <code>false</code>, car <code>Array !== </code><code>window.frames[0].Array</code> et que les tableaux héritent de leur constructeur.</p>
+Différents niveaux d'intégrations ont différents environnements. Cela signifie que les valeurs retournées sont différentes (objet globaux différents, constructeurs différents, etc.). Cela peut engendrer des résultats inattendus. Par exemple, `[] instanceof window.frames[0].Array` renverra `false`, car ` Array !== ``window.frames[0].Array` et que les tableaux héritent de leur constructeur.
 
-<p>Cela peut être contre-intuitif au début, mais lorsqu'il est nécessaire de travailler avec plusieurs frames ou fenêtres, et que des objets sont transférés via des fonctions, cela sera un obstacle valide et important. Par contre, il est tout à fait possible d'utiliser <code>Array.isArray(myObj)</code> pour vérifier de manière sécurisée qu'un tableau est effectivement un tableau.</p>
+Cela peut être contre-intuitif au début, mais lorsqu'il est nécessaire de travailler avec plusieurs frames ou fenêtres, et que des objets sont transférés via des fonctions, cela sera un obstacle valide et important. Par contre, il est tout à fait possible d'utiliser `Array.isArray(myObj)` pour vérifier de manière sécurisée qu'un tableau est effectivement un tableau.
 
-<p>Ainsi, pour vérifier qu'un <a href="/fr/docs/Web/API/Node">nœud</a> est bien un objet de type <a href="/fr/docs/Web/API/SVGElement">SVGElement</a> dans un autre contexte, on pourra utiliser <code>monNœud instanceof monNœud.documentMaitre.vue.SVGElement</code>.</p>
+Ainsi, pour vérifier qu'un [nœud](/fr/docs/Web/API/Node) est bien un objet de type [SVGElement](/fr/docs/Web/API/SVGElement) dans un autre contexte, on pourra utiliser `monNœud instanceof monNœud.documentMaitre.vue.SVGElement`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Démonstration_que_String_et_Date_sont_de_type_Object_et_cas_aux_limites_des_littéraux">Démonstration que <code>String</code> et <code>Date</code> sont de type <code>Object</code> et cas aux limites des littéraux</h3>
+### Démonstration que `String` et `Date` sont de type `Object` et cas aux limites des littéraux
 
-<p>Le code suivant utilise <code>instanceof</code> pour démontrer que les objets <code>String</code> et <code>Date</code> sont aussi de type <code>Object</code> (ils dérivent d'<code>Object</code>).</p>
+Le code suivant utilise `instanceof` pour démontrer que les objets `String` et `Date` sont aussi de type `Object` (ils dérivent d'`Object`).
 
-<p>Cependant, les objets créés à partir de littéraux objets sont une exception : en effet, bien que leur prototype ne soit pas défini, <code>instanceof Object</code> renvoie <code>true</code>.</p>
+Cependant, les objets créés à partir de littéraux objets sont une exception : en effet, bien que leur prototype ne soit pas défini, `instanceof Object` renvoie `true`.
 
-<pre class="brush: js notranslate">var chaîneSimple = "Une chaîne simple";
+```js
+var chaîneSimple = "Une chaîne simple";
 var maChaîne  = new String();
 var newChaîne = new String("Chaîne créée avec un constructeur");
 var maDate    = new Date();
@@ -100,13 +100,14 @@ maChaîne instanceof Date;   // false
 maDate instanceof Date;     // true
 maDate instanceof Object;   // true
 maDate instanceof String;   // false
-</pre>
+```
 
-<h3 id="Démonstration_que_mavoiture_est_de_type_Voiture_et_de_type_Object">Démonstration que <code>mavoiture</code> est de type <code>Voiture</code> et de type <code>Object</code></h3>
+### Démonstration que `mavoiture` est de type `Voiture` et de type `Object`
 
-<p>Le code suivant créé un objet de type <code>Voiture</code> et une instance de cet objet, <code>mavoiture</code>. L'opérateur <code>instanceof</code> montre que l'objet <code>mavoiture</code> est de type <code>Voiture</code> et de type <code>Object</code>.</p>
+Le code suivant créé un objet de type `Voiture` et une instance de cet objet, `mavoiture`. L'opérateur `instanceof` montre que l'objet `mavoiture` est de type `Voiture` et de type `Object`.
 
-<pre class="brush: js notranslate">function Voiture(fabricant, modele, annee) {
+```js
+function Voiture(fabricant, modele, annee) {
   this.fabricant = fabricant;
   this.modele = modele;
   this.annee = annee;
@@ -114,51 +115,26 @@ maDate instanceof String;   // false
 var mavoiture = new Voiture("Citroën", "C3", 2006);
 var a = mavoiture instanceof Voiture; // retourne true
 var b = mavoiture instanceof Object;  // retourne true
-</pre>
+```
 
-<h3 id="Attention_à_la_précédence_des_opérateurs">Attention à la précédence des opérateurs</h3>
+### Attention à la précédence des opérateurs
 
-<p>Pour tester qu'un objet n'est pas une instance d'un constructeur donné, on pourra faire le test <code>!(monObj instanceof Constructor)</code>. Toutefois, attention à ne pas écrire <code>!monObj instanceof Constructor</code> car <code>!monObj</code> serait traité en priorité et on testerait donc <code>false instanceof Constructor</code> qui sera toujours faux.</p>
+Pour tester qu'un objet n'est pas une instance d'un constructeur donné, on pourra faire le test `!(monObj instanceof Constructor)`. Toutefois, attention à ne pas écrire `!monObj instanceof Constructor` car `!monObj` serait traité en priorité et on testerait donc `false instanceof Constructor` qui sera toujours faux.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-relational-operators', 'Relational Operators')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-relational-operators', 'Opérateurs relationnels')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-11.8.6', 'Opérateur instanceof')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3', '#sec-11.8.6', 'Opérateur instanceof')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.4.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                         | Commentaires                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-relational-operators', 'Relational Operators')}} | {{Spec2('ESDraft')}} |                                                       |
+| {{SpecName('ES6', '#sec-relational-operators', 'Opérateurs relationnels')}} | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ES5.1', '#sec-11.8.6', 'Opérateur instanceof')}}                     | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES3', '#sec-11.8.6', 'Opérateur instanceof')}}                     | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.4. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.operators.instanceof")}}</p>
+{{Compat("javascript.operators.instanceof")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Opérateurs/L_opérateur_typeof","typeof")}}</li>
- <li>{{jsxref("Symbol.hasInstance")}}</li>
-</ul>
+- {{jsxref("Opérateurs/L_opérateur_typeof","typeof")}}
+- {{jsxref("Symbol.hasInstance")}}

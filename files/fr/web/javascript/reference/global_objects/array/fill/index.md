@@ -12,49 +12,47 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/fill
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/fill
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>fill()</code></strong> remplit tous les éléments d'un tableau entre deux index avec une valeur statique. La valeur de l'index de fin n'est pas incluse. Cette méthode renvoie le tableau modifié.</p>
+La méthode **`fill()`** remplit tous les éléments d'un tableau entre deux index avec une valeur statique. La valeur de l'index de fin n'est pas incluse. Cette méthode renvoie le tableau modifié.
 
-<div>{{EmbedInteractiveExample("pages/js/array-fill.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-fill.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>arr</var>.fill(valeur<var><var>)
-</var>arr</var>.fill(valeur, <var>début<var>)
-</var>arr</var>.fill(valeur, <var>début<var>, <var>fin</var>)</var></var>
-</pre>
+    arr.fill(valeur)
+    arr.fill(valeur, début)
+    arr.fill(valeur, début, fin)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>valeur</code></dt>
- <dd>Valeur avec laquelle remplir le tableau.</dd>
- <dt><code>début</code> {{optional_inline}}</dt>
- <dd>Index de début, la valeur par défaut est 0.</dd>
- <dt><code>fin</code> {{optional_inline}}</dt>
- <dd>Index de fin, la valeur par défaut est <code>this.length</code>.</dd>
-</dl>
+- `valeur`
+  - : Valeur avec laquelle remplir le tableau.
+- `début` {{optional_inline}}
+  - : Index de début, la valeur par défaut est 0.
+- `fin` {{optional_inline}}
+  - : Index de fin, la valeur par défaut est `this.length`.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Le tableau modifié par la méthode.</p>
+Le tableau modifié par la méthode.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Les éléments pour lesquels on utilisera la valeur sont ceux contenus dans l'intervalle de positions [<code>début</code>, <code>fin</code>].</p>
+Les éléments pour lesquels on utilisera la valeur sont ceux contenus dans l'intervalle de positions \[`début`, `fin`].
 
-<p>La méthode <code>fill()</code> prend jusqu'à trois arguments : <code>valeur</code>, <code>début</code> et <code>fin</code>. Les arguments <code>début</code> et <code>fin</code> sont optionnels. Leurs valeurs par défaut sont respectivement <code>0</code> et la taille <code>length</code> de l'objet <code>this</code>.</p>
+La méthode `fill()` prend jusqu'à trois arguments : `valeur`, `début` et `fin`. Les arguments `début` et `fin` sont optionnels. Leurs valeurs par défaut sont respectivement `0` et la taille `length` de l'objet `this`.
 
-<p>Si <code>début</code> est négatif, il sera traité comme <code>length+début</code> où <code>length</code> est la taille du tableau. Si <code>fin</code> est négatif, il est traité comme <code>length+fin</code>.</p>
+Si `début` est négatif, il sera traité comme `length+début` où `length` est la taille du tableau. Si `fin` est négatif, il est traité comme `length+fin`.
 
-<p>La fonction <code>fill()</code> est intentionnellement générique, il n'est pas nécessaire que sa valeur <code>this</code> soit un objet <code>Array</code>.</p>
+La fonction `fill()` est intentionnellement générique, il n'est pas nécessaire que sa valeur `this` soit un objet `Array`.
 
-<p>La méthode <code>fill()</code> est une méthode de modification, elle changera l'objet <code>this</code> lui-même, et renverra l'objet modifié. Elle ne crée pas de copie. Lorsque cette méthode reçoit un objet comme valeur, elle copiera l'objet passé et remplira le tableau avec une référence vers cette copie.</p>
+La méthode `fill()` est une méthode de modification, elle changera l'objet `this` lui-même, et renverra l'objet modifié. Elle ne crée pas de copie. Lorsque cette méthode reçoit un objet comme valeur, elle copiera l'objet passé et remplira le tableau avec une référence vers cette copie.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">[1, 2, 3].fill(4);            // [4, 4, 4]
+```js
+[1, 2, 3].fill(4);            // [4, 4, 4]
 [1, 2, 3].fill(4, 1);         // [1, 4, 4]
 [1, 2, 3].fill(4, 1, 2);      // [1, 4, 3]
 [1, 2, 3].fill(4, 1, 1);      // [1, 2, 3]
@@ -67,11 +65,12 @@ Array(3).fill(4);             // [4, 4, 4]
 // Les objets sont copiés via une référence
 var arr = Array(3).fill({}); // [{}, {}, {}];
 arr[0].yop = "yop"; // [{yop: "yop"}, {yop: "yop"}, {yop: "yop"}]
-</pre>
+```
 
-<h2 id="Prothèse_d'émulation_(polyfill)">Prothèse d'émulation (<em>polyfill</em>)</h2>
+## Prothèse d'émulation (_polyfill_)
 
-<pre class="brush: js">if (!Array.prototype.fill) {
+```js
+if (!Array.prototype.fill) {
   Object.defineProperty(Array.prototype, 'fill', {
     value: function(value) {
 
@@ -83,29 +82,29 @@ arr[0].yop = "yop"; // [{yop: "yop"}, {yop: "yop"}, {yop: "yop"}]
       var O = Object(this);
 
       // Steps 3-5.
-      var len = O.length &gt;&gt;&gt; 0;
+      var len = O.length >>> 0;
 
       // Steps 6-7.
       var start = arguments[1];
-      var relativeStart = start &gt;&gt; 0;
+      var relativeStart = start >> 0;
 
       // Step 8.
-      var k = relativeStart &lt; 0 ?
+      var k = relativeStart < 0 ?
         Math.max(len + relativeStart, 0) :
         Math.min(relativeStart, len);
 
       // Steps 9-10.
       var end = arguments[2];
       var relativeEnd = end === undefined ?
-        len : end &gt;&gt; 0;
+        len : end >> 0;
 
       // Step 11.
-      var final = relativeEnd &lt; 0 ?
+      var final = relativeEnd < 0 ?
         Math.max(len + relativeEnd, 0) :
         Math.min(relativeEnd, len);
 
       // Step 12.
-      while (k &lt; final) {
+      while (k < final) {
         O[k] = value;
         k++;
       }
@@ -114,37 +113,21 @@ arr[0].yop = "yop"; // [{yop: "yop"}, {yop: "yop"}, {yop: "yop"}]
       return O;
     }
   });
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-array.prototype.fill', 'Array.prototype.fill')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.fill', 'Array.prototype.fill')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                         | Commentaires         |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-array.prototype.fill', 'Array.prototype.fill')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-array.prototype.fill', 'Array.prototype.fill')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Array.fill")}}</p>
+{{Compat("javascript.builtins.Array.fill")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Array")}}</li>
- <li>{{jsxref("TypedArray.prototype.fill()")}}</li>
-</ul>
+- {{jsxref("Array")}}
+- {{jsxref("TypedArray.prototype.fill()")}}

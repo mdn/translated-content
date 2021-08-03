@@ -8,55 +8,52 @@ tags:
   - Operator
   - Reference
 browser-compat: javascript.operators.left_shift
-translation-of: Web/JavaScript/Reference/Operators/Left_shift
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>L'opérateur de <strong>décalage binaire à gauche (<code>&lt;&lt;</code>)</strong> décale la séquence de bits représentée par le premier opérande d'autant de bits vers la gauche que le nombre indiqué par le second opérande. Les bits en excès à gauche sont écartés et des bits à zéro sont introduits à droite.</p>
+L'opérateur de **décalage binaire à gauche (`<<`)** décale la séquence de bits représentée par le premier opérande d'autant de bits vers la gauche que le nombre indiqué par le second opérande. Les bits en excès à gauche sont écartés et des bits à zéro sont introduits à droite.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-left-shift.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-left-shift.html")}}
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">
-<var>a</var> &lt;&lt; <var>b</var>
-</pre>
+```js
+a << b
+```
 
-<h2 id="description">Description</h2>
+## Description
 
-<p>Cet opérateur décale les bits du premier opérande vers la gauche, d'autant que le nombre indiqué par le second opérande. Les bits qui dépassent à gauche sont abandonnés et des zéros sont introduits à droite.</p>
+Cet opérateur décale les bits du premier opérande vers la gauche, d'autant que le nombre indiqué par le second opérande. Les bits qui dépassent à gauche sont abandonnés et des zéros sont introduits à droite.
 
-<p>Ainsi, <code>9 &lt;&lt; 2</code> donnera la valeur 36 (en base 10) :</p>
+Ainsi, `9 << 2` donnera la valeur 36 (en base 10) :
 
-<pre class="brush: js">
+```js
        9 (base 10): 00000000000000000000000000001001 (base 2)
                     --------------------------------
-  9 &lt;&lt; 2 (base 10): 00000000000000000000000000100100 (base 2) = 36 (base 10)
-</pre>
+  9 << 2 (base 10): 00000000000000000000000000100100 (base 2) = 36 (base 10)
+```
 
-<p>Le décalage binaire de tout nombre <code>x</code> de <code>y</code> bits vers la gauche donnera comme résultat <code>x * 2 ** y</code>. Par exemple, <code>9 &lt;&lt; 3</code> pourra être reformulé en <code>9 * (2 ** 3) = 9 * (8) = 72</code>.</p>
+Le décalage binaire de tout nombre `x` de `y` bits vers la gauche donnera comme résultat `x * 2 ** y`. Par exemple, `9 << 3` pourra être reformulé en `9 * (2 ** 3) = 9 * (8) = 72`.
 
-<h2 id="examples">Exemples</h2>
+## Exemples
 
-<h3 id="using_left_shift">Utiliser le décalage binaire à gauche</h3>
+### Utiliser le décalage binaire à gauche
 
-<pre class="brush: js">
-9 &lt;&lt; 3; // 72
+```js
+9 << 3; // 72
 
 // 9 * (2 ** 3) = 9 * (8) = 72
-</pre>
+```
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise">Les opérateurs binaires dans le guide JavaScript</a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment">L'opérateur de décalage binaire à gauche et d'affectation</a></li>
-</ul>
+- [Les opérateurs binaires dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise)
+- [L'opérateur de décalage binaire à gauche et d'affectation](/fr/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)

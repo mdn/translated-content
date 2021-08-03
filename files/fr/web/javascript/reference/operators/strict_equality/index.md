@@ -7,45 +7,40 @@ tags:
   - Operator
   - Reference
 browser-compat: javascript.operators.strict_equality
-translation-of: Web/JavaScript/Reference/Operators/Strict_equality
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>L'opérateur d'égalité stricte (<code>===</code>) vérifie si ses deux opérandes sont égaux et renvoie un booléen correspondant au résultat. À la différence de <a href="/fr/docs/Web/JavaScript/Reference/Operators/Equality">l'opérateur d'égalité</a>, l'opérateur d'égalité stricte considère toujours des opérandes de types différents comme étant différents.</p>
+L'opérateur d'égalité stricte (`===`) vérifie si ses deux opérandes sont égaux et renvoie un booléen correspondant au résultat. À la différence de [l'opérateur d'égalité](/fr/docs/Web/JavaScript/Reference/Operators/Equality), l'opérateur d'égalité stricte considère toujours des opérandes de types différents comme étant différents.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-strict-equality.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-strict-equality.html")}}
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">
+```js
 x === y
-</pre>
+```
 
-<h2 id="description">Description</h2>
+## Description
 
-<p>Les opérateurs d'égalité stricte (<code>===</code> et <code>!==</code>) utilisent <a href="https://www.ecma-international.org/ecma-262/5.1/#sec-11.9.6">l'algorithme de comparaison d'égalité stricte</a> pour comparer deux opérandes.</p>
+Les opérateurs d'égalité stricte (`===` et `!==`) utilisent [l'algorithme de comparaison d'égalité stricte](https://www.ecma-international.org/ecma-262/5.1/#sec-11.9.6) pour comparer deux opérandes.
 
-<ul>
-  <li>Si les opérandes sont de types différents, on renvoie <code>false</code>.</li>
-  <li>Si les deux opérandes sont des objets, on renvoie <code>true</code> uniquement s'ils réfèrent au même objet.</li>
-  <li>Si les deux opérandes valent <code>null</code> ou si les deux opérandes valent <code>undefined</code>, on renvoie <code>true</code>.</li>
-  <li>Si au moins l'un des opérandes vaut <code>NaN</code>, on renvoie <code>false</code>.</li>
-  <li>Sinon, on compare la valeur des deux opérandes :
-    <ul>
-      <li>Les nombres doivent avoir la même valeur. <code>+0</code> and <code>-0</code> sont considérés comme égaux.</li>
-      <li>Les chaînes de caractères doivent avoir les mêmes caractères, dans le même ordre.</li>
-      <li>Les booléens doivent avoir la même valeur (tous les deux <code>true</code> ou tous les deux <code>false</code>).</li>
-    </ul>
-  </li>
-</ul>
+- Si les opérandes sont de types différents, on renvoie `false`.
+- Si les deux opérandes sont des objets, on renvoie `true` uniquement s'ils réfèrent au même objet.
+- Si les deux opérandes valent `null` ou si les deux opérandes valent `undefined`, on renvoie `true`.
+- Si au moins l'un des opérandes vaut `NaN`, on renvoie `false`.
+- Sinon, on compare la valeur des deux opérandes :
 
-<p>La différence fondamentale avec <a href="/fr/docs/Web/JavaScript/Reference/Operators/Equality">l'opérateur d'égalité</a> (<code>==</code>) est que, lorsque les opérandes sont de types différents, <code>==</code> tentera une conversion vers un type commun avant la comparaison.</p>
+  - Les nombres doivent avoir la même valeur. `+0` and `-0` sont considérés comme égaux.
+  - Les chaînes de caractères doivent avoir les mêmes caractères, dans le même ordre.
+  - Les booléens doivent avoir la même valeur (tous les deux `true` ou tous les deux `false`).
 
-<h2 id="examples">Exemples</h2>
+La différence fondamentale avec [l'opérateur d'égalité](/fr/docs/Web/JavaScript/Reference/Operators/Equality) (`==`) est que, lorsque les opérandes sont de types différents, `==` tentera une conversion vers un type commun avant la comparaison.
 
-<h3 id="comparing_operands_of_the_same_type">Comparaison d'opérandes de même type</h3>
+## Exemples
 
-<pre class="brush: js">
+### Comparaison d'opérandes de même type
+
+```js
 console.log("hello" === "hello");   // true
 console.log("hello" === "hola");    // false
 
@@ -56,21 +51,21 @@ console.log(true === true);         // true
 console.log(true === false);        // false
 
 console.log(null === null);         // true
-</pre>
+```
 
-<h3 id="comparing_operands_of_different_types">Comparaison d'opérandes de types différents</h3>
+### Comparaison d'opérandes de types différents
 
-<pre class="brush: js">
+```js
 console.log("3" === 3);           // false
 
 console.log(true === 1);          // false
 
 console.log(null === undefined);  // false
-</pre>
+```
 
-<h3 id="comparing_objects">Comparaison d'objets</h3>
+### Comparaison d'objets
 
-<pre class="brush: js">
+```js
 const objet1 = {
   name: "coucou"
 }
@@ -81,20 +76,18 @@ const objet2 = {
 
 console.log(objet1 === objet2);  // false
 console.log(objet1 === objet1);  // true
-</pre>
+```
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Inequality">L'opérateur d'inégalité</a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Equality">L'opérateur d'égalité</a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Strict_inequality">L'opérateur d'inégalité stricte</a></li>
-</ul>
+- [L'opérateur d'inégalité](/fr/docs/Web/JavaScript/Reference/Operators/Inequality)
+- [L'opérateur d'égalité](/fr/docs/Web/JavaScript/Reference/Operators/Equality)
+- [L'opérateur d'inégalité stricte](/fr/docs/Web/JavaScript/Reference/Operators/Strict_inequality)

@@ -11,34 +11,33 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/set
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/set
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>set()</strong></code> ajoute un nouvel élément avec une <code>clé</code> et une <code>valeur</code> données à un objet <code>Map</code>.</p>
+La méthode **`set()`** ajoute un nouvel élément avec une `clé` et une `valeur` données à un objet `Map`.
 
-<div>{{EmbedInteractiveExample("pages/js/map-prototype-set.html")}}</div>
+{{EmbedInteractiveExample("pages/js/map-prototype-set.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><em>maMap</em>.set(clé, valeur);</pre>
+    maMap.set(clé, valeur);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>clé</code></dt>
- <dd>Ce paramètre représente la clé de l'élément à ajouter à l'objet <code>Map</code>.</dd>
- <dt><code>valeur</code></dt>
- <dd>Ce paramètre représente la valeur de l'élément à ajouter à l'objet <code>Map</code>.</dd>
-</dl>
+- `clé`
+  - : Ce paramètre représente la clé de l'élément à ajouter à l'objet `Map`.
+- `valeur`
+  - : Ce paramètre représente la valeur de l'élément à ajouter à l'objet `Map`.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>L'objet <code>Map</code> courant (auquel l'élément a été ajouté).</p>
+L'objet `Map` courant (auquel l'élément a été ajouté).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_la_méthode_set()">Utiliser la méthode <code>set()</code></h3>
+### Utiliser la méthode `set()`
 
-<pre class="brush: js">var maMap = new Map();
+```js
+var maMap = new Map();
 
 // On ajoute de nouveaux éléments à l'objet map
 maMap.set("truc", "toto");
@@ -46,48 +45,33 @@ maMap.set(1, "bidule");
 
 // On met à jour un élément
 maMap.set("truc", "fuuu");
-</pre>
+```
 
-<h3 id="Utiliser_la_méthode_set()_avec_un_enchaînement">Utiliser la méthode <code>set()</code> avec un enchaînement</h3>
+### Utiliser la méthode `set()` avec un enchaînement
 
-<p>La méthode <code>set()</code> renvoie le même objet <code>Map</code> et on peut donc la « chaîner » pour des opérations successives :</p>
+La méthode `set()` renvoie le même objet `Map` et on peut donc la « chaîner » pour des opérations successives :
 
-<pre class="brush: js">// On ajoute de nouveaux éléments
+```js
+// On ajoute de nouveaux éléments
 // en enchaînant les appels à set()
 maMap.set('truc', 'toto')
      .set(1, 'tototruc')
-     .set(2, 'bidule');</pre>
+     .set(2, 'bidule');
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-map.prototype.set', 'Map.prototype.set')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-map.prototype.set', 'Map.prototype.set')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-map.prototype.set', 'Map.prototype.set')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-map.prototype.set', 'Map.prototype.set')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Map.set")}}</p>
+{{Compat("javascript.builtins.Map.set")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Map")}}</li>
- <li>{{jsxref("Map.prototype.get()")}}</li>
- <li>{{jsxref("Map.prototype.has()")}}</li>
-</ul>
+- {{jsxref("Map")}}
+- {{jsxref("Map.prototype.get()")}}
+- {{jsxref("Map.prototype.has()")}}

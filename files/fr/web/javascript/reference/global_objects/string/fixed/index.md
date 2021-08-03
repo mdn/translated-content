@@ -11,63 +11,47 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/fixed
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/fixed
 ---
-<div>{{JSRef}}{{deprecated_header}}</div>
+{{JSRef}}{{deprecated_header}}
 
-<p>La méthode <code><strong>fixed()</strong></code> permet de créer un élément HTML {{HTMLElement("tt")}}, ce qui permet d'afficher le texte de la chaîne de caractère dans une fonte à chasse fixe.</p>
+La méthode **`fixed()`** permet de créer un élément HTML {{HTMLElement("tt")}}, ce qui permet d'afficher le texte de la chaîne de caractère dans une fonte à chasse fixe.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>str</var>.fixed()</pre>
+    str.fixed()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une chaîne de caractères représentant un élément HTML {{HTMLElement("tt")}}.</p>
+Une chaîne de caractères représentant un élément HTML {{HTMLElement("tt")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code>fixed()</code> encadre une chaîne de caractères dans une balise <code>&lt;tt&gt;</code> :<br>
- <code>"&lt;tt&gt;str&lt;/tt&gt;</code>"</p>
+La méthode `fixed()` encadre une chaîne de caractères dans une balise `<tt>` :
+`"<tt>str</tt>`"
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>L'exemple suivant illustre l'utilisation de la méthode <code>fixed</code> pour formater une chaîne de caractères :</p>
+L'exemple suivant illustre l'utilisation de la méthode `fixed` pour formater une chaîne de caractères :
 
-<pre class="brush:js">var worldString = "Coucou monde";
+```js
+var worldString = "Coucou monde";
 
 console.log(worldString.fixed());
-// "&lt;tt&gt;Coucou monde&lt;/tt&gt;"
-</pre>
+// "<tt>Coucou monde</tt>"
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.fixed', 'String.prototype.fixed')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Définition initiale. Implémentée dans JavaScript 1.0. Définie dans l'annexe B (normative) pour les fonctionnalités ECMAScript additionnelles pour les navigateurs web.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.fixed', 'String.prototype.fixed')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Définie dans l'annexe B (normative) pour les fonctionnalités ECMAScript additionnelles pour les navigateurs web.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | État                         | Commentaires                                                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ES6', '#sec-string.prototype.fixed', 'String.prototype.fixed')}}         | {{Spec2('ES6')}}         | Définition initiale. Implémentée dans JavaScript 1.0. Définie dans l'annexe B (normative) pour les fonctionnalités ECMAScript additionnelles pour les navigateurs web. |
+| {{SpecName('ESDraft', '#sec-string.prototype.fixed', 'String.prototype.fixed')}} | {{Spec2('ESDraft')}} | Définie dans l'annexe B (normative) pour les fonctionnalités ECMAScript additionnelles pour les navigateurs web.                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.String.fixed")}}</p>
+{{Compat("javascript.builtins.String.fixed")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("String.prototype.bold()")}}</li>
- <li>{{jsxref("String.prototype.italics()")}}</li>
- <li>{{jsxref("String.prototype.strike()")}}</li>
-</ul>
+- {{jsxref("String.prototype.bold()")}}
+- {{jsxref("String.prototype.italics()")}}
+- {{jsxref("String.prototype.strike()")}}

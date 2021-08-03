@@ -10,86 +10,79 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl
 original_slug: Web/JavaScript/Reference/Objets_globaux/Intl
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>L'objet <strong><code>Intl</code></strong> est l'espace de noms pour l'API d'Internationalisation d'ECMAScript. Elle fournit des outils de comparaison de chaînes de caractères, de formatage des nombres, de dates et de l'heure selon les langues. <code>Intl</code> donne accès à plusieurs constructeurs et fonctionnalités communs aux constructeurs destinés à l'internationalion et à d'autres fonctions dépendantes des langues.</p>
+L'objet **`Intl`** est l'espace de noms pour l'API d'Internationalisation d'ECMAScript. Elle fournit des outils de comparaison de chaînes de caractères, de formatage des nombres, de dates et de l'heure selon les langues. `Intl` donne accès à plusieurs constructeurs et fonctionnalités communs aux constructeurs destinés à l'internationalion et à d'autres fonctions dépendantes des langues.
 
-<h2 id="Propriétés_constructrices">Propriétés constructrices</h2>
+## Propriétés constructrices
 
-<dl>
- <dt>{{jsxref("Objets_globaux/Collator", "Intl.Collator")}}</dt>
- <dd>Le constructeur pour les ordonnanceurs (<em>collators</em> en anglais) et les objets qui permettent la comparaison de chaînes de caractères selon les règles spécifiques d'une langue.</dd>
- <dt>{{jsxref("Objets_globaux/DateTimeFormat", "Intl.DateTimeFormat")}}</dt>
- <dd>Le constructeur pour les objets qui permettent le formatage des dates et de l'heure selon les règles spécifiques d'une langue.</dd>
- <dt>{{jsxref("Global_Objects/Intl/DisplayNames/DisplayNames", "Intl.DisplayNames()")}}</dt>
- <dd>Le constructeur pour les objets qui permettent de fournir des traductions constantes de noms de langues, régions et systèmes d'écriture.</dd>
- <dt>{{jsxref("Objets_globaux/ListFormat", "Intl.ListFormat")}}</dt>
- <dd>Le constructeur pour les objets qui permettent le formatage des listes selon les règles spécifiques d'une langue.</dd>
- <dt>{{jsxref("Global_Objects/Intl/Locale/Locale", "Intl.Locale()")}}</dt>
- <dd>Le constructeur pour les objets qui représentent un identifiant de langue Unicode.</dd>
- <dt>{{jsxref("Objets_globaux/NumberFormat", "Intl.NumberFormat")}}</dt>
- <dd>Le constructeur pour les objets qui permettent le formatage des nombres selon les règles spécifiques d'une langue.</dd>
- <dt>{{jsxref("Objets_globaux/PluralRules","Intl.PluralRules")}}</dt>
- <dd>Le constructeur pour les objets qui permettent le formatage prenant en compte le pluriel et les règles de pluriel spécifiques d'une langue.</dd>
- <dt>{{jsxref("Objets_globaux/RelativeTimeFormat","Intl.RelativeTimeFormat")}}</dt>
- <dd>Le constructeur pour les objets qui permettent le formatage d'intervalles de temps spécifiques d'une langue.</dd>
-</dl>
+- {{jsxref("Objets_globaux/Collator", "Intl.Collator")}}
+  - : Le constructeur pour les ordonnanceurs (_collators_ en anglais) et les objets qui permettent la comparaison de chaînes de caractères selon les règles spécifiques d'une langue.
+- {{jsxref("Objets_globaux/DateTimeFormat", "Intl.DateTimeFormat")}}
+  - : Le constructeur pour les objets qui permettent le formatage des dates et de l'heure selon les règles spécifiques d'une langue.
+- {{jsxref("Global_Objects/Intl/DisplayNames/DisplayNames", "Intl.DisplayNames()")}}
+  - : Le constructeur pour les objets qui permettent de fournir des traductions constantes de noms de langues, régions et systèmes d'écriture.
+- {{jsxref("Objets_globaux/ListFormat", "Intl.ListFormat")}}
+  - : Le constructeur pour les objets qui permettent le formatage des listes selon les règles spécifiques d'une langue.
+- {{jsxref("Global_Objects/Intl/Locale/Locale", "Intl.Locale()")}}
+  - : Le constructeur pour les objets qui représentent un identifiant de langue Unicode.
+- {{jsxref("Objets_globaux/NumberFormat", "Intl.NumberFormat")}}
+  - : Le constructeur pour les objets qui permettent le formatage des nombres selon les règles spécifiques d'une langue.
+- {{jsxref("Objets_globaux/PluralRules","Intl.PluralRules")}}
+  - : Le constructeur pour les objets qui permettent le formatage prenant en compte le pluriel et les règles de pluriel spécifiques d'une langue.
+- {{jsxref("Objets_globaux/RelativeTimeFormat","Intl.RelativeTimeFormat")}}
+  - : Le constructeur pour les objets qui permettent le formatage d'intervalles de temps spécifiques d'une langue.
 
-<h2 id="Méthodes_statiques">Méthodes statiques</h2>
+## Méthodes statiques
 
-<dl>
- <dt>{{jsxref("Intl.getCanonicalLocales()")}}</dt>
- <dd>Méthode renvoyant les noms canoniques des locales.</dd>
-</dl>
+- {{jsxref("Intl.getCanonicalLocales()")}}
+  - : Méthode renvoyant les noms canoniques des locales.
 
-<h2 id="Identification_et_choix_de_la_locale">Identification et choix de la locale</h2>
+## Identification et choix de la locale
 
-<p>Les constructeurs d'internationalisation, ainsi que plusieurs autres méthodes spécifiques à une langue dans d'autres constructeurs (voir ci-dessous {{anch("See_also", "Voir aussi")}}), utilisent un schéma commun pour identifier les locales et déterminer celle qu'ils utiliseront effectivement : ils acceptent tous les arguments <code>locales</code> et <code>options</code>, et ils négocient les locales demandées face aux locales qu'ils supportent, en utilisant un algorithme spécifié dans la propriété <code>options.localeMatcher</code>.</p>
+Les constructeurs d'internationalisation, ainsi que plusieurs autres méthodes spécifiques à une langue dans d'autres constructeurs (voir ci-dessous {{anch("See_also", "Voir aussi")}}), utilisent un schéma commun pour identifier les locales et déterminer celle qu'ils utiliseront effectivement : ils acceptent tous les arguments `locales` et `options`, et ils négocient les locales demandées face aux locales qu'ils supportent, en utilisant un algorithme spécifié dans la propriété `options.localeMatcher`.
 
-<h3 id="Argument_locales">Argument <code>locales</code></h3>
+### Argument `locales`
 
-<p>L'argument <code>locales</code> peut être soit une chaîne de caractères comportant une <a href="http://tools.ietf.org/html/rfc5646">balise de langue BCP 47</a>, soit un tableau de telles balises. Si l'argument n'est pas fourni ou est indéfini, la locale par défaut de l'environnement d'exécution est utilisée.</p>
+L'argument `locales` peut être soit une chaîne de caractères comportant une [balise de langue BCP 47](http://tools.ietf.org/html/rfc5646), soit un tableau de telles balises. Si l'argument n'est pas fourni ou est indéfini, la locale par défaut de l'environnement d'exécution est utilisée.
 
-<p>Une balise de langue BCP 47 définit un langage et contient au minimum un code de langue principale. Dans sa forme la plus fréquente, elle peut contenir, dans l'ordre : un code de langue, un code de script et un code de pays ou de région, tous séparés par des tirets. Bien que la balise ne soit sensible à la casse, il est recommandé d'utiliser des initiales majuscules pour le code de script, des majuscules pour les codes de pays et de région, et des minuscules pour tout le reste.</p>
+Une balise de langue BCP 47 définit un langage et contient au minimum un code de langue principale. Dans sa forme la plus fréquente, elle peut contenir, dans l'ordre : un code de langue, un code de script et un code de pays ou de région, tous séparés par des tirets. Bien que la balise ne soit sensible à la casse, il est recommandé d'utiliser des initiales majuscules pour le code de script, des majuscules pour les codes de pays et de région, et des minuscules pour tout le reste.
 
-<p>Exemples :</p>
+Exemples :
 
-<ul>
- <li><code>"hi"</code> : Hindi (langue principale).</li>
- <li><code>"de-AT"</code> : Allemand tel qu'utilisé en Autriche (langue principale avec un code pays).</li>
- <li><code>"zh-Hans-CN"</code> : Le chinois écrit en caractères simplifiés tel qu'utilisé en Chine (langue principale avec des codes de script et de pays).</li>
-</ul>
+- `"hi"` : Hindi (langue principale).
+- `"de-AT"` : Allemand tel qu'utilisé en Autriche (langue principale avec un code pays).
+- `"zh-Hans-CN"` : Le chinois écrit en caractères simplifiés tel qu'utilisé en Chine (langue principale avec des codes de script et de pays).
 
-<p>Les sous balises identifiant les langues, les scripts, les pays (régions) et les variantes (rarement utilisées) dans les balises de langue BCP 47 peuvent être trouvées dans le <a href="http://www.iana.org/assignments/language-subtag-registry">registre IANA des Sous balises de Langues</a></p>
+Les sous balises identifiant les langues, les scripts, les pays (régions) et les variantes (rarement utilisées) dans les balises de langue BCP 47 peuvent être trouvées dans le [registre IANA des Sous balises de Langues](http://www.iana.org/assignments/language-subtag-registry)
 
-<p>La BCP 47 permet également des extensions. Les fonctions d'internalisation de JavaScript utilisent l'extension "u" (Unicode), qui peut utilisée pour demander une personnalisation supplémentaire des objets {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, ou {{jsxref("DateTimeFormat")}}. Exemples :</p>
+La BCP 47 permet également des extensions. Les fonctions d'internalisation de JavaScript utilisent l'extension "u" (Unicode), qui peut utilisée pour demander une personnalisation supplémentaire des objets {{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, ou {{jsxref("DateTimeFormat")}}. Exemples :
 
-<ul>
- <li><code>"de-DE-u-co-phonebk"</code> : utiliser la variante annuaire de l'ordre de tri allemand, qui décompose les voyelles infléchies (à umlaut) en paires de caractères : ä → ae, ö → oe, ü → ue.</li>
- <li><code>"th-TH-u-nu-thai"</code> : utiliser les chiffres thaïs (๐, ๑, ๒, ๓, ๔, ๕, ๖, ๗, ๘, ๙) dans le formatage des nombres.</li>
- <li><code>"ja-JP-u-ca-japanese"</code> : utiliser le calendrier japonais dans le formatage des dates et des heures, de sorte que 2013 soit exprimé comme l'an 25 de l'ère Heisei, ou 平成25.</li>
- <li><code>"en-GB-u-ca-islamic"</code> : utiliser l'anglais britannique avec le calendrier islamique (Hijri), où la date grégorienne 14 octobre 2017 est la date de l'ère de l'Hégire 24 Muharram,1439.</li>
-</ul>
+- `"de-DE-u-co-phonebk"` : utiliser la variante annuaire de l'ordre de tri allemand, qui décompose les voyelles infléchies (à umlaut) en paires de caractères : ä → ae, ö → oe, ü → ue.
+- `"th-TH-u-nu-thai"` : utiliser les chiffres thaïs (๐, ๑, ๒, ๓, ๔, ๕, ๖, ๗, ๘, ๙) dans le formatage des nombres.
+- `"ja-JP-u-ca-japanese"` : utiliser le calendrier japonais dans le formatage des dates et des heures, de sorte que 2013 soit exprimé comme l'an 25 de l'ère Heisei, ou 平成 25.
+- `"en-GB-u-ca-islamic"` : utiliser l'anglais britannique avec le calendrier islamique (Hijri), où la date grégorienne 14 octobre 2017 est la date de l'ère de l'Hégire 24 Muharram,1439.
 
-<h3 id="Négociation_de_la_locale">Négociation de la locale</h3>
+### Négociation de la locale
 
-<p>L'argument <code>locales</code>, après retrait de toutes les extensions Unicode, est interprété comme une requête classée par priorité émanant de l'application. L'environnement d'exécution le compare aux locales dont il dispose et choisit la meilleure disponible. Il existe deux algorithmes d'association : l'apparieur "lookup" suit l'algorithme Lookup spécifié dans <a href="http://tools.ietf.org/html/rfc4647#section-3.4">BCP 47</a>; l'apparieur "meilleure correspondance" laisse l'environnement d'exécution fournir une locale qui est au moins aussi, mais possiblement mieux, adaptée à la demande que le résultat de l'algorithme Lookup. Si l'application ne fournit pas d'argument <code>locales</code> ou que l'environnement d'exécution ne dispose pas d'une locale qui corresponde à la requête, alors la locale par défaut de l'environnement d'exécution est utilisée. L'apparieur peut être choisi en utilisant une propriété de l'argument <code>options</code> (voir ci-dessous).</p>
+L'argument `locales`, après retrait de toutes les extensions Unicode, est interprété comme une requête classée par priorité émanant de l'application. L'environnement d'exécution le compare aux locales dont il dispose et choisit la meilleure disponible. Il existe deux algorithmes d'association : l'apparieur "lookup" suit l'algorithme Lookup spécifié dans [BCP 47](http://tools.ietf.org/html/rfc4647#section-3.4); l'apparieur "meilleure correspondance" laisse l'environnement d'exécution fournir une locale qui est au moins aussi, mais possiblement mieux, adaptée à la demande que le résultat de l'algorithme Lookup. Si l'application ne fournit pas d'argument `locales` ou que l'environnement d'exécution ne dispose pas d'une locale qui corresponde à la requête, alors la locale par défaut de l'environnement d'exécution est utilisée. L'apparieur peut être choisi en utilisant une propriété de l'argument `options` (voir ci-dessous).
 
-<p>Si la balise de la langue choisie comporte une sous chaîne d'extension Unicode, cette extension est maintenant utilisée pour personnaliser l'objet construit ou le comportement de la fonction. Chaque constructeur ou fonction ne supporte qu'un sous-ensemble des clés définies pour le extension Unicode, et les valeurs supportées dépendent souvent de la balise de langue. Par exemple, la clé "co" (collation) n'est supportée que par le constructeur {{jsxref("Collator")}}, et sa valeur "phonebk" n'est supportée que pour l'allemand.</p>
+Si la balise de la langue choisie comporte une sous chaîne d'extension Unicode, cette extension est maintenant utilisée pour personnaliser l'objet construit ou le comportement de la fonction. Chaque constructeur ou fonction ne supporte qu'un sous-ensemble des clés définies pour le extension Unicode, et les valeurs supportées dépendent souvent de la balise de langue. Par exemple, la clé "co" (collation) n'est supportée que par le constructeur {{jsxref("Collator")}}, et sa valeur "phonebk" n'est supportée que pour l'allemand.
 
-<h3 id="Argument_options">Argument <code>options</code></h3>
+### Argument `options`
 
-<p>L'argument <code>options</code> doit être un objet ayant des propriétés qui varient suivant qu'il s'agit des constructeurs ou des fonctions. Si l'argument <code>options</code> n'est pas fourni ou est indéfini, des valeurs par défaut seront utilisées pour toutes les propriétés.</p>
+L'argument `options` doit être un objet ayant des propriétés qui varient suivant qu'il s'agit des constructeurs ou des fonctions. Si l'argument `options` n'est pas fourni ou est indéfini, des valeurs par défaut seront utilisées pour toutes les propriétés.
 
-<p>Une propriété est supportée par tous les constructeurs et toutes les fonctions fondés sur les locales : la propriété <code>localeMatcher</code>, dont la valeur doit être la chaîne <code>"lookup"</code> ou <code>"best fit"</code>, et qui sélectionne l'un des algorithmes d'appariement décrits ci-dessus.</p>
+Une propriété est supportée par tous les constructeurs et toutes les fonctions fondés sur les locales : la propriété `localeMatcher`, dont la valeur doit être la chaîne `"lookup"` ou `"best fit"`, et qui sélectionne l'un des algorithmes d'appariement décrits ci-dessus.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Formater_des_dates_et_nombres">Formater des dates et nombres</h3>
+### Formater des dates et nombres
 
-<p>Vous pouvez utiliser Intl pour formater des dates et nombres dans un format qui est conventionnel pour une langue et une région spécifiques :</p>
+Vous pouvez utiliser Intl pour formater des dates et nombres dans un format qui est conventionnel pour une langue et une région spécifiques :
 
-<pre class="brush: js notranslate">const compte = 26254.39;
+```js
+const compte = 26254.39;
 const date = new Date("2012-05-24");
 
 function afficher (langue) {
@@ -102,61 +95,38 @@ afficher("en-US");
 // résultat attendu : 5/24/2012 26,254.39
 
 afficher("de-DE");
-// résultat attendu : 24.5.2012 26.254,39</pre>
+// résultat attendu : 24.5.2012 26.254,39
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int 1.0', '#sec-8', 'Intl')}}</td>
-   <td>{{Spec2('ES Int 1.0')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int 2.0', '#sec-8', 'Intl')}}</td>
-   <td>{{Spec2('ES Int 2.0')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#intl-object', 'Intl')}}</td>
-   <td>{{Spec2('ES Int Draft')}}</td>
-   <td>Ajout de <code>Intl.getCanonicalLocales</code> dans la 4e édition.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                        | État                             | Commentaires                                            |
+| -------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------- |
+| {{SpecName('ES Int 1.0', '#sec-8', 'Intl')}}         | {{Spec2('ES Int 1.0')}} | Définition initiale.                                    |
+| {{SpecName('ES Int 2.0', '#sec-8', 'Intl')}}         | {{Spec2('ES Int 2.0')}} |                                                         |
+| {{SpecName('ES Int Draft', '#intl-object', 'Intl')}} | {{Spec2('ES Int Draft')}} | Ajout de `Intl.getCanonicalLocales` dans la 4e édition. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Intl")}}</p>
+{{Compat("javascript.builtins.Intl")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Introduction : <a href="http://norbertlindenberg.com/2012/12/ecmascript-internationalization-api/index.html">'The ECMAScript Internationalisation API</a></li>
- <li>Constructeurs
-  <ul>
-   <li>{{jsxref("Collator", "Intl.Collator")}}</li>
-   <li>{{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}</li>
-   <li>{{jsxref("ListFormat", "Intl.ListFormat")}}</li>
-   <li>{{jsxref("NumberFormat", "Intl.NumberFormat")}}</li>
-   <li>{{jsxref("PluralRules", "Intl.PluralRules")}}</li>
-   <li>{{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat")}}</li>
-   <li>{{jsxref("Locale", "Intl.Locale")}}</li>
-  </ul>
- </li>
- <li>Méthodes
-  <ul>
-   <li>{{jsxref("String.prototype.localeCompare()")}}</li>
-   <li>{{jsxref("Number.prototype.toLocaleString()")}}</li>
-   <li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
-   <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
-   <li>{{jsxref("Date.prototype.toLocaleTimeString()")}}</li>
-  </ul>
- </li>
-</ul>
+- Introduction : ['The ECMAScript Internationalisation API](http://norbertlindenberg.com/2012/12/ecmascript-internationalization-api/index.html)
+- Constructeurs
+
+  - {{jsxref("Collator", "Intl.Collator")}}
+  - {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
+  - {{jsxref("ListFormat", "Intl.ListFormat")}}
+  - {{jsxref("NumberFormat", "Intl.NumberFormat")}}
+  - {{jsxref("PluralRules", "Intl.PluralRules")}}
+  - {{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
+  - {{jsxref("Locale", "Intl.Locale")}}
+
+- Méthodes
+
+  - {{jsxref("String.prototype.localeCompare()")}}
+  - {{jsxref("Number.prototype.toLocaleString()")}}
+  - {{jsxref("Date.prototype.toLocaleString()")}}
+  - {{jsxref("Date.prototype.toLocaleDateString()")}}
+  - {{jsxref("Date.prototype.toLocaleTimeString()")}}

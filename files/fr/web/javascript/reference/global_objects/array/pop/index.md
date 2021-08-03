@@ -10,97 +10,73 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Array/pop
 original_slug: Web/JavaScript/Reference/Objets_globaux/Array/pop
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>pop()</strong></code> supprime le <strong>dernier</strong> élément d'un tableau et retourne cet élément. Cette méthode modifie la longueur du tableau.</p>
+La méthode **`pop()`** supprime le **dernier** élément d'un tableau et retourne cet élément. Cette méthode modifie la longueur du tableau.
 
-<div>{{EmbedInteractiveExample("pages/js/array-pop.html")}}</div>
+{{EmbedInteractiveExample("pages/js/array-pop.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>arr</var>.pop()</pre>
+    arr.pop()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>L'élément qui a été retiré du tableau. Si le tableau est vide, elle renvoie {{jsxref("undefined")}}.</p>
+L'élément qui a été retiré du tableau. Si le tableau est vide, elle renvoie {{jsxref("undefined")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code>pop()</code> supprime le dernier élément d'un tableau et retourne cette valeur.</p>
+La méthode `pop()` supprime le dernier élément d'un tableau et retourne cette valeur.
 
-<p><code>pop()</code> est volontairement générique ; cette méthode peut être {{jsxref("Function.call", "appelée")}} ou {{jsxref("Function.apply", "appliquée")}} pour des objets ressemblant à des tableaux. Les objets qui ne contiennent pas une propriété <code>length</code> reflétant la fin d'une série de propriétés consécutives numérotées peuvent se comporter bizarrement.</p>
+`pop()` est volontairement générique ; cette méthode peut être {{jsxref("Function.call", "appelée")}} ou {{jsxref("Function.apply", "appliquée")}} pour des objets ressemblant à des tableaux. Les objets qui ne contiennent pas une propriété `length` reflétant la fin d'une série de propriétés consécutives numérotées peuvent se comporter bizarrement.
 
-<p>Si vous appelez <code>pop()</code> sur un tableau vide, il renverra la valeur {{jsxref("undefined")}}.</p>
+Si vous appelez `pop()` sur un tableau vide, il renverra la valeur {{jsxref("undefined")}}.
 
-<div class="blockIndicator note">
-<p><strong>Note :</strong> La méthode {{jsxref("Array.prototype.shift()")}} possède un comportement analogue mais retire le <em>premier</em> élément du tableau.</p>
-</div>
+> **Note :** La méthode {{jsxref("Array.prototype.shift()")}} possède un comportement analogue mais retire le _premier_ élément du tableau.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Supprimer_le_dernier_élément_d'un_tableau">Supprimer le dernier élément d'un tableau</h3>
+### Supprimer le dernier élément d'un tableau
 
-<p>Le code suivant crée le tableau <code>mesPoissons</code> qui contient quatre éléments puis supprime le dernier élément.</p>
+Le code suivant crée le tableau `mesPoissons` qui contient quatre éléments puis supprime le dernier élément.
 
-<pre class="brush:js">var mesPoissons = ["angel", "clown", "mandarin", "sturgeon"];
+```js
+var mesPoissons = ["angel", "clown", "mandarin", "sturgeon"];
 
 var popped = mesPoissons.pop();
 
 console.table(mesPoissons); // angel, clown, madarin
-console.log(popped);        // sturgeon</pre>
+console.log(popped);        // sturgeon
+```
 
-<h3 id="Utiliser_apply()_ou_call()_sur_les_objets_semblables_aux_tableaux">Utiliser <code>apply()</code> ou <code>call()</code> sur les objets semblables aux tableaux</h3>
+### Utiliser `apply()` ou `call()` sur les objets semblables aux tableaux
 
-<p>Le code suivant crée un objet <code>mesPoissons</code> semblable à un tableau, qui contient 4 propriétés indexées avec des nombres et une propriété <code>length</code>. On utilise la méthode {{jsxref("Function.call()")}} pour invoquer <code>pop()</code> sur cet objet :</p>
+Le code suivant crée un objet `mesPoissons` semblable à un tableau, qui contient 4 propriétés indexées avec des nombres et une propriété `length`. On utilise la méthode {{jsxref("Function.call()")}} pour invoquer `pop()` sur cet objet :
 
-<pre class="brush: js">var mesPoissons = {0: 'angel', 1: 'clown', 2: 'mandarin', 3: 'sturgeon', length: 4};
+```js
+var mesPoissons = {0: 'angel', 1: 'clown', 2: 'mandarin', 3: 'sturgeon', length: 4};
 
 var popped = Array.prototype.pop.call(mesPoissons); // on aurait pu utiliser apply()
 console.log(mesPoissons); // {0: 'angel', 1: 'clown', 2: 'mandarin', length: 3}
 console.log(popped);      // 'sturgeon'
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.2.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.4.4.6', 'Array.prototype.pop')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-array.prototype.pop', 'Array.prototype.pop')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-array.prototype.pop', 'Array.prototype.pop')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                         | Commentaires                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ES3')}}                                                                             | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.2. |
+| {{SpecName('ES5.1', '#sec-15.4.4.6', 'Array.prototype.pop')}}                     | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-array.prototype.pop', 'Array.prototype.pop')}}         | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-array.prototype.pop', 'Array.prototype.pop')}} | {{Spec2('ESDraft')}} |                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Array.pop")}}</p>
+{{Compat("javascript.builtins.Array.pop")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Array.prototype.push()")}}</li>
- <li>{{jsxref("Array.prototype.shift()")}}</li>
- <li>{{jsxref("Array.prototype.unshift()")}}</li>
- <li>{{jsxref("Array.prototype.splice()")}}</li>
-</ul>
+- {{jsxref("Array.prototype.push()")}}
+- {{jsxref("Array.prototype.shift()")}}
+- {{jsxref("Array.prototype.unshift()")}}
+- {{jsxref("Array.prototype.splice()")}}

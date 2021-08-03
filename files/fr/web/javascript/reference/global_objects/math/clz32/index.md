@@ -11,82 +11,61 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/clz32
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/clz32
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La fonction <code><strong>Math.clz32()</strong></code> renvoie le nombre de zéros de tête dans la représentation binaire sur 32 bits d'un nombre.</p>
+La fonction **`Math.clz32()`** renvoie le nombre de zéros de tête dans la représentation binaire sur 32 bits d'un nombre.
 
-<div>{{EmbedInteractiveExample("pages/js/math-clz32.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-clz32.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Math.clz32(<var>x</var>)
-</pre>
+    Math.clz32(x)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Un nombre.</dd>
-</dl>
+- `x`
+  - : Un nombre.
 
-<h3 id="Valeur_retournée">Valeur retournée</h3>
+### Valeur retournée
 
-<p>Le nombre de bits à zéro en tête de la représentation binaire sur 32 bits du nombre donné.</p>
+Le nombre de bits à zéro en tête de la représentation binaire sur 32 bits du nombre donné.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>"<code>clz32</code>" est un raccourci pour CountLeadingZeroes32 (en français, « compter les zéros de tête »).</p>
+"`clz32`" est un raccourci pour CountLeadingZeroes32 (en français, « compter les zéros de tête »).
 
-<p>Si <code>x</code> n'est pas un nombre, il sera d'abord converti en nombre puis converti en un entier non signé sur 32 bits.</p>
+Si `x` n'est pas un nombre, il sera d'abord converti en nombre puis converti en un entier non signé sur 32 bits.
 
-<p>Si l'entier non signé sur 32 bits résultant vaut <code>0</code>, la fonction renverra <code>32</code>, car tous les bits valent <code>0</code>.</p>
+Si l'entier non signé sur 32 bits résultant vaut `0`, la fonction renverra `32`, car tous les bits valent `0`.
 
-<p>Cette fonction est particulièrement utile aux systèmes qui compilent du code JavaScript, comme <a href="/fr/docs/Emscripten">Emscripten</a>.</p>
+Cette fonction est particulièrement utile aux systèmes qui compilent du code JavaScript, comme [Emscripten](/fr/docs/Emscripten).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">Math.clz32(1)                // 31
+```js
+Math.clz32(1)                // 31
 Math.clz32(1000)             // 22
 Math.clz32()                 // 32
 
 var liste = [NaN, Infinity, -Infinity, 0, -0, null, undefined, 'machin', {}, []];
-liste.every(n =&gt; Math.clz32(n) == 32); // true
+liste.every(n => Math.clz32(n) == 32); // true
 
 Math.clz32(true)             // 31
 Math.clz32(3.5)              // 30
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-math.clz32', 'Math.clz32')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.clz32', 'Math.clz32')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | Statut                       | Commentaire          |
+| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-math.clz32', 'Math.clz32')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-math.clz32', 'Math.clz32')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Math.clz32")}}</p>
+{{Compat("javascript.builtins.Math.clz32")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Math")}}</li>
- <li>{{jsxref("Math.imul")}}</li>
-</ul>
+- {{jsxref("Math")}}
+- {{jsxref("Math.imul")}}

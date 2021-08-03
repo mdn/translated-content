@@ -9,52 +9,51 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/ceil
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/ceil
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La fonction <code><strong>Math.ceil()</strong></code> retourne le plus petit entier supérieur ou égal au nombre donné.</p>
+La fonction **`Math.ceil()`** retourne le plus petit entier supérieur ou égal au nombre donné.
 
-<div>{{EmbedInteractiveExample("pages/js/math-ceil.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-ceil.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Math.ceil(<var>x</var>) </pre>
+    Math.ceil(x)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Un nombre.</dd>
-</dl>
+- `x`
+  - : Un nombre.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Le plus petit entier qui est supérieur ou égal au nombre donné.</p>
+Le plus petit entier qui est supérieur ou égal au nombre donné.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p><code>ceil()</code> est une méthode statique de <code>Math</code>. Elle doit être utilisée avec la syntaxe <code>Math.ceil()</code>, plutôt que comme une méthode d'un autre objet qui aurait été créé (<code>Math</code> n'est pas un constructeur).</p>
+`ceil()` est une méthode statique de `Math`. Elle doit être utilisée avec la syntaxe `Math.ceil()`, plutôt que comme une méthode d'un autre objet qui aurait été créé (`Math` n'est pas un constructeur).
 
-<div class="blockIndicator note">
-<p><strong>Note :</strong> <code>Math.ceil(null)</code> renverra <code>0</code> et pas {{jsxref("NaN")}}.</p>
-</div>
+> **Note :** `Math.ceil(null)` renverra `0` et pas {{jsxref("NaN")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_Math.ceil()">Utiliser <code>Math.ceil()</code></h3>
+### Utiliser `Math.ceil()`
 
-<p>Voici un exemple d'utilisation de <code>Math.ceil()</code>.</p>
+Voici un exemple d'utilisation de `Math.ceil()`.
 
-<pre class="brush:js;">Math.ceil(.95);    // 1
+```js
+Math.ceil(.95);    // 1
 Math.ceil(4);      // 4
 Math.ceil(7.004);  // 8
 Math.ceil(-0.95);  // -0
 Math.ceil(-4);     // -4
 Math.ceil(-7.004); // -7
-Math.ceil(null);   // 0</pre>
+Math.ceil(null);   // 0
+```
 
-<h3 id="Arrondi_décimal">Arrondi décimal</h3>
+### Arrondi décimal
 
-<pre class="brush:js">// Fermeture
+```js
+// Fermeture
 (function(){
 
 	/**
@@ -74,7 +73,7 @@ Math.ceil(null);   // 0</pre>
 		exp = +exp;
 		// Si value n'est pas un nombre
         // ou si l'exposant n'est pas entier
-		if (isNaN(value) || !(typeof exp === 'number' &amp;&amp; exp % 1 === 0)) {
+		if (isNaN(value) || !(typeof exp === 'number' && exp % 1 === 0)) {
 			return NaN;
 		}
 		// Décalage
@@ -125,50 +124,25 @@ Math.ceil10(55.51, -1); // 55.6
 Math.ceil10(51, 1); // 60
 Math.ceil10(-55.59, -1); // -55.5
 Math.ceil10(-59, 1); // -50
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.2.6', 'Math.ceil')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.ceil', 'Math.ceil')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.ceil', 'Math.ceil')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                            | État                         | Commentaires                                          |
+| ------------------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ES1')}}                                                 | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.2.6', 'Math.ceil')}}     | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-math.ceil', 'Math.ceil')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-math.ceil', 'Math.ceil')}} | {{Spec2('ESDraft')}} |                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Math.ceil")}}</p>
+{{Compat("javascript.builtins.Math.ceil")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Math.abs()")}}</li>
- <li>{{jsxref("Math.floor()")}}</li>
- <li>{{jsxref("Math.round()")}}</li>
- <li>{{jsxref("Math.sign()")}}</li>
- <li>{{jsxref("Math.trunc()")}}{</li>
-</ul>
+- {{jsxref("Math.abs()")}}
+- {{jsxref("Math.floor()")}}
+- {{jsxref("Math.round()")}}
+- {{jsxref("Math.sign()")}}
+- {{jsxref("Math.trunc()")}}{

@@ -8,61 +8,56 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/delete
 original_slug: Web/JavaScript/Reference/Opérateurs/L_opérateur_delete
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>L'opérateur <strong><code>delete</code></strong> permet de retirer une propriété d'un objet.</p>
+L'opérateur **`delete`** permet de retirer une propriété d'un objet.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-deleteoperator.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-deleteoperator.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">delete <em>expression</em></pre>
+    delete expression
 
-<p>où <em>expression</em> est évaluée comme une référence à une propriété :</p>
+où _expression_ est évaluée comme une référence à une propriété :
 
-<pre class="syntaxbox">delete <em>objet.propriete</em>
-delete <em>objet</em>['propriete']
-</pre>
+    delete objet.propriete
+    delete objet['propriete']
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>objet</code></dt>
- <dd>Le nom d'un objet ou une expression dont l'évaluation fournit un objet.</dd>
- <dt><code>propriete</code></dt>
- <dd>La propriété qu'on souhaite supprimer.</dd>
-</dl>
+- `objet`
+  - : Le nom d'un objet ou une expression dont l'évaluation fournit un objet.
+- `propriete`
+  - : La propriété qu'on souhaite supprimer.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p><code>true</code> pour tous les cas sauf lorsque la propriété est une propriété <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty">propre</a> <a href="/fr/docs/Web/JavaScript/Reference/Erreurs/Cant_delete">non-configurable</a> auquel cas <code>false</code> est renvoyé en mode non-strict.</p>
+`true` pour tous les cas sauf lorsque la propriété est une propriété [propre](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty) [non-configurable](/fr/docs/Web/JavaScript/Reference/Erreurs/Cant_delete) auquel cas `false` est renvoyé en mode non-strict.
 
-<h3 id="Exceptions">Exceptions</h3>
+### Exceptions
 
-<p>Cet opérateur lève une exception {{jsxref("TypeError")}} en <a href="/fr/docs/Web/JavaScript/Reference/Strict_mode">mode strict</a> si la propriété est une propriété propre qui est non-configurable.</p>
+Cet opérateur lève une exception {{jsxref("TypeError")}} en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode) si la propriété est une propriété propre qui est non-configurable.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Contrairement à ce qu'on pourrait penser, l'opérateur <code>delete</code> n'a rien à voir avec une libération de mémoire directe. La gestion de la mémoire en JavaScript est réalisée de façon indirecte en tenant compte des références, <a href="/fr/docs/Web/JavaScript/Gestion_de_la_mémoire">voir cette page pour plus de détails</a>.</p>
+Contrairement à ce qu'on pourrait penser, l'opérateur `delete` n'a rien à voir avec une libération de mémoire directe. La gestion de la mémoire en JavaScript est réalisée de façon indirecte en tenant compte des références, [voir cette page pour plus de détails](/fr/docs/Web/JavaScript/Gestion_de_la_mémoire).
 
-<p>L'opérateur <code><strong>delete</strong></code> permet de retirer une propriété donnée d'un objet. Lorsque la suppression se déroule sans problème, l'opération renvoie <code>true</code>, sinon c'est la valeur <code>false</code> qui est renvoyée. Voici quelques scénarios importants qui précisent ce comportement :</p>
+L'opérateur **`delete`** permet de retirer une propriété donnée d'un objet. Lorsque la suppression se déroule sans problème, l'opération renvoie `true`, sinon c'est la valeur `false` qui est renvoyée. Voici quelques scénarios importants qui précisent ce comportement :
 
-<ul>
- <li>Si la propriété qu'on souhaite supprimer n'existe pas, <code>delete</code> n'aura aucun effet et l'opération renverra <code>true</code></li>
- <li>Si une propriété du même nom existe sur la chaîne de prototypes, après la suppression, l'objet utilisera la propriété disponible sur la chaîne de prototypes. Autrement dit, <code>delete</code> n'a d'effet que sur les propriétés directement rattachées à un objet (les propriétés « propres »).</li>
- <li>Toute propriété déclarée avec {{jsxref("Instructions/var","var")}} ne peut pas être supprimée de la portée globale ou de la portée d'une fonction.
-  <ul>
-   <li>Aussi, <code>delete</code> ne pourra supprimer des fonctions de la portée globale (que ce soit une définition de fonction ou une expression de fonction).</li>
-   <li>Les fonctions qui font partie d'un objet (à l'exception de la portée globale) peuvent être supprimées avec <code>delete</code>.</li>
-  </ul>
- </li>
- <li>Toute propriété déclarée avec {{jsxref("Instructions/let","let")}} ou {{jsxref("Instructions/const","const")}} ne peut être supprimée de la portée dans laquelle elles ont été créées.</li>
- <li>Les propriétés non-configurable ne peuvent pas être retirées. Cela inclut les propriétés des objets natifs comme {{jsxref("Math")}}, {{jsxref("Array")}}, {{jsxref("Object")}} et les propriétés qui sont créées comme non-configurable grâce à la méthode {{jsxref("Object.defineProperty()")}}.</li>
-</ul>
+- Si la propriété qu'on souhaite supprimer n'existe pas, `delete` n'aura aucun effet et l'opération renverra `true`
+- Si une propriété du même nom existe sur la chaîne de prototypes, après la suppression, l'objet utilisera la propriété disponible sur la chaîne de prototypes. Autrement dit, `delete` n'a d'effet que sur les propriétés directement rattachées à un objet (les propriétés « propres »).
+- Toute propriété déclarée avec {{jsxref("Instructions/var","var")}} ne peut pas être supprimée de la portée globale ou de la portée d'une fonction.
 
-<p>Voici un fragment de code qui illustre certains cas :</p>
+  - Aussi, `delete` ne pourra supprimer des fonctions de la portée globale (que ce soit une définition de fonction ou une expression de fonction).
+  - Les fonctions qui font partie d'un objet (à l'exception de la portée globale) peuvent être supprimées avec `delete`.
 
-<pre class="brush: js">var Employe = {
+- Toute propriété déclarée avec {{jsxref("Instructions/let","let")}} ou {{jsxref("Instructions/const","const")}} ne peut être supprimée de la portée dans laquelle elles ont été créées.
+- Les propriétés non-configurable ne peuvent pas être retirées. Cela inclut les propriétés des objets natifs comme {{jsxref("Math")}}, {{jsxref("Array")}}, {{jsxref("Object")}} et les propriétés qui sont créées comme non-configurable grâce à la méthode {{jsxref("Object.defineProperty()")}}.
+
+Voici un fragment de code qui illustre certains cas :
+
+```js
+var Employe = {
   age: 28,
   nom: 'abc',
   designation: 'developpeur'
@@ -74,21 +69,23 @@ console.log(delete Employe.age);  // renvoie true
 // Lorsqu'on souhaite supprimer une propriété
 // inexistante, on obtient true
 console.log(delete Employe.salaire); // renvoie true
-</pre>
+```
 
-<h3 id="Les_propriétés_non-configurables">Les propriétés non-configurables</h3>
+### Les propriétés non-configurables
 
-<p>Lorsqu'une propriété est marquée comme non-configurable, <code>delete</code> n'aura aucun effet et l'opération renverra <code>false</code>. En mode strict, cela déclenchera une exception <code>TypeError</code>.</p>
+Lorsqu'une propriété est marquée comme non-configurable, `delete` n'aura aucun effet et l'opération renverra `false`. En mode strict, cela déclenchera une exception `TypeError`.
 
-<pre class="brush: js">var Employe = {};
+```js
+var Employe = {};
 Object.defineProperty(Employe, 'nom', {configurable: false});
 
 console.log(delete Employe.nom);  // renvoie false
-</pre>
+```
 
-<p>{{jsxref("Instructions/var","var")}} (ou <code>let</code> ou <code>const</code>) crée des propriétés non-configurables qui ne peuvent pas être supprimées via <code>delete</code> :</p>
+{{jsxref("Instructions/var","var")}} (ou `let` ou `const`) crée des propriétés non-configurables qui ne peuvent pas être supprimées via `delete` :
 
-<pre class="brush: js">var autreNom = 'XYZ';
+```js
+var autreNom = 'XYZ';
 
 // On peut accéder à la description de cette
 // propriété globale grâce à :
@@ -97,33 +94,36 @@ Object.getOwnPropertyDescriptor(window, 'autreNom')
 /* Object {value: "XYZ",
                   writable: true,
                   enumerable: true,
-                  <strong>configurable: false</strong>}
+                  configurable: false}
 */
 
 // On voit que "autreNom", ajouté avec var
 // est marquée comme "non-configurable"
 
-delete autreNom;   // renvoie false</pre>
+delete autreNom;   // renvoie false
+```
 
-<p>En mode strict, cela aurait déclenché une exception.</p>
+En mode strict, cela aurait déclenché une exception.
 
-<h3 id="Mode_strict_ou_non-strict">Mode strict ou non-strict ?</h3>
+### Mode strict ou non-strict ?
 
-<p>Lorsqu'on est en mode strict, si <code>delete</code> est utilisé sur une référence directe à une variable, un argument de fonction ou un nom de fonction, il déclenchera une exception {{jsxref("SyntaxError")}}<strong>.</strong></p>
+Lorsqu'on est en mode strict, si `delete` est utilisé sur une référence directe à une variable, un argument de fonction ou un nom de fonction, il déclenchera une exception {{jsxref("SyntaxError")}}**.**
 
-<p>Toute variable définie avec <code>var</code> est marquée comme non-configurable. Dans l'exemple qui suit, <code>salaire</code> est non-configurable et ne peut pas être supprimé. En mode non-strict, l'opération <code>delete</code> renverra <code>false</code>.</p>
+Toute variable définie avec `var` est marquée comme non-configurable. Dans l'exemple qui suit, `salaire` est non-configurable et ne peut pas être supprimé. En mode non-strict, l'opération `delete` renverra `false`.
 
-<pre class="brush: js">function Employe() {
+```js
+function Employe() {
   delete salaire;
   var salaire;
 }
 
 Employe();
-</pre>
+```
 
-<p>Voyons comment ce code se comporte en mode strict : au lieu de renvoyer false, l'instruction lève une exception <code>SyntaxError</code>.</p>
+Voyons comment ce code se comporte en mode strict : au lieu de renvoyer false, l'instruction lève une exception `SyntaxError`.
 
-<pre class="brush: js">"use strict";
+```js
+"use strict";
 
 function Employe() {
   delete salaire;  // SyntaxError
@@ -138,11 +138,12 @@ function DemoFunction() {
 }
 
 delete DemoFunction; // SyntaxError
-</pre>
+```
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">// on crée la propriété adminName sur la portée globale
+```js
+// on crée la propriété adminName sur la portée globale
 adminName = 'xyz';
 
 // on crée la propriété empCount sur la portée globale
@@ -167,7 +168,7 @@ delete empCount;        // renvoie false
 // d'objets
 delete EmployeeDetails.name; // renvoie true
 
-<strong>// </strong>Même lorsque la propriété n'existe pas,
+// Même lorsque la propriété n'existe pas,
 // l'opération renvoie "true"
 delete EmployeeDetails.salary; // renvoie true
 
@@ -186,13 +187,14 @@ function f() {
   // des variables locales
   delete z;     // returns false
 }
-</pre>
+```
 
-<h3 id="delete_et_la_chaîne_de_prototypes"><code>delete</code> et la chaîne de prototypes</h3>
+### `delete` et la chaîne de prototypes
 
-<p>Dans l'exemple qui suit, on supprime une propriété directement rattachée à un objet (une propriété « propre ») alors qu'une propriété du même nom existe sur la chaîne de prototypes :</p>
+Dans l'exemple qui suit, on supprime une propriété directement rattachée à un objet (une propriété « propre ») alors qu'une propriété du même nom existe sur la chaîne de prototypes :
 
-<pre class="brush: js">function Toto(){
+```js
+function Toto(){
   this.truc = 10;
 }
 
@@ -216,31 +218,37 @@ delete Toto.prototype.truc;
 // On aura "undefined" dans la console
 // car l'objet n'hérite plus de cette propriété
 // qui a été supprimée
-console.log(toto.truc);</pre>
+console.log(toto.truc);
+```
 
-<h3 id="Supprimer_les_éléments_dun_tableau">Supprimer les éléments d'un tableau</h3>
+### Supprimer les éléments d'un tableau
 
-<p>Lorsqu'on supprime un élément d'un tableau, la longueur du tableau n'est pas modifiée. Cela vaut également lorsqu'on supprime le dernier élément du tableau.</p>
+Lorsqu'on supprime un élément d'un tableau, la longueur du tableau n'est pas modifiée. Cela vaut également lorsqu'on supprime le dernier élément du tableau.
 
-<p>Lorsqu'on utilise <code>delete</code> pour retirer un élément du tableau, cet élément n'est plus dans le tableau. Dans l'exemple suivant, on retire <code>arbres[3]</code> grâce à <code>delete</code>.</p>
+Lorsqu'on utilise `delete` pour retirer un élément du tableau, cet élément n'est plus dans le tableau. Dans l'exemple suivant, on retire `arbres[3]` grâce à `delete`.
 
-<pre class="brush: js">var arbres = ["cèdre","pin","chêne","érable","sapin"];
+```js
+var arbres = ["cèdre","pin","chêne","érable","sapin"];
 delete arbres[3];
 if (3 in arbres) {
     // Le code ici ne sera pas exécuté
-}</pre>
+}
+```
 
-<p>Si on veut conserver l'existence d'un élément du tableau avec une valeur indéfinie, on pourra affecter la valeur <code>undefined</code> à cet élément. Ainsi, contrairement à l'exemple précédent, en utilisant <code>undefined</code>, <code>arbres[3]</code> continue d'être présent :</p>
+Si on veut conserver l'existence d'un élément du tableau avec une valeur indéfinie, on pourra affecter la valeur `undefined` à cet élément. Ainsi, contrairement à l'exemple précédent, en utilisant `undefined`, `arbres[3]` continue d'être présent :
 
-<pre class="brush: js">var arbres = ["cèdre","pin","chêne","érable","sapin"];
+```js
+var arbres = ["cèdre","pin","chêne","érable","sapin"];
 arbres[3] = undefined;
 if (3 in arbres) {
   // Le code ici sera bien exécuté
-}</pre>
+}
+```
 
-<p>Si on souhaite plutôt retirer un élément du tableau en changeant le contenu du tableau, on pourra utiliser la méthode {{jsxref("Array.splice()")}}. Dans l'exemple qui suit, la valeur actuelle de <code>arbres[3]</code> est retirée du tableau grâce à <code>splice()</code> mais l'index suivant se décale et arbres[4] devient arbres[3] :</p>
+Si on souhaite plutôt retirer un élément du tableau en changeant le contenu du tableau, on pourra utiliser la méthode {{jsxref("Array.splice()")}}. Dans l'exemple qui suit, la valeur actuelle de `arbres[3]` est retirée du tableau grâce à `splice()` mais l'index suivant se décale et arbres\[4] devient arbres\[3] :
 
-<pre class="brush: js">var arbres = ["cèdre","pin","chêne","érable","sapin"];
+```js
+var arbres = ["cèdre","pin","chêne","érable","sapin"];
 if (3 in arbres) {
  // Le code ici sera exécuté
 }
@@ -249,54 +257,29 @@ console.log(arbres); // ["cèdre","pin","chêne","sapin"];
 if (3 in arbres) {
  // Le code ici sera également exécuté
 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-delete-operator', 'The delete Operator')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-delete-operator', 'The delete Operator')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-11.4.1', 'The delete Operator')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1', '#sec-11.4.1', 'The delete Operator')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale. Implémenté avec JavaScript 1.2.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                         | Commentaires                                         |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------- |
+| {{SpecName('ESDraft', '#sec-delete-operator', 'The delete Operator')}} | {{Spec2('ESDraft')}} |                                                      |
+| {{SpecName('ES6', '#sec-delete-operator', 'The delete Operator')}}     | {{Spec2('ES6')}}         |                                                      |
+| {{SpecName('ES5.1', '#sec-11.4.1', 'The delete Operator')}}             | {{Spec2('ES5.1')}}     |                                                      |
+| {{SpecName('ES1', '#sec-11.4.1', 'The delete Operator')}}                 | {{Spec2('ES1')}}         | Définition initiale. Implémenté avec JavaScript 1.2. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.operators.delete")}}</p>
+{{Compat("javascript.operators.delete")}}
 
-<h2 id="Notes_de_compatibilité">Notes de compatibilité</h2>
+## Notes de compatibilité
 
-<p>Bien que l'ordre d'itération des objets soit laissé à l'implémentation selon le standard ECMAScript, il semblerait que la plupart des navigateurs utilise un ordre d'itération basé sur l'ordre d'ajout des propriétés (au moins pour les propriétés propres). Toutefois, pour Internet Explorer, lorsqu'on utilise <code>delete</code> sur une propriété puis qu'on redéfinit plus tard une propriété avec le même nom, l'ordre d'itération de cette propriété sera le même que précédemment (alors que dans les autres navigateurs, cette « nouvelle » propriété sera parcourue en dernier).</p>
+Bien que l'ordre d'itération des objets soit laissé à l'implémentation selon le standard ECMAScript, il semblerait que la plupart des navigateurs utilise un ordre d'itération basé sur l'ordre d'ajout des propriétés (au moins pour les propriétés propres). Toutefois, pour Internet Explorer, lorsqu'on utilise `delete` sur une propriété puis qu'on redéfinit plus tard une propriété avec le même nom, l'ordre d'itération de cette propriété sera le même que précédemment (alors que dans les autres navigateurs, cette « nouvelle » propriété sera parcourue en dernier).
 
-<p>Aussi, si on veut simuler un tableau associatif ordonné de façon transparente et pour plusieurs navigateurs, il faudra utiliser deux tableaux ou, mieux encore, un objet {{jsxref("Map")}} si celui-ci est disponible.</p>
+Aussi, si on veut simuler un tableau associatif ordonné de façon transparente et pour plusieurs navigateurs, il faudra utiliser deux tableaux ou, mieux encore, un objet {{jsxref("Map")}} si celui-ci est disponible.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="https://perfectionkills.com/understanding-delete/">Une analyse de <code>delete</code> par Kangax, en anglais</a></li>
- <li>{{jsxref("Reflect.deleteProperty()")}}</li>
- <li>{{jsxref("Map.prototype.delete()")}}</li>
-</ul>
+- [Une analyse de `delete` par Kangax, en anglais](https://perfectionkills.com/understanding-delete/)
+- {{jsxref("Reflect.deleteProperty()")}}
+- {{jsxref("Map.prototype.delete()")}}

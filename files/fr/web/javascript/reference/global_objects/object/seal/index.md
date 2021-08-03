@@ -11,36 +11,35 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/seal
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/seal
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>Object.seal()</strong></code> scelle un objet afin d'empêcher l'ajout de nouvelles propriétés, en marquant les propriétés existantes comme non-configurables. Les valeurs des propriétés courantes peuvent toujours être modifiées si elles sont accessibles en écriture.</p>
+La méthode **`Object.seal()`** scelle un objet afin d'empêcher l'ajout de nouvelles propriétés, en marquant les propriétés existantes comme non-configurables. Les valeurs des propriétés courantes peuvent toujours être modifiées si elles sont accessibles en écriture.
 
-<div>{{EmbedInteractiveExample("pages/js/object-seal.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-seal.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Object.seal(<var>obj</var>)</pre>
+    Object.seal(obj)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt>obj</dt>
- <dd>L'objet à sceller. Ce peut être n'importe quelle valeur qui n'ait pas <a href="/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Types_de_données">un type primitif</a>.</dd>
-</dl>
+- obj
+  - : L'objet à sceller. Ce peut être n'importe quelle valeur qui n'ait pas [un type primitif](/fr/docs/Web/JavaScript/Guide/Types_et_grammaire#Types_de_données).
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>L'objet qui est scellé.</p>
+L'objet qui est scellé.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Par défaut, les objets sont {{jsxref("Object.isExtensible()", "extensibles", "", 1)}} (ce qui signifie que de nouvelles propriétés peuvent leur être ajoutées). Sceller un objet empêche l'ajout de nouvelles propriétés et marque les propriétés existantes comme non-configurables. Ainsi, l'ensemble de propriétés de l'objet devient fixé et immuable. Le fait de rendre les propriétés non-configurables empêche également de transformer des propriétés de données en accesseurs et vice versa. Cela n'empêche pas de modifier la valeur des propriétés. Toute tentative de suppression ou d'ajout de propriétés à un objet qui est scellé, de conversion d'une propriété de données en accesseurs ou vice versa échouera, soit de manière silencieuse soit en lançant une exception {{jsxref("TypeError")}} (la plupart du temps en {{jsxref("Fonctions_et_portee_des_fonctions/Strict_mode","mode strict","",1)}}.</p>
+Par défaut, les objets sont {{jsxref("Object.isExtensible()", "extensibles", "", 1)}} (ce qui signifie que de nouvelles propriétés peuvent leur être ajoutées). Sceller un objet empêche l'ajout de nouvelles propriétés et marque les propriétés existantes comme non-configurables. Ainsi, l'ensemble de propriétés de l'objet devient fixé et immuable. Le fait de rendre les propriétés non-configurables empêche également de transformer des propriétés de données en accesseurs et vice versa. Cela n'empêche pas de modifier la valeur des propriétés. Toute tentative de suppression ou d'ajout de propriétés à un objet qui est scellé, de conversion d'une propriété de données en accesseurs ou vice versa échouera, soit de manière silencieuse soit en lançant une exception {{jsxref("TypeError")}} (la plupart du temps en {{jsxref("Fonctions_et_portee_des_fonctions/Strict_mode","mode strict","",1)}}.
 
-<p>La chaîne de prototypes reste la même. Cependant, la propriété {{jsxref("Object.proto", "__proto__")}} ( {{deprecated_inline}} ) est scellée également.</p>
+La chaîne de prototypes reste la même. Cependant, la propriété {{jsxref("Object.proto", "__proto__")}} ( {{deprecated_inline}} ) est scellée également.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var obj = {
+```js
+var obj = {
     prop: function () {},
     toto: "truc"
   };
@@ -89,62 +88,41 @@ Object.defineProperty(obj, "ohai", { value: 17 });
 // lance une TypeError
 
 Object.defineProperty(obj, "toto", { value: "eit" });
-// modifie une propriété existante</pre>
+// modifie une propriété existante
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Pour ES5, si l'argument passé à la méthode n'est pas un objet (mais une valeur d'un autre type primitif), cela entraînera une exception {{jsxref("TypeError")}}. Pour ES2015, un argument qui n'est pas un objet sera traité comme un objet ordinaire scellé et la méthode renverra cet objet.</p>
+Pour ES5, si l'argument passé à la méthode n'est pas un objet (mais une valeur d'un autre type primitif), cela entraînera une exception {{jsxref("TypeError")}}. Pour ES2015, un argument qui n'est pas un objet sera traité comme un objet ordinaire scellé et la méthode renverra cet objet.
 
-<pre class="brush: js">Object.seal(1);
+```js
+Object.seal(1);
 // TypeError : 1 n'est pas un objet (code ES5)
 
 Object.seal(1);
-// 1 (code ES2015)</pre>
+// 1 (code ES2015)
+```
 
-<h3 id="Comparaison_avec_Object.freeze()">Comparaison avec <code>Object.freeze()</code></h3>
+### Comparaison avec `Object.freeze()`
 
-<p>Lorsqu'on utilise la méthode {{jsxref("Object.freeze()")}}, les propriétés existantes d'un objet gelé deviennent immuables. En revanche, avec <code>Object.seal()</code>, il est toujours possible de modifier la valeur des propriétés existantes d'un objet scellé.</p>
+Lorsqu'on utilise la méthode {{jsxref("Object.freeze()")}}, les propriétés existantes d'un objet gelé deviennent immuables. En revanche, avec `Object.seal()`, il est toujours possible de modifier la valeur des propriétés existantes d'un objet scellé.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.8', 'Object.seal')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Définition initiale.<br>
-    Implémentée par JavaScript 1.8.5</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.seal', 'Object.seal')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.seal', 'Object.seal')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | État                         | Commentaire                                           |
+| ---------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ES5.1', '#sec-15.2.3.8', 'Object.seal')}}     | {{Spec2('ES5.1')}}     | Définition initiale. Implémentée par JavaScript 1.8.5 |
+| {{SpecName('ES6', '#sec-object.seal', 'Object.seal')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-object.seal', 'Object.seal')}} | {{Spec2('ESDraft')}} |                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Object.seal")}}</p>
+{{Compat("javascript.builtins.Object.seal")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Object.isSealed()")}}</li>
- <li>{{jsxref("Object.preventExtensions()")}}</li>
- <li>{{jsxref("Object.isExtensible()")}}</li>
- <li>{{jsxref("Object.freeze()")}}</li>
- <li>{{jsxref("Object.isFrozen()")}}</li>
-</ul>
+- {{jsxref("Object.isSealed()")}}
+- {{jsxref("Object.preventExtensions()")}}
+- {{jsxref("Object.isExtensible()")}}
+- {{jsxref("Object.freeze()")}}
+- {{jsxref("Object.isFrozen()")}}

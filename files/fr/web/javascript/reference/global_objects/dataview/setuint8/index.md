@@ -11,80 +11,56 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/DataView/setUint8
 original_slug: Web/JavaScript/Reference/Objets_globaux/DataView/setUint8
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>setUint8()</code></strong> permet d'enregister un entier non-signé sur 8 bits à l'octet indiqué par rapport au début de la {{jsxref("DataView")}}.</p>
+La méthode **`setUint8()`** permet d'enregister un entier non-signé sur 8 bits à l'octet indiqué par rapport au début de la {{jsxref("DataView")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/dataview-setuint8.html")}}</div>
+{{EmbedInteractiveExample("pages/js/dataview-setuint8.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>dataview</var>.setUint8(positionOctet, valeur)</pre>
+    dataview.setUint8(positionOctet, valeur)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>positionOctet</code></dt>
- <dd>La position, exprimée en numéro d'octet, à partir du début de la vue à laquelle enregistrer la donnée.</dd>
- <dt><code>valeur</code></dt>
- <dd>La valeur à enregistrer.</dd>
-</dl>
+- `positionOctet`
+  - : La position, exprimée en numéro d'octet, à partir du début de la vue à laquelle enregistrer la donnée.
+- `valeur`
+  - : La valeur à enregistrer.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>{{jsxref("undefined")}}.</p>
+{{jsxref("undefined")}}.
 
-<h3 id="Erreurs_renvoyées">Erreurs renvoyées</h3>
+### Erreurs renvoyées
 
-<dl>
- <dt>{{jsxref("RangeError")}}</dt>
- <dd>Renvoyée si <code>positionOctet</code> est tel que l'enregistrement sera fait en dehors de la vue.</dd>
-</dl>
+- {{jsxref("RangeError")}}
+  - : Renvoyée si `positionOctet` est tel que l'enregistrement sera fait en dehors de la vue.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utilisation_de_la_méthode_setUint8">Utilisation de la méthode <code>setUint8</code></h3>
+### Utilisation de la méthode `setUint8`
 
-<pre class="brush:js">var buffer = new ArrayBuffer(8);
+```js
+var buffer = new ArrayBuffer(8);
 var dataview = new DataView(buffer);
 dataview.setUint8(1, 3);
 dataview.getUint8(1); // 3
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Typed Array')}}</td>
-   <td>{{Spec2('Typed Array')}}</td>
-   <td>Remplacée dans ECMAScript 2015.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-dataview.prototype.setuint8', 'DataView.prototype.setUint8')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale au sein d'un standard ECMA.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-dataview.prototype.setuint8', 'DataView.prototype.setUint8')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | État                             | Commentaires                                    |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------- |
+| {{SpecName('Typed Array')}}                                                                                     | {{Spec2('Typed Array')}} | Remplacée dans ECMAScript 2015.                 |
+| {{SpecName('ES2015', '#sec-dataview.prototype.setuint8', 'DataView.prototype.setUint8')}} | {{Spec2('ES2015')}}         | Définition initiale au sein d'un standard ECMA. |
+| {{SpecName('ESDraft', '#sec-dataview.prototype.setuint8', 'DataView.prototype.setUint8')}} | {{Spec2('ESDraft')}}     |                                                 |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.DataView.setUint8")}}</p>
+{{Compat("javascript.builtins.DataView.setUint8")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("DataView")}}</li>
- <li>{{jsxref("ArrayBuffer")}}</li>
-</ul>
+- {{jsxref("DataView")}}
+- {{jsxref("ArrayBuffer")}}

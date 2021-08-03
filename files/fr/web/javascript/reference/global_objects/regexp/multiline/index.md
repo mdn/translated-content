@@ -10,77 +10,47 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/multiline
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/multiline
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La propriété <code><strong>multiline</strong></code> indique si le drapeau (<em>flag</em>) "<code>m</code>" a été utilisé ou non pour l'expression rationnelle. <code>multiline</code> est une propriété liée à l'instance, accessible en lecture seule.</p>
+La propriété **`multiline`** indique si le drapeau (_flag_) "`m`" a été utilisé ou non pour l'expression rationnelle. `multiline` est une propriété liée à l'instance, accessible en lecture seule.
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-prototype-multiline.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/regexp-prototype-multiline.html", "taller")}}{{js_property_attributes(0,0,1)}}
 
+## Description
 
+La valeur de `multiline` est un booléen. Elle vaut `true` si le drapeau "`m`" a été utilisé et `false` sinon. Le flag "`m`" indique qu'une chaine de caractères qui s'étend sur plusieurs lignes doit être traitée comme une série de ligne. Ainsi, si "`m`" est utilisé, "`^`" et "`$`" ne correspondent plus au début et à la fin de la chaîne mais aux débuts et aux fins de chaque ligne de la chaîne.
 
-<div>{{js_property_attributes(0,0,1)}}</div>
+Cette propriété ne peut pas être modifiée directement.
 
-<h2 id="Description">Description</h2>
+## Exemples
 
-<p>La valeur de <code>multiline</code> est un booléen. Elle vaut <code>true</code> si le drapeau "<code>m</code>" a été utilisé et <code>false</code> sinon. Le flag "<code>m</code>" indique qu'une chaine de caractères qui s'étend sur plusieurs lignes doit être traitée comme une série de ligne. Ainsi, si "<code>m</code>" est utilisé, "<code>^</code>" et "<code>$</code>" ne correspondent plus au début et à la fin de la chaîne mais aux débuts et aux fins de chaque ligne de la chaîne.</p>
-
-<p>Cette propriété ne peut pas être modifiée directement.</p>
-
-<h2 id="Exemples">Exemples</h2>
-
-<pre class="brush:js">var regex = new RegExp("toto", "m");
+```js
+var regex = new RegExp("toto", "m");
 
 console.log(regex.multiline); // true
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.2. Avec JavaScript 1.5 : <code>multiline</code> est une propriété liée à l'instance de {{jsxref("RegExp")}} et non à l'objet <code>RegExp</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.10.7.4', 'RegExp.prototype.multiline')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-get-regexp.prototype.multiline', 'RegExp.prototype.multiline')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td><code>multiline</code> est désormais un propriété du prototype sous forme d'accesseur plutôt qu'une propriété directement liée à l'instance.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-get-regexp.prototype.multiline', 'RegExp.prototype.multiline')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                | Statut                       | Commentaires                                                                                                                                                                           |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('ES3')}}                                                                                                     | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.2. Avec JavaScript 1.5 : `multiline` est une propriété liée à l'instance de {{jsxref("RegExp")}} et non à l'objet `RegExp`. |
+| {{SpecName('ES5.1', '#sec-15.10.7.4', 'RegExp.prototype.multiline')}}                                 | {{Spec2('ES5.1')}}     |                                                                                                                                                                                        |
+| {{SpecName('ES6', '#sec-get-regexp.prototype.multiline', 'RegExp.prototype.multiline')}}         | {{Spec2('ES6')}}         | `multiline` est désormais un propriété du prototype sous forme d'accesseur plutôt qu'une propriété directement liée à l'instance.                                                      |
+| {{SpecName('ESDraft', '#sec-get-regexp.prototype.multiline', 'RegExp.prototype.multiline')}} | {{Spec2('ESDraft')}} |                                                                                                                                                                                        |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.RegExp.multiline")}}</p>
+{{Compat("javascript.builtins.RegExp.multiline")}}
 
-<h2 id="Notes_de_compatibilité">Notes de compatibilité</h2>
+## Notes de compatibilité
 
-<ul>
- <li>Avant Firefox 48 , une propriété globale non-standard <code>RegExp.multiline</code> existait en plus de la propriété <code>RegExp.prototype.multiline</code>. Elle a été retirée dans les nouvelles versions du moteur (cf. {{bug(1219757)}}). On utilisera la propriété décrite sur cette page ou le <a href="/fr/docs/Web/JavaScript/Guide/Expressions_régulières#Effectuer_des_recherches_avancées_en_utilisant_les_drapeaux_(flags)">marqueur <code>m</code></a> à la place.</li>
-</ul>
+- Avant Firefox 48 , une propriété globale non-standard `RegExp.multiline` existait en plus de la propriété `RegExp.prototype.multiline`. Elle a été retirée dans les nouvelles versions du moteur (cf. {{bug(1219757)}}). On utilisera la propriété décrite sur cette page ou le [marqueur `m`](</fr/docs/Web/JavaScript/Guide/Expressions_régulières#Effectuer_des_recherches_avancées_en_utilisant_les_drapeaux_(flags)>) à la place.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("RegExp.prototype.global")}}</li>
- <li>{{jsxref("RegExp.prototype.lastIndex")}}</li>
- <li>{{jsxref("RegExp.prototype.ignoreCase")}}</li>
- <li>{{jsxref("RegExp.prototype.source")}}</li>
- <li>{{jsxref("RegExp.prototype.sticky")}}</li>
-</ul>
+- {{jsxref("RegExp.prototype.global")}}
+- {{jsxref("RegExp.prototype.lastIndex")}}
+- {{jsxref("RegExp.prototype.ignoreCase")}}
+- {{jsxref("RegExp.prototype.source")}}
+- {{jsxref("RegExp.prototype.sticky")}}

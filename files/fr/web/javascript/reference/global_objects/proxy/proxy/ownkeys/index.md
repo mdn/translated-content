@@ -10,64 +10,60 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/ownKeys
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/ownKeys
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>handler.ownKeys()</code></strong> est une trappe pour {{jsxref("Object.getOwnPropertyNames()")}}.</p>
+La méthode **`handler.ownKeys()`** est une trappe pour {{jsxref("Object.getOwnPropertyNames()")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/proxyhandler-ownkeys.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-ownkeys.html", "taller")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var p = new Proxy(cible, {
+```js
+var p = new Proxy(cible, {
   ownKeys: function(cible) {
   }
 });
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Le paramètre suivant est passé à la méthode <code>ownKeys</code>. <code>this</code> est lié au gestionnaire.</p>
+Le paramètre suivant est passé à la méthode `ownKeys`. `this` est lié au gestionnaire.
 
-<dl>
- <dt><code>cible</code></dt>
- <dd>L'objet cible.</dd>
-</dl>
+- `cible`
+  - : L'objet cible.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>La méthode <code>ownKeys</code> doit renvoyer un objet énumérable.</p>
+La méthode `ownKeys` doit renvoyer un objet énumérable.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code><strong>handler.ownKeys()</strong></code> est une trappe pour intercepter les opérations de {{jsxref("Object.getOwnPropertyNames()")}}.</p>
+La méthode **`handler.ownKeys()`** est une trappe pour intercepter les opérations de {{jsxref("Object.getOwnPropertyNames()")}}.
 
-<h3 id="Interceptions">Interceptions</h3>
+### Interceptions
 
-<p>Cette trappe permet d'intercepter les opérations suivantes :</p>
+Cette trappe permet d'intercepter les opérations suivantes :
 
-<ul>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
- <li>{{jsxref("Object.getOwnPropertySymbols()")}}</li>
- <li>{{jsxref("Object.keys()")}}</li>
- <li>{{jsxref("Reflect.ownKeys()")}}</li>
-</ul>
+- {{jsxref("Object.getOwnPropertyNames()")}}
+- {{jsxref("Object.getOwnPropertySymbols()")}}
+- {{jsxref("Object.keys()")}}
+- {{jsxref("Reflect.ownKeys()")}}
 
-<h3 id="Invariants">Invariants</h3>
+### Invariants
 
-<p>Si les invariants suivants ne sont pas respectés, le proxy renverra une exception {{jsxref("TypeError")}} :</p>
+Si les invariants suivants ne sont pas respectés, le proxy renverra une exception {{jsxref("TypeError")}} :
 
-<ul>
- <li>Le résultat de <code>ownKeys</code> doit être un tableau.</li>
- <li>Le type de chaque élément de ce tableau est soit une {{jsxref("String")}}, soit un {{jsxref("Symbol")}}.</li>
- <li>Le tableau résultant doit contenir les clés de toutes les propriétés propres non-configurables de l'objet cible.</li>
- <li>Si l'objet cible n'est pas extensible, la liste obtenue doit contenir toutes les clés pour les propriétés propres et aucune autre valeur.</li>
-</ul>
+- Le résultat de `ownKeys` doit être un tableau.
+- Le type de chaque élément de ce tableau est soit une {{jsxref("String")}}, soit un {{jsxref("Symbol")}}.
+- Le tableau résultant doit contenir les clés de toutes les propriétés propres non-configurables de l'objet cible.
+- Si l'objet cible n'est pas extensible, la liste obtenue doit contenir toutes les clés pour les propriétés propres et aucune autre valeur.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans l'exemple suivant, on intercepte l'action de {{jsxref("Object.getOwnPropertyNames()")}}.</p>
+Dans l'exemple suivant, on intercepte l'action de {{jsxref("Object.getOwnPropertyNames()")}}.
 
-<pre class="brush: js">var p = new Proxy({}, {
+```js
+var p = new Proxy({}, {
   ownKeys: function(target) {
     console.log("appelée");
     return ["a", "b", "c"];
@@ -76,11 +72,12 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/ownKeys
 
 console.log(Object.getOwnPropertyNames(p)); // "appelée"
                                             // [ "a", "b", "c"]
-</pre>
+```
 
-<p>L'exemple suivant ne respecte pas l'ensemble des invariants :</p>
+L'exemple suivant ne respecte pas l'ensemble des invariants :
 
-<pre class="brush: js  example-bad">var obj = {};
+```js example-bad
+var obj = {};
 Object.defineProperty(obj, "a", {
   configurable: false,
   enumerable: true,
@@ -95,39 +92,22 @@ var p = new Proxy(obj, {
 
 console.log(Object.getOwnPropertyNames(p));
 // TypeError est levée
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-ownpropertykeys', '[[OwnPropertyKeys]]')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-ownpropertykeys', '[[OwnPropertyKeys]]')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                                    | État                         | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-ownpropertykeys', '[[OwnPropertyKeys]]')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-ownpropertykeys', '[[OwnPropertyKeys]]')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Proxy.handler.ownKeys")}}</p>
+{{Compat("javascript.builtins.Proxy.handler.ownKeys")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
- <li>{{jsxref("Reflect.ownKeys()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}
+- {{jsxref("Reflect.ownKeys()")}}

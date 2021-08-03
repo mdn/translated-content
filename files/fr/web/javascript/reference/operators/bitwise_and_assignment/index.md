@@ -8,43 +8,40 @@ tags:
   - Operator
   - Reference
 browser-compat: javascript.operators.bitwise_and_assignment
-translation-of: Web/JavaScript/Reference/Operators/Bitwise_AND_assignment
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>L'opérateur d'affectation après ET binaire (<code>&amp;=</code>) utilise la représentation binaire des deux opérandes, applique un ET logique entre chaque puis affecte le résultat de l'opération à la variable représentée par l'opérande gauche.</p>
+L'opérateur d'affectation après ET binaire (`&=`) utilise la représentation binaire des deux opérandes, applique un ET logique entre chaque puis affecte le résultat de l'opération à la variable représentée par l'opérande gauche.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-bitwise-and-assignment.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-bitwise-and-assignment.html")}}
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">
-<strong>Opérateur :</strong> x &amp;= y
-<strong>Signification :</strong>  x  = x &amp; y
-</pre>
+```js
+Opérateur : x &= y
+Signification :  x  = x & y
+```
 
-<h2 id="examples">Exemples</h2>
+## Exemples
 
-<h3 id="using_bitwise_and_assignment">Utiliser l'affectation après ET binaire</h3>
+### Utiliser l'affectation après ET binaire
 
-<pre class="brush: js">
+```js
 let a = 5;
 // 5:     00000000000000000000000000000101
 // 2:     00000000000000000000000000000010
-a &amp;= 2; // 0
-</pre>
+a &= 2; // 0
+```
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment">Les opérateurs d'affectation dans le guide JavaScript</a></li>
-  <li><a href="/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_AND">L'opérateur ET binaire</a></li>
-</ul>
+- [Les opérateurs d'affectation dans le guide JavaScript](/fr/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment)
+- [L'opérateur ET binaire](/fr/docs/Web/JavaScript/Reference/Operators/Bitwise_AND)

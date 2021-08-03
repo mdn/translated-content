@@ -10,34 +10,33 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/matchAll
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/matchAll
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>matchAll()</code></strong> renvoie un itérateur contenant l'ensemble des correspondances entre une chaîne de caractères d'une part et une expression rationnelle d'autre part (y compris les groupes capturants).</p>
+La méthode **`matchAll()`** renvoie un itérateur contenant l'ensemble des correspondances entre une chaîne de caractères d'une part et une expression rationnelle d'autre part (y compris les groupes capturants).
 
-<div>{{EmbedInteractiveExample("pages/js/string-matchall.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-matchall.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>str</var>.matchAll(<var>regexp</var>)</pre>
+    str.matchAll(regexp)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>regexp</code></dt>
- <dd>Un objet représentant une expression rationnelle. Si cet objet n'est pas une instance de {{jsxref("RegExp")}}, il est automatiquement et implicitement converti en une telle instance à l'aide de <code>new RegExp(obj)</code>.</dd>
-</dl>
+- `regexp`
+  - : Un objet représentant une expression rationnelle. Si cet objet n'est pas une instance de {{jsxref("RegExp")}}, il est automatiquement et implicitement converti en une telle instance à l'aide de `new RegExp(obj)`.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un <a href="https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs">itérateur</a>.</p>
+Un [itérateur](https://developer.mozilla.org/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Regexp.exec()_et_matchAll()"><code>Regexp.exec()</code> et <code>matchAll()</code></h3>
+### `Regexp.exec()` et `matchAll()`
 
-<p>Avant l'apparition de <code>matchAll()</code> en JavaScript, il était possible d'utiliser {{jsxref("RegExp.exec")}} (et des expressions rationnelles utilisant le marqueur <code>/g</code>) dans une boucle afin d'obtenir l'ensemble des correspondances :</p>
+Avant l'apparition de `matchAll()` en JavaScript, il était possible d'utiliser {{jsxref("RegExp.exec")}} (et des expressions rationnelles utilisant le marqueur `/g`) dans une boucle afin d'obtenir l'ensemble des correspondances :
 
-<pre class="brush: js">const regexp = RegExp('foo*','g');
+```js
+const regexp = RegExp('foo*','g');
 const str = 'table football, foosball';
 
 while ((matches = regexp.exec(str)) !== null) {
@@ -45,11 +44,12 @@ while ((matches = regexp.exec(str)) !== null) {
   // dans la console : "foo trouvé. Prochaine recherche à partir de 9."
   // dans la console : "foo trouvé. Prochaine recherche à partir de 19."
 }
-</pre>
+```
 
-<p>Avec <code>matchAll()</code>, on peut éviter la boucle <code>while</code> et le marqueur global. On récupère l'itérateur et on utilise une boucle <code><a href="/fr/docs/Web/JavaScript/Reference/Instructions/for...of">for...of</a></code>, <a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Syntaxe_décomposition">la décomposition de tableau</a> ou encore {{jsxref("Array.from()")}} :</p>
+Avec `matchAll()`, on peut éviter la boucle `while` et le marqueur global. On récupère l'itérateur et on utilise une boucle [`for...of`](/fr/docs/Web/JavaScript/Reference/Instructions/for...of), [la décomposition de tableau](/fr/docs/Web/JavaScript/Reference/Opérateurs/Syntaxe_décomposition) ou encore {{jsxref("Array.from()")}} :
 
-<pre class="brush: js">const regexp = RegExp('foo*','g');
+```js
+const regexp = RegExp('foo*','g');
 const str = 'table football, foosball';
 let matches = str.matchAll(regexp);
 
@@ -63,57 +63,45 @@ for (const match of matches) {
 // On rappelle matchAll afin de créer un nouvel itérateur
 matches = str.matchAll(regexp);
 
-Array.from(matches, m =&gt; m[0]);
+Array.from(matches, m => m[0]);
 // Array [ "foo", "foo" ]
-</pre>
+```
 
-<h3 id="Meilleur_accès_aux_groupes_capturants">Meilleur accès aux groupes capturants</h3>
+### Meilleur accès aux groupes capturants
 
-<p>Un autre avantage de <code>matchAll()</code> est un meilleur accès aux groupes capturants. De fait, les groupes capturants sont ignorés par <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/match">match()</a></code> lorsqu'on utilise le marqueur global <code>/g</code> :</p>
+Un autre avantage de `matchAll()` est un meilleur accès aux groupes capturants. De fait, les groupes capturants sont ignorés par [`match()`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/String/match) lorsqu'on utilise le marqueur global `/g` :
 
-<pre class="brush: js">var regexp = /t(e)(st(\d?))/g;
+```js
+var regexp = /t(e)(st(\d?))/g;
 var str = 'test1test2';
 
 str.match(regexp);
-// Array ['test1', 'test2']</pre>
+// Array ['test1', 'test2']
+```
 
-<p>Avec <code>matchAll()</code>, on peut y accéder :</p>
+Avec `matchAll()`, on peut y accéder :
 
-<pre class="brush: js">let array = [...str.matchAll(regexp)];
+```js
+let array = [...str.matchAll(regexp)];
 
 array[0];
 // ['test1', 'e', 'st1', '1', index: 0, input: 'test1test2', length: 4]
 array[1];
 // ['test2', 'e', 'st2', '2', index: 5, input: 'test1test2', length: 4]
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.matchall', 'String.prototype.matchAll')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | État                         | Commentaires |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ------------ |
+| {{SpecName('ESDraft', '#sec-string.prototype.matchall', 'String.prototype.matchAll')}} | {{Spec2('ESDraft')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.String.matchAll")}}</p>
+{{Compat("javascript.builtins.String.matchAll")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("RegExp")}}</li>
- <li>{{jsxref("RegExp.prototype.exec()")}}</li>
- <li>{{jsxref("RegExp.prototype.test()")}}</li>
-</ul>
+- {{jsxref("RegExp")}}
+- {{jsxref("RegExp.prototype.exec()")}}
+- {{jsxref("RegExp.prototype.test()")}}

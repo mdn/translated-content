@@ -10,62 +10,48 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/@@species
 original_slug: Web/JavaScript/Reference/Objets_globaux/Set/@@species
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Set[@@species]</strong></code> renvoie le constructeur <code>Set</code>.</p>
+**`Set[@@species]`** renvoie le constructeur `Set`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Set[Symbol.species]
-</pre>
+    Set[Symbol.species]
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>L'accesseur <code>species</code> renvoie le constructeur par défaut pour les objets <code>Set</code>. Les constructeurs pour les classes filles peuvent surcharger cette propriété afin de modifier le constructeur utilisé lors de l'affectation.</p>
+L'accesseur `species` renvoie le constructeur par défaut pour les objets `Set`. Les constructeurs pour les classes filles peuvent surcharger cette propriété afin de modifier le constructeur utilisé lors de l'affectation.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>La propriété <code>species</code> renvoie la fonction utilisée comme constructeur par défaut, dans le cas des objets <code>Set</code>, c'est le constructeur <code>Set</code> :</p>
+La propriété `species` renvoie la fonction utilisée comme constructeur par défaut, dans le cas des objets `Set`, c'est le constructeur `Set` :
 
-<pre class="brush: js">Set[Symbol.species]; // function Set()</pre>
+```js
+Set[Symbol.species]; // function Set()
+```
 
-<p>Pour les objets dérivés (par exemple une classe <code>MonSet</code> que vous auriez construite), la propriété species pour <code>MonSet</code> sera le constructeur <code>MonSet</code>. Cependant, si vous souhaitez surcharger ce comportement afin de renvoyer le constructeur <code>Set</code> dans les méthodes des classes dérivées, vous pourrez utiliser :</p>
+Pour les objets dérivés (par exemple une classe `MonSet` que vous auriez construite), la propriété species pour `MonSet` sera le constructeur `MonSet`. Cependant, si vous souhaitez surcharger ce comportement afin de renvoyer le constructeur `Set` dans les méthodes des classes dérivées, vous pourrez utiliser :
 
-<pre class="brush: js">class MonSet extends Set
+```js
+class MonSet extends Set
   // On surcharge la propriété species de MonSet
   // avec le constructeur Set de la classe parente
   static get [Symbol.species()]() { return Set;}
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-get-set-@@species', 'get Set [ @@species ]')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-get-set-@@species', 'get Set [ @@species ]')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                         | Commentaires         |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-get-set-@@species', 'get Set [ @@species ]')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-get-set-@@species', 'get Set [ @@species ]')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Set.@@species")}}</p>
+{{Compat("javascript.builtins.Set.@@species")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("Symbol.species")}}</li>
-</ul>
+- {{jsxref("Set")}}
+- {{jsxref("Symbol.species")}}

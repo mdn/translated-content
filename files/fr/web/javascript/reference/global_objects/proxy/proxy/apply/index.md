@@ -10,64 +10,60 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/apply
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/apply
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>handler.apply()</code></strong> représente une trappe pour un appel de fonctions.</p>
+La méthode **`handler.apply()`** représente une trappe pour un appel de fonctions.
 
-<div>{{EmbedInteractiveExample("pages/js/proxyhandler-apply.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-apply.html", "taller")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var p = new Proxy(cible, {
+```js
+var p = new Proxy(cible, {
   apply: function(cible, thisArg, listeArguments) {
   }
 });
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Les paramètres suivants sont passés à la méthode <code>apply</code>. Ici, <code>this</code> est lié au gestionnaire.</p>
+Les paramètres suivants sont passés à la méthode `apply`. Ici, `this` est lié au gestionnaire.
 
-<dl>
- <dt><code>cible</code></dt>
- <dd>L'objet cible.</dd>
- <dt><code>thisArg</code></dt>
- <dd>L'argument {{jsxref("Opérateurs/L_opérateur_this","this")}} pour cet appel.</dd>
- <dt><code>listeArguments</code></dt>
- <dd>La liste d'arguments pour l'appel.</dd>
-</dl>
+- `cible`
+  - : L'objet cible.
+- `thisArg`
+  - : L'argument {{jsxref("Opérateurs/L_opérateur_this","this")}} pour cet appel.
+- `listeArguments`
+  - : La liste d'arguments pour l'appel.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>La méthode <code>apply</code> peut renvoyer n'importe quelle valeur.</p>
+La méthode `apply` peut renvoyer n'importe quelle valeur.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code><strong>handler.apply</strong></code> est une trappe pour l'appel à une fonction.</p>
+La méthode **`handler.apply`** est une trappe pour l'appel à une fonction.
 
-<h3 id="Interceptions">Interceptions</h3>
+### Interceptions
 
-<p>Cette trappe intercepte les opérations suivantes :</p>
+Cette trappe intercepte les opérations suivantes :
 
-<ul>
- <li><code>proxy(...args)</code></li>
- <li>{{jsxref("Function.prototype.apply()")}} et {{jsxref("Function.prototype.call()")}}</li>
- <li>{{jsxref("Reflect.apply()")}}</li>
-</ul>
+- `proxy(...args)`
+- {{jsxref("Function.prototype.apply()")}} et {{jsxref("Function.prototype.call()")}}
+- {{jsxref("Reflect.apply()")}}
 
-<h3 id="Invariants">Invariants</h3>
+### Invariants
 
-<p>Si les invariants suivants ne sont pas respectés, le proxy lèvera une exception <code>TypeError</code> :</p>
+Si les invariants suivants ne sont pas respectés, le proxy lèvera une exception `TypeError` :
 
-<ul>
- <li>la cible doit pouvoir être « appelable ». Autrement dit, il doit s'agir d'une fonction.</li>
-</ul>
+- la cible doit pouvoir être « appelable ». Autrement dit, il doit s'agir d'une fonction.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans l'exemple ci-dessous, on piège un appel de fonction.</p>
+Dans l'exemple ci-dessous, on piège un appel de fonction.
 
-<pre class="brush: js">var p = new Proxy(function() {}, {
+```js
+var p = new Proxy(function() {}, {
   apply: function(target, thisArg, argumentsList) {
     console.log("called: " + argumentsList.join(", "));
     return argumentsList[0] + argumentsList[1] + argumentsList[2];
@@ -76,40 +72,23 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/apply
 
 console.log(p(1, 2, 3)); // "called: 1, 2, 3"
                          // 6
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-call-thisargument-argumentslist', '[[Call]]')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-call-thisargument-argumentslist', '[[Call]]')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                                        | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-call-thisargument-argumentslist', '[[Call]]')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-call-thisargument-argumentslist', '[[Call]]')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Proxy.handler.apply")}}</p>
+{{Compat("javascript.builtins.Proxy.handler.apply")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Function.prototype.apply")}}</li>
- <li>{{jsxref("Function.prototype.call")}}</li>
- <li>{{jsxref("Reflect.apply()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Function.prototype.apply")}}
+- {{jsxref("Function.prototype.call")}}
+- {{jsxref("Reflect.apply()")}}

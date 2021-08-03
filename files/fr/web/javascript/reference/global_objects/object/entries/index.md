@@ -10,36 +10,35 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/entries
 original_slug: Web/JavaScript/Reference/Objets_globaux/Object/entries
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>Object.entries()</strong></code> renvoie un tableau des propriétés propres énumérables d'un objet dont la clé est une chaîne de caractères, sous la forme de paires <code>[clé, valeur]</code>, dans le même ordre qu'une boucle {{jsxref("Instructions/for...in", "for...in")}} (la boucle <code>for-in</code> est différente car elle parcourt la chaîne des prototypes).</p>
+La méthode **`Object.entries()`** renvoie un tableau des propriétés propres énumérables d'un objet dont la clé est une chaîne de caractères, sous la forme de paires `[clé, valeur]`, dans le même ordre qu'une boucle {{jsxref("Instructions/for...in", "for...in")}} (la boucle `for-in` est différente car elle parcourt la chaîne des prototypes).
 
-<p>L'ordre du tableau renvoyé par cette méthode ne dépend pas de la façon dont l'objet est défini. S'il faut garantir un certain ordre, on pourra utiliser la méthode {{jsxref("Array.sort()")}}.</p>
+L'ordre du tableau renvoyé par cette méthode ne dépend pas de la façon dont l'objet est défini. S'il faut garantir un certain ordre, on pourra utiliser la méthode {{jsxref("Array.sort()")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/object-entries.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-entries.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Object.entries(<var>obj</var>)</pre>
+    Object.entries(obj)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>L'objet dont on souhaite connaître les propriétés propres énumérables dont la clé est une chaîne de caractères, sous la forme de paires <code>[clé, valeur]</code>.</dd>
-</dl>
+- `obj`
+  - : L'objet dont on souhaite connaître les propriétés propres énumérables dont la clé est une chaîne de caractères, sous la forme de paires `[clé, valeur]`.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un tableau qui contient les propriétés énumérables propres de l'objet sous la forme de paires <code>[clé, valeur]</code>.</p>
+Un tableau qui contient les propriétés énumérables propres de l'objet sous la forme de paires `[clé, valeur]`.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p><code>Object.entries()</code> renvoie un tableau dont les éléments sont des paires (des tableaux à deux éléments)  <code>[clé, valeur]</code> qui correspondent aux propriétés énumérables qui sont directement présentes sur l'objet passé en argument. L'ordre du tableau est le même que celui utilisé lorsqu'on parcourt les valeurs manuellement.</p>
+`Object.entries()` renvoie un tableau dont les éléments sont des paires (des tableaux à deux éléments)  `[clé, valeur]` qui correspondent aux propriétés énumérables qui sont directement présentes sur l'objet passé en argument. L'ordre du tableau est le même que celui utilisé lorsqu'on parcourt les valeurs manuellement.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var obj = { toto: "truc", machin: 42 };
+```js
+var obj = { toto: "truc", machin: 42 };
 console.log(Object.entries(obj)); // [ ['toto', 'truc'], ['machin', 42] ]
 
 // Un objet semblable à un tableau
@@ -71,37 +70,42 @@ for (var [cle, valeur] of Object.entries(autreObjet)){
 }
 
 // Ou encore, en utilisant les méthodes génériques
-Object.entries(autreObjet).forEach(([clé, valeur]) =&gt; {
+Object.entries(autreObjet).forEach(([clé, valeur]) => {
   console.log(clé + ' ' + valeur);
 });
-</pre>
+```
 
-<h3 id="Convertir_un_objet_en_Map">Convertir un objet en <code>Map</code></h3>
+### Convertir un objet en `Map`
 
-<p>Le constructeur {{jsxref("Map", "new Map()")}} accepte un argument itérable pour décrire les entrées du tableau associatif. Grâce à <code>Object.entries</code>, il est possible de convertir simplement un objet {{jsxref("Object")}} en un objet {{jsxref("Map")}} :</p>
+Le constructeur {{jsxref("Map", "new Map()")}} accepte un argument itérable pour décrire les entrées du tableau associatif. Grâce à `Object.entries`, il est possible de convertir simplement un objet {{jsxref("Object")}} en un objet {{jsxref("Map")}} :
 
-<pre class="brush: js">var obj = { toto: "truc", machin: 42 };
+```js
+var obj = { toto: "truc", machin: 42 };
 var map = new Map(Object.entries(obj));
-console.log(map); // Map { toto: "truc", machin: 42 }</pre>
+console.log(map); // Map { toto: "truc", machin: 42 }
+```
 
-<h3 id="Parcourir_un_objet">Parcourir un objet</h3>
+### Parcourir un objet
 
-<p>En utilisant <a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Affecter_par_décomposition#Décomposition_d'un_tableau">la décomposition des tableaux</a>, on peut simplement parcourir les différentes propriétés d'un objet :</p>
+En utilisant [la décomposition des tableaux](/fr/docs/Web/JavaScript/Reference/Opérateurs/Affecter_par_décomposition#Décomposition_d'un_tableau), on peut simplement parcourir les différentes propriétés d'un objet :
 
-<pre class="brush: js">const obj = { toto: "truc", bidule: 42 };
+```js
+const obj = { toto: "truc", bidule: 42 };
 Object.entries(obj).forEach(
-  ([clé, valeur]) =&gt; console.log(`${clé}: ${valeur}`)
+  ([clé, valeur]) => console.log(`${clé}: ${valeur}`)
 );
 // "toto: truc"
-// "bidule: 42"</pre>
+// "bidule: 42"
+```
 
-<h2 id="Prothèse_d'émulation_(polyfill)">Prothèse d'émulation (<em>polyfill</em>)</h2>
+## Prothèse d'émulation (_polyfill_)
 
-<p>Afin d'ajouter le support pour <code>Object.entries</code> dans des environnements plus anciens qui ne supportent pas la méthode nativement, vous pouvez utiliser une prothèse comme celle proposée sur le dépôt <a href="https://github.com/tc39/proposal-object-values-entries">tc39/proposal-object-values-entries</a> ou sur le dépôt <a href="https://github.com/es-shims/Object.entries">es-shims/Object.entries</a>.</p>
+Afin d'ajouter le support pour `Object.entries` dans des environnements plus anciens qui ne supportent pas la méthode nativement, vous pouvez utiliser une prothèse comme celle proposée sur le dépôt [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) ou sur le dépôt [es-shims/Object.entries](https://github.com/es-shims/Object.entries).
 
-<p>Vous pouvez également utiliser la prothèse suivante (qui nécessitera la prothèse pour <code>Object.prototype.keys()</code> si on souhaite être compatible avec IE 8 et les versions antérieures) :</p>
+Vous pouvez également utiliser la prothèse suivante (qui nécessitera la prothèse pour `Object.prototype.keys()` si on souhaite être compatible avec IE 8 et les versions antérieures) :
 
-<pre class="brush: js">if (!Object.entries) {
+```js
+if (!Object.entries) {
   Object.entries = function( obj ){
     var ownProps = Object.keys( obj ),
         i = ownProps.length,
@@ -111,47 +115,29 @@ Object.entries(obj).forEach(
 
     return resArray;
   };
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.entries', 'Object.entries')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES8', '#sec-object.entries', 'Object.entries')}}</td>
-   <td>{{Spec2('ES8')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                         | Commentaires         |
+| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{SpecName('ESDraft', '#sec-object.entries', 'Object.entries')}} | {{Spec2('ESDraft')}} |                      |
+| {{SpecName('ES8', '#sec-object.entries', 'Object.entries')}}     | {{Spec2('ES8')}}         | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Object.entries")}}</p>
+{{Compat("javascript.builtins.Object.entries")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement">Énumérabilité et rattachement des propriétés</a></li>
- <li>{{jsxref("Object.keys()")}}</li>
- <li>{{jsxref("Object.values()")}}</li>
- <li>{{jsxref("Object.prototype.propertyIsEnumerable()")}}</li>
- <li>{{jsxref("Object.create()")}}</li>
- <li>{{jsxref("Object.fromEntries()")}}</li>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
- <li>{{jsxref("Map.prototype.entries()")}}</li>
- <li>{{jsxref("Map.prototype.keys()")}}</li>
- <li>{{jsxref("Map.prototype.values()")}}</li>
-</ul>
+- [Énumérabilité et rattachement des propriétés](/fr/docs/Web/JavaScript/Caractère_énumérable_des_propriétés_et_rattachement)
+- {{jsxref("Object.keys()")}}
+- {{jsxref("Object.values()")}}
+- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
+- {{jsxref("Object.create()")}}
+- {{jsxref("Object.fromEntries()")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}
+- {{jsxref("Map.prototype.entries()")}}
+- {{jsxref("Map.prototype.keys()")}}
+- {{jsxref("Map.prototype.values()")}}

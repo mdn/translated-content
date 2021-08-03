@@ -10,62 +10,48 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/@@species
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/@@species
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Map[@@species]</strong></code> renvoie le constructeur <code>Map</code>.</p>
+**`Map[@@species]`** renvoie le constructeur `Map`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Map[Symbol.species]
-</pre>
+    Map[Symbol.species]
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>L'accesseur <code>species</code> renvoie le constructeur par défaut pour les objets <code>Map</code>. Les constructeurs des sous-classes peuvent surcharger ce constructeur afin de modifier ce qui est fait lors de la construction de l'objet et son affectation</p>
+L'accesseur `species` renvoie le constructeur par défaut pour les objets `Map`. Les constructeurs des sous-classes peuvent surcharger ce constructeur afin de modifier ce qui est fait lors de la construction de l'objet et son affectation
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>La propriété <code>species</code> renvoie la fonction correspondant au constructeur par défaut. Pour les objets <code>Map</code>, ce sera le constructeur <code>Map</code> :</p>
+La propriété `species` renvoie la fonction correspondant au constructeur par défaut. Pour les objets `Map`, ce sera le constructeur `Map` :
 
-<pre class="brush: js">Map[Symbol.species]; // function Map()</pre>
+```js
+Map[Symbol.species]; // function Map()
+```
 
-<p>Pour des objets dérivés (par exemple un dictionnaire <code>MaMap</code> que vous auriez construit), la propriété <code>species</code> correspondra au constructeur <code>MaMap</code>. Si vous souhaitez surcharger cela pour renvoyer le constructeur parent <code>Map</code>, vous pourrez utiliser :</p>
+Pour des objets dérivés (par exemple un dictionnaire `MaMap` que vous auriez construit), la propriété `species` correspondra au constructeur `MaMap`. Si vous souhaitez surcharger cela pour renvoyer le constructeur parent `Map`, vous pourrez utiliser :
 
-<pre class="brush: js">class MaMap extends Map {
+```js
+class MaMap extends Map {
   // On surcharge le symbole species de MaMap
   // avec le constructeur Map parent
   static get [Symbol.species]() { return Map; }
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-get-map-@@species', 'get Map [ @@species ]')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-get-map-@@species', 'get Map [ @@species ]')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | Statut                       | Commentaires         |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-get-map-@@species', 'get Map [ @@species ]')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-get-map-@@species', 'get Map [ @@species ]')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Map.@@species")}}</p>
+{{Compat("javascript.builtins.Map.@@species")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Map")}}</li>
- <li>{{jsxref("Symbol.species")}}</li>
-</ul>
+- {{jsxref("Map")}}
+- {{jsxref("Symbol.species")}}

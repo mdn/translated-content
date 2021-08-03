@@ -11,25 +11,26 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Map/clear
 original_slug: Web/JavaScript/Reference/Global_Objects/Map/clear
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>clear()</strong></code> supprime tous les éléments d'un objet <code>Map</code>.</p>
+La méthode **`clear()`** supprime tous les éléments d'un objet `Map`.
 
-<div>{{EmbedInteractiveExample("pages/js/map-prototype-clear.html")}}</div>
+{{EmbedInteractiveExample("pages/js/map-prototype-clear.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>maMap</var>.clear();</pre>
+    maMap.clear();
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>{{jsxref("undefined")}}.</p>
+{{jsxref("undefined")}}.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<h3 id="Utiliser_la_méthode_clear()">Utiliser la méthode <code>clear()</code></h3>
+### Utiliser la méthode `clear()`
 
-<pre class="brush: js">var maMap = new Map();
+```js
+var maMap = new Map();
 maMap.set("truc", "bidule");
 maMap.set(1, "toto");
 
@@ -40,36 +41,19 @@ maMap.clear();
 
 maMap.size;        // 0
 maMap.has("truc")  // false
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-map.prototype.clear', 'Map.prototype.clear')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-map.prototype.clear', 'Map.prototype.clear')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                         | Commentaires         |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-map.prototype.clear', 'Map.prototype.clear')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-map.prototype.clear', 'Map.prototype.clear')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Map.clear")}}</p>
+{{Compat("javascript.builtins.Map.clear")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Map")}}</li>
-</ul>
+- {{jsxref("Map")}}

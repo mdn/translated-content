@@ -10,30 +10,29 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer/isView
 original_slug: Web/JavaScript/Reference/Objets_globaux/ArrayBuffer/isView
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>ArrayBuffer.isView()</strong></code> renvoie <code>true</code> si l'argument passé est une des vues <code>ArrayBuffer</code>, comme par exemple <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray">un tableau typé</a> ou une {{jsxref("DataView")}} ; <code>false</code> sinon.</p>
+La méthode **`ArrayBuffer.isView()`** renvoie `true` si l'argument passé est une des vues `ArrayBuffer`, comme par exemple [un tableau typé](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray) ou une {{jsxref("DataView")}} ; `false` sinon.
 
-<div>{{EmbedInteractiveExample("pages/js/arraybuffer-isview.html")}}</div>
+{{EmbedInteractiveExample("pages/js/arraybuffer-isview.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">ArrayBuffer.isView(<var>arg</var>)</pre>
+    ArrayBuffer.isView(arg)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>arg</code></dt>
- <dd>L'argument dont on souhaite savoir s'il est une vue.</dd>
-</dl>
+- `arg`
+  - : L'argument dont on souhaite savoir s'il est une vue.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p><code>true</code> si la valeur passée en argument est une des vues du tableau <code>ArrayBuffer</code>, <code>false</code> sinon.</p>
+`true` si la valeur passée en argument est une des vues du tableau `ArrayBuffer`, `false` sinon.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">ArrayBuffer.isView();                    // false
+```js
+ArrayBuffer.isView();                    // false
 ArrayBuffer.isView([]);                  // false
 ArrayBuffer.isView({});                  // false
 ArrayBuffer.isView(null);                // false
@@ -47,41 +46,20 @@ ArrayBuffer.isView(new Int8Array(10).subarray(0, 3)); // true
 var buffer = new ArrayBuffer(2);
 var dv = new DataView(buffer);
 ArrayBuffer.isView(dv); // true
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Typed Array')}}</td>
-   <td>{{Spec2('Typed Array')}}</td>
-   <td>Remplacée par ECMAScript 2015</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-arraybuffer.isview', 'ArrayBuffer.isView')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale dans un standard ECMA.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-arraybuffer.isview', 'ArrayBuffer.isView')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | État                             | Commentaires                               |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------ |
+| {{SpecName('Typed Array')}}                                                             | {{Spec2('Typed Array')}} | Remplacée par ECMAScript 2015              |
+| {{SpecName('ES2015', '#sec-arraybuffer.isview', 'ArrayBuffer.isView')}} | {{Spec2('ES2015')}}         | Définition initiale dans un standard ECMA. |
+| {{SpecName('ESDraft', '#sec-arraybuffer.isview', 'ArrayBuffer.isView')}} | {{Spec2('ESDraft')}}     |                                            |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.ArrayBuffer.isView")}}</p>
+{{Compat("javascript.builtins.ArrayBuffer.isView")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Tableaux_typés">Les tableaux typés en JavaScript</a></li>
-</ul>
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés)

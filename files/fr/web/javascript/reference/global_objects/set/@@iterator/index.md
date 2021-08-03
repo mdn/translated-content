@@ -12,25 +12,26 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
 original_slug: Web/JavaScript/Reference/Objets_globaux/Set/@@iterator
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La valeur initiale de la propriété <code><strong>@@iterator</strong></code> est le même objet fonction que la valeur initiale de la propriété {{jsxref("Set.prototype.values()", "Set.prototype.values")}}.</p>
+La valeur initiale de la propriété **`@@iterator`** est le même objet fonction que la valeur initiale de la propriété {{jsxref("Set.prototype.values()", "Set.prototype.values")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-@@iterator.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-@@iterator.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>monSet</var>[Symbol.iterator]</pre>
+    monSet[Symbol.iterator]
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>La fonction associée au symbole <code>@@iterator</code> de l'objet. Par défaut, c'est la fonction {{jsxref("Set.prototype.values()","values()")}}.</p>
+La fonction associée au symbole `@@iterator` de l'objet. Par défaut, c'est la fonction {{jsxref("Set.prototype.values()","values()")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_iterator()">Utiliser <code>[@@iterator]()</code></h3>
+### Utiliser `[@@iterator]()`
 
-<pre class="brush:js">const monSet = new Set();
+```js
+const monSet = new Set();
 monSet.add("0");
 monSet.add(1);
 monSet.add({});
@@ -40,11 +41,12 @@ const setIter = monSet[Symbol.iterator]();
 console.log(setIter.next().value); // "0"
 console.log(setIter.next().value); // 1
 console.log(setIter.next().value); // {}
-</pre>
+```
 
-<h3 id="Utiliser_iterator()_avec_une_boucle_for..of">Utiliser <code>[@@iterator]()</code> avec une boucle <code>for..of</code></h3>
+### Utiliser `[@@iterator]()` avec une boucle `for..of`
 
-<pre class="brush:js">const monSet= new Set();
+```js
+const monSet= new Set();
 monSet.add("0");
 monSet.add(1);
 monSet.add({});
@@ -52,38 +54,21 @@ monSet.add({});
 for (const v of monSet) {
   console.log(v);
 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-set.prototype-@@iterator', 'Set.prototype[@@iterator]')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-set.prototype-@@iterator', 'Set.prototype[@@iterator]')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                         | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-set.prototype-@@iterator', 'Set.prototype[@@iterator]')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-set.prototype-@@iterator', 'Set.prototype[@@iterator]')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Set.@@iterator")}}</p>
+{{Compat("javascript.builtins.Set.@@iterator")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Set.prototype.entries()")}}</li>
- <li>{{jsxref("Set.prototype.values","Set.prototype.keys()")}}</li>
- <li>{{jsxref("Set.prototype.values()")}}</li>
-</ul>
+- {{jsxref("Set.prototype.entries()")}}
+- {{jsxref("Set.prototype.values","Set.prototype.keys()")}}
+- {{jsxref("Set.prototype.values()")}}

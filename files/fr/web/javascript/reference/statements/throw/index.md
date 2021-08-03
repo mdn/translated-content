@@ -9,39 +9,40 @@ tags:
 translation_of: Web/JavaScript/Reference/Statements/throw
 original_slug: Web/JavaScript/Reference/Instructions/throw
 ---
-<div>{{jsSidebar("Statements")}}</div>
+{{jsSidebar("Statements")}}
 
-<p>L'instruction <strong><code>throw</code></strong> permet de lever une exception définie par l'utilisateur. L'exécution de la fonction courante sera stoppée (les instructions situées après l'instruction <code>throw</code> ne seront pas exécutées) et le contrôle sera passé au premier bloc {{jsxref("Instructions/try...catch","catch")}} de la pile d'appels. Si aucun bloc <code>catch</code> ne se trouve dans les fonctions de la pile d'appels, le programme sera terminé.</p>
+L'instruction **`throw`** permet de lever une exception définie par l'utilisateur. L'exécution de la fonction courante sera stoppée (les instructions situées après l'instruction `throw` ne seront pas exécutées) et le contrôle sera passé au premier bloc {{jsxref("Instructions/try...catch","catch")}} de la pile d'appels. Si aucun bloc `catch` ne se trouve dans les fonctions de la pile d'appels, le programme sera terminé.
 
-<div>{{EmbedInteractiveExample("pages/js/statement-throw.html")}}</div>
+{{EmbedInteractiveExample("pages/js/statement-throw.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">throw <em>expression</em>; </pre>
+    throw expression;
 
-<dl>
- <dt><code>expression</code></dt>
- <dd>L'expression qui fournit l'exception à lever.</dd>
-</dl>
+- `expression`
+  - : L'expression qui fournit l'exception à lever.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>L'instruction <code>throw</code> permet de lever (<em>throw</em> en anglais) une exception. Lorsqu'on lève une exception, <code>expression</code> fournit la valeur de l'exception. Chacune des instructions ci-après permet de lever une exception :</p>
+L'instruction `throw` permet de lever (_throw_ en anglais) une exception. Lorsqu'on lève une exception, `expression` fournit la valeur de l'exception. Chacune des instructions ci-après permet de lever une exception :
 
-<pre class="brush: js">throw "monErreur"; // génère une exception étant une chaîne de caractères
+```js
+throw "monErreur"; // génère une exception étant une chaîne de caractères
 throw 42;          // génère une exception ayant la valeur 42
 throw true;        // génère une exception ayant la valeur true
-throw new Error("Obligatoire");  // génère un objet Error avec le message "Obligatoire"</pre>
+throw new Error("Obligatoire");  // génère un objet Error avec le message "Obligatoire"
+```
 
-<p>On notera également que l'instruction <code>throw</code> est affectée par {{jsxref("Grammaire_lexicale","l'insertion automatique de point-virgule","#Insertion_automatique_de_points-virgules",1)}} car il n'est pas permis d'avoir un caractère de fin de ligne entre le mot-clé <code>throw</code> et l'expression.</p>
+On notera également que l'instruction `throw` est affectée par {{jsxref("Grammaire_lexicale","l'insertion automatique de point-virgule","#Insertion_automatique_de_points-virgules",1)}} car il n'est pas permis d'avoir un caractère de fin de ligne entre le mot-clé `throw` et l'expression.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Lever_une_exception_qui_est_un_objet">Lever une exception qui est un objet</h3>
+### Lever une exception qui est un objet
 
-<p>Il est possible de lever une exception qui est un objet et de faire référence aux propriétés de cet objet au sein du bloc <code>catch</code>. Dans l'exemple suivant, on crée un objet <code>monException</code> du type <code>ExceptionUtilisateur</code> puis on utilise cet objet avec une instruction <code>throw</code>.</p>
+Il est possible de lever une exception qui est un objet et de faire référence aux propriétés de cet objet au sein du bloc `catch`. Dans l'exemple suivant, on crée un objet `monException` du type `ExceptionUtilisateur` puis on utilise cet objet avec une instruction `throw`.
 
-<pre class="brush: js">function ExceptionUtilisateur(message) {
+```js
+function ExceptionUtilisateur(message) {
    this.message = message;
    this.name = "ExceptionUtilisateur";
 }
@@ -65,13 +66,14 @@ try {
    console.error(e.message, e.name); // on passe les caractéristiques de l'exception
                                      // à un gestionnaire d'erreur
 }
-</pre>
+```
 
-<h3 id="Deuxième_exemple_avec_un_objet">Deuxième exemple avec un objet</h3>
+### Deuxième exemple avec un objet
 
-<p>Ici, on cherche à valider une chaîne de caractères représentant un code postal américain. Si le format utilisé est invalide, cela provoquera une exception avec un objet du type <code>ZipFormatIncorrectException</code>. (Le mot-clé {{jsxref("Instructions/const","const")}} introduit avec ECMAScript 6 est utilisé dans cet exemple).</p>
+Ici, on cherche à valider une chaîne de caractères représentant un code postal américain. Si le format utilisé est invalide, cela provoquera une exception avec un objet du type `ZipFormatIncorrectException`. (Le mot-clé {{jsxref("Instructions/const","const")}} introduit avec ECMAScript 6 est utilisé dans cet exemple).
 
-<pre class="brush: js">/*
+```js
+/*
  * Crée un objet ZipCode.
  *
  * Les formats acceptés sont :
@@ -136,63 +138,39 @@ b = vérifierZipCode(9560);          // renvoie -1
 c = vérifierZipCode("a");           // renvoie -1
 d = vérifierZipCode("95060");       // renvoie 95060
 e = vérifierZipCode("95060 1234");  // renvoie 95060 1234
-</pre>
+```
 
-<h3 id="Propager_une_exception">Propager une exception</h3>
+### Propager une exception
 
-<p>L'instruction <code>throw</code> peut être utilisée pour transmettre une exception qui aurait été interceptée avec {{jsxref("Instructions/try...catch","catch")}}. Dans l'exemple suivant, on intercepte une exception avec une valeur numérique et on propage l'exception si la valeur est supérieure à 50. L'exception qui est levée se propage dans la fonction appelante ou au niveau le plus haut, visible par l'utilisateur.</p>
+L'instruction `throw` peut être utilisée pour transmettre une exception qui aurait été interceptée avec {{jsxref("Instructions/try...catch","catch")}}. Dans l'exemple suivant, on intercepte une exception avec une valeur numérique et on propage l'exception si la valeur est supérieure à 50. L'exception qui est levée se propage dans la fonction appelante ou au niveau le plus haut, visible par l'utilisateur.
 
-<pre class="brush: js">try {
+```js
+try {
    throw n; // lève une exception avec une valeur numérique
 } catch (e) {
-   if (e &lt;= 50) {
+   if (e <= 50) {
       // des instructions pour gérer les cas entre 1 et 50
    } else {
       // ce cas ne peut pas être géré maintenant, on transmet l'exception
       throw e;
    }
 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.4</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-12.13', 'throw statement')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-throw-statement', 'throw statement')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-throw-statement', 'throw statement')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                         | Commentaires                                         |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------- |
+| {{SpecName('ES3')}}                                                                 | {{Spec2('ES3')}}         | Définition initiale. Implémentée avec JavaScript 1.4 |
+| {{SpecName('ES5.1', '#sec-12.13', 'throw statement')}}                 | {{Spec2('ES5.1')}}     |                                                      |
+| {{SpecName('ES6', '#sec-throw-statement', 'throw statement')}}     | {{Spec2('ES6')}}         |                                                      |
+| {{SpecName('ESDraft', '#sec-throw-statement', 'throw statement')}} | {{Spec2('ESDraft')}} |                                                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.statements.throw")}}</p>
+{{Compat("javascript.statements.throw")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Instructions/try...catch","try...catch")}}</li>
- <li>{{jsxref("Error")}}</li>
-</ul>
+- {{jsxref("Instructions/try...catch","try...catch")}}
+- {{jsxref("Error")}}

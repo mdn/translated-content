@@ -14,15 +14,16 @@ tags:
 translation_of: Web/JavaScript/Reference/Operators/Destructuring_assignment
 original_slug: Web/JavaScript/Reference/Opérateurs/Affecter_par_décomposition
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>L'<strong>affectation par décomposition </strong>(<em>destructuring </em>en anglais) est une expression JavaScript qui permet d'extraire (<em>unpack</em> en anglais) des données d'un tableau ou d'un objet grâce à une syntaxe dont la forme ressemble à la structure du tableau ou de l'objet.</p>
+L'**affectation par décomposition** (_destructuring_ en anglais) est une expression JavaScript qui permet d'extraire (_unpack_ en anglais) des données d'un tableau ou d'un objet grâce à une syntaxe dont la forme ressemble à la structure du tableau ou de l'objet.
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-destructuringassignment.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-destructuringassignment.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">let a, b, rest;
+```js
+let a, b, rest;
 [a, b] = [10, 20];
 console.log(a); // 10
 console.log(b); // 20
@@ -41,33 +42,33 @@ console.log(b); // 20
 console.log(a); // 10
 console.log(b); // 20
 console.log(rest); // {c: 30, d: 40}
-</pre>
+```
 
-<div class="note">
-<p><strong>Note :</strong> <code>{a, b} = {a:1, b:2}</code> n'est pas syntaxiquement valide en tant que tel, en effet <code>{a, b}</code> est ici considéré comme un bloc et non comme un objet littéral.</p>
+> **Note :** `{a, b} = {a:1, b:2}` n'est pas syntaxiquement valide en tant que tel, en effet `{a, b}` est ici considéré comme un bloc et non comme un objet littéral.
+>
+> Cependant, `({a, b} = {a:1, b:2})` sera valide comme pour la forme `let {a, b} = {a:1, b:2}`.
 
-<p>Cependant, <code>({a, b} = {a:1, b:2})</code> sera valide comme pour la forme <code>let {a, b} = {a:1, b:2}</code>.</p>
-</div>
+## Description
 
-<h2 id="Description">Description</h2>
+Ces expressions utilisant des littéraux pour les [objets](/fr/docs/Web/JavaScript/Guide/Valeurs,_variables,_et_littéraux#Litt.C3.A9raux_objets) ou les [tableaux](/fr/docs/Web/JavaScript/Guide/Valeurs,_variables,_et_littéraux#Litt.C3.A9raux_de_tableaux) permettent de créer simplement des données regroupées. Une fois créées, on peut les utiliser de n'importe quelle façon, y compris comme valeur renvoyée par une fonction.
 
-<p>Ces expressions utilisant des littéraux pour les <a href="/fr/docs/Web/JavaScript/Guide/Valeurs,_variables,_et_littéraux#Litt.C3.A9raux_objets">objets</a> ou les <a href="/fr/docs/Web/JavaScript/Guide/Valeurs,_variables,_et_littéraux#Litt.C3.A9raux_de_tableaux">tableaux</a> permettent de créer simplement des données regroupées. Une fois créées, on peut les utiliser de n'importe quelle façon, y compris comme valeur renvoyée par une fonction.</p>
-
-<pre class="brush: js">const x = [1, 2, 3, 4, 5]; // On crée un "paquet" de données
+```js
+const x = [1, 2, 3, 4, 5]; // On crée un "paquet" de données
 const [y, z] = x; // On utilise l'affectation par décomposition
 console.log(y); // 1
 console.log(z); // 2
-</pre>
+```
 
-<p>L'intérêt de l'assignation par décomposition est de pouvoir lire une structure entière en une seule instruction. Il y a également d'autres choses que vous pouvez faire avec cette expression, comme montré dans les exemples ci-dessous.</p>
+L'intérêt de l'assignation par décomposition est de pouvoir lire une structure entière en une seule instruction. Il y a également d'autres choses que vous pouvez faire avec cette expression, comme montré dans les exemples ci-dessous.
 
-<p>Cette syntaxe est semblable aux fonctionnalités offertes par des langages tels que Perl et Python.</p>
+Cette syntaxe est semblable aux fonctionnalités offertes par des langages tels que Perl et Python.
 
-<h2 id="Décomposition_dun_tableau">Décomposition d'un tableau</h2>
+## Décomposition d'un tableau
 
-<h3 id="Exemple_simple">Exemple simple</h3>
+### Exemple simple
 
-<pre class="brush: js">const toto = ["un", "deux", "trois"];
+```js
+const toto = ["un", "deux", "trois"];
 
 // sans utiliser la décomposition
 const un    = toto[0];
@@ -75,87 +76,99 @@ const deux  = toto[1];
 const trois = toto[2];
 
 // en utilisant la décomposition
-const [un, deux, trois] = toto;</pre>
+const [un, deux, trois] = toto;
+```
 
-<h3 id="Affectation_sans_déclaration">Affectation sans déclaration</h3>
+### Affectation sans déclaration
 
-<p>L'affectation par décomposition peut être effectuée sans qu'il y ait de déclaration directement dans l'instruction d'affectation. Par exemple :</p>
+L'affectation par décomposition peut être effectuée sans qu'il y ait de déclaration directement dans l'instruction d'affectation. Par exemple :
 
-<pre class="brush: js">let a, b;
+```js
+let a, b;
 [a, b] = [1, 2];
 console.log(a);  // 1
-console.log(b);  // 2</pre>
+console.log(b);  // 2
+```
 
-<h3 id="Valeurs_par_défaut">Valeurs par défaut</h3>
+### Valeurs par défaut
 
-<p>On peut définir une valeur par défaut au cas où la valeur extraite du tableau soit {{jsxref("undefined")}}. Par exemple :</p>
+On peut définir une valeur par défaut au cas où la valeur extraite du tableau soit {{jsxref("undefined")}}. Par exemple :
 
-<pre class="brush: js">let a, b;
+```js
+let a, b;
 
 [a = 5, b = 7] = [1];
 console.log(a); // 1
 console.log(b); // 7
-</pre>
+```
 
-<h3 id="Échange_de_variables">Échange de variables</h3>
+### Échange de variables
 
-<p>Une fois le fragment de code exécuté, on aura <var>b</var> égal à 1 et <var>a</var> égal à 3. S'il n'avait pas été possible d'utiliser l'affectation par décomposition, l'échange des valeurs aurait nécessité une variable temporaire (pour des données binaires, on aurait pu utiliser une <a class="external" href="https://fr.wikipedia.org/wiki/Permutation_(informatique)#En_utilisant_l.27op.C3.A9ration_XOR">permutation XOR</a>).</p>
+Une fois le fragment de code exécuté, on aura _b_ égal à 1 et _a_ égal à 3. S'il n'avait pas été possible d'utiliser l'affectation par décomposition, l'échange des valeurs aurait nécessité une variable temporaire (pour des données binaires, on aurait pu utiliser une [permutation XOR](<https://fr.wikipedia.org/wiki/Permutation_(informatique)#En_utilisant_l.27op.C3.A9ration_XOR>)).
 
-<pre class="brush:js">let a = 1;
+```js
+let a = 1;
 let b = 3;
 
 [a, b] = [b, a];
 console.log(a); // 3
-console.log(b); // 1</pre>
+console.log(b); // 1
+```
 
-<h3 id="Renvoyer_plusieurs_valeurs">Renvoyer plusieurs valeurs</h3>
+### Renvoyer plusieurs valeurs
 
-<p>Grâce à l'affectation par décomposition, les fonctions peuvent renvoyer plusieurs valeurs. Il était déjà possible de renvoyer un tableau mais cela ajoute un nouveau degré de flexibilité.</p>
+Grâce à l'affectation par décomposition, les fonctions peuvent renvoyer plusieurs valeurs. Il était déjà possible de renvoyer un tableau mais cela ajoute un nouveau degré de flexibilité.
 
-<pre class="brush:js">function f() {
+```js
+function f() {
   return [1, 2];
 }
-</pre>
+```
 
-<p>Les valeurs de retour sont déclarées via une syntaxe semblable à celle utilisée pour déclarer les tableaux, utilisant les crochets. On peut ainsi renvoyer autant de valeurs que souhaité. Dans cet exemple, <code>f()</code> renvoie les valeurs <code>[1, 2]</code>.</p>
+Les valeurs de retour sont déclarées via une syntaxe semblable à celle utilisée pour déclarer les tableaux, utilisant les crochets. On peut ainsi renvoyer autant de valeurs que souhaité. Dans cet exemple, `f()` renvoie les valeurs `[1, 2]`.
 
-<pre class="brush:js">let a, b;
+```js
+let a, b;
 [a, b] = f();
 console.log("A vaut " + a + " B vaut " + b);
-</pre>
+```
 
-<p>L'instruction <code>[a, b] = f()</code> assigne, dans l'ordre, les résultats de la fonction aux variables représentées entre les crochets. Ainsi, ici <var>a</var> vaut 1 et b vaut 2.</p>
+L'instruction `[a, b] = f()` assigne, dans l'ordre, les résultats de la fonction aux variables représentées entre les crochets. Ainsi, ici _a_ vaut 1 et b vaut 2.
 
-<p>On peut également récupérer la valeur de retour comme un tableau :</p>
+On peut également récupérer la valeur de retour comme un tableau :
 
-<pre class="brush:js">const x = f();
+```js
+const x = f();
 console.log("X vaut " + x);
-</pre>
+```
 
-<p>Et on aura x qui sera égal au tableau contenant 1 et 2.</p>
+Et on aura x qui sera égal au tableau contenant 1 et 2.
 
-<h3 id="Ignorer_certaines_valeurs">Ignorer certaines valeurs</h3>
+### Ignorer certaines valeurs
 
-<p>On peut également ignorer certaines des valeurs renvoyées qu'on ne souhaiterait pas traiter :</p>
+On peut également ignorer certaines des valeurs renvoyées qu'on ne souhaiterait pas traiter :
 
-<pre class="brush:js">function f() {
+```js
+function f() {
   return [1, 2, 3];
 }
 
 const [a, , b] = f();
 console.log("A vaut " + a + " B vaut " + b);
-</pre>
+```
 
-<p>Après avoir exécuté ce code, on aura a égal à 1 et b égal à 3. La valeur 2 est ignorée. On peut ignorer n'importe laquelle des valeurs (voire toutes). Par exemple :</p>
+Après avoir exécuté ce code, on aura a égal à 1 et b égal à 3. La valeur 2 est ignorée. On peut ignorer n'importe laquelle des valeurs (voire toutes). Par exemple :
 
-<pre class="brush:js">[,,] = f();
-</pre>
+```js
+[,,] = f();
+```
 
-<h3 id="Exploiter_les_résultats_dune_expression_rationnelle">Exploiter les résultats d'une expression rationnelle</h3>
+### Exploiter les résultats d'une expression rationnelle
 
-<p>Lorsque la méthode <code><a href="/fr/docs/JavaScript/Reference/Objets_globaux/Object/RegExp/Exec">exec()</a></code>, liées aux expressions rationnelles, trouve une correspondance, elle renvoie un tableau qui contient d'abord la partie complète de la chaîne qui correspond puis ensuite les différentes portions correspondant aux différents groupes. L'affectation par décomposition permet de filtrer simplement les valeurs qu'on souhaite exploiter. Ici, on ignore le premier élément qui est la correspondance complète :</p>
+Lorsque la méthode [`exec()`](/fr/docs/JavaScript/Reference/Objets_globaux/Object/RegExp/Exec), liées aux expressions rationnelles, trouve une correspondance, elle renvoie un tableau qui contient d'abord la partie complète de la chaîne qui correspond puis ensuite les différentes portions correspondant aux différents groupes. L'affectation par décomposition permet de filtrer simplement les valeurs qu'on souhaite exploiter. Ici, on ignore le premier élément qui est la correspondance complète :
 
-<pre class="brush:js">function parseProtocol(url) {
+```js
+function parseProtocol(url) {
   const parsedURL = /^(\w+)\:\/\/([^\/]+)\/(.*)$/.exec(url);
   if (!parsedURL) {
     return false;
@@ -167,27 +180,32 @@ console.log("A vaut " + a + " B vaut " + b);
 }
 
 console.log(parseProtocol('https://developer.mozilla.org/en-US/Web/JavaScript')); // "https"
-</pre>
+```
 
-<h3 id="Affecter_le_reste_dun_tableau_à_une_variable">Affecter le reste d'un tableau à une variable</h3>
+### Affecter le reste d'un tableau à une variable
 
-<p>On peut également utiliser la décomposition d'un tableau afin d'en affecter une partie à une variable :</p>
+On peut également utiliser la décomposition d'un tableau afin d'en affecter une partie à une variable :
 
-<pre class="brush: js">const [a, ...b] = [1, 2, 3];
+```js
+const [a, ...b] = [1, 2, 3];
 console.log(a); // 1
-console.log(b); // [2, 3]</pre>
+console.log(b); // [2, 3]
+```
 
-<p>Un exception {{jsxref("SyntaxError")}} sera levée si une virgule est laissée à la fin de l'élément du reste du tableau de gauche :</p>
+Un exception {{jsxref("SyntaxError")}} sera levée si une virgule est laissée à la fin de l'élément du reste du tableau de gauche :
 
-<pre class="brush: js example-bad">const [a, ...b,] = [1, 2, 3]
+```js example-bad
+const [a, ...b,] = [1, 2, 3]
 // SyntaxError : un élément du reste ne peut pas avoir
-//               de virgule à la fin</pre>
+//               de virgule à la fin
+```
 
-<h2 id="Décomposer_un_objet">Décomposer un objet</h2>
+## Décomposer un objet
 
-<h3 id="Exemple_simple_2">Exemple simple</h3>
+### Exemple simple
 
-<pre class="brush: js">const o = {p: 42, q: true};
+```js
+const o = {p: 42, q: true};
 const {p, q} = o;
 
 console.log(p); // 42
@@ -198,55 +216,61 @@ const {p: toto, q: truc} = o;
 
 console.log(toto); // 42
 console.log(truc); // true
-</pre>
+```
 
-<h3 id="Affectation_sans_déclaration_2">Affectation sans déclaration</h3>
+### Affectation sans déclaration
 
-<p>Il est possible d'effectuer une affectation par décomposition même si aucune déclaration n'est directement utilisée dans l'instruction d'affectation. Par exemple :</p>
+Il est possible d'effectuer une affectation par décomposition même si aucune déclaration n'est directement utilisée dans l'instruction d'affectation. Par exemple :
 
-<pre class="brush: js">let a, b;
+```js
+let a, b;
 ({a, b} = {a:1, b:2});
-</pre>
+```
 
-<div class="note">
-<p><strong>Note :</strong> Les parenthèses <code>( ... )</code> utilisées autour de l'instruction sont nécessaires pour que la partie gauche soit bien interprétée comme un objet littéral et non comme un bloc. Il est également nécessaire d'avoir un point-virgule avant les parenthèses de l'instruction car sinon, ces parenthèses peuvent être interprétées comme un appel de fonction.</p>
-</div>
+> **Note :** Les parenthèses `( ... )` utilisées autour de l'instruction sont nécessaires pour que la partie gauche soit bien interprétée comme un objet littéral et non comme un bloc. Il est également nécessaire d'avoir un point-virgule avant les parenthèses de l'instruction car sinon, ces parenthèses peuvent être interprétées comme un appel de fonction.
 
-<h3 id="Affecter_avec_un_nom_différent">Affecter avec un nom différent</h3>
+### Affecter avec un nom différent
 
-<p>Lorsqu'on décompose un objet, on peut affecter la variable obtenue sur une variable qui possède un autre nom (que celui de la propriété) :</p>
+Lorsqu'on décompose un objet, on peut affecter la variable obtenue sur une variable qui possède un autre nom (que celui de la propriété) :
 
-<pre class="brush: js">const o = {p: 42, q: true};
+```js
+const o = {p: 42, q: true};
 const {p: toto, q: truc} = o;
 
 console.log(toto); // 42
-console.log(truc); // true</pre>
+console.log(truc); // true
+```
 
-<p>Ici, par exemple, <code>const {p: toto} = o</code> prend la propriété <code>p</code> de l'objet <code>o</code> pour l'affecter à une variable locale intitulée <code>toto</code>.</p>
+Ici, par exemple, `const {p: toto} = o` prend la propriété `p` de l'objet `o` pour l'affecter à une variable locale intitulée `toto`.
 
-<h3 id="Valeurs_par_défaut_2">Valeurs par défaut</h3>
+### Valeurs par défaut
 
-<p>Une variable peut recevoir une valeur par défaut lors de la décomposition si la propriété correspondante de l'objet vaut <code>undefined</code>.</p>
+Une variable peut recevoir une valeur par défaut lors de la décomposition si la propriété correspondante de l'objet vaut `undefined`.
 
-<pre class="brush: js">const {a = 10, b = 5} = {a: 3};
+```js
+const {a = 10, b = 5} = {a: 3};
 
 console.log(a); // 3
-console.log(b); // 5</pre>
+console.log(b); // 5
+```
 
-<h3 id="Affecter_de_nouveaux_noms_aux_variables_et_fournir_des_valeurs_par_défaut">Affecter de nouveaux noms aux variables et fournir des valeurs par défaut</h3>
+### Affecter de nouveaux noms aux variables et fournir des valeurs par défaut
 
-<p>Il est possible d'extraitre une valeur d'un objet pour lui affecter un nouveau nom et lui affecter une valeur par défaut au cas où la valeur extraite vaut <code>undefined</code>.</p>
+Il est possible d'extraitre une valeur d'un objet pour lui affecter un nouveau nom et lui affecter une valeur par défaut au cas où la valeur extraite vaut `undefined`.
 
-<pre class="brush: js">const {a: aa = 10, b: bb = 5} = {a: 3};
+```js
+const {a: aa = 10, b: bb = 5} = {a: 3};
 
 console.log(aa); // 3
-console.log(bb); // 5</pre>
+console.log(bb); // 5
+```
 
-<h3 id="Arguments_par_défaut_dune_fonction">Arguments par défaut d'une fonction</h3>
+### Arguments par défaut d'une fonction
 
-<h4 id="Version_ES5">Version ES5</h4>
+#### Version ES5
 
-<pre class="brush: js">function dessinGrapheES5(options) {
+```js
+function dessinGrapheES5(options) {
   options = options === undefined ? {} : options;
   var size = options.size === undefined ? 'big' : options.size;
   var coords = options.coords === undefined ? { x: 0, y: 0 } : options.coords;
@@ -258,11 +282,13 @@ console.log(bb); // 5</pre>
 dessinGrapheES5({
   coords: { x: 18, y: 30 },
   radius: 30
-});</pre>
+});
+```
 
-<h4 id="Version_ES2015">Version ES2015</h4>
+#### Version ES2015
 
-<pre class="brush: js">function dessinGrapheES2015({size = 'big', coords = { x: 0, y: 0 }, radius = 25} = {})
+```js
+function dessinGrapheES2015({size = 'big', coords = { x: 0, y: 0 }, radius = 25} = {})
 {
   console.log(size, coords, radius);
   // on dessine le graphe
@@ -271,15 +297,15 @@ dessinGrapheES5({
 dessinGrapheES2015({
   coords: { x: 18, y: 30 },
   radius: 30
-});</pre>
+});
+```
 
-<div class="note">
-<p><strong>Note :</strong> Dans la signature de la fonction <code>dessinGrapheES2015</code> ci avant, la valeur décomposée à gauche utilise un objet vide comme opérande droit (<code>{size = 'big', coords = { x: 0, y: 0 }, radius = 25} = {}</code>). On aurait également pu écrire la fonction sans cet objet vide mais, dans ce cas, il aurait fallu au moins un argument pour utiliser la fonction. Avec cette « forme », <code>dessinGrapheES2015()</code> pourra être appelée sans paramètre.</p>
-</div>
+> **Note :** Dans la signature de la fonction `dessinGrapheES2015` ci avant, la valeur décomposée à gauche utilise un objet vide comme opérande droit (`{size = 'big', coords = { x: 0, y: 0 }, radius = 25} = {}`). On aurait également pu écrire la fonction sans cet objet vide mais, dans ce cas, il aurait fallu au moins un argument pour utiliser la fonction. Avec cette « forme », `dessinGrapheES2015()` pourra être appelée sans paramètre.
 
-<h3 id="Décomposition_imbriquée_avec_objets_et_tableaux">Décomposition imbriquée avec objets et tableaux</h3>
+### Décomposition imbriquée avec objets et tableaux
 
-<pre class="brush:js">const metadata = {
+```js
+const metadata = {
     title: "Scratchpad",
     translations: [
        {
@@ -296,11 +322,13 @@ dessinGrapheES2015({
 let { title: englishTitle, translations: [{ title: localeTitle }] } = metadata;
 
 console.log(englishTitle); // "Scratchpad"
-console.log(localeTitle);  // "JavaScript-Umgebung"</pre>
+console.log(localeTitle);  // "JavaScript-Umgebung"
+```
 
-<h3 id="Décomposition_et_utilisation_de_for_of">Décomposition et utilisation de <a href="/fr/docs/JavaScript/Référence_JavaScript/Instructions/for...of">for of</a></h3>
+### Décomposition et utilisation de [for of](/fr/docs/JavaScript/Référence_JavaScript/Instructions/for...of)
 
-<pre class="brush: js">const personnes = [
+```js
+const personnes = [
   {
     nom: "Alain Dupont",
     famille: {
@@ -326,11 +354,13 @@ for (const {nom: n, famille: { pere: f } } of personnes) {
 }
 
 // "Nom : Alain Dupont, Père : Jean Dupont"
-// "Nom : Luc Marchetoile, Père : Antonin Marchetoile"</pre>
+// "Nom : Luc Marchetoile, Père : Antonin Marchetoile"
+```
 
-<h3 id="Décomposer_les_propriétés_dobjets_passés_en_arguments">Décomposer les propriétés d'objets passés en arguments</h3>
+### Décomposer les propriétés d'objets passés en arguments
 
-<pre class="brush:js">const user = {
+```js
+const user = {
   id: 42,
   displayName: "jbiche",
   fullName: {
@@ -348,79 +378,71 @@ function whois({displayName: displayName, fullName: {firstName: name}}){
 }
 
 console.log("userId: " + userId(user)); w// "userId: 42"
-whois(user); // "jbiche est Jean"</pre>
+whois(user); // "jbiche est Jean"
+```
 
-<p>Cela permet d'accéder directement à <code>id</code>, <code>displayName</code> et <code>firstName</code> depuis l'objet <code>user</code>.</p>
+Cela permet d'accéder directement à `id`, `displayName` et `firstName` depuis l'objet `user`.
 
-<h3 id="Les_noms_de_propriétés_calculés_et_la_décomposition">Les noms de propriétés calculés et la décomposition</h3>
+### Les noms de propriétés calculés et la décomposition
 
-<p>Il est possible d'utiliser des noms de propriétés calculés, comme avec les <a href="/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Initialisateur_objet#Noms_de_propri.C3.A9t.C3.A9s_calcul.C3.A9s">littéraux objets</a>, avec la décomposition.</p>
+Il est possible d'utiliser des noms de propriétés calculés, comme avec les [littéraux objets](/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Initialisateur_objet#Noms_de_propri.C3.A9t.C3.A9s_calcul.C3.A9s), avec la décomposition.
 
-<pre class="brush: js">let clef = "z";
+```js
+let clef = "z";
 let { [clef]: toto } = { z: "truc" };
 
-console.log(toto); // "truc"</pre>
+console.log(toto); // "truc"
+```
 
-<h3 id="Syntaxe_du_«_reste_»_et_décomposition_dun_objet">Syntaxe du « reste » et décomposition d'un objet</h3>
+### Syntaxe du « reste » et décomposition d'un objet
 
-<p><a href="https://github.com/tc39/proposal-object-rest-spread">La proposition de décomposition des propriétés et de la syntaxe du reste dans ECMAScript</a> ajoute <a href="/fr/docs/Web/JavaScript/Reference/Fonctions/paramètres_du_reste">la syntaxe du reste</a> pour la décomposition. La propriété du reste permet de collecter les propriétés énumérables restantes qui n'auraient pas été extraites par la décomposition :</p>
+[La proposition de décomposition des propriétés et de la syntaxe du reste dans ECMAScript](https://github.com/tc39/proposal-object-rest-spread) ajoute [la syntaxe du reste](/fr/docs/Web/JavaScript/Reference/Fonctions/paramètres_du_reste) pour la décomposition. La propriété du reste permet de collecter les propriétés énumérables restantes qui n'auraient pas été extraites par la décomposition :
 
-<pre class="brush: js">let {a, b, ...reste } = {a: 10, b: 20, c: 30, d: 40};
+```js
+let {a, b, ...reste } = {a: 10, b: 20, c: 30, d: 40};
 a; // 10
 b; // 20
-reste; // { c: 30, d: 40 }</pre>
+reste; // { c: 30, d: 40 }
+```
 
-<h3 id="Gestion_des_identifiants_invalides_comme_noms_de_propriétés">Gestion des identifiants invalides comme noms de propriétés</h3>
+### Gestion des identifiants invalides comme noms de propriétés
 
-<p>Si besoin, on peut également utiliser la décomposition pour fournir un alias à des noms de propriétés qui ne seraient pas des identifiants valides. Par exemple :</p>
+Si besoin, on peut également utiliser la décomposition pour fournir un alias à des noms de propriétés qui ne seraient pas des identifiants valides. Par exemple :
 
-<pre class="brush: js">const toto = {'truc-bidule': true}
+```js
+const toto = {'truc-bidule': true}
 const {'truc-bidule': trucBidule } = toto;
 
-console.log(trucBidule);  // "true"</pre>
+console.log(trucBidule);  // "true"
+```
 
-<h3 id="Combiner_la_décomposition_de_tableaux_et_dobjets">Combiner la décomposition de tableaux et d'objets</h3>
+### Combiner la décomposition de tableaux et d'objets
 
-<p>Il est possible de décomposer un tableau et un objet simultanément. Dans l'exemple qui suit, on accède ainsi à la propriété <code>nom</code> du troisième élément du tableau <code>props</code>:</p>
+Il est possible de décomposer un tableau et un objet simultanément. Dans l'exemple qui suit, on accède ainsi à la propriété `nom` du troisième élément du tableau `props`:
 
-<pre class="brush: js">const props = [
+```js
+const props = [
   { id: 1, nom: "Toto"},
   { id: 2, nom: "Truc"},
   { id: 3, nom: "Bidule"}
 ];
 
 const [,, {nom}] = props;
-console.log(nom); // Bidule</pre>
+console.log(nom); // Bidule
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-destructuring-assignment', 'Destructuring assignment')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-destructuring-assignment', 'Destructuring assignment')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                         | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-destructuring-assignment', 'Destructuring assignment')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-destructuring-assignment', 'Destructuring assignment')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.operators.destructuring")}}</p>
+{{Compat("javascript.operators.destructuring")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_d_affectation">Opérateurs d'affectation</a></li>
- <li><a href="https://tech.mozfr.org/post/2015/06/05/ES6-en-details-%3A-la-decomposition">ES6 en détails : La décomposition sur tech.mozfr.org</a></li>
-</ul>
+- [Opérateurs d'affectation](/fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_d_affectation)
+- [ES6 en détails : La décomposition sur tech.mozfr.org](https://tech.mozfr.org/post/2015/06/05/ES6-en-details-%3A-la-decomposition)

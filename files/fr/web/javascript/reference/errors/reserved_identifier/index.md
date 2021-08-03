@@ -8,75 +8,74 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Reserved_identifier
 original_slug: Web/JavaScript/Reference/Erreurs/Reserved_identifier
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="syntaxbox">SyntaxError: The use of a future reserved word for an identifier is invalid (Edge)
-SyntaxError: "x" is a reserved identifier (Firefox)
-SyntaxError: Unexpected reserved word (Chrome)</pre>
+    SyntaxError: The use of a future reserved word for an identifier is invalid (Edge)
+    SyntaxError: "x" is a reserved identifier (Firefox)
+    SyntaxError: Unexpected reserved word (Chrome)
 
-<h2 id="Type_d'erreur">Type d'erreur</h2>
+## Type d'erreur
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="Quel_est_le_problème">Quel est le problème ?</h2>
+## Quel est le problème ?
 
-<p><a href="/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale#Mots-clés_réservés_selon_ECMAScript_2015">Les mots-clés réservés</a> lèveront une exception s'ils sont utilisés en tant qu'identifiants. Voici les mots-clés réservés en mode strict et en mode <em>sloppy</em> :</p>
+[Les mots-clés réservés](/fr/docs/Web/JavaScript/Reference/Grammaire_lexicale#Mots-clés_réservés_selon_ECMAScript_2015) lèveront une exception s'ils sont utilisés en tant qu'identifiants. Voici les mots-clés réservés en mode strict et en mode _sloppy_ :
 
-<ul>
- <li><code>enum</code></li>
-</ul>
+- `enum`
 
-<p>Voici les mots-clés uniquement réservés en mode strict :</p>
+Voici les mots-clés uniquement réservés en mode strict :
 
-<ul class="threecolumns">
- <li><code>implements</code></li>
- <li><code>interface</code></li>
- <li>{{jsxref("Statements/let", "let")}}</li>
- <li><code>package</code></li>
- <li><code>private</code></li>
- <li><code>protected</code></li>
- <li><code>public</code></li>
- <li><code>static</code></li>
-</ul>
+- `implements`
+- `interface`
+- {{jsxref("Statements/let", "let")}}
+- `package`
+- `private`
+- `protected`
+- `public`
+- `static`
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Mots-clés_réservés_en_modes_strict_et_non-strict">Mots-clés réservés en modes strict et non-strict</h3>
+### Mots-clés réservés en modes strict et non-strict
 
-<p>L'identifiant <code>enum</code> est réservé dans les différents cas :</p>
+L'identifiant `enum` est réservé dans les différents cas :
 
-<pre class="brush: js example-bad">var enum = { RED: 0, GREEN: 1, BLUE: 2 };
+```js example-bad
+var enum = { RED: 0, GREEN: 1, BLUE: 2 };
 // SyntaxError: enum is a reserved identifier
-</pre>
+```
 
-<p>En mode strict, d'autres mots-clés sont réservés :</p>
+En mode strict, d'autres mots-clés sont réservés :
 
-<pre class="brush: js example-bad">"use strict";
+```js example-bad
+"use strict";
 var package = ["pomme", "poire", "pêches"];
 // SyntaxError: package is a reserved identifier
-</pre>
+```
 
-<p>Pour ne pas avoir l'erreur, il faudra renommer les variables :</p>
+Pour ne pas avoir l'erreur, il faudra renommer les variables :
 
-<pre class="brush: js example-good">var enumCouleurs = { RED: 0, GREEN: 1, BLUE: 2 };
-var liste = ["pomme", "poire", "pêches"];</pre>
+```js example-good
+var enumCouleurs = { RED: 0, GREEN: 1, BLUE: 2 };
+var liste = ["pomme", "poire", "pêches"];
+```
 
-<h3 id="Mettre_à_jour_les_anciens_navigateurs">Mettre à jour les anciens navigateurs</h3>
+### Mettre à jour les anciens navigateurs
 
-<p>Si vous utilisez un ancien navigateur qui n'implémente pas <code><a href="/fr/docs/Web/JavaScript/Reference/Instructions/let">let</a></code> ou <code><a href="/fr/docs/Web/JavaScript/Reference/Instructions/class">class</a></code>, vous devrez mettre à jour votre navigateur :</p>
+Si vous utilisez un ancien navigateur qui n'implémente pas [`let`](/fr/docs/Web/JavaScript/Reference/Instructions/let) ou [`class`](/fr/docs/Web/JavaScript/Reference/Instructions/class), vous devrez mettre à jour votre navigateur :
 
-<pre class="brush: js">"use strict";
+```js
+"use strict";
 class DocArchiver {}
 
 // SyntaxError: class is a reserved identifier
 // (lève une exception dans les anciens navigateurs
 // tels que Firefox 44 et les versions antérieures)
-</pre>
+```
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="https://wiki.c2.com/?GoodVariableNames">Utiliser de bons noms de variable</a></li>
-</ul>
+- [Utiliser de bons noms de variable](https://wiki.c2.com/?GoodVariableNames)

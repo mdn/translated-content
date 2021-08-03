@@ -8,33 +8,33 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Malformed_formal_parameter
 original_slug: Web/JavaScript/Reference/Erreurs/Malformed_formal_parameter
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="syntaxbox">SyntaxError: Expected {x} (Edge)
-SyntaxError: malformed formal parameter (Firefox)
-</pre>
+    SyntaxError: Expected {x} (Edge)
+    SyntaxError: malformed formal parameter (Firefox)
 
-<h2 id="Type_d'erreur">Type d'erreur</h2>
+## Type d'erreur
 
-<p>{{jsxref("SyntaxError")}}</p>
+{{jsxref("SyntaxError")}}
 
-<h2 id="Quel_est_le_problème">Quel est le problème ?</h2>
+## Quel est le problème ?
 
-<p>La méthode {{jsxref("Function()")}} a été utilisée avec au moins deux arguments. Le dernier argument correspond au code source de la nouvelle fonction qui est créée. Les autres arguments sont la liste des arguments passés à la fonction.</p>
+La méthode {{jsxref("Function()")}} a été utilisée avec au moins deux arguments. Le dernier argument correspond au code source de la nouvelle fonction qui est créée. Les autres arguments sont la liste des arguments passés à la fonction.
 
-<p>C'est cette liste d'arguments qui est, pour une certaine raison, invalide. Il s'agit peut-être d'un mot-clé (<code>if</code> ou <code>var</code> par exemple) utilisé comme un nom d'argument, ou d'un signe de ponctuation mal placé. Il peut également s'agir d'une valeur invalide comme un nombre ou un objet.</p>
+C'est cette liste d'arguments qui est, pour une certaine raison, invalide. Il s'agit peut-être d'un mot-clé (`if` ou `var` par exemple) utilisé comme un nom d'argument, ou d'un signe de ponctuation mal placé. Il peut également s'agir d'une valeur invalide comme un nombre ou un objet.
 
-<h2 id="OK_mais_pourquoi_cette_formulation_étrange">OK mais pourquoi cette formulation étrange ?</h2>
+## OK mais pourquoi cette formulation étrange ?
 
-<p>En effet, "Formal parameter" est une manière étrange de dire  « argument de fonction ». Le mot "malformed" (malformé) est utilisé car les ingénieurs travaillant sur Firefox engineers apprécient énormément les romans gothiques du XIXe.</p>
+En effet, "Formal parameter" est une manière étrange de dire  « argument de fonction ». Le mot "malformed" (malformé) est utilisé car les ingénieurs travaillant sur Firefox engineers apprécient énormément les romans gothiques du XIXe.
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="Exemples_invalides">Exemples invalides</h3>
+### Exemples invalides
 
-<pre class="brush: js example-bad">var f = Function("x y", "return x + y;");
+```js example-bad
+var f = Function("x y", "return x + y;");
 // SyntaxError (virgule manquante)
 
 var f = Function("x,", "return x;");
@@ -42,11 +42,12 @@ var f = Function("x,", "return x;");
 
 var f = Function(37, "console.log('OK')");
 // SyntaxError (des nombres ne peuvent être des noms)
-</pre>
+```
 
-<h3 id="Exemples_valides">Exemples valides</h3>
+### Exemples valides
 
-<pre class="brush: js example-good"> // Ponctuation correcte
+```js example-good
+ // Ponctuation correcte
 var f = Function("x, y", "return x + y;");
 
 var f = Function("x", "return x;");
@@ -54,12 +55,10 @@ var f = Function("x", "return x;");
 // Voici une alternative plus rapide
 // si vous pouvez éviter Function
 var f = function (x) { return x; };
-</pre>
+```
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Function()")}}</li>
- <li><a href="/fr/docs/Web/JavaScript/Guide/Fonctions">Le chapitre du Guide JavaScript sur les fonctions</a></li>
- <li><a href="https://www.gutenberg.org/ebooks/84"><em>Frankenstein</em> par Mary Wollstonecraft Shelley</a> ("<em>Cursed (although I curse myself) be the hands that formed you! You have made me wretched beyond expression. You have left me no power to consider whether I am just to you or not. Begone! Relieve me from the sight of your detested form.</em>")</li>
-</ul>
+- {{jsxref("Function()")}}
+- [Le chapitre du Guide JavaScript sur les fonctions](/fr/docs/Web/JavaScript/Guide/Fonctions)
+- [_Frankenstein_ par Mary Wollstonecraft Shelley](https://www.gutenberg.org/ebooks/84) ("_Cursed (although I curse myself) be the hands that formed you! You have made me wretched beyond expression. You have left me no power to consider whether I am just to you or not. Begone! Relieve me from the sight of your detested form._")

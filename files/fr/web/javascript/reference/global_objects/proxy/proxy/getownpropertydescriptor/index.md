@@ -10,66 +10,62 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor
 original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/getOwnPropertyDescriptor
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>handler.getOwnPropertyDescriptor()</code></strong> est une trappe pour intercepter {{jsxref("Object.getOwnPropertyDescriptor()")}}.</p>
+La méthode **`handler.getOwnPropertyDescriptor()`** est une trappe pour intercepter {{jsxref("Object.getOwnPropertyDescriptor()")}}.
 
-<div>{{EmbedInteractiveExample("pages/js/proxyhandler-getownpropertydescriptor.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/proxyhandler-getownpropertydescriptor.html", "taller")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: js">var p = new Proxy(cible, {
+```js
+var p = new Proxy(cible, {
   getOwnPropertyDescriptor: function(cible, prop) {
   }
 });
-</pre>
+```
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<p>Les paramètres suivants sont passés à la méthode <code>getOwnPropertyDescriptor</code>. <code>this</code> est ici lié au gestionnaire (<em>handler</em>).</p>
+Les paramètres suivants sont passés à la méthode `getOwnPropertyDescriptor`. `this` est ici lié au gestionnaire (_handler_).
 
-<dl>
- <dt><code>cible</code></dt>
- <dd>L'objet cible</dd>
- <dt><code>prop</code></dt>
- <dd>Le nom de la propriété dont on souhaite obtenir le descripteur.</dd>
-</dl>
+- `cible`
+  - : L'objet cible
+- `prop`
+  - : Le nom de la propriété dont on souhaite obtenir le descripteur.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>La méthode <code>getOwnPropertyDescriptor</code> doit renvoyer un objet ou <code>undefined</code>.</p>
+La méthode `getOwnPropertyDescriptor` doit renvoyer un objet ou `undefined`.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code><strong>handler.getOwnPropertyDescriptor()</strong></code> est une trappe pour un proxy afin d'intercepter les opérations effectuées avec {{jsxref("Object.getOwnPropertyDescriptor()")}}.</p>
+La méthode **`handler.getOwnPropertyDescriptor()`** est une trappe pour un proxy afin d'intercepter les opérations effectuées avec {{jsxref("Object.getOwnPropertyDescriptor()")}}.
 
-<h3 id="Interceptions">Interceptions</h3>
+### Interceptions
 
-<p>Cette trappe permet d'intercepter :</p>
+Cette trappe permet d'intercepter :
 
-<ul>
- <li>{{jsxref("Object.getOwnPropertyDescriptor()")}}</li>
- <li>{{jsxref("Reflect.getOwnPropertyDescriptor()")}}</li>
-</ul>
+- {{jsxref("Object.getOwnPropertyDescriptor()")}}
+- {{jsxref("Reflect.getOwnPropertyDescriptor()")}}
 
-<h3 id="Invariants">Invariants</h3>
+### Invariants
 
-<p>Si les invariants suivants ne sont pas respectés, le proxy lèvera une exception {{jsxref("TypeError")}} :</p>
+Si les invariants suivants ne sont pas respectés, le proxy lèvera une exception {{jsxref("TypeError")}} :
 
-<ul>
- <li><code>getOwnPropertyDescriptor</code> doit renvoyer un objet ou <code>undefined</code>.</li>
- <li>Une propriété ne peut pas être indiquée comme non-existante s'il existe une propriété correspondante de l'objet cible qui est une propriété propre et non-configurable.</li>
- <li>Une propriété ne peut pas être indiquée comme non-existante s'il existe une propriété correspondante de l'objet cible qui est une propriété propre et que l'objet cible n'est pas extensible.</li>
- <li>Une propriété ne peut pas être indiquée comme existante si elle n'existe pas de façon correspondante sur l'objet cible et que l'objet cible n'est pas extensible.</li>
- <li>Une propriété ne peut pas être indiquée comme non-configurable si la propriété correspondante n'existe pas pour l'objet cible ou si elle existe comme un propriété propre configurable.</li>
- <li>Le résultat de <code>Object.getOwnPropertyDescriptor(cible)</code> peut être appliqué à l'objet cible avec <code>Object.defineProperty</code> sans que cela lève une exception.</li>
-</ul>
+- `getOwnPropertyDescriptor` doit renvoyer un objet ou `undefined`.
+- Une propriété ne peut pas être indiquée comme non-existante s'il existe une propriété correspondante de l'objet cible qui est une propriété propre et non-configurable.
+- Une propriété ne peut pas être indiquée comme non-existante s'il existe une propriété correspondante de l'objet cible qui est une propriété propre et que l'objet cible n'est pas extensible.
+- Une propriété ne peut pas être indiquée comme existante si elle n'existe pas de façon correspondante sur l'objet cible et que l'objet cible n'est pas extensible.
+- Une propriété ne peut pas être indiquée comme non-configurable si la propriété correspondante n'existe pas pour l'objet cible ou si elle existe comme un propriété propre configurable.
+- Le résultat de `Object.getOwnPropertyDescriptor(cible)` peut être appliqué à l'objet cible avec `Object.defineProperty` sans que cela lève une exception.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans l'exemple qui suit, on intercepte {{jsxref("Object.getOwnPropertyDescriptor()")}}.</p>
+Dans l'exemple qui suit, on intercepte {{jsxref("Object.getOwnPropertyDescriptor()")}}.
 
-<pre class="brush: js">var p = new Proxy({ a: 20 }, {
+```js
+var p = new Proxy({ a: 20 }, {
   getOwnPropertyDescriptor: function(cible, prop) {
     console.log("appelée : " + prop);
     return { configurable: true, enumerable: true, value: 10 };
@@ -78,11 +74,12 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Proxy/handler/getOwnPrope
 
 console.log(Object.getOwnPropertyDescriptor(p, "a").value); // "appelée : a"
                                                             // 10
-</pre>
+```
 
-<p>L'exemple suivant ne respecte pas un invariant :</p>
+L'exemple suivant ne respecte pas un invariant :
 
-<pre class="brush: js">var obj = { a: 10 };
+```js
+var obj = { a: 10 };
 Object.preventExtensions(obj);
 var p = new Proxy(obj, {
   getOwnPropertyDescriptor: function(cible, prop) {
@@ -91,39 +88,22 @@ var p = new Proxy(obj, {
 });
 
 Object.getOwnPropertyDescriptor(p, "a"); // Une exception TypeError est renvoyée
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-getownproperty-p', '[[GetOwnProperty]]')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-getownproperty-p', '[[GetOwnProperty]]')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                                    | État                         | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-proxy-object-internal-methods-and-internal-slots-getownproperty-p', '[[GetOwnProperty]]')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-proxy-object-internal-methods-and-internal-slots-getownproperty-p', '[[GetOwnProperty]]')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Proxy.handler.getOwnPropertyDescriptor")}}</p>
+{{Compat("javascript.builtins.Proxy.handler.getOwnPropertyDescriptor")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Proxy")}}</li>
- <li>{{jsxref("Proxy.handler", "handler")}}</li>
- <li>{{jsxref("Object.getOwnPropertyDescriptor()")}}</li>
- <li>{{jsxref("Reflect.getOwnPropertyDescriptor()")}}</li>
-</ul>
+- {{jsxref("Proxy")}}
+- {{jsxref("Proxy.handler", "handler")}}
+- {{jsxref("Object.getOwnPropertyDescriptor()")}}
+- {{jsxref("Reflect.getOwnPropertyDescriptor()")}}

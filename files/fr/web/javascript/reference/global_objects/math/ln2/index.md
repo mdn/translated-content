@@ -9,74 +9,47 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/LN2
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/LN2
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La propriété <code><strong>Math.LN2</strong></code> représente le logarithme naturel de 2, environ 0.693:</p>
+La propriété **`Math.LN2`** représente le logarithme naturel de 2, environ 0.693:
 
-<p><math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LN2</mi></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>0.693</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LN2}} = \ln(2) \approx 0.693</annotation></semantics></math></p>
+<math display="block"><semantics><mrow><mstyle mathvariant="monospace"><mi>Math.LN2</mi></mstyle><mo>=</mo><mo lspace="0em" rspace="0em">ln</mo><mo stretchy="false">(</mo><mn>2</mn><mo stretchy="false">)</mo><mo>≈</mo><mn>0.693</mn></mrow><annotation encoding="TeX">\mathtt{\mi{Math.LN2}} = \ln(2) \approx 0.693</annotation></semantics></math>
 
-<div>{{EmbedInteractiveExample("pages/js/math-ln2.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-ln2.html")}}{{js_property_attributes(0,0,0)}}
 
+## Description
 
+`LN2` est une propriété statique de l'objet `Math`, il doit toujours être utilisé avec la syntaxe `Math.LN2`, et non pas être utilisé comme la propriété d'un objet qui aurait été créé (`Math` n'est pas un constructeur).
 
-<div>{{js_property_attributes(0,0,0)}}</div>
+## Exemples
 
-<h2 id="Description">Description</h2>
+### Utiliser `Math.LN2`
 
-<p><code>LN2</code> est une propriété statique de l'objet <code>Math</code>, il doit toujours être utilisé avec la syntaxe <code>Math.LN2</code>, et non pas être utilisé comme la propriété d'un objet qui aurait été créé (<code>Math</code> n'est pas un constructeur).</p>
+La fonction suivante renvoie le logarithme en base 2 d'un nombre en utilisant la valeur de `Math.LN2` :
 
-<h2 id="Exemples">Exemples</h2>
-
-<h3 id="Utiliser_Math.LN2">Utiliser <code>Math.LN2</code></h3>
-
-<p>La fonction suivante renvoie le logarithme en base 2 d'un nombre en utilisant la valeur de <code>Math.LN2</code> :</p>
-
-<pre class="brush:js">function getLog2(x) {
+```js
+function getLog2(x) {
   return Math.log(x) / Math.LN2;
 }
 
-getLog2(256); // 8</pre>
+getLog2(256); // 8
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.1.3', 'Math.LN2')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.ln2', 'Math.LN2')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.ln2', 'Math.LN2')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                        | Statut                       | Commentaires                                          |
+| -------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ES1')}}                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.0. |
+| {{SpecName('ES5.1', '#sec-15.8.1.3', 'Math.LN2')}} | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-math.ln2', 'Math.LN2')}}     | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-math.ln2', 'Math.LN2')}} | {{Spec2('ESDraft')}} |                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Math.LN2")}}</p>
+{{Compat("javascript.builtins.Math.LN2")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Math.exp()")}}</li>
- <li>{{jsxref("Math.log()")}}</li>
- <li>{{jsxref("Math.log2()")}}</li>
-</ul>
+- {{jsxref("Math.exp()")}}
+- {{jsxref("Math.log()")}}
+- {{jsxref("Math.log2()")}}

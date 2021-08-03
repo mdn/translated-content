@@ -10,56 +10,58 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RegExp/@@matchAll
 original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/@@matchAll
 ---
-<p>{{JSRef}}</p>
+{{JSRef}}
 
-<p>La méthode <strong><code>[@@matchAll]</code></strong> renvoie l'ensemble des correspondances d'une expression rationnelle sur une chaîne de caractères.</p>
+La méthode **`[@@matchAll]`** renvoie l'ensemble des correspondances d'une expression rationnelle sur une chaîne de caractères.
 
-<div>{{EmbedInteractiveExample("pages/js/regexp-prototype-@@matchall.html")}}</div>
+{{EmbedInteractiveExample("pages/js/regexp-prototype-@@matchall.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>regexp</var>[Symbol.matchAll](<var>str</var>)</pre>
+    regexp[Symbol.matchAll](str)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>str</code></dt>
- <dd>Une chaîne de caractères ({{jsxref("String")}}) dont on souhaite trouver les correspondances.</dd>
-</dl>
+- `str`
+  - : Une chaîne de caractères ({{jsxref("String")}}) dont on souhaite trouver les correspondances.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un <a href="/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs">itérateur</a>.</p>
+Un [itérateur](/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs).
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Cette méthode est appelée, en interne, par le moteur JavaScript, pendant l'exécution {{jsxref("String.prototype.matchAll()")}}. Les deux lignes qui suivent renverront donc le même résultat.</p>
+Cette méthode est appelée, en interne, par le moteur JavaScript, pendant l'exécution {{jsxref("String.prototype.matchAll()")}}. Les deux lignes qui suivent renverront donc le même résultat.
 
-<pre class="brush: js">'abc'.matchAll(/a/);
+```js
+'abc'.matchAll(/a/);
 
-/a/[Symbol.matchAll]('abc');</pre>
+/a/[Symbol.matchAll]('abc');
+```
 
-<p>Cette méthode existe afin de personnaliser le comportement des correspondances pour les sous-classes de <code>RegExp</code>.</p>
+Cette méthode existe afin de personnaliser le comportement des correspondances pour les sous-classes de `RegExp`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Appel_direct">Appel direct</h3>
+### Appel direct
 
-<p>Cette méthode peut être utilisée de façon semblable à {{jsxref("String.prototype.matchAll()")}} mais l'objet <code>this</code> et l'ordre des arguments seront différents.</p>
+Cette méthode peut être utilisée de façon semblable à {{jsxref("String.prototype.matchAll()")}} mais l'objet `this` et l'ordre des arguments seront différents.
 
-<pre class="brush: js">var re = /[0-9]+/g;
+```js
+var re = /[0-9]+/g;
 var str = '2016-01-02';
 var resultat = re[Symbol.matchAll](str);
 
-console.log(Array.from(resultat, x =&gt; x[0]));
+console.log(Array.from(resultat, x => x[0]));
 // ["2016", "01", "02"]
-</pre>
+```
 
-<h3 id="Utiliser_matchAll_dans_une_sous-classe">Utiliser <code>@@matchAll</code> dans une sous-classe</h3>
+### Utiliser `@@matchAll` dans une sous-classe
 
-<p>Les sous-classes de {{jsxref("RegExp")}} peuvent surcharger la méthode <code>[@@matchAll]()</code> afin de modifier le comportement par défaut (par exemple pour renvoyer un tableau ({{jsxref("Array")}}) plutôt qu'un <a href="/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators">itérateur</a>).</p>
+Les sous-classes de {{jsxref("RegExp")}} peuvent surcharger la méthode `[@@matchAll]()` afin de modifier le comportement par défaut (par exemple pour renvoyer un tableau ({{jsxref("Array")}}) plutôt qu'un [itérateur](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)).
 
-<pre class="brush: js">class MaRegExp extends RegExp {
+```js
+class MaRegExp extends RegExp {
   [Symbol.matchAll](str) {
     var resultat = RegExp.prototype[Symbol.matchAll].call(this, str);
     if (!resultat) {
@@ -75,32 +77,19 @@ var str = '2016-01-02|2019-03-07';
 var resultat = str.matchAll(re);
 console.log(resultat[0]); // [ "2016-01-02", "2016", "01", "02" ]
 console.log(resultat[1]); // [ "2019-03-07", "2019", "03", "07" ]
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-regexp-prototype-matchall', 'RegExp.prototype[@@matchAll]')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | État                         | Commentaires |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------ |
+| {{SpecName('ESDraft', '#sec-regexp-prototype-matchall', 'RegExp.prototype[@@matchAll]')}} | {{Spec2('ESDraft')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.RegExp.@@matchAll")}}</p>
+{{Compat("javascript.builtins.RegExp.@@matchAll")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{JSxRef("String.prototype.matchAll()")}}</li>
- <li>{{JSxRef("Symbol.matchAll")}}</li>
-</ul>
+- {{JSxRef("String.prototype.matchAll()")}}
+- {{JSxRef("Symbol.matchAll")}}

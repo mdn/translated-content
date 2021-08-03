@@ -11,34 +11,33 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Number/isFinite
 original_slug: Web/JavaScript/Reference/Objets_globaux/Number/isFinite
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <strong><code>Number.isFinite()</code></strong> permet de déterminer si la valeur fournie est un nombre fini.</p>
+La méthode **`Number.isFinite()`** permet de déterminer si la valeur fournie est un nombre fini.
 
-<div>{{EmbedInteractiveExample("pages/js/number-isfinite.html")}}</div>
+{{EmbedInteractiveExample("pages/js/number-isfinite.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox notranslate">Number.isFinite(valeurÀTester);</pre>
+    Number.isFinite(valeurÀTester);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>valeurÀTester</code></dt>
- <dd>La valeur dont on souhaite savoir si elle est finie.</dd>
-</dl>
+- `valeurÀTester`
+  - : La valeur dont on souhaite savoir si elle est finie.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un booléen indiquant si la valeur passée en argument est un nombre fini.</p>
+Un booléen indiquant si la valeur passée en argument est un nombre fini.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Par rapport à la fonction de l'objet global {{jsxref("isFinite","isFinite()")}} qui convertit l'argument donné en un nombre, la fonction <code>Number.isFinite </code>ne convertit pas l'argument et ne renvoie pas <code>true</code>.</p>
+Par rapport à la fonction de l'objet global {{jsxref("isFinite","isFinite()")}} qui convertit l'argument donné en un nombre, la fonction `Number.isFinite `ne convertit pas l'argument et ne renvoie pas `true`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush:js; notranslate">Number.isFinite(Infinity);  // false
+```js
+Number.isFinite(Infinity);  // false
 Number.isFinite(NaN);       // false
 Number.isFinite(-Infinity); // false
 
@@ -50,11 +49,12 @@ Number.isFinite("0");       // false, ce qui aurait
 
 Number.isFinite(null);      // false, ce qui aurait
                             // renvoyé true avc isFinite(null)
-</pre>
+```
 
-<h2 id="Prothèse_démulation_polyfill">Prothèse d'émulation (<em>polyfill</em>)</h2>
+## Prothèse d'émulation (_polyfill_)
 
-<pre class="brush:js; notranslate">// Number.isFinite polyfill
+```js
+// Number.isFinite polyfill
 // http://people.mozilla.org/~jorendorff/es6-draft.html#sec-number.isfinite
 if (typeof Number.isFinite !== 'function') {
     Number.isFinite = function isFinite(value) {
@@ -70,43 +70,28 @@ if (typeof Number.isFinite !== 'function') {
         return true;
     };
 }
-</pre>
+```
 
-<p>Deuxième version plus concise qui utilise la méthode globale <code>isFinite</code></p>
+Deuxième version plus concise qui utilise la méthode globale `isFinite`
 
-<pre class="brush: js notranslate">if (Number.isFinite === undefined) Number.isFinite = function(value) {
-    return typeof value === "number" &amp;&amp; isFinite(value);
-}</pre>
+```js
+if (Number.isFinite === undefined) Number.isFinite = function(value) {
+    return typeof value === "number" && isFinite(value);
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-number.isfinite', 'Number.isInteger')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-number.isfinite', 'Number.isInteger')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                         | Commentaires         |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES6', '#sec-number.isfinite', 'Number.isInteger')}}     | {{Spec2('ES6')}}         | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-number.isfinite', 'Number.isInteger')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Number.isFinite")}}</p>
+{{Compat("javascript.builtins.Number.isFinite")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'objet {{jsxref("Number")}} auquel appartient cette méthode</li>
- <li>La méthode {{jsxref("isFinite", "isFinite()")}} de l'objet global</li>
-</ul>
+- L'objet {{jsxref("Number")}} auquel appartient cette méthode
+- La méthode {{jsxref("isFinite", "isFinite()")}} de l'objet global

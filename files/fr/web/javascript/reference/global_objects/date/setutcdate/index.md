@@ -10,78 +10,52 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/setUTCDate
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/setUTCDate
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>setUTCDate()</strong></code> définit le jour du mois pour la date, selon UTC.</p>
+La méthode **`setUTCDate()`** définit le jour du mois pour la date, selon UTC.
 
-<div>{{EmbedInteractiveExample("pages/js/date-setutcdate.html")}}</div>
+{{EmbedInteractiveExample("pages/js/date-setutcdate.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>dateObj</var>.setUTCDate(valeurJour)</pre>
+    dateObj.setUTCDate(valeurJour)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>valeurJour</code></dt>
- <dd>Un entier de 1 à 31, représentant un jour dans le mois.</dd>
-</dl>
+- `valeurJour`
+  - : Un entier de 1 à 31, représentant un jour dans le mois.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Le nombre de millisecondes écoulées entre le premier janvier 1970 minuit, UTC et la date mise à jour.</p>
+Le nombre de millisecondes écoulées entre le premier janvier 1970 minuit, UTC et la date mise à jour.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Si le paramètre renseigné est en dehors des limites attendues, <code>setUTCDate()</code> tentera de mettre à jour la date en conséquence. Par exemple, si on utilise la valeur 40 pour <code>valeurJour</code>, et que le mois de la date est juin, le jour sera changé en 10 et le mois passera à juillet.</p>
+Si le paramètre renseigné est en dehors des limites attendues, `setUTCDate()` tentera de mettre à jour la date en conséquence. Par exemple, si on utilise la valeur 40 pour `valeurJour`, et que le mois de la date est juin, le jour sera changé en 10 et le mois passera à juillet.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_setUTCDate()">Utiliser <code>setUTCDate()</code></h3>
+### Utiliser `setUTCDate()`
 
-<pre class="brush: js">var leGrandJour = new Date();
+```js
+var leGrandJour = new Date();
 leGrandJour.setUTCDate(20);
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.3.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.9.5.37', 'Date.prototype.setUTCDate')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-date.prototype.setutcdate', 'Date.prototype.setUTCDate')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-date.prototype.setutcdate', 'Date.prototype.setUTCDate')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | État                         | Commentaires                                          |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------------------------- |
+| {{SpecName('ES1')}}                                                                                             | {{Spec2('ES1')}}         | Définition initiale. Implémentée avec JavaScript 1.3. |
+| {{SpecName('ES5.1', '#sec-15.9.5.37', 'Date.prototype.setUTCDate')}}                         | {{Spec2('ES5.1')}}     |                                                       |
+| {{SpecName('ES6', '#sec-date.prototype.setutcdate', 'Date.prototype.setUTCDate')}}         | {{Spec2('ES6')}}         |                                                       |
+| {{SpecName('ESDraft', '#sec-date.prototype.setutcdate', 'Date.prototype.setUTCDate')}} | {{Spec2('ESDraft')}} |                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Date.setUTCDate")}}</p>
+{{Compat("javascript.builtins.Date.setUTCDate")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Date.prototype.getUTCDate()")}}</li>
- <li>{{jsxref("Date.prototype.setDate()")}}</li>
-</ul>
+- {{jsxref("Date.prototype.getUTCDate()")}}
+- {{jsxref("Date.prototype.setDate()")}}

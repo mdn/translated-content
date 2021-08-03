@@ -9,37 +9,38 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/is_not_iterable
 original_slug: Web/JavaScript/Reference/Erreurs/is_not_iterable
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="syntaxbox">TypeError: 'x' is not iterable (Firefox, Chrome)
-TypeError: 'x' is not a function or its return value is not iterable (Chrome)
-</pre>
+    TypeError: 'x' is not iterable (Firefox, Chrome)
+    TypeError: 'x' is not a function or its return value is not iterable (Chrome)
 
-<h2 id="Type_d'erreur">Type d'erreur</h2>
+## Type d'erreur
 
-<p>{{jsxref("TypeError")}}</p>
+{{jsxref("TypeError")}}
 
-<h2 id="Quel_est_le_problème">Quel est le problème ?</h2>
+## Quel est le problème ?
 
-<p>La valeur passée comme opérande droit de <a href="/fr/docs/Web/JavaScript/Reference/Instructions/for...of"><code>for…of</code> </a>ou comme argument d'une fonction telle que {{jsxref("Promise.all")}} ou {{jsxref("TypedArray.from")}} n'est pas <a href="/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration">un objet itérable</a>.  Un objet itérable peut être un objet itérable natif tel qu'un objet {{jsxref("Array")}}, {{jsxref("String")}} ou {{jsxref("Map")}} ou le résultat d'un générateur ou un objet qui implémente <a href="/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_«_itérable_»">le protocole itérable</a>.</p>
+La valeur passée comme opérande droit de [`for…of` ](/fr/docs/Web/JavaScript/Reference/Instructions/for...of)ou comme argument d'une fonction telle que {{jsxref("Promise.all")}} ou {{jsxref("TypedArray.from")}} n'est pas [un objet itérable](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration).  Un objet itérable peut être un objet itérable natif tel qu'un objet {{jsxref("Array")}}, {{jsxref("String")}} ou {{jsxref("Map")}} ou le résultat d'un générateur ou un objet qui implémente [le protocole itérable](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_«_itérable_»).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Parcourir_les_propriétés_d'un_objet">Parcourir les propriétés d'un objet</h3>
+### Parcourir les propriétés d'un objet
 
-<p>En JavaScript, les objets ne sont pas itérables car ils n'implémentent pas le <a href="/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_«_itérable_»">protocole itérable</a>. On ne peut donc pas utiliser <code>for...of</code> afin d'en parcourir les propriétés.</p>
+En JavaScript, les objets ne sont pas itérables car ils n'implémentent pas le [protocole itérable](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_«_itérable_»). On ne peut donc pas utiliser `for...of` afin d'en parcourir les propriétés.
 
-<pre class="brush: js example-bad">var obj = { 'France': 'Paris', 'England': 'London' };
+```js example-bad
+var obj = { 'France': 'Paris', 'England': 'London' };
 for (let p of obj) { // TypeError: obj is not iterable
     // …
 }
-</pre>
+```
 
-<p>Si on souhaite utiliser un itérateur pour parcourir les propriétés (leurs noms ou leurs valeurs), on pourra utiliser les méthodes {{jsxref("Object.keys")}} ou {{jsxref("Object.entries")}} qui fournissent des itérateurs :</p>
+Si on souhaite utiliser un itérateur pour parcourir les propriétés (leurs noms ou leurs valeurs), on pourra utiliser les méthodes {{jsxref("Object.keys")}} ou {{jsxref("Object.entries")}} qui fournissent des itérateurs :
 
-<pre class="brush: js example-good">var obj = { 'France': 'Paris', 'England': 'London' };
+```js example-good
+var obj = { 'France': 'Paris', 'England': 'London' };
 // On parcourt les noms des propriétés
 for (let country of Object.keys(obj)) {
     var capital = obj[country];
@@ -48,11 +49,12 @@ for (let country of Object.keys(obj)) {
 
 for (const [country, capital] of Object.entries(obj))
     console.log(country, capital);
-</pre>
+```
 
-<p>On pourrait également utiliser un objet {{jsxref("Map")}} :</p>
+On pourrait également utiliser un objet {{jsxref("Map")}} :
 
-<pre class="brush: js example-good">var map = new Map;
+```js example-good
+var map = new Map;
 map.set('France', 'Paris');
 map.set('England', 'London');
 // On parcourt les noms des propriétés
@@ -66,37 +68,40 @@ for (let capital of map.values())
 
 for (const [country, capital] of map.entries())
     console.log(country, capital);
-</pre>
+```
 
-<h3 id="Itérer_grâce_à_un_générateur">Itérer grâce à un générateur</h3>
+### Itérer grâce à un générateur
 
-<p><a href="/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs">Les générateurs</a> sont des fonctions qui, lorsqu'elles sont appelées, produisent des objets itérables.</p>
+[Les générateurs](/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs) sont des fonctions qui, lorsqu'elles sont appelées, produisent des objets itérables.
 
-<pre class="brush: js example-bad">function* generate(a, b) {
+```js example-bad
+function* generate(a, b) {
   yield a;
   yield b;
 }
 
 for (let x of generate) // TypeError: generate is not iterable
     console.log(x);
-</pre>
+```
 
-<p>Lorsqu'elles ne sont pas appelées, l'objet {{jsxref("Function")}} correspondant au générateur peut être appelé mais il n'est pass itérable. Il ne faut donc pas oublier d'invoquer le générateur afin de parcourir les valeurs de l'itérateur qu'il produit.</p>
+Lorsqu'elles ne sont pas appelées, l'objet {{jsxref("Function")}} correspondant au générateur peut être appelé mais il n'est pass itérable. Il ne faut donc pas oublier d'invoquer le générateur afin de parcourir les valeurs de l'itérateur qu'il produit.
 
-<pre class="brush: js example-good">function* generate(a, b) {
+```js example-good
+function* generate(a, b) {
     yield a;
     yield b;
 }
 
 for (let x of generate(1,2))
     console.log(x);
-</pre>
+```
 
-<h3 id="Parcourir_un_itérable_spécifique">Parcourir un itérable spécifique</h3>
+### Parcourir un itérable spécifique
 
-<p>Les itérables spécifiques (<em>custom iterables</em>) peuvent être créés en implémentant la méthode {{jsxref("Symbol.iterator")}}. En implémentant cette méthode, il faut s'assurer que la valeur renvoyée est un objet qui est un itérateur. Autrement dit, l'objet renvoyé doit posséder une méthode <code>next()</code>.</p>
+Les itérables spécifiques (_custom iterables_) peuvent être créés en implémentant la méthode {{jsxref("Symbol.iterator")}}. En implémentant cette méthode, il faut s'assurer que la valeur renvoyée est un objet qui est un itérateur. Autrement dit, l'objet renvoyé doit posséder une méthode `next()`.
 
-<pre class="brush: js example-bad">const monIterableVide = {
+```js example-bad
+const monIterableVide = {
     [Symbol.iterator]() {
         return [] // [] est un iterable mais pas un itérateur
                   // car il n'a pas de méthode next
@@ -104,26 +109,25 @@ for (let x of generate(1,2))
 }
 
 Array.from(monIterableVide);  // TypeError: monIterableVide is not iterable
-</pre>
+```
 
-<p>Voici une implémentation correcte :</p>
+Voici une implémentation correcte :
 
-<pre class="brush: js example-good">const monIterableVide = {
+```js example-good
+const monIterableVide = {
     [Symbol.iterator]() {
         return [][Symbol.iterator]()
     }
 }
 
 Array.from(monIterableVide);  // []
-</pre>
+```
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_«_itérable_»">Le protocole itérable</a></li>
- <li>{{jsxref("Object.keys")}}</li>
- <li>{{jsxref("Object.entries")}}</li>
- <li>{{jsxref("Map")}}</li>
- <li><a href="/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs#Générateurs">Les générateurs</a></li>
- <li><code><a href="/fr/docs/Web/JavaScript/Reference/Instructions/for...of">for…of</a></code></li>
-</ul>
+- [Le protocole itérable](/fr/docs/Web/JavaScript/Reference/Les_protocoles_iteration#Le_protocole_«_itérable_»)
+- {{jsxref("Object.keys")}}
+- {{jsxref("Object.entries")}}
+- {{jsxref("Map")}}
+- [Les générateurs](/fr/docs/Web/JavaScript/Guide/iterateurs_et_generateurs#Générateurs)
+- [`for…of`](/fr/docs/Web/JavaScript/Reference/Instructions/for...of)

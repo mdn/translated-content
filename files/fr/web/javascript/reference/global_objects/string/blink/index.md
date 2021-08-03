@@ -12,73 +12,60 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/String/blink
 original_slug: Web/JavaScript/Reference/Objets_globaux/String/blink
 ---
-<div>{{JSRef}}{{deprecated_header}}</div>
+{{JSRef}}{{deprecated_header}}
 
-<p>La méthode <code><strong>blink()</strong></code> crée un élément HTML {{HTMLElement("blink")}} qui affiche la chaine de caractères en clignotant.</p>
+La méthode **`blink()`** crée un élément HTML {{HTMLElement("blink")}} qui affiche la chaine de caractères en clignotant.
 
-<div class="warning"><p><strong>Attention :</strong> Les textes clignotants sont fortement déconseillés par de nombreux standards d'accessibilité. L'élément <code>&lt;blink&gt;</code> est lui-même non standard et obsolète !</p></div>
+> **Attention :** Les textes clignotants sont fortement déconseillés par de nombreux standards d'accessibilité. L'élément `<blink>` est lui-même non standard et obsolète !
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>str</var>.blink()</pre>
+    str.blink()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une chaine de caractères représentant un élément HTML {{HTMLElement("blink")}}.</p>
+Une chaine de caractères représentant un élément HTML {{HTMLElement("blink")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code>blink()</code> place la chaine de caractères dans une balise <code>&lt;blink&gt;</code> :<br>
- <code>"&lt;blink&gt;str&lt;/blink&gt;</code>"</p>
+La méthode `blink()` place la chaine de caractères dans une balise `<blink>` :
+`"<blink>str</blink>`"
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>L'exemple suivant utilise des méthodes de <code>String</code> pour changer l'affichage d'une chaine de caractères :</p>
+L'exemple suivant utilise des méthodes de `String` pour changer l'affichage d'une chaine de caractères :
 
-<pre class="brush:js">var chaîneMonde = "Coucou monde";
+```js
+var chaîneMonde = "Coucou monde";
 
 console.log(chaîneMonde.blink());
 console.log(chaîneMonde.bold());
 console.log(chaîneMonde.italics());
-console.log(chaîneMonde.strike());</pre>
+console.log(chaîneMonde.strike());
+```
 
-<p>Cet exemple produira le code HTML suivant :</p>
+Cet exemple produira le code HTML suivant :
 
-<pre class="brush:html">&lt;blink&gt;Coucou monde&lt;/blink&gt;
-&lt;b&gt;Coucou monde&lt;/b&gt;
-&lt;i&gt;Coucou monde&lt;/i&gt;
-&lt;strike&gt;Coucou monde&lt;/strike&gt;</pre>
+```html
+<blink>Coucou monde</blink>
+<b>Coucou monde</b>
+<i>Coucou monde</i>
+<strike>Coucou monde</strike>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-string.prototype.blink', 'String.prototype.blink')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Définition initiale. Implémentée avec JavaScript 1.0. Définie dans l'annexe B (normative) pour les fonctionnalités additionnelles des navigateurs web.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.blink', 'String.prototype.blink')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td>Définie dans l'annexe B (normative) pour les fonctionnalités additionnelles des navigateurs web.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | État                         | Commentaires                                                                                                                                           |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('ES6', '#sec-string.prototype.blink', 'String.prototype.blink')}}         | {{Spec2('ES6')}}         | Définition initiale. Implémentée avec JavaScript 1.0. Définie dans l'annexe B (normative) pour les fonctionnalités additionnelles des navigateurs web. |
+| {{SpecName('ESDraft', '#sec-string.prototype.blink', 'String.prototype.blink')}} | {{Spec2('ESDraft')}} | Définie dans l'annexe B (normative) pour les fonctionnalités additionnelles des navigateurs web.                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.String.blink")}}</p>
+{{Compat("javascript.builtins.String.blink")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("String.prototype.bold()")}}</li>
- <li>{{jsxref("String.prototype.italics()")}}</li>
- <li>{{jsxref("String.prototype.strike()")}}</li>
-</ul>
+- {{jsxref("String.prototype.bold()")}}
+- {{jsxref("String.prototype.italics()")}}
+- {{jsxref("String.prototype.strike()")}}

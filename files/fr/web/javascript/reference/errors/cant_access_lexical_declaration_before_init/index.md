@@ -9,30 +9,30 @@ tags:
 translation_of: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
 original_slug: Web/JavaScript/Reference/Erreurs/Cant_access_lexical_declaration_before_init
 ---
-<div>{{jsSidebar("Errors")}}</div>
+{{jsSidebar("Errors")}}
 
-<h2 id="Message">Message</h2>
+## Message
 
-<pre class="syntaxbox">ReferenceError: Use before delaration (Edge)
-ReferenceError: can't access lexical declaration `X' before initialization (Firefox)
-ReferenceError: 'x' is not defined (Chrome)
-</pre>
+    ReferenceError: Use before delaration (Edge)
+    ReferenceError: can't access lexical declaration `X' before initialization (Firefox)
+    ReferenceError: 'x' is not defined (Chrome)
 
-<h2 id="Type_d'erreur">Type d'erreur</h2>
+## Type d'erreur
 
-<p>{{jsxref("ReferenceError")}}</p>
+{{jsxref("ReferenceError")}}
 
-<h2 id="Quel_est_le_problème">Quel est le problème ?</h2>
+## Quel est le problème ?
 
-<p>Il y a eu un accès à une variable déclarée avec <code>let</code> ou <code>const</code> avant que celle-ci ait été initialisée. Cela peut se produire dans n'importe quelle instruction de bloc avec une variable déclarée avec <code>let</code> ou <code>const</code> et qui est utilisée avant son initialisation.</p>
+Il y a eu un accès à une variable déclarée avec `let` ou `const` avant que celle-ci ait été initialisée. Cela peut se produire dans n'importe quelle instruction de bloc avec une variable déclarée avec `let` ou `const` et qui est utilisée avant son initialisation.
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<h3 id="Exemples_invalides">Exemples invalides</h3>
+### Exemples invalides
 
-<p>Dans l'exemple qui suit, la variable <code>toto</code> est redéclarée dans le bloc avec un second <code>let</code> et elle n'est donc pas initialisée.</p>
+Dans l'exemple qui suit, la variable `toto` est redéclarée dans le bloc avec un second `let` et elle n'est donc pas initialisée.
 
-<pre class="brush: js example-bad">function test(){
+```js example-bad
+function test(){
    let toto = 33;
    if (true) {
       let toto = (toto + 55);
@@ -41,23 +41,22 @@ ReferenceError: 'x' is not defined (Chrome)
    }
 }
 test();
-</pre>
+```
 
-<h3 id="Exemples_valides">Exemples valides</h3>
+### Exemples valides
 
-<p>Afin que <code>toto</code> puisse être modifiée au sein de l'instruction <code>if</code>, on enlèvera la redéclaration dans ce bloc :</p>
+Afin que `toto` puisse être modifiée au sein de l'instruction `if`, on enlèvera la redéclaration dans ce bloc :
 
-<pre class="brush: js example-good">function test(){
+```js example-good
+function test(){
    let toto = 33;
    if (true) {
       toto = (toto + 55);
    }
 }
 test();
-</pre>
+```
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/JavaScript/Reference/Instructions/let#Zone_morte_temporaire_(Temporal_Dead_Zone_TDZ)_et_les_erreurs_liées_à_let">La « zone morte temporelle » (ou TDZ pour « <em>Temporal Dead Zone</em> ») et les erreurs avec <code>let</code></a></li>
-</ul>
+- [La « zone morte temporelle » (ou TDZ pour « _Temporal Dead Zone_ ») et les erreurs avec `let`](</fr/docs/Web/JavaScript/Reference/Instructions/let#Zone_morte_temporaire_(Temporal_Dead_Zone_TDZ)_et_les_erreurs_liées_à_let>)

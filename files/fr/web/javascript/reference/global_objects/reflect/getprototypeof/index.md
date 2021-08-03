@@ -10,48 +10,47 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Reflect/getPrototypeOf
 original_slug: Web/JavaScript/Reference/Objets_globaux/Reflect/getPrototypeOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode statique <code><strong>Reflect</strong></code><strong><code>.getPrototypeOf()</code></strong> est semblable à la méthode {{jsxref("Object.getPrototypeOf()")}}. Elle renvoie le prototype (c'est-à-dire la valeur de la propriété interne <code>[[Prototype]]</code>) de l'objet donné.</p>
+La méthode statique **`Reflect`\*\***`.getPrototypeOf()`\*\* est semblable à la méthode {{jsxref("Object.getPrototypeOf()")}}. Elle renvoie le prototype (c'est-à-dire la valeur de la propriété interne `[[Prototype]]`) de l'objet donné.
 
-<div>{{EmbedInteractiveExample("pages/js/reflect-getprototypeof.html")}}</div>
+{{EmbedInteractiveExample("pages/js/reflect-getprototypeof.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Reflect.getPrototypeOf(<var>cible</var>)
-</pre>
+    Reflect.getPrototypeOf(cible)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>cible</code></dt>
- <dd>L'objet cible dont on souhaite obtenir le prototype.</dd>
-</dl>
+- `cible`
+  - : L'objet cible dont on souhaite obtenir le prototype.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Le prototype de l'objet ou {{jsxref("null")}} s'il n'y a aucune propriété héritée.</p>
+Le prototype de l'objet ou {{jsxref("null")}} s'il n'y a aucune propriété héritée.
 
-<h3 id="Exceptions_levées">Exceptions levées</h3>
+### Exceptions levées
 
-<p>Une erreur {{jsxref("TypeError")}} si <code>cible</code> n'est pas un {{jsxref("Object")}}.</p>
+Une erreur {{jsxref("TypeError")}} si `cible` n'est pas un {{jsxref("Object")}}.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>La méthode <code>Reflect.getPrototypeOf</code> renvoie le prototype (qui correspond en réalité à la valeur de la propriété interne <code>[[Prototype]]</code>) de l'objet passé en argument.</p>
+La méthode `Reflect.getPrototypeOf` renvoie le prototype (qui correspond en réalité à la valeur de la propriété interne `[[Prototype]]`) de l'objet passé en argument.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_Reflect.getPrototypeOf()">Utiliser <code>Reflect.getPrototypeOf()</code></h3>
+### Utiliser `Reflect.getPrototypeOf()`
 
-<pre class="brush: js">Reflect.getPrototypeOf({}); // Object.prototype
+```js
+Reflect.getPrototypeOf({}); // Object.prototype
 Reflect.getPrototypeOf(Object.prototype); // null
 Reflect.getPrototypeOf(Object.create(null)); // null
-</pre>
+```
 
-<h3 id="Comparaison_avec_Object.getPrototypeOf()">Comparaison avec <code>Object.getPrototypeOf()</code></h3>
+### Comparaison avec `Object.getPrototypeOf()`
 
-<pre class="brush: js">// Résultat identiques pour les objets
+```js
+// Résultat identiques pour les objets
 Object.getPrototypeOf({});  // Object.prototype
 Reflect.getPrototypeOf({}); // Object.prototype
 
@@ -67,37 +66,20 @@ Reflect.getPrototypeOf('toto'); // Throws TypeError
 // Pour obtenir le même effet qu'avec Object en ES2015, il
 // faut ajouter une opération de conversion explicite
 Reflect.getPrototypeOf(Object('toto')); // String.prototype
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-reflect.getprototypeof', 'Reflect.getPrototypeOf')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-reflect.getprototypeof', 'Reflect.getPrototypeOf')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | État                         | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-reflect.getprototypeof', 'Reflect.getPrototypeOf')}}     | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-reflect.getprototypeof', 'Reflect.getPrototypeOf')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Reflect.getPrototypeOf")}}</p>
+{{Compat("javascript.builtins.Reflect.getPrototypeOf")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Reflect")}}</li>
- <li>{{jsxref("Object.getPrototypeOf()")}}</li>
-</ul>
+- {{jsxref("Reflect")}}
+- {{jsxref("Object.getPrototypeOf()")}}

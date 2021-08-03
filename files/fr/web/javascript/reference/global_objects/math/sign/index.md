@@ -11,38 +11,37 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/sign
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/sign
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La fonction <code><strong>Math.sign()</strong></code> renvoie le signe d'un nombre et permet de savoir si un nombre est positif, négatif ou nul.</p>
+La fonction **`Math.sign()`** renvoie le signe d'un nombre et permet de savoir si un nombre est positif, négatif ou nul.
 
-<div>{{EmbedInteractiveExample("pages/js/math-sign.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-sign.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Math.sign(<var>x</var>)</pre>
+    Math.sign(x)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Un nombre.</dd>
-</dl>
+- `x`
+  - : Un nombre.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Un nombre qui représente le signe de l'argument. Si l'argument est un nombre positif, négatif, un zéro positif ou un zéro négatif, la fonction renverra respectivement <code>1</code>, <code>-1</code>, <code>0</code>, <code>-0</code>. Sinon, ce sera {{jsxref("NaN")}} qui sera renvoyé.</p>
+Un nombre qui représente le signe de l'argument. Si l'argument est un nombre positif, négatif, un zéro positif ou un zéro négatif, la fonction renverra respectivement `1`, `-1`, `0`, `-0`. Sinon, ce sera {{jsxref("NaN")}} qui sera renvoyé.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p><code>sign()</code> étant une méthode statique de <code>Math</code>, il faut utiliser <code>Math.<code>sign</code>()</code> et non pas la méthode d'un autre objet qui aurait été créé (<code>Math </code>n'est pas un constructeur).</p>
+`sign()` étant une méthode statique de `Math`, il faut utiliser `Math.sign()` et non pas la méthode d'un autre objet qui aurait été créé (`Math `n'est pas un constructeur).
 
-<p>Cette fonction peut renvoyer 5 valeurs : <code>1, -1, 0, -0, NaN,</code> qui indiquent respectivement que <code>x</code> est un nombre positif, un nombre négatif, zéro, la limite négative de zéro, et n'est pas un nombre pour {{jsxref("NaN")}}.</p>
+Cette fonction peut renvoyer 5 valeurs : `1, -1, 0, -0, NaN,` qui indiquent respectivement que `x` est un nombre positif, un nombre négatif, zéro, la limite négative de zéro, et n'est pas un nombre pour {{jsxref("NaN")}}.
 
-<p>L'argument passé à cette fonction sera implicitement converti au type <code>number</code>.</p>
+L'argument passé à cette fonction sera implicitement converti au type `number`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush:js">Math.sign(3)     //  1
+```js
+Math.sign(3)     //  1
 Math.sign(-3)    // -1
 Math.sign("-3")  // -1
 Math.sign(0)     //  0
@@ -50,40 +49,23 @@ Math.sign(-0)    // -0
 Math.sign(NaN)   // NaN
 Math.sign("foo") // NaN
 Math.sign()      // NaN
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.sign', 'Math.sign')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.sign', 'Math.sign')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                            | État                         | Commentaires         |
+| ------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{SpecName('ES6', '#sec-math.sign', 'Math.sign')}}     | {{Spec2('ES6')}}         | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-math.sign', 'Math.sign')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Math.sign")}}</p>
+{{Compat("javascript.builtins.Math.sign")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Math.abs()")}}</li>
- <li>{{jsxref("Math.ceil()")}}</li>
- <li>{{jsxref("Math.floor()")}}</li>
- <li>{{jsxref("Math.round()")}}</li>
- <li>{{jsxref("Math.trunc()")}}</li>
-</ul>
+- {{jsxref("Math.abs()")}}
+- {{jsxref("Math.ceil()")}}
+- {{jsxref("Math.floor()")}}
+- {{jsxref("Math.round()")}}
+- {{jsxref("Math.trunc()")}}

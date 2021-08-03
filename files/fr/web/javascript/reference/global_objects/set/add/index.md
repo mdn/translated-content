@@ -11,68 +11,50 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Set/add
 original_slug: Web/JavaScript/Reference/Objets_globaux/Set/add
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>add()</strong></code> permet d'ajouter un nouvel élément ayant une valeur donnée à un ensemble <code>Set</code>. Cette valeur sera ajoutée à la fin de l'objet <code>Set</code>.</p>
+La méthode **`add()`** permet d'ajouter un nouvel élément ayant une valeur donnée à un ensemble `Set`. Cette valeur sera ajoutée à la fin de l'objet `Set`.
 
-<div>{{EmbedInteractiveExample("pages/js/set-prototype-add.html")}}</div>
+{{EmbedInteractiveExample("pages/js/set-prototype-add.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>monSet</var>.add(<var>valeur</var>);</pre>
+    monSet.add(valeur);
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>valeur</code></dt>
- <dd>Ce paramètre est obligatoire. La valeur de l'élément qu'on souhaite ajouter à l'objet <code>Set</code>.</dd>
-</dl>
+- `valeur`
+  - : Ce paramètre est obligatoire. La valeur de l'élément qu'on souhaite ajouter à l'objet `Set`.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>L'objet <code>Set</code> (ce qui permet de chaîner une suite d'instructions utilisant cette méthode).</p>
+L'objet `Set` (ce qui permet de chaîner une suite d'instructions utilisant cette méthode).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: js">var monSet = new Set();
+```js
+var monSet = new Set();
 
 monSet.add(1);
 monSet.add(5).add("du texte"); // ajouts en chaîne
 
 console.log(monSet);
 // Set [1, 5, "du texte"]
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-set.prototype.add', 'Set.prototype.add')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-set.prototype.add', 'Set.prototype.add')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-set.prototype.add', 'Set.prototype.add')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-set.prototype.add', 'Set.prototype.add')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Set.add")}}</p>
+{{Compat("javascript.builtins.Set.add")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Set")}}</li>
- <li>{{jsxref("Set.prototype.delete()")}}</li>
- <li>{{jsxref("Set.prototype.has()")}}</li>
-</ul>
+- {{jsxref("Set")}}
+- {{jsxref("Set.prototype.delete()")}}
+- {{jsxref("Set.prototype.has()")}}

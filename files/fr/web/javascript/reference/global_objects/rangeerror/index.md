@@ -9,58 +9,55 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/RangeError
 original_slug: Web/JavaScript/Reference/Objets_globaux/RangeError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>L'objet <code><strong>RangeError</strong></code> permet d'indiquer une erreur lorsqu'une valeur fournie n'appartient pas à l'intervalle autorisé.</p>
+L'objet **`RangeError`** permet d'indiquer une erreur lorsqu'une valeur fournie n'appartient pas à l'intervalle autorisé.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">new RangeError([<var>message</var>[, nomFichier[, numLigne]]])</pre>
+    new RangeError([message[, nomFichier[, numLigne]]])
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>message</code></dt>
- <dd>Paramètre optionnel. Une description lisible (humainement) de l'erreur.</dd>
- <dt><code>nomFichier</code> {{non-standard_inline}}</dt>
- <dd>Paramètre optionnel. Le nom du fichier contenant le code à l'origine de cette exception.</dd>
- <dt><code>numLigne </code>{{non-standard_inline}}</dt>
- <dd>Paramètre optionnel. Le numéro de la ligne du code à l'origine de cette exception.</dd>
-</dl>
+- `message`
+  - : Paramètre optionnel. Une description lisible (humainement) de l'erreur.
+- `nomFichier` {{non-standard_inline}}
+  - : Paramètre optionnel. Le nom du fichier contenant le code à l'origine de cette exception.
+- `numLigne `{{non-standard_inline}}
+  - : Paramètre optionnel. Le numéro de la ligne du code à l'origine de cette exception.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Une exception <code>RangeError</code> est levée lorsqu'une valeur est passée comme argument à une fonction qui n'accepte pas de valeurs dans cet intervalle. Par exemple, cela peut être le cas quand on souhaite créer un tableau avec une longueur illégale via {{jsxref("Array")}} ou lorsqu'on passe des valeurs incorrectes aux méthodes {{jsxref("Number.toExponential()")}}, {{jsxref("Number.toFixed()")}} ou {{jsxref("Number.toPrecision()")}}. Cette exception n'est pas limitée aux problèmes d'intervalles numériques et peuvent également se produire lorsqu'on passe une valeur non autorisée à {{jsxref("String.prototype.normalize()")}}.</p>
+Une exception `RangeError` est levée lorsqu'une valeur est passée comme argument à une fonction qui n'accepte pas de valeurs dans cet intervalle. Par exemple, cela peut être le cas quand on souhaite créer un tableau avec une longueur illégale via {{jsxref("Array")}} ou lorsqu'on passe des valeurs incorrectes aux méthodes {{jsxref("Number.toExponential()")}}, {{jsxref("Number.toFixed()")}} ou {{jsxref("Number.toPrecision()")}}. Cette exception n'est pas limitée aux problèmes d'intervalles numériques et peuvent également se produire lorsqu'on passe une valeur non autorisée à {{jsxref("String.prototype.normalize()")}}.
 
-<h2 id="Propriétés">Propriétés</h2>
+## Propriétés
 
-<dl>
- <dt>{{jsxref("RangeError.prototype")}}</dt>
- <dd>Cette propriété permet d'ajouter des propriétés à toutes les instances de <code>RangeError</code>.</dd>
-</dl>
+- {{jsxref("RangeError.prototype")}}
+  - : Cette propriété permet d'ajouter des propriétés à toutes les instances de `RangeError`.
 
-<h2 id="Méthodes">Méthodes</h2>
+## Méthodes
 
-<p>L'objet global <code>RangeError</code> ne contient pas de méthodes propres mais héritent de certaines méthodes via la chaîne de prototypes.</p>
+L'objet global `RangeError` ne contient pas de méthodes propres mais héritent de certaines méthodes via la chaîne de prototypes.
 
-<h2 id="Instances_de_RangeError">Instances de <code>RangeError</code></h2>
+## Instances de `RangeError`
 
-<h3 id="Propriétés_2">Propriétés</h3>
+### Propriétés
 
-<p>{{ page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/RangeError/prototype','Properties') }}</p>
+{{ page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/RangeError/prototype','Properties') }}
 
-<h3 id="Méthodes_2">Méthodes</h3>
+### Méthodes
 
-<p>{{ page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/RangeError/prototype','Methods') }}</p>
+{{ page('/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/RangeError/prototype','Methods') }}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_RangeError">Utiliser <code>RangeError</code></h3>
+### Utiliser `RangeError`
 
-<pre class="brush: js">var MIN = 200;
+```js
+var MIN = 200;
 var MAX = 300;
 var vérifier = function( num ) {
-  if( num &lt; MIN || num &gt; MAX ) {
+  if( num < MIN || num > MAX ) {
     throw new RangeError( "Le paramètre doit être compris entre " + MIN + " et " + MAX );
   }
 };
@@ -72,11 +69,13 @@ catch (e) {
   if (e instanceof RangeError ){
     // On gère ce qui se passe en cas d'erreur
   }
-}</pre>
+}
+```
 
-<h3 id="Utiliser_RangeError_avec_des_valeurs_non-numériques">Utiliser <code>RangeError</code> avec des valeurs non-numériques</h3>
+### Utiliser `RangeError` avec des valeurs non-numériques
 
-<pre class="brush: js">function verifier(valeur){
+```js
+function verifier(valeur){
   if(["pomme", "banane", "carotte"].includes(valeur) === false){
     throw new RangeError("L'argument n'est pas un fruit parmi pomme / banane ou carotte.");
   }
@@ -90,52 +89,27 @@ catch(erreur) {
     //On gère ce qui se passe en cas d'erreur
   }
 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES3')}}</td>
-   <td>{{Spec2('ES3')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.11.6.2', 'RangeError')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-rangeerror', 'RangeError')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-rangeerror', 'RangeError')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                    | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES3')}}                                                                                                         | {{Spec2('ES3')}}         | Définition initiale. |
+| {{SpecName('ES5.1', '#sec-15.11.6.2', 'RangeError')}}                                                         | {{Spec2('ES5.1')}}     |                      |
+| {{SpecName('ES6', '#sec-native-error-types-used-in-this-standard-rangeerror', 'RangeError')}}     | {{Spec2('ES6')}}         |                      |
+| {{SpecName('ESDraft', '#sec-native-error-types-used-in-this-standard-rangeerror', 'RangeError')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.RangeError")}}</p>
+{{Compat("javascript.builtins.RangeError")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Error")}}</li>
- <li>{{jsxref("Array")}}</li>
- <li>{{jsxref("RangeError.prototype")}}</li>
- <li>{{jsxref("Number.toExponential()")}}</li>
- <li>{{jsxref("Number.toFixed()")}}</li>
- <li>{{jsxref("Number.toPrecision()")}}</li>
- <li>{{jsxref("String.prototype.normalize()")}}</li>
-</ul>
+- {{jsxref("Error")}}
+- {{jsxref("Array")}}
+- {{jsxref("RangeError.prototype")}}
+- {{jsxref("Number.toExponential()")}}
+- {{jsxref("Number.toFixed()")}}
+- {{jsxref("Number.toPrecision()")}}
+- {{jsxref("String.prototype.normalize()")}}

@@ -11,93 +11,77 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/cosh
 original_slug: Web/JavaScript/Reference/Objets_globaux/Math/cosh
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La fonction <code><strong>Math.cosh()</strong></code> renvoie le cosinus hyperbolique d'un nombre, défini par :</p>
+La fonction **`Math.cosh()`** renvoie le cosinus hyperbolique d'un nombre, défini par :
 
-<p><math><semantics><mrow><mstyle mathvariant="monospace"><mo lspace="0em" rspace="thinmathspace">Math.cosh(x)</mo></mstyle><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.cosh(x)}} = \frac{e^x + e^{-x}}{2}</annotation></semantics></math></p>
+<math><semantics><mrow><mstyle mathvariant="monospace"><mo lspace="0em" rspace="thinmathspace">Math.cosh(x)</mo></mstyle><mo>=</mo><mfrac><mrow><msup><mi>e</mi><mi>x</mi></msup><mo>+</mo><msup><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="TeX">\mathtt{\operatorname{Math.cosh(x)}} = \frac{e^x + e^{-x}}{2}</annotation></semantics></math>
 
-<div>{{EmbedInteractiveExample("pages/js/math-cosh.html")}}</div>
+{{EmbedInteractiveExample("pages/js/math-cosh.html")}}
 
+(Voir la page sur {{jsxref("Objets_globaux/Math/E","e","",1)}})
 
+## Syntaxe
 
-<p>(Voir la page sur {{jsxref("Objets_globaux/Math/E","e","",1)}})</p>
+    Math.cosh(x)
 
-<h2 id="Syntaxe">Syntaxe</h2>
+### Paramètres
 
-<pre class="syntaxbox">Math.cosh(<var>x</var>)</pre>
+- `x`
+  - : Un nombre.
 
-<h3 id="Paramètres">Paramètres</h3>
+### Valeur de retour
 
-<dl>
- <dt><code>x</code></dt>
- <dd>Un nombre.</dd>
-</dl>
+Le cosinus hyperbolique du nombre passé en argument.
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+## Description
 
-<p>Le cosinus hyperbolique du nombre passé en argument.</p>
+`cosh()` étant une méthode statique de `Math`, il faut utiliser `Math.cosh()` et non pas la méthode d'un objet `Math` créé sur mesure (`Math` n'est pas un constructeur).
 
-<h2 id="Description">Description</h2>
+## Exemple
 
-<p><code>cosh()</code> étant une méthode statique de <code>Math</code>, il faut utiliser <code>Math.cosh()</code> et non pas la méthode d'un objet <code>Math</code> créé sur mesure (<code>Math</code> n'est pas un constructeur).</p>
+### Utiliser `Math.cosh()`
 
-<h2 id="Exemple">Exemple</h2>
-
-<h3 id="Utiliser_Math.cosh()">Utiliser <code>Math.cosh()</code></h3>
-
-<pre class="brush:js">Math.cosh(0);  // 1
+```js
+Math.cosh(0);  // 1
 Math.cosh(1);  // 1.5430806348152437
 Math.cosh(-1); // 1.5430806348152437
-</pre>
+```
 
-<h2 id="Prothèse_d'émulation_(polyfill)">Prothèse d'émulation (<em>polyfill</em>)</h2>
+## Prothèse d'émulation (_polyfill_)
 
-<p>Cette fonction peut être émulée grâce à la fonction {{jsxref("Objets_globaux/Math/exp", "Math.exp()")}} :</p>
+Cette fonction peut être émulée grâce à la fonction {{jsxref("Objets_globaux/Math/exp", "Math.exp()")}} :
 
-<pre class="brush: js">Math.cosh = Math.cosh || function(x) {
+```js
+Math.cosh = Math.cosh || function(x) {
     return (Math.exp(x) + Math.exp(-x)) / 2;
-}</pre>
+}
+```
 
-<p>On peut également utiliser un unique appel à {{jsxref("Objets_globaux/Math/exp", "exp()")}} :</p>
+On peut également utiliser un unique appel à {{jsxref("Objets_globaux/Math/exp", "exp()")}} :
 
-<pre class="brush: js">Math.cosh = Math.cosh || function(x) {
+```js
+Math.cosh = Math.cosh || function(x) {
     var y = Math.exp(x);
     return (y + 1 / y) / 2;
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.cosh', 'Math.cosh')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.cosh', 'Math.cosh')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                            | État                         | Commentaires         |
+| ------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{SpecName('ES6', '#sec-math.cosh', 'Math.cosh')}}     | {{Spec2('ES6')}}         | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-math.cosh', 'Math.cosh')}} | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Math.cosh")}}</p>
+{{Compat("javascript.builtins.Math.cosh")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("Math.acosh()")}}</li>
- <li>{{jsxref("Math.asinh()")}}</li>
- <li>{{jsxref("Math.atanh()")}}</li>
- <li>{{jsxref("Math.sinh()")}}</li>
- <li>{{jsxref("Math.tanh()")}}</li>
-</ul>
+- {{jsxref("Math.acosh()")}}
+- {{jsxref("Math.asinh()")}}
+- {{jsxref("Math.atanh()")}}
+- {{jsxref("Math.sinh()")}}
+- {{jsxref("Math.tanh()")}}

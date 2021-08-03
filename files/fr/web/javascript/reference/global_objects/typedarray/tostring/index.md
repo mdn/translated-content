@@ -11,66 +11,51 @@ tags:
 translation_of: Web/JavaScript/Reference/Global_Objects/TypedArray/toString
 original_slug: Web/JavaScript/Reference/Objets_globaux/TypedArray/toString
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p>La méthode <code><strong>toString()</strong></code> renvoie une chaîne de caractères qui représente le tableau typé et ses éléments. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.toString()")}}<em>.</em> Dans la suite de cet article, <em>TypedArray</em> fait référence à <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray">l'un des types de tableau typé listés ici</a>.</p>
+La méthode **`toString()`** renvoie une chaîne de caractères qui représente le tableau typé et ses éléments. Cette méthode utilise le même algorithme que {{jsxref("Array.prototype.toString()")}}_._ Dans la suite de cet article, _TypedArray_ fait référence à [l'un des types de tableau typé listés ici](/fr/docs/Web/JavaScript/Reference/Objets_globaux/TypedArray#Les_objets_TypedArray).
 
-<div>{{EmbedInteractiveExample("pages/js/typedarray-tostring.html")}}</div>
+{{EmbedInteractiveExample("pages/js/typedarray-tostring.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>typedarray</var>.toString()</pre>
+    typedarray.toString()
 
-<h3 id="Valeur_de_retour">Valeur de retour</h3>
+### Valeur de retour
 
-<p>Une chaîne de caractères qui représente les éléments du tableau typé.</p>
+Une chaîne de caractères qui représente les éléments du tableau typé.
 
-<h2 id="Description">Description</h2>
+## Description
 
-<p>Les objets {{jsxref("TypedArray")}} surchargent la méthode <code>toString</code> de {{jsxref("Object")}}. Pour les objets <code>TypedArray</code>, la méthode <code>toString</code> fusionne le tableau et renovoie une chaîne de caractères contenant les éléments du tableau, chacun séparés par une virgule. Par exemple :</p>
+Les objets {{jsxref("TypedArray")}} surchargent la méthode `toString` de {{jsxref("Object")}}. Pour les objets `TypedArray`, la méthode `toString` fusionne le tableau et renovoie une chaîne de caractères contenant les éléments du tableau, chacun séparés par une virgule. Par exemple :
 
-<pre class="brush: js">var numbers = new Uint8Array([2, 5, 8, 1, 4])
+```js
+var numbers = new Uint8Array([2, 5, 8, 1, 4])
 numbers.toString(); // "2,5,8,1,4"
-</pre>
+```
 
-<p>JavaScript appelle automatiquement la méthode <code>toString()</code> lorsqu'un tableau typé doit être manipulé sous une forme textuelle (par exemple lorsqu'il est utilisé avec une chaîne de caractères dans une concaténation).</p>
+JavaScript appelle automatiquement la méthode `toString()` lorsqu'un tableau typé doit être manipulé sous une forme textuelle (par exemple lorsqu'il est utilisé avec une chaîne de caractères dans une concaténation).
 
-<h3 id="Compatibilité">Compatibilité</h3>
+### Compatibilité
 
-<p>Si un navigateur ne prend pas encore en charge la méthode <code>TypedArray.prototype.toString()</code>, le moteur JavaScript utilisera la méthode <code>toString</code> rattachée à {{jsxref("Object")}} :</p>
+Si un navigateur ne prend pas encore en charge la méthode `TypedArray.prototype.toString()`, le moteur JavaScript utilisera la méthode `toString` rattachée à {{jsxref("Object")}} :
 
-<pre class="brush: js">var numbers = new Uint8Array([2, 5, 8, 1, 4])
+```js
+var numbers = new Uint8Array([2, 5, 8, 1, 4])
 numbers.toString(); // "[object Uint8Array]"
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES2015', '#sec-%typedarray%.prototype.tostring', 'TypedArray.prototype.toString')}}</td>
-   <td>{{Spec2('ES2015')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-%typedarray%.prototype.tostring', 'Array.prototype.toString')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                    | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('ES2015', '#sec-%typedarray%.prototype.tostring', 'TypedArray.prototype.toString')}} | {{Spec2('ES2015')}}     | Définition initiale. |
+| {{SpecName('ESDraft', '#sec-%typedarray%.prototype.tostring', 'Array.prototype.toString')}}         | {{Spec2('ESDraft')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.TypedArray.toString")}}</p>
+{{Compat("javascript.builtins.TypedArray.toString")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{jsxref("TypedArray.prototype.join()")}}</li>
-</ul>
+- {{jsxref("TypedArray.prototype.join()")}}
