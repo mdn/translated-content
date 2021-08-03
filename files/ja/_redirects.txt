@@ -3379,7 +3379,7 @@
 /ja/docs/Updating_extensions_for_Firefox_3	/ja/docs/Mozilla/Firefox/Releases/3/Updating_extensions
 /ja/docs/Updating_extensions_for_Firefox_3.1	/ja/docs/Mozilla/Firefox/Releases/3.5/Updating_extensions
 /ja/docs/Updating_web_applications_for_Firefox_3	/ja/docs/Mozilla/Firefox/Releases/3/Updating_web_applications
-/ja/docs/User_Agent_Strings_Reference	/ja/docs/conflicting/Web/HTTP/Headers/User-Agent/Firefox
+/ja/docs/User_Agent_Strings_Reference	/ja/docs/Web/HTTP/Headers/User-Agent/Firefox
 /ja/docs/Using_Firefox_1.5_caching	/ja/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 /ja/docs/Using_HTML5_audio_and_video	/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 /ja/docs/Using_HTML5_audio_and_video-redirect-1	/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
