@@ -43,10 +43,10 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/String/fromCharCode
 <p>Pour les caractères du plan multilingue de base, UTF-16 utilise une seule unité de code :</p>
 
 <pre class="brush:js">String.fromCharCode(65,66,67); // ABC
-String.fromCharCode(0x2014);   // "<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">—"
+String.fromCharCode(0x2014);   // "—"
 String.fromCharCode(0x12014);  // "—" également, le 1 a été tronqué
 String.fromCharCode(8212);     // renvoie également "—" car 8212
-                               // est la forme décimale</span></span></span></span>
+                               // est la forme décimale
 </pre>
 
 <p>Les caractères hors de ce plan utilisent deux unités de code (on parle de <em>surrogate pair</em>) :</p>

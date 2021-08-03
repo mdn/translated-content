@@ -58,7 +58,7 @@ translation_of: Web/API/Canvas_API/Tutorial/Basic_usage
 
 <p>{{HTMLElement("canvas")}} 元素创造了一个固定大小的画布，它公开了一个或多个<strong>渲染上下文</strong>，其可以用来绘制和处理要展示的内容。我们将会将注意力放在2D渲染上下文中。其他种类的上下文也许提供了不同种类的渲染方式；比如， <a href="/en-US/docs/Web/WebGL" title="/en-US/docs/Web/WebGL">WebGL</a> 使用了基于<a class="external" href="http://www.khronos.org/opengles/" rel="external" title="http://en.wikipedia.org/wiki/OpenGL_ES">OpenGL ES</a>的3D上下文 ("experimental-webgl") 。</p>
 
-<p>canvas起初是空白的。为了展示，首先脚本需要找到渲染上下文，然后在它的上面绘制。{{HTMLElement("canvas")}} 元素有一个叫做 {{domxref("HTMLCanvasElement.getContext", "getContext()")}} 的方法，这个方法是用来获得渲染上下文和它的绘画功能。<code>getContext()</code>只有一个参数，上下文的格式。对于2D图像而言，如本教程，你可以使用 {{domxref("CanvasRenderingContext2D")}}。</p>
+<p>canvas起初是空白的。为了展示，首先脚本需要找到渲染上下文，然后在它的上面绘制。{{HTMLElement("canvas")}} 元素有一个叫做 {{domxref("HTMLCanvasElement.getContext", "getContext()")}} 的方法，这个方法是用来获得渲染上下文和它的绘画功能。<code>getContext()</code>接受一个参数，即上下文的类型。对于2D图像而言，如本教程，你可以使用 {{domxref("CanvasRenderingContext2D")}}。</p>
 
 <pre class="brush: js">var canvas = document.getElementById('tutorial');
 var ctx = canvas.getContext('2d');
