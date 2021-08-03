@@ -77,7 +77,7 @@ Hello #2</pre>
 
 <p>このマクロからのデータは、テンプレートコード内で <code class="language-javascript">$0</code> 引数のオブジェクトとして利用できます (例えば、 <code>$0.Alpha</code>, <code>$0.Beta</code>, <code>$0.Foo</code>)。これにより、引数の単純なリストで実現することが難しい又は不可能な複雑なデータ構造を、マクロ引数で表すことができます。</p>
 
-<p>なお、この引数の形はとても繊細です。 — 正確に <a href="http://json.org/" title="http://json.org/">JSON の構文</a>に従っていなければならず、間違いを犯しやすいエスケープ文字の要件が求められます (例えば、すべてのスラッシュをエスケープするなど)。疑わしい場合は、 <a href="http://jsonlint.com/" title="http://jsonlint.com/">JSON をバリデーターに掛けてみてください</a>。</p>
+<p>なお、この引数の形はとても繊細です。 — 正確に <a href="http://json.org/" title="http://json.org/">JSON の構文</a>に従っていなければならず、間違いを犯しやすいエスケープ文字の要件が求められます (例えば、すべてのスラッシュをエスケープするなど)。疑わしい場合は、 <a href="http://jsonlint.com/">JSON をバリデーターに掛けてみてください</a>。</p>
 
 <h4 id="How_to_write_in_text" name="How_to_write_in_text">「\{{」を記述する方法</h4>
 
@@ -202,7 +202,7 @@ Hello #2</pre>
 
 <h4 id="Built-in_methods" name="Built-in_methods">ビルトインメソッド</h4>
 
-<p>This manually-maintained documentation is likely to fall out of date with the code. With that in mind, <a class="link-https" href="https://github.com/mdn/kumascript/blob/master/lib/kumascript/api.js#L175" title="https://github.com/mdn/kumascript/blob/master/lib/kumascript/api.js#L208">you can always check out the latest state of built-in APIs in the KumaScript source</a>. But here is a selection of useful methods exposed to templates:</p>
+<p>This manually-maintained documentation is likely to fall out of date with the code. With that in mind, <a class="link-https" href="https://github.com/mdn/kumascript/blob/master/lib/kumascript/api.js#L175">you can always check out the latest state of built-in APIs in the KumaScript source</a>. But here is a selection of useful methods exposed to templates:</p>
 
 <dl>
  <dt><code class="language-javascript">md5(string)</code></dt>
@@ -223,7 +223,7 @@ Hello #2</pre>
  <dt><code class="language-javascript">cacheFn(key, timeout, function_to_cache)</code></dt>
  <dd>Using the given key and cache entry lifetime, cache the results of the given function. Honors the value of <code>env.cache_control</code> to invalidate cache on <code>no-cache</code>, which can be sent by a logged-in user hitting shift-refresh.</dd>
  <dt><code class="language-javascript">request</code></dt>
- <dd>Access to <a class="link-https" href="https://github.com/mikeal/request" title="https://github.com/mikeal/request"><code>mikeal/request</code></a>, a library for making HTTP requests. Using this module in KumaScript templates is not yet very friendly, so you may want to wrap usage in module APIs that simplify things.</dd>
+ <dd>Access to <a class="link-https" href="https://github.com/mikeal/request"><code>mikeal/request</code></a>, a library for making HTTP requests. Using this module in KumaScript templates is not yet very friendly, so you may want to wrap usage in module APIs that simplify things.</dd>
  <dt><code class="language-javascript">log.debug(string)</code></dt>
  <dd>Outputs a debug message into the script log on the page (i.e. the big red box that usually displays errors).</dd>
 </dl>
