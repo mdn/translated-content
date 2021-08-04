@@ -49492,31 +49492,6 @@
       "RobinEgg"
     ]
   },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Package_your_extension_": {
-    "modified": "2019-03-18T21:04:26.854Z",
-    "contributors": [
-      "Uemmra3",
-      "stmkza",
-      "MichinariNukazawa"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension": {
-    "modified": "2019-03-18T21:08:02.889Z",
-    "contributors": [
-      "Uemmra3",
-      "YujiSoftware",
-      "hashedhyphen",
-      "dynamis",
-      "lv7777"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox": {
-    "modified": "2019-03-18T21:07:03.772Z",
-    "contributors": [
-      "Raysphere24",
-      "hashedhyphen"
-    ]
-  },
   "orphaned/Mozilla_Modules_and_Module_Ownership": {
     "modified": "2019-01-16T15:50:48.596Z",
     "contributors": [
