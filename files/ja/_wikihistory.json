@@ -7999,13 +7999,6 @@
       "Sheppy"
     ]
   },
-  "Mozilla/Firefox/Experimental_features": {
-    "modified": "2019-03-18T21:45:37.616Z",
-    "contributors": [
-      "silverskyvicto",
-      "karaage-kun"
-    ]
-  },
   "Mozilla/Firefox/Releases": {
     "modified": "2020-10-24T22:59:03.287Z",
     "contributors": [
@@ -8128,14 +8121,6 @@
       "saneyuki_s"
     ]
   },
-  "Mozilla/Firefox/Releases/17/Site_compatibility": {
-    "modified": "2019-01-16T16:50:24.947Z",
-    "contributors": [
-      "kohei.yoshino",
-      "omasanori",
-      "ethertank"
-    ]
-  },
   "Mozilla/Firefox/Releases/18": {
     "modified": "2019-03-23T23:37:31.134Z",
     "contributors": [
@@ -8146,14 +8131,6 @@
       "nodaguti"
     ]
   },
-  "Mozilla/Firefox/Releases/18/Site_compatibility": {
-    "modified": "2019-01-16T16:50:47.476Z",
-    "contributors": [
-      "kohei.yoshino",
-      "omasanori",
-      "ethertank"
-    ]
-  },
   "Mozilla/Firefox/Releases/19": {
     "modified": "2019-03-23T23:36:11.284Z",
     "contributors": [
@@ -8161,13 +8138,6 @@
       "kohei.yoshino",
       "ethertank",
       "yyss"
-    ]
-  },
-  "Mozilla/Firefox/Releases/19/Site_compatibility": {
-    "modified": "2019-01-16T16:50:47.334Z",
-    "contributors": [
-      "kohei.yoshino",
-      "omasanori"
     ]
   },
   "Mozilla/Firefox/Releases/2": {
@@ -8211,13 +8181,6 @@
       "ethertank"
     ]
   },
-  "Mozilla/Firefox/Releases/20/Site_compatibility": {
-    "modified": "2019-01-16T16:53:31.342Z",
-    "contributors": [
-      "kohei.yoshino",
-      "omasanori"
-    ]
-  },
   "Mozilla/Firefox/Releases/21": {
     "modified": "2019-11-20T21:19:26.122Z",
     "contributors": [
@@ -8228,26 +8191,12 @@
       "ethertank"
     ]
   },
-  "Mozilla/Firefox/Releases/21/Site_compatibility": {
-    "modified": "2019-01-16T17:00:34.131Z",
-    "contributors": [
-      "kohei.yoshino",
-      "omasanori"
-    ]
-  },
   "Mozilla/Firefox/Releases/22": {
     "modified": "2019-03-23T23:32:42.128Z",
     "contributors": [
       "kohei.yoshino",
       "yyss",
       "ethertank"
-    ]
-  },
-  "Mozilla/Firefox/Releases/22/Site_compatibility": {
-    "modified": "2019-01-16T17:00:50.108Z",
-    "contributors": [
-      "kohei.yoshino",
-      "omasanori"
     ]
   },
   "Mozilla/Firefox/Releases/23": {
@@ -8257,26 +8206,11 @@
       "yyss"
     ]
   },
-  "Mozilla/Firefox/Releases/23/Site_compatibility": {
-    "modified": "2019-01-16T17:06:04.279Z",
-    "contributors": [
-      "kohei.yoshino",
-      "omasanori"
-    ]
-  },
   "Mozilla/Firefox/Releases/24": {
     "modified": "2019-03-23T23:27:22.220Z",
     "contributors": [
       "kohei.yoshino",
       "yyss"
-    ]
-  },
-  "Mozilla/Firefox/Releases/24/Site_compatibility": {
-    "modified": "2019-01-16T17:27:45.788Z",
-    "contributors": [
-      "kohei.yoshino",
-      "teoli",
-      "omasanori"
     ]
   },
   "Mozilla/Firefox/Releases/25": {
@@ -8287,24 +8221,11 @@
       "ntim007"
     ]
   },
-  "Mozilla/Firefox/Releases/25/Site_Compatibility": {
-    "modified": "2019-01-16T17:41:43.600Z",
-    "contributors": [
-      "kohei.yoshino",
-      "omasanori"
-    ]
-  },
   "Mozilla/Firefox/Releases/26": {
     "modified": "2019-03-23T23:25:40.788Z",
     "contributors": [
       "kohei.yoshino",
       "yyss"
-    ]
-  },
-  "Mozilla/Firefox/Releases/26/Site_Compatibility": {
-    "modified": "2019-01-16T17:49:15.934Z",
-    "contributors": [
-      "kohei.yoshino"
     ]
   },
   "Mozilla/Firefox/Releases/27": {
@@ -8315,12 +8236,6 @@
       "frankyan"
     ]
   },
-  "Mozilla/Firefox/Releases/27/Site_Compatibility": {
-    "modified": "2019-01-16T17:53:24.443Z",
-    "contributors": [
-      "kohei.yoshino"
-    ]
-  },
   "Mozilla/Firefox/Releases/28": {
     "modified": "2019-03-23T23:22:45.315Z",
     "contributors": [
@@ -8329,25 +8244,12 @@
       "Zefling"
     ]
   },
-  "Mozilla/Firefox/Releases/28/Site_Compatibility": {
-    "modified": "2019-01-16T18:01:55.743Z",
-    "contributors": [
-      "kohei.yoshino",
-      "omasanori"
-    ]
-  },
   "Mozilla/Firefox/Releases/29": {
     "modified": "2019-03-23T23:21:24.109Z",
     "contributors": [
       "Sebastianz",
       "kohei.yoshino",
       "yyss"
-    ]
-  },
-  "Mozilla/Firefox/Releases/29/Site_Compatibility": {
-    "modified": "2019-01-16T18:10:11.899Z",
-    "contributors": [
-      "kohei.yoshino"
     ]
   },
   "Mozilla/Firefox/Releases/3": {
@@ -8471,12 +8373,6 @@
       "teoli"
     ]
   },
-  "Mozilla/Firefox/Releases/30/Site_Compatibility": {
-    "modified": "2019-01-16T18:26:54.689Z",
-    "contributors": [
-      "kohei.yoshino"
-    ]
-  },
   "Mozilla/Firefox/Releases/31": {
     "modified": "2019-03-23T23:17:44.092Z",
     "contributors": [
@@ -8485,23 +8381,11 @@
       "fred.wang"
     ]
   },
-  "Mozilla/Firefox/Releases/31/Site_Compatibility": {
-    "modified": "2019-01-16T18:49:36.783Z",
-    "contributors": [
-      "kohei.yoshino"
-    ]
-  },
   "Mozilla/Firefox/Releases/32": {
     "modified": "2019-03-23T23:15:23.740Z",
     "contributors": [
       "kohei.yoshino",
       "yyss"
-    ]
-  },
-  "Mozilla/Firefox/Releases/32/Site_Compatibility": {
-    "modified": "2019-01-16T19:07:26.668Z",
-    "contributors": [
-      "kohei.yoshino"
     ]
   },
   "Mozilla/Firefox/Releases/33": {
@@ -8512,25 +8396,11 @@
       "yyss"
     ]
   },
-  "Mozilla/Firefox/Releases/33/Site_Compatibility": {
-    "modified": "2019-01-16T19:22:52.315Z",
-    "contributors": [
-      "kohei.yoshino",
-      "syoichi"
-    ]
-  },
   "Mozilla/Firefox/Releases/34": {
     "modified": "2019-03-23T23:10:15.502Z",
     "contributors": [
       "kohei.yoshino",
       "yyss"
-    ]
-  },
-  "Mozilla/Firefox/Releases/34/Site_Compatibility": {
-    "modified": "2019-01-16T19:30:49.366Z",
-    "contributors": [
-      "kohei.yoshino",
-      "syoichi"
     ]
   },
   "Mozilla/Firefox/Releases/35": {
@@ -8541,24 +8411,12 @@
       "yyss"
     ]
   },
-  "Mozilla/Firefox/Releases/35/Site_Compatibility": {
-    "modified": "2019-01-16T19:41:11.474Z",
-    "contributors": [
-      "kohei.yoshino"
-    ]
-  },
   "Mozilla/Firefox/Releases/36": {
     "modified": "2019-03-23T23:05:46.783Z",
     "contributors": [
       "Sebastianz",
       "kohei.yoshino",
       "yyss"
-    ]
-  },
-  "Mozilla/Firefox/Releases/36/Site_Compatibility": {
-    "modified": "2019-01-16T19:53:35.073Z",
-    "contributors": [
-      "kohei.yoshino"
     ]
   },
   "Mozilla/Firefox/Releases/37": {
@@ -8569,24 +8427,10 @@
       "arai"
     ]
   },
-  "Mozilla/Firefox/Releases/37/Site_Compatibility": {
-    "modified": "2019-01-16T19:58:48.538Z",
-    "contributors": [
-      "kohei.yoshino",
-      "arai"
-    ]
-  },
   "Mozilla/Firefox/Releases/38": {
     "modified": "2019-03-23T23:01:43.746Z",
     "contributors": [
       "yyss"
-    ]
-  },
-  "Mozilla/Firefox/Releases/38/Site_Compatibility": {
-    "modified": "2019-01-16T20:18:54.504Z",
-    "contributors": [
-      "kohei.yoshino",
-      "syoichi"
     ]
   },
   "Mozilla/Firefox/Releases/39": {
@@ -8594,12 +8438,6 @@
     "contributors": [
       "Guillaume-Heras",
       "yyss",
-      "kohei.yoshino"
-    ]
-  },
-  "Mozilla/Firefox/Releases/39/Site_Compatibility": {
-    "modified": "2019-01-16T20:31:00.935Z",
-    "contributors": [
       "kohei.yoshino"
     ]
   },
@@ -8633,12 +8471,6 @@
       "adria"
     ]
   },
-  "Mozilla/Firefox/Releases/40/Site_Compatibility": {
-    "modified": "2019-01-16T20:36:07.559Z",
-    "contributors": [
-      "kohei.yoshino"
-    ]
-  },
   "Mozilla/Firefox/Releases/41": {
     "modified": "2019-03-23T22:52:24.119Z",
     "contributors": [
@@ -8646,22 +8478,10 @@
       "kohei.yoshino"
     ]
   },
-  "Mozilla/Firefox/Releases/41/Site_Compatibility": {
-    "modified": "2019-01-16T21:00:19.662Z",
-    "contributors": [
-      "kohei.yoshino"
-    ]
-  },
   "Mozilla/Firefox/Releases/42": {
     "modified": "2019-03-23T22:50:41.673Z",
     "contributors": [
       "yyss",
-      "kohei.yoshino"
-    ]
-  },
-  "Mozilla/Firefox/Releases/42/Site_Compatibility": {
-    "modified": "2019-01-16T21:18:02.074Z",
-    "contributors": [
       "kohei.yoshino"
     ]
   },
@@ -16350,18 +16170,6 @@
       "Wind1808"
     ]
   },
-  "Web/API/HTMLElement/tabIndex": {
-    "modified": "2020-10-15T21:09:43.599Z",
-    "contributors": [
-      "mfuji09",
-      "Wind1808",
-      "momdo",
-      "fscholz",
-      "khalid32",
-      "ethertank",
-      "dextra"
-    ]
-  },
   "Web/API/HTMLElement/style": {
     "modified": "2020-10-15T21:16:29.287Z",
     "contributors": [
@@ -16374,6 +16182,18 @@
       "Shoot",
       "Marsf",
       "Okome"
+    ]
+  },
+  "Web/API/HTMLElement/tabIndex": {
+    "modified": "2020-10-15T21:09:43.599Z",
+    "contributors": [
+      "mfuji09",
+      "Wind1808",
+      "momdo",
+      "fscholz",
+      "khalid32",
+      "ethertank",
+      "dextra"
     ]
   },
   "Web/API/HTMLElement/title": {
@@ -18788,6 +18608,16 @@
       "fscholz"
     ]
   },
+  "Web/API/Navigator/Online_and_offline_events": {
+    "modified": "2019-03-23T23:53:08.504Z",
+    "contributors": [
+      "chrisdavidmills",
+      "ethertank",
+      "Marsf",
+      "Mgjbot",
+      "Koyamak"
+    ]
+  },
   "Web/API/Navigator/activeVRDisplays": {
     "modified": "2020-10-15T21:47:31.877Z",
     "contributors": [
@@ -18941,16 +18771,6 @@
       "AshfaqHossain",
       "Mgjbot",
       "Potappo"
-    ]
-  },
-  "Web/API/Navigator/Online_and_offline_events": {
-    "modified": "2019-03-23T23:53:08.504Z",
-    "contributors": [
-      "chrisdavidmills",
-      "ethertank",
-      "Marsf",
-      "Mgjbot",
-      "Koyamak"
     ]
   },
   "Web/API/Navigator/onLine": {
