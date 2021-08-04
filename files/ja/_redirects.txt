@@ -959,7 +959,7 @@
 /ja/docs/Core_JavaScript_1.5_Reference/Operators/Logical_Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/Core_JavaScript_1.5_Reference/Operators/Member_Operators	/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors
 /ja/docs/Core_JavaScript_1.5_Reference/Operators/Operator_Precedence	/ja/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
-/ja/docs/Core_JavaScript_1.5_Reference/Operators/Special_Operators	/ja/docs/orphaned/Web/JavaScript/Reference/Operators/Special_Operators
+/ja/docs/Core_JavaScript_1.5_Reference/Operators/Special_Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/Core_JavaScript_1.5_Reference/Operators/Special_Operators/Comma_Operator	/ja/docs/Web/JavaScript/Reference/Operators/Comma_Operator
 /ja/docs/Core_JavaScript_1.5_Reference/Operators/Special_Operators/function_Operator	/ja/docs/Web/JavaScript/Reference/Operators/function
 /ja/docs/Core_JavaScript_1.5_Reference/Operators/Special_Operators/new_Operator	/ja/docs/Web/JavaScript/Reference/Operators/new
@@ -2641,9 +2641,9 @@
 /ja/docs/JavaScript/Reference/Operators/Logical_Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/JavaScript/Reference/Operators/Member_Operators	/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors
 /ja/docs/JavaScript/Reference/Operators/Operator_Precedence	/ja/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
-/ja/docs/JavaScript/Reference/Operators/Special	/ja/docs/orphaned/Web/JavaScript/Reference/Operators/Special
+/ja/docs/JavaScript/Reference/Operators/Special	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/JavaScript/Reference/Operators/Special/get	/ja/docs/Web/JavaScript/Reference/Functions/get
-/ja/docs/JavaScript/Reference/Operators/Special_Operators	/ja/docs/orphaned/Web/JavaScript/Reference/Operators/Special_Operators
+/ja/docs/JavaScript/Reference/Operators/Special_Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/JavaScript/Reference/Operators/Special_Operators/Comma_Operator	/ja/docs/Web/JavaScript/Reference/Operators/Comma_Operator
 /ja/docs/JavaScript/Reference/Operators/Special_Operators/function_Operator	/ja/docs/Web/JavaScript/Reference/Operators/function
 /ja/docs/JavaScript/Reference/Operators/Special_Operators/new_Operator	/ja/docs/Web/JavaScript/Reference/Operators/new
@@ -4460,10 +4460,9 @@
 /ja/docs/Web/JavaScript/Reference/Operators/Comparison_Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/Web/JavaScript/Reference/Operators/Logical_Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/Web/JavaScript/Reference/Operators/Member_Operators	/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors
-/ja/docs/Web/JavaScript/Reference/Operators/Pipeline_operator	/ja/docs/orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator
-/ja/docs/Web/JavaScript/Reference/Operators/Special	/ja/docs/orphaned/Web/JavaScript/Reference/Operators/Special
+/ja/docs/Web/JavaScript/Reference/Operators/Special	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/Web/JavaScript/Reference/Operators/Special/get	/ja/docs/Web/JavaScript/Reference/Functions/get
-/ja/docs/Web/JavaScript/Reference/Operators/Special_Operators	/ja/docs/orphaned/Web/JavaScript/Reference/Operators/Special_Operators
+/ja/docs/Web/JavaScript/Reference/Operators/Special_Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/Web/JavaScript/Reference/Operators/Special_Operators/Comma_Operator	/ja/docs/Web/JavaScript/Reference/Operators/Comma_Operator
 /ja/docs/Web/JavaScript/Reference/Operators/Special_Operators/function_Operator	/ja/docs/Web/JavaScript/Reference/Operators/function
 /ja/docs/Web/JavaScript/Reference/Operators/Special_Operators/new_Operator	/ja/docs/Web/JavaScript/Reference/Operators/new
@@ -5051,9 +5050,9 @@
 /ja/docs/dummySlug/Reference/Operators/Logical_Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/dummySlug/Reference/Operators/Member_Operators	/ja/docs/Web/JavaScript/Reference/Operators/Property_Accessors
 /ja/docs/dummySlug/Reference/Operators/Operator_Precedence	/ja/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
-/ja/docs/dummySlug/Reference/Operators/Special	/ja/docs/orphaned/Web/JavaScript/Reference/Operators/Special
+/ja/docs/dummySlug/Reference/Operators/Special	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/dummySlug/Reference/Operators/Special/get	/ja/docs/Web/JavaScript/Reference/Functions/get
-/ja/docs/dummySlug/Reference/Operators/Special_Operators	/ja/docs/orphaned/Web/JavaScript/Reference/Operators/Special_Operators
+/ja/docs/dummySlug/Reference/Operators/Special_Operators	/ja/docs/Web/JavaScript/Reference/Operators
 /ja/docs/dummySlug/Reference/Operators/Special_Operators/Comma_Operator	/ja/docs/Web/JavaScript/Reference/Operators/Comma_Operator
 /ja/docs/dummySlug/Reference/Operators/Special_Operators/function_Operator	/ja/docs/Web/JavaScript/Reference/Operators/function
 /ja/docs/dummySlug/Reference/Operators/Special_Operators/new_Operator	/ja/docs/Web/JavaScript/Reference/Operators/new

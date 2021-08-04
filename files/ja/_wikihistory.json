@@ -50867,28 +50867,6 @@
       "shide55"
     ]
   },
-  "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
-    "modified": "2020-10-17T14:59:10.566Z",
-    "contributors": [
-      "mpcjazz",
-      "mfuji09",
-      "YuichiNukiyama"
-    ]
-  },
-  "orphaned/Web/JavaScript/Reference/Operators/Special": {
-    "modified": "2019-01-16T13:14:28.710Z",
-    "contributors": [
-      "ethertank",
-      "Potappo"
-    ]
-  },
-  "orphaned/Web/JavaScript/Reference/Operators/Special_Operators": {
-    "modified": "2019-01-16T13:12:31.355Z",
-    "contributors": [
-      "ethertank",
-      "Potappo"
-    ]
-  },
   "orphaned/Web/Manifest/serviceworker": {
     "modified": "2020-10-15T22:29:06.759Z",
     "contributors": [
