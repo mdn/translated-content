@@ -1976,10 +1976,8 @@
 /ja/docs/Glossary/Constant(定数)	/ja/docs/Glossary/Constant
 /ja/docs/Glossary/Constant（定数）	/ja/docs/Glossary/Constant
 /ja/docs/Glossary/DTD	/ja/docs/Glossary/Doctype
-/ja/docs/Glossary/Gaia	/ja/docs/orphaned/Glossary/Gaia
 /ja/docs/Glossary/Global_attribute	/ja/docs/Web/HTML/Global_attributes
 /ja/docs/Glossary/Header	/ja/docs/Glossary/HTTP_header
-/ja/docs/Glossary/Modern_web_apps	/ja/docs/orphaned/Glossary/Modern_web_apps
 /ja/docs/Glossary/POP3	/ja/docs/Glossary/POP
 /ja/docs/Glossary/SSL_Glossary	/ja/docs/Glossary/SSL
 /ja/docs/Glossary/Signature/セキュリティ	/ja/docs/Glossary/Signature/Security
