@@ -4632,7 +4632,6 @@
 /ja/docs/WebSockets-840092-dup/Writing_WebSocket_servers	/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_servers
 /ja/docs/WebSockets/WebSockets_reference	/ja/docs/conflicting/Web/API/WebSockets_API
 /ja/docs/WebSockets/Writing_WebSocket_client_applications	/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications
-/ja/docs/Web_Content_Accessibility_Guidelines_1.0	/ja/docs/orphaned/Web_Content_Accessibility_Guidelines_1.0
 /ja/docs/Web_Developer_Extension_(external)	https://addons.mozilla.org/ja/firefox/addon/60
 /ja/docs/Web_Development	/ja/docs/conflicting/Web/Guide
 /ja/docs/Web_Development/Historical_artifacts_to_avoid	/ja/docs/Learn/HTML/Introduction_to_HTML
