@@ -649,7 +649,6 @@
 /ja/docs/Chrome	/ja/docs/Glossary/Chrome
 /ja/docs/Code_snippets/Toolbar	/ja/docs/orphaned/Code_snippets/Toolbar
 /ja/docs/Code_snippets:Toolbar	/ja/docs/orphaned/Code_snippets/Toolbar
-/ja/docs/Components	/ja/docs/orphaned/Components
 /ja/docs/Controlling_DNS_prefetching	/ja/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control
 /ja/docs/Controlling_spell_checking_in_HTML_forms	/ja/docs/Web/HTML/Global_attributes/spellcheck
 /ja/docs/Core_JavaScript_1.5_Guide	/ja/docs/Web/JavaScript/Guide
