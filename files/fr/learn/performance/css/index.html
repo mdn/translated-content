@@ -32,13 +32,13 @@ translation_of: Learn/Performance/CSS
 
 <p>Les navigateurs sont déjà optimisés pour manipuler les animations CSS, ainsi que les propriétés d'animation qui ne provoquent pas de réorganisation soudaine du document (ces autres propriétés nécessiteront alors un nouveau rendu). Cette optimisation s'effectue en plaçant les éléments animés sur un autre fil d'execution que l'on peut alors envoyer sur le GPU, bien plus rapide pour ce genre de tâche. Pour profiter de cette optimisation, il faut alors animer de préférence avec les propriétés de transformation 3D (<code><a href="/en-US/docs/Web/CSS/transform">transform: translateZ()</a></code>, <code><a href="/en-US/docs/Web/CSS/transform-function/rotate3d">rotate3d()</a></code>, etc.), de transformation 2D ainsi que les propriétés <code><a href="/en-US/docs/Web/CSS/opacity">opacity</a></code>, <code><a href="/en-US/docs/Web/CSS/position">position: fixed</a></code>, <code><a href="/en-US/docs/Web/CSS/will-change">will-change</a></code> et <code><a href="/en-US/docs/Web/CSS/filter">filter</a></code>. D'autres éléments, parmi lesquels <code><a href="/en-US/docs/Web/HTML/Element/video">&lt;video&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/canvas">&lt;canvas&gt;</a></code> ou encore <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code>, fonctionnent aussi sur leur propre fil d'execution. Cette technique permet donc de tirer profit de la vitesse d'exécution du GPU pour chaque élément géré sur un nouveau fil d'éxécution, et permet d'obtenir de bien meilleures performance, en particulier sur mobile.</p>
 
-<h3 id="La_propriété_cssxrefwill-change">La propriété {{cssxref('will-change')}}</h3>
+<h3 id="La_propriété_cssxrefwill-change">La propriété <code>will-change</code></h3>
 
 <p>La propriété CSS {{cssxref('will-change')}} indique au navigateur les propriétés CSS d'un élément qui sont susceptibles d'être modifiées par la suite (lors d'animations par exemple), afin que le navigateur puisse s'y préparer et optimiser ces changements. Cela permet principalement d'améliorer les performances en réalisant en amont des calculs parfois gourmands.</p>
 
 <pre class="brush: css notranslate">will-change: opacity, transform;</pre>
 
-<h3 id="La_propriété_cssxreffont-display">La propriété {{cssxref('font-display')}}</h3>
+<h3 id="La_propriété_cssxreffont-display">La propriété <code>font-display</code></h3>
 
 <p>Insérée dans une règle {{cssxref('@font-face')}}, la propriété CSS {{cssxref('font-display')}} permet de définir la logique de chargement et d'affichage des polices par le navigateur. Elle permet par exemple d'afficher le texte avec une police par défaut le temps que l'autre charge ou lorsque le chargement échoue. Cela permet de rendre le texte visible sans l'attente du chargement des polices, mais a pour défaut un flash brusque de changement de police une fois la ressource chargée.</p>
 
@@ -52,7 +52,7 @@ translation_of: Learn/Performance/CSS
 
 <p>Dans cet exemple, la dernière règle <code>font-display: fallback;</code> permet justement d'afficher le texte avec une police par défaut en attendant le chargement de la police <code>someFont.woff</code>.</p>
 
-<h3 id="La_propriété_cssxrefcontain">La propriété {{cssxref('contain')}}</h3>
+<h3 id="La_propriété_cssxrefcontain">La propriété <code>contain</code></h3>
 
 <p>La propriété CSS {{cssxref('contain')}} permet quant à elle de spécifier au navigateur qu'un élément et son contenu sont, dans la mesure du possible, indépendant du reste de l'arborescence du document. Ceci offre la possibilité au navigateur de recalculer la mise en page, le style, le rendu, la taille ou toute combinaison de ces propriétés seulement pour une portion de l'arborescence DOM, sans avoir à étendre ces calculs à la totalité de la page.</p>
 
