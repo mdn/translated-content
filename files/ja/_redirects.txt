@@ -3218,9 +3218,6 @@
 /ja/docs/Web/API/Coordinates	/ja/docs/Web/API/GeolocationCoordinates
 /ja/docs/Web/API/DOMLocator	/ja/docs/orphaned/Web/API/DOMLocator
 /ja/docs/Web/API/DeviceAcceleration	/ja/docs/Web/API/DeviceMotionEventAcceleration
-/ja/docs/Web/API/DeviceProximityEvent/max	/ja/docs/orphaned/Web/API/DeviceProximityEvent/max
-/ja/docs/Web/API/DeviceProximityEvent/min	/ja/docs/orphaned/Web/API/DeviceProximityEvent/min
-/ja/docs/Web/API/DeviceProximityEvent/value	/ja/docs/orphaned/Web/API/DeviceProximityEvent/value
 /ja/docs/Web/API/Document.domConfig	/ja/docs/Web/API/Document
 /ja/docs/Web/API/Document/async	/ja/docs/Web/API/XMLDocument/async
 /ja/docs/Web/API/Document/defaultView/storage_event	/ja/docs/Web/API/Window/storage_event
