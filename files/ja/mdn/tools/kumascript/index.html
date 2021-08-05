@@ -218,7 +218,9 @@ Hello #2</pre>
  <dt><code class="language-javascript">cacheFn(key, timeout, function_to_cache)</code></dt>
  <dd>指定されたキーとキャッシュ生存時間を使用して、指定された関数の結果をキャッシュします。 <code>env.cache_control</code> の値を尊重し、ログイン中のユーザーが Shift を押しながら更新を押すことで送信される <code>no-cache</code> でキャッシュを無効化します。</dd>
  <dt><code class="language-javascript">request</code></dt>
+
  <dd>HTTP リクエストを作成するためのライブラリーである <a class="link-https" href="https://github.com/request/request"><code>request/request</code></a> にアクセスします。 KumaScript テンプレート内でこのモジュールを使用するにはあまり使い勝手が良くないので、簡単にするためにモジュール API の中でラップすると良いでしょう。</dd>
+
  <dt><code class="language-javascript">log.debug(string)</code></dt>
  <dd>ページ上のスクリプトログにデバッグメッセージを出力します (通常はエラーを表示する大きな赤いボックスです)。</dd>
 </dl>

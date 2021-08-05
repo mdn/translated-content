@@ -578,7 +578,7 @@ translation_of: Web/HTML/Element/input
  <p>When the form above is submitted, the input cause both the <code>name</code> / <code>value</code> pair of <code>fruit=cherry</code> and the <code>dirname</code> / direction pair of <code>fruit.dir=ltr</code> to be sent.</p>
  </dd>
  <dt>{{ htmlattrdef("disabled") }}</dt>
- <dd>这个布尔属性表示此表单控件不可用。 特别是在禁用的控件中， <code>click</code> 事件 <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#enabling-and-disabling-form-controls" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#enabling-and-disabling-form-controls">将不会被分发</a> 。 并且，禁用的控件的值在提交表单时也不会被提交。如果 <strong>type</strong> 属性为  <span style="font-family: courier new;">hidden</span>，此属性将被忽略。</dd>
+ <dd>这个布尔属性表示此表单控件不可用。 特别是在禁用的控件中， <code>click</code> 事件 <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/association-of-controls-and-forms.html#enabling-and-disabling-form-controls">将不会被分发</a> 。 并且，禁用的控件的值在提交表单时也不会被提交。如果 <strong>type</strong> 属性为  <span style="font-family: courier new;">hidden</span>，此属性将被忽略。</dd>
 </dl>
 
 <div class="note"><strong>Note:</strong> Although not required by the specification, Firefox will by default <a href="https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing">persist the dynamic disabled state</a> of an <code>&lt;input&gt;</code> across page loads. Use the {{htmlattrxref("autocomplete","input")}} attribute to control this feature.</div>
@@ -726,7 +726,7 @@ translation_of: Web/HTML/Element/input
  <dt>{{ htmlattrdef("usemap") }} {{ HTMLVersionInline(4) }} only, {{ obsoleteGeneric("inline", "HTML5") }}</dt>
  <dd>作为图像映射的{{ HTMLElement("map") }}元素的名称.</dd>
  <dt>{{ htmlattrdef("value") }}</dt>
- <dd>控件的初始值. 此属性是可选的，除非<strong>type</strong> 属性是<code>radio</code>或<code>checkbox</code><span style="font-family: courier new;">。</span>注意，当重新加载页面时，如果在重新加载之前更改了值，<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186" title="https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186">Gecko和IE将忽略HTML源代码中指定的值</a>。</dd>
+ <dd>控件的初始值. 此属性是可选的，除非<strong>type</strong> 属性是<code>radio</code>或<code>checkbox</code><span style="font-family: courier new;">。</span>注意，当重新加载页面时，如果在重新加载之前更改了值，<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=46845#c186">Gecko和IE将忽略HTML源代码中指定的值</a>。</dd>
  <dt>{{ htmlattrdef("width") }} {{ HTMLVersionInline(5) }}</dt>
  <dd>如果<strong>type</strong>属性的值是<span style="font-family: courier new;">image，这个属性定义了按钮图片的宽度。</span></dd>
  <dt>

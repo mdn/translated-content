@@ -13,7 +13,7 @@ original_slug: Web/JavaScript/Reference/Erreurs/Cant_assign_to_property
 
 <h2 id="Message">Message</h2>
 
-<pre class="syntaxbox">TypeError: <code class="highlighted" id="line-87">can't assign to property "x" on {y}: not an object</code> (Firefox)
+<pre class="syntaxbox">TypeError: can't assign to property "x" on {y}: not an object (Firefox)
 TypeError: Cannot create property 'x' on {y} (Chrome)
 </pre>
 
@@ -35,7 +35,7 @@ TypeError: Cannot create property 'x' on {y} (Chrome)
 
 var foo = "my string";
 // The following line does nothing if not in strict mode.
-foo.bar = {}; // <span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">TypeError: can't assign to property "bar" on "my string": not an object</span></span></span>
+foo.bar = {}; // TypeError: can't assign to property "bar" on "my string": not an object
 </pre>
 
 <h3 id="Exemple_valide">Exemple valide</h3>

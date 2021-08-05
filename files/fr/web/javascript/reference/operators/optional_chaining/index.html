@@ -14,15 +14,13 @@ original_slug: Web/JavaScript/Reference/Opérateurs/Optional_chaining
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p>L'opérateur de <strong>chaînage optionnel</strong> <strong><code>?.</code></strong> permet de lire la valeur d'une propriété située profondément dans une chaîne d'objets connectés sans avoir à valider expressément que chaque référence dans la chaîne est valide. <span class="seoSummary">L'opérateur <code>?.</code> fonctionne de manière similaire à l'opérateur de chaînage <code>.</code>, à ceci près qu'au lieu de causer une erreur si une référence est {{jsxref("null")}} ou {{jsxref("undefined")}}, l'expression se court-circuite avec <code>undefined</code> pour valeur de retour.</span> Quand il est utilisé avec des appels de fonctions, il retourne <code>undefined</code> si la fonction donnée n'existe pas.</p>
+<p>L'opérateur de <strong>chaînage optionnel</strong> <strong><code>?.</code></strong> permet de lire la valeur d'une propriété située profondément dans une chaîne d'objets connectés sans avoir à valider expressément que chaque référence dans la chaîne est valide. L'opérateur <code>?.</code> fonctionne de manière similaire à l'opérateur de chaînage <code>.</code>, à ceci près qu'au lieu de causer une erreur si une référence est {{jsxref("null")}} ou {{jsxref("undefined")}}, l'expression se court-circuite avec <code>undefined</code> pour valeur de retour. Quand il est utilisé avec des appels de fonctions, il retourne <code>undefined</code> si la fonction donnée n'existe pas.</p>
 
 <p>Ceci résulte en des expressions plus courtes et plus simples lors de l'accès à des propriétés chaînées quand il est possible qu'une référence soit manquante. Ceci peut aussi être utile lors de l'exploration du contenu d'un objet lorsqu'il n'y a aucune garantie concernant les propriétés qui sont requises.</p>
 
 <p>Le chainage optionnel ne peut pas être utilisé sur un objet initialement inexistant. Il ne remplace les vérifications du type <code>if (typeof a == "undefined")</code>.</p>
 
 <p>{{EmbedInteractiveExample("pages/js/expressions-optionalchainingoperator.html")}}</p>
-
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuer à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
@@ -176,7 +174,7 @@ console.log(villeDuClient); // Ville inconnue</pre>
  </tbody>
 </table>
 
-<h2 id="Compatibilité_des_navigateurs"><span>Compatibilité des navigateurs</span></h2>
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 
 <p>{{Compat("javascript.operators.optional_chaining")}}</p>
 
