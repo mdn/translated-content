@@ -1,11 +1,6 @@
 ---
 title: Optimisation des performances en CSS
 slug: Learn/Performance/CSS
-tags:
-  - CSS
-  - Optimisation
-  - Performance
-  - Tutoriel
 translation_of: Learn/Performance/CSS
 ---
 <p>{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/fonts", "Learn/Performance")}} {{draft}}</p>
@@ -23,15 +18,15 @@ translation_of: Learn/Performance/CSS
 
 <h3 id="Optimiser_le_temps_de_bloquage_du_rendu">Optimiser le temps de bloquage du rendu</h3>
 
-<p>Une des forces du CSS réside dans sa capacité à appliquer des styles différents selon l'appareil utilisé, par le biais de <a href="/fr/docs/Web/CSS/Requ%C3%AAtes_m%C3%A9dia/Utilisation_requ%C3%AAtes_media_accessibilit%C3%A9">Requêtes Média</a> ("media queries" en anglais) permettant de poser des conditions de mise en page selon les caractéristiques de l'apareil. Ces requettes média sont d'une importance capitale pour le <a href="/fr/docs/Apprendre/CSS/CSS_layout/Responsive_Design">responsive design</a> (mise en page flexible) et peuvent également nous permettre d'optimiser une partie critique du processus de rendu. En effet, le navigateur bloque le rendu de la page tant qu'il n'a pas entièrement interprêté les règles CSS, mais ne bloquera plus ni le rendu, ni l'affichage pour des fichiers CSS dont il sait ne pas avoir l'utilité - comme c'est le cas pour la mise en page d'impression papier, destinée à l'imprimante et non à l'écran. En réorganisant alors l'ensemble des règles CSS en plusieurs fichiers suivant des requêtes média, nous pouvons alors éviter de bloquer inutilement le rendu en attendant le chargement de ressources superflues pour l'affichage.</p>
+<p>Une des forces du CSS réside dans sa capacité à appliquer des styles différents selon l'appareil utilisé, par le biais de <a href="/fr/docs/Web/CSS/Requ%C3%AAtes_m%C3%A9dia/Utilisation_requ%C3%AAtes_media_accessibilit%C3%A9">Requêtes Média</a> (<i lang="en">media queries</i> en anglais) permettant de poser des conditions de mise en page selon les caractéristiques de l'appareil. Ces requettes média sont d'une importance capitale pour le <a href="/fr/docs/Apprendre/CSS/CSS_layout/Responsive_Design">responsive design</a> (mise en page flexible) et peuvent également nous permettre d'optimiser une partie critique du processus de rendu. En effet, le navigateur bloque le rendu de la page tant qu'il n'a pas entièrement interprêté les règles CSS, mais ne bloquera plus ni le rendu, ni l'affichage pour des fichiers CSS dont il sait ne pas avoir l'utilité - comme c'est le cas pour la mise en page d'impression papier, destinée à l'imprimante et non à l'écran. En réorganisant alors l'ensemble des règles CSS en plusieurs fichiers suivant des requêtes média, nous pouvons alors éviter de bloquer inutilement le rendu en attendant le chargement de ressources superflues pour l'affichage.</p>
 
 <p>Pour obtenir ce résultat dans les faits, il suffit de placer le code CSS inutilisé lors du rendu, par exemple celui de l'impression papier, dans un fichier à part puis de l'intégrer à la page par le biais d'une balise <code><a href="/fr/docs/Web/HTML/Element/link">&lt;link&gt;</a></code>. On spécifie ensuite l'attribut <code>media</code> de cette balise pour y ajouter notre requête média : dans notre exemple, cette requête spécifierait que ce n'est utile que pour une imprimante.</p>
 
 <pre class="brush: html notranslate">&lt;link rel="stylesheet" href="styles.css"&gt; &lt;!-- bloquant --&gt;
 &lt;link rel="stylesheet" href="print.css" media="print"&gt; &lt;!-- non bloquant --&gt;
-&lt;link rel="stylesheet" href="mobile.css" media="screen and (max-width: 480px)"&gt; &lt;!-- non boquant sur grand écran --&gt;</pre>
+&lt;link rel="stylesheet" href="mobile.css" media="screen and (max-width: 480px)"&gt; &lt;!-- non bloquant sur grand écran --&gt;</pre>
 
-<p>Par défaut, le navigateur suppose que chaque fichier CSS est bloquant, car probablement utile pour le rendu. En utilisant cet attribut <code>media</code>, le navigateur comprend alors quel fichier utiliser dans quel scénario : il téléchargera alors le fichier, mais ne bloquera pas le rendu lors de son interprétation, ce qui résultera en un affichage plus rapide pour l'utilisateur. Dans le cas ci-dessus, le fichier <code>styles.css</code> est boquant quelque soit l'appareil utilisé, <code>print.css</code> devient bloquant pour une imprimante et <code>mobile.css</code> devient bloquant seulement lorsque la largeur de l'écran n'excède pas 480 pixels.</p>
+<p>Par défaut, le navigateur suppose que chaque fichier CSS est bloquant, car probablement utile pour le rendu. En utilisant cet attribut <code>media</code>, le navigateur comprend alors quel fichier utiliser dans quel scénario : il téléchargera alors le fichier, mais ne bloquera pas le rendu lors de son interprétation, ce qui résultera en un affichage plus rapide pour l'utilisateur. Dans le cas ci-dessus, le fichier <code>styles.css</code> est bloquant quelque soit l'appareil utilisé, <code>print.css</code> devient bloquant pour une imprimante et <code>mobile.css</code> devient bloquant seulement lorsque la largeur de l'écran n'excède pas 480 pixels.</p>
 
 <h3 id="Interprêter_les_animations_sur_le_GPU">Interprêter les animations sur le GPU</h3>
 
@@ -39,7 +34,7 @@ translation_of: Learn/Performance/CSS
 
 <h3 id="La_propriété_cssxrefwill-change">La propriété {{cssxref('will-change')}}</h3>
 
-<p>La propriété CSS {{cssxref('will-change')}} indique au navigateur les propriétés CSS d'un élément qui sont suceptibles d'être modifiés par la suite (lors d'animations par exemple), afin que le navigateur puisse s'y préparer et optimiser ces changements. Cela permet principalement d'améliorer les performances en réalisant en amont des calculs parfois gourmands.</p>
+<p>La propriété CSS {{cssxref('will-change')}} indique au navigateur les propriétés CSS d'un élément qui sont susceptibles d'être modifiées par la suite (lors d'animations par exemple), afin que le navigateur puisse s'y préparer et optimiser ces changements. Cela permet principalement d'améliorer les performances en réalisant en amont des calculs parfois gourmands.</p>
 
 <pre class="brush: css notranslate">will-change: opacity, transform;</pre>
 
@@ -63,11 +58,11 @@ translation_of: Learn/Performance/CSS
 
 <h2 id="Conclusion">Conclusion</h2>
 
-<p>Optimiser les performances en CSS revient ainsi à améliorer deux étapes cruciales et chronophages du rendu de page :</p>
+<p>Optimiser les performances en CSS revient ainsi à améliorer deux étapes cruciales et chronophages du rendu de page&nbsp;:</p>
 
 <ul>
- <li>d'une part le chargement des ressources CSS de la page (en compressant, en divisant le fichier, ou encore en l'enregistrant dans le cache par exemple),</li>
- <li>d'autre part le rendu, en établissant une stratégie ingénieuse de chargement et d'interprétation des ressources, notamment en distinguant les ressources essentielles pour le rendu et les autres ressources annexes, qui peuvent attendre;</li>
+ <li>d'une part le chargement des ressources CSS de la page (en compressant, en divisant le fichier, ou encore en l'enregistrant dans le cache par exemple)&nbsp;;</li>
+ <li>d'autre part le rendu, en établissant une stratégie ingénieuse de chargement et d'interprétation des ressources, notamment en distinguant les ressources essentielles pour le rendu et les autres ressources annexes, qui peuvent attendre.</li>
 </ul>
 
 <p>Enfin, les outils de développement du navigateur sont à votre disposition pour vous aider à cibler les étapes chronophages qui ralentissent le rendu de vos pages et gagner encore en efficacité, au prix parfois de quelques compromis.</p>
@@ -77,18 +72,18 @@ translation_of: Learn/Performance/CSS
 <h2 id="Dans_ce_module">Dans ce module</h2>
 
 <ul>
- <li><a href="/fr/docs/Learn/Performance/pourquoi_performance_web">Le "pourquoi" des performances web</a></li>
- <li><a href="/en-US/docs/Learn/Performance/What_is_web_performance">What is web performance?</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Perceived_performance">How do users perceive performance?</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Measuring_performance">Measuring performance</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Multimedia">Multimedia: images</a></li>
- <li><a href="/en-US/docs/Learn/Performance/video">Multimedia: video</a></li>
- <li><a href="/en-US/docs/Learn/Performance/JavaScript">JavaScript performance best practices</a>.</li>
- <li><a href="/en-US/docs/Learn/Performance/HTML">HTML performance features</a></li>
- <li><a href="/fr/docs/Learn/Performance/CSS">CSS performance featuresOptimisation des performances en CSS</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Fonts">Fonts and performance</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Mobile">Mobile performance</a></li>
- <li><a href="/en-US/docs/Learn/Performance/business_case_for_performance">Focusing on performance</a></li>
+ <li><a href="/fr/docs/Learn/Performance/pourquoi_performance_web">Le «&nbsp;pourquoi&nbsp;» des performances web</a></li>
+ <li><a href="/fr/docs/Learn/Performance/What_is_web_performance">Que sont les performances web&nbsp;?</a></li>
+ <li><a href="/fr/docs/Learn/Performance/Perceived_performance">Comment les internautes perçoivent-ils les performance&nbsp;?</a></li>
+ <li><a href="/fr/docs/Learn/Performance/Measuring_performance">Mesurer les performance</a></li>
+ <li><a href="/fr/docs/Learn/Performance/Multimedia">Multimédia&nbsp;: images</a></li>
+ <li><a href="/fr/docs/Learn/Performance/video">Multimédia&nbsp;: vidéos</a></li>
+ <li><a href="/fr/docs/Learn/Performance/JavaScript">Bonnes pratiques Javascript en matière de performance</a></li>
+ <li><a href="/fr/docs/Learn/Performance/HTML">Fonctionnalité HTML pour la performance</a></li>
+ <li><a href="/fr/docs/Learn/Performance/CSS">Optimisation des performances en CSS</a></li>
+ <li><a href="/fr/docs/Learn/Performance/Fonts">Performance et polices</a></li>
+ <li><a href="/fr/docs/Learn/Performance/Mobile">Performance sur mobile</a></li>
+ <li><a href="/fr/docs/Learn/Performance/business_case_for_performance">Placer le focus sur les performances</a></li>
 </ul>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
