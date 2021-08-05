@@ -3211,9 +3211,6 @@
 /ja/docs/Web/API/CanvasRenderingContext2D.drawFocusIfNeeded	/ja/docs/Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
 /ja/docs/Web/API/CanvasRenderingContext2D.removeHitRegion	/ja/docs/Web/API/CanvasRenderingContext2D/removeHitRegion
 /ja/docs/Web/API/Canvas_API/Drawing_graphics_with_canvas	/ja/docs/Web/API/Canvas_API/Tutorial
-/ja/docs/Web/API/ChildNode	/ja/docs/orphaned/Web/API/ChildNode
-/ja/docs/Web/API/ChildNode/before	/ja/docs/orphaned/Web/API/ChildNode/before
-/ja/docs/Web/API/ChildNode/replaceWith	/ja/docs/orphaned/Web/API/ChildNode/replaceWith
 /ja/docs/Web/API/Console.error	/ja/docs/Web/API/Console/error
 /ja/docs/Web/API/Coordinates	/ja/docs/Web/API/GeolocationCoordinates
 /ja/docs/Web/API/DOMLocator	/ja/docs/orphaned/Web/API/DOMLocator
