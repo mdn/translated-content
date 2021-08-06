@@ -3,9 +3,9 @@ title: Web Audio API
 slug: Web/API/Web_Audio_API
 translation_of: Web/API/Web_Audio_API
 ---
-<div>
+<div>{{DefaultAPISidebar("Web Audio API")}}</div>
+
 <p>Web Audio API는 웹에서 오디오를 제어하기 위한 강력하고 다양한 기능을 제공합니다. Web Audio API를 이용하면 오디오 소스를 선택할 수 있도록 하거나, 오디오에 이펙트를 추가하거나, 오디오를 시각화하거나, 패닝과 같은 공간 이펙트를 적용시키는 등의 작업이 가능합니다.</p>
-</div>
 
 <h2 id="Web_audio_concepts_and_usage">Web audio의 개념과 사용법</h2>
 
@@ -18,11 +18,11 @@ translation_of: Web/API/Web_Audio_API
 <p>웹 오디오의 간단하고 일반적인 작업 흐름은 다음과 같습니다 :</p>
 
 <ol>
- <li>오디오 컨텍스트를 생성합니다.</li>
- <li>컨텍스트 내에 소스를 생성합니다.(ex - &lt;audio&gt;, 발진기, 스트림)</li>
- <li>이펙트 노드를 생성합니다. (ex - 잔향 효과,  바이쿼드 필터, 패너, 컴프레서 등)</li>
- <li>오디오의 최종 목적지를 선택합니다. (ex - 시스템 스피커)</li>
- <li>사운드를 이펙트에 연결하고, 이펙트를 목적지에 연결합니다.</li>
+	<li>오디오 컨텍스트를 생성합니다.</li>
+	<li>컨텍스트 내에 소스를 생성합니다.(ex - &lt;audio&gt;, 발진기, 스트림)</li>
+	<li>이펙트 노드를 생성합니다. (ex - 잔향 효과,  바이쿼드 필터, 패너, 컴프레서 등)</li>
+	<li>오디오의 최종 목적지를 선택합니다. (ex - 시스템 스피커)</li>
+	<li>사운드를 이펙트에 연결하고, 이펙트를 목적지에 연결합니다.</li>
 </ol>
 
 <p><img alt="오디오 컨텍스트라고 쓰여진 외부 박스와, 소스, 이펙트, 목적지라고 쓰여진 세 개의 내부 박스를 가진 간단한 박스 다이어그램. 세 개의 내부 박스는 사이에 좌에서 우를 가리키는 화살표를 가지고 있는데, 이는 오디오 정보의 흐름을 나타냅니다." src="audio-context_.png"></p>
@@ -47,7 +47,7 @@ translation_of: Web/API/Web_Audio_API
 
 <p>코드를 작성하는 것은 카드 게임과 비슷합니다. 규칙을 배우고, 플레이합니다. 모르겠는 규칙은 다시 공부하고, 다시 새로운 판을 합니다. 마찬가지로, 이 문서와 첫 튜토리얼에서 설명하는 것만으로 부족하다고 느끼신다면 첫 튜토리얼의 내용을 보충하는 동시에 여러 테크닉을 이용하여 스텝 시퀀서를 만드는 법을 설명하는 <a href="/en-US/docs/Web/API/Web_Audio_API/Advanced_techniques">상급자용 튜토리얼</a>을 읽어보시는 것을 추천합니다.</p>
 
-<p>그 외에도 이 페이지의 사이드바에서 API의 모든 기능을 설명하는 참고자료와 다양한 튜토리얼을 찾아 보실 수 있습니다.</p>
+<p>그 외에도 이 페이지의 사이드바에서 API의 모든 기능을 설명하는 참고자료와 다양한 자습서를 찾아 보실 수 있습니다.</p>
 
 <p>만약에 프로그래밍보다는 음악이 친숙하고, 음악 이론에 익숙하며, 악기를 만들고 싶으시다면 바로 상급자용 튜토리얼부터 시작하여 여러가지를 만들기 시작하시면 됩니다. 위의 튜토리얼은 음표를 배치하는 법, 저주파 발진기 등 맞춤형 Oscillator(발진기)와 Envelope를 설계하는 법 등을 설명하고 있으니, 이를 읽으며 사이드바의 자료를 참고하시면 될 것입니다.</p>
 
@@ -62,20 +62,18 @@ translation_of: Web/API/Web_Audio_API
 <p>Web Audio API 사용범위 내에서 오디오 그래프를 형성하는 일반적인 컨테이너와 정의입니다.</p>
 
 <dl>
- <dt>{{domxref("AudioContext")}}</dt>
- <dd><strong><code>AudioContext</code></strong> 인터페이스는 오디오 모듈이 서로 연결되어 구성된 오디오 프로세싱 그래프를 표현하며, 각각의 그래프는 {{domxref("AudioNode")}}로 표현됩니다. <code>AudioContext</code>는 자신이 가지고 있는 노드의 생성과 오디오 프로세싱 혹은 디코딩의 실행을 제어합니다. 어떤 작업이든 시작하기 전에 <code>AudioContext</code>를 생성해야 합니다. 모든 작업은 컨텍스트 내에서 이루어집니다.</dd>
- <dt>{{domxref("AudioNode")}}</dt>
- <dd><strong><code>AudioNode</code></strong><strong> </strong>인터페이스는 오디오 소스({{HTMLElement("audio")}}나 {{HTMLElement("video")}} 요소), 오디오 목적지, 중간 처리 모듈({{domxref("BiquadFilterNode")}}이나 {{domxref("GainNode")}})과 같은 오디오 처리 모듈을 나타냅니다.</dd>
- <dt>{{domxref("AudioParam")}}</dt>
- <dd><strong><code>AudioParam</code></strong> 인터페이스는 {{domxref("AudioNode")}}중 하나와 같은 오디오 관련 파라미터를 나타냅니다. 이는 특정 값 또는 값 변경으로 세팅되거나, 특정 시간에 발생하고 특정 패턴을 따르도록 스케쥴링할 수 있습니다.</dd>
- <dt>{{domxref("AudioParamMap")}}</dt>
- <dd>{{domxref("AudioParam")}} 인터페이스 그룹에 maplike 인터페이스를 제공하는데, 이는 <code>forEach()</code>, <code>get()</code>, <code>has()</code>, <code>keys()</code>, <code>values()</code> 메서드와 <code>size</code> 속성이 제공된다는 것을 의미합니다.</dd>
- <dt>{{domxref("BaseAudioContext")}}</dt>
- <dd><strong><code>BaseAudioContext</code></strong> 인터페이스는 온라인과 오프라인 오디오 프로세싱 그래프에 대한 기본 정의로서 동작하는데, 이는 각각 {{domxref("AudioContext")}} 와 {{domxref("OfflineAudioContext")}}로 대표됩니다. <code>BaseAudioContext</code>는 직접 쓰여질 수 없습니다 — 이 두 가지 상속되는 인터페이스 중 하나를 통해 이것의 기능을 사용할 수 있습니다.</dd>
- <dt>The {{event("ended")}} event</dt>
- <dd>
- <p><strong><code>ended</code></strong> 이벤트는 미디어의 끝에 도달하여 재생이 정지되면 호출됩니다.</p>
- </dd>
+	<dt>{{domxref("AudioContext")}}</dt>
+	<dd><strong><code>AudioContext</code></strong> 인터페이스는 오디오 모듈이 서로 연결되어 구성된 오디오 프로세싱 그래프를 표현하며, 각각의 그래프는 {{domxref("AudioNode")}}로 표현됩니다. <code>AudioContext</code>는 자신이 가지고 있는 노드의 생성과 오디오 프로세싱 혹은 디코딩의 실행을 제어합니다. 어떤 작업이든 시작하기 전에 <code>AudioContext</code>를 생성해야 합니다. 모든 작업은 컨텍스트 내에서 이루어집니다.</dd>
+	<dt>{{domxref("AudioNode")}}</dt>
+	<dd><strong><code>AudioNode</code></strong><strong> </strong>인터페이스는 오디오 소스({{HTMLElement("audio")}}나 {{HTMLElement("video")}} 요소), 오디오 목적지, 중간 처리 모듈({{domxref("BiquadFilterNode")}}이나 {{domxref("GainNode")}})과 같은 오디오 처리 모듈을 나타냅니다.</dd>
+	<dt>{{domxref("AudioParam")}}</dt>
+	<dd><strong><code>AudioParam</code></strong> 인터페이스는 {{domxref("AudioNode")}}중 하나와 같은 오디오 관련 파라미터를 나타냅니다. 이는 특정 값 또는 값 변경으로 세팅되거나, 특정 시간에 발생하고 특정 패턴을 따르도록 스케쥴링할 수 있습니다.</dd>
+	<dt>{{domxref("AudioParamMap")}}</dt>
+	<dd>{{domxref("AudioParam")}} 인터페이스 그룹에 maplike 인터페이스를 제공하는데, 이는 <code>forEach()</code>, <code>get()</code>, <code>has()</code>, <code>keys()</code>, <code>values()</code> 메서드와 <code>size</code> 속성이 제공된다는 것을 의미합니다.</dd>
+	<dt>{{domxref("BaseAudioContext")}}</dt>
+	<dd><strong><code>BaseAudioContext</code></strong> 인터페이스는 온라인과 오프라인 오디오 프로세싱 그래프에 대한 기본 정의로서 동작하는데, 이는 각각 {{domxref("AudioContext")}} 와 {{domxref("OfflineAudioContext")}}로 대표됩니다. <code>BaseAudioContext</code>는 직접 쓰여질 수 없습니다 — 이 두 가지 상속되는 인터페이스 중 하나를 통해 이것의 기능을 사용할 수 있습니다.</dd>
+	<dt>The {{event("ended")}} event</dt>
+	<dd><p><strong><code>ended</code></strong> 이벤트는 미디어의 끝에 도달하여 재생이 정지되면 호출됩니다.</p></dd>
 </dl>
 
 <h3 id="Defining_audio_sources">오디오 소스 정의하기</h3>
@@ -83,20 +81,20 @@ translation_of: Web/API/Web_Audio_API
 <p>Web Audio API에서 사용하기 위한 오디오 소스를 정의하는 인터페이스입니다.</p>
 
 <dl>
- <dt>{{domxref("AudioScheduledSourceNode")}}</dt>
- <dd><strong><code>AudioScheduledSourceNode</code></strong>는 오디오 소스 노드 인터페이스의 몇 가지 유형에 대한 부모 인터페이스입니다. 이것은 {{domxref("AudioNode")}}입니다.</dd>
- <dt>{{domxref("OscillatorNode")}}</dt>
- <dd><strong><code style="font-size: 14px;">OscillatorNode</code></strong> 인터페이스는 삼각파 또는 사인파와 같은 주기적 파형을 나타냅니다. 이것은 주어진 주파수의 파동을 생성하는 {{domxref("AudioNode")}} 오디오 프로세싱 모듈입니다.</dd>
- <dt>{{domxref("AudioBuffer")}}</dt>
- <dd><strong><code>AudioBuffer</code></strong> 인터페이스는 {{ domxref("AudioContext.decodeAudioData()") }}메소드를 사용해 오디오 파일에서 생성되거나 {{ domxref("AudioContext.createBuffer()") }}를 사용해 로우 데이터로부터 생성된 메모리상에 적재되는 짧은 오디오 자원을 나타냅니다. 이 형식으로 디코딩된 오디오는 {{ domxref("AudioBufferSourceNode") }}에 삽입될 수 있습니다.</dd>
- <dt>{{domxref("AudioBufferSourceNode")}}</dt>
- <dd><strong><code>AudioBufferSourceNode</code></strong> 인터페이스는 {{domxref("AudioBuffer")}}에 저장된 메모리상의 오디오 데이터로 구성된 오디오 소스를 나타냅니다. 이것은 오디오 소스 역할을 하는 {{domxref("AudioNode")}}입니다.</dd>
- <dt>{{domxref("MediaElementAudioSourceNode")}}</dt>
- <dd><code><strong>MediaElementAudio</strong></code><strong><code>SourceNode</code></strong> 인터페이스는 {{ htmlelement("audio") }} 나 {{ htmlelement("video") }} HTML 엘리먼트로 구성된 오디오 소스를 나타냅니다. 이것은 오디오 소스 역할을 하는 {{domxref("AudioNode")}}입니다.</dd>
- <dt>{{domxref("MediaStreamAudioSourceNode")}}</dt>
- <dd><code><strong>MediaStreamAudio</strong></code><strong><code>SourceNode</code></strong> 인터페이스는 <a href="/en-US/docs/Web/API/WebRTC_API" title="/en-US/docs/WebRTC">WebRTC</a> {{domxref("MediaStream")}}(웹캡, 마이크 혹은 원격 컴퓨터에서 전송된 스트림)으로 구성된 오디오 소스를 나타냅니다. 이것은 오디오 소스 역할을 하는 {{domxref("AudioNode")}}입니다.</dd>
- <dt>{{domxref("MediaStreamTrackAudioSourceNode")}}</dt>
- <dd>{{domxref("MediaStreamTrackAudioSourceNode")}} 유형의 노드는 데이터가 {{domxref("MediaStreamTrack")}}로부터 오는 오디오 소스를 표현합니다. 이 노드를 생성하기 위해 {{domxref("AudioContext.createMediaStreamTrackSource", "createMediaStreamTrackSource()")}} 메서드를 사용하여 이 노드를 생성할 때, 여러분은 어떤 트랙을 사용할 지 명시합니다. 이것은 <code>MediaStreamAudioSourceNode</code>보다 더 많은 제어를 제공합니다.</dd>
+	<dt>{{domxref("AudioScheduledSourceNode")}}</dt>
+	<dd><strong><code>AudioScheduledSourceNode</code></strong>는 오디오 소스 노드 인터페이스의 몇 가지 유형에 대한 부모 인터페이스입니다. 이것은 {{domxref("AudioNode")}}입니다.</dd>
+	<dt>{{domxref("OscillatorNode")}}</dt>
+	<dd><strong><code style="font-size: 14px;">OscillatorNode</code></strong> 인터페이스는 삼각파 또는 사인파와 같은 주기적 파형을 나타냅니다. 이것은 주어진 주파수의 파동을 생성하는 {{domxref("AudioNode")}} 오디오 프로세싱 모듈입니다.</dd>
+	<dt>{{domxref("AudioBuffer")}}</dt>
+	<dd><strong><code>AudioBuffer</code></strong> 인터페이스는 {{ domxref("AudioContext.decodeAudioData()") }}메소드를 사용해 오디오 파일에서 생성되거나 {{ domxref("AudioContext.createBuffer()") }}를 사용해 로우 데이터로부터 생성된 메모리상에 적재되는 짧은 오디오 자원을 나타냅니다. 이 형식으로 디코딩된 오디오는 {{ domxref("AudioBufferSourceNode") }}에 삽입될 수 있습니다.</dd>
+	<dt>{{domxref("AudioBufferSourceNode")}}</dt>
+	<dd><strong><code>AudioBufferSourceNode</code></strong> 인터페이스는 {{domxref("AudioBuffer")}}에 저장된 메모리상의 오디오 데이터로 구성된 오디오 소스를 나타냅니다. 이것은 오디오 소스 역할을 하는 {{domxref("AudioNode")}}입니다.</dd>
+	<dt>{{domxref("MediaElementAudioSourceNode")}}</dt>
+	<dd><code><strong>MediaElementAudio</strong></code><strong><code>SourceNode</code></strong> 인터페이스는 {{ htmlelement("audio") }} 나 {{ htmlelement("video") }} HTML 엘리먼트로 구성된 오디오 소스를 나타냅니다. 이것은 오디오 소스 역할을 하는 {{domxref("AudioNode")}}입니다.</dd>
+	<dt>{{domxref("MediaStreamAudioSourceNode")}}</dt>
+	<dd><code><strong>MediaStreamAudio</strong></code><strong><code>SourceNode</code></strong> 인터페이스는 <a href="/en-US/docs/Web/API/WebRTC_API" title="/en-US/docs/WebRTC">WebRTC</a> {{domxref("MediaStream")}}(웹캠, 마이크 혹은 원격 컴퓨터에서 전송된 스트림)으로 구성된 오디오 소스를 나타냅니다. 이것은 오디오 소스 역할을 하는 {{domxref("AudioNode")}}입니다.</dd>
+	<dt>{{domxref("MediaStreamTrackAudioSourceNode")}}</dt>
+	<dd>{{domxref("MediaStreamTrackAudioSourceNode")}} 유형의 노드는 데이터가 {{domxref("MediaStreamTrack")}}로부터 오는 오디오 소스를 표현합니다. 이 노드를 생성하기 위해 {{domxref("AudioContext.createMediaStreamTrackSource", "createMediaStreamTrackSource()")}} 메서드를 사용하여 이 노드를 생성할 때, 여러분은 어떤 트랙을 사용할 지 명시합니다. 이것은 <code>MediaStreamAudioSourceNode</code>보다 더 많은 제어를 제공합니다.</dd>
 </dl>
 
 <h3 id="Defining_audio_effects_filters">오디오 이펙트 필터 정의하기</h3>
@@ -104,22 +102,22 @@ translation_of: Web/API/Web_Audio_API
 <p>오디오 소스에 적용할 이펙트를 정의하는 인터페이스입니다.</p>
 
 <dl>
- <dt>{{domxref("BiquadFilterNode")}}</dt>
- <dd><strong><code>BiquadFilterNode</code></strong> 인터페이스는 간단한 하위 필터를 나타냅니다. 이것은 여러 종류의 필터나 톤 제어 장치 혹은 그래픽 이퀄라이저를 나타낼 수 있는 {{domxref("AudioNode")}}입니다. <code>BiquadFilterNode</code>는 항상 단 하나의 입력과 출력만을 가집니다. </dd>
- <dt>{{domxref("ConvolverNode")}}</dt>
- <dd><code><strong>Convolver</strong></code><strong><code>Node</code></strong><span style="line-height: 1.5;"> 인터페이스는 주어진 {{domxref("AudioBuffer")}}에 선형 콘볼루션을 수행하는 {{domxref("AudioNode")}}이며, 리버브 이펙트를 얻기 위해 자주 사용됩니다. </span></dd>
- <dt>{{domxref("DelayNode")}}</dt>
- <dd><strong><code>DelayNode</code></strong> 인터페이스는 지연선을 나타냅니다. 지연선은 입력 데이터가 출력에 전달되기까지의 사이에 딜레이를 발생시키는 {{domxref("AudioNode")}} 오디오 처리 모듈입니다.</dd>
- <dt>{{domxref("DynamicsCompressorNode")}}</dt>
- <dd><strong><code>DynamicsCompressorNode</code></strong> 인터페이스는 압축 이펙트를 제공합니다, 이는 신호의 가장 큰 부분의 볼륨을 낮추어 여러 사운드를 동시에 재생할 때 발생할 수 있는 클리핑 및 왜곡을 방지합니다.</dd>
- <dt>{{domxref("GainNode")}}</dt>
- <dd><strong><code>GainNode</code></strong> 인터페이스는 음량의 변경을 나타냅니다. 이는 출력에 전달되기 전의 입력 데이터에 주어진 음량 조정을 적용하기 위한 {{domxref("AudioNode")}} 오디오 모듈입니다.</dd>
- <dt>{{domxref("WaveShaperNode")}}</dt>
- <dd><strong><code>WaveShaperNode</code></strong> 인터페이스는 비선형 왜곡을 나타냅니다. 이는 곡선을 사용하여 신호의 파형 형성에 왜곡을 적용하는 {{domxref("AudioNode")}}입니다. 분명한 왜곡 이펙트 외에도 신호에 따뜻한 느낌을 더하는데 자주 사용됩니다.</dd>
- <dt>{{domxref("PeriodicWave")}}</dt>
- <dd>{{domxref("OscillatorNode")}}의 출력을 형성하는데 사용될 수 있는 주기적 파형을 설명합니다.</dd>
- <dt>{{domxref("IIRFilterNode")}}</dt>
- <dd>일반적인 <strong><a class="external external-icon" href="https://en.wikipedia.org/wiki/infinite%20impulse%20response" title="infinite impulse response">infinite impulse response</a></strong> (IIR) 필터를 구현합니다; 이 유형의 필터는 음색 제어 장치와 그래픽 이퀄라이저를 구현하는 데 사용될 수 있습니다.</dd>
+	<dt>{{domxref("BiquadFilterNode")}}</dt>
+	<dd><strong><code>BiquadFilterNode</code></strong> 인터페이스는 간단한 하위 필터를 나타냅니다. 이것은 여러 종류의 필터나 톤 제어 장치 혹은 그래픽 이퀄라이저를 나타낼 수 있는 {{domxref("AudioNode")}}입니다. <code>BiquadFilterNode</code>는 항상 단 하나의 입력과 출력만을 가집니다. </dd>
+	<dt>{{domxref("ConvolverNode")}}</dt>
+	<dd><code><strong>Convolver</strong></code><strong><code>Node</code></strong><span style="line-height: 1.5;"> 인터페이스는 주어진 {{domxref("AudioBuffer")}}에 선형 콘볼루션을 수행하는 {{domxref("AudioNode")}}이며, 리버브 이펙트를 얻기 위해 자주 사용됩니다. </span></dd>
+	<dt>{{domxref("DelayNode")}}</dt>
+	<dd><strong><code>DelayNode</code></strong> 인터페이스는 지연선을 나타냅니다. 지연선은 입력 데이터가 출력에 전달되기까지의 사이에 딜레이를 발생시키는 {{domxref("AudioNode")}} 오디오 처리 모듈입니다.</dd>
+	<dt>{{domxref("DynamicsCompressorNode")}}</dt>
+	<dd><strong><code>DynamicsCompressorNode</code></strong> 인터페이스는 압축 이펙트를 제공합니다, 이는 신호의 가장 큰 부분의 볼륨을 낮추어 여러 사운드를 동시에 재생할 때 발생할 수 있는 클리핑 및 왜곡을 방지합니다.</dd>
+	<dt>{{domxref("GainNode")}}</dt>
+	<dd><strong><code>GainNode</code></strong> 인터페이스는 음량의 변경을 나타냅니다. 이는 출력에 전달되기 전의 입력 데이터에 주어진 음량 조정을 적용하기 위한 {{domxref("AudioNode")}} 오디오 모듈입니다.</dd>
+	<dt>{{domxref("WaveShaperNode")}}</dt>
+	<dd><strong><code>WaveShaperNode</code></strong> 인터페이스는 비선형 왜곡을 나타냅니다. 이는 곡선을 사용하여 신호의 파형 형성에 왜곡을 적용하는 {{domxref("AudioNode")}}입니다. 분명한 왜곡 이펙트 외에도 신호에 따뜻한 느낌을 더하는데 자주 사용됩니다.</dd>
+	<dt>{{domxref("PeriodicWave")}}</dt>
+	<dd>{{domxref("OscillatorNode")}}의 출력을 형성하는데 사용될 수 있는 주기적 파형을 설명합니다.</dd>
+	<dt>{{domxref("IIRFilterNode")}}</dt>
+	<dd>일반적인 <strong><a class="external external-icon" href="https://en.wikipedia.org/wiki/infinite%20impulse%20response" title="infinite impulse response">infinite impulse response</a></strong> (IIR) 필터를 구현합니다; 이 유형의 필터는 음색 제어 장치와 그래픽 이퀄라이저를 구현하는 데 사용될 수 있습니다.</dd>
 </dl>
 
 <h3 id="Defining_audio_destinations">오디오 목적지 정의하기</h3>
@@ -138,8 +136,8 @@ translation_of: Web/API/Web_Audio_API
 <p>오디오에서 재생시간이나 주파수 등의 데이터를 추출하기 위한 인터페이스입니다.</p>
 
 <dl>
- <dt>{{domxref("AnalyserNode")}}</dt>
- <dd><strong><code>AnalyserNode</code></strong> 인터페이스는 데이터를 분석하고 시각화하기 위한 실시간 주파수와 시간영역 분석 정보를 제공하는 노드를 나타냅니다.</dd>
+	<dt>{{domxref("AnalyserNode")}}</dt>
+	<dd><strong><code>AnalyserNode</code></strong> 인터페이스는 데이터를 분석하고 시각화하기 위한 실시간 주파수와 시간영역 분석 정보를 제공하는 노드를 나타냅니다.</dd>
 </dl>
 
 <h3 id="Splitting_and_merging_audio_channels">오디오 채널을 분리하고 병합하기</h3>
@@ -147,10 +145,10 @@ translation_of: Web/API/Web_Audio_API
 <p>오디오 채널들을 분리하거나 병합하기 위한 인터페이스입니다.</p>
 
 <dl>
- <dt>{{domxref("ChannelSplitterNode")}}</dt>
- <dd><code><strong>ChannelSplitterNode</strong></code> 인터페이스는 오디오 소스의 여러 채널을 모노 출력 셋으로 분리합니다.</dd>
- <dt>{{domxref("ChannelMergerNode")}}</dt>
- <dd><code><strong>ChannelMergerNode</strong></code> 인터페이스는 여러 모노 입력을 하나의 출력으로 재결합합니다. 각 입력은 출력의 채널을 채우는데 사용될 것입니다.</dd>
+	<dt>{{domxref("ChannelSplitterNode")}}</dt>
+	<dd><code><strong>ChannelSplitterNode</strong></code> 인터페이스는 오디오 소스의 여러 채널을 모노 출력 셋으로 분리합니다.</dd>
+	<dt>{{domxref("ChannelMergerNode")}}</dt>
+	<dd><code><strong>ChannelMergerNode</strong></code> 인터페이스는 여러 모노 입력을 하나의 출력으로 재결합합니다. 각 입력은 출력의 채널을 채우는데 사용될 것입니다.</dd>
 </dl>
 
 <h3 id="Audio_spatialization">오디오 공간화</h3>
@@ -158,12 +156,12 @@ translation_of: Web/API/Web_Audio_API
 <p>오디오 소스에 오디오 공간화 패닝 이펙트를 추가하는 인터페이스입니다.</p>
 
 <dl>
- <dt>{{domxref("AudioListener")}}</dt>
- <dd><strong><code>AudioListener</code></strong> 인터페이스는 오디오 공간화에 사용되는 오디오 장면을 청취하는 고유한 시청자의 위치와 방향을 나타냅니다.</dd>
- <dt>{{domxref("PannerNode")}}</dt>
- <dd><strong><code>PannerNode</code></strong> 인터페이스는 공간 내의 신호 양식을 나타냅니다. 이것은 자신의 오른손 직교 좌표 내의 포지션과, 속도 벡터를 이용한 움직임과, 방향성 원뿔을 이용한 방향을 서술하는 {{domxref("AudioNode")}} 오디오 프로세싱 모듈입니다.</dd>
- <dt>{{domxref("StereoPannerNode")}}</dt>
- <dd><code><strong>StereoPannerNode</strong></code> 인터페이스는 오디오 스트림을 좌우로 편향시키는데 사용될 수 있는 간단한 스테레오 패너 노드를 나타냅니다.</dd>
+	<dt>{{domxref("AudioListener")}}</dt>
+	<dd><strong><code>AudioListener</code></strong> 인터페이스는 오디오 공간화에 사용되는 오디오 장면을 청취하는 고유한 시청자의 위치와 방향을 나타냅니다.</dd>
+	<dt>{{domxref("PannerNode")}}</dt>
+	<dd><strong><code>PannerNode</code></strong> 인터페이스는 공간 내의 신호 양식을 나타냅니다. 이것은 자신의 오른손 직교 좌표 내의 포지션과, 속도 벡터를 이용한 움직임과, 방향성 원뿔을 이용한 방향을 서술하는 {{domxref("AudioNode")}} 오디오 프로세싱 모듈입니다.</dd>
+	<dt>{{domxref("StereoPannerNode")}}</dt>
+	<dd><code><strong>StereoPannerNode</strong></code> 인터페이스는 오디오 스트림을 좌우로 편향시키는데 사용될 수 있는 간단한 스테레오 패너 노드를 나타냅니다.</dd>
 </dl>
 
 <h3 id="Audio_processing_in_JavaScript">JavaScript에서의 오디오 프로세싱</h3>
@@ -199,12 +197,12 @@ translation_of: Web/API/Web_Audio_API
 <p>다음을 이용해 백그라운드(장치의 스피커가 아닌 {{domxref("AudioBuffer")}}으로 렌더링)에서 오디오 그래프를 신속하게 처리/렌더링 할수 있습니다.</p>
 
 <dl>
- <dt>{{domxref("OfflineAudioContext")}}</dt>
- <dd><strong><code>OfflineAudioContext</code></strong> 인터페이스는 {{domxref("AudioNode")}}로 연결되어 구성된 오디오 프로세싱 그래프를 나타내는 {{domxref("AudioContext")}} 인터페이스입니다. 표준 <strong><code>AudioContext</code></strong> 와 대조적으로, <strong><code>OfflineAudioContext</code></strong> 는 실제로 오디오를 렌더링하지 않고 가능한 빨리 버퍼 내에서 생성합니다. </dd>
- <dt>{{event("complete")}} (event)</dt>
- <dd><strong><code>complete</code></strong> 이벤트는 {{domxref("OfflineAudioContext")}}의 렌더링이 종료될때 발생합니다.</dd>
- <dt>{{domxref("OfflineAudioCompletionEvent")}}</dt>
- <dd><strong><code>OfflineAudioCompletionEvent</code></strong> 이벤트는 {{domxref("OfflineAudioContext")}} 의 처리가 종료될 때 발생하는 이벤트를 나타냅니다. {{event("complete")}} 이벤트는 이 이벤트를 구현합니다.</dd>
+	<dt>{{domxref("OfflineAudioContext")}}</dt>
+	<dd><strong><code>OfflineAudioContext</code></strong> 인터페이스는 {{domxref("AudioNode")}}로 연결되어 구성된 오디오 프로세싱 그래프를 나타내는 {{domxref("AudioContext")}} 인터페이스입니다. 표준 <strong><code>AudioContext</code></strong> 와 대조적으로, <strong><code>OfflineAudioContext</code></strong> 는 실제로 오디오를 렌더링하지 않고 가능한 빨리 버퍼 내에서 생성합니다. </dd>
+	<dt>{{event("complete")}} (event)</dt>
+	<dd><strong><code>complete</code></strong> 이벤트는 {{domxref("OfflineAudioContext")}}의 렌더링이 종료될때 발생합니다.</dd>
+	<dt>{{domxref("OfflineAudioCompletionEvent")}}</dt>
+	<dd><strong><code>OfflineAudioCompletionEvent</code></strong> 이벤트는 {{domxref("OfflineAudioContext")}} 의 처리가 종료될 때 발생하는 이벤트를 나타냅니다. {{event("complete")}} 이벤트는 이 이벤트를 구현합니다.</dd>
 </dl>
 
 <h2 id="Guides_and_tutorials">가이드와 자습서</h2>
@@ -266,7 +264,7 @@ translation_of: Web/API/Web_Audio_API
 <ul>
 	<li><a href="https://github.com/bit101/tones">Tones</a>: Web Audio API를 사용하여 특정한 음색/음을 재생하는 간단한 라이브러리</li>
 	<li><a href="https://tonejs.github.io/">Tone.js</a>: 브라우저에서 상호작용을 하는 음악을 생성하기 위한 프레임워크</li>
-	<li><a href="https://github.com/goldfire/howler.js/">howler.js</a>: 다른 유용한 기능들을 제공할 뿐만 아니라, <a href="https://webaudio.github.io/web-audio-api/">Web Audio API</a>을 기본으로 하고 <a href="https://www.whatwg.org/specs/web-apps/current-work/#the-audio-element">HTML5 Audio</a>에 fall back하는 JS 오디오 라이브러리</li>
+	<li><a href="https://github.com/goldfire/howler.js/">howler.js</a>: 다른 유용한 기능들을 제공할 뿐만 아니라, <a href="https://webaudio.github.io/web-audio-api/">Web Audio API</a>을 기본으로 하고 <a href="https://www.whatwg.org/specs/web-apps/current-work/#the-audio-element">HTML5 Audio</a>에 대안을 제공하는 JS 오디오 라이브러리</li>
 	<li><a href="https://github.com/mattlima/mooog">Mooog</a>: jQuery 스타일의 AudioNode 체이닝, mixer 스타일의 전송/반환, 등등</li>
 	<li><a href="https://korilakkuma.github.io/XSound/">XSound</a>: 신시사이저, 이펙트, 시각화, 레코딩 등을 위한 Web Audio API 라이브러리</li>
 	<li><a class="external external-icon" href="https://github.com/chrisjohndigital/OpenLang">OpenLang</a>: 다른 소스로부터 하나의 파일에 비디오와 오디오를 레코드하고 결합시키기 위한 Web Audio API를 사용하는 HTML5 비디오 language lab 웹 애플리케이션 (<a class="external external-icon" href="https://github.com/chrisjohndigital/OpenLang">GitHub에 있는 소스</a>)</li>
