@@ -51,7 +51,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/@@matchAll
 var str = '2016-01-02';
 var resultat = re[Symbol.matchAll](str);
 
-console.log(<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-variable">Array</span>.<span class="cm-property">from</span>(<span class="cm-variable">result</span>at, <span class="cm-def">x</span> <span class="cm-operator">=&gt;</span> <span class="cm-variable-2">x</span>[<span class="cm-number">0</span>])</span></span></span>);
+console.log(Array.from(resultat, x =&gt; x[0]));
 // ["2016", "01", "02"]
 </pre>
 

@@ -24,7 +24,7 @@ translation_of: Web/API/Document/getElementsByTagNameNS
  <li><code>name</code> 是所要查询的元素的名称。其中特殊字符 "*" 代表所有元素 (参考 <code><a href="/en/DOM/Node.localName" title="En/DOM/Node.localName">element.localName</a></code>)。</li>
 </ul>
 
-<div class="note"><strong>注意：</strong>在W3C文档中，<code>elements</code>是一个 <code>NodeList</code>，而该方法在Gecko内核的浏览器和IE中返回的是HTML集合<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLCollection" title="HTMLCollection 接口表示一个包含了元素（元素顺序为文档流中的顺序）的通用集合（generic collection），还提供了用来从该集合中选择元素的方法和属性。">HTMLCollection</a>.</code> Opera返回的也是一个 <code>NodeList</code>，但通过 <code>namedItem</code>方法 ， 使得它类似于一个<code>HTMLCollection</code> . 截止2012年1月，只有WebKit内核的浏览器返回的值是一个纯 <code>NodeList</code>. 详情请参考 <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=14869" title="https://bugzilla.mozilla.org/show_bug.cgi?id=14869">bug 14869</a> .</div>
+<div class="note"><strong>注意：</strong>在W3C文档中，<code>elements</code>是一个 <code>NodeList</code>，而该方法在Gecko内核的浏览器和IE中返回的是HTML集合<code><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/HTMLCollection" title="HTMLCollection 接口表示一个包含了元素（元素顺序为文档流中的顺序）的通用集合（generic collection），还提供了用来从该集合中选择元素的方法和属性。">HTMLCollection</a>.</code> Opera返回的也是一个 <code>NodeList</code>，但通过 <code>namedItem</code>方法 ， 使得它类似于一个<code>HTMLCollection</code> . 截止2012年1月，只有WebKit内核的浏览器返回的值是一个纯 <code>NodeList</code>. 详情请参考 <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=14869">bug 14869</a> .</div>
 
 <h2 id="Example" name="Example">示例</h2>
 
