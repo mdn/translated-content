@@ -13,7 +13,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/Locale/numberingSyst
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary">La propriété <strong><code>Intl.Locale.prototype.numberingSystem</code></strong> est une propriété fournie par un accesseur qui renvoie le <a href="https://en.wikipedia.org/wiki/Numeral_system">système de numération</a> utilisée par la locale.</span></p>
+<p>La propriété <strong><code>Intl.Locale.prototype.numberingSystem</code></strong> est une propriété fournie par un accesseur qui renvoie le <a href="https://en.wikipedia.org/wiki/Numeral_system">système de numération</a> utilisée par la locale.</p>
 
 <h2 id="Description">Description</h2>
 
@@ -386,7 +386,7 @@ console.log(numberingSystemStr.numberingSystem);
 
 <h3 id="Définir_la_valeur_de_numberingSystem_grâce_à_un_objet_de_configuration">Définir la valeur de <code>numberingSystem</code> grâce à un objet de configuration</h3>
 
-<p>Le constructeur <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale" title="The Intl.Locale constructor is a standard built-in property of the Intl object."><code>Intl.Locale</code></a> possède un deuxième argument, optionnel, qui est un objet permettant de configurer la locale. Les propriétés de cet objet sont utilisées comme extensions pour la locale ; les clés des propriétés sont les noms des extensions et leurs valeurs sont celles utilisées pour chaque extension. On peut donc utiliser la propriété <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">numberingSystem</span></font> sur cet objet afin de définir le système de numération à utiliser pour cette locale.</p>
+<p>Le constructeur <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale" title="The Intl.Locale constructor is a standard built-in property of the Intl object."><code>Intl.Locale</code></a> possède un deuxième argument, optionnel, qui est un objet permettant de configurer la locale. Les propriétés de cet objet sont utilisées comme extensions pour la locale ; les clés des propriétés sont les noms des extensions et leurs valeurs sont celles utilisées pour chaque extension. On peut donc utiliser la propriété <code>numberingSystem</code> sur cet objet afin de définir le système de numération à utiliser pour cette locale.</p>
 
 <pre class="brush: js">let numberingSystemViaObj= new Intl.Locale("en-Latn-US", {numberingSystem: "latn"});
 console.log(us12hour.numberingSystem);

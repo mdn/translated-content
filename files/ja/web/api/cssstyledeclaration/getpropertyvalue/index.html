@@ -2,66 +2,46 @@
 title: CSSStyleDeclaration.getPropertyValue()
 slug: Web/API/CSSStyleDeclaration/getPropertyValue
 tags:
-  - API
-  - CSSOM
-  - Method
-  - Reference
+- API
+- CSSOM
+- Method
+- Reference
+browser-compat: api.CSSStyleDeclaration.getPropertyValue
 translation_of: Web/API/CSSStyleDeclaration/getPropertyValue
 ---
 <p>{{ APIRef("CSSOM") }}</p>
 
 <p><strong>CSSStyleDeclaration.getPropertyValue()</strong> メソッドインターフェイスは、指定された CSS プロパティの値を含む {{domxref('DOMString')}} を返します。</p>
 
-<h2 id="構文">構文</h2>
+<h2 id="Syntax">構文</h2>
 
-<pre class="syntaxbox notranslate">var <em>value</em> = <em>style</em>.getPropertyValue(<em>property</em>);</pre>
+<pre
+  class="brush: js">var <em>value</em> = <em>style</em>.getPropertyValue(<em>property</em>);</pre>
 
-<h3 id="パラメータ">パラメータ</h3>
-
-<ul>
- <li><em><code>property</code></em> は、チェックされるプロパティ名を表す {{domxref('DOMString')}} です。</li>
-</ul>
-
-<h3 id="返り値">返り値</h3>
+<h3 id="Parameters">引数</h3>
 
 <ul>
- <li><code><em>value</em></code> は、プロパティの値を含む {{domxref('DOMString')}} です。設定されていない場合、空の文字列を返します。</li>
+  <li><em><code>property</code></em> は、チェックされるプロパティ名 (ハイフン区切り) を表す {{domxref('DOMString')}} です。</li>
 </ul>
 
-<h2 id="例">例</h2>
+<h3 id="Return_value">返値</h3>
 
-<p>次の JavaScript コードは CSS セレクタールールの <code>margin</code> プロパティの値をクエリします:</p>
+<ul>
+ <li><code><em>value</em></code> は、プロパティの値を含む {{domxref('DOMString')}} です。設定されていない場合、空文字列を返します。</li>
+</ul>
 
-<pre class="brush: js notranslate">var declaration = document.styleSheets[0].cssRules[0].style;
+<h2 id="Example">例</h2>
+
+<p>次の JavaScript コードは、 CSS セレクター規則の <code>margin</code> プロパティの値を問い合わせます。</p>
+
+<pre class="brush: js">var declaration = document.styleSheets[0].cssRules[0].style;
 var value = declaration.getPropertyValue('margin'); // "1px 2px"
 </pre>
 
-<h2 id="仕様">仕様</h2>
+<h2 id="Specifications">Specifications</h2>
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM', '#dom-cssstyledeclaration-getpropertyvalue', 'CSSStyleDeclaration.getPropertyValue()')}}</td>
-   <td>{{Spec2('CSSOM')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSStyleDeclaration', 'CSSStyleDeclaration')}}</td>
-   <td>{{Spec2('DOM2 Style')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-
-
-<p>{{Compat("api.CSSStyleDeclaration.getPropertyValue")}}</p>
+<p>{{Compat}}</p>

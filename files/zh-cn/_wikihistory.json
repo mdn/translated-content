@@ -6443,16 +6443,6 @@
       "ethertank"
     ]
   },
-  "Mozilla/Firefox/Releases/17": {
-    "modified": "2019-03-18T21:09:08.582Z",
-    "contributors": [
-      "fscholz",
-      "wbamberg",
-      "Ende93",
-      "ethertank",
-      "ziyunfei"
-    ]
-  },
   "Mozilla/Firefox/Releases/18": {
     "modified": "2019-01-16T16:41:51.967Z",
     "contributors": [
@@ -6505,21 +6495,6 @@
       "wbamberg",
       "Ende93",
       "ethertank",
-      "ziyunfei"
-    ]
-  },
-  "Mozilla/Firefox/Releases/23": {
-    "modified": "2019-01-16T17:12:46.618Z",
-    "contributors": [
-      "wbamberg",
-      "Ende93",
-      "ziyunfei"
-    ]
-  },
-  "Mozilla/Firefox/Releases/23/Site_compatibility": {
-    "modified": "2019-01-16T17:27:23.228Z",
-    "contributors": [
-      "wbamberg",
       "ziyunfei"
     ]
   },
@@ -6657,59 +6632,12 @@
       "ziyunfei"
     ]
   },
-  "Mozilla/Firefox/Releases/35": {
-    "modified": "2019-12-13T20:33:35.958Z",
-    "contributors": [
-      "wbamberg",
-      "Ende93",
-      "tiansh",
-      "Fiag"
-    ]
-  },
   "Mozilla/Firefox/Releases/41": {
     "modified": "2019-01-16T20:57:02.807Z",
     "contributors": [
       "wbamberg",
       "Ende93",
       "zhentao_lin"
-    ]
-  },
-  "Mozilla/Firefox/Releases/43": {
-    "modified": "2019-03-23T22:45:32.059Z",
-    "contributors": [
-      "wbamberg",
-      "Ende93",
-      "tulei555"
-    ]
-  },
-  "Mozilla/Firefox/Releases/44": {
-    "modified": "2019-01-16T22:24:18.829Z",
-    "contributors": [
-      "wbamberg",
-      "EricHedgedog"
-    ]
-  },
-  "Mozilla/Firefox/Releases/45": {
-    "modified": "2019-01-16T22:09:44.303Z",
-    "contributors": [
-      "wbamberg",
-      "Ende93",
-      "imeteora"
-    ]
-  },
-  "Mozilla/Firefox/Releases/49": {
-    "modified": "2019-01-16T23:59:52.584Z",
-    "contributors": [
-      "wbamberg",
-      "Ende93",
-      "Jiang-Xuan"
-    ]
-  },
-  "Mozilla/Firefox/Releases/56": {
-    "modified": "2019-03-23T22:06:15.833Z",
-    "contributors": [
-      "wbamberg",
-      "dapenglang"
     ]
   },
   "Mozilla/Firefox/Releases/59": {
@@ -6732,19 +6660,6 @@
       "sjlleo",
       "Azurak",
       "wearehere8"
-    ]
-  },
-  "Mozilla/Firefox/Releases/68": {
-    "modified": "2020-08-24T20:29:03.064Z",
-    "contributors": [
-      "w568w",
-      "HondaNM"
-    ]
-  },
-  "Mozilla/Firefox/Releases/69": {
-    "modified": "2019-10-25T04:48:07.433Z",
-    "contributors": [
-      "KringMiao"
     ]
   },
   "Mozilla/Firefox/Releases/78": {
@@ -49538,50 +49453,6 @@
       "AlexChao"
     ]
   },
-  "orphaned/Web/API/ChildNode/after": {
-    "modified": "2020-10-15T21:51:08.472Z",
-    "contributors": [
-      "Ende93",
-      "Cattla"
-    ]
-  },
-  "orphaned/Web/API/ChildNode/before": {
-    "modified": "2019-03-23T22:12:22.842Z",
-    "contributors": [
-      "caoweiju"
-    ]
-  },
-  "orphaned/Web/API/ChildNode/remove": {
-    "modified": "2020-10-15T21:27:27.352Z",
-    "contributors": [
-      "RainSlide",
-      "iSmartSV",
-      "duola8789",
-      "pasturn",
-      "Ende93",
-      "xgqfrms-GitHub",
-      "ceverytime",
-      "teoli",
-      "khalid32",
-      "ziyunfei",
-      "Darrel.Hsu"
-    ]
-  },
-  "orphaned/Web/API/ChildNode/replaceWith": {
-    "modified": "2020-10-15T21:56:06.625Z",
-    "contributors": [
-      "ecnelises",
-      "SphinxKnight",
-      "wzx",
-      "VictorDu"
-    ]
-  },
-  "orphaned/Web/API/DOMLocator": {
-    "modified": "2019-03-23T22:08:16.598Z",
-    "contributors": [
-      "ResJay"
-    ]
-  },
   "orphaned/Web/API/Detecting_device_orientation": {
     "modified": "2020-10-15T21:21:28.912Z",
     "contributors": [
@@ -50065,12 +49936,6 @@
     "modified": "2020-10-15T22:29:03.476Z",
     "contributors": [
       "lauhua"
-    ]
-  },
-  "orphaned/Web/API/RenderingContext": {
-    "modified": "2019-03-23T22:53:04.731Z",
-    "contributors": [
-      "ice-i-snow"
     ]
   },
   "orphaned/Web/API/Request/context": {

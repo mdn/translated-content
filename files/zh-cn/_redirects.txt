@@ -516,7 +516,6 @@
 /zh-CN/docs/Firefox_14_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/14
 /zh-CN/docs/Firefox_15_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/15
 /zh-CN/docs/Firefox_16_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/16
-/zh-CN/docs/Firefox_17_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/17
 /zh-CN/docs/Firefox_18_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/18
 /zh-CN/docs/Firefox_20_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/20
 /zh-CN/docs/Firefox_21_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/21
@@ -1190,7 +1189,6 @@
 /zh-CN/docs/Server-sent_events/Using_server-sent_events	/zh-CN/docs/Web/API/Server-sent_events/Using_server-sent_events
 /zh-CN/docs/Site_Compatibility_for_Firefox_19	/zh-CN/docs/Mozilla/Firefox/Releases/19/Site_compatibility
 /zh-CN/docs/Site_Compatibility_for_Firefox_21	/zh-CN/docs/Mozilla/Firefox/Releases/21/Site_compatibility
-/zh-CN/docs/Site_Compatibility_for_Firefox_23	/zh-CN/docs/Mozilla/Firefox/Releases/23/Site_compatibility
 /zh-CN/docs/Site_Compatibility_for_Firefox_24	/zh-CN/docs/Mozilla/Firefox/Releases/24/Site_compatibility
 /zh-CN/docs/Tips_for_Authoring_Fast-loading_HTML_Pages	/zh-CN/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages
 /zh-CN/docs/Tools-840092-dup/Remote_Debugging	/zh-CN/docs/Tools/Remote_Debugging
@@ -2048,21 +2046,6 @@
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/DisplayNames	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ListFormat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/ListFormat
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Locale	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map	/zh-CN/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/@@iterator	/zh-CN/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@iterator
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/@@species	/zh-CN/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@species
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag	/zh-CN/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/@@toStringTag
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/Map	/zh-CN/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/Map
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/clear	/zh-CN/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/clear
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/delete	/zh-CN/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/delete
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/entries	/zh-CN/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/entries
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/forEach	/zh-CN/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/forEach
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/get	/zh-CN/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/get
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/has	/zh-CN/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/has
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/keys	/zh-CN/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/keys
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/set	/zh-CN/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/set
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/size	/zh-CN/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/size
-/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Map/values	/zh-CN/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Map/values
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/反双曲余弦值	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/acosh
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 /zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat/format	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format

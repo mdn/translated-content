@@ -9,15 +9,16 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/unescape
 ---
 <div>{{jsSidebar("Objects")}}</div>
 
-<div class="warning"><strong>Attention !</strong> Bien que <code>unescape(…)</code> ne soit pas strictement obsolète (au sens où elle n'a pas été retirée des standards), elle est définie au sein de <a href="https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers">l'Annexe B</a> du standard ECMA-262 qui commence par :
+<div class="warning"><p><strong>Attention :</strong> Bien que <code>unescape(…)</code> ne soit pas strictement obsolète (au sens où elle n'a pas été retirée des standards), elle est définie au sein de <a href="https://www.ecma-international.org/ecma-262/9.0/index.html#sec-additional-ecmascript-features-for-web-browsers">l'Annexe B</a> du standard ECMA-262 qui commence par :
 
 <blockquote>… L'ensemble des fonctionnalités et comportements définis dans cette annexe possède une ou plusieurs caractéristiques indésirables. En l'absence d'une utilisation historique, ces fonctionnalités seraient retirés de la spécification. …<br>
 … Les développeurs ne devraient pas utiliser ces fonctionnalités et comportements ou présupposer qu'elles existent lors de l'écriture de nouveau code ECMAScript. …</blockquote>
+</p>
 </div>
 
 <p>La fonction dépréciée <code><strong>unescape()</strong></code> calcule une nouvelle chaîne de caractères et remplace les séquences d'échappement hexadécimales par les caractères qu'elles représentent. Les séquences d'échappement peuvent provenir de la fonction {{jsxref("escape")}}. Cette méthode est obsolète, c'est pourquoi il est conseillé d'utiliser {{jsxref("decodeURI")}} ou {{jsxref("decodeURIComponent")}} à la place.</p>
 
-<div class="note"><strong>Note : </strong><code>unescape()</code> ne doit pas être utilisée pour décoder les URI. À la place, utilisez <code>decodeURI</code>.</div>
+<div class="note"><p><strong>Note :</strong> <code>unescape()</code> ne doit pas être utilisée pour décoder les URI. À la place, utilisez <code>decodeURI</code>.</p></div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
