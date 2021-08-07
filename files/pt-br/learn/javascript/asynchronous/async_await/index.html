@@ -1,0 +1,86 @@
+---
+title: Tornando mais fácil a programação assíncrona com async e await
+slug: Learn/JavaScript/Asynchronous/Async_await
+translation_of: Learn/JavaScript/Asynchronous/Async_await
+original_slug: Learn/JavaScript/Asynchronous/Async_await
+---
+<div>{{LearnSidebar}}</div>
+
+<div>{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Choosing_the_right_approach", "Learn/JavaScript/Asynchronous")}}</div>
+
+<p class="summary">Adições mais recentes à linguagem JavaScript são as funções assíncronas e a palavra-chave await, adicionadas no ECMAScript 2017. Esses recursos atuam basicamente como um syntactic sugar em cima de promises, tornando o código assíncrono mais fácil de escrever e ler. Isso faz com que o código assíncrono pareça mais com o código síncrono old-school, então vale a pena aprender. Este artigo fornece o que você precisa saber.</p>
+
+<table class="learn-box standard-table">
+ <tbody>
+  <tr>
+   <th scope="row">Pré-requisitos:</th>
+   <td>Conhecimento básico de informática, uma compreensão razoável dos fundamentos do JavaScript, uma compreensão de código assíncrono em geral e promises.</td>
+  </tr>
+  <tr>
+   <th scope="row">Objetivo:</th>
+   <td>Entender o uso do async/await.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="O_basico_de_async_await">O básico de async/await</h2>
+
+<div><p>Existem duas formas de usar async/await no seu código.</p></div>
+
+<h3 id="A_palavra_chave_async"><a href="#A_palavra_chave_async" title="Link permanente para A palavra-chave async">A palavra-chave async</a></h3>
+
+<div><p>Em primeiro lugar, temos a palavra-chave <code>async</code>, que você coloca antes de uma declaração de função para transformá-la em uma função assíncrona. Uma <a href="/pt-BR/docs/Web/JavaScript/Reference/Statements/async_function">função assíncrona</a> é uma função que espera a possibilidade de a palavra-chave await ser usada para invocar código assíncrono.</p>
+  
+  <p>Experimente digitar as seguintes linhas no console JS do seu navegador.</p>
+
+  <div class="code-example"><pre class="brush: js notranslate"><code><span class="token keyword">function</span> <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token string">"Hello"</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre><button aria-hidden="false" type="button" class="copy-icon"><span class="visually-hidden">Copiar para área de transferência</span></button></div>
+
+    <p>A funcão retorna "Hello" — nada de especial, certo?</p>
+  
+    <p>Mas o que acontece se transformar-mos isso em uma função assíncrona? Tente o seguinte:</p>
+
+    <div class="code-example"><pre class="brush: js notranslate"><code><span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token string">"Hello"</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+      <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre><button aria-hidden="false" type="button" class="copy-icon"><span class="visually-hidden">Copiar para área de transferência</span></button></div>
+
+    <p>Ah. A invocação da função agora retorna uma promise. Isso é uma das características das funções assíncronas — seus valores de retorno são garantidos para serem convertidos em promessas.</p>
+
+    <p>Você também pode criar uma <a href="/en-US/docs/Web/JavaScript/Reference/Operators/async_function">expressão de função assíncrona</a>, assim:</p>
+
+    <div class="code-example"><pre class="brush: js notranslate"><code><span class="token keyword">let</span> <span class="token function-variable function">hello</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token string">"Hello"</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+      <span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre><button aria-hidden="false" type="button" class="copy-icon"><span class="visually-hidden">Copiar para área de transferência</span></button></div>
+
+    <p>E você pode usar arrow functions:</p>
+
+    <div class="code-example"><pre class="brush: js notranslate"><code><span class="token keyword">let</span> <span class="token function-variable function">hello</span> <span class="token operator">=</span> <span class="token keyword">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token string">"Hello"</span> <span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre><button aria-hidden="false" type="button" class="copy-icon"><span class="visually-hidden">Copiar para área de transferência</span></button></div>
+
+    <p>Tudo isso faz basicamente a mesma coisa.</p>
+  
+  <p>Para consumir o valor retornado quando a promise é finalizada, desde que esteja retornando uma promise, podemos usar um bloco com <code>.then()</code>:</p>
+
+  <div class="code-example"><pre class="brush: js notranslate"><code><span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">value</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span><span class="token punctuation">)</span></code></pre><button aria-hidden="false" type="button" class="copy-icon"><span class="visually-hidden">Copiar para área de transferência</span></button></div>
+
+  <p>ou mesmo de forma simplificada</p>
+
+  <div class="code-example"><pre class="brush: js notranslate"><code><span class="token function">hello</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>console<span class="token punctuation">.</span>log<span class="token punctuation">)</span></code></pre><button aria-hidden="false" type="button" class="copy-icon"><span class="visually-hidden">Copiar para área de transferência</span></button></div>
+
+  <p>Como vimos no último artigo.</p>
+
+  <p>Então a palavra-chave <code>async</code> é adicionada nas funções para dizer a elas para retornar uma promise ao invés de diretamente retornar uma valor.</p></div>
+
+  <h2 id="Conclusao">Conclusão</h2>
+
+  <p>Então é isso — tudo que é essencial sobre loops e intervalos assíncronos em um artigo. Você vai descobrir que esse métodos são úteis em muitas situações, mas tome cuidado para não usá-los sem necessidade! Porque eles são executados na thread principal, callbacks intensivos e pesados (especialmente aqueles que manipulam o DOM) podem realmente trazer lentidão para uma página se você não for cuidadoso.</p>
+
+  <p>{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Promises", "Learn/JavaScript/Choosing_the_right_approach", "Learn/JavaScript/Asynchronous")}}</p>
+
+  <h2 id="Neste_modulo">Neste módulo</h2>
+
+  <ul>
+    <li><a href="/pt-BR/docs/Learn/JavaScript/Asynchronous/Concepts">Conceitos gerais da programação assíncrona</a></li>
+    <li><a href="/pt-BR/docs/Learn/JavaScript/Asynchronous/Introducing">Introdução ao JavaScript Async</a></li>
+    <li><a href="/pt-BR/docs/Learn/JavaScript/Asynchronous/Timeouts_and_intervals">Timeouts e intervalos</a></li>
+    <li><a href="/pt-BR/docs/Learn/JavaScript/Asynchronous/Promises">Programação elegante com Promises</a></li>
+    <li><a href="/pt-BR/docs/Learn/JavaScript/Asynchronous/Choosing_the_right_approach">Escolhendo a abordagem correta</a></li>
+   </ul>
+</div>
