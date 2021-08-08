@@ -38,13 +38,13 @@ translation_of: 'Learn/Performance/Measuring_performance'
 
 <p>L'objet <a href="/fr/docs/Web/API/PerformanceEntry"><code>PerformanceEntry</code></a> fait partie de la <em>chronologie des performances</em>. Une entrée <em>performance</em> peut directement être créée en utilisant <em>{{domxref("PerformanceMark","PerformanceMark")}}</em> ou une <em>{{domxref("PerformanceMeasure","PerformanceMeasure")}}</em> (par exemple en appelant la méthode {{domxref("Performance.mark","mark()")}}) sur un point explicite de l'application. Les entrées de performances peuvent aussi être créées de façon indirecte, par exemple lors du chargement d'une ressource graphique.</p>
 
-<p><a href="/fr/docs/Web/API/PerformanceObserver">l'API PerformanceObserver</a> peut être utilisée pour observer le déroulement d'évènements de mesure des performances et permet de vous notifier de nouvelles <a href="/fr/docs/Web/API/PerformanceEntry">entrées de performances</a> lorsqu'elles enregistrent la chronologie des performances dans le navigateur.</p>
+<p><a href="/fr/docs/Web/API/PerformanceObserver">L'API PerformanceObserver</a> peut être utilisée pour observer le déroulement d'évènements de mesure des performances et permet de vous notifier de nouvelles <a href="/fr/docs/Web/API/PerformanceEntry">entrées de performances</a> lorsqu'elles enregistrent la chronologie des performances dans le navigateur.</p>
 
-<p>While this article does not dive into using these APIs, it is useful to know they exist. You can also refer to  the <a href="/fr/docs/Web/Performance/Navigation_and_resource_timings">Navigation and timings</a>  article for further examples on using performance Web APIs.</p>
+<p>Si cet article n'a pas pour but de proposer une documentation complète de ces API, il est bon de savoir qu'elles existent. Vous pouvez vous référer à l'article concernant <a href="/fr/docs/Web/Performance/Navigation_and_resource_timings">l'horodatage de navigation</a> pour aller plus loin et découvrir plus d'exemples concernant les API liées à la mesure des performances.</p>
 
-<h2 id="tools_and_metrics">Tools and metrics</h2>
+<h2 id="tools_and_metrics">Outils de mesure</h2>
 
-<p>There are a number of different tools available to help you improve performance. These can generally be classified into two categories:</p>
+<p>Il y a beaucoup d'outils disponibles pour vous aider à améliorer les performances de vos sites. Il sont généralement classés dans deux catégories&nbsp;:</p>
 
 <ul>
  <li>Tools that indicate or measure performance, such as <a href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed Insights</a> or the Firefox <a href="/fr/docs/Tools/Network_Monitor">Network Monitor</a> and <a href="/fr/docs/Tools/Performance">Performance Monitor</a>. These tools show you how fast or slow your web app or site load. They also indicate areas that can be improved to optimize your web app.</li>
