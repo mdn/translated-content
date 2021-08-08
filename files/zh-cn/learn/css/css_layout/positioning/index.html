@@ -458,6 +458,7 @@ p:nth-of-type(1) {
 
 <p>还有一个可用的位置值称为 position: sticky，比起其他位置值要新一些。它基本上是相对位置和固定位置的混合体，它允许被定位的元素表现得像相对定位一样，直到它滚动到某个阈值点（例如，从视口顶部起1​​0像素）为止，此后它就变得固定了。例如，它可用于使导航栏随页面滚动直到特定点，然后粘贴在页面顶部。</p>
 
+<div id="Sticky_1">
 <div class="hidden">
 <h6 id="Sticky_positioning_example">Sticky positioning example</h6>
 
@@ -491,8 +492,9 @@ p:nth-of-type(1) {
   top: 30px;
   left: 30px;
 }</pre>
+</div>
 
-<p>{{ EmbedLiveSample('position_sticky', '100%', 200) }}</p>
+<p>{{ EmbedLiveSample('Sticky_1', '100%', 200) }}</p>
 
 <p><code>position: sticky</code> 的另一种有趣且常用的用法，是创建一个滚动索引页面。在此页面上，不同的标题会停留在页面顶部。这样的示例的标记可能如下所示：</p>
 
@@ -541,7 +543,7 @@ p:nth-of-type(1) {
 
 <div id="Sticky_2">
 <div class="hidden">
-<pre class="brush: css notranslate">body {
+<pre class="notranslate">body {
   width: 500px;
   height: 1400px;
   margin: 0 auto;
@@ -558,7 +560,7 @@ dt {
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Sticky positioning&lt;/h1&gt;
+<pre class="notranslate">&lt;h1&gt;Sticky positioning&lt;/h1&gt;
 
 &lt;dl&gt;
     &lt;dt&gt;A&lt;/dt&gt;
