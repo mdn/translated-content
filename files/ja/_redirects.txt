@@ -2173,7 +2173,6 @@
 /ja/docs/HTML/HTML_Elements/strong	/ja/docs/Web/HTML/Element/strong
 /ja/docs/HTML/HTML_Elements/title	/ja/docs/Web/HTML/Element/title
 /ja/docs/HTML/HTML_Elements/var	/ja/docs/Web/HTML/Element/var
-/ja/docs/HTML/HTML_Extensions	/ja/docs/orphaned/Web/HTML/HTML_Extensions
 /ja/docs/HTML/Inline_elements	/ja/docs/Web/HTML/Inline_elements
 /ja/docs/HTML/Introduction	/ja/docs/Learn/HTML/Introduction_to_HTML
 /ja/docs/HTML/Introduction_to_HTML5	/ja/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
@@ -4205,7 +4204,6 @@
 /ja/docs/Web/HTML/HTML_Elements/strong	/ja/docs/Web/HTML/Element/strong
 /ja/docs/Web/HTML/HTML_Elements/title	/ja/docs/Web/HTML/Element/title
 /ja/docs/Web/HTML/HTML_Elements/var	/ja/docs/Web/HTML/Element/var
-/ja/docs/Web/HTML/HTML_Extensions	/ja/docs/orphaned/Web/HTML/HTML_Extensions
 /ja/docs/Web/HTML/Introduction	/ja/docs/Learn/HTML/Introduction_to_HTML
 /ja/docs/Web/HTML/Introduction_to_HTML5	/ja/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5
 /ja/docs/Web/HTML/Optimizing_your_pages_for_speculative_parsing	/ja/docs/Glossary/speculative_parsing
