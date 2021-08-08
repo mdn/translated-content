@@ -1597,7 +1597,6 @@
 /ja/docs/DOM/window.navigator.platform	/ja/docs/orphaned/Web/API/NavigatorID/platform
 /ja/docs/DOM/window.navigator.product	/ja/docs/orphaned/Web/API/NavigatorID/product
 /ja/docs/DOM/window.navigator.productSub	/ja/docs/Web/API/Navigator/productSub
-/ja/docs/DOM/window.navigator.registerContentHandler	/ja/docs/orphaned/Web/API/Navigator/registerContentHandler
 /ja/docs/DOM/window.navigator.registerProtocolHandler	/ja/docs/Web/API/Navigator/registerProtocolHandler
 /ja/docs/DOM/window.navigator.userAgent	/ja/docs/orphaned/Web/API/NavigatorID/userAgent
 /ja/docs/DOM/window.navigator.vendor	/ja/docs/Web/API/Navigator/vendor
@@ -1819,7 +1818,6 @@
 /ja/docs/DOM:window.navigator.platform	/ja/docs/orphaned/Web/API/NavigatorID/platform
 /ja/docs/DOM:window.navigator.product	/ja/docs/orphaned/Web/API/NavigatorID/product
 /ja/docs/DOM:window.navigator.productSub	/ja/docs/Web/API/Navigator/productSub
-/ja/docs/DOM:window.navigator.registerContentHandler	/ja/docs/orphaned/Web/API/Navigator/registerContentHandler
 /ja/docs/DOM:window.navigator.registerProtocolHandler	/ja/docs/Web/API/Navigator/registerProtocolHandler
 /ja/docs/DOM:window.navigator.userAgent	/ja/docs/orphaned/Web/API/NavigatorID/userAgent
 /ja/docs/DOM:window.navigator.vendor	/ja/docs/Web/API/Navigator/vendor
@@ -3330,7 +3328,6 @@
 /ja/docs/Web/API/LocalMediaStream	/ja/docs/orphaned/Web/API/LocalMediaStream
 /ja/docs/Web/API/MediaRecorder_API	/ja/docs/Web/API/MediaStream_Recording_API
 /ja/docs/Web/API/Navigator.getUserMedia	/ja/docs/Web/API/Navigator/getUserMedia
-/ja/docs/Web/API/Navigator/registerContentHandler	/ja/docs/orphaned/Web/API/Navigator/registerContentHandler
 /ja/docs/Web/API/Navigator/userAgent	/ja/docs/orphaned/Web/API/NavigatorID/userAgent
 /ja/docs/Web/API/NavigatorConcurrentHardware	/ja/docs/orphaned/Web/API/NavigatorConcurrentHardware
 /ja/docs/Web/API/NavigatorConcurrentHardware/hardwareConcurrency	/ja/docs/orphaned/Web/API/NavigatorConcurrentHardware/hardwareConcurrency
@@ -3663,7 +3660,6 @@
 /ja/docs/Web/API/window.navigator.platform	/ja/docs/orphaned/Web/API/NavigatorID/platform
 /ja/docs/Web/API/window.navigator.product	/ja/docs/orphaned/Web/API/NavigatorID/product
 /ja/docs/Web/API/window.navigator.productSub	/ja/docs/Web/API/Navigator/productSub
-/ja/docs/Web/API/window.navigator.registerContentHandler	/ja/docs/orphaned/Web/API/Navigator/registerContentHandler
 /ja/docs/Web/API/window.navigator.userAgent	/ja/docs/orphaned/Web/API/NavigatorID/userAgent
 /ja/docs/Web/API/window.navigator.vendor	/ja/docs/Web/API/Navigator/vendor
 /ja/docs/Web/API/window.navigator.vendorSub	/ja/docs/Web/API/Navigator/vendorSub
