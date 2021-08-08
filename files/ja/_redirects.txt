@@ -3034,14 +3034,6 @@
 /ja/docs/Server-sent_events	/ja/docs/Web/API/Server-sent_events
 /ja/docs/Server-sent_events/Using_server-sent_events	/ja/docs/Web/API/Server-sent_events/Using_server-sent_events
 /ja/docs/Setting_up_extension_development_environment	/ja/docs/orphaned/Setting_up_extension_development_environment
-/ja/docs/Site_Compatibility_for_Firefox_17	/ja/docs/Mozilla/Firefox/Releases/17/Site_compatibility
-/ja/docs/Site_Compatibility_for_Firefox_18	/ja/docs/Mozilla/Firefox/Releases/18/Site_compatibility
-/ja/docs/Site_Compatibility_for_Firefox_19	/ja/docs/Mozilla/Firefox/Releases/19/Site_compatibility
-/ja/docs/Site_Compatibility_for_Firefox_20	/ja/docs/Mozilla/Firefox/Releases/20/Site_compatibility
-/ja/docs/Site_Compatibility_for_Firefox_21	/ja/docs/Mozilla/Firefox/Releases/21/Site_compatibility
-/ja/docs/Site_Compatibility_for_Firefox_22	/ja/docs/Mozilla/Firefox/Releases/22/Site_compatibility
-/ja/docs/Site_Compatibility_for_Firefox_23	/ja/docs/Mozilla/Firefox/Releases/23/Site_compatibility
-/ja/docs/Site_Compatibility_for_Firefox_24	/ja/docs/Mozilla/Firefox/Releases/24/Site_compatibility
 /ja/docs/The_DOM_and_JavaScript	/ja/docs/Web/JavaScript/JavaScript_technologies_overview
 /ja/docs/The_Importance_of_Correct_HTML_Commenting	/ja/docs/orphaned/The_Importance_of_Correct_HTML_Commenting
 /ja/docs/The_X-Frame-Options_response_header	/ja/docs/Web/HTTP/Headers/X-Frame-Options
