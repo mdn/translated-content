@@ -180,7 +180,7 @@ translation_of: Mozilla/Firefox/Releases/55
 <ul>
  <li><code>xml:base</code> 属性を、{{htmlattrxref("style")}} 属性内に現れるパスのベース URL として使用できなくなりました。 例えば <code>&lt;div xml:base="https://example.com/" style="background:url(picture.jpg)"&gt;&lt;/div&gt;</code> のような使い方です ({{bug(1350521)}})。style 属性向け xml:base が無効化されました。</li>
  <li>他のブラウザーがサポートしていないため、Firefox 55 から content ドキュメントでは {{htmlelement("style")}} 要素の {{htmlattrxref("scoped","style")}} 属性を設定 (<code>layout.css.scoped-style.enabled</code>) で無効化しました。</li>
- <li>{{htmlelement("meta")}} 要素の {{htmlattrxref("http-equiv","meta")}} 属性で、不明瞭な値である <code>MSThemeCompatible</code> のサポートを Gecko から削除しました。他にサポートする現行ブラウザーがなく ({{bug("966240")}})。</li>
+ <li>{{htmlelement("meta")}} 要素の {{htmlattrxref("http-equiv","meta")}} 属性で、不明瞭な値である <code>MSThemeCompatible</code> のサポートを Gecko から削除しました。他にサポートする現行ブラウザーがなく、また互換性の問題が発生していました ({{bug("966240")}})。</li>
 </ul>
 
 <h3 id="CSS_2" name="CSS_2">CSS</h3>
