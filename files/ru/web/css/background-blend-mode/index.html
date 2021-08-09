@@ -13,10 +13,10 @@ translation_of: Web/CSS/background-blend-mode
 
 <p>{{cssinfo}}</p>
 
-<h2 id="Syntax" name="Syntax">Синтаксис</h2>
+<h2 id="Formal_syntax">Формальный синтаксис</h2>
+{{csssyntax("background-blend-mode")}}
 
-<pre class="twopartsyntaxbox"><code>Формальный синтаксис:  {{csssyntax("background-blend-mode")}}</code></pre>
-
+<h2 id="Syntax">Cинтаксис</h2>
 <pre>background-blend-mode: normal;               /* Одно значение */
 background-blend-mode: darken, luminosity;   /* Два значение, по одному на каждый фон */
 
@@ -34,38 +34,39 @@ background-blend-mode: unset;
 
 <h2 id="Examples" name="Examples">Пример</h2>
 
+<pre class="brush: html hidden">&lt;div id="div"&gt;&lt;/div&gt;
 &lt;select id="select"&gt;
-    &lt;option&gt;normal&lt;/option&gt;
-    &lt;option&gt;multiply&lt;/option&gt;
-    &lt;option selected&gt;screen&lt;/option&gt;
-    &lt;option&gt;overlay&lt;/option&gt;
-    &lt;option&gt;darken&lt;/option&gt;
-    &lt;option&gt;lighten&lt;/option&gt;
-    &lt;option&gt;color-dodge&lt;/option&gt;
-    &lt;option&gt;color-burn&lt;/option&gt;
-    &lt;option&gt;hard-light&lt;/option&gt;
-    &lt;option&gt;soft-light&lt;/option&gt;
-    &lt;option&gt;difference&lt;/option&gt;
-    &lt;option&gt;exclusion&lt;/option&gt;
-    &lt;option&gt;hue&lt;/option&gt;
-    &lt;option&gt;saturation&lt;/option&gt;
-    &lt;option&gt;color&lt;/option&gt;
-    &lt;option&gt;luminosity&lt;/option&gt;
+    &lt;option&gt;normal&lt;/option&gt;
+    &lt;option&gt;multiply&lt;/option&gt;
+    &lt;option selected&gt;screen&lt;/option&gt;
+    &lt;option&gt;overlay&lt;/option&gt;
+    &lt;option&gt;darken&lt;/option&gt;
+    &lt;option&gt;lighten&lt;/option&gt;
+    &lt;option&gt;color-dodge&lt;/option&gt;
+    &lt;option&gt;color-burn&lt;/option&gt;
+    &lt;option&gt;hard-light&lt;/option&gt;
+    &lt;option&gt;soft-light&lt;/option&gt;
+    &lt;option&gt;difference&lt;/option&gt;
+    &lt;option&gt;exclusion&lt;/option&gt;
+    &lt;option&gt;hue&lt;/option&gt;
+    &lt;option&gt;saturation&lt;/option&gt;
+    &lt;option&gt;color&lt;/option&gt;
+    &lt;option&gt;luminosity&lt;/option&gt;
 &lt;/select&gt;</pre>
 
-<pre class="brush: css" class="hidden">#div {
-    width: 300px;
-    height: 300px;
-    background: url('https://mdn.mozillademos.org/files/8543/br.png'),url('https://mdn.mozillademos.org/files/8545/tr.png');
-    background-blend-mode: screen;
+<pre class="brush: css hidden">#div {
+    width: 300px;
+    height: 300px;
+    background: url('/en-US/docs/Web/CSS/background-blend-mode/br.png'),url('/en-US/docs/Web/CSS/background-blend-mode/tr.png');
+    background-blend-mode: screen;
 }</pre>
 
-<pre class="brush: js" class="hidden">document.getElementById("select").onchange = function(event) {
-    document.getElementById("div").style.backgroundBlendMode = document.getElementById("select").selectedOptions[0].innerHTML;
+<pre class="brush: js hidden">document.getElementById("select").onchange = function(event) {
+    document.getElementById("div").style.backgroundBlendMode = document.getElementById("select").selectedOptions[0].innerHTML;
 }
 console.log(document.getElementById('div'));</pre>
 
-<p>{{ EmbedLiveSample('Examples', "330", "330") }}</p>
+<p>{{ EmbedLiveSample('Examples', "330", "350") }}</p>
 
 <h2 id="Specifications" name="Specifications">Спецификации</h2>
 
