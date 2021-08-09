@@ -1,25 +1,46 @@
 ---
 title: 'SyntaxError: return not in function'
 slug: Web/JavaScript/Reference/Errors/Bad_return_or_yield
+tags:
+- Error
+- Errors
+- JavaScript
+- SyntaxError
 translation_of: Web/JavaScript/Reference/Errors/Bad_return_or_yield
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
-<h2 id="메시지">메시지</h2>
+<p>JavaScript 예외 "return (or yield) not in function"은
+  <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/return">return</a></code>
+  또는 <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code>
+  이 <a
+    href="/en-US/docs/Web/JavaScript/Guide/Functions">function</a> 외부에서 호출될 때 발생합니다.</p>
 
-<pre class="syntaxbox">SyntaxError: return not in function
-SyntaxError: yield not in function
+<h2 id="Message">메시지</h2>
+
+<pre class="brush: js">SyntaxError: 'return' statement outside of function (Edge)
+  SyntaxError: return not in function (Firefox)
+  SyntaxError: yield not in function (Firefox)
 </pre>
 
-<h2 id="에러_타입">에러 타입</h2>
+<h2 id="Error_type">에러 타입</h2>
 
 <p>{{jsxref("SyntaxError")}}.</p>
 
-<h2 id="뭐가_잘못된_걸까요">뭐가 잘못된 걸까요?</h2>
+<h2 id="What_went_wrong">무엇이 잘못된 걸까요?</h2>
 
-<p><code><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/return">return</a></code> 또는 <code><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code> 문장이 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/%ED%95%A8%EC%88%98">function</a> 밖에서 호출되었기 때문입니다. 혹시 어딘가에 중괄호를 빠트리신 건 아닌가요? <code>return</code> 과 <code>yield</code> function 내에 있어야 합니다, 왜냐하면 이것들은 function의 실행 종료 (또는 일시정지 및 재개)를 의미하고 function 호출자에게 특정 값을 반환하기 위해 사용되기 때문입니다.</p>
+<p>
+  <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/return">return</a></code>
+  또는 <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code>
+  문장이 <a
+    href="/en-US/docs/Web/JavaScript/Guide/Functions">function</a> 밖에서 호출되었기 때문입니다.
+    혹시 어딘가에 중괄호를 빠트리신 건 아닌가요? <code>return</code>과 <code>yield</code>는 function 내에 있어야합니다.
+    왜냐하면 이것들은 function의 실행 종료 (또는 일시정지 및 재개)를 의미하고 function 호출자에게 특정 값을 반환하기 위해 사용되기 때문입니다.
+  </p>
 
-<h2 id="예제">예제</h2>
+<h2 id="Examples">예제</h2>
+
+<h3 id="Missing_curly_brackets">중괄호 누락</h3>
 
 <pre class="brush: js example-bad">var cheer = function(score) {
   if (score === 147)
@@ -43,9 +64,13 @@ SyntaxError: yield not in function
   }
 };</pre>
 
-<h2 id="또_다른_내용">또 다른 내용</h2>
+<h2 id="See_also">같이 보기</h2>
 
 <ul>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/return">return</a></code></li>
- <li><code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code></li>
+  <li>
+    <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/return">return</a></code>
+  </li>
+  <li>
+    <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code>
+  </li>
 </ul>

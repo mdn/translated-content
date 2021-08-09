@@ -30,7 +30,7 @@ fileSelect.addEventListener("click", function (e) {
 </pre>
 <p>Obviously you can style the new button for opening the file picker as you wish.</p>
 <h3 id="Dynamically_adding_a_change_listener">Dynamically adding a change listener</h3>
-<p>If your input field was created using a JavaScript library such as <a class="external" href="http://www.jquery.com/" title="http://www.jquery.com/">jQuery</a>, you'll need to use {{ domxref("element.addEventListener()") }} to add the <code>change</code> event listener, like this:</p>
+<p>If your input field was created using a JavaScript library such as <a class="external" href="http://www.jquery.com/">jQuery</a>, you'll need to use {{ domxref("element.addEventListener()") }} to add the <code>change</code> event listener, like this:</p>
 <pre class="brush: js">var inputElement = document.getElementById("inputField");
 inputElement.addEventListener("change", handleFiles, false);
 

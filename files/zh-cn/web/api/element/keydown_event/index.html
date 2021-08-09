@@ -38,7 +38,7 @@ translation_of: Web/API/Element/keydown_event
 
 <p>键盘事件只能由 <code>&lt;inputs&gt;</code>, <code>&lt;textarea&gt;</code> 以及任何具有  <code>contentEditable</code> 或 <code>tabindex="-1"</code>属性的组件触发。</p>
 
-<p>自 Firefox 65起,  <code>keydown</code> 与 <code><a href="/en-US/docs/Web/API/Element/keyup_event">keyup</a></code> 事件会在IME（输入法编辑器）复合事件中被触发,目的是为了提升CJKT（中日韩台地区）用户跨浏览器性能, ({{bug(354358)}}，更多详情访问 <a href="https://www.fxsitecompat.com/en-CA/docs/2018/keydown-and-keyup-events-are-now-fired-during-ime-composition/">keydown and keyup events are now fired during IME composition</a> ). 若要忽略复合事件中所有 <code>keydown</code> 事件, 可以按照如下代码修改 (229是某个在IME中触发的键盘事件对应的 <code>keyCode</code>):</p>
+<p>自 Firefox 65起,  <code>keydown</code> 与 <code><a href="/en-US/docs/Web/API/Element/keyup_event">keyup</a></code> 事件会在IME（输入法编辑器）复合事件中被触发,目的是为了提升CJKT（中日韩台地区）用户跨浏览器性能, ({{bug(354358)}}). 若要忽略复合事件中所有 <code>keydown</code> 事件, 可以按照如下代码修改 (229是某个在IME中触发的键盘事件对应的 <code>keyCode</code>):</p>
 
 <pre class="brush: js">eventTarget.addEventListener("keydown", event =&gt; {
   if (event.isComposing || event.keyCode === 229) {

@@ -111,7 +111,7 @@ translation_of: Web/Security/Same-origin_policy
 
 <ul>
  <li><code>&lt;script src="..."&gt;&lt;/script&gt;</code> 标签嵌入跨域脚本。语法错误信息只能被同源脚本中捕捉到。</li>
- <li><code>&lt;link rel="stylesheet" href="..."&gt;</code> 标签嵌入CSS。由于CSS的<a href="http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html">松散的语法规则</a>，CSS的跨域需要一个设置正确的 HTTP 头部 <code>Content-Type</code> 。不同浏览器有不同的限制：<span> </span><a href="http://msdn.microsoft.com/zh-CN/library/ie/gg622939%28v=vs.85%29.aspx">IE</a><span>, </span><a href="http://www.mozilla.org/security/announce/2010/mfsa2010-46.html" title="http://www.mozilla.org/security/announce/2010/mfsa2010-46.html">Firefox</a><span>, </span><a href="http://code.google.com/p/chromium/issues/detail?id=9877" title="http://code.google.com/p/chromium/issues/detail?id=9877">Chrome</a><span>, </span><a href="http://support.apple.com/kb/HT4070" title="http://support.apple.com/kb/HT4070">Safari</a><span> (跳至CVE-2010-0051)部分 和 </span><a href="http://www.opera.com/support/kb/view/943/" title="http://www.opera.com/support/kb/view/943/">Opera</a>。</li>
+ <li><code>&lt;link rel="stylesheet" href="..."&gt;</code> 标签嵌入CSS。由于CSS的<a href="http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html">松散的语法规则</a>，CSS的跨域需要一个设置正确的 HTTP 头部 <code>Content-Type</code> 。不同浏览器有不同的限制：<span> </span><a href="http://msdn.microsoft.com/zh-CN/library/ie/gg622939%28v=vs.85%29.aspx">IE</a><span>, </span><a href="http://www.mozilla.org/security/announce/2010/mfsa2010-46.html" title="http://www.mozilla.org/security/announce/2010/mfsa2010-46.html">Firefox</a><span>, </span><a href="http://code.google.com/p/chromium/issues/detail?id=9877" title="http://code.google.com/p/chromium/issues/detail?id=9877">Chrome</a><span>, </span><a href="http://support.apple.com/kb/HT4070">Safari</a><span> (跳至CVE-2010-0051)部分 和 </span><a href="http://www.opera.com/support/kb/view/943/">Opera</a>。</li>
  <li>通过 {{htmlelement("img")}} 展示的图片。支持的图片格式包括PNG,JPEG,GIF,BMP,SVG,...</li>
  <li>通过 {{htmlelement("video")}} 和 {{htmlelement("audio")}} 播放的多媒体资源。</li>
  <li>通过 <code><a href="https://developer.mozilla.org/zh-CN/docs/HTML/Element/object" title="HTML/Element/object">&lt;object&gt;</a></code>、 <a href="https://developer.mozilla.org/zh-CN/docs/HTML/Element/embed" title="HTML/Element/embed"><code>&lt;embed&gt;</code></a> 和 <code><a href="https://developer.mozilla.org/zh-CN/docs/HTML/Element/applet" title="HTML/Element/applet">&lt;applet&gt;</a></code> 嵌入的插件。</li>
@@ -133,7 +133,7 @@ translation_of: Web/Security/Same-origin_policy
 
 <h2 id="跨源脚本API访问">跨源脚本API访问</h2>
 
-<p>JavaScript 的 API 中，如<span> </span><code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/HTMLIFrameElement" title="DOM/HTMLIFrameElement">iframe.contentWindow</a></code>、<span> {{domxref("window.parent")}}、{{domxref("window.open")}} 和 {{domxref("window.opener")}} 允许文档间直接相互引用。当两个文档的源不同时，这些引用方式将对</span><span> </span><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window">Window</a><span> 和 </span><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#security-location" title="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#security-location">Location</a>对象的访问添加限制，如下两节所述。</p>
+<p>JavaScript 的 API 中，如<span> </span><code><a href="https://developer.mozilla.org/zh-CN/docs/DOM/HTMLIFrameElement" title="DOM/HTMLIFrameElement">iframe.contentWindow</a></code>、<span> {{domxref("window.parent")}}、{{domxref("window.open")}} 和 {{domxref("window.opener")}} 允许文档间直接相互引用。当两个文档的源不同时，这些引用方式将对</span><span> </span><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/browsers.html#security-window">Window</a><span> 和 </span><a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#security-location">Location</a>对象的访问添加限制，如下两节所述。</p>
 
 <p>为了能让不同源中文档进行交流，可以使用 {{domxref("window.postMessage")}}。</p>
 
@@ -257,7 +257,7 @@ translation_of: Web/Security/Same-origin_policy
 <h2 id="参见">参见</h2>
 
 <ul>
- <li><a href="http://www.w3.org/Security/wiki/Same_Origin_Policy" title="http://www.w3.org/Security/wiki/Same_Origin_Policy">Same-Origin Policy at W3C</a></li>
+ <li><a href="http://www.w3.org/Security/wiki/Same_Origin_Policy">Same-Origin Policy at W3C</a></li>
  <li><a href="http://web.dev/secure/same-origin-policy">http://web.dev/secure/same-origin-policy</a></li>
 </ul>
 

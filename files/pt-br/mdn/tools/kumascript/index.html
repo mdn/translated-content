@@ -15,7 +15,7 @@ translation_of: MDN/Tools/KumaScript
 ---
 <div>{{MDNSidebar}}</div><h2 id="Overview">Overview</h2>
 
-<p><span class="seoSummary">On the <a href="/en-US/docs/MDN/Kuma">Kuma</a> platform that powers MDN, the template system for automating aspects of content on the wiki is called <a class="link-https" href="https://github.com/mdn/kumascript" title="https://github.com/mdn/kumascript">KumaScript</a>. KumaScript is powered by server-side JavaScript, implemented using <a class="external" href="https://nodejs.org/en/" title="https://nodejs.org/en/">Node.js</a>.</span> This article provides basic information on how to use KumaScript.</p>
+<p><span class="seoSummary">On the <a href="/en-US/docs/MDN/Kuma">Kuma</a> platform that powers MDN, the template system for automating aspects of content on the wiki is called <a class="link-https" href="https://github.com/mdn/kumascript">KumaScript</a>. KumaScript is powered by server-side JavaScript, implemented using <a class="external" href="https://nodejs.org/en/">Node.js</a>.</span> This article provides basic information on how to use KumaScript.</p>
 
 <p>For a detailed overview and Q&amp;A of KumaScript, watch the MDN dev team's <a href="https://vreplay.mozilla.com/replay/showRecordDetails.html?sortBy=date&amp;viewCount=1&amp;currentPage=1&amp;groupBy=combo&amp;roomFilter=&amp;usernameFilter=&amp;searchFilter=&amp;usernameFullFilter=&amp;myManager=-1&amp;adminManager=0&amp;webCast=0&amp;command=&amp;recId=1082&amp;auxMessage=&amp;auxMessage1=&amp;lang=en&amp;langChanged=&amp;tenantFilter=&amp;securityTab=">KumaScript Fireside Chat</a> (the meeting starts at 10 minutes into the video). KumaScript replaced DekiScript, which was the template language for MindTouch, the previous platform used by MDN.</p>
 
@@ -38,7 +38,7 @@ translation_of: MDN/Tools/KumaScript
 
 <h2 id="Basics">Basics</h2>
 
-<p>KumaScript is used on MDN in <a class="link-https" href="https://github.com/visionmedia/ejs" title="https://github.com/visionmedia/ejs">embedded JavaScript templates</a>. These templates can be invoked in document content by any MDN author, through the use of macros.</p>
+<p>KumaScript is used on MDN in <a class="link-https" href="https://github.com/visionmedia/ejs">embedded JavaScript templates</a>. These templates can be invoked in document content by any MDN author, through the use of macros.</p>
 
 <p>A script in KumaScript is a <em>template</em>, and each template is a file in <a href="https://github.com/mdn/kumascript/tree/master/macros">the macros directory of the KumaScript repository</a> on Github. A  <a class="link-https" href="https://github.com/mdn/kumascript/blob/master/macros/hello.ejs" title="hello.ejs">template</a> looks like this:</p>
 
@@ -81,7 +81,7 @@ Hello #2</pre>
 
 <p>The data from this macro is available in template code as an object in the <code>$0</code> argument (e.g., <code>$0.Alpha</code>, <code>$0.Beta</code>, <code>$0.Foo</code>). This also allows you to express complex data structures in macro parameters that are hard or impossible to do with a simple list of parameters.</p>
 
-<p>Note that this parameter style is very picky — it must adhere to <a href="http://json.org/" title="http://json.org/">JSON syntax</a> exactly, which has some requirements about escaping characters that are easy to miss (e.g., all forward slashes are escaped). When in doubt, <a href="http://jsonlint.com/" title="http://jsonlint.com/">try running your JSON through a validator</a>.</p>
+<p>Note that this parameter style is very picky — it must adhere to <a href="http://json.org/">JSON syntax</a> exactly, which has some requirements about escaping characters that are easy to miss (e.g., all forward slashes are escaped). When in doubt, <a href="http://jsonlint.com/">try running your JSON through a validator</a>.</p>
 
 <h4 id="How_to_write_in_text">How to write "\{{" in text</h4>
 
@@ -93,7 +93,7 @@ Hello #2</pre>
 
 <p>Each KumaScript template is a file under <a href="https://github.com/mdn/kumascript/tree/master/macros">the macros directory of KumaScript</a>. You create and edit these files as you would the files of any open-source project on GitHub (see <a href="https://github.com/mdn/kumascript">the KumaScript README</a> for more information).</p>
 
-<p>KumaScript templates are processed by an <a class="link-https" href="https://github.com/visionmedia/ejs" title="https://github.com/visionmedia/ejs">embedded JavaScript template engine</a> with a few simple rules:</p>
+<p>KumaScript templates are processed by an <a class="link-https" href="https://github.com/visionmedia/ejs">embedded JavaScript template engine</a> with a few simple rules:</p>
 
 <ul>
  <li>Within a template, the parameters passed in from the macro are available as the variables <code>$0</code>, <code>$1</code>, <code>$2</code>, and so on. The entire list of parameters is also available in a template as the variable <code>arguments</code>.</li>
@@ -114,7 +114,7 @@ Hello #&lt;%= i %&gt;
 
   <p>Note how the JavaScript code is contained in <code>&lt;% ... %&gt;</code>, and output happens in the space between <code>%&gt; ... &lt;%</code>. The <code>for</code> loop in JS can begin with one <code>&lt;% %&gt;</code> block, transition to output mode, and finish up in a second <code>&lt;% %&gt;</code> JS block.</p>
  </li>
- <li>For more details on EJS syntax, <a class="link-https" href="https://github.com/visionmedia/ejs" title="https://github.com/visionmedia/ejs">check out the upstream module documentation</a>.</li>
+ <li>For more details on EJS syntax, <a class="link-https" href="https://github.com/visionmedia/ejs">check out the upstream module documentation</a>.</li>
 </ul>
 
 <h3 id="Tips">Tips</h3>
@@ -207,7 +207,7 @@ Hello #&lt;%= i %&gt;
 
 <h4 id="Built-in_methods">Built-in methods</h4>
 
-<p>This manually-maintained documentation is likely to fall out of date with the code. With that in mind, <a class="link-https" href="https://github.com/mdn/kumascript/blob/master/lib/kumascript/api.js#L175" title="https://github.com/mdn/kumascript/blob/master/lib/kumascript/api.js#L208">you can always check out the latest state of built-in APIs in the KumaScript source</a>. But here is a selection of useful methods exposed to templates:</p>
+<p>This manually-maintained documentation is likely to fall out of date with the code. With that in mind, <a class="link-https" href="https://github.com/mdn/kumascript/blob/master/lib/kumascript/api.js#L175">you can always check out the latest state of built-in APIs in the KumaScript source</a>. But here is a selection of useful methods exposed to templates:</p>
 
 <dl>
  <dt><code>md5(string)</code></dt>
@@ -223,7 +223,7 @@ Hello #&lt;%= i %&gt;
  <dt><code>cacheFn(key, timeout, function_to_cache)</code></dt>
  <dd>Using the given key and cache entry lifetime, cache the results of the given function. Honors the value of <code>env.cache_control</code> to invalidate cache on <code>no-cache</code>, which can be sent by a logged-in user hitting shift-refresh.</dd>
  <dt><code>request</code></dt>
- <dd>Access to <a class="link-https" href="https://github.com/mikeal/request" title="https://github.com/mikeal/request"><code>mikeal/request</code></a>, a library for making HTTP requests. Using this module in KumaScript templates is not yet very friendly, so you may want to wrap usage in module APIs that simplify things.</dd>
+ <dd>Access to <a class="link-https" href="https://github.com/mikeal/request"><code>mikeal/request</code></a>, a library for making HTTP requests. Using this module in KumaScript templates is not yet very friendly, so you may want to wrap usage in module APIs that simplify things.</dd>
  <dt><code>log.debug(string)</code></dt>
  <dd>Outputs a debug message into the script log on the page (i.e. the big red box that usually displays errors).</dd>
 </dl>
@@ -496,5 +496,5 @@ var s_title = mdn.localString({
 <ul>
  <li><a href="http://kuma.readthedocs.io/en/latest/" title="Getting started with Kuma">Getting started with Kuma</a></li>
  <li><a href="https://github.com/mdn/kumascript" title="Project:en/KumaScript reference">KumaScript reference</a></li>
- <li><a class="link-https" href="https://wiki.mozilla.org/MDN/Kuma" title="https://wiki.mozilla.org/MDN/Kuma">Kuma wiki</a></li>
+ <li><a class="link-https" href="https://wiki.mozilla.org/MDN/Kuma">Kuma wiki</a></li>
 </ul>
