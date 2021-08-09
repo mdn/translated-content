@@ -7999,6 +7999,13 @@
       "Sheppy"
     ]
   },
+  "Mozilla/Firefox/Experimental_features": {
+    "modified": "2019-03-18T21:45:37.616Z",
+    "contributors": [
+      "silverskyvicto",
+      "karaage-kun"
+    ]
+  },
   "Mozilla/Firefox/Releases": {
     "modified": "2020-10-24T22:59:03.287Z",
     "contributors": [
@@ -8121,6 +8128,14 @@
       "saneyuki_s"
     ]
   },
+  "Mozilla/Firefox/Releases/17/Site_compatibility": {
+    "modified": "2019-01-16T16:50:24.947Z",
+    "contributors": [
+      "kohei.yoshino",
+      "omasanori",
+      "ethertank"
+    ]
+  },
   "Mozilla/Firefox/Releases/18": {
     "modified": "2019-03-23T23:37:31.134Z",
     "contributors": [
@@ -8131,6 +8146,14 @@
       "nodaguti"
     ]
   },
+  "Mozilla/Firefox/Releases/18/Site_compatibility": {
+    "modified": "2019-01-16T16:50:47.476Z",
+    "contributors": [
+      "kohei.yoshino",
+      "omasanori",
+      "ethertank"
+    ]
+  },
   "Mozilla/Firefox/Releases/19": {
     "modified": "2019-03-23T23:36:11.284Z",
     "contributors": [
@@ -8138,6 +8161,13 @@
       "kohei.yoshino",
       "ethertank",
       "yyss"
+    ]
+  },
+  "Mozilla/Firefox/Releases/19/Site_compatibility": {
+    "modified": "2019-01-16T16:50:47.334Z",
+    "contributors": [
+      "kohei.yoshino",
+      "omasanori"
     ]
   },
   "Mozilla/Firefox/Releases/2": {
@@ -8181,6 +8211,13 @@
       "ethertank"
     ]
   },
+  "Mozilla/Firefox/Releases/20/Site_compatibility": {
+    "modified": "2019-01-16T16:53:31.342Z",
+    "contributors": [
+      "kohei.yoshino",
+      "omasanori"
+    ]
+  },
   "Mozilla/Firefox/Releases/21": {
     "modified": "2019-11-20T21:19:26.122Z",
     "contributors": [
@@ -8191,12 +8228,26 @@
       "ethertank"
     ]
   },
+  "Mozilla/Firefox/Releases/21/Site_compatibility": {
+    "modified": "2019-01-16T17:00:34.131Z",
+    "contributors": [
+      "kohei.yoshino",
+      "omasanori"
+    ]
+  },
   "Mozilla/Firefox/Releases/22": {
     "modified": "2019-03-23T23:32:42.128Z",
     "contributors": [
       "kohei.yoshino",
       "yyss",
       "ethertank"
+    ]
+  },
+  "Mozilla/Firefox/Releases/22/Site_compatibility": {
+    "modified": "2019-01-16T17:00:50.108Z",
+    "contributors": [
+      "kohei.yoshino",
+      "omasanori"
     ]
   },
   "Mozilla/Firefox/Releases/23": {
@@ -8206,11 +8257,26 @@
       "yyss"
     ]
   },
+  "Mozilla/Firefox/Releases/23/Site_compatibility": {
+    "modified": "2019-01-16T17:06:04.279Z",
+    "contributors": [
+      "kohei.yoshino",
+      "omasanori"
+    ]
+  },
   "Mozilla/Firefox/Releases/24": {
     "modified": "2019-03-23T23:27:22.220Z",
     "contributors": [
       "kohei.yoshino",
       "yyss"
+    ]
+  },
+  "Mozilla/Firefox/Releases/24/Site_compatibility": {
+    "modified": "2019-01-16T17:27:45.788Z",
+    "contributors": [
+      "kohei.yoshino",
+      "teoli",
+      "omasanori"
     ]
   },
   "Mozilla/Firefox/Releases/25": {
@@ -8221,11 +8287,24 @@
       "ntim007"
     ]
   },
+  "Mozilla/Firefox/Releases/25/Site_Compatibility": {
+    "modified": "2019-01-16T17:41:43.600Z",
+    "contributors": [
+      "kohei.yoshino",
+      "omasanori"
+    ]
+  },
   "Mozilla/Firefox/Releases/26": {
     "modified": "2019-03-23T23:25:40.788Z",
     "contributors": [
       "kohei.yoshino",
       "yyss"
+    ]
+  },
+  "Mozilla/Firefox/Releases/26/Site_Compatibility": {
+    "modified": "2019-01-16T17:49:15.934Z",
+    "contributors": [
+      "kohei.yoshino"
     ]
   },
   "Mozilla/Firefox/Releases/27": {
@@ -8236,6 +8315,12 @@
       "frankyan"
     ]
   },
+  "Mozilla/Firefox/Releases/27/Site_Compatibility": {
+    "modified": "2019-01-16T17:53:24.443Z",
+    "contributors": [
+      "kohei.yoshino"
+    ]
+  },
   "Mozilla/Firefox/Releases/28": {
     "modified": "2019-03-23T23:22:45.315Z",
     "contributors": [
@@ -8244,12 +8329,25 @@
       "Zefling"
     ]
   },
+  "Mozilla/Firefox/Releases/28/Site_Compatibility": {
+    "modified": "2019-01-16T18:01:55.743Z",
+    "contributors": [
+      "kohei.yoshino",
+      "omasanori"
+    ]
+  },
   "Mozilla/Firefox/Releases/29": {
     "modified": "2019-03-23T23:21:24.109Z",
     "contributors": [
       "Sebastianz",
       "kohei.yoshino",
       "yyss"
+    ]
+  },
+  "Mozilla/Firefox/Releases/29/Site_Compatibility": {
+    "modified": "2019-01-16T18:10:11.899Z",
+    "contributors": [
+      "kohei.yoshino"
     ]
   },
   "Mozilla/Firefox/Releases/3": {
@@ -8373,6 +8471,12 @@
       "teoli"
     ]
   },
+  "Mozilla/Firefox/Releases/30/Site_Compatibility": {
+    "modified": "2019-01-16T18:26:54.689Z",
+    "contributors": [
+      "kohei.yoshino"
+    ]
+  },
   "Mozilla/Firefox/Releases/31": {
     "modified": "2019-03-23T23:17:44.092Z",
     "contributors": [
@@ -8381,11 +8485,23 @@
       "fred.wang"
     ]
   },
+  "Mozilla/Firefox/Releases/31/Site_Compatibility": {
+    "modified": "2019-01-16T18:49:36.783Z",
+    "contributors": [
+      "kohei.yoshino"
+    ]
+  },
   "Mozilla/Firefox/Releases/32": {
     "modified": "2019-03-23T23:15:23.740Z",
     "contributors": [
       "kohei.yoshino",
       "yyss"
+    ]
+  },
+  "Mozilla/Firefox/Releases/32/Site_Compatibility": {
+    "modified": "2019-01-16T19:07:26.668Z",
+    "contributors": [
+      "kohei.yoshino"
     ]
   },
   "Mozilla/Firefox/Releases/33": {
@@ -8396,11 +8512,25 @@
       "yyss"
     ]
   },
+  "Mozilla/Firefox/Releases/33/Site_Compatibility": {
+    "modified": "2019-01-16T19:22:52.315Z",
+    "contributors": [
+      "kohei.yoshino",
+      "syoichi"
+    ]
+  },
   "Mozilla/Firefox/Releases/34": {
     "modified": "2019-03-23T23:10:15.502Z",
     "contributors": [
       "kohei.yoshino",
       "yyss"
+    ]
+  },
+  "Mozilla/Firefox/Releases/34/Site_Compatibility": {
+    "modified": "2019-01-16T19:30:49.366Z",
+    "contributors": [
+      "kohei.yoshino",
+      "syoichi"
     ]
   },
   "Mozilla/Firefox/Releases/35": {
@@ -8411,12 +8541,24 @@
       "yyss"
     ]
   },
+  "Mozilla/Firefox/Releases/35/Site_Compatibility": {
+    "modified": "2019-01-16T19:41:11.474Z",
+    "contributors": [
+      "kohei.yoshino"
+    ]
+  },
   "Mozilla/Firefox/Releases/36": {
     "modified": "2019-03-23T23:05:46.783Z",
     "contributors": [
       "Sebastianz",
       "kohei.yoshino",
       "yyss"
+    ]
+  },
+  "Mozilla/Firefox/Releases/36/Site_Compatibility": {
+    "modified": "2019-01-16T19:53:35.073Z",
+    "contributors": [
+      "kohei.yoshino"
     ]
   },
   "Mozilla/Firefox/Releases/37": {
@@ -8427,10 +8569,24 @@
       "arai"
     ]
   },
+  "Mozilla/Firefox/Releases/37/Site_Compatibility": {
+    "modified": "2019-01-16T19:58:48.538Z",
+    "contributors": [
+      "kohei.yoshino",
+      "arai"
+    ]
+  },
   "Mozilla/Firefox/Releases/38": {
     "modified": "2019-03-23T23:01:43.746Z",
     "contributors": [
       "yyss"
+    ]
+  },
+  "Mozilla/Firefox/Releases/38/Site_Compatibility": {
+    "modified": "2019-01-16T20:18:54.504Z",
+    "contributors": [
+      "kohei.yoshino",
+      "syoichi"
     ]
   },
   "Mozilla/Firefox/Releases/39": {
@@ -8438,6 +8594,12 @@
     "contributors": [
       "Guillaume-Heras",
       "yyss",
+      "kohei.yoshino"
+    ]
+  },
+  "Mozilla/Firefox/Releases/39/Site_Compatibility": {
+    "modified": "2019-01-16T20:31:00.935Z",
+    "contributors": [
       "kohei.yoshino"
     ]
   },
@@ -8471,6 +8633,12 @@
       "adria"
     ]
   },
+  "Mozilla/Firefox/Releases/40/Site_Compatibility": {
+    "modified": "2019-01-16T20:36:07.559Z",
+    "contributors": [
+      "kohei.yoshino"
+    ]
+  },
   "Mozilla/Firefox/Releases/41": {
     "modified": "2019-03-23T22:52:24.119Z",
     "contributors": [
@@ -8478,10 +8646,22 @@
       "kohei.yoshino"
     ]
   },
+  "Mozilla/Firefox/Releases/41/Site_Compatibility": {
+    "modified": "2019-01-16T21:00:19.662Z",
+    "contributors": [
+      "kohei.yoshino"
+    ]
+  },
   "Mozilla/Firefox/Releases/42": {
     "modified": "2019-03-23T22:50:41.673Z",
     "contributors": [
       "yyss",
+      "kohei.yoshino"
+    ]
+  },
+  "Mozilla/Firefox/Releases/42/Site_Compatibility": {
+    "modified": "2019-01-16T21:18:02.074Z",
+    "contributors": [
       "kohei.yoshino"
     ]
   },
@@ -16170,6 +16350,18 @@
       "Wind1808"
     ]
   },
+  "Web/API/HTMLElement/tabIndex": {
+    "modified": "2020-10-15T21:09:43.599Z",
+    "contributors": [
+      "mfuji09",
+      "Wind1808",
+      "momdo",
+      "fscholz",
+      "khalid32",
+      "ethertank",
+      "dextra"
+    ]
+  },
   "Web/API/HTMLElement/style": {
     "modified": "2020-10-15T21:16:29.287Z",
     "contributors": [
@@ -16182,18 +16374,6 @@
       "Shoot",
       "Marsf",
       "Okome"
-    ]
-  },
-  "Web/API/HTMLElement/tabIndex": {
-    "modified": "2020-10-15T21:09:43.599Z",
-    "contributors": [
-      "mfuji09",
-      "Wind1808",
-      "momdo",
-      "fscholz",
-      "khalid32",
-      "ethertank",
-      "dextra"
     ]
   },
   "Web/API/HTMLElement/title": {
@@ -18608,16 +18788,6 @@
       "fscholz"
     ]
   },
-  "Web/API/Navigator/Online_and_offline_events": {
-    "modified": "2019-03-23T23:53:08.504Z",
-    "contributors": [
-      "chrisdavidmills",
-      "ethertank",
-      "Marsf",
-      "Mgjbot",
-      "Koyamak"
-    ]
-  },
   "Web/API/Navigator/activeVRDisplays": {
     "modified": "2020-10-15T21:47:31.877Z",
     "contributors": [
@@ -18771,6 +18941,16 @@
       "AshfaqHossain",
       "Mgjbot",
       "Potappo"
+    ]
+  },
+  "Web/API/Navigator/Online_and_offline_events": {
+    "modified": "2019-03-23T23:53:08.504Z",
+    "contributors": [
+      "chrisdavidmills",
+      "ethertank",
+      "Marsf",
+      "Mgjbot",
+      "Koyamak"
     ]
   },
   "Web/API/Navigator/onLine": {
@@ -25794,6 +25974,24 @@
   },
   "Web/API/XRReferenceSpaceEvent/transform": {
     "modified": "2020-11-08T18:53:27.284Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/API/XRReferenceSpaceEventInit": {
+    "modified": "2020-11-08T02:10:47.628Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/API/XRReferenceSpaceEventInit/referenceSpace": {
+    "modified": "2020-11-08T19:13:54.683Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/API/XRReferenceSpaceEventInit/transform": {
+    "modified": "2020-11-08T19:23:29.842Z",
     "contributors": [
       "Wind1808"
     ]
@@ -48195,11 +48393,22 @@
       "silverskyvicto"
     ]
   },
-  "conflicting/Mozilla/Firefox/Releases": {
-    "modified": "2020-07-16T22:35:56.505Z",
+  "conflicting/Learn/JavaScript/Building_blocks/Events": {
+    "modified": "2019-11-20T21:35:36.010Z",
     "contributors": [
       "wbamberg",
-      "yyss"
+      "dskmori",
+      "yamaguchi-takayuki",
+      "mikamikuh"
+    ]
+  },
+  "conflicting/MDN/Yari": {
+    "modified": "2020-08-13T21:26:07.304Z",
+    "contributors": [
+      "eltociear",
+      "wbamberg",
+      "Marsf",
+      "mantaroh"
     ]
   },
   "conflicting/Tools/Memory/Basic_operations": {
@@ -48267,24 +48476,6 @@
       "Wind1808"
     ]
   },
-  "conflicting/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent": {
-    "modified": "2020-11-08T02:10:47.628Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "conflicting/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent_0f733d39fd3094010931f093b9045686": {
-    "modified": "2020-11-08T19:13:54.683Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "conflicting/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent_7dfb381c892055a0c91980d537a86c6b": {
-    "modified": "2020-11-08T19:23:29.842Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
   "conflicting/Web/API_dd04ca1265cb79b990b8120e5f5070d3": {
     "modified": "2019-03-23T23:32:13.721Z",
     "contributors": [
@@ -48300,19 +48491,6 @@
     "modified": "2019-03-23T23:49:43.648Z",
     "contributors": [
       "Marsf"
-    ]
-  },
-  "conflicting/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property": {
-    "modified": "2019-03-23T23:49:29.579Z",
-    "contributors": [
-      "teoli",
-      "Marsf",
-      "Mgjbot",
-      "Okome",
-      "Takenbot",
-      "Taken Bot",
-      "Shimono",
-      "DaViD83"
     ]
   },
   "conflicting/Web/CSS/Media_Queries/Using_media_queries": {
@@ -48725,6 +48903,1099 @@
       "electrolysis",
       "Akanemoto",
       "Taken Bot"
+    ]
+  },
+  "orphaned/DebNews": {
+    "modified": "2019-03-23T23:58:51.669Z",
+    "contributors": [
+      "wbamberg",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews": {
+    "modified": "2019-03-24T00:01:17.379Z",
+    "contributors": [
+      "ethertank",
+      "Potappo",
+      "Aminevsky"
+    ]
+  },
+  "orphaned/DevNews/20060705": {
+    "modified": "2019-03-23T23:44:41.824Z",
+    "contributors": [
+      "SphinxKnight",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20060706": {
+    "modified": "2019-03-23T23:44:38.389Z",
+    "contributors": [
+      "SphinxKnight",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20060712": {
+    "modified": "2019-11-06T08:30:44.050Z",
+    "contributors": [
+      "dlwe",
+      "SphinxKnight",
+      "fscholz",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20060713": {
+    "modified": "2019-03-23T23:44:40.984Z",
+    "contributors": [
+      "SphinxKnight",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20060719": {
+    "modified": "2019-03-23T23:44:37.065Z",
+    "contributors": [
+      "SphinxKnight",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20060726": {
+    "modified": "2019-03-23T23:44:43.083Z",
+    "contributors": [
+      "SphinxKnight",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20060802": {
+    "modified": "2019-03-23T23:44:41.738Z",
+    "contributors": [
+      "SphinxKnight",
+      "Taken",
+      "Kozawa"
+    ]
+  },
+  "orphaned/DevNews/20060809": {
+    "modified": "2019-03-24T00:02:38.645Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20060817": {
+    "modified": "2019-03-23T23:44:37.587Z",
+    "contributors": [
+      "SphinxKnight",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20060818": {
+    "modified": "2019-03-23T23:44:38.793Z",
+    "contributors": [
+      "SphinxKnight",
+      "ethertank",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20060821": {
+    "modified": "2019-01-16T16:08:59.317Z",
+    "contributors": [
+      "SphinxKnight",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20060822": {
+    "modified": "2019-03-23T23:44:41.650Z",
+    "contributors": [
+      "SphinxKnight",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20060822-02": {
+    "modified": "2019-01-16T16:08:59.330Z",
+    "contributors": [
+      "SphinxKnight",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20060823": {
+    "modified": "2019-03-23T23:44:39.356Z",
+    "contributors": [
+      "SphinxKnight",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20060825": {
+    "modified": "2019-03-23T23:44:39.633Z",
+    "contributors": [
+      "SphinxKnight",
+      "Taken",
+      "Okome"
+    ]
+  },
+  "orphaned/DevNews/20060828": {
+    "modified": "2019-03-23T23:44:40.070Z",
+    "contributors": [
+      "SphinxKnight",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20061002": {
+    "modified": "2019-03-23T23:44:42.578Z",
+    "contributors": [
+      "SphinxKnight",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20061002-02": {
+    "modified": "2019-03-23T23:44:37.149Z",
+    "contributors": [
+      "SphinxKnight",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20061025": {
+    "modified": "2019-11-06T08:30:13.775Z",
+    "contributors": [
+      "dlwe",
+      "SphinxKnight",
+      "Taken",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20061106": {
+    "modified": "2019-03-23T23:44:34.559Z",
+    "contributors": [
+      "SphinxKnight",
+      "Taken",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20061107": {
+    "modified": "2019-03-23T23:44:28.948Z",
+    "contributors": [
+      "SphinxKnight",
+      "Taken",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20061108": {
+    "modified": "2019-03-23T23:44:33.766Z",
+    "contributors": [
+      "SphinxKnight",
+      "Taken",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20061114": {
+    "modified": "2019-01-16T16:09:15.429Z",
+    "contributors": [
+      "SphinxKnight",
+      "Taken",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20061129": {
+    "modified": "2019-03-23T23:44:30.387Z",
+    "contributors": [
+      "SphinxKnight",
+      "Taken",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20061208": {
+    "modified": "2019-03-23T23:44:34.792Z",
+    "contributors": [
+      "SphinxKnight",
+      "Taken",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20061219": {
+    "modified": "2019-03-23T23:44:29.115Z",
+    "contributors": [
+      "SphinxKnight",
+      "Taken",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20070207": {
+    "modified": "2019-03-23T23:44:39.720Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20070213": {
+    "modified": "2019-03-23T23:44:43.533Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20070219": {
+    "modified": "2019-03-23T23:44:46.951Z",
+    "contributors": [
+      "SphinxKnight",
+      "Taken",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20070223": {
+    "modified": "2019-03-23T23:45:04.595Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20070302": {
+    "modified": "2019-03-23T23:45:03.605Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20070304": {
+    "modified": "2019-03-23T23:45:22.177Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "Shimono",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20070312": {
+    "modified": "2019-03-23T23:45:16.576Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20070315": {
+    "modified": "2019-03-23T23:45:19.169Z",
+    "contributors": [
+      "SphinxKnight",
+      "Taken",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20070320": {
+    "modified": "2019-03-23T23:45:15.886Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20070322": {
+    "modified": "2019-03-23T23:45:17.600Z",
+    "contributors": [
+      "SphinxKnight",
+      "Taken",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20070323": {
+    "modified": "2019-03-23T23:45:58.656Z",
+    "contributors": [
+      "SphinxKnight",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20070411": {
+    "modified": "2019-01-16T16:03:49.994Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20070424": {
+    "modified": "2019-03-23T23:45:57.284Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20070427": {
+    "modified": "2019-03-23T23:46:27.168Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "Taken",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20070501": {
+    "modified": "2019-03-23T23:46:02.439Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20070502": {
+    "modified": "2019-03-23T23:46:11.295Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20070509": {
+    "modified": "2019-03-23T23:46:07.520Z",
+    "contributors": [
+      "SphinxKnight",
+      "Taken",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20070512": {
+    "modified": "2019-03-23T23:46:17.283Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20070523": {
+    "modified": "2019-03-23T23:46:17.752Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20070523-2": {
+    "modified": "2019-03-23T23:46:27.081Z",
+    "contributors": [
+      "SphinxKnight",
+      "Taken",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20070529": {
+    "modified": "2019-01-16T16:02:01.977Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20070529-2": {
+    "modified": "2019-03-23T23:46:24.466Z",
+    "contributors": [
+      "SphinxKnight",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20070530": {
+    "modified": "2019-03-23T23:46:27.380Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20070530-02": {
+    "modified": "2019-03-23T23:46:22.037Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20070604": {
+    "modified": "2019-03-23T23:46:24.619Z",
+    "contributors": [
+      "SphinxKnight",
+      "Taken",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20070606": {
+    "modified": "2019-03-24T00:02:47.249Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20070606-2": {
+    "modified": "2019-03-23T23:46:39.627Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20070626": {
+    "modified": "2019-03-23T23:46:42.327Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20070628": {
+    "modified": "2019-01-16T16:00:48.431Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20070702": {
+    "modified": "2019-03-23T23:47:01.106Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20070710": {
+    "modified": "2019-03-23T23:46:57.982Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20070717": {
+    "modified": "2019-03-24T00:02:45.220Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Taken",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20070718": {
+    "modified": "2019-03-18T21:16:12.903Z",
+    "contributors": [
+      "SphinxKnight",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20070719": {
+    "modified": "2019-03-23T23:47:27.402Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20070730": {
+    "modified": "2019-03-23T23:47:25.355Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20070801": {
+    "modified": "2019-03-23T23:47:24.394Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20070803": {
+    "modified": "2019-03-23T23:48:55.350Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shoot",
+      "Shimono",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20070808": {
+    "modified": "2019-01-16T15:54:57.102Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20070910": {
+    "modified": "2019-03-23T23:48:12.720Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20070913": {
+    "modified": "2019-03-23T23:48:22.226Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20070918": {
+    "modified": "2019-03-23T23:48:53.553Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20070920": {
+    "modified": "2019-03-24T00:02:44.096Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Shimono",
+      "Taken"
+    ]
+  },
+  "orphaned/DevNews/20071005": {
+    "modified": "2019-03-23T23:49:13.148Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20071008": {
+    "modified": "2019-03-23T23:49:35.724Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20071012": {
+    "modified": "2019-03-23T23:49:34.408Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20071018": {
+    "modified": "2019-03-23T23:49:30.423Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20071101": {
+    "modified": "2019-03-23T23:49:36.140Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20071115": {
+    "modified": "2019-03-23T23:49:32.635Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shimono"
+    ]
+  },
+  "orphaned/DevNews/20071126": {
+    "modified": "2019-03-23T23:49:37.696Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20071203": {
+    "modified": "2019-03-23T23:51:30.713Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20071210": {
+    "modified": "2019-03-23T23:51:34.554Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20071210-02": {
+    "modified": "2019-03-23T23:50:04.941Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shoot"
+    ]
+  },
+  "orphaned/DevNews/20071211": {
+    "modified": "2019-03-23T23:50:09.683Z",
+    "contributors": [
+      "SphinxKnight",
+      "Shoot"
+    ]
+  },
+  "orphaned/DevNews/20071217": {
+    "modified": "2019-03-23T23:51:30.958Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20071218": {
+    "modified": "2019-03-24T00:02:42.956Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Shoot"
+    ]
+  },
+  "orphaned/DevNews/20080107": {
+    "modified": "2019-03-24T00:02:50.869Z",
+    "contributors": [
+      "SphinxKnight",
+      "ethertank",
+      "fscholz",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080115": {
+    "modified": "2019-03-23T23:51:30.494Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080122": {
+    "modified": "2019-03-23T23:51:31.437Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080129": {
+    "modified": "2019-03-23T23:52:05.671Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080205": {
+    "modified": "2019-03-23T23:51:27.128Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080207": {
+    "modified": "2019-03-23T23:51:26.458Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080207-2": {
+    "modified": "2019-03-23T23:51:29.219Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080212": {
+    "modified": "2019-03-23T23:51:35.365Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080219": {
+    "modified": "2019-03-24T00:02:30.321Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080226": {
+    "modified": "2019-03-23T23:51:53.381Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080304": {
+    "modified": "2019-03-23T23:51:59.049Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080310": {
+    "modified": "2019-03-24T00:02:47.052Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080311": {
+    "modified": "2019-03-24T00:02:32.507Z",
+    "contributors": [
+      "SphinxKnight",
+      "fscholz",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080318": {
+    "modified": "2019-03-23T23:52:13.043Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080325": {
+    "modified": "2019-03-23T23:52:12.885Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080401": {
+    "modified": "2019-03-23T23:52:19.249Z",
+    "contributors": [
+      "SphinxKnight",
+      "ethertank",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080408": {
+    "modified": "2019-03-24T00:02:49.244Z",
+    "contributors": [
+      "SphinxKnight",
+      "ethertank",
+      "fscholz",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080415": {
+    "modified": "2019-03-23T23:52:26.961Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080422": {
+    "modified": "2019-03-23T23:52:30.355Z",
+    "contributors": [
+      "SphinxKnight",
+      "Kozawa",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080429": {
+    "modified": "2019-03-23T23:52:41.098Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080501": {
+    "modified": "2019-03-23T23:52:46.204Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080506": {
+    "modified": "2019-03-23T23:52:44.180Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080513": {
+    "modified": "2019-03-23T23:52:55.065Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080520": {
+    "modified": "2019-03-23T23:52:57.914Z",
+    "contributors": [
+      "SphinxKnight",
+      "ethertank",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080527": {
+    "modified": "2019-03-23T23:52:55.379Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080603": {
+    "modified": "2019-03-23T23:53:07.574Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080610": {
+    "modified": "2019-03-23T23:53:25.287Z",
+    "contributors": [
+      "SphinxKnight",
+      "ethertank",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080617": {
+    "modified": "2019-03-23T23:53:53.800Z",
+    "contributors": [
+      "SphinxKnight",
+      "ethertank",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080624": {
+    "modified": "2019-03-23T23:53:34.729Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080630": {
+    "modified": "2019-03-23T23:58:03.917Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080708": {
+    "modified": "2019-03-23T23:54:07.055Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080715": {
+    "modified": "2019-03-23T23:53:59.538Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080722": {
+    "modified": "2019-03-23T23:54:06.126Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080728": {
+    "modified": "2019-03-23T23:54:15.467Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080729": {
+    "modified": "2019-03-23T23:54:16.522Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080805": {
+    "modified": "2019-03-23T23:56:39.931Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080810": {
+    "modified": "2019-03-23T23:56:37.606Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080812": {
+    "modified": "2019-03-23T23:56:38.905Z",
+    "contributors": [
+      "SphinxKnight",
+      "ethertank",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080819": {
+    "modified": "2019-03-23T23:57:11.715Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080826": {
+    "modified": "2019-03-23T23:57:14.535Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080902": {
+    "modified": "2019-03-23T23:57:31.148Z",
+    "contributors": [
+      "SphinxKnight",
+      "ethertank",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080909": {
+    "modified": "2019-03-23T23:57:56.153Z",
+    "contributors": [
+      "SphinxKnight",
+      "ethertank",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080916": {
+    "modified": "2019-03-23T23:58:00.696Z",
+    "contributors": [
+      "SphinxKnight",
+      "ethertank",
+      "Marsf",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080923": {
+    "modified": "2019-03-23T23:58:01.633Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080930": {
+    "modified": "2019-03-23T23:58:00.303Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20080930-2": {
+    "modified": "2019-03-23T23:58:00.520Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20081007": {
+    "modified": "2019-03-23T23:58:06.051Z",
+    "contributors": [
+      "SphinxKnight",
+      "ethertank",
+      "yassan",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20081014": {
+    "modified": "2019-03-23T23:58:07.474Z",
+    "contributors": [
+      "SphinxKnight",
+      "ethertank",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20081021": {
+    "modified": "2019-03-23T23:58:46.194Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20081028": {
+    "modified": "2019-03-23T23:58:39.179Z",
+    "contributors": [
+      "SphinxKnight",
+      "ethertank",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20081104": {
+    "modified": "2019-03-23T23:58:39.849Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20081111": {
+    "modified": "2019-03-23T23:58:49.910Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20081118": {
+    "modified": "2019-03-23T23:58:53.350Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20081125": {
+    "modified": "2019-03-23T23:58:57.400Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20081202": {
+    "modified": "2019-03-23T23:59:03.612Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo",
+      "Kozawa"
+    ]
+  },
+  "orphaned/DevNews/20081209": {
+    "modified": "2019-03-23T23:58:58.371Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20081216": {
+    "modified": "2019-03-23T23:59:06.000Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20081223": {
+    "modified": "2019-03-23T23:59:06.626Z",
+    "contributors": [
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20090113": {
+    "modified": "2019-11-06T08:39:44.056Z",
+    "contributors": [
+      "dlwe",
+      "SphinxKnight",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20090120": {
+    "modified": "2019-03-23T23:35:17.463Z",
+    "contributors": [
+      "ethertank"
+    ]
+  },
+  "orphaned/DevNews/20090310": {
+    "modified": "2019-03-23T23:59:32.415Z",
+    "contributors": [
+      "SphinxKnight",
+      "ethertank",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20090324": {
+    "modified": "2019-03-23T23:59:42.131Z",
+    "contributors": [
+      "SphinxKnight",
+      "ethertank",
+      "Potappo"
+    ]
+  },
+  "orphaned/DevNews/20090904": {
+    "modified": "2019-03-24T00:01:20.431Z",
+    "contributors": [
+      "SphinxKnight",
+      "ethertank",
+      "Aminevsky"
     ]
   },
   "orphaned/Developing_Mozilla": {
@@ -49219,6 +50490,16 @@
       "chrisdavidmills",
       "mfuji09",
       "silverskyvicto",
+      "wbamberg",
+      "Uemmra3",
+      "hamasaki"
+    ]
+  },
+  "orphaned/MDN/Tools/Revision_dashboard": {
+    "modified": "2020-09-30T16:50:21.567Z",
+    "contributors": [
+      "chrisdavidmills",
+      "dlwe",
       "wbamberg",
       "Uemmra3",
       "hamasaki"
@@ -49869,6 +51150,39 @@
     "contributors": [
       "fscholz",
       "nshimizu"
+    ]
+  },
+  "orphaned/Web/API/NavigatorPlugins": {
+    "modified": "2019-03-23T23:01:18.262Z",
+    "contributors": [
+      "fscholz"
+    ]
+  },
+  "orphaned/Web/API/NavigatorPlugins/javaEnabled": {
+    "modified": "2019-03-23T23:49:36.507Z",
+    "contributors": [
+      "fscholz",
+      "Hasilt",
+      "Potappo"
+    ]
+  },
+  "orphaned/Web/API/NavigatorPlugins/mimeTypes": {
+    "modified": "2019-03-23T23:49:36.040Z",
+    "contributors": [
+      "fscholz",
+      "AshfaqHossain",
+      "Potappo"
+    ]
+  },
+  "orphaned/Web/API/NavigatorPlugins/plugins": {
+    "modified": "2019-03-23T23:49:27.584Z",
+    "contributors": [
+      "wbamberg",
+      "yoko0827",
+      "fscholz",
+      "khalid32",
+      "ethertank",
+      "Potappo"
     ]
   },
   "orphaned/Web/API/NavigatorStorage": {
@@ -50659,6 +51973,28 @@
     "modified": "2019-03-23T22:54:31.675Z",
     "contributors": [
       "shide55"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
+    "modified": "2020-10-17T14:59:10.566Z",
+    "contributors": [
+      "mpcjazz",
+      "mfuji09",
+      "YuichiNukiyama"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Operators/Special": {
+    "modified": "2019-01-16T13:14:28.710Z",
+    "contributors": [
+      "ethertank",
+      "Potappo"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Operators/Special_Operators": {
+    "modified": "2019-01-16T13:12:31.355Z",
+    "contributors": [
+      "ethertank",
+      "Potappo"
     ]
   },
   "orphaned/Web/Manifest/serviceworker": {
