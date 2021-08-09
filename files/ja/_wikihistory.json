@@ -48431,15 +48431,6 @@
       "Luna8bit"
     ]
   },
-  "conflicting/Web/API/URL": {
-    "modified": "2019-03-23T23:31:44.426Z",
-    "contributors": [
-      "YuichiNukiyama",
-      "fscholz",
-      "khalid32",
-      "ethertank"
-    ]
-  },
   "conflicting/Web/API/WebSockets_API": {
     "modified": "2019-03-23T23:32:19.540Z",
     "contributors": [
