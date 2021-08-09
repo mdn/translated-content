@@ -48458,12 +48458,6 @@
       "ethertank"
     ]
   },
-  "conflicting/Web/API/Window/moveTo": {
-    "modified": "2019-03-23T22:33:34.460Z",
-    "contributors": [
-      "dreissig.jahrhundert"
-    ]
-  },
   "conflicting/Web/API/XRInputSource/handedness": {
     "modified": "2020-12-06T13:23:10.937Z",
     "contributors": [

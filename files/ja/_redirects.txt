@@ -3471,7 +3471,7 @@
 /ja/docs/Web/API/Window/onmouseup	/ja/docs/Web/API/GlobalEventHandlers/onmouseup
 /ja/docs/Web/API/Window/onreset	/ja/docs/Web/API/GlobalEventHandlers/onreset
 /ja/docs/Web/API/Window/onresize	/ja/docs/Web/API/GlobalEventHandlers/onresize
-/ja/docs/Web/API/Window/restore	/ja/docs/conflicting/Web/API/Window/moveTo
+/ja/docs/Web/API/Window/restore	/ja/docs/Web/API/Window/moveTo
 /ja/docs/Web/API/Window/setInterval	/ja/docs/Web/API/WindowOrWorkerGlobalScope/setInterval
 /ja/docs/Web/API/Window/setTimeout	/ja/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
 /ja/docs/Web/API/Window/unescape	/ja/docs/Web/JavaScript/Reference/Global_Objects/unescape
