@@ -17801,6 +17801,17 @@
       "Potappo"
     ]
   },
+  "Web/API/IndexedDB_API/Basic_Terminology": {
+    "modified": "2020-03-25T11:26:36.526Z",
+    "contributors": [
+      "Uemmra3",
+      "Wind1808",
+      "wbamberg",
+      "SphinxKnight",
+      "mandel59",
+      "yyss"
+    ]
+  },
   "Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria": {
     "modified": "2019-05-23T13:25:35.305Z",
     "contributors": [
@@ -51007,17 +51018,6 @@
     "modified": "2020-10-15T22:28:17.699Z",
     "contributors": [
       "mfuji09"
-    ]
-  },
-  "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
-    "modified": "2020-03-25T11:26:36.526Z",
-    "contributors": [
-      "Uemmra3",
-      "Wind1808",
-      "wbamberg",
-      "SphinxKnight",
-      "mandel59",
-      "yyss"
     ]
   },
   "orphaned/Web/API/LinkStyle": {
