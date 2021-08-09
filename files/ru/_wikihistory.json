@@ -4905,52 +4905,6 @@
       "uleming"
     ]
   },
-  "Mozilla/Firefox/Releases/44": {
-    "modified": "2019-03-23T22:39:30.117Z",
-    "contributors": [
-      "fgff",
-      "wbamberg",
-      "warsan",
-      "uleming"
-    ]
-  },
-  "Mozilla/Firefox/Releases/45": {
-    "modified": "2019-03-23T22:41:10.764Z",
-    "contributors": [
-      "fgff",
-      "wbamberg",
-      "warsan",
-      "uleming"
-    ]
-  },
-  "Mozilla/Firefox/Releases/47": {
-    "modified": "2019-03-23T22:29:35.138Z",
-    "contributors": [
-      "fgff",
-      "wbamberg",
-      "kdex",
-      "Stalker"
-    ]
-  },
-  "Mozilla/Firefox/Releases/50": {
-    "modified": "2019-03-23T22:23:43.944Z",
-    "contributors": [
-      "fgff",
-      "wbamberg",
-      "warsan",
-      "bigaltum",
-      "lleming"
-    ]
-  },
-  "Mozilla/Firefox/Releases/51": {
-    "modified": "2019-01-16T23:57:15.335Z",
-    "contributors": [
-      "wbamberg",
-      "warsan",
-      "Liubava77",
-      "L18-666B"
-    ]
-  },
   "Mozilla/Firefox/Releases/53": {
     "modified": "2019-03-23T22:12:30.459Z",
     "contributors": [
@@ -4958,29 +4912,6 @@
       "wbamberg",
       "arturparkhisenko",
       "Sweaty_Shura"
-    ]
-  },
-  "Mozilla/Firefox/Releases/58": {
-    "modified": "2019-03-23T22:02:13.092Z",
-    "contributors": [
-      "wbamberg",
-      "maryia"
-    ]
-  },
-  "Mozilla/Firefox/Releases/59": {
-    "modified": "2019-03-18T21:15:19.138Z",
-    "contributors": [
-      "fgff",
-      "wbamberg",
-      "someone12346"
-    ]
-  },
-  "Mozilla/Firefox/Releases/60": {
-    "modified": "2019-03-18T21:34:46.038Z",
-    "contributors": [
-      "fgff",
-      "wbamberg",
-      "ikzsl"
     ]
   },
   "Mozilla/Firefox/Releases/62": {
@@ -5009,22 +4940,10 @@
       "InoY"
     ]
   },
-  "Mozilla/Firefox/Releases/66": {
-    "modified": "2019-03-29T04:57:02.159Z",
-    "contributors": [
-      "karr1d"
-    ]
-  },
   "Mozilla/Firefox/Releases/68": {
     "modified": "2019-07-19T06:10:13.061Z",
     "contributors": [
       "art-gur"
-    ]
-  },
-  "Mozilla/Firefox/Releases/70": {
-    "modified": "2019-09-02T10:55:41.909Z",
-    "contributors": [
-      "InoY"
     ]
   },
   "Plugins/Roadmap": {
