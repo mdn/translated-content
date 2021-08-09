@@ -25978,6 +25978,24 @@
       "Wind1808"
     ]
   },
+  "Web/API/XRReferenceSpaceEventInit": {
+    "modified": "2020-11-08T02:10:47.628Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/API/XRReferenceSpaceEventInit/referenceSpace": {
+    "modified": "2020-11-08T19:13:54.683Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/API/XRReferenceSpaceEventInit/transform": {
+    "modified": "2020-11-08T19:23:29.842Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
   "Web/API/XRRigidTransform": {
     "modified": "2020-12-09T01:29:36.634Z",
     "contributors": [
@@ -48393,13 +48411,6 @@
       "mantaroh"
     ]
   },
-  "conflicting/Mozilla/Firefox/Releases": {
-    "modified": "2020-07-16T22:35:56.505Z",
-    "contributors": [
-      "wbamberg",
-      "yyss"
-    ]
-  },
   "conflicting/Tools/Memory/Basic_operations": {
     "modified": "2020-07-16T22:36:28.978Z",
     "contributors": [
@@ -48438,15 +48449,6 @@
       "Luna8bit"
     ]
   },
-  "conflicting/Web/API/URL": {
-    "modified": "2019-03-23T23:31:44.426Z",
-    "contributors": [
-      "YuichiNukiyama",
-      "fscholz",
-      "khalid32",
-      "ethertank"
-    ]
-  },
   "conflicting/Web/API/WebSockets_API": {
     "modified": "2019-03-23T23:32:19.540Z",
     "contributors": [
@@ -48467,24 +48469,6 @@
       "Wind1808"
     ]
   },
-  "conflicting/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent": {
-    "modified": "2020-11-08T02:10:47.628Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "conflicting/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent_0f733d39fd3094010931f093b9045686": {
-    "modified": "2020-11-08T19:13:54.683Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "conflicting/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent_7dfb381c892055a0c91980d537a86c6b": {
-    "modified": "2020-11-08T19:23:29.842Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
   "conflicting/Web/API_dd04ca1265cb79b990b8120e5f5070d3": {
     "modified": "2019-03-23T23:32:13.721Z",
     "contributors": [
@@ -48500,19 +48484,6 @@
     "modified": "2019-03-23T23:49:43.648Z",
     "contributors": [
       "Marsf"
-    ]
-  },
-  "conflicting/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property": {
-    "modified": "2019-03-23T23:49:29.579Z",
-    "contributors": [
-      "teoli",
-      "Marsf",
-      "Mgjbot",
-      "Okome",
-      "Takenbot",
-      "Taken Bot",
-      "Shimono",
-      "DaViD83"
     ]
   },
   "conflicting/Web/CSS/Media_Queries/Using_media_queries": {
@@ -50517,6 +50488,16 @@
       "hamasaki"
     ]
   },
+  "orphaned/MDN/Tools/Revision_dashboard": {
+    "modified": "2020-09-30T16:50:21.567Z",
+    "contributors": [
+      "chrisdavidmills",
+      "dlwe",
+      "wbamberg",
+      "Uemmra3",
+      "hamasaki"
+    ]
+  },
   "orphaned/MDN/Tools/Search": {
     "modified": "2020-09-30T16:50:21.247Z",
     "contributors": [
@@ -51162,6 +51143,39 @@
     "contributors": [
       "fscholz",
       "nshimizu"
+    ]
+  },
+  "orphaned/Web/API/NavigatorPlugins": {
+    "modified": "2019-03-23T23:01:18.262Z",
+    "contributors": [
+      "fscholz"
+    ]
+  },
+  "orphaned/Web/API/NavigatorPlugins/javaEnabled": {
+    "modified": "2019-03-23T23:49:36.507Z",
+    "contributors": [
+      "fscholz",
+      "Hasilt",
+      "Potappo"
+    ]
+  },
+  "orphaned/Web/API/NavigatorPlugins/mimeTypes": {
+    "modified": "2019-03-23T23:49:36.040Z",
+    "contributors": [
+      "fscholz",
+      "AshfaqHossain",
+      "Potappo"
+    ]
+  },
+  "orphaned/Web/API/NavigatorPlugins/plugins": {
+    "modified": "2019-03-23T23:49:27.584Z",
+    "contributors": [
+      "wbamberg",
+      "yoko0827",
+      "fscholz",
+      "khalid32",
+      "ethertank",
+      "Potappo"
     ]
   },
   "orphaned/Web/API/NavigatorStorage": {

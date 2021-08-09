@@ -20,7 +20,7 @@ translation_of: Web/CSS/@charset
 <p>スタイルシートの文字エンコーディングを定義する方法は複数あるので、ブラウザは次の手順を順番に試します (そして 1 つでも結果が得られると止めます):</p>
 
 <ol>
- <li>ファイル先頭にある <a href="http://ja.wikipedia.org/wiki/%E3%83%90%E3%82%A4%E3%83%88%E9%A0%86%E3%83%9E%E3%83%BC%E3%82%AF" title="http://en.wikipedia.org/wiki/Byte_order_mark">Unicode byte-order</a> 文字 (BOM) の値</li>
+ <li>ファイル先頭にある <a href="http://ja.wikipedia.org/wiki/%E3%83%90%E3%82%A4%E3%83%88%E9%A0%86%E3%83%9E%E3%83%BC%E3%82%AF">Unicode byte-order</a> 文字 (BOM) の値</li>
  <li><code>Content-Type:</code> HTTP ヘッダーの <code>charset</code> 属性、またはスタイルシートを送るのに使われたプロトコル内の同等のものから、得られた値</li>
  <li>CSS の <code>@charset</code> at-規則</li>
  <li>文書参照で定義されている文字エンコーディングを使用。{{HTMLElement("link")}} 要素の <code>charset</code> 属性です。この方式は HTML5 で廃止されており、使うべきではありません。</li>
