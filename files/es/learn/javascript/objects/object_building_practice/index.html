@@ -53,7 +53,7 @@ var ctx = canvas.getContext('2d');
 var width = canvas.width = window.innerWidth;
 var height = canvas.height = window.innerHeight;</pre>
 
-<p>Este script obtiene una referencia del elemento <code>&lt;canvas&gt;</code>, luego llama al método <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/getContext">getContext()</a></code> para definir un contexto en el cual se pueda comenzar a dibujar. La resultado de la variable  (<code>ctx</code>) es el objeto que representa directamente el área de dibujo del <code>&lt;canvas&gt;</code> y permite dibujar elementos 2D en él. </p>
+<p>Este script obtiene una referencia del elemento <code>&lt;canvas&gt;</code>, luego llama al método <code><a href="/en-US/docs/Web/API/HTMLCanvasElement/getContext">getContext()</a></code> para definir un contexto en el cual se pueda comenzar a dibujar. El resultado de la variable  (<code>ctx</code>) es el objeto que representa directamente el área de dibujo del <code>&lt;canvas&gt;</code> y permite dibujar elementos 2D en él. </p>
 
 <p>A continuación se da valor a las variables <code>width</code> and <code>height</code> que corresponden al ancho y alto del elemento <em>canvas</em> (representado por las propiedades <code>canvas.width</code> y <code>canvas.height</code>), de manera que el alto y ancho coincidan con el alto y ancho del navegador (<em>viewport</em>)  cuyos valores se obtienen directamente de las propiedades <em>window.innerWidth </em>y <em>window.innerHeight</em>.</p>
 
@@ -160,7 +160,7 @@ testBall.draw()</pre>
   this.y += this.velY;
 }</pre>
 
-<p>Las cuatro primeras partes de la función verifican si la pelota a alcanzado el borde del <em>canvas</em>. Si es así, se invierte la dirección de la velocidad, para que la pelota se mueva en la dirección contraria. Así, si la pelota va hacia arriba, (<code>velY</code> positiva) , entonces la velocidad vertical es cambiada, para que se mueva hacia abajo (<code>velY</code> negativa).</p>
+<p>Las cuatro primeras partes de la función verifican si la pelota ha alcanzado el borde del <em>canvas</em>. Si es así, se invierte la dirección de la velocidad, para que la pelota se mueva en la dirección contraria. Así, si la pelota va hacia arriba, (<code>velY</code> positiva) , entonces la velocidad vertical es cambiada, para que se mueva hacia abajo (<code>velY</code> negativa).</p>
 
 <p>Los cuatro posibles casos son: </p>
 
