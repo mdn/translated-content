@@ -3324,7 +3324,7 @@
 /ja/docs/Web/API/Navigator/registerContentHandler	/ja/docs/orphaned/Web/API/Navigator/registerContentHandler
 /ja/docs/Web/API/Navigator/userAgent	/ja/docs/orphaned/Web/API/NavigatorID/userAgent
 /ja/docs/Web/API/NavigatorConcurrentHardware	/ja/docs/orphaned/Web/API/NavigatorConcurrentHardware
-/ja/docs/Web/API/NavigatorConcurrentHardware/hardwareConcurrency	/ja/docs/orphaned/Web/API/NavigatorConcurrentHardware/hardwareConcurrency
+/ja/docs/Web/API/NavigatorConcurrentHardware/hardwareConcurrency	/ja/docs/Web/API/Navigator/hardwareConcurrency
 /ja/docs/Web/API/NavigatorID	/ja/docs/orphaned/Web/API/NavigatorID
 /ja/docs/Web/API/NavigatorID/appCodeName	/ja/docs/orphaned/Web/API/NavigatorID/appCodeName
 /ja/docs/Web/API/NavigatorID/appName	/ja/docs/orphaned/Web/API/NavigatorID/appName
