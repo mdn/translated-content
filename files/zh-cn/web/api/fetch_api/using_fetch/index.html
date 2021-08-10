@@ -157,7 +157,7 @@ fetch('https://example.com/posts', {
 
 <h3 id="检测请求是否成功">检测请求是否成功</h3>
 
-<p>如果遇到网络故障，{{domxref("GlobalFetch.fetch","fetch()")}} promise 将会 reject，带上一个 {{jsxref("TypeError")}} 对象。虽然这个情况经常是遇到了权限问题或类似问题——比如 404 不是一个网络故障。想要精确的判断 <code>fetch()</code> 是否成功，需要包含 promise resolved 的情况，此时再判断 {{domxref("Response.ok")}} 是不是为 true。类似以下代码：</p>
+<p>如果遇到网络故障或服务端的 CORS 配置错误时，{{domxref("GlobalFetch.fetch","fetch()")}} promise 将会 reject，带上一个 {{jsxref("TypeError")}} 对象。虽然这个情况经常是遇到了权限问题或类似问题——比如 404 不是一个网络故障。想要精确的判断 <code>fetch()</code> 是否成功，需要包含 promise resolved 的情况，此时再判断 {{domxref("Response.ok")}} 是不是为 true。类似以下代码：</p>
 
 <pre class="brush: js notranslate">fetch('flowers.jpg').then(function(response) {
   if(response.ok) {
