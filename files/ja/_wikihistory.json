@@ -18917,6 +18917,24 @@
       "mfuji09"
     ]
   },
+  "Web/API/Navigator/language": {
+    "modified": "2020-10-15T21:16:44.985Z",
+    "contributors": [
+      "dskmori",
+      "benishouga",
+      "fscholz",
+      "khalid32",
+      "ethertank",
+      "Potappo"
+    ]
+  },
+  "Web/API/Navigator/languages": {
+    "modified": "2019-03-23T23:12:38.148Z",
+    "contributors": [
+      "fscholz",
+      "nshimizu"
+    ]
+  },
   "Web/API/Navigator/locks": {
     "modified": "2020-11-25T13:37:38.955Z",
     "contributors": [
@@ -51090,31 +51108,6 @@
       "khalid32",
       "ethertank",
       "Potappo"
-    ]
-  },
-  "orphaned/Web/API/NavigatorLanguage": {
-    "modified": "2020-10-15T21:33:12.034Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz"
-    ]
-  },
-  "orphaned/Web/API/NavigatorLanguage/language": {
-    "modified": "2020-10-15T21:16:44.985Z",
-    "contributors": [
-      "dskmori",
-      "benishouga",
-      "fscholz",
-      "khalid32",
-      "ethertank",
-      "Potappo"
-    ]
-  },
-  "orphaned/Web/API/NavigatorLanguage/languages": {
-    "modified": "2019-03-23T23:12:38.148Z",
-    "contributors": [
-      "fscholz",
-      "nshimizu"
     ]
   },
   "orphaned/Web/API/NavigatorPlugins": {
