@@ -4025,7 +4025,7 @@
 /ja/docs/Web/Guide/CSS/Getting_started/What_is_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /ja/docs/Web/Guide/CSS/Getting_started/Why_use_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /ja/docs/Web/Guide/CSS/Getting_started/Why_use_CSS?	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
-/ja/docs/Web/Guide/CSS/Media_queries	/ja/docs/conflicting/Web/CSS/Media_Queries/Using_media_queries
+/ja/docs/Web/Guide/CSS/Media_queries	/ja/docs/Web/CSS/Media_Queries/Using_media_queries
 /ja/docs/Web/Guide/CSS/Scaling_background_images	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
 /ja/docs/Web/Guide/CSS/Testing_media_queries	/ja/docs/Web/CSS/Media_Queries/Testing_media_queries
 /ja/docs/Web/Guide/CSS/Understanding_z_index	/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index
