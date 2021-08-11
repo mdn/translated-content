@@ -4068,7 +4068,7 @@
 /ja/docs/Web/Guide/HTML/Canvas_tutorial/Pixel_manipulation_with_canvas	/ja/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
 /ja/docs/Web/Guide/HTML/Canvas_tutorial/Transformations	/ja/docs/Web/API/Canvas_API/Tutorial/Transformations
 /ja/docs/Web/Guide/HTML/Canvas_tutorial/Using_images	/ja/docs/Web/API/Canvas_API/Tutorial/Using_images
-/ja/docs/Web/Guide/HTML/Event_attributes	/ja/docs/conflicting/Learn/JavaScript/Building_blocks/Events
+/ja/docs/Web/Guide/HTML/Event_attributes	/ja/docs/Learn/JavaScript/Building_blocks/Events
 /ja/docs/Web/Guide/HTML/Forms	/ja/docs/Learn/Forms
 /ja/docs/Web/Guide/HTML/Forms/Data_form_validation	/ja/docs/Learn/Forms/Form_validation
 /ja/docs/Web/Guide/HTML/Forms/HTML_forms_in_legacy_browsers	/ja/docs/Learn/Forms/HTML_forms_in_legacy_browsers
