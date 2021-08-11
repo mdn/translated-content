@@ -4803,7 +4803,7 @@
 /ja/docs/XSLT_in_Gecko:Generating_HTML	/ja/docs/Web/API/XSLTProcessor/Generating_HTML
 /ja/docs/XSLT_in_Gecko:Introduction	/ja/docs/Web/API/XSLTProcessor/Introduction
 /ja/docs/XSLT_in_Gecko:Resources	/ja/docs/Web/API/XSLTProcessor/Resources
-/ja/docs/addons.mozilla.org_(AMO)_API_Developers'_Guide	/ja/docs/orphaned/addons.mozilla.org_(AMO)_API_Developers'_Guide
+/ja/docs/addons.mozilla.org_(AMO)_API_Developers'_Guide	/ja/docs/Mozilla/Add-ons
 /ja/docs/ant_script_to_assemble_an_extension	/ja/docs/orphaned/ant_script_to_assemble_an_extension
 /ja/docs/console	/ja/docs/Web/API/console
 /ja/docs/counters	/ja/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
