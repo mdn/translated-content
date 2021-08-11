@@ -48499,18 +48499,6 @@
       "RobinEgg"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance": {
-    "modified": "2020-10-15T21:58:31.243Z",
-    "contributors": [
-      "ukyo"
-    ]
-  },
-  "conflicting/Web/JavaScript/Reference/Global_Objects/WebAssembly/Table": {
-    "modified": "2020-10-15T21:58:31.479Z",
-    "contributors": [
-      "ukyo"
-    ]
-  },
   "conflicting/tools/Keyboard_shortcuts": {
     "modified": "2020-07-16T22:34:03.446Z",
     "contributors": [
