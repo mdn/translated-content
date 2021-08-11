@@ -17,3 +17,62 @@ original_slug: Glossaire/Syntax_error
  <li>{{Interwiki("wikipedia", "Syntaxe")}} sur Wikipédia</li>
  <li>{{jsxref("SyntaxError")}} objet JavaScript</li>
 </ul>
+if ( ( FICHE.GET ('FV') < 12 ) || (FICHE.GET('FV') > 20 ) )  {
+      FICHE.COULEUR_CHAMP('FV', 'rouge');
+      FICHE.COULEUR_LIB('FV', 'rouge');
+    } else {
+      FICHE.COULEUR_CHAMP('FV', '');
+      FICHE.COULEUR_LIB('FV', '');
+    }  
+if ( ( FICHE.GET ('FV#2') < 12 ) || (FICHE.GET('FV#2') > 20 ) )  {
+      FICHE.COULEUR_CHAMP('FV#2', 'rouge');
+      FICHE.COULEUR_LIB('FV#2', 'rouge');
+    } else {
+      FICHE.COULEUR_CHAMP('FV#2', 'vert');
+      FICHE.COULEUR_LIB('FV#2', 'vert');
+} 
+if ( FICHE.GET ('AIR') <= 94)   {
+      FICHE.COULEUR_CHAMP('AIR', 'rouge');
+      FICHE.COULEUR_LIB('AIR', 'rouge');
+    } else {
+      FICHE.COULEUR_CHAMP('AIR', '');
+      FICHE.COULEUR_LIB('AIR', '');
+    } 
+if ( FICHE.GET ('SPO2') <= 94)   {
+      FICHE.COULEUR_CHAMP('SPO2', 'rouge');
+      FICHE.COULEUR_LIB('SPO2', 'rouge');
+    } else {
+      FICHE.COULEUR_CHAMP('SPO2', '');
+      FICHE.COULEUR_LIB('SPO2', '');
+    } 
+ if ( FICHE.GET ('SAT') <= 94)  {
+      FICHE.COULEUR_CHAMP('SAT', 'rouge');
+      FICHE.COULEUR_LIB('SAT', 'rouge');
+} else if ( FICHE.GET ('SAT') > 98)   {
+     FICHE.COULEUR_CHAMP('SAT', 'ecarlate');
+      FICHE.COULEUR_LIB('SAT', 'ecarlate');
+    } else {
+      FICHE.COULEUR_CHAMP('SAT', '');
+      FICHE.COULEUR_LIB('SAT', '');
+    }
+if ( ( FICHE.GET ('BNNFC') < 60) || (FICHE.GET('BNNFC') > 100 ) )  {
+      FICHE.COULEUR_CHAMP('BNNFC', 'rouge');
+      FICHE.COULEUR_LIB('BNNFC', 'rouge');
+    } else {
+      FICHE.COULEUR_CHAMP('BNNFC', '');
+      FICHE.COULEUR_LIB('BNNFC', '');
+    } 
+if ( ( FICHE.GET ('FC') < 60) || (FICHE.GET('FC') > 100 ) )  {
+      FICHE.COULEUR_CHAMP('FC', 'rouge');
+      FICHE.COULEUR_LIB('FC', 'rouge');
+    } else {
+      FICHE.COULEUR_CHAMP('FC', '');
+      FICHE.COULEUR_LIB('FC', '');
+    } 
+if ( ( FICHE.GET ('GLY#3') < 0.60) || (FICHE.GET('GLY#3') > 1.20 ) )  {
+      FICHE.COULEUR_CHAMP('GLY#3', 'rouge');
+      FICHE.COULEUR_LIB('GLY#3', 'rouge');
+    } else {
+      FICHE.COULEUR_CHAMP('GLY#3', '');
+      FICHE.COULEUR_LIB('GLY#3', '');
+    } 
