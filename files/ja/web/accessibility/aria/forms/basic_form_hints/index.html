@@ -39,7 +39,7 @@ translation_of: Web/Accessibility/ARIA/forms/Basic_form_hints
 
 <h2 id="Labeling_with_ARIA" name="Labeling_with_ARIA">ARIA でラベルをつける</h2>
 
-<p>HTML の {{HTMLElement("label")}} 要素はフォーム関連の要素にふさわしいのですが、多くのフォームコントロールは {{HTMLElement("div")}} や {{HTMLElement("span")}} を使用した、動的な JavaScript ウィジェットとして実装されています。W3C の <a href="http://www.w3.org/WAI/" title="http://www.w3.org/WAI/">Web Accessibility Initiative</a> から生まれた <a href="http://www.w3.org/WAI/intro/aria.php" title="http://www.w3.org/WAI/intro/aria.php">WAI-ARIA</a> こと <strong>Accessible Rich Internet Applications</strong> 仕様は、このような場合のために <a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-labelledby"><strong>aria-labelledby</strong></a> 属性を用意しています。</p>
+<p>HTML の {{HTMLElement("label")}} 要素はフォーム関連の要素にふさわしいのですが、多くのフォームコントロールは {{HTMLElement("div")}} や {{HTMLElement("span")}} を使用した、動的な JavaScript ウィジェットとして実装されています。W3C の <a href="http://www.w3.org/WAI/">Web Accessibility Initiative</a> から生まれた <a href="http://www.w3.org/WAI/intro/aria.php" title="http://www.w3.org/WAI/intro/aria.php">WAI-ARIA</a> こと <strong>Accessible Rich Internet Applications</strong> 仕様は、このような場合のために <a href="http://www.w3.org/TR/2010/WD-wai-aria-20100916/states_and_properties#aria-labelledby"><strong>aria-labelledby</strong></a> 属性を用意しています。</p>
 
 <p>以下の例では、順不同リストを使用して実装したラジオボタングループを示しています。3 行目で {{HTMLElement("li")}} 要素の <strong>aria-labelledby</strong> 属性に、1 行目の {{HTMLElement("h3")}} 要素の <strong>id</strong> である "rg1_label" を設定しており、h3 要素がラジオボタングループのラベルです。</p>
 
