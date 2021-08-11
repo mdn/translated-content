@@ -13592,6 +13592,14 @@
       "hashedhyphen"
     ]
   },
+  "Web/API/Element/append": {
+    "modified": "2020-10-15T22:19:11.886Z",
+    "contributors": [
+      "mfuji09",
+      "dskymd",
+      "isdh"
+    ]
+  },
   "Web/API/Element/attachShadow": {
     "modified": "2020-10-15T22:09:56.110Z",
     "contributors": [
@@ -13626,6 +13634,13 @@
     "contributors": [
       "yumetodo",
       "Marsf"
+    ]
+  },
+  "Web/API/Element/children": {
+    "modified": "2020-11-23T04:45:58.549Z",
+    "contributors": [
+      "segayuu",
+      "sii"
     ]
   },
   "Web/API/Element/classList": {
@@ -14086,6 +14101,13 @@
     "contributors": [
       "YujiSoftware",
       "sii"
+    ]
+  },
+  "Web/API/Element/prepend": {
+    "modified": "2020-10-15T22:22:02.876Z",
+    "contributors": [
+      "mfuji09",
+      "silverskyvicto"
     ]
   },
   "Web/API/Element/querySelector": {
@@ -51130,43 +51152,6 @@
       "Potappo",
       "Mgjbot",
       "Shoot"
-    ]
-  },
-  "orphaned/Web/API/ParentNode": {
-    "modified": "2020-11-23T03:46:53.867Z",
-    "contributors": [
-      "segayuu",
-      "yyss",
-      "Marsf",
-      "YuichiNukiyama"
-    ]
-  },
-  "orphaned/Web/API/ParentNode/append": {
-    "modified": "2020-10-15T22:19:11.886Z",
-    "contributors": [
-      "mfuji09",
-      "dskymd",
-      "isdh"
-    ]
-  },
-  "orphaned/Web/API/ParentNode/children": {
-    "modified": "2020-11-23T04:45:58.549Z",
-    "contributors": [
-      "segayuu",
-      "sii"
-    ]
-  },
-  "orphaned/Web/API/ParentNode/prepend": {
-    "modified": "2020-10-15T22:22:02.876Z",
-    "contributors": [
-      "mfuji09",
-      "silverskyvicto"
-    ]
-  },
-  "orphaned/Web/API/ParentNode/querySelectorAll": {
-    "modified": "2020-10-15T22:26:50.502Z",
-    "contributors": [
-      "mfuji09"
     ]
   },
   "orphaned/Web/API/RTCIdentityErrorEvent": {

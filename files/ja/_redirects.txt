@@ -3382,12 +3382,6 @@
 /ja/docs/Web/API/Node/prefix	/ja/docs/Web/API/Element/prefix
 /ja/docs/Web/API/NodeList.item	/ja/docs/Web/API/NodeList/item
 /ja/docs/Web/API/NonDocumentTypeChildNode	/ja/docs/Web/API/Element
-/ja/docs/Web/API/ParentNode	/ja/docs/orphaned/Web/API/ParentNode
-/ja/docs/Web/API/ParentNode/append	/ja/docs/orphaned/Web/API/ParentNode/append
-/ja/docs/Web/API/ParentNode/childElementCount	/ja/docs/Web/API/Element/childElementCount
-/ja/docs/Web/API/ParentNode/children	/ja/docs/orphaned/Web/API/ParentNode/children
-/ja/docs/Web/API/ParentNode/prepend	/ja/docs/orphaned/Web/API/ParentNode/prepend
-/ja/docs/Web/API/ParentNode/querySelectorAll	/ja/docs/orphaned/Web/API/ParentNode/querySelectorAll
 /ja/docs/Web/API/Position	/ja/docs/Web/API/GeolocationPosition
 /ja/docs/Web/API/PositionError	/ja/docs/Web/API/GeolocationPositionError
 /ja/docs/Web/API/Push_API/Using_the_Push_API	/ja/docs/Web/API/Push_API
