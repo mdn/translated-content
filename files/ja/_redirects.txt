@@ -4623,7 +4623,7 @@
 /ja/docs/WebSockets/Writing_WebSocket_client_applications	/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications
 /ja/docs/Web_Content_Accessibility_Guidelines_1.0	/ja/docs/orphaned/Web_Content_Accessibility_Guidelines_1.0
 /ja/docs/Web_Developer_Extension_(external)	https://addons.mozilla.org/ja/firefox/addon/60
-/ja/docs/Web_Development	/ja/docs/conflicting/Web/Guide
+/ja/docs/Web_Development	/ja/docs/Web/Guide
 /ja/docs/Web_Development/Historical_artifacts_to_avoid	/ja/docs/Learn/HTML/Introduction_to_HTML
 /ja/docs/Web_Development/Introduction_to_Web_development	/ja/docs/Web/Guide/Introduction_to_Web_development
 /ja/docs/Web_Development/Mobile	/ja/docs/Web/Guide/Mobile
