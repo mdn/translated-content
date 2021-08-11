@@ -48502,20 +48502,6 @@
       "Shimono"
     ]
   },
-  "conflicting/Web/Guide": {
-    "modified": "2020-05-04T11:57:57.814Z",
-    "contributors": [
-      "Uemmra3",
-      "yyss",
-      "happysadman",
-      "Hfjapancom",
-      "Potappo",
-      "Level",
-      "kohei.yoshino",
-      "Mgjbot",
-      "Okome"
-    ]
-  },
   "conflicting/Web/HTTP/Headers/X-DNS-Prefetch-Control": {
     "modified": "2019-03-24T00:00:27.042Z",
     "contributors": [
