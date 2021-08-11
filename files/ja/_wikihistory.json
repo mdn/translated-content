@@ -48502,14 +48502,6 @@
       "Shimono"
     ]
   },
-  "conflicting/Web/HTTP/Headers/User-Agent/Firefox": {
-    "modified": "2019-03-23T23:58:03.561Z",
-    "contributors": [
-      "ethertank",
-      "Potappo",
-      "Kohei"
-    ]
-  },
   "conflicting/Web/HTTP/Headers/X-DNS-Prefetch-Control": {
     "modified": "2019-03-24T00:00:27.042Z",
     "contributors": [
