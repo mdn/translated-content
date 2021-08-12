@@ -116,7 +116,7 @@ original_slug: Apprendre/CSS/Building_blocks/Le_modele_de_boite
  <li><strong>La boîte de contenu </strong>: Il s'agit de la zone où sont affichés les éléments contenus par notre boîte, qui peut être dimensionnée en utilisant les propriétés CSS {{cssxref("width")}} et {{cssxref("height")}}.</li>
  <li><strong>La boîte de padding</strong> <strong>(marge intérieure) </strong>: Le padding est une zone vierge qui se présente comme un espacement encadrant le contenu; sa taille peut être controllée sur chaque côté en utilisant la propriété {{cssxref("padding")}} et ses autres propriétés connexes.</li>
  <li><strong>La boîte du cadre </strong>: Le cadre englobe le contenu et le padding pour former une bordure. Sa taille et son style sont paramétrés par la propriété {{cssxref("border")}} et ses propriétés sous-jacentes.</li>
- <li><strong>La boîte de margin (marge extérieure)</strong> : Le margin est la couche la plus à l'extérieur, englobant le contenu, le padding and le border. Comme le padding, il s'agit d'une zone vierge d'espacement mais qui est cette fois située a l'extérieur de l'élément, séparant l'élément des autres éléments de la page. sa taille peut être controllée sur chaque côté en utilisant la propriété {{cssxref("margin")}} et ses autres propriétés connexes.</li>
+ <li><strong>La boîte de margin (marge extérieure)</strong> : Le margin est la couche la plus à l'extérieur, englobant le contenu, le padding et le border. Comme le padding, il s'agit d'une zone vierge d'espacement mais qui est cette fois située a l'extérieur de l'élément, séparant l'élément des autres éléments de la page. sa taille peut être controllée sur chaque côté en utilisant la propriété {{cssxref("margin")}} et ses autres propriétés connexes.</li>
 </ul>
 
 <p>Le schéma ci-dessous montre la structure de ces différentes couches:</p>
@@ -158,7 +158,7 @@ original_slug: Apprendre/CSS/Building_blocks/Le_modele_de_boite
   box-sizing: border-box;
 } </code></pre>
 
-<p>Si vous désirez utiliser le modèle alternatif sur tous vos éléments — ce qui est un choix répendu parmi certains cercles de développeurs — vous pouvez le faire simplement à l'aide de ces quelques instructions ci-dessous, en utilisant <code>box-sizing</code> sur l'élément <code>&lt;html&gt;</code> et en utilisant l'effet cascade du CSS en paramètrant tous les autres éléments sur la valeur hérité du parent (<code>inherit</code>). Si vous tenez à comprendre le raisonnement derrière ce code, regardez du coté de <a href="https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/">l'article des Astuces CSS sur box-sizing</a>.</p>
+<p>Si vous désirez utiliser le modèle alternatif sur tous vos éléments — ce qui est un choix répandu parmi certains cercles de développeurs — vous pouvez le faire simplement à l'aide des quelques instructions ci-dessous, en utilisant <code>box-sizing</code> sur l'élément <code>&lt;html&gt;</code> et en utilisant l'effet cascade du CSS en paramètrant tous les autres éléments sur la valeur héritée du parent (<code>inherit</code>). Si vous tenez à comprendre le raisonnement derrière ce code, regardez du coté de <a href="https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/">l'article des Astuces CSS sur box-sizing</a>.</p>
 
 <pre class="brush: css notranslate"><code class="language-css"><span class="selector token">html</span> <span class="punctuation token">{</span>
   <span class="property token">box-sizing</span><span class="punctuation token">:</span> border-box<span class="punctuation token">;</span>
