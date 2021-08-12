@@ -6,16 +6,16 @@ original_slug: Apprendre/CSS/Building_blocks/Values_and_units
 ---
 <div>{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}</div>
 
-<p>Chaque propriété utilisée en CSS a un type de valeur définissant un ensemble de valeurs autorisées pour cette propriété. Visiter des pages de propriétés sur MDN vous aidera à comprendre les valeurs associées à un type de valeur, qui sont valides pour une propriété particulière. Dans cette leçon nous allons observer quelques uns des types de valeurs les plus fréquemment utilisés, et leurs valeurs et unités les plus communes.</p>
+<p>Chaque propriété utilisée en CSS a un type de valeur définissant un ensemble de valeurs autorisées pour cette propriété. Visiter des pages de propriétés sur MDN vous aidera à comprendre les valeurs associées à un type de valeur, qui sont valides pour une propriété particulière. Dans cette leçon nous allons observer quelques-uns des types de valeurs les plus fréquemment utilisés, et leurs valeurs et unités les plus communes.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">Prérequis:</th>
+   <th scope="row">Prérequis :</th>
    <td>Maîtrise élémentaire de l'informatique, <a href="https://developer.mozilla.org/fr/docs/Apprendre/Commencer_avec_le_web/Installation_outils_de_base">suite logicielle de base installée</a>, compétences élémentaires pour <a href="https://developer.mozilla.org/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers">travailler avec des fichiers</a>, connaissance de base du HTML  (cf. <a href="https://developer.mozilla.org/fr/docs/Apprendre/HTML/Introduction_à_HTML">Introduction à HTML</a>), et une idée de <a href="https://developer.mozilla.org/fr/docs/Learn/CSS/First_steps/How_CSS_works">Comment fonctionne CSS</a>.</td>
   </tr>
   <tr>
-   <th scope="row">Objectif:</th>
+   <th scope="row">Objectif :</th>
    <td>Apprendre les différents types de valeurs et d'unités utilisés dans les propriétés CSS.</td>
   </tr>
  </tbody>
@@ -26,14 +26,14 @@ original_slug: Apprendre/CSS/Building_blocks/Values_and_units
 <p>Dans les spécifications CSS et sur les pages de propriétés ici sur MDN, vous pourrez identifier les types de valeurs car ils sont entourés par des chevrons, tel que <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code> ou <code><a href="/en-US/docs/Web/CSS/length">&lt;length&gt;</a></code>. Quand vous voyez le type de valeur <code>&lt;color&gt;</code>, valide pour une propriété particulière, cela signifie que vous pouvez utiliser n'importe quelle couleur valide comme valeur pour cette propriété, comme énoncé dans la page de référence de <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code>.</p>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: Vous verrez également des valeurs CSS appelées <em>types de données</em>. Les termes sont interchangeables — Quand vous voyez quelque chose en CSS identifié comme type de données, c'est juste une façon différente de dire type de valeur. Le terme <em>valeur</em> se rapporte à n'importe quelle expression particulière supportée par un type de valeur que vous avez choisi d'utiliser.</p>
+<p><strong>Note</strong> : Vous verrez également des valeurs CSS appelées <em>types de données</em>. Les termes sont interchangeables — Quand vous voyez quelque chose en CSS identifié comme type de données, c'est juste une façon différente de dire type de valeur. Le terme <em>valeur</em> se rapporte à n'importe quelle expression particulière supportée par un type de valeur que vous avez choisi d'utiliser.</p>
 </div>
 
 <div class="blockIndicator note">
-<p><strong>Note</strong>: Oui, les types de valeur CSS tendent à être indiqués par des chevrons, pour les différencier des propriétés CSS (ex: la propriété {{cssxref("color")}}, comparée au type de données <a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a>). Vous pourriez aussi être désorienté entre les ttypes de données CSS et les éléments HTML, car ils utilisent tous deux les chevrons, mais c'est peu probable — ils sont utilisés dans des contextes très différents.</p>
+<p><strong>Note</strong> : Oui, les types de valeurs CSS tendent à être indiqués par des chevrons, pour les différencier des propriétés CSS (ex : la propriété {{cssxref("color")}}, comparée au type de données <a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a>). Vous pourriez aussi être désorienté entre les types de données CSS et les éléments HTML, car ils utilisent tous deux les chevrons, mais c'est peu probable — ils sont utilisés dans des contextes très différents.</p>
 </div>
 
-<p>Dans l'exemple suivant, nous avons défini la couleur de notre titre en utilisant un mot-clé, et la couleur de fond en utilisant la fonction <code>rgb()</code>:</p>
+<p>Dans l'exemple suivant, nous avons défini la couleur de notre titre en utilisant un mot-clé, et la couleur de fond en utilisant la fonction <code>rgb()</code> :</p>
 
 <pre class="brush: css notranslate"><code>h1 {
   color: black;
@@ -41,13 +41,13 @@ original_slug: Apprendre/CSS/Building_blocks/Values_and_units
 } </code>
 </pre>
 
-<p>Un type de valeurs en CSS est une manière de définir un ensemble de valeurs autorisées. Cela signifie que si vous voyez <code>&lt;color&gt;</code> comme valide, vous n'avez pas besoin de vous demander quel type de valeur vous pouvez utiliser —  mot-clés, valeurs hex, fonctions <code>rgb()</code>, etc. Vous pouvez utiliser <em>n'importe quelle</em> valeur <code>&lt;color&gt;</code> disponible, en supposant qu'elle soit supportée par votre navigateur. La pageMDN pour chaque valeur vous donnera les informations au sujet du support par le navigateur. Par exemple, si vous regardez la page <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code>, vous verrez que la section sur la compatibilité des navigateurs liste différents types de valeurs pour "color" et le support.</p>
+<p>Un type de valeur en CSS est une manière de définir un ensemble de valeurs autorisées. Cela signifie que si vous voyez <code>&lt;color&gt;</code> comme valide, vous n'avez pas besoin de vous demander quel type de valeur vous pouvez utiliser —  mot-clés, valeurs hex, fonctions <code>rgb()</code>, etc. Vous pouvez utiliser <em>n'importe quelle</em> valeur <code>&lt;color&gt;</code> disponible, en supposant qu'elle soit supportée par votre navigateur. La page MDN pour chaque valeur vous donnera les informations au sujet du support par le navigateur. Par exemple, si vous regardez la page <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code>, vous verrez que la section sur la compatibilité des navigateurs liste différents types de valeurs pour "color" et le support.</p>
 
 <p>Observons quelques uns des types de valeurs et d'unités que vous pouvez fréquemment rencontrer, avec des exemples, pour que vous puissiez essayer différentes valeurs possibles.</p>
 
 <h2 id="Nombres_longueurs_et_pourcentages">Nombres, longueurs et pourcentages</h2>
 
-<p>Il éxiste de nombreux types de valeurs numériques que vous pourrez trouver vous même en utilisant CSS. Les suivants sont tous classés comme numériques:</p>
+<p>Il existe de nombreux types de valeurs numériques que vous pourrez trouver vous-même en utilisant CSS. Les types de valeurs suivants sont tous classés comme numériques :</p>
 
 <table class="standard-table">
  <thead>
@@ -71,7 +71,7 @@ original_slug: Apprendre/CSS/Building_blocks/Values_and_units
   </tr>
   <tr>
    <td><code><a href="/en-US/docs/Web/CSS/percentage">&lt;percentage&gt;</a></code></td>
-   <td><code>&lt;percentage&gt;</code> représente une fraction d'une autre valeur.  Par exemple, <code>50%</code>. Les valeurs de pourcentage sont toujours relatives à une qutre quantité. Par exemple, la longeur d'un élément est relative à la longueur de son élément parent.</td>
+   <td><code>&lt;percentage&gt;</code> représente une fraction d'une autre valeur.  Par exemple, <code>50%</code>. Les valeurs de pourcentage sont toujours relatives à une autre quantité. Par exemple, la longeur d'un élément est relative à la longueur de son élément parent.</td>
   </tr>
  </tbody>
 </table>
