@@ -2719,8 +2719,6 @@
 /ja/docs/JavaScript_typed_arrays	/ja/docs/Web/JavaScript/Typed_arrays
 /ja/docs/JavaScript_技術の概要	/ja/docs/Web/JavaScript/JavaScript_technologies_overview
 /ja/docs/JavaScript_技術概説	/ja/docs/Web/JavaScript/JavaScript_technologies_overview
-/ja/docs/Jetpack/UI/Slidebar	/ja/docs/orphaned/Jetpack/UI/Slidebar
-/ja/docs/Jetpack/システム	/ja/docs/orphaned/Jetpack/システム
 /ja/docs/Key-navigable_custom_DHTML_widgets	/ja/docs/orphaned/Key-navigable_custom_DHTML_widgets
 /ja/docs/Learn/CSS/Building_blocks/セレクタ	/ja/docs/Learn/CSS/Building_blocks/Selectors
 /ja/docs/Learn/CSS/Introduction_to_CSS	/en-US/docs/Learn/CSS/First_steps
