@@ -63,7 +63,7 @@ original_slug: Apprendre/CSS/Building_blocks/Backgrounds_and_borders
  <li><code>repeat</code> — comportement par défaut : répétition dans les deux directions.</li>
 </ul>
 
-<p><strong>Expérimentez l'effet de ces valeurs dans l'exemple ci-dessous. La valeur est fixée à <code>no-repeat</code>, une seule étoile apparaît donc. Remplacez par <code>repeat-x</code> et <code>repeat-y</code><strong> et observez.</strong></p>
+<p><strong>Expérimentez l'effet de ces valeurs dans l'exemple ci-dessous. La valeur est fixée à <code>no-repeat</code>, une seule étoile apparaît donc. Remplacez par <code>repeat-x</code> et <code>repeat-y</code> et observez.</strong></p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/repeat.html", '100%', 800)}}</p>
 
@@ -203,7 +203,7 @@ background-position: 10px 20px,  top right;</pre>
 
 <h3 id="Arrière-plans_et_accessibilité">Arrière-plans et accessibilité</h3>
 
-<p>Quand on place un texte sur une image ou une couleur de fond, il faut s'assurer d'un contraste suffisant pour une bonne lisibilité. Quand un texte est écrit par-dessu une image, déclarez toujours une <code>background-color</code> qui rendra le texte lisible si l'image n'est pas chargée.</p>
+<p>Quand on place un texte sur une image ou une couleur de fond, il faut s'assurer d'un contraste suffisant pour une bonne lisibilité. Quand un texte est écrit par-dessus une image, déclarez toujours une <code>background-color</code> qui rendra le texte lisible si l'image n'est pas chargée.</p>
 
 <p>Les lecteurs d'écran ne traitent pas les images de fond, elles ne doivent donc pas être autre chose que décoratives ; tout contenu important doit faire partie de la page HTML et pas de la mise en forme du fond.</p>
 
@@ -251,13 +251,13 @@ background-position: 10px 20px,  top right;</pre>
 
 <p>On peut arrondir les coins d'une boîte avec la propriété {{cssxref("border-radius")}} and associated longhands which relate to each corner of the box. Two lengths or percentages may be used as a value, the first value defining the horizontal radius, and the second the vertical radius. In a lot of cases you will only pass in one value, which will be used for both.</p>
 
-<p>Par exemple, Pour donner par exemple un rayon de 10px à chacun des quatre coins :</p>
+<p>Par exemple, pour donner par exemple un rayon de 10px à chacun des quatre coins :</p>
 
 <pre class="brush: css">.box {
   border-radius: 10px;
 }</pre>
 
-<p>Ou de donner au coin en haut à droite un rayon horizontal de 1em et un rayon vertical de 10% :</p>
+<p>Ou pour donner au coin en haut à droite un rayon horizontal de 1em et un rayon vertical de 10% :</p>
 
 <pre class="brush: css">.box {
   border-top-right-radius: 1em 10%;
