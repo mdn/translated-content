@@ -48413,15 +48413,6 @@
       "dextra"
     ]
   },
-  "conflicting/Web/API/MouseEvent/button": {
-    "modified": "2019-03-23T23:48:11.013Z",
-    "contributors": [
-      "fscholz",
-      "khalid32",
-      "Mgjbot",
-      "Luna8bit"
-    ]
-  },
   "conflicting/Web/API/URL": {
     "modified": "2019-03-23T23:31:44.426Z",
     "contributors": [
