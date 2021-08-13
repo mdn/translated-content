@@ -2184,7 +2184,6 @@
 /ja/docs/HTML:Inline_elements	/ja/docs/Web/HTML/Inline_elements
 /ja/docs/HTMLSpanElement	/ja/docs/Web/API/HTMLSpanElement
 /ja/docs/HTMLSpanElement_interface	/ja/docs/Web/API/HTMLSpanElement
-/ja/docs/HTML_Element_Cross_Reference	/ja/docs/orphaned/HTML_Element_Cross_Reference
 /ja/docs/HTML_in_XMLHttpRequest	/ja/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest
 /ja/docs/HTTP	/ja/docs/Web/HTTP
 /ja/docs/HTTP/HTTP_response_codes	/ja/docs/Web/HTTP/Status
