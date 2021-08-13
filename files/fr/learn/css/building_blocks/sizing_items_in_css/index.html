@@ -31,7 +31,7 @@ original_slug: Apprendre/CSS/Building_blocks/Sizing_items_in_CSS
 
 <p>Tous les éléments HTML ont une taille "naturelle", définie avant toute modification par CSS. Un exemple parlant est celui d'un élément image. Une image a une largeur et une hauteur définies dans le fichier image qu'elle incorpore dans la page. On parle d'une <strong>taille intrinsèque </strong>— qui provient de l'image elle même.</p>
 
-<p>Si vous placer une image dans une page sans modifier sa hauteur ni sa largeur (que ce soit à en utilisant un attribut sur la balise <code>&lt;img&gt;</code> ou avec CSS), cela l'affichera en utilisant sa taille intrasèque. Ci-dessous nous avons l'exemple d'une image à laquelle nous avons ajouté une bordure afin de bien délimiter sa taille.</p>
+<p>Si vous placer une image dans une page sans modifier sa hauteur ni sa largeur (que ce soit à en utilisant un attribut sur la balise <code>&lt;img&gt;</code> ou avec CSS), cela l'affichera en utilisant sa taille intrinsèque. Ci-dessous nous avons l'exemple d'une image à laquelle nous avons ajouté une bordure afin de bien délimiter sa taille.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/sizing/intrinsic-image.html", '100%', 600)}}</p>
 
@@ -39,11 +39,11 @@ original_slug: Apprendre/CSS/Building_blocks/Sizing_items_in_CSS
 
 <p>{{EmbedGHLiveSample("css-examples/learn/sizing/intrinsic-text.html", '100%', 500)}}</p>
 
-<p>Dans l'exemple ci-dessus; essayez d'ajouter du texte a l'interieur de l'élément vide. Les bordures contiennent maintenant ce texte car la hauteur de l'élément est définie par son contenu. De plus, la taille de cette <code>&lt;div&gt;</code> dans l'axe de bloc provient maintenant de la taille du contenu. Là aussi il s'agit de la taille intrasèque de l'élément — sa taille est définie par son contenu.</p>
+<p>Dans l'exemple ci-dessus; essayez d'ajouter du texte a l'interieur de l'élément vide. Les bordures contiennent maintenant ce texte car la hauteur de l'élément est définie par son contenu. De plus, la taille de cette <code>&lt;div&gt;</code> dans l'axe de bloc provient maintenant de la taille du contenu. Là aussi il s'agit de la taille intrinsèque de l'élément — sa taille est définie par son contenu.</p>
 
 <h2 id="Spécifier_une_taille">Spécifier une taille</h2>
 
-<p>Nous pouvons bien entendu donner une taille spécifique aux éléments. Quand une taille est ainsi donnée à un élément (et que son contenu est adapté à cette taille), nous parlons de <strong>taille extrinsèque</strong>. Reprenons notre <code>&lt;div&gt;</code> de l'exemple précédent — nous pouvons lui donner une  {{cssxref("width")}} spécifique et une {{cssxref("height")}} spécifique, l'élément à désormais une taille définie peu importe ce qui est placé à l'interieur de celui ci. Comme nous l'avons appris dans <a href="/fr/docs/Learn/CSS/Building_blocks/Overflowing_content">notre précédente leçon sur le concept d'overflow,</a> une hauteur définie peut générer un débordement du contenu si celui ci est plus important que l'espace alloué par son conteneur.</p>
+<p>Nous pouvons bien entendu donner une taille spécifique aux éléments. Quand une taille est ainsi donnée à un élément (et que son contenu est adapté à cette taille), nous parlons de <strong>taille extrinsèque</strong>. Reprenons notre <code>&lt;div&gt;</code> de l'exemple précédent — nous pouvons lui donner une  {{cssxref("width")}} spécifique et une {{cssxref("height")}} spécifique, l'élément a désormais une taille définie peu importe ce qui est placé à l'interieur de celui ci. Comme nous l'avons appris dans <a href="/fr/docs/Learn/CSS/Building_blocks/Overflowing_content">notre précédente leçon sur le concept d'overflow,</a> une hauteur définie peut générer un débordement du contenu si celui ci est plus important que l'espace alloué par son conteneur.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/sizing/height.html", '100%', 600)}}</p>
 
