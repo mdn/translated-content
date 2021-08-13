@@ -13613,6 +13613,13 @@
       "Okome"
     ]
   },
+  "Web/API/Element/before": {
+    "modified": "2020-10-17T03:58:22.731Z",
+    "contributors": [
+      "Potappo",
+      "Shirasu"
+    ]
+  },
   "Web/API/Element/blur_event": {
     "modified": "2020-10-15T21:58:39.988Z",
     "contributors": [
@@ -14140,6 +14147,13 @@
       "fscholz",
       "khalid32",
       "Mgjbot"
+    ]
+  },
+  "Web/API/Element/replaceWith": {
+    "modified": "2020-10-17T04:41:48.425Z",
+    "contributors": [
+      "Potappo",
+      "Shirasu"
     ]
   },
   "Web/API/Element/requestFullScreen": {
@@ -50800,28 +50814,6 @@
     "modified": "2019-03-23T23:15:45.631Z",
     "contributors": [
       "shinnn"
-    ]
-  },
-  "orphaned/Web/API/ChildNode": {
-    "modified": "2020-11-23T03:36:42.854Z",
-    "contributors": [
-      "segayuu",
-      "Marsf",
-      "momoi"
-    ]
-  },
-  "orphaned/Web/API/ChildNode/before": {
-    "modified": "2020-10-17T03:58:22.731Z",
-    "contributors": [
-      "Potappo",
-      "Shirasu"
-    ]
-  },
-  "orphaned/Web/API/ChildNode/replaceWith": {
-    "modified": "2020-10-17T04:41:48.425Z",
-    "contributors": [
-      "Potappo",
-      "Shirasu"
     ]
   },
   "orphaned/Web/API/DOMLocator": {
