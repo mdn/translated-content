@@ -20996,10 +20996,46 @@
       "jack-low"
     ]
   },
+  "Web/API/Response/arrayBuffer": {
+    "modified": "2020-10-15T21:43:16.481Z",
+    "contributors": [
+      "Wind1808",
+      "woodmix",
+      "YuichiNukiyama"
+    ]
+  },
+  "Web/API/Response/blob": {
+    "modified": "2020-10-15T21:47:35.044Z",
+    "contributors": [
+      "Wind1808",
+      "woodmix",
+      "YuichiNukiyama"
+    ]
+  },
+  "Web/API/Response/body": {
+    "modified": "2020-10-15T22:25:57.301Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/API/Response/bodyUsed": {
+    "modified": "2020-10-15T21:42:42.306Z",
+    "contributors": [
+      "Wind1808",
+      "YuichiNukiyama"
+    ]
+  },
   "Web/API/Response/error": {
     "modified": "2020-10-15T22:31:34.288Z",
     "contributors": [
       "eltociear"
+    ]
+  },
+  "Web/API/Response/formData": {
+    "modified": "2020-10-15T21:43:16.713Z",
+    "contributors": [
+      "Wind1808",
+      "YuichiNukiyama"
     ]
   },
   "Web/API/Response/headers": {
@@ -21008,10 +21044,28 @@
       "eltociear"
     ]
   },
+  "Web/API/Response/json": {
+    "modified": "2020-10-15T21:43:16.571Z",
+    "contributors": [
+      "Wind1808",
+      "mfuji09",
+      "woodmix",
+      "YuichiNukiyama"
+    ]
+  },
   "Web/API/Response/redirect": {
     "modified": "2020-10-15T22:31:37.239Z",
     "contributors": [
       "eltociear"
+    ]
+  },
+  "Web/API/Response/text": {
+    "modified": "2020-10-15T21:43:16.444Z",
+    "contributors": [
+      "Wind1808",
+      "Uemmra3",
+      "woodmix",
+      "YuichiNukiyama"
     ]
   },
   "Web/API/SVGElement": {
@@ -50761,72 +50815,6 @@
     "modified": "2019-03-23T23:15:45.631Z",
     "contributors": [
       "shinnn"
-    ]
-  },
-  "orphaned/Web/API/Body": {
-    "modified": "2020-10-15T21:42:48.844Z",
-    "contributors": [
-      "Wind1808",
-      "dlwe",
-      "woodmix",
-      "hamasaki",
-      "chikoski",
-      "YuichiNukiyama",
-      "fscholz"
-    ]
-  },
-  "orphaned/Web/API/Body/arrayBuffer": {
-    "modified": "2020-10-15T21:43:16.481Z",
-    "contributors": [
-      "Wind1808",
-      "woodmix",
-      "YuichiNukiyama"
-    ]
-  },
-  "orphaned/Web/API/Body/blob": {
-    "modified": "2020-10-15T21:47:35.044Z",
-    "contributors": [
-      "Wind1808",
-      "woodmix",
-      "YuichiNukiyama"
-    ]
-  },
-  "orphaned/Web/API/Body/body": {
-    "modified": "2020-10-15T22:25:57.301Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "orphaned/Web/API/Body/bodyUsed": {
-    "modified": "2020-10-15T21:42:42.306Z",
-    "contributors": [
-      "Wind1808",
-      "YuichiNukiyama"
-    ]
-  },
-  "orphaned/Web/API/Body/formData": {
-    "modified": "2020-10-15T21:43:16.713Z",
-    "contributors": [
-      "Wind1808",
-      "YuichiNukiyama"
-    ]
-  },
-  "orphaned/Web/API/Body/json": {
-    "modified": "2020-10-15T21:43:16.571Z",
-    "contributors": [
-      "Wind1808",
-      "mfuji09",
-      "woodmix",
-      "YuichiNukiyama"
-    ]
-  },
-  "orphaned/Web/API/Body/text": {
-    "modified": "2020-10-15T21:43:16.444Z",
-    "contributors": [
-      "Wind1808",
-      "Uemmra3",
-      "woodmix",
-      "YuichiNukiyama"
     ]
   },
   "orphaned/Web/API/ChildNode": {
