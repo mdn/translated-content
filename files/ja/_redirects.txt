@@ -253,7 +253,6 @@
 /ja/docs/CSS/-moz-transform	/ja/docs/Web/CSS/transform
 /ja/docs/CSS/-moz-transform-origin	/ja/docs/Web/CSS/transform-origin
 /ja/docs/CSS/-moz-user-input	/ja/docs/Web/CSS/-moz-user-input
-/ja/docs/CSS/:-moz-alt-text	/ja/docs/orphaned/Web/CSS/:-moz-alt-text
 /ja/docs/CSS/:-moz-broken	/ja/docs/Web/CSS/:-moz-broken
 /ja/docs/CSS/:-moz-drag-over	/ja/docs/Web/CSS/:-moz-drag-over
 /ja/docs/CSS/:-moz-first-node	/ja/docs/Web/CSS/:-moz-first-node
@@ -607,7 +606,6 @@
 /ja/docs/CSS:-moz-background-inline-policy	/ja/docs/Web/CSS/box-decoration-break
 /ja/docs/CSS:-moz-background-origin	/ja/docs/Web/CSS/background-origin
 /ja/docs/CSS:-moz-user-input	/ja/docs/Web/CSS/-moz-user-input
-/ja/docs/CSS::-moz-alt-text	/ja/docs/orphaned/Web/CSS/:-moz-alt-text
 /ja/docs/CSS::-moz-broken	/ja/docs/Web/CSS/:-moz-broken
 /ja/docs/CSS::-moz-drag-over	/ja/docs/Web/CSS/:-moz-drag-over
 /ja/docs/CSS::-moz-first-node	/ja/docs/Web/CSS/:-moz-first-node
@@ -3740,7 +3738,6 @@
 /ja/docs/Web/CSS/-moz-zoom-out	/ja/docs/Web/CSS/cursor
 /ja/docs/Web/CSS/-ms-high-contrast	/ja/docs/Web/CSS/@media/-ms-high-contrast
 /ja/docs/Web/CSS/-ms-scroll-snap-type	/ja/docs/Web/CSS/scroll-snap-type
-/ja/docs/Web/CSS/:-moz-alt-text	/ja/docs/orphaned/Web/CSS/:-moz-alt-text
 /ja/docs/Web/CSS/:-moz-placeholder	/ja/docs/Web/CSS/:placeholder-shown
 /ja/docs/Web/CSS/:-ms-input-placeholder	/ja/docs/Web/CSS/:placeholder-shown
 /ja/docs/Web/CSS/:-webkit-autofill	/ja/docs/Web/CSS/:autofill
