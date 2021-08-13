@@ -10,10 +10,9 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Date
 ---
 <div>{{JSRef}}</div>
 
-<p><span class="seoSummary">Les objets JavaScript <strong><code>Date</code></strong> représentent un instant donné sur l'axe du temps dans un format indépendant de la plateforme utilisée.</span> Les objets <code>Date</code> contiennent un nombre (<code>Number</code>) qui représente le nombre de millisecondes écoulées depuis le premier janvier 1970 sur l'échelle <a href="https://fr.wikipedia.org/wiki/Temps_universel_coordonn%C3%A9">UTC</a>.</p>
+<p>Les objets JavaScript <strong><code>Date</code></strong> représentent un instant donné sur l'axe du temps dans un format indépendant de la plateforme utilisée. Les objets <code>Date</code> contiennent un nombre (<code>Number</code>) qui représente le nombre de millisecondes écoulées depuis le premier janvier 1970 sur l'échelle <a href="https://fr.wikipedia.org/wiki/Temps_universel_coordonn%C3%A9">UTC</a>.</p>
 
-<div class="blockIndicator note">
-<p>TC39 travaille actuellement sur <a href="https://tc39.es/proposal-temporal/docs/index.html">Temporal</a>, une nouvelle API pour la gestion des dates, heures et données temporelles.<br>
+<div class="note"><p><strong>Note :</strong> TC39 travaille actuellement sur <a href="https://tc39.es/proposal-temporal/docs/index.html">Temporal</a>, une nouvelle API pour la gestion des dates, heures et données temporelles.<br>
  Pour en savoir plus, consultez le <a href="https://blogs.igalia.com/compilers/2020/06/23/dates-and-times-in-javascript/">blog d'Igalia</a> et n'hésitez pas à répondre <a href="https://forms.gle/iL9iZg7Y9LvH41Nv8">au sondage</a>. Les retours concrets de développeurs web sont importants pour affiner cette API. Attention, elle n'est pas encore prête à être utilisée en production !</p>
 </div>
 
@@ -23,7 +22,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Date
 
 <p>D'un point de vue technique, une date JavaScript correspond au nombre de millisecondes écoulées depuis le premier janvier 1970, minuit UTC. Cette date et cette heure sont les mêmes que <strong>l'<a href="https://fr.wikipedia.org/wiki/Epoch">epoch</a> UNIX</strong>, qui est l'instant de référence principalement utilisé pour manipuler les dates/heures dans les systèmes informatiques.</p>
 
-<p><strong>Note :</strong> Bien que les valeurs temporelles des objets dates soient relatives à UTC, certaines des méthodes simples pour obtenir les composantes d'une date/heure fonctionnent relativement au fuseau horaire du système.</p>
+<div class="note"><p><strong>Note :</strong> Bien que les valeurs temporelles des objets dates soient relatives à UTC, certaines des méthodes simples pour obtenir les composantes d'une date/heure fonctionnent relativement au fuseau horaire du système.</p></div>
 
 <p>On notera également que la représentation maximale d'un objet <code>Date</code> n'est pas la même que le plus grand entier représentable en JavaScript (<code>Number.MAX_SAFE_INTEGER</code> vaut 9,007,199,254,740,991). En effet, ECMA-262 définit un maximum de ±100 000 000 (cent millions) jours relatifs au premier janvier 1970 UTC (ce qui correspond au 20 avril 271 821 avant notre ètre d'une part et au 13 septembre 275 760 de notre ère) pouvant être représentés par un objet <code>Date</code> standard (soit un intervalle de ±8 640 000 000 000 000 millisecondes).</p>
 
@@ -247,8 +246,6 @@ let valeurDeRetour = afficheDureeEcoulee(maFonctionATester)
 </table>
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<div class="hidden">Le tableau de compatibilité de cette page a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à consulter <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> et à nous envoyer une <em>pull request</em>.</div>
 
 <p>{{Compat("javascript.builtins.Date", 3)}}</p>
 

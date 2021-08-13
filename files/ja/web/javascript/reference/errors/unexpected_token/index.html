@@ -2,17 +2,19 @@
 title: 'SyntaxError: Unexpected token'
 slug: Web/JavaScript/Reference/Errors/Unexpected_token
 tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
+- Error
+- Errors
+- JavaScript
+- SyntaxError
 translation_of: Web/JavaScript/Reference/Errors/Unexpected_token
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
-<h2 id="Message" name="Message">メッセージ</h2>
+<p>JavaScript の例外 "unexpected token" は、特定の言語構造が期待されているのに、それ以外のものが提供されている場合に発生します。単純なタイプミスかもしれません。</p>
 
-<pre class="syntaxbox">SyntaxError: expected expression, got "x"
+<h2 id="Message">エラーメッセージ</h2>
+
+<pre class="brush: js">SyntaxError: expected expression, got "x"
 SyntaxError: expected property name, got "x"
 SyntaxError: expected target, got "x"
 SyntaxError: expected rest argument name, got "x"
@@ -20,17 +22,17 @@ SyntaxError: expected closing parenthesis, got "x"
 SyntaxError: expected '=&gt;' after argument list, got "x"
 </pre>
 
-<h2 id="Error_type" name="Error_type">エラー種別</h2>
+<h2 id="Error_type">エラーの種類</h2>
 
 <p>{{jsxref("SyntaxError")}}</p>
 
-<h2 id="What_went_wrong" name="What_went_wrong">エラーの原因</h2>
+<h2 id="What_went_wrong">エラーの原因</h2>
 
 <p>特定の言語構造が予想されている箇所に、ほかのものが提供されています。これは単純なタイプミスの可能性があります。</p>
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
-<h3 id="Expression_expected" name="Expression_expected">式が期待される</h3>
+<h3 id="Expression_expected">式が期待される</h3>
 
 <p>たとえば関数を呼び出すとき、末尾のカンマは許可されていません。</p>
 
@@ -47,7 +49,7 @@ SyntaxError: expected '=&gt;' after argument list, got "x"
 }
 </pre>
 
-<h3 id="Not_enough_brackets" name="Not_enough_brackets">括弧の不足</h3>
+<h3 id="Not_enough_brackets">括弧の不足</h3>
 
 <p>時々、 <code>if</code> 文を囲む括弧を忘れることがあります。</p>
 
@@ -74,8 +76,8 @@ SyntaxError: expected '=&gt;' after argument list, got "x"
 }
 </pre>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
- <li>{{jsxref("SyntaxError")}}</li>
+  <li>{{jsxref("SyntaxError")}}</li>
 </ul>

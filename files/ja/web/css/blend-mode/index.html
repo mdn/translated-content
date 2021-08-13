@@ -4,33 +4,32 @@ slug: Web/CSS/blend-mode
 tags:
   - Blend modes
   - CSS
-  - CSS Compositing
   - CSS Data Type
-  - CSS データ型
-  - CSS 合成
   - Compositing
+  - Compositing and Blending
+  - Data Type
   - Reference
+  - color
   - ブレンドモード
   - 合成
+browser-compat: css.types.blend-mode
 translation_of: Web/CSS/blend-mode
 ---
 <div>{{CSSRef}}</div>
 
 <p><strong><code>&lt;blend-mode&gt;</code></strong> は <a href="/ja/docs/Web/CSS">CSS</a> の<a href="/ja/docs/Web/CSS/CSS_Types">データ型</a>で、要素が重なったときにどのように色が現れるかを記述します。 {{cssxref("background-blend-mode")}} または {{cssxref("mix-blend-mode")}} プロパティで使用されます。</p>
 
-<p>ブレンドモードは、適用されるレイヤーの各ピクセルについて前景と背景の色を取り、それらを計算し、新しい色の値を返します。</p>
-
-<h2 id="Syntax" name="Syntax">構文</h2>
+<h2 id="Syntax">構文</h2>
 
 <p><code>&lt;blend-mode&gt;</code> データ型は、以下に挙げたキーワードのうちの一つで定義します。</p>
 
-<h3 id="Values" name="Values">値</h3>
+<h3 id="Values">値</h3>
 
 <dl>
  <dt><code id="normal">normal</code></dt>
  <dd>
  <p>下の色が何であるかに関わらず、上の色が最終的な色になります。<br>
-  この効果は2枚の不透明の紙が重なっているようなものです。</p>
+  この効果は 2 枚の不透明の紙が重なっているようなものです。</p>
 
  <div id="normal_example">
  <div class="hidden">
@@ -195,7 +194,7 @@ translation_of: Web/CSS/blend-mode
 
  <p>{{ EmbedLiveSample('color-burn_example', "300", "300") }}</p>
  </dd>
- <dt>hard-light</dt>
+ <dt><code>hard-light</code></dt>
  <dd>
  <p>上の色が暗い色であれば <code>multiply</code> 、明るい色であれば <code>screen</code> の結果が最終的な色になります。<br>
   このブレンドモードは <code>overlay</code> と同じですが、レイヤーが入れ替わっています。<br>
@@ -241,7 +240,7 @@ translation_of: Web/CSS/blend-mode
  </dd>
  <dt><code id="difference">difference</code></dt>
  <dd>
- <p>2つの色のうち明るい色から、暗い色を減算した結果が最終的な色になります。<br>
+ <p>2 つの色のうち明るい色から、暗い色を減算した結果が最終的な色になります。<br>
   黒いレイヤーは変化をもたらしません。白いレイヤーは、もうひとつのレイヤーの色を反転します。</p>
 
  <div id="difference_example">
@@ -366,11 +365,64 @@ translation_of: Web/CSS/blend-mode
  </dd>
 </dl>
 
-<h2 id="Interpolation_of_blend_modes" name="Interpolation_of_blend_modes">ブレンドモードの補間</h2>
+<h2 id="Description">解説</h2>
 
-<p>ブレンドモード間の遷移は補間されません。変更は直ちに行われます。</p>
+<p>ブレンドモードは、適用されるレイヤー間のそれぞれのピクセルにおいて前景色と背景色を取り、計算を行い、新しい色の値を返します。</p>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<p>ブレンドモード同士の変化は補完されません。すべての変更が直接反映されます。</p>
+
+<h2 id="Examples">例</h2>
+
+<h3 id="Blend_mode_comparison">ブレンドモードの比較</h3>
+
+<p>次の例の <code>&lt;div&gt;</code> には、 Firefox のロゴと線形グラデーションの 2 つの背景画像を設定してあります。その下に <code>&lt;select&gt;</code> メニューがあって <code>background-blend-mode</code> を変更することができ、それが <code>&lt;div&gt;</code> に適用されますので、様々なブレンドモードの効果を比較することができます。</p>
+
+<h4 id="HTML">HTML</h4>
+
+<pre class="brush: html">&lt;div&gt;&lt;/div&gt;
+&lt;p&gt;ブレンドモードを選択してください。&lt;/p&gt;
+&lt;select&gt;
+  &lt;option selected&gt;normal&lt;/option&gt;
+  &lt;option&gt;multiply&lt;/option&gt;
+  &lt;option&gt;screen&lt;/option&gt;
+  &lt;option&gt;overlay&lt;/option&gt;
+  &lt;option&gt;darken&lt;/option&gt;
+  &lt;option&gt;lighten&lt;/option&gt;
+  &lt;option&gt;color-dodge&lt;/option&gt;
+  &lt;option&gt;color-burn&lt;/option&gt;
+  &lt;option&gt;hard-light&lt;/option&gt;
+  &lt;option&gt;soft-light&lt;/option&gt;
+  &lt;option&gt;difference&lt;/option&gt;
+  &lt;option&gt;exclusion&lt;/option&gt;
+  &lt;option&gt;hue&lt;/option&gt;
+  &lt;option&gt;saturation&lt;/option&gt;
+  &lt;option&gt;color&lt;/option&gt;
+  &lt;option&gt;luminosity&lt;/option&gt;
+&lt;/select&gt;</pre>
+
+<h4 id="CSS">CSS</h4>
+
+<pre class="brush: css">div {
+  width: 300px;
+  height: 300px;
+  background: url(https://media.prod.mdn.mozit.cloud/attachments/2020/07/29/17350/3b4892b7e820122ac6dd7678891d4507/firefox.png) no-repeat center,
+  linear-gradient(to bottom, blue, orange);
+}</pre>
+
+<h4 id="JavaScript">JavaScript</h4>
+
+<pre class="brush: js">const selectElem = document.querySelector('select');
+const divElem = document.querySelector('div');
+
+selectElem.addEventListener('change', () =&gt; {
+  divElem.style.backgroundBlendMode = selectElem.value;
+});</pre>
+
+<h4 id="Result">結果</h4>
+
+<p>{{EmbedLiveSample('Blend_mode_comparison', '100%', 370)}}</p>
+
+<h2 id="Specifications">仕様書</h2>
 
 <table class="standard-table">
  <thead>
@@ -389,15 +441,19 @@ translation_of: Web/CSS/blend-mode
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
+<p>{{Compat}}</p>
 
-<p>{{Compat("css.types.blend-mode")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
  <li>このデータ型を使用するプロパティ: {{cssxref("background-blend-mode")}}, {{cssxref("mix-blend-mode")}}</li>
- <li><a href="http://en.wikipedia.org/wiki/Blend_modes">Blend modes</a></li>
+</ul>
+
+<p>様々なブレンドモードの他のウェブサイトにおける解説</p>
+
+<ul>
+ <li>Wikipedia の<a href="https://ja.wikipedia.org/wiki/%E3%83%96%E3%83%AC%E3%83%B3%E3%83%89%E3%83%A2%E3%83%BC%E3%83%89">ブレンドモード</a>の記事</li>
+ <li><a href="https://helpx.adobe.com/jp/photoshop/using/blending-modes.html">Adobe Photoshop における描画モード</a> (Adobe)</li>
 </ul>

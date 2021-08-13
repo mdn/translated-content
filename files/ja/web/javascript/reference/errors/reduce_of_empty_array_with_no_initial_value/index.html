@@ -2,26 +2,28 @@
 title: 'TypeError: Reduce of empty array with no initial value'
 slug: Web/JavaScript/Reference/Errors/Reduce_of_empty_array_with_no_initial_value
 tags:
-  - Error
-  - JavaScript
-  - Reference
-  - TypeError
+- Error
+- JavaScript
+- Reference
+- TypeError
 translation_of: Web/JavaScript/Reference/Errors/Reduce_of_empty_array_with_no_initial_value
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
-<h2 id="メッセージ">メッセージ</h2>
+<p>JavaScript の例外 "reduce of empty array with no initial value" は、 reduce 関数が使用されたときに発生します。</p>
 
-<pre class="syntaxbox">TypeError: reduce of empty array with no initial value
+<h2 id="Message">エラーメッセージ</h2>
+
+<pre class="brush: js">TypeError: reduce of empty array with no initial value
 </pre>
 
-<h2 id="エラータイプ">エラータイプ</h2>
+<h2 id="Error_type">エラーの種類</h2>
 
 <p>{{jsxref("TypeError")}}</p>
 
 <h2 id="何がうまくいかなかったのか？">何がうまくいかなかったのか？</h2>
 
-<p>JavaScript には、複数の reduce 関数があります:</p>
+<p>JavaScript には、複数の reduce 関数があります。</p>
 
 <ul>
  <li>{{jsxref("Array.prototype.reduce()")}}、{{jsxref("Array.prototype.reduceRight()")}} と</li>
@@ -46,7 +48,7 @@ ints.filter(x =&gt; x &gt; 0)         // removes all elements
 var name_list = Array.prototype.reduce.call(names, (acc, name) =&gt; acc + ", " + name);
 </pre>
 
-<h3 id="有効なケース">有効なケース</h3>
+<h3 id="Valid_cases">有効な場合</h3>
 
 <p>これらの問題は、2 つの異なる方法で解決できます。</p>
 
@@ -57,7 +59,7 @@ ints.filter(x =&gt; x &lt; 0)         // removes all elements
     .reduce((x, y) =&gt; x + y, 0) // the initial value is the neutral element of the addition
 </pre>
 
-<p>もう 1 つの方法は、<code>reduce</code> を呼び出す前、または予期しないダミーの初期値を追加した後にコールバックで空のケースを処理する 2 つの方法です。</p>
+<p>もう 1 つの方法は、<code>reduce</code> を呼び出す前、または予期しないダミーの初期値を追加した後にコールバックで空のケースを処理する方法です。</p>
 
 <pre class="brush: js example-good">var names = document.getElementsByClassName("names");
 
@@ -77,12 +79,12 @@ var name_list2 = Array.prototype.reduce.call(names, (acc, name) =&gt; {
 <h2 id="関連項目">関連項目</h2>
 
 <ul>
- <li>{{jsxref("Array.prototype.reduce()")}}</li>
- <li>{{jsxref("Array.prototype.reduceRight()")}}</li>
- <li>{{jsxref("TypedArray.prototype.reduce()")}}</li>
- <li>{{jsxref("TypedArray.prototype.reduceRight()")}}</li>
- <li>{{jsxref("Array")}}</li>
- <li>{{jsxref("TypedArray")}}</li>
- <li>{{jsxref("Array.prototype.filter()")}}</li>
- <li>{{jsxref("TypedArray.prototype.filter()")}}</li>
+  <li>{{jsxref("Array.prototype.reduce()")}}</li>
+  <li>{{jsxref("Array.prototype.reduceRight()")}}</li>
+  <li>{{jsxref("TypedArray.prototype.reduce()")}}</li>
+  <li>{{jsxref("TypedArray.prototype.reduceRight()")}}</li>
+  <li>{{jsxref("Array")}}</li>
+  <li>{{jsxref("TypedArray")}}</li>
+  <li>{{jsxref("Array.prototype.filter()")}}</li>
+  <li>{{jsxref("TypedArray.prototype.filter()")}}</li>
 </ul>

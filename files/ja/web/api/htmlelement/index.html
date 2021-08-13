@@ -16,22 +16,24 @@ translation_of: Web/API/HTMLElement
 
 <p>{{InheritanceDiagram}}</p>
 
-<h2 id="プロパティ">プロパティ</h2>
+<h2 id="Properties">プロパティ</h2>
 
-<p><em>親である {{DOMxRef("Element")}} からプロパティを継承しており、{{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("ElementCSSInlineStyle")}}, {{DOMxRef("GlobalEventHandlers")}}, {{DOMxRef("HTMLOrForeignElement")}}, {{DOMxRef("TouchEventHandlers")}} からのプロパティを実装しています。</em></p>
+<p><em>親である {{DOMxRef("Element")}} からプロパティを継承しており、{{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("GlobalEventHandlers")}}, {{DOMxRef("TouchEventHandlers")}} からプロパティを実装しています。</em></p>
 
 <dl>
  <dt>{{DOMxRef("HTMLElement.accessKey")}}</dt>
  <dd>要素に割り当てられたアクセスキーを表す {{DOMxRef("DOMString")}} です。</dd>
  <dt>{{DOMxRef("HTMLElement.accessKeyLabel")}} {{ReadOnlyInline}}</dt>
  <dd>要素に割り当てられたアクセスキーを含む {{DOMxRef("DOMString")}} を返します。</dd>
+ <dt>{{DOMxRef("HTMLElement.attributeStyleMap")}} {{ReadOnlyInline}}</dt>
+ <dd>{{DOMxRef("StylePropertyMap")}} で、その要素の {{htmlattrxref("style")}} 属性の宣言を表します。</dd>
  <dt>{{DOMxRef("HTMLElement.contentEditable")}}</dt>
  <dd>{{DOMxRef("DOMString")}}。この文字列が <code>true</code> の場合は要素が編集可能、<code>false</code> の場合は編集不可です。</dd>
  <dt>{{DOMxRef("HTMLElement.isContentEditable")}} {{ReadOnlyInline}}</dt>
  <dd>要素のコンテンツが編集可能か否かを示す {{DOMxRef("Boolean")}} を返します。</dd>
  <dt>{{DOMxRef("HTMLElement.contextMenu")}} {{Deprecated_Inline}}</dt>
  <dd>要素に割り当てたコンテキストメニューを表す {{DOMxRef("HTMLMenuElement")}} です。<code>null</code> になる可能性があります。</dd>
- <dt>{{DOMxRef("HTMLOrForeignElement.dataset")}} {{ReadOnlyInline}}</dt>
+ <dt>{{DOMxRef("HTMLElement.dataset")}} {{ReadOnlyInline}}</dt>
  <dd>要素の <a href="docs/Web/Guide/HTML/Using_data_attributes">カスタムデータ属性</a> (<code>data-*</code>) を読み書きできるスクリプトの {{DOMxRef("DOMStringMap")}} を返します。</dd>
  <dt>{{DOMxRef("HTMLElement.dir")}}</dt>
  <dd>要素の記述方向を表す <code>dir</code> グローバル属性を反映する {{DOMxRef("DOMString")}} です。可能な値は、<code>"ltr"</code> および <code>"rtl"</code>、<code>"auto"</code> です。</dd>
@@ -61,7 +63,7 @@ translation_of: Web/API/HTMLElement
  <dd>要素の属性およびテキスト、要素のコンテンツの言語を表す {{DOMxRef("DOMString")}} です。</dd>
  <dt>{{DOMxRef("HTMLElement.noModule")}}</dt>
  <dd>{{JSxRef("Boolean")}} であり、モジュールスクリプトに対応しているユーザーエージェントでインポートしたスクリプトが実行されるかどうかを示します。</dd>
- <dt>{{DOMxRef("HTMLOrForeignElement.nonce")}}</dt>
+ <dt>{{DOMxRef("HTMLElement.nonce")}}</dt>
  <dd>指定されたフェッチが実行を許可されるかどうかを判断するために Content Security Policy が使用する、一度だけ使用される暗号学的な数値を返します。</dd>
  <dt>{{DOMxRef("HTMLElement.offsetHeight")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
  <dd>レイアウトに対して相対的な要素の高さを含む <code>double</code> 値を返します。</dd>
@@ -75,11 +77,11 @@ translation_of: Web/API/HTMLElement
  <dd>レイアウトに対して相対的な要素の幅を含む <code>double</code> 値を返します。</dd>
  <dt>{{DOMxRef("HTMLElement.properties")}} {{Experimental_Inline}}{{ReadOnlyInline}}</dt>
  <dd>{{DOMxRef("HTMLPropertiesCollection")}}… を返します。</dd>
- <dt>{{DOMxRef("HTMLElement.spellcheck")}}{{Gecko_MinVersion_Inline("1.9")}}</dt>
- <dd><a href="/docs/HTML/Controlling_spell_checking_in_HTML_forms" title="/Controlling_spell_checking_in_HTML_forms">スペルチェック</a> を制御する {{jsxref("Boolean")}} です。これはすべての HTML 要素上で提供されていますが、すべての要素に効果があるとは限りません。</dd>
+ <dt>{{DOMxRef("HTMLElement.spellcheck")}}</dt>
+ <dd><a href="/ja/docs/Web/HTML/Global_attributes/spellcheck">スペルチェック</a> を制御する {{jsxref("Boolean")}} です。これはすべての HTML 要素上で提供されていますが、すべての要素に効果があるとは限りません。</dd>
  <dt>{{DOMxRef("HTMLElement.style")}}</dt>
  <dd>要素の style 属性の宣言を表すオブジェクトである {{DOMxRef("CSSStyleDeclaration")}} です。</dd>
- <dt>{{DOMxRef("HTMLOrForeignElement.tabIndex")}}</dt>
+ <dt>{{DOMxRef("HTMLElement.tabIndex")}}</dt>
  <dd>タブ順内の要素の位置を表す <code>long</code> 値です。</dd>
  <dt>{{DOMxRef("HTMLElement.title")}}</dt>
  <dd>マウスポインターが要素上に置かれた時に現れるポップアップボックスのテキストを含む {{DOMxRef("DOMString")}} です。</dd>
@@ -87,7 +89,7 @@ translation_of: Web/API/HTMLElement
  <dd>translation を表す {{jsxref("Boolean")}} です。</dd>
 </dl>
 
-<h3 id="Event_handlers" name="Event_handlers">イベントハンドラー</h3>
+<h3 id="Event_handlers">イベントハンドラー</h3>
 
 <p>ほとんどのイベントハンドラープロパティは、<code>onXYZ</code> の形であり、{{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("GlobalEventHandlers")}}, {{DOMxRef("TouchEventHandlers")}} の何れかのインターフェイスで定義されていて、<code>HTMLElement</code> により実装されています。さらに <code>HTMLElement</code> 固有のイベントプロパティがいくつかあります。</p>
 
@@ -112,24 +114,24 @@ translation_of: Web/API/HTMLElement
  <dd>{{domxref("Element/touchcancel_event", "touchcancel")}} イベントのイベントハンドリングコードを返します。</dd>
 </dl>
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+<h2 id="Methods">メソッド</h2>
 
-<p><em>親である {{DOMxRef("Element")}} からメソッドを継承しており、{{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("ElementCSSInlineStyle")}}, {{DOMxRef("GlobalEventHandlers")}}, {{DOMxRef("HTMLOrForeignElement")}}, {{DOMxRef("TouchEventHandlers")}} からのメソッドを実装しています。</em></p>
+<p><em>親である {{DOMxRef("Element")}} からメソッドを継承しており、{{DOMxRef("DocumentAndElementEventHandlers")}}, {{DOMxRef("GlobalEventHandlers")}}, {{DOMxRef("TouchEventHandlers")}} からのメソッドを実装しています。</em></p>
 
 <dl>
  <dt>{{DOMxRef("HTMLElement.attachInternals()")}} {{Experimental_Inline}}</dt>
  <dd>{{DOMxRef("ElementInternals")}} のインスタンスをカスタム要素に割り当てます。</dd>
- <dt>{{DOMxRef("HTMLOrForeignElement.blur()")}}</dt>
+ <dt>{{DOMxRef("HTMLElement.blur()")}}</dt>
  <dd>現在フォーカスされている要素からキーボードフォーカスを外します。</dd>
  <dt>{{DOMxRef("HTMLElement.click()")}}</dt>
  <dd>要素にマウスクリックイベントを送信します。</dd>
- <dt>{{DOMxRef("HTMLOrForeignElement.focus()")}}</dt>
+ <dt>{{DOMxRef("HTMLElement.focus()")}}</dt>
  <dd>要素に現在のキーボードフォーカスを当てます。</dd>
  <dt>{{DOMxRef("HTMLElement.forceSpellCheck()")}} {{Experimental_Inline}}</dt>
  <dd>要素上のコンテンツに対してスペルチェックを実行します。</dd>
 </dl>
 
-<h2 id="Events" name="Events">イベント</h2>
+<h2 id="Events">イベント</h2>
 
 <p>これらのイベントを待ち受けするには <code>addEventListener()</code> を用いるか、イベントリスナーをこのインターフェイスの <code>on<em>イベント名</em></code> プロパティに代入するかしてください。</p>
 
@@ -139,7 +141,7 @@ translation_of: Web/API/HTMLElement
  {{domxref("GlobalEventHandlers/oninvalid", "oninvalid")}} プロパティからも利用できます。</dd>
 </dl>
 
-<h3 id="Animation_events" name="Animation_events">アニメーションイベント</h3>
+<h3 id="Animation_events">アニメーションイベント</h3>
 
 <dl>
  <dt>{{domxref("HTMLElement/animationcancel_event", "animationcancel")}}</dt>
@@ -156,7 +158,7 @@ translation_of: Web/API/HTMLElement
  {{domxref("GlobalEventHandlers/onanimationstart", "onanimationstart")}} プロパティからも利用できます。</dd>
 </dl>
 
-<h3 id="Input_events" name="Input_events">入力イベント</h3>
+<h3 id="Input_events">入力イベント</h3>
 
 <dl>
  <dt>{{domxref("HTMLElement/beforeinput_event", "beforeinput")}}</dt>
@@ -168,14 +170,14 @@ translation_of: Web/API/HTMLElement
  <dd>{{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} のいずれかの要素の <code>value</code> が変更され、ユーザーが確定したときに発行されます。{{domxref("HTMLElement/input_event", "input")}} イベントとは異なり、<code>change</code> イベントは要素の <code>value</code> が変更されるたびに発行されるわけではありません。</dd>
 </dl>
 
-<h3 id="Pointer_events" name="Pointer_events">ポインターイベント</h3>
+<h3 id="Pointer_events">ポインターイベント</h3>
 
 <dl>
  <dt>{{domxref("HTMLElement/gotpointercapture_event", "gotpointercapture")}}</dt>
  <dd>{{domxref("Element/setPointerCapture", "setPointerCapture()")}} を用いて要素がポインターをキャプチャしたときに発行されます。<br>
  {{domxref("GlobalEventHandlers/ongotpointercapture", "ongotpointercapture")}} プロパティからも利用できます。</dd>
  <dt>{{domxref("HTMLElement/lostpointercapture_event", "lostpointercapture")}}</dt>
- <dd><a href="/ja/docs/Web/API/Pointer_events#Pointer_capture">キャプチャされたポインター</a>が解放されたときに発行されます。<br>
+ <dd><a href="/ja/docs/Web/API/Pointer_events#pointer_capture">キャプチャされたポインター</a>が解放されたときに発行されます。<br>
  {{domxref("GlobalEventHandlers/onlostpointercapture", "onlostpointercapture")}} プロパティからも利用できます。</dd>
  <dt>{{domxref("HTMLElement/pointercancel_event", "pointercancel")}}</dt>
  <dd>ポインターイベントがキャンセルされたときに発行されます。<br>
@@ -203,7 +205,7 @@ translation_of: Web/API/HTMLElement
  {{domxref("GlobalEventHandlers/onpointerup", "onpointerup")}} プロパティからも利用できます。</dd>
 </dl>
 
-<h3 id="Transition_events" name="Transition_events">トランジションイベント</h3>
+<h3 id="Transition_events">トランジションイベント</h3>
 
 <dl>
  <dt>{{domxref("HTMLElement/transitioncancel_event", "transitioncancel")}}</dt>
@@ -220,57 +222,15 @@ translation_of: Web/API/HTMLElement
  {{domxref("GlobalEventHandlers/ontransitionstart", "ontransitionstart")}} プロパティからも利用できます。</dd>
 </dl>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications">仕様書</h2>
 
-<p>ｓ</p>
+{{Specifications}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#extensions-to-the-htmlelement-interface', 'HTMLElement')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td>次のプロパティを追加: <code>offsetParent</code>, <code>offsetTop</code>, <code>offsetLeft</code>, <code>offsetWidth</code>, <code>offsetHeight</code>。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'elements.html#htmlelement', 'HTMLElement')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>次のプロパティを追加: <code>translate</code>, <code>itemScope</code>, <code>itemType</code>, <code>itemId</code>, <code>itemRef</code>, <code>itemProp</code>, <code>properties</code>, <code>itemValue</code>。<br>
-    次のメソッドを追加: <code>forceSpellcheck()</code>。<br>
-    <code>onXYZ</code> 属性を {{DOMxRef("GlobalEventHandlers")}} インターフェイスへ移動し、そこから継承したプロパティを追加。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'dom.html#htmlelement', 'HTMLElement')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>次のプロパティを追加: <code>dataset</code>, <code>hidden</code>, <code>tabindex</code>, <code>accessKey</code>, <code>accessKeyLabel</code>, <code>draggable</code>, <code>dropzone</code>, <code>contentEditable</code>, <code>isContentEditable</code>, <code>contextMenu</code>, <code>spellcheck</code>, <code>commandType</code>, <code>commandLabel</code>, <code>commandIcon</code>, <code>commandHidden</code>, <code>commandDisabled</code>, <code>commandChecked</code>, <code>style</code>, およびすべての <code>onXYZ</code> プロパティ。<br>
-    <code>id</code> と <code>className</code> プロパティを {{DOMxRef("Element")}} インターフェイスへ移動。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-011100101', 'HTMLElement')}}</td>
-   <td>{{Spec2('DOM2 HTML')}}</td>
-   <td>{{SpecName('DOM2 HTML')}} からの変更なし。</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-html.html#ID-011100101', 'HTMLElement')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+<p>{{Compat}}</p>
 
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、<a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
-
-<p>{{Compat("api.HTMLElement")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
  <li>{{DOMxRef("Element")}}</li>

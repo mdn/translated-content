@@ -113,7 +113,7 @@ new Intl.PluralRules('ar-EG').select(18);
 
 <h3 id="Utiliser_options">Utiliser <code>options</code></h3>
 
-<p>Les résultats obtenus peuvent être adaptés grâce à l'argument <code>options</code>. Celui-ci possède une propriété appelée <code>type</code> qui peut valoir <code>ordinal</code>. Cela peut être utile afin de déterminer la forme d'un indicateur ordinal (par exemple, "1<sup>er</sup>", "2<sup>e</sup>", etc.).</p>
+<p>Les résultats obtenus peuvent être adaptés grâce à l'argument <code>options</code>. Celui-ci possède une propriété appelée <code>type</code> qui peut valoir <code>ordinal</code>. Cela peut être utile afin de déterminer la forme d'un indicateur ordinal (par exemple, "1er", "2e", etc.).</p>
 
 <pre class="brush: js">var pr = new Intl.PluralRules('en-US', { type: 'ordinal' });
 
@@ -150,11 +150,7 @@ pr.select(42);
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 
-<div>
-<div class="hidden">Ce tableau de compatibilité a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à envoyer une <em>pull request</em> sur <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>.</div>
-
 <p>{{Compat("javascript.builtins.Intl.PluralRules")}}</p>
-</div>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 

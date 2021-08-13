@@ -22,7 +22,7 @@ translation_of: Web/API/Fetch_API/Using_Fetch
 <ul>
  <li><code>fetch()</code> 回傳的 promise <strong>不會 reject HTTP 的 error status</strong>，就算是 HTTP 404 或 500 也一樣。相反地，它會正常地 resolve，並把 <code>ok</code> status 設為 false。會讓它發生 reject 的只有網路錯誤或其他會中斷 request 的情況。</li>
  <li><code>fetch</code> <strong>可以接收跨站的 cookies</strong>，你可以用 Fetch 來建立跨站的 session。</li>
- <li><code>fetch</code> <strong>不會傳送 cookies</strong>，除非你有設定 credentials 的 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters">init option</a>。 (Since <a href="https://github.com/whatwg/fetch/pull/585" rel="nofollow noopener">Aug 25, 2017</a>. The spec changed the default credentials policy to <code>same-origin</code>. Firefox changed since 61.0b13.)</li>
+ <li><code>fetch</code> <strong>不會傳送 cookies</strong>，除非你有設定 credentials 的 <a href="/zh-TW/docs/Web/API/WindowOrWorkerGlobalScope/fetch#Parameters">init option</a>。 (Since <a href="https://github.com/whatwg/fetch/pull/585" rel="nofollow noopener">Aug 25, 2017</a>. The spec changed the default credentials policy to <code>same-origin</code>. Firefox changed since 61.0b13.)</li>
 </ul>
 
 <h2 id="使用_Fetch_發送請求_request">使用 Fetch 發送請求 ( request )</h2>

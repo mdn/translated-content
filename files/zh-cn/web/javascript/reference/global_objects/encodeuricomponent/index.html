@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/encodeURIComponent
 ---
 <div>{{jsSidebar("Objects")}}</div>
 
-<p><code><strong>encodeURIComponent()</strong></code>函数通过将一个，两个，三个或四个表示字符的UTF-8编码的转义序列替换某些字符的每个实例来编码 <a href="https://wiki.developer.mozilla.org/en-US/docs/Glossary/URI">URI</a> （对于由两个“代理”字符组成的字符而言，将仅是四个转义序列） 。</p>
+<p><code><strong>encodeURIComponent()</strong></code>函数通过将一个，两个，三个或四个表示字符的UTF-8编码的转义序列替换某些字符的每个实例来编码 <a href="/zh-CN/docs/Glossary/URI">URI</a> （对于由两个“代理”字符组成的字符而言，将仅是四个转义序列） 。</p>
 
 <p>{{EmbedInteractiveExample("pages/js/globalprops-encodeuricomponent.html","shorter")}}</p>
 
@@ -89,7 +89,7 @@ console.log(header);
 
 function encodeRFC5987ValueChars (str) {
     return encodeURIComponent(str).
-        // 注意，仅管 RFC3986 保留 "!"，但 RFC5987 并没有
+        // 注意，尽管 RFC3986 保留 "!"，但 RFC5987 并没有
         // 所以我们并不需要过滤它
         replace(/['()]/g, escape). // i.e., %27 %28 %29
         replace(/\*/g, '%2A').

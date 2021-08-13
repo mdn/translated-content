@@ -24,7 +24,7 @@ translation_of: Web/HTML/Element/select
 
 <p>你还可以将 <code>&lt;option&gt;</code> 元素放在 {{htmlelement("optgroup")}} 元素中以为下拉菜单创建不同的选项分组。</p>
 
-<p>在 <a href="https://wiki.developer.mozilla.org/zh-CN/docs/Learn/HTML/Forms/The_native_form_widgets">原生表单部件</a> 中查看更多示例。</p>
+<p>在 <a href="/zh-CN/docs/Learn/HTML/Forms/The_native_form_widgets">原生表单部件</a> 中查看更多示例。</p>
 
 <h2 id="属性">属性</h2>
 
@@ -87,9 +87,9 @@ translation_of: Web/HTML/Element/select
 
 <h2 id="应用_CSS_样式">应用 CSS 样式</h2>
 
-<p>众所周知，<code>&lt;select&gt;</code>元素很难用 CSS 进行高效的设计。你可以像其他元素一样改变某些方面——例如，调整 <a href="https://wiki.developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model">盒模型</a>、<a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Fonts">显示的字体</a> 等，你还可以使用 {{cssxref("appearance")}} 属性来去除默认的系统外观。</p>
+<p>众所周知，<code>&lt;select&gt;</code>元素很难用 CSS 进行高效的设计。你可以像其他元素一样改变某些方面——例如，调整 <a href="/zh-CN/docs/Learn/CSS/Building_blocks/The_box_model">盒模型</a>、<a href="/zh-CN/docs/Web/CSS/CSS_Fonts">显示的字体</a> 等，你还可以使用 {{cssxref("appearance")}} 属性来去除默认的系统外观。</p>
 
-<p>但是，这些属性的表现在不同浏览器之间并不一致，而且有些事情难以很好地处理，例如在一列中顺序排列不同类型的表单元素。 <code>&lt;select&gt;</code>元素的内部结构复杂，难以控制。 如果你想完全控制，你应该考虑使用一个在修改表单部件样式方面拥有强大能力的库，或者尝试使用非语义元素和 JavaScript 来制作下拉菜单，再使用 <a href="https://wiki.developer.mozilla.org/zh-CN/docs/learn/Accessibility/WAI-ARIA_basics">WAI-ARIA</a> 来提供语义。</p>
+<p>但是，这些属性的表现在不同浏览器之间并不一致，而且有些事情难以很好地处理，例如在一列中顺序排列不同类型的表单元素。 <code>&lt;select&gt;</code>元素的内部结构复杂，难以控制。 如果你想完全控制，你应该考虑使用一个在修改表单部件样式方面拥有强大能力的库，或者尝试使用非语义元素和 JavaScript 来制作下拉菜单，再使用 <a href="/zh-CN/docs/learn/Accessibility/WAI-ARIA_basics">WAI-ARIA</a> 来提供语义。</p>
 
 <p>有关样式<code>&lt;select&gt;</code>的更多有用信息，请参阅：</p>
 
@@ -100,7 +100,7 @@ translation_of: Web/HTML/Element/select
 
 <h2 id="示例">示例</h2>
 
-<h3 id="基本选择">基本选择</h3>
+<h3 id="Basic_select">基本选择</h3>
 
 <pre class="brush: html">&lt;!-- 第二项会默认选中 --&gt;
 &lt;select name="select"&gt;
@@ -112,13 +112,13 @@ translation_of: Web/HTML/Element/select
 
 <h4 id="结果">结果</h4>
 
-<p><select name="select"><option value="value1">Value 1</option><option selected value="value2">Value 2</option><option value="value3">Value 3</option></select></p>
+<p>{{EmbedLiveSample("Basic_select", "", "100")}}</p>
 
-<h3 id="使用多选的进阶选择">使用多选的进阶选择</h3>
+<h3 id="Advanced_select_with_multiple_features">使用多选的进阶选择</h3>
 
 <p>下面的例子更加复杂，展示了可用在 <code>&lt;select&gt;</code> 元素上的更多功能：</p>
 
-<pre>&lt;label&gt;Please choose one or more pets:
+<pre class="brush: html">&lt;label&gt;Please choose one or more pets:
   &lt;select name="pets" multiple size="4"&gt;
     &lt;optgroup label="4-legged pets"&gt;
       &lt;option value="dog"&gt;Dog&lt;/option&gt;
@@ -134,7 +134,7 @@ translation_of: Web/HTML/Element/select
 &lt;/label&gt;
 </pre>
 
-<p><iframe class="live-sample-frame sample-code-frame" frameborder="0" height="100" id="frame_Advanced_select_with_multiple_features" src="https://mdn.mozillademos.org/en-US/docs/Web/HTML/Element/select$samples/Advanced_select_with_multiple_features?revision=1625986"></iframe></p>
+<p>{{EmbedLiveSample("Advanced_select_with_multiple_features", "", "100")}}</p>
 
 <p>你会看见：</p>
 
@@ -150,8 +150,8 @@ translation_of: Web/HTML/Element/select
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Content_categories">内容分类</a></th>
-   <td><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>, <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Content_categories#Interactive_content">interactive content</a>, <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Content_categories#Form_listed">listed</a>, <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Content_categories#Form_labelable">labelable</a>, <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Content_categories#Form_resettable">resettable</a>, and <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Content_categories#Form_submittable">submittable</a> <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Content_categories#Form-associated_">form-associated </a>element</td>
+   <th scope="row"><a href="/zh-CN/docs/Web/HTML/Content_categories">内容分类</a></th>
+   <td><a href="/zh-CN/docs/Web/HTML/Content_categories#Flow_content">Flow content</a>, <a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>, <a href="/zh-CN/docs/Web/HTML/Content_categories#Interactive_content">interactive content</a>, <a href="/zh-CN/docs/Web/HTML/Content_categories#Form_listed">listed</a>, <a href="/zh-CN/docs/Web/HTML/Content_categories#Form_labelable">labelable</a>, <a href="/zh-CN/docs/Web/HTML/Content_categories#Form_resettable">resettable</a>, and <a href="/zh-CN/docs/Web/HTML/Content_categories#Form_submittable">submittable</a> <a href="/zh-CN/docs/Web/HTML/Content_categories#Form-associated_">form-associated </a>element</td>
   </tr>
   <tr>
    <th scope="row">允许的内容</th>
@@ -163,7 +163,7 @@ translation_of: Web/HTML/Element/select
   </tr>
   <tr>
    <th scope="row">允许的父元素</th>
-   <td>Any element that accepts <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
+   <td>Any element that accepts <a href="/zh-CN/docs/Web/HTML/Content_categories#Phrasing_content">phrasing content</a>.</td>
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
@@ -182,36 +182,11 @@ translation_of: Web/HTML/Element/select
 
 <h2 id="规范">规范</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">规范</th>
-   <th scope="col">状态</th>
-   <th scope="col">注释</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'forms.html#the-select-element', '&lt;select&gt;')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', 'forms.html#the-select-element', '&lt;select&gt;')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML4.01', 'interact/forms.html#h-17.6', '&lt;select&gt;')}}</td>
-   <td>{{Spec2('HTML4.01')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+<p>{{Specifications}}</p>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-<div>{{Compat("html.elements.select")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="参见">参见</h2>
 

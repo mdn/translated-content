@@ -20,8 +20,6 @@ original_slug: Web/JavaScript/Reference/Instructions/async_function
 
 <div>{{EmbedInteractiveExample("pages/js/statement-async.html", "taller")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="syntaxbox">async function <em>name</em>([<em>param</em>[, <em>param</em>[, ... <em>param</em>]]]) {
@@ -34,14 +32,8 @@ original_slug: Web/JavaScript/Reference/Instructions/async_function
 <dl>
  <dt><code>name</code></dt>
  <dd>Le nom de la fonction.</dd>
-</dl>
-
-<dl>
  <dt><code>param</code></dt>
  <dd>Le nom d'un argument à passer à la fonction.</dd>
-</dl>
-
-<dl>
  <dt><code>instructions</code></dt>
  <dd>Les instructions qui composent le corps de la fonction.</dd>
 </dl>
@@ -61,7 +53,7 @@ original_slug: Web/JavaScript/Reference/Instructions/async_function
 </div>
 
 <div class="note">
-<p><strong>Note </strong><strong>:</strong> Le but des fonctions <code>async</code>/<code>await</code> est de simplifier l'utilisation synchrone des promesses et d'opérer sur des groupes de promesses. De la même façon que les promesses sont semblables à des <em>callbacks</em> structurés, <code>async</code>/<code>await</code> est semblable à la combinaison des générateurs et des promesses.</p>
+<p><strong>Note :</strong> Le but des fonctions <code>async</code>/<code>await</code> est de simplifier l'utilisation synchrone des promesses et d'opérer sur des groupes de promesses. De la même façon que les promesses sont semblables à des <em>callbacks</em> structurés, <code>async</code>/<code>await</code> est semblable à la combinaison des générateurs et des promesses.</p>
 </div>
 
 <h2 id="Exemples">Exemples</h2>
@@ -154,7 +146,6 @@ setTimeout(parallel, 10000); // réellement parallele : après 1 seconde,
 setTimeout(parallelPromise, 13000); // identique à parallel
 </pre>
 
-<div class="note">
 <h4 id="await_et_lexécution_parallèle"><code>await</code> et l'exécution parallèle</h4>
 
 <p>Dans <code>sequentialStart</code>, l'exécution est arrêtée pendant deux secondes avant le premier <code>await</code> puis encore une autre seconde avant le deuxième <code>await</code>. Le deuxième minuteur n'est pas créé tant que le premier n'est pas écoulé. Le code s'exécute donc au moins en 3 secondes.</p>
@@ -163,9 +154,7 @@ setTimeout(parallelPromise, 13000); // identique à parallel
  Toutefois, les appels utilisant  <code>await</code> sont exécutés séquentiellement et la deuxième instruction avec <code>await</code> attendra que la première ait été  traitée. Le minuteur le plus rapide est donc créé juste après le premier.</p>
 
 <p>Si on souhaite avoir deux tâches qui s'exécutent réellement en parallèle, on pourra utiliser  <code>await Promise.all([job1(), job2()])</code> comme illustré ci-avant avec <code>parallel</code>.</p>
-</div>
 
-<div class="warning">
 <h4 id="asyncawait_Promise.prototype.then_et_la_gestion_des_erreurs"><code>async</code>/<code>await</code>, <code>Promise.prototype.then()</code> et la gestion des erreurs</h4>
 
 <p>La plupart des fonctions asynchrones peuvent être écrites avec des promesses. Toutefois, les fonctions asynchrones qui utilisent <code>async</code> se prêtent mieux à la gestion des erreurs.</p>
@@ -176,7 +165,6 @@ setTimeout(parallelPromise, 13000); // identique à parallel
 
 <p>Bien entendu, il est toutefois possible d'avoir des fonctions asynchrones (avec <code>async</code>) qui gobent des erreurs involontairement. Si on considère la fonction <code>parallel</code> ci-avant, s'il n'y avait eu aucun <code>await</code> ou <code>return</code> pour le résultat de <code>Promise.all([])</code>, aucune erreur n'aurait été propagée.<br>
  Bien que l'exemple <code>parallelPromise</code> paraisse simple, il ne gère aucune erreur du tout. Il aurait fallu utiliser un <code>return </code><code>Promise.all([])</code> analogue.</p>
-</div>
 
 <h3 id="Réécrire_une_chaîne_de_promesses_avec_une_fonction_asynchrone">Réécrire une chaîne de promesses avec une fonction asynchrone</h3>
 
@@ -257,8 +245,6 @@ setTimeout(parallelPromise, 13000); // identique à parallel
 </table>
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<div class="hidden">Ce tableau de compatibilité a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à envoyer une <em>pull request</em> sur <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>.</div>
 
 <p>{{Compat("javascript.statements.async_function")}}</p>
 

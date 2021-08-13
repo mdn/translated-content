@@ -1,0 +1,107 @@
+---
+title: Object.getOwnPropertyDescriptors()
+slug: Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptors
+tags:
+- JavaScript
+- Method
+- Object
+- Polyfill
+browser-compat: javascript.builtins.Object.getOwnPropertyDescriptors
+---
+<div>{{JSRef}}</div>
+
+<p><code><strong>Object.getOwnPropertyDescriptors()</strong></code> 메서드는 주어진 객체의 모든 속성들의 설명자(descriptor)들을 반환합니다.</p>
+
+<div>{{EmbedInteractiveExample("pages/js/object-getownpropertydescriptors.html")}}</div>
+
+<h2 id="Syntax">구문</h2>
+
+<pre class="brush: js">Object.getOwnPropertyDescriptors(<var>obj</var>)</pre>
+
+<h3 id="Parameters">매개변수</h3>
+
+<dl>
+  <dt><code>obj</code></dt>
+  <dd>가지고 있는 모든 속성들의 설명자를 반환받고 싶은 객체</dd>
+</dl>
+
+<h3 id="Return_value">반환 값</h3>
+
+<p>객체의 모든 속성의 설명자를 가지는 객체를 반환합니다. 매개변수 객체에 속성이 없다면, 빈 객체가 반환됩니다.</p>
+
+<h2 id="Description">설명</h2>
+
+<p>이 메서드를 사용하면, 객체의 모든 속성들에 대한 설명자를 정확하게 확인할 수 있습니다.
+    자바스크립트의 <dfn>속성</dfn>은 문자열로된 이름 또는 심볼, 그리고 속성 설명자로 이루어져 있습니다.
+    속성 설명자 종류와 특성에 대한 자세한 정보는 {{jsxref("Object.defineProperty()")}}에 있습니다..
+</p>
+
+<p><dfn>속성 설명자</dfn> 는 다음과 같은 특징들을 가진 레코드입니다.</p>
+
+<dl>
+  <dt><code>value</code></dt>
+  <dd>속성과 관련된 값입니다. (데이터 설명자만 해당됨)</dd>
+  <dt><code>writable</code></dt>
+  <dd><code>참(true)</code>인 경우, 속성과 관련된 값이 변경될 수 있는 상태입니다. (데이터 설명자만 해당됨)</dd>
+  <dt><code>get</code></dt>
+  <dd>속성에 대한 getter 역할을 하는 함수거나, getter가 정의되지 않은 경우에는 {{jsxref("undefined")}} 입니다.
+    (접근자 설명자만 해당됨)</dd>
+  <dt><code>set</code></dt>
+  <dd>속성에 대한 setter 역할을 하는 함수거나, setter 정의되지 않은 경우에는 {{jsxref("undefined")}} 입니다.
+    (접근자 설명자만 해당됨)</dd>
+  <dt><code>configurable</code></dt>
+  <dd><code>참(true)</code>인 경우, 객체로 부터 속성 설명자가 변경 및 삭제될 수 있는 상태입니다.</dd>
+  <dt><code>enumerable</code></dt>
+  <dd><code>true</code>인 경우, 열거 가능한 상태의 속성입니다.</dd>
+</dl>
+
+<h2 id="Examples">예시</h2>
+
+<h3 id="Creating_a_shallow_clone">얕은 복사하기</h3>
+
+<p>{{jsxref("Object.assign()")}} 메서드는 원본 객체에서 목표 객체로 열거 가능한 속성과 객체의 속성들만 복사하는 반면,
+   이 메서드와 {{jsxref("Object.create()")}} 를 사용하면 어느 두 객체를 얕은 복사에 사용할 수 있습니다.</p>
+
+<pre class="brush: js">Object.create(
+  Object.getPrototypeOf(obj),
+  Object.getOwnPropertyDescriptors(obj)
+);
+</pre>
+
+<h3 id="Creating_a_subclass">서브클래스 만들기</h3>
+
+<p>서브클래스를 만드는 일반적인 방법은 서브클래스를 정의하고, 프로토타입을 슈퍼 클래스의 인스턴스로 설정한 다음, 그 인스턴스에 속성을 정의하는 것입니다.
+  이 방법은 게터와 세터의 경우 굉장히 불편합니다. 대신, 다음 코드를 사용하여 프로토타입을 설정할 수 있습니다.
+</p>
+
+<pre class="brush: js">function superclass() {}
+superclass.prototype = {
+  // 여기에 슈퍼 클래스의 생성자, 매서드, 속성을 정의합니다.
+};
+function subclass() {}
+subclass.prototype = Object.create(
+  superclass.prototype,
+  {
+    // 여기에 서브클래스의 생성자, 매서드, 속성을 정의합니다.
+  }
+);
+</pre>
+
+<h2 id="Specifications">명세</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">브라우저 호환성</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">같이 보기</h2>
+
+<ul>
+  <li><code>Object.getOwnPropertyDescriptors</code>의 폴리필은 다음에서 확인 할 수 있습니다. <a href="https://github.com/zloirock/core-js#ecmascript-object"><code>core-js</code></a></li>
+  <li>{{jsxref("Object.getOwnPropertyDescriptor()")}}</li>
+  <li>{{jsxref("Object.defineProperty()")}}</li>
+  <li><a
+      href="https://github.com/tc39/proposal-object-getownpropertydescriptors">Polyfill</a>
+  </li>
+</ul>

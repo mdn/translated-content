@@ -2,97 +2,170 @@
 title: プログレッシブウェブアプリの紹介
 slug: Web/Progressive_web_apps/Introduction
 tags:
+  - Applications
+  - Guide
+  - Intermediate
   - Introduction
   - PWA
   - Progressive web apps
+  - Service Worker
   - js13kGames
   - progressive
-  - ウェブマニフェスト
-  - サービスワーカー
-  - プログレッシブウェブアプリ
+  - web manifest
 translation_of: Web/Progressive_web_apps/Introduction
 ---
 <div>{{NextMenu("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps")}}</div>
 
-<p class="summary">この記事では<ruby>プログレッシブウェブアプリ<rp> (</rp><rt>Progressive Web Apps</rt><rp>)</rp></ruby> (PWA) を紹介し、それが何なのか、また普通のウェブアプリよりもどのような利点があるのかを説明します。</p>
+<p class="summary">この記事ではプログレッシブウェブアプリ (Progressive Web Apps, PWA) を紹介し、それが何なのか、また普通のウェブアプリよりもどのような利点があるのかを説明します。</p>
 
-<h2 id="What_is_a_Progressive_Web_App" name="What_is_a_Progressive_Web_App">プログレッシブウェブアプリとは</h2>
+<h2 id="What_is_a_Progressive_Web_App">プログレッシブウェブアプリとは</h2>
 
-<p>PWA は数々の特定の技術と、ウェブアプリとネイティブアプリの機能の利点を併せ持った標準パターンを使用して開発されたウェブアプリです。</p>
+<div class="notecard note">
+	<h3>注</h3>
+	<p>「プログレッシブウェブアプリ」という用語は、公式または正式な名称ではありません。ウェブ技術だけを使って、柔軟性と適応性のあるアプリケーションを作成するというコンセプトのもと、 Google が当初使用していた略語です。</p>
+</div>
 
-<p>例えば、ウェブアプリはより見つけやすいものです。— アクセスするのは、アプリケーションをインストールするよりはるかに簡単で手早く、リンクを通してウェブアプリを共有することもできます。</p>
+<p>PWA は数々の特定の技術と、ウェブアプリとネイティブアプリの機能の利点を併せ持った標準パターンを使用して開発されたウェブアプリです。例えば、ウェブアプリはより見つけやすいものです。アクセスするのは、アプリケーションをインストールするよりはるかに簡単で手早く、リンクを通してウェブアプリを共有することもできます。</p>
 
-<p>一方、ネイティブアプリはオペレーティングシステムとより調和するので、ユーザーにもっと継ぎ目のない使い勝手を提供します。ネイティブアプリをインストールするとオフラインで動作し、ユーザーはブラウザーを使ってアプリに移動するのではなく、ホーム画面のアイコンから好きなアプリをタップするだけで簡単にアクセスできます。</p>
+<p>一方、ネイティブアプリはオペレーティングシステムとより調和するので、ユーザーにもっとシームレスな使い勝手を提供します。ネイティブアプリをインストールするとオフラインで動作し、ユーザーはブラウザーを使ってアプリに移動するのではなく、ホーム画面のアイコンから好きなアプリをタップするだけで簡単にアクセスできます。</p>
 
-<p>PWA によって、ネイティブアプリの利点を引き継いでウェブアプリケーションを作成できます。</p>
+<p>PWA によって、ネイティブアプリの利点を引き継いだウェブアプリケーションを作成することができます。</p>
 
-<p>PWA は新しい概念ではありません。このような考えは、今までも様々なアプローチで検討されてきました。既に、プログレッシブエンハンスメントやレスポンシブデザインを用いてモバイルに適したウェブサイトを作成することができます。オフラインでの動作やアプリケーションとしてのインストールも、数年前に Firefox OS で実現されていました。</p>
+<p>これ新しい概念ではありません。このような考えは、過去にもウェブプラットフォーム上で、様々なアプローチにより何度も繰り返されてきました。プログレッシブエンハンスメントとレスポンシブデザインにより、すでにモバイルフレンドリーなウェブサイトを構築することができます。</p>
 
 <p>しかし、PWA はウェブを素晴らしいものにする既存の機能を一切排除することなく、これらすべてとそれ以上の機能を提供します。</p>
 
-<h2 id="What_makes_an_app_a_PWA" name="What_makes_an_app_a_PWA">何がアプリを PWA にするのか</h2>
+<h2 id="What_makes_an_app_a_PWA">何がアプリを PWA にするのか</h2>
 
 <p>前に述べたように、PWA は単一の技術によって成り立っているわけではありません。PWA とはウェブアプリケーションを構築するための新しい哲学を表しており、いくつかの特定のパターンや API、機能を含みます。一見しただけではそのウェブアプリが PWA かを見極めることはできません。ウェブアプリは、特定の要件を満たしているか、あるいは特定の機能を実装している場合に、PWA と見なされます。例えば、オフラインで動作すること、インストールできること、簡単に同期できること、プッシュ通知を送信することができることなどです。</p>
 
-<p>更に、アプリの完成度をパーセント値で測定するツールもあります (今の所は <a href="https://developers.google.com/web/tools/lighthouse/">Lighthouse</a> が最も有名です)。様々な技術的優位性を実装することでアプリをより進化的(progressive)にすることができ、より高い Lighthouse のスコアを得ることができます。しかし、このスコアは大まかな指標でしかありません。</p>
+<p>更に、アプリの完成度をパーセント値で測定するツールもあります (今のところは <a href="https://developers.google.com/web/tools/lighthouse/">Lighthouse</a> が最も有名です)。様々な技術的優位性を実装することでアプリをより進化的 (progressive) にすることができ、より高い Lighthouse のスコアを得ることができます。しかし、このスコアは大まかな指標でしかありません。</p>
 
 <p>ウェブアプリが PWA として見なされるために、いくつかの重要な原則があります。</p>
 
 <ul>
- <li><a href="/ja/Progressive_web_apps/Advantages#Discoverable">Discoverable</a>: コンテンツを検索エンジンで見つけることができる。</li>
- <li><a href="/ja/Progressive_web_apps/Advantages#Installable">Installable</a>: アプリは端末のホーム画面に追加できる。</li>
- <li><a href="/ja/Progressive_web_apps/Advantages#Linkable">Linkable</a>: URL を送るだけでアプリを共有できる。</li>
- <li><a href="/ja/Progressive_web_apps/Advantages#Network_independent">Network independent</a>: オフラインか、あるいは貧弱なネットワーク環境でも使用できる。</li>
- <li><a href="/ja/Progressive_web_apps/Advantages#Progressive">Progressive</a>: 古いブラウザーでも基本的な機能は使用でき、最新のブラウザーではすべての機能が使用できる。</li>
- <li><a href="/ja/Progressive_web_apps/Advantages#Re-engageable">Re-engageable</a>: 新しいコンテンツがあるときには、通知を送ることができる。</li>
- <li><a href="/ja/Progressive_web_apps/Advantages#Responsive">Responsive</a>: 携帯電話やタブレット、ノートパソコン、テレビ、冷蔵庫など、画面とブラウザーを備える全ての端末で使用できる。</li>
- <li><a href="/ja/Progressive_web_apps/Advantages#Safe">Safe</a>: アプリからの通信が第三者からの攻撃に対して安全であり、機密情報を保護できる。</li>
+ <li><a href="#discoverability">Discoverable</a> (発見可能): コンテンツを検索エンジンで見つけることができる。</li>
+ <li><a href="#installability">Installable</a> (インストール可能): アプリを端末のホーム画面に追加できる。</li>
+ <li><a href="#linkability">Linkable</a> (リンク可能): URL を送るだけでアプリを共有できる。</li>
+ <li><a href="#network_independence">Network independent</a> (ネットワーク非依存): オフラインか、あるいは貧弱なネットワーク環境でも使用できる。</li>
+ <li><a href="#progressive_enhancement_support">Progressive</a> (進化的): 古いブラウーザーでも基本的な機能は使用でき、最新のブラウザーではすべての機能が使用できる。</li>
+ <li><a href="#re-engageability">Re-engageable</a> (再エンゲージ可能): 新しいコンテンツがあるときには、通知を送ることができる。</li>
+ <li><a href="#responsiveness">Responsive</a> (レスポンシブ): 携帯電話やタブレット、ノートパソコン、テレビ、冷蔵庫など、画面とブラウザーを備える全ての端末で使用できる。</li>
+ <li><a href="#safety">Safe</a> (安全): アプリからの通信が第三者からの攻撃に対して安全であり、機密情報を保護できる。</li>
 </ul>
 
-<h3 id="Is_it_worth_doing_all_that" name="Is_it_worth_doing_all_that">取り組む価値はありますか？</h3>
+<p>これらの機能を提供し、{{anch("Advantages of web applications", "長所")}}をすべて活用することで、ユーザーや顧客にとって魅力的で柔軟性の高いサービスを提供することができます。</p>
+
+<h3 id="Is_it_worth_doing_all_that">取り組む価値はありますか？</h3>
 
 <p>もちろん！基本的な PWA の機能を実装するのに必要な労力は比較的小さく、得られる便益は膨大です。例をあげましょう。</p>
 
 <ul>
- <li>アプリのインストール後、<font color="#0b0115"><a href="/ja/docs/Web/API/Service_Worker_API">Service Worker</a></font> のキャッシュのおかげで読み込み時間が減少する。大切な帯域の利用量も同様。</li>
- <li>アプリ更新の際、変更があった内容だけを更新する機能。対照的にネイティブアプリの場合、ほんの小さな変更だとしてもユーザーにアプリケーション全体を再びダウンロードさせてしまう。</li>
- <li>ネイティブプラットフォームとよく統合されたルックアンドフィール。例えばホームスクリーンのアプリアイコンや、フルスクリーン動作するアプリなど。</li>
- <li>システム通知やプッシュメッセージによるユーザーの再訪問。これはエンゲージユーザーやコンバージョン率の向上に繋がる。</li>
+ <li><a href="/ja/docs/Web/API/Service_Worker_API">サービスワーカー</a>によるキャッシュのおかげで、貴重な帯域幅と時間の節約とともに、アプリがインストールされた後の読み込み時間が短縮されます。 PWA は (2 回目のアクセスから) ほぼ瞬時にローディングが行われます。</li>
+ <li>アプリの更新があると、変更されたコンテンツだけを更新することができます。一方、ネイティブアプリでは、わずかな変更でもユーザーはアプリ全体をダウンロードし直さなければなりません。</li>
+ <li>ネイティブプラットフォームとよく統合されたルックアンドフィール。例えばホーム画面のアプリアイコンや、全画面で動作するアプリなど。</li>
+ <li>システム通知やプッシュメッセージによるユーザーの再エンゲージ。これはエンゲージユーザーやコンバージョン率の向上に繋がる。</li>
 </ul>
+
+<h3 id="Success_stories">成功例</h3>
 
 <p>PWA の道を試みて、ネイティブアプリよりもウェブサイトの使い勝手の向上を選択し、その結果として大きな利益を得るに至った企業の成功例は多数あります。<a href="https://www.pwastats.com/">PWA Stats</a> というウェブサイトはこのような便益を示すたくさんの調査を公開しています。</p>
 
-<p>もっとも有名な成功例は、おそらく <a href="https://stories.flipkart.com/introducing-flipkart-lite/">Flipkart Lite</a> でしょう。インド最大手の e コマースサイトは 2015年に PWA へと作り直され、その結果コンバージョン数が 70%増加しました。<a href="https://m.aliexpress.com/">AliExpress</a> の PWA もまた新規ユーザーのコンバージョン率が 104%向上という、ウェブやネイティブアプリよりも良い結果となりました。このような利益の増加や PWA 転換に必要な労力が比較的少ないことを考えると、PWA の利点は明確です。</p>
+<p>もっとも有名な成功例は、おそらく <a href="https://stories.flipkart.com/introducing-flipkart-lite/">Flipkart Lite</a> でしょう。インド最大手の e コマースサイトは 2015年に PWA へと作り直され、その結果コンバージョン数が 70% 増加しました。<a href="https://m.aliexpress.com/">AliExpress</a> の PWA もまた新規ユーザーのコンバージョン率が 104%向上という、ウェブやネイティブアプリよりも良い結果となりました。このような利益の増加や PWA 転換に必要な労力が比較的少ないことを考えると、PWA の利点は明確です。</p>
 
-<p>一方では <a href="https://www.couponmoto.com/">couponmoto</a> のような初期段階にあるスタートアップも消費者エンゲージメント促進のため PWA を使い始め、企業の大小問わずユーザーの (再) エンゲージに効果的であることが示されています。</p>
+<p>一方では <a href="https://www.couponmoto.com/">couponmoto</a> のような初期段階にあるスタートアップも消費者エンゲージ促進のため PWA を使い始め、企業の大小問わずユーザーの (再) エンゲージに効果的であることが示されています。</p>
 
 <p>他にも例を知りたければ <a href="https://pwa.rocks/">pwa.rocks</a> を確認してみてください。特に <a href="https://hnpwa.com/">hnpwa.com</a> のページは注目に値します。これは (よくある TodoMVC アプリの代わりに) Hacker News ウェブサイトの実装例を掲載しており、様々なフロントエンドフレームワークの利用例を見ることができます。</p>
 
-<p><a href="https://www.pwabuilder.com/">PWABuilder</a> を利用すると、PWA をオンラインで生成することもできます。</p>
+<p><a href="https://www.pwabuilder.com/">PWABuilder</a> のウェブサイトを利用すると、PWA をオンラインで生成することもできます。</p>
 
-<p>Service Worker - およびプッシュ通知 - に固有の情報を探しているならば、<a href="https://serviceworke.rs/">Service Worker Cookbook</a> も忘れずにチェックしてください。モダンなサイトにおける Service Worker のレシピ集です。</p>
+<p>サービスワーカーとおよびプッシュ通知に固有の情報を探しているならば、<a href="https://serviceworke.rs/">Service Worker Cookbook</a> も忘れずにチェックしてください。モダンなサイトにおけるサービスワーカーのレシピ集です。</p>
 
 <p>PWA のアプローチは挑戦する十分な価値があります。あなたのアプリでそれがどう動くのか、ぜひ自身で確認してみてください。</p>
 
-<h2 id="Browser_support" name="Browser_support">ブラウザーの対応</h2>
+<h2 id="Advantages_of_web_applications">ウェブアプリケーションの利点</h2>
 
-<p>前述のように、PWA は単一の API に依存するのではなく、さまざまなテクノロジーを使用して、可能な限り最高の Web エクスペリエンスを提供するという目標を達成します。<br>
- <br>
- PWA に必要な重要な要素は、<a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/Service_Worker_API">service worker</a> のサポートです。ありがたいことに、Service Worker は現在、デスクトップとモバイルの<a href="https://jakearchibald.github.io/isserviceworkerready/">すべての主要なブラウザー</a>でサポートされています。<br>
- <br>
- <a href="https://wiki.developer.mozilla.org/ja/docs/Web/Manifest">Web App Manifest</a> や <a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/Push_API">Push</a>, <a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/Notifications_API">Notifications</a>, <a href="https://wiki.developer.mozilla.org/ja/docs/Web/Progressive_web_apps/Add_to_home_screen">Add to Home Screen</a> などの他の機能も幅広くサポートされています。現在、Safari では、ウェブアプリマニフェストとホーム画面に追加のサポートが制限されており、ウェブプッシュ通知はサポートされていません。ただし、他の主要なブラウザーはこれらすべての機能をサポートしています。<br>
- <br>
- これらの API の一部は実験的であり、ドキュメントはまだドラフトですが、Flipkart や AliExpress のような成功事例を見ると、ウェブアプリで既に PWA機能の一部を試して実装するよう確信するはずです。<br>
- <br>
- 何よりも、progressive enhancement rule に従う必要があります。サポートされている場合にのみ、そのような拡張機能を提供するテクノロジーを使用しますが、サポートされていない場合でもアプリの基本機能を提供します。この方法で誰もが使用できるようになりますが、最新のブラウザーを使用するユーザーは PWA機能をさらに活用できます。</p>
+<p>完全に機能するプログレッシブウェブアプリケーションは、以下のすべての利点をユーザーに提供します。</p>
 
-<h2 id="An_example_application" name="An_example_application">アプリケーションの例</h2>
+<h3 id="Discoverability">発見可能性</h3>
 
-<p>このシリーズの記事では、 <a href="http://2017.js13kgames.com/">js13kGames 2017</a> コンペティションの <a href="http://js13kgames.com/aframe">A-Frame category</a> に提出されたゲームに関する情報をリストする、非常にシンプルなウェブサイトのソースコードを調べます。ウェブサイトの実際のコンテンツについて考える必要はありません。主なポイントは、自分のプロジェクトで PWA機能を使用する方法を学ぶことです。<br>
- <br>
- オンラインバージョンは <a href="https://mdn.github.io/pwa-examples/js13kpwa/">mdn.github.io/pwa-examples/js13kpwa</a> (<a href="https://github.com/mdn/pwa-examples/tree/master/js13kpwa">ソースコードも参照</a> )で見つけることができます。これについては、次のいくつかの記事で詳しく説明します。<br>
- <br>
- それでは、このシリーズの第2部に移り、サンプルアプリの構造を見ていきましょう。</p>
+<p><img alt="" src="discoverable.svg" style="float: left; margin-right: 1em;">最終的な目的は、ウェブアプリが検索エンジンでより適切に表現され、公開されやすく、カタログ化とランク付けされ、ブラウザーにメタデータを使用してそれらに特別な機能を提供することです。</p>
+
+<p>一部の機能は、<a href="https://ogp.me/">Open Graph</a> のような独自の技術によって特定のウェブベースのプラットフォームですでにできるようになっています。これは {{Glossary("HTML")}} の {{HTMLElement("head")}} ブロック内で {{HTMLElement("meta")}} タグを使って同様のメタデータを指定するフォーマットを提供しています。</p>
+
+<p>ここで関連するウェブ標準は<a href="/ja/docs/Web/Manifest">ウェブアプリマニフェスト</a>（Web app manifest）です。 これは、名前、アイコン、スプラッシュ画面、テーマカラーなどのアプリの機能を {{Glossary("JSON")}} 形式のマニフェストファイルで定義します。 これは、アプリ一覧や端末のホーム画面などの場面で使用するためのものです。</p>
+
+<h3 id="Installability">インストール可能性</h3>
+
+<p><img alt="" src="installable.svg" style="float: left; margin-right: 1em;"></p>
+
+<p>ウェブアプリの使い勝手の中心となるのは、ユーザーがホーム画面にアプリのアイコンを表示し、タップしてアプリを開くことができるネイティブコンテナーであり、基盤となるプラットフォームとうまく統合されていることです。</p>
+
+<p>最近のウェブアプリは、ウェブアプリマニフェストに設定されたプロパティや、最近のスマートフォンブラウザーで利用できる<a href="/ja/docs/Web/Progressive_web_apps/Developer_guide/Installing">ウェブアプリのインストール</a>と呼ばれる機能によって、このようなネイティブアプリの感覚を持つことができます。</p>
+
+<h3 id="Linkability">リンク可能性</h3>
+
+<p><img alt="" src="linkable.svg" style="float: left; margin-right: 1em;"></p>
+
+<p>ウェブの最も強力な機能の 1 つは、特定の URL でアプリにリンクできることです。アプリストアは不要で、複雑なインストールプロセスも不要です。これは今までもそうでした。</p>
+
+<h3 id="Network_independence">ネットワーク非依存性</h3>
+
+<p><img alt="" src="network-independent.svg" style="float: left; margin-right: 1em;"></p>
+
+<p>最新のウェブアプリケーションは、ネットワークの信頼性が低い、あるいは存在しない場合でも動作します。ネットワーク非依存性の基本的な考え方は、以下の通りです。</p>
+
+<ul>
+	<li>ネットワークが利用できない場合でも、サイトを再訪してそのコンテンツを取得できる。</li>
+	<li>ユーザーが過去に一度でもアクセスしたことのあるコンテンツであれば、接続性が悪い状況でも閲覧できる。</li>
+	<li>接続がない状況で、ユーザーに表示するものを制御することができます。</li>
+</ul>
+
+<p>これは、ページリクエストを制御する<a href="/ja/docs/Web/API/Service_Worker_API">サービスワーカー</a> (オフラインでの保存など)、ネットワークリクエストに対するレスポンスをオフラインで保存する <a href="/ja/docs/Web/API/Cache">Cache API</a> (サイトの資産を保存するのにとても便利)、アプリケーションデータをオフラインで保存する<a href="/ja/docs/Web/API/Web_Storage_API">ウェブストレージ</a>や <a href="/ja/docs/Web/API/IndexedDB_API">IndexedDB</a> などのクライアントサイドのデータストレージ技術など、さまざまな技術を組み合わせて実現されています。</p>
+
+<h3 id="Progressive_enhancement_support">プログレッシブエンハンスメントの対応</h3>
+
+<p><img alt="" src="progressive.svg" style="float: left; margin-right: 1em;"></p>
+
+<p>最近のウェブアプリは、十分な機能を備えたブラウザーでは優れた使い勝手を、機能の劣るブラウザーでは (見劣りするものの) 許容できる使い勝手を提供するように開発することができます。私たちは、プログレッシブエンハンスメントなどのベストプラクティスを用いて、何年も前からこれを行ってきました。<a href="/ja/docs/Glossary/Progressive_Enhancement">プログレッシブエンハンスメント</a>を使用することで、 PWA はクロスブラウザーに対応します。つまり開発者は、 PWA の一部の機能や技術の実装が、ブラウザーの実装ごとに異なることを考慮する必要があります。</p>
+
+<h3 id="Re-engageability">再エンゲージ可能性</h3>
+
+<p><img alt="" src="re-engageable.svg" style="float: left; margin-right: 1em;"></p>
+
+<p>ネイティブプラットフォームの大きな利点は、ユーザーがアプリを見ていない時や端末を使用していない時でも、アップデートや新しいコンテンツによってユーザーを簡単に再エンゲージできることです。最近のウェブアプリでは、ページを制御するサービスワーカー、サーバーからサービスワーカーを介してアプリに直接アップデートを送信する <a href="/ja/docs/Web/API/Push_API">Web Push API</a>、システム通知を生成する <a href="/ja/docs/Web/API/Notifications_API">Notifications API</a> などの新しい技術を使用することで、このようなことが可能になっていますが、ユーザーがウェブブラウザーを積極的に使用していないときにも、ユーザーの関心を引くことができます。</p>
+
+<h3 id="Responsiveness">レスポンシブ性</h3>
+
+<p><img alt="" src="responsive.svg" style="float: left; margin-right: 1em;"></p>
+
+<p>レスポンシブウェブアプリでは、<a href="/ja/docs/Web/CSS/Media_queries">メディアクエリー</a>や<a href="/ja/docs/Glossary/Viewport">ビューポート</a>などの技術を用いて、デスクトップ、モバイル、タブレットなど、あらゆるフォームファクターに対応する UI を実現しています。</p>
+
+<h3 id="Safety">安全性</h3>
+
+<p><img alt="" src="safe.svg" style="float: left; margin-right: 1em;"></p>
+
+<p><img alt='Facebook Messengerを探すために「Messenger」と検索すると、膨大な数の結果が表示されるスクリーンショット。どれが正しいのでしょうか？' src="instalingmessengersomanyoptionseek.jpeg" style="border-style: solid; border-width: 1px; float: right; margin-left: 1em;">{{Glossary("HTTPS")}} を利用し、セキュリティを考慮してアプリを開発していれば、ウェブプラットフォームは、コンテンツが改ざんされていないことを確認すると同時に、盗み見されることを防ぐ安全な配信メカニズムを提供します。</p>
+
+<p>また、アプリの URL がサイトのドメインと一致するため、ユーザーは正しいアプリをインストールしているかどうかを簡単に確認することができます。これは、アプリストアのアプリとは大きく異なります。アプリストアには似たような名前のアプリがいくつもあり、中には自分のサイトをベースにしたものもあるため、混乱を招くだけです。ウェブアプリは、そのような混乱を解消し、ユーザーに最高の使い勝手を提供します。</p>
+
+<h2 id="Browser_support">ブラウザーの対応</h2>
+
+<p>前述のように、PWA は単一の API に依存するのではなく、さまざまなテクノロジーを使用して、可能な限り最高のウェブの操作性を提供するという目標を達成します。</p>
+
+<p>PWA に必要な重要な要素は、<a href="/ja/docs/Web/API/Service_Worker_API">サービスワーカー</a>のサポートです。ありがたいことに、サービスワーカーは現在、デスクトップとモバイルの<a href="https://jakearchibald.github.io/isserviceworkerready/">すべての主要なブラウザー</a>でサポートされています。</p>
+
+<p><a href="/ja/docs/Web/Manifest">ウェブアプリマニフェスト</a>や<a href="/ja/docs/Web/API/Push_API">プッシュ通知</a>、<a href="/ja/docs/Web/API/Notifications_API">お知らせ</a>、<a href="/ja/docs/Web/Progressive_web_apps/Add_to_home_screen">ホーム画面に追加</a>などの他の機能も幅広く対応されています。現在、Safari では、ウェブアプリマニフェストとホーム画面に追加の対応が制限されており、ウェブプッシュ通知には対応していません。ただし、他の主要なブラウザーはこれらすべての機能に対応しています。</p>
+
+<p>特に、プログレッシブエンハンスメントのルールに従うべきです。つまり、利用可能な場合はアプリの外観や実用性を向上させる技術を使用し、それらの機能が利用できない場合はアプリの基本的な機能を提供します。信頼性の高いウェブサイトを優れたパフォーマンスで提供することは、これらの機能強化を使用することの結果であり、これは、より良い慣行に従ったウェブアプリを構築することを意味します。このようにして、誰もがアプリを使用できるようになりますが、モダンブラウザーを使用している人は、 PWA 機能の恩恵をさらに受けることができます。</p>
+
+<h2 id="An_example_application">アプリケーションの例</h2>
+
+<p>このシリーズの記事では、 <a href="https://2017.js13kgames.com/">js13kGames 2017</a> 競技会の <a href="https://js13kgames.com/aframe">A-Frame category</a> に提出されたゲームに関する情報をリストする、非常にシンプルなウェブサイトのソースコードを調べます。ウェブサイトの実際のコンテンツについて考える必要はありません。主なポイントは、自分のプロジェクトで PWA 機能を使用する方法を学ぶことです。</p>
+
+<p>オンラインでは <a href="https://mdn.github.io/pwa-examples/js13kpwa/">mdn.github.io/pwa-examples/js13kpwa</a> (<a href="https://github.com/mdn/pwa-examples/tree/master/js13kpwa">ソースコードも参照</a> ) で見つけることができます。これについては、次のいくつかの記事で詳しく説明します。</p>
+
+<p>それでは、このシリーズの第 2 部に移り、サンプルアプリの構造を見ていきましょう。</p>
 
 <p>{{NextMenu("Web/Progressive_web_apps/App_structure", "Web/Progressive_web_apps")}}</p>
 

@@ -19,11 +19,11 @@ TypeError: Converting circular structure to JSON (Chrome and Opera)
 TypeError: Circular reference in value argument not supported (Edge)
 </pre>
 
-<h2 id="Error_type" name="Error_type">エラー種別</h2>
+<h2 id="Error_type">エラーの種類</h2>
 
 <p>{{jsxref("TypeError")}}</p>
 
-<h2 id="What_went_wrong" name="What_went_wrong">エラーの原因</h2>
+<h2 id="What_went_wrong">エラーの原因</h2>
 
 <p><a href="https://www.json.org/">JSON 形式</a>はオブジェクト参照に対応していません (<a href="http://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03">IETF の草案はありますが</a>)。したがって {{jsxref("JSON.stringify()")}} はこれを解決しようとせず、これによって失敗します。</p>
 

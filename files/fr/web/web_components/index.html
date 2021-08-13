@@ -32,7 +32,7 @@ translation_of: Web/Web_Components
 <p>Généralement, l'approche basique pour la création d'un composant Web est la suivante:</p>
 
 <ol>
- <li>Créer une classe dans laquelle est spécifié la fonctionnalité du composant Web en utilisant la syntaxe de classe ECMAScript 2015 (voir les <a href="https://wiki.developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Classes">Classes</a> pour de plus amples informations).</li>
+ <li>Créer une classe dans laquelle est spécifié la fonctionnalité du composant Web en utilisant la syntaxe de classe ECMAScript 2015 (voir les <a href="/fr/docs/Web/JavaScript/Reference/Classes">Classes</a> pour de plus amples informations).</li>
  <li>Enregistrer le nouvel élément personnalisé en utilisant la méthode {{domxref("CustomElementRegistry.define()")}}, avec en paramètre le nom de l'élément à définir, la classe ou la fonction dans laquelle la fonctionnalité est spécifiée, et <span id="p3">optionnellement</span>, de quel élément celui-ci hérite-t-il.</li>
  <li>Si nécessaire, connecter un shadow DOM à l'élément personnalisé en utilisant la méthode {{domxref("Element.attachShadow()")}}. Ajouter les éléments-fils, les écouteurs d'événements, etc., au shadow DOM en utilisant les méthodes DOM usuelles.</li>
  <li>Si nécessaire, définir un template HTML en utilisant {{htmlelement("template")}} et {{htmlelement("slot")}}. Toujours en utilisant les méthodes DOM usuelles pour cloner le template et le connecter au shadow DOM.</li>

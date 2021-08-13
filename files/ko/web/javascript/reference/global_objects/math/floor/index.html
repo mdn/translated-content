@@ -2,11 +2,12 @@
 title: Math.floor()
 slug: Web/JavaScript/Reference/Global_Objects/Math/floor
 tags:
-  - JavaScript
-  - Math
-  - Method
-  - Reference
+- JavaScript
+- Math
+- Method
+- Reference
 translation_of: Web/JavaScript/Reference/Global_Objects/Math/floor
+browser-compat: javascript.builtins.Math.floor
 ---
 <div>{{JSRef}}</div>
 
@@ -16,22 +17,22 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/floor
 
 
 
-<h2 id="구문">구문</h2>
+<h2 id="Syntax">구문</h2>
 
 <pre class="syntaxbox">Math.floor(<var>x</var>)</pre>
 
-<h3 id="매개변수">매개변수</h3>
+<h3 id="Parameters">매개변수</h3>
 
 <dl>
  <dt><code>x</code></dt>
  <dd>숫자.</dd>
 </dl>
 
-<h3 id="반환_값">반환 값</h3>
+<h3 id="Return_value">반환 값</h3>
 
 <p>주어진 수 이하의 가장 큰 정수.</p>
 
-<h2 id="설명">설명</h2>
+<h2 id="Description">설명</h2>
 
 <p><code>floor()</code>는 <code>Math</code>의 정적 메서드이므로, 사용자가 생성한 <code>Math</code> 객체의 메서드로 호출할 수 없고 항상 <code>Math.floor()</code>를 사용해야 합니다. (<code>Math</code>는 생성자가 아닙니다)</p>
 
@@ -39,9 +40,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Math/floor
 <p><strong>참고</strong>: <code>Math.floor(null)</code>은 {{jsxref("NaN")}} 대신 0을 반환합니다.</p>
 </div>
 
-<h2 id="예제">예제</h2>
+<h2 id="Examples">예제</h2>
 
-<h3 id="Math.floor()_사용하기"><code>Math.floor()</code> 사용하기</h3>
+<h3 id="Using_Math.floor"><code>Math.floor()</code> 사용하기</h3>
 
 <pre class="brush: js">Math.floor( 45.95); //  45
 Math.floor( 45.05); //  45
@@ -50,26 +51,26 @@ Math.floor(-45.05); // -46
 Math.floor(-45.95); // -46
 </pre>
 
-<h3 id="십진수_조절">십진수 조절</h3>
+<h3 id="Decimal_adjustment">십진수 조절</h3>
 
 <pre class="brush: js">// Closure
 (function() {
   /**
-   * Decimal adjustment of a number.
+   * 십진수 조절
    *
-   * @param {String}  type  The type of adjustment.
-   * @param {Number}  value The number.
-   * @param {Integer} exp   The exponent (the 10 logarithm of the adjustment base).
-   * @returns {Number} The adjusted value.
+   * @param {String}  type  조정 타입.
+   * @param {Number}  value 숫자.
+   * @param {Integer} exp   지수 (10 로그의 조정값).
+   * @returns {Number} 조정값
    */
   function decimalAdjust(type, value, exp) {
-    // If the exp is undefined or zero...
+    // exp가 undefined 또는 0인 경우...
     if (typeof exp === 'undefined' || +exp === 0) {
       return Math[type](value);
     }
     value = +value;
     exp = +exp;
-    // If the value is not a number or the exp is not an integer...
+    // 값이 숫자가 아니거나 정수형이 아닌 경우...
     if (isNaN(value) || !(typeof exp === 'number' &amp;&amp; exp % 1 === 0)) {
       return NaN;
     }
@@ -81,19 +82,19 @@ Math.floor(-45.95); // -46
     return +(value[0] + 'e' + (value[1] ? (+value[1] + exp) : exp));
   }
 
-  // Decimal round
+  // 십진수 round
   if (!Math.round10) {
     Math.round10 = function(value, exp) {
       return decimalAdjust('round', value, exp);
     };
   }
-  // Decimal floor
+  // 십진수 floor
   if (!Math.floor10) {
     Math.floor10 = function(value, exp) {
       return decimalAdjust('floor', value, exp);
     };
   }
-  // Decimal ceil
+  // 십진수 ceil
   if (!Math.ceil10) {
     Math.ceil10 = function(value, exp) {
       return decimalAdjust('ceil', value, exp);
@@ -122,45 +123,15 @@ Math.ceil10(-55.59, -1);   // -55.5
 Math.ceil10(-59, 1);       // -50
 </pre>
 
-<h2 id="명세">명세</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.0.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.8.2.9', 'Math.floor')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-math.floor', 'Math.floor')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-math.floor', 'Math.floor')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+<h2 id="Browser_compatibility">브라우저 호환성</h2>
 
+<p>{{Compat}}</p>
 
-
-<p>{{Compat("javascript.builtins.Math.floor")}}</p>
-
-<h2 id="같이_보기">같이 보기</h2>
+<h2 id="See_also">같이 보기</h2>
 
 <ul>
  <li>{{jsxref("Math.abs()")}}</li>

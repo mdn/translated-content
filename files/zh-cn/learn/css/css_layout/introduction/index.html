@@ -50,7 +50,7 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 
 <p>每种技术都有它们的用途，各有优缺点，相互辅助。通过理解各个布局方法的设计理念，你能够找到构建你想要的网页需要的布局方案。</p>
 
-<h2 id="正常布局流Normal_flow">正常布局流(Normal flow)</h2>
+<h2 id="Normal_flow">正常布局流(Normal flow)</h2>
 
 <p>正常布局流(normal flow)是指在不对页面进行任何布局控制时，浏览器默认的HTML布局方式。让我们快速地看一个HTML的例子：</p>
 
@@ -66,7 +66,7 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 
 <p>默认情况下，浏览器的显示如下:</p>
 
-<p>{{ EmbedLiveSample('正常布局流Normal_flow', '100%', 200) }}</p>
+<p>{{ EmbedLiveSample('Normal_flow', '100%', 200) }}</p>
 
 <p>注意，HTML元素完全按照源码中出现的先后次序显示——第一个段落、无序列表、第二个段落。</p>
 
@@ -98,7 +98,7 @@ translation_of: Learn/CSS/CSS_layout/Introduction
 
 <h2 id="弹性盒子Flexbox">弹性盒子(Flexbox)</h2>
 
-<p>Flexbox 是CSS 弹性盒子布局模块（<a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexible Box Layout</a> Module）的缩写，它被专门设计出来用于创建横向或是纵向的一维页面布局。要使用flexbox，你只需要在想要进行flex布局的父元素上应用<code>display: flex</code> ，所有直接子元素都将会按照flex进行布局。我们来看一个例子。</p>
+<p>Flexbox 是CSS 弹性盒子布局模块（<a href="/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout">Flexible Box Layout</a> Module）的缩写，它被专门设计出来用于创建横向或是纵向的一维页面布局。要使用flexbox，你只需要在想要进行flex布局的父元素上应用<code>display: flex</code> ，所有直接子元素都将会按照flex进行布局。我们来看一个例子。</p>
 
 <p>下面这些HTML标记描述了一个class为<code>wrapper</code>的容器元素，它的内部有三个<code>&lt;div&gt;</code>元素。它们在我们的英文文档当中，会默认地作为块元素从上到下进行显示。</p>
 
@@ -349,7 +349,7 @@ p {
  <li><strong>粘性定位(Sticky positioning)</strong>是一种新的定位方式，它会让元素先保持和<code>position: static</code>一样的定位，当它的相对视口位置(offset from the viewport)达到某一个预设值时，他就会像<code>position: fixed</code>一样定位。</li>
 </ul>
 
-<h3 id="简单定位示例">简单定位示例</h3>
+<h3 id="Simple_positioning_example">简单定位示例</h3>
 
 <p>我们将展示一些示例代码来熟悉这些布局技术. 这些示例代码都作用在下面这一个相同的HTML上：</p>
 
@@ -376,7 +376,7 @@ p {
 
 <p>渲染效果如下:</p>
 
-<p>{{ EmbedLiveSample('简单定位示例', '100%', 300) }}</p>
+<p>{{ EmbedLiveSample('Simple_positioning_example', '100%', 300) }}</p>
 
 <h3 id="相对定位">相对定位</h3>
 
@@ -581,7 +581,7 @@ p {
 <p><strong>注意</strong>: 想要发现更多关于定位的信息，请参阅我们的<a href="/en-US/docs/Learn/CSS/CSS_layout/Positioning">Positioning</a>和<a href="/en-US/docs/Learn/CSS/CSS_layout/Practical_positioning_examples">Practical positioning examples</a>文章。</p>
 </div>
 
-<h2 id="表格布局">表格布局</h2>
+<h2 id="Table_layout">表格布局</h2>
 
 <p>HTML表格对于显示表格数据是很好的，但是很多年前——在浏览器中支持基本的CSS之前——web开发人员过去也常常使用表格来完成整个网页布局——将它们的页眉、页脚、不同的列等等放在不同的表行和列中。这在当时是有效的，但它有很多问题——表布局是不灵活的，繁重的标记，难以调试和语义上的错误（比如，屏幕阅读器用户在导航表布局方面有问题）。</p>
 
@@ -649,7 +649,7 @@ form p {
 
 <p>结果如下：</p>
 
-<p>{{ EmbedLiveSample('CSS_表格', '100%', '170') }}</p>
+<p>{{ EmbedLiveSample('Table_layout', '100%', '170') }}</p>
 
 <p>你可以在 <a href="https://mdn.github.io/learning-area/css/styling-boxes/box-model-recap/css-tables-example.html">css-tables-example.html</a> 看到预览版 (也可以见<a href="https://github.com/mdn/learning-area/blob/master/css/styling-boxes/box-model-recap/css-tables-example.html">源码</a>)</p>
 

@@ -11,7 +11,7 @@ original_slug: Web/JavaScript/Reference/Instructions/with
 ---
 <div>{{jsSidebar("Statements")}}</div>
 
-<div class="warning">Il n'est pas recommandé d'utiliser l'instruction <code>with</code>. En effet, elle est parfois source de problèmes de compatibilité ou de bogues. Se référer au paragraphe « Inconvénient : l'ambiguïté » de la section « Description » pour plus de détails.</div>
+<div class="warning"><p><strong>Attention :</strong>Il n'est pas recommandé d'utiliser l'instruction <code>with</code>. En effet, elle est parfois source de problèmes de compatibilité ou de bogues. Se référer au paragraphe « Inconvénient : l'ambiguïté » de la section « Description » pour plus de détails.</p></div>
 
 <p>L'instruction <strong><code>with</code></strong> permet d'étendre la portée chaînée d'une instruction.</p>
 
@@ -33,7 +33,7 @@ original_slug: Web/JavaScript/Reference/Instructions/with
 
 <p>Dès qu'un nom non-qualifié est utilisé, JavaScript cherche dans la chaîne des portées associée à l'exécution une fonction ou un script qui contiendrait ce nom. L'instruction <code>with</code> ajoute l'objet donné à la tête de la chaîne des portées lors de l'évaluation des instructions qu'elle contient. Si un nom non-qualifié est utilisé parmi ces instructions correspond à une propriété de la chaîne des portées, le nom sera alors lié à la propriété et à l'objet contenant cette propriété, sinon une erreur <code>ReferenceError</code> est renvoyée.</p>
 
-<div class="note">L'utilisation de l'instruction <code>with</code> n'est pas recommandée et est interdite dans le <a href="/fr/docs/Web/JavaScript/Reference/Strict_mode">mode strict</a> d'ECMAScript 5. L'alternative recommandée est d'assigner l'objet utilisant les propriétés désirées à une variable temporaire.</div>
+<div class="note"><p><strong>Note :</strong> L'utilisation de l'instruction <code>with</code> n'est pas recommandée et est interdite dans le <a href="/fr/docs/Web/JavaScript/Reference/Strict_mode">mode strict</a> d'ECMAScript 5. L'alternative recommandée est d'assigner l'objet utilisant les propriétés désirées à une variable temporaire.</p></div>
 
 <h3 id="Avantages_et_inconvénients_les_performances">Avantages et inconvénients : les performances</h3>
 
@@ -121,8 +121,6 @@ with (Math) {
 </table>
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<div class="hidden">Ce tableau de compatibilité a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à envoyer une <em>pull request</em> sur <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>.</div>
 
 <p>{{Compat("javascript.statements.with")}}</p>
 

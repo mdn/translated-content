@@ -1,36 +1,35 @@
 ---
-title: '<div>: コンテンツ分割要素'
+title: '<div>: コンテンツ区分要素'
 slug: Web/HTML/Element/div
 tags:
+  - Content Division
+  - Element
   - HTML
-  - HTML コンテンツのグループ化
-  - 'HTML:フローコンテンツ'
-  - 'HTML:知覚可能コンテンツ'
+  - HTML grouping content
+  - HTML:Flow content
+  - Layout
   - Reference
-  - ウェブ
-  - リファレンス
-  - 要素
+  - Web
+  - div
 translation_of: Web/HTML/Element/div
 ---
 <div>{{HTMLRef}}</div>
 
-<p><span class="seoSummary"><strong>HTML の コンテンツ分割要素</strong> (<strong><code>&lt;div&gt;</code></strong>) は、フローコンテンツの汎用コンテナーです。 {{glossary("CSS")}} を用いてスタイル付けがされるまでは、コンテンツやレイアウトには影響を与えません。</span></p>
+<p><span class="seoSummary"><strong>HTML の コンテンツ区分要素</strong> (<strong><code>&lt;div&gt;</code></strong>) は、フローコンテンツの汎用コンテナーです。 {{glossary("CSS")}} を用いて何らかのスタイル付けがされる (例えば、スタイルが直接適用されたり、親要素に<a href="/ja/docs/Web/CSS/CSS_Flexible_Box_Layout">フレックスボックス</a>などの何らかのレイアウトモデルが適用されるなど) までは、コンテンツやレイアウトには影響を与えません。</span></p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/div.html","tabbed-standard")}}</div>
-
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
 
 <p><code>&lt;div&gt;</code> 要素は「純粋」なコンテナーとして、本質的には何も表しません。その代わり、 {{htmlattrxref("class")}} や {{htmlattrxref("id")}} を使用してスタイル付けしやすくしたり、文書内で異なる言語で書かれた部分を ({{htmlattrxref("lang")}} 属性を使用して) 示したりするために使用します。</p>
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリ</a></th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Flow_content">フローコンテンツ</a>, 知覚可能コンテンツ</td>
+   <th scope="row"><a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリ</a></th>
+   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a>, 知覚可能コンテンツ</td>
   </tr>
   <tr>
    <th scope="row">許可されている内容</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Flow_content">フローコンテンツ</a>。<br>
+   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a>。<br>
     または ({{glossary("WHATWG")}} HTML において) 親要素が {{HTMLElement("dl")}} である場合: 1つ以上の {{HTMLElement("dt")}} 要素と、それに続く1つ以上の {{HTMLElement("dd")}} 要素、さらに任意で {{HTMLElement("script")}} 要素や {{HTMLElement("template")}} 要素が混在。</td>
   </tr>
   <tr>
@@ -39,8 +38,12 @@ translation_of: Web/HTML/Element/div
   </tr>
   <tr>
    <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Flow_content">フローコンテンツ</a> を受け入れるすべての要素。<br>
+   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a> を受け入れるすべての要素。<br>
     または ({{glossary("WHATWG")}} HTML において) {{HTMLElement("dl")}} 要素。</td>
+  </tr>
+  <tr>
+   <th scope="row">暗黙の ARIA ロール</th>
+   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
   </tr>
   <tr>
    <th scope="row">許可されている ARIA ロール</th>
@@ -53,25 +56,29 @@ translation_of: Web/HTML/Element/div
  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+<h2 id="Attributes">属性</h2>
 
 <p>この要素は<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>を持ちます。</p>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>メモ:</strong> <code>align</code> 属性は廃止されたので、使用しないでください。代わりに、 CSS のプロパティを使用したり、 <a href="/ja/docs/Web/CSS/CSS_Grid_Layout">CSS グリッド</a>や <a href="/ja/docs/Learn/CSS/CSS_layout/Flexbox">CSS フレックスボックス</a>を使用して <code>&lt;div&gt;</code> 要素をページの中央に配置したりしてください。</p>
 </div>
 
-<h2 id="Usage_notes" name="Usage_notes">使用上の注意</h2>
+<h2 id="Usage_notes">使用上の注意</h2>
 
 <ul>
  <li><code>&lt;div&gt;</code> 要素は、他に適切な意味的要素（{{HTMLElement("article")}} や {{HTMLElement("nav")}} など）がない場合に限り使用してください。</li>
 </ul>
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Accessibility_concerns">アクセシビリティの考慮</h2>
 
-<h3 id="A_simple_example" name="A_simple_example">単純な例</h3>
+<p><code>&lt;div&gt;</code> 要素は <a href="https://www.w3.org/TR/wai-aria-1.2/#generic"><code>generic</code> の暗黙のロール</a>を持っており、まったくない訳ではありません。これは、特定の役割を持つ直接の子孫要素が適切に機能することを期待する、特定の ARIA の組み合わせ宣言に影響を与える可能性があります。</p>
 
-<pre class="brush:html">&lt;div&gt;
+<h2 id="Examples">例</h2>
+
+<h3 id="A_simple_example">単純な例</h3>
+
+<pre class="brush: html">&lt;div&gt;
   &lt;p&gt;Any kind of content here. Such as
   &amp;lt;p&amp;gt;, &amp;lt;table&amp;gt;. You name it!&lt;/p&gt;
 &lt;/div&gt; </pre>
@@ -80,7 +87,7 @@ translation_of: Web/HTML/Element/div
 
 <p>{{EmbedLiveSample("A_simple_example", 650, 60)}}</p>
 
-<h3 id="A_styled_example" name="A_styled_example">スタイル付けを行う例</h3>
+<h3 id="A_styled_example">スタイル付けを行う例</h3>
 
 <p>この例では CSS を用いて <code>&lt;div&gt;</code> にスタイルを適用することで、影付きのボックスを作成します。なお、 <code>&lt;div&gt;</code> 要素に {{htmlattrxref("class")}} 属性を使用して、 <code>"shadowbox"</code> という名前のスタイルを要素に適用します。</p>
 
@@ -101,11 +108,11 @@ translation_of: Web/HTML/Element/div
   background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
 }</pre>
 
-<h4 id="Result" name="Result">結果</h4>
+<h4 id="Result">結果</h4>
 
 <p>{{EmbedLiveSample("A_styled_example", 650, 120)}}</p>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications">仕様書</h2>
 
 <table class="standard-table">
  <thead>
@@ -134,15 +141,13 @@ translation_of: Web/HTML/Element/div
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<p class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</p>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
 <p>{{Compat("html.elements.div")}}</p>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
- <li>意味的区分要素: {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}</li>
- <li>記述コンテンツのスタイリング用の {{HTMLElement("span")}} 要素</li>
+ <li>意味論的な区分要素: {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("nav")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}</li>
+ <li>記述コンテンツのスタイル付け用の {{HTMLElement("span")}} 要素</li>
 </ul>

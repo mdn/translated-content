@@ -3,7 +3,7 @@ title: Event.composed
 slug: Web/API/Event/composed
 translation_of: Web/API/Event/composed
 ---
-<p>{{SeeCompatTable}}{{APIRef("Shadow DOM")}}</p>
+<p>{{APIRef("Shadow DOM")}}</p>
 
 <p>{{domxref("Event")}} 接口的只读属性 <strong><code>composed</code></strong> 返回一个 {{jsxref("Boolean")}} 值，用来指示该事件是否可以从 Shadow DOM 传递到一般的 DOM。</p>
 
@@ -20,6 +20,57 @@ translation_of: Web/API/Event/composed
 <p>如果返回的 {{jsxref("Boolean")}} 值为 <code>true</code>，表明当事件到达 shadow DOM 的根节点（也就是 shadow DOM 中事件开始传播的第一个节点）时，事件可以从 shadow DOM 传递到一般 DOM。当然，事件要具有可传播性，即该事件的 {{domxref("Event.bubbles", "bubbles")}} 属性必须为 <code>true</code>。你也可以通过调用 {{domxref("Event.composedPath", "composedPath()")}} 来查看事件从 shadow DOM 传播到普通 DOM 的路径。</p>
 
 <p>如果属性值为 <code>false</code>，那么事件将不会跨越 shadow DOM 的边界传播。</p>
+
+<h2 id="例子">例子</h2>
+
+<p>在我们的组合组合路径示例（实时查看）中，我们定义了两个不重要的自定义元素 <code>&lt;open-shadow&gt;</code> 和 <code>&lt;closed-shadow&gt;</code>，它们都将获取其 <code>text</code> 属性的内容并将它们作为元素的文本内容插入到元素的 shadow DOM 中。两者之间的唯一区别是它们的阴影根附加了它们的模式分别设置为 open 和 closed。</p>
+
+<p>第一个定义如下所示：</p>
+ 
+<pre class="brush: js">customElements.define('open-shadow',
+  class extends HTMLElement {
+    constructor() {
+      super();
+
+      let pElem = document.createElement('p');
+      pElem.textContent = this.getAttribute('text');
+
+      let shadowRoot = this.attachShadow({mode: 'open'})
+        .appendChild(pElem);
+
+  }
+});</pre>
+
+<p>我们将他们插入我们的页面当中：</p>
+
+<pre class="brush: html">&lt;open-shadow text="I have an open shadow root"&gt;&lt;/open-shadow&gt;
+&lt;closed-shadow text="I have a closed shadow root"&gt;&lt;/closed-shadow&gt;</pre>
+
+ <p>然后在 <code>html</code> 标签上监听 click 事件：</p>
+
+<pre class="brush: js">document.querySelector('html').addEventListener('click',function(e) {
+  console.log(e.composed);
+  console.log(e.composedPath());
+});</pre>
+
+<p>当我们点击 <code>&lt;open-shadow&gt;</code> 和 <code>&lt;closed-shadow&gt;</code> 元素时候我们会注意到：</p>
+
+<ol>
+  <li>The <code>composed</code> property returns <code>true</code> because the
+    <code>click</code> event is always able to propagate across shadow boundaries.</li>
+  <li>You'll notice a difference in the value of <code>composedPath</code> for the two
+    elements.</li>
+</ol>
+
+<p><code>&lt;open-shadow&gt;</code> 元素的组合路径是：</p>
+
+<pre>Array [ p, ShadowRoot, open-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]</pre>
+
+<p>而 <code>&lt;closed-shadow&gt;</code> 元素的组合路径是：</p>
+
+<pre>Array [ closed-shadow, body, html, HTMLDocument https://mdn.github.io/web-components-examples/composed-composed-path/, Window ]</pre>
+
+<p>第二种情况下，监听器只会捕获到 <code>&lt;closed-shadow&gt;</code> 元素本身，而不会去继续捕捉这个其中的节点。</p>
 
 <h2 id="规范">规范</h2>
 

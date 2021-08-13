@@ -13,10 +13,10 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/parseInt
 
 <div>{{EmbedInteractiveExample("pages/js/globalprops-parseint.html")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
 
-<div class="blockIndicator warning">
-<p><strong>Attention !</strong> On veillera à bien utiliser le second paramètre de la fonction pour éviter toute ambiguité sur la base numérique utilisée.</p>
+
+<div class="warning">
+<p><strong>Attention :</strong> On veillera à bien utiliser le second paramètre de la fonction pour éviter toute ambiguité sur la base numérique utilisée.</p>
 </div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
@@ -32,7 +32,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/parseInt
  <dd>
  <p>Un entier compris entre 2 et 36 qui représente la <a href="https://fr.wikipedia.org/wiki/Base_%28arithm%C3%A9tique%29">base</a> utilisée pour la valeur représentée dans la chaîne. La base communément utilisée est la base décimale et on utilisera donc <code>10</code> dans ce cas pour ce paramètre.</p>
 
- <p class="warning"><strong>Attention ! </strong>La base par défaut n'est pas 10. Ce paramètre doit toujours être utilisé, en effet s'il n'est pas spécifié, le comportement de la fonction n'est pas garanti et peut varier d'une plate-forme à une autre.</p>
+ <div class="warning"><p><strong>Attention :</strong>La base par défaut n'est pas 10. Ce paramètre doit toujours être utilisé, en effet s'il n'est pas spécifié, le comportement de la fonction n'est pas garanti et peut varier d'une plate-forme à une autre.</p></div>
 
  <p>Voir cependant la description ci-après qui explicite le comportement par défaut attendu.</p>
  </dd>
@@ -188,8 +188,6 @@ console.log(filterInt('1.61803398875'));     // NaN
 </table>
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<div class="hidden">Ce tableau de compatibilité a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à envoyer une <em>pull request</em> sur <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>.</div>
 
 <p>{{Compat("javascript.builtins.parseInt")}}</p>
 

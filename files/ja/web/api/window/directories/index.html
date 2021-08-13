@@ -1,33 +1,47 @@
 ---
-title: window.directories
+title: Window.directories
 slug: Web/API/Window/directories
 tags:
-  - DOM
-  - DOM_0
-  - Gecko
-  - Gecko DOM Reference
-  - 要更新
+  - API
+  - HTML DOM
+  - NeedsCompatTable
+  - NeedsExample
+  - NeedsMarkupWork
+  - NeedsSpecTable
+  - Deprecated
+  - Property
+  - Reference
+  - Window
 translation_of: Web/API/Window/directories
 ---
-<p>{{ ApiRef() }} {{ 英語版章題("Summary") }}</p>
-<h3 id=".E6.A6.82.E8.A6.81" name=".E6.A6.82.E8.A6.81">概要</h3>
-<p>ウィンドウディレクトリのツールバーオブジェクトを返します。 {{ 英語版章題("Syntax") }}</p>
+<p>{{APIRef()}}{{deprecated_header}}</p>
+
+<div class="note notebox">
+  <p><strong>注:</strong> このメソッドは Firefox 4 以降で削除されました。</p>
+</div>
+
+<h3 id="Summary">概要</h3>
+
+<p>ウィンドウディレクトリのツールバーオブジェクトを返します。代わりに {{ domxref("window.personalbar") }} を使用してください。</p>
+
 <h3 id="Syntax">構文</h3>
-<pre class="eval"><i>dirBar</i> = window.directories
+
+<pre class="javascript">var <var>dirBar</var> = window.directories;
 </pre>
-<p>{{ 英語版章題("Parameters") }}</p>
-<h3 id="Arguments">引数</h3>
-<p>
- <i>
-  dirBar</i>
- は、<code>barProp</code> 型のオブジェクトです。 {{ 英語版章題("Example") }}</p>
-<h3 id=".E4.BE.8B" name=".E4.BE.8B">例</h3>
+
+<h3 id="Parameters">引数</h3>
+
+<p><var>dirBar</var> は <code>BarProp</code> 型のオブジェクトです。</p>
+
+<h3 id="Example">例</h3>
+
 <pre>&lt;script&gt;
  function dirs() {
   alert(window.directories);
  }
 &lt;/script&gt;
 </pre>
-<p>{{ 英語版章題("Specification") }}</p>
-<h3 id=".E4.BB.95.E6.A7.98" name=".E4.BB.95.E6.A7.98">仕様</h3>
-<p>{{ DOM0() }}</p>
+
+<h3 id="Specifications">仕様書</h3>
+
+<p>仕様書には記載されていません。</p>

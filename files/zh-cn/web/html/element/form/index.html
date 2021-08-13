@@ -41,11 +41,11 @@ translation_of: Web/HTML/Element/form
   </tr>
   <tr>
    <th scope="row">Implicit ARIA role</th>
-   <td><code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Form_Role">form</a></code> if the form has an <a href="https://www.w3.org/TR/accname-1.1/#dfn-accessible-name">accessible name</a>, otherwise <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a></td>
+   <td><code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/Form_Role">form</a></code> if the form has an <a href="https://www.w3.org/TR/accname-1.1/#dfn-accessible-name">accessible name</a>, otherwise <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">no corresponding role</a></td>
   </tr>
   <tr>
    <th scope="row">Permitted ARIA roles</th>
-   <td><code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/Search_role">search</a></code>, {{ARIARole("group")}}, {{ARIARole("presentation")}}</td>
+   <td><code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/Search_role">search</a></code>, {{ARIARole("group")}}, {{ARIARole("presentation")}}</td>
   </tr>
   <tr>
    <th scope="row">DOM 接口</th>
@@ -78,7 +78,7 @@ translation_of: Web/HTML/Element/form
  <dt>{{htmlattrdef("autocomplete")}}</dt>
  <dd>用于指示 input 元素是否能够拥有一个默认值，此默认值是由浏览器自动补全的。此设定可以被属于此表单的子元素的 <code>autocomplete</code> 属性覆盖。 可能的值有：
  <ul>
-  <li><code>off</code>：浏览器可能不会自动补全条目（在疑似登录表单中，浏览器倾向于忽略该值，而提供密码自动填充功能，参见 <a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#禁用自动填充">自动填充属性和登录</a>）</li>
+  <li><code>off</code>：浏览器可能不会自动补全条目（在疑似登录表单中，浏览器倾向于忽略该值，而提供密码自动填充功能，参见 <a href="/zh-CN/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion#禁用自动填充">自动填充属性和登录</a>）</li>
   <li><code>on</code>：浏览器可自动补全条目</li>
  </ul>
 
@@ -87,7 +87,7 @@ translation_of: Web/HTML/Element/form
  <dt>{{htmlattrdef("name")}}</dt>
  <dd>表单的名称。HTML 4中不推荐（应使用 <code>id</code>）。在 HTML 5 中，该值必须是所有表单中独一无二的，而且不能是空字符串。</dd>
  <dt>{{htmlattrdef("rel")}}</dt>
- <dd>根据 value 创建一个超链接或Creates a hyperlink or annotation depending on the value, see the <a href="https://wiki.developer.mozilla.org/docs/Web/HTML/Attributes/rel">{{htmlattrdef("rel")}}</a> attribute for details.</dd>
+ <dd>根据 value 创建一个超链接或Creates a hyperlink or annotation depending on the value, see the <a href="/zh-CN/docs/Web/HTML/Attributes/rel">{{htmlattrdef("rel")}}</a> attribute for details.</dd>
 </dl>
 
 <h3 id="关于提交表单的属性">关于提交表单的属性</h3>
@@ -96,7 +96,7 @@ translation_of: Web/HTML/Element/form
 
 <dl>
  <dt>{{htmlattrdef("action")}}</dt>
- <dd>处理表单提交的 URL。这个值可被 {{HTMLElement("button")}}、<code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code> 或 <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> 元素上的 {{htmlattrxref("formaction", "button")}} 属性覆盖。</dd>
+ <dd>处理表单提交的 URL。这个值可被 {{HTMLElement("button")}}、<code><a href="/zh-CN/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code> 或 <code><a href="/zh-CN/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> 元素上的 {{htmlattrxref("formaction", "button")}} 属性覆盖。</dd>
 </dl>
 
 <dl>
@@ -108,13 +108,13 @@ translation_of: Web/HTML/Element/form
   <li><code>text/plain</code>：出现于 HTML5，用于调试。</li>
  </ul>
 
- <p>这个值可被 {{HTMLElement("button")}}、<code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code> 或 <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> 元素上的 {{htmlattrxref("formaction", "button")}} 属性覆盖。</p>
+ <p>这个值可被 {{HTMLElement("button")}}、<code><a href="/zh-CN/docs/Web/HTML/Element/input/submit">&lt;input type="submit"&gt;</a></code> 或 <code><a href="/zh-CN/docs/Web/HTML/Element/input/image">&lt;input type="image"&gt;</a></code> 元素上的 {{htmlattrxref("formenctype", "button")}} 属性覆盖。</p>
  </dd>
  <dt>{{htmlattrdef("method")}}</dt>
  <dd>浏览器使用这种 <a href="/en-US/docs/HTTP">HTTP</a> 方式来提交 表单. 可能的值有：
  <ul>
   <li><code>post</code>：指的是 HTTP <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5">POST 方法</a>；表单数据会包含在表单体内然后发送给服务器.</li>
-  <li><code>get</code>：指的是 HTTP <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3">GET 方法</a>；表单数据会附加在 <code>action</code> 属性的 URL 中，并以 '?' 作为分隔符，<a href="https://wiki.developer.mozilla.org/en-US/docs/Glossary/Idempotent">没有副作用</a> 时使用这个方法。</li>
+  <li><code>get</code>：指的是 HTTP <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3">GET 方法</a>；表单数据会附加在 <code>action</code> 属性的 URL 中，并以 '?' 作为分隔符，<a href="/zh-CN/docs/Glossary/Idempotent">没有副作用</a> 时使用这个方法。</li>
   <li><code>dialog</code>：如果表单在 {{HTMLElement("dialog")}} 元素中，提交时关闭对话框。</li>
  </ul>
 
@@ -135,11 +135,11 @@ translation_of: Web/HTML/Element/form
  </dd>
 </dl>
 
-<h2 id="Examples" name="Examples">示例</h2>
+<h2 id="Examples">示例</h2>
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="notranslate">&lt;!-- Form which will send a GET request to the current URL --&gt;
+<pre class="brush: html">&lt;!-- Form which will send a GET request to the current URL --&gt;
 &lt;form&gt;
   &lt;label&gt;Name:
     &lt;input name="submitted-name" autocomplete="name"&gt;
@@ -163,7 +163,7 @@ translation_of: Web/HTML/Element/form
   &lt;/fieldset&gt;
 &lt;/form&gt;</pre>
 
-<p><iframe class="live-sample-frame sample-code-frame" frameborder="0" height="110" id="frame_Examples" src="https://mdn.mozillademos.org/en-US/docs/Web/HTML/Element/form$samples/Examples?revision=1623519" width="100%"></iframe></p>
+<p>{{ EmbedLiveSample('Examples', '100%', 110) }}</p>
 
 <h2 id="规范">规范</h2>
 

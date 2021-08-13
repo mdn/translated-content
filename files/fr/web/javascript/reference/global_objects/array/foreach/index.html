@@ -18,8 +18,6 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Array/forEach
 
 <div>{{EmbedInteractiveExample("pages/js/array-foreach.html")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="syntaxbox"><var>arr</var>.forEach(<var>callback</var>);
@@ -67,9 +65,7 @@ arr.forEach(callback, <var>thisArg</var>);</pre>
 
 <p><code>forEach()</code> ne modifie pas le tableau sur lequel elle est appelée, en revanche, la fonction de retour (<em>callback</em>) utilisée peut modifier le tableau.</p>
 
-<div class="note"><strong>Note :</strong>
-
-<p>Il n'existe aucun moyen d'arrêter une boucle <code>forEach</code> en dehors de lever une exception. Si vous avez besoin d'arrêter la boucle, étudiez plutôt :</p>
+<div class="note"><p><strong>Note :</strong> Il n'existe aucun moyen d'arrêter une boucle <code>forEach</code> en dehors de lever une exception. Si vous avez besoin d'arrêter la boucle, étudiez plutôt :</p>
 
 <ul>
  <li>Une boucle <code><a href="/fr/docs/Web/JavaScript/Reference/Instructions/for">for</a></code> classique</li>
@@ -110,7 +106,7 @@ items.forEach(function(item){
 
 <h3 id="Afficher_le_contenu_d'un_tableau">Afficher le contenu d'un tableau</h3>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Note :</strong> Pour afficher le contenu d'un tableau, on pourra utiliser <code><a href="/fr/docs/Web/API/Console/table">console.table()</a></code> qui met en forme les éléments du tableau. L'exemple suivant est laissé à titre d'illustration pour <code>forEach()</code>.</p>
 </div>
 
@@ -155,7 +151,7 @@ console.log(obj.somme);  // 16
 </div>
 
 <div class="note">
-<p><strong>Note : </strong>Si la fonction passée en argument est <a href="/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées">une fonction fléchée</a>, il n'est pas nécessaire d'ajouter le paramètre <code>this</code> car les fonctions fléchées utilisent le <code><a href="/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this">this</a></code> fourni par le contexte lexical.</p>
+<p><strong>Note :</strong> Si la fonction passée en argument est <a href="/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées">une fonction fléchée</a>, il n'est pas nécessaire d'ajouter le paramètre <code>this</code> car les fonctions fléchées utilisent le <code><a href="/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/L_op%C3%A9rateur_this">this</a></code> fourni par le contexte lexical.</p>
 </div>
 
 <h3 id="Stopper_une_boucle">Stopper une boucle</h3>
@@ -259,11 +255,7 @@ mots.forEach(function(mot) {
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 
-<div>
-<div class="hidden">Le tableau de compatibilité de cette page a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à consulter <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> et à nous envoyer une<em>pull request</em>.</div>
-
 <p>{{Compat("javascript.builtins.Array.forEach")}}</p>
-</div>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 

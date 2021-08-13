@@ -12,18 +12,18 @@ translation_of: Web/JavaScript/Reference/Errors/Bad_return_or_yield
 
 <p>JavaScript の例外 "return (or yield) not in function" は、 <code><a href="/ja/docs/Web/JavaScript/Reference/Statements/return">return</a></code> 文または <code><a href="/ja/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code> 文が<a href="/ja/docs/Web/JavaScript/Guide/Functions">関数</a>の外側で呼び出されたときに発生します。</p>
 
-<h2 id="Message">メッセージ</h2>
+<h2 id="Message">エラーメッセージ</h2>
 
 <pre class="brush: js">SyntaxError: 'return' statement outside of function (Edge)
 SyntaxError: return not in function (Firefox)
 SyntaxError: yield not in function (Firefox)
 </pre>
 
-<h2 id="Error_type">エラー種別</h2>
+<h2 id="Error_type">エラーの種類</h2>
 
 <p>{{jsxref("SyntaxError")}}</p>
 
-<h2 id="What_went_wrong">原因</h2>
+<h2 id="What_went_wrong">エラーの原因</h2>
 
 <p><code><a href="/ja/docs/Web/JavaScript/Reference/Statements/return">return</a></code> 文か <code><a href="/ja/docs/Web/JavaScript/Reference/Operators/yield">yield</a></code> 文が <a href="/ja/docs/Web/JavaScript/Guide/Functions">関数</a> の外側で呼び出されました。どこかで、中括弧を忘れたのかもしれません。 <code>return</code> 文と <code>yield</code> 文は、関数内で使用しなければなりません。これらの文は、関数の実行を終了 (または、停止や再開) し、関数の呼び出し元に返す値を指定するからです。</p>
 

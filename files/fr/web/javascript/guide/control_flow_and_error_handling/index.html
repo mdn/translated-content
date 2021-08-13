@@ -17,7 +17,7 @@ original_slug: Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs
 ---
 <div>{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}</div>
 
-<p class="summary">JavaScript supporte nativement un ensemble d'instructions. Ces instructions permettent de définir les logiques des algorithmes, le flux des informations, etc. Ce chapitre fournit un aperçu sur le fonctionnement de ces différentes instructions JavaScript.</p>
+<p>JavaScript supporte nativement un ensemble d'instructions. Ces instructions permettent de définir les logiques des algorithmes, le flux des informations, etc. Ce chapitre fournit un aperçu sur le fonctionnement de ces différentes instructions JavaScript.</p>
 
 <p>Les <a href="/fr/docs/Web/JavaScript/Reference/Statements">Références de JavaScript</a> contiennent plus de détails sur les différentes instructions décrites dans ce chapitre.</p>
 
@@ -44,9 +44,8 @@ original_slug: Web/JavaScript/Guide/Contrôle_du_flux_Gestion_des_erreurs
 
 <p>Ici, <code>{ x++; }</code> représente le bloc.</p>
 
-<div class="notecard note">
-  <p><b>Note importante :</b></p>
-  <p>En JavaScript, avant ECMAScript 2015 (aussi appelé ES6), les blocs <strong>n'introduisaient pas de nouvelles portées</strong>. Les variables introduites dans le bloc avec l'instruction <code>var</code> font partie de la portée de la fonction englobante ou du script. Les effets de leur définition persistent en dehors du bloc. Les blocs seuls utilisés avec <code>var</code> (et non <code>let</code>) pourront laisser penser que ce bloc se comportera comme en C ou en Java. Par exemple :</p>
+<div class="note">
+  <p><strong>Note :</strong> En JavaScript, avant ECMAScript 2015 (aussi appelé ES6), les blocs <strong>n'introduisaient pas de nouvelles portées</strong>. Les variables introduites dans le bloc avec l'instruction <code>var</code> font partie de la portée de la fonction englobante ou du script. Les effets de leur définition persistent en dehors du bloc. Les blocs seuls utilisés avec <code>var</code> (et non <code>let</code>) pourront laisser penser que ce bloc se comportera comme en C ou en Java. Par exemple :</p>
 
   <pre class="brush: js">var x = 1;
 {
@@ -131,9 +130,8 @@ console.log(x); // affichera 2</pre>
 
 <p>Les autres valeurs, y compris les objets, seront équivalents à <code>true</code>.</p>
 
-<div class="notecard note">
-  <p><b>Attention :</b></p>
-  <p>Ne pas confondre les valeurs booléennes « primitives » <code>true</code> et <code>false</code> avec les valeurs créées grâce à un objet <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean"><code>Boolean</code></a>.</p>
+<div class="warning">
+  <p><strong>Attention :</strong> Ne pas confondre les valeurs booléennes « primitives » <code>true</code> et <code>false</code> avec les valeurs créées grâce à un objet <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean"><code>Boolean</code></a>.</p>
   <p>Par exemple, on aura :</p>
   
   <pre class="brush: js">var b = new Boolean(false);
@@ -249,9 +247,8 @@ throw true;       //type Boolean
 throw {toString: function () { return "je suis un objet !"; } };
 </pre>
 
-<div class="notecard note">
-  <p><b>Note :</b></p>
-  <p>Vous pouvez spécifier un objet lorsque vous lancez une exception. Vous pouvez alors faire référence aux propriétés de l'objet dans le bloc <code>catch</code>.</p>
+<div class="note">
+  <p><strong>Note :</strong> Vous pouvez spécifier un objet lorsque vous lancez une exception. Vous pouvez alors faire référence aux propriétés de l'objet dans le bloc <code>catch</code>.</p>
 </div>
 
 <pre class="brush: js">// On crée le constructeur pour cet objet
@@ -319,9 +316,8 @@ try { // les instructions à essayer si tout se passe bien
   enregistrerErreurs(e); // on passe l'objet représentant l'exception à une fonction utilisée pour gérer les erreurs
 }</pre>
 
-<div class="blockIndicator note">
-  <p><b>Bonne pratique :</b></p>
-  <p>Quand on souhaite afficher des erreurs dans la console, on privilégiera <a href="/fr/docs/Web/API/Console/error"><code>console.error()</code></a> plutôt que <a href="/fr/docs/Web/API/Console/log"><code>console.log()</code></a>. En effet, cette première méthode est plus adaptée et indiquera plus d'informations.</p>
+<div class="note">
+  <p><strong>Note :</strong> Quand on souhaite afficher des erreurs dans la console, on privilégiera <a href="/fr/docs/Web/API/Console/error"><code>console.error()</code></a> plutôt que <a href="/fr/docs/Web/API/Console/log"><code>console.log()</code></a>. En effet, cette première méthode est plus adaptée et indiquera plus d'informations.</p>
 </div>
 
 <h4 id="the_finally_block">Le bloc <code>finally</code></h4>

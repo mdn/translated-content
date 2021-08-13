@@ -8,19 +8,19 @@ original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽�
 
 <div>{{IncludeSubnav("/ko/docs/Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임")}}</div>
 
-<p>{{PreviousNext("Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}</p>
+<p>{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}</p>
 
 <div class="summary">
-<p>이 학습은 <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a>의 일곱 번째 단계입니다. <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson07.html">Gamedev-Canvas-workshop/lesson7.html</a>에서 이번 학습에서 완성된 코드를 확인할 수 있습니다.</p>
+<p>이 학습은 <a href="/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript">Gamedev Canvas tutorial</a>의 일곱 번째 단계입니다. <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson07.html">Gamedev-Canvas-workshop/lesson7.html</a>에서 이번 학습에서 완성된 코드를 확인할 수 있습니다.</p>
 </div>
 
-<p>지난 학습에서 우린 화면에 벽돌을 표현했습니다. 그러나 공은 벽돌은 그냥 지나가버리고 게임은 아직 흥미로워지려면 멀어보입니다. 우린 공이 벽돌을 파괴하고 튕겨져 나올 수 있도록 충돌 감지 기능을 고려해봐야 합니다.</p>
+<p>지난 학습에서 우린 화면에 벽돌을 표현했습니다. 그러나 공은 벽돌을 그냥 지나쳐버리니 게임은 아직 그렇게 흥미롭지 않습니다. 우린 공이 벽돌을 파괴하고 튕겨져 나올 수 있도록 충돌 감지 기능을 고려해봐야 합니다.</p>
 
 <p>물론 어떻게 적용할지는 우리가 결정할 문제입니다. 그러나 공이 벽돌에 닿았는지 계산하는 일은 꽤나 까다로울 수 있습니다. 왜냐하면 캔버스엔 이를 위한 기능이 없기 때문입니다.  이번 학습은 가능한 쉬운 방법으로 진행될 것입니다. 우린 공의 중앙이 어느 벽돌과 충돌하는지 확인할 것입니다. 이는 항상 완벽한 결과를 주진 않지만, 충돌 감지를 위한 정교한 방법은 무궁무진합니다. 그러나 이 방법 역시 기본적인 개념을 학습하기에 꽤 괜찮습니다.</p>
 
 <h2 id="충돌_감지_함수">충돌 감지 함수</h2>
 
-<p>이 모든 것을 시작하기 위해 우리는 모든 벽돌들을 순회하고 각 벽돌의 좌표를 공의 위치와 비교하는 충돌 감지 함수를 만들어야 합니다. 코드의 가독성을 향상시키기 위해 충돌 감지의 반복에서 사용할 벽돌 객체를 저장하는 b 변수를 정의할 것입니다.</p>
+<p>이 모든 것을 시작하기 위해 우리는 모든 벽돌들을 순회하고 각 벽돌의 좌표를 공의 위치와 비교하는 충돌 감지 함수를 만들어야 합니다. 코드의 가독성을 향상시키기 위해 충돌 감지의 반복에서 사용할 벽돌 객체를 저장하는 <code>b</code>변수를 정의할 것입니다.</p>
 
 <pre class="brush: js">function collisionDetection() {
     for(var c=0; c&lt;brickColumnCount; c++) {
@@ -67,7 +67,7 @@ for(var c=0; c&lt;brickColumnCount; c++) {
     }
 }</pre>
 
-<p>다음으로 <code>drawBricks</code> 함수에서 벽돌들을 그리기 전에 <code>status</code> 속성을 확인해야 합니다. 만약 <code>status</code>가 1이라면 벽돌을 그리고, 만약 0이라면 이미 공이 치고간 벽돌이므로 우린 더이상 화면에 그릴 필요가 없습니다. 아래와 같이 <code>drawBricks</code> 함수를 수정해봅시다,</p>
+<p>다음으로 <code>drawBricks</code> 함수에서 벽돌들을 그리기 전에 <code>status</code> 속성을 확인해야 합니다. 만약 <code>status</code>가 1이라면 벽돌을 그리고, 만약 0이라면 이미 공이 치고 간 벽돌이므로 우린 더 이상 화면에 그릴 필요가 없습니다. 아래와 같이 <code>drawBricks</code> 함수를 수정해 봅시다.</p>
 
 <pre class="brush: js; highlight:[4,5,6,7,8,9,10,11,12,13,14]">function drawBricks() {
     for(var c=0; c&lt;brickColumnCount; c++) {
@@ -87,7 +87,7 @@ for(var c=0; c&lt;brickColumnCount; c++) {
     }
 }</pre>
 
-<h2 id="충돌_감지함수에서_상태_추적_및_업데이트">충돌 감지함수에서 상태 추적 및 업데이트</h2>
+<h2 id="충돌_감지_함수에서_상태_추적_및_업데이트">충돌 감지 함수에서 상태 추적 및 업데이트</h2>
 
 <p>이제 <code>collisonDectection</code> 함수에 벽돌 <code>status</code> 속성을 포함시켜야 합니다. 만약 벽돌이 활성 상태(<code>status</code> 1)이라면 충돌이 일어났는지 확인해야 합니다. 만약 충돌이 발생했다면 다시 그리지 않게 벽돌의 속성을 0으로 변경해야 합니다. <code>collisionDetection</code> 함수를 아래와 같이 수정합시다.</p>
 
@@ -114,7 +114,7 @@ for(var c=0; c&lt;brickColumnCount; c++) {
 
 <h2 id="코드_비교하기">코드 비교하기</h2>
 
-<p>이제 매 프레임마다 충돌 감지를 확인할 것입니다. 이제 우린 별돌을 파괴할 수 있습니다!</p>
+<p>이제 매 프레임마다 충돌 감지를 확인할 것입니다. 이제 우린 벽돌을 파괴할 수 있습니다!</p>
 
 <p>{{JSFiddleEmbed("https://jsfiddle.net/yumetodo/mkwtxgc3/3/","","395")}}</p>
 
@@ -124,6 +124,6 @@ for(var c=0; c&lt;brickColumnCount; c++) {
 
 <h2 id="다음_단계">다음 단계</h2>
 
-<p>우리는 충분히 여기까지 왔습니다! 이제 어덟 번째 장에서는<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Track_the_score_and_win"> 점수를 추가와 승패 판정 방법</a>을 알아 볼 것입니다.</p>
+<p>우리는 충분히 여기까지 왔습니다! 이제 여덟 번째 장에서는 <a href="/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win">점수 추가와 승패 판정 방법</a>을 알아 볼 것입니다.</p>
 
-<p>{{PreviousNext("Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}</p>
+<p>{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}</p>

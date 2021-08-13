@@ -1,0 +1,92 @@
+---
+title: 'あなたのスキルをテストしよう: 数学'
+slug: 'Learn/JavaScript/First_steps/Test_your_skills:_Math'
+tags:
+  - Beginner
+  - JavaScript
+  - Learn
+  - Math
+  - test your skills
+---
+<div>{{learnsidebar}}</div>
+
+<p>このスキルテストの目的は、<a href="/ja/docs/Learn/JavaScript/First_steps/Math">JavaScript での基本演算 — 数値と演算子</a> の記事を理解しているかどうかを評価することです。</p>
+
+<div class="notecard note">
+<p><strong>注</strong>: 下記のインタラクティブエディターのソリューションで試してみることができますが、コードをダウンロードし、<a href="https://codepen.io/">CodePen</a>、<a href="https://jsfiddle.net/">jsFiddle</a>、<a href="https://glitch.com/">Glitch</a> などのオンラインツールを利用すると、タスクに取り組むのに役立つかもしれません。<br>
+ <br>
+ 行き詰まったなら、私たちに助けを求めてください。 — このページの下部の {{anch("Assessment or further help")}} セクションを参照</p>
+</div>
+
+<div class="notecard note">
+<p><strong>注</strong>: 下記の作成では、あなたのコードにエラーがあれば、このページの結果パネル（または、ダウンロード可能なバージョンでは、ブラウザーの JavaScript コンソール）に出力され、答えにたどり着くための助けとなります。</p>
+</div>
+
+<h2 id="Math_1">数学 1</h2>
+
+<p>基本演算子の知識をテストすることから始めましょう。4 つの数値を作成し、最初の 2 つを加算してください。そして 3 番目から 4 番目を減算してください。そうして出来た 2 つの 2 次結果を乗算して、48 になるようにしてください。最後に、この値が偶数であることを証明するテストを記述することも必要ですね。</p>
+
+<p>では、完成イメージを再構築するために、下記のライブコードを更新してみましょう。次の手順に従ってください:</p>
+
+<ol>
+ <li>数値の変数を 4 つ作成してください。変数にわかりやすい名前を付けてください。</li>
+ <li>最初の 2 つの変数を加算し、その結果を別の変数に格納してください。</li>
+ <li>3 番目の変数から 4 番目の変数を減算し、その結果を別の変数に格納してください。</li>
+ <li>上記 2 つの工程の結果を乗算し、<code>finalResult</code> という変数に格納してください。その結果は 48 になるはずです。もしならなければ、初期の設定数値を調整する必要があります。</li>
+ <li>最後に、<code>finalResult</code> が偶数であるかどうかをチェックする計算式を記述してください。結果を <code>evenOddResult</code> という変数に格納してください。</li>
+</ol>
+
+<p>{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math1.html", '100%', 400)}}</p>
+
+<div class="notecard note">
+    <p><a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/math/math1-download.html">このタスクのための準備済みファイルをダウンロード</a> して、自身のエディターまたはオンラインエディターで動かせるようにしてください。</p>
+</div>
+
+<h2 id="Math_2">数学 2</h2>
+
+<p>2 番目のタスクでは、すでに結果が変数 <code>result</code> と <code>result2</code> に格納されている 2 つの計算式が提供されています。しかし、これらの結果は私たちが求めているものではありません。望む結果にするために、2 つの計算式を変更する必要がでてきます。</p>
+
+<p>私たちは何を求めている？ 2 つの結果を乗算し、その結果を小数第 2 位までにフォーマットすると、最終結果は 10.42 になるようにしたいのです。</p>
+
+<p>この完成イメージを再構築するために、下記のライブコードを更新してみましょう。次の手順に従ってください:</p>
+
+<ol>
+ <li><code>result</code> と <code>result2</code> を乗算し、結果を <code>result</code> に代入し戻す計算式を記述してください。これは、代入演算子の略記形を使いましょう。</li>
+ <li>その結果を小数第 2 位までにフォーマットし、そして <code>finalResult</code> という変数に格納する 1 行コードを記述してください。</li>
+ <li><code>typeof</code> を使用して <code>finalResult</code> のデータ型をチェックしてください。実際には <code>string</code> 型であることがわかるでしょう！それを <code>number</code> 型に変換し、結果を <code>finalNumber</code> という変数に格納する 1 行コードを記述してください。</li>
+ <li><code>finalNumber</code> の値は <code>10.42</code> にならなければいけません。戻って、この最終結果が得られるように最初に与えられていた計算式を更新してください。数値や演算子は更新しないでくださいね。</li>
+</ol>
+
+<p>{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math2.html", '100%', 400)}}</p>
+
+<div class="notecard note">
+<p><a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/math/math2-download.html">このタスクのための準備済みファイルをダウンロード</a> して、自身のエディターまたはオンラインエディターで動かせるようにしてください。</p>
+</div>
+
+<h2 id="Math_3">数学 3</h2>
+
+<p>この記事の最後のタスクでは、いくつかのテストを記述していきましょう。各々がステートメントと 2 つの変数で構成されてる、3 つのグループが与えられています。各グループについて、与えられているステートメントを証明または反証するテストを記述してください。これらのテスト結果を、各々 <code>weightComparison</code>、<code>heightComparison</code>、そして <code>pwdMatch</code> という変数に格納してください。</p>
+
+<p>{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/math/math3.html", '100%', 400)}}</p>
+
+<div class="notecard note">
+<p><a href="https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/math/math3-download.html">このタスクのための準備済みファイルをダウンロード</a> して、自身のエディターまたはオンラインエディターで動かせるようにしてください。</p>
+</div>
+
+<h2 id="Assessment_or_further_help">評価またはさらなる助け</h2>
+
+<p>上記のインタラクティブエディターでこれらの作成を練習することができます。</p>
+
+<p>あなたの制作物を評価してもらいたい、または行き詰まって助けを求めたい場合:</p>
+
+<ol>
+ <li>あなたの制作物を、<a href="https://codepen.io/">CodePen</a>、<a href="https://jsfiddle.net/">jsFiddle</a>、または <a href="https://glitch.com/">Glitch</a> のような共有可能なオンラインエディターに置いてください。いちから自身でコードを記述することもできますし、上記のセクションでリンク付けされている準備済みファイルを利用するのもよいでしょう。</li>
+ <li><a href="https://discourse.mozilla.org/c/mdn/learn">MDN Discourse forum Learning category</a> で、評価を希望したり、助けを求めるポストを投稿してください。ポストには以下を含みましょう:
+  <ul>
+   <li>"Assessment wanted for Math 1 skill test" のような説明的なタイトル</li>
+   <li>あなたがこれまで試したことの詳細、そしてあなたが私たちに何をしてほしいか。例えば、行き詰まって助けが必要だとか、評価をしてほしいなど。</li>
+   <li>評価してほしかったり、助けが必要な作成物へのリンク。共有可能なオンラインエディター（上記ステップ 1 で述べたもの）を使って。これは分かりやすくするためのよい実践方法でしょう — コードが見れない状態で、コーディング問題を抱えている人を助けることはとても難しいですよね。</li>
+   <li>実際のタスクまたは評価ページのリンク。そうすれば、あなたがどの質問に助けが必要かがわかります。</li>
+  </ul>
+ </li>
+</ol>

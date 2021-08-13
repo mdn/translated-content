@@ -1,0 +1,266 @@
+---
+title: Map
+slug: orphaned/Web/JavaScript/Reference/Global_Objects/Map
+tags:
+  - ECMAScript 2015
+  - JavaScript
+  - Map
+translation_of: Web/JavaScript/Reference/Global_Objects/Map
+original_slug: Web/JavaScript/Reference/Global_Objects/Map
+---
+<div>{{JSRef}}</div>
+
+<p><span class="seoSummary"><strong><code>Map</code></strong> 是保存了鍵值對（key-value pairs）的物件。</span>任何值（包括物件及{{Glossary("Primitive", "基本型別（primitive）值")}}）都可以作為鍵或值。</p>
+
+<h2 id="語法">語法</h2>
+
+<pre class="syntaxbox">new Map([<em>iterable</em>])</pre>
+
+<h3 id="參數">參數</h3>
+
+<dl>
+ <dt><code>iterable</code></dt>
+ <dd>為一個{{jsxref("Array", "陣列")}}或其他元素成鍵值對的<a href="/zh-TW/docs/Web/JavaScript/Guide/iterable">可迭代</a>物件（有兩個元素的陣列，例如 <code>[[ 1, 'one' ],[ 2, 'two' ]]</code>）。每一個鍵值對都會被加入至新的 <code>Map</code>；<code>null</code> 會被視為 <code>undefined</code>。</dd>
+</dl>
+
+<h2 id="描述">描述</h2>
+
+<p>一個 <code>Map</code> 物件會根據元素的新增順序走訪自身的所有元素 — {{jsxref("Statements/for...of", "for...of")}} 迴圈會在每次迭代回傳一個 <code>[key, value]</code> 陣列。</p>
+
+
+
+<h3 id="鍵的相等性">鍵的相等性</h3>
+
+<p>鍵相等是基於 <a href="/zh-TW/docs/Web/JavaScript/Equality_comparisons_and_sameness#Same-value-zero_equality">SameValueZero</a> 的演算法：<code>NaN</code> 被認為與 <code>NaN</code> 相同（即使 <code>NaN !== NaN</code>）並且根據 <code>===</code> 運算符的語義，所有其他值都被認為相等。在目前的ECMAScript 規範中，<code>-0</code> 和 <code>+0</code> 被認為是相等的，儘管在早期的草案中並非如此。詳細的內容請參閱 {{anch("Browser compatibility")}} 表中的 "Value equality for -0 and 0"。</p>
+
+<h3 id="Object_及_Map_的比較">Object 及 Map 的比較</h3>
+
+<p>{{jsxref("Object")}} 和 <code>Map</code> 類似。兩者都允許你設置對應的鍵值對，檢索這些值，刪除鍵，並檢測是否有什麼存儲在鍵中。正因為如此（也因為沒有內置的替代品），<code>Object</code> 在歷史上一直被當作 <code>Map</code> 使用；然而在某些情況下，使用 <code>Map</code> 有一些重要的不同之處:</p>
+
+<ul>
+ <li><code>Object</code> 的鍵是 {{jsxref("String", "字串")}} 和 {{jsxref("Symbol", "Symbol")}}，而它們在 <code>Map</code> 中可以是任意的資料型態，包括函數，對象以及原始的資料型態。</li>
+ <li>你可以使用 <code>size</code> 屬性輕鬆地獲得 <code>Map</code> 的大小，而 <code>Object</code> 中的屬性數量必須手動確認。</li>
+ <li><code>Map</code> 是可迭代（<a href="/en-US/docs/Web/JavaScript/Guide/iterable">iterable</a>）的，因此可以直接迭代，而在 <code>Object</code> 上迭代則需要以某種方式獲取其鍵並對其進行迭代。</li>
+ <li><code>Object</code> 有一個原型，所以如果不小心，映射中有一些默認鍵可能與鍵發生衝突。從 ES5 開始，這可以通過使用 <code>map = Object.create(null)</code> 來繞過這個問題，但是很少這樣做。</li>
+ <li>在涉及頻繁添加和刪除鍵值對的場景中，<code>Map</code> 可能表現得更好。</li>
+</ul>
+
+<h2 id="屬性">屬性</h2>
+
+<dl>
+ <dt><code>Map.length</code></dt>
+ <dd><code>length</code>屬性的值為 0<br>
+ 要計算 <code>Map</code> 中有多少元素，可以使用 {{jsxref("Map.prototype.size")}}。</dd>
+ <dt>{{jsxref("Map.@@species", "get Map[@@species]")}}</dt>
+ <dd>用於創建派生物件的構造函數。</dd>
+ <dt>{{jsxref("Map.prototype")}}</dt>
+ <dd>表示 <code>Map</code> 構造函數的原型，允許對所有的 <code>Map</code> 物件添加屬性</dd>
+</dl>
+
+<h2 id="Map_物件實體"><code>Map</code> 物件實體</h2>
+
+<p>所有的 <code>Map</code> 實例都繼承自 {{jsxref("Map.prototype")}}.</p>
+
+<h3 id="屬性_2">屬性</h3>
+
+<p>{{page('zh-TW/Web/JavaScript/Reference/Global_Objects/Map/prototype','Properties')}}</p>
+
+<h3 id="方法">方法</h3>
+
+<p>{{page('zh-TW/Web/JavaScript/Reference/Global_Objects/Map/prototype','Methods')}}</p>
+
+<h2 id="範例">範例</h2>
+
+<h3 id="使用_Map_物件">使用 <code>Map</code> 物件</h3>
+
+<pre class="brush: js">var myMap = new Map();
+
+var keyString = 'a string',
+    keyObj = {},
+    keyFunc = function() {};
+
+// setting the values
+myMap.set(keyString, "value associated with 'a string'");
+myMap.set(keyObj, 'value associated with keyObj');
+myMap.set(keyFunc, 'value associated with keyFunc');
+
+myMap.size; // 3
+
+// getting the values
+myMap.get(keyString);    // "value associated with 'a string'"
+myMap.get(keyObj);       // "value associated with keyObj"
+myMap.get(keyFunc);      // "value associated with keyFunc"
+
+myMap.get('a string');   // "value associated with 'a string'"
+                         // because keyString === 'a string'
+myMap.get({});           // undefined, because keyObj !== {}
+myMap.get(function() {}) // undefined, because keyFunc !== function () {}
+</pre>
+
+<h3 id="使用_NaN_作為_Map_的鍵">使用 <code>NaN</code> 作為 <code>Map</code> 的鍵</h3>
+
+<p><code>NaN</code> 同樣可以作為 <code>Map</code> 的 key，雖然每個 <code>NaN</code> 都不等於自己本身，下面的例子是有效的，因為 <code>NaN</code> 無法區分彼此。</p>
+
+<pre class="brush: js">var myMap = new Map();
+myMap.set(NaN, 'not a number');
+
+myMap.get(NaN); // "not a number"
+
+var otherNaN = Number('foo');
+myMap.get(otherNaN); // "not a number"
+</pre>
+
+<h3 id="透過_for..of_迭代_Map">透過 <code>for..of</code> 迭代 <code>Map</code></h3>
+
+<p>Map 可以使用 <code>for..of</code> 迴圈進行迭代：</p>
+
+<pre class="brush: js">var myMap = new Map();
+myMap.set(0, 'zero');
+myMap.set(1, 'one');
+for (var [key, value] of myMap) {
+  console.log(key + ' = ' + value);
+}
+// 0 = zero
+// 1 = one
+
+for (var key of myMap.keys()) {
+  console.log(key);
+}
+// 0
+// 1
+
+for (var value of myMap.values()) {
+  console.log(value);
+}
+// zero
+// one
+
+for (var [key, value] of myMap.entries()) {
+  console.log(key + ' = ' + value);
+}
+// 0 = zero
+// 1 = one
+</pre>
+
+<h3 id="透過_forEach_迭代_Map">透過 <code>forEach()</code> 迭代 <code>Map</code></h3>
+
+<p><code>Map</code> 可以使用 <code>forEach()</code> 方法進行迭代：</p>
+
+<pre class="brush: js">myMap.forEach(function(value, key) {
+  console.log(key + ' = ' + value);
+});
+// Will show 2 logs; first with "0 = zero" and second with "1 = one"
+</pre>
+
+<h3 id="與_Array_物件關聯">與 <code>Array</code> 物件關聯</h3>
+
+<pre class="brush: js">var kvArray = [['key1', 'value1'], ['key2', 'value2']];
+
+// Use the regular Map constructor to transform a 2D key-value Array into a map
+var myMap = new Map(kvArray);
+
+myMap.get('key1'); // returns "value1"
+
+// Use the Array.from function to transform a map into a 2D key-value Array
+console.log(Array.from(myMap)); // Will show you exactly the same Array as kvArray
+
+// Or use the keys or values iterators and convert them to an array
+console.log(Array.from(myMap.keys())); // Will show ["key1", "key2"]
+</pre>
+
+
+
+<h3 id="複製與合併_Map"> 複製與合併 <code>Map</code></h3>
+
+<p>就像 <code>Array</code> 一樣，<code>Map</code> 可以被複製:</p>
+
+<pre><code>var original = new Map([
+  [1, 'one']
+]);
+
+var clone = new Map(original);
+
+console.log(clone.get(1)); // one
+console.log(original === clone); // false. Useful for shallow comparison</code></pre>
+
+<p>請記住，數據本身並非克隆的。</p>
+
+<p><code>Map</code> 可以被合併，保持鍵的唯一性:</p>
+
+<pre><code>var first = new Map([
+  [1, 'one'],
+  [2, 'two'],
+  [3, 'three'],
+]);
+
+var second = new Map([
+  [1, 'uno'],
+  [2, 'dos']
+]);
+
+// Merge two maps. The last repeated key wins.
+// Spread operator essentially converts a Map to an Array
+var merged = new Map([...first, ...second]);
+
+console.log(merged.get(1)); // uno
+console.log(merged.get(2)); // dos
+console.log(merged.get(3)); // three</code></pre>
+
+<p><code>Map</code> 也可以跟 <code>Array</code> 合併：</p>
+
+<pre><code>var first = new Map([
+  [1, 'one'],
+  [2, 'two'],
+  [3, 'three'],
+]);
+
+var second = new Map([
+  [1, 'uno'],
+  [2, 'dos']
+]);
+
+// Merge maps with an array. The last repeated key wins.
+var merged = new Map([...first, ...second, [1, 'eins']]);
+
+console.log(merged.get(1)); // eins
+console.log(merged.get(2)); // dos
+console.log(merged.get(3)); // three</code>
+</pre>
+
+<h2 id="規範">規範</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('ES2015', '#sec-map-objects', 'Map')}}</td>
+   <td>{{Spec2('ES2015')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('ESDraft', '#sec-map-objects', 'Map')}}</td>
+   <td>{{Spec2('ESDraft')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="瀏覽器相容性">瀏覽器相容性</h2>
+
+
+
+<p>{{Compat("javascript.builtins.Map")}}</p>
+
+<h2 id="參見">參見</h2>
+
+<ul>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=697479">Map and Set bug at Mozilla</a></li>
+ <li><a class="external" href="http://wiki.ecmascript.org/doku.php?id=harmony:simple_maps_and_sets">ECMAScript Harmony proposal</a></li>
+ <li>{{jsxref("Set")}}</li>
+ <li>{{jsxref("WeakMap")}}</li>
+ <li>{{jsxref("WeakSet")}}</li>
+</ul>

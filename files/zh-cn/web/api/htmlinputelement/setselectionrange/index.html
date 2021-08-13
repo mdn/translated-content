@@ -20,7 +20,7 @@ translation_of: Web/API/HTMLInputElement/setSelectionRange
 
 <p>要注意的是，在 <a href="https://html.spec.whatwg.org/multipage/forms.html#concept-input-apply">WHATWG forms spec</a> 中，<code>selectionStart</code>, <code>selectionEnd</code> 属性和 <code>setSelectionRange</code> 方法只能应用于类型为文本、搜索、链接、电话号码和密码的输入。Chrome 从版本 33 开始会在访问其余类型的这些属性和方法时抛出异常。例如，输入类型为数字时会抛出：“不能从'HTMLInputElement'中读取'selectionStart'属性：输入元素的类型('number')不支持选择（Failed to read the 'selectionStart' property from 'HTMLInputElement': The input element's type ('number') does not support selection）”。</p>
 
-<p>如果你希望<strong>全选</strong>输入元素中的文本，你可以使用 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/select">HTMLInputElement.select()</a> 方法。</p>
+<p>如果你希望<strong>全选</strong>输入元素中的文本，你可以使用 <a href="/zh-CN/docs/Web/API/HTMLInputElement/select">HTMLInputElement.select()</a> 方法。</p>
 
 <h2 id="语法">语法</h2>
 
@@ -65,7 +65,7 @@ translation_of: Web/API/HTMLInputElement/setSelectionRange
 
 <h3 id="结果">结果</h3>
 
-<p><iframe class="live-sample-frame sample-code-frame" frameborder="0" id="frame_Example" src="https://mdn.mozillademos.org/en-US/docs/Web/API/HTMLInputElement/setSelectionRange$samples/Example?revision=1557137"></iframe></p>
+<p>{{EmbedLiveSample("Example")}}</p>
 
 <h2 id="规范">规范</h2>
 

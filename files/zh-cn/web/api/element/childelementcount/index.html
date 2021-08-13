@@ -1,15 +1,20 @@
 ---
-title: ParentNode.childElementCount
+title: Element.childElementCount
 slug: Web/API/Element/childElementCount
-translation_of: Web/API/ParentNode/childElementCount
-original_slug: Web/API/ParentNode/childElementCount
+translation_of: Web/API/Element/childElementCount
+tags:
+  - API
+  - DOM
+  - Property
+  - Reference
+browser-compat: api.Element.childElementCount
 ---
 <p>{{ APIRef("DOM") }} </p>
 
-<p> <code><strong>ParentNode.childElementCount </strong></code>只读属性返回一个<em><strong>无符号长整型数字</strong></em>，表示给定元素的子元素数。</p>
+<p> <code><strong>Element.childElementCount </strong></code>只读属性返回一个<em><strong>无符号长整型数字</strong></em>，表示给定元素的子元素数。</p>
 
 <div class="note">
-<p>This property was initially defined in the {{domxref("ElementTraversal")}} pure interface. As this interface contained two distinct set of properties, one aimed at {{domxref("Node")}} that have children, one at those that are children, they have been moved into two separate pure interfaces, {{domxref("ParentNode")}} and {{domxref("ChildNode")}}. In this case, <code>childElementCount</code> moved to {{domxref("ParentNode")}}. This is a fairly technical change that shouldn't affect compatibility.</p>
+<p>This property was initially defined in the {{domxref("ElementTraversal")}} pure interface. As this interface contained two distinct set of properties, one aimed at {{domxref("Node")}} that have children, one at those that are children, they have been moved into two separate pure interfaces, {{domxref("Element")}} and {{domxref("ChildNode")}}. In this case, <code>childElementCount</code> moved to {{domxref("Element")}}. This is a fairly technical change that shouldn't affect compatibility.</p>
 </div>
 
 <p> </p>
@@ -82,7 +87,7 @@ if (foo.childElementCount &gt; 0) {
 &lt;/body&gt;
 </pre>
 
-<div>执行上面的例子:<a class="external" href="http://help.dottoro.com/external/examples/ljsfamht/childElementCount_1.htm" title="http://help.dottoro.com/external/examples/ljsfamht/childElementCount_1.htm">http://help.dottoro.com/external/examples/ljsfamht/childElementCount_1.htm</a></div>
+<div>执行上面的例子:<a class="external" href="http://help.dottoro.com/external/examples/ljsfamht/childElementCount_1.htm">http://help.dottoro.com/external/examples/ljsfamht/childElementCount_1.htm</a></div>
 
 <p> </p>
 

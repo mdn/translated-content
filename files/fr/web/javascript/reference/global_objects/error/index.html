@@ -125,7 +125,7 @@ const y = new Error("J'ai été créée avec new");</pre>
 <h4 id="Classes_derreur_personnalisées_avec_ECMAScript_2015_ES6">Classes d'erreur personnalisées avec ECMAScript 2015 / ES6</h4>
 
 <div class="warning">
-<p><strong>Attention !</strong> Babel, dans les versions antérieures à Babel 7, ainsi que d'autres transpileurs ne géreront pas correctement le code suivant sans <a href="https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend">configuration supplémentaire</a>. Les versions de Babel antérieures à la version 7 peuvent uniquement gérer les classes d'erreur personnalisées lorsque celles-ci sont créées avec <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/defineProperty">Object.defineProperty()</a></code>.</p>
+<p><strong>Attention :</strong> Babel, dans les versions antérieures à Babel 7, ainsi que d'autres transpileurs ne géreront pas correctement le code suivant sans <a href="https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend">configuration supplémentaire</a>. Les versions de Babel antérieures à la version 7 peuvent uniquement gérer les classes d'erreur personnalisées lorsque celles-ci sont créées avec <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Object/defineProperty">Object.defineProperty()</a></code>.</p>
 </div>
 
 <div class="note">
@@ -160,7 +160,7 @@ try {
 <h4 id="Objet_derreur_personnalisé_ES5">Objet d'erreur personnalisé ES5</h4>
 
 <div class="warning">
-<p><strong>Attention ! Tous</strong> les navigateurs incluent le constructeur <code>CustomError</code> dans la pile  d'appel lorsqu'une déclaration prototypale est utilisée.</p>
+<p><strong>Attention :</strong> Tous les navigateurs incluent le constructeur <code>CustomError</code> dans la pile  d'appel lorsqu'une déclaration prototypale est utilisée.</p>
 </div>
 
 <pre class="brush: js notranslate">function CustomError(machin, message, nomFichier, numeroLigne) {
@@ -235,11 +235,7 @@ try {
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 
-<div>
-<div class="hidden">Le tableau de compatibilité de cette page a été généré à partir de données structurées. Si vous souhaitez contribuer aux données, merci de regarder <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> et envoyez-nous une <em>pull request</em>.</div>
-
 <p>{{Compat("javascript.builtins.Error")}}</p>
-</div>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 

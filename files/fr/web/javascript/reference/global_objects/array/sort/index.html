@@ -18,8 +18,6 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Array/sort
 
 <div>{{EmbedInteractiveExample("pages/js/array-sort.html")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuer à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="syntaxbox"><var>arr</var>.sort()
@@ -40,7 +38,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Array/sort
 
 <p>Si le paramètre <code>fonctionComparaison</code> n'est pas fourni, les éléments qui ne valent pas <code>undefined</code> sont triés en les convertissant en chaines de caractères et en comparant ces chaines selon l'ordre des points de code Unicode. Par exemple, "banane" sera trié avant "cerise", mais "Cerise" arrivera avant "banane" à cause de la majuscule (les majuscules arrivent avant dans la liste). Dans un tri numérique, 9 sera trié avant 80, mais comme ces nombres sont convertis en chaînes de caractères, "80" arrive avant "9" selon l'ordre des unités de code UTF-16. Les éléments valant <code>undefined</code> sont placés à la fin du tableau.</p>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Note :</strong> En UTF-16, les caractères Unicode situés après <code>\uFFFF</code> sont encodés avec deux unités de code <em>surrogates</em> sur l'intervalle <code>\uD800</code>-<code>\uDFFF</code>. Pour comparer les chaînes de caractères entre elles, ce sont les unités de code séparées qui sont prises en compte. Ainsi, le caractère formé par la paire <em>surrogate</em> <code>\uD655 \uDE55</code> sera trié avant le caractère <code>\uFF3A</code>.</p>
 </div>
 
@@ -234,8 +232,8 @@ var result = mapped.map(function(e){
 });
 </pre>
 
-<div class="blockIndicator note">
-<p><strong>Note : </strong>Une bibliothèque <em>open source</em> utilise cette approche : <code><a href="https://null.house/open-source/mapsort">mapsort</a></code>.</p>
+<div class="note">
+<p><strong>Note :</strong> Une bibliothèque <em>open source</em> utilise cette approche : <code><a href="https://null.house/open-source/mapsort">mapsort</a></code>.</p>
 </div>
 
 <h2 id="Spécifications">Spécifications</h2>
@@ -273,8 +271,6 @@ var result = mapped.map(function(e){
 </table>
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<div class="hidden">Le tableau de compatibilité de cette page a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à consulter <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> et à nous envoyer une <em>pull request</em>.</div>
 
 <p>{{Compat("javascript.builtins.Array.sort")}}</p>
 

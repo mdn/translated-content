@@ -21,7 +21,7 @@ translation_of: Mozilla/Firefox/Releases/22
 <h3 id="JavaScript">JavaScript</h3>
 
 <ul>
- <li><a href="http://asmjs.org/spec/latest/" title="http://asmjs.org/spec/latest/">Asm.js</a> の最適化が有効になり、パフォーマンス向上のために C/C++ アプリケーションを JavaScript のサブセットにコンパイルすることが可能になります。</li>
+ <li><a href="http://asmjs.org/spec/latest/">Asm.js</a> の最適化が有効になり、パフォーマンス向上のために C/C++ アプリケーションを JavaScript のサブセットにコンパイルすることが可能になります。</li>
  <li>ES6 の <a href="/ja/docs/JavaScript/Reference/arrow_functions">Arrow Function</a> 構文を実装しました ({{bug(846406)}})。</li>
  <li>新しい <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/is">Object.is</a> 関数が追加されました ({{bug(839979)}})。</li>
 </ul>
@@ -30,12 +30,12 @@ translation_of: Mozilla/Firefox/Releases/22
 
 <ul>
  <li><code>XMLHttpRequest</code> の <code>multipart</code> プロパティおよび <code>XMLHttpRequest</code> の <code>multipart/x-mixed-replace</code> レスポンスのサポートを削除しました。これは Gecko だけの機能であり、標準化されませんでした。<a href="/ja/docs/Server-sent_events" title="/ja/docs/Server-sent_events">Server-Sent Events</a>、<a href="/ja/docs/WebSockets" title="/ja/docs/WebSockets">Web Sockets</a>、あるいは progress イベントをもとに <code>responseText</code> を調べることを、代わりに使用できます。</li>
- <li><a href="http://notifications.spec.whatwg.org/" title="http://notifications.spec.whatwg.org/">Web Notifications</a> をサポートしました ({{bug(782211)}})。</li>
+ <li><a href="http://notifications.spec.whatwg.org/">Web Notifications</a> をサポートしました ({{bug(782211)}})。</li>
  <li>{{domxref("XMLHttpRequest/FormData", "FormData")}} の <code>append</code> メソッドが、省略可能な第 3 引数 <code>filename</code> を受け入れるようになりました ({{bug(690659)}})。</li>
  <li>{{domxref("Node.isSupported")}} を削除しました ({{bug(801562)}})。</li>
  <li>{{domxref("Node.setUserData")}} および {{domxref("Node.getUserData")}} を web content 向けには削除、chrome content 向けには非推奨としました ({{bug(842372)}})。</li>
  <li>仕様書で求められたため、{{domxref("Element.attributes")}} プロパティを {{domxref("Node")}} から移転しました ({{bug("844134")}})。</li>
- <li>{{domxref("DeviceLightEvent", "Ambient Light Events")}} の Mac OS X バックエンドを実装しました。</li>
+ <li><strong>Ambient Light Events</strong> の Mac OS X バックエンドを実装しました。</li>
  <li>ローカルネームが {{HTMLElement("bgsound")}}、{{HTMLElement("multicol")}} および {{HTMLElement("image")}} である HTML ネームスペースの要素は、{{domxref("HTMLSpanElement")}} インターフェイスを実装しません。{{HTMLElement("bgsound")}} および {{HTMLElement("multicol")}} は {{domxref("HTMLUnknownElement")}} を、{{HTMLElement("image")}} は {{domxref("HTMLElement")}} を実装します。</li>
  <li>{{ domxref("NodeIterator.detach") }} は何も行わないようになりました ({{bug("823549")}})。</li>
  <li>{{domxref("BlobEvent")}} インターフェイスを実装しました ({{bug("834165")}})。</li>
@@ -58,16 +58,16 @@ translation_of: Mozilla/Firefox/Releases/22
 <ul>
  <li>{{interface('nsITreeView')}} のメソッド {{ifmethod('nsITreeView','getCellProperties')}}、{{ifmethod('nsITreeView','getColumnProperties')}} および {{ifmethod('nsITreeView','getRowProperties')}} から、引数 <code>properties</code> を削除しました。これらのメソッドは空白で区切られたプロパティ名の文字列を返すようになります。({{bug('407956')}})</li>
  <li>{{ifmethod('inIDOMUtils', 'getCSSPropertyNames')}} メソッドを実装しました。これはサポートしているすべての <a href="/ja/docs/CSS/CSS_Reference" title="CSS/CSS_Reference">CSS プロパティ</a>名を返します。</li>
- <li>さらなる変更点については <a href="https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/" title="https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/">こちら</a> (<a href="https://dev.mozilla.jp/2013/06/firefox-22-addon-compatibility/" title="https://dev.mozilla.jp/2013/06/firefox-22-addon-compatibility/">日本語訳</a>) をご覧ください。</li>
+ <li>さらなる変更点については <a href="https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/">こちら</a> (<a href="https://dev.mozilla.jp/2013/06/firefox-22-addon-compatibility/">日本語訳</a>) をご覧ください。</li>
 </ul>
 
 <h3 id="Firefox_開発ツール">Firefox 開発ツール</h3>
 
 <ul>
- <li><a href="https://hacks.mozilla.org/2013/04/developer-tools-update-firefox-22/" title="https://hacks.mozilla.org/2013/04/developer-tools-update-firefox-22/">フォントインスペクタ</a>が、コンピュータ内のどのフォントがページに適用されているかを表示します。</li>
+ <li><a href="https://hacks.mozilla.org/2013/04/developer-tools-update-firefox-22/">フォントインスペクタ</a>が、コンピュータ内のどのフォントがページに適用されているかを表示します。</li>
  <li>ハイライト表示によるフィードバックで、ページのどの領域がいつ再描画されたかを示します。</li>
  <li>開発ツールをブラウザの下側だけでなく、右側にもドッキング可能になりました。</li>
- <li>開発ツール内の一部ペインを <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=875727" title="https://bugzilla.mozilla.org/show_bug.cgi?id=875727">XUL から HTML</a> に切り替えました。例えば CSS ルールビューアは、<span class="comment-copy"><code>cssruleview.xul</code></span> ではなく chrome://browser/content/devtools/cssruleview.xhtml になりました。load listener を読み込んでこれらの HTML ドキュメントを変更するには、ペインの機能を拡張するために直接オーバーレイを追加するのではなく、外側の XUL ドキュメントにオーバーレイやスクリプトを追加します。</li>
+ <li>開発ツール内の一部ペインを <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=875727">XUL から HTML</a> に切り替えました。例えば CSS ルールビューアは、<span class="comment-copy"><code>cssruleview.xul</code></span> ではなく chrome://browser/content/devtools/cssruleview.xhtml になりました。load listener を読み込んでこれらの HTML ドキュメントを変更するには、ペインの機能を拡張するために直接オーバーレイを追加するのではなく、外側の XUL ドキュメントにオーバーレイやスクリプトを追加します。</li>
  <li>デバッガで、スタックトレースが上側にパンくずリストのように表示されるようになりました。またスクリプト一覧がパネルの左側に表示されるようになりました。</li>
 </ul>
 
@@ -75,7 +75,6 @@ translation_of: Mozilla/Firefox/Releases/22
 
 <ul>
  <li><a href="http://www.mozilla.jp/firefox/22.0/releasenotes/">Firefox 22 リリースノート</a></li>
- <li><a href="https://www.fxsitecompat.com/ja/versions/22/">Firefox 22 サイト互換性情報</a></li>
  <li><a href="https://dev.mozilla.jp/2013/06/firefox-22-addon-compatibility/">Firefox 22 アドオン互換性情報</a></li>
 </ul>
 

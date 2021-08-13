@@ -37,21 +37,22 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/isSealed
 var empty = {};
 Object.isSealed(empty); // === false
 
-// 如果你把一个空对象变的不可扩展,则它同时也会变成个密封对象.
+// 如果你把一个空对象变的不可扩展，则它同时也会变成个密封对象.
 Object.preventExtensions(empty);
 Object.isSealed(empty); // === true
 
-// 但如果这个对象不是空对象,则它不会变成密封对象,因为密封对象的所有自身属性必须是不可配置的.
+// 但如果这个对象不是空对象，则它不会变成密封对象,因为密封对象的所有自身属性必须是不可配置的.
 var hasProp = { fee: "fie foe fum" };
 Object.preventExtensions(hasProp);
 Object.isSealed(hasProp); // === false
 
-// 如果把这个属性变的不可配置,则这个属性也就成了密封对象.
-Object.defineProperty(hasProp, "fee", { configurable: false });
-Object.isSealed(hasProp); // === false
-Object.isSealed(hasProp.fee); // === true
+// 如果把这个属性变的不可配置，则这个属性也就成了密封对象.
+Object.defineProperty(hasProp, 'fee', {
+  configurable: false
+});
+Object.isSealed(hasProp); // === true
 
-// 最简单的方法来生成一个密封对象,当然是使用Object.seal.
+// 最简单的方法来生成一个密封对象，当然是使用Object.seal.
 var sealed = {};
 Object.seal(sealed);
 Object.isSealed(sealed); // === true
@@ -106,10 +107,6 @@ Object.isSealed(1);
 </table>
 
 <h2 id="浏览器兼容">浏览器兼容</h2>
-
-<div class="hidden">
-<p>The compatibility table on this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
-</div>
 
 <p>{{Compat("javascript.builtins.Object.isSealed")}}</p>
 

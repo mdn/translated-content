@@ -210,7 +210,7 @@ h1 {
 
 <h3 id="Avoiding_selector_list_invalidation">Avoiding selector list invalidation</h3>
 
-<p>Unlike <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/Selector_list">selector lists</a>, the <code>:is()</code> pseudo-class doesn't get invalidated when one of the selectors passed to it isn't supported by the browser.</p>
+<p>Unlike <a href="/zh-CN/docs/Web/CSS/Selector_list">selector lists</a>, the <code>:is()</code> pseudo-class doesn't get invalidated when one of the selectors passed to it isn't supported by the browser.</p>
 
 <pre><code>:is(:valid, :unsupported) {
   ...
@@ -228,7 +228,7 @@ h1 {
 
 <h3 id="Issues_with_performance_and_specificity" name="Issues_with_performance_and_specificity">any(): — Issues with performance and specificity</h3>
 
-<p><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=561154" title="https://bugzilla.mozilla.org/show_bug.cgi?id=561154">Bug 561154</a> tracks an issue with Gecko where the specificity of <code>:-moz-any()</code> is incorrect. The current (as of Firefox 12) implementation puts <code>:-moz-any()</code> in the category of universal rules, meaning using it as the rightmost selector will be slower than using an ID, class, or tag as the rightmost selector.</p>
+<p><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=561154">Bug 561154</a> tracks an issue with Gecko where the specificity of <code>:-moz-any()</code> is incorrect. The current (as of Firefox 12) implementation puts <code>:-moz-any()</code> in the category of universal rules, meaning using it as the rightmost selector will be slower than using an ID, class, or tag as the rightmost selector.</p>
 
 <p>For example:</p>
 
@@ -276,8 +276,8 @@ h1 {
 <h2 id="相关链接">相关链接</h2>
 
 <ul>
- <li>{{CSSxRef(":where", ":where()")}} {{Experimental_Inline}} - Like <code>:is()</code>, but with 0 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/Specificity">specificity</a>.</li>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/CSS/Selector_list">Selector list</a></li>
+ <li>{{CSSxRef(":where", ":where()")}} {{Experimental_Inline}} - Like <code>:is()</code>, but with 0 <a href="/zh-CN/docs/Web/CSS/Specificity">specificity</a>.</li>
+ <li><a href="/zh-CN/docs/Web/CSS/Selector_list">Selector list</a></li>
 </ul>
 
 <ul>

@@ -12,16 +12,16 @@ translation_of: Web/JavaScript/Reference/Errors/Stmt_after_return
 
 <p>JavaScript の警告 "unreachable code after return statement" は、 {{jsxref("Statements/return", "return")}} 文の後で式を使用したり、セミコロンのない return 文を使用して、その直後に式を置いたりした場合に発生します。</p>
 
-<h2 id="Message" name="Message">メッセージ</h2>
+<h2 id="Message">エラーメッセージ</h2>
 
-<pre class="syntaxbox">Warning: unreachable code after return statement (Firefox)
+<pre class="brush: js">Warning: unreachable code after return statement (Firefox)
 </pre>
 
-<h2 id="Error_type" name="Error_type">エラー種別</h2>
+<h2 id="Error_type">エラーの種類</h2>
 
 <p>警告</p>
 
-<h2 id="What_went_wrong" name="What_went_wrong">原因</h2>
+<h2 id="What_went_wrong">エラーの原因</h2>
 
 <p>unreachable code after a return statement は、以下のような場合に発生することがあります。</p>
 
@@ -37,15 +37,15 @@ translation_of: Web/JavaScript/Reference/Errors/Stmt_after_return
 <p>以下の文の場合、セミコロンがない場合の return の警告は表示されません。</p>
 
 <ul>
- <li>{{jsxref("Statements/throw", "throw")}}</li>
- <li>{{jsxref("Statements/break", "break")}}</li>
- <li>{{jsxref("Statements/var", "var")}}</li>
- <li>{{jsxref("Statements/function", "function")}}</li>
+  <li>{{jsxref("Statements/throw", "throw")}}</li>
+  <li>{{jsxref("Statements/break", "break")}}</li>
+  <li>{{jsxref("Statements/var", "var")}}</li>
+  <li>{{jsxref("Statements/function", "function")}}</li>
 </ul>
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
-<h3 id="Invalid_cases" name="Invalid_cases">無効な場合</h3>
+<h3 id="Invalid_cases">無効な場合</h3>
 
 <pre class="brush: js example-bad">function f() {
   var x = 3;
@@ -60,7 +60,7 @@ function f() {
 }
 </pre>
 
-<h3 id="Valid_cases" name="Valid_cases">妥当な場合</h3>
+<h3 id="Valid_cases">妥当な場合</h3>
 
 <pre class="brush: js example-good">function f() {
   var x = 3;
@@ -74,8 +74,8 @@ function f() {
 }
 </pre>
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
- <li>{{jsxref("Statements/return", "自動セミコロン挿入", "#Automatic_Semicolon_Insertion", 1)}}</li>
+  <li>{{jsxref("Statements/return", "自動セミコロン挿入", "#Automatic_Semicolon_Insertion", 1)}}</li>
 </ul>

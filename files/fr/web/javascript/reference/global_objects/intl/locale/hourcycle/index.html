@@ -58,7 +58,7 @@ console.log(fr24hour.hourCycle); // Affichera "h23" dans la console</pre>
 
 <h3 id="Définir_le_format_horaire_grâce_à_un_objet_de_configuration">Définir le format horaire grâce à un objet de configuration</h3>
 
-<p>Le constructeur <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale" title="The Intl.Locale constructor is a standard built-in property of the Intl object."><code>Intl.Locale</code></a> permet d'utiliser un objet de configuration comme deuxième argument. Les propriétés de cet objet permettent de définir différentes extensions, y compris celle pour le format horaire. Pour cela, on indiquera la propriété <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">hourCycle</span></font> sur l'objet de configuration avec la valeur souhaitée et on passera cet objet au constructeur.</p>
+<p>Le constructeur <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Locale" title="The Intl.Locale constructor is a standard built-in property of the Intl object."><code>Intl.Locale</code></a> permet d'utiliser un objet de configuration comme deuxième argument. Les propriétés de cet objet permettent de définir différentes extensions, y compris celle pour le format horaire. Pour cela, on indiquera la propriété <code>hourCycle</code> sur l'objet de configuration avec la valeur souhaitée et on passera cet objet au constructeur.</p>
 
 <pre class="brush: js">let us12hour = new Intl.Locale("en-US-u-hc-h12");
 console.log(us12hour.hourCycle); // Affichera "h12" dans la console</pre>
@@ -83,8 +83,6 @@ console.log(us12hour.hourCycle); // Affichera "h12" dans la console</pre>
 </table>
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<div class="hidden">Le tableau de compatibilité de cette page a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à consulter <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> et à nous envoyer une <em>pull request</em>.</div>
 
 <div>{{Compat("javascript.builtins.Intl.Locale.hourCycle")}}</div>
 

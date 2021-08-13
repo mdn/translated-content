@@ -11,11 +11,12 @@ tags:
   - Reference
   - Screen Layout
   - viewport
+browser-compat: css.at-rules.viewport
 translation_of: Web/CSS/@viewport
 ---
 <div>{{CSSRef}}{{deprecated_header}}</div>
 
-<div class="blockIndicator note">
+<div class="notecard note">
 <p><strong>注</strong>: <a href="https://github.com/w3c/csswg-drafts/issues/4766">https://github.com/w3c/csswg-drafts/issues/4766</a> に @viewport を標準路線から除外することに関する議論があります。</p>
 </div>
 
@@ -25,7 +26,7 @@ translation_of: Web/CSS/@viewport
 
 <p>モバイル端末 (または全画面モードのデスクトップ端末) では、初期ビューポートはふつう端末の画面のうちアプリケーションが利用できる部分です。これは全画面の場合もあれば、全画面からオペレーティングシステムが制御する領域 (タスクバーなど) を引いた部分の場合、アプリケーションが利用できる画面領域 (全画面又は画面からオペレーティングシステムやその他のアプリケーションが所有する領域を引いた部分) の場合もあります。</p>
 
-<pre class="brush: css no-line-numbers notranslate">@viewport {
+<pre class="brush: css no-line-numbers">@viewport {
   width: 100vw; /*実際のビューポートの幅を端末の幅に設定*/
 }
 </pre>
@@ -34,52 +35,52 @@ translation_of: Web/CSS/@viewport
 <p><strong>メモ</strong>: <code>&lt;meta name="viewport"&gt;</code> タグを使用すると、 <code>@viewport</code> より優先します。</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+<h2 id="Syntax">構文</h2>
 
 <p>このアット規則は波括弧で囲まれた CSS ブロック内に、一連の入れ子になった{{glossary("descriptor (CSS)", "記述子")}}を含みます。</p>
 
 <p><code>1.0</code> または <code>100%</code> の<em>ズーム倍率</em>はズーム無しに相当します。より大きい値はズームイン、より小さい値はズームアウトになります。</p>
 
-<h3 id="Descriptors" name="Descriptors">記述子</h3>
+<h3 id="Descriptors">記述子</h3>
 
 <p>現時点では <code>@viewport</code> のブラウザーの互換性は弱く、対応は Internet Explorer 及び Edge で広く行われています。これらのブラウザーでも、少数の記述子しか利用できません。 <code>@viewport</code> は対応していないブラウザーからは無視され、理解できない記述子は無視されるでしょう。</p>
 
 <dl>
- <dt><a href="/ja/docs/Web/CSS/@viewport/min-width"><code>min-width</code></a></dt>
+ <dt><code>min-width</code></dt>
  <dd>文書が最初に表示されたときの、ビューポートの幅を決めるのに使われます。</dd>
- <dt><a href="/ja/docs/Web/CSS/@viewport/max-width"><code>max-width</code></a></dt>
+ <dt><code>max-width</code></dt>
  <dd>文書が最初に表示されたときの、ビューポートの幅を決めるのに使われます。</dd>
- <dt><a href="/ja/docs/Web/CSS/@viewport/width"><code>width</code></a></dt>
+ <dt><code>width</code></dt>
  <dd><code>min-width</code> と <code>max-width</code> の両方を設定するための一括指定です。</dd>
- <dt><a href="/ja/docs/Web/CSS/@viewport/min-height"><code>min-height</code></a></dt>
+ <dt><code>min-height</code></dt>
  <dd>文書が最初に表示されたときの、ビューポートの高さを決めるのに使われます。</dd>
- <dt><a href="/ja/docs/Web/CSS/@viewport/max-height"><code>max-height</code></a></dt>
+ <dt><code>max-height</code></dt>
  <dd>文書が最初に表示されたときの、ビューポートの高さを決めるのに使われます。</dd>
- <dt><a href="/ja/docs/Web/CSS/@viewport/height"><code>height</code></a></dt>
+ <dt><code>height</code></dt>
  <dd><code>min-height</code> と <code>max-height</code> の両方を設定するための一括指定です。</dd>
- <dt><a href="/ja/docs/Web/CSS/@viewport/zoom"><code>zoom</code></a></dt>
+ <dt><code>zoom</code></dt>
  <dd>ズームの初期値を設定します。</dd>
- <dt><a href="/ja/docs/Web/CSS/@viewport/min-zoom"><code>min-zoom</code></a></dt>
+ <dt><code>min-zoom</code></dt>
  <dd>ズームの最小値を設定します。</dd>
- <dt><a href="/ja/docs/Web/CSS/@viewport/max-zoom"><code>max-zoom</code></a></dt>
+ <dt><code>max-zoom</code></dt>
  <dd>ズームの最大値を設定します。</dd>
- <dt><a href="/ja/docs/Web/CSS/@viewport/user-zoom"><code>user-zoom</code></a></dt>
+ <dt><code>user-zoom</code></dt>
  <dd>ユーザーがズーム倍率を変更できるか否かを制御します。</dd>
- <dt><a href="/ja/docs/Web/CSS/@viewport/orientation"><code>orientation</code></a></dt>
+ <dt><code>orientation</code></dt>
  <dd>文書の向きを制御します。</dd>
- <dt>{{cssxref("@viewport/viewport-fit", "viewport-fit")}}</dt>
+ <dt><code>viewport-fit</code></dt>
  <dd>長方形ではないディスプレイでの文書の表示を制御します。</dd>
 </dl>
 
-<h2 id="Formal_syntax" name="Formal_syntax">形式文法</h2>
+<h2 id="Formal_syntax">形式文法</h2>
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
-<h3 id="Setting_viewport_size_zoom_and_orientation" name="Setting_viewport_size_zoom_and_orientation">ビューポートの大きさ、拡大率、向きの設定</h3>
+<h3 id="Setting_viewport_size_zoom_and_orientation">ビューポートの大きさ、拡大率、向きの設定</h3>
 
-<pre class="brush: css notranslate">@viewport {
+<pre class="brush: css">@viewport {
   min-width: 640px;
   max-width: 800px;
 }
@@ -94,7 +95,7 @@ translation_of: Web/CSS/@viewport
   orientation: landscape;
 }</pre>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications">仕様書</h2>
 
 <table class="standard-table">
  <thead>
@@ -108,7 +109,7 @@ translation_of: Web/CSS/@viewport
   <tr>
    <td>{{SpecName("CSS Round Display", "#extending-viewport-rule", "@viewport")}}</td>
    <td>{{Spec2("CSS Round Display")}}</td>
-   <td>{{cssxref("@viewport/viewport-fit", "viewport-fit")}} 記述子を定義。</td>
+   <td><code>viewport-fit</code> 記述子を定義。</td>
   </tr>
   <tr>
    <td>{{SpecName('CSS3 Device', '#atviewport-rule', '@viewport')}}</td>
@@ -118,15 +119,13 @@ translation_of: Web/CSS/@viewport
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</p>
+<p>{{Compat}}</p>
 
-<p>{{Compat("css.at-rules.viewport")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
  <li>{{HTMLElement("meta")}}、特に <code>&lt;meta name="viewport"&gt;</code> の項目</li>
- <li><a href="/ja/docs/Mobile/Viewport_meta_tag">モバイルブラウザーでのレイアウトを制御するために meta タグの viewport を使う</a></li>
+ <li><a href="/ja/docs/Web/HTML/Viewport_meta_tag">モバイルブラウザーでのレイアウトを制御するために meta タグの viewport を使う</a></li>
 </ul>

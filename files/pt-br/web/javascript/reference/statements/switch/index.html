@@ -47,7 +47,7 @@ translation_of: Web/JavaScript/Reference/Statements/switch
 
 <p>Se a condição for correspondida, o programa executa as instruções asssociadas. Se múltiplos casos corresponderem o valor, o primeiro caso que corresponder é selecionado, mesmo se os casos não forem iguais entre si.</p>
 
-<p>O programa primeiro procura por um caso o qual a expressão avalie como tendo o mesmo valor que o input da expressão (usando a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">comparação de igualdade estrita</a>, <code>===) </code>transferindo assim o controle para a cláusula encontrada e em seguida execudando as instruções associadas. Caso nenhum caso seja correspondido, então o programa procura pela cláusula opicional <code>default</code>, que, se encontrado, tem o controle transferido à ele, executando suas instruções associadas. Se não ouver uma cláusula <code>default</code>, o programa continua a execução da instrução seguindo para o final do <code>switch</code>. Por convenção, a cláusula default é a última, mas não é algo obrigatório.</p>
+<p>O programa primeiro procura por um caso o qual a expressão avalie como tendo o mesmo valor que o input da expressão (usando a <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators">comparação de igualdade estrita</a>, <code>===) </code>transferindo assim o controle para a cláusula encontrada e em seguida executando as instruções associadas. Caso nenhum caso seja correspondido, então o programa procura pela cláusula opcional <code>default</code>, que, se encontrado, tem o controle transferido a ele, executando suas instruções associadas. Se não houver uma cláusula <code>default</code>, o programa continua a execução da instrução seguindo para o final do <code>switch</code>. Por convenção, a cláusula default é a última, mas não é algo obrigatório.</p>
 
 <p>A instrução opcional <code><a href="/en-US/docs/Web/JavaScript/Reference/Statements/break" title="JavaScript/Reference/Statements/break">break</a></code> associada com cada <code>case</code> garante que o programa saia da condicional <code>switch</code> assim que a instrução correspondente for executada  e executa a instrução que segue logo após o switch. Caso <code>break</code> seja omitido, o programa continua a execução para a próxima instrução dentro de <code>switch</code>. </p>
 
@@ -229,7 +229,7 @@ switch (foo) {
  </tbody>
 </table>
 
-<h2 id="Compatibilidade_de_Navegadores">Compatibilidade de Navegadores</h2>
+<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
 <p>{{ CompatibilityTable() }}</p>
 

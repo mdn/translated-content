@@ -1,0 +1,173 @@
+---
+title: repeating-linear-gradient
+slug: orphaned/Web/CSS/repeating-linear-gradient()
+tags:
+  - CSS
+  - Fonction
+  - Reference
+translation_of: Web/CSS/repeating-linear-gradient()
+original_slug: Web/CSS/repeating-linear-gradient()
+---
+<div>{{CSSRef}}</div>
+
+<p>La fonction CSS <strong><code>repeating-linear-gradient</code></strong> créé une {{cssxref("&lt;image&gt;")}} composée de dégradés qui se répètent. Cela fonctionne de manière similaire aux dégradés linéaires simples décrits les mêmes arguments que les dégradés linéaires basiques représentés avec {{cssxref("linear-gradient")}} mais les points d'arrêt des couleurs sont automatiquement répétés, indéfiniment, dans les deux directions (les points d'arrêt sont répétés d'autant que la distance qui sépare le premier et le dernier point d'arrêt).</p>
+
+<div>{{EmbedInteractiveExample("pages/css/function-repeating-linear-gradient.html")}}</div>
+
+<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
+
+<p>Par conséquent, la ligne de la couleur de fin coïncide toujours avec la ligne de la couleur de début. Si les deux ne sont pas identiques, on obtiendra alors une transition abrupte.</p>
+
+<p>Comme pour les autres dégradés, un dégradé linéaire répété n'est pas une couleur (type {{cssxref("&lt;color&gt;")}}) CSS mais une image (type {{cssxref("&lt;image&gt;")}}) <a href="/fr/docs/Web/CSS/image" title="en/CSS/image#no_intrinsic">sans dimension intrinsèque</a> ; c'est-à-dire, qu'il n'a ni taille naturelle ni taille préférée. Sa taille réelle s'adapte à l'élément auquel il s'applique.</p>
+
+<div class="note">
+<p><strong>Note :</strong> Le type <code>&lt;gradient&gt;</code> est un sous-type du type  <code>&lt;image&gt;</code>. À ce titre, <code>repeating-linear-gradient()</code> ne fonctionnera pas pour {{cssxref("background-color")}} et les autres propriétés qui utilisent le type de données {{cssxref("&lt;color&gt;")}}.</p>
+</div>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="brush: css no-line-numbers notranslate">/* Un dégradé répétitif sur un axe à 45 degrés */
+/* débutant bleu et finissant rouge, répété 3 fois */
+repeating-linear-gradient( 45deg, blue, red 33.3% );
+
+/* Un dégradé répétitif allant du coin inférieur droit */
+/* à coin supérieur gauche débutant bleu et finissant rouge */
+/* et répété tous les 20 pixels */
+repeating-linear-gradient( to left top, blue, red 20px);
+
+/* Un dégradé répétitif allant du bas vers le haut, */
+/* débutant bleu, étant vert après 40% et finissant rouge */
+repeating-linear-gradient( 0deg, blue, green 40%, red );
+
+/* Un dégradé répété cinq fois, progressant de gauche à
+   droite, commençant en rouge, passant en vert puis à
+   nouveau en rouge */
+repeating-linear-gradient(to right, red 0%, green 10%, red 20%);</pre>
+
+<h3 id="Valeurs">Valeurs</h3>
+
+<dl>
+ <dt><code>&lt;side-or-corner&gt;</code></dt>
+ <dd>Représente la position du point de départ de la ligne de dégradé. Cette valeur comprends deux mots-clés : le premier indique le côté sur une ligne horizontale, <code>left</code> ou <code>right</code>, le second indique le côté sur une ligne verticale, <code>top</code> ou <code>bottom</code>. L'ordre n'a pas d'influence et chacun des mots-clés est optionnel.<br>
+ Les valeurs<code> to top</code>, <code>to bottom</code>, <code>to left</code> et <code>to right</code> sont respectivement traduites vers les angles <code>0deg</code>, <code>180deg</code>, <code>270deg</code>, <code>90deg</code>. Les autres sont traduites vers des angles qui permettent au point de départ d'être dans le même quadrant que le coin décrit et que la ligne définie par le point de départ et le coin soit perpendiculaire à la ligne de dégradé. De cette manière, la couleur décrite par le point d'arrêt sera exactement celle du coin. Ceci est parfois appelé la propriété du « coin magique ». Le point de fin de la ligne de dégradé est le point symétrique de du point de départ dans l'autre direction par rapport au centre de la boîte.</dd>
+ <dt><code>&lt;angle&gt;</code></dt>
+ <dd>Un angle pour la direction du dégradé. L'angle démarre à <code>0deg</code> (ce qui est équivalent à <code>to top</code>) et progresse dans le sens des aiguilles d'une montre. Voir {{cssxref("&lt;angle&gt;")}}.</dd>
+ <dt><code>&lt;linear-color-stop&gt;</code></dt>
+ <dd>Cette valeur est composée d'une valeur de  couleur (type {{cssxref("&lt;color&gt;")}}), suivie d'une position d'arrêt optionnelle (soit un pourcentage entre 0% et 100% ou une longueur (type {{cssxref("&lt;length&gt;")}}) mesurée le long de l'axe du dégradé).</dd>
+ <dt><code>&lt;color-hint&gt;</code></dt>
+ <dd>L'indication de couleur est une indication pour l'interpolation des couleurs le long du dégradé et entre deux points d'arrêt de couleur. La longueur définit l'emplacement où la transition entre les deux couleurs est appliquée à moitié. Si cette valeur est absente, le niveau intermédiaire de la transition se situera à équidistance des deux points d'arrêt de couleur.</dd>
+ <dd>Le rendu des points d'arrêt en CSS suit les mêmes règles que les dégradés en SVG.</dd>
+</dl>
+
+<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+
+<pre class="syntaxbox notranslate">repeating-linear-gradient(  [ <a href="/fr/docs/Web/CSS/angle">&lt;angle&gt;</a> | to &lt;side-or-corner&gt; ,]? &lt;color-stop-list&gt; )
+                            \---------------------------------/ \---------------/
+                              Définition de la ligne du dégradé Liste des points d'arrêt
+
+où <code>&lt;side-or-corner&gt; = [left | right] || [top | bottom]</code>
+  et <code>&lt;</code><code>color-stop-list&gt; = [ &lt;</code><dfn>linear-</dfn><code>color-stop&gt; [, &lt;color-hint&gt;? ]? ]#, &lt;</code><dfn>linear-</dfn><code>color-stop&gt;
+  et &lt;</code><dfn>linear-</dfn><code>color-stop&gt; = &lt;color&gt; [ &lt;color-stop-length&gt; ]?
+  et &lt;color-stop-length&gt; = [ &lt;percentage&gt; | &lt;length&gt; ]{1,2}
+  et &lt;color-hint&gt; = [ &lt;percentage&gt; | &lt;length&gt; ]</code>
+</pre>
+
+<h2 id="Exemples">Exemples</h2>
+
+<h3 id="Bandes_zébrées">Bandes zébrées</h3>
+
+<div class="hidden">
+<pre class="brush: css notranslate">body {
+  width: 100vw;
+  height: 100vh;
+}</pre>
+</div>
+
+<pre class="brush: css notranslate">body {
+  background-image: repeating-linear-gradient(-45deg,
+      transparent,
+      transparent 20px,
+      black 20px,
+      black 40px);
+  /* avec plusieurs longueurs pour les points d'arrêt */
+  background-image: repeating-linear-gradient(-45deg,
+      transparent 0 20px,
+      black 20px 40px);
+}
+</pre>
+
+<p>{{EmbedLiveSample('Bandes_zébrées', 120, 120)}}</p>
+
+<h3 id="Dix_barres_horizontales_répétées">Dix barres horizontales répétées</h3>
+
+<div class="hidden">
+<pre class="brush: css notranslate">body {
+  width: 100vw;
+  height: 100vh;
+}</pre>
+</div>
+
+<pre class="brush: css notranslate">body {
+  background-image: repeating-linear-gradient(to bottom,
+      rgb(26,198,204),
+      rgb(26,198,204) 7%,
+      rgb(100,100,100) 10%);
+}
+</pre>
+
+<p>{{EmbedLiveSample('Dix_barres_horizontales_répétées', 120, 120)}}</p>
+
+<p>Comme le dernier point d'arrêt est situé à 10% et que le dégradé est vertical, chaque dégradé occupera 10% de la hauteur et on aura donc au total dix barres horizontales.</p>
+
+<div class="note">
+<p><strong>Note :</strong> Voir la page <a href="/fr/docs/Web/CSS/Utilisation_de_dégradés_CSS">Manipuler les dégradés CSS</a> pour plus d'exemples.</p>
+</div>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Spécification</th>
+   <th scope="col">État</th>
+   <th scope="col">Commentaires</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS3 Images', '#repeating-gradients', 'repeating-linear-gradient()')}}</td>
+   <td>{{Spec2('CSS3 Images')}}</td>
+   <td>Définition initiale.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<p>{{Compat("css.types.image.gradient.repeating-linear-gradient")}}</p>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="/fr/docs/Web/CSS/Utilisation_de_dégradés_CSS">Manipuler les dégradés CSS</a></li>
+ <li>Les propriétés liées aux dégradés :
+  <ul>
+   <li>{{cssxref("radial-gradient", "radial-gradient()")}},</li>
+   <li>{{cssxref("linear-gradient", "linear-gradient()")}},</li>
+   <li>{{cssxref("repeating-radial-gradient", "repeating-radial-gradient()")}}</li>
+   <li>{{cssxref("conic-gradient")}}</li>
+   <li>{{cssxref("repeating-conic-gradient")}}</li>
+  </ul>
+ </li>
+ <li>Les propriétés où ces fonctions peuvent être utilisées :
+  <ul>
+   <li>{{cssxref("background-image")}},{{cssxref("background")}}.</li>
+  </ul>
+ </li>
+ <li><a href="https://codepen.io/adobe/full/fhnBJ">Un dégradé CSS interactif</a></li>
+ <li>{{cssxref("&lt;image&gt;")}}</li>
+ <li>{{cssxref("_image","image()")}}</li>
+ <li>{{cssxref("element()")}}</li>
+ <li>{{cssxref("image-set","image-set()")}}</li>
+ <li>{{cssxref("cross-fade")}}</li>
+</ul>

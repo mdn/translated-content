@@ -14,13 +14,11 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/eval
 
 <p>La fonction <code><strong>eval()</strong></code> permet d'évaluer du code JavaScript représenté sous forme d'une chaîne de caractères.</p>
 
-<div class="blockIndicator warning">
-<p><strong>Avertissement :</strong> L'exécution de JavaScript à partir d'une chaîne de caractères constitue un risque de sécurité énorme. Il est beaucoup trop facile pour un mauvais acteur d'exécuter du code arbitraire lorsque vous utilisez <code>eval()</code>. Voir la section <a href="#Nutiliser_eval_quen_dernier_recours_!">N'utilisez eval() qu'en dernier recours !</a> ci-dessous.</p>
+<div class="warning">
+<p><strong>Attention :</strong> L'exécution de JavaScript à partir d'une chaîne de caractères constitue un risque de sécurité énorme. Il est beaucoup trop facile pour un mauvais acteur d'exécuter du code arbitraire lorsque vous utilisez <code>eval()</code>. Voir la section <a href="#Nutiliser_eval_quen_dernier_recours_!">N'utilisez eval() qu'en dernier recours !</a> ci-dessous.</p>
 </div>
 
 <div>{{EmbedInteractiveExample("pages/js/globalprops-eval.html")}}</div>
-
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
@@ -67,7 +65,7 @@ eval(expression.toString());
   (0, eval)('x + y'); // un autre exemple d'appel indirect.
 }</pre>
 
-<h2 id="Nutiliser_eval_quen_dernier_recours_!"><a name="dont-use-it">N'utiliser <code>eval()</code> qu'en dernier recours !</a></h2>
+<h2 id="Nutiliser_eval_quen_dernier_recours_!">N'utiliser <code>eval()</code> qu'en dernier recours !</h2>
 
 <p><code>eval()</code> est une fonction dangereuse qui exécute le code passé en argument avec les privilèges de l'environnement appelant. Si <code>eval()</code> est utilisée avec une chaîne construite de façon mal intentionnée, cela pourra entraîner l'exécution d'un code malveillant sur la machine de l'utilisateur avec les permissions données au site ou au module complémentaire. À un niveau encore plus critique, du code tiers pourrait ainsi consulter la portée dans laquelle <code>eval()</code> a été invoquée. Cela peut permettre des attaques qui n'auraient pas été rendues possible en utilisant un objet {{jsxref("Function")}}.</p>
 
@@ -262,8 +260,6 @@ var fct2 = eval(fctStr2)  // renvoie une function
 </table>
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<div class="hidden">Ce tableau de compatibilité a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à envoyer une <em>pull request</em> sur <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>.</div>
 
 <p>{{Compat("javascript.builtins.eval")}}</p>
 

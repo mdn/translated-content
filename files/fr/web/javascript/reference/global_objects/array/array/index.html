@@ -23,10 +23,10 @@ new Array(<var>longueurTableau</var>)</pre>
 <h3 id="Paramètres">Paramètres</h3>
 
 <dl>
- <dt><code>element<em>N</em></code></dt>
+ <dt><code>elementN</code></dt>
  <dd>Un tableau JavaScript est initialisé avec les éléments indiqués à moins qu'un seul argument ne soit passé (cf. <code>longueurTableau</code> ci-après). On notera que ce cas au limite ne s'applique qu'avec le constructeur <code>Array</code>. Si on utilise la forme littérale (avec les crochets), on peut initialiser un tableau avec un seul élément.</dd>
  <dt><code>longueurTableau</code></dt>
- <dd>Si le seul argument passé au constructeur <code>Array</code> est un entier entre 0 et 2<sup>32</sup>-1 (inclus), le constructeur renverra un tableau dont la propriété <code>length</code> vaut ce nombre. <strong>Note :</strong> le tableau contiendra des éléments vides (à ne pas confondre avec des éléments qui vaudraient <code>undefined</code>). Si l'argument est un autre nombre, une exception {{jsxref("RangeError")}} sera levée.</dd>
+ <dd>Si le seul argument passé au constructeur <code>Array</code> est un entier entre 0 et 2^32-1 (inclus), le constructeur renverra un tableau dont la propriété <code>length</code> vaut ce nombre. <strong>Note :</strong> le tableau contiendra des éléments vides (à ne pas confondre avec des éléments qui vaudraient <code>undefined</code>). Si l'argument est un autre nombre, une exception {{jsxref("RangeError")}} sera levée.</dd>
 </dl>
 
 <h2 id="Exemples">Exemples</h2>
@@ -75,8 +75,6 @@ console.log(fruits[0]);     // "Pomme"
 </table>
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<div class="hidden">Le tableau de compatibilité de cette page a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à consulter <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> et à nous envoyer une <em>pull request</em>.</div>
 
 <p>{{Compat("javascript.builtins.Array.Array")}}</p>
 

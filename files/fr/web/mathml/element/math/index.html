@@ -114,7 +114,7 @@ translation_of: Web/MathML/Element/math
 &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p><strong>Note </strong>: Les documents XHTML avec du MathML doivent être servis en tant que <code>application/xhtml+xml</code>. Ceci est facilement réalisable en ajoutant l'extension <code>.xhtml</code> aux fichiers locaux. Pour les serveurs Apache, il est possible de <a class="external" href="http://httpd.apache.org/docs/2.2/mod/mod_mime.html#addtype" title="http://httpd.apache.org/docs/2.2/mod/mod_mime.html#addtype">configurer le fichier <code>.htaccess</code></a> afin que les extensions correspondent au type MIME correct. Étant donné qu'ici le MathML est utilisé au sein d'un document XML, il faut s'assurer que celui-ci est bien formé.</p>
+<p><strong>Note </strong>: Les documents XHTML avec du MathML doivent être servis en tant que <code>application/xhtml+xml</code>. Ceci est facilement réalisable en ajoutant l'extension <code>.xhtml</code> aux fichiers locaux. Pour les serveurs Apache, il est possible de <a class="external" href="http://httpd.apache.org/docs/2.2/mod/mod_mime.html#addtype">configurer le fichier <code>.htaccess</code></a> afin que les extensions correspondent au type MIME correct. Étant donné qu'ici le MathML est utilisé au sein d'un document XML, il faut s'assurer que celui-ci est bien formé.</p>
 
 <h2 id="Specifications" name="Specifications">Spécifications</h2>
 
@@ -142,13 +142,11 @@ translation_of: Web/MathML/Element/math
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 
-<div class="hidden">Le tableau de compatibilité sur cette page est généré à partir de données structurées. Si vous souhaitez contribuer aux données, veuillez consulter <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> et nous envoyer une <em>pull request</em>.</div>
-
 <p>{{Compat("mathml.elements.math")}}</p>
 
 <h2 id="Notes_relatives_à_Firefox">Notes relatives à Firefox</h2>
 
-<p>Firefox 7.0 {{ geckoRelease("7.0") }} a introduit le support de tous les attributs MathML sur l'élément racine math (c'est à dire le même comportement que l'élément {{ MathMLElement("mstyle") }}). Cependant, l'attribut <code>displaystyle</code> n'avait pas été pris en compte et a <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=669719" title="https://bugzilla.mozilla.org/show_bug.cgi?id=669719">été ajouté</a> dans Firefox 8.0 {{ geckoRelease("8.0") }}.</p>
+<p>Firefox 7.0 {{ geckoRelease("7.0") }} a introduit le support de tous les attributs MathML sur l'élément racine math (c'est à dire le même comportement que l'élément {{ MathMLElement("mstyle") }}). Cependant, l'attribut <code>displaystyle</code> n'avait pas été pris en compte et a <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=669719">été ajouté</a> dans Firefox 8.0 {{ geckoRelease("8.0") }}.</p>
 
 <p>Un moyen textuel alternatif (<code>alttext</code>) ou une référence à une image alternative utilisant les attributs <code>altimg</code>, <code>altimg-width</code>, <code>altimg-height</code> ou <code>altimg-valign</code> n'est pas encore, à l'heure actuelle, implémentée dans Firefox.</p>
 

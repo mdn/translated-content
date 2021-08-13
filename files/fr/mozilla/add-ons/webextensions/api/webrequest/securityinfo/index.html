@@ -25,7 +25,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/SecurityInfo
  <dt><code>certificates</code></dt>
  <dd><code>Array</code> de {{WebExtAPIRef("webRequest.CertificateInfo", "CertificateInfo")}}. Si {{WebExtAPIRef("webRequest.getSecurityInfo()")}} a été appelé avec l'option <code>certificateChain</code> présente et définie sur <code>true</code>, cela contiendra un objet <code>CertificateInfo</code> pour chaque certificat de la chaîne, depuis le certificat du serveur jusqu'à et y compris la racine de confiance.</dd>
  <dd>Sinon, il contiendra un seul objet <code>CertificateInfo</code>, pour le certificat du serveur.</dd>
- <dt><code>certificateTransparencyStatus</code><span class="diff_add"> {{optional_inline}}</span></dt>
+ <dt><code>certificateTransparencyStatus</code> {{optional_inline}}</dt>
  <dd>
  <p><code>String</code>. Indique l'état de la <a href="https://www.certificate-transparency.org/">transparence des certificats</a> pour la connexion. Ceci peut prendre l'une des valeurs suivantes :</p>
 
@@ -36,29 +36,29 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/SecurityInfo
   <li>"policy_not_diverse_scts"</li>
  </ul>
  </dd>
- <dt><code>cipherSuite</code><span class="diff_add"> {{optional_inline}}</span></dt>
+ <dt><code>cipherSuite</code> {{optional_inline}}</dt>
  <dd><code>String</code>. Suite de chiffrement utilisée pour la connexion, formatée selon la <a href="https://tools.ietf.org/html/rfc5246#appendix-A.5">specification TLS </a>: par exemple, "<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="objectBox objectBox-string">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</span></span></span></span>".</dd>
- <dt><code>errorMessage</code><span class="diff_add"> {{optional_inline}}</span></dt>
+ <dt><code>errorMessage</code> {{optional_inline}}</dt>
  <dd>
  <p><code>String</code>. S'il y a eu un problème avec le protocole TLS  (for example, the certificate had expired, or a trusted root could not be found, or a certificate was revoked) then <code>status</code> will be "broken" and the <code>errorMessage</code> property will contain a string describing the error, taken from Firefox's internal list of error codes.</p>
 
  <p>Note though that at present you can only call <code>getSecurityInfo()</code> in the <code>onHeaderReceived</code> listener, and the <code>onHeaderReceived</code> event is not fired when the handshake fails. So in practice this will never be set. </p>
  </dd>
- <dt><code>hpkp</code><span class="diff_add"> {{optional_inline}}</span></dt>
+ <dt><code>hpkp</code> {{optional_inline}}</dt>
  <dd><code>Boolean</code>. <code>true</code> si l'hôte utilise <a href="/fr/docs/Web/Security/Public_Key_Pinning">Public Key Pinning</a>, sinon <code>false</code>.</dd>
- <dt><code>hsts</code><span class="diff_add"> {{optional_inline}}</span></dt>
+ <dt><code>hsts</code> {{optional_inline}}</dt>
  <dd><code>Boolean</code>. <code>true</code> si l'hôte utilise <a href="/fr/docs/Sécurité/HTTP_Strict_Transport_Security">Strict Transport Security</a>, sinon <code>false</code>.</dd>
- <dt><code>isDomainMismatch</code><span class="diff_add"> {{optional_inline}}</span></dt>
+ <dt><code>isDomainMismatch</code> {{optional_inline}}</dt>
  <dd><code>Boolean</code>. <code>true</code> si le nom de domaine du serveur ne correspond pas au nom de domaine dans son certificat, sinon <code>false</code>.</dd>
- <dt><code>isExtendedValidation</code><span class="diff_add"> {{optional_inline}}</span></dt>
+ <dt><code>isExtendedValidation</code> {{optional_inline}}</dt>
  <dd><code>Boolean</code>. <code>true</code> si le serveur possède un <a href="https://en.wikipedia.org/wiki/Extended_Validation_Certificate">Extended Validation Certificate</a>, sinon <code>false</code>.</dd>
- <dt><code>isNotValidAtThisTime</code><span class="diff_add"> {{optional_inline}}</span></dt>
+ <dt><code>isNotValidAtThisTime</code> {{optional_inline}}</dt>
  <dd><code>Boolean</code>. <code>true</code> si l'heure actuelle tombe en dehors de la période de validité du certificat de serveur (c'est-à-dire que le certificat a expiré ou n'est pas encore valide), sinon <code>false</code>.</dd>
- <dt><code>isUntrusted</code><span class="diff_add"> {{optional_inline}}</span></dt>
+ <dt><code>isUntrusted</code> {{optional_inline}}</dt>
  <dd><code>Boolean</code>. <code>true</code> si une chaîne de retour à un certificat racine de confiance n'a pas pu être construite, sinon <code>false</code>.</dd>
  <dt><code>keaGroupName</code> {{optional_inline}}</dt>
  <dd><code>String</code>. Si <code>state</code> est "sécurisé" cela décrit l'algorithme d'échange de clé utilisé dans cette requête.</dd>
- <dt><code>protocolVersion</code><span class="diff_add"> {{optional_inline}}</span></dt>
+ <dt><code>protocolVersion</code> {{optional_inline}}</dt>
  <dd>
  <p><code>String</code>. Version du protocole TLS utilisé. L'un des :</p>
 
@@ -85,13 +85,11 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/webRequest/SecurityInfo
 
  <p>Notez cependant qu'actuellement, vous ne pouvez appele <code>getSecurityInfo()</code> que dans l'écouteur <code>onHeaderReceived</code>, et l'événement <code>onHeaderReceived</code> n'est pas déclenché lorsque la poignée de main échoue. Ainsi, dans la pratique, il ne sera jamais réglé sur "cassé".</p>
  </dd>
- <dt><code>weaknessReasons</code><span class="diff_add"> {{optional_inline}}</span></dt>
+ <dt><code>weaknessReasons</code> {{optional_inline}}</dt>
  <dd><code>String</code>. Si l'<code>état</code> est "faible", cela indique la raison. Actuellement, il ne peut contenir qu'une seule valeur "chiffre", ce qui indique que la suite de chiffres négociée est considérée comme faible.</dd>
 </dl>
 
 <h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
-
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
 
 <p>{{Compat("webextensions.api.webRequest.SecurityInfo", 10)}}</p>
 

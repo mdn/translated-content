@@ -16,8 +16,6 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/@@matchAll
 
 <div>{{EmbedInteractiveExample("pages/js/regexp-prototype-@@matchall.html")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuer à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="syntaxbox"><var>regexp</var>[Symbol.matchAll](<var>str</var>)</pre>
@@ -53,7 +51,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/@@matchAll
 var str = '2016-01-02';
 var resultat = re[Symbol.matchAll](str);
 
-console.log(<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body"><span class="cm-variable">Array</span>.<span class="cm-property">from</span>(<span class="cm-variable">result</span>at, <span class="cm-def">x</span> <span class="cm-operator">=&gt;</span> <span class="cm-variable-2">x</span>[<span class="cm-number">0</span>])</span></span></span>);
+console.log(Array.from(resultat, x =&gt; x[0]));
 // ["2016", "01", "02"]
 </pre>
 
@@ -97,8 +95,6 @@ console.log(resultat[1]); // [ "2019-03-07", "2019", "03", "07" ]
 </table>
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<div class="hidden">Le tableau de compatibilité de cette page a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à consulter <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> et à nous envoyer une <em>pull request</em>.</div>
 
 <p>{{Compat("javascript.builtins.RegExp.@@matchAll")}}</p>
 

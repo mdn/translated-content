@@ -20,8 +20,6 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/String/replace
 
 <div>{{EmbedInteractiveExample("pages/js/string-replace.html")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="syntaxbox"><var>chn</var>.replace(<var>regexp</var>|<var>souschn</var>, nouv<var>Souschn</var>|<var>fonction</var>)</pre>
@@ -76,7 +74,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/String/replace
    <td>Insère la partie de la chaîne de caractère qui suit la sous-chaîne en correspondance.</td>
   </tr>
   <tr>
-   <td><code>$<em>n</em></code></td>
+   <td><code>$n</code></td>
    <td>
     <p>Où <code><em>n</em></code> est un entier positif inférieur à 100. Insère la <em>n</em> ième chaîne de sous-correspondance entre parenthèses, à condition que le premier argument ait été un objet {{jsxref("RegExp")}}. Notez que ceci est réalisé en indices base 1.</p>
    </td>
@@ -141,8 +139,8 @@ console.log(nouvChn); // Twas the night before Christmas...</pre>
 
 <p>Cela affiche 'Twas the night before Christmas...'.</p>
 
-<div class="blockIndicator note">
-<p>Note : Voir <a href="/fr/docs/Web/JavaScript/Guide/Expressions_r%C3%A9guli%C3%A8res">ce guide</a> pour plus d'explications concernant les expressions régulières.</p>
+<div class="note">
+<p><strong>Note :</strong> Voir <a href="/fr/docs/Web/JavaScript/Guide/Expressions_r%C3%A9guli%C3%A8res">ce guide</a> pour plus d'explications concernant les expressions régulières.</p>
 </div>
 
 <h3 id="Utilisation_de_global_et_ignore_avec_replace">Utilisation de <code>global</code> et <code>ignore</code> avec <code>replace()</code></h3>
@@ -225,7 +223,7 @@ x_x_x___x___x___</pre>
 
 <div></div>
 
-<div>Un tableau d'objets. Un <code>'x'</code> dénote un état <code>'marche'</code>, un <code>'-'</code> symbolise un état '<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">arret</span></font>' et un  <code>'_'</code> (blanc souligné) symbolise la longueur d'un état <code>'<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">marche</span></font>'</code>.</div>
+<div>Un tableau d'objets. Un <code>'x'</code> dénote un état <code>'marche'</code>, un <code>'-'</code> symbolise un état '<code>arret</code>' et un  <code>'_'</code> (blanc souligné) symbolise la longueur d'un état <code>'<code>marche</code>'</code>.</div>
 
 <div></div>
 
@@ -286,8 +284,6 @@ console.log(tabRet);</pre>
 </table>
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<p class="hidden">Le tableau de compatibilité de cette page a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, regardez <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> et envoyez nous une pull request.</p>
 
 <p>{{Compat("javascript.builtins.String.replace")}}</p>
 

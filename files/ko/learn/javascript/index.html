@@ -1,5 +1,5 @@
 ---
-title: JavaScript - 동적인 클라이언트측 스크립트 언어
+title: JavaScript - 동적인 클라이언트 사이드 스크립트 언어
 slug: Learn/JavaScript
 tags:
   - Beginner
@@ -12,16 +12,25 @@ translation_of: Learn/JavaScript
 ---
 <div>{{LearnSidebar}}</div>
 
-<p class="summary">{{Glossary("JavaScript")}} 는 웹 페이지의 복잡한 것들을 구현할 수 있는 프로그래밍 언어입니다. 웹페이지는 단순히 변하지 않고 정적인 정보들만 보여주는 것 이상의 일을 합니다. 시간의 흐름에 따라 업데이트 되는 콘텐츠, 동적인 지도와 움직이는 2D/3D 그래픽, 또는 스크롤 가능한 비디오 쥬크박스들과 여러 가지들을 보여줍니다. 여러분은 '아마도 JavaScript 그 일들을 하고 있겠구나'라고 생각하실 수 있습니다.</p>
+<p class="summary">{{Glossary("JavaScript")}} 는 웹 페이지의 복잡한 것들을 구현할 수 있는 프로그래밍 언어입니다. 웹페이지는 단순히 변하지 않고 정적인 정보들만 보여주는 것 이상의 일을 합니다. 시간의 흐름에 따라 업데이트 되는 콘텐츠, 동적인 지도와 움직이는 2D/3D 그래픽, 또는 스크롤 가능한 비디오 쥬크박스들과 여러 가지들을 보여줍니다. 여러분은 '아마도 JavaScript가 그 일들을 하고 있겠구나'라고 생각하실 수 있습니다.</p>
 
-<h2 id="학습_과정">학습 과정</h2>
+<div class="callout">
+  <h4 id="Looking_to_become_a_front-end_web_developer">프런트엔드 개발자가 되길 희망하나요?</h4>
 
-<p>JavaScript 는 HTML 이나 CSS 와 같은 관련 기술들보다 배우기가 더 어렵습니다. JavaScript 에 입문하기 전에, 적어도 아래의 두가지 기술을 먼저 배우고, 아마도 다른 것들도 배우는 것이 좋습니다. 다음 과정들을 통해 시작하세요.</p>
+  <p>우리는 모든 필수 정보를 포함하는 과정을 구성했습니다. 목표를 향해 노력할 일만 남았습니다.</p>
+
+  <p><a href="/ko/docs/Learn/Front-end_web_developer"><strong>시작하기</strong></a></p>
+
+</div>
+
+<h2 id="Prerequisites">선수 조건</h2>
+
+<p>JavaScript 는 <a href="/ko/docs/Learn/HTML">HTML</a> 이나 <a href="/ko/docs/Learn/CSS">CSS</a> 와 같은 관련 기술들보다 배우기가 더 어렵습니다. JavaScript 에 입문하기 전에, 적어도 아래의 두가지 기술을 먼저 배우고, 아마도 다른 것들도 배우는 것이 좋습니다. 다음 과정들을 통해 시작하세요.</p>
 
 <ul>
  <li><a href="/ko/docs/Learn/Getting_started_with_the_web">Web과 함께 시작하기</a></li>
- <li><a href="/ko/docs/Learn/HTML/Introduction_to_HTML">HTML 소개</a></li>
- <li><a href="/ko/docs/Learn/CSS/Introduction_to_CSS">CSS 소개</a></li>
+ <li><a href="/ko/docs/Learn/HTML/Introduction_to_HTML"><abbr title="Hypertext Markup Language">HTML</abbr> 소개</a></li>
+ <li><a href="/ko/docs/Learn/CSS/Introduction_to_CSS"><abbr title="Cascading Style Sheets">CSS</abbr> 소개</a></li>
 </ul>
 
 <p>다른 프로그래밍 언어를 배웠던 경험이 있다면 도움이 될 수도 있습니다.</p>
@@ -30,10 +39,10 @@ translation_of: Learn/JavaScript
 
 <ul>
  <li>JavaScript 심화, <a href="/ko/docs/Web/JavaScript/Guide">자바스크립트 안내서</a></li>
- <li><a href="/ko/docs/Web/API">웹 API 참조문서</a></li>
+ <li><a href="/ko/docs/Web/API">웹 <abbr title="application programming interface">APIs</abbr> 참조문서</a></li>
 </ul>
 
-<h2 id="과정">과정</h2>
+<h2 id="Modules">과정</h2>
 
 <p>이 주제에는 다음 과정들이 제안된 순서대로 포함되어 있습니다.</p>
 
@@ -52,11 +61,11 @@ translation_of: Learn/JavaScript
  <dd>클라이언트측의 웹사이트나 응용프로그램을 위해 JavaScript 를 작성하는 경우, 여러분은 브라우저와 운영체제 또는 다른 웹사이트의 데이터를 위한 API를 사용하기 전에 이상한 길에 빠지지 않을 겁니다. 이번 과정에서는 API 가 무엇인지, 그리고 개발 도중 자주 접하게 될 가장 보편적인 API들을 사용하는 방법에 대해 알아 볼 것입니다.</dd>
 </dl>
 
-<h2 id="일반적인_JavaScript_문제_해결">일반적인 JavaScript 문제 해결</h2>
+<h2 id="Solving_common_JavaScript_problems">일반적인 JavaScript 문제 해결</h2>
 
 <p><a href="/ko/docs/Learn/JavaScript/Howto">JavaScript 를 이용한 보편적인 문제 해결</a> 은 웹페이지를 만들 때 발생하는 일반적인 문제들을 JavaScript 로 해결하는 방법에 대한 링크들을 제공합니다.</p>
 
-<h2 id="관련_항목">관련 항목</h2>
+<h2 id="See_also">관련 항목</h2>
 
 <dl>
  <dt><a href="/ko/docs/Web/JavaScript">JavaScript on MDN</a></dt>

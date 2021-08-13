@@ -5,7 +5,7 @@ translation_of: Web/API/XMLHttpRequest/Using_XMLHttpRequest
 ---
 <p>{{APIRef("XMLHttpRequest")}}</p>
 
-<p><span class="seoSummary">En esta guía le echaremos un vistazo a cómo usar {{domxref("XMLHttpRequest")}} para enviar solicitudes <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP">HTTP</a> con el objetivo de intercambiar datos entre el sitio web y el servidor.</span> Se incluyen ejemplos, tanto para los casos de uso comunes de <code>XMLHttpRequest</code>, como para los más inusuales.</p>
+<p><span class="seoSummary">En esta guía le echaremos un vistazo a cómo usar {{domxref("XMLHttpRequest")}} para enviar solicitudes <a href="/en-US/docs/Web/HTTP">HTTP</a> con el objetivo de intercambiar datos entre el sitio web y el servidor.</span> Se incluyen ejemplos, tanto para los casos de uso comunes de <code>XMLHttpRequest</code>, como para los más inusuales.</p>
 
 <p>Para enviar una solicitud HTTP, cree un objeto <code>XMLHttpRequest</code>, abra una URL y envíe la solicitud. Una vez que la transacción haya sido completada, el objeto contendrá información útil tal como el cuerpo de la respuesta y el estado <a href="/en-US/docs/Web/HTTP/Status">HTTP</a> del resultado.</p>
 
@@ -83,7 +83,7 @@ req.send(null); </pre>
 <ol>
  <li><a href="/en/Code_snippets/HTML_to_DOM#Safely_parsing_simple_HTML.c2.a0to_DOM" title="https://developer.mozilla.org/en/Code_snippets/HTML_to_DOM#Safely_parsing_simple_HTML.c2.a0to_DOM">Analizar con nsIScriptableUnescapeHTML </a>repidamente convertira la cadena HTML en DOM, al mismo tiempo que tira javascript y otros elementos avanzados, incluyendo la etiqueta <code>&lt;head&gt;</code> de la página.</li>
  <li><a href="/es/Referencia_de_JavaScript_1.5/Objetos_globales/RegExp" title="es/Referencia de JavaScript 1.5/Objetos globales/RegExp">RegExp </a>se puede usar si de antemano conoces el HTML que vendra en el <code>responseText</code>. Quizas quieras remover los saltos de linea, si usas RegExp para escanear considerandolos. Sin embargo, este metodo es un "ultimo recurso" ya que si el HTML cambia ligeramente, posiblemente fallara.</li>
- <li><a href="/en/Code_snippets/HTML_to_DOM#Using_a_hidden_iframe_element_to_parse_HTML_to_a_window%27s_DOM" title="https://developer.mozilla.org/en/Code_snippets/HTML_to_DOM#Using_a_hidden_iframe_element_to_parse_HTML_to_a_window's_DOM">Usar un hidden chrome o un content-level iframe</a> para cargar toda la pagina también se puede hacer para manipularla luego como DOM, sin embargo existen <a href="/En/Displaying_web_content_in_an_extension_without_security_issues" title="En/Displaying_web_content_in_an_extension_without_security_issues">riesgos de seguridad al dar a código remoto este nivel de acceso privilegiado</a>, que puede causar <a class="link-https" href="https://addons.mozilla.org/en-US/developers/docs/policies/reviews" title="https://addons.mozilla.org/en-US/developers/docs/policies/reviews">problemas </a>en la revisión de tu addon. Por ejemplo, si una pagina ejecuta el comando común "<code>document.location = redirecttothispage.html</code>" para cargar, esto se interpretara como cambiar la locación del navegador (<code>document.location</code> en una extensión) en contraposición a la locación de una página web (<code>content.document.location</code> en una extensión), y en consecuecia destruir todos los componentes del navegador. Alternativamente, y de algun modo mas seguro, una cadena <code>responseText adquirida mediante</code> <code>XMLHttpRequest se puede analizar con</code> RegExp para remover problemas de javascript, luego cargada en un iframe oculto previamente  establecido:</li>
+ <li><a href="/en/Code_snippets/HTML_to_DOM#Using_a_hidden_iframe_element_to_parse_HTML_to_a_window%27s_DOM" title="https://developer.mozilla.org/en/Code_snippets/HTML_to_DOM#Using_a_hidden_iframe_element_to_parse_HTML_to_a_window's_DOM">Usar un hidden chrome o un content-level iframe</a> para cargar toda la pagina también se puede hacer para manipularla luego como DOM, sin embargo existen <a href="/En/Displaying_web_content_in_an_extension_without_security_issues" title="En/Displaying_web_content_in_an_extension_without_security_issues">riesgos de seguridad al dar a código remoto este nivel de acceso privilegiado</a>, que puede causar <a class="link-https" href="https://addons.mozilla.org/en-US/developers/docs/policies/reviews">problemas </a>en la revisión de tu addon. Por ejemplo, si una pagina ejecuta el comando común "<code>document.location = redirecttothispage.html</code>" para cargar, esto se interpretara como cambiar la locación del navegador (<code>document.location</code> en una extensión) en contraposición a la locación de una página web (<code>content.document.location</code> en una extensión), y en consecuecia destruir todos los componentes del navegador. Alternativamente, y de algun modo mas seguro, una cadena <code>responseText adquirida mediante</code> <code>XMLHttpRequest se puede analizar con</code> RegExp para remover problemas de javascript, luego cargada en un iframe oculto previamente  establecido:</li>
 </ol>
 
 <pre>document.getElementById('hiddenXULiframe').contentWindow.document.body.innerHTML = req.responseText
@@ -267,7 +267,7 @@ req.send(stream);
 
 <h3 id="In_Firefox_3.5_and_later">In Firefox 3.5 and later</h3>
 
-<p>Firefox 3.5 adds support for DOM progress event monitoring of <code>XMLHttpRequest</code> transfers; this follows the Web API <a class="external" href="http://dev.w3.org/2006/webapi/progress/Progress.html" title="http://dev.w3.org/2006/webapi/progress/Progress.html">specification for progress events</a>.</p>
+<p>Firefox 3.5 adds support for DOM progress event monitoring of <code>XMLHttpRequest</code> transfers; this follows the Web API <a class="external" href="http://dev.w3.org/2006/webapi/progress/Progress.html">specification for progress events</a>.</p>
 
 <pre class="script">var req = new XMLHttpRequest();
 
@@ -442,6 +442,6 @@ req.send(null);
  <li><a class="external" href="http://developer.apple.com/internet/webcontent/xmlhttpreq.html">Apple developers' reference</a></li>
  <li><a class="external" href="http://jibbering.com/2002/4/httprequest.html">"Using the XMLHttpRequest Object" (jibbering.com)</a></li>
  <li><a class="external" href="http://www.w3.org/TR/XMLHttpRequest/">The XMLHttpRequest Object: W3C Working Draft</a></li>
- <li><a class="external" href="http://dev.w3.org/2006/webapi/progress/Progress.html" title="http://dev.w3.org/2006/webapi/progress/Progress.html">Web Progress Events specification</a></li>
- <li><a class="external" href="http://www.bluishcoder.co.nz/2009/06/05/reading-ogg-files-with-javascript.html" title="http://www.bluishcoder.co.nz/2009/06/05/reading-ogg-files-with-javascript.html">Reading Ogg files with JavaScript (Chris Double)</a></li>
+ <li><a class="external" href="http://dev.w3.org/2006/webapi/progress/Progress.html">Web Progress Events specification</a></li>
+ <li><a class="external" href="http://www.bluishcoder.co.nz/2009/06/05/reading-ogg-files-with-javascript.html">Reading Ogg files with JavaScript (Chris Double)</a></li>
 </ol>

@@ -44,11 +44,13 @@ shape-image-threshold: unset;
 
 {{csssyntax}}
 
-<h2 id="范例">范例</h2>
+<h2 id="Examples">范例</h2>
+
+<h3 id="Aligning_text_to_a_gradient">Aligning text to a gradient</h3>
 
 <p>这个例子创建了一个{{HTMLElement("div")}}块，其背景是一个渐变图像。<code>shape-outside</code>也定义了一个渐变图像，以此创建一个CSS形状，渐变图像中不透明度至少为20%（即alpha值大于0.2）的像素都是形状的一部分。</p>
 
-<h3 id="HTML">HTML</h3>
+<h4 id="HTML">HTML</h4>
 
 <pre class="brush: html">&lt;div id="gradient-shape"&gt;&lt;/div&gt;
 
@@ -65,7 +67,7 @@ shape-image-threshold: unset;
   deleniti ipsum sequi rem eveniet laboriosam magni expedita?
 &lt;/p&gt;</pre>
 
-<h3 id="CSS">CSS</h3>
+<h4 id="CSS">CSS</h4>
 
 <pre class="brush: css; hightlight[9]">#gradient-shape {
   width: 150px;
@@ -82,9 +84,10 @@ shape-image-threshold: unset;
 
 <p>随后值为<code>0.2</code>的<code>shape-image-threshold</code>属性规定渐变中不透明度超过20%的像素才参与构成形状。</p>
 
-<h3 id="Result">Result</h3>
+<h4 id="Result">Result</h4>
 
-<p><iframe class="live-sample-frame sample-code-frame" frameborder="0" height="230" id="frame_Example" src="https://mdn.mozillademos.org/en-US/docs/Web/CSS/shape-image-threshold$samples/Example?revision=1598826" width="600"></iframe></p>
+<p>{{EmbedLiveSample('Aligning_text_to_a_gradient', 600, 230)}}</p>
+
 <h2 id="规范">规范</h2>
 
 <table class="standard-table">
@@ -109,7 +112,7 @@ shape-image-threshold: unset;
 <div>
 
 
-<p>{{Compat("css.properties.shape-image-threshold")}}</p>
+<p>{{Compat}}</p>
 </div>
 
 <h2 id="参见">参见</h2>

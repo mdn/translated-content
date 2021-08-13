@@ -24,7 +24,7 @@ RangeError: Provided date is not in valid range (Chrome)
 
 <p>{{jsxref("RangeError")}}</p>
 
-<h2 id="What_went_wrong">原因</h2>
+<h2 id="What_went_wrong">エラーの原因</h2>
 
 <p>無効な日付を示す文字列が {{jsxref("Date")}} または {{jsxref("Date.parse()")}} に渡されたことです。</p>
 
@@ -45,7 +45,7 @@ new Date('foo-bar 2014').toString();
 
 <p>詳細は {{jsxref("Date.parse()")}} のドキュメントをご覧ください。</p>
 
-<h3 id="Valid_cases">有効なケース</h3>
+<h3 id="Valid_cases">有効な場合</h3>
 
 <pre class="brush: js example-good">new Date('05 October 2011 14:48 UTC');
 new Date(1317826080); // Unix Time Stamp for 05 October 2011 14:48:00 UTC</pre>

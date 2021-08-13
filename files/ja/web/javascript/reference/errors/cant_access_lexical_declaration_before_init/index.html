@@ -2,30 +2,35 @@
 title: 'ReferenceError: can''t access lexical declaration`X'' before initialization'
 slug: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
 tags:
+  - Error
   - Errors
   - JavaScript
-  - ReferemceError
+  - ReferenceError
 translation_of: Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init
 ---
 <div>{{jsSidebar("Errors")}}</div>
 
-<h2 id="メッセージ">メッセージ</h2>
+<p>JavaScript の例外 "can't access lexical declaration `<em>variable</em>' before
+  initialization" は、語彙変数が初期化前にアクセスされたときに発生します。これはブロック文内で、 <code><a href="/ja/docs/Web/JavaScript/Reference/Statements/let">let</a></code> または <code><a href="/ja/docs/Web/JavaScript/Reference/Statements/const">const</a></code> 宣言が定義される前にアクセスされたときに発生します。</p>
 
-<pre class="syntaxbox">ReferenceError: can't access lexical declaration `X' before initialization (Firefox)
+<h2 id="Message">エラーメッセージ</h2>
+
+<pre class="brush: js">ReferenceError: Use before delaration (Edge)
+ReferenceError: can't access lexical declaration `X' before initialization (Firefox)
 ReferenceError: 'x' is not defined (Chrome)
 </pre>
 
-<h2 id="エラータイプ">エラータイプ</h2>
+<h2 id="Error_type">エラーの種類</h2>
 
 <p>{{jsxref("ReferenceError")}}</p>
 
-<h2 id="何がうまくいかなかったのか？">何がうまくいかなかったのか？</h2>
+<h2 id="What_went_wrong">エラーの原因</h2>
 
 <p>初期化前に語彙変数にアクセスしました。これはブロックステートメント内で、定義される前に<code><a href="/ja/docs/Web/JavaScript/Reference/Statements/let">let</a></code> か <code><a href="/ja/docs/Web/JavaScript/Reference/Statements/const">const</a></code> 宣言にアクセスすると発生します。</p>
 
-<h2 id="例">例</h2>
+<h2 id="Examples">例</h2>
 
-<h3 id="不正な場合">不正な場合</h3>
+<h3 id="Invalid_cases">不正な場合</h3>
 
 <p>この場合、変数 "foo" はブロックステートメント内で <code>let</code> を使用して再宣言されています。</p>
 
@@ -40,7 +45,7 @@ ReferenceError: 'x' is not defined (Chrome)
 test();
 </pre>
 
-<h3 id="有効な場合">有効な場合</h3>
+<h3 id="Valid_cases">有効な場合</h3>
 
 <p>"foo" を if ステートメント内に変更するには、再宣言の原因となる <code>let</code> を取り除きます。</p>
 
@@ -53,8 +58,8 @@ test();
 test();
 </pre>
 
-<h2 id="関連項目">関連項目</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Statements/let#Temporal_dead_zone_と_let_に関するエラー">Temporal dead zone と let に関するエラー</a></li>
+ <li><a href="/ja/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let">let における一時的なデッドゾーンとエラー</a></li>
 </ul>

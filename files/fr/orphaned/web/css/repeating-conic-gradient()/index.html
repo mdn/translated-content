@@ -1,0 +1,206 @@
+---
+title: repeating-conic-gradient()
+slug: orphaned/Web/CSS/repeating-conic-gradient()
+tags:
+  - CSS
+  - Dégradé
+  - Fonction
+  - Reference
+translation_of: Web/CSS/repeating-conic-gradient()
+original_slug: Web/CSS/repeating-conic-gradient()
+---
+<div>{{draft}} {{CSSRef}}</div>
+
+<p><span class="seoSummary">La fonction CSS <strong><code>repeating-conic-gradient()</code></strong> crée une image composée d'un dégradé conique répété. Elle permet d'avoir un motif répété qu'on pourrait décrire avec une seule itération grâce à {{cssxref('conic-gradient')}}. Le résultat fourni par la fonction <code>repeating-conic-gradient()</code> est une valeur de type {{CSSxRef("&lt;gradient&gt;")}} qui est un sous-type du type{{CSSxRef("&lt;image&gt;")}}.</span></p>
+
+<p>Si le premier ou le dernier arrêt de couleur inclut un angle supérieur à <code>0deg</code> ou inférieur à <code>360deg</code>, le dégradé conique ne sera pas répété.</p>
+
+<div>{{EmbedInteractiveExample("pages/css/function-repeating-conic-gradient.html")}}</div>
+
+<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuer à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
+
+<p>À l'instar des autres dégradés, les dégradés coniques répétés n'ont pas <a href="/fr/docs/Web/CSS/image#Les_types_d'images">de dimensions intrinsèques</a> (c'est-à-dire pas de taille naturelle ou préférée et pas de proportion préférée). La taille finale du dégradé sera la taille de l'élément sur lequel il est appliqué ou la taille indiquée par d'autres propriétés.</p>
+
+<p>Le type de donnée <code>&lt;gradient&gt;</code>s étant un sous-type d'<code>&lt;image&gt;</code>, on pourra utiliser les dégradés coniques répétés là où des valeurs de type <code>&lt;image&gt;</code> sont attendues. Ainsi, <code>repeating-conic-gradient()</code> ne fonctionnera pas pour la propriété {{CSSxRef("background-color")}} car celle-ci attend une valeur de type {{CSSxRef("&lt;color&gt;")}}.</p>
+
+<div class="blockIndicator note">
+<p><strong>Note :</strong> Afin de créer un dégradé conique qui ne se répète pas, on pourra utiliser la notation fonctionnelle {{CSSxRef("conic-gradient")}}.</p>
+</div>
+
+<h2 id="Comprendre_les_dégradés_coniques_répétés">Comprendre les dégradés coniques répétés</h2>
+
+<p>La syntaxe pour <code>repeating-conic-gradient</code> est semblable à celle de {{CSSxRef("conic-gradient")}} et à celle de {{CSSxRef("repeating-radial-gradient")}}. À l'instar du dégradé conique unitaire, les arrêts de couleur sont placés autour d'un arc. Comme pour les dégradés radiaux répétés, la taille de la portion répétée correspond au premier arrêt de couleur auquel on a soustrait l'angle du dernier arrêt de couleur.</p>
+
+<p><img alt="Comparison of the color stops for repeating and non-repeating conic and radial gradients" src="https://mdn.mozillademos.org/files/16798/repeatingconicgradient.png" style="height: 376px; width: 1403px;"></p>
+
+<p>Les dégradés ci-dessus sont définis avec un tiers de bleu, un tiers de rouge et un tiers de jaune.</p>
+
+<pre class="notranslate">repeating-conic-gradient(from 0deg, red 0deg 30deg, yellow 30deg 60deg, blue 60deg 90deg);
+
+repeating-radial-gradient(red 0 8%, yellow 8% 16%, blue 16% 24%);
+
+conic-gradient(red 120deg, yellow 120deg 240deg, blue 240deg);
+
+radial-gradient(red 33%, yellow 33% 66%, blue 66%);
+</pre>
+
+<p>Pour un dégradé répété, on définit le premier et le dernier arrêt de couleur. Si les valeurs ne sont pas explicitement définies, elles correspondent respectivement aux angles <code>0</code> et <code>360deg</code>. Lorsque ces valeurs sont utilisées par défaut, l'arc qui est répété occupe 360 degrés et il n'y a donc pas de répétition.</p>
+
+<p>Les arrêts de couleur sont placés autour d'un arc (et non sur une ligne qui s'écarte du centre). L'arc progresse dans le sens horaire.</p>
+
+<p>Un dégradé conique répété est défini en indiquant un angle de rotation, le centre du dégradé et une liste d'arrêts de couleur. Les arrêts de couleur sont définis avec un angle (type CSS {{cssxref('angle')}}). Les unités qui permettent de déclarer un angle sont <code>deg</code> (pour les degrés), <code>grad</code> (pour les grades), <code>rad</code> (pour les radians) et <code>turn</code> (pour les tours). Un cercle se compose de 360 degrés, 400 grade, 2π radians et d'un tour.</p>
+
+<p>Les navigateurs qui prennent en charge ces dégradés permettent également d'utiliser des valeurs en pourcentages (où 100% correspond à 360 degrés). Toutefois, ce comportement n'est pas décrit dans la spécification.</p>
+
+<p>La syntaxe de définition permet de placer le centre du dégradé à l'intérieur ou encore à l'extérieur de l'image. Les valeurs permettant de définir la position du centre s'écrivent comme la syntaxe à deux valeurs de  {{cssxref('background-position')}}.</p>
+
+<h3 id="Personnaliser_des_dégradés">Personnaliser des dégradés</h3>
+
+<p>En ajoutant des arrêts de couleur à l'arc du dégradé, il est possible de créer des dégradés sur mesures. La position d'un arrêt de couleur se définit via un {{CSSxRef("&lt;angle&gt;")}}. Si on n'indique pas de position pour un arrêt, celui-ci est placé à mi-parcours entre le précédent et le suivant. Si la position du premier ou du dernier arrêt ne sont pas définies, par défaut, ils seront placés à <code>0deg</code> et à <code>360deg</code> respectivement.</p>
+
+<p>Attention, lorsque ces valeurs par défaut sont utilisées, l'arc occupe tout le cercle et le dégradé n'est donc pas répété.</p>
+
+<p>Les deux formulations suivantes sont équivalentes :</p>
+
+<pre class="brush: css notranslate">repeating-conic-gradient(red, orange, yellow, green, blue 50%);
+repeating-conic-gradient(from -45deg, red 45deg, orange, yellow, green, blue 225deg)</pre>
+
+<p>Par défaut, les couleurs évoluent progressivement entre chaque arrêt et le milieur de l'arc correspondra à la moyenne des couleurs. Il est possible de déplacer ce point intermédiaire en fournissant une indication quant à l'emplacement du milieu de la transition.</p>
+
+<p>Si deux (voire plusieurs) couleurs sont au même emplacement, la transition sera une ligne brutale entre la première et la dernière couleur déclarées à cet emplacement.</p>
+
+<p>Bien qu'il soit possible de mélanger et de combiner différentes unités pour les angles, il est préférable d'éviter par souci de lisibilité / maintenabilité.</p>
+
+<h2 id="Syntaxe">Syntaxe</h2>
+
+<pre class="language-css notranslate" id="css">background: repeating-conic-gradient(
+    from 3deg at 25% 25%,
+    hsl(200, 100%, 50%) 0deg 15deg,
+    hsl(200, 100%, 60%) 10deg 30deg);
+);</pre>
+
+<h3 id="Values">Values</h3>
+
+<dl>
+ <dt>{{CSSxRef("&lt;angle&gt;")}}</dt>
+ <dd>Lorsque cet angle est précédé du mot-clé <code>from</code>, cela définit la rotation du dégradé dans le sens horaire.</dd>
+ <dt><code>&lt;position&gt;</code></dt>
+ <dd>Une position définie avec la même syntaxe que la propriété {{cssxref("background-position")}}. Cette position définit le centre du dégradé. Lorsque cette valeur est absente, la valeur utilisée par défaut est <code>center</code>, ce qui indique que le dégradé est centré.</dd>
+ <dt><code>&lt;angular-color-stop&gt;</code></dt>
+ <dd>Une valeur {{CSSxRef("&lt;color&gt;")}} pour un arrêt de couleur, suivie par une ou plusieurs positions d'arrêt (données par un {{CSSxRef("&lt;angle&gt;")}} le long de l'arc). La taille de l'arc répété pour le dégradé est donné par l'angle du dernier arrêt de couleur auquel on a soustrait l'angle du premier arrêt de couleur.</dd>
+ <dt><code>&lt;color-hint&gt;</code></dt>
+ <dd>Une indication d'interpolation qui définit la façon dont le dégradé progresse entre deux arrêts de couleurs adjacents. Cette indication indique l'emplacement où la couleur doit être la couleur intermédiaire entre les deux arrêts environnant. Si cette valeur est absente, la moitié de la transition entre les couleurs sera atteinte à la moitié de l'arc entre les deux arrêts.</dd>
+ <dd>
+ <div class="note">
+ <p><strong>Note :</strong> Le rendu des arrêts de couleur pour les dégradés CSS suit les mêmes règles que celui des arrêts de couleur pour <a href="/fr/docs/Web/SVG/Tutoriel/Gradients">les dégradés SVG</a>.</p>
+ </div>
+ </dd>
+</dl>
+
+<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+
+<pre class="syntaxbox notranslate">repeating-conic-gradient(
+  [ from &lt;angle&gt; ]? [ at &lt;position&gt; ]?, &lt;angular-color-stop-list&gt; )
+  \---------------------------------/ \----------------------------/
+        Définition du dégradé            Liste d'arrêts de couleur
+
+where &lt;angular-color-stop-list&gt; = [ &lt;angular-color-stop&gt; [, &lt;angular-color-hint&gt;]? ]# , &lt;angular-color-stop&gt;
+  and &lt;angular-color-stop&gt; = &lt;color&gt; &amp;&amp; &lt;color-stop-angle&gt;?
+  and &lt;angular-color-hint&gt; = &lt;angle-percentage&gt;
+  and &lt;color-stop-angle&gt; = &lt;angle-percentage&gt;{1,2}</pre>
+
+<h2 id="Exemples">Exemples</h2>
+
+<div>
+<h3 id="Noir_et_blanc">Noir et blanc</h3>
+
+<div class="hidden">
+<pre class="brush: css notranslate">div {
+  width: 200px;
+  height: 200px;
+}</pre>
+
+<pre class="brush: html notranslate">&lt;div&gt;&lt;/div&gt;
+</pre>
+</div>
+
+<pre class="brush: css notranslate">div {
+  background-image:
+     repeating-conic-gradient(#fff 0 9deg, #000 9deg 18deg);
+}
+</pre>
+
+<p>{{EmbedLiveSample("Noir_et_blanc", 220, 220)}}</p>
+</div>
+
+<div>
+<h3 id="Dégradé_désaxé">Dégradé désaxé</h3>
+
+<div class="hidden">
+<pre class="brush: css notranslate">div {
+  width: 200px;
+  height: 200px;
+}</pre>
+
+<pre class="brush: html notranslate">&lt;div&gt;&lt;/div&gt;
+</pre>
+</div>
+
+<pre class="brush: css notranslate">div {
+  background: repeating-conic-gradient(
+    from 3deg at 25% 25%,
+    green, blue 2deg 5deg, green, yellow 15deg 18deg, green 20deg);
+}</pre>
+
+<p>{{EmbedLiveSample("Dégradé_désaxé", 220, 220)}}</p>
+
+<p>Le degradé est répété 18 fois mais on en voit que la moitié droite et on voit donc 9 répétitions.</p>
+</div>
+
+<div class="note">
+<p><strong>Note :</strong> Voir la page <a href="/fr/docs/Web/CSS/Utilisation_de_dégradés_CSS">Utiliser les dégradés en CSS</a> pour plus d'exemples.</p>
+</div>
+
+<h2 id="Accessibilité">Accessibilité</h2>
+
+<p>Les navigateurs ne fournissent pas d'informations spécifiques aux outils d'assistance quant aux images d'arrière-plan. Les lecteurs d'écran ne pourront donc pas annoncer le sens de l'image aux utilisateurs. Bien qu'il soit possible de créer des camemberts, damiers, etc. avec CSS, si l'image contient des informations critiques pour la compréhension générale de la page, mieux vaudra décrire ces informations de façon sémantique dans le document.</p>
+
+<ul>
+ <li><a href="/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.1_%E2%80%94_Providing_text_alternatives_for_non-text_content">Comprendre les règles du WCAG 1.1</a></li>
+ <li><a href="https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html">Understanding Success Criterion 1.1.1 - W3C Understanding WCAG 2.0 (en anglais)</a></li>
+</ul>
+
+<h2 id="Spécifications">Spécifications</h2>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">Spécification</th>
+   <th scope="col">État</th>
+   <th scope="col">Commentaires</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>{{SpecName('CSS4 Images', '#repeating-gradients', 'repeating-conic-gradient()')}}</td>
+   <td>{{Spec2('CSS4 Images')}}</td>
+   <td></td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+
+<div>{{Compat("css.types.image.gradient.conic-gradient")}}</div>
+
+<h2 id="Voir_aussi">Voir aussi</h2>
+
+<ul>
+ <li><a href="/fr/docs/Web/CSS/Utilisation_de_dégradés_CSS">Manipuler les dégradés en CSS</a></li>
+ <li>Les autres fonctions relatives aux dégradés : {{CSSxRef("conic-gradient")}}, {{CSSxRef("linear-gradient")}}, {{CSSxRef("repeating-linear-gradient")}}, {{CSSxRef("radial-gradient")}}, {{CSSxRef("repeating-radial-gradient")}}</li>
+ <li>{{cssxref("&lt;image&gt;")}}</li>
+ <li>{{cssxref("_image","image()")}}</li>
+ <li>{{cssxref("element()")}}</li>
+ <li>{{cssxref("image-set","image-set()")}}</li>
+ <li>{{cssxref("cross-fade")}}</li>
+</ul>

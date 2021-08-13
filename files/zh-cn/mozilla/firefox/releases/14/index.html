@@ -39,7 +39,7 @@ translation_of: Mozilla/Firefox/Releases/14
 <h3 id="CSS">CSS</h3>
 
 <ul>
- <li>The {{ cssxref("text-transform") }} and {{ cssxref("font-variant") }} CSS properties have been fixed to correctly handle the <code>i</code> → <code>İ</code> and <code>ı</code> → <code>I</code> <a class="external" href="http://en.wikipedia.org/wiki/Turkic_languages" title="http://en.wikipedia.org/wiki/Turkic_languages">Turkic</a>-specific case pairs.</li>
+ <li>The {{ cssxref("text-transform") }} and {{ cssxref("font-variant") }} CSS properties have been fixed to correctly handle the <code>i</code> → <code>İ</code> and <code>ı</code> → <code>I</code> <a class="external" href="http://en.wikipedia.org/wiki/Turkic_languages">Turkic</a>-specific case pairs.</li>
  <li>The Dutch IJ digraph is now correctly handled by <code>text-transform: capitalization</code>. Similarly the Greek letter <code>Σ</code>, which has two lowercase forms, <code>σ</code> and <code>ς</code>, is now correctly handled by <code>text-transform: lowercase</code>.</li>
  <li>Support for the <code>skew()</code> function has been removed from {{cssxref("transform")}} property, as it has been removed from the draft standard.</li>
  <li>The syntax for {{ cssxref("border-image") }} has been updated to match the latest revision of the specification; it no longer accepts a trailing slash ("/").</li>
@@ -58,7 +58,7 @@ translation_of: Mozilla/Firefox/Releases/14
 <h3 id="HTTP">HTTP</h3>
 
 <ul>
- <li>Gecko开始支持新的<a href="/zh-cn/HTTP" title="HTTP">HTTP</a> <a href="/zh-cn/HTTP/HTTP_response_codes#308" title="https://developer.mozilla.org/zh-cn/HTTP/HTTP_response_codes#308"><code>308</code>永久重定向</a> 状态码. 由于Gecko并不区分永久重定向和零食重定向,所以该状态码的表现行为和<a href="/zh-cn/HTTP/HTTP_response_codes#307" title="https://developer.mozilla.org/zh-cn/HTTP/HTTP_response_codes#307"><code>307 临时重定向</code></a>状态码是一样的, 和302以及301状态码的区别是,它们禁止用户代理改变重定之后的HTTP方法(<code>POST还是</code><code>POST</code>, <code>GET</code>还是<code>GET</code>).</li>
+ <li>Gecko开始支持新的<a href="/zh-cn/HTTP" title="HTTP">HTTP</a> <a href="/zh-cn/HTTP/HTTP_response_codes#308"><code>308</code>永久重定向</a> 状态码. 由于Gecko并不区分永久重定向和零食重定向,所以该状态码的表现行为和<a href="/zh-cn/HTTP/HTTP_response_codes#307"><code>307 临时重定向</code></a>状态码是一样的, 和302以及301状态码的区别是,它们禁止用户代理改变重定之后的HTTP方法(<code>POST还是</code><code>POST</code>, <code>GET</code>还是<code>GET</code>).</li>
 </ul>
 
 <h2 id="Changes_for_Mozilla_and_add-on_developers">Changes for Mozilla and add-on developers</h2>
@@ -70,7 +70,7 @@ translation_of: Mozilla/Firefox/Releases/14
 <ul>
  <li>Added a keyboard shortcut to toggle commenting for the current selection (Ctrl-/ or Cmd-/ on Mac OS X).</li>
  <li>Added the Ctrl-[ and Ctrl-] keyboard shortcuts for moving the text input position to the beginning and end of the current block.</li>
- <li>Added the new <a href="/zh-cn/JavaScript_code_modules/source-editor.jsm#getLineStart%28%29" title="zh-cn/JavaScript_code_modules/source-editor.jsm#getLineStart%28%29"><code>getLineStart()</code></a> and <a href="/zh-cn/JavaScript_code_modules/source-editor.jsm#getLineEnd%28%29" title="zh-cn/JavaScript_code_modules/source-editor.jsm#getLineEnd%28%29"><code>getLineEnd()</code></a> methods.</li>
+ <li>Added the new <a href="/zh-cn/JavaScript_code_modules/source-editor.jsm#getLineStart%28%29"><code>getLineStart()</code></a> and <a href="/zh-cn/JavaScript_code_modules/source-editor.jsm#getLineEnd%28%29"><code>getLineEnd()</code></a> methods.</li>
 </ul>
 
 <h3 id="XUL">XUL</h3>
@@ -82,15 +82,15 @@ translation_of: Mozilla/Firefox/Releases/14
 <h3 class="editable" id="接口"><span>接口</span></h3>
 
 <ul>
- <li>{{ interface("nsILocalFile") }}接口被合并到{{ interface("nsIFile") }}接口中. (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=682360" title="https://bugzilla.mozilla.org/show_bug.cgi?id=682360">bug 682360</a>).</li>
- <li>The methods in {{ interface("nsIPlacesImportExportService") }} for importing bookmarks have all been removed in favor of the <code><a href="/zh-cn/JavaScript_code_modules/BookmarkHTMLUtils.jsm" title="zh-cn/JavaScript_code_modules/BookmarkHTMLUtils.jsm">BookmarkHTMLUtils.jsm</a></code> JavaScript code module.</li>
+ <li>{{ interface("nsILocalFile") }}接口被合并到{{ interface("nsIFile") }}接口中. (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=682360">bug 682360</a>).</li>
+ <li>The methods in {{ interface("nsIPlacesImportExportService") }} for importing bookmarks have all been removed in favor of the <code><a href="/zh-cn/JavaScript_code_modules/BookmarkHTMLUtils.jsm">BookmarkHTMLUtils.jsm</a></code> JavaScript code module.</li>
  <li>{{ interface("nsIDOMGeoPositionAddress") }} 接口已被移除.</li>
 </ul>
 
 <h3 id="拼写检查">拼写检查</h3>
 
 <ul>
- <li>Dictionary names are now parsed as full <a class="external" href="http://tools.ietf.org/html/bcp47" title="http://tools.ietf.org/html/bcp47">BCP 47</a> language tags (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=730209" title="https://bugzilla.mozilla.org/show_bug.cgi?id=730209">bug 730209</a>, <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=741842" title="https://bugzilla.mozilla.org/show_bug.cgi?id=741842">bug 741842</a>). Developers are encouraged to not hard-code the name of their language in their dictionary names.</li>
+ <li>Dictionary names are now parsed as full <a class="external" href="http://tools.ietf.org/html/bcp47">BCP 47</a> language tags (<a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=730209">bug 730209</a>, <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=741842">bug 741842</a>). Developers are encouraged to not hard-code the name of their language in their dictionary names.</li>
 </ul>
 
 <h2 id="相关链接">相关链接</h2>

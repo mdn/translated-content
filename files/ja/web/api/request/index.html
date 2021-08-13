@@ -10,31 +10,34 @@ tags:
   - Reference
   - request
 translation_of: Web/API/Request
+browser-compat: api.Request
 ---
 <div>{{APIRef("Fetch API")}}</div>
 
-<p><a href="/ja/docs/Web/API/Fetch_API">Fetch API</a> の <strong><code>Request</code></strong> インターフェイスは、リソースのリクエストを表します。</p>
+<p><strong><code>Request</code></strong> は <a href="/ja/docs/Web/API/Fetch_API">Fetch API</a> のインターフェイスで、リソースのリクエストを表します。</p>
 
-<p>新しい <code>Request</code> オブジェクトは {{domxref("Request.Request()")}} コンストラクターを用いて生成することができますが、 <code>Request</code> オブジェクトは他の API 操作、例えばサービスワーカーの {{domxref("FetchEvent.request")}} などの結果として返されたものに遭遇することの方が多いでしょう。</p>
+<p>新しい <code>Request</code> オブジェクトは {{domxref("Request.Request","Request()")}} コンストラクターを用いて生成することができますが、 <code>Request</code> オブジェクトは他の API 操作、例えばサービスワーカーの {{domxref("FetchEvent.request")}} などの結果として返されたものに遭遇することの方が多いでしょう。</p>
 
-<h2 id="Constructor" name="Constructor">コンストラクター</h2>
+<h2 id="Constructor">コンストラクター</h2>
 
 <dl>
  <dt>{{domxref("Request.Request","Request()")}}</dt>
  <dd>新しい <code>Request</code> オブジェクトを生成します。</dd>
 </dl>
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+<h2 id="Properties">プロパティ</h2>
 
 <dl>
+ <dt>{{domxref("Request.body")}} {{readonlyInline}}</dt>
+ <dd>body の中身を {{domxref("ReadableStream")}} として取り出すために使用されるシンプルなゲッターです。</dd>
+ <dt>{{domxref("Request.bodyUsed")}} {{readonlyInline}}</dt>
+ <dd><code>true</code> または <code>false</code> で、レスポンス中で本文が既に使用されたかどうかを示します。</dd>
  <dt>{{domxref("Request.cache")}} {{readonlyInline}}</dt>
  <dd>リクエストのキャッシュモード (<code>default</code>, <code>reload</code>, <code>no-cache</code> など) が入ります。</dd>
- <dt>{{domxref("Request.context")}} {{readonlyInline}} {{deprecated_inline()}}</dt>
- <dd>リクエストのコンテキスト (<code>audio</code>, <code>image</code>, <code>iframe</code> など) が入ります。</dd>
  <dt>{{domxref("Request.credentials")}} {{readonlyInline}}</dt>
  <dd>リクエストの認証情報 (<code>omit</code>, <code>same-origin</code>, <code>include</code> など) が入ります。既定値は <code>same-origin</code> です。</dd>
  <dt>{{domxref("Request.destination")}} {{ReadOnlyInline}}</dt>
- <dd>{{domxref("RequestDestination")}} 列挙型の文字列で、リクエストの方向を示します。これはその種類のコンテンツがリクエストされることを示す文字列です。</dd>
+ <dd>文字列で、リクエストの方向を示します。これはその種類のコンテンツがリクエストされることを示す文字列です。</dd>
  <dt>{{domxref("Request.headers")}} {{readonlyInline}}</dt>
  <dd>リクエストに関連付けられた {{domxref("Headers")}} オブジェクトが入ります。</dd>
  <dt>{{domxref("Request.integrity")}} {{readonlyInline}}</dt>
@@ -53,48 +56,34 @@ translation_of: Web/API/Request
  <dd>リクエストの URL が入ります。</dd>
 </dl>
 
-<p><code>Request</code> は {{domxref("Body")}} を実装しているため、以下のプロパティを継承しています。</p>
-
-<dl>
- <dt>{{domxref("Body.body", "body")}} {{readonlyInline}}</dt>
- <dd>body の中身を {{domxref("ReadableStream")}} として取り出すために使用されるシンプルなゲッターです。</dd>
- <dt>{{domxref("Body.bodyUsed", "bodyUsed")}} {{readonlyInline}}</dt>
- <dd>{{domxref("Boolean")}} であり、レスポンス中で本文が既に使用されたかどうかを示します。</dd>
-</dl>
-
 <h2 id="Methods" name="Methods">メソッド</h2>
 
 <dl>
+ <dt>{{domxref("Request.arrayBuffer()")}}</dt>
+ <dd>リクエスト本体を表す {{jsxref("ArrayBuffer")}} で解決するプロミスを返します。</dd>
+ <dt>{{domxref("Request.blob()")}}</dt>
+ <dd>リクエスト本体を表す {{domxref("Blob")}} で解決するプロミスを返します。</dd>
  <dt>{{domxref("Request.clone()")}}</dt>
  <dd>現在の <code>Request</code> オブジェクトのコピーを生成します。</dd>
-</dl>
-
-<p><code>Request</code> は {{domxref("Body")}} を実装しているため、以下のメソッドも利用できます。</p>
-
-<dl>
- <dt>{{domxref("Body.arrayBuffer()")}}</dt>
- <dd>リクエスト本体を表す {{domxref("ArrayBuffer")}} で解決する Promise が返ります。</dd>
- <dt>{{domxref("Body.blob()")}}</dt>
- <dd>リクエスト本体を表す {{domxref("Blob")}} で解決する Promise が返ります。</dd>
- <dt>{{domxref("Body.formData()")}}</dt>
- <dd>リクエスト本体を表す {{domxref("FormData")}} で解決する Promise が返ります。</dd>
- <dt>{{domxref("Body.json()")}}</dt>
- <dd>リクエスト本体を表す {{domxref("JSON")}} で解決する Promise が返ります。</dd>
- <dt>{{domxref("Body.text()")}}</dt>
- <dd>リクエスト本体を表す {{domxref("USVString")}} (テキスト) で解決する Promise が返ります。</dd>
+ <dt>{{domxref("Request.formData()")}}</dt>
+ <dd>リクエスト本体を表す {{domxref("FormData")}} で解決するプロミスを返します。</dd>
+ <dt>{{domxref("Request.json()")}}</dt>
+ <dd>リクエスト本体を表す {{domxref("JSON")}} で解決するプロミスを返します。</dd>
+ <dt>{{domxref("Request.text()")}}</dt>
+ <dd>リクエスト本体を表す {{domxref("USVString")}} (テキスト) で解決するプロミスを返します。</dd>
 </dl>
 
 <div class="note">
-<p><strong>メモ</strong>: {{domxref("Body")}} の関数は 1 度しか呼び出せません。 2 回目以降は空の文字列または ArrayBuffer で解決します。</p>
+<p><strong>メモ</strong>: リクエスト本文の関数は 1 度しか呼び出せません。 2 回目以降は空の文字列または ArrayBuffer で解決します。</p>
 </div>
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
 <p>次のスニペットでは、<code>Request()</code> コンストラクターを使用して (スクリプトと同じディレクトリーにある画像ファイルのために) 新しい request を生成し、いくつかリクエストのプロパティ値を返しています。</p>
 
 <pre class="brush: js">const request = new Request('https://www.mozilla.org/favicon.ico');
 
-const URL = request.url;
+const url = request.url;
 const method = request.method;
 const credentials = request.credentials;
 </pre>
@@ -111,7 +100,7 @@ const credentials = request.credentials;
 
 <pre class="brush: js">const request = new Request('https://example.com', {method: 'POST', body: '{"foo": "bar"}'});
 
-const URL = request.url;
+const url = request.url;
 const method = request.method;
 const credentials = request.credentials;
 const bodyUsed = request.bodyUsed;
@@ -121,7 +110,7 @@ const bodyUsed = request.bodyUsed;
 <p><strong>メモ:</strong> body の型は {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}} {{domxref("ReadableStream")}} のいずれかで、ペイロードにそのオブジェクトを文字列化するのに必要な JSON オブジェクトでも同様です。</p>
 </div>
 
-<p>すると <code>Request</code> オブジェクトを、例えば {{domxref("GlobalFetch.fetch()")}} 呼び出しの引数として渡すことで API リクエストを取得できて、レスポンスを取得できます。</p>
+<p>すると <code>Request</code> オブジェクトを、例えば {{domxref("WindowOrWorkerGlobalScope.fetch()")}} 呼び出しの引数として渡すことで API リクエストを取得できて、レスポンスを取得できます。</p>
 
 <pre class="brush: js">fetch(request)
   .then(response =&gt; {
@@ -138,35 +127,18 @@ const bodyUsed = request.bodyUsed;
     console.error(error);
   });</pre>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications">仕様書</h2>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Fetch','#request-class','Request')}}</td>
-   <td>{{Spec2('Fetch')}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
+<p>{{Compat}}</p>
 
-<p>{{Compat("api.Request")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
- <li><a href="/ja/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
- <li><a href="/ja/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
+ <li><a href="/ja/docs/Web/API/Service_Worker_API">ServiceWorker API</a></li>
+ <li><a href="/ja/docs/Web/HTTP/CORS">HTTP アクセス制御 (CORS)</a></li>
  <li><a href="/ja/docs/Web/HTTP">HTTP</a></li>
 </ul>

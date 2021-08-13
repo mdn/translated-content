@@ -16,8 +16,6 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/RelativeTimeFormat
 
 <div>{{EmbedInteractiveExample("pages/js/intl-relativetimeformat.html")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <h2 id="Syntaxe">Syntaxe</h2>
 
 <pre>new Intl.RelativeTimeFormat([<var>locales</var>[, <var>options</var>]])</pre>
@@ -32,16 +30,11 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Intl/RelativeTimeFormat
  <dt><code>options</code> {{optional_inline}}</dt>
  <dd>
  <p>Optionnel, un objet possédant tout ou partie des propriétés suivantes :</p>
- </dd>
- <dd>
  <dl>
   <dt><code>localeMatcher</code></dt>
   <dd>L'algorithme de correspondance à utiliser pour la locale. Les valeurs possibles sont <code>"lookup"</code> et <code>"best fit"</code> ; le défaut est <code>"best fit"</code>. Pour des informations sur cette option, voir la page {{jsxref("Objets_globaux/Intl","Intl","##Choix_de_la_locale")}}.</dd>
   <dt><code>numeric</code></dt>
   <dd>Le format du message de sortie. Les valeurs possibles sont <code>"always"</code> (par exemple <code>1 day ago</code>) ou  <code>"auto"</code> (par exemple <code>yesterday</code>). <code>"auto"</code> permet de ne pas toujours avoir de valeurs numériques dans le message produit.</dd>
- </dl>
-
- <dl>
   <dt><code>style</code></dt>
   <dd>La longueur du message internationalisé. Les valeurs possibles sont : <code>"long"</code> (la valeur par défaut) (par exemple : <code>in 1 month</code>), <code>"short"</code> (par exemple : <code>in 1 mo.</code>) ou  <code>"narrow"</code> (par exemple : <code>in 1 mo.</code>). Le style <code>narrow</code> peut être semblable au style <code>short</code> pour certaines locales.</dd>
  </dl>
@@ -151,8 +144,6 @@ rtf.formatToParts(100, "day");
 </table>
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<div class="hidden">Le tableau de compatibilité de cette page a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à consulter <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> et à nous envoyer une <em>pull request</em>.</div>
 
 <p>{{Compat("javascript.builtins.Intl.RelativeTimeFormat")}}</p>
 

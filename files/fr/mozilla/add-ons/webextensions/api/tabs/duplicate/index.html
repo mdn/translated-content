@@ -1,81 +1,88 @@
 ---
 title: tabs.duplicate()
 slug: Mozilla/Add-ons/WebExtensions/API/tabs/duplicate
-tags:
-  - API
-  - Add-ons
-  - Duplicate
-  - Extensions
-  - Method
-  - Non-standard
-  - Reference
-  - WebExtensions
-  - onglets
-  - tabs
 translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/duplicate
+browser-compat: webextensions.api.tabs.duplicate
 ---
 <div>{{AddonSidebar()}}</div>
 
-<p>Duplique un onglet dont l’identifiant est donné.</p>
+<p>Duplique un onglet dont l'identifiant est donné.</p>
 
-<p>C'est une fonction asynchrone qui renvoie une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code>.</p>
+<p>Il s'agit d'une fonction asynchrone qui renvoie une <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">promesse (<code>Promise</code>)</a>.</p>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+<h2 id="syntax">Syntaxe</h2>
 
-<pre class="syntaxbox brush:js">var duplicating = browser.tabs.duplicate(
-  tabId              // integer
-)
+<pre class="brush:js">
+let duplicating = browser.tabs.duplicate(
+  tabId,              // entier
+  duplicateProperties // objet optionnel
+);
 </pre>
 
-<h3 id="Paramètres">Paramètres</h3>
+<h3 id="parameters">Paramètres</h3>
 
 <dl>
  <dt><code>tabId</code></dt>
  <dd><code>integer</code>. L'identifiant de l'onglet à dupliquer.</dd>
+ <dt><code>duplicateProperties</code> Optionnel</dt>
+ <dd><code>object</code>. Un objet décrivant la façon dont l'onglet est dupliqué. Il contient les propriétés suivantes :</dd>
+ <dd>
+ <dl>
+  <dt><code><var>index</var></code> Optionnel</dt>
+  <dd><code>integer</code>. La position du nouvel onglet dans la fenêtre. La valeur est restreinte à l'intervalle entre zéro et le nombre d'onglets dans la fenêtre.</dd>
+  <dt><code><var>active</var></code> Optionnel</dt>
+  <dd>
+  <p><code>boolean</code>. Si l'onglet devient l'onglet actif dans la fenêtre. Cela ne change pas l'état du focus pour la fenêtre. <code>true</code> par défaut.</p>
+  </dd>
+ </dl>
+ </dd>
 </dl>
 
-<h3 id="valeur_retournée">valeur retournée</h3>
+<h3 id="return_value">Valeur de retour</h3>
 
-<p>Une <code><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promise</a></code> qui sera remplie avec un objet {{WebExtAPIRef('tabs.Tab')}} contenant des détails sur l'onglet dupliqué. L'objet <code>onglet</code> contient uniquement <code>url</code>, <code>title</code> et <code>favIconUrl</code> si l'extension a la <a href="/en-US/Add-ons/WebExtensions/manifest.json/permissions"> permission <code>"tabs"</code></a>. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.</p>
+<p>Une <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise">promesse (<code>Promise</code>)</a> dont la valeur de résolution sera un objet <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab"><code>tabs.Tab</code></a> contenant des détails sur l'onglet dupliqué. L'objet <code>Tab</code> contiendra les propriétés <code>url</code>, <code>title</code> et <code>favIconUrl</code> uniquement si l'extension dispose de la <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions"> permission <code>"tabs"</code></a> ou lorsque <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions">l'hôte correspond à un hôte ciblé dans les permissions</a>. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.</p>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: A partir de Firefox 68, la promise retournée par browser.tabs.duplicate() se résout dès que l'onglet a été dupliqué. Auparavant, la promise n'était résolue qu'une fois l'onglet entièrement chargé.</p>
+<div class="note">
+<p><strong>Note</strong> : À partir de Firefox 68, la promesse renvoyée par <code>browser.tabs.duplicate()</code> se résout dès que l'onglet a été dupliqué. Auparavant, la promesse n'était résolue qu'une fois l'onglet entièrement chargé.</p>
 </div>
 
 <h2 id="Exemples">Exemples</h2>
 
-<p><span id="result_box" lang="fr"><span>Duplique le premier onglet, puis affiche l'ID de l'onglet nouvellement créé :</span></span></p>
+<p>Duplique le premier onglet, puis affiche l'identifiant de l'onglet nouvellement créé :</p>
 
-<pre class="brush: js">function onDuplicated(tabInfo) {
+<pre class="brush: js">
+function onDuplicated(tabInfo) {
   console.log(tabInfo.id);
 }
 
 function onError(error) {
-  console.log(`Error: ${error}`);
+  console.error(error);
 }
 
-// Duplicate the first tab in the array
+// Duplique le premier onglet du tableau
 function duplicateFirstTab(tabs) {
   console.log(tabs);
   if (tabs.length &gt; 0) {
-    var duplicating = browser.tabs.duplicate(tabs[0].id);
+    let duplicating = browser.tabs.duplicate(tabs[0].id);
     duplicating.then(onDuplicated, onError);
   }
 }
 
-// Query for all open tabs
-var querying = browser.tabs.query({});
+// On récupère tous les onglets ouverts
+let querying = browser.tabs.query({});
 querying.then(duplicateFirstTab, onError);</pre>
 
-<p>{{WebExtExamples}}</p>
+<h3 id="example_extensions">Exemple d'extensions</h3>
 
-<h2 id="Compatibilité_du_navigateur">Compatibilité du navigateur</h2>
+<ul>
+  <li><a href="https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs">tabs-tabs-tabs</a></li>
+</ul>
 
-<p class="hidden">The compatibility table in this page is generated from structured data. If you'd like to contribute to the data, please check out <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> and send us a pull request.</p>
+<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
 
-<p>{{Compat("webextensions.api.tabs.duplicate")}}</p>
+<p>{{Compat}}</p>
 
-<div class="note"><strong>Remerciements :</strong>
+<div class="note"><strong>Remerciements</strong>
 
 <p>Cette API est basée sur l'API Chromium <a href="https://developer.chrome.com/extensions/tabs#method-executeScript"><code>chrome.tabs</code></a>. Cette documentation est dérivée de <a href="https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json"><code>tabs.json</code></a> dans le code de Chromium code.</p>
 

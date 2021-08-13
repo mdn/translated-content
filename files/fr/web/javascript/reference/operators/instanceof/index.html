@@ -16,8 +16,6 @@ original_slug: Web/JavaScript/Reference/Opérateurs/instanceof
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-instanceof.html")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="syntaxbox notranslate"><em>objet</em> instanceof <em>constructeur</em></pre>
@@ -27,9 +25,6 @@ original_slug: Web/JavaScript/Reference/Opérateurs/instanceof
 <dl>
  <dt><code>objet</code></dt>
  <dd>L'objet qu'on souhaite analyser.</dd>
-</dl>
-
-<dl>
  <dt><code>constructeur</code></dt>
  <dd>La fonction dont on souhaite vérifier la présence dans la chaîne de prototypes.</dd>
 </dl>
@@ -75,9 +70,6 @@ o3 instanceof C; // true car C.prototype fait partie de la chaîne de o3
 <p>Cela peut être contre-intuitif au début, mais lorsqu'il est nécessaire de travailler avec plusieurs frames ou fenêtres, et que des objets sont transférés via des fonctions, cela sera un obstacle valide et important. Par contre, il est tout à fait possible d'utiliser <code>Array.isArray(myObj)</code> pour vérifier de manière sécurisée qu'un tableau est effectivement un tableau.</p>
 
 <p>Ainsi, pour vérifier qu'un <a href="/fr/docs/Web/API/Node">nœud</a> est bien un objet de type <a href="/fr/docs/Web/API/SVGElement">SVGElement</a> dans un autre contexte, on pourra utiliser <code>monNœud instanceof monNœud.documentMaitre.vue.SVGElement</code>.</p>
-
-<div class="note"><strong>Note aux développeurs Mozilla :</strong><br>
-Dans un code utilisant XPCOM, <code>instanceof</code> a un comportement particulier : <code>obj instanceof </code><em><code>xpcomInterface</code></em> (ex : <code>Components.interfaces.nsIFile</code>) appelle <code>obj.QueryInterface(<em>xpcomInterface</em>)</code> et retourne <code>true</code> si QueryInterface réussit. Un effet indésirable à cela est qu'il est possible d'utiliser les propriétés de <em><code>xpcomInterface</code></em> sur <code>obj</code> après un test réussi d'<code>instanceof</code>. Contrairement au JavaScript classique, <code>obj instanceof xpcomInterface </code>fonctionnera comme prévu même si <code>obj</code> appartient à un autre niveau d'organisation (fenêtre, frame, etc.).</div>
 
 <h2 id="Exemples">Exemples</h2>
 
@@ -161,8 +153,6 @@ var b = mavoiture instanceof Object;  // retourne true
 </table>
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<div class="hidden">Ce tableau de compatibilité a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à envoyer une <em>pull request</em> sur <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>.</div>
 
 <p>{{Compat("javascript.operators.instanceof")}}</p>
 

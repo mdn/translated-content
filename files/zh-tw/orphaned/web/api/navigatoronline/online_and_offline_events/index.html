@@ -1,0 +1,102 @@
+---
+title: Firefox 3 Online and Offline Events
+slug: orphaned/Web/API/NavigatorOnLine/Online_and_offline_events
+translation_of: Web/API/NavigatorOnLine/Online_and_offline_events
+original_slug: Web/API/NavigatorOnLine/Online_and_offline_events
+---
+<p>Firefox 3 Online and Offline Events From MoztwWiki</p>
+<p>Firefox 3 依據 <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/">WHATWG Web Applications 1.0 Specification</a> 實做了 <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#offline">Offline/Online Events</a>。</p>
+<h3 id=".E6.A6.82.E8.A7.80" name=".E6.A6.82.E8.A7.80">概觀</h3>
+<p>打造可以離線跑的網路應用程式時，我們往往需要讓程式知道目前的網路狀況。實際上，網路應用程式一般的需求可細分如下：</p>
+<ul>
+ <li>使用者連上網路的時候，網路應用程式必須知道—使用者已經連上網路了，以便與伺服器同步(re-synchronize)。</li>
+ <li>使用者離線的時候，網路應用程式必須知道—使用者目前處於離線狀態，以便將使用者對伺服器發出的 requests 排入隊列(queue)。</li>
+</ul>
+<p>有了 Online/offline events，要滿足這些需求變得很簡單。</p>
+<p>此外，你的網路應用程式有時可能必須將某些 HTML 文件列入快取中，以便使用者離線時可以存取，如有這個需求，你可以在 HTML 文件的 &lt;HEAD&gt; 加入 &lt;link&gt; 元素：</p>
+<pre>&lt;link rel="offline-resource" href="myresource"&gt;</pre>
+<p>Firefox 3 看到這些語法時，就會將這些資源列入一個特殊的離線資源快取(offline resource cache)中，讓使用者在離線時，依舊可以被存取這些資源。</p>
+<h3 id="API" name="API">API</h3>
+<h4 id="navigator.onLine" name="navigator.onLine">navigator.onLine</h4>
+<dl>
+ <dd>
+  avigator.onLine 是一個 property，其值可為 true/false (true 代表 online, false 代表 offline)。當使用者將瀏覽器切換成 Offline Mode 時(透過 主選單 -&gt; 檔案 -&gt; 離線模式)，這個 property 就會被更新。</dd>
+</dl>
+<dl>
+ <dd>
+  除此之外，根據規格書的建議，在瀏覽器無法連接到網路時，也應該更新這個 property。規格書上是這樣寫的：</dd>
+ <dd>
+  <blockquote>
+   The navigator.onLine attribute must return false if the user agent will not contact the network when the user follows links or when a script requests a remote page (or knows that such an attempt would fail)...</blockquote>
+ </dd>
+</dl>
+<dl>
+ <dd>
+  Firefox 2 在我們將瀏覽器切換成為離線模式、或離開離線模式時，會更新這個 property，在失去網路連線、或重新連線到網路時，也會更新這個 property。</dd>
+</dl>
+<dl>
+ <dd>
+  在比較老的 Firefox 與 Internet Explorer 版本，也有支援這個 property (事實上，規格書是依據這些之前版本的實做結果來制定的)，所以現在就可以馬上開始使用它。</dd>
+</dl>
+<dl>
+ <dd>
+  但「自動偵測網路狀況」是在 Firefox 2 中才實做出來。</dd>
+</dl>
+<h4 id="online_and_offline_events" name="online_and_offline_events">online and offline events</h4>
+<dl>
+ <dd>
+  Firefox 3 新增了兩個 events 的支援： "online" 及 "offline"。當我們切換瀏覽器的 online/offline 狀態時，就會對每個頁面的 &lt;body&gt; 觸發這兩個事件。除此之外，這兩個事件會從 document.body bubble up 到 document，到 window 才結束。這兩個事件都是 non-cancellable 的(因為你無法防止使用者連線到網路、或離線)。</dd>
+</dl>
+<dl>
+ <dd>
+  有好幾種你熟悉的方式可以用來註冊這兩個事件的 listeners：</dd>
+</dl>
+<dl>
+ <dd>
+  <ul>
+   <li>對 window, document 或 document.body 使用 addEventListener。</li>
+   <li>對 document 或 document.body 設定 .ononline 或 .onoffline properties 作為一個 JavaScript Function object. (注意： 使用 window.ononline 或 window.onoffline 無法作用，這是為了相容性。)</li>
+   <li>在 html 文件的 &lt;body&gt; 指定 ononline="..." 或 onoffline="..." attributes。</li>
+  </ul>
+ </dd>
+</dl>
+<h3 id=".E4.BE.8B.E5.AD.90" name=".E4.BE.8B.E5.AD.90">例子</h3>
+<p>這裡有個<a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=220609">簡單的例子</a>。</p>
+<pre>&lt;!doctype html&gt;
+ &lt;html&gt;
+ &lt;head&gt;
+   &lt;script&gt;
+     function updateOnlineStatus(msg) {
+       var status = document.getElementById("status");
+       var condition = navigator.onLine ? "ONLINE" : "OFFLINE";
+       status.setAttribute("class", condition);
+       var state = document.getElementById("state");
+       state.innerHTML = condition;
+       var log = document.getElementById("log");
+       log.appendChild(document.createTextNode("Event: " + msg + "; status=" + condition + "\n"));
+     }
+     function loaded() {
+       updateOnlineStatus("load");
+       document.body.addEventListener("offline", function () {
+         updateOnlineStatus("offline")
+       }, false);
+       document.body.addEventListener("online", function () {
+         updateOnlineStatus("online")
+       }, false);
+     }
+   &lt;/script&gt;
+   &lt;style&gt;...&lt;/style&gt;
+ &lt;/head&gt;
+ &lt;body onload="loaded()"&gt;
+   &lt;div id="status"&gt;&lt;p id="state"&gt;&lt;/p&gt;&lt;/div&gt;
+   &lt;div id="log"&gt;&lt;/div&gt;
+ &lt;/body&gt;
+ &lt;/html&gt;</pre>
+<h3 id=".E5.8F.83.E8.80.83.E8.B3.87.E6.96.99" name=".E5.8F.83.E8.80.83.E8.B3.87.E6.96.99">參考資料</h3>
+<ul>
+ <li><a class="external" href="http://developer.mozilla.org/en/docs/Online_and_offline_events">Online and Offline Events 原始網頁</a></li>
+ <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#offline">'Online/Offline events' section from the WHATWG Web Applications 1.0 Specification</a></li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=336359">The bug tracking online/offline events implementation in Firefox</a> and <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=336682">Follow-up</a></li>
+ <li><a class="link-https" href="https://bugzilla.mozilla.org/attachment.cgi?id=220609">一個簡單的例子</a></li>
+ <li><a class="external" href="http://ejohn.org/blog/offline-events/">An explanation of Online/Offline events</a></li>
+</ul>

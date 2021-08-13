@@ -121,11 +121,15 @@ translation_of: Web/API/Canvas_API/Tutorial/Compositing
  </tbody>
 </table>
 
-<p>這裡有這些構圖組合的<a href="/en-US/docs/Web/Guide/HTML/Canvas_tutorial/Compositing/Example" title="/en-US/docs/Web/Guide/HTML/Canvas_tutorial/Compositing/Example">實際範例</a>，<a href="https://mdn.mozillademos.org/en-US/docs/Web/Guide/HTML/Canvas_tutorial/Compositing/Example$samples/Compositing_example" title="https://mdn.mozillademos.org/en-US/docs/Web/Guide/HTML/Canvas_tutorial/Compositing/Example$samples/Compositing_example">輸出結果</a>在此。</p>
+<p>這裡有這些構圖組合的<a href="/en-US/docs/Web/Guide/HTML/Canvas_tutorial/Compositing/Example" title="/en-US/docs/Web/Guide/HTML/Canvas_tutorial/Compositing/Example">實際範例</a>，{{ LiveSampleLink('Compositing_example', "輸出結果") }}在此。</p>
+
+<p>See <a href="/zh-TW/docs/Web/API/Canvas_API/Tutorial/Compositing/Example">compositing examples</a> for the code of the following examples.</p>
+
+<p>{{EmbedLiveSample("Compositing_example", 750, 6750, "" ,"Web/API/Canvas_API/Tutorial/Compositing/Example")}}</p>
 
 <h2 id="Clipping_paths" name="Clipping_paths">裁剪路徑</h2>
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/209/Canvas_clipping_path.png" style="float: right;">裁剪路徑就像是一般畫布圖形繪圖，但就如同遮罩一樣，會蓋掉不需要的部分，如右圖所示。紅邊星星是我們的裁剪路徑，在路徑區域以外部分都不會出現在畫布上。</p>
+<p><img alt="" class="internal" src="canvas_clipping_path.png" style="float: right;">裁剪路徑就像是一般畫布圖形繪圖，但就如同遮罩一樣，會蓋掉不需要的部分，如右圖所示。紅邊星星是我們的裁剪路徑，在路徑區域以外部分都不會出現在畫布上。</p>
 
 <p>和上述 globalCompositeOperation 相比，可以發現 source-in 和 source-atop 這兩種構圖組合所達到的效果，和裁剪路徑類似，而其中最大差異在於裁剪路徑不需加入新圖形，消失的部分也不會出現在畫布上，所以，如果想要限定繪圖區域，裁剪路徑會是更理想的作法。</p>
 
@@ -202,6 +206,6 @@ function drawStar(ctx,r){
 
 <p>繪製裁剪路徑之後，所產生的所有圖形都只會出現在路徑以內，從後來繪製的漸層背景中可看出此特性。我們用自訂的 drawStar() 函數產生 50 個隨機散佈、大小不一的星星。這些星星同樣只會出現在裁剪路徑的範圍之內。</p>
 
-<p>{{EmbedLiveSample("A_clip_example", "180", "180", "https://mdn.mozillademos.org/files/208/Canvas_clip.png")}}</p>
+<p>{{EmbedLiveSample("A_clip_example", "180", "180", "canvas_clip.png")}}</p>
 
 <p>{{PreviousNext("Web/Guide/HTML/Canvas_tutorial/Transformations", "Web/Guide/HTML/Canvas_tutorial/Basic_animations")}}</p>

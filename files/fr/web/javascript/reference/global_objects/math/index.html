@@ -12,8 +12,8 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Math
 
 <p>L'objet <strong><code>Math</code></strong> est un objet natif dont les méthodes et propriétés permettent l'utilisation de constantes et fonctions mathématiques. Cet objet n'est pas une fonction.</p>
 
-<div class="blockIndicator warning">
-<p><strong>Attention !</strong> <code>Math</code> fonctionne avec le type {{jsxref("Number")}}. Il ne fonctionne pas avec les grands entiers/{{jsxref("BigInt")}}.</p>
+<div class="warning">
+<p><strong>Attention :</strong> <code>Math</code> fonctionne avec le type {{jsxref("Number")}}. Il ne fonctionne pas avec les grands entiers/{{jsxref("BigInt")}}.</p>
 </div>
 
 <h2 id="Description">Description</h2>
@@ -48,11 +48,9 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Math
 
 <h2 id="Méthodes">Méthodes</h2>
 
-<div class="note">Les fonctions trigonométriques (<code>sin()</code>, <code>cos()</code>, <code>tan()</code>, <code>asin()</code>, <code>acos()</code>, <code>atan()</code>, <code>atan2()</code>) acceptent ou retournent des angles en radians.<br>
-Pour convertir des degrés en radians, multipliez la valeur en degrés par (<code>Math.PI / 180</code>).<br>
-Pour passer des radians en degrés, divisez la valeur en radians par (<code>Math.PI / 180</code>).</div>
+<div class="note"><p><strong>Note :</strong> Les fonctions trigonométriques (<code>sin()</code>, <code>cos()</code>, <code>tan()</code>, <code>asin()</code>, <code>acos()</code>, <code>atan()</code>, <code>atan2()</code>) acceptent ou retournent des angles en radians. Pour convertir des degrés en radians, multipliez la valeur en degrés par (<code>Math.PI / 180</code>). Pour passer des radians en degrés, divisez la valeur en radians par (<code>Math.PI / 180</code>).</p></div>
 
-<div class="note">La précision des fonctions mathématiques dépend notamment de l'implémentation. Cela signifie que différents navigateurs peuvent fournir des résultats différents. On peut même avoir un même moteur JavaScript qui, sur des architectures et/ou des systèmes d'exploitation différents, fournit des résultats différents.</div>
+<div class="note"><p><strong>Note :</strong> La précision des fonctions mathématiques dépend notamment de l'implémentation. Cela signifie que différents navigateurs peuvent fournir des résultats différents. On peut même avoir un même moteur JavaScript qui, sur des architectures et/ou des systèmes d'exploitation différents, fournit des résultats différents.</p></div>
 
 <dl>
  <dt>{{jsxref("Objets_globaux/Math/abs", "Math.abs(x)")}}</dt>
@@ -82,7 +80,7 @@ Pour passer des radians en degrés, divisez la valeur en radians par (<code>Math
  <dt>{{jsxref("Objets_globaux/Math/cosh", "Math.cosh(x)")}}</dt>
  <dd>Renvoie le cosinus hyperbolique d'un nombre.</dd>
  <dt>{{jsxref("Objets_globaux/Math/exp", "Math.exp(x)")}}</dt>
- <dd>Renvoie l'exponentielle d'un nombre (soit E<sup>nombre</sup>) avec E la constante d'Euler (2,718...).</dd>
+ <dd>Renvoie l'exponentielle d'un nombre (soit E^nombre) avec E la constante d'Euler (2,718...).</dd>
  <dt>{{jsxref("Objets_globaux/Math/expm1", "Math.expm1(x)")}}</dt>
  <dd>Renvoie le résultat de 1 moins l'exponentielle d'un nombre.</dd>
  <dt>{{jsxref("Objets_globaux/Math/floor", "Math.floor(x)")}}</dt>
@@ -162,8 +160,6 @@ Pour passer des radians en degrés, divisez la valeur en radians par (<code>Math
 </table>
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<p class="hidden">Le tableau de compatibilité de cette page a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à envoyer une <em>pull request</em> sur <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>.</p>
 
 <p>{{Compat("javascript.builtins.Math")}}</p>
 

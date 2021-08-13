@@ -7,9 +7,7 @@ tags:
   - Accessibility
 translation_of: Web/Accessibility/ARIA/Roles/Listitem_role
 ---
-<div>\{{ariaref}}</div>
-
-<p class="summary">ARIAの <code>listitem</code> ロールは、項目のリスト内の項目を識別するために使用できます。 これは、通常、リストコンテナを識別するために使用される <code>list</code> ロールとともに使用されます。</p>
+<p class="summary">ARIA のリスト項目 (<code>listitem</code>) ロールは、項目のリスト内の項目を識別するために使用できます。 これは、通常、リストコンテナーを識別するために使用するリスト (<code>list</code>) ロールと組み合わせて使用します。</p>
 
 <pre class="brush: html">&lt;section role="list"&gt;
   &lt;div role="listitem"&gt;リスト項目 1&lt;/div&gt;
@@ -20,12 +18,12 @@ translation_of: Web/Accessibility/ARIA/Roles/Listitem_role
 
 <h2 id="Description" name="Description">説明</h2>
 
-<p>外側のコンテナとその内側の要素のリストで構成されるコンテンツは、それぞれ <code>list</code> と <code>listitem</code> のコンテナを使用して支援技術で識別できます。</p>
+<p>外側のコンテナーとその内側の要素のリストで構成されるコンテンツは、それぞれリスト (<code>list</code>) とリスト項目 (<code>listitem</code>) のコンテナーを使用して支援技術で識別できます。</p>
 
-<p>リストとリスト項目をマークアップするためにどの要素を使用すべきかについて、鉄則はありませんが、リスト項目がリストのコンテキストで意味をなすようにするべきです。 例えば、買い物リスト、料理の手順、運転の指示。</p>
+<p>リストとリスト項目をマークアップするためにどの要素を使用するべきかについて、鉄則はありませんが、リスト項目がリストのコンテキストで意味をなすようにするべきです (例えば、買い物リスト、料理の手順、運転の指示) 。</p>
 
 <div class="warning">
-<p><strong>警告</strong>: 可能な限り、適切な意味論の HTML 要素を使用して、<code>list</code> とその <code>listitem</code>（{{htmlelement("ul")}} や {{htmlelement("ol")}} と {{htmlelement("li")}}）をマークアップする必要があります。 詳しくは、{{anch("Best practices","ベストプラクティス")}}を参照してください。</p>
+<p><strong>警告</strong>: 可能な限り、適切な意味論の HTML 要素を使用して、リストとそのリスト項目 ({{htmlelement("ul")}} や {{htmlelement("ol")}} と {{htmlelement("li")}}) をマークアップするべきです。 詳しい例は、{{anch("Best practices","ベストプラクティス")}}を参照してください。</p>
 </div>
 
 <h3 id="Associated WAI-ARIA Roles, States, and Properties" name="Associated WAI-ARIA Roles, States, and Properties">関連する WAI-ARIA のロール、ステート、プロパティ</h3>
@@ -33,11 +31,11 @@ translation_of: Web/Accessibility/ARIA/Roles/Listitem_role
 <dl>
  <dt><a href="/ja/docs/Web/Accessibility/ARIA/Roles/List_role">list</a></dt>
  <dd>
- <p>項目のリスト。 <code>list</code> ロールを持つ要素には、子として <code>listitem</code> ロールを持つ1つ以上の要素、<code>group</code> ロールを持つ1つ以上の要素が必要です。 <code>group</code> ロールを持つ要素は、子として listitem ロールを持つ1つ以上の要素を持ちます。</p>
+ <p>項目のリスト。 リスト (<code>list</code>) ロールを持つ要素には、子として1つ以上のリスト項目 (<code>listitem</code>) ロールを持つ要素か、子として1つ以上のリスト項目 (<code>listitem</code>) ロールを持つ要素を含む1つ以上のグループ (<code>group</code>) ロールを持つ要素が必要です。</p>
  </dd>
  <dt><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role">group</a></dt>
  <dd>
- <p>リストにネストされたときにリスト項目に限定される関連オブジェクトのコレクションです。 ページの目次に独自の場所を持つほど重要ではありません。</p>
+ <p>ページの目次に掲載されるほど重要ではなく、リスト内にネストされている場合はリスト項目に限定される、関連するオブジェクトのコレクションです。 (訳注: リスト内にグループをネストできるという仕様は、ARIA 1.2 で、無くなる予定です。)</p>
  </dd>
 </dl>
 
@@ -51,13 +49,13 @@ translation_of: Web/Accessibility/ARIA/Roles/Listitem_role
 
 <h2 id="Examples" name="Examples">例</h2>
 
-<p> <a href="https://www.scottohara.me/blog/2018/05/26/aria-lists.html">ARIA Lists</a> — Scott O'Hara によるいくつかの有用な例と考え（英語）</p>
+<p> <a href="https://www.scottohara.me/blog/2018/05/26/aria-lists.html">ARIA Lists</a> — Scott O'Hara によるいくつかの有用な例と考え (英語)</p>
 
 <h2 id="Best_practices" name="Best_practices">ベストプラクティス</h2>
 
-<p>例えば、HTML を制御できないが、JavaScript を使用した後でアクセシビリティを動的に向上させる必要がある場合など、<code>role="list"</code> と <code>role="listitem"</code> のみを使用する必要があります。</p>
+<p><code>role="list"</code> と <code>role="listitem"</code> は必要な場合のみ使用してください。 例えば、HTML を制御できなくても、JavaScript で事後に動的にアクセシビリティを向上させることができる場合です。</p>
 
-<p>可能な限り、適切な意味論の HTML 要素を使用して、<code>list</code> と <code>listitem</code>（{{htmlelement("ol")}} や {{htmlelement("ul")}} と {{htmlelement("li")}}）をマークアップする必要があります。 例えば、上記の例は次のように書き直すべきです。</p>
+<p>可能な限り、適切な意味論の HTML 要素を使用して、リストとリスト項目 ({{htmlelement("ol")}} や {{htmlelement("ul")}} と {{htmlelement("li")}}) をマークアップするべきです。 例えば、上記の例は次のように書き直すべきです。</p>
 
 <pre class="brush: html">&lt;ul&gt;
   &lt;li&gt;リスト項目 1&lt;/li&gt;
@@ -65,7 +63,7 @@ translation_of: Web/Accessibility/ARIA/Roles/Listitem_role
   &lt;li&gt;リスト項目 3&lt;/li&gt;
 &lt;/ul&gt;</pre>
 
-<p>リスト項目の順序が重要な場合は、順序付きリストを使用します。</p>
+<p>また、リスト項目の順序が重要な場合は、順序付きリストを使用します。</p>
 
 <pre class="brush: html">&lt;ol&gt;
   &lt;li&gt;リスト項目 1&lt;/li&gt;
@@ -74,11 +72,11 @@ translation_of: Web/Accessibility/ARIA/Roles/Listitem_role
 &lt;/ol&gt;</pre>
 
 <div class="note">
-<p><strong>注</strong>: ARIA の <code>list</code> ロールと <code>listitem</code> ロールでは、順序付きリストと順序無しリストを区別しません。</p>
+<p><strong>注</strong>: ARIA のリストロールとリスト項目ロールでは、順序付きリストと順序無しリストを区別しません。</p>
 </div>
 
 <div class="note">
-<p><strong>注</strong>: タブ付きインターフェースとして機能する項目のリストをマークアップする場合は、代わりに <code>tab</code>、<code>tabpanel</code>、<code>tablist</code> ロールを使用するべきです。</p>
+<p><strong>注</strong>: タブ付きインターフェイスとして機能する項目のリストをマークアップする場合は、代わりにタブ (<code>tab</code>)、タブパネル (<code>tabpanel</code>)、タブリスト (<code>tablist</code>) のロールを使用するべきです。</p>
 </div>
 
 <h2 id="Specifications" name="Specifications">仕様</h2>
@@ -105,9 +103,15 @@ translation_of: Web/Accessibility/ARIA/Roles/Listitem_role
 <ul>
  <li><a href="https://wicg.github.io/aom/spec/">Accessibility Object Model</a></li>
  <li><a href="https://w3c.github.io/html-aria/">ARIA in HTML</a></li>
- <li><span class="ILfuVd yZ8quc">HTML </span>{{htmlelement("li")}} 要素</li>
- <li><span class="ILfuVd yZ8quc">HTML </span>{{htmlelement("ul")}} 要素</li>
- <li><span class="ILfuVd yZ8quc">HTML </span>{{htmlelement("ol")}} 要素</li>
+ <li><a href="/ja/docs/Web/HTML/Element/li">HTML <code>&lt;li&gt;</code> 要素</a></li>
+ <li><a href="/ja/docs/Web/HTML/Element/ul">HTML <code>&lt;ul&gt;</code> 要素</a></li>
+ <li><a href="/ja/docs/Web/HTML/Element/ol">HTML <code>&lt;ol&gt;</code> 要素</a></li>
  <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/List_role">ARIA: list ロール</a></li>
  <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_group_role">ARIA: group ロール</a></li>
 </ul>
+
+<section id="Quick_links">
+    <ol>
+        <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA ロール</strong></a>{{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}</li>
+    </ol>
+</section>

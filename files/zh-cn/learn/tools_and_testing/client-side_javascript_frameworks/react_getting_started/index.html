@@ -219,7 +219,7 @@ import './App.css';</pre>
 
 <p>第一句代码引入了 React 库，这是为了将代码中的 JSX 语句转为<code>React.createElement()</code>，所有的 React 模块都应该引入 React 模块，否则会抛错。</p>
 
-<p>第二句代码引入了 <code>.'/logo.svg'</code>。注意文件路径以 <code>./</code> 开头、由 <code>.svg</code> 尾——表明这是一个本地文件，并且它不是 JavaScript 文件。</p>
+<p>第二句代码引入了 <code>'./logo.svg'</code>。注意文件路径以 <code>./</code> 开头、由 <code>.svg</code> 尾——表明这是一个本地文件，并且它不是 JavaScript 文件。</p>
 
 <div class="blockIndicator note">
 <p>我们没有指定 React 模块的路径——表明它并非来自本地文件，而是在 <code>package.json</code> 文件中列为依赖项。在整个学习过程中，请务必留心这两种引入方式的不同之处。</p>

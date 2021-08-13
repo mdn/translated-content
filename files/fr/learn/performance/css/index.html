@@ -1,53 +1,37 @@
 ---
 title: Optimisation des performances en CSS
 slug: Learn/Performance/CSS
-tags:
-  - CSS
-  - Optimisation
-  - Performance
-  - Tutoriel
 translation_of: Learn/Performance/CSS
 ---
 <p>{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/fonts", "Learn/Performance")}} {{draft}}</p>
 
-<p>Afficher une page sans mise en forme, puis ré-afficher cette même page une fois sa mise en forme chargée serait un processus bien désagréable pour l'utilisateur. Afin d'éviter ce désagrément, le CSS retarde l'affichage de la page sur le naviguateur tant qu'il n'a pas été entièrement chargé et interprêté : on dit que <span class="seoSummary">le CSS bloque le rendu de la page</span> (on le qualifie d'ailleurs de "render blocking" en anglais). C'est cette configuration que le navigateur utilise par défaut, bien que l'on puisse spécifier une stratégie d'affichage différente comme indiqué dans la section suivante.</p>
+<p>Peindre une page non stylisée, puis la repeindre une fois les styles analysés constituerait une mauvaise expérience pour l'utilisateur. C'est pourquoi les feuilles de style CSS bloquent le rendu, sauf si le navigateur sait que les feuilles de style CSS ne sont pas nécessaires. Le navigateur peut peindre la page une fois qu'il a téléchargé le CSS et construit le modèle objet CSS. Les navigateurs suivent un chemin de rendu spécifique : la peinture n'intervient qu'après la mise en page, qui intervient après la création de l'arbre de rendu, qui nécessite à son tour les arbres DOM et CSSOM. Pour optimiser la construction du CSSOM, il faut supprimer les styles inutiles, les minifier, les compresser et les mettre en cache, et répartir les CSS qui ne sont pas nécessaires au chargement de la page dans des fichiers supplémentaires afin de réduire le blocage du rendu CSS.</p>
 
-<p>Le navigateur suit une procédure d'affichage très précise : l'affichage n'intervient qu'après la mise en page, qui elle-même dépend de la génération de l'abre de rendu par le navigateur, qui requiert lui aussi l'existence de deux autres ressources : le <a href="/fr/docs/Glossaire/DOM">DOM</a> (Document Object Model) et le <a href="/fr/docs/MDN/Doc_status/API/CSSOM">CSSOM</a> (CSS Object Model). <span class="seoSummary">Optimiser les performances en CSS revient donc d'une part à réduire le temps de chargement des ressources, et d'autre part à optimiser la construction du CSSOM.</span> Pour se faire, quelques bonnes pratiques :</p>
+<h3 id="optimizing_for_render_blocking">Optimiser le temps de bloquage du rendu</h3>
 
-<ul>
- <li>Retirez les règles de styles inutilisées ou dupliquées,</li>
- <li>Minimisez la taille de votre fichier CSS (en retirant les espaces, retours à la ligne et tabulations par exemple),</li>
- <li>compressez votre fichier CSS et enregistrez-le dans le cache du navigateur client,</li>
- <li>enregistrez dans des fichiers additionnels les règles CSS qui ne sont pas nécessaires lors du chargement de la page afin de diminuer le temps de bloquage.</li>
-</ul>
+<p>Les CSS peuvent adapter les styles à des conditions particulières grâce aux requêtes média. Les requêtes média sont importantes pour une conception Web adaptative et nous aident à optimiser un chemin de rendu critique. Le navigateur bloque le rendu jusqu'à ce qu'il analyse tous ces styles, mais il ne bloque pas le rendu des styles qu'il sait qu'il n'utilisera pas, comme les feuilles de style d'impression. En divisant le CSS en plusieurs fichiers basés sur des requêtes média, vous pouvez empêcher le blocage du rendu pendant le téléchargement du CSS inutilisé. Pour créer un lien CSS non bloquant, déplacez les styles qui ne sont pas immédiatement utilisés, tels que les styles d'impression, dans un fichier distinct, ajoutez une balise HTML <code><a href="/fr/docs/Web/HTML/Element/link">&lt;link&gt;</a></code>, et ajoutez une requête média, indiquant dans ce cas qu'il s'agit d'une feuille de style d'impression.</p>
 
-<h3 id="Optimiser_le_temps_de_bloquage_du_rendu">Optimiser le temps de bloquage du rendu</h3>
-
-<p>Une des forces du CSS réside dans sa capacité à appliquer des styles différents selon l'appareil utilisé, par le biais de <a href="/fr/docs/Web/CSS/Requ%C3%AAtes_m%C3%A9dia/Utilisation_requ%C3%AAtes_media_accessibilit%C3%A9">Requêtes Média</a> ("media queries" en anglais) permettant de poser des conditions de mise en page selon les caractéristiques de l'apareil. Ces requettes média sont d'une importance capitale pour le <a href="/fr/docs/Apprendre/CSS/CSS_layout/Responsive_Design">responsive design</a> (mise en page flexible) et peuvent également nous permettre d'optimiser une partie critique du processus de rendu. En effet, le navigateur bloque le rendu de la page tant qu'il n'a pas entièrement interprêté les règles CSS, mais ne bloquera plus ni le rendu, ni l'affichage pour des fichiers CSS dont il sait ne pas avoir l'utilité - comme c'est le cas pour la mise en page d'impression papier, destinée à l'imprimante et non à l'écran. En réorganisant alors l'ensemble des règles CSS en plusieurs fichiers suivant des requêtes média, nous pouvons alors éviter de bloquer inutilement le rendu en attendant le chargement de ressources superflues pour l'affichage.</p>
-
-<p>Pour obtenir ce résultat dans les faits, il suffit de placer le code CSS inutilisé lors du rendu, par exemple celui de l'impression papier, dans un fichier à part puis de l'intégrer à la page par le biais d'une balise <code><a href="/fr/docs/Web/HTML/Element/link">&lt;link&gt;</a></code>. On spécifie ensuite l'attribut <code>media</code> de cette balise pour y ajouter notre requête média : dans notre exemple, cette requête spécifierait que ce n'est utile que pour une imprimante.</p>
-
-<pre class="brush: html notranslate">&lt;link rel="stylesheet" href="styles.css"&gt; &lt;!-- bloquant --&gt;
+<pre class="brush: html">&lt;link rel="stylesheet" href="styles.css"&gt; &lt;!-- bloquant --&gt;
 &lt;link rel="stylesheet" href="print.css" media="print"&gt; &lt;!-- non bloquant --&gt;
-&lt;link rel="stylesheet" href="mobile.css" media="screen and (max-width: 480px)"&gt; &lt;!-- non boquant sur grand écran --&gt;</pre>
+&lt;link rel="stylesheet" href="mobile.css" media="screen and (max-width: 480px)"&gt; &lt;!-- non bloquant sur grand écran --&gt;</pre>
 
-<p>Par défaut, le navigateur suppose que chaque fichier CSS est bloquant, car probablement utile pour le rendu. En utilisant cet attribut <code>media</code>, le navigateur comprend alors quel fichier utiliser dans quel scénario : il téléchargera alors le fichier, mais ne bloquera pas le rendu lors de son interprétation, ce qui résultera en un affichage plus rapide pour l'utilisateur. Dans le cas ci-dessus, le fichier <code>styles.css</code> est boquant quelque soit l'appareil utilisé, <code>print.css</code> devient bloquant pour une imprimante et <code>mobile.css</code> devient bloquant seulement lorsque la largeur de l'écran n'excède pas 480 pixels.</p>
+<p>Par défaut, le navigateur suppose que chaque feuille de style spécifiée bloque le rendu. Indiquez au navigateur quand la feuille de style doit être appliquée en ajoutant un attribut <code>media</code> avec la <a href="/fr/docs/Web/CSS/Media_Queries/Using_media_queries">requête média</a>. Lorsque le navigateur voit une feuille de style, il sait qu'il n'a besoin de l'appliquer que pour un scénario spécifique, il télécharge quand même la feuille de style, mais ne rend pas le bloc. En séparant la feuille de style en plusieurs fichiers, le fichier principal bloquant le rendu, dans ce cas <code>styles.css</code>, est beaucoup plus petit, ce qui réduit le temps de blocage du rendu.</p>
 
-<h3 id="Interprêter_les_animations_sur_le_GPU">Interprêter les animations sur le GPU</h3>
+<h3 id="animating_on_the_gpu">Les animations sur le GPU</h3>
 
-<p>Les navigateurs sont déjà optimisés pour manipuler les animations CSS, ainsi que les propriétés d'animation qui ne provoquent pas de réorganisation soudaine du document (ces autres propriétés nécessiteront alors un nouveau rendu). Cette optimisation s'effectue en plaçant les éléments animés sur un autre fil d'execution que l'on peut alors envoyer sur le GPU, bien plus rapide pour ce genre de tâche. Pour profiter de cette optimisation, il faut alors animer de préférence avec les propriétés de transformation 3D (<code><a href="/en-US/docs/Web/CSS/transform">transform: translateZ()</a></code>, <code><a href="/en-US/docs/Web/CSS/transform-function/rotate3d">rotate3d()</a></code>, etc.), de transformation 2D ainsi que les propriétés <code><a href="/en-US/docs/Web/CSS/opacity">opacity</a></code>, <code><a href="/en-US/docs/Web/CSS/position">position: fixed</a></code>, <code><a href="/en-US/docs/Web/CSS/will-change">will-change</a></code> et <code><a href="/en-US/docs/Web/CSS/filter">filter</a></code>. D'autres éléments, parmi lesquels <code><a href="/en-US/docs/Web/HTML/Element/video">&lt;video&gt;</a></code>, <code><a href="/en-US/docs/Web/HTML/Element/canvas">&lt;canvas&gt;</a></code> ou encore <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code>, fonctionnent aussi sur leur propre fil d'execution. Cette technique permet donc de tirer profit de la vitesse d'exécution du GPU pour chaque élément géré sur un nouveau fil d'éxécution, et permet d'obtenir de bien meilleures performance, en particulier sur mobile.</p>
+<p>Les navigateurs sont déjà optimisés pour manipuler les animations CSS, ainsi que les propriétés d'animation qui ne provoquent pas de réorganisation soudaine du document (ces autres propriétés nécessiteront alors un nouveau rendu). Cette optimisation s'effectue en plaçant les éléments animés sur un autre fil d'exécution que l'on peut alors envoyer sur le GPU, bien plus rapide pour ce genre de tâche. Pour profiter de cette optimisation, il faut alors animer de préférence avec les propriétés de transformation 3D (<code><a href="/fr/docs/Web/CSS/transform">transform: translateZ()</a></code>, <code><a href="/fr/docs/Web/CSS/transform-function/rotate3d()">rotate3d()</a></code>, etc.), de transformation 2D ainsi que les propriétés <code><a href="/fr/docs/Web/CSS/opacity">opacity</a></code>, <code><a href="/fr/docs/Web/CSS/position">position: fixed</a></code>, <code><a href="/fr/docs/Web/CSS/will-change">will-change</a></code> et <code><a href="/fr/docs/Web/CSS/filter">filter</a></code>. D'autres éléments, parmi lesquels <code><a href="/fr/docs/Web/HTML/Element/video">&lt;video&gt;</a></code>, <code><a href="/fr/docs/Web/HTML/Element/canvas">&lt;canvas&gt;</a></code> ou encore <code><a href="/fr/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code>, fonctionnent aussi sur leur propre fil d'exécution. Cette technique permet donc de tirer profit de la vitesse d'exécution du GPU pour chaque élément géré sur un nouveau fil d'exécution, et permet d'obtenir de bien meilleures performances, en particulier sur mobile.</p>
 
-<h3 id="La_propriété_cssxrefwill-change">La propriété {{cssxref('will-change')}}</h3>
+<h3 id="will-change_property">La propriété <code>will-change</code></h3>
 
-<p>La propriété CSS {{cssxref('will-change')}} indique au navigateur les propriétés CSS d'un élément qui sont suceptibles d'être modifiés par la suite (lors d'animations par exemple), afin que le navigateur puisse s'y préparer et optimiser ces changements. Cela permet principalement d'améliorer les performances en réalisant en amont des calculs parfois gourmands.</p>
+<p>La propriété CSS <a href="/fr/docs/Web/CSS/will-change"><code>will-change</code></a> indique au navigateur les propriétés CSS d'un élément qui sont susceptibles d'être modifiées par la suite (lors d'animations par exemple), afin que le navigateur puisse s'y préparer et optimiser ces changements. Cela permet principalement d'améliorer les performances en réalisant en amont des calculs parfois gourmands.</p>
 
-<pre class="brush: css notranslate">will-change: opacity, transform;</pre>
+<pre class="brush: css">will-change: opacity, transform;</pre>
 
-<h3 id="La_propriété_cssxreffont-display">La propriété {{cssxref('font-display')}}</h3>
+<h3 id="the_cssxreffont-display_property">La propriété <code>font-display</code></h3>
 
-<p>Insérée dans une règle {{cssxref('@font-face')}}, la propriété CSS {{cssxref('font-display')}} permet de définir la logique de chargement et d'affichage des polices par le navigateur. Elle permet par exemple d'afficher le texte avec une police par défaut le temps que l'autre charge ou lorsque le chargement échoue. Cela permet de rendre le texte visible sans l'attente du chargement des polices, mais a pour défaut un flash brusque de changement de police une fois la ressource chargée.</p>
+<p>Insérée dans une règle <a href="/fr/docs/Web/CSS/@font-face"><code>@font-face</code></a>, la propriété CSS <a href="/fr/docs/Web/CSS/@font-face/font-display"><code>font-display</code></a> permet de définir la logique de chargement et d'affichage des polices par le navigateur. Elle permet par exemple d'afficher le texte avec une police par défaut le temps que l'autre charge ou lorsque le chargement échoue. Cela permet de rendre le texte visible sans l'attente du chargement des polices, mais a pour défaut un flash brusque de changement de police une fois la ressource chargée.</p>
 
-<pre class="brush: css notranslate">@font-face {
+<pre class="brush: css">@font-face {
   font-family: someFont;
   src: url(/path/to/fonts/someFont.woff) format('woff');
   font-weight: 400;
@@ -57,44 +41,44 @@ translation_of: Learn/Performance/CSS
 
 <p>Dans cet exemple, la dernière règle <code>font-display: fallback;</code> permet justement d'afficher le texte avec une police par défaut en attendant le chargement de la police <code>someFont.woff</code>.</p>
 
-<h3 id="La_propriété_cssxrefcontain">La propriété {{cssxref('contain')}}</h3>
+<h3 id="the_cssxrefcontain_property">La propriété <code>contain</code></h3>
 
-<p>La propriété CSS {{cssxref('contain')}} permet quant à elle de spécifier au navigateur qu'un élément et son contenu sont, dans la mesure du possible, indépendant du reste de l'arborescence du document. Ceci offre la possibilité au navigateur de recalculer la mise en page, le style, le rendu, la taille ou toute combinaison de ces propriétés seulement pour une portion de l'arborescence DOM, sans avoir à étendre ces calculs à la totalité de la page.</p>
+<p>La propriété CSS <a href="/fr/docs/Web/CSS/contain"><code>contain</code></a> permet quant à elle de spécifier au navigateur qu'un élément et son contenu sont, dans la mesure du possible, indépendants du reste de l'arborescence du document. Ceci offre la possibilité au navigateur de recalculer la mise en page, le style, le rendu, la taille ou toute combinaison de ces propriétés seulement pour une portion de l'arborescence DOM, sans avoir à étendre ces calculs à la totalité de la page.</p>
 
-<h2 id="Conclusion">Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 
-<p>Optimiser les performances en CSS revient ainsi à améliorer deux étapes cruciales et chronophages du rendu de page :</p>
+<p>Optimiser les performances en CSS revient ainsi à améliorer deux étapes cruciales et chronophages du rendu de page&nbsp;:</p>
 
 <ul>
- <li>d'une part le chargement des ressources CSS de la page (en compressant, en divisant le fichier, ou encore en l'enregistrant dans le cache par exemple),</li>
- <li>d'autre part le rendu, en établissant une stratégie ingénieuse de chargement et d'interprétation des ressources, notamment en distinguant les ressources essentielles pour le rendu et les autres ressources annexes, qui peuvent attendre;</li>
+ <li>d'une part le chargement des ressources CSS de la page (en compressant, en divisant le fichier, ou encore en l'enregistrant dans le cache par exemple)&nbsp;;</li>
+ <li>d'autre part le rendu, en établissant une stratégie ingénieuse de chargement et d'interprétation des ressources, notamment en distinguant les ressources essentielles pour le rendu et les autres ressources annexes, qui peuvent attendre.</li>
 </ul>
 
 <p>Enfin, les outils de développement du navigateur sont à votre disposition pour vous aider à cibler les étapes chronophages qui ralentissent le rendu de vos pages et gagner encore en efficacité, au prix parfois de quelques compromis.</p>
 
 <p>{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/fonts", "Learn/Performance")}}</p>
 
-<h2 id="Dans_ce_module">Dans ce module</h2>
+<h2 id="in_this_module">Dans ce module</h2>
 
 <ul>
- <li><a href="/fr/docs/Learn/Performance/pourquoi_performance_web">Le "pourquoi" des performances web</a></li>
- <li><a href="/en-US/docs/Learn/Performance/What_is_web_performance">What is web performance?</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Perceived_performance">How do users perceive performance?</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Measuring_performance">Measuring performance</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Multimedia">Multimedia: images</a></li>
- <li><a href="/en-US/docs/Learn/Performance/video">Multimedia: video</a></li>
- <li><a href="/en-US/docs/Learn/Performance/JavaScript">JavaScript performance best practices</a>.</li>
- <li><a href="/en-US/docs/Learn/Performance/HTML">HTML performance features</a></li>
- <li><a href="/fr/docs/Learn/Performance/CSS">CSS performance featuresOptimisation des performances en CSS</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Fonts">Fonts and performance</a></li>
- <li><a href="/en-US/docs/Learn/Performance/Mobile">Mobile performance</a></li>
- <li><a href="/en-US/docs/Learn/Performance/business_case_for_performance">Focusing on performance</a></li>
+ <li><a href="/fr/docs/Learn/Performance/why_web_performance">Le « pourquoi » des performances web</a></li>
+ <li><a href="/fr/docs/Learn/Performance/What_is_web_performance">Que sont les performances web ?</a></li>
+ <li><a href="/fr/docs/Learn/Performance/Perceived_performance">Comment les internautes perçoivent-ils les performances ?</a></li>
+ <li><a href="/fr/docs/Learn/Performance/Measuring_performance">Mesurer les performances</a></li>
+ <li><a href="/fr/docs/Learn/Performance/Multimedia">Multimédia : images</a></li>
+ <li><a href="/fr/docs/Learn/Performance/video">Multimédia : vidéos</a></li>
+ <li><a href="/fr/docs/Learn/Performance/JavaScript">Bonnes pratiques Javascript en matière de performance</a></li>
+ <li><a href="/fr/docs/Learn/Performance/HTML">Fonctionnalité HTML pour la performance</a></li>
+ <li><a href="/fr/docs/Learn/Performance/CSS">Optimisation des performances en CSS</a></li>
+ <li><a href="/fr/docs/Learn/Performance/Fonts">Performance et polices</a></li>
+ <li><a href="/fr/docs/Learn/Performance/Mobile">Performance sur mobile</a></li>
+ <li><a href="/fr/docs/Learn/Performance/business_case_for_performance">Placer le focus sur les performances</a></li>
 </ul>
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+<h2 id="see_also">Voir aussi</h2>
 
 <ul>
  <li>
-  <p><a href="/en-US/docs/Web/Performance/CSS_JavaScript_animation_performance">CSS animation performance</a></p>
+  <p><a href="/fr/docs/Web/Performance/CSS_JavaScript_animation_performance">CSS animation performance</a></p>
  </li>
 </ul>

@@ -11,7 +11,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/BigInt
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>BigInt</code></strong> est un objet natif qui permet de représenter des nombres entiers supérieurs à 2<sup>53</sup> (la plus grande valeur entière qui puisse être représentée par le type primitif {{jsxref("Number")}}). <code>BigInt</code> peut être utilisé afin de représenter de grands entiers de n'importe quelle taille.</p>
+<p><strong><code>BigInt</code></strong> est un objet natif qui permet de représenter des nombres entiers supérieurs à 2^53 (la plus grande valeur entière qui puisse être représentée par le type primitif {{jsxref("Number")}}). <code>BigInt</code> peut être utilisé afin de représenter de grands entiers de n'importe quelle taille.</p>
 
 <div class="blockIndicator note">
 <p><strong>Note :</strong> BigInt est actuellement une <strong>proposition de niveau 3</strong> pour la <a href="#Spécifications">spécification</a> ECMAScript.</p>
@@ -37,9 +37,6 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/BigInt
 <p><strong>Note :</strong> <code>BigInt()</code> n'est pas censé être utilisé avec l'opérateur {{jsxref("Opérateurs/L_opérateur_new", "new")}}.</p>
 </div>
 
-<dl>
-</dl>
-
 <h2 id="Description">Description</h2>
 
 <p>Un objet <code>BigInt</code> est créé en ajoutant un <code>n</code> à la fin d'un littéral d'entier — <code>10n</code> par exemple — ou en appelant la fonction <code>BigInt()</code>.</p>
@@ -55,13 +52,13 @@ const grandNombreEnChaîne = BigInt('9007199254740991');
 const grandeNombreHexa = BigInt("0x1fffffffffffff");
 // ↪ 9007199254740991n
 
-const grandeNombreBinaire = BigInt("<code class="language-js"><span class="string token">0b11111111111111111111111111111111111111111111111111111</span></code>");
+const grandeNombreBinaire = BigInt("0b11111111111111111111111111111111111111111111111111111");
 // ↪ 9007199254740991n</pre>
 
 <p>Les objets <code>BigInt</code> sont semblables aux objets {{jsxref("Number")}} selon certains aspects mais avec quelques différences clés. Les objets <code>BigInt</code> ne peuvent pas êre utilisés avec l'objet {{jsxref("Math")}} et ne peuvent pas être manipulés avec des opérations qui impliquent des objets {{jsxref("Number")}}.</p>
 
-<div class="blockIndicator warning">
-<p><strong>Attention !</strong> Il est nécessaire de convertir des valeurs {{jsxref("Number")}} ou <code>BigInt</code> dans les opérations qui les combinent.</p>
+<div class="warning">
+<p><strong>Attention :</strong> Il est nécessaire de convertir des valeurs {{jsxref("Number")}} ou <code>BigInt</code> dans les opérations qui les combinent.</p>
 
 <p>Attention lors de ces conversions car la précision d'une valeur <code>BigInt</code> peut être perdue lorsque ce dernier est converti en {{jsxref("Number")}}.</p>
 </div>
@@ -194,21 +191,21 @@ Boolean(12n)
 
 <dl>
  <dt><strong><code>BigInt.asIntN()</code></strong></dt>
- <dd>Écrète un objet <code>BigInt</code> pour obtenir un entier signé entre -2<sup>largeur-1</sup> et 2<sup>largeur-1</sup>-1</dd>
+ <dd>Écrète un objet <code>BigInt</code> pour obtenir un entier signé entre -2^(largeur-1) et 2^(largeur-1)-1</dd>
  <dt><code>BigInt.asUintN()</code></dt>
- <dd>Écrète un objet <code>BigInt</code> pour obtenir un entier non-signé entre 0 et 2<sup>largeur</sup>-1</dd>
+ <dd>Écrète un objet <code>BigInt</code> pour obtenir un entier non-signé entre 0 et 2^(largeur)-1</dd>
 </dl>
 
 <h2 id="Propriétés">Propriétés</h2>
 
 <dl>
  <dt>{{jsxref("BigInt.prototype")}}</dt>
- <dd><span style="letter-spacing: -0.00278rem;">Cette propriété permet d'ajouter des propriétés aux objets </span><code style="letter-spacing: -0.00278rem;">BigInt</code><span style="letter-spacing: -0.00278rem;">.</span></dd>
+ <dd>Cette propriété permet d'ajouter des propriétés aux objets <code>BigInt</code>.</dd>
 </dl>
 
 <h2 id="Instances_de_BigInt">Instances de <code>BigInt</code></h2>
 
-<p>L'ensemble des instances de <code>BigInt</code> héritent de <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">BigInt.prototype</span></font>. Le prototype du constructeur <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">BigInt</span></font> peut être modifié afin de modifier l'ensemble des instances de <code>BigInt</code>.</p>
+<p>L'ensemble des instances de <code>BigInt</code> héritent de <code>BigInt.prototype</code>. Le prototype du constructeur <code>BigInt</code> peut être modifié afin de modifier l'ensemble des instances de <code>BigInt</code>.</p>
 
 <h3 id="Méthodes_2">Méthodes</h3>
 
@@ -218,7 +215,7 @@ Boolean(12n)
 
 <h3 id="Coercition_en_Number">Coercition en <code>Number</code></h3>
 
-<p>Lorsqu'on convertit une valeur <code>BigInt</code> en {{jsxref("Objets_globaux/Number","Number")}}, on perd en précision. Si on effectue des allers-retours entre ces deux types, on ne conservera pas la même valeur. Aussi, il est recommandé d'utiliser uniquement <code>BigInt</code> lorsque les valeurs qu'on manipule seront supérieures à 2<sup>53</sup> et qu'il ne sera pas nécessaire de passer d'un type à l'autre.</p>
+<p>Lorsqu'on convertit une valeur <code>BigInt</code> en {{jsxref("Objets_globaux/Number","Number")}}, on perd en précision. Si on effectue des allers-retours entre ces deux types, on ne conservera pas la même valeur. Aussi, il est recommandé d'utiliser uniquement <code>BigInt</code> lorsque les valeurs qu'on manipule seront supérieures à 2^53 et qu'il ne sera pas nécessaire de passer d'un type à l'autre.</p>
 
 <h3 id="Cryptographie">Cryptographie</h3>
 
@@ -254,7 +251,7 @@ function nthPrime(nth) {
 nthPrime(20n)
 // ↪ 73n</pre>
 
-<h2 id="Spécifications_2"><a id="Spécifications" name="Spécifications">Spécifications</a></h2>
+<h2 id="Spécifications">Spécifications</h2>
 
 <table class="standard-table">
  <thead>
@@ -272,8 +269,6 @@ nthPrime(20n)
 </table>
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<div class="hidden">Le tableau de compatibilité de cette page a été généré à partir de données structurées. Si vous souhaitez contribuer à ces données, n'hésitez pas à consulter <a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> et à nous envoyer une <em>pull request</em>.</div>
 
 <p>{{Compat("javascript.builtins.BigInt")}}</p>
 

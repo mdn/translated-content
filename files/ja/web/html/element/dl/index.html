@@ -2,36 +2,35 @@
 title: '<dl>: 説明リスト要素'
 slug: Web/HTML/Element/dl
 tags:
+  - Definition List
+  - Description list
+  - Element
   - HTML
-  - HTML コンテンツグループ化
-  - 'HTML:フローコンテンツ'
-  - 'HTML:知覚可能コンテンツ'
+  - HTML grouping content
+  - HTML:Flow content
+  - HTML:Palpable Content
   - Reference
   - Web
-  - ウェブ
-  - リファレンス
-  - 要素
+browser-compat: html.elements.dl
 translation_of: Web/HTML/Element/dl
 ---
 <div>{{HTMLRef}}</div>
 
-<p><strong>HTML の <code>&lt;dl&gt;</code></strong> 要素は、説明リストを表します。この要素は、一連の用語（{{HTMLElement("dt")}} 要素を使用して指定）と説明（{{HTMLElement("dd")}} 要素によって提供）をリスト化したものです。一般的な使用例として、用語集の作成やメタデータ（キーと値のペアのリスト）の表示が挙げられます。</p>
+<p><strong>HTML の <code>&lt;dl&gt;</code></strong> 要素は、説明リストを表します。この要素は、一連の用語 ({{HTMLElement("dt")}} 要素を使用して指定) と説明 ({{HTMLElement("dd")}} 要素によって提供) をリスト化したものです。一般的な使用例として、用語集の作成やメタデータ (キーと値のペアのリスト) の表示が挙げられます。</p>
 
 <div>{{EmbedInteractiveExample("pages/tabbed/dl.html", "tabbed-standard")}}</div>
-
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、<a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row"><a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a></th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Flow_content">フローコンテンツ</a>、<code>&lt;dl&gt;</code> 要素の子要素が 1 つの名前と値のグループの場合は知覚可能コンテンツ</td>
+   <th scope="row"><a href="/ja/docs/Web/Guide/HTML/Content_categories">コンテンツカテゴリー</a></th>
+   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a>、<code>&lt;dl&gt;</code> 要素の子要素が 1 つの名前と値のグループの場合は知覚可能コンテンツ</td>
   </tr>
   <tr>
    <th scope="row">許可されている内容</th>
    <td>
     <p>1 個以上の {{HTMLElement("dt")}} 要素とそれに続く 1 個以上の {{HTMLElement("dd")}} 要素、任意で {{HTMLElement("script")}} 要素や {{HTMLElement("template")}} 要素が混在するもの。<br>
-     または 1 個以上の {{HTMLElement("div")}} 要素、任意で {{HTMLElement("script")}} 要素や {{HTMLElement("template")}} 要素が混在するもの。</p>
+     または ({{Glossary("WHATWG")}} HTML や {{Glossary("W3C")}} HTML 5.2 以降では) 1 個以上の {{HTMLElement("div")}} 要素、任意で {{HTMLElement("script")}} 要素や {{HTMLElement("template")}} 要素が混在するもの。</p>
    </td>
   </tr>
   <tr>
@@ -40,11 +39,15 @@ translation_of: Web/HTML/Element/dl
   </tr>
   <tr>
    <th scope="row">許可されている親要素</th>
-   <td><a href="/ja/docs/Web/HTML/Content_categories#Flow_content">フローコンテンツ</a>を受け入れるすべての要素</td>
+   <td><a href="/ja/docs/Web/Guide/HTML/Content_categories#flow_content">フローコンテンツ</a>を受け入れるすべての要素</td>
+  </tr>
+  <tr>
+   <th scope="row">暗黙の ARIA ロール</th>
+   <td><a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a></td>
   </tr>
   <tr>
    <th scope="row">許可されている ARIA ロール</th>
-   <td>{{ARIARole("group")}}, {{ARIARole("presentation")}}</td>
+   <td>{{ARIARole("group")}}, <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/List_role">list</a></code>, {{ARIARole("none")}}, {{ARIARole("presentation")}}</td>
   </tr>
   <tr>
    <th scope="row">DOM インターフェイス</th>
@@ -53,15 +56,15 @@ translation_of: Web/HTML/Element/dl
  </tbody>
 </table>
 
-<h2 id="Attributes" name="Attributes">属性</h2>
+<h2 id="Attributes">属性</h2>
 
 <p>この要素には<a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>のみがあります。</p>
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
-<h3 id="Single_term_and_description" name="Single_term_and_description">一つの定義語に対する一つの定義説明</h3>
+<h3 id="Single_term_and_description">一つの定義語に対する一つの定義説明</h3>
 
-<pre class="brush: html notranslate">&lt;dl&gt;
+<pre class="brush: html">&lt;dl&gt;
   &lt;dt&gt;Firefox&lt;/dt&gt;
   &lt;dd&gt;
     A free, open source, cross-platform,
@@ -76,9 +79,9 @@ translation_of: Web/HTML/Element/dl
 
 <p>{{EmbedLiveSample("Single_term_and_description")}}</p>
 
-<h3 id="Multiple_terms_single_description" name="Multiple_terms_single_description">複数の定義語に対する一つの定義説明</h3>
+<h3 id="Multiple_terms_single_description">複数の定義語に対する一つの定義説明</h3>
 
-<pre class="brush: html notranslate">&lt;dl&gt;
+<pre class="brush: html">&lt;dl&gt;
   &lt;dt&gt;Firefox&lt;/dt&gt;
   &lt;dt&gt;Mozilla Firefox&lt;/dt&gt;
   &lt;dt&gt;Fx&lt;/dt&gt;
@@ -95,9 +98,9 @@ translation_of: Web/HTML/Element/dl
 
 <p>{{EmbedLiveSample("Multiple_terms_single_description")}}</p>
 
-<h3 id="Single_term_multiple_descriptions" name="Single_term_multiple_descriptions">一つの定義語に対し、複数の定義内容をあてる</h3>
+<h3 id="Single_term_multiple_descriptions">一つの定義語に対し、複数の定義内容をあてる</h3>
 
-<pre class="brush: html notranslate">&lt;dl&gt;
+<pre class="brush: html">&lt;dl&gt;
   &lt;dt&gt;Firefox&lt;/dt&gt;
   &lt;dd&gt;
     A free, open source, cross-platform,
@@ -118,15 +121,15 @@ translation_of: Web/HTML/Element/dl
 
 <p>{{EmbedLiveSample("Single_term_multiple_descriptions")}}</p>
 
-<h3 id="Multiple_terms_and_descriptions" name="Multiple_terms_and_descriptions">複数の定義語に対し、複数の定義内容をあてる</h3>
+<h3 id="Multiple_terms_and_descriptions">複数の定義語に対し、複数の定義内容をあてる</h3>
 
 <p>これまでの例を組み合わせることで、複数の定義語に対し、複数の内容を定義することもできます。</p>
 
-<h3 id="Metadata" name="Metadata">メタデータ</h3>
+<h3 id="Metadata">メタデータ</h3>
 
 <p>説明リストは、キーと値のペアのリストであるメタデータの表示にも役立ちます。</p>
 
-<pre class="brush: html notranslate">&lt;dl&gt;
+<pre class="brush: html">&lt;dl&gt;
   &lt;dt&gt;Name&lt;/dt&gt;
   &lt;dd&gt;Godzilla&lt;/dd&gt;
   &lt;dt&gt;Born&lt;/dt&gt;
@@ -140,15 +143,15 @@ translation_of: Web/HTML/Element/dl
 
 <p>ヒント: CSS でキーと値のセパレーターを定義すると便利でしょう。</p>
 
-<pre class="brush: css notranslate">dt::after {
+<pre class="brush: css">dt::after {
   content: ": ";
 }</pre>
 
-<h3 id="Wrapping_name-value_groups_in_HTMLElementdiv_elements" name="Wrapping_name-value_groups_in_HTMLElement(div)_elements">名前と値のグループを {{HTMLElement("div")}} 要素で包む</h3>
+<h3 id="Wrapping_name-value_groups_in_HTMLElementdiv_elements">名前と値のグループを <code>div</code> 要素で包む</h3>
 
-<p><a href="/ja/docs/Glossary/WHATWG">WHATWG</a> HTML では、{{HTMLElement("dl")}} 要素内でそれそれの名前と値のグループを、{{HTMLElement("div")}} 要素で包むことができます。これは <a href="/ja/docs/Web/HTML/Microdata">microdata</a> を使用するとき、グループ全体に <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a> を適用するとき、あるいはスタイルを設定するために役立ちます。</p>
+<p><a href="/ja/docs/Glossary/WHATWG">WHATWG</a> HTML では、{{HTMLElement("dl")}} 要素内でそれそれの名前と値のグループを、{{HTMLElement("div")}} 要素でまとめることができます。これは <a href="/ja/docs/Web/HTML/Microdata">microdata</a> を使用するとき、グループ全体に <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a> を適用するとき、あるいはスタイルを設定するために役立ちます。</p>
 
-<pre class="brush: html notranslate">&lt;dl&gt;
+<pre class="brush: html">&lt;dl&gt;
   &lt;div&gt;
     &lt;dt&gt;Name&lt;/dt&gt;
     &lt;dd&gt;Godzilla&lt;/dd&gt;
@@ -168,21 +171,22 @@ translation_of: Web/HTML/Element/dl
 &lt;/dl&gt;
 </pre>
 
-<h2 id="Notes" name="Notes">メモ</h2>
+<h2 id="Notes">メモ</h2>
 
 <p>単なる字下げの目的でこの要素 (あるいは {{HTMLElement("ul")}} 要素) を使用するのは誤りです。そのように機能しますが、これは悪い慣習であり説明リストの意味を不明瞭にします。</p>
 
-<p>用語の説明のインデントを変更するには、<a href="/ja/docs/Web/CSS">CSS</a> の {{cssxref("margin")}} プロパティを使用します。</p>
+<p>用語の説明のインデントを変更するには、<a href="/ja/docs/Web/CSS">CSS</a> の {{cssxref("margin")}} プロパティを使用してください。</p>
 
-<h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティの考慮事項</h2>
+<h2 id="Accessibility_concerns">アクセシビリティの考慮</h2>
 
-<p>読み上げソフトによって <code>&lt;dl&gt;</code> の内容の読み上げは異なります。iOS の VoiceOver など、読み上げソフトによっては <code>&lt;dl&gt;</code> の内容がリストであるため読み上げないものがあります。このため、リストグループ内の他のリスト項目との関係が分かるような形でリスト項目の内容が書かれていることを確認してください。</p>
+<p>画面リーダーによって <code>&lt;dl&gt;</code> の内容の読み上げは異なります。 iOS 14 では、 VoiceOver は仮想カーソルで操作する際に、 <code>&lt;dl&gt;</code> の内容がリストであることをアナウンスします (read-all コマンドを使用しなくても)。このため、リストグループ内の他のリスト項目との関係が分かるような形でリスト項目の内容が書かれていることを確認してください。</p>
 
 <ul>
- <li><a href="https://s.codepen.io/aardrian/debug/NzGaKP">CodePen - HTML Buddies: dt &amp; dd</a></li>
+ <li><a href="https://codepen.io/aardrian/debug/NzGaKP">CodePen - HTML Buddies: dt &amp; dd</a></li>
+ <li><a href="https://adrianroselli.com/2020/09/voiceover-on-ios-14-supports-description-lists.html">VoiceOver on iOS 14 Supports Description Lists</a></li>
 </ul>
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+<h2 id="Specifications">仕様書</h2>
 
 <table class="standard-table">
  <thead>
@@ -201,7 +205,7 @@ translation_of: Web/HTML/Element/dl
   <tr>
    <td>{{SpecName('HTML5 W3C', 'grouping-content.html#the-dl-element', '&lt;dl&gt;')}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
-   <td></td>
+   <td>{{HTMLElement("div")}} 要素を中に入れ、 <code>&lt;dt&gt;</code> および <code>&lt;dd&gt;</code> 要素を囲むことができるようになった。</td>
   </tr>
   <tr>
    <td>{{SpecName('HTML4.01', 'struct/lists.html#h-10.3', '&lt;dl&gt;')}}</td>
@@ -211,13 +215,11 @@ translation_of: Web/HTML/Element/dl
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
+<p>{{Compat}}</p>
 
-<p>{{Compat("html.elements.dl")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
+<h2 id="See_also">関連情報</h2>
 
 <ul>
  <li>{{HTMLElement("dt")}} 要素</li>

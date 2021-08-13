@@ -10,25 +10,25 @@ original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽�
 ---
 <div>{{GamesSidebar}}</div>
 
-<div>{{IncludeSubnav("/en-US/docs/Games")}}</div>
+<div>{{IncludeSubnav("/ko/docs/Games")}}</div>
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Finishing_up")}}</p>
+<p>{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up")}}</p>
 
 <div class="summary">
-<p>이 레슨은 <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch">Gamedev Canvas tutorial</a>.의 10개 중 <strong>9 번째</strong> 단계입니다. 당신은 <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson09.html">Gamedev-Canvas-workshop/lesson9.html</a>. 이 소스코드에서 이 수업의 교훈을 찾을 수 있습니다.</p>
+<p>이 레슨은 <a href="/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript">Gamedev Canvas tutorial</a>의 10개 중 <strong>9번째</strong> 단계입니다. 당신은 <a href="https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson09.html">Gamedev-Canvas-workshop/lesson9.html</a>에서 완성된 소스코드를 찾을 수 있습니다.</p>
 </div>
 
-<p><span class="seoSummary">경기 자체가 사실상 끝났으므로, 이를 다듬는 작업을 해봅시다. 우리는 이미 키보드로 조종하는 코드를 추가했지만 마우스 조종하는 코드를 쉽게 추가할 수 있습니다.</span></p>
+<p><span class="seoSummary">게임 자체는 사실상 완성되었으므로, 이를 다듬는 작업을 해봅시다. 우리는 이미 키보드로 조종하는 코드를 추가했지만 마우스 조종하는 코드를 쉽게 추가할 수 있습니다.</span></p>
 
 <h2 id="마우스_이동_감지하기">마우스 이동 감지하기</h2>
 
-<p>마우스 움직임을 감지하기 위해 감지를 하는 것은 키 감지를 하는 것보다 훨씬 더 쉽습니다. 우리가 필요한 것은 {{event("mousemove")}} 이 이벤트 감지입니다. 이 <code>keyup event</code> 바로 아래에 이 행을 추가하십시오.</p>
+<p>마우스 움직임을 감지하는 것은 키 누름을 감지하는 것보다 더욱 쉽습니다. 우리에게 필요한 모든 것은 {{event("mousemove")}} 이벤트에 대한 리스너입니다. 이 <code>keyup event</code> 바로 아래에 이 행을 추가해보세요.</p>
 
 <pre class="brush: js">document.addEventListener("mousemove", mouseMoveHandler, false);</pre>
 
-<h2 id="마우스_움직임에_따라_패들_이동_하기">마우스 움직임에 따라 패들 이동 하기</h2>
+<h2 id="마우스_움직임에_따라_패들_이동_하기">마우스 움직임에 따라 패들 이동하기</h2>
 
-<p>포인터 좌표에 따라 패들 위치를 업데이트를 할 수 있습니다. 다음과 같은 핸들러 기능을 정확하게 할 것입니다. 추가한 이전 줄 아래에 다음 함수를 추가하십시오:</p>
+<p>포인터 좌표에 따라 패들 위치를 업데이트할 수 있습니다. 다음의 핸들러 함수가 정확히 이것을 할 것입니다. 추가한 이전 줄 아래에 다음 함수를 추가해보세요.</p>
 
 <pre class="brush: js">function mouseMoveHandler(e) {
     var relativeX = e.clientX - canvas.offsetLeft;
@@ -37,7 +37,7 @@ original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽�
     }
 }</pre>
 
-<p>이 함수에서 우리는 먼저 상대적인 <code>relativeX</code> 를 구합니다. 이 값은 뷰포트(<code>e.clientX</code>)와 캔버스 왼쪽 가장자리 (<code>canvas.offsetLeft</code>) 사이의 거리에 마우스 위치를 뺀 값입니다. 상대적인 X 포인터 위치가 0보다 크고 캔버스 폭보다 적으면 포인터가 경계 내에 있게 되고, <code>paddleX</code>의 위치(패들 왼쪽 가장자리에 배치되어 있다)는 패들 width의 반을 뺀 <code>relativeX</code>의 값으로 설정되므로 이동은 실제로 패들 가운데 상대적으로 이동이 됩니다.</p>
+<p>이 함수에서 우리는 첫번째로 <code>relativeX</code> 값을 계산하는데, 이는 뷰포트 (<code>e.clientX</code>) 안에 있는 가로 마우스 위치에 캔버스의 좌측 끝과 뷰포트 (<code>canvas.offsetLeft</code>) 의 좌측 끝 사이의 거리를 뺀 값과 같습니다. 이는 캔버스의 좌측 끝과 마우스 포인터 사이의 거리와 같습니다. 상대적인 X 포인터 위치가 0보다 크고 캔버스 폭보다 적으면 포인터가 경계 내에 있게 되고, <code>paddleX</code>의 위치(패들 왼쪽 가장자리에 배치되어 있습니다)는 패들 폭의 반을 뺀 <code>relativeX</code>의 값으로 설정되므로 이동은 패들의 중앙과 관련될 것입니다.</p>
 
 <p>이제 패들은 마우스 커서의 움직임을 따르겠지만, 움직임을 캔버스 크기로 제한하고 있기 때문에 어느 쪽에서도 완전히 사라지지 않을 것입니다.</p>
 
@@ -48,11 +48,11 @@ original_slug: Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽�
 <p>{{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/vt7y5hcp/","","395")}}</p>
 
 <div class="summary">
-<p>Exercise: 패들이 캔버스 양쪽 가장자리에서 반만 잘려나가 보일 것 입니다. 패들 이동 제한 경계를 조정해 보세요.</p>
+<p>연습: 패들이 캔버스 양쪽 가장자리에서 반만 잘려나가 보일 것입니다. 패들 이동 제한 경계를 조정해 보세요.</p>
 </div>
 
 <h2 id="다음_단계">다음 단계</h2>
 
-<p>이제 우리는 완전한 게임을 할 수 있게 되었습니다. 우리는 몇 가지 작은 코드만으로 이 레슨을 마치게 될 것 입니다! — <a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Finishing_up">Finishing up</a>.<a href="https://developer.mozilla.org/en-US/docs/Games/Workflows/Breakout_game_from_scratch/Finishing_up"> (마지막)</a></p>
+<p>이제 우리는 완전한 게임을 할 수 있게 되었습니다. 우리는 몇 가지 작은 코드만으로 이 레슨을 마치게 될 것 입니다! — <a href="/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up">마지막</a>.</p>
 
-<p>{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Finishing_up")}}</p>
+<p>{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up")}}</p>

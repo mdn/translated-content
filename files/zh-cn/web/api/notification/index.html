@@ -31,7 +31,7 @@ translation_of: Web/API/Notification
  <dd>一个被允许用来设置通知的对象。它包含以下属性：
  <ul>
   <li><code>dir</code> : 文字的方向；它的值可以是 <code>auto（自动）</code>, <code>ltr（从左到右）</code>, or <code>rtl</code>（从右到左）</li>
-  <li><code>lang</code>: 指定通知中所使用的语言。这个字符串必须在 <a href="http://tools.ietf.org/html/bcp47" title="http://tools.ietf.org/html/bcp47">BCP 47 language tag</a> 文档中是有效的。</li>
+  <li><code>lang</code>: 指定通知中所使用的语言。这个字符串必须在 <a href="http://tools.ietf.org/html/bcp47">BCP 47 language tag</a> 文档中是有效的。</li>
   <li><code>body</code>: 通知中额外显示的字符串</li>
   <li><code>tag</code>: 赋予通知一个ID，以便在必要的时候对通知进行刷新、替换或移除。</li>
   <li><code>icon</code>: 一个图片的URL，将被用于显示通知的图标。</li>
@@ -240,7 +240,7 @@ translation_of: Web/API/Notification
 <h3 id="Chrome_备忘">Chrome 备忘</h3>
 
 <ul>
- <li>在 Chrome 22 版本之前，如果要使用通知需要 <a href="http://www.chromium.org/developers/design-documents/desktop-notifications/api-specification" title="http://www.chromium.org/developers/design-documents/desktop-notifications/api-specification">旧的带前缀版本的规范</a> ，并且使用{{domxref("window.navigator.webkitNotifications","navigator.webkitNotifications")}} 对象创建一个新的通知实例。</li>
+ <li>在 Chrome 22 版本之前，如果要使用通知需要 <a href="http://www.chromium.org/developers/design-documents/desktop-notifications/api-specification">旧的带前缀版本的规范</a> ，并且使用{{domxref("window.navigator.webkitNotifications","navigator.webkitNotifications")}} 对象创建一个新的通知实例。</li>
  <li>在 Chrome 32 版本之前，不支持 {{domxref("Notification.permission")}} 属性。</li>
 </ul>
 

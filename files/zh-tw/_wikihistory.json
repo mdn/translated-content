@@ -2595,12 +2595,6 @@
       "BobChao"
     ]
   },
-  "Mozilla/Firefox/Releases/68": {
-    "modified": "2020-05-02T05:45:42.258Z",
-    "contributors": [
-      "abc52090241"
-    ]
-  },
   "Mozilla/Firefox/Releases/7": {
     "modified": "2019-04-23T05:35:00.727Z",
     "contributors": [
@@ -2859,14 +2853,6 @@
       "lixingnan200"
     ]
   },
-  "Web/API/Ambient_Light_Events": {
-    "modified": "2019-03-23T23:27:04.119Z",
-    "contributors": [
-      "jackblackevo",
-      "teoli",
-      "MashKao"
-    ]
-  },
   "Web/API/AnalyserNode": {
     "modified": "2019-03-23T22:40:29.435Z",
     "contributors": [
@@ -2928,19 +2914,6 @@
     "modified": "2019-03-23T22:05:38.897Z",
     "contributors": [
       "flyinglimao"
-    ]
-  },
-  "Web/API/Body": {
-    "modified": "2020-10-15T22:10:19.507Z",
-    "contributors": [
-      "RickBrown"
-    ]
-  },
-  "Web/API/Body/json": {
-    "modified": "2020-10-15T22:10:18.425Z",
-    "contributors": [
-      "xstar",
-      "eyeccc"
     ]
   },
   "Web/API/CSSStyleDeclaration": {
@@ -3124,12 +3097,6 @@
   },
   "Web/API/CharacterData": {
     "modified": "2019-03-23T22:30:36.282Z",
-    "contributors": [
-      "jackblackevo"
-    ]
-  },
-  "Web/API/ChildNode": {
-    "modified": "2019-03-23T22:30:29.724Z",
     "contributors": [
       "jackblackevo"
     ]
@@ -3508,12 +3475,6 @@
       "fscholz",
       "jackblackevo",
       "james_yang"
-    ]
-  },
-  "Web/API/ElementCSSInlineStyle/style": {
-    "modified": "2019-03-23T22:20:07.015Z",
-    "contributors": [
-      "jackblackevo"
     ]
   },
   "Web/API/ErrorEvent": {
@@ -4047,12 +4008,6 @@
       "NoobTW"
     ]
   },
-  "Web/API/HTMLOrForeignElement/dataset": {
-    "modified": "2019-03-18T21:38:45.005Z",
-    "contributors": [
-      "willynpi"
-    ]
-  },
   "Web/API/HTMLSelectElement": {
     "modified": "2019-03-23T22:18:47.753Z",
     "contributors": [
@@ -4125,16 +4080,6 @@
       "MashKao",
       "ethertank",
       "princetoad@gmail.com"
-    ]
-  },
-  "Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
-    "modified": "2019-03-18T20:39:41.131Z",
-    "contributors": [
-      "choznerol",
-      "jackblackevo",
-      "birdca",
-      "foxbrush",
-      "thomaschen"
     ]
   },
   "Web/API/IndexedDB_API/Using_IndexedDB": {
@@ -4250,20 +4195,6 @@
   },
   "Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers": {
     "modified": "2019-03-23T23:51:06.175Z",
-    "contributors": [
-      "chrisdavidmills",
-      "teoli",
-      "Coolcd"
-    ]
-  },
-  "Web/API/NavigatorOnLine": {
-    "modified": "2019-03-23T22:02:07.853Z",
-    "contributors": [
-      "chrisdavidmills"
-    ]
-  },
-  "Web/API/NavigatorOnLine/Online_and_offline_events": {
-    "modified": "2019-03-23T23:51:04.713Z",
     "contributors": [
       "chrisdavidmills",
       "teoli",
@@ -5379,13 +5310,6 @@
     "modified": "2019-03-23T22:27:58.659Z",
     "contributors": [
       "gn00979905"
-    ]
-  },
-  "Web/CSS/radial-gradient()": {
-    "modified": "2020-11-18T14:43:15.827Z",
-    "contributors": [
-      "chrisdavidmills",
-      "linzging"
     ]
   },
   "Web/CSS/ruby-position": {
@@ -7148,15 +7072,6 @@
       "SolomonKang"
     ]
   },
-  "Web/JavaScript/Reference/Global_Objects/Map": {
-    "modified": "2020-10-15T21:51:34.887Z",
-    "contributors": [
-      "othree",
-      "tainenko",
-      "jackblackevo",
-      "jsgao0"
-    ]
-  },
   "Web/JavaScript/Reference/Global_Objects/Math": {
     "modified": "2020-10-15T21:38:29.906Z",
     "contributors": [
@@ -7897,21 +7812,6 @@
     "contributors": [
       "chrisdavidmills",
       "iigmir"
-    ]
-  },
-  "Web/Reference": {
-    "modified": "2019-03-23T23:29:16.937Z",
-    "contributors": [
-      "jackblackevo",
-      "Somnlent",
-      "Sheppy"
-    ]
-  },
-  "Web/Reference/API": {
-    "modified": "2019-03-23T23:05:52.036Z",
-    "contributors": [
-      "jackblackevo",
-      "wildsky"
     ]
   },
   "Web/SVG": {
@@ -8691,6 +8591,33 @@
       "iigmir"
     ]
   },
+  "orphaned/Web/API/Ambient_Light_Events": {
+    "modified": "2019-03-23T23:27:04.119Z",
+    "contributors": [
+      "jackblackevo",
+      "teoli",
+      "MashKao"
+    ]
+  },
+  "orphaned/Web/API/Body": {
+    "modified": "2020-10-15T22:10:19.507Z",
+    "contributors": [
+      "RickBrown"
+    ]
+  },
+  "orphaned/Web/API/Body/json": {
+    "modified": "2020-10-15T22:10:18.425Z",
+    "contributors": [
+      "xstar",
+      "eyeccc"
+    ]
+  },
+  "orphaned/Web/API/ChildNode": {
+    "modified": "2019-03-23T22:30:29.724Z",
+    "contributors": [
+      "jackblackevo"
+    ]
+  },
   "orphaned/Web/API/Detecting_device_orientation": {
     "modified": "2019-03-23T23:27:03.486Z",
     "contributors": [
@@ -8702,6 +8629,42 @@
     "modified": "2019-03-23T22:27:33.501Z",
     "contributors": [
       "H-W-Chang"
+    ]
+  },
+  "orphaned/Web/API/ElementCSSInlineStyle/style": {
+    "modified": "2019-03-23T22:20:07.015Z",
+    "contributors": [
+      "jackblackevo"
+    ]
+  },
+  "orphaned/Web/API/HTMLOrForeignElement/dataset": {
+    "modified": "2019-03-18T21:38:45.005Z",
+    "contributors": [
+      "willynpi"
+    ]
+  },
+  "orphaned/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB": {
+    "modified": "2019-03-18T20:39:41.131Z",
+    "contributors": [
+      "choznerol",
+      "jackblackevo",
+      "birdca",
+      "foxbrush",
+      "thomaschen"
+    ]
+  },
+  "orphaned/Web/API/NavigatorOnLine": {
+    "modified": "2019-03-23T22:02:07.853Z",
+    "contributors": [
+      "chrisdavidmills"
+    ]
+  },
+  "orphaned/Web/API/NavigatorOnLine/Online_and_offline_events": {
+    "modified": "2019-03-23T23:51:04.713Z",
+    "contributors": [
+      "chrisdavidmills",
+      "teoli",
+      "Coolcd"
     ]
   },
   "orphaned/Web/API/ParentNode": {
@@ -8729,6 +8692,13 @@
       "mrstork",
       "teoli",
       "Kennyluck"
+    ]
+  },
+  "orphaned/Web/CSS/radial-gradient()": {
+    "modified": "2020-11-18T14:43:15.827Z",
+    "contributors": [
+      "chrisdavidmills",
+      "linzging"
     ]
   },
   "orphaned/Web/Guide/Events": {
@@ -9096,6 +9066,30 @@
     "contributors": [
       "teoli",
       "happysadman"
+    ]
+  },
+  "orphaned/Web/JavaScript/Reference/Global_Objects/Map": {
+    "modified": "2020-10-15T21:51:34.887Z",
+    "contributors": [
+      "othree",
+      "tainenko",
+      "jackblackevo",
+      "jsgao0"
+    ]
+  },
+  "orphaned/Web/Reference": {
+    "modified": "2019-03-23T23:29:16.937Z",
+    "contributors": [
+      "jackblackevo",
+      "Somnlent",
+      "Sheppy"
+    ]
+  },
+  "orphaned/Web/Reference/API": {
+    "modified": "2019-03-23T23:05:52.036Z",
+    "contributors": [
+      "jackblackevo",
+      "wildsky"
     ]
   },
   "orphaned/Web/SVG/教學": {

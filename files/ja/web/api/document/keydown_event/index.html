@@ -40,7 +40,7 @@ translation_of: Web/API/Document/keydown_event
 
 <p><code>keydown</code> および {{domxref("Document/keyup_event", "keyup")}} イベントが、どのキーが押されたのかを示すコードを提供するのに対し、 {{domxref("Document/keypress_event", "keypress")}} はどの<em>文字</em>が入力されたかを示します。例えば、小文字の "a" は <code>keydown</code> および <code>keyup</code> では65になるのに対し、 <code>keypress</code> では97になります。大文字の "A" はどのイベントでも65と報告されます。</p>
 
-<p>Firefox 65 から、 <code>keydown</code> および {{domxref("Document/keyup_event", "keyup")}} イベントは IME 入力中でも発生するようになり、 CJKT のユーザーのブラウザー間の互換性が向上しました ({{bug(354358)}}、またもっと有益な詳細は <a href="https://www.fxsitecompat.com/en-CA/docs/2018/keydown-and-keyup-events-are-now-fired-during-ime-composition/">keydown and keyup events are now fired during IME composition</a> を参照)。 IME 入力中のすべての <code>keydown</code> イベントを無視するには、次のようにします (229 は IME によって処理されたイベントに関連する <code>keyCode</code> の特殊な値のセットです)。</p>
+<p>Firefox 65 から、 <code>keydown</code> および {{domxref("Document/keyup_event", "keyup")}} イベントは IME 入力中でも発生するようになり、 CJKT のユーザーのブラウザー間の互換性が向上しました ({{bug(354358)}})。 IME 入力中のすべての <code>keydown</code> イベントを無視するには、次のようにします (229 は IME によって処理されたイベントに関連する <code>keyCode</code> の特殊な値のセットです)。</p>
 
 <pre class="brush: js">eventTarget.addEventListener("keydown", event =&gt; {
   if (event.isComposing || event.keyCode === 229) {
@@ -89,8 +89,6 @@ function logKey(e) {
 </table>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<div class="hidden">このページの互換性一覧表は構造化データから生成されています。データに協力していただけるのであれば、 <a class="external" href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a> をチェックアウトしてプルリクエストを送信してください。</div>
 
 <p>{{Compat("api.Document.keydown_event")}}</p>
 

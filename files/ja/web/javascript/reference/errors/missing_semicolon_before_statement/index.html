@@ -18,13 +18,13 @@ translation_of: Web/JavaScript/Reference/Errors/Missing_semicolon_before_stateme
 SyntaxError: missing ; before statement (Firefox)
 </pre>
 
-<h2 id="Error_type">エラー種別</h2>
+<h2 id="Error_type">エラーの種類</h2>
 
 <p>{{jsxref("SyntaxError")}}</p>
 
-<h2 id="What_went_wrong">原因</h2>
+<h2 id="What_went_wrong">エラーの原因</h2>
 
-<p>どこかでセミコロン (<code>;</code>) を忘れています。<a href="/ja/docs/Web/JavaScript/Reference/Statements">JavaScript 文</a>はセミコロンで終えなければなりません。一部は、<a href="/ja/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion">自動セミコロン挿入 (ASI)</a> の影響を受けますが、この場合に JavaScript がソースコードを正確に解釈するためには、セミコロンを置く必要があります。</p>
+<p>どこかでセミコロン (<code>;</code>) を忘れています。<a href="/ja/docs/Web/JavaScript/Reference/Statements">JavaScript の文</a>はセミコロンで終えなければなりません。一部は、<a href="/ja/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion">自動セミコロン挿入 (ASI)</a> の影響を受けますが、この場合に JavaScript がソースコードを正確に解釈するためには、セミコロンを置く必要があります。</p>
 
 <p>しかし、多くの場合、このエラーは、文字列の不適切なエスケープや <code>var</code> の誤った使用など、その他のエラーの結果として発生します。また、どこかで括弧が多すぎるかもしれません。このエラーが発生した場合は、注意深く構文をチェックしてください。</p>
 
@@ -80,6 +80,6 @@ array[0] = 'there';
 <h2 id="See_also">関連情報</h2>
 
 <ul>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion">自動セミコロン挿入 (ASI)</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Statements">JavaScript 文</a></li>
+  <li><a href="/ja/docs/Web/JavaScript/Reference/Lexical_grammar#automatic_semicolon_insertion">自動セミコロン挿入 (ASI)</a></li>
+  <li><a href="/ja/docs/Web/JavaScript/Reference/Statements">JavaScript 文</a></li>
 </ul>

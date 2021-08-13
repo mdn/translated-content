@@ -4,7 +4,6 @@ slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 translation_of: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 original_slug: WebSockets/Writing_WebSocket_client_applications
 ---
-<p>{{ draft() }}</p>
 
 <p>Веб-сокеты - технология, которая позволяет открыть интерактивную сессию общения между браузером пользователя и сервером. Соединяясь через веб-сокеты, веб-приложения могут осуществлять взаимодействие в реальном времени вместо того, чтобы делать запросы к клиенту о входящих/исходящих изменениях.</p>
 
@@ -72,33 +71,33 @@ WebSocket WebSocket(
 
 <p>Когда соединение установлено (что соответствует, <code>readyState</code> <code>OPEN</code>), <code>exampleSocket.protocol</code> сообщит, какой протокол выбрал сервер.</p>
 
-<p>In the above examples <code>ws</code> has replaced <code>http</code>, similarly <code>wss</code> replaces <code>https</code>. Establishing a WebSocket relies on the HTTP Upgrade mechanism, so the request for the protocol upgrade is implicit when we address the HTTP server as <code><span class="nowiki">ws://www.example.com</span></code> or <code><span class="nowiki">wss://www.example.com</span></code>.</p>
+<p>В приведенных выше примерах <code>ws</code> заменяет <code>http</code>, аналогично <code>wss</code> заменяет <code>https</code>. Установка соединения через WebSocket зависит от механизма обновления HTTP, таким образом запрос на обновление неявный, когда мы обращаемся к серверу HTTP с помощью <code><span class="nowiki">ws://www.example.com</span></code> или <code><span class="nowiki">wss://www.example.com</span></code>.</p>
 
 <h2 id="Отправка_данных_на_сервер">Отправка данных на сервер</h2>
 
 <p>Однажды открыв соединение, вы можете передавать данные на сервер. Для осуществления этого, вызовите метод <a href="/en/WebSockets/WebSockets_reference/WebSocket#send()" title="en/WebSockets/WebSockets reference/WebSocket#send()"><code>send()</code></a> объекта <code>WebSocket</code>  для каждого сообщение, которое желаете отправить:</p>
 
-<pre class="brush: js">exampleSocket.send("Here's some text that the server is urgently awaiting!");
+<pre class="brush: js">exampleSocket.send("Вот текст, который будет отправлен серверу.");
 </pre>
 
 <p>Вы можете пересылать данные в виде строки, {{ domxref("Blob") }}, так и <a href="/en/JavaScript_typed_arrays/ArrayBuffer" title="en/JavaScript typed arrays/ArrayBuffer"><code>ArrayBuffer</code></a>.</p>
 
-<div class="note"><strong>Note:</strong> Prior to version 11, Firefox only supported sending data as a string.</div>
+<div class="note"><strong>Замечание:</strong> До версии 11, Firefox поддерживал отправку данных только в виде строки.</div>
 
-<p>As establishing a connection is asynchronous and prone to failure there is no guarantee that calling the <code>send()</code> method immediately after creating a WebSocket object will be successful. We can at least be sure that attempting to send data only takes place once a connection is established by defining an <code>onopen</code> handler to do the work:</p>
+<p>Так как установка соедиения асинхронна и подвержена сбоям, то нет никакой гарантии, что вызов метода <code>send()</code>, после создания объекта WebSocket, будет завершен успешно. По крайней мере, мы можем быть уверены, что попытка отправить данные будет иметь место только после того, как соединение будет установлено, определив обработчик <code>onopen</code> для выполнения этого действия:</p>
 
 <pre class="brush: js">exampleSocket.onopen = function (event) {
-  exampleSocket.send("Here's some text that the server is urgently awaiting!");
+  exampleSocket.send("Вот текст, который будет отправлен серверу.");
 };
 </pre>
 
-<h3 id="Using_JSON_to_transmit_objects">Using JSON to transmit objects</h3>
+<h3 id="Использование_JSON_для_передачи_объектов">Использование JSON для передачи объектов</h3>
 
-<p>One handy thing you can do is use <a href="/en/JSON" title="en/JSON">JSON</a> to send reasonably complex data to the server. For example, a chat program can interact with a server using a protocol implemented using packets of JSON-encapsulated data:</p>
+<p>Одна удобная вещь которую вы можете сделать, это использовать <a href="/en/JSON" title="en/JSON">JSON</a> для пересылки сложных данных на сервер. Например, приложение-чат может взаимодействовать с сервером, используя протокол, реализованный с использованием пакетов данных, инкапсулированных в JSON:</p>
 
-<pre class="brush: js">// Send text to all users through the server
+<pre class="brush: js">// Отправьте текст всем пользователям через сервер
 function sendText() {
-  // Construct a msg object containing the data the server needs to process the message from the chat client.
+  // Создайте объект содержащий данные, необходимые серверу для обрабоки сообщения от клиента чата.
   var msg = {
     type: "message",
     text: document.getElementById("text").value,
@@ -106,34 +105,34 @@ function sendText() {
     date: Date.now()
   };
 
-  // Send the msg object as a JSON-formatted string.
+  // Отправьте объект в виде JSON строки.
   exampleSocket.send(JSON.stringify(msg));
 
-  // Blank the text input element, ready to receive the next line of text from the user.
+  // Очистите элемент ввода текста, чтобы получить следующую строку текста от пользователя.
   document.getElementById("text").value = "";
 }
 </pre>
 
-<h2 id="Receiving_messages_from_the_server">Receiving messages from the server</h2>
+<h2 id="Получение_сообщений_от_сервера">Получение сообщений от сервера</h2>
 
-<p>WebSockets is an event-driven API; when messages are received, a "message" event is delivered to the <code>onmessage</code> function. To begin listening for incoming data, you can do something like this:</p>
+<p>WebSockets — это API, управляемый событиями; когда сообщения получены, событие "message" доставлено в функцию <code>onmessage</code>. Чтобы начать прослушивание входящих данных, вы можете сделать что-то вроде этого:</p>
 
 <pre class="brush: js">exampleSocket.onmessage = function (event) {
   console.log(event.data);
 }
 </pre>
 
-<h3 id="Receiving_and_interpreting_JSON_objects">Receiving and interpreting JSON objects</h3>
+<h3 id="Получение_и_интерпретация_JSON_объектов">Получение и интерпретация JSON объектов</h3>
 
-<p>Let's consider the chat client application first alluded to in {{ anch("Using JSON to transmit objects") }}. There are assorted types of data packets the client might receive, such as:</p>
+<p>Давайте рассмотрим клиентское приложение чата, которое впервые упоминалось в разделе {{ anch("Использование JSON для передачи объектов") }}. Есть разные типы пакетов данных, которые может получить клиент, например:</p>
 
 <ul>
- <li>Login handshake</li>
- <li>Message text</li>
- <li>User list updates</li>
+ <li>Вход в систему</li>
+ <li>Текст сообщения</li>
+ <li>Обновление списка пользователей</li>
 </ul>
 
-<p>The code that interprets these incoming messages might look like this:</p>
+<p>Код обрабатывающий эти входящие сообщения, может выглядеть так:</p>
 
 <pre class="brush: js">exampleSocket.onmessage = function(event) {
   var f = document.getElementById("chatbox").contentDocument;
@@ -172,25 +171,25 @@ function sendText() {
 };
 </pre>
 
-<p>Here we use <a href="/en/JavaScript/Reference/Global_Objects/JSON/parse" title="en/JavaScript/Reference/Global Objects/JSON/parse"><code>JSON.parse()</code></a> to convert the JSON object back into the original object, then examine and act upon its contents.</p>
+<p>Здесь мы используем <a href="/en/JavaScript/Reference/Global_Objects/JSON/parse" title="en/JavaScript/Reference/Global Objects/JSON/parse"><code>JSON.parse()</code></a> чтобы преобразовать JSON строку в объект, затем обработайте его.</p>
 
-<h3 id="Text_data_format">Text data format</h3>
+<h3 id="Формат_текстовых_данных">Формат текстовых данных</h3>
 
-<p>Text received over a WebSocket connection is in UTF-8 format.</p>
+<p>Текст, полученный через WebSocket должен иметь кодировку UTF-8</p>
 
-<p>Prior to Gecko 9.0 {{ geckoRelease("9.0") }}, certain non-characters in otherwise valid UTF-8 text would cause the connection to be terminated. Now Gecko permits these values.</p>
+<p>До Gecko 9.0 {{ geckoRelease("9.0") }}, некоторые не символьные значения в допустимом тексте UTF-8 могут привести к разрыву соединения. Теперь Gecko допускает эти значения.</p>
 
-<h2 id="Closing_the_connection">Closing the connection</h2>
+<h2 id="Закрытие_соединения">Закрытие соединения</h2>
 
-<p>When you've finished using the WebSocket connection, call the WebSocket method <a href="/en/WebSockets/WebSockets_reference/WebSocket#close()" title="en/WebSockets/WebSockets reference/WebSocket#close()"><code>close()</code></a>:</p>
+<p>Когда вы закончили использовать соединение WebSocket, закройте его используя метод  <a href="/en/WebSockets/WebSockets_reference/WebSocket#close()" title="en/WebSockets/WebSockets reference/WebSocket#close()"><code>close()</code></a>:</p>
 
 <pre class="brush: js">exampleSocket.close();
 </pre>
 
-<p>It may be helpful to examine the socket's <code>bufferedAmount</code> attribute before attempting to close the connection to determine if any data has yet to be transmitted on the network.</p>
+<p>Перед попыткой закрыть соединение может быть полезно проверить атрибут <code>bufferedAmount</code> чтобы определить, не переданы ли еще какие-либо данные по сети.</p>
 
-<h2 id="Security_considerations">Security considerations</h2>
+<h2 id="Безопасность">Безопасность</h2>
 
-<p>WebSockets should not be used in a mixed content environment; that is, you shouldn't open a non-secure WebSocket connection from a page loaded using HTTPS or vice-versa. In fact, some browsers explicitly forbid this, including Firefox 8 and later.</p>
+<p>WebSocket не следует использовать в среде со смешанным содержимым: то есть вы не должны открывать незащищенное соединение WebSocket со страницы, загруженной с использованием HTTPS, или наоборот. Фактически, некоторые браузеры явно запрещают это, например Firefox 8 и выше.</p>
 
 <p>{{ languages ( {"zh-tw": "zh_tw/WebSockets/Writing_WebSocket_client_applications"} ) }}</p>
