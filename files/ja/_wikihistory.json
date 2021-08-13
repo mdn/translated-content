@@ -13613,6 +13613,13 @@
       "Okome"
     ]
   },
+  "Web/API/Element/before": {
+    "modified": "2020-10-17T03:58:22.731Z",
+    "contributors": [
+      "Potappo",
+      "Shirasu"
+    ]
+  },
   "Web/API/Element/blur_event": {
     "modified": "2020-10-15T21:58:39.988Z",
     "contributors": [
@@ -14140,6 +14147,13 @@
       "fscholz",
       "khalid32",
       "Mgjbot"
+    ]
+  },
+  "Web/API/Element/replaceWith": {
+    "modified": "2020-10-17T04:41:48.425Z",
+    "contributors": [
+      "Potappo",
+      "Shirasu"
     ]
   },
   "Web/API/Element/requestFullScreen": {
@@ -20996,10 +21010,46 @@
       "jack-low"
     ]
   },
+  "Web/API/Response/arrayBuffer": {
+    "modified": "2020-10-15T21:43:16.481Z",
+    "contributors": [
+      "Wind1808",
+      "woodmix",
+      "YuichiNukiyama"
+    ]
+  },
+  "Web/API/Response/blob": {
+    "modified": "2020-10-15T21:47:35.044Z",
+    "contributors": [
+      "Wind1808",
+      "woodmix",
+      "YuichiNukiyama"
+    ]
+  },
+  "Web/API/Response/body": {
+    "modified": "2020-10-15T22:25:57.301Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/API/Response/bodyUsed": {
+    "modified": "2020-10-15T21:42:42.306Z",
+    "contributors": [
+      "Wind1808",
+      "YuichiNukiyama"
+    ]
+  },
   "Web/API/Response/error": {
     "modified": "2020-10-15T22:31:34.288Z",
     "contributors": [
       "eltociear"
+    ]
+  },
+  "Web/API/Response/formData": {
+    "modified": "2020-10-15T21:43:16.713Z",
+    "contributors": [
+      "Wind1808",
+      "YuichiNukiyama"
     ]
   },
   "Web/API/Response/headers": {
@@ -21008,10 +21058,28 @@
       "eltociear"
     ]
   },
+  "Web/API/Response/json": {
+    "modified": "2020-10-15T21:43:16.571Z",
+    "contributors": [
+      "Wind1808",
+      "mfuji09",
+      "woodmix",
+      "YuichiNukiyama"
+    ]
+  },
   "Web/API/Response/redirect": {
     "modified": "2020-10-15T22:31:37.239Z",
     "contributors": [
       "eltociear"
+    ]
+  },
+  "Web/API/Response/text": {
+    "modified": "2020-10-15T21:43:16.444Z",
+    "contributors": [
+      "Wind1808",
+      "Uemmra3",
+      "woodmix",
+      "YuichiNukiyama"
     ]
   },
   "Web/API/SVGElement": {
@@ -48413,15 +48481,6 @@
       "dextra"
     ]
   },
-  "conflicting/Web/API/MouseEvent/button": {
-    "modified": "2019-03-23T23:48:11.013Z",
-    "contributors": [
-      "fscholz",
-      "khalid32",
-      "Mgjbot",
-      "Luna8bit"
-    ]
-  },
   "conflicting/Web/API/URL": {
     "modified": "2019-03-23T23:31:44.426Z",
     "contributors": [
@@ -48497,13 +48556,6 @@
     "modified": "2019-03-24T00:00:27.042Z",
     "contributors": [
       "RobinEgg"
-    ]
-  },
-  "conflicting/tools/Keyboard_shortcuts": {
-    "modified": "2020-07-16T22:34:03.446Z",
-    "contributors": [
-      "wbamberg",
-      "yyss"
     ]
   },
   "orphaned/Bugzilla-ja": {
@@ -48795,14 +48847,6 @@
       "teoli",
       "Mgjbot",
       "Shimono"
-    ]
-  },
-  "orphaned/Components": {
-    "modified": "2019-03-23T23:49:08.351Z",
-    "contributors": [
-      "wbamberg",
-      "Mgjbot",
-      "Okome"
     ]
   },
   "orphaned/Creating_toolbar_buttons": {
@@ -49962,26 +50006,6 @@
       "Taken"
     ]
   },
-  "orphaned/Glossary/Gaia": {
-    "modified": "2019-03-18T21:26:29.596Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "orphaned/Glossary/Modern_web_apps": {
-    "modified": "2019-02-17T08:08:49.645Z",
-    "contributors": [
-      "ksugimori",
-      "Wind1808"
-    ]
-  },
-  "orphaned/HTML_Element_Cross_Reference": {
-    "modified": "2019-03-24T00:03:07.695Z",
-    "contributors": [
-      "Marsf",
-      "Mgjbot"
-    ]
-  },
   "orphaned/Installing_Extensions_and_Themes_From_Web_Pages": {
     "modified": "2019-03-23T23:45:12.220Z",
     "contributors": [
@@ -50015,22 +50039,6 @@
       "Mgjbot",
       "Potappo",
       "Kohei"
-    ]
-  },
-  "orphaned/Jetpack/UI/Slidebar": {
-    "modified": "2019-01-16T14:40:29.960Z",
-    "contributors": [
-      "wbamberg",
-      "arita_san"
-    ]
-  },
-  "orphaned/Jetpack/システム": {
-    "modified": "2019-01-16T14:40:45.346Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "Potappo",
-      "hiroyuki"
     ]
   },
   "orphaned/Key-navigable_custom_DHTML_widgets": {
@@ -50782,94 +50790,6 @@
       "shinnn"
     ]
   },
-  "orphaned/Web/API/Body": {
-    "modified": "2020-10-15T21:42:48.844Z",
-    "contributors": [
-      "Wind1808",
-      "dlwe",
-      "woodmix",
-      "hamasaki",
-      "chikoski",
-      "YuichiNukiyama",
-      "fscholz"
-    ]
-  },
-  "orphaned/Web/API/Body/arrayBuffer": {
-    "modified": "2020-10-15T21:43:16.481Z",
-    "contributors": [
-      "Wind1808",
-      "woodmix",
-      "YuichiNukiyama"
-    ]
-  },
-  "orphaned/Web/API/Body/blob": {
-    "modified": "2020-10-15T21:47:35.044Z",
-    "contributors": [
-      "Wind1808",
-      "woodmix",
-      "YuichiNukiyama"
-    ]
-  },
-  "orphaned/Web/API/Body/body": {
-    "modified": "2020-10-15T22:25:57.301Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "orphaned/Web/API/Body/bodyUsed": {
-    "modified": "2020-10-15T21:42:42.306Z",
-    "contributors": [
-      "Wind1808",
-      "YuichiNukiyama"
-    ]
-  },
-  "orphaned/Web/API/Body/formData": {
-    "modified": "2020-10-15T21:43:16.713Z",
-    "contributors": [
-      "Wind1808",
-      "YuichiNukiyama"
-    ]
-  },
-  "orphaned/Web/API/Body/json": {
-    "modified": "2020-10-15T21:43:16.571Z",
-    "contributors": [
-      "Wind1808",
-      "mfuji09",
-      "woodmix",
-      "YuichiNukiyama"
-    ]
-  },
-  "orphaned/Web/API/Body/text": {
-    "modified": "2020-10-15T21:43:16.444Z",
-    "contributors": [
-      "Wind1808",
-      "Uemmra3",
-      "woodmix",
-      "YuichiNukiyama"
-    ]
-  },
-  "orphaned/Web/API/ChildNode": {
-    "modified": "2020-11-23T03:36:42.854Z",
-    "contributors": [
-      "segayuu",
-      "Marsf",
-      "momoi"
-    ]
-  },
-  "orphaned/Web/API/ChildNode/before": {
-    "modified": "2020-10-17T03:58:22.731Z",
-    "contributors": [
-      "Potappo",
-      "Shirasu"
-    ]
-  },
-  "orphaned/Web/API/ChildNode/replaceWith": {
-    "modified": "2020-10-17T04:41:48.425Z",
-    "contributors": [
-      "Potappo",
-      "Shirasu"
-    ]
-  },
   "orphaned/Web/API/DOMLocator": {
     "modified": "2020-08-13T09:34:48.574Z",
     "contributors": [
@@ -50883,24 +50803,6 @@
       "hamasaki",
       "yyss",
       "Fajrovulpo"
-    ]
-  },
-  "orphaned/Web/API/DeviceProximityEvent/max": {
-    "modified": "2019-03-23T22:15:32.868Z",
-    "contributors": [
-      "YuichiNukiyama"
-    ]
-  },
-  "orphaned/Web/API/DeviceProximityEvent/min": {
-    "modified": "2019-03-23T22:15:40.764Z",
-    "contributors": [
-      "YuichiNukiyama"
-    ]
-  },
-  "orphaned/Web/API/DeviceProximityEvent/value": {
-    "modified": "2019-03-23T22:15:41.294Z",
-    "contributors": [
-      "YuichiNukiyama"
     ]
   },
   "orphaned/Web/API/Document_Object_Model/Events": {
@@ -51939,12 +51841,6 @@
       "dskmori"
     ]
   },
-  "orphaned/Web_Content_Accessibility_Guidelines_1.0": {
-    "modified": "2019-01-16T16:11:29.195Z",
-    "contributors": [
-      "Marsf"
-    ]
-  },
   "orphaned/Working_with_windows_in_chrome_code": {
     "modified": "2019-01-16T17:12:27.632Z",
     "contributors": [
@@ -51965,13 +51861,6 @@
     "contributors": [
       "fscholz",
       "kohei.yoshino"
-    ]
-  },
-  "orphaned/addons.mozilla.org_(AMO)_API_Developers'_Guide": {
-    "modified": "2019-03-24T00:01:55.682Z",
-    "contributors": [
-      "ethertank",
-      "yuki_nichiyama"
     ]
   },
   "orphaned/ant_script_to_assemble_an_extension": {
