@@ -3089,7 +3089,6 @@
 /ja/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE_clone	/ja/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE
 /ja/docs/Tools/Responsive_Design_Mode_(before_Firefox_52)	/ja/docs/Tools/Responsive_Design_Mode
 /ja/docs/Tools/Responsive_Design_View	/ja/docs/Tools/Responsive_Design_Mode
-/ja/docs/Tools/Using_the_Source_Editor	/ja/docs/conflicting/tools/Keyboard_shortcuts
 /ja/docs/Tools/Web_Console-redirect-1	/ja/docs/Tools/Web_Console
 /ja/docs/Tools/Web_Console/Keyboard_shortcuts	/ja/docs/orphaned/Tools/Web_Console/Keyboard_shortcuts
 /ja/docs/Tools/Web_Console/Opening_the_Web_Console	/ja/docs/Tools/Web_Console/UI_Tour
