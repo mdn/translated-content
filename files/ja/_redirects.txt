@@ -3186,7 +3186,6 @@
 /ja/docs/Web/API/Canvas_API/Drawing_graphics_with_canvas	/ja/docs/Web/API/Canvas_API/Tutorial
 /ja/docs/Web/API/Console.error	/ja/docs/Web/API/Console/error
 /ja/docs/Web/API/Coordinates	/ja/docs/Web/API/GeolocationCoordinates
-/ja/docs/Web/API/DOMLocator	/ja/docs/orphaned/Web/API/DOMLocator
 /ja/docs/Web/API/DeviceAcceleration	/ja/docs/Web/API/DeviceMotionEventAcceleration
 /ja/docs/Web/API/Document.domConfig	/ja/docs/Web/API/Document
 /ja/docs/Web/API/Document/async	/ja/docs/Web/API/XMLDocument/async
