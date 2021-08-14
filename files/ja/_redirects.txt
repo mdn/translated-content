@@ -3210,7 +3210,6 @@
 /ja/docs/Web/API/Element.querySelectorAll	/ja/docs/Web/API/Element/querySelectorAll
 /ja/docs/Web/API/Element/Activate_event	/ja/docs/Web/API/Element/DOMActivate_event
 /ja/docs/Web/API/Element/accessKey	/ja/docs/Web/API/HTMLElement/accessKey
-/ja/docs/Web/API/Element/currentStyle	/ja/docs/orphaned/Web/API/Element/currentStyle
 /ja/docs/Web/API/Element/name	/ja/docs/conflicting/Web/API
 /ja/docs/Web/API/Event/button	/ja/docs/Web/API/MouseEvent/button
 /ja/docs/Web/API/Event/createEvent	/ja/docs/Web/API/Document/createEvent
