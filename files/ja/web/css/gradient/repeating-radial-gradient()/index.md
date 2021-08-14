@@ -137,7 +137,7 @@ where <extent-keyword> = closest-corner | closest-side | farthest-corner | farth
 
 {{Specifications}}
 
-## ブラウザーの対応
+## ブラウザーの互換性
 
 {{Compat}}
 
