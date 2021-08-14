@@ -37,10 +37,10 @@ alert(align); // mostra o valor do atributo "align" do elemento com id="div1"</p
 
 <p>Quando for utilizado para um elemento HTML num DOM sinalizado como documento HTML,  <code>getAttribute()</code> troca de caixa alta para caixa baixa (maiúscula para minúscula) seu argumento antes de prosseguir.</p>
 
-<p>Essencialmente todos navegadores (Firefox, Internet Explorer, versões recentes do Opera, Safari, Konqueror, e iCab, por exemplo) retornam <code>null</code> quando o atributo especificado não existe no elemento em questão, seguindo que <a href="http://dom.spec.whatwg.org/#dom-element-getattribute" title="http://dom.spec.whatwg.org/#dom-element-getattribute">o esboço atual de especificações DOM</a> diz. A velha especificação do DOM 3 Core, por sua vez, diz que correto é retornar uma <em>string vazia</em> e algumas implementações de DOM se comportam dessa forma. Por exemplo, a implementação do getAttribute no XUL (Gecko) segue as especificações do DOM 3 Core e retorna uma string vazia. Consequentemente, deve-se usar {{domxref("Element.hasAttribute()")}} para checar a existência do atributo antes de utilizar o <code>getAttribute()</code>caso exista a possibilidade do argumento inexistir.</p>
+<p>Essencialmente todos navegadores (Firefox, Internet Explorer, versões recentes do Opera, Safari, Konqueror, e iCab, por exemplo) retornam <code>null</code> quando o atributo especificado não existe no elemento em questão, seguindo que <a href="http://dom.spec.whatwg.org/#dom-element-getattribute">o esboço atual de especificações DOM</a> diz. A velha especificação do DOM 3 Core, por sua vez, diz que correto é retornar uma <em>string vazia</em> e algumas implementações de DOM se comportam dessa forma. Por exemplo, a implementação do getAttribute no XUL (Gecko) segue as especificações do DOM 3 Core e retorna uma string vazia. Consequentemente, deve-se usar {{domxref("Element.hasAttribute()")}} para checar a existência do atributo antes de utilizar o <code>getAttribute()</code>caso exista a possibilidade do argumento inexistir.</p>
 
 <div>
-<h2 id="Compatibilidade_entre_browsers">Compatibilidade entre browsers</h2>
+<h2 id="Browser_compatibility">Compatibilidade com navegadores</h2>
 
 <p>{{CompatibilityTable}}</p>
 

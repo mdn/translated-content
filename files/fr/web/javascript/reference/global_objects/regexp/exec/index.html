@@ -18,7 +18,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/RegExp/exec
 
 <div>{{EmbedInteractiveExample("pages/js/regexp-prototype-exec.html")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
+
 
 <p>Les objets représentant des expressions rationnelles gardent un état en mémoire lorsqu'ils utilisent les marqueurs {{jsxref("RegExp.global", "global")}} ou {{jsxref("RegExp.sticky", "sticky")}} et ils gardent notamment en mémoire {{jsxref("RegExp.lastIndex", "lastIndex")}} à partir de la correspondance précédemment trouvée. Ainsi, <code>exec()</code> peut être utilisée afin de parcourir plusieurs correspondances dans un texte (avec des groupes capturants) (contrairement à {{jsxref("String.prototype.match()")}}).</p>
 
@@ -138,7 +138,7 @@ Trouvé ab. Prochaine correspondance à partir de 9
 </pre>
 
 <div class="warning">
-<p><strong>Attention</strong> à ne pas placer un littéral d'expression rationnelle (ou le constructeur {{jsxref("RegExp")}}) au sein de la condition <code>while</code> car cela créerait un boucle infinie s'il y a une correspondance car la propriété {{jsxref("RegExp.lastIndex", "lastIndex")}} serait redéfinie à chaque itération. Il faut également s'assurer que le drapeau global est défini sinon on aura également une boucle.</p>
+<p><strong>Attention :</strong> Il ne faut pas placer un littéral d'expression rationnelle (ou le constructeur {{jsxref("RegExp")}}) au sein de la condition <code>while</code> car cela créerait un boucle infinie s'il y a une correspondance car la propriété {{jsxref("RegExp.lastIndex", "lastIndex")}} serait redéfinie à chaque itération. Il faut également s'assurer que le drapeau global est défini sinon on aura également une boucle.</p>
 </div>
 
 <h3 id="Utiliser_exec()_avec_des_littéraux">Utiliser <code>exec()</code> avec des littéraux</h3>

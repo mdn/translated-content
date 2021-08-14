@@ -274,7 +274,7 @@ request.onupgradeneeded = function (event) {
 
 <p>想要修改数据库模式或结构——包括新建或删除对象仓库或索引，只能在 <code>versionchange</code> 事务中才能实现。该事务由一个指定了 version 的 {{domxref("IDBFactory.open")}} 方法启动。（在仍未实现最新标准的 WebKit 浏览器 ，{{domxref("IDBFactory.open")}} 方法只接受一个参数，即数据库的 <code>name</code>，这样你必须调用 {{domxref("IDBVersionChangeRequest.setVersion")}} 来建立 <code>versionchange</code> 事务。</p>
 
-<p>使用 <code>readonly</code> 或 <code>readwrite</code> 模式都可以从已存在的对象仓库里读取记录。但只有在 <code>readwrite</code> 事务中才能修改对象仓库。你需要使用 {{domxref("IDBDatabase.transaction")}} 启动一个事务。该方法接受两个参数：<code>storeNames</code> (作用域，一个你想访问的对象仓库的数组），事务模式 <code>mode</code>（readonly 或 readwrite）。该方法返回一个包含 {{domxref("IDBIndex.objectStore")}} 方法的事务对象，使用 {{domxref("IDBIndex.objectStore")}} 你可以访问你的对象仓库。未指定 <code>mode</code> 时，默认为 <code>readyonly</code> 模式。</p>
+<p>使用 <code>readonly</code> 或 <code>readwrite</code> 模式都可以从已存在的对象仓库里读取记录。但只有在 <code>readwrite</code> 事务中才能修改对象仓库。你需要使用 {{domxref("IDBDatabase.transaction")}} 启动一个事务。该方法接受两个参数：<code>storeNames</code> (作用域，一个你想访问的对象仓库的数组），事务模式 <code>mode</code>（readonly 或 readwrite）。该方法返回一个包含 {{domxref("IDBIndex.objectStore")}} 方法的事务对象，使用 {{domxref("IDBIndex.objectStore")}} 你可以访问你的对象仓库。未指定 <code>mode</code> 时，默认为 <code>readonly</code> 模式。</p>
 
 <div class="blockIndicator note">
 <p>从 Firfox 40 起，IndexedDB 事务放松了对持久性的保证以提高性能（参见 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1112702" rel="noopener">Bug1112702</a>）以前在 <code>readwrite</code> 事务中，只有当所有的数据确保被写入磁盘时才会触发 {{domxref("IDBTransaction.oncomplete")}}。在 Firefox 40+ 中，当操作系统被告知去写入数据后 <code>complete</code> 事件便被触发，但此时数据可能还没有真正的写入磁盘。<code>complete</code> 事件触发因此变得更快，但这样会有极小的机会发生以下情况：如果操作系统崩溃或在数据被写入磁盘前断电，那么整个事务都将丢失。由于这种灾难事件是罕见的，大多数使用者并不需要过分担心。如果由于某些原因你必须确保数据的持久性（例如你要保存一个无法再次计算的关键数据），你可以使用实验性（非标准的）<code>readwriteflush</code> 模式来创建事务以强制 <code>complete</code> 事件在数据写入磁盘后触发（查看 {{domxref("IDBDatabase.transaction")}}）。</p>
@@ -1317,7 +1317,7 @@ input {
 
 <ul>
  <li><a href="https://developer.mozilla.org/en/IndexedDB" title="https://developer.mozilla.org/en/IndexedDB">IndexedDB 接口参考</a></li>
- <li><a href="http://www.w3.org/TR/IndexedDB/" title="http://www.w3.org/TR/IndexedDB/">Indexed Database 接口说明</a></li>
+ <li><a href="http://www.w3.org/TR/IndexedDB/">Indexed Database 接口说明</a></li>
  <li><a href="https://developer.mozilla.org/en-US/docs/IndexedDB/Using_IndexedDB_in_chrome">在 Chrome 中使用 IndexedDB</a></li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_JavaScript_Generators_in_Firefox">在 Firefox 中使用 JavaScript 生成器</a></li>
  <li>Firefox 源码中的 IndexedDB <a href="https://mxr.mozilla.org/mozilla-central/find?text=&amp;string=dom%2FindexedDB%2F.*%5C.idl&amp;regexp=1">接口文件</a></li>
@@ -1326,8 +1326,8 @@ input {
 <h3 id="教程和指导">教程和指导</h3>
 
 <ul>
- <li><a href="http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/" title="http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/">Databinding UI Elements with IndexedDB</a></li>
- <li><a href="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx" title="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx">IndexedDB — The Store in Your Browser</a></li>
+ <li><a href="http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/">Databinding UI Elements with IndexedDB</a></li>
+ <li><a href="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx">IndexedDB — The Store in Your Browser</a></li>
 </ul>
 
 <h3 id="库">库</h3>

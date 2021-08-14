@@ -30,7 +30,7 @@ original_slug: Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 
 <h2 id="Overview_of_IndexedDB" name="Overview_of_IndexedDB">IndexedDB の概要</h2>
 
-<p>IndexedDB では、"キー" でインデックス付けされたオブジェクトを保存および取り出すことができます。データベースに対して施したすべての変更は、トランザクションで発生します。たいていの Web ストレージ技術と同様に、IndexedDB も<a href="http://www.w3.org/Security/wiki/Same_Origin_Policy" title="http://www.w3.org/Security/wiki/Same_Origin_Policy">同一生成元ポリシー</a>に従います。よって、保存済みデータは同一ドメイン内からアクセスできますが、異なるドメインにまたがってデータへアクセスすることはできません。</p>
+<p>IndexedDB では、"キー" でインデックス付けされたオブジェクトを保存および取り出すことができます。データベースに対して施したすべての変更は、トランザクションで発生します。たいていの Web ストレージ技術と同様に、IndexedDB も<a href="http://www.w3.org/Security/wiki/Same_Origin_Policy">同一生成元ポリシー</a>に従います。よって、保存済みデータは同一ドメイン内からアクセスできますが、異なるドメインにまたがってデータへアクセスすることはできません。</p>
 
 <p>IndexedDB は、<a href="/ja/docs/Web/API/Web_Workers_API/Using_web_workers" title="https://developer.mozilla.org/En/Using_web_workers">Web Workers</a> を含むほとんどの状況で使用できる<a href="/ja/docs/Web/API/IndexedDB_API#Asynchronous_API" title="IndexedDB#Asynchronous_API">非同期</a> API です。以前は Web Workers で使用するための<a href="/ja/docs/Web/API/IndexedDB_API#Synchronous_API" title="IndexedDB#Synchronous_API">同期</a> API も含まれていましたが、Web コミュニティが無関心であったために仕様から削除されました。</p>
 
@@ -47,7 +47,7 @@ original_slug: Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
  <li>
   <p><strong>IndexedDB はトランザクショナルデータベースモデルに基づいて構築されます。</strong>IndexedDB で行うことはすべて、<a href="#gloss_transaction">トランザクション</a>環境で発生します。IndexedDB API はインデックス、テーブル、カーソルなどを表す多くのオブジェクトを提供していますが、それらは個々のトランザクションに結びつけられています。よって、トランザクションの外部でコマンドを実行したりカーソルを開くことはできません。トランザクションには明確な存続期間がありますので、完了後にトランザクションを使おうとすると例外が発生します。また、トランザクションは自動コミットであり、手動コミットはできません。</p>
 
-  <p>このトランザクションモデルは、ユーザーが同時に 2 つの異なるタブを使用して ウェブ アプリのインスタンスを 2 つ開いた場合に何が起きるかを考慮すると、とても役に立ちます。トランザクショナルな操作がなければ、2 つのインスタンスでお互いの変更点が干渉するでしょう。データベースのトランザクションについて詳しくない場合は、<a class="link-https" href="https://en.wikipedia.org/wiki/Database_transaction" title="https://secure.wikimedia.org/wikipedia/en/wiki/Database_transaction">Wikipedia の Database transaction の記事</a> (<a class="link-https" href="https://ja.wikipedia.org/wiki/%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B6%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3" title="トランザクション">日本語版</a>) をご覧ください。また、定義の章の<a href="#gloss_transaction">トランザクション</a>もご覧ください。</p>
+  <p>このトランザクションモデルは、ユーザーが同時に 2 つの異なるタブを使用して ウェブ アプリのインスタンスを 2 つ開いた場合に何が起きるかを考慮すると、とても役に立ちます。トランザクショナルな操作がなければ、2 つのインスタンスでお互いの変更点が干渉するでしょう。データベースのトランザクションについて詳しくない場合は、<a class="link-https" href="https://en.wikipedia.org/wiki/Database_transaction">Wikipedia の Database transaction の記事</a> (<a class="link-https" href="https://ja.wikipedia.org/wiki/%E3%83%88%E3%83%A9%E3%83%B3%E3%82%B6%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3" title="トランザクション">日本語版</a>) をご覧ください。また、定義の章の<a href="#gloss_transaction">トランザクション</a>もご覧ください。</p>
  </li>
  <li>
   <p><strong>IndexedDB API はほぼ非同期です。</strong>API はデータを戻り値として返しません。代わりに、コールバック関数を渡さなければなりません。同期的な方法でデータベースに値を "保存" したり、データベースから値を "取り出す" ことはありません。代わりに、データベースで実行する操作を "要求" します。操作が完了すると DOM イベントによって通知され、イベントの種類によって操作が成功したか失敗したかを知ることができます。これは、始めは若干複雑に聞こえますが、健全化対策が組み込まれています。また、<a href="/ja/docs/DOM/XMLHttpRequest" title="https://developer.mozilla.org/en/xmlhttprequest">XMLHttpRequest</a> が動作する方法と同様です。</p>
@@ -61,10 +61,10 @@ original_slug: Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
  <li>
   <p><strong>IndexedDB はオブジェクト指向です。</strong>IndexedDB は、行と列の集合で表されるテーブルによるリレーショナルデータベースではありません。この重要かつ根本的な違いが、アプリケーションの設計や構築の方法に影響を与えます。</p>
 
-  <p>伝統的なリレーショナルデータストアでは、データを示す行と、名前付きでデータの型を示す列の集合を保存するテーブルを持ちます。一方、IndexedDB はデータの型と、単に持続的な JavaScript オブジェクトを保存するためのオブジェクトストアを作成しなければなりません。それぞれのオブジェクトストアは問い合わせや反復処理を効率的に行うためのインデックスの集合を持つことができます。オブジェクト指向データベース管理システムについて詳しくない場合は、<a href="https://en.wikipedia.org/wiki/Object_database" title="http://en.wikipedia.org/wiki/Object_database">Wikipedia の Object database の記事</a> (<a href="https://ja.wikipedia.org/wiki/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9" title="オブジェクトデータベース">日本語版</a>) をご覧ください。</p>
+  <p>伝統的なリレーショナルデータストアでは、データを示す行と、名前付きでデータの型を示す列の集合を保存するテーブルを持ちます。一方、IndexedDB はデータの型と、単に持続的な JavaScript オブジェクトを保存するためのオブジェクトストアを作成しなければなりません。それぞれのオブジェクトストアは問い合わせや反復処理を効率的に行うためのインデックスの集合を持つことができます。オブジェクト指向データベース管理システムについて詳しくない場合は、<a href="https://en.wikipedia.org/wiki/Object_database">Wikipedia の Object database の記事</a> (<a href="https://ja.wikipedia.org/wiki/%E3%82%AA%E3%83%96%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9" title="オブジェクトデータベース">日本語版</a>) をご覧ください。</p>
  </li>
  <li>
-  <p><strong>IndexedDB は Structured Query Language (<abbr>SQL</abbr>) を使用しません。</strong>IndexedDB はカーソルを生成するインデックスでクエリーを使用しており、結果セットで反復処理を行うために使用します。NoSQL システムについて詳しくない場合は、<a href="https://en.wikipedia.org/wiki/NoSQL" title="http://en.wikipedia.org/wiki/NoSQL">Wikipedia の NoSQL の記事</a> (<a href="https://ja.wikipedia.org/wiki/NoSQL" title="NoSQL">日本語版</a>) をご覧ください。</p>
+  <p><strong>IndexedDB は Structured Query Language (<abbr>SQL</abbr>) を使用しません。</strong>IndexedDB はカーソルを生成するインデックスでクエリーを使用しており、結果セットで反復処理を行うために使用します。NoSQL システムについて詳しくない場合は、<a href="https://en.wikipedia.org/wiki/NoSQL">Wikipedia の NoSQL の記事</a> (<a href="https://ja.wikipedia.org/wiki/NoSQL" title="NoSQL">日本語版</a>) をご覧ください。</p>
  </li>
  <li>
   <p><a name="origin"><strong>IndexedDB は同一生成元ポリシーに従います。</strong></a>生成元は、スクリプトを実行したドメイン、アプリケーション層プロトコル、ドキュメントの URL のポートです。それぞれの生成元が、自身に関連付けられたデータベースセットを持ちます。すべてのデータベースが、どの生成元に所属するかを識別する名称を持ちます。</p>
@@ -134,7 +134,7 @@ original_slug: Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 
  <p>代わりに、<a href="#gloss_key">キー</a>を使用してオブジェクトストア内のレコードを検索することもできます。</p>
 
- <p>インデックスの使用法について詳しくは、<a href="/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB#Using_an_index" title="IndexedDB/Using_IndexedDB#Using_an_index">IndexedDB を使用する</a>をご覧ください。インデックスのリファレンスドキュメントとして、<a href="https://wiki.developer.mozilla.org/ja/docs/Web/API/IDBKeyRange" rel="internal">IDBKeyRange</a> をご覧ください。</p>
+ <p>インデックスの使用法について詳しくは、<a href="/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB#Using_an_index" title="IndexedDB/Using_IndexedDB#Using_an_index">IndexedDB を使用する</a>をご覧ください。インデックスのリファレンスドキュメントとして、<a href="/ja/docs/Web/API/IDBKeyRange" rel="internal">IDBKeyRange</a> をご覧ください。</p>
  </dd>
 </dl>
 
@@ -211,8 +211,8 @@ original_slug: Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB
 <h2 id="See_also" name="See_also">関連情報</h2>
 
 <ul>
- <li><a href="http://www.w3.org/TR/IndexedDB/" title="http://www.w3.org/TR/IndexedDB/"><span style="direction: ltr;">Indexed Database API 仕様</span></a></li>
+ <li><a href="http://www.w3.org/TR/IndexedDB/"><span style="direction: ltr;">Indexed Database API 仕様</span></a></li>
  <li><a href="/ja/docs/Web/API/IndexedDB_API" title="IndexedDB">IndexedDB API リファレンス</a></li>
  <li><a href="/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB" title="IndexedDB/Using IndexedDB">IndexedDB を使用する</a></li>
- <li><a href="http://msdn.microsoft.com/scriptjunkie/gg679063.aspx" title="http://msdn.microsoft.com/scriptjunkie/gg679063.aspx">IndexedDB — The Store in Your Browser</a></li>
+ <li><a href="http://msdn.microsoft.com/scriptjunkie/gg679063.aspx">IndexedDB — The Store in Your Browser</a></li>
 </ul>

@@ -86,9 +86,9 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 <p>在我们的例子中，缺失的规范是显而易见的，所以我们将着手处理他们，但是对于一些没有人想到去定义正确行为的小部件而言，这的确是一个问题。所以在设计阶段花费时间是值得的，因为如果你定义的行为不够好，或者忘记定义了一个行为，那么在用户开始实际使用时，将会很难去重新定义它们。如果你在定义时有疑问，请征询他人的意见，如果你有预算，请不要犹豫的去进行<a href="https://en.wikipedia.org/wiki/Usability_testing">用户可行性测试</a>，这个过程被称为UX design (User Experience <em>Design</em>用户体验设计）,如果你想要深入的学习相关的内容，请查阅下面这些有用资源：</p>
 
 <ul>
- <li><a href="http://www.uxmatters.com/" rel="external" title="http://www.uxmatters.com/">UXMatters.com</a></li>
- <li><a href="http://uxdesign.com/" rel="external" title="http://uxdesign.com/">UXDesign.com</a></li>
- <li><a href="http://uxdesign.smashingmagazine.com/" rel="external" title="http://uxdesign.smashingmagazine.com/">The UX Design section of SmashingMagazine</a></li>
+ <li><a href="http://www.uxmatters.com/" rel="external">UXMatters.com</a></li>
+ <li><a href="http://uxdesign.com/" rel="external">UXDesign.com</a></li>
+ <li><a href="http://uxdesign.smashingmagazine.com/" rel="external">The UX Design section of SmashingMagazine</a></li>
 </ul>
 
 <div class="note">
@@ -311,7 +311,7 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 </div>
 
 <div class="note">
-<p><strong>注意：</strong>创建可复用的组件可能是一件需要些技巧的事情。<a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html" rel="external" title="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html">W3C 网络组件草案</a> 是对这类特定问题的答案之一。<a href="http://x-tags.org/" rel="external" title="http://x-tags.org/">X-Tag 项目 </a>是对这一规格的实验性实现；我们建议你看看它。</p>
+<p><strong>注意：</strong>创建可复用的组件可能是一件需要些技巧的事情。<a href="http://dvcs.w3.org/hg/webcomponents/raw-file/tip/explainer/index.html" rel="external">W3C 网络组件草案</a> 是对这类特定问题的答案之一。<a href="http://x-tags.org/" rel="external">X-Tag 项目 </a>是对这一规格的实验性实现；我们建议你看看它。</p>
 </div>
 
 <h3 id="它为什么不生效？">它为什么不生效？</h3>
@@ -323,7 +323,7 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
  <li>脚本没有加载。这是最常见的情形，特别是在移动端上，在那些网络非常不可靠的地方。</li>
  <li>脚本是有问题的。你应该总是考虑这种可能性。</li>
  <li>脚本和第三方脚本冲突。这可能会由用户使用的跟踪脚本和一些书签工具引发。</li>
- <li>脚本与一个浏览器的拓展冲突，或者受其影响。 (比如 Firefox 的 <a href="https://addons.mozilla.org/fr/firefox/addon/noscript/" rel="external" title="https://addons.mozilla.org/fr/firefox/addon/noscript/">NoScript</a> 拓展 或者 Chrome 的 <a href="https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn" rel="external" title="https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn">NotScripts</a> 拓展)。</li>
+ <li>脚本与一个浏览器的拓展冲突，或者受其影响。 (比如 Firefox 的 <a href="https://addons.mozilla.org/fr/firefox/addon/noscript/" rel="external">NoScript</a> 拓展 或者 Chrome 的 <a href="https://chrome.google.com/webstore/detail/notscripts/odjhifogjcknibkahlpidmdajjpkkcfn" rel="external">NotScripts</a> 拓展)。</li>
  <li>用户在使用老旧的浏览器，而且你需要的一些功能没有被支持。当你使用一些最新的 API 时，这种情况会经常发生。</li>
 </ul>
 
@@ -404,7 +404,7 @@ original_slug: Learn/HTML/Forms/How_to_build_custom_form_widgets
 
 <p>在我们将要构建的代码之中，我们将会使用标准的 DOM API 来完成我们所要做的所有工作。尽管 DOM API 在浏览器中得到了更好支持，但是在旧的浏览器上还是会出现问题。( 特别是非常老的 Internet Explorer）。</p>
 
-<p>如果你想要避免旧浏览器带来的麻烦，这儿有两种解决方案：使用专门的框架，比如 <a href="http://jquery.com/" rel="external" title="http://jquery.com/">jQuery</a>, <a href="https://github.com/julienw/dollardom" rel="external" title="https://github.com/julienw/dollardom">$dom</a>, <a href="http://prototypejs.org/" rel="external" title="http://prototypejs.org/">prototype</a>, <a href="http://dojotoolkit.org/" rel="external" title="http://dojotoolkit.org/">Dojo</a>, <a href="http://yuilibrary.com/" rel="external" title="http://yuilibrary.com/">YUI</a>, 或者类似的框架，或者通过填充你想使用的缺失的特性 （这可以通过条件加载轻松完成——例如使用 <a href="http://yepnopejs.com/" rel="external" title="http://yepnopejs.com/">yepnope</a> 这样的库。</p>
+<p>如果你想要避免旧浏览器带来的麻烦，这儿有两种解决方案：使用专门的框架，比如 <a href="http://jquery.com/" rel="external">jQuery</a>, <a href="https://github.com/julienw/dollardom" rel="external">$dom</a>, <a href="http://prototypejs.org/" rel="external">prototype</a>, <a href="http://dojotoolkit.org/" rel="external">Dojo</a>, <a href="http://yuilibrary.com/" rel="external">YUI</a>, 或者类似的框架，或者通过填充你想使用的缺失的特性 （这可以通过条件加载轻松完成——例如使用 <a href="http://yepnopejs.com/" rel="external">yepnope</a> 这样的库。</p>
 
 <p>我们打算使用的特性如下所示（按照风险程度从高到低排列）：</p>
 
@@ -673,7 +673,7 @@ window.addEventListener('load', function () {
 
 <p>我们构建了一个能够生效的东西，尽管这离一个特性齐全的选择框还差得远，但是它效果不错。但是我们已经完成的事情只不过是摆弄DOM。这个组件并没有真正的语义，即使它看起来像一个选择框，但是从浏览器的角度来看并不是，所以辅助技术并不能明白这是一个选择框。简单来说，这个全新的选择框并不具备可访问性！</p>
 
-<p>幸运的是，有一种解决方案叫做 <a href="/en-US/docs/Accessibility/ARIA" title="/en-US/docs/Accessibility/ARIA">ARIA</a>。ARIA代表"无障碍富互联网应用"。这是一个专为我们现在做的事情设计的<a href="http://www.w3.org/TR/wai-aria/" rel="external" title="http://www.w3.org/TR/wai-aria/"> W3C 规范</a>：使网络应用和自定义组件易于访问，它本质上是一组用来拓展 HTML 的属性集，以便我们能够更好的描述角色，状态和属性，就像我们刚才设计的元素是是它试图传递的原生元素一样。使用这些属性非常简单，所以让我们来试试看。</p>
+<p>幸运的是，有一种解决方案叫做 <a href="/en-US/docs/Accessibility/ARIA" title="/en-US/docs/Accessibility/ARIA">ARIA</a>。ARIA代表"无障碍富互联网应用"。这是一个专为我们现在做的事情设计的<a href="http://www.w3.org/TR/wai-aria/" rel="external"> W3C 规范</a>：使网络应用和自定义组件易于访问，它本质上是一组用来拓展 HTML 的属性集，以便我们能够更好的描述角色，状态和属性，就像我们刚才设计的元素是是它试图传递的原生元素一样。使用这些属性非常简单，所以让我们来试试看。</p>
 
 <h3 id="role_属性"> <code>role</code> 属性</h3>
 
@@ -725,7 +725,7 @@ window.addEventListener('load', function () {
   highlightOption(select, optionList[index]);
 };</pre>
 
-<p>这是经过所有的改变之后的最终结果。 ( 藉由 <a href="http://www.nvda-project.org/" rel="external" title="http://www.nvda-project.org/">NVDA</a> or <a href="http://www.apple.com/accessibility/voiceover/" rel="external" title="http://www.apple.com/accessibility/voiceover/">VoiceOver</a> 这样的辅助技术尝试它，你会对此有更好的体会)：</p>
+<p>这是经过所有的改变之后的最终结果。 ( 藉由 <a href="http://www.nvda-project.org/" rel="external">NVDA</a> or <a href="http://www.apple.com/accessibility/voiceover/" rel="external">VoiceOver</a> 这样的辅助技术尝试它，你会对此有更好的体会)：</p>
 
 <table>
  <thead>
@@ -750,9 +750,9 @@ window.addEventListener('load', function () {
 <p>这儿有一些库，在你编写自己的之前应该了解一下：</p>
 
 <ul>
- <li><a href="http://jqueryui.com/" rel="external" title="http://jqueryui.com/">jQuery UI</a></li>
- <li><a href="https://github.com/marghoobsuleman/ms-Dropdown" rel="external" title="https://github.com/marghoobsuleman/ms-Dropdown">msDropDown</a></li>
- <li><a href="http://www.emblematiq.com/lab/niceforms/" rel="external" title="http://www.emblematiq.com/lab/niceforms/">Nice Forms</a></li>
+ <li><a href="http://jqueryui.com/" rel="external">jQuery UI</a></li>
+ <li><a href="https://github.com/marghoobsuleman/ms-Dropdown" rel="external">msDropDown</a></li>
+ <li><a href="http://www.emblematiq.com/lab/niceforms/" rel="external">Nice Forms</a></li>
  <li><a href="https://www.google.fr/search?q=HTML+custom+form+controls&amp;ie=utf-8&amp;oe=utf-8&amp;aq=t&amp;rls=org.mozilla:fr:official&amp;client=firefox-a" rel="external" title="https://www.google.fr/search?q=HTML+custom+form+controls&amp;ie=utf-8&amp;oe=utf-8&amp;aq=t&amp;rls=org.mozilla:fr:official&amp;client=firefox-a">And many more…</a></li>
 </ul>
 

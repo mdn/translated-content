@@ -14,7 +14,7 @@ original_slug: Web/Guide/API/DOM/The_structured_clone_algorithm
 
 <ul>
  <li><code><a href="/cn/JavaScript/Reference/Global_Objects/Error">Error</a></code> 以及 <code><a href="/cn/JavaScript/Reference/Global_Objects/Function">Function</a></code> 对象是不能被结构化克隆算法复制的；如果你尝试这样子去做，这会导致抛出 <code>DATA_CLONE_ERR</code> 的异常。</li>
- <li>企图去克隆 DOM 节点同样会抛出 <code>DATA_CLONE_ERROR</code> 异常。</li>
+ <li>企图去克隆 DOM 节点同样会抛出 <code>DATA_CLONE_ERR</code> 异常。</li>
  <li>对象的某些特定参数也不会被保留
   <ul>
    <li><code><a href="/cn/JavaScript/Reference/Global_Objects/RegExp">RegExp</a> </code>对象的 <code>lastIndex</code> 字段不会被保留</li>
@@ -100,7 +100,7 @@ original_slug: Web/Guide/API/DOM/The_structured_clone_algorithm
 <h2 id="相关链接">相关链接</h2>
 
 <ul>
- <li><a href="http://www.w3.org/TR/html5/infrastructure.html#safe-passing-of-structured-data" title="http://www.w3.org/TR/html5/common-dom-interfaces.html#safe-passing-of-structured-data">HTML5 Specification: Safe passing of structured data</a></li>
+ <li><a href="http://www.w3.org/TR/html5/infrastructure.html#safe-passing-of-structured-data">HTML5 Specification: Safe passing of structured data</a></li>
  <li>{{ domxref("window.history") }}</li>
  <li>{{ domxref("window.postMessage()") }}</li>
  <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API">Web Workers</a></li>

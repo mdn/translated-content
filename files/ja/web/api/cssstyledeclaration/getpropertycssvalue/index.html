@@ -2,64 +2,58 @@
 title: CSSStyleDeclaration.getPropertyCSSValue()
 slug: Web/API/CSSStyleDeclaration/getPropertyCSSValue
 tags:
-  - API
-  - CSSOM
-  - Method
-  - Obsolete
-  - Reference
+- API
+- CSSOM
+- Method
+- Deprecated
+- Reference
+browser-compat: api.CSSStyleDeclaration.getPropertyCSSValue
 translation_of: Web/API/CSSStyleDeclaration/getPropertyCSSValue
 ---
-<p>{{ APIRef("CSSOM") }} {{Obsolete_header}}</p>
+<p>{{ APIRef("CSSOM") }} {{deprecated_header}}</p>
 
-<p><span class="seoSummary"><strong>CSSStyleDeclaration.getPropertyCSSValue()</strong> メソッドインターフェイスは、プロパティの CSS 値を含む {{domxref('CSSValue')}} を返します。</span> プロパティ名が省略プロパティの場合は <code>null</code> を返すことに注意して下さい。</p>
+<p><strong>CSSStyleDeclaration.getPropertyCSSValue()</strong> メソッドインターフェイスは、プロパティの CSS 値を含む {{domxref('CSSValue')}} を返します。プロパティ名が一括指定プロパティの場合は <code>null</code> を返すことに注意して下さい。</p>
 
-<p>代わりに {{domxref("CSSStyleDeclaration.getPropertyValue()")}} を使用する必要があります。</p>
+<div class="notecard note">
+  <p><strong>注:</strong> このインターフェースは、型付けされた CSS オブジェクトモデルを作成する試みの一部でした。この試みは放棄されており、ほとんどのブラウザーは実装していません。</p>
+  <p>この目的を達成するには、以下のものを使用することができます。</p>
+  <ul>
+    <li>{{domxref("CSSStyleDeclaration.getPropertyValue()")}} が型付けなしの <a href="/ja/docs/Web/API/CSS_Object_Model">CSS オブジェクトモデル</a>にあり、広く対応されています。</li>
+    <li>{{domxref("Element.computedStyleMap()")}} が最近の <a href="/ja/docs/Web/API/CSS_Typed_OM_API">CSS 型付きオブジェクトモデル API</a> にありますが、対応が少なく実験的なものと考えられています。</li>
+  </ul>
+</div>
 
-<h2 id="構文">構文</h2>
+<h2 id="Syntax">構文</h2>
 
-<pre class="syntaxbox notranslate">var <em>value</em> = <em>style</em>.getPropertyCSSValue(<em>property</em>);</pre>
+<pre
+  class="brush: js">var <em>value</em> = <em>style</em>.getPropertyCSSValue(<em>property</em>);</pre>
 
-<h3 id="パラメータ">パラメータ</h3>
+<h3 id="Parameters">引数</h3>
 
 <ul>
- <li><em><code>property</code></em> は、取得するプロパティ名を表す {{domxref('DOMString')}} です。</li>
+  <li><em><code>property</code></em> は、取得するプロパティ名を表す {{domxref('DOMString')}} です。</li>
 </ul>
 
-<h3 id="返り値">返り値</h3>
+<h3 id="Return_value">返値</h3>
 
 <ul>
  <li><code><em>value</em></code> は、プロパティの CSS 値を含む {{domxref('CSSValue')}} です。存在しない場合は <code>null</code> を返します。</li>
 </ul>
 
-<h2 id="例">例</h2>
+<h2 id="Example">例</h2>
 
-<p>次の JavaScript コードは、 <code>color</code> CSS プロパティの計算された RGB 値を含むオブジェクトを取得します:</p>
+<p>次の JavaScript コードは、 CSS の <code>color</code> プロパティの計算済みの RGB 値を含むオブジェクトを取得します。</p>
 
-<pre class="brush: js notranslate">var style = window.getComputedStyle(elem, null);
+<pre class="brush: js">var style = window.getComputedStyle(elem, null);
 var rgbObj = style.getPropertyCSSValue('color').getRGBColorValue();
 </pre>
 
-<h2 id="仕様">仕様</h2>
+<h2 id="Specifications">仕様書</h2>
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('DOM2 Style', 'css.html#CSS-CSSStyleDeclaration', 'CSSStyleDeclaration')}}</td>
-   <td>{{Spec2('DOM2 Style')}}</td>
-   <td><a href="https://lists.w3.org/Archives/Public/www-style/2003Oct/0347.html">2003年7月</a>に廃止と宣言</td>
-  </tr>
- </tbody>
-</table>
+<p>この機能はもともと、 <a href="https://www.w3.org/TR/DOM-Level-2-Style">DOM Style Level 2</a> 仕様書で定義されていましたが、それ以降の標準化の取り組みからは外れています。</p>
 
-<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+<p>この機能は、最新の、しかし互換性のない、 <a href="/ja/docs/Web/API/CSS_Typed_OM_API">CSS Typed Object Model API</a> に取って代わられ、現在は標準化されています。</p>
 
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
 
-
-<p>{{Compat("api.CSSStyleDeclaration.getPropertyCSSValue")}}</p>
+<p>{{Compat}}</p>

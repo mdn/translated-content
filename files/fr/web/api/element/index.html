@@ -1,454 +1,425 @@
 ---
-title: element
+title: Element
 slug: Web/API/Element
-tags:
-  - API
-  - DOM
-  - Elements
-  - Interface
-  - Reference
-  - Web API
 translation_of: Web/API/Element
+browser-compat: api.Element
 ---
-<p>{{APIRef("DOM")}}</p>
+<div>{{APIRef("DOM")}}</div>
 
-<p><strong><code>Element</code></strong> est la classe de base la plus générale à partir de laquelle tous les objets d'un {{domxref("Document")}} héritent. <span>Il n'a que des méthodes et des propriétés communes à tous les types d'éléments.</span> <span>Les classes plus spécifiques héritent d'<code>Element</code>.</span> <span>Par exemple, l'interface {{domxref("HTMLElement")}} est l'interface de base pour les éléments HTML, tandis que l'interface {{domxref ("SVGElement")}} est la base de tous les éléments SVG.</span> <span>La plupart des fonctionnalités sont spécifiées plus bas dans la hiérarchie des classes.</span></p>
+<p><strong><code>Element</code></strong> est la classe de base la plus générique dont héritent tous les objets qui représentent des éléments d'un <a href="/fr/docs/Web/API/Document"><code>Document</code></a>. Elle contient uniquement des méthodes et propriétés communes à l'ensemble des éléments. Des classes plus spécifiques héritent d'<code>Element</code>. Ainsi, l'interface <a href="/fr/docs/Web/API/HTMLElement"><code>HTMLElement</code></a> correspond à l'interface de base pour les éléments HTML tandis que l'interface <a href="/fr/docs/Web/API/SVGElement"><code>SVGElement</code></a> représente la base pour les éléments SVG. La plupart des fonctionnalités sont définies dans les classes situées plus loin dans la hiérarchie.</p>
 
-<p>Les langages en dehors du domaine de la plate-forme Web, comme XUL via l'interface <code>XULElement</code>, implémentent également <code>Element</code>.</p>
+<h2 id="properties">Propriétés</h2>
 
-<p>{{InheritanceDiagram}}</p>
-
-<h2 id="Propriétés">Propriétés</h2>
-
-<p><em><span>Hérite des propriétés de son interface parent {{domxref("Node")}} et, par extension, du parent de cette interface {{domxref("EventTarget")}}.</span> <span>Il implémente les propriétés de {{domxref("ParentNode")}}, </span></em> <em>{{domxref("ChildNode")}},</em> <em><span> {{domxref("NonDocumentTypeChildNode")}} et {{domxref("Animatable")}}.</span></em></p>
+<p><em><code>Element</code> hérite des propriétés de son interface parente : <a href="/fr/docs/Web/API/Node"><code>Node</code></a> (et donc indirectement des propriétés du parent de celle-ci : <a href="/fr/docs/Web/API/EventTarget"><code>EventTarget</code></a>).</em></p>
 
 <dl>
- <dt>{{domxref("Element.attributes")}} {{readOnlyInline}}</dt>
- <dd>Retourne un objet {{domxref("NamedNodeMap")}} contenant les attributs assignés de l'élément HTML correspondant.</dd>
- <dt>{{domxref("Element.classList")}} {{readOnlyInline}}</dt>
- <dd>Retourne une {{domxref("DOMTokenList")}} contenant la liste des attributs de classe.</dd>
- <dt>{{domxref("Element.className")}}</dt>
- <dd>est une {{domxref("DOMString")}} représentant la classe de l'élément.</dd>
- <dt>{{domxref("Element.clientHeight")}} {{experimental_inline}} {{readOnlyInline}}</dt>
- <dd>Retourne un {{jsxref("Number")}}  représentant la hauteur intérieure de l'élément.</dd>
- <dt>{{domxref("Element.clientLeft")}} {{readOnlyInline}}</dt>
- <dd>Retourne un {{jsxref("Number")}}  représentant la largeur de la bordure gauche de l'élément.</dd>
- <dt>{{domxref("Element.clientTop")}} {{readOnlyInline}}</dt>
- <dd>Retourne un {{jsxref("Number")}} représentant la largeur de la bordure haut de l'élément.</dd>
- <dt>{{domxref("Element.clientWidth")}} {{readOnlyInline}}</dt>
- <dd>Retourne un {{jsxref("Number")}} représentant la largeur intérieure de l'élément.</dd>
- <dt>{{domxref("Element.computedName")}} {{readOnlyInline}}</dt>
- <dd>Retourne une {{domxref("DOMString")}}  contenant l'étiquette affichée pour l'accessibilité.</dd>
- <dt>{{domxref("Element.computedRole")}} {{readOnlyInline}}</dt>
- <dd>Retourne une {{domxref("DOMString")}} contenant le rôle ARIA qui a été appliqué à un élément particulier.</dd>
- <dt>{{domxref("Element.id")}}</dt>
- <dd>est une {{domxref("DOMString")}} représentant l'id <em>(identifiant)</em> de l'élément.</dd>
- <dt>{{domxref("Element.innerHTML")}}</dt>
- <dd>Est une {{domxref("DOMString")}} représentant la partie locale du nom qualifié de l'élément.</dd>
- <dt>{{ domxref("Element.localName") }} {{readOnlyInline}}</dt>
- <dd>une {{domxref("DOMString")}} représentant la partie locale du nom qualifié de l'élément.</dd>
- <dt>{{domxref("Element.namespaceURI")}} {{readonlyInline}}</dt>
- <dd>L'URI d'espace de noms de l'élément, ou <code>null</code> s'il n'est pas un espace de noms.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/assignedSlot"><code>Element.assignedSlot</code></a>{{readonlyInline}}</dt>
+  <dd>Renvoie un objet <a href="/fr/docs/Web/API/HTMLSlotElement"><code>HTMLSlotElement</code></a> représentant l'emplacement (<a href="/fr/docs/Web/HTML/Element/slot"><code>&lt;slot&gt;</code></a>) dans lequel le nœud est inséré.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/attributes"><code>Element.attributes</code></a> {{readOnlyInline}}</dt>
+  <dd>Renvoie un objet <a href="/fr/docs/Web/API/NamedNodeMap"><code>NamedNodeMap</code></a> contenant les attributs affectés de l'élément HTML correspondant.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/childElementCount"><code>Element.childElementCount</code></a> {{readonlyInline}}</dt>
+  <dd>Renvoie le nombre d'éléments enfants de cet élément.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/children"><code>Element.children</code></a> {{readonlyInline}}</dt>
+  <dd>Renvoie les éléments enfants de cet élément.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/classList"><code>Element.classList</code></a> {{readOnlyInline}}</dt>
+  <dd>Renvoie un objet <a href="/fr/docs/Web/API/DOMTokenList"><code>DOMTokenList</code></a> contenant la liste des attributs de classe.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/className"><code>Element.className</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui représente la classe de l'élément.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/clientHeight"><code>Element.clientHeight</code></a> {{readOnlyInline}}</dt>
+  <dd>Renvoie un nombre (<a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a>) représentant la hauteur intérieure de l'élément.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/clientLeft"><code>Element.clientLeft</code></a> {{readOnlyInline}}</dt>
+  <dd>Renvoie un nombre (<a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a>) représentant la largeur de la bordure gauche de l'élément.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/clientTop"><code>Element.clientTop</code></a> {{readOnlyInline}}</dt>
+  <dd>Renvoie un nombre (<a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a>) représentant la largeur de la bordure haute de l'élément.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/clientWidth"><code>Element.clientWidth</code></a> {{readOnlyInline}}</dt>
+  <dd>Renvoie un nombre (<a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a>) représentant la largeur intérieure de l'élément.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/firstElementChild"><code>Element.firstElementChild</code></a> {{readonlyInline}}</dt>
+  <dd>Renvoie le premier élément enfant de cet élément.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/id"><code>Element.id</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui représente l'identifiant de l'élément.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/innerHTML"><code>Element.innerHTML</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui représente le balisage du contenu de l'élément.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/lastElementChild"><code>Element.lastElementChild</code></a> {{readonlyInline}}</dt>
+  <dd>Renvoie le dernier élément enfant de cet élément.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/localName"><code>Element.localName</code></a> {{readOnlyInline}}</dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui représente la partie locale pour le nom qualifié de l'élément.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/namespaceURI"><code>Element.namespaceURI</code></a> {{readonlyInline}}</dt>
+  <dd>L'URI pour l'espace de noms de l'élément ou <code>null</code> s'il n'y en a pas.
+  <div class="note">
+  <p><strong>Note :</strong> Pour Firefox 3.5 et les versions antérieures, les éléments HTML ne sont pas situés dans un espace de noms. Dans les versions ultérieures, les éléments HTML s'inscrivent dans l'espace de noms <code><a href="https://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a></code> tant pour les arbres HTML que XML.</p>
+  </div>
+  </dd>
+  <dt><a href="/fr/docs/Web/API/Element/nextElementSibling"><code>Element.nextElementSibling</code></a> {{readOnlyInline}}</dt>
+  <dd>Un objet <code>Element</code> qui représente l'élément qui suit immédiatement l'élément courant dans l'arbre ou <code>null</code> si l'élément courant n'a pas de voisin.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/outerHTML"><code>Element.outerHTML</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui représente le balisage de l'élément (incluant son contenu). Lorsque cette propriété est utilisée en modification, cela remplace l'élément avec les noeuds construits à partir de l'analyse de la chaîne de caractères fournie.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/part"><code>Element.part</code></a></dt>
+  <dd>Représente les identifiants des parties de l'élément (c'est-à-dire ceux définis avec l'attribut <code>part</code>) sous la forme d'un objet <a href="/fr/docs/Web/API/DOMTokenList"><code>DOMTokenList</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/prefix"><code>Element.prefix</code></a> {{readOnlyInline}}</dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui représente le préfixe de l'espace de nom pour l'élément ou <code>null</code> si aucun préfixe n'est défini.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/previousElementSibling"><code>Element.previousElementSibling</code></a> {{readOnlyInline}}</dt>
+  <dd>Un objet <code>Element</code> qui représente l'élément qui précède immédiatement l'élément courant dans l'arbre ou <code>null</code> si l'élément courant n'a pas de voisin.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/scrollHeight"><code>Element.scrollHeight</code></a> {{readOnlyInline}}</dt>
+  <dd>Renvoie un nombre (<a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a>) représentant la hauteur de la vue de défilement pour l'élément.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/scrollLeft"><code>Element.scrollLeft</code></a></dt>
+  <dd>Un nombre (<a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a>) qui représente le décalage à gauche de l'élément lié au défilement.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/scrollLeftMax"><code>Element.scrollLeftMax</code></a> {{Non-standard_Inline}} {{readOnlyInline}}</dt>
+  <dd>Renvoie un nombre (<a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a>) représentant le décalage à gauche maximal pour l'élément lors du défilement.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/scrollTop"><code>Element.scrollTop</code></a></dt>
+  <dd>Un nombre (<a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a>) qui représente le nombre de pixels dont on a fait défiler verticalement le haut de l'élément.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/scrollTopMax"><code>Element.scrollTopMax</code></a> {{Non-standard_Inline}} {{readOnlyInline}}</dt>
+  <dd>Renvoie un nombre (<a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a>) représentant le décalage maximal depuis le haut de l'élément lors du défilement.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/scrollWidth"><code>Element.scrollWidth</code></a> {{readOnlyInline}}</dt>
+  <dd>Renvoie un nombre (<a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Number"><code>Number</code></a>) représentant la largeur de la vue de défilement pour l'élément.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/shadowRoot"><code>Element.shadowRoot</code></a>{{readOnlyInline}}</dt>
+  <dd>Renvoie la racine sombre ouverte (<i lang="en">open shadow root</i>) hébergée par l'élément ou <code>null</code> si aucune racine sombre ouverte n'est présente.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/openOrClosedShadowRoot"><code>Element.openOrClosedShadowRoot</code></a> {{Non-standard_Inline}}{{readOnlyInline}}</dt>
+  <dd>Renvoie la racine sombre hébergée par l'élément (qu'elle soit ouverte ou fermée). <strong>Uniquement disponible pour <a href="/fr/docs/Mozilla/Add-ons/WebExtensions">les WebExtensions</a>.</strong></dd>
+  <dt><a href="/fr/docs/Web/API/Element/slot"><code>Element.slot</code></a> {{Experimental_Inline}}</dt>
+  <dd>Renvoie le nom de l'emplacement du DOM sombre dans lequel l'élément est inséré.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/tagName"><code>Element.tagName</code></a> {{readOnlyInline}}</dt>
+  <dd>Renvoie une chaîne de caractères (<a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/String"><code>String</code></a>) qui est le nom de la balise pour l'élément courant.</dd>
 </dl>
 
-<div class="note">
-<p><strong>Note :</strong> Dans Firefox 3.5 et versions antérieures, les éléments HTML ne sont pas dans un espace de noms. <span>Dans les versions ultérieures, les éléments HTML se trouvent dans l'espace de noms <code><a class="linkification-ext external external-icon" href="http://www.w3.org/1999/xhtml" title="Linkification: http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a></code> <span lang="fr"><span> dans les arborescences HTML et XML. </span></span> {{gecko_minversion_inline("1.9.2")}}</span></p>
-</div>
+<h3 id="properties_included_from_aria">Propriétés provenant d'ARIA</h3>
+
+<p><em>L'interface <code>Element</code> inclut les propriétés suivantes, définies sur le <i lang="en">mixin</i> <code>ARIAMixin</code>.</em></p>
 
 <dl>
- <dt>{{domxref("NonDocumentTypeChildNode.nextElementSibling")}} {{readOnlyInline}}</dt>
- <dd>est un {{domxref("Element")}} suivant immédiatement dans l'arbre celui donné, ou <code>null</code> s'il n'y a pas de noeud frère.</dd>
- <dt>{{domxref("Element.outerHTML")}}</dt>
- <dd>Est une {{domxref("DOMString")}} représentant le balisage de l'élément, y compris son contenu. <span>Lorsqu'il est utilisé en tant qu'initiateur, remplace l'élément par des nœuds analysés à partir de la chaîne donnée.</span></dd>
- <dt>{{DOMxRef("Element.part")}}</dt>
- <dd>Représente le ou les identifiants <code>part</code> de l'élément (c'est-à-dire définis en utilisant l'attribut <code>part</code>), retournés dans un {{domxref("DOMTokenList")}}.</dd>
- <dt>{{domxref("Element.prefix")}} {{readOnlyInline}}</dt>
- <dd>Une {{domxref("DOMString")}} représentant le préfixe de l'espace de noms de l'élément, ou <code>null</code> si aucun préfixe n'est spécifié.</dd>
- <dt>{{domxref("NonDocumentTypeChildNode.previousElementSibling")}} {{readOnlyInline}}</dt>
- <dd>Est un {{domxref("Element")}}, celui précédant immédiatement dans l'arbre l'élément donné, ou <code>null</code> s'il n'y a pas d'élément frère.</dd>
- <dt>{{domxref("Element.scrollHeight")}} {{readOnlyInline}}</dt>
- <dd>Retourne un {{jsxref("Number")}} représentant <span class="short_text" id="result_box" lang="fr"><span>la hauteur de vue de défilement d'un élément.</span></span></dd>
- <dt>{{domxref("Element.scrollLeft")}}</dt>
- <dd>Est un {{jsxref("Number")}} représentant <span class="short_text" id="result_box" lang="fr"><span>le décalage de défilement gauche de l'élément.</span></span></dd>
- <dt>{{domxref("Element.scrollLeftMax")}} {{non-standard_inline}} {{readOnlyInline}}</dt>
- <dd>Retourne un {{jsxref("Number")}}  représentant le décalage maximum de défilement gauche possible pour l'élément.</dd>
- <dt>{{domxref("Element.scrollTop")}}</dt>
- <dd>Est un {{jsxref("Number")}} représentant le décalage de défilement haut de l'élément.</dd>
- <dt>{{domxref("Element.scrollTopMax")}} {{non-standard_inline}} {{readOnlyInline}}</dt>
- <dd>Retourne un {{jsxref("Number")}} représentant le décalage maximum de défilement haut possible pour l'élément.</dd>
- <dt>{{domxref("Element.scrollWidth")}} {{readOnlyInline}}</dt>
- <dd>Retourne un {{jsxref("Number")}} représentant la largeur de vue de défilement de l'élément.</dd>
- <dt>{{domxref("Element.shadowRoot")}} {{readOnlyInline}}</dt>
- <dd>Renvoie la racine shadow la plus jeune hébergée par l'élément.</dd>
- <dt>{{DOMxRef("Element.openOrClosedShadowRoot")}} {{Non-standard_Inline}}{{readOnlyInline}}</dt>
- <dd>Retourne la racine fantôme qui a l'élément pour hôte, qu'elle soit ouverte ou fermée. <strong>Disponible seulement pour les <a href="https://wiki.developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions">WebExtensions</a>.</strong></dd>
- <dt>{{domxref("Element.slot")}} {{experimental_inline}}</dt>
- <dd>Renvoie le nom de l'emplacement du DOM shadow attaché à l'élément. <span>Un emplacement (<em>slot</em>) est un espace réservé dans un composant web que les utilisateurs peuvent remplir avec leur propre balisage.</span></dd>
- <dt>{{domxref("Element.tabStop")}} {{non-standard_inline}}</dt>
- <dd>Est un {{jsxref("Boolean")}} indiquant si l'élément peut recevoir un focus d'entrée via la touche de tabulation.</dd>
- <dt>{{domxref("Element.tagName")}} {{readOnlyInline}}</dt>
- <dd>Retourne une {{domxref("String")}} avec le nom de la balise pour l'élément donné.</dd>
- <dt>{{domxref("Element.undoManager")}} {{experimental_inline}} {{readOnlyInline}}</dt>
- <dd>Retourne le {{domxref("UndoManager")}} associé à l'élément.</dd>
- <dt>{{domxref("Element.undoScope")}} {{experimental_inline}}</dt>
- <dd>Est un {{jsxref("Boolean")}} indiquant si l'élément <span class="short_text" id="result_box" lang="fr"><span>est un hôte de portée d'annulation, ou non.</span></span></dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaAtomic"><code>Element.ariaAtomic</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-atomic</code> qui indique si des technologies d'assistance présenteront tout ou partie de la région modifiée selon les notifications définies par l'attribut <code>aria-relevant</code>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaAutoComplete"><code>Element.ariaAutoComplete</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-autocomplete</code> qui indique si la saisie de texte peut déclencher l'affichage d'une ou plusieurs prédictions pour la valeur saisie par l'utilisateur à destination d'une liste de choix, d'une boîte de recherche ou d'une zone de texte. Elle indique également la façon dont les éventuelles prédictions seraient présentées.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaBusy"><code>Element.ariaBusy</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-busy</code> qui indique d'un élément est en train d'être modifié. Les technologies d'assistance peuvent alors faire le choix d'attendre la fin de la modification avant d'exposer le contenu à l'utilisateur.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaChecked"><code>Element.ariaChecked</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-checked</code> indiquant l'état coché (ou non) des cases à cocher, des boutons radio ou des autres éléments d'interface graphique qui peuvent être cochés.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaColCount"><code>Element.ariaColCount</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-colcount</code> indiquant le nombre de colonnes d'un tableau, d'une grille ou d'une grille arborescente.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaColIndex"><code>Element.ariaColIndex</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-colindex</code> qui définit l'indice de la colonne d'un élément ou sa position par rapport au nombre total de colonnes d'un tableau, d'une grille ou d'une grille arborescente.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaColIndexText"><code>Element.ariaColIndexText</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-colindextext</code> qui définit texte alternatif à <code>aria-colindex</code> qui soit compréhensible par un humain.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaColSpan"><code>Element.ariaColSpan</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-colspan</code> qui définit le nombre de colonnes sur lesquelles s'étend une cellule dans un tableau, une grille ou une grille arborescente.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaCurrent"><code>Element.ariaCurrent</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-current</code> qui indique l'élément représente l'objet courant dans un conteneur ou un ensemble d'éléments.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaDescription"><code>Element.ariaDescription</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-description</code> qui définit la chaîne de caractères pour décrire ou annoter l'élément courant.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaDisabled"><code>Element.ariaDisabled</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-disabled</code> qui indique que l'élément est perceptible mais désactivé et qu'il ne peut être édité ou manipulé.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaExpanded"><code>Element.ariaExpanded</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-expanded</code> qui indique si un élément de groupement contrôlé par l'élément courant est développé ou replié.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaHasPopup"><code>Element.ariaHasPopup</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-haspopup</code> qui indique la disponibilité et le type d'élément interactif visuel comme un menu ou une boîte de dialogue pouvant être généré par l'élément courant.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaHidden"><code>Element.ariaHidden</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-hidden</code> qui indique si l'élément est exposé à une API d'accessibilité.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaKeyShortcuts"><code>Element.ariaKeyShortcuts</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-keyshortcuts</code> qui indique les raccourcis clavier implémentés spécifiquement pour activer ou fournir le focus à un élément.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaLabel"><code>Element.ariaLabel</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-label</code> qui définit une chaîne de caractères étant un libellé pour l'élément courant.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaLevel"><code>Element.ariaLevel</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-level</code> qui définit le niveau hiérarchique de l'élément au sein d'une structure.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaLive"><code>Element.ariaLive</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-live</code> qui indique que l'élément sera mis à jour et qui décrit les types de mises à jour qui peuvent être attendues par les agents utilisateur, les outils d'assistance et l'utilisateur.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaModal"><code>Element.ariaModal</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-modal</code> qui indique si un élément est modal lorsqu'il est affiché.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaMultiline"><code>Element.ariaMultiline</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-multiline</code> qui indique si une zone de texte accepte une saisie sur plusieurs lignes ou sur une seule ligne.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaMultiSelectable"><code>Element.ariaMultiSelectable</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-multiselectable</code> qui indique que la personne peut choisir plus d'un élément parmi les éléments descendants qui peuvent être sélectionnés.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaOrientation"><code>Element.ariaOrientation</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-orientation</code> qui indique si l'orientation de l'élément est horizontale, verticale ou inconnue voire ambigüe.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaPlaceholder"><code>Element.ariaPlaceholder</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-placeholder</code> qui définit une indication courte destinée à aider l'utilisateur à saisir une valeur lorsque le contrôle ne possède pas de valeur.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaPosInSet"><code>Element.ariaPosInSet</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-posinset</code> qui définit l'index ou la position de l'élément courant dans l'ensemble ou l'arbre d'éléments.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaPressed"><code>Element.ariaPressed</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-pressed</code> qui indique l'état actif/pressé des boutons.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaReadOnly"><code>Element.ariaReadOnly</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-readonly</code> qui indique que l'élément ne peut pas être édité mais qu'il peut être utilisé sinon.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaRelevant"><code>Element.ariaRelevant</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-relevant</code> qui indique les notifications qui seront déclenchées par l'agent utilisateur lorsque l'arbre d'accessibilité d'une région interactive sera modifié. Cette propriété est utilisée afin de décrire quels changements d'une région <code>aria-live</code> sont pertinents et devraient être annoncés.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaRequired"><code>Element.ariaRequired</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-required</code> qui indique que la saisie d'une utilisatrice ou d'un utilisateur est requise sur l'élément avant qu'un formulaire puisse être envoyé.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaRoleDescription"><code>Element.ariaRoleDescription</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-roledescription</code> qui définit une description compréhensible par un humain, adaptée par l'autrice ou l'auteur du document pour le rôle de l'élément courant.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaRowCount"><code>Element.ariaRowCount</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-rowcount</code> qui définit le nombre total de lignes dans un tableau, une grille ou une grille arborescente.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaRowIndex"><code>Element.ariaRowIndex</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-rowindex</code> qui définit l'index ou la position de la ligne de l'élément par rapport au nombre total de lignes dans le tableau, la grille ou la grille arborescente.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaRowIndexText"><code>Element.ariaRowIndexText</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-rowindextext</code> qui définit un libellé alternatif à <code>aria-rowindex</code>, compréhensible par un humain.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaRowSpan"><code>Element.ariaRowSpan</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-rowspan</code> qui définit le nombre de lignes sur lesquelles s'étend une cellule dans un tableau, une grille ou une grille arborescente.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaSelected"><code>Element.ariaSelected</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-selected</code> qui indique l'état de sélection pour les éléments qui peuvent être sélectionnés.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaSetSize"><code>Element.ariaSetSize</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-setsize</code> qui définit le nombre d'objets dans l'ensemble d'éléments d'une liste ou d'un arbre.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaSort"><code>Element.ariaSort</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-sort</code> qui indique si les objets d'un tableau ou d'une grille sont triés par ordre croissant ou décroissant.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaValueMax"><code>Element.ariaValueMax</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-valueMax</code> qui définit la valeur maximale autorisée pour un élément d'interface utilisateur décrivant un intervalle.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaValueMin"><code>Element.ariaValueMin</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-valueMin</code> qui définit la valeur minimale autorisée pour un élément d'interface utilisateur décrivant un intervalle.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaValueNow"><code>Element.ariaValueNow</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-valueNow</code> qui définit la valeur courante d'un élément d'interface utilisateur décrivant un intervalle.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/ariaValueText"><code>Element.ariaValueText</code></a></dt>
+  <dd>Une chaîne de caractères <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> qui reflète l'attribut <code>aria-valuetext</code> qui définit une alternative textuelle à <code>aria-valuenow</code> compréhensible par un humain.</dd>
 </dl>
 
-<div class="note">
-<p><strong>Note :</strong>  DOM niveau 3 définit <code>namespaceURI</code>, <code>localName</code> et <code>prefix </code>sur l'interface {{domxref("Node")}}. Dans DOM4, ils ont été déplacés dans <code>Element</code>.</p>
-
-<p>Ce changement est implémenté dans Chrome depuis la version 46.0 et Firefox à partir de la version 48.0.</p>
-</div>
-
-<h3 id="Propriété_inclue_dans_Slotable">Propriété inclue dans "Slotable"</h3>
-
-<p><em>L'interface <code>Element</code> inclut la propriété suivante, définie sur le "mixin" </em> <em>{{domxref("Slotable")}}. </em></p>
+<h3 id="handlers">Gestionnaires d'évènements</h3>
 
 <dl>
- <dt>{{domxref("Slotable.assignedSlot")}}{{readonlyInline}}</dt>
- <dd>renvoie un {{domxref("HTMLSlotElement")}} représentant le {{htmlelement("slot")}} sur lequel le noeud est inséré.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/onfullscreenchange"><code>Element.onfullscreenchange</code></a></dt>
+  <dd>Un gestionnaire d'évènement pour l'évènement <a href="/fr/docs/Web/API/Document/fullscreenchange_event"><code>fullscreenchange</code></a> qui est envoyé lorsque l'élément passe en mode plein écran ou sort de celui-ci. Cet évènement peut être utilisé pour surveiller les transitions entre les deux modes mais aussi pour surveiller les modifications inattendues comme lorsque l'application s'exécute en arrière-plan.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/onfullscreenerror"><code>Element.onfullscreenerror</code></a></dt>
+  <dd>Un gestionnaire d'évènement pour <a href="/fr/docs/Web/API/Document/fullscreenerror_event"><code>fullscreenerror</code></a> qui est envoyé lorsqu'une erreur se produit lors du passage au mode plein écran.</dd>
 </dl>
 
-<h2 id="M.C3.A9thodes" name="M.C3.A9thodes">Méthodes</h2>
+<h2 id="methods">Méthodes</h2>
 
-<p><em>Hérite des méthodes de son parent {{domxref ("Node")}} et de son propre parent {{domxref ("EventTarget")}}, et implémente celles de {{domxref("ParentNode")}}, </em> <em><em>{{domxref("ChildNode")}}</em></em> <em><span lang="fr">, {{domxref("NonDocumentTypeChildNode")}} et {{domxref("Animatable")}}.</span></em></p>
+<p><em><code>Element</code> hérite des méthodes fournit par la classe parente <a href="/fr/docs/Web/API/Node"><code>Node</code></a> et de sa classe parente avant elle : <a href="/fr/docs/Web/API/EventTarget"><code>EventTarget</code></a>.</em></p>
 
 <dl>
- <dt>{{domxref("EventTarget.addEventListener()")}}</dt>
- <dd>enregistre sur l'élément un gestionnaire d'évènements propre à un type d'évènements.</dd>
- <dt>{{domxref("Element.attachShadow()")}}</dt>
- <dd>Attache un arbre DOM shadow à l'élément spécifié et renvoie une référence à sa {{domxref("ShadowRoot")}} (<em>racine</em>).</dd>
- <dt>{{domxref("Element.animate()")}} {{experimental_inline}}</dt>
- <dd>Une méthode raccourcie pour créer et exécuter une animation sur un élément. <span class="short_text" id="result_box" lang="fr"><span>Renvoie l'instance d'objet Animation créée.</span></span></dd>
- <dt>{{domxref("Element.closest()")}}</dt>
- <dd>Retourne l'{{domxref("Element")}} qui est l'ancêtre le plus proche de l'élément courant (ou l'élément courant lui-même) qui correspond aux sélecteurs donnés dans le paramètre.</dd>
- <dt>{{domxref("Element.createShadowRoot()")}} {{experimental_inline}} {{deprecated_inline()}}</dt>
- <dd>Crée un <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Shadow_DOM">shadow DOM</a> sur l'élément, <span class="short_text" id="result_box" lang="fr"><span>le transforme en un hôte fantôme.</span> <span>Renvoie un </span></span> {{domxref("ShadowRoot")}}.</dd>
- <dt>{{DOMxRef("Element.computedStyleMap()")}} {{Experimental_Inline}}</dt>
- <dd>Retourne une interface {{DOMxRef("StylePropertyMapReadOnly")}} fournissant une représentation en lecture seule d'un bloc de déclaration de règles CSS. Il s'agit d'une alternative à {{DOMxRef("CSSStyleDeclaration")}}.</dd>
- <dt>{{domxref("EventTarget.dispatchEvent()")}}</dt>
- <dd>Répartit un évènement sur ce noeud dans le DOM et renvoie un {{jsxref("Boolean")}} qui indique qu'au-moins un gestionnaire ne l'a pas annulé.</dd>
- <dt>{{domxref("Element.getAnimations()")}} {{experimental_inline}}</dt>
- <dd>Renvoie un tableau d'objets Animation actuellement actifs sur l'élément.</dd>
- <dt>{{domxref("Element.getAttribute()")}}</dt>
- <dd>Retrouve la valeur de l'attribut nommé depuis le noeud courant et le retourne comme un {{jsxref("Object")}}.</dd>
- <dt>{{domxref("Element.getAttributeNames()")}}</dt>
- <dd>Retourne un tableau des noms d'attribut de l'élément courant.</dd>
- <dt>{{domxref("Element.getAttributeNS()")}}</dt>
- <dd>Retrouve la valeur de l'attribut avec le nom spécifié et l'espace de noms, depuis le noeud courant, et le retourne comme un {{jsxref("Object")}}.</dd>
- <dt>{{domxref("Element.getBoundingClientRect()")}}</dt>
- <dd>Retourne la taille d'un élément et ses positions relatives au "viewport".</dd>
- <dt>{{domxref("Element.getClientRects()")}}</dt>
- <dd>Retourne une collection de rectangles qui indiquent les rectangles de délimitation pour chaque ligne de texte dans un client.</dd>
- <dt>{{domxref("Element.getElementsByClassName()")}}</dt>
- <dd>Retourne une {{domxref("HTMLCollection")}} qui contient tous les descendants de l'élément courant qui possèdent la liste des classes donnée dans le paramètre.</dd>
- <dt>{{domxref("Element.getElementsByTagName()")}}</dt>
- <dd>Renvoie une {{domxref ("HTMLCollection")}} contenant tous les éléments descendants, d'un nom de tag particulier, de l'élément en cours.</dd>
- <dt>{{domxref("Element.getElementsByTagNameNS()")}}</dt>
- <dd>Renvoie une {{domxref ("HTMLCollection")}} contenant tous les éléments descendants, d'un nom de balise particulier et d'un espace de nom, de l'élément en cours.</dd>
- <dt>{{domxref("Element.hasAttribute()")}}</dt>
- <dd>Retourne un {{jsxref("Boolean")}} indiquant si l'élément a un attribut spécifié ou non.</dd>
- <dt>{{domxref("Element.hasAttributeNS()")}}</dt>
- <dd>Retourne un {{jsxref("Boolean")}} indiquant si l'élément a un attribut spécifié, dans l'espace de noms spécifié, ou non.</dd>
- <dt>{{domxref("Element.hasAttributes()")}}</dt>
- <dd>Retourne un {{jsxref("Boolean")}} indiquant si l'élément a un ou plusieurs attributs HTML présents.</dd>
- <dt>{{DOMxRef("Element.hasPointerCapture()")}}</dt>
- <dd>Indique si l'élément sur lequel la méthode est invoquée a  une capture de pointeur pour le pointeur spécifié par son identifiant.</dd>
- <dt>{{domxref("Element.insertAdjacentElement")}}</dt>
- <dd>Insère un noeud d'élément donné à la position donnée par rapport à l'élément sur lequel il a été invoqué.</dd>
- <dt>{{domxref("Element.insertAdjacentHTML")}}</dt>
- <dd>Analyse le texte au format HTML ou XML et insère les nœuds résultants dans l'arborescence dans la position indiquée.</dd>
- <dt>{{domxref("Element.insertAdjacentText")}}</dt>
- <dd>Insère un noeud de texte donné à la position donnée par rapport à l'élément qui l'invoque.</dd>
- <dt>{{domxref("Element.matches()")}}</dt>
- <dd>Retourne un {{jsxref("Boolean")}} indiquant si l'élément serait sélectionné ou non par la chaîne de sélection spécifiée.</dd>
- <dt>{{DOMxRef("Element.pseudo()")}} {{Experimental_Inline}}</dt>
- <dd>Retourne un {{DOMxRef("CSSPseudoElement")}} représentant les pseudo-élément enfants correspondant au sélecteur de pseudo-élément fourni.</dd>
- <dt>{{domxref("Element.querySelector()")}}</dt>
- <dd>Retourne le premier {{domxref("Node")}} correspondant à la chaîne du sélecteur spécifiée par rapport à l'élément.</dd>
- <dt>{{domxref("Element.querySelectorAll")}}</dt>
- <dd>Retourne une {{domxref("NodeList")}} des noeuds qui correspondent à la chaîne du sélecteur par rapport à l'élément.</dd>
- <dt>{{domxref("Element.releasePointerCapture")}}</dt>
- <dd>Relâche (arrête) la capture de pointeur précédemment définie pour un {{domxref("PointerEvent","évènement pointeur")}} spécifique.</dd>
- <dt>{{domxref("ChildNode.remove()")}} {{experimental_inline}}</dt>
- <dd>Supprime l'élément de la liste des enfants de son parent.</dd>
- <dt>{{domxref("Element.removeAttribute()")}}</dt>
- <dd>Supprime l'attribut nommé du noeud courant.</dd>
- <dt>{{domxref("Element.removeAttributeNS()")}}</dt>
- <dd>Supprime l'attribut avec le nom et l'espace de nom spécifiés du noeud actuel.</dd>
- <dt>{{domxref("EventTarget.removeEventListener()")}}</dt>
- <dd>Supprime un écouteur d'évènement de l'élément.</dd>
- <dt>{{domxref("Element.requestFullscreen()")}} {{experimental_inline}}</dt>
- <dd>Demande de manière asynchrone au navigateur de mettre l'élément en plein écran.</dd>
- <dt>{{domxref("Element.requestPointerLock()")}} {{experimental_inline}}</dt>
- <dd>Permet de demander de manière asynchrone que le pointeur soit verrouillé sur l'élément donné.</dd>
- <dt>{{domxref("Element.scroll()")}}</dt>
- <dd>Défile vers les coordonnées fournises au sein d'un élément.</dd>
- <dt>{{domxref("Element.scrollBy()")}}</dt>
- <dd>Défile au sein d'un élément d'autant de pixels que demandé.</dd>
- <dt>{{domxref("Element.scrollIntoView()")}} {{experimental_inline}}</dt>
- <dd>Fait défiler la page jusqu'à ce que l'élément entre dans la vue.</dd>
- <dt>{{domxref("Element.scrollTo()")}}</dt>
- <dd>Défile vers les coordonnées fournises au sein d'un élément.</dd>
- <dt>{{domxref("Element.setAttribute()")}}</dt>
- <dd>Définit la valeur d'un attribut nommé du nœud actuel.</dd>
- <dt>{{domxref("Element.setAttributeNS()")}}</dt>
- <dd>Définit la valeur de l'attribut avec le nom et l'espace de noms spécifiés, à partir du nœud actuel.</dd>
- <dt>{{domxref("Element.setCapture()")}} {{non-standard_inline}}</dt>
- <dd>Configure la capture d'évènements de souris, en redirigeant tous les évènements de la souris vers cet élément.</dd>
- <dt>{{domxref("Element.setPointerCapture()")}}</dt>
- <dd>Désigne un élément spécifique en tant que cible de capture des futurs <a href="https://developer.mozilla.org/fr/docs/Web/API/Pointer_events">évènements de pointeur</a>.</dd>
- <dt>{{DOMxRef("Element.toggleAttribute()")}}</dt>
- <dd>Alterne un attribut booléen sur l'élément spécifié, le supprimant s'il est présent et l'ajoutant s'il est absent.</dd>
- <dt>
- <h3 id="Méthodes_obsolètes"><span lang="fr"><span>Méthodes obsolètes</span></span></h3>
- </dt>
- <dt>{{domxref("Element.getAttributeNode()")}}{{obsolete_inline}}</dt>
- <dd>Retrouve la représentation du noeud de l'attribut nommé depuis le noeud courant et le retourne comme un {{domxref("Attr")}}.</dd>
- <dt>{{domxref("Element.getAttributeNodeNS()")}}{{obsolete_inline}}</dt>
- <dd>Retrouve la représentation du noeud de l'attibut avec le nom spécifié et l'espace de noms, depuis le noeud courant, et le retourne comme un {{domxref("Attr")}}.</dd>
- <dt>{{domxref("Element.removeAttributeNode()")}} {{obsolete_inline}}</dt>
- <dd>Supprime la représentation du noeud de l'attibut nommé du noeud actuel.</dd>
- <dt>{{domxref("Element.setAttributeNode()")}} {{obsolete_inline}}</dt>
- <dd>Définit la représentation de noeud de l'attribut nommé à partir du noeud actuel.</dd>
- <dt>{{domxref("Element.setAttributeNodeNS()")}} {{obsolete_inline}}</dt>
- <dd>Synchronise la représentation du nœud de l'attribut avec le nom et l'espace de noms spécifiés, à partir du nœud actuel.</dd>
+  <dt><a href="/fr/docs/Web/API/EventTarget/addEventListener"><code>EventTarget.addEventListener()</code></a></dt>
+  <dd>Enregistre un gestionnaire d'évènement sur l'élément pour un type d'évènement donné.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/after"><code>Element.after()</code></a></dt>
+  <dd>Insère un ensemble d'objets <a href="/fr/docs/Web/API/Node"><code>Node</code></a> ou <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> dans la liste des enfants du parent de l'élément courant, juste après ce dernier.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/attachShadow"><code>Element.attachShadow()</code></a></dt>
+  <dd>Attache un arbre du DOM sombre à l'élément indiqué puis renvoie une référence à sa racine <a href="/fr/docs/Web/API/ShadowRoot"><code>ShadowRoot</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/animate"><code>Element.animate()</code></a> {{Experimental_Inline}}</dt>
+  <dd>Une méthode synthétique pour créer et exécuter une animation sur un élément. Renvoie l'instance de l'objet <code>Animation</code> créé.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/append"><code>Element.append()</code></a></dt>
+  <dd>Insère un ensemble d'objet <a href="/fr/docs/Web/API/Node"><code>Node</code></a> ou <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> après le dernier enfant de l'élément.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/before"><code>Element.before()</code></a></dt>
+  <dd>Insère un ensemble d'objet <a href="/fr/docs/Web/API/Node"><code>Node</code></a> ou <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> dans la liste des enfants du parent de l'élément courant, juste avant ce dernier.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/closest"><code>Element.closest()</code></a></dt>
+  <dd>Renvoie l'élément (<a de>Element</code>) qui est le plus proche ancêtre de l'élément courant (ou l'élément courant lui-même) qui correspond au sélecteur passé en paramètre.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/createShadowRoot"><code>Element.createShadowRoot()</code></a> {{Non-standard_Inline}} {{Deprecated_Inline}}</dt>
+  <dd>Crée un <a href="/fr/docs/Web/Web_Components/Using_shadow_DOM">DOM sombre</a> sur l'élément, le transformant ainsi en hôte sombre. Renvoie un objet <a href="/fr/docs/Web/API/ShadowRoot"><code>ShadowRoot</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/computedStyleMap"><code>Element.computedStyleMap()</code></a> {{Experimental_Inline}}</dt>
+  <dd>Renvoie une interface <a href="/fr/docs/Web/API/StylePropertyMapReadOnly"><code>StylePropertyMapReadOnly</code></a> qui fournit une représentation en lecture seule d'un bloc de déclaration CSS alternatif à <a href="/fr/docs/Web/API/CSSStyleDeclaration"><code>CSSStyleDeclaration</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/EventTarget/dispatchEvent"><code>EventTarget.dispatchEvent()</code></a></dt>
+  <dd>Diffuse un évènement sur ce nœud dans le DOM et renvoie un booléen qui indique si aucun gestionnaire n'a annulé l'évènement.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/getAnimations"><code>Element.getAnimations()</code></a> {{Experimental_Inline}}</dt>
+  <dd>Renvoie un tableau des objets <code>Animation</code> actuellement actifs sur l'élément.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/getAttribute"><code>Element.getAttribute()</code></a></dt>
+  <dd>Récupère la valeur de l'attribut nommé  pour le nœud courant et le renvoie comme un <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object">objet</a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/getAttributeNames"><code>Element.getAttributeNames()</code></a></dt>
+  <dd>Renvoie un tableau de noms d'attribut pour l'élément courant.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/getAttributeNode"><code>Element.getAttributeNode()</code></a></dt>
+  <dd>Récupère la représentation du nœud pour l'attrtibut nommé du nœud courant et le renvoie comme un objet <a href="/fr/docs/Web/API/Attr"><code>Attr</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/getAttributeNodeNS"><code>Element.getAttributeNodeNS()</code></a></dt>
+  <dd>Depuis le nœud courant, récupère la représentation du nœud pour l'attribut avec le nom et l'espace de noms indiqués et renvoie la valeur obtenue sous la forme d'un objet <a href="/fr/docs/Web/API/Attr"><code>Attr</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/getAttributeNS"><code>Element.getAttributeNS()</code></a></dt>
+  <dd>Depuis le nœud courant, récupère la valeur de l'attribut avec le nom et l'espace de noms indiqués et la renvoie sous la forme d'un <a href="/fr/docs/Web/JavaScript/Reference/Global_Objects/Object">objet</a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/getBoundingClientRect"><code>Element.getBoundingClientRect()</code></a></dt>
+  <dd>Renvoie la taille d'un élément et sa position relative dans la zone d'affichage (<i lang="en">viewport</i>).</dd>
+  <dt><a href="/fr/docs/Web/API/Element/getBoxQuads"><code>Element.getBoxQuads()</code></a> {{experimental_inline}}</dt>
+  <dd>Renvoie une liste d'objets <a href="/fr/docs/Web/API/DOMQuad"><code>DOMQuad</code></a> qui représentent les fragments CSS pour le nœud.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/getClientRects"><code>Element.getClientRects()</code></a></dt>
+  <dd>Renvoie une collection de rectangles qui indique les rectangles englobants pour chaque ligne de texte d'un client.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/getElementsByClassName"><code>Element.getElementsByClassName()</code></a></dt>
+  <dd>Renvoie une collection dynamique <a href="/fr/docs/Web/API/HTMLCollection"><code>HTMLCollection</code></a> qui contient tous les descendants de l'élément courant et qui possèdent la liste de classes fournie en paramètre.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/getElementsByTagName"><code>Element.getElementsByTagName()</code></a></dt>
+  <dd>Renvoie une collection dynamique <a href="/fr/docs/Web/API/HTMLCollection"><code>HTMLCollection</code></a> qui contient tous les descendants de l'élément courant avec un nom de balise donné.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/getElementsByTagNameNS"><code>Element.getElementsByTagNameNS()</code></a></dt>
+  <dd>Renvoie une collection dynamique <a href="/fr/docs/Web/API/HTMLCollection"><code>HTMLCollection</code></a> qui contient tous les descendants de l'élément courant qui ont un nom de balise et un espace de noms donnés.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/hasAttribute"><code>Element.hasAttribute()</code></a></dt>
+  <dd>Renvoie un booléen indiquant si l'élément courant possède l'attribut donné.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/hasAttributeNS"><code>Element.hasAttributeNS()</code></a></dt>
+  <dd>Renvoie un booléen indiquant si l'élément courant possède l'attribut donné pour l'espace de noms donné.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/hasAttributes"><code>Element.hasAttributes()</code></a></dt>
+  <dd>Renvoie un booléen qui indique si l'élément courant a un ou plusieurs attributs HTML.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/hasPointerCapture"><code>Element.hasPointerCapture()</code></a></dt>
+  <dd>Indique si l'élément a la capture du pointeur pour le pointeur identifié par l'identifiant passé en argument.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/insertAdjacentElement"><code>Element.insertAdjacentElement()</code></a></dt>
+  <dd>Insère un nœud d'élément à la position relative indiquée par rapport à l'élément courant.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/insertAdjacentHTML"><code>Element.insertAdjacentHTML()</code></a></dt>
+  <dd>Analyse le texte comme HTML ou XML puis insère les nœuds résultatns dans l'arbre à la position indiquée.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/insertAdjacentText"><code>Element.insertAdjacentText()</code></a></dt>
+  <dd>Insère un nœud textuel à la position relative indiquée, par rapport à l'élément courant.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/matches"><code>Element.matches()</code></a></dt>
+  <dd>Renvoie un booléen qui indique si l'élément serait ciblé par la chaîne de caractères passée en argument qui décrit un sélecteur.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/prepend"><code>Element.prepend()</code></a></dt>
+  <dd>Insère un ensemble d'objets <a href="/fr/docs/Web/API/Node"><code>Node</code></a> ou <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> avant le premier enfant de l'élément courant.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/querySelector"><code>Element.querySelector()</code></a></dt>
+  <dd>Renvoie le premier objet <a href="/fr/docs/Web/API/Node"><code>Node</code></a> qui correspond au sélecteur donné, relatif à l'élément courant.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/querySelectorAll"><code>Element.querySelectorAll()</code></a></dt>
+  <dd>Renvoie un objet <a href="/fr/docs/Web/API/NodeList"><code>NodeList</code></a> contenant les nœuds pour lesquels le sélecteur, passé en argument, relatif à l'élément courant.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/releasePointerCapture"><code>Element.releasePointerCapture()</code></a></dt>
+  <dd>Libère (arrête) la capture du pointeur précédemment activée pour un évènement de pointeur spécifique.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/remove"><code>Element.remove()</code></a></dt>
+  <dd>Retire l'élément de la liste des éléments enfants de son parent.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/removeAttribute"><code>Element.removeAttribute()</code></a></dt>
+  <dd>Retire l'attribut nommé du nœud courant.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/removeAttributeNode"><code>Element.removeAttributeNode()</code></a></dt>
+  <dd>Retire la représentation nodale de l'attribut nommé pour le nœud courant.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/removeAttributeNS"><code>Element.removeAttributeNS()</code></a></dt>
+  <dd>Sur le nœud courant, retire l'attribut avec le nom et l'espace de noms indiqués.</dd>
+  <dt><a href="/fr/docs/Web/API/EventTarget/removeEventListener"><code>EventTarget.removeEventListener()</code></a></dt>
+  <dd>Retire un gestionnaire d'évènement de l'élément.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/replaceChildren"><code>Element.replaceChildren()</code></a></dt>
+  <dd>Remplace l'enfant existant d'un nœud avec un nouvel ensemble d'enfants.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/replaceWith"><code>Element.replaceWith()</code></a></dt>
+  <dd>Remplace l'élément dans la liste des enfants de son parent par un ensemble d'objets <a href="/fr/docs/Web/API/Node"><code>Node</code></a> ou <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/requestFullScreen"><code>Element.requestFullscreen()</code></a> {{Experimental_Inline}}</dt>
+  <dd>Demande au navigateur, de façon asynchrone, d'afficher l'élément en plein écran.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/requestPointerLock"><code>Element.requestPointerLock()</code></a> {{Experimental_Inline}}</dt>
+  <dd>Demande au navigateur, de façon asynchrone, de bloquer le pointeur sur l'élément indiqué.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/scroll"><code>Element.scroll()</code></a></dt>
+  <dd>Défile jusqu'à un ensemble de coordonnées données à l'intérieur de l'élément courant.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/scrollBy"><code>Element.scrollBy()</code></a></dt>
+  <dd>Défile un élément de la quantité indiquée.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/scrollIntoView"><code>Element.scrollIntoView()</code></a> {{Experimental_Inline}}</dt>
+  <dd>Défile la page jusqu'à ce que l'élément apparaisse dans la vue.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/scrollTo"><code>Element.scrollTo()</code></a></dt>
+  <dd>Défile jusqu'à un ensemble de coordonnées particulier à l'intérieur de l'élément donné.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/setAttribute"><code>Element.setAttribute()</code></a></dt>
+  <dd>Définit la valeur d'un attribut nommé pour le nœud courant.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/setAttributeNode"><code>Element.setAttributeNode()</code></a></dt>
+  <dd>Définit la représentation nodale d'un attribut nommé pour le nœud courant.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/setAttributeNodeNS"><code>Element.setAttributeNodeNS()</code></a></dt>
+  <dd>Pour le nœud courant, définit la représentation nodale d'un attribut avec le nom et l'espace de noms indiqués.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/setAttributeNS"><code>Element.setAttributeNS()</code></a></dt>
+  <dd>Pour le nœud courant, définit la valeur de l'attribut avec le nom et l'espace de noms indiqués.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/setCapture"><code>Element.setCapture()</code></a> {{Non-standard_Inline}}{{Deprecated_Inline}}</dt>
+  <dd>Initialise la capture des évènements liés à la souris, redirigeant ainsi tous les évènements de la souris sur cet élément.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/setPointerCapture"><code>Element.setPointerCapture()</code></a></dt>
+  <dd>Désigne un élément spécifique comme future cible pour la capture des <a href="/fr/docs/Web/API/Pointer_events">évènements de pointeur</a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/toggleAttribute"><code>Element.toggleAttribute()</code></a></dt>
+  <dd>Active/désactive un attribut booléen sur l'élément courant : s'il est présent, cela le retire et s'il est absent, cela l'ajoute.</dd>
 </dl>
 
-<h2 id="Évènements">Évènements</h2>
+<h2 id="events">Évènements</h2>
 
-<p><span class="tlid-translation translation" lang="fr"><span title="">Ecoute ces évènements en utilisant</span></span> <code>addEventListener()</code> ou en assignant un <span class="tlid-translation translation" lang="fr"><span title="">écouteur d'évènement</span></span> (event listener) au <code>on<em>eventname</em></code> propriété de cette interface.</p>
+<p>On peut écouter ces évènements en utilisant la méthode <code>addEventListener()</code> ou en affectant un gestionnaire d'évènement à la propriété <code>on<em>nomevenement</em></code> de cette interface.</p>
 
 <dl>
- <dt>{{domxref("Element/cancel_event", "cancel")}}</dt>
- <dd>Déclenche sur {{HTMLElement("dialog")}} lorsque l'utilisateur indique au navigateur qu'il souhaite fermer la boîte de dialogue en cours. Pour exemple, le navigateur peut déclencher cet évènement lorsque l'utilisateur appuie sur la touche <kbd>Esc</kbd> ou clique sur le bouton "Ferme le dialogue" <span class="tlid-translation translation" lang="fr"><span title="">qui fait partie de l'interface utilisateur du navigateur</span></span> .<br>
- Aussi disponible via la propriété {{domxref("GlobalEventHandlers/oncancel", "oncancel")}}.</dd>
- <dt>{{domxref("Element/error_event", "error")}}</dt>
- <dd>Déclenché quand le chargement d'une ressource échoue, ou qu'elle ne peut pas être utilisée. Par exemple, il sera déclenché si un script contient une erreur d'exécution ou une image ne peut être trouvée ou est invalide.<br>
- Il est aussi disponible via la propriété {{domxref("GlobalEventHandlers/onerror", "onerror")}}.</dd>
- <dt>{{domxref("Element/scroll_event", "scroll")}}</dt>
- <dd>Déclenché quand la vue du document un élément a été défilé.<br>
- Il est aussi disponible via la propriété {{DOMxRef("GlobalEventHandlers.onscroll", "onscroll")}}.</dd>
- <dt>{{domxref("Element/select_event", "select")}}</dt>
- <dd>Déclenché quand une portion de texte a été sélectionnée.<br>
- Il est aussi disponible via la propriété {{DOMxRef("GlobalEventHandlers.onselect", "onselect")}}.</dd>
- <dt>{{domxref("Element/show_event", "show")}}</dt>
- <dd>Déclenché quand un évènement {{domxref("Element/contextmenu_event", "contextmenu")}} est lui-même déclenché et bouillonne jusqu'à un élément ayant un attribut <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/html/Global_attributes/contextmenu">contextmenu</a></code>. {{deprecated_inline}}<br>
- Il est aussi disponible via la propriété {{DOMxRef("GlobalEventHandlers.onshow", "onshow")}}.</dd>
- <dt>{{domxref("Element/wheel_event","wheel")}}</dt>
- <dd>Déclenché quand l'utilisateur tourne une molette sur un appareil avec pointeur (typiquement, une souris).<br>
- Il est aussi disponible via la propriété {{DOMxRef("GlobalEventHandlers.onwheel", "onwheel")}}.</dd>
- <dt>
- <h3 id="Évènements_du_presse-papiers">Évènements du presse-papiers</h3>
- </dt>
- <dt>{{domxref("Element/copy_event", "copy")}}</dt>
- <dd><span class="tlid-translation translation" lang="fr"><span title="">Déclenché lorsque l'utilisateur lance une action de copie via l'interface utilisateur du navigateur.</span></span><br>
- Aussi disponible via la propiété {{domxref("HTMLElement/oncopy", "oncopy")}}.</dd>
- <dt>{{domxref("Element/cut_event", "cut")}}</dt>
- <dd><span class="tlid-translation translation" lang="fr"><span title="">Déclenché lorsque l'utilisateur lance une action de couper via l'interface utilisateur du navigateur.</span></span><br>
- Aussi disponible via la propriété {{domxref("HTMLElement/oncut", "oncut")}}.</dd>
- <dt>{{domxref("Element/paste_event", "paste")}}</dt>
- <dd><span class="tlid-translation translation" lang="fr"><span title="">Déclenché lorsque l'utilisateur lance une action de coller via l'interface utilisateur du navigateur.</span></span><br>
- Aussi disponible via la propriété {{domxref("HTMLElement/onpaste", "onpaste")}}.</dd>
- <dt>
- <h3 id="Évènements_de_composition">Évènements de composition</h3>
- </dt>
- <dt>{{domxref("Element/compositionend_event", "compositionend")}}</dt>
- <dd><span class="tlid-translation translation" lang="fr"><span title="">Déclenché quand un système de composition de </span></span>texte tel qu'un {{glossary("input method editor")}} complète ou annule la session actuelle de composition.</dd>
- <dt>{{domxref("Element/compositionstart_event", "compositionstart")}}</dt>
- <dd><span class="tlid-translation translation" lang="fr"><span title="">Déclenché quand un système de composition de </span></span>texte tel qu'un {{glossary("input method editor")}} démarre une nouvelle session de composition.</dd>
- <dt>{{domxref("Element/compositionupdate_event", "compositionupdate")}}</dt>
- <dd>Déclenché quand un nouveau caractère est reçu dans le contexte d'une session de composition de texte contrôlée par un système de composition de texte tel qu'un {{glossary("input method editor")}}.</dd>
- <dt>
- <h3 id="Évènements_de_focale">Évènements de focale</h3>
- </dt>
- <dt>{{domxref("Element/blur_event", "blur")}}</dt>
- <dd>Déclenché quand un élément a perdu la focale.<br>
- Il est aussi disponible via la propriété {{domxref("GlobalEventHandlers/onblur", "onblur")}}.</dd>
- <dt>{{domxref("Element/focus_event", "focus")}}</dt>
- <dd>Déclenché quand un élément a obtenu la focale.<br>
- Il est aussi disponible via la propriété {{domxref("GlobalEventHandlers/onfocus", "onfocus")}}.</dd>
- <dt>{{domxref("Element/focusin_event", "focusin")}}</dt>
- <dd>Déclenché quand un élément est sur le point d'obtenir la focale.</dd>
- <dt>{{domxref("Element/focusout_event", "focusout")}}</dt>
- <dd>Déclenché quand un élément est sur le point de perdre la focale.</dd>
- <dt>
- <h3 id="Évènements_de_plein_écran">Évènements de plein écran</h3>
- </dt>
- <dt>{{domxref("Element/fullscreenchange_event", "fullscreenchange")}}</dt>
- <dd>Envoyé à un {{domxref("Element")}} quand il transite vers ou depuis un état de <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API/Guide">plein écran</a>.<br>
- Il est aussi disponible via la propriété {{domxref("Element.onfullscreenchange", "onfullscreenchange")}}.</dd>
- <dt>{{domxref("Element/fullscreenerror_event", "fullscreenerror")}}</dt>
- <dd>Envoyé à un <code>Element</code> si une erreur survient en tentant de passer vers ou de quitter le <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API/Guide">plein écran</a>.<br>
- Il est aussi disponible via la propriété {{domxref("Element.onfullscreenerror", "onfullscreenerror")}}.</dd>
- <dt>
- <h3 id="Évènements_de_clavier">Évènements de clavier</h3>
- </dt>
- <dt><code>{{domxref("Element/keydown_event", "keydown")}}</code></dt>
- <dd>Déclenché quand une touche est pressée.<br>
- Il est aussi disponible via la propriété {{domxref("GlobalEventHandlers/onkeydown", "onkeydown")}}.</dd>
- <dt><code>{{domxref("Element/keypress_event", "keypress")}}</code></dt>
- <dd>Déclenché quand une touche produit un caractère est pressée. {{deprecated_inline}}<br>
- Il est aussi disponible via la propriété {{domxref("GlobalEventHandlers/onkeypress", "onkeypress")}}.</dd>
- <dt><code>{{domxref("Element/keyup_event", "keyup")}}</code></dt>
- <dd>Déclenché quand une touche est relâchée.<br>
- Il est aussi disponible via la propriété {{domxref("GlobalEventHandlers/onkeyup", "onkeyup")}}.</dd>
- <dt>
- <h3 id="Évènements_de_souris">Évènements de souris</h3>
- </dt>
- <dt>{{domxref("Element/auxclick_event", "auxclick")}}</dt>
- <dd>Déclenché quand un bouton secondaire d'un appareil de pointage (par exemple, tout bouton d'une souris autre que le gauche) est pressé et relâché sur le même élément.<br>
- Il est aussi disponible via la propriété {{domxref("GlobalEventHandlers/onauxclick", "onauxclick")}}.</dd>
- <dt>{{domxref("Element/click_event", "click")}}</dt>
- <dd>Déclenché quand un bouton d'un appareil de pointage (par exemple, le clic gauche d'une souris) est pressé et relâché sur le même élément.<br>
- Il est aussi disponible via la propriété {{domxref("GlobalEventHandlers/onclick", "onclick")}}.</dd>
- <dt>{{domxref("Element/contextmenu_event", "contextmenu")}}</dt>
- <dd>Déclenché quand l'utilisateur tente d'ouvrir un menu contextuel.<br>
- Il est aussi disponible via la propriété {{domxref("GlobalEventHandlers/oncontextmenu", "oncontextmenu")}}.</dd>
- <dt>{{domxref("Element/dblclick_event", "dblclick")}}</dt>
- <dd>Déclenché quand un bouton d'un appareil de pointage (par exemple, le clic gauche d'une souris) est cliqué deux fois sur le même élément.<br>
- Il est aussi disponible via la propriété {{domxref("GlobalEventHandlers/ondblclick", "ondblclick")}}.</dd>
- <dt>{{domxref("Element/DOMActivate_event", "DOMActivate")}} {{Deprecated_Inline}}</dt>
- <dd>Déclenché quand un élément est activé, par exemple, par le biais d'un clic de souris ou d'une pression de touche sur un clavier.</dd>
- <dt>{{domxref("Element/mousedown_event", "mousedown")}}</dt>
- <dd>Déclenché quand un bouton d'un appareil de pointage est pressé sur un élément.<br>
- Il est aussi disponible via la propriété {{domxref("GlobalEventHandlers/onmousedown", "onmousedown")}}.</dd>
- <dt>{{domxref("Element/mouseenter_event", "mouseenter")}}</dt>
- <dd>Déclenché quand un appareil de pointage (généralement une souris) est déplacé à l'intérieur de l'élément sur lequel l'écouteur est attaché.<br>
- Il est aussi disponible via la propriété {{domxref("GlobalEventHandlers/onmouseenter", "onmouseenter")}}.</dd>
- <dt>{{domxref("Element/mouseleave_event", "mouseleave")}}</dt>
- <dd>Déclenché quand un appareil de pointage est déplacé à l'extérieur de l'élément sur lequel l'écouteur est attaché.<br>
- Il est aussi disponible via la propriété {{domxref("GlobalEventHandlers/onmouseleave", "onmouseleave")}}.</dd>
- <dt>{{domxref("Element/mousemove_event", "mousemove")}}</dt>
- <dd>Déclenché quand un appareil de pointage est déplacé au sein de l'élément sur lequel l'écouteur est attaché.<br>
- Il est aussi disponible via la propriété {{domxref("GlobalEventHandlers/onmousemove", "onmousemove")}}.</dd>
- <dt>{{domxref("Element/mouseout_event", "mouseout")}}</dt>
- <dd>Déclenché quand un appareil de pointage est déplacé à l'extérieur de l'élément sur lequel l'écouteur est attaché ou sur un de ses enfants.<br>
- Il est aussi disponible via la propriété {{domxref("GlobalEventHandlers/onmouseout", "onmouseout")}}.</dd>
- <dt>{{domxref("Element/mouseover_event", "mouseover")}}</dt>
- <dd>Déclenché quand un appareil de pointage est déplacé au sein de l'élément sur lequel l'écouteur est attaché ou sur un de ses enfants.<br>
- Il est aussi disponible via la propriété {{domxref("GlobalEventHandlers/onmouseover", "onmouseover")}}.</dd>
- <dt>{{domxref("Element/mouseup_event", "mouseup")}}</dt>
- <dd>Déclenché quand un bouton d'un appareil de pointage est relâché sur un élément.<br>
- Il est aussi disponible via la propriété {{domxref("GlobalEventHandlers/onmouseup", "onmouseup")}}.</dd>
- <dt>{{domxref("Element/webkitmouseforcechanged_event", "webkitmouseforcechanged")}}</dt>
- <dd>Déclenché à chaque fois que le niveau de pression sur un écran tactile change.</dd>
- <dt>{{domxref("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}}</dt>
- <dd>Déclenché après l'évènement de pression de bouton d'un appareil de pointage à la condition qu'une pression suffisante ait été produite pour la qualifier de "clic forcé".</dd>
- <dt>{{domxref("Element/webkitmouseforcewillbegin_event", "webkitmouseforcewillbegin")}}</dt>
- <dd>Déclenché avant l'évènement {{domxref("Element/mousedown_event", "mousedown")}}.</dd>
- <dt>{{domxref("Element/webkitmouseforceup_event", "webkitmouseforceup")}}</dt>
- <dd>Déclenché après l'évènement {{domxref("Element/webkitmouseforcedown_event", "webkitmouseforcedown")}} à la condition qu'une pression suffisamment en baisse ait été observée pour mettre fin au "clic forcé".</dd>
- <dt>
- <h3 id="Évènements_de_toucher">Évènements de toucher</h3>
- </dt>
- <dt>{{domxref("Element/touchcancel_event", "touchcancel")}}</dt>
- <dd>Déclenché quand un ou plusieurs points de toucher ont été altérés d'une manière relative à l'implantation (par exemple, trop de points de contacts ont été créés).<br>
- Il est aussi disponible via la propriété {{domxref("GlobalEventHandlers/ontouchcancel", "ontouchcancel")}}.</dd>
- <dt>{{domxref("Element/touchend_event", "touchend")}}</dt>
- <dd>Déclenché quand un ou plusieurs points de toucher sont retirés de la surface tactile.<br>
- Il est aussi disponible via la propriété {{domxref("GlobalEventHandlers/ontouchend", "ontouchend")}}</dd>
- <dt>{{domxref("Element/touchmove_event", "touchmove")}}</dt>
- <dd>Déclenché quand un ou plusieurs points de toucher sont déplacés sur la surface tactile.<br>
- Il est aussi disponible via la propriété {{domxref("GlobalEventHandlers/ontouchmove", "ontouchmove")}}</dd>
- <dt>{{domxref("Element/touchstart_event", "touchstart")}}</dt>
- <dd>Déclenché quand un plusieurs points de toucher sont placés sur la surface tactile.<br>
- Il est aussi disponible via la propriété {{domxref("GlobalEventHandlers/ontouchstart", "ontouchstart")}}.</dd>
+  <dt><a href="/fr/docs/Web/API/HTMLDialogElement/cancel_event"><code>cancel</code></a></dt>
+  <dd>Déclenché sur un élément <a href="/fr/docs/Web/HTML/Element/dialog"><code>&lt;dialog&gt;</code></a> lorsque la personne indique au navigateur le souhait de fermer la boîte de dialogue courante. Un navigateur pourra par exemple déclencher cet évènement lors d'un appui sur la touche <kbd>Echap</kbd> ou lors d'un clic sur le bouton « Fermer cette boîte de dialogue » fourni par le navigateur. Également disponible via la propriété <a href="/fr/docs/Web/API/GlobalEventHandlers/oncancel"><code>oncancel</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/error_event"><code>error</code></a></dt>
+  <dd>Déclenché lors de l'échec du chargement d'une ressource ou lorsque celle-ci ne peut être utilisée. Cet évènement sera par exemple déclenché lors d'une erreur d'exécution d'un script ou lorsqu'une image ne peut être trouvée ou est invalide. Également disponible via la propriété <a href="/fr/docs/Web/API/GlobalEventHandlers/onerror"><code>onerror</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/scroll_event"><code>scroll</code></a></dt>
+  <dd>Déclenché lors du défilement de la vue du document ou d'un élément. Également disponible via la propriété <a href="/fr/docs/Web/API/GlobalEventHandlers/onscroll"><code>onscroll</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/select_event"><code>select</code></a></dt>
+  <dd>Déclenché lors de la sélection de texte. Également disponible via la propriété <a href="/fr/docs/Web/API/GlobalEventHandlers/onselect"><code>onselect</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/show_event"><code>show</code></a></dt>
+  <dd>Déclenché lorsqu'un évènement <a href="/fr/docs/Web/API/Element/contextmenu_event"><code>contextmenu</code></a> a été déclenché ou a bouillonné sur un élément qui dispose de l'attribut <code><a href="/fr/docs/Web/HTML/Global_attributes/contextmenu">contextmenu</a></code> attribute. {{deprecated_inline}} Également disponible via la propriété <a href="/fr/docs/Web/API/GlobalEventHandlers/onshow"><code>onshow</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/wheel_event"><code>wheel</code></a></dt>
+  <dd>Déclenché lorsque l'utilisateur fait tourner la molette d'un appareil de pointage (généralement une souris). Également disponible via la propriété <a href="/fr/docs/Web/API/GlobalEventHandlers/onwheel"><code>onwheel</code></a>.</dd>
 </dl>
 
-<h2 id="Spécifications">Spécifications</h2>
+<h3 id="clipboard_events">Évènements du presse-papiers</h3>
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("Web Animations", '', '')}}</td>
-   <td>{{Spec2("Web Animations")}}</td>
-   <td>Ajoute la méthode <code>getAnimations()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Undo Manager', '', 'Element')}}</td>
-   <td>{{Spec2('Undo Manager')}}</td>
-   <td>Ajoute les propriétés <code>undoScope</code> et <code>undoManager</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events 2', '#extensions-to-the-element-interface', 'Element')}}</td>
-   <td>{{Spec2('Pointer Events 2')}}</td>
-   <td>Ajoute les gestionnaires d'évènements suivants : <code>ongotpointercapture</code> et<code>onlostpointercapture</code>.<br>
-    Ajoute les méthodes suivantes : <code>setPointerCapture()</code> et <code>releasePointerCapture()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events', '#extensions-to-the-element-interface', 'Element')}}</td>
-   <td>{{Spec2('Pointer Events')}}</td>
-   <td>Ajoute les gestionnaires d'évènements suivants : <code>ongotpointercapture</code> et <code>onlostpointercapture</code>.<br>
-    Ajoute les méthodes suivantes : <code>setPointerCapture()</code> et <code>releasePointerCapture()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Selectors API Level 1', '#interface-definitions', 'Element')}}</td>
-   <td>{{Spec2('Selectors API Level 1')}}</td>
-   <td>Ajoute les méthodes suivantes : <code>querySelector()</code> et <code>querySelectorAll()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Lock', 'index.html#element-interface', 'Element')}}</td>
-   <td>{{Spec2('Pointer Lock')}}</td>
-   <td>Ajoute la méthode<code>requestPointerLock()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fullscreen', '#api', 'Element')}}</td>
-   <td>{{Spec2('Fullscreen')}}</td>
-   <td>Ajoute la méthode <code>requestFullscreen().</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM Parsing', '#extensions-to-the-element-interface', 'Element')}}</td>
-   <td>{{Spec2('DOM Parsing')}}</td>
-   <td>Ajoute les propriétés suivantes : <code>innerHTML</code> et <code>outerHTML</code>.<br>
-    Ajoute les méthodes suivantes : <code>insertAdjacentHTML()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSSOM View', '#extensions-to-the-element-interface', 'Element')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td>Ajoute les propriétés suivantes : <code>scrollTop</code>, <code>scrollLeft</code>, <code>scrollWidth</code>, <code>scrollHeight</code>, <code>clientTop</code>, <code>clientLeft</code>, <code>clientWidth</code> et <code>clientHeight</code>.<br>
-    Ajoute les méthodes suivantes : <code>getClientRects()</code>, <code>getBoundingClientRect()</code> et <code>scrollIntoView()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Element Traversal', '#ecmascript-bindings', 'Element')}}</td>
-   <td>{{Spec2('Element Traversal')}}</td>
-   <td>Ajoute l'héritage de l'interface {{domxref("ElementTraversal")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM WHATWG', '#interface-element', 'Element')}}</td>
-   <td>{{Spec2('DOM WHATWG')}}</td>
-   <td>Supprime les méthodes suivantes : <code>closest()</code>, <code>setIdAttribute()</code>, <code>setIdAttributeNS()</code>, et <code>setIdAttributeNode()</code>.<br>
-    Supprime la propriété <code>schemaTypeInfo</code>.<br>
-    Modifie la valeur retournée de <code>getElementsByTag()</code> et <code>getElementsByTagNS()</code>.<br>
-    Déplace <code>hasAttributes()</code> de l'interface <code>Node</code> ici.<br>
-    Insère<code>insertAdjacentElement()</code> et <code>insertAdjacentText()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM3 Core', 'core.html#ID-745549614', 'Element')}}</td>
-   <td>{{Spec2('DOM3 Core')}}</td>
-   <td>Ajoute les méthodes suivantes : <code>setIdAttribute()</code>, <code>setIdAttributeNS()</code> et <code>setIdAttributeNode()</code>. Ces méthodes n'ont jamais été implémentées et ont été supprimées dans des spécifications ultérieures.<br>
-    Ajoute la propriété <code>schemaTypeInfo</code>. Cette propriété n'a jamais été implémentée et a été supprimée dans des spécificationq ultérieures.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM2 Core', 'core.html#ID-745549614', 'Element')}}</td>
-   <td>{{Spec2('DOM2 Core')}}</td>
-   <td>La méthode <code>normalize()</code> a été déplacée vers {{domxref("Node")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('DOM1', 'level-one-core.html#ID-745549614', 'Element')}}</td>
-   <td>{{Spec2('DOM1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+<dl>
+  <dt><a href="/fr/docs/Web/API/Element/copy_event"><code>copy</code></a></dt>
+  <dd>Déclenché lorsque l'utilisateur initie une action de copie via l'interface du navigateur. Également disponible via la propriété <a href="/fr/docs/Web/API/HTMLElement/oncopy"><code>oncopy</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/cut_event"><code>cut</code></a></dt>
+  <dd>Déclenché lorsque l'utilisateur initie une action de coupe via l'interface du navigateur. Également disponible via la propriété <a href="/fr/docs/Web/API/HTMLElement/oncut"><code>oncut</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/paste_event"><code>paste</code></a></dt>
+  <dd>Déclenché lorsque l'utilisateur initie une action pour coller via l'interface du navigateur. Également disponible via la propriété <a href="/fr/docs/Web/API/HTMLElement/onpaste"><code>onpaste</code></a>.</dd>
+</dl>
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+<h3 id="composition_events">Évènements de composition</h3>
 
-<p>{{Compat("api.Element")}}</p>
+<dl>
+  <dt><a href="/fr/docs/Web/API/Element/compositionend_event"><code>compositionend</code></a></dt>
+  <dd>Déclenché lorsqu'un système de composition textuel tel qu'un <a href="/fr/docs/Glossary/Input_method_editor">éditeur de méthode de saisie</a> termine ou annule la session de composition courante.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/compositionstart_event"><code>compositionstart</code></a></dt>
+  <dd>Déclenché lorsqu'un système de composition textuel tel qu'un <a href="/fr/docs/Glossary/Input_method_editor">éditeur de méthode de saisie</a> démarre une nouvelle session de composition.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/compositionupdate_event"><code>compositionupdate</code></a></dt>
+  <dd>Déclenché lorsqu'un nouveau caractère est reçu dans le contexte d'une session de composition textuelle.</dd>
+</dl>
+
+<h3 id="focus_events">Évènements pour le focus</h3>
+
+<dl>
+  <dt><a href="/fr/docs/Web/API/Element/blur_event"><code>blur</code></a></dt>
+  <dd>Déclenché lorsqu'un élément a perdu le focus. Également disponible via la propriété <a href="/fr/docs/Web/API/GlobalEventHandlers/onblur"><code>onblur</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/focus_event"><code>focus</code></a></dt>
+  <dd>Déclenché lorsqu'un élément reçoit le focus. Également disponible via la propriété <a href="/fr/docs/Web/API/GlobalEventHandlers/onfocus"><code>onfocus</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/focusin_event"><code>focusin</code></a></dt>
+  <dd>Déclenché lorsqu'un élément s'apprête à recevoir le focus.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/focusout_event"><code>focusout</code></a></dt>
+  <dd>Déclenché lorsqu'un élément s'apprête à perdre le focus.</dd>
+</dl>
+
+<h3 id="fullscreen_events">Évènements relatifs au plein écran</h3>
+
+<dl>
+  <dt><a href="/fr/docs/Web/API/Element/fullscreenchange_event"><code>fullscreenchange</code></a></dt>
+  <dd>Envoyé à un élément (<a de>Element</code>) lorsque celui-ci effectue une transition (entrée ou sortie) pour le mode <a href="/fr/docs/Web/API/Fullscreen_API/Guide">plein écran</a>. Également disponible via la propriété <a href="/fr/docs/Web/API/Element/onfullscreenchange"><code>onfullscreenchange</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/fullscreenerror_event"><code>fullscreenerror</code></a></dt>
+  <dd>Envoyé à un élément <code>Element</code> si une erreur se produit lors d'une transition (entrée ou sortie) pour le mode <a href="/fr/docs/Web/API/Fullscreen_API/Guide">plein écran</a>. Également disponible via la propriété <a href="/fr/docs/Web/API/Element/onfullscreenerror"><code>onfullscreenerror</code></a>.</dd>
+</dl>
+
+<h3 id="keyboard_events">Évènements relatifs au clavier</h3>
+
+<dl>
+  <dt><code><a href="/fr/docs/Web/API/Element/keydown_event"><code>keydown</code></a></code></dt>
+  <dd>Déclenché lors de l'appui sur une touche du clavier. Également disponible via la propriété <a href="/fr/docs/Web/API/GlobalEventHandlers/onkeydown"><code>onkeydown</code></a>.</dd>
+  <dt><code><a href="/fr/docs/Web/API/Element/keypress_event"><code>keypress</code></a></code></dt>
+  <dd>Déclenché lorsqu'une touche produit un caractère lorsqu'elle est pressée. {{deprecated_inline}} Également disponible via la propriété <a href="/fr/docs/Web/API/GlobalEventHandlers/onkeypress"><code>onkeypress</code></a>.</dd>
+  <dt><code><a href="/fr/docs/Web/API/Element/keyup_event"><code>keyup</code></a></code></dt>
+  <dd>Déclenché lorsqu'une touche est relâchée. Également disponible via la propriété <a href="/fr/docs/Web/API/GlobalEventHandlers/onkeyup"><code>onkeyup</code></a>.</dd>
+</dl>
+
+<h3 id="mouse_events">Évènements relatifs à la souris</h3>
+
+<dl>
+  <dt><a href="/fr/docs/Web/API/Element/auxclick_event"><code>auxclick</code></a></dt>
+  <dd>Déclenché lorsqu'un bouton non primaire d'un appareil de pointage (c'est-à-dire tout bouton de la souris en dehors du bouton gauche) a été pressé puis relâché sur un élément. Également disponible via la propriété <a href="/fr/docs/Web/API/GlobalEventHandlers/onauxclick"><code>onauxclick</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/click_event"><code>click</code></a></dt>
+  <dd>Déclenché lorsqu'un bouton d'un appareil de pointage (par exemple le bouton gauche de la souris) a été pressé puis relâche sur un élément. Également disponible via la propriété <a href="/fr/docs/Web/API/GlobalEventHandlers/onclick"><code>onclick</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/contextmenu_event"><code>contextmenu</code></a></dt>
+  <dd>Déclenché lorsqu'un utilisateur tente d'ouvrir un menu contextuel. Également disponible via la propriété <a href="/fr/docs/Web/API/GlobalEventHandlers/oncontextmenu"><code>oncontextmenu</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/dblclick_event"><code>dblclick</code></a></dt>
+  <dd>Déclenché lorsqu'un bouton d'un appareil de pointage (par exemple le bouton gauche de la souris) a été utilisé pour un double-clic sur un élément. Également disponible via la propriété <a href="/fr/docs/Web/API/GlobalEventHandlers/ondblclick"><code>ondblclick</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/DOMActivate_event"><code>DOMActivate</code></a> {{Deprecated_Inline}}</dt>
+  <dd>Se produit lorsqu'un élément est activé, par exemple avec un clic de souris ou l'appui d'une touche.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/mousedown_event"><code>mousedown</code></a></dt>
+  <dd>Déclenché lorsqu'un bouton d'un appareil de pointage est pressé sur un élément. Également disponible via la propriété <a href="/fr/docs/Web/API/GlobalEventHandlers/onmousedown"><code>onmousedown</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/mouseenter_event"><code>mouseenter</code></a></dt>
+  <dd>Déclenché lorsqu'un appareil de pointage (généralement une souris) est déplacé pour arriver sur l'élément disposant du gestionnaire d'évènement. Également disponible via la propriété <a href="/fr/docs/Web/API/GlobalEventHandlers/onmouseenter"><code>onmouseenter</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/mouseleave_event"><code>mouseleave</code></a></dt>
+  <dd>Déclenché lorsque le pointeur d'un appareil de pointage (généralement une souris) est déplacée en dehors de l'élément qui dispose du gestionnaire d'évènement. Également disponible via la propriété <a href="/fr/docs/Web/API/GlobalEventHandlers/onmouseleave"><code>onmouseleave</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/mousemove_event"><code>mousemove</code></a></dt>
+  <dd>Déclenché lorsqu'un appareil de pointage (généralement une souris) est déplacé sur un élément. Également disponible via la propriété <a href="/fr/docs/Web/API/GlobalEventHandlers/onmousemove"><code>onmousemove</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/mouseout_event"><code>mouseout</code></a></dt>
+  <dd>Déclenché lorsqu'un appareil de pointage (généralement une souris) se déplace pour quitter l'élément qui dispose du gestionnaire d'évènement (ou lorsque le pointeur quitte l'un des enfants de cet élément). Également disponible via la propriété <a href="/fr/docs/Web/API/GlobalEventHandlers/onmouseout"><code>onmouseout</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/mouseover_event"><code>mouseover</code></a></dt>
+  <dd>Déclenché lorsqu'un appareil de pointage arrive sur l'élément (ou l'un de ses enfants) qui dispose du gestionnaire d'évènement. Également disponible via la propriété <a href="/fr/docs/Web/API/GlobalEventHandlers/onmouseover"><code>onmouseover</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/mouseup_event"><code>mouseup</code></a></dt>
+  <dd>Déclenché lorsque le bouton d'un appareil de pointage est relâché pour un élément. Également disponible via la propriété <a href="/fr/docs/Web/API/GlobalEventHandlers/onmouseup"><code>onmouseup</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/webkitmouseforcechanged_event"><code>webkitmouseforcechanged</code></a></dt>
+  <dd>Déclenché à chaque fois que la quantite dé pression change sur le pavé ou l'écran tactile.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/webkitmouseforcedown_event"><code>webkitmouseforcedown</code></a></dt>
+  <dd>Déclenché après l'évènement <code>mousedown</code> dès que suffisamment de pression a été appliquée pour qualifier ce clic de clic forcé.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/webkitmouseforcewillbegin_event"><code>webkitmouseforcewillbegin</code></a></dt>
+  <dd>Déclenché avant l'évènement <a href="/fr/docs/Web/API/Element/mousedown_event"><code>mousedown</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/webkitmouseforceup_event"><code>webkitmouseforceup</code></a></dt>
+  <dd>Déclenché après l'évènement <a href="/fr/docs/Web/API/Element/webkitmouseforcedown_event"><code>webkitmouseforcedown</code></a> dès que suffisamment de pression a été relâchée pour terminer le clic forcé.</dd>
+</dl>
+
+<h3 id="touch_events">Évènements tactiles</h3>
+
+<dl>
+  <dt><a href="/fr/docs/Web/API/Element/touchcancel_event"><code>touchcancel</code></a></dt>
+  <dd>Déclenché lorsqu'un ou plusieurs points de toucher ont été perturbés de façon spécifique à l'implémentation (par exemple lorsque trop de points de toucher ont été créés). Également disponible avec la propriété <a href="/fr/docs/Web/API/GlobalEventHandlers/ontouchcancel"><code>ontouchcancel</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/touchend_event"><code>touchend</code></a></dt>
+  <dd>Déclenché lorsqu'un ou plusieurs points de toucher sont retirés de la surface tactile. Également disponible via la propriété <a href="/fr/docs/Web/API/GlobalEventHandlers/ontouchend"><code>ontouchend</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/touchmove_event"><code>touchmove</code></a></dt>
+  <dd>Déclenché lorsqu'un ou plusieurs points de toucher se déplacent sur la surface tactile. Également disponible via la propriété <a href="/fr/docs/Web/API/GlobalEventHandlers/ontouchmove"><code>ontouchmove</code></a>.</dd>
+  <dt><a href="/fr/docs/Web/API/Element/touchstart_event"><code>touchstart</code></a></dt>
+  <dd>Déclenché lorsqu'un ou plusieurs points de toucher sont placés sur la surface tactile. Également disponible via la propriété <a href="/fr/docs/Web/API/GlobalEventHandlers/ontouchstart"><code>ontouchstart</code></a>.</dd>
+</dl>
+
+<h2 id="specifications">Spécifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+
+<p>{{Compat}}</p>

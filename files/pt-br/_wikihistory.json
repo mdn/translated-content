@@ -3208,12 +3208,6 @@
       "marcoarw"
     ]
   },
-  "Mozilla/Firefox/Releases/65": {
-    "modified": "2019-03-18T21:21:43.693Z",
-    "contributors": [
-      "yellowag"
-    ]
-  },
   "Tools": {
     "modified": "2020-07-16T22:44:17.244Z",
     "contributors": [
@@ -5263,12 +5257,6 @@
     "modified": "2019-03-23T22:30:34.242Z",
     "contributors": [
       "welingtonms"
-    ]
-  },
-  "Web/API/FullscreenOptions": {
-    "modified": "2020-10-15T22:15:52.238Z",
-    "contributors": [
-      "TecladistaProd"
     ]
   },
   "Web/API/Gamepad_API": {
@@ -16923,6 +16911,12 @@
     "modified": "2020-08-30T22:44:17.906Z",
     "contributors": [
       "bermarques"
+    ]
+  },
+  "orphaned/Web/API/FullscreenOptions": {
+    "modified": "2020-10-15T22:15:52.238Z",
+    "contributors": [
+      "TecladistaProd"
     ]
   },
   "orphaned/Web/API/HTMLOrForeignElement/blur": {

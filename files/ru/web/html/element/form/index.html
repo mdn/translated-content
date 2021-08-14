@@ -27,7 +27,7 @@ translation_of: Web/HTML/Element/form
   </tr>
   <tr>
    <td>Нормативный документ</td>
-   <td><a href="http://www.w3.org/TR/html5/forms.html#the-form-element" title="http://www.w3.org/TR/html5/forms.html#the-form-element">HTML5, section 4.10.3</a> (<a href="http://www.w3.org/TR/1999/REC-html401-19991224/interact/forms.html#h-17.3" title="http://www.w3.org/TR/1999/REC-html401-19991224/interact/forms.html#h-17.3">HTML4.01, section 17.3</a>)</td>
+   <td><a href="http://www.w3.org/TR/html5/forms.html#the-form-element">HTML5, section 4.10.3</a> (<a href="http://www.w3.org/TR/1999/REC-html401-19991224/interact/forms.html#h-17.3">HTML4.01, section 17.3</a>)</td>
   </tr>
  </tbody>
 </table>
@@ -58,7 +58,7 @@ translation_of: Web/HTML/Element/form
  </div>
  </dd>
  <dt>{{htmlattrdef("enctype")}}</dt>
- <dd>Когда значение атрибута method равно <code>post</code>, атрибут - <a href="http://en.wikipedia.org/wiki/Mime_type" title="http://en.wikipedia.org/wiki/Mime_type">MIME тип</a> содержимого, которое используется, чтобы передать форму на сервер. Возможные значения:
+ <dd>Когда значение атрибута method равно <code>post</code>, атрибут - <a href="http://en.wikipedia.org/wiki/Mime_type">MIME тип</a> содержимого, которое используется, чтобы передать форму на сервер. Возможные значения:
  <ul>
   <li><code>application/x-www-form-urlencoded</code>: Значение по умолчанию, если атрибут не задан.</li>
   <li><code>multipart/form-data</code>: Используйте это значение, если пользуетесь элементом {{HTMLElement("input")}} атрибутом <code>type</code> установленным в "file".</li>
@@ -70,8 +70,8 @@ translation_of: Web/HTML/Element/form
  <dt>{{htmlattrdef("method")}}</dt>
  <dd><a href="/en-US/docs/HTTP" title="http://www.w3.org/Protocols/rfc2616/rfc2616.html">HTTP</a> метод, который браузер использует, для отправки формы. Возможные значения:
  <ul>
-  <li><code>post</code>: Соответствует HTTP <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5" title="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5">POST методу</a> ; данные из формы включаются в тело формы и посылаются на сервер.</li>
-  <li><code>get</code>: Соответствует <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3" title="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3">GET методу</a>; данные из формы добавляются к URI атрибута <code>action</code>, их разделяет '?', и полученный URI посылается на сервер. Используйте этот метод, когда форма содержит только ASCII символы и не имеет побочного эффекта.</li>
+  <li><code>post</code>: Соответствует HTTP <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5">POST методу</a> ; данные из формы включаются в тело формы и посылаются на сервер.</li>
+  <li><code>get</code>: Соответствует <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3">GET методу</a>; данные из формы добавляются к URI атрибута <code>action</code>, их разделяет '?', и полученный URI посылается на сервер. Используйте этот метод, когда форма содержит только ASCII символы и не имеет побочного эффекта.</li>
  </ul>
 
  <p>Это значение может быть переписано атрибутом {{htmlattrxref("formmethod", "button")}} на {{HTMLElement("button")}} или {{HTMLElement("input")}} элементе.</p>

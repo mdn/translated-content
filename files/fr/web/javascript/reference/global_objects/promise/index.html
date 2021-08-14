@@ -19,8 +19,6 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Promise
 
 <div>{{EmbedInteractiveExample("pages/js/promise-constructor.html")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="syntaxbox">new Promise( /* exécuteur */ function(resolve, reject) { ... } );</pre>
@@ -50,10 +48,10 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Promise
 
 <p>Les méthodes {{jsxref("Promise.then","Promise.prototype.then()")}} et {{jsxref("Promise.catch","Promise.prototype.catch()")}} renvoient des promesses et peuvent ainsi être chaînées. C'est ce qu'on appelle une <em>composition</em>.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15911/promises.png" style="height: 297px; width: 801px;"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/15911/promises.png"></p>
 
 <div class="note">
-<p><strong>Note</strong>: Une promesse est dans l'état <em>settled </em>(acquittée) qu'elle soit tenue ou rompue mais plus en attente. Le terme <em>resolved</em> (résolue) est aussi utilisé concernant les promesses — cela signifie que la promesse est acquittée ou bien enfermée dans une chaine de promesse. Le billet de Domenic Denicola, <a href="https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md"><em>States and fates</em> (en anglais)</a>, contient de plus amples détails sur la terminologie utilisée.</p>
+<p><strong>Note :</strong> Une promesse est dans l'état <em>settled </em>(acquittée) qu'elle soit tenue ou rompue mais plus en attente. Le terme <em>resolved</em> (résolue) est aussi utilisé concernant les promesses — cela signifie que la promesse est acquittée ou bien enfermée dans une chaine de promesse. Le billet de Domenic Denicola, <a href="https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md"><em>States and fates</em> (en anglais)</a>, contient de plus amples détails sur la terminologie utilisée.</p>
 </div>
 
 <div class="warning">
@@ -78,14 +76,8 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Promise
  <dd>Attend que l'ensemble des promesses aient été acquittées (tenues ou rompues) et renvoie une promesse qui est résolue après que chaque promesse ait été tenue ou rompue. La valeur de résolution de la promesse renvoyée est un tableau dont chaque élément est le résultat des promesses initiales.</dd>
  <dt>{{jsxref("Promise.race", "Promise.race(iterable)")}}</dt>
  <dd>Renvoie une promesse qui est tenue ou rompue dès que l'une des promesses de l'itérable est tenue ou rompue avec la valeur ou la raison correspondante.</dd>
-</dl>
-
-<dl>
  <dt>{{jsxref("Promise.reject", "Promise.reject(raison)")}}</dt>
  <dd>Renvoie un objet <code>Promise</code> qui est rompue avec la raison donnée.</dd>
-</dl>
-
-<dl>
  <dt>{{jsxref("Promise.resolve", "Promise.resolve(valeur)")}}</dt>
  <dd>Renvoie un objet <code>Promise</code> qui est tenue (résolue) avec la valeur donnée. Si la valeur possède une méthode <code>then</code>, la promesse renvoyée « suivra » cette méthode pour arriver dans son état, sinon la promesse renvoyée sera tenue avec la valeur fournie. Généralement, quand on veut savoir si une valeur est une promesse, on utilisera {{jsxref("Promise.resolve","Promise.resolve(valeur)")}} et on travaillera avec la valeur de retour en tant que promesse.</dd>
 </dl>
@@ -129,7 +121,7 @@ original_slug: Web/JavaScript/Reference/Objets_globaux/Promise
 
 <h3 id="Exemple_interactif">Exemple interactif</h3>
 
-<pre class="brush: html hidden">&lt;button id="btn" type="button"&gt;Créer un objet Promise !&lt;/button&gt;
+<pre class="brush: html">&lt;button id="btn" type="button"&gt;Créer un objet Promise !&lt;/button&gt;
 &lt;div id="log"&gt;&lt;/div&gt;
 </pre>
 
@@ -183,7 +175,7 @@ function testPromise() {
 }
 </pre>
 
-<pre class="brush: js hidden">if ("Promise" in window) {
+<pre class="brush: js">if ("Promise" in window) {
   var btn = document.getElementById("btn");
   btn.addEventListener("click", testPromise);
  } else {

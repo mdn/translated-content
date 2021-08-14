@@ -114,13 +114,13 @@ translation_of: Web/API/WebRTC_API/Taking_still_photos
 
 <p>成功回调接收一个 stream 对象作为输入。它是新视频的 {{HTMLElement("video")}} 元素的源。</p>
 
-<p>一旦流被链接到 <code>{{HTMLElement("video")}}</code> 元素，我们通过调用 <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement#play">HTMLMediaElement.play()</a></code> 开始播放。</p>
+<p>一旦流被链接到 <code>{{HTMLElement("video")}}</code> 元素，我们通过调用 <code><a href="/zh-CN/docs/Web/API/HTMLMediaElement#play">HTMLMediaElement.play()</a></code> 开始播放。</p>
 
 <p>如果打开流失败，则调用失败回调函数。 在没有连接兼容的相机，或者用户拒绝访问时，则会发生这种情况。</p>
 
 <h3 id="监听视频开始播放">监听视频开始播放</h3>
 
-<p>在 <code>{{HTMLElement("video")}}</code> 上调用 <code><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement#play">HTMLMediaElement.play()</a></code> 之后，在视频流开始流动之前，有一段（希望简短）的时间段过去了。 为了避免在此之前一直阻塞，我们为 <code>{{HTMLElement("video")}}</code> 加上一个 {{event("canplay")}} 事件的监听器，当视频播放实际开始时会触发该事件。 那时，视频对象中的所有属性都已基于流的格式进行配置。</p>
+<p>在 <code>{{HTMLElement("video")}}</code> 上调用 <code><a href="/zh-CN/docs/Web/API/HTMLMediaElement#play">HTMLMediaElement.play()</a></code> 之后，在视频流开始流动之前，有一段（希望简短）的时间段过去了。 为了避免在此之前一直阻塞，我们为 <code>{{HTMLElement("video")}}</code> 加上一个 {{event("canplay")}} 事件的监听器，当视频播放实际开始时会触发该事件。 那时，视频对象中的所有属性都已基于流的格式进行配置。</p>
 
 <pre class="brush: js">    video.addEventListener('canplay', function(ev){
       if (!streaming) {

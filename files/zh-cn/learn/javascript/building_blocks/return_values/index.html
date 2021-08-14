@@ -39,7 +39,7 @@ console.log(newString);
 // replaces one substring with another, and returns
 // a new string with the replacement made</pre>
 
-<p>在第一篇函数文章中，我们确切地看到了这一块代码。我们对 <code>myText</code> 字符串调用 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace()</a> 功能，并通过这两个参数的字符串查找，和子串替换它。当这个函数完成（完成运行）后，它返回一个值，这个值是一个新的字符串，它具有替换的功能。在上面的代码中，我们保存这个返回值，以作为<code>newString</code>变量的内容。</p>
+<p>在第一篇函数文章中，我们确切地看到了这一块代码。我们对 <code>myText</code> 字符串调用 <a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace">replace()</a> 功能，并通过这两个参数的字符串查找，和子串替换它。当这个函数完成（完成运行）后，它返回一个值，这个值是一个新的字符串，它具有替换的功能。在上面的代码中，我们保存这个返回值，以作为<code>newString</code>变量的内容。</p>
 
 <p>如果你看看替换功能MDN参考页面，你会看到一个<a href="/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace#Return_value">返回值</a>。知道和理解函数返回的值是非常有用的，因此我们尽可能地包含这些信息。</p>
 
@@ -49,7 +49,7 @@ console.log(newString);
 
 <h3 id="在自定义的函数中使用返回值">在自定义的函数中使用返回值</h3>
 
-<p>要从自定义函数返回值，您需要使用…等待它… <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/return">return</a> 关键字。 我们最近在<a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html">random-canvas-circles.html</a>示例中看到了这一点。 我们的 <code>draw()</code> 函数绘制100随机圆在HTML的{{htmlelement("canvas")}}:</p>
+<p>要从自定义函数返回值，您需要使用…等待它… <a href="/zh-CN/docs/Web/JavaScript/Reference/Statements/return">return</a> 关键字。 我们最近在<a href="https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html">random-canvas-circles.html</a>示例中看到了这一点。 我们的 <code>draw()</code> 函数绘制100随机圆在HTML的{{htmlelement("canvas")}}:</p>
 
 <pre class="brush: js notranslate">function draw() {
   ctx.clearRect(0,0,WIDTH,HEIGHT);

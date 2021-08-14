@@ -1,0 +1,134 @@
+---
+title: Element.prepend()
+slug: Web/API/Element/prepend
+translation_of: Web/API/Element/prepend
+tags:
+  - API
+  - DOM
+  - Method
+  - Node
+  - Element
+  - Reference
+  - prepend
+browser-compat: api.Element.prepend
+---
+<div>{{APIRef("DOM")}}</div>
+
+<p><strong><code>Element.prepend</code></strong> 方法可以在父节点的第一个子节点之前插入一系列{{domxref("Node")}}对象或者{{domxref("DOMString")}}对象。{{domxref("DOMString")}}会被当作{{domxref("Text")}}节点对待（也就是说插入的不是HTML代码）。</p>
+
+<h2 id="语法">语法</h2>
+
+<pre class="syntaxbox">Element.prepend((Node or DOMString)... nodes);
+</pre>
+
+<h3 id="参数">参数</h3>
+
+<dl>
+ <dt><code>nodes</code></dt>
+ <dd>要插入的一系列{{domxref("Node")}}或者{{domxref("DOMString")}}。</dd>
+</dl>
+
+<h3 id="返回值">返回值</h3>
+
+<p><code>undefined</code>.</p>
+
+<h3 id="错误">错误</h3>
+
+<ul>
+ <li>{{domxref("HierarchyRequestError")}}：节点不能插入当前层级内。</li>
+</ul>
+
+<h2 id="例子">例子</h2>
+
+<h3 id="Prepending_an_element">Prepending an element</h3>
+
+<pre class="brush: js">var parent = document.createElement("div");
+var p = document.createElement("p");
+var span = document.createElement("span");
+parent.append(p);
+parent.prepend(span);
+
+console.log(parent.childNodes); // NodeList [ &lt;span&gt;, &lt;p&gt; ]
+</pre>
+
+<h3 id="Prepending_text">Prepending text</h3>
+
+<pre class="brush: js">var parent = document.createElement("div");
+parent.append("Some text");
+parent.prepend("Headline: ");
+
+console.log(parent.textContent); // "Headline: Some text"</pre>
+
+<h3 id="Appending_an_element_and_text">Appending an element and text</h3>
+
+<pre class="brush: js">var parent = document.createElement("div");
+var p = document.createElement("p");
+parent.prepend("Some text", p);
+
+console.log(parent.childNodes); // NodeList [ #text "Some text", &lt;p&gt; ]</pre>
+
+<h3 id="Element.prepend_is_unscopable"><code>Element.prepend()</code> is unscopable</h3>
+
+<p><code>prepend()不能在with语句内使用，详情参考</code>{{jsxref("Symbol.unscopables")}}。</p>
+
+<pre class="brush: js">var parent = document.createElement("div");
+
+with(parent) {
+  prepend("foo");
+}
+// ReferenceError: prepend is not defined </pre>
+
+<h2 id="Polyfill">Polyfill</h2>
+
+<p>使用下面的代码在IE9或更高版本中模拟<code>prepend()</code>方法：</p>
+
+<pre class="brush: js">// from: https://github.com/jserz/js_piece/blob/master/DOM/Element/prepend()/prepend().md
+(function (arr) {
+    arr.forEach(function (item) {
+        item.prepend = item.prepend || function () {
+            var argArr = Array.prototype.slice.call(arguments),
+                docFrag = document.createDocumentFragment();
+
+            argArr.forEach(function (argItem) {
+                var isNode = argItem instanceof Node;
+                docFrag.appendChild(isNode ? argItem : document.createTextNode(String(argItem)));
+            });
+
+            this.insertBefore(docFrag, this.firstChild);
+        };
+    });
+})([Element.prototype, Document.prototype, DocumentFragment.prototype]);</pre>
+
+<h2 id="说明">说明</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('DOM WHATWG', '#dom-Element-prepend', 'Element.prepend()')}}</td>
+   <td>{{Spec2('DOM WHATWG')}}</td>
+   <td>Initial definition.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="兼容性">兼容性</h2>
+
+
+
+<p>{{Compat("api.Element.prepend")}}</p>
+
+<h2 id="See_also">See also</h2>
+
+<ul>
+ <li>{{domxref("Element")}} and {{domxref("ChildNode")}}</li>
+ <li>{{domxref("Element.append()")}}</li>
+ <li>{{domxref("Node.appendChild()")}}</li>
+ <li>{{domxref("Node.insertBefore()")}}</li>
+ <li>{{domxref("ChildNode.before()")}}</li>
+ <li>{{domxref("NodeList")}}</li>
+</ul>

@@ -21,10 +21,6 @@ translation_of: Web/JavaScript/Reference/Operators/Object_initializer
 
 <p>{{EmbedInteractiveExample("pages/js/expressions-objectinitializer.html", "taller")}}</p>
 
-<div class="hidden">
-<p>The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> and send us a pull request.</p>
-</div>
-
 <h2 id="구문">구문</h2>
 
 <pre class="brush: js notranslate">var o = {};
@@ -94,7 +90,7 @@ var o = {
 
 <h3 id="속성_접근">속성 접근</h3>
 
-<p>일단 객체를 생성하면, 읽거나 바꿀 수 있습니다. 객체 속성은 점 표기법 또는 각괄호 표기법을 사용하여 액세스될 수 있습니다. (자세한 사항은 <a href="/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors" title="property accessors">속성 접근자</a> 참조.)</p>
+<p>일단 객체를 생성하면, 읽거나 바꿀 수 있습니다. 객체 속성은 점 표기법 또는 각괄호 표기법을 사용하여 액세스될 수 있습니다. (자세한 사항은 <a href="/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors">속성 접근자</a> 참조.)</p>
 
 <pre class="brush: js notranslate">object.foo; // "bar"
 object["age"]; // 42
@@ -189,7 +185,7 @@ var o = {
 
 <h3 id="계산된_속성명">계산된 속성명</h3>
 
-<p>ECMAScript 2015를 시작으로, 객체 초기화 구문은 계산된 속성명(computed property name)도 지원합니다. 각괄호 <code>[]</code> 안에 식을 넣을 수 있고, 식이 계산되고 그 결과가 속성명으로 사용됩니다. 이는 이미 속성을 읽고 설정하는 데 사용했을 수 있는 <a href="/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors" title="property accessor">속성 접근자</a> 구문의 각괄호 표기법을 연상시킵니다.  </p>
+<p>ECMAScript 2015를 시작으로, 객체 초기화 구문은 계산된 속성명(computed property name)도 지원합니다. 각괄호 <code>[]</code> 안에 식을 넣을 수 있고, 식이 계산되고 그 결과가 속성명으로 사용됩니다. 이는 이미 속성을 읽고 설정하는 데 사용했을 수 있는 <a href="/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors">속성 접근자</a> 구문의 각괄호 표기법을 연상시킵니다.  </p>
 
 <p>이제 당신은 객체 리터럴에서도 같은 구문을 쓸 수 있습니다:</p>
 
@@ -215,7 +211,7 @@ console.log(config); // { size: 12, mobileSize: 4 }</pre>
 
 <h3 id="전개_속성">전개 속성</h3>
 
-<p><a href="https://github.com/tc39/proposal-object-rest-spread">ECMASCript의 나머지/전개 속성</a> 제안 (stage 4) 으로 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">전개(spread)</a> 속성이 객체 리터럴에 추가됩니다. 이 속성은 제공된 객체의 열거 가능한(enumerable) 속성을 새 객체로 복사합니다.</p>
+<p><a href="https://github.com/tc39/proposal-object-rest-spread">ECMASCript의 나머지/전개 속성</a> 제안 (stage 4) 으로 <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Spread_operator">전개(spread)</a> 속성이 객체 리터럴에 추가됩니다. 이 속성은 제공된 객체의 열거 가능한(enumerable) 속성을 새 객체로 복사합니다.</p>
 
 <p>(<code>prototype</code>을 제외하는) 얕은 복제(Shallow-cloning) 나 객체 합침(merging objects)이 이제{{jsxref("Object.assign()")}} 보다 짧은 문법으로 가능해집니다.</p>
 
@@ -229,7 +225,7 @@ let mergedObj = { ...obj1, ...obj2 }
 // Object { foo: "baz", x: 42, y: 13 }</pre>
 
 <div class="blockIndicator warning">
-<p>{{jsxref("Object.assign()")}}는 <a href="https://wiki.developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/set">setters</a>를 작동시키지만, 전개 연산자(spread operator)는 아니라는 걸 주목하세요!</p>
+<p>{{jsxref("Object.assign()")}}는 <a href="/ko/docs/Web/JavaScript/Reference/Functions/set">setters</a>를 작동시키지만, 전개 연산자(spread operator)는 아니라는 걸 주목하세요!</p>
 </div>
 
 <h3 id="프로토타입_변이">프로토타입 변이</h3>
@@ -292,5 +288,5 @@ assert(obj3.__proto__ === 17);
  <li><a href="/ko/docs/Web/JavaScript/Reference/Operators/Property_Accessors">속성 접근자</a></li>
  <li><code><a href="/ko/docs/Web/JavaScript/Reference/Functions/get">get</a></code> / <code><a href="/ko/docs/Web/JavaScript/Reference/Functions/set">set</a></code></li>
  <li><a href="/ko/docs/Web/JavaScript/Reference/Functions/Method_definitions">메서드 정의</a></li>
- <li><a href="/ko/docs/Web/JavaScript/Reference/Lexical_grammar" title="Lexical grammar">어휘 문법</a></li>
+ <li><a href="/ko/docs/Web/JavaScript/Reference/Lexical_grammar">어휘 문법</a></li>
 </ul>

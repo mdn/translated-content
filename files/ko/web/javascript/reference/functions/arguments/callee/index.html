@@ -18,11 +18,11 @@ browser-compat: javascript.functions.arguments.callee
 
 <p><code>callee</code>는 <code>arguments</code> 객체의 속성입니다. 그 함수의 몸통(body) 내에서 현재 실행 중인 함수를 참조하는 데 쓰일 수 있습니다. 이는 함수의 이름을 알 수 없는 경우에 유용합니다, 가령 이름 없는 함수 식(또한 "익명 함수"라 함) 내에서.</p>
 
-<div class="warning"><strong>경고:</strong> ECMAScript 제5판(ES5) 은 <a href="/ko/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode" title="Strict mode">엄격 모드</a>에서 <code>arguments.callee()</code>의 사용을 금합니다. function 식(expression)에 이름을 주거나 함수 자체를 호출해야 하는 곳에 function 선언을 사용하여 <code>arguments.callee()</code> 사용을 피하세요.</div>
+<div class="warning"><strong>경고:</strong> ECMAScript 제5판(ES5) 은 <a href="/ko/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode">엄격 모드</a>에서 <code>arguments.callee()</code>의 사용을 금합니다. function 식(expression)에 이름을 주거나 함수 자체를 호출해야 하는 곳에 function 선언을 사용하여 <code>arguments.callee()</code> 사용을 피하세요.</div>
 
 <h3 id="arguments.callee는_왜_ES5_엄격_모드에서_제거되었나요"><code>arguments.callee</code>는 왜 ES5 엄격 모드에서 제거되었나요?</h3>
 
-<p>(<a href="http://stackoverflow.com/a/235760/578288" title="http://stackoverflow.com/a/235760/578288">olliej의 Stack Overflow 답변</a>에서 고쳐씀)</p>
+<p>(<a href="http://stackoverflow.com/a/235760/578288">olliej의 Stack Overflow 답변</a>에서 고쳐씀)</p>
 
 <p>초기 버전 JavaScript는 유명(named) 함수 식을 허용하지 않습니다. 그리고 이 때문에 재귀(recursive) 함수 식을 만들 수 없습니다.</p>
 
@@ -85,9 +85,9 @@ sillyFunction();</pre>
 
 <h3 id="익명_재귀_함수에서_arguments.callee_사용하기">익명 재귀 함수에서 <code>arguments.callee</code> 사용하기</h3>
 
-<p>재귀 함수는 자신을 참조할 수 있어야 합니다. 보통, 함수는 그 이름으로 자신을 참조합니다. 그러나, 익명 함수(<a href="/ko/docs/Web/JavaScript/Reference/Operators/function" title="function expression">함수 식</a> 또는 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Function" title="Function constructor"><code>Function</code> 생성자</a>로 생성될 수 있는)는 이름이 없습니다. 그러므로 그를 참조하는 액세스 가능한 변수가 없는 경우, 함수가 자신을 참조할 수 있는 유일한 방법은 <code>arguments.callee</code>에 의해서입니다.</p>
+<p>재귀 함수는 자신을 참조할 수 있어야 합니다. 보통, 함수는 그 이름으로 자신을 참조합니다. 그러나, 익명 함수(<a href="/ko/docs/Web/JavaScript/Reference/Operators/function">함수 식</a> 또는 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code> 생성자</a>로 생성될 수 있는)는 이름이 없습니다. 그러므로 그를 참조하는 액세스 가능한 변수가 없는 경우, 함수가 자신을 참조할 수 있는 유일한 방법은 <code>arguments.callee</code>에 의해서입니다.</p>
 
-<p>다음 예는 차례로 팩토리얼 함수를 정의하고 반환하는 함수를 정의합니다. 이 예는 매우 실용적이지 않고 같은 결과가 <a href="/ko/docs/Web/JavaScript/Reference/Operators/function" title="named function expressions">유명 함수 식</a>으로 달성될 수 없는 경우가 거의 없습니다.</p>
+<p>다음 예는 차례로 팩토리얼 함수를 정의하고 반환하는 함수를 정의합니다. 이 예는 매우 실용적이지 않고 같은 결과가 <a href="/ko/docs/Web/JavaScript/Reference/Operators/function">유명 함수 식</a>으로 달성될 수 없는 경우가 거의 없습니다.</p>
 
 <pre class="brush: js">function create() {
    return function(n) {

@@ -10,9 +10,9 @@ translation_of: Web/Performance/dns-prefetch
 
 <h2 id="为什么要使用_dns-prefetch">为什么要使用 dns-prefetch?</h2>
 
-<p>当浏览器从（第三方）服务器请求资源时，必须先将该<a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS">跨域</a>域名解析为 IP地址，然后浏览器才能发出请求。此过程称为 DNS解析。DNS 缓存可以帮助减少此延迟，而 DNS解析可以导致请求增加明显的延迟。对于打开了与许多第三方的连接的网站，此延迟可能会大大降低加载性能。</p>
+<p>当浏览器从（第三方）服务器请求资源时，必须先将该<a href="/zh-CN/docs/Web/HTTP/CORS">跨域</a>域名解析为 IP地址，然后浏览器才能发出请求。此过程称为 DNS解析。DNS 缓存可以帮助减少此延迟，而 DNS解析可以导致请求增加明显的延迟。对于打开了与许多第三方的连接的网站，此延迟可能会大大降低加载性能。</p>
 
-<p><code>dns-prefetch</code> 可帮助开发人员掩盖 DNS解析延迟。 <a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Element/link">HTML <code>&lt;link&gt;</code>元素</a> 通过 dns-prefetch的 <a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/HTML/Attributes/rel">rel 属性</a>值提供此功能。然后在<a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/HTML/Attributes"> href属性</a>中指要<a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS">跨域</a>的域名：</p>
+<p><code>dns-prefetch</code> 可帮助开发人员掩盖 DNS解析延迟。 <a href="/zh-CN/docs/Web/HTML/Element/link">HTML <code>&lt;link&gt;</code>元素</a> 通过 dns-prefetch的 <a href="/zh-CN/docs/Web/HTML/Attributes/rel">rel 属性</a>值提供此功能。然后在<a href="/zh-CN/docs/Web/HTML/Attributes"> href属性</a>中指要<a href="/zh-CN/docs/Web/HTTP/CORS">跨域</a>的域名：</p>
 
 <h2 id="句法">句法</h2>
 
@@ -30,19 +30,19 @@ translation_of: Web/Performance/dns-prefetch
   &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<p>每当站点引用跨域域上的资源时，都应在 <a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/HTML/Element/head">&lt;head&gt; 元素</a>中放置 dns-prefetch提示，但是要记住一些注意事项。</p>
+<p>每当站点引用跨域域上的资源时，都应在 <a href="/zh-CN/docs/Web/HTML/Element/head">&lt;head&gt; 元素</a>中放置 dns-prefetch提示，但是要记住一些注意事项。</p>
 
 <h2 id="最佳实践">最佳实践</h2>
 
 <p id="Three_things_to_keep_in_mind">请记住以下三点：</p>
 
-<p>首先，<code>dns-prefetch</code> 仅对<a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS">跨域</a>域上的 DNS查找有效，因此请避免使用它来指向您的站点或域。这是因为，到浏览器看到提示时，您站点域背后的IP已经被解析。</p>
+<p>首先，<code>dns-prefetch</code> 仅对<a href="/zh-CN/docs/Web/HTTP/CORS">跨域</a>域上的 DNS查找有效，因此请避免使用它来指向您的站点或域。这是因为，到浏览器看到提示时，您站点域背后的IP已经被解析。</p>
 
-<p>其次，还可以通过使用 <a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers/Link">HTTP链接字段</a>将 <code>dns-prefetch</code>（以及其他资源提示）指定为 <a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers">HTTP标头</a>：</p>
+<p>其次，还可以通过使用 <a href="/zh-CN/docs/Web/HTTP/Headers/Link">HTTP链接字段</a>将 <code>dns-prefetch</code>（以及其他资源提示）指定为 <a href="/zh-CN/docs/Web/HTTP/Headers">HTTP标头</a>：</p>
 
 <pre class="notranslate">Link: &lt;https://fonts.gstatic.com/&gt;; rel=dns-prefetch</pre>
 
-<p>第三，考虑将 <code>dns-prefetch</code> 与 <code>preconnect(</code>预连接<code>)</code>提示配对。尽管 <code>dns-prefetch</code> 仅执行 DNS查找，但<code>preconnect</code> 会建立与服务器的连接。如果站点是通过HTTPS服务的，则此过程包括DNS解析，建立TCP连接以及执行TLS握手。将两者结合起来可提供进一步减少<a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS">跨域请求</a>的感知延迟的机会。您可以安全地将它们一起使用，如下所示：</p>
+<p>第三，考虑将 <code>dns-prefetch</code> 与 <code>preconnect(</code>预连接<code>)</code>提示配对。尽管 <code>dns-prefetch</code> 仅执行 DNS查找，但<code>preconnect</code> 会建立与服务器的连接。如果站点是通过HTTPS服务的，则此过程包括DNS解析，建立TCP连接以及执行TLS握手。将两者结合起来可提供进一步减少<a href="/zh-CN/docs/Web/HTTP/CORS">跨域请求</a>的感知延迟的机会。您可以安全地将它们一起使用，如下所示：</p>
 
 <pre class="brush: html notranslate">&lt;link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin&gt;
 &lt;link rel="dns-prefetch" href="https://fonts.gstatic.com/"&gt;
@@ -54,15 +54,15 @@ translation_of: Web/Performance/dns-prefetch
 
 <p>配对这些提示的逻辑是因为对dns-prefetch的支持比对预连接的支持要好。不支持预连接的浏览器仍然可以通过回退到dns-prefetch来获得更多好处。由于这是HTML功能，因此非常容错。如果不支持的浏览器遇到dns-prefetch提示（或任何其他资源提示），则您的网站不会中断。您只是不会获得它提供的好处。</p>
 
-<p>一些资源（如字体）以匿名模式加载。在这种情况下，应使用预连接提示设置 <a href="https://wiki.developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS">crossorigin</a> 属性。如果您省略它，则浏览器将仅执行DNS查找。</p>
+<p>一些资源（如字体）以匿名模式加载。在这种情况下，应使用预连接提示设置 <a href="/zh-CN/docs/Web/HTTP/CORS">crossorigin</a> 属性。如果您省略它，则浏览器将仅执行DNS查找。</p>
 
 <h2 id="查看更多">查看更多</h2>
 
 <ul>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Element/link">&lt;link&gt;</a></li>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel">HTML attribute: rel</a></li>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTML/CORS_settings_attributes">crossorigin</a></li>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing (CORS)</a></li>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Headers">HTTP headers</a></li>
- <li><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Link">HTTP header </a><a href="https://wiki.developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Link" title="The HTTP Link entity-header field provides a means for serialising one or more links in HTTP headers. It is semantically equivalent to the HTML &lt;link> element.">Link</a></li>
+ <li><a href="/zh-CN/docs/Web/HTML/Element/link">&lt;link&gt;</a></li>
+ <li><a href="/zh-CN/docs/Web/HTML/Attributes/rel">HTML attribute: rel</a></li>
+ <li><a href="/zh-CN/docs/Web/HTML/CORS_settings_attributes">crossorigin</a></li>
+ <li><a href="/zh-CN/docs/Web/HTTP/CORS">Cross-Origin Resource Sharing (CORS)</a></li>
+ <li><a href="/zh-CN/docs/Web/HTTP/Headers">HTTP headers</a></li>
+ <li><a href="/zh-CN/docs/Web/HTTP/Headers/Link">HTTP header </a><a href="/zh-CN/docs/Web/HTTP/Headers/Link" title="The HTTP Link entity-header field provides a means for serialising one or more links in HTTP headers. It is semantically equivalent to the HTML &lt;link> element.">Link</a></li>
 </ul>

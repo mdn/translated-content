@@ -19,9 +19,9 @@ original_slug: Web/JavaScript/Reference/Operators/연산자_우선순위
 
 <h2 id="우선순위와_결합성">우선순위와 결합성</h2>
 
-<p>아래와 같이 표현할 수 있는 표현식을 생각해 봅시다. 연산자<sub>1</sub>과 연산자<sub>2</sub>의 자리에는 아무 연산자를 넣을 수 있습니다.</p>
+<p>아래와 같이 표현할 수 있는 표현식을 생각해 봅시다. 연산자1과 연산자2의 자리에는 아무 연산자를 넣을 수 있습니다.</p>
 
-<pre class="syntaxbox">a 연산자<sub>1</sub> b 연산자<sub>2</sub> c</pre>
+<pre class="syntaxbox">a 연산자1 b 연산자2 c</pre>
 
 <p>두 연산자의 우선순위(아래 표 참조)가 다를 경우, 우선순위가 높은 연산자가 먼저 실행되고 결합성은 영향을 미치지 않습니다. 아래 예제에서는 덧셈이 곱셈보다 먼저 쓰였음에도 곱셈의 우선순위가 높기 때문에 먼저 실행됩니다.</p>
 
@@ -30,7 +30,7 @@ console.log(3 + (10 * 2)); // 23을 출력, 괄호는 불필요함
 console.log((3 + 10) * 2); // 26을 출력, 괄호로 인해 실행 순서가 바뀜
 </pre>
 
-<p>좌결합성(왼쪽에서 오른쪽으로)은 표현식이 <code>(a 연산자<sub>1</sub> b) 연산자<sub>2</sub> c</code>와 같이, 우결합성(오른쪽에서 왼쪽으로)은 <code>a 연산자<sub>1</sub> (b 연산자<sub>2</sub> c)</code>와 같이 계산된다는 의미입니다. 대입 연산자는 우결합성이므로 다음과 같은 코드를 작성할 수 있습니다.</p>
+<p>좌결합성(왼쪽에서 오른쪽으로)은 표현식이 <code>(a 연산자1 b) 연산자2 c</code>와 같이, 우결합성(오른쪽에서 왼쪽으로)은 <code>a 연산자1 (b 연산자2 c)</code>와 같이 계산된다는 의미입니다. 대입 연산자는 우결합성이므로 다음과 같은 코드를 작성할 수 있습니다.</p>
 
 <pre class="brush: js">a = b = 5; // a = (b = 5);와 같음
 </pre>
@@ -379,7 +379,7 @@ console.log((echo("첫째", 2) ** echo("둘째", 3)) ** echo("셋째", 2));</pre
   </tr>
   <tr>
    <td>7</td>
-   <td><a href="https://wiki.developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator">널 병합 연산자</a></td>
+   <td><a href="/ko/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator">널 병합 연산자</a></td>
    <td>좌결합성</td>
    <td><code>… ?? …</code></td>
   </tr>
