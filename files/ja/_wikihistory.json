@@ -48605,18 +48605,6 @@
       "ethertank"
     ]
   },
-  "conflicting/Web/API/XRInputSource/handedness": {
-    "modified": "2020-12-06T13:23:10.937Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "conflicting/Web/API/XRInputSource/targetRayMode": {
-    "modified": "2020-12-08T09:23:22.538Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
   "conflicting/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent": {
     "modified": "2020-11-08T02:10:47.628Z",
     "contributors": [
