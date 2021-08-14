@@ -3233,7 +3233,6 @@
 /ja/docs/Web/API/Geolocation/Using_geolocation	/ja/docs/Web/API/Geolocation_API
 /ja/docs/Web/API/GlobalFetch	/en-US/docs/Web/API/WindowOrWorkerGlobalScope
 /ja/docs/Web/API/GlobalFetch/fetch	/ja/docs/Web/API/WindowOrWorkerGlobalScope/fetch
-/ja/docs/Web/API/HTMLElement/forceSpellCheck	/ja/docs/orphaned/Web/API/HTMLElement/forceSpellCheck
 /ja/docs/Web/API/HTMLFormElement.acceptCharset	/ja/docs/Web/API/HTMLFormElement/acceptCharset
 /ja/docs/Web/API/HTMLFormElement.action	/ja/docs/Web/API/HTMLFormElement/action
 /ja/docs/Web/API/HTMLFormElement.elements	/ja/docs/Web/API/HTMLFormElement/elements
