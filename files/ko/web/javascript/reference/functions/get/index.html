@@ -36,12 +36,12 @@ translation_of: Web/JavaScript/Reference/Functions/get
 <div>
 <ul>
  <li>숫자나 문자열로 구성된 식별자를 이용할 수 있습니다.</li>
- <li>getter는 절대로 매개변수를 가져서는 안 됩니다. (<a class="external" href="http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/" rel="external nofollow">Incompatible <abbr title="ECMAScript 5th edition">ES5</abbr> change: literal getter and setter functions must now have exactly zero or one arguments</a> 를 참조하세요.)</li>
+ <li>getter는 절대로 매개변수를 가져서는 안 됩니다. (<a class="external" href="http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/" rel="external nofollow">Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments</a> 를 참조하세요.)</li>
  <li>하나의 객체 리터럴에 또다른 getter나 데이터 바인딩은 불가능합니다. (<code>{ get x() { }, get x() { } }</code> 나 <code>{ x: ..., get x() { } }</code> 는 사용할 수 없습니다.)</li>
 </ul>
 </div>
 
-<p>getter는 <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete" title="en/Core_JavaScript_1.5_Reference/Operators/Special_Operators/delete_Operator">delete</a></code> 연산자를 이용해 삭제할 수 있습니다.</p>
+<p>getter는 <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code> 연산자를 이용해 삭제할 수 있습니다.</p>
 
 <h2 id="예">예</h2>
 

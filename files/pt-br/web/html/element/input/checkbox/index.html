@@ -46,7 +46,7 @@ translation_of: Web/HTML/Element/input/checkbox
 
 <pre class="brush: html">&lt;form&gt;
   &lt;div&gt;
-    &lt;input type = "checkbox" id = "subscribeNews" nome = "subscribe" value = "<code>newsletter</code>"&gt;
+    &lt;input type = "checkbox" id = "subscribeNews" name = "subscribe" value = "<code>newsletter</code>"&gt;
     &lt;label for = "subscribeNews"&gt; Subscreva a newsletter? &lt;/ label&gt;
   &lt;/ div&gt;
   &lt;div&gt;
@@ -77,11 +77,11 @@ translation_of: Web/HTML/Element/input/checkbox
 <pre class="brush: html">&lt;fieldset&gt;
   &lt;legend&gt; Escolha seus interesses &lt;/ legend&gt;
   &lt;div&gt;
-    &lt;input type = "checkbox" id = "codificação" name = "interesse" valor = "codificação"&gt;
+    &lt;input type = "checkbox" id = "codificação" name = "interesse" value = "codificação"&gt;
     &lt;label for = "coding"&gt; Codificação &lt;/ label&gt;
   &lt;/ div&gt;
   &lt;div&gt;
-    &lt;input type = "checkbox" id = "música" name = "interesse" valor = "música"&gt;
+    &lt;input type = "checkbox" id = "música" name = "interesse" value = "música"&gt;
     &lt;label for = "music"&gt; Música &lt;/ label&gt;
   &lt;/ div&gt;
 &lt;/ fieldset&gt;</pre>
@@ -97,11 +97,11 @@ translation_of: Web/HTML/Element/input/checkbox
 <pre class="brush: html">&lt;fieldset&gt;
   &lt;legend&gt; Escolha seus interesses &lt;/ legend&gt;
   &lt;div&gt;
-    &lt;input type = "checkbox" id = "codificação" nome = "interesse" valor = "codificação" checked&gt;
+    &lt;input type = "checkbox" id = "codificação" name = "interesse" value = "codificação" checked&gt;
     &lt;label for = "coding"&gt; Codificação &lt;/ label&gt;
   &lt;/ div&gt;
   &lt;div&gt;
-    &lt;input type = "checkbox" id = "música" name = "interesse" valor = "música"&gt;
+    &lt;input type = "checkbox" id = "música" name = "interesse" value = "música"&gt;
     &lt;label for = "music"&gt; Música &lt;/ label&gt;
   &lt;/ div&gt;
 &lt;/ fieldset&gt;</pre>
@@ -142,7 +142,7 @@ translation_of: Web/HTML/Element/input/checkbox
   });
 
   for(var i = 0; i &lt;ingredientes.length; i ++) {
-    ingredientes [i] .addEventListener ('clique', updateDisplay);
+    ingredientes [i] .addEventListener ('click', updateDisplay);
   }
 
   função updateDisplay () {
@@ -185,29 +185,29 @@ translation_of: Web/HTML/Element/input/checkbox
   &lt;fieldset&gt;
   &lt;legend&gt; Escolha seus interesses &lt;/ legend&gt;
     &lt;div&gt;
-      &lt;input type = "checkbox" id = "codificação" name = "interesse" valor = "codificação"&gt;
+      &lt;input type = "checkbox" id = "codificação" name = "interesse" value = "codificação"&gt;
       &lt;label for = "coding"&gt; Codificação &lt;/ label&gt;
     &lt;/ div&gt;
     &lt;div&gt;
-      &lt;input type = "checkbox" id = "música" name = "interesse" valor = "música"&gt;
+      &lt;input type = "checkbox" id = "música" name = "interesse" value = "música"&gt;
       &lt;label for = "music"&gt; Música &lt;/ label&gt;
     &lt;/ div&gt;
     &lt;div&gt;
-      &lt;input type = "checkbox" id = "arte" name = "interesse" valor = "arte"&gt;
+      &lt;input type = "checkbox" id = "arte" name = "interesse" value = "arte"&gt;
       &lt;label for = "art"&gt; Art &lt;/ label&gt;
     &lt;/ div&gt;
     &lt;div&gt;
-      &lt;input type = "checkbox" id = "sports" nome = "interesse" valor = "esportes"&gt;
+      &lt;input type = "checkbox" id = "sports" name = "interesse" value = "esportes"&gt;
       &lt;label for = "sports"&gt; Esportes &lt;/ label&gt;
     &lt;/ div&gt;
     &lt;div&gt;
-      &lt;input type = "checkbox" id = "cozinhar" nome = "interesse" valor = "cozinhar"&gt;
+      &lt;input type = "checkbox" id = "cozinhar" name = "interesse" value = "cozinhar"&gt;
       &lt;label for = "cooking"&gt; Cozinhando &lt;/ label&gt;
     &lt;/ div&gt;
     &lt;div&gt;
-      &lt;input type = "checkbox" id = "outro" nome = "interesse" valor = "outro"&gt;
+      &lt;input type = "checkbox" id = "outro" name = "interesse" value = "outro"&gt;
       &lt;label for = "other"&gt; Outro &lt;/ label&gt;
-      &lt;input type = "text" id = "otherValue" nome = "outro"&gt;
+      &lt;input type = "text" id = "otherValue" name = "outro"&gt;
     &lt;/ div&gt;
     &lt;div&gt;
       &lt;button type = "submit"&gt; Enviar formulário &lt;/ button&gt;
@@ -252,10 +252,10 @@ otherText.style.visibility = 'oculto';
 
 otherCheckbox.onchange = function () {
   if (otherCheckbox.checked) {
-    otherText.style.visibility = 'visível';
+    otherText.style.visibility = 'visible';
     otherText.value = '';
   } outro {
-    otherText.style.visibility = 'oculto';
+    otherText.style.visibility = 'hidden';
   }
 };</pre>
 
