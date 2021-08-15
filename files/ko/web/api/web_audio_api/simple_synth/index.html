@@ -185,7 +185,7 @@ let mainGainNode = null;
 
 <ol>
  <li><code>audioContext</code>는 전역 {{domxref("AudioContext")}} 객체를 (또는 필요하다면 <code>webkitAudioContext</code>를) 참조하기 위해 설정되었습니다.</li>
- <li><code>oscList</code>는 현재 재생되고 있는 모든 osciallator를 포함할 준비가 되기 위해 설정되었습니다. 이것은 빈 상태로 시작하는데, 왜냐하면 아직 어떤 것도 재생되고 있지 않기 때문입니다.</li>
+ <li><code>oscList</code>는 현재 재생되고 있는 모든 oscillator를 포함할 준비가 되기 위해 설정되었습니다. 이것은 빈 상태로 시작하는데, 왜냐하면 아직 어떤 것도 재생되고 있지 않기 때문입니다.</li>
  <li><code>mainGainNode</code>은 null로 설정되었습니다; 설정 과정 중에, 이것은 재생되는 모든 oscillator가 연결되고 슬라이더를 사용해 전체 볼륨이 제어되도록 하는 {{domxref("GainNode")}}를 포함하도록 설정될 것입니다.</li>
 </ol>
 
@@ -218,7 +218,7 @@ let cosineTerms = null;
 
 <h3 id="Creating_the_note_table">음 테이블 생성하기</h3>
 
-<p><code>createNoteTable()</code> 함수는 각 옥타브를 나타내는 객체의 배열을 포함하는 <code>noteFreq</code> 배열을 만듭니다. 차례로 각 옥타브는 그 옥타브에 있는 각 음에 대한 하나의 지정된 프로퍼티를 가집니다; 그 프로퍼티의 이름은 음의 이름입니다 (예를 들자면 C-sharp는 "C#"로 표현됩니다), 그리고 값은 헤르츠로 표현되는 그 음의 주파수입니다.</p>
+<p><code>createNoteTable()</code> 함수는 각 옥타브를 나타내는 객체의 배열을 포함하는 <code>noteFreq</code> 배열을 만듭니다. 차례로 각 옥타브는 그 옥타브에 있는 각 음에 대한 하나의 지정된 속성을 가집니다; 그 속성의 이름은 음의 이름입니다 (예를 들자면 C-sharp는 "C#"로 표현됩니다), 그리고 값은 헤르츠로 표현되는 그 음의 주파수입니다.</p>
 
 <pre class="brush: js">function createNoteTable() {
   let noteFreq = [];
@@ -332,7 +332,7 @@ let cosineTerms = null;
 }
 </pre>
 
-<p>결과는 <code>noteFreq</code> 배열인데, 이는 각 옥타브에 대한 객체를 가지고 있습니다. 각 옥타브 객체는 프로퍼티 이름이 음의 이름이고 (예를 들자면 C-sharp는 "C#"로 표현됩니다) 프로퍼티의 값은 헤르츠로 표현되는 음의 주파수인 지정된 프로퍼티들을 가지고 있습니다. 부분적으로는, 결과 객체는 다음과 같이 보입니다:</p>
+<p>결과는 <code>noteFreq</code> 배열인데, 이는 각 옥타브에 대한 객체를 가지고 있습니다. 각 옥타브 객체는 속성 이름이 음의 이름이고 (예를 들자면 C-sharp는 "C#"로 표현됩니다) 속성의 값은 헤르츠로 표현되는 음의 주파수인 지정된 속성들을 가지고 있습니다. 부분적으로는, 결과 객체는 다음과 같이 보입니다:</p>
 
 <table class="standard-table">
  <tbody>
