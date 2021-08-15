@@ -97,7 +97,7 @@ AuthName "Accès au site de pré-production"
 AuthUserFile /chemin/vers/.htpasswd
 Require valid-user</pre>
 
-<p>Le fichier <code>.htaccess</code> fait référence à un fichier <code>.htpasswd</code> dans lequel chaque ligne contient un nom d'utilisateur et un mot de passe séparés par deux-points (« : »). Vous ne pouvez pas déchiffrer les mots de passe à l'intérieur, car ils sont <a href="https://httpd.apache.org/docs/2.4/misc/password_encryptions.html">chiffrées</a> (en md5 en l'occurrence). Vous pouvez tout à fait nommer votre fichier <code>.htpasswd</code> différemment si vous le désirez, mais gardez en tête que ce fichier ne doit pas être accessible à quiconque. (Apache est normalement configuré pour empêcher l'accès aux fichiers <code>.ht*</code>).</p>
+<p>Le fichier <code>.htaccess</code> fait référence à un fichier <code>.htpasswd</code> dans lequel chaque ligne contient un nom d'utilisateur et un mot de passe séparés par deux-points (« : »). Vous ne pouvez pas déchiffrer les mots de passe à l'intérieur, car ils sont <a href="https://httpd.apache.org/docs/2.4/misc/password_encryptions.html">chiffrées</a> (en md5 en l'occurrence). Vous pouvez tout à fait nommer votre fichier <code>.htpasswd</code> différemment si vous le désirez, mais gardez en tête que ce fichier ne doit pas être accessible à quiconque (Apache est normalement configuré pour empêcher l'accès aux fichiers <code>.ht*</code>).</p>
 
 <pre>aladdin:$apr1$ZjTqBB3f$IF9gdYAGlMrs2fuINjHsz.
 user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/</pre>
