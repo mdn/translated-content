@@ -549,7 +549,7 @@ setup();</pre>
 }
 </pre>
 
-<p><code>noteReleased()</code>는 사용자 정의 <code>data-octave</code>와 <code>data-note</code> 어트리뷰트를 건반의 oscillator를 찾아보기 위해 사용하고, 그리고 나서 음 재생을 멈추기 위해 oscillator의 상속된 {{domxref("AudioScheduledSourceNode.stop", "stop()")}} 메서드를 호출합니다. 마지막으로, 음이 현재 재생되고 있지 않다는 것을 나타내기 위해, 음에 대한 <code>oscList</code> 항목은 지워지고 <code>data-pressed</code> 어트리뷰트는 ({{domxref("event.target")}}에 의해 식별된) 건반 요소로부터 제거됩니다.</p>
+<p><code>noteReleased()</code>는 사용자 정의 <code>data-octave</code>와 <code>data-note</code> 특성을 건반의 oscillator를 찾아보기 위해 사용하고, 그리고 나서 음 재생을 멈추기 위해 oscillator의 상속된 {{domxref("AudioScheduledSourceNode.stop", "stop()")}} 메서드를 호출합니다. 마지막으로, 음이 현재 재생되고 있지 않다는 것을 나타내기 위해, 음에 대한 <code>oscList</code> 항목은 지워지고 <code>data-pressed</code> 특성은 ({{domxref("event.target")}}에 의해 식별된) 건반 요소로부터 제거됩니다.</p>
 
 <h4 id="main">메인 볼륨 변경하기</h4>
 
