@@ -2832,9 +2832,6 @@
 /ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.inspectedWindow/tabId	/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/tabId
 /ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network	/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network
 /ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels	/ja/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels
-/ja/docs/Mozilla/Add-ons/WebExtensions/Packaging_and_installation	/ja/docs/orphaned/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox
-/ja/docs/Mozilla/Add-ons/WebExtensions/Porting_from_Google_Chrome	/ja/docs/orphaned/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension
-/ja/docs/Mozilla/Add-ons/WebExtensions/Publishing_your_WebExtension	/ja/docs/orphaned/Mozilla/Add-ons/WebExtensions/Package_your_extension_
 /ja/docs/Mozilla/Add-ons/WebExtensions/ThunderbirdにおけるWebExtensionsによるアドイン開発	/ja/docs/Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Thunderbird
 /ja/docs/Mozilla/Add-ons/WebExtensions/Using_the_JavaScript_APIs	/ja/docs/Mozilla/Add-ons/WebExtensions/API
 /ja/docs/Mozilla/Add-ons/WebExtensions/Walkthrough	/ja/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
