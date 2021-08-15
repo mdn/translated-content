@@ -3357,9 +3357,9 @@
 /ja/docs/Web/API/WorkerGlobalScope/caches	/ja/docs/Web/API/WindowOrWorkerGlobalScope/caches
 /ja/docs/Web/API/XMLHttpRequest/openRequest	/ja/docs/orphaned/Web/API/XMLHttpRequest/openRequest
 /ja/docs/Web/API/XRHandedness	/ja/docs/conflicting/Web/API/XRInputSource/handedness
-/ja/docs/Web/API/XRReferenceSpaceEventInit	/ja/docs/conflicting/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent
-/ja/docs/Web/API/XRReferenceSpaceEventInit/referenceSpace	/ja/docs/conflicting/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent_0f733d39fd3094010931f093b9045686
-/ja/docs/Web/API/XRReferenceSpaceEventInit/transform	/ja/docs/conflicting/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent_7dfb381c892055a0c91980d537a86c6b
+/ja/docs/Web/API/XRReferenceSpaceEventInit	/ja/docs/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent
+/ja/docs/Web/API/XRReferenceSpaceEventInit/referenceSpace	/ja/docs/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent
+/ja/docs/Web/API/XRReferenceSpaceEventInit/transform	/ja/docs/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent
 /ja/docs/Web/API/XRReferenceSpaceType	/ja/docs/Web/API/XRSession/requestReferenceSpace
 /ja/docs/Web/API/XRSessionMode	/ja/docs/orphaned/Web/API/XRSessionMode
 /ja/docs/Web/API/XRTargetRayMode	/ja/docs/conflicting/Web/API/XRInputSource/targetRayMode
