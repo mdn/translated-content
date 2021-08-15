@@ -456,7 +456,7 @@ setup();</pre>
 
 <h4 id="Creating_a_key">건반 생성하기</h4>
 
-<p><code>createKey()</code> 함수는 가상 키보드에 표시하기를 원하는 각각의 건반에 대해 한 번 호출됩니다. 이것은 건반과 건반의 라벨으로 구성되는 요소를 생성하고, 추후의 사용을 위해 그 요소에 데이터 어트리뷰트를 추가하고, 그리고 우리가 관심을 가지고 있는 이벤트에 대한 이벤트 핸들러를 부여합니다.</p>
+<p><code>createKey()</code> 함수는 가상 키보드에 표시하기를 원하는 각각의 건반에 대해 한 번 호출됩니다. 이것은 건반과 건반의 라벨으로 구성되는 요소를 생성하고, 추후의 사용을 위해 그 요소에 데이터 특성을 추가하고, 그리고 우리가 관심을 가지고 있는 이벤트에 대한 이벤트 핸들러를 부여합니다.</p>
 
 <pre class="brush: js">function createKey(note, octave, freq) {
   let keyElement = document.createElement("div");
