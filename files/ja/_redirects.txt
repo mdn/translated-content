@@ -140,7 +140,7 @@
 /ja/docs/Building_an_Extension	/ja/docs/Mozilla/Add-ons
 /ja/docs/CORS_Enabled_Image	/ja/docs/Web/HTML/CORS_enabled_image
 /ja/docs/CSS	/ja/docs/Web/CSS
-/ja/docs/CSS-2_Quick_Reference	/ja/docs/conflicting/Web/CSS
+/ja/docs/CSS-2_Quick_Reference	/ja/docs/Web/CSS
 /ja/docs/CSS-2_Quick_Reference/All_in_a_page	/ja/docs/Web/CSS/Reference
 /ja/docs/CSS-2_Quick_Reference:All_in_a_page	/ja/docs/Web/CSS/Reference
 /ja/docs/CSS-redirect-1	/ja/docs/Web/CSS
@@ -278,7 +278,7 @@
 /ja/docs/CSS/Media/Visual	/ja/docs/Web/CSS/@media
 /ja/docs/CSS/Media_queries	/ja/docs/Web/CSS/Media_queries
 /ja/docs/CSS/Multiple_backgrounds	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
-/ja/docs/CSS/Other_Resources	/ja/docs/conflicting/Web/CSS_eb0c7d23f84df658710ebb6b4bdec8ea
+/ja/docs/CSS/Other_Resources	/ja/docs/Web/CSS
 /ja/docs/CSS/Privacy_and_the_:visited_selector	/ja/docs/Web/CSS/Privacy_and_the_:visited_selector
 /ja/docs/CSS/Pseudo-classes	/ja/docs/Web/CSS/Pseudo-classes
 /ja/docs/CSS/Pseudo-elements	/ja/docs/Web/CSS/Pseudo-elements
@@ -547,7 +547,7 @@
 /ja/docs/CSS:Getting_Started:What_is_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /ja/docs/CSS:Getting_Started:Why_use_CSS	/en-US/docs/Learn/CSS/First_steps/How_CSS_works
 /ja/docs/CSS:Media:Visual	/ja/docs/Web/CSS/@media
-/ja/docs/CSS:Other_Resources	/ja/docs/conflicting/Web/CSS_eb0c7d23f84df658710ebb6b4bdec8ea
+/ja/docs/CSS:Other_Resources	/ja/docs/Web/CSS
 /ja/docs/CSS:color	/ja/docs/Web/CSS/color
 /ja/docs/CSS:computed_value	/ja/docs/Web/CSS/computed_value
 /ja/docs/CSS:font	/ja/docs/Web/CSS/font
@@ -3699,7 +3699,7 @@
 /ja/docs/Web/CSS/Media	/ja/docs/Web/CSS/@media
 /ja/docs/Web/CSS/Media/Visual	/ja/docs/Web/CSS/@media
 /ja/docs/Web/CSS/Motion_Path	/ja/docs/Web/CSS/CSS_Motion_Path
-/ja/docs/Web/CSS/Other_Resources	/ja/docs/conflicting/Web/CSS_eb0c7d23f84df658710ebb6b4bdec8ea
+/ja/docs/Web/CSS/Other_Resources	/ja/docs/Web/CSS
 /ja/docs/Web/CSS/Reference/@viewport	/ja/docs/Web/CSS/@viewport
 /ja/docs/Web/CSS/Reference/@viewport/max-zoom	/ja/docs/Web/CSS/@viewport
 /ja/docs/Web/CSS/Reference/@viewport/min-zoom	/ja/docs/Web/CSS/@viewport
