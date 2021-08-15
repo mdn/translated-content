@@ -33,7 +33,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Object/valueOf
 
 <p>JavaScript는 객체를 원시 값으로 변환할 때 <code>valueOf</code> 메서드를 호출합니다. 보통 원시 값을 필요로 할 때 알아서 사용하므로 직접 호출해야 하는 경우는 매우 드뭅니다.</p>
 
-<p>기본적으로 {{jsxref("Object")}}의 모든 후손 객체는 <code>valueOf</code>를 상속받습니다. 내장된 핵심 객체는 모두 <code>valueOf</code>를 재정의<sup>override</sup>해 적합한 값을 반환합니다. 어떤 객체가 원시 값을 가지고 있지 않다면, <code>valueOf</code>는 객체 스스로를 반환합니다.</p>
+<p>기본적으로 {{jsxref("Object")}}의 모든 후손 객체는 <code>valueOf</code>를 상속받습니다. 내장된 핵심 객체는 모두 <code>valueOf</code>를 재정의해 적합한 값을 반환합니다. 어떤 객체가 원시 값을 가지고 있지 않다면, <code>valueOf</code>는 객체 스스로를 반환합니다.</p>
 
 <p>여러분의 코드에서 <code>valueOf</code>를 호출해 내장 객체를 원시 값으로 변환할 수 있습니다. 사용자 정의 객체를 만들 땐 <code>valueOf</code>를 재정의해 {{jsxref("Object")}}의 메서드 대신 다른 행동을 부여할 수도 있습니다.</p>
 
@@ -70,7 +70,7 @@ MyNumberType.prototype.valueOf = function() {
 var myObj = new MyNumberType(4);
 myObj + 3; // 7</pre>
 
-<h3 id="단항_더하기_사용하기"><a name="Details_of_unary_plus">단항 더하기 사용하기</a></h3>
+<h3 id="단항_더하기_사용하기">단항 더하기 사용하기</h3>
 
 <pre class="notranslate">+"5" // 5 (string to number)
 +"" // 0 (string to number)
