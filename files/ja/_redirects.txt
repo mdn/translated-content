@@ -2964,7 +2964,7 @@
 /ja/docs/Tools/Debugger_(before_Firefox_52)/Keyboard_shortcuts	/ja/docs/orphaned/Tools/Debugger_(before_Firefox_52)/Keyboard_shortcuts
 /ja/docs/Tools/Debugger_(before_Firefox_52)/Settings	/ja/docs/orphaned/Tools/Debugger_(before_Firefox_52)/Settings
 /ja/docs/Tools/Debugger_(before_Firefox_52)/UI_Tour	/ja/docs/orphaned/Tools/Debugger_(before_Firefox_52)/UI_Tour
-/ja/docs/Tools/Memory/Comparing_heap_snapshots	/ja/docs/conflicting/Tools/Memory/Basic_operations
+/ja/docs/Tools/Memory/Comparing_heap_snapshots	/ja/docs/Tools/Memory/Basic_operations
 /ja/docs/Tools/Memory/Open_the_Memory_tool	/ja/docs/Tools/Memory/Basic_operations
 /ja/docs/Tools/Memory/Take_a_heap_snapshot	/ja/docs/Tools/Memory/Basic_operations
 /ja/docs/Tools/Page_Inspector-redirect-1	/ja/docs/Tools/Page_Inspector

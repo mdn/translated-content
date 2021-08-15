@@ -48452,13 +48452,6 @@
       "mantaroh"
     ]
   },
-  "conflicting/Tools/Memory/Basic_operations": {
-    "modified": "2020-07-16T22:36:28.978Z",
-    "contributors": [
-      "wbamberg",
-      "yyss"
-    ]
-  },
   "conflicting/Tools/Performance": {
     "modified": "2020-07-16T22:35:28.845Z",
     "contributors": [
