@@ -153,7 +153,7 @@ console.log(filterItems('an')); // ['banana', 'mango', 'orange']</code></pre>
 
 <h2 id="폴리필">폴리필</h2>
 
-<p><font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">filter</span></font>는 ECMA-262 표준 제5판에 추가됐습니다. 따라서 어떤 표준 구현체에서는 사용할 수 없을 수도 있습니다. 다른 모든 코드 이전에 아래 코드를 포함하면 지원하지 않는 환경에서도 <font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">filter</span></font>를 사용할 수 있습니다. 아래 알고리즘은 <code>fn.call</code>의 계산 값이 원래의 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call" title="call() 메소드는 주어진 this 값 및 각각 전달된 인수와 함께 함수를 호출합니다."><code>Function.prototype.call()</code></a>과 같고, {{jsxref("Array.prototype.push()")}}가 변형되지 않은 경우 ECMA-262 제5판이 명시한 것과 동일합니다.</p>
+<p><code>filter</code>는 ECMA-262 표준 제5판에 추가됐습니다. 따라서 어떤 표준 구현체에서는 사용할 수 없을 수도 있습니다. 다른 모든 코드 이전에 아래 코드를 포함하면 지원하지 않는 환경에서도 <code>filter</code>를 사용할 수 있습니다. 아래 알고리즘은 <code>fn.call</code>의 계산 값이 원래의 <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/call"><code>Function.prototype.call()</code></a>과 같고, {{jsxref("Array.prototype.push()")}}가 변형되지 않은 경우 ECMA-262 제5판이 명시한 것과 동일합니다.</p>
 
 <pre class="brush: js">if (!Array.prototype.filter){
   Array.prototype.filter = function(func, thisArg) {
