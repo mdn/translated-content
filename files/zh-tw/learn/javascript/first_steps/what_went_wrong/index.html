@@ -67,7 +67,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
   <pre class="brush: js notranslate">guessSubmit.addeventListener('click', checkGuess);</pre>
  </li>
  <li>主控台提示的錯誤訊息寫著「guessSubmit.addeventListener is not a function（guessSubmit.addeventListener 並不是一個函式）」，所以我們大概是哪裡拼錯字了。如果你並不確定一個函式的正確名稱如何拼寫，打開MDN確認看看是個不錯的選擇。最佳做法是在你喜歡的搜尋引擎搜尋「mdn<em>關鍵字</em>」。為了節省時間，這裡提供你一個捷徑：<code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code>。</li>
- <li>回來看看這個頁面，我們明顯是把函式名稱給拼錯了！記住，JavaScript是會區分大小寫的，所以任何些微的拼寫錯誤甚至是大小寫錯誤都會造成錯誤發生。把<code>addeventListener</code> 改成<code>addEventListener</code> 問題就解決了。現在將你的程式碼修正吧。</li>
+ <li>回來看看這個頁面，我們明顯是把函式名稱給拼錯了！記住，JavaScript是會區分大小寫的，所以任何些微的拼寫錯誤甚至是大小寫錯誤都會造成錯誤發生。把<code>addeventListener</code>改成<code>addEventListener</code>問題就解決了。現在將你的程式碼修正吧。</li>
 </ol>
 
 <div class="note">
@@ -94,26 +94,26 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
   <pre class="brush: js notranslate">console.log(lowOrHi);</pre>
 
   <div class="note">
-  <p><strong>Note</strong>:<code><a href="/en-US/docs/Web/API/Console/log">console.log()</a></code> 是一個非常好用的除錯功能，它能夠將值印出至主控台中。所以這行程式碼會在第48行賦值給<code>lowOrHi</code>後，將它的值印出至主控台中。</p>
+  <p><strong>Note</strong>:<code><a href="/en-US/docs/Web/API/console/log">console.log()</a></code>是一個非常好用的除錯功能，它能夠將值印出至主控台中。所以這行程式碼會在第48行賦值給<code>lowOrHi</code>後，將它的值印出至主控台中。</p>
   </div>
  </li>
- <li>存檔並重整，你應該會在主控台中看到 <code>console.log()</code> 輸出的結果。<img alt="" src="console-log-output.png" style="display: block; margin: 0 auto;">在這個時間點，<code>lowOrHi</code>的值是<code>null</code>。所以很明顯的，第 48 行一定出了什麼問題。</li>
+ <li>存檔並重整，你應該會在主控台中看到<code>console.log()</code>輸出的結果。<img alt="" src="console-log-output.png" style="display: block; margin: 0 auto;">在這個時間點，<code>lowOrHi</code>的值是<code>null</code>。所以很明顯的，第 48 行一定出了什麼問題。</li>
  <li>讓我們思考一下發生了什麼問題。第48行呼叫了 <code><a href="/zh-TW/docs/Web/API/Document/querySelector">document.querySelector()</a></code> 方法來透過CSS選擇器取得一個HTML元素參照。打開我們的網頁看看我們想要取得的段落元素：
   <pre class="brush: js notranslate">&lt;p class="lowOrHi"&gt;&lt;/p&gt;</pre>
  </li>
- <li>所以我們需要的是一個開頭是小數點(.)的class選擇器，但傳進第48行<code>querySelector()</code>方法的選擇器並沒有開頭的小數點。這也許就是問題所在了！試著將第48行的 <code>lowOrHi</code> 改成<code>.lowOrHi</code>。</li>
+ <li>所以我們需要的是一個開頭是小數點(.)的class選擇器，但傳進第48行<code>querySelector()</code>方法的選擇器並沒有開頭的小數點。這也許就是問題所在了！試著將第48行的<code>lowOrHi</code>改成<code>.lowOrHi</code>。</li>
  <li>再次存檔並重整，你的<code>console.log()</code>現在應該會輸出我們想要的<code>&lt;p&gt;</code>元素了。呼！又修好了另一個錯誤！你現在可以把你的<code>console.log()</code>那行移除了，或是你想要留著之後查看——取決於你。</li>
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: 看看這個 <a href="/zh-TW/docs/Web/JavaScript/Reference/Errors/Unexpected_type">TypeError: "x" is (not) "y"</a> 連結來了解更多有關這類錯誤的資訊。</p>
+<p><strong>Note</strong>: 看看這個<a href="/zh-TW/docs/Web/JavaScript/Reference/Errors/Unexpected_type">TypeError: "x" is (not) "y"</a> 連結來了解更多有關這類錯誤的資訊。</p>
 </div>
 
 <h3 id="Syntax_errors_round_three">語法錯誤：第三回合</h3>
 
 <ol>
  <li>現在如果你試著再次玩這個遊戲應該會相當順利，直到該讓遊戲結束的時機點才會發生錯誤：無論是猜對還是10次用完。</li>
- <li>此時console提供錯誤訊息跟一開始一樣： "TypeError: resetButton.addeventListener is not a function"! 然而此次錯誤來自第94行。查看第94行後，我們可以輕易發現依舊是屬性大小寫問題，一樣把<code>addeventListener</code> 改成 <code>.addEventListener</code>就沒問題了。</li>
+ <li>此時console提供錯誤訊息跟一開始一樣：「TypeError: resetButton.addeventListener is not a function!」 然而此次錯誤來自第94行。查看第94行後，我們可以輕易發現依舊是屬性大小寫問題，一樣把<code>addeventListener</code>改成<code>.addEventListener</code>就沒問題了。</li>
 </ol>
 
 <h2 id="A_logic_error">邏輯錯誤</h2>
@@ -187,7 +187,7 @@ translation_of: Learn/JavaScript/First_steps/What_went_wrong
 
 <p>這個檢查就失效了，程式會永遠回傳 <code>true</code>而勝利並結束遊戲。請小心！</p>
 
-<h3 id="SyntaxError_missing_after_argument_list">語法錯誤：參數列表後面缺少「)<br>SyntaxError: missing ) after argument list</h3>
+<h3 id="SyntaxError_missing_after_argument_list">語法錯誤：參數列表後面缺少「)」<br>SyntaxError: missing ) after argument list</h3>
 
 <p>給完函式或方法參數時別忘了放上<code>)</code>右括號（請注意不要打成中文輸入法）。</p>
 
