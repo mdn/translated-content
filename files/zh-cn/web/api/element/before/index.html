@@ -1,10 +1,15 @@
 ---
-title: ChildNode.before()
-slug: orphaned/Web/API/ChildNode/before
+title: Element.before()
+slug: Web/API/Element/before
 tags:
-  - api、dom、节点、方法
-translation_of: Web/API/ChildNode/before
+  - API
+  - DOM
+  - Method
+  - Node
+  - Reference
+translation_of: Web/API/Element/before
 original_slug: Web/API/ChildNode/before
+browser-compat: api.Element.before
 ---
 <div>{{APIRef("DOM")}} {{SeeCompatTable}}</div>
 
@@ -13,7 +18,7 @@ original_slug: Web/API/ChildNode/before
 <h2 id="语法">语法</h2>
 
 <pre class="syntaxbox">[Throws, Unscopable]
-void ChildNode.before((Node or DOMString)... nodes);
+void Element.before((Node or DOMString)... nodes);
 </pre>
 
 <h3 id="Parameters参数">Parameters参数</h3>
@@ -67,7 +72,7 @@ child.before(span, "Text");
 console.log(parent.outerHTML);
 // "&lt;div&gt;&lt;span&gt;&lt;/span&gt;Text&lt;p&gt;&lt;/p&gt;&lt;/div&gt;"</pre>
 
-<h3 id="ChildNode.before()_is_unscopable不可使用区域"><code>ChildNode.before()</code> is unscopable不可使用区域</h3>
+<h3 id="Element.before()_is_unscopable不可使用区域"><code>Element.before()</code> is unscopable不可使用区域</h3>
 
 <p>The <code>before()</code> 不能配合with声明使用，See {{jsxref("Symbol.unscopables")}} for more information.</p>
 
@@ -115,7 +120,7 @@ console.log(parent.outerHTML);
    <th scope="col">Comment</th>
   </tr>
   <tr>
-   <td>{{SpecName('DOM WHATWG', '#dom-childnode-before', 'ChildNode.before()')}}</td>
+   <td>{{SpecName('DOM WHATWG', '#dom-childnode-before', 'Element.before()')}}</td>
    <td>{{Spec2('DOM WHATWG')}}</td>
    <td>Initial definition.</td>
   </tr>
