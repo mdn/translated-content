@@ -13613,6 +13613,13 @@
       "Okome"
     ]
   },
+  "Web/API/Element/before": {
+    "modified": "2020-10-17T03:58:22.731Z",
+    "contributors": [
+      "Potappo",
+      "Shirasu"
+    ]
+  },
   "Web/API/Element/blur_event": {
     "modified": "2020-10-15T21:58:39.988Z",
     "contributors": [
@@ -14140,6 +14147,13 @@
       "fscholz",
       "khalid32",
       "Mgjbot"
+    ]
+  },
+  "Web/API/Element/replaceWith": {
+    "modified": "2020-10-17T04:41:48.425Z",
+    "contributors": [
+      "Potappo",
+      "Shirasu"
     ]
   },
   "Web/API/Element/requestFullScreen": {
@@ -20996,10 +21010,46 @@
       "jack-low"
     ]
   },
+  "Web/API/Response/arrayBuffer": {
+    "modified": "2020-10-15T21:43:16.481Z",
+    "contributors": [
+      "Wind1808",
+      "woodmix",
+      "YuichiNukiyama"
+    ]
+  },
+  "Web/API/Response/blob": {
+    "modified": "2020-10-15T21:47:35.044Z",
+    "contributors": [
+      "Wind1808",
+      "woodmix",
+      "YuichiNukiyama"
+    ]
+  },
+  "Web/API/Response/body": {
+    "modified": "2020-10-15T22:25:57.301Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/API/Response/bodyUsed": {
+    "modified": "2020-10-15T21:42:42.306Z",
+    "contributors": [
+      "Wind1808",
+      "YuichiNukiyama"
+    ]
+  },
   "Web/API/Response/error": {
     "modified": "2020-10-15T22:31:34.288Z",
     "contributors": [
       "eltociear"
+    ]
+  },
+  "Web/API/Response/formData": {
+    "modified": "2020-10-15T21:43:16.713Z",
+    "contributors": [
+      "Wind1808",
+      "YuichiNukiyama"
     ]
   },
   "Web/API/Response/headers": {
@@ -21008,10 +21058,28 @@
       "eltociear"
     ]
   },
+  "Web/API/Response/json": {
+    "modified": "2020-10-15T21:43:16.571Z",
+    "contributors": [
+      "Wind1808",
+      "mfuji09",
+      "woodmix",
+      "YuichiNukiyama"
+    ]
+  },
   "Web/API/Response/redirect": {
     "modified": "2020-10-15T22:31:37.239Z",
     "contributors": [
       "eltociear"
+    ]
+  },
+  "Web/API/Response/text": {
+    "modified": "2020-10-15T21:43:16.444Z",
+    "contributors": [
+      "Wind1808",
+      "Uemmra3",
+      "woodmix",
+      "YuichiNukiyama"
     ]
   },
   "Web/API/SVGElement": {
@@ -48398,28 +48466,12 @@
       "yyss"
     ]
   },
-  "conflicting/Tools/Performance/Call_Tree": {
-    "modified": "2020-07-16T22:36:14.354Z",
-    "contributors": [
-      "wbamberg",
-      "yyss"
-    ]
-  },
   "conflicting/Web/API": {
     "modified": "2019-09-25T00:26:30.367Z",
     "contributors": [
       "fscholz",
       "Hasilt",
       "dextra"
-    ]
-  },
-  "conflicting/Web/API/MouseEvent/button": {
-    "modified": "2019-03-23T23:48:11.013Z",
-    "contributors": [
-      "fscholz",
-      "khalid32",
-      "Mgjbot",
-      "Luna8bit"
     ]
   },
   "conflicting/Web/API/URL": {
@@ -48499,302 +48551,6 @@
       "RobinEgg"
     ]
   },
-  "conflicting/Web/JavaScript/Reference/Lexical_grammar": {
-    "modified": "2019-12-24T12:46:59.479Z",
-    "contributors": [
-      "Kisaragi",
-      "teoli",
-      "ethertank",
-      "dextra",
-      "Potappo",
-      "Mgjbot",
-      "Yuichirou",
-      "electrolysis"
-    ]
-  },
-  "conflicting/tools/Keyboard_shortcuts": {
-    "modified": "2020-07-16T22:34:03.446Z",
-    "contributors": [
-      "wbamberg",
-      "yyss"
-    ]
-  },
-  "orphaned/Bugzilla-ja": {
-    "modified": "2019-03-24T00:01:53.796Z",
-    "contributors": [
-      "fscholz",
-      "Shimono",
-      "drry",
-      "Taken"
-    ]
-  },
-  "orphaned/Bugzilla-ja/2.20-ja": {
-    "modified": "2019-01-16T15:57:55.816Z",
-    "contributors": [
-      "Shimono"
-    ]
-  },
-  "orphaned/Bugzilla-ja/3.0-ja": {
-    "modified": "2019-03-23T23:50:49.325Z",
-    "contributors": [
-      "fscholz",
-      "Shimono"
-    ]
-  },
-  "orphaned/Bugzilla-ja/l10n": {
-    "modified": "2019-01-16T14:42:11.445Z",
-    "contributors": [
-      "Shimono"
-    ]
-  },
-  "orphaned/Bugzilla-jp": {
-    "modified": "2019-01-16T15:51:58.702Z",
-    "contributors": [
-      "Baffclan",
-      "Shimono",
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide": {
-    "modified": "2019-03-23T23:46:39.501Z",
-    "contributors": [
-      "yassan",
-      "Masayuki",
-      "Taken"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/About": {
-    "modified": "2019-03-23T23:46:42.256Z",
-    "contributors": [
-      "yassan",
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/About/AccountCreation": {
-    "modified": "2019-03-23T23:46:34.570Z",
-    "contributors": [
-      "yassan",
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/About/BugDetails": {
-    "modified": "2019-03-23T23:46:48.723Z",
-    "contributors": [
-      "yassan",
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/About/ChangeAccountPrefs": {
-    "modified": "2019-03-23T23:46:32.418Z",
-    "contributors": [
-      "yassan",
-      "ethertank",
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/About/ProductsAndComponents": {
-    "modified": "2019-03-23T23:46:29.901Z",
-    "contributors": [
-      "yassan",
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/About/TrunkAndBranch": {
-    "modified": "2019-03-23T23:46:31.442Z",
-    "contributors": [
-      "yassan",
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/About/WhatIsBug": {
-    "modified": "2019-03-23T23:46:29.774Z",
-    "contributors": [
-      "yassan",
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/About/WhatIsBugzilla": {
-    "modified": "2019-01-16T16:02:00.656Z",
-    "contributors": [
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/Comment": {
-    "modified": "2019-03-23T23:46:32.818Z",
-    "contributors": [
-      "yassan",
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/Comment/LinkRules": {
-    "modified": "2019-03-23T23:46:34.176Z",
-    "contributors": [
-      "yassan",
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/Contribute": {
-    "modified": "2019-01-16T16:01:12.088Z",
-    "contributors": [
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/Grossary": {
-    "modified": "2019-03-23T23:46:37.485Z",
-    "contributors": [
-      "yassan",
-      "trevorh",
-      "Masayuki",
-      "Shimono"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/LifeCycle": {
-    "modified": "2019-03-24T00:00:42.354Z",
-    "contributors": [
-      "yassan",
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/LifeCycle/Mozilla": {
-    "modified": "2019-01-16T15:34:15.290Z",
-    "contributors": [
-      "yassan",
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/LifeCycle/MozillaGumi": {
-    "modified": "2019-01-16T15:34:04.625Z",
-    "contributors": [
-      "yassan",
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/LifeCycle/QAMozilla": {
-    "modified": "2019-01-16T15:34:14.142Z",
-    "contributors": [
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/LifeCycle/WebStandard": {
-    "modified": "2019-01-16T15:34:09.199Z",
-    "contributors": [
-      "yassan",
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/LifeCycle/WebTools": {
-    "modified": "2019-03-23T23:53:07.266Z",
-    "contributors": [
-      "yassan",
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/Management": {
-    "modified": "2019-03-23T23:46:32.893Z",
-    "contributors": [
-      "yassan",
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/Management/DeleteAccount": {
-    "modified": "2019-03-23T23:46:38.078Z",
-    "contributors": [
-      "yassan",
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/Management/StopAccount": {
-    "modified": "2019-01-16T16:01:11.778Z",
-    "contributors": [
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/Management/UpgradeAccount": {
-    "modified": "2019-01-16T16:01:46.647Z",
-    "contributors": [
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/Report": {
-    "modified": "2019-03-23T23:46:44.227Z",
-    "contributors": [
-      "yassan",
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/Report/CrashBugs": {
-    "modified": "2019-03-23T23:46:43.597Z",
-    "contributors": [
-      "yassan",
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/Report/Enhancement": {
-    "modified": "2019-03-23T23:46:35.269Z",
-    "contributors": [
-      "yassan",
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/Report/MemoryLeakBugs": {
-    "modified": "2019-01-16T16:01:49.322Z",
-    "contributors": [
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/Report/RenderingBugs": {
-    "modified": "2019-01-16T14:55:24.293Z",
-    "contributors": [
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/Report/SecurityBugs": {
-    "modified": "2019-01-16T16:02:19.512Z",
-    "contributors": [
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/Report/UIBugs": {
-    "modified": "2019-01-16T16:01:51.726Z",
-    "contributors": [
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/Search": {
-    "modified": "2019-03-23T23:46:30.066Z",
-    "contributors": [
-      "yassan",
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/Search/Advanced": {
-    "modified": "2019-03-23T23:46:37.571Z",
-    "contributors": [
-      "yassan",
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/Search/Hints": {
-    "modified": "2019-01-16T15:49:53.324Z",
-    "contributors": [
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/Search/Simple": {
-    "modified": "2019-03-23T23:46:34.827Z",
-    "contributors": [
-      "yassan",
-      "ethertank",
-      "Masayuki"
-    ]
-  },
-  "orphaned/Bugzilla-jp/Guide/Tracking": {
-    "modified": "2019-03-23T23:46:46.460Z",
-    "contributors": [
-      "yassan",
-      "Masayuki"
-    ]
-  },
   "orphaned/Building_a_Mozilla_Distribution": {
     "modified": "2019-03-23T23:49:07.062Z",
     "contributors": [
@@ -48808,14 +48564,6 @@
       "teoli",
       "Mgjbot",
       "Shimono"
-    ]
-  },
-  "orphaned/Components": {
-    "modified": "2019-03-23T23:49:08.351Z",
-    "contributors": [
-      "wbamberg",
-      "Mgjbot",
-      "Okome"
     ]
   },
   "orphaned/Creating_toolbar_buttons": {
@@ -49975,26 +49723,6 @@
       "Taken"
     ]
   },
-  "orphaned/Glossary/Gaia": {
-    "modified": "2019-03-18T21:26:29.596Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "orphaned/Glossary/Modern_web_apps": {
-    "modified": "2019-02-17T08:08:49.645Z",
-    "contributors": [
-      "ksugimori",
-      "Wind1808"
-    ]
-  },
-  "orphaned/HTML_Element_Cross_Reference": {
-    "modified": "2019-03-24T00:03:07.695Z",
-    "contributors": [
-      "Marsf",
-      "Mgjbot"
-    ]
-  },
   "orphaned/Installing_Extensions_and_Themes_From_Web_Pages": {
     "modified": "2019-03-23T23:45:12.220Z",
     "contributors": [
@@ -50328,108 +50056,6 @@
       "Potappo"
     ]
   },
-  "orphaned/MDN/Tools/Add-ons_and_plug-ins": {
-    "modified": "2020-09-30T16:50:22.923Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "Uemmra3",
-      "hamasaki"
-    ]
-  },
-  "orphaned/MDN/Tools/Feeds": {
-    "modified": "2020-09-30T16:50:20.576Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "Uemmra3",
-      "k-kuwahara",
-      "hamasaki",
-      "dynamis",
-      "ethertank"
-    ]
-  },
-  "orphaned/MDN/Tools/PUT_API": {
-    "modified": "2020-09-30T16:50:22.260Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "silverskyvicto",
-      "wbamberg",
-      "Uemmra3",
-      "hamasaki"
-    ]
-  },
-  "orphaned/MDN/Tools/Page_deletion": {
-    "modified": "2020-09-30T16:50:20.722Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "wbamberg",
-      "hamasaki",
-      "dynamis"
-    ]
-  },
-  "orphaned/MDN/Tools/Page_moving": {
-    "modified": "2020-09-30T16:50:21.714Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "wbamberg",
-      "hamasaki",
-      "Uemmra3"
-    ]
-  },
-  "orphaned/MDN/Tools/Page_regeneration": {
-    "modified": "2020-09-30T16:50:21.984Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "wbamberg",
-      "Uemmra3",
-      "hamasaki"
-    ]
-  },
-  "orphaned/MDN/Tools/Page_watching": {
-    "modified": "2020-09-30T16:50:22.753Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "silverskyvicto",
-      "wbamberg",
-      "Uemmra3",
-      "hamasaki"
-    ]
-  },
-  "orphaned/MDN/Tools/Revision_dashboard": {
-    "modified": "2020-09-30T16:50:21.567Z",
-    "contributors": [
-      "chrisdavidmills",
-      "dlwe",
-      "wbamberg",
-      "Uemmra3",
-      "hamasaki"
-    ]
-  },
-  "orphaned/MDN/Tools/Search": {
-    "modified": "2020-09-30T16:50:21.247Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "wbamberg",
-      "Uemmra3",
-      "hamasaki",
-      "dynamis"
-    ]
-  },
-  "orphaned/MDN/Tools/Template_editing": {
-    "modified": "2020-09-30T16:50:21.855Z",
-    "contributors": [
-      "chrisdavidmills",
-      "wbamberg",
-      "hamasaki"
-    ]
-  },
   "orphaned/MDN/Troubleshooting": {
     "modified": "2020-09-30T16:58:23.514Z",
     "contributors": [
@@ -50471,31 +50097,6 @@
     "modified": "2019-01-16T14:46:30.090Z",
     "contributors": [
       "RobinEgg"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Package_your_extension_": {
-    "modified": "2019-03-18T21:04:26.854Z",
-    "contributors": [
-      "Uemmra3",
-      "stmkza",
-      "MichinariNukazawa"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Porting_a_Google_Chrome_extension": {
-    "modified": "2019-03-18T21:08:02.889Z",
-    "contributors": [
-      "Uemmra3",
-      "YujiSoftware",
-      "hashedhyphen",
-      "dynamis",
-      "lv7777"
-    ]
-  },
-  "orphaned/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox": {
-    "modified": "2019-03-18T21:07:03.772Z",
-    "contributors": [
-      "Raysphere24",
-      "hashedhyphen"
     ]
   },
   "orphaned/Mozilla_Modules_and_Module_Ownership": {
@@ -50779,100 +50380,6 @@
       "shinnn"
     ]
   },
-  "orphaned/Web/API/Body": {
-    "modified": "2020-10-15T21:42:48.844Z",
-    "contributors": [
-      "Wind1808",
-      "dlwe",
-      "woodmix",
-      "hamasaki",
-      "chikoski",
-      "YuichiNukiyama",
-      "fscholz"
-    ]
-  },
-  "orphaned/Web/API/Body/arrayBuffer": {
-    "modified": "2020-10-15T21:43:16.481Z",
-    "contributors": [
-      "Wind1808",
-      "woodmix",
-      "YuichiNukiyama"
-    ]
-  },
-  "orphaned/Web/API/Body/blob": {
-    "modified": "2020-10-15T21:47:35.044Z",
-    "contributors": [
-      "Wind1808",
-      "woodmix",
-      "YuichiNukiyama"
-    ]
-  },
-  "orphaned/Web/API/Body/body": {
-    "modified": "2020-10-15T22:25:57.301Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "orphaned/Web/API/Body/bodyUsed": {
-    "modified": "2020-10-15T21:42:42.306Z",
-    "contributors": [
-      "Wind1808",
-      "YuichiNukiyama"
-    ]
-  },
-  "orphaned/Web/API/Body/formData": {
-    "modified": "2020-10-15T21:43:16.713Z",
-    "contributors": [
-      "Wind1808",
-      "YuichiNukiyama"
-    ]
-  },
-  "orphaned/Web/API/Body/json": {
-    "modified": "2020-10-15T21:43:16.571Z",
-    "contributors": [
-      "Wind1808",
-      "mfuji09",
-      "woodmix",
-      "YuichiNukiyama"
-    ]
-  },
-  "orphaned/Web/API/Body/text": {
-    "modified": "2020-10-15T21:43:16.444Z",
-    "contributors": [
-      "Wind1808",
-      "Uemmra3",
-      "woodmix",
-      "YuichiNukiyama"
-    ]
-  },
-  "orphaned/Web/API/ChildNode": {
-    "modified": "2020-11-23T03:36:42.854Z",
-    "contributors": [
-      "segayuu",
-      "Marsf",
-      "momoi"
-    ]
-  },
-  "orphaned/Web/API/ChildNode/before": {
-    "modified": "2020-10-17T03:58:22.731Z",
-    "contributors": [
-      "Potappo",
-      "Shirasu"
-    ]
-  },
-  "orphaned/Web/API/ChildNode/replaceWith": {
-    "modified": "2020-10-17T04:41:48.425Z",
-    "contributors": [
-      "Potappo",
-      "Shirasu"
-    ]
-  },
-  "orphaned/Web/API/DOMLocator": {
-    "modified": "2020-08-13T09:34:48.574Z",
-    "contributors": [
-      "eltociear"
-    ]
-  },
   "orphaned/Web/API/Detecting_device_orientation": {
     "modified": "2020-10-15T21:21:30.973Z",
     "contributors": [
@@ -50882,24 +50389,6 @@
       "Fajrovulpo"
     ]
   },
-  "orphaned/Web/API/DeviceProximityEvent/max": {
-    "modified": "2019-03-23T22:15:32.868Z",
-    "contributors": [
-      "YuichiNukiyama"
-    ]
-  },
-  "orphaned/Web/API/DeviceProximityEvent/min": {
-    "modified": "2019-03-23T22:15:40.764Z",
-    "contributors": [
-      "YuichiNukiyama"
-    ]
-  },
-  "orphaned/Web/API/DeviceProximityEvent/value": {
-    "modified": "2019-03-23T22:15:41.294Z",
-    "contributors": [
-      "YuichiNukiyama"
-    ]
-  },
   "orphaned/Web/API/Document_Object_Model/Events": {
     "modified": "2020-09-27T12:30:54.835Z",
     "contributors": [
@@ -50907,12 +50396,6 @@
       "dskmori",
       "keeponbeat",
       "mikamikuh"
-    ]
-  },
-  "orphaned/Web/API/HTMLElement/forceSpellCheck": {
-    "modified": "2020-10-15T22:22:28.662Z",
-    "contributors": [
-      "Wind1808"
     ]
   },
   "orphaned/Web/API/HTMLOrForeignElement": {
@@ -50930,21 +50413,6 @@
       "SphinxKnight",
       "mandel59",
       "yyss"
-    ]
-  },
-  "orphaned/Web/API/LinkStyle": {
-    "modified": "2019-03-23T23:29:59.357Z",
-    "contributors": [
-      "yyss",
-      "ethertank"
-    ]
-  },
-  "orphaned/Web/API/LocalMediaStream": {
-    "modified": "2020-10-15T21:46:16.531Z",
-    "contributors": [
-      "teoli",
-      "Uemmra3",
-      "S_F__"
     ]
   },
   "orphaned/Web/API/Navigator/registerContentHandler": {
@@ -51241,14 +50709,6 @@
     "modified": "2020-10-24T11:40:22.240Z",
     "contributors": [
       "Wind1808"
-    ]
-  },
-  "orphaned/Web/CSS/:-moz-alt-text": {
-    "modified": "2019-03-23T23:54:24.260Z",
-    "contributors": [
-      "teoli",
-      "ethertank",
-      "Marsf"
     ]
   },
   "orphaned/Web/CSS/@media/Index": {
@@ -51596,22 +51056,6 @@
       "silverskyvicto"
     ]
   },
-  "orphaned/Web/HTML/Global_attributes/dropzone": {
-    "modified": "2020-12-07T13:17:08.707Z",
-    "contributors": [
-      "mfuji09",
-      "reodog",
-      "yyss",
-      "hamasaki"
-    ]
-  },
-  "orphaned/Web/HTML/HTML_Extensions": {
-    "modified": "2019-01-16T14:37:34.613Z",
-    "contributors": [
-      "ethertank",
-      "Marsf"
-    ]
-  },
   "orphaned/Web/HTTP/Headers/Index": {
     "modified": "2019-03-18T21:26:05.914Z",
     "contributors": [
@@ -51934,12 +51378,6 @@
     "contributors": [
       "ueokande",
       "dskmori"
-    ]
-  },
-  "orphaned/Web_Content_Accessibility_Guidelines_1.0": {
-    "modified": "2019-01-16T16:11:29.195Z",
-    "contributors": [
-      "Marsf"
     ]
   },
   "orphaned/Working_with_windows_in_chrome_code": {
