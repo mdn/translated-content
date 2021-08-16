@@ -14,7 +14,7 @@ translation_of: Web/JavaScript/Reference/Functions
 
 <p>JavaScript에서, 함수는 다른 객체처럼 속성 및 메서드를 가질 수 있기에 일급(first-class) 객체입니다. 다른 객체와 함수를 구별하는 것은 함수는 호출될 수 있다는 것입니다. 간단히 말해, 함수는 <code><a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Function">Function</a></code> 객체입니다.</p>
 
-<p>더 많은 예제와 설명은, <a href="/ko/docs/Web/JavaScript/Guide/함수" title="JavaScript guide about functions">JavaScript 함수 안내서</a>를 참조하세요.</p>
+<p>더 많은 예제와 설명은, <a href="/ko/docs/Web/JavaScript/Guide/함수">JavaScript 함수 안내서</a>를 참조하세요.</p>
 
 <h2 id="설명">설명</h2>
 
@@ -61,7 +61,7 @@ function myFunc(theObject) {
 
 <h3 id="함수_선언_function_문">함수 선언 (<code>function</code> 문)</h3>
 
-<p>함수 선언을 위한 특별한 구문이 있습니다 (자세한 사항은 <a href="/ko/docs/Web/JavaScript/Reference/Statements/function" title="function statement">function 문</a> 참조):</p>
+<p>함수 선언을 위한 특별한 구문이 있습니다 (자세한 사항은 <a href="/ko/docs/Web/JavaScript/Reference/Statements/function">function 문</a> 참조):</p>
 
 <pre class="brush: js">function <em>name</em>([<em>param</em>[, <em>param</em>[, ... <em>param</em>]]]) {
    <em>statements</em>
@@ -85,7 +85,7 @@ function myFunc(theObject) {
 
 <h3 id="함수_표현식_function_식">함수 표현식 (<code>function</code> 식)</h3>
 
-<p>함수 식(expression)은 함수 선언과 비슷하고 구문이 같습니다 (자세한 사항은 <a href="/ko/docs/Web/JavaScript/Reference/Operators/function" title="function expression">function 식</a> 참조):</p>
+<p>함수 식(expression)은 함수 선언과 비슷하고 구문이 같습니다 (자세한 사항은 <a href="/ko/docs/Web/JavaScript/Reference/Operators/function">function 식</a> 참조):</p>
 
 <p>함수 표현식(expression)은 함수 선언과 비슷하고 구문이 같습니다 (자세한 내용은 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/function">function expression</a> 참조). 함수 표현식은 더 큰 표현식의 일부일 수 있습니다. "이름이 붙은(named)"함수 표현식 (예 : 호출 스택에서 표현식 이름 사용하는경우) 또는 "익명"함수 표현식을 정의 할 수 있습니다. 함수 표현식은 선언이 되지 않은 상태에서 사용할 수 없기 때문에 함수를 사용하기 전에 코드에 함수코드가 존제해야 사용 할 수 있습니다.</p>
 
@@ -106,7 +106,7 @@ function myFunc(theObject) {
  <dd>함수의 몸통을 구성하는 문.</dd>
 </dl>
 
-<p>다음은 익명 함수 표현식의 예입니다 (<font face="consolas, Liberation Mono, courier, monospace"><span style="background-color: rgba(220, 220, 220, 0.5);">이름</span></font> 이 사용되지 않음):</p>
+<p>다음은 익명 함수 표현식의 예입니다 (<code>이름</code> 이 사용되지 않음):</p>
 
 <pre class="brush: js"><code>var myFunction = function() {
     statements
@@ -177,7 +177,7 @@ function myFunc(theObject) {
 
 <h3 id="화살표_함수_표현식_>">화살표 함수 표현식 (=&gt;)</h3>
 
-<p>화살표 함수 식은 구문이 더 짧고 어휘상(lexically) <code>this</code> 값을 바인딩합니다 (자세한 사항은 <a href="/ko/docs/Web/JavaScript/Reference/Functions/애로우_펑션" title="arrow functions">화살표 함수</a> 참조):</p>
+<p>화살표 함수 식은 구문이 더 짧고 어휘상(lexically) <code>this</code> 값을 바인딩합니다 (자세한 사항은 <a href="/ko/docs/Web/JavaScript/Reference/Functions/애로우_펑션">화살표 함수</a> 참조):</p>
 
 <pre class="brush: js">([param[, param]]) =&gt; {
    statements
@@ -247,11 +247,11 @@ param =&gt; expression
 
 <h3 id="기본_매개변수">기본 매개변수</h3>
 
-<p>기본(default) 함수 매개변수는 전달된 값이 없거나 <code>undefined</code>인 경우 기본값으로 초기화되는 형식 매개변수를 허용합니다. 자세한 사항은, <a href="/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters" title="default parameters">기본 매개변수</a> 참조.</p>
+<p>기본(default) 함수 매개변수는 전달된 값이 없거나 <code>undefined</code>인 경우 기본값으로 초기화되는 형식 매개변수를 허용합니다. 자세한 사항은, <a href="/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters">기본 매개변수</a> 참조.</p>
 
 <h3 id="나머지_매개변수">나머지 매개변수</h3>
 
-<p>나머지(rest) 매개변수 구문은 부정(indefinite)수인 인수를 배열로 나타내는 것을 허용합니다. 자세한 사항은, <a href="/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters" title="rest parameters">나머지 매개변수</a> 참조.</p>
+<p>나머지(rest) 매개변수 구문은 부정(indefinite)수인 인수를 배열로 나타내는 것을 허용합니다. 자세한 사항은, <a href="/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters">나머지 매개변수</a> 참조.</p>
 
 <h2 id="arguments_객체"><code>arguments</code> 객체</h2>
 
@@ -456,7 +456,7 @@ function a() {
 
 <h2 id="블록_레벨_함수">블록 레벨 함수</h2>
 
-<p>ES2015 (ES6)를 시작으로 <a href="/ko/docs/Web/JavaScript/Reference/Strict_mode" title="strict mode">엄격 모드</a>에서, 블록 내부 함수는 이제 그 블록 범위가 됩니다. ES6 이전에, 블록 레벨 함수는 엄격 모드에서 금지됐습니다.</p>
+<p>ES2015 (ES6)를 시작으로 <a href="/ko/docs/Web/JavaScript/Reference/Strict_mode">엄격 모드</a>에서, 블록 내부 함수는 이제 그 블록 범위가 됩니다. ES6 이전에, 블록 레벨 함수는 엄격 모드에서 금지됐습니다.</p>
 
 <pre class="brush: js">'use strict';
 
@@ -490,7 +490,7 @@ f() === 1; // true
 
 <p>ES2015는 <code>shouldDefineZero</code>가 false인 경우, 그러면 <code>zero</code>는 결코 정의되어서는 안된다고 합니다, 그 블록이 실행된 적이 없기에. 그러나, 이는 표준의 새로운 일부입니다. 역사상, 이는 지정되지 않은 채 방치되었고 일부 브라우저는 블록이 실행됐든 아니든 <code>zero</code>를 정의할 겁니다.</p>
 
-<p><a href="/ko/docs/Web/JavaScript/Reference/Strict_mode" title="strict mode">엄격 모드</a>에서, ES2015를 지원하는 모든 브라우저는 이를 같은 식으로 다룹니다: <code>zero</code>는 <code>shouldDefineZero</code>가 true이고 <code>if</code> 블록 범위인 경우에만 정의됩니다.</p>
+<p><a href="/ko/docs/Web/JavaScript/Reference/Strict_mode">엄격 모드</a>에서, ES2015를 지원하는 모든 브라우저는 이를 같은 식으로 다룹니다: <code>zero</code>는 <code>shouldDefineZero</code>가 true이고 <code>if</code> 블록 범위인 경우에만 정의됩니다.</p>
 
 <p>조건부 함수를 정의하는 더 안전한 방법은 function 식을 변수에 할당하는 것입니다:</p>
 
@@ -592,5 +592,5 @@ result = padZeros(5,4);  // 반환값 "0005"
  <li>{{jsxref("Functions/get", "getter")}}</li>
  <li>{{jsxref("Functions/set", "setter")}}</li>
  <li>{{jsxref("Functions/Method_definitions", "메서드 정의")}}</li>
- <li><a href="/ko/docs/Web/JavaScript/Reference/Functions" title="Functions and function scope">함수 및 함수 범위</a></li>
+ <li><a href="/ko/docs/Web/JavaScript/Reference/Functions">함수 및 함수 범위</a></li>
 </ul>
