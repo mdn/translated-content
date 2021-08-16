@@ -48795,6 +48795,7 @@
       "Taken"
     ]
   },
+<<<<<<< Updated upstream
   "orphaned/DevNews/20070213": {
     "modified": "2019-03-23T23:44:43.533Z",
     "contributors": [
@@ -48821,6 +48822,10 @@
   },
   "orphaned/DevNews/20070302": {
     "modified": "2019-03-23T23:45:03.605Z",
+=======
+  "orphaned/MDN/Structures/API_references": {
+    "modified": "2020-11-28T12:21:15.783Z",
+>>>>>>> Stashed changes
     "contributors": [
       "SphinxKnight",
       "Shimono"
@@ -48850,6 +48855,7 @@
       "Shimono"
     ]
   },
+<<<<<<< Updated upstream
   "orphaned/DevNews/20070320": {
     "modified": "2019-03-23T23:45:15.886Z",
     "contributors": [
@@ -48860,6 +48866,10 @@
   },
   "orphaned/DevNews/20070322": {
     "modified": "2019-03-23T23:45:17.600Z",
+=======
+  "orphaned/Map": {
+    "modified": "2019-03-23T23:22:54.998Z",
+>>>>>>> Stashed changes
     "contributors": [
       "SphinxKnight",
       "Taken",
