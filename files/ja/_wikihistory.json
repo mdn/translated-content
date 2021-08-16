@@ -50415,13 +50415,6 @@
       "yyss"
     ]
   },
-  "orphaned/Web/API/LinkStyle": {
-    "modified": "2019-03-23T23:29:59.357Z",
-    "contributors": [
-      "yyss",
-      "ethertank"
-    ]
-  },
   "orphaned/Web/API/Navigator/registerContentHandler": {
     "modified": "2020-10-15T21:15:53.115Z",
     "contributors": [
