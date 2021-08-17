@@ -36,7 +36,7 @@ browser-compat: javascript.functions.set
 <div>
 <ul>
  <li>숫자혹은 문자로된 식별자를 가질 수 있다;</li>
- <li>한 개의 파라메터만 가질 수 있다.(더 자세한 정보는 <a class="external" href="http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/" rel="external nofollow">Incompatible <abbr title="ECMAScript 5th edition">ES5</abbr> change: literal getter and setter functions must now have exactly zero or one arguments</a>를 본다);</li>
+ <li>한 개의 파라메터만 가질 수 있다.(더 자세한 정보는 <a class="external" href="http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/" rel="external nofollow">Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments</a>를 본다);</li>
  <li>오브젝트 리터럴에 동일한 property에 대한  다른 set나  데이터 항목이 올 수 없다.<br>
   ( <code>{ set x(v) { }, set x(v) { } }</code> 그리고 <code>{ x: ..., set x(v) { } }</code> 는 허용되지 않는다.)</li>
 </ul>
@@ -58,7 +58,7 @@ browser-compat: javascript.functions.set
 }
 </pre>
 
-<p><code><font face="Open Sans, Arial, sans-serif">다음 사항에 주의한다. </font>current는 정의 되지 않았고 이것에 접근하는 모든 시도는 undefined 값을 얻게될 것이다.</code></p>
+<p>다음 사항에 주의한다. current는 정의 되지 않았고 이것에 접근하는 모든 시도는 undefined 값을 얻게될 것이다.</p>
 
 <h3 id="delete_operator로_setter를_제거하기"><code>delete</code> operator로 setter를 제거하기</h3>
 
