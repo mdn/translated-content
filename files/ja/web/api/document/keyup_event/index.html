@@ -42,7 +42,7 @@ translation_of: Web/API/Document/keyup_event
 <p><strong>注:</strong> 入力値の変更に反応する方法を探しているのであれば、 <a href="/ja/docs/Web/API/HTMLElement/input_event"><code>input</code> イベント</a>を使用してください。 <code>keyup</code> では、テキスト入力のコンテキストニューからテキストを貼り付けた場合など、一部の変更が検出されません。</p>
 </div>
 
-<p>Firefox 65 から、 {{domxref("Document/keydown_event", "keydown")}} および <code>keyup</code> イベントは IME 入力中でも発生するようになり、 CJKT のユーザーのブラウザー間の互換性が向上しました ({{bug(354358)}}、またもっと有益な詳細は <a href="https://www.fxsitecompat.com/en-CA/docs/2018/keydown-and-keyup-events-are-now-fired-during-ime-composition/">keydown and keyup events are now fired during IME composition</a> を参照)。 IME 入力中のすべての <code>keyup</code> イベントを無視するには、次のようにします (229 は IME によって処理されたイベントに関連する <code>keyCode</code> の特殊な値のセットです)。</p>
+<p>Firefox 65 から、 {{domxref("Document/keydown_event", "keydown")}} および <code>keyup</code> イベントは IME 入力中でも発生するようになり、 CJKT のユーザーのブラウザー間の互換性が向上しました ({{bug(354358)}})。 IME 入力中のすべての <code>keyup</code> イベントを無視するには、次のようにします (229 は IME によって処理されたイベントに関連する <code>keyCode</code> の特殊な値のセットです)。</p>
 
 <pre class="brush: js notranslate">eventTarget.addEventListener("keyup", event =&gt; {
   if (event.isComposing || event.keyCode === 229) {

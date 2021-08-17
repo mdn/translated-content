@@ -28,7 +28,7 @@ translation_of: Web/JavaScript/Reference/Operators/this
 
 <h2 id="전역_문맥">전역 문맥</h2>
 
-<p>전역 실행 문맥<sup>global execution context</sup>에서 <code>this</code>는 엄격 모드 여부에 관계 없이 전역 객체를 참조합니다.</p>
+<p>전역 실행 맥락에서 <code>this</code>는 엄격 모드 여부에 관계 없이 전역 객체를 참조합니다.</p>
 
 <pre class="brush: js notranslate">// 웹 브라우저에서는 window 객체가 전역 객체
 console.log(this === window); // true
@@ -142,7 +142,7 @@ console.log(o.a, o.f(), o.g(), o.h()); // 37, 37, azerty, azerty</pre>
 
 <h3 id="화살표_함수">화살표 함수</h3>
 
-<p><a href="/ko/docs/Web/JavaScript/Reference/Functions/%EC%95%A0%EB%A1%9C%EC%9A%B0_%ED%8E%91%EC%85%98">화살표 함수</a>에서 <code>this</code>는 자신을 감싼 정적 범위<sup>lexical context</sup>입니다. 전역 코드에서는 전역 객체를 가리킵니다.</p>
+<p><a href="/ko/docs/Web/JavaScript/Reference/Functions/%EC%95%A0%EB%A1%9C%EC%9A%B0_%ED%8E%91%EC%85%98">화살표 함수</a>에서 <code>this</code>는 자신을 감싼 정적 범위입니다. 전역 코드에서는 전역 객체를 가리킵니다.</p>
 
 <pre class="brush: js notranslate">var globalObject = this;
 var foo = (() =&gt; this);
