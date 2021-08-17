@@ -4,6 +4,7 @@ slug: Web/JavaScript/Reference/Global_Objects/parseInt
 tags:
   - JavaScript
   - Reference
+browser-compat: javascript.builtins.parseInt
 translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
 ---
 <div>{{jsSidebar("Objects")}}</div>
@@ -47,7 +48,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
  <li>첫번째 non-whitespace 문자가 숫자로 변환되지 않는 경우</li>
 </ul>
 
-<h2 id="설명_2"><a id="설명" name="설명">설명</a></h2>
+<h2 id="설명_2">설명</h2>
 
 <p><code>parseInt</code> 함수는 첫 번째 인자를 문자열로 변환하고 파싱하고,  그 문자열을 파싱하여 정수나 <code>NaN</code>을 리턴합니다.</p>
 
@@ -57,7 +58,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
 
 <p>만약 <code>parseInt</code> 함수가 특정 진수를 나타내는 숫자가 아닌 글자를 마주치게 되면, 이 글자와 계속되는 글자들은 전부 무시되며, 파싱된 정수값을 리턴합니다. <code>parseInt</code> 함수는 정수값으로 숫자를 잘라버립니다. 맨 앞의 공백과 그 뒤의 공백들은 허용됩니다.</p>
 
-<p>일부 숫자들은 문자열 표현에 e 문자를 사용하기 때문에(예: 6.022 × 10<sup>23</sup>의 경우 <code>6.022e23</code> ) 숫자를 자르기 위하여 <code>parseInt</code>를 사용하는 것은 매우 크거나 매우 작은 숫자에 사용하는 경우 예기치 않은 결과가 발생합니다. <code>parseInt</code>는 {{jsxref("Math.floor()")}}의 대체품으로 사용해서는 안 됩니다.</p>
+<p>일부 숫자들은 문자열 표현에 e 문자를 사용하기 때문에(예: 6.022 × 10^23의 경우 <code>6.022e23</code> ) 숫자를 자르기 위하여 <code>parseInt</code>를 사용하는 것은 매우 크거나 매우 작은 숫자에 사용하는 경우 예기치 않은 결과가 발생합니다. <code>parseInt</code>는 {{jsxref("Math.floor()")}}의 대체품으로 사용해서는 안 됩니다.</p>
 
 <p><code>parseInt</code>는 양수를 의미하는 <code>+ </code>기호와 음수를 나타내는 <code>-</code> 기호를 정확히 이해합니다(ECMAScript 1 이후). 공백이 제거된 후 구문 분석의 초기 단계로 수행됩니다. 기호를 찾을 수 없으면 알고리즘이 다음 단계로 이동하고, 그렇지 않으면 기호를 제거하고 문자열의 나머지 부분에서 숫자 파싱을 실행합니다.</p>
 
@@ -206,7 +207,7 @@ parseInt(1e+21,10);
 
 <h2 id="브라우저_호환성">브라우저 호환성</h2>
 
-<div id="compat-mobile">{{Compat("javascript.builtins.parseInt")}}</div>
+<div>{{Compat}}</div>
 
 <h2 id="같이_보기">같이 보기</h2>
 
