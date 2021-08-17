@@ -9,7 +9,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number
 ---
 <div>{{JSRef}}</div>
 
-<p><strong><code>Number</code></strong> 객체는 숫자 값으로 작업할 수 있게 해주는 래퍼<sup>wrapper</sup> 객체입니다. <code>Number</code> 객체는 <strong><code>Number()</code> 생성자</strong>를 사용하여 만듭니다. 원시 숫자 자료형은 <strong><code>Number()</code> 함수</strong>를 사용해 생성합니다.</p>
+<p><strong><code>Number</code></strong> 객체는 숫자 값으로 작업할 수 있게 해주는 래퍼(wrapper) 객체입니다. <code>Number</code> 객체는 <strong><code>Number()</code> 생성자</strong>를 사용하여 만듭니다. 원시 숫자 자료형은 <strong><code>Number()</code> 함수</strong>를 사용해 생성합니다.</p>
 
 <h2 id="구문">구문</h2>
 
@@ -41,11 +41,11 @@ var <em>b</em> = Number('123'); // b === 123은 true
  <dt>{{jsxref("Number.EPSILON")}}</dt>
  <dd>두 개의 표현 가능한 숫자 사이의 최소 간격.</dd>
  <dt>{{jsxref("Number.MAX_SAFE_INTEGER")}}</dt>
- <dd>JavaScript에서 안전한 최대 정수. (<code>2<sup>53</sup> - 1</code>)</dd>
+ <dd>JavaScript에서 안전한 최대 정수. (<code>2^53 - 1</code>)</dd>
  <dt>{{jsxref("Number.MAX_VALUE")}}</dt>
  <dd>표현 가능한 가장 큰 양수.</dd>
  <dt>{{jsxref("Number.MIN_SAFE_INTEGER")}}</dt>
- <dd>JavaScript에서 안전한 최소 정수. (<code>-(2<sup>53</sup> - 1)</code>)</dd>
+ <dd>JavaScript에서 안전한 최소 정수. (<code>-(2^53 - 1)</code>)</dd>
  <dt>{{jsxref("Number.MIN_VALUE")}}</dt>
  <dd>표현 가능한 가장 작은 양수. 즉, 0보다 크지만 0에 가장 가까운 양수.</dd>
  <dt>{{jsxref("Number.NaN")}}</dt>
@@ -68,7 +68,7 @@ var <em>b</em> = Number('123'); // b === 123은 true
  <dt>{{jsxref("Number.isInteger()")}}</dt>
  <dd>주어진 값이 정수인지 확인합니다.</dd>
  <dt>{{jsxref("Number.isSafeInteger()")}}</dt>
- <dd>주어진 값이 안전한 정수(<code>-(2<sup>53</sup> - 1)</code>과 <code>2<sup>53</sup> - 1</code> 사이의 정수)인지 확인합니다.</dd>
+ <dd>주어진 값이 안전한 정수(<code>-(2^53 - 1)</code>과 <code>2^53 - 1</code> 사이의 정수)인지 확인합니다.</dd>
  <dt><s class="obsoleteElement">{{jsxref("Number.toInteger()")}} {{obsolete_inline}}</s></dt>
  <dd><s class="obsoleteElement">전달 된 값을 평가하고 이를 정수(혹은 {{jsxref("Infinity", "Infinity")}})로 변환하는데 사용되지만, 제거되었습니다.</s></dd>
  <dt>{{jsxref("Number.parseFloat()")}}</dt>

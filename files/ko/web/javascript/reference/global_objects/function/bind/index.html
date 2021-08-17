@@ -25,7 +25,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 
 <dl>
  <dt><code>thisArg</code></dt>
- <dd>바인딩<span style="font-size: 13.3333px;"> </span>함수가 대상 함수(target function)의 <code>this</code>에 전달하는 값입니다. 바인딩 함수를 {{jsxref("Operators/new", "new")}} 연산자로 생성한 경우 무시됩니다. <code>bind</code>를 사용하여 <code>setTimeout</code> 내에 콜백 함수를 만들 때, <code>thisArg</code>로 전달된 원시 값은 객체로 변환됩니다. <code>bind</code>할 인수(argument)가 제공되지 않으면  실행 스코프 내의 <code>this</code>는 새로운 함수의 <code>thisArg</code>로 처리됩니다.</dd>
+ <dd>바인딩 함수가 대상 함수(target function)의 <code>this</code>에 전달하는 값입니다. 바인딩 함수를 {{jsxref("Operators/new", "new")}} 연산자로 생성한 경우 무시됩니다. <code>bind</code>를 사용하여 <code>setTimeout</code> 내에 콜백 함수를 만들 때, <code>thisArg</code>로 전달된 원시 값은 객체로 변환됩니다. <code>bind</code>할 인수(argument)가 제공되지 않으면  실행 스코프 내의 <code>this</code>는 새로운 함수의 <code>thisArg</code>로 처리됩니다.</dd>
  <dt><code>arg1, arg2, ...</code></dt>
  <dd>대상 함수의 인수 앞에 사용될 인수.</dd>
 </dl>
@@ -36,7 +36,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Function/bind
 
 <h2 id="설명">설명</h2>
 
-<p><code>bind()</code> 함수는 새로운 바인딩한 함수를 만듭니다. 바인딩한 함수는 원본 함수 객체를 감싸는 함수로, ECMAScript 2015에서 말하는 특이 함수 객체<sup>exotic function object</sup>입니다. 바인딩한 함수를 호출하면 일반적으로 래핑된 함수가 호출 됩니다.</p>
+<p><code>bind()</code> 함수는 새로운 바인딩한 함수를 만듭니다. 바인딩한 함수는 원본 함수 객체를 감싸는 함수로, ECMAScript 2015에서 말하는 특이 함수 객체(exotic function object)입니다. 바인딩한 함수를 호출하면 일반적으로 래핑된 함수가 호출 됩니다.</p>
 
 <p>바인딩한 함수는 다음과 같은 내부 속성을 가지고 있습니다.</p>
 
