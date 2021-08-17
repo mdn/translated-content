@@ -9,15 +9,15 @@ translation_of: Web/API/History/state
 
 <p>{{event("popstate")}} 이벤트가 트리거될때가 아닌 상태에서 state값을 볼 수 있는 방법입니다.</p>
 
-<h2 id="문법">문법</h2>
+<h2 id="syntax">구문</h2>
 
 <pre class="syntaxbox">const <em>currentState</em> = history.state</pre>
 
-<h3 id="값">값</h3>
+<h3 id="value">값</h3>
 
 <p>현 history에 위치한 값입니다. 이 값은 {{domxref("History.pushState","pushState()")}} 또는 {{domxref("History.replaceState","replaceState()")}}을 사용할때까지 {{jsxref("null")}} 값을 가집니다.</p>
 
-<h2 id="예제">예제</h2>
+<h2 id="examples">예제</h2>
 
 <p><code>history.state</code> 로 초기값을 보여준 후 {{domxref("History.pushState","pushState()")}}를 사용하여 State를 푸시합니다.</p>
 
@@ -32,7 +32,7 @@ history.pushState({name: 'Example'}, "pushState example", 'page3.html');
 // Now state has a value.
 console.log(`History.state after pushState: ${history.state}`);</pre>
 
-<h2 id="SpecificationsE">Specifications<a class="button section-edit only-icon" href="https://developer.mozilla.org/en-US/docs/Web/API/History$edit#Specifications" rel="nofollow, noindex"><span>E</span></a></h2>
+<h2 id="Specifications">명세</h2>
 
 <table class="standard-table">
  <tbody>
@@ -54,13 +54,13 @@ console.log(`History.state after pushState: ${history.state}`);</pre>
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">브라우저 호환성</h2>
 
 
 
 <p>{{Compat("api.History.state")}}</p>
 
-<h2 id="See_also">See also</h2>
+<h2 id="See_also">같이 보기</h2>
 
 <ul>
  <li><a href="/en-US/docs/Web/API/History_API/Working_with_the_History_API">Working with the History API</a></li>
