@@ -4275,7 +4275,6 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array_temp	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint32Array
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array_temp	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint8Array
 /ja/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakMap
-/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/clear	/ja/docs/orphaned/Web/JavaScript/Reference/Global_Objects/WeakSet/clear
 /ja/docs/Web/JavaScript/Reference/Global_Objects/WeakSet/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakSet
 /ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Instance
 /ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Memory
