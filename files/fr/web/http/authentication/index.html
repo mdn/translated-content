@@ -1,12 +1,6 @@
 ---
 title: Authentification HTTP
 slug: Web/HTTP/Authentication
-tags:
-  - Access Control
-  - Authentication
-  - Guide
-  - HTTP
-  - Security
 translation_of: Web/HTTP/Authentication
 ---
 <div>{{HTTPSidebar}}</div>
@@ -39,7 +33,7 @@ translation_of: Web/HTTP/Authentication
 
 <h3 id="authentication_of_cross-origin_images">Authentification des images multi-origines</h3>
 
-<p>Une faille de sécurité potentielle qui a été récemment corrigée par les navigateurs est l'authentification des images multi-origines. À partir de <a href="/fr/docs/Mozilla/Firefox/Releases/59">Firefox 59</a> et version ultérieures, les images chargées depuis des origines différentes du site courant ne sont plus en mesure de déclencher l'ouverture d'une fenêtre de dialogue (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1423146">bug 1423146</a>) demandant l'authentification HTTP, empêchant ainsi le vol d'identifiants utilisateurs si des personnes mal-intentionnées étaient en mesure d'embarquer une image aléatoire dans une page.</p>
+<p>Une faille de sécurité potentielle qui a été récemment corrigée par les navigateurs est l'authentification des images multi-origines. À partir de <a href="/fr/docs/Mozilla/Firefox/Releases/59">Firefox 59</a> et versions ultérieures, les images chargées depuis des origines différentes du site courant ne sont plus en mesure de déclencher l'ouverture d'une fenêtre de dialogue (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1423146">bug 1423146</a>) demandant l'authentification HTTP, empêchant ainsi le vol d'identifiants utilisateurs si des personnes mal-intentionnées étaient en mesure d'embarquer une image aléatoire dans une page.</p>
 
 <h3 id="character_encoding_of_http_authentication">Encodage de caractère de l'authentification HTTP</h3>
 
@@ -75,7 +69,7 @@ Proxy-Authorization: &lt;type&gt; &lt;credentials&gt;</pre>
   <dt>Bearer</dt>
   <dd>Voir <a href="https://tools.ietf.org/html/rfc6750">RFC 6750</a>, jetons <em>bearer</em> (« porteur » en français) pour accéder à des ressources protégées par OAuth 2.0.</dd>
   <dt>Digest</dt>
-  <dd>Voir <a href="https://tools.ietf.org/html/rfc7616">RFC 7616</a>, Firefox n'est compatible qu'avec l'encryption md5, voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=472823">bug 472823</a> pour la compatibilité avec l'encryption SHA.</dd>
+  <dd>Voir <a href="https://tools.ietf.org/html/rfc7616">RFC 7616</a>, Firefox n'est compatible qu'avec le chiffrement md5, voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=472823">bug 472823</a> pour la compatibilité avec le chiffrement SHA.</dd>
   <dt>HOBA</dt>
   <dd>Voir <a href="https://tools.ietf.org/html/rfc7486">RFC 7486</a>, <strong>H</strong>TTP <strong>O</strong>rigin-<strong>B</strong>ound <strong>A</strong>uthentication, basé sur une signature digitale.</dd>
   <dt>Mutual</dt>
@@ -103,7 +97,7 @@ AuthName "Accès au site de pré-production"
 AuthUserFile /chemin/vers/.htpasswd
 Require valid-user</pre>
 
-<p>Le fichier <code>.htaccess</code> fait référence à un fichier <code>.htpasswd</code> dans lequel chaque ligne contient un nom d'utilisateur et un mot de passe séparés par deux-points (« : »). Vous ne pouvez pas déchiffrer les mots de passe à l'intérieur, car ils sont <a href="https://httpd.apache.org/docs/2.4/misc/password_encryptions.html">encryptés</a> (md5 en l'occurrence). Vous pouvez tout à fait nommer votre fichier <code>.htpasswd</code> différemment si vous le désirez, mais gardez en tête que ce fichier ne doit pas être accessible à quiconque. (Apache est normalement configuré pour empêcher l'accès aux fichiers <code>.ht*</code>).</p>
+<p>Le fichier <code>.htaccess</code> fait référence à un fichier <code>.htpasswd</code> dans lequel chaque ligne contient un nom d'utilisateur et un mot de passe séparés par deux-points (« : »). Vous ne pouvez pas déchiffrer les mots de passe à l'intérieur, car ils sont <a href="https://httpd.apache.org/docs/2.4/misc/password_encryptions.html">chiffrées</a> (en md5 en l'occurrence). Vous pouvez tout à fait nommer votre fichier <code>.htpasswd</code> différemment si vous le désirez, mais gardez en tête que ce fichier ne doit pas être accessible à quiconque (Apache est normalement configuré pour empêcher l'accès aux fichiers <code>.ht*</code>).</p>
 
 <pre>aladdin:$apr1$ZjTqBB3f$IF9gdYAGlMrs2fuINjHsz.
 user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/</pre>
