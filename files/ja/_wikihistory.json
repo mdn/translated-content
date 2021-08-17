@@ -49206,21 +49206,6 @@
       "mfuji09"
     ]
   },
-  "orphaned/Web/API/LinkStyle": {
-    "modified": "2019-03-23T23:29:59.357Z",
-    "contributors": [
-      "yyss",
-      "ethertank"
-    ]
-  },
-  "orphaned/Web/API/LocalMediaStream": {
-    "modified": "2020-10-15T21:46:16.531Z",
-    "contributors": [
-      "teoli",
-      "Uemmra3",
-      "S_F__"
-    ]
-  },
   "orphaned/Web/API/Navigator/registerContentHandler": {
     "modified": "2020-10-15T21:15:53.115Z",
     "contributors": [
