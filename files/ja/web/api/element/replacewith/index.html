@@ -1,0 +1,73 @@
+---
+title: Element.replaceWith()
+slug: Web/API/Element/replaceWith
+tags:
+  - API
+  - DOM
+  - Method
+  - Element
+  - Reference
+browser-compat: api.Element.replaceWith
+translation_of: Web/API/Element/replaceWith
+original_slug: Web/API/ChildNode/replaceWith
+---
+<div>{{APIRef("DOM")}}</div>
+
+<p><code><strong>Element.replaceWith()</strong></code> メソッドは、この <code>Element</code> を親の子リストの中で一連の {{domxref("Node")}} または {{domxref("DOMString")}} オブジェクトに置換します。 {{domxref("DOMString")}} オブジェクトは {{domxref("Text")}} ノードと等価なノードとして挿入されます。</p>
+
+<h2 id="Syntax">構文</h2>
+
+<pre class="brush: js">replaceWith(...nodes)</pre>
+
+<h3 id="Parameters">引数</h3>
+
+<dl>
+	<dt><code>nodes</code></dt>
+	<dd>一連の {{domxref("Node")}} または {{domxref("DOMString")}} オブジェクトで置換します。</dd>
+</dl>
+
+<h3 id="Exceptions">例外</h3>
+
+<ul>
+	<li>{{domxref("HierarchyRequestError")}}: 階層の指定の位置にはノードを挿入できません。</li>
+</ul>
+
+<h2 id="Examples">例</h2>
+
+<h3 id="Using_replaceWith"><code>replaceWith()</code> の使用</h3>
+
+<pre class="brush: js">const div = document.createElement("div");
+const p = document.createElement("p");
+div.appendChild(p);
+const span = document.createElement("span");
+
+p.replaceWith(span);
+
+console.log(div.outerHTML);
+// "&lt;div&gt;&lt;span&gt;&lt;/span&gt;&lt;/div&gt;"
+</pre>
+
+<h3 id="replaceWith_is_unscopable"><code>replaceWith()</code> はスコーピングに非対応</h3>
+
+<p><code>replaceWith()</code> メソッドは <code>with</code> 文でのスコーピングに対応していません。詳細は {{jsxref("Symbol.unscopables")}} をご覧ください。</p>
+
+<pre class="brush: js">with(node) {
+  replaceWith("foo");
+}
+// ReferenceError: replaceWith is not defined </pre>
+
+<h2 id="Specification">仕様書</h2>
+
+<p>{{Specifications}}
+
+</p>
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">関連情報</h2>
+
+<ul>
+  <li>{{domxref("Node.replaceChild()")}}</li>
+  <li>{{domxref("NodeList")}}</li>
+</ul>
