@@ -39,7 +39,7 @@ translation_of: Web/JavaScript/Reference/Trailing_commas
 arr; // [1, 2, 3]
 arr.length; // 3</pre>
 
-<p>trailing comma가 여러 개 있을 경우 빈 슬롯("구멍")이 생깁니다. 구멍이 있는 배열을 성기다<sup>sparse</sup>고 합니다(조밀한<sup>dense</sup> 배열에는 구멍이 없습니다). {{jsxref("Array.prototype.forEach()")}}나 {{jsxref("Array.prototype.map()")}}을 이용해 배열을 순회할 때는 빈 슬롯을 무시합니다.</p>
+<p>trailing comma가 여러 개 있을 경우 빈 슬롯("구멍")이 생깁니다. 구멍이 있는 배열을 성기다(sparse)고 합니다(조밀한(dense) 배열에는 구멍이 없습니다). {{jsxref("Array.prototype.forEach()")}}나 {{jsxref("Array.prototype.map()")}}을 이용해 배열을 순회할 때는 빈 슬롯을 무시합니다.</p>
 
 <pre class="brush: js notranslate">var arr = [1, 2, 3,,,];
 arr.length; // 5

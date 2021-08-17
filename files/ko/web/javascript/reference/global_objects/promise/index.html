@@ -27,7 +27,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise
  <li>거부(<em>rejected)</em>: 연산이 실패함.</li>
 </ul>
 
-<p>대기 중인 프로미스는 값과 함께 <em>이행할</em> 수도, 어떤 이유(오류)로 인해 <em>거부</em>될 수 있습니다. 이행이나 거부될 때, 프로미스에 연결한 처리기는 그 프로미스의 <code>then</code> 메서드에 의해 대기열에 오릅니다. 이미 이행했거나 거부된 프로미스에 연결한 처리기도 호출하므로, 비동기 연산과 처리기 연결 사이에 경합 조건<sup>race condition</sup>은 없습니다.</p>
+<p>대기 중인 프로미스는 값과 함께 <em>이행할</em> 수도, 어떤 이유(오류)로 인해 <em>거부</em>될 수 있습니다. 이행이나 거부될 때, 프로미스에 연결한 처리기는 그 프로미스의 <code>then</code> 메서드에 의해 대기열에 오릅니다. 이미 이행했거나 거부된 프로미스에 연결한 처리기도 호출하므로, 비동기 연산과 처리기 연결 사이에 경합 조건은 없습니다.</p>
 
 <p>{{jsxref("Promise.prototype.then()")}} 및 {{jsxref("Promise.prototype.catch()")}} 메서드의 반환 값은 다른 프로미스이므로, 서로 연결할 수 있습니다.</p>
 
@@ -38,7 +38,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise
 </div>
 
 <div class="note">
-<p><strong>참고</strong>: 프로미스는 대기 중이지 않으며 이행 또는 거부됐을 때 처리(settled)됐다고 말합니다. 프로미스와 함께 쓰이는 단어 resolved는 프로미스가 다른 프로미스의 상태에 맞춰 처리됨, 또는 상태가 "잠김"되었다는 의미입니다. 용어에 관한 더 자세한 설명은 Domenic Denicola의 글 <a href="https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md" title="States and fates">States and fates</a>에서 볼 수 있습니다.</p>
+<p><strong>참고</strong>: 프로미스는 대기 중이지 않으며 이행 또는 거부됐을 때 처리(settled)됐다고 말합니다. 프로미스와 함께 쓰이는 단어 resolved는 프로미스가 다른 프로미스의 상태에 맞춰 처리됨, 또는 상태가 "잠김"되었다는 의미입니다. 용어에 관한 더 자세한 설명은 Domenic Denicola의 글 <a href="https://github.com/domenic/promises-unwrapping/blob/master/docs/states-and-fates.md">States and fates</a>에서 볼 수 있습니다.</p>
 </div>
 
 <h2 id="생성자">생성자</h2>
