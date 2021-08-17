@@ -41,7 +41,7 @@ p.then(function(value) {
 
 <h3 id="반환값">반환값</h3>
 
-<p>{{jsxref("Promise")}}가 이행하거나 거부했을 때, 각각에 해당하는 핸들러 함수(<code style="font-style: normal; font-weight: normal;">onFulfilled</code>나 <code style="font-style: normal; font-weight: normal;">onRejected</code>)가 <strong>비동기적으로</strong> 실행됩니다. 핸들러 함수는 다음 규칙을 따라 실행됩니다.</p>
+<p>{{jsxref("Promise")}}가 이행하거나 거부했을 때, 각각에 해당하는 핸들러 함수(<code>onFulfilled</code>나 <code>onRejected</code>)가 <strong>비동기적으로</strong> 실행됩니다. 핸들러 함수는 다음 규칙을 따라 실행됩니다.</p>
 
 <ul>
  <li>함수가 값을 반환할 경우, <code>then</code>에서 반환한 프로미스는 그 반환값을 자신의 결과값으로 하여 이행합니다.</li>
