@@ -3,35 +3,37 @@ title: AnalyserNode
 slug: Web/API/AnalyserNode
 tags:
   - API
+  - AnalyserNode
+  - Interface
+  - Reference
   - Web Audio API
-  - 오디오
-translation_of: Web/API/AnalyserNode
+browser-compat: api.AnalyserNode
 ---
 <p>{{APIRef("Web Audio API")}}</p>
 
-<p><strong><code>AnalyserNode</code></strong><strong> </strong>는 시간대 별로 실시간 주파수의 정보를 표현합니다. {{domxref("AudioNode")}} 를 통해 오디오 스트림정보가 그대로 입력되어 출력이 되지만 이를 통해 당신은 새로운 형태의 데이터를 생성하거나, 가공하고 오디오를 시각화 시키는 작업을 할 수 있습니다.</p>
+<p><strong><code>AnalyserNode</code></strong> 인터페이스는 실시간 주파수와 시간 영역 분석 정보를 제공 가능한 노드를 표현합니다. 이것은 변경되지 않은 오디오 스트림을 입력에서 출력으로 전달하지만, 여러분은 생성된 데이터를 얻고, 그것을 처리하고, 오디오 시각화를 생성할 수 있습니다.</p>
 
-<p><code>AnalyzerNode</code> 는 하나의 입력에 하나의 출력을 가집니다. 그리고 이 노드는 출력이 명시되지 않더라도 동작을 합니다.</p>
+<p><code>AnalyserNode</code>는 정확히 하나의 입력과 하나의 출력을 가집니다. 이 노드는 출력이 연결되지 않았더라도 작동합니다.</p>
 
-<p><img alt="Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT." src="https://mdn.mozillademos.org/files/9707/WebAudioFFT.png" style="height: 174px; width: 661px;"></p>
+<p><img alt="오디오 스트림을 수정하지 않고, 이 노드는 FFT를 사용하여 이것에 관련된 주파수와 시간 영역의 데이터를 얻을 수 있게 합니다." src="fttaudiodata_en.svg"></p>
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row">Number of inputs</th>
+   <th scope="row">입력의 수</th>
    <td><code>1</code></td>
   </tr>
   <tr>
-   <th scope="row">Number of outputs</th>
-   <td><code>1</code> (but may be left unconnected)</td>
+   <th scope="row">출력의 수</th>
+   <td><code>1</code> (그러나 연결되지 않은 채로 남아있을지도 모릅니다)</td>
   </tr>
   <tr>
    <th scope="row">Channel count mode</th>
-   <td><code>"explicit"</code></td>
+   <td><code>"max"</code></td>
   </tr>
   <tr>
    <th scope="row">Channel count</th>
-   <td><code>1</code></td>
+   <td><code>2</code></td>
   </tr>
   <tr>
    <th scope="row">Channel interpretation</th>
@@ -40,125 +42,129 @@ translation_of: Web/API/AnalyserNode
  </tbody>
 </table>
 
-<div class="note">
-<p><strong>Note</strong>: See the guide <a href="/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API">Visualizations with Web Audio API</a> for more information on creating audio visualizations.</p>
-</div>
+<h2 id="Inheritance">상속</h2>
 
-<h2 id="Properties">Properties</h2>
+<p>이 인터페이스는 다음의 부모 인터페이스들로부터 상속받습니다:</p>
 
-<p><em>{{domxref("AudioNode")}}</em> 를 부모로 가지는 프로퍼티.<em> </em></p>
+<p>{{InheritanceDiagram}}</p>
+
+<h2 id="Constructor">생성자</h2>
 
 <dl>
- <dt><span id="cke_bm_91S" class="hidden"> </span>{{domxref("AnalyserNode.fftSize")}}</dt>
- <dd>부호가 없는(unsigned long value) 주파수 영역에서의 전체 크기의 값을 나타내기 위한 푸리에 변환의 값의 크기를 나타낸다. (대략적으로 설명을 하면 해당 주파수영역을 보는데 얼마나 세밀하게 데이터를 볼것인지를 나타낸다. 클수록 세밀하지만 시간이 오래걸리고 작으면 빨리한다.)</dd>
- <dt> </dt>
- <dt>{{domxref("AnalyserNode.frequencyBinCount")}} {{readonlyInline}}</dt>
- <dd>부호가 없는 푸리에변환 값의 절반을 나타낸다. 이 값은 일반적으로 데이터를 시각화 하기위해 사용되는 데이터의 수와 같다.</dd>
- <dt>{{domxref("AnalyserNode.minDecibels")}}</dt>
- <dd>double형 값으로 표현되는  FFT(푸리에 변환)로 분석된 데이터의 범위에서의 최소값을 나타낸다. 이는 부호가 없는 바이트 값으로 변환된다. 일반적으로 이 특정한 최소값은 <code>getByteFrequencyData()를 사용하여 얻은 결과값이다.</code></dd>
- <dt>{{domxref("AnalyserNode.maxDecibels")}}</dt>
- <dd>double형 값으로 표현되는  FFT(푸리에 변환)로 분석된 데이터의 범위에서의 최대값을 나타낸다. 이는 부호가 없는 바이트 값으로 변환된다. 일반적으로 이 특정한 최대값은 <code>getByteFrequencyData()를 사용하여 얻은 결과값이다.</code></dd>
- <dt>{{domxref("AnalyserNode.smoothingTimeConstant")}}</dt>
- <dd>double형 값으로 마지막에 분석된 프레임의 평균 정수값을 나타낸다. 일반적으로 이 값을 통해 time smoother상의 값들을  변환하는데 사용된다.</dd>
+ <dt>{{domxref("AnalyserNode.AnalyserNode", "AnalyserNode()")}}</dt>
+ <dd><code>AnalyserNode</code> 객체의 새로운 인스턴스를 생성합니다.</dd>
 </dl>
 
-<h2 id="Methods">Methods</h2>
+<h2 id="Properties">속성</h2>
 
-<p><em>{{domxref("AudioNode")}} 을 상속하는 메서드.</em></p>
+<p><em>부모인 {{domxref("AudioNode")}}로부터 속성을 상속받습니다</em>.</p>
+
+<dl>
+ <dt>{{domxref("AnalyserNode.fftSize")}}</dt>
+ <dd>주파수 영역을 결정하는 데 사용될 FFT(<a href="https://en.wikipedia.org/wiki/Fast_Fourier_transform">Fast Fourier Transform</a>)의 사이즈를 나타내는 unsigned long 값입니다.</dd>
+ <dt>{{domxref("AnalyserNode.frequencyBinCount")}} {{readonlyInline}}</dt>
+ <dd>FFT 사이즈 값의 절반인 unsigned long 값입니다. 이것은 일반적으로 시각화를 위해 사용할 데이터 값의 수와 동일시됩니다.</dd>
+ <dt>{{domxref("AnalyserNode.minDecibels")}}</dt>
+ <dd>unsigned byte 값으로의 전환에 대해서, FFT 분석 데이터의 스케일링 범위에서의 최소 power 값을 나타내는 double 값입니다 — 기본적으로, 이것은 <code>getByteFrequencyData()</code>를 사용할 때 결과의 범위에 대한 최소 값을 명시합니다.</dd>
+ <dt>{{domxref("AnalyserNode.maxDecibels")}}</dt>
+ <dd>unsigned byte 값으로의 전환에 대해서, FFT 분석 데이터의 스케일링 범위에서의 최대 power 값을 나타내는 double 값입니다 — 기본적으로, 이것은 <code>getByteFrequencyData()</code>를 사용할 때 결과의 범위에 대한 최대 값을 명시합니다.</dd>
+ <dt>{{domxref("AnalyserNode.smoothingTimeConstant")}}</dt>
+ <dd>마지막 분석 프레임의 에버리징(averaging) 상수를 나타내는 double 값입니다 — 기본적으로, 이것은 시간에 대한 값 사이의 전환을 더 매끄럽게 만듭니다.</dd>
+</dl>
+
+<h2 id="Methods">메서드</h2>
+
+<p><em>부모인 {{domxref("AudioNode")}}로부터 메서드를 상속받습니다</em>.</p>
 
 <dl>
  <dt>{{domxref("AnalyserNode.getFloatFrequencyData()")}}</dt>
- <dd>현재의 주파수 데이터를 <span style="line-height: 1.5;"> {{domxref("Float32Array")}} 로 복사해 전달한다.</span></dd>
-</dl>
-
-<dl>
+ <dd>전달된 {{domxref("Float32Array")}} 배열 내로 현재 주파수 데이터를 복사합니다.</dd>
  <dt>{{domxref("AnalyserNode.getByteFrequencyData()")}}</dt>
- <dd>현재의 주파수 데이터를 <span style="line-height: 1.5;"> </span>{{domxref("Uint8Array")}} (unsigned byte array)<span style="line-height: 1.5;"> 로 복사해 전달한다.</span></dd>
-</dl>
-
-<dl>
+ <dd>전달된 {{domxref("Uint8Array")}} (unsiged byte array) 내로 현재 주파수 데이터를 복사합니다.</dd>
  <dt>{{domxref("AnalyserNode.getFloatTimeDomainData()")}}</dt>
- <dd>현재 데이터의 파형, 또는 시간기반(time-domain) 데이터를 <span style="line-height: 1.5;"> {{domxref("Float32Array")}} 배열에 전달한다.</span></dd>
+ <dd>전달된 {{domxref("Float32Array")}} 배열 내로 현재 파형, 즉 시간 영역 데이터를 복사합니다.</dd>
  <dt>{{domxref("AnalyserNode.getByteTimeDomainData()")}}</dt>
- <dd>현재 데이터의 파형, 또는 시간기반(time-domain) 데이터를 {{domxref("Uint8Array")}} (unsigned byte array) 로 전달한다.</dd>
+ <dd>전달된 {{domxref("Uint8Array")}} (unsigned byte array) 내로 현재 파형, 즉 시간 영역 데이터를 복사합니다.</dd>
 </dl>
 
-<h2 id="Example">Example</h2>
+<h2 id="Examples">예제</h2>
 
-<p>이 예제는  {{domxref("AudioContext")}} 를 사용해 <span style="font-family: courier new,andale mono,monospace; line-height: 1.5;">AnalyserNode를 생성하여 사용하는 방법을 보여주고, </span><span style="line-height: 1.5;"> {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} and {{htmlelement("canvas")}} 를 통해 반복적으로 시간기반(time-domain) 의 정보를 반복적으로 수집 및 </span><span style="line-height: 1.5;"> "oscilloscope style" 를 통해 입력된 오디오 정보를 시각화하여 보여주는 예제입니다. 더 많은 정보와 예제는 </span><span style="line-height: 1.5;"> </span><a href="http://mdn.github.io/voice-change-o-matic/" style="line-height: 1.5;">Voice-change-O-matic</a><span style="line-height: 1.5;"> demo (see </span><a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205" style="line-height: 1.5;">app.js lines 128–205</a><span style="line-height: 1.5;"> for relevant code)를 확인 하세요.</span></p>
+<div class="note">
+<p><strong>참고</strong>: 오디오 시각화 생성하기에 대한 더 많은 정보를 보려면 <a href="/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API">Web Audio API 시각화</a> 가이드를 참고하세요.</p>
+</div>
 
-<pre class="brush: js">var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+<h3 id="Basic_usage">기본 사용</h3>
+
+<p>다음의 예제는 <code>AnalyserNode</code>를 생성하기 위한 {{domxref("AudioContext")}}와 그리고 나서 반복적으로 시간 영역의 데이터를 수집하고 현재 오디오 입력의 "오실로스코프 스타일의" 출력을 그리기 위한 {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}}과 {{htmlelement("canvas")}}의 기본 사용을 보여줍니다. 더 완벽한 응용 예제/정보를 보려면 <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a> 데모를 확인하세요 (관련된 코드를 보려면 <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js 라인 128–205</a>를 참고하세요).</p>
+
+<pre class="brush: js">var audioCtx = new(window.AudioContext || window.webkitAudioContext)();
+
+// ...
+
 var analyser = audioCtx.createAnalyser();
-// 새로운 <span style="font-family: courier new,andale mono,monospace;">AnalyserNode를 생성한다.</span>
-  ...
+analyser.fftSize = 2048;
 
-analyser.fftSize = 2048; // FFT의 크기를 2048로 한다.
-var bufferLength = analyser.frequencyBinCount; // 시각화를 하기 위한 데이터의 갯수
-var dataArray = new Uint8Array(bufferLength); // 데이터를 담을 bufferLength 크기의 Unit8Array의 배열을 생성
-analyser.getByteTimeDomainData(dataArray); // 시간기반의 데이터를 Unit8Array배열로 전달
+var bufferLength = analyser.frequencyBinCount;
+var dataArray = new Uint8Array(bufferLength);
+analyser.getByteTimeDomainData(dataArray);
 
-// 얻어진 데이터를 기반으로 시각화 작업을 한다. 캔버스를 이용한다.
+// 분석될 소스에 연결합니다
+source.connect(analyser);
+
+// ID "oscilloscope"로 정의된 canvas를 얻습니다
+var canvas = document.getElementById("oscilloscope");
+var canvasCtx = canvas.getContext("2d");
+
+// 현재 오디오 소스의 오실로스코프를 그립니다
 
 function draw() {
 
-      drawVisual = requestAnimationFrame(draw);
+  requestAnimationFrame(draw);
 
-      analyser.getByteTimeDomainData(dataArray);
+  analyser.getByteTimeDomainData(dataArray);
 
-      canvasCtx.fillStyle = 'rgb(200, 200, 200)';
-      canvasCtx.fillRect(0, 0, WIDTH, HEIGHT);
+  canvasCtx.fillStyle = "rgb(200, 200, 200)";
+  canvasCtx.fillRect(0, 0, canvas.width, canvas.height);
 
-      canvasCtx.lineWidth = 2;
-      canvasCtx.strokeStyle = 'rgb(0, 0, 0)';
+  canvasCtx.lineWidth = 2;
+  canvasCtx.strokeStyle = "rgb(0, 0, 0)";
 
-      canvasCtx.beginPath();
+  canvasCtx.beginPath();
 
-      var sliceWidth = WIDTH * 1.0 / bufferLength;
-      var x = 0;
+  var sliceWidth = canvas.width * 1.0 / bufferLength;
+  var x = 0;
 
-      for(var i = 0; i &lt; bufferLength; i++) {
+  for (var i = 0; i &lt; bufferLength; i++) {
 
-        var v = dataArray[i] / 128.0;
-        var y = v * HEIGHT/2;
+    var v = dataArray[i] / 128.0;
+    var y = v * canvas.height / 2;
 
-        if(i === 0) {
-          canvasCtx.moveTo(x, y);
-        } else {
-          canvasCtx.lineTo(x, y);
-        }
+    if (i === 0) {
+      canvasCtx.moveTo(x, y);
+    } else {
+      canvasCtx.lineTo(x, y);
+    }
 
-        x += sliceWidth;
-      }
+    x += sliceWidth;
+  }
 
-      canvasCtx.lineTo(canvas.width, canvas.height/2);
-      canvasCtx.stroke();
-    };
+  canvasCtx.lineTo(canvas.width, canvas.height / 2);
+  canvasCtx.stroke();
+}
 
-    draw();</pre>
+draw();
+</pre>
 
-<h2 id="Specifications">Specifications</h2>
+<h2 id="Specifications">명세</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Web Audio API', '#the-analysernode-interface', 'AnalyserNode')}}</td>
-   <td>{{Spec2('Web Audio API')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+<h2 id="Browser_compatibility">브라우저 호환성</h2>
 
-<p>{{Compat("api.AnalyserNode")}}</p>
+<p>{{Compat}}</p>
 
-<h2 id="See_also">See also</h2>
+<h2 id="See_also">같이 보기</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Using the Web Audio API</a></li>
+ <li><a href="/ko/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Web Audio API 사용하기</a></li>
 </ul>
