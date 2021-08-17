@@ -95,7 +95,7 @@ var promise = import("module-name");//这是一个处于第三阶段的提案。
 
 <p>整个模块仅为副作用（中性词，无贬义含义）而导入，而不导入模块中的任何内容（接口）。 这将运行模块中的全局代码, 但实际上不导入任何值。</p>
 
-<pre class="brush: js notranslate"><code>import '/modules/my-module.js';</code></pre>
+<pre class="brush: js notranslate">import '/modules/my-module.js';</pre>
 
 <h3 id="导入默认值">导入默认值</h3>
 
@@ -140,15 +140,15 @@ var promise = import("module-name");//这是一个处于第三阶段的提案。
 
 <p>关键字import可以像调用函数一样来动态的导入模块。以这种方式调用，将返回一个 <code>promise</code>。</p>
 
-<pre class="brush: js notranslate"><code>import('/modules/my-module.js')
+<pre class="brush: js notranslate">import('/modules/my-module.js')
   .then((module) =&gt; {
     // Do something with the module.
-  });</code>
+  });
 </pre>
 
 <p>这种使用方式也支持 <code>await</code> 关键字。</p>
 
-<pre class="brush: js notranslate"><code>let module = await import('/modules/my-module.js');</code></pre>
+<pre class="brush: js notranslate">let module = await import('/modules/my-module.js');</pre>
 
 <h2 id="示例">示例</h2>
 
