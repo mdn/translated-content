@@ -1,0 +1,417 @@
+---
+title: MDN の Markdown
+slug: MDN/Contribute/Markdown_in_MDN
+tags:
+  - MDN
+---
+<div>{{MDNSidebar}}</div>
+
+<div class="notecard warning">
+
+<h4>警告</h4>
+
+<p>現在、 MDN のすべてのコンテンツを HTML から Markdown に変換しているところです。現在、 HTML または Markdown でページを書くことができますが、私たちは一つの章の中で書式を混在させたくありません。</p>
+
+<p>現時点では、 (訳注: 英語版の) JavaScript のドキュメント (<a href="/en-US/docs/Web/JavaScript">https://developer.mozilla.org/en-US/docs/Web/JavaScript</a> 以下のページ) のみが Markdown になっていますので、このページはサイトのその部分にのみ適用されます。サイトの他の部分については、 HTML でドキュメントを書いてください。</p>
+
+</div>
+
+<p>このページでは、 Markdown を使用してどのように MDN のドキュメントを書くかを説明します。ベースラインとして GitHub-Flavored Markdown (GFM) を選択し、 GFM では容易にサポートされていない MDN で行う必要のあるいくつかのことに対応するために、いくつかの拡張機能を追加しました。</p>
+
+<h2>ベースライン: GitHub-Flavored Markdown</h2>
+
+<p>MDN Markdown のベースラインは GitHub-Flavored Markdown (GFM、 <a href="https://github.github.com/gfm/">https://github.github.com/gfm/</a>) です。このページで特に明記されていないものについては、 GFM の仕様を参照してください。また、 GFM は CommonMark (<a href="https://spec.commonmark.org/">http://spec.commonmark.org/</a>) の上位互換です。</p>
+
+<h2>コードブロックの例</h2>
+
+<p>GFM や CommonMark では、「コードフェンス」を使用して <code>&lt;pre&gt;</code> ブロックを区切ることができます。冒頭のコードフェンスの後には、「情報文字列」と呼ばれるテキストが続くことがあります。仕様書によると、次の通りです。</p>
+
+<blockquote>
+  <p>情報文字列の最初の単語は、通常、コードサンプルの言語を指定するために使用され、コードタグの class 属性に表示されます。</p>
+</blockquote>
+
+<p>情報文字列には、次のように複数の単語を含めることができます。</p>
+
+<pre>
+```fee fi fo fum
+// some example code
+```
+</pre>
+
+MDN では、書き手はコードブロックのサンプルにコードフェンスを使用します。ライターは情報文字列の最初の単語を使用してコードサンプルの言語を指定する必要があり、これはブロックの構文強調表示を提供するために使用されます。以下の単語に対応しています。
+
+<ul>
+  <li><code>bash</code></li>
+  <li><code>cpp</code> (for C/C++)</li>
+  <li><code>css</code></li>
+  <li><code>html</code></li>
+  <li><code>java</code></li>
+  <li><code>js</code> (JavaScript 向け)</li>
+  <li><code>json</code></li>
+  <li><code>php</code></li>
+  <li><code>python</code></li>
+  <li><code>sql</code></li>
+  <li><code>xml</code></li>
+  <li><code>wasm</code> (WebAssembly テキスト書式向け)</li>
+</ul>
+
+例えば、次のようにします。
+
+<pre>
+```js
+const greeting = "I will get syntax highlighting";
+```
+</pre>
+
+<p>書き手は以下の追加の単語のいずれかを使用することができますが、これらの単語は言語の単語の後に置く必要があります。</p>
+
+<ul>
+  <li><code>example-good</code>: この例を良い例 (採用すべきもの) としてスタイル付けする</li>
+  <li><code>example-bad</code>: この例を悪い例 (避けるべきもの) としてスタイル付けする</li>
+  <li><code>hidden</code>: このコードブロックをページに表示しません。これはライブサンプルで使用するためのものです。</li>
+</ul>
+
+例:
+
+<pre>
+```js example-good
+const greeting = "I'm a good example";
+```
+</pre>
+
+<h3>議論リファレンス</h3>
+
+<p>この課題は <a href="https://github.com/mdn/content/issues/3512">https://github.com/mdn/content/issues/3512</a> で解決しました。</p>
+
+<h2>メモ、警告、コールアウト</h2>
+
+<p>コンテンツの一部に特別な注意を喚起したい場合があります。そのためには、特別な最初の段落を持つ GFM ブロック引用を使用します。 GFM ブロック引用には、「メモ」「警告」「コールアウト」の 3 種類があります。</p>
+
+<ul>
+  <li>メモを追加するには、 GFM ブロック引用の最初の段落を <code>**Note:**</code> で始めてください。</li>
+  <li>警告を追加するには、 GFM ブロック引用の最初の段落を <code>**Warning:**</code> で始めてください。</li>
+  <li>コールアウトを追加するには、 GFM ブロック引用の最初の段落を <code>**Callout:**</code> で始めてください。</li>
+</ul>
+
+<p>メモと警告は、出力に <strong>Note:</strong> または <strong>Warning:</strong> というテキストが表示されますが、コールアウトは表示されません。このため、コールアウトは、独自のタイトルを提供したい場合に適しています。</p>
+
+<p>マークアップの処理は、指定された正確な文字ではなく、生成された AST に基づいて行われます。つまり、 <code>&lt;strong&gt;Note:&lt;/strong&gt;</code> もメモを生成します。ただし、スタイルの問題として Markdown の構文が必要です。</p>
+
+<p>複数行は、通常の段落と同じように、空のブロック引用行によって生成されます。さらに、スペースのない複数の行は通常の Markdown の行と同様に扱われ、連結されます。</p>
+
+<p>ブロック引用には、コードブロックやその他のブロック要素を含めることができます。</p>
+
+<p>"Note:" や "Warning:" というテキストは、レンダリングされた出力にも表示されるため、翻訳に配慮する必要があります。実際には、 MDN で対応しているすべてのロケールがこれらの文字列の独自の翻訳を提供しなければならず、プラットフォームは構成が特別な処理を必要とすることを示すものとして認識しなければならないことを意味します。</p>
+
+<h4>例</h4>
+
+<h5>注</h5>
+
+<pre>
+&gt; **Note:** これがメモの書き方です。
+&gt;
+&gt; 複数行を入れることもできます。
+</pre>
+
+<p>これで次のような HTML が生成されます。</p>
+
+<pre class="brush: html">
+&lt;div class="notecard note"&gt;
+  &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; これがメモの書き方です。&lt;/p&gt;
+  &lt;p&gt;複数行を入れることもできます。&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+<p>この HTML は次のように、強調ボックスとして描画されます。</p>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> これがメモの書き方です。</p>
+  <p>複数行を入れることもできます。</p>
+</div>
+
+<h5>警告</h5>
+
+<pre>
+&gt; **Warning:** これが警告の書き方です。
+&gt;
+&gt; 複数の段落を入れることもできます。
+</pre>
+
+<p>これで次のような HTML が生成されます。</p>
+
+<pre class="brush: html">
+&lt;div class="notecard warning"&gt;
+  &lt;p&gt;&lt;strong&gt;Warning:&lt;/strong&gt; これが警告の書き方です。&lt;/p&gt;
+  &lt;p&gt;複数の段落を入れることもできます。&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+<p>この HTML は次のように、強調ボックスとして描画されます。</p>
+
+<div class="notecard warning">
+  <p><strong>Warning:</strong> これが警告の書き方です。</p>
+  <p>複数の段落を入れることもできます。</p>
+</div>
+
+<h5>コールアウト</h5>
+
+<pre>
+&gt; **Callout:** **これがコールアウトの書き方です。**
+&gt;
+&gt; 複数の段落を入れることもできます。
+</pre>
+
+<p>これで次のような HTML が生成されます。</p>
+
+<pre class="brush: html">
+&lt;div class="callout"&gt;
+  &lt;p&gt;&lt;strong&gt;これがコールアウトの書き方です。&lt;/strong&gt;&lt;/p&gt;
+  &lt;p&gt;複数の段落を入れることもできます。&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+<p>この HTML は次のように、強調ボックスとして描画されます。</p>
+
+<div class="callout">
+  <p><strong>これがコールアウトの書き方です。</strong></p>
+  <p>複数の段落を入れることもできます。</p>
+</div>
+
+<h5>翻訳された警告</h5>
+
+<p>(訳注: 現時点では日本語の見出しには対応していません。)</p>
+
+<p>例えば、ドイツ語で "Warning" を "Warnung" としたい場合、ドイツ語のページで次のように書きます。</p>
+
+<pre>
+&gt; Warnung: So schreibt man eine Warnung.
+</pre>
+
+<p>これは次のように表示されます。</p>
+
+<pre class="brush: html">
+&lt;div class="notecard warning"&gt;
+  &lt;p&gt;&lt;strong&gt;Warnung:&lt;/strong&gt; So schreibt man eine Warnung.&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+<h5>コードブロックを含むメモ</h5>
+
+<p>この例はコードブロックを含んでいます。</p>
+
+<pre>
+&gt; **Note:** これがメモの書き方です。
+&gt;
+&gt; コードブロックを含むことができます。
+&gt;
+&gt; ```js
+&gt; const s = "コードブロックの中です";
+&gt; ```
+&gt; こんな感じです。
+</pre>
+
+<p>これで次のような HTML が生成されます。</p>
+
+<pre class="brush: html">
+&lt;div class="notecard note"&gt;
+  &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; これがメモの書き方です。&lt;/p&gt;
+  &lt;p&gt;コードブロックを含むことができます。&lt;/p&gt;
+  &lt;pre class="brush: js"&gt;const s = "コードブロックの中です";&lt;/pre&gt;
+  &lt;p&gt;こんな感じです。&lt;/p&gt;
+&lt;/div&gt;
+</pre>
+
+<p>この HTML は次のようにコードブロックと一緒に描画されます。</p>
+
+<div class="notecard note">
+  <p><strong>Note:</strong> これがメモの書き方です。</p>
+  <p>コードブロックを含むことができます。.</p>
+  <pre class="brush: js">const s = "コードブロックの中です";</pre>
+  <p>こんな感じです。</p>
+</div>
+
+<h3>議論リファレンス</h3>
+
+<p>この課題は <a href="https://github.com/mdn/content/issues/3483">https://github.com/mdn/content/issues/3483</a> で解決されました。</p>
+
+<h2>定義リスト</h2>
+
+<p>MDN で定義リストを作成するためには、 GFM 順序なしリスト ({{HTMLElement("ul")}}) を変更した書き方をします。</p>
+
+<ul>
+  <li>GFM <code>&lt;ul&gt;</code> は任意の数の最上位の GFM <code>&lt;li&gt;</code> 要素を含みます。</li>
+  <li>最上位の GFM <code>&lt;li&gt;</code> 要素は、最後の要素として GFM <code>&lt;ul&gt;</code> 要素を含みます。</li>
+  <li>最終的に含まれる <code>&lt;ul&gt;</code> は、単一の GFM <code>&lt;li&gt;</code> 要素を含み、この中身は <code>:&nbsp;</code> (コロンに続いて空白) で始まるテキストでなければなりません。この要素はブロック要素、例えば段落、コードブロック、埋め込みリスト、メモなどを含むことができます。</li>
+</ul>
+
+<p>最上位の GFM <code>&lt;li&gt;</code> 要素は、次のように
+  <code>&lt;dt&gt;</code>/<code>&lt;dd&gt;</code> の組に変換されます。</p>
+
+<ul>
+  <li>最上位の GFM <code>&lt;li&gt;</code> 要素は、GFM <code>&lt;li&gt;</code> 要素として解析され、その内部コンテンツは、 <code>&lt;dt&gt;</code> の内容を構成しますが、最後に入れ子になった <code>&lt;ul&gt;</code> については例外で、 <code>&lt;dt&gt;</code> には含まれません。
+  <li>最後に入れ子になった <code>&lt;ul&gt;</code> の中の <code>&lt;li&gt;</code> 要素は、GFM <code>&lt;li&gt;</code> 要素として解析され、その内容は <code>&lt;dd&gt;</code> の内容を構成しますが、先頭の <code>:&nbsp;</code> は捨てられます。</li>
+</ul>
+
+例えば、これは <code>&lt;dl&gt;</code> です。
+
+<pre>
+* term1
+    * : My description of term1
+
+* `term2`
+    * : My description of term2
+
+      It can have multiple paragraphs, and code blocks too:
+
+      ```js
+      const thing = 1;
+      ```
+</pre>
+
+GFM/CommonMark では、これは次の HTML を生成します。
+
+<pre class="brush: html">
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;term1&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;: My description of term1&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code&gt;term2&lt;/code&gt;&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;: My description of term2&lt;/p&gt;
+        &lt;p&gt;It can have multiple paragraphs, and code blocks too:&lt;/p&gt;
+        &lt;pre&gt;
+          &lt;code class="brush: js"&gt;const thing = 1;&lt;/code&gt;
+        &lt;/pre&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+MDN では、これは次の HTML を生成します。
+
+<pre class="brush: html">
+&lt;dl&gt;
+  &lt;dt&gt;
+    &lt;p&gt;term1&lt;/p&gt;
+  &lt;/dt&gt;
+  &lt;dd&gt;My description of term1&lt;/dd&gt;
+  &lt;dt&gt;
+    &lt;p&gt;&lt;code&gt;term2&lt;/code&gt;&lt;/p&gt;
+  &lt;/dt&gt;
+  &lt;dd&gt;
+    &lt;p&gt;My description of term2&lt;/p&gt;
+    &lt;p&gt;It can have multiple paragraphs, and code blocks too:&lt;/p&gt;
+    &lt;pre&gt;
+       &lt;code class="brush: js"&gt;const thing = 1;&lt;/code&gt;
+    &lt;/pre&gt;
+  &lt;/dd&gt;
+&lt;/dl&gt;
+</pre>
+
+<p>この構文で書かれた定義リストは、 <code>&lt;dt&gt;</code>/<code>&lt;dd&gt;</code> 要素のペアで構成されます。この構文では、 2 つ以上の連続した <code>&lt;dt&gt;</code> 要素、または 2 つ以上の連続した <code>&lt;dd&gt;</code> 要素を持つリストを書くことはできません。パーサーはこれをエラーとして扱います。 MDN 上のほとんどすべての定義リストがこの制限で動作することを期待しており、動作しないものについては、生の HTML に戻ることができます。</p>
+
+<p>複数の <code>&lt;dt&gt;</code> 項目を 1 つの <code>&lt;dd&gt;</code> に関連付ける必要がある場合の回避策として、以下のように複数の用語をカンマで区切って 1 つの <code>&lt;dt&gt;</code> として提供することを検討してください。<p>
+
+<pre>
+* `param1`, `param2`, `param3`
+    * : My description of params 1, 2, and 3
+</pre>
+
+<p>ここで説明する構文の根拠は、 CommonMark を期待するツール (Prettier や GitHub のプレビューなど) で十分に機能すると同時に、記述と解析が適度に簡単であることです。</p>
+
+<h3>議論リファレンス</h3>
+
+<p>この課題は <a href="https://github.com/mdn/content/issues/4367">https://github.com/mdn/content/issues/4367</a> で解決されました。</p>
+
+<h2>表</h2>
+
+<p>GFM では (ただし CommonMark を除く)、表の構文として <a href="https://github.github.com/gfm/#tables-extension-">https://github.github.com/gfm/#tables-extension-</a> があります。これを利用していますが、 GFM の構文は HTML で利用可能な機能の一部しか対応していません。</p>
+
+<p>ですから、ここでの一般的な原則は、可能な限り GFM Markdown の構文を使用し、必要に応じて生の HTML に戻る必要があるということです。</p>
+
+<p>GFM の表の構文は、主に以下のような制限があります。</p>
+
+<ul>
+  <li>GFM の表ではヘッダー行が必要です。</li>
+  <li>GFM の表ではヘッダー列を設定することができません。</li>
+  <li>GFM は表のセル内にある GFM ブロック要素を解析しません。例えば、表のセル内にリストを入れることはできません。</li>
+  <li>GFM は <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code>, <code>&lt;td&gt;</code> 以外の表要素に対応していません。</li>
+  <li>GFM は <code>colspan</code>, <code>rowspan</code>, <code>scope</code> のような表要素の属性に対応していません。</li>
+</ul>
+
+<p>これらのみ対応の機能を使用する必要がある場合は、表を HTML で記述する必要があります。</p>
+
+<p>また、 <code>&lt;caption&gt;</code> 要素を表に使用することはお勧めしません。これも GFM の構文の規則外になるからです。</p>
+
+<p>GFM の表の構文では、行の最初と最後のパイプ記号を省略することができます。 MDN の編集者は、読みやすさのためにこれらのパイプ記号を記入する必要があります。</p>
+
+<p>つまり、 MDN の編集者はこのスタイルを使用する必要があります。</p>
+
+<pre>
+| Heading 1 | Heading 2 | Heading 3 |
+|-----------|-----------|-----------|
+| cell 1    | cell 2    | cell 3    |
+| cell 4    | cell 5    | cell 6    |
+</pre>
+
+<p>このスタイルではありません。</p>
+
+<pre>
+Heading 1 | Heading 2 | Heading 3
+ --- | --- | ---
+cell 1    | cell 2    | cell 3
+cell 4    | cell 5    | cell 6
+</pre>
+
+<h3>議論リファレンス</h3>
+
+<p>この課題は <a href="https://github.com/mdn/content/issues/4325">https://github.com/mdn/content/issues/4325</a> で解決しました。</p>
+
+<h2>上付き・下付き文字</h2>
+
+<p>HTML の {{HTMLElement("sup")}} および {{HTMLElement("sub")}} 要素を必要に応じて使用することができますが、可能な限り代替策を採ってください。具体的には次のようにします。</p>
+
+<ul>
+  <li>べき乗については、 <code>2^53</code> のようにキャレットを使用してください。</li>
+  <li>1<sup>st</sup> のような序数表現では、 "first" のように言葉を使用してください。</li>
+  <li>脚注については、脚注参照を <code>&lt;sup&gt;[1]&lt;/sup&gt;</code> のようにマークアップする必要はありません。不必要なものです。</li>
+</ul>
+
+<h3>議論リファレンス</h3>
+
+<p>この課題は <a href="https://github.com/mdn/content/issues/4578">https://github.com/mdn/content/issues/4578</a> で解決しました。</p>
+
+<h2>ページ概要</h2>
+
+<p><em>ページ概要</em>はページの最初の「コンテンツ」の段落、すなわち、ページのフロントマター、<a href="#kumascript">サイドバー、ページバナーのマクロ</a>の後に表示される最初のテキストです。</p>
+
+<p>この概要は検索エンジン最適化 (SEO) のために使用され、また、マクロによってはページリストに自動的に含まれます。
+	したがって、最初の段落は、簡潔で説明的なものでなければなりません。</p>
+
+<h3>議論リファレンス</h3>
+
+<p>この課題は <a href="https://github.com/mdn/content/issues/3923">https://github.com/mdn/content/issues/3923</a> で解決しました。</p>
+
+<h2>KumaScript</h2>
+
+<p>文章のコンテンツに、 KumaScript のマクロ呼び出しを含めることができます。</p>
+
+<pre>
+
+The **`margin`** [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) property
+sets the margin area on all four sides of an element. It is a shorthand for
+\{{cssxref("margin-top")}}, \{{cssxref("margin-right")}}, \{{cssxref("margin-bottom")}},
+and \{{cssxref("margin-left")}}.
+
+\{{EmbedInteractiveExample("pages/css/margin.html")}}
+
+The top and bottom margins have no effect on replaced inline elements, such as
+\{{HTMLElement("span")}} or \{{HTMLElement("code")}}.
+
+</pre>
