@@ -3916,7 +3916,7 @@
 /ja/docs/Web/Guide/HTML/Forms/Styling_HTML_forms	/ja/docs/Learn/Forms/Styling_web_forms
 /ja/docs/Web/Guide/HTML/Forms/The_native_form_widgets	/ja/docs/Learn/Forms/Basic_native_form_controls
 /ja/docs/Web/Guide/HTML/HTML5	/ja/docs/orphaned/Web/Guide/HTML/HTML5
-/ja/docs/Web/Guide/HTML/HTML5/Constraint_validation	/ja/docs/orphaned/Web/Guide/HTML/HTML5/Constraint_validation
+/ja/docs/Web/Guide/HTML/HTML5/Constraint_validation	/ja/docs/Web/Guide/HTML/Constraint_validation
 /ja/docs/Web/Guide/HTML/HTML5/Forms_in_HTML5	/ja/docs/Learn/Forms
 /ja/docs/Web/Guide/HTML/HTML5/HTML5_Thematic_Classification	/ja/docs/orphaned/Web/Guide/HTML/HTML5
 /ja/docs/Web/Guide/HTML/HTML5/HTML5_element_list	/ja/docs/Web/HTML/Element
@@ -3982,7 +3982,7 @@
 /ja/docs/Web/HTML/Forms/The_native_form_widgets	/ja/docs/Learn/Forms/Basic_native_form_controls
 /ja/docs/Web/HTML/Forms_in_HTML	/ja/docs/Learn/Forms/HTML5_input_types
 /ja/docs/Web/HTML/HTML5	/ja/docs/orphaned/Web/Guide/HTML/HTML5
-/ja/docs/Web/HTML/HTML5/Constraint_validation	/ja/docs/orphaned/Web/Guide/HTML/HTML5/Constraint_validation
+/ja/docs/Web/HTML/HTML5/Constraint_validation	/ja/docs/Web/Guide/HTML/Constraint_validation
 /ja/docs/Web/HTML/HTML5/Forms_in_HTML5	/ja/docs/Learn/Forms/HTML5_input_types
 /ja/docs/Web/HTML/HTML5/HTML5_Thematic_Classification	/ja/docs/orphaned/Web/Guide/HTML/HTML5
 /ja/docs/Web/HTML/HTML5/HTML5_element_list	/ja/docs/Web/HTML/Element

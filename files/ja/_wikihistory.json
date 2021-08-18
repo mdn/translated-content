@@ -33604,6 +33604,13 @@
       "Marsf"
     ]
   },
+  "Web/Guide/HTML/Constraint_validation": {
+    "modified": "2020-10-16T13:41:03.752Z",
+    "contributors": [
+      "mfuji09",
+      "Uemmra3"
+    ]
+  },
   "Web/Guide/HTML/Content_categories": {
     "modified": "2020-10-18T10:43:23.129Z",
     "contributors": [
@@ -49530,13 +49537,6 @@
       "shirayuki",
       "Dwchiang",
       "Marsf"
-    ]
-  },
-  "orphaned/Web/Guide/HTML/HTML5/Constraint_validation": {
-    "modified": "2020-10-16T13:41:03.752Z",
-    "contributors": [
-      "mfuji09",
-      "Uemmra3"
     ]
   },
   "orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5": {
