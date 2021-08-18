@@ -3173,7 +3173,6 @@
 /ja/docs/Web/API/MediaRecorder_API	/ja/docs/Web/API/MediaStream_Recording_API
 /ja/docs/Web/API/Navigator.getUserMedia	/ja/docs/Web/API/Navigator/getUserMedia
 /ja/docs/Web/API/Navigator/registerContentHandler	/ja/docs/orphaned/Web/API/Navigator/registerContentHandler
-/ja/docs/Web/API/NavigatorConcurrentHardware/hardwareConcurrency /ja/docs/Web/API/Navigator/hardwareConcurrency
 /ja/docs/Web/API/NavigatorID	/ja/docs/Web/API/Navigator
 /ja/docs/Web/API/NavigatorID/appCodeName	/ja/docs/Web/API/Navigator/appCodeName
 /ja/docs/Web/API/NavigatorID/appName	/ja/docs/Web/API/Navigator/appName
