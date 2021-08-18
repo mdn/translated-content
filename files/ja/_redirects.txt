@@ -2114,7 +2114,7 @@
 /ja/docs/Installing_Extensions_and_Themes_From_Web_Pages	/ja/docs/orphaned/Installing_Extensions_and_Themes_From_Web_Pages
 /ja/docs/Installing_extensions	/ja/docs/orphaned/Installing_extensions
 /ja/docs/Introducing_Content_Security_Policy	/ja/docs/Web/HTTP/CSP
-/ja/docs/Introduction_to_DOM_Inspector	/ja/docs/orphaned/Introduction_to_DOM_Inspector
+/ja/docs/Introduction_to_DOM_Inspector	/ja/docs/Tools/Page_Inspector
 /ja/docs/Introduction_to_using_XPath_in_JavaScript	/ja/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /ja/docs/JSON	/ja/docs/Glossary/JSON
 /ja/docs/JavaScript	/ja/docs/Web/JavaScript
