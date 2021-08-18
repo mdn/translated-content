@@ -18963,6 +18963,12 @@
       "rootx"
     ]
   },
+  "Web/API/Navigator/hardwareConcurrency": {
+    "modified": "2020-10-15T22:16:03.921Z",
+    "contributors": [
+      "shisama"
+    ]
+  },
   "Web/API/Navigator/keyboard": {
     "modified": "2020-10-15T22:09:25.704Z",
     "contributors": [
@@ -49258,12 +49264,6 @@
       "mikamikuh"
     ]
   },
-  "orphaned/Web/API/HTMLOrForeignElement": {
-    "modified": "2020-10-15T22:28:17.699Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "orphaned/Web/API/Navigator/registerContentHandler": {
     "modified": "2020-10-15T21:15:53.115Z",
     "contributors": [
@@ -49278,12 +49278,6 @@
     "modified": "2020-10-15T22:16:01.086Z",
     "contributors": [
       "fscholz"
-    ]
-  },
-  "orphaned/Web/API/NavigatorConcurrentHardware/hardwareConcurrency": {
-    "modified": "2020-10-15T22:16:03.921Z",
-    "contributors": [
-      "shisama"
     ]
   },
   "orphaned/Web/API/NavigatorLanguage": {
@@ -50134,12 +50128,6 @@
   },
   "orphaned/Web/Manifest/serviceworker": {
     "modified": "2020-10-15T22:29:06.759Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "orphaned/Web/SVG/Element/solidColor": {
-    "modified": "2020-12-06T03:41:32.485Z",
     "contributors": [
       "mfuji09"
     ]

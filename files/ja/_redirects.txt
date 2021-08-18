@@ -3173,8 +3173,6 @@
 /ja/docs/Web/API/MediaRecorder_API	/ja/docs/Web/API/MediaStream_Recording_API
 /ja/docs/Web/API/Navigator.getUserMedia	/ja/docs/Web/API/Navigator/getUserMedia
 /ja/docs/Web/API/Navigator/registerContentHandler	/ja/docs/orphaned/Web/API/Navigator/registerContentHandler
-/ja/docs/Web/API/NavigatorConcurrentHardware	/ja/docs/orphaned/Web/API/NavigatorConcurrentHardware
-/ja/docs/Web/API/NavigatorConcurrentHardware/hardwareConcurrency	/ja/docs/orphaned/Web/API/NavigatorConcurrentHardware/hardwareConcurrency
 /ja/docs/Web/API/NavigatorID	/ja/docs/Web/API/Navigator
 /ja/docs/Web/API/NavigatorID/appCodeName	/ja/docs/Web/API/Navigator/appCodeName
 /ja/docs/Web/API/NavigatorID/appName	/ja/docs/Web/API/Navigator/appName
@@ -4365,7 +4363,6 @@
 /ja/docs/Web/Reference/Events/vrdisplayconnected	/ja/docs/Web/API/Window/vrdisplayconnect_event
 /ja/docs/Web/Reference/Events/vrdisplaydisconnected	/ja/docs/Web/API/Window/vrdisplaydisconnect_event
 /ja/docs/Web/Reference/Events/vrdisplaypresentchange	/ja/docs/Web/API/Window/vrdisplaypresentchange_event
-/ja/docs/Web/SVG/Element/solidColor	/ja/docs/orphaned/Web/SVG/Element/solidColor
 /ja/docs/Web/Security/CSP	/ja/docs/Web/HTTP/CSP
 /ja/docs/Web/Security/CSP/CSP_policy_directives	/ja/docs/Web/HTTP/Headers/Content-Security-Policy
 /ja/docs/Web/Security/CSP/Default_CSP_restrictions	/ja/docs/Web/HTTP/Headers/Content-Security-Policy
