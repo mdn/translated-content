@@ -574,7 +574,7 @@
 /ja/docs/Core_JavaScript_1.5_Guide/About	/ja/docs/Web/JavaScript/Guide/Introduction
 /ja/docs/Core_JavaScript_1.5_Guide/About/Core_Language_Features	/ja/docs/orphaned/Web/JavaScript/Guide/Core_Language_Features
 /ja/docs/Core_JavaScript_1.5_Guide/Block_Statement	/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
-/ja/docs/Core_JavaScript_1.5_Guide/Class-Based_vs._Prototype-Based_Languages	/ja/docs/orphaned/Web/JavaScript/Guide/Class-Based_vs._Prototype-Based_Languages
+/ja/docs/Core_JavaScript_1.5_Guide/Class-Based_vs._Prototype-Based_Languages	/ja/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
 /ja/docs/Core_JavaScript_1.5_Guide/Core_Language_Features	/ja/docs/orphaned/Web/JavaScript/Guide/Core_Language_Features
 /ja/docs/Core_JavaScript_1.5_Guide/Creating_New_Objects	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects
 /ja/docs/Core_JavaScript_1.5_Guide/Creating_New_Objects/Defining_Getters_and_Setters	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters
@@ -619,7 +619,7 @@
 /ja/docs/Core_JavaScript_1.5_Guide:About	/ja/docs/Web/JavaScript/Guide/Introduction
 /ja/docs/Core_JavaScript_1.5_Guide:About:Core_Language_Features	/ja/docs/orphaned/Web/JavaScript/Guide/Core_Language_Features
 /ja/docs/Core_JavaScript_1.5_Guide:Block_Statement	/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
-/ja/docs/Core_JavaScript_1.5_Guide:Class-Based_vs._Prototype-Based_Languages	/ja/docs/orphaned/Web/JavaScript/Guide/Class-Based_vs._Prototype-Based_Languages
+/ja/docs/Core_JavaScript_1.5_Guide:Class-Based_vs._Prototype-Based_Languages	/ja/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
 /ja/docs/Core_JavaScript_1.5_Guide:Core_Language_Features	/ja/docs/orphaned/Web/JavaScript/Guide/Core_Language_Features
 /ja/docs/Core_JavaScript_1.5_Guide:Creating_New_Objects	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects
 /ja/docs/Core_JavaScript_1.5_Guide:Creating_New_Objects:Defining_Getters_and_Setters	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters
@@ -2129,7 +2129,7 @@
 /ja/docs/JavaScript/Guide/About-redirect-1	/ja/docs/Web/JavaScript/Guide/Introduction
 /ja/docs/JavaScript/Guide/Block_Statement	/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /ja/docs/JavaScript/Guide/Block_Statement-redirect-1	/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
-/ja/docs/JavaScript/Guide/Class-Based_vs._Prototype-Based_Languages	/ja/docs/orphaned/Web/JavaScript/Guide/Class-Based_vs._Prototype-Based_Languages
+/ja/docs/JavaScript/Guide/Class-Based_vs._Prototype-Based_Languages	/ja/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
 /ja/docs/JavaScript/Guide/Closures	/ja/docs/Web/JavaScript/Closures
 /ja/docs/JavaScript/Guide/Core_Language_Features	/ja/docs/orphaned/Web/JavaScript/Guide/Core_Language_Features
 /ja/docs/JavaScript/Guide/Creating_New_Objects	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects
@@ -4068,7 +4068,7 @@
 /ja/docs/Web/JavaScript/Getting_Started	/ja/docs/Learn/Getting_started_with_the_web/JavaScript_basics
 /ja/docs/Web/JavaScript/Guide/About	/ja/docs/Web/JavaScript/Guide/Introduction
 /ja/docs/Web/JavaScript/Guide/Block_Statement	/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
-/ja/docs/Web/JavaScript/Guide/Class-Based_vs._Prototype-Based_Languages	/ja/docs/orphaned/Web/JavaScript/Guide/Class-Based_vs._Prototype-Based_Languages
+/ja/docs/Web/JavaScript/Guide/Class-Based_vs._Prototype-Based_Languages	/ja/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
 /ja/docs/Web/JavaScript/Guide/Closures	/ja/docs/Web/JavaScript/Closures
 /ja/docs/Web/JavaScript/Guide/Core_Language_Features	/ja/docs/orphaned/Web/JavaScript/Guide/Core_Language_Features
 /ja/docs/Web/JavaScript/Guide/Creating_New_Objects	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects
