@@ -4,80 +4,68 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocal
 tags:
   - DateTimeFormat
   - Internationalization
+  - Intl
   - JavaScript
+  - Localization
   - Method
-  - Prototype
+  - Reference
+browser-compat: javascript.builtins.Intl.DateTimeFormat.supportedLocalesOf
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocalesOf
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Intl.DateTimeFormat.supportedLocalesOf()</code></strong> メソッドは、ランタイムの既定のロケールで代替する必要なく日時の書式で対応されているものを含む配列を返します。</p>
+**`Intl.DateTimeFormat.supportedLocalesOf()`** メソッドは、ランタイムの既定のロケールで代替する必要なく日時の書式で対応されているものを含む配列を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-supportedlocalesof.html","shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-supportedlocalesof.html","shorter")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただける場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">Intl.DateTimeFormat.supportedLocalesOf(<var>locales</var>[, <var>options</var>])</pre>
+```js
+Intl.DateTimeFormat.supportedLocalesOf(locales)
+Intl.DateTimeFormat.supportedLocalesOf(locales, options)
+```
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+### 引数
 
-<dl>
- <dt><code><var>locales</var></code></dt>
- <dd>BCP 47 言語タグを持つ文字列、またはそのような文字列の配列です。 <code>locales</code> 引数の一般的な形式については、 {{jsxref("Intl", "Intl のページ", "#Locale_identification_and_negotiation", 1)}}を参照してください。</dd>
- <dt><code><var>options</var></code></dt>
- <dd>
- <p>省略可能です。以下のプロパティを持つことがあるオブジェクトです。</p>
+- `locales`
+  - : BCP 47 言語タグを持つ文字列、またはそのような文字列の配列です。 `locales` 引数の一般的な形式については、 {{jsxref("Intl", "Intl", "#Locale_identification_and_negotiation", 1)}} のページを参照してください。
+- `options` {{optional_inline}}
 
- <dl>
-  <dt><code>localeMatcher</code></dt>
-  <dd>使用するロケールの一致アルゴリズムです。指定可能な値は <code>lookup</code> および <code>best fit</code> で、既定値は <code>best fit</code> です。このオプションの詳細は、 {{jsxref("Intl", "Intl のページ", "#Locale_negotiation", 1)}}を参照してください。</dd>
- </dl>
- </dd>
-</dl>
+  - : 省略可能です。以下のプロパティを持つことがあるオブジェクトです。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+    - `localeMatcher`
+      - : 使用するロケールの一致アルゴリズムです。指定可能な値は `lookup` および `best fit` で、既定値は `best fit` です。このオプションの詳細は、 {{jsxref("Intl", "Intl", "#Locale_negotiation", 1)}} のページを参照してください。
 
-<p>指定したロケールタグのサブセットを表す文字列の配列で、ランタイムの既定のロケールで代替する必要なく日時の書式で対応されているものを含みます。</p>
+### 返値
 
-<h2 id="Description" name="Description">解説</h2>
+指定したロケールタグのサブセットを表す文字列の配列で、ランタイムの既定のロケールで代替する必要なく日時の書式で対応されているものを含みます。
 
-<p><code>locales</code> で提供されている言語タグのサブセットを含む配列を返します。返される言語タグは、ランタイムが日時のロケールに対応しているもので、使用しているロケール一致アルゴリズムで一致しているとみなされているものです。</p>
+## 解説
 
-<h2 id="Examples" name="Examples">例</h2>
+`locales` で提供されている言語タグのサブセットを含む配列を返します。返される言語タグは、ランタイムが日時のロケールに対応しているもので、使用しているロケール一致アルゴリズムで一致しているとみなされているものです。
 
-<h3 id="Using_supportedLocalesOf" name="Using_supportedLocalesOf">supportedLocalesOf() の使用</h3>
+## 例
 
-<p>日時の書式でインドネシア語とドイツ語に対応しており、バリ語に対応していないランタイムを想定すると、 <code>supportedLocalesOf</code> はインドネシア語とドイツ語の言語タグを変更せずに返しますが、 pinyin の照合は日時の書式には関係なく、インドネシア語でも使用されません。ここでの <code>lookup</code> アルゴリズムの仕様に注意してください — バリ語話者のほとんどはインドネシア語も理解しているので、 <code>best fit</code> のマッチャーはインドネシア語がバリ語に適切に一致すると判断し、バリ語の言語タグも返すかもしれません。</p>
+### supportedLocalesOf() の使用
 
-<pre class="brush: js notranslate">var locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
-var options = { localeMatcher: 'lookup' };
+日時の書式でインドネシア語とドイツ語に対応しており、バリ語に対応していないランタイムを想定すると、 `supportedLocalesOf` はインドネシア語とドイツ語の言語タグを変更せずに返しますが、 pinyin の照合は日時の書式には関係なく、インドネシア語でも使用されません。ここでの `lookup` アルゴリズムの仕様に注意してください — バリ語話者のほとんどはインドネシア語も理解しているので、 `best fit` のマッチャーはインドネシア語がバリ語に適切に一致すると判断し、バリ語の言語タグも返すかもしれません。
+
+```js
+const locales = ['ban', 'id-u-co-pinyin', 'de-ID'];
+const options = { localeMatcher: 'lookup' };
 console.log(Intl.DateTimeFormat.supportedLocalesOf(locales, options).join(', '));
 // → "id-u-co-pinyin, de-ID"
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#sec-intl.datetimeformat.supportedlocalesof', 'Intl.DateTimeFormat.supportedLocalesOf')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.Intl.DateTimeFormat.supportedLocalesOf")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}</li>
-</ul>
+- {{jsxref("Intl.DateTimeFormat")}}
