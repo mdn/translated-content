@@ -1,6 +1,4 @@
-# Peer Guidelines
-
-## Translated content
+# Translated Content Peer Guidelines
 
 ## Policies for community maintenance teams
 
