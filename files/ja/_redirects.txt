@@ -3220,9 +3220,7 @@
 /ja/docs/Web/API/Node.replaceChild	/ja/docs/Web/API/Node/replaceChild
 /ja/docs/Web/API/Node.textContent	/ja/docs/Web/API/Node/textContent
 /ja/docs/Web/API/Node/baseURIObject	/ja/docs/Web/API/Node
-/ja/docs/Web/API/Node/cloneNode-old	/ja/docs/orphaned/Web/API/Node/getUserData
 /ja/docs/Web/API/Node/firstChild-temp	/ja/docs/Web/API/Node/firstChild
-/ja/docs/Web/API/Node/getUserData	/ja/docs/orphaned/Web/API/Node/getUserData
 /ja/docs/Web/API/Node/innerText	/ja/docs/Web/API/HTMLElement/innerText
 /ja/docs/Web/API/Node/localName	/ja/docs/Web/API/Element/localName
 /ja/docs/Web/API/Node/namespaceURI	/ja/docs/Web/API/Element/namespaceURI
