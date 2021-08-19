@@ -30,9 +30,9 @@ translation_of: 'Learn/Performance/Measuring_performance'
 
 <p>Si vous êtes en capacité d'écrire du code pour le web, sachez qu'il existe un grand nombre <a href="/fr/docs/Web/API">d'API Web</a> destinées à créer vos propres outils de mesure de performances.</p>
 
-<p>Vous pouvez utiliser <a href="/fr/docs/Web/API/Navigation_timing_API">l'API d'horodatage de navigation</a> pour mesurer les performances web côté client. Cela comprend le volume de temps nécessaire pour décharger la page précédente, le temps que prendra la résolution du nom de domaine, le total du temps passé à exécuter le chargement de la page, et bien plus encore. Vous pouvez utiliser les API pour créer des indicateurs de mesure de tous les évènements liés à la navigation affichés dans le diagramme présenté ci-dessous.</p>
+<p>Vous pouvez utiliser <a href="/fr/docs/Web/API/Navigation_timing_API">l'API d'horodatage de navigation</a> pour mesurer les performances web côté client. Cela comprend le volume de temps nécessaire pour décharger la page précédente, le temps que prendra la résolution du nom de domaine, le total du temps passé à exécuter le chargement de la page, et bien plus encore. Vous pouvez utiliser les API pour créer des indicateurs de mesure de tous les évènements liés à la navigation affichés dans le diagramme présenté ci-dessous.</p>
 
-<p><img alt="Voici les différents gestionnaires que l'API d'horodatage de la navigation peut prendre en charge, incluant les gestionnaires suivants (en anglais) : Prompt for unload ; redirect ; unload ; App cache ; DNS ; TCP ; Request ; Response ; Processing ; onLoad ; navigationStart ; redirectStart ; redirectEnd ; fetchStart ; domainLookupEnd ; domainLookupStart ; connectStart (secureConnectionStart) ; connectEnd ; requestStart ; responseStart ; responseEnd ; unloadStart ; unloadEnd ; domLoading ; domInteractive ; domContentLoaded ; domComplete ; loadEventStart ; loadEventEnd." src="navigationtimingapi.jpg"></p>
+<p><img alt="Voici les différents gestionnaires que l'API d'horodatage de la navigation peut prendre en charge, incluant les gestionnaires suivants (en anglais)&nbsp;: Prompt for unload&nbsp;; redirect&nbsp;; unload&nbsp;; App cache&nbsp;; DNS&nbsp;; TCP&nbsp;; Request&nbsp;; Response&nbsp;; Processing&nbsp;; onLoad&nbsp;; navigationStart&nbsp;; redirectStart&nbsp;; redirectEnd&nbsp;; fetchStart&nbsp;; domainLookupEnd&nbsp;; domainLookupStart&nbsp;; connectStart (secureConnectionStart)&nbsp;; connectEnd&nbsp;; requestStart&nbsp;; responseStart&nbsp;; responseEnd&nbsp;; unloadStart&nbsp;; unloadEnd&nbsp;; domLoading&nbsp;; domInteractive&nbsp;; domContentLoaded&nbsp;; domComplete&nbsp;; loadEventStart&nbsp;; loadEventEnd." src="navigationtimingapi.jpg"></p>
 
 <p><a href="/fr/docs/Web/API/Performance_API/Using_the_Performance_API">L'API de performances</a> propose un accès aux informations liées aux performances, ce qui comprend <a href="/fr/docs/Web/API/Performance_Timeline">l'API de chronologie des performances</a>, <a href="/fr/docs/Web/API/Navigation_timing_API">l'API d'horodatage de la navigation</a>, <a href="/fr/docs/Web/API/User_Timing_API">l'API d'horodatage du visiteur</a> ainsi que <a href="/fr/docs/Web/API/Resource_Timing_API">l'API d'horodatage des ressources</a>. Ces interfaces permettent de mesurer précisément le temps que prennent les tâches JavaScript pour se dérouler.</p>
 
@@ -40,11 +40,11 @@ translation_of: 'Learn/Performance/Measuring_performance'
 
 <p><a href="/fr/docs/Web/API/PerformanceObserver">L'API PerformanceObserver</a> peut être utilisée pour observer le déroulement d'évènements de mesure des performances et permet de vous notifier de nouvelles <a href="/fr/docs/Web/API/PerformanceEntry">entrées de performances</a> lorsqu'elles enregistrent la chronologie des performances dans le navigateur.</p>
 
-<p>Si cet article n'a pas pour but de proposer une documentation complète de ces API, il est bon de savoir qu'elles existent. Vous pouvez vous référer à l'article concernant <a href="/fr/docs/Web/Performance/Navigation_and_resource_timings">l'horodatage de navigation</a> pour aller plus loin et découvrir plus d'exemples concernant les API liées à la mesure des performances.</p>
+<p>Si cet article n'a pas pour but de proposer une documentation complète de ces API, il est bon de savoir qu'elles existent. Vous pouvez vous référer à l'article concernant <a href="/fr/docs/Web/Performance/Navigation_and_resource_timings">l'horodatage de navigation</a> pour aller plus loin et découvrir plus d'exemples concernant les API liées à la mesure des performances.</p>
 
 <h2 id="tools_and_metrics">Outils de mesure</h2>
 
-<p>Il y a beaucoup d'outils disponibles pour vous aider à améliorer les performances de vos sites. Il sont généralement classés dans deux catégories&nbsp;:</p>
+<p>Il y a beaucoup d'outils disponibles pour vous aider à améliorer les performances de vos sites. Ils sont généralement classés dans deux catégories&nbsp;:</p>
 
 <ul>
   <li>Les outils qui indiquent ou mesurent les performances, tels que <a href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed Insights</a> ou le <a href="/fr/docs/Tools/Network_Monitor">moniteur réseau</a> et le <a href="/fr/docs/Tools/Performance">moniteur de performances</a> de Firefox. Ces outils vous montrent la vitesse de chargement de votre site ou de votre application. Ils vous indiquent également les points sur lesquels votre application web peut être améliorée.</li>
@@ -69,11 +69,11 @@ translation_of: 'Learn/Performance/Measuring_performance'
 
 <h3 id="network_tools">Outils réseau</h3>
 
-<p>La plupart des navigateurs ont des outils avec lesquels vous pouvez tester les pages web en cours de chargement pour déterminer leurs performances. Par exemple, le <a href="/fr/docs/Tools/Network_Monitor">moniteur réseau</a> de Firefox retourne des information détaillées sur toutes les ressources téléchargées sur le réseau ainsi qu'un graphique montrant la durée de téléchargement de chaque ressource.</p>
+<p>La plupart des navigateurs ont des outils avec lesquels vous pouvez tester les pages web en cours de chargement pour déterminer leurs performances. Par exemple, le <a href="/fr/docs/Tools/Network_Monitor">moniteur réseau</a> de Firefox retourne des informations détaillées sur toutes les ressources téléchargées sur le réseau ainsi qu'un graphique montrant la durée de téléchargement de chaque ressource.</p>
 
 <p><img alt="" src="network-monitor.png" style="border-style: solid; border-width: 1px;"></p>
 
-<p>Vous pouvez aussi utiliser le <a href="/fr/docs/Tools/Performance">moniteur de performances</a> pour mesurer les performances de l'interface de votre application ou de votre site pendant que vous réalisez différentes actions. Cela permet d'identifier les fonctionnalités qui ralentissent le plus votre interface.</p>
+<p>Vous pouvez aussi utiliser le <a href="/fr/docs/Tools/Performance">moniteur de performances</a> pour mesurer les performances de l'interface de votre application ou de votre site pendant que vous réalisez différentes actions. Cela permet d'identifier les fonctionnalités qui ralentissent le plus votre interface.</p>
 
 <p><img alt="" src="perf-monitor.png" style="border-style: solid; border-width: 1px;"></p>
 
