@@ -2801,7 +2801,6 @@
 /ja/docs/Mozilla/Add-ons/WebExtensions/前提条件	/ja/docs/Mozilla/Add-ons/WebExtensions/Prerequisites
 /ja/docs/Mozilla/Firefox/Releases/Firefox_47_for_developers	/ja/docs/Mozilla/Firefox/Releases/47
 /ja/docs/Mozilla_Addons_FAQ_(external)	https://addons.mozilla.org/faq.php
-/ja/docs/Mozmill	/ja/docs/orphaned/Mozmill
 /ja/docs/NPAPI/Constants	/ja/docs/Plugins/Guide/Constants
 /ja/docs/NPAPI:Constants	/ja/docs/Plugins/Guide/Constants
 /ja/docs/Namespace	/ja/docs/Glossary/Namespace
@@ -3221,9 +3220,7 @@
 /ja/docs/Web/API/Node.replaceChild	/ja/docs/Web/API/Node/replaceChild
 /ja/docs/Web/API/Node.textContent	/ja/docs/Web/API/Node/textContent
 /ja/docs/Web/API/Node/baseURIObject	/ja/docs/Web/API/Node
-/ja/docs/Web/API/Node/cloneNode-old	/ja/docs/orphaned/Web/API/Node/getUserData
 /ja/docs/Web/API/Node/firstChild-temp	/ja/docs/Web/API/Node/firstChild
-/ja/docs/Web/API/Node/getUserData	/ja/docs/orphaned/Web/API/Node/getUserData
 /ja/docs/Web/API/Node/innerText	/ja/docs/Web/API/HTMLElement/innerText
 /ja/docs/Web/API/Node/localName	/ja/docs/Web/API/Element/localName
 /ja/docs/Web/API/Node/namespaceURI	/ja/docs/Web/API/Element/namespaceURI

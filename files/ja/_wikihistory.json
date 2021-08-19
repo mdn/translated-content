@@ -48972,12 +48972,6 @@
       "Mgjbot"
     ]
   },
-  "orphaned/Mozmill": {
-    "modified": "2019-03-24T00:11:57.214Z",
-    "contributors": [
-      "Marsf"
-    ]
-  },
   "orphaned/New_in_JavaScript_1.8": {
     "modified": "2019-03-24T00:06:00.366Z",
     "contributors": [
@@ -49348,19 +49342,6 @@
     "modified": "2020-10-15T22:20:07.668Z",
     "contributors": [
       "Wind1808"
-    ]
-  },
-  "orphaned/Web/API/Node/getUserData": {
-    "modified": "2020-10-15T21:14:35.305Z",
-    "contributors": [
-      "mfuji09",
-      "AshfaqHossain",
-      "teoli",
-      "ethertank",
-      "dextra",
-      "Potappo",
-      "Mgjbot",
-      "Shoot"
     ]
   },
   "orphaned/Web/API/ParentNode": {
