@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Guide/Numbers_and_dates
 
 <h2 id="숫자">숫자</h2>
 
-<p>JavaScript에서 모든 숫자는 <a class="external external-icon" href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">double-precision 64-bit binary format IEEE 754</a> (즉, ±2<sup>−1022</sup> 과 ±2<sup>+1023</sup> 또는 대략 ±10<sup>−308</sup> to ±10<sup>+308</sup> 사이의 숫자이며 53bits의 수치정밀도 )로 구현되어 있습니다. ± 2<sup>53</sup> - 1까지의 정수 값을 정확하게 나타낼 수 있습니다.</p>
+<p>JavaScript에서 모든 숫자는 <a class="external external-icon" href="https://en.wikipedia.org/wiki/Double-precision_floating-point_format">double-precision 64-bit binary format IEEE 754</a> (즉, ±2^−1022 과 ±2^+1023 또는 대략 ±10^−308 to ±10^+308 사이의 숫자이며 53bits의 수치정밀도 )로 구현되어 있습니다. ±2^53 - 1까지의 정수 값을 정확하게 나타낼 수 있습니다.</p>
 
 <p>여기 부동 소수점 숫자를 나타낼 수 있으며, 숫자 형식은 세 개의 상징적인 값: <code>+</code>{{jsxref("Infinity")}}, <code>-</code>{{jsxref("Infinity")}}, and {{jsxref("NaN")}} (숫자가 아닌 값)을 갖습니다.</p>
 
@@ -120,11 +120,11 @@ var notANum = Number.NaN;
   </tr>
   <tr>
    <td>{{jsxref("Number.MIN_SAFE_INTEGER")}}</td>
-   <td>자바스크립트에서 안전한 최소의 정수.(−2<sup>53</sup> + 1, or <code>−9007199254740991</code>)</td>
+   <td>자바스크립트에서 안전한 최소의 정수.(−2^53 + 1, or <code>−9007199254740991</code>)</td>
   </tr>
   <tr>
    <td>{{jsxref("Number.MAX_SAFE_INTEGER")}}</td>
-   <td>자바스크립트에서 안전한 최대의 정수.(+2<sup>53</sup> − 1, or <code>+9007199254740991</code>)</td>
+   <td>자바스크립트에서 안전한 최대의 정수.(+2^53 − 1, or <code>+9007199254740991</code>)</td>
   </tr>
  </tbody>
 </table>

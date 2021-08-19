@@ -89,7 +89,7 @@ console.log(header);
 
 function encodeRFC5987ValueChars (str) {
     return encodeURIComponent(str).
-        // 注意，仅管 RFC3986 保留 "!"，但 RFC5987 并没有
+        // 注意，尽管 RFC3986 保留 "!"，但 RFC5987 并没有
         // 所以我们并不需要过滤它
         replace(/['()]/g, escape). // i.e., %27 %28 %29
         replace(/\*/g, '%2A').

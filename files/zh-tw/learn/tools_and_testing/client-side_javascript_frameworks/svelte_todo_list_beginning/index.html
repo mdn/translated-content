@@ -85,30 +85,30 @@ tags:
  <li>刪除全部已完成任務。</li>
 </ul>
 
-<h2 id="Building_our_first_component">Building our first component</h2>
+<h2 id="Building_our_first_component">建立我們第一個元件</h2>
 
-<p>Let's create a <code>Todos.svelte</code> component — this will contain our list of todos.</p>
+<p>建立<code>Todos.svelte</code>元件——這將包含我們的待辦任務。</p>
 
 <ol>
  <li>
-  <p>Create a new folder — <code>src/components</code>.</p>
+  <p>建立新資料夾——<code>src/components</code>。</p>
 
   <div class="notecard note">
-  <p><strong>Note</strong>: you can put your components anywhere inside the <code>src</code> folder, but the <code>components</code> folder is a recognized convention to follow, allowing you to find your components easily.</p>
+  <p><strong>注意</strong>：你可以把元件們放在<code>src</code>資料夾當中的任何地方，但放在<code>components</code>資料夾是比較常見的做法，也讓你可以更容易地找到元件們。</p>
   </div>
  </li>
  <li>
-  <p>Create a file named <code>src/components/Todos.svelte</code> with the following content:</p>
+  <p>建立<code>src/components/Todos.svelte</code>檔案並包含以下內容：</p>
 
   <pre class="brush: html">&lt;h1&gt;Svelte To-Do list&lt;/h1&gt;</pre>
  </li>
  <li>
-  <p>Change the <code>title</code> element in <code>public/index.html</code> to contain the text <em>Svelte To-do list</em>:</p>
+  <p>改變<code>public/index.html</code>中的<code>title</code>元素內容為<em>Svelte To-do list</em>：</p>
 
   <pre class="brush: html">&lt;title&gt;Svelte To-Do list&lt;/title&gt;</pre>
  </li>
  <li>
-  <p>Open <code>src/App.svelte</code> and replace its contents with the following:</p>
+  <p>打開<code>src/App.svelte</code>並替換為以下內容：</p>
 
   <pre class="brush: html">&lt;script&gt;
   import Todos from './components/Todos.svelte'
@@ -117,7 +117,7 @@ tags:
 &lt;Todos /&gt;</pre>
  </li>
  <li>
-  <p>In development mode, Svelte will issue a warning in the browser console when specifying a prop that doesn't exist in the component; in this case we have a <code>name</code> prop being specified when we instantiate the <code>App</code> component inside <code>src/main.js</code>, which isn't used inside <code>App</code>. The console should currently give you a message along the lines of "&lt;App&gt; was created with unknown prop 'name'". To get rid of this, remove the <code>name</code> prop from <code>src/main.js</code>; it should now look like so:</p>
+  <p>在開發模式中，當定義屬性沒有存在於元件時，Svelte將會在瀏覽器主控台警示問題；以此例來看，當我們於<code>src/main.js</code>實例化<code>App</code>元件時，由於我們已經明確定義出<code>name</code>屬性，但並無實際在<code>App</code>中使用到。所以主控台現在應該會給你一個警示訊息，如「&lt;App&gt; was created with unknown prop 'name'」。而為了排除這個問題，從<code>src/main.js</code>中移除<code>name</code>屬性；看起來應該要像是如下這樣：</p>
 
   <pre class="brush: js">import App from './App.svelte'
 
@@ -129,7 +129,7 @@ export default app</pre>
  </li>
 </ol>
 
-<p>Now if you check your testing server URL you'll see our <code>Todos.svelte</code> component being rendered:</p>
+<p>假如你現在檢查你的測試伺服器URL，應該會看到<code>Todos.svelte</code>元件已經被渲染出如下畫面：</p>
 
 <p><img alt="basic component rendering which a title that says 'Svelte to-do list'" src="02-todos-component-rendered.png" style="border-style: solid; border-width: 1px; display: block; margin: 0 auto;"></p>
 
