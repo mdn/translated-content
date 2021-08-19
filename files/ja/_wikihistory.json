@@ -49366,19 +49366,6 @@
       "Wind1808"
     ]
   },
-  "orphaned/Web/API/Node/getUserData": {
-    "modified": "2020-10-15T21:14:35.305Z",
-    "contributors": [
-      "mfuji09",
-      "AshfaqHossain",
-      "teoli",
-      "ethertank",
-      "dextra",
-      "Potappo",
-      "Mgjbot",
-      "Shoot"
-    ]
-  },
   "orphaned/Web/API/RTCIdentityErrorEvent": {
     "modified": "2019-03-23T22:51:24.405Z",
     "contributors": [
