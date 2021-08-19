@@ -64,7 +64,7 @@ null 型は値が `null` の 1 つしかありません。詳しくは {{jsxref(
 
 値が代入されていない変数の値は `undefined` になります。詳しくは {{jsxref("undefined")}} および [Undefined](/ja/docs/Glossary/undefined) を参照してください。
 
-### 整数型 (Number)
+### 数値型 (Number)
 
 ECMAScript には、**数値型** (Number) と**長整数型** (BigInt、下記参照) の 2 つの組み込み数値型があります。
 
