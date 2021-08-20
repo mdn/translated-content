@@ -5525,12 +5525,6 @@
       "bsidesoft"
     ]
   },
-  "Web/API/Index": {
-    "modified": "2019-03-06T12:18:21.576Z",
-    "contributors": [
-      "alattalatta"
-    ]
-  },
   "Web/API/IndexedDB_API": {
     "modified": "2020-02-21T12:46:53.785Z",
     "contributors": [
@@ -17539,15 +17533,9 @@
     ]
   },
   "conflicting/Web/API": {
-    "modified": "2019-03-23T23:30:26.179Z",
+    "modified": "2019-03-06T12:18:21.576Z",
     "contributors": [
-      "wbamberg",
-      "fscholz",
-      "oohii",
-      "hyeonseok",
-      "PillarLee",
-      "junho85",
-      "francisco.jordano"
+      "alattalatta"
     ]
   },
   "conflicting/Web/API/Document_Object_Model": {

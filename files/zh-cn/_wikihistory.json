@@ -16296,13 +16296,6 @@
       "ice-i-snow"
     ]
   },
-  "Web/API/Index": {
-    "modified": "2020-09-07T03:42:22.980Z",
-    "contributors": [
-      "SphinxKnight",
-      "hl7514576"
-    ]
-  },
   "Web/API/IndexedDB_API": {
     "modified": "2020-08-17T03:58:13.141Z",
     "contributors": [
@@ -47010,11 +47003,10 @@
     ]
   },
   "conflicting/Web/API": {
-    "modified": "2019-03-23T23:09:29.332Z",
+    "modified": "2020-09-07T03:42:22.980Z",
     "contributors": [
-      "mySoul",
-      "teoli",
-      "AlexChao"
+      "SphinxKnight",
+      "hl7514576"
     ]
   },
   "conflicting/Web/API/Beacon_API": {
