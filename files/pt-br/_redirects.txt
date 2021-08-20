@@ -471,6 +471,7 @@
 /pt-BR/docs/Web/API/API_Web_Audio	/pt-BR/docs/Web/API/Web_Audio_API
 /pt-BR/docs/Web/API/API_Web_Audio/Sintetizador_simples	/pt-BR/docs/Web/API/Web_Audio_API/Simple_synth
 /pt-BR/docs/Web/API/API_de_Desempenho	/pt-BR/docs/Web/API/Performance_API
+/pt-BR/docs/Web/API/AnimationEvent/initAnimationEvent	/pt-BR/docs/conflicting/Web/API/AnimationEvent/AnimationEvent
 /pt-BR/docs/Web/API/ArrayBuffer	/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /pt-BR/docs/Web/API/AudioContext/currentTime	/pt-BR/docs/Web/API/BaseAudioContext/currentTime
 /pt-BR/docs/Web/API/BatteryManager.charging	/pt-BR/docs/Web/API/BatteryManager/charging
