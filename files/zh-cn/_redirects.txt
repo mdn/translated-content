@@ -1377,6 +1377,7 @@
 /zh-CN/docs/Web/API/IDBCursor.direction	/zh-CN/docs/Web/API/IDBCursor/direction
 /zh-CN/docs/Web/API/IDBFactory.open	/zh-CN/docs/Web/API/IDBFactory/open
 /zh-CN/docs/Web/API/IDBObjectStore.openCursor	/zh-CN/docs/Web/API/IDBObjectStore/openCursor
+/zh-CN/docs/Web/API/Index	/zh-CN/docs/conflicting/Web/API
 /zh-CN/docs/Web/API/IndexedDB_API/IDBObjectStore	/zh-CN/docs/Web/API/IDBObjectStore
 /zh-CN/docs/Web/API/Intersection_Observer_API/点观察者API的时序元素可见性	/zh-CN/docs/Web/API/Intersection_Observer_API/Timing_element_visibility
 /zh-CN/docs/Web/API/Location.replace	/zh-CN/docs/Web/API/Location/replace
@@ -1641,7 +1642,7 @@
 /zh-CN/docs/Web/API/window.requestAnimationFrame	/zh-CN/docs/Web/API/Window/requestAnimationFrame
 /zh-CN/docs/Web/API/剪贴板_API	/zh-CN/docs/Web/API/Clipboard_API
 /zh-CN/docs/Web/API/开发式平台	/zh-CN/docs/Web/API/Push_API
-/zh-CN/docs/Web/API/指数	/zh-CN/docs/Web/API/Index
+/zh-CN/docs/Web/API/指数	/zh-CN/docs/conflicting/Web/API
 /zh-CN/docs/Web/API/支付_请求_接口	/zh-CN/docs/Web/API/Payment_Request_API
 /zh-CN/docs/Web/API/支付_请求_接口/Concepts	/zh-CN/docs/Web/API/Payment_Request_API/Concepts
 /zh-CN/docs/Web/API/消息事件	/zh-CN/docs/Web/API/MessageEvent
