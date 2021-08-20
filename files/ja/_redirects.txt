@@ -574,7 +574,7 @@
 /ja/docs/Core_JavaScript_1.5_Guide/About	/ja/docs/Web/JavaScript/Guide/Introduction
 /ja/docs/Core_JavaScript_1.5_Guide/About/Core_Language_Features	/ja/docs/orphaned/Web/JavaScript/Guide/Core_Language_Features
 /ja/docs/Core_JavaScript_1.5_Guide/Block_Statement	/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
-/ja/docs/Core_JavaScript_1.5_Guide/Class-Based_vs._Prototype-Based_Languages	/ja/docs/orphaned/Web/JavaScript/Guide/Class-Based_vs._Prototype-Based_Languages
+/ja/docs/Core_JavaScript_1.5_Guide/Class-Based_vs._Prototype-Based_Languages	/ja/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
 /ja/docs/Core_JavaScript_1.5_Guide/Core_Language_Features	/ja/docs/orphaned/Web/JavaScript/Guide/Core_Language_Features
 /ja/docs/Core_JavaScript_1.5_Guide/Creating_New_Objects	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects
 /ja/docs/Core_JavaScript_1.5_Guide/Creating_New_Objects/Defining_Getters_and_Setters	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters
@@ -619,7 +619,7 @@
 /ja/docs/Core_JavaScript_1.5_Guide:About	/ja/docs/Web/JavaScript/Guide/Introduction
 /ja/docs/Core_JavaScript_1.5_Guide:About:Core_Language_Features	/ja/docs/orphaned/Web/JavaScript/Guide/Core_Language_Features
 /ja/docs/Core_JavaScript_1.5_Guide:Block_Statement	/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
-/ja/docs/Core_JavaScript_1.5_Guide:Class-Based_vs._Prototype-Based_Languages	/ja/docs/orphaned/Web/JavaScript/Guide/Class-Based_vs._Prototype-Based_Languages
+/ja/docs/Core_JavaScript_1.5_Guide:Class-Based_vs._Prototype-Based_Languages	/ja/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
 /ja/docs/Core_JavaScript_1.5_Guide:Core_Language_Features	/ja/docs/orphaned/Web/JavaScript/Guide/Core_Language_Features
 /ja/docs/Core_JavaScript_1.5_Guide:Creating_New_Objects	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects
 /ja/docs/Core_JavaScript_1.5_Guide:Creating_New_Objects:Defining_Getters_and_Setters	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#defining_getters_and_setters
@@ -2129,7 +2129,7 @@
 /ja/docs/JavaScript/Guide/About-redirect-1	/ja/docs/Web/JavaScript/Guide/Introduction
 /ja/docs/JavaScript/Guide/Block_Statement	/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
 /ja/docs/JavaScript/Guide/Block_Statement-redirect-1	/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
-/ja/docs/JavaScript/Guide/Class-Based_vs._Prototype-Based_Languages	/ja/docs/orphaned/Web/JavaScript/Guide/Class-Based_vs._Prototype-Based_Languages
+/ja/docs/JavaScript/Guide/Class-Based_vs._Prototype-Based_Languages	/ja/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
 /ja/docs/JavaScript/Guide/Closures	/ja/docs/Web/JavaScript/Closures
 /ja/docs/JavaScript/Guide/Core_Language_Features	/ja/docs/orphaned/Web/JavaScript/Guide/Core_Language_Features
 /ja/docs/JavaScript/Guide/Creating_New_Objects	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects
@@ -3168,6 +3168,7 @@
 /ja/docs/Web/API/IDBFactory.cmp	/ja/docs/Web/API/IDBFactory/cmp
 /ja/docs/Web/API/IDBFactory.deleteDatabase	/ja/docs/Web/API/IDBFactory/deleteDatabase
 /ja/docs/Web/API/IDBFactory.open	/ja/docs/Web/API/IDBFactory/open
+/ja/docs/Web/API/Index	/ja/docs/conflicting/Web/API_49b9a84475f11fffb8fc271a7df3c49a
 /ja/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/ja/docs/Web/API/IndexedDB_API/Basic_Terminology
 /ja/docs/Web/API/MediaRecorder_API	/ja/docs/Web/API/MediaStream_Recording_API
 /ja/docs/Web/API/Navigator.getUserMedia	/ja/docs/Web/API/Navigator/getUserMedia
@@ -3228,12 +3229,6 @@
 /ja/docs/Web/API/Node/prefix	/ja/docs/Web/API/Element/prefix
 /ja/docs/Web/API/NodeList.item	/ja/docs/Web/API/NodeList/item
 /ja/docs/Web/API/NonDocumentTypeChildNode	/ja/docs/Web/API/Element
-/ja/docs/Web/API/ParentNode	/ja/docs/orphaned/Web/API/ParentNode
-/ja/docs/Web/API/ParentNode/append	/ja/docs/orphaned/Web/API/ParentNode/append
-/ja/docs/Web/API/ParentNode/childElementCount	/ja/docs/Web/API/Element/childElementCount
-/ja/docs/Web/API/ParentNode/children	/ja/docs/orphaned/Web/API/ParentNode/children
-/ja/docs/Web/API/ParentNode/prepend	/ja/docs/orphaned/Web/API/ParentNode/prepend
-/ja/docs/Web/API/ParentNode/querySelectorAll	/ja/docs/orphaned/Web/API/ParentNode/querySelectorAll
 /ja/docs/Web/API/Position	/ja/docs/Web/API/GeolocationPosition
 /ja/docs/Web/API/PositionError	/ja/docs/Web/API/GeolocationPositionError
 /ja/docs/Web/API/Push_API/Using_the_Push_API	/ja/docs/Web/API/Push_API
@@ -4076,7 +4071,7 @@
 /ja/docs/Web/JavaScript/Getting_Started	/ja/docs/Learn/Getting_started_with_the_web/JavaScript_basics
 /ja/docs/Web/JavaScript/Guide/About	/ja/docs/Web/JavaScript/Guide/Introduction
 /ja/docs/Web/JavaScript/Guide/Block_Statement	/ja/docs/Web/JavaScript/Guide/Control_flow_and_error_handling
-/ja/docs/Web/JavaScript/Guide/Class-Based_vs._Prototype-Based_Languages	/ja/docs/orphaned/Web/JavaScript/Guide/Class-Based_vs._Prototype-Based_Languages
+/ja/docs/Web/JavaScript/Guide/Class-Based_vs._Prototype-Based_Languages	/ja/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
 /ja/docs/Web/JavaScript/Guide/Closures	/ja/docs/Web/JavaScript/Closures
 /ja/docs/Web/JavaScript/Guide/Core_Language_Features	/ja/docs/orphaned/Web/JavaScript/Guide/Core_Language_Features
 /ja/docs/Web/JavaScript/Guide/Creating_New_Objects	/ja/docs/Web/JavaScript/Guide/Working_with_Objects#creating_new_objects

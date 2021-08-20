@@ -13592,6 +13592,14 @@
       "hashedhyphen"
     ]
   },
+  "Web/API/Element/append": {
+    "modified": "2020-10-15T22:19:11.886Z",
+    "contributors": [
+      "mfuji09",
+      "dskymd",
+      "isdh"
+    ]
+  },
   "Web/API/Element/attachShadow": {
     "modified": "2020-10-15T22:09:56.110Z",
     "contributors": [
@@ -13633,6 +13641,13 @@
     "contributors": [
       "yumetodo",
       "Marsf"
+    ]
+  },
+  "Web/API/Element/children": {
+    "modified": "2020-11-23T04:45:58.549Z",
+    "contributors": [
+      "segayuu",
+      "sii"
     ]
   },
   "Web/API/Element/classList": {
@@ -14093,6 +14108,13 @@
     "contributors": [
       "YujiSoftware",
       "sii"
+    ]
+  },
+  "Web/API/Element/prepend": {
+    "modified": "2020-10-15T22:22:02.876Z",
+    "contributors": [
+      "mfuji09",
+      "silverskyvicto"
     ]
   },
   "Web/API/Element/querySelector": {
@@ -17792,13 +17814,6 @@
       "yyss",
       "Ragg",
       "ethertank"
-    ]
-  },
-  "Web/API/Index": {
-    "modified": "2019-01-16T21:57:23.880Z",
-    "contributors": [
-      "mfuji09",
-      "Marsf"
     ]
   },
   "Web/API/IndexedDB_API": {
@@ -48588,6 +48603,13 @@
       "Wind1808"
     ]
   },
+  "conflicting/Web/API_49b9a84475f11fffb8fc271a7df3c49a": {
+    "modified": "2019-01-16T21:57:23.880Z",
+    "contributors": [
+      "mfuji09",
+      "Marsf"
+    ]
+  },
   "conflicting/Web/API_dd04ca1265cb79b990b8120e5f5070d3": {
     "modified": "2019-03-23T23:32:13.721Z",
     "contributors": [
@@ -49344,43 +49366,6 @@
       "Wind1808"
     ]
   },
-  "orphaned/Web/API/ParentNode": {
-    "modified": "2020-11-23T03:46:53.867Z",
-    "contributors": [
-      "segayuu",
-      "yyss",
-      "Marsf",
-      "YuichiNukiyama"
-    ]
-  },
-  "orphaned/Web/API/ParentNode/append": {
-    "modified": "2020-10-15T22:19:11.886Z",
-    "contributors": [
-      "mfuji09",
-      "dskymd",
-      "isdh"
-    ]
-  },
-  "orphaned/Web/API/ParentNode/children": {
-    "modified": "2020-11-23T04:45:58.549Z",
-    "contributors": [
-      "segayuu",
-      "sii"
-    ]
-  },
-  "orphaned/Web/API/ParentNode/prepend": {
-    "modified": "2020-10-15T22:22:02.876Z",
-    "contributors": [
-      "mfuji09",
-      "silverskyvicto"
-    ]
-  },
-  "orphaned/Web/API/ParentNode/querySelectorAll": {
-    "modified": "2020-10-15T22:26:50.502Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "orphaned/Web/API/RTCIdentityErrorEvent": {
     "modified": "2019-03-23T22:51:24.405Z",
     "contributors": [
@@ -49820,16 +49805,6 @@
     "modified": "2019-03-18T21:26:05.914Z",
     "contributors": [
       "mfuji09"
-    ]
-  },
-  "orphaned/Web/JavaScript/Guide/Class-Based_vs._Prototype-Based_Languages": {
-    "modified": "2019-01-16T14:43:33.903Z",
-    "contributors": [
-      "ethertank",
-      "happysadman",
-      "Mgjbot",
-      "electrolysis",
-      "Kozawa"
     ]
   },
   "orphaned/Web/JavaScript/Guide/Core_Language_Features": {
