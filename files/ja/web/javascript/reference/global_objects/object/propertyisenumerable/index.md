@@ -3,71 +3,73 @@ title: Object.prototype.propertyIsEnumerable()
 slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 tags:
   - JavaScript
-  - Method
-  - Object
-  - Prototype
-  - プロトタイプ
   - メソッド
+  - Object
+  - プロトタイプ
+browser-compat: javascript.builtins.Object.propertyIsEnumerable
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p> <code><strong>propertyIsEnumerable()</strong></code> メソッドは、指定されたプロパティが列挙可能で、オブジェクト自身のプロパティであることを示す Boolean を返します。</p>
+**`propertyIsEnumerable()`** メソッドは、指定されたプロパティが列挙可能で、かつオブジェクト自身のプロパティであるかどうかを示す論理値を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/object-prototype-propertyisenumerable.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/object-prototype-propertyisenumerable.html", "taller")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+propertyIsEnumerable(prop)
+```
 
-<pre class="syntaxbox"><code><var>obj</var>.propertyIsEnumerable(<var>prop</var>)</code></pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `prop`
+  - : 調べたいプロパティの名前です。
 
-<dl>
- <dt><code>prop</code></dt>
- <dd>調べたいプロパティの名前。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+`true` または `false` の値で、指定されたプロパティが列挙可能であり、かつオブジェクト自身のプロパティであるかどうかを示します。
 
-<p>指定されたプロパティが列挙可能であり、かつオブジェクト自体のプロパティであるかどうかを示す {{jsxref("Boolean")}} 。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+すべてのオブジェクトは `propertyIsEnumerable` メソッドを持っています。このメソッドはあるオブジェクトのプロパティが、プロトタイプチェーンを通じて継承されたプロパティを除いて {{jsxref("Statements/for...in", "for...in")}} ループで列挙可能かどうかを特定することができます。もしオブジェクトが指定されたプロパティを持っていない場合、このメソッドは `false` を返します。
 
-<p>すべてのオブジェクトは <code>propertyIsEnumerable</code> メソッドを持っています。このメソッドはあるオブジェクトのプロパティが、プロトタイプチェーンを通じて継承されたプロパティを除いて {{jsxref("Statements/for...in", "for...in")}} ループで列挙可能かどうかを特定することができます。もしオブジェクトが指定されたプロパティを持っていない場合、このメソッドは <code>false</code> を返します。</p>
+> **Note:** 列挙可能なプロパティは {{jsxref("Statements/for...in", "for...in")}} ループで反復処理されますが、 {{jsxref("Global_Objects/Symbol", "Symbol")}} は含まれないことに留意してください。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="A_basic_use_of_propertyIsEnumerable" name="A_basic_use_of_propertyIsEnumerable"><code>propertyIsEnumerable</code> の基本的な使い方</h3>
+### `propertyIsEnumerable` の基本的な使い方
 
-<p>以下の例はオブジェクトと配列での <code>propertyIsEnumerable</code> の使い方を示しています。</p>
+以下の例はオブジェクトと配列での `propertyIsEnumerable` の使い方を示しています。
 
-<pre class="brush: js">var o = {};
+```js
+var o = {};
 var a = [];
 o.prop = 'is enumerable';
 a[0] = 'is enumerable';
 
 o.propertyIsEnumerable('prop');   // true を返す
 a.propertyIsEnumerable(0);        // true を返す
-</pre>
+```
 
-<h3 id="User-defined_vs._built-in_objects" name="User-defined_vs._built-in_objects">ユーザー定義オブジェクトと組み込みオブジェクト</h3>
+### ユーザー定義オブジェクトと組み込みオブジェクト
 
-<p>以下の例はユーザー定義プロパティと組み込みプロパティの列挙可能性を実証しています。</p>
+以下の例は、ユーザー定義プロパティと組み込みプロパティの列挙可能性を実証しています。
 
-<pre class="brush: js">var a = ['is enumerable'];
+```js
+var a = ['is enumerable'];
 
 a.propertyIsEnumerable(0);          // true を返す
 a.propertyIsEnumerable('length');   // false を返す
 
 Math.propertyIsEnumerable('random');   // false を返す
 this.propertyIsEnumerable('Math');     // false を返す
-</pre>
+```
 
 <h3 id="Direct_versus_inherited_properties" name="Direct_versus_inherited_properties">直接のプロパティと継承されたプロパティ</h3>
 
-<pre class="brush: js">var a = [];
+```js
+var a = [];
 a.propertyIsEnumerable('constructor');         // false を返す
 
 function firstConstructor() {
@@ -77,7 +79,7 @@ function firstConstructor() {
 firstConstructor.prototype.firstMethod = function() {};
 
 function secondConstructor() {
-  this.method = function method() { return 'is enumerable'; };
+  this.method = function() { return 'is enumerable'; };
 }
 
 secondConstructor.prototype = new firstConstructor;
@@ -94,40 +96,25 @@ o.property = 'is enumerable';
 
 o.propertyIsEnumerable('property');            // true を返す
 
-// これらはすべて false を返します。これは、 (最後の2つは for-in で
+// これらはすべて false を返します。これは、 (最後の 2 つは for-in で
 // 反復処理可能であるにもかかわらず) propertyIsEnumerable が考慮しない
 // プロトタイプであるためです。
 o.propertyIsEnumerable('prototype');   // false を返す (as of JS 1.8.1/FF3.6)
 o.propertyIsEnumerable('constructor'); // false を返す
 o.propertyIsEnumerable('firstMethod'); // false を返す
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.prototype.propertyisenumerable', 'Object.prototype.propertyIsEnumerable')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## Browser compatibility
 
-<div>
-<p>{{Compat("javascript.builtins.Object.propertyIsEnumerable")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## See also
 
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">列挙可能性とプロパティの所有権</a></li>
- <li>{{jsxref("Statements/for...in", "for...in")}}</li>
- <li>{{jsxref("Object.keys()")}}</li>
- <li>{{jsxref("Object.defineProperty()")}}</li>
-</ul>
+- [列挙可能性とプロパティの所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- {{jsxref("Statements/for...in", "for...in")}}
+- {{jsxref("Object.keys()")}}
+- {{jsxref("Object.defineProperty()")}}
