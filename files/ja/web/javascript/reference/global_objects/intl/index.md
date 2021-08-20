@@ -8,124 +8,144 @@ tags:
   - Namespace
   - 名前空間
   - 国際化
+browser-compat: javascript.builtins.Intl
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>Intl</code></strong> オブジェクトは、 ECMAScript の国際化 API の名前空間で、言語に依存した文字列の比較、数値フォーマット、日付フォーマットを提供します。 <strong><code>Intl</code></strong> オブジェクトは、いくつかのコンストラクターに加え、国際化コンストラクターや他の言語に関する関数に共通する機能へのアクセスを提供します。</p>
+**`Intl`** オブジェクトは、 ECMAScript の国際化 API の名前空間で、言語に依存した文字列の比較、数値の書式化ト、日付の書式化を提供します。 **`Intl`** オブジェクトは、いくつかのコンストラクターに加え、国際化コンストラクターや他の言語に関する関数に共通する機能へのアクセスを提供します。
 
-<h2 id="Properties" name="Properties">プロパティ</h2>
+## コンストラクタープロパティ
 
-<dl>
- <dt>{{jsxref("Global_Objects/Collator", "Intl.Collator")}}</dt>
- <dd>言語に依存した文字列の比較を可能にするオブジェクトである collator のためのコンストラクター。</dd>
- <dt>{{jsxref("Global_Objects/DateTimeFormat", "Intl.DateTimeFormat")}}</dt>
- <dd>言語に依存した日時の書式化を可能にするオブジェクトのためのコンストラクター。</dd>
- <dt>{{jsxref("Global_Objects/ListFormat", "Intl.ListFormat")}}</dt>
- <dd>言語に依存したリストの書式化を可能にするオブジェクトのためのコンストラクター。</dd>
- <dt>{{jsxref("Global_Objects/Locale", "Intl.Locale")}}</dt>
- <dd>Unicode ロケール識別子を表すオブジェクトのためのコンストラクター。</dd>
- <dt>{{jsxref("Global_Objects/NumberFormat", "Intl.NumberFormat")}}</dt>
- <dd>言語に依存した数値フォーマットを可能にするオブジェクトのためのコンストラクター。</dd>
- <dt>{{jsxref("Global_Objects/PluralRules", "Intl.PluralRules")}}</dt>
- <dd>複数形を意識した書式化や複数形の言語規則を可能にするオブジェクトのためのコンストラクター。</dd>
- <dt>{{jsxref("Global_Objects/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}</dt>
- <dd>言語を意識した相対時刻の書式化を可能にするオブジェクトのためのコンストラクター。</dd>
-</dl>
+- {{jsxref("Global_Objects/Intl/Collator/Collator", "Intl.Collator()")}}
+  - : 言語に依存した文字列の比較を可能にするオブジェクトである collator のためのコンストラクターです。
+- {{jsxref("Global_Objects/Intl/DateTimeFormat/DateTimeFormat", "Intl.DateTimeFormat()")}}
+  - : 言語に依存した日時の書式化を可能にするオブジェクトのためのコンストラクターです。
+- {{jsxref("Global_Objects/Intl/DisplayNames/DisplayNames", "Intl.DisplayNames()")}}
+  - : 言語、地域、文字体系の表示名の一貫した翻訳を可能にするオブジェクトのコンストラクターです。
+- {{jsxref("Global_Objects/Intl/ListFormat/ListFormat", "Intl.ListFormat()")}}
+  - : 言語に依存したリストの書式化を可能にするオブジェクトのためのコンストラクターです。
+- {{jsxref("Global_Objects/Intl/Locale/Locale", "Intl.Locale()")}}
+  - : Unicode ロケール識別子を表すオブジェクトのためのコンストラクターです。
+- {{jsxref("Global_Objects/Intl/NumberFormat/NumberFormat", "Intl.NumberFormat()")}}
+  - : 言語に依存した数値フォーマットを可能にするオブジェクトのためのコンストラクターです。
+- {{jsxref("Global_Objects/Intl/PluralRules/PluralRules", "Intl.PluralRules()")}}
+  - : 複数形を意識した書式化や複数形の言語規則を可能にするオブジェクトのためのコンストラクターです。
+- {{jsxref("Global_Objects/Intl/RelativeTimeFormat/RelativeTimeFormat", "Intl.RelativeTimeFormat()")}}
+  - : 言語を意識した相対時刻の書式化を可能にするオブジェクトのためのコンストラクターです。
 
-<h2 id="Methods" name="Methods">メソッド</h2>
+## メソッド
 
-<dl>
- <dt>{{jsxref("Intl.getCanonicalLocales()")}}</dt>
- <dd>正規のロケール名を返すメソッド。</dd>
-</dl>
+- {{jsxref("Intl.getCanonicalLocales()")}}
+  - : 正規のロケール名を返すメソッド。
 
-<h2 id="Locale_identification_and_negotiation" name="Locale_identification_and_negotiation">ロケールの識別とネゴシエーション</h2>
+<h2 id="Locale_identification_and_negotiation">ロケールの識別とネゴシエーション</h2>
 
-<p>国際化コンストラクターや他のコンストラクターの言語を意識したメソッド (<a href="#See_also">関連情報</a>に記載) は、ロケールを識別して実際に使用するものを決定するために共通のパターンを使用しています。これらはすべて、 <code>locales</code> と <code>options</code> の引数を受け取り、 <code>options.localeMatcher</code> プロパティで指定したアルゴリズムを使用して 要求されたロケールと対応しているロケールとのネゴシエーションを行います。</p>
+国際化コンストラクターや他のコンストラクターの言語を意識したメソッド ([関連情報](#関連情報)に記載) は、ロケールを識別して実際に使用するものを決定するために共通のパターンを使用しています。これらはすべて、 `locales` と `options` の引数を受け取り、 `options.localeMatcher` プロパティで指定したアルゴリズムを使用して 要求されたロケールと対応しているロケールとのネゴシエーションを行います。
 
-<h3 id="locales_argument" name="locales_argument">locales 引数</h3>
+### locales 引数
 
-<p><code>locales</code> 引数は、 <a href="http://tools.ietf.org/html/rfc5646">BCP 47 言語タグ</a>を保持している文字列か、そのような言語タグの配列でなければなりません。 <code>locales</code> 引数が与えられていなかったり、 undefined であったりした場合は、実行時の既定のロケールが使用されます。</p>
+`locales` 引数は、指定された操作に使用するロケールを特定するために使用されます。 JavaScript の実装では `locales` を調べて、表現された指定を満たすものに最も近い、理解可能なロケールを計算します。 `locales` は次のものを取ることができます。
 
-<p>BCP 47 言語タグは、言語と、少なくとも主たる言語コードを含んでいます。ほとんどのよくある形式では、すべてハイフンで区切られたサブタグを、言語コード、文字体系コード、国または地域コードの順で含んでいます。タグは大文字小文字を区別しませんが、文字体系コードでは先頭が大文字で残りは小文字、国または地域コードでは大文字、その他はすべて小文字が推奨されています。</p>
+- `undefined` (または省略): その実装の既定のロケールが使用されます。
+- ロケール: ロケール識別子またはロケール識別子を持つ [`Intl.Locale`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale) オブジェクトです。
+- ロケールのリスト: 何らかの他の値で、オブジェクトに変換され、ロケールの配列として扱われます。
 
-<p>例:</p>
+後 2 者では、実際に使用されるロケールは、[ロケールネゴシエーション](#locale_negotiation)によって決定された、最も良く対応しているロケールになります。
 
-<ul>
- <li><code>"hi"</code>: ヒンディー語 (主たる言語)。</li>
- <li><code>"de-AT"</code>: オーストリアで使用されているドイツ語 (主たる言語と国コード)。</li>
- <li><code>"zh-Hans-CN"</code>: 中国で使用されている簡体字で書かれる中国語 (主たる言語と文字体系と国コード)。</li>
-</ul>
+ロケール識別子は以下のものから成る文字列です。
 
-<p>言語、文字体系、国 (地域)、 (まれに使用される) 変化形を識別する BCP 47 言語タグのサブタグは <a href="http://www.iana.org/assignments/language-subtag-registry">IANA Language Subtag Registry</a> で調べられます。</p>
+1.  原語サブタグ
+2.  (任意で) 文字体系サブタグ
+3.  (任意で) 地域 (または国) サブタグ
+4.  (任意で) 1 つ以上の変化形サブタグ (すべて固有でなければならない)
+5.  (任意で) 1 つ以上の BCP 47 拡張シーケンス
+6.  (任意で) 私的に使用する拡張シーケンス
 
-<p>BCP 47 はまた、拡張を認めており、そのうちの一つ <code>"u"</code> (Unicode) 拡張は、 JavaScript の国際化機能にとって重要です。それは、{{jsxref("Collator")}}, {{jsxref("NumberFormat")}}, {{jsxref("DateTimeFormat")}} オブジェクトのロケール固有の動作のカスタマイズを要求するために使用することができます。</p>
+...存在するサブタグやシーケンスはすべて、ハイフンで区切ります。ロケール識別子は大文字小文字の区別のない ASCII です。しかし、文字体系サブタグではタイトルケース (最初の文字が大文字で、以降の文字は小文字) を、地域サブタグは大文字、それ以外はすべて小文字を使う習慣があります。
 
-<ul>
- <li><code>"de-DE-u-co-phonebk"</code>: ドイツ語のソート順の電話帳変化形を使用します。このソート順では、ウムラウト付きの母音を、 ä → ae, ö → oe, ü → ue のように、ウムラウトの付かない母音二文字に展開したものと見なした順で並べ替えします。</li>
- <li><code>"th-TH-u-nu-thai"</code>: 数値書式で、タイの数字 (๐, ๑, ๒, ๓, ๔, ๕, ๖, ๗, ๘, ๙) を使用します。</li>
- <li><code>"ja-JP-u-ca-japanese"</code>: 日時書式で和暦を使用します。すなわち、2013年は平成25年として表現されます。</li>
- <li><code>"en-GB-u-ca-islamic"</code>: イギリス英語でイスラム暦 (Hijri) を使用します。グレゴリオ暦で2017年10月14日は、 Hijri 暦で 24 Muharram, 1439 です。</li>
-</ul>
+- "`hi`": ヒンディー語 (主たる言語)
+- "`de-AT`": オーストリア (地域) で使用されているドイツ語 (言語)
+- "`zh-Hans-CN`": 中国 (地域) で使用されている簡体字 (文字体系) で書かれている中国語 (言語)。
+- "`en-emodeng`": 英語 (言語) の "Early modern English" 方言 (変化形)
 
-<p>BCP 47 拡張タグは <a href="https://unicode.org/repos/cldr/trunk/common/bcp47/">Unicode CLDR Project</a> にあります。</p>
+言語、文字体系、地域 (国を含む)、 (稀に使用される) 変化形を識別するサブタグは、 [IANA 言語サブタグレジストリー](https://www.iana.org/assignments/language-subtag-registry)に登録されています。このレジストリーは長期にわたって定期的に更新されており、実装は常に最新であるとは限らないため、サブタグが広く対応されていることを頼りすぎないようにしてください。
+
+BCP 47 拡張シーケンスは、単一の数字または文字 (`"x"` 以外) と、ハイフンで区切られた 1 つ以上の 2 から 8 文字の文字または数字によるサブタグで構成されています。それぞれの数字または文字に対して 1 つのシーケンスのみが許可されていますので、 "`de-a-foo-a-foo`" は無効です。 BCP 47 拡張サブタグは [Unicode CLDR Project](https://github.com/unicode-org/cldr/tree/master/common/bcp47) で定義されています。現在は 2 つの拡張機能の意味のみが定義されています。
+
+- `"u"` (Unicode) 拡張は {{jsxref("Intl.Collator")}}, {{jsxref("Intl.NumberFormat")}}, {{jsxref("Intl.DateTimeFormat")}} の各オブジェクトにおいて、ロケール固有の動作のカスタマイズを要求するために使用することができます。
+
+  - "`de-DE-u-co-phonebk`": ドイツ語のソート順の電話帳変化形を使用します。このソート順では、ウムラウト付きの母音を、 ä → ae, ö → oe, ü → ue のように、ウムラウトの付かない母音二文字に展開したものと見なした順で並べ替えします。
+  - "`th-TH-u-nu-thai`": 数値書式で、タイの数字 (๐, ๑, ๒, ๓, ๔, ๕, ๖, ๗, ๘, ๙) を使用します。
+  - "`ja-JP-u-ca-japanese`": 日時書式で和暦を使用します。すなわち、 2013 年は平成 25 年として表現されます。
+  - "`en-GB-u-ca-islamic`": イギリス英語でイスラム暦 (Hijri) を使用します。グレゴリオ暦で2017年10月14日は、 Hijri 暦で 24 Muharram, 1439 です。
+
+- `"t"` (transformed) 拡張は、他のロケールから翻訳されたテキストなど、変換されたコンテンツを示します。現在のところ、 `Intl` の機能で `"t"` 拡張を考慮するものはありません。しかし、この拡張はネストされたロケールを含むことがあります。たとえば、 "`de-t-en`" には英語のロケール識別子が含まれています。入れ子のロケールが存在する場合、それは有効なロケール識別子でなければなりません。例えば、 "`en-emodeng-emodeng`" は (`emodeng` の変化形サブタグが重複しているため) 無効なので、"`de-t-en-emodeng-emodeng`"も無効です。
+
+最後に、"x "という文字を使った私的使用の拡張シーケンスがあり、その後にハイフンで区切られた 1 ～ 8 文字または数字のサブタグが 1 つ以上続きます。これにより、アプリケーションが独自に使用する情報をエンコードすることができますが、すべての `Intl` の操作では無視されます。
 
 <h3 id="Locale_negotiation" name="Locale_negotiation">ロケールネゴシエーション</h3>
 
-<p><code>locales</code> 引数は、すべての Unicode 拡張を除去した後、アプリケーションからの優先順位付き要求として解釈されます。ランタイムは、利用可能なロケールと比較し、利用可能なロケールのうち最適なものを選びます。マッチングアルゴリズムは二種類あります。 "<code>lookup</code>" マッチャーは、<a href="http://tools.ietf.org/html/rfc4647#section-3.4">BCP 47</a> で指定された Lookup アルゴリズムに従います。 "<code>best fit</code>" マッチャーでは、ランタイムが少なくとも、あるいは場合によっては、 Lookup アルゴリズムの結果よりもリクエストに適合したロケールを提供します。アプリケーションが <code>locales</code> 引数を提供しなかった場合や、リクエストに一致するロケールをランタイムが持っていなかった場合は、ランタイムの既定のロケールが使用されます。マッチャーは、 <code>options</code> 引数のプロパティを使って選択することができます (後述)。</p>
+`locales` 引数は、すべての Unicode 拡張を除去した後、アプリケーションからの優先順位付き要求として解釈されます。ランタイムは、利用可能なロケールと比較し、利用可能なロケールのうち最適なものを選びます。マッチングアルゴリズムは二種類あります。 "`lookup`" マッチャーは、[BCP 47](https://datatracker.ietf.org/doc/html/rfc4647#section-3.4) で指定された Lookup アルゴリズムに従います。 "`best fit`" マッチャーでは、ランタイムが少なくとも、あるいは場合によっては、 Lookup アルゴリズムの結果よりもリクエストに適合したロケールを提供します。アプリケーションが `locales` 引数を提供しなかった場合や、リクエストに一致するロケールをランタイムが持っていなかった場合は、ランタイムの既定のロケールが使用されます。マッチャーは、 `options` 引数のプロパティを使って選択することができます (下記参照)。
 
-<p>ネゴシエーションにより選択された言語タグが Unicode 拡張の部分文字列を持っているとき、その拡張はここで、構築されたオブジェクトや関数の振る舞いをカスタマイズするために使われます。それぞれのコンストラクターや関数は、 Unicode 拡張用のキーのごく一部分のみ対応しており、また、対応する値は、多くの場合言語タグに依存します。例えば、 "<code>co</code>" キー (コレクション)は、 {{jsxref("Collator")}} だけが対応しており、そのキーに対する "<code>phonebk</code>" の値はドイツ語だけが対応しています。</p>
+ネゴシエーションにより選択された言語タグが Unicode 拡張の部分文字列を持っているとき、その拡張はここで、構築されたオブジェクトや関数の振る舞いをカスタマイズするために使われます。それぞれのコンストラクターや関数は、 Unicode 拡張用のキーのごく一部分のみ対応しており、また、対応する値は、多くの場合言語タグに依存します。例えば、 "`co`" キー (コレクション)は、 {{jsxref("Intl.Collator")}} だけが対応しており、そのキーに対する "`phonebk`" の値はドイツ語だけが対応しています。
 
-<h3 id="options_argument" name="options_argument">options 引数</h3>
+### options 引数
 
-<p><code>options</code> 引数は、コンストラクターや関数ごとに異なるプロパティをもつオブジェクトである必要があります。 <code>options</code> 引数が与えられなかった場合、または、未定義の場合、すべてのプロパティに対して既定値が使用されます。</p>
+`options` 引数は、コンストラクターや関数ごとに異なるプロパティをもつオブジェクトである必要があります。 `options` 引数が与えられなかった場合、または、未定義の場合、すべてのプロパティに対して既定値が使用されます。
 
-<p>言語を意識するすべてのコンストラクターや関数が対応しているプロパティが一つあります。 <code>localeMatcher</code> プロパティで、この値は "<code>lookup</code>" または "<code>best fit</code>" の文字列である必要があり、上記のロケールマッチングアルゴリズムのうちから一つを選択します。</p>
+言語を意識するすべてのコンストラクターや関数が対応しているプロパティが一つあります。 `localeMatcher` プロパティで、この値は "`lookup`" または "`best fit`" の文字列である必要があり、上記のロケールマッチングアルゴリズムのうちから一つを選択します。
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 例
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#intl-object', 'Intl')}}</td>
-  </tr>
- </tbody>
-</table>
+### 日付と数値の書式化
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+`Intl` を使用して、特定の言語や地域で一般的な形で日付や数値を書式化することができます。
 
-<div>
-<p>{{Compat("javascript.builtins.Intl")}}</p>
-</div>
+```js
+const count = 26254.39;
+const date = new Date("2012-05-24");
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+function log(locale) {
+  console.log(
+    `${new Intl.DateTimeFormat(locale).format(date)} ${new Intl.NumberFormat(locale).format(count)}`
+  );
+}
 
-<ul>
- <li>導入: <a href="https://norbertlindenberg.com/2012/12/ecmascript-internationalization-api/index.html">The ECMAScript Internationalization API</a></li>
- <li>コンストラクター
-  <ul>
-   <li>{{jsxref("Collator", "Intl.Collator")}}</li>
-   <li>{{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}</li>
-   <li>{{jsxref("ListFormat", "Intl.ListFormat")}}</li>
-   <li>{{jsxref("NumberFormat", "Intl.NumberFormat")}}</li>
-   <li>{{jsxref("PluralRules", "Intl.PluralRules")}}</li>
-   <li>{{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat")}}</li>
-   <li>{{jsxref("Locale", "Intl.Locale")}}</li>
-  </ul>
- </li>
- <li>メソッド
-  <ul>
-   <li>{{jsxref("String.prototype.localeCompare()")}}</li>
-   <li>{{jsxref("Number.prototype.toLocaleString()")}}</li>
-   <li>{{jsxref("Date.prototype.toLocaleString()")}}</li>
-   <li>{{jsxref("Date.prototype.toLocaleDateString()")}}</li>
-   <li>{{jsxref("Date.prototype.toLocaleTimeString()")}}</li>
-  </ul>
- </li>
-</ul>
+log("en-US");
+// 期待される出力: 5/24/2012 26,254.39
+
+log("de-DE");
+// 期待される出力: 24.5.2012 26.254,39
+```
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+
+## 関連情報
+
+- 導入: [The ECMAScript Internationalization API](https://norbertlindenberg.com/2012/12/ecmascript-internationalization-api/index.html)
+- コンストラクター
+
+  - {{jsxref("Intl/Collator", "Intl.Collator")}}
+  - {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}}
+  - {{jsxref("Intl/ListFormat", "Intl.ListFormat")}}
+  - {{jsxref("Intl/NumberFormat", "Intl.NumberFormat")}}
+  - {{jsxref("Intl/PluralRules", "Intl.PluralRules")}}
+  - {{jsxref("Intl/RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
+  - {{jsxref("Intl/Locale", "Intl.Locale")}}
+
+- メソッド
+
+  - {{jsxref("String.prototype.localeCompare()")}}
+  - {{jsxref("Number.prototype.toLocaleString()")}}
+  - {{jsxref("Date.prototype.toLocaleString()")}}
+  - {{jsxref("Date.prototype.toLocaleDateString()")}}
+  - {{jsxref("Date.prototype.toLocaleTimeString()")}}
+ 
