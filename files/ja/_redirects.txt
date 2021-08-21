@@ -1507,7 +1507,7 @@
 /ja/docs/DOM/window.navigator.buildID	/ja/docs/Web/API/Navigator/buildID
 /ja/docs/DOM/window.navigator.cookieEnabled	/ja/docs/Web/API/Navigator/cookieEnabled
 /ja/docs/DOM/window.navigator.isLocallyAvailable	/ja/docs/Web/API/Navigator/mozIsLocallyAvailable
-/ja/docs/DOM/window.navigator.language	/ja/docs/orphaned/Web/API/NavigatorLanguage/language
+/ja/docs/DOM/window.navigator.language	/ja/docs/Web/API/Navigator/language
 /ja/docs/DOM/window.navigator.mozIsLocallyAvailable	/ja/docs/Web/API/Navigator/mozIsLocallyAvailable
 /ja/docs/DOM/window.navigator.onLine	/ja/docs/Web/API/Navigator/onLine
 /ja/docs/DOM/window.navigator.oscpu	/ja/docs/Web/API/Navigator/oscpu
@@ -1729,7 +1729,7 @@
 /ja/docs/DOM:window.navigator.buildID	/ja/docs/Web/API/Navigator/buildID
 /ja/docs/DOM:window.navigator.cookieEnabled	/ja/docs/Web/API/Navigator/cookieEnabled
 /ja/docs/DOM:window.navigator.isLocallyAvailable	/ja/docs/Web/API/Navigator/mozIsLocallyAvailable
-/ja/docs/DOM:window.navigator.language	/ja/docs/orphaned/Web/API/NavigatorLanguage/language
+/ja/docs/DOM:window.navigator.language	/ja/docs/Web/API/Navigator/language
 /ja/docs/DOM:window.navigator.mozIsLocallyAvailable	/ja/docs/Web/API/Navigator/mozIsLocallyAvailable
 /ja/docs/DOM:window.navigator.onLine	/ja/docs/Web/API/Navigator/onLine
 /ja/docs/DOM:window.navigator.oscpu	/ja/docs/Web/API/Navigator/oscpu
@@ -3180,10 +3180,10 @@
 /ja/docs/Web/API/NavigatorID/platform	/ja/docs/Web/API/Navigator/platform
 /ja/docs/Web/API/NavigatorID/product	/ja/docs/Web/API/Navigator/product
 /ja/docs/Web/API/NavigatorID/userAgent	/ja/docs/Web/API/Navigator/userAgent
-/ja/docs/Web/API/NavigatorLanguage	/ja/docs/orphaned/Web/API/NavigatorLanguage
-/ja/docs/Web/API/NavigatorLanguage.languages	/ja/docs/orphaned/Web/API/NavigatorLanguage/languages
-/ja/docs/Web/API/NavigatorLanguage/language	/ja/docs/orphaned/Web/API/NavigatorLanguage/language
-/ja/docs/Web/API/NavigatorLanguage/languages	/ja/docs/orphaned/Web/API/NavigatorLanguage/languages
+/ja/docs/Web/API/NavigatorLanguage	/ja/docs/Web/API/Navigator
+/ja/docs/Web/API/NavigatorLanguage.languages	/ja/docs/Web/API/Navigator/languages
+/ja/docs/Web/API/NavigatorLanguage/language	/ja/docs/Web/API/Navigator/language
+/ja/docs/Web/API/NavigatorLanguage/languages	/ja/docs/Web/API/Navigator/languages
 /ja/docs/Web/API/NavigatorOnLine/Online_and_offline_events	/ja/docs/Web/API/Navigator/Online_and_offline_events
 /ja/docs/Web/API/NavigatorOnLine/onLine	/ja/docs/Web/API/Navigator/onLine
 /ja/docs/Web/API/NavigatorStorage	/ja/docs/orphaned/Web/API/NavigatorStorage
@@ -3488,7 +3488,7 @@
 /ja/docs/Web/API/window.navigator.appCodeName	/ja/docs/Web/API/Navigator/appCodeName
 /ja/docs/Web/API/window.navigator.appName	/ja/docs/Web/API/Navigator/appName
 /ja/docs/Web/API/window.navigator.battery	/ja/docs/Web/API/Navigator/battery
-/ja/docs/Web/API/window.navigator.language	/ja/docs/orphaned/Web/API/NavigatorLanguage/language
+/ja/docs/Web/API/window.navigator.language	/ja/docs/Web/API/Navigator/language
 /ja/docs/Web/API/window.navigator.onLine	/ja/docs/Web/API/Navigator/onLine
 /ja/docs/Web/API/window.navigator.oscpu	/ja/docs/Web/API/Navigator/oscpu
 /ja/docs/Web/API/window.navigator.platform	/ja/docs/Web/API/Navigator/platform
