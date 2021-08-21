@@ -7,11 +7,11 @@ tags:
   - 无障碍
 translation_of: Web/Accessibility/ARIA/Roles/listbox_role
 ---
-<p><span class="seoSummary"><code>listbox</code> 角色用于列表，用户可以从中选择一个或多个静态选项，并且与 HTML &lt;select&gt; 元素不同，它可能包含图像。</span></p>
+<p><span class="seoSummary"><code>listbox</code> 角色用于列表，用户可以从中选择一个或多个静态选项，并且与 HTML {{HTMLElement("select")}} 元素不同，它可能包含图像。</span></p>
 
 <h2 id="Description">描述</h2>
 
-<p><code>listbox</code> 角色用于标识创建列表的元素，用户可以从中选择一个或多个静态选项，类似于 HTML &lt;select&gt; 元素。与 &lt;select&gt; 不同，<code>listbox</code> 可以包含图像。<code>listbox</code> 的每个子项都应该有一个 <a href="https://www.w3.org/TR/2010/WD-wai-aria-20100916/roles#option"><code>option</code></a> role。</p>
+<p><code>listbox</code> 角色用于标识创建列表的元素，用户可以从中选择一个或多个静态选项，类似于 HTML {{HTMLElement("select")}} 元素。与 {{HTMLElement("select")}} 不同，<code>listbox</code> 可以包含图像。<code>listbox</code> 的每个子项都应该有一个 <a href="https://www.w3.org/TR/2010/WD-wai-aria-20100916/roles#option"><code>option</code></a> role。</p>
 
 <p>强烈建议使用 HTML <code>select</code> 元素，如果只能选择一个选项，则使用一组单选按钮，如果可以选择多个选项，则使用一组复选框，因为有很多键盘交互来管理所有后代的焦点和原生 HTML 元素为您提供相关的功能。</p>
 
@@ -122,7 +122,7 @@ translation_of: Web/Accessibility/ARIA/Roles/listbox_role
 </ol>
 
 <div class="note">
-<p><span class="ILfuVd yZ8quc">ARIA 使用的第一原则是您可以使用具有内置语义和行为的原生功能，而不是重新利用元素并<strong>添加</strong> ARIA角色、状态或属性使其可访问。含有后代 &lt;option&gt; 元素的 &lt;select&gt; 元素带有所有需要的交互的原生处理方法。</span></p>
+<p><span class="ILfuVd yZ8quc">ARIA 使用的第一原则是您可以使用具有内置语义和行为的原生功能，而不是重新利用元素并<strong>添加</strong> ARIA角色、状态或属性使其可访问。含有后代 {{HTMLElement("option")}} 元素的 {{HTMLElement("select")}} 元素带有所有需要的交互的原生处理方法。</span></p>
 </div>
 
 <h2 id="Examples">例子</h2>
@@ -146,7 +146,7 @@ translation_of: Web/Accessibility/ARIA/Roles/listbox_role
 &lt;/div&gt;
 </pre>
 
-<p>使用原生的 HTML <a href="/zh-CN/docs/Web/HTML/Element/select"><code>&lt;select&gt;</code> </a> 和 <a href="/zh-CN/docs/Web/HTML/Element/label"> <code>&lt;label&gt;</code></a> 元素可以更简单。</p>
+<p>使用原生的 HTML {{HTMLElement("select")}} 和 {{HTMLElement("label")}} 元素可以更简单。</p>
 
 <pre class="brush: html">&lt;label for="listbox1"&gt;Select a color:&lt;/label&gt;
 &lt;select id="listbox1"&gt;
@@ -202,9 +202,9 @@ translation_of: Web/Accessibility/ARIA/Roles/listbox_role
 <h2 id="See_also">另见</h2>
 
 <ul>
-	<li><a href="/zh-CN/docs/Web/HTML/Element/select">HTML <code>&lt;select&gt;</code> 元素</a></li>
-	<li><a href="/zh-CN/docs/Web/HTML/Element/label">HTML <code>&lt;label&gt;</code> 元素</a></li>
-	<li><a href="/zh-CN/docs/Web/HTML/Element/option">HTML <code>&lt;option&gt;</code> 元素</a></li>
+	<li>{{HTMLElement("select")}} 元素</li>
+	<li>{{HTMLElement("label")}} 元素</li>
+	<li>{{HTMLElement("option")}} 元素</li>
 	<li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/combobox_role">ARIA: <code>combobox</code> 角色</a></li>
 	<li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/option_role">ARIA: <code>option</code> 角色</a></li>
 	<li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/List_role">ARIA: <code>list</code> 角色</a></li>
