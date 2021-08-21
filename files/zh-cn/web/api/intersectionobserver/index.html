@@ -51,7 +51,7 @@ translation_of: Web/API/IntersectionObserver
  </dt>
 </dl>
 
-<pre><code>var intersectionObserver = new IntersectionObserver(function(entries) {
+<pre class="brush: js">var intersectionObserver = new IntersectionObserver(function(entries) {
   // If intersectionRatio is 0, the target is out of view
   // and we do not need to do anything.
   if (entries[0].intersectionRatio &lt;= 0) return;
@@ -60,7 +60,7 @@ translation_of: Web/API/IntersectionObserver
   console.log('Loaded new items');
 });
 // start observing
-intersectionObserver.observe(document.querySelector('.scrollerFooter'));</code></pre>
+intersectionObserver.observe(document.querySelector('.scrollerFooter'));</pre>
 
 <h2 id="规范">规范</h2>
 
