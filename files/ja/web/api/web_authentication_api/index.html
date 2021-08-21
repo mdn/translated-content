@@ -70,7 +70,7 @@ translation_of: Web/API/Web_Authentication_API
   この保証には次の点を含む：
   <ol>
    <li>challenge が送信時と同じものであるかの確認</li>
-   <li>origin が期待された origin でとなっていることの保証</li>
+   <li>origin が期待された origin となっていることの保証</li>
    <li>clientDataHash の署名と特定モデルの認証器用の証明書チェーンを使った attestation の検証</li>
   </ol>
   検証ステップの完全な一覧は <a href="https://w3c.github.io/webauthn/#registering-a-new-credential">WebAuthn の仕様書の中にあります</a>。 チェックが上手くいくと、サーバはユーザーアカウントに紐づいたその新しい公開鍵を保存し、将来の利用に備えます。つまりは、ユーザーが認証のためにその公開鍵を使いたい時は何時でも使えるようにするということです。</li>
