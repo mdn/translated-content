@@ -11,10 +11,7 @@ original_slug: MDN/Structures/Macros/Custom_macros
 ---
 <div>{{MDNSidebar}}</div>
 
-<p><span class="seoSummary">本页列举了一些 MDN 中的常用宏命令。对于使用这些宏的入门信息，请阅读<a
-      href="/zh-CN/docs/MDN/Contribute/Content/Macros">使用宏</a>这篇文章。</span>还有一些不常用或只在特定内容中适用，以及一些不赞成使用的宏的信息，参见<a
-    href="/zh-CN/docs/MDN/Contribute/Structures/Macros/Other">其它宏</a>。在我们的 GitHub Repo 中，可以找到<a
-    href="https://github.com/mdn/yari/tree/master/kumascript/macros">MDN 上所有宏的完整列表</a>。</p>
+<p><span class="seoSummary">本页列举了一些 MDN 中的常用宏命令。对于使用这些宏的入门信息，请阅读<a href="/zh-CN/docs/MDN/Contribute/Content/Macros">使用宏</a>这篇文章。</span>还有一些不常用或只在特定内容中适用，以及一些不赞成使用的宏的信息，参见<a href="/zh-CN/docs/MDN/Contribute/Structures/Macros/Other">其它宏</a>。在我们的 GitHub Repo 中，可以找到<a href="https://github.com/mdn/yari/tree/master/kumascript/macros">MDN 上所有宏的完整列表</a>。</p>
 
 <p>对于调整页面样式相关的宏，另见 <a href="/zh-CN/docs/MDN/Contribute/Guidelines/CSS_style_guide">CSS 样式指南</a>。</p>
 
@@ -26,7 +23,8 @@ original_slug: MDN/Structures/Macros/Custom_macros
 
 <h3 id="Glossayr_links">链接到术语库</h3>
 
-<p>正如{{TemplateLink("Glossary")}}这个宏的名字所示，它可用于创建指向 MDN 中<a href="/zh-CN/docs/Glossary">术语库</a>内一个具体词条的链接。调用这个宏时，有一个必需的参数和一个可选参数。</p>
+<p>正如{{TemplateLink("Glossary")}}这个宏的名字所示，它可用于创建指向 MDN 中<a
+    href="/zh-CN/docs/Glossary">术语库</a>内一个具体词条的链接。调用这个宏时，有一个必需的参数和一个可选参数。</p>
 
 <ol>
   <li>术语的名字，比如“HTML”。
@@ -56,7 +54,7 @@ original_slug: MDN/Structures/Macros/Custom_macros
 
 <p>下面列出的宏可链接到 MDN 站内不同技术领域的参考文档，如 Javascript,、CSS、HTML、elements、SVG 等。</p>
 
-<P>这些宏都很容易上手，大多数情况下只需一个参数——所涉及的 Web 组件的名字（如标签、对象、方法、属性等的名字）。在{{anch("Glossayr links","术语库")}}中提到的，可修改实际显示的文本的可选参数，也存在于下面大多数宏中。如果你想了解其他参数，表格中最左列的链接中可以查看相关宏的文档。</P>
+<P>这些宏都很容易上手，大多数情况下只需一个参数——所涉及的 Web 组件的名字（如标签、对象、方法、属性等的名字）。在{{anch("Glossayrlinks","术语库")}}中提到的，可修改实际显示的文本的可选参数，也存在于下面大多数宏中。如果你想了解其他参数，表格中最左列的链接中可以查看相关宏的文档。</P>
 
 <table class="standard-table">
   <thead>
@@ -76,8 +74,8 @@ original_slug: MDN/Structures/Macros/Custom_macros
       <td>{{TemplateLink("DOMxRef")}}</td>
       <td><a href="/zh-CN/docs/Web/API">DOM 参考文档</a> (/Web/API)</td>
       <td><code>\{{DOMxRef("Document")}}</code>或<code>\{{DOMxRef("document")}}</code>都指向{{DOMxRef("Document")}}。<br>
-        <code>\{{DOMxRef("document.getElementsByName()")}}</code>会指向{{DOMxRef("document.getElementsByName()")}}<br />
-        <code>\{{DOMxRef("Node")}}</code>会指向{{DOMxRef("Node")}}. <br />
+        <code>\{{DOMxRef("document.getElementsByName()")}}</code>会指向{{DOMxRef("document.getElementsByName()")}}<br>
+        <code>\{{DOMxRef("Node")}}</code>会指向{{DOMxRef("Node")}}. <br>
         你可以使用第二个参数控制在页面上实际显示的文本：<code>\{{DOMxRef("document.getElementsByName()","getElementsByName()")}}</code>会生成{{DOMxRef("document.getElementsByName()","getElementsByName()")}}
       </td>
     </tr>
@@ -89,8 +87,7 @@ original_slug: MDN/Structures/Macros/Custom_macros
     </tr>
     <tr>
       <td>{{TemplateLink("HTMLAttrxRef")}}</td>
-      <td>如果只指明了属性的名字，链接会跳转到 <a href="/zh-CN/docs/Web/HTML/Global_attributes">HTML 全局属性</a>页面对应属性的位置。<br />如果同时指明 HTML
-        元素和属性名，则会跳转到元素页面下对应属性的位置。</td>
+      <td>如果只指明了属性的名字，链接会跳转到 <a href="/zh-CN/docs/Web/HTML/Global_attributes">HTML 全局属性</a>页面对应属性的位置。<br/>如果同时指明 HTML 元素和属性名，则会跳转到元素页面下对应属性的位置。</td>
       <td>
         <code>\{{HTMLAttrxRef("lang")}} </code>会指向{{HTMLAttrxRef("lang")}}.<br /><code>\{{HTMLAttrxRef("type","input")}}</code>生成的链接则会跳转到{{HTMLElement("input")}}元素页面下的{{HTMLAttrxRef("type","input")}}属性。
       </td>
@@ -145,11 +142,9 @@ original_slug: MDN/Structures/Macros/Custom_macros
 <ul>
   <li>Bugs
     <ul>
-      <li>通过编号，{{TemplateLink("bug")}}宏可以指向<a
-          href="bugzilla.mozilla.org">bugzilla.mozilla.org</a>站内相应的 bug，<code>\{{Bug(123456)}}</code>会指向{{Bug(123456)}}.
+      <li>通过编号，{{TemplateLink("bug")}}宏可以指向<a href="bugzilla.mozilla.org">bugzilla.mozilla.org</a>站内相应的 bug，<code>\{{Bug(123456)}}</code>会指向{{Bug(123456)}}.
       </li>
-      <li>类似的，{{TemplateLink("WebkitBug")}}宏同样可以借助编号，指向 WebKit bug 库里对应的 bug。例如，
-        <code>\{{WebkitBug(31277)}}</code>会指向{{WebkitBug(31277)}}.
+      <li>类似的，{{TemplateLink("WebkitBug")}}宏同样可以借助编号，指向 WebKit bug 库里对应的 bug。例如，<code>\{{WebkitBug(31277)}}</code>会指向{{WebkitBug(31277)}}.
       </li>
     </ul>
   </li>
@@ -158,22 +153,16 @@ original_slug: MDN/Structures/Macros/Custom_macros
 <h3 id="Navigation_aids_for_multi-page_guides">多页面间的导航栏</h3>
 
 <p>
-  {{TemplateLink("Previous")}}、{TemplateLink("Next")}}、{{TemplateLink("PreviousNext")}}、{{TemplateLink("PreviousMenuNext")}}这几个宏可以在页面中创建导航栏，帮助使用者了解文章的先后顺序。其中的参数需要填入目标页面在
-  MDN 中的位置，你可以在页面的网址中找到所需的信息。例如 <a href="/zh-CN/docs/Learn/JavaScript/Objects/Inheritance">JavaScript
-    中的继承</a>这个页面，链接地址为“https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Objects/Inheritance”，那么它在 MDN
-  中的位置就可以用<code>Learn/JavaScript/Objects/Object_prototypes</code>描述。</p>
+  {{TemplateLink("Previous")}}、{TemplateLink("Next")}}、{{TemplateLink("PreviousNext")}}、{{TemplateLink("PreviousMenuNext")}}这几个宏可以在页面中创建导航栏，帮助读者按照文章的先后顺序阅读。其中的参数需要填入目标页面在 MDN 中的位置，你可以在页面的网址中找到所需的信息。例如 <a href="/zh-CN/docs/Learn/JavaScript/Objects/Inheritance">JavaScript 中的继承</a>这个页面，链接地址为“https://developer.mozilla.org/zh-CN/docs/Learn/JavaScript/Objects/Inheritance”，那么它在 MDN 中的位置就可以用<code>Learn/JavaScript/Objects/Object_prototypes</code>描述。</p>
 
 <h2 id="Code_samples">代码示例</h2>
 
 <h3 id="Live_samples">动态示例</h3>
 
 <ul>
-  <li>{{TemplateLink("EmbedLiveSample")}} 可嵌入一个在<a
-      href="/zh-CN/docs/MDN/Contribute/Structures/Live_samples">动态示例</a>中描述的代码示例，到当前页面上。</li>
-  <li>{{TemplateLink("LiveSampleLink")}} 创建一个页面链接，其中包含如<a
-      href="/zh-CN/docs/MDN/Contribute/Structures/Live_samples">动态示例</a>中描述的示例的结果。</li>
-  <li>{{TemplateLink("EmbedGHLiveSample")}} 提供了一种新的动态示例编写和使用方式，你可以在<a
-      href="/zh-CN/docs/MDN/Structures/Code_examples#github_live_samples">Github动态示例</a>中了解更多信息。</li>
+  <li>{{TemplateLink("EmbedLiveSample")}} 可嵌入一个在<a href="/zh-CN/docs/MDN/Contribute/Structures/Live_samples">动态示例</a>中描述的代码示例，到当前页面上。</li>
+  <li>{{TemplateLink("LiveSampleLink")}} 创建一个页面链接，其中包含如<a href="/zh-CN/docs/MDN/Contribute/Structures/Live_samples">动态示例</a>中描述的示例的结果。</li>
+  <li>{{TemplateLink("EmbedGHLiveSample")}} 提供了一种新的动态示例编写和使用方式，你可以在<a href="/zh-CN/docs/MDN/Structures/Code_examples#github_live_samples">Github动态示例</a>中了解更多信息。</li>
 </ul>
 
 <h2 id="Sidebar_generation">添加侧边栏组</h2>
@@ -198,8 +187,8 @@ original_slug: MDN/Structures/Macros/Custom_macros
 <dl>
   <dt><code>isCustomObject</code> {{ReadOnlyInline}}</dt>
   <dd>如果此项值为 <code>true</code>，表明该对象是一个自定义对象。</dd>
-  <dt>parameterX {{optional_inline}}</dt>
-  <dd>巴拉巴拉巴拉</dd>
+  <dt>某项参数{{optional_inline}}</dt>
+  <dd>参数描述</dd>
 </dl>
 
 <h2 id="Status_and_compatibility_indicators">状态和兼容性指示器</h2>
@@ -257,9 +246,7 @@ original_slug: MDN/Structures/Macros/Custom_macros
 <ul>
   <li>{{TemplateLink("non-standard_header")}}语法：<code>\{{Non-standard_header()}}</code> {{ Non-standard_header}}</li>
 
-  <li>{{TemplateLink("SeeCompatTable")}} 对于一些介绍<a
-      href="/zh-CN/docs/MDN/Guidelines/Conventions_definitions#experimental">实验性功能</a>的内容，应当在这些内容前放置此指示器。语法：<code>\{{SeeCompatTable}}</code>
-    {{SeeCompatTable()}}</li>
+  <li>{{TemplateLink("SeeCompatTable")}} 对于一些介绍<a href="/zh-CN/docs/MDN/Guidelines/Conventions_definitions#experimental">实验性功能</a>的内容，应当在这些内容前放置此指示器。语法：<code>\{{SeeCompatTable}}</code> {{SeeCompatTable()}}</li>
 
   <li>{{TemplateLink("deprecated_header")}}: <code>\{{deprecated_header()}}</code> {{ Deprecated_header() }}</li>
 
