@@ -100,7 +100,7 @@ element.id = 'testqq';
 var el = document.getElementById('testqq'); // el は null になります
 </pre>
 
-<p><strong>HTML 以外の文書</strong>の場合。 DOM の実装では、どの属性が ID 類であるかを示す情報が必要です。 "id" という名前の属性は、文書の DTD で定義されていない限り ID 類とみなされません。 <code>id</code> 属性は <a href="/ja/docs/XHTML" title="ja/docs/XHTML">XHTML</a>, <a href="/ja/docs/XUL" title="ja/docs/XUL">XUL</a> などの一般的な場合には ID 類として定義されています。属性が ID 類であるかどうかが分からない実装では、 <code>null</code> を返すでしょう。</p>
+<p><strong>HTML 以外の文書</strong>の場合。 DOM の実装では、どの属性が ID 類であるかを示す情報が必要です。 "id" という名前の属性は、文書の DTD で定義されていない限り ID 類とみなされません。 <code>id</code> 属性は <a href="/ja/docs/XHTML">XHTML</a>, <a href="/ja/docs/XUL">XUL</a> などの一般的な場合には ID 類として定義されています。属性が ID 類であるかどうかが分からない実装では、 <code>null</code> を返すでしょう。</p>
 
 <h2 id="Specification" name="Specification">仕様書</h2>
 
@@ -145,5 +145,5 @@ var el = document.getElementById('testqq'); // el は null になります
 <ul>
  <li>{{domxref("Document")}}: 文書内で要素への参照を取得するために使うことができる他のメソッドやプロパティで使用するための参照。</li>
  <li>{{domxref("Document.querySelector()")}}: <code>'div.myclass'</code> のようなセレクターを通したクエリのためのもの。</li>
- <li><a href="/ja/docs/xml/xml:id" title="ja/docs/xml/id">xml:id</a> - <code>getElementById()</code> による XML 文書 (Ajax 呼び出しによって返されるものなど) の 'xml:id' の取得を可能とする便利なメソッドを持つ</li>
+ <li><a href="/ja/docs/xml/xml:id">xml:id</a> - <code>getElementById()</code> による XML 文書 (Ajax 呼び出しによって返されるものなど) の 'xml:id' の取得を可能とする便利なメソッドを持つ</li>
 </ul>
