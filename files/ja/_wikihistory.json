@@ -18990,6 +18990,24 @@
       "mfuji09"
     ]
   },
+  "Web/API/Navigator/language": {
+    "modified": "2020-10-15T21:16:44.985Z",
+    "contributors": [
+      "dskmori",
+      "benishouga",
+      "fscholz",
+      "khalid32",
+      "ethertank",
+      "Potappo"
+    ]
+  },
+  "Web/API/Navigator/languages": {
+    "modified": "2019-03-23T23:12:38.148Z",
+    "contributors": [
+      "fscholz",
+      "nshimizu"
+    ]
+  },
   "Web/API/Navigator/locks": {
     "modified": "2020-11-25T13:37:38.955Z",
     "contributors": [
@@ -31291,6 +31309,20 @@
       "fscholz",
       "ethertank",
       "sosleepy"
+    ]
+  },
+  "Web/CSS/image/image-set()": {
+    "modified": "2020-11-16T08:53:38.885Z",
+    "contributors": [
+      "chrisdavidmills",
+      "mfuji09"
+    ]
+  },
+  "Web/CSS/image/paint()": {
+    "modified": "2020-11-16T09:09:19.836Z",
+    "contributors": [
+      "chrisdavidmills",
+      "mfuji09"
     ]
   },
   "Web/CSS/image-orientation": {
@@ -48573,18 +48605,6 @@
       "ethertank"
     ]
   },
-  "conflicting/Web/API/XRInputSource/handedness": {
-    "modified": "2020-12-06T13:23:10.937Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "conflicting/Web/API/XRInputSource/targetRayMode": {
-    "modified": "2020-12-08T09:23:22.538Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
   "conflicting/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent": {
     "modified": "2020-11-08T02:10:47.628Z",
     "contributors": [
@@ -49296,31 +49316,6 @@
       "fscholz"
     ]
   },
-  "orphaned/Web/API/NavigatorLanguage": {
-    "modified": "2020-10-15T21:33:12.034Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz"
-    ]
-  },
-  "orphaned/Web/API/NavigatorLanguage/language": {
-    "modified": "2020-10-15T21:16:44.985Z",
-    "contributors": [
-      "dskmori",
-      "benishouga",
-      "fscholz",
-      "khalid32",
-      "ethertank",
-      "Potappo"
-    ]
-  },
-  "orphaned/Web/API/NavigatorLanguage/languages": {
-    "modified": "2019-03-23T23:12:38.148Z",
-    "contributors": [
-      "fscholz",
-      "nshimizu"
-    ]
-  },
   "orphaned/Web/API/NavigatorPlugins": {
     "modified": "2019-03-23T23:01:18.262Z",
     "contributors": [
@@ -49494,13 +49489,6 @@
       "mfuji09"
     ]
   },
-  "orphaned/Web/CSS/image-set()": {
-    "modified": "2020-11-16T08:53:38.885Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09"
-    ]
-  },
   "orphaned/Web/CSS/linear-gradient()": {
     "modified": "2020-11-16T08:57:22.063Z",
     "contributors": [
@@ -49516,13 +49504,6 @@
       "sosleepy",
       "Level",
       "FredB"
-    ]
-  },
-  "orphaned/Web/CSS/paint()": {
-    "modified": "2020-11-16T09:09:19.836Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09"
     ]
   },
   "orphaned/Web/CSS/radial-gradient()": {
