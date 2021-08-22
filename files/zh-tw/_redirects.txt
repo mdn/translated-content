@@ -512,6 +512,7 @@
 /zh-TW/docs/Using_files_from_web_applications	/zh-TW/docs/Web/API/File/Using_files_from_web_applications
 /zh-TW/docs/Using_geolocation	/zh-TW/docs/Web/API/Geolocation_API
 /zh-TW/docs/Web/API/Ambient_Light_Events	/zh-TW/docs/orphaned/Web/API/Ambient_Light_Events
+/zh-TW/docs/Web/API/AnimationEvent/initAnimationEvent	/zh-TW/docs/Web/API/AnimationEvent/AnimationEvent
 /zh-TW/docs/Web/API/Body	/zh-TW/docs/orphaned/Web/API/Body
 /zh-TW/docs/Web/API/Body/json	/zh-TW/docs/orphaned/Web/API/Body/json
 /zh-TW/docs/Web/API/Canvas_API/Drawing_graphics_with_canvas	/zh-TW/docs/conflicting/Web/API/Canvas_API/Tutorial
