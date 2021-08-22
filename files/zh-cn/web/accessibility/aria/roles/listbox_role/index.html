@@ -13,17 +13,17 @@ translation_of: Web/Accessibility/ARIA/Roles/listbox_role
 
 <p><code>listbox</code> 角色用于标识创建列表的元素，用户可以从中选择一个或多个静态选项，类似于 HTML {{HTMLElement("select")}} 元素。与 {{HTMLElement("select")}} 不同，<code>listbox</code> 可以包含图像。<code>listbox</code> 的每个子项都应该有一个 <a href="https://www.w3.org/TR/2010/WD-wai-aria-20100916/roles#option"><code>option</code></a> role。</p>
 
-<p>强烈建议使用 HTML <code>select</code> 元素，如果只能选择一个选项，则使用一组单选按钮，如果可以选择多个选项，则使用一组复选框，因为有很多键盘交互来管理所有后代的焦点和原生 HTML 元素为您提供相关的功能。</p>
+<p>强烈建议使用 HTML {{HTMLElement("select")}} 元素，如果只能选择一个选项，则使用一组单选按钮，如果可以选择多个选项，则使用一组复选框，因为有很多键盘交互来管理所有后代的焦点和原生 HTML 元素为您提供相关的功能。</p>
 
 <p>具有 <code>listbox</code> 角色的元素含有隐式的 <code>aria-orientation</code> 和 <code>vertical</code> 值。</p>
 
-<p>当一个列表被 tab 聚焦到时，如果没有其他内容，将会选择列表中的第一项。可以用 <kbd>Up</kbd> / <kbd>Down</kbd> 键在列表中导航，按 <kbd>Shift</kbd> + <kbd>Up</kbd> / <kbd>Down</kbd>将移动并扩展选择。键入一个或多个字母将在列表项中导航（相同的字母指向以那个开头的每个选项，不同的字母指向以整个字符串开头的第一个选项）。如果当前选项有关联的菜单， <kbd>Shift</kbd>+<kbd>F10</kbd> 将启动该菜单。如果项目可被勾选，<kbd>Space</kbd> 可用于切换 <a href="https://www.w3.org/TR/wai-aria-practices/#checkbox"><code>checkbox</code></a> role。对于可选择的列表项，<kbd>Space</kbd> 切换它们的选择，<kbd>Shift</kbd>+<kbd>Space</kbd> 可用于选择连续的项目，<kbd>Ctrl</kbd>+<kbd>Arrow</kbd> 移动而不选择， <kbd>Ctrl</kbd>+<kbd>Space</kbd> 可用于选择非连续的项目。建议使用 checkbox、 link 或其他方法来选择所有项目，为此可以使用 <kbd>Ctrl</kbd>+<kbd>A</kbd> 作为快捷键。</p>
+<p>当一个列表被 tab 聚焦到时，如果没有其他内容，将会选择列表中的第一项。可以用 Up/Down 方向键在列表中导航，按 Shift + Up/Down 方向键将移动并扩展选择。键入一个或多个字母将在列表项中导航（相同的字母指向以那个开头的每个选项，不同的字母指向以整个字符串开头的第一个选项）。如果当前选项有关联的菜单， Shift+F10 将启动该菜单。如果项目可被勾选，Space 可用于切换 <a href="https://www.w3.org/TR/wai-aria-practices/#checkbox"><code>checkbox</code></a> role。对于可选择的列表项，Space 切换它们的选择，Shift+Space 可用于选择连续的项目，Ctrl+方向键 移动而不选择， Ctrl+Space 可用于选择非连续的项目。建议使用 checkbox、link 或其他方法来选择所有项目，为此可以使用 Ctrl+A 作为快捷键。</p>
 
 <p>当 listbox 角色被添加到元素中，或含有它的元素变得可见时，屏幕阅读器会在 listbox 获得焦点时读出它的 label 和 role。如果列表中的 option 或选项获得焦点，则接下来会读出它，如果屏幕阅读器支持，则会在列表中指示选项的位置。当焦点在列表中移动时，屏幕阅读器会读出相关选项。</p>
 
-<h3 id="Associated_ARIA_roles_states_and_properties">相关的 ARIA Role、状态和属性</h3>
+<h3 id="Associated_ARIA_roles_states_and_properties">相关的 ARIA 角色、状态和属性</h3>
 
-<h4 id="Associated_Roles">相关 Role</h4>
+<h4 id="Associated_Roles">相关角色</h4>
 
 <dl>
   <dt><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/option_role">option</a></dt>
@@ -73,8 +73,8 @@ translation_of: Web/Accessibility/ARIA/Roles/listbox_role
   </li>
   <li><kbd>Down Arrow</kbd>: 将焦点移至下一个选项。（可选）在单选 listbox 中，选中的值也可以随焦点移动。</li>
   <li><kbd>Up Arrow</kbd>: 将焦点移至上一个选项。（可选）在单选 listbox 中，选中的值也可以随焦点移动。</li>
-  <li><kbd>Home</kbd> (可选地): 将焦点移至第一个选项。（可选）在单选列表框中，选中的值也可以随焦点移动。对于超过五个选项的列表，强烈建议支持此键。</li>
-  <li><kbd>End</kbd> (可选的): 将焦点移至最后一个选项。（可选）在单选列表框中，选中的值也可以随焦点移动。对于超过五个选项的列表，强烈建议支持此键。</li>
+  <li><kbd>Home</kbd> (可选): 将焦点移至第一个选项。（可选）在单选列表框中，选中的值也可以随焦点移动。对于超过五个选项的列表，强烈建议支持此键。</li>
+  <li><kbd>End</kbd> (可选): 将焦点移至最后一个选项。（可选）在单选列表框中，选中的值也可以随焦点移动。对于超过五个选项的列表，强烈建议支持此键。</li>
   <li>建议所有 listbox 都预先输入，尤其是那些有七个以上选项的列表框：
     <ul>
       <li>键入字符时：焦点移至名称符合键入的字符开头的一项。</li>
