@@ -28162,20 +28162,20 @@
       "yyss"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Border-image_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders": {
+    "modified": "2020-04-17T14:34:56.933Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator": {
     "modified": "2019-03-18T21:41:18.820Z",
     "contributors": [
       "mfuji09"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Border-radius_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator": {
     "modified": "2020-02-13T14:54:34.325Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/CSS/CSS_Backgrounds_and_Borders": {
-    "modified": "2020-04-17T14:34:56.933Z",
     "contributors": [
       "mfuji09"
     ]
@@ -31311,20 +31311,6 @@
       "sosleepy"
     ]
   },
-  "Web/CSS/image/image-set()": {
-    "modified": "2020-11-16T08:53:38.885Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09"
-    ]
-  },
-  "Web/CSS/image/paint()": {
-    "modified": "2020-11-16T09:09:19.836Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09"
-    ]
-  },
   "Web/CSS/image-orientation": {
     "modified": "2020-10-15T21:46:42.965Z",
     "contributors": [
@@ -31341,6 +31327,20 @@
       "ethertank",
       "Level",
       "Taken"
+    ]
+  },
+  "Web/CSS/image/image-set()": {
+    "modified": "2020-11-16T08:53:38.885Z",
+    "contributors": [
+      "chrisdavidmills",
+      "mfuji09"
+    ]
+  },
+  "Web/CSS/image/paint()": {
+    "modified": "2020-11-16T09:09:19.836Z",
+    "contributors": [
+      "chrisdavidmills",
+      "mfuji09"
     ]
   },
   "Web/CSS/ime-mode": {
@@ -33638,6 +33638,12 @@
     "modified": "2020-05-04T01:56:10.076Z",
     "contributors": [
       "mfuji09"
+    ]
+  },
+  "Web/Guide/Houdini": {
+    "modified": "2020-07-24T06:19:03.585Z",
+    "contributors": [
+      "Wind1808"
     ]
   },
   "Web/Guide/Index": {
@@ -37387,12 +37393,6 @@
     "modified": "2019-03-18T21:25:47.710Z",
     "contributors": [
       "silverskyvicto"
-    ]
-  },
-  "Web/Houdini": {
-    "modified": "2020-07-24T06:19:03.585Z",
-    "contributors": [
-      "Wind1808"
     ]
   },
   "Web/JavaScript": {

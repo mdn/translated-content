@@ -3627,6 +3627,8 @@
 /ja/docs/Web/CSS/Background_Backup	/ja/docs/Web/CSS/background
 /ja/docs/Web/CSS/Block_formatting_context	/ja/docs/Web/Guide/CSS/Block_formatting_context
 /ja/docs/Web/CSS/CSS_Background_and_Borders	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders
+/ja/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
+/ja/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
 /ja/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
 /ja/docs/Web/CSS/CSS_Colors	/en-US/docs/Web/CSS/CSS_Color
@@ -4067,6 +4069,7 @@
 /ja/docs/Web/HTTP/Response_codes/204	/ja/docs/Web/HTTP/Status/204
 /ja/docs/Web/HTTP/Server-Side_Access_Control	/ja/docs/Web/HTTP/CORS
 /ja/docs/Web/HTTP/X-Frame-Options	/ja/docs/Web/HTTP/Headers/X-Frame-Options
+/ja/docs/Web/Houdini	/ja/docs/Web/Guide/Houdini
 /ja/docs/Web/JavaScript/Equality_comparisons_and_when_to_use_them	/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /ja/docs/Web/JavaScript/Getting_Started	/ja/docs/Learn/Getting_started_with_the_web/JavaScript_basics
 /ja/docs/Web/JavaScript/Guide/About	/ja/docs/Web/JavaScript/Guide/Introduction

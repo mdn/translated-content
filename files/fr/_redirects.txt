@@ -3927,8 +3927,8 @@
 /fr/docs/Web/CSS/Animations_CSS/Détecter_la_prise_en_charge_des_animations_CSS	/fr/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 /fr/docs/Web/CSS/Animations_CSS/Utiliser_les_animations_CSS	/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations
 /fr/docs/Web/CSS/Arrière-plans_et_bordures_CSS	/fr/docs/conflicting/Web/CSS/CSS_Backgrounds_and_Borders
-/fr/docs/Web/CSS/Arrière-plans_et_bordures_CSS/Générateur_border-image	/fr/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator
-/fr/docs/Web/CSS/Arrière-plans_et_bordures_CSS/Générateur_border-radius	/fr/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator
+/fr/docs/Web/CSS/Arrière-plans_et_bordures_CSS/Générateur_border-image	/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
+/fr/docs/Web/CSS/Arrière-plans_et_bordures_CSS/Générateur_border-radius	/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
 /fr/docs/Web/CSS/Arrière-plans_et_bordures_CSS/Scaling_background_images	/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
 /fr/docs/Web/CSS/Arrière-plans_et_bordures_CSS/Utiliser_des_fonds_multiples	/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /fr/docs/Web/CSS/Aural	/fr/docs/Web/CSS/@media/aural
@@ -3939,6 +3939,9 @@
 /fr/docs/Web/CSS/CSS_:_la_propriété_animation-play-state	/fr/docs/Web/CSS/animation-play-state
 /fr/docs/Web/CSS/CSS_Animations/Utiliser_les_animations_CSS	/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations
 /fr/docs/Web/CSS/CSS_Background_and_Borders	/fr/docs/conflicting/Web/CSS/CSS_Backgrounds_and_Borders
+/fr/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
+/fr/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator	/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
+/fr/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator	/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 /fr/docs/Web/CSS/CSS_Background_and_Borders/Scaling_background_images	/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
 /fr/docs/Web/CSS/CSS_Background_and_Borders/Utiliser_des_fonds_multiples	/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images	/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
@@ -3948,7 +3951,7 @@
 /fr/docs/Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_bloc_absolue_tableau	/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables
 /fr/docs/Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_colonnes	/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Multi-column_Layout
 /fr/docs/Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_grille	/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout
-/fr/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator	/fr/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator
+/fr/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator	/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 /fr/docs/Web/CSS/CSS_Colors	/fr/docs/conflicting/Web/CSS/CSS_Color
 /fr/docs/Web/CSS/CSS_Columns/Concepts_base_multi-colonnes	/fr/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol
 /fr/docs/Web/CSS/CSS_Columns/Gestion_dépassement_multi-colonnes	/fr/docs/Web/CSS/CSS_Columns/Handling_Overflow_in_Multicol
@@ -4090,9 +4093,9 @@
 /fr/docs/Web/CSS/Mode_de_mise_en_page	/fr/docs/Web/CSS/Layout_mode
 /fr/docs/Web/CSS/Modèle_de_boîte	/en-US/docs/Learn/CSS/Building_blocks/The_box_model
 /fr/docs/Web/CSS/Modèle_de_boîte_CSS	/fr/docs/Web/CSS/CSS_Box_Model
-/fr/docs/Web/CSS/Modèle_de_boîte_CSS/Box-shadow_generator	/fr/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator
+/fr/docs/Web/CSS/Modèle_de_boîte_CSS/Box-shadow_generator	/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 /fr/docs/Web/CSS/Modèle_de_boîte_CSS/Fusion_des_marges	/fr/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
-/fr/docs/Web/CSS/Modèle_de_boîte_CSS/Générateur_box-shadow	/fr/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator
+/fr/docs/Web/CSS/Modèle_de_boîte_CSS/Générateur_box-shadow	/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 /fr/docs/Web/CSS/Modèle_de_boîte_CSS/Modèle_de_boîte	/en-US/docs/Learn/CSS/Building_blocks/The_box_model
 /fr/docs/Web/CSS/Modèle_de_mise_en_forme_visuelle	/fr/docs/Web/CSS/Visual_formatting_model
 /fr/docs/Web/CSS/Motion_Path	/fr/docs/Web/CSS/CSS_Motion_Path
