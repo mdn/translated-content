@@ -2,8 +2,15 @@
 title: Intersection Observer API
 slug: Web/API/Intersection_Observer_API
 tags:
-  - Intersection Observer API
-  - IntersectionObserver
+- API
+- Clipping
+- Intersection
+- Intersection Observer API
+- IntersectionObserver
+- Overview
+- Performance
+- Reference
+- Web
 translation_of: Web/API/Intersection_Observer_API
 ---
 <div>
@@ -85,7 +92,7 @@ observer.observe(target);
 
 <p>只要目标满足为 IntersectionObserver 指定的阈值，就会调用回调。回调接收 {{domxref("IntersectionObserverEntry")}} 对象和观察者的列表：</p>
 
-<pre class="brush: js"><code>let callback =(entries, observer) =&gt; {
+<pre class="brush: js">let callback =(entries, observer) =&gt; {
   entries.forEach(entry =&gt; {
     // Each entry describes an intersection change for one observed target element:
     // entry.boundingClientRect
@@ -96,7 +103,7 @@ observer.observe(target);
     // entry.target
     // entry.time
   });
-};</code></pre>
+};</pre>
 
 <p>请留意，你注册的回调函数将会在主线程中被执行。所以该函数执行速度要尽可能的快。如果有一些耗时的操作需要执行，建议使用 {{domxref("Window.requestIdleCallback()")}} 方法。</p>
 
