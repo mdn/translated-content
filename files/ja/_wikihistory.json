@@ -48627,33 +48627,6 @@
       "Jeremie"
     ]
   },
-  "conflicting/Web/CSS": {
-    "modified": "2019-03-23T23:49:43.648Z",
-    "contributors": [
-      "Marsf"
-    ]
-  },
-  "conflicting/Web/CSS/Reference": {
-    "modified": "2019-01-16T15:49:24.673Z",
-    "contributors": [
-      "Marsf"
-    ]
-  },
-  "conflicting/Web/CSS_eb0c7d23f84df658710ebb6b4bdec8ea": {
-    "modified": "2019-03-23T23:44:01.923Z",
-    "contributors": [
-      "ethertank",
-      "Mgjbot",
-      "Okome",
-      "Shimono"
-    ]
-  },
-  "conflicting/Web/HTTP/Headers/X-DNS-Prefetch-Control": {
-    "modified": "2019-03-24T00:00:27.042Z",
-    "contributors": [
-      "RobinEgg"
-    ]
-  },
   "orphaned/Building_a_Mozilla_Distribution": {
     "modified": "2019-03-23T23:49:07.062Z",
     "contributors": [
