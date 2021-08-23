@@ -1622,7 +1622,9 @@
 /es/docs/Web/CSS/CSS_Animations/Detectar_soporte_de_animación_CSS	/es/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support
 /es/docs/Web/CSS/CSS_Animations/Usando_animaciones_CSS	/es/docs/Web/CSS/CSS_Animations/Using_CSS_animations
 /es/docs/Web/CSS/CSS_Background_and_Borders	/es/docs/Web/CSS/CSS_Backgrounds_and_Borders
-/es/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generador	/es/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator
+/es/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generador	/es/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
+/es/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/es/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
+/es/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator	/es/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
 /es/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds	/es/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /es/docs/Web/CSS/CSS_Colors	/es/docs/Web/CSS/CSS_Color
 /es/docs/Web/CSS/CSS_Colors/Herramienta_para_seleccionar_color	/es/docs/Web/CSS/CSS_Colors/Color_picker_tool

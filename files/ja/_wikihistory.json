@@ -18990,6 +18990,24 @@
       "mfuji09"
     ]
   },
+  "Web/API/Navigator/language": {
+    "modified": "2020-10-15T21:16:44.985Z",
+    "contributors": [
+      "dskmori",
+      "benishouga",
+      "fscholz",
+      "khalid32",
+      "ethertank",
+      "Potappo"
+    ]
+  },
+  "Web/API/Navigator/languages": {
+    "modified": "2019-03-23T23:12:38.148Z",
+    "contributors": [
+      "fscholz",
+      "nshimizu"
+    ]
+  },
   "Web/API/Navigator/locks": {
     "modified": "2020-11-25T13:37:38.955Z",
     "contributors": [
@@ -28144,20 +28162,20 @@
       "yyss"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Border-image_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders": {
+    "modified": "2020-04-17T14:34:56.933Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
+  "Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator": {
     "modified": "2019-03-18T21:41:18.820Z",
     "contributors": [
       "mfuji09"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Border-radius_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator": {
     "modified": "2020-02-13T14:54:34.325Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
-  "Web/CSS/CSS_Backgrounds_and_Borders": {
-    "modified": "2020-04-17T14:34:56.933Z",
     "contributors": [
       "mfuji09"
     ]
@@ -31311,6 +31329,20 @@
       "Taken"
     ]
   },
+  "Web/CSS/image/image-set()": {
+    "modified": "2020-11-16T08:53:38.885Z",
+    "contributors": [
+      "chrisdavidmills",
+      "mfuji09"
+    ]
+  },
+  "Web/CSS/image/paint()": {
+    "modified": "2020-11-16T09:09:19.836Z",
+    "contributors": [
+      "chrisdavidmills",
+      "mfuji09"
+    ]
+  },
   "Web/CSS/ime-mode": {
     "modified": "2020-10-15T21:14:16.842Z",
     "contributors": [
@@ -33606,6 +33638,12 @@
     "modified": "2020-05-04T01:56:10.076Z",
     "contributors": [
       "mfuji09"
+    ]
+  },
+  "Web/Guide/Houdini": {
+    "modified": "2020-07-24T06:19:03.585Z",
+    "contributors": [
+      "Wind1808"
     ]
   },
   "Web/Guide/Index": {
@@ -37355,12 +37393,6 @@
     "modified": "2019-03-18T21:25:47.710Z",
     "contributors": [
       "silverskyvicto"
-    ]
-  },
-  "Web/Houdini": {
-    "modified": "2020-07-24T06:19:03.585Z",
-    "contributors": [
-      "Wind1808"
     ]
   },
   "Web/JavaScript": {
@@ -48542,20 +48574,6 @@
       "mantaroh"
     ]
   },
-  "conflicting/Tools/Memory/Basic_operations": {
-    "modified": "2020-07-16T22:36:28.978Z",
-    "contributors": [
-      "wbamberg",
-      "yyss"
-    ]
-  },
-  "conflicting/Tools/Performance": {
-    "modified": "2020-07-16T22:35:28.845Z",
-    "contributors": [
-      "wbamberg",
-      "yyss"
-    ]
-  },
   "conflicting/Web/API": {
     "modified": "2019-09-25T00:26:30.367Z",
     "contributors": [
@@ -48573,43 +48591,6 @@
       "ethertank"
     ]
   },
-  "conflicting/Web/API/XRInputSource/handedness": {
-    "modified": "2020-12-06T13:23:10.937Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "conflicting/Web/API/XRInputSource/targetRayMode": {
-    "modified": "2020-12-08T09:23:22.538Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "conflicting/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent": {
-    "modified": "2020-11-08T02:10:47.628Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "conflicting/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent_0f733d39fd3094010931f093b9045686": {
-    "modified": "2020-11-08T19:13:54.683Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "conflicting/Web/API/XRReferenceSpaceEvent/XRReferenceSpaceEvent_7dfb381c892055a0c91980d537a86c6b": {
-    "modified": "2020-11-08T19:23:29.842Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "conflicting/Web/API_49b9a84475f11fffb8fc271a7df3c49a": {
-    "modified": "2019-01-16T21:57:23.880Z",
-    "contributors": [
-      "mfuji09",
-      "Marsf"
-    ]
-  },
   "conflicting/Web/API_dd04ca1265cb79b990b8120e5f5070d3": {
     "modified": "2019-03-23T23:32:13.721Z",
     "contributors": [
@@ -48619,33 +48600,6 @@
       "stingray",
       "ethertank",
       "Jeremie"
-    ]
-  },
-  "conflicting/Web/CSS": {
-    "modified": "2019-03-23T23:49:43.648Z",
-    "contributors": [
-      "Marsf"
-    ]
-  },
-  "conflicting/Web/CSS/Reference": {
-    "modified": "2019-01-16T15:49:24.673Z",
-    "contributors": [
-      "Marsf"
-    ]
-  },
-  "conflicting/Web/CSS_eb0c7d23f84df658710ebb6b4bdec8ea": {
-    "modified": "2019-03-23T23:44:01.923Z",
-    "contributors": [
-      "ethertank",
-      "Mgjbot",
-      "Okome",
-      "Shimono"
-    ]
-  },
-  "conflicting/Web/HTTP/Headers/X-DNS-Prefetch-Control": {
-    "modified": "2019-03-24T00:00:27.042Z",
-    "contributors": [
-      "RobinEgg"
     ]
   },
   "orphaned/Building_a_Mozilla_Distribution": {
@@ -49296,31 +49250,6 @@
       "fscholz"
     ]
   },
-  "orphaned/Web/API/NavigatorLanguage": {
-    "modified": "2020-10-15T21:33:12.034Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz"
-    ]
-  },
-  "orphaned/Web/API/NavigatorLanguage/language": {
-    "modified": "2020-10-15T21:16:44.985Z",
-    "contributors": [
-      "dskmori",
-      "benishouga",
-      "fscholz",
-      "khalid32",
-      "ethertank",
-      "Potappo"
-    ]
-  },
-  "orphaned/Web/API/NavigatorLanguage/languages": {
-    "modified": "2019-03-23T23:12:38.148Z",
-    "contributors": [
-      "fscholz",
-      "nshimizu"
-    ]
-  },
   "orphaned/Web/API/NavigatorPlugins": {
     "modified": "2019-03-23T23:01:18.262Z",
     "contributors": [
@@ -49494,13 +49423,6 @@
       "mfuji09"
     ]
   },
-  "orphaned/Web/CSS/image-set()": {
-    "modified": "2020-11-16T08:53:38.885Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09"
-    ]
-  },
   "orphaned/Web/CSS/linear-gradient()": {
     "modified": "2020-11-16T08:57:22.063Z",
     "contributors": [
@@ -49516,13 +49438,6 @@
       "sosleepy",
       "Level",
       "FredB"
-    ]
-  },
-  "orphaned/Web/CSS/paint()": {
-    "modified": "2020-11-16T09:09:19.836Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09"
     ]
   },
   "orphaned/Web/CSS/radial-gradient()": {
