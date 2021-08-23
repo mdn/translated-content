@@ -383,10 +383,13 @@
 /ru/docs/Web/CSS/Adjacent_sibling_selectors	/ru/docs/Web/CSS/Adjacent_sibling_combinator
 /ru/docs/Web/CSS/CSS_Animations/Ispolzovanie_CSS_animatciy	/ru/docs/Web/CSS/CSS_Animations/Using_CSS_animations
 /ru/docs/Web/CSS/CSS_Background_and_Borders	/ru/docs/Web/CSS/CSS_Backgrounds_and_Borders
-/ru/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_генератор	/ru/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator
+/ru/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/ru/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
+/ru/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator	/ru/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
+/ru/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_генератор	/ru/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
+/ru/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator	/ru/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 /ru/docs/Web/CSS/CSS_Background_and_Borders/Множественные_фоны	/ru/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /ru/docs/Web/CSS/CSS_Basic_User_Interface/Использование_URL_значений_для_свойства_cursor	/ru/docs/Web/CSS/CSS_Basic_User_Interface/Using_URL_values_for_the_cursor_property
-/ru/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator	/ru/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator
+/ru/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator	/ru/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 /ru/docs/Web/CSS/CSS_Colors	/ru/docs/Web/CSS/CSS_Color
 /ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Выравнивание_элементов_в_Flex_контейнере	/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container
 /ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Контролирование_соотношения_элементов_вдоль_главной_оси	/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax

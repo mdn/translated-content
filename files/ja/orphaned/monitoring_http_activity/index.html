@@ -34,7 +34,7 @@ activityDistributor.addObserver(httpObserver);
 <h2 id="アクティビティを観察する">アクティビティを観察する</h2>
 <p>観察可能なクラスは2つあります： ソケットレベルで発生するものと、HTTPトランザクションレベルで発生するものです。</p>
 <h3 id="観察可能なソケットのアクティビティ">観察可能なソケットのアクティビティ</h3>
-<p>{{ interface("nsIHttpActivityDistributor") }} メソッドに報告され<code>た </code>アクティビティが <code>ACTIVITY_TYPE_SOCKET_TRANSPORT</code> の場合、発生したアクティビティの詳細な型を示すアクティビティサブタイプは <a href="/ja/XPCOM_Interface_Reference/nsISocketTransport#nsITransportEventSink.0a_status_codes" title="ja/XPCOM Interface Reference/nsISocketTransport#nsITransportEventSink.0a status codes">socket transport status code</a> となります。</p>
+<p>{{ interface("nsIHttpActivityDistributor") }} メソッドに報告され<code>た </code>アクティビティが <code>ACTIVITY_TYPE_SOCKET_TRANSPORT</code> の場合、発生したアクティビティの詳細な型を示すアクティビティサブタイプは <a href="/ja/XPCOM_Interface_Reference/nsISocketTransport#nsITransportEventSink.0a_status_codes">socket transport status code</a> となります。</p>
 <h3 id="観察可能な_HTTP_のアクティビティ">観察可能な HTTP のアクティビティ</h3>
 <p>アクティビティタイプ が <code>ACTIVITY_TYPE_HTTP_TRANSACTION の場合</code>、アクティビティサブタイプは <a href="/en/nsIHttpActivityObserver#Activity_subtype_constants" title="en/nsIHttpActivityObserver#Activity subtype constants">activity subtype 定数</a> のうちの1つとなります。これらは送信されるHTTPリクエストヘッダやボディ、受信するHTTPヘッダなどを含むHTTPトランザクション全体を観察するための機能も含みます。</p>
 <h2 id="参照">参照</h2>

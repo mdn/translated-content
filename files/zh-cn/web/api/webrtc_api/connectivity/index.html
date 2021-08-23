@@ -41,33 +41,33 @@ translation_of: Web/API/WebRTC_API/Connectivity
 <ol>
  <li>呼叫者通过 {{domxref("navigator.mediaDevices.getUserMedia()")}} 捕捉本地媒体。</li>
  <li>呼叫者创建一个<code>RTCPeerConnection</code> 并调用 {{domxref("RTCPeerConnection.addTrack()")}} (注： <code>addStream</code> 已经过时。)</li>
- <li>呼叫者调用 ("RTCPeerConnection.createOffer()")来创建一个提议(offer).</li>
- <li>呼叫者调用 ("RTCPeerConnection.setLocalDescription()") 将提议(Offer)<em>   </em>设置为本地描述 (即，连接的本地描述).</li>
+ <li>呼叫者调用 {{domxref("RTCPeerConnection.createOffer()")}} 来创建一个提议(offer).</li>
+ <li>呼叫者调用 {{domxref("RTCPeerConnection.setLocalDescription()")}} 将提议(Offer)<em>   </em>设置为本地描述 (即，连接的本地描述).</li>
  <li>setLocalDescription()之后, 呼叫者请求 STUN 服务创建ice候选(ice candidates)</li>
  <li>呼叫者通过信令服务器将提议(offer)传递至 本次呼叫的预期的接受者.</li>
- <li>接受者收到了提议(offer) 并调用 ("RTCPeerConnection.setRemoteDescription()") 将其记录为远程描述 (也就是连接的另一端的描述).</li>
+ <li>接受者收到了提议(offer) 并调用 {{domxref("RTCPeerConnection.setRemoteDescription()")}} 将其记录为远程描述 (也就是连接的另一端的描述).</li>
  <li>接受者做一些可能需要的步骤结束本次呼叫：捕获本地媒体，然后通过{{domxref("RTCPeerConnection.addTrack()")}}添加到连接中。</li>
- <li>接受者通过("RTCPeerConnection.createAnswer()")创建一个应答。</li>
- <li>接受者调用 ("RTCPeerConnection.setLocalDescription()") 将应答(answer)<em>   </em>设置为本地描述. 此时，接受者已经获知连接双方的配置了.</li>
+ <li>接受者通过 {{domxref("RTCPeerConnection.createAnswer()")}} 创建一个应答。</li>
+ <li>接受者调用 {{domxref("RTCPeerConnection.setLocalDescription()")}} 将应答(answer)<em>   </em>设置为本地描述. 此时，接受者已经获知连接双方的配置了.</li>
  <li>接受者通过信令服务器将应答传递到呼叫者.</li>
  <li>呼叫者接受到应答.</li>
- <li>呼叫者调用 ("RTCPeerConnection.setRemoteDescription()") 将应答设定为远程描述. 如此，呼叫者已经获知连接双方的配置了.</li>
+ <li>呼叫者调用 {{domxref("RTCPeerConnection.setRemoteDescription()")}} 将应答设定为远程描述. 如此，呼叫者已经获知连接双方的配置了.</li>
 </ol>
 
 <h3 id="待定的和当前描述"><strong>待定的和当前描述</strong></h3>
 
 <p>进一步了解该过程，我们发现localDescription和remoteDescription(返回这两个描述的属性 )并不像外观那样简单。 因为在重新协商期间，提议可能会被拒绝，因为它提出了不兼容的格式，每个端点都有能力提出一种新的格式，但是实际上不会切换到另一个对等体，直到它被其他对等体接受为止。 因此，WebRTC使用待定和当前的描述。</p>
 
-<p><strong>当前描述</strong>(由 ("RTCPeerConnection.currentLocalDescription") 和 ("RTCPeerConnection.currentRemoteDescription") 属性返回 )表示连接实际使用的描述。 这是双方已经完全同意使用的最新连接。</p>
+<p><strong>当前描述</strong>(由 {{domxref("RTCPeerConnection.currentLocalDescription")}} 和 {{domxref("RTCPeerConnection.currentRemoteDescription")}} 属性返回 )表示连接实际使用的描述。 这是双方已经完全同意使用的最新连接。</p>
 
-<p><strong>待定的描述</strong>(由 ("RTCPeerConnection.pendingLocalDescription" ) 和 ("RTCPeerConnection.pendingRemoteDescription") 返回 )表示当 分别调用setLocalDescription( )或setRemoteDescription( )。</p>
+<p><strong>待定的描述</strong>(由 {{domxref("RTCPeerConnection.pendingLocalDescription")}} 和 {{domxref("RTCPeerConnection.pendingRemoteDescription")}} 返回 )表示当 分别调用setLocalDescription( )或setRemoteDescription( )。</p>
 
-<p>当读取描述( ("RTCPeerConnection.localDescription" ) 和 ("RTCPeerConnection.remoteDescription" )  )返回时，返回的值是pendingLocalDescription / pendingRemoteDescription的值，如果有待处理的描述( 也就是说，待处理描述不为null ); 否则，返回当前描述(currentLocalDescription / currentRemoteDescription )。</p>
+<p>当读取描述( {{domxref("RTCPeerConnection.localDescription")}} 和 {{domxref("RTCPeerConnection.remoteDescription")}} )返回时，返回的值是pendingLocalDescription / pendingRemoteDescription的值，如果有待处理的描述( 也就是说，待处理描述不为null ); 否则，返回当前描述(currentLocalDescription / currentRemoteDescription )。</p>
 
 <p>通过调用setLocalDescription( )或setRemoteDescription( )更改描述时，将指定的描述设置为待定描述，WebRTC层开始评估是否可以接受。 一旦建议的描述已经达成一致，currentLocalDescription或currentRemoteDescription的值将更改为待处理描述，并且待处理的描述再次设置为null，表示没有待处理的描述。</p>
 
 <div class="note">
-<p>pendingLocalDescription不仅包含正在考虑的提议或答案，而且自从提议或应答以来已经收集到的任何本地ICE候选人都被创建。 类似地，pendingRemoteDescription包括通过调用 ("RTCPeerConnection.addIceCandidate( )" ) 提供的任何远程ICE候选。</p>
+<p>pendingLocalDescription不仅包含正在考虑的提议或答案，而且自从提议或应答以来已经收集到的任何本地ICE候选人都被创建。 类似地，pendingRemoteDescription包括通过调用 {{domxref("RTCPeerConnection.addIceCandidate()")}} 提供的任何远程ICE候选。</p>
 </div>
 
 <p>有关这些属性和方法的更多细节，请参阅各个文章。</p>
