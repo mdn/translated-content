@@ -17,7 +17,7 @@ translation_of: Web/JavaScript/EventLoop
 
 <h3 id="視覺化呈現（Visual_representation）">視覺化呈現（Visual representation）</h3>
 
-<p style="text-align: center;"><img alt="Stack, heap, queue" src="/files/4617/default.svg" style="height: 270px; width: 294px;"></p>
+<p style="text-align: center;"><img alt="Stack, heap, queue" src="the_javascript_runtime_environment_example.svg" style="height: 270px; width: 294px;"></p>
 
 <h3 id="堆疊（Stack）">堆疊（Stack）</h3>
 
@@ -106,4 +106,4 @@ console.log(bar(7));
 
 <p>事件循環這個模型有一個非常有趣的特色就是永不阻塞，這與其他語言不一樣。I/O 的處理通常會經由事件以及回呼函式實作，因此當一個程式正在等待 <a href="/zh-TW/docs/Web/API/IndexedDB_API">IndexedDB</a> 的查詢結果或是回傳 <a href="/zh-TW/docs/Web/API/XMLHttpRequest">XHR</a> 請求時，依舊可以執行其他像是使用者輸入的動作。</p>
 
-<p>例外（exceptions）永遠存在，像是 <code>alert</code> 或是同步的 XHR，但好的實作方式就是避開他們。另外要注意個是，<a href="http://stackoverflow.com/questions/2734025/is-javascript-guaranteed-to-be-single-threaded/2734311#2734311">例外的例外一直是存在的</a>（但通常為實作時的錯誤而非其他情況）。</p>
+<p>例外（exceptions）永遠存在，像是 <code>alert</code> 或是同步的 XHR，但好的實作方式就是避開他們。另外要注意個是，<a href="https://stackoverflow.com/questions/2734025/is-javascript-guaranteed-to-be-single-threaded/2734311#2734311">例外的例外一直是存在的</a>（但通常為實作時的錯誤而非其他情況）。</p>
