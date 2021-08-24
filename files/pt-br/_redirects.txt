@@ -471,6 +471,7 @@
 /pt-BR/docs/Web/API/API_Web_Audio	/pt-BR/docs/Web/API/Web_Audio_API
 /pt-BR/docs/Web/API/API_Web_Audio/Sintetizador_simples	/pt-BR/docs/Web/API/Web_Audio_API/Simple_synth
 /pt-BR/docs/Web/API/API_de_Desempenho	/pt-BR/docs/Web/API/Performance_API
+/pt-BR/docs/Web/API/AnimationEvent/initAnimationEvent	/pt-BR/docs/conflicting/Web/API/AnimationEvent/AnimationEvent
 /pt-BR/docs/Web/API/ArrayBuffer	/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 /pt-BR/docs/Web/API/AudioContext/currentTime	/pt-BR/docs/Web/API/BaseAudioContext/currentTime
 /pt-BR/docs/Web/API/BatteryManager.charging	/pt-BR/docs/Web/API/BatteryManager/charging
@@ -565,6 +566,8 @@
 /pt-BR/docs/Web/CSS/-moz-box-ordinal-group	/pt-BR/docs/Web/CSS/box-ordinal-group
 /pt-BR/docs/Web/CSS/CSS_Animations/Usando_animações_CSS	/pt-BR/docs/Web/CSS/CSS_Animations/Using_CSS_animations
 /pt-BR/docs/Web/CSS/CSS_Background_and_Borders	/pt-BR/docs/Web/CSS/CSS_Backgrounds_and_Borders
+/pt-BR/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/pt-BR/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
+/pt-BR/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator	/pt-BR/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
 /pt-BR/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds	/pt-BR/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
 /pt-BR/docs/Web/CSS/CSS_Box_Model/margin_collapsing	/pt-BR/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
 /pt-BR/docs/Web/CSS/CSS_Colors/seletor_de_cores	/pt-BR/docs/Web/CSS/CSS_Colors/Color_picker_tool
@@ -586,8 +589,8 @@
 /pt-BR/docs/Web/CSS/Seletor_universal	/pt-BR/docs/Web/CSS/Universal_selectors
 /pt-BR/docs/Web/CSS/Seletores_CSS	/pt-BR/docs/Web/CSS/CSS_Selectors
 /pt-BR/docs/Web/CSS/Sintexe_valor	/pt-BR/docs/Web/CSS/Value_definition_syntax
-/pt-BR/docs/Web/CSS/Tools/Border-image_generator	/pt-BR/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator
-/pt-BR/docs/Web/CSS/Tools/Border-radius_generator	/pt-BR/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator
+/pt-BR/docs/Web/CSS/Tools/Border-image_generator	/pt-BR/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
+/pt-BR/docs/Web/CSS/Tools/Border-radius_generator	/pt-BR/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
 /pt-BR/docs/Web/CSS/Using_CSS_variables	/pt-BR/docs/Web/CSS/Using_CSS_custom_properties
 /pt-BR/docs/Web/CSS/Valor_atual	/pt-BR/docs/Web/CSS/actual_value
 /pt-BR/docs/Web/CSS/Valor_resolvido	/pt-BR/docs/Web/CSS/resolved_value

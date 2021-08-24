@@ -71,8 +71,8 @@ here is the rest of the paragraph.&lt;/p&gt;
 
 <p>대부분의 스크린 리더는 기본값에서 <code>&lt;del&gt;</code> 요소의 존재를 표현하지 않습니다. 그러나 CSS {{cssxref("content")}} 속성과 {{cssxref("::before")}}, {{cssxref("::after")}} 의사 요소를 사용하면 소리내어 읽도록 할 수 있습니다.</p>
 
-<pre class="brush: css">ins::before,
-ins::after {
+<pre class="brush: css">del::before,
+del::after {
   clip-path: inset(100%);
   clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
@@ -82,11 +82,11 @@ ins::after {
   width: 1px;
 }
 
-ins::before {
+del::before {
   content: " [제거 부분 시작] ";
 }
 
-ins::after {
+del::after {
   content: " [제거 부분 끝] ";
 }</pre>
 

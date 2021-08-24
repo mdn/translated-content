@@ -1,56 +1,85 @@
 ---
-title: window.onload
+title: GlobalEventHandlers.onload
 slug: Web/API/GlobalEventHandlers/onload
 tags:
-  - DOM
-  - Gecko
-  - Gecko DOM Reference
-  - Window
+- API
+- Event Handler
+- GlobalEventHandlers
+- HTML DOM
+- Property
+- Reference
+- onload
+browser-compat: api.GlobalEventHandlers.onload
 translation_of: Web/API/GlobalEventHandlers/onload
 ---
-<div>
- {{ApiRef}}</div>
-<h2 id="Summary" name="Summary">概要</h2>
-<p>{{domxref("window")}} の <code>load</code> イベントに対応するイベントハンドラです。</p>
-<h2 id="Syntax" name="Syntax">構文</h2>
-<pre class="syntaxbox">window.onload = <var>funcRef</var>;
+<div>{{ApiRef()}}</div>
+
+<p><strong><code>onload</code></strong> は {{domxref("GlobalEventHandlers")}} ミックスインのプロパティで、{{domxref("Window")}}、{{domxref("XMLHttpRequest")}}、{{htmlelement("img")}} 要素などで発生した {{event("load")}} イベントを処理する<a href="/ja/docs/Web/Events/Event_handlers">イベントハンドラー</a>です。</p>
+
+<p><code>load</code> イベントは指定されたリソースの読み込みが完了したときに発行されます。</p>
+
+<h2 id="Syntax">構文</h2>
+
+<pre class="brush: js"><em>target</em>.onload = <em>functionRef</em>;
 </pre>
-<ul>
- <li><var>funcRef</var> : <code>load</code> イベント発生時に呼び出す関数への参照または関数式</li>
-</ul>
-<h2 id="Example" name="Example">例</h2>
-<pre class="brush:js">window.onload = function() {
-  doSomething(); // DOM 構築後に実行したい関数の呼び出し
+
+<h3 id="Value">値</h3>
+
+<p><code>functionRef</code> は、ウィンドウの <code>load</code> イベントが発行されたときに呼び出されるハンドラー関数です。</p>
+
+<h2 id="Examples">例</h2>
+
+<pre class="brush: js">window.onload = function() {
+  init();
+  doSomethingElse();
 };
 </pre>
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="ja"&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8" /&gt;
-&lt;title&gt;onload のテスト&lt;/title&gt;
 
-&lt;script&gt;
-function load() {
-  alert("load イベントが発生しました。");
-}
-
-window.onload = load;
-&lt;/script&gt;
-
-&lt;/head&gt;
-&lt;body&gt;
-&lt;p&gt;文書の読み込みの完了時に load イベントが発生します。&lt;/p&gt;
-&lt;/body&gt;
+<pre class="brush: html">&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;onload test&lt;/title&gt;
+    // ES5
+    &lt;script&gt;
+      function load() {
+        console.log("load イベントが検出されました。");
+      }
+      window.onload = load;
+    &lt;/script&gt;
+    // ES2015
+    &lt;script&gt;
+      const load = () =&gt; {
+        console.log("load イベントが検出されました。");
+      }
+      window.onload = load;
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p&gt;load イベントは、文書の読み込みが完了したときに発行されます。&lt;/p&gt;
+  &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-<h2 id="Notes" name="Notes">注記</h2>
-<p><code>load</code> イベントは文書のローディング工程の終了時に発生します。このイベントが発生した時点で、文書中の全てのオブジェクトは DOM 内にあり、全ての画像とサブフレームのロードは完了しています。</p>
-<p><code>DOMContentLoaded</code> や <code>DOMFrameContentLoaded</code> のような Gecko で定められた <a href="/ja/docs/Web/Reference/Events">DOM イベント</a> (※{{domxref("element.addEventListener()")}} でハンドリング可能) もありますが、これらは他のリソースのロード完了を待たずに発生するものです。つまり、 <code>window.onload</code> より先に発生します。</p>
-<h2 id="Specification" name="Specification">仕様</h2>
+
+<h2 id="Notes">メモ</h2>
+
+<p><code>load</code> イベントは文書の読み込み工程の終了時に発行されます。このイベントが発行された時点で、文書中のすべてのオブジェクトが DOM 内にあり、すべての画像、スクリプト、サブフレームの読み込みが完了しています。</p>
+
+<p><code>DOMContentLoaded</code> や <code>DOMFrameContentLoaded</code> のような <a href="/ja/docs/Web/Events">DOM イベント</a> ({{domxref("EventTarget.addEventListener()")}} で扱うことが可能) もありますが、これらはこのページの DOM が構築された後、他のリソースの読み込みが完了する前に発行されます。</p>
+
+<h2 id="Specifications">仕様書</h2>
+
+{{Specifications}}
+
+<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="See_also">関連情報</h2>
+
 <ul>
- <li><a href="http://www.whatwg.org/html/#handler-window-onload">http://www.whatwg.org/html/#handler-window-onload</a></li>
-</ul>
-<h2 id="See_also" name="See_also">関連情報</h2>
-<ul>
- <li><a href="/ja/docs/Listening_to_events_in_Firefox_extensions">Firefox 拡張機能内でのイベントのリスニング</a></li>
+  <li>{{Event("load")}} イベント</li>
+  <li><code>DOMContentLoaded</code> イベント (<a
+      href="/ja/docs/Listening_to_events_in_Firefox_extensions#Simple_DOM_events">イベントの待ち受け: 単純な DOM イベント</a>内)</li>
+  <li>IIFE <a href="https://en.wikipedia.org/wiki/Immediately-invoked_function_expression"
+      rel="nofollow noreferrer">Immediately-invoked function expression</a></li>
 </ul>

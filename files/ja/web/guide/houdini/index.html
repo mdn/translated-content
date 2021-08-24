@@ -1,0 +1,94 @@
+---
+title: CSS Houdini
+slug: Web/Guide/Houdini
+tags:
+  - API
+  - CSS
+  - Houdini
+  - JavaScript
+  - Landing
+  - Web
+translation_of: Web/Houdini
+original_slug: Web/Houdini
+---
+<p>Houdini は、CSS エンジンの一部を公開する低レベル API のセットであり、開発者はブラウザーのレンダリングエンジンのスタイリングおよびレイアウトプロセスにフックすることで CSS を拡張できます。 Houdini は、開発者が <a href="/ja/docs/Web/API/CSS_Object_Model">CSS オブジェクトモデル</a>（CSSOM）に直接アクセスできるようにする API のグループです。 開発者は、ブラウザーが CSS として解析できるコードを記述できるため、ブラウザーにネイティブに実装されるのを待たずに新しい CSS 機能を作成できます。</p>
+
+<h2 id="Houdini_の利点">Houdini の利点</h2>
+
+<p>Houdini は、スタイルの変更に JavaScript の .<code><a href="/ja/docs/Web/API/HTMLElement/style">style</a></code> を使用するよりも高速な解析時間を可能にします。 ブラウザーは、スクリプトで見つかったスタイルの更新を適用する前に、CSSOM（レイアウト、ペイント、合成のプロセスを含む）を解析します。 さらに、JavaScript スタイルの更新のために、レイアウト、ペイント、および合成のプロセスが繰り返されます。 Houdini のコードは、最初のレンダリングサイクルが完了するまで待機しません。 むしろ、それは最初のサイクルに含まれ、レンダリング可能で理解可能なスタイルを作成します。 Houdini は、JavaScript で CSS 値を操作するためのオブジェクトベースの API を提供します。</p>
+
+<p>Houdini の CSS Typed OM は、型とメソッドを備えた CSS オブジェクトモデルであり、値を JavaScript オブジェクトとして公開し、以前の文字列ベースの <code><a href="/ja/docs/Web/API/HTMLElement/style">HTMLElement.style</a></code> 操作よりも直感的な CSS 操作を実現します。 すべての要素とスタイルシートのルールには、<code><a href="/ja/docs/Web/API/StylePropertyMap">StylePropertyMap</a></code> を介してアクセスできるスタイルマップがあります。</p>
+
+<p>CSS Houdini の機能の1つはワークレット（<a href="/ja/docs/Web/API/Worklet">Worklet</a>）です。 ワークレットを使用すると、モジュール方式の CSS を作成できます。 構成可能なコンポーネントをインポートするには、次の JavaScript の1行が必要です。 プリプロセッサー、ポストプロセッサー、JavaScript フレームワークは必要ありません。</p>
+
+<pre class="brush: js notranslate">&lt;script&gt;
+  CSS.paintWorklet.addModule('csscomponent.js');
+&lt;/script&gt;
+</pre>
+
+<p>この追加されたモジュールには、完全に構成可能なワークレットを登録する <code><a href="/ja/docs/Web/API/PaintWorklet/registerPaint">registerPaint()</a></code> 関数が含まれています。</p>
+
+<p>CSS の <code>paint()</code> 関数のパラメーターには、オプションのパラメーターとともに、ワークレットの名前が含まれます。 ワークレットは要素のカスタムプロパティにもアクセスできます。 これらは関数の引数として渡す必要はありません。</p>
+
+<pre class="brush: css notranslate">li {
+	background-image: paint(myComponent, stroke, 10px);
+    --highlights: blue;
+    --lowlights: green;
+}</pre>
+
+<div class="blockIndicator note">
+<p><strong>注</strong>: 大きな力には大きな責任が伴います。 Houdini を使用すると、独自の石積み（masonry）、グリッド、またはリージョンの実装を発明できますが、そうすることが必ずしも最良の考えであるとは限りません。 CSS ワーキンググループは、すべての機能が確実に実行され、すべてのエッジケースを処理し、セキュリティ、プライバシー、およびアクセシビリティを考慮するために多くの作業を行います。 Houdini で CSS を拡張するときは、これらの考慮事項を念頭に置き、より野心的なプロジェクトに進む前に、まずは小さいものから始めてください。</p>
+</div>
+
+<h2 class="Documentation" id="Houdini_の_API">Houdini の API</h2>
+
+<p>以下に、Houdini の傘下にある API をカバーするメインリファレンスページへのリンクと、それらの使用方法を学習する際にガイダンスが必要な場合に役立つガイドへのリンクを示します。</p>
+
+<div class="hidden">
+<p>Start by reading <a href="/ja/docs/Web/Houdini/learn">Houdini, an introduction</a> — this provides a brief history of Houdini and an overview of its many features.</p>
+</div>
+
+<dl>
+ <dt>CSS Parser API</dt>
+ <dd>任意の CSS のような言語を穏やかに型付けされた表現に解析するために、CSS パーサーをより直接的に公開する API。<br>
+ <br>
+ この API のガイドやリファレンスは現在書かれていません。</dd>
+ <dt>CSS Properties and Values API </dt>
+ <dd>新しい CSS プロパティを登録するための API を定義します。 この API を使用して登録したプロパティには、型、継承の振る舞い、および初期値を定義する解析構文が提供されます。<br>
+ <br>
+ <a href="/ja/docs/Web/API/CSS_Properties_and_Values_API">CSS Properties and Values API リファレンス</a><br>
+ <a href="/ja/docs/Web/API/CSS_Properties_and_Values_API/guide">CSS Properties and Values API ガイド</a></dd>
+ <dt></dt>
+ <dt>CSS Typed OM</dt>
+ <dd>CSSOM 値の文字列を意味のある型の JavaScript 表現に変換したり、元に戻したりすると、パフォーマンスのオーバーヘッドが大幅に増加する可能性があります。 CSS Typed OM は、CSS 値を型付き JavaScript オブジェクトとして公開し、パフォーマンスの高い操作を可能にします。<br>
+ <br>
+ <a href="/ja/docs/Web/API/CSS_Typed_OM_API">CSS Typed OM リファレンス</a><br>
+ <a href="/ja/docs/Web/API/CSS_Typed_OM_API/Guide">CSS Typed OM ガイド</a></dd>
+ <dt>CSS Layout API </dt>
+ <dd>
+ <p>CSS の拡張性を改善するように設計されたこの API は、開発者が石積みやラインスナップなどの独自のレイアウトアルゴリズムを作成できるようにします。 まだネイティブでは利用できません。<br>
+  <br>
+  この API のガイドやリファレンスは現在書かれていません。</p>
+ </dd>
+ <dt>CSS Painting API</dt>
+ <dd>
+ <p>CSS の拡張性を向上させるために開発 — 開発者が <code>paint()</code> CSS 関数を介して要素の背景、境界線、またはコンテンツに直接描画できる JavaScript 関数を記述できるようにします。<br>
+  <br>
+  <a href="/ja/docs/Web/API/CSS_Painting_API">CSS Painting API リファレンス</a><br>
+  <a href="/ja/docs/Web/API/CSS_Painting_API/ガイド">CSS Painting API ガイド</a></p>
+ </dd>
+ <dt>Worklets </dt>
+ <dd>
+ <p>メインの JavaScript 実行環境から独立した、レンダリングパイプラインのさまざまな段階でスクリプトを実行するための API。 ワークレットは概念的には <a href="/ja/docs/Web/API/Web_Workers_API/Using_web_workers">Web Workers</a> に似ており、レンダリングエンジンによって呼び出され、レンダリングエンジンを拡張します。<br>
+  <br>
+  <a href="/ja/docs/Web/API/Worklet">Worklets リファレンス</a></p>
+ </dd>
+</dl>
+
+<h2 id="その他のトピック">その他のトピック</h2>
+
+<p>興味深い方法で Houdini API と連携して使用できるため、興味深い関連トピック。</p>
+
+<dl>
+ <dt>合成スクロールとアニメーション</dt>
+</dl>
