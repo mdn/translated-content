@@ -2874,7 +2874,7 @@
       "fscholz"
     ]
   },
-  "Web/API/AnimationEvent/initAnimationEvent": {
+  "Web/API/AnimationEvent/AnimationEvent": {
     "modified": "2019-03-23T22:58:50.823Z",
     "contributors": [
       "teoli",

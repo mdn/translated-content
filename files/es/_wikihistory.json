@@ -10652,23 +10652,23 @@
       "ulisescab"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Border-image_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders": {
+    "modified": "2019-03-23T22:41:48.399Z",
+    "contributors": [
+      "teoli"
+    ]
+  },
+  "Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator": {
     "modified": "2019-03-23T22:41:48.777Z",
     "contributors": [
       "teoli",
       "mcclone2001"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Border-radius_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator": {
     "modified": "2019-03-18T21:15:42.476Z",
     "contributors": [
       "israel-munoz"
-    ]
-  },
-  "Web/CSS/CSS_Backgrounds_and_Borders": {
-    "modified": "2019-03-23T22:41:48.399Z",
-    "contributors": [
-      "teoli"
     ]
   },
   "Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds": {
@@ -20358,14 +20358,14 @@
       "Deng_C1"
     ]
   },
-  "Web/Progressive_web_apps/Developer_guide/Installing": {
-    "modified": "2020-09-20T03:25:41.762Z",
+  "Web/Progressive_web_apps/Installable_PWAs": {
+    "modified": "2020-09-20T03:54:28.154Z",
     "contributors": [
       "Nachec"
     ]
   },
-  "Web/Progressive_web_apps/Installable_PWAs": {
-    "modified": "2020-09-20T03:54:28.154Z",
+  "Web/Progressive_web_apps/Installing": {
+    "modified": "2020-09-20T03:25:41.762Z",
     "contributors": [
       "Nachec"
     ]
