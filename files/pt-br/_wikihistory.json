@@ -3632,13 +3632,6 @@
       "takahan"
     ]
   },
-  "Web/API/AnimationEvent/initAnimationEvent": {
-    "modified": "2019-03-23T22:45:29.493Z",
-    "contributors": [
-      "teoli",
-      "takahan"
-    ]
-  },
   "Web/API/AnimationEvent/pseudoElement": {
     "modified": "2019-03-23T22:45:35.200Z",
     "contributors": [
@@ -7591,23 +7584,23 @@
       "francisco.hansen"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Border-image_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders": {
+    "modified": "2019-03-23T22:44:11.690Z",
+    "contributors": [
+      "teoli"
+    ]
+  },
+  "Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator": {
     "modified": "2019-05-06T10:31:39.391Z",
     "contributors": [
       "leodeJESUS",
       "Torto"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Border-radius_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator": {
     "modified": "2019-03-23T23:07:37.174Z",
     "contributors": [
       "Torto"
-    ]
-  },
-  "Web/CSS/CSS_Backgrounds_and_Borders": {
-    "modified": "2019-03-23T22:44:11.690Z",
-    "contributors": [
-      "teoli"
     ]
   },
   "Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images": {
@@ -16366,6 +16359,13 @@
     "modified": "2019-03-23T22:18:12.202Z",
     "contributors": [
       "RafaelGiordanno"
+    ]
+  },
+  "conflicting/Web/API/AnimationEvent/AnimationEvent": {
+    "modified": "2019-03-23T22:45:29.493Z",
+    "contributors": [
+      "teoli",
+      "takahan"
     ]
   },
   "conflicting/Web/API/Crypto/getRandomValues": {
