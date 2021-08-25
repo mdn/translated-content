@@ -26082,12 +26082,6 @@
       "Wind1808"
     ]
   },
-  "Web/API/XRHandedness": {
-    "modified": "2020-12-06T13:23:10.937Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
   "Web/API/XRInputSource": {
     "modified": "2020-12-06T11:35:46.714Z",
     "contributors": [
@@ -26101,7 +26095,7 @@
     ]
   },
   "Web/API/XRInputSource/handedness": {
-    "modified": "2020-12-07T01:54:31.459Z",
+    "modified": "2020-12-06T13:23:10.937Z",
     "contributors": [
       "Wind1808"
     ]
@@ -26113,7 +26107,7 @@
     ]
   },
   "Web/API/XRInputSource/targetRayMode": {
-    "modified": "2020-12-08T09:39:34.531Z",
+    "modified": "2020-12-08T09:23:22.538Z",
     "contributors": [
       "Wind1808"
     ]
@@ -26204,12 +26198,6 @@
   },
   "Web/API/XRSystem": {
     "modified": "2020-10-23T14:29:58.403Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Web/API/XRTargetRayMode": {
-    "modified": "2020-12-08T09:23:22.538Z",
     "contributors": [
       "Wind1808"
     ]
