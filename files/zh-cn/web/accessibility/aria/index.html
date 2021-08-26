@@ -3,175 +3,123 @@ title: ARIA
 slug: Web/Accessibility/ARIA
 tags:
   - ARIA
-  - Accessibility
-  - NeedsTranslation
-  - TopicStub
+  - 可访问性
+  - 无障碍
+  - HTML
 translation_of: Web/Accessibility/ARIA
 ---
-<p>Accessible Rich Internet Applications <strong>(ARIA)</strong> 是能够让残障人士更加便利的访问 Web 内容和使用 Web 应用（特别是那些由JavaScript 开发的）的一套机制。</p>
 
-<p>ARIA是对超文本标记语言（HTML ）的补充，以便在没有其他机制的情况下，使得应用程序中常用的交互和小部件可以传递给辅助交互技术。例如，ARIA支持HTML4中的可访问导航地标、JavaScript小部件、表单提示和错误消息、实时内容更新等。</p>
+<p><strong>ARIA</strong> (Accessible Rich Internet Applications) 是一组属性，用于定义使残障人士更容易访问 Web 内容和 Web 应用程序（尤其是使用 JavaScript 开发的应用程序）的方法。</p>
 
-<p>ARIA 是一组特殊的易用性属性，可以添加到任意标签上，尤其适用于 HTML。role 属性定义了对象的通用类型（例如文章、警告，或幻灯片）。额外的 ARIA 属性提供了其他有用的特性，例如表单的描述或进度条的当前值。</p>
+<p>它补充了 HTML，以便在没有其他机制时可以将应用程序中常用的交互和小部件传递给辅助技术。例如，ARIA 支持 HTML4 中的可访问导航地标、JavaScript 小部件、表单提示和错误消息、实时内容更新等。</p>
 
-<p>ARIA 在大多数流行的浏览器和屏幕阅读器中得到了实现。尽管如此，实现方式有所不同，而且旧的技术对其支持不好（或者不支持）。使用可以优雅降级的“安全的” ARIA，或者要求用户升级使用新的技术。</p>
-
-<div class="blockIndicator warning">
-<p>这些小部件中的许多后来被合并到HTML5中，如果存在这样的元素，<strong>开发人员应该更倾向使用对应的语义化HTML元素，而不是使用ARIA</strong>。例如，原生元素具有内置的<a href="https://developer.mozilla.org/zh-CN/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets">键盘可访问性</a>、角色和状态。但是，如果您选择使用ARIA，您有责任在脚本中模仿(等效的)浏览器行为。</p>
+<div class="notecard warning">
+ <p>许多这些小部件后来被合并到 HTML5 中，如果存在这样的元素，<strong>开发人员应该更喜欢使用正确语义的 HTML 元素而不是使用 ARIA</strong>。例如，原生元素具有内置的<a href="/zh-CN/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets">键盘可访问性</a>、角色和状态。但是，如果您选择使用 ARIA，则您有责任在脚本中模仿（等效）浏览器行为。</p>
 </div>
+<p>这是进度条小部件的标记：</p>
 
-<p>下面是一段进度条组件的代码：</p>
-
-<pre class="brush: html notranslate"><code>&lt;div id="percent-loaded" role="progressbar" aria-valuenow="75"
-     aria-valuemin="0" aria-valuemax="100" /&gt;</code>
+<pre class="brush: html">&lt;div id="percent-loaded" role="progressbar" aria-valuenow="75"
+     aria-valuemin="0" aria-valuemax="100"&gt;
+&lt;/div&gt;
 </pre>
 
-<p>由于这个滚动条是用<code>&lt;div&gt;</code>写的，没有字面含义。然而，对开发者来说，在HTML4中，又没有更多的语义化的标签，所以我们需要引入ARIA这个角色和属性，这些是通过向元素添加属性来指定的。举个例子，<code>role="progressbar"</code>这个属性告诉浏览器，该元素其实是一个JavaScript实现的进度条组件。<code>aria-valuemin </code>和<code>aria-valuemax</code> 属性表明了进度条的最小值和最大值。 <code>aria-valuenow</code>则描述了当前进度条的状态， 因此它得用JavaScript来更新。</p>
+<p>这个进度条是使用 {{HTMLElement("div")}} 构建的，它没有任何意义。不幸的是，HTML 4 中没有更多语义标签可供开发人员使用，因此我们需要包含 ARIA 角色和属性。这些是通过向元素添加属性来指定的。在这个例子中， <code>role="progressbar"</code> 属性通知浏览器这个元素实际上是一个 JavaScript 驱动的进度条小部件。 <code>aria-valuemin</code> 和 <code>aria-valuemax</code> 属性指定进度条的最小值和最大值，<code>aria-valuenow</code> 描述进度条的当前状态和因此必须使用 JavaScript 保持更新。</p>
 
-<p>除了直接给标签加属性，还可以通过JavaScript代码把ARIA属性添加到元素并动态地更新，如下面所示：</p>
+<p>除了将它们直接放置在元素中之外，还可以将 ARIA 属性添加到元素中，并使用 JavaScript 代码动态更新，如下所示：</p>
 
-<pre class="brush: js notranslate"><code>// Find the progress bar &lt;div&gt; in the DOM.
- var progressBar = document.getElementById("percent-loaded");</code>
+<pre class="brush: js">// Find the progress bar &lt;div&gt; in the DOM.
+var progressBar = document.getElementById("percent-loaded");
 
-<code>// Set its ARIA roles and states,
-// so that assistive technologies know what kind of widget it is.</code>
- progressBar.setAttribute("role", "progressbar");
- progressBar.setAttribute("aria-valuemin", 0);
- progressBar.setAttribute("aria-valuemax", 100);
+// Set its ARIA roles and states,
+// so that assistive technologies know what kind of widget it is.
+progressBar.setAttribute("role", "progressbar");
+progressBar.setAttribute("aria-valuemin", 0);
+progressBar.setAttribute("aria-valuemax", 100);
 
 // Create a function that can be called at any time to update
 // the value of the progress bar.
- function updateProgress(percentComplete) {
-   progressBar.setAttribute("aria-valuenow", percentComplete);
- }
+function updateProgress(percentComplete) {
+  progressBar.setAttribute("aria-valuenow", percentComplete);
+}</pre>
 
-</pre>
+<div class="notecard note">
+ <p>请注意，ARIA 是在 HTML4 之后发明的，因此无法在 HTML4 或其 XHTML 变体中进行验证。然而，它提供的可访问性收益远远超过任何技术无效性。</p>
 
-<div class="note">
-<p>注意由于ARIA是在HTML4之后引入的，所以在HTML4或XTHML中没有提供验证。然而，它提供的可访问性收益远远超过任何技术上的无效性。</p>
-
-<p>在HTML5中，所有的ARIA属性都是有效的。新的标记元素（<code>&lt;main&gt;</code>, <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>等）都已具有了ARIA角色，所以就没必要再标注说明了。</p>
+ <p>在 HTML5 中，所有 ARIA 属性都经过验证。新的地标元素（{{HTMLElement("main")}}、{{HTMLElement("header")}}、{{HTMLElement("nav")}} 等）具有内置的 ARIA 角色，因此有无需复制它们。</p>
 </div>
 
-<table class="topicpage-table">
- <tbody>
-  <tr>
-   <td>
-    <h3 id="Documentation" name="Documentation">ARIA 入门</h3>
+<h2 id="Support">支持</h2>
 
-    <dl>
-     <dt><a href="/en-US/docs/Accessibility/An_overview_of_accessible_web_applications_and_widgets" title="An overview of accessible web applications and widgets">ARIA 介绍</a></dt>
-     <dd>关于借助 ARIA 使得动态内容可访问的快速介绍。也可参考经典的 <a class="external" href="http://dev.opera.com/articles/view/introduction-to-wai-aria/" title="http://dev.opera.com/articles/view/introduction-to-wai-aria/">ARIA 介绍 - Gez Lemon</a>，2008 年。</dd>
-     <dt><a href="/en-US/docs/Accessibility/ARIA/Web_applications_and_ARIA_FAQ" title="https://developer.mozilla.org/en-US/docs/Accessibility/Web_applications_and_ARIA_FAQ">Web 应用与 ARIA FAQ</a></dt>
-     <dd>解答关于WAI-ARIA的问题并且解释为什么网站需要ARIA。</dd>
-     <dt><a class="external" href="http://zomigi.com/blog/videos-of-screen-readers-using-aria-updated/" title="http://zomigi.com/blog/videos-of-screen-readers-using-aria-updated/">在视频频和屏幕阅读器使用 ARIA</a></dt>
-     <dd>从网上看到真实和简单的例子，包括“before”和“after”ARIA视频。</dd>
-     <dt><a class="external" href="http://dvcs.w3.org/hg/aria-unofficial/raw-file/tip/index.html">在 HTML 使用 ARIA</a></dt>
-     <dd>A practical guide for developers. It suggests what ARIA attributes to use on HTML elements. Suggestions are based on implementation realities.一份为开发人员提供实用指南。它建议一些基于基于执行的在HTML元素上使用哪些ARIA属性。</dd>
-    </dl>
+<p>与任何其他 Web 技术一样，对 ARIA 有不同程度的支持。支持基于所使用的操作系统和浏览器，以及与之交互的辅助技术类型。此外，操作系统、浏览器和辅助技术的版本也是影响因素。较旧的软件版本可能不支持某些 ARIA 角色、仅部分支持或误报其功能。</p>
 
-    <h3 id="ARIA_初级进阶">ARIA 初级进阶</h3>
+<p>同样重要的是要承认一些依赖辅助技术的人不愿意升级他们的软件，因为害怕失去与他们的计算机和浏览器交互的能力。因此，尽可能对 <a href="/zh-CN/docs/Learn/Accessibility/HTML">使用语义化的 HTML 元素</a> 很重要，因为语义 HTML 对辅助技术的支持要好得多。</p>
 
-    <dl>
-     <dt><a class="external" href="http://www.paciellogroup.com/blog/2010/10/using-wai-aria-landmark-roles/" rel="external" title="http://www.paciellogroup.com/blog/2010/10/using-wai-aria-landmark-roles/">通过ARIA标签增强页面导航</a></dt>
-     <dd>A nice intro to using ARIA landmarks to improve web page navigation for screen reader users. <a class="external" href="http://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/" rel="external" title="http://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/">See also, ARIA landmark implementation notes</a> and examples on real sites (updated as of July '11).</dd>
-     <dt><a href="/en-US/docs/ARIA/forms" rel="internal" title="/en-US/docs/ARIA/forms">提高表单可访问性</a></dt>
-     <dd>ARIA is not just for dynamic content! Learn how to improve accessibility of HTML forms using additional ARIA attributes. </dd>
-     <dt><a class="external" href="/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Live_Regions" rel="external" title="http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm">ARIA 活动区域 </a></dt>
-     <dd>活动区域为屏幕阅读器提供关于如何处理一个页面内容变更的建议。</dd>
-     <dt><a class="external" href="http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm" rel="external" title="http://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm">用ARIA 活动区域去通知内容的改变</a></dt>
-     <dd>A quick summary of live regions, by the makers of JAWS screen reader software. Note that live regions are also supported by NVDA in Firefox, and VoiceOver with Safari (as of OS X Lion and iOS 5).</dd>
-    </dl>
+<p>使用实际辅助技术测试您编写的 ARIA 也很重要。就像浏览器模拟器和模拟器不是测试完全支持的有效解决方案一样，代理辅助技术解决方案不足以完全保证功能。</p>
 
-    <h3 id="ARIA_与脚本组件">ARIA 与脚本组件</h3>
+<h2 id="Tutorials">教程</h2>
 
-    <dl>
-     <dt><a class="external" href="/en-US/docs/Accessibility/Keyboard-navigable_JavaScript_widgets" title="en-US/docs/Accessibility/Keyboard-navigable_JavaScript_widgets">键盘导航与组件焦点</a></dt>
-     <dd>The first step in developing an accessible JavaScript widget is to make it keyboard navigable. This article steps through the process. The <a class="external" href="http://www.yuiblog.com/blog/2009/02/23/managing-focus/" title="http://www.yuiblog.com/blog/2009/02/23/managing-focus/">Yahoo! focus management article</a> is a great resource as well.</dd>
-     <dt><a class="external" href="http://access.aol.com/dhtml-style-guide-working-group/" title="http://dev.aol.com/dhtml_style_guide">Style Guide for Keyboard Navigation</a></dt>
-     <dd>A challenge with ARIA is getting developers to implement consistent behavior -- clearly best for users. This style guide describes the keyboard interface for common widgets.</dd>
-    </dl>
+<dl>
+ <dt><a href="/zh-CN/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets">ARIA 简介</a></dt>
+ <dd>快速介绍如何使用 ARIA 访问动态内容。另请参阅 2008 年的经典 <a href="https://dev.opera.com/articles/view/introduction-to-wai-aria/">ARIA intro by Gez Lemon</a>。</dd>
+ <dt><a href="https://zomigi.com/blog/videos-of-screen-readers-using-aria-updated/">Videos of screen readers using ARIA</a></dt>
+ <dd>查看来自网络的真实和简化示例，视频包括 ARIA “之前”和 ARIA“之后”。</dd>
+ <dt><a href="https://w3c.github.io/using-aria/">Using ARIA</a></dt>
+ <dd>开发人员实用指南。它建议在 HTML 元素上使用哪些 ARIA 属性。建议是基于实施的实际情况。</dd>
+</dl>
 
-    <h3 id="ARIA_资源">ARIA 资源</h3>
+<h2 id="Simple_ARIA_enhancements">简单的 ARIA 增强</h2>
 
-    <dl>
-     <dt><a href="/en-US/docs/Accessibility/ARIA/widgets/overview" title="en-US/docs/aria/widgets/overview">Widget Techniques, Tutorials, and Examples</a></dt>
-     <dd>Need a slider, a menu, or another kind of widget? Find resources here.</dd>
-     <dt><a class="external" href="http://www.paciellogroup.com/blog/2009/07/wai-aria-implementation-in-javascript-ui-libraries/" title="http://www.paciellogroup.com/blog/2009/07/wai-aria-implementation-in-javascript-ui-libraries/">ARIA-Enabled JavaScript UI Libraries</a></dt>
-     <dd>If you're starting a new project, choose a UI widget library with ARIA support already built-in. Warning: this is from 2009 -- content should be moved to an MDN page where it can be updated.</dd>
-     <dt><a class="external" href="http://dl.dropbox.com/u/573324/CSUN2012/index.html" title="http://dl.dropbox.com/u/573324/CSUN2012/index.html">Accessibility of HTML5 and Rich Internet Applications - CSUN 2012 Workshop Materials</a></dt>
-     <dd>Includes slide presentations and examples.</dd>
-    </dl>
-   </td>
-   <td>
-    <h3 id="Community" name="Community">邮件列表</h3>
+<dl>
+ <dt><a href="https://www.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/">Enhancing page navigation with ARIA landmarks</a></dt>
+ <dd>使用 ARIA 地标改进屏幕阅读器用户的网页导航的一个很好的介绍。参考 <a href="https://www.paciellogroup.com/blog/2011/07/html5-accessibility-chops-aria-landmark-support/">ARIA landmark implementation notes</a> 和真实站点上的示例（截至 2011 年 7 月更新）。</dd>
+ <dt><a href="/zh-CN/docs/Web/Accessibility/ARIA/forms">Improving form accessibility</a></dt>
+ <dd>ARIA 不仅适用于动态内容！了解如何使用附加 ARIA 属性提高 HTML 表单的可访问性。</dd>
+</dl>
 
-    <dl>
-     <dt><a class="link-https" href="https://groups.google.com/forum/#!forum/free-aria" title="https://groups.google.com/forum/#!forum/free-aria">Free ARIA Google Group</a></dt>
-     <dd>A place to ask questions about ARIA, as well as make suggestions for improving the ARIA documentation found on these pages.</dd>
-    </dl>
+<h2 id="ARIA_for_Scripted_Widgets">脚本小部件的 ARIA</h2>
 
-    <h3 id="Community" name="Community">博客</h3>
+<dl>
+ <dt><a href="/zh-CN/docs/Web/Accessibility/Keyboard-navigable_JavaScript_widgets">编写可通过键盘导航的 JavaScript 小部件</a></dt>
+ <dd>{{HTMLElement("input")}}、{{HTMLElement("button")}} 等内置元素具有内置键盘辅助功能。如果您使用 {{HTMLElement("div")}} 和 ARIA 来“伪造”这些，则必须确保您的小部件可通过键盘访问。</dd>
+ <dt><a href="/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Live_Regions">实时区域</a></dt>
+ <dd>实时区域向屏幕阅读器提供有关如何处理页面内容更改的建议。</dd>
+ <dt><a href="https://www.freedomscientific.com/Training/Surfs-up/AriaLiveRegions.htm">Using ARIA Live Regions to announce content changes</a></dt>
+ <dd>JAWS 屏幕阅读器软件制造商对实时区域的快速总结。带有 Firefox 的 NVDA 和带有 Safari 的 VoiceOver 也支持实时区域。</dd>
+</dl>
 
-    <p>ARIA information on blogs tends to get out of date quickly. Still, there is some great info out there from other developers making ARIA work today.</p>
+<h2 id="References">参考文献</h2>
 
-    <p><a class="external" href="http://www.paciellogroup.com/blog/category/wai-aria/" title="http://www.paciellogroup.com/blog/category/wai-aria/">Paciello Group</a></p>
+<dl>
+ <dt><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles">ARIA Roles</a></dt>
+ <dd>参考页面涵盖了 MDN 上讨论的所有 WAI-ARIA 角色。</dd>
+</dl>
 
-    <p><a class="external" href="http://www.accessibleculture.org/tag/wai-aria/" title="http://www.accessibleculture.org/tag/wai-aria/">Accessible Culture</a></p>
+<h2 id="Standardization_Efforts">标准化工作</h2>
 
-    <p><a class="external" href="http://yaccessibilityblog.com/library/category/code/aria" title="http://yaccessibilityblog.com/library/category/code/aria">Yahoo! Accessibility</a></p>
+<dl>
+ <dt><a href="https://www.w3.org/TR/wai-aria-1.1/">WAI-ARIA Specification</a></dt>
+ <dd>W3C 规范本身。</dd>
+ <dt><a href="https://www.w3.org/TR/wai-aria-practices-1.1/">WAI-ARIA Authoring Practices</a></dt>
+ <dd><p>官方最佳实践记录了如何最好地对常见小部件和交互进行 ARIA 化。一个很好的资源。</p></dd>
+</dl>
 
-    <h3 id="提交_Bug">提交 Bug</h3>
+<h2 id="Videos">视频</h2>
 
-    <p><a href="/en/Accessibility/ARIA/How_to_file_ARIA-related_bugs" title="https://developer.mozilla.org/en/ARIA/How_to_file_ARIA-related_bugs">File ARIA bugs on browsers, screen readers, and JavaScript libraries</a>.</p>
+<p>以下演讲是了解 ARIA 的好方法：</p>
 
-    <h3 id="示例">示例</h3>
+<p><a href="https://www.youtube.com/watch?v=qdB8SRhqvFc">ARIA, Accessibility APIs and coding like you give a damn! – Léonie Watson</a></p>
 
-    <dl>
-     <dt><a class="external" href="/en-US/docs/Accessibility/ARIA/ARIA_Test_Cases" title="en-US/docs/ARIA/examples">ARIA 示例库</a></dt>
-     <dd>A set of barebones example files which are easy to learn from.</dd>
-     <dt><span class="external">可访问的 JS 组件库演示</span></dt>
-     <dd><a class="external" href="http://dojotoolkit.org/widgets" title="http://dojotoolkit.org/widgets">Dojo</a>, <a class="external" href="http://hanshillen.github.com/jqtest/" title="http://hanshillen.github.com/jqtest/">jQuery</a>, <a class="external" href="http://wiki.fluidproject.org/display/fluid/Components" title="http://wiki.fluidproject.org/display/fluid/Components">Fluid</a>, <a class="external" href="http://yuilibrary.com/gallery/" title="http://yuilibrary.com/gallery/">YUI</a></dd>
-    </dl>
+<h2 id="Filing_Bugs">提交错误</h2>
 
-    <dl>
-     <dt><a class="external" href="http://mail.yahoo.com" title="http://mail.yahoo.com">Yahoo! 邮箱</a></dt>
-     <dd>Yahoo! puts it all together with Yahoo! Mail, a web app that almost looks like a native app. It works very well. As a <a class="external" href="http://www.marcozehe.de/2011/09/21/review-the-all-new-yahoo-mail-web-application/" title="http://www.marcozehe.de/2011/09/21/review-the-all-new-yahoo-mail-web-application/">review of Yahoo! Mail</a> by screen reader Marco Zehe says, "Keep up the good work!".</dd>
-    </dl>
+<p><a href="/zh-CN/docs/Web/Accessibility/ARIA/How_to_file_ARIA-related_bugs">在浏览器、屏幕阅读器和 JavaScript 库上提交 ARIA 错误。</a></p>
 
-    <dl>
-     <dt><a class="external" href="http://search.yahoo.com" title="http://search.yahoo.com">Yahoo! 搜索</a></dt>
-     <dd>Yahoo! has done an amazing job of advancing ARIA here, by exercising ARIA's full capabilities and <a class="external" href="http://ycorpblog.com/2011/03/23/searchdirect/" title="http://ycorpblog.com/2011/03/23/searchdirect/">sharing their techniques</a>. Yahoo! Search uses a combination of ARIA landmarks, live regions, and widgets.</dd>
-    </dl>
+<h2 id="Related_Topics">相关话题</h2>
 
-    <h3 id="规范特性">规范特性</h3>
+<p><a href="/zh-CN/docs/Web/Accessibility">Accessibility</a>, <a href="/zh-CN/docs/Web/Guide/AJAX">AJAX</a>, <a href="/zh-CN/docs/Web/JavaScript">JavaScript</a></p>
 
-    <dl>
-     <dt><a class="external" href="http://www.w3.org/WAI/intro/aria.php" title="http://www.w3.org/WAI/intro/aria.php">WAI-ARIA Activities Overview at W3C</a></dt>
-     <dd>Authoritative Overview of WAI-ARIA Standardization efforts by the Web Accessibility Initiative (WAI)</dd>
-     <dt><a class="external" href="http://www.w3.org/TR/wai-aria/" title="http://www.w3.org/TR/wai-aria/">WAI-ARIA Specification</a></dt>
-     <dd>The W3C specification itself, useful as a reference. Note that, at this stage, it is important to test compatibility, as implementations are still inconsistent.</dd>
-     <dt><a class="external" href="http://www.w3.org/WAI/PF/aria-practices/" title="http://www.w3.org/WAI/PF/aria-practices/">WAI-ARIA Authoring Practices</a></dt>
-     <dd>Like the W3C WAI-ARIA specification, the official best practices represents a future ideal -- a day when authors can rely on consistent ARIA support across browsers and screen readers. The W3C documents provide an in-depth view of ARIA.<br>
-     <br>
-     For now, web developers implementing ARIA should maximize compatibility. Use best practices docs and examples based on current implementations.</dd>
-     <dt><a class="external" href="http://www.openajax.org/member/wiki/Accessibility" title="http://www.openajax.org/member/wiki/Accessibility">Open AJAX Accessibility Task Force</a></dt>
-     <dd>The Open AJAX effort centers around developing tools, sample files, and automated tests for ARIA.</dd>
-     <dt><a href="/en-US/docs/Accessibility/ARIA/ARIA_Techniques" title="ARIA Techniques">Under Construction: WCAG 2.0 ARIA Techniques</a></dt>
-     <dd>The community needs a complete set of WCAG techniques for WAI-ARIA + HTML, so that organizations can be comfortable claiming their ARIA-enabled content is WCAG compliant. This is mostly important when regulations or policies are based on WCAG.</dd>
-    </dl>
-   </td>
-  </tr>
- </tbody>
- <tbody>
-  <tr>
-   <td colspan="2">
-    <h3 id="Related_Topics" name="Related_Topics">相关主题</h3>
-
-    <dl>
-     <dd><a href="/en-US/docs/Accessibility" title="en-US/docs/Accessibility">Accessibility</a>, <a href="/en-US/docs/AJAX" title="en-US/docs/AJAX">AJAX</a>, <a href="/en-US/docs/JavaScript" title="en-US/docs/JavaScript">JavaScript</a></dd>
-    </dl>
-   </td>
-  </tr>
- </tbody>
-</table>
+<section id="Quick_links">
+ <ol>
+  <li><a href="/zh-CN/docs/Web/Guide">网页开发</a></li>
+  <li><a href="/zh-CN/docs/Mozilla/Accessibility">Mozilla 的可访问性</a></li>
+ </ol>
+</section>

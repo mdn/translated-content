@@ -2114,7 +2114,7 @@
 /ja/docs/Installing_Extensions_and_Themes_From_Web_Pages	/ja/docs/orphaned/Installing_Extensions_and_Themes_From_Web_Pages
 /ja/docs/Installing_extensions	/ja/docs/orphaned/Installing_extensions
 /ja/docs/Introducing_Content_Security_Policy	/ja/docs/Web/HTTP/CSP
-/ja/docs/Introduction_to_DOM_Inspector	/ja/docs/orphaned/Introduction_to_DOM_Inspector
+/ja/docs/Introduction_to_DOM_Inspector	/ja/docs/Tools/Page_Inspector
 /ja/docs/Introduction_to_using_XPath_in_JavaScript	/ja/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /ja/docs/JSON	/ja/docs/Glossary/JSON
 /ja/docs/JavaScript	/ja/docs/Web/JavaScript
@@ -2963,7 +2963,6 @@
 /ja/docs/Tools/Responsive_Design_Mode_(before_Firefox_52)	/ja/docs/Tools/Responsive_Design_Mode
 /ja/docs/Tools/Responsive_Design_View	/ja/docs/Tools/Responsive_Design_Mode
 /ja/docs/Tools/Web_Console-redirect-1	/ja/docs/Tools/Web_Console
-/ja/docs/Tools/Web_Console/Keyboard_shortcuts	/ja/docs/orphaned/Tools/Web_Console/Keyboard_shortcuts
 /ja/docs/Tools/Web_Console/Opening_the_Web_Console	/ja/docs/Tools/Web_Console/UI_Tour
 /ja/docs/Tools/Web_Console/WebConsoleHelp	/en-US/docs/Tools/Web_Console/Helpers
 /ja/docs/Transforming_XML_with_XSLT	/ja/docs/Web/XSLT/Transforming_XML_with_XSLT
@@ -3923,7 +3922,7 @@
 /ja/docs/Web/Guide/HTML/Forms/Styling_HTML_forms	/ja/docs/Learn/Forms/Styling_web_forms
 /ja/docs/Web/Guide/HTML/Forms/The_native_form_widgets	/ja/docs/Learn/Forms/Basic_native_form_controls
 /ja/docs/Web/Guide/HTML/HTML5	/ja/docs/orphaned/Web/Guide/HTML/HTML5
-/ja/docs/Web/Guide/HTML/HTML5/Constraint_validation	/ja/docs/orphaned/Web/Guide/HTML/HTML5/Constraint_validation
+/ja/docs/Web/Guide/HTML/HTML5/Constraint_validation	/ja/docs/Web/Guide/HTML/Constraint_validation
 /ja/docs/Web/Guide/HTML/HTML5/Forms_in_HTML5	/ja/docs/Learn/Forms
 /ja/docs/Web/Guide/HTML/HTML5/HTML5_Thematic_Classification	/ja/docs/orphaned/Web/Guide/HTML/HTML5
 /ja/docs/Web/Guide/HTML/HTML5/HTML5_element_list	/ja/docs/Web/HTML/Element
@@ -3989,7 +3988,7 @@
 /ja/docs/Web/HTML/Forms/The_native_form_widgets	/ja/docs/Learn/Forms/Basic_native_form_controls
 /ja/docs/Web/HTML/Forms_in_HTML	/ja/docs/Learn/Forms/HTML5_input_types
 /ja/docs/Web/HTML/HTML5	/ja/docs/orphaned/Web/Guide/HTML/HTML5
-/ja/docs/Web/HTML/HTML5/Constraint_validation	/ja/docs/orphaned/Web/Guide/HTML/HTML5/Constraint_validation
+/ja/docs/Web/HTML/HTML5/Constraint_validation	/ja/docs/Web/Guide/HTML/Constraint_validation
 /ja/docs/Web/HTML/HTML5/Forms_in_HTML5	/ja/docs/Learn/Forms/HTML5_input_types
 /ja/docs/Web/HTML/HTML5/HTML5_Thematic_Classification	/ja/docs/orphaned/Web/Guide/HTML/HTML5
 /ja/docs/Web/HTML/HTML5/HTML5_element_list	/ja/docs/Web/HTML/Element
