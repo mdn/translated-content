@@ -15885,12 +15885,6 @@
       "Taoja"
     ]
   },
-  "Web/API/Headers/getAll": {
-    "modified": "2019-03-23T22:15:47.321Z",
-    "contributors": [
-      "Taoja"
-    ]
-  },
   "Web/API/Headers/has": {
     "modified": "2019-03-18T21:43:54.084Z",
     "contributors": [
@@ -47243,6 +47237,12 @@
       "fscholz",
       "xgqfrms-GitHub",
       "m2mbob"
+    ]
+  },
+  "conflicting/Web/API/Headers/get": {
+    "modified": "2019-03-23T22:15:47.321Z",
+    "contributors": [
+      "Taoja"
     ]
   },
   "conflicting/Web/API/MouseEvent/altKey": {
