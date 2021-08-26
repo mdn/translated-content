@@ -66,7 +66,7 @@ console.log(bar(7));
 
 <p>瀏覽器中，會添加訊息是由於事件的觸動，以及伴隨著事件的監聽者。若是沒有事件監聽者，則該事件的觸動就不會形成訊息，例如說一個點擊的動作伴隨著點擊事件監聽者就會形成一個新的訊息，其他類事件亦然。</p>
 
-<p>呼叫 <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout"><code>setTimeout</code></a> 時有兩個參數：第一個是會被加入到佇列中的訊息，第二個參數為延遲時間（預設為 0）。若無其他訊息在佇列中，則這個訊息會在設定的延遲後立刻被處理。但若佇列內有其他訊息，<code>setTimeout</code> 的訊息必須等到其他訊息處理完。因此第二個時間參數只能表示為最少時間，而不是一個精準的時間。</p>
+<p>呼叫 <a href="/en-US/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout"><code>setTimeout</code></a> 時有兩個參數：第一個是會被加入到佇列中的訊息，第二個參數為延遲時間（預設為<code>0</code>）。若無其他訊息在佇列中，則這個訊息會在設定的延遲後立刻被處理。但若佇列內有其他訊息，<code>setTimeout</code> 的訊息必須等到其他訊息處理完。因此第二個時間參數只能表示為最少時間，而不是一個精準的時間。</p>
 
 <p>這裡有個示範此概念的例子（<code>setTimeout</code>在其計時器到期後不會立刻執行）：</p>
 
