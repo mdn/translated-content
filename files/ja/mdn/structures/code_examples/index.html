@@ -1,8 +1,9 @@
 ---
-title: コード例
+title: コードサンプル
 slug: MDN/Structures/Code_examples
 tags:
   - Code
+  - Examples
   - Landing
   - Live
   - MDN Meta
@@ -14,205 +15,115 @@ translation_of: MDN/Structures/Code_examples
 ---
 <div>{{MDNSidebar}}</div>
 
-<div>{{IncludeSubnav("/ja/docs/MDN")}}</div>
+<p class="summary">MDN では、ウェブプラットフォームの機能の使い方を示すために、ページ中に数多くのコードサンプルが挿入されています。この記事では、ページにコードサンプルを追加するためのさまざまな仕組みと、どのような場合にどのような仕組みを使うべきかについて説明します。</p>
 
-<p class="summary">MDN には、Web プラットフォーム機能の使用方法を示すために、多数のコード例がページ全体に挿入されています。この記事では、コード例をページに追加する際に使用できるさまざまなメカニズムと、使用する必要があるものとそのタイミングについて説明します。</p>
+<h2 id="What_types_of_code_example_are_available">利用できるコードサンプルの種類</h2>
 
-<h2 id="どのような種類のコード例が利用できますか？">どのような種類のコード例が利用できますか？</h2>
-
-<p>There are four types of code example available on MDN:</p>
+<p>MDN には 4 種類のコードサンプルがあります。</p>
 
 <ul>
- <li>Static examples — plain code blocks, possibly with a screenshot to statically show the result of such code if it were to be run.</li>
- <li>Traditional MDN "live samples" — A macro that takes plain code blocks, dynamically puts them into a document inside an {{htmlelement("iframe")}} element, and embeds it into the page to show the code running live.</li>
- <li>GitHub "live samples" — A macro that takes a document in a GitHub repo inside the <a href="https://github.com/mdn/">mdn organization</a>, puts it inside an {{htmlelement("iframe")}} element, and embeds it into the page to show the code running live.</li>
- <li>Interactive examples — Our system for creating <a href="https://github.com/mdn/interactive-examples">live interactive examples</a> that show the code running live but also allow you to change code on the fly to see what the effect is.</li>
+ <li>静的サンプル — プレーンなコードブロックで、そのようなコードを実行した場合の結果を静的に示すスクリーンショットが付いている場合があります。</li>
+ <li>MDN の従来型「ライブサンプル」 - 単体のコードブロックを {{htmlelement("iframe")}} 要素内の文書に動的に配置し、ページに埋め込んでコードの実行をライブで表示するマクロです。</li>
+ <li>GitHub 「ライブサンプル」 —  <a href="https://github.com/mdn/">mdn 組織</a>内の GitHub リポジトリにある文書を取り込んで {{htmlelement("iframe")}} 要素の中に入れ、それをページに埋め込んでコードをライブで表示するマクロです。</li>
+ <li>インタラクティブサンプル - <a href="https://github.com/mdn/interactive-examples">ライブでインタラクティブサンプル</a>を生成するためのシステムで、コードをライブで表示するだけでなく、その場でコードを変更して効果を確認したり、結果を簡単にコピーしたりすることができます。</li>
 </ul>
 
-<p>We'll discuss each one in later sections.</p>
+<p>それぞれの機能については後のセクションで説明します。</p>
 
-<h2 id="いつそれらを使うべきですか？">いつそれらを使うべきですか？</h2>
+<h2 id="When_should_you_use_each_one">使うべき場面</h2>
 
-<p>Each type of code example has it own use cases. When should you use each one?</p>
+<p>コードサンプルの種類ごとに、それぞれの用途があります。どのような場合に使用するのでしょうか。</p>
 
 <ul>
- <li>Static examples are useful if you just need to show some code, and it isn't super important to show what the live result is. Some people just want something to copy and paste. Maybe you are just showing an intermediate step, or the source code is enough. (For example, the article is for an advanced audience, and they just need to see the code.) Also, you might be demonstrating an API feature that doesn't work well as an embedded example, which might need its own separate page to link to.</li>
- <li>Traditional live samples are useful if you want to show source code on a page, then show it running, and you’re not that bothered about it being accessible as a standalone example. This approach also has the advantage that if you are showing source code and live examples side by side, you only need to update the code once to update both. They can however be awkward to edit and get working.</li>
- <li>GitHub live samples are useful when you’ve got an existing example you want to embed, don’t want to show the source code for, and/or you want to make sure the example is available in standalone form. They have a better contribution workflow, but it does require you to know GitHub. Also because on-page code and source code are in two different places, it is easier for them to get out of sync.</li>
- <li>The new interactive examples are great as readers can modify values on the fly — this is very valuable for learning. However, they are more complex to set up than the other forms, with more limitations, and are intended for specific purposes.</li>
+ <li>静的サンプルは、単にコードを表示するだけで、実際の結果を表示することがそれほど重要でない場合に便利です。何かをコピー＆ペーストだけしたいという人もいます。中間段階を示すだけの場合や、ソースコードで十分な場合もあるでしょう。(例えば、上級者向けの記事で、コードを見てもらえればよい場合など) また、埋め込み型のサンプルではうまくいかない API 機能のデモを行っている場合もあり、その場合はリンク先として別のページが必要になるかもしれません。</li>
+ <li>従来型ライブサンプルは、ページ上にソースコードを表示し、それを実行する様子を見せたい場合で、独立したサンプルとしてアクセスできるかどうかはそれほど気にしない場合に便利です。この方法は、ソースコードとライブサンプルを並べて表示した場合、コードを一度更新するだけで両方を更新できるという利点があります。しかし、編集したり動作させたりするのが面倒なこともあります。</li>
+ <li>GitHub ライブサンプルは、既存のサンプルを埋め込んでソースコードを見せたくないときや、そのサンプルがスタンドアロンで利用できることを確認したいときなどに便利です。協力するためのワークフローはより優れていますが、 GitHub を知っている必要があります。また、ページ上のコードとソースコードが 2 つの異なる場所にあるため、同期が取れなくなることもあります。</li>
+ <li>インタラクティブサンプルは、読者がその場で値を変更できるので、学習には非常に有効です。しかし、他のフォームよりも設定が複雑で、制限も多く、特定の目的のためのものです。
+</li>
 </ul>
 
-<p>If you are not sure which one to use, you should default to traditional or GitHub live samples, depending on which one you are most comfortable with. You are also welcome to ask for advice on our <a href="https://discourse.mozilla.org/c/mdn">Discourse forum</a>.</p>
+<p>どちらを使うべきか迷った場合は、まず従来型か GitHub のライブサンプルか、使いやすい方を検討してください。<a href="/ja/docs/MDN/Contribute/Getting_started#step_4_ask_for_help">助けを求めることp</a>も歓迎します。</p>
 
-<h2 id="一般的なガイドライン">一般的なガイドライン</h2>
+<h2 id="General_guidelines">一般的なガイドライン</h2>
 
-<p>Aside from the specific system for presenting the live samples, as summarized above, there are style and content cconsiderations to keep in mind when adding or updating samples on MDN?</p>
+<p>MDN でサンプルを追加・更新する際には、上記のようなライブサンプルを表示するための具体的なシステムの他に、スタイルやコンテンツについても考慮する必要があります。</p>
 
 <ul>
- <li>When placing samples on a page, try to ensure that all of the features or options of the API or concept you're writing about are covered. At a minimum, at least the most-common options or properties should be included in examples.</li>
- <li>Precede each example with an explanation of what  the example does and why it's interesting or useful.</li>
- <li>Follow each piece of code with an explanation of what it does.</li>
- <li>When possible, break large examples into smaller pieces. For instance, the "live sample" system will automatically concatenate all your code together into one piece before running the example, so you can actually break your JavaScript, HTML, and/or CSS into smaller pieces with descriptive text after each piece if you choose to do so. This is a great way to help explain long or complicated stretches of code more clearly.</li>
- <li>Go beyond just demonstrating how each piece of the API or technology works. Consider possible real-world use cases you might try to demonstrate.</li>
+ <li>サンプルをページに掲載する際には、書かれている API や概念のすべての機能やオプションをカバーするようにしてください。最低でも、最も一般的なオプションやプロパティはサンプルに含めるべきです。</li>
+ <li>それぞれのサンプルの前で、そのサンプルが何をしているのか、なぜそれが興味深いのか、役に立つのかを説明してください。</li>
+ <li>コードのそれぞれの部分の後には、それが何をするものなのかを説明してください。</li>
+ <li>可能な限り、大きなサンプルは小さく分割してください。例えば、「ライブサンプル」システムでは、サンプルを実行する前に、すべてのコードを自動的に 1 つにまとめてくれますが、実際には、JavaScript、HTML、CSS をより細かく分割し、それぞれの部分の後に説明文を付けることができます。これは、長いコードや複雑なコードをよりわかりやすく説明するためのよい方法です。</li>
+ <li>API や技術の各部分がどのように機能するかを説明するだけではありません。実際の使用例を考慮した上で、実演してみましょう。</li>
 </ul>
 
-<h2 id="静的サンプル">静的サンプル</h2>
+<h2 id="Static_examples">静的サンプル</h2>
 
-<p>By static examples, we are talking about static code blocks that show how a feature might be used in code. These are put on a page using the <strong>PRE</strong> and <strong>Syntax Highlighter</strong> buttons on the MDN editor UI. An example result might look like this:</p>
+<p>静的サンプルでは、ある機能がコードでどのように使われるかを示す静的なコードブロックです。<a href="/ja/docs/MDN/Guidelines/CSS_style_guide#code_syntax_highlighting">コードの構文強調</a>で説明したように、 <code>&lt;pre&gt;</code> 要素を使ってページに配置します。結果の例は次のようになります。</p>
 
-<pre class="brush: js notranslate">// This is a JS example
+<pre class="brush: js">// これは JS の例です
 var test = "Hello";
 console.log(test);</pre>
 
-<div class="note">
-<p><strong>Note</strong>: For more details on adding code blocks to MDN pages, see our <a href="/en-US/docs/MDN/Contribute/Editor/Syntax_highlighting">Syntax highlighting</a> article.</p>
-</div>
+<p>任意で、次のように出力結果を静的な画像で示すことができます。</p>
 
-<p>Optionally, you might want to show a static image of the code's resulting output. For example:</p>
+<p><img alt="" src="console-example.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15523/console-example.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></p>
+<h2 id="Traditional_live_samples">従来型ライブサンプル</h2>
 
-<div class="note">
-<p><strong>Note</strong>: For more details on adding images to MDN pages, see our <a href="/en-US/docs/MDN/Contribute/Editor/Images">Images</a> article.</p>
-</div>
+<p>従来型ライブサンプルは、 <code><a href="https://github.com/mdn/yari/blob/master/kumascript/macros/EmbedLiveSample.ejs">EmbedLiveSample</a></code> マクロを使ってページに挿入します。\{{EmbedLiveSample}} を呼び出すと、自分と同じ文書の節にあるコードブロックを動的に取得して文書に入れ、それを {{htmlelement("iframe")}} の中のページに挿入します。詳しくは<a href="/ja/docs/MDN/Structures/Live_samples">ライブサンプルガイド</a>をご覧ください。</p>
 
-<h2 id="従来のライブサンプル">従来のライブサンプル</h2>
+<h2 id="GitHub_live_samples">GitHub ライブサンプル</h2>
 
-<p>Traditional live samples are inserted into the page using the <span class="templateLink"><code><a class="external external-icon" href="https://github.com/mdn/kumascript/blob/master/macros/EmbedLiveSample.ejs">EmbedLiveSample</a></code></span> macro. An \{{EmbedLiveSample}} call dynamically grabs the code blocks in the same document section as itself and puts them into a document, which it then inserts into the page inside an {{htmlelement("iframe")}}. This is most easily demonstrated with an example, so let's look at one in this section and the next.</p>
+<p>GitHub ライブサンプルは、 <code><a href="https://github.com/mdn/yari/blob/master/kumascript/macros/EmbedGHLiveSample.ejs">EmbedGHLiveSample</a></code> マクロを使ってページに挿入します。\{{EmbedGHLiveSample}} を呼び出すと、指定した URL (GitHub の mdn 組織内のものでなければなりません) の文書を動的に取得し、ページ内の {{htmlelement("iframe")}} 内に挿入します。</p>
 
-<ol>
- <li>The easiest way is to press the <strong>Insert Code Sample Template</strong> button, which asks us for a title. For the example in the "{{anch("test")}}" section below, we entered "test" for the title, and the button generated the entire section for us.</li>
- <li>Next, we entered some very simple sample code into the HTML, CSS, and JavaScript code blocks.</li>
- <li>Finally, we published the page; the \{{EmbedLiveSample('test')}} call you can see in the edit view was replaced with an <code>&lt;iframe&gt;</code> containing the code running live.</li>
-</ol>
+<p>これらは従来のライブサンプルとよく似た動作をしますが、よりシンプルなものです。</p>
 
-<p>If you look at the source inside the <code>&lt;iframe&gt;</code>, you'll see this:</p>
+<p>ページ上のコードブロックの配置を気にする必要はありません。 GitHub リポジトリーの HTML 文書を取得して、<code>&lt;iframe&gt;</code> の中に挿入します。</p>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;link href="https://developer.mozilla.org/static/build/styles/samples.css"
-          rel="stylesheet" type="text/css"&gt;
-
-    &lt;style type="text/css"&gt;
-      h1 {
-        color: blue;
-      }
-    &lt;/style&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Your example?&lt;/h1&gt;
-
-
-    &lt;script type="text/javascript"&gt;
-      document.querySelector('h1').onclick = function() {
-        document.querySelector('h1').textContent = 'Your example?';
-      };
-    &lt;/script&gt;
-
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
-
-<h3 id="その他のマクロパラメータ">その他のマクロパラメータ</h3>
-
-<p>The call we've used in the below example only uses one parameter — \{{EmbedLiveSample('test')}}. This simply defines which section of the document the code blocks should be grabbed from — <code>test</code> is the ID defined on the heading "test" below, so the macro will will grab all the code blocks inside that heading. Put another way, it will grab all the blocks below that heading, up until another {{htmlelement("h2")}} is encountered.</p>
-
-<p>There are some other optional parameters available too. You can include a second and third parameter, which will be a set width and height for the <code>&lt;iframe&gt;</code>. For example \{{EmbedLiveSample('test', '100%', '100px')}}. You can use pixel values or percentage values. Reasonable defaults are used if you omit these.</p>
-
-<p>There are also optional fourth and fifth parameters available, a screenshot URL that points to a screenshot showing the example should look like, and a page slug that points to another page on MDN —this is only used if you want to embed an example from another page. You won't use these two very often.</p>
-
-<p>See <a href="/en-US/docs/MDN/Contribute/Structures/Live_samples#EmbedLiveSample_macro">EmbedLiveSample macro</a> for more details on all these parameters.</p>
-
-<h3 id="伝統的なライブサンプルを使用するためのヒント">伝統的なライブサンプルを使用するためのヒント</h3>
-
-<ul>
- <li>You don't need to use the <strong>Insert Code Sample Template</strong> button — but it is easier when you are getting used to using it. It is possible to just insert a \{{EmbedLiveSample('test')}} macro call inside any section of your page that contains code blocks, and it will work — as long as you set the first parameter to the ID of the document section it is inside.</li>
- <li>You don't need the <em>HTML</em>, <em>CSS</em>, <em>JavaScript</em>, and <em>Result</em> headings, but it is considered best practice to include them where appropriate as it makes it easier to see what is going on. If you don't include them, you should include descriptive text to tell the reader what is happening.</li>
- <li>You don't need HTML, CSS, and JavaScript code blocks — you can embed any combination you like — HTML and CSS, HTML and JavaScript, or even HTML only.</li>
- <li>Another approach is to wrap your code blocks inside a block-level element with an ID, and then give the macro call that ID. For example, you could put your code blocks inside <code>&lt;div id="test"&gt;&lt;/div&gt;</code>, then use \{{EmbedLiveSample('test')}}.</li>
- <li>In fact, this is a better option when you have a complex document hierarchy, and you are having trouble getting just the right code blocks to be embedded. In a complex document, this can be troublesome.</li>
-</ul>
-
-<div class="note">
-<p><strong>Note</strong>: You can find a lot more information about traditional Live samples in our <a href="/en-US/docs/MDN/Contribute/Structures/Live_samples">Live samples</a> article.</p>
-</div>
-
-<h2 id="テスト">テスト</h2>
-
-<h3 id="HTML">HTML</h3>
-
-<pre class="brush: html notranslate">&lt;h1&gt;My example?&lt;/h1&gt;</pre>
-
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css notranslate">h1 {
-  color: blue;
-}</pre>
-
-<h3 id="JavaScript">JavaScript</h3>
-
-<pre class="brush: js notranslate">document.querySelector('h1').onclick = function() {
-  document.querySelector('h1').textContent = 'Your example?';
-};</pre>
-
-<h3 id="結果">結果</h3>
-
-<p>{{EmbedLiveSample('test')}}</p>
-
-<h2 id="GitHub_ライブサンプル">GitHub ライブサンプル</h2>
-
-<p>GitHub live samples are inserted into the page using the <span class="templateLink"><code><a class="external external-icon" href="https://github.com/mdn/kumascript/blob/master/macros/EmbedGHLiveSample.ejs">EmbedGHLiveSample</a></code></span> macro. An \{{EmbedGHLiveSample}} call dynamically grabs the document at a specified URL (which has to be inside the <strong>mdn</strong> GitHub organization), and inserts into the page inside an {{htmlelement("iframe")}}.</p>
-
-<p>These work in a very similar way to the {{anch("Traditional live samples")}}, but they are a lot simpler:</p>
-
-<p>You don't have to worry about placement of code blocks on the page — it simply grabs an HTML document in a GitHub repo, and puts it in the <code>&lt;iframe&gt;</code>.</p>
-
-<p>The macro only has three parameters:</p>
+<p>マクロの引数は 3 つだけです。</p>
 
 <ol>
- <li>The URL of the document to embed — this is relative to the mdn organization, the top level directory of which is at <span class="pl-s1"><span class="pl-s"><code>https://mdn.github.io/</code>. So this parameter needs to contain the part of the URL after that, e.g. </span></span><code>my-subdirectory/example.html</code>. You can omit the filename if it is called <code>index.html</code>.</li>
- <li>The width of the <code>&lt;iframe&gt;</code>, which can be expressed as a percentage or in pixels.</li>
- <li>The height of the <code>&lt;iframe&gt;</code>, which can be expressed as a percentage or in pixels.</li>
+ <li>埋め込む文書の URL — これは、 <code>https://mdn.github.io/</code> にある最上位のディレクトリである mdn 組織からの相対 URL です。ですから、この引数には、<code>my-subdirectory/example.html</code> のように、URL の後の部分を含める必要があります。 <code>index.html</code> の場合は、ファイル名を省略できます。</li>
+ <li><code>&lt;iframe&gt;</code> の幅、パーセント値またはピクセル単位で表すことができます。</li>
+ <li><code>&lt;iframe&gt;</code> の高さ、パーセント値またはピクセル単位で表すことができます。</li>
 </ol>
 
-<p>Let's look at an example. Say we wanted to embed the code at <a href="https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/">https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/</a>. We could use the following call:</p>
+<p>例を見てみましょう。 <a href="https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/">https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/</a> のコードを埋め込みたいとします。次のように呼び出すことができます。</p>
 
 <p>\{{EmbedGHLiveSample("learning-area/css/styling-boxes/backgrounds/", '100%', 100)}}</p>
 
-<p>This looks like so when rendered:</p>
+<p>表示されるときには次のようになります。</p>
 
 <p>{{EmbedGHLiveSample("learning-area/css/styling-boxes/backgrounds/", '100%', 100)}}</p>
 
-<h3 id="GitHub_ライブサンプルを使用するためのヒント">GitHub ライブサンプルを使用するためのヒント</h3>
+<h3 id="Tips_for_using_GitHub_live_samples">GitHub ライブサンプルを使用するためのヒント</h3>
 
 <ul>
- <li>You obviously need to get a suitable code sample onto the <a href="https://github.com/mdn/">mdn GitHub organization</a> first. This needs to be done using Git. If you are not familiar with Git, check out our <a href="/en-US/docs/Learn/Common_questions/Using_Github_pages">How do I use GitHub Pages?</a> article, and <a href="/en-US/docs/MDN/Contribute/Structures/Compatibility_tables#Preparing_to_add_the_data">Preparing to add the data</a> for more advanced uses.</li>
- <li>Your code sample needs to be suitable to show what you are trying to demonstrate — it should contain one simple example that does one thing well, should have no offensive content in it, and should follow the MDN <a href="/en-US/docs/MDN/Contribute/Guidelines/Code_samples">Code sample guidelines</a>.</li>
+ <li>まず最初に、適切なコードサンプルを <a href="https://github.com/mdn/">GitHub の mdn 組織</a>に登録する必要があります。これは Git を使って行う必要があります。 Git に慣れていない方は、 <a href="/ja/docs/Learn/Common_questions/Using_Github_pages">GitHub ページの使い方</a>の記事を参照してください。もっと慣れている人は<a href="/ja/docs/MDN/Structures/Compatibility_tables#preparing_to_add_the_data">データを追加する準備</a>を参照してください。</li>
+ <li>コードサンプルは、実証しようとしていることを示すのに適したものでなければなりません。 1 つのことをうまく行う簡単なサンプルが含まれていること、不快な内容が含まれていないこと、そして MDN の<a href="/ja/docs/MDN/Guidelines/Code_guidelines">コードサンプルガイドライン</a>に従っている必要があります。</li>
 </ul>
 
-<h2 id="インタラクティブな例">インタラクティブな例</h2>
+<h2 id="Interactive_examples">インタラクティブサンプル</h2>
 
-<p>The newest form of live example available on MDN is interactive live examples. These provide a step up from live examples, because the reader can edit the code and the live example updates on the fly. This is great for learning and experimentation.</p>
+<p>MDN で利用できる最新のライブサンプルは、インタラクティブなライブサンプルです。これは、読者がコードを編集すると、ライブサンプルがその場で更新されるため、ライブサンプルからステップアップすることできます。これは、学習や実験に最適です。</p>
 
-<p>The interactive examples are intended to be used at the top of MDN reference pages — we are aiming to provide these to improve their value to beginners and other readers who want to just grab and play with an example quickly before seeing all the details of whatever they are looking up. There are a few important limitations to note about the interactive examples:</p>
+<p>インタラクティブなサンプルは、 MDN のリファレンスページの上部で使用されることを想定しています。初心者や、調べていることの詳細を見る前に、すぐに例題を手に取って遊びたいという読者にとっての価値を高めるために、これらを提供することを目指しています。インタラクティブサンプルについては、いくつかの重要な制限事項があります。</p>
 
 <ul>
- <li>They are specialised for a particular technology — the UI for JavaScript is different from the UI for CSS, and they only illustrate one technology in isolation. They are not appropriate if you want to show, for example, how to combine a particular HTML/CSS/JS structure.</li>
- <li>The interactive live examples are currently only set up to show CSS and JavaScript. For other technologies, you'll just have to wait.</li>
- <li>The UI is more performance-intensive than other code examples; you shouldn't put more than one on each MDN article you apply them to.</li>
- <li>They are not intended for large code examples — the UI supports a range of fixed sizes, which only really work for short (say, 10–15 line) examples.</li>
+ <li>インタラクティブサンプルは、特定の技術に特化しています。 — JavaScript の UI と CSS の UI は異なりますし、 1 つの技術を独立させて説明しているだけです。例えば、特定の HTML/CSS/JS 構造をどのように組み合わせるかを示したい場合には適していません。</li>
+ <li>インタラクティブなライブサンプルは、現在のところ CSS と JavaScript を表示するように設定されています。他の技術については、待つしかありません。</li>
+ <li>UIは他のコード例よりもパフォーマンスを重視していますので、適用する MDN の記事ごとに複数を置くべきではありません。</li>
+ <li>長いコードサンプルには適していません。 — この UI は本当に短い (10-15 行程度) サンプルでのみ利用できる固定された大きさの範囲でのみ有効です。</li>
 </ul>
 
-<p>If you want to submit an example, you can find out how at the <a href="https://github.com/mdn/interactive-examples/blob/master/CONTRIBUTING.md">interactive examples repo Contribution guide</a>.</p>
+<p>サンプルを投稿したい場合は、 <a href="https://github.com/mdn/interactive-examples/blob/master/CONTRIBUTING.md">interactive examples repo Contribution guide</a> でその方法を知ることができます。</p>
 
-<p>If you find a page that doesn't have an associated interactive example, you are welcome to contribute one! The <a href="https://discourse.mozilla.org/c/mdn">MDN Discourse forum</a> is a good place to ask for help or advice.</p>
+<p>関連するインタラクティブサンプルがないページを見つけた場合は、ぜひ投稿してください。</p>
 
-<h3 id="インタラクティブなサンプルデモ">インタラクティブなサンプルデモ</h3>
+<h3 id="Interactive_example_demo">インタラクティブサンプルのデモ</h3>
 
-<p>The <code>\{{EmbedInteractiveExample}}</code> macro is used to embed finished examples into MDN pages. For example, the macro call <code>\{{EmbedInteractiveExample("pages/js/array-push.html")}}</code> displays the following code example:</p>
+<p><code><a href="https://github.com/mdn/yari/blob/master/kumascript/macros/EmbedInteractiveExample.ejs">EmbedInteractiveExample</a></code> マクロを使用して、完成したサンプルを MDN ページに埋め込みます。たとえば、 \{{EmbedInteractiveExample("pages/js/array-push.html")}} というマクロ呼び出しで、次のコードサンプルが表示されます。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/array-push.html")}}</div>
 
-<div> </div>
-
-<div>Try adjusting the code to see what happens, and playing with the controls.</div>
+<div>コードを調整して様子を見たり、操作をしたりしてみてください。</div>

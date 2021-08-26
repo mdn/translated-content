@@ -1374,9 +1374,11 @@
 /zh-CN/docs/Web/API/HTMLHyperlinkElementUtils/toString	/zh-CN/docs/Web/API/HTMLAnchorElement/toString
 /zh-CN/docs/Web/API/HTMLHyperlinkElementUtils/username	/zh-CN/docs/Web/API/HTMLAnchorElement/username
 /zh-CN/docs/Web/API/HTMLTableElement.deleteTHead	/zh-CN/docs/Web/API/HTMLTableElement/deleteTHead
+/zh-CN/docs/Web/API/Headers/getAll	/zh-CN/docs/conflicting/Web/API/Headers/get
 /zh-CN/docs/Web/API/IDBCursor.direction	/zh-CN/docs/Web/API/IDBCursor/direction
 /zh-CN/docs/Web/API/IDBFactory.open	/zh-CN/docs/Web/API/IDBFactory/open
 /zh-CN/docs/Web/API/IDBObjectStore.openCursor	/zh-CN/docs/Web/API/IDBObjectStore/openCursor
+/zh-CN/docs/Web/API/Index	/zh-CN/docs/conflicting/Web/API
 /zh-CN/docs/Web/API/IndexedDB_API/IDBObjectStore	/zh-CN/docs/Web/API/IDBObjectStore
 /zh-CN/docs/Web/API/Intersection_Observer_API/点观察者API的时序元素可见性	/zh-CN/docs/Web/API/Intersection_Observer_API/Timing_element_visibility
 /zh-CN/docs/Web/API/Location.replace	/zh-CN/docs/Web/API/Location/replace
@@ -1641,7 +1643,7 @@
 /zh-CN/docs/Web/API/window.requestAnimationFrame	/zh-CN/docs/Web/API/Window/requestAnimationFrame
 /zh-CN/docs/Web/API/剪贴板_API	/zh-CN/docs/Web/API/Clipboard_API
 /zh-CN/docs/Web/API/开发式平台	/zh-CN/docs/Web/API/Push_API
-/zh-CN/docs/Web/API/指数	/zh-CN/docs/Web/API/Index
+/zh-CN/docs/Web/API/指数	/zh-CN/docs/conflicting/Web/API
 /zh-CN/docs/Web/API/支付_请求_接口	/zh-CN/docs/Web/API/Payment_Request_API
 /zh-CN/docs/Web/API/支付_请求_接口/Concepts	/zh-CN/docs/Web/API/Payment_Request_API/Concepts
 /zh-CN/docs/Web/API/消息事件	/zh-CN/docs/Web/API/MessageEvent
@@ -1669,9 +1671,12 @@
 /zh-CN/docs/Web/CSS/Block_formatting_context	/zh-CN/docs/Web/Guide/CSS/Block_formatting_context
 /zh-CN/docs/Web/CSS/CSS3中的关键帧	/zh-CN/docs/Web/CSS/@keyframes
 /zh-CN/docs/Web/CSS/CSSOM_View/坐标系	/zh-CN/docs/Web/CSS/CSSOM_View/Coordinate_systems
-/zh-CN/docs/Web/CSS/CSS_Background_and_Borders/圆角边框发生器	/zh-CN/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator
+/zh-CN/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
+/zh-CN/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator	/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
+/zh-CN/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator	/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
+/zh-CN/docs/Web/CSS/CSS_Background_and_Borders/圆角边框发生器	/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
 /zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images	/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
-/zh-CN/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator	/zh-CN/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator
+/zh-CN/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator	/zh-CN/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 /zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Flexbox_的_向下_支持	/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Backwards_Compatibility_of_Flexbox
 /zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/典型_用例_的_Flexbox	/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox
 /zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/弹性盒子与其他布局方法的联系	/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods
@@ -1967,6 +1972,7 @@
 /zh-CN/docs/Web/HTTP/策略特征/Using_Feature_Policy	/zh-CN/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy
 /zh-CN/docs/Web/HTTP/缓存_FAQ	/zh-CN/docs/Web/HTTP/Caching
 /zh-CN/docs/Web/HTTP/重定向	/zh-CN/docs/Web/HTTP/Redirections
+/zh-CN/docs/Web/Houdini	/zh-CN/docs/Web/Guide/Houdini
 /zh-CN/docs/Web/JavaScript/Equality_comparisons_and_when_to_use_them	/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness
 /zh-CN/docs/Web/JavaScript/Guide/Closures	/zh-CN/docs/Web/JavaScript/Closures
 /zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_when_to_use_them	/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness

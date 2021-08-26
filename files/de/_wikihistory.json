@@ -5114,29 +5114,29 @@
       "Simu"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Border-image_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders": {
+    "modified": "2019-03-23T22:44:11.176Z",
+    "contributors": [
+      "teoli"
+    ]
+  },
+  "Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator": {
     "modified": "2019-03-18T21:15:52.768Z",
     "contributors": [
       "Sebastianz"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Border-radius_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator": {
     "modified": "2019-03-23T22:43:49.105Z",
     "contributors": [
       "Sebastianz"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Box-shadow_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator": {
     "modified": "2019-03-18T20:43:44.623Z",
     "contributors": [
       "BychekRU",
       "Sebastianz"
-    ]
-  },
-  "Web/CSS/CSS_Backgrounds_and_Borders": {
-    "modified": "2019-03-23T22:44:11.176Z",
-    "contributors": [
-      "teoli"
     ]
   },
   "Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images": {
