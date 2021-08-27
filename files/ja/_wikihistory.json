@@ -48752,13 +48752,6 @@
       "RobinEgg"
     ]
   },
-  "orphaned/Participating_in_the_Mozilla_project": {
-    "modified": "2019-03-24T00:00:18.082Z",
-    "contributors": [
-      "Marsf",
-      "Potappo"
-    ]
-  },
   "orphaned/Setting_up_extension_development_environment": {
     "modified": "2019-03-23T23:54:13.028Z",
     "contributors": [
@@ -49802,21 +49795,6 @@
     "contributors": [
       "fscholz",
       "ethertank"
-    ]
-  },
-  "orphaned/XPCOM_components_list": {
-    "modified": "2019-01-16T15:43:28.878Z",
-    "contributors": [
-      "Mgjbot",
-      "Shimono",
-      "Okome"
-    ]
-  },
-  "orphaned/XPCOM_plans": {
-    "modified": "2019-01-16T14:37:34.536Z",
-    "contributors": [
-      "fscholz",
-      "kohei.yoshino"
     ]
   },
   "orphaned/ant_script_to_assemble_an_extension": {
