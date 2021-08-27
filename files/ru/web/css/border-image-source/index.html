@@ -7,24 +7,24 @@ translation_of: Web/CSS/border-image-source
 
 <h2 id="Описание">Описание</h2>
 
-<p>The <strong><code>border-image-source</code></strong> CSS property defines the {{cssxref("&lt;image&gt;")}} to use instead of the style of the border. If this property is set to <code>none</code>, the style defined by {{cssxref("border-style")}} is used instead.</p>
+<p>Свойство CSS <strong><code>border-image-source</code></strong> определяет {{cssxref("&lt;image&gt;")}} который будет использоваться вместо стиля границы. Если для этого свойства установлено значение <code>none</code>, то вместо него используется стиль, определенный параметром {{cssxref("border-style")}}.</p>
 
-<div class="note"><strong>Предупреждение:</strong> Though any {{cssxref("&lt;image&gt;")}} can be used with this CSS property, browser support is still limited and some browsers support only images defined using the <code>url()</code> functional notation.</div>
+<div class="note"><strong>Предупреждение:</strong> Хотя с этим свойством CSS можно использовать любой {{cssxref("&lt;image&gt;")}} , поддержка браузеров по-прежнему ограничена, и некоторые браузеры поддерживают только изображения, определенные с использованием функциональной нотации <code>url()</code> .</div>
 
 <p>{{cssinfo}}</p>
 
 <h2 id="Синтаксис">Синтаксис</h2>
 
-<pre class="brush:css">/* no border-image, use the specified border-style */
+<pre class="brush:css">/* без изображения границы, используется указанный стиль границы */
 border-image-source: none;
 
-/* the image.jpg is used as image */
+/* image.jpg используется в качестве изображения */
 border-image-source: url(image.jpg);
 
-/* a gradient is used as image */
+/* В качестве изображения используется градиент */
 border-image-source: linear-gradient(to top, red, yellow);
 
-/* Global values */
+/* Глобальные значения */
 border-image-source: inherit;
 border-image-source: initial;
 border-image-source: unset;
@@ -34,7 +34,7 @@ border-image-source: unset;
 
 <dl>
  <dt><code>none</code></dt>
- <dd>Specifies that no image should be used for the border. Instead the style defined by {{cssxref("border-style")}} is used.</dd>
+ <dd>Указывает, что для границы не используется изображение. Вместо этого используется стиль, определенный {{cssxref("border-style")}} .</dd>
  <dt><code>&lt;image&gt;</code></dt>
  <dd>Ссылка на изображение, которое будет использоваться в отрисовке границы.</dd>
 </dl>
@@ -45,7 +45,7 @@ border-image-source: unset;
 
 <h2 id="Specifications" name="Specifications">Примеры</h2>
 
-<p>See {{cssxref("border-image")}} for examples of what the various source values will do.</p>
+<p>См. в {{cssxref("border-image")}} примеры того, что будут делать различные исходные значения.</p>
 
 <h2 id="Specifications" name="Specifications">Спецификации</h2>
 
@@ -61,7 +61,7 @@ border-image-source: unset;
   <tr>
    <td>{{SpecName('CSS3 Backgrounds', '#border-image-source', 'border-image-source')}}</td>
    <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Initial definition</td>
+   <td>Первоначальное определение</td>
   </tr>
  </tbody>
 </table>
