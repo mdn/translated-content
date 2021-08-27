@@ -412,7 +412,7 @@
 /zh-CN/docs/DOM/event.defaultPrevented	/zh-CN/docs/Web/API/Event/defaultPrevented
 /zh-CN/docs/DOM/event.isChar	/zh-CN/docs/Web/API/UIEvent/isChar
 /zh-CN/docs/DOM/event.isTrusted	/zh-CN/docs/Web/API/Event/isTrusted
-/zh-CN/docs/DOM/event.pageY	/zh-CN/docs/Web/API/UIEvent/pageY
+/zh-CN/docs/DOM/event.pageY	/zh-CN/docs/conflicting/Web/API/MouseEvent/pageY
 /zh-CN/docs/DOM/event.preventDefault	/zh-CN/docs/Web/API/Event/preventDefault
 /zh-CN/docs/DOM/event.stopImmediatePropagation	/zh-CN/docs/Web/API/Event/stopImmediatePropagation
 /zh-CN/docs/DOM/event.stopPropagation	/zh-CN/docs/Web/API/Event/stopPropagation
@@ -1309,7 +1309,7 @@
 /zh-CN/docs/Web/API/Element/removeAttributre	/zh-CN/docs/Web/API/Element/removeAttribute
 /zh-CN/docs/Web/API/Event/CustomEvent	/zh-CN/docs/Web/API/CustomEvent
 /zh-CN/docs/Web/API/Event/isChar	/zh-CN/docs/Web/API/UIEvent/isChar
-/zh-CN/docs/Web/API/Event/pageY	/zh-CN/docs/Web/API/UIEvent/pageY
+/zh-CN/docs/Web/API/Event/pageY	/zh-CN/docs/conflicting/Web/API/MouseEvent/pageY
 /zh-CN/docs/Web/API/Event/禁用时间冒泡	/zh-CN/docs/Web/API/Event/cancelBubble
 /zh-CN/docs/Web/API/EventTarget.dispatchEvent	/zh-CN/docs/Web/API/EventTarget/dispatchEvent
 /zh-CN/docs/Web/API/EventTarget.removeEventListener	/zh-CN/docs/Web/API/EventTarget/removeEventListener
@@ -1374,6 +1374,7 @@
 /zh-CN/docs/Web/API/HTMLHyperlinkElementUtils/toString	/zh-CN/docs/Web/API/HTMLAnchorElement/toString
 /zh-CN/docs/Web/API/HTMLHyperlinkElementUtils/username	/zh-CN/docs/Web/API/HTMLAnchorElement/username
 /zh-CN/docs/Web/API/HTMLTableElement.deleteTHead	/zh-CN/docs/Web/API/HTMLTableElement/deleteTHead
+/zh-CN/docs/Web/API/Headers/getAll	/zh-CN/docs/conflicting/Web/API/Headers/get
 /zh-CN/docs/Web/API/IDBCursor.direction	/zh-CN/docs/Web/API/IDBCursor/direction
 /zh-CN/docs/Web/API/IDBFactory.open	/zh-CN/docs/Web/API/IDBFactory/open
 /zh-CN/docs/Web/API/IDBObjectStore.openCursor	/zh-CN/docs/Web/API/IDBObjectStore/openCursor
@@ -1475,6 +1476,8 @@
 /zh-CN/docs/Web/API/Touch.screenX	/zh-CN/docs/Web/API/Touch/screenX
 /zh-CN/docs/Web/API/Touch.screenY	/zh-CN/docs/Web/API/Touch/screenY
 /zh-CN/docs/Web/API/TouchEvent.changedTouches	/zh-CN/docs/Web/API/TouchEvent/changedTouches
+/zh-CN/docs/Web/API/UIEvent/pageX	/zh-CN/docs/conflicting/Web/API/MouseEvent/pageX
+/zh-CN/docs/Web/API/UIEvent/pageY	/zh-CN/docs/conflicting/Web/API/MouseEvent/pageY
 /zh-CN/docs/Web/API/UIEvent/视图	/zh-CN/docs/Web/API/UIEvent/view
 /zh-CN/docs/Web/API/URL.URL	/zh-CN/docs/Web/API/URL/URL
 /zh-CN/docs/Web/API/URL.createObjectURL	/zh-CN/docs/Web/API/URL/createObjectURL
@@ -1628,7 +1631,7 @@
 /zh-CN/docs/Web/API/event.defaultPrevented	/zh-CN/docs/Web/API/Event/defaultPrevented
 /zh-CN/docs/Web/API/event.isChar	/zh-CN/docs/Web/API/UIEvent/isChar
 /zh-CN/docs/Web/API/event.isTrusted	/zh-CN/docs/Web/API/Event/isTrusted
-/zh-CN/docs/Web/API/event.pageY	/zh-CN/docs/Web/API/UIEvent/pageY
+/zh-CN/docs/Web/API/event.pageY	/zh-CN/docs/conflicting/Web/API/MouseEvent/pageY
 /zh-CN/docs/Web/API/event.preventDefault	/zh-CN/docs/Web/API/Event/preventDefault
 /zh-CN/docs/Web/API/event.stopImmediatePropagation	/zh-CN/docs/Web/API/Event/stopImmediatePropagation
 /zh-CN/docs/Web/API/event.stopPropagation	/zh-CN/docs/Web/API/Event/stopPropagation
