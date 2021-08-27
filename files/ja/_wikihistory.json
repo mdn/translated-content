@@ -48633,26 +48633,6 @@
       "Taken Bot"
     ]
   },
-  "orphaned/MDN/Dashboards": {
-    "modified": "2019-03-18T21:20:57.974Z",
-    "contributors": [
-      "silverskyvicto",
-      "ExE-Boss"
-    ]
-  },
-  "orphaned/MDN/Dashboards/Editors": {
-    "modified": "2019-03-18T21:20:58.636Z",
-    "contributors": [
-      "silverskyvicto"
-    ]
-  },
-  "orphaned/MDN/Kuma/Server_charts": {
-    "modified": "2020-09-28T14:48:43.333Z",
-    "contributors": [
-      "mfuji09",
-      "silverskyvicto"
-    ]
-  },
   "orphaned/MDN/Structures/API_references": {
     "modified": "2020-11-28T12:21:15.783Z",
     "contributors": [
@@ -48683,15 +48663,6 @@
       "wbamberg",
       "hamasaki",
       "Potappo"
-    ]
-  },
-  "orphaned/MDN/Troubleshooting": {
-    "modified": "2020-09-30T16:58:23.514Z",
-    "contributors": [
-      "chrisdavidmills",
-      "eltociear",
-      "wbamberg",
-      "Uemmra3"
     ]
   },
   "orphaned/Map": {
