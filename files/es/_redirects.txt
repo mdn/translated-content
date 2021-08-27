@@ -293,7 +293,7 @@
 /es/docs/DOM/event.cancelable	/es/docs/Web/API/Event/cancelable
 /es/docs/DOM/event.initEvent	/es/docs/Web/API/Event/initEvent
 /es/docs/DOM/event.initMouseEvent	/es/docs/Web/API/MouseEvent/initMouseEvent
-/es/docs/DOM/event.pageX	/es/docs/Web/API/UIEvent/pageX
+/es/docs/DOM/event.pageX	/es/docs/Web/API/MouseEvent/pageX
 /es/docs/DOM/event.preventDefault	/es/docs/Web/API/Event/preventDefault
 /es/docs/DOM/event.type	/es/docs/Web/API/Event/type
 /es/docs/DOM/form	/es/docs/Web/API/HTMLFormElement
@@ -360,7 +360,7 @@
 /es/docs/DOM:event.cancelable	/es/docs/Web/API/Event/cancelable
 /es/docs/DOM:event.initEvent	/es/docs/Web/API/Event/initEvent
 /es/docs/DOM:event.initMouseEvent	/es/docs/Web/API/MouseEvent/initMouseEvent
-/es/docs/DOM:event.pageX	/es/docs/Web/API/UIEvent/pageX
+/es/docs/DOM:event.pageX	/es/docs/Web/API/MouseEvent/pageX
 /es/docs/DOM:event.preventDefault	/es/docs/Web/API/Event/preventDefault
 /es/docs/DOM:form	/es/docs/Web/API/HTMLFormElement
 /es/docs/DOM:range	/es/docs/Web/API/Range
@@ -1566,6 +1566,7 @@
 /es/docs/Web/API/Position	/es/docs/Web/API/GeolocationPosition
 /es/docs/Web/API/RandomSource/Obtenervaloresaleatorios	/es/docs/Web/API/Crypto/getRandomValues
 /es/docs/Web/API/SubtleCrypto/encrypt	/es/docs/Web/HTTP/Headers/Digest
+/es/docs/Web/API/UIEvent/pageX	/es/docs/Web/API/MouseEvent/pageX
 /es/docs/Web/API/WebGL_API/Getting_started_with_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /es/docs/Web/API/WebGL_API/Tutorial/Objetos_3D_utilizando_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL
 /es/docs/Web/API/WebGL_API/Tutorial/Wtilizando_texturas_en_WebGL	/es/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL

@@ -7568,6 +7568,15 @@
       "Mgjbot"
     ]
   },
+  "Web/API/MouseEvent/pageX": {
+    "modified": "2019-03-23T23:12:56.756Z",
+    "contributors": [
+      "fscholz",
+      "khalid32",
+      "Nathymig",
+      "Julgon"
+    ]
+  },
   "Web/API/MouseEvent/shiftKey": {
     "modified": "2019-03-23T22:05:24.832Z",
     "contributors": [
@@ -8429,15 +8438,6 @@
     "modified": "2019-03-23T23:01:34.700Z",
     "contributors": [
       "fscholz"
-    ]
-  },
-  "Web/API/UIEvent/pageX": {
-    "modified": "2019-03-23T23:12:56.756Z",
-    "contributors": [
-      "fscholz",
-      "khalid32",
-      "Nathymig",
-      "Julgon"
     ]
   },
   "Web/API/URL": {
