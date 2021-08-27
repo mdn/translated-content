@@ -173,7 +173,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
  <li><code>exclude_globs:</code> <a href="/ja/Add-ons/WebExtensions/manifest.json/content_scripts$edit#globs">globs</a> の配列</li>
 </ul>
 
-<p>これらのプロパティにマッチするには、URL は配列内で少なくとも 1 つの項目にマッチしなれりばなりません。例えばこのようなプロパティが与えられたら:</p>
+<p>これらのプロパティにマッチするには、URL は配列内で少なくとも 1 つの項目にマッチしなければなりません。例えばこのようなプロパティが与えられたら:</p>
 
 <pre class="brush: json no-line-numbers  language-json notranslate">"matches": ["*://*.example.org/*", "*://*.example.com/*"]</pre>
 
@@ -197,7 +197,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
  <li>"?" はちょうど 1個のキャラクターにマッチします</li>
 </ul>
 
-<p>例えば: <code>"*na?i"</code> は <code>"illuminati"</code> と <code>"annunaki"</code> にマッチし、<code>"sagnarelli"</code> にはマッチしせん</p>
+<p>例えば: <code>"*na?i"</code> は <code>"illuminati"</code> と <code>"annunaki"</code> にマッチし、<code>"sagnarelli"</code> にはマッチしません。</p>
 
 <h2 id="例">例</h2>
 
