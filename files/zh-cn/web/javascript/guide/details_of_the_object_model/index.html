@@ -157,12 +157,14 @@ function Manager() {
   this.reports = [];
 }
 Manager.prototype = Object.create(Employee.prototype);
+Manager.prototype.constructor = Manager;
 
 function WorkerBee() {
   Employee.call(this);
   this.projects = [];
 }
-WorkerBee.prototype = Object.create(Employee.prototype);</pre>
+WorkerBee.prototype = Object.create(Employee.prototype);
+WorkerBee.prototype.constructor = WorkerBee;</pre>
    </td>
    <td>
     <pre class="brush: java notranslate">
