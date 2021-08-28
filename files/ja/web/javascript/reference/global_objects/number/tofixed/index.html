@@ -49,6 +49,9 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Number/toFixed
 <p><strong>警告:</strong> 浮動小数点数は、二進数で正確にすべての十進数値を表すことができるわけではありません。これは予想外の結果を導くことがあり、例えば <code>0.1 + 0.2 === 0.3</code> は <code>false</code> を返します。</p>
 </div>
 
+<div class="note">
+<p><strong>注:</strong> 返値が０になり、結果与えられた数値が負数の場合、<code>-0</code>を返します。</div>
+
 <h2 id="Examples" name="Examples">例</h2>
 
 <h3 id="Using_toFixed" name="Using_toFixed">toFixed の使用</h3>
@@ -59,6 +62,7 @@ numObj.toFixed()       // '12346' を返す : 四捨五入され小数部がな�
 numObj.toFixed(1)      // '12345.7' を返す : 四捨五入
 numObj.toFixed(6)      // '12345.678900'を返す : 0 を追加する
 (1.23e+20).toFixed(2)  // '123000000000000000000.00' を返す
+(-0.001).toFixed(2)    // '-0' を返す
 (1.23e-10).toFixed(2)  // '0.00' を返す
 2.34.toFixed(1)        // '2.3' を返す
 2.35.toFixed(1)        // '2.4' を返す。切り上げ。
