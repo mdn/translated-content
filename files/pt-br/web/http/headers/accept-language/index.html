@@ -10,9 +10,9 @@ translation_of: Web/HTTP/Headers/Accept-Language
 
 <p>O cabeçalho HTTP <strong><code>Accept-Language</code></strong> anuncia quais linguas o cliente é capaz de entender, e qual é a preferência do variante do Locale. (Por Linguas, queremos dizer linguas como Inglês e portugues) Usando <a href="/en-US/docs/Web/HTTP/Content_negotiation">content negotiation</a>, o servidor seleciona uma das propostas, usa ela e informa o cliente da sua escolha com o {{HTTPHeader("Content-Language")}} cabeçalho de responsta. Navegadores configuram valores adequados para este cabeçalhos de acordo com a língua configurada pelo usuario. </p>
 
-<p>Este cabeçalho é uma dica a ser usada pelo servicor quando ele não possui outra forma de determinar a lingua do cliente, como uma URL específica, que é controlada por uma decisão explicita do usuário. É recomendado que o servidor nunca sobreescreva uma decisão explícita. O conteúdo de <code>Accept-Language</code> está comumente fora do controle do usuário (em uma viagem a outro país por exemplo); O usuário pode querer acessar a pagina em outra lingua diferente da decidida pelo navegador.</p>
+<p>Este cabeçalho é uma dica a ser usada pelo servidor quando ele não possui outra forma de determinar a lingua do cliente, como uma URL específica, que é controlada por uma decisão explicita do usuário. É recomendado que o servidor nunca sobreescreva uma decisão explícita. O conteúdo de <code>Accept-Language</code> está comumente fora do controle do usuário (em uma viagem a outro país por exemplo); O usuário pode querer acessar a página em outra língua diferente da decidida pelo navegador.</p>
 
-<p>Se o servicor não encontrar uma língua correspondente, ele pode, teóricamente responder com o código de erro{{HTTPStatus("406")}} (Not Acceptable) . Mas, para uma melhor experiencia de usuário, iss o raramente é feito. Mais comumente, quando isso ocorre, o cabeçalho é ignorado.</p>
+<p>Se o servicor não encontrar uma língua correspondente, ele pode, teóricamente responder com o código de erro{{HTTPStatus("406")}} (Not Acceptable) . Mas, para uma melhor experiência de usuário, isso raramente é feito. Mais comumente, quando isso ocorre, o cabeçalho é ignorado.</p>
 
 <table class="properties">
  <tbody>

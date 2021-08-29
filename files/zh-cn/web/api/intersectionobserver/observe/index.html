@@ -11,7 +11,8 @@ translation_of: Web/API/IntersectionObserver/observe
 
 <h2 id="语法">语法</h2>
 
-<pre class="syntaxbox"><em>IntersectionObserver</em>.observe(<em>targetElement</em>);</pre>
+<pre
+  class="brush: js"><em>IntersectionObserver</em>.observe(<em>targetElement</em>);</pre>
 
 <h3 id="参数">参数</h3>
 
@@ -25,37 +26,41 @@ translation_of: Web/API/IntersectionObserver/observe
 
 <p><code>undefined</code>.</p>
 
-<dl>
-</dl>
+<h2 id="Examples">示例</h2>
 
-<h2 id="Examples">Examples</h2>
+<pre class="brush: js">
+// Register IntersectionObserver
+const io = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    // Add 'active' class if observation target is inside viewport
+    if (entry.intersectionRatio > 0) {
+      entry.target.classList.add('active');
+    }
+    // Remove 'active' class otherwise
+    else {
+      entry.target.classList.remove('active');
+    }
+  })
+})
 
-<p>&lt;&lt;&lt;...&gt;&gt;&gt;</p>
+// Declares what to observe, and observes its properties.
+const boxElList = document.querySelectorAll('.box');
+boxElList.forEach((el) => {
+    io.observe(el);
+})
+</pre>
 
-<h2 id="Specifications">Specifications</h2>
+<h2 id="Specifications">规范</h2>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('IntersectionObserver','#dom-intersectionobserver-observe','IntersectionObserver.observe()')}}</td>
-   <td>{{Spec2('IntersectionObserver')}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<div>
-<h2 id="Browser_compatibility">Browser compatibility</h2>
 
-<p>{{Compat("api.IntersectionObserver.observe")}}</p>
-</div>
+<h2 id="Browser_compatibility">浏览器兼容性</h2>
 
-<h2 id="See_also">See also</h2>
+<p>{{Compat}}</p>
+
+
+<h2 id="See_also">参考</h2>
 
 <ul>
  <li>{{domxref("IntersectionObserver.unobserve()")}}</li>

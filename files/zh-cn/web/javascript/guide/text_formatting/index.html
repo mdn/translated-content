@@ -62,7 +62,7 @@ typeof foo; // 返回 'object'</pre>
 <pre class="brush: js notranslate">const firstString = '2 + 2'; //创建一个字符串字面量
 const secondString = new String('2 + 2'); // 创建一个字符串对象
 eval(firstString); // 返回数字 4
-eval(secondString); // 返回字符串 "2 + 2"</pre>
+eval(secondString); // 返回包含 "2 + 2" 的字符串对象</pre>
 
 <p><code>String</code> 对象有一个属性 <code>length</code>，标识了字符串中 UTF-16 的码点个数。举例，下面的代码把 13 赋值给了<code>helloLength</code>，因为 "Hello, World!" 包含 13 个字符，每个字符用一个 UTF-16 码点表示。你可以通过数组的方式访问每一个码点，但你不能修改每个字符，因为字符串是不变的类数组对象： </p>
 

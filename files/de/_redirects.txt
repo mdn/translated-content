@@ -486,10 +486,13 @@
 /de/docs/Web/CSS/Boxmodell	/de/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 /de/docs/Web/CSS/CSS_Animations/CSS_Animationen_nutzen	/de/docs/Web/CSS/CSS_Animations/Using_CSS_animations
 /de/docs/Web/CSS/CSS_Background_and_Borders	/de/docs/Web/CSS/CSS_Backgrounds_and_Borders
+/de/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/de/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
+/de/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator	/de/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
+/de/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator	/de/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 /de/docs/Web/CSS/CSS_Background_and_Borders/Mehrere_Hintergründe_in_CSS_verwenden	/de/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds
-/de/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator	/de/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator
+/de/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator	/de/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 /de/docs/Web/CSS/CSS_Boxmodell	/de/docs/Web/CSS/CSS_Box_Model
-/de/docs/Web/CSS/CSS_Boxmodell/Box-shadow_generator	/de/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator
+/de/docs/Web/CSS/CSS_Boxmodell/Box-shadow_generator	/de/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 /de/docs/Web/CSS/CSS_Boxmodell/Einführung_in_das_CSS_Boxmodell	/de/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model
 /de/docs/Web/CSS/CSS_Boxmodell/Zusammenfallen_von_Außenabständen_meistern	/de/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing
 /de/docs/Web/CSS/CSS_Colors	/de/docs/Web/CSS/CSS_Color

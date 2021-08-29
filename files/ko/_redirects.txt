@@ -502,6 +502,9 @@
 /ko/docs/Web/API/window.screen.unlockOrientation	/ko/docs/Web/API/Screen/unlockOrientation
 /ko/docs/Web/CSS/All_About_The_Containing_Block	/ko/docs/Web/CSS/Containing_block
 /ko/docs/Web/CSS/CSS_Background_and_Borders	/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders
+/ko/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
+/ko/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator	/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
+/ko/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator	/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 /ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images	/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
 /ko/docs/Web/CSS/CSS_Colors	/ko/docs/Web/CSS/CSS_Color
 /ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Flexbox의_기본_개념	/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
