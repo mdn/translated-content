@@ -1,18 +1,21 @@
 ---
 title: background-blend-mode
 slug: Web/CSS/background-blend-mode
+tags:
+  - CSS
+  - CSS-свойство
+  - Композиция и наложение
+  - recipe:css-property
 translation_of: Web/CSS/background-blend-mode
 browser-compat: css.properties.background-blend-mode
 ---
 {{CSSRef()}}
 
-## Описание
-
-Свойство `background-blend-mode` описывает то, как фоновое изображение элемента должно накладываться на фоны других элементов.</p>
+[CSS-свойство](/ru/docs/Web/CSS) **`background-blend-mode`** описывает то, как фоновое изображение элемента должно накладываться на фоны других элементов.
 
 {{EmbedInteractiveExample("pages/css/background-blend-mode.html")}}
 
-<p>Режимы наложения должны быть определены в том же порядке что CSS свойство {{cssxref("background-image")}}. Если длины списка режимов наложения и фоновых изображений не равны, он будет повторяться и/или сокращаться до совпадения длин.</p>
+Режимы наложения должны быть определены в том же порядке, что и CSS свойство {{cssxref("background-image")}}. Если количество режимов наложения будет больше или меньше количества фоновых изображений, то последние режимы будут либо отброшены, либо повторены до совпадения количества.
 
 ## Cинтаксис
 
@@ -20,7 +23,7 @@ browser-compat: css.properties.background-blend-mode
 /* Одно значение */
 background-blend-mode: normal;
 
-/* Два значение, по одному на каждый фон */
+/* Два значения, по одному на каждый фон */
 background-blend-mode: darken, luminosity;
 
 /* Глобальные значения */
@@ -33,7 +36,7 @@ background-blend-mode: unset;
 ### Значения
 
 - {{cssxref("&lt;blend-mode&gt;")}}
-  - : обозначающий режим наложения, который применён. Может быть несколько значений, разделённых запятыми.
+  - : Применённый режим наложения. Можно указать несколько значений, разделённых запятыми.
 
 ## Формальное определение
 
