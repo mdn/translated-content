@@ -2916,6 +2916,25 @@
       "Ptak82"
     ]
   },
+  "Web/API/MouseEvent/pageX": {
+    "modified": "2019-03-23T23:42:37.418Z",
+    "contributors": [
+      "teoli",
+      "khalid32",
+      "Mgjbot",
+      "Jan Dudek",
+      "Ptak82"
+    ]
+  },
+  "Web/API/MouseEvent/pageY": {
+    "modified": "2019-03-23T23:41:13.568Z",
+    "contributors": [
+      "teoli",
+      "khalid32",
+      "Jan Dudek",
+      "Ptak82"
+    ]
+  },
   "Web/API/MouseEvent/relatedTarget": {
     "modified": "2019-03-23T23:41:15.246Z",
     "contributors": [
@@ -3531,25 +3550,6 @@
     "contributors": [
       "teoli",
       "jsx",
-      "Jan Dudek",
-      "Ptak82"
-    ]
-  },
-  "Web/API/UIEvent/pageX": {
-    "modified": "2019-03-23T23:42:37.418Z",
-    "contributors": [
-      "teoli",
-      "khalid32",
-      "Mgjbot",
-      "Jan Dudek",
-      "Ptak82"
-    ]
-  },
-  "Web/API/UIEvent/pageY": {
-    "modified": "2019-03-23T23:41:13.568Z",
-    "contributors": [
-      "teoli",
-      "khalid32",
       "Jan Dudek",
       "Ptak82"
     ]

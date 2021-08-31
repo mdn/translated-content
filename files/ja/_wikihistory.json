@@ -48633,26 +48633,6 @@
       "Taken Bot"
     ]
   },
-  "orphaned/MDN/Dashboards": {
-    "modified": "2019-03-18T21:20:57.974Z",
-    "contributors": [
-      "silverskyvicto",
-      "ExE-Boss"
-    ]
-  },
-  "orphaned/MDN/Dashboards/Editors": {
-    "modified": "2019-03-18T21:20:58.636Z",
-    "contributors": [
-      "silverskyvicto"
-    ]
-  },
-  "orphaned/MDN/Kuma/Server_charts": {
-    "modified": "2020-09-28T14:48:43.333Z",
-    "contributors": [
-      "mfuji09",
-      "silverskyvicto"
-    ]
-  },
   "orphaned/MDN/Structures/API_references": {
     "modified": "2020-11-28T12:21:15.783Z",
     "contributors": [
@@ -48683,15 +48663,6 @@
       "wbamberg",
       "hamasaki",
       "Potappo"
-    ]
-  },
-  "orphaned/MDN/Troubleshooting": {
-    "modified": "2020-09-30T16:58:23.514Z",
-    "contributors": [
-      "chrisdavidmills",
-      "eltociear",
-      "wbamberg",
-      "Uemmra3"
     ]
   },
   "orphaned/Map": {
@@ -48750,13 +48721,6 @@
       "teoli",
       "Jürgen Jeka",
       "RobinEgg"
-    ]
-  },
-  "orphaned/Participating_in_the_Mozilla_project": {
-    "modified": "2019-03-24T00:00:18.082Z",
-    "contributors": [
-      "Marsf",
-      "Potappo"
     ]
   },
   "orphaned/Setting_up_extension_development_environment": {
@@ -49742,12 +49706,6 @@
       "YuichiNukiyama"
     ]
   },
-  "orphaned/Web/JavaScript/Reference/Global_Objects/WeakSet/clear": {
-    "modified": "2019-03-23T22:54:31.675Z",
-    "contributors": [
-      "shide55"
-    ]
-  },
   "orphaned/Web/JavaScript/Reference/Operators/Pipeline_operator": {
     "modified": "2020-10-17T14:59:10.566Z",
     "contributors": [
@@ -49802,21 +49760,6 @@
     "contributors": [
       "fscholz",
       "ethertank"
-    ]
-  },
-  "orphaned/XPCOM_components_list": {
-    "modified": "2019-01-16T15:43:28.878Z",
-    "contributors": [
-      "Mgjbot",
-      "Shimono",
-      "Okome"
-    ]
-  },
-  "orphaned/XPCOM_plans": {
-    "modified": "2019-01-16T14:37:34.536Z",
-    "contributors": [
-      "fscholz",
-      "kohei.yoshino"
     ]
   },
   "orphaned/ant_script_to_assemble_an_extension": {
