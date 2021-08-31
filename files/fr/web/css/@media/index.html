@@ -6,7 +6,7 @@ translation_of: Web/CSS/@media
 ---
 <div>{{CSSRef}}</div>
 
-<p>La <a href="/fr/docs/Web/CSS/R%C3%A8gles_@">règle @</a> <strong><code>@media</code></strong> permet d'appliquer une partie d'une feuille de styles en fonction du résultat d'une ou plusieurs <a href="/fr/docs/Web/CSS/Media_Queries">requêtes média (<i lang="en">media queries</i>)</a>. Grâce à cette règle, on peut indiquer une requête média et un ensemble de règles CSS qui s'appliquent uniquement si la requête média est vérifiée pour l'appareil, le contexte avec lequel le contenu est consulté.</p>
+<p>La <a href="/fr/docs/Web/CSS/At-rule">règle @</a> <strong><code>@media</code></strong> permet d'appliquer une partie d'une feuille de styles en fonction du résultat d'une ou plusieurs <a href="/fr/docs/Web/CSS/Media_Queries">requêtes média (<i lang="en">media queries</i>)</a>. Grâce à cette règle, on peut indiquer une requête média et un ensemble de règles CSS qui s'appliquent uniquement si la requête média est vérifiée pour l'appareil, le contexte avec lequel le contenu est consulté.</p>
 
 <div class="note">
   <p><strong>Note :</strong> Il est possible de manipuler la règle @ <code>@media</code> via le CSSOM (et JavaScript) grâce à l'interface <a href="/fr/docs/Web/API/CSSMediaRule"><code>CSSMediaRule</code></a>.</p>
@@ -16,7 +16,7 @@ translation_of: Web/CSS/@media
 
 <p>Une requête média (type <code>&lt;media-query&gt;</code>) est composée d'un type de média (optionnel) et/ou de différentes caractéristiques relatives au média. Une requête média peut être imbriquée dans une autre <a href="/fr/docs/Web/CSS/At-rule#les_r%c3%a8gles_de_groupe_conditionnelles">règle conditionnelle</a>.</p>
 
-<pre class="brush: css no-line-numbers">/* Au niveau le plus haut du code */
+<pre class="brush: css">/* Au niveau le plus haut du code */
 @media screen and (min-width: 900px) {
   article {
     padding: 1rem 3rem;
