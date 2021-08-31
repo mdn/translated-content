@@ -16,10 +16,10 @@ translation_of: Web/JavaScript/Reference/Global_Objects/WebAssembly/RuntimeError
 ## 構文
 
 ```js
-new RuntimeError.LinkError()
-new RuntimeError.LinkError(message)
-new RuntimeError.LinkError(message, fileName)
-new RuntimeError.LinkError(message, fileName, lineNumber)
+new WebAssembly.RuntimeError()
+new WebAssembly.RuntimeError(message)
+new WebAssembly.RuntimeError(message, fileName)
+new WebAssembly.RuntimeError(message, fileName, lineNumber)
 ```
 
 ### 引数
