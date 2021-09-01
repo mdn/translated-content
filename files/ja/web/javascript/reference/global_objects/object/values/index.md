@@ -3,42 +3,48 @@ title: Object.values()
 slug: Web/JavaScript/Reference/Global_Objects/Object/values
 tags:
   - JavaScript
-  - Method
-  - Object
-  - Reference
   - メソッド
+  - Object
+  - リファレンス
+  - Polyfill
+browser-compat: javascript.builtins.Object.values
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/values
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary"><code><strong>Object.values()</strong></code> メソッドは、指定されたオブジェクトが持つ列挙可能なプロパティの値を、 {{jsxref("Statements/for...in", "for...in")}} ループで提供される場合と同じ順序で配列にして返します。 (違いは、 <code>for...in</code> ループではプロパティチェーン上のプロパティも同様に列挙するという点だけです。)</span></p>
+**`Object.values()`** メソッドは、指定されたオブジェクトが持つ列挙可能なプロパティの値を、 {{jsxref("Statements/for...in", "for...in")}} ループで提供される場合と同じ順序で配列にして返します。 (違いは、 `for...in` ループではプロパティチェーン上のプロパティも同様に列挙するという点だけです。)
 
-<div>{{EmbedInteractiveExample("pages/js/object-values.html")}}</div>
+{{EmbedInteractiveExample("pages/js/object-values.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+Object.values(obj)
+```
 
-<pre class="syntaxbox">Object.values(<var>obj</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `obj`
+  - : 返値となる列挙可能な自身のプロパティの値を持つオブジェクト。
 
-<dl>
- <dt><code><var>obj</var></code></dt>
- <dd> 返されることになる列挙可能な自身のプロパティの値を持つオブジェクト。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+与えられたオブジェクトが所有する列挙可能なプロパティの値が入った配列。
 
-<p>与えられたオブジェクトが所有する列挙可能なプロパティの値が入った配列。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+`Object.values()` は、`object` に直接存在する列挙可能な値が配列要素の文字列に対応した配列を返します。プロパティの順序はマニュアル操作でオブジェクト内のプロパティに対してループさせた時の順序と同じになります。
 
-<p><code>Object.values()</code> は、<code>object</code> に直接存在する列挙可能な値が配列要素の文字列に対応した配列を返します。プロパティの順序はマニュアル操作でオブジェクト内のプロパティに対してループさせた時の順序と同じになります。</p>
+## ポリフィル
 
-<h2 id="Examples" name="Examples">使用例</h2>
+`Object.values` をネイティブで対応していない古い環境に対応するために、 [tc39/proposal-object-values-entries](https://github.com/tc39/proposal-object-values-entries) や [es-shims/Object.values](https://github.com/es-shims/Object.values) などのリポジトリーにポリフィルがあります。
 
-<pre class="brush: js">const obj = { foo: 'bar', baz: 42 };
+## 例
+
+### Object.values の使用
+
+```js
+const obj = { foo: 'bar', baz: 42 };
 console.log(Object.values(obj)); // ['bar', 42]
 
 // 配列風オブジェクト
@@ -57,40 +63,22 @@ console.log(Object.values(my_obj)); // ['bar']
 
 // オブジェクトでない引数はオブジェクトへと型強制される
 console.log(Object.values('foo')); // ['f', 'o', 'o']
-</pre>
+```
 
-<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
+## 仕様書
 
-<p><code>Object.values</code> に対応していない古い環境と互換性を持たせる場合は、 <a href="https://github.com/tc39/proposal-object-values-entries">tc39/proposal-object-values-entries</a> や <a href="https://github.com/es-shims/Object.values">es-shims/Object.values</a> 内にポリフィルがあります。</p>
+{{Specifications}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## ブラウザーの互換性
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.values', 'Object.values')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Compat}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## 関連情報
 
-<div>
-<p>{{Compat("javascript.builtins.Object.values")}}</p>
-</div>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">プロパティの列挙可能性と所有権</a></li>
- <li>{{jsxref("Object.keys()")}}</li>
- <li>{{jsxref("Object.entries()")}}</li>
- <li>{{jsxref("Object.prototype.propertyIsEnumerable()")}}</li>
- <li>{{jsxref("Object.create()")}}</li>
- <li>{{jsxref("Object.getOwnPropertyNames()")}}</li>
-</ul>
+- `Object.values` のポリフィルが [`core-js`](https://github.com/zloirock/core-js#ecmascript-object) にあります
+- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- {{jsxref("Object.keys()")}}
+- {{jsxref("Object.entries()")}}
+- {{jsxref("Object.prototype.propertyIsEnumerable()")}}
+- {{jsxref("Object.create()")}}
+- {{jsxref("Object.getOwnPropertyNames()")}}
