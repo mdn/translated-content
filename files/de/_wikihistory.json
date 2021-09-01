@@ -4194,22 +4194,6 @@
       "teoli"
     ]
   },
-  "Web/API/WindowOrWorkerGlobalScope/btoa": {
-    "modified": "2019-03-23T22:50:32.544Z",
-    "contributors": [
-      "cami"
-    ]
-  },
-  "Web/API/WindowOrWorkerGlobalScope/setTimeout": {
-    "modified": "2019-03-23T23:36:28.621Z",
-    "contributors": [
-      "mdnde",
-      "Eschon",
-      "fscholz",
-      "c0ffm3k4r",
-      "wartab"
-    ]
-  },
   "Web/API/Worker": {
     "modified": "2019-03-18T21:45:39.485Z",
     "contributors": [
@@ -4227,6 +4211,12 @@
       "paul_thomann"
     ]
   },
+  "Web/API/btoa": {
+    "modified": "2019-03-23T22:50:32.544Z",
+    "contributors": [
+      "cami"
+    ]
+  },
   "Web/API/notification": {
     "modified": "2019-03-23T22:55:22.604Z",
     "contributors": [
@@ -4241,6 +4231,16 @@
     "contributors": [
       "schlagi123",
       "mwsh2005"
+    ]
+  },
+  "Web/API/setTimeout": {
+    "modified": "2019-03-23T23:36:28.621Z",
+    "contributors": [
+      "mdnde",
+      "Eschon",
+      "fscholz",
+      "c0ffm3k4r",
+      "wartab"
     ]
   },
   "Web/Accessibility": {
