@@ -3881,59 +3881,6 @@
       "teoli"
     ]
   },
-  "Web/API/WindowOrWorkerGlobalScope/atob": {
-    "modified": "2019-03-23T23:09:12.984Z",
-    "contributors": [
-      "teoli",
-      "Eltu"
-    ]
-  },
-  "Web/API/WindowOrWorkerGlobalScope/btoa": {
-    "modified": "2019-03-23T23:09:14.333Z",
-    "contributors": [
-      "teoli",
-      "Eltu"
-    ]
-  },
-  "Web/API/WindowOrWorkerGlobalScope/clearInterval": {
-    "modified": "2019-03-24T00:10:08.372Z",
-    "contributors": [
-      "teoli",
-      "khalid32",
-      "ethertank",
-      "qfel13"
-    ]
-  },
-  "Web/API/WindowOrWorkerGlobalScope/clearTimeout": {
-    "modified": "2019-03-24T00:10:09.180Z",
-    "contributors": [
-      "teoli",
-      "khalid32",
-      "qfel13"
-    ]
-  },
-  "Web/API/WindowOrWorkerGlobalScope/setInterval": {
-    "modified": "2019-03-24T00:10:09.408Z",
-    "contributors": [
-      "Bajdzis",
-      "teoli",
-      "khalid32",
-      "qfel13",
-      "Mgjbot",
-      "Jan Dudek"
-    ]
-  },
-  "Web/API/WindowOrWorkerGlobalScope/setTimeout": {
-    "modified": "2019-03-24T00:10:06.439Z",
-    "contributors": [
-      "teoli",
-      "AshfaqHossain",
-      "qfel13",
-      "Ceth",
-      "Mgjbot",
-      "Jan Dudek"
-    ]
-  },
   "Web/API/XMLHttpRequest": {
     "modified": "2019-03-23T23:55:55.505Z",
     "contributors": [
@@ -3944,6 +3891,59 @@
       "Ptak82",
       "Ziombka",
       "gandalf"
+    ]
+  },
+  "Web/API/atob": {
+    "modified": "2019-03-23T23:09:12.984Z",
+    "contributors": [
+      "teoli",
+      "Eltu"
+    ]
+  },
+  "Web/API/btoa": {
+    "modified": "2019-03-23T23:09:14.333Z",
+    "contributors": [
+      "teoli",
+      "Eltu"
+    ]
+  },
+  "Web/API/clearInterval": {
+    "modified": "2019-03-24T00:10:08.372Z",
+    "contributors": [
+      "teoli",
+      "khalid32",
+      "ethertank",
+      "qfel13"
+    ]
+  },
+  "Web/API/clearTimeout": {
+    "modified": "2019-03-24T00:10:09.180Z",
+    "contributors": [
+      "teoli",
+      "khalid32",
+      "qfel13"
+    ]
+  },
+  "Web/API/setInterval": {
+    "modified": "2019-03-24T00:10:09.408Z",
+    "contributors": [
+      "Bajdzis",
+      "teoli",
+      "khalid32",
+      "qfel13",
+      "Mgjbot",
+      "Jan Dudek"
+    ]
+  },
+  "Web/API/setTimeout": {
+    "modified": "2019-03-24T00:10:06.439Z",
+    "contributors": [
+      "teoli",
+      "AshfaqHossain",
+      "qfel13",
+      "Ceth",
+      "Mgjbot",
+      "Jan Dudek"
     ]
   },
   "Web/Accessibility": {
