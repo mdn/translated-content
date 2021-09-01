@@ -2813,7 +2813,6 @@
 /ja/docs/Notification_object/requestPermission	/ja/docs/Web/API/Notification/requestPermission
 /ja/docs/Notification_object/tag	/ja/docs/Web/API/Notification/tag
 /ja/docs/Notification_object/title	/ja/docs/Web/API/Notification/title
-/ja/docs/NsIDOMHTMLMediaElement	/ja/docs/orphaned/NsIDOMHTMLMediaElement
 /ja/docs/Offline_resources_in_Firefox/Using_audio_and_video_in_Firefox	/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 /ja/docs/Online_and_offline_events	/ja/docs/Web/API/Navigator/Online_and_offline_events
 /ja/docs/Other_JavaScript_tools	/ja/docs/Tools
@@ -2978,7 +2977,6 @@
 /ja/docs/Using_XMLHttpRequest	/ja/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest
 /ja/docs/Using_XPath	/ja/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript
 /ja/docs/Using_audio_and_video_in_Firefox	/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
-/ja/docs/Using_audio_and_video_in_Firefox/NsIDOMHTMLMediaElement	/ja/docs/orphaned/NsIDOMHTMLMediaElement
 /ja/docs/Using_files_from_web_applications	/ja/docs/Web/API/File/Using_files_from_web_applications
 /ja/docs/Using_geolocation	/ja/docs/Web/API/Geolocation_API
 /ja/docs/Using_gradients	/ja/docs/Web/CSS/CSS_Images/Using_CSS_gradients
@@ -4931,9 +4929,7 @@
 /ja/docs/javascript_typed_arrays/Uint8Array	/ja/docs/Web/JavaScript/Reference/Global_objects/Uint8Array
 /ja/docs/lastIndexOf	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 /ja/docs/method	/ja/docs/Web/API/HTMLFormElement/method
-/ja/docs/mozIStorageService	/ja/docs/orphaned/mozIStorageService
 /ja/docs/mozillaのメール	/ja/docs/Web
-/ja/docs/nsIDynamicContainer	/ja/docs/orphaned/nsIDynamicContainer
 /ja/docs/reftest_opportunities_files	/ja/docs/orphaned/reftest_opportunities_files
 /ja/docs/slice	/ja/docs/Web/JavaScript/Reference/Global_Objects/String/slice
 /ja/docs/title	/ja/docs/Web/HTML/Element/title

@@ -48713,16 +48713,6 @@
       "Potappo"
     ]
   },
-  "orphaned/NsIDOMHTMLMediaElement": {
-    "modified": "2019-04-20T00:22:02.073Z",
-    "contributors": [
-      "wbamberg",
-      "SphinxKnight",
-      "teoli",
-      "Jürgen Jeka",
-      "RobinEgg"
-    ]
-  },
   "orphaned/Setting_up_extension_development_environment": {
     "modified": "2019-03-23T23:54:13.028Z",
     "contributors": [
@@ -49766,22 +49756,6 @@
     "modified": "2019-08-11T02:17:04.841Z",
     "contributors": [
       "Marsf"
-    ]
-  },
-  "orphaned/mozIStorageService": {
-    "modified": "2019-04-20T00:21:50.232Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "tomotaka"
-    ]
-  },
-  "orphaned/nsIDynamicContainer": {
-    "modified": "2019-04-20T00:19:05.595Z",
-    "contributors": [
-      "wbamberg",
-      "teoli",
-      "tomotaka"
     ]
   },
   "orphaned/reftest_opportunities_files": {
