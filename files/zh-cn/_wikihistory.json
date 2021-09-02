@@ -27262,16 +27262,6 @@
       "yan"
     ]
   },
-  "Web/CSS/Tools": {
-    "modified": "2019-03-23T22:29:45.280Z",
-    "contributors": [
-      "runyul",
-      "pluwen",
-      "edwards1101",
-      "lucia007",
-      "lunix01"
-    ]
-  },
   "Web/CSS/Tutorials": {
     "modified": "2019-03-23T23:32:32.218Z",
     "contributors": [
@@ -47392,6 +47382,16 @@
     "modified": "2019-03-23T22:29:25.203Z",
     "contributors": [
       "qianzhangcheng"
+    ]
+  },
+  "conflicting/Web/CSS": {
+    "modified": "2019-03-23T22:29:45.280Z",
+    "contributors": [
+      "runyul",
+      "pluwen",
+      "edwards1101",
+      "lucia007",
+      "lunix01"
     ]
   },
   "conflicting/Web/CSS/::placeholder": {

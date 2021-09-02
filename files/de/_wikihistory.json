@@ -5602,13 +5602,6 @@
       "Sebastianz"
     ]
   },
-  "Web/CSS/Tools": {
-    "modified": "2019-03-23T22:43:38.676Z",
-    "contributors": [
-      "Sebastianz",
-      "creativenitish"
-    ]
-  },
   "Web/CSS/Tools/Linear-gradient_Generator": {
     "modified": "2019-03-23T22:43:38.482Z",
     "contributors": [
@@ -13588,6 +13581,13 @@
       "chrisdavidmills",
       "teoli",
       "eminor"
+    ]
+  },
+  "conflicting/Web/CSS": {
+    "modified": "2019-03-23T22:43:38.676Z",
+    "contributors": [
+      "Sebastianz",
+      "creativenitish"
     ]
   },
   "conflicting/Web/CSS/::placeholder": {

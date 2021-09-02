@@ -1714,6 +1714,7 @@
 /zh-CN/docs/Web/CSS/Reference/Webkit_Extensions	/zh-CN/docs/Web/CSS/WebKit_Extensions
 /zh-CN/docs/Web/CSS/Reference/background-blend-mode	/zh-CN/docs/Web/CSS/background-blend-mode
 /zh-CN/docs/Web/CSS/Reference/mix-blend-mode	/zh-CN/docs/Web/CSS/mix-blend-mode
+/zh-CN/docs/Web/CSS/Tools	/zh-CN/docs/conflicting/Web/CSS
 /zh-CN/docs/Web/CSS/Tutorials/Using_CSS_transforms	/zh-CN/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms
 /zh-CN/docs/Web/CSS/Understanding_z-index	/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index
 /zh-CN/docs/Web/CSS/Understanding_z-index/Adding_z-index	/zh-CN/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index

@@ -4114,7 +4114,7 @@
 /fr/docs/Web/CSS/Média/Visuel	/fr/docs/Web/CSS/@media
 /fr/docs/Web/CSS/Média_Paginé	/fr/docs/Web/CSS/Paged_Media
 /fr/docs/Web/CSS/Média_paginés	/fr/docs/Web/CSS/Paged_Media
-/fr/docs/Web/CSS/Outils	/fr/docs/Web/CSS/Tools
+/fr/docs/Web/CSS/Outils	/fr/docs/conflicting/Web/CSS_c2c099599c0a58c69d1390033045f244
 /fr/docs/Web/CSS/Outils/Générateur_de_courbe_de_Bézier	/fr/docs/orphaned/Web/CSS/Tools/Cubic_Bezier_Generator
 /fr/docs/Web/CSS/Outils/Générateur_de_dégradés_linéaires	/fr/docs/Web/CSS/Tools/Linear-gradient_Generator
 /fr/docs/Web/CSS/Propriétés_raccourcies	/fr/docs/Web/CSS/Shorthand_properties
@@ -4150,6 +4150,7 @@
 /fr/docs/Web/CSS/Sélecteurs_descendant	/fr/docs/Web/CSS/Descendant_combinator
 /fr/docs/Web/CSS/Sélecteurs_enfant	/fr/docs/Web/CSS/Child_combinator
 /fr/docs/Web/CSS/Sélecteurs_universels	/fr/docs/Web/CSS/Universal_selectors
+/fr/docs/Web/CSS/Tools	/fr/docs/conflicting/Web/CSS_c2c099599c0a58c69d1390033045f244
 /fr/docs/Web/CSS/Tools/Cubic_Bezier_Generator	/fr/docs/orphaned/Web/CSS/Tools/Cubic_Bezier_Generator
 /fr/docs/Web/CSS/Tools/Générateur_de_courbe_de_Bézier	/fr/docs/orphaned/Web/CSS/Tools/Cubic_Bezier_Generator
 /fr/docs/Web/CSS/Tools/Générateur_de_dégradés_linéaires	/fr/docs/Web/CSS/Tools/Linear-gradient_Generator

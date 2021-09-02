@@ -25688,13 +25688,6 @@
       "FredB"
     ]
   },
-  "Web/CSS/Tools": {
-    "modified": "2019-04-06T13:47:45.843Z",
-    "contributors": [
-      "SphinxKnight",
-      "velvel53"
-    ]
-  },
   "Web/CSS/Tools/Linear-gradient_Generator": {
     "modified": "2019-04-06T13:48:01.466Z",
     "contributors": [
@@ -43605,6 +43598,13 @@
       "FredB",
       "tregagnon",
       "ThePrisoner"
+    ]
+  },
+  "conflicting/Web/CSS_c2c099599c0a58c69d1390033045f244": {
+    "modified": "2019-04-06T13:47:45.843Z",
+    "contributors": [
+      "SphinxKnight",
+      "velvel53"
     ]
   },
   "conflicting/Web/Guide": {

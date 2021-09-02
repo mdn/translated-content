@@ -7981,13 +7981,6 @@
       "fvargaspf@gmail.com"
     ]
   },
-  "Web/CSS/Tools": {
-    "modified": "2019-03-23T23:07:41.210Z",
-    "contributors": [
-      "hlays",
-      "velvel53"
-    ]
-  },
   "Web/CSS/Type_selectors": {
     "modified": "2020-10-15T22:32:30.449Z",
     "contributors": [
@@ -16467,6 +16460,13 @@
     "contributors": [
       "Aschlla",
       "caio.rrs"
+    ]
+  },
+  "conflicting/Web/CSS": {
+    "modified": "2019-03-23T23:07:41.210Z",
+    "contributors": [
+      "hlays",
+      "velvel53"
     ]
   },
   "conflicting/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox": {

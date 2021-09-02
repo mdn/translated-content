@@ -3683,6 +3683,7 @@
 /ja/docs/Web/CSS/Reference/@viewport/zoom	/ja/docs/Web/CSS/@viewport
 /ja/docs/Web/CSS/Reference/Mozilla_Extensions	/ja/docs/Web/CSS/Mozilla_Extensions
 /ja/docs/Web/CSS/Scaling_background_images	/ja/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
+/ja/docs/Web/CSS/Tools	/ja/docs/conflicting/Web/CSS
 /ja/docs/Web/CSS/Understanding_z_index	/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index
 /ja/docs/Web/CSS/Understanding_z_index/Adding_z-index	/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
 /ja/docs/Web/CSS/Understanding_z_index/Stacking_and_float	/ja/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float

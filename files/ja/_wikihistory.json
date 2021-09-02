@@ -29309,13 +29309,6 @@
       "sii"
     ]
   },
-  "Web/CSS/Tools": {
-    "modified": "2020-07-21T12:48:32.485Z",
-    "contributors": [
-      "mfuji09",
-      "sii"
-    ]
-  },
   "Web/CSS/Type_selectors": {
     "modified": "2020-10-15T21:20:42.015Z",
     "contributors": [
@@ -48607,6 +48600,13 @@
       "stingray",
       "ethertank",
       "Jeremie"
+    ]
+  },
+  "conflicting/Web/CSS": {
+    "modified": "2020-07-21T12:48:32.485Z",
+    "contributors": [
+      "mfuji09",
+      "sii"
     ]
   },
   "orphaned/Building_a_Mozilla_Distribution": {
