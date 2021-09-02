@@ -1,0 +1,72 @@
+---
+title: WindowOrWorkerGlobalScope.indexedDB
+slug: Web/API/indexedDB
+tags:
+  - API
+  - Database
+  - IndexedDB
+  - Property
+  - Reference
+  - Storage
+translation_of: Web/API/WindowOrWorkerGlobalScope/indexedDB
+original_slug: Web/API/WindowOrWorkerGlobalScope/indexedDB
+---
+<p>{{ APIRef() }}</p>
+
+<p>{{domxref("WindowOrWorkerGlobalScope")}} ミックスインの <strong><code>indexedDB</code></strong> 読み取り専用プロパティは、アプリケーションが indexed データベースのキャパビリティに非同期でアクセスするための機構を提供します。</p>
+
+<h2 id="Syntax" name="Syntax">構文</h2>
+
+<pre class="syntaxbox">var IDBFactory = self.indexedDB;</pre>
+
+<h3 id="Value" name="Value">値</h3>
+
+<p>{{domxref("IDBFactory")}} オブジェクト。</p>
+
+<h2 id="Example" name="Example">例</h2>
+
+<pre class="brush: js;highlight:[3]">var db;
+function openDB() {
+ var DBOpenRequest = window.indexedDB.open('toDoList');
+ DBOpenRequest.onsuccess = function(e) {
+   db = DBOpenRequest.result;
+ }
+}</pre>
+
+<h2 id="Specifications" name="Specifications">仕様</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">仕様書</th>
+   <th scope="col">策定状況</th>
+   <th scope="col">備考</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('IndexedDB 2', '#dom-windoworworkerglobalscope-indexeddb', 'indexedDB')}}</td>
+   <td>{{Spec2('IndexedDB 2')}}</td>
+   <td>Defined in a <code>WindowOrWorkerGlobalScope</code> partial in the newest spec.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('IndexedDB', '#widl-IDBEnvironment-indexedDB', 'indexedDB')}}</td>
+   <td>{{Spec2('IndexedDB')}}</td>
+   <td>初期定義。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの実装状況</h2>
+
+<p>{{Compat("api.WindowOrWorkerGlobalScope.indexedDB")}}</p>
+
+<h2 id="See_also" name="See_also">関連情報</h2>
+
+<ul>
+ <li><a href="/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
+ <li>トランザクションの開始: {{domxref("IDBDatabase")}}</li>
+ <li>トランザクションの使用: {{domxref("IDBTransaction")}}</li>
+ <li>キーの範囲設定: {{domxref("IDBKeyRange")}}</li>
+ <li>データの取得と変更: {{domxref("IDBObjectStore")}}</li>
+ <li>カーソルの使用: {{domxref("IDBCursor")}}</li>
+ <li>参照例: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+</ul>
