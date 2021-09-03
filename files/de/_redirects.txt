@@ -544,6 +544,7 @@
 /de/docs/Web/CSS/url	/de/docs/Web/CSS/url()
 /de/docs/Web/CSS/visible	/de/docs/Web/CSS/visibility
 /de/docs/Web/CSS/word-wrap	/de/docs/Web/CSS/overflow-wrap
+/de/docs/Web/Demos_of_open_web_technologies	/de/docs/Web/Demos
 /de/docs/Web/Events/DOMContentLoaded	/de/docs/Web/API/Window/DOMContentLoaded_event
 /de/docs/Web/Events/change	/de/docs/Web/API/HTMLElement/change_event
 /de/docs/Web/Events/fullscreenchange	/de/docs/Web/API/Document/fullscreenchange_event
