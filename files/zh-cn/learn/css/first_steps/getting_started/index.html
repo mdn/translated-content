@@ -17,7 +17,7 @@ original_slug: Learn/CSS/First_steps/开始
 <p>{{PreviousMenuNext("Learn/CSS/First_steps/What_is_CSS", "Learn/CSS/First_steps/How_CSS_is_structured", "Learn/CSS/First_steps")}}</p>
 </div>
 
-<p class="summary">在这篇文章中，我们将会拿一个简单的HTML文档做例子，并且在上边使用CSS样式，期待你能在此过程中学会更多有关CSS的实战性知识。</p>
+<p class="summary">在这篇文章中，我们将会拿一个简单的 HTML 文档做例子，并且在里面使用 CSS 样式，期待你能在此过程中学会更多有关 CSS 的实战性知识。</p>
 
 <h4 id="前置知识">前置知识</h4>
 
@@ -26,19 +26,19 @@ original_slug: Learn/CSS/First_steps/开始
 <ul>
  <li><font><font>基本熟悉计算机操作。</font></font></li>
  <li><font><font>基本工作环境的设置（详见</font></font><font><font><a href="https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web/Installing_basic_software">安装基本软件</a>）</font></font><font><font>，基本的文件操作，详见</font></font><font><font><a href="https://developer.mozilla.org/zh-CN/docs/Learn/Getting_started_with_the_web/Dealing_with_files">处理文件</a></font></font><font><font>。</font></font></li>
- <li>熟悉 <a href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML概述</a> 章节中提到的基本HTML知识.</li>
+ <li>熟悉 <a href="https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML">HTML 概述</a> 章节中提到的基本 HTML 知识.</li>
 </ul>
 
 <h4 id="目标">目标</h4>
 
 <ul>
- <li>理解 HTML文档链接CSS文档的几个基本套路，</li>
- <li>并能运用所学的CSS，做些文字上的格式化操作。</li>
+ <li>理解 HTML 文档链接 CSS 文档的几个基本套路，</li>
+ <li>并能运用所学的 CSS，做些文字上的格式化操作。</li>
 </ul>
 
-<h2 id="先从HTML开始吧">先从HTML开始吧</h2>
+<h2 id="先从HTML开始吧">先从 HTML 开始吧</h2>
 
-<p>我们先以HTML文档展开叙述。如果想在自己电脑试一试，可以copy下面的代码。在你的电脑上，将代码以文件名： <code>index.html</code> 的形式保存下来。</p>
+<p>我们先以 HTML 文档展开叙述。如果想在自己电脑试一试，可以复制下面的代码。在你的电脑上，将代码以文件名： <code>index.html</code> 的形式保存下来。</p>
 
 <pre class="brush: html">&lt;!doctype html&gt;
 &lt;html lang="en"&gt;
@@ -71,25 +71,25 @@ original_slug: Learn/CSS/First_steps/开始
 <p><strong>温馨提示：假设你电脑操作环境不方便创建文件运行代码，别担心，可以用我们下方给出的在线实时代码编辑器。</strong></p>
 </div>
 
-<h2 id="添加CSS试试看？">添加CSS试试看？</h2>
+<h2 id="添加CSS试试看？">添加 CSS 试试看？</h2>
 
-<p>我们最想做的就是让HTML文档能够遵守我们给它的CSS规则。 其实有三种方式可以实现，而目前我们更倾向于利用最普遍且有用的方式——在文档的开头链接CSS。</p>
+<p>我们最想做的就是让 HTML 文档能够遵守我们给它的 CSS 规则。 其实有三种方式可以实现，而目前我们更倾向于利用最普遍且有用的方式——在文档的开头链接 CSS。</p>
 
-<p>在与之前所说的HTML文档的相同目录创建一个文件，保存并命名为 <code>styles.css</code> 。（看后缀知道此文件就是CSS文件）</p>
+<p>在与之前所说的 HTML 文档的相同目录创建一个文件，保存并命名为 <code>styles.css</code> 。（看后缀知道此文件就是 CSS 文件）</p>
 
-<p>为了把 <code>styles.css</code> 和 <code>index.html</code> 联结起来，可以在HTML文档中，{{htmlelement("head")}}语句模块里面加上下面的代码：</p>
+<p>为了把 <code>styles.css</code> 和 <code>index.html</code> 连接起来，可以在 HTML 文档中，{{htmlelement("head")}} 语句模块里面加上下面的代码：</p>
 
 <pre class="brush: html">&lt;link rel="stylesheet" href="styles.css"&gt;</pre>
 
-<p> {{htmlelement("link")}} 语句块里面，我们用属性<code>rel</code>，让浏览器知道有CSS文档存在（所以需要遵守CSS样式的规定），并利用属性 <code>href</code> 指定，寻找CSS文件的位置。 你可以做测试来验证CSS是否有效：在 <code>styles.css</code> 里面加上CSS样式并观察显示的结果。下面，用你的编辑器打出下面的代码。</p>
+<p> {{htmlelement("link")}} 语句块里面，我们用属性 <code>rel</code>，让浏览器知道有 CSS 文档存在（所以需要遵守 CSS 样式的规定），并利用属性 <code>href</code> 指定，寻找 CSS 文件的位置。 你可以做测试来验证CSS是否有效：在 <code>styles.css</code> 里面加上CSS样式并观察显示的结果。下面，用你的编辑器打出下面的代码。</p>
 
 <pre class="brush: css">h1 {
   color: red;
 }</pre>
 
-<p>保存HTML和CSS文档，刷新浏览器网页，不出意外你将看到网页顶层的大标题变成红色了。如果看到这个现象，我得恭喜你：你已经成功将某些CSS样式运用到HTML上了。当然假设没有达到预想结果，可以仔细检查每句代码是否正确，加油：）</p>
+<p>保存 HTML 和 CSS 文档，刷新浏览器网页，不出意外你将看到网页顶层的大标题变成红色了。如果看到这个现象，恭喜你：你已经成功将某些 CSS 样式运用到 HTML 上了。当然假设没有达到预想结果，可以仔细检查每句代码是否正确，加油：）</p>
 
-<p>你可以一直在本地编辑器练习 <code>styles.css</code> ，或者采用我们教程下面的交互式智能编辑器。这个编辑器会默认把第一个面板里面的CSS代码联结到旁边的HTML文档，就好像我们上面得两个文档一样互相联结。</p>
+<p>你可以一直在本地编辑器练习 <code>styles.css</code> ，或者采用我们教程下面的交互式智能编辑器。这个编辑器会默认把第一个面板里面的 CSS 代码连接到旁边的 HTML 文档，就好像我们上面得两个文档一样互相连接。</p>
 
 <h2 id="样式化_HTML_元素">样式化 HTML 元素</h2>
 
@@ -177,7 +177,7 @@ span.special {
 
 <p>该选择器将选择<code>&lt;li&gt;</code>内部的任何<code>&lt;em&gt;</code>元素（<code>&lt;li&gt;</code>的后代）。因此在示例文档中，您应该发现第三个列表项内的<code>&lt;em&gt;</code>现在是紫色，但是在段落内的那个没发生变化。</p>
 
-<p>另一些可能想尝试的事情是在HTML文档中设置直接出现在标题后面并且与标题具有相同层级的段落样式，为此需在两个选择器之间添加一个 <code>+</code> 号 (成为 <strong>相邻选择符</strong>) </p>
+<p>另一些可能想尝试的事情是在 HTML 文档中设置直接出现在标题后面并且与标题具有相同层级的段落样式，为此需在两个选择器之间添加一个 <code>+</code> 号 (成为 <strong>相邻选择符</strong>) </p>
 
 <p>也将这个规则添加到样式表中：</p>
 
@@ -185,7 +185,7 @@ span.special {
   font-size: 200%;
 }</pre>
 
-<p>下面的示例包含了上面的两个规则。 尝试添加规则使位于段落中的span变为红色。如果正确您将看到在第一段中的span会变为红色，但是第一个列表项中的span不会改变颜色。</p>
+<p>下面的示例包含了上面的两个规则。 尝试添加规则使位于段落中的 span 变为红色。如果没问题，您将看到在第一段中的 span 会变为红色，但是第一个列表项中的 span 不会改变颜色。</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/getting-started/started2.html", '100%', 1100)}}</p>
 
@@ -211,23 +211,23 @@ a:visited {
   text-decoration: none;
 }</pre>
 
-<p>在下面的例子中，你可以对超链接的不同状态尝试各种各样的值。我已经编写了一些规则，然而你肯定已经发现粉色看上去太浅以至于不好辨认。— 换个更好的颜色吧。你能将链接变为黑体吗?</p>
+<p>在下面的例子中，你可以对超链接的不同状态尝试各种各样的值。我已经编写了一些规则，然而你肯定已经发现粉色看上去太浅以至于不好辨认。——换一个更好的颜色吧。你能将链接变为黑体吗?</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/getting-started/started3.html", '100%', 900)}} </p>
 
-<p>我们对鼠标悬停于链接上的情况删除了下划线。你当然可以让超链接在任何情况下都没有下划线.。但需要注意的是，对一个实际的站点，需要让浏览者知道“链接是链接”。为了让浏览者注意到一段文字中的某些部分是可点击的，最好保留link状态下的下划线。— 这是下划线的本来作用。不管你用CSS来做什么，都应当使得变化后的文档看上去更加清晰明了。— 在后面，当我们遇到类似的情况时，我们将适时指出。</p>
+<p>我们对鼠标悬停于链接上的情况删除了下划线。你当然可以让超链接在任何情况下都没有下划线。但需要注意的是，对一个实际的站点，需要让浏览者知道“链接是链接”。为了让浏览者注意到一段文字中的某些部分是可点击的，最好保留 link 状态下的下划线。— 这是下划线的本来作用。不管你用 CSS 来做什么，都应当使得变化后的文档看上去更加清晰明了。— 在后面，当我们遇到类似的情况时，我们将适时指出。</p>
 
 <div class="blockIndicator note">
-<p><strong>注</strong>: 在本教程以及整个MDN站点中，你会经常看到“无障碍”这个词。“无障碍”一词的意思是，我们的网页应当每一个访客都能够理解、使用。</p>
+<p><strong>注</strong>: 在本教程以及整个 MDN 站点中，你会经常看到“无障碍”这个词。“无障碍”一词的意思是，我们的网页应当让每一个访客都能够理解、使用。</p>
 
 <p>你的访客可能在一台使用鼠标和键盘操作的计算机前，也可能正在使用带有触摸屏的手机，或者正在使用屏幕阅读软件读出文档内容，或者他们需要使用更大的字体，或者仅仅使用键盘浏览站点。</p>
 
-<p>一个朴素的HTML文档一般来说对任何人都是可以无障碍访问的 ，当你开始为它添加样式，记得不要破坏这种可访问性。</p>
+<p>一个朴素的 HTML 文档一般来说对任何人都是可以无障碍访问的 ，当你开始为它添加样式，记得不要破坏这种可访问性。</p>
 </div>
 
-<h2 id="将选择子和关系选择器组合起来">将选择子和关系选择器组合起来</h2>
+<h2 id="同时使用选择器和选择符">同时使用选择器和选择符</h2>
 
-<p>你可以将多个选择子和关系选择器组合起来。来看一些例子：</p>
+<p>你可以同时使用选择器和选择符。来看一些例子：</p>
 
 <pre class="brush: css">/* selects any &lt;span&gt; that is inside a &lt;p&gt;, which is inside an &lt;article&gt;  */
 article p span { ... }
@@ -243,15 +243,15 @@ h1 + ul + p { ... }</pre>
   padding: 5px;
 }</pre>
 
-<p>上面的代码为以下元素建立样式：在&lt;body&gt;之内，紧接在&lt;h1&gt;后面的&lt;p&gt;元素的内部，类名为special。</p>
+<p>上面的代码为以下元素建立样式：在&lt;body&gt;之内，紧接在&lt;h1&gt;后面的&lt;p&gt;元素的内部，类名为 special。</p>
 
-<p>在我们提供的原始HTML文档中，与之符合的元素只有<code>&lt;span class="special"&gt;</code>.</p>
+<p>在我们提供的原始 HTML 文档中，与之符合的元素只有<code>&lt;span class="special"&gt;</code>.</p>
 
-<p>如果你现在觉得这份代码太复杂了，别担心，— 一旦你开始编写更多的CSS代码，你很快就能找到窍门。</p>
+<p>如果你现在觉得这份代码太复杂了，别担心，— 一旦你开始编写更多的 CSS 代码，你很快就能找到窍门。</p>
 
 <h2 id="总结">总结</h2>
 
-<p>在本教程中，我们学习了使用CSS为文档添加样式的几种方法。在教程的剩下部分，我们将继续这个话题。不过，你现在已经有了足够的知识为文本建立样式；根据目标元素的不同用不同的方式应用样式；在MDN文档中查找属性和值。</p>
+<p>在本教程中，我们学习了使用 CSS 为文档添加样式的几种方法。在教程的剩下部分，我们将继续这个话题。不过，你现在已经有了足够的知识为文本建立样式；根据目标元素的不同用不同的方式应用样式；在 MDN 文档中查找属性和值。</p>
 
 <p>在下一节中，我们将看到样式表的结构是什么样的。</p>
 
@@ -260,9 +260,9 @@ h1 + ul + p { ... }</pre>
 <h2 id="在此模块">在此模块</h2>
 
 <ol>
- <li><a href="/zh-CN/docs/Learn/CSS/First_steps/What_is_CSS">什么是CSS?</a></li>
- <li><a href="/zh-CN/docs/Learn/CSS/First_steps/开始">开始学习CSS</a></li>
- <li><a href="/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured">CSS代码是如何组织的</a></li>
- <li><a href="/zh-CN/docs/Learn/CSS/First_steps/CSS如何运行">CSS是如何工作的</a></li>
+ <li><a href="/zh-CN/docs/Learn/CSS/First_steps/What_is_CSS">什么是 CSS?</a></li>
+ <li><a href="/zh-CN/docs/Learn/CSS/First_steps/开始">开始学习 CSS</a></li>
+ <li><a href="/zh-CN/docs/Learn/CSS/First_steps/How_CSS_is_structured">CSS 代码是如何组织的</a></li>
+ <li><a href="/zh-CN/docs/Learn/CSS/First_steps/CSS如何运行">CSS 是如何工作的</a></li>
  <li><a href="/zh-CN/docs/Learn/CSS/First_steps/Using_your_new_knowledge">开始使用你的新知识</a></li>
 </ol>

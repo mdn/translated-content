@@ -512,6 +512,7 @@
 /zh-TW/docs/Using_files_from_web_applications	/zh-TW/docs/Web/API/File/Using_files_from_web_applications
 /zh-TW/docs/Using_geolocation	/zh-TW/docs/Web/API/Geolocation_API
 /zh-TW/docs/Web/API/Ambient_Light_Events	/zh-TW/docs/orphaned/Web/API/Ambient_Light_Events
+/zh-TW/docs/Web/API/AnimationEvent/initAnimationEvent	/zh-TW/docs/Web/API/AnimationEvent/AnimationEvent
 /zh-TW/docs/Web/API/Body	/zh-TW/docs/orphaned/Web/API/Body
 /zh-TW/docs/Web/API/Body/json	/zh-TW/docs/orphaned/Web/API/Body/json
 /zh-TW/docs/Web/API/Canvas_API/Drawing_graphics_with_canvas	/zh-TW/docs/conflicting/Web/API/Canvas_API/Tutorial
@@ -570,6 +571,8 @@
 /zh-TW/docs/Web/API/Window.requestAnimationFrame	/zh-TW/docs/Web/API/window/requestAnimationFrame
 /zh-TW/docs/Web/API/Window/sidebar/Adding_search_engines_from_Web_pages	/zh-TW/docs/conflicting/Web/OpenSearch
 /zh-TW/docs/Web/API/WindowBase64	/zh-TW/docs/conflicting/Web/API/WindowOrWorkerGlobalScope
+/zh-TW/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/zh-TW/docs/Web/API/btoa
+/zh-TW/docs/Web/API/WindowOrWorkerGlobalScope/setInterval	/zh-TW/docs/Web/API/setInterval
 /zh-TW/docs/Web/API/WindowTimers	/zh-TW/docs/conflicting/Web/API/WindowOrWorkerGlobalScope_e2691f7ad05781a30c5fc5bb3b3f633a
 /zh-TW/docs/Web/API/XMLHttpRequest/FormData	/zh-TW/docs/Web/API/FormData
 /zh-TW/docs/Web/API/document.createTreeWalker	/zh-TW/docs/Web/API/Document/createTreeWalker
@@ -595,6 +598,7 @@
 /zh-TW/docs/Web/CSS/彈頭	/zh-TW/docs/Web/CSS/box-sizing
 /zh-TW/docs/Web/CSS/繼承	/zh-TW/docs/Web/CSS/inheritance
 /zh-TW/docs/Web/CSS/語法	/zh-TW/docs/Web/CSS/Syntax
+/zh-TW/docs/Web/Demos_of_open_web_technologies	/zh-TW/docs/Web/Demos
 /zh-TW/docs/Web/Events/DOMContentLoaded	/zh-TW/docs/Web/API/Window/DOMContentLoaded_event
 /zh-TW/docs/Web/Events/abort	/zh-TW/docs/Web/API/HTMLMediaElement/abort_event
 /zh-TW/docs/Web/Events/click	/zh-TW/docs/Web/API/Element/click_event

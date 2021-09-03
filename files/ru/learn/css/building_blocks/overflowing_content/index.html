@@ -1,38 +1,38 @@
 ---
-title: Перекрытие содержимого
+title: Переполнение содержимого
 slug: Learn/CSS/Building_blocks/Overflowing_content
 translation_of: Learn/CSS/Building_blocks/Overflowing_content
 ---
 <div>{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}</div>
 
-<p>В этом уроке мы рассмотрим другую важную концепцию в CSS — <strong>overflow</strong>. Overflow это то что случается, когда слишком много контента содержится внутри блока. В этом гайде вы изучите что это и как этим управлять.</p>
+<p>В этом уроке мы рассмотрим другую важную концепцию в CSS — <strong>переполнение</strong>. Переполнение это то, что случается когда слишком много контента содержится внутри блока. В этом гайде вы изучите что это и как этим управлять.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), and an idea of how CSS works (study <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>.)</td>
+   <th scope="row">Необходимые условия:</th>
+   <td>Базовая компьютерная грамотность, <a href="ru/Learn/Getting_started_with_the_web/Installing_basic_software">Установка базового ПО</a>, базовые знания <a href="ru/Learn/Getting_started_with_the_web/Dealing_with_files">работы с файлами</a>, основы HTML (<a href="/ru/docs/Learn/HTML/Introduction_to_HTML">Введение в HTML</a>), и общее представление о том, как работает CSS (study <a href="/ru/docs/Learn/CSS/First_steps">Введение в CSS</a>.)</td>
   </tr>
   <tr>
-   <th scope="row">Objective:</th>
-   <td>To understand overflow and how to manage it.</td>
+   <th scope="row">Цель:</th>
+   <td>Понять, что такое переполнение и как с ним работать.</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Что_такое_overflow">Что такое overflow?</h2>
+<h2 id="Что_такое_overflow">Что такое переполнение?</h2>
 
-<p>Мы уже знаем что все в  CSS - блоки, и что мы можем ограничивать размер этих блоков присваивая им определённое значение посредством {{cssxref("width")}} и {{cssxref("height")}} (или {{cssxref("inline-size")}} и {{cssxref("block-size")}}). Overflow это то что случается, когда у вас слишком много контента в блоке, так что он не помещается в данный ограниченный блок. CSS даёт нам различные инструменты для управления этим overflow, и это также полезная концепция для понимания на этой ранней стадии. Вы будете встречаться с overflow достаточно часто когда пишите CSS, особенно когда глубже погрузитесь в CSS макет.</p>
+<p>Мы уже знаем, что всё в CSS — блоки, и что мы можем ограничивать размер этих блоков, присваивая им определённое значение посредством {{cssxref("width")}} и {{cssxref("height")}} (или {{cssxref("inline-size")}} и {{cssxref("block-size")}}). Переполнение — это то, что случается, когда у вас слишком много контента в блоке, так что он не помещается в данный ограниченный размер. CSS даёт нам различные инструменты для управления переполнением, и это также полезная концепция для понимания на этой ранней стадии. Вы будете встречаться с переполнением достаточно часто, когда пишите CSS, особенно когда глубже погрузитесь в CSS раскладку.</p>
 
 <h2 id="CSS_пытается_избежать_потери_данных">CSS пытается избежать "потери данных"</h2>
 
-<p>Рассмотрим два примера, демонстрирующих поведение CSS по умолчанию при возникновении перекрытия.</p>
+<p>Рассмотрим два примера, демонстрирующих поведение CSS по умолчанию при возникновении переполнения.</p>
 
-<p>Первый пример – это блок, который был ограничен установленным параметром <code>height</code>. Затем мы добавили контент, превышающий выделенное пространство. Контент вышел за пределы поля и попал в абзац ниже.</p>
+<p>Первый пример — это блок, который был ограничен установленным параметром <code>height</code>. Затем мы добавили контент, превышающий выделенное пространство. Контент вышел за пределы поля и попал в абзац ниже.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/overflow/block-overflow.html", '100%', 600)}}</p>
 
-<p>Второй пример – слово в блоке. Блок оказался слишком маленьким для этого слова, и поэтому оно выходит за его пределы.</p>
+<p>Второй пример — слово в блоке. Блок оказался слишком маленьким для этого слова, и поэтому оно выходит за его пределы.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/overflow/inline-overflow.html", '100%', 500)}}</p>
 
@@ -40,19 +40,19 @@ translation_of: Learn/CSS/Building_blocks/Overflowing_content
 
 <p>По возможности, CSS не скрывает контент, потому что это может привести к потере данных. Проблема состоит в том, что вы можете не заметить исчезновение данных. Посетители сайта тоже могут не заметить этого. Если кнопка отправки формы исчезнет и никто не может заполнить форму, это может стать большой проблемой! Поэтому, вместо того, чтобы скрывать выходящий за границы блока контент, CSS явно его отображает. Так вы с большей вероятностью увидите проблему при разработке. В худшем случае это заметит посетитель сайта и сообщит вам об этом.</p>
 
-<p>Если вы ограничиваете поле с помощью параметров <code>width</code> или <code>height</code>, CSS доверяет вам и считает, что вы знаете, что делаете. CSS предполагает, что вы управляете ситуацией и предусматриваете возможность возникновения перекрытия. В общем случае, ограничение размера блока проблематично, если он содержит текст. В этом месте может быть больше текста, чем вы ожидали или его размер может быть больше (например, если пользователь увеличил размер шрифта).</p>
+<p>Если вы ограничиваете поле с помощью параметров <code>width</code> или <code>height</code>, CSS доверяет вам и считает, что вы знаете, что делаете. CSS предполагает, что вы управляете ситуацией и предусматриваете возможность возникновения переполнения. В общем случае, ограничение размера блока проблематично, если он содержит текст. В этом месте может быть больше текста, чем вы ожидали или его размер может быть больше (например, если пользователь увеличил размер шрифта).</p>
 
-<p>В следующих двух уроках объясняются различные подходы управления размерами, которые позволяют уменьшить вероятность возникновения перекрытия. Однако, если вам нужен фиксированный размер блока, вы также можете контролировать поведение перекрытия.</p>
+<p>В следующих двух уроках объясняются различные подходы управления размерами, которые позволяют уменьшить вероятность возникновения переполнения. Однако, если вам нужен фиксированный размер блока, вы также можете контролировать поведение переполнения.</p>
 
 <h2 id="The_overflow_property">Свойство overflow</h2>
 
-<p>Свойство {{cssxref("overflow")}} позволяет взять под контроль перекрытие элемента и подсказать браузеру, как он должен себя вести. Значение overflow по умолчанию – <code>visible</code>, что означает - «показывать контент, когда он выходит за границы блока».</p>
+<p>Свойство {{cssxref("overflow")}} позволяет взять под контроль переполнение элемента и подсказать браузеру, как он должен себя вести. Значение overflow по умолчанию – <code>visible</code>, что означает - «показывать контент, когда он выходит за границы блока».</p>
 
 <p>Чтобы обрезать контент выходящий за пределы блока, вы можете установить <code>overflow: hidden</code>. Это свойство делает именно то, о чём говорит: скрывает выходящий за пределы контент. Помните, что это может сделать часть содержимого невидимым. Используйте данное значение только в том случае, если скрытие содержимого не вызовет проблем.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/overflow/hidden.html", '100%', 600)}}</p>
 
-<p>Возможно, что при возникновении перекрытия вместо скрытия вы захотите отобразить полосы прокрутки. При использовании <code>overflow: scroll</code> браузеры с видимыми полосами прокрутки всегда будут отображать их, даже если содержимого недостаточно для возникновения перекрытия. Это позволяет сохранить целостность раскладки, так как полосы прокрутки не будут появляться и пропадать в зависимости от количества содержимого в контейнере.</p>
+<p>Возможно, что при возникновении переполнения вместо скрытия вы захотите отобразить полосы прокрутки. При использовании <code>overflow: scroll</code> браузеры с видимыми полосами прокрутки всегда будут отображать их, даже если содержимого недостаточно для возникновения перекрытия. Это позволяет сохранить целостность раскладки, так как полосы прокрутки не будут появляться и пропадать в зависимости от количества содержимого в контейнере.</p>
 
 <p><strong>Удалите часть содержимого из поля ниже. Обратите внимание, что полосы прокрутки остаются, даже если прокрутка не требуется.</strong></p>
 
@@ -82,44 +82,44 @@ translation_of: Learn/CSS/Building_blocks/Overflowing_content
 
 <p>Когда вы используете значение overflow, такое как <code>scroll</code> или <code>auto</code>, вы создаете <strong>контекст форматирования блока </strong> (BFC). Содержимое блока, для которого вы установили параметр <code>overflow</code> приобретает автономную раскладку. Контент вне блока не может проникнуть в блок, и ничто не может вылезти из этого блока в окружающее его пространство. Это дает возможность прокручивать содержимое, так чтобы оно не выходило за пределы блока.</p>
 
-<h2 id="Unwanted_overflow_in_web_design">Нежелательный overflow в веб-разработке</h2>
+<h2 id="Unwanted_overflow_in_web_design">Нежелательное переполнение в веб-разработке</h2>
 
-<p>Современные методы раскладки (описанные в разделе <a href="/en-US/docs/Learn/CSS/CSS_layout">CSS раскладка</a>) справляются с перекрытием очень хорошо вне зависимости от того, сколько контента будет на веб-странице.</p>
+<p>Современные методы раскладки (описанные в разделе <a href="/en-US/docs/Learn/CSS/CSS_layout">CSS раскладка</a>) справляются с переполнением очень хорошо вне зависимости от того, сколько контента будет на веб-странице.</p>
 
-<p>Это не всегда было нормой. В прошлом некоторые сайты были построены с блоками фиксированной высоты для выравнивания нижних границ блоков. Тем не менее эти блоки могли не иметь ничего общего между собой. Это была хрупкая конструкция. В устаревших приложениях вы можете встретить блок, в котором содержимое перекрывает другое содержимое на странице. Теперь вы понимаете, что это происходит из-за overflow. В идеале вы должны провести рефакторинг разметки, чтобы не полагаться на блоки с фиксированной высотой.</p>
+<p>Это не всегда было нормой. В прошлом некоторые сайты были построены с блоками фиксированной высоты для выравнивания нижних границ блоков. Тем не менее эти блоки могли не иметь ничего общего между собой. Это была хрупкая конструкция. В устаревших приложениях вы можете встретить блок, в котором содержимое перекрывает другое содержимое на странице. Теперь вы понимаете, что это происходит из-за переполнения. В идеале вы должны провести рефакторинг разметки, чтобы не полагаться на блоки с фиксированной высотой.</p>
 
-<p>При разработке сайта всегда помните о перекрытии. Тестируйте дизайны как с большим, так и с малым количеством контента. Проверяйте различные размеры шрифта текстов. Убедитесь, что ваш CSS работает надёжно. Изменение значения overflow для скрытия содержимого или добавления полос прокрутки, должно использоваться только при необходимости (например там, где вы хотите использовать прокручиваемый блок).</p>
+<p>При разработке сайта всегда помните о переполнении. Тестируйте дизайны как с большим, так и с малым количеством контента. Проверяйте различные размеры шрифта текстов. Убедитесь, что ваш CSS работает надёжно. Изменение значения overflow для скрытия содержимого или добавления полос прокрутки, должно использоваться только при необходимости (например там, где вы хотите использовать прокручиваемый блок).</p>
 
 <h2 id="Test_your_skills!">Проверьте свои навыки!</h2>
 
-<p>В этой статье мы рассмотрели многое, но можете ли вы вспомнить самую важную информацию? Вы можете найти дополнительные тесты, чтобы убедиться, что вы усвоили эту информацию, прежде чем двигаться дальше – см. <a href="/en-US/docs/Learn/CSS/Building_blocks/Overflow_Tasks">Проверь свои навыки: overflow</a>.</p>
+<p>В этой статье мы рассмотрели многое, но можете ли вы вспомнить самую важную информацию? Вы можете найти дополнительные тесты, чтобы убедиться, что вы усвоили эту информацию, прежде чем двигаться дальше – см. <a href="/en-US/docs/Learn/CSS/Building_blocks/Overflow_Tasks">Проверь свои навыки: переполнение</a>.</p>
 
 <h2 id="Summary">Заключение</h2>
 
-<p>В этом уроке была представлена концепция перекрытия. Важно понимать, что CSS по умолчанию старается избежать обрезания выходящего за границы блока содержимого. Мы изучили, как можно справиться с возникшим перекрытием, а также рассмотрели важность тестирования поведения веб-страниц как с малым количеством контента, так и с большим.</p>
+<p>В этом уроке была представлена концепция переполнения. Важно понимать, что CSS по умолчанию старается избежать обрезания выходящего за границы блока содержимого. Мы изучили, как можно справиться с возникшим переполнением, а также рассмотрели важность тестирования поведения веб-страниц как с малым количеством контента, так и с большим.</p>
 
 <p>{{PreviousMenuNext("Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks")}}</p>
 
 <h2 id="In_this_module">In this module</h2>
 
 <ol>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Cascade and inheritance</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">CSS selectors</a>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Каскад и наследование</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Selectors">Селекторы CSS</a>
   <ul>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">Type, class, and ID selectors</a></li>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Attribute selectors</a></li>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">Pseudo-classes and pseudo-elements</a></li>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators">Combinators</a></li>
+   <li><a href="/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">Селекторы типа, класса и ID</a></li>
+   <li><a href="/ru/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Селекторы атрибута</a></li>
+   <li><a href="/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">Псевдоклассы и псевдоэлементы</a></li>
+   <li><a href="/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators">Комбинаторы</a></li>
   </ul>
  </li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">The box model</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Backgrounds and borders</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Handling different text directions</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content">Overflowing content</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">Values and units</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Sizing items in CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements">Images, media, and form elements</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Styling_tables">Styling tables</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS">Debugging CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Organizing">Organizing your CSS</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/The_box_model">Блочная модель(The box model)</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Фон и границы</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Обработка разных направлений текста</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Overflowing_content">Переполнение содержимого</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Values_and_units">Значения и единицы измерения</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Размеры в CSS</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Images_media_form_elements">Элементы изображений, форм и медиа-элементы</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Styling_tables">Стилизация таблиц</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Debugging_CSS">Отладка CSS</a></li>
+ <li><a href="/ru/docs/Learn/CSS/Building_blocks/Organizing">Организация вашей CSS</a></li>
 </ol>

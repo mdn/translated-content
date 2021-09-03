@@ -456,6 +456,7 @@
 /ko/docs/Web/API/HTMLHyperlinkElementUtils/href	/ko/docs/Web/API/HTMLAnchorElement/href
 /ko/docs/Web/API/HTML_드래그_앤_드롭_API	/ko/docs/Web/API/HTML_Drag_and_Drop_API
 /ko/docs/Web/API/HTML_드래그_앤_드롭_API/Drag_operations	/ko/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations
+/ko/docs/Web/API/Index	/ko/docs/conflicting/Web/API
 /ko/docs/Web/API/Navigator.battery	/ko/docs/Web/API/Navigator/battery
 /ko/docs/Web/API/Navigator.battery/window.navigator.battery	/ko/docs/Web/API/Navigator/battery
 /ko/docs/Web/API/Navigator.connection/window.navigator.connection	/ko/docs/Web/API/Navigator/connection
@@ -489,7 +490,8 @@
 /ko/docs/Web/API/WebGL_API/Using_shaders_to_apply_color_in_WebGL	/ko/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 /ko/docs/Web/API/WebGL_API/Using_textures_in_WebGL	/ko/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 /ko/docs/Web/API/Web_Workers_API/basic_usage	/ko/docs/Web/API/Web_Workers_API/Using_web_workers
-/ko/docs/Web/API/WindowTimers/setTimeout	/ko/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
+/ko/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/ko/docs/Web/API/setTimeout
+/ko/docs/Web/API/WindowTimers/setTimeout	/ko/docs/Web/API/setTimeout
 /ko/docs/Web/API/XMLHttpRequest/timeout	/ko/docs/Web/API/XMLHttpRequest/timeout_event
 /ko/docs/Web/API/document.importNode	/ko/docs/Web/API/Document/importNode
 /ko/docs/Web/API/element-temp	/ko/docs/Web/API/Element
@@ -501,6 +503,9 @@
 /ko/docs/Web/API/window.screen.unlockOrientation	/ko/docs/Web/API/Screen/unlockOrientation
 /ko/docs/Web/CSS/All_About_The_Containing_Block	/ko/docs/Web/CSS/Containing_block
 /ko/docs/Web/CSS/CSS_Background_and_Borders	/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders
+/ko/docs/Web/CSS/CSS_Background_and_Borders/Border-image_generator	/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator
+/ko/docs/Web/CSS/CSS_Background_and_Borders/Border-radius_generator	/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator
+/ko/docs/Web/CSS/CSS_Background_and_Borders/Box-shadow_generator	/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator
 /ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images	/ko/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
 /ko/docs/Web/CSS/CSS_Colors	/ko/docs/Web/CSS/CSS_Color
 /ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Flexbox의_기본_개념	/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox
