@@ -3795,6 +3795,7 @@
 /ja/docs/Web/Compatibility_FAQ/Tips_Default_Style_Difference.html	/ja/docs/orphaned/Web/Compatibility_FAQ/Tips_Default_Style_Difference.html
 /ja/docs/Web/Compatibility_FAQ/Tips_Vendor_Prefix.html	/ja/docs/orphaned/Web/Compatibility_FAQ/Tips_Vendor_Prefix.html
 /ja/docs/Web/Compatibility_FAQ/Underline_Color_Diffrence.html	/ja/docs/orphaned/Web/Compatibility_FAQ/Underline_Color_Diffrence.html
+/ja/docs/Web/Demos_of_open_web_technologies	/ja/docs/Web/Demos
 /ja/docs/Web/Events/Activate	/ja/docs/Web/API/Element/DOMActivate_event
 /ja/docs/Web/Events/DOMContentLoaded	/ja/docs/Web/API/Window/DOMContentLoaded_event
 /ja/docs/Web/Events/abort	/ja/docs/Web/API/HTMLMediaElement/abort_event

@@ -623,6 +623,7 @@
 /pt-BR/docs/Web/CSS/valor_inicial	/pt-BR/docs/Web/CSS/initial_value
 /pt-BR/docs/Web/CSS/var	/pt-BR/docs/Web/CSS/var()
 /pt-BR/docs/Web/CSS/word-wrap	/pt-BR/docs/Web/CSS/overflow-wrap
+/pt-BR/docs/Web/Demos_of_open_web_technologies	/pt-BR/docs/Web/Demos
 /pt-BR/docs/Web/Events/DOMContentLoaded	/pt-BR/docs/Web/API/Window/DOMContentLoaded_event
 /pt-BR/docs/Web/Events/abort	/pt-BR/docs/Web/API/HTMLMediaElement/abort_event
 /pt-BR/docs/Web/Events/beforeunload	/pt-BR/docs/Web/API/Window/beforeunload_event

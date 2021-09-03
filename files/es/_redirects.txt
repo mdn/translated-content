@@ -1718,6 +1718,7 @@
 /es/docs/Web/CSS/transform-function/translateY	/es/docs/Web/CSS/transform-function/translateY()
 /es/docs/Web/CSS/transform-function/translateZ	/es/docs/Web/CSS/transform-function/translateZ()
 /es/docs/Web/CSS/var	/es/docs/Web/CSS/var()
+/es/docs/Web/Demos_of_open_web_technologies	/es/docs/Web/Demos
 /es/docs/Web/Events/animationend	/es/docs/Web/API/HTMLElement/animationend_event
 /es/docs/Web/Events/beforeunload	/es/docs/Web/API/Window/beforeunload_event
 /es/docs/Web/Events/blur	/es/docs/Web/API/Element/blur_event

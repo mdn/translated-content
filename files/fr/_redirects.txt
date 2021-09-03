@@ -4265,7 +4265,8 @@
 /fr/docs/Web/CSS/visible	/fr/docs/Web/CSS/visibility
 /fr/docs/Web/CSS/word-wrap	/fr/docs/Web/CSS/overflow-wrap
 /fr/docs/Web/CSS/Élément_remplacé	/fr/docs/Web/CSS/Replaced_element
-/fr/docs/Web/Démos_de_technologies_open_web	/fr/docs/Web/Demos_of_open_web_technologies
+/fr/docs/Web/Demos_of_open_web_technologies	/fr/docs/Web/Demos
+/fr/docs/Web/Démos_de_technologies_open_web	/fr/docs/Web/Demos
 /fr/docs/Web/Events/DOMContentLoaded	/fr/docs/Web/API/Window/DOMContentLoaded_event
 /fr/docs/Web/Events/abort	/fr/docs/conflicting/Web/API/HTMLMediaElement/abort_event
 /fr/docs/Web/Events/abort_(ProgressEvent)	/fr/docs/Web/API/XMLHttpRequest/abort_event
