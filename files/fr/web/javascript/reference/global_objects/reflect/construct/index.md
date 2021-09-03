@@ -25,7 +25,7 @@ La méthode statique **`Reflect`\*\***`.construct()`\*\* agit comme l'opérateur
 - `cible`
   - : La fonction cible à appeler.
 - `listeArguments`
-  - : Un objet semblable à un tableau définissant les arguments à passer à `cible` lors de l'appel. Utiliser {{jsxref("null")}} ou {{jsxref("undefined")}} si aucun argument ne doit être fourni à la fonction.
+  - : Un objet semblable à un tableau définissant les arguments à passer à `cible` lors de l'appel.
 - `newCible` {{optional_inline}}
   - : Le constructeur dont le prototype devrait être utilisé. Voir également l'opérateur [`new.target`](/fr/docs/Web/JavaScript/Reference/Opérateurs/new.target). Si `newCible` n'est pas présent, c'est `cible` qui sera utilisé.
 
