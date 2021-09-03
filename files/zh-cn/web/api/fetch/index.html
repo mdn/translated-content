@@ -1,0 +1,174 @@
+---
+title: WorkerOrGlobalScope.fetch()
+slug: Web/API/fetch
+tags:
+  - API
+  - Experimental
+  - Fetch
+  - FetchAPI
+  - GlobalFetch
+  - request
+translation_of: Web/API/WindowOrWorkerGlobalScope/fetch
+original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
+---
+<p>{{APIRef("Fetch")}}</p>
+
+<p>位于 {{domxref("WorkerOrGlobalScope")}} 这一个 mixin 中的 <strong><code>fetch()</code> </strong>方法用于发起获取资源的请求。它返回一个 promise，这个 promise 会在请求响应后被 resolve，并传回 {{domxref("Response")}} 对象。</p>
+
+<p>{{domxref("Window")}} 和 {{domxref("WorkerGlobalScope")}} 都实现了 WorkerOrGlobalScope。 ——这意味着基本在任何场景下只要你想获取资源，都可以使用 位于 WorkerOrGlobalScope 中的 <code>fetch()</code> 方法。</p>
+
+<p>当遇到网络错误时，{{domxref("WorkerOrGlobalScope.fetch","fetch()")}} 返回的 promise 会被 reject，并传回 {{jsxref("TypeError")}}，虽然这也可能因为权限或其它问题导致。成功的 fetch() 检查不仅要包括 promise 被 resolve，还要包括 {{domxref("Response.ok")}} 属性为 true。HTTP 404 状态并不被认为是网络错误。</p>
+
+<p><code>fetch()</code> 方法由 <a href="/en-US/docs/Security/CSP/CSP_policy_directives">Content Security Policy</a> 的 <code>connect-src</code>指令控制，而不是它请求的资源。</p>
+
+<div class="note">
+<p><strong>注意</strong>:{{domxref("WorkerOrGlobalScope.fetch","fetch()")}} 方法的参数与 {{domxref("Request.Request","Request()")}} 构造器是一样的。</p>
+</div>
+
+<h2 id="语法">语法</h2>
+
+<pre class="syntaxbox notranslate">Promise&lt;Response&gt; fetch(input[, init]);
+</pre>
+
+<h3 id="参数">参数</h3>
+
+<dl>
+ <dt><em>?input</em></dt>
+ <dd>定义要获取的资源。这可能是：
+ <ul>
+  <li>一个 {{domxref("USVString")}} 字符串，包含要获取资源的 URL。一些浏览器会接受 <code>blob:</code> 和 <code>data:</code> 作为 schemes.</li>
+  <li>一个 {{domxref("Request")}} 对象。</li>
+ </ul>
+ </dd>
+ <dt><em>init</em> {{optional_inline}}</dt>
+ <dd>一个配置项对象，包括所有对请求的设置。可选的参数有：
+ <ul>
+  <li><code>method</code>: 请求使用的方法，如 <code>GET<font face="Open Sans, Arial, sans-serif">、</font></code><code>POST。</code></li>
+  <li><code>headers</code>: 请求的头信息，形式为 {{domxref("Headers")}} 的对象或包含 {{domxref("ByteString")}} 值的对象字面量。</li>
+  <li><code>body</code>: 请求的 body 信息：可能是一个 {{domxref("Blob")}}、{{domxref("BufferSource")}}、{{domxref("FormData")}}、{{domxref("URLSearchParams")}} 或者 {{domxref("USVString")}} 对象。注意 GET 或 HEAD 方法的请求不能包含 body 信息。</li>
+  <li><code>mode</code>: 请求的模式，如 <code>cors、</code> <code>no-cors 或者</code> <code>same-origin。</code></li>
+  <li><code>credentials</code>: 请求的 credentials，如 <code>omit<font face="Open Sans, Arial, sans-serif">、</font></code><code>same-origin 或者</code> <code>include</code>。为了在当前域名内自动发送 cookie ， 必须提供这个选项， 从 Chrome 50 开始， 这个属性也可以接受 {{domxref("FederatedCredential")}} 实例或是一个 {{domxref("PasswordCredential")}} 实例。</li>
+  <li><code>cache</code>:  请求的 cache 模式: <code>default</code>、 <code>no-store</code>、 <code>reload</code> 、 <code>no-cache </code>、 <code>force-cache </code>或者 <code>only-if-cached</code> 。</li>
+  <li><code>redirect</code>: 可用的 redirect 模式: <code>follow</code> (自动重定向), <code>error</code> (如果产生重定向将自动终止并且抛出一个错误）, 或者 <code>manual</code> (手动处理重定向). 在Chrome中默认使用<code>follow（</code>Chrome 47之前的默认值是<code>manual</code>）。</li>
+  <li><code>referrer</code>: 一个 {{domxref("USVString")}} 可以是 <code>no-referrer<font face="Open Sans, Arial, sans-serif">、</font></code><code>client</code>或一个 URL。默认是 <code>client。</code></li>
+  <li><code>referrerPolicy</code>: 指定了HTTP头部referer字段的值。可能为以下值之一： <code>no-referrer、</code> <code>no-referrer-when-downgrade、</code> <code>origin、</code> <code>origin-when-cross-origin、</code> <code>unsafe-url 。</code></li>
+  <li><code>integrity</code>: 包括请求的  <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">subresource integrity</a> 值 （ 例如： <code>sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=）。</code></li>
+ </ul>
+ </dd>
+</dl>
+
+<h3 id="返回值">返回值</h3>
+
+<p>一个 {{jsxref("Promise")}}，resolve 时回传 {{domxref("Response")}} 对象。</p>
+
+<h3 id="例外">例外</h3>
+
+<table class="standard-table">
+ <thead>
+  <tr>
+   <th scope="col">类型</th>
+   <th scope="col"><strong>描述</strong></th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><code>AbortError</code></td>
+   <td>请求被{{domxref("AbortController.abort()")}}终止。</td>
+  </tr>
+  <tr>
+   <td><code>TypeError</code></td>
+   <td>从<a href="/en-US/docs/Mozilla/Firefox/Releases/43">Firefox 43</a>开始，如果<code>fetch()</code>接收到含有用户名和密码的URL（例如<code>http://user:password@example.com</code>），它将会抛出一个<code>TypeError</code> 。</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="示例">示例</h2>
+
+<p>在 <a href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request">Fetch Request 示例</a> (参见 <a href="http://mdn.github.io/fetch-examples/fetch-request/">Fetch Request live</a>) 中，我们使用对应的构造器创建了一个新的 {{domxref("Request")}} 对象，然后调用 fetch() 方法获取资源。因为我们是在请求一个图片，为了解析正常，我们对响应执行 {{domxref("Body.blob")}} 来设置相应的 MIME 类型。然后创建一个 Object URL，并在 {{htmlelement("img")}} 元素中把它显示出来。</p>
+
+<pre class="brush: js notranslate">var myImage = document.querySelector('img');
+
+var myRequest = new Request('flowers.jpg');
+
+fetch(myRequest).then(function(response) {
+  return response.blob();
+}).then(function(response) {
+  var objectURL = URL.createObjectURL(response);
+  myImage.src = objectURL;
+});</pre>
+
+<p>在 <a href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-with-init-then-request">Fetch with init then Request 示例</a> (参见 <a href="http://mdn.github.io/fetch-examples/fetch-with-init-then-request/">Fetch Request init live</a>) 中，我们做同样的操作，除了在调用 fetch() 时传入一个 init 对象：</p>
+
+<pre class="brush: js notranslate">var myImage = document.querySelector('img');
+
+var myHeaders = new Headers();
+myHeaders.append('Content-Type', 'image/jpeg');
+
+var myInit = { method: 'GET',
+               headers: myHeaders,
+               mode: 'cors',
+               cache: 'default' };
+
+var myRequest = new Request('flowers.jpg');
+
+fetch(myRequest,myInit).then(function(response) {
+  ...
+});</pre>
+
+<p>你也可以传入同样的 init 对象到 Request 构造器，来实现同样的效果，如：</p>
+
+<pre class="brush: js notranslate">var myRequest = new Request('flowers.jpg',myInit);
+</pre>
+
+<p><code>init</code> 对象中的 <code>headers</code> 也可以是一个对象字面量：</p>
+
+<pre class="brush: js notranslate"><span class="keyword token">var</span> myInit <span class="operator token">=</span> <span class="punctuation token">{</span> method<span class="punctuation token">:</span> <span class="string token">'GET'</span><span class="punctuation token">,</span>
+               headers<span class="punctuation token">:</span> <span class="punctuation token">{</span>
+                   <span class="string token">'Content-Type'</span><span class="punctuation token">:</span> <span class="string token">'image/jpeg'</span>
+               <span class="punctuation token">}</span><span class="punctuation token">,</span>
+               mode<span class="punctuation token">:</span> <span class="string token">'cors'</span><span class="punctuation token">,</span>
+               cache<span class="punctuation token">:</span> <span class="string token">'default'</span> <span class="punctuation token">}</span><span class="punctuation token">;</span>
+
+<span class="keyword token">var</span> myRequest <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Request</span><span class="punctuation token">(</span><span class="string token">'flowers.jpg'</span><span class="punctuation token">,</span> myInit<span class="punctuation token">)</span><span class="punctuation token">;</span></pre>
+
+<h2 id="规范">规范</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('Fetch','#fetch-method','fetch()')}}</td>
+   <td>{{Spec2('Fetch')}}</td>
+   <td>Defined in a <code>WindowOrWorkerGlobalScope</code> partial in the newest spec.</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('Fetch','#dom-global-fetch','fetch()')}}</td>
+   <td>{{Spec2('Fetch')}}</td>
+   <td>Initial definition</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('Credential Management')}}</td>
+   <td>{{Spec2('Credential Management')}}</td>
+   <td>Adds {{domxref("FederatedCredential")}} or {{domxref("PasswordCredential")}} instance as a possible value for <code>init.credentials</code>.</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+
+
+<p>{{Compat("api.WindowOrWorkerGlobalScope.fetch")}}</p>
+
+<h2 id="相关链接">相关链接</h2>
+
+<ul>
+ <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API">Fetch API</a></li>
+ <li><a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorker API</a></li>
+ <li><a href="/en-US/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
+ <li><a href="/en-US/docs/Web/HTTP">HTTP</a></li>
+</ul>

@@ -7529,13 +7529,6 @@
       "alattalatta"
     ]
   },
-  "Web/API/WindowOrWorkerGlobalScope/setTimeout": {
-    "modified": "2019-03-23T22:22:22.449Z",
-    "contributors": [
-      "DevJang",
-      "TroyTae"
-    ]
-  },
   "Web/API/Worker": {
     "modified": "2020-10-15T21:47:12.252Z",
     "contributors": [
@@ -7644,6 +7637,13 @@
       "sagnol",
       "AshfaqHossain",
       "junho85"
+    ]
+  },
+  "Web/API/setTimeout": {
+    "modified": "2019-03-23T22:22:22.449Z",
+    "contributors": [
+      "DevJang",
+      "TroyTae"
     ]
   },
   "Web/Accessibility": {

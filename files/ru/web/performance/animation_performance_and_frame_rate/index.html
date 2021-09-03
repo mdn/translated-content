@@ -65,7 +65,11 @@ original_slug: Web/Performance/Производительность_анимац
  <tbody>
   <tr>
    <td>Свойства, затрагивающие геометрию или позицию элемента, запускают <strong>весь</strong> процесс заново: новое вычисление стилей, layout и перерисовку.</td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10827/recalculate-style.png" style="height: 26px; width: 123px;"> <img alt="" src="https://mdn.mozillademos.org/files/10825/layout.png" style="height: 26px; width: 123px;"> <img alt="" src="https://mdn.mozillademos.org/files/10823/paint.png" style="height: 26px; width: 123px;"></td>
+   <td>
+     <img alt="" src="/en-US/docs/Web/Performance/Animation_performance_and_frame_rate/recalculate-style.png" loading="lazy" width="246" height="52">
+     <img alt="" src="/en-US/docs/Web/Performance/Animation_performance_and_frame_rate/layout.png" loading="lazy" width="244" height="52">
+     <img alt="" src="/en-US/docs/Web/Performance/Animation_performance_and_frame_rate/paint.png" loading="lazy" width="246" height="52">
+    </td>
    <td>
     <p><code><a href="/en-US/docs/Web/CSS/left">left</a></code><br>
      <code><a href="/en-US/docs/Web/CSS/max-width">max-width</a></code><br>
@@ -78,7 +82,11 @@ original_slug: Web/Performance/Производительность_анимац
    <td>
     <p>Свойства, не затрагивающие геометрию и позиционирование элементов, но не лежащие в отдельном слое, запускают только вычисление стилей и перерисовку, но не Layout.</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10827/recalculate-style.png" style="height: 26px; width: 123px;"> <img alt="" src="https://mdn.mozillademos.org/files/10835/layout-faint.png" style="height: 52px; width: 123px;"> <img alt="" src="https://mdn.mozillademos.org/files/10823/paint.png" style="height: 26px; width: 123px;"></td>
+   <td>
+     <img alt="" src="/en-US/docs/Web/Performance/Animation_performance_and_frame_rate/recalculate-style.png" loading="lazy" width="246" height="52">
+     <img alt="" src="/en-US/docs/Web/Performance/Animation_performance_and_frame_rate/layout-faint.png" loading="lazy" width="246" height="52">
+     <img alt="" src="/en-US/docs/Web/Performance/Animation_performance_and_frame_rate/paint.png" loading="lazy" width="246" height="52">
+    </td>
    <td>
     <p><code><a href="/en-US/docs/Web/CSS/color">color</a></code></p>
    </td>
@@ -87,7 +95,11 @@ original_slug: Web/Performance/Производительность_анимац
    <td>
     <p>Свойства, которые рендерятся в отдельном слое не запускают даже repaint, так как результат обновления обрабатывается на этапе композиции.</p>
    </td>
-   <td><img alt="" src="https://mdn.mozillademos.org/files/10827/recalculate-style.png" style="height: 26px; width: 123px;"> <img alt="" src="https://mdn.mozillademos.org/files/10835/layout-faint.png" style="height: 52px; width: 123px;"> <img alt="" src="https://mdn.mozillademos.org/files/10839/paint-faint.png" style="height: 26px; width: 123px;"></td>
+   <td>
+     <img alt="" src="/en-US/docs/Web/Performance/Animation_performance_and_frame_rate/recalculate-style.png" loading="lazy" width="246" height="52">
+     <img alt="" src="/en-US/docs/Web/Performance/Animation_performance_and_frame_rate/layout-faint.png" loading="lazy" width="246" height="52">
+     <img alt="" src="/en-US/docs/Web/Performance/Animation_performance_and_frame_rate/paint-faint.png" loading="lazy" width="246" height="52">
+   </td>
    <td><code><a href="/en-US/docs/Web/CSS/transform">transform</a></code><br>
     <code><a href="/en-US/docs/Web/CSS/opacity">opacity</a></code></td>
   </tr>
@@ -100,7 +112,7 @@ original_slug: Web/Performance/Производительность_анимац
 
 <h2 id="Пример_margin_против_transform">Пример: margin против transform</h2>
 
-<p>В этом разделе мы увидим, как инструмент <a href="/en-US/docs/Tools/Performance/Waterfall">Waterfall</a> может указать на разницу между анимацией. её <code><a href="/en-US/docs/Web/CSS/margin">margin</a></code>  и <code><a href="/en-US/docs/Web/CSS/transform">transform</a></code>.</p>
+<p>В этом разделе мы увидим, как инструмент <a href="/en-US/docs/Tools/Performance/Waterfall">Waterfall</a> может указать на разницу между анимацией <code><a href="/en-US/docs/Web/CSS/margin">margin</a></code> и <code><a href="/en-US/docs/Web/CSS/transform">transform</a></code>.</p>
 
 <p>Задумка этого сценария не в том, чтобы убедить вас, что анимация через <code>margin</code> - это всегда плохая идея. Сценарий нужен, чтобы продемонстрировать, как инструменты могут помочь вам понять работу браузера и как вы можете применить эти знания для оптимизации.</p>
 
@@ -168,7 +180,7 @@ original_slug: Web/Performance/Производительность_анимац
 
 <h4 id="Этапы_рендеринга_в_деталях_Waterfall_2">Этапы рендеринга в деталях (Waterfall)</h4>
 
-<p>В этой секции мы видим объяснения тому, что fps значительно улучшился. Мы больше не тратим время на layout и перерисовку элементов. :</p>
+<p>В этой секции мы видим объяснения тому, что fps значительно улучшился. Мы больше не тратим время на layout и перерисовку элементов:</p>
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/10867/transform-timeline.png" style="display: block; height: 384px; margin-left: auto; margin-right: auto; width: 800px;"></p>
 
