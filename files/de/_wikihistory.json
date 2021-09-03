@@ -763,12 +763,6 @@
       "Klingohle"
     ]
   },
-  "Glossary/Robots.txt": {
-    "modified": "2020-10-15T22:23:51.763Z",
-    "contributors": [
-      "LoVo666"
-    ]
-  },
   "Glossary/SQL": {
     "modified": "2019-03-18T21:39:17.726Z",
     "contributors": [
@@ -4200,22 +4194,6 @@
       "teoli"
     ]
   },
-  "Web/API/WindowOrWorkerGlobalScope/btoa": {
-    "modified": "2019-03-23T22:50:32.544Z",
-    "contributors": [
-      "cami"
-    ]
-  },
-  "Web/API/WindowOrWorkerGlobalScope/setTimeout": {
-    "modified": "2019-03-23T23:36:28.621Z",
-    "contributors": [
-      "mdnde",
-      "Eschon",
-      "fscholz",
-      "c0ffm3k4r",
-      "wartab"
-    ]
-  },
   "Web/API/Worker": {
     "modified": "2019-03-18T21:45:39.485Z",
     "contributors": [
@@ -4233,6 +4211,12 @@
       "paul_thomann"
     ]
   },
+  "Web/API/btoa": {
+    "modified": "2019-03-23T22:50:32.544Z",
+    "contributors": [
+      "cami"
+    ]
+  },
   "Web/API/notification": {
     "modified": "2019-03-23T22:55:22.604Z",
     "contributors": [
@@ -4247,6 +4231,16 @@
     "contributors": [
       "schlagi123",
       "mwsh2005"
+    ]
+  },
+  "Web/API/setTimeout": {
+    "modified": "2019-03-23T23:36:28.621Z",
+    "contributors": [
+      "mdnde",
+      "Eschon",
+      "fscholz",
+      "c0ffm3k4r",
+      "wartab"
     ]
   },
   "Web/Accessibility": {
@@ -5114,29 +5108,29 @@
       "Simu"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Border-image_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders": {
+    "modified": "2019-03-23T22:44:11.176Z",
+    "contributors": [
+      "teoli"
+    ]
+  },
+  "Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator": {
     "modified": "2019-03-18T21:15:52.768Z",
     "contributors": [
       "Sebastianz"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Border-radius_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator": {
     "modified": "2019-03-23T22:43:49.105Z",
     "contributors": [
       "Sebastianz"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Box-shadow_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator": {
     "modified": "2019-03-18T20:43:44.623Z",
     "contributors": [
       "BychekRU",
       "Sebastianz"
-    ]
-  },
-  "Web/CSS/CSS_Backgrounds_and_Borders": {
-    "modified": "2019-03-23T22:44:11.176Z",
-    "contributors": [
-      "teoli"
     ]
   },
   "Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images": {
@@ -5606,13 +5600,6 @@
     "modified": "2019-03-23T23:11:49.533Z",
     "contributors": [
       "Sebastianz"
-    ]
-  },
-  "Web/CSS/Tools": {
-    "modified": "2019-03-23T22:43:38.676Z",
-    "contributors": [
-      "Sebastianz",
-      "creativenitish"
     ]
   },
   "Web/CSS/Tools/Linear-gradient_Generator": {
@@ -7604,7 +7591,7 @@
       "axlwaii"
     ]
   },
-  "Web/Demos_of_open_web_technologies": {
+  "Web/Demos": {
     "modified": "2019-03-23T22:39:34.270Z",
     "contributors": [
       "sigoa",
@@ -13594,6 +13581,13 @@
       "chrisdavidmills",
       "teoli",
       "eminor"
+    ]
+  },
+  "conflicting/Web/CSS": {
+    "modified": "2019-03-23T22:43:38.676Z",
+    "contributors": [
+      "Sebastianz",
+      "creativenitish"
     ]
   },
   "conflicting/Web/CSS/::placeholder": {

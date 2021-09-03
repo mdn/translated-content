@@ -7529,13 +7529,6 @@
       "alattalatta"
     ]
   },
-  "Web/API/WindowOrWorkerGlobalScope/setTimeout": {
-    "modified": "2019-03-23T22:22:22.449Z",
-    "contributors": [
-      "DevJang",
-      "TroyTae"
-    ]
-  },
   "Web/API/Worker": {
     "modified": "2020-10-15T21:47:12.252Z",
     "contributors": [
@@ -7644,6 +7637,13 @@
       "sagnol",
       "AshfaqHossain",
       "junho85"
+    ]
+  },
+  "Web/API/setTimeout": {
+    "modified": "2019-03-23T22:22:22.449Z",
+    "contributors": [
+      "DevJang",
+      "TroyTae"
     ]
   },
   "Web/Accessibility": {
@@ -8035,31 +8035,31 @@
       "jaemin_jo"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Border-image_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders": {
+    "modified": "2020-08-10T06:40:27.369Z",
+    "contributors": [
+      "alattalatta",
+      "Sheppy"
+    ]
+  },
+  "Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator": {
     "modified": "2019-03-20T10:30:55.489Z",
     "contributors": [
       "alattalatta",
       "young-gratia"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Border-radius_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator": {
     "modified": "2019-03-20T10:29:25.952Z",
     "contributors": [
       "alattalatta",
       "young-gratia"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Box-shadow_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders/Box-shadow_generator": {
     "modified": "2019-03-20T10:32:14.015Z",
     "contributors": [
       "alattalatta"
-    ]
-  },
-  "Web/CSS/CSS_Backgrounds_and_Borders": {
-    "modified": "2020-08-10T06:40:27.369Z",
-    "contributors": [
-      "alattalatta",
-      "Sheppy"
     ]
   },
   "Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images": {

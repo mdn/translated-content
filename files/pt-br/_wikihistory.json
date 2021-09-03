@@ -6880,33 +6880,6 @@
       "Bzbarsky"
     ]
   },
-  "Web/API/WindowOrWorkerGlobalScope/atob": {
-    "modified": "2020-10-15T21:46:04.009Z",
-    "contributors": [
-      "mateusvelleda",
-      "joaoricardo_rm"
-    ]
-  },
-  "Web/API/WindowOrWorkerGlobalScope/clearTimeout": {
-    "modified": "2020-10-15T21:31:54.685Z",
-    "contributors": [
-      "GarkGarcia",
-      "teoli",
-      "Willkuns"
-    ]
-  },
-  "Web/API/WindowOrWorkerGlobalScope/fetch": {
-    "modified": "2019-03-23T22:06:21.567Z",
-    "contributors": [
-      "dowgssss"
-    ]
-  },
-  "Web/API/WindowOrWorkerGlobalScope/setInterval": {
-    "modified": "2020-10-15T22:16:56.864Z",
-    "contributors": [
-      "luan0ap"
-    ]
-  },
   "Web/API/Worker": {
     "modified": "2020-10-28T22:21:09.210Z",
     "contributors": [
@@ -7012,6 +6985,33 @@
     "modified": "2019-03-23T22:27:06.677Z",
     "contributors": [
       "trestini"
+    ]
+  },
+  "Web/API/atob": {
+    "modified": "2020-10-15T21:46:04.009Z",
+    "contributors": [
+      "mateusvelleda",
+      "joaoricardo_rm"
+    ]
+  },
+  "Web/API/clearTimeout": {
+    "modified": "2020-10-15T21:31:54.685Z",
+    "contributors": [
+      "GarkGarcia",
+      "teoli",
+      "Willkuns"
+    ]
+  },
+  "Web/API/fetch": {
+    "modified": "2019-03-23T22:06:21.567Z",
+    "contributors": [
+      "dowgssss"
+    ]
+  },
+  "Web/API/setInterval": {
+    "modified": "2020-10-15T22:16:56.864Z",
+    "contributors": [
+      "luan0ap"
     ]
   },
   "Web/Accessibility": {
@@ -7584,23 +7584,23 @@
       "francisco.hansen"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Border-image_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders": {
+    "modified": "2019-03-23T22:44:11.690Z",
+    "contributors": [
+      "teoli"
+    ]
+  },
+  "Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator": {
     "modified": "2019-05-06T10:31:39.391Z",
     "contributors": [
       "leodeJESUS",
       "Torto"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Border-radius_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator": {
     "modified": "2019-03-23T23:07:37.174Z",
     "contributors": [
       "Torto"
-    ]
-  },
-  "Web/CSS/CSS_Backgrounds_and_Borders": {
-    "modified": "2019-03-23T22:44:11.690Z",
-    "contributors": [
-      "teoli"
     ]
   },
   "Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images": {
@@ -7979,13 +7979,6 @@
       "diancabral",
       "teoli",
       "fvargaspf@gmail.com"
-    ]
-  },
-  "Web/CSS/Tools": {
-    "modified": "2019-03-23T23:07:41.210Z",
-    "contributors": [
-      "hlays",
-      "velvel53"
     ]
   },
   "Web/CSS/Type_selectors": {
@@ -8937,7 +8930,7 @@
       "jessuircleydson"
     ]
   },
-  "Web/Demos_of_open_web_technologies": {
+  "Web/Demos": {
     "modified": "2020-09-04T06:28:02.627Z",
     "contributors": [
       "gustavoSoriano",
@@ -16467,6 +16460,13 @@
     "contributors": [
       "Aschlla",
       "caio.rrs"
+    ]
+  },
+  "conflicting/Web/CSS": {
+    "modified": "2019-03-23T23:07:41.210Z",
+    "contributors": [
+      "hlays",
+      "velvel53"
     ]
   },
   "conflicting/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox": {

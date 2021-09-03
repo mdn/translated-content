@@ -7568,6 +7568,15 @@
       "Mgjbot"
     ]
   },
+  "Web/API/MouseEvent/pageX": {
+    "modified": "2019-03-23T23:12:56.756Z",
+    "contributors": [
+      "fscholz",
+      "khalid32",
+      "Nathymig",
+      "Julgon"
+    ]
+  },
   "Web/API/MouseEvent/shiftKey": {
     "modified": "2019-03-23T22:05:24.832Z",
     "contributors": [
@@ -8431,15 +8440,6 @@
       "fscholz"
     ]
   },
-  "Web/API/UIEvent/pageX": {
-    "modified": "2019-03-23T23:12:56.756Z",
-    "contributors": [
-      "fscholz",
-      "khalid32",
-      "Nathymig",
-      "Julgon"
-    ]
-  },
   "Web/API/URL": {
     "modified": "2019-03-23T22:19:12.735Z",
     "contributors": [
@@ -9120,79 +9120,6 @@
       "chrisdavidmills"
     ]
   },
-  "Web/API/WindowOrWorkerGlobalScope/atob": {
-    "modified": "2019-03-23T23:03:12.715Z",
-    "contributors": [
-      "fscholz",
-      "sathyasanles"
-    ]
-  },
-  "Web/API/WindowOrWorkerGlobalScope/caches": {
-    "modified": "2019-03-23T22:16:45.016Z",
-    "contributors": [
-      "ivannieto"
-    ]
-  },
-  "Web/API/WindowOrWorkerGlobalScope/clearInterval": {
-    "modified": "2019-03-23T22:56:16.485Z",
-    "contributors": [
-      "Guitxo"
-    ]
-  },
-  "Web/API/WindowOrWorkerGlobalScope/clearTimeout": {
-    "modified": "2019-06-18T10:20:27.972Z",
-    "contributors": [
-      "AlePerez92",
-      "fscholz",
-      "basemnassar11",
-      "VictorArias"
-    ]
-  },
-  "Web/API/WindowOrWorkerGlobalScope/createImageBitmap": {
-    "modified": "2020-10-15T22:14:17.553Z",
-    "contributors": [
-      "Bumxu"
-    ]
-  },
-  "Web/API/WindowOrWorkerGlobalScope/fetch": {
-    "modified": "2020-10-15T22:01:57.457Z",
-    "contributors": [
-      "fscholz",
-      "jagomf"
-    ]
-  },
-  "Web/API/WindowOrWorkerGlobalScope/indexedDB": {
-    "modified": "2019-03-23T22:16:36.537Z",
-    "contributors": [
-      "ivannieto"
-    ]
-  },
-  "Web/API/WindowOrWorkerGlobalScope/isSecureContext": {
-    "modified": "2019-03-23T22:16:45.834Z",
-    "contributors": [
-      "ivannieto"
-    ]
-  },
-  "Web/API/WindowOrWorkerGlobalScope/setInterval": {
-    "modified": "2020-08-24T18:02:23.092Z",
-    "contributors": [
-      "mastertrooper",
-      "Makinita",
-      "Klius",
-      "claudionebbia"
-    ]
-  },
-  "Web/API/WindowOrWorkerGlobalScope/setTimeout": {
-    "modified": "2019-03-23T23:17:29.378Z",
-    "contributors": [
-      "BubuAnabelas",
-      "vltamara",
-      "nauj27",
-      "fscholz",
-      "AshfaqHossain",
-      "VictorArias"
-    ]
-  },
   "Web/API/Worker": {
     "modified": "2019-03-23T22:48:01.797Z",
     "contributors": [
@@ -9277,12 +9204,65 @@
       "mmednik"
     ]
   },
+  "Web/API/atob": {
+    "modified": "2019-03-23T23:03:12.715Z",
+    "contributors": [
+      "fscholz",
+      "sathyasanles"
+    ]
+  },
+  "Web/API/caches": {
+    "modified": "2019-03-23T22:16:45.016Z",
+    "contributors": [
+      "ivannieto"
+    ]
+  },
+  "Web/API/clearInterval": {
+    "modified": "2019-03-23T22:56:16.485Z",
+    "contributors": [
+      "Guitxo"
+    ]
+  },
+  "Web/API/clearTimeout": {
+    "modified": "2019-06-18T10:20:27.972Z",
+    "contributors": [
+      "AlePerez92",
+      "fscholz",
+      "basemnassar11",
+      "VictorArias"
+    ]
+  },
   "Web/API/console/assert": {
     "modified": "2019-03-23T22:47:53.587Z",
     "contributors": [
       "Takumakun",
       "AlePerez92",
       "danycoro"
+    ]
+  },
+  "Web/API/createImageBitmap": {
+    "modified": "2020-10-15T22:14:17.553Z",
+    "contributors": [
+      "Bumxu"
+    ]
+  },
+  "Web/API/fetch": {
+    "modified": "2020-10-15T22:01:57.457Z",
+    "contributors": [
+      "fscholz",
+      "jagomf"
+    ]
+  },
+  "Web/API/indexedDB": {
+    "modified": "2019-03-23T22:16:36.537Z",
+    "contributors": [
+      "ivannieto"
+    ]
+  },
+  "Web/API/isSecureContext": {
+    "modified": "2019-03-23T22:16:45.834Z",
+    "contributors": [
+      "ivannieto"
     ]
   },
   "Web/API/notification": {
@@ -9336,6 +9316,26 @@
       "MarkelCuesta",
       "jezdez",
       "Davdriver"
+    ]
+  },
+  "Web/API/setInterval": {
+    "modified": "2020-08-24T18:02:23.092Z",
+    "contributors": [
+      "mastertrooper",
+      "Makinita",
+      "Klius",
+      "claudionebbia"
+    ]
+  },
+  "Web/API/setTimeout": {
+    "modified": "2019-03-23T23:17:29.378Z",
+    "contributors": [
+      "BubuAnabelas",
+      "vltamara",
+      "nauj27",
+      "fscholz",
+      "AshfaqHossain",
+      "VictorArias"
     ]
   },
   "Web/Accessibility": {
@@ -10652,23 +10652,23 @@
       "ulisescab"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Border-image_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders": {
+    "modified": "2019-03-23T22:41:48.399Z",
+    "contributors": [
+      "teoli"
+    ]
+  },
+  "Web/CSS/CSS_Backgrounds_and_Borders/Border-image_generator": {
     "modified": "2019-03-23T22:41:48.777Z",
     "contributors": [
       "teoli",
       "mcclone2001"
     ]
   },
-  "Web/CSS/CSS_Background_and_Borders/Border-radius_generator": {
+  "Web/CSS/CSS_Backgrounds_and_Borders/Border-radius_generator": {
     "modified": "2019-03-18T21:15:42.476Z",
     "contributors": [
       "israel-munoz"
-    ]
-  },
-  "Web/CSS/CSS_Backgrounds_and_Borders": {
-    "modified": "2019-03-23T22:41:48.399Z",
-    "contributors": [
-      "teoli"
     ]
   },
   "Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds": {
@@ -11190,12 +11190,6 @@
       "joseanpg",
       "mili01gm",
       "Derhks"
-    ]
-  },
-  "Web/CSS/Tools": {
-    "modified": "2019-03-23T22:28:04.142Z",
-    "contributors": [
-      "arturoblack"
     ]
   },
   "Web/CSS/Tutorials": {
@@ -13293,7 +13287,7 @@
       "pekechis"
     ]
   },
-  "Web/Demos_of_open_web_technologies": {
+  "Web/Demos": {
     "modified": "2019-03-23T22:33:45.097Z",
     "contributors": [
       "SoftwareRVG",
@@ -21462,6 +21456,12 @@
       "maedca",
       "ethertank",
       "Jeremie"
+    ]
+  },
+  "conflicting/Web/CSS": {
+    "modified": "2019-03-23T22:28:04.142Z",
+    "contributors": [
+      "arturoblack"
     ]
   },
   "conflicting/Web/CSS/::placeholder": {
