@@ -214,7 +214,7 @@
 /de/docs/DOM/window	/de/docs/Web/API/Window
 /de/docs/DOM/window.dump	/de/docs/Web/API/Window/dump
 /de/docs/DOM/window.openDialog	/de/docs/Web/API/Window/openDialog
-/de/docs/DOM/window.setTimeout	/de/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
+/de/docs/DOM/window.setTimeout	/de/docs/Web/API/setTimeout
 /de/docs/DragDrop	/de/docs/Web/API/HTML_Drag_and_Drop_API
 /de/docs/Erweiterungen_für_Firefox_3_aktualisieren	/de/docs/Mozilla/Firefox/Releases/3/Updating_extensions
 /de/docs/Farbverläufe_in_CSS	/de/docs/Web/CSS/CSS_Images/Using_CSS_gradients
@@ -447,10 +447,12 @@
 /de/docs/Web/API/WebGL_API/Tutorial/Objekte_mit_WebGL_animieren	/de/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 /de/docs/Web/API/WebGL_API/Tutorial/Texturen_in_WebGL_verwenden	/de/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 /de/docs/Web/API/Window.alert	/de/docs/Web/API/Window/alert
-/de/docs/Web/API/Window/setTimeout	/de/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
+/de/docs/Web/API/Window/setTimeout	/de/docs/Web/API/setTimeout
 /de/docs/Web/API/WindowBase64	/de/docs/Web/API/WindowOrWorkerGlobalScope
-/de/docs/Web/API/WindowBase64/btoa	/de/docs/Web/API/WindowOrWorkerGlobalScope/btoa
-/de/docs/Web/API/WindowTimers/setTimeout	/de/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout
+/de/docs/Web/API/WindowBase64/btoa	/de/docs/Web/API/btoa
+/de/docs/Web/API/WindowOrWorkerGlobalScope/btoa	/de/docs/Web/API/btoa
+/de/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/de/docs/Web/API/setTimeout
+/de/docs/Web/API/WindowTimers/setTimeout	/de/docs/Web/API/setTimeout
 /de/docs/Web/API/document.documentElement	/de/docs/Web/API/Document/documentElement
 /de/docs/Web/Barrierefreiheit	/de/docs/Web/Accessibility
 /de/docs/Web/Barrierefreiheit/ARIA	/de/docs/Web/Accessibility/ARIA
@@ -529,6 +531,7 @@
 /de/docs/Web/CSS/Pseudoklasse	/de/docs/Web/CSS/Pseudo-classes
 /de/docs/Web/CSS/Referenz	/de/docs/Web/CSS/Reference
 /de/docs/Web/CSS/Spezifität	/de/docs/Web/CSS/Specificity
+/de/docs/Web/CSS/Tools	/de/docs/conflicting/Web/CSS
 /de/docs/Web/CSS/Vererbung	/de/docs/Web/CSS/inheritance
 /de/docs/Web/CSS/Wertdefinitionssyntax	/de/docs/Web/CSS/Value_definition_syntax
 /de/docs/Web/CSS/attr	/de/docs/Web/CSS/attr()
@@ -541,6 +544,7 @@
 /de/docs/Web/CSS/url	/de/docs/Web/CSS/url()
 /de/docs/Web/CSS/visible	/de/docs/Web/CSS/visibility
 /de/docs/Web/CSS/word-wrap	/de/docs/Web/CSS/overflow-wrap
+/de/docs/Web/Demos_of_open_web_technologies	/de/docs/Web/Demos
 /de/docs/Web/Events/DOMContentLoaded	/de/docs/Web/API/Window/DOMContentLoaded_event
 /de/docs/Web/Events/change	/de/docs/Web/API/HTMLElement/change_event
 /de/docs/Web/Events/fullscreenchange	/de/docs/Web/API/Document/fullscreenchange_event
