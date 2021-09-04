@@ -55,51 +55,58 @@ translation_of: Web/CSS/transform-function/rotate3d()
 
 <h2 id="Ejemplos">Ejemplos</h2>
 
-<h3 id="Rotar_sobre_el_eje-X">Rotar sobre el eje-X</h3>
+<h3 id="Rotar_sobre_el_eje-Y">Rotar sobre el eje-Y</h3>
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html">&lt;p&gt;foo&lt;/p&gt;
-&lt;p class="transformed"&gt;bar&lt;/p&gt;</pre>
+<pre class="brush: html notranslate">&lt;div&gt;Normal&lt;/div&gt;
+&lt;div class="rotated"&gt;Rotated&lt;/div&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css">p {
-  width: 50px;
-  height: 50px;
-  background-color: teal;
+<pre class="brush: css notranslate">body {
+  perspective: 800px;
 }
 
-.transformed{
-  transform: rotate3d(1,0,0,60deg);
-  background-color: blue;
+div {
+  width: 80px;
+  height: 80px;
+  background-color: skyblue;
 }
-</pre>
+
+.rotated {
+  transform: rotate3d(0, 1, 0, 60deg);
+  background-color: pink;
+}</pre>
 
 <h4 id="Resultado">Resultado</h4>
 
-<p>{{EmbedLiveSample("Rotating_on_the_X-axis","100%","200")}}</p>
+
+<p>{{EmbedLiveSample("Rotating_on_the_Y-axis","100%","200")}}</p>
 
 <h3 id="Rotar_sobre_un_eje_personalizado">Rotar sobre un eje personalizado</h3>
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html">&lt;p&gt;foo&lt;/p&gt;
-&lt;p class="transformed"&gt;bar&lt;/p&gt;</pre>
+<pre class="brush: html notranslate">&lt;div&gt;Normal&lt;/div&gt;
+&lt;div class="rotated"&gt;Rotated&lt;/div&gt;</pre>
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css">p {
-  width: 50px;
-  height: 50px;
-  background-color: teal;
+<pre class="brush: css notranslate">body {
+  perspective: 800px;
 }
 
-.transformed{
-  transform: rotate3d(1, 2, -1, 192deg);
-  background-color: blue;
+div {
+  width: 80px;
+  height: 80px;
+  background-color: skyblue;
 }
-</pre>
+
+.rotated {
+  transform: rotate3d(1, 2, -1, 192deg);
+  background-color: pink;
+}</pre>
 
 <h4 id="Resultado_2">Resultado</h4>
 
