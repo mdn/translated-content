@@ -70,7 +70,7 @@ original_slug: Web/CSS/A_Propos_Du_Bloc_Conteneur
 
 <p>Le code HTML utilisé pour les exemples suivants sera :</p>
 
-<pre class="brush: html notranslate">&lt;body&gt;
+<pre class="brush: html">&lt;body&gt;
   &lt;section&gt;
     &lt;p&gt;Et voici un paragraphe !&lt;/p&gt;
   &lt;/section&gt;
@@ -81,16 +81,14 @@ original_slug: Web/CSS/A_Propos_Du_Bloc_Conteneur
 
 <p>Dans cet exemple, le paragraphe est positionné de façon statique et son bloc englobant est la zone de contenu de {{HTMLElement("section")}} car cet élément est l'ancêtre le plus proche qui est un conteneur de bloc.</p>
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;body&gt;
+<pre class="brush: html hidden">&lt;body&gt;
   &lt;section&gt;
     &lt;p&gt;Et voici un paragraphe !&lt;/p&gt;
   &lt;/section&gt;
 &lt;/body&gt;
 </pre>
-</div>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   background: beige;
 }
 
@@ -116,16 +114,14 @@ p {
 
 <p>Dans cet exemple, le bloc englobant est formé par l'élément {{HTMLElement("body")}}<strong> </strong>car <code>&lt;section&gt;</code> n'est pas un conteneur de bloc en raison de <code>display: inline</code> et il ne crée pas de contexte de formatage.</p>
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;body&gt;
+<pre class="brush: html">&lt;body&gt;
   &lt;section&gt;
     &lt;p&gt;Et voici un paragraphe !&lt;/p&gt;
   &lt;/section&gt;
 &lt;/body&gt;
 </pre>
-</div>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   background: beige;
 }
 
@@ -147,16 +143,14 @@ p {
 
 <p>Ici, le bloc englobant du paragraphe est <code>&lt;section&gt;</code> car la propriété <code>position</code> de ce dernier vaut <code>absolute</code>. Les valeurs exprimées en pourcentages et associées au paragraphe sont relatives à la zone de remplissage du bloc englobant (ce ne serait pas le cas si la propriété {{cssxref("box-sizing")}} du bloc englobant valait <code>border-box</code>).</p>
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;body&gt;
+<pre class="brush: html hidden">&lt;body&gt;
   &lt;section&gt;
     &lt;p&gt;Et voici un paragraphe !&lt;/p&gt;
   &lt;/section&gt;
 &lt;/body&gt;
 </pre>
-</div>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   background: beige;
 }
 
@@ -186,16 +180,14 @@ p {
 
 <p>Dans cet exemple, la propriété <code>position</code> du paragraphe vaut <code>fixed</code>. Le bloc englobant est donc le bloc englobant initial (c'est-à-dire le <em>viewport</em> pour les écrans). Aussi, les dimensions du paragraphe changent selon la taille de la fenêtre du navigateur.</p>
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;body&gt;
+<pre class="brush: html hidden">&lt;body&gt;
   &lt;section&gt;
     &lt;p&gt;Et voici un paragraphe !&lt;/p&gt;
   &lt;/section&gt;
 &lt;/body&gt;
 </pre>
-</div>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   background: beige;
 }
 
@@ -223,16 +215,14 @@ p {
 
 <p>Dans cet exemple, la propriété <code>position</code> du paragraphe vaut <code>absolute</code>. Son bloc englobant est donc <code>&lt;section&gt;</code> car c'est l'ancêtre le plus proche dont la propriété {{cssxref("transform")}} ne vaut pas <code>none</code>.</p>
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;body&gt;
+<pre class="brush: html hidden">&lt;body&gt;
   &lt;section&gt;
     &lt;p&gt;Et voici un paragraphe !&lt;/p&gt;
   &lt;/section&gt;
 &lt;/body&gt;
 </pre>
-</div>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   background: beige;
 }
 

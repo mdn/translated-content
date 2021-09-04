@@ -20,8 +20,8 @@ original_slug: Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_gril
 <p>Lorsqu'on définit une grille avec <code>grid-template-rows</code> et <code>grid-template-columns</code>, on peut donner des noms aux lignes (toutes ou seulement quelques unes). Pour illustrer ce point, nous allons reprendre la disposition utilisée dans l'article sur le placement sur les lignes. Cette fois, nous allons utiliser des lignes avec des noms.</p>
 
 <div id="example_named_lines">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -37,7 +37,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_gril
   color: #d9480f;
 }
 </pre>
-</div>
 
 <p>Lorsqu'on définit la grille, on nomme les lignes entre crochets. Ces noms peuvent être n'importe quelle valeur. Ici, on définit un nom pour le début et la fin du conteneur, pour les lignes et pour les colonnes. On définit les blocs du centres (ici <code>content-start</code> et <code>content-end</code>), à la fois pour les lignes et pour les colonnes. Il n'est pas nécessaire de nommer toutes les lignes de la grille, on peut très bien uniquement nommer celles qui sont importantes.</p>
 
@@ -95,8 +94,8 @@ original_slug: Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_gril
 <p>Bien qu'on puisse choisir n'importe quel nom (avec les contraintes qu'on vient d'énoncer), si on utilise les suffixes <code>-start</code> et <code>-end</code> pour désigner les lignes qui entourent une zone (comme dans l'exemple ci-avant), la grille créera automatiquement une zone nommée avec le nom utilisé devant ces suffixes. Si on reprend l'exemple précédent où on utilise <code>content-start</code> et <code>content-end</code> pour les lignes et pour les colonnes, cela signifie qu'on a, implicitement, une zone de grille intitulée <code>content</code> qu'on peut également manipuler</p>
 
 <div id="implicit_areas_from_lines">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -112,7 +111,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_gril
   color: #d9480f;
 }
 </pre>
-</div>
 
 <p>On utilise les mêmes définitions qu'avant mais cette fois, nous allons placer un objet dans la zone intitulée <code>content</code>.</p>
 
@@ -171,8 +169,8 @@ original_slug: Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_gril
 <p>On peut positionner <code>overlay</code> grâce à ces lignes implicites, de la même façon qu'on aurait positionner un objet avec des lignes créées explicitement :</p>
 
 <div id="implicit_lines_from_area">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -188,7 +186,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_gril
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -243,8 +240,8 @@ original_slug: Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_gril
 <p>Dans l'exemple qui suit, nous allons créer une grille avec douze colonnes de même largeur. Avant de définir la taille d'une piste pour la colonne (<code>1fr</code>), on définit un nom : <code>[col-start]</code>. Cela signifie qu'on aura une grille avec 12 colonnes, toutes intitulées <code>col-start</code> et qui mesureront chacune <code>1fr</code> de large.</p>
 
 <div id="multiple_lines_same_name">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -260,7 +257,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_gril
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -317,8 +313,8 @@ original_slug: Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_gril
 <p>Si vous utilisez une liste de pistes, vous pouvez utiliser le mot-clé <code>span</code> pour indiquer le nombre de lignes à occuper mais aussi pour indiquer le nombre de lignes à occuper qui ont un nom donné.</p>
 
 <div id="span_line_number">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -334,7 +330,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_gril
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -372,8 +367,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_gril
 
 <p>On peut alors utiliser ce modèle pour mettre en forme notre page. Par exemple, on peut créer une disposition avec trois colonnes, un en-tête et un pied de page avec les règles suivantes :</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -389,7 +383,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_gril
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;header class="main-header"&gt;Je suis l'en-tête&lt;/header&gt;

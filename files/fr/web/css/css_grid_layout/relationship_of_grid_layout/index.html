@@ -21,8 +21,8 @@ original_slug: Web/CSS/CSS_Grid_Layout/Modèle_de_grille_et_autres_modèles_de_d
 <p>On utilise aussi la propriété {{cssxref("flex-wrap")}} avec la valeur <code>wrap</code>, afin de créer une nouvelle ligne si le conteneur devient trop étroit pour conserver <code>flex-basis</code>.</p>
 
 <div id="onedtwod">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -38,7 +38,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Modèle_de_grille_et_autres_modèles_de_d
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div&gt;Un&lt;/div&gt;
@@ -71,8 +70,8 @@ original_slug: Web/CSS/CSS_Grid_Layout/Modèle_de_grille_et_autres_modèles_de_d
 <p>Dans cet exemple, on crée la même disposition en utilisant la grille CSS. Ici, on a trois pistes <code>1fr</code>. Il n'est pas nécessaire de paramétrer quoi que ce soit sur les objets, ils se disposeront eux-mêmes dans chaque cellule formée par la grille. On peut alors voir que les objets restent dans une grille stricte, avec les lignes et les colonnes qui sont alignées. Avec cinq éléments, on a donc un espace restant à la fin de la deuxième ligne.</p>
 
 <div class="Two_Dimensional_With_Grid">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -88,7 +87,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Modèle_de_grille_et_autres_modèles_de_d
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div&gt;Un&lt;/div&gt;
@@ -133,8 +131,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Modèle_de_grille_et_autres_modèles_de_d
 
 <p>Dans le premier exemple, on utilise les boîtes flexibles avec un conteneur qui dispose de trois objets. La propriété {{cssxref("min-height")}} est définie et paramètre la hauteur du conteneur flexible. {{cssxref("align-items")}} vaut <code>flex-end</code> pour le conteneur flexible et les objets s'empileront donc jusqu'à l'extrémité du conteneur flexible. On utilise également la propriété {{cssxref("align-self")}} sur <code>box1</code> afin de surcharger la valeur par défaut et d'étirer jusqu'à la hauteur du conteneur et jusqu'à <code>box2</code> afin que <code>box1</code> soit alignée avec le début du conteneur flexible.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -150,7 +147,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Modèle_de_grille_et_autres_modèles_de_d
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box1"&gt;Un&lt;/div&gt;
@@ -178,8 +174,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Modèle_de_grille_et_autres_modèles_de_d
 
 <p>Dans cet exemple, on utilise une grille pour créer la même disposition. Cette fois on utilise les propriétés d'alignement des boîtes. On aligne donc par rapport à <code>start</code> et <code>end</code> plutôt que par rapport à <code>flex-start</code> et <code>flex-end</code>. Dans le cas d'une disposition en grille, on aligne les éléments à l'intérieur de leur zone de grille. Dans ce cas, il s'agit d'une seule cellule mais on pourrait très bien construire une zone composée de plusieurs cellules.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -195,7 +190,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Modèle_de_grille_et_autres_modèles_de_d
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box1"&gt;Un&lt;/div&gt;
@@ -233,8 +227,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Modèle_de_grille_et_autres_modèles_de_d
 
 <p>Dans l'exemple qui suit, on utilise le mot-clé <code>auto-fill</code> à la place d'un entier dans la fonction <code>repeat</code> et on définit la taille d'une piste à 200 pixels. Cela signifie que la grille créera autant de pistes de 200 pixels en colonnes qu'il est possible d'en placer dans le conteneur.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -250,7 +243,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Modèle_de_grille_et_autres_modèles_de_d
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div&gt;Un&lt;/div&gt;
@@ -273,8 +265,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Modèle_de_grille_et_autres_modèles_de_d
 
 <p>Dans l'exemple qui suit, on crée des pistes qui sont remplies automatiquement avec <code>minmax</code>. On souhaite que les pistes mesurent au moins 200 pixels, avec un maximum de <code>1fr</code>. Lorsque le navigateur a calculé la quantité de colonnes qui tiendraient dans le conteneur (en tenant compte des espaces), il utilisera le maximum <code>1fr</code> afin de répartir l'espace restant entre les objets.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -290,7 +281,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Modèle_de_grille_et_autres_modèles_de_d
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div&gt;Un&lt;/div&gt;
@@ -319,8 +309,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Modèle_de_grille_et_autres_modèles_de_d
 
 <p>Dans l'exemple ci-après, on a un conteneur avec quatre enfants. Le troisième élément est positionné en absolu et est placé sur la grille. La grille, le conteneur, a <code>position:</code> <code>relative</code> et devient donc le contexte de positionnement pour cet objet.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -336,7 +325,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Modèle_de_grille_et_autres_modèles_de_d
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box1"&gt;Un&lt;/div&gt;
@@ -389,8 +377,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Modèle_de_grille_et_autres_modèles_de_d
 
 <p>On indique que <code>.box3</code> a une position relative puis on positionne l'élément avec des propriétés de décalage. Dans ce cas, le contexte de positionnement est la zone de la grille.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -406,7 +393,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Modèle_de_grille_et_autres_modèles_de_d
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box1"&gt;Un&lt;/div&gt;
@@ -459,8 +445,8 @@ original_slug: Web/CSS/CSS_Grid_Layout/Modèle_de_grille_et_autres_modèles_de_d
 <p>Si on utilise <code>display:</code> <code>contents</code> sur un élément, la boîte qu'il aurait normalement créé disparaîtra et les boîtes des éléments qui sont ses enfants apparaîtront comme si elles avaient grimpé d'un niveau. Cela signifie que les éléments fils d'un élément d'une grille peuvent, à leur tour, devenir des éléments de cette grille. Un peu perdu-e ? Voici un exemple. Dans le code qui suit, on a une grille dont le premier élément s'étend sur les trois pistes. Cet élément contient trois éléments imbriqués. Ces derniers n'étant pas des enfants directs de la grille, ils ne s'inscrivent pas dans la disposition en grille et sont affichés avec la disposition classique.</p>
 
 <div id="Display_Contents_Before">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -482,7 +468,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Modèle_de_grille_et_autres_modèles_de_d
   padding: 1em;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box box1"&gt;
@@ -515,8 +500,8 @@ original_slug: Web/CSS/CSS_Grid_Layout/Modèle_de_grille_et_autres_modèles_de_d
 <p>Si on ajoute <code>display:</code> <code>contents</code> aux règles qui ciblent <code>box1</code>, la boîte de cet élément disparaîtra et ses sous-éléments deviendront alors des éléments de la grille qui se placeront selon les règles de placement automatiques pour la grille.</p>
 
 <div id="Display_Contents_After">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -538,7 +523,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Modèle_de_grille_et_autres_modèles_de_d
   padding: 1em;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box box1"&gt;

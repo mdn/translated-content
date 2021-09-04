@@ -75,8 +75,8 @@ original_slug: >-
 <p>Sur le Web, c'est la valeur <code>horizontal-tb</code> qui est la valeur par défaut pour le texte. C'est dans cette direction que vous lisez cet article. Les autres valeurs changeront la façon dont le texte est écrit sur le document et correspondent aux modes d'écriture utilisés dans d'autres langues. Dans l'exemple qui suit, on a deux paragraphes, le premier utilise la valeur par défaut <code>horizontal-tb</code> et le second utilise la valeur <code>vertical-rl</code>. Dans ce deuxième mode, le texte est toujours écrit de gauche à droite mais la direction du texte est verticale. Dans ce deuxième paragraphe, l'axe en ligne (<em>inline</em>) est donc l'axe vertical.</p>
 
 <div id="writing_1">
-<div class="hidden">
-<pre class="brush: css">.wrapper &gt; p {
+
+<pre class="brush: css hidden">.wrapper &gt; p {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -86,7 +86,6 @@ original_slug: >-
   max-width: 300px;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;p style="writing-mode: horizontal-tb"&gt;Mon mode d'écriture est celui par défaut &lt;code&gt;horizontal-tb&lt;/code&gt;&lt;/p&gt;
@@ -104,8 +103,8 @@ original_slug: >-
 <p>Dans le prochain exemple, la grille possède trois colonnes et deux lignes. Cela signifie qu'il y a trois pistes qui traversent l'axe de bloc. Avec le mode d'écriture par défaut, la grille commence par placer les objets en haut à gauche  en remplissant les trois cellules sur la première ligne avant de passer à la suivante, en formant une nouvelle ligne, etc.</p>
 
 <div id="writing_2">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -121,7 +120,6 @@ original_slug: >-
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -146,8 +144,8 @@ original_slug: >-
 <p>Si on ajoute <code>writing-mode: vertical-lr</code> au conteneur de la grille, on peut voir que les axes logiques s'appliquent désormais dans une autre direction. L'axe de bloc (aussi appelé l'axe des colonnes pour la grille) s'étend maintenant de gauche à droite et l'axe en ligne court verticalement.</p>
 
 <div id="writing_3">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -163,7 +161,6 @@ original_slug: >-
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   writing-mode: vertical-lr;
@@ -195,8 +192,8 @@ original_slug: >-
 <p>Dans le prochain exemple, on aligne des objets dans une grille pour laquelle <code>writing-mode: vertical-lr</code>. Les valeurs <code>start</code> et <code>end</code> fonctionnent de la même façon qu'avec le mode d'écriture par défaut mais, parce qu'elles sont logiques, on voit que la grille est bien renversée.</p>
 
 <div id="writing_4">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -212,7 +209,6 @@ original_slug: >-
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   writing-mode: vertical-lr;
@@ -270,8 +266,8 @@ original_slug: >-
 </ul>
 
 <div id="writing_5">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -320,8 +316,8 @@ original_slug: >-
 <p>Si on ajoute alors la propriété {{cssxref("direction")}} avec la valeur <code>rtl</code> pour le conteneur de la grille, la colonne 1 sera la plus à droite et la colonne 1 sera à gauche.</p>
 
 <div id="writing_6">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -337,7 +333,6 @@ original_slug: >-
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   direction: rtl;

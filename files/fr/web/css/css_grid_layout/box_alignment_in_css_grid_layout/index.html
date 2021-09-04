@@ -49,8 +49,8 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
 </ul>
 
 <div id="alignment_1">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -66,7 +66,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -112,8 +111,8 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
 <p>Dans le prochain exemple, on utilise la propriété <code>align-self</code> afin d'illustrer les différentes valeurs pour l'alignement. La première zone illustre le comportement par défaut pour <code>align-self</code> : l'objet est étiré. Le deuxième objet utilise la valeur <code>start</code>, le troisième utilise <code>end</code> et le quatrième utilise <code>center</code>.</p>
 
 <div id="alignment_2">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -129,7 +128,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -197,8 +195,8 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
 <p>Là encore, la valeur par défaut <code>stretch</code> pour les objets qui n'ont pas de ratio intrinsèque. Cela signifie que, par défaut, les objets de la grille couvriront l'ensemble de la zone de grille sur laquelle ils sont placés. Dans l'exemple qui suit, le premier objet illustre cet alignement par défaut.</p>
 
 <div id="alignment_3">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -214,7 +212,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -268,8 +265,8 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
 <p>En combinant les propriétés <code>align-</code><code>*</code> et <code>justify-*</code>, on peut facilement centrer un objet sur sa zone de grille.</p>
 
 <div id="alignment_4">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -285,7 +282,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -338,8 +334,8 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
 <p>La propriété <code>align-content</code> s'applique sur le conteneur de la grille car elle porte sur l'ensemble de la grille. Pour une disposition en grille, la valeur par défaut est <code>start</code> : cela indique que les pistes commencent à partir du coin en haut à gauche de la grille.</p>
 
 <div id="alignment_5">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -355,7 +351,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -397,8 +392,8 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
 <p>Si on ajoute <code>align-content</code> avec la valeur <code>end</code> sur le conteneur, les pistes seront déplacées à la fin du conteneur selon l'axe des colonnes.</p>
 
 <div id="alignment_6">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -457,8 +452,8 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
 <p>Pour cette propriété, on peut également utiliser des valeurs qu'on manipule avec les boîtes flexibles : <code>space-between</code>, <code>space-around</code> et <code>space-evenly</code> qui permettent de répartir l'espace. Si on utilise {{cssxref("align-content")}} avec <code>space-between</code> pour notre exemple, on voit alors que les éléments sont espacés de façon équitable.</p>
 
 <div id="alignment_7">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -474,7 +469,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -527,8 +521,8 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
 <p>Avec le même exemple, on utilise {{cssxref("justify-content")}} avec la valeur <code>space-around</code>. Là encore, les pistes qui s'étalent sur plus d'une colonne gagnent en largeur.</p>
 
 <div id="alignment_8">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -544,7 +538,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -592,8 +585,8 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
 <p>Dans l'exemple qui suit, pour l'objet 1, on utilise une marge à gauche avec <code>auto</code>. On peut alors voir le contenu poussé à droite de la zone (la marge à gauche occupant le plus d'espace possible).</p>
 
 <div id="alignment_9">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -609,7 +602,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;

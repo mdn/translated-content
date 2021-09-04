@@ -11,7 +11,7 @@ translation_of: Web/CSS/attr()
 
 <p>La fonction <strong><code>attr()</code></strong> est utilisée afin de récupérer la valeur d'un attribut d'un élément pour l'utiliser dans la feuille de style. Cette fonction peut également être utilisée sur <a href="/fr/docs/Web/CSS/Pseudo-elements">les pseudo-éléments</a> auquel cas c'est la valeur correspondant à l'élément source qui est renvoyée.</p>
 
-<pre class="brush:css no-line-numbers notranslate">/* Utilisation simple */
+<pre class="brush:css no-line-numbers">/* Utilisation simple */
 attr(data-count);
 attr(title);
 
@@ -168,11 +168,11 @@ attr(data-something, "default");
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html; notranslate">&lt;p data-toto="coucou"&gt;world&lt;/p&gt;</pre>
+<pre class="brush: html;">&lt;p data-toto="coucou"&gt;world&lt;/p&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css; highlight[2] notranslate">[data-toto]::before {
+<pre class="brush: css; highlight[2]">[data-toto]::before {
   content: attr(data-toto) " ";
 }</pre>
 
@@ -186,19 +186,17 @@ attr(data-something, "default");
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html; notranslate">&lt;div class="background" data-background="lime"&gt;&lt;/div&gt;</pre>
+<pre class="brush: html;">&lt;div class="background" data-background="lime"&gt;&lt;/div&gt;</pre>
 
 <h4 id="CSS_2">CSS</h4>
 
-<div class="hidden">
-<pre class="brush: css; notranslate">html,
+<pre class="brush: css;">html,
 body,
 .background {
   height: 100vh;
 }</pre>
-</div>
 
-<pre class="brush: css; highlight[6] notranslate">.background {
+<pre class="brush: css; highlight[6]">.background {
   background-color: red;
 }
 

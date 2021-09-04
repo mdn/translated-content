@@ -26,8 +26,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_un
 
 <p><img alt="Our Grid highlighted in DevTools" src="https://mdn.mozillademos.org/files/14663/3_hilighted_grid.png" style="height: 296px; width: 900px;"></p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -43,7 +42,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_un
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -79,8 +77,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_un
 
 <p>On peut placer chacun des éléments individuellement et on peut également choisir de laisser certaines cellules vides. Un des avantages de la grille CSS est qu'on peut créer des espaces sans avoir à utiliser des marges ou d'autres méthodes de contournement.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -99,7 +96,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_un
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;Un&lt;/div&gt;
@@ -137,8 +133,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_un
 
 <p>On a écrit beaucoup de règles pour positionner chaque élément. Heureusement, il existe des propriétés raccourcies qui permettent d'avoir une syntaxe plus concise. Les propriétés {{cssxref("grid-column-start")}} et {{cssxref("grid-column-end")}} peuvent être combinées pour former la propriété raccourcie {{cssxref("grid-column")}} et de la même façon, {{cssxref("grid-row-start")}} et  {{cssxref("grid-row-end")}} peuvent être synthétisées avec {{cssxref("grid-row")}}.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -157,7 +152,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_un
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box1"&gt;Un&lt;/div&gt;
@@ -193,8 +187,8 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_un
 <p>Dans les exemples précédents, on a défini chaque ligne et colonne de fin pour chaque élément. Mais si en pratique, on souhaite qu'un élément n'occupe qu'une seule piste, on peut omettre <code>grid-column-end</code> ou <code>grid-row-end</code>. Par défaut, les éléments occupent une seule piste. Notre exemple initial, avec les propriétés détaillées peut donc être réécrit de cette façon :</p>
 
 <div id="End_Lines">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -213,7 +207,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_un
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box1"&gt;Un&lt;/div&gt;
@@ -250,8 +243,8 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_un
 <p>Avec les propriétés raccourcies, on obtient le code suivant (sans aucune barre oblique ni seconde valeur pour les éléments qui n'occupent qu'une seule piste).</p>
 
 <div id="New_Shorthand">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -270,7 +263,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_un
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box1"&gt;Un&lt;/div&gt;
@@ -312,8 +304,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_un
  <li><code>grid-column-end</code></li>
 </ul>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -332,7 +323,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_un
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box1"&gt;Un&lt;/div&gt;
@@ -377,8 +367,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_un
 
 <p>Dans le prochain exemple, on renverse la disposition de la grille en travaillant à partir du bas et de la droite.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -397,7 +386,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_un
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
    &lt;div class="box1"&gt;Un&lt;/div&gt;
@@ -456,8 +444,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_un
 
 <p>Les gouttières apparaissent uniquement entre les pistes de la grille, elles n'ajoutent pas d'espace en haut, en bas, à gauche ou à droite du conteneur. Voyons comment ajouter des espaces sur l'exemple précédent grâce à ces propriétés :</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -476,7 +463,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_un
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box1"&gt;Un&lt;/div&gt;
@@ -531,8 +517,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_un
 
 <p>On a vu comment indiquer la ligne de début et la ligne de fin avec des numéros. Il est aussi possible de définir la taille d'un élément en indiquant le numéro de la ligne de départ et le nombre de pistes sur lequel s'étale l'élément.</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -551,7 +536,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_un
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box1"&gt;Un&lt;/div&gt;

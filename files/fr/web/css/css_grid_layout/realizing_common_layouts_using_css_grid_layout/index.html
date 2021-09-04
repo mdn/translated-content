@@ -28,8 +28,8 @@ original_slug: >-
 <p>Dans le document on a un conteneur qui contient un en-tête, un pied de page, du contenu principal, une barre de navigation, une barre latérale et un bloc dans lequel on souhaite placer de la publicité.</p>
 
 <div id="layout_1">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   max-width: 1024px;
@@ -50,7 +50,6 @@ nav ul {
   padding: 0;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;header class="main-head"&gt;L'en-tête&lt;/header&gt;
@@ -165,8 +164,8 @@ nav ul {
 <p>Si vous travaillez avec un <em>framework</em> ou avec un système de grille, vous êtes peut-être habitué-e à travailler sur une grille avec 12 ou 16 colonnes. On peut recréer ce genre de système avec une grille CSS. Pour commencer, on crée une grille avec 12 colonnes dont chaque piste mesure <code>1fr</code>-unit et commence par une ligne intitulée <code>col-start</code>. Autrement dit, on aura 12 colonnes intitulées <code>col-start</code>.</p>
 
 <div id="layout_2">
-<div class="hidden">
-<pre class="brush: css">.wrapper {
+
+<pre class="brush: css hidden">.wrapper {
   max-width: 1024px;
   margin: 0 auto;
   font: 1.2em Helvetica, arial, sans-serif;
@@ -178,7 +177,6 @@ nav ul {
   padding: 10px;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -232,8 +230,8 @@ nav ul {
 <p>Pour voir comment cette méthode fonctionne en pratique, nous allons créé le même plan que celui que nous avons vu avec les zones nommées et {{cssxref("grid-template-areas")}} mais en utilisant désormais ce système à 12 colonnes. Commençons avec la même structure que celle utilisée plus haut avec les zones nommées :</p>
 
 <div id="layout_3">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   max-width: 1024px;
@@ -254,7 +252,6 @@ nav ul {
   padding: 0;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;header class="main-head"&gt;L'en-tête&lt;/header&gt;
@@ -398,8 +395,7 @@ nav ul {
 &lt;/ul&gt;
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 img {max-width: 100%; display: block;}
 body {
   font: 1.2em Helvetica, arial, sans-serif;
@@ -418,7 +414,6 @@ h2 {
   padding: 20px;
 }
 </pre>
-</div>
 
 <p>Nous allons créer une grille avec un nombre de colonnes adaptable et chacune des colonnes sera flexible. On indique qu'une colonne doit avoir une largeur minimale de 200 pixels et que l'espace restant doit être réparti équitablement (toutes les colonnes auront donc la même largeur). Pour obtenir ce résultat, on utilise la fonction <code>minmax()</code> avec la notation <code>repeat</code> pour la propriété <code>grid-template-columns</code> qui permet de dimensionner les pistes.</p>
 
@@ -464,8 +459,8 @@ h2 {
 <p>Si on veut éviter ces trous, on peut utiliser la règle {{cssxref("grid-auto-flow")}}<code>: dense </code>sur le conteneur de la grille. Attention à utiliser cette valeur car l'ordre logique n'est plus respecté. Aussi, il ne faut utiliser cette valeur uniquement lorsqu'il n'y a pas d'ordre pour les objets. Avec cette valeur, la navigation au clavier (<em>tab order</em>) continue de suivre l'ordre des éléments du document et pas l'ordre d'affichage des objets sur la grille.</p>
 
 <div id="layout_5">
-<div class="hidden">
-<pre class="brush: html">&lt;ul class="listing"&gt;
+
+<pre class="brush: html hidden">&lt;ul class="listing"&gt;
   &lt;li&gt;
     &lt;h2&gt;Item One&lt;/h2&gt;
     &lt;div class="body"&gt;&lt;p&gt;The content of this listing item goes here.&lt;/p&gt;&lt;/div&gt;
@@ -497,7 +492,7 @@ h2 {
 &lt;/ul&gt;
 </pre>
 
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 img {max-width: 100%; display: block;}
 body {
   font: 1.2em Helvetica, arial, sans-serif;
@@ -529,7 +524,6 @@ h2 {
   padding: 10px;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.listing {
   list-style: none;

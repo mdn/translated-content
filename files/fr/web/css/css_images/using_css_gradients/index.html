@@ -233,15 +233,13 @@ div {
 
 <p>Pour créer une ligne franche entre deux couleurs et avoir deux bandes plutôt qu'un dégradé progressif, on peut définir deux points d'arrêt de couleur au même endroit. Dans l'exemple suivant, on a deux couleurs pour un même emplacement de point d'arrêt situé à <code>50%</code>:</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="striped"&gt;&lt;/div&gt;
+<pre class="brush: html hidden">&lt;div class="striped"&gt;&lt;/div&gt;
 </pre>
 
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   width: 120px;
   height: 120px;
 }</pre>
-</div>
 
 <pre class="brush: css">.striped {
    background: linear-gradient(to bottom left, cyan 50%, palegoldenrod 50%);
@@ -253,17 +251,15 @@ div {
 
 <p>Pour inclure une bande d'une couleur donnée, sans transition au sein du dégradé, on utilisera deux points d'arrêt successif avec la même couleur. Ainsi, la couleur sera atteinte au premier point d'arrêt puis sera conservée jusqu'au suivant.</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="multiposition-stops"&gt;&lt;/div&gt;
+<pre class="brush: html hidden">&lt;div class="multiposition-stops"&gt;&lt;/div&gt;
 &lt;div class="multiposition-stop2"&gt;&lt;/div&gt;
 </pre>
 
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   width: 120px;
   height: 120px;
   float: left; margin-right: 10px; box-sizing: border-box;
 }</pre>
-</div>
 
 <pre class="brush: css">.multiposition-stops {
    background: linear-gradient(to left,
@@ -289,17 +285,15 @@ div {
 
 <p>Par défaut, un dégradé progresse linéairement entre les deux couleurs et la couleur médiane est atteinte à la moitié du parcours. Toutefois, si on veut atteindre cette couleur médiane plus tôt ou plus tard, on peut fournir une indication permettant de définir l'emplacement du milieu de la transition. Dans l'exemple qui suit, la couleur est à la moitié de la transition entre le vert et le cyan à 20% du dégradé (et non à 50%). Le deuxième exemple ne contient pas de telle indication et la transition s'effectue linéairement. Vous pouvez ainsi observer l'impact d'une telle indication.</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="colorhint-gradient"&gt;&lt;/div&gt; &lt;div class="regular-progression"&gt;&lt;/div&gt;
+<pre class="brush: html hidden">&lt;div class="colorhint-gradient"&gt;&lt;/div&gt; &lt;div class="regular-progression"&gt;&lt;/div&gt;
 
 </pre>
 
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   width: 120px;
   height: 120px;
   float: left; margin-right: 10px; box-sizing: border-box;
 }</pre>
-</div>
 
 <pre class="brush: css">.colorhint-gradient {
   background: linear-gradient(to top, black, 20%, cyan);
@@ -350,15 +344,13 @@ div {
 
 <p>De la même façon qu'avec les dégradés linéaires, il suffit de deux couleurs pour créer un dégradé radial.</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="simple-radial"&gt;&lt;/div&gt;
+<pre class="brush: html hidden">&lt;div class="simple-radial"&gt;&lt;/div&gt;
 </pre>
 
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   width: 120px;
   height: 120px;
 }</pre>
-</div>
 
 <pre class="brush: css">.simple-radial {
   background: radial-gradient(red, blue);
@@ -371,15 +363,13 @@ div {
 
 <p>À nouveau, comme pour les dégradés linéaires, il est possible de placer des arrêts de couleur en précisant un pourcentage ou une distance.</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="radial-gradient"&gt;&lt;/div&gt;
+<pre class="brush: html hidden">&lt;div class="radial-gradient"&gt;&lt;/div&gt;
 </pre>
 
-<pre class="brush: css">div {
+<pre class="brush: hidden">div {
   width: 120px;
   height: 120px;
 }</pre>
-</div>
 
 <pre class="brush: css">.radial-gradient {
   background: radial-gradient(red 10px, yellow 30%, #1e90ff 50%);
@@ -392,15 +382,13 @@ div {
 
 <p>La position du centre du dégradé peut être définie avec des mots-clés, des pourcetages ou des longueurs. Deux valeurs permettent de placer le centre sur les deux axes. Si une seule valeur est fournie, elle sera utilisée pour les deux axes.</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="radial-gradient"&gt;&lt;/div&gt;
+<pre class="brush: html hidden">&lt;div class="radial-gradient"&gt;&lt;/div&gt;
 </pre>
 
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   width: 120px;
   height: 240px;
 }</pre>
-</div>
 
 <pre class="brush: css">.radial-gradient {
   background: radial-gradient(at 0% 30%, red 10px, yellow 30%, #1e90ff 50%);
@@ -417,15 +405,13 @@ div {
 
 <p>Dans l'exemple qui suit, on utilise la valeur <code>closest-side</code> pour la taille. Cela signifie que la taille du dégradé sera définie par la distance entre le point central de départ et le côté le plus proche de la boîte englobante.</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="radial-ellipse-side"&gt;&lt;/div&gt;
+<pre class="brush: html hidden">&lt;div class="radial-ellipse-side"&gt;&lt;/div&gt;
 </pre>
 
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   width: 240px;
   height: 100px;
 }</pre>
-</div>
 
 <pre class="brush: css">.radial-ellipse-side {
   background: radial-gradient(ellipse closest-side,
@@ -439,15 +425,13 @@ div {
 
 <p>Cet exemple ressemble fortement au précédent mais on utilise ici <code>farthest-corner</code> qui crée un dégradé dont la distance est celle entre le point de départ central et le côté le plus éloigné de la boîte englobante.</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="radial-ellipse-far"&gt;&lt;/div&gt;
+<pre class="brush: html hidden">&lt;div class="radial-ellipse-far"&gt;&lt;/div&gt;
 </pre>
 
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   width: 240px;
   height: 100px;
 }</pre>
-</div>
 
 <pre class="brush: css">.radial-ellipse-far {
   background: radial-gradient(ellipse farthest-corner,
@@ -461,15 +445,13 @@ div {
 
 <p>Pour cet exemple, on utilise <code>closest-side</code> qui permet de créer un cercle dont le rayon est la distance entre le point de départ central et le côté le plus proche de la boîte englobante. Ici, le rayon du cercle est donc la moitié de la hauteur de la boîte car les bords haut et bas sont équidistants du point de départ et plus proches que les côtés gauche et droit.</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="radial-circle-close"&gt;&lt;/div&gt;
+<pre class="brush: html hidden">&lt;div class="radial-circle-close"&gt;&lt;/div&gt;
 </pre>
 
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   width: 240px;
   height: 120px;
 }</pre>
-</div>
 
 <pre class="brush: css">.radial-circle-close {
   background: radial-gradient(circle closest-side,
@@ -483,15 +465,13 @@ div {
 
 <p>À l'instar des dégradés linéaires, on peut empiler des dégradés radiaux. Le premier dégradé indiqué sera celui sur la couche la plus haute et le dernier sera celui sur la couche la plus basse.</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="stacked-radial"&gt;&lt;/div&gt;
+<pre class="brush: html hidden">&lt;div class="stacked-radial"&gt;&lt;/div&gt;
 </pre>
 
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   width: 200px;
   height: 200px;
 }</pre>
-</div>
 
 <pre class="brush: css">.stacked-radial {
   background:
@@ -523,15 +503,13 @@ div {
 
 <p>Comme pour les dégradés linéaires et radiaux, il suffit de deux couleurs pour créer un dégradé conique. Par défaut, le centre du dégradé sera situé au centre (point 50% 50%) et le début du dégradé commencera vers le haut :</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="simple-conic"&gt;&lt;/div&gt;
+<pre class="brush: html hidden">&lt;div class="simple-conic"&gt;&lt;/div&gt;
 </pre>
 
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   width: 120px;
   height: 120px;
 }</pre>
-</div>
 
 <pre class="brush: css">.simple-conic {
   background: conic-gradient(red, blue);
@@ -546,15 +524,13 @@ div {
 
 <p>À l'instar des dégradés radiaux, on peut placer le centre d'un dégradé conique à l'aide de mots-clés, de valeurs (longueurs ou pourcentages) avec le mot-clé <code>at</code>.</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="conic-gradient"&gt;&lt;/div&gt;
+<pre class="brush: html hidden">&lt;div class="conic-gradient"&gt;&lt;/div&gt;
 </pre>
 
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   width: 120px;
   height: 120px;
 }</pre>
-</div>
 
 <pre class="brush: css">.conic-gradient {
   background: conic-gradient(at 0% 30%, red 10%, yellow 30%, #1e90ff 50%);
@@ -567,15 +543,13 @@ div {
 <div>
 <h3 id="Modifier_l’angle">Modifier l’angle</h3>
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="conic-gradient"&gt;&lt;/div&gt;
+<pre class="brush: html hidden">&lt;div class="conic-gradient"&gt;&lt;/div&gt;
 </pre>
 
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   width: 120px;
   height: 120px;
 }</pre>
-</div>
 
 <pre class="brush: css">.conic-gradient {
   background: conic-gradient(from 45deg, red, orange, yellow, green, blue, purple);
@@ -595,15 +569,13 @@ div {
 
 <p>Dans cet exemple, on utilise la fonction {{cssxref("repeating-linear-gradient")}} afin de créer un dégradé linéaire qui se répète le long d'une ligne. Les couleurs forment un cycle lorsque le motif se répète.</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="repeating-linear"&gt;&lt;/div&gt;
+<pre class="brush: html hidden">&lt;div class="repeating-linear"&gt;&lt;/div&gt;
 </pre>
 
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   width: 120px;
   height: 120px;
 }</pre>
-</div>
 
 <pre class="brush: css">.repeating-linear {
   background: repeating-linear-gradient(-45deg, red, red 5px, blue 5px, blue 10px);
@@ -614,15 +586,13 @@ div {
 
 <h3 id="Répéter_plusieurs_dégradés_linéaires">Répéter plusieurs dégradés linéaires</h3>
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="multi-repeating-linear"&gt;&lt;/div&gt;
+<pre class="brush: html hidden">&lt;div class="multi-repeating-linear"&gt;&lt;/div&gt;
 </pre>
 
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   width: 600px;
   height: 400px;
 }</pre>
-</div>
 
 <pre class="brush: css">.multi-repeating-linear {
   background:
@@ -646,14 +616,12 @@ div {
 
 <h3 id="Créer_un_tartan">Créer un tartan</h3>
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="plaid-gradient"&gt;&lt;/div&gt;</pre>
+<pre class="brush: html hidden">&lt;div class="plaid-gradient"&gt;&lt;/div&gt;</pre>
 
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   width: 200px;
   height: 200px;
 }</pre>
-</div>
 
 <pre class="brush: css">.plaid-gradient {
   background:
@@ -682,15 +650,13 @@ div {
 
 <p>Ici, on utilise la fonction {{cssxref("repeating-radial-gradient")}} afin de créer un dégradé radial qui se répète. Les couleurs utilisées forment un cycle lorsque le motif unitaire recommence.</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="repeating-radial"&gt;&lt;/div&gt;
+<pre class="brush: html hidden">&lt;div class="repeating-radial"&gt;&lt;/div&gt;
 </pre>
 
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   width: 120px;
   height: 120px;
 }</pre>
-</div>
 
 <pre class="brush: css">.repeating-radial {
   background: repeating-radial-gradient(black, black 5px, white 5px, white 10px);
@@ -701,15 +667,13 @@ div {
 
 <h3 id="Répéter_plusieurs_dégradés_radiaux">Répéter plusieurs dégradés radiaux</h3>
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="multi-target"&gt;&lt;/div&gt;
+<pre class="brush: html hidden">&lt;div class="multi-target"&gt;&lt;/div&gt;
 </pre>
 
-<pre class="brush: css">div {
+<pre class="brush: css hidden">div {
   width: 250px;
   height: 150px;
 }</pre>
-</div>
 
 <pre class="brush: css">.multi-target {
   background:
