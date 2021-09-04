@@ -152,278 +152,189 @@ transform-origin: unset;
 
 <p>Voir la page sur <a class="internal" href="/fr/docs/Web/CSS/CSS_Transforms/Utilisation_des_transformations_CSS">l'utilisation des transformations CSS</a> pour des exemples supplémentaires.</p>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Code</th>
-   <th>Exemple</th>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: none;</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_none">
-    <pre class="brush: html">
-&lt;div class="box1"&gt;&amp;nbsp;&lt;/div&gt;
-</pre>
+<h3 id="a_demonstration_of_various_transform_values">Illustrations des différentes valeurs de transform</h3>
 
-    <pre class="brush: css">
-.box1 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
+<p>Cet exemple illustre ce que donnent les différentes valeurs de <code>transform-origin</code> pour différentes fonctions de transformation.</p>
+
+<pre class="brush: html hidden">
+&lt;div class="container"&gt;
+
+&lt;div class="example"&gt;
+  &lt;div class="box box1"&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;div class="box original"&gt;&amp;nbsp;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;pre&gt;
 transform: none;
-}
-</pre>
-    </div>
+&lt;/pre&gt;
 
-    <p>{{EmbedLiveSample('transform_none', '', '120', '', '', 'no-button') }}</p>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: rotate(30deg);</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_rotate_only">
-    <pre class="brush: html">
-&lt;div class="box2"&gt;&amp;nbsp;&lt;/div&gt;
-</pre>
+&lt;div class="example"&gt;
+  &lt;div class="box box2"&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;div class="box original"&gt;&amp;nbsp;&lt;/div&gt;
+&lt;/div&gt;
 
-    <pre class="brush: css">
-.box2 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
+&lt;pre&gt;
 transform: rotate(30deg);
-}
-</pre>
-    </div>
+&lt;/pre&gt;
 
-    <p>{{EmbedLiveSample('transform_rotate_only', '', '120', '', '', 'no-button') }}</p>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: rotate(30deg);<br>
-     transform-origin: 0 0;</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_rotate">
-    <pre class="brush: html">
-&lt;div class="box3"&gt;&amp;nbsp;&lt;/div&gt;
-</pre>
+&lt;div class="example"&gt;
+  &lt;div class="box box3"&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;div class="box original"&gt;&amp;nbsp;&lt;/div&gt;
+&lt;/div&gt;
 
-    <pre class="brush: css">
-.box3 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
+&lt;pre&gt;
+transform: rotate(30deg);
 transform-origin: 0 0;
+&lt;/pre&gt;
+
+&lt;div class="example"&gt;
+  &lt;div class="box box4"&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;div class="box original"&gt;&amp;nbsp;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;pre&gt;
 transform: rotate(30deg);
-}
-</pre>
-    </div>
-
-    <p>{{EmbedLiveSample('transform_rotate', '', '120', '', '', 'no-button') }}</p>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: rotate(30deg);<br>
-     transform-origin: 100% 100%;</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_rotate_with_percentage">
-    <pre class="brush: html">
-&lt;div class="box4"&gt;&amp;nbsp;&lt;/div&gt;
-</pre>
-
-    <pre class="brush: css">
-.box4 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
 transform-origin: 100% 100%;
+&lt;/pre&gt;
+
+&lt;div class="example"&gt;
+  &lt;div class="box box5"&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;div class="box original"&gt;&amp;nbsp;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;pre&gt;
 transform: rotate(30deg);
-}
-</pre>
-    </div>
+transform-origin: -1em -3em;
+&lt;/pre&gt;
 
-    <p>{{EmbedLiveSample('transform_rotate_with_percentage', '', '120', '', '', 'no-button') }}</p>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: rotate(30deg);<br>
-     transform-origin: -10em -30em;</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_rotate_with_em">
-    <pre class="brush: html">
-&lt;div class="box5"&gt;&amp;nbsp;&lt;/div&gt;
-</pre>
+&lt;div class="example"&gt;
+  &lt;div class="box box6"&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;div class="box original"&gt;&amp;nbsp;&lt;/div&gt;
+&lt;/div&gt;
 
-    <pre class="brush: css">
-.box5 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
-transform-origin: -10em -30em;
-transform: rotate(30deg);
-}
-</pre>
-    </div>
+&lt;pre&gt;
+transform: scale(1.7);
+&lt;/pre&gt;
 
-    <p>{{EmbedLiveSample('transform_rotate_with_em', '', '120', '', '', 'no-button') }}</p>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: scale(1.9);</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_scale_only">
-    <pre class="brush: html">
-&lt;div class="box6"&gt;&amp;nbsp;&lt;/div&gt;
-</pre>
+&lt;div class="example"&gt;
+  &lt;div class="box box7"&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;div class="box original"&gt;&amp;nbsp;&lt;/div&gt;
+&lt;/div&gt;
 
-    <pre class="brush: css">
-.box6 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
-transform: scale(1.9);
-}
-</pre>
-    </div>
-
-    <p>{{EmbedLiveSample('transform_scale_only', '', '120', '', '', 'no-button') }}</p>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: scale(1.9);<br>
-     transform-origin: 0 0;</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_scale_without_origin">
-    <pre class="brush: html">
-&lt;div class="box7"&gt;&amp;nbsp;&lt;/div&gt;
-</pre>
-
-    <pre class="brush: css">
-.box7 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
-transform: scale(1.9);
+&lt;pre&gt;
+transform: scale(1.7);
 transform-origin: 0 0;
-}
-</pre>
-    </div>
+&lt;/pre&gt;
 
-    <p>{{EmbedLiveSample('transform_scale_without_origin', '', '120', '', '', 'no-button') }}</p>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: scale(1.9);<br>
-     transform-origin: 100% -30%;</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_scale">
-    <pre class="brush: html">
-&lt;div class="box8"&gt;&amp;nbsp;&lt;/div&gt;
-</pre>
+&lt;div class="example"&gt;
+  &lt;div class="box box8"&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;div class="box original"&gt;&amp;nbsp;&lt;/div&gt;
+&lt;/div&gt;
 
-    <pre class="brush: css">
-.box8 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
-transform: scale(1.9);
+&lt;pre&gt;
+transform: scale(1.7);
 transform-origin: 100% -30%;
-}
-</pre>
-    </div>
+&lt;/pre&gt;
 
-    <p>{{EmbedLiveSample('transform_scale', '', '120', '', '', 'no-button') }}</p>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: skewX(50deg);<br>
-     transform-origin: 100% -30%;</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_skew_x">
-    <pre class="brush: html">
-&lt;div class="box9"&gt;&amp;nbsp;&lt;/div&gt;
-</pre>
+&lt;div class="example"&gt;
+  &lt;div class="box box9"&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;div class="box original"&gt;&amp;nbsp;&lt;/div&gt;
+&lt;/div&gt;
 
-    <pre class="brush: css">
-.box9 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
+&lt;pre&gt;
 transform: skewX(50deg);
 transform-origin: 100% -30%;
-}
-</pre>
-    </div>
+&lt;/pre&gt;
 
-    <p>{{EmbedLiveSample('transform_skew_x', '', '120', '', '', 'no-button') }}</p>
-   </td>
-  </tr>
-  <tr>
-   <td>
-    <p><code>transform: skewY(50deg);<br>
-     transform-origin: 100% -30%;</code></p>
-   </td>
-   <td>
-    <div class="hidden" id="transform_skew_y">
-    <pre class="brush: html">
-&lt;div class="box10"&gt;&amp;nbsp;&lt;/div&gt;
-</pre>
+&lt;div class="example"&gt;
+  &lt;div class="box box10"&gt;&amp;nbsp;&lt;/div&gt;
+  &lt;div class="box original"&gt;&amp;nbsp;&lt;/div&gt;
+&lt;/div&gt;
 
-    <pre class="brush: css">
-.box10 {
-margin: 0.5em;
-width: 3em;
-height: 3em;
-border: solid 1px;
-background-color: palegreen;
+&lt;pre&gt;
 transform: skewY(50deg);
 transform-origin: 100% -30%;
-}
-</pre>
-    </div>
+&lt;/pre&gt;
 
-    <p>{{EmbedLiveSample('transform_skew_y', '', '120', '', '', 'no-button') }}</p>
-   </td>
-  </tr>
- </tbody>
-</table>
+&lt;/div&gt;
+</pre>
+
+<pre class="brush: css hidden">
+.container {
+  display: grid;
+  grid-template-columns: 200px 100px;
+  gap: 20px;
+}
+
+.example {
+  position: relative;
+  margin: 0 2em 4em 5em;
+}
+
+.box {
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  border: solid 1px;
+  background-color: palegreen;
+}
+
+.original {
+  position: absolute;
+  left: 0;
+  opacity: 20%;
+}
+
+.box1 {
+  transform: none;
+}
+
+.box2 {
+  transform: rotate(30deg);
+}
+
+.box3 {
+  transform: rotate(30deg);
+  transform-origin: 0 0;
+}
+
+.box4 {
+  transform: rotate(30deg);
+  transform-origin: 100% 100%;
+}
+
+.box5 {
+  transform: rotate(30deg);
+  transform-origin: -1em -3em;
+}
+
+.box6 {
+  transform: scale(1.7);
+}
+
+.box7  {
+  transform: scale(1.7);
+  transform-origin: 0 0;
+}
+
+.box8 {
+  transform: scale(1.7);
+  transform-origin: 100% -30%;
+}
+
+.box9 {
+  transform: skewX(50deg);
+  transform-origin: 100% -30%;
+}
+
+.box10 {
+  transform: skewY(50deg);
+  transform-origin: 100% -30%;
+}
+
+</pre>
+
+<p>{{EmbedLiveSample('a_demonstration_of_various_transform_values', '', 1350) }}</p>
 
 <h2 id="Spécifications">Spécifications</h2>
 

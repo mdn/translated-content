@@ -38,8 +38,8 @@ translation_of: Web/CSS/animation
   animation: 3s slidein;
 </pre>
 
-<div class="hidden" id="animation">
-<pre class="brush: html">&lt;div class="grid"&gt;
+<h2 id="animation_example">Exemple d'animation</h2>
+<pre class="brush: html hidden">&lt;div class="grid"&gt;
   &lt;div class="col"&gt;
     &lt;div class="note"&gt;
       Avec l'animation suivante :
@@ -78,7 +78,7 @@ translation_of: Web/CSS/animation
   &lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush: css">html,body {
+<pre class="brush: css hidden">html,body {
   height: 100%;
   box-sizing: border-box;
 }
@@ -170,7 +170,7 @@ button.restart {
   transform-origin: left center;
 }</pre>
 
-<pre class="brush: js">window.addEventListener('load', function () {
+<pre class="brush: js hidden">window.addEventListener('load', function () {
   var ANIMATION = Array.from(document.querySelectorAll('.animation'));
   var BUTTON    = Array.from(document.querySelectorAll('button'));
 
@@ -209,9 +209,8 @@ button.restart {
     btn.addEventListener('click', function () { playPause(index); });
   });
 })</pre>
-</div>
 
-<p>{{EmbedLiveSample("animation", "100%", 260, "", "", "example-outcome-frame")}}</p>
+<p>{{EmbedLiveSample("animation_example", "100%", 260, "", "", "example-outcome-frame")}}</p>
 
 <p><a href="/fr/docs/Web/CSS/Liste_propriétés_CSS_animées">Une liste des propriétés qui peuvent être animées</a> est disponible. On notera que cette liste est également valable pour <a href="/fr/docs/Web/CSS/CSS_Transitions/Utiliser_transitions_CSS">les transitions CSS</a>.</p>
 
