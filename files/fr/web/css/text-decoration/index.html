@@ -12,9 +12,7 @@ translation_of: Web/CSS/text-decoration
 
 <p>La propriété <strong><code>text-decoration</code></strong> est utilisée pour « décorer » le texte en ajoutant une ligne pouvant être positionnée sous, sur ou à travers le texte. C'est une <a href="/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies">propriété raccourcie</a> qui permet de paramétrer simultanément les propriétés « détaillées » : {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}} et {{cssxref("text-decoration-style")}}.</p>
 
-<div>{{EmbedInteractiveExample("pages/css/text-decoration.html")}}</div>
-
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
+<div>{{EmbedInteractiveExample("pages/css/text-decoration.html")}}</div
 
 <p>Ces décorations se propagent sur les différents éléments enfants. Cela signifie qu'il n'est pas possible de désactiver la décoration d'un élément descendant pour lequel un ancêtre est décoré. Par exemple, avec ce fragment de HTML <code>&lt;p&gt;Ce texte a &lt;em&gt; des mots mis en avant&lt;/em&gt; dedans.&lt;/p&gt;</code>, et cette règle CSS <code>p { text-decoration: underline; }</code>, on aura tout le  paragraphe souligné, même si on applique la règle <code>em { text-decoration: none; }</code>, cela n'aurait aucun impact. En revanche, ajouter la règle <code>em { text-decoration: overline; }</code> entraînerait un cumul des décorations pour « des mots mis en avant ».</p>
 
