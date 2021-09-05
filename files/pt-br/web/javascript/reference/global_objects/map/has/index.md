@@ -12,12 +12,11 @@ browser-compat: javascript.builtins.Map.has
 ---
 {{JSRef}}
 
-The **`has()`** method returns a boolean indicating whether an element with the
-specified key exists or not.
+O método **`has()`** retorna um booleano indicando se o elemento com a chave especificada existe ou não.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-has.html")}}
 
-## Syntax
+## Sintáxe
 
 ```js
 has(key)
@@ -26,34 +25,33 @@ has(key)
 ### Parameters
 
 - `key`
-  - : The key of the element to test for presence in the `Map` object.
+  - : A chave do elemento que será testado no objeto `Map`.
 
-### Return value
+### Valor retornado
 
-`true` if an element with the specified key exists in the `Map` object;
-otherwise `false`.
+`true` se o elemento com a chave especificada existe no objeto `Map`, de outra forma será retornado `false`.
 
-## Examples
+## Exemplos
 
-### Using has()
+### Usando has()
 
 ```js
 let myMap = new Map()
 myMap.set('bar', "foo")
 
-myMap.has('bar')   // returns true
-myMap.has('baz')   // returns false
+myMap.has('bar')   // retorna true
+myMap.has('baz')   // retorna false
 ```
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidade com navegadores.
 
 {{Compat}}
 
-## See also
+## Veja também
 
 - {{jsxref("Map")}}
 - {{jsxref("Map.prototype.set()")}}

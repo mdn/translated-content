@@ -12,12 +12,11 @@ browser-compat: javascript.builtins.Map.forEach
 ---
 {{JSRef}}
 
-The **`forEach()`** method executes a provided function once per each key/value
-pair in the `Map` object, in insertion order.
+O método **`forEach()`** executa a função que foi provida uma vez para cada par de chave-valor no objeto `Map`, ma order em que foram inseridos.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-foreach.html")}}
 
-## Syntax
+## Sintáxe
 
 ```js
 // Arrow function
@@ -26,11 +25,11 @@ forEach((value) => { ... } )
 forEach((value, key) => { ... } )
 forEach((value, key, map) => { ... } )
 
-// Callback function
+// função de Callback
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
 
-// Inline callback function
+// função de callback inline
 forEach(function callbackFn() { ... })
 forEach(function callbackFn(value) { ... })
 forEach(function callbackFn(value, key) { ... })
@@ -38,53 +37,52 @@ forEach(function callbackFn(value, key, map) { ... })
 forEach(function callbackFn(value, key, map) { ... }, thisArg)
 ```
 
-### Parameters
+### Parâmetros
 
 - `callbackFn`
-  - : Function to execute for each entry in the map. It takes the following
-    arguments:
+  - : A função que será executada em cada entrada do map. Ela receberá os seguintes argumentos:
     - `value` {{Optional_Inline}}
-      - : Value of each iteration.
+      - : O valor de cada iteração.
     - `key` {{Optional_Inline}}
-      - : Key of each iteration.
+      - : A chave de cada iteração.
     - `map` {{Optional_Inline}}
-      - : The map being iterated.
+      - : O map que está sendo iterado.
 - `thisArg` {{Optional_Inline}}
-  - : Value to use as `this` when executing `callback`.
+  - : O valor para usar como `this` quando o callback for executado.
 
-### Return value
+### Valor retornado
 
 {{jsxref("undefined")}}.
 
-## Description
+## Descrição
 
-The `forEach` method executes the provided `callback` once for each key of the
-map which actually exist. It is not invoked for keys which have been deleted.
-However, it is executed for values which are present but have the value
-`undefined`.
+O método `forEach` executa o `callback` provido uma vez para cada chave do map
+que realmente existe. 
+Ele não é invocado para chaves que foram deletadas. 
+Porém, é executados para valores que estão presentes mesmo tendo o valor `undefined`.
 
-`callback` is invoked with **three arguments**:
+O `callback` é invocado com **três argumentos**:
 
-- the entry's `value`
-- the entry's `key`
-- the **`Map` object** being traversed
+- O `value` de entrada
+- A `key` de entrada
+- o **objeto `Map`** que esta sendo percorrido
 
+Se o parâmetro `thisArg` for provido para o `forEach`, ele será passado para o 
+`callback` quando for invocado, para ser usado como o valor de `this`. De outra forma,
+o valor `undefined` será usado como valor de `this`. o valor de `this` será 
+observado pelo `callback` em última análise e será determinado de acordo com
 If a `thisArg` parameter is provided to `forEach`, it will be passed to
-`callback` when invoked, for use as its `this` value. Otherwise, the value
-`undefined` will be passed for use as its `this` value. The `this` value
-ultimately observable by `callback` is determined according to
-[the usual rules for determining the `this` seen by a function](/en-US/docs/Web/JavaScript/Reference/Operators/this).
+[as regras usuais para a determinação do `this` visto por uma função](/en-US/docs/Web/JavaScript/Reference/Operators/this).
 
-Each value is visited once, except in the case when it was deleted and re-added
-before `forEach` has finished. `callback` is not invoked for values deleted
-before being visited. New values added before `forEach` has finished will be
-visited.
+Cada valor será visitado uma vez, exceto no caso em que foram deletados e adicionados novamento
+antes do `forEach` ser finalizado. o `callback` não é invocado para valores que foram removidos antes de 
+terem sidos visitados. Novos valores adicionados antes do `forEach` terminar serão visitados.
 
-## Examples
+## Exemplos
 
-### Printing the contents of a Map object
+### Exibindo o conteúdo de um objeto Map
 
-The following code logs a line for each element in an `Map` object:
+O código a seguir registra um linha para cada elemento do objeto `Map`:
 
 ```js
 function logMapElements(value, key, map) {
@@ -97,15 +95,15 @@ new Map([['foo', 3], ['bar', {}], ['baz', undefined]]).forEach(logMapElements)
 // "map.get('baz') = undefined"
 ```
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidade com navegadores
 
 {{Compat}}
 
-## See also
+## Veja também
 
 - {{jsxref("Array.prototype.forEach()")}}
 - {{jsxref("Set.prototype.forEach()")}}

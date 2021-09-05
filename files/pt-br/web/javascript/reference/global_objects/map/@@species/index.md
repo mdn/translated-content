@@ -10,29 +10,28 @@ browser-compat: javascript.builtins.Map.@@species
 ---
 {{JSRef}}
 
-The **`Map[@@species]`** accessor property returns the `Map` constructor.
+A propiedade acessora **`Map[@@species]`** retorna o construtor do `Map`.
 
-## Description
+## Descrição
 
-The species accessor property returns the default constructor for `Map` objects.
-Subclass constructors may over-ride it to change the constructor assignment.
+O acessor `species` retorna o valor padrão do construtor dos objetos `Map`
+Subclasses de construtores devem sobrescrever isso para mudar o construtor atríbuido.
 
-## Examples
 
-### Species in ordinary objects
+## Exemplos
 
-The species property returns the default constructor function, which is the
-`Map` constructor for `Map` objects:
+### Species em objetos ordinários
+
+A propiedade *species* retorna a função padrão do construtor, que é o construtor `Map` para objetos `Map`.
 
 ```js
 Map[Symbol.species]; // function Map()
 ```
 
-### Species in derived objects
+### Species em objetos derivados
 
-In a derived collection object (e.g. your custom map `MyMap`), the `MyMap`
-species is the `MyMap` constructor. However, you might want to overwrite this,
-in order to return parent `Map` objects in your derived class methods:
+Em uma objeto derivado (e.g. seu custom map `MyMap`), a `specie` do `MyMap` é o construtor do `MyMap`.
+Porém, você deve querer sobrescrever isso, para retornar o objeto `Map` pai nos métodos derivados de sua classe. 
 
 ```js
 class MyMap extends Map {
@@ -41,15 +40,15 @@ class MyMap extends Map {
 }
 ```
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidade com navegadores
 
 {{Compat}}
 
-## See also
+## Veja também
 
 - {{jsxref("Map")}}
 - {{jsxref("Symbol.species")}}

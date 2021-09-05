@@ -12,32 +12,31 @@ browser-compat: javascript.builtins.Map.get
 ---
 {{JSRef}}
 
-The **`get()`** method returns a specified element from a `Map` object. If the
-value that is associated to the provided key is an object, then you will get a
-reference to that object and any change made to that object will effectively
-modify it inside the `Map` object.
+O método **`get()`** retorna um elemento específico do objeto `Map`. se o valor 
+associado a chave for um objeto, será retornado a referência do objeto e qualquer mudança no mesmo 
+irá afetar o valor que está dentro do objeto `Map`.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-get.html")}}
 
-## Syntax
+## Sintáxe
 
 ```js
 get(key)
 ```
 
-### Parameters
+### Parâmetros
 
 - `key`
-  - : The key of the element to return from the `Map` object.
+  - : A chave do elemento que será retornado do objeto `Map`.
 
-### Return value
+### Valor retornado
 
-The element associated with the specified key, or
-{{jsxref("undefined")}} if the key can't be found in the `Map` object.
+O elemento associado a chave especificada, ou {{jsxref("undefined")}} se 
+a chave não puder ser encontrada no objeto `Map`.
 
-## Examples
+## Exemplos
 
-### Using get()
+### Usando o get()
 
 ```js
 let myMap = new Map();
@@ -47,15 +46,15 @@ myMap.get('bar');   // Returns "foo"
 myMap.get('baz');   // Returns undefined
 ```
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidade com navegadores
 
 {{Compat}}
 
-## See also
+## Veja também
 
 - {{jsxref("Map")}}
 - {{jsxref("Map.prototype.set()")}}

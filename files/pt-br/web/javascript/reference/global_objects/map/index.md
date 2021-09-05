@@ -432,7 +432,7 @@ const second = new Map([
   [2, 'dos']
 ])
 
-// MesclaR maps com um array. A última chave a se repetir vence.
+// Mescla maps com um array. A última chave a se repetir vence.
 const merged = new Map([...first, ...second, [1, 'eins']])
 
 console.log(merged.get(1)) // eins

@@ -12,32 +12,32 @@ browser-compat: javascript.builtins.Map.@@toStringTag
 ---
 {{JSRef}}
 
-The **`Map[@@toStringTag]`** property has an initial value of "Map".
+A propiedade **`Map[@@toStringTag]`** tem o valor inicial do `Map`.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-@@tostringtag.html","shorter")}}{{js_property_attributes(0,0,1)}}
 
-## Syntax
+## Sintáxe
 
 ```js
 Map[Symbol.toStringTag]
 ```
 
-## Examples
+## Exemplos
 
-### Using toStringTag
+### Usando o toStringTag
 
 ```js
 Object.prototype.toString.call(new Map()) // "[object Map]"
 ```
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidade com navegadores
 
 {{Compat}}
 
-## See also
+## Veja também
 
 - {{jsxref("Symbol.toStringTag")}}

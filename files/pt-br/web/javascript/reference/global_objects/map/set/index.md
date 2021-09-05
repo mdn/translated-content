@@ -12,60 +12,58 @@ browser-compat: javascript.builtins.Map.set
 ---
 {{JSRef}}
 
-The **`set()`** method adds or updates an element with a specified key and a
-value to a `Map` object.
+O método **`set()`** adiciona ou atualiza um elemento com a chave especificada e um valor do objeto `Map`.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-set.html")}}
 
-## Syntax
+## Sintáxe
 
 ```js
 set(key, value)
 ```
 
-### Parameters
+### Parâmetros
 
 - `key`
-  - : The key of the element to add to the `Map` object.
+  - : A chave do elemento para adicionar ao objeto `Map`.
 - `value`
-  - : The value of the element to add to the `Map` object.
+  - : O valor do elemento que será adicionado ao objeto `Map`.
 
-### Return value
+### Valor retornado
 
-The `Map` object.
+O objeto `Map`
 
-## Examples
+## Exemplos
 
-### Using set()
+### Usando o set()
 
 ```js
 let myMap = new Map()
 
-// Add new elements to the map
+// Adiciona um elemento ao map
 myMap.set('bar', 'foo')
 myMap.set(1, 'foobar')
 
-// Update an element in the map
+// Atualiza um elemento no map
 myMap.set('bar', 'baz')
 ```
 
-### Using the set() with chaining
+### Usando o `set` de forma encadeada
 
-Since the `set()` method returns back the same `Map` object, you can chain the
-method call like below:
+Já que o método `set()` retorna o mesmo objeto `Map`, você pode encadear a chamada do método como abaixo: 
 
 ```js
-// Add new elements to the map with chaining.
+// Adiciona novos elementos ao map de forma encadeada.
 myMap.set('bar', 'foo')
      .set(1, 'foobar')
      .set(2, 'baz');
 ```
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidade com navegadores
 
 {{Compat}}
 

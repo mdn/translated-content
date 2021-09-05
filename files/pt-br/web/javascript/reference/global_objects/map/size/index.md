@@ -10,20 +10,18 @@ browser-compat: javascript.builtins.Map.size
 ---
 {{JSRef}}
 
-The **`size`** accessor property returns the number of elements in a
-{{jsxref("Map")}} object.
+A propiedade acessora **`size`** retorna o número de elementos que estão dentro do objeto {{jsxref("Map")}}
 
 {{EmbedInteractiveExample("pages/js/map-prototype-size.html")}}
 
-## Description
+## Descrição
 
-The value of `size` is an integer representing how many entries the `Map` object
-has. A set accessor function for `size` is `undefined`; you can not change this
-property.
+O valor de `size` é um inteiro que representa a quantidade de entradas que o objeto `Map` possue.
+A função acessora set para `size` é `undefined`; você não poderá alterar essa propiedade.
 
-## Examples
+## Exemplos
 
-### Using size
+### Usando o size
 
 ```js
 var myMap = new Map();
@@ -34,14 +32,14 @@ myMap.set('g', 'gamma');
 myMap.size // 3
 ```
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidade com browsers
 
 {{Compat}}
 
-## See also
+## Veja também
 
 - {{jsxref("Map")}}

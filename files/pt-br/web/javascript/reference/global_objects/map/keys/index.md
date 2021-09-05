@@ -12,25 +12,24 @@ browser-compat: javascript.builtins.Map.keys
 ---
 {{JSRef}}
 
-The **`keys()`** method returns a new
-**[Iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)** object
-that contains the keys for each element in the `Map` object in insertion order.
+O método **`keys()`** retorna um novo objeto **[iterativo](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)** que contém
+as chaves de cada elemento dentro do objeto `Map` na ordem em que foram inseridos.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-keys.html")}}
 
-## Syntax
+## Sintáxe
 
 ```js
 keys()
 ```
 
-### Return value
+### Valor retornado
 
-A new {{jsxref("Map")}} iterator object.
+Um novo objeto {{jsxref("Map")}} iterativo.
 
-## Examples
+## Exemplos
 
-### Using keys()
+### Usando keys()
 
 ```js
 var myMap = new Map();
@@ -45,15 +44,15 @@ console.log(mapIter.next().value); // 1
 console.log(mapIter.next().value); // Object
 ```
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidade com navegadores
 
 {{Compat}}
 
-## See also
+## Veja também
 
 - {{jsxref("Map.prototype.entries()")}}
 - {{jsxref("Map.prototype.values()")}}

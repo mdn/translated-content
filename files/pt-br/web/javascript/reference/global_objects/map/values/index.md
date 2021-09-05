@@ -17,21 +17,24 @@ The **`values()`** method returns a new
 that contains the values for each element in the `Map` object in insertion
 order.
 
+O método **`values()`** retorna um novo objeto **[iterativo](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)** que contém o valor 
+de cada elemento dentro do objeto `Map` na ordem em que foram inseridos.
+
 {{EmbedInteractiveExample("pages/js/map-prototype-values.html")}}
 
-## Syntax
+## Sintáxe
 
 ```js
 values()
 ```
 
-### Return value
+### Valor retornado
 
-A new {{jsxref("Map")}} iterator object.
+Um novo objeto {{jsxref("Map")}} iterativo. 
 
-## Examples
+## Exemplos
 
-### Using values()
+### Usando values()
 
 ```js
 var myMap = new Map();
@@ -46,11 +49,11 @@ console.log(mapIter.next().value); // "bar"
 console.log(mapIter.next().value); // "baz"
 ```
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidade com navegadores
 
 {{Compat}}
 

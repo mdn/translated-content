@@ -12,23 +12,23 @@ browser-compat: javascript.builtins.Map.clear
 ---
 {{JSRef}}
 
-The **`clear()`** method removes all elements from a `Map` object.
+O método **`clear()`** remove todos os elementos de um objeto `Map`.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-clear.html")}}
 
-## Syntax
+## Sintáxe
 
 ```js
 clear()
 ```
 
-### Return value
+### Valor retornado
 
 {{jsxref("undefined")}}.
 
-## Examples
+## Exemplos
 
-### Using clear()
+### Usando o clear()
 
 ```js
 var myMap = new Map();
@@ -44,14 +44,14 @@ myMap.size;       // 0
 myMap.has('bar')  // false
 ```
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidade com navegadores
 
 {{Compat}}
 
-## See also
+## Veja também
 
 - {{jsxref("Map")}}

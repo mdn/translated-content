@@ -11,27 +11,26 @@ browser-compat: javascript.builtins.Map.Map
 ---
 {{JSRef}}
 
-The **`Map()` constructor** creates {{jsxref("Map")}} objects.
+O **construtor `Map()`** cria objetos {{jsxref("Map")}}.  
 
-## Syntax
+## Sintáxe
 
 ```js
 new Map()
 new Map(iterable)
 ```
 
-### Parameters
+### Parâmetros
 
 - `iterable` {{optional_inline}}
-  - : An {{jsxref("Array")}} or other
-    [iterable](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) object
-    whose elements are key-value pairs. (For example, arrays with two elements,
-    such as `[[ 1, 'one' ],[ 2, 'two' ]]`.) Each key-value pair is added to the
-    new `Map`.
+  - : Um {{jsxref("Array")}} ou outro
+    objeto [iterável](/en-US/docs/Web/JavaScript/Reference/Iteration_protocols) 
+    dos quais os elementos são pares chave-valor. (Por exemplo, arrays com dois elementos como `[[ 1, 'one' ],[ 2, 'two' ]]`.)
+    Cada par chave-valor é adicionado ao novo `Map`.
 
-## Examples
+## Exemplos
 
-### Creating a new Map
+### Criando um novo Map
 
 ```js
 let myMap = new Map([
@@ -41,17 +40,17 @@ let myMap = new Map([
 ])
 ```
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidade com navegadores
 
 {{Compat}}
 
-## See also
+## Veja também
 
-- A polyfill of `Map` is available in
+- Um polyfill de `Map` esta disponível em
   [`core-js`](https://github.com/zloirock/core-js#map)
 - {{jsxref("Set")}}
 - {{jsxref("WeakMap")}}

@@ -12,30 +12,29 @@ browser-compat: javascript.builtins.Map.delete
 ---
 {{JSRef}}
 
-The **`delete()`** method removes the specified element from a `Map` object by
-key.
+O método **`delete()`** remove o elemento especifico do objeto `Map` através de sua chave.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-delete.html")}}
 
-## Syntax
+## Sintáxe
 
 ```js
 delete(key)
 ```
 
-### Parameters
+### Parâmetros
 
 - `key`
-  - : The key of the element to remove from the `Map` object.
+  - : A chave do elemento que será removido do objeto `Map`.
 
-### Return value
+### Valor retornado
 
-`true` if an element in the `Map` object existed and has been removed, or
-`false` if the element does not exist.
+`true` se o elemento do `Map` existe e foi removido, ou 
+`false` se o elemento não existe.
 
-## Examples
+## Exemplos
 
-### Using delete()
+### Usando o delete()
 
 ```js
 var myMap = new Map();
@@ -45,11 +44,11 @@ myMap.delete('bar'); // Returns true. Successfully removed.
 myMap.has('bar');    // Returns false. The "bar" element is no longer present.
 ```
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidade com navegadores
 
 {{Compat}}
 

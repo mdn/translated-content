@@ -12,28 +12,26 @@ browser-compat: javascript.builtins.Map.entries
 ---
 {{JSRef}}
 
-The **`entries()`** method returns a new
-**[Iterator](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)** object
-that contains the `[key, value]` pairs for each element in the `Map` object in
-insertion order. In this particular case, this iterator object is also an
-iterable, so the for-of loop can be used. When the protocol `[Symbol.iterator]`
-is used, it returns a function that, when invoked, returns this iterator itself.
+O método **`entries()`** retorna um novo objeto **[iterativo](/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)** que cobntém os pares `[key, value]` de cada elemento no objeto `Map` na 
+ordem em que foram inseridos. Nesse caso em particular, esse objeto iterativo também é iterativo. então
+o loop for-of pode ser usado. Quando o protocolo `[Symbol.iterator]` é usado, ele retorna uma função que,
+quando invocada, retorna o própio iterador.
 
 {{EmbedInteractiveExample("pages/js/map-prototype-entries.html")}}
 
-## Syntax
+## Sintáxe
 
 ```js
 entries()
 ```
 
-### Return value
+### Valor retornado
 
-A new {{jsxref("Map")}} iterator object.
+Um novo objeto iterativo {{jsxref("Map)}}.
 
-## Examples
+## Exemplos
 
-### Using entries()
+### Usando o entries()
 
 ```js
 let myMap = new Map()
@@ -48,15 +46,15 @@ console.log(mapIter.next().value)  // [1, "bar"]
 console.log(mapIter.next().value)  // [Object, "baz"]
 ```
 
-## Specifications
+## Especificações
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatibilidade com navegadores
 
 {{Compat}}
 
-## See also
+## Veja também
 
 - {{jsxref("Map.prototype.keys()")}}
 - {{jsxref("Map.prototype.values()")}}
