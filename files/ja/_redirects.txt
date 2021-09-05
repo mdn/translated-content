@@ -1232,7 +1232,7 @@
 /ja/docs/DOM/TouchList	/ja/docs/Web/API/TouchList
 /ja/docs/DOM/Touch_events	/ja/docs/Web/API/Touch_events
 /ja/docs/DOM/UserProximityEvent	/ja/docs/Web/API/UserProximityEvent
-/ja/docs/DOM/UserProximityEvent.near	/ja/docs/orphaned/Web/API/UserProximityEvent/near
+/ja/docs/DOM/UserProximityEvent.near	/ja/docs/Web/API/UserProximityEvent
 /ja/docs/DOM/Using_full-screen_mode	/ja/docs/Web/API/Fullscreen_API
 /ja/docs/DOM/Using_media_queries_from_code	/ja/docs/Web/CSS/Media_Queries/Testing_media_queries
 /ja/docs/DOM/Using_media_queries_from_code-redirect-1	/ja/docs/Web/CSS/Media_Queries/Testing_media_queries
@@ -1514,7 +1514,6 @@
 /ja/docs/DOM/window.navigator.platform	/ja/docs/Web/API/Navigator/platform
 /ja/docs/DOM/window.navigator.product	/ja/docs/Web/API/Navigator/product
 /ja/docs/DOM/window.navigator.productSub	/ja/docs/Web/API/Navigator/productSub
-/ja/docs/DOM/window.navigator.registerContentHandler	/ja/docs/orphaned/Web/API/Navigator/registerContentHandler
 /ja/docs/DOM/window.navigator.registerProtocolHandler	/ja/docs/Web/API/Navigator/registerProtocolHandler
 /ja/docs/DOM/window.navigator.userAgent	/ja/docs/Web/API/Navigator/userAgent
 /ja/docs/DOM/window.navigator.vendor	/ja/docs/Web/API/Navigator/vendor
@@ -1736,7 +1735,6 @@
 /ja/docs/DOM:window.navigator.platform	/ja/docs/Web/API/Navigator/platform
 /ja/docs/DOM:window.navigator.product	/ja/docs/Web/API/Navigator/product
 /ja/docs/DOM:window.navigator.productSub	/ja/docs/Web/API/Navigator/productSub
-/ja/docs/DOM:window.navigator.registerContentHandler	/ja/docs/orphaned/Web/API/Navigator/registerContentHandler
 /ja/docs/DOM:window.navigator.registerProtocolHandler	/ja/docs/Web/API/Navigator/registerProtocolHandler
 /ja/docs/DOM:window.navigator.userAgent	/ja/docs/Web/API/Navigator/userAgent
 /ja/docs/DOM:window.navigator.vendor	/ja/docs/Web/API/Navigator/vendor
@@ -3162,7 +3160,6 @@
 /ja/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/ja/docs/Web/API/IndexedDB_API/Basic_Terminology
 /ja/docs/Web/API/MediaRecorder_API	/ja/docs/Web/API/MediaStream_Recording_API
 /ja/docs/Web/API/Navigator.getUserMedia	/ja/docs/Web/API/Navigator/getUserMedia
-/ja/docs/Web/API/Navigator/registerContentHandler	/ja/docs/orphaned/Web/API/Navigator/registerContentHandler
 /ja/docs/Web/API/NavigatorID	/ja/docs/Web/API/Navigator
 /ja/docs/Web/API/NavigatorID/appCodeName	/ja/docs/Web/API/Navigator/appCodeName
 /ja/docs/Web/API/NavigatorID/appName	/ja/docs/Web/API/Navigator/appName
@@ -3246,9 +3243,8 @@
 /ja/docs/Web/API/Slotable	/ja/docs/Web/API/Element
 /ja/docs/Web/API/SourceBufferList/SourceBuffer	/ja/docs/orphaned/Web/API/SourceBufferList/SourceBuffer
 /ja/docs/Web/API/TouchList.length	/ja/docs/Web/API/TouchList/length
-/ja/docs/Web/API/TypeInfo	/ja/docs/orphaned/Web/API/TypeInfo
-/ja/docs/Web/API/UserProximityEvent.near	/ja/docs/orphaned/Web/API/UserProximityEvent/near
-/ja/docs/Web/API/UserProximityEvent/near	/ja/docs/orphaned/Web/API/UserProximityEvent/near
+/ja/docs/Web/API/UserProximityEvent.near	/ja/docs/Web/API/UserProximityEvent
+/ja/docs/Web/API/UserProximityEvent/near	/ja/docs/Web/API/UserProximityEvent
 /ja/docs/Web/API/VRDevice	/ja/docs/Web/API/VRDisplay
 /ja/docs/Web/API/VRDevice/cancelAnimationFrame	/ja/docs/Web/API/VRDisplay/cancelAnimationFrame
 /ja/docs/Web/API/VRDevice/capabilities	/ja/docs/Web/API/VRDisplay/capabilities
@@ -3496,7 +3492,6 @@
 /ja/docs/Web/API/window.navigator.platform	/ja/docs/Web/API/Navigator/platform
 /ja/docs/Web/API/window.navigator.product	/ja/docs/Web/API/Navigator/product
 /ja/docs/Web/API/window.navigator.productSub	/ja/docs/Web/API/Navigator/productSub
-/ja/docs/Web/API/window.navigator.registerContentHandler	/ja/docs/orphaned/Web/API/Navigator/registerContentHandler
 /ja/docs/Web/API/window.navigator.userAgent	/ja/docs/Web/API/Navigator/userAgent
 /ja/docs/Web/API/window.navigator.vendor	/ja/docs/Web/API/Navigator/vendor
 /ja/docs/Web/API/window.navigator.vendorSub	/ja/docs/Web/API/Navigator/vendorSub
