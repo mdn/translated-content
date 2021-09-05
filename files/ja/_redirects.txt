@@ -2772,7 +2772,7 @@
 /ja/docs/MDN_at_ten	/ja/docs/MDN/At_ten
 /ja/docs/MDN_at_ten/Contributing_to_MDN	/ja/docs/MDN/Contribute
 /ja/docs/MDN_at_ten/History_of_MDN	/ja/docs/MDN/At_ten/History_of_MDN
-/ja/docs/Map	/ja/docs/orphaned/Map
+/ja/docs/Map	/ja/docs/Web/JavaScript/Reference/Global_Objects/Map
 /ja/docs/MathML	/ja/docs/Web/MathML
 /ja/docs/MathML/Element	/ja/docs/Web/MathML/Element
 /ja/docs/MathML/Element/math	/ja/docs/Web/MathML/Element/math
