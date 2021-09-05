@@ -172,7 +172,7 @@ console.log(b); // [2, 3]</pre>
 
 <h4 id="Unpacking_values_from_a_regular_expression_match" name="Unpacking_values_from_a_regular_expression_match">正規表現の一致からの値取得</h4>
 
-<p>正規表現オブジェクトの <code><a href="/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec"> exec()</a></code> メソッドは一致するものを見つけ、最初に一致した文字列全体の一部と、正規表現内の各括弧で囲まれたグループに一致した文字列の部分を含む配列を返します。分割代入によって、簡単にこの配列の一部分を取り出せます。また必要でない場合は、完全一致を無視できます。</p>
+<p>正規表現オブジェクトの <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/exec"> exec()</a></code> メソッドは一致するものを見つけ、最初に一致した文字列全体の一部と、正規表現内の各括弧で囲まれたグループに一致した文字列の部分を含む配列を返します。分割代入によって、簡単にこの配列の一部分を取り出せます。また必要でない場合は、完全一致を無視できます。</p>
 
 <pre class="brush:js notranslate">function parseProtocol(url) {
   const parsedURL = /^(\w+)\:\/\/([^\/]+)\/(.*)$/.exec(url);
