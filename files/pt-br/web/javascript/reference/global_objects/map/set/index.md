@@ -31,7 +31,7 @@ set(key, value)
 
 ### Valor retornado
 
-O objeto `Map`
+O objeto `Map`.
 
 ## Exemplos
 
@@ -67,7 +67,7 @@ myMap.set('bar', 'foo')
 
 {{Compat}}
 
-## See also
+## Veja também
 
 - {{jsxref("Map")}}
 - {{jsxref("Map.prototype.get()")}}

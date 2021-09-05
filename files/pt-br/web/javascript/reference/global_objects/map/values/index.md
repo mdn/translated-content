@@ -57,7 +57,7 @@ console.log(mapIter.next().value); // "baz"
 
 {{Compat}}
 
-## See also
+## Veja também
 
 - {{jsxref("Map.prototype.entries()")}}
 - {{jsxref("Map.prototype.keys()")}}

@@ -48,7 +48,7 @@ console.log(mapIter.next().value) // [1, "bar"]
 console.log(mapIter.next().value) // [Object, "baz"]
 ```
 
-### Using \[@@iterator]\() with for..of
+### Usando o \[@@iterator]\() com for..of
 
 ```js
 const myMap = new Map()
@@ -75,11 +75,11 @@ for (const [key, value] of myMap) {
 
 {{Specifications}}
 
-## Browser compatibility
+## Compatiblidade com navegadores
 
 {{Compat}}
 
-## See also
+## Veja também
 
 - {{jsxref("Map.prototype.entries()")}}
 - {{jsxref("Map.prototype.keys()")}}

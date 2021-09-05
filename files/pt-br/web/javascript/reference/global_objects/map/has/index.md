@@ -22,7 +22,7 @@ O método **`has()`** retorna um booleano indicando se o elemento com a chave es
 has(key)
 ```
 
-### Parameters
+### Parâmetros
 
 - `key`
   - : A chave do elemento que será testado no objeto `Map`.

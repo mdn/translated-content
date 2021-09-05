@@ -52,6 +52,6 @@ myMap.has('bar');    // Returns false. The "bar" element is no longer present.
 
 {{Compat}}
 
-## See also
+## Veja também
 
 - {{jsxref("Map")}}

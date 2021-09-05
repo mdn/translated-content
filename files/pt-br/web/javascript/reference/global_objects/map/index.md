@@ -18,7 +18,7 @@ O objeto **`Map`** contém pares de chave-valor e lembra a ordem original da ins
 
 ## Descrição
 
-Um objeto `Map` itera seus elementos na order da inserção - um loop {{jsxref("Statements/for...of", "for...of")}} retorna um array de `[key,value]` para cada iteração
+Um objeto `Map` itera seus elementos na order da inserção - um loop {{jsxref("Statements/for...of", "for...of")}} retorna um array de `[key, value]` para cada iteração
 
 ### Igualdade de chaves
 
@@ -26,7 +26,7 @@ Um objeto `Map` itera seus elementos na order da inserção - um loop {{jsxref("
 
 - O {{jsxref("NaN")}} é considerado o mesmo que o `NaN` (apesar de `NaN !== NaN`) e todos os outros valores são considerados de acordo com a semântica do operador `===`. 
 
-- Na especificação atual do ECMAScript, `-0` e `+0` são considerados iguais, embora não tenha sido nos esboços anteriores. Veja _"Value equality for -0 and 0"_ in the [Compatibilidade com navegadores](#browser_compatibility) para mais detalhes;
+- Na especificação atual do ECMAScript, `-0` e `+0` são considerados iguais, embora não tenha sido nos esboços anteriores. Veja _"Equivalência de valor entre -0 e 0"_ in the [Compatibilidade com navegadores](#browser_compatibility) para mais detalhes;
 
 ### Objetos vs. Maps
 
@@ -182,7 +182,6 @@ Porém, existem diferenças importantes que fazem o `Map` ser preferido em algun
   </tbody>
 </table>
 
-### Setting object properties
 ### Definindo propiedades no objeto
 
 Definir propiedades no objeto também funciona em objetos `Map`, e pode causar um confusão considerável.
@@ -224,7 +223,7 @@ console.log(contacts.size) // 1
 - {{jsxref("Map/Map", "Map()")}}
   - : Cria um novo objeto `Map`.
 
-## Static properties
+## Propiedades estáticas
 
 - {{jsxref("Map.@@species", "get Map[@@species]")}}
   - : A função do construtor que é usada para criar apartir de objetos.
@@ -296,7 +295,7 @@ myMap.get({})            // undefined, porque keyObj !== {}
 myMap.get(function() {}) // undefined, porque keyFunc !== function () {}
 ```
 
-### Using NaN as Map keys
+### Usando NaN como chaves de Map
 
 {{jsxref("NaN")}} também pode ser usado como chave. Apesar de todo o `NaN` não ser igual a ele mesmo (`NaN !== NaN`), o exemplo a seguir funciona porque não é possível distinguir um `NaN` de outros.
 
