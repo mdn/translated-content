@@ -1,0 +1,101 @@
+---
+title: WindowTimers.clearTimeout()
+slug: Web/API/clearTimeout
+tags:
+  - API
+  - Method
+  - Window
+translation_of: Web/API/WindowOrWorkerGlobalScope/clearTimeout
+original_slug: Web/API/WindowOrWorkerGlobalScope/clearTimeout
+---
+<div>
+<div>
+<div>{{APIRef("HTML DOM")}}</div>
+</div>
+</div>
+
+<h2 id="Summary" name="Summary">Sumário</h2>
+
+<p>O método <strong><code>clearTimeout()</code></strong> do escopo<em> </em>{{domxref("WindowOrWorkerGlobalScope")}} cancela um <em>timeout</em> previamente estabelecido pela função {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}}.</p>
+
+<h2 id="Syntax" name="Syntax">Síntaxe</h2>
+
+<pre class="syntaxbox"><em>escopo</em>.clearTimeout(<em>timeoutID</em>)
+</pre>
+
+<h3 id="Parâmetros">Parâmetros</h3>
+
+<dl>
+ <dt><code>timeoutID</code></dt>
+ <dd>O ID do <em>timeout</em> que você deseja cancelar. Esse ID é o retorno da função <code>setTimeout()</code>.</dd>
+</dl>
+
+<p>É interessante ressaltar que os conjuntso de <em>ID</em>s usados pelos métodos {{domxref("WindowOrWorkerGlobalScope.setTimeout", "setTimeout()")}} e {{domxref("WindowOrWorkerGlobalScope.setInterval", "setInterval()")}} são compartilhados, o que significa que <code>clearTimeout()</code> e {{domxref("WindowOrWorkerGlobalScope.clearInterval", "clearInterval()")}} podem ser tecnicamente utilizados de forma intercambiável. No entanto, para obter-se maior clareza, isso deve ser evitado.</p>
+
+<h2 id="Example" name="Example">Exemplo</h2>
+
+<p>Execute o script abaixo em uma página web e clique na página uma vez. Você verá uma mensagem aparecer um segundo depois. Se você continuar clicando na página várias vezes nesse intervalo de tempo, a mensagem aparecerá uma única vez.</p>
+
+<pre class="brush: js" dir="rtl">var alarme = {
+  relembrar: function(aMessage) {
+    alert(aMessage);
+    delete this.timeoutID;
+  },
+
+  setup: function() {
+    if (typeof this.timeoutID === 'number') {
+        this.cancelar();
+    }
+
+    this.timeoutID = window.setTimeout(function(msg) {
+        this.relembrar(msg);
+    }.bind(this), 1000, 'Wake up!');
+  },
+
+  cancelar: function() {
+    window.clearTimeout(this.timeoutID);
+  }
+};
+window.onclick = function() { alarme.setup() };</pre>
+
+<h2 id="Notes" name="Notes">Notas</h2>
+
+<p>Passar um <em>ID</em> inválido para <code>clearTimeout</code> não causa nenhum efeito (não lança nenhuma exceção).</p>
+
+<h2 id="Specification" name="Specification">Especificações</h2>
+
+<table class="standard-table" style="height: 166px; width: 1207px;">
+ <tbody>
+  <tr>
+   <th scope="col">Especificação</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comentário</th>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'webappapis.html#dom-cleartimeout', 'WindowOrWorkerGlobalScope.clearTimeout()')}}</td>
+   <td>{{Spec2("HTML WHATWG")}}</td>
+   <td>Método movido para <code>WindowOrWorkerGlobalScope</code> .</td>
+  </tr>
+  <tr>
+   <td>{{SpecName('HTML WHATWG', 'webappapis.html#dom-cleartimeout', 'clearTimeout()')}}</td>
+   <td>{{Spec2('HTML WHATWG')}}</td>
+   <td> </td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="See_also" name="See_also">Compatibilidade</h2>
+
+
+
+<p>{{Compat("api.WindowOrWorkerGlobalScope.clearTimeout")}}</p>
+
+<h2 id="See_also" name="See_also">Veja também</h2>
+
+<ul>
+ <li>{{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}</li>
+ <li>{{domxref("WindowOrWorkerGlobalScope.setInterval()")}}</li>
+ <li>{{domxref("WindowOrWorkerGlobalScope.clearInterval()")}}</li>
+ <li>{{domxref("Window.requestAnimationFrame()")}}</li>
+ <li><a href="https://developer.mozilla.org/en-US/docs/JavaScript/Timers/Daemons" title="JavaScript/Timers/Daemons"><em>Daemons</em> management</a></li>
+</ul>
