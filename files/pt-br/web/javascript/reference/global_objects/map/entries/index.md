@@ -25,6 +25,7 @@ quando invocada, retorna o própio iterador.
 entries()
 ```
 
+
 ### Valor retornado
 
 Um novo objeto iterativo {{jsxref("Map)}}.
