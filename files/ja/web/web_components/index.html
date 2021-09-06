@@ -31,7 +31,7 @@ translation_of: Web/Web_Components
 <p>Web Component を実装する基本的な流れは、以下に挙げてある通りです。</p>
 
 <ol>
- <li>Web Component の機能を明示したクラスもしくは関数を作成します。クラスを使用するなら、ECMAScript 2015 のクラスの文法に従って下さい。 (詳細は<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes">クラス</a>を参照して下さい。)</li>
+ <li>Web Component の機能を明示したクラスもしくは関数を作成します。クラスを使用するなら、ECMAScript 2015 のクラスの文法に従って下さい。 (詳細は<a href="/ja/docs/Web/JavaScript/Reference/Classes">クラス</a>を参照して下さい。)</li>
  <li>新しく作成したカスタム要素を登録します。{{domxref("CustomElementRegistry.define()")}} メソッドに、要素の名前、機能が明示されているクラスもしくは関数、またオプションでどの要素を継承するかを渡して下さい。</li>
  <li>必要なら、{{domxref("Element.attachShadow()")}} メソッドを使って、Shadow DOM をカスタム要素に紐付けます。通常の DOM メソッドを使って、子要素やイベントリスナーなどをShadow DOM に追加して下さい。</li>
  <li>必要なら、{{htmlelement("template")}} と {{htmlelement("slot")}} を使って、HTML テンプレートを定義します。通常の DOM メソッドを再度使って、テンプレートをクローンし、Shadow DOM に紐付けてください。</li>
@@ -41,11 +41,11 @@ translation_of: Web/Web_Components
 <h2 id="チュートリアル">チュートリアル</h2>
 
 <dl>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements">カスタム要素を使ってみよう</a></dt>
+ <dt><a href="/ja/docs/Web/Web_Components/Using_custom_elements">カスタム要素を使ってみよう</a></dt>
  <dd>単純な Web Component を作成するために、カスタム要素の機能の使い方を紹介したガイドラインです。それ以外にも、ライフサイクルコールバックやその他の高度な機能の中を覗いていきます。</dd>
- <dt><a href="https://developer.mozilla.org/ja/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM を使ってみよう</a></dt>
+ <dt><a href="/ja/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM を使ってみよう</a></dt>
  <dd>Shadow DOM の基礎を眺めるガイドラインです。 Shadow DOM を要素にどう紐付けるか、Shadow DOM ツリーにどう追加するか、どうスタイルするかなどを紹介しています。</dd>
- <dt><a href="https://developer.mozilla.org/ja/docs/Web/Web_Components/Using_templates_and_slots">テンプレートとスロットを使ってみよう</a></dt>
+ <dt><a href="/ja/docs/Web/Web_Components/Using_templates_and_slots">テンプレートとスロットを使ってみよう</a></dt>
  <dd>{{htmlelement("template")}} と {{htmlelement("slot")}} 要素を使って、再利用可能な HTML 構造体の定義と使用方法を紹介したガイドラインです。 </dd>
 </dl>
 
@@ -58,7 +58,7 @@ translation_of: Web/Web_Components
  <dd>カスタム要素に関わる機能が含まれています。中でも注目すべきは、 {{domxref("CustomElementRegistry.define()")}} メソッドで、新しいカスタム要素を登録するために用います。それにより、カスタム要素をドキュメント内で使用できるようになります。</dd>
  <dt>{{domxref("Window.customElements")}}</dt>
  <dd><code>CustomElementRegistry</code> オブジェクトへの参照を返します。</dd>
- <dt><a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements#Using_the_lifecycle_callbacks">Life cycle callbacks</a></dt>
+ <dt><a href="/ja/docs/Web/Web_Components/Using_custom_elements#Using_the_lifecycle_callbacks">Life cycle callbacks</a></dt>
  <dd>カスタム要素のクラス定義の中で定義された特別なコールバック関数で、挙動に影響を与えます。
  <ul>
   <li><code>connectedCallback</code>: カスタム要素がドキュメントの DOM に初めて接続したときに呼び出されます。</li>
@@ -85,9 +85,9 @@ translation_of: Web/Web_Components
  <dd>カスタム要素に関連する擬似クラス:
  <ul>
   <li>{{cssxref(":defined")}}: ビルトイン要素と <code>CustomElementRegistry.define()</code> で定義されるカスタム要素を含む、あらゆる定義済みの要素にマッチします。</li>
-  <li>{{cssxref(":host")}}: 使われている CSS を含む、<a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a> のシャドーホストを選択します。</li>
-  <li>{{cssxref(":host()")}}: 使われている CSS を含む、<a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a> のシャドーホストを選択します。 (Shadow DOM の内側からカスタム要素を選択することができます。) ただし、関数のパラメータとして渡されるセレクタがシャドーホストに一致している場合に限ります。</li>
-  <li>{{cssxref(":host-context()")}}: 使われている CSS を含む、<a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a> のシャドーホストを選択します。 (Shadow DOM の内側からカスタム要素を選択することができます。) ただし、関数のパラメータとして渡されるセレクタが DOM 階層内のシャドーホストの先祖要素に一致している場合に限ります。</li>
+  <li>{{cssxref(":host")}}: 使われている CSS を含む、<a href="/ja/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a> のシャドーホストを選択します。</li>
+  <li>{{cssxref(":host()")}}: 使われている CSS を含む、<a href="/ja/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a> のシャドーホストを選択します。 (Shadow DOM の内側からカスタム要素を選択することができます。) ただし、関数のパラメータとして渡されるセレクタがシャドーホストに一致している場合に限ります。</li>
+  <li>{{cssxref(":host-context()")}}: 使われている CSS を含む、<a href="/ja/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a> のシャドーホストを選択します。 (Shadow DOM の内側からカスタム要素を選択することができます。) ただし、関数のパラメータとして渡されるセレクタが DOM 階層内のシャドーホストの先祖要素に一致している場合に限ります。</li>
  </ul>
  </dd>
 </dl>
@@ -129,7 +129,7 @@ translation_of: Web/Web_Components
  <dd>Contains an HTML fragment that is not rendered when a containing document is initially loaded, but can be displayed at runtime using JavaScript, mainly used as the basis of custom element structures. The associated DOM interface is {{domxref("HTMLTemplateElement")}}.</dd>
  <dt>{{htmlelement("slot")}}</dt>
  <dd>A placeholder inside a web component that you can fill with your own markup, which lets you create separate DOM trees and present them together. The associated DOM interface is {{domxref("HTMLSlotElement")}}.</dd>
- <dt>The <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/slot">slot</a></code> global HTML attribute</dt>
+ <dt>The <code><a href="/ja/docs/Web/HTML/Global_attributes/slot">slot</a></code> global HTML attribute</dt>
  <dd>Assigns a slot in a shadow DOM shadow tree to an element.</dd>
  <dt>{{domxref("Slotable")}}</dt>
  <dd>A mixin implemented by both {{domxref("Element")}} and {{domxref("Text")}} nodes, defining features that allow them to become the contents of an {{htmlelement("slot")}} element. The mixin defines one attribute, {{domxref("Slotable.assignedSlot")}}, which returns a reference to the slot the node is inserted in.</dd>
@@ -173,22 +173,22 @@ translation_of: Web/Web_Components
   <tr>
    <td>{{SpecName("HTML WHATWG","custom-elements.html#custom-elements","custom elements")}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements">HTML Custom Elements</a> の定義です。</td>
+   <td><a href="/ja/docs/Web/Web_Components/Using_custom_elements">HTML Custom Elements</a> の定義です。</td>
   </tr>
   <tr>
    <td>{{SpecName("DOM WHATWG","#shadow-trees","shadow trees")}}</td>
    <td>{{Spec2('DOM WHATWG')}}</td>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a> の定義です。</td>
+   <td><a href="/ja/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a> の定義です。</td>
   </tr>
   <tr>
    <td>{{SpecName("HTML Imports", "", "")}}</td>
    <td>{{Spec2("HTML Imports")}}</td>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/HTML_Imports">HTML Imports</a> の最初の定義です。</td>
+   <td><a href="/ja/docs/Web/Web_Components/HTML_Imports">HTML Imports</a> の最初の定義です。</td>
   </tr>
   <tr>
    <td>{{SpecName("Shadow DOM", "", "")}}</td>
    <td>{{Spec2("Shadow DOM")}}</td>
-   <td><a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a> の最初の定義です。</td>
+   <td><a href="/ja/docs/Web/Web_Components/Using_shadow_DOM">Shadow DOM</a> の最初の定義です。</td>
   </tr>
  </tbody>
 </table>
