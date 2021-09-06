@@ -15,10 +15,10 @@ translation_of: Web/API/IDBDatabase
  <p>IndexedDB API<code>のIDBDatabase</code>インターフェイスは、<a href="/ja/docs/IndexedDB#database_connection">データベースへの接続</a>を提供します。 <code>IDBDatabase</code>オブジェクトで、データベースの<a href="/ja/docs/IndexedDB#gloss_transaction">transaction</a>を開き、データベースのオブジェクト（データ）を生成したり、操作したり、削除したりできます。このインターフェイスはデータベースのバージョンを取得したり、統合したりする唯一の方法を提供します。</p>
 </div>
 <div class="note">
- <p><strong>Note</strong>: Everything you do in IndexedDB always happens in the context of a <a href="/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction">transaction</a>, representing interactions with data in the database. All objects in IndexedDB — including object stores, indexes, and cursors — are tied to a particular transaction. Thus, you cannot execute commands, access data, or open anything outside of a transaction.</p>
+ <p><strong>Note</strong>: Everything you do in IndexedDB always happens in the context of a <a href="/ja/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction">transaction</a>, representing interactions with data in the database. All objects in IndexedDB — including object stores, indexes, and cursors — are tied to a particular transaction. Thus, you cannot execute commands, access data, or open anything outside of a transaction.</p>
 </div>
 <h2 id="メソッド">メソッド</h2>
-<p>Inherits from: <a href="/en-US/docs/DOM/EventTarget">EventTarget</a></p>
+<p>Inherits from: <a href="/ja/docs/DOM/EventTarget">EventTarget</a></p>
 <dl>
  <dt>
   {{domxref("IDBDatabase.close")}}</dt>
@@ -46,11 +46,11 @@ translation_of: Web/API/IDBDatabase
  <dt>
   {{domxref("IDBDatabase.version")}} {{readonlyInline}}</dt>
  <dd>
-  接続しているデータベースのバージョンを含む<a href="/en-US/docs/NSPR_API_Reference/Long_Long_(64-bit)_Integers">64-bit integer</a>。データベースが初めて作られた場合、この属性は空文字である。</dd>
+  接続しているデータベースのバージョンを含む<a href="/ja/docs/NSPR_API_Reference/Long_Long_(64-bit)_Integers">64-bit integer</a>。データベースが初めて作られた場合、この属性は空文字である。</dd>
  <dt>
   {{domxref("IDBDatabase.objectStoreNames")}} {{readonlyInline}}</dt>
  <dd>
-  接続しているデータベースの<a href="/en-US/docs/IndexedDB#gloss_object_store">object stores</a>名のリストを含む{{ domxref("DOMStringList") }} 。</dd>
+  接続しているデータベースの<a href="/ja/docs/IndexedDB#gloss_object_store">object stores</a>名のリストを含む{{ domxref("DOMStringList") }} 。</dd>
 </dl>
 <h3 id="イベントハンドラ">イベントハンドラ</h3>
 <dl>
@@ -138,7 +138,7 @@ translation_of: Web/API/IDBDatabase
 
 <h2 id="関連情報">関連情報</h2>
 <ul>
- <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
+ <li><a href="/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB">Using IndexedDB</a></li>
  <li>Starting transactions: {{domxref("IDBDatabase")}}</li>
  <li>Using transactions: {{domxref("IDBTransaction")}}</li>
  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>

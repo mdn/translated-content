@@ -29,7 +29,7 @@ var bool = range.intersectsNode(document.getElementsByTagName("p").item(0));</pr
 <h2 id="Notes" name="Notes">注記</h2>
 <p>このメソッドは廃止されました。代わりに W3C DOM Range メソッドを用います（※参照: <code><a href="/ja/docs/DOM/range.compareBoundaryPoints">compareBoundaryPoints()</a></code> ）</p>
 <div class="warning">
- <b>注意:</b> このメソッドは <a href="/en-US/docs/Gecko">Gecko</a> 1.9 より<a href="/ja/docs/Gecko_1.9_Changes_affecting_websites">削除されています</a>。もし既にこのメソッドを用いている場合、出来るだけ早く、 <code>compareBoundaryPoints()</code> に切り替えて下さい。</div>
+ <b>注意:</b> このメソッドは <a href="/ja/docs/Gecko">Gecko</a> 1.9 より<a href="/ja/docs/Gecko_1.9_Changes_affecting_websites">削除されています</a>。もし既にこのメソッドを用いている場合、出来るだけ早く、 <code>compareBoundaryPoints()</code> に切り替えて下さい。</div>
 <p>次の関数を代替として用いる事が出来ます。</p>
 <pre class="brush:js notranslate">function rangeIntersectsNode(range, node) {
   var nodeRange = node.ownerDocument.createRange();
