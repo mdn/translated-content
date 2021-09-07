@@ -38,18 +38,20 @@ translation_of: Web/CSS/transform-function/rotate3d()
 </dl>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">笛卡尔坐标 on ℝ<sup>2</sup></th>
-   <th scope="col">齐次坐标 on ℝℙ<sup>2</sup></th>
-   <th scope="col">笛卡尔坐标 on ℝ<sup>3</sup></th>
-   <th scope="col">齐次坐标 on ℝℙ<sup>3</sup></th>
-  </tr>
- </thead>
  <tbody>
   <tr>
-   <td colspan="2">这种变换应用于3D空间，不可用于平面空间</td>
+   <th scope="col">在ℝ<sup>2</sup>上的笛卡尔坐标</th>
+   <td rowspan="2">这种变换应用于3D空间，不可用于平面空间</td>
+  </tr>
+  <tr>
+   <th scope="col">在ℝℙ<sup>2</sup>上的齐次坐标</th>
+  </tr>
+  <tr>
+   <th scope="col">在ℝ<sup>3</sup>上的笛卡尔坐标</th>
    <td colspan="1"><a href="/@api/deki/files/5987/=transform-functions-rotate3d_cart.png"><img src="/@api/deki/files/5987/=transform-functions-rotate3d_cart.png?size=webview" style="height: 47px; width: 510px;"></a><math> <mfenced><mtable><mtr><mtd>1<mo>+</mo>(1<mo>-</mo>cos(<mi>a</mi>))(<msup><mi>x</mi><mn>2</mn></msup><mo>-</mo>1)</mtd><mtd><mi>z</mi><mo>·</mo>sin(<mi>a</mi>)+<mi>x</mi><mi>y</mi>(1<mo>-</mo>cos(<mi>a</mi>))</mtd><mtd><mo>-</mo><mi>y</mi><mo>·</mo>sin(<mi>a</mi>)<mo>+</mo><mi>x</mi><mi>z</mi><mo>·</mo>(1<mo>-</mo>cos(<mi>a</mi>))</mtd></mtr><mtr><mtd><mo>-</mo><mi>z</mi><mo>·</mo>sin(<mi>a</mi>)<mo>+</mo><mi>x</mi><mi>y</mi><mo>·</mo>(1<mo>-</mo>cos(<mi>a</mi>))</mtd><mtd>1+(1-cos(a))(y2-1)</mtd><mtd><mi>x</mi><mo>·</mo>sin(<mi>a</mi>)<mo>+</mo><mi>y</mi><mi>z</mi><mo>·</mo>(1<mo>-</mo>cos(<mi>a</mi>))</mtd><mtr><mtd>ysin(a) + xz(1-cos(a))</mtd><mtd>-xsin(a)+yz(1-cos(a))</mtd><mtd>1+(1-cos(a))(z2-1)</mtd><mtd>t</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr> </mtr></mtable></mfenced></math></td>
+  </tr>
+  <tr>
+   <th scope="col">在ℝℙ<sup>3</sup>上的齐次坐标</th>
    <td colspan="1"><a href="/@api/deki/files/5986/=transform-functions-rotate3d_hom4.png"><img src="/@api/deki/files/5986/=transform-functions-rotate3d_hom4.png?size=webview" style="height: 61px; width: 522px;"></a></td>
   </tr>
  </tbody>
