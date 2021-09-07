@@ -24,7 +24,7 @@ translation_of: Web/API/MediaDevices/getUserMedia
 <p>これは {{domxref("MediaStream")}} オブジェクトに解決する {{jsxref("Promise")}} を返します。ユーザーが拒否した場合や、一致するメディアが利用できない場合、 Promise はそれぞれ <code>NotAllowedError</code> または <code>NotFoundError</code> で拒否されます。</p>
 
 <div class="note">
-<p><strong>メモ:</strong> ユーザーが選択する必要が全くなく、リクエストを単純に無視できる場合、返却された Promise が解決または拒絶の<em>どちらにもならない</em>可能性があります。</p>
+<p><strong>メモ:</strong> ユーザーが選択する必要が全くなく、リクエストを単純に無視できる場合、返却された Promise が解決または拒否の<em>どちらにもならない</em>可能性があります。</p>
 </div>
 
 <p>一般的に、 {{domxref("MediaDevices")}} のシングルトンオブジェクトは以下のように、 {{domxref("navigator.mediaDevices")}} を使用してアクセスします。</p>
