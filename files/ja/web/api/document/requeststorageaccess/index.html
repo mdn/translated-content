@@ -14,7 +14,7 @@ translation_of: Web/API/Document/requestStorageAccess
 ---
 <div>{{APIRef}}</div>
 
-<p><strong><code>requestStorageAccess()</code></strong> は {{domxref("Document")}} インターフェイスのメソッドで、ファーストパーティのストレージへのアクセスが許可されたら解決し、アクセスが拒否されたら拒絶される {{jsxref("Promise")}} を返します。</p>
+<p><strong><code>requestStorageAccess()</code></strong> は {{domxref("Document")}} インターフェイスのメソッドで、ファーストパーティのストレージへのアクセスが許可されたら解決し、アクセスが拒否されたら拒否される {{jsxref("Promise")}} を返します。</p>
 
 <h2 id="Conditions_for_granting_storage_access" name="Conditions_for_granting_storage_access">ストレージへのアクセスが許可される条件</h2>
 
@@ -22,14 +22,14 @@ translation_of: Web/API/Document/requestStorageAccess
 
 <ol>
  <li>文書がすでにアクセスを許可されていれば、解決。</li>
- <li>文書が null オリジンを持っていれば、拒絶。</li>
+ <li>文書が null オリジンを持っていれば、拒否。</li>
  <li>文書のフレームが主フレームであれば、解決。</li>
  <li>副フレームのオリジンが主フレームのものと同じであれば、解決。</li>
  <li>副フレームがサンドボックス化されていなければ、7へ飛ぶ。</li>
- <li>副フレームにトークン <code>allow-storage-access-by-user-activation</code> がなければ、拒絶。</li>
- <li>副フレームの親フレームが最上位フレームでなければ、拒絶。</li>
- <li>ブラウザーがユーザージェスチャーを処理中でなければ、拒絶。</li>
- <li>ブラウザーが持っている追加の規則をチェック。例えば、ホワイトリスト、ブラックリスト、端末上の分類、ユーザー設定、クリックジャック防止の推測、ユーザーへの明示的なパーミッションの確認など。いくつかの規則が満たされていなければ、拒絶。</li>
+ <li>副フレームにトークン <code>allow-storage-access-by-user-activation</code> がなければ、拒否。</li>
+ <li>副フレームの親フレームが最上位フレームでなければ、拒否。</li>
+ <li>ブラウザーがユーザージェスチャーを処理中でなければ、拒否。</li>
+ <li>ブラウザーが持っている追加の規則をチェック。例えば、ホワイトリスト、ブラックリスト、端末上の分類、ユーザー設定、クリックジャック防止の推測、ユーザーへの明示的なパーミッションの確認など。いくつかの規則が満たされていなければ、拒否。</li>
  <li>文書にクッキーやその他のサイトストレージへのアクセスを許可し、将来の {{domxref("Document.hasStorageAccess()")}} および <code>requestStorageAccess()</code> の呼び出しのためにその事実を保存。</li>
 </ol>
 
@@ -99,7 +99,7 @@ translation_of: Web/API/Document/requestStorageAccess
 
 <h3 id="Return_value" name="Return_value">返値</h3>
 
-<p>ファーストパーティのストレージへのアクセスが許可されたら <code>undefined</code> で満たされ、アクセスが拒否されたら拒絶される {{jsxref("Promise")}} です。</p>
+<p>ファーストパーティのストレージへのアクセスが許可されたら <code>undefined</code> で満たされ、アクセスが拒否されたら拒否される {{jsxref("Promise")}} です。</p>
 
 <p>Promise が解決されると、 Promise が満たされたか拒否されたかに関わらず、ユーザージェスチャーが処理されているかのように解決ハンドラーが実行されます。</p>
 
