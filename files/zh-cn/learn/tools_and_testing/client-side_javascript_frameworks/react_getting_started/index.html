@@ -339,33 +339,6 @@ ReactDOM.render(&lt;App /&gt;, document.getElementById('root'));</pre>
 
 <pre class="brush: js notranslate">&lt;img src={logo} className="App-logo" alt="logo" /&gt;</pre>
 
-<pre class="brush: js notranslate">import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    &lt;div className="App"&gt;
-      &lt;header className="App-header"&gt;
-        &lt;img src={logo} className="App-logo" alt="logo" /&gt;
-        &lt;p&gt;
-          Edit &lt;code&gt;src/App.js&lt;/code&gt; and save to reload.
-        &lt;/p&gt;
-        &lt;a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        &gt;
-          Learn React
-        &lt;/a&gt;
-      &lt;/header&gt;
-    &lt;/div&gt;
-  );
-}
-export default App;</pre>
-
-
 <p>可以看到，  <code>&lt;img /&gt;</code> 标签的 <code>src</code> 属性只值是在大括号中的 -- <code>{logo}</code>. 这是JSX 识别变量的方式。 React 将会识别 <code>{logo}</code>， 知道您在指在我们 app 第二行引入的 logo， 然后 React 会读取这个文件它并渲染。</p>
 
 <p>让我们试着设置一个我们自己的变量，在 <code>App</code> return 之前， 添加 <code>const subject = 'React';</code>。 您的代码现在应该如下所示：</p>
