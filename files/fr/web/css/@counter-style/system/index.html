@@ -38,7 +38,7 @@ system: extends decimal;
 
 <dl>
  <dt><code>cyclic</code></dt>
- <dd>Le système itère et boucle parmi la liste des symboles fournis. Une fois que la fin de la liste est atteinte, le système reprend au début de la liste. Ce système est pertinent lorsqu'on a un seul symbole ou une liste non numérotée avec des puces. Afin que le style du compteur soit valide, il faut au moins définir un symbole via le descripteur {{cssxref("symbols")}}.</dd>
+ <dd>Le système itère et boucle parmi la liste des symboles fournis. Une fois que la fin de la liste est atteinte, le système reprend au début de la liste. Ce système est pertinent lorsqu'on a un seul symbole ou une liste non numérotée avec des puces. Afin que le style du compteur soit valide, il faut au moins définir un symbole via le descripteur {{cssxref("symbols()")}}.</dd>
  <dt><code>fixed</code></dt>
  <dd>Cette valeur permet de définir un ensemble fini de symboles. Une fois que le système a utilisé les différents symboles, il poursuivra en utilisant le système de secours. Afin que le style du compteur soit valide, il faut qu'au moins un symbole soit défini avec le descripteur <code>symbols</code>. On peut éventuellement ajouter un entier (valeur {{cssxref("integer")}}) après le système et qui définit la valeur du premier symbole. La valeur par défaut de ce paramètre (s'il est absent) est <code>1</code>.</dd>
  <dt><code>symbolic</code></dt>
@@ -334,5 +334,5 @@ system: extends decimal;
  <li>{{cssxref("list-style")}},</li>
  <li>{{cssxref("list-style-image")}},</li>
  <li>{{cssxref("list-style-position")}},</li>
- <li>{{cssxref("symbols", "symbols()")}}, la notation fonctionnelle utilisée pour créer des styles de compteur anonymes.</li>
+ <li>{{cssxref("symbols()", "symbols()")}}, la notation fonctionnelle utilisée pour créer des styles de compteur anonymes.</li>
 </ul>

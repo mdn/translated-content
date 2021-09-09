@@ -13,7 +13,7 @@ original_slug: Web/CSS/Comprendre_z-index/Empilement_de_couches
 
 <h2 id="Le_contexte_dempilement">Le contexte d'empilement</h2>
 
-<p>Dans l'exemple précédent, <a href="/fr/docs/Web/CSS/Comprendre_z-index/Ajout_de_z-index">Ajout de z-index</a>, les blocs <em>DIV</em> sont rendus les uns au dessus des autres (de l'arrière vers l'avant), en commençant par celui dont la valeur de {{cssxref("z-index")}} est la plus faible et en finissant par celui dont la valeur de <code>z-index</code> est la plus forte. Dans cet exemple, il n'y a qu'un seul <em>contexte d'empilement</em>, qui est l'élément <code>HTML</code> racine de la page.</p>
+<p>Dans l'exemple précédent, <a href="/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index">Ajout de z-index</a>, les blocs <em>DIV</em> sont rendus les uns au dessus des autres (de l'arrière vers l'avant), en commençant par celui dont la valeur de {{cssxref("z-index")}} est la plus faible et en finissant par celui dont la valeur de <code>z-index</code> est la plus forte. Dans cet exemple, il n'y a qu'un seul <em>contexte d'empilement</em>, qui est l'élément <code>HTML</code> racine de la page.</p>
 
 <p>Dans certaines conditions, un contexte d'empilement enfant peut être créé à l'intérieur d'un bloc <em>DIV</em> (ou un autre élément) n'importe où dans le document. En particulier, un élément positionné (en absolu ou en relatif) possédant une valeur de <code>z-index</code> différente de <em>auto</em> crée son propre contexte d'empilement : tous ses éléments enfants sont entièrement empilés dans ce contexte, suivant les mêmes règles que celles expliquées précédemment. Les valeurs de <code>z-index</code> de ses enfants n'ont de signification que dans ce contexte. Le bloc <em>DIV</em> entier et son contenu sont empilés comme un seul élément dans le contexte d'empilement de leur parent.</p>
 
@@ -56,7 +56,7 @@ original_slug: Web/CSS/Comprendre_z-index/Empilement_de_couches
 
 <h4 id="Illustration">Illustration</h4>
 
-<p><img alt="Figure 1. Exemple de règles d'empilement modifiées avec la propriété z-index" class="internal" src="/@api/deki/files/1451/=Understanding_zindex_04.png"></p>
+<p><img alt="Figure 1. Exemple de règles d'empilement modifiées avec la propriété z-index" class="internal" src="understanding_zindex_04.png"></p>
 
 <p>Dans cet exemple, tous les éléments positionnés créent leur propre contexte d'empilement, du fait de leur positionnement et de leur valeur <code>z-index</code>. La hiérarchie des contextes d'empilement est organisée comme suit :</p>
 

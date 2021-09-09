@@ -13,7 +13,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
 
 <p>{{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_une_grille_CSS", "Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_grille","Web/CSS/CSS_Grid_Layout")}}</p>
 
-<p>Dans <a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_une_grille_CSS">le guide précédent</a>, on a étudié les lignes formées par une grille et comment positionner des objets sur ces lignes. Lorsqu'on utilise une grille CSS, on a toujours ces lignes et celles-ci permettent d'avoir une disposition simple. Toutefois, il existe une autre méthode de disposition avec les grilles, qu'on peut utiliser seule ou combinée avec les lignes. Avec cette méthode, on place les éléments sur des <em>zones</em> de la grille. Nous allons voir dans ce guide comment cela fonctionne voire comment on peut faire de l'ASCII-art en CSS avec les grilles !</p>
+<p>Dans <a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">le guide précédent</a>, on a étudié les lignes formées par une grille et comment positionner des objets sur ces lignes. Lorsqu'on utilise une grille CSS, on a toujours ces lignes et celles-ci permettent d'avoir une disposition simple. Toutefois, il existe une autre méthode de disposition avec les grilles, qu'on peut utiliser seule ou combinée avec les lignes. Avec cette méthode, on place les éléments sur des <em>zones</em> de la grille. Nous allons voir dans ce guide comment cela fonctionne voire comment on peut faire de l'ASCII-art en CSS avec les grilles !</p>
 
 <h2 id="Donner_un_nom_à_une_zone_de_grille">Donner un nom à une zone de grille</h2>
 
@@ -26,7 +26,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
 
 <p>Ici, on définit les quatre lignes qui entourent la zone en question :</p>
 
-<p><img alt="The Grid Area defined by lines" src="https://mdn.mozillademos.org/files/14667/4_Area.png" style="height: 354px; width: 951px;"></p>
+<p><img alt="The Grid Area defined by lines" src="4_area.png"></p>
 
 <p>On peut également définir une zone en lui donnant un nom puis en définissant l'emplacement de cette zone grâce à la propriété {{cssxref("grid-template-areas")}}. Vous pouvez choisir les noms de vos zones, on peut par exemple créer une disposition avec quatre zones :</p>
 
@@ -37,7 +37,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
  <li>Le contenu principale (<em>content</em>)</li>
 </ul>
 
-<p><img alt="An image showing a simple two column layout with header and footer" src="https://mdn.mozillademos.org/files/14669/4_Layout.png" style="height: 397px; width: 900px;"></p>
+<p><img alt="An image showing a simple two column layout with header and footer" src="4_layout.png"></p>
 
 <p>Avec {{cssxref("grid-area")}}, on affecte un nom à chacune de ces zones. Pour le moment, aucune disposition n'a été créée mais on a des noms qu'on pourra utiliser dans notre disposition :</p>
 
@@ -307,7 +307,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
 
 <p>Dans l'exemple qui suit, on crée un objet « media » qui servira de composant pour afficher un media (une image par exemple) d'un côté et un texte de l'autre. On pourra ainsi voir l'effet obtenu en changeant la disposition avec l'image à droite ou à gauche.</p>
 
-<p><img alt="Images showing an example media object design" src="https://mdn.mozillademos.org/files/14671/4_Media_objects.png" style="height: 432px; width: 800px;"></p>
+<p><img alt="Images showing an example media object design" src="4_media_objects.png"></p>
 
 <p>Ici, la grille se compose de deux pistes en colonnes. La colonne pour l'image est dimensionnée avec <code>1fr</code> et celle pour le texte reçoit <code>3fr</code>. Si on souhaitait utiliser une largeur fixe pour l'image, on aurait pu utiliser des pixels pour définir la taille de la colonne et utiliser <code>1fr</code> pour la zone du texte. Cette colonne de <code>1fr</code> aurait alors occupé le reste de l'espace.</p>
 
@@ -447,7 +447,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
  <li>{{cssxref("grid-auto-flow")}}</li>
 </ul>
 
-<p>Cette propriété réinitialise également la propriété {{cssxref("grid-gap")}} avec la valeur <code>0</code> mais, en revanche, elle ne permet pas de définir des espaces.</p>
+<p>Cette propriété réinitialise également la propriété {{cssxref("gap")}} avec la valeur <code>0</code> mais, en revanche, elle ne permet pas de définir des espaces.</p>
 
 <p>On peut utiliser la même syntaxe qu'avec {{cssxref("grid-template")}} mais attention, cela réinitialisera les valeurs des autres propriétés :</p>
 

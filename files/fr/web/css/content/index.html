@@ -9,7 +9,7 @@ translation_of: Web/CSS/content
 ---
 <div>{{CSSRef}}</div>
 
-<p>La propriété <strong><code>content</code></strong> est utilisée avec les pseudo-éléments {{cssxref("::before")}} et {{cssxref("::after")}} afin de générer le contenu d'un élément. Les objets insérés via la propriété <code>content</code> sont des <em><a href="/fr/docs/Web/CSS/Élément_remplacé">éléments remplacés anonymes</a>.</em></p>
+<p>La propriété <strong><code>content</code></strong> est utilisée avec les pseudo-éléments {{cssxref("::before")}} et {{cssxref("::after")}} afin de générer le contenu d'un élément. Les objets insérés via la propriété <code>content</code> sont des <em><a href="/fr/docs/Web/CSS/Replaced_element">éléments remplacés anonymes</a>.</em></p>
 
 <pre class="brush: css no-line-numbers">/* Des mots-clés qui ne peuvent pas être mélangés
   avec d'autres valeurs */
@@ -60,11 +60,11 @@ content: unset;
  <dt>{{cssxref("&lt;string&gt;")}}</dt>
  <dd>Contenu sous forme de texte. Les caractères non-latins doivent être encodés avec leur séquence d'échappement Unicode (<code>\000A9</code> représentera par exemple le symbole ©).</dd>
  <dt>{{cssxref("&lt;image&gt;")}}</dt>
- <dd>Une image (valeur de type {{cssxref("&lt;image&gt;")}}) de type {{cssxref("&lt;url&gt;")}} ou {{cssxref("&lt;gradient&gt;")}} ou une partie de la page web fournie par la fonction {{cssxref("element", "element()")}} et qui indique le contenu à afficher.</dd>
- <dt><code>counter()</code> ou <code>counters()</code> (cf. {{cssxref("&lt;counter&gt;")}})</dt>
- <dd>Un compteur CSS, généralement un nombre, qui peut être affiché grâce à la fonction {{cssxref("counter")}} or {{cssxref("counters")}}.</dd>
+ <dd>Une image (valeur de type {{cssxref("&lt;image&gt;")}}) de type {{cssxref("&lt;url&gt;")}} ou {{cssxref("&lt;gradient&gt;")}} ou une partie de la page web fournie par la fonction {{cssxref("element()", "element()")}} et qui indique le contenu à afficher.</dd>
+ <dt><code>counter()</code> ou <code>counters()</code> (cf. {{cssxref("CSS_Lists_and_Counters/Using_CSS_counters")}})</dt>
+ <dd>Un compteur CSS, généralement un nombre, qui peut être affiché grâce à la fonction {{cssxref("CSS_Lists_and_Counters/Using_CSS_counters")}} or {{cssxref("counters()")}}.</dd>
  <dd>La première possède deux formes : 'counter(<var>name</var>)' ou 'counter(<var>name</var>, <var>style</var>)'. Le texte généré est la valeur du compteur le plus profond possédant un nom donné dans ce pseudo-élément ; il est formaté selon le style indiqué (<code>decimal</code> par défaut).</dd>
- <dd>La seconde a également deux formes : <code>counters(<var>name</var>, <var>string</var>)</code> ou <code>counters(<var>name</var>, <var>string</var>, <var>style</var>)</code>. Le texte généré est la valeur de tous les compteurs d'un nom donné dans ce pseudo-élément, depuis le moins profond jusqu'au plus profond séparés par la chaîne définie. Les compteurs sont formatés selon le style indiqué (<code>decimal</code> par défaut). Voir <a href="/fr/docs/Web/CSS/counter">la section sur les compteurs automatiques</a> et sur la numérotation pour plus d'informations.</dd>
+ <dd>La seconde a également deux formes : <code>counters(<var>name</var>, <var>string</var>)</code> ou <code>counters(<var>name</var>, <var>string</var>, <var>style</var>)</code>. Le texte généré est la valeur de tous les compteurs d'un nom donné dans ce pseudo-élément, depuis le moins profond jusqu'au plus profond séparés par la chaîne définie. Les compteurs sont formatés selon le style indiqué (<code>decimal</code> par défaut). Voir <a href="/fr/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">la section sur les compteurs automatiques</a> et sur la numérotation pour plus d'informations.</dd>
  <dt><code>attr(X)</code></dt>
  <dd>Renvoie la valeur de l'attribut X de l'élément comme une chaîne. S'il n'existe pas d'attribut X, une chaîne vide est renvoyée. La sensibilité à la casse du nom de l'attribut dépend du langage utilisé.</dd>
  <dt><code>open-quote</code> | <code>close-quote</code></dt>
@@ -216,7 +216,7 @@ li {
 
 <h2 id="Accessibilité">Accessibilité</h2>
 
-<p>Le contenu généré par CSS n'est pas inclus dans le <a href="/fr/docs/Web/API/Document_Object_Model/Introduction">DOM</a>. Pour cette raison, il ne fait pas partie de l'<a href="/fr/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs">arbre d'accessibilité</a> et certaines technologies d'assistances ou certains navigateurs ne permettront pas d'annoncer ce contenu. Si ce contenu porte des informations essentielles à la compréhension de la page, il faut inclure ces informations de façon sémantique dans le document principal.</p>
+<p>Le contenu généré par CSS n'est pas inclus dans le <a href="/fr/docs/Web/API/Document_Object_Model/Introduction">DOM</a>. Pour cette raison, il ne fait pas partie de l'<a href="/fr/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis">arbre d'accessibilité</a> et certaines technologies d'assistances ou certains navigateurs ne permettront pas d'annoncer ce contenu. Si ce contenu porte des informations essentielles à la compréhension de la page, il faut inclure ces informations de façon sémantique dans le document principal.</p>
 
 <ul>
  <li><a href="https://tink.uk/accessibility-support-for-css-generated-content/">La prise en charge relative à l'accessibilité pour les contenus générés par CSS generated content – Tink (en anglais)</a></li>

@@ -15,7 +15,7 @@ original_slug: Web/CSS/timing-function
 
 <p>Cette fonction prend comme entrée un ratio de temps (0 : l'état initial, 1 : l'état final) et produit un ratio d'évolution (sous la forme d'une valeur {{cssxref("&lt;number&gt;")}}) allant également de 0.0 à 1.0.</p>
 
-<p><img src="/files/3434/TF_with_output_gt_than_1.png"><img src="/files/3435/TF_with_output_gt_than_1_clipped.png" style="margin-right: 5px;"></p>
+<p><img src="tf_with_output_gt_than_1.png"><img src="tf_with_output_gt_than_1_clipped.png" style="margin-right: 5px;"></p>
 
 <p>Le ratio de sortie peut être supérieur à 1.0 ou inférieur à 0.0. Cela entraînera l'animation « plus loin » que l'état final ou initial avant de revenir. Cela permettra de créer un effet de <em>rebondissement</em>.</p>
 
@@ -99,11 +99,11 @@ cubic-bezier(-1.9, 0.3, -0.2, 2.1)
 
 <p>La notation fonctionnelle <code>steps()</code> permet de définir <a href="https://en.wikipedia.org/wiki/Step_function">une fonction en escalier</a> qui découpe les valeurs de sortie en « marches » de même longueur. Chacune de ces marches correspondra à une étape de l'animation.</p>
 
-<p style="float: left;"><img src="/files/3436/steps(2,start).png" style="height: 332px; width: 248px;"></p>
+<p style="float: left;"><img src="/files/3436/steps(2,start).png"></p>
 
 <p><code>steps(2, start)</code></p>
 
-<p style="float: left;"><img src="/files/3437/steps(4,end).png" style="height: 332px; width: 248px;"></p>
+<p style="float: left;"><img src="/files/3437/steps(4,end).png"></p>
 
 <p><code>steps(4, end)</code></p>
 
@@ -163,7 +163,7 @@ steps(0, end)
 
 <p>La notation fonctionnelle <code>frames()</code> définit une fonction en escalier avec des intervalles (les marches) équidistantes. La différence difference entre <code>frames()</code> et <code>steps()</code> est que <code>frames()</code> considèrent l'état initial (0%) et final (100%) comme étant des paliers à part entière. Ces états sont donc affichés aussi longtemps que les autres intervalles.</p>
 
-<p><img src="https://www.w3.org/TR/css-timing-1/frames-timing-func-examples.svg" style="float: left; height: 200px; width: 244px;"><code>frames(2), frames(4)</code></p>
+<p><img src="https://www.w3.org/TR/css-timing-1/frames-timing-func-examples.svg" style="float: left;"><code>frames(2), frames(4)</code></p>
 
 <p> </p>
 
@@ -211,31 +211,31 @@ frames(0)
 
 <h4 id="linear"><code>linear</code></h4>
 
-<p><img src="/files/3425/cubic-bezier,linear.png" style="float: left; height: 332px; width: 249px;">Ce mot-clé représente la fonction de temporisation <code>cubic-bezier(</code><code>0.0, 0.0, 1.0, 1.0</code><code>)</code>. Cette fonction permet de passer de l'état initial à l'état final avec une vitesse constante.</p>
+<p><img src="/files/3425/cubic-bezier,linear.png" style="float: left;">Ce mot-clé représente la fonction de temporisation <code>cubic-bezier(</code><code>0.0, 0.0, 1.0, 1.0</code><code>)</code>. Cette fonction permet de passer de l'état initial à l'état final avec une vitesse constante.</p>
 
 <h4 id="ease"><code>ease</code></h4>
 
-<p><img src="/files/3429/cubic-bezier,ease.png" style="float: left; height: 332px; width: 244px;">Ce mot-clé représente la fonction de temporisation <code>cubic-bezier(0.25, 0.1, 0.25, 1.0)</code>. Cette fonction est semblable à <code>ease-in-out</code> sauf qu'elle accélère plus rapidement au début et ralentit dès la moitié du parcours..</p>
+<p><img src="/files/3429/cubic-bezier,ease.png" style="float: left;">Ce mot-clé représente la fonction de temporisation <code>cubic-bezier(0.25, 0.1, 0.25, 1.0)</code>. Cette fonction est semblable à <code>ease-in-out</code> sauf qu'elle accélère plus rapidement au début et ralentit dès la moitié du parcours..</p>
 
 <h4 id="ease-in"><code>ease-in</code></h4>
 
-<p><img src="/files/3426/cubic-bezier,ease-in.png" style="float: left; height: 332px; width: 249px;">Ce mot-clé représente la fonction de temporisation <code>cubic-bezier(0.42, 0.0, 1.0, 1.0)</code>. L'animation démarre lentement puis accélère progressivement jusqu'à atteindre l'état final. Cela donne l'impression que l'animation s'arrête brutalement.</p>
+<p><img src="/files/3426/cubic-bezier,ease-in.png" style="float: left;">Ce mot-clé représente la fonction de temporisation <code>cubic-bezier(0.42, 0.0, 1.0, 1.0)</code>. L'animation démarre lentement puis accélère progressivement jusqu'à atteindre l'état final. Cela donne l'impression que l'animation s'arrête brutalement.</p>
 
 <h4 id="ease-in-out"><code>ease-in-out</code></h4>
 
-<p><img src="/files/3428/cubic-bezier,ease-in-out.png" style="float: left; height: 332px; width: 244px;">Ce mot-clé représente la fonction de temporisation <code>cubic-bezier(</code><code>0.42, 0.0, 0.58, 1.0</code><code>)</code>. L'animation démarre lentement puis accélère progressivement avant de ralentir à nouveau à l'approche de l'état final. Dans la première phase, la courbe se comporte comme <code>ease-in</code> et dans la deuxième moitié, elle se comporte comme <code>ease-out</code>.</p>
+<p><img src="/files/3428/cubic-bezier,ease-in-out.png" style="float: left;">Ce mot-clé représente la fonction de temporisation <code>cubic-bezier(</code><code>0.42, 0.0, 0.58, 1.0</code><code>)</code>. L'animation démarre lentement puis accélère progressivement avant de ralentir à nouveau à l'approche de l'état final. Dans la première phase, la courbe se comporte comme <code>ease-in</code> et dans la deuxième moitié, elle se comporte comme <code>ease-out</code>.</p>
 
 <h4 id="ease-out"><code>ease-out</code></h4>
 
-<p><img src="/files/3427/cubic-bezer,ease-out.png" style="float: left; height: 332px; width: 249px;">Ce mot-clé représente la fonction de temporisation <code>cubic-bezier(</code><code>0.0, 0.0, 0.58, 1.0</code><code>)</code>. L'animation démarre rapidement puis ralentit progressivement avant d'atteindre son état final.</p>
+<p><img src="/files/3427/cubic-bezer,ease-out.png" style="float: left;">Ce mot-clé représente la fonction de temporisation <code>cubic-bezier(</code><code>0.0, 0.0, 0.58, 1.0</code><code>)</code>. L'animation démarre rapidement puis ralentit progressivement avant d'atteindre son état final.</p>
 
 <h4 id="step-start"><code>step-start</code></h4>
 
-<p><img src="/files/3423/steps(1,start).png" style="float: left; height: 332px; width: 248px;">Ce mot-clé représente la fonction de temporisation <code>steps(1, start)</code> (ou <code>steps(1, jump-start)</code>). Avec cette fonction, l'animation passe directement à l'état final dès le début et conserve cet état jusqu'à la fin de l'animation.</p>
+<p><img src="/files/3423/steps(1,start).png" style="float: left;">Ce mot-clé représente la fonction de temporisation <code>steps(1, start)</code> (ou <code>steps(1, jump-start)</code>). Avec cette fonction, l'animation passe directement à l'état final dès le début et conserve cet état jusqu'à la fin de l'animation.</p>
 
 <h4 id="step-end"><code>step-end</code></h4>
 
-<p><img src="/files/3424/steps(1,end).png" style="float: left; height: 332px; width: 248px;">Ce mot-clé représente la fonction de temporisation <code>steps(1, end)</code> (ou <code>steps(1, jump-end)</code>). Avec cette fonction, l'animation reste dans son état initial tout le long de la durée et passe directement à la position finale à la toute fin.</p>
+<p><img src="/files/3424/steps(1,end).png" style="float: left;">Ce mot-clé représente la fonction de temporisation <code>steps(1, end)</code> (ou <code>steps(1, jump-end)</code>). Avec cette fonction, l'animation reste dans son état initial tout le long de la durée et passe directement à la position finale à la toute fin.</p>
 
 <h2 id="Spécifications">Spécifications</h2>
 
@@ -269,6 +269,6 @@ frames(0)
 
 <ul>
  <li>Les propriétés {{cssxref("transition-timing-function")}} et {{cssxref("animation-timing-function")}} qui utilisent une valeur de type <code>&lt;timing-function&gt;</code></li>
- <li><a href="/fr/docs/Web/CSS/Animations_CSS">Les animations CSS</a></li>
+ <li><a href="/fr/docs/Web/CSS/CSS_Animations">Les animations CSS</a></li>
  <li><a href="/fr/docs/Web/CSS/CSS_Transitions">Les transitions CSS</a></li>
 </ul>

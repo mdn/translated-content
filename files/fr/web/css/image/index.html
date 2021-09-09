@@ -10,7 +10,7 @@ translation_of: Web/CSS/image
 ---
 <div>{{CSSRef}}</div>
 
-<p>Le type de donnée CSS <strong><code>&lt;image&gt;</code></strong> représente une image en deux dimensions. Il existe deux types d'images en CSS : les images statiques (souvent utilisées via une URL (cf. {{cssxref("&lt;url&gt;")}})), et les images générées dynamiquement comme les dégradés (cf. {{cssxref("&lt;gradient&gt;")}}) ou les images construites à partir de fragments de l'arbre du DOM ({{CSSxRef("element")}}). D'autres fonctions peuvent être utilisées pour créer des images comme {{CSSxRef("imagefunction", "image()")}}, {{CSSxRef("image-set")}} et {{CSSxRef("cross-fade")}}.</p>
+<p>Le type de donnée CSS <strong><code>&lt;image&gt;</code></strong> représente une image en deux dimensions. Il existe deux types d'images en CSS : les images statiques (souvent utilisées via une URL (cf. {{cssxref("&lt;url&gt;")}})), et les images générées dynamiquement comme les dégradés (cf. {{cssxref("&lt;gradient&gt;")}}) ou les images construites à partir de fragments de l'arbre du DOM ({{CSSxRef("element()")}}). D'autres fonctions peuvent être utilisées pour créer des images comme {{CSSxRef("imagefunction", "image()")}}, {{CSSxRef("image-set")}} et {{CSSxRef("cross-fade()")}}.</p>
 
 <p>Les images peuvent être utilisées pour de nombreuses propriétés CSS dont, par exemple, {{cssxref("background-image")}}, {{cssxref("border-image")}}, {{cssxref("content")}}, {{cssxref("list-style-image")}} et {{cssxref("cursor")}}.</p>
 
@@ -64,7 +64,7 @@ translation_of: Web/CSS/image
    <td>?</td>
   </tr>
   <tr>
-   <td>{{cssxref("symbols")}} pour <code>@counter-style</code></td>
+   <td>{{cssxref("symbols()")}} pour <code>@counter-style</code></td>
    <td>Une fonctionnalité en cours de discussion. Si elle est prise en charge, la taille utilisée sera celle des curseurs utilisés par le système.</td>
   </tr>
   <tr>
@@ -84,7 +84,7 @@ translation_of: Web/CSS/image
 
 <p>Les images peuvent être utilisées pour de nombreuses propriétés CSS comme {{cssxref("background-image")}}, {{cssxref("border-image")}}, {{cssxref("content")}}, {{cssxref("list-style-image")}} ou {{cssxref("cursor")}}.</p>
 
-<div class="note"><strong>Note :</strong> tous les navigateurs ne supportent pas n'importe quel type d'image sur n'importe quelle propriété. Voir la section <a href="/fr/docs/CSS/image#Compatibilit.C3.A9_des_navigateurs">compatibilité des navigateurs</a> pour une liste explicative.</div>
+<div class="note"><strong>Note :</strong> tous les navigateurs ne supportent pas n'importe quel type d'image sur n'importe quelle propriété. Voir la section <a href="/fr/docs/Web/CSS/image#compatibilit.c3.a9_des_navigateurs">compatibilité des navigateurs</a> pour une liste explicative.</div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
@@ -93,7 +93,7 @@ translation_of: Web/CSS/image
 <ul>
  <li>une image dénotée par le type de donnée CSS {{cssxref("&lt;url&gt;")}} et la fonction <code>url()</code> ;</li>
  <li>une valeur CSS {{cssxref("&lt;gradient&gt;")}} (représentant un dégradé) ;</li>
- <li>une partie de la page, définie par la fonction {{cssxref("element")}} ;</li>
+ <li>une partie de la page, définie par la fonction {{cssxref("element()")}} ;</li>
  <li>une image, un fragment d'image ou une couleur définie grâce à la fonction {{cssxref("image()")}} ;</li>
  <li>une fusion de deux ou plusieurs images avec la fonction {{cssxref("cross-face")}}</li>
  <li>une image choisie parmi un ensemble d'images (selon leurs résolutions, l'appareil et la connexion utilisés) grâce à la fonction {{cssxref("image-set()")}}.</li>
@@ -108,7 +108,7 @@ linear-gradient(blue, red) /* Un dégradé (&lt;gradient&gt;) */
 element(#colonne3)         /* Utilisation d'un élément de la page via la fonction element(),
                               si colonne3 est bien un identifiant CSS existant. */
 image(ltr 'arrow.png#xywh=0,0,16,16', red)
-                           /* Une section de 16x16 pixels de l'image <code>arrow.png</code> et qui démarre au coin
+                           /* Une section de 16x16 pixels de l'image arrow.png et qui démarre au coin
                               supérieur gauche de l'image et qui sera utilisée si arrow.png est à un
                               format pris en charge. Sinon, ce sera un fond rouge qui sera utilisé.
                               Si la langue est écrite de gauche à droite, l'image sera inversée
@@ -180,8 +180,8 @@ image-set('chat.jpg' 1x, 'chien.jpg' 1x) /* Chaque image doit avoir une résolut
    <li>{{cssxref("conic-gradient")}}</li>
   </ul>
  </li>
- <li>{{cssxref("element")}}</li>
+ <li>{{cssxref("element()")}}</li>
  <li>{{CSSxRef("imagefunction", "image()")}}</li>
  <li>{{cssxref("image-set()")}}</li>
- <li>{{CSSxRef("cross-fade")}}</li>
+ <li>{{CSSxRef("cross-fade()")}}</li>
 </ul>

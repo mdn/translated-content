@@ -14,7 +14,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
 
 <p>{{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS", "Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d_écriture","Web/CSS/CSS_Grid_Layout")}}</p>
 
-<p>Si vous connaissez <a href="/fr/docs/Web/CSS/Disposition_des_boîtes_flexibles_CSS">les boîtes flexibles (flexbox)</a> vous savez déjà comment aligner les éléments flexibles à l'intérieur d'un conteneur flexible. Ces propriétés d'alignement, initialement spécifiée dans la spécification des boîtes flexibles, sont désormais spécifiées dans une nouvelle spécification <a href="https://drafts.csswg.org/css-align/">Box Alignment Level 3</a>. Cette spécification détaille le fonctionnement de l'alignement pour les différentes méthodes de disposition.</p>
+<p>Si vous connaissez <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout">les boîtes flexibles (flexbox)</a> vous savez déjà comment aligner les éléments flexibles à l'intérieur d'un conteneur flexible. Ces propriétés d'alignement, initialement spécifiée dans la spécification des boîtes flexibles, sont désormais spécifiées dans une nouvelle spécification <a href="https://drafts.csswg.org/css-align/">Box Alignment Level 3</a>. Cette spécification détaille le fonctionnement de l'alignement pour les différentes méthodes de disposition.</p>
 
 <p>Chaque méthode de disposition qui implémente cette nouvelle spécification se comportera légèrement différemment selon les différences de contraintes et de fonctionnalités (et aussi selon le comportement historique). On ne pourra donc pas avoir un alignement exactement homogène. La spécification pour l'alignement des boîtes détaille le fonctionnement de chaque méthode mais malheureusement, à l'heure actuelle, aucun navigateur ne prend en charge cette spécification. À l'heure actuelle, les navigateurs respectent les règles de cette spécification pour l'alignement et la répartition de l'espace lorsqu'on utilise une disposition en grille. Dans cet article, nous verrons comment celles-ci fonctionnent. On retrouvera de nombreux points communs avec les boîtes flexibles pour le fonctionnement de ces propriétés et valeurs. Toutefois, les grilles fonctionnant sur deux axes et les boîtes flexibles sur un seul, il faudra faire attention à quelques différences. Commençons par analyser les deux axes utilisés lorsqu'il s'agit d'aligner des objets sur une grille.</p>
 
@@ -22,11 +22,11 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
 
 <p>Lorsqu'on manipule une grille, on dispose  de deux axes sur lesquels aligner les objets. L'axe de bloc et l'axe en ligne. L'axe de bloc est l'axe selon lequel les blocs sont disposés quand on a une disposition en bloc (<em>block layout</em>). Par exemple, si on a deux paragraphes sur une page, par défaut, ils s'affichent l'un en dessous de l'autre.</p>
 
-<p><img src="https://mdn.mozillademos.org/files/14725/7_Block_Axis.png" style="height: 306px; width: 940px;"></p>
+<p><img src="7_block_axis.png"></p>
 
 <p><strong>L'axe en ligne est orthogonal à l'axe de bloc. C'est la direction selon laquelle progresse le texte.</strong></p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14773/7_Inline_Axis.png" style="height: 306px; width: 940px;"></p>
+<p><img alt="" src="7_inline_axis.png"></p>
 
 <p>Grâce aux propriétés et à leurs valeurs, nous serons en mesure d'aligner le contenu de la grillle par rapport à ces deux axes.</p>
 
@@ -500,7 +500,7 @@ Justifier_les_objets_sur_laxe_en_ligne_inline_axis
 
 <p>Dans l'image qui suit, on a a placé une grille en utilisant <code>align-content: start</code> et une autre grille qui utilise <code>align-content: space-between</code>. On peut voir la façon dont les objets 1 et 2 (qui s'étalent sur deux lignes) ont gagné en hauteur pour combler l'espace entre les pistes.</p>
 
-<p><img src="https://mdn.mozillademos.org/files/14729/7_space-between.png" style="height: 534px; width: 1030px;"></p>
+<p><img src="7_space-between.png"></p>
 
 <h2 id="Justifier_les_pistes_sur_laxe_des_lignes">Justifier les pistes sur l'axe des lignes</h2>
 
@@ -625,7 +625,7 @@ Justifier_les_objets_sur_laxe_en_ligne_inline_axis
 
 <p>On peut voir comment l'objet est aligné grâce à <a href="/fr/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">l'outil de mise en évidence des grilles dans Firefox</a>.</p>
 
-<p><img src="https://mdn.mozillademos.org/files/14731/7_auto_margins.png" style="height: 1000px; width: 1000px;"></p>
+<p><img src="7_auto_margins.png"></p>
 
 <h2 id="Lalignement_et_les_modes_décriture">L'alignement et les modes d'écriture</h2>
 

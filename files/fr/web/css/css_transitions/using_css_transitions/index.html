@@ -15,7 +15,7 @@ original_slug: Web/CSS/CSS_Transitions/Utiliser_transitions_CSS
 
 <p>Les animations qui utilisent des transitions entre deux états sont souvent appelées <em>transitions implicites</em> car l'état initial et l'état final sont définis implicitement par le navigateur.</p>
 
-<p><img alt="A CSS transition tells the browser to draw the intermediate states between the initial and final states, showing the user a smooth transitions." src="/files/4529/TransitionsPrinciple.png" style="display: block; height: 196px; margin: auto; width: 680px;"></p>
+<p><img alt="A CSS transition tells the browser to draw the intermediate states between the initial and final states, showing the user a smooth transitions." src="transitionsprinciple.png" style="display: block; margin: auto;"></p>
 
 <p>Les transitions CSS vous permettent de choisir :</p>
 
@@ -28,7 +28,7 @@ original_slug: Web/CSS/CSS_Transitions/Utiliser_transitions_CSS
 
 <h2 id="Quelles_sont_les_propriétés_CSS_qui_peuvent_être_animées">Quelles sont les propriétés CSS qui peuvent être animées ?</h2>
 
-<p>On peut définir les propriétés qu'on souhaite animer et la façon dont on souhaite les animer. Cela permet de créer des transitions complexes. Toutefois, toutes les propriétés ne peuvent pas être animées et <a href="/fr/docs/Web/CSS/Liste_propriétés_CSS_animées">la liste des propriétés concernées est limitée</a>.</p>
+<p>On peut définir les propriétés qu'on souhaite animer et la façon dont on souhaite les animer. Cela permet de créer des transitions complexes. Toutefois, toutes les propriétés ne peuvent pas être animées et <a href="/fr/docs/Web/CSS/CSS_animated_properties">la liste des propriétés concernées est limitée</a>.</p>
 
 <p class="note"><strong>Note :</strong> La gestion de la valeur <code>auto</code> représente un cas complexe. La spécification requiert de ne pas animer une telle valeur. Certains navigateurs dont ceux basés sur Gecko respectent cette règle mais d'autres comme WebKit sont moins stricts. Attention donc lors de l'utilisation des animations avec <code>auto</code>.</p>
 
@@ -49,7 +49,7 @@ original_slug: Web/CSS/CSS_Transitions/Utiliser_transitions_CSS
  <dd>Cette propriété définit la durée de la transition. On peut définir une durée pour toutes les transitions ou une durée pour chacuune des propriétés.
  </dd>
  <dt>{{cssxref("transition-timing-function")}}</dt>
- <dd><img alt="" src="/files/3434/TF_with_output_gt_than_1.png" style="float: left; height: 173px; margin-right: 5px; width: 130px;">Cette propriété définit une fonction qui décrit la façon dont les valeurs intermédiaires sont calculées. On utilise pour cela des <a href="/fr/docs/Web/CSS/timing-function">fonctions de temporisation</a>.
+ <dd><img alt="" src="tf_with_output_gt_than_1.png" style="float: left; margin-right: 5px;">Cette propriété définit une fonction qui décrit la façon dont les valeurs intermédiaires sont calculées. On utilise pour cela des <a href="/fr/docs/Web/CSS/easing-function">fonctions de temporisation</a>.
  </dd>
  <dt>{{cssxref("transition-delay")}}</dt>
  <dd>Cette propriété indique le temps à attendre entre le moment où la propriété est modifiée et le début de la transition.
@@ -318,5 +318,5 @@ el.addEventListener("transitionstart", signalStart, true);</pre>
 
 <ul>
  <li>L'interface {{domxref("TransitionEvent")}} et l'événement {{event("transitionend")}}</li>
- <li><a href="/fr/docs/Web/CSS/Animations_CSS/Utiliser_les_animations_CSS">Utiliser les animations CSS</a></li>
+ <li><a href="/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations">Utiliser les animations CSS</a></li>
 </ul>

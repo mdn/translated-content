@@ -42,7 +42,7 @@ original_slug: >-
 
 <p>Cela peut devenir un problème lorsqu'on développe un site qui doit fonctionner avec plusieurs langues dont certaines sont écrites de droite à gauche et non de gauche à droite. Les navigateurs savent plutôt bien gérer les différentes directions d'écriture. Dans l'exemple qui suit, on a deux paragraphes. Pour le deuxième, aucune propriété {{cssxref("text-align")}} n'est utilisée, alors que pour le second, on utilise <code>text-align</code> avec <code>left</code> et on ajoute <code>dir="rtl"</code> sur l'élément HTML ce qui a pour effet de changer la direction d'écriture. On peut voir que, dans le second paragraphe, la direction change et le texte est écrit de droite à gauche. Dans le premier cependant, avec <code>text-align value: left</code>, l'alignement reste à gauche.</p>
 
-<p><img alt="A simple example of text direction." src="https://mdn.mozillademos.org/files/14733/8_direction_simple_example.png" style="height: 354px; width: 1136px;"></p>
+<p><img alt="A simple example of text direction." src="8_direction_simple_example.png"></p>
 
 <p>Cela illustre un problème fréquent avec les propriétés et valeurs physiques en CSS : elles empêchent le navigateur de passer correctement d'un mode d'écriture à l'autre.</p>
 
@@ -54,7 +54,7 @@ original_slug: >-
 
 <p>Lorsqu'on commence à travailler avec les propriétés logiques plutôt qu'avec les propriétés physiques, on cesse de voir le monde comme un espace qui va de gauche à droite et de haut en bas. Il faut de nouveaux axes de références : l'axe de bloc (<em>block axis</em> en anglais) et l'axe en ligne (<em>inline axis</em>). Le premier est l'axe orthogonal au sens d'écriture et le second est l'axe dans lequel on écrit. Ces axes <em>logiques</em> sont très utiles et on comprend mieux leurs rôles sur la grille.</p>
 
-<p><img alt="An image showing the default direction of the Block and Inline Axes." src="https://mdn.mozillademos.org/files/14735/8-horizontal-tb.png" style="height: 256px; width: 500px;"></p>
+<p><img alt="An image showing the default direction of the Block and Inline Axes." src="8-horizontal-tb.png"></p>
 
 <h2 id="Les_modes_d'écriture_CSS">Les modes d'écriture CSS</h2>
 
@@ -178,7 +178,7 @@ original_slug: >-
 
 <p>{{EmbedLiveSample("definir_writing-mode", '500', '330')}}</p>
 
-<p><img alt="A image showing the direction of Block and Inline when writing-mode is vertical-lr" src="https://mdn.mozillademos.org/files/14737/8-vertical-lr.png" style="height: 360px; width: 257px;"></p>
+<p><img alt="A image showing the direction of Block and Inline when writing-mode is vertical-lr" src="8-vertical-lr.png"></p>
 
 <h2 id="L'utilisation_de_valeurs_logiques_pour_l'alignement">L'utilisation de valeurs logiques pour l'alignement</h2>
 
@@ -423,7 +423,7 @@ original_slug: >-
 
 <h2 id="Les_valeurs_physiques_et_les_grilles_CSS">Les valeurs physiques et les grilles CSS</h2>
 
-<p>On rencontre souvent les propriétés physiques lorsqu'on construit un site web et, bien que la grille et les propriétés logiques permettent de respecter les modes d'écriture, il existe certains effets qui ne peuvent être obtenus qu'avec des propriétés et des valeurs physiques. Dans le guide sur <a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_CSS">l'alignement des boîtes et les grilles</a>, nous avons vu comment utiliser les marges automatiques sur les zones d'une grille. Utiliser les marges automatiques pour contraindre le placement d'un élément est une astuce qu'on rencontre aussi avec les boîtes flexibles mais cela couple la disposition avec l'espace physique.</p>
+<p>On rencontre souvent les propriétés physiques lorsqu'on construit un site web et, bien que la grille et les propriétés logiques permettent de respecter les modes d'écriture, il existe certains effets qui ne peuvent être obtenus qu'avec des propriétés et des valeurs physiques. Dans le guide sur <a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">l'alignement des boîtes et les grilles</a>, nous avons vu comment utiliser les marges automatiques sur les zones d'une grille. Utiliser les marges automatiques pour contraindre le placement d'un élément est une astuce qu'on rencontre aussi avec les boîtes flexibles mais cela couple la disposition avec l'espace physique.</p>
 
 <p>Si on utilise le positionnement absolu dans une zone d'une grille, là encore, on utilisera des décalages physiques pour décaler l'élément au sein de la zone. Dans ces cas, il faut être conscient du couplage qu'on ajoute avec l'espace physique et comprendre qu'il faudra adapter la feuille de style si on veut par exemple passer d'un mode <code>ltr</code> à un mode <code>rtl</code>.</p>
 

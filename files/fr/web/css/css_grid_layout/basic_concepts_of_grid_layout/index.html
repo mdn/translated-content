@@ -40,7 +40,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Les_concepts_de_base
 
 <p>Il peut arriver que l'on place plusieurs éléments dans une même cellule, ou que des zones se chevauchent. La superposition peut être contrôlée à l'aide de la propriété {{cssxref("z-index")}}.</p>
 
-<p>La grille est une spécification puissante qui peut être combinée avec d'autres modules CSS tels que <a href="/fr/docs/Web/CSS/Disposition_des_boîtes_flexibles_CSS">flexbox</a>. Le point de départ est le <strong>conteneur</strong>.</p>
+<p>La grille est une spécification puissante qui peut être combinée avec d'autres modules CSS tels que <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout">flexbox</a>. Le point de départ est le <strong>conteneur</strong>.</p>
 
 <h2 id="Le_conteneur">Le conteneur</h2>
 
@@ -83,7 +83,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Les_concepts_de_base
 
 <p>Tous les enfants directs sont maintenant des éléments de grille. On ne voit pas la différence dans un navigateur, car la grille n'a qu'une seule colonne. Vous trouverez sans doute utile de travailler avec Firefox, qui propose un <a href="/fr/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">inspecteur de grille</a> dans les outils de développement. En inspectant la grille dans Firefox, vous pouvez voir une petite icône à côté de la valeur <code>grid</code>. Un clic dessus permet d'afficher la grille correspondante dans le navigateur.</p>
 
-<p><img alt="Using the Grid Highlighter in DevTools to view a grid" src="https://mdn.mozillademos.org/files/14791/Screen%20Shot%202017-03-17%20at%2014.47.48.png" style="height: 551px; width: 846px;"></p>
+<p><img alt="Using the Grid Highlighter in DevTools to view a grid" src="screen_shot_2017-03-17_at_14.47.48.png"></p>
 
 <p>Cet outil vous permettra de mieux comprendre le fonctionnement de CSS Grid Layout.</p>
 
@@ -93,7 +93,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Les_concepts_de_base
 
 <p>Les propriétés {{cssxref("grid-template-columns")}} et {{cssxref("grid-template-rows")}} permettent de définir des colonnes et des rangées. Celles-ci définissent les pistes. Une <em>piste</em> est l'espace entre deux lignes d'une grille. L'image ci-dessous colore une piste de la grille – correspondant à la première rangée de la grille.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14637/1_Grid_Track.png" style="height: 400px; width: 600px;"></p>
+<p><img alt="" src="1_grid_track.png"></p>
 
 <p>On peut ajouter la propriété <code>grid-template-columns</code> à notre exemple précédent, pour définir la taille des colonnes.</p>
 
@@ -263,7 +263,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Les_concepts_de_base
 
 <p>Que l'on crée une grille explicite, ou que l'on définisse la taille des pistes créées implicitement, il peut être utile d'assigner une taille minimum, qui s'agrandit pour s'adapter au contenu. Par exemple on peut souhaiter que les rangées ne soient jamais moins hautes que 100 pixels, mais qu'elles aillent jusqu'à 300 pixels de haut si le contenu le nécessite.</p>
 
-<p>La fonction {{cssxref("minmax", "minmax()")}} permet ce comportement. Dans l'exemple suivant nous utilisons <code>minmax()</code> comme valeur de la propriété {{cssxref("grid-auto-rows")}}. Les rangées créées automatiquement feront un minimum de 100 pixels, et un maximum de <code>auto</code>, ce qui signifie que la taille s'adaptera à la hauteur du contenu.</p>
+<p>La fonction {{cssxref("minmax()", "minmax()")}} permet ce comportement. Dans l'exemple suivant nous utilisons <code>minmax()</code> comme valeur de la propriété {{cssxref("grid-auto-rows")}}. Les rangées créées automatiquement feront un minimum de 100 pixels, et un maximum de <code>auto</code>, ce qui signifie que la taille s'adaptera à la hauteur du contenu.</p>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -304,7 +304,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Les_concepts_de_base
 
 <p>Il faut noter que l'on définit les pistes d'une grille, et pas les lignes qui en résultent. La grille génère des lignes numérotées que l'on utilise pour positionner les éléments. Dans notre grille de trois colonnes et deux rangées, nous avons quatre lignes de colonnes.</p>
 
-<p><img alt="Grid Lines" src="https://mdn.mozillademos.org/files/14793/GRID2.jpg" style="height: 456px; width: 764px;"></p>
+<p><img alt="Grid Lines" src="grid2.jpg"></p>
 
 <p>Les lignes sont numérotées selon le sens de lecture du document. Dans un langage qui se lit de gauche à droite, la ligne 1 est située à gauche, dans un langage qui se lit de droite à gauche elle est située à droite. Les lignes peuvent aussi être nommées, comme nous le verrons plus loin dans ces pages.</p>
 
@@ -367,17 +367,17 @@ original_slug: Web/CSS/CSS_Grid_Layout/Les_concepts_de_base
 
 <p>Une <em>cellule</em> est la plus petite unité sur une grille, conceptuellement similaire à une cellule de tableau. Comme nous l'avons vu lorsqu'une grille est définie sur un élément ses enfants viennent se positionner chacun dans l'une des cellules de la grille. Dans l'image ci-dessous la première cellule est colorée.</p>
 
-<p><img alt="The first cell of the grid highlighted" src="https://mdn.mozillademos.org/files/14643/1_Grid_Cell.png" style="height: 400px; width: 600px;"></p>
+<p><img alt="The first cell of the grid highlighted" src="1_grid_cell.png"></p>
 
 <h2 id="Les_zones">Les zones</h2>
 
 <p>Un élément peut s'étendre sur plusieurs cellules d'une rangée ou d'une colonne, et cela crée une <em>zone</em>. Les zones doivent être rectangulaires - on ne peut pas créer de forme en L par exemple. La zone colorée ci-dessous s'étend sur deux rangées et deux colonnes.</p>
 
-<p><img alt="A grid area" src="https://mdn.mozillademos.org/files/14645/1_Grid_Area.png" style="height: 400px; width: 600px;"></p>
+<p><img alt="A grid area" src="1_grid_area.png"></p>
 
 <h2 id="Les_gouttières">Les gouttières</h2>
 
-<p>Les <em>gouttière</em><em>s</em> entre les cellules sont définies à l'aide des propriétés {{cssxref("grid-column-gap")}} et {{cssxref("grid-row-gap")}}, ou de la propriété raccourcie {{cssxref("grid-gap")}}. Dans l'exemple ci-dessous nous créons une gouttière de dix pixels de large entre les colonnes, et une gouttière de 1em de hauteur entre les rangées.</p>
+<p>Les <em>gouttière</em><em>s</em> entre les cellules sont définies à l'aide des propriétés {{cssxref("grid-column-gap")}} et {{cssxref("row-gap")}}, ou de la propriété raccourcie {{cssxref("gap")}}. Dans l'exemple ci-dessous nous créons une gouttière de dix pixels de large entre les colonnes, et une gouttière de 1em de hauteur entre les rangées.</p>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -388,7 +388,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Les_concepts_de_base
 </pre>
 
 <div class="note">
-<p><strong>Note :</strong> Les anciens navigateurs utilisent {{cssxref("column-gap")}}, {{cssxref("row-gap")}}, {{cssxref("gap")}} avec le préfixe <code>grid-</code> soit : {{cssxref("grid-column-gap")}}, {{cssxref("grid-row-gap")}} et {{cssxref("grid-gap")}}.</p>
+<p><strong>Note :</strong> Les anciens navigateurs utilisent {{cssxref("column-gap")}}, {{cssxref("row-gap")}}, {{cssxref("gap")}} avec le préfixe <code>grid-</code> soit : {{cssxref("grid-column-gap")}}, {{cssxref("row-gap")}} et {{cssxref("gap")}}.</p>
 
 <p>Les navigateurs actuels retirent progressivement ce préfixe (la version préfixée sera maintenue sous forme d'alias). À l'heure actuelle, certains navigateurs ne prennent pas encore la version sans préfixe et c'est pourquoi certains exemples de ce guide continuent d'utiliser les versions préfixées avec <code>grid-</code>.</p>
 </div>
@@ -438,7 +438,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Les_concepts_de_base
 &lt;/div&gt;
 </pre>
 
-<p><img alt="Nested grid in flow" src="https://mdn.mozillademos.org/files/14795/grid3.jpg" style="height: 512px; width: 900px;"></p>
+<p><img alt="Nested grid in flow" src="grid3.jpg"></p>
 
 <p>En définissant la propriété <code>display:grid</code> sur l'élément <code>box1</code>, il devient lui-même une grille et ses enfants se positionnent sur cette grille.</p>
 
@@ -475,7 +475,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Les_concepts_de_base
 
 <p>{{ EmbedLiveSample('Grilles_imbriquées', '600', '340') }}</p>
 
-<p>Dans ce cas la grille imbriquée n'est pas liée à la grille qui la contient. Elle n'hérite pas des {{cssxref("grid-gap")}}, et ses lignes ne s'alignent pas avec celles de la grille parent.</p>
+<p>Dans ce cas la grille imbriquée n'est pas liée à la grille qui la contient. Elle n'hérite pas des {{cssxref("gap")}}, et ses lignes ne s'alignent pas avec celles de la grille parent.</p>
 
 <h3 id="Sous-grille">Sous-grille</h3>
 

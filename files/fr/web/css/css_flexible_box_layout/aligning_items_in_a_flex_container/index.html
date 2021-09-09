@@ -17,7 +17,7 @@ original_slug: >-
 
 <p>Afin de centrer notre boîte, nous allons utiliser la propriété <code>align-items</code> afin d'aligner l'objet sur l'axe secondaire (<em>cross axis</em> en anglais). Dans notre exemple, cet axe est l'axe de bloc et est orienté verticalement. La propriété <code>justify-content</code> est quant à elle utilisée pour aligner l'objet sur l'axe principal (<em>main axis</em> en anglais) (ici l'axe principal est l'axe en ligne qui s'étend horizontalement).</p>
 
-<p><img alt="Un élément contenant une autre boîte centrée à l'intérieur" src="https://mdn.mozillademos.org/files/15627/align1.png" style="display: block; height: 357px; margin: 0px auto; width: 616px;"></p>
+<p><img alt="Un élément contenant une autre boîte centrée à l'intérieur" src="align1.png" style="display: block; margin: 0px auto;"></p>
 
 <p> </p>
 
@@ -48,9 +48,9 @@ original_slug: >-
 
 <p>Prenons un exemple simple : nous ajoutons <code>display: flex</code> à un conteneur qui contient trois objets. Tous s'étirent afin d'être aussi grands que le plus grand des éléments car celui-ci définit la taille du conteneur sur l'axe secondaire. Si le conteneur flexible possède une hauteur définie, les objets qu'il contient s'étireront pour atteindre cette taille, quel que soit le contenu dont ils disposent.</p>
 
-<p><img alt="Trois objets dont un avec un texte plus long qui le rend plus grand que les autres" src="https://mdn.mozillademos.org/files/15628/align2.png" style="display: block; height: 131px; margin: 0px auto; width: 509px;"></p>
+<p><img alt="Trois objets dont un avec un texte plus long qui le rend plus grand que les autres" src="align2.png" style="display: block; margin: 0px auto;"></p>
 
-<p><img alt="Trois objets étirés pour mesurer 200 pixels de haut" src="https://mdn.mozillademos.org/files/15629/align3.png" style="display: block; height: 207px; margin: 0px auto; width: 637px;"></p>
+<p><img alt="Trois objets étirés pour mesurer 200 pixels de haut" src="align3.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Les éléments obtiennent la même hauteur à cause de la valeur initiale de <code>align-items</code> qui contrôle l'alignement sur l'axe secondaire. Cette valeur initiale est <code>stretch</code> (qui indique que les objets du conteneur doivent être étirés sur l'axe).</p>
 
@@ -80,11 +80,11 @@ original_slug: >-
 
 <p>Jusqu'à présent, les exemples fonctionnaient avec <code>flex-direction</code> valant <code>row</code> et avec un langage dont les lignes progressent du haut vers le bas. Cela signifie que l'axe principal est une ligne horizontale et que l'axe secondaire est une ligne verticale dirigée vers le bas.</p>
 
-<p><img alt="Trois objets, le premier aligné avec flex-start, le deuxième avec center et le troisième avec flex-end. Alignement sur l'axe vertical.." src="https://mdn.mozillademos.org/files/15630/align4.png" style="display: block; height: 204px; margin: 0px auto; width: 671px;"></p>
+<p><img alt="Trois objets, le premier aligné avec flex-start, le deuxième avec center et le troisième avec flex-end. Alignement sur l'axe vertical.." src="align4.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Si on passe <code>flex-direction</code> à <code>column</code>, <code>align-items</code> et <code>align-self</code> aligneront les éléments à gauche et à droite.</p>
 
-<p><img alt="Trois éléments, le premier aligné avec flex-start, le deuxième avec center et le troisième avec flex-end. Alignement sur l'axe horizontal." src="https://mdn.mozillademos.org/files/15631/align5.png" style="display: block; height: 239px; margin: 0px auto; width: 687px;"></p>
+<p><img alt="Trois éléments, le premier aligné avec flex-start, le deuxième avec center et le troisième avec flex-end. Alignement sur l'axe horizontal." src="align5.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Vous pouvez manipuler cet exemple qui reprend le même code que l'exemple précédent avec la seule exception que <code>flex-direction</code> vaut ici <code>column</code>.</p>
 
@@ -130,7 +130,7 @@ original_slug: >-
 
 <p>Dans l'exemple initial avec <code>display: flex</code> appliqué au conteneur, les éléments formaient une ligne qui commençait au début du conteneur. Cela provient de la valeur initiale de <code>justify-content</code> qui est <code>flex-start</code>. Avec cette valeur, tout l'espace disponible est placé à la fin, après les éléments.</p>
 
-<p><img alt="Trois éléments, chacun mesurant 100 pixels de large dans un conteneur de 500 pixels de large. L'espace disponible restant se situe après les éléments." src="https://mdn.mozillademos.org/files/15632/align6.png" style="display: block; height: 198px; margin: 0px auto; width: 528px;"></p>
+<p><img alt="Trois éléments, chacun mesurant 100 pixels de large dans un conteneur de 500 pixels de large. L'espace disponible restant se situe après les éléments." src="align6.png" style="display: block; margin: 0px auto;"></p>
 
 <p>La propriété <code>justify-content</code> prend en charge les mêmes valeurs que <code>align-content</code>.</p>
 
@@ -156,11 +156,11 @@ original_slug: >-
 
 <p>Rappelons ici qu'avec ces méthodes d'alignement, <code>flex-start</code> et <code>flex-end</code> respectent le mode d'écriture utilisé. Si on utilise <code>justify-content</code> avec la valeur <code>start</code> pour un contenu écrit en anglais (un mode d'écriture de la gauche vers la droite), les éléments commenceront à gauche du conteneur.</p>
 
-<p><img alt="Trois éléments alignés sur la gauche" src="https://mdn.mozillademos.org/files/15638/Basics5.png" style="display: block; height: 152px; margin: 0px auto; width: 631px;"></p>
+<p><img alt="Trois éléments alignés sur la gauche" src="basics5.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Mais si le contenu est écrit en arabe (un mode d'écriture de la droite vers la gauche), les éléments démarreront à la droite du conteneur.</p>
 
-<p><img alt="Trois éléments alignés sur la droite" src="https://mdn.mozillademos.org/files/15639/Basics6.png" style="display: block; height: 152px; margin: 0px auto; width: 634px;"></p>
+<p><img alt="Trois éléments alignés sur la droite" src="basics6.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Dans l'exemple qui suit, on indique explicitement la valeur <code>rtl</code> pour la propriété <code>display</code> afin de forcer un mode d'écriture de droite à gauche. Vous pouvez retirer cette déclaration ou modifier la valeur de <code>justify-content</code> afin de voir comment les boîtes flexibles s'organisent lorsque le début de la ligne est à droite.</p>
 
@@ -176,17 +176,17 @@ original_slug: >-
 
 <p>Si cela peut paraître déroutant, la règle principale à mémoriser est que, par défaut, si on ne change rien, les éléments flexibles sont organisés dans la direction naturelle de la langue dans laquelle le document est écrit. <code>flex-start</code> correspondra donc à la ligne de début depuis laquelle une phrase démarrerait.</p>
 
-<p><img alt="Un diagramme illustrant la ligne de début à gauche et la ligne de fin à droite" src="https://mdn.mozillademos.org/files/15634/align8.png" style="display: block; height: 152px; margin: 0px auto; width: 631px;"></p>
+<p><img alt="Un diagramme illustrant la ligne de début à gauche et la ligne de fin à droite" src="align8.png" style="display: block; margin: 0px auto;"></p>
 
 <p>On peut changer l'axe avec <code>flex-direction: column</code>. Dans ce cas, <code>flex-start</code> correspondra à l'emplacement du début du premier paragraphe d'un texte.</p>
 
-<p><img alt="Un diagramme illustrant la ligne de début en haut et la ligne de fin en bas" src="https://mdn.mozillademos.org/files/15636/align10.png" style="display: block; height: 273px; margin: 0px auto; width: 709px;"></p>
+<p><img alt="Un diagramme illustrant la ligne de début en haut et la ligne de fin en bas" src="align10.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Si on utilise <code>flex-direction</code> avec une des valeurs inversée, les éléments seront organisés dans l'ordre inverse (à l'opposé de la disposition naturelle de la langue utilisée pour le document). <code>flex-start</code> correspondra alors à la « fin » usuelle d'une ligne de texte sur une disposition en ligne et au dernier paragraphe sur une disposition organisée sur un axe principal vertical.</p>
 
-<p><img alt="Un diagramme illustrant la ligne de début à droite et celle de fin à gauche" src="https://mdn.mozillademos.org/files/15635/align9.png" style="display: block; height: 152px; margin: 0px auto; width: 631px;"></p>
+<p><img alt="Un diagramme illustrant la ligne de début à droite et celle de fin à gauche" src="align9.png" style="display: block; margin: 0px auto;"></p>
 
-<p><img alt="Un diagramme illustrant la ligne de début en bas et celle de fin en haut" src="https://mdn.mozillademos.org/files/15637/align11.png" style="display: block; height: 273px; margin: 0px auto; width: 709px;"></p>
+<p><img alt="Un diagramme illustrant la ligne de début en bas et celle de fin en haut" src="align11.png" style="display: block; margin: 0px auto;"></p>
 
 <h2 id="Utiliser_les_marges_automatiques_pour_aligner_sur_l'axe_principal">Utiliser les marges automatiques pour aligner sur l'axe principal</h2>
 
@@ -194,7 +194,7 @@ original_slug: >-
 
 <p>Un motif fréquent est l'organisation d'une barre de navigation où certains éléments clés sont situés à droite alors qu'un groupe principal est présent à gauche. On pourrait alors penser qu'il s'agit d'un cas d'utilisation pour une propriété comme <code>justify-self</code>… Cependant, si on regarde l'image qui suit et qu'on était capable de modifier <code>justify-self</code> sur l'élément <em>d</em>, cela changerait également l'alignement de l'élément <em>e</em> qui suit, ce qui pourrait ou non être voulu.</p>
 
-<p><img alt="Cinq objets répartis en deux groupes. Trois sont situés à gauche et deux sont situés à droite." src="https://mdn.mozillademos.org/files/15633/align7.png" style="display: block; height: 84px; margin: 0px auto; width: 645px;"></p>
+<p><img alt="Cinq objets répartis en deux groupes. Trois sont situés à gauche et deux sont situés à droite." src="align7.png" style="display: block; margin: 0px auto;"></p>
 
 <p>Plutôt que cela, on peut cibler le quatrième élément et le séparer des trois premiers en utilisant <code>margin-left: auto</code>. Une marge automatique consommera tout l'espace disponible sur l'axe correspondant.</p>
 
@@ -208,12 +208,12 @@ original_slug: >-
 
 <p>Le module de spécification sur l'alignement des boîtes inclut également d'autres méthodes pour créer des espaces entre les objets telles que les propriétés <code>column-gap</code> et <code>row-gap</code> décrites dans <a href="/fr/docs/Web/CSS/CSS_Grid_Layout">le module de grille CSS (<em>CSS Grid</em>)</a>. L'inclusion de ces propriétés dans le module d'alignement des boîtes signifie que nous pourrons plus tard les utiliser dans les dispositions avec les boîtes flexibles. Cela signifie qu'il ne sera plus nécessaire d'utiliser des marges afin d'espacer des éléments flexibles. Firefox 63 devrait implémenter les propriétés <code>gap</code> pour les dispositions flexibles.</p>
 
-<p>Lorsque vous explorez les différentes méthodes d'alignement relatives aux boîtes flexibles, n'hésitez pas à étudier ce qui est disponible avec une disposition en grille (<em>CSS Grid Layout</em>). En effet, ces deux spécifications utilisent les propriétés d'alignement qui sont désormais détaillées dans la spécification sur l'alignement des boîtes. Vous pouvez en savoir plus sur le fonctionnement de ces propriétés sur une grille <a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_CSS">grâce à cet article</a>. Une page récapitulative (en anglais) est également disponible pour comparer le fonctionnement de l'alignement par rapport à ces différentes spécifications : <em><a href="https://rachelandrew.co.uk/css/cheatsheets/box-alignment">Box Alignment Cheatsheet</a></em>.</p>
+<p>Lorsque vous explorez les différentes méthodes d'alignement relatives aux boîtes flexibles, n'hésitez pas à étudier ce qui est disponible avec une disposition en grille (<em>CSS Grid Layout</em>). En effet, ces deux spécifications utilisent les propriétés d'alignement qui sont désormais détaillées dans la spécification sur l'alignement des boîtes. Vous pouvez en savoir plus sur le fonctionnement de ces propriétés sur une grille <a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">grâce à cet article</a>. Une page récapitulative (en anglais) est également disponible pour comparer le fonctionnement de l'alignement par rapport à ces différentes spécifications : <em><a href="https://rachelandrew.co.uk/css/cheatsheets/box-alignment">Box Alignment Cheatsheet</a></em>.</p>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
  <li><a href="/fr/docs/Web/CSS/CSS_Box_Alignment">Le module<em>CSS Box Alignment</em></a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_Flexbox">L'alignement des boîtes avec Flexbox</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_grille">L'alignement des boîtes avec une grille CSS</a></li>
+ <li><a href="/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox">L'alignement des boîtes avec Flexbox</a></li>
+ <li><a href="/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout">L'alignement des boîtes avec une grille CSS</a></li>
 </ul>

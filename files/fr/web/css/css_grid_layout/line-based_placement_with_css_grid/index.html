@@ -16,7 +16,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_un
 
 <p>Dans <a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout">l'article sur les concepts de base</a>, nous avons vu comment positionner des éléments en utilisant des numéros de lignes. Nous allons désormais étudier cette fonctionnalité de positionnement plus en détail.</p>
 
-<p>Commencer par utiliser les lignes numérotées est plutôt logique car toutes les grilles possèdent des lignes numérotées. Ces lignes forment les colonnes et les lignes horizontales de la grille, elles sont numérotées à partir de 1. On notera aussi que la numérotation des lignes varie selon le mode d'écriture du document. Dans un document écrit de gauche à droite comme le français, la ligne numéro 1 est située à l'extrêmité gauche de la grille. Si l'écriture va de droite à gauche, la ligne numéro 1 sera celle qui est située le plus à droite. Nous explorerons ces notions sur les modes d'écriture dans <a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d_écriture">un prochain guide</a>.</p>
+<p>Commencer par utiliser les lignes numérotées est plutôt logique car toutes les grilles possèdent des lignes numérotées. Ces lignes forment les colonnes et les lignes horizontales de la grille, elles sont numérotées à partir de 1. On notera aussi que la numérotation des lignes varie selon le mode d'écriture du document. Dans un document écrit de gauche à droite comme le français, la ligne numéro 1 est située à l'extrêmité gauche de la grille. Si l'écriture va de droite à gauche, la ligne numéro 1 sera celle qui est située le plus à droite. Nous explorerons ces notions sur les modes d'écriture dans <a href="/fr/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes">un prochain guide</a>.</p>
 
 <h2 id="Un_exemple_simple">Un exemple simple</h2>
 
@@ -24,7 +24,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_un
 
 <p>Dans le conteneur, on a quatre éléments fils. Si aucune autre règle de placement n'est indiquée, ces éléments seront placés automatiquement et la grille remplira les quatre premières cellules. Si vous utilisez <a href="/fr/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">l'outil de mise en évidence des grilles de Firefox</a>, vous pouvez voir les colonnes et les lignes horizontales formées par la grille.</p>
 
-<p><img alt="Our Grid highlighted in DevTools" src="https://mdn.mozillademos.org/files/14663/3_hilighted_grid.png" style="height: 296px; width: 900px;"></p>
+<p><img alt="Our Grid highlighted in DevTools" src="3_hilighted_grid.png"></p>
 
 <pre class="brush: css hidden">* {box-sizing: border-box;}
 
@@ -72,7 +72,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_un
 }
 </pre>
 
-<p>Lorsqu'on positionne des objets sur la grille, les autres continueront d'être placés selon les règles de placement automatique. Nous verrons ces règles dans <a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS">un prochain guide</a> mais grâce à cet exemple, on peut voir que les cellules vides sont remplies au fur et à mesure par les objets qui ne sont pas placés explicitement.</p>
+<p>Lorsqu'on positionne des objets sur la grille, les autres continueront d'être placés selon les règles de placement automatique. Nous verrons ces règles dans <a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout">un prochain guide</a> mais grâce à cet exemple, on peut voir que les cellules vides sont remplies au fur et à mesure par les objets qui ne sont pas placés explicitement.</p>
 
 <p>On peut placer chacun des éléments individuellement et on peut également choisir de laisser certaines cellules vides. Un des avantages de la grille CSS est qu'on peut créer des espaces sans avoir à utiliser des marges ou d'autres méthodes de contournement.</p>
 
@@ -341,7 +341,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_un
 
 <p>{{EmbedLiveSample('La_propriété_grid-area', '300', '330')}}</p>
 
-<p>L'ordre des valeurs utilisé pour <code>grid-area</code> peut sembler un peu étrange quand on connaît celui utilisé par les propriétés raccourcies pour les marges (<em>margin</em>) et le remplissage (<em>padding</em>). Cet ordre s'explique car les grilles CSS fonctionnent avec les différents modes d'écriture et on utilise des propriétés et des valeurs <em>logiques</em> plutôt que des propriétés et des valeurs <em>physiques</em>. Nous aborderons ce point dans <a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d_écriture">un prochain article</a> mais il faut retenir ici que l'ordre des valeurs correspond aux directions logiques suivantes :</p>
+<p>L'ordre des valeurs utilisé pour <code>grid-area</code> peut sembler un peu étrange quand on connaît celui utilisé par les propriétés raccourcies pour les marges (<em>margin</em>) et le remplissage (<em>padding</em>). Cet ordre s'explique car les grilles CSS fonctionnent avec les différents modes d'écriture et on utilise des propriétés et des valeurs <em>logiques</em> plutôt que des propriétés et des valeurs <em>physiques</em>. Nous aborderons ce point dans <a href="/fr/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Logical_Values_and_Writing_Modes">un prochain article</a> mais il faut retenir ici que l'ordre des valeurs correspond aux directions logiques suivantes :</p>
 
 <ul>
  <li><code>block-start</code></li>
@@ -427,10 +427,10 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_un
 
 <h2 id="Les_gouttières">Les gouttières</h2>
 
-<p>La spécification pour les grilles CSS permet également d'ajouter des espaces (« gouttières ») entre les colonnes et entre les lignes grâce aux propriétés {{cssxref("grid-column-gap")}} et {{cssxref("grid-row-gap")}}. Celles-ci permettent de définir un espace, de la même façon que la propriété {{cssxref("column-gap")}} permet d'obtenir un espace pour un mode de disposition avec plusieurs colonnes.</p>
+<p>La spécification pour les grilles CSS permet également d'ajouter des espaces (« gouttières ») entre les colonnes et entre les lignes grâce aux propriétés {{cssxref("grid-column-gap")}} et {{cssxref("row-gap")}}. Celles-ci permettent de définir un espace, de la même façon que la propriété {{cssxref("column-gap")}} permet d'obtenir un espace pour un mode de disposition avec plusieurs colonnes.</p>
 
 <div class="note">
-<p><strong>Note :</strong> Les anciens navigateurs utilisent {{cssxref("column-gap")}}, {{cssxref("row-gap")}}, {{cssxref("gap")}} avec le préfixe <code>grid-</code> soit : {{cssxref("grid-column-gap")}}, {{cssxref("grid-row-gap")}} et {{cssxref("grid-gap")}}.</p>
+<p><strong>Note :</strong> Les anciens navigateurs utilisent {{cssxref("column-gap")}}, {{cssxref("row-gap")}}, {{cssxref("gap")}} avec le préfixe <code>grid-</code> soit : {{cssxref("grid-column-gap")}}, {{cssxref("row-gap")}} et {{cssxref("gap")}}.</p>
 
 <p>Les navigateurs actuels retirent progressivement ce préfixe (la version préfixée sera maintenue sous forme d'alias). À l'heure actuelle, certains navigateurs ne prennent pas encore la version sans préfixe et c'est pourquoi certains exemples de ce guide continuent d'utiliser les versions préfixées avec <code>grid-</code>.</p>
 </div>
@@ -494,7 +494,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_un
 
 <h3 id="Les_propriétés_raccourcies_pour_les_gouttières">Les propriétés raccourcies pour les gouttières</h3>
 
-<p>Les deux propriétés que nous venons de voir peuvent être synthétisées grâce à la propriété raccourcie {{cssxref("grid-gap")}}. Si on fournit une seule valeur, celle-ci s'appliquera pour les espaces entre les colonnes et entre les lignes. Avec deux valeurs, la première sera utilisée pour <code>grid-row-gap</code> et la seconde pour <code>grid-column-gap</code>.</p>
+<p>Les deux propriétés que nous venons de voir peuvent être synthétisées grâce à la propriété raccourcie {{cssxref("gap")}}. Si on fournit une seule valeur, celle-ci s'appliquera pour les espaces entre les colonnes et entre les lignes. Avec deux valeurs, la première sera utilisée pour <code>grid-row-gap</code> et la seconde pour <code>grid-column-gap</code>.</p>
 
 <pre class="brush: css">.wrapper {
   display: grid;

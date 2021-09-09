@@ -1,11 +1,11 @@
 ---
 title: ':not'
-slug: 'Web/CSS/:not'
+slug: Web/CSS/:not
 tags:
   - CSS
   - Pseudo-classe
   - Reference
-translation_of: 'Web/CSS/:not'
+translation_of: Web/CSS/:not
 ---
 <div>{{CSSRef}}</div>
 
@@ -17,14 +17,14 @@ translation_of: 'Web/CSS/:not'
   color: blue;
 }</pre>
 
-<p>La <a href="/fr/Apprendre/CSS/Les_bases/La_cascade_et_l_héritage">spécificité</a> de la pseudo-classe <code>:not</code> est la spécificité de son argument. La pseudo-classe de négation n'ajoute pas de spécificité, contrairement aux autres pseudo-classes.</p>
+<p>La <a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">spécificité</a> de la pseudo-classe <code>:not</code> est la spécificité de son argument. La pseudo-classe de négation n'ajoute pas de spécificité, contrairement aux autres pseudo-classes.</p>
 
 <div class="note">
 <p><strong>Notes :</strong></p>
 
 <ul>
  <li>Attention à ne pas écrire de sélecteurs inutiles à l'aide de cette pseudo-classe. Ainsi, <code>:not(*) </code>va exclure tous les éléments et ne sera jamais appliqué.</li>
- <li>À l'inverse, il est possible d'augmenter la <a href="/fr/docs/Web/CSS/Spécificité">spécificitié</a> d'un sélecteur. Ainsi. <code>toto:not(truc)</code> ciblera les mêmes éléments que <code>toto</code>, mais avec une spécificité plus forte.</li>
+ <li>À l'inverse, il est possible d'augmenter la <a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">spécificitié</a> d'un sélecteur. Ainsi. <code>toto:not(truc)</code> ciblera les mêmes éléments que <code>toto</code>, mais avec une spécificité plus forte.</li>
  <li><code>:not(toto){}</code> ciblera tout élément qui n'est pas <code>toto</code>, <strong>notamment {{HTMLElement("html")}} et {{HTMLElement("body")}}</strong>.</li>
  <li>Ce sélecteur ne s'applique qu'à un seul élément. Il ne peut pas être utilisé afin d'exclure tous les ancêtres. Ainsi, <code>body :not(table) a</code> s'appliquera aux liens contenus dans un tableau car {{HTMLElement("tr")}} ne sera pas ciblé par la partie <code>:not()</code> du sélecteur.</li>
 </ul>
@@ -32,7 +32,7 @@ translation_of: 'Web/CSS/:not'
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<p>La pseudo-classe <code>:not()</code> prend en argument une liste d'un ou plusieurs sélecteurs séparés par des virgules. Cette liste ne doit pas contenir d'autre sélecteur de négation ou <a href="/fr/docs/Web/CSS/Pseudo-éléments">de pseudo-élément</a>.</p>
+<p>La pseudo-classe <code>:not()</code> prend en argument une liste d'un ou plusieurs sélecteurs séparés par des virgules. Cette liste ne doit pas contenir d'autre sélecteur de négation ou <a href="/fr/docs/Web/CSS/Pseudo-elements">de pseudo-élément</a>.</p>
 
 <div class="warning">
 <p><strong>Attention :</strong> la possibilité d'avoir plusieurs sélecteurs est expérimentale et n'est pas encore largement prise en charge.</p>

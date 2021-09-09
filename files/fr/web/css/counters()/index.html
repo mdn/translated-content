@@ -16,7 +16,7 @@ translation_of: Web/CSS/counters()
  <li><code>counters(<var>name</var>, <var>string</var>, <var>style</var>)</code></li>
 </ul>
 
-<p>Cette fonction est généralement utilisée sur des <a href="/fr/docs/Web/CSS/Pseudo-éléments">pseudo-éléments</a> mais peut théoriquement être utilisée à tout endroit où une valeur <code><a href="/fr/docs/Web/CSS/string">&lt;string&gt;</a></code> est attendue. Le texte généré est la concaténation des compteurs en commençant par les compteurs « parents » puis en ajoutant la valeurs des compteurs « fils ». Les compteurs sont affichés avec le style indiqué (par défaut, ce sera <code>decimal</code>).</p>
+<p>Cette fonction est généralement utilisée sur des <a href="/fr/docs/Web/CSS/Pseudo-elements">pseudo-éléments</a> mais peut théoriquement être utilisée à tout endroit où une valeur <code><a href="/fr/docs/Web/CSS/string">&lt;string&gt;</a></code> est attendue. Le texte généré est la concaténation des compteurs en commençant par les compteurs « parents » puis en ajoutant la valeurs des compteurs « fils ». Les compteurs sont affichés avec le style indiqué (par défaut, ce sera <code>decimal</code>).</p>
 
 <pre class="notranslate">/* Utilisation simple - style decimal par défaut */
 counters(countername, '-');
@@ -40,7 +40,7 @@ counters(countername, '.', upper-roman)</pre>
  <dt>{{cssxref("&lt;custom-ident&gt;")}}</dt>
  <dd>Un nom identifiant les compteurs à utiliser. C'est le même nom qui pourra être utilisé avec les propriétés {{cssxref("counter-reset")}} et {{cssxref("counter-increment")}}. Le nom ne peut pas commencer par deux tirets et ne peut pas être <code>none</code>, <code>unset</code>, <code>initial</code> ou <code>inherit</code>.</dd>
  <dt><code style="white-space: nowrap;">&lt;counter-style&gt;</code></dt>
- <dd>Un style de compteur (cf. <a href="/fr/docs/Web/CSS/list-style-type#Valeurs">les valeurs décrites pour <code>list-style-type</code></a>) ou une fonction <code><a href="/fr/docs/Web/CSS/symbols">symbols()</a></code>. En absence de valeur, le style utilisé sera <code>decimal</code>.</dd>
+ <dd>Un style de compteur (cf. <a href="/fr/docs/Web/CSS/list-style-type#valeurs">les valeurs décrites pour <code>list-style-type</code></a>) ou une fonction <code><a href="/fr/docs/Web/CSS/symbols()">symbols()</a></code>. En absence de valeur, le style utilisé sera <code>decimal</code>.</dd>
  <dt>{{cssxref("&lt;string&gt;")}}</dt>
  <dd>Une suite de caractères. Les caractères qui ne sont pas latins doivent être encodés avec leur séquence d'échappement Unicode. <code>\000A9</code> représentera par exemple le symbole copyright (©).</dd>
  <dt><code>none</code></dt>
@@ -178,7 +178,7 @@ li::before {
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Lists/Compteurs_CSS">Utiliser les compteurs CSS</a></li>
+ <li><a href="/fr/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">Utiliser les compteurs CSS</a></li>
  <li>{{cssxref("counter-reset")}}</li>
  <li>{{cssxref("counter-increment")}}</li>
  <li>{{cssxref("@counter-style")}}</li>

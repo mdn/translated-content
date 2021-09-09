@@ -106,7 +106,7 @@ img {
 
 <p>Dans l'image qui suit, on voit à gauche ce qu'on obtient dans un navigateur qui ne prend pas en charge les grilles CSS et à droite le résultat obtenu pour un navigateur qui permet de les utiliser.</p>
 
-<p><img alt="A simple example of overriding a floated layout using grid." src="https://mdn.mozillademos.org/files/14743/10-float-simple-override.png" style="height: 308px; width: 1620px;"></p>
+<p><img alt="A simple example of overriding a floated layout using grid." src="10-float-simple-override.png"></p>
 
 <h3 id="Utiliser_les_requêtes_de_fonctionnalité_(feature_queries)">Utiliser les requêtes de fonctionnalité (<em>feature queries</em>)</h3>
 
@@ -181,19 +181,19 @@ img {
 
 <p>Dans la capture qui suit, on voit un problème classique qui est causé par les dispositions flottantes : si on ajoute du contenu à l'une des cartes, la disposition est chamboulée.</p>
 
-<p><img alt="A floated cards layout demonstrating the problem caused by uneven content height." src="https://mdn.mozillademos.org/files/14745/10-floated-cards.png" style="height: 536px; width: 550px;"></p>
+<p><img alt="A floated cards layout demonstrating the problem caused by uneven content height." src="10-floated-cards.png"></p>
 
 <p>Pour gérer les anciens navigateurs dans une certaine mesure, on peut indiquer une hauteur minimale pour les boîtes avec {{cssxref("min-height")}} et espérer que les éditeurs n'ajouteront pas trop de contenu dans chaque boîte…</p>
 
 <p>Voyons comment améliorer cette disposition avec une grille : on transforme l'élément {{HTMLElement("ul")}} en un conteneur de grille avec trois pistes en colonne. Malheureusement, la largeur qu'on avait affectée aux éléments de la liste s'applique toujours et désormais, chaque élément de la liste occupe uniquement un tiers de la piste correspondante.</p>
 
-<p><img alt="After applying grid to our container, the width of the items is now incorrect as they display at one third of the item width." src="https://mdn.mozillademos.org/files/14747/10-float-width-problem.png" style="height: 721px; width: 550px;"></p>
+<p><img alt="After applying grid to our container, the width of the items is now incorrect as they display at one third of the item width." src="10-float-width-problem.png"></p>
 
 <p>Si on réinitialise la largeur avec <code>auto</code>, on n'aura plus le résultat souhaité dans les anciens navigateurs. Il faut donc trouver un moyen de définir la largeur pour les anciens navigateurs et de supprimer la largeur quand le navigateur prend en charge les grilles CSS. Grâce <a href="/fr/docs/Web/CSS/@supports">aux requêtes de fonctionnalité CSS</a>, on peut le faire directement en CSS.</p>
 
 <h4 id="une_solution_avec_les_requetes_de_fonctionnalité">Une solution avec les requêtes de fonctionnalité</h4>
 
-<p>Les requêtes de fonctionnalité ressemblent beaucoup aux <a href="/fr/docs/Web/CSS/Requêtes_média">requêtes de média</a> qu'on utilise pour créer des dispositions adaptatives. Ici, plutôt que de vérifier la largeur de la zone d'affichage ou telle caractéristique du navigateur ou de l'appareil, on vérifie la prise en charge d'une propriété CSS avec une certaine valeur grâce à une règle {{cssxref("@supports")}}. À l'intérieur de cette requête, on peut écrire le CSS nécessaire pour obtenir la nouvelle disposition et retiré tout ce qui est nécessaire pour l'ancienne mise en forme.</p>
+<p>Les requêtes de fonctionnalité ressemblent beaucoup aux <a href="/fr/docs/Web/CSS/Media_Queries">requêtes de média</a> qu'on utilise pour créer des dispositions adaptatives. Ici, plutôt que de vérifier la largeur de la zone d'affichage ou telle caractéristique du navigateur ou de l'appareil, on vérifie la prise en charge d'une propriété CSS avec une certaine valeur grâce à une règle {{cssxref("@supports")}}. À l'intérieur de cette requête, on peut écrire le CSS nécessaire pour obtenir la nouvelle disposition et retiré tout ce qui est nécessaire pour l'ancienne mise en forme.</p>
 
 <pre class="brush: css">@supports (display: grid) {
   .wrapper {
@@ -206,7 +206,7 @@ img {
 
 <p>La prise en charge des requêtes de fonctionnalité par les différents navigateurs est excellente. Tous les navigateurs qui prennent en charge la nouvelle spécification pour les grilles CSS supportent aussi les requêtes de fonctionnalité. On peut donc les utiliser pour résoudre le problème précédent pour améliorer la disposition flottante.</p>
 
-<p>On utilise donc <code>@supports</code> pour vérifier la prise en charge de <code>display: grid</code>;, ensuite on indique que {{HTMLElement("ul")}} est le conteneur de la grille, on définit la largeur et {{cssxref("min-height")}} avec <code>auto</code> pour les éléments {{HTMLElement("li")}}. On retire également les marges, les marges négatives et on remplace l'espacement avec la propriété {{cssxref("grid-gap")}}. Cela signifie qu'il n'y aura pas de marge finale sur la dernière ligne de boîtes. La disposition fonctionne également  désormais lorsqu'une carte possède plus de contenu qu'une autre.</p>
+<p>On utilise donc <code>@supports</code> pour vérifier la prise en charge de <code>display: grid</code>;, ensuite on indique que {{HTMLElement("ul")}} est le conteneur de la grille, on définit la largeur et {{cssxref("min-height")}} avec <code>auto</code> pour les éléments {{HTMLElement("li")}}. On retire également les marges, les marges négatives et on remplace l'espacement avec la propriété {{cssxref("gap")}}. Cela signifie qu'il n'y aura pas de marge finale sur la dernière ligne de boîtes. La disposition fonctionne également  désormais lorsqu'une carte possède plus de contenu qu'une autre.</p>
 
 <pre class="brush: css hidden">* {box-sizing: border-box;}
 

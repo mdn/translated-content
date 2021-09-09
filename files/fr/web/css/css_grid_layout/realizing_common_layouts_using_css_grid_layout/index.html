@@ -15,15 +15,15 @@ original_slug: >-
 
 <p>{{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Modèle_de_grille_et_autres_modèles_de_disposition","","Web/CSS/CSS_Grid_Layout")}}</p>
 
-<p>Pour clôturer ces différents guides, nous allons maintenant voir différentes dispositions sur lesquelles nous appliquerons des techniques avec les grilles CSS. Nous prendrons un exemple qui utilise <a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille">les zones nommées d'une grille</a>, un système de grille flexible avec 12 colonnes et aussi une liste de produits avec un placement automatique. Comme nous le verrons, il existe plusieurs méthodes pour accéder à chaque résultat. À vous de choisir la méthode qui vous paraît la plus pertinente et utile pour les problèmes que vous avez à résoudre et les dispositions que vous devez implémenter.</p>
+<p>Pour clôturer ces différents guides, nous allons maintenant voir différentes dispositions sur lesquelles nous appliquerons des techniques avec les grilles CSS. Nous prendrons un exemple qui utilise <a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">les zones nommées d'une grille</a>, un système de grille flexible avec 12 colonnes et aussi une liste de produits avec un placement automatique. Comme nous le verrons, il existe plusieurs méthodes pour accéder à chaque résultat. À vous de choisir la méthode qui vous paraît la plus pertinente et utile pour les problèmes que vous avez à résoudre et les dispositions que vous devez implémenter.</p>
 
 <h2 id="Une_disposition_adaptative_avec_une_à_trois_colonnes_en_utilisant_grid-template-areas">Une disposition adaptative avec une à trois colonnes en utilisant <code>grid-template-areas</code></h2>
 
 <p>De nombreux sites web sont construits comme une variation autour de cette disposition avec du contenu, une ou plusieurs barres latérale, un en-tête et un pied de page. Pour que le site soit <em>responsive</em>, on peut souhaiter avoir une seule colonne pour certaines tailles d'affichage, ajouter une barre latérale lorsqu'on a plus d'espace et enfin, avoir trois colonnes pour les écrans les plus larges.</p>
 
-<p><img alt="Image of the three different layouts created by redefining our grid at two breakpoints." src="https://mdn.mozillademos.org/files/14749/11-responsive-areas.png"></p>
+<p><img alt="Image of the three different layouts created by redefining our grid at two breakpoints." src="11-responsive-areas.png"></p>
 
-<p>Ici, on crée une disposition avec des zones nommées comme on a pu le voir <em><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille">dans l'article correspondant</a></em>.</p>
+<p>Ici, on crée une disposition avec des zones nommées comme on a pu le voir <em><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">dans l'article correspondant</a></em>.</p>
 
 <p>Dans le document on a un conteneur qui contient un en-tête, un pied de page, du contenu principal, une barre de navigation, une barre latérale et un bloc dans lequel on souhaite placer de la publicité.</p>
 
@@ -111,7 +111,7 @@ nav ul {
 }
 </pre>
 
-<p>Après cette disposition par défaut pour les appareils mobiles, on peut ajouter une <a href="/fr/docs/Web/CSS/Requêtes_média">requête média (<em>media query</em>)</a> et redéfinir la disposition lorsqu'on a plus d'espace et qu'on peut afficher deux colonnes :</p>
+<p>Après cette disposition par défaut pour les appareils mobiles, on peut ajouter une <a href="/fr/docs/Web/CSS/Media_Queries">requête média (<em>media query</em>)</a> et redéfinir la disposition lorsqu'on a plus d'espace et qu'on peut afficher deux colonnes :</p>
 
 <pre class="brush: css">@media (min-width: 500px) {
   .wrapper {
@@ -211,11 +211,11 @@ nav ul {
 
 <p>{{EmbedLiveSample('Une_disposition_flexible_avec_12_colonnes', '800', '330')}}</p>
 
-<p>Comme nous l'avons vu dans <a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nomméees_sur_une_grille">le guide sur le nommage des lignes</a>, on utilise les noms des colonnes pour placer nos éléments. On a ici 12 colonnes avec le même nom, on utilise donc ce nom et l'indice qui indique le numéro. On pourrait tout aussi bien utiliser seulement le numéro si on voulait se passer des noms pour les lignes.</p>
+<p>Comme nous l'avons vu dans <a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines">le guide sur le nommage des lignes</a>, on utilise les noms des colonnes pour placer nos éléments. On a ici 12 colonnes avec le même nom, on utilise donc ce nom et l'indice qui indique le numéro. On pourrait tout aussi bien utiliser seulement le numéro si on voulait se passer des noms pour les lignes.</p>
 
 <p>Plutôt que d'indiquer le numéro de la dernière colonne pour chaque élément, on a ici utilisé le mot-clé <code>span</code> pour indiquer la taille de chaque élément. Cette approche permet de revoir plus clairement la taille de chaque élément lorsqu'on ajoute une nouvelle disposition pour une nouvelle taille d'écran. Dans la capture qui suit, on peut voir comment les blocs sont positionnés sur la grilles. Pour cela, on a utilisé <a href="/fr/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">l'inspecteur de grille de Firefox</a> qui indique de façon claire comment les objets sont placés.</p>
 
-<p><img alt="Showing the items placed on the grid with grid tracks highlighted." src="https://mdn.mozillademos.org/files/14753/11-grid-inspector-12col.png"></p>
+<p><img alt="Showing the items placed on the grid with grid tracks highlighted." src="11-grid-inspector-12col.png"></p>
 
 <p>Il y a certainement certaines différences fondamentales avec les systèmes que vous auriez pu utiliser précédemment. On voit par exemple qu'il n'est pas nécessaire d'ajouter de règles supplémentaires pour créer une ligne. Généralement, il faut ajouter des contrôles pour éviter que les éléments remontent sur les lignes au-dessus. Avec une grille CSS, ce n'est pas un problème, les lignes supérieures sont laissées vides. La disposition étant <em>stricte</em>, on peut très bien laisser des espaces dans notre plan. Il n'est pas non plus nécessaire de définir des classes spécifiques afin d'indenter les différents objets, il suffit ici d'indiquer la colonne de début et la colonne de fin.</p>
 
@@ -343,13 +343,13 @@ nav ul {
 
 <p>On peut à nouveau profiter de <a href="/fr/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">l'inspecteur de grille</a> pour voir comment se compose effectivement notre disposition :</p>
 
-<p><img alt="Showing the layout with grid tracks highlighted by the grid inspector." src="https://mdn.mozillademos.org/files/14755/11-grid-inspector-12col-layout.png" style="height: 614px; width: 2050px;"></p>
+<p><img alt="Showing the layout with grid tracks highlighted by the grid inspector." src="11-grid-inspector-12col-layout.png"></p>
 
 <p>On notera qu'il n'a pas été nécessaire de redéfinir explicitement la position de chaque élément pour chaque résolution. On a pu hériter des emplacements des résolutions précédentes. On gagne donc à travailler en considérant les résolutions mobiles en premier lieu. On tire également parti du placement automatique géré par la grille avec l'ordre, logique, des éléments du documents. Dans le dernier exemple, nous allons voir comment le placement automatique sur la grille peut aider à positionner des objets..</p>
 
 <h2 id="Une_liste_produit_utilisant_le_placement_automatique">Une liste produit utilisant le placement automatique</h2>
 
-<p>De nombreuses dispositions sont essentiellement composée de <em>cartes</em> ou <em>tuiles</em> : des listes produit, des galeries d'image, etc. Avec une grille, on peut facilement créer ce genre de liste de façon adaptative, sans avoir à ajouter de <a href="/fr/docs/Web/CSS/Requêtes_média">requêtes de média</a>. Dans l'exemple qui suit, nous allons combiner les grilles CSS et les boîtes flexibles afin d'obtenir une liste de produits.</p>
+<p>De nombreuses dispositions sont essentiellement composée de <em>cartes</em> ou <em>tuiles</em> : des listes produit, des galeries d'image, etc. Avec une grille, on peut facilement créer ce genre de liste de façon adaptative, sans avoir à ajouter de <a href="/fr/docs/Web/CSS/Media_Queries">requêtes de média</a>. Dans l'exemple qui suit, nous allons combiner les grilles CSS et les boîtes flexibles afin d'obtenir une liste de produits.</p>
 
 <p>Le document utilisé contient une liste d'objets non ordonnée. Pour chaque produit, on a un titre, un texte dont la taille n'est pas fixe et un lien pour effectuer une action.</p>
 
@@ -445,7 +445,7 @@ h2 {
 
 <p>Le résultat est plutôt abouti mais on a parfois des cartes qui ont beaucoup plus de contenu. Si on veut que celles-ci soient plus large (pour éviter qu'elles soient trop hautes), on peut les étaler sur deux pistes. Pour cela, on a utilisé la classe <code>wide</code> sur l'objet avec plus de contenu et on ajoute une règle {{cssxref("grid-column-end")}} avec la valeur <code>span 2</code>. Désormais, lorsque la grille devra placer un élément de ce type, elle lui affectera deux colonnes. Cela signifie aussi que pour certaines tailles d'affichage, on aura un espace dans la grille lorsqu'il n'y aura pas suffisamment d'espace pour placer un objet sur deux colonnes :</p>
 
-<p><img alt="The layout has gaps as there is not space to layout a two track item." src="https://mdn.mozillademos.org/files/14751/11-grid-auto-flow-sparse.png" style="height: 1664px; width: 1640px;"></p>
+<p><img alt="The layout has gaps as there is not space to layout a two track item." src="11-grid-auto-flow-sparse.png"></p>
 
 <p>Si on veut éviter ces trous, on peut utiliser la règle {{cssxref("grid-auto-flow")}}<code>: dense </code>sur le conteneur de la grille. Attention à utiliser cette valeur car l'ordre logique n'est plus respecté. Aussi, il ne faut utiliser cette valeur uniquement lorsqu'il n'y a pas d'ordre pour les objets. Avec cette valeur, la navigation au clavier (<em>tab order</em>) continue de suivre l'ordre des éléments du document et pas l'ordre d'affichage des objets sur la grille.</p>
 

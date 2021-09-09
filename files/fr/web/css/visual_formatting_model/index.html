@@ -10,7 +10,7 @@ original_slug: Web/CSS/Modèle_de_mise_en_forme_visuelle
 ---
 <div>{{CSSRef}}</div>
 
-<p>En CSS, le modèle de mise en forme visuelle est un algorithme qui traite un document afin de l'afficher sur un support visuel. Chaque élément du document est ainsi transformé en zéro, une ou plusieurs boîtes qui s'inscrivent dans <a href="/fr/Apprendre/CSS/Introduction_à_CSS/Le_modèle_de_boîte">le modèle de boîtes CSS</a>. La disposition de chaque boîte est dictée par :</p>
+<p>En CSS, le modèle de mise en forme visuelle est un algorithme qui traite un document afin de l'afficher sur un support visuel. Chaque élément du document est ainsi transformé en zéro, une ou plusieurs boîtes qui s'inscrivent dans <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">le modèle de boîtes CSS</a>. La disposition de chaque boîte est dictée par :</p>
 
 <ul>
  <li>Les dimensions de la boîte qui peuvent être définies explicitement, contraintes ou non</li>
@@ -30,13 +30,13 @@ original_slug: Web/CSS/Modèle_de_mise_en_forme_visuelle
 
 <h3 id="Les_éléments_de_bloc_et_les_boîtes_de_bloc">Les éléments de bloc et les boîtes de bloc</h3>
 
-<p>Un élément est dit « de bloc » lorsque <a href="/fr/docs/Web/CSS/Valeur_calculée">la valeur calculée</a> de la propriété {{cssxref("display")}} qui lui est appliquée vaut : <code>block</code>, <code>list-item</code> ou <code>table</code>. Un élément de bloc est représenté sous la forme d'un bloc (comme un paragraphe par exemple) et les blocs sont empilés verticalement les uns sur les autres.</p>
+<p>Un élément est dit « de bloc » lorsque <a href="/fr/docs/Web/CSS/computed_value">la valeur calculée</a> de la propriété {{cssxref("display")}} qui lui est appliquée vaut : <code>block</code>, <code>list-item</code> ou <code>table</code>. Un élément de bloc est représenté sous la forme d'un bloc (comme un paragraphe par exemple) et les blocs sont empilés verticalement les uns sur les autres.</p>
 
-<p>Chaque boîte de bloc contribue au <a href="/fr/docs/Web/CSS/Block_formatting_context">contexte de mise en forme des blocs</a>. Chaque élément de bloc génère au moins une boîte de niveau bloc, qu'on appelle la boîte de bloc principale. Certains éléments (comme les éléments d'une liste par exemple) génèrent d'autres boîtes afin de gérer les puces ou d'autres éléments typographiques.</p>
+<p>Chaque boîte de bloc contribue au <a href="/fr/docs/Web/Guide/CSS/Block_formatting_context">contexte de mise en forme des blocs</a>. Chaque élément de bloc génère au moins une boîte de niveau bloc, qu'on appelle la boîte de bloc principale. Certains éléments (comme les éléments d'une liste par exemple) génèrent d'autres boîtes afin de gérer les puces ou d'autres éléments typographiques.</p>
 
 <p>La boîte de bloc principale contient les boîtes générées par les descendants ete le contenu généré. Cette boîte participe au schéma de positionnement.</p>
 
-<p><img alt="venn_blocks.png" class="internal lwrap" src="/@api/deki/files/5995/=venn_blocks.png"></p>
+<p><img alt="venn_blocks.png" class="internal lwrap" src="venn_blocks.png"></p>
 
 <p>Une boîte de bloc peut également un conteneur de blocs. Un conteneur de blocs est une boîte qui ne contient que d'autres boîtes de bloc ou qui crée un contexte de formatage en ligne et qui ne contient alors que des boîtes en ligne. Attention, les notions de boîtes de bloc et de conteneurs de blocs ne sont pas identiques. La première décrit la façon dont la boîte se comporte avec ses parents et ses voisins et le seconde définit la façon dont elle interagit avec ses descendants. Certaines boîtes de blocs, telles que les tableaux, ne sont pas des conteneurs de blocs. Réciproquement, certains conteneurs de blocs (tels que les cellules de tableau non remplacées) ne sont pas des boîtes de bloc.</p>
 
@@ -60,7 +60,7 @@ original_slug: Web/CSS/Modèle_de_mise_en_forme_visuelle
 </pre>
 
 <p>On aura deux boîtes de bloc anonymes qui seront créées : une pour le texte avant le paragraphe et une pour le texte après. On aura alors la structure suivante :<br>
-   <img alt="anonymous_block-level_boxes.png" src="/@api/deki/files/5996/=anonymous_block-level_boxes.png"></p>
+   <img alt="anonymous_block-level_boxes.png" src="anonymous_block-level_boxes.png"></p>
 
 <p>À la différence de la boîte des éléments {{HTMLElement("p")}}, les développeurs ne peuvent pas contrôler la mise en forme des boîtes anonymes. Les propriétés qui héritent des éléments parents récupèreront la valeur obtenue pour l'élément {{HTMLElement("div")}} et les autres propriétés auront la valeur <code>initial</code>.</p>
 
@@ -78,7 +78,7 @@ original_slug: Web/CSS/Modèle_de_mise_en_forme_visuelle
 
 <p>Deux boîtes de bloc anonymes sont créées : une pour le texte avant l'élément <code>&lt;span&gt;</code> et une pour le texte qui suit cet élément. On a alors la structure suivante :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13625/anonymous_block_box_break.png" style="height: 137px; width: 597px;"></p>
+<p><img alt="" src="anonymous_block_box_break.png"></p>
 
 <h3 id="Les_éléments_en_ligne_et_les_boîtes_en_ligne">Les éléments en ligne et les boîtes en ligne</h3>
 

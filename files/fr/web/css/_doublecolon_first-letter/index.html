@@ -1,15 +1,15 @@
 ---
 title: '::first-letter'
-slug: 'Web/CSS/::first-letter'
+slug: Web/CSS/::first-letter
 tags:
   - CSS
   - Pseudo-element
   - Reference
-translation_of: 'Web/CSS/::first-letter'
+translation_of: Web/CSS/::first-letter
 ---
 <div>{{CSSRef}}</div>
 
-<p>Le <a href="/fr/docs/Web/CSS/Pseudo-éléments">pseudo-élément</a> <strong><code>::first-letter</code></strong> sélectionne la première lettre de la première ligne d'un bloc, si elle n'est pas précédée par un quelconque autre contenu (comme une image ou un tableau en ligne) sur sa ligne.</p>
+<p>Le <a href="/fr/docs/Web/CSS/Pseudo-elements">pseudo-élément</a> <strong><code>::first-letter</code></strong> sélectionne la première lettre de la première ligne d'un bloc, si elle n'est pas précédée par un quelconque autre contenu (comme une image ou un tableau en ligne) sur sa ligne.</p>
 
 <pre class="brush: css no-line-numbers">/* Sélectionne la première lettre */
 /* d'un élément &lt;p&gt; */
@@ -22,7 +22,7 @@ p::first-letter {
 
 <ul>
  <li>La ponctuation, c'est-à-dire n'importe quel caractère défini dans une des classes Unicode <em lang="en">open</em> (Ps), <em lang="en">close</em> (Pe), <em lang="en">initial quote</em> (Pi), <em lang="en">final quote</em> (Pf) et <em lang="en">other punctuation</em> (Po) , précédant ou suivant immédiatement la première lettre est aussi sélectionnée par ce pseudo-élément.</li>
- <li>D'autre part, certaines langues possèdent des digraphes qui sont mis en majuscule ensemble, comme le <code>IJ</code> en néerlandais. Dans ces rares cas, les deux lettres du digraphes doivent être sélectionnées par le pseudo-élément <code>::first-letter</code>. (Ceci est mal supporté par les navigateurs, reportez vous au <a href="/fr/CSS/::first-letter#Compatibilité_des_navigateurs">tableau de compatibilité des navigateurs</a>).</li>
+ <li>D'autre part, certaines langues possèdent des digraphes qui sont mis en majuscule ensemble, comme le <code>IJ</code> en néerlandais. Dans ces rares cas, les deux lettres du digraphes doivent être sélectionnées par le pseudo-élément <code>::first-letter</code>. (Ceci est mal supporté par les navigateurs, reportez vous au <a href="/fr/docs/Web/CSS/::first-letter#compatibilit%c3%a9_des_navigateurs">tableau de compatibilité des navigateurs</a>).</li>
  <li>Enfin, une combinaison du pseudo-élément {{cssxref("::before")}} et de la propriété {{cssxref("content")}} peut injecter du texte au début de l'élément. Dans ce cas, <code>::first-letter</code> sélectionnera la première lettre du contenu inséré.</li>
 </ul>
 
