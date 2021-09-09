@@ -3045,6 +3045,7 @@
 /ja/docs/Web/API/AudioContext/sampleRate	/ja/docs/Web/API/BaseAudioContext/sampleRate
 /ja/docs/Web/API/AudioContext/state	/ja/docs/Web/API/BaseAudioContext/state
 /ja/docs/Web/API/Boolean	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+/ja/docs/Web/API/ByteString	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String
 /ja/docs/Web/API/CSSMatrix	/ja/docs/Web/API/DOMMatrix
 /ja/docs/Web/API/CSSStyleSheet.insertRule	/ja/docs/Web/API/CSSStyleSheet/insertRule
 /ja/docs/Web/API/CSS_Painting_API/ガイド	/ja/docs/Web/API/CSS_Painting_API/Guide
@@ -3161,6 +3162,7 @@
 /ja/docs/Web/API/Index	/ja/docs/conflicting/Web/API_49b9a84475f11fffb8fc271a7df3c49a
 /ja/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/ja/docs/Web/API/IndexedDB_API/Basic_Terminology
 /ja/docs/Web/API/MediaRecorder_API	/ja/docs/Web/API/MediaStream_Recording_API
+/ja/docs/Web/API/MouseEvent/which	/ja/docs/Web/API/UIEvent/which
 /ja/docs/Web/API/Navigator.getUserMedia	/ja/docs/Web/API/Navigator/getUserMedia
 /ja/docs/Web/API/Navigator/registerContentHandler	/ja/docs/orphaned/Web/API/Navigator/registerContentHandler
 /ja/docs/Web/API/NavigatorID	/ja/docs/Web/API/Navigator
