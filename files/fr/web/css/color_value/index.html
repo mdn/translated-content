@@ -10,12 +10,12 @@ original_slug: Web/CSS/Type_color
 ---
 <div>{{CSSRef}}</div>
 
-<p>Le type de données CSS <strong><code>&lt;color&gt;</code></strong> permet de représenter des couleurs dans <a class="external" href="https://fr.wikipedia.org/wiki/SRGB">l'espace de couleurs sRGB</a>. Une couleur pourra être décrite de trois façons :</p>
+<p>Le type de données CSS <strong><code>&lt;color&gt;</code></strong> permet de représenter des couleurs dans <a href="https://fr.wikipedia.org/wiki/SRGB">l'espace de couleurs sRGB</a>. Une couleur pourra être décrite de trois façons :</p>
 
 <ul>
  <li>grâce à un mot-clé (comme <code>blue</code> ou  <code>transparent</code> par exemple)</li>
  <li>en utilisant <a href="https://fr.wikipedia.org/wiki/Couleur_du_Web#Triplet_hexad.C3.A9cimal">le système de coordonnées cubiques RGB</a> (grâce à la notation #-hexadecimal ou aux notations fonctionnelles <code>rgb()</code> et <code>rgba()</code>)</li>
- <li>en utilisant <a class="external" href="https://fr.wikipedia.org/wiki/Teinte_saturation_lumi%C3%A8re">le système de coordonnées cylindriques HSL</a> (grâce aux notations fonctionnelles <code>hsl()</code> et <code>hsla()</code>)</li>
+ <li>en utilisant <a href="https://fr.wikipedia.org/wiki/Teinte_saturation_lumi%C3%A8re">le système de coordonnées cylindriques HSL</a> (grâce aux notations fonctionnelles <code>hsl()</code> et <code>hsla()</code>)</li>
 </ul>
 
 <p>En plus de la couleur exprimée dans l'espace RGB, une valeur <code>&lt;color&gt;</code> contient également un <a href="https://fr.wikipedia.org/wiki/Alpha_blending">canal alpha</a> qui décrit la transparence de l'image et donc la façon dont cette image se <a href="https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending">compose</a> avec son arrière-plan.</p>
@@ -1321,11 +1321,11 @@ hsla(240deg,100%,50%, 0.4) /* 40% opaque blue */</pre>
 
 <h2 id="Interpolation">Interpolation</h2>
 
-<p>Les valeurs de type <code>&lt;color&gt;</code> peuvent être interpolées afin de créer des animations ou des dégradés (type <code>&lt;gradient&gt;</code>). Dans ce cas, elles sont interpolées via chacune de leurs composantes rouge, verte, bleue et chacune de ces coordonnées est gérée comme un nombre réel flottant. L'interpolation des couleurs est appliquée dans <a class="external" href="https://www.gimp.org/docs/plug-in/appendix-alpha.html">l'espace de couleurs alpha sRGBA prémultiplié</a> afin d'empêcher des tons de gris d'apparaître. Pour les animations, la vitesse de l'interpolation est définie selon <a href="/fr/docs/Web/CSS/timing-function">la fonction de temporisation</a> associée à l'animation.</p>
+<p>Les valeurs de type <code>&lt;color&gt;</code> peuvent être interpolées afin de créer des animations ou des dégradés (type <code>&lt;gradient&gt;</code>). Dans ce cas, elles sont interpolées via chacune de leurs composantes rouge, verte, bleue et chacune de ces coordonnées est gérée comme un nombre réel flottant. L'interpolation des couleurs est appliquée dans <a href="https://www.gimp.org/docs/plug-in/appendix-alpha.html">l'espace de couleurs alpha sRGBA prémultiplié</a> afin d'empêcher des tons de gris d'apparaître. Pour les animations, la vitesse de l'interpolation est définie selon <a href="/fr/docs/Web/CSS/timing-function">la fonction de temporisation</a> associée à l'animation.</p>
 
 <h2 id="Accessibilité">Accessibilité</h2>
 
-<p>La recommandation du W3C : <a class="external" href="https://www.w3.org/TR/WCAG/#visual-audio-contrast">WCAG 2.0</a> conseille vivement aux auteurs de ne pas utiliser la couleur comme le seul moyen de transmettre une information, une action ou un résultat. Certains utilisateurs peuvent rencontrer des difficultés à distinguer les couleurs. Bien entendu, cette recommandation ne vise pas à interdire l'utilisation des couleurs, elle indique simplement que ce ne doit pas être le seul moyen de fournir une information (voir l'article sur <a href="/fr/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">Ies couleurs et le contraste</a> pour plus d'informations).</p>
+<p>La recommandation du W3C : <a href="https://www.w3.org/TR/WCAG/#visual-audio-contrast">WCAG 2.0</a> conseille vivement aux auteurs de ne pas utiliser la couleur comme le seul moyen de transmettre une information, une action ou un résultat. Certains utilisateurs peuvent rencontrer des difficultés à distinguer les couleurs. Bien entendu, cette recommandation ne vise pas à interdire l'utilisation des couleurs, elle indique simplement que ce ne doit pas être le seul moyen de fournir une information (voir l'article sur <a href="/fr/docs/Learn/Accessibility/CSS_and_JavaScript#Color_and_color_contrast">Ies couleurs et le contraste</a> pour plus d'informations).</p>
 
 <h2 id="Spécifications">Spécifications</h2>
 
