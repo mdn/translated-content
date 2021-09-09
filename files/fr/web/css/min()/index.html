@@ -11,7 +11,7 @@ translation_of: Web/CSS/min()
 
 <p>La fonction CSS <code><strong>min()</strong></code> permet d'obtenir la plus petite valeurs parmi une liste d'expressions, séparées par des virgules afin d'utiliser ce minimum comme valeur d'une propriété CSS. La fonction <code>min()</code> peut être utilisée à tout endroit où une valeur de type {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}} ou {{cssxref("&lt;integer&gt;")}} est autorisée.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* property: min(expression<code class="css plain"> [, expression]</code>) */
+<pre class="brush: css no-line-numbers">/* property: min(expression<code class="css plain"> [, expression]</code>) */
 width: min(10vw, 4em, 80px);
 </pre>
 
@@ -44,14 +44,14 @@ width: min(10vw, 4em, 80px);
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">.logo {
+<pre class="brush: css">.logo {
   width: min(50vw, 300px);
 }
 </pre>
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;img src="https://developer.mozilla.org/static/img/web-docs-sprite.svg" alt="MDN Web Docs" class="logo"&gt;</pre>
+<pre class="brush: html">&lt;img src="https://developer.mozilla.org/static/img/web-docs-sprite.svg" alt="MDN Web Docs" class="logo"&gt;</pre>
 
 <h4 id="Résultat">Résultat</h4>
 
@@ -63,7 +63,7 @@ width: min(10vw, 4em, 80px);
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">input, label {
+<pre class="brush: css">input, label {
   padding: 2px;
   box-sizing: border-box;
   display: inline-block;
@@ -82,7 +82,7 @@ form {
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;label&gt;Saisir quelque chose :&lt;/label&gt;
   &lt;input type="text"&gt;
 &lt;/form&gt;
@@ -94,7 +94,7 @@ form {
 
 <p>Lorsqu'on utilise <code>min()</code> afin de contrôler la taille du texte, il faut s'assurer que le texte puisse toujours être suffisamment grand pour être lisible. Pour cela, on peut imbriquer l'appel à <code>min()</code> dans <code><a href="/fr/docs/Web/CSS/max">max()</a></code> utilisant <a href="/fr/docs/Web/CSS/length#Unités_de_longueur_relatives">une unité de longueur relative</a> en deuxième argument afin de garantir une lisibilité minimale :</p>
 
-<pre class="brush: css notranslate">small {
+<pre class="brush: css">small {
   font-size: max(min(0.5vw, 0.5em), 1rem);
 }</pre>
 

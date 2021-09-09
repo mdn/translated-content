@@ -77,7 +77,7 @@ original_slug: Web/CSS/Redimensionnement_arrière-plans_SVG
 
 <p>Avec ces déclarations CSS :</p>
 
-<pre class="brush: css notranslate">background: url(no-dimensions-or-ratio.svg);
+<pre class="brush: css">background: url(no-dimensions-or-ratio.svg);
 background-size: 125px 175px;
 </pre>
 
@@ -89,7 +89,7 @@ background-size: 125px 175px;
 
 <p>Avec ces déclarations CSS :</p>
 
-<pre class="brush: css notranslate">background: url(100px-wide-no-height-or-ratio.svg);
+<pre class="brush: css">background: url(100px-wide-no-height-or-ratio.svg);
 background-size: 250px 150px;
 </pre>
 
@@ -101,7 +101,7 @@ background-size: 250px 150px;
 
 <p>Avec ces déclarations CSS :</p>
 
-<pre class="brush: css notranslate">background: url(100px-height-3x4-ratio.svg);
+<pre class="brush: css">background: url(100px-height-3x4-ratio.svg);
 background-size: 275px 125px;
 </pre>
 
@@ -113,7 +113,7 @@ background-size: 275px 125px;
 
 <p>Avec ces déclarations CSS :</p>
 
-<pre class="brush: css notranslate">background: url(no-dimensions-1x1-ratio.svg);
+<pre class="brush: css">background: url(no-dimensions-1x1-ratio.svg);
 background-size: 250px 100px;
 </pre>
 
@@ -131,7 +131,7 @@ background-size: 250px 100px;
 
 <p>Si une image n'a ni dimensions définie, ni proportions définies, les règles 2 ou 3 ne pourront pas s'appliquer. La règle 4 est donc utilisée et l'image couvre toute la zone (ce qui satisfait d'ailleurs les différentes contraintes).</p>
 
-<pre class="brush: css notranslate">background: url(no-dimensions-or-ratio.svg);
+<pre class="brush: css">background: url(no-dimensions-or-ratio.svg);
 background-size: contain;
 </pre>
 
@@ -143,7 +143,7 @@ background-size: contain;
 
 <p>De même si l'image possède une dimension mais aucune proportion, la règle 4 sera appliquée : l'image est ainsi redimensionnée pour couvrir toute la zone.</p>
 
-<pre class="brush: css notranslate">background: url(100px-wide-no-height-or-ratio.svg);
+<pre class="brush: css">background: url(100px-wide-no-height-or-ratio.svg);
 background-size: contain;
 </pre>
 
@@ -157,7 +157,7 @@ background-size: contain;
 
 <h5 id="contain"><code>contain</code></h5>
 
-<pre class="brush: css notranslate">background: url(100px-height-3x4-ratio.svg);
+<pre class="brush: css">background: url(100px-height-3x4-ratio.svg);
 background-size: contain;
 </pre>
 
@@ -169,7 +169,7 @@ background-size: contain;
 
 <h5 id="cover"><code>cover</code></h5>
 
-<pre class="brush: css notranslate">background: url(100px-height-3x4-ratio.svg);
+<pre class="brush: css">background: url(100px-height-3x4-ratio.svg);
 background-size: cover;
 </pre>
 
@@ -185,7 +185,7 @@ background-size: cover;
 
 <h5 id="contain_2"><code>contain</code></h5>
 
-<pre class="brush: css notranslate">background: url(no-dimensions-1x1-ratio.svg);
+<pre class="brush: css">background: url(no-dimensions-1x1-ratio.svg);
 background-size: contain;
 </pre>
 
@@ -197,7 +197,7 @@ background-size: contain;
 
 <h5 id="cover_2"><code>cover</code></h5>
 
-<pre class="brush: css notranslate">background: url(no-dimensions-1x1-ratio.svg);
+<pre class="brush: css">background: url(no-dimensions-1x1-ratio.svg);
 background-size: cover;
 </pre>
 
@@ -215,7 +215,7 @@ background-size: cover;
 
 <p>Lorsque l'image n'a aucune proportion ni dimension, ce sera la dernière règle qui s'appliquera : l'image couvrira toute la surface de la zone.</p>
 
-<pre class="brush: css notranslate">background: url(no-dimensions-or-ratio.svg);
+<pre class="brush: css">background: url(no-dimensions-or-ratio.svg);
 background-size: auto auto;
 </pre>
 
@@ -227,7 +227,7 @@ background-size: auto auto;
 
 <p>S'il n'y a aucune proportion définie mais qu'une dimension est fournie, la règle n°3 s'appliquera et l'image sera affichée avec ces dimensions.</p>
 
-<pre class="brush: css notranslate">background: url(100px-wide-no-height-or-ratio.svg);
+<pre class="brush: css">background: url(100px-wide-no-height-or-ratio.svg);
 background-size: auto auto;
 </pre>
 
@@ -241,7 +241,7 @@ background-size: auto auto;
 
 <p>Si on dispose de proportions intrinsèques et d'une dimension fixée, les deux dimensions sont alors définies.</p>
 
-<pre class="brush: css notranslate">background: url(100px-height-3x4-ratio.svg);
+<pre class="brush: css">background: url(100px-height-3x4-ratio.svg);
 background-size: auto auto;
 </pre>
 
@@ -255,7 +255,7 @@ background-size: auto auto;
 
 <p>Lorsqu'un ratio s'applique sans dimension, c'est la règle n°2 qui s'applique. L'image est affichée comme pour <code>contain</code>.</p>
 
-<pre class="brush: css notranslate">background: url(no-dimensions-1x1-ratio.svg);
+<pre class="brush: css">background: url(no-dimensions-1x1-ratio.svg);
 background-size: auto auto;
 </pre>
 
@@ -271,7 +271,7 @@ background-size: auto auto;
 
 <p>Si l'image ne possède ni dimension ni proportion intrinsèque, c'est la règle 4 qui s'applique et les dimensions de la zone pour l'arrière-plan seront utilisées pour <code>auto</code>.</p>
 
-<pre class="brush: css notranslate">background: url(no-dimensions-or-ratio.svg);
+<pre class="brush: css">background: url(no-dimensions-or-ratio.svg);
 background-size: auto 140px;
 </pre>
 
@@ -283,7 +283,7 @@ background-size: auto 140px;
 
 <p>Si l'image possède une dimension implicite mais pas de ratio, la dimension définie sera utilisée selon la règle n°3 si elle vaut <code>auto</code> dans le code CSS.</p>
 
-<pre class="brush: css notranslate">background: url(100px-wide-no-height-or-ratio.svg);
+<pre class="brush: css">background: url(100px-wide-no-height-or-ratio.svg);
 background-size: 200px auto;
 </pre>
 
@@ -291,7 +291,7 @@ background-size: 200px auto;
 
 <p>Ici, la valeur de 200px fournie dans la feuille de style surcharge la valeur de 100px définie dans le fichier SVG. Puisqu'il n'y a aucune proportion intrinsèque ni hauteur de définie et qu'on utilise la valeur <code>auto</code>, l'image fera la même hauteur que la zone pour l'arrière-plan.</p>
 
-<pre class="brush: css notranslate">background: url(100px-wide-no-height-or-ratio.svg);
+<pre class="brush: css">background: url(100px-wide-no-height-or-ratio.svg);
 background-size: auto 125px;
 </pre>
 
@@ -303,7 +303,7 @@ background-size: auto 125px;
 
 <p>Lorsqu'une dimension est indiquée, la première règle s'applique et la dimension du fichier SVG est utilisée sauf si le CSS la redéfinit. Lorsqu'un ratio est indiqué, celui-ci est utilisé pour déterminer la deuxième dimension.</p>
 
-<pre class="brush: css notranslate">background: url(100px-height-3x4-ratio.svg);
+<pre class="brush: css">background: url(100px-height-3x4-ratio.svg);
 background-size: 150px auto;
 </pre>
 
@@ -315,7 +315,7 @@ background-size: 150px auto;
 
 <p>Si aucune dimension n'est définie dans l'image SVG, ce sera celle du CSS qui sera appliquée. Les proportions intrinsèques sont ensuite utilisées pour déterminer l'autre dimension (selon la rgèle n°2).</p>
 
-<pre class="brush: css notranslate">background: url(no-dimensions-1x1-ratio.svg);
+<pre class="brush: css">background: url(no-dimensions-1x1-ratio.svg);
 background-size: 150px auto;
 </pre>
 

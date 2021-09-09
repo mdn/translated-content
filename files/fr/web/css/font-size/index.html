@@ -15,7 +15,7 @@ translation_of: Web/CSS/font-size
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* Valeurs dont la taille est absolue */
+<pre class="brush:css no-line-numbers">/* Valeurs dont la taille est absolue */
 font-size: xx-small;
 font-size: x-small;
 font-size: small;
@@ -89,7 +89,7 @@ font-size: unset;
 
 <p>Pour calculer une équivalence entre <code>em</code> et un résultat exprimé en pixels, on peut utiliser cette formule :</p>
 
-<pre class="brush: css notranslate">em = taille visée en px / font-size du parent en pixels</pre>
+<pre class="brush: css">em = taille visée en px / font-size du parent en pixels</pre>
 
 <p>Ainsi, si la taille <code>font-size</code> de <code>body</code> vaut <code>1em</code> et que l'échelle par défaut du navigateur indique <code>1em</code> = <code>16px</code> et qu'on souhaite obtenir une <code>font-size</code> équivalente à <code>12px</code>, on pourra utiliser la valeur <code>0.75em</code> (car 12/16 = 0.75). De même, si on veut une taille analogue à <code>10px</code>, on utilisera <code>0.625em</code> (10/16 = 0.625).</p>
 
@@ -97,7 +97,7 @@ font-size: unset;
 
 <p>Un autre aspect important est la <strong>composition</strong> des valeurs exprimées avec cette unité. Si on prend le fragment HTML suivant :</p>
 
-<pre class="brush: html notranslate">&lt;div&gt;
+<pre class="brush: html">&lt;div&gt;
   &lt;span&gt;
     Extérieur
       &lt;span&gt;Intérieur&lt;/span&gt;
@@ -108,7 +108,7 @@ font-size: unset;
 
 <p>Et qu'on applique la feuille de style suivante :</p>
 
-<pre class="brush: css notranslate">body {
+<pre class="brush: css">body {
   font-size: 62.5%;
 }
 span {
@@ -127,7 +127,7 @@ span {
 
 <p>La feuille de style qui suit ressemble fortement à celle utilisée dans l'exemple précédent, on a simplement remplacé l'unité par <code>rem</code>.</p>
 
-<pre class="brush: css notranslate">html {
+<pre class="brush: css">html {
   font-size: 62.5%;
 }
 span {
@@ -137,7 +137,7 @@ span {
 
 <p>On utilisera le même fragment de HTML :</p>
 
-<pre class="brush: html notranslate">&lt;span&gt;
+<pre class="brush: html">&lt;span&gt;
   Extérieur
     &lt;span&gt;Intérieur&lt;/span&gt;
   Extérieur
@@ -151,7 +151,7 @@ span {
 
 <h3 id="Premiers_exemples">Premiers exemples</h3>
 
-<pre class="brush: css notranslate">/* Le paragraphe sera écrit avec une grande */
+<pre class="brush: css">/* Le paragraphe sera écrit avec une grande */
 /* fonte.                                   */
 p { font-size: xx-large }
 
@@ -168,7 +168,7 @@ span { font-size: 16px; }
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">.small {
+<pre class="brush: css">.small {
   font-size: xx-small;
 }
 .larger {
@@ -184,7 +184,7 @@ span { font-size: 16px; }
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;h1 class="small"&gt;Petit H1&lt;/h1&gt;
+<pre class="brush: html">&lt;h1 class="small"&gt;Petit H1&lt;/h1&gt;
 &lt;h1 class="larger"&gt;H1 plus grand&lt;/h1&gt;
 &lt;h1 class="point"&gt;H1 de 24 points&lt;/h1&gt;
 &lt;h1 class="percent"&gt;H1 à 200%&lt;/h1&gt;</pre>

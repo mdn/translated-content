@@ -12,7 +12,7 @@ translation_of: Web/CSS/calc()
 
 <p>La fonction <strong><code>calc()</code></strong> peut être utilisée à n'importe quel endroit où une {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;percentage&gt;")}} ou {{cssxref("&lt;integer&gt;")}} est nécessaire. Grâce à <code>calc()</code>, il est possible de réaliser des calculs pour déterminer la valeur d'une propriété CSS.</p>
 
-<pre class="brush: css no-line-numbers notranslate">/* property: calc(expression) */
+<pre class="brush: css no-line-numbers">/* property: calc(expression) */
 width: calc(100% - 80px);
 </pre>
 
@@ -55,7 +55,7 @@ width: calc(100% - 80px);
 
 <p><code>calc()</code> rend le positionnement des objets facile en définissant une marge. Dans cet exemple, le CSS crée une bannière qui s'étend sur toute la fenêtre, avec un espace de 40 pixels entre chaque bout de la bannière et les bords de la fenêtre :</p>
 
-<pre class="brush: css notranslate">.banniere {
+<pre class="brush: css">.banniere {
   position: absolute;
   left: 40px;
   width: calc(100% - 80px);
@@ -68,7 +68,7 @@ width: calc(100% - 80px);
 }
 </pre>
 
-<pre class="brush: html notranslate">&lt;div class="banniere"&gt;C'est une bannière !&lt;/div&gt;</pre>
+<pre class="brush: html">&lt;div class="banniere"&gt;C'est une bannière !&lt;/div&gt;</pre>
 
 <p>{{EmbedLiveSample("Positionner_un_objet_sur_l’écran_avec_une_marge", '100%', '60')}}</p>
 
@@ -78,7 +78,7 @@ width: calc(100% - 80px);
 
 <p>Regardons un peu le CSS :</p>
 
-<pre class="brush: css notranslate">input {
+<pre class="brush: css">input {
   padding: 2px;
   display: block;
   width: calc(100% - 1em);
@@ -93,7 +93,7 @@ width: calc(100% - 80px);
 
 <p>Dans ce cas, le formulaire est lui-même défini pour utiliser un sixième de la taille disponible de la fenêtre. Ensuite, pour s'assurer que les champs gardent une taille appropriée, nous utilisons <code>calc()</code> pour définir qu'ils doivent être de la largeur de leur conteneur moins 1em. Enfin, le HTML suivant utilise le CSS défini :</p>
 
-<pre class="brush: html notranslate">&lt;form&gt;
+<pre class="brush: html">&lt;form&gt;
   &lt;div id="boiteformulaire"&gt;
   &lt;label&gt;Tapez quelque chose :&lt;/label&gt;
   &lt;input type="text"&gt;
@@ -107,7 +107,7 @@ width: calc(100% - 80px);
 
 <p>Prenons la feuille de style suivante :</p>
 
-<pre class="brush: css notranslate">.toto {
+<pre class="brush: css">.toto {
   --largeurA: 100px;
   --largeurB: calc(var(--largeurA) / 2);
   --largeurC: calc(var(--largeurB) / 2);
@@ -120,7 +120,7 @@ width: calc(100% - 80px);
 
 <p>Lorsque vous utilisez <code>calc()</code> pour définir la taille d'un texte, assurez-vous d'inclure <a href="/fr/docs/Web/CSS/length#Unités_de_longueur_relatives">une unité de longueur relative</a>. Par exemple :</p>
 
-<pre class="brush: css notranslate">h1 {
+<pre class="brush: css">h1 {
   font-size: calc(1.5rem + 3vw);
 }</pre>
 
