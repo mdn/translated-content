@@ -55,18 +55,18 @@ grid-template-columns: unset;
  <dd>Une dimension positive dont l'unité <code>fr</code> indique le facteur de flexibilité de la piste. Chaque piste dimensionnée avec <code>&lt;flex&gt;</code> occupera une partie de l'espace restant en fonction de ce facteur.
  <p>Lorsque cette valeur apparaît en dehors de la notation <code>minmax()</code>, la valeur minimale <code>auto</code> est implicite (la valeur signifie <code>minmax(auto, &lt;flex&gt;)</code>). Voir {{cssxref("&lt;flex&gt;")}}.</p>
  </dd>
- <dt id="max-content"><code>max-content</code></dt>
+ <dt><code>max-content</code></dt>
  <dd>Un mot-clé qui représente la plus grande des contributions maximales de contenu aux objets de la grilles qui occupe la piste de la grille.</dd>
  <dt><code>min-content</code></dt>
  <dd>Un mot-clé qui représente la plus grande des contributions minimales de contenu aux objets de la grilles qui occupe la piste de la grille.</dd>
  <dt>{{cssxref("minmax","minmax(min, max)")}}</dt>
  <dd>Une notation fonctionnelle qui définit un intervalle de taille entre <code>min</code> et <code>max</code>. Si <code>max</code> est inférieur à <code>min</code>, <code>max</code> est ignoré et la fonction est traitée comme un minimum. En tant que maximum, elle joue le rôle d'une valeur <code>&lt;flex&gt;</code> qui définit le facteur de flexibilité de la piste. Cette valeur est invalide en tant que minimum.</dd>
- <dt id="auto"><code>auto</code></dt>
+ <dt><code>auto</code></dt>
  <dd>Un mot-clé qui est identique au contenu maximal si c'est un maximum. Si c'est un minimum, il représente la plus grande des plus petites tailles (définie par {{cssxref("min-width")}}/{{cssxref("min-height")}})) des objets de la grilles qui occupe cette piste de la grille.</dd>
  <dd>
  <p class="note"><strong>Note :</strong> Les pistes de taille <code>auto</code> (et uniquement celles-ci) peuvent être étirées grâce aux propriétés {{cssxref("align-content")}} et {{cssxref("justify-content")}}.</p>
  </dd>
- <dt id="fit-content()">{{cssxref("fit-content", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}</dt>
+ <dt>{{cssxref("fit-content", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}</dt>
  <dd>Cette notation représente la formule <code>min(max-content, max(auto, argument))</code> qui est calculée comme pour <code>auto</code> (i.e. <code>minmax(auto, max-content)</code>) sauf que la taille de la piste est ramenée à <em>argument</em> si elle est plus grande que le minimum fourni par <code>auto</code>.</dd>
  <dt>{{cssxref("repeat","repeat( [ &lt;positive-integer&gt; | auto-fill | auto-fit ], &lt;track-list&gt; )")}}</dt>
  <dd>Représente un fragment répété d'une liste de pistes, cela permet de gérer des grilles avec de nombreuses colonnes pour lesquelles on réutilise un motif.</dd>

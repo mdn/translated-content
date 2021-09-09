@@ -16,7 +16,9 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS
 
 <p>En plus de pouvoir placer des objets de façon précise sur une grille, la spécification pour les grilles CSS définit le comportement obtenu lorsque certains des objets ne sont pas placés sur la grille (voire aucun). Pour voir comment fonctionne le placement automatique, il suffit de créer une grille avec un ensemble d'objets. Sans fournir aucune information de placement, ces objets se placeront chacun sur une cellule de la grille.</p>
 
-<div id="placement_1">
+
+<h2 id="Placement_automatique">Placement automatique</h2>
+
 <pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
@@ -50,7 +52,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS
 &lt;/div&gt;
 </pre>
 
-<p>{{EmbedLiveSample('placement_1', '500', '230')}}</p>
+<p>{{EmbedLiveSample('Placement_automatique', '500', '230')}}</p>
 </div>
 
 <h2 id="Définir_des_règles_pour_le_placement_automatique">Définir des règles pour le placement automatique</h2>
@@ -62,8 +64,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS
 <p>Par défaut, les lignes implicites créées automatiquement ont une taille automatique. Autrement dit, elles seront dimensionnées pour contenir les éléments qu'elles doivent placer sans que ceux-ci dépassent.</p>
 
 <p>Il est toutefois possible de contrôler la taille de ces lignes grâce à la propriété <code>grid-auto-rows</code>. Ainsi, si on veut que les lignes créées automatiquement mesurent 100 pixels de haut, on utilisera :</p>
-
-<div id="placement_2">
 
 <pre class="brush: css hidden">* {box-sizing: border-box;}
 
@@ -99,12 +99,10 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS
 }
 </pre>
 
-<p>{{EmbedLiveSample('placement_2', '500', '330')}}</p>
-</div>
+<p>{{EmbedLiveSample('Dimensionner_les_lignes_de_la_grille_implicite', '500', '330')}}</p>
 
+<h3 id="Dimensionner_les_lignes_avec_minmax">Dimensionner les lignes avec minmax()</h3>
 <p>On peut utiliser la fonction {{cssxref("minmax","minmax()")}} pour la valeur de {{cssxref("grid-auto-rows")}} afin de créer des lignes avec une taille minimale mais qui puissent être plus grandes si le contenu est plus grand que cette taille minimale.</p>
-
-<div id="placement_3">
 
 <pre class="brush: css hidden">* {box-sizing: border-box;}
 
@@ -147,12 +145,11 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS
 }
 </pre>
 
-<p>{{EmbedLiveSample('placement_3', '500', '330')}}</p>
-</div>
+<p>{{EmbedLiveSample('Dimensionner_les_lignes_avec_minmax', '500', '330')}}</p>
+
+<h3 id="Dimensionner_les_lignes_avec_une_liste_de_pistes">Dimensionner les lignes avec une liste de pistes</h3>
 
 <p>On peut aussi passer en argument une liste de pistes qui se répèteront. Dans l'exemple ci-après, on crée une piste implicite pour une ligne de 100 pixels et une seconde de <code>200px</code>. Ce motif sera utilisé tant que du contenu sera ajouté à la grille implicite.</p>
-
-<div id="placement_4">
 
 <pre class="brush: css hidden">* {box-sizing: border-box;}
 
@@ -191,8 +188,8 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS
 }
 </pre>
 
-<p>{{EmbedLiveSample('placement_4', '500', '330')}}</p>
-</div>
+<p>{{EmbedLiveSample('Dimensionner_les_lignes_avec_une_liste_de_pistes', '500', '330')}}</p>
+
 
 <h3 id="Utiliser_le_placement_automatique_pour_les_colonnes">Utiliser le placement automatique pour les colonnes</h3>
 
@@ -200,7 +197,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS
 
 <p>Dans le prochain exemple, on crée une grille avec trois lignes qui mesurent chacune 200 pixels de haut. On utilise le placement automatique en colonne. La première colonne qui sera créée mesurera 300 pixels de large, ensuite on aura une colonne de 100 pixels de large et ainsi de suite jusqu'à ce que tous les éléments puissent être placés.</p>
 
-<div id="placement_5">
 <pre class="brush: css">.wrapper {
   display: grid;
   grid-template-rows: repeat(3, 200px);
@@ -239,8 +235,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS
 &lt;/div&gt;
 </pre>
 
-<p>{{EmbedLiveSample('placement_5', '500', '640')}}</p>
-</div>
+<p>{{EmbedLiveSample('Utiliser_le_placement_automatique_pour_les_colonnes', '500', '640')}}</p>
 
 <h2 id="Lordre_des_éléments_placés_automatiquement">L'ordre des éléments placés automatiquement</h2>
 
@@ -253,8 +248,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS
 <h3 id="Les_éléments_avec_des_propriétés_de_placement">Les éléments avec des propriétés de placement</h3>
 
 <p>La grille commencera par placer les éléments pour lesquels on a défini une position. Dans l'exemple qui suit, on a une grille avec 12 éléments, l'élément 2 et l'élément 5 sont placés en utilisant les lignes. On put voir comment ces deux éléments sont placés et comment les autres sont placés automatiquement dans les espaces restants. Les objets placés automatiquement seront placés avant les éléments qui sont placés, dans l'ordre du DOM.</p>
-
-<div id="placement_6">
 
 <pre class="brush: css hidden">* {box-sizing: border-box;}
 
@@ -305,16 +298,13 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS
 }
 </pre>
 
-<p>{{EmbedLiveSample('placement_6', '500', '450')}}</p>
-</div>
+<p>{{EmbedLiveSample('Les_éléments_avec_des_propriétés_de_placement', '500', '450')}}</p>
 
 <h3 id="Gérer_les_éléments_qui_sétalent_sur_plusieurs_pistes">Gérer les éléments qui s'étalent sur plusieurs pistes</h3>
 
 <p>On peut utiliser les propriétés de placement tout en tirant parti du placement automatique. Dans le prochain exemple, on complète la disposition en indiquant que les éléments 1, 4 et 9 (4n+1) doivent occuper deux pistes, pour les colonnes et pour les lignes. Pour obtenir ce résultat, on utilise les propriétés {{cssxref("grid-column-end")}} et {{cssxref("grid-row-end")}} avec la valeur <code>span 2</code>. La ligne de début sera déterminée automatiquement et la ligne de fin sera deux pistes plus loin.</p>
 
 <p>On peut voir coment cela laisse des espaces dans la grille car lorsqu'un élément placé automatiquement n'a pas suffisamment de place sur une piste, une nouvelle ligne sera créée jusqu'à ce que l'élément ait la place.</p>
-
-<div id="placement_7">
 
 <pre class="brush: css hidden">* {box-sizing: border-box;}
 .wrapper {
@@ -331,7 +321,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div&gt;Un&lt;/div&gt;
@@ -370,8 +359,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS
 }
 </pre>
 
-<p>{{EmbedLiveSample('placement_7', '500', '770')}}</p>
-</div>
+<p>{{EmbedLiveSample('Gérer_les_éléments_qui_sétalent_sur_plusieurs_pistes', '500', '770')}}</p>
 
 <h3 id="Combler_les_espaces">Combler les espaces</h3>
 
@@ -380,8 +368,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS
 <p>Pour cela, sur le conteneur, on ajoute la propriété {{cssxref("grid-auto-flow")}} avec la valeur <code>dense</code>. C'est la même propriété qu'on utilise pour modifier l'ordre du flux avec <code>column</code>. On peut aussi obtenir une disposition dense, rangée par colonne en utilisant les deux valeurs pour la propriété : <code>grid-auto-flow: column dense</code>.</p>
 
 <p>Avec cette valeur, la grille cherchera donc à combler les espaces qu'elle a laissés quitte à ne pas respecter l'ordre du DOM. En revanche, l'ordre de la navigation au clavier (<em>tab order</em>) suivra toujours l'ordre du document. Nous étudierons cet aspect plus en détails dans <a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_et_l_accessibilit%C3%A9">un article sur l'accessibilité</a>.</p>
-
-<div id="placement_8">
 
 <pre class="brush: css hidden">* {box-sizing: border-box;}
 .wrapper {
@@ -437,8 +423,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS
 }
 </pre>
 
-<p>{{EmbedLiveSample('placement_8', '500', '730')}}</p>
-</div>
+<p>{{EmbedLiveSample('Combler_les_espaces', '500', '730')}}</p>
 
 <h3 id="Les_éléments_anonymes_de_la_grille">Les éléments anonymes de la grille</h3>
 
@@ -458,7 +443,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS
 
 <p>Le placement automatique peut être utile lorsqu'on a un ensemble d'objets qui se ressemblent. Ce peut être des éléments qui n'ont pas d'ordre logique particulier : une galerie de photos, une liste de produits. Dans ces cas de figure, on peut choisir d'utiliser une disposition dense afin de combler les trous de la grille. Dans l'exemple qui représente la galerie d'images, on a certaines images en paysage et d'autres en portrait (lorsqu'on utilise la classe <code>landscape</code> l'élément s'étend sur deux colonnes). On utilise ensuite <code>grid-auto-flow: dense</code> afin de créer une grille dense.</p>
 
-<div id="placement_9">
 <pre class="brush: css">.wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
@@ -497,12 +481,11 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS
 &lt;/ul&gt;
 </pre>
 
-<p>{{EmbedLiveSample('placement_9', '500', '1300')}}</p>
-</div>
+<p>{{EmbedLiveSample('Les_cas_dutilisation_pour_le_placement_automatique', '500', '1300')}}</p>
 
 <p>Le placement automatique peut également aider à disposer des éléments d'interface utilisateur qui ont un ordre logique. Dans l'exemple suivant, on voit comment manipuler les listes de définition. Les listes de définition sont intéressantes car il n'y a pas de niveau de regroupement pour regrouper un terme et ses définitions. Dans cet exemple, on autorise le placement automatique mais on a une classe pour qu'un élément <code>dt</code> démarre sur la première ligne et que l'élément  <code>dd</code> sur la  ligne 2. On s'assure ainsi que les termes sont bien en face de chaque définition, peu importe le nombre de définitions qu'on a pour un terme.</p>
 
-<div id="placement_10">
+<h3 id="Autre_exemple">Autre exemple</h3>
 
 <pre class="brush: css hidden">* {box-sizing: border-box;}
 
@@ -544,11 +527,10 @@ dd {
 }
 </pre>
 
-<p>{{EmbedLiveSample('placement_10', '500', '230')}}</p>
+<p>{{EmbedLiveSample('Autre_exemple', '500', '230')}}</p>
 
 <div class="note">
 <p><strong>Note :</strong> Voir <a href="https://www.sitepoint.com/understanding-masonry-layout/">cet article de SitePoint</a> à propos de la disposition en briques pour d'autres cas d'utilisation.</p>
-</div>
 </div>
 
 <h2 id="Quest-ce_que_le_placement_automatique_ne_permet_pas_de_réaliser_actuellement">Qu'est-ce que le placement automatique ne permet pas de réaliser (actuellement) ?</h2>

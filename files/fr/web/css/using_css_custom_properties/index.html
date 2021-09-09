@@ -55,7 +55,8 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 
 <p>Commençons avec cette feuille CSS simple colorant les éléments de différentes classes avec la même couleur :</p>
 
-<div id="sample1">
+<h3>Exemple 1</h3>
+
 <pre class="brush:css; highlight:[3,20,26,32]">.un {
   color: white;
   background-color: brown;
@@ -104,12 +105,13 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 
 <p>ce qui donne ceci :</p>
 
-<p>{{EmbedLiveSample("sample1",600,180)}}</p>
+<p>{{EmbedLiveSample("exemple_1",600,180)}}</p>
 
 <p>Remarquez la répétition dans le CSS. La couleur d'arrière-plan est définie à <code>brown</code> à plusieurs endroits. Certaines déclarations peuvent être faites plus haut dans la cascade et le problème se résoudra grâce à l'héritage. Mais pour des projets non-triviaux, cela n'est pas toujours possible. En déclarant une variable dans la pseudo-classe {{cssxref(":root")}}, un développeur CSS peut éviter certaines répétitions en utilisant cette variable.</p>
 </div>
 
-<div id="sample2">
+<h3>Exemple 2</h3>
+
 <pre class="brush:css; highlight:[2, 7, 24,30,36]">:root {
   --main-bg-color: brown;
 }

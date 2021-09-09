@@ -99,7 +99,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Les_concepts_de_base
 
 <p>Nous avons créé une grille avec trois pistes de 200 pixels de large. Chaque élément sera disposé dans l'une des cellules de la grille.</p>
 
-<div id="grid_first">
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div&gt;Un&lt;/div&gt;
   &lt;div&gt;Deux&lt;/div&gt;
@@ -129,16 +128,14 @@ original_slug: Web/CSS/CSS_Grid_Layout/Les_concepts_de_base
   color: #d9480f;
 }
 </pre>
-</div>
 
 <p>{{ EmbedLiveSample('grid_first', '610', '140') }}</p>
-</div>
+
 
 <h3 id="L'unité_fr">L'unité fr</h3>
 
 <p>Les pistes peuvent être définies à l'aide de n'importe quelle unité de mesure. Les grilles proposent aussi une nouvelle unité de mesure pour aider à la création de pistes flexibles. Cette unité, <code>fr</code>, représente une fraction de l'espace disponible dans le conteneur de la grille. Le code suivant crée trois colonnes égales qui se redimensionnent en fonction de l'espace disponible.</p>
 
-<div id="fr_unit_ls">
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div&gt;Un&lt;/div&gt;
   &lt;div&gt;Deux&lt;/div&gt;
@@ -169,8 +166,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Les_concepts_de_base
 }
 </pre>
 
-<p>{{ EmbedLiveSample('fr_unit_ls', '220', '140') }}</p>
-</div>
+<p>{{ EmbedLiveSample("L'unité_fr", '220', '140') }}</p>
 
 <p>L'exemple suivant crée une grille avec une colonne de <code>2fr</code>, et deux colonnes de <code>1fr</code>. L'espace disponible est divisé en quatre. Les deux premières fractions sont allouées à la première colonne, et chacune des colonnes suivante dispose d'une fraction.</p>
 
@@ -429,7 +425,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Les_concepts_de_base
 
 <p>Un élément placé dans une grille peut aussi être le conteneur d'une autre grille. Dans l'exemple suivant nous retrouvons la grille de trois colonnes créée plus haut, avec deux éléments explicitement positionnés. Le premier élément contient lui-même des éléments. Comme ils ne sont pas des enfants directs de la grille principale, ils se positionnent normalement dans le flux.</p>
 
-<div id="nesting">
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box box1"&gt;
     &lt;div class="nested"&gt;a&lt;/div&gt;
@@ -477,9 +472,8 @@ original_slug: Web/CSS/CSS_Grid_Layout/Les_concepts_de_base
     padding: 1em;
 }
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('nesting', '600', '340') }}</p>
+<p>{{ EmbedLiveSample('Grilles_imbriquées', '600', '340') }}</p>
 
 <p>Dans ce cas la grille imbriquée n'est pas liée à la grille qui la contient. Elle n'hérite pas des {{cssxref("grid-gap")}}, et ses lignes ne s'alignent pas avec celles de la grille parent.</p>
 
@@ -503,7 +497,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Les_concepts_de_base
 
 <p>Plusieurs éléments peuvent être placés dans la même cellule. Si nous retournons à notre exemple avec les items positionnés par numéros de ligne, nous pouvons modifier cela pour que deux items se chevauchent.</p>
 
-<div id="l_ex">
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="box box1"&gt;Un&lt;/div&gt;
   &lt;div class="box box2"&gt;Deux&lt;/div&gt;
@@ -545,9 +538,8 @@ original_slug: Web/CSS/CSS_Grid_Layout/Les_concepts_de_base
   color: #d9480f;
 }
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('l_ex', '230', '420') }}</p>
+<p>{{ EmbedLiveSample('Superposer_les_éléments_avec_z-index', '230', '420') }}</p>
 
 <p>L'élément <code>box2</code> est maintenant superposé avec <code>box1</code>, et comme il arrive après dans le code source il s'affiche par-dessus.</p>
 

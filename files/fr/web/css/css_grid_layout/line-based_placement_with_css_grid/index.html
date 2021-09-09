@@ -64,7 +64,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_un
 
 <p>On peut placer les éléments d'une grille en utilisant les numéros de lignes qui définissent la zone allouée à l'élément. Si on souhaite que le premier élément commence tout à gauche et occupe une colonne, qu'il commence sur la première ligne et s'étale sur quatre lignes, on pourra utiliser les règles suivantes :</p>
 
-<div id="Line_Number">
 <pre class="brush: css">.box1 {
    grid-column-start: 1;
    grid-column-end: 2;
@@ -125,10 +124,9 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_un
 }
 </pre>
 
-<p>{{EmbedLiveSample('Line_Number', '300', '330')}}</p>
-</div>
+<p>{{EmbedLiveSample("Positionner_les_éléments_d'une_grille_grâce_au_numéro_de_ligne", '300', '330')}}</p>
 
-<div id="Grid_Shorthands">
+
 <h2 id="Les_propriétés_raccourcies_grid-column_et_grid-row">Les propriétés raccourcies <code>grid-column</code> et <code>grid-row</code></h2>
 
 <p>On a écrit beaucoup de règles pour positionner chaque élément. Heureusement, il existe des propriétés raccourcies qui permettent d'avoir une syntaxe plus concise. Les propriétés {{cssxref("grid-column-start")}} et {{cssxref("grid-column-end")}} peuvent être combinées pour former la propriété raccourcie {{cssxref("grid-column")}} et de la même façon, {{cssxref("grid-row-start")}} et  {{cssxref("grid-row-end")}} peuvent être synthétisées avec {{cssxref("grid-row")}}.</p>
@@ -179,14 +177,11 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_un
 }
 </pre>
 
-<p>{{EmbedLiveSample('Grid_Shorthands', '300', '330')}}</p>
-</div>
+<p>{{EmbedLiveSample('Les_propriétés_raccourcies_grid-column_et_grid-row', '300', '330')}}</p>
 
-<h3 id="La_taille_par_défaut">La taille par défaut</h3>
+<h2 id="La_taille_par_défaut">La taille par défaut</h2>
 
 <p>Dans les exemples précédents, on a défini chaque ligne et colonne de fin pour chaque élément. Mais si en pratique, on souhaite qu'un élément n'occupe qu'une seule piste, on peut omettre <code>grid-column-end</code> ou <code>grid-row-end</code>. Par défaut, les éléments occupent une seule piste. Notre exemple initial, avec les propriétés détaillées peut donc être réécrit de cette façon :</p>
-
-<div id="End_Lines">
 
 <pre class="brush: css hidden">* {box-sizing: border-box;}
 
@@ -237,12 +232,11 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_un
 }
 </pre>
 
-<p>{{EmbedLiveSample('End_Lines', '300', '330')}}</p>
-</div>
+<p>{{EmbedLiveSample('La_taille_par_défaut', '300', '330')}}</p>
+
+<h3 id="Tailles_par_défaut_avec_les_propriétés_raccourcies">Tailles par défaut avec les propriétés raccourcies</h3>
 
 <p>Avec les propriétés raccourcies, on obtient le code suivant (sans aucune barre oblique ni seconde valeur pour les éléments qui n'occupent qu'une seule piste).</p>
-
-<div id="New_Shorthand">
 
 <pre class="brush: css hidden">* {box-sizing: border-box;}
 
@@ -290,8 +284,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_un
 }
 </pre>
 
-<p>{{EmbedLiveSample('New_Shorthand', '300', '330')}}</p>
-</div>
+<p>{{EmbedLiveSample('Tailles_par_défaut_avec_les_propriétés_raccourcies', '300', '330')}}</p>
 
 <h2 id="La_propriété_grid-area">La propriété <code>grid-area</code></h2>
 

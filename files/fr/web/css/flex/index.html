@@ -17,9 +17,10 @@ translation_of: Web/CSS/flex
 
 <div>{{EmbedInteractiveExample("pages/css/flex.html")}}</div>
 
+<h2 id="description">Description</h2>
+
 <p>Pour la plupart des cas, on utilisera une des valeurs suivantes : <code>auto</code>, <code>initial</code>, <code>none</code> ou un nombre positif sans unité. Pour voir l'effet de ces valeurs, essayez de redimensionner les conteneurs flexibles ci-après :</p>
 
-<div id="flex">
 <pre class="hidden brush: html notranslate">&lt;div class="flex-container"&gt;
 
    &lt;div class="item auto"&gt;auto&lt;/div&gt;
@@ -108,14 +109,11 @@ translation_of: Web/CSS/flex
 }
 </pre>
 
-<p>{{EmbedLiveSample("flex", "100%","370")}}</p>
+<p>{{EmbedLiveSample("description", "100%","370")}}</p>
 
-<div id="flex">
 <p>Par défaut, les éléments flexibles ne se rétrécissent pas en dessous de la taille minimale du contenu. Pour modifier ce comportement, il faudra paramétrer {{cssxref("min-width")}} ou {{cssxref("min-height")}}.</p>
-</div>
 
 <p>Voir la page <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Utilisation_des_flexbox_en_CSS" title="CSS/Using_CSS_flexible_boxes">Utiliser les boîtes flexibles (<em>flexbox</em>) CSS</a> pour plus d'informations.</p>
-</div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
@@ -182,7 +180,6 @@ flex: unset;
 
 <h3 id="Valeurs">Valeurs</h3>
 
-<div id="flex">
 <dl>
  <dt><code>auto</code></dt>
  <dd>L'élément est dimensionné selon ses propriétés <code>width</code> et <code>height</code> mais peut grandir pour absorber l'espace libre disponible dans le conteneur flexible ou rétrécir à sa taille minimale pour rentrer dans le conteneur. Cette valeur est équivalente à "<code>flex: 1 1 auto</code>".</dd>
@@ -190,15 +187,11 @@ flex: unset;
  <dd>L'élément est dimensionné selon ses propriétés <code>width</code> et <code>height</code>. Ce comportement est équivalent à la valeur par défaut (<code>0 1 auto</code>). Si besoin, l'élément rétrécit à sa taille minimale pour rentrer dans le conteneur mais il ne grandira pas s'il y a de l'espace disponible dans ce conteneur. Ce mot-clé est équivalent à "<code>flex: 0 1 auto</code>".</dd>
  <dt><code>none</code></dt>
  <dd>L'élément est dimensionné par rapport à ses propriétés <code>width</code> et <code>height</code>. Il n'est pas flexible : il ne peut ni rétrécir ni grandir selon l'espace du conteneur flexible. Ce mot-clé est équivalent à "<code>flex: 0 0 auto</code>".</dd>
-</dl>
-</div>
-
-<dl>
- <dt><a id="grow" name="grow"><code>&lt;'flex-grow'&gt;</code></a></dt>
+ <dt><code>&lt;'flex-grow'&gt;</code></dt>
  <dd>Voir {{cssxref("flex-grow")}}. Les valeurs négatives sont interdites et la valeur par défaut est <code>1</code>.</dd>
- <dt><a id="shrink" name="shrink"><code>&lt;'flex-shrink'&gt;</code></a></dt>
+ <dt><code>&lt;'flex-shrink'&gt;</code></dt>
  <dd>Voir {{cssxref("flex-shrink")}}. Les valeurs négatives sont interdites et la valeur par défaut est <code>1</code>.</dd>
- <dt><a id="basis" name="basis"><code>&lt;'flex-basis'&gt;</code></a></dt>
+ <dt><code>&lt;'flex-basis'&gt;</code></dt>
  <dd>Voir {{cssxref("flex-basis")}}. Une valeur valide pour {{cssxref("width")}} et {{cssxref("height")}}. La valeur par défaut est <code>0</code>.</dd>
 </dl>
 

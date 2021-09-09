@@ -41,7 +41,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
 
 <p>Avec {{cssxref("grid-area")}}, on affecte un nom à chacune de ces zones. Pour le moment, aucune disposition n'a été créée mais on a des noms qu'on pourra utiliser dans notre disposition :</p>
 
-<div id="Grid_Area_1">
 <pre class="brush: css">.header {
   grid-area: hd;
 }
@@ -95,8 +94,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
   &lt;div class="footer"&gt;Pied de page&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<p>{{EmbedLiveSample('Grid_Area_1', '300', '330')}}</p>
-</div>
+<p>{{EmbedLiveSample('Donner_un_nom_à_une_zone_de_grille', '300', '330')}}</p>
 
 <p>Grâce à cette méthode, il n'est pas nécessaire de gérer chacun des éléments individuellement. Tout est organisé au travers du conteneur. La disposition est décrite grâce à la propriété {{cssxref("grid-template-areas")}}.</p>
 
@@ -305,6 +303,8 @@ original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
 
 <p>La plupart des exemples illustrent une utilisation de la grille pour la disposition principale de la page. Toutefois, une grille peut également être utile pour les petits éléments. {{cssxref("grid-template-areas")}} est assez pratique car elle permet de voir facilement à quoi ressemblera l'élément.</p>
 
+<h3 id="Exemple_d'objet_média">Exemple d'objet média</h3>
+
 <p>Dans l'exemple qui suit, on crée un objet « media » qui servira de composant pour afficher un media (une image par exemple) d'un côté et un texte de l'autre. On pourra ainsi voir l'effet obtenu en changeant la disposition avec l'image à droite ou à gauche.</p>
 
 <p><img alt="Images showing an example media object design" src="https://mdn.mozillademos.org/files/14671/4_Media_objects.png" style="height: 432px; width: 800px;"></p>
@@ -313,7 +313,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
 
 <p>Pour la zone dédiée à l'image, on crée une zone de grille intitulée <code>img</code> et pour le texte, on crée une seconde zone intitulée <code>content</code>. Ensuite, on utilise ces noms pour créer l'organisation via la propriété <code>grid-template-areas</code>.</p>
 
-<div id="Media_1">
 <pre class="brush: css">* {box-sizing: border-box;}
 
 .media {
@@ -349,14 +348,12 @@ original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
   &lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<p>{{EmbedLiveSample('Media_1', '300', '200')}}</p>
-</div>
+<p>{{EmbedLiveSample('Exemple_d'objet_média', '300', '200')}}</p>
 
 <h3 id="Afficher_l'image_de_l'autre_côté">Afficher l'image de l'autre côté</h3>
 
 <p>Si on a besoin d'afficher l'image d l'autre côté, il suffit de redéfinir une grille pour laquelle la piste qui mesure <code>1fr</code> est en dernier et d'échanger les valeurs dans {{cssxref("grid-template-areas")}}.</p>
 
-<div id="Media_2">
 <pre class="brush: css">* {box-sizing: border-box;}
 
 .media {
@@ -397,8 +394,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
   &lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<p>{{EmbedLiveSample('Media_2', '300', '200') }}</p>
-</div>
+<p>{{EmbedLiveSample("Afficher_l'image_de_l'autre_côté", '300', '200') }}</p>
 
 <h2 id="Les_propriétés_raccourcies_pour_les_grilles_CSS">Les propriétés raccourcies pour les grilles CSS</h2>
 
