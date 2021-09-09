@@ -1,0 +1,25 @@
+---
+title: Gecko
+slug: Glossary/Gecko
+tags:
+  - Gecko
+  - Glossary
+  - Глоссарий
+translation_of: Glossary/Gecko
+original_slug: Глоссарий/Gecko
+---
+<p id="Summary"><span class="seoSummary"><strong>Gecko -</strong> это движок обработки и рендеринга макетов веб-страниц, разработанный в рамках Mozilla Project и используемый многими приложениями и устройствами, включая {{glossary("Mozilla Firefox","Firefox")}} и {{glossary("Firefox OS")}}.</span></p>
+
+Веб-{{glossary("browser","браузеры")}} нуждаются в программах, называемых "движками рендеринга" для того, чтобы обрабатывать {{glossary("HTML")}}, {{glossary("CSS")}}, {{glossary("JavaScript")}} и другой встроенный контент (например, картинки) и всё это отрисовать на экране вашего монитора. Кроме того, Gecko создаёт чётко-связанные программные {{glossary("API","API")}}, хорошо работающие в любой операционной системе (которая поддерживается Gecko), и это API разработано только для поддержки связанных с основными задачами целей. Это означает, что Gecko включает: сетевой стек, графический стек, рендеринг страниц, виртуальная машина JavaScript и другое.
+
+Поскольку все приложения Firefox OS это веб-приложения, то Firefox OS использует Gecko как среду выполнения приложений.
+
+## Узнать больше
+
+### Общие знания
+
+- {{interwiki("wikipedia", "Gecko (software)", "Gecko")}} on Wikipedia
+
+### Технический справочник
+
+- [The Gecko documentation on MDN](/en-US/docs/Mozilla/Gecko)
