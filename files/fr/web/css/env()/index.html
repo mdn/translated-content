@@ -26,7 +26,7 @@ translation_of: Web/CSS/env()
 
 <p>La fonction <code>env()</code> peut être utilisée à n'importe quel endroit où une valeur peut être associée à une propriété, à n'importe quel endroit où une valeur peut être utilisée dans un descripteur d'une règle @ (ex. dans une <a href="/fr/docs/Web/CSS/@media">requête média</a>) et, de façon générale, à n'importe quel endroit où les valeurs CSS sont autorisées. Selon les évolutions de la spécification, cette fonction pourrait également être utilisées à d'autres endroits comme les sélecteurs.</p>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Note :</strong> Les variables d'environnement furent initialement fournies par le navigateur iOS afin de permettre aux développeurs de placer le contenu sur une zone sûre de la zone d'affichage (<em>viewport</em>) et d'éviter le décrochement formé en haut de l'écran sur certains des appareils.</p>
 </div>
 
@@ -52,7 +52,7 @@ env(safe-area-inset-left, 1.4rem);
  <dd>Ces mots-clés sont des variables d'environnement qui définissent un rectangle avec les décalages par rapport à chacun des côtés de la zone d'affichage (<em>viewport</em>) dans lequel on pourra placer du contenu sans que ce dernier puisse être rogné du fait de la forme non rectangulaire de l'affichage.</dd>
 </dl>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Note :</strong> À la différence des autres propriétés CSS, les identifiants provenant de l'agent utilisateur sont sensibles à la casse.</p>
 </div>
 
@@ -110,7 +110,7 @@ padding: env(x, 50px, 20px);
 
 <p>Pour la deuxième valeur, il est possible d'utiliser des virgules afin de fournir un ensemble composite de valeurs à la propriété. Toutefois, si la propriété en question ne permet pas de gérer plusieurs valeurs, la déclaration sera invalide.</p>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Note :</strong> Les propriétés relatives à l'agent utilisateur ne sont pas réinitialisées avec la propriété {{cssxref("all")}}.</p>
 </div>
 
