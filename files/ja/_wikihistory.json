@@ -10699,12 +10699,6 @@
       "Wind1808"
     ]
   },
-  "Web/API/ByteString": {
-    "modified": "2020-03-11T12:49:49.193Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "Web/API/CDATASection": {
     "modified": "2019-09-16T12:26:56.983Z",
     "contributors": [
@@ -18756,12 +18750,6 @@
       "naturallucky"
     ]
   },
-  "Web/API/MouseEvent/which": {
-    "modified": "2020-10-15T22:18:18.557Z",
-    "contributors": [
-      "isdh"
-    ]
-  },
   "Web/API/MutationObserver": {
     "modified": "2020-10-15T21:21:02.785Z",
     "contributors": [
@@ -22680,6 +22668,12 @@
     "contributors": [
       "isdh",
       "yyss"
+    ]
+  },
+  "Web/API/UIEvent/which": {
+    "modified": "2020-10-15T22:18:18.557Z",
+    "contributors": [
+      "isdh"
     ]
   },
   "Web/API/URL": {

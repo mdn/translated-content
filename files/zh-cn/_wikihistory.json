@@ -8264,13 +8264,6 @@
       "Spikef"
     ]
   },
-  "Web/API/ByteString": {
-    "modified": "2019-07-13T11:30:42.104Z",
-    "contributors": [
-      "RainSlide",
-      "zhouxu"
-    ]
-  },
   "Web/API/CDATASection": {
     "modified": "2020-10-15T21:50:11.923Z",
     "contributors": [
@@ -16601,12 +16594,6 @@
       "cuixiping"
     ]
   },
-  "Web/API/KeyboardEvent/which": {
-    "modified": "2020-10-15T22:35:00.980Z",
-    "contributors": [
-      "xgqfrms"
-    ]
-  },
   "Web/API/LocalFileSystemSync": {
     "modified": "2019-03-23T22:09:04.520Z",
     "contributors": [
@@ -17288,12 +17275,6 @@
     "modified": "2019-03-23T22:20:33.463Z",
     "contributors": [
       "Dcfm"
-    ]
-  },
-  "Web/API/MouseEvent/which": {
-    "modified": "2019-03-18T21:11:17.379Z",
-    "contributors": [
-      "WayneCui"
     ]
   },
   "Web/API/MouseEvent/x": {
@@ -20819,6 +20800,12 @@
     "modified": "2020-10-15T22:25:09.871Z",
     "contributors": [
       "pans9"
+    ]
+  },
+  "Web/API/UIEvent/which": {
+    "modified": "2020-10-15T22:35:00.980Z",
+    "contributors": [
+      "xgqfrms"
     ]
   },
   "Web/API/URL": {
@@ -47300,6 +47287,12 @@
       "hibernake"
     ]
   },
+  "conflicting/Web/API/UIEvent/which": {
+    "modified": "2019-03-18T21:11:17.379Z",
+    "contributors": [
+      "WayneCui"
+    ]
+  },
   "conflicting/Web/API/URL": {
     "modified": "2019-03-23T22:22:37.359Z",
     "contributors": [
@@ -47829,23 +47822,10 @@
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/String": {
-    "modified": "2020-10-15T21:27:29.084Z",
+    "modified": "2019-07-13T11:30:42.104Z",
     "contributors": [
-      "gqbre",
-      "pabloyshi",
-      "zhazhjie",
-      "zqyue",
-      "Ende93",
-      "midare",
-      "Yuxuan_Jiang",
-      "micheal-death",
-      "xgqfrms-GitHub",
-      "Hugh",
-      "terrycafe520",
-      "qianjiahao",
-      "paddingme",
-      "teoli",
-      "ziyunfei"
+      "RainSlide",
+      "zhouxu"
     ]
   },
   "conflicting/Web/JavaScript/Reference/Global_Objects/Symbol": {
