@@ -1,0 +1,133 @@
+---
+title: Object.prototype.propertyIsEnumerable()
+slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
+tags:
+  - 物件
+  - 方法
+  - 原型
+  - JavaScript
+  - Method
+  - Object
+  - Prototype
+translation_of: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
+---
+<div>{{JSRef}}</div>
+
+<p><code><strong>propertyIsEnumerable()</strong></code>方法會回傳一個布林值，表示指定屬性是否可枚舉並且是否為物件自己的屬性。</p>
+
+<div>{{EmbedInteractiveExample("pages/js/object-prototype-propertyisenumerable.html")}}</div>
+
+
+
+<h2 id="syntax">語法</h2>
+
+<pre class="syntaxbox"><code><var>obj</var>.propertyIsEnumerable(<var>prop</var>)</code></pre>
+
+<h3 id="parameters">參數</h3>
+
+<dl>
+ <dt><code>prop</code></dt>
+ <dd>要測試的屬性名稱。</dd>
+</dl>
+
+<h3 id="return_value">回傳值</h3>
+
+<p>
+一個<code>true</code>或者<code>false</code>的布林值，表示指定的屬性是否可枚舉並且是對象自己的屬性。
+</p>
+
+<h2 id="description">描述</h2>
+
+<p>每個物件都有一個<code>propertyIsEnumerable</code>方法。該方法可以判斷一個對像中的指定屬性是否可以被 {{jsxref("Statements/for...in", "for...in")}} 循環枚舉，除了通過了原型鏈繼承的屬性，若物件沒有指定的屬性，則此方法回傳<code>false</code>。</p>
+
+<h2 id="examples">範例</h2>
+
+<h3 id="a_basic_use_of_propertyisenumerable"><code>propertyIsEnumerable</code>方法的基本使用方式</h3>
+
+<p>以下範例顯示<code>propertyIsEnumerable</code>對物件和陣列的基本用法：</p>
+
+<pre class="brush: js">var o = {};
+var a = [];
+o.prop = 'is enumerable';
+a[0] = 'is enumerable';
+
+o.propertyIsEnumerable('prop'); // returns true
+a.propertyIsEnumerable(0);      // returns true</pre>
+
+<h3 id="user-defined_vs._built-in_objects">使用者自定物件 vs 內置物件</h3>
+
+<p>以下範例展示使用者自訂物件與內置物件屬性可枚舉性的差異：</p>
+
+<pre class="brush: js">var a = ['is enumerable'];
+
+a.propertyIsEnumerable(0);        // returns true
+a.propertyIsEnumerable('length'); // returns false
+
+Math.propertyIsEnumerable('random'); // returns false
+this.propertyIsEnumerable('Math');   // returns false</pre>
+
+<h3 id="direct_vs._inherited_properties">自身屬性 vs 繼承屬性</h3>
+
+<pre class="brush: js">var a = [];
+a.propertyIsEnumerable('constructor'); // returns false
+
+function firstConstructor() {
+  this.property = 'is not enumerable';
+}
+
+firstConstructor.prototype.firstMethod = function() {};
+
+function secondConstructor() {
+  this.method = function method() { return 'is enumerable'; };
+}
+
+secondConstructor.prototype = new firstConstructor;
+secondConstructor.prototype.constructor = secondConstructor;
+
+var o = new secondConstructor();
+o.arbitraryProperty = 'is enumerable';
+
+o.propertyIsEnumerable('arbitraryProperty'); // returns true
+o.propertyIsEnumerable('method');            // returns true
+o.propertyIsEnumerable('property');          // returns false
+
+o.property = 'is enumerable';
+
+o.propertyIsEnumerable('property');          // returns true
+
+// These return false as they are on the prototype which
+// propertyIsEnumerable does not consider (even though the last two
+// are iteratable with for-in)
+o.propertyIsEnumerable('prototype');   // returns false (as of JS 1.8.1/FF3.6)
+o.propertyIsEnumerable('constructor'); // returns false
+o.propertyIsEnumerable('firstMethod'); // returns false</pre>
+
+<h2 id="specifications">規範</h2>
+
+<table class="standard-table">
+  <thead>
+    <tr>
+      <th scope="col">規範</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <a href="https://tc39.es/ecma262/multipage/fundamental-objects.html#sec-object.prototype.propertyisenumerable">ECMAScript Language Specification (ECMAScript)<br><small># sec-object.prototype.propertyisenumerable</small></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="browser_compatibility">瀏覽器相容性</h2>
+
+<p>{{Compat("javascript.builtins.Object.propertyIsEnumerable")}}</p>
+
+<h2 id="see_also">參閱</h2>
+
+<ul>
+ <li><a href="/zh-TW/docs/Enumerability_and_ownership_of_properties">屬性的可列舉性及所有權</a></li>
+ <li>{{jsxref("Statements/for...in", "for...in")}}</li>
+ <li>{{jsxref("Object.keys()")}}</li>
+ <li>{{jsxref("Object.defineProperty()")}}</li>
+</ul>
