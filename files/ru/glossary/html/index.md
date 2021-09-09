@@ -21,7 +21,7 @@ original_slug: Глоссарий/HTML
 
 Вы можете дополнить HTML теги с помощью {{Glossary("attribute","атрибутов")}}, которые дают дополнительную информацию и затрагивают то, как браузер интерпретирует элемент:
 
-<img alt="Detail of the structure of an HTML element" src="https://mdn.mozillademos.org/files/7659/anatomy-of-an-html-element.png" style="height: 181px; width: 609px;">
+![Detail of the structure of an HTML element](https://mdn.mozillademos.org/files/7659/anatomy-of-an-html-element.png)
 
 HTML принято сохранять с расширением `.htm` или `.html`, которые обслуживаются {{Glossary("Server","сервером")}}, и могут воспроизводиться любым {{Glossary("Browser","браузером")}}.
 

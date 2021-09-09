@@ -7,7 +7,9 @@ tags:
 translation_of: Glossary/Element
 original_slug: Глоссарий/Элемент
 ---
-Элемент - это часть веб-страницы. В XML и HTML элемент может содержать данные, фрагмент текста или изображения, или не содержать ничего. Обычный элемент включает в себя открывающий тэг с некоторыми атрибутами, текст и закрывающий тэг. <img alt="Example: in <p class=&#x22;nice&#x22;>Hello world!</p>, &#x27;<p class=&#x22;nice&#x22;>&#x27; is an opening tag, &#x27;class=&#x22;nice&#x22;&#x27; is an attribute and its value, &#x27;Hello world!&#x27; is enclosed text content, and &#x27;</p>&#x27; is a closing tag." src="https://mdn.mozillademos.org/files/7659/anatomy-of-an-html-element.png" style="height: 181px; width: 609px;">
+Элемент - это часть веб-страницы. В XML и HTML элемент может содержать данные, фрагмент текста или изображения, или не содержать ничего. Обычный элемент включает в себя открывающий тэг с некоторыми атрибутами, текст и закрывающий тэг.
+
+![Example: in <p class="nice">Hello world!</p>, '<p class="nice">' is an opening tag, 'class="nice"' is an attribute and its value, 'Hello world!' is enclosed text content, and '</p>' is a closing tag.](https://mdn.mozillademos.org/files/7659/anatomy-of-an-html-element.png)
 
 Элементы и тэги это _не_ одни и те же вещи. Тэги открывают или закрывают элементы в исходном коде, тогда как элементы являются частью {{Glossary("DOM")}}, объектной моделью документа для отображения страницы в {{glossary("browser", "браузере")}}.
 

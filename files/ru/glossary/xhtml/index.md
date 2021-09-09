@@ -16,11 +16,7 @@ original_slug: Глоссарий/XHTML
 - [Wikipedia's XHTML article](http://ru.wikipedia.org/wiki/XHTML)
 - [Sending XHTML as text/html considered harmful](http://www.hixie.ch/advocacy/xhtml)
 
-<div id="section_1"><h3 class="editable" id="Инструменты"><span>Инструменты</span></h3><div class="editIcon"><a href="/../../../../en/XHTML#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div><ul><li><a class="external" href="http://validator.w3.org/" rel="external nofollow">Markup validation service (W3C)</a></li><li><a href="../../../../en/Standards-Compliant_Authoring_Tools" rel="internal">Standards-Compliant Authoring Tools</a></li></ul></div>
-
-<h3 class="editable" id="Смотрите_также"><span>Смотрите также</span></h3>
-
-<div class="editIcon"><a href="/../../../../en/XHTML#" style="" title="Edit section"><span class="icon"><img alt="Edit section" class="sectionedit" src="../../../../skins/common/icons/icon-trans.gif"></span></a></div>
+### Смотрите также
 
 - [HTML](/../../../../ru/HTML "../../../../ru/HTML")
 - [Namespaces](/../../../../ru/Namespaces "../../../../ru/Namespaces")

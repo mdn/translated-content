@@ -4,13 +4,11 @@ slug: Glossary/Decryption
 translation_of: Glossary/Decryption
 original_slug: Глоссарий/Дешифрование
 ---
-В {{glossary("cryptography")}}, **дешифрование\*\*** \*\*это конвертация {{glossary("ciphertext")}} в {{glossary("cleartext")}}.
+В {{glossary("cryptography")}}, **дешифрование** — это конвертация {{glossary("ciphertext")}} в {{glossary("cleartext")}}.
 
 Расшифровка это криптографическая основа: это трансформация кодированного текста в простой текст при помощи криптографического алгоритма под названием {{glossary("cipher")}}. Шифрование, как и дешифрование в современных способах кодирования осуществляется благодаря определённому алгоритму и секретному элементу: {{glossary("key")}}. Если алгоритм обычно доступен публично, то по соображениям безопасности, ключ должен оставаться в тайне.
 
-
-
-<img alt="The decryption primitive." src="https://mdn.mozillademos.org/files/9817/Decryption.png" style="height: 81px; width: 485px;">
+![The decryption primitive.](https://mdn.mozillademos.org/files/9817/Decryption.png)
 
 Дешифрование это обратный процесс {{glossary("encryption")}} и если ключ остаётся в тайне, дешифрование становиться математически сложным. Степень сложности зависит от уровня безопасности действующих криптографических алгоритмов и эволюционирует с развитием {{glossary("cryptanalysis")}}.
 

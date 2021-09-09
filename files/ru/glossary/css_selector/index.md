@@ -28,7 +28,7 @@ original_slug: Глоссарий/CSS_Selector
 
 В первом CSS-правиле я выбираю элемент div и задаю его стиль (цвет текста <span class="st">—</span> зелёный). Во втором CSS-правиле выбираю элемент p и задаю красный цвет текста. Вот как выглядит результат:
 
-<img alt="CSS selector coding results" src="https://mdn.mozillademos.org/files/13941/cssSelectorMDNGlossary.jpg" style="border: 1px solid black; height: 101px; width: 343px;">
+![CSS selector coding results](https://mdn.mozillademos.org/files/13941/cssSelectorMDNGlossary.jpg)
 
 ## Смотрите также
 
