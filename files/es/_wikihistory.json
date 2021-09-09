@@ -7446,14 +7446,6 @@
       "empirreamm"
     ]
   },
-  "Web/API/KeyboardEvent/which": {
-    "modified": "2019-03-23T23:25:30.040Z",
-    "contributors": [
-      "fscholz",
-      "jsx",
-      "arthusu"
-    ]
-  },
   "Web/API/Location": {
     "modified": "2020-03-11T08:46:40.807Z",
     "contributors": [
@@ -8438,6 +8430,14 @@
     "modified": "2019-03-23T23:01:34.700Z",
     "contributors": [
       "fscholz"
+    ]
+  },
+  "Web/API/UIEvent/which": {
+    "modified": "2019-03-23T23:25:30.040Z",
+    "contributors": [
+      "fscholz",
+      "jsx",
+      "arthusu"
     ]
   },
   "Web/API/URL": {
