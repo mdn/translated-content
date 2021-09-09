@@ -117,7 +117,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Liens_entre_flexbox_et_les_autres
 <p>On notera que cela ne retire que la boîte de la disposition. Les éléments fils au deuxième niveau ne deviennent pas des éléments fils directs pour d'autres notions. On peut voir dans l'exemple qu'on utilise un sélecteur sur les éléments fils directs pour gérer l'arrière-plan et les bordures : ces styles n'ont pas été appliqués aux éléments fils de deuxième rang. Ces éléments ont été disposés comme des éléments flexibles, mais ils ne récupèrent pas la mise en forme des éléments fils directs.</p>
 
 <div class="warning">
-<p><strong>Attention !</strong> Utiliser <code>display: contents</code> entraînera la suppression de l'élément dans l'arbre d'accessibilité et les lecteurs d'écran ne pourront pas en voir le contenu (comme si on avait utilisé <code>display: none</code>). La valeur <code>contents</code> doit uniquement être utilisée pour les éléments de présentation (et pas de contenu).</p>
+<p><strong>Attention :</strong> Utiliser <code>display: contents</code> entraînera la suppression de l'élément dans l'arbre d'accessibilité et les lecteurs d'écran ne pourront pas en voir le contenu (comme si on avait utilisé <code>display: none</code>). La valeur <code>contents</code> doit uniquement être utilisée pour les éléments de présentation (et pas de contenu).</p>
 </div>
 
 <p>En retirant la boîte de l'élément parent, on ne peut pas utiliser cette boîte pour, par exemple, ajouter une couleur d'arrière-plan commune aux éléments fils imbriqués. Si on retire <code>display: contents</code> dans l'exemple, on peut voir que l'arrière-plan orange rattaché à l'élément disparaît avec la boîte.</p>
