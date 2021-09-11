@@ -1,5 +1,5 @@
 ---
-title: Beginning our React todo list
+title: React todo list 시작하기
 slug: >-
   Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning
 tags:
@@ -12,248 +12,260 @@ tags:
   - Style
   - client-side
 ---
-<div>{{LearnSidebar}}</div>
+{{LearnSidebar}}
 
-<div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
+{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
-<p class="summary">Let's say that we’ve been tasked with creating a proof-of-concept in React – an app that allows users to add, edit, and delete tasks they want to work on, and also mark tasks as complete without deleting them. This article will walk you through putting the basic <code>App</code> component structure and styling in place, ready for individual component definition and interactivity, which we'll add later.</p>
+여러분이 React로 개념 증명을 만드는, 곧 사용자가 원하는 태스크를 추가, 편집, 그리고 삭제할 수 있으며, 태스크를 삭제하지 않고 완료로 표시할 수도 있는 앱을 만드는 작업을 맡게 되었다고 가정해 보겠습니다. 이 기사는 기본 `App` 컴포넌트 구조와 스타일링을 설정하는 방법에 대해서 다루며, 여러분은 개별 컴포넌트 정의와 상호작용성을 배울 준비를 갖추게 될 겁니다.
 
 <div class="notecard note">
-<p class="summary"><strong>Note</strong>: If you need to check your code against our version, you can find a finished version of the sample React app code in our <a href="https://github.com/mdn/todo-react">todo-react repository</a>. For a running live version, see <a href="https://mdn.github.io/todo-react-build/">https://mdn.github.io/todo-react-build/</a>.</p>
-</div>
+<p class="summary"><strong>참고</strong>: 여러분의 코드를 우리의 것과 비교하고 싶다면 <a href="https://github.com/mdn/todo-react">todo-react repository</a>에서 최종적인 버전의 샘플 React 앱 코드를 확인해보세요. 실행 중인 라이브 버전은 <a href="https://mdn.github.io/todo-react-build/">https://mdn.github.io/todo-react-build/</a>에서 볼 수 있습니다.</p></div>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">Prerequisites:</th>
+   <th scope="row">사전 요구 사항:</th>
    <td>
-    <p>Familiarity with the core <a href="/en-US/docs/Learn/HTML">HTML</a>, <a href="/en-US/docs/Learn/CSS">CSS</a>, and <a href="/en-US/docs/Learn/JavaScript">JavaScript</a> languages, knowledge of the <a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">terminal/command line</a>.</p>
+    코어 <a href="/ko/docs/Learn/HTML">HTML</a>, <a href="/ko/docs/Learn/CSS">CSS</a>, 및 <a href="/ko/docs/Learn/JavaScript">JavaScript</a> 언어에 익숙할 것. <a href="/ko/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">터미널/커맨드라인</a>에 대한 지식.
    </td>
   </tr>
   <tr>
-   <th scope="row">Objective:</th>
-   <td>To introduce our todo list case study, and get the basic <code>App</code> structure and styling in place.</td>
+   <th scope="row">목적:</th>
+   <td>투두 리스트를 만들고 기본 <code>App</code> 구조와 스타일링을 설정한다.</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Our_apps_user_stories">Our app's user stories</h2>
 
-<p>In software development, a user story is an actionable goal from the perspective of the user. Defining user stories before we begin our work will help us focus our work. Our app should fulfill the following stories:</p>
 
-<p>As a user, I can</p>
+## 우리가 만들 애플리케이션의 유저 스토리
 
-<ul>
- <li>read a list of tasks.</li>
- <li>add a task using the mouse or keyboard.</li>
- <li>mark any task as completed, using the mouse or keyboard.</li>
- <li>delete any task, using the mouse or keyboard.</li>
- <li>edit any task, using the mouse or keyboard.</li>
- <li>view a specific subset of tasks: All tasks, only the active task, or only the completed tasks.</li>
-</ul>
+소프트웨어 개발에서 유저 스토리(user story)는 사용자의 관점에서 실행 가능한 목표를 뜻합니다. 개발을 시작하기 전에 유저 스토리를 정의하는 것은 매우 도움이 됩니다. 우리의 애플리케이션은 다음과 같은 스토리를 만족해야 합니다:
 
-<p>We'll tackle these stories one-by-one.</p>
+나는 사용자로서, 다음의 것들을 할 수 있다:
 
-<h2 id="Pre-project_housekeeping">Pre-project housekeeping</h2>
+- 태스크 목록 읽기
+- 마우스나 키보드로 태스크 추가하기
+- 마우스나 키보드를 사용하여 태스크를 완료로 표시하기
+- 마우스나 키보드를 사용하여 태스크 삭제하기
+- 마우스나 키보드를 사용하여 태스크 편집하기
+- 태스크를 특정한 집합으로 나누어 보기: 전체 태스크, 진행 중인 태스크, 혹은 완료된 태스크들.
 
-<p>create-react-app has made a few files we won't be using at all for our project.</p>
+이 스토리들을 하나하나 따져보겠습니다.
 
-<ul>
- <li>We're not going to write per-component stylesheets, so first delete the <code>App.css</code> import from the top of <code>App.js</code>.</li>
- <li>We are also not going to be using the <code>logo.svg</code> file, so remove that import too.</li>
-</ul>
 
-<p>Then, copy and paste the following commands into your terminal to delete some unneeded files. Make sure you’re starting in the app's root directory!</p>
 
-<pre class="brush: bash"># Move into the src directory of your project
+## 프로젝트를 실행하기 전 점검하기
+
+create-react-app은 우리의 프로젝트에서 전혀 사용하지 않는 파일을 몇 개 만듭니다.
+
+- 컴포넌트마다 스타일 시트를 만들지 않을 것이므로, 우선 `App.js`의 상단에 `App.css`를 임포트하고 있는 문을 지웁니다.
+- `logo.svg` 파일 역시 사용하지 않으므로, 이것을 임포트하고 있는 문 역시 삭제합니다.
+
+그러고 나서 필요하지 않은 파일들을 삭제하기 위해 터미널에 아래의 커맨드들을 복사, 붙여넣기 합니다. 애플리케이션의 루트 디렉토리에서 터미널을 실행하고 있는지 확인하세요!
+
+```shell
+# 프로젝트의 src 디렉토리로 이동
 cd src
-# Delete a few files
+# 파일들을 삭제
 rm -- App.test.js App.css logo.svg serviceWorker.js setupTests.js
-# Move back up to the root of the project
-cd ..</pre>
+# 프로젝트의 루트 디렉토리로 다시 돌아오기
+cd ..
+```
 
-<p>Notes:</p>
+참고:
 
-<ul>
- <li>Two of the files we’re deleting are for testing the application. We will not cover testing here.</li>
- <li>If you stopped your server to do the terminal tasks mentioned above, you’ll have to start it again using <code>npm start</code>.</li>
-</ul>
+- 위 파일 중 두 개는 애플리케이션을 테스트하기 위해 사용됩니다. 이 기사에서는 테스팅(testing)에 대해 다루지 않습니다.
+- 위의 터미널 작업을 수행하기 위해 서버를 멈추었다면, `npm start`를 사용하여 다시 시작해야 합니다.
 
-<h2 id="Project_starter_code">Project starter code</h2>
 
-<p>As a starting point for this project, we're going to provide two things: An <code>App()</code> function to replace the one you have now, and some CSS to style your app.</p>
 
-<h3 id="The_JSX">The JSX</h3>
+## 프로젝트 스타터 코드
 
-<p>Copy the following snippet to your clipboard, then paste it into <code>App.js</code> so that it replaces the existing <code>App()</code> function:</p>
+프로젝트를 시작하기 위해 여러분이 지금 가지고 있는 것을 대신할 `App()` 함수와 애플리케이션을 꾸밀 CSS를 제공하겠습니다.
 
-<pre class="brush: js">function App(props) {
+
+
+### JSX
+
+아래의 스니펫을 복사하고 기존의 `App()` 함수 대신 `App.js`에 붙여넣으세요.
+
+```js
+function App(props) {
   return (
-    &lt;div className="todoapp stack-large"&gt;
-      &lt;h1&gt;TodoMatic&lt;/h1&gt;
-      &lt;form&gt;
-        &lt;h2 className="label-wrapper"&gt;
-          &lt;label htmlFor="new-todo-input" className="label__lg"&gt;
+    <div className="todoapp stack-large">
+      <h1>TodoMatic</h1>
+      <form>
+        <h2 className="label-wrapper">
+          <label htmlFor="new-todo-input" className="label__lg">
             What needs to be done?
-          &lt;/label&gt;
-        &lt;/h2&gt;
-        &lt;input
+          </label>
+        </h2>
+        <input
           type="text"
           id="new-todo-input"
           className="input input__lg"
           name="text"
           autoComplete="off"
-        /&gt;
-        &lt;button type="submit" className="btn btn__primary btn__lg"&gt;
+        />
+        <button type="submit" className="btn btn__primary btn__lg">
           Add
-        &lt;/button&gt;
-      &lt;/form&gt;
-      &lt;div className="filters btn-group stack-exception"&gt;
-        &lt;button type="button" className="btn toggle-btn" aria-pressed="true"&gt;
-          &lt;span className="visually-hidden"&gt;Show &lt;/span&gt;
-          &lt;span&gt;all&lt;/span&gt;
-          &lt;span className="visually-hidden"&gt; tasks&lt;/span&gt;
-        &lt;/button&gt;
-        &lt;button type="button" className="btn toggle-btn" aria-pressed="false"&gt;
-          &lt;span className="visually-hidden"&gt;Show &lt;/span&gt;
-          &lt;span&gt;Active&lt;/span&gt;
-          &lt;span className="visually-hidden"&gt; tasks&lt;/span&gt;
-        &lt;/button&gt;
-        &lt;button type="button" className="btn toggle-btn" aria-pressed="false"&gt;
-          &lt;span className="visually-hidden"&gt;Show &lt;/span&gt;
-          &lt;span&gt;Completed&lt;/span&gt;
-          &lt;span className="visually-hidden"&gt; tasks&lt;/span&gt;
-        &lt;/button&gt;
-      &lt;/div&gt;
-      &lt;h2 id="list-heading"&gt;
+        </button>
+      </form>
+      <div className="filters btn-group stack-exception">
+        <button type="button" className="btn toggle-btn" aria-pressed="true">
+          <span className="visually-hidden">Show </span>
+          <span>all</span>
+          <span className="visually-hidden"> tasks</span>
+        </button>
+        <button type="button" className="btn toggle-btn" aria-pressed="false">
+          <span className="visually-hidden">Show </span>
+          <span>Active</span>
+          <span className="visually-hidden"> tasks</span>
+        </button>
+        <button type="button" className="btn toggle-btn" aria-pressed="false">
+          <span className="visually-hidden">Show </span>
+          <span>Completed</span>
+          <span className="visually-hidden"> tasks</span>
+        </button>
+      </div>
+      <h2 id="list-heading">
         3 tasks remaining
-      &lt;/h2&gt;
-      &lt;ul
+      </h2>
+      <ul
         role="list"
         className="todo-list stack-large stack-exception"
         aria-labelledby="list-heading"
-      &gt;
-        &lt;li className="todo stack-small"&gt;
-          &lt;div className="c-cb"&gt;
-            &lt;input id="todo-0" type="checkbox" defaultChecked={true} /&gt;
-            &lt;label className="todo-label" htmlFor="todo-0"&gt;
+      >
+        <li className="todo stack-small">
+          <div className="c-cb">
+            <input id="todo-0" type="checkbox" defaultChecked={true} />
+            <label className="todo-label" htmlFor="todo-0">
               Eat
-            &lt;/label&gt;
-          &lt;/div&gt;
-          &lt;div className="btn-group"&gt;
-            &lt;button type="button" className="btn"&gt;
-              Edit &lt;span className="visually-hidden"&gt;Eat&lt;/span&gt;
-            &lt;/button&gt;
-            &lt;button type="button" className="btn btn__danger"&gt;
-              Delete &lt;span className="visually-hidden"&gt;Eat&lt;/span&gt;
-            &lt;/button&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li className="todo stack-small"&gt;
-          &lt;div className="c-cb"&gt;
-            &lt;input id="todo-1" type="checkbox" /&gt;
-            &lt;label className="todo-label" htmlFor="todo-1"&gt;
+            </label>
+          </div>
+          <div className="btn-group">
+            <button type="button" className="btn">
+              Edit <span className="visually-hidden">Eat</span>
+            </button>
+            <button type="button" className="btn btn__danger">
+              Delete <span className="visually-hidden">Eat</span>
+            </button>
+          </div>
+        </li>
+        <li className="todo stack-small">
+          <div className="c-cb">
+            <input id="todo-1" type="checkbox" />
+            <label className="todo-label" htmlFor="todo-1">
               Sleep
-            &lt;/label&gt;
-          &lt;/div&gt;
-          &lt;div className="btn-group"&gt;
-            &lt;button type="button" className="btn"&gt;
-              Edit &lt;span className="visually-hidden"&gt;Sleep&lt;/span&gt;
-            &lt;/button&gt;
-            &lt;button type="button" className="btn btn__danger"&gt;
-              Delete &lt;span className="visually-hidden"&gt;Sleep&lt;/span&gt;
-            &lt;/button&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-        &lt;li className="todo stack-small"&gt;
-          &lt;div className="c-cb"&gt;
-            &lt;input id="todo-2" type="checkbox" /&gt;
-            &lt;label className="todo-label" htmlFor="todo-2"&gt;
+            </label>
+          </div>
+          <div className="btn-group">
+            <button type="button" className="btn">
+              Edit <span className="visually-hidden">Sleep</span>
+            </button>
+            <button type="button" className="btn btn__danger">
+              Delete <span className="visually-hidden">Sleep</span>
+            </button>
+          </div>
+        </li>
+        <li className="todo stack-small">
+          <div className="c-cb">
+            <input id="todo-2" type="checkbox" />
+            <label className="todo-label" htmlFor="todo-2">
               Repeat
-            &lt;/label&gt;
-          &lt;/div&gt;
-          &lt;div className="btn-group"&gt;
-            &lt;button type="button" className="btn"&gt;
-              Edit &lt;span className="visually-hidden"&gt;Repeat&lt;/span&gt;
-            &lt;/button&gt;
-            &lt;button type="button" className="btn btn__danger"&gt;
-              Delete &lt;span className="visually-hidden"&gt;Repeat&lt;/span&gt;
-            &lt;/button&gt;
-          &lt;/div&gt;
-        &lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/div&gt;
+            </label>
+          </div>
+          <div className="btn-group">
+            <button type="button" className="btn">
+              Edit <span className="visually-hidden">Repeat</span>
+            </button>
+            <button type="button" className="btn btn__danger">
+              Delete <span className="visually-hidden">Repeat</span>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
   );
-}</pre>
+}
+```
 
-<p>Now open <code>public/index.html</code> and change the <code><a href="/en-US/docs/Web/HTML/Element/title">&lt;title&gt;</a></code> element’s text to <code>TodoMatic</code>. This way, it will match the <code><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">&lt;h1&gt;</a></code> at the top of our app.</p>
+이제 `public/index.html`을 열고 [`<title>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title) 요소의 텍스트를 `TodoMatic`으로 바꾸세요. 이렇게 하면 우리의 애플리케이션 상단의 [`<h1>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements)과 일치할 겁니다.
 
-<pre class="brush: html">&lt;title&gt;TodoMatic&lt;/title&gt;</pre>
+```js
+<title>TodoMatic</title>
+```
 
-<p>When your browser refreshes, you should see something like this:</p>
+브라우저를 새로고침하면, 아래 이미지처럼 보일 거예요.
 
-<p><img alt="todo-matic app, unstyled, showing a jumbled mess of labels, inputs, and buttons" src="unstyled-app.png" style="border-style: solid; border-width: 1px;"></p>
+![todo-matic app, unstyled, showing a jumbled mess of labels, inputs, and buttons](./unstyled-app.png)
 
-<p>It's ugly, and doesn’t function yet, but that's okay — we'll style it in a moment. First, consider the JSX we have, and how it corresponds to our user stories:</p>
+예쁘지 않고 아무런 기능도 갖추지 않았지만, 괜찮습니다! 곧 꾸밀 거니까요. 우선, JSX가 user story에 어떻게 대응하는지 살펴봅시다:
 
-<ul>
- <li>We have a <code><a href="/en-US/docs/Web/HTML/Element/form">&lt;form&gt;</a></code> element, with an <code><a href="/en-US/docs/Web/HTML/Element/input/text">&lt;input type="text"&gt;</a></code> for writing out a new task, and a button to submit the form.</li>
- <li>We have an array of buttons that will be used to filter our tasks.</li>
- <li>We have a heading that tells us how many tasks remain.</li>
- <li>We have our 3 tasks, arranged in an un-ordered list. Each task is a list item (<code><a href="/en-US/docs/Web/HTML/Element/li">&lt;li&gt;</a></code>), and has buttons to edit and delete it and a checkbox to check it off as done.</li>
-</ul>
+- 새로운 태스크를 쓰기 위한 [`<input type="text">`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/text)와 폼(form)을 제출하기 위한 버튼을 가진 [`<form>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form) 요소가 있습니다.
+- 태스크를 필터링하기 위한 여러 개의 버튼이 있습니다.
+- 태스크가 몇 개 남아있는지 알려주는 헤딩(heading)이 있습니다.
+- 순서가 매겨지지 않은 세 개의 태스크가 있습니다. 각각의 태스크는 리스트 아이템([`<li>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li))이며, 편집하거나 삭제하기 위한 버튼과 완료를 표시할 체크 박스를 가지고 있습니다.
 
-<p>The form will allow us to <em>make</em> tasks; the buttons will let us <em>filter</em> them; the heading and list are our way to <em>read</em> them. The UI for <em>editing</em> a task is conspicuously absent for now. That's okay – we'll write that later.</p>
+폼은 태스크를 *만들* 수 있게 해줍니다; 버튼들은 태스크들을 *필터링할* 수 있게 해줍니다; 헤딩과 리스트는 태스크들을 *읽을* 수 있게 해줍니다. 태스크를 *편집하는* UI는 현재는 없습니다. 이것도 괜찮습니다 – 나중에 만들 거니까요.
 
-<h3 id="Accessibility_features">Accessibility features</h3>
 
-<p>You may notice some unusual attributes here. For example:</p>
 
-<pre class="brush: html">&lt;button type="button" className="btn toggle-btn" aria-pressed="true"&gt;
-  &lt;span className="visually-hidden"&gt;Show &lt;/span&gt;
-  &lt;span&gt;all&lt;/span&gt;
-  &lt;span className="visually-hidden"&gt; tasks&lt;/span&gt;
-&lt;/button&gt;</pre>
+### 접근성 기능
 
-<p>Here, <code>aria-pressed</code> tells assistive technology (like screen readers) that the button can be in one of two states: <code>pressed</code> or <code>unpressed</code>. Think of these as analogs for <code>on</code> and <code>off</code>. Setting a value of <code>true</code> means that the button is pressed by default.</p>
+익숙하지 않은 속성을 발견했을 겁니다. 예를 들어:
 
-<p>The class <code>visually-hidden</code> has no effect yet, because we have not included any CSS. Once we have put our styles in place, though, any element with this class will be hidden from sighted users and still available to screen reader users — this is because these words are not needed by sighted users; they are there to provide more information about what the button does for screenreader users that do not have the extra visual context to help them.</p>
+```js
+<button type="button" className="btn toggle-btn" aria-pressed="true">
+  <span className="visually-hidden">Show </span>
+  <span>all</span>
+  <span className="visually-hidden"> tasks</span>
+</button>
+```
 
-<p>Further down, you can find our <code><a href="/en-US/docs/Web/HTML/Element/ul">&lt;ul&gt;</a></code> element:</p>
+`aria-pressed`은 (스크린 리더와 같은) assistive technology에게 하나의 버튼이 두 개의 상태 `pressed`와 `unpressed`로 있을 수 있다는 것을 알려줍니다. `on`과 `off`라고 생각해보세요. 값을 `true`로 설정하는 것은 버튼을 기본적으로 눌린 상태라는 것을 의미합니다.
 
-<pre class="brush: html">&lt;ul
+클래스 `visually-hidden`는 아직 CSS를 연결하지 않았으므로 아직 아무런 이펙트도 없습니다. 제대로 스타일을 설정하면 이 클래스를 가진 모든 요소가 시력이 정상인 사용자에게는 숨겨지며 스크린 리더 사용자에게만 보입니다 — 이 단어들은 시력이 정상인 사용자들에게 필요하지 않기 때문입니다; 단어들은 추가적인 시각적 맥락(visual context)을 가지고 있지 않은 스크린 리더 사용자들에게 버튼이 무엇을 하는지 더 많은 정보를 제공합니다.
+
+아래에서 [`<ul>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul) 요소를 찾을 수 있을 겁니다.
+
+```js
+<ul
   role="list"
   className="todo-list stack-large stack-exception"
   aria-labelledby="list-heading"
-&gt;</pre>
+>
+```
 
-<p>The <code>role</code> attribute helps assistive technology explain what kind of element a tag represents. A <code>&lt;ul&gt;</code> is treated like a list by default, but the styles we're about to add will break that functionality. This role will restore the "list" meaning to the <code>&lt;ul&gt;</code>  element. If you want to learn more about why this is necessary, you can check out <a href="https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html">Scott O'Hara’s article, “Fixing Lists”</a>.</p>
+`role` 속성은 assistive technology가 태그가 나타내고 있는 요소의 종류가 무엇인지 설명하는 데 도움이 됩니다. `<ul>`은 기본적으로 리스트처럼 취급되지만, 우리가 추가할 스타일은 리스트의 기능성을 해칩니다. `role="list"`는 `<ul>` 요소가  "리스트"의 의미를 회복하도록 합니다. 이것이 왜 필요한지 알고 싶다면, [Scott O'Hara’s article, “Fixing Lists”](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html)을 참고하세요.
 
-<p>The <code>aria-labelledby</code> attribute tells assistive technologies that we're treating our list heading as the label that describes the purpose of the list beneath it. Making this association gives the list a more informative context, which could help screen reader users better understand the purpose of it.</p>
+`aria-labelledby` 속성은 assistive technologies에게 리스트 헤딩을 헤딩 아래의 리스트의 목적을 나타내는 라벨로 사용하고 있음을 알립니다. 이러한 연관을 만드는 것은 리스트가 더욱 정보가 많은 맥락을 가지게 하여, 스크린 리더 사용자가 리스트의 목적을 더 잘 이해할 수 있도록 합니다.
 
-<p>Finally, the labels and inputs in our list items have some attributes unique to JSX:</p>
+마지막으로, 리스트 항목 안의 라벨과 인풋들은 JSX에 고유한 속성을 가지고 있습니다.
 
-<pre class="brush: html">&lt;input id="todo-0" type="checkbox" defaultChecked={true} /&gt;
-&lt;label className="todo-label" htmlFor="todo-0"&gt;
+```js
+<input id="todo-0" type="checkbox" defaultChecked={true} />
+<label className="todo-label" htmlFor="todo-0">
   Eat
-&lt;/label&gt;</pre>
+</label>
+```
 
-<p>The <code>defaultChecked</code> attribute in the <code>&lt;input/ &gt;</code>  tag tells React to check this checkbox initially. If we were to use <code>checked</code>, as we would in regular HTML, React would log some warnings into our browser console relating to handling events on the checkbox, which we want to avoid. Don't worry too much about this for now — we will cover this later on when we get to using events.</p>
+`<input/ >`의 `defaultChecked` 속성은 React가 초기에 이 체크박스를 체크하도록 합니다. HTML에서처럼 `checked`를 사용한다면, React는 체크박스에 대한 이벤트를 다루는 것과 관련한 경고를 브라우저 콘솔에 출력할 것입니다. 지금은 크게 걱정하지 마세요 — 나중에 이벤트를 사용할 때 이야기할테니까요.
 
-<p>The <code>htmlFor</code> attribute corresponds to the <code>for</code> attribute used in HTML. We cannot use <code>for</code> as an attribute in JSX because <code>for</code> is a reserved word, so  React uses <code>htmlFor</code> instead.</p>
+`htmlFor` 속성은 HTML에서는 `for` 속성과 대응합니다. JSX에서는 `for`을 속성으로 사용하지 않는데, `for`이 예약어(reserved word)이기 때문입니다. 그래서 React는 `htmlFor`을 대신 사용합니다.
 
-<p>Notes:</p>
+참고:
 
-<ul>
- <li>To use boolean values (<code>true</code> and <code>false</code>) in JSX attributes, you must enclose them in curly braces. If you write <code>defaultChecked="true"</code>, the value of <code>defaultChecked</code> will be <code>"true"</code> — a string literal. Remember — this is actually JavaScript, not HTML!</li>
- <li>The <code>aria-pressed</code> attribute used in our earlier code snippet has a value of <code>"true"</code> because <code>aria-pressed</code> is not a true boolean attribute in the way <code>checked</code> is.</li>
-</ul>
+- JSX 속성에 불리언 값들(`true`와 `false`)를 사용하기 위해서는 이 값들을 중괄호로 감싸야 합니다. `defaultChecked="true"`라고 적는다면, `defaultChecked`의 값은 문자열 리터럴인 `"true"`가 될 겁니다. 꼭 기억하세요 — JSX는 JavaScript이지, HTML이 아닙니다!
+- 이전의 코드 스니펫에서 사용되었던 `aria-pressed` 속성은 `"true"`라는 값을 가지는데, 이것은 `aria-pressed`가 `checked`가 있는 방식에서 진짜 불리언 속성이 아니기 때문입니다(because `checked` is not a true boolean attribute in the way `checked` is).
 
-<h3 id="Implementing_our_styles">Implementing our styles</h3>
+### 스타일 적용하기
 
-<p>Paste the following CSS code into <code>src/index.css</code> so that it replaces what's currently there:</p>
+`src/index.css`에 기존에 있던 것 대신 아래의 CSS 코드를 붙여넣기하세요.
 
-<pre class="brush: css">/* RESETS */
+```js
+/* RESETS */
 *,
 *::before,
 *::after {
@@ -324,7 +336,7 @@ body {
 }
 /*END RESETS*/
 /* GLOBAL STYLES */
-.form-group &gt; input[type="text"] {
+.form-group > input[type="text"] {
   display: inline-block;
   margin-top: 0.4rem;
 }
@@ -358,10 +370,10 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.btn-group &gt; * {
+.btn-group > * {
   flex: 1 1 49%;
 }
-.btn-group &gt; * + * {
+.btn-group > * + * {
   margin-left: 0.8rem;
 }
 .label-wrapper {
@@ -378,21 +390,21 @@ body {
   clip: rect(1px, 1px, 1px, 1px);
   white-space: nowrap;
 }
-[class*="stack"] &gt; * {
+[class*="stack"] > * {
   margin-top: 0;
   margin-bottom: 0;
 }
-.stack-small &gt; * + * {
+.stack-small > * + * {
   margin-top: 1.25rem;
 }
-.stack-large &gt; * + * {
+.stack-large > * + * {
   margin-top: 2.5rem;
 }
 @media screen and (min-width: 550px) {
-  .stack-small &gt; * + * {
+  .stack-small > * + * {
     margin-top: 1.4rem;
   }
-  .stack-large &gt; * + * {
+  .stack-large > * + * {
     margin-top: 2.8rem;
   }
 }
@@ -412,15 +424,15 @@ body {
     padding: 4rem;
   }
 }
-.todoapp &gt; * {
+.todoapp > * {
   max-width: 50rem;
   margin-left: auto;
   margin-right: auto;
 }
-.todoapp &gt; form {
+.todoapp > form {
   max-width: 100%;
 }
-.todoapp &gt; h1 {
+.todoapp > h1 {
   display: block;
   max-width: 100%;
   text-align: center;
@@ -465,7 +477,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
 }
-.todo &gt; * {
+.todo > * {
   flex: 0 0 100%;
 }
 .todo-text {
@@ -491,15 +503,15 @@ body {
   padding-left: 40px;
   clear: left;
 }
-.c-cb &gt; label::before,
-.c-cb &gt; input[type="checkbox"] {
+.c-cb > label::before,
+.c-cb > input[type="checkbox"] {
   box-sizing: border-box;
   top: -2px;
   left: -2px;
   width: 44px;
   height: 44px;
 }
-.c-cb &gt; input[type="checkbox"] {
+.c-cb > input[type="checkbox"] {
   -webkit-font-smoothing: antialiased;
   cursor: pointer;
   position: absolute;
@@ -507,7 +519,7 @@ body {
   margin: 0;
   opacity: 0;
 }
-.c-cb &gt; label {
+.c-cb > label {
   font-size: inherit;
   font-family: inherit;
   line-height: inherit;
@@ -517,17 +529,17 @@ body {
   cursor: pointer;
   touch-action: manipulation;
 }
-.c-cb &gt; label::before {
+.c-cb > label::before {
   content: "";
   position: absolute;
   border: 2px solid currentColor;
   background: transparent;
 }
-.c-cb &gt; input[type="checkbox"]:focus + label::before {
+.c-cb > input[type="checkbox"]:focus + label::before {
   border-width: 4px;
   outline: 3px dashed #228bec;
 }
-.c-cb &gt; label::after {
+.c-cb > label::after {
   box-sizing: content-box;
   content: "";
   position: absolute;
@@ -542,17 +554,22 @@ body {
   opacity: 0;
   background: transparent;
 }
-.c-cb &gt; input[type="checkbox"]:checked + label::after {
+.c-cb > input[type="checkbox"]:checked + label::after {
   opacity: 1;
-}</pre>
+}
+```
 
-<p>Save and look back at your browser, and your app should now have reasonable styling.</p>
+코드를 저장하고 브라우저로 되돌아오면, 이제 애플리케이션은 적당한 스타일을 가지게 될 겁니다.
 
-<h2 id="Summary">Summary</h2>
 
-<p>Now our todo list app actually looks a bit more like a real app! The problem is: it doesn’t actually do anything. We’ll start fixing that in the next chapter!</p>
 
-<p>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</p>
+## 요약
+
+이제 우리의 투두 리스트는 조금 더 진짜 애플리케이션 같아졌습니다! 문제는, 이 앱이 실제로는 아무것도 하지 않는다는 거죠. 다음 챕터에서 해결해봅시다!
+
+
+
+{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
 
 <h2 id="In_this_module">In this module</h2>
 
