@@ -12,7 +12,7 @@ translation_of: Web/CSS/grid-auto-columns
 
 <p>La propriété <strong><code>grid-auto-columns</code></strong> définit la taille d'une colonne de grille créée de façon implicite.</p>
 
-<div>{{EmbedInteractiveExample("pages/css/grid-auto-columns.html")}}</div
+<div>{{EmbedInteractiveExample("pages/css/grid-auto-columns.html")}}</div>
 
 <p>Si un élément de la grille est positionné sur une colonne dont la taille n'est pas explicitement définie avec {{cssxref("grid-template-columns")}}, une piste implicite est créée pour contenir l'élément. Cela peut se produire lorsqu'on positionne un élément sur une ligne inexistante ou lorsque l'algorithme de placement automatique ajoute des colonnes supplémentaires.</p>
 
@@ -82,9 +82,7 @@ grid-auto-columns: unset;
  <dt><code>fit-content(argument)</code></dt>
  <dd>Cette notation représente la formule <code>min(max-content, max(auto, argument))</code> qui est calculée de façon semblable à <code>auto</code>, sauf qu'ici, la taille de la piste est écrétée à <em>argument</em> s'i elle est plus grande que le minimum <code>auto</code>.</dd>
  <dt><code>auto</code></dt>
- <dd>Un mot-clé qui est identique au contenu maximal si c'est un maximum. Si c'est un minimum, il représente la plus grande des plus petites tailles (définie par {{cssxref("min-width")}}/{{cssxref("min-height")}})) des objets de la grilles qui occupe cette piste de la grille.</dd>
- <dd>
- <p class="note"><strong>Note :</strong> Les pistes de taille <code>auto</code> (et uniquement celles-ci) peuvent être étirées grâce aux propriétés {{cssxref("align-content")}} et {{cssxref("justify-content")}}.</p>
+ <dd>Un mot-clé qui est identique au contenu maximal si c'est un maximum. Si c'est un minimum, il représente la plus grande des plus petites tailles (définie par {{cssxref("min-width")}}/{{cssxref("min-height")}})) des objets de la grilles qui occupe cette piste de la grille. <div class="note"><p><strong>Note :</strong> Les pistes de taille <code>auto</code> (et uniquement celles-ci) peuvent être étirées grâce aux propriétés {{cssxref("align-content")}} et {{cssxref("justify-content")}}.</p></div>
  </dd>
 </dl>
 

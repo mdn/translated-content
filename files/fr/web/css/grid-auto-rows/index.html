@@ -75,9 +75,7 @@ grid-auto-rows: unset;
  <dt><code>minmax(min, max)</code></dt>
  <dd>Une notation fonctionnelle qui définit un intervalle de taille entre <code>min</code> et <code>max</code>. Si <code>max</code> est inférieur à <code>min</code>, <code>max</code> est ignoré et la fonction est traitée comme un minimum. En tant que maximum, elle joue le rôle d'une valeur <code>&lt;flex&gt;</code> qui définit le facteur de flexibilité de la piste. En tant que minimum, elle est gérée comme zéro (ou comme le contenu minimal si le conteneur de la grille impose une contrainte de contenu minimal).</dd>
  <dt><code>auto</code></dt>
- <dd>Un mot-clé qui est identique au contenu maximal si c'est un maximum. Si c'est un minimum, il représente la plus grande des plus petites tailles (définie par {{cssxref("min-width")}}/{{cssxref("min-height")}})) des objets de la grilles qui occupe cette piste de la grille.</dd>
- <dd>
- <p class="note"><strong>Note :</strong> Les pistes de taille <code>auto</code> (et uniquement celles-ci) peuvent être étirées grâce aux propriétés {{cssxref("align-content")}} et {{cssxref("justify-content")}}.</p>
+ <dd>Un mot-clé qui est identique au contenu maximal si c'est un maximum. Si c'est un minimum, il représente la plus grande des plus petites tailles (définie par {{cssxref("min-width")}}/{{cssxref("min-height")}})) des objets de la grilles qui occupe cette piste de la grille. <div class="note"><p><strong>Note :</strong> Les pistes de taille <code>auto</code> (et uniquement celles-ci) peuvent être étirées grâce aux propriétés {{cssxref("align-content")}} et {{cssxref("justify-content")}}.</p></div>
  </dd>
 </dl>
 
