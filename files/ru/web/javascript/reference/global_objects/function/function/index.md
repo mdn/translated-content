@@ -26,7 +26,7 @@ new Function(arg1, ... , argN, functionBody)
 
 - `arg1, arg2, ... argN`
 
-  - : Имена, используемые функцией в качестве имён формальных аргументов. Каждое имя должно быть строкой с правильным JavaScript-значением (либо [идентификатором](/ru/docs/Glossary/Identifier), [оставшимся параметром](/ru/docs/Web/JavaScript/Reference/Functions/rest_parameters), или [деструктурирующим присваиванием](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), либо списком таких строк, разделённых запятой.
+  - : Имена, используемые функцией в качестве имён формальных аргументов. Каждое имя должно быть строкой с правильным JavaScript-значением (либо [идентификатором](/ru/docs/Glossary/Identifier), [оставшимся параметром](/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters), или [деструктурирующим присваиванием](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment), либо списком таких строк, разделённых запятой.
 
     Поскольку параметры разбираются так же, как и объявления функций, допускается использование пробелов и комментариев. Например: `"x", "theValue = 42", "[a, b] /* numbers */"` — или `"x, theValue = 42, [a, b] /* numbers */"`. (`"x, theValue = 42", "[a, b]"` также будет правильным, хотя трудно читаемым).
 
