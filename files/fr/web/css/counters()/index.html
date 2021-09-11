@@ -39,7 +39,7 @@ counters(countername, '.', upper-roman)</pre>
 <dl>
  <dt>{{cssxref("&lt;custom-ident&gt;")}}</dt>
  <dd>Un nom identifiant les compteurs à utiliser. C'est le même nom qui pourra être utilisé avec les propriétés {{cssxref("counter-reset")}} et {{cssxref("counter-increment")}}. Le nom ne peut pas commencer par deux tirets et ne peut pas être <code>none</code>, <code>unset</code>, <code>initial</code> ou <code>inherit</code>.</dd>
- <dt><code style="white-space: nowrap;">&lt;counter-style&gt;</code></dt>
+ <dt><code>&lt;counter-style&gt;</code></dt>
  <dd>Un style de compteur (cf. <a href="/fr/docs/Web/CSS/list-style-type#valeurs">les valeurs décrites pour <code>list-style-type</code></a>) ou une fonction <code><a href="/fr/docs/Web/CSS/symbols()">symbols()</a></code>. En absence de valeur, le style utilisé sera <code>decimal</code>.</dd>
  <dt>{{cssxref("&lt;string&gt;")}}</dt>
  <dd>Une suite de caractères. Les caractères qui ne sont pas latins doivent être encodés avec leur séquence d'échappement Unicode. <code>\000A9</code> représentera par exemple le symbole copyright (©).</dd>
@@ -83,7 +83,7 @@ counters(countername, '.', upper-roman)</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css; highlight[2]">ol {
+<pre class="brush: css">ol {
   counter-reset: listCounter;
 }
 li {
@@ -130,7 +130,7 @@ li::before {
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css; highlight[2]">ol {
+<pre class="brush: css">ol {
   counter-reset: count;
 }
 li {
