@@ -27,7 +27,7 @@ original_slug: Web/CSS/Type_color
 <h2 id="Syntaxe">Syntaxe</h2>
 
 <div class="note">
-<p>Bien que les valeurs des couleurs CSS soient définies précisément, elles pourront s'afficher différemment sur différents appareils. La plupart des appareils ne sont pas calibrés et certains navigateurs ne prennent pas en charge <a href="https://fr.wikipedia.org/wiki/Profil_ICC">le profil de couleurs</a> de l'appareil. Sans ces éléments, le rendu des couleurs peut varier.</p>
+<p><strong>Note :</strong> Bien que les valeurs des couleurs CSS soient définies précisément, elles pourront s'afficher différemment sur différents appareils. La plupart des appareils ne sont pas calibrés et certains navigateurs ne prennent pas en charge <a href="https://fr.wikipedia.org/wiki/Profil_ICC">le profil de couleurs</a> de l'appareil. Sans ces éléments, le rendu des couleurs peut varier.</p>
 </div>
 
 <p>Il existe plusieurs méthodes pour décrire une valeur <code>&lt;color&gt;</code>.</p>
@@ -981,7 +981,8 @@ original_slug: Web/CSS/Type_color
 <p><strong>Note :</strong> Attention lorsqu'on utilise ce mot-clé pour un dégradé (cf.{{cssxref("gradient")}}, <a href="https://www.w3.org/TR/2012/CR-css3-images-20120417/#color-stop-syntax">la spécification W3C indique que <code>transparent</code> devrait être calculé dans l'espace de couleurs avec pré-multiplication des alpha</a>. Cependant, les anciens navigateurs peuvent traiter ce noir avec une valeur <code>alpha</code> de 0.</p>
 </div>
 
-<div class="note"><strong>Note historique :</strong> Le mot-clé <code>transparent</code> n'était pas une valeur de type <code>&lt;color&gt;</code> pour la spécification CSS de niveau 2 (première révision). C'était un mot-clé qui pouvait être utilisé comme valeur pour les propriétés {{cssxref("background")}} et {{cssxref("border")}}. Il a été ajouté afin de pouvoir surcharger l'héritage de couleurs opaques. Avec l'ajout de la gestion de l'opacité via <a href="https://fr.wikipedia.org/wiki/Alpha_blending">les canaux alpha</a>, <code>transparent</code> a été redéfini comme une couleur avec la spécification CSS de niveau 3 sur les couleurs, ce qui permet de l'utiliser à n'importe quel endroit où une valeur <code>&lt;color&gt;</code> est nécessaire (la propriété {{cssxref("color")}} par exemple).</div>
+<div class="note">
+  <p><strong>Note :</strong> Historiquement, le mot-clé <code>transparent</code> n'était pas une valeur de type <code>&lt;color&gt;</code> pour la spécification CSS de niveau 2 (première révision). C'était un mot-clé qui pouvait être utilisé comme valeur pour les propriétés {{cssxref("background")}} et {{cssxref("border")}}. Il a été ajouté afin de pouvoir surcharger l'héritage de couleurs opaques. Avec l'ajout de la gestion de l'opacité via <a href="https://fr.wikipedia.org/wiki/Alpha_blending">les canaux alpha</a>, <code>transparent</code> a été redéfini comme une couleur avec la spécification CSS de niveau 3 sur les couleurs, ce qui permet de l'utiliser à n'importe quel endroit où une valeur <code>&lt;color&gt;</code> est nécessaire (la propriété {{cssxref("color")}} par exemple).</p></div>
 
 <h3 id="Le_mot-clé_currentColor">Le mot-clé <code>currentColor</code></h3>
 

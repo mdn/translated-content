@@ -47,7 +47,9 @@ translation_of: Web/CSS/Using_CSS_custom_properties
  <li>les propriétés personnalisées, qui sont des propriétés spéciales notées <code>--*</code> où <code>*</code> représente le nom de la variable. Elles sont utilisées pour définir la valeur d'une variable donnée : <code>--example-variable: 20px;</code> est une déclaration en CSS, utilisant la propriété personnalisée <code>--*</code> pour initialiser la valeur de la variable CSS <code>--example-variable</code> à <code>20px</code>.</li>
 </ul>
 
-<div class="note"><strong>Note :</strong> Le préfixe de propriété personnalisée était noté <code>var-</code> dans les précédentes spécifications, mais a ensuite été changé pour <code>--</code>. Firefox 31 et supérieurs respectent cette nouvelle notation. ({{bug(985838)}})</div>
+<div class="note">
+  <p><strong>Note :</strong> Le préfixe de propriété personnalisée était noté <code>var-</code> dans les précédentes spécifications, mais a ensuite été changé pour <code>--</code>. Firefox 31 et supérieurs respectent cette nouvelle notation. ({{bug(985838)}})</p>
+</div>
 
 <p>Les propriétés personnalisées sont similaires aux propriétés ordinaires. Elles sont sujettes à la cascade et héritent leur valeur de leur parent si elles ne sont pas redéfinies.</p>
 
@@ -223,7 +225,7 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 </pre>
 
 <div class="note">
-<p><strong>Note : </strong>La syntaxe pour la valeur de recours, comme celle des <a dir="ltr" href="https://www.w3.org/TR/css-variables/#custom-property" title="CSS Custom Properties for Cascading Variables Module Level 1">propriétés personnalisées</a>, permet d'utiliser une virgule. Ainsi, <code>var(--toto, red, blue)</code> définit une valeur de recours égale à <code>red, blue</code>, c'est-à-dire tout ce qui est écrit après la première virgule. Si la deuxième valeur est incorrecte, elle ne pourra pas être utilisée et la règle sera invalide.</p>
+<p><strong>Note :</strong> La syntaxe pour la valeur de recours, comme celle des <a dir="ltr" href="https://www.w3.org/TR/css-variables/#custom-property" title="CSS Custom Properties for Cascading Variables Module Level 1">propriétés personnalisées</a>, permet d'utiliser une virgule. Ainsi, <code>var(--toto, red, blue)</code> définit une valeur de recours égale à <code>red, blue</code>, c'est-à-dire tout ce qui est écrit après la première virgule. Si la deuxième valeur est incorrecte, elle ne pourra pas être utilisée et la règle sera invalide.</p>
 
 <p>La syntaxe de la deuxième règle (sur <code>.trois</code>) permet d'utiliser une autre variable comme variable de secours et une autre valeur (<code>pink</code>) dans le cas où cette deuxième variable ne fonctionne pas.</p>
 </div>

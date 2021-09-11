@@ -15,9 +15,12 @@ translation_of: Web/CSS/font-variation-settings
 
 <p>Cette propriété fonctionne à un niveau plus bas que {{cssxref("font-feature-settings")}} qui permet de définir les valeurs et les étiquettes (<em>tags</em>) pour les caractéristiques des polices.</p>
 
-<div class="note"><strong>Note : </strong>Si possible, les auteurs web devraient utiliser d'autres méthodes pour contrôler l'affichage des polices de caractères et notamment la propriété raccourcie {{cssxref("font-variant")}} ou une des propriétés détaillée associée. Cette propriété est une fonctionnalité de bas niveau destinée à gérer les cas spécifiques pour lesquels il est autrement impossible d'activer ou de paramétrer une caractéristique OpenType existante.</div>
+<div class="note">
+  <p><strong>Note :</strong> Si possible, les auteurs web devraient utiliser d'autres méthodes pour contrôler l'affichage des polices de caractères et notamment la propriété raccourcie {{cssxref("font-variant")}} ou une des propriétés détaillée associée. Cette propriété est une fonctionnalité de bas niveau destinée à gérer les cas spécifiques pour lesquels il est autrement impossible d'activer ou de paramétrer une caractéristique OpenType existante.</p></div>
 
-<div class="note"><strong>Note :</strong> Les caractéristiques définies avec <code>font-variation-settings</code> l'emporteront sur celles définies par les autres propriétés relatives aux polices (ex. <code>font-weight</code>), où qu'elles soient dans la cascade. Pour certains navigateurs, cela se vérifie uniquement lorsque la déclaration <code>@font-face</code> inclut un intervalle <code>font-weight</code>.</div>
+<div class="note">
+  <p><strong>Note :</strong> Les caractéristiques définies avec <code>font-variation-settings</code> l'emporteront sur celles définies par les autres propriétés relatives aux polices (ex. <code>font-weight</code>), où qu'elles soient dans la cascade. Pour certains navigateurs, cela se vérifie uniquement lorsque la déclaration <code>@font-face</code> inclut un intervalle <code>font-weight</code>.</p>
+</div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
@@ -98,7 +101,7 @@ font-variation-settings: unset;
 <p>Les axes spécifiques peuvent correspondre à n'importe quel axe que le concepteur de la police souhaite faire varier (ce peut par exemple être la hauteur des hampes et des jambages, la taille des empattements ou tout autre chose). N'importe quel axe peut être utilisé tant qu'il a une étiquette unique sur quatre caractères. Il est possible que, si des axes spécifiques deviennent majoritairement présents, ils soient intégrés parmi les axes enregistrés.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Les étiquettes des axes enregistrés sont écrits en minuscules et les axes spécifiques doivent être écrits en majuscules. On notera que rien n'oblige à suivre cette règle et qu'il est tout à fait possible que des concepteurs de polices donnent des étiquettes en minuscules à des axes spécifiques. Quoiqu'il en soit, on retiendra que les étiquettes des axes sont sensibles à la casse.</p>
+<p><strong>Note :</strong> Les étiquettes des axes enregistrés sont écrits en minuscules et les axes spécifiques doivent être écrits en majuscules. On notera que rien n'oblige à suivre cette règle et qu'il est tout à fait possible que des concepteurs de polices donnent des étiquettes en minuscules à des axes spécifiques. Quoiqu'il en soit, on retiendra que les étiquettes des axes sont sensibles à la casse.</p>
 </div>
 
 <h2 id="Exemples">Exemples</h2>

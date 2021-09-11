@@ -58,9 +58,10 @@ font-variant-alternates: unset;
  <dd>Cette fonction active l'affichage des glypes <a href="https://fr.wikipedia.org/wiki/Lettre_orn%C3%A9e">pour les lettres ornées</a>. Le paramètre passé à la fonction est un nom lié à la fonte auquel est associé un nombre. Elle correspond aux valeurs OpenType <code>swsh</code> et <code>cswh</code> (par exemple <code>swsh 2</code> ou <code>cswh 2</code>).</dd>
  <dt><code><a name="ornaments()"></a>ornaments()</code></dt>
  <dd>Cette fonction active l'affichage des ornements tels que les <a href="https://fr.wikipedia.org/wiki/Fleuron_(typographie)">fleurons</a> et autres casseaux. Le paramètre passé à la fonction est un nom lié à la fonte auquel est associé un nombre. Cette valeur correspond à la valeur OpenType <code>ornm</code> (par exemple <code>ornm 2</code>).
- <div class="note"><strong>Note : </strong>afin de préserver la sémantique de la fonte, les fondeurs sont invités à ne pas créer de casseaux qui correspondent aux caractères Unicode déjà définis comme variantes d'ornement pour la puce  (U+2022). De nombreuses fontes passent outre cette règle et perdent ainsi en qualité.</div>
+ <div class="note">
+   <p><strong>Note :</strong> afin de préserver la sémantique de la fonte, les fondeurs sont invités à ne pas créer de casseaux qui correspondent aux caractères Unicode déjà définis comme variantes d'ornement pour la puce (U+2022). De nombreuses fontes passent outre cette règle et perdent ainsi en qualité.</p></div>
  </dd>
- <dt><code><a name="annotation()"></a>annotation()</code></dt>
+ <dt><code>annotation()</code></dt>
  <dd>Cette fonction active l'affichage des annotations (telles que les chiffres entourés ou les caractères inversés). Le paramètre est un nom lié à la fonte auquel est associé un nombre. Cette valeur correspond à la valeur OpenType <code>nalt</code> (par exemple <code>nalt 2</code>).</dd>
 </dl>
 

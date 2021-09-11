@@ -30,16 +30,20 @@ original_slug: Web/CSS/CSS_Transitions/Utiliser_transitions_CSS
 
 <p>On peut définir les propriétés qu'on souhaite animer et la façon dont on souhaite les animer. Cela permet de créer des transitions complexes. Toutefois, toutes les propriétés ne peuvent pas être animées et <a href="/fr/docs/Web/CSS/CSS_animated_properties">la liste des propriétés concernées est limitée</a>.</p>
 
-<p class="note"><strong>Note :</strong> La gestion de la valeur <code>auto</code> représente un cas complexe. La spécification requiert de ne pas animer une telle valeur. Certains navigateurs dont ceux basés sur Gecko respectent cette règle mais d'autres comme WebKit sont moins stricts. Attention donc lors de l'utilisation des animations avec <code>auto</code>.</p>
+<div class="note">
+  <p><strong>Note :</strong> La gestion de la valeur <code>auto</code> représente un cas complexe. La spécification requiert de ne pas animer une telle valeur. Certains navigateurs dont ceux basés sur Gecko respectent cette règle mais d'autres comme WebKit sont moins stricts. Attention donc lors de l'utilisation des animations avec <code>auto</code>.</p>
+</div>
 
-<p class="note"><strong>Note :</strong> Attention lorsqu'on manipule des transitions directement après avoir ajouté un élément via <code>.appendChild()</code> ou en modiant <code>display: none;</code>. Cela sera compris comme si l'état initial n'avait jamais eu lieu et que l'élément avait toujours été dans son état final. Pour contourner ce problème, on peut appliquer <code>window.setTimeout()</code> pendant quelques millisecondes avant de modifier la propriété CSS sur laquelle on souhaite appliquer une transition.</p>
+<div class="note">
+  <p><strong>Note :</strong> Attention lorsqu'on manipule des transitions directement après avoir ajouté un élément via <code>.appendChild()</code> ou en modiant <code>display: none;</code>. Cela sera compris comme si l'état initial n'avait jamais eu lieu et que l'élément avait toujours été dans son état final. Pour contourner ce problème, on peut appliquer <code>window.setTimeout()</code> pendant quelques millisecondes avant de modifier la propriété CSS sur laquelle on souhaite appliquer une transition.</p>
+</div>
 
 <h2 id="Les_propriétés_CSS_relatives_aux_transitions">Les propriétés CSS relatives aux transitions</h2>
 
 <p>Les transitions CSS sont généralement contrôlées grâce à la propriété raccourcie {{cssxref("transition")}}. Les différents composants d'une transition CSS peuvent être décrits dans le détail grâce aux propriétés détaillées suivantes :</p>
 
 <div class="note">
-<p><strong>Note : </strong>Dans les exemples ci-après, l'effet de répétition est uniquement utilisé à des fins de visualisation. Si vous souhaitez obtenir des effets visuels qui se répètent, il faudra utiliser la propriété {{cssxref("animation")}}.</p>
+<p><strong>Note :</strong>Dans les exemples ci-après, l'effet de répétition est uniquement utilisé à des fins de visualisation. Si vous souhaitez obtenir des effets visuels qui se répètent, il faudra utiliser la propriété {{cssxref("animation")}}.</p>
 </div>
 
 <dl>
@@ -293,7 +297,9 @@ document.addEventListener('click', function(ev){
 <pre class="brush: js">el.addEventListener("transitionrun", signalStart, true);
 el.addEventListener("transitionstart", signalStart, true);</pre>
 
-<div class="note"><strong>Note :</strong> L'événement <code>transitionend</code> n'est pas déclenché si la transition est interrompue avant la fin de la transition si {{cssxref("display")}}<code>: none</code> ou si la valeur de la propriété est modifiée.</div>
+<div class="note">
+  <p><strong>Note :</strong> L'événement <code>transitionend</code> n'est pas déclenché si la transition est interrompue avant la fin de la transition si {{cssxref("display")}}<code>: none</code> ou si la valeur de la propriété est modifiée.</p>
+</div>
 
 <h2 id="Spécifications">Spécifications</h2>
 

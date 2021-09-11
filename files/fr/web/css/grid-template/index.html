@@ -50,11 +50,11 @@ grid-template: unset;
  <dd>Voir {{cssxref("grid-template-rows")}} et {{cssxref("grid-template-columns")}} pour les valeurs définies. {{cssxref("grid-template-areas")}} recevra la valeur <code>none</code>.</dd>
  <dt><code>[ &lt;line-names&gt;? &lt;string&gt; &lt;track-size&gt;? &lt;line-names&gt;? ]+ [ / &lt;track-list&gt; ]?</code></dt>
  <dd>{{cssxref("grid-template-areas")}} est définie avec les chaînes listées, {{cssxref("grid-template-rows")}} est définie avec les tailles de piste suivant chaque chaîne (<code>auto</code> sera utilisé pour les tailles manquantes), les lignes seront découpées selon les noms avant et après chaque taille. {{cssxref("grid-template-columns")}} sera définie avec la valeur listée après la barre oblique (ou <code>none</code> sinon).
- <p class="note"><strong>Note :</strong> La fonction {{cssxref("repeat()")}} n'est pas autorisée parmi les listes de pistes car les pistes sont conçues pour correspondre à la disposition finale (à la façon d'un dessin en ASCII).</p>
+ <div class="note"><p><strong>Note :</strong> La fonction {{cssxref("repeat()")}} n'est pas autorisée parmi les listes de pistes car les pistes sont conçues pour correspondre à la disposition finale (à la façon d'un dessin en ASCII).</p></div>
  </dd>
 </dl>
 
-<p class="note"><strong>Note :</strong> La propriété raccourcie {{cssxref("grid")}} accepte la même syntaxe mais réinitialise également les propriétés implicites avec leurs valeurs initiales. On pourra utiliser <code>grid</code> (plutôt que <code>grid-template</code>) pour empêcher les valeurs de suivre la cascade de façon séparée.</p>
+<div class="note"><p><strong>Note :</strong> La propriété raccourcie {{cssxref("grid")}} accepte la même syntaxe mais réinitialise également les propriétés implicites avec leurs valeurs initiales. On pourra utiliser <code>grid</code> (plutôt que <code>grid-template</code>) pour empêcher les valeurs de suivre la cascade de façon séparée.</p></div>
 
 <h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
 

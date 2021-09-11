@@ -84,7 +84,9 @@ translation_of: Web/CSS/float
  </tbody>
 </table>
 
-<div class="note"><strong>Note : </strong>Si vous utilisez cette propriété via JavaScript, comme propriété de l'objet {{domxref("HTMLElement.style")}}, la plupart des navigateurs récents permettra d'utiliser <code>float</code> mais il faudra utiliser <code>cssFloat</code> (attention à la casse) pour les navigateurs plus anciens. Pour Internet Explorer 8 et les versions antérieures, elle était appelée <code>styleFloat</code>. Le terme <code>float</code> étant réservé en JavaScript, ce cas de figure était une exception à la règle qui définit que le nom de la propriété DOM est une version <a href="https://fr.wikipedia.org/wiki/CamelCase">CamelCase</a> de la propriété CSS construite avec des tirets. De même, <code>class</code> sera échappée en <code>className</code> et le <code>for</code> des éléments &lt;label&gt; sera converti en <code>htmlFor</code>).</div>
+<div class="note">
+  <p><strong>Note :</strong>Si vous utilisez cette propriété via JavaScript, comme propriété de l'objet {{domxref("HTMLElement.style")}}, la plupart des navigateurs récents permettra d'utiliser <code>float</code> mais il faudra utiliser <code>cssFloat</code> (attention à la casse) pour les navigateurs plus anciens. Pour Internet Explorer 8 et les versions antérieures, elle était appelée <code>styleFloat</code>. Le terme <code>float</code> étant réservé en JavaScript, ce cas de figure était une exception à la règle qui définit que le nom de la propriété DOM est une version <a href="https://fr.wikipedia.org/wiki/CamelCase">CamelCase</a> de la propriété CSS construite avec des tirets. De même, <code>class</code> sera échappée en <code>className</code> et le <code>for</code> des éléments &lt;label&gt; sera converti en <code>htmlFor</code>).</p>
+</div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
@@ -170,7 +172,8 @@ h4 {
 <pre class="brush:css">p.avecBoitesRouges { overflow: hidden; height: auto; }
 </pre>
 
-<div class="note"><strong>Note :</strong> En utilisant <code>overflow</code>: <code>scroll</code> on contiendra également les éléments fils flottants mais cela affichera des barres de défilement quelle que soit la hauteur du contenu. Ici, nous utilisons <code>auto</code> pour <code>height</code> afin d'indiquer que le conteneur doit s'agrandir si nécessaire.</div>
+<div class="note">
+  <p><strong>Note :</strong> En utilisant <code>overflow</code>: <code>scroll</code> on contiendra également les éléments fils flottants mais cela affichera des barres de défilement quelle que soit la hauteur du contenu. Ici, nous utilisons <code>auto</code> pour <code>height</code> afin d'indiquer que le conteneur doit s'agrandir si nécessaire.</p></div>
 
 <h2 id="Spécifications">Spécifications</h2>
 
