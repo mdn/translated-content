@@ -64,20 +64,19 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 <dl>
  <dt><code>string</code></dt>
  <dd>
+  <p>Une chaîne de caractères indiquant une URL ou l'identifiant d'une forme SVG.</p>
  <dl>
   <dt><code>&lt;url&gt;</code></dt>
   <dd>Une URL, relative ou absolue, qui pointe vers une ressource web à inclure ou un URI de donnée éventuellement encadrée entre quotes ou doubles quotes. Les quotes sont obligatoires si l'URL inclut des parenthèses, espaces, doubles quotes, etc. (sauf si ces caractères sont échappés) ou si l'adresse inclut des caractères de contrôle supérieurs à <code>0x7e</code>. Il n'est pas possible d'utiliser des doubles quotes dans une URL encadrée par des doubles quotes à moins de les échapper. De même, on ne peut pas utiliser une simple quote dans une URL délimitée par des simples quotes. Les déclarations suivantes seront équivalentes :
   <pre class="syntaxbox">&lt;propriété_css&gt;: url("https://example.com/image.png")
 &lt;propriété_css&gt;: url('https://example.com/image.png')
 &lt;propriété_css&gt;: url(https://example.com/image.png)</pre>
+  <p>Si vous choisissez d'écrire l'URL sans guillemets, il faudra utiliser une barre oblique inverse (<code>\</code>) avant toute parenthèse, espace ou apostrophe (<code>'</code>) ou guillemets(<code>"</code>) faisant partie de l'URL.</p>
   </dd>
  </dl>
  </dd>
  <dt><em>chemin</em></dt>
  <dd>La référence à un identifiant d'une <a href="/en-US/docs/Web/SVG/Tutorial/Basic_Shapes">forme SVG</a> -- <code>circle</code>, <code>ellipse</code>, <code>line</code>, <code>path</code>, <code>polygon</code>, <code>polyline</code>, or <code>rect</code>. Ce sera alors la géométrie de la forme qui sera utilisée pour le chemin.</dd>
-</dl>
-
-<dl>
  <dt><code>url-modifier</code> {{Experimental_Inline}}</dt>
  <dd>À l'avenir, la fonction <code>url()</code> pourrait prendre en charge un modificateur tel qu'un identifiant ou une notation fonctionnelle qui modifierait le sens de l'URL. Cette valeur n'est pas complètement définie par la spécification et n'est pas prise en charge.</dd>
 </dl>

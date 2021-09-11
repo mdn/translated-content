@@ -41,6 +41,7 @@ visibility: unset;
  <dd>La boîte est invisible (totalement transparente, rien n'est dessiné) mais continue d'avoir un impact sur la disposition. Les fils de l'élément seront visibles s'ils ont <code>visibility:visible</code>. L'élément ne pourra plus recevoir le focus (cf. <a href="/fr/docs/Web/HTML/Global_attributes/tabindex">la navigation au clavier avec les tabulations</a>).</dd>
  <dt><code>collapse</code></dt>
  <dd>
+  <p>Le mot-clé <code>collapse</code> a différents effets selon les éléments :</p>
  <ul>
   <li>Pour les lignes, les colonnes, les groupes de lignes et les groupes de colonnes d'un tableau, les éléments sont masqués et l'espace occupé est retiré (comme si on avait appliqué <code>{{cssxref("display")}}: none</code> aux colonnes/lignes du tableau). La taille des autres lignes et colonnes continue d'être calculée comme si les lignes et colonnes masquées étaient présentes. Cela a été conçu afin de pouvoir retirer rapidement des lignes et/ou des colonnes sans avoir à recalculer les dimensions pour l'ensemble du tableau.</li>
   <li>Les éléments flexibles sont masqués et l'espace qu'ils auraient occupé est retiré.</li>

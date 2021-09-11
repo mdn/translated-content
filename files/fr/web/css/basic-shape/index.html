@@ -20,11 +20,10 @@ translation_of: Web/CSS/basic-shape
 <p>Les formes qui suivent sont prises en charge. Toutes les valeurs <code>&lt;basic-shape&gt;</code> sont créées via une notation fonctionnelle (pour analyser la syntaxe, se référer à <a href="/fr/docs/Web/CSS/Syntaxe_de_d%C3%A9finition_des_valeurs">cette page explicative</a>).</p>
 
 <dl>
- <dt><code><a name="inset()"></a>inset()</code></dt>
+ <dt><code>inset()</code></dt>
  <dd>
+   <p>Cette fonction permet de définir un rectangle incrusté (<em>inset</em>).</p>
  <pre class="syntaxbox">inset( &lt;shape-arg&gt;{1,4} [round &lt;border-radius&gt;]? )</pre>
-
- <p>Cette fonction permet de définir un rectangle incrusté (<em>inset</em>).</p>
 
  <p>Lorsque les quatre premiers arguments sont fournis, ils représentent respectivement les décalages, vers l'intérieur, depuis les côtés haut, droit, bas et gauche par rapport à la boîte de référence. Ces arguments peuvent être utilisés de la même façon que pour {{cssxref("margin")}} afin d'utiliser seulement une, deux ou quatre valeurs.</p>
 
@@ -32,24 +31,27 @@ translation_of: Web/CSS/basic-shape
 
  <p>Si on utilise deux valeurs de décalage pour le même axe (par exemple un décalage depuis le bas et un décalage depuis le haut) dont la somme est supérieure à la dimension de la boîte sur cet axe, la forme obtenue ne contiendra aucune zone. On aura alors une zone de flottement vide.</p>
  </dd>
- <dt><code><a name="polygon()"></a>polygon()</code></dt>
+ <dt><code>polygon()</code></dt>
  <dd>
+   <p>Définit un polygone.</p>
  <pre class="syntaxbox">polygon( [&lt;fill-rule&gt;,]? [&lt;shape-arg&gt; &lt;shape-arg&gt;]# )</pre>
 
  <p><code>&lt;fill-rule&gt;</code> représente <a href="/fr/docs/Web/SVG/Attribute/fill-rule">la règle de remplissage</a> utilisée pour déterminer l'intérieur du polygone. Les valeurs possibles sont <code>nonzero</code> et <code>evenodd</code>. La valeur par défaut pour cet argument est <code>nonzero</code>.</p>
 
  <p>Ensuite, chaque paire d'arguments dans la liste représente les coordonnées <em>xi</em> et <em>yi</em> du i-ème sommet du polygone.</p>
  </dd>
- <dt><code><a name="circle()"></a>circle(</code>)</dt>
+ <dt><code>circle(</code>)</dt>
  <dd>
+  <p>Définit un cercle.</p>
  <pre class="syntaxbox">circle( [&lt;shape-radius&gt;]? [at &lt;position&gt;]? )</pre>
 
  <p>L'argument <code>&lt;shape-radius&gt;</code> représente le rayon du cercle. Les valeurs négatives ne sont pas autorisées et les valeurs exprimées en pourcentages seront calculées de la façon suivante en fonction de la hauteur et de la largeur de la boîte de référence <code>sqrt(largeur^2+hauteur^2)/sqrt(2)</code>.</p>
 
  <p>L'argument {{cssxref("&lt;position&gt;")}} définit la position pour le centre du cercle. La valeur par défaut est <code>center</code>.</p>
  </dd>
- <dt><code><a name="ellipse()"></a>ellipse()</code></dt>
+ <dt><code>ellipse()</code></dt>
  <dd>
+  <p>Définit une ellipse.</p>
  <pre class="syntaxbox">ellipse( [&lt;shape-radius&gt;{2}]? [at &lt;position&gt;]? )</pre>
 
  <p>Les arguments <code>&lt;shape-radius&gt;</code> représentent les demi-axes horizontaux (r<sub>x</sub>) et verticaux (r<sub>y</sub>) de l'ellipse. Les valeurs négatives ne sont pas autorisées. Les valeurs exprimées en pourcentages sont calculées : en fonction de la hauteur de la boîte de référence pour le demi-axe vertical, en fonction de la largeur de la boîte de référence pour le demi-axe horizontal.</p>
@@ -58,6 +60,7 @@ translation_of: Web/CSS/basic-shape
  </dd>
  <dt><code>path()</code></dt>
  <dd>
+  <p>Définit un chemin.</p>
  <pre class="syntaxbox"><code>path( [&lt;fill-rule&gt;,]? &lt;string&gt;)</code></pre>
 
  <p>L'argument optionnel <code>&lt;fill-rule&gt;</code> représente <a href="/fr/docs/Web/SVG/Attribute/fill-rule">la règle de remplissage</a> utilisée pour déterminer l'intérieur du chemin. Les valeurs possibles sont <code>nonzero</code> et <code>evenodd</code>. La valeur par défaut est <code>nonzero</code>.</p>
