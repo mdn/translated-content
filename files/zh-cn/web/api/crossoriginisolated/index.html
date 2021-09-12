@@ -1,0 +1,59 @@
+---
+title: WindowOrWorkerGlobalScope.crossOriginIsolated
+slug: Web/API/crossOriginIsolated
+translation_of: Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated
+original_slug: Web/API/WindowOrWorkerGlobalScope/crossOriginIsolated
+---
+<div>{{APIRef()}}{{SeeCompatTable}}</div>
+
+<p><code><strong>crossOriginIsolated</strong></code> 是 {{domxref("WindowOrWorkerGlobalScope")}} 的一个只读属性，返回一个布尔值，该值指示是否可以通过{{domxref("Window.postMessage()")}}调用发送 {{jsxref("SharedArrayBuffer")}}。</p>
+
+<p>该值取决于响应中存在的{{httpheader("Cross-Origin-Opener-Policy")}} 和{{httpheader("Cross-Origin-Embedder-Policy")}} 头。</p>
+
+<h2 id="语法">语法</h2>
+
+<pre class="syntaxbox">var <em>myCrossOriginIsolated</em> = self.crossOriginIsolated; // 或直接 crossOriginIsolated
+</pre>
+
+<h3 id="类型">类型</h3>
+
+<p>布尔类型</p>
+
+<h2 id="示例">示例</h2>
+
+<pre class="brush: js">if(crossOriginIsolated) {
+  // post SharedArrayBuffer
+} else {
+  // Do something else
+}
+</pre>
+
+<h2 id="规范">规范</h2>
+
+<table class="standard-table">
+ <tbody>
+  <tr>
+   <th scope="col">Specification</th>
+   <th scope="col">Status</th>
+   <th scope="col">Comment</th>
+  </tr>
+  <tr>
+   <td>{{SpecName("HTML WHATWG")}}</td>
+   <td></td>
+   <td>Not yet merged into the spec</td>
+  </tr>
+ </tbody>
+</table>
+
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
+
+
+
+<p>{{Compat("api.WindowOrWorkerGlobalScope.crossOriginIsolated")}}</p>
+
+<h2 id="参见">参见</h2>
+
+<ul>
+ <li><a href="/en-US/docs/Web/API/ServiceWorker_API">Service Workers</a></li>
+ <li><a href="/en-US/docs/Web/API/Web_Workers_API">Web Workers</a></li>
+</ul>
