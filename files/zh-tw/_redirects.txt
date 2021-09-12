@@ -598,6 +598,7 @@
 /zh-TW/docs/Web/CSS/彈頭	/zh-TW/docs/Web/CSS/box-sizing
 /zh-TW/docs/Web/CSS/繼承	/zh-TW/docs/Web/CSS/inheritance
 /zh-TW/docs/Web/CSS/語法	/zh-TW/docs/Web/CSS/Syntax
+/zh-TW/docs/Web/Demos_of_open_web_technologies	/zh-TW/docs/Web/Demos
 /zh-TW/docs/Web/Events/DOMContentLoaded	/zh-TW/docs/Web/API/Window/DOMContentLoaded_event
 /zh-TW/docs/Web/Events/abort	/zh-TW/docs/Web/API/HTMLMediaElement/abort_event
 /zh-TW/docs/Web/Events/click	/zh-TW/docs/Web/API/Element/click_event

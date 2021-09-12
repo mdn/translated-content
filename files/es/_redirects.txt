@@ -1546,6 +1546,7 @@
 /es/docs/Web/API/HTMLOrForeignElement/focus	/es/docs/orphaned/Web/API/HTMLOrForeignElement/focus
 /es/docs/Web/API/IDBObjectStore.add	/es/docs/Web/API/IDBObjectStore/add
 /es/docs/Web/API/IndexedDB_API/Usando_IndexedDB	/es/docs/Web/API/IndexedDB_API/Using_IndexedDB
+/es/docs/Web/API/KeyboardEvent/which	/es/docs/Web/API/UIEvent/which
 /es/docs/Web/API/Navigator.getUserMedia	/es/docs/Web/API/Navigator/getUserMedia
 /es/docs/Web/API/NavigatorConcurrentHardware	/es/docs/orphaned/Web/API/NavigatorConcurrentHardware
 /es/docs/Web/API/NavigatorConcurrentHardware/hardwareConcurrency	/es/docs/orphaned/Web/API/NavigatorConcurrentHardware/hardwareConcurrency
@@ -1596,7 +1597,7 @@
 /es/docs/Web/API/WindowTimers/setTimeout	/es/docs/Web/API/setTimeout
 /es/docs/Web/API/XMLHttpRequest/FormData	/es/docs/Web/API/FormData
 /es/docs/Web/API/event.defaultPrevented	/es/docs/Web/API/Event/defaultPrevented
-/es/docs/Web/API/event.which	/es/docs/Web/API/KeyboardEvent/which
+/es/docs/Web/API/event.which	/es/docs/Web/API/UIEvent/which
 /es/docs/Web/Accesibilidad	/es/docs/Web/Accessibility
 /es/docs/Web/Accesibilidad/Comunidad	/es/docs/Web/Accessibility/Community
 /es/docs/Web/Accesibilidad/Understanding_WCAG	/es/docs/Web/Accessibility/Understanding_WCAG
@@ -1718,6 +1719,7 @@
 /es/docs/Web/CSS/transform-function/translateY	/es/docs/Web/CSS/transform-function/translateY()
 /es/docs/Web/CSS/transform-function/translateZ	/es/docs/Web/CSS/transform-function/translateZ()
 /es/docs/Web/CSS/var	/es/docs/Web/CSS/var()
+/es/docs/Web/Demos_of_open_web_technologies	/es/docs/Web/Demos
 /es/docs/Web/Events/animationend	/es/docs/Web/API/HTMLElement/animationend_event
 /es/docs/Web/Events/beforeunload	/es/docs/Web/API/Window/beforeunload_event
 /es/docs/Web/Events/blur	/es/docs/Web/API/Element/blur_event

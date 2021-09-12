@@ -3467,6 +3467,7 @@
 /fr/docs/Web/API/AudioContext/createGain	/fr/docs/Web/API/BaseAudioContext/createGain
 /fr/docs/Web/API/Body	/fr/docs/orphaned/Web/API/Body
 /fr/docs/Web/API/Body/json	/fr/docs/orphaned/Web/API/Body/json
+/fr/docs/Web/API/ByteString	/fr/docs/Web/JavaScript/Reference/Global_Objects/String
 /fr/docs/Web/API/CSSMatrix	/fr/docs/Web/API/DOMMatrix
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas	/fr/docs/Web/API/Canvas_API/Tutorial
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Advanced_animations	/fr/docs/Web/API/Canvas_API/Tutorial/Advanced_animations
@@ -4265,7 +4266,8 @@
 /fr/docs/Web/CSS/visible	/fr/docs/Web/CSS/visibility
 /fr/docs/Web/CSS/word-wrap	/fr/docs/Web/CSS/overflow-wrap
 /fr/docs/Web/CSS/Élément_remplacé	/fr/docs/Web/CSS/Replaced_element
-/fr/docs/Web/Démos_de_technologies_open_web	/fr/docs/Web/Demos_of_open_web_technologies
+/fr/docs/Web/Demos_of_open_web_technologies	/fr/docs/Web/Demos
+/fr/docs/Web/Démos_de_technologies_open_web	/fr/docs/Web/Demos
 /fr/docs/Web/Events/DOMContentLoaded	/fr/docs/Web/API/Window/DOMContentLoaded_event
 /fr/docs/Web/Events/abort	/fr/docs/conflicting/Web/API/HTMLMediaElement/abort_event
 /fr/docs/Web/Events/abort_(ProgressEvent)	/fr/docs/Web/API/XMLHttpRequest/abort_event

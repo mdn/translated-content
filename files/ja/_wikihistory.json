@@ -10699,12 +10699,6 @@
       "Wind1808"
     ]
   },
-  "Web/API/ByteString": {
-    "modified": "2020-03-11T12:49:49.193Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "Web/API/CDATASection": {
     "modified": "2019-09-16T12:26:56.983Z",
     "contributors": [
@@ -18756,12 +18750,6 @@
       "naturallucky"
     ]
   },
-  "Web/API/MouseEvent/which": {
-    "modified": "2020-10-15T22:18:18.557Z",
-    "contributors": [
-      "isdh"
-    ]
-  },
   "Web/API/MutationObserver": {
     "modified": "2020-10-15T21:21:02.785Z",
     "contributors": [
@@ -22680,6 +22668,12 @@
     "contributors": [
       "isdh",
       "yyss"
+    ]
+  },
+  "Web/API/UIEvent/which": {
+    "modified": "2020-10-15T22:18:18.557Z",
+    "contributors": [
+      "isdh"
     ]
   },
   "Web/API/URL": {
@@ -33360,7 +33354,7 @@
       "mpcjazz"
     ]
   },
-  "Web/Demos_of_open_web_technologies": {
+  "Web/Demos": {
     "modified": "2019-03-23T22:34:52.877Z",
     "contributors": [
       "dskmori"
@@ -48563,50 +48557,6 @@
     "contributors": [
       "papparapa",
       "silverskyvicto"
-    ]
-  },
-  "conflicting/MDN/Yari": {
-    "modified": "2020-08-13T21:26:07.304Z",
-    "contributors": [
-      "eltociear",
-      "wbamberg",
-      "Marsf",
-      "mantaroh"
-    ]
-  },
-  "conflicting/Web/API": {
-    "modified": "2019-09-25T00:26:30.367Z",
-    "contributors": [
-      "fscholz",
-      "Hasilt",
-      "dextra"
-    ]
-  },
-  "conflicting/Web/API/URL": {
-    "modified": "2019-03-23T23:31:44.426Z",
-    "contributors": [
-      "YuichiNukiyama",
-      "fscholz",
-      "khalid32",
-      "ethertank"
-    ]
-  },
-  "conflicting/Web/API_dd04ca1265cb79b990b8120e5f5070d3": {
-    "modified": "2019-03-23T23:32:13.721Z",
-    "contributors": [
-      "wbamberg",
-      "fscholz",
-      "yyss",
-      "stingray",
-      "ethertank",
-      "Jeremie"
-    ]
-  },
-  "conflicting/Web/CSS": {
-    "modified": "2020-07-21T12:48:32.485Z",
-    "contributors": [
-      "mfuji09",
-      "sii"
     ]
   },
   "orphaned/Building_a_Mozilla_Distribution": {

@@ -1351,7 +1351,7 @@
 /ja/docs/DOM/element.lastChild	/ja/docs/Web/API/Node/lastChild
 /ja/docs/DOM/element.length	/ja/docs/Web/API/NodeList/length
 /ja/docs/DOM/element.localName	/ja/docs/Web/API/Element/localName
-/ja/docs/DOM/element.name	/ja/docs/conflicting/Web/API
+/ja/docs/DOM/element.name	/ja/docs/Web/API
 /ja/docs/DOM/element.namespaceURI	/ja/docs/Web/API/Element/namespaceURI
 /ja/docs/DOM/element.nextSibling	/ja/docs/Web/API/Node/nextSibling
 /ja/docs/DOM/element.nodeName	/ja/docs/Web/API/Node/nodeName
@@ -3045,6 +3045,7 @@
 /ja/docs/Web/API/AudioContext/sampleRate	/ja/docs/Web/API/BaseAudioContext/sampleRate
 /ja/docs/Web/API/AudioContext/state	/ja/docs/Web/API/BaseAudioContext/state
 /ja/docs/Web/API/Boolean	/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+/ja/docs/Web/API/ByteString	/ja/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String
 /ja/docs/Web/API/CSSMatrix	/ja/docs/Web/API/DOMMatrix
 /ja/docs/Web/API/CSSStyleSheet.insertRule	/ja/docs/Web/API/CSSStyleSheet/insertRule
 /ja/docs/Web/API/CSS_Painting_API/ガイド	/ja/docs/Web/API/CSS_Painting_API/Guide
@@ -3079,7 +3080,7 @@
 /ja/docs/Web/API/Element.querySelectorAll	/ja/docs/Web/API/Element/querySelectorAll
 /ja/docs/Web/API/Element/Activate_event	/ja/docs/Web/API/Element/DOMActivate_event
 /ja/docs/Web/API/Element/accessKey	/ja/docs/Web/API/HTMLElement/accessKey
-/ja/docs/Web/API/Element/name	/ja/docs/conflicting/Web/API
+/ja/docs/Web/API/Element/name	/ja/docs/Web/API
 /ja/docs/Web/API/Event/button	/ja/docs/Web/API/MouseEvent/button
 /ja/docs/Web/API/Event/createEvent	/ja/docs/Web/API/Document/createEvent
 /ja/docs/Web/API/EventHandler	/ja/docs/orphaned/Web/Guide/Events/Event_handlers
@@ -3158,9 +3159,10 @@
 /ja/docs/Web/API/IDBFactory.cmp	/ja/docs/Web/API/IDBFactory/cmp
 /ja/docs/Web/API/IDBFactory.deleteDatabase	/ja/docs/Web/API/IDBFactory/deleteDatabase
 /ja/docs/Web/API/IDBFactory.open	/ja/docs/Web/API/IDBFactory/open
-/ja/docs/Web/API/Index	/ja/docs/conflicting/Web/API_49b9a84475f11fffb8fc271a7df3c49a
+/ja/docs/Web/API/Index	/ja/docs/Web/API
 /ja/docs/Web/API/IndexedDB_API/Basic_Concepts_Behind_IndexedDB	/ja/docs/Web/API/IndexedDB_API/Basic_Terminology
 /ja/docs/Web/API/MediaRecorder_API	/ja/docs/Web/API/MediaStream_Recording_API
+/ja/docs/Web/API/MouseEvent/which	/ja/docs/Web/API/UIEvent/which
 /ja/docs/Web/API/Navigator.getUserMedia	/ja/docs/Web/API/Navigator/getUserMedia
 /ja/docs/Web/API/Navigator/registerContentHandler	/ja/docs/orphaned/Web/API/Navigator/registerContentHandler
 /ja/docs/Web/API/NavigatorID	/ja/docs/Web/API/Navigator
@@ -3795,6 +3797,7 @@
 /ja/docs/Web/Compatibility_FAQ/Tips_Default_Style_Difference.html	/ja/docs/orphaned/Web/Compatibility_FAQ/Tips_Default_Style_Difference.html
 /ja/docs/Web/Compatibility_FAQ/Tips_Vendor_Prefix.html	/ja/docs/orphaned/Web/Compatibility_FAQ/Tips_Vendor_Prefix.html
 /ja/docs/Web/Compatibility_FAQ/Underline_Color_Diffrence.html	/ja/docs/orphaned/Web/Compatibility_FAQ/Underline_Color_Diffrence.html
+/ja/docs/Web/Demos_of_open_web_technologies	/ja/docs/Web/Demos
 /ja/docs/Web/Events/Activate	/ja/docs/Web/API/Element/DOMActivate_event
 /ja/docs/Web/Events/DOMContentLoaded	/ja/docs/Web/API/Window/DOMContentLoaded_event
 /ja/docs/Web/Events/abort	/ja/docs/Web/API/HTMLMediaElement/abort_event
@@ -4438,7 +4441,7 @@
 /ja/docs/Web2/Reference/Events/compositionend	/ja/docs/Web/API/Element/compositionend_event
 /ja/docs/Web2/Reference/Events/compositionstart	/ja/docs/Web/API/Element/compositionstart_event
 /ja/docs/Web2/Reference/Events/input	/ja/docs/Web/API/HTMLElement/input_event
-/ja/docs/WebAPI	/ja/docs/conflicting/Web/API_dd04ca1265cb79b990b8120e5f5070d3
+/ja/docs/WebAPI	/ja/docs/Web/API
 /ja/docs/WebAPI/Battery_Status	/ja/docs/Web/API/Battery_Status_API
 /ja/docs/WebAPI/Managing_screen_orientation	/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation
 /ja/docs/WebAPI/Network_Information	/ja/docs/Web/API/Network_Information_API

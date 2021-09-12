@@ -1235,6 +1235,7 @@
 /zh-CN/docs/Web/API/Blob.size	/zh-CN/docs/Web/API/Blob/size
 /zh-CN/docs/Web/API/Blob.slice	/zh-CN/docs/Web/API/Blob/slice
 /zh-CN/docs/Web/API/Blob.type	/zh-CN/docs/Web/API/Blob/type
+/zh-CN/docs/Web/API/ByteString	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String
 /zh-CN/docs/Web/API/CSSStyleSheet.insertRule	/zh-CN/docs/Web/API/CSSStyleSheet/insertRule
 /zh-CN/docs/Web/API/CSS分页规则	/zh-CN/docs/Web/API/CSSPageRule
 /zh-CN/docs/Web/API/CanvasCaptureMediaStream	/zh-CN/docs/Web/API/CanvasCaptureMediaStreamTrack
@@ -1381,8 +1382,10 @@
 /zh-CN/docs/Web/API/Index	/zh-CN/docs/conflicting/Web/API
 /zh-CN/docs/Web/API/IndexedDB_API/IDBObjectStore	/zh-CN/docs/Web/API/IDBObjectStore
 /zh-CN/docs/Web/API/Intersection_Observer_API/点观察者API的时序元素可见性	/zh-CN/docs/Web/API/Intersection_Observer_API/Timing_element_visibility
+/zh-CN/docs/Web/API/KeyboardEvent/which	/zh-CN/docs/Web/API/UIEvent/which
 /zh-CN/docs/Web/API/Location.replace	/zh-CN/docs/Web/API/Location/replace
 /zh-CN/docs/Web/API/MediaStream.addTrack	/zh-CN/docs/Web/API/MediaStream/addTrack
+/zh-CN/docs/Web/API/MouseEvent/which	/zh-CN/docs/conflicting/Web/API/UIEvent/which
 /zh-CN/docs/Web/API/Navigator.battery	/zh-CN/docs/Web/API/Navigator/battery
 /zh-CN/docs/Web/API/Navigator.buildID	/zh-CN/docs/Web/API/Navigator/buildID
 /zh-CN/docs/Web/API/Navigator.cookieEnabled	/zh-CN/docs/Web/API/Navigator/cookieEnabled
@@ -1776,6 +1779,7 @@
 /zh-CN/docs/Web/CSS/文本装饰线厚度(粗细)	/zh-CN/docs/Web/CSS/text-decoration-thickness
 /zh-CN/docs/Web/CSS/混合模式	/zh-CN/docs/Web/CSS/blend-mode
 /zh-CN/docs/Web/CSS/网格-模板-列	/zh-CN/docs/Web/CSS/grid-template-rows
+/zh-CN/docs/Web/Demos_of_open_web_technologies	/zh-CN/docs/Web/Demos
 /zh-CN/docs/Web/Events/Activate	/zh-CN/docs/Web/API/Element/DOMActivate_event
 /zh-CN/docs/Web/Events/DOMContentLoaded	/zh-CN/docs/Web/API/Window/DOMContentLoaded_event
 /zh-CN/docs/Web/Events/DOMContentLoaded_(event)	/zh-CN/docs/Web/API/Window/DOMContentLoaded_event
@@ -2187,7 +2191,7 @@
 /zh-CN/docs/Web/媒体	/zh-CN/docs/Web/Media
 /zh-CN/docs/Web/媒体/Autoplay_guide	/zh-CN/docs/Web/Media/Autoplay_guide
 /zh-CN/docs/Web/性能	/zh-CN/docs/Web/Performance
-/zh-CN/docs/Web/演示说明	/zh-CN/docs/Web/Demos_of_open_web_technologies
+/zh-CN/docs/Web/演示说明	/zh-CN/docs/Web/Demos
 /zh-CN/docs/WebAPI/Using_geolocation	/zh-CN/docs/Web/API/Geolocation_API
 /zh-CN/docs/WebAssembly/概念	/zh-CN/docs/WebAssembly/Concepts
 /zh-CN/docs/WebGL	/zh-CN/docs/Web/API/WebGL_API
