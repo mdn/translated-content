@@ -84,45 +84,79 @@ overflow: unset;
 
 <h2 id="Exemples">Exemples</h2>
 
-<pre class="brush: css">p {
-  width: 12em;
-  height: 6em;
-  border: dotted;
+<h3 id="définir_différentes_valeurs_d_overflow_pour_le_texte">Définir différentes valeurs d'overflow pour le texte</h3>
 
-  /* le contenu n'est pas rogné */
+<h4>HTML</h4>
+
+<pre class="brush: html">
+  &lt;div&gt;
+    &lt;code&gt;visible&lt;/code&gt;
+    &lt;p class="visible"&gt;
+     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;code&gt;hidden&lt;/code&gt;
+    &lt;p class="hidden"&gt;
+     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;code&gt;scroll&lt;/code&gt;
+    &lt;p class="scroll"&gt;
+     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+    &lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div&gt;
+    &lt;code&gt;auto&lt;/code&gt;
+    &lt;p class="auto"&gt;
+     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+    &lt;/p&gt;
+  &lt;/div&gt;
+</pre>
+
+<h4>CSS</h4>
+
+<pre class="brush: css">
+body {
+  display: flex;
+  justify-content: space-around;
+}
+
+div {
+  margin: 1em;
+  font-size: 1.2em;
+}
+
+p {
+  width: 8em;
+  height: 5em;
+  border: dotted;
+}
+
+p.visible {
   overflow: visible;
 }
-</pre>
 
-<p style="overflow: visible; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>visible</code> (default)<br>
- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-
-<pre class="brush: css">p {
-  /* pas d'ascenseur fourni */
+p.hidden {
   overflow: hidden;
 }
-</pre>
 
-<p style="overflow: hidden; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>overflow: hidden</code><br>
- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-
-<pre class="brush: css">p {
-  /* les ascenseurs sont toujours affichés */
+p.scroll {
   overflow: scroll;
 }
-</pre>
 
-<p style="overflow: scroll; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>overflow: scroll</code><br>
- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
-
-<pre class="brush: css">p {
-  /* les ascenseurs sont affichés si nécessaires */
+p.auto {
   overflow: auto;
 }
 </pre>
 
-<p style="overflow: auto; display: inline-block; width: 12em; height: 6em; border: dotted;"><code>overflow: auto</code><br>
- Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+<h4>Résultat</h4>
+
+<p>{{EmbedLiveSample("définir_différentes_valeurs_d_overflow_pour_le_texte", "600", "250")}}</p>
 
 <h2 id="Spécifications">Spécifications</h2>
 

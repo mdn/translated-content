@@ -36,31 +36,11 @@ border-right-width: unset;</pre>
 <dl>
  <dt><code>&lt;br-width&gt;</code></dt>
  <dd>Une valeur de longueur ({{cssxref("&lt;length&gt;")}}) positive ou un mot-clé qui indique l'épaisseur de la bordure pour le côté droit de la boîte. Si la valeur est un mot-clé, ce doit être l'une des valeurs suivantes :
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <td><code>thin</code></td>
-    <td>
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-right-style: solid; border-right-width: thin; background-color: palegreen;"> </div>
-    </td>
-    <td>Une bordure fine.</td>
-   </tr>
-   <tr>
-    <td><code>medium</code></td>
-    <td>
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-right-style: solid; border-right-width: medium; background-color: palegreen;"> </div>
-    </td>
-    <td>Une bordure moyenne.</td>
-   </tr>
-   <tr>
-    <td><code>thick</code></td>
-    <td>
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-right-style: solid; border-right-width: thick; background-color: palegreen;"> </div>
-    </td>
-    <td>Une bordure épaisse.</td>
-   </tr>
-  </tbody>
- </table>
+  <ul>
+    <li><code>thin</code> (fin)</li>
+    <li><code>medium</code> (intermédiaire)</li>
+    <li><code>thick</code> (épais)</li>
+  </ul>
  La spécification ne précise pas de façon exacte l'épaisseur correspondant à chacun de ces mots-clés (c'est donc à chaque implémentation de choisir). La spécification requiert toutefois que l'inégalité suivante soit respectée <code>thin ≤ medium ≤ thick</code> et que ces valeurs soient constantes pour un même document.</dd>
 </dl>
 

@@ -18,14 +18,14 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 
 <p>Voici comment on déclare une variable :</p>
 
-<pre class="brush:css; highlight:[2]">element {
+<pre class="brush:css">element {
   --main-bg-color: brown;
 }
 </pre>
 
 <p>Et voici comment on l'utilise</p>
 
-<pre class="brush:css; highlight:[2]">element {
+<pre class="brush:css">element {
   background-color: var(--main-bg-color);
 }
 </pre>
@@ -59,7 +59,7 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 
 <h3>Exemple 1</h3>
 
-<pre class="brush:css; highlight:[3,20,26,32]">.un {
+<pre class="brush:css">.un {
   color: white;
   background-color: brown;
   margin: 10px;
@@ -114,7 +114,7 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 
 <h3>Exemple 2</h3>
 
-<pre class="brush:css; highlight:[2, 7, 24,30,36]">:root {
+<pre class="brush:css">:root {
   --main-bg-color: brown;
 }
 
@@ -225,7 +225,7 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 </pre>
 
 <div class="note">
-<p><strong>Note :</strong> La syntaxe pour la valeur de recours, comme celle des <a dir="ltr" href="https://www.w3.org/TR/css-variables/#custom-property" title="CSS Custom Properties for Cascading Variables Module Level 1">propriétés personnalisées</a>, permet d'utiliser une virgule. Ainsi, <code>var(--toto, red, blue)</code> définit une valeur de recours égale à <code>red, blue</code>, c'est-à-dire tout ce qui est écrit après la première virgule. Si la deuxième valeur est incorrecte, elle ne pourra pas être utilisée et la règle sera invalide.</p>
+<p><strong>Note :</strong> La syntaxe pour la valeur de recours, comme celle des <a href="https://www.w3.org/TR/css-variables/#custom-property">propriétés personnalisées</a>, permet d'utiliser une virgule. Ainsi, <code>var(--toto, red, blue)</code> définit une valeur de recours égale à <code>red, blue</code>, c'est-à-dire tout ce qui est écrit après la première virgule. Si la deuxième valeur est incorrecte, elle ne pourra pas être utilisée et la règle sera invalide.</p>
 
 <p>La syntaxe de la deuxième règle (sur <code>.trois</code>) permet d'utiliser une autre variable comme variable de secours et une autre valeur (<code>pink</code>) dans le cas où cette deuxième variable ne fonctionne pas.</p>
 </div>

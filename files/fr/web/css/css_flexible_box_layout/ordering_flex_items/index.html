@@ -29,19 +29,19 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Ordonner_éléments_flexibles
 
 <p>Les deux premières valeurs permettent de conserver l'ordre des éléments tels qu'ils apparaissent dans le document source et de les afficher les uns à la suite des autres à partir de la ligne du début.</p>
 
-<p><img alt="Les objets sont affichés sur une ligne horizontale qui commence à gauche." src="basics1.png" style="display: flex; margin: 0px auto;"></p>
+<p><img alt="Les objets sont affichés sur une ligne horizontale qui commence à gauche." src="basics1.png"></p>
 
-<p><img alt="Les objets sont affichés sur une colonne qui commence en haut." src="align10.png" style="display: flex; margin: 0px auto;"></p>
+<p><img alt="Les objets sont affichés sur une colonne qui commence en haut." src="align10.png"></p>
 
 <p>Les deux valeurs suivantes inversent l'ordre des éléments en échangeant les lignes de début et de fin.</p>
 
-<p><img alt="Les éléments sont affichés dans l'ordre inverse et commencent à droite." src="align9.png" style="display: flex; margin: 0px auto;"></p>
+<p><img alt="Les éléments sont affichés dans l'ordre inverse et commencent à droite." src="align9.png"></p>
 
-<p><img alt="Les éléments sont affichés en colonne et dans l'ordre inverse, ils commencent par le bas." src="align11.png" style="display: flex; margin: 0px auto;"></p>
+<p><img alt="Les éléments sont affichés en colonne et dans l'ordre inverse, ils commencent par le bas." src="align11.png"></p>
 
 <p>Rappelons ici que les lignes de début et de fin sont liées aux modes d'écritures. Les exemples en lignes ci-avant illustrent comment <code>row</code> et <code>row-reverse</code> fonctionnent dans une langue qui s'écrit de gauche à droite (le français par exemple). Si on travaille avec une langue écrite de droite à gauche (l'arabe par exemple), <code>row</code> correspondrait au côté droit et  <code>row-reverse</code> au côté gauche.</p>
 
-<p><img alt="Des conteneurs flexibles avec des lettres arabes illustrant comment le contenu commence à droite normalement et commence à gauche lorsqu'on utilise row-reverse." src="order-rtl.png" style="display: flex; margin: 0px auto;"></p>
+<p><img alt="Des conteneurs flexibles avec des lettres arabes illustrant comment le contenu commence à droite normalement et commence à gauche lorsqu'on utilise row-reverse." src="order-rtl.png"></p>
 
 <p>Cette méthode peut donc sembler efficace pour afficher des éléments dans un ordre inversé. Toutefois, il faut garder à l'esprit que seul l'<em>affichage</em> est inversé. Sur ce sujet, la spécification explique :</p>
 
@@ -93,7 +93,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Ordonner_éléments_flexibles
  <li>Quatrième élément selon la source : <code>order: 3</code></li>
 </ul>
 
-<p><img alt="Les éléments contiennent un nombre qui illustre leur ordre selon la source et on peut voir que leur ordre visuel a été réarrangé." src="order-property.png" style="display: flex; margin: 0px auto;"></p>
+<p><img alt="Les éléments contiennent un nombre qui illustre leur ordre selon la source et on peut voir que leur ordre visuel a été réarrangé." src="order-property.png"></p>
 
 <p>Vous pouvez manipuler les valeurs dans l'exemple qui suit afin de voir comment l'ordre est modifié. Essayez également de modifier la valeur de <code>flex-direction</code> pour utiliser <code>row-reverse</code> — la ligne de début est inversée et l'ordre des éléments commence à partir du côté opposé.</p>
 

@@ -165,7 +165,7 @@ h4 {
 <pre class="brush:css">h2.deuxiemeTitre { clear: both; }
 </pre>
 
-<p>Cela dit, cette méthode fonctionne uniquement s'il n'y a pas d'autres éléments dans le même <a href="/fr/docs/Web/Guide/CSS/Block_formatting_context" rel="internal">contexte de formatage de bloc</a> pour lesquels on voudrait que l'élément apparaisse à droite. Par exemple, si l'élément <code>H2</code> est entourée de barres latérales à gauche et à droite et qu'on utilise <code>clear</code>, le titre apparaîtra alors en bas, sous les barres, plutôt qu'entre elles.</p>
+<p>Cela dit, cette méthode fonctionne uniquement s'il n'y a pas d'autres éléments dans le même <a href="/fr/docs/Web/Guide/CSS/Block_formatting_context">contexte de formatage de bloc</a> pour lesquels on voudrait que l'élément apparaisse à droite. Par exemple, si l'élément <code>H2</code> est entourée de barres latérales à gauche et à droite et qu'on utilise <code>clear</code>, le titre apparaîtra alors en bas, sous les barres, plutôt qu'entre elles.</p>
 
 <p>Aussi, si on ne peut pas dégager un élément, on peut limiter le formatage en bloc au conteneur des éléments flottants. Pour reprendre l'exemple précédent, on voit que toutes les boîtes rouges sont dans un élément {{HTMLElement("p")}}. On peut alors utiliser {{cssxref("overflow")}} avec <code>hidden</code> ou <code>auto</code> afin que l'élément s'agrandisse pour les contenir, sans les faire tomber en bas :</p>
 

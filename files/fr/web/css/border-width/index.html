@@ -66,31 +66,11 @@ border-width: unset;
 <dl>
  <dt><code>&lt;line-width&gt;</code></dt>
  <dd>Une valeur de longueur (type {{cssxref("&lt;length&gt;")}} ou un mot-clé indiquant l'épaisseur de la bordure. Le mot-clé doit être l'une des valeurs suivantes :
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <td><code>thin</code></td>
-    <td>
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-style: solid; border-width: thin; background-color: palegreen;"> </div>
-    </td>
-    <td>La bordure est fine.</td>
-   </tr>
-   <tr>
-    <td><code>medium</code></td>
-    <td>
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-style: solid; border-width: medium; background-color: palegreen;"> </div>
-    </td>
-    <td>La bordure est moyenne.</td>
-   </tr>
-   <tr>
-    <td><code>thick</code></td>
-    <td>
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-style: solid; border-width: thick; background-color: palegreen;"> </div>
-    </td>
-    <td>La bordure est épaisse.</td>
-   </tr>
-  </tbody>
- </table>
+  <ul>
+    <li><code>thin</code> (fin)</li>
+    <li><code>medium</code> (intermédiaire)</li>
+    <li><code>thick</code> (épais)</li>
+  </ul>
   La spécification ne définit pas précisément l'épaisseur correspondante à chacun de ces mots-clés, les rendant dépendants de l'implémentation. Toutefois, la spécification indique que l'épaisseur doit suivre la relation d'inégalité suivante : <code>thin ≤ medium ≤ thick</code> et que les valeurs pour chaque mot-clé doivent être constantes pour un même document.</dd>
 </dl>
 

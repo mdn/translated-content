@@ -164,7 +164,7 @@ dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
   list-style-type: square;
 }</pre>
 
-<h3 id="Notes" name="Notes">Simplifier les sélecteurs de section</h3>
+<h3 id="Notes">Simplifier les sélecteurs de section</h3>
 
 <p>La pseudo-classe <code>:matches</code> est particulièrement utile lorsqu'on manipule les <a href="/en-US/docs/Sections_and_Outlines_of_an_HTML5_document" title="Sections and Outlines of an HTML5 document">sections et en-têtes</a> HTML5. {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}} et {{HTMLElement("nav")}} étant souvent imbriqués les uns dans les autres, les mettre en forme (sans <code>:matches()</code>) s'avèrerait plutôt compliqué.</p>
 
@@ -230,7 +230,7 @@ h1 {
 
 <h2 id="Notes_2">Notes</h2>
 
-<h3 id="Issues_with_performance_and_specificity" name="Issues_with_performance_and_specificity">Problèmes de performances avec <code>any():</code> et la spécificité</h3>
+<h3 id="Issues_with_performance_and_specificity">Problèmes de performances avec <code>any():</code> et la spécificité</h3>
 
 <p>{{Bug(561154)}} suit un problème de spécificité relatif à <code>:-moz-any()</code>. L'implémentation  place <code>:-moz-any()</code> dans la catégorie des règles universelles, ce qui signifie que si on l'utilise comme sélecteur le plus à droite, ce sera plus lent que d'utiliser un sélecteur d'identifiant, de classe ou de balise comme premier sélecteur.</p>
 
