@@ -21,7 +21,7 @@ p::first-letter {
 <p>La première lettre d'un élément n'est pas forcément évidente à identifier :</p>
 
 <ul>
- <li>La ponctuation, c'est-à-dire n'importe quel caractère défini dans une des classes Unicode <em lang="en">open</em> (Ps), <em lang="en">close</em> (Pe), <em lang="en">initial quote</em> (Pi), <em lang="en">final quote</em> (Pf) et <em lang="en">other punctuation</em> (Po) , précédant ou suivant immédiatement la première lettre est aussi sélectionnée par ce pseudo-élément.</li>
+ <li>La ponctuation, c'est-à-dire n'importe quel caractère défini dans une des classes Unicode <i lang="en">open</i> (Ps), <i lang="en">close</i> (Pe), <i lang="en">initial quote</i> (Pi), <i lang="en">final quote</i> (Pf) et <i lang="en">other punctuation</i> (Po) , précédant ou suivant immédiatement la première lettre est aussi sélectionnée par ce pseudo-élément.</li>
  <li>D'autre part, certaines langues possèdent des digraphes qui sont mis en majuscule ensemble, comme le <code>IJ</code> en néerlandais. Dans ces rares cas, les deux lettres du digraphes doivent être sélectionnées par le pseudo-élément <code>::first-letter</code>. (Ceci est mal supporté par les navigateurs, reportez vous au <a href="/fr/docs/Web/CSS/::first-letter#compatibilit%c3%a9_des_navigateurs">tableau de compatibilité des navigateurs</a>).</li>
  <li>Enfin, une combinaison du pseudo-élément {{cssxref("::before")}} et de la propriété {{cssxref("content")}} peut injecter du texte au début de l'élément. Dans ce cas, <code>::first-letter</code> sélectionnera la première lettre du contenu inséré.</li>
 </ul>
