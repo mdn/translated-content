@@ -29,70 +29,64 @@ input:checked {
 
 <h2 id="Exemples">Exemples</h2>
 
-<p>Ici, on utilise la pseudo-classe <code>:checked</code> pseudo-class applied to hidden checkboxes appended at the beginning of your page could be employed in order to store some dynamic booleans to be used by a CSS rule. The following example shows how to hide/show some expandable elements by simply clicking on a button (<a class="internal" href="/@api/deki/files/6246/=expandable-elements.html" title="Expandable elements through the :checked pseudoclass">download this demo</a>).</p>
+<h3 id="exemple_simple">Exemple simple</h3>
 
-<h3 id="CSS">CSS</h3>
+<h4 id="HTML">HTML</h4>
 
-<pre class="brush: css">#expand-btn {
-    margin: 0 3px;
-    display: inline-block;
-    font: 12px / 13px "Lucida Grande", sans-serif;
-    text-shadow: rgba(255, 255, 255, 0.4) 0 1px;
-    padding: 3px 6px;
-    border: 1px solid rgba(0, 0, 0, 0.6);
-    background-color: #969696;
-    cursor: default;
-    border-radius: 3px;
-    box-shadow: rgba(255, 255, 255, 0.4) 0 1px, inset 0 20px 20px -10px white;
+<pre class="brush: html">
+&lt;div&gt;
+  &lt;input type="radio" name="my-input" id="yes"&gt;
+  &lt;label for="yes"&gt;Oui&lt;/label&gt;
+
+  &lt;input type="radio" name="my-input" id="no"&gt;
+  &lt;label for="no"&gt;Non&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+  &lt;input type="checkbox" name="my-checkbox" id="opt-in"&gt;
+  &lt;label for="opt-in"&gt;Cochez-moi !&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;select name="my-select" id="fruit"&gt;
+  &lt;option value="opt1"&gt;Pommes&lt;/option&gt;
+  &lt;option value="opt2"&gt;Raisins&lt;/option&gt;
+  &lt;option value="opt3"&gt;Poires&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+
+<h4 id="CSS">CSS</h4>
+
+<pre class="brush: css">
+div,
+select {
+  margin: 8px;
 }
 
-#isexpanded:checked ~ #expand-btn, #isexpanded:checked ~ * #expand-btn {
-    background: #B5B5B5;
-    box-shadow: inset rgba(0, 0, 0, 0.4) 0 -5px 12px, inset rgba(0, 0, 0, 1) 0 1px 3px, rgba(255, 255, 255, 0.4) 0 1px;
+/* Libellés pour les entrées cochées */
+input:checked + label {
+  color: red;
 }
 
-#isexpanded, .expandable {
-    display: none;
+/* Éléments radio cochés */
+input[type="radio"]:checked {
+  box-shadow: 0 0 0 3px orange;
 }
 
-#isexpanded:checked ~ * tr.expandable {
-    display: table-row;
-    background: #cccccc;
-
+/* Éléments cases à cocher cochés */
+input[type="checkbox"]:checked {
+  box-shadow: 0 0 0 3px hotpink;
 }
 
-#isexpanded:checked ~ p.expandable, #isexpanded:checked ~ * p.expandable {
-    display: block;
-    background: #cccccc;
+/* Éléments options sélectionnés */
+option:checked {
+  box-shadow: 0 0 0 3px lime;
+  color: red;
 }
 </pre>
 
-<h3 id="HTML">HTML</h3>
+<h4 id="résultat">Résultat</h4>
 
-<pre class="brush: html">&lt;input type="checkbox" id="isexpanded" /&gt;
-
-&lt;table&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;&lt;th&gt;Colonne 1&lt;/th&gt;&lt;th&gt;Colonne 2&lt;/th&gt;&lt;th&gt;Colonne 3&lt;/th&gt;&lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-        &lt;tr class="expandable"&gt;&lt;td&gt;[cellule]&lt;/td&gt;&lt;td&gt;[cellule]&lt;/td&gt;&lt;td&gt;[cellule]&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr&gt;&lt;td&gt;[cellule]&lt;/td&gt;&lt;td&gt;[cellule]&lt;/td&gt;&lt;td&gt;[cellule]&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr&gt;&lt;td&gt;[cellule]&lt;/td&gt;&lt;td&gt;[cellule]&lt;/td&gt;&lt;td&gt;[cellule]&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr class="expandable"&gt;&lt;td&gt;[cellule]&lt;/td&gt;&lt;td&gt;[cellule]&lt;/td&gt;&lt;td&gt;[cellule]&lt;/td&gt;&lt;/tr&gt;
-        &lt;tr class="expandable"&gt;&lt;td&gt;[cellule]&lt;/td&gt;&lt;td&gt;[cellule]&lt;/td&gt;&lt;td&gt;[cellule]&lt;/td&gt;&lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;[Un texte normal]&lt;/p&gt;
-&lt;p&gt;&lt;label for="isexpanded" id="expand-btn"&gt;Afficher les éléments masqués&lt;/label&gt;&lt;/p&gt;
-&lt;p class="expandable"&gt;[Un texte caché]&lt;/p&gt;
-&lt;p&gt;[Un texte normal]&lt;/p&gt;
-</pre>
-
-<h3 id="Résultat">Résultat</h3>
-
-<p>{{EmbedLiveSample('Exemples','300','450')}}</p>
+<p>{{EmbedLiveSample("exemple_simple")}}</p>
 
 <h2 id="Spécifications">Spécifications</h2>
 

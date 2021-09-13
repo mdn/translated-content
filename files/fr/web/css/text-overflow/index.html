@@ -9,7 +9,7 @@ translation_of: Web/CSS/text-overflow
 ---
 <div>{{CSSRef}}</div>
 
-<p>La propriété <strong><code>text-overflow</code></strong> définit la façon dont le contenu textuel qui dépasse d'une boîte est signalé pour les utilisateurs. Le texte peut être rogné (<em>clipping</em>), afficher une ellipse ('<code>…</code>', <code style="text-transform: uppercase;">U+2026 Horizontal Ellipsis</code>) ou afficher une chaîne de caractères choisie.</p>
+<p>La propriété <strong><code>text-overflow</code></strong> définit la façon dont le contenu textuel qui dépasse d'une boîte est signalé pour les utilisateurs. Le texte peut être rogné (<em>clipping</em>), afficher une ellipse ('<code>…</code>', <code>U+2026 Horizontal Ellipsis</code>) ou afficher une chaîne de caractères choisie.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/text-overflow.html")}}</div>
 
@@ -64,7 +64,7 @@ text-overflow: unset;
  <dt><code>clip</code></dt>
  <dd>La valeur par défaut de cette propriété. Ce mot-clé indique qu'on tronque le texte à la limite de <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">la boîte de contenu</a>. La troncature peut donc arriver sur le milieu d'un caractère. Pour que celle-ci soit appliquée entre deux caractères, on devra utiliser la chaîne vide (<code>''</code>) comme valeur pour cette propriété.</dd>
  <dt><code>ellipsis</code></dt>
- <dd>Ce mot-clé indique qu'on affiche une ellipse (<code>'…'</code>, <code style="text-transform: uppercase;">U+2026 Horizontal Ellipsis</code>) pour représenter le texte rogné. L'ellipse est affichée à l'intérieur de <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">la boîte de contenu</a> et réduit donc la quantité de texte affichée. S'il n'y a pas assez de place pour afficher l'ellipse, celle-ci est rognée.</dd>
+ <dd>Ce mot-clé indique qu'on affiche une ellipse (<code>'…'</code>, <code>U+2026 Horizontal Ellipsis</code>) pour représenter le texte rogné. L'ellipse est affichée à l'intérieur de <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">la boîte de contenu</a> et réduit donc la quantité de texte affichée. S'il n'y a pas assez de place pour afficher l'ellipse, celle-ci est rognée.</dd>
  <dt><code>fade</code> {{experimental_inline}}</dt>
  <dd>Ce mot-clé indique que le contenu qui dépasse est rogné avec un effet de dégradé en transparence. Au bout de la boîte, le contenu est totalement transparent.</dd>
  <dt><code>fade( &lt;length&gt; | &lt;percentage&gt; )</code> {{experimental_inline}}</dt>

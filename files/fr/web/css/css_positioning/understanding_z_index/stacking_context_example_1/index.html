@@ -16,15 +16,15 @@ original_slug: Web/CSS/Comprendre_z-index/Exemple_1
 
 <p>Le seul et unique contexte d'empilement est le contexte racine. Sans <code>z-index</code>, les éléments sont empilés dans leur ordre d'apparition dans le code HTML.</p>
 
-<p><img alt="Figure 5a : Exemple de contexte d'empilement 1" class="internal" src="/@api/deki/files/1452/=Understanding_zindex_05a.png"></p>
+<p><img alt="Figure 5a : Exemple de contexte d'empilement 1" class="internal" src="understanding_zindex_05a.png"></p>
 
 <p>Si on assigne au bloc <em>DIV #2</em> une valeur de <code>z-index</code> positive (non nulle et non automatique), il est rendu par dessus tous les autres blocs.</p>
 
-<p><img alt="Figure 5b : Exemple de contexte d'empilement 1" class="internal" src="/@api/deki/files/1453/=Understanding_zindex_05b.png"></p>
+<p><img alt="Figure 5b : Exemple de contexte d'empilement 1" class="internal" src="understanding_zindex_05b.png"></p>
 
 <p>Si maintenant on assigne également au bloc <em>DIV #4</em> une valeur de <code>z-index</code> positive, plus grande que celle du <em>DIV #2</em>, le bloc <em>DIV #4</em> est rendu par dessus tous les autres, y compris par dessus le bloc <em>DIV #2</em>.</p>
 
-<p><img alt="Figure 5c : Exemple de contexte d'empilement 1" class="internal" src="/@api/deki/files/1454/=Understanding_zindex_05c.png"></p>
+<p><img alt="Figure 5c : Exemple de contexte d'empilement 1" class="internal" src="understanding_zindex_05c.png"></p>
 
 <p>Dans le dernier exemple, vous pouvez voir que les blocs <em>DIV #2</em> et <em>DIV #4</em> ne sont pas frères, parce qu'ils appartiennent à des parents différents dans la hiérarchie des éléments HTML. Néanmoins, l'empilement du bloc <em>DIV #4</em>, tout en respectant le bloc <em>DIV #2</em>, peut être contrôlé avec la propriété <code>z-index</code>. Il se fait que les éléments <em>DIV #1</em> et <em>DIV #3</em> n'ayant pas de <code>z-index</code> défini, ils ne créent pas de contexte d'empilement. Cela signifie que l'ensemble de leur contenu, y compris les blocs <em>DIV #2</em> et <em>DIV #3</em>, appartient au contexte d'empilement de la racine.</p>
 
