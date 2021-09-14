@@ -3610,7 +3610,6 @@
 /ja/docs/Web/CSS/::-webkit-input-placeholder	/ja/docs/Web/CSS/::placeholder
 /ja/docs/Web/CSS/:any	/ja/docs/Web/CSS/:is
 /ja/docs/Web/CSS/:matches	/ja/docs/Web/CSS/:is
-/ja/docs/Web/CSS/@media/Index	/ja/docs/orphaned/Web/CSS/@media/Index
 /ja/docs/Web/CSS/@media/scan	/ja/docs/orphaned/Web/CSS/@media/scan
 /ja/docs/Web/CSS/@page/bleed	/ja/docs/orphaned/Web/CSS/@page/bleed
 /ja/docs/Web/CSS/@page/marks	/ja/docs/orphaned/Web/CSS/@page/marks
@@ -3667,7 +3666,6 @@
 /ja/docs/Web/CSS/Getting_started/Tables	/ja/docs/Learn/CSS/Building_blocks/Styling_tables
 /ja/docs/Web/CSS/Getting_started/Text_styles	/ja/docs/Learn/CSS/Styling_text/Fundamentals
 /ja/docs/Web/CSS/Getting_started/What_is_CSS	/ja/docs/Learn/CSS/First_steps/How_CSS_works
-/ja/docs/Web/CSS/Index	/ja/docs/orphaned/Web/CSS/Index
 /ja/docs/Web/CSS/Media	/ja/docs/Web/CSS/@media
 /ja/docs/Web/CSS/Media/Visual	/ja/docs/Web/CSS/@media
 /ja/docs/Web/CSS/Motion_Path	/ja/docs/Web/CSS/CSS_Motion_Path
@@ -4064,7 +4062,6 @@
 /ja/docs/Web/HTTP/HTTP_access_control/Errors/CORSPreflightDidNotSucceed	/ja/docs/Web/HTTP/CORS/Errors/CORSPreflightDidNotSucceed
 /ja/docs/Web/HTTP/HTTP_access_control/Errors/CORSRequestNotHttp	/ja/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp
 /ja/docs/Web/HTTP/HTTP_response_codes	/ja/docs/Web/HTTP/Status
-/ja/docs/Web/HTTP/Headers/Index	/ja/docs/orphaned/Web/HTTP/Headers/Index
 /ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file	/ja/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 /ja/docs/Web/HTTP/Response_codes	/ja/docs/Web/HTTP/Status
 /ja/docs/Web/HTTP/Response_codes/204	/ja/docs/Web/HTTP/Status/204

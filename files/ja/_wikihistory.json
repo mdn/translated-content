@@ -49056,12 +49056,6 @@
       "Wind1808"
     ]
   },
-  "orphaned/Web/CSS/@media/Index": {
-    "modified": "2019-03-18T21:22:31.321Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "orphaned/Web/CSS/@media/scan": {
     "modified": "2020-10-15T22:06:00.879Z",
     "contributors": [
@@ -49078,13 +49072,6 @@
     "modified": "2020-10-15T22:06:39.164Z",
     "contributors": [
       "mfuji09"
-    ]
-  },
-  "orphaned/Web/CSS/Index": {
-    "modified": "2019-01-16T21:57:06.536Z",
-    "contributors": [
-      "mfuji09",
-      "Marsf"
     ]
   },
   "orphaned/Web/CSS/conic-gradient()": {
@@ -49378,12 +49365,6 @@
     "contributors": [
       "morinokami",
       "silverskyvicto"
-    ]
-  },
-  "orphaned/Web/HTTP/Headers/Index": {
-    "modified": "2019-03-18T21:26:05.914Z",
-    "contributors": [
-      "mfuji09"
     ]
   },
   "orphaned/Web/JavaScript/Guide/Core_Language_Features": {
