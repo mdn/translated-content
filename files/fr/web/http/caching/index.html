@@ -42,29 +42,29 @@ original_slug: Web/HTTP/Cache
 
 <p>Une entrée de cache peut aussi consister en de multiples réponses stockées différenciées par une clé secondaire, si la requête fait l’objet de négociation de contenu. Pour plus de détails, voir les informations à propos de l’en-tête {{HTTPHeader("Vary")}} <a href="#Varying_responses">ci-dessous</a>.</p>
 
-<h2 id="Contrôle_de_la_mise_en_cache"><span class="tlid-translation translation"><span title="">Contrôle de la mise en cache</span></span></h2>
+<h2 id="Contrôle_de_la_mise_en_cache">Contrôle de la mise en cache</h2>
 
-<h3 id="L'en-tête_Cache-control"><span class="tlid-translation translation"><span title="">L'en-tête Cache-control</span></span></h3>
+<h3 id="L'en-tête_Cache-control">L'en-tête Cache-control</h3>
 
-<p><span class="tlid-translation translation">Le</span> {{HTTPHeader("Cache-Control")}} HTTP/1.1 <span class="tlid-translation translation"><span title="">Le champ d'en-tête général est utilisé pour spécifier les directives pour les mécanismes de cache dans les requêtes et les réponses.</span> <span title="">Utilisez cet en-tête pour définir vos stratégies de mise en cache avec la variété de directives fournie</span></span>s.</p>
+<p>Le {{HTTPHeader("Cache-Control")}} HTTP/1.1 Le champ d'en-tête général est utilisé pour spécifier les directives pour les mécanismes de cache dans les requêtes et les réponses. Utilisez cet en-tête pour définir vos stratégies de mise en cache avec la variété de directives fournies.</p>
 
 <h4 id="Pas_du_tout_de_cache_mémoire">Pas du tout de cache mémoire</h4>
 
-<p><span class="tlid-translation translation"><span title="">Le cache ne doit rien stocker concernant la demande du client ou la réponse du serveur.</span> <span title="">Une demande est envoyée au serveur et une réponse complète est téléchargée à chaque fois.</span></span></p>
+<p>Le cache ne doit rien stocker concernant la demande du client ou la réponse du serveur. Une demande est envoyée au serveur et une réponse complète est téléchargée à chaque fois.</p>
 
 <pre>Cache-Control: no-store
 Cache-Control: no-cache, no-store, must-revalidate
 </pre>
 
-<h4 id="Pas_de_cache"><span class="tlid-translation translation"><span title="">Pas de cache</span></span></h4>
+<h4 id="Pas_de_cache">Pas de cache</h4>
 
-<p><span class="tlid-translation translation"><span title="">Un cache enverra la demande au serveur d'origine pour validation avant de publier une copie en cache</span></span>.</p>
+<p>Un cache enverra la demande au serveur d'origine pour validation avant de publier une copie en cache.</p>
 
 <pre>Cache-Control: no-cache</pre>
 
-<h4 id="Caches_privées_et_publiques"><span class="tlid-translation translation"><span title="">Caches privées et publiques</span></span></h4>
+<h4 id="Caches_privées_et_publiques">Caches privées et publiques</h4>
 
-<p><span class="tlid-translation translation"><span title="">La directive "public" indique que la réponse peut être mise en cache par n'importe quel cache.</span> <span title="">Cela peut être utile si les pages avec une authentification HTTP ou des codes d’état de réponse qui ne sont pas normalement mis en cache doivent maintenant être mis en cache.</span> <span title="">En revanche, "privé" indique que la réponse est destinée à un seul utilisateur et ne doit pas être stockée par un cache partagé.</span> <span title="">Un cache de navigateur privé peut stocker la réponse dans ce cas.</span></span></p>
+<p>La directive "public" indique que la réponse peut être mise en cache par n'importe quel cache. Cela peut être utile si les pages avec une authentification HTTP ou des codes d’état de réponse qui ne sont pas normalement mis en cache doivent maintenant être mis en cache. En revanche, "privé" indique que la réponse est destinée à un seul utilisateur et ne doit pas être stockée par un cache partagé. Un cache de navigateur privé peut stocker la réponse dans ce cas.</p>
 
 <pre>Cache-Control: private
 Cache-Control: public
@@ -72,21 +72,21 @@ Cache-Control: public
 
 <h4 id="Expiration">Expiration</h4>
 
-<p><span class="tlid-translation translation"><span title="">La directive la plus importante ici est "max-age = &lt;secondes&gt;", qui correspond au temps maximum pendant lequel une ressource est considérée comme nouvelle.</span> <span title="">Contrairement à {{HTTPHeader ("Expires")}}, cette directive est relative à l'heure de la demande.</span> <span title="">Pour les fichiers de l'application qui ne changeront pas, vous pouvez généralement ajouter une mise en cache agressive.</span> <span title="">Cela inclut les fichiers statiques tels que les images, les fichiers CSS et les fichiers JavaScript, par exemple.</span></span></p>
+<p>La directive la plus importante ici est "max-age = &lt;secondes&gt;", qui correspond au temps maximum pendant lequel une ressource est considérée comme nouvelle. Contrairement à {{HTTPHeader ("Expires")}}, cette directive est relative à l'heure de la demande. Pour les fichiers de l'application qui ne changeront pas, vous pouvez généralement ajouter une mise en cache agressive. Cela inclut les fichiers statiques tels que les images, les fichiers CSS et les fichiers JavaScript, par exemple.</p>
 
-<p><span class="tlid-translation translation"><span title="">Pour plus de détails, voir aussi la section</span></span> <a href="#Freshness">Freshness</a> <span class="tlid-translation translation"><span title="">ci-dessous.</span></span>.</p>
+<p>Pour plus de détails, voir aussi la section <a href="#Freshness">Freshness</a> ci-dessous..</p>
 
 <pre>Cache-Control: max-age=31536000</pre>
 
 <h4 id="Validation">Validation</h4>
 
-<p><span class="tlid-translation translation"><span title="">Lors de l'utilisation de la directive "must-revalidate", le cache doit vérifier l'état des ressources obsolètes avant de l'utiliser, et celles qui ont expiré ne doivent pas être utilisées.</span> <span title="">Pour plus de détails, voir la section</span></span> <a href="#Cache_validation">Validation</a> <span class="tlid-translation translation"><span title="">ci-dessous</span></span>.</p>
+<p>Lors de l'utilisation de la directive "must-revalidate", le cache doit vérifier l'état des ressources obsolètes avant de l'utiliser, et celles qui ont expiré ne doivent pas être utilisées. Pour plus de détails, voir la section <a href="#Cache_validation">Validation</a> ci-dessous.</p>
 
 <pre>Cache-Control: must-revalidate</pre>
 
-<h3 id="L'en-têtePragma"><span class="tlid-translation translation"><span title="">L'en-tête</span></span><code>Pragma</code></h3>
+<h3 id="L'en-têtePragma">L'en-tête<code>Pragma</code></h3>
 
-<p><span class="tlid-translation translation"><span title="">{{HTTPHeader ("Pragma")}} est un en-tête HTTP / 1.0. Il n'est pas spécifié pour les réponses HTTP et ne constitue donc pas un remplacement fiable pour l'en-tête général HTTP / 1.1 Cache-Control, bien qu'il se comporte de la même manière que Cache</span><span title="">-Control: no-cache, si le champ d'en-tête Cache-Control est omis dans une requête.</span> <span title="">Utilisez Pragma uniquement pour une compatibilité ascendante avec les clients HTTP / 1.0</span></span>.</p>
+<p>{{HTTPHeader ("Pragma")}} est un en-tête HTTP / 1.0. Il n'est pas spécifié pour les réponses HTTP et ne constitue donc pas un remplacement fiable pour l'en-tête général HTTP / 1.1 Cache-Control, bien qu'il se comporte de la même manière que Cache-Control: no-cache, si le champ d'en-tête Cache-Control est omis dans une requête. Utilisez Pragma uniquement pour une compatibilité ascendante avec les clients HTTP / 1.0.</p>
 
 <h2 id="Fraîcheur_(Freshness)">Fraîcheur (Freshness)</h2>
 
