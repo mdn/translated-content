@@ -88,11 +88,15 @@ translation_of: Web/HTTP/CORS
  <li>Aucun objet {{domxref("ReadableStream")}} n'est utilisé dans la requête.</li>
 </ul>
 
-<div class="note"><strong>Note :</strong> Cela correspond aux classes de requêtes généralement produites par du contenu web. Aucune donnée de réponse n'est envoyée au client qui a lancé la requête sauf si le serveur envoie un en-tête approprié. Aussi, les sites qui empêchent les requêtes étrangères falsifiées ne craignent rien de nouveau.</div>
+<div class="note">
+  <p><strong>Note :</strong> Cela correspond aux classes de requêtes généralement produites par du contenu web. Aucune donnée de réponse n'est envoyée au client qui a lancé la requête sauf si le serveur envoie un en-tête approprié. Aussi, les sites qui empêchent les requêtes étrangères falsifiées ne craignent rien de nouveau.</p>
+</div>
 
-<div class="note"><strong>Note :</strong> WebKit Nightly et Safari Technology Preview ajoutent des restrictions supplémentaires pour les valeurs autorisées des en-têtes {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}} et {{HTTPHeader("Content-Language")}}. Si l'un de ces en-têtes a une valeur non-standard, WebKit/Safari considère que la requête ne correspond pas à une requête simple. Les valeurs considérées comme non-standard par WebKit/Safari ne sont pas documentées en dehors de ces bugs WebKit : <em><a href="https://bugs.webkit.org/show_bug.cgi?id=165178" rel="nofollow noreferrer">Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language</a></em>, <em><a href="https://bugs.webkit.org/show_bug.cgi?id=165566" rel="nofollow noreferrer">Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS</a></em> et <em><a href="https://bugs.webkit.org/show_bug.cgi?id=166363" rel="nofollow noreferrer">Switch to a blacklist model for restricted Accept headers in simple CORS requests</a></em>. Aucun autre navigateur n'implémente ces restrictions supplémentaires, car elles ne font pas partie de la spécification.</div>
+<div class="note">
+  <p><strong>Note :</strong> WebKit Nightly et Safari Technology Preview ajoutent des restrictions supplémentaires pour les valeurs autorisées des en-têtes {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}} et {{HTTPHeader("Content-Language")}}. Si l'un de ces en-têtes a une valeur non-standard, WebKit/Safari considère que la requête ne correspond pas à une requête simple. Les valeurs considérées comme non-standard par WebKit/Safari ne sont pas documentées en dehors de ces bugs WebKit : <em><a href="https://bugs.webkit.org/show_bug.cgi?id=165178" rel="nofollow noreferrer">Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language</a></em>, <em><a href="https://bugs.webkit.org/show_bug.cgi?id=165566" rel="nofollow noreferrer">Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS</a></em> et <em><a href="https://bugs.webkit.org/show_bug.cgi?id=166363" rel="nofollow noreferrer">Switch to a blacklist model for restricted Accept headers in simple CORS requests</a></em>. Aucun autre navigateur n'implémente ces restrictions supplémentaires, car elles ne font pas partie de la spécification.</p>
+</div>
 
-<p>Si, par exemple, on a un contenu web situé sous le domaine <code class="plain">http://toto.example</code> qui souhaite invoquer du contenu situé sous le domaine <code class="plain">http://truc.autre</code>, on pourrait utiliser du code JavaScript semblable à ce qui suit sur <code>toto.example</code> :</p>
+<p>Si, par exemple, on a un contenu web situé sous le domaine <code>http://toto.example</code> qui souhaite invoquer du contenu situé sous le domaine <code>http://truc.autre</code>, on pourrait utiliser du code JavaScript semblable à ce qui suit sur <code>toto.example</code> :</p>
 
 <pre class="brush: js">var invocation = new XMLHttpRequest();
 var url = 'http://truc.autre/resources/public-data/';
@@ -136,13 +140,13 @@ Content-Type: application/xml
 [XML Data]
 </pre>
 
-<p>Les lignes 1 à 10 correspondent aux en-têtes envoyés. L'en-tête qui nous intéresse particulièrement ici est {{HTTPHeader("Origin")}}, situé à la ligne 10 : on y voit que l'invocation provient du domaine <code class="plain">http://toto.example</code>.</p>
+<p>Les lignes 1 à 10 correspondent aux en-têtes envoyés. L'en-tête qui nous intéresse particulièrement ici est {{HTTPHeader("Origin")}}, situé à la ligne 10 : on y voit que l'invocation provient du domaine <code>http://toto.example</code>.</p>
 
-<p>Les lignes 13 à 22 détaillent la réponse HTTP du serveur situé sous le domaine <code class="plain">http://truc.autre</code>. Dans la réponse, le serveur renvoie un en-tête {{HTTPHeader("Access-Control-Allow-Origin")}} (visible à la ligne 16). On voit ici les en-têtes {{HTTPHeader("Origin")}} et {{HTTPHeader("Access-Control-Allow-Origin")}} pour un contrôle d'accès dans sa forme la plus simple. Ici, le serveur répond avec <code>Access-Control-Allow-Origin: *</code> ce qui signifie que la ressource peut être demandée par n'importe quel domaine. Si les propriétés de la ressource située sous <code class="plain">http://truc.autre</code> souhaitaient restreindre l'accès à la ressource à l'origine <code class="plain">http://toto.example</code>, ils auraient renvoyé :</p>
+<p>Les lignes 13 à 22 détaillent la réponse HTTP du serveur situé sous le domaine <code>http://truc.autre</code>. Dans la réponse, le serveur renvoie un en-tête {{HTTPHeader("Access-Control-Allow-Origin")}} (visible à la ligne 16). On voit ici les en-têtes {{HTTPHeader("Origin")}} et {{HTTPHeader("Access-Control-Allow-Origin")}} pour un contrôle d'accès dans sa forme la plus simple. Ici, le serveur répond avec <code>Access-Control-Allow-Origin: *</code> ce qui signifie que la ressource peut être demandée par n'importe quel domaine. Si les propriétés de la ressource située sous <code>http://truc.autre</code> souhaitaient restreindre l'accès à la ressource à l'origine <code>http://toto.example</code>, ils auraient renvoyé :</p>
 
-<p><code class="plain">Access-Control-Allow-Origin: http://toto.example</code></p>
+<p><code>Access-Control-Allow-Origin: http://toto.example</code></p>
 
-<p>On notera que, dans ce cas, aucun autre domaine que <code class="plain">http://toto.example</code> (tel qu'identifié par l'en-tête <code>Origin</code>) ne pourra accéder à la ressource. L'en-tête <code>Access-Control-Allow-Origin</code> devrait contenir la valeur qui a été envoyée dans l'en-tête  <code>Origin</code> de la requête.</p>
+<p>On notera que, dans ce cas, aucun autre domaine que <code>http://toto.example</code> (tel qu'identifié par l'en-tête <code>Origin</code>) ne pourra accéder à la ressource. L'en-tête <code>Access-Control-Allow-Origin</code> devrait contenir la valeur qui a été envoyée dans l'en-tête  <code>Origin</code> de la requête.</p>
 
 <h3 id="Requêtes_nécessitant_une_requête_préliminaire">Requêtes nécessitant une requête préliminaire</h3>
 
@@ -185,7 +189,9 @@ Content-Type: application/xml
  <li><strong>Ou si</strong> un objet {{domxref("ReadableStream")}} est utilisé dans la requête.</li>
 </ul>
 
-<div class="note"><strong>Note :</strong> WebKit Nightly et Safari Technology Preview ajoutent des restrictions supplémentaires pour les valeurs autorisées des en-têtes {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}} et {{HTTPHeader("Content-Language")}}. Si l'un de ces en-têtes a une valeur non-standard, WebKit/Safari considère que la requête ne correspond pas à une requête simple. Les valeurs considérées comme non-standard par WebKit/Safari ne sont pas documentées en dehors de ces bugs WebKit : <em><a href="https://bugs.webkit.org/show_bug.cgi?id=165178" rel="nofollow noreferrer">Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language</a></em>, <em><a href="https://bugs.webkit.org/show_bug.cgi?id=165566" rel="nofollow noreferrer">Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS</a></em> et <em><a href="https://bugs.webkit.org/show_bug.cgi?id=166363" rel="nofollow noreferrer">Switch to a blacklist model for restricted Accept headers in simple CORS requests</a></em>. Aucun autre navigateur n'implémente ces restrictions supplémentaires, car elles ne font pas partie de la spécification.</div>
+<div class="note">
+  <p><strong>Note :</strong> WebKit Nightly et Safari Technology Preview ajoutent des restrictions supplémentaires pour les valeurs autorisées des en-têtes {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}} et {{HTTPHeader("Content-Language")}}. Si l'un de ces en-têtes a une valeur non-standard, WebKit/Safari considère que la requête ne correspond pas à une requête simple. Les valeurs considérées comme non-standard par WebKit/Safari ne sont pas documentées en dehors de ces bugs WebKit : <em><a href="https://bugs.webkit.org/show_bug.cgi?id=165178" rel="nofollow noreferrer">Require preflight for non-standard CORS-safelisted request headers Accept, Accept-Language, and Content-Language</a></em>, <em><a href="https://bugs.webkit.org/show_bug.cgi?id=165566" rel="nofollow noreferrer">Allow commas in Accept, Accept-Language, and Content-Language request headers for simple CORS</a></em> et <em><a href="https://bugs.webkit.org/show_bug.cgi?id=166363" rel="nofollow noreferrer">Switch to a blacklist model for restricted Accept headers in simple CORS requests</a></em>. Aucun autre navigateur n'implémente ces restrictions supplémentaires, car elles ne font pas partie de la spécification.</p>
+</div>
 
 <p>Voici un exemple d'une requête qui devra être précédée d'une requête préliminaire :</p>
 
@@ -335,7 +341,7 @@ Access-Control-Max-Age: 86400</pre>
 
 <p>Une des fonctionnalités intéressante mise en avant par le CORS (via {{domxref("XMLHttpRequest")}} ou <a href="/fr/docs/Web/API/Fetch_API">Fetch</a>) est la possibilité d'effectuer des requêtes authentifiées reconnaissant les <a href="/fr/docs/Web/HTTP/Cookies">cookies HTTP</a> et les informations d'authentification HTTP. Par défaut, lorsqu'on réalise des appels {{domxref("XMLHttpRequest")}} ou <a href="/fr/docs/Web/API/Fetch_API">Fetch</a> entre différents sites, les navigateurs n'enverront pas les informations d'authentification. Pour cela, il est nécessaire d'utiliser une option spécifique avec le constructeur {{domxref("XMLHttpRequest")}} ou {{domxref("Request")}} lorsqu'on l'appelle.</p>
 
-<p>Dans cet exemple, le contenu chargé depuis <code class="plain">http://toto.example</code> effectue une requête GET simple vers une ressource située sous <code class="plain">http://truc.autre</code> qui définit des <em>cookies</em>. Voici un exemple de code JavaScript qui pourrait se trouver sur <code>toto.example</code> :</p>
+<p>Dans cet exemple, le contenu chargé depuis <code>http://toto.example</code> effectue une requête GET simple vers une ressource située sous <code>http://truc.autre</code> qui définit des <em>cookies</em>. Voici un exemple de code JavaScript qui pourrait se trouver sur <code>toto.example</code> :</p>
 
 <pre class="brush: js">var invocation = new XMLHttpRequest();
 var url = 'http://truc.autre/resources/credentialed-content/';
@@ -388,13 +394,13 @@ Content-Type: text/plain
 [text/plain payload]
 </pre>
 
-<p>Bien que la ligne 11 contienne le <em>cookie</em> pour le contenu sous <code class="plain">http://truc.autre</code>, si <code>truc.autre</code> n'avait pas répondu avec {{HTTPHeader("Access-Control-Allow-Credentials")}}<code>: true</code> (cf. ligne 19), la réponse aurait été ignorée et n'aurait pas pu être consommée par le contenu web.</p>
+<p>Bien que la ligne 11 contienne le <em>cookie</em> pour le contenu sous <code>http://truc.autre</code>, si <code>truc.autre</code> n'avait pas répondu avec {{HTTPHeader("Access-Control-Allow-Credentials")}}<code>: true</code> (cf. ligne 19), la réponse aurait été ignorée et n'aurait pas pu être consommée par le contenu web.</p>
 
 <h4 id="Requêtes_authentifiées_et_jokers_wildcards">Requêtes authentifiées et jokers (<em>wildcards</em>)</h4>
 
 <p>Lorsqu'il répond à une requête authentifiée, le serveur <strong>doit</strong> indiquer une origine via la valeur de l'en-tête <code>Access-Control-Allow-Origin</code>, il ne doit pas utiliser le joker "<code>*</code>".</p>
 
-<p>Avec la requête précédente, on voit la présence d'un en-tête <code>Cookie</code> mais la requête échouerait si la valeur de l'en-tête de réponse <code>Access-Control-Allow-Origin</code> était "<code>*</code>". Ici, ce n'est pas le cas : <code>Access-Control-Allow-Origin</code> vaut "<code class="plain">http://toto.example</code>" et le contenu récupéré par la requête est alors envoyé au contenu web.</p>
+<p>Avec la requête précédente, on voit la présence d'un en-tête <code>Cookie</code> mais la requête échouerait si la valeur de l'en-tête de réponse <code>Access-Control-Allow-Origin</code> était "<code>*</code>". Ici, ce n'est pas le cas : <code>Access-Control-Allow-Origin</code> vaut "<code>http://toto.example</code>" et le contenu récupéré par la requête est alors envoyé au contenu web.</p>
 
 <p>Dans cet exemple, on notera également que l'en-tête de réponse <code>Set-Cookie</code> définit un autre <em>cookie</em>. En cas d'échec, une exception (dépendant de l'API utilisée) sera levée.</p>
 
@@ -477,7 +483,9 @@ Content-Type: text/plain
 
 <p>L'origine est un URI qui indique le serveur à partir duquel la requête a été initiée. Elle n'inclut aucune information relative au chemin mais contient uniquement le nom du serveur.</p>
 
-<div class="note"><strong>Note :</strong> <code>origine</code> peut être une chaîne vide (ce qui s'avère notamment utile lorsque la source est une URL de donnée).</div>
+<div class="note">
+  <p><strong>Note :</strong> <code>origine</code> peut être une chaîne vide (ce qui s'avère notamment utile lorsque la source est une URL de donnée).</p>
+</div>
 
 <p>Pour chaque requête avec contrôle d'accès, l'en-tête {{HTTPHeader("Origin")}} sera <strong>toujours</strong> envoyé.</p>
 

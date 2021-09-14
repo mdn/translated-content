@@ -107,12 +107,12 @@ original_slug: Web/HTTP/Aperçu
 <ol>
  <li>Il ouvre une connexion TCP : la connexion TCP va être utilisée pour envoyer une ou plusieurs requêtes et pour recevoir une réponse. Le client peut ouvrir une nouvelle connexion, réutiliser une connexion existante ou ouvrir plusieurs connexions TCP vers le serveur.</li>
  <li>Il envoie un message HTTP : les messages HTTP (avant HTTP/2) sont lisibles par les humains. Avec HTTP/2, ces simples messages sont en-capsulés dans des trames, rendant la lecture directe impossible, mais le principe reste le même.
-  <pre class="line-numbers  language-html">GET / HTTP/1.1
+  <pre>GET / HTTP/1.1
 Host: developer.mozilla.org
 Accept-Language: fr</pre>
  </li>
  <li>Il lit la réponse envoyée par le serveur :
-  <pre class="line-numbers  language-html">HTTP/1.1 200 OK
+  <pre>HTTP/1.1 200 OK
 Date: Sat, 09 Oct 2010 14:28:02 GMT
 Server: Apache
 Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT

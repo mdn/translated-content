@@ -16,7 +16,9 @@ translation_of: Web/HTTP/Headers/X-Content-Type-Options
 
 <p>Les testeurs de sécurité du site s'attendent généralement à ce que cet en-tête soit défini.</p>
 
-<p class="blockIndicator note">Note: <code>X-Content-Type-Options</code> ne s'appliquent qu'au <a href="https://fetch.spec.whatwg.org/#should-response-to-request-be-blocked-due-to-nosniff?">blocage des demandes par <code>nosniff</code></a> pour les <a href="https://fetch.spec.whatwg.org/#concept-request-destination">destinations de demandes</a> de  "<code>script</code>" et "<code>style</code>". Il permet également le <a href="https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md#what-types-of-content-are-protected-by-corb">blocage en lecture croisé (CORB)</a> pour les fichiers HTML, TXT, JSON, et XML (à l'exception des images SVG <code>image/svg+xml</code>).</p>
+<div class="note">
+  <p><strong>Note :</strong> <code>X-Content-Type-Options</code> ne s'appliquent qu'au <a href="https://fetch.spec.whatwg.org/#should-response-to-request-be-blocked-due-to-nosniff?">blocage des demandes par <code>nosniff</code></a> pour les <a href="https://fetch.spec.whatwg.org/#concept-request-destination">destinations de demandes</a> de  "<code>script</code>" et "<code>style</code>". Il permet également le <a href="https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md#what-types-of-content-are-protected-by-corb">blocage en lecture croisé (CORB)</a> pour les fichiers HTML, TXT, JSON, et XML (à l'exception des images SVG <code>image/svg+xml</code>).</p>
+</div>
 
 <table class="properties">
  <tbody>

@@ -20,7 +20,9 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/object-src
 
 <p>Pour définir des types autorisés pour les éléments {{HTMLElement("object")}}, {{HTMLElement("embed")}} et {{HTMLElement("applet")}}, voir la directive {{CSP("plugin-types")}}.</p>
 
-<p class="note">Les éléments contrôlés par <code>object-src</code> sont considérés peut-être par coïcidence comme des éléments HTML du passé et ne recevront de nouvelles fonctionnalités normalisées (comme les attributs de sécurité <code>sandbox</code> et <code>allow</code> pour <code>&lt;iframe&gt;</code>). De ce fait, il est <a href="https://csp.withgoogle.com/docs/strict-csp.html">recommandé</a> de restreindre cette directive, c'est-à-dire la définir explicitement à <code>object-src 'none'</code> dans la mesure du possible.</p>
+<div class="notecard note">
+  <p><strong>Note :</strong> Les éléments contrôlés par <code>object-src</code> sont considérés peut-être par coïcidence comme des éléments HTML du passé et ne recevront de nouvelles fonctionnalités normalisées (comme les attributs de sécurité <code>sandbox</code> et <code>allow</code> pour <code>&lt;iframe&gt;</code>). De ce fait, il est <a href="https://csp.withgoogle.com/docs/strict-csp.html">recommandé</a> de restreindre cette directive, c'est-à-dire la définir explicitement à <code>object-src 'none'</code> dans la mesure du possible.</p>
+</div>
 
 <table class="properties">
  <tbody>

@@ -19,7 +19,9 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-reques
 
 <p>La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <code><strong>upgrade-insecure-requests</strong></code> informe l'agent utilisateur de traiter toutes les URL non sécurisées d'un site (servies avec HTTP) comme si elles avaient été remplacées par des URL sécurisées (servies avec HTTPS). Cette directive est prévue pour les sites web ayant un grand nombre d'URL non sécurisées héritées du passé et qui ont besoin d'être récrites.</p>
 
-<p class="note">La directive <code>upgrade-insecure-requests</code> est évaluée avant la directive {{CSP("block-all-mixed-content")}} et si cette elle est définie, cette dernière est effectivement ignorée. Il est recommendé de ne définir que l'une des deux directives mais non les deux, à moins que vous souhaitiez forcer HTTPS sur les anciens navigateurs qui ne le font pas après une redirection vers HTTP.</p>
+<div class="notecard note">
+  <p><strong>Note :</strong> La directive <code>upgrade-insecure-requests</code> est évaluée avant la directive {{CSP("block-all-mixed-content")}} et si cette elle est définie, cette dernière est effectivement ignorée. Il est recommendé de ne définir que l'une des deux directives mais non les deux, à moins que vous souhaitiez forcer HTTPS sur les anciens navigateurs qui ne le font pas après une redirection vers HTTP.</p>
+</div>
 
 <p>The <code>upgrade-insecure-requests</code> directive will not ensure that users visiting your site via links on third-party sites will be upgraded to HTTPS for the top-level navigation and thus does not replace the {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}}) header, which should still be set with an appropriate <code>max-age</code> to ensure that users are not subject to SSL stripping attacks.</p>
 

@@ -19,8 +19,8 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content
 
 <p>Toutes les requêtes vers des <a href="/fr/docs/Sécurité/MixedContent">contenus mixtes</a> sont alors bloquées, y compris les ressources actives et passives. Cela s'applique aussi aux documents {{HTMLElement("iframe")}}, assurant que la page est complètement protégée contre les contenus mixtes.</p>
 
-<div class="blockIndicator note">
-<p>Note : La directive {{CSP("upgrade-insecure-requests")}} est évaluée avant <code>block-all-mixed-content</code>. Si elle est définie, alors <code>block-all-mixed-content</code> n'est pas nécessaire, à moins que vous souhaitiez forcer HTTPS sur les anciens navigateurs qui ne le font pas après une redirection vers HTTP.</p>
+<div class="note">
+<p><strong>Note :</strong> La directive {{CSP("upgrade-insecure-requests")}} est évaluée avant <code>block-all-mixed-content</code>. Si elle est définie, alors <code>block-all-mixed-content</code> n'est pas nécessaire, à moins que vous souhaitiez forcer HTTPS sur les anciens navigateurs qui ne le font pas après une redirection vers HTTP.</p>
 </div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
