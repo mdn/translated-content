@@ -53,7 +53,7 @@ translation_of: Web/Web_Components/Using_shadow_DOM
 
 <p>你可以使用同样的方式来操作 Shadow DOM，就和操作常规 DOM 一样——例如添加子节点、设置属性，以及为节点添加自己的样式（例如通过 <code>element.style</code> 属性），或者为整个 Shadow DOM 添加样式（例如在 {{htmlelement("style")}} 元素内添加样式）。不同的是，Shadow DOM 内部的元素始终不会影响到它外部的元素（除了 {{CSSxRef(":focus-within")}}），这为封装提供了便利。</p>
 
-<p>注意，不管从哪个方面来看，Shadow DOM 都不是一个新事物——在过去的很长一段时间里，浏览器用它来封装一些元素的内部结构。以一个有着默认播放控制按钮的 {{htmlelement("video")}} 元素为例。你所能看到的只是一个 <code>&lt;video&gt;</code> 标签，实际上，在它的 Shadow DOM 中，包含来一系列的按钮和其他控制器。Shadow DOM 标准允许你为你自己的元素（custom element）维护一组 Shadow DOM。</p>
+<p>注意，不管从哪个方面来看，Shadow DOM 都不是一个新事物——在过去的很长一段时间里，浏览器用它来封装一些元素的内部结构。以一个有着默认播放控制按钮的 {{htmlelement("video")}} 元素为例。你所能看到的只是一个 <code>&lt;video&gt;</code> 标签，实际上，在它的 Shadow DOM 中，包含了一系列的按钮和其他控制器。Shadow DOM 标准允许你为你自己的元素（custom element）维护一组 Shadow DOM。</p>
 
 <h2 id="基本用法">基本用法</h2>
 

@@ -6,151 +6,153 @@ original_slug: Apprendre/CSS/Building_blocks/Handling_different_text_directions
 ---
 <div>{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}</div>
 
-<p>Beaucoup des propriétés et des valeurs que nous avons rencontrées jusqu'ici dans notre apprentissage du CSS ont été associées aux dimensions physiques de notre écran. Nous créons des bordues en haut, à droite, en bas et à gauche d'une box, par exemple. Ces dimensions physiques s'accordent très bien au contenu qui est visionné horizontalement, et par défaut le web à tendance à mieux supporter les langues qui se lisent de gauche à droite (par exemple l'anglais ou le Français) que celles qui se lisent de droite à gauche (comme l'Arabe).</p>
+<p>Beaucoup des propriétés et des valeurs que nous avons rencontrées jusqu'ici dans notre apprentissage du CSS ont été associées aux dimensions physiques de notre écran. Nous créons des bordures en haut, à droite, en bas et à gauche d'une box, par exemple. Ces dimensions physiques s'accordent très bien au contenu qui est visionné horizontalement, et par défaut le web a tendance à mieux supporter les langues qui se lisent de gauche à droite (par exemple l'anglais ou le français) que celles qui se lisent de droite à gauche (comme l'arabe).</p>
 
-<p>Ces dernières années cependant, le CSS a évolué pour supporter du contenu orienté dans différentes directions, comme la droite vers la gauche, mais également le haut vers le bas (comme le Japonais) — Ces différentes directionnalités sont appelées <strong>writing modes</strong> (modes d'écriture en français). En progressant dans votre apprentissage et en travaillant sur l'agencement, une compréhension des modes d'écriture vous sera très utile, donc nous allons vous les présenter maintenant.</p>
+<p>Ces dernières années cependant, le CSS a évolué pour supporter du contenu orienté dans différentes directions, comme la droite vers la gauche, mais également le haut vers le bas (comme le japonais) — Ces différentes directions sont appelées <strong>modes d'écriture</strong> (<i lang="en">writing modes</i> en anglais). En progressant dans votre apprentissage et en travaillant sur l'agencement, une compréhension des modes d'écriture vous sera très utile, donc nous allons vous les présenter maintenant.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">Prerequisites:</th>
-   <td>Basic computer literacy, <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Installing_basic_software">basic software installed</a>, basic knowledge of <a href="https://developer.mozilla.org/en-US/Learn/Getting_started_with_the_web/Dealing_with_files">working with files</a>, HTML basics (study <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML">Introduction to HTML</a>), and an idea of how CSS works (study <a href="/en-US/docs/Learn/CSS/First_steps">CSS first steps</a>.)</td>
+   <th scope="row">Prérequis&nbsp;:</th>
+   <td>Notions informatiques de base, <a href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software">avoir installé les logiciels de base</a>, notions élémentaires sur <a href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files">la manipulation des fichiers</a>, notions élémentaires sur HTML (voir <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">l'introduction à HTML</a>), et une idée du fonctionnement de CSS (voir <a href="/fr/docs/Learn/CSS/First_steps">les premiers pas en CSS</a>.)</td>
   </tr>
   <tr>
-   <th scope="row">Objective:</th>
-   <td>To understand the importance of writing modes to modern CSS.</td>
+   <th scope="row">Objectif&nbsp;:</th>
+   <td>Comprendre l'importance des modes d'écriture pour le CSS moderne.</td>
   </tr>
  </tbody>
 </table>
 
 <h2 id="Que_sont_les_modes_décritures">Que sont les modes d'écritures?</h2>
 
-<p>Un mode d'écriture en CSS fait référence au sens d'écriture du texte, soit horizontalement, soit verticalement. La propriété {{cssxref("writing-mode")}} nous permet de passer d'un mode d'écriture à un autre. Vous n'avez pas besoin de travailler dans une langue qui utilise un mode d'écriture vertical pour vouloir l'utiliser — vous pourriez aussi changer le mode d'écriture de certaines parties de votre agencement dans un but créatif.</p>
+<p>Un mode d'écriture en CSS fait référence au sens d'écriture du texte : horizontal ou vertical. La propriété <a href="/fr/docs/Web/CSS/writing-mode"><code>writing-mode</code></a> nous permet de passer d'un mode d'écriture à un autre. Vous n'avez pas besoin de travailler dans une langue qui utilise un mode d'écriture vertical pour vouloir l'utiliser — vous pourriez aussi changer le mode d'écriture de certaines parties de votre agencement dans un but créatif.</p>
 
 <p>Dans l'exemple ci-dessous nous avons un titre affiché qui utilise <code>writing-mode: vertical-rl</code>. Le texte est maintenant affiché verticalement. Les textes verticaux sont communs dans le design graphique, et peuvent être un moyen pour ajouter un look plus intéressant à votre design web.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/writing-modes/simple-vertical.html", '100%', 800)}}</p>
 
-<p>Les trois valeurs possibles pour la propriété <code><a href="/en-US/docs/Web/CSS/writing-mode">writing-mode</a></code> sont:</p>
+<p>Les trois valeurs possibles pour la propriété <code><a href="/fr/docs/Web/CSS/writing-mode">writing-mode</a></code> sont&nbsp;:</p>
 
 <ul>
- <li><code>horizontal-tb</code>: Top-to-bottom block flow direction. Sentences run horizontally.</li>
- <li><code>vertical-rl</code>: Right-to-left block flow direction. Sentences run vertically.</li>
- <li><code>vertical-lr</code>: Left-to-right block flow direction. Sentences run vertically.</li>
+ <li><code>horizontal-tb</code>&nbsp;: Direction de bloc allant du haut vers le bas, les phrases sont écrites horizontalement.</li>
+ <li><code>vertical-rl</code>&nbsp;: Direction de bloc allant de droite à gauche, les phrases sont écrites verticalement.</li>
+ <li><code>vertical-lr</code>&nbsp;: Direction de bloc allant de gauche à droite, les phrases sont écrites verticalement.</li>
 </ul>
 
-<p>So the <code>writing-mode</code> property is in reality setting the direction in which block-level elements are displayed on the page — either from top-to-bottom, right-to-left, or left-to-right. This then dictates the direction text flows in sentences.</p>
+<p>La propriété <code>writing-mode</code> définit d'abord la direction selon laquelle les éléments de bloc sont affichés sur la page : de haut en bas, de droite à gauche ou de gauche à droite. Elle indique ensuite la direction selon laquelle le texte est écrit au sein des phrases.</p>
 
-<h2 id="Writing_modes_and_block_and_inline_layout">Writing modes and block and inline layout</h2>
+<h2 id="writing_modes_and_block_and_inline_layout">Modes d'écriture et disposition en bloc ou en ligne</h2>
 
-<p>We have already discussed <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model#Block_and_inline_boxes">block and inline layout</a>, and the fact that some things display as block elements and others as inline elements. As we have seen described above, block and inline is tied to the writing mode of the document, and not the physical screen. Blocks are only displayed from the top to the bottom of the page if you are using a writing mode that displays text horizontally, such as English.</p>
+<p>Nous avons déjà abordé <a href="/fr/docs/Learn/CSS/Building_blocks/The_box_model#block_and_inline_boxes">la disposition en ligne et en bloc</a> et le fait que certains éléments s'affichent en bloc et d'autres en ligne. Dans les descriptions précédentes, on voit que le caractère «&nbsp;de bloc&nbsp;» ou «&nbsp;en ligne&nbsp;» est lié au mode d'écriture du document et pas à l'écran, physique. Les blocs sont uniquement affichés de haut en bas sur la page si on utilise un mode d'écriture qui organise le texte horizontalement, comme celui utilisé pour le français.</p>
 
-<p>If we look at an example this will become clearer. In this next example I have two boxes that contain a heading and a paragraph. The first uses <code>writing-mode: horizontal-tb</code>, a writing mode that is written horizontally and from the top of the page to the bottom. The second uses <code>writing-mode: vertical-rl</code>; this is a writing mode that is written vertically and from right to left.</p>
+<p>Prenons un exemple pour éclaircir tout ça. Ici, on a deux boîtes qui contiennent un titre et un paragraphe. La première boîte utilise <code>writing-mode: horizontal-tb</code>, c'est-à-dire un mode d'écriture où le texte est écrit horizontalement et où le contenu s'organise du haut de la page vers le bas. La deuxième boîte utilise <code>writing-mode: vertical-rl</code>, c'est-à-dire un mode d'écriture où le texte est écrit verticalement et où le contenu va de droite à gauche.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/writing-modes/block-inline.html", '100%', 1200)}}</p>
 
-<p>When we switch the writing mode, we are changing which direction is block and which is inline. In a <code>horizontal-tb</code> writing mode the block direction runs from top to bottom; in a <code>vertical-rl</code> writing mode the block direction runs right-to-left horizontally. So the <strong>block dimension</strong> is always the direction blocks are displayed on the page in the writing mode in use. The <strong>inline dimension</strong> is always the direction a sentence flows.</p>
+<p>Lorsqu'on change de mode d'écriture, on change la direction utilisée pour l'axe de bloc et celle pour l'axe en ligne. Avec un mode d'écriture <code>horizontal-tb</code>, la direction de bloc va de haut en bas&nbsp; avec un mode d'écriture <code>vertical-rl</code>, la direction de bloc va de droite à gauche. Ainsi, la <strong>dimension de bloc</strong> correspond toujours à la direction selon laquelle les blocs sont affichés sur la page pour le mode d'écriture utilisé. La <strong>dimension en ligne</strong> correspond toujours à la direction selon laquelle les phrases sont écrites.</p>
 
-<p>This figure shows the two dimensions when in a horizontal writing mode.<img alt="Showing the block and inline axis for a horizontal writing mode." src="https://mdn.mozillademos.org/files/16574/horizontal-tb.png" style="height: 353px; width: 634px;"></p>
+<p>Ce schéma illustre les deux dimensions pour un mode d'écriture horizontal.</p>
 
-<p>This figure shows the two dimensions in a vertical writing mode.</p>
+<p><img alt="Illustration de l'axe de bloc et de l'axe en ligne pour un mode d'écriture horizontal." src="horizontal-tb.png"></p>
 
-<p><img alt="Showing the block and inline axis for a vertical writing mode." src="https://mdn.mozillademos.org/files/16575/vertical.png" style="height: 472px; width: 406px;"></p>
+<p>Ce schéma illustre les deux dimensions pour un mode d'écriture vertical.</p>
 
-<p>Once you start to look at CSS layout, and in particular the newer layout methods, this idea of block and inline becomes very important. We will revisit it later on.</p>
+<p><img alt="Illustration de l'axe de bloc et de l'axe en ligne pour un mode d'écriture vertical." src="vertical.png"></p>
+
+<p>Lorsqu'on commence à travailler sur des dispositions CSS, notamment avec les méthodes de disposition récentes, les notions de bloc et d'en ligne se révèlent cruciales. Nous y reviendrons par la suite.</p>
 
 <h3 id="Direction">Direction</h3>
 
-<p>In addition to writing mode we also have text direction. As mentioned above, some languages such as Arabic are written horizontally, but right-to-left. This is not something you are likely to use in a creative sense — if you simply want to line something up on the right there are other ways to do so — however it is important to understand this as part of the nature of CSS. The web is not just for languages that are displayed left-to-right!</p>
+<p>En plus des modes d'écriture, il existe également la direction du texte. Comme mentionné avant, certaines langues comme l'arabe sont écrites horizontalement mais de droite à gauche. Il ne s'agit probablement pas là d'un aspect qui sera utilisé à des fins artistiques (si on souhaite aligner quelque chose à droite, il existe d'autres façons de faire) mais il est important de comprendre que cela fait partie de la nature de CSS. Le Web ne concerne pas uniquement les langues écrites de gauches à droite&nbsp;!</p>
 
-<p>Due to the fact that writing mode and direction of text can change, newer CSS layout methods do not refer to left and right, and top and bottom. Instead they will talk about <em>start</em> and <em>end</em> along with this idea of inline and block. Don't worry too much about that right now, but keep these ideas in mind as you start to look at layout; you will find it really helpful in your understanding of CSS.</p>
+<p>Étant donné que les modes d'écritures et les directions du texte peuvent varier, les nouvelles méthodes de disposition CSS ne font pas référence à la gauche, la droite, le haut ou le bas. À la place, elles utilisent les notions de <em>début</em> et de <em>fin</em>, combinées aux notions bloc et en ligne. Ne vous souciez pas trop de ça pour le moment, mais gardez ces idées en tête lorsque vous verrez ces notions pour les méthodes de disposition, cela vous sera utile pour une bonne compréhension de CSS.</p>
 
-<h2 id="Logical_properties_and_values">Logical properties and values</h2>
+<h2 id="logical_properties_and_values">Propriétés et valeurs logiques</h2>
 
-<p>The reason to talk about writing modes and direction at this point in your learning however, is because of the fact we have already looked at a lot of properties which are tied to the physical dimensions of the screen, and make most sense when in a horizontal writing mode.</p>
+<p>Nous abordons maintenant les modes d'écriture et la direction du texte maintenant, car les propriétés que nous avons vues jusqu'à présent étaient plutôt liées aux dimensions physiques de l'écran et à un mode d'écriture horizontal.</p>
 
-<p>Let's take a look at our two boxes again — one with a <code>horizontal-tb</code> writing mode and one with <code>vertical-rl</code>. I have given both of these boxes a {{cssxref("width")}}. You can see that when the box is in the vertical writing mode, it still has a width, and this is causing the text to overflow.</p>
+<p>Reprenons nos deux boîtes&nbsp;: celle avec le mode d'écriture <code>horizontal-tb</code> et celle avec le mode d'écriture <code>vertical-rl</code>. Pour ces deux boîtes, on a défini <a href="/fr/docs/Web/CSS/width"><code>width</code></a>. Pour la boîte avec le mode d'écriture vertical, cela provoque un dépassement du texte.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/writing-modes/width.html", '100%', 1200)}}</p>
 
-<p>What we really want in this scenario, is to essentially swap height and width along with the writing mode. When we're in a vertical writing mode we want the box to expand in the block dimension just like it does in the horizontal mode.</p>
+<p>Ce qu'on veut plus probablement dans ce scénario, c'est de passer de la largeur à la hauteur selon le mode d'écriture&nbsp;: quand on utilise un mode d'écriture vertical, on souhaite que la boîte soit redimensionnée selon l'axe de bloc, comme pour le mode horizontal.</p>
 
-<p>To make this easier, CSS has recently developed a set of mapped properties. These essentially replace physical properties — things like <code>width</code> and <code>height</code> — with <strong>logical</strong>, or <strong>flow relative</strong> versions.</p>
+<p>Pour faciliter cela, CSS est désormais doté d'un ensemble de propriétés correspondantes. Dans l'ensemble, ces propriétés remplacent les propriétés physiques comme <code>width</code> ou <code>height</code> par des versions <strong>logiques</strong> ou <strong>relatives au flux</strong>.</p>
 
-<p>The property mapped to <code>width</code> when in a horizontal writing mode is called {{cssxref("inline-size")}} — it refers to the size in the inline dimension. The property for <code>height</code> is named {{cssxref("block-size")}} and is the size in the block dimension. You can see how this works in the example below where we have replaced <code>width</code> with <code>inline-size</code>.</p>
+<p>La propriété logique qui correspond à <code>width</code> lorsqu'on utilise un mode d'écriture horizontal est appelée <a href="/fr/docs/Web/CSS/inline-size"><code>inline-size</code></a>&nbsp;: elle fait référence à la dimension selon l'axe en ligne. La propriété correspondant à <code>height</code> est quant à elle intitulée <a href="/fr/docs/Web/CSS/block-size"><code>block-size</code></a> et représente la taille selon la dimension de bloc. Vous pouvez observer leur fonctionnement dans l'exemple qui suit où nous avons remplacé <code>width</code> par <code>inline-size</code>.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/writing-modes/inline-size.html", '100%', 1200)}}</p>
+<p>{{EmbedGHLiveSample("css-examples/learn/writing-modes/inline-size.html", '100%', 950)}}</p>
 
-<h3 id="Logical_margin_border_and_padding_properties">Logical margin, border, and padding properties</h3>
+<h3 id="logical_margin_border_and_padding_properties">Propriétés logiques pour les marges, bordures et remplissages</h3>
 
-<p>In the last two lessons we have learned about the CSS box model, and CSS borders. In the margin, border, and padding properties you will find many instances of physical properties, for example {{cssxref("margin-top")}}, {{cssxref("padding-left")}}, and {{cssxref("border-bottom")}}. In the same way that we have mappings for width and height there are mappings for these properties.</p>
+<p>Dans les deux précédentes leçons, nous avons abordé le modèle de boîte CSS et les bordures. Pour les propriétés qui régissent les marges, bordures et le remplissage, vous verrez de nombreuses propriétés physiques comme <a href="/fr/docs/Web/CSS/margin-top"><code>margin-top</code></a>, <a href="/fr/docs/Web/CSS/padding-left"><code>padding-left</code></a>, et <a href="/fr/docs/Web/CSS/border-bottom"><code>border-bottom</code></a>. À l'instar de la hauteur et de la largeur, ces propriétés disposent de propriétés logiques équivalentes.</p>
 
-<p>The <code>margin-top</code> property is mapped to {{cssxref("margin-block-start")}} — this will always refer to the margin at the start of the block dimension.</p>
+<p>La propriété physique <code>margin-top</code> correspond à la propriété logique <a href="/fr/docs/Web/CSS/margin-block-start"><code>margin-block-start</code></a> pour un mode d'écriture horizontal. Cette propriété logique fera toujours référence à la marge située au début de la dimension de bloc.</p>
 
-<p>The {{cssxref("padding-left")}} property maps to {{cssxref("padding-inline-start")}}, the padding that is applied to the start of the inline direction. This will be where sentences start in that writing mode. The {{cssxref("border-bottom")}} property maps to {{cssxref("border-block-end")}}, which is the border at the end of the block dimension.</p>
+<p>La propriété physique <a href="/fr/docs/Web/CSS/padding-left"><code>padding-left</code></a> trouve son équivalent avec <a href="/fr/docs/Web/CSS/padding-inline-start"><code>padding-inline-start</code></a>, le remplissage (<i lang="en">padding</i>) appliqué au début de la direction en ligne. Cela correspond à l'endroit où les phrases commencent pour le mode d'écriture courant. La propriété <a href="/fr/docs/Web/CSS/border-bottom"><code>border-bottom</code></a> a quant à elle l'équivalent <a href="/fr/docs/Web/CSS/border-block-end"><code>border-block-end</code></a> qui représente la bordure sur à la fin de la dimension de bloc.</p>
 
-<p>You can see a comparison between physical and logical properties below.</p>
+<p>Vous pouvez voir une comparaison entre les propriétés physiques et logiques ci-après.</p>
 
-<p><strong>If you change the writing mode of the boxes by switching the <code>writing-mode</code> property on <code>.box</code> to <code>vertical-rl</code>, you will see how the physical properties stay tied to their physical direction, whereas the logical properties switch with the writing mode.</strong></p>
+<p><strong>Si vous changez le mode d'écriture des boîtes en modifiant la valeur de <code>writing-mode</code> sur le sélecteur <code>.box</code> afin de la passer à <code>vertical-rl</code>, vous pourrez voir que les propriétés physiques restent liées aux directions physiques tandis que les propriétés logiques s'adaptent en fonction du mode d'écriture.</strong></p>
 
-<p><strong>You can also see that the {{htmlelement("h2")}} has a black <code>border-bottom</code>. Can you work out how to make that bottom border always go below the text in both writing modes?</strong></p>
+<p><strong>Vous pouvez également voir que <a href="/fr/docs/Web/HTML/Element/Heading_Elements"><code>&lt;h2&gt;</code></a> a une bordure avec <code>border-bottom</code>. Pouvez-vous adapter le code afin que la bordure sous le texte suive cette direction, quel que soit le mode d'écriture&nbsp;?</strong></p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/writing-modes/logical-mbp.html", '100%', 1200)}}</p>
 
-<p>There are a huge number of properties when you consider all of the individual border longhands, and you can see all of the mapped properties on the MDN page for <a href="/en-US/docs/Web/CSS/CSS_Logical_Properties">Logical Properties and Values</a>.</p>
+<p>Il existe de nombreuses propriétés détaillées pour gérer les différents aspects des bordures, vous pouvez voir l'ensemble des correspondances sur la page MDN des <a href="/fr/docs/Web/CSS/CSS_Logical_Properties">propriétés et valeurs logiques</a>.</p>
 
-<h3 id="Logical_values">Logical values</h3>
+<h3 id="logical_values">Valeurs logiques</h3>
 
-<p>We have so far looked at logical property names. There are also some properties that take physical values of <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>. These values also have mappings, to logical values — <code>block-start</code>, <code>inline-end</code>, <code>block-end</code>, and <code>inline-start</code>.</p>
+<p>Jusqu'à présent, nous avons étudié les noms des propriétés logiques. Il existe également des propriétés dont les valeurs sont caractérisées physiquement comme <code>top</code>, <code>right</code>, <code>bottom</code>, et <code>left</code>. Ces valeurs disposent également d'équivalences logiques&nbsp;: <code>block-start</code>, <code>inline-end</code>, <code>block-end</code>, et <code>inline-start</code>.</p>
 
-<p>For example, you can float an image left to cause text to wrap round the image. You could replace <code>left</code> with <code>inline-start</code> as shown in the example below.</p>
+<p>Ainsi, on peut faire flotter une image à gauche pour que le texte soit écrit autour de l'image. Dans l'exemple qui suit, vous pouvez remplacer <code>left</code> avec <code>inline-start</code>.</p>
 
-<p><strong>Change the writing mode on this example to <code>vertical-rl</code> to see what happens to the image. Change <code>inline-start</code> to <code>inline-end</code> to change the float.</strong></p>
+<p><strong>Modifiez le mode d'écriture de cet exemple afin de le passer à <code>vertical-rl</code> pour voir ce qui se produit sur l'image. Modifiez <code>inline-start</code> à <code>inline-end</code> pour changer l'emplacement du flottement.</strong></p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/writing-modes/float.html", '100%', 1200)}}</p>
+<p>{{EmbedGHLiveSample("css-examples/learn/writing-modes/float.html", '100%', 850)}}</p>
 
-<p>Here we are also using logical margin values to ensure the margin is in the correct place no matter what the writing mode is.</p>
+<p>Ici, on utilise aussi les valeurs logiques pour les marges afin de s'assurer que les marges sont correctement positionnées, quel que soit le mode d'écriture.</p>
 
-<div class="blockIndicator note">
-<p>Currently, only Firefox supports flow relative values  for <code>float</code>. If you are using <strong>Google Chrome</strong> or <strong>Microsoft Edge</strong>, you may find that the image did not float.</p>
+<div class="notecard note">
+ <p><strong>Note :</strong> Actuellement, seul Firefox prend en charge les valeurs relatives de flux pour <code>float</code>. Si vous utilisez <strong>Google Chrome</strong> ou <strong>Microsoft Edge</strong>, vous obtiendrez vraisemblablement un résultat où l'image ne flotte pas.</p>
 </div>
 
-<h3 id="Should_you_use_physical_or_logical_properties">Should you use physical or logical properties?</h3>
+<h3 id="should_you_use_physical_or_logical_properties">Faut-il utiliser les propriétés physiques ou logiques&nbsp;?</h3>
 
-<p>The logical properties and values are newer than their physical equivalents, and therefore have only recently been implemented in browsers. You can check any property page on MDN to see how far back the browser support goes. If you are not using multiple writing modes then for now you might prefer to use the physical versions. However, ultimately we expect that people will transition to the logical versions for most things, as they make a lot of sense once you start also dealing with layout methods such as flexbox and grid.</p>
+<p>Les propriétés logiques et les valeurs correspondantes sont plus récentes que leurs équivalents physiques et l'implémentation de ces premières est donc également plus récente. Vous pouvez consulter la page de chaque propriété sur MDN pour vérifier le tableau de compatibilité des navigateurs. Si vous n'utilisez pas plusieurs modes d'écriture, vous pourrez préférer les versions physiques. Toutefois, on s'attend à terme que les personnes utilisent les versions logiques dans la majorité des cas étant donné leur pertinence pour certaines méthodes de dispositions comme les grilles CSS ou <i lang="en">flexbox</i>.</p>
 
-<h2 id="Test_your_skills!">Test your skills!</h2>
+<h2 id="test_your_skills!">Testez vos compétences&nbsp;!</h2>
 
-<p>We have covered a lot in this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/CSS/Building_blocks/Writing_Modes_Tasks">Test your skills: writing modes</a>.</p>
+<p>Nous avons abordé de nombreux concepts dans cet article, mais avez-vous retenu les informations fondamentales ? Vous pourrez trouver différents tests sur le sujet pour vérifier que vous avez assimilé les bonnes informations&nbsp;: voir <a href="/fr/docs/Learn/CSS/Building_blocks/Writing_Modes_Tasks">Testez vos compétences&nbsp;: les modes d'écriture</a>.</p>
 
-<h2 id="Summary">Summary</h2>
+<h2 id="summary">Résumé</h2>
 
-<p>The concepts explained in this lesson are becoming increasingly important in CSS. An understanding of the block and inline direction — and how text flow changes with a change in writing mode — will be very useful going forward. It will help you in understanding CSS even if you never use a writing mode other than a horizontal one.</p>
+<p>Les concepts expliqués ici revêtent une importance croissante en CSS. Comprendre les directions en ligne et de bloc, ainsi que la façon dont le flux de texte change selon le mode d'écriture vous sera désormais très utile. Vous aurez une meilleure compréhension de CSS, même si vous n'utilisez qu'un seul mode d'écriture horizontal.</p>
 
-<p>In the next module we will take a good look at overflow in CSS.</p>
+<p>Dans le prochain module, nous verrons comment les dépassements sont gérés en CSS.</p>
 
 <p>{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}</p>
 
-<h2 id="In_this_module">In this module</h2>
+<h2 id="in_this_module">Dans ce module</h2>
 
 <ol>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Cascade and inheritance</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">CSS selectors</a>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Cascade et héritage</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors">Sélecteurs CSS</a>
   <ul>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">Type, class, and ID selectors</a></li>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Attribute selectors</a></li>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">Pseudo-classes and pseudo-elements</a></li>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators">Combinators</a></li>
+   <li><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">Sélecteurs de type, de classe et d'ID</a></li>
+   <li><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Sélecteurs d'attributs</a></li>
+   <li><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">Pseudo-classes et pseudo-éléments</a></li>
+   <li><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators">Combinateurs</a></li>
   </ul>
  </li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">The box model</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Backgrounds and borders</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Handling different text directions</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content">Overflowing content</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">Values and units</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Sizing items in CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements">Images, media, and form elements</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Styling_tables">Styling tables</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS">Debugging CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Organizing">Organizing your CSS</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/The_box_model">Le modèle de boîte</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Arrière-plans et bordures</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Gestion de différentes directions de texte</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Overflowing_content">Débordements de contenu</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Values_and_units">Valeurs et unités CSS</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Définir la taille des éléments en CSS</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements">Images, médias et éléments de formulaire</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Styling_tables">Mise en page de tableaux</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS">Débogage de CSS</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Organizing">Organiser votre CSS</a></li>
 </ol>
