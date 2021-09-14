@@ -3,105 +3,99 @@ title: parseInt()
 slug: Web/JavaScript/Reference/Global_Objects/parseInt
 tags:
   - JavaScript
-  - Method
-  - Reference
+  - メソッド
+  - リファレンス
   - parseInt
+browser-compat: javascript.builtins.parseInt
 translation_of: Web/JavaScript/Reference/Global_Objects/parseInt
 ---
-<div>{{jsSidebar("Objects")}}</div>
+{{jsSidebar("Objects")}}
 
-<p><code><strong>parseInt()</strong></code> は、文字列の引数を解析し、指定された<a href="https://ja.wikipedia.org/wiki/%E5%9F%BA%E6%95%B0">基数</a> (数学的記数法の底) の整数値を返します。</p>
+**`parseInt()`** 関数は、文字列の引数を解析し、指定された[基数](https://ja.wikipedia.org/wiki/%E5%9F%BA%E6%95%B0) (数学的記数法の底) の整数値を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/globalprops-parseint.html")}}</div>
+{{EmbedInteractiveExample("pages/js/globalprops-parseint.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただける場合は、<a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+parseInt(string)
+parseInt(string, radix)
+```
 
-<pre class="syntaxbox notranslate">parseInt(<var>string</var> [, <var>radix</var>])</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `string`
+  - : 解析する値。この引数が文字列でなかった場合は、抽象操作 [`ToString`](https://tc39.es/ecma262/#sec-tostring) を用いて文字列に変換されます。この引数では先頭の{{glossary("whitespace", "ホワイトスペース")}}は無視されます。
+- `radix` {{optional_inline}}
 
-<dl>
- <dt><code><var>string</var></code></dt>
- <dd>解析する値。この引数が文字列でない場合、抽象操作 <code><a href="https://tc39.es/ecma262/#sec-tostring">ToString</a></code> を用いて文字列に変換されます。この引数では先頭の{{glossary("whitespace", "ホワイトスペース")}}は無視されます。</dd>
- <dt><code><var>radix</var></code><var> {{optional_inline}}</var></dt>
- <dd><code>2</code> から <code>36</code> までの整数で、<code><var>string</var></code> の<em>基数</em> (数学的記数法の底) を表します。これは既定値が <code>10</code> では<strong><em>ない</em></strong>ので注意してください。</dd>
- <dd class="blockIndicator warning"><a href="#Description">下記の解説</a>では、<code><var>radix</var></code> が提供されなかった場合に何が起こるかをもっと詳細に説明しています。</dd>
-</dl>
+  - : `2` から `36` までの整数で、`string` の*基数* (数学的記数法の底) を表します。既定値が `10` では**ない**ので注意してください。基数の値が `Number` 型でなかった場合は、 `Number` に型変換されます。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+    > **Warning:** [下記の解説](#description)では、`radix` が提供されなかった場合に何が起こるかをもっと詳細に説明しています。
 
-<p>指定された <code><var>string</var></code> を解析した整数値です。</p>
+### 返値
 
-<p>また、下記の場合は {{jsxref("NaN")}} が返されます。</p>
+指定された `string` を解析した整数値です。
 
-<ul>
- <li><code><var>radix</var></code> が <code>2</code> よりも小さいか <code>36</code> よりも大きい、または r</li>
- <li>最初のホワイトスペース以外の文字が数値に変換できない。</li>
-</ul>
+また、下記の場合は {{jsxref("NaN")}} が返されます。
 
-<h2 id="Description" name="Description">解説</h2>
+- `radix` が `2` よりも小さいか `36` よりも大きい、または
+- 最初のホワイトスペース以外の文字が数値に変換できない。
 
-<p><code>parseInt</code> 関数は第1引数を文字列に変換し、解析したうえで、整数または <code>NaN</code> を返します。</p>
+## 解説
 
-<p>返値は <code>NaN</code> でない場合は、第1引数を指定された <code><var>radix</var></code> で数値として解釈した整数値になります。(例えば、<code><var>radix</var></code> が <code>10</code> であれば 10進数からの変換で、<code>8</code> であれば 8進数からの変換で、<code>16</code> であれば 16進数からの変換、などです。)</p>
+`parseInt` 関数は第 1 引数を文字列に変換し、解析したうえで、整数または `NaN` を返します。
 
-<p><code>10</code> 以上の基数については、<code>9</code> より大きい数字はアルファベットで示されます。たとえば、16進数(基数 <code>16</code>) では <code>A</code> から <code>F</code> が用いられます。</p>
+`NaN` でない場合は、返値は第 1 引数を指定された `radix` で数値として解釈した整数値になります。(例えば、`radix` が `10` であれば 10 進数からの変換で、`8` であれば 8 進数からの変換で、`16` であれば 16 進数からの変換、などです。)
 
-<p><code>parseInt</code> 関数は指定された <code>radix</code> における数字ではない文字に出会うと、それ以降の文字を無視し、その時点で解析された整数値を返します。<code>parseInt</code> は数値を整数に切り捨てます。前後に空白があっても構いません。</p>
+`10` 以上の基数については、`9` より大きい数字はアルファベットで示されます。たとえば、 16 進数 (基数 `16`) では `A` から `F` が用いられます。
 
-<p>数値によっては <code>e</code> の文字を文字列表現の中で使用しますので (例えば <strong><code>6.022e23</code></strong> は 6.022 × 10<sup>23</sup> を表します)、<code>parseInt</code> を使用して数値を切り捨てると、とても大きな数字やとても小さな数字を使用する際に予期しない結果を生み出すことがあります。<code>parseInt</code> を {{jsxref("Math.floor()")}} の代用として使うべきでは<em>ありません</em>。</p>
+`parseInt` 関数は指定された `radix` における数字ではない文字に出会うと、それ以降の文字を無視し、その時点で解析された整数値を返します。`parseInt` は数値を整数に切り捨てます。前後に空白があっても構いません。
 
-<p><code>parseInt</code> は 2 つの符号を正確に理解します。<code>+</code> は正の符号で、<code>-</code> は負の符号です (ECMAScript 1 より)。これは解析の最初の段階で、ホワイトスペースを除去した後に行われます。符号が見つからなかった場合は、アルゴリズムは次の段階に移行します。そうでなければ、符号を取り除いて残りの文字列の数値の解析を実行します。</p>
+数値によっては `e` の文字を文字列表現の中で使用しますので (例えば **`6.022E23`** は 6.022 × 10^23 を表します)、`parseInt` を使用して数値を切り捨てると、とても大きな数字やとても小さな数字を使用する際に予期しない結果を生み出すことがあります。`parseInt` を {{jsxref("Math.floor()")}} の代用として使うべきではありません。
 
-<p><code><var>radix</var></code> が <code>undefined</code>, <code>0</code>, または指定されなかった場合、JavaScript 以下のように仮定します。</p>
+`parseInt` は 2 つの符号を正確に理解します。`+` は正の符号で、`-` は負の符号です (ECMAScript 1 より)。これは解析の最初の段階で、ホワイトスペースを除去した後に行われます。符号が見つからなかった場合は、アルゴリズムは次の段階に移行します。そうでなければ、符号を取り除いて残りの文字列の数値の解析を実行します。
 
-<ol>
- <li>入力した <code>string</code> が "<code>0x</code>" または "<code>0X</code>" (ゼロに続いて小文字または大文字の X) で始まった場合は、<code><var>radix</var></code> は <code>16</code> と仮定され、残りの文字列が 16進数として解釈されます。</li>
- <li>入力した <code>string</code> が "<code>0</code>" (ゼロ) で始まった場合は、<code><var>radix</var></code> は <code>8</code> (8進数) または <code>10</code> (10進数) と仮定されます。厳密にどちらの基数が選択されるかは実装に依存します。ECMAScript 5 では <code>10</code> (10進数) を使用する<em>べき</em>だと明示していますが、まだすべてのブラウザーが対応している訳ではありません。したがって、<strong><code>parseInt</code>関数を使うときは <code><var>radix</var></code> を常に指定してください</strong>。</li>
- <li>入力した <code>string</code> がその他の値で始まるときは、基数は <code>10</code> (10進数) となります。</li>
-</ol>
+引数 radix に渡された値は (必要に応じて) Number に型変換され、それから値が 0、`NaN`、`Infinity` のいずれかの場合 (undefined は `NaN` に型変換されます)、JavaScript は以下のように仮定します。
 
-<p>初めの文字が数値に変換できないときは、<code>parseInt</code> は <code>NaN</code> を返します。</p>
+1.  入力した `string` が "`0x`" または "`0X`" (ゼロに続いて小文字または大文字の X) で始まった場合は、`radix` は `16` と仮定され、残りの文字列が 16 進数として解釈されます。
+2.  入力した `string` がその他の値で始まるときは、基数は `10` (10 進数) となります。
 
-<p>数値演算の目的では、<code>NaN</code> は基数がいくつであっても数値にはなりません。{{jsxref("isNaN")}} 関数を使うと、<code>parseInt</code> の結果が <code>NaN</code> であるかどうか確かめられます。数値演算で <code>NaN</code> が与えられると、演算結果も <code>NaN</code> になります。</p>
+それ以外の場合、(必要に応じて型変換した) 基数の値が \[2, 36] の範囲から外れた場合は、`parseInt` は `NaN` を返します。
 
-<p>数値を特定の基数で文字列リテラルに変換したいときは、<code><var>thatNumber</var>.toString(<var>radix</var>)</code> を使用してください。</p>
+最初の文字が使用している基数で数字に変換できなかった場合は、`parseInt` は `NaN` を返します。
 
-<div class="blockIndicator warning">
-<p><strong>{{jsxref("BigInt")}} の警告:</strong> <code>parseInt</code> は {{jsxref("BigInt")}} を {{jsxref("Number")}} へ変換するので、その処理中に精度が落ちます。これは後に付く数値ではない値が、"<code>n</code>" を含めて、切り落とされるからです。</p>
-</div>
+数値演算の目的では、`NaN` は基数がいくつであっても数値にはなりません。{{jsxref("isNaN")}} 関数を使うと、`parseInt` の結果が `NaN` であるかどうか確かめられます。数値演算で `NaN` が与えられると、演算結果も `NaN` になります。
 
+数値を特定の基数で文字列リテラルに変換したいときは、`thatNumber.toString(radix)` を使用してください。
 
+> **Warning:** `parseInt` は {{jsxref("BigInt")}} を {{jsxref("Number")}} へ変換するので、その処理中に精度が落ちます。これは後に付く数値ではない値が、"`n`" を含めて、切り落とされるからです。
 
-<h3 id="Octal_interpretations_with_no_radix" name="Octal_interpretations_with_no_radix">基数を指定しない 8進数の解釈</h3>
+### 基数を指定しない 8 進数の解釈
 
-<p>ECMAScript 3 で非推奨となり、ECMAScript 5 で廃止されたものの、多くの実装が <code>0</code> で始まる数字の文字列を 8進数として解釈します。以下の式は 8進数とされることもあれば、10進数で扱われることもあります。<strong>つねに <code><var>radix</var></code> を指定すれば、信頼できない動作を防ぐことができます</strong>。</p>
+以下の情報は 2021 年時点での最新の実装には当てはまらないことに注意してください。
 
-<pre class="brush: js notranslate">parseInt('0e0')  // 0
+ECMAScript 3 で非推奨となったものの、 ECMAScript 3 の多くの実装が `0` で始まる数字の文字列を 8 進数として解釈していました。以下の式は 8 進数とされることもあれば、 10 進数で扱われることもありました。
+
+```js
+parseInt('0e0')  // 0
 parseInt('08')   // '8' は 8進数では用いられないため、0。
-</pre>
+```
 
-<p>ECMAScript 5 仕様書において <code>parseInt</code> 関数は、<code>0</code> の文字で始まる文字列を 8進数として扱うことをもはや実装に認めなくなりました。</p>
+ECMAScript 5 仕様書において、 `parseInt` 関数は、`0` の文字で始まる文字列を 8 進数として扱うことを実装に認めなくなりました。 2021 年時点では、多くの実装がこの動作を採用しています。
 
-<p>ECMAScript 5 では次のように宣言しています。</p>
+```js
+parseInt('0e0')  // 0
+parseInt('08')   // 8
+```
 
-<blockquote>
-<p><code>parseInt</code>関数は、文字列引数の内容を指定された基数によって解釈した整数値を生成します。文字列の先頭のホワイトスペースは無視されます。基数が <code>undefined</code> または <code>0</code> である場合は <code>10</code> と仮定されますが、数値が <code>0x</code> または <code>0X</code> の 2文字で始まる場合は例外で、この場合は基数が <code>16</code> と仮定されます。</p>
-</blockquote>
+### より厳密な解析関数
 
-<p>これは、ECMAScript 3 が 8進数の解釈を<em>非推奨</em> (ただし許容) としていたのとは異なります。</p>
+場合によっては、値の整数への解析により厳密な方法を採るのも有効でしょう。
 
-<p>2013年現在、多くの実装はまだこの仕様に対応していません。そして、古いブラウザーの対応が必要なので、<strong>つねに基数を指定してください</strong>。</p>
+正規表現が役立ちます。
 
-<h3 id="A_stricter_parse_function" name="A_stricter_parse_function">より厳密な解析関数</h3>
-
-<p>場合によっては、値の整数への解析により厳密な方法を採るのも有効でしょう。</p>
-
-<p>正規表現が役立ちます。</p>
-
-<pre class="brush: js notranslate">function filterInt(value) {
+```js
+function filterInt(value) {
   if (/^[-+]?(\d+|Infinity)$/.test(value)) {
     return Number(value)
   } else {
@@ -117,15 +111,16 @@ console.log(filterInt('421e+0'))             // NaN
 console.log(filterInt('421hop'))             // NaN
 console.log(filterInt('hop1.61803398875'))   // NaN
 console.log(filterInt('1.61803398875'))      // NaN
-</pre>
+```
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_parseInt" name="Using_parseInt">parseInt の使用</h3>
+### parseInt の使用
 
-<p>以下の例はいずれも <code>15</code> を返します。</p>
+以下の例はいずれも `15` を返します。
 
-<pre class="brush: js notranslate">parseInt('0xF', 16)
+```js
+parseInt('0xF', 16)
 parseInt('F', 16)
 parseInt('17', 8)
 parseInt(021, 8)
@@ -138,17 +133,19 @@ parseInt('15 * 3', 10)
 parseInt('15e2', 10)
 parseInt('15px', 10)
 parseInt('12', 13)
-</pre>
+```
 
-<p>以下の例はいずれも <code>NaN</code> を返します。</p>
+以下の例はいずれも `NaN` を返します。
 
-<pre class="brush: js notranslate">parseInt('Hello', 8)  // まったく数字ではない
-parseInt('546', 2)    // 2進数では 0 または 1 以外の数字は無効
-</pre>
+```js
+parseInt('Hello', 8)  // まったく数字ではない
+parseInt('546', 2)    // 2 進数では 0 または 1 以外の数字は無効
+```
 
-<p>以下の例はいずれも <code>-15</code> を返します。</p>
+以下の例はいずれも `-15` を返します。
 
-<pre class="brush: js notranslate">parseInt('-F', 16)
+```js
+parseInt('-F', 16)
 parseInt('-0F', 16)
 parseInt('-0XF', 16)
 parseInt(-15.1, 10)
@@ -157,68 +154,75 @@ parseInt('-15', 10)
 parseInt('-1111', 2)
 parseInt('-15e1', 10)
 parseInt('-12', 13)
-</pre>
+```
 
-<p>以下の例はいずれも <code>4</code> を返します。</p>
+以下の例はいずれも `4` を返します。
 
-<pre class="brush: js notranslate">parseInt(4.7, 10)
+```js
+parseInt(4.7, 10)
 parseInt(4.7 * 1e22, 10)        // 非常に大きな数によって 4 になる
 parseInt(0.00000000000434, 10)  // 非常に小さな数によって 4 になる
-</pre>
+```
 
-<p>以下の例は 1e+21(基数を含む) より大きいか、1e-7(基数を含む) より小さい場合は <code>1</code> を返します。(基数 10 を使用している場合)。</p>
+以下の例は 1e+21 以上か 1e-7 以下の場合は `1` を返します。(基数 10 を使用している場合)。
 
-<pre class="brush: js notranslate">parseInt(0.0000001,10);
+```js
+parseInt(0.0000001,10);
 parseInt(0.000000123,10);
 parseInt(1e-7,10);
 parseInt(1000000000000000000000,10);
 parseInt(123000000000000000000000,10);
 parseInt(1e+21,10);
-</pre>
+```
 
+以下の例は `224` を返します。
 
-<p>以下の例は <code>224</code> を返します。</p>
+```js
+parseInt('0e0', 16)
+```
 
-<pre class="brush: js notranslate">parseInt('0e0', 16)
-</pre>
+{{jsxref("BigInt")}} の値は精度が落ちます。
 
-<p>{{jsxref("BigInt")}} の値は精度が落ちます。</p>
+```js
+parseInt('900719925474099267n')
+// 900719925474099300
+```
 
-<pre class="brush: js notranslate">parseInt('900719925474099267n')
-// 900719925474099300</pre>
+`parseInt` は[数字の区切り文字](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_separators)は機能しません。
 
-<p><code>parseInt</code> は<a href="/ja/docs/Web/JavaScript/Reference/Lexical_grammar#Numeric_separators">数字の区切り文字</a>は機能しません。</p>
-
-<pre class="brush: js notranslate">parseInt('123_456')
+```js
+parseInt('123_456')
 // 123
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+基数は `Number` に型変換されます。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-parseint-string-radix', 'parseInt')}}</td>
-  </tr>
- </tbody>
-</table>
+```js
+const obj = {
+  valueOf() {return 8}
+};
+parseInt('11', obj); // 9
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+obj.valueOf = function() {return 1};
+parseInt('11', obj); // NaN
 
-<p>{{Compat("javascript.builtins.parseInt")}}</p>
+obj.valueOf = function() {return Infinity};
+parseInt('11', obj); // 11
+```
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 仕様書
 
-<ul>
- <li>{{jsxref("Global_Objects/parseFloat", "parseFloat()")}}</li>
- <li>{{jsxref("Number.parseFloat()")}}</li>
- <li>{{jsxref("Number.parseInt()")}}</li>
- <li>{{jsxref("Global_Objects/isNaN", "isNaN()")}}</li>
- <li>{{jsxref("Number.toString()")}}</li>
- <li>{{jsxref("Object.valueOf")}}</li>
-</ul>
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
+- {{jsxref("Number.parseFloat()")}}
+- {{jsxref("Number.parseInt()")}}
+- {{jsxref("Global_Objects/isNaN", "isNaN()")}}
+- {{jsxref("Number.toString()")}}
+- {{jsxref("Object.valueOf")}}
