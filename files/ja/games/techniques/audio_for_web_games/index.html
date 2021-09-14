@@ -44,7 +44,7 @@ translation_of: Games/Techniques/Audio_for_Web_Games
 
 <p>急騰するモバイルネットワークのデータ使用を軽減するための試みとして、再生開始前のバッファリングができなくなることが恐らくあります。バッファリングとは、ブラウザが前もってメディアのダウンロードをする処理であり、円滑な再生を確実なものにするために度々必要になります。</p>
 
-<p>{{domxref("HTMLMediaElement")}} インターフェイスが備える <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement#Properties">多くのプロパティ</a> はトラックが再生可能な状態にあるかどうかを決定する助けになります。</p>
+<p>{{domxref("HTMLMediaElement")}} インターフェイスが備える <a href="/ja/docs/Web/API/HTMLMediaElement#Properties">多くのプロパティ</a> はトラックが再生可能な状態にあるかどうかを決定する助けになります。</p>
 
 <div class="note">
 <p><strong>注</strong>: 色々な意味でバッファリングの概念は時代遅れです。バイトレンジリクエストが許容される限り（これが既定の振る舞いです）、先行する内容のダウンロードの必要なしにオーディオの任意の点に飛ぶことができるべきです。しかしながら、先読みは依然として便利です。それなしでは、再生が始められるようになる前に、常にいくらかのクライアント・サーバー間通信が必要になるでしょう。</p>
@@ -52,7 +52,7 @@ translation_of: Games/Techniques/Audio_for_Web_Games
 
 <h3 id="並行したオーディオ再生">並行したオーディオ再生</h3>
 
-<p>多くのゲームでは、複数のオーディオを同時に再生することが求められます。例えば、ゲーム内で様々なことが起こるために、バックグラウンドミュージックと効果音を一緒に再生することがあります。この状況は近々、<a href="/docs/Web/API/Web_Audio_API">Web Audio API</a>の採用でもっと上手くいくようになる予定ですが、現状最も広くサポートされている方法 ― 平凡な{{htmlelement("audio")}}要素を使用すること ― は、モバイルデバイス上では不安定な結果になります。</p>
+<p>多くのゲームでは、複数のオーディオを同時に再生することが求められます。例えば、ゲーム内で様々なことが起こるために、バックグラウンドミュージックと効果音を一緒に再生することがあります。この状況は近々、<a href="/ja/docs/Web/API/Web_Audio_API">Web Audio API</a>の採用でもっと上手くいくようになる予定ですが、現状最も広くサポートされている方法 ― 平凡な{{htmlelement("audio")}}要素を使用すること ― は、モバイルデバイス上では不安定な結果になります。</p>
 
 <h3 id="テストとサポート">テストとサポート</h3>
 
@@ -152,7 +152,7 @@ translation_of: Games/Techniques/Audio_for_Web_Games
 
 <h3 id="オーディオスプライト">オーディオスプライト</h3>
 
-<p>オーディオスプライトは<a href="/docs/Web/Guide/CSS/CSS_Image_Sprites">CSSスプライト</a>から名前をとったもので、CSSスプライトとは単一グラフィックリソースを連続したスプライトに分解して使うCSSのための視覚的なテクニックです。同じ原理をオーディオに適用することで、読み込みと再生に時間のかかる小さなオーディオファイルの束ではなく、必要とするオーディオすべてを含む大きなオーディオファイル一つを用いることができます。そのファイルから特定の音を再生するには、各オーディオスプライトの既知の開始・停止時間を指定するだけです。</p>
+<p>オーディオスプライトは<a href="/ja/docs/Web/Guide/CSS/CSS_Image_Sprites">CSSスプライト</a>から名前をとったもので、CSSスプライトとは単一グラフィックリソースを連続したスプライトに分解して使うCSSのための視覚的なテクニックです。同じ原理をオーディオに適用することで、読み込みと再生に時間のかかる小さなオーディオファイルの束ではなく、必要とするオーディオすべてを含む大きなオーディオファイル一つを用いることができます。そのファイルから特定の音を再生するには、各オーディオスプライトの既知の開始・停止時間を指定するだけです。</p>
 
 <p>利点は、一つのオーディオを前もって提供しておき、スプライトをすぐ使える状態にできることです。こうすることで、大きな一つのオーディオの再生と即時停止をするだけですみます。また、サーバーリクエスト数を減らすことと、帯域幅を節約することもできます。</p>
 
@@ -215,11 +215,11 @@ myAudio.addEventListener('timeupdate', function() {
 
 <p>ゲーム内の音楽は感情に訴える強力な効果があります。あなたは様々な楽曲サンプルを組み合わせることができ、さらに、オーディオ要素のボリュームをコントロールすることができることを想定すれば、異なる楽曲をクロスフェードさせることができます。<code><a href="/Apps/Build/Audio_and_video_delivery/HTML5_playbackRate_explained">playbackRate()</a></code>を使うことで、動きにより良く同期させるために、ピッチに影響なく音楽のスピードの調節もできます。</p>
 
-<p>これは標準の{{HTMLElement("audio")}}要素を使って{{domxref("HTMLMediaElement")}}と連携しさえすれば可能となりますが、より発展した<a href="/docs/Web/API/Web_Audio_API">Web Audio API</a>を使えばもっと簡単で柔軟になります。次にこれについて見ていきましょう。</p>
+<p>これは標準の{{HTMLElement("audio")}}要素を使って{{domxref("HTMLMediaElement")}}と連携しさえすれば可能となりますが、より発展した<a href="/ja/docs/Web/API/Web_Audio_API">Web Audio API</a>を使えばもっと簡単で柔軟になります。次にこれについて見ていきましょう。</p>
 
 <h2 id="ゲーム用の_Web_オーディオ_API">ゲーム用の Web オーディオ API</h2>
 
-<p>Now that it's supported in all modern browsers except for Opera Mini and Internet Explorer (<a href="https://status.modern.ie/webaudioapi">although Microsoft is now working on it</a>), an acceptable approach for many situations is to use the <a href="/docs/Web/API/Web_Audio_API">Web Audio API</a> (see the <a href="http://caniuse.com/#search=web%20audio%20api">Can I use Web Audio API page</a> for more on browser compatibility). The Web Audio API is an advanced audio JavaScript API that is ideal for game audio. Developers can generate audio and manipulate audio samples as well as positioning sound in 3D game space.</p>
+<p>Now that it's supported in all modern browsers except for Opera Mini and Internet Explorer (<a href="https://status.modern.ie/webaudioapi">although Microsoft is now working on it</a>), an acceptable approach for many situations is to use the <a href="/ja/docs/Web/API/Web_Audio_API">Web Audio API</a> (see the <a href="http://caniuse.com/#search=web%20audio%20api">Can I use Web Audio API page</a> for more on browser compatibility). The Web Audio API is an advanced audio JavaScript API that is ideal for game audio. Developers can generate audio and manipulate audio samples as well as positioning sound in 3D game space.</p>
 
 <p>A feasible cross-browser strategy would be to provide basic audio using the standard {{HTMLElement("audio")}} element and, where supported, enhance the experience using the Web Audio API.</p>
 
@@ -241,7 +241,7 @@ myAudio.addEventListener('timeupdate', function() {
 
 <h3 id="トラックを読み込む">トラックを読み込む</h3>
 
-<p>With the Web Audio API you can load separate tracks and loops individually using <a href="/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a>, which means you can load them synchronously or in parallel. Loading synchronously might mean parts of your music are ready earlier and you can start playing them while others load.</p>
+<p>With the Web Audio API you can load separate tracks and loops individually using <a href="/ja/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a>, which means you can load them synchronously or in parallel. Loading synchronously might mean parts of your music are ready earlier and you can start playing them while others load.</p>
 
 <p>Either way you may want to synchronize tracks or loops. The Web Audio API contains the notion of an internal clock that starts ticking the moment you create an audio context. You'll need to take account of the time between creating an audio context and when the first audio track starts playing. Recording this offset and querying the playing track's current time gives you enough information to synchronize separate pieces of audio.</p>
 
@@ -370,10 +370,10 @@ for (var i = 0, len = tracks.length; i &lt; len; i++) {
  <li>The environment (cavernous, underwater, etc.)</li>
 </ul>
 
-<p>This is especially useful in a three-dimensional environment rendered using <a href="/docs/Web/WebGL">WebGL</a>, where the Web Audio API makes it possible to tie audio to the objects and viewpoints.</p>
+<p>This is especially useful in a three-dimensional environment rendered using <a href="/ja/docs/Web/WebGL">WebGL</a>, where the Web Audio API makes it possible to tie audio to the objects and viewpoints.</p>
 
 <div class="note">
-<p><strong>注</strong>: See <a href="https://developer.mozilla.org/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">Web Audio API Spatialization Basics</a> for more details.</p>
+<p><strong>注</strong>: See <a href="/ja/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">Web Audio API Spatialization Basics</a> for more details.</p>
 </div>
 
 <h2 id="こちらも確認">こちらも確認</h2>
