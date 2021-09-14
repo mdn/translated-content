@@ -14,9 +14,8 @@ translation_of: Web/HTTP/Headers/Set-Cookie
 
 <p>L'en-tête de réponse HTTP <strong><code>Set-Cookie</code></strong> est utilisé pour envoyer un cookie depuis le serveur à l'agent utilisateur afin qu'il puisse le renvoyer dans l'avenir.</span> Pour envoyer plusieurs cookies, on enverra plusieurs en-têtes <code>Set-Cookie</code> dans la même réponse.</p>
 
-<div class="notecard warning">
-  <p><b>Avertissement :</b></p>
-  <p>Les navigateurs empêchent le code JavaScript <i>front-end</i> d'accéder à l'en-tête <code>Set-Cookie</code>, comme l'exige la spécification Fetch, qui définit <code>Set-Cookie</code> comme un <a href="https://fetch.spec.whatwg.org/#forbidden-response-header-name">nom d'en-tête de réponse interdit</a> qui <a href="https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0">doit être filtré</a> de toute réponse exposée au code <i>front-end</i>.</p>
+<div class="warning">
+  <p><strong>Attention :</strong> Les navigateurs empêchent le code JavaScript <i>front-end</i> d'accéder à l'en-tête <code>Set-Cookie</code>, comme l'exige la spécification Fetch, qui définit <code>Set-Cookie</code> comme un <a href="https://fetch.spec.whatwg.org/#forbidden-response-header-name">nom d'en-tête de réponse interdit</a> qui <a href="https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0">doit être filtré</a> de toute réponse exposée au code <i>front-end</i>.</p>
 </div>
 
 <p>Pour plus d'information, voir le <a href="/fr/docs/Web/HTTP/Cookies">guide sur les cookies HTTP</a>.</p>
@@ -73,9 +72,8 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
 
     <p>Si non spécifié, le cookie devient un <strong>cookie de session</strong>. Une session finit quand le client s'arrête, les cookies de sessions sont alors supprimés à ce moment.</p>
 
-    <div class="notecard warning">
-      <p><b>Attention :</b></p>
-      <p>Plusieurs navigateurs ont un système de récupération de session qui enregistre les onglets et les restaure quand le navigateur redémarre. Les cookies de session seront aussi restaurés comme si le navigateur ne s'était jamais arrêté.</p>
+    <div class="warning">
+      <p><strong>Attention :</strong> Plusieurs navigateurs ont un système de récupération de session qui enregistre les onglets et les restaure quand le navigateur redémarre. Les cookies de session seront aussi restaurés comme si le navigateur ne s'était jamais arrêté.</p>
     </div>
 
     <p>Quand une telle date de péremption est indiquée, elle est relative au <em>client</em> et pas au serveur.</p>
@@ -157,9 +155,8 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
 
 <p>De plus, les cookies avec le préfixe <code>__Host-</code> doivent avoir un <code>path</code> qui vaut <code>/</code> (donc tous les chemins de l'hôte) et ne doivent pas avoir d'attribut <code>Domain</code>.</p>
 
-<div class="notecard warning">
-  <p><b>Attention :</b></p>
-  <p>Pour les clients qui n'implémentent pas les préfixes de cookies, vous ne pouvez pas compter sur ces contraintes, les cookies avec un préfixe seront toujours acceptés.</p>
+<div class="warning">
+  <p><strong>Attention :</strong> Pour les clients qui n'implémentent pas les préfixes de cookies, vous ne pouvez pas compter sur ces contraintes, les cookies avec un préfixe seront toujours acceptés.</p>
 </div>
 
 <pre>// Les deux sont acceptés s'ils viennent d'une origine sécurisée (HTTPS)

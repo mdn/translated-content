@@ -65,8 +65,8 @@ Content-Security-Policy: frame-ancestors &lt;source&gt; &lt;source&gt;;
   <li><code>https://store.example.com</code>: correspondra à toutes les tentatives d'accès à store.example.com via le protocole <code>https:</code>.</li>
  </ul>
 
- <div class="blockIndicator warning">
- <p>Si aucun schéma d'URL n'est spécifié comme <code>host-source</code> et que l'{{HTMLElement("iframe")}} est chargée via une URL <code>https:</code>, la page chargeant l'iframe doit aussi être chargée en <code>https:</code>, selon la spécification du W3C sur <a href="https://w3c.github.io/webappsec-csp/2/#match-source-expression">les correspondances de valeurs de sources</a>.</p>
+ <div class="warning">
+ <p><strong>Attention :</strong> Si aucun schéma d'URL n'est spécifié comme <code>host-source</code> et que l'{{HTMLElement("iframe")}} est chargée via une URL <code>https:</code>, la page chargeant l'iframe doit aussi être chargée en <code>https:</code>, selon la spécification du W3C sur <a href="https://w3c.github.io/webappsec-csp/2/#match-source-expression">les correspondances de valeurs de sources</a>.</p>
  </div>
  </dd>
  <dt>&lt;scheme-source&gt;</dt>
