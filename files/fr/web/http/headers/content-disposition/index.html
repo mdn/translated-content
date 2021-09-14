@@ -59,15 +59,15 @@ name="fieldName"; filename="filename.jpg"</pre>
 
 <h2 id="Directives">Directives</h2>
 
-<p dir="ltr"><code>&lt;name&gt;</code><br>
+<p><code>&lt;name&gt;</code><br>
  Est suivie d'une chaîne contenant le nom du champ HTML dans la forme dont le contenu de cette sous-partie se réfère. Lorsqu'il s'agit de plusieurs fichiers dans le même champ (par exemple, l'attribut {{htmlattrxref("multiple", "input")}} d'un {{HTMLElement("input","&lt;input type=file&gt;")}} element), il peut y avoir plusieurs sous-parties portant le même nom.</p>
 
-<p dir="ltr">Un <code>name</code> avec une valeur de <code>'_charset_'</code> indique que la partie n'est pas un champ HTML, mais le jeu de caractères par défaut à utiliser pour les pièces sans informations de charset explicites.</p>
+<p>Un <code>name</code> avec une valeur de <code>'_charset_'</code> indique que la partie n'est pas un champ HTML, mais le jeu de caractères par défaut à utiliser pour les pièces sans informations de charset explicites.</p>
 
-<p dir="ltr"><code>&lt;filename&gt;</code><br>
+<p><code>&lt;filename&gt;</code><br>
  Est suivi d'une chaîne contenant le nom d'origine du fichier transmis. Le nom de fichier est toujours facultatif et ne doit pas être utilisé aveuglément par l'application: l'information du chemin doit être rayée et la conversion aux règles du système de fichiers du serveur doit être effectuée. Ce paramètre fournit principalement des informations indicatives. Lorsqu'il est utilisé en combinaison avec <code>Content-Disposition: attachement</code>, il est utilisé comme nom de fichier par défaut pour une éventuelle boîte de dialogue "Enregistrer sous" présentée à l'utilisateur.</p>
 
-<p dir="ltr"><code>&lt;filename*&gt;</code><br>
+<p><code>&lt;filename*&gt;</code><br>
  Les paramètres <code>filename</code> et <code>filename*</code> diffèrent uniquement en ce que <code>filename*</code> utilise l'encodage défini dans la RFC 5987. Lorsque <code>filename</code> et <code>filename*</code> sont présents dans une seule valeur de champ d'en-tête, <code>filename*</code> est préféré à <code>filename</code> lorsque les deux sont présents et compris.</p>
 
 <h2 id="Exemples">Exemples</h2>
