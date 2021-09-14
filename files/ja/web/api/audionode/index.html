@@ -17,7 +17,7 @@ translation_of: Web/API/AudioNode
 
 <p>AudioNodeは複数の入力、出力を持ち、それぞれがチャンネルを持ちます。入力が無く、一つの出力を持つAudioNodeは、ソースノードと呼ばれます。厳密な処理はAudioNodeによって異なりますが,　基本的に、ノードは入力を読み込み、何らかの音声関連の処理を行ってから、出力のための新しい値を出力します。</p>
 
-<p>Different nodes can be linked together to build a <em>processing graph</em>. Such a graph is contained in an {{domxref("AudioContext")}}. Each <code>AudioNode</code> participates in exactly one such context. In general, processing nodes inherit the properties and methods of <code>AudioNode</code>, but also define their own functionality on top. See the individual node pages for more details, as listed on the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> homepage.</p>
+<p>Different nodes can be linked together to build a <em>processing graph</em>. Such a graph is contained in an {{domxref("AudioContext")}}. Each <code>AudioNode</code> participates in exactly one such context. In general, processing nodes inherit the properties and methods of <code>AudioNode</code>, but also define their own functionality on top. See the individual node pages for more details, as listed on the <a href="/ja/docs/Web/API/Web_Audio_API">Web Audio API</a> homepage.</p>
 
 <p>ノードは音声処理のグラフを構築するため、互いに関連付けることができます。そのようなグラフは一つの{{domxref("AudioContext")}}に含まれます。それぞれのAudioNodeは必ず一つのcontextに含まれます。一般に、ノードはAudioNodeのプロパティやメソッドを継承し、独自の機能が定義されています。個々のノードについての詳細を知りたい場合は、「Web Audio API」ホームページを御覧ください。</p>
 
@@ -47,14 +47,14 @@ translation_of: Web/API/AudioNode
 
 <dl>
  <dt>{{domxref("AudioNode.channelCount")}}</dt>
- <dd>Represents an integer used to determine how many channels are used when <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing">up-mixing and down-mixing</a> connections to any inputs to the node. Its usage and precise definition depend on the value of {{domxref("AudioNode.channelCountMode")}}.</dd>
+ <dd>Represents an integer used to determine how many channels are used when <a href="/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing">up-mixing and down-mixing</a> connections to any inputs to the node. Its usage and precise definition depend on the value of {{domxref("AudioNode.channelCountMode")}}.</dd>
 </dl>
 
 <dl>
  <dt>{{domxref("AudioNode.channelCountMode")}}</dt>
  <dd>Represents an enumerated value describing the way channels must be matched between the node's inputs and outputs.</dd>
  <dt>{{domxref("AudioNode.channelInterpretation")}}</dt>
- <dd>Represents an enumerated value describing the meaning of the channels. This interpretation will define how audio <a href="/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing">up-mixing and down-mixing</a> will happen.<br>
+ <dd>Represents an enumerated value describing the meaning of the channels. This interpretation will define how audio <a href="/ja/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Up-mixing_and_down-mixing">up-mixing and down-mixing</a> will happen.<br>
  The possible values are <code>"speakers"</code> or <code>"discrete"</code>.</dd>
 </dl>
 
@@ -73,7 +73,7 @@ translation_of: Web/API/AudioNode
 
 <h2 id="例">例</h2>
 
-<p>This simple snippet of code shows the creation of some audio nodes, and how the AudioNode properties and methods can be used. You can find examples of such usage on any of the examples linked to on the <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> landing page (for example <a href="https://github.com/mdn/violent-theremin">Violent Theremin</a>.)<span class="p"> </span></p>
+<p>This simple snippet of code shows the creation of some audio nodes, and how the AudioNode properties and methods can be used. You can find examples of such usage on any of the examples linked to on the <a href="/ja/docs/Web/API/Web_Audio_API">Web Audio API</a> landing page (for example <a href="https://github.com/mdn/violent-theremin">Violent Theremin</a>.)<span class="p"> </span></p>
 
 <pre class="brush: js;highlight[8,9,11,12,13,14]">var AudioContext = window.AudioContext || window.webkitAudioContext;
 
@@ -114,5 +114,5 @@ oscillator.channelCount;</pre>
 <h2 id="関連情報">関連情報</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Web Audio API の利用</a></li>
+ <li><a href="/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Web Audio API の利用</a></li>
 </ul>
