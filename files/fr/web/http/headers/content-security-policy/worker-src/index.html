@@ -42,7 +42,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/worker-src
 
 <p>Une ou plusieurs sources peuvent être autorisées pour cette directive :</p>
 
-<pre class="syntaxbox notranslate">Content-Security-Policy: worker-src &lt;source&gt;;
+<pre class="syntaxbox">Content-Security-Policy: worker-src &lt;source&gt;;
 Content-Security-Policy: worker-src &lt;source&gt; &lt;source&gt;;
 </pre>
 
@@ -56,11 +56,11 @@ Content-Security-Policy: worker-src &lt;source&gt; &lt;source&gt;;
 
 <p>Soit cet en-tête CSP :</p>
 
-<pre class="brush: bash notranslate">Content-Security-Policy: worker-src https://example.com/</pre>
+<pre class="brush: bash">Content-Security-Policy: worker-src https://example.com/</pre>
 
 <p>{{domxref("Worker")}}, {{domxref("SharedWorker")}} et {{domxref("ServiceWorker")}} seront bloqués et ne se chargeront pas :</p>
 
-<pre class="brush: html notranslate">&lt;script&gt;
+<pre class="brush: html">&lt;script&gt;
   var blockedWorker = new Worker("data:application/javascript,...");
   blockedWorker = new SharedWorker("https://not-example.com/");
   navigator.serviceWorker.register('https://not-example.com/sw.js');

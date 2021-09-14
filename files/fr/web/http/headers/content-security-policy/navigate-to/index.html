@@ -42,7 +42,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/navigate-to
 
 <p>Une ou plusieurs sources peuvent être utilisées pour cette directive :</p>
 
-<pre class="syntaxbox notranslate">Content-Security-Policy: navigate-to &lt;source&gt;;
+<pre class="syntaxbox">Content-Security-Policy: navigate-to &lt;source&gt;;
 Content-Security-Policy: navigate-to &lt;source&gt; &lt;source&gt;;
 </pre>
 
@@ -54,14 +54,14 @@ Content-Security-Policy: navigate-to &lt;source&gt; &lt;source&gt;;
 
 <h3 id="Configuration_par_balise_&lt;meta>">Configuration par balise &lt;meta&gt;</h3>
 
-<pre class="brush: html notranslate">&lt;meta http-equiv="Content-Security-Policy" content="navigate-to 'none'"&gt;
+<pre class="brush: html">&lt;meta http-equiv="Content-Security-Policy" content="navigate-to 'none'"&gt;
 </pre>
 
 <h3 id="Cas_de_violation">Cas de violation</h3>
 
 <p>Utiliser l'élément {{HTMLElement("form")}} avec un attribut <code>action</code> défini à un script embarqué en JavaScript résultera en une violation de CSP :</p>
 
-<pre class="brush: html; example-bad notranslate">&lt;meta http-equiv="Content-Security-Policy" content="navigate-to 'none'"&gt;
+<pre class="brush: html; example-bad">&lt;meta http-equiv="Content-Security-Policy" content="navigate-to 'none'"&gt;
 
 &lt;form action="javascript:alert('Foo')" id="form1" method="post"&gt;
   &lt;input type="text" name="fieldName" value="fieldValue"&gt;

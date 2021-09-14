@@ -44,7 +44,7 @@ translation_of: Web/HTTP/Headers/Content-Disposition
 <p>Le premier paramètre dans le contexte HTTP est en ligne (valeur par défaut, indiquant qu'il peut être affiché à l'intérieur de la page Web ou en tant que page Web) ou pièce jointe (en indiquant qu'il devrait être téléchargé), la plupart des navigateurs présentant une boîte de dialogue "Enregistrer sous" Avec la valeur des paramètres du nom de<br>
  fichier si présent.</p>
 
-<pre class="syntaxbox notranslate">Content-Disposition: inline
+<pre class="syntaxbox">Content-Disposition: inline
 Content-Disposition: attachment
 Content-Disposition: attachment; filename="filename.jpg"</pre>
 
@@ -53,7 +53,7 @@ Content-Disposition: attachment; filename="filename.jpg"</pre>
 <p>Le premier paramètre dans le contexte HTTP est toujours une donnée de forme. Les paramètres supplémentaires sont insensibles à la casse et ont des arguments, qui utilisent la syntaxe de chaîne cité après le signe '='. Les paramètres multiples sont<br>
  séparés par un point-virgule (';').</p>
 
-<pre class="notranslate">Content-Disposition: form-data Content-Disposition: form-data;
+<pre>Content-Disposition: form-data Content-Disposition: form-data;
 name="fieldName" Content-Disposition: form-data;
 name="fieldName"; filename="filename.jpg"</pre>
 
@@ -74,7 +74,7 @@ name="fieldName"; filename="filename.jpg"</pre>
 
 <p>Une réponse déclanchant le dialogue "Enregistrer sous":</p>
 
-<pre class="brush: html notranslate">200 OK
+<pre class="brush: html">200 OK
 Content-Type: text/html; charset=utf-8
 Content-Disposition: attachment; filename="cool.html"
 Content-Length: 22
@@ -86,7 +86,7 @@ Content-Length: 22
 
 <p>Un exemple de formulaire HTML, publié à l'aide du format <code>multipart / form-data</code> qui utilise l'en-tête <code>Content-Disposition</code>:</p>
 
-<pre class="notranslate">POST /test.html HTTP/1.1
+<pre>POST /test.html HTTP/1.1
 Host: example.org
 Content-Type: multipart/form-data;boundary="boundary"
 

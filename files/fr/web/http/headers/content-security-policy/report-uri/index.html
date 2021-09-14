@@ -18,7 +18,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/report-uri
 <div class="warning">
 <p>Bien que la directive {{CSP("report-to")}} est prévue remplacer la directive <code><strong>report-uri</strong></code> maintenant dépréciée, {{CSP("report-to")}} n'est pas encore supportée par la plupart des navigateurs modernes. Par rétrocompatibilité avec les navigateurs courants et tout en prévoyant une compatibilité future quand les navigateurs supporteront {{CSP("report-to")}}, vous pouvez spécifier les deux directives <code><strong>report-uri</strong></code> et {{CSP("report-to")}}:</p>
 
-<pre class="syntaxbox notranslate">Content-Security-Policy: ...; report-uri https://endpoint.com; report-to groupname</pre>
+<pre class="syntaxbox">Content-Security-Policy: ...; report-uri https://endpoint.com; report-to groupname</pre>
 
 <p>Dans les navigateurs qui supportent {{CSP("report-to")}}, la directive <code><strong>report-uri</strong></code> sera ignorée.</p>
 </div>
@@ -43,7 +43,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/report-uri
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox notranslate">Content-Security-Policy: report-uri &lt;uri&gt;;
+<pre class="syntaxbox">Content-Security-Policy: report-uri &lt;uri&gt;;
 Content-Security-Policy: report-uri &lt;uri&gt; &lt;uri&gt;;</pre>
 
 <dl>
@@ -55,11 +55,11 @@ Content-Security-Policy: report-uri &lt;uri&gt; &lt;uri&gt;;</pre>
 
 <p>Voir {{HTTPHeader("Content-Security-Policy-Report-Only")}} pour plus d'informations et d'exemples.</p>
 
-<pre class="notranslate">Content-Security-Policy: default-src https:; report-uri /csp-violation-report-endpoint/</pre>
+<pre>Content-Security-Policy: default-src https:; report-uri /csp-violation-report-endpoint/</pre>
 
 <p><code>/csp-violation-report-endpoint/</code> pourrait par exemple exécuter un script PHP similaire au suivant qui journaliserait le JSON détaillant la violation et, si elle est la première ajoutée au journal, enverrait un courril à l'administrateur :</p>
 
-<pre class="brush: php notranslate">&lt;?php
+<pre class="brush: php">&lt;?php
 
 // Start configure
 $log_file = dirname(__FILE__) . '/csp-violations.log';

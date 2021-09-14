@@ -43,7 +43,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/object-src
 
 <p>Une ou plusieurs sources peuvent être autorisées pour cette directive :</p>
 
-<pre class="syntaxbox notranslate">Content-Security-Policy: object-src &lt;source&gt;;
+<pre class="syntaxbox">Content-Security-Policy: object-src &lt;source&gt;;
 Content-Security-Policy: object-src &lt;source&gt; &lt;source&gt;;
 </pre>
 
@@ -57,11 +57,11 @@ Content-Security-Policy: object-src &lt;source&gt; &lt;source&gt;;
 
 <p>Soit cet en-tête CSP :</p>
 
-<pre class="brush: bash notranslate">Content-Security-Policy: object-src https://example.com/</pre>
+<pre class="brush: bash">Content-Security-Policy: object-src https://example.com/</pre>
 
 <p>Ces éléments {{HTMLElement("object")}}, {{HTMLElement("embed")}} et {{HTMLElement("applet")}} seront bloqués et ne se chargeront pas :</p>
 
-<pre class="brush: html notranslate">&lt;embed src="https://not-example.com/flash"&gt;&lt;/embed&gt;
+<pre class="brush: html">&lt;embed src="https://not-example.com/flash"&gt;&lt;/embed&gt;
 &lt;object data="https://not-example.com/plugin"&gt;&lt;/object&gt;
 &lt;applet archive="https://not-example.com/java"&gt;&lt;/applet&gt;</pre>
 

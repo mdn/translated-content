@@ -20,7 +20,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/trusted-types
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="notranslate">Content-Security-Policy: trusted-types;
+<pre>Content-Security-Policy: trusted-types;
 Content-Security-Policy: trusted-types 'none';
 Content-Security-Policy: trusted-types &lt;policyName&gt;;
 Content-Security-Policy: trusted-types &lt;policyName&gt; &lt;policyName&gt; 'allow-duplicates';
@@ -39,11 +39,11 @@ Content-Security-Policy: trusted-types &lt;policyName&gt; &lt;policyName&gt; 'al
 
 <p>Soit l'en-tête CSP :</p>
 
-<pre class="notranslate">Content-Security-Policy: trusted-types foo bar 'allow-duplicates';</pre>
+<pre>Content-Security-Policy: trusted-types foo bar 'allow-duplicates';</pre>
 
 <p>Ce code génèrera une erreur car une des règles créées a un nom non autorisé :</p>
 
-<pre class="brush: js notranslate">if (typeof trustedTypes !== 'undefined') {
+<pre class="brush: js">if (typeof trustedTypes !== 'undefined') {
   const policyFoo = trustedTypes.createPolicy('foo', {});
   const policyFoo2 = trustedTypes.createPolicy('foo', {});
   const policyBaz = trustedTypes.createPolicy('baz', {}); // Throws and dispatches a SecurityPolicyViolationEvent.

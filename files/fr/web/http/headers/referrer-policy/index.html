@@ -37,7 +37,7 @@ translation_of: Web/HTTP/Headers/Referrer-Policy
 <p>Le nom originel de l'en-tête, {{HTTPHeader("Referer")}}, est une faute de frappe du mot anglais "referrer". L'en-tête <code>Referrer-Policy</code> ne comporte pas cette erreur.</p>
 </div>
 
-<pre class="syntaxbox notranslate">Referrer-Policy: no-referrer
+<pre class="syntaxbox">Referrer-Policy: no-referrer
 Referrer-Policy: no-referrer-when-downgrade
 Referrer-Policy: origin
 Referrer-Policy: origin-when-cross-origin
@@ -79,15 +79,15 @@ Referrer-Policy: unsafe-url
 
 <p>Vous pouvez aussi définir des règles de référent au sein d'HTML. Par exemple, vous pouvez définir la règle de référent pour le document entier avec un élément {{HTMLElement("meta")}} dont le <a href="/en-US/docs/Web/HTML/Element/meta#attr-name">name</a> est <code>referrer</code> :</p>
 
-<pre class="brush: html notranslate">&lt;meta name="referrer" content="origin"&gt;</pre>
+<pre class="brush: html">&lt;meta name="referrer" content="origin"&gt;</pre>
 
 <p>Ou le définit pour des requêtes spécifiques avec l'attribut <code>referrerpolicy</code> sur les éléments {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("img")}}, {{HTMLElement("iframe")}}, {{HTMLElement("script")}}, ou {{HTMLElement("link")}} :</p>
 
-<pre class="brush: html notranslate">&lt;a href="http://example.com" referrerpolicy="origin"&gt;</pre>
+<pre class="brush: html">&lt;a href="http://example.com" referrerpolicy="origin"&gt;</pre>
 
 <p>Autrement, une <a href="/en-US/docs/Web/HTML/Link_types">relation de lien</a> définie à <code>noreferrer</code> sur un élément <code>a</code>, <code>area</code>, ou <code>link</code> peut être défini :</p>
 
-<pre class="brush: html notranslate">&lt;a href="http://example.com" rel="noreferrer"&gt;</pre>
+<pre class="brush: html">&lt;a href="http://example.com" rel="noreferrer"&gt;</pre>
 
 <div class="blockIndicator warning">
 <p>Comme vu précédemment, la relation de lien <code>noreferrer</code> s'écrit sans trait d'union. Toutefois, quand la règle de référent est spécifiée pour le document entier avec un élément {{HTMLElement("meta")}}, il faut mettre le trait d'union : <code>&lt;meta name="referrer" content="no-referrer"&gt;</code>.</p>
@@ -206,7 +206,7 @@ Referrer-Policy: unsafe-url
 
 <p>Si vous voulez spécifier une règle à appliquer par défaut dans les où la règle voulue n'est pas supportée par les navigateurs, utilisez un liste de valeurs séparées par des virgules avec la règle voulue fournie en dernière position :</p>
 
-<pre class="notranslate">Referrer-Policy: no-referrer, strict-origin-when-cross-origin</pre>
+<pre>Referrer-Policy: no-referrer, strict-origin-when-cross-origin</pre>
 
 <p>Ici, <code>no-referrer</code> ne sera utilisée que si <code>strict-origin-when-cross-origin</code> n'est pas supportée par le navigateur.</p>
 

@@ -56,7 +56,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/default-src
 
 <p>Une ou plusieurs sources peuvent être autorisées pour cette directive :</p>
 
-<pre class="syntaxbox notranslate">Content-Security-Policy: default-src &lt;source&gt;;
+<pre class="syntaxbox">Content-Security-Policy: default-src &lt;source&gt;;
 Content-Security-Policy: default-src &lt;source&gt; &lt;source&gt;;
 </pre>
 
@@ -111,11 +111,11 @@ Content-Security-Policy: default-src &lt;source&gt; &lt;source&gt;;
 
 <p>S'il y a d'autres directives spécifiées, <code>default-src</code> ne les affecte pas. Soit l'en-tête suivant :</p>
 
-<pre class="brush: bash notranslate">Content-Security-Policy: default-src 'self'; script-src https://example.com</pre>
+<pre class="brush: bash">Content-Security-Policy: default-src 'self'; script-src https://example.com</pre>
 
 <p>Est identique à :</p>
 
-<pre class="brush: bash notranslate">Content-Security-Policy: connect-src 'self';
+<pre class="brush: bash">Content-Security-Policy: connect-src 'self';
                          font-src 'self';
                          frame-src 'self';
                          img-src 'self';

@@ -39,7 +39,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/child-src
 
 <p>Une ou plusieurs sources peuvent être autorisées pour cette directive :</p>
 
-<pre class="syntaxbox notranslate">Content-Security-Policy: child-src &lt;source&gt;;
+<pre class="syntaxbox">Content-Security-Policy: child-src &lt;source&gt;;
 Content-Security-Policy: child-src &lt;source&gt; &lt;source&gt;;
 </pre>
 
@@ -53,11 +53,11 @@ Content-Security-Policy: child-src &lt;source&gt; &lt;source&gt;;
 
 <p>Soit cet en-tête CSP :</p>
 
-<pre class="brush: bash notranslate">Content-Security-Policy: child-src https://example.com/</pre>
+<pre class="brush: bash">Content-Security-Policy: child-src https://example.com/</pre>
 
 <p>Cet {{HTMLElement("iframe")}} et ce worker seront bloqués et ne se chargeront pas :</p>
 
-<pre class="brush: html notranslate">&lt;iframe src="https://not-example.com"&gt;&lt;/iframe&gt;
+<pre class="brush: html">&lt;iframe src="https://not-example.com"&gt;&lt;/iframe&gt;
 
 &lt;script&gt;
   var blockedWorker = new Worker("data:application/javascript,...");

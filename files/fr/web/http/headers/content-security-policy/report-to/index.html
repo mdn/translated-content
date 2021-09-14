@@ -16,7 +16,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/report-to
 
 <p>La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <strong><code>report-to</code></strong> demande à l'agent utilisateur de rapporter les violations de règles CSP à l'adresse fournie dans un groupe de l'en-tête HTTP <code>Report-To</code>.</p>
 
-<pre class="syntaxbox notranslate">Content-Security-Policy: ...; report-to groupname
+<pre class="syntaxbox">Content-Security-Policy: ...; report-to groupname
 </pre>
 
 <p>Cette directive n'a aucun effet en elle-même, mais prend tout son sens en étant combinée à d'autres directives.</p>
@@ -39,13 +39,13 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/report-to
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="notranslate">Content-Security-Policy: report-to &lt;json-field-value&gt;;</pre>
+<pre>Content-Security-Policy: report-to &lt;json-field-value&gt;;</pre>
 
 <h2 id="Exemples">Exemples</h2>
 
 <p>Voir {{HTTPHeader("Content-Security-Policy-Report-Only")}} pour plus d'informations et d'exemples.</p>
 
-<pre class="notranslate"><a href="http://wicg.github.io/reporting/#report-to">Report-To</a>: { "<a href="http://wicg.github.io/reporting/#group">group</a>": "csp-endpoint",
+<pre><a href="http://wicg.github.io/reporting/#report-to">Report-To</a>: { "<a href="http://wicg.github.io/reporting/#group">group</a>": "csp-endpoint",
              "<a href="http://wicg.github.io/reporting/#max-age">max_age</a>": 10886400,
              "<a href="http://wicg.github.io/reporting/#endpoints">endpoints</a>": [
                { "<a href="http://wicg.github.io/reporting/#url">url</a>": "https://example.com/csp-reports" }
@@ -58,7 +58,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/report-to
 <a href="https://w3c.github.io/webappsec-csp/#content-security-policy">Content-Security-Policy</a>: ...; <a href="https://w3c.github.io/webappsec-csp/#directives-reporting">report-to</a> csp-endpoint
 </pre>
 
-<pre class="notranslate"><a href="http://wicg.github.io/reporting/#report-to">Report-To</a>: { "<a href="http://wicg.github.io/reporting/#group">group</a>": "endpoint-1",
+<pre><a href="http://wicg.github.io/reporting/#report-to">Report-To</a>: { "<a href="http://wicg.github.io/reporting/#group">group</a>": "endpoint-1",
              "<a href="http://wicg.github.io/reporting/#max-age">max_age</a>": 10886400,
              "<a href="http://wicg.github.io/reporting/#endpoints">endpoints</a>": [
                { "<a href="http://wicg.github.io/reporting/#url">url</a>": "https://example.com/reports" },

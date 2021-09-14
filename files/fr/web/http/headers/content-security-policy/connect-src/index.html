@@ -51,7 +51,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/connect-src
 
 <p>Une ou plusieurs sources peuvent être autorisées pour cette directive :</p>
 
-<pre class="syntaxbox notranslate">Content-Security-Policy: connect-src &lt;source&gt;;
+<pre class="syntaxbox">Content-Security-Policy: connect-src &lt;source&gt;;
 Content-Security-Policy: connect-src &lt;source&gt; &lt;source&gt;;
 </pre>
 
@@ -65,11 +65,11 @@ Content-Security-Policy: connect-src &lt;source&gt; &lt;source&gt;;
 
 <p>Soit cet en-tête CSP :</p>
 
-<pre class="brush: bash notranslate">Content-Security-Policy: connect-src https://example.com/</pre>
+<pre class="brush: bash">Content-Security-Policy: connect-src https://example.com/</pre>
 
 <p>Les connexions suivantes seront bloquées et ne se chargeront pas :</p>
 
-<pre class="brush: html notranslate">&lt;a ping="https://not-example.com"&gt;
+<pre class="brush: html">&lt;a ping="https://not-example.com"&gt;
 
 &lt;script&gt;
   var xhr = new XMLHttpRequest();
