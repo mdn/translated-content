@@ -93,13 +93,13 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
   <dt><code>Path=&lt;path-value&gt;</code> {{optional_inline}}</dt>
   <dd>Un chemin qui doit exister dans l'URL de la requête ou le navigateur n'enverra pas d'en-tête <code>Cookie</code> correspondante par la suite.</dd>
   <dd>La barre oblique (<code>/</code>) est interprétée comme un séparateur de répertoire. Les sous-répertoires sont inclus, par exemple: pour <code>Path=/docs</code> les répertoires <code>/docs</code>, <code>/docs/Web/</code> et <code>/docs/Web/HTTP</code> sont concernés.</dd>
-  <dt id="secure"><code>Secure</code> {{optional_inline}}</dt>
+  <dt><code>Secure</code> {{optional_inline}}</dt>
   <dd>Un cookie sécurisé est envoyé uniquement si la requête est faite en <code>https:</code> (sauf pour <i>localhost</i>). Cependant des informations confidentielles ne devraient jamais être enregistrées dans un cookie classique, en effet le mécanique est non sécurisé et ne chiffre aucune information.
     <p class="notecard note"><b>Note:</b> Les sites non sécurisés (<code>http:</code>) ne peuvent plus définir des cookies <code></code>Secure</code> désormais (depuis Chrome 52+ et Firefox 52+). Depuis Firefox 75, cette restriction ne s'applique pas pour <i>localhost</i>.</p>
   </dd>
-  <dt id="httponly"><code>HttpOnly</code> {{optional_inline}}</dt>
+  <dt><code>HttpOnly</code> {{optional_inline}}</dt>
   <dd>Empêche JavaScript d'accéder au cookie; par exemple, au travers de la propriété <a href="/fr/docs/Web/API/Document/cookie"><code>Document.cookie</code></a>, de l'API <a href="/fr/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a> ou de l'API <a href="/fr/docs/Web/API/Request"><code>Request</code></a>. Cela protège des attaques <em>cross-site scripting</em> (<a href="/fr/docs/Glossary/XSS">XSS</a>).</dd>
-  <dt id="samesite"><code>SameSite=&lt;samesite-value&gt;</code> {{optional_inline}}</dt>
+  <dt><code>SameSite=&lt;samesite-value&gt;</code> {{optional_inline}}</dt>
   <dd>Contrôle si un cookie est envoyé avec les requêtes d'origine croisée, offrant ainsi une certaine protection contre les attaques de falsification de requêtes inter-sites (<a href="/fr/docs/Glossary/CSRF">CSRF</a>).
     <div class="notecard note">
       <p>Les normes relatives aux <a href="/fr/docs/Web/HTTP/Headers/Set-Cookie/SameSite">Cookies SameSite</a> ont récemment changé de telle sorte que :</p>

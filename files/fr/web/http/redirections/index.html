@@ -49,7 +49,7 @@ translation_of: Web/HTTP/Redirections
  </tbody>
 </table>
 
-<p><a id="attr1" name="attr1"></a>[1] La spécification n'avait pas l'intention de permettre des changements de méthode, mais il y a en pratique des agents utilisateurs qui le font. <code>308</code> a été créé pour supprimer l'ambiguïté du comportement lors de l'utilisation de méthodes autres que <code>GET</code>.</p>
+<p>La spécification n'avait pas l'intention de permettre des changements de méthode, mais il y a en pratique des agents utilisateurs qui le font. <code>308</code> a été créé pour supprimer l'ambiguïté du comportement lors de l'utilisation de méthodes autres que <code>GET</code>.</p>
 
 <h3 id="Redirections_temporaires">Redirections temporaires</h3>
 
@@ -88,7 +88,7 @@ translation_of: Web/HTTP/Redirections
  </tbody>
 </table>
 
-<p><a id="attr2" name="attr2"></a>[2] La spécification n'avait pas l'intention de permettre des changements de méthode, mais il y a en pratique des agents utilisateurs qui le font. <code>307</code> a été créé pour supprimer l'ambiguïté du comportement lors de l'utilisation de méthodes autres que <code>GET</code></p>
+<p>La spécification n'avait pas l'intention de permettre des changements de méthode, mais il y a en pratique des agents utilisateurs qui le font. <code>307</code> a été créé pour supprimer l'ambiguïté du comportement lors de l'utilisation de méthodes autres que <code>GET</code></p>
 
 <h3 id="Redirections_spéciales">Redirections spéciales</h3>
 
@@ -249,7 +249,7 @@ rewrite ^/images/(.*)$ http://images.example.com/$1 permanent;
 
 <p>Parfois, le serveur ne le détecte pas : une boucle de redirection peut s'étendre sur plusieurs serveurs qui n'ont pas une vue globale de ce qui se passe. Dans ce cas, les navigateurs le détecteront et afficheront un message d'erreur. Firefox affichera:</p>
 
-<pre class="bz_comment_text" id="comment_text_0">Firefox a détecté que le serveur redirige la demande pour cette adresse d'une manière qui n'aboutira pas.
+<pre>Firefox a détecté que le serveur redirige la demande pour cette adresse d'une manière qui n'aboutira pas.
 </pre>
 
 <p>tandis que Chrome affichera:</p>

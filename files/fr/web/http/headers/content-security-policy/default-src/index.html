@@ -62,7 +62,6 @@ Content-Security-Policy: default-src &lt;source&gt; &lt;source&gt;;
 
 <h3 id="Sources">Sources</h3>
 
-<div id="common_sources">
 <p>La &lt;source&gt; peut être une des suivantes :</p>
 
 <dl>
@@ -89,7 +88,7 @@ Content-Security-Policy: default-src &lt;source&gt; &lt;source&gt;;
  <dd>Cette valeur fait référence au domaine dont est originaire le document protégé, y compris le protocole et le numéro de port. Vous devez mettre cette valeur entre guillemets. Certains navigateurs excluent spécifiquement les valeurs <code>blob</code> et <code>filesystem</code> des directives de source. Les sites nécessitant une permission pour ces types de contenu peuvent les spécifier en utilisant l'attribut Data.</dd>
  <dt><code>'unsafe-eval'</code></dt>
  <dd>Permet l'usage de la fonction <code>eval()</code> et de méthodes similaires pour créer du code à partir de chaines de caractères. Vous devez mettre cette valeur entre guillemets.</dd>
- <dt id="unsafe-hashes"><code>'unsafe-hashes'</code></dt>
+ <dt><code>'unsafe-hashes'</code></dt>
  <dd>Permet l'usage de certains <a href="/en-US/docs/Web/Guide/Events/Event_handlers">écouteurs d'évènements</a> par attributs. Si vous n'avez besoin que d'écouteurs d'évènements par attributs et non d'éléments {{HTMLElement("script")}} embarqués ou d'URL <code>javascript:</code>, cette valeur est plus sécurisée que <code>unsafe-inline</code>.</dd>
  <dt><code>'unsafe-inline'</code></dt>
  <dd>Permet l'usage de ressources embarquées, tels que des éléments {{HTMLElement("script")}} (sans <code>src</code>), d'URL <code>javascript:</code>, de gestionnaire d'évènement par attributs (<code>on&lt;eventName&gt;</code>), et d'éléments {{HTMLElement("style")}}. Vous devez mettre cette valeur entre guillemets.</dd>
@@ -99,22 +98,12 @@ Content-Security-Policy: default-src &lt;source&gt; &lt;source&gt;;
  <dd>Une liste de permissions pour des scripts embarqués spécifiques en utilisant un nonce (<em>number used once</em>, nombre à usage unique) cryptographique. Le serveur doit générer un nonce à chaque fois qu'il transmet une réponse. Il est extrèmement important de fournir des nonces non prédictibles, puisque le contraire permettrait aisément de contourner la stratégie de sécurité. Voir <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#Unsafe_inline_script">inline script non fiables</a> pour avoir un exemple. Spécifier un nonce implique que les navigateurs modernes ignoreront la valeur <code>'unsafe-inline'</code>, qui peut toutefois être laissée pour les anciens navigateurs ne supportant pas les nonces.</dd>
  <dt>'&lt;hash-algorithm&gt;-&lt;base64-value&gt;'</dt>
  <dd>Un hash sha256, sha384 ou sha512 d'un <code>&lt;script&gt;</code> ou d'un <code>&lt;style&gt;</code>. Cette source est composée de deux parties séparées par un tiret : le nom de l'algorithme de chiffrage utilisé pour générer le hash à gauche et le hash encodé en base 64 à droite. Lors de la génération du hash, il ne faut pas inclure les balises <code>&lt;script&gt;</code> or <code>&lt;style&gt;</code> et tenir compte de la casse et des caractères blancs (espaces, retours à la ligne, etc.). Voir <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#Unsafe_inline_script">inline script non fiables</a> pour en avoir un exemple. En CSP 2.0, cette valeur ne s'applique qu'aux scripts embarqués. CSP 3.0 le permet aussi dans le cas de scripts externes.</dd>
-</dl>
-</div>
-
-<div id="strict-dynamic">
-<dl>
  <dt>'strict-dynamic'</dt>
  <dd>La valeur <code>strict-dynamic</code> spécifie que la confiance explicitement donnée à un script de la page, par le biais d'un nonce ou d'un hash, doit être propagée à tous les scripts chargés par celui-ci. En conséquence, toute les valeurs telles que <code>'self'</code> ou <code>'unsafe-inline'</code> et listes de permissions sont ignorées. Voir <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#strict-dynamic">script-src</a> pour en avoir un exemple.</dd>
-</dl>
-</div>
-
-<div id="report-sample">
-<dl>
  <dt>'report-sample'</dt>
  <dd>Requiert qu'un échantillon du code violant la directive soit inclus dans le rapport envoyé.</dd>
 </dl>
-</div>
+
 
 <h2 id="Exemples">Exemples</h2>
 

@@ -57,7 +57,7 @@ translation_of: Web/HTTP/CORS
 
 <p>Un aperçu « côté serveur » des fonctionnalités CORS se trouve dans l'article <a class="internal" href="/fr/docs/Web/HTTP/Server-Side_Access_Control">Contrôle d'accès côté serveur</a>.</p>
 
-<h3 id="Requêtes_simples"><a id="simples" name="simples">Requêtes simples</a></h3>
+<h3 id="Requêtes_simples">Requêtes simples</h3>
 
 <p>Certaines requêtes ne nécessitent pas de <a href="#preflight">requête CORS préliminaire</a>. Dans le reste de cet article, ce sont ce que nous appellerons des requêtes « simples » (bien que la spécification {{SpecName('Fetch')}} (qui définit le CORS) n'utilise pas ce terme). Une requête simple est une requête qui respecte les conditions suivantes :</p>
 
@@ -94,7 +94,7 @@ translation_of: Web/HTTP/CORS
 
 <p>Si, par exemple, on a un contenu web situé sous le domaine <code class="plain">http://toto.example</code> qui souhaite invoquer du contenu situé sous le domaine <code class="plain">http://truc.autre</code>, on pourrait utiliser du code JavaScript semblable à ce qui suit sur <code>toto.example</code> :</p>
 
-<pre class="brush: js" id="line1">var invocation = new XMLHttpRequest();
+<pre class="brush: js">var invocation = new XMLHttpRequest();
 var url = 'http://truc.autre/resources/public-data/';
 
 function callOtherDomain() {
@@ -144,7 +144,7 @@ Content-Type: application/xml
 
 <p>On notera que, dans ce cas, aucun autre domaine que <code class="plain">http://toto.example</code> (tel qu'identifié par l'en-tête <code>Origin</code>) ne pourra accéder à la ressource. L'en-tête <code>Access-Control-Allow-Origin</code> devrait contenir la valeur qui a été envoyée dans l'en-tête  <code>Origin</code> de la requête.</p>
 
-<h3 id="Requêtes_nécessitant_une_requête_préliminaire"><a id="preflight" name="preflight">Requêtes nécessitant une requête préliminaire</a></h3>
+<h3 id="Requêtes_nécessitant_une_requête_préliminaire">Requêtes nécessitant une requête préliminaire</h3>
 
 <p>À la différence des <a href="#simples">requêtes simples</a>, les requêtes préliminaires envoient d'abord une requête HTTP avec la méthode {{HTTPMethod("OPTIONS")}} vers la ressource de l'autre domaine afin de déterminer quelle requête peut être envoyée de façon sécurisée. Les requêtes entre différents sites peuvent notamment utiliser ce mécanisme de vérification préliminaire lorsque des données utilisateurs sont impliquées.</p>
 
@@ -189,7 +189,7 @@ Content-Type: application/xml
 
 <p>Voici un exemple d'une requête qui devra être précédée d'une requête préliminaire :</p>
 
-<pre class="brush: js" id="line1">var invocation = new XMLHttpRequest();
+<pre class="brush: js">var invocation = new XMLHttpRequest();
 var url = 'http://truc.autre/resources/post-here/';
 var body = '&lt;?xml version="1.0"?&gt;&lt;personne&gt;&lt;nom&gt;Toto&lt;/nom&gt;&lt;/personne&gt;';
 
@@ -331,13 +331,13 @@ Access-Control-Max-Age: 86400</pre>
 
 <p>Toutefois, si la requête déclenche une requête préliminaire suite à l'absence de l'en-tête {{HTTPHeader("Authorization")}}, on ne pourra pas utiliser cette méthode de contournement et il sera nécessaire d'avoir accès au serveur pour contourner le problème.</p>
 
-<h3 id="Requêtes_avec_informations_dauthentification"><a id="credentials" name="credentials">Requêtes avec informations d'authentification</a></h3>
+<h3 id="Requêtes_avec_informations_dauthentification">Requêtes avec informations d'authentification</h3>
 
 <p>Une des fonctionnalités intéressante mise en avant par le CORS (via {{domxref("XMLHttpRequest")}} ou <a href="/fr/docs/Web/API/Fetch_API">Fetch</a>) est la possibilité d'effectuer des requêtes authentifiées reconnaissant les <a href="/fr/docs/Web/HTTP/Cookies">cookies HTTP</a> et les informations d'authentification HTTP. Par défaut, lorsqu'on réalise des appels {{domxref("XMLHttpRequest")}} ou <a href="/fr/docs/Web/API/Fetch_API">Fetch</a> entre différents sites, les navigateurs n'enverront pas les informations d'authentification. Pour cela, il est nécessaire d'utiliser une option spécifique avec le constructeur {{domxref("XMLHttpRequest")}} ou {{domxref("Request")}} lorsqu'on l'appelle.</p>
 
 <p>Dans cet exemple, le contenu chargé depuis <code class="plain">http://toto.example</code> effectue une requête GET simple vers une ressource située sous <code class="plain">http://truc.autre</code> qui définit des <em>cookies</em>. Voici un exemple de code JavaScript qui pourrait se trouver sur <code>toto.example</code> :</p>
 
-<pre class="brush: js" id="line1">var invocation = new XMLHttpRequest();
+<pre class="brush: js">var invocation = new XMLHttpRequest();
 var url = 'http://truc.autre/resources/credentialed-content/';
 
 function callOtherDomain(){
@@ -544,11 +544,3 @@ Content-Type: text/plain
   </ul>
  </li>
 </ul>
-
-<div id="mouseposition-extension-element-full-container" style="position: fixed; top: 0px; left: 0px; right: 0px; font-weight: 400;">
-<div id="mouseposition-extension-element-rect-display" style='display: none; position: absolute; background: rgba(255, 255, 255, 0.7); outline: black solid 1px; font-size: 12px; cursor: default; color: rgb(0, 0, 0); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; width: 0px; height: 0px;'>
-<pre style="text-align: center; background-color: rgba(255, 255, 255, 0.7); color: rgb(0, 0, 0); min-height: 12px; transition: all 1s ease 0s;"></pre>
-</div>
-
-<pre id="mouseposition-extension-element-coordinate-display" style='position: absolute; display: none; background: rgb(255, 255, 255); font-size: 12px; line-height: 14px; border-radius: 3px; border-width: 1px; border-color: rgb(34, 34, 34) black rgb(51, 51, 51); border-style: solid; padding: 3px; color: rgb(34, 34, 34); cursor: default; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;'></pre>
-</div>
