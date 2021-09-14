@@ -1232,6 +1232,7 @@
 /zh-CN/docs/Web/API/AudioContext/onstatechange	/zh-CN/docs/Web/API/BaseAudioContext/onstatechange
 /zh-CN/docs/Web/API/AudioContext/sampleRate	/zh-CN/docs/Web/API/BaseAudioContext/sampleRate
 /zh-CN/docs/Web/API/AudioContext/state	/zh-CN/docs/Web/API/BaseAudioContext/state
+/zh-CN/docs/Web/API/AudioNodeOptions	/zh-CN/docs/conflicting/Web/API/AudioNode
 /zh-CN/docs/Web/API/Blob.size	/zh-CN/docs/Web/API/Blob/size
 /zh-CN/docs/Web/API/Blob.slice	/zh-CN/docs/Web/API/Blob/slice
 /zh-CN/docs/Web/API/Blob.type	/zh-CN/docs/Web/API/Blob/type
