@@ -217,7 +217,7 @@ function callOtherDomain(){
 
 <p>Voyons ce qui se passe entre le client et le serveur. Le premier échange est la requête/réponse préliminaire :</p>
 
-<pre class="brush: none;highlight:[1,10,11,17-20]">OPTIONS /resources/post-here/ HTTP/1.1
+<pre>OPTIONS /resources/post-here/ HTTP/1.1
 Host: truc.autre
 User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre) Gecko/20081130 Minefield/3.1b3pre
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -247,7 +247,7 @@ Content-Type: text/plain
 
 <p>Une fois que la requête préliminaire est effectuée, la requête principale est envoyée :</p>
 
-<pre class="brush: none;">POST /resources/post-here/ HTTP/1.1
+<pre>POST /resources/post-here/ HTTP/1.1
 Host: truc.autre
 User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre) Gecko/20081130 Minefield/3.1b3pre
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -282,7 +282,7 @@ Content-Type: text/plain
 
 <p>Entre les lignes 1 à 12 qui précèdent, on voit la requête préliminaire avec la méthode {{HTTPMethod("OPTIONS")}}. Le navigateur détermine qu'il est nécessaire d'envoyer cela à cause des paramètres de la requête fournie par le code JavaScript. De cette façon le serveur peut répondre si la requête principale est acceptable et avec quels paramètres. OPTIONS est une méthode HTTP/1.1 qui est utilisée afin de déterminer de plus amples informations à propos du serveur. La méthode OPTIONS est une méthode « sûre » (<em>safe</em>) et ne change aucune ressource. On notera, qu'avec la requête OPTIONS, deux autres en-têtes sont envoyés (cf. lignes 10 et 11) :</p>
 
-<pre class="brush: none">Access-Control-Request-Method: POST
+<pre>Access-Control-Request-Method: POST
 Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 </pre>
 
@@ -290,7 +290,7 @@ Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 
 <p>Dans les lignes 14 à 26 qui suivent, on voit la réponse renvoyée par le serveur qui indique que la méthode de la requête (<code>POST</code>) ainsi que ses en-têtes (<code>X-PINGOTHER</code>) sont acceptables. Voici ce qu'on peut notamment lire entre les lignes 17 et 20 :</p>
 
-<pre class="brush: none">Access-Control-Allow-Origin: http://toto.example
+<pre>Access-Control-Allow-Origin: http://toto.example
 Access-Control-Allow-Methods: POST, GET
 Access-Control-Allow-Headers: X-PINGOTHER, Content-Type
 Access-Control-Max-Age: 86400</pre>
@@ -355,7 +355,7 @@ function callOtherDomain(){
 
 <p>Voici un exemple d'échange entre le client et le serveur :</p>
 
-<pre class="brush: none">GET /resources/access-control-with-credentials/ HTTP/1.1
+<pre>GET /resources/access-control-with-credentials/ HTTP/1.1
 Host: truc.autre
 User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre) Gecko/20081130 Minefield/3.1b3pre
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -410,14 +410,14 @@ Content-Type: text/plain
 
 <p>Une ressource de réponse peut avoir un en-tête {{HTTPHeader("Access-Control-Allow-Origin")}} avec la syntaxe suivante :</p>
 
-<pre class="brush: none">Access-Control-Allow-Origin: &lt;origin&gt; | *
+<pre>Access-Control-Allow-Origin: &lt;origin&gt; | *
 </pre>
 
 <p>Le paramètre <code>origin</code> définit un URI qui peut accéder à la ressource. Le navigateur doit respecter cette contrainte. Pour les requêtes qui n'impliquent pas d'informations d'authentification, le serveur pourra indiquer un joker ("<code>*</code>") qui permet à n'importe quelle origine d'accéder à la ressource.</p>
 
 <p>Si on souhaite, par exemple, autoriser <code>http://mozilla.org</code> à accéder à la ressource, on pourra répondre avec :</p>
 
-<pre class="brush: none">Access-Control-Allow-Origin: http://mozilla.org</pre>
+<pre>Access-Control-Allow-Origin: http://mozilla.org</pre>
 
 <p>Si le serveur indique une origine spécifique plutôt que "<code>*</code>", il pourra également inclure la valeur <code>Origin</code> dans l'en-tête de réponse {{HTTPHeader("Vary")}} pour indiquer au client que la réponse du serveur variera selon la valeur de l'en-tête de requête {{HTTPHeader("Origin")}}.</p>
 
@@ -425,7 +425,7 @@ Content-Type: text/plain
 
 <p>L'en-tête {{HTTPHeader("Access-Control-Expose-Headers")}} fournit une liste blanche des en-têtes auxquels les navigateurs peuvent accéder. Ainsi :</p>
 
-<pre class="brush: none">Access-Control-Expose-Headers: X-Mon-En-tete-Specifique, X-Un-Autre-En-tete
+<pre>Access-Control-Expose-Headers: X-Mon-En-tete-Specifique, X-Un-Autre-En-tete
 </pre>
 
 <p>Cela permettra que les en-têtes <code>X-Mon-En-tete-Specifique</code> et <code>X-Un-Autre-En-tete</code> soient utilisés par le navigateur.</p>
@@ -434,7 +434,7 @@ Content-Type: text/plain
 
 <p>L'en-tête {{HTTPHeader("Access-Control-Max-Age")}} indique la durée pendant laquelle le résultat de la requête préliminaire peut être mis en cache (voir les exemples ci-avant pour des requêtes impliquant des requêtes préliminaires).</p>
 
-<pre class="brush: none">Access-Control-Max-Age: &lt;delta-en-secondes&gt;
+<pre>Access-Control-Max-Age: &lt;delta-en-secondes&gt;
 </pre>
 
 <p>Le paramètre <code>delta-en-seconds</code> indique le nombre de secondes pendant lesquelles les résultats peuvent être mis en cache.</p>
@@ -443,7 +443,7 @@ Content-Type: text/plain
 
 <p>L'en-tête {{HTTPHeader("Access-Control-Allow-Credentials")}} indique si la réponse à la requête doit être exposée lorsque l'option <code>credentials</code> vaut <code>true</code>. Lorsque cet en-tête est utilisé dans une réponse préliminaire, cela indique si la requête principale peut ou non être effectuée avec des informations d'authentification. On notera que les requêtes <code>GET</code> sont des requêtes simples et si une requête est effectuée, avec des informations d'authentification pour une ressource, et que cet en-tête n'est pas renvoyé, la réponse sera ignorée par le navigateur et sa charge ne pourra pas être consommée par le contenu web.</p>
 
-<pre class="brush: none">Access-Control-Allow-Credentials: true
+<pre>Access-Control-Allow-Credentials: true
 </pre>
 
 <p><a class="internal" href="#credentials">Voir les scénarios ci-avant pour des exemples</a>.</p>
@@ -452,7 +452,7 @@ Content-Type: text/plain
 
 <p>L'en-tête {{HTTPHeader("Access-Control-Allow-Methods")}} indique la ou les méthodes qui sont autorisées pour accéder à la ressoure. Cet en-tête est utilisé dans la réponse à la requête préliminaire (voir ci-avant <a href="#preflight">les conditions dans lesquelles une requête préliminaire est nécessaire</a>).</p>
 
-<pre class="brush: none">Access-Control-Allow-Methods: &lt;methode&gt;[, &lt;methode&gt;]*
+<pre>Access-Control-Allow-Methods: &lt;methode&gt;[, &lt;methode&gt;]*
 </pre>
 
 <p><a href="#preflight">Voir un exemple ci-avant pour l'utilisation de cet en-tête</a>.</p>
@@ -461,7 +461,7 @@ Content-Type: text/plain
 
 <p>L'en-tête {{HTTPHeader("Access-Control-Allow-Headers")}} est utilisé dans une réponse à une requête préliminaire afin d'indiquer les en-têtes HTTP qui peuvent être utilisés lorsque la requête principale est envoyée.</p>
 
-<pre class="brush: none">Access-Control-Allow-Headers: &lt;nom-champ&gt;[, &lt;nom-champ&gt;]*
+<pre>Access-Control-Allow-Headers: &lt;nom-champ&gt;[, &lt;nom-champ&gt;]*
 </pre>
 
 <h2 id="En-têtes_de_requête_HTTP">En-têtes de requête HTTP</h2>
@@ -472,7 +472,7 @@ Content-Type: text/plain
 
 <p>L'en-tête {{HTTPHeader("Origin")}} indique l'origine de la requête (principale ou préliminaire) pour l'accès multi-origine.</p>
 
-<pre class="brush: none">Origin: &lt;origine&gt;
+<pre>Origin: &lt;origine&gt;
 </pre>
 
 <p>L'origine est un URI qui indique le serveur à partir duquel la requête a été initiée. Elle n'inclut aucune information relative au chemin mais contient uniquement le nom du serveur.</p>
@@ -485,7 +485,7 @@ Content-Type: text/plain
 
 <p>L'en-tête {{HTTPHeader("Access-Control-Request-Method")}} est utilisé lorsqu'on émet une requête préliminaire afin de savoir quelle méthode HTTP pourra être utilisée avec la requête principale.</p>
 
-<pre class="brush: none">Access-Control-Request-Method: &lt;methode&gt;
+<pre>Access-Control-Request-Method: &lt;methode&gt;
 </pre>
 
 <p>Voir <a href="#preflight">ci-avant pour des exemples d'utilisation de cet en-tête</a>.</p>
@@ -494,7 +494,7 @@ Content-Type: text/plain
 
 <p>L'en-tête {{HTTPHeader("Access-Control-Request-Headers")}} est utilisé lorsqu'on émet une requête préliminaire afin de communiquer au serveur les en-têtes HTTP qui seront utilisés avec la requête principale.</p>
 
-<pre class="brush: none">Access-Control-Request-Headers: &lt;nom-champ&gt;[, &lt;nom-champ&gt;]*
+<pre>Access-Control-Request-Headers: &lt;nom-champ&gt;[, &lt;nom-champ&gt;]*
 </pre>
 
 <p>Voir <a href="#preflight">ci-avant pour des exemples d'utilisation de cet en-tête</a>.</p>
