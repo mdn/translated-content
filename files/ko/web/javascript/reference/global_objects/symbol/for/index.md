@@ -1,85 +1,79 @@
 ---
 title: Symbol.for()
 slug: Web/JavaScript/Reference/Global_Objects/Symbol/for
-translation_of: Web/JavaScript/Reference/Global_Objects/Symbol/for
+tags:
+  - ECMAScript 2015
+  - JavaScript
+  - Method
+  - Symbol
 browser-compat: javascript.builtins.Symbol.for
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Symbol.for(key)</strong></code> 메소드는  runtime-wide 심볼 레지스트리에서 해당 키로 존재하는 심볼을 찾는다. 없으면 전역 심볼 레지시트리에  해당 키로 새로운 심볼을 만들어 준다.  </p>
+**`Symbol.for(key)`** 메서드는 주어진 키를 사용해 런타임 범위의 심볼 레지스트리에서 존재하는 심볼을 찾고, 존재할 경우 이를 반환합니다. 존재하지 않는 경우에는 해당 키를 사용해 전역 심볼 레지스트리에 새로운 심볼을 생성합니다.
 
-<h2 id="문법">문법</h2>
+{{EmbedInteractiveExample("pages/js/symbol-for.html")}}
 
-<pre class="syntaxbox"><var>Symbol.for(key)</var>;</pre>
+## 구문
 
-<h3 id="파라미터">파라미터</h3>
+```js
+Symbol.for(key);
+```
 
-<dl>
- <dt>key</dt>
- <dd>String, 필수. 심볼의 키 (심볼의 설명을 위해서도 쓰인다).</dd>
-</dl>
+### 파라미터
 
-<h3 id="반환_값">반환 값</h3>
+- `key`
+  - : 문자열, 필수. 심볼에 대한 키(심볼을 설명하기 위해서도 사용됨).
 
-<p>해당 키에 해당하는 심볼이 있다면 반환 없으면 새로운 심볼을 만들고 반환한다.</p>
+### 반환 값
 
-<h2 id="설명">설명</h2>
+주어진 키를 갖는 존재하는 심볼. 존재하지 않을 경우 새로운 심볼이 생성되고 반환됨.
 
-<p><code>Symbol()과는 다르게</code>, the <code>Symbol.for()</code> 함수는 전역 심볼 레지스트리 리스트에 심볼을 만든다. <code>Symbol.for()는 또한 매 호출마다 새로운 심볼을 만들지 않고 현재 레지스트리에 해당 키를 가진 심볼이 있는지 먼저 검사를 한다. 있다면 그 심볼을 반환한다. 만약 키에 해당하는 심볼이 없다면 </code>Symbol.for()는 새로운 전역 심볼을 만들 것이다.</p>
+## 설명
 
-<h3 id="전역_심볼_레지스트리">전역 심볼 레지스트리 </h3>
+`Symbol()`과 대조적으로, `Symbol.for()` 함수는 전역 심볼 레지스트리 목록에서 사용 가능한 심볼을 생성합니다. `Symbol.for()`는 호출할 때마다 새로운 심볼을 생성하지는 않으며 레지스트리에서 주어진 `key`를 갖는 심볼이 이미 존재하는지를 먼저 확인합니다. 존재하는 경우 해당하는 심볼이 반환됩니다. 주어진 키를 갖는 심볼이 존재하지 않는 경우, `Symbol.for()`는 새로운 전역 심볼을 생성합니다.
 
-<p>전역심볼 레지스트리는 다음 레코드 구조를 가진 리스트이고 초기 값은 비어 있다:</p>
+### 전역 심볼 레지스트리
 
-<p>전역심볼 레지스트리의 레코드</p>
+전역 심볼 레지스트리는 다음 레코드 구조를 갖는 목록이며 비어있는 상태로 초기화됩니다.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>필드 명</th>
-   <th>값</th>
-  </tr>
-  <tr>
-   <td>[[key]]</td>
-   <td>심볼을 구분하기 위해 사용되는 문자열 키</td>
-  </tr>
-  <tr>
-   <td>[[symbol]]</td>
-   <td>전역으로 저장되는 심볼</td>
-  </tr>
- </tbody>
-</table>
+| 필드명 | 값                                   |
+| ---------- | --------------------------------------- |
+| [[key]]    | 심볼을 구분하는데 사용되는 문자열 키. |
+| [[symbol]] | 전역으로 저장되는 심볼.       |
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<pre class="brush: js">Symbol.for('foo'); // 새로운 전역심볼 생성
-Symbol.for('foo'); // 이미 만들어진 심볼을 검색
+### Symbol.for() 사용하기
 
-// 전역심볼은 서로 같고, 지역심볼은 아니다.
+```js
+Symbol.for('foo'); // 새로운 전역 심볼을 생성
+Symbol.for('foo'); // 이미 생성된 심볼을 반환
+
+// 동일한 전역 심볼이지만 지역적으로는 그렇지 않음
 Symbol.for('bar') === Symbol.for('bar'); // true
 Symbol('bar') === Symbol('bar'); // false
 
-// 키는 설명하는데 쓰이기도 한다.
+// 키는 설명으로 사용되기도 함
 var sym = Symbol.for('mario');
 sym.toString(); // "Symbol(mario)"
-</pre>
+```
 
-<p>다른 라이브러리의 전역 심볼들과 당신의 전역 심볼간의 키 충돌을 피하기 위해서는 당신 심볼 앞에 prefix를 두는 것이 좋다:</p>
+전역 심볼 키와 다른 (라이브러리 코드) 전역 심볼의 이름 충돌을 피하려면, 심볼에 접두어를 붙이는 것이 좋습니다.
 
-<pre class="brush: js">Symbol.for('mdn.foo');
+```js
+Symbol.for('mdn.foo');
 Symbol.for('mdn.bar');
-</pre>
+```
 
-<h2 id="specifications">명세</h2>
+## 명세
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="참조">참조</h2>
+## 같이 보기
 
-<ul>
- <li>{{jsxref("Symbol.keyFor()")}}</li>
-</ul>
+- {{jsxref("Symbol.keyFor()")}}
