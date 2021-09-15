@@ -23,7 +23,7 @@ translation_of: Web/API/Node/removeChild
 
 <ul>
  <li><code>child</code> est le nœud enfant à retirer du DOM.</li>
- <li><code><font face="Consolas, Liberation Mono, Courier, monospace">node </font></code>est le nœud parent de <code>child</code>.</li>
+ <li><code>node </code>est le nœud parent de <code>child</code>.</li>
  <li><code>oldchild</code> conserve une référence au nœud enfant retiré. <code>oldchild</code> === <code>child</code>.</li>
 </ul>
 
@@ -36,7 +36,7 @@ translation_of: Web/API/Node/removeChild
 <p>La méthode peut lever une exception de deux façons :</p>
 
 <ol>
- <li>Si <code>enfant</code> était bien un enfant de <font face="Consolas, Liberation Mono, Courier, monospace">element </font>et qu'il existe donc dans le DOM, mais qu'il a déjà été retiré, la méthode provoque l'exception suivante :<code>​​</code><br>
+ <li>Si <code>enfant</code> était bien un enfant de element et qu'il existe donc dans le DOM, mais qu'il a déjà été retiré, la méthode provoque l'exception suivante :<code>​​</code><br>
   <code>Uncaught NotFoundError: Failed to execute 'removeChild' on 'element': The node to be removed is not a child of this node</code>.</li>
  <li>si l'<code>enfant</code> n'existe pas dans le DOM de la page, la méthode provoque l'exception suivante :<br>
   <code>Uncaught TypeError: Failed to execute 'removeChild' on 'element': parameter 1 is not of type 'Node'.</code></li>

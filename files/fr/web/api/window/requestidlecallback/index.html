@@ -18,7 +18,7 @@ translation_of: Web/API/Window/requestIdleCallback
 <h3 id="Parameters" name="Parameters">Paramètres</h3>
 
 <dl>
- <dt><font face="Consolas, Liberation Mono, Courier, monospace">fonction</font></dt>
+ <dt>fonction</dt>
  <dd>La référence d'une fonction qui devrait être appellée dans un futur proche. La fonction en question recevra en argument un objet de type temps restant avec les propriétés suivantes :
  <ul>
   <li><code>timeRemaining </code>: Fonction qui retourne un {{domxref("DOMHighResTimeStamp")}} repésentant le temps restant estimé par le navigateur pour exécuter la tâche, ayant pour valeur minimale zéro. Les tâches nécessitant un temps d'exécution relativement long sont susceptibles de recourir à plusieurs appels à cette méthode s'il reste du travail à effectuer, rendant la main au navigateur peu avant que le compteur n'atteigne zéro. <code>timeRemaining()</code> retournera toujours zéro si <code>didTimeout</code> est positionné à true (i.e. la fonction n'a pas été appelée durant la période de repos du navigateur). La limite de temps est limitée à 50ms, même si le navigateur reste n'a pas d'autre tâche à exécuter pendant une durée plus longue.</li>

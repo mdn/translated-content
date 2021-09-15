@@ -33,7 +33,7 @@ translation_of: Web/API/CredentialsContainer/create
  <dt><code>options</code></dt>
  <dd>Un objet de type {{domxref("CredentialCreationOptions")}} qui contient des options pour le nouvel objet <code>Credentials</code> demandé. Cet objet doit posséder au moins une des propriétés parmi <code>"password"</code>, <code>"federated"</code> ou <code>"publicKey"</code>. Les options sont :
  <ul>
-  <li><font face="consolas, Liberation Mono, courier, monospace">password</font>: {{optional_inline}} un objet {{domxref("HTMLFormElement")}} ou un objet {{domxref("PasswordCredentialData")}}
+  <li>password: {{optional_inline}} un objet {{domxref("HTMLFormElement")}} ou un objet {{domxref("PasswordCredentialData")}}
    <ul>
     <li><code>id</code>: (obligatoire) {{domxref("USVString")}} hérité de {{domxref("CredentialData")}}.</li>
     <li><code>name</code>: {{optional_inline}} {{domxref("USVString")}}</li>
@@ -41,7 +41,7 @@ translation_of: Web/API/CredentialsContainer/create
     <li><code>password</code>: (required) {{domxref("USVString")}}</li>
    </ul>
   </li>
-  <li><font face="consolas, Liberation Mono, courier, monospace">federated</font> : {{optional_inline}} un objet {{domxref("FederatedCredentialInit")}}. Cet objet contient le nécessaire pour créer/obtenir des informations d'authentification fédérées. Les propriétés disponibles sont :
+  <li>federated : {{optional_inline}} un objet {{domxref("FederatedCredentialInit")}}. Cet objet contient le nécessaire pour créer/obtenir des informations d'authentification fédérées. Les propriétés disponibles sont :
    <ul>
     <li><code>id</code>: (required) {{domxref("USVString")}} hérité de {{domxref("CredentialData")}}.</li>
     <li><code>name</code>: {{optional_inline}} {{domxref("USVString")}}</li>

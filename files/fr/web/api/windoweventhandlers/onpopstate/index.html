@@ -11,7 +11,7 @@ translation_of: Web/API/WindowEventHandlers/onpopstate
 
 <p>Un gestionnaire d'évènement pour l'évènement <code>popstate</code> de la fenêtre.</p>
 
-<p>L'évènement <code>popstate</code> est envoyé à la fenêtre à chaque fois que l'entrée actuelle de l'historique change avec 2 autres entrées du même document. Si l'entrée actuelle a été créée en appelant <code>history.pushState()</code> ou a été modifiée en appelant <code>history.replaceState()</code>, la propriété <font face="Courier New, Andale Mono, monospace">state</font> de l'évènement <code>popstate</code> contient une copie de l'objet d'entrée de l'historique.</p>
+<p>L'évènement <code>popstate</code> est envoyé à la fenêtre à chaque fois que l'entrée actuelle de l'historique change avec 2 autres entrées du même document. Si l'entrée actuelle a été créée en appelant <code>history.pushState()</code> ou a été modifiée en appelant <code>history.replaceState()</code>, la propriété state de l'évènement <code>popstate</code> contient une copie de l'objet d'entrée de l'historique.</p>
 
 <p>Sachez qu'appeler <code>history.pushState()</code> ou <code>history.replaceState()</code> ne déclenchera pas l'évènement <code>popstate</code>. Cet évènement n'est déclenché que par une action utilisateur telle que cliquer sur le bouton Retour (ou appeler <code>history.back()</code>, en JavaScript). L'évènement n'est déclenché que pour la navigation entre deux entrées du même document.</p>
 
