@@ -6,7 +6,7 @@ original_slug: Web/API/WebVR_API/Utiliser_des_contrôleurs_de_realite_virtuelle_
 ---
 <div>{{APIRef("WebVR API")}}</div>
 
-<p class="summary">La plupart des matériels de WebVR possède des contrôleurs qui viennent avec le casque de réalité virtuelle. Ceux-ci peuvent être utilisés dans les application WebVR grâce à l'<a href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">API Gamepad</a>, et plus spécifiquement avec l'<a href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API#Experimental_Gamepad_extensions">API Gamepad Extensions</a> qui ajoute des API pour accéder, entre autres, à la <a href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadPose">position du controller</a>, au <a href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadHapticActuator">retour haptique</a>, etc.. Cet article fournit les bases pour utiliser ces API.</p>
+<p>La plupart des matériels de WebVR possède des contrôleurs qui viennent avec le casque de réalité virtuelle. Ceux-ci peuvent être utilisés dans les application WebVR grâce à l'<a href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API">API Gamepad</a>, et plus spécifiquement avec l'<a href="https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API#Experimental_Gamepad_extensions">API Gamepad Extensions</a> qui ajoute des API pour accéder, entre autres, à la <a href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadPose">position du controller</a>, au <a href="https://developer.mozilla.org/en-US/docs/Web/API/GamepadHapticActuator">retour haptique</a>, etc.. Cet article fournit les bases pour utiliser ces API.</p>
 
 <h2 id="L'API_WebVR">L'API WebVR</h2>
 
@@ -243,8 +243,6 @@ if(gp) {
     angAccStats.textContent = 'Angular acceleration not reported';
   }
 }</pre>
-
-<h2 id="Summary">Summary</h2>
 
 <p>This article has given you a very basic idea of how to use the Gamepad Extensions to use VR controllers inside WebVR apps. In a real app you'd probably have a much more complex control system in effect, with controls assigned to the buttons on the VR controllers, and the display being affected by both the display pose and the controller poses simultaneously. Here however, we just wanted to isolate the pure Gamepad Extensions parts of that.</p>
 

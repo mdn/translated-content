@@ -11,7 +11,9 @@ translation_of: Web/API/Performance_API
 ---
 <div>{{DefaultAPISidebar("High Resolution Time")}}</div>
 
-<p class="summary"><span class="seoSummary">La norme <a href="https://www.w3.org/TR/hr-time/">High Resolution Time</a> définit l'interface <a href="/fr/docs/Web/API/Performance"><code>Performance</code></a> qui prend en charge les mesures de latence côté client au sein des applications. Les interfaces <a href="/fr/docs/Web/API/Performance"><code>Performance</code></a> sont considérées comme étant à <em>haute résolution</em>, car elles sont précises au millième de milliseconde (sous réserve de contraintes matérielles ou logicielles).</span> Les interfaces prennent en charge un certain nombre de cas d'utilisation, notamment le calcul des taux de trame (potentiellement important dans les animations) et l'évaluation comparative (comme le temps de chargement d'une ressource).</p>
+<p>La norme <a href="https://www.w3.org/TR/hr-time/">High Resolution Time</a> définit l'interface <a href="/fr/docs/Web/API/Performance"><code>Performance</code></a> qui prend en charge les mesures de latence côté client au sein des applications. Les interfaces <a href="/fr/docs/Web/API/Performance"><code>Performance</code></a> sont considérées comme étant à <em>haute résolution</em>, car elles sont précises au millième de milliseconde (sous réserve de contraintes matérielles ou logicielles).</p>
+
+<p>Les interfaces prennent en charge un certain nombre de cas d'utilisation, notamment le calcul des taux de trame (potentiellement important dans les animations) et l'évaluation comparative (comme le temps de chargement d'une ressource).</p>
 
 <p>Comme l'<em>horloge système</em> d'une plateforme est sujette à divers <em>décalages</em> (comme les ajustements NTP), les interfaces prennent en charge une <em>horloge monotone</em>, c'est-à-dire une horloge toujours croissante. À ce titre, l'API <a href="/fr/docs/Web/API/Performance"><code>Performance</code></a> définit un type <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> plutôt que d'utiliser l'interface {{jsxref("Date.now", "Date.now()")}}.</p>
 

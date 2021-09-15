@@ -11,8 +11,6 @@ translation_of: Web/API/Event/cancelable
 ---
 <div>{{ ApiRef("DOM") }}</div>
 
-<h2 id="Summary" name="Summary">Résumé</h2>
-
 <p>La propriété  <dfn><code>cancelable</code></dfn> (<em>annulable</em>) de "Event" Indique si l'événement peut être annulé et donc empêché, comme si l'événement ne s'était jamais produit. Si l'événement n'est pas annulable, alors sa propriété <code>cancelable</code> est à <code>false</code> (<em>faux</em>) et l'écouteur d'événement ne peut pas l'arrêter.</p>
 
 <p>L'appel de {{domxref("event.preventDefault", "preventDefault()")}} sur un évènement qui ne peut être annulé produit une erreur, aussi les écouteurs d'évènement qui gèrent de nombreux types d'évènements peuvent être vérifiés avec <code>cancelable</code> avant d'appeler leurs méthodes <code>preventDefault()</code>.</p>

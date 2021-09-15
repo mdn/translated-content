@@ -13,7 +13,9 @@ translation_of: Web/API/Notification/actions
 ---
 <p>{{APIRef("Web Notifications")}}{{AvailableInWorkers}}{{securecontext_header}}</p>
 
-<p><span class="seoSummary">La propriété <strong><code>actions</code></strong> en lecture seule de l'interface {{domxref ("Notification")}} renvoie la liste des {{domxref ("NotificationAction")}} objets définis à l'aide de l'option <code>actions</code> lors de la création de la notification à l'aide du constructeur {{domxref("Notification.Notification","Notification()")}}.</span> Il s'agit d'une liste des actions définies par l'application que l'utilisateur peut choisir de prendre directement depuis le contexte d'une notification.</p>
+<p>La propriété <strong><code>actions</code></strong> en lecture seule de l'interface {{domxref ("Notification")}} renvoie la liste des {{domxref ("NotificationAction")}} objets définis à l'aide de l'option <code>actions</code> lors de la création de la notification à l'aide du constructeur {{domxref("Notification.Notification","Notification()")}}.</p>
+
+<p>Il s'agit d'une liste des actions définies par l'application que l'utilisateur peut choisir de prendre directement depuis le contexte d'une notification.</p>
 
 <div class="blockIndicator note">
 <p><strong>Note:</strong> Le périphérique et l'agent utilisateur peuvent ne pouvoir afficher qu'un nombre limité d'actions (en raison, par exemple, d'un espace d'écran limité). Cette limite peut être déduite de {{DOMxRef ("Notification.maxActions")}}.</p>

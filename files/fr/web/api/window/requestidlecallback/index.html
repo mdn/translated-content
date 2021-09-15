@@ -5,8 +5,6 @@ translation_of: Web/API/Window/requestIdleCallback
 ---
 <div>{{APIRef}}{{SeeCompatTable}}</div>
 
-<h2 id="Summary" name="Summary">Résumé</h2>
-
 <p>La méthode <code><strong>window.requestIdleCallback() </strong></code>mémorise une fonction qui sera appellée lorsque le navigateur n'aura plus aucune autre tâche en cours. Cela offre au développeur la possibilité de réaliser des tâches à basse priorité en arrière-plan sur le thread principal, sans impacter l'expérience utilisateur (ralentissement des animations, etc). L'ordre des appels aux fonctions est généralement premier entré, premier sorti, sauf si le timeout défini au moment de l'enregistrement est atteint avant que le navigateur n'ait eu le temps d'appeler la fonction en question.</p>
 
 <h2 id="Syntax" name="Syntax">Syntaxe</h2>

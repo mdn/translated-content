@@ -17,7 +17,7 @@ translation_of: Web/API/XMLHttpRequest/send
 ---
 <div>{{APIRef('XMLHttpRequest')}}</div>
 
-<p><span class="seoSummary">La méthode  {{domxref("XMLHttpRequest")}} <code><strong>send()</strong></code> envoie la requête au serveur.  Si la requête est asynchrone (elle l'est par défaut), la méthode envoie un retour dés que la requête est partie et le résultat est intégré en utilisant les évènements.</span>En cas de requête synchrone, elle ne renvoie rien tant que la réponse n'est pas retournée.</p>
+<p>La méthode  {{domxref("XMLHttpRequest")}} <code><strong>send()</strong></code> envoie la requête au serveur.  Si la requête est asynchrone (elle l'est par défaut), la méthode envoie un retour dés que la requête est partie et le résultat est intégré en utilisant les évènements. En cas de requête synchrone, elle ne renvoie rien tant que la réponse n'est pas retournée.</p>
 
 <p><code>send()</code> accepte un paramètre optionnel qui qui vous permet de spécifier le corps de la requête; c'est principalement utilisé pour les requêtes comme  {{HTTPMethod("PUT")}}. Si la méthode est {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}}, le paramètre <code>body</code> est ignoré et le corps de la requête est fixé à <code>null</code>.</p>
 
