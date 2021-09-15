@@ -66,10 +66,9 @@ ctx.clearRect(10, 10, 100, 100);
 
 <p>Modifiez le code suivant et voyez vos changements en direct dans le canevas :</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
+<h6 id="code_jouable">Code jouable</h6>
 
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
   &lt;input id="edit" type="button" value="Edit" /&gt;
   &lt;input id="reset" type="button" value="Reset" /&gt;
@@ -85,7 +84,7 @@ ctx.stroke();
 ctx.clearRect(10, 10, 100, 100);&lt;/textarea&gt;
 </pre>
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+<pre class="brush: js hidden">var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -109,9 +108,8 @@ edit.addEventListener("click", function() {
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 400) }}</p>
+<p>{{ EmbedLiveSample('code_jouable', 700, 400) }}</p>
 
 <h2 id="Spécifications">Spécifications</h2>
 

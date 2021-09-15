@@ -132,15 +132,13 @@ function getMyVideo() {
 
 <p>Dans l'exemple suivant, nous utiliserons une image externe comme fond pour un petit graphique linéaire. L'utilisation d'images de fond peut rendre vos scripts considérablement plus légers puisqu'il n'est alors pas nécessaire de dessiner des arrières-plans élaborés. Une seule image est utilisée ici, on utilise donc le gestionnaire d'évènement <code>load</code> de l'objet image pour lancer les instructions de dessin. La méthode <code>drawImage()</code> place l'image de fond aux coordonnées (0,0), soit le coin supérieur gauche du canevas.</p>
 
-<div class="hidden">
-  <pre class="brush: html">
+<pre class="brush: html hidden">
 &lt;html&gt;
   &lt;body onload="draw();"&gt;
     &lt;canvas id="canvas" width="180" height="150"&gt;&lt;/canvas&gt;
   &lt;/body&gt;
 &lt;/html&gt;
-  </pre>
-</div>
+</pre>
 
 <pre class="brush: js">
 function draw() {
@@ -181,15 +179,13 @@ function draw() {
 <p><strong>Note</strong> : les images peuvent devenir floues lorsqu'elles sont agrandies ou granuleuses si elles sont réduites. Il vaut mieux ne pas redimensionner une image contenant du texte devant rester lisible.</p>
 </div>
 
-<div class="hidden">
-<pre class="brush: html">
+<pre class="brush: html hidden">
 &lt;html&gt;
  &lt;body onload="draw();"&gt;
    &lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;
  &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-</div>
 
 <pre class="brush: js">
 function draw() {

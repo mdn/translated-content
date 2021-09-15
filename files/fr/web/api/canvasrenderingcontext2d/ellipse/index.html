@@ -62,10 +62,9 @@ ctx.stroke();
 
 <p>Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel dans le canevas (vérifiez le support de votre navigateur dans la table de compatibilité si aucune ellipse n'est tracée) :</p>
 
-<div class="hidden">
-<h6 id="Playable_code" name="Playable_code">Playable code</h6>
+<h6 id="code_jouable">Code jouable</h6>
 
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
   &lt;input id="edit" type="button" value="Edit" /&gt;
   &lt;input id="reset" type="button" value="Reset" /&gt;
@@ -76,7 +75,7 @@ ctx.ellipse(100, 100, 50, 75, 45 * Math.PI/180, 0, 2 * Math.PI);
 ctx.stroke();&lt;/textarea&gt;
 </pre>
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+<pre class="brush: js hidden">var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -100,9 +99,8 @@ edit.addEventListener("click", function() {
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+<p>{{ EmbedLiveSample('code_jouable', 700, 360) }}</p>
 
 <h2 id="Spécifications">Spécifications</h2>
 

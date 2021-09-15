@@ -58,10 +58,9 @@ ctx.stroke();
 
 <p>Modifiez le code ci-dessous et voyez vos modifications mises à jour en direct dans le canvas :</p>
 
-<div class="hidden">
-<h6 id="Playable_code" name="Playable_code">Playable code</h6>
+<h6 id="code_jouable">Code jouable</h6>
 
-<pre class="brush: html">&lt;canvas id="canevas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html hidden">&lt;canvas id="canevas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
   &lt;input id="modifier" type="button" value="Modifier" /&gt;
   &lt;input id="effacer" type="button" value="Effacer" /&gt;
@@ -75,7 +74,7 @@ ctx.lineTo(100, 100);
 ctx.stroke();&lt;/textarea&gt;
 </pre>
 
-<pre class="brush: js">var canevas = document.getElementById('canevas');
+<pre class="brush: js hidden">var canevas = document.getElementById('canevas');
 var ctx = canevas.getContext('2d');
 var zoneTexte = document.getElementById('code');
 var effacer = document.getElementById('effacer');
@@ -99,9 +98,8 @@ modifier.addEventListener('click', function() {
 zoneTexte.addEventListener('input', dessinerCanevas);
 window.addEventListener('load', dessinerCanevas);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+<p>{{ EmbedLiveSample('code_jouable', 700, 360) }}</p>
 
 <h3 id="A_lineCap_example" name="A_lineCap_example">Un exemple de <code>lineCap</code></h3>
 
@@ -133,9 +131,7 @@ for (var i = 0; i &lt; lineCap.length; i++) {
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canevas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
-</div>
+<pre class="brush: html hidden">&lt;canvas id="canevas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
 <p>{{EmbedLiveSample("A_lineCap_example", "180", "180", "https://mdn.mozillademos.org/files/236/Canvas_linecap.png")}}</p>
 

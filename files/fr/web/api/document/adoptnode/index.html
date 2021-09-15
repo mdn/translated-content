@@ -14,7 +14,7 @@ translation_of: Web/API/Document/adoptNode
 
 <div> </div>
 
-<p><span id="result_box" lang="fr"><span>Adopte un noeud.</span> <span>Le noeud (et son sous-arbre) est supprimé du document dans lequel il se trouve (le cas échéant) et son </span></span> <code><a href="https://developer.mozilla.org/fr/docs/Web/API/Node/ownerDocument" title="DOM/Node.ownerDocument">ownerDocument</a></code> <span lang="fr"><span> (<em>document propriétaire</em>) est remplacé par le document en cours.</span> <span>Le noeud peut ensuite être inséré dans le document en cours.</span></span></p>
+<p>Adopte un noeud. Le noeud (et son sous-arbre) est supprimé du document dans lequel il se trouve (le cas échéant) et son  <code><a href="https://developer.mozilla.org/fr/docs/Web/API/Node/ownerDocument" title="DOM/Node.ownerDocument">ownerDocument</a></code>  (<em>document propriétaire</em>) est remplacé par le document en cours. Le noeud peut ensuite être inséré dans le document en cours.</p>
 
 <p><strong>Pris en charge depuis Gecko 1.9 (Firefox 3)</strong></p>
 
@@ -24,8 +24,8 @@ translation_of: Web/API/Document/adoptNode
 </pre>
 
 <dl>
- <dt><code><span class="hidden"> </span><span class="hidden"> </span><span class="hidden"> </span>node</code></dt>
- <dd>est le noeud adopté  qui a maintenant ce document en tant que son <code><a href="/en-US/docs/DOM/Node.ownerDocument" title="DOM/Node.ownerDocument">ownerDocument</a></code> (<em>document propriétaire</em>). Le <a href="/en-US/docs/DOM/Node.parentNode"><code>parentNode</code></a> du noeud est <code>null</code>, car il n'a pas encore été inséré dans l'arborescence du document.  Notez que <code>node</code> et <code>externalNode</code> sont le même objet après cet appel.<span class="hidden">  </span><span class="hidden"> </span></dd>
+ <dt><code>   node</code></dt>
+ <dd>est le noeud adopté  qui a maintenant ce document en tant que son <code><a href="/en-US/docs/DOM/Node.ownerDocument" title="DOM/Node.ownerDocument">ownerDocument</a></code> (<em>document propriétaire</em>). Le <a href="/en-US/docs/DOM/Node.parentNode"><code>parentNode</code></a> du noeud est <code>null</code>, car il n'a pas encore été inséré dans l'arborescence du document.  Notez que <code>node</code> et <code>externalNode</code> sont le même objet après cet appel.   </dd>
  <dt><code>externalNode</code></dt>
  <dd>est le noeud à adopter existant dans un autre document.</dd>
 </dl>

@@ -94,11 +94,9 @@ function drawStar(ctx, r) {
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js notranslate">draw();</pre>
-</div>
+<pre class="brush: js hidden">draw();</pre>
 
 <p>Dans les premières lignes de code, nous dessinons un rectangle noir ayant la même taille que le canvas comme toile de fond puis nous déplaçons l'origine au centre de l'image. Ensuite, nous créons le détourage circulaire en dessinant un arc (complet) et en faisant appelle à <code>clip()</code>. Les détourages font aussi partie de l'état de sauvegarde des canvas. Si on voulait garder le détourage d'origine, on pourrait par exemple sauvegarder l'état du canvas au préalable.</p>
 

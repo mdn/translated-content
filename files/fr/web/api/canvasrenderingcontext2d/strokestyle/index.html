@@ -49,10 +49,9 @@ ctx.strokeRect(10, 10, 100, 100);
 
 <p>Éditez le code ci-dessous pour voir vos changements mettre à jour le canvas en direct:</p>
 
-<div class="hidden">
-<h6 id="Playable_code" name="Playable_code">Playable code</h6>
+<h6 id="code_jouable">Code jouable</h6>
 
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
   &lt;input id="edit" type="button" value="Edit" /&gt;
   &lt;input id="reset" type="button" value="Reset" /&gt;
@@ -62,7 +61,7 @@ ctx.strokeStyle = 'blue';
 ctx.strokeRect(10, 10, 100, 100);&lt;/textarea&gt;
 </pre>
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+<pre class="brush: js hidden">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
@@ -86,9 +85,8 @@ edit.addEventListener('click', function() {
 textarea.addEventListener('input', drawCanvas);
 window.addEventListener('load', drawCanvas);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+<p>{{ EmbedLiveSample('code_jouable', 700, 360) }}</p>
 
 <h3 id="A_strokeStyle_example" name="A_strokeStyle_example">Un exemple <code>strokeStyle</code></h3>
 
@@ -107,9 +105,7 @@ for (var i = 0; i &lt; 6; i++) {
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
-</div>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
 <p>Le résultat devrait ressembler à ça:</p>
 

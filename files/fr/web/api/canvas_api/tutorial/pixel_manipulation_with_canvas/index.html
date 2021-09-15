@@ -64,11 +64,9 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Pixel_manipulation_with_canvas
 
 <p>Dans cet exemple, nous utilisons la méthode <a href="https://developer.mozilla.org/fr/docs/Web/API/CanvasRenderingContext2D/getImageData">getImageData() </a>pour afficher la couleur en dessous du curseur de la souris. Pour cela, nous avons besoin de la position en cours de la souris donnée par <code>layerX</code> et <code>layerY</code>, nous recherchons ensuite les données pixel à cette position dans le tableau de pixels que <a href="https://developer.mozilla.org/fr/docs/Web/API/CanvasRenderingContext2D/getImageData">getImageData()</a> nous fournit. Finalement, nous utilisons les données du tableau pour définir une couleur d'arrière-plan et un texte dans le <code>&lt;div&gt;</code> pour afficher la couleur.</p>
 
-<div class="hidden">
-<pre class="brush: html; notranslate">&lt;canvas id="canvas" width="300" height="227" style="float:left"&gt;&lt;/canvas&gt;
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="300" height="227" style="float:left"&gt;&lt;/canvas&gt;
 &lt;div id="color" style="width:200px;height:50px;float:left"&gt;&lt;/div&gt;
 </pre>
-</div>
 
 <pre class="notranslate"><code>var img = new Image();
 img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
@@ -111,14 +109,12 @@ canvas.addEventListener('mousemove', pick);</code></pre>
 
 <p>Dans cet exemple, nous itérons sur tous les pixels pour changer leurs valeurs, puis nous remettons le tableau de pixels modifié sur le canevas à l'aide de <a href="/fr-FR/docs/Web/API/CanvasRenderingContext2D/putImageData">putImageData()</a>. La fonction inversion soustrait simplement chaque couleur de la valeur maximale 255. La fonction  grayscale <em>(niveaux de gris)</em> fait simplement la moyenne du rouge, du vert et du bleu. Vous pouvez également utiliser une moyenne pondérée, donnée par la formule x = 0.299r + 0.587v + 0.114b, par exemple. Voir <a href="https://fr.wikipedia.org/wiki/Niveau_de_gris">Niveaux de gris</a> sur Wikipedia pour plus d'informations.</p>
 
-<div class="hidden">
-<pre class="brush: html; notranslate">&lt;canvas id="canevas" width="300" height="227"&gt;&lt;/canvas&gt;
+<pre class="brush: html hidden">&lt;canvas id="canevas" width="300" height="227"&gt;&lt;/canvas&gt;
 &lt;div&gt;
   &lt;input id="btnniveaudegris" value="Niveau de gris" type="button"&gt;
   &lt;input id="btninversion" value="Inversion" type="button"&gt;
 &lt;/div&gt;
 </pre>
-</div>
 
 <pre class="brush: js notranslate">var img = new Image();
 img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
@@ -174,10 +170,9 @@ function dessiner(img) {
 
 <p><span id="result_box" lang="fr"><span>Étant donné que l'anticrénelage est activé par défaut, nous pouvons désactiver le lissage pour voir les pixels clairs.</span> <span>Vous pouvez basculer la case à cocher pour voir l'effet de la propriété <code>imageSmoothingEnabled</code> (qui a besoin de préfixes pour différents navigateurs).</span></span></p>
 
-<h6 class="hidden" id="Zoom_example">Zoom example</h6>
+<h6 id="exemple_de_zoom">Exemple de zoom</h6>
 
-<div class="hidden">
-<pre class="brush: html; notranslate">&lt;canvas id="canvas" width="300" height="227"&gt;&lt;/canvas&gt;
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="300" height="227"&gt;&lt;/canvas&gt;
 &lt;canvas id="zoom" width="300" height="227"&gt;&lt;/canvas&gt;
 &lt;div&gt;
 &lt;label for="smoothbtn"&gt;
@@ -186,9 +181,8 @@ function dessiner(img) {
 &lt;/label&gt;
 &lt;/div&gt;
 </pre>
-</div>
 
-<pre class="brush: js notranslate">var img = new Image();
+<pre class="brush: js hidden">var img = new Image();
 img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
 img.onload = function() {
   draw(this);
@@ -224,7 +218,7 @@ function draw(img) {
   canvas.addEventListener('mousemove', zoom);
 }</pre>
 
-<p>{{ EmbedLiveSample('Zoom_example', 620, 490) }}</p>
+<p>{{ EmbedLiveSample('exemple_de_zoom', 620, 490) }}</p>
 
 <h2 id="Sauvegarde_des_images">Sauvegarde des images</h2>
 

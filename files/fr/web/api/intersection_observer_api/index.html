@@ -118,8 +118,9 @@ observer.observe(target);
  <li>La dernière boîte a des paliers tous les 25%.</li>
 </ul>
 
-<div class="hidden" id="threshold-example">
-<pre class="brush: html">&lt;template id="boxTemplate"&gt;
+<h5 id="exemple_de_seuil">Exemple de seuil</h5>
+
+<pre class="brush: html hidden">&lt;template id="boxTemplate"&gt;
   &lt;div class="sampleBox"&gt;
     &lt;div class="label topLeft"&gt;&lt;/div&gt;
     &lt;div class="label topRight"&gt;&lt;/div&gt;
@@ -135,7 +136,7 @@ observer.observe(target);
   &lt;/div&gt;
 &lt;/main&gt;</pre>
 
-<pre class="brush: css">.contents {
+<pre class="brush: css hidden">.contents {
   position: absolute;
   width: 700px;
   height: 1725px;
@@ -205,7 +206,7 @@ observer.observe(target);
 }
 </pre>
 
-<pre class="brush: js">let observers = [];
+<pre class="brush: js hidden">let observers = [];
 
 startup();
 
@@ -272,9 +273,8 @@ function intersectionCallback(entries) {
   });
 }
 </pre>
-</div>
 
-<p>{{EmbedLiveSample("threshold-example", 500, 500)}}</p>
+<p>{{EmbedLiveSample("exemple_de_seuil", 500, 500)}}</p>
 
 <h2 id="Interfaces">Interfaces</h2>
 

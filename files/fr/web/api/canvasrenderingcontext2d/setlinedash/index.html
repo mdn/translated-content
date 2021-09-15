@@ -69,10 +69,9 @@ ctx.stroke();
 
 <p>Editez le code ci-dessous et observez les changements se produire dans le canvas:</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
+<h6 id="code_jouable">Code jouable</h6>
 
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
   &lt;input id="edit" type="button" value="Edit" /&gt;
   &lt;input id="reset" type="button" value="Reset" /&gt;
@@ -91,7 +90,7 @@ ctx.lineTo(400, 150);
 ctx.stroke();&lt;/textarea&gt;
 </pre>
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+<pre class="brush: js hidden">var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -115,9 +114,8 @@ edit.addEventListener("click", function() {
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 10, 410) }}</p>
+<p>{{ EmbedLiveSample('code_jouable', 10, 410) }}</p>
 
 <h2 id="Spécifications">Spécifications</h2>
 

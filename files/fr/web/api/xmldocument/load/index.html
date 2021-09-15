@@ -18,7 +18,6 @@ translation_of: Web/API/XMLDocument/load
 
 <h2 id="Examples" name="Examples">Exemples</h2>
 
-<div style="overflow: hidden;">
 <pre>var docXml = document.implementation.createDocument("", "test", null);
 
 function documentCharge (e) {
@@ -27,7 +26,6 @@ function documentCharge (e) {
 
 xmlDoc.addEventListener("load", documentCharge, false);
 xmlDoc.load('querydata.xml');</pre>
-</div>
 
 <p>{{Source("content/xml/tests/load/", "Voir aussi l'extrait de chargement")}} dans le dossier de tests XML. (Pour tester cette fonctionnalité, créez les fichiers sur votre disque local ou sur un serveur web, plutôt que de charger le fichier load.html depuis la page générée par LXR, qui servira le fichier text.xml comme HTML.)</p>
 

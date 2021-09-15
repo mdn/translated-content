@@ -56,10 +56,9 @@ ctx.fillRect(50, 50, 100, 100);
 
 <p>Modifiez le code ci-dessous et voyez vos modifications mises à jour en direct dans le canevas :</p>
 
-<div class="hidden">
-<h6 id="Playable_code" name="Playable_code">Playable code</h6>
+<h6 id="code_jouable">Code jouable</h6>
 
-<pre class="brush: html">&lt;canvas id="canevas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html hidden">&lt;canvas id="canevas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
   &lt;input id="modifier" type="button" value="Modifier" /&gt;
   &lt;input id="effacement" type="button" value="Effacement" /&gt;
@@ -74,7 +73,7 @@ ctx.fillStyle = 'red';
 ctx.fillRect(50, 50, 100, 100);&lt;/textarea&gt;
 </pre>
 
-<pre class="brush: js">var canevas = document.getElementById('canevas');
+<pre class="brush: js hidden">var canevas = document.getElementById('canevas');
 var ctx = canevas.getContext('2d');
 var zoneTexte = document.getElementById('code');
 var effacement = document.getElementById('effacement');
@@ -98,9 +97,8 @@ modifier.addEventListener('click', function() {
 zoneTexte.addEventListener('input', dessinerCanevas);
 window.addEventListener('load', dessinerCanevas);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 380) }}</p>
+<p>{{ EmbedLiveSample('code_jouable', 700, 380) }}</p>
 
 <h3 id="A_globalAlpha_example" name="A_globalAlpha_example">Un exemple de <code>globalAlpha</code></h3>
 
@@ -130,9 +128,7 @@ for (i = 0; i &lt; 7; i++){
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canevas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
-</div>
+<pre class="brush: html hidden">&lt;canvas id="canevas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
 <p>{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "https://mdn.mozillademos.org/files/232/Canvas_globalalpha.png")}}</p>
 

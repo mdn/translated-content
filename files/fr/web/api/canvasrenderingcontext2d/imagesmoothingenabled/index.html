@@ -57,10 +57,9 @@ img.onload = function() {
 
 <p>Modifiez le code ci-dessous et voyez vos changements mis à jour en direct dans le canevas :</p>
 
-<div class="hidden">
-<h6 id="Playable_code" name="Playable_code">Code jouable</h6>
+<h6 id="code_jouable">Code jouable</h6>
 
-<pre class="brush: html">&lt;canvas id="canevas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html hidden">&lt;canvas id="canevas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="<code>playable-buttons</code>"&gt;
   &lt;input id="modifier" type="button" value="Modifier" /&gt;
   &lt;input id="effacer" type="button" value="Effacer" /&gt;
@@ -77,7 +76,7 @@ img.onload = function() {
 };&lt;/textarea&gt;
 </pre>
 
-<pre class="brush: js">var canevas = document.getElementById('canevas');
+<pre class="brush: js hidden">var canevas = document.getElementById('canevas');
 var ctx = canevas.getContext('2d');
 var textarea = document.getElementById('code');
 var effacer = document.getElementById('effacer');
@@ -101,7 +100,6 @@ modifier.addEventListener('click', function() {
 textarea.addEventListener('input', dessinerCanevas);
 window.addEventListener('load', dessinerCanevas);
 </pre>
-</div>
 
 <p>{{ EmbedLiveSample('Playable_code', 700, 400) }}</p>
 

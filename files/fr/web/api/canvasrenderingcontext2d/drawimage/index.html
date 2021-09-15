@@ -81,10 +81,9 @@ ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);
 
 <p>Éditez le code suivant pour voir les changements en direct dans la balise canvas:</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
+<h6 id="code_jouable">Code jouable</h6>
 
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
   &lt;img id="source" src="https://mdn.mozillademos.org/files/5397/rhino.jpg" width="300" height="227"&gt;
 &lt;/div&gt;
 &lt;div class="playable-buttons"&gt;
@@ -95,7 +94,7 @@ ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);
 ctx.drawImage(image, 33, 71, 104, 124, 21, 20, 87, 104);&lt;/textarea&gt;
 </pre>
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+<pre class="brush: js hidden">var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var image = document.getElementById('source');
 var textarea = document.getElementById("code");
@@ -120,9 +119,8 @@ edit.addEventListener("click", function() {
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+<p>{{ EmbedLiveSample('code_jouable', 700, 360) }}</p>
 
 <h2 id="Spécifications">Spécifications</h2>
 

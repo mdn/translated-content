@@ -96,10 +96,9 @@ if (ball.x + ball.vx &gt; canvas.width || ball.x + ball.vx &lt; 0) {
 
 <p>Voyons voir ce que cela donne. Déplacez votre souris dans le canevas pour commencer l'animation :</p>
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js notranslate">var canvas = document.getElementById('canvas');
+<pre class="brush: js hidden">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var raf;
 
@@ -146,7 +145,6 @@ canvas.addEventListener("mouseout",function(e){
 });
 
 ball.draw();</pre>
-</div>
 
 <p>{{EmbedLiveSample("Première_demo", "610", "310")}}</p>
 
@@ -159,12 +157,11 @@ ball.vy += .25;</pre>
 
 <p>Ceci ralentit la vitesse verticale à chaque rendu d'image de sorte que la balle va rebondir de moins en moins haut.</p>
 
-<div class="hidden">
-<h6 id="Second_demo">Second demo</h6>
+<h6 id="deuxième_démo">Deuxième démo</h6>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js notranslate">var canvas = document.getElementById('canvas');
+<pre class="brush: js hidden">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var raf;
 
@@ -213,9 +210,8 @@ canvas.addEventListener("mouseout",function(e){
 });
 
 ball.draw();</pre>
-</div>
 
-<p>{{EmbedLiveSample("Second_demo", "610", "310")}}</p>
+<p>{{EmbedLiveSample("deuxième_démo", "610", "310")}}</p>
 
 <h2 id="Effet_de_traînée">Effet de traînée</h2>
 
@@ -224,12 +220,11 @@ ball.draw();</pre>
 <pre class="brush: js notranslate">ctx.fillStyle = 'rgba(255,255,255,0.3)';
 ctx.fillRect(0,0,canvas.width,canvas.height);</pre>
 
-<div class="hidden">
-<h6 id="Third_demo">Third demo</h6>
+<h6 id="troisième_demo">Troisième démo</h6>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html hidden">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js notranslate">var canvas = document.getElementById('canvas');
+<pre class="brush: js hidden">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var raf;
 
@@ -279,17 +274,14 @@ canvas.addEventListener("mouseout",function(e){
 });
 
 ball.draw();</pre>
-</div>
 
-<p>{{EmbedLiveSample("Third_demo", "610", "310")}}</p>
+<p>{{EmbedLiveSample("troisième_démo", "610", "310")}}</p>
 
 <h2 id="Ajout_dun_contrôle_de_souris">Ajout d'un contrôle de souris</h2>
 
 <p>Afin d'obtenir quelques contrôles sur la balle, nous pouvons faire suivre notre souris en utilisant l'événement <code><a href="/en-US/docs/Web/Reference/Events/mousemove">mousemove</a></code>, par exemple. L'événement <code><a href="/en-US/docs/Web/Events/click">click</a></code> relâche la balle et la laisse rebondir à nouveau.</p>
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
-</div>
+<pre class="brush: html hidden">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
 
 <pre class="brush: js notranslate">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
