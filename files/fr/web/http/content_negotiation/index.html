@@ -11,7 +11,7 @@ translation_of: Web/HTTP/Content_negotiation
 
 <p>Un document spécifique s'appelle une <em>ressource</em>. Lorsqu'un client veut y accéder, il le demande en utilisant son URL. Le serveur utilise cette URL pour choisir une des différentes versions qu'il peut fournir - chaque version étant appelée une représentation - et renvoie cette représentation spécifique au client. La ressource globale, ainsi que chacune de ses représentations, ont une URL spécifique. La façon dont une représentation spécifique est choisie est déterminée par la <em>négociation de contenu</em> et il existe plusieurs façons de négocier entre le client et le serveur.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13789/HTTPNego.png" style="height: 311px; width: 767px;"></p>
+<p><img alt="" src="httpnego.png"></p>
 
 <p>La sélection de la représentation la mieux adaptée se fait par l'un des deux mécanismes suivants:</p>
 
@@ -28,7 +28,7 @@ translation_of: Web/HTTP/Content_negotiation
 
 <p>Dans la <em>négociation de contenu gérée par le serveur</em>, ou négociation proactive de contenu, le navigateur (ou tout autre type de client) envoie plusieurs en-têtes HTTP avec l'URL décrivant les choix préférés de l'utilisateur. Le serveur les utilise comme indications et un algorithme interne choisit le meilleur contenu à servir au client. L'algorithme est spécifique au serveur et n'est pas défini dans la norme. Voir, par exemple, l'<a href="http://httpd.apache.org/docs/2.2/en/content-negotiation.html#algorithm">algorithme de négociation d'Apache 2.2</a>.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13791/HTTPNegoServer.png" style="height: 380px; width: 767px;"></p>
+<p><img alt="" src="httpnegoserver.png"></p>
 
 <p>La norme HTTP/1.1 définit la liste des en-têtes standard qui initient la négociation pilotée par le serveur ({{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}). Bien qu'à proprement parler {{HTTPHeader("User-Agent")}} ne figure pas dans la liste, il est aussi parfois utilisé pour envoyer une représentation spécifique de la ressource demandée, bien que cela ne soit pas considéré comme une bonne pratique. Le serveur utilise l'en-tête {{HTTPHeader("Vary")}} pour indiquer quels en-têtes il a effectivement utilisés pour la négociation de contenu (ou plus précisément les en-têtes de réponse associés), pour que les <a href="/en-US/docs/Web/HTTP/Caching">caches</a> puissent fonctionner de manière optimale.</p>
 
@@ -138,6 +138,6 @@ translation_of: Web/HTTP/Content_negotiation
 
 <p>From the beginnings of HTTP, the protocol allowed another negotiation type: <em>agent-driven negotiation</em> or <em>reactive negotiation</em>. In this negotiation, when facing an ambiguous request, the server sends back a page containing links to the available alternative resources. The user is presented the resources and choose the one to use.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13795/HTTPNego3.png"></p>
+<p><img alt="" src="httpnego3.png"></p>
 
 <p>Unfortunately, the HTTP standard does not specify the format of the page allowing to choose between the available resource, which prevents to easily automatize the process. Besides falling back to the <em>server-driven negotiation</em>, this method is almost always used in conjunction with scripting, especially with JavaScript redirection: after having checked for the negotiation criteria, the script performs the redirection. A second problem is that one more request is needed in order to fetch the real resource, slowing the availability of the resource to the user.</p>

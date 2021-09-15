@@ -18,7 +18,7 @@ translation_of: Web/HTTP/CORS
 
 <p>Pour des raisons de sécurité, les requêtes HTTP multi-origine émises depuis les scripts sont restreintes. Ainsi, {{domxref("XMLHttpRequest")}} et l'<a href="/en-US/docs/Web/API/Fetch_API">API Fetch</a> respectent la règle <a href="/en-US/docs/Web/Security/Same-origin_policy">d'origine unique</a>. Cela signifie qu'une application web qui utilise ces API peut uniquement émettre des requêtes vers la même origine que celle à partir de laquelle l'application a été chargée, sauf si des en-têtes CORS sont utilisés.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14295/CORS_principle.png"></p>
+<p><img alt="" src="cors_principle.png"></p>
 
 <p>Le CORS permet de prendre en charge des requêtes multi-origines sécurisées et des transferts de données entre des navigateurs et des serveurs web. Les navigateurs récents utilisent le CORS dans une API contenante comme {{domxref("XMLHttpRequest")}} ou <code><a href="/fr/docs/Web/API/Fetch_API">Fetch</a></code> pour aider à réduire les risques de requêtes HTTP multi-origines.</p>
 
@@ -55,7 +55,7 @@ translation_of: Web/HTTP/CORS
 
 <p>Les fragments de code JavaScript (ainsi que les instances serveurs qui gèrent ces requêtes) se trouvent sur <a class="external" href="http://arunranga.com/examples/access-control/">http://arunranga.com/examples/access-control/</a> et fonctionnent pour les navigateurs qui prennent en charge {{domxref("XMLHttpRequest")}} dans un contexte multi-site.</p>
 
-<p>Un aperçu « côté serveur » des fonctionnalités CORS se trouve dans l'article <a class="internal" href="/fr/docs/Web/HTTP/Server-Side_Access_Control">Contrôle d'accès côté serveur</a>.</p>
+<p>Un aperçu « côté serveur » des fonctionnalités CORS se trouve dans l'article <a href="/fr/docs/Web/HTTP/Server-Side_Access_Control">Contrôle d'accès côté serveur</a>.</p>
 
 <h3 id="Requêtes_simples">Requêtes simples</h3>
 
@@ -112,11 +112,11 @@ function callOtherDomain() {
 
 <p>Cela entraînera un échange simple entre le client et le serveur laissant aux en-têtes CORS le soin de gérer les privilèges d'accès :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14293/simple_req.png" style="height: 224px; width: 521px;"></p>
+<p><img alt="" src="simple-req-updated.png"></p>
 
 <p>Voyons dans le détail ce que le navigateur envoie au serveur et quelle sera sa réponse :</p>
 
-<pre class="brush: shell;highlight:[10,16]">GET /resources/public-data/ HTTP/1.1
+<pre>GET /resources/public-data/ HTTP/1.1
 Host: truc.autre
 User-Agent: Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1b3pre) Gecko/20081130 Minefield/3.1b3pre
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
@@ -215,7 +215,7 @@ function callOtherDomain(){
 
 <p>Dans le fragment de code ci-avant, à la ligne 3, on crée un corps XML envoyé avec la requête <code>POST</code> ligne 8. Sur la ligne 9, on voit également un en-tête de requête HTTP non standard : <code>X-PINGOTHER: pingpong</code>. De tels en-têtes ne sont pas décrits par le protocole HTTP/1.1 mais peuvent être utilisés par les applications web. La requête utilisant un en-tête <code>Content-Type</code> qui vaut <code>application/xml</code> et un en-tête spécifique, il est nécessaire d'envoyer au préalable une requête préliminaire.</p>
 
-<p><img alt="pre-flight CORS french" src="https://mdn.mozillademos.org/files/17065/preflight_correct.png" style="height: 553px; width: 521px;"></p>
+<p><img alt="" src="preflight_correct.png"></p>
 
 <div class="note">
 <p><strong>Note :</strong> Comme décrit après, la vraie requête POST n'inclut pas les en-têtes <code>Access-Control-Request-*</code> qui sont uniquement nécessaires pour la requête OPTIONS.</p>
@@ -357,7 +357,7 @@ function callOtherDomain(){
 
 <p>À la ligne 7, on voit que l'option <code>withCredentials</code>, du constructeur {{domxref("XMLHttpRequest")}}, doit être activée pour que l'appel utilise les <em>cookies</em>. Par défaut, l'appel sera réalisé sans les <em>cookies</em>. Cette requête étant une simple requête <code>GET</code>, il n'est pas nécessaire d'avoir une requête préliminaire. Cependant, le navigateur rejettera tout réponse qui ne possède pas l'en-tête {{HTTPHeader("Access-Control-Allow-Credentials")}}<code>: true</code> et la réponse correspondante ne sera pas disponible pour le contenu web qui l'a demandée.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14291/cred-req.png" style="height: 223px; width: 521px;"></p>
+<p><img alt="" src="cred-req-updated.png"></p>
 
 <p>Voici un exemple d'échange entre le client et le serveur :</p>
 
@@ -452,7 +452,7 @@ Content-Type: text/plain
 <pre>Access-Control-Allow-Credentials: true
 </pre>
 
-<p><a class="internal" href="#credentials">Voir les scénarios ci-avant pour des exemples</a>.</p>
+<p><a href="#credentials">Voir les scénarios ci-avant pour des exemples</a>.</p>
 
 <h3 id="Access-Control-Allow-Methods"><code>Access-Control-Allow-Methods</code></h3>
 
@@ -540,7 +540,7 @@ Content-Type: text/plain
 <ul>
  <li><a class="external" href="https://arunranga.com/examples/access-control/">Exemples de codes utilisant <code>XMLHttpRequest</code> et le CORS (en anglais)</a></li>
  <li><a href="https://github.com/jackblackevo/cors-jsonp-sample">Exemples de code côté client et côté serveur utilisant le CORS (en anglais)</a></li>
- <li><a class="internal" href="/fr/docs/Web/HTTP/Server-Side_Access_Control">Le CORS vu côté serveur (PHP, etc.)</a></li>
+ <li><a href="/fr/docs/Web/HTTP/Server-Side_Access_Control">Le CORS vu côté serveur (PHP, etc.)</a></li>
  <li>{{domxref("XMLHttpRequest")}}</li>
  <li><a href="/fr/docs/Web/API/Fetch_API">L'API Fetch</a></li>
  <li><a href="https://www.html5rocks.com/en/tutorials/cors/">Utiliser le CORS - HTML5 Rocks (en anglais)</a></li>

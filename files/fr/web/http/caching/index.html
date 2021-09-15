@@ -18,7 +18,7 @@ original_slug: Web/HTTP/Cache
 
 <p>Il y a différents types de caches, qui peuvent être groupés en deux principales catégories : les caches privés et les caches partagés. Un <em>cache partagé</em> est un cache qui stocke les réponses pour qu’elles soient réutilisées par plus d’un utilisateur. Un <em>cache privé</em> est dédié à un seul utilisateur. Cette page aborde principalement les caches de navigateur et de proxy, mais il existe aussi des caches de passerelle, de CDN, les caches de proxy inversés et les répartiteurs de charge qui sont déployés sur les serveurs web pour une meilleure fiabilité, une meilleure performance et une meilleure évolutivité des sites et applications web.</p>
 
-<p><img alt="Ce que permet un cache, avantages et inconvénients des caches privés ou partagés." lang="fr-FR" src="https://mdn.mozillademos.org/files/16128/HTTPCacheType-fr.png" style="height: 573px; width: 910px;"></p>
+<p><img alt="Ce que permet un cache, avantages et inconvénients des caches privés ou partagés." src="http_cache_type.png"></p>
 
 <h3 id="Caches_de_navigateur_privés">Caches de navigateur privés</h3>
 
@@ -94,7 +94,7 @@ Cache-Control: public
 
 <p>Ici un exemple de ce processus avec un cache de proxy partagé :</p>
 
-<p><img alt="Show how a proxy cache acts when a doc is not cache, in the cache and fresh, in the cache and stale." src="https://mdn.mozillademos.org/files/13771/HTTPStaleness.png" style="height: 910px; width: 822px;"></p>
+<p><img alt="Show how a proxy cache acts when a doc is not cache, in the cache and fresh, in the cache and stale." src="http_staleness.png"></p>
 
 <p>Le calcul de la durée de vie de la fraîcheur est basé sur plusieurs en-têtes. Si une en-tête "<code>Cache-control: max-age=N</code>" est spécifiée, alors la durée de vie est égale à N. Si cette en-tête est absente (ce qui est souvent le cas),  on vérifie si une en-tête {{HTTPHeader("Expires")}} est présente. Si ce <code>Expires</code> existe, alors sa valeur moins la valeur de l'en-tête {{HTTPHeader("Date")}} détermine la durée de vie de la fraîcheur. Finalement, si aucune en-tête n'est présente, on en cherche une {{HTTPHeader("Last-Modified")}} et si elle est présente, alors la durée de vie de la fraîcheur du cache est égale à la valeur de l'en-tête <code>Date</code> moins la valeur de l'en-tête <code>Last-modified</code> divisée par 10.</p>
 
@@ -113,7 +113,7 @@ Cache-Control: public
 
 <p>Cette technique a un avantage de plus : mettre à jour deux ressources en cache en même temps ne fera pas qu'une version périmée d'une des ressources sera utilisée avec la nouvelle version de l'autre. C'est trés important quand les sites ont des feuilles de style CSS ou des scripts JS qui ont des dépendances mutuelles c'est-à-dire qui dépendent l'un de l'autre parce qu'ils se réfèrent aux mêmes éléments HTML.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13779/HTTPRevved.png"></p>
+<p><img alt="How the revved cache mechanism works." src="http_revved_fix_typo.png"></p>
 
 <p>La version de révision ajoutée à la ressource révisée n'a pas à être sous une forme classique de chaîne de version comme  1.1.3, ou une suite monotone de chiffres. Cela peut être n'importe quoi qui prévienne une collision : un hash ou une date.</p>
 
@@ -137,7 +137,7 @@ Cache-Control: public
 
 <p>Quand un cache reçoit une requête qui peut être satisfaite par une réponse en cache qui a un champ d'en-tête  <code>Vary</code> il ne devra pas utiliser cette réponse à moins que tous les champs d'en-tête cités dans l'en-tête <code>Vary</code> ne soient communs aux deux : la requête originale (en cache) et la nouvelle requête.</p>
 
-<p><img alt="The Vary header leads cache to use more HTTP headers as key for the cache." src="https://mdn.mozillademos.org/files/13769/HTTPVary.png" style="height: 817px; width: 752px;"></p>
+<p><img alt="The Vary header leads cache to use more HTTP headers as key for the cache." src="http_vary.png"></p>
 
 <p>Cela peut être trés utile pour servir du contenu dynamique par exemple. Quand on se sert de l'en-tête  <code>Vary: User-Agent</code>, les serveurs de cache devront considérer l'agent utilisateur pour décider de servir la page du cache. Si vous servez du contenu varié aux utilisateurs de mobiles, cela vous aidera à éviter qu'un cache puisse servir, par erreur, une version "Desktop" de votre site. En plus, cela aidera Google et d'autres moteurs de recherche  à découvrir la version mobile d'une page et peut aussi les avertir qu'aucun "masquage" (<a href="https://en.wikipedia.org/wiki/Cloaking">Cloaking</a>) n'est à craindre.</p>
 

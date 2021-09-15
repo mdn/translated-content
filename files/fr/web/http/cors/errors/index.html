@@ -33,13 +33,13 @@ translation_of: Web/HTTP/CORS/Errors
  <li>Essayez de reproduir la requête qui échoue et vérifiez la <a href="/en-US/docs/Tools/Web_Console">console</a> pour trouver les messages de violation CORS, ce qui tournerait autours de:</li>
 </ol>
 
-<p><img alt="Firefox console showing CORS error" src="https://mdn.mozillademos.org/files/16050/cors-error2.png"></p>
+<p><img alt="Firefox console showing CORS error" src="cors-error2.png"></p>
 
 <p>Le text de l'erreur sera probablement similaire à:</p>
 
-<pre>Cross<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">-Origin Request Blocked: The Same Origin Policy disallows
+<pre>Cross-Origin Request Blocked: The Same Origin Policy disallows
 reading the remote resource at <em>https://some-url-here</em>. (<em>Reason:
-additional information here</em>).</span></span></span></pre>
+additional information here</em>).</pre>
 
 <div class="note">
 <p><strong>Note :</strong> Pour des raisons de sécurité, il <em>est impossible</em> d'analyser les causes de l'erreur CORS via JavaScript. Seule une indication de l'échec de la requête sera fournie. Il faut donc absolument regarder manuellement les messages d'erreur de la console pour débugger.</p>

@@ -58,13 +58,13 @@ original_slug: Web/HTTP/Detection_du_navigateur_en_utilisant_le_user_agent
 
 <p>Faites aussi attention à ne pas utiliser une expression régulière trop simple sur le nom du navigateur car le User-Agent contient d'autres chaînes de caractères ne respectant pas le format clé/valeur. Par exemple, le User-Agent de Safari et Chrome contient une chaîne "like Gecko".</p>
 
-<table style="height: 585px; width: 852px;">
+<table>
  <thead>
   <tr>
-   <th scope="col"> </th>
+   <th scope="col">Moteur</th>
    <th scope="col">Doit contenir</th>
    <th scope="col">Ne doit pas contenir</th>
-   <th scope="col"> </th>
+   <th scope="col">Notes</th>
   </tr>
  </thead>
  <tbody>
@@ -109,7 +109,7 @@ original_slug: Web/HTTP/Detection_du_navigateur_en_utilisant_le_user_agent
    <td>
     <p><sup>[1]</sup>  Opera 15+ (moteur de rendu Blink) </p>
 
-    <p><sup>[2]</sup><span style="line-height: 1.5;"> Opera 12- (moteur de rendu Presto)</span></p>
+    <p><sup>[2]</sup> Opera 12- (moteur de rendu Presto)</p>
    </td>
   </tr>
   <tr>
@@ -135,12 +135,12 @@ original_slug: Web/HTTP/Detection_du_navigateur_en_utilisant_le_user_agent
 
 <p>Il y a cinq principaux moteurs de rendu : Trident, Gecko, Presto, Blink et Webkit. Puisque détecter le nom du moteur de rendu est courant, d'autres noms sont ajoutés dans beaucoup d'autres User-Agents. Il est donc important de faire attention aux faux positifs lorsqu'on cherche à détecter le moteur de rendu.</p>
 
-<table style="width: 100%;">
+<table>
  <thead>
   <tr>
-   <th scope="col"> </th>
+   <th scope="col">Moteur</th>
    <th scope="col">Doit contenir</th>
-   <th scope="col"> </th>
+   <th scope="col">Ne doit pas contenir</th>
   </tr>
  </thead>
  <tbody>
@@ -221,10 +221,10 @@ original_slug: Web/HTTP/Detection_du_navigateur_en_utilisant_le_user_agent
   <tr>
    <td>Basé sur Presto (Opera 12-)</td>
    <td>
-    <p><a href="http://my.opera.com/community/openweb/idopera/" style="line-height: 1.5;">Chaîne <strong>Opera Mobi/xyz</strong></a><span style="line-height: 1.5;"> dans le commentaire (Opera 12-)</span></p>
+    <p><a href="http://my.opera.com/community/openweb/idopera/">Chaîne <strong>Opera Mobi/xyz</strong></a> dans le commentaire (Opera 12-)</p>
    </td>
    <td>
-    <p><span style="line-height: 1.5;">Opera/9.80 (Android 2.3.3; Linux; Opera Mobi/ADR-1111101157; U; es-ES) Presto/2.9.201 Version/11.50</span></p>
+    <p>Opera/9.80 (Android 2.3.3; Linux; Opera Mobi/ADR-1111101157; U; es-ES) Presto/2.9.201 Version/11.50</p>
    </td>
   </tr>
   <tr>
