@@ -104,15 +104,7 @@ Cache-Control: stale-if-error=&lt;seconds&gt;
  <dt><code>no-cache</code></dt>
  <dd>Indique de renvoyer systématiquement la requête au serveur et ne servir une éventuelle version en cache que dans le cas où le serveur le demande.</dd>
  <dt><code>no-store</code></dt>
- <dd>La réponse <strong>ne</strong> peut être stockée dans<em> aucune</em> mémoire cache. Bien que d'autres directives puissent être définies, C'est la seule directive dont vous avez besoin pour empêcher le réponses en cache sur les navigateurs modernes. <code>max-age=0</code> <strong>est déjà implicite</strong>. <strong>La définition de la directive</strong> <code>must-revalidate</code> <strong>n'a pas de sens</strong> car pour passer la revalidation,  vous devez stocker la réponse dans un cache, ce que n'empêche <code>no-store</code>.</dd>
- <dd><strong>Ne pas copier-coller les spécifications Internet-Explorer</strong> <code>pre-check=0,post-check=0</code> Si vous le voyez en ligne car il est entièrement ignoré, ce que confirme le <a href="https://twitter.com/ericlaw/status/685201170260819968">tweet du développeur Edge</a>.</dd>
- <dt>Désactive le cache par Cache-Control</dt>
- <dd>
- <pre class="example-good">no-store</pre>
- </dd>
- <dd>
- <pre class="example-bad">no-cache,no-store,must-revalidate,pre-check=0,post-check=0</pre>
- </dd>
+ <dd><p>La réponse <strong>ne</strong> peut être stockée dans<em> aucune</em> mémoire cache. Bien que d'autres directives puissent être définies, C'est la seule directive dont vous avez besoin pour empêcher le réponses en cache sur les navigateurs modernes. <code>max-age=0</code> <strong>est déjà implicite</strong>. <strong>La définition de la directive</strong> <code>must-revalidate</code> <strong>n'a pas de sens</strong> car pour passer la revalidation, vous devez stocker la réponse dans un cache, ce que n'empêche <code>no-store</code>.<strong>Ne pas copier-coller les spécifications Internet-Explorer</strong> <code>pre-check=0,post-check=0</code> Si vous le voyez en ligne car il est entièrement ignoré, ce que confirme le <a href="https://twitter.com/ericlaw/status/685201170260819968">tweet du développeur Edge</a>.</p></dd>
 </dl>
 
 <h3 id="Expiration">Expiration</h3>
@@ -158,42 +150,27 @@ Cache-Control: stale-if-error=&lt;seconds&gt;
 
 <p>Pour désactiver la mise en cache, vous pouvez envoyer l'en-tête de réponse suivant. En outre, voir aussi les en-têtes <code>Expires</code> et <code>Pragma</code>.</p>
 
-<dl>
- <dd>
- <pre class="example-good brush: http no-line-numbers">Cache-Control: no-store
+<pre class="example-good">Cache-Control: no-store
 </pre>
- </dd>
- <dd>
- <pre class="example-bad brush: http no-line-numbers">Cache-Control: private,no-cache,no-store,max-age=0,must-revalidate,pre-check=0,post-check=0
+
+<pre class="example-bad">Cache-Control: private,no-cache,no-store,max-age=0,must-revalidate,pre-check=0,post-check=0
 </pre>
- </dd>
-</dl>
 
 <h3 id="Mise_en_cache_dactifs_statiques">Mise en cache d'actifs statiques</h3>
 
 <p>Pour les fichiers de l'application qui ne seront pas modifiés, vous pouvez généralement ajouter une mise en cache agressive en envoyant l'en-tête de réponse ci-dessous. Cela inclut les fichiers statiques qui sont servis par l'application comme les images, les fichiers CSS et les fichiers JavaScript, par exemple. En outre, voir l'en-tête <code>Expires</code>.</p>
 
-<dl>
- <dd>
- <pre class="brush: http no-line-numbers">Cache-Control: public, max-age=604800, immutable
+<pre>Cache-Control: public, max-age=604800, immutable
 </pre>
- </dd>
-</dl>
 
 <h3 id="Nécessitant_une_revalidation">Nécessitant une revalidation</h3>
 
 <p>Le fait de spécifier no-cache ou <code>max-age=0</code> indique que les clients peuvent mettre une ressource en cache et doivent la revalider à chaque fois avant de l'utiliser. Cela signifie que la requête HTTP se produit à chaque fois, mais qu'elle peut sauter le téléchargement du corps HTTP si le contenu est valide.</p>
 
-<dl>
- <dd>
- <pre class="brush: http no-line-numbers">Cache-Control: no-cache
+<pre>Cache-Control: no-cache
 Cache-Control: no-cache, max-age=0
 Cache-Control: no-cache, max-age=0, stale-while-revalidate=300
 </pre>
- </dd>
-</dl>
-
-
 
 <h2 id="Spécifications">Spécifications</h2>
 

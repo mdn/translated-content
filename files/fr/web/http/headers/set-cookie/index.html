@@ -58,7 +58,7 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
 
 <dl>
   <dt><code>&lt;cookie-name&gt;=&lt;cookie-value&gt;</code></dt>
-  <dd>Un cookie commence par une paire nom-valeur:
+  <dd><p>Un cookie commence par une paire nom-valeur:</p>
     <ul>
       <li>Le nom porté par <code>&lt;cookie-name&gt;</code> peut-être composé de n'importe quels caractères ASCII, à l'exception des caractères de contrôle, d'espace, de tabulation et des caractères de séparation suivants : <code>( ) &lt; &gt; @ , ; : \ " / [ ] ? = { }</code>.</li>
       <li>La valeur, <code>&lt;cookie-value&gt;</code>, peut éventuellement être entourée de guillemets doubles et peut être composée de n'importe quel caractère ASCII à l'exception des caractères de contrôle, des blancs, des guillemets doubles, d'une virgule, d'un point-virgule ou d'une barre oblique inversée (<i>backslash</i>). <strong>Encodage</strong> : de nombreuses implémentations encodent les caractères d'URL (<i>URL-encoding</i>) bien que ce ne soit pas nécessaire selon la RFC. Une telle transformation facilite tout de même l'utilisation de caractères autorisés.</li>
@@ -81,7 +81,7 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
   <dt><code>Max-Age=&lt;number&gt; </code>{{optional_inline}}</dt>
   <dd>Le nombre de secondes avant son expiration. Une valeur nulle ou négative fera expirer immédiatement le cookie. Si <code>Expires</code> et <code>Max-Age</code> sont configurés, <code>Max-Age</code> sera prioritaire.</dd>
   <dt><code>Domain=&lt;domain-value&gt;</code> {{optional_inline}}</dt>
-  <dd>Le domaine où le cookie sera envoyé.
+  <dd><p>Le domaine où le cookie sera envoyé.</p>
     <ul>
       <li>Si omis, la valeur par défaut sera l'hôte de l'URL du document courant. Les sous-domaines ne seront pas inclus.</li>
       <li>Contrairement aux anciennes spécifications, le point au début dans les noms de domaines (<code>.example.com</code>) est ignoré.</li>
@@ -89,18 +89,19 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
     </ul>
   </dd>
   <dt><code>Path=&lt;path-value&gt;</code> {{optional_inline}}</dt>
-  <dd>Un chemin qui doit exister dans l'URL de la requête ou le navigateur n'enverra pas d'en-tête <code>Cookie</code> correspondante par la suite.</dd>
-  <dd>La barre oblique (<code>/</code>) est interprétée comme un séparateur de répertoire. Les sous-répertoires sont inclus, par exemple: pour <code>Path=/docs</code> les répertoires <code>/docs</code>, <code>/docs/Web/</code> et <code>/docs/Web/HTTP</code> sont concernés.</dd>
+  <dd>Un chemin qui doit exister dans l'URL de la requête ou le navigateur n'enverra pas d'en-tête <code>Cookie</code> correspondante par la suite. La barre oblique (<code>/</code>) est interprétée comme un séparateur de répertoire. Les sous-répertoires sont inclus, par exemple: pour <code>Path=/docs</code> les répertoires <code>/docs</code>, <code>/docs/Web/</code> et <code>/docs/Web/HTTP</code> sont concernés.</dd>
   <dt><code>Secure</code> {{optional_inline}}</dt>
-  <dd>Un cookie sécurisé est envoyé uniquement si la requête est faite en <code>https:</code> (sauf pour <i>localhost</i>). Cependant des informations confidentielles ne devraient jamais être enregistrées dans un cookie classique, en effet le mécanique est non sécurisé et ne chiffre aucune information.
-    <p class="notecard note"><b>Note:</b> Les sites non sécurisés (<code>http:</code>) ne peuvent plus définir des cookies <code></code>Secure</code> désormais (depuis Chrome 52+ et Firefox 52+). Depuis Firefox 75, cette restriction ne s'applique pas pour <i>localhost</i>.</p>
+  <dd><p>Un cookie sécurisé est envoyé uniquement si la requête est faite en <code>https:</code> (sauf pour <i>localhost</i>). Cependant des informations confidentielles ne devraient jamais être enregistrées dans un cookie classique, en effet le mécanique est non sécurisé et ne chiffre aucune information.</p>
+    <div class="notecard note">
+      <p><strong>Note :</strong> Les sites non sécurisés (<code>http:</code>) ne peuvent plus définir des cookies <code></code>Secure</code> désormais (depuis Chrome 52+ et Firefox 52+). Depuis Firefox 75, cette restriction ne s'applique pas pour <i>localhost</i>.</p>
+    </div>
   </dd>
   <dt><code>HttpOnly</code> {{optional_inline}}</dt>
   <dd>Empêche JavaScript d'accéder au cookie; par exemple, au travers de la propriété <a href="/fr/docs/Web/API/Document/cookie"><code>Document.cookie</code></a>, de l'API <a href="/fr/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a> ou de l'API <a href="/fr/docs/Web/API/Request"><code>Request</code></a>. Cela protège des attaques <em>cross-site scripting</em> (<a href="/fr/docs/Glossary/XSS">XSS</a>).</dd>
   <dt><code>SameSite=&lt;samesite-value&gt;</code> {{optional_inline}}</dt>
-  <dd>Contrôle si un cookie est envoyé avec les requêtes d'origine croisée, offrant ainsi une certaine protection contre les attaques de falsification de requêtes inter-sites (<a href="/fr/docs/Glossary/CSRF">CSRF</a>).
+  <dd><p>Contrôle si un cookie est envoyé avec les requêtes d'origine croisée, offrant ainsi une certaine protection contre les attaques de falsification de requêtes inter-sites (<a href="/fr/docs/Glossary/CSRF">CSRF</a>).</p>
     <div class="notecard note">
-      <p>Les normes relatives aux <a href="/fr/docs/Web/HTTP/Headers/Set-Cookie/SameSite">Cookies SameSite</a> ont récemment changé de telle sorte que :</p>
+      <p><strong>Note :</strong> Les normes relatives aux <a href="/fr/docs/Web/HTTP/Headers/Set-Cookie/SameSite">Cookies SameSite</a> ont récemment changé de telle sorte que :</p>
     
       <ol>
         <li>Le comportement d'envoi des cookies si <code>SameSite</code> n'est pas spécifié est <code>SameSite=Lax</code>. Auparavant, le comportement par défaut était que les cookies étaient envoyés pour toutes les requêtes.</li>
@@ -109,8 +110,7 @@ Set-Cookie: &lt;cookie-name&gt;=&lt;cookie-value&gt;; Domain=&lt;domain-value&gt
     
       <p>Les options ci-dessous couvrent le nouveau comportement. Voir le tableau <a href="/fr/docs/Web/HTTP/Headers/Set-Cookie/SameSite#browser_compatibility">Compatibilité des navigateurs</a> pour des informations sur la mise en œuvre spécifique des navigateurs (lignes : « <code>SameSite</code> : Defaults to <code>Lax</code> » et « <code>SameSite</code> : Secure context required »).</p>
     </div>
-    Les options sont :
-  
+    <p>Les options sont :</p>
     <ul>
       <li><code>Strict</code> : le navigateur envoie le cookie uniquement pour les demandes provenant du même site (c'est-à-dire les demandes provenant du même site qui a défini le cookie). Si la demande provient d'une URL différente de l'URL actuelle, aucun cookie avec l'attribut <code>SameSite=Strict</code> n'est envoyé.</li>
       <li><code>Lax</code> : Le cookie n'est pas envoyé sur les requêtes inter-sites, telles que les appels pour charger des images ou des <i>iframes</i>, mais il est envoyé lorsqu'un utilisateur navigue vers le site d'origine à partir d'un site externe (par exemple, s'il suit un lien). C'est le comportement par défaut si l'attribut <code>SameSite</code> n'est pas spécifié.</li>
