@@ -26,20 +26,20 @@ translation_of: Web/API/Console/trace
 
 <h2 id="Exemple">Exemple</h2>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">foo</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">function</span> <span class="function token">bar</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">trace</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-  <span class="function token">bar</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">function foo() {
+  function bar() {
+    console.trace();
+  }
+  bar();
+}
 
-<span class="function token">foo</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+foo();</code></pre>
 
 <p>Dans la console, la trace suivante sera affichée :</p>
 
 <pre class="line-numbers  language-html"><code class="language-html">bar
 foo
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>anonymous</span><span class="punctuation token">&gt;</span></span></code></pre>
+&lt;anonymous&gt;</code></pre>
 
 <h2 id="Specification" name="Specification">Spécification</h2>
 

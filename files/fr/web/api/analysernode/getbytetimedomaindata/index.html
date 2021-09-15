@@ -13,10 +13,10 @@ translation_of: Web/API/AnalyserNode/getByteTimeDomainData
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> contexteAudio <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">AudioContext</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> analyseur <span class="operator token">=</span> contexteAudio<span class="punctuation token">.</span><span class="function token">createAnalyser</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;
+<pre class="brush: js line-numbers  language-js"><code class="language-js">var contexteAudio = new AudioContext();
+var analyseur = contexteAudio.createAnalyser();
 
-</span></code>// La taille du tableau Uint8Array doit correspondre à la valeur de la propriété fftSize <code class="language-js">
+</code>// La taille du tableau Uint8Array doit correspondre à la valeur de la propriété fftSize <code class="language-js">
 </code>var tableauDonnees = new Uint8Array(analyseur.fftSize);
 
 // remplit le tableau Uint8Array avec les données renvoyées par la méthode getByteTimeDomainData()

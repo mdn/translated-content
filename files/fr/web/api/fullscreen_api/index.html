@@ -11,9 +11,9 @@ original_slug: Web/Guide/DOM/Using_full_screen_mode
 ---
 <p>{{DefaultAPISidebar("Fullscreen API")}}</p>
 
-<p>L'<strong>API Fullscreen</strong> <em>(plein écran)</em> fournit un moyen simple de présenter du contenu web en utilisant l'ensemble de l'écran de l'utilisateur. <span id="result_box" lang="fr"><span>L'API vous permet de diriger facilement le navigateur pour faire en sorte qu'un élément et ses enfants, le cas échéant, occupent entièrement l'écran, éliminant toute l'interface utilisateur du navigateur et les autres applications de l'écran pendant ce temps.</span></span></p>
+<p>L'<strong>API Fullscreen</strong> <em>(plein écran)</em> fournit un moyen simple de présenter du contenu web en utilisant l'ensemble de l'écran de l'utilisateur. L'API vous permet de diriger facilement le navigateur pour faire en sorte qu'un élément et ses enfants, le cas échéant, occupent entièrement l'écran, éliminant toute l'interface utilisateur du navigateur et les autres applications de l'écran pendant ce temps.</p>
 
-<div class="note"><strong>Note :</strong> Pour le moment, tous les navigateurs n'utilisent pas la version non préfixée de cet API. <span id="result_box" lang="fr"><span>Consultez le tableau récapitulant les <a href="#Préfixes">préfixes</a> et les différences de noms entre eux (vous pouvez également utiliser </span></span> <a href="https://github.com/rafrex/fscreen">Fscreen</a> <span lang="fr"><span> pour l'accès du fournisseur à l'API).</span></span></div>
+<div class="note"><strong>Note :</strong> Pour le moment, tous les navigateurs n'utilisent pas la version non préfixée de cet API. Consultez le tableau récapitulant les <a href="#Préfixes">préfixes</a> et les différences de noms entre eux (vous pouvez également utiliser  <a href="https://github.com/rafrex/fscreen">Fscreen</a>  pour l'accès du fournisseur à l'API).</div>
 
 <h2 id="Specification" name="Specification">Activation du mode plein écran</h2>
 
@@ -29,10 +29,10 @@ original_slug: Web/Guide/DOM/Using_full_screen_mode
 
 <p>Nous pouvons mettre cet élément video en plein écran avec un script de cette façon :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> elem <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">"myvideo"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">if</span> <span class="punctuation token">(</span>elem<span class="punctuation token">.</span>requestFullscreen<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  elem<span class="punctuation token">.</span><span class="function token">requestFullscreen</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">var elem = document.getElementById("myvideo");
+if (elem.requestFullscreen) {
+  elem.requestFullscreen();
+}</code></pre>
 
 <h3 id="Différences_de_présentation">Différences de présentation</h3>
 
@@ -52,7 +52,7 @@ original_slug: Web/Guide/DOM/Using_full_screen_mode
 
 <h3 id="Lorsqu'une_demande_de_plein_écran_échoue">Lorsqu'une demande de plein écran échoue</h3>
 
-<p>Il n'est pas garanti que vous soyez capable de passer en mode plein écran. Par exemple, les élements {{ HTMLElement("iframe") }} possèdent l'attribut  {{ HTMLAttrXRef("allowfullscreen", "iframe") }} pour permettre à leur contenu d'être affiché en mode plein écran. Certains contenus comme les greffons fenêtrés ne peuvent être représentés en plein écran. Essayer de placer un élément qui ne peut être affiché en mode plein écran (ou le parent ou le descendant d'un tel élément) ne marchera pas. A la place, l'élément qui a demandé le mode plein écran recevra un événement  <code>mozfullscreenerror</code> . Quand une demande de plein écran échoue, Firefox écrit un message d'erreur dans la console Web expliquant pourquoi la demande n'a pas pu aboutir. <span id="result_box" lang="fr"><span>Dans Chrome et les versions plus récentes d'Opera, aucun avertissement de ce type n'est généré.</span></span></p>
+<p>Il n'est pas garanti que vous soyez capable de passer en mode plein écran. Par exemple, les élements {{ HTMLElement("iframe") }} possèdent l'attribut  {{ HTMLAttrXRef("allowfullscreen", "iframe") }} pour permettre à leur contenu d'être affiché en mode plein écran. Certains contenus comme les greffons fenêtrés ne peuvent être représentés en plein écran. Essayer de placer un élément qui ne peut être affiché en mode plein écran (ou le parent ou le descendant d'un tel élément) ne marchera pas. A la place, l'élément qui a demandé le mode plein écran recevra un événement  <code>mozfullscreenerror</code> . Quand une demande de plein écran échoue, Firefox écrit un message d'erreur dans la console Web expliquant pourquoi la demande n'a pas pu aboutir. Dans Chrome et les versions plus récentes d'Opera, aucun avertissement de ce type n'est généré.</p>
 
 <div class="note">
 <p><strong>Note :</strong> Les requêtes de Fullscreen doivent être appelées depuis un gestionnaire d'évènements ou sinon, elles seront refusées.</p>
@@ -100,15 +100,15 @@ original_slug: Web/Guide/DOM/Using_full_screen_mode
 
 <p>Ce code est appelé lorsque l'utilisateur appuie sur la touche <kbd>Entrée</kbd>, comme vu plus haut.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">toggleFullScreen</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>document<span class="punctuation token">.</span>fullscreenElement<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      document<span class="punctuation token">.</span>documentElement<span class="punctuation token">.</span><span class="function token">requestFullscreen</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="punctuation token">{</span>
-    <span class="keyword token">if</span> <span class="punctuation token">(</span>document<span class="punctuation token">.</span>exitFullscreen<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      document<span class="punctuation token">.</span><span class="function token">exitFullscreen</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">function toggleFullScreen() {
+  if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
+}</code></pre>
 
 <p> Dans un premier temps, la valeur de l'attribut <code>fullscreenElement</code> est analysée dans le {{ domxref("document") }} (en contrôlant s'il est préfixé par <code>moz-, ms-</code> ou <code>webkit-</code>). Si la valeur est nulle, le document est actuellement en mode normal, donc nous devons passer en mode plein écran. Le passage en mode plein écran est assuré en appelant {{ domxref("element.requestFullscreen()") }}.</p>
 
@@ -116,7 +116,7 @@ original_slug: Web/Guide/DOM/Using_full_screen_mode
 
 <h2 id="Préfixes_2"><a name="Préfixes">Préfixes</a></h2>
 
-<p>Pour le moment, tous les navigateurs n'ont pas implémenté la version sans préfixe de l'API (pour l'accès du fournisseur de l'API, vous pouvez utiliser <a href="https://github.com/rafrex/fscreen">Fscreen</a>) . <span id="result_box" lang="fr"><span>Voici le tableau résumant les préfixes et les différences de noms entre eux </span></span><span lang="fr"><span>:</span></span></p>
+<p>Pour le moment, tous les navigateurs n'ont pas implémenté la version sans préfixe de l'API (pour l'accès du fournisseur de l'API, vous pouvez utiliser <a href="https://github.com/rafrex/fscreen">Fscreen</a>) . Voici le tableau résumant les préfixes et les différences de noms entre eux :</p>
 
 <table class="standard-table">
  <thead>

@@ -13,17 +13,17 @@ original_slug: Web/API/WebGL_API/Tutorial/Commencer_avec_WebGL
 
 <p>Les exemples de code de ce tutoriel peuvent aussi être trouvés dans le <a href="https://github.com/mdn/webgl-examples/tree/gh-pages/tutorial">webgl-examples GitHub repository</a>.</p>
 
-<h2 class="editable" id="Préparation_au_rendu_3D"><span>Préparation au rendu 3D</span></h2>
+<h2 class="editable" id="Préparation_au_rendu_3D">Préparation au rendu 3D</h2>
 
 <p>La première chose dont vous avez besoin pour utiliser WebGL pour faire un rendu est un canvas. Le fragment d'HTML ci-dessous déclare un canvas dans lequel notre exemple se dessinera.</p>
 
-<pre class="brush: html"><span class="plain"><code>&lt;body&gt;
+<pre class="brush: html"><code>&lt;body&gt;
   &lt;canvas id="glCanvas" width="640" height="480"&gt;&lt;/canvas&gt;
-&lt;/body&gt;</code></span>
+&lt;/body&gt;</code>
 </pre>
 
 <div id="section_2">
-<h3 class="editable" id="Préparation_du_contexte_WebGL"><span>Préparation du contexte WebGL</span></h3>
+<h3 class="editable" id="Préparation_du_contexte_WebGL">Préparation du contexte WebGL</h3>
 
 <p>La fonction <code>main()</code> dans notre code JavaScript est appelée quand notre script est chargé. Son but est de créer le contexte WebGL et de commencer à rendre du contenu.</p>
 

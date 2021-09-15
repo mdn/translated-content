@@ -49,41 +49,41 @@ translation_of: Web/API/SharedWorker
 
 <p>L'extrait de code suivant illustre la création d'un objet <code>SharedWorker</code> en utilisant le constructeur {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}. Les deux scripts contiennent ceci :</p>
 
-<pre class="brush: js  language-js"><code class="language-js"><span class="keyword token">var</span> myWorker <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">SharedWorker</span><span class="punctuation token">(</span><span class="string token">"worker.js"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js  language-js"><code class="language-js">var myWorker = new SharedWorker("worker.js");</code></pre>
 
 <p>Les deux scripts accèdent alors au worker à travers un objet {{domxref("MessagePort")}} créé en utilisant la propriété {{domxref("SharedWorker.port")}} — le port est démarré au moyen de sa méthode <code>start()</code> :</p>
 
-<pre class="brush: js  language-js"><code class="language-js">myWorker<span class="punctuation token">.</span>port<span class="punctuation token">.</span><span class="function token">start<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js  language-js"><code class="language-js">myWorker.port.start();</code></pre>
 
 <p>Lorsque le port est démarré, les deux scripts envoient des messages au worker et gèrent les messages qu'il renvoie en utilisant respectivement <code>port.postMessage()</code> et <code>port.onmessage</code> :</p>
 
-<pre class="brush: js  language-js"><code class="language-js">first<span class="punctuation token">.</span>onchange <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    myWorker<span class="punctuation token">.</span>port<span class="punctuation token">.</span><span class="function token">postMessage<span class="punctuation token">(</span></span><span class="punctuation token">[</span>first<span class="punctuation token">.</span>value<span class="punctuation token">,</span>second<span class="punctuation token">.</span>value<span class="punctuation token">]</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    console<span class="punctuation token">.</span><span class="function token">log<span class="punctuation token">(</span></span><span class="string token">'Message envoyé au worker'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
+<pre class="brush: js  language-js"><code class="language-js">first.onchange = function() {
+    myWorker.port.postMessage([first.value,second.value]);
+    console.log('Message envoyé au worker');
+  }
 
-  second<span class="punctuation token">.</span>onchange <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    myWorker<span class="punctuation token">.</span>port<span class="punctuation token">.</span><span class="function token">postMessage<span class="punctuation token">(</span></span><span class="punctuation token">[</span>first<span class="punctuation token">.</span>value<span class="punctuation token">,</span>second<span class="punctuation token">.</span>value<span class="punctuation token">]</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    console<span class="punctuation token">.</span><span class="function token">log<span class="punctuation token">(</span></span><span class="string token">'Message envoyé au worker'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
+  second.onchange = function() {
+    myWorker.port.postMessage([first.value,second.value]);
+    console.log('Message envoyé au worker');
+  }
 
-  myWorker<span class="punctuation token">.</span>port<span class="punctuation token">.</span>onmessage <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>e<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    result1<span class="punctuation token">.</span>textContent <span class="operator token">=</span> e<span class="punctuation token">.</span>data<span class="punctuation token">;</span>
-    console<span class="punctuation token">.</span><span class="function token">log<span class="punctuation token">(</span></span><span class="string token">'Message reçu du worker'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span></code></pre>
+  myWorker.port.onmessage = function(e) {
+    result1.textContent = e.data;
+    console.log('Message reçu du worker');
+  }</code></pre>
 
 <p>Au sein du worker, nous utilisons le gestionnaire {{domxref("SharedWorkerGlobalScope.onconnect")}} pour se connecter au même port dont il a été question plus haut. Les ports associés au worker sont accessibles dans la propriété <code>ports</code> de l'événement {{event("connect")}} — nous utilisons alors la méthode {{domxref("MessagePort")}} <code>start()</code> pour démarrer le port, et le gestionnaire <code>onmessage</code> pour s'occuper des messages en provenance des threads principaux.</p>
 
-<pre class="brush: js  language-js"><code class="language-js">onconnect <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>e<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">var</span> port <span class="operator token">=</span> e<span class="punctuation token">.</span>ports<span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
+<pre class="brush: js  language-js"><code class="language-js">onconnect = function(e) {
+    var port = e.ports[0];
 
-    port<span class="punctuation token">.</span>onmessage <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span>e<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="keyword token">var</span> workerResult <span class="operator token">=</span> <span class="string token">'Result: '</span> <span class="operator token">+</span> <span class="punctuation token">(</span>e<span class="punctuation token">.</span>data<span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span> <span class="operator token">*</span> e<span class="punctuation token">.</span>data<span class="punctuation token">[</span><span class="number token">1</span><span class="punctuation token">]</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-      port<span class="punctuation token">.</span><span class="function token">postMessage<span class="punctuation token">(</span></span>workerResult<span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
+    port.onmessage = function(e) {
+      var workerResult = 'Result: ' + (e.data[0] * e.data[1]);
+      port.postMessage(workerResult);
+    }
 
-    port<span class="punctuation token">.</span><span class="function token">start<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+    port.start();
+}</code></pre>
 
 <h2 id="Spécifications">Spécifications</h2>
 

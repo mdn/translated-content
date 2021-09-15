@@ -455,24 +455,24 @@ if (isset($_FILES['myFile'])) {
 
 <p>Sous Firefox, la constante de configuration <code>pdfjs.disabled</code> doit être définie à <code>false</code> {{non-standard_inline()}} pour afficher les PDF encapsulés dans dans un {{ HTMLElement("iframe") }} plutôt que de s'en voir proposer le téléchargement sur le PC local.</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>iframe</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>viewer<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;iframe id="viewer"&gt;</code></pre>
 
 <p>Et voici comment modifier la valeur de l'attribut <code>src</code> :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> obj_url <span class="operator token">=</span> window<span class="punctuation token">.</span>URL<span class="punctuation token">.</span><span class="function token">createObjectURL</span><span class="punctuation token">(</span>blob<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> iframe <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">'viewer'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-iframe<span class="punctuation token">.</span><span class="function token">setAttribute</span><span class="punctuation token">(</span><span class="string token">'src'</span><span class="punctuation token">,</span> obj_url<span class="punctuation token">)</span><span class="punctuation token">;</span>
-window<span class="punctuation token">.</span>URL<span class="punctuation token">.</span><span class="function token">revokeObjectURL</span><span class="punctuation token">(</span>obj_url<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">var obj_url = window.URL.createObjectURL(blob);
+var iframe = document.getElementById('viewer');
+iframe.setAttribute('src', obj_url);
+window.URL.revokeObjectURL(obj_url);</code></pre>
 
 <h2 id="Exemple_Utiliser_un_objet_URLs_avec_d'autres_types_de_fichiers">Exemple : Utiliser un objet URLs avec d'autres types de fichiers</h2>
 
 <p>Vous pouvez manipuler de la même façon des fichiers d'autres formats. Voici comment prévisualiser une vidéo téléchargée sur le serveur :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> video <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">'video'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> obj_url <span class="operator token">=</span> window<span class="punctuation token">.</span>URL<span class="punctuation token">.</span><span class="function token">createObjectURL</span><span class="punctuation token">(</span>blob<span class="punctuation token">)</span><span class="punctuation token">;</span>
-video<span class="punctuation token">.</span>src <span class="operator token">=</span> obj_url<span class="punctuation token">;</span>
-video<span class="punctuation token">.</span><span class="function token">play</span><span class="punctuation token">(</span><span class="punctuation token">)</span>
-window<span class="punctuation token">.</span>URL<span class="punctuation token">.</span><span class="function token">revokeObjectURL</span><span class="punctuation token">(</span>obj_url<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">var video = document.getElementById('video');
+var obj_url = window.URL.createObjectURL(blob);
+video.src = obj_url;
+video.play()
+window.URL.revokeObjectURL(obj_url);</code></pre>
 
 <h2 id="Specification" name="Specification">Spécifications</h2>
 

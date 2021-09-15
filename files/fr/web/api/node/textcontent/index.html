@@ -58,27 +58,27 @@ document.getElementById("divA").textContent = "Ceci est un exemple de texte";
 
 <h2 id="Polyfill_pour_IE8">Polyfill pour IE8</h2>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// Source: Eli Grey @ http://eligrey.com/blog/post/textcontent-in-ie8</span>
-<span class="keyword token">if</span> <span class="punctuation token">(</span>Object<span class="punctuation token">.</span>defineProperty
-  <span class="operator token">&amp;&amp;</span> Object<span class="punctuation token">.</span>getOwnPropertyDescriptor
-  <span class="operator token">&amp;&amp;</span> Object<span class="punctuation token">.</span><span class="function token">getOwnPropertyDescriptor</span><span class="punctuation token">(</span>Element<span class="punctuation token">.</span>prototype<span class="punctuation token">,</span> <span class="string token">"textContent"</span><span class="punctuation token">)</span>
-  <span class="operator token">&amp;&amp;</span> <span class="operator token">!</span>Object<span class="punctuation token">.</span><span class="function token">getOwnPropertyDescriptor</span><span class="punctuation token">(</span>Element<span class="punctuation token">.</span>prototype<span class="punctuation token">,</span> <span class="string token">"textContent"</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="keyword token">get</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">var</span> innerText <span class="operator token">=</span> Object<span class="punctuation token">.</span><span class="function token">getOwnPropertyDescriptor</span><span class="punctuation token">(</span>Element<span class="punctuation token">.</span>prototype<span class="punctuation token">,</span> <span class="string token">"innerText"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    Object<span class="punctuation token">.</span><span class="function token">defineProperty</span><span class="punctuation token">(</span>Element<span class="punctuation token">.</span>prototype<span class="punctuation token">,</span> <span class="string token">"textContent"</span><span class="punctuation token">,</span>
-     <span class="comment token">// Passing innerText or innerText.get directly does not work,</span>
-     <span class="comment token">// wrapper function is required.</span>
-     <span class="punctuation token">{</span>
-       <span class="keyword token">get</span><span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-         <span class="keyword token">return</span> innerText<span class="punctuation token">.</span><span class="keyword token">get</span><span class="punctuation token">.</span><span class="function token">call</span><span class="punctuation token">(</span><span class="keyword token">this</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-       <span class="punctuation token">}</span><span class="punctuation token">,</span>
-       <span class="keyword token">set</span><span class="punctuation token">:</span> <span class="keyword token">function</span><span class="punctuation token">(</span>s<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-         <span class="keyword token">return</span> innerText<span class="punctuation token">.</span><span class="keyword token">set</span><span class="punctuation token">.</span><span class="function token">call</span><span class="punctuation token">(</span><span class="keyword token">this</span><span class="punctuation token">,</span> s<span class="punctuation token">)</span><span class="punctuation token">;</span>
-       <span class="punctuation token">}</span>
-     <span class="punctuation token">}</span>
-   <span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">// Source: Eli Grey @ http://eligrey.com/blog/post/textcontent-in-ie8
+if (Object.defineProperty
+  &amp;&amp; Object.getOwnPropertyDescriptor
+  &amp;&amp; Object.getOwnPropertyDescriptor(Element.prototype, "textContent")
+  &amp;&amp; !Object.getOwnPropertyDescriptor(Element.prototype, "textContent").get) {
+  (function() {
+    var innerText = Object.getOwnPropertyDescriptor(Element.prototype, "innerText");
+    Object.defineProperty(Element.prototype, "textContent",
+     // Passing innerText or innerText.get directly does not work,
+     // wrapper function is required.
+     {
+       get: function() {
+         return innerText.get.call(this);
+       },
+       set: function(s) {
+         return innerText.set.call(this, s);
+       }
+     }
+   );
+  })();
+}</code></pre>
 
 <ul>
 </ul>

@@ -13,10 +13,10 @@ translation_of: Web/API/Event/initEvent
 
 <p>La méthode <strong><code>Event.initEvent()</code></strong> est utilisée pour initialiser la valeur d'un objet {{domxref("event")}} créé à l'aide de {{domxref("Document.createEvent()")}}.</p>
 
-<p>Les évènements initialisés par ce moyen ont été créés par la méthode {{domxref("Document.createEvent()")}}. Celle-ci doit être appelée à définir l'évènement avant qu'il ne soit distribué, en utilisant {{domxref("EventTarget.dispatchEvent()")}}. <span class="short_text" id="result_box" lang="fr"><span>Une fois l'évènement transmis, la méthode ne fait plus rien.</span></span></p>
+<p>Les évènements initialisés par ce moyen ont été créés par la méthode {{domxref("Document.createEvent()")}}. Celle-ci doit être appelée à définir l'évènement avant qu'il ne soit distribué, en utilisant {{domxref("EventTarget.dispatchEvent()")}}. Une fois l'évènement transmis, la méthode ne fait plus rien.</p>
 
 <div class="note">
-<p><strong><span class="short_text" lang="fr"><span>Note : Ne pas utiliser cette méthode qui est dépréciée</span></span></strong></p>
+<p><strong>Note : Ne pas utiliser cette méthode qui est dépréciée</strong></p>
 
 <p>À la place, utilisez un constructeur d'évènements spécifique comme {{domxref("Event.Event", "Event()")}} . La page <a href="https://developer.mozilla.org/fr/docs/Web/Guide/DOM/Events/Creating_and_triggering_events">Création et déclenchement d'évènements</a> vous donne plus d'informations sur la manière de les utiliser.</p>
 </div>
@@ -64,7 +64,7 @@ elem.dispatchEvent(event);</code>
   <tr>
    <td>{{SpecName('DOM WHATWG', '#dom-event-initevent','Event.initEvent()')}}</td>
    <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>Depuis {{SpecName('DOM2 Events')}}, dépréciée, <span class="short_text" id="result_box" lang="fr"><span>remplacée par les constructeurs d'événements.</span></span></td>
+   <td>Depuis {{SpecName('DOM2 Events')}}, dépréciée, remplacée par les constructeurs d'événements.</td>
   </tr>
   <tr>
    <td>{{SpecName('DOM2 Events','##Events-Event-initEvent','Event.initEvent()')}}</td>

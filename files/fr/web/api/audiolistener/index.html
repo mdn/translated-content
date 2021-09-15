@@ -12,7 +12,7 @@ translation_of: Web/API/AudioListener
 
 <p>L'interface <em>AudioListener </em>représente la position et l'orientation de l'unique personne écoutant la scène audio; elle est utilisée dans le cadre d'une <a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">spatialisation audio</a>. Tous les {{domxref ("PannerNode")}} sont spatialisés par rapport à l'objet <em>AudioListener </em>stocké dans la propriété {{domxref ("AudioContext.listener")}}.</p>
 
-<p><span id="result_box" lang="fr"><span class="hps">Il est important</span> <span class="hps">de noter qu'il n'y</span> <span class="hps">a qu'un seul</span> <span class="hps">auditeur</span> <span class="hps">par</span> <span class="alt-edited hps">contexte, et qu'il ne s'agit</span><span class="hps"> pas</span> d'<span class="atn hps">un {{domxref("AudioNode")}}.</span></span></p>
+<p>Il est important de noter qu'il n'y a qu'un seul auditeur par contexte, et qu'il ne s'agit pas d'un {{domxref("AudioNode")}}.</p>
 
 <p><img alt="We see the position, velocity, up and front vectors of an AudioListener, with the up and front vectors at 90° each from the other" src="https://mdn.mozillademos.org/files/12652/listener.svg" style="height: 249px; width: 720px;"></p>
 
@@ -51,7 +51,7 @@ translation_of: Web/API/AudioListener
 
 <dl>
  <dt>{{domxref("AudioListener.setOrientation()")}}</dt>
- <dd><span id="result_box" lang="fr"><span class="hps">Définit</span> <span class="hps">l'orientation</span> <span class="hps">de l'auditeur.</span></span></dd>
+ <dd>Définit l'orientation de l'auditeur.</dd>
  <dt>{{domxref("AudioListener.setPosition()")}}</dt>
  <dd>Définit la position de l'auditeur. Consulter {{anch("Deprecated features")}}  pour savoir pourquoi cette méthode est désormais obsolète.</dd>
 </dl>

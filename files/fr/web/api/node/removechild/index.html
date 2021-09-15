@@ -44,56 +44,56 @@ translation_of: Web/API/Node/removeChild
 
 <h2 id="Exemples">Exemples</h2>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="comment token">&lt;!--Sample HTML code--&gt;</span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>top<span class="punctuation token">"</span></span> <span class="attr-name token">align</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>center<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span> <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;!--Sample HTML code--&gt;
+&lt;div id="top" align="center"&gt; &lt;/div&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>text/javascript<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="language-javascript script token">
-      <span class="keyword token">var</span> top <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">"top"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-      <span class="keyword token">var</span> nested <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">"nested"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+&lt;script type="text/javascript"&gt;
+      var top = document.getElementById("top");
+      var nested = document.getElementById("nested");
 
-      <span class="keyword token">var</span> garbage <span class="operator token">=</span> top<span class="punctuation token">.</span><span class="function token">removeChild</span><span class="punctuation token">(</span>nested<span class="punctuation token">)</span><span class="punctuation token">;</span>    <span class="comment token">//Cas test 2: la méthode lance l'exception (2)</span>
+      var garbage = top.removeChild(nested);    //Cas test 2: la méthode lance l'exception (2)
 
-</span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span>
+&lt;/script&gt;
 
-<span class="comment token">&lt;!--Sample HTML code--&gt;</span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>top<span class="punctuation token">"</span></span> <span class="attr-name token">align</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>center<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
- <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>nested<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
+&lt;!--Sample HTML code--&gt;
+&lt;div id="top" align="center"&gt;
+ &lt;div id="nested"&gt;&lt;/div&gt;
+&lt;/div&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>text/javascript<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="language-javascript script token">
-      <span class="keyword token">var</span> top <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">"top"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-      <span class="keyword token">var</span> nested <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">"nested"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+&lt;script type="text/javascript"&gt;
+      var top = document.getElementById("top");
+      var nested = document.getElementById("nested");
 
-      <span class="keyword token">var</span> garbage <span class="operator token">=</span> top<span class="punctuation token">.</span><span class="function token">removeChild</span><span class="punctuation token">(</span>nested<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// Ce premier appel supprime correctement le noeud</span>
+      var garbage = top.removeChild(nested); // Ce premier appel supprime correctement le noeud
 
-      <span class="comment token">// ......</span>
-      garbage <span class="operator token">=</span> top<span class="punctuation token">.</span><span class="function token">removeChild</span><span class="punctuation token">(</span>nested<span class="punctuation token">)</span><span class="punctuation token">;</span>   <span class="comment token">// Cas test 1 : la méthode dans le second appel ici, lance l'exception (1)</span>
+      // ......
+      garbage = top.removeChild(nested);   // Cas test 1 : la méthode dans le second appel ici, lance l'exception (1)
 
-</span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span></code></pre>
+&lt;/script&gt;</code></pre>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="comment token">&lt;!--Sample HTML code--&gt;</span>
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;!--Sample HTML code--&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>top<span class="punctuation token">"</span></span> <span class="attr-name token">align</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>center<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>nested<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span></code></pre>
+&lt;div id="top" align="center"&gt;
+  &lt;div id="nested"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
-<pre class="brush:js line-numbers  language-js"><code class="language-js"><span class="comment token">// Supprime un élément spécifié quand son noeud parent est connu</span>
-<span class="keyword token">var</span> d <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">"top"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> d_nested <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">"nested"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> throwawayNode <span class="operator token">=</span> d<span class="punctuation token">.</span><span class="function token">removeChild</span><span class="punctuation token">(</span>d_nested<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush:js line-numbers  language-js"><code class="language-js">// Supprime un élément spécifié quand son noeud parent est connu
+var d = document.getElementById("top");
+var d_nested = document.getElementById("nested");
+var throwawayNode = d.removeChild(d_nested);</code></pre>
 
-<pre class="brush:js line-numbers  language-js"><code class="language-js"><span class="comment token">// Supprime un élément spécifié sans avoir à spécifier son noeud parent</span>
-<span class="keyword token">var</span> node <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">"nested"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">if</span> <span class="punctuation token">(</span>node<span class="punctuation token">.</span>parentNode<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  node<span class="punctuation token">.</span>parentNode<span class="punctuation token">.</span><span class="function token">removeChild</span><span class="punctuation token">(</span>node<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush:js line-numbers  language-js"><code class="language-js">// Supprime un élément spécifié sans avoir à spécifier son noeud parent
+var node = document.getElementById("nested");
+if (node.parentNode) {
+  node.parentNode.removeChild(node);
+}</code></pre>
 
 <pre class="brush:js line-numbers  language-js">
-<code class="language-js"><span class="comment token">// Supprime tous les enfant d'un élément</span>
-<span class="keyword token">var</span> element <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">"top"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">while</span> <span class="punctuation token">(</span>element<span class="punctuation token">.</span>firstChild<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  element<span class="punctuation token">.</span><span class="function token">removeChild</span><span class="punctuation token">(</span>element<span class="punctuation token">.</span>firstChild<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+<code class="language-js">// Supprime tous les enfant d'un élément
+var element = document.getElementById("top");
+while (element.firstChild) {
+  element.removeChild(element.firstChild);
+}</code></pre>
 
 <h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Spécifications</h2>
 

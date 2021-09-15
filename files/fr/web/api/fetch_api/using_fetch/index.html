@@ -139,7 +139,7 @@ fetch(myRequest,myInit)
 <p>C'est très pratique, si le corps de la requête et de la réponse ne sont utilisés qu'une fois seulement. Cette manière de faire une copie permet de ré-utiliser la requête/réponse, en changeant juste les options du <code>init</code> si nécessaire.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Il y a aussi une méthode {{domxref("Request.clone","clone()")}} qui créer une copie. <span id="result_box" lang="fr"><span>Cela a</span> <span>une sémantique légèrement différente</span> <span>à l'autre</span> <span>méthode de copie</span></span>— La première va échouer si l'ancien corps de la requête a déjà été lu (même pour copier une réponse), alors qu'avec <code>clone()</code> non.</p>
+<p><strong>Note </strong>: Il y a aussi une méthode {{domxref("Request.clone","clone()")}} qui créer une copie. Cela a une sémantique légèrement différente à l'autre méthode de copie— La première va échouer si l'ancien corps de la requête a déjà été lu (même pour copier une réponse), alors qu'avec <code>clone()</code> non.</p>
 </div>
 
 <h2 id="En-têtes_Headers">En-têtes (Headers)</h2>

@@ -21,7 +21,7 @@ translation_of: Web/API/Element/getAttributeNS
 
 <dl>
  <dt><code>namespace </code></dt>
- <dd><span id="result_box" lang="fr"><span>L'espace de noms dans lequel rechercher l'attribut spécifié.</span></span></dd>
+ <dd>L'espace de noms dans lequel rechercher l'attribut spécifié.</dd>
  <dt><code>name </code></dt>
  <dd>Le nom de l'attribut à chercher.</dd>
 </dl>
@@ -31,7 +31,7 @@ translation_of: Web/API/Element/getAttributeNS
 <p>La valeur de chaîne de caractères de l'attribut spécifié. Si  l'attribut n'existe pas, le résultat est <code>null</code>.</p>
 
 <div class="note">
-<p>Note : <span id="result_box" lang="fr"><span>Les versions antérieures de la spécification DOM avaient cette méthode décrite comme renvoyant une chaîne vide pour des attributs inexistants, mais elle n'était généralement pas implémentée de cette façon, car null a plus de sens.</span> <span>La spécification DOM4 indique maintenant que cette méthode devrait retourner null pour les attributs inexistants.</span></span></p>
+<p>Note : Les versions antérieures de la spécification DOM avaient cette méthode décrite comme renvoyant une chaîne vide pour des attributs inexistants, mais elle n'était généralement pas implémentée de cette façon, car null a plus de sens. La spécification DOM4 indique maintenant que cette méthode devrait retourner null pour les attributs inexistants.</p>
 </div>
 
 <h2 id="Exemples">Exemples</h2>
@@ -80,7 +80,7 @@ translation_of: Web/API/Element/getAttributeNS
 
 <p>La méthode <code>getAttributeNS</code> diffère de {{domxref("element.getAttribute()", "getAttribute()")}} en ce qu'elle permet de spécifier les attributs faisant partie d'un espace de noms particulier, comme dans l'exemple précédent, où l'attribut fait partie d'un espace de noms fictif « specialspace » de mozilla.</p>
 
-<p><span id="result_box" lang="fr"><span>Avant la spécification DOM4, cette méthode était spécifiée pour renvoyer une chaîne vide plutôt que null pour les attributs inexistants.</span> <span>Cependant, la plupart des navigateurs ont renvoyé null.</span> <span>À partir de DOM4, la spécification dit maintenant de retourner null.</span> <span>Cependant, certains navigateurs plus anciens renvoient une chaîne vide.</span> <span>Pour cette raison, vous devez utiliser {{domxref("element.hasAttributeNS ()","hasAttributeNS ()")}} pour vérifier l'existence d'un attribut avant d'appeler <code>getAttributeNS()</code> s'il est possible que l'attribut demandé n'existe pas</span> <span>sur l'élément spécifié.</span></span></p>
+<p>Avant la spécification DOM4, cette méthode était spécifiée pour renvoyer une chaîne vide plutôt que null pour les attributs inexistants. Cependant, la plupart des navigateurs ont renvoyé null. À partir de DOM4, la spécification dit maintenant de retourner null. Cependant, certains navigateurs plus anciens renvoient une chaîne vide. Pour cette raison, vous devez utiliser {{domxref("element.hasAttributeNS ()","hasAttributeNS ()")}} pour vérifier l'existence d'un attribut avant d'appeler <code>getAttributeNS()</code> s'il est possible que l'attribut demandé n'existe pas sur l'élément spécifié.</p>
 
 <p>{{ DOMAttributeMethods() }}</p>
 
@@ -103,7 +103,7 @@ translation_of: Web/API/Element/getAttributeNS
   <tr>
    <td>{{SpecName("DOM3 Core", "#ID-ElGetAttrNS", "Element.getAttributeNS()")}}</td>
    <td>{{Spec2("DOM3 Core")}}</td>
-   <td>Specifie qu'une exception <code>NOT_SUPPORTED_ERR</code>  <span class="short_text" id="result_box" lang="fr"><span>est levée si l'agent utilisateur ne supporte pas la fonctionnalité</span></span> <code>"XML"</code>. <span id="result_box" lang="fr"><span>Spécifie également que <code>null</code> doit être passé pour n'avoir aucun espace de noms.</span></span></td>
+   <td>Specifie qu'une exception <code>NOT_SUPPORTED_ERR</code>  est levée si l'agent utilisateur ne supporte pas la fonctionnalité <code>"XML"</code>. Spécifie également que <code>null</code> doit être passé pour n'avoir aucun espace de noms.</td>
   </tr>
   <tr>
    <td>{{SpecName("DOM2 Core", "#ID-ElGetAttrNS", "Element.getAttributeNS()")}}</td>

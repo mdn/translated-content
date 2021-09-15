@@ -13,18 +13,18 @@ translation_of: Web/API/MediaStream
  <dt>{{domxref("MediaStream.id")}} {{readonlyInline}}</dt>
  <dd>{{domxref("DOMString")}} contenant 36 carractères correspondant à l'identifiant unique (GUID) de l'objet.</dd>
  <dt>{{domxref("MediaStream.ended")}} {{readonlyInline}}</dt>
- <dd>Booléen dont la valeur est <code>true</code> si l'évènement <span style="line-height: inherit;">{{event("ended (MediaStream)", "ended")}} à été déclenché sur l'objet, signifiant que le flux à été complètement lu, ou <code>false</code></span> si la fin du flux n'à pas été atteinte.</dd>
+ <dd>Booléen dont la valeur est <code>true</code> si l'évènement {{event("ended (MediaStream)", "ended")}} à été déclenché sur l'objet, signifiant que le flux à été complètement lu, ou <code>false</code> si la fin du flux n'à pas été atteinte.</dd>
 </dl>
 
 <h3 id="Gestionnaire_d'évènements">Gestionnaire d'évènements</h3>
 
 <dl>
  <dt>{{domxref("MediaStream.onaddtrack")}}</dt>
- <dd>Est un <span style="line-height: inherit;">{{event("Event_handlers", "event handler")}} contenant l'action à exécuter lorsqu'un évènement {{event("addtrack")}} est déclenché sur l'objet, ce qui arrive lorsqu'un nouvel objet {{domxref("MediaStreamTrack")}} est ajouté.</span></dd>
+ <dd>Est un {{event("Event_handlers", "event handler")}} contenant l'action à exécuter lorsqu'un évènement {{event("addtrack")}} est déclenché sur l'objet, ce qui arrive lorsqu'un nouvel objet {{domxref("MediaStreamTrack")}} est ajouté.</dd>
  <dt>{{domxref("MediaStream.onended")}}</dt>
- <dd><span style="line-height: inherit;">Est un  {{event("Event_handlers", "event handler")}} contenant l'action à exécuter lorsqu'un évènement {{event("ended (MediaStream)","ended")}} est déclenché sur l'objet, ce qui arrive lorsque la diffusion est terminée.</span></dd>
+ <dd>Est un  {{event("Event_handlers", "event handler")}} contenant l'action à exécuter lorsqu'un évènement {{event("ended (MediaStream)","ended")}} est déclenché sur l'objet, ce qui arrive lorsque la diffusion est terminée.</dd>
  <dt>{{domxref("MediaStream.onremovetrack")}}</dt>
- <dd><span style="line-height: inherit;">Est un {{event("Event_handlers", "event handler")}} contenant l'action à exécuter lorsqu'un évènement {{event("removetrack")}} est délenché sur l'objet, ce qui arrive quand un objet  {{domxref("MediaStreamTrack")}} est retiré.</span></dd>
+ <dd>Est un {{event("Event_handlers", "event handler")}} contenant l'action à exécuter lorsqu'un évènement {{event("removetrack")}} est délenché sur l'objet, ce qui arrive quand un objet  {{domxref("MediaStreamTrack")}} est retiré.</dd>
 </dl>
 
 <h2 id="Méthodes">Méthodes</h2>
@@ -36,13 +36,13 @@ translation_of: Web/API/MediaStream
 
 <dl>
  <dt>{{domxref("MediaStream.addTrack()")}}</dt>
- <dd>Stocke une copie de<span style="line-height: inherit;"> {{domxref("MediaStreamTrack")}} fourni en paramètre. Si la piste à déjà été ajouté à l'objet <code>MediaStream</code></span>, rien ne se passe; si la piste est au statut <code>finished</code>, c'est à dire qu'elle est terminée, l'<span style="line-height: inherit;">exception </span><code style="font-size: 14px; line-height: inherit;">INVALID_STATE_RAISE</code><span style="line-height: inherit;"> est levée.</span></dd>
+ <dd>Stocke une copie de {{domxref("MediaStreamTrack")}} fourni en paramètre. Si la piste à déjà été ajouté à l'objet <code>MediaStream</code>, rien ne se passe; si la piste est au statut <code>finished</code>, c'est à dire qu'elle est terminée, l'exception <code style="font-size: 14px; line-height: inherit;">INVALID_STATE_RAISE</code> est levée.</dd>
  <dt>{{domxref("MediaStream.removeTrack()")}}</dt>
- <dd>Retire le <span style="line-height: inherit;">the {{domxref("MediaStreamTrack")}} fourni comme argument. Si la piste ne fait pas parti du <code>MediaStream</code></span>, rien ne se passe<span style="line-height: inherit;">; Si la piste est au statut <code>finished</code></span>, ce qui arrive lorsqu'elle est terminée, <span style="line-height: inherit;">l'exception </span><code style="font-size: 14px; line-height: inherit;">INVALID_STATE_RAISE</code><span style="line-height: inherit;"> est levée.</span></dd>
+ <dd>Retire le the {{domxref("MediaStreamTrack")}} fourni comme argument. Si la piste ne fait pas parti du <code>MediaStream</code>, rien ne se passe; Si la piste est au statut <code>finished</code>, ce qui arrive lorsqu'elle est terminée, l'exception <code style="font-size: 14px; line-height: inherit;">INVALID_STATE_RAISE</code> est levée.</dd>
  <dt>{{domxref("MediaStream.getAudioTracks()")}}</dt>
- <dd>Retourne la liste des<span style="line-height: inherit;"> {{domxref("MediaStreamTrack")}} stockés dans l'objet </span><code style="font-size: 14px; line-height: inherit;">MediaStream</code><span style="line-height: inherit;"> qui ont leur attribut </span><code style="font-size: 14px; line-height: inherit;">kind</code><span style="line-height: inherit;"> défini à </span><code style="font-size: 14px; line-height: inherit;">"audio"</code><span style="line-height: inherit;">. L'ordre n'est pas défini, et peut varier d'un navigateur à l'autre, mais aussi d'un appel de la méthode à l'autre.</span></dd>
+ <dd>Retourne la liste des {{domxref("MediaStreamTrack")}} stockés dans l'objet <code style="font-size: 14px; line-height: inherit;">MediaStream</code> qui ont leur attribut <code style="font-size: 14px; line-height: inherit;">kind</code> défini à <code style="font-size: 14px; line-height: inherit;">"audio"</code>. L'ordre n'est pas défini, et peut varier d'un navigateur à l'autre, mais aussi d'un appel de la méthode à l'autre.</dd>
  <dt>{{domxref("MediaStream.getVideoTracks()")}}</dt>
- <dd>Retourne une liste des<span style="line-height: inherit;"> {{domxref("MediaStreamTrack")}} stockés dans l'objet </span><code style="font-size: 14px; line-height: inherit;">MediaStream</code><span style="line-height: inherit;"> qui ont leur attribut </span><code style="font-size: 14px; line-height: inherit;">kind</code><span style="line-height: inherit;"> défini à </span><code style="font-size: 14px; line-height: inherit;">"video"</code><span style="line-height: inherit;">. L'ordre n'est pas défini, et peut varier d'un navigateur à l'autre, mais aussi d'un appel de la méthode à l'autre.</span></dd>
+ <dd>Retourne une liste des {{domxref("MediaStreamTrack")}} stockés dans l'objet <code style="font-size: 14px; line-height: inherit;">MediaStream</code> qui ont leur attribut <code style="font-size: 14px; line-height: inherit;">kind</code> défini à <code style="font-size: 14px; line-height: inherit;">"video"</code>. L'ordre n'est pas défini, et peut varier d'un navigateur à l'autre, mais aussi d'un appel de la méthode à l'autre.</dd>
 </dl>
 
 <h2 id="Spécifications">Spécifications</h2>

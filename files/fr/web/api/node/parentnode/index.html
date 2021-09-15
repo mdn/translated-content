@@ -11,21 +11,21 @@ translation_of: Web/API/Node/parentNode
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p>La propriété en lecture seule <strong>parentNode</strong> <span id="result_box" lang="fr"><span>renvoie le parent du nœud spécifié dans l'arborescence de DOM</span></span> .</p>
+<p>La propriété en lecture seule <strong>parentNode</strong> renvoie le parent du nœud spécifié dans l'arborescence de DOM .</p>
 
 <h2 id="Syntaxe" name="Syntaxe">Syntaxe</h2>
 
 <pre class="syntaxbox"><em>parentNode</em> = <em>node</em>.parentNode</pre>
 
-<p><code>parentNode</code> est l'élément parent du nœud courant. <span class="short_text" id="result_box" lang="fr"><span>Le parent d'un élément est un </span></span>nœud <code>Element</code> , un nœud <code>Document</code> ou un nœud <code>DocumentFragment</code> .</p>
+<p><code>parentNode</code> est l'élément parent du nœud courant. Le parent d'un élément est un nœud <code>Element</code> , un nœud <code>Document</code> ou un nœud <code>DocumentFragment</code> .</p>
 
 <h2 id="Exemple" name="Exemple">Exemple</h2>
 
-<pre class="brush:js line-numbers  language-js"><code class="language-js"><span class="keyword token">if</span> <span class="punctuation token">(</span>node<span class="punctuation token">.</span>parentNode<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="comment token">// supprime un noeud  de l'arbre, </span>
-  <span class="comment token">// sauf s'il a déjà été supprimé</span>
-  node<span class="punctuation token">.</span>parentNode<span class="punctuation token">.</span><span class="function token">removeChild</span><span class="punctuation token">(</span>node<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush:js line-numbers  language-js"><code class="language-js">if (node.parentNode) {
+  // supprime un noeud  de l'arbre, 
+  // sauf s'il a déjà été supprimé
+  node.parentNode.removeChild(node);
+}</code></pre>
 
 <h2 id="Notes" name="Notes">Notes</h2>
 

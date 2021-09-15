@@ -32,11 +32,11 @@ translation_of: Web/API/Document/readyState
  <dd>Le document et toutes les sous-ressources ont été chargés, et {{event("load")}} a été émis.</dd>
 </dl>
 
-<h2 id="Exemples"><span>Exemples</span></h2>
+<h2 id="Exemples">Exemples</h2>
 
 <h3 id="Différents_états_de_chargement">Différents états de chargement</h3>
 
-<pre class="brush: js notranslate"><span>switch (document.readyState) {
+<pre class="brush: js notranslate">switch (document.readyState) {
   case "loading":
     // Encore en chargement.
     break;
@@ -50,7 +50,7 @@ translation_of: Web/API/Document/readyState
     // La page est pleinement chargée.
     console.log("The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText);
     break;
-}</span>
+}
 </pre>
 
 <h3 id="readystatechange_comme_alternative_à_DOMContentLoaded">readystatechange comme alternative à  DOMContentLoaded</h3>

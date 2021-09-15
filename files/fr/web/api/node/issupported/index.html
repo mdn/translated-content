@@ -28,14 +28,14 @@ translation_of: Web/API/Node/isSupported
 
 <h2 id="Exemple" name="Exemple">Exemple</h2>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>doc<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;div id="doc"&gt;
+&lt;/div&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span><span class="punctuation token">&gt;</span></span><span class="language-javascript script token">
- <span class="comment token">// Obtenir un élément et vérifier pour voir s'il est pris en charge par les modules HTML DOM2.</span>
- <span class="keyword token">var</span> main <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">'doc'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
- <span class="keyword token">var</span> output <span class="operator token">=</span> main<span class="punctuation token">.</span><span class="function token">isSupported</span><span class="punctuation token">(</span><span class="string token">'HTML'</span><span class="punctuation token">,</span> <span class="string token">'2.0'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-</span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span></code></pre>
+&lt;script&gt;
+ // Obtenir un élément et vérifier pour voir s'il est pris en charge par les modules HTML DOM2.
+ var main = document.getElementById('doc');
+ var output = main.isSupported('HTML', '2.0');
+&lt;/script&gt;</code></pre>
 
 <h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Spécifications</h2>
 

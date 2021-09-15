@@ -11,10 +11,10 @@ translation_of: Web/API/Document/hasFocus
 ---
 <p>{{ ApiRef() }}</p>
 
-<p>La méthode <code><strong>Document.hasFocus()</strong></code> retourne une valeur  {{jsxref("Boolean")}} <code>true</code> <em>(vrai)</em> indiquant <span id="result_box" lang="fr"><span>si le document ou tout élément à l'intérieur du document a le focus.</span> <span>Cette méthode peut être utilisée pour déterminer si l'élément actif d'un document a le focus.</span></span></p>
+<p>La méthode <code><strong>Document.hasFocus()</strong></code> retourne une valeur  {{jsxref("Boolean")}} <code>true</code> <em>(vrai)</em> indiquant si le document ou tout élément à l'intérieur du document a le focus. Cette méthode peut être utilisée pour déterminer si l'élément actif d'un document a le focus.</p>
 
 <div class="note">
-<p><strong>Note :</strong> <span id="result_box" lang="fr"><span>Lors de la visualisation d'un document, un élément avec focus est toujours l'élément actif dans le document, mais un élément actif n'a pas nécessairement le focus.</span> <span>Par exemple, un élément actif dans une fenêtre contextuelle qui n'est pas le premier plan n'a pas de focus.</span></span></p>
+<p><strong>Note :</strong> Lors de la visualisation d'un document, un élément avec focus est toujours l'élément actif dans le document, mais un élément actif n'a pas nécessairement le focus. Par exemple, un élément actif dans une fenêtre contextuelle qui n'est pas le premier plan n'a pas de focus.</p>
 </div>
 
 <h2 id="Syntaxe" name="Syntaxe">Syntaxe</h2>
@@ -28,42 +28,42 @@ translation_of: Web/API/Document/hasFocus
 
 <h2 id="Exemple" name="Exemple">Exemple</h2>
 
-<pre class="brush:html;highlight:[17] line-numbers  language-html"><code class="language-html"><span class="doctype token">&lt;!DOCTYPE html&gt;</span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>html</span> <span class="attr-name token">lang</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>en<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>head</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>meta</span> <span class="attr-name token">charset</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>UTF-8<span class="punctuation token">"</span></span> <span class="punctuation token">/&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>title</span><span class="punctuation token">&gt;</span></span>TEST<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>title</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>style</span><span class="punctuation token">&gt;</span></span><span class="language-css style token">
-<span class="selector token"><span class="id token">#message</span> </span><span class="punctuation token">{</span> <span class="property token">font-weight</span><span class="punctuation token">:</span> bold<span class="punctuation token">;</span> <span class="punctuation token">}</span>
-</span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>style</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span><span class="punctuation token">&gt;</span></span><span class="language-javascript script token">
-<span class="function token">setInterval</span><span class="punctuation token">(</span> checkPageFocus<span class="punctuation token">,</span> <span class="number token">200</span> <span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush:html;highlight:[17] line-numbers  language-html"><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8" /&gt;
+&lt;title&gt;TEST&lt;/title&gt;
+&lt;style&gt;
+#message { font-weight: bold; }
+&lt;/style&gt;
+&lt;script&gt;
+setInterval( checkPageFocus, 200 );
 
-<span class="keyword token">function</span> <span class="function token">checkPageFocus</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">var</span> info <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">"message"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+function checkPageFocus() {
+  var info = document.getElementById("message");
 
-  <span class="keyword token">if</span> <span class="punctuation token">(</span> document<span class="punctuation token">.</span><span class="function token">hasFocus</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    info<span class="punctuation token">.</span>innerHTML <span class="operator token">=</span> <span class="string token">"The document has the focus."</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="punctuation token">{</span>
-    info<span class="punctuation token">.</span>innerHTML <span class="operator token">=</span> <span class="string token">"The document doesn't have the focus."</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span>
+  if ( document.hasFocus() ) {
+    info.innerHTML = "The document has the focus.";
+  } else {
+    info.innerHTML = "The document doesn't have the focus.";
+  }
+}
 
-<span class="keyword token">function</span> <span class="function token">openWindow</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  window<span class="punctuation token">.</span>open <span class="punctuation token">(</span>
-    <span class="string token">"http://developer.mozilla.org/"</span><span class="punctuation token">,</span>
-    <span class="string token">"mozdev"</span><span class="punctuation token">,</span>
-    <span class="string token">"width=640,height=300,left=150,top=260"</span>
-  <span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
-</span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>head</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>body</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>h1</span><span class="punctuation token">&gt;</span></span>JavaScript hasFocus example<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>h1</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>message<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Waiting for user action<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>button</span> <span class="attr-name token">onclick</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>openWindow()<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Open a new window<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>button</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>body</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>html</span><span class="punctuation token">&gt;</span></span></code></pre>
+function openWindow() {
+  window.open (
+    "http://developer.mozilla.org/",
+    "mozdev",
+    "width=640,height=300,left=150,top=260"
+  );
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;JavaScript hasFocus example&lt;/h1&gt;
+  &lt;div id="message"&gt;Waiting for user action&lt;/div&gt;
+  &lt;div&gt;&lt;button onclick="openWindow()"&gt;Open a new window&lt;/button&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
 
 <h2 id="Specifications">Spécification</h2>
 

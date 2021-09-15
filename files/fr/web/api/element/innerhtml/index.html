@@ -46,12 +46,12 @@ original_slug: Web/API/Element/innertHTML
 
 <p>La lecture de <code>innerHTML</code> amène l'agent utilisateur à sérialiser le fragment HTML ou XML composé des descendants de l'élément. La chaîne résultante est renvoyée.</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">let</span> contents <span class="operator token">=</span> myElement<span class="punctuation token">.</span>innerHTML<span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">let contents = myElement.innerHTML;</code></pre>
 
 <p>Cela vous permet de regarder le balisage HTML des nœuds de contenu de l'élément.</p>
 
 <div class="note">
-<p><span id="result_box" lang="fr"><span><strong>Note :</strong> Le fragment HTML ou XML renvoyé est généré en fonction du contenu actuel de l'élément. Il est donc probable que le balisage et la mise en forme du fragment renvoyé ne correspondent pas au balisage de la page d'origine.</span></span></p>
+<p><strong>Note :</strong> Le fragment HTML ou XML renvoyé est généré en fonction du contenu actuel de l'élément. Il est donc probable que le balisage et la mise en forme du fragment renvoyé ne correspondent pas au balisage de la page d'origine.</p>
 </div>
 
 <h3 id="Remplacement_du_contenu_dun_élément">Remplacement du contenu d'un élément</h3>
@@ -60,13 +60,13 @@ original_slug: Web/API/Element/innertHTML
 
 <p>Par exemple, vous pouvez effacer le contenu entier du document en effaçant le contenu de l'attribut {{domxref("Document.body", "body")}} du document.</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">document<span class="punctuation token">.</span>body<span class="punctuation token">.</span>innerHTML <span class="operator token">=</span> <span class="string token">""</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">document.body.innerHTML = "";</code></pre>
 
 <p>Cet exemple récupère le balisage HTML actuel du document et remplace les caractères <code>"&lt;"</code> par l'entité HTML <code>"&amp; lt;"</code>, convertissant ainsi essentiellement le code HTML en texte brut. Ceci est ensuite inclus dans un élément {{HTMLElement ("pre")}}. Puis, la valeur de <code>innerHTML</code> est modifiée dans cette nouvelle chaîne. Par conséquent, le contenu du document est remplacé par un affichage du code source entier de la page.</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">document<span class="punctuation token">.</span>documentElement<span class="punctuation token">.</span>innerHTML <span class="operator token">=</span> <span class="string token">"&lt;pre&gt;"</span> <span class="operator token">+</span>
-         document<span class="punctuation token">.</span>documentElement<span class="punctuation token">.</span>innerHTML<span class="punctuation token">.</span><span class="function token">replace</span><span class="punctuation token">(</span><span class="regex token">/&lt;/g</span><span class="punctuation token">,</span><span class="string token">"&amp;lt;"</span><span class="punctuation token">)</span> <span class="operator token">+</span>
-            <span class="string token">"&lt;/pre&gt;"</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">document.documentElement.innerHTML = "&lt;pre&gt;" +
+         document.documentElement.innerHTML.replace(/&lt;/g,"&amp;lt;") +
+            "&lt;/pre&gt;";</code></pre>
 
 <h4 id="Détails_opérationnels">Détails opérationnels</h4>
 
@@ -82,26 +82,26 @@ original_slug: Web/API/Element/innertHTML
 
 <p>Il n'est pas rare de voir <code>innerHTML</code> utilisé pour insérer du texte dans une page Web. Il est possible que ceci devienne un vecteur d'attaque sur un site, ce qui crée potentiellement un risque de sécurité.</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">const</span> name <span class="operator token">=</span> <span class="string token">"John"</span><span class="punctuation token">;</span>
-<span class="comment token">// en supposant que 'el' est un élément de document HTML</span>
-el<span class="punctuation token">.</span>innerHTML <span class="operator token">=</span> name<span class="punctuation token">;</span> <span class="comment token">// inoffensif dans ce cas</span>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">const name = "John";
+// en supposant que 'el' est un élément de document HTML
+el.innerHTML = name; // inoffensif dans ce cas
 
-<span class="comment token">// ...</span>
+// ...
 
-name <span class="operator token">=</span> <span class="string token">"&lt;script&gt;alert('I am John in an annoying alert!')&lt;/script&gt;"</span><span class="punctuation token">;</span>
-el<span class="punctuation token">.</span>innerHTML <span class="operator token">=</span> name<span class="punctuation token">;</span> <span class="comment token">// inoffensif dans ce cas</span></code></pre>
+name = "&lt;script&gt;alert('I am John in an annoying alert!')&lt;/script&gt;";
+el.innerHTML = name; // inoffensif dans ce cas</code></pre>
 
 <p>Bien que cela puisse ressembler à une attaque {{interwiki ("wikipedia", "cross-site_scripting","cross-site scripting")}}, le résultat est inoffensif. HTML5 spécifie qu'une balise {{HTMLElement ("script")}} insérée avec <code>innerHTML</code> <a href="https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0">ne doit pas s'exécuter</a>.</p>
 
 <p>Cependant, il existe des moyens d'exécuter JavaScript sans utiliser les éléments {{HTMLElement ("script")}}, donc il existe toujours un risque de sécurité chaque fois que vous utilisez <code>innerHTML</code> pour définir des chaînes sur lesquelles vous n'avez aucun contrôle. Par exemple :</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">const</span> name <span class="operator token">=</span> <span class="string token">"&lt;img src='x' onerror='alert(1)'&gt;"</span><span class="punctuation token">;</span>
-el<span class="punctuation token">.</span>innerHTML <span class="operator token">=</span> name<span class="punctuation token">;</span> <span class="comment token">// affiche l'alerte</span></code></pre>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">const name = "&lt;img src='x' onerror='alert(1)'&gt;";
+el.innerHTML = name; // affiche l'alerte</code></pre>
 
 <p>Pour cette raison, il est recommandé de ne pas utiliser <code>innerHTML</code> pour insérer du texte brut ; à la place, utilisez {{domxref("Node.textContent")}}. Cela n'analyse pas le contenu passé en HTML, mais l'insère à la place en tant que texte brut.</p>
 
 <div class="warning">
-<p><strong>Attention :</strong> <span id="result_box" lang="fr"><span>Si votre projet est soumis à une vérification de sécurité, l'utilisation de <code>innerHTML</code> entraînera probablement le rejet de votre code.</span> <span>Par exemple, si vous utilisez <code>innerHTML</code> dans une extension de navigateur et soumettez l'extension à addons.mozilla.org, elle ne passera pas le processus de révision automatique.</span></span></p>
+<p><strong>Attention :</strong> Si votre projet est soumis à une vérification de sécurité, l'utilisation de <code>innerHTML</code> entraînera probablement le rejet de votre code. Par exemple, si vous utilisez <code>innerHTML</code> dans une extension de navigateur et soumettez l'extension à addons.mozilla.org, elle ne passera pas le processus de révision automatique.</p>
 </div>
 
 <h2 id="Exemple" name="Exemple">Exemple</h2>
@@ -110,64 +110,64 @@ el<span class="punctuation token">.</span>innerHTML <span class="operator token"
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">function</span> <span class="function token">log</span><span class="punctuation token">(</span>msg<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">var</span> logElem <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">".log"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">function log(msg) {
+  var logElem = document.querySelector(".log");
 
-  <span class="keyword token">var</span> time <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Date</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="keyword token">var</span> timeStr <span class="operator token">=</span> time<span class="punctuation token">.</span><span class="function token">toLocaleTimeString</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  logElem<span class="punctuation token">.</span>innerHTML <span class="operator token">+</span><span class="operator token">=</span> timeStr <span class="operator token">+</span> <span class="string token">": "</span> <span class="operator token">+</span> msg <span class="operator token">+</span> <span class="string token">"&lt;br/&gt;"</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+  var time = new Date();
+  var timeStr = time.toLocaleTimeString();
+  logElem.innerHTML += timeStr + ": " + msg + "&lt;br/&gt;";
+}
 
-<span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"Logging mouse events inside this container..."</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+log("Logging mouse events inside this container...");</code></pre>
 
 <p>La fonction <code>log()</code> crée la sortie du journal en récupérant l'heure actuelle à partir d'un objet {{jsxref ("Date")}} en utilisant {{jsxref ("Date.toLocaleTimeString", "toLocaleTimeString ()")}} et en créant une chaîne avec l'horodatage et le texte du message. Ensuite, le message est ajouté à la boîte avec la classe <code>"log"</code>.</p>
 
 <p>Nous ajoutons une seconde méthode qui enregistre des informations sur les événements basés sur {{domxref ("MouseEvent")}} (tels que {{event ("mousedown")}}, {{event ("click")}} et {{event ("mouseenter") }}) :</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">function</span> <span class="function token">logEvent</span><span class="punctuation token">(</span>event<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">var</span> msg <span class="operator token">=</span> <span class="string token">"Event &lt;strong&gt;"</span> <span class="operator token">+</span> event<span class="punctuation token">.</span>type <span class="operator token">+</span> <span class="string token">"&lt;/strong&gt; at &lt;em&gt;"</span> <span class="operator token">+</span>
-            event<span class="punctuation token">.</span>clientX <span class="operator token">+</span> <span class="string token">", "</span> <span class="operator token">+</span> event<span class="punctuation token">.</span>clientY <span class="operator token">+</span> <span class="string token">"&lt;/em&gt;"</span><span class="punctuation token">;</span>
-  <span class="function token">log</span><span class="punctuation token">(</span>msg<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">function logEvent(event) {
+  var msg = "Event &lt;strong&gt;" + event.type + "&lt;/strong&gt; at &lt;em&gt;" +
+            event.clientX + ", " + event.clientY + "&lt;/em&gt;";
+  log(msg);
+}</code></pre>
 
 <p>Alors, nous utilisons ceci comme un gestionnaire d'évènements pour un certain nombre d'évènements de souris sur la boîte qui contient notre journal.</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">var</span> boxElem <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">".box"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">var boxElem = document.querySelector(".box");
 
-boxElem<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">"mousedown"</span><span class="punctuation token">,</span> logEvent<span class="punctuation token">)</span><span class="punctuation token">;</span>
-boxElem<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">"mouseup"</span><span class="punctuation token">,</span> logEvent<span class="punctuation token">)</span><span class="punctuation token">;</span>
-boxElem<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">"click"</span><span class="punctuation token">,</span> logEvent<span class="punctuation token">)</span><span class="punctuation token">;</span>
-boxElem<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">"mouseenter"</span><span class="punctuation token">,</span> logEvent<span class="punctuation token">)</span><span class="punctuation token">;</span>
-boxElem<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">"mouseleave"</span><span class="punctuation token">,</span> logEvent<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+boxElem.addEventListener("mousedown", logEvent);
+boxElem.addEventListener("mouseup", logEvent);
+boxElem.addEventListener("click", logEvent);
+boxElem.addEventListener("mouseenter", logEvent);
+boxElem.addEventListener("mouseleave", logEvent);</code></pre>
 
 <h3 id="HTML">HTML</h3>
 
 <p>Le HTML est assez simple pour notre exemple.</p>
 
-<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>box<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>strong</span><span class="punctuation token">&gt;</span></span>Log:<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>strong</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>log<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html line-numbers  language-html notranslate"><code class="language-html">&lt;div class="box"&gt;
+  &lt;div&gt;&lt;strong&gt;Log:&lt;/strong&gt;&lt;/div&gt;
+  &lt;div class="log"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
-<p><span id="result_box" lang="fr"><span>Le {{HTMLElement ("div")}} avec la classe <code>"box"</code> est juste un conteneur pour la mise en page, présentant le contenu avec une boîte autour de lui.</span> <span>Le <code>&lt;div&gt;</code> dont la classe est <code>"log"</code> est le conteneur pour le texte du journal lui-même.</span></span></p>
+<p>Le {{HTMLElement ("div")}} avec la classe <code>"box"</code> est juste un conteneur pour la mise en page, présentant le contenu avec une boîte autour de lui. Le <code>&lt;div&gt;</code> dont la classe est <code>"log"</code> est le conteneur pour le texte du journal lui-même.</p>
 
 <h3 id="Notes" name="Notes">CSS</h3>
 
 <p>Les styles CSS suivants pour notre exemple de contenu.</p>
 
-<pre class="brush: css line-numbers  language-css notranslate"><code class="language-css"><span class="selector token"><span class="class token">.box</span> </span><span class="punctuation token">{</span>
-  <span class="property token">width</span><span class="punctuation token">:</span> <span class="number token">600</span>px<span class="punctuation token">;</span>
-  <span class="property token">height</span><span class="punctuation token">:</span> <span class="number token">300</span>px<span class="punctuation token">;</span>
-  <span class="property token">border</span><span class="punctuation token">:</span> <span class="number token">1</span>px solid black<span class="punctuation token">;</span>
-  <span class="property token">padding</span><span class="punctuation token">:</span> <span class="number token">2</span>px <span class="number token">4</span>px<span class="punctuation token">;</span>
-  <span class="property token">overflow-y</span><span class="punctuation token">:</span> scroll<span class="punctuation token">;</span>
-  <span class="property token">overflow-x</span><span class="punctuation token">:</span> auto<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+<pre class="brush: css line-numbers  language-css notranslate"><code class="language-css">.box {
+  width: 600px;
+  height: 300px;
+  border: 1px solid black;
+  padding: 2px 4px;
+  overflow-y: scroll;
+  overflow-x: auto;
+}
 
-<span class="selector token"><span class="class token">.log</span> </span><span class="punctuation token">{</span>
-  <span class="property token">margin-top</span><span class="punctuation token">:</span> <span class="number token">8</span>px<span class="punctuation token">;</span>
-  <span class="property token">font-family</span><span class="punctuation token">:</span> monospace<span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+.log {
+  margin-top: 8px;
+  font-family: monospace;
+}</code></pre>
 
 <h3 id="Résultat">Résultat</h3>
 

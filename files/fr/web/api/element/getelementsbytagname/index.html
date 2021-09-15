@@ -13,9 +13,9 @@ translation_of: Web/API/Element/getElementsByTagName
 
 <p>La méthode <code><strong>Element.getElementsByTagName()</strong></code> retourne une liste des éléments portant le <a href="https://developer.mozilla.org/fr/docs/Web/API/Element/tagName" title="fr/DOM/element.tagName">nom de balise</a> donné. La recherche porte sur le sous-arbre de l'élément spécifié, à l'exception de cet élément lui-même. La liste retournée est <em>live</em>, c'est à dire qu'elle se met à jour automatiquement à chaque changement de l'arbre DOM. Par conséquent, il n'est pas nécessaire d'appeller plusieurs fois  <code>Element.getElementsByTagName()</code>  avec le même élément et les mêmes arguments.</p>
 
-<p>Quand elle est appelée sur un élément HTML dans un document HTML, <code>getElementsByTagName </code><span id="result_box" lang="fr"><span>place son argument en minuscule avant de continuer.</span> <span>Cela n'est pas souhaitable lorsque vous tentez de faire correspondre des éléments SVG "</span></span> camel-cased" <span lang="fr"><span> dans une sous-arborescence dans un document HTML.</span> <span>{{domxref("Element.getElementsByTagNameNS()")}} fonctionne dans ce cas.</span></span></p>
+<p>Quand elle est appelée sur un élément HTML dans un document HTML, <code>getElementsByTagName </code>place son argument en minuscule avant de continuer. Cela n'est pas souhaitable lorsque vous tentez de faire correspondre des éléments SVG " camel-cased"  dans une sous-arborescence dans un document HTML. {{domxref("Element.getElementsByTagNameNS()")}} fonctionne dans ce cas.</p>
 
-<p><span id="result_box" lang="fr"><span><code>Element.getElementsByTagName</code> est similaire à {{domxref("Document.getElementsByTagName()")}}, à part que sa recherche est limitée aux éléments qui sont des descendants de l'élément spécifié.</span></span></p>
+<p><code>Element.getElementsByTagName</code> est similaire à {{domxref("Document.getElementsByTagName()")}}, à part que sa recherche est limitée aux éléments qui sont des descendants de l'élément spécifié.</p>
 
 <h2 id="Syntaxe" name="Syntaxe">Syntaxe</h2>
 
@@ -29,15 +29,15 @@ translation_of: Web/API/Element/getElementsByTagName
 
 <h2 id="Exemple" name="Exemple">Exemple</h2>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// vérifie l'alignement sur un nombre de cellules dans un tableau. </span>
-<span class="keyword token">var</span> table <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">"forecast-table"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> cells <span class="operator token">=</span> table<span class="punctuation token">.</span><span class="function token">getElementsByTagName</span><span class="punctuation token">(</span><span class="string token">"td"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">for</span> <span class="punctuation token">(</span><span class="keyword token">var</span> i <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span> i <span class="operator token">&lt;</span> cells<span class="punctuation token">.</span>length<span class="punctuation token">;</span> i<span class="operator token">++</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">var</span> status <span class="operator token">=</span> cells<span class="punctuation token">[</span>i<span class="punctuation token">]</span><span class="punctuation token">.</span><span class="function token">getAttribute</span><span class="punctuation token">(</span><span class="string token">"data-status"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="keyword token">if</span> <span class="punctuation token">(</span> status <span class="operator token">==</span> <span class="string token">"open"</span> <span class="punctuation token">)</span> <span class="punctuation token">{</span>
-        <span class="comment token">// saisit les données </span>
-    <span class="punctuation token">}</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">// vérifie l'alignement sur un nombre de cellules dans un tableau. 
+var table = document.getElementById("forecast-table");
+var cells = table.getElementsByTagName("td");
+for (var i = 0; i &lt; cells.length; i++) {
+    var status = cells[i].getAttribute("data-status");
+    if ( status == "open" ) {
+        // saisit les données 
+    }
+}</code></pre>
 
 <h2 id="Spécifications">Spécifications</h2>
 

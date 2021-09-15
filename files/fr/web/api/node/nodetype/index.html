@@ -135,9 +135,9 @@ p.firstChild.nodeType === Node.TEXT_NODE; // true  (<em>vrai</em>)
 
 <p><font><font>Cet exemple vérifie si le premier noeud dans l'élément du document est un noeud commentaire et si ce n'est pas le cas, affiche un message.</font></font></p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> node <span class="operator token">=</span> document<span class="punctuation token">.</span>documentElement<span class="punctuation token">.</span>firstChild<span class="punctuation token">;</span>
-<span class="keyword token">if</span> <span class="punctuation token">(</span>node<span class="punctuation token">.</span>nodeType <span class="operator token">!=</span> Node<span class="punctuation token">.</span>COMMENT_NODE<span class="punctuation token">)</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">"You should comment your code well!"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">var node = document.documentElement.firstChild;
+if (node.nodeType != Node.COMMENT_NODE)
+  console.log("You should comment your code well!");</code></pre>
 
 <h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification"><font><font>Spécifications</font></font></h2>
 

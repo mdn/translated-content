@@ -14,7 +14,7 @@ original_slug: NavigatorUserMedia.getUserMedia
 
 <p>La fonction obsolète <strong>Navigator.getUserMedia()</strong> demande à l'utilisateur la permission d'utiliser une entrée vidéo (ex: une webcam ou un écran partagé) ou audio (ex: un microphone) de l'utilisateur.</p>
 
-<p>Si ce dernier l'autorise, un {{domxref("MediaStream")}} est transmis au callback spécifié, il contient les pistes audio et/ou vidéo des entrées autorisées. Si l'utilisateur refuse l'accès, que le périphérique n'existe pas, ou qu'une erreur <span>quelconque</span> se produit, le callback d'erreur est alors exécuté avec comme paramètre un objet {{domxref("MediaStreamError")}}, il décrit l'erreur qui vient de se produire. Si l'utilisateur ne fait aucun choix, aucun callback n'est exécuté.</p>
+<p>Si ce dernier l'autorise, un {{domxref("MediaStream")}} est transmis au callback spécifié, il contient les pistes audio et/ou vidéo des entrées autorisées. Si l'utilisateur refuse l'accès, que le périphérique n'existe pas, ou qu'une erreur quelconque se produit, le callback d'erreur est alors exécuté avec comme paramètre un objet {{domxref("MediaStreamError")}}, il décrit l'erreur qui vient de se produire. Si l'utilisateur ne fait aucun choix, aucun callback n'est exécuté.</p>
 
 <div class="note">
 <p>Il s'agit d'une ancienne méthode, veuillez utiliser la méthode {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}} à la place. Bien qu'elle ne soit pas techniquement obsolète, l'utilisation de callbacks l'est, les spécifications encouragent fortamment l'utilisation de la nouvelle version avec {{jsxref("promise", "promesses")}}.</p>

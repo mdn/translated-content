@@ -64,9 +64,9 @@ d1.insertAdjacentHTML('afterend', '&lt;div id="two"&gt;two&lt;/div&gt;');
 
 <h3 id="Considérations_de_sécurité">Considérations de sécurité</h3>
 
-<p><span id="result_box" lang="fr"><span>Lorsque vous insérez du code HTML dans une page en utilisant insertAdjacentHTML, veillez à ne pas utiliser d'entrée utilisateur qui n'a pas été échappée.</span></span></p>
+<p>Lorsque vous insérez du code HTML dans une page en utilisant insertAdjacentHTML, veillez à ne pas utiliser d'entrée utilisateur qui n'a pas été échappée.</p>
 
-<p><span id="result_box" lang="fr"><span>Il est recommandé de ne pas utiliser <code>insertAdjacentHTML</code> lors de l'insertion de texte brut;</span> <span>à la place, utilisez la propriété <code>node.textContent</code> ou la méthode <code>node.insertAdjacentText()</code>.</span> <span>Cela n'interprète pas le contenu transmis au format HTML, mais l'insère à la place sous forme de texte brut.</span></span></p>
+<p>Il est recommandé de ne pas utiliser <code>insertAdjacentHTML</code> lors de l'insertion de texte brut; à la place, utilisez la propriété <code>node.textContent</code> ou la méthode <code>node.insertAdjacentText()</code>. Cela n'interprète pas le contenu transmis au format HTML, mais l'insère à la place sous forme de texte brut.</p>
 
 <h2 id="Spécification">Spécification</h2>
 
@@ -96,5 +96,5 @@ d1.insertAdjacentHTML('afterend', '&lt;div id="two"&gt;two&lt;/div&gt;');
 <ul>
  <li>{{domxref("Element.insertAdjacentElement()")}}</li>
  <li>{{domxref("Element.insertAdjacentText()")}}</li>
- <li><a class="external external-icon" href="https://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/">hacks.mozilla.org guest post</a><span class="external external-icon"> par Henri Sivonen </span> <span id="result_box" lang="fr"><span>y compris le benchmark montrant que insertAdjacentHTML peut être beaucoup plus rapide dans certains cas.</span></span></li>
+ <li><a class="external external-icon" href="https://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/">hacks.mozilla.org guest post</a> par Henri Sivonen  y compris le benchmark montrant que insertAdjacentHTML peut être beaucoup plus rapide dans certains cas.</li>
 </ul>

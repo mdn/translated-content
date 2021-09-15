@@ -64,10 +64,10 @@ translation_of: Web/API/KeyboardEvent/code
 
 <p>{{EmbedLiveSample('Pratiquer_KeyboardEvent', 600, 300) }}</p>
 
-<h3 id="Gérer_les_événements_de_clavier_dans_un_jeu"><span class="tlid-translation translation" lang="fr"><span title="">Gérer les événements de clavier dans un jeu</span></span></h3>
+<h3 id="Gérer_les_événements_de_clavier_dans_un_jeu">Gérer les événements de clavier dans un jeu</h3>
 
 <div class="text-wrap tlid-copy-target">
-<div class="result-shield-container tlid-copy-target"><span class="tlid-translation translation" lang="fr"><span title="">Cet exemple établit un écouteur d'événements pour</span></span> l'événement {{event("keydown")}}  <span class="tlid-translation translation" lang="fr"><span title="">qui gère la saisie au clavier pour un jeu qui utilise la disposition de clavier typique "ZQSD" pour se déplacer en avant, à gauche, en arrière et à droite.</span> <span title="">Cela utilisera les quatre mêmes touches physiquement, quels que soient les caractères correspondants, par exemple si l'utilisateur utilise un clavier QWERTY.</span></span></div>
+<div class="result-shield-container tlid-copy-target">Cet exemple établit un écouteur d'événements pour l'événement {{event("keydown")}}  qui gère la saisie au clavier pour un jeu qui utilise la disposition de clavier typique "ZQSD" pour se déplacer en avant, à gauche, en arrière et à droite. Cela utilisera les quatre mêmes touches physiquement, quels que soient les caractères correspondants, par exemple si l'utilisateur utilise un clavier QWERTY.</div>
 </div>
 
 <h4 id="HTML_2">HTML</h4>
@@ -138,7 +138,7 @@ let spaceship = document.getElementById("spaceship");
 }
 </pre>
 
-<p>La fonction <code>refresh()</code> <span class="tlid-translation translation" lang="fr"><span title="">gère l'application de la rotation et de la position à l'aide d'un</span></span> <a href="/en-US/docs/Web/SVG/Attribute/transform">SVG transform</a>.</p>
+<p>La fonction <code>refresh()</code> gère l'application de la rotation et de la position à l'aide d'un <a href="/en-US/docs/Web/SVG/Attribute/transform">SVG transform</a>.</p>
 
 <pre class="brush: js">function refresh() {
   let x = position.x - (shipSize.width/2);
@@ -149,7 +149,7 @@ let spaceship = document.getElementById("spaceship");
 }
 </pre>
 
-<p><span class="tlid-translation translation" lang="fr"><span title="">Enfin, la méthode <code>addEventListener()</code> est utilisée pour commencer à écouter les événements {{event ("keydown")}}, en mettant à jour chaque touche en mettant à jour la position et l’angle de rotation du vaisseau, puis en appelant la méthode <code>refresh()</code> pour tracer le navire dans sa nouvelle position </span><span title="">et son nouvel angle.</span></span></p>
+<p>Enfin, la méthode <code>addEventListener()</code> est utilisée pour commencer à écouter les événements {{event ("keydown")}}, en mettant à jour chaque touche en mettant à jour la position et l’angle de rotation du vaisseau, puis en appelant la méthode <code>refresh()</code> pour tracer le navire dans sa nouvelle position et son nouvel angle.</p>
 
 <pre class="brush: js">window.addEventListener("keydown", function(event) {
   if (event.preventDefaulted) {
@@ -191,7 +191,7 @@ let spaceship = document.getElementById("spaceship");
 
 <p>{{EmbedLiveSample("Handle_keyboard_events_in_a_game", 420, 460)}}</p>
 
-<p><span class="tlid-translation translation" lang="fr"><span title="">Ce code peut être amélioré de plusieurs manières.</span> <span title="">La plupart des jeux réels surveillent les événements</span></span> {{event("keydown")}}, <span class="tlid-translation translation" lang="fr"><span title="">démarrent le mouvement lorsque cela se produit et stoppent le mouvement lorsque l'événement</span></span> {{event("keyup")}} se produit, au lieu de compter sur des répétitions de touches. <span class="tlid-translation translation" lang="fr"><span title="">Cela permettrait des mouvements plus fluides et plus rapides, mais permettrait également au joueur de bouger et de diriger en même temps.</span> <span title="">Des transitions ou des animations peuvent également être utilisées pour rendre le mouvement du navire plus fluide.</span></span> Pour permettre cela, il ne faudrait pas utiliser de <code>switch</code>, ni de <code>else if</code>.ff</p>
+<p>Ce code peut être amélioré de plusieurs manières. La plupart des jeux réels surveillent les événements {{event("keydown")}}, démarrent le mouvement lorsque cela se produit et stoppent le mouvement lorsque l'événement {{event("keyup")}} se produit, au lieu de compter sur des répétitions de touches. Cela permettrait des mouvements plus fluides et plus rapides, mais permettrait également au joueur de bouger et de diriger en même temps. Des transitions ou des animations peuvent également être utilisées pour rendre le mouvement du navire plus fluide. Pour permettre cela, il ne faudrait pas utiliser de <code>switch</code>, ni de <code>else if</code>.ff</p>
 
 <h2 id="Spécifications">Spécifications</h2>
 

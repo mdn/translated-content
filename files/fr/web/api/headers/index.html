@@ -14,7 +14,7 @@ translation_of: Web/API/Headers
 ---
 <div>{{APIRef("Fetch API")}}</div>
 
-<p>L'interface <code>Headers</code> de l'API Fetch vous permet d'effectuer diverses actions sur les en-têtes de requête et de réponse HTTP. Ces actions incluent la récupération, la configuration, l’ajout et la suppression. Un objet <code>Headers</code> a une liste <code>Headers</code> associée qui est vide lors de l'initialisation et qui est constituée de zéro ou plusieurs paires de noms et de valeurs. Vous pouvez en ajouter via les méthodes comme<span style="line-height: 19.0909080505371px;">{{domxref("Headers.append","append()")}} (see {{anch("Examples")}}.)  Dans toutes les méthodes de cette interface, les noms des <code>Headers</code> sont reliés à une séquence d'octets sensible à la case.</span></p>
+<p>L'interface <code>Headers</code> de l'API Fetch vous permet d'effectuer diverses actions sur les en-têtes de requête et de réponse HTTP. Ces actions incluent la récupération, la configuration, l’ajout et la suppression. Un objet <code>Headers</code> a une liste <code>Headers</code> associée qui est vide lors de l'initialisation et qui est constituée de zéro ou plusieurs paires de noms et de valeurs. Vous pouvez en ajouter via les méthodes comme{{domxref("Headers.append","append()")}} (see {{anch("Examples")}}.)  Dans toutes les méthodes de cette interface, les noms des <code>Headers</code> sont reliés à une séquence d'octets sensible à la case.</p>
 
 <p>Pour des raisons de sécurité, les <code>Headers</code> ci-dessous peuvent être controlés uniquement par l'User Agent : {{Glossary("Forbidden_header_name", "forbidden header names", 1)}}  et {{Glossary("Forbidden_response_header_name", "forbidden response header names", 1)}}.</p>
 
@@ -87,7 +87,7 @@ monHeader.append('Content-Type', 'text/xml');
 monHeader.get('Content-Type') // doit retourner 'text/xml'
 </pre>
 
-<p>La même chose peut être accomplie en passant par un array d'array  <span class="tlid-translation translation" lang="fr"><span title="">un littéral d'objet au constructeur.</span></span></p>
+<p>La même chose peut être accomplie en passant par un array d'array  un littéral d'objet au constructeur.</p>
 
 <pre class="brush: js notranslate">var mesHeaders = new Headers({
     'Content-Type': 'text/xml'

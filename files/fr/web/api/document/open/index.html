@@ -32,7 +32,7 @@ document.open();
 
 <p>Si un document existe dans la cible, cette méthode le supprime (voir l'exemple ci-dessus).</p>
 
-<p>Par ailleurs, un appel automatique à <code>document.open()</code> est réalisé lorsque <a href="https://developer.mozilla.org/fr/docs/Web/API/Document/write">document.write()</a> est appelé après que la page ait été chargée, bien que ce ne soit pas défini dans la spécification du W3C. <span class="comment">documenter les paramètres à document.open ne figurant pas dans la spécification</span></p>
+<p>Par ailleurs, un appel automatique à <code>document.open()</code> est réalisé lorsque <a href="https://developer.mozilla.org/fr/docs/Web/API/Document/write">document.write()</a> est appelé après que la page ait été chargée, bien que ce ne soit pas défini dans la spécification du W3C. documenter les paramètres à document.open ne figurant pas dans la spécification</p>
 
 <p>Cette méthode ne doit pas être confondue avec <a href="https://developer.mozilla.org/fr/docs/Web/API/Window/open">window.open()</a>. <code>document.open</code> permet d'écrire par dessus le document courant ou d'y ajouter du contenu, alors que <code>window.open</code> fournit une manière d'ouvrir une nouvelle fenêtre laissant le document courant intact. Comme <code>window</code> est l'objet, si on appelle juste <code>open(...)</code>, il sera traité comme un appel à <code>window.open(...)</code>. Le document ouvert peut être fermé à l'aide de <a href="https://developer.mozilla.org/fr/docs/Web/API/Document/close">document.close()</a>.</p>
 

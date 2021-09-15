@@ -29,12 +29,12 @@ original_slug: Web/Guide/API/Gamepad
  <p><strong>Note</strong>: À l'écriture de ces lignes, Chrome n'implémente pas les événements {{ domxref("Window.gamepadconnected") }} et {{ domxref("Window.gamepaddisconnected") }}. Vous devez utiliser {{ domxref("navigator.getGamepads") }} pour récupérer la liste des contrôleurs disponibles.</p>
 </div>
 <h2 id="disconnecting" name="disconnecting">Déconnexion du contrôleur</h2>
-<p>Lorsqu'un contrôleur est déconnecté, et si la page avait déjà reçu des données de ce contrôleur auparavant (par exemple par l'événement {{ domxref("Window.gamepadconnected") }}), un second événement est envoyé à la fenêtre active : <span style="line-height: 1.5;"> {{ domxref("Window.gamepaddisconnected") }}.</span></p>
+<p>Lorsqu'un contrôleur est déconnecté, et si la page avait déjà reçu des données de ce contrôleur auparavant (par exemple par l'événement {{ domxref("Window.gamepadconnected") }}), un second événement est envoyé à la fenêtre active :  {{ domxref("Window.gamepaddisconnected") }}.</p>
 <pre class="brush: js">window.addEventListener("gamepaddisconnected", function(e) {
   console.log("Contrôleur n°%d déconnecté : %s",
   e.gamepad.index, e.gamepad.id);
 });</pre>
-<p>La propriété <code>index</code> sera unique à chaque périphérique connecté au système, même si plusieurs contrôleurs du même type sont utilisés. La propriété correspond également à l'indice du tableau retourné par<span style="line-height: 1.5;"> {{ domxref("navigator.getGamepads") }}.</span></p>
+<p>La propriété <code>index</code> sera unique à chaque périphérique connecté au système, même si plusieurs contrôleurs du même type sont utilisés. La propriété correspond également à l'indice du tableau retourné par {{ domxref("navigator.getGamepads") }}.</p>
 <pre class="brush: js">var gamepads = {};
 
 function gamepadHandler(event, connecting) {
@@ -136,10 +136,10 @@ function pollGamepads() {
 <p>Now on to the main game loop. In each execution of the loop we check if one of four buttons is being pressed; if so, we update the values of the <code>a</code> and <code>b</code> movement variables appropriately, then update the {{ cssxref("left") }} and {{ cssxref("top") }} properties, changing their values to the current values of <code>a</code> and <code>b</code> respectively. This has the effect of moving the ball around the screen.  In current versions of Chrome (version 34 as of this writing) the button values are stored as an array of double values, instead of {{ domxref("GamepadButton") }} objects. This is fixed in development versions.</p>
 <p>After all this is done, we use our <code>rAF</code> variable to request the next animation frame, running <code>gameLoop()</code> again.</p>
 <pre class="brush: js">function buttonPressed(b) {
-<span class="k">  if</span> <span class="p">(</span><span class="k">typeof</span><span class="p">(</span><span class="nx">b</span><span class="p">)</span> <span class="o">==</span> <span class="s2">"object"</span><span class="p">)</span> <span class="p">{</span>
-<span class="nx">    return</span> <span class="nx">b</span><span class="p">.</span><span class="nx">pressed</span><span class="p">;</span>
-<span class="nx">  </span><span class="p">}</span>
-<span class="p">  return</span> <span class="nx">b</span> <span class="o">==</span> <span class="mf">1.0</span><span class="p">;</span>
+  if (typeof(b) == "object") {
+    return b.pressed;
+  }
+  return b == 1.0;
 }
 
 function gameLoop() {

@@ -22,12 +22,12 @@ original_slug: Web/API/API_IndexedDB
 
 <h2 id="Concepts_clés_et_utilisation">Concepts clés et utilisation</h2>
 
-<p>IndexedDB est un système de gestion de base de données transactionnel, similaire à un SGBD relationnel basé sur SQL. Cependant contrairement aux SGBD relationnels, qui utilisent des tables avec des colonnes fixes, IndexedDB est une base de données orientée objet basée sur JavaScript. <span style="line-height: 1.5;">IndexedDB vous permet de stocker et de récupérer des objets qui sont indexés avec une </span><strong style="line-height: 1.5;">clef</strong><span style="line-height: 1.5;">; tout objet supporté par </span><a href="https://developer.mozilla.org/fr/docs/Web/API/Web_Workers_API/algorithme_clonage_structure">l'algorithme de clônage structuré</a><span style="line-height: 1.5;"> peut être stocké. </span><span style="line-height: 1.5;">Vous devez spécifier le schéma de la base de données, ouvrir une connexion à votre base de données, puis récupérer et mettre à jour des données dans une série de </span><strong style="line-height: 1.5;">transactions</strong><span style="line-height: 1.5;">.</span></p>
+<p>IndexedDB est un système de gestion de base de données transactionnel, similaire à un SGBD relationnel basé sur SQL. Cependant contrairement aux SGBD relationnels, qui utilisent des tables avec des colonnes fixes, IndexedDB est une base de données orientée objet basée sur JavaScript. IndexedDB vous permet de stocker et de récupérer des objets qui sont indexés avec une <strong style="line-height: 1.5;">clef</strong>; tout objet supporté par <a href="https://developer.mozilla.org/fr/docs/Web/API/Web_Workers_API/algorithme_clonage_structure">l'algorithme de clônage structuré</a> peut être stocké. Vous devez spécifier le schéma de la base de données, ouvrir une connexion à votre base de données, puis récupérer et mettre à jour des données dans une série de <strong style="line-height: 1.5;">transactions</strong>.</p>
 
 <ul>
- <li><span style="line-height: 1.5;">Plus d'informations sur les <a href="/fr/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB">concepts derrière IndexedDB</a>.</span></li>
- <li><span style="line-height: 1.5;">Apprenez à utiliser IndexedDB de manière asynchrone à partir des principes fondamentaux grâce à notre guide <a href="/fr/docs/IndexedDB/Using_IndexedDB">Utiliser IndexedDB</a>.</span></li>
- <li><span style="line-height: 1.5;">Combinez IndexedDB pour le stockage des données en mode déconnecté avec les Service Workers pour stocker des assets en mode déconnecté, comme précisé dans <a href="/fr/docs/Web/Progressive_web_apps/Offline_Service_workers">Faire fonctionner les PWAs en mode déconnecté grâce aux Service workers</a></span><span style="line-height: 1.5;">.</span></li>
+ <li>Plus d'informations sur les <a href="/fr/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB">concepts derrière IndexedDB</a>.</li>
+ <li>Apprenez à utiliser IndexedDB de manière asynchrone à partir des principes fondamentaux grâce à notre guide <a href="/fr/docs/IndexedDB/Using_IndexedDB">Utiliser IndexedDB</a>.</li>
+ <li>Combinez IndexedDB pour le stockage des données en mode déconnecté avec les Service Workers pour stocker des assets en mode déconnecté, comme précisé dans <a href="/fr/docs/Web/Progressive_web_apps/Offline_Service_workers">Faire fonctionner les PWAs en mode déconnecté grâce aux Service workers</a>.</li>
 </ul>
 
 <div class="note">
@@ -150,7 +150,7 @@ original_slug: Web/API/API_IndexedDB
 <ul>
  <li><a class="external" href="https://localforage.github.io/localForage/">localForage</a>: Un <em>Polyfill</em> fournissant une syntaxe clé-valeurs simple pour un stockage côté client; il utilise IndexedDB en arrière plan, mais se retourne d'abord sur WebSQL puis sur localStorage pour les navigateurs qui ne supportent pas IndexedDB.</li>
  <li><a class="external" href="http://www.dexie.org/">dexie.js</a> : Un <em>wrapper </em>pour IndexedDB qui permet un développement plus rapide avec une syntaxe simple.</li>
- <li><a class="external" href="https://github.com/erikolson186/zangodb">ZangoDB </a>: Une interface MongoDB-like pour indexedDB qui <span id="result_box" lang="fr"><span>prend en charge la plupart des fonctionnalités familières de filtrage, projection, tri, mise à jour et agrégation de MongoDB.</span></span></li>
+ <li><a class="external" href="https://github.com/erikolson186/zangodb">ZangoDB </a>: Une interface MongoDB-like pour indexedDB qui prend en charge la plupart des fonctionnalités familières de filtrage, projection, tri, mise à jour et agrégation de MongoDB.</li>
  <li><a class="external" href="http://jsstore.net/">JsStore </a>: Un contenu indexedDB avec SQL comme syntaxe.</li>
  <li><a class="external" href="https://github.com/mWater/minimongo">MiniMongo</a></li>
  <li><a class="external" href="https://pouchdb.com">PouchDB</a></li>

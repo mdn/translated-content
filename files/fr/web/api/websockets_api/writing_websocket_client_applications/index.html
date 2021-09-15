@@ -51,7 +51,7 @@ WebSocket WebSocket(
 
 <h3 id="Exemples">Exemples</h3>
 
-<p>Cet  exemple simple crée un nouvel objet WebSocket, qui se connecte au serveur à l'adresse <code><span class="nowiki">ws://www.example.com/socketserver</span></code>. Un protocole spécifique "protocolOne" est indiqué dans cette exemple, bien qu'il ne soit pas obligatoire.</p>
+<p>Cet  exemple simple crée un nouvel objet WebSocket, qui se connecte au serveur à l'adresse <code>ws://www.example.com/socketserver</code>. Un protocole spécifique "protocolOne" est indiqué dans cette exemple, bien qu'il ne soit pas obligatoire.</p>
 
 <pre class="brush: js">var exampleSocket = new WebSocket("ws://www.example.com/socketserver", "protocolOne");
 </pre>
@@ -65,7 +65,7 @@ WebSocket WebSocket(
 
 <p>Une fois la connexion établie (c'est-à-dire quand <code>readyState</code> a la valeur <code>OPEN</code>), la propriété <code>protocol</code> indique quel protocole le server a sélectionné.</p>
 
-<p>Dans les exemples ci-dessus on a remplacé  <code>http</code> par <code>ws</code>, et de la même façon on peut remplacer <code>https</code> par  <code>wss</code> . L'établissement d'une connexion WebSocket repose sur le méchanisme HTTP Upgrade, donc la requête pour l'upgrade de protocole est implicite lorsqu'on s'adresse au server HTTP avec <code><span class="nowiki">ws://www.example.com</span></code> ou <code><span class="nowiki">wss://www.example.com</span></code>.</p>
+<p>Dans les exemples ci-dessus on a remplacé  <code>http</code> par <code>ws</code>, et de la même façon on peut remplacer <code>https</code> par  <code>wss</code> . L'établissement d'une connexion WebSocket repose sur le méchanisme HTTP Upgrade, donc la requête pour l'upgrade de protocole est implicite lorsqu'on s'adresse au server HTTP avec <code>ws://www.example.com</code> ou <code>wss://www.example.com</code>.</p>
 
 <h2 id="Envoi_de_données_vers_le_serveur">Envoi de données vers le serveur</h2>
 

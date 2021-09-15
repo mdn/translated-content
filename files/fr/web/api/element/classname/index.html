@@ -24,13 +24,13 @@ translation_of: Web/API/Element/className
 
 <h2 id="Exemple" name="Exemple">Exemple</h2>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">let</span> elm <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">'item'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">let elm = document.getElementById('item');
 
-<span class="keyword token">if</span><span class="punctuation token">(</span>elm<span class="punctuation token">.</span>className <span class="operator token">===</span> <span class="string token">'active'</span><span class="punctuation token">)</span><span class="punctuation token">{</span>
-    elm<span class="punctuation token">.</span>className <span class="operator token">=</span> <span class="string token">'inactive'</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="punctuation token">{</span>
-    elm<span class="punctuation token">.</span>className <span class="operator token">=</span> <span class="string token">'active'</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+if(elm.className === 'active'){
+    elm.className = 'inactive';
+} else {
+    elm.className = 'active';
+}</code></pre>
 
 <h2 id="Notes" name="Notes">Notes</h2>
 

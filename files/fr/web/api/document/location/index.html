@@ -10,13 +10,13 @@ tags:
   - lecture seule
 translation_of: Web/API/Document/location
 ---
-<p><span style="font-size: 14px; line-height: 1.5;">La propriété en lecture seule </span><strong style="font-size: 14px; line-height: 1.5;"><code>Document.location</code></strong><code style="font-size: 14px;"> renvoie un objet</code><span style="font-size: 14px; line-height: 1.5;"> {{domxref("Location")}}, contenant les informations sur l'URL du document et fournit des moyens pour modifier cette URL ou charger une autre URL.</span></p>
+<p>La propriété en lecture seule <strong style="font-size: 14px; line-height: 1.5;"><code>Document.location</code></strong><code style="font-size: 14px;"> renvoie un objet</code> {{domxref("Location")}}, contenant les informations sur l'URL du document et fournit des moyens pour modifier cette URL ou charger une autre URL.</p>
 
-<p><span style="font-size: 14px; line-height: 1.5;">Bien que </span><code style="font-size: 14px;">Document.location</code><span style="font-size: 14px; line-height: 1.5;"> soit un objet </span><span style="font-size: 14px; line-height: 1.5;"> </span><code style="font-size: 14px;">Location</code><span style="font-size: 14px; line-height: 1.5;"> en <em>lecture seule</em>, vous pouvez lui assigner un</span><span style="font-size: 14px; line-height: 1.5;"> {{domxref("DOMString")}}. Cela signifie que vous pouvez dans la plupart des cas utiliser document.location comme s'il s'agissait d'une chaîne de caractères: </span><code style="font-size: 14px;">document.location = 'http://www.example.com'</code><span style="font-size: 14px; line-height: 1.5;"> est un synonyme de </span><code style="font-size: 14px;">document.location.href = 'http://www.example.com'</code><span style="font-size: 14px; line-height: 1.5;">.</span></p>
+<p>Bien que <code style="font-size: 14px;">Document.location</code> soit un objet  <code style="font-size: 14px;">Location</code> en <em>lecture seule</em>, vous pouvez lui assigner un {{domxref("DOMString")}}. Cela signifie que vous pouvez dans la plupart des cas utiliser document.location comme s'il s'agissait d'une chaîne de caractères: <code style="font-size: 14px;">document.location = 'http://www.example.com'</code> est un synonyme de <code style="font-size: 14px;">document.location.href = 'http://www.example.com'</code>.</p>
 
-<p><span style="font-size: 14px; line-height: 1.5;">Pour récupérer uniquement l'URL en tant que chaîne de caractères, la propriété </span><span style="font-size: 14px; line-height: 1.5;">{{domxref("document.URL")}} peut également être utilisée.</span></p>
+<p>Pour récupérer uniquement l'URL en tant que chaîne de caractères, la propriété {{domxref("document.URL")}} peut également être utilisée.</p>
 
-<p><span style="font-size: 14px; line-height: 1.5;">Si le document courant n'est pas un contexte de navigation, la valeur renvoyée est <em>null</em>.</span></p>
+<p>Si le document courant n'est pas un contexte de navigation, la valeur renvoyée est <em>null</em>.</p>
 
 <h2 id="Syntax" name="Syntax">Syntaxe</h2>
 

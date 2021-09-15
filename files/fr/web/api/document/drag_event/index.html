@@ -207,7 +207,7 @@ translation_of: Web/API/Document/drag_event
   }, false);
 
   document.addEventListener("drop", function( event ) {
-      // Empêche l'action par défaut (ouvrir<span class="short_text" id="result_box" lang="fr"><span> comme lien pour certains éléments)</span></span>
+      // Empêche l'action par défaut (ouvrir comme lien pour certains éléments)
       event.preventDefault();
       // Déplace l'élément traîné vers la cible du drop sélectionnée
       if ( event.target.className == "dropzone" ) {

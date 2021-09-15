@@ -160,15 +160,15 @@ function dessiner(img) {
 
 <h2 id="Zoom_et_anticrénelage">Zoom et anticrénelage</h2>
 
-<p><span id="result_box" lang="fr"><span>A l'aide de la méthode {{domxref ("CanvasRenderingContext2D.drawImage", "drawImage ()")}}, un deuxième canevas, et la propriété </span></span> {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} , nous pouvons<span lang="fr"><span> zoomer sur notre image et voir les détails.</span></span></p>
+<p>A l'aide de la méthode {{domxref ("CanvasRenderingContext2D.drawImage", "drawImage ()")}}, un deuxième canevas, et la propriété  {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} , nous pouvons zoomer sur notre image et voir les détails.</p>
 
-<p><span id="result_box" lang="fr"><span>Nous obtenons la position de la souris et recadrons une image de 5 pixels à gauche et au-dessus à 5 pixels à droite et en-dessous.</span> <span>Ensuite, nous copions celle-ci sur un autre canevas et redimensionnons l'image à la taille que nous voulons.</span> <span>Dans la zone de zoom, nous redimensionnons une zone de 10 × 10 pixels du canevas d'origine à 200 × 200.</span></span></p>
+<p>Nous obtenons la position de la souris et recadrons une image de 5 pixels à gauche et au-dessus à 5 pixels à droite et en-dessous. Ensuite, nous copions celle-ci sur un autre canevas et redimensionnons l'image à la taille que nous voulons. Dans la zone de zoom, nous redimensionnons une zone de 10 × 10 pixels du canevas d'origine à 200 × 200.</p>
 
 <pre class="brush: js notranslate">zoomctx.drawImage(canvas,
                   Math.abs(x - 5), Math.abs(y - 5),
                   10, 10, 0, 0, 200, 200);</pre>
 
-<p><span id="result_box" lang="fr"><span>Étant donné que l'anticrénelage est activé par défaut, nous pouvons désactiver le lissage pour voir les pixels clairs.</span> <span>Vous pouvez basculer la case à cocher pour voir l'effet de la propriété <code>imageSmoothingEnabled</code> (qui a besoin de préfixes pour différents navigateurs).</span></span></p>
+<p>Étant donné que l'anticrénelage est activé par défaut, nous pouvons désactiver le lissage pour voir les pixels clairs. Vous pouvez basculer la case à cocher pour voir l'effet de la propriété <code>imageSmoothingEnabled</code> (qui a besoin de préfixes pour différents navigateurs).</p>
 
 <h6 id="exemple_de_zoom">Exemple de zoom</h6>
 
@@ -222,22 +222,22 @@ function draw(img) {
 
 <h2 id="Sauvegarde_des_images">Sauvegarde des images</h2>
 
-<p><span id="result_box" lang="fr"><span>L' {{domxref ("HTMLCanvasElement")}} fournit une méthode <code>toDataURL ()</code>, utile lors de l'enregistrement d'images.</span> <span>Il retourne un <a href="https://developer.mozilla.org/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">URI de données</a> contenant une représentation de l'image dans le format spécifié par le paramètre de <code>type</code> (par défaut en </span></span> <a class="external external-icon" href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a> <span lang="fr"><span>).</span> <span>L'image renvoyée est dans une résolution de 96 dpi.</span></span></p>
+<p>L' {{domxref ("HTMLCanvasElement")}} fournit une méthode <code>toDataURL ()</code>, utile lors de l'enregistrement d'images. Il retourne un <a href="https://developer.mozilla.org/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">URI de données</a> contenant une représentation de l'image dans le format spécifié par le paramètre de <code>type</code> (par défaut en  <a class="external external-icon" href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a> ). L'image renvoyée est dans une résolution de 96 dpi.</p>
 
 <dl>
  <dt>{{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/png')")}}</dt>
  <dd>Par défaut. Crée un image PNG.</dd>
  <dt>{{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/jpeg', quality)")}}</dt>
- <dd><span id="result_box" lang="fr"><span>Crée une image JPG.</span> <span>En option, vous pouvez fournir une qualité comprise entre 0 et 1, 1 étant de la meilleure qualité et 0 presque non reconnaissable mais de petite taille.</span></span></dd>
+ <dd>Crée une image JPG. En option, vous pouvez fournir une qualité comprise entre 0 et 1, 1 étant de la meilleure qualité et 0 presque non reconnaissable mais de petite taille.</dd>
 </dl>
 
-<p><span id="result_box" lang="fr"><span>Une fois que vous avez généré un URI de données à partir de votre canevas, vous pouvez l'utiliser comme source de {{HTMLElement ("image")}} ou le mettre dans un lien hypertexte avec un attribut de téléchargement pour l'enregistrer sur le disque par exemple.</span></span></p>
+<p>Une fois que vous avez généré un URI de données à partir de votre canevas, vous pouvez l'utiliser comme source de {{HTMLElement ("image")}} ou le mettre dans un lien hypertexte avec un attribut de téléchargement pour l'enregistrer sur le disque par exemple.</p>
 
-<p><span id="result_box" lang="fr"><span>Vous pouvez également créer un {{domxref ("Blob")}} à partir du canevas.</span></span></p>
+<p>Vous pouvez également créer un {{domxref ("Blob")}} à partir du canevas.</p>
 
 <dl>
  <dt>{{domxref("HTMLCanvasElement.toBlob", "canvas.toBlob(callback, type, encoderOptions)")}}</dt>
- <dd><span id="result_box" lang="fr"><span>Crée un objet <code>Blob</code> représentant l'image contenue dans le canevas.</span></span></dd>
+ <dd>Crée un objet <code>Blob</code> représentant l'image contenue dans le canevas.</dd>
 </dl>
 
 <h2 id="Voir_aussi">Voir aussi</h2>

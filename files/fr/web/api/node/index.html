@@ -29,9 +29,9 @@ translation_of: Web/API/Node
 
 <dl>
  <dt>{{DOMxRef("Node.baseURI")}} {{readonlyInline}}</dt>
- <dd>Retourne une {{domxref("DOMString")}} (<em>chaine de caractères</em>) <span id="result_box" lang="fr"><span>représentant l'URL de base du document contenant le <code>Node</code>.</span><span> En HTML, il correspond au protocole, au nom de domaine et à la structure du répertoire, jusqu'au dernier</span></span> <code>/</code>.</dd>
+ <dd>Retourne une {{domxref("DOMString")}} (<em>chaine de caractères</em>) représentant l'URL de base du document contenant le <code>Node</code>. En HTML, il correspond au protocole, au nom de domaine et à la structure du répertoire, jusqu'au dernier <code>/</code>.</dd>
  <dt>{{DOMxRef("Node.baseURIObject")}} {{Non-standard_inline()}}</dt>
- <dd><span id="result_box" lang="fr"><span>(Non disponible pour le contenu Web). L'objet </span></span><span id="result_box" lang="fr"><span>en lecture seule</span></span> <span lang="fr"><span> {{Interface ("nsIURI")}} représentant l'URI de base pour l'élément.</span></span></dd>
+ <dd>(Non disponible pour le contenu Web). L'objet en lecture seule  {{Interface ("nsIURI")}} représentant l'URI de base pour l'élément.</dd>
  <dt>{{DOMxRef("Node.childNodes")}} {{readonlyInline}}</dt>
  <dd>Renvoie un {{domxref ("NodeList")}} contenant tous les enfants de ce nœud. {{domxref ("NodeList")}} signifie que si les enfants du <code>Node</code> changent, l'objet {{domxref ("NodeList")}} est automatiquement mis à jour.</dd>
  <dt>{{DOMxRef("Node.firstChild")}} {{readonlyInline}}</dt>
@@ -111,11 +111,11 @@ translation_of: Web/API/Node
  <dt>{{DOMxRef("Node.parentNode")}}{{readonlyInline}}</dt>
  <dd>Retourne un {{domxref("Node")}} qui est le parent de ce nœud. S'il n'existe pas, parce qu'il est en haut de l'arbre ou parce qu'il ne participe pas à un arbre, cette propriété retourne <code>null</code> .</dd>
  <dt>{{DOMxRef("Node.parentElement")}}{{readonlyInline}}</dt>
- <dd>Retourne un {{domxref("Element")}} qui est le parent de ce nœud. <span id="result_box" lang="fr"><span>Si le nœud n'a aucun parent ou si ce parent n'est pas un </span></span> {{domxref("Element")}} , cette propriété retourne <code>null</code>.</dd>
+ <dd>Retourne un {{domxref("Element")}} qui est le parent de ce nœud. Si le nœud n'a aucun parent ou si ce parent n'est pas un  {{domxref("Element")}} , cette propriété retourne <code>null</code>.</dd>
  <dt>{{DOMxRef("Node.previousSibling")}}{{readonlyInline}}</dt>
  <dd>Retourne un {{domxref("Node")}} représentant le nœud précédent dans l'arbre ou  <code>null</code> s'il n'y en a pas.</dd>
  <dt>{{DOMxRef("Node.textContent")}}</dt>
- <dd>Retourne / définit <span id="result_box" lang="fr"><span>le contenu textuel d'un élément et de tous ses descendants.</span></span></dd>
+ <dd>Retourne / définit le contenu textuel d'un élément et de tous ses descendants.</dd>
 </dl>
 
 <dl>
@@ -125,11 +125,11 @@ translation_of: Web/API/Node
 
 <dl>
  <dt>{{DOMxRef("Node.localName")}} {{obsolete_inline}}{{readonlyInline}}</dt>
- <dd>Retourne un {{domxref("DOMString")}}  représentant <span class="short_text" id="result_box" lang="fr"><span>la partie locale du nom d'un élément.</span></span></dd>
+ <dd>Retourne un {{domxref("DOMString")}}  représentant la partie locale du nom d'un élément.</dd>
 </dl>
 
 <div class="note">
-<p><strong>Note :</strong> <span id="result_box" lang="fr"><span>Dans Firefox 3.5 et versions antérieures, la propriété saisit le nom local pour les éléments HTML (mais pas les éléments XHTML).</span> <span>Dans les versions ultérieures, cela ne se produit pas, donc la propriété est en minuscule pour HTML et XHTML.</span></span> {{gecko_minversion_inline("1.9.2")}}</p>
+<p><strong>Note :</strong> Dans Firefox 3.5 et versions antérieures, la propriété saisit le nom local pour les éléments HTML (mais pas les éléments XHTML). Dans les versions ultérieures, cela ne se produit pas, donc la propriété est en minuscule pour HTML et XHTML. {{gecko_minversion_inline("1.9.2")}}</p>
 </div>
 
 <dl>
@@ -138,7 +138,7 @@ translation_of: Web/API/Node
 </dl>
 
 <div class="note">
-<p>Note : Dans Firefox 3.5 et versions antérieures, les éléments HTML ne contiennent aucun "namespace". Dans les versions ultérieures, les éléments HTML sont dans le "namespace" <code><a class="linkification-ext external external-icon" href="https://www.w3.org/1999/xhtml/" title="Linkification: http://www.w3.org/1999/xhtml">https://www.w3.org/1999/xhtml/</a></code>  <span class="short_text" id="result_box" lang="fr"><span>pour HTML et XML. </span></span> {{gecko_minversion_inline("1.9.2")}}</p>
+<p>Note : Dans Firefox 3.5 et versions antérieures, les éléments HTML ne contiennent aucun "namespace". Dans les versions ultérieures, les éléments HTML sont dans le "namespace" <code><a class="linkification-ext external external-icon" href="https://www.w3.org/1999/xhtml/" title="Linkification: http://www.w3.org/1999/xhtml">https://www.w3.org/1999/xhtml/</a></code>  pour HTML et XML.  {{gecko_minversion_inline("1.9.2")}}</p>
 </div>
 
 <dl>
@@ -163,15 +163,15 @@ translation_of: Web/API/Node
  <dt>{{DOMxRef("Node.compareDocumentPosition()")}}</dt>
  <dd>Compare la position du nœud courant par rapport à un autre nœud dans tout autre document.</dd>
  <dt>{{DOMxRef("Node.contains()")}}</dt>
- <dd>Retourne une valeur {{jsxref("Boolean")}} (<em>booléen</em>) <span id="result_box" lang="fr"><span>indiquant si un noeud est un descendant d'un noeud donné ou non.</span></span></dd>
+ <dd>Retourne une valeur {{jsxref("Boolean")}} (<em>booléen</em>) indiquant si un noeud est un descendant d'un noeud donné ou non.</dd>
  <dt>{{domxref("Node.getBoxQuads()")}} {{experimental_inline}}</dt>
  <dd>Retourne une liste des boites CSS des nœuds relatifs à un autre nœud.</dd>
  <dt>{{DOMxRef("Node.getRootNode()")}}</dt>
- <dd><span id="result_box" lang="fr"><span>Retourne la racine de l'objet contextuel qui comprend éventuellement la "Shadow root" si elle est disponible.</span></span></dd>
+ <dd>Retourne la racine de l'objet contextuel qui comprend éventuellement la "Shadow root" si elle est disponible.</dd>
  <dt>{{DOMxRef("Node.hasChildNodes()")}}</dt>
- <dd>Retourne un {{jsxref("Boolean")}} (<em>booléen</em>) indiquant si l'élément a des<span id="result_box" lang="fr"><span> noeuds enfants ou non.</span></span></dd>
+ <dd>Retourne un {{jsxref("Boolean")}} (<em>booléen</em>) indiquant si l'élément a des noeuds enfants ou non.</dd>
  <dt>{{DOMxRef("Node.insertBefore()")}}</dt>
- <dd>Insère un {{domxref("Node")}} avant <span id="result_box" lang="fr"><span>le nœud de référence en tant qu'enfant du noeud actuel.</span></span></dd>
+ <dd>Insère un {{domxref("Node")}} avant le nœud de référence en tant qu'enfant du noeud actuel.</dd>
  <dt>{{DOMxRef("Node.isDefaultNamespace()")}}</dt>
  <dd>Accepte une URI d'espace de nom comme argument et retourne une valeur {{jsxref("Boolean")}} avec <code>true</code> (<em>vrai</em>) si l'espace de nom est celui par défaut du noeud donné ou <code>false</code> (<em>faux</em>) sinon.</dd>
  <dt>{{DOMxRef("Node.isEqualNode()")}}</dt>
@@ -196,29 +196,29 @@ translation_of: Web/API/Node
  <dt>{{domxref("Node.getFeature()")}} {{obsolete_inline}}</dt>
  <dd>Permet à un utilisateur d'obtenir un objet {{DOMxRef("DOMUserData")}} à partir du nœud fourni.</dd>
  <dt>{{domxref("Node.getUserData()")}} {{obsolete_inline}}</dt>
- <dd><span id="result_box" lang="fr"><span>Permet à un utilisateur d'obtenir une {{domxref ("DOMUserData")}} (<em>donnée utilisateur</em>) à partir du </span></span>nœud<span lang="fr"><span>.</span></span></dd>
+ <dd>Permet à un utilisateur d'obtenir une {{domxref ("DOMUserData")}} (<em>donnée utilisateur</em>) à partir du nœud.</dd>
  <dt>{{domxref("Node.hasAttributes()")}} {{obsolete_inline}}</dt>
- <dd>Retourne un {{jsxref("Boolean")}} <span id="result_box" lang="fr"><span>indiquant si l'élément possède des attributs ou non.</span></span></dd>
+ <dd>Retourne un {{jsxref("Boolean")}} indiquant si l'élément possède des attributs ou non.</dd>
  <dt>{{domxref("Node.isSupported()")}} {{obsolete_inline}}</dt>
- <dd>Retourne une marque {{jsxref("Boolean")}} qui contient le résultat d'un test <span id="result_box" lang="fr"><span>si l'implémentation DOM prend en compte une caractéristique spécifique et si cette fonctionnalité est prise en charge par le </span></span>nœud<span lang="fr"><span> spécifique.</span></span></dd>
+ <dd>Retourne une marque {{jsxref("Boolean")}} qui contient le résultat d'un test si l'implémentation DOM prend en compte une caractéristique spécifique et si cette fonctionnalité est prise en charge par le nœud spécifique.</dd>
  <dt>{{domxref("Node.setUserData()")}} {{obsolete_inline}}</dt>
- <dd><span class="short_text" id="result_box" lang="fr"><span>Permet à un utilisateur d'attacher ou d'enlever </span></span> {{domxref("DOMUserData")}} du nœud.</dd>
+ <dd>Permet à un utilisateur d'attacher ou d'enlever  {{domxref("DOMUserData")}} du nœud.</dd>
 </dl>
 
 <h2 id="Exemples">Exemples</h2>
 
-<h3 id="Parcourir_tous_les_nœuds_enfants"><span class="short_text" id="result_box" lang="fr"><span>Parcourir tous les nœuds enfants</span></span></h3>
+<h3 id="Parcourir_tous_les_nœuds_enfants">Parcourir tous les nœuds enfants</h3>
 
 <p>La fonction suivante parcourt de manière récursive tous les nœuds enfants d'un noeud et exécute une fonction de rappel sur eux (et sur le nœud parent lui-même).</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">function</span> DOMComb <span class="punctuation token">(</span>oParent<span class="punctuation token">,</span> oCallback<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">if</span> <span class="punctuation token">(</span>oParent<span class="punctuation token">.</span><span class="function token">hasChildNodes</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">for</span> <span class="punctuation token">(</span><span class="keyword token">var</span> oNode <span class="operator token">=</span> oParent<span class="punctuation token">.</span>firstChild<span class="punctuation token">;</span> oNode<span class="punctuation token">;</span> oNode <span class="operator token">=</span> oNode<span class="punctuation token">.</span>nextSibling<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="function token">DOMComb</span><span class="punctuation token">(</span>oNode<span class="punctuation token">,</span> oCallback<span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-  <span class="punctuation token">}</span>
-  oCallback<span class="punctuation token">.</span><span class="function token">call</span><span class="punctuation token">(</span>oParent<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">function DOMComb (oParent, oCallback) {
+  if (oParent.hasChildNodes()) {
+    for (var oNode = oParent.firstChild; oNode; oNode = oNode.nextSibling) {
+      DOMComb(oNode, oCallback);
+    }
+  }
+  oCallback.call(oParent);
+}</code></pre>
 
 <h4 id="Syntaxe">Syntaxe</h4>
 
@@ -239,27 +239,27 @@ translation_of: Web/API/Node
 
 <h4 id="Exemples_dutilisation">Exemples d'utilisation</h4>
 
-<p><span id="result_box" lang="fr"><span>L'exemple suivant envoie à la <code>console.log</code> le contenu texte du corps :</span></span></p>
+<p>L'exemple suivant envoie à la <code>console.log</code> le contenu texte du corps :</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="keyword token">function</span> printContent <span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="keyword token">this</span><span class="punctuation token">.</span>nodeValue<span class="punctuation token">)</span> <span class="punctuation token">{</span> console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="keyword token">this</span><span class="punctuation token">.</span>nodeValue<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="punctuation token">}</span>
-<span class="punctuation token">}</span>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">function printContent () {
+  if (this.nodeValue) { console.log(this.nodeValue); }
+}
 
-onload <span class="operator token">=</span> <span class="keyword token">function</span> <span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="function token">DOMComb</span><span class="punctuation token">(</span>document<span class="punctuation token">.</span>body<span class="punctuation token">,</span> printContent<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
+onload = function () {
+  DOMComb(document.body, printContent);
+};</code></pre>
 
 <h3 id="Supprimer_tous_les_enfants_imbriqués_dans_un_nœud">Supprimer tous les enfants imbriqués dans un nœud</h3>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">Element<span class="punctuation token">.</span>prototype<span class="punctuation token">.</span>removeAll <span class="operator token">=</span> <span class="keyword token">function</span> <span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">while</span> <span class="punctuation token">(</span><span class="keyword token">this</span><span class="punctuation token">.</span>firstChild<span class="punctuation token">)</span> <span class="punctuation token">{</span> <span class="keyword token">this</span><span class="punctuation token">.</span><span class="function token">removeChild</span><span class="punctuation token">(</span><span class="keyword token">this</span><span class="punctuation token">.</span>firstChild<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="punctuation token">}</span>
-  <span class="keyword token">return</span> <span class="keyword token">this</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">Element.prototype.removeAll = function () {
+  while (this.firstChild) { this.removeChild(this.firstChild); }
+  return this;
+};</code></pre>
 
 <h4 id="Exemple_dutilisation">Exemple d'utilisation</h4>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js"><span class="comment token">/* ... an alternative to document.body.innerHTML = "" ... */</span>
-document<span class="punctuation token">.</span>body<span class="punctuation token">.</span><span class="function token">removeAll</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">/* ... an alternative to document.body.innerHTML = "" ... */
+document.body.removeAll();</code></pre>
 
 <h2 id="Spécifications">Spécifications</h2>
 
@@ -275,7 +275,7 @@ document<span class="punctuation token">.</span>body<span class="punctuation tok
   <tr>
    <td>{{SpecName('DOM WHATWG', '#interface-node', 'Node')}}</td>
    <td>{{Spec2('DOM WHATWG')}}</td>
-   <td><span class="short_text" id="result_box" lang="fr"><span>Supprime les propriétés suivantes :</span></span> <code>attributes</code>, <code>namespaceURI</code>, <code>prefix</code>, et <code>localName</code>.<br>
+   <td>Supprime les propriétés suivantes : <code>attributes</code>, <code>namespaceURI</code>, <code>prefix</code>, et <code>localName</code>.<br>
     Supprime les méthodes suivantes : <code>isSupported()</code>, <code>hasAttributes()</code>, <code>getFeature()</code>, <code>setUserData()</code>, et <code>getUserData()</code>.</td>
   </tr>
   <tr>

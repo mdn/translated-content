@@ -89,45 +89,45 @@ doc.appendChild(peopleElem);
 
 <p>Vous pouvez automatiser la création de l'arbre DOM en utilisant un algorithme inversé JSON associé avec la représentation JSON suivante :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="punctuation token">{</span>
-  <span class="string token">"people"</span><span class="punctuation token">:</span> <span class="punctuation token">{</span>
-    <span class="string token">"person"</span><span class="punctuation token">:</span> <span class="punctuation token">[</span><span class="punctuation token">{</span>
-      <span class="string token">"address"</span><span class="punctuation token">:</span> <span class="punctuation token">[</span><span class="punctuation token">{</span>
-        <span class="string token">"@street"</span><span class="punctuation token">:</span> <span class="string token">"321 south st"</span><span class="punctuation token">,</span>
-        <span class="string token">"@city"</span><span class="punctuation token">:</span> <span class="string token">"denver"</span><span class="punctuation token">,</span>
-        <span class="string token">"@state"</span><span class="punctuation token">:</span> <span class="string token">"co"</span><span class="punctuation token">,</span>
-        <span class="string token">"@country"</span><span class="punctuation token">:</span> <span class="string token">"usa"</span>
-      <span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="punctuation token">{</span>
-        <span class="string token">"@street"</span><span class="punctuation token">:</span> <span class="string token">"123 main st"</span><span class="punctuation token">,</span>
-        <span class="string token">"@city"</span><span class="punctuation token">:</span> <span class="string token">"arlington"</span><span class="punctuation token">,</span>
-        <span class="string token">"@state"</span><span class="punctuation token">:</span> <span class="string token">"ma"</span><span class="punctuation token">,</span>
-        <span class="string token">"@country"</span><span class="punctuation token">:</span> <span class="string token">"usa"</span>
-      <span class="punctuation token">}</span><span class="punctuation token">]</span><span class="punctuation token">,</span>
-      <span class="string token">"@first-name"</span><span class="punctuation token">:</span> <span class="string token">"eric"</span><span class="punctuation token">,</span>
-      <span class="string token">"@middle-initial"</span><span class="punctuation token">:</span> <span class="string token">"H"</span><span class="punctuation token">,</span>
-      <span class="string token">"@last-name"</span><span class="punctuation token">:</span> <span class="string token">"jung"</span>
-    <span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="punctuation token">{</span>
-      <span class="string token">"address"</span><span class="punctuation token">:</span> <span class="punctuation token">[</span><span class="punctuation token">{</span>
-        <span class="string token">"@street"</span><span class="punctuation token">:</span> <span class="string token">"321 north st"</span><span class="punctuation token">,</span>
-        <span class="string token">"@city"</span><span class="punctuation token">:</span> <span class="string token">"atlanta"</span><span class="punctuation token">,</span>
-        <span class="string token">"@state"</span><span class="punctuation token">:</span> <span class="string token">"ga"</span><span class="punctuation token">,</span>
-        <span class="string token">"@country"</span><span class="punctuation token">:</span> <span class="string token">"usa"</span>
-      <span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="punctuation token">{</span>
-        <span class="string token">"@street"</span><span class="punctuation token">:</span> <span class="string token">"123 west st"</span><span class="punctuation token">,</span>
-        <span class="string token">"@city"</span><span class="punctuation token">:</span> <span class="string token">"seattle"</span><span class="punctuation token">,</span>
-        <span class="string token">"@state"</span><span class="punctuation token">:</span> <span class="string token">"wa"</span><span class="punctuation token">,</span>
-        <span class="string token">"@country"</span><span class="punctuation token">:</span> <span class="string token">"usa"</span>
-      <span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="punctuation token">{</span>
-        <span class="string token">"@street"</span><span class="punctuation token">:</span> <span class="string token">"321 south avenue"</span><span class="punctuation token">,</span>
-        <span class="string token">"@city"</span><span class="punctuation token">:</span> <span class="string token">"denver"</span><span class="punctuation token">,</span>
-        <span class="string token">"@state"</span><span class="punctuation token">:</span> <span class="string token">"co"</span><span class="punctuation token">,</span>
-        <span class="string token">"@country"</span><span class="punctuation token">:</span> <span class="string token">"usa"</span>
-      <span class="punctuation token">}</span><span class="punctuation token">]</span><span class="punctuation token">,</span>
-      <span class="string token">"@first-name"</span><span class="punctuation token">:</span> <span class="string token">"jed"</span><span class="punctuation token">,</span>
-      <span class="string token">"@last-name"</span><span class="punctuation token">:</span> <span class="string token">"brown"</span>
-    <span class="punctuation token">}</span><span class="punctuation token">]</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">{
+  "people": {
+    "person": [{
+      "address": [{
+        "@street": "321 south st",
+        "@city": "denver",
+        "@state": "co",
+        "@country": "usa"
+      }, {
+        "@street": "123 main st",
+        "@city": "arlington",
+        "@state": "ma",
+        "@country": "usa"
+      }],
+      "@first-name": "eric",
+      "@middle-initial": "H",
+      "@last-name": "jung"
+    }, {
+      "address": [{
+        "@street": "321 north st",
+        "@city": "atlanta",
+        "@state": "ga",
+        "@country": "usa"
+      }, {
+        "@street": "123 west st",
+        "@city": "seattle",
+        "@state": "wa",
+        "@country": "usa"
+      }, {
+        "@street": "321 south avenue",
+        "@city": "denver",
+        "@state": "co",
+        "@country": "usa"
+      }],
+      "@first-name": "jed",
+      "@last-name": "brown"
+    }]
+  }
+}</code></pre>
 
 <h3 id="Alors_quoi_.3F" name="Alors_quoi_.3F">Et après ?</h3>
 

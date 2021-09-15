@@ -26,7 +26,7 @@ translation_of: Web/API/CustomEvent
 
 <dl>
  <dt>{{domxref("CustomEvent.detail")}} {{readonlyinline}}</dt>
- <dd><span id="result_box" lang="fr"><span>Toute donnée transmise lors de l'initialisation de l'événement.</span></span></dd>
+ <dd>Toute donnée transmise lors de l'initialisation de l'événement.</dd>
 </dl>
 
 <p>Cette interface hérite des propriétés de son parent {{domxref("Event")}}:</p>
@@ -37,7 +37,7 @@ translation_of: Web/API/CustomEvent
 
 <dl>
  <dt>{{domxref("CustomEvent.initCustomEvent()")}} {{deprecated_inline}}</dt>
- <dd><span id="result_box" lang="fr"><span>Initialise un objet CustomEvent.</span> <span>Si l'événement a déjà été distribué, cette méthode ne fait rien.</span></span></dd>
+ <dd>Initialise un objet CustomEvent. Si l'événement a déjà été distribué, cette méthode ne fait rien.</dd>
 </dl>
 
 <p>Cette interface hérite les méthodes de son parent {{domxref("Event")}}:</p>
@@ -77,12 +77,12 @@ translation_of: Web/API/CustomEvent
 
 <p>Lors de la création d'un objet CustomEvent, vous devez créer l'objet à partir de la même <a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/window">fenêtre</a> que celle où vous déclencherez l'évenement.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="comment token">// doc est une référence au contenu du document</span>
-<span class="keyword token">function</span> <span class="function token">dispatchCustomEvent</span><span class="punctuation token">(</span>doc<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">var</span> eventDetail <span class="operator token">=</span> Components<span class="punctuation token">.</span>utils<span class="punctuation token">.</span><span class="function token">cloneInto</span><span class="punctuation token">(</span><span class="punctuation token">{</span>foo<span class="punctuation token">:</span> <span class="string token">'bar'</span><span class="punctuation token">}</span><span class="punctuation token">,</span> doc<span class="punctuation token">.</span>defaultView<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="keyword token">var</span> myEvent <span class="operator token">=</span> doc<span class="punctuation token">.</span>defaultView<span class="punctuation token">.</span><span class="function token">CustomEvent</span><span class="punctuation token">(</span><span class="string token">"mytype"</span><span class="punctuation token">,</span> eventDetail<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  doc<span class="punctuation token">.</span><span class="function token">dispatchEvent</span><span class="punctuation token">(</span>myEvent<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">// doc est une référence au contenu du document
+function dispatchCustomEvent(doc) {
+  var eventDetail = Components.utils.cloneInto({foo: 'bar'}, doc.defaultView);
+  var myEvent = doc.defaultView.CustomEvent("mytype", eventDetail);
+  doc.dispatchEvent(myEvent);
+}</code></pre>
 
 <p>Notez qu'exposer une fonction permettra au script de l'exécuter avec les privilèges qu'accorde Chrome ce qui peut ouvrir une faille de sécurité.</p>
 

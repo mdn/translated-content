@@ -15,41 +15,41 @@ original_slug: HTML/Manipulating_video_using_canvas
 
 <h2 id="Le_contenu_du_document">Le contenu du document</h2>
 
-<p>Le document XHTML utilisé <span id="result_box" lang="fr"><span>pour rendre ce contenu est montré ci-dessous :</span></span></p>
+<p>Le document XHTML utilisé pour rendre ce contenu est montré ci-dessous :</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="doctype token">&lt;!DOCTYPE html&gt;</span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>html</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>head</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>style</span><span class="punctuation token">&gt;</span></span><span class="language-css style token">
-      <span class="selector token">body </span><span class="punctuation token">{</span>
-        <span class="property token">background</span><span class="punctuation token">:</span> black<span class="punctuation token">;</span>
-        <span class="property token">color</span><span class="punctuation token">:</span><span class="hexcode token">#CCCCCC</span><span class="punctuation token">;</span>
-      <span class="punctuation token">}</span>
-      <span class="selector token"><span class="id token">#c2</span> </span><span class="punctuation token">{</span>
-        <span class="property token">background-image</span><span class="punctuation token">:</span> <span class="token url">url(foo.png)</span><span class="punctuation token">;</span>
-        <span class="property token">background-repeat</span><span class="punctuation token">:</span> no-repeat<span class="punctuation token">;</span>
-      <span class="punctuation token">}</span>
-      <span class="selector token">div </span><span class="punctuation token">{</span>
-        <span class="property token">float</span><span class="punctuation token">:</span> left<span class="punctuation token">;</span>
-        <span class="property token">border</span> <span class="punctuation token">:</span><span class="number token">1</span>px solid <span class="hexcode token">#444444</span><span class="punctuation token">;</span>
-        <span class="property token">padding</span><span class="punctuation token">:</span><span class="number token">10</span>px<span class="punctuation token">;</span>
-        <span class="property token">margin</span><span class="punctuation token">:</span> <span class="number token">10</span>px<span class="punctuation token">;</span>
-        <span class="property token">background</span><span class="punctuation token">:</span><span class="hexcode token">#3B3B3B</span><span class="punctuation token">;</span>
-      <span class="punctuation token">}</span>
-    </span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>style</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>text/javascript<span class="punctuation token">"</span></span> <span class="attr-name token">src</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>main.js<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>head</span><span class="punctuation token">&gt;</span></span>
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      body {
+        background: black;
+        color:#CCCCCC;
+      }
+      #c2 {
+        background-image: url(foo.png);
+        background-repeat: no-repeat;
+      }
+      div {
+        float: left;
+        border :1px solid #444444;
+        padding:10px;
+        margin: 10px;
+        background:#3B3B3B;
+      }
+    &lt;/style&gt;
+    &lt;script type="text/javascript" src="main.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
 
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>body</span> <span class="attr-name token">onload</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>processor.doLoad()<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>video</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>video<span class="punctuation token">"</span></span> <span class="attr-name token">src</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>video.ogv<span class="punctuation token">"</span></span> <span class="attr-name token">controls</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>true<span class="punctuation token">"</span></span><span class="punctuation token">/&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>canvas</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>c1<span class="punctuation token">"</span></span> <span class="attr-name token">width</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>160<span class="punctuation token">"</span></span> <span class="attr-name token">height</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>96<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>canvas</span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>canvas</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>c2<span class="punctuation token">"</span></span> <span class="attr-name token">width</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>160<span class="punctuation token">"</span></span> <span class="attr-name token">height</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>96<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>canvas</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>body</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>html</span><span class="punctuation token">&gt;</span></span></code></pre>
+  &lt;body onload="processor.doLoad()"&gt;
+    &lt;div&gt;
+      &lt;video id="video" src="video.ogv" controls="true"/&gt;
+    &lt;/div&gt;
+    &lt;div&gt;
+      &lt;canvas id="c1" width="160" height="96"&gt;&lt;/canvas&gt;
+      &lt;canvas id="c2" width="160" height="96"&gt;&lt;/canvas&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
 
 <p>Les éléments clés à retenir sont :</p>
 
@@ -67,66 +67,66 @@ original_slug: HTML/Manipulating_video_using_canvas
 
 <p>La métode <code>doLoad()</code> est appelée quand le document XHTML se charge. Cette méthode sert à initialiser chaque variable nécessaire au code traitant l'incrustation (<em>chroma-key</em>), ainsi qu'à associer un écouteur d'évènement qui détectera le moment où l'utilisateur lancera la vidéo.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> processor<span class="punctuation token">;</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">var processor;
 
-  processor<span class="punctuation token">.</span>doLoad <span class="operator token">=</span> <span class="keyword token">function</span> <span class="function token">doLoad</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">this</span><span class="punctuation token">.</span>video <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">'video'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="keyword token">this</span><span class="punctuation token">.</span>c1 <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">'c1'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="keyword token">this</span><span class="punctuation token">.</span>ctx1 <span class="operator token">=</span> <span class="keyword token">this</span><span class="punctuation token">.</span>c1<span class="punctuation token">.</span><span class="function token">getContext</span><span class="punctuation token">(</span><span class="string token">'2d'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="keyword token">this</span><span class="punctuation token">.</span>c2 <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">'c2'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="keyword token">this</span><span class="punctuation token">.</span>ctx2 <span class="operator token">=</span> <span class="keyword token">this</span><span class="punctuation token">.</span>c2<span class="punctuation token">.</span><span class="function token">getContext</span><span class="punctuation token">(</span><span class="string token">'2d'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="keyword token">let</span> self <span class="operator token">=</span> <span class="keyword token">this</span><span class="punctuation token">;</span>
-    <span class="keyword token">this</span><span class="punctuation token">.</span>video<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'play'</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-        self<span class="punctuation token">.</span>width <span class="operator token">=</span> self<span class="punctuation token">.</span>video<span class="punctuation token">.</span>videoWidth <span class="operator token">/</span> <span class="number token">2</span><span class="punctuation token">;</span>
-        self<span class="punctuation token">.</span>height <span class="operator token">=</span> self<span class="punctuation token">.</span>video<span class="punctuation token">.</span>videoHeight <span class="operator token">/</span> <span class="number token">2</span><span class="punctuation token">;</span>
-        self<span class="punctuation token">.</span><span class="function token">timerCallback</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-      <span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="keyword token">false</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span></code></pre>
+  processor.doLoad = function doLoad() {
+    this.video = document.getElementById('video');
+    this.c1 = document.getElementById('c1');
+    this.ctx1 = this.c1.getContext('2d');
+    this.c2 = document.getElementById('c2');
+    this.ctx2 = this.c2.getContext('2d');
+    let self = this;
+    this.video.addEventListener('play', function() {
+        self.width = self.video.videoWidth / 2;
+        self.height = self.video.videoHeight / 2;
+        self.timerCallback();
+      }, false);
+  },</code></pre>
 
 <p>Le code récupère les références aux élément XHTML qui nous intéressent, à savoir l'élément <code>video</code> et les deux éléments <code>canvas</code>. Il définit également les contextes graphique de chacun des éléments <code>canvas</code>. Ce sera utile pour la suite, lorsque nous créerons l'effet d'incrustation.</p>
 
 <p>Ensuite, l'écouteur d'évènement <code>addEventListener()</code> est appelé sur l'élément <code>video</code> pour détecter le moment où l'utilisateur va cliquer sur le bouton de lecture. Dès lors, le code récupère la hauteur et la largeur de la vidéo, que l'on divise par deux (nécessaire pour plus tard effectuer l'effet d'incrustation), puis on appelle la méthode <code>timerCallback()</code> pour surveiller l'avancement de la vidéo et appliquer l'effet visuel.</p>
 
-<h3 id="Le_rappel_du_minuteur"><span class="short_text" id="result_box" lang="fr"><span>Le rappel du minuteur</span></span></h3>
+<h3 id="Le_rappel_du_minuteur">Le rappel du minuteur</h3>
 
-<p><span id="result_box" lang="fr"><span>Le rappel du minuteur est initialisé lorsque la vidéo commence à jouer (lorsque l'événement "play" se produit), puis est chargé d'établir le rappel périodique afin de lancer l'effet d'ajustement pour chaque "frame".</span></span></p>
+<p>Le rappel du minuteur est initialisé lorsque la vidéo commence à jouer (lorsque l'événement "play" se produit), puis est chargé d'établir le rappel périodique afin de lancer l'effet d'ajustement pour chaque "frame".</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">processor<span class="punctuation token">.</span>timerCallback <span class="operator token">=</span> <span class="keyword token">function</span> <span class="function token">timerCallback</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="keyword token">this</span><span class="punctuation token">.</span>video<span class="punctuation token">.</span>paused <span class="operator token">||</span> <span class="keyword token">this</span><span class="punctuation token">.</span>video<span class="punctuation token">.</span>ended<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="keyword token">return</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-    <span class="keyword token">this</span><span class="punctuation token">.</span><span class="function token">computeFrame</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="keyword token">let</span> self <span class="operator token">=</span> <span class="keyword token">this</span><span class="punctuation token">;</span>
-    <span class="function token">setTimeout</span><span class="punctuation token">(</span><span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-        self<span class="punctuation token">.</span><span class="function token">timerCallback</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-      <span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="number token">0</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">processor.timerCallback = function timerCallback() {
+    if (this.video.paused || this.video.ended) {
+      return;
+    }
+    this.computeFrame();
+    let self = this;
+    setTimeout(function() {
+        self.timerCallback();
+      }, 0);
+  },</code></pre>
 
-<p><span id="result_box" lang="fr"><span>La première chose que le rappel fait est de vérifier si la vidéo est en train de jouer.</span> <span>Si ce n'est pas le cas, le rappel revient immédiatement sans rien faire.</span></span></p>
+<p>La première chose que le rappel fait est de vérifier si la vidéo est en train de jouer. Si ce n'est pas le cas, le rappel revient immédiatement sans rien faire.</p>
 
-<p><span id="result_box" lang="fr"><span>Ensuite, il appelle la méthode <code>computeFrame()</code>, qui effectue l'effet </span></span> "chroma-keying" <span lang="fr"><span> sur l'image vidéo en cours.</span></span></p>
+<p>Ensuite, il appelle la méthode <code>computeFrame()</code>, qui effectue l'effet  "chroma-keying"  sur l'image vidéo en cours.</p>
 
-<p><span id="result_box" lang="fr"><span>La dernière chose que fait le rappel est d'appeler <code>setTimeout()</code> pour programmer  un nouvel appel.</span> <span>En réalité, vous planifierez probablement cela en fonction de la connaissance de la fréquence d'images de la vidéo.</span></span></p>
+<p>La dernière chose que fait le rappel est d'appeler <code>setTimeout()</code> pour programmer  un nouvel appel. En réalité, vous planifierez probablement cela en fonction de la connaissance de la fréquence d'images de la vidéo.</p>
 
 <h3 id="Manipulation_des_données_des_images_vidéo">Manipulation des données des images vidéo</h3>
 
 <p>La méthode <code>computeFrame()</code> , présentée ci-dessous, est en charge de récupérer les données de chaque image et d'y appliquer l'effet d'incrustation.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">processor<span class="punctuation token">.</span>computeFrame <span class="operator token">=</span> <span class="keyword token">function</span> <span class="function token">computeFrame</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">this</span><span class="punctuation token">.</span>ctx1<span class="punctuation token">.</span><span class="function token">drawImage</span><span class="punctuation token">(</span><span class="keyword token">this</span><span class="punctuation token">.</span>video<span class="punctuation token">,</span> <span class="number token">0</span><span class="punctuation token">,</span> <span class="number token">0</span><span class="punctuation token">,</span> <span class="keyword token">this</span><span class="punctuation token">.</span>width<span class="punctuation token">,</span> <span class="keyword token">this</span><span class="punctuation token">.</span>height<span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="keyword token">let</span> frame <span class="operator token">=</span> <span class="keyword token">this</span><span class="punctuation token">.</span>ctx1<span class="punctuation token">.</span><span class="function token">getImageData</span><span class="punctuation token">(</span><span class="number token">0</span><span class="punctuation token">,</span> <span class="number token">0</span><span class="punctuation token">,</span> <span class="keyword token">this</span><span class="punctuation token">.</span>width<span class="punctuation token">,</span> <span class="keyword token">this</span><span class="punctuation token">.</span>height<span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="keyword token">let</span> l <span class="operator token">=</span> frame<span class="punctuation token">.</span>data<span class="punctuation token">.</span>length <span class="operator token">/</span> <span class="number token">4</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">processor.computeFrame = function computeFrame() {
+    this.ctx1.drawImage(this.video, 0, 0, this.width, this.height);
+    let frame = this.ctx1.getImageData(0, 0, this.width, this.height);
+    let l = frame.data.length / 4;
 
-    <span class="keyword token">for</span> <span class="punctuation token">(</span><span class="keyword token">let</span> i <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span> i <span class="operator token">&lt;</span> l<span class="punctuation token">;</span> i<span class="operator token">++</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="keyword token">let</span> r <span class="operator token">=</span> frame<span class="punctuation token">.</span>data<span class="punctuation token">[</span>i <span class="operator token">*</span> <span class="number token">4</span> <span class="operator token">+</span> <span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
-      <span class="keyword token">let</span> g <span class="operator token">=</span> frame<span class="punctuation token">.</span>data<span class="punctuation token">[</span>i <span class="operator token">*</span> <span class="number token">4</span> <span class="operator token">+</span> <span class="number token">1</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
-      <span class="keyword token">let</span> b <span class="operator token">=</span> frame<span class="punctuation token">.</span>data<span class="punctuation token">[</span>i <span class="operator token">*</span> <span class="number token">4</span> <span class="operator token">+</span> <span class="number token">2</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
-      <span class="keyword token">if</span> <span class="punctuation token">(</span>g <span class="operator token">&gt;</span> <span class="number token">100</span> <span class="operator token">&amp;&amp;</span> r <span class="operator token">&gt;</span> <span class="number token">100</span> <span class="operator token">&amp;&amp;</span> b <span class="operator token">&lt;</span> <span class="number token">43</span><span class="punctuation token">)</span>
-        frame<span class="punctuation token">.</span>data<span class="punctuation token">[</span>i <span class="operator token">*</span> <span class="number token">4</span> <span class="operator token">+</span> <span class="number token">3</span><span class="punctuation token">]</span> <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-    <span class="keyword token">this</span><span class="punctuation token">.</span>ctx2<span class="punctuation token">.</span><span class="function token">putImageData</span><span class="punctuation token">(</span>frame<span class="punctuation token">,</span> <span class="number token">0</span><span class="punctuation token">,</span> <span class="number token">0</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="keyword token">return</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span></code></pre>
+    for (let i = 0; i &lt; l; i++) {
+      let r = frame.data[i * 4 + 0];
+      let g = frame.data[i * 4 + 1];
+      let b = frame.data[i * 4 + 2];
+      if (g &gt; 100 &amp;&amp; r &gt; 100 &amp;&amp; b &lt; 43)
+        frame.data[i * 4 + 3] = 0;
+    }
+    this.ctx2.putImageData(frame, 0, 0);
+    return;
+  }</code></pre>
 
 <p>²</p>
 
@@ -138,17 +138,17 @@ original_slug: HTML/Manipulating_video_using_canvas
 
 <p><img alt="sourcectx.png" class="default internal" src="/@api/deki/files/3284/=sourcectx.png" style="height: 96px; width: 160px;"></p>
 
-<p><span id="result_box" lang="fr"><span>La ligne 3 extrait une copie des données graphiques brutes pour l'image courante de la vidéo en appelant la méthode <code>getImageData() </code>sur le premier contexte.</span> <span>Cela fournit des données brutes d'image pixel 32 bits que nous pouvons ensuite manipuler.</span> <span>La ligne 4 calcule le nombre de pixels de l'image en divisant la taille totale des données d'image du cadre par quatre.</span></span></p>
+<p>La ligne 3 extrait une copie des données graphiques brutes pour l'image courante de la vidéo en appelant la méthode <code>getImageData() </code>sur le premier contexte. Cela fournit des données brutes d'image pixel 32 bits que nous pouvons ensuite manipuler. La ligne 4 calcule le nombre de pixels de l'image en divisant la taille totale des données d'image du cadre par quatre.</p>
 
-<p><span id="result_box" lang="fr"><span>La boucle <code>for</code>, qui commence à la ligne 6, parcourt les pixels du cadre  en extrayant les valeurs rouges, vertes et bleues de chaque pixel et compare les valeurs aux nombres prédéterminés utilisés pour détecter l'écran vert qui sera remplacé par l'image</span><span> de fond importée de <code>foo.png</code>.</span></span></p>
+<p>La boucle <code>for</code>, qui commence à la ligne 6, parcourt les pixels du cadre  en extrayant les valeurs rouges, vertes et bleues de chaque pixel et compare les valeurs aux nombres prédéterminés utilisés pour détecter l'écran vert qui sera remplacé par l'image de fond importée de <code>foo.png</code>.</p>
 
-<p><span id="result_box" lang="fr"><span>Chaque pixel dans les données d'image, qui se trouve dans les paramètres considérés comme faisant partie de l'écran vert, a sa valeur alpha remplacée par un zéro, indiquant que le pixel est entièrement transparent.</span> <span>En conséquence, l'image finale a toute la zone d'écran vert 100% transparente, de sorte que lorsqu'elle est dessinée dans le contexte de destination à la ligne 13, le résultat est une superposition sur la toile de fond statique.</span></span></p>
+<p>Chaque pixel dans les données d'image, qui se trouve dans les paramètres considérés comme faisant partie de l'écran vert, a sa valeur alpha remplacée par un zéro, indiquant que le pixel est entièrement transparent. En conséquence, l'image finale a toute la zone d'écran vert 100% transparente, de sorte que lorsqu'elle est dessinée dans le contexte de destination à la ligne 13, le résultat est une superposition sur la toile de fond statique.</p>
 
-<p><span class="short_text" id="result_box" lang="fr"><span>L'image résultante ressemble à ceci :</span></span></p>
+<p>L'image résultante ressemble à ceci :</p>
 
 <p><img alt="output.png" class="default internal" src="/@api/deki/files/3283/=output.png" style="height: 96px; width: 161px;"></p>
 
-<p><span id="result_box" lang="fr"><span>Cela se fait de façon répétée au fur et à mesure que la vidéo est lue, de sorte que, image après image, la vidéo est traitée et affichée avec l'effet de chrominance.</span></span></p>
+<p>Cela se fait de façon répétée au fur et à mesure que la vidéo est lue, de sorte que, image après image, la vidéo est traitée et affichée avec l'effet de chrominance.</p>
 
 <p><a class="external" href="/samples/video/chroma-key/index.xhtml" title="https://developer.mozilla.org/editor/fckeditor/core/editor/samples/video/chroma-key/index.xhtml">Voyez cet exemple réel</a>.</p>
 

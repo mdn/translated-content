@@ -56,83 +56,83 @@ translation_of: Web/API/KeyboardEvent/key
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>fx<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>textarea</span> <span class="attr-name token">rows</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>5<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>test-target<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>test-target<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>textarea</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>button</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>button<span class="punctuation token">"</span></span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>btn-clear-console<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>btn-clear-console<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>clear console<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>button</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>flex<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>console-log<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;div class="fx"&gt;
+  &lt;div&gt;
+    &lt;textarea rows="5" name="test-target" id="test-target"&gt;&lt;/textarea&gt;
+    &lt;button type="button" name="btn-clear-console" id="btn-clear-console"&gt;clear console&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;div class="flex"&gt;
+    &lt;div id="console-log"&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css line-numbers  language-css"><code class="language-css"><span class="selector token"><span class="class token">.fx</span> </span><span class="punctuation token">{</span>
-  <span class="property token">-webkit-display</span><span class="punctuation token">:</span> flex<span class="punctuation token">;</span>
-  <span class="property token">display</span><span class="punctuation token">:</span> flex<span class="punctuation token">;</span>
-  <span class="property token">margin-left</span><span class="punctuation token">:</span> -<span class="number token">20</span>px<span class="punctuation token">;</span>
-  <span class="property token">margin-right</span><span class="punctuation token">:</span> -<span class="number token">20</span>px<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+<pre class="brush: css line-numbers  language-css"><code class="language-css">.fx {
+  -webkit-display: flex;
+  display: flex;
+  margin-left: -20px;
+  margin-right: -20px;
+}
 
-<span class="selector token"><span class="class token">.fx</span> &gt; div </span><span class="punctuation token">{</span>
-  <span class="property token">padding-left</span><span class="punctuation token">:</span> <span class="number token">20</span>px<span class="punctuation token">;</span>
-  <span class="property token">padding-right</span><span class="punctuation token">:</span> <span class="number token">20</span>px<span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+.fx &gt; div {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
-<span class="selector token"><span class="class token">.fx</span> &gt; div<span class="pseudo-class token">:first-child</span> </span><span class="punctuation token">{</span>
-   <span class="property token">width</span><span class="punctuation token">:</span> <span class="number token">30%</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+.fx &gt; div:first-child {
+   width: 30%;
+}
 
-<span class="selector token"><span class="class token">.flex</span> </span><span class="punctuation token">{</span>
-  <span class="property token">-webkit-flex</span><span class="punctuation token">:</span> <span class="number token">1</span><span class="punctuation token">;</span>
-  <span class="property token">flex</span><span class="punctuation token">:</span> <span class="number token">1</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+.flex {
+  -webkit-flex: 1;
+  flex: 1;
+}
 
-<span class="selector token"><span class="id token">#test-target</span> </span><span class="punctuation token">{</span>
-  <span class="property token">display</span><span class="punctuation token">:</span> block<span class="punctuation token">;</span>
-  <span class="property token">width</span><span class="punctuation token">:</span> <span class="number token">100%</span><span class="punctuation token">;</span>
-  <span class="property token">margin-bottom</span><span class="punctuation token">:</span> <span class="number token">10</span>px<span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+#test-target {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+}</code></pre>
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">let</span> textarea <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">'test-target'</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
-consoleLog <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">'console-log'</span><span class="punctuation token">)</span><span class="punctuation token">,</span>
-btnClearConsole <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">'btn-clear-console'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">let textarea = document.getElementById('test-target'),
+consoleLog = document.getElementById('console-log'),
+btnClearConsole = document.getElementById('btn-clear-console');
 
-<span class="keyword token">function</span> <span class="function token">logMessage</span><span class="punctuation token">(</span>message<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">let</span> p <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createElement</span><span class="punctuation token">(</span><span class="string token">'p'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  p<span class="punctuation token">.</span><span class="function token">appendChild</span><span class="punctuation token">(</span>document<span class="punctuation token">.</span><span class="function token">createTextNode</span><span class="punctuation token">(</span>message<span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  consoleLog<span class="punctuation token">.</span><span class="function token">appendChild</span><span class="punctuation token">(</span>p<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+function logMessage(message) {
+  let p = document.createElement('p');
+  p.appendChild(document.createTextNode(message));
+  consoleLog.appendChild(p);
+}
 
-textarea<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'keydown'</span><span class="punctuation token">,</span> <span class="punctuation token">(</span>e<span class="punctuation token">)</span> <span class="operator token">=</span><span class="operator token">&gt;</span> <span class="punctuation token">{</span>
-  <span class="keyword token">if</span> <span class="punctuation token">(</span><span class="operator token">!</span>e<span class="punctuation token">.</span>repeat<span class="punctuation token">)</span>
-    <span class="function token">logMessage</span><span class="punctuation token">(</span>`first keydown event<span class="punctuation token">.</span> key property value is <span class="string token">"${e.key}"</span><span class="template-string token"><span class="string token">`);
+textarea.addEventListener('keydown', (e) =&gt; {
+  if (!e.repeat)
+    logMessage(`first keydown event. key property value is "${e.key}"`);
   else
-    logMessage(`</span></span>keydown event repeats<span class="punctuation token">.</span> key property value is <span class="string token">"${e.key}"</span>`<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    logMessage(`keydown event repeats. key property value is "${e.key}"`);
+});
 
-textarea<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'beforeinput'</span><span class="punctuation token">,</span> <span class="punctuation token">(</span>e<span class="punctuation token">)</span> <span class="operator token">=</span><span class="operator token">&gt;</span> <span class="punctuation token">{</span>
-  <span class="function token">logMessage</span><span class="punctuation token">(</span>`beforeinput event<span class="punctuation token">.</span> you are about inputing <span class="string token">"${e.data}"</span>`<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+textarea.addEventListener('beforeinput', (e) =&gt; {
+  logMessage(`beforeinput event. you are about inputing "${e.data}"`);
+});
 
-textarea<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'input'</span><span class="punctuation token">,</span> <span class="punctuation token">(</span>e<span class="punctuation token">)</span> <span class="operator token">=</span><span class="operator token">&gt;</span> <span class="punctuation token">{</span>
-  <span class="function token">logMessage</span><span class="punctuation token">(</span>`input event<span class="punctuation token">.</span> you have just inputed <span class="string token">"${e.data}"</span>`<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+textarea.addEventListener('input', (e) =&gt; {
+  logMessage(`input event. you have just inputed "${e.data}"`);
+});
 
-textarea<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'keyup'</span><span class="punctuation token">,</span> <span class="punctuation token">(</span>e<span class="punctuation token">)</span> <span class="operator token">=</span><span class="operator token">&gt;</span> <span class="punctuation token">{</span>
-  <span class="function token">logMessage</span><span class="punctuation token">(</span>`keyup event<span class="punctuation token">.</span> key property value is <span class="string token">"${e.key}"</span>`<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+textarea.addEventListener('keyup', (e) =&gt; {
+  logMessage(`keyup event. key property value is "${e.key}"`);
+});
 
-btnClearConsole<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'click'</span><span class="punctuation token">,</span> <span class="punctuation token">(</span>e<span class="punctuation token">)</span> <span class="operator token">=</span><span class="operator token">&gt;</span> <span class="punctuation token">{</span>
-  <span class="keyword token">let</span> child <span class="operator token">=</span> consoleLog<span class="punctuation token">.</span>firstChild<span class="punctuation token">;</span>
-  <span class="keyword token">while</span> <span class="punctuation token">(</span>child<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-   consoleLog<span class="punctuation token">.</span><span class="function token">removeChild</span><span class="punctuation token">(</span>child<span class="punctuation token">)</span><span class="punctuation token">;</span>
-   child <span class="operator token">=</span> consoleLog<span class="punctuation token">.</span>firstChild<span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+btnClearConsole.addEventListener('click', (e) =&gt; {
+  let child = consoleLog.firstChild;
+  while (child) {
+   consoleLog.removeChild(child);
+   child = consoleLog.firstChild;
+  }
+});</code></pre>
 
 <h3 id="Résultat">Résultat</h3>
 
@@ -164,7 +164,7 @@ btnClearConsole<span class="punctuation token">.</span><span class="function tok
 
 <h2 id="Exemple">Exemple</h2>
 
-<p><span id="result_box" lang="fr"><span>Cet exemple utilise {{domxref("EventTarget.addEventListener()")}} pour écouter les événements </span></span> {{domxref("Element/keydown_event", "keydown")}} <span lang="fr"><span>.</span> <span>Quand ils se produisent, la valeur de la touche est vérifiée pour voir si c'est l'une des touches qui intéressent le code, et si c'est le cas, elle est traitée (éventuellement en pilotant un vaisseau spatial, peut-être en changeant la cellule sélectionnée dans une feuille de calcul</span><span>).</span></span></p>
+<p>Cet exemple utilise {{domxref("EventTarget.addEventListener()")}} pour écouter les événements  {{domxref("Element/keydown_event", "keydown")}} . Quand ils se produisent, la valeur de la touche est vérifiée pour voir si c'est l'une des touches qui intéressent le code, et si c'est le cas, elle est traitée (éventuellement en pilotant un vaisseau spatial, peut-être en changeant la cellule sélectionnée dans une feuille de calcul).</p>
 
 <pre class="brush: js">window.addEventListener("keydown", function (event) {
   if (event.defaultPrevented) {

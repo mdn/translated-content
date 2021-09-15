@@ -32,17 +32,17 @@ translation_of: Web/API/Worker/postMessage
 
 <p>L'extrait de code suivant montre la création d'un objet {{domxref("Worker")}} en utilisant le constructeur {{domxref("Worker.Worker", "Worker()")}}. Quand les deux champs de formulaire (<code>fisrt</code> et <code>second</code>) ont été changés, les évènements {{event("change")}} invoquent <code>postMessage()</code> pour envoyer la valeur des deux entrées au <em>worker</em> courant.</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">var</span> myWorker <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Worker</span><span class="punctuation token">(</span><span class="string token">'worker.js'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers language-js"><code class="language-js">var myWorker = new Worker('worker.js');
 
-first<span class="punctuation token">.</span><span class="function function-variable token">onchange</span> <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  myWorker<span class="punctuation token">.</span><span class="function token">postMessage</span><span class="punctuation token">(</span><span class="punctuation token">[</span>first<span class="punctuation token">.</span>value<span class="punctuation token">,</span>second<span class="punctuation token">.</span>value<span class="punctuation token">]</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'Message posted to worker'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+first.onchange = function() {
+  myWorker.postMessage([first.value,second.value]);
+  console.log('Message posted to worker');
+}
 
-second<span class="punctuation token">.</span><span class="function function-variable token">onchange</span> <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  myWorker<span class="punctuation token">.</span><span class="function token">postMessage</span><span class="punctuation token">(</span><span class="punctuation token">[</span>first<span class="punctuation token">.</span>value<span class="punctuation token">,</span>second<span class="punctuation token">.</span>value<span class="punctuation token">]</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'Message posted to worker'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+second.onchange = function() {
+  myWorker.postMessage([first.value,second.value]);
+  console.log('Message posted to worker');
+}</code></pre>
 
 <p>Pour l'exemple en entier, voir <a href="https://github.com/mdn/simple-web-worker">Basic dedicated worder example</a> (<a href="http://mdn.github.io/simple-web-worker/">démonstration</a>).</p>
 
@@ -56,56 +56,56 @@ second<span class="punctuation token">.</span><span class="function function-var
 
 <h4 id="Main_thread_code">Main thread code:</h4>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js"><span class="keyword token">var</span> myWorker <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">ChromeWorker</span><span class="punctuation token">(</span>self<span class="punctuation token">.</span>path <span class="operator token">+</span> <span class="string token">'myWorker.js'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers language-js"><code class="language-js">var myWorker = new ChromeWorker(self.path + 'myWorker.js');
 
-<span class="keyword token">function</span> <span class="function token">handleMessageFromWorker</span><span class="punctuation token">(</span><span class="parameter token">msg</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'incoming message from worker, msg:'</span><span class="punctuation token">,</span> msg<span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="keyword token">switch</span> <span class="punctuation token">(</span>msg<span class="punctuation token">.</span>data<span class="punctuation token">.</span>aTopic<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-        <span class="keyword token">case</span> <span class="string token">'do_sendMainArrBuff'</span><span class="punctuation token">:</span>
-            <span class="function token">sendMainArrBuff</span><span class="punctuation token">(</span>msg<span class="punctuation token">.</span>data<span class="punctuation token">.</span>aBuf<span class="punctuation token">)</span>
-            <span class="keyword token">break</span><span class="punctuation token">;</span>
-        <span class="keyword token">default</span><span class="punctuation token">:</span>
-            <span class="keyword token">throw</span> <span class="string token">'no aTopic on incoming message to ChromeWorker'</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-<span class="punctuation token">}</span>
+function handleMessageFromWorker(msg) {
+    console.log('incoming message from worker, msg:', msg);
+    switch (msg.data.aTopic) {
+        case 'do_sendMainArrBuff':
+            sendMainArrBuff(msg.data.aBuf)
+            break;
+        default:
+            throw 'no aTopic on incoming message to ChromeWorker';
+    }
+}
 
-myWorker<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'message'</span><span class="punctuation token">,</span> handleMessageFromWorker<span class="punctuation token">)</span><span class="punctuation token">;</span>
+myWorker.addEventListener('message', handleMessageFromWorker);
 
-<span class="comment token">// Ok lets create the buffer and send it</span>
-<span class="keyword token">var</span> arrBuf <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">ArrayBuffer</span><span class="punctuation token">(</span><span class="number token">8</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-console<span class="punctuation token">.</span><span class="function token">info</span><span class="punctuation token">(</span><span class="string token">'arrBuf.byteLength pre transfer:'</span><span class="punctuation token">,</span> arrBuf<span class="punctuation token">.</span>byteLength<span class="punctuation token">)</span><span class="punctuation token">;</span>
+// Ok lets create the buffer and send it
+var arrBuf = new ArrayBuffer(8);
+console.info('arrBuf.byteLength pre transfer:', arrBuf.byteLength);
 
-myWorker<span class="punctuation token">.</span><span class="function token">postMessage</span><span class="punctuation token">(</span>
-    <span class="punctuation token">{</span>
-        aTopic<span class="punctuation token">:</span> <span class="string token">'do_sendWorkerArrBuff'</span><span class="punctuation token">,</span>
-        aBuf<span class="punctuation token">:</span> arrBuf <span class="comment token">// The array buffer that we passed to the transferrable section 3 lines below</span>
-    <span class="punctuation token">}</span><span class="punctuation token">,</span>
-    <span class="punctuation token">[</span>
-        arrBuf <span class="comment token">// The array buffer we created 9 lines above</span>
-    <span class="punctuation token">]</span>
-<span class="punctuation token">)</span><span class="punctuation token">;</span>
+myWorker.postMessage(
+    {
+        aTopic: 'do_sendWorkerArrBuff',
+        aBuf: arrBuf // The array buffer that we passed to the transferrable section 3 lines below
+    },
+    [
+        arrBuf // The array buffer we created 9 lines above
+    ]
+);
 
-console<span class="punctuation token">.</span><span class="function token">info</span><span class="punctuation token">(</span><span class="string token">'arrBuf.byteLength post transfer:'</span><span class="punctuation token">,</span> arrBuf<span class="punctuation token">.</span>byteLength<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+console.info('arrBuf.byteLength post transfer:', arrBuf.byteLength);</code></pre>
 
 <h4 id="Worker_code">Worker code</h4>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">self<span class="punctuation token">.</span><span class="function function-variable token">onmessage</span> <span class="operator token">=</span> <span class="keyword token">function</span> <span class="punctuation token">(</span><span class="parameter token">msg</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="keyword token">switch</span> <span class="punctuation token">(</span><span class="parameter token">msg<span class="punctuation token">.</span>data<span class="punctuation token">.</span>aTopic</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-        <span class="keyword token">case</span> <span class="string token">'do_sendWorkerArrBuff'</span><span class="punctuation token">:</span>
-               <span class="function token"> sendWorkerArrBuff</span><span class="punctuation token">(</span>msg<span class="punctuation token">.</span>data<span class="punctuation token">.</span>aBuf<span class="punctuation token">)</span>
-            <span class="keyword token">break</span><span class="punctuation token">;</span>
-        <span class="keyword token">default</span><span class="punctuation token">:</span>
-            <span class="keyword token">throw</span> <span class="string token">'no aTopic on incoming message to ChromeWorker'</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-<span class="punctuation token">}</span>
+<pre class="brush: js line-numbers language-js"><code class="language-js">self.onmessage = function (msg) {
+    switch (msg.data.aTopic) {
+        case 'do_sendWorkerArrBuff':
+                sendWorkerArrBuff(msg.data.aBuf)
+            break;
+        default:
+            throw 'no aTopic on incoming message to ChromeWorker';
+    }
+}
 
-<span class="keyword token">function</span> <span class="function token">sendWorkerArrBuff</span><span class="punctuation token">(</span><span class="parameter token">aBuf</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">info</span><span class="punctuation token">(</span><span class="string token">'from worker, PRE send back aBuf.byteLength:'</span><span class="punctuation token">,</span> aBuf<span class="punctuation token">.</span>byteLength<span class="punctuation token">)</span><span class="punctuation token">;</span>
+function sendWorkerArrBuff(aBuf) {
+    console.info('from worker, PRE send back aBuf.byteLength:', aBuf.byteLength);
 
-    self<span class="punctuation token">.</span><span class="function token">postMessage</span><span class="punctuation token">(</span><span class="punctuation token">{</span>aTopic<span class="punctuation token">:</span><span class="string token">'do_sendMainArrBuff'</span><span class="punctuation token">,</span> aBuf<span class="punctuation token">:</span>aBuf<span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="punctuation token">[</span>aBuf<span class="punctuation token">]</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+    self.postMessage({aTopic:'do_sendMainArrBuff', aBuf:aBuf}, [aBuf]);
 
-    console<span class="punctuation token">.</span><span class="function token">info</span><span class="punctuation token">(</span><span class="string token">'from worker, POST send back aBuf.byteLength:'</span><span class="punctuation token">,</span> aBuf<span class="punctuation token">.</span>byteLength<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+    console.info('from worker, POST send back aBuf.byteLength:', aBuf.byteLength);
+}</code></pre>
 
 <h4 id="Output_logged">Output logged</h4>
 

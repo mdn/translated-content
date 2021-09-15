@@ -62,27 +62,27 @@ var selectFormElement = document.forms[index].elements[index];
 
 <h3 id="Specification" name="Specification">Accéder aux formulaires nommés</h3>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="doctype token">&lt;!DOCTYPE html&gt;</span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>html</span> <span class="attr-name token">lang</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>en<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>head</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>title</span><span class="punctuation token">&gt;</span></span>document.forms example<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>title</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>head</span><span class="punctuation token">&gt;</span></span>
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;title&gt;document.forms example&lt;/title&gt;
+&lt;/head&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>body</span><span class="punctuation token">&gt;</span></span>
+&lt;body&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>form</span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>login<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>email<span class="punctuation token">"</span></span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>email<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>password<span class="punctuation token">"</span></span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>password<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>button</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>submit<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Log in<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>button</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>form</span><span class="punctuation token">&gt;</span></span>
+&lt;form name="login"&gt;
+  &lt;input name="email" type="email"&gt;
+  &lt;input name="password" type="password"&gt;
+  &lt;button type="submit"&gt;Log in&lt;/button&gt;
+&lt;/form&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span><span class="punctuation token">&gt;</span></span><span class="language-javascript script token">
-  <span class="keyword token">var</span> loginForm <span class="operator token">=</span> document<span class="punctuation token">.</span>forms<span class="punctuation token">.</span>login<span class="punctuation token">;</span> <span class="comment token">// Ou document.forms['login']</span>
-  loginForm<span class="punctuation token">.</span>elements<span class="punctuation token">.</span>email<span class="punctuation token">.</span>placeholder <span class="operator token">=</span> <span class="string token">'test@example.com'</span><span class="punctuation token">;</span>
-  loginForm<span class="punctuation token">.</span>elements<span class="punctuation token">.</span>password<span class="punctuation token">.</span>placeholder <span class="operator token">=</span> <span class="string token">'password'</span><span class="punctuation token">;</span>
-</span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>body</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>html</span><span class="punctuation token">&gt;</span></span></code></pre>
+&lt;script&gt;
+  var loginForm = document.forms.login; // Ou document.forms['login']
+  loginForm.elements.email.placeholder = 'test@example.com';
+  loginForm.elements.password.placeholder = 'password';
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
 
 <h2 id="Specification" name="Specification">Spécifications</h2>
 

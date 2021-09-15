@@ -14,11 +14,11 @@ translation_of: Web/API/HTMLIFrameElement/contentWindow
 
 <h2 id="Exemples">Exemples</h2>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> x <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementsByTagName</span><span class="punctuation token">(</span><span class="string token">"iframe"</span><span class="punctuation token">)</span><span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">.</span>contentWindow<span class="punctuation token">;</span>
-<span class="comment token">//x = window.frames[0];</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">var x = document.getElementsByTagName("iframe")[0].contentWindow;
+//x = window.frames[0];
 
-x<span class="punctuation token">.</span>document<span class="punctuation token">.</span><span class="function token">getElementsByTagName</span><span class="punctuation token">(</span><span class="string token">"body"</span><span class="punctuation token">)</span><span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">.</span>style<span class="punctuation token">.</span>backgroundColor <span class="operator token">=</span> <span class="string token">"blue"</span><span class="punctuation token">;</span>
-<span class="comment token">// ceci devrait changer le 1er iframe dans le document bleu.</span></code></pre>
+x.document.getElementsByTagName("body")[0].style.backgroundColor = "blue";
+// ceci devrait changer le 1er iframe dans le document bleu.</code></pre>
 
 <h2 id="Spécifications">Spécifications</h2>
 

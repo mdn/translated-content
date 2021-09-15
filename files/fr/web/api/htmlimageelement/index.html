@@ -9,7 +9,7 @@ translation_of: Web/API/HTMLImageElement
 
 <h2 id="Propriétés">Propriétés</h2>
 
-<p><em><span id="result_box" lang="fr"><span>Hérite les propriétés de son parent, {{domxref ("HTMLElement")}}</span></span></em></p>
+<p><em>Hérite les propriétés de son parent, {{domxref ("HTMLElement")}}</em></p>
 
 <dl>
  <dt>{{domxref("HTMLImageElement.align")}} {{obsolete_inline}}</dt>
@@ -33,13 +33,13 @@ translation_of: Web/API/HTMLImageElement
  <dt>{{domxref("HTMLImageElement.longDesc")}} {{obsolete_inline}}</dt>
  <dd>Est une {{domxref("DOMString")}} <em>(chaîne de caractères)</em> représentant l'URL d'une longue description de l'image.</dd>
  <dt>{{domxref("HTMLImageElement.lowSrc")}} {{obsolete_inline}}</dt>
- <dd>Est une {{domxref("DOMString")}}  <em>(chaîne de caractères)</em> qui <span id="result_box" lang="fr"><span> fait référence à une copie de faible qualité (mais plus rapide à charger) de l'image.</span></span></dd>
+ <dd>Est une {{domxref("DOMString")}}  <em>(chaîne de caractères)</em> qui  fait référence à une copie de faible qualité (mais plus rapide à charger) de l'image.</dd>
  <dt>{{domxref("HTMLImageElement.name")}} {{obsolete_inline}}</dt>
  <dd>Est une {{domxref("DOMString")}} <em>(chaîne de caractères)</em> représentant le nom de l'élément.</dd>
  <dt>{{domxref("HTMLImageElement.naturalHeight")}} {{readonlyInline}}</dt>
  <dd>Retourne un <code>unsigned long</code>  représentant la hauteur intrinsèque de l'image en pixels CSS, si elle est disponible ; sinon, 0 est affiché.</dd>
  <dt>{{domxref("HTMLImageElement.referrerPolicy")}} {{experimental_inline}}</dt>
- <dd>Est une {{domxref("DOMString")}} <em>(chaîne de caractères)</em> qui reflète l'attribut HTML {{htmlattrxref("referrerpolicy", "img")}}  <span id="result_box" lang="fr"><span>indiquant la référence à utiliser pour récupérer l'image.</span></span></dd>
+ <dd>Est une {{domxref("DOMString")}} <em>(chaîne de caractères)</em> qui reflète l'attribut HTML {{htmlattrxref("referrerpolicy", "img")}}  indiquant la référence à utiliser pour récupérer l'image.</dd>
  <dt>{{domxref("HTMLImageElement.src")}}</dt>
  <dd>Est une {{domxref("DOMString")}} <em>(chaîne de caractères)</em> qui reflète l'attribut HTML  {{htmlattrxref("src", "img")}} contenant l'URL complète de l'image y compris l'URI de base.</dd>
  <dt>{{domxref("HTMLImageElement.sizes")}} {{experimental_inline}}</dt>
@@ -64,7 +64,7 @@ translation_of: Web/API/HTMLImageElement
 
 <dl>
  <dt>{{domxref("HTMLImageElement.Image()", "Image()")}}</dt>
- <dd>Le constructeur d'image, comprend<span id="result_box" lang="fr"><span> deux propriétés </span></span> <code>unsigned</code>  et <code>long</code> <span lang="fr"><span>, qui sont la largeur et la hauteur de la ressource, et crée une instance de </span></span> <code>HTMLImageElement</code> <span lang="fr"><span>, non insérée dans une arborescence DOM.</span></span></dd>
+ <dd>Le constructeur d'image, comprend deux propriétés  <code>unsigned</code>  et <code>long</code> , qui sont la largeur et la hauteur de la ressource, et crée une instance de  <code>HTMLImageElement</code> , non insérée dans une arborescence DOM.</dd>
 </dl>
 
 <h2 id="Erreurs">Erreurs</h2>
@@ -81,18 +81,18 @@ translation_of: Web/API/HTMLImageElement
 
 <h2 id="Exemple">Exemple</h2>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> img1 <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Image</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">//  Constructeur HTML5</span>
-img1<span class="punctuation token">.</span>src <span class="operator token">=</span> <span class="string token">'image1.png'</span><span class="punctuation token">;</span>
-img1<span class="punctuation token">.</span>alt <span class="operator token">=</span> <span class="string token">'alt'</span><span class="punctuation token">;</span>
-document<span class="punctuation token">.</span>body<span class="punctuation token">.</span><span class="function token">appendChild</span><span class="punctuation token">(</span>img1<span class="punctuation token">)</span><span class="punctuation token">;</span></code>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">var img1 = new Image(); //  Constructeur HTML5
+img1.src = 'image1.png';
+img1.alt = 'alt';
+document.body.appendChild(img1);</code>
 
-<span class="keyword token">var</span> img2 <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createElement</span><span class="punctuation token">(</span><span class="string token">'img'</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// utilise DOM HTMLImageElement</span>
-img2<span class="punctuation token">.</span>src <span class="operator token">=</span> <span class="string token">'image2.jpg'</span><span class="punctuation token">;</span>
-img2<span class="punctuation token">.</span>alt <span class="operator token">=</span> <span class="string token">'alt text'</span><span class="punctuation token">;</span>
-document<span class="punctuation token">.</span>body<span class="punctuation token">.</span><span class="function token">appendChild</span><span class="punctuation token">(</span>img2<span class="punctuation token">)</span><span class="punctuation token">;</span>
+var img2 = document.createElement('img'); // utilise DOM HTMLImageElement
+img2.src = 'image2.jpg';
+img2.alt = 'alt text';
+document.body.appendChild(img2);
 
-<span class="comment token">// en utilisant la première image dans le document</span>
-<span class="function token">alert</span><span class="punctuation token">(</span>document<span class="punctuation token">.</span>images<span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">.</span>src<span class="punctuation token">)</span><span class="punctuation token">;</span></pre>
+// en utilisant la première image dans le document
+alert(document.images[0].src);</pre>
 
 <h2 class="brush: js line-numbers  language-js" id="Spécifications">Spécifications</h2>
 

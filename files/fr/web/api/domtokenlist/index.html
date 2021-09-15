@@ -57,14 +57,14 @@ translation_of: Web/API/DOMTokenList
 
 <p>D'abord HTML :</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>a b c<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;p class="a b c"&gt;&lt;/p&gt;</code></pre>
 
 <p>Puis Javascript :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> para <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">"p"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> classes <span class="operator token">=</span> para<span class="punctuation token">.</span>classList<span class="punctuation token">;</span>
-para<span class="punctuation token">.</span>classList<span class="punctuation token">.</span><span class="function token">add</span><span class="punctuation token">(</span><span class="string token">"d"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-para<span class="punctuation token">.</span>textContent <span class="operator token">=</span> <span class="string token">'paragraph classList is "'</span> <span class="operator token">+</span> classes <span class="operator token">+</span> <span class="string token">'"'</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">var para = document.querySelector("p");
+var classes = para.classList;
+para.classList.add("d");
+para.textContent = 'paragraph classList is "' + classes + '"';</code></pre>
 
 <p>La sortie ressemble à ceci :</p>
 
@@ -72,14 +72,14 @@ para<span class="punctuation token">.</span>textContent <span class="operator to
 
 <h2 id="Découpage_des_espaces_et_suppression_des_doublons">Découpage des espaces et suppression des doublons</h2>
 
-<p>Les méthodes qui modifient la <code>DOMTokenList</code> (comme {{domxref("DOMTokenList.add()")}}) <span id="result_box" lang="fr"><span>suppriment automatiquement les espaces en excès et les valeurs en double de la liste.</span> <span>Par exemple :</span></span></p>
+<p>Les méthodes qui modifient la <code>DOMTokenList</code> (comme {{domxref("DOMTokenList.add()")}}) suppriment automatiquement les espaces en excès et les valeurs en double de la liste. Par exemple :</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>span</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>    d   d e f<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>span</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;span class="    d   d e f"&gt;&lt;/span&gt;</code></pre>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> span <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">"span"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> classes <span class="operator token">=</span> span<span class="punctuation token">.</span>classList<span class="punctuation token">;</span>
-span<span class="punctuation token">.</span>classList<span class="punctuation token">.</span><span class="function token">add</span><span class="punctuation token">(</span><span class="string token">"x"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-span<span class="punctuation token">.</span>textContent <span class="operator token">=</span> <span class="string token">'span classList is "'</span> <span class="operator token">+</span> classes <span class="operator token">+</span> <span class="string token">'"'</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">var span = document.querySelector("span");
+var classes = span.classList;
+span.classList.add("x");
+span.textContent = 'span classList is "' + classes + '"';</code></pre>
 
 <p>La sortie ressemble à ceci :</p>
 

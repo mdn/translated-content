@@ -36,7 +36,7 @@ var event = document.createEvent('Event');
 // Nomme l'événement 'build'.
 event.initEvent('build', true, true);
 
-//  <span class="short_text" id="result_box" lang="fr"><span>Écoute l'événement</span></span>.
+//  Écoute l'événement.
 elem.addEventListener('build', function (e) {
   // e.target correspond à elem
 }, false);
@@ -47,9 +47,9 @@ elem.dispatchEvent(event);
 
 <h3 id="Notes">Notes</h3>
 
-<p><span id="result_box" lang="fr"><span>Les chaînes de type d'événement appropriées pour passer à <code>createEvent ()</code> sont répertoriées dans la norme DOM - voir le tableau à l'étape 2. Gardez à l'esprit que la plupart des objets événement ont maintenant des constructeurs, qui sont la méthode recommandée pour créer des occurrences d'objet événement.</span></span></p>
+<p>Les chaînes de type d'événement appropriées pour passer à <code>createEvent ()</code> sont répertoriées dans la norme DOM - voir le tableau à l'étape 2. Gardez à l'esprit que la plupart des objets événement ont maintenant des constructeurs, qui sont la méthode recommandée pour créer des occurrences d'objet événement.</p>
 
-<p><span id="result_box" lang="fr"><span>Gecko prend en charge certains alias d'objet événement non standard, répertoriés ci-dessous :</span></span></p>
+<p>Gecko prend en charge certains alias d'objet événement non standard, répertoriés ci-dessous :</p>
 
 <table class="fullwidth-table">
  <tbody>

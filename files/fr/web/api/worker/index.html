@@ -81,13 +81,13 @@ translation_of: Web/API/Worker
 
 <p>L'extrait de code suivant montre la création d'un objet {{domxref("Worker")}} en utilisant le constructeur {{domxref("Worker.Worker", "Worker()")}} et l'utilisation de l'objet:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> monWorker <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">Worker</span><span class="punctuation token">(</span><span class="string token">"worker.js"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> premier <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">querySelector</span><span class="punctuation token">(</span><span class="string token">'#numero1'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">var monWorker = new Worker("worker.js");
+var premier = document.querySelector('#numero1');
 
-premier<span class="punctuation token">.</span>onchange <span class="operator token">=</span> <span class="keyword token">function</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  monWorker<span class="punctuation token">.</span><span class="function token">postMessage</span><span class="punctuation token">(</span><span class="punctuation token">[premiere</span><span class="punctuation token">.</span>valeur<span class="punctuation token">, deuxieme</span><span class="punctuation token">.</span>valeur<span class="punctuation token">]</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'Message envoyé au worker'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+premier.onchange = function() {
+  monWorker.postMessage([premiere.valeur, deuxieme.valeur]);
+  console.log('Message envoyé au worker');
+}</code></pre>
 
 <p>Pour un exemple complet, voir <a class="external external-icon" href="https://github.com/mdn/simple-web-worker">Exemple basique de worker dédié</a> (<a class="external external-icon" href="http://mdn.github.io/simple-web-worker/">exécuter le worker dédié</a>).</p>
 

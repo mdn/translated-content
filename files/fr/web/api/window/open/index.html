@@ -46,22 +46,22 @@ translation_of: Web/API/Window/open
 
 <h4 id="Exemples" name="Exemples">Exemples</h4>
 
-<pre class="brush:js  language-js"><code class="language-js"><span class="keyword token">var</span> windowObjectReference<span class="punctuation token">;</span>
-<span class="keyword token">var</span> strWindowFeatures <span class="operator token">=</span> <span class="string token">"menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes"</span><span class="punctuation token">;</span>
+<pre class="brush:js  language-js"><code class="language-js">var windowObjectReference;
+var strWindowFeatures = "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
 
-<span class="keyword token">function</span> <span class="function token">openRequestedPopup<span class="punctuation token">(</span></span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  windowObjectReference <span class="operator token">=</span> window<span class="punctuation token">.</span><span class="function token">open<span class="punctuation token">(</span></span><span class="string token">"http://www.cnn.com/"</span><span class="punctuation token">,</span> <span class="string token">"CNN_WindowName"</span><span class="punctuation token">,</span> strWindowFeatures<span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+function openRequestedPopup() {
+  windowObjectReference = window.open("http://www.cnn.com/", "CNN_WindowName", strWindowFeatures);
+}</code></pre>
 
-<pre class="brush:js  language-js"><code class="language-js"><span class="keyword token">var</span> windowObjectReference<span class="punctuation token">;</span>
+<pre class="brush:js  language-js"><code class="language-js">var windowObjectReference;
 
-<span class="keyword token">function</span> <span class="function token">openRequestedPopup<span class="punctuation token">(</span></span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  windowObjectReference <span class="operator token">=</span> window<span class="punctuation token">.</span><span class="function token">open<span class="punctuation token">(</span></span>
-    <span class="string token">"http://www.domainname.ext/path/ImageFile.png"</span><span class="punctuation token">,</span>
-    <span class="string token">"DescriptiveWindowName"</span><span class="punctuation token">,</span>
-    <span class="string token">"resizable,scrollbars,status"</span>
-  <span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+function openRequestedPopup() {
+  windowObjectReference = window.open(
+    "http://www.domainname.ext/path/ImageFile.png",
+    "DescriptiveWindowName",
+    "resizable,scrollbars,status"
+  );
+}</code></pre>
 
 
 
@@ -95,26 +95,26 @@ translation_of: Web/API/Window/open
 
 <dl>
  <dt>left </dt>
- <dd><span id="left">Spécifie la distance</span> à laquelle la nouvelle fenêtre est placée depuis le bord gauche de la zone de travail destinée aux applications du système d'exploitation de l'utilisateur jusqu'à la bordure extérieure (bordure de redimensionnement) de la fenêtre de navigation. La nouvelle fenêtre ne peut pas être positionnée initialement hors de l'écran.</dd>
+ <dd>Spécifie la distance à laquelle la nouvelle fenêtre est placée depuis le bord gauche de la zone de travail destinée aux applications du système d'exploitation de l'utilisateur jusqu'à la bordure extérieure (bordure de redimensionnement) de la fenêtre de navigation. La nouvelle fenêtre ne peut pas être positionnée initialement hors de l'écran.</dd>
  <dd>Reconnu par : , , , , ,</dd>
 </dl>
 
 <dl>
  <dt>top </dt>
- <dd><span id="topS">Spécifie la distance</span> à laquelle la nouvelle fenêtre est placée depuis le bord supérieur de la zone de travail destinée aux applications du système d'exploitation de l'utilisateur jusqu'à la bordure extérieure (bordure de redimensionnement) de la fenêtre de navigation. La nouvelle fenêtre ne peut pas être positionnée initialement hors de l'écran.</dd>
+ <dd>Spécifie la distance à laquelle la nouvelle fenêtre est placée depuis le bord supérieur de la zone de travail destinée aux applications du système d'exploitation de l'utilisateur jusqu'à la bordure extérieure (bordure de redimensionnement) de la fenêtre de navigation. La nouvelle fenêtre ne peut pas être positionnée initialement hors de l'écran.</dd>
  <dd>Reconnu par : , , , , ,</dd>
 </dl>
 
 <dl>
  <dt>height </dt>
- <dd><span id="height">Spécifie la hauteur</span> de la zone de contenu, l'espace de visualisation de la nouvelle fenêtre secondaire, en pixels. La valeur de hauteur comprend celle de la barre de défilement horizontale si celle-ci est présente. La valeur minimale requise est 100.</dd>
+ <dd>Spécifie la hauteur de la zone de contenu, l'espace de visualisation de la nouvelle fenêtre secondaire, en pixels. La valeur de hauteur comprend celle de la barre de défilement horizontale si celle-ci est présente. La valeur minimale requise est 100.</dd>
  <dd><a href="#Note_sur_la_diff.C3.A9rence_entre_outerHeight_et_height">Note sur la différence entre outerHeight et height (ou innerHeight)</a></dd>
  <dd>Reconnu par : , , , , ,</dd>
 </dl>
 
 <dl>
  <dt>width </dt>
- <dd><span id="width">Spécifie la largeur</span> de la zone de contenu, l'espace de visualisation de la nouvelle fenêtre secondaire, en pixels. La valeur de largeur comprend celle de la barre de défilement verticale si celle-ci est présente. Elle ne prend pas en compte un éventuel panneau latéral si celui-ci est déplié. La valeur minimale requise est 100.</dd>
+ <dd>Spécifie la largeur de la zone de contenu, l'espace de visualisation de la nouvelle fenêtre secondaire, en pixels. La valeur de largeur comprend celle de la barre de défilement verticale si celle-ci est présente. Elle ne prend pas en compte un éventuel panneau latéral si celui-ci est déplié. La valeur minimale requise est 100.</dd>
  <dd>Reconnu par : , , , , ,</dd>
 </dl>
 
@@ -506,7 +506,7 @@ de Firefox&lt;/a&gt;&lt;/p&gt;
 </dl>
 
 <dl>
- <dt>Je n'arrive pas à accéder aux propriétés de la nouvelle fenêtre secondaire. J'obtiens toujours une erreur dans la console JavaScript disant « Erreur <span class="nowiki">:</span> uncaught exception<span class="nowiki">:</span> Permission denied to get property &lt;property_name or method_name&gt; ». Pourquoi cela ?</dt>
+ <dt>Je n'arrive pas à accéder aux propriétés de la nouvelle fenêtre secondaire. J'obtiens toujours une erreur dans la console JavaScript disant « Erreur : uncaught exception: Permission denied to get property &lt;property_name or method_name&gt; ». Pourquoi cela ?</dt>
  <dd>Ceci est causé par la restriction de sécurité des scripts entre domaines (aussi appelée<em>Same Origin Policy</em> , « Politique de même origine »). Un script chargé dans une fenêtre (ou cadre) d'une origine donnée (nom de domaine) <strong>ne peut pas obtenir ou modifier</strong> des propriétés d'une autre fenêtre (ou cadre) ou les propriétés d'aucun de ses objets HTML si celle-ci provient d'une autre origine distincte (nom de domaine). C'est pourquoi, avant d'exécuter un script se référant à une fenêtre secondaire depuis la fenêtre principale, le navigateur vérifiera que la fenêtre secondaire possède le même nom de domaine.</dd>
  <dd>Plus d'informations à propos de la restriction de sécurité des scripts entre domaines : <a class="external" href="http://www.mozilla.org/projects/security/components/same-origin.html" rel="freelink">http://www.mozilla.org/projects/secu...me-origin.html</a></dd>
 </dl>

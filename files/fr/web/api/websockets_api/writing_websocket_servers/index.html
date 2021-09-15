@@ -146,7 +146,7 @@ Connection: Upgrade
 <pre>var DECODED = "";
 for (var i = 0; i &lt; ENCODED.length; i++) {
     DECODED[i] = ENCODED[i] ^ MASK[i % 4];
-<span style="line-height: 1.5;">}</span></pre>
+}</pre>
 
 <div class="note">
 <p>Ici la variable <code>DECODED</code> correspond aux données utiles à votre application - en fonction de l'utilisation ou non d'un sous-protocole (<em>si c'est <code>json</code>, vous devez encore décoder les données utiles reçues avec le parseur JSON</em>). </p>

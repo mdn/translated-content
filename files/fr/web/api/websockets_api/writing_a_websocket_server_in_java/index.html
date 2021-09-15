@@ -19,11 +19,11 @@ translation_of: Web/API/WebSockets_API/Writing_a_WebSocket_server_in_Java
 
 <p>Constructeur :</p>
 
-<pre class="brush: java"><code><span class="memberNameLink">ServerSocket</span>(int port)</code></pre>
+<pre class="brush: java"><code>ServerSocket(int port)</code></pre>
 
 <p>Lors de l'instanciation de la classe ServerSocket, celle-ci est liée au numéro de port renseigné par le paramètre <em>port</em>.</p>
 
-<p><span style="line-height: 1.572;">Voici comment implémenter ce que nous venons d'apprendre :</span></p>
+<p>Voici comment implémenter ce que nous venons d'apprendre :</p>
 
 <pre class="brush: java">import java.net.ServerSocket;
 import java.net.Socket;
@@ -45,9 +45,9 @@ public class Server{
 <p>Méthodes :</p>
 
 <ul>
- <li><code>java.net.</code><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html" title="class in java.net">Socket</a><code> <span class="memberNameLink"><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html#getInputStream--">getInputStream</a></span>()</code><br>
+ <li><code>java.net.</code><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html" title="class in java.net">Socket</a><code> <a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html#getInputStream--">getInputStream</a>()</code><br>
   Renvoie un flux d’entrée pour ce socket.</li>
- <li><code>java.net.</code><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html" title="class in java.net">Socket</a><code> <span class="memberNameLink"><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html#getOutputStream--">getOutputStream</a></span>()</code><br>
+ <li><code>java.net.</code><a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html" title="class in java.net">Socket</a><code> <a href="http://docs.oracle.com/javase/8/docs/api/java/net/Socket.html#getOutputStream--">getOutputStream</a>()</code><br>
   Renvoie un flux sortant pour ce socket.</li>
 </ul>
 
@@ -63,7 +63,7 @@ public class Server{
 
 <p>Méthodes :</p>
 
-<pre class="brush: java"><span class="brush: cpp" style="line-height: 1.572;">read</span><code>(byte[] b, int off, int len)</code></pre>
+<pre class="brush: java">read<code>(byte[] b, int off, int len)</code></pre>
 
 <p>Reads up to <em>len</em> bytes of data from the input stream into an array of bytes.<em> </em></p>
 
@@ -180,7 +180,7 @@ if (get.find()) {
 </table>
 
 <p>FIN : votre message peut être transmis en plusieurs morceaux, mais restons simple pour l’instant.<br>
- <span style="line-height: 1.572;">Opcode </span><em>0x1</em><span style="line-height: 1.572;"> signifie que ceci est un texte. </span><a href="http://tools.ietf.org/html/rfc6455#section-5.2" style="line-height: 1.572;" title="http://tools.ietf.org/html/rfc6455#section-5.2">Liste exhaustive des Opcodes</a></p>
+ Opcode <em>0x1</em> signifie que ceci est un texte. <a href="http://tools.ietf.org/html/rfc6455#section-5.2" style="line-height: 1.572;" title="http://tools.ietf.org/html/rfc6455#section-5.2">Liste exhaustive des Opcodes</a></p>
 
 <p>- 134:</p>
 

@@ -20,11 +20,11 @@ translation_of: Web/API/Element/outerHTML
 
 element.outerHTML = htmlString;</code></pre>
 
-<h3 class="highlight-spanned" id="Valeur"><span class="highlight-span">Valeur</span></h3>
+<h3 class="highlight-spanned" id="Valeur">Valeur</h3>
 
 <p>La lecture de la valeur de <code>outerHTML</code> renvoie une  {{domxref("DOMString")}} contenant la sérialisation HTML des descendants de l'élément. Définir la valeur de <code>innerHTML</code> supprime tous les descendants et les remplace par les noeuds construits en analysant le HTML donné dans la chaîne <code>htmlString</code>.</p>
 
-<h3 class="highlight-spanned" id="Exceptions"><span class="highlight-span">Exceptions</span></h3>
+<h3 class="highlight-spanned" id="Exceptions">Exceptions</h3>
 
 <dl>
  <dt><code>SyntaxError</code></dt>
@@ -67,9 +67,9 @@ console.log(container.firstChild.nodeName); // affiche "P"
 
 <p>Si un élément n'a pas de noeud parent, définir sa propriété <code>outerHTML</code> ne le modifiera pas, ni ses descendants. De nombreux navigateurs déclencheront aussi une exception. Par exemple :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> div <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createElement</span><span class="punctuation token">(</span><span class="string token">"div"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-div<span class="punctuation token">.</span>outerHTML <span class="operator token">=</span> <span class="string token">"&lt;div class=\"test\"&gt;test&lt;/div&gt;"</span><span class="punctuation token">;</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>div<span class="punctuation token">.</span>outerHTML<span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">// output: "&lt;div&gt;&lt;/div&gt;"</span></code></pre>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">var div = document.createElement("div");
+div.outerHTML = "&lt;div class=\"test\"&gt;test&lt;/div&gt;";
+console.log(div.outerHTML); // output: "&lt;div&gt;&lt;/div&gt;"</code></pre>
 
 <p>Aussi, lorsqu'un élément va être remplacé dans le document, la variable dont la propriété <code>outerHTML</code> a été modifiée contiendra toujours une référence à l'élément initial :</p>
 

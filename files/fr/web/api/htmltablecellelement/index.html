@@ -12,7 +12,7 @@ translation_of: Web/API/HTMLTableCellElement
 <div>{{ APIRef("HTML DOM") }}</div>
 </div>
 
-<p>L'interface <strong><span class="external"><code>HTMLTableCellElement</code></span></strong> expose des méthodes et des propriétés spécifiques (s'ajoutant à celles fournies par l'interface générique {{domxref("HTMLElement")}}, également disponibles par héritage) pour l'agencement et la gestion de l'apparence des cellules de tableau dans un document HTML, qu'il s'agisse de cellules d'entête ou de données.</p>
+<p>L'interface <strong><code>HTMLTableCellElement</code></strong> expose des méthodes et des propriétés spécifiques (s'ajoutant à celles fournies par l'interface générique {{domxref("HTMLElement")}}, également disponibles par héritage) pour l'agencement et la gestion de l'apparence des cellules de tableau dans un document HTML, qu'il s'agisse de cellules d'entête ou de données.</p>
 
 <h2 id="Properties" name="Properties">Propriétés</h2>
 
@@ -40,7 +40,7 @@ translation_of: Web/API/HTMLTableCellElement
  <dt>{{domxref("HTMLTableCellElement.ch")}} {{obsolete_inline}}</dt>
  <dd>Renvoie une chaîne {{domxref("DOMString")}} contenant un unique caractère. Ce caractère est celui utilisé pour l'alignement de toutes les cellules d'une même colonne. Il représente l'attribut {{htmlattrxref("char", "td")}} et prend par défaut la valeur du séparateur décimal associé à la langue, par exemple <code>'.'</code> pour l'anglais, <code>ou ','</code> pour le français. Cette propriété était optionnelle et peu supportée.</dd>
  <dt>{{domxref("HTMLTableCellElement.chOff")}} {{obsolete_inline}}</dt>
- <dd>Renvoie une chaîne {{domxref("DOMString")}} contenant un entier indiquant le nombre de caractères devant être laissés à droite (pour les écritures de gauche à droite<span style='font-family: "Calibri",sans-serif; font-size: 11.0pt; line-height: 107%;'> </span>; sinon à gauche pour les écritures de droite à gauche) du caractère défini par <code>HTMLTableCellElement.ch</code>. Cette propriété était optionnelle et peu supportée.</dd>
+ <dd>Renvoie une chaîne {{domxref("DOMString")}} contenant un entier indiquant le nombre de caractères devant être laissés à droite (pour les écritures de gauche à droite ; sinon à gauche pour les écritures de droite à gauche) du caractère défini par <code>HTMLTableCellElement.ch</code>. Cette propriété était optionnelle et peu supportée.</dd>
  <dt>{{domxref("HTMLTableCellElement.noWrap")}} {{obsolete_inline}}</dt>
  <dd>Renvoie un valeur booléenne {{domxref("Boolean")}} représentant l'attribut {{htmlattrxref("nowrap", "td")}} et indiquant si le contenu de la cellule peut être scindé en plusieurs lignes.</dd>
  <dt>{{domxref("HTMLTableCellElement.vAlign")}} {{obsolete_inline}}</dt>
@@ -68,7 +68,7 @@ translation_of: Web/API/HTMLTableCellElement
   <tr>
    <td>{{SpecName('HTML5 W3C', "tabular-data.html#htmltablecellelement", "HTMLTableCellElement")}}</td>
    <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Les propriétés suivantes sont devenues obsolètes<span style='font-family: "Calibri",sans-serif; font-size: 11.0pt; line-height: 107%;'> </span>: <code>align</code>, <code>axis</code>, <code>bgColor</code>, <code>height</code>, <code>width</code>, <code>ch</code>, <code>chOff</code>, <code>noWrap</code>, <code>et vAlign</code>.<br>
+   <td>Les propriétés suivantes sont devenues obsolètes : <code>align</code>, <code>axis</code>, <code>bgColor</code>, <code>height</code>, <code>width</code>, <code>ch</code>, <code>chOff</code>, <code>noWrap</code>, <code>et vAlign</code>.<br>
     La propriété <code>headers</code> est maintenant en lecture seule et renvoie un objet {{domxref("DOMSettableTokenList")}} au lieu d'une simple chaîne {{domxref("DOMString")}}.<br>
     Les propriétés <code>colspan</code> et <code>rowspan</code> renvoient maintenant des entiers long positifs (<code>unsigned long)</code>.</td>
   </tr>
@@ -92,5 +92,5 @@ translation_of: Web/API/HTMLTableCellElement
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li>Éléments HTML implémentant cette interface <span style='font-family: "Calibri",sans-serif; font-size: 11.0pt; line-height: 107%;'> </span> : {{HTMLElement("th")}} et {{HTMLElement("td")}} par héritage via {{domxref("HTMLTableHeaderCellElement")}} et {{domxref("HTMLTableDataCellElement")}}.</li>
+ <li>Éléments HTML implémentant cette interface   : {{HTMLElement("th")}} et {{HTMLElement("td")}} par héritage via {{domxref("HTMLTableHeaderCellElement")}} et {{domxref("HTMLTableDataCellElement")}}.</li>
 </ul>

@@ -23,44 +23,44 @@ original_slug: Explorer_un_tableau_HTML_avec_des_interfaces_DOM_et_JavaScript
 
 <h3 id="Contenu_HTML">Contenu HTML</h3>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>button<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>Generate a table.<span class="punctuation token">"</span></span> <span class="attr-name token">onclick</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>generate_table()<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;input type="button" value="Generate a table." onclick="generate_table()"&gt;</code></pre>
 
 <h3 id="Contenu_JavaScript">Contenu JavaScript</h3>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">generate_table</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="comment token">// get the reference for the body</span>
-  <span class="keyword token">var</span> body <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementsByTagName</span><span class="punctuation token">(</span><span class="string token">"body"</span><span class="punctuation token">)</span><span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">function generate_table() {
+  // get the reference for the body
+  var body = document.getElementsByTagName("body")[0];
 
-  <span class="comment token">// creates a &lt;table&gt; element and a &lt;tbody&gt; element</span>
-  <span class="keyword token">var</span> tbl <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createElement</span><span class="punctuation token">(</span><span class="string token">"table"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="keyword token">var</span> tblBody <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createElement</span><span class="punctuation token">(</span><span class="string token">"tbody"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  // creates a &lt;table&gt; element and a &lt;tbody&gt; element
+  var tbl = document.createElement("table");
+  var tblBody = document.createElement("tbody");
 
-  <span class="comment token">// creating all cells</span>
-  <span class="keyword token">for</span> <span class="punctuation token">(</span><span class="keyword token">var</span> i <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span> i <span class="operator token">&lt;</span> <span class="number token">2</span><span class="punctuation token">;</span> i<span class="operator token">++</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="comment token">// creates a table row</span>
-    <span class="keyword token">var</span> row <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createElement</span><span class="punctuation token">(</span><span class="string token">"tr"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  // creating all cells
+  for (var i = 0; i &lt; 2; i++) {
+    // creates a table row
+    var row = document.createElement("tr");
 
-    <span class="keyword token">for</span> <span class="punctuation token">(</span><span class="keyword token">var</span> j <span class="operator token">=</span> <span class="number token">0</span><span class="punctuation token">;</span> j <span class="operator token">&lt;</span> <span class="number token">2</span><span class="punctuation token">;</span> j<span class="operator token">++</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="comment token">// Create a &lt;td&gt; element and a text node, make the text</span>
-      <span class="comment token">// node the contents of the &lt;td&gt;, and put the &lt;td&gt; at</span>
-      <span class="comment token">// the end of the table row</span>
-      <span class="keyword token">var</span> cell <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createElement</span><span class="punctuation token">(</span><span class="string token">"td"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-      <span class="keyword token">var</span> cellText <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">createTextNode</span><span class="punctuation token">(</span><span class="string token">"cell in row "</span><span class="operator token">+</span>i<span class="operator token">+</span><span class="string token">", column "</span><span class="operator token">+</span>j<span class="punctuation token">)</span><span class="punctuation token">;</span>
-      cell<span class="punctuation token">.</span><span class="function token">appendChild</span><span class="punctuation token">(</span>cellText<span class="punctuation token">)</span><span class="punctuation token">;</span>
-      row<span class="punctuation token">.</span><span class="function token">appendChild</span><span class="punctuation token">(</span>cell<span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
+    for (var j = 0; j &lt; 2; j++) {
+      // Create a &lt;td&gt; element and a text node, make the text
+      // node the contents of the &lt;td&gt;, and put the &lt;td&gt; at
+      // the end of the table row
+      var cell = document.createElement("td");
+      var cellText = document.createTextNode("cell in row "+i+", column "+j);
+      cell.appendChild(cellText);
+      row.appendChild(cell);
+    }
 
-    <span class="comment token">// add the row to the end of the table body</span>
-    tblBody<span class="punctuation token">.</span><span class="function token">appendChild</span><span class="punctuation token">(</span>row<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
+    // add the row to the end of the table body
+    tblBody.appendChild(row);
+  }
 
-  <span class="comment token">// put the &lt;tbody&gt; in the &lt;table&gt;</span>
-  tbl<span class="punctuation token">.</span><span class="function token">appendChild</span><span class="punctuation token">(</span>tblBody<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="comment token">// appends &lt;table&gt; into &lt;body&gt;</span>
-  body<span class="punctuation token">.</span><span class="function token">appendChild</span><span class="punctuation token">(</span>tbl<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="comment token">// sets the border attribute of tbl to 2;</span>
-  tbl<span class="punctuation token">.</span><span class="function token">setAttribute</span><span class="punctuation token">(</span><span class="string token">"border"</span><span class="punctuation token">,</span> <span class="string token">"2"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+  // put the &lt;tbody&gt; in the &lt;table&gt;
+  tbl.appendChild(tblBody);
+  // appends &lt;table&gt; into &lt;body&gt;
+  body.appendChild(tbl);
+  // sets the border attribute of tbl to 2;
+  tbl.setAttribute("border", "2");
+}</code></pre>
 
 <p>{{ EmbedLiveSample('Overview_of_Sample1.html') }}</p>
 
@@ -112,32 +112,32 @@ original_slug: Explorer_un_tableau_HTML_avec_des_interfaces_DOM_et_JavaScript
 
 <p>Vous pouvez construire ce tableau ainsi que ses éléments enfants internes en utilisant juste quelques méthodes DOM. Conservez à l'esprit le modèle en arbre des structures que vous comptez créer, cela rendra plus facile l'écriture du code nécessaire. Dans l'arbre &lt;table&gt; de la figure 1, l'élément &lt;table&gt; a un enfant, l'élément &lt;tbody&gt;, qui lui-même a deux enfants &lt;tr&gt;, qui à leur tour ont chacun un enfant &lt;td&gt;. Enfin, chacun de ces éléments &lt;td&gt; a un enfant, un nœud texte.</p>
 
-<h2 id="M.C3.A9thodes_DOM_fondamentales_-_Exemple2.html" name="M.C3.A9thodes_DOM_fondamentales_-_Exemple2.html">Exemple : <span id="result_box" lang="fr"><span>Définition de la couleur d'arrière-plan d'un paragraphe</span></span></h2>
+<h2 id="M.C3.A9thodes_DOM_fondamentales_-_Exemple2.html" name="M.C3.A9thodes_DOM_fondamentales_-_Exemple2.html">Exemple : Définition de la couleur d'arrière-plan d'un paragraphe</h2>
 
-<p><code>getElementsByTagName</code> est à la fois une méthode de l'interface Document et de l'interface Element. <span id="result_box" lang="fr"><span>Lorsqu'il est appelé, il renvoie un tableau avec tous les descendants de l'élément correspondant au nom de l'étiquette.</span> <span>Le premier élément de la liste se trouve à la position [0] dans le tableau.</span></span></p>
+<p><code>getElementsByTagName</code> est à la fois une méthode de l'interface Document et de l'interface Element. Lorsqu'il est appelé, il renvoie un tableau avec tous les descendants de l'élément correspondant au nom de l'étiquette. Le premier élément de la liste se trouve à la position [0] dans le tableau.</p>
 
 <h3 id="Contenu_HTML_2">Contenu HTML</h3>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>body</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>button<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>Set paragraph background color<span class="punctuation token">"</span></span> <span class="attr-name token">onclick</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>set_background()<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>hi<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>hello<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>body</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;body&gt;
+  &lt;input type="button" value="Set paragraph background color" onclick="set_background()"&gt;
+  &lt;p&gt;hi&lt;/p&gt;
+  &lt;p&gt;hello&lt;/p&gt;
+&lt;/body&gt;</code></pre>
 
 <h3 id="Contenu_JavaScript_2">Contenu JavaScript</h3>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">set_background</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="comment token">// </span></code>récupère une liste de tous les éléments body (il n'y en aura qu'un)<code class="language-js"><span class="comment token">,</span>
-  <span class="comment token">// </span></code>et sélectionne le premier (indice 0) de ces éléments<code class="language-js">
-  myBody <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementsByTagName</span><span class="punctuation token">(</span><span class="string token">"body"</span><span class="punctuation token">)</span><span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
+<pre class="brush: js line-numbers  language-js"><code class="language-js">function set_background() {
+  // </code>récupère une liste de tous les éléments body (il n'y en aura qu'un)<code class="language-js">,
+  // </code>et sélectionne le premier (indice 0) de ces éléments<code class="language-js">
+  myBody = document.getElementsByTagName("body")[0];
 
-  <span class="comment token">// </span></code>à présent, trouve tous les éléments p enfants de cet élément body<code class="language-js">
-  myBodyElements <span class="operator token">=</span> myBody<span class="punctuation token">.</span><span class="function token">getElementsByTagName</span><span class="punctuation token">(</span><span class="string token">"p"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  // </code>à présent, trouve tous les éléments p enfants de cet élément body<code class="language-js">
+  myBodyElements = myBody.getElementsByTagName("p");
 
-  <span class="comment token">// </span></code>récupère le second élément de cette liste d'éléments p<code class="language-js">
-  myP <span class="operator token">=</span> myBodyElements<span class="punctuation token">[</span><span class="number token">1</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
-  myP<span class="punctuation token">.</span>style<span class="punctuation token">.</span>background <span class="operator token">=</span> <span class="string token">"rgb(255,0,0)"</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span></code></pre>
+  // </code>récupère le second élément de cette liste d'éléments p<code class="language-js">
+  myP = myBodyElements[1];
+  myP.style.background = "rgb(255,0,0)";
+}</code></pre>
 
 <p>{{ EmbedLiveSample('Setting_background_of_a_paragraph') }}</p>
 
@@ -284,18 +284,18 @@ body.appendChild(nouveauNoeudBALISEP);
 
 <div class="note">Si l'objet est un nœud texte, vous pouvez récupérer le texte qu'il contient en employant l'attribut <code>data</code>.</div>
 
-<pre class="brush:js line-numbers  language-js"><code class="language-js">mybody <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementsByTagName</span><span class="punctuation token">(</span><span class="string token">"body"</span><span class="punctuation token">)</span><span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
-mytable <span class="operator token">=</span> mybody<span class="punctuation token">.</span><span class="function token">getElementsByTagName</span><span class="punctuation token">(</span><span class="string token">"table"</span><span class="punctuation token">)</span><span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
-mytablebody <span class="operator token">=</span> mytable<span class="punctuation token">.</span><span class="function token">getElementsByTagName</span><span class="punctuation token">(</span><span class="string token">"tbody"</span><span class="punctuation token">)</span><span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
-myrow <span class="operator token">=</span> mytablebody<span class="punctuation token">.</span><span class="function token">getElementsByTagName</span><span class="punctuation token">(</span><span class="string token">"tr"</span><span class="punctuation token">)</span><span class="punctuation token">[</span><span class="number token">1</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
-mycel <span class="operator token">=</span> myrow<span class="punctuation token">.</span><span class="function token">getElementsByTagName</span><span class="punctuation token">(</span><span class="string token">"td"</span><span class="punctuation token">)</span><span class="punctuation token">[</span><span class="number token">1</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
+<pre class="brush:js line-numbers  language-js"><code class="language-js">mybody = document.getElementsByTagName("body")[0];
+mytable = mybody.getElementsByTagName("table")[0];
+mytablebody = mytable.getElementsByTagName("tbody")[0];
+myrow = mytablebody.getElementsByTagName("tr")[1];
+mycel = myrow.getElementsByTagName("td")[1];
 
-<span class="comment token">// premier élément du noeud liste des enfants de mycel</span>
-myceltext<span class="operator token">=</span>mycel<span class="punctuation token">.</span>childNodes<span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">;</span>
+// premier élément du noeud liste des enfants de mycel
+myceltext=mycel.childNodes[0];
 
-<span class="comment token">// </span></code> <span id="result_box" lang="fr"><span>contenu de currenttext est le contenu des données de</span></span><code class="language-js"><span class="comment token"> myceltext</span>
-currenttext<span class="operator token">=</span>document<span class="punctuation token">.</span><span class="function token">createTextNode</span><span class="punctuation token">(</span>myceltext<span class="punctuation token">.</span>data<span class="punctuation token">)</span><span class="punctuation token">;</span>
-mybody<span class="punctuation token">.</span><span class="function token">appendChild</span><span class="punctuation token">(</span>currenttext<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+// </code> contenu de currenttext est le contenu des données de<code class="language-js"> myceltext
+currenttext=document.createTextNode(myceltext.data);
+mybody.appendChild(currenttext);</code></pre>
 
 <h3 id="R.C3.A9cup.C3.A9rer_la_valeur_d.27un_attribut" name="R.C3.A9cup.C3.A9rer_la_valeur_d.27un_attribut">Récupérer la valeur d'un attribut</h3>
 
@@ -350,4 +350,4 @@ mybody<span class="punctuation token">.</span><span class="function token">appen
 </dl>
 
 <p><br>
- <span class="comment">Interwik</span></p>
+ Interwik</p>

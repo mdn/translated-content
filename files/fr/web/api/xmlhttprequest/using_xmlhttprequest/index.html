@@ -29,13 +29,13 @@ oReq.send();</pre>
 
 <h2 id="Types_de_requêtes">Types de requêtes</h2>
 
-<p>Une demande faite via XMLHttpRequest peut récupérer les données dans l'une des deux façons, de manière asynchrone ou synchrone. Le type de demande est dictée par l'argument optionnel <span style="font-family: courier new,andale mono,monospace; line-height: normal;">async</span> (le troisième argument) qui est mis sur la méthode <a href="/en-US/docs/DOM/XMLHttpRequest#open()" title="DOM/XMLHttpRequest#open()">open()</a> XMLHttpRequest (). Si cet argument est <span style="font-family: courier new,andale mono,monospace; line-height: normal;">true</span> ou non spécifié, l'objet <span style="font-family: courier new,andale mono,monospace; line-height: normal;">XMLHttpRequest</span> est traitée de manière asynchrone, sinon le processus est effectué de façon synchrone. Une discussion détaillée et des démonstrations de ces deux types de demandes peuvent être trouvés sur la page des <a href="/en-US/docs/DOM/XMLHttpRequest/Synchronous_and_Asynchronous_Requests" style="text-decoration: underline;" title="Synchronous and Asynchronous Requests">requêtes synchrones et asynchrones</a>. En général, vous devriez rarement, voire jamais, utiliser requêtes synchrones.</p>
+<p>Une demande faite via XMLHttpRequest peut récupérer les données dans l'une des deux façons, de manière asynchrone ou synchrone. Le type de demande est dictée par l'argument optionnel async (le troisième argument) qui est mis sur la méthode <a href="/en-US/docs/DOM/XMLHttpRequest#open()" title="DOM/XMLHttpRequest#open()">open()</a> XMLHttpRequest (). Si cet argument est true ou non spécifié, l'objet XMLHttpRequest est traitée de manière asynchrone, sinon le processus est effectué de façon synchrone. Une discussion détaillée et des démonstrations de ces deux types de demandes peuvent être trouvés sur la page des <a href="/en-US/docs/DOM/XMLHttpRequest/Synchronous_and_Asynchronous_Requests" style="text-decoration: underline;" title="Synchronous and Asynchronous Requests">requêtes synchrones et asynchrones</a>. En général, vous devriez rarement, voire jamais, utiliser requêtes synchrones.</p>
 
 <div class="note"><strong>Note:</strong> A partir de Gecko 30.0 {{ geckoRelease("30.0") }}, les requêtes synchrones sur le processus principal ont été dépréciées en raison de l'effet négatif sur l'expérience utilisateur.</div>
 
 <h2 id="Gérer_les_réponses">Gérer les réponses</h2>
 
-<p><span style="line-height: 1.5;">Il existe plusieurs types </span><a href="http://www.w3.org/TR/XMLHttpRequest2/#response">d'attributs de réponse</a><span style="line-height: 1.5;"> définies par la spécification W3C pour XMLHttpRequest. Ceci indique que le client faisant l'objet XMLHttpRequest des informations importantes sur l'état ​​de la réponse. Certains cas où, traitant de types de réponse non-texte peuvent impliquer une certaine manipulation et l'analyse comme indiqué dans les sections suivantes.</span></p>
+<p>Il existe plusieurs types <a href="http://www.w3.org/TR/XMLHttpRequest2/#response">d'attributs de réponse</a> définies par la spécification W3C pour XMLHttpRequest. Ceci indique que le client faisant l'objet XMLHttpRequest des informations importantes sur l'état ​​de la réponse. Certains cas où, traitant de types de réponse non-texte peuvent impliquer une certaine manipulation et l'analyse comme indiqué dans les sections suivantes.</p>
 
 <h3 id="Analyser_et_manipuler_la_propriété_responseXML">Analyser et manipuler la propriété <code>responseXML</code></h3>
 
@@ -58,7 +58,7 @@ oReq.send();</pre>
 <ol>
  <li>Utiliser la propriété <code>XMLHttpRequest.responseXML</code>.</li>
  <li>Injecter le contenu dans le body d'un <a href="/en-US/docs/Web/API/DocumentFragment">fragment de document</a> via <code>fragment.body.innerHTML</code> et traverser le DOM du fragment.</li>
- <li><a href="/en-US/docs/JavaScript/Reference/Global_Objects/RegExp" title="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/regexp">RegExp </a>peut être utlisé si vous connaissez à l'avance le contenu du document HTML dans <span style="font-family: courier new,andale mono,monospace; line-height: normal;">responseText</span>. Vous pouvez supprimer les sauts de ligne, si vous utlisez RegExp en prenant en compte ces sauts. Toutefois, cette méthode est un "dernier recours", car si le code XML change légèrement, la méthode échouera probablement.</li>
+ <li><a href="/en-US/docs/JavaScript/Reference/Global_Objects/RegExp" title="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/regexp">RegExp </a>peut être utlisé si vous connaissez à l'avance le contenu du document HTML dans responseText. Vous pouvez supprimer les sauts de ligne, si vous utlisez RegExp en prenant en compte ces sauts. Toutefois, cette méthode est un "dernier recours", car si le code XML change légèrement, la méthode échouera probablement.</li>
 </ol>
 
 <h2 id="Gérer_les_données_binaires">Gérer les données binaires</h2>
@@ -181,7 +181,7 @@ function loadEnd(e) {
 
 <h3 id="Rien_de_plus_que_XMLHttpRequest">Rien de plus que <code>XMLHttpRequest</code></h3>
 
-<p>Envoyer des formulaires sans l'API <a href="/en-US/docs/DOM/XMLHttpRequest/FormData" title="DOM/XMLHttpRequest/FormData"><code>FormData</code></a> ne demande rien de plus, si ce n'est l'API <a href="/en-US/docs/DOM/FileReader" style="line-height: 1.5;" title="/en-US/docs/DOM/FileReader"><code style="font-size: 14px;">FileReader</code></a><span style="line-height: 1.5;">, mais seulement </span><strong style="line-height: 1.5;">si vous voulez envoyer un fichier ou plus</strong><span style="line-height: 1.5;">.</span></p>
+<p>Envoyer des formulaires sans l'API <a href="/en-US/docs/DOM/XMLHttpRequest/FormData" title="DOM/XMLHttpRequest/FormData"><code>FormData</code></a> ne demande rien de plus, si ce n'est l'API <a href="/en-US/docs/DOM/FileReader" style="line-height: 1.5;" title="/en-US/docs/DOM/FileReader"><code style="font-size: 14px;">FileReader</code></a>, mais seulement <strong style="line-height: 1.5;">si vous voulez envoyer un fichier ou plus</strong>.</p>
 
 <h4 id="Une_brève_introduction_au_méthodes_de_submission">Une brève introduction au méthodes de submission</h4>
 
@@ -194,7 +194,7 @@ function loadEnd(e) {
  <li>en utilisant la méthode <code>GET</code> (dans ce cas, l'attribut <code>enctype</code> sera ignoré).</li>
 </ul>
 
-<p>Maintenant, considérons qu'on envoie un formulaire contenant seulement deux champs, nommées<span style="line-height: 1.5;"> </span><code style="font-size: 14px;">foo</code><span style="line-height: 1.5;"> et </span><code style="font-size: 14px;">baz</code><span style="line-height: 1.5;">. Si vous utilisez la méthode </span><code style="font-size: 14px;">POST</code><span style="line-height: 1.5;">, le serveur va recevoir une chaîne similaire à l'un des trois suivantes, en fonction de l'encodage que vous utilisez :</span></p>
+<p>Maintenant, considérons qu'on envoie un formulaire contenant seulement deux champs, nommées <code style="font-size: 14px;">foo</code> et <code style="font-size: 14px;">baz</code>. Si vous utilisez la méthode <code style="font-size: 14px;">POST</code>, le serveur va recevoir une chaîne similaire à l'un des trois suivantes, en fonction de l'encodage que vous utilisez :</p>
 
 <ul>
  <li>
@@ -485,7 +485,7 @@ var AJAXSubmit = (function () {
 &lt;/html&gt;</pre>
 </div>
 
-<p>Pour le tester, créez une page nommée <strong>register.php</strong> (qui est l'attribut <code>action</code> des formulaires d'exemple) et mettez y ce contenu <em><span class="long_text short_text" id="result_box" lang="en"><span class="hps">minimaliste</span></span></em>:</p>
+<p>Pour le tester, créez une page nommée <strong>register.php</strong> (qui est l'attribut <code>action</code> des formulaires d'exemple) et mettez y ce contenu <em>minimaliste</em>:</p>
 
 <pre class="brush: php">&lt;?php
 /* register.php */
@@ -691,7 +691,7 @@ ifHasChanged("mapage.html", function (nModif, nVisit) {
   alert("La page '" + this.filepath + "' a été changée le " + (new Date(nModif)).toLocaleString() + "!");
 });</pre>
 
-<p>Si vous voulez savoir <strong>si la <em>page courante</em> a changée</strong>, lisez l'article à propos de la propriété <a href="/en-US/docs/Web/API/document.lastModified" style="line-height: 1.5;" title="/en-US/docs/Web/API/document.lastModified"><code style="font-size: 14px;">document.lastModified</code></a><span style="line-height: 1.5;">.</span></p>
+<p>Si vous voulez savoir <strong>si la <em>page courante</em> a changée</strong>, lisez l'article à propos de la propriété <a href="/en-US/docs/Web/API/document.lastModified" style="line-height: 1.5;" title="/en-US/docs/Web/API/document.lastModified"><code style="font-size: 14px;">document.lastModified</code></a>.</p>
 
 <h2 id="Cross-site_XMLHttpRequest">Cross-site XMLHttpRequest</h2>
 
@@ -699,7 +699,7 @@ ifHasChanged("mapage.html", function (nModif, nVisit) {
 
 <h2 id="Contourner_le_cache">Contourner le cache</h2>
 
-<p><span style="line-height: 1.572;">Une approche cross-browser pour contourner le cache est d'ajouter le timestamp à l'URL, en étant sûr d'inclure un "?" ou un "&amp;" selon les cas. Par exemple :</span></p>
+<p>Une approche cross-browser pour contourner le cache est d'ajouter le timestamp à l'URL, en étant sûr d'inclure un "?" ou un "&amp;" selon les cas. Par exemple :</p>
 
 <pre>http://foo.com/bar.html -&gt; http://foo.com/bar.html?12345
 http://foo.com/bar.html?foobar=baz -&gt; http://foo.com/bar.html?foobar=baz&amp;12345
@@ -724,7 +724,7 @@ oReq.send(null);</pre>
 
 <h3 id="XMLHttpRequests_stoppées">XMLHttpRequests stoppées</h3>
 
-<p>Si vous vous retrouvez avec une XMLHttpRequest ayant <code style="font-size: 14px;">status=0</code> et <code style="font-size: 14px;">statusText=null</code>, cela signifie que la requête n'a pas été autorisée à être effectuée. Elle a été <code style="font-size: 14px;"><a href="http://www.w3.org/TR/XMLHttpRequest/#dom-xmlhttprequest-unsent">UNSENT</a></code>. Une cause probable est lorsque <a href="http://www.w3.org/TR/XMLHttpRequest/#xmlhttprequest-origin" style="line-height: 1.5; text-decoration: underline; outline: dotted 1px; outline-offset: 0pt;">l'origine <code style="font-size: 14px;">XMLHttpRequest</code> </a><span style="line-height: 1.5;"> (lors de la création de l'objet XMLHttpRequest) a changé quand l'objet XMLHttpRequest est déjà </span><span style="font-family: courier new,andale mono,monospace; line-height: normal;">open()</span><span style="line-height: 1.5;">. Ce cas peut se produire par exemple lorsque l'on a une XMLHttpRequest qui est lancée sur un évènement onunload d'une fenêtre: l'objet XMLHttpRequest est en fait créé lorsque la fenêtre sur le point de se fermer est toujours là, et la demande est envoyée (c'est à dire </span><span style="font-family: courier new,andale mono,monospace; line-height: normal;">open()</span><span style="line-height: 1.5;">) lorsque cette fenêtre a perdu son focus et une autre fenêtre a potentiellement pris le focus. La manière d'éviter ce problème est de fixer un écouteur sur l'évènement </span><span style="line-height: 1.5;">"activate" </span><span style="line-height: 1.5;">de la nouvelle fenêtre qui se lance quand l'ancienne fenêtre a son événement "unload" lancé.</span></p>
+<p>Si vous vous retrouvez avec une XMLHttpRequest ayant <code style="font-size: 14px;">status=0</code> et <code style="font-size: 14px;">statusText=null</code>, cela signifie que la requête n'a pas été autorisée à être effectuée. Elle a été <code style="font-size: 14px;"><a href="http://www.w3.org/TR/XMLHttpRequest/#dom-xmlhttprequest-unsent">UNSENT</a></code>. Une cause probable est lorsque <a href="http://www.w3.org/TR/XMLHttpRequest/#xmlhttprequest-origin" style="line-height: 1.5; text-decoration: underline; outline: dotted 1px; outline-offset: 0pt;">l'origine <code style="font-size: 14px;">XMLHttpRequest</code> </a> (lors de la création de l'objet XMLHttpRequest) a changé quand l'objet XMLHttpRequest est déjà open(). Ce cas peut se produire par exemple lorsque l'on a une XMLHttpRequest qui est lancée sur un évènement onunload d'une fenêtre: l'objet XMLHttpRequest est en fait créé lorsque la fenêtre sur le point de se fermer est toujours là, et la demande est envoyée (c'est à dire open()) lorsque cette fenêtre a perdu son focus et une autre fenêtre a potentiellement pris le focus. La manière d'éviter ce problème est de fixer un écouteur sur l'évènement "activate" de la nouvelle fenêtre qui se lance quand l'ancienne fenêtre a son événement "unload" lancé.</p>
 
 <h2 id="Utiliser_XMLHttpRequest_depuis_un_module_JavaScript_un_composant_XPCOM">Utiliser XMLHttpRequest depuis un module JavaScript / un composant XPCOM</h2>
 

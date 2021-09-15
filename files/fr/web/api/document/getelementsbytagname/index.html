@@ -12,7 +12,7 @@ translation_of: Web/API/Document/getElementsByTagName
 
 <div> </div>
 
-<p><span id="result_box" lang="fr"><span>Renvoie une {{domxref ("HTMLCollection")}} des éléments avec le nom de balise donné.</span> <span>Le document complet est recherché, y compris le nœud racine.</span> <span>Le <code>HTMLCollection</code> renvoyée est en direct, ce qui signifie qu'elle se met à jour automatiquement pour rester synchronisée avec l'arborescence DOM sans avoir à rappeler document.getElementsByTagName ().</span></span></p>
+<p>Renvoie une {{domxref ("HTMLCollection")}} des éléments avec le nom de balise donné. Le document complet est recherché, y compris le nœud racine. Le <code>HTMLCollection</code> renvoyée est en direct, ce qui signifie qu'elle se met à jour automatiquement pour rester synchronisée avec l'arborescence DOM sans avoir à rappeler document.getElementsByTagName ().</p>
 
 <h2 id="Syntaxe" name="Syntaxe">Syntaxe</h2>
 
@@ -29,72 +29,72 @@ translation_of: Web/API/Document/getElementsByTagName
 
 <h2 id="Exemple" name="Exemple">Exemple</h2>
 
-<p><span id="result_box" lang="fr"><span>Dans l'exemple suivant, <code>getElementsByTagName()</code> commence à partir d'un élément parent particulier et effectue une recherche descendante récursive dans le DOM à partir de cet élément parent, en créant une collection de tous les éléments descendants qui correspondent au paramètre de <code>name</code>.</span> <span>Cela démontre à la fois <code>document.getElementsByTagName()</code> et son homologue {{domxref ("Element.getElementsByTagName ()")}}, qui lance la recherche sur un élément spécifique dans l'arbre DOM.</span></span></p>
+<p>Dans l'exemple suivant, <code>getElementsByTagName()</code> commence à partir d'un élément parent particulier et effectue une recherche descendante récursive dans le DOM à partir de cet élément parent, en créant une collection de tous les éléments descendants qui correspondent au paramètre de <code>name</code>. Cela démontre à la fois <code>document.getElementsByTagName()</code> et son homologue {{domxref ("Element.getElementsByTagName ()")}}, qui lance la recherche sur un élément spécifique dans l'arbre DOM.</p>
 
-<p><span id="result_box" lang="fr"><span>Cliquer sur les boutons utilise <code>getElementsByTagName()</code> pour compter les éléments de paragraphe descendant d'un parent particulier (le document lui-même ou l'un des éléments {{HTMLElement ("div")}} imbriqués).</span></span></p>
+<p>Cliquer sur les boutons utilise <code>getElementsByTagName()</code> pour compter les éléments de paragraphe descendant d'un parent particulier (le document lui-même ou l'un des éléments {{HTMLElement ("div")}} imbriqués).</p>
 
-<pre class="brush:html line-numbers  language-html"><code class="language-html"><span class="doctype token">&lt;!DOCTYPE html&gt;</span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>html</span> <span class="attr-name token">lang</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>en<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>head</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>meta</span> <span class="attr-name token">charset</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>UTF-8<span class="punctuation token">"</span></span> <span class="punctuation token">/&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>title</span><span class="punctuation token">&gt;</span></span>getElementsByTagName example<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>title</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span><span class="punctuation token">&gt;</span></span><span class="language-javascript script token">
-    <span class="keyword token">function</span> <span class="function token">getAllParaElems</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="keyword token">var</span> allParas <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementsByTagName</span><span class="punctuation token">(</span><span class="string token">'p'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-      <span class="keyword token">var</span> num <span class="operator token">=</span> allParas<span class="punctuation token">.</span>length<span class="punctuation token">;</span>
-      <span class="function token">alert</span><span class="punctuation token">(</span><span class="string token">'There are '</span> <span class="operator token">+</span> num <span class="operator token">+</span> <span class="string token">' paragraph in this document'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
+<pre class="brush:html line-numbers  language-html"><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8" /&gt;
+  &lt;title&gt;getElementsByTagName example&lt;/title&gt;
+  &lt;script&gt;
+    function getAllParaElems() {
+      var allParas = document.getElementsByTagName('p');
+      var num = allParas.length;
+      alert('There are ' + num + ' paragraph in this document');
+    }
 
-    <span class="keyword token">function</span> <span class="function token">div1ParaElems</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="keyword token">var</span> div1 <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">'div1'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-      <span class="keyword token">var</span> div1Paras <span class="operator token">=</span> div1<span class="punctuation token">.</span><span class="function token">getElementsByTagName</span><span class="punctuation token">(</span><span class="string token">'p'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-      <span class="keyword token">var</span> num <span class="operator token">=</span> div1Paras<span class="punctuation token">.</span>length<span class="punctuation token">;</span>
-      <span class="function token">alert</span><span class="punctuation token">(</span><span class="string token">'There are '</span> <span class="operator token">+</span> num <span class="operator token">+</span> <span class="string token">' paragraph in #div1'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
+    function div1ParaElems() {
+      var div1 = document.getElementById('div1');
+      var div1Paras = div1.getElementsByTagName('p');
+      var num = div1Paras.length;
+      alert('There are ' + num + ' paragraph in #div1');
+    }
 
-    <span class="keyword token">function</span> <span class="function token">div2ParaElems</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="keyword token">var</span> div2 <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">'div2'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-      <span class="keyword token">var</span> div2Paras <span class="operator token">=</span> div2<span class="punctuation token">.</span><span class="function token">getElementsByTagName</span><span class="punctuation token">(</span><span class="string token">'p'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-      <span class="keyword token">var</span> num <span class="operator token">=</span> div2Paras<span class="punctuation token">.</span>length<span class="punctuation token">;</span>
-      <span class="function token">alert</span><span class="punctuation token">(</span><span class="string token">'There are '</span> <span class="operator token">+</span> num <span class="operator token">+</span> <span class="string token">' paragraph in #div2'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="punctuation token">}</span>
-  </span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>head</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>body</span><span class="language-css style-attr token"><span class="attr-name token"> <span class="attr-name token">style</span></span><span class="punctuation token">="</span><span class="attr-value token"><span class="property token">border</span><span class="punctuation token">:</span> solid green <span class="number token">3</span>px</span><span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>Some outer text<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>Some outer text<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
+    function div2ParaElems() {
+      var div2 = document.getElementById('div2');
+      var div2Paras = div2.getElementsByTagName('p');
+      var num = div2Paras.length;
+      alert('There are ' + num + ' paragraph in #div2');
+    }
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body style="border: solid green 3px"&gt;
+  &lt;p&gt;Some outer text&lt;/p&gt;
+  &lt;p&gt;Some outer text&lt;/p&gt;
 
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>div1<span class="punctuation token">"</span></span><span class="language-css style-attr token"><span class="attr-name token"> <span class="attr-name token">style</span></span><span class="punctuation token">="</span><span class="attr-value token"><span class="property token">border</span><span class="punctuation token">:</span> solid blue <span class="number token">3</span>px</span><span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>Some div1 text<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>Some div1 text<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>Some div1 text<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
+  &lt;div id="div1" style="border: solid blue 3px"&gt;
+    &lt;p&gt;Some div1 text&lt;/p&gt;
+    &lt;p&gt;Some div1 text&lt;/p&gt;
+    &lt;p&gt;Some div1 text&lt;/p&gt;
 
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>div2<span class="punctuation token">"</span></span><span class="language-css style-attr token"><span class="attr-name token"> <span class="attr-name token">style</span></span><span class="punctuation token">="</span><span class="attr-value token"><span class="property token">border</span><span class="punctuation token">:</span> solid red <span class="number token">3</span>px</span><span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>Some div2 text<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>Some div2 text<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
+    &lt;div id="div2" style="border: solid red 3px"&gt;
+      &lt;p&gt;Some div2 text&lt;/p&gt;
+      &lt;p&gt;Some div2 text&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
 
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>Some outer text<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>Some outer text<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
+  &lt;p&gt;Some outer text&lt;/p&gt;
+  &lt;p&gt;Some outer text&lt;/p&gt;
 
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>button</span> <span class="attr-name token">onclick</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>getAllParaElems();<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-    show all p elements in document<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>button</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span> <span class="punctuation token">/&gt;</span></span>
+  &lt;button onclick="getAllParaElems();"&gt;
+    show all p elements in document&lt;/button&gt;&lt;br /&gt;
 
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>button</span> <span class="attr-name token">onclick</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>div1ParaElems();<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-    show all p elements in div1 element<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>button</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>br</span> <span class="punctuation token">/&gt;</span></span>
+  &lt;button onclick="div1ParaElems();"&gt;
+    show all p elements in div1 element&lt;/button&gt;&lt;br /&gt;
 
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>button</span> <span class="attr-name token">onclick</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>div2ParaElems();<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-    show all p elements in div2 element<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>button</span><span class="punctuation token">&gt;</span></span>
+  &lt;button onclick="div2ParaElems();"&gt;
+    show all p elements in div2 element&lt;/button&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>body</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>html</span><span class="punctuation token">&gt;</span></span></code></pre>
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
 
 <h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Notes</h2>
 
-<p><span id="result_box" lang="fr"><span>Lorsqu'elle est appelée sur un document HTML, <code>getElementsByTagName()</code> classe son argument avant de continuer.</span> <span>Cela n'est pas souhaitable lorsque vous essayez de faire correspondre des éléments camelCase SVG dans un sous-arbre dans un document HTML.</span> <span>{{Domxref ("document.getElementsByTagNameNS ()")}} est utile dans ce cas.</span> <span>Voir aussi {{Bug (499656)}}.</span><br>
+<p>Lorsqu'elle est appelée sur un document HTML, <code>getElementsByTagName()</code> classe son argument avant de continuer. Cela n'est pas souhaitable lorsque vous essayez de faire correspondre des éléments camelCase SVG dans un sous-arbre dans un document HTML. {{Domxref ("document.getElementsByTagNameNS ()")}} est utile dans ce cas. Voir aussi {{Bug (499656)}}.<br>
  <br>
- <span><code>document.getElementsByTagName()</code> est similaire à {{domxref ("element.getElementsByTagName ()")}}, sauf que sa recherche englobe tout le document.</span></span></p>
+ <code>document.getElementsByTagName()</code> est similaire à {{domxref ("element.getElementsByTagName ()")}}, sauf que sa recherche englobe tout le document.</p>
 
 <h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Spécifications</h2>
 

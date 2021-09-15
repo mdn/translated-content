@@ -32,22 +32,22 @@ translation_of: Web/API/Node/nextSibling
 
 <h2 id="Exemple" name="Exemple">Exemple</h2>
 
-<pre class="brush:html line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>div-01<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Here is div-01<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>div-02<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Here is div-02<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
+<pre class="brush:html line-numbers  language-html"><code class="language-html">&lt;div id="div-01"&gt;Here is div-01&lt;/div&gt;
+&lt;div id="div-02"&gt;Here is div-02&lt;/div&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>text/javascript<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="language-javascript script token">
-<span class="keyword token">var</span> el <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">'div-01'</span><span class="punctuation token">)</span><span class="punctuation token">.</span>nextSibling<span class="punctuation token">,</span>
-    i <span class="operator token">=</span> <span class="number token">1</span><span class="punctuation token">;</span>
+&lt;script type="text/javascript"&gt;
+var el = document.getElementById('div-01').nextSibling,
+    i = 1;
 
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span><span class="string token">'Siblings of div-01:'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+console.log('Siblings of div-01:');
 
-<span class="keyword token">while</span> <span class="punctuation token">(</span>el<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>i <span class="operator token">+</span> <span class="string token">'. '</span> <span class="operator token">+</span> el<span class="punctuation token">.</span>nodeName<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  el <span class="operator token">=</span> el<span class="punctuation token">.</span>nextSibling<span class="punctuation token">;</span>
-  i<span class="operator token">++</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
+while (el) {
+  console.log(i + '. ' + el.nodeName);
+  el = el.nextSibling;
+  i++;
+}
 
-</span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span>
+&lt;/script&gt;
 
 /**************************************************
   Ce qui suit est écrit sur la console pendant le chargement:

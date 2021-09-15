@@ -5,7 +5,7 @@ translation_of: Web/API/AnalyserNode/smoothingTimeConstant
 ---
 <p>{{ APIRef("Web Audio API") }}</p>
 
-<p>La propriété <strong><code>smoothingTimeConstant</code></strong> de l'interface {{ domxref("AnalyserNode") }} est un nombre flottant à double précision qui représente <span lang="fr"><span class="hps">une</span><span class="hps"> </span><span class="hps">moyenne</span> </span>entre le buffer courant et le buffer précédent<span lang="fr"><span> - elle sert à lisser</span></span> la transition entre les valeurs.</p>
+<p>La propriété <strong><code>smoothingTimeConstant</code></strong> de l'interface {{ domxref("AnalyserNode") }} est un nombre flottant à double précision qui représente une moyenne entre le buffer courant et le buffer précédent - elle sert à lisser la transition entre les valeurs.</p>
 
 <p>La valeur est <code>0.8</code> par défaut; elle doit être comprise entre <code>0</code> et <code>1</code>. Lorsqu'elle vaut 0, aucune moyenne n'est effectuée, tandis que la valeur 1 signifie que le chevauchement entre le buffer en cours et le buffer précédent est conséquent lors du calcul des valeurs, ce qui a pour effet d'adoucir le changement lors des appels {{domxref("AnalyserNode.getFloatFrequencyData")}}/{{domxref("AnalyserNode.getByteFrequencyData")}}.</p>
 
