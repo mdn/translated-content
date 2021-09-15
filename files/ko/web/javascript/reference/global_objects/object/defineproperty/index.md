@@ -7,90 +7,77 @@ tags:
   - Method
   - Object
   - Reference
+browser-compat: javascript.builtins.Object.defineProperty
 translation_of: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>Object.defineProperty()</strong></code> 정적 메서드는 객체에 직접 새로운 속성을 정의하거나 이미 존재하는 속성을 수정한 후, 그 객체를 반환합니다.</p>
+**`Object.defineProperty()`** 정적 메서드는 객체에 새로운 속성을 직접 정의하거나 이미 존재하는 속성을 수정한 후, 해당 객체를 반환합니다.
 
-<div class="blockIndicator note">
-<p><strong>참고:</strong> <code>defineProperty</code>는 {{jsxref("Object")}} 인스턴스가 아니라 생성자에서 바로 호출해야 합니다.</p>
-</div>
+{{EmbedInteractiveExample("pages/js/object-defineproperty.html")}}
 
-<div>{{EmbedInteractiveExample("pages/js/object-defineproperty.html")}}</div>
+## 구문
 
+```js
+Object.defineProperty(obj, prop, descriptor)
+```
 
+### 매개변수
 
-<h2 id="구문">구문</h2>
+- `obj`
+  - : 속성을 정의할 객체.
+- `prop`
+  - : 새로 정의하거나 수정하려는 속성의 이름 또는 {{jsxref("Symbol")}}.
+- `descriptor`
+  - : 새로 정의하거나 수정하려는 속성을 기술하는 객체.
 
-<pre class="syntaxbox"><code>Object.defineProperty(<var>obj</var>, <var>prop</var>, <var>descriptor</var>)</code></pre>
+### 반환 값
 
-<h3 id="매개변수">매개변수</h3>
+`obj` 객체.
 
-<dl>
- <dt><code>obj</code></dt>
- <dd>속성을 정의할 객체.</dd>
- <dt><code>prop</code></dt>
- <dd>새로 정의하거나 수정하려는 속성의 이름 또는 {{jsxref("Symbol")}}.</dd>
- <dt><code>descriptor</code></dt>
- <dd>새로 정의하거나 수정하려는 속성을 기술하는 객체.</dd>
-</dl>
+## 설명
 
-<h3 id="반환_값">반환 값</h3>
+`defineProperty` 메서드를 사용하면 객체의 속성을 세밀하게 추가하거나 수정할 수 있습니다. 할당을 통해 속성을 추가하는 일반적인 방법으로 추가한 속성은 객체의 속성을 열거({{jsxref("Statements/for...in", "for...in")}} 반복문 또는 {{jsxref("Object.keys")}} 메서드)할 때 노출되며, 원하는대로 값을 변경하고 {{jsxref("Operators/delete", "delete")}} 연산자로 삭제할 수도 있습니다. `defineProperty`를 사용하면 이런 기본 동작까지도 상세하게 조절할 수 있습니다. `Object.defineProperty()`로 추가한 속성은 기본적으로 불변하며 열거 불가능합니다.
 
-<p>주어진 대상 <code>obj</code>.</p>
+속성 서술자(`descriptor`)는 데이터 서술자(data descriptors)와 접근자 서술자(accessor descriptors) 두 가지 형식을 취할 수 있습니다. **데이터 서술자**는 값을 가지는 속성을 기술할 때 사용합니다. **접근자 서술자**는 접근자(getter)-설정자(setter) 함수를 한 쌍으로 가지는 속성을 기술할 때 사용합니다. 서술자는 두 유형 중 하나여야 하며, 두 유형을 동시에 나타낼 수는 없습니다.
 
-<h2 id="설명">설명</h2>
+데이터 서술자와 접근자 서술자는 모두 객체로, 다음의 선택적 키를 서로 공유합니다.
 
-<p><code>defineProperty</code>는 객체의 속성을 정교하게 추가하거나 수정할 수 있습니다. 할당을 통해 속성을 추가하는 일반적인 방법을 사용하면 속성 열거({{jsxref("Statements/for...in", "for...in")}} 반복문이나 {{jsxref("Object.keys")}} 메서드)를 통해 노출되어 값을 변경하거나 {{jsxref("Operators/delete", "delete")}} 연산자로 삭제할 수 있습니다. <code>defineProperty</code>를 사용하면 이런 부분을 상세하게 조절할 수 있습니다. <code>Object.defineProperty()</code>로 추가한 속성은 기본적으로 불변합니다.</p>
+> **참고:** 아래에서 설명하는 **기본 값**은 `Object.defineProperty()`로 정의한 속성의 기본 동작을 의미합니다.
 
-<p>속성 서술자는 객체로 나타내며 데이터 서술자(data descriptors)와 접근자 서술자(accessor descriptors)의 두 가지 유형을 갖습니다. 데이터 서술자는 값을 가지는 속성으로, 덮어쓰거나 쓸 수 없습니다. 접근자 서술자는 접근자(getter)-설정자(setter) 한 쌍을 가지는 속성입니다. 서술자는 두 유형 중 하나여야 하며, 동시에 두 유형일 수는 없습니다.</p>
+- `configurable`
+  - : 속성의 값을 변경할 수 있고, 객체에서 삭제할 수도 있으면 `true`입니다. **기본 값은 `false`입니다.**
+- `enumerable`
+  - : 속성이 객체의 속성 열거 시 노출되면 `true`입니다. **기본 값은 `false`입니다.**
 
-<p>데이터 서술자와 접근자 서술자 모두 객체이며 다음과 같은 키를 공유합니다.</p>
+**데이터 서술자**는 다음의 키를 선택적으로 포함할 수 있습니다.
 
-<dl>
- <dt><code>configurable</code></dt>
- <dd>이 속성의 값을 변경할 수 있고, 대상 객체에서 삭제할 수도 있다면 <code>true</code>.<br>
- 기본값은<strong> </strong><code>false</code>.</dd>
- <dt><code>enumerable</code></dt>
- <dd>이 속성이 대상 객체의 속성 열거 시 노출된다면 <code>true</code>.<br>
- 기본값은<strong> </strong><code>false</code>.</dd>
-</dl>
+- `value`
+  - : 속성에 연관된 값입니다. 유효한 JavaScript 값(숫자, 객체, 함수 등)은 모두 사용할 수 있습니다. **기본 값은 {{jsxref("undefined")}}입니다.**
+- `writable`
+  - : {{jsxref("Operators/Assignment_Operators", "할당 연산자", "", 1)}}로 속성의 값을 바꿀 수 있으면 `true`입니다. **기본 값은 `false`입니다.**
 
-<p>데이터 서술자는 다음 키를 선택사항으로 가집니다.</p>
+**접근자 서술자**는 다음 키를 선택사항으로 가집니다.
 
-<dl>
- <dt><code>value</code></dt>
- <dd>속성에 연관된 값. 아무 유효한 JavaScript 값(숫자, 객체, 함수 등)이나 가능합니다.<br>
- 기본값은 {{jsxref("undefined")}}</dd>
- <dt><code>writable</code></dt>
- <dd>{{jsxref("Operators/Assignment_Operators", "할당 연산자", "", 1)}}로 속성의 값을 바꿀 수 있다면 <code>true</code>.<br>
- 기본값은<strong> </strong><code>false</code>.</dd>
-</dl>
+- `get`
+  - : 속성의 접근자로 사용할 함수입니다. 접근자가 없으면 {{jsxref("undefined")}}입니다. 이 속성에 접근하면, 접근할 때 사용한 객체(속성의 주인 객체와 다를 수 있음)를 이 함수의 `this`로 설정하고, 매개변수 없이 호출한 뒤 그 반환 값을 이 속성의 값으로 취급합니다. **기본 값은 {{jsxref("undefined")}}입니다.**
+- `set`
+  - : 속성의 설정자로 사용할 함수입니다. 설정자가 없으면 {{jsxref("undefined")}}입니다. 이 속성에 값을 할당하면, 할당할 때 사용한 객체를 이 함수의 `this`로 설정하고, 한 개의 매개변수(할당 중인 값)로 호출합니다. **기본 값은 {{jsxref("undefined")}}입니다.**
 
-<p>접근자 서술자는 다음 키를 선택사항으로 가집니다.</p>
+`value`, `writable`, `get`, `set` 키를 모두 지니고 있지 않은 서술자는 데이터 서술자로 간주합니다. 반면 `value` 또는 `writable`을 `get` 또는 `set` 키와 함께 가지고 있으면 오류가 발생합니다.
 
-<dl>
- <dt><code>get</code></dt>
- <dd>속성 접근자로 사용할 함수, 접근자가 없다면 {{jsxref("undefined")}}. 속성에 접근하면 이 함수를 매개변수 없이 호출하고, 그 반환값이 속성의 값이 됩니다. 이 때 <code>this</code> 값은 이 속성을 가진 객체(상속으로 인해 원래 정의한 객체가 아닐 수 있음)입니다.<br>
- 기본값은 {{jsxref("undefined")}}.</dd>
- <dt><code>set</code></dt>
- <dd>속성 설정자로 사용할 함수, 설정자가 없다면 {{jsxref("undefined")}}. 속성에 값을 할당하면 이 함수를 하나의 매개변수(할당하려는 값)로 호출합니다. 이 때 <code>this</code> 값은 이 속성을 가진 객체입니다.<br>
- 기본값은 {{jsxref("undefined")}}.</dd>
-</dl>
+위의 각 설정이 서술자의 자체 속성일 필요는 없으며, 서술자가 상속하는 속성도 고려합니다. 기본 값을 확실하게 보존하려면 {{jsxref("Object")}}를 먼저 동결하거나, 모든 설정을 직접 명시하거나, {{jsxref("Object.create", "Object.create(null)")}}을 사용해 서술자의 프로토타입이 {{jsxref("null")}}을 가리키도록 하세요.
 
-<p>서술자가 <code>value</code>, <code>writable</code>, <code>get</code>, <code>set</code> 키를 모두 지니고 있지 않으면 데이터 서술자로 간주합니다. 반면 <code>value</code> 또는 <code>writable</code>과 동시에 <code>get</code> 또는 <code>set</code> 키를 함께 가지고 있으면 오류가 발생합니다.</p>
-
-<p>각 설정값이 서술자 스스로의 속성일 필요는 없습니다. 따라서 서술자가 상속받은 값도 영향을 줍니다. 기본 설정값을 확실하게 보존하려면 {{jsxref("Object.prototype")}}을 먼저 동결하거나, 모든 속성을 명시적으로 지정하거나, {{jsxref("Object.create", "Object.create(null)")}}로 {{jsxref("null")}}을 가리키세요.</p>
-
-<pre class="brush: js">// __proto__ 사용
+```js
+// __proto__ 사용
 var obj = {};
 var descriptor = Object.create(null); // 상속받은 속성 없음
-// 기본으로 열거 불가, 설정 불가, 변경 불가
 descriptor.value = 'static';
+
+// 기본 값은 열거 불가, 설정 불가, 쓰기 불가
 Object.defineProperty(obj, 'key', descriptor);
 
-// 명시적
+// 기본 값 명시하기
 Object.defineProperty(obj, 'key', {
   enumerable: false,
   configurable: false,
@@ -108,28 +95,30 @@ function withValue(value) {
       value: null
     }
   );
-  d.value = value;
+
+  // 중복 할당 방지
+  if (d.value !== value) d.value = value;
+
   return d;
 }
+
 Object.defineProperty(obj, 'key', withValue('static'));
 
-// Object.freeze가 존재하면
-// 속성의 추가/제거 방지
+// 객체 동결을 사용할 수 있다면 프로토타입의 변형을 방지하기
 // (value, get, set, enumerable, writable, configurable)
 (Object.freeze || Object)(Object.prototype);
-</pre>
+```
 
-<h2 id="예제">예제</h2>
+## 예제
 
-<p>이진 플래그 형태로 <code>defineProperty</code>를 사용하는 예제는 <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty/Additional_examples">additional examples</a>에 있습니다.</p>
+### 속성 생성하기
 
-<h3 id="속성_생성하기">속성 생성하기</h3>
+`Object.defineProperty()`는 가리킨 속성이 객체에 존재하지 않으면 서술자를 사용해 속성을 객체에 새로 생성합니다. 서술자의 일부 항목은 생략 가능하며, 생략한 항목에는 기본 값을 사용합니다.
 
-<p><code>Object.defineProperty()</code>는 지정한 속성이 객체에 존재하지 않으면 주어진 서술자를 사용해 새로 생성합니다. 서술자의 일부 항목은 생략 가능하며, 생략한 항목은 기본값을 대신 사용합니다.</p>
+```js
+var o = {}; // 새로운 객체 생성
 
-<pre class="brush: js">var o = {}; // 새로운 객체 생성
-
-// 데이터 속성 서술자와 defineProperty로
+// 값 속성 서술자와 defineProperty로
 // 새로운 속성을 추가하는 예시
 Object.defineProperty(o, 'a', {
   value: 37,
@@ -157,26 +146,28 @@ o.b; // 38
 // o.b를 재정의하지 않는 이상
 // o.b의 값은 항상 bValue와 동일함
 
-// 두 가지를 혼용할 수 없음
+// 두 가지를 혼용할 수는 없음
 Object.defineProperty(o, 'conflict', {
   value: 0x9f91102,
   get: function() { return 0xdeadbeef; }
 });
 // TypeError 발생
 // value는 데이터 서술자에만,
-// get은 접근자 서술자에만 나타날 수 있음</pre>
+// get은 접근자 서술자에만 나타날 수 있음
+```
 
-<h3 id="속성_수정하기">속성 수정하기</h3>
+### 속성 수정하기
 
-<p><code>ObjectdefineProperty()</code>는 지정한 속성이 객체에 이미 존재하면 주어진 서술자와 객체의 기존 설정을 사용해 속성의 수정을 시도합니다. 기존 속성 서술자의 <code>configurable</code>이 <code>false</code>이면 속성이 "설정 불가능"하다고 말하고, 이 속성의 어떤 특성도 수정할 수 없습니다. 다만 쓰기 가능한 데이터 속성의 경우 값을 바꾸거나 <code>writable</code> 특성을 <code>true</code>에서 <code>false</code>로 바꾸는건 가능합니다. 속성이 설정 불가능한 경우 속성의 유형을 데이터에서 접근자, 또는 접근자에서 데이터로 바꿀 수 없습니다.</p>
+`ObjectdefineProperty()`는 가리킨 속성이 객체에 이미 존재하면, 주어진 서술자와 해당 속성의 기존 설정에 따라 속성의 수정을 시도합니다. 기존 속성의 `configurable` 특성이 `false`일 때, 해당 속성이 "설정 불가능"하다고 말합니다. 접근자 속성이 설정 불가능하면 속성의 모든 특성을 수정할 수 없습니다. 값 속성은 설정 불가능하더라도 `writable` 특성은 바꿀 수 있고, 쓰기 가능한 경우 `value`도 바꿀 수 있습니다. 설정 불가능한 속성의 유형을 변경(값 속성을 접근자 속성으로, 혹은 그 반대로)하는 것은 불가능합니다.
 
-<p>설정 불가능한 속성의 특성을 바꾸려고 시도하면 {{jsxref("TypeError")}}가 발생합니다. 단, 기존 값과 신규 값이 같은 경우, 혹은 쓰기 가능한 속성의 <code>value</code>와 <code>writable</code>은 수정할 수 있습니다.</p>
+설정 불가능한 속성의 특성을 바꾸려고 시도하면 {{jsxref("TypeError")}}가 발생합니다. 단, 기존 값이 신규 값과 같거나, 값 속성의 `value`(쓰기 가능할 때)와 `writable`을 수정하는 경우에는 오류가 발생하지 않습니다.
 
-<h4 id="writable_특성"><code>writable</code> 특성</h4>
+#### `writable` 특성
 
-<p>속성의 <code>writable</code> 특성이 <code>false</code>인 경우는 "쓰기 불가능"하여 다시 할당할 수 없습니다.</p>
+`writable` 특성이 `false`인 속성은 "쓰기 불가능"하여 다시 할당할 수 없습니다.
 
-<pre class="brush: js">var o = {}; // 새로운 객체 생성
+```js
+var o = {}; // 새로운 객체 생성
 
 Object.defineProperty(o, 'a', {
   value: 37,
@@ -185,9 +176,8 @@ Object.defineProperty(o, 'a', {
 
 console.log(o.a); // 37 기록
 o.a = 25; // 오류 발생하지 않음
-// 엄격 모드에서는 값이 같더라도
-// 오류가 발생함
-console.log(o.a); // 37 기록, 할당하지 못했음
+// 단, 엄격 모드에서는 값이 같더라도 오류가 발생했을 것
+console.log(o.a); // 37 기록, 25가 할당되지 않음
 
 // 엄격 모드
 (function() {
@@ -200,15 +190,16 @@ console.log(o.a); // 37 기록, 할당하지 못했음
   o.b = 3; // TypeError: "b" is read-only
   return o.b; // 윗줄이 없다면 2 반환
 }());
-</pre>
+```
 
-<p>위의 예제가 보이듯, 비엄격 모드에서는 쓰기 불가능한 속성의 값에 쓰려고 시도하면 값이 바뀌지 않고, 오류도 발생하지도 않습니다.</p>
+위의 예제에서 확인할 수 있듯, 엄격 모드가 아니라면 쓰기 불가능한 속성에 할당을 시도하면 값이 바뀌지도 않고, 오류가 발생하지도 않습니다.
 
-<h4 id="Enumerable_속성">Enumerable 속성</h4>
+#### `enumerable` 특성
 
-<p><code>enumerable</code>은 해당 속성이 {{jsxref("Statements/for...in", "for...in")}} 루프나 {{jsxref("Object.keys()")}} 에서 노출될지 말지를 정의한다.</p>
+`enumerable` 특성은 {{jsxref("Object.assign()")}}과 {{jsxref("Operators/Spread_syntax", "전개 연산자", "", 1)}}가 속성을 볼 수 있는지, 없는지를 결정합니다. 이에 더해, 비 {{jsxref("Symbol")}} 속성에 대해서는 {{jsxref("Statements/for...in", "for...in")}} 반복문과 {{jsxref("Object.keys()")}}에서의 노출 여부도 추가로 결정합니다.
 
-<pre class="brush: js">var o = {};
+```js
+var o = {};
 Object.defineProperty(o, 'a', {
   value: 1,
   enumerable: true
@@ -219,9 +210,9 @@ Object.defineProperty(o, 'b', {
 });
 Object.defineProperty(o, 'c', {
   value: 3
-}); // enumerable defaults to false
-o.d = 4; // enumerable defaults to true
-         // when creating a property by setting it
+}); // enumerable의 기본 값은 false
+o.d = 4; // 할당을 통한 생성 시에는
+         // enumerable의 기본 값이 true
 Object.defineProperty(o, Symbol.for('e'), {
   value: 5,
   enumerable: true
@@ -234,7 +225,7 @@ Object.defineProperty(o, Symbol.for('f'), {
 for (var i in o) {
   console.log(i);
 }
-// logs 'a' and 'd' (in undefined order)
+// 'a'와 'd' 기록
 
 Object.keys(o); // ['a', 'd']
 
@@ -252,13 +243,14 @@ p.c // undefined
 p.d // 4
 p[Symbol.for('e')] // 5
 p[Symbol.for('f')] // undefined
-</pre>
+```
 
-<h4 id="Configurable_속성">Configurable 속성</h4>
+#### `configurable` 특성
 
-<p><code>configurable</code> 은 객체에서 해당키가 제거될 수 있는지와 (<code>writable</code>을 제외한)기술속성을 변경할 수 있는지에 대한 여부를 동시에 통제한다.</p>
+`configurable` 특성은 객체에서 이 속성을 제거할 수 있는지, 그리고 속성의 (`value`와 `writable`을 제외한) 특성을 바꿀 수 있는지 결정합니다.
 
-<pre class="brush: js">var o = {};
+```js
+var o = {};
 Object.defineProperty(o, 'a', {
   get() { return 1; },
   configurable: false
@@ -266,36 +258,38 @@ Object.defineProperty(o, 'a', {
 
 Object.defineProperty(o, 'a', {
   configurable: true
-}); // throws a TypeError
+}); // TypeError
 Object.defineProperty(o, 'a', {
   enumerable: true
-}); // throws a TypeError
+}); // TypeError
 Object.defineProperty(o, 'a', {
   set() {}
-}); // throws a TypeError (set was undefined previously)
+}); // TypeError (set이 undefined였음)
 Object.defineProperty(o, 'a', {
   get() { return 1; }
-}); // throws a TypeError
-// (even though the new get does exactly the same thing)
+}); // TypeError
+// (형태는 같지만 서로 다른 함수이므로)
 Object.defineProperty(o, 'a', {
   value: 12
-}); // throws a TypeError
+}); // TypeError
+// (configurable이 false여도 value는 바꿀 수 있지만, 속성의 기존 get 접근자로 인해 변경 불가)
 
-console.log(o.a); // logs 1
-delete o.a; // Nothing happens
-console.log(o.a); // logs 1
-</pre>
+console.log(o.a); // 1 기록
+delete o.a; // 아무 일도 없음
+console.log(o.a); // 1 기록
+```
 
-<p>o.a의 configurable 가 true라면, 위의 예외는 발생하지 않고 속성은 마지막에 제거되었을 것이다.</p>
+`o.a`의 `configurable`이 `true`였다면 오류가 발생하지도 않고, 마지막에 객체에서 삭제도 가능했을 것입니다.
 
-<h3 id="속성에_기본값_추가하기">속성에 기본값 추가하기</h3>
+### 속성 추가와 특성 기본 값
 
-<p>속성을 정의할 때 기본값을 제공하는 방식은 중요하다. 간단히 점구문을 이용해 할당한 값과 <code>Object.defineProperty</code>를 사용한 경우는 꽤 다르다. 아래 예를 보자.</p>
+속성 추가 시, 각 특성의 기본 값을 적용하는 방식을 중요하게 고려해야 합니다. 일반 속성 접근 구문(`o.a`)에 할당해 속성을 추가하는 것과, `Object.defineProperty()`를 사용해 추가하는 경우의 특성 기본 값은 아래 예제에서 보이듯 서로 다릅니다.
 
-<pre class="brush: js">var o = {};
+```js
+var o = {};
 
 o.a = 1;
-// 위의 표현은 아래와 같다:
+// 위의 할당은 아래와 같음
 Object.defineProperty(o, 'a', {
   value: 1,
   writable: true,
@@ -304,22 +298,23 @@ Object.defineProperty(o, 'a', {
 });
 
 
-// 만약 다음과 같이 표현한다면,
+// 반면...
 Object.defineProperty(o, 'a', { value: 1 });
-// 아래의 의미를 지니게 된다:
+// 위 경우 아래와 같음
 Object.defineProperty(o, 'a', {
   value: 1,
   writable: false,
   configurable: false,
   enumerable: false
 });
-</pre>
+```
 
-<h3 id="사용자_정의_Setters_와_Getters">사용자 정의 Setters 와 Getters</h3>
+### 사용자 정의 설정자와 접근자
 
-<p>아래의 예는 어떻게 스스로 변화를 기록해두는 객체를 만드는지 보여준다. <code>temperature</code> 속성의 값을 바꾸면 <code>archive</code> 배열에도 로그가 쌓인다.</p>
+아래 예제에서는 스스로 값의 변화를 기록하는 속성을 구현합니다. `temperature` 속성에 값을 할당할 때마다 `archive` 배열에 값이 추가됩니다.
 
-<pre class="brush: js">function Archiver() {
+```js
+function Archiver() {
   var temperature = null;
   var archive = [];
 
@@ -342,76 +337,115 @@ arc.temperature; // 'get!'
 arc.temperature = 11;
 arc.temperature = 13;
 arc.getArchive(); // [{ val: 11 }, { val: 13 }]
-</pre>
+```
 
-<h2 id="명세">명세</h2>
+다음 코드에서는, 접근자가 항상 같은 값을 반환합니다.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Status</th>
-   <th scope="col">Comment</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-15.2.3.6', 'Object.defineProperty')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>Initial definition. Implemented in JavaScript 1.8.5.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-object.defineproperty', 'Object.defineProperty')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-object.defineproperty', 'Object.defineProperty')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+```js
+var pattern = {
+    get() {
+        return '무엇을 할당해도 항상 같은 값을 반환합니다';
+    },
+    set() {
+        this.myname = '내 이름';
+    }
+};
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+function TestDefineSetAndGet() {
+    Object.defineProperty(this, 'myproperty', pattern);
+}
 
+var instance = new TestDefineSetAndGet();
+instance.myproperty = 'test';
+console.log(instance.myproperty);
+// 무엇을 할당해도 항상 같은 값을 반환합니다
 
+console.log(instance.myname); // 내 이름
+```
 
-<p>{{Compat("javascript.builtins.Object.defineProperty")}}</p>
+### 속성의 상속
 
-<h2 id="호환성_참고사항">호환성 참고사항</h2>
+접근자 속성이 상속될 경우, 자식 객체의 속성에 접근하고 수정할 때 부모의 속성 `get`과 `set` 메서드를 호출합니다. 아래와 같이, 두 메서드가 바깥 변수에 값을 저장할 경우 모든 객체 인스턴스가 값을 공유하게 됩니다.
 
-<h3 id="Redefining_the_length_property_of_an_Array_object">Redefining the <code>length</code> property of an <code>Array</code> object</h3>
+```js
+function myclass() {
+}
 
-<p>It is possible to redefine the {{jsxref("Array.length", "length")}} property of arrays, subject to the usual redefinition restrictions. (The {{jsxref("Array.length", "length")}} property is initially non-configurable, non-enumerable, and writable. Thus on an unaltered array it is possible to change the {{jsxref("Array.length", "length")}} property's value, or to make it non-writable. It is not allowed to change its enumerability or configurability, or if it is non-writable to change its value or writability.) However, not all browsers permit this redefinition.</p>
+var value;
+Object.defineProperty(myclass.prototype, "x", {
+  get() {
+    return value;
+  },
+  set(x) {
+    value = x;
+  }
+});
 
-<p>Firefox 4 through 22 will throw a {{jsxref("Global_Objects/TypeError", "TypeError")}} on any attempt whatsoever (whether permitted or not) to redefine the {{jsxref("Array.length", "length")}} property of an array.</p>
+var a = new myclass();
+var b = new myclass();
+a.x = 1;
+console.log(b.x); // 1
+```
 
-<p>Versions of Chrome which implement <code>Object.defineProperty()</code> in some circumstances ignore a length value different from the array's current {{jsxref("Array.length", "length")}} property. In some circumstances changing writability seems to silently not work (and not throw an exception). Also, relatedly, some array-mutating methods like {{jsxref("Array.prototype.push")}} don't respect a non-writable length.</p>
+이 문제는 값을 다른 속성에 저장해서 수정할 수 있습니다. `get`과 `set` 메서드에서 `this`는 속성에 접근하거나 수정할 때 사용하는 객체를 가리킵니다.
 
-<p>Versions of Safari which implement <code>Object.defineProperty()</code> ignore a <code>length</code> value different from the array's current {{jsxref("Array.length", "length")}} property, and attempts to change writability execute without error but do not actually change the property's writability.</p>
+```js
+function myclass() {
+}
 
-<p>Only Internet Explorer 9 and later, and Firefox 23 and later, appear to fully and correctly implement redefinition of the {{jsxref("Array.length", "length")}} property of arrays. For now, don't rely on redefining the {{jsxref("Array.length", "length")}} property of an array to either work, or to work in a particular manner. And even when you <em>can</em> rely on it, <a href="http://whereswalden.com/2013/08/05/new-in-firefox-23-the-length-property-of-an-array-can-be-made-non-writable-but-you-shouldnt-do-it/">there's really no good reason to do so</a>.</p>
+Object.defineProperty(myclass.prototype, "x", {
+  get() {
+    return this.stored_x;
+  },
+  set(x) {
+    this.stored_x = x;
+  }
+});
 
-<h3 id="Internet_Explorer_8_specific_notes">Internet Explorer 8 specific notes</h3>
+var a = new myclass();
+var b = new myclass();
+a.x = 1;
+console.log(b.x); // undefined
+```
 
-<p>Internet Explorer 8 implemented a <code>Object.defineProperty()</code> method that could <a class="external" href="http://msdn.microsoft.com/en-us/library/dd229916%28VS.85%29.aspx">only be used on DOM objects</a>. A few things need to be noted:</p>
+접근자 속성과 달리, 값 속성은 프로토타입이 아닌 객체 자체에 설정됩니다. 그러나 부모의 쓰기 불가능한 속성을 상속하는 경우 자식 객체에서도 값을 수정할 수 없습니다.
 
-<ul>
- <li>Trying to use <code>Object.defineProperty()</code> on native objects throws an error.</li>
- <li>Property attributes must be set to some values. <code>Configurable</code>, <code>enumerable</code> and <code>writable</code> attributes should all be set to <code>true</code> for data descriptor and <code>true</code> for <code>configurable</code>, <code>false</code> for <code>enumerable</code> for accessor descriptor.(?) Any attempt to provide other value(?) will result in an error being thrown.</li>
- <li>Reconfiguring a property requires first deleting the property. If the property isn't deleted, it stays as it was before the reconfiguration attempt.</li>
-</ul>
+```js
+function myclass() {
+}
 
-<h2 id="같이_보기">같이 보기</h2>
+myclass.prototype.x = 1;
+Object.defineProperty(myclass.prototype, "y", {
+  writable: false,
+  value: 1
+});
 
-<ul>
- <li><a href="/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties">Enumerability and ownership of properties</a></li>
- <li>{{jsxref("Object.defineProperties()")}}</li>
- <li>{{jsxref("Object.propertyIsEnumerable()")}}</li>
- <li>{{jsxref("Object.getOwnPropertyDescriptor()")}}</li>
- <li>{{jsxref("Object.prototype.watch()")}}</li>
- <li>{{jsxref("Object.prototype.unwatch()")}}</li>
- <li>{{jsxref("Operators/get", "get")}}</li>
- <li>{{jsxref("Operators/set", "set")}}</li>
- <li>{{jsxref("Object.create()")}}</li>
- <li><a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty/Additional_examples">Additional <code>Object.defineProperty</code> examples</a></li>
-</ul>
+var a = new myclass();
+a.x = 2;
+console.log(a.x); // 2
+console.log(myclass.prototype.x); // 1
+a.y = 2; // 무시, 엄격 모드에서는 오류
+console.log(a.y); // 1
+console.log(myclass.prototype.y); // 1
+```
+
+## 명세
+
+{{Specifications}}
+
+## 브라우저 호환성
+
+{{Compat}}
+
+## 같이 보기
+
+- [속성의 소유권과 열거 가능성](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- {{jsxref("Object.defineProperties()")}}
+- {{jsxref("Object.propertyIsEnumerable()")}}
+- {{jsxref("Object.getOwnPropertyDescriptor()")}}
+- {{jsxref("Object.prototype.watch()")}}
+- {{jsxref("Object.prototype.unwatch()")}}
+- {{jsxref("Operators/get", "get")}}
+- {{jsxref("Operators/set", "set")}}
+- {{jsxref("Object.create()")}}
+- {{jsxref("Reflect.defineProperty()")}}
