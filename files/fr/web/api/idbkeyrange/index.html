@@ -130,7 +130,7 @@ translation_of: Web/API/IDBKeyRange
 
 <p>Dans l'exemple qui suit, on montre comment utiliser un intervalle de clé. Ici, on déclare un objet <code>keyRangeValue</code> qui représente un intervalle pour les valeurs entre "A" et "F". On ouvre une transaction grâce à {{domxref("IDBTransaction")}}, on ouvre également un magasin d'objets puis un curseur avec la méthode {{domxref("IDBObjectStore.openCursor")}} pour lequel on indique que <code>keyRangeValue</code> est l'intervalle de clé à considérer. Cela signifie que le curseur récupèrera uniquement les enregistrements pour lesquels les clés sont contenues dans cet intervalle. Cet intervalle est fermé, il inclut les valeur "A" and "F" (on n'a pas indiqué que ces bornes étaient ouvertes). Si on avait utilisé <code>IDBKeyRange.bound("A", "F", true, true);</code>, l'intervalle serait ouvert et ne contiendrait pas "A" ou "F" mais uniquement les valeurs intermédiaires.</p>
 
-<pre class="brush: js notranslate">function displayData() {
+<pre class="brush: js">function displayData() {
   var keyRangeValue = IDBKeyRange.bound("A", "F");
 
   var transaction = db.transaction(['fThings'], 'readonly');

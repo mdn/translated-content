@@ -27,30 +27,30 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Pixel_manipulation_with_canvas
 
 <p>Par exemple, pour lire la valeur de la composante bleue d'un pixel situé en colonne 200, ligne 50  de l'image, vous pouvez faire ce qui suit :</p>
 
-<pre class="brush: js notranslate">composanteBleue = imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 2];</pre>
+<pre class="brush: js">composanteBleue = imageData.data[((50 * (imageData.width * 4)) + (200 * 4)) + 2];</pre>
 
 <p>Vous pouvez accéder à la taille en octets du tableau de pixels en lisant l'attribut <code>Uint8ClampedArray.length</code> :</p>
 
-<pre class="brush: js notranslate">var nbOctets = imageData.data.length;
+<pre class="brush: js">var nbOctets = imageData.data.length;
 </pre>
 
 <h2 id="Création_dun_objet_ImageData">Création d'un objet <code>ImageData</code></h2>
 
 <p>Pour créer un nouvel objet <code>ImageData</code> vierge, vous pouvez utiliser la méthode  {{domxref("CanvasRenderingContext2D.createImageData", "createImageData()")}}. Il existe deux versions de la méthode <code>createImageData() </code>:</p>
 
-<pre class="brush: js notranslate">var monImageData = ctx.createImageData(largeur, hauteur);</pre>
+<pre class="brush: js">var monImageData = ctx.createImageData(largeur, hauteur);</pre>
 
 <p>Cela crée un nouvel objet <code>ImageData</code> avec les dimensions spécifiées. Tous les pixels sont prédéfinis comme étant noirs transparents.</p>
 
 <p>Vous pouvez aussi créer un nouvel objet <code>ImageData</code> ayant les mêmes dimensions que celles de l'objet indiqué par <code>autreImageData</code>. Les pixels du nouvel objet sont tous prédéfinis comme étant noirs transparents. <strong>Cela ne copie pas les données d'image !</strong></p>
 
-<pre class="brush: js notranslate">var monImageData = ctx.createImageData(autreImageData);</pre>
+<pre class="brush: js">var monImageData = ctx.createImageData(autreImageData);</pre>
 
 <h2 id="Obtention_des_données_pixel_pour_un_contexte">Obtention des données pixel pour un contexte</h2>
 
 <p>Pour obtenir un objet  <code>ImageData</code> contenant une copie des données pixel pour un contexte de canevas, vous pouvez utiliser la méthode <code>getImageData()</code> :</p>
 
-<pre class="brush: js notranslate">var monImageData = ctx.getImageData(gauche, haut, largeur, hauteur);</pre>
+<pre class="brush: js">var monImageData = ctx.getImageData(gauche, haut, largeur, hauteur);</pre>
 
 <p>Cette méthode retourne un objet <code>ImageData</code> représentant les données pixel pour la zone du canevas dont les coins sont représentés par les points  (<code>left</code>,<code>top</code>) <em><code> (gauche,haut)</code></em>, (<code>left+width</code>, <code>top</code>) <em>(gauche+largeur, haut)</em>, (<code>left</code>, <code>top+height</code>)<em> (gauche, haut+hauteur)</em> et  (<code>left+width</code>, <code>top+height</code>) <em>(gauche+largeur, haut+hauteur)</em>. Les coordonnées sont spécifiées en unités d'espace de coordonnées du canevas.</p>
 
@@ -95,14 +95,14 @@ canvas.addEventListener('mousemove', pick);</code></pre>
 
 <p>Vous pouvez utiliser la méthode <a href="https://developer.mozilla.org/fr/docs/Web/API/CanvasRenderingContext2D/putImageData">putImageData() </a>pour peindre les données pixel dans un contexte :</p>
 
-<pre class="brush: js notranslate">ctx.putImageData(monImageData, dx, dy);
+<pre class="brush: js">ctx.putImageData(monImageData, dx, dy);
 </pre>
 
 <p>Les paramètres <code>dx</code> et <code>dy</code> indiquent les coordonnées système dans le contexte du coin supérieur gauche des données pixel qui doivent être peintes.</p>
 
 <p>Par exemple, pour peindre l'image entière représentée par <code>monImageData</code> dans le coin supérieur gauche du contexte, vous pouvez simplement faire ce qui suit :</p>
 
-<pre class="brush: js notranslate">ctx.putImageData(monImageData, 0, 0);
+<pre class="brush: js">ctx.putImageData(monImageData, 0, 0);
 </pre>
 
 <h3 id="Niveaux_de_gris_et_inversion_de_couleurs">Niveaux de gris et inversion de couleurs</h3>
@@ -116,7 +116,7 @@ canvas.addEventListener('mousemove', pick);</code></pre>
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js notranslate">var img = new Image();
+<pre class="brush: js">var img = new Image();
 img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
 img.onload = function() {
   dessiner(this);
@@ -164,7 +164,7 @@ function dessiner(img) {
 
 <p>Nous obtenons la position de la souris et recadrons une image de 5 pixels à gauche et au-dessus à 5 pixels à droite et en-dessous. Ensuite, nous copions celle-ci sur un autre canevas et redimensionnons l'image à la taille que nous voulons. Dans la zone de zoom, nous redimensionnons une zone de 10 × 10 pixels du canevas d'origine à 200 × 200.</p>
 
-<pre class="brush: js notranslate">zoomctx.drawImage(canvas,
+<pre class="brush: js">zoomctx.drawImage(canvas,
                   Math.abs(x - 5), Math.abs(y - 5),
                   10, 10, 0, 0, 200, 200);</pre>
 

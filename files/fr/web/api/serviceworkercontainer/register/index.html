@@ -22,7 +22,7 @@ translation_of: Web/API/ServiceWorkerContainer/register
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox notranslate"><em>serviceWorkerContainer</em>.register(<em>scriptURL</em>, <em>options</em>)
+<pre class="syntaxbox"><em>serviceWorkerContainer</em>.register(<em>scriptURL</em>, <em>options</em>)
   .then(function(<em>serviceWorkerRegistration</em>) { ... })</pre>
 
 <h3 id="Paramètres">Paramètres</h3>
@@ -50,7 +50,7 @@ translation_of: Web/API/ServiceWorkerContainer/register
 
 <p>L'exemple suivant utilise la valeur par défaut de la portée (en l'omettant). Le code du <code>ServiceWorker</code> dans ce cas, s'il est inclus dans <code>example.com/index.html</code>, contrôlera <code>example.com/index.html</code>, ainsi que les pages en dessous, comme <code>example.com/product/description.html</code>.</p>
 
-<pre class="brush: js notranslate">if ('serviceWorker' in navigator) {
+<pre class="brush: js">if ('serviceWorker' in navigator) {
   // Register a service worker hosted at the root of the
   // site using the default scope.
   navigator.serviceWorker.register('/sw.js').then(
@@ -69,7 +69,7 @@ translation_of: Web/API/ServiceWorkerContainer/register
 
 <p>Sinon, si ce code était inclus dans une page à <code>example.com/product/description.html</code>, avec le fichier Javascript résidant à <code>example.com/product/sw.js</code>, alors le service worker ne s'appliquerait qu'aux ressources sous <code>example.com /product</code>.</p>
 
-<pre class="brush: js notranslate">if ('serviceWorker' in navigator) {
+<pre class="brush: js">if ('serviceWorker' in navigator) {
   // declaring scope manually
   navigator.serviceWorker.register('/sw.js', { scope: './' }).then(
     (registration) =&gt; {
@@ -88,7 +88,7 @@ translation_of: Web/API/ServiceWorkerContainer/register
 
 <p>Le code suivant, s'il est inclus dans <code>example.com/index.html</code>, à la racine d'un site, ne s'appliquerait qu'aux ressources sous <code>example.com/product</code>.</p>
 
-<pre class="brush: js notranslate">if ('serviceWorker' in navigator) {
+<pre class="brush: js">if ('serviceWorker' in navigator) {
   // declaring scope manually
   navigator.serviceWorker.register('/sw.js', { scope: '/product/' }).then(
     (registration) =&gt; {

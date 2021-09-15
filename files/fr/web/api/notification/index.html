@@ -112,11 +112,11 @@ translation_of: Web/API/Notification
 
 <p>Supposons ce HTML de base:</p>
 
-<pre class="brush: html notranslate">&lt;button onclick="notifyMe()"&gt;Notifie moi !&lt;/button&gt;</pre>
+<pre class="brush: html">&lt;button onclick="notifyMe()"&gt;Notifie moi !&lt;/button&gt;</pre>
 
 <p>Il est possible d'envoyer une notification comme suit - nous présentons ici un ensemble de code assez détaillé et complet que vous pourriez utiliser si vous vouliez d'abord vérifier si les notifications sont prises en charge, puis vérifiez si l'autorisation a été accordée pour l'{{glossary("Origin","origine")}} actuelle d'envoyer des notifications, puis demander l'autorisation si nécessaire, avant d'envoyer une notification.</p>
 
-<pre class="brush: js notranslate">function notifyMe() {
+<pre class="brush: js">function notifyMe() {
   // Vérifions si le navigateur prend en charge les notifications
   if (!('Notification' in window)) {
     alert('Ce navigateur ne prend pas en charge la notification de bureau')

@@ -23,13 +23,13 @@ translation_of: Web/API/ServiceWorkerGlobalScope/onnotificationclick
 
 <h2 id="Syntaxe" style="line-height: 30px; font-size: 2.14285714285714rem;">Syntaxe</h2>
 
-<pre class="brush: js notranslate" style="font-size: 14px;">ServiceWorkerGlobalScope.onnotificationclick = function(NotificationEvent) { ... }
+<pre class="brush: js" style="font-size: 14px;">ServiceWorkerGlobalScope.onnotificationclick = function(NotificationEvent) { ... }
 ServiceWorkerGlobalScope.onnotificationclick = (NotificationEvent) =&gt; { ... }
 </pre>
 
 <h2 id="Exemple">Exemple</h2>
 
-<pre class="brush: js notranslate">self.onnotificationclick = (event) =&gt; {
+<pre class="brush: js">self.onnotificationclick = (event) =&gt; {
   console.log('On notification click: ', event.notification.tag)
   event.notification.close()
 

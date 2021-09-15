@@ -16,7 +16,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Optimizing_canvas
 
 <p>Si vous avez besoin d'ajouter un dessin complexe identique à chaque image rendue, préférez l'utilisation d'un canvas hors-champ, le rendre une fois (ou à chaque fois qu'il change) sur ce canvas, puis dessinez-le sur le canvas principal à chaque image rendue.</p>
 
-<pre class="brush: js notranslate">myEntity.offscreenCanvas = document.createElement("canvas");
+<pre class="brush: js">myEntity.offscreenCanvas = document.createElement("canvas");
 myEntity.offscreenCanvas.width = myEntity.width;
 myEntity.offscreenCanvas.height = myEntity.height;
 myEntity.offscreenContext = myEntity.offscreenCanvas.getContext("2d");
@@ -28,7 +28,7 @@ myEntity.render(myEntity.offscreenContext);
 
 <p>Un rendu de sous-pixel est opéré quand on dessine des objets sur un canvas sans valeur entière.</p>
 
-<pre class="brush: js notranslate">ctx.drawImage(myImage, 0.3, 0.5);
+<pre class="brush: js">ctx.drawImage(myImage, 0.3, 0.5);
 </pre>
 
 <p>Cela pousse le navigateur à faire des calculs supplémentaires pour créer un effet d'anti-crénelage. Pour empêcher cela, il faut s'assurer d'arrondir les coordonnées utilisées pour {{domxref("CanvasRenderingContext2D.drawImage", "drawImage()")}}.</p>
@@ -43,7 +43,7 @@ myEntity.render(myEntity.offscreenContext);
 
 <p>Par exemple, on peut créer un calque UI, dessiné au-dessus de tous les autres uniquement lorsque l'utilisateur accède à un menu. En dessous, un calque <em>jeu</em> où les entités du jeu sont souvent mises à jour. Et, à l'arrière, un calque de fond rarement modifié.</p>
 
-<pre class="brush: html notranslate">&lt;div id="stage"&gt;
+<pre class="brush: html">&lt;div id="stage"&gt;
   &lt;canvas id="ui-layer" width="480" height="320"&gt;&lt;/canvas&gt;
   &lt;canvas id="game-layer" width="480" height="320"&gt;&lt;/canvas&gt;
   &lt;canvas id="background-layer" width="480" height="320"&gt;&lt;/canvas&gt;
@@ -71,7 +71,7 @@ myEntity.render(myEntity.offscreenContext);
 
 <p><a href="/fr/docs/Web/CSS/CSS_Transforms/Utilisation_des_transformations_CSS">Les transformations CSS</a> sont plus rapides car elles utilisent le GPU. Le mieux est d'utiliser un canvas plus grand et de réduire sa taille. Pour Firefox OS, les dimensions sont de 480 x 320 px.</p>
 
-<pre class="brush: js notranslate">var scaleX = window.innerWidth / canvas.width;
+<pre class="brush: js">var scaleX = window.innerWidth / canvas.width;
 var scaleY = window.innerHeight / canvas.height;
 
 var scaleToFit = Math.min(scaleX, scaleY);
@@ -85,7 +85,7 @@ stage.style.transform = "scale(" + scaleToFit + ")";
 
 <p>Si le canvas n'a pas besoin de transparence, ajouter l'attribut <code>moz-opaque</code> dans la balise canvas. Cette information peut être utilisée par le navigateur pour optimiser le rendu.</p>
 
-<pre class="brush: html notranslate">&lt;canvas id="mycanvas" moz-opaque&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html">&lt;canvas id="mycanvas" moz-opaque&gt;&lt;/canvas&gt;</pre>
 
 <h3 id="Dautres_conseils">D'autres conseils</h3>
 

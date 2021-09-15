@@ -35,7 +35,7 @@ translation_of: Web/API/Window/message_event
 
 <p>Supposons qu'un script envoie un message à un contexte de navigation différent, tel qu'un autre <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code>, en utilisant un code comme celui-ci:</p>
 
-<pre class="brush: js notranslate">const targetFrame = window.top.frames[1];
+<pre class="brush: js">const targetFrame = window.top.frames[1];
 const targetOrigin = 'https://exemple.org';
 const windowMessageButton = document.querySelector('#window-message');
 
@@ -45,13 +45,13 @@ windowMessageButton.addEventListener('click', () =&gt; {
 
 <p>Le récepteur peut écouter le message en utilisant <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener()</a></code> avec un code comme celui-ci:</p>
 
-<pre class="brush: js notranslate">window.addEventListener('message', (event) =&gt; {
+<pre class="brush: js">window.addEventListener('message', (event) =&gt; {
     console.log(`Message reçu: ${event.data}`);
 });</pre>
 
 <p>Alternativement l'écouteur peut utiliser la propriété du gestionnaire d'événements <code><a href="/en-US/docs/Web/API/WindowEventHandlers/onmessage">onmessage</a></code>:</p>
 
-<pre class="brush: js notranslate">window.onmessage = (event) =&gt; {
+<pre class="brush: js">window.onmessage = (event) =&gt; {
     console.log(`Message reçu: ${event.data}`);
 };</pre>
 

@@ -14,12 +14,12 @@ translation_of: Web/API/FeaturePolicy/allowsFeature
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox notranslate">const listePermissions = <em>FeaturePolicy</em>.allowsFeature(&lt;nomDirective&gt;)
+<pre class="syntaxbox">const listePermissions = <em>FeaturePolicy</em>.allowsFeature(&lt;nomDirective&gt;)
 </pre>
 
 <p>ou</p>
 
-<pre class="syntaxbox notranslate">const listePermissions = <em>FeaturePolicy</em>.allowsFeature(&lt;nomDirective&gt;, &lt;origine&gt;)</pre>
+<pre class="syntaxbox">const listePermissions = <em>FeaturePolicy</em>.allowsFeature(&lt;nomDirective&gt;, &lt;origine&gt;)</pre>
 
 <h3 id="Paramètres">Paramètres</h3>
 
@@ -39,7 +39,7 @@ translation_of: Web/API/FeaturePolicy/allowsFeature
 
 <p>Cet exemple demande au document s'il lui est permis par Feature Policy d'utiliser l'API Camera (appareil photo). Notez que l'API Camera pourrait être restreinte par l'API Permissions si l'utilisateur n'a pas encore accordé la permission.</p>
 
-<pre class="brush: js notranslate">// D'abord, récupère le Feature Policy
+<pre class="brush: js">// D'abord, récupère le Feature Policy
 const featurePolicy = document.featurePolicy
 
 // Demande si la fonctionnalité est disponible

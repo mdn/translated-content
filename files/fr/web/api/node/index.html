@@ -211,7 +211,7 @@ translation_of: Web/API/Node
 
 <p>La fonction suivante parcourt de manière récursive tous les nœuds enfants d'un noeud et exécute une fonction de rappel sur eux (et sur le nœud parent lui-même).</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">function DOMComb (oParent, oCallback) {
+<pre class="brush: js line-numbers  language-js"><code class="language-js">function DOMComb (oParent, oCallback) {
   if (oParent.hasChildNodes()) {
     for (var oNode = oParent.firstChild; oNode; oNode = oNode.nextSibling) {
       DOMComb(oNode, oCallback);
@@ -222,7 +222,7 @@ translation_of: Web/API/Node
 
 <h4 id="Syntaxe">Syntaxe</h4>
 
-<pre class="syntaxbox notranslate">DOMComb(parentNode, callbackFunction);</pre>
+<pre class="syntaxbox">DOMComb(parentNode, callbackFunction);</pre>
 
 <h4 id="Description">Description</h4>
 
@@ -241,7 +241,7 @@ translation_of: Web/API/Node
 
 <p>L'exemple suivant envoie à la <code>console.log</code> le contenu texte du corps :</p>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">function printContent () {
+<pre class="brush: js line-numbers  language-js"><code class="language-js">function printContent () {
   if (this.nodeValue) { console.log(this.nodeValue); }
 }
 
@@ -251,14 +251,14 @@ onload = function () {
 
 <h3 id="Supprimer_tous_les_enfants_imbriqués_dans_un_nœud">Supprimer tous les enfants imbriqués dans un nœud</h3>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">Element.prototype.removeAll = function () {
+<pre class="brush: js line-numbers  language-js"><code class="language-js">Element.prototype.removeAll = function () {
   while (this.firstChild) { this.removeChild(this.firstChild); }
   return this;
 };</code></pre>
 
 <h4 id="Exemple_dutilisation">Exemple d'utilisation</h4>
 
-<pre class="brush: js line-numbers  language-js notranslate"><code class="language-js">/* ... an alternative to document.body.innerHTML = "" ... */
+<pre class="brush: js line-numbers  language-js"><code class="language-js">/* ... an alternative to document.body.innerHTML = "" ... */
 document.body.removeAll();</code></pre>
 
 <h2 id="Spécifications">Spécifications</h2>

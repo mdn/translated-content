@@ -46,16 +46,16 @@ Ne jamais boire de l'azote liquide.
 
 <h5 id="Exemple_1_-_Plus_petit_fichier_WebVTT">Exemple 1 - Plus petit fichier WebVTT</h5>
 
-<pre class="eval notranslate">WEBVTT
+<pre class="eval">WEBVTT
 </pre>
 
 <h5 id="Exemple_2_-_Simple_fichier_WebVTT_contenant_un_entête">Exemple 2 - Simple fichier WebVTT contenant un entête</h5>
 
-<pre class="eval notranslate">WEBVTT - Ce fichier ne possède pas de réplique.</pre>
+<pre class="eval">WEBVTT - Ce fichier ne possède pas de réplique.</pre>
 
 <h5 id="Exemple_3_-_Fichier_WebVTT_courant_avec_un_entête_et_des_répliques">Exemple 3 - Fichier WebVTT courant avec un entête et des répliques</h5>
 
-<pre class="eval notranslate">WEBVTT - Ce fichier possède des répliques.
+<pre class="eval">WEBVTT - Ce fichier possède des répliques.
 
 14
 00:01:14.815 --&gt; 00:01:18.114
@@ -117,11 +117,11 @@ NOTE Cette ligne est la dernière ligne du fichier
 
 <h5 id="Exemple_4_-_Simple_commentaire_WebVTT">Exemple 4 - Simple commentaire WebVTT</h5>
 
-<pre class="eval notranslate">NOTE Ceci est un simple commentaire</pre>
+<pre class="eval">NOTE Ceci est un simple commentaire</pre>
 
 <h5 id="Exemple_5_-_Multi-line_comment">Exemple 5 - Multi-line comment</h5>
 
-<pre class="eval notranslate">NOTE
+<pre class="eval">NOTE
 Un autre commentaire qui est
 coupé sur plusieurs lignes.
 
@@ -131,7 +131,7 @@ sur plusieurs lignes de cette façon.
 
 <h5 id="Exemple_6_-_Usage_commun_des_commentaires">Exemple 6 - Usage commun des commentaires</h5>
 
-<pre class="eval notranslate">WEBVTT - Traduction de ce film que j'aime
+<pre class="eval">WEBVTT - Traduction de ce film que j'aime
 
 NOTE
 Cette traduction a été faite par Kyle pour que
@@ -160,7 +160,7 @@ NOTE Cette dernière ligne n'est pas forcément bien traduite.
 
 <h3 id="Avec_du_CSS">Avec du CSS</h3>
 
-<pre class="brush: css notranslate">video::cue {
+<pre class="brush: css">video::cue {
   background-image: linear-gradient(to bottom, dimgray, lightgray);
   color: papayawhip;
 }
@@ -174,7 +174,7 @@ video::cue(b) {
 
 <p>The HTML snippet below actually handles displaying the media itself.</p>
 
-<pre class="brush: html notranslate">&lt;video controls autoplay src="video.webm"&gt;
+<pre class="brush: html">&lt;video controls autoplay src="video.webm"&gt;
  &lt;track default src="track.vtt"&gt;
 &lt;/video&gt;
 </pre>
@@ -217,7 +217,7 @@ crédit de transcription
 Transcrit par Célestes™
 </pre>
 
-<pre class="brush: css notranslate">::cue(#\31) { color: lime; }
+<pre class="brush: css">::cue(#\31) { color: lime; }
 ::cue(#crédit\ de\ transcription) { color: red; }</pre>
 
 <p>Positioning of text tracks is also supported, by including positioning information after the timings in a cue, as seen below (see {{anch("Cue settings")}} for more information):</p>
@@ -247,7 +247,7 @@ What are you waiting for?</pre>
 
 <h5 id="Exemple_7_-_Exemple_de_réplique">Exemple 7 - Exemple de réplique</h5>
 
-<pre class="eval notranslate">1 - Title Crawl
+<pre class="eval">1 - Title Crawl
 00:00:05.000 --&gt; 00:00:10.000 line:0 position:20% size:60% align:start
 Some time ago in a place rather distant....</pre>
 
@@ -257,11 +257,11 @@ Some time ago in a place rather distant....</pre>
 
 <h5 id="Example_8_-_Cue_identifier_from_Example_7">Example 8 - Cue identifier from Example 7</h5>
 
-<pre class="eval notranslate">1 - Title Crawl</pre>
+<pre class="eval">1 - Title Crawl</pre>
 
 <h5 id="Example_9_-_Common_usage_of_identifiers">Example 9 - Common usage of identifiers</h5>
 
-<pre class="eval notranslate">WEBVTT
+<pre class="eval">WEBVTT
 
 1
 00:00:22.230 --&gt; 00:00:24.606
@@ -332,20 +332,20 @@ Third
 
 <h5 id="Example_10_-_Basic_cue_timing_examples">Example 10 - Basic cue timing examples</h5>
 
-<pre class="eval notranslate">00:22.230 --&gt; 00:24.606
+<pre class="eval">00:22.230 --&gt; 00:24.606
 00:30.739 --&gt; 00:00:34.074
 00:00:34.159 --&gt; 00:35.743
 00:00:35.827 --&gt; 00:00:40.122</pre>
 
 <h5 id="Example_11_-_Overlapping_cue_timing_examples">Example 11 - Overlapping cue timing examples</h5>
 
-<pre class="eval notranslate">00:00:00.000 --&gt; 00:00:10.000
+<pre class="eval">00:00:00.000 --&gt; 00:00:10.000
 00:00:05.000 --&gt; 00:01:00.000
 00:00:30.000 --&gt; 00:00:50.000</pre>
 
 <h5 id="Example_12_-_Non-overlapping_cue_timing_examples">Example 12 - Non-overlapping cue timing examples</h5>
 
-<pre class="eval notranslate">00:00:00.000 --&gt; 00:00:10.000
+<pre class="eval">00:00:00.000 --&gt; 00:00:10.000
 00:00:10.000 --&gt; 00:01:00.581
 00:01:00.581 --&gt; 00:02:00.100
 00:02:01.000 --&gt; 00:02:01.000</pre>
@@ -556,7 +556,7 @@ Third
 
 <p>The first line demonstrates no settings. The second line might be used to overlay text on a sign or label. The third line might be used for a title. The last line might be used for an Asian language.</p>
 
-<pre class="eval notranslate">00:00:05.000 --&gt; 00:00:10.000
+<pre class="eval">00:00:05.000 --&gt; 00:00:10.000
 00:00:05.000 --&gt; 00:00:10.000 line:63% position:72% align:start
 00:00:05.000 --&gt; 00:00:10.000 line:0 position:20% size:60% align:start
 00:00:05.000 --&gt; 00:00:10.000 vertical:rt line:-1 align:end
@@ -629,7 +629,7 @@ Third
   <div>
   <h5 id="Example_12_-_Karaoke_style_text">Example 12 - Karaoke style text</h5>
 
-  <pre class="eval notranslate">1
+  <pre class="eval">1
 00:16.500 --&gt; 00:18.500
 When the moon &lt;00:17.500&gt;hits your eye
 
@@ -738,7 +738,7 @@ That's &lt;00:00:21.000&gt;amore
 
 <p>Constructor is the first point for starting the Cue which is defined using the default constructor VTTCue(startTime, endTime, text) where starting time, ending time and text for cue can be adjusted. After that we can set the region for that particular cue to which this cue belongs using cue.region. Vertical, horizontal, line, lineAlign, Position, positionAlign, text, size and Align can be used to alter the cue and its formation, just like we can alter the objects form, shape and visibility in HTML using CSS. But the VTTCue interface is within the WebVTT provides the vast range of adjustment variables which can be used directly to alter the Cue. Following interface can be used to expose WebVTT cues in DOM API:</p>
 
-<pre class="idl def notranslate">enum <dfn>AutoKeyword</dfn> { <dfn>"auto"</dfn> };
+<pre class="idl def">enum <dfn>AutoKeyword</dfn> { <dfn>"auto"</dfn> };
 enum <dfn>DirectionSetting</dfn> { <dfn>""</dfn> /* horizontal */, <dfn>"rl"</dfn>, <dfn>"lr"</dfn> };
 enum <dfn>LineAlignSetting</dfn> { <dfn>"start"</dfn>, <dfn>"center"</dfn>, <dfn>"end"</dfn> };
 enum <dfn>PositionAlignSetting</dfn> { <dfn>"line-left"</dfn>, <dfn>"center"</dfn>, <dfn>"line-right"</dfn>, <dfn>"auto"</dfn> };
@@ -764,7 +764,7 @@ interface <dfn>VTTCue</dfn> : <a href="https://html.spec.whatwg.org/multipage/em
 
 <p>The new keyword can be used for defining a new VTTRegion object which can then be used for containing the multiple cues. There are several properties of VTTRegion which are width, lines, regionAnchorX, RegionAnchorY, viewportAnchorX, viewportAnchorY and scroll that can be used to specify the look and feel of this VTT region. The interface code is given below which can be used to expose the WebVTT regions in DOM API:</p>
 
-<pre class="idl def notranslate">enum <dfn>ScrollSetting</dfn> { <dfn>""</dfn> /* none */, <dfn>"up"</dfn> };
+<pre class="idl def">enum <dfn>ScrollSetting</dfn> { <dfn>""</dfn> /* none */, <dfn>"up"</dfn> };
 [<a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttregion-vttregion" id="ref-for-dom-vttregion-vttregion-1">Constructor</a>]
 interface <dfn>VTTRegion</dfn> {
   attribute double <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttregion-width" id="ref-for-dom-vttregion-width-1">width</a>;

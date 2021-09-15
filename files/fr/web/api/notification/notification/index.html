@@ -48,7 +48,7 @@ translation_of: Web/API/Notification/Notification
 
 <p>Dans notre <a href="https://chrisdavidmills.github.io/emogotchi/">démo Emogotchi</a> (<a href="https://github.com/mdn/emogotchi">voir le code source</a>), nous exécutons une fonction <code>spawnNotification()</code> lorsque nous voulons déclencher une notification. La fonction reçoit des paramètres pour spécifier le corps, l'icône et le titre souhaités, puis elle crée l'objet <code>options</code> nécessaire et déclenche la notification à l'aide du constructeur <code>Notification()</code>.</p>
 
-<pre class="brush: js notranslate">function spawnNotification(body, icon, title) {
+<pre class="brush: js">function spawnNotification(body, icon, title) {
   const options = {
     body: body,
     icon: icon

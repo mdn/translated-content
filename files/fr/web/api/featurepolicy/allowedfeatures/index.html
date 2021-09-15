@@ -15,7 +15,7 @@ translation_of: Web/API/FeaturePolicy/allowedFeatures
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox notranslate">const permissions = <em>FeaturePolicy</em>.allowedFeatures()
+<pre class="syntaxbox">const permissions = <em>FeaturePolicy</em>.allowedFeatures()
 </pre>
 
 <h3 id="Paramètres">Paramètres</h3>
@@ -30,7 +30,7 @@ translation_of: Web/API/FeaturePolicy/allowedFeatures
 
 <p>L'exemple suivant affiche toutes les directives permises pour le présent document. Notez que ces fonctionnalités pourraient être restreintes par l'API Permissions, si l'utilisateur n'a pas encore accordé les droits correspondants.</p>
 
-<pre class="brush: js notranslate">// D'abord, récupère l'objet Feature Policy
+<pre class="brush: js">// D'abord, récupère l'objet Feature Policy
 const featurePolicy = document.featurePolicy
 
 // Puis demande la liste des foncitonnalités permises

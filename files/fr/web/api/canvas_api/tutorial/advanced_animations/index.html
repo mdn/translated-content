@@ -12,12 +12,12 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Advanced_animations
 
 <p>Nous allons utiliser une balle pour étudier les animations. Ainsi, Commençons par dessiner notre balle au sein du canevas.</p>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="600" height="300"&gt;&lt;/canvas&gt;
+<pre class="brush: html">&lt;canvas id="canvas" width="600" height="300"&gt;&lt;/canvas&gt;
 </pre>
 
 <p>Comme d'habitude, nous avons tout d'abord besoin de dessiner le contexte. Pour dessiner la balle, nous allons créer un objet <code>ball</code> contenant des propriétés et une méthode <code>draw()</code> afin de la placer sur le canevas.</p>
 
-<pre class="brush: js notranslate">var canvas = document.getElementById('canvas');
+<pre class="brush: js">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 var ball = {
@@ -42,7 +42,7 @@ ball.draw();</pre>
 
 <p>Maintenant que nous avons une balle, nous sommes prêts à ajouter une animation simple comme nous avons pu le voir dans le <a href="https://developer.mozilla.org/fr/docs/Tutoriel_canvas/Animations_basiques">dernier chapitre</a> de ce tutoriel. Une fois encore, {{domxref("window.requestAnimationFrame()")}} nous aide à contrôler l'animation. Il est possible de déplacer la balle en ajoutant un vecteur de vitesse à la position. Pour chaque "frame", nous avons aussi {{domxref("CanvasRenderingContext2D.clearRect", "clear", "", 1)}} <em>(nettoyé)</em> les canvas pour supprimer les anciens cercles des "frames" précédents.</p>
 
-<pre class="brush: js; highlight:[8,9,24,25] notranslate">var canvas = document.getElementById('canvas');
+<pre class="brush: js; highlight:[8,9,24,25]">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var raf;
 
@@ -85,7 +85,7 @@ ball.draw();
 
 <p>Si aucun test de collision n'est effectué, notre balle sort hors du canevas rapidement. Nous avons ici besoin de vérifier si les positions <code>x</code> et <code>y</code> de la balle sont hors des dimensions du canevas et si c'est le cas, d'inverser la direction des vecteurs de vitesse. Pour faire cela, nous ajoutons les vérifications suivantes à la méthode <code>draw</code> :</p>
 
-<pre class="brush: js notranslate">if (ball.y + ball.vy &gt; canvas.height || ball.y + ball.vy &lt; 0) {
+<pre class="brush: js">if (ball.y + ball.vy &gt; canvas.height || ball.y + ball.vy &lt; 0) {
   ball.vy = -ball.vy;
 }
 if (ball.x + ball.vx &gt; canvas.width || ball.x + ball.vx &lt; 0) {
@@ -152,7 +152,7 @@ ball.draw();</pre>
 
 <p>Afin d'obtenir un mouvement plus réel, vous pouvez jouer sur la vitesse, par exemple :</p>
 
-<pre class="brush: js notranslate">ball.vy *= .99;
+<pre class="brush: js">ball.vy *= .99;
 ball.vy += .25;</pre>
 
 <p>Ceci ralentit la vitesse verticale à chaque rendu d'image de sorte que la balle va rebondir de moins en moins haut.</p>
@@ -217,7 +217,7 @@ ball.draw();</pre>
 
 <p>Jusqu'à maintenant, nous avons utilisé la méthode {{domxref("CanvasRenderingContext2D.clearRect", "clearRect")}} pour effacer les images précédentes. En la remplaçant par la méthode {{domxref("CanvasRenderingContext2D.fillRect", "fillRect")}} et en utilisant un remplissage semi-transparent, on obtient un effet de traînée.</p>
 
-<pre class="brush: js notranslate">ctx.fillStyle = 'rgba(255,255,255,0.3)';
+<pre class="brush: js">ctx.fillStyle = 'rgba(255,255,255,0.3)';
 ctx.fillRect(0,0,canvas.width,canvas.height);</pre>
 
 <h6 id="troisième_demo">Troisième démo</h6>
@@ -283,7 +283,7 @@ ball.draw();</pre>
 
 <pre class="brush: html hidden">&lt;canvas id="canvas" style="border: 1px solid" width="600" height="300"&gt;&lt;/canvas&gt;</pre>
 
-<pre class="brush: js notranslate">var canvas = document.getElementById('canvas');
+<pre class="brush: js">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var raf;
 var running = false;

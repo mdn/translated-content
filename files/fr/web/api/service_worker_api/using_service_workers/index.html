@@ -65,7 +65,7 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 
 <h4 id="sync">sync</h4>
 
-<pre class="brush: js notranslate">try {
+<pre class="brush: js">try {
   var value = myFunction();
   console.log(value);
 } catch(err) {
@@ -74,7 +74,7 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 
 <h4 id="async">async</h4>
 
-<pre class="brush: js notranslate">myFunction().then(function(value) {
+<pre class="brush: js">myFunction().then(function(value) {
   console.log(value);
   }).catch(function(err) {
   console.log(err);
@@ -90,7 +90,7 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 <p><strong>Remarque </strong>: la mise en place d'un véritable service worker utiliserait la mise en cache et onfetch plutôt que l'API obsolète XMLHttpRequest. Ces fonctionnalités ne sont pas utilisées ici afin de se concentrer sur la compréhension des promesses.</p>
 </div>
 
-<pre class="brush: js notranslate">function imgLoad(url) {
+<pre class="brush: js">function imgLoad(url) {
   return new Promise(function(resolve, reject) {
     var request = new XMLHttpRequest();
     request.open('GET', url);
@@ -116,7 +116,7 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 
 <p>Lorsqu'on appelle la fonction <code>imgLoad()</code>, on l'appelle avec l'url de l'image à charger, comme on pourrait s'en douter, mais le reste du code est un peu différent :</p>
 
-<pre class="brush: js notranslate">var body = document.querySelector('body');
+<pre class="brush: js">var body = document.querySelector('body');
 var myImage = new Image();
 
 imgLoad('myLittleVader.jpg').then(function(response) {
@@ -163,7 +163,7 @@ imgLoad('myLittleVader.jpg').then(function(response) {
 
 <p>Le premier bloc de code dans le fichier JavaScript de l'application — <code>app.js</code> — se présente comme suit. C'est le point d'entrée pour utiliser des service workers.</p>
 
-<pre class="brush: js notranslate">if ('serviceWorker' in navigator) {
+<pre class="brush: js">if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw-test/sw.js', { scope: '/sw-test/' }).then(function(reg) {
     // registration worked
     console.log('Registration succeeded. Scope is ' + reg.scope);
@@ -215,7 +215,7 @@ imgLoad('myLittleVader.jpg').then(function(response) {
 
 <p>Commençons cette section par l'examen d'un exemple de code — c'est le <a href="https://github.com/mdn/sw-test/blob/gh-pages/sw.js#L1-L18">premier bloc présent dans le service worker</a>:</p>
 
-<pre class="brush: js notranslate">this.addEventListener('install', function(event) {
+<pre class="brush: js">this.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v1').then(function(cache) {
       return cache.addAll([
@@ -257,7 +257,7 @@ imgLoad('myLittleVader.jpg').then(function(response) {
 
 <p>On peut attacher un écouteur de l'événement <code>fetch</code> au service worker, puis appeler la méthode <code>respondWith()</code> sur l'événement pour détourner les réponses HTTP et les mettre à jour en leur jetant un sort particulier.</p>
 
-<pre class="brush: js notranslate">this.addEventListener('fetch', function(event) {
+<pre class="brush: js">this.addEventListener('fetch', function(event) {
   event.respondWith(
     // la magie opère ici
   );
@@ -265,7 +265,7 @@ imgLoad('myLittleVader.jpg').then(function(response) {
 
 <p>On peut déjà simplement répondre avec la ressource en cache dont l'url correspond à celle de la requête réseau, dans chaque cas :</p>
 
-<pre class="brush: js notranslate">this.addEventListener('fetch', function(event) {
+<pre class="brush: js">this.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request)
   );
@@ -279,29 +279,29 @@ imgLoad('myLittleVader.jpg').then(function(response) {
  <li>
   <p>Le constructeur <code>{{domxref("Response.Response","Response()")}}</code> permet de créer une réponse personnalisée. Dans cet exemple, une chaîne de caractères est simplement retournée :</p>
 
-  <pre class="brush: js notranslate">new Response('Hello from your friendly neighbourhood service worker!');</pre>
+  <pre class="brush: js">new Response('Hello from your friendly neighbourhood service worker!');</pre>
  </li>
  <li>
   <p>La <code>Response</code> plus complexe ci-dessous montre qu'il est possible de passer optionnellement un ensemble d'en-têtes avec la réponse, émulant ainsi des en-têtes de réponse HTTP standards. Ici, on signale au navigateur quel est le type de contenu de notre réponse artificielle :</p>
 
-  <pre class="brush: js notranslate">new Response('&lt;p&gt;Hello from your friendly neighbourhood service worker!&lt;/p&gt;', {
+  <pre class="brush: js">new Response('&lt;p&gt;Hello from your friendly neighbourhood service worker!&lt;/p&gt;', {
   headers: { 'Content-Type': 'text/html' }
 })</pre>
  </li>
  <li>
   <p>Si une correspondance n'est pas trouvée en cache, on peut indiquer simplement au navigateur d'effectuer ({{domxref("GlobalFetch.fetch","fetch")}}) la requête réseau par défaut pour cette ressource, afin de récupérer cette nouvelle ressource sur le réseau si disponible :</p>
 
-  <pre class="brush: js notranslate">fetch(event.request)</pre>
+  <pre class="brush: js">fetch(event.request)</pre>
  </li>
  <li>
   <p>Si une correspondance n'est pas trouvée en cache et que le réseau n'est pas disponible, on peut alors faire correspondre la requête avec une page de rechange par défaut en guise de réponse en utilisant {{domxref("CacheStorage.match","match()")}}, comme suit :</p>
 
-  <pre class="brush: js notranslate">caches.match('/fallback.html');</pre>
+  <pre class="brush: js">caches.match('/fallback.html');</pre>
  </li>
  <li>
   <p>On peut récupérer beaucoup d'informations à propos de chaque requête en interrogeant les paramètres de l'objet {{domxref("Request")}} retourné par {{domxref("FetchEvent")}} :</p>
 
-  <pre class="brush: js notranslate">event.request.url
+  <pre class="brush: js">event.request.url
 event.request.method
 event.request.headers
 event.request.body</pre>
@@ -314,7 +314,7 @@ event.request.body</pre>
 
 <p>Heureusement, la structure des service workers qui repose sur les promesses rend triviale la gestion des alternatives à une situation de succès. On pourrait faire ceci :</p>
 
-<pre class="brush: js notranslate">this.addEventListener('fetch', function(event) {
+<pre class="brush: js">this.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request).catch(function() {
       return fetch(event.request);
@@ -326,7 +326,7 @@ event.request.body</pre>
 
 <p>Plus malin encore, on pourrait non seulement récupérer la ressource à partir du serveur, mais aussi la sauvegarder dans le cache afin que les requêtes ultérieures pour cette ressource puissent être disponibles aussi en mode déconnecté. Cela signifierait que toute image supplémentaire ajoutée à la galerie Star Wars pourrait être récupérée par l'application et mise en cache. Le code suivant illustre ce mécanisme :</p>
 
-<pre class="brush: js notranslate">this.addEventListener('fetch', function(event) {
+<pre class="brush: js">this.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request).catch(function() {
       return fetch(event.request).then(function(response) {
@@ -345,7 +345,7 @@ event.request.body</pre>
 
 <p>Le dernier problème qui demeure alors est l'échec de la requête au cas où elle n'a aucune correspondance dans le cache et que le réseau n'est pas disponible. Fournir un document de rechange par défaut permet quoiqu'il arrive, à l'utilisateur de récupérer quelque chose :</p>
 
-<pre class="brush: js notranslate">this.addEventListener('fetch', function(event) {
+<pre class="brush: js">this.addEventListener('fetch', function(event) {
   event.respondWith(
     caches.match(event.request).catch(function() {
       return fetch(event.request).then(function(response) {
@@ -366,7 +366,7 @@ event.request.body</pre>
 
 <p>Ce code utilise un chaînage de promesses plus standard et retourne la réponse au document sans avoir à attendre que <code>caches.open()</code> soit résolue :</p>
 
-<pre class="brush: js notranslate">this.addEventListener('fetch', function(event) {
+<pre class="brush: js">this.addEventListener('fetch', function(event) {
   var response;
   event.respondWith(caches.match(event.request).catch(function() {
     return fetch(event.request);
@@ -387,7 +387,7 @@ event.request.body</pre>
 
 <p>On souhaite mettre à jour l'écouteur d'événement <code>install</code> dans le nouveau service worker de la façon suivante (à noter le nouveau numéro de version) :</p>
 
-<pre class="brush: js notranslate">this.addEventListener('install', function(event) {
+<pre class="brush: js">this.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('v2').then(function(cache) {
       return cache.addAll([
@@ -415,7 +415,7 @@ event.request.body</pre>
 
 <p>Les promesses passées à <code>waitUntil()</code> bloqueront les autres événements jusqu'à réalisation complète, ainsi on a l'assurance que l'opération de nettoyage aura été menée à terme au moment où surviendra le premier événement <code>fetch</code> du nouveau cache.</p>
 
-<pre class="brush: js notranslate">this.addEventListener('activate', function(event) {
+<pre class="brush: js">this.addEventListener('activate', function(event) {
   var cacheWhitelist = ['v2'];
 
   event.waitUntil(

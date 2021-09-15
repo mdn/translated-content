@@ -69,7 +69,7 @@ translation_of: Web/API/IDBIndex
 
 <p>Finalement, On itère sur tous les enregistrements pour en insérer les données dans un tableau HTML. En utilisant la méthode {{domxref("IDBIndex.openCursor")}} qui travaille de la même façon que la méthode {{domxref("IDBObjectStore.openCursor")}} de l'{{domxref("IDBObjectStore","accès")}} au magasin d'objet sauf que les enregistrements sont renvoyés dans l'ordre de l'index et non celui du magasin d'objet.</p>
 
-<pre class="brush:js notranslate">function displayDataByIndex() {
+<pre class="brush:js">function displayDataByIndex() {
   tableEntry.innerHTML = '';
 
   //ouvre un transaction

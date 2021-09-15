@@ -22,7 +22,7 @@ translation_of: Web/API/Notification/close
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox notranslate">Notification.close()</pre>
+<pre class="syntaxbox">Notification.close()</pre>
 
 <h3 id="Paramètres">Paramètres</h3>
 
@@ -36,7 +36,7 @@ translation_of: Web/API/Notification/close
 
 <p>Dans l'extrait de code suivant, nous avons une simple fonction qui, lorsqu'elle est appelée, crée un objet <code>options</code>, puis de celui-ci une nouvelle notification. À la fin de la fonction, elle appelle également <code>close()</code> dans une fonction {{domxref ("EventTarget.addEventListener", "addEventListener ()")}} pour supprimer la notification lorsque le contenu pertinent a été lu sur la page Web.</p>
 
-<pre class="brush:js notranslate">function spawnNotification(theBody, theIcon, theTitle) {
+<pre class="brush:js">function spawnNotification(theBody, theIcon, theTitle) {
   const options = {
     body: theBody,
     icon: theIcon

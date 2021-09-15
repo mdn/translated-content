@@ -44,7 +44,7 @@ translation_of: Web/API/Window/rejectionhandled_event
 
 <p>Vous pouvez utiliser l'événement <code>rejectionhandled</code> pour consigner les promesses rejetées sur la console, ainsi que les raisons pour lesquelles elles ont été rejetées :</p>
 
-<pre class="brush: js notranslate">window.addEventListener("rejectionhandled", event =&gt; {
+<pre class="brush: js">window.addEventListener("rejectionhandled", event =&gt; {
   console.log("Promise rejected; reason: " + event.reason);
 }, false);
 </pre>

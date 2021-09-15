@@ -94,11 +94,11 @@ translation_of: Web/API/BaseAudioContext
 
 <p>Déclaration de context audio de base:</p>
 
-<pre class="brush: js notranslate">var audioCtx = new AudioContext();</pre>
+<pre class="brush: js">var audioCtx = new AudioContext();</pre>
 
 <p>Variante de nagivateur croisé:</p>
 
-<pre class="brush: js notranslate">var AudioContext = window.AudioContext || window.webkitAudioContext;
+<pre class="brush: js">var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
 var oscillatorNode = audioCtx.createOscillator();

@@ -45,7 +45,7 @@ translation_of: Web/API/ServiceWorker
 
 <p>Ce fragment de code provient d'<a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/registration-events/index.html">un exemple d'enregistrement d'évènement pour le service worker</a> (<a href="https://googlechrome.github.io/samples/service-worker/registration-events/">démo en direct</a>). Le code écoute tout changement du {{domxref("ServiceWorker.state")}} et retourne sa valeur.</p>
 
-<pre class="brush: js notranslate">if ('serviceWorker' in navigator) {
+<pre class="brush: js">if ('serviceWorker' in navigator) {
   navigator.serviceWorker
     .register('service-worker.js', {
       scope: './'

@@ -16,7 +16,7 @@ translation_of: Web/API/Notifications_API
 
 <p>Sur les plates-formes prises en charge, l'affichage d'une notification système implique généralement deux choses. Tout d'abord, l'utilisateur doit accorder l'autorisation à l' {{glossary("Origin","origine")}} actuelle pour afficher les notifications système, ce qui est généralement effectué lorsque l'application ou le site s'initialise, à l'aide de la méthode {{domxref ("Notification.requestPermission()")}}. Cela doit être fait en réponse à un geste de l'utilisateur, tel que cliquer sur un bouton, par exemple:</p>
 
-<pre class="brush: js notranslate">btn.addEventListener('click', () =&gt; {
+<pre class="brush: js">btn.addEventListener('click', () =&gt; {
   let promise = Notification.requestPermission()
   // wait for permission
 })</pre>

@@ -103,7 +103,7 @@ translation_of: Web/API/WorkerGlobalScope
 
 <p>Vous n'accéderez pas à <code>WorkerGlobalScope</code> directement dans votre code; cependant, ses propriétés et méthodes sont héritées par des portées globales plus spécifiques telles que {{domxref ("DedicatedWorkerGlobalScope")}} et {{domxref ("SharedWorkerGlobalScope")}}. Par exemple, vous pouvez importer un autre script dans le worker et imprimer le contenu de l'objet <code>navigator</code> de l'étendue du worker en utilisant les deux lignes suivantes:</p>
 
-<pre class="brush: js notranslate">importScripts('foo.js');
+<pre class="brush: js">importScripts('foo.js');
 console.log(navigator);</pre>
 
 <div class="note">

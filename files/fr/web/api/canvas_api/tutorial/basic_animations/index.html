@@ -65,7 +65,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Animations_basiques
 
 <p>Cette exemple anime un petit modèle de notre système terrestre.</p>
 
-<pre class="brush: js notranslate">var sun = new Image();
+<pre class="brush: js">var sun = new Image();
 var moon = new Image();
 var earth = new Image();
 function init(){
@@ -122,7 +122,7 @@ init();
 
 <p>Cette exemple dessine une horloge animée qui affiche l'heure actuelle.</p>
 
-<pre class="brush: js notranslate">function clock(){
+<pre class="brush: js">function clock(){
   var now = new Date();
   var ctx = document.getElementById('canvas').getContext('2d');
   ctx.save();
@@ -229,7 +229,7 @@ window.requestAnimationFrame(clock);</pre>
 
 <p>Dans cet exemple, un panorama défile de la gauche vers la droite et recommence. Nous utilisons une <a href="http://commons.wikimedia.org/wiki/File:Capitan_Meadows,_Yosemite_National_Park.jpg" title="http://commons.wikimedia.org/wiki/File:Capitan_Meadows,_Yosemite_National_Park.jpg">image du parc Yosemite National</a> récupérée sur Wikimedia, vous pouvez utiliser une autre image de votre choix qui est plus grande que le canevas.</p>
 
-<pre class="brush: js notranslate">var img = new Image();
+<pre class="brush: js">var img = new Image();
 
 // Variables utilisateur - les personnaliser pour changer l'image qui défile, ses
 // directions, et la vitesse.
@@ -318,7 +318,7 @@ function draw() {
 
 <p>En dessous, vous trouvez l'élément {{HTMLElement("canvas")}} avec l'image qui défile. Notez que les dimensions de largeur et de hauteur spécifiées doivent correspondre aux valeurs des variables <code>CanvasXZSize</code> et <code>CanvasYSize</code> dans le code JavaScript.</p>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="800" height="200"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html">&lt;canvas id="canvas" width="800" height="200"&gt;&lt;/canvas&gt;</pre>
 
 <p>{{EmbedLiveSample("Un_panorama_défilant_en_boucle", "830", "230")}}</p>
 

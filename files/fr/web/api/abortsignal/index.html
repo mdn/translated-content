@@ -41,7 +41,7 @@ translation_of: Web/API/AbortSignal
 
 <p>Lorsque la  <a href="https://developer.mozilla.org/fr/docs/Web/API/GlobalFetch/fetch">requête fetch</a> (<em>extraction</em>) est lancée, nous transmettons le paramètre <code>AbortSignal</code> en tant qu'option dans l'objet d'options de la requête (voir <code>{signal}</code> ci-dessous). Cela associe le signal et le contrôleur à la requête d'extraction et nous permet de l'annuler en appelant {{domxref("AbortController.abort()")}}, comme indiqué ci-dessous dans le second écouteur d'événements.</p>
 
-<pre class="brush: js notranslate">var controller = new AbortController();
+<pre class="brush: js">var controller = new AbortController();
 var signal = controller.signal;
 
 var downloadBtn = document.querySelector('.download');

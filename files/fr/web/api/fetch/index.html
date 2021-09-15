@@ -30,7 +30,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox notranslate">const <em>fetchResponsePromise</em> = Promise&lt;Response&gt; fetch(<em>entrée</em>[, <em>init</em>]);</pre>
+<pre class="syntaxbox">const <em>fetchResponsePromise</em> = Promise&lt;Response&gt; fetch(<em>entrée</em>[, <em>init</em>]);</pre>
 
 <h3 id="Paramètres">Paramètres</h3>
 
@@ -103,7 +103,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
 
 <p>Dans notre <a href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request">exemple de requête avec fetch</a> (voir <a href="http://mdn.github.io/fetch-examples/fetch-request/">cet exemple en direct</a>) nous créons une nouvelle {{domxref("Request")}} avec le constructeur correspondant, puis on l'envoie en appellant <code>fetch()</code>. Comme nous récupérons une image, nous utilisons la méthode {{domxref("Body.blob()")}} sur la réponse pour lui donner le bon type MIME pour qu'elle soit gérée correctement, puis l'on crée l'URL correspondant à cet objet et on l'affiche dans un élément {{htmlelement("img")}}.</p>
 
-<pre class="brush: js notranslate">const monImage = document.querySelector('img');
+<pre class="brush: js">const monImage = document.querySelector('img');
 
 let maRequete = new Request('fleurs.jpg');
 
@@ -121,7 +121,7 @@ fetch(maRequete)
 
 <p>Dans notre <a href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-with-init-then-request">exemple fetch avec initialisation et requête</a> (voir <a href="http://mdn.github.io/fetch-examples/fetch-with-init-then-request/">cet exemple en direct</a>) nous faisons la même chose à la différence que nous passons aussi un objet d'initalisation à la méthode <code>fetch</code> :</p>
 
-<pre class="brush: js notranslate">const monImage = document.querySelector('img');
+<pre class="brush: js">const monImage = document.querySelector('img');
 
 let mesEntetes = new Headers();
 mesEntetes.append('Content-Type', 'image/jpeg');
@@ -139,11 +139,11 @@ fetch(maRequete, monInit).then(function(reponse) {
 
 <p>Notez que vous pouvez aussi passer l'objet d'initialisation au constructeur de la requête pour obtenir le même effet, par exemple :</p>
 
-<pre class="brush: js notranslate">let maRequete = new Request('fleurs.jpg', monInit);</pre>
+<pre class="brush: js">let maRequete = new Request('fleurs.jpg', monInit);</pre>
 
 <p>Vous pouvez aussi utiliser un objet litéral comme en-têtes dans votre objet d'initalisation.</p>
 
-<pre class="brush: js notranslate">const monInit = { method: 'GET',
+<pre class="brush: js">const monInit = { method: 'GET',
                headers: {
                    'Content-Type': 'image/jpeg'
                },

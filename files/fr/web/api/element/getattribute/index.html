@@ -16,7 +16,7 @@ translation_of: Web/API/Element/getAttribute
 
 <h2 id="Syntaxe" name="Syntaxe">Syntaxe</h2>
 
-<pre class="eval notranslate"><em>let attribut</em> = element.getAttribute(<em>nom_attribut</em>)
+<pre class="eval"><em>let attribut</em> = element.getAttribute(<em>nom_attribut</em>)
 </pre>
 
 <p>où</p>
@@ -34,7 +34,7 @@ translation_of: Web/API/Element/getAttribute
 
 <p>Exemple de JavaScript :</p>
 
-<pre class="eval notranslate">const div1 = document.getElementById("div1");
+<pre class="eval">const div1 = document.getElementById("div1");
 //=&gt; &lt;div id="div1"&gt;Hi Champ!&lt;/div&gt;
 
 const attributID = div1.getAttribute("id");
@@ -58,12 +58,12 @@ cont alignement = div1.getAttribute("align");
 
 <p>Pour des raisons de sécurité, les <em>nonces</em> <a href="/fr/docs/Web/HTTP/CSP">CSP</a> des sources autres que des scripts, telles que les feuilles de style CSS, et les appels <code>.getAttribute("nonce")</code> sont interdits.</p>
 
-<pre class="brush: js example-bad notranslate">let nonce = script.getAttribute("nonce");
+<pre class="brush: js example-bad">let nonce = script.getAttribute("nonce");
 // renvoie une chaine vide</pre>
 
 <p>Plutôt que de tenter de lire le <em>nonce</em> via l’attribut, utilisez la propriété {{domxref("HTMLOrForeignElement/nonce", "nonce")}} :</p>
 
-<pre class="brush: js notranslate">let nonce = script.nonce;</pre>
+<pre class="brush: js">let nonce = script.nonce;</pre>
 
 <h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Spécifications</h2>
 

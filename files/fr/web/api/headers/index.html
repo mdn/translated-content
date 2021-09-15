@@ -81,7 +81,7 @@ translation_of: Web/API/Headers
 
 <p>Dans le fragment de code suivant, nous créons un nouvel Header en utilisant le contructeur <code>Headers()</code>, ajoutons un nouvel header à ce dernier en utilisant <code>append()</code>, puis retournons la valeur du header en utilisant <code>get()</code> :</p>
 
-<pre class="brush: js notranslate">var monHeader = new Headers();
+<pre class="brush: js">var monHeader = new Headers();
 
 monHeader.append('Content-Type', 'text/xml');
 monHeader.get('Content-Type') // doit retourner 'text/xml'
@@ -89,7 +89,7 @@ monHeader.get('Content-Type') // doit retourner 'text/xml'
 
 <p>La même chose peut être accomplie en passant par un array d'array  un littéral d'objet au constructeur.</p>
 
-<pre class="brush: js notranslate">var mesHeaders = new Headers({
+<pre class="brush: js">var mesHeaders = new Headers({
     'Content-Type': 'text/xml'
 });
 
