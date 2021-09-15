@@ -7,27 +7,25 @@ tags:
   - Attribute
 translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute
 ---
-<h3 id="Description" name="Description">説明</h3>
+<h3 id="Description">説明</h3>
 
-<p><span class="seoSummary"><code><a href="https://www.w3.org/TR/wai-aria/#aria-describedby">aria-describedby</a></code> 属性は、オブジェクトを説明する要素の ID を示すために使用されます。 これは、ウィジェットまたはグループとそれらを記述するテキストの間の関係を確立するために使用されます。 これは、<code><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby</a></code> と非常によく似ています。 ラベルはオブジェクトの本質を表し、説明はユーザーが必要とする可能性のある詳細を提供します。</span></p>
+<p><span class="seoSummary"><a href="https://www.w3.org/TR/wai-aria/#aria-describedby" rel="external"><code>aria-describedby</code></a> 属性は、オブジェクトを説明する要素の ID を示すために使用されます。これは、ウィジェットまたはグループとそれらを記述するテキストの間の関係を確立するために使用されます。これは、<code><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby</a></code> と非常によく似ています。 ラベルはオブジェクトの本質を表し、説明はユーザーが必要とする可能性のある詳細を提供します。</span></p>
 
 <p><code>aria-describedby</code> 属性はフォーム要素にのみ使用されるものではありません。 静的テキストをウィジェット、要素のグループ、ペイン、見出しを持つ領域、定義等々に関連付けるためにも使用されます。 以下の{{ anch("Examples","例") }}のセクションでは、これらの場合に属性を使用する方法の詳細について説明します。</p>
 
 <p>この属性は、一般的な HTML フォーム要素で使用できます。 ARIA の <code>role</code> が割り当てられている要素に限定されるものではありません。</p>
 
-<h3 id="Value" name="Value">値</h3>
+<h3 id="Value">値</h3>
 
 <p>スペースで区切られた要素の ID のリスト</p>
 
-<h3 id='Possible_effects_on_user_agents_and_assistive_technology""' name='Possible_effects_on_user_agents_and_assistive_technology""'>ユーザーエージェントと支援技術への影響</h3>
+<h3 id="Possible_effects_on_user_agents_and_assistive_technology">ユーザーエージェントと支援技術への影響</h3>
 
-<p> </p>
+<div class="note"><strong>注:</strong> 支援技術がこの手法をどのように扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の 1 つで、したがって規範的ではありません。</div>
 
-<div class="note"><strong>注:</strong> 支援技術がこの手法をどのように扱うべきかについての意見は異なる場合があります。 上記の情報は、これらの意見の1つで、したがって規範的ではありません。</div>
+<h3 id="Examples">例</h3>
 
-<h3 id="Examples" name="Examples">例</h3>
-
-<h4 id="Example_1_Application_Landmark_Descriptions" name="Example_1_Application_Landmark_Descriptions">例 1: アプリケーションのランドマークの説明</h4>
+<h4 id="Example_1_Application_Landmark_Descriptions">例 1: アプリケーションのランドマークの説明</h4>
 
 <p>以下の例では、導入の段落でカレンダーアプリケーションについて説明します。 <code>aria-describedby</code> は、段落をアプリケーションのコンテナに関連付けるために使用されます。</p>
 
@@ -42,7 +40,7 @@ translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedb
 &lt;/div&gt;
 </pre>
 
-<h4 id="Example_2_A_Close_Button" name="Example_2_A_Close_Button">例 2: 閉じるボタン</h4>
+<h4 id="Example_2_A_Close_Button">例 2: 閉じるボタン</h4>
 
 <p>以下の例では、ダイアログの [閉じる] ボタンとして機能するリンクが、ドキュメントの別の場所で説明されています。 <code>aria-describedby</code> 属性は、説明をリンクに関連付けるために使用されます。</p>
 
@@ -55,34 +53,27 @@ translation_of: Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedb
 メインページに戻ります&lt;/div&gt;
 </pre>
 
-<h3 id="Working_Examples" name="Working_Examples">動作する例</h3>
-
-<ul>
- <li><code>aria-describedby</code> を使用した<a href="http://www.oaa-accessibility.org/examplep/checkbox1/">チェックボックスの例</a></li>
- <li><code>aria-describedby</code> を使用した<a href="http://www.oaa-accessibility.org/examplep/tooltip1/">ツールチップの例</a></li>
-</ul>
-
-<h3 id="Notes" name="Notes">注</h3>
+<h3 id="Notes">注</h3>
 
 <ul>
  <li><code>aria-describedby</code> 属性は、外部リソースの記述を参照するようには設計されていません。 ID であるため、同じ DOM ドキュメント内の要素を参照する必要があります。</li>
 </ul>
 
-<h3 id="Used_by_ARIA_roles" name="Used_by_ARIA_roles">ARIA ロールによって使用される</h3>
+<h3 id="Used_by_ARIA_roles">ARIA ロールによって使用される</h3>
 
 <p>ベースマークアップのすべての要素</p>
 
-<h3 id="Related_ARIA_techniques" name="Related_ARIA_techniques">関連する ARIA 技術</h3>
+<h3 id="Related_ARIA_techniques">関連する ARIA 技術</h3>
 
 <ul>
  <li><a href="/ja/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute">aria-labelledby 属性の使用</a></li>
 </ul>
 
-<h3 id="Compatibility" name="Compatibility">互換性</h3>
+<h3 id="Compatibility">互換性</h3>
 
 <p class="comment">TBD: 一般的な UA と AT 製品の組み合わせに関するサポート情報を追加する</p>
 
-<h3 id="Additional_resources" name="Additional_resources">その他のリソース</h3>
+<h3 id="Additional_resources">その他のリソース</h3>
 
 <ul>
  <li><a href="https://www.w3.org/TR/wai-aria/#aria-describedby">aria-describedby の WAI-ARIA 仕様</a>（英語）</li>
