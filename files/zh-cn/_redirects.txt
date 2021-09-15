@@ -1232,9 +1232,11 @@
 /zh-CN/docs/Web/API/AudioContext/onstatechange	/zh-CN/docs/Web/API/BaseAudioContext/onstatechange
 /zh-CN/docs/Web/API/AudioContext/sampleRate	/zh-CN/docs/Web/API/BaseAudioContext/sampleRate
 /zh-CN/docs/Web/API/AudioContext/state	/zh-CN/docs/Web/API/BaseAudioContext/state
+/zh-CN/docs/Web/API/AudioNodeOptions	/zh-CN/docs/conflicting/Web/API/AudioNode
 /zh-CN/docs/Web/API/Blob.size	/zh-CN/docs/Web/API/Blob/size
 /zh-CN/docs/Web/API/Blob.slice	/zh-CN/docs/Web/API/Blob/slice
 /zh-CN/docs/Web/API/Blob.type	/zh-CN/docs/Web/API/Blob/type
+/zh-CN/docs/Web/API/ByteString	/zh-CN/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String
 /zh-CN/docs/Web/API/CSSStyleSheet.insertRule	/zh-CN/docs/Web/API/CSSStyleSheet/insertRule
 /zh-CN/docs/Web/API/CSS分页规则	/zh-CN/docs/Web/API/CSSPageRule
 /zh-CN/docs/Web/API/CanvasCaptureMediaStream	/zh-CN/docs/Web/API/CanvasCaptureMediaStreamTrack
@@ -1381,8 +1383,10 @@
 /zh-CN/docs/Web/API/Index	/zh-CN/docs/conflicting/Web/API
 /zh-CN/docs/Web/API/IndexedDB_API/IDBObjectStore	/zh-CN/docs/Web/API/IDBObjectStore
 /zh-CN/docs/Web/API/Intersection_Observer_API/点观察者API的时序元素可见性	/zh-CN/docs/Web/API/Intersection_Observer_API/Timing_element_visibility
+/zh-CN/docs/Web/API/KeyboardEvent/which	/zh-CN/docs/Web/API/UIEvent/which
 /zh-CN/docs/Web/API/Location.replace	/zh-CN/docs/Web/API/Location/replace
 /zh-CN/docs/Web/API/MediaStream.addTrack	/zh-CN/docs/Web/API/MediaStream/addTrack
+/zh-CN/docs/Web/API/MouseEvent/which	/zh-CN/docs/conflicting/Web/API/UIEvent/which
 /zh-CN/docs/Web/API/Navigator.battery	/zh-CN/docs/Web/API/Navigator/battery
 /zh-CN/docs/Web/API/Navigator.buildID	/zh-CN/docs/Web/API/Navigator/buildID
 /zh-CN/docs/Web/API/Navigator.cookieEnabled	/zh-CN/docs/Web/API/Navigator/cookieEnabled

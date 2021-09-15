@@ -15,17 +15,17 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Popups
 
 <p><img alt="" src="https://mdn.mozillademos.org/files/15747/page_action_popup.png" style="display: block; height: 282px; margin-left: auto; margin-right: auto; width: 350px;"></p>
 
-<p>ユーザーがボタンをクリックした時、ポップアップが表示されます。ポップアップの外をクリックすると、ポップアップは閉じます。ポップアップは、そこで実行しているスクリプトから <code><a href="https://developer.mozilla.org/ja/docs/Web/API/Window/close">window.close()</a></code> を呼ぶとプログラム的に閉じられます。しかし、拡張機能の JavaScript からプログラム的に開くことはできません。つまりユーザー操作への反応としてだけ開きます。</p>
+<p>ユーザーがボタンをクリックした時、ポップアップが表示されます。ポップアップの外をクリックすると、ポップアップは閉じます。ポップアップは、そこで実行しているスクリプトから <code><a href="/ja/docs/Web/API/Window/close">window.close()</a></code> を呼ぶとプログラム的に閉じられます。しかし、拡張機能の JavaScript からプログラム的に開くことはできません。つまりユーザー操作への反応としてだけ開きます。</p>
 
 <p><code>"_execute_browser_action"</code> と <code>"_execute_page_action"</code> ショートカットを使って、ポップアップを開くキーボードショートカットを定義できます。manifest.json の <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands">commands</a></code><span class="hidden"> </span> キーの文書を見てください。</p>
 
 <h2 id="Specifying_a_popup" name="Specifying_a_popup">ポップアップを指定する</h2>
 
-<p>通常の Web ページと同じく、ポップアップは HTML ファイルで定義されます（ここに CSS や JavaScript も含めることが可能です）。 ただし、拡張機能が持つ<a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/manifest.json/permissions">パーミッション</a>の範囲で JavaScript から <a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/API">WebExtension API</a> にアクセスできる点で通常のものとは異なります。</p>
+<p>通常の Web ページと同じく、ポップアップは HTML ファイルで定義されます（ここに CSS や JavaScript も含めることが可能です）。 ただし、拡張機能が持つ<a href="/ja/Add-ons/WebExtensions/manifest.json/permissions">パーミッション</a>の範囲で JavaScript から <a href="/ja/Add-ons/WebExtensions/API">WebExtension API</a> にアクセスできる点で通常のものとは異なります。</p>
 
 <p>ポップアップの文書はポップアップが表示されるたびに読み込まれて、ポップアップが閉じるたびに開放されます。</p>
 
-<p>HTML ファイルを拡張機能に入れるには、manifest.json内の <code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> か <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a> キーの <code>"default_popup"</code> にて指定します:</p>
+<p>HTML ファイルを拡張機能に入れるには、manifest.json内の <code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> か <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a> キーの <code>"default_popup"</code> にて指定します:</p>
 
 <pre class="brush: json">  "browser_action": {
     "default_icon": "icons/beasts-32.png",
@@ -33,13 +33,13 @@ translation_of: Mozilla/Add-ons/WebExtensions/user_interface/Popups
     "default_popup": "popup/choose_beast.html"
   }</pre>
 
-<p>ブラウザーの UI と統一感を持たせるスタイルシートをポップアップに組み込めるようになりました。これを利用するためには、<code><a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> か <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a> キーで <code>"browser_style": true</code> を指定してください。</p>
+<p>ブラウザーの UI と統一感を持たせるスタイルシートをポップアップに組み込めるようになりました。これを利用するためには、<code><a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action">browser_action</a></code> か <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action">page_action</a> キーで <code>"browser_style": true</code> を指定してください。</p>
 
-<p>ポップアップにおけるリソースの読み込み元や、<code><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code> のように安全でない処理は Content Security Policy によって制限されます。詳細は <a href="https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">Content Security Policy</a> を参照してください。</p>
+<p>ポップアップにおけるリソースの読み込み元や、<code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code> のように安全でない処理は Content Security Policy によって制限されます。詳細は <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">Content Security Policy</a> を参照してください。</p>
 
 <h2 id="Debugging_popups" name="Debugging_popups">ポップアップのデバッグ</h2>
 
-<p>ポップアップのマークアップと JavaScript をアドオンデバッガーを使ってデバッグできます。しかしポップアップの自動非表示を不可として、ポップアップの外をクリックした時に隠れてしまうのを防ぐ必要があります。<a href="https://developer.mozilla.org/ja/Add-ons/WebExtensions/Debugging#Debugging_popups">ポップアップのデバッグを読んでください</a>。</p>
+<p>ポップアップのマークアップと JavaScript をアドオンデバッガーを使ってデバッグできます。しかしポップアップの自動非表示を不可として、ポップアップの外をクリックした時に隠れてしまうのを防ぐ必要があります。<a href="/ja/Add-ons/WebExtensions/Debugging#Debugging_popups">ポップアップのデバッグを読んでください</a>。</p>
 
 <h2 id="Popup_resizing" name="Popup_resizing">ポップアップのリサイズ</h2>
 

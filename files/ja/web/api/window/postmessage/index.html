@@ -37,7 +37,7 @@ translation_of: Web/API/Window/postMessage
  </ul>
  </dd>
  <dt><code>message</code></dt>
- <dd>他のウィンドウに送られるデータ。データは <a href="https://developer.mozilla.org/ja/docs/DOM/The_structured_clone_algorithm">the structured clone algorithm</a> に従ってシリアル化されます。つまり、手動でシリアル化することなく様々なデータオブジェクトを渡すことができます。</dd>
+ <dd>他のウィンドウに送られるデータ。データは <a href="/ja/docs/DOM/The_structured_clone_algorithm">the structured clone algorithm</a> に従ってシリアル化されます。つまり、手動でシリアル化することなく様々なデータオブジェクトを渡すことができます。</dd>
  <dt><code>targetOrigin</code></dt>
  <dd>イベントを配信する <code>otherWindow</code> のオリジンを <code>"*"</code> というリテラル文字列（制限しないことを示します）か URI のいずれかで指定します。もしイベントの配信が予約される時点で、<code>targetWindow</code> のドキュメントのスキーマ、ホスト名、あるいはポートが <code>targetOrigin</code> で指定されたものにマッチしない場合、そのイベントは配信されません。3 つすべてがマッチした場合にだけイベントが配信されます。この仕組みはメッセージがどこに送られるかを制御できるようにしています。例えば <code>postMessage</code> をパスワードを送るために利用する場合、悪意のある第三者によるパスワードの傍受を防ぐため、そのメッセージを受け取るべき受信者のオリジンと一致する URI をこの引数に指定しておくことが非常に重要になります。 <strong>送信先ウィンドウのドキュメントがどこに配置されるのかを知っている場合、<code>*</code> ではなく具体的な <code>targetOrigin</code> を指定してください。具体的なターゲットを指定しない場合、相手が悪意を持ったサイトであっても、送信したデータが公開されることを意味します。</strong></dd>
  <dt><code><em><strong>transfer</strong></em></code> {{optional_Inline}}</dt>

@@ -12,7 +12,7 @@ translation_of: Web/API/LocalFileSystemSync
 ---
 <div>{{APIRef("File System API")}}{{non-standard_header()}}</div>
 
-<p>The <code>LocalFileSystemSync</code> interface of the <a href="/en/DOM/File_API/File_System_API" title="en/DOM/File_API/File_System_APIB">File System API</a> gives you access to a sandboxed file system. It is intended to be used with <a href="/en/DOM/Worker" title="en/DOM/Worker"> WebWorkers</a>. The methods are implemented by <a href="/en/DOM/Worker" title="En/DOM/Worker">worker</a> objects.</p>
+<p>The <code>LocalFileSystemSync</code> interface of the <a href="/ja/DOM/File_API/File_System_API" title="en/DOM/File_API/File_System_APIB">File System API</a> gives you access to a sandboxed file system. It is intended to be used with <a href="/ja/DOM/Worker" title="en/DOM/Worker"> WebWorkers</a>. The methods are implemented by <a href="/ja/DOM/Worker" title="En/DOM/Worker">worker</a> objects.</p>
 
 <h2 id="この文書について">この文書について</h2>
 
@@ -46,10 +46,10 @@ var fs = requestFileSystemSync(TEMPORARY, 1024*1024 /*1MB*/);</pre>
 <table class="standard-table">
  <tbody>
   <tr>
-   <td><code>FileSystemSync <a href="#requestFileSystemSync" title="#requestFileSystemSync">requestFileSystemSync</a> (in unsigned short <em>type</em>, in long long <em>size</em>) raises <a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>; </code></td>
+   <td><code>FileSystemSync <a href="#requestFileSystemSync" title="#requestFileSystemSync">requestFileSystemSync</a> (in unsigned short <em>type</em>, in long long <em>size</em>) raises <a href="/ja/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>; </code></td>
   </tr>
   <tr>
-   <td><code>EntrySync <a href="#resolveLocalFileSystemSyncURL" title="resolveLocalFileSystemSyncURL">resolveLocalFileSystemSyncURL</a> (in DOMString <em>url</em>) raises <a href="/en/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>;</code></td>
+   <td><code>EntrySync <a href="#resolveLocalFileSystemSyncURL" title="resolveLocalFileSystemSyncURL">resolveLocalFileSystemSyncURL</a> (in DOMString <em>url</em>) raises <a href="/ja/DOM/File_API/File_System_API/FileException" title="en/DOM/File_API/File_System_API/FileException">FileException</a>;</code></td>
   </tr>
  </tbody>
 </table>
@@ -103,7 +103,7 @@ var fs = requestFileSystemSync(TEMPORARY, 1024*1024 /*1MB*/);</pre>
 <h5 id="戻り値">戻り値</h5>
 
 <dl>
- <dt><code><a href="/en/DOM/File_API/File_System_API/FileSystemSync" title="en/DOM/File_API/File_System_API/FileSystemSync">FileSystemSync</a></code></dt>
+ <dt><code><a href="/ja/DOM/File_API/File_System_API/FileSystemSync" title="en/DOM/File_API/File_System_API/FileSystemSync">FileSystemSync</a></code></dt>
  <dd>ファイルシステムを表すオブジェクト。</dd>
 </dl>
 
@@ -142,7 +142,7 @@ var fs = requestFileSystemSync(TEMPORARY, 1024*1024 /*1MB*/);</pre>
 <h5 id="戻り値_2">戻り値</h5>
 
 <dl>
- <dt><code><a href="/en/DOM/File_API/File_System_API/EntrySync" title="en/DOM/File_API/File_System_API/EntrySync">EntrySync</a></code></dt>
+ <dt><code><a href="/ja/DOM/File_API/File_System_API/EntrySync" title="en/DOM/File_API/File_System_API/EntrySync">EntrySync</a></code></dt>
  <dd>ファイルシステム内のエントリを表すオブジェクト。</dd>
 </dl>
 
@@ -181,6 +181,6 @@ var fs = requestFileSystemSync(TEMPORARY, 1024*1024 /*1MB*/);</pre>
 
 <p>Specification:{{ spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD") }}</p>
 
-<p>Reference: <a href="/en/DOM/File_API/File_System_API" title="en/DOM/File_API/File_System_API">File System API</a></p>
+<p>Reference: <a href="/ja/DOM/File_API/File_System_API" title="en/DOM/File_API/File_System_API">File System API</a></p>
 
-<p>Introduction: <a href="/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API" title="en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API">Basic Concepts About the File System API</a></p>
+<p>Introduction: <a href="/ja/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API" title="en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API">Basic Concepts About the File System API</a></p>

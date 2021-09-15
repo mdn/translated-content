@@ -6,48 +6,49 @@ original_slug: Apprendre/CSS/Building_blocks/Values_and_units
 ---
 <div>{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}</div>
 
-<p>Chaque propriété utilisée en CSS a un type de valeur définissant un ensemble de valeurs autorisées pour cette propriété. Visiter des pages de propriétés sur MDN vous aidera à comprendre les valeurs associées à un type de valeur, qui sont valides pour une propriété particulière. Dans cette leçon nous allons observer quelques uns des types de valeurs les plus fréquemment utilisés, et leurs valeurs et unités les plus communes.</p>
+<p>Chaque propriété utilisée en CSS possède un type de valeur qui définit l'ensemble des valeurs autorisées pour cette propriété. Visiter des pages de propriétés sur MDN vous aidera à comprendre les valeurs associées à un type de valeur, qui sont valides pour une propriété particulière. Dans cette leçon, nous allons observer quelques-uns des types de valeur les plus fréquemment utilisés, ainsi que leurs valeurs et unités les plus communes.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
-   <th scope="row">Prérequis:</th>
-   <td>Maîtrise élémentaire de l'informatique, <a href="https://developer.mozilla.org/fr/docs/Apprendre/Commencer_avec_le_web/Installation_outils_de_base">suite logicielle de base installée</a>, compétences élémentaires pour <a href="https://developer.mozilla.org/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers">travailler avec des fichiers</a>, connaissance de base du HTML  (cf. <a href="https://developer.mozilla.org/fr/docs/Apprendre/HTML/Introduction_à_HTML">Introduction à HTML</a>), et une idée de <a href="https://developer.mozilla.org/fr/docs/Learn/CSS/First_steps/How_CSS_works">Comment fonctionne CSS</a>.</td>
+   <th scope="row">Prérequis&nbsp;:</th>
+   <td>Maîtrise élémentaire de l'informatique, <a href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software">suite logicielle de base installée</a>, compétences élémentaires pour <a href="/fr/docs/Apprendre/Commencer_avec_le_web/G%C3%A9rer_les_fichiers">travailler avec des fichiers</a>, connaissance de base du HTML  (cf. <a href="/fr/docs/Apprendre/HTML/Introduction_%C3%A0_HTML">Introduction à HTML</a>), et une idée de <a href="/fr/docs/Learn/CSS/First_steps/How_CSS_works">Comment fonctionne CSS</a>.</td>
   </tr>
   <tr>
-   <th scope="row">Objectif:</th>
+   <th scope="row">Objectif&nbsp;:</th>
    <td>Apprendre les différents types de valeurs et d'unités utilisés dans les propriétés CSS.</td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Quest-ce_quune_valeur_CSS">Qu'est-ce qu'une valeur CSS?</h2>
+<h2 id="Quest-ce_quune_valeur_CSS">Qu'est-ce qu'une valeur CSS&nbsp;?</h2>
 
-<p>Dans les spécifications CSS et sur les pages de propriétés ici sur MDN, vous pourrez identifier les types de valeurs car ils sont entourés par des chevrons, tel que <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code> ou <code><a href="/en-US/docs/Web/CSS/length">&lt;length&gt;</a></code>. Quand vous voyez le type de valeur <code>&lt;color&gt;</code>, valide pour une propriété particulière, cela signifie que vous pouvez utiliser n'importe quelle couleur valide comme valeur pour cette propriété, comme énoncé dans la page de référence de <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code>.</p>
+<p>Dans les spécifications CSS et sur les pages de propriétés présentes sur MDN, vous pourrez identifier les types de valeurs, car ils sont entourés par des chevrons, tel que <code><a href="/fr/docs/Web/CSS/color_value">&lt;color&gt;</a></code> ou <code><a href="/fr/docs/Web/CSS/length">&lt;length&gt;</a></code>. Quand vous voyez le type de valeur <code>&lt;color&gt;</code>, valide pour une propriété particulière, cela signifie que vous pouvez utiliser n'importe quelle couleur valide comme valeur pour cette propriété, comme énoncé dans la page de référence de <code><a href="/fr/docs/Web/CSS/color_value">&lt;color&gt;</a></code>.</p>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: Vous verrez également des valeurs CSS appelées <em>types de données</em>. Les termes sont interchangeables — Quand vous voyez quelque chose en CSS identifié comme type de données, c'est juste une façon différente de dire type de valeur. Le terme <em>valeur</em> se rapporte à n'importe quelle expression particulière supportée par un type de valeur que vous avez choisi d'utiliser.</p>
+<div class="notecard note">
+<p><strong>Note</strong>&nbsp;: Vous verrez également des valeurs CSS appelées <em>types de données</em>. Les termes sont interchangeables — Quand vous voyez quelque chose en CSS identifié comme type de données, c'est juste une façon différente de dire type de valeur. Le terme <em>valeur</em> se rapporte à n'importe quelle expression particulière supportée par un type de valeur que vous avez choisi d'utiliser.</p>
 </div>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: Oui, les types de valeur CSS tendent à être indiqués par des chevrons, pour les différencier des propriétés CSS (ex: la propriété {{cssxref("color")}}, comparée au type de données <a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a>). Vous pourriez aussi être désorienté entre les ttypes de données CSS et les éléments HTML, car ils utilisent tous deux les chevrons, mais c'est peu probable — ils sont utilisés dans des contextes très différents.</p>
+<div class="notecard note">
+<p><strong>Note</strong>&nbsp;: Oui, les types de valeurs CSS tendent à être indiqués par des chevrons, pour les différencier des propriétés CSS (ex : la propriété <a href="/fr/docs/Web/CSS/color"><code>color</code></a>, comparée au type de données <a href="/fr/docs/Web/CSS/color_value">&lt;color&gt;</a>). Vous pourriez aussi être désorienté entre les types de données CSS et les éléments HTML, car ils utilisent tous deux les chevrons, mais c'est peu probable — ils sont utilisés dans des contextes très différents.</p>
 </div>
 
-<p>Dans l'exemple suivant, nous avons défini la couleur de notre titre en utilisant un mot-clé, et la couleur de fond en utilisant la fonction <code>rgb()</code>:</p>
+<p>Dans l'exemple suivant, nous avons défini la couleur de notre titre en utilisant un mot-clé, et la couleur de fond en utilisant la fonction <code>rgb()</code>&nbsp;:</p>
 
-<pre class="brush: css notranslate"><code>h1 {
+<pre class="brush: css  ">h1 {
   color: black;
   background-color: rgb(197,93,161);
-} </code>
+} 
 </pre>
 
-<p>Un type de valeurs en CSS est une manière de définir un ensemble de valeurs autorisées. Cela signifie que si vous voyez <code>&lt;color&gt;</code> comme valide, vous n'avez pas besoin de vous demander quel type de valeur vous pouvez utiliser —  mot-clés, valeurs hex, fonctions <code>rgb()</code>, etc. Vous pouvez utiliser <em>n'importe quelle</em> valeur <code>&lt;color&gt;</code> disponible, en supposant qu'elle soit supportée par votre navigateur. La pageMDN pour chaque valeur vous donnera les informations au sujet du support par le navigateur. Par exemple, si vous regardez la page <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code>, vous verrez que la section sur la compatibilité des navigateurs liste différents types de valeurs pour "color" et le support.</p>
+<p>Un type de valeur en CSS est une manière de définir un ensemble de valeurs autorisées. Cela signifie que si vous voyez <code>&lt;color&gt;</code> comme valide, vous n'avez pas besoin de vous demander quel type de valeur vous pouvez utiliser —  mot-clés, valeurs hex, fonctions <code>rgb()</code>, etc. Vous pouvez utiliser <em>n'importe quelle</em> valeur <code>&lt;color&gt;</code> disponible, en supposant qu'elle soit supportée par votre navigateur. La page MDN pour chaque valeur vous donnera les informations au sujet du support par le navigateur. Par exemple, si vous regardez la page <code><a href="/fr/docs/Web/CSS/color_value">&lt;color&gt;</a></code>, vous verrez que la section sur la compatibilité des navigateurs liste différents types de valeurs pour "color" et le support.</p>
 
-<p>Observons quelques uns des types de valeurs et d'unités que vous pouvez fréquemment rencontrer, avec des exemples, pour que vous puissiez essayer différentes valeurs possibles.</p>
+<p>Observons quelques-uns des types de valeurs et d'unités que vous pouvez fréquemment rencontrer, avec des exemples, pour que vous puissiez essayer différentes valeurs possibles.</p>
 
-<h2 id="Nombres_longueurs_et_pourcentages">Nombres, longueurs et pourcentages</h2>
 
-<p>Il éxiste de nombreux types de valeurs numériques que vous pourrez trouver vous même en utilisant CSS. Les suivants sont tous classés comme numériques:</p>
+<h2 id="numbers_lengths_and_percentages">Nombres, longueurs et pourcentages</h2>
+
+<p>Il existe plusieurs types de valeur numérique que vous pourrez utiliser en CSS. Les types qui suivent sont classés comme numériques :</p>
 
 <table class="standard-table">
  <thead>
@@ -58,336 +59,337 @@ original_slug: Apprendre/CSS/Building_blocks/Values_and_units
  </thead>
  <tbody>
   <tr>
-   <td><code><a href="/en-US/docs/Web/CSS/integer">&lt;integer&gt;</a></code></td>
-   <td><code>&lt;integer&gt;</code> est un nombre entier comme <code>1024</code> ou <code>-55</code>.</td>
+   <td><code><a href="/fr/docs/Web/CSS/integer">&lt;integer&gt;</a></code></td>
+   <td>Une valeur de type <code>&lt;integer&gt;</code> est un nombre entier comme <code>1024</code> ou <code>-55</code>.</td>
   </tr>
   <tr>
-   <td><code><a href="/en-US/docs/Web/CSS/number">&lt;number&gt;</a></code></td>
-   <td><code>&lt;number&gt;</code> représente un nombre décimal — il peut avoir, ou non, un point décimal avec un composant fractionnaire. Par exemple, <code>0.255</code>, <code>128</code>, ou <code>-1.2</code>.</td>
+   <td><code><a href="/fr/docs/Web/CSS/number">&lt;number&gt;</a></code></td>
+   <td>Une valeur de type <code>&lt;number&gt;</code> représente un nombre décimal (qui peut avoir ou ne pas avoir de partie décimale). Par exemple : <code>0.255</code>, <code>128</code>, ou <code>-1.2</code>.</td>
   </tr>
   <tr>
-   <td><code><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/dimension">&lt;dimension&gt;</a></code></td>
-   <td><code>&lt;dimension&gt;</code> est un <code>&lt;number&gt;</code> avec une unité attachée à lui. Par exemple, <code>45deg</code>, <code>5s</code>, ou <code>10px</code>. <code>&lt;dimension&gt;</code> est divisé en d'autres catégories incluant les types <code><a href="/en-US/docs/Web/CSS/length">&lt;length&gt;</a></code>, <code><a href="/en-US/docs/Web/CSS/angle">&lt;angle&gt;</a></code>, <code><a href="/en-US/docs/Web/CSS/time">&lt;time&gt;</a></code>, <code>et <a href="/en-US/docs/Web/CSS/resolution">&lt;resolution&gt;</a></code><a href="/en-US/docs/Web/CSS/resolution">.</a></td>
+   <td><code><a href="/fr/docs/Web/CSS/dimension">&lt;dimension&gt;</a></code></td>
+   <td>Une valeur de type <code>&lt;dimension&gt;</code> est une valeur de type <code>&lt;number&gt;</code> à laquelle est attachée une unité. Par exemple : <code>45deg</code>, <code>5s</code>, ou <code>10px</code>. <code>&lt;dimension&gt;</code> est une catégorie de type qui inclut les types <code><a href="/fr/docs/Web/CSS/length">&lt;length&gt;</a></code>, <code><a href="/fr/docs/Web/CSS/angle">&lt;angle&gt;</a></code>, <code><a href="/fr/docs/Web/CSS/time">&lt;time&gt;</a></code>, et <code><a href="/fr/docs/Web/CSS/resolution">&lt;resolution&gt;</a></code>.</td>
   </tr>
   <tr>
-   <td><code><a href="/en-US/docs/Web/CSS/percentage">&lt;percentage&gt;</a></code></td>
-   <td><code>&lt;percentage&gt;</code> représente une fraction d'une autre valeur.  Par exemple, <code>50%</code>. Les valeurs de pourcentage sont toujours relatives à une qutre quantité. Par exemple, la longeur d'un élément est relative à la longueur de son élément parent.</td>
+   <td><code><a href="/fr/docs/Web/CSS/percentage">&lt;percentage&gt;</a></code></td>
+   <td>Une valeur de type <code>&lt;percentage&gt;</code> représente une fraction relative à une autre valeur. Par exemple : <code>50%</code>. Les valeurs de pourcentages sont toujours relatives à une autre quantité. Ainsi, la longueur d'un élément pourra être relative à la longueur de son élément parent.</td>
   </tr>
  </tbody>
 </table>
 
-<h3 id="Longueurs">Longueurs</h3>
+<h3 id="lengths">Longueurs</h3>
 
-<p>The numeric type you will come across most frequently is <code>&lt;length&gt;</code>. For example <code>10px</code> (pixels) or <code>30em</code>. There are two types of lengths used in CSS — relative and absolute. It's important to know the difference in order to understand how big things will become.</p>
+<p>Le type numérique que vous rencontrerez le plus souvent est le type <code>&lt;length&gt;</code>. Par exemple : <code>10px</code> (pixels) ou <code>30em</code>. Il existe deux types de longueurs en CSS&nbsp;: les longueurs relatives et les longueurs absolues. Connaître la différence entre les deux est important pour comprendre la taille que les éléments obtiendront.</p>
 
-<h4 id="Absolute_length_units">Absolute length units</h4>
+<h4 id="absolute_length_units">Unités de longueur absolue</h4>
 
-<p>The following are all <strong>absolute</strong> length units — they are not relative to anything else, and are generally considered to always be the same size.</p>
+<p>La liste qui suit contient uniquement des unités de longueur <strong>absolue</strong>. Ces quantités ne sont pas relatives à quoi que ce soit d'autre et leur taille sera considérée comme constante.</p>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th scope="col">Unit</th>
-   <th scope="col">Name</th>
-   <th scope="col">Equivalent to</th>
+   <th scope="col">Unité</th>
+   <th scope="col">Nom</th>
+   <th scope="col">Équivalent à</th>
   </tr>
  </thead>
  <tbody>
   <tr>
    <td><code>cm</code></td>
-   <td>Centimeters</td>
-   <td>1cm = 96px/2.54</td>
+   <td>Centimètres</td>
+   <td>1cm = 38px = 25/64in</td>
   </tr>
   <tr>
    <td><code>mm</code></td>
-   <td>Millimeters</td>
+   <td>Millimètres</td>
    <td>1mm = 1/10th of 1cm</td>
   </tr>
   <tr>
    <td><code>Q</code></td>
-   <td>Quarter-millimeters</td>
+   <td>Quarts de millimètre</td>
    <td>1Q = 1/40th of 1cm</td>
   </tr>
   <tr>
    <td><code>in</code></td>
-   <td>Inches</td>
+   <td>Pouces (<i lang="en">inches</i>)</td>
    <td>1in = 2.54cm = 96px</td>
   </tr>
   <tr>
    <td><code>pc</code></td>
    <td>Picas</td>
-   <td>1pc = 1/6th of 1in</td>
+   <td>1pc = 1/6e de 1in</td>
   </tr>
   <tr>
    <td><code>pt</code></td>
    <td>Points</td>
-   <td>1pt = 1/72th of 1in</td>
+   <td>1pt = 1/72e de 1in</td>
   </tr>
   <tr>
    <td><code>px</code></td>
    <td>Pixels</td>
-   <td>1px = 1/96th of 1in</td>
+   <td>1px = 1/96th de 1in</td>
   </tr>
  </tbody>
 </table>
 
-<p>Most of these units are more useful when used for print, rather than screen output. For example, we don't typically use <code>cm</code> (centimeters) on screen. The only value that you will commonly use is <code>px</code> (pixels).</p>
+<p>La plupart de ces unités sont utiles pour l'impression plutôt que pour l'affichage sur un écran. Ainsi, on n'utilise généralement pas <code>cm</code> (centimètres) sur un écran. La seule unité ici que vous rencontrerez fréquemment est <code>px</code> (pixels).</p>
 
-<h4 id="Relative_length_units">Relative length units</h4>
+<h4 id="relative_length_units">Unités de longueur relative</h4>
 
-<p>Relative length units are relative to something else, perhaps the size of the parent element's font, or the size of the viewport. The benefit of using relative units is that with some careful planning you can make it so the size of text or other element scales relative to everything else on the page. Some of the most useful units for web development are listed in the table below.</p>
+<p>Les unités de longueur relative permettent d'exprimer des quantités relatives à quelque chose d'autre comme la taille de la police de l'élément parent ou la taille de la zone d'affichage (<i lang="en">viewport</i>). L'avantage d'utiliser des unités relatives est qu'avec un peu d'organisation, on peut faire que la taille du texte ou d'autres éléments se mette à l'échelle, relativement à quelque chose d'autre sur la page. La plupart des unités les plus utiles pour le développement web sont présentes dans le tableau qui suit.</p>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th scope="col">Unit</th>
-   <th scope="col">Relative to</th>
+   <th scope="col">Unité</th>
+   <th scope="col">Relative à</th>
   </tr>
  </thead>
  <tbody>
   <tr>
    <td><code>em</code></td>
-   <td>Font size of the parent, in the case of typographical properties like <code><a href="/en-US/docs/Web/CSS/font-size">font-size</a></code>, and font size of the element itself, in the case of other properties like <code><a href="/en-US/docs/Web/CSS/width">width</a></code>.</td>
+   <td>Pour les propriétés typographiques comme <code><a href="/fr/docs/Web/CSS/font-size">font-size</a></code>, relative à la taille de la police de l'élément parent. Pour les autres propriétés comme <code><a href="/fr/docs/Web/CSS/width">width</a></code>, relative à la taille de la police de l'élément;</td>
   </tr>
   <tr>
    <td><code>ex</code></td>
-   <td>x-height of the element's font.</td>
+   <td>La hauteur d'x de la police de l'élément.</td>
   </tr>
   <tr>
    <td><code>ch</code></td>
-   <td>The advance measure (width) of the glyph "0" of the element's font.</td>
+   <td>La <a href="https://fr.wikipedia.org/wiki/Chasse_(typographie)">chasse/avance</a> du glyphe « 0 » pour la police de l'élément.</td>
   </tr>
   <tr>
    <td><code>rem</code></td>
-   <td>Font size of the root element.</td>
+   <td>La taille de la police pour l'élément racine.</td>
   </tr>
   <tr>
    <td><code>lh</code></td>
-   <td>Line height of the element.</td>
+   <td>La hauteur de ligne pour l'élément.</td>
   </tr>
   <tr>
    <td><code>vw</code></td>
-   <td>1% of the viewport's width.</td>
+   <td>1% de la largeur du <i lang="en">viewport</i> (la zone d'affichage).</td>
   </tr>
   <tr>
    <td><code>vh</code></td>
-   <td>1% of the viewport's height.</td>
+   <td>1% de la hauteur du <i lang="en">viewport</i> (la zone d'affichage).</td>
   </tr>
   <tr>
    <td><code>vmin</code></td>
-   <td>1% of the viewport's smaller dimension.</td>
+   <td>1% de la plus petite dimension du <i lang="en">viewport</i> (la zone d'affichage).</td>
   </tr>
   <tr>
    <td><code>vmax</code></td>
-   <td>1% of the viewport's larger dimension.</td>
+   <td>1% de la plus grande dimension du <i lang="en">viewport</i> (la zone d'affichage).</td>
   </tr>
  </tbody>
 </table>
 
-<h4 id="Exploring_an_example">Exploring an example</h4>
+<h4 id="exploring_an_example">Exploration d'un exemple</h4>
 
-<p>In the example below, you can see how some relative and absolute length units behave. The first box has a {{cssxref("width")}} set in pixels. As an absolute unit, this width will remain the same no matter what else changes.</p>
+<p>Dans l'exemple qui suit, vous pouvez observer le fonctionnement de certaines unités de longueur relative et absolue. La première boîte a la propriété <a href="/fr/docs/Web/CSS/width"><code>width</code></a> définie en pixels. Il s'agit d'une unité absolue et cette largeur restera donc la même, quels que soient les autres changements.</p>
 
-<p>The second box has a width set in <code>vw</code> (viewport width) units. This value is relative to the viewport width, and so 10vw is 10 percent of the width of the viewport. If you change the width of your browser window, the size of the box should change. However this example is embedded into the page using an <code><a href="/en-US/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code>, so this won't work. To see this in action you'll have to <a href="https://mdn.github.io/css-examples/learn/values-units/length.html">try the example after opening it in its own browser tab</a>.</p>
+<p>La deuxième boîte a sa largeur définie avec l'unité <code>vw</code> (relative à la largeur de la zone d'affichage). Cette valeur est relative à la largeur du <i lang="en">viewport</i>. Ainsi, <code>10vw</code> correspondra à 10 pourcents de la largeur de la zone d'affichage. Si vous changez la largeur de la fenêtre de votre navigateur, la taille de cette boîte devrait changer. Toutefois, si l'exemple est intégré dans la page avec un élément <code><a href="/fr/docs/Web/HTML/Element/iframe">&lt;iframe&gt;</a></code>, cela ne fonctionnera pas. Pour voir concrètement le résultat, vous devrez ouvrir <a href="https://mdn.github.io/css-examples/learn/values-units/length.html">l'exemple dans un nouvel onglet avant d'ajuster la taille de votre fenêtre</a>.</p>
 
-<p>The third box uses <code>em</code> units. These are relative to the font size. I've set a font size of <code>1em</code> on the containing {{htmlelement("div")}}, which has a class of <code>.wrapper</code>. Change this value to <code>1.5em</code> and you will see that the font size of all the elements increases, but only the last item will get wider, as the width is relative to that font size.</p>
+<p>La troisième boîte utilise les unités <code>em</code>. Ces unités sont relatives à la taille de la police. On a défini une taille de police de <code>1em</code> sur l'élément <a href="/fr/docs/Web/HTML/Element/div"><code>&lt;div&gt;</code></a> englobant et qui a la classe <code>.wrapper</code>. Passez cette valeur à <code>1.5em</code> et vous pourrez voir que la taille de la police de tous les éléments augmente mais que seul le dernier élément s'élargit du fait que sa largeur soit relative à cette taille de police.</p>
 
-<p>After following the instructions above, try playing with the values in other ways, to see what you get.</p>
+<p>Après avoir suivi ces instructions, n'hésitez pas à modifier les valeurs autrement pour voir ce que ça donne.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/values-units/length.html", '100%', 820)}}</p>
 
-<h4 id="ems_and_rems">ems and rems</h4>
+<h4 id="ems_and_rems">ems et rems</h4>
 
-<p><code>em</code> and <code>rem</code> are the two relative lengths you are likely to encounter most frequently when sizing anything from boxes to text. It's worth understanding how these work, and the differences between them, especially when you start getting on to more complex subjects like <a href="/en-US/docs/Learn/CSS/Styling_text">styling text</a> or <a href="/en-US/docs/Learn/CSS/CSS_layout">CSS layout</a>. The below example provides a demonstration.</p>
+<p><code>em</code> et <code>rem</code> sont deux unités de longueur relative que vous rencontrerez fréquemment dès que vous dimensionnerez des boîtes ou du texte. Aussi, il est intéressant de comprendre leur fonctionnement, les différences entre ces deux unités, surtout avant d'aborder des sujets plus complexes comme <a href="/fr/docs/Learn/CSS/Styling_text">la mise en forme du texte</a> ou <a href="/fr/docs/Learn/CSS/CSS_layout">les dispositions CSS</a>. L'exemple qui suit fournit une démonstration.</p>
 
-<p>The HTML is a set of nested lists — we have three lists in total and both examples have the same HTML. The only difference is that the first has a class of <em>ems</em> and the second a class of <em>rems</em>.</p>
+<p>Le HTML utilisé ci-après est un ensemble de listes imbriquées&nbsp;: il y a trois listes au total et les exemples partagent tous le même code HTML. La seule différence est que le premier utilise une classe <em>ems</em> et que le second utilise une classe <em>rems</em>.</p>
 
-<p>To start with, we set 16px as the font size on the <code>&lt;html&gt;</code> element.</p>
+<p>Pour commencer, on définit la taille de la police à 16px sur l'élément <code>&lt;html&gt;</code>.</p>
 
-<p><strong>To recap, the em unit means "my parent element's font-size"</strong> in the case of typography. The {{htmlelement("li")}} elements inside the {{htmlelement("ul")}} with a <code>class</code> of <code>ems</code> take their sizing from their parent. So each successive level of nesting gets progressively larger, as each has its font size set to <code>1.3em</code> — 1.3 times its parent's font size.</p>
+<p><strong>Pour récapituler, l'unité <code>em</code> signifie «&nbsp;la taille de police de l'élément parent&nbsp;»</strong> pour ce qui concerne la typographie. Les éléments <a href="/fr/docs/Web/HTML/Element/li"><code>&lt;li&gt;</code></a> à l'intérieur de <a href="/fr/docs/Web/HTML/Element/ul"><code>&lt;ul&gt;</code></a> et qui ont un attribut <code>class</code> avec <code>ems</code> prendront donc leur taille en fonction de celle de leur parent. Aussi, chaque niveau plus grand que le précédent, car chacun a une taille de police de <code>1.3em</code> soit 1,3 fois plus grand que la taille de police pour l'élément parent.</p>
 
-<p><strong>To recap, the rem unit means "The root element's font-size"</strong>. (rem stands for "root em".) The {{htmlelement("li")}} elements inside the {{htmlelement("ul")}} with a <code>class</code> of <code>rems</code> take their sizing from the root element (<code>&lt;html&gt;</code>). This means that each successive level of nesting does not keep getting larger.</p>
+<p><strong>Pour récapituler, l'unité <code>rem</code> signifie «&nbsp;la taille de police de l'élément racine&nbsp;»</strong> (rem est l'acronyme anglais de «&nbsp;<i lang="en">root em</i>&nbsp;» qu'on pourrait traduire par «&nbsp;em racine&nbsp;».) Les éléments <a href="/fr/docs/Web/HTML/Element/li"><code>&lt;li&gt;</code></a> à l'intérieur de <a href="/fr/docs/Web/HTML/Element/ul"><code>&lt;ul&gt;</code></a> et qui ont un attribut <code>class</code> avec <code>rems</code> prendront leur taille à partir de l'élément racine (<code>&lt;html&gt;</code>). Cela signifie que les niveaux successifs ne gagneront pas en largeur.</p>
 
-<p>However, if you change the <code>&lt;html&gt;</code> <code>font-size</code> in the CSS you will see that everything else changes relative to it — both <code>rem</code>- and <code>em</code>-sized text.</p>
+<p>Toutefois, si vous modifier la taille de la police avec <code>font-size</code> pour <code>&lt;html&gt;</code> dans la feuille CSS, vous pourrez voir que toutes les tailles varient en fonction de celle-ci, tant celles qui utilisent <code>rem</code> que celles qui utilisent <code>em</code>.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/em-rem.html", '100%', 1000)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/em-rem.html", '100%', 1000)}} </p>
 
-<h3 id="Percentages">Percentages</h3>
+<h3 id="percentages">Pourcentages</h3>
 
-<p>In a lot of cases, a percentage is treated in the same way as a length. The thing with percentages is that they are always set relative to some other value. For example, if you set an element's <code>font-size</code> as a percentage it will be a percentage of the <code>font-size</code> of the element's parent. If you use a percentage for a <code>width</code> value, it will be a percentage of the <code>width</code> of the parent.</p>
+<p>Dans la plupart des cas, un pourcentage est traité comme une longueur. Un pourcentage est toujours relatif à une autre valeur. Ainsi, si vous définissez la propriété <code>font-size</code> d'un élément avec un pourcentage, ce pourcentage sera relatif à la valeur de <code>font-size</code> de l'élément parent. Si vous utilisez un pourcentage pour <code>width</code>, la valeur obtenue sera le pourcentage de la valeur de <code>width</code> pour l'élément parent.</p>
 
-<p>In the below example the two percentage-sized boxes and the two pixel-sized boxes have the same class names. Both sets are 200px and 40% wide respectively.</p>
+<p>Dans l'exemple qui suit, on a deux boîtes dimensionnées avec des pourcentages et deux boîtes dimensionnées en pixels, elles partagent les mêmes noms de classes. Chaque ensemble est dimensionné respectivement avec 40% et 200px.</p>
 
-<p>The difference is that the second set of two boxes is inside a wrapper that is 400 pixels wide. The second 200px wide box is the same width as the first one, but the second 40% box is now 40% of 400px — a lot narrower than the first one!</p>
+<p>La différence est que le deuxième ensemble avec les deux boîtes se situe dans un contenant large de 400 pixels. La boîte dimensionnée avec 200px a la même largeur que dans le premier ensemble, en revanche, la boîte dimensionnée avec 40% a une largeur de 40% de 400px ce qui est beaucoup plus étroit que l'autre&nbsp;!</p>
 
-<p><strong>Try changing the width of the wrapper or the percentage value to see how this works.</strong></p>
+<p><strong>Essayez de modifier la largeur du bloc englobant ou la valeur du pourcentage pour voir comment cela fonctionne.</strong></p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/percentage.html", '100%', 850)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/percentage.html", '100%', 850)}} </p>
 
-<p>The next example has font sizes set in percentages. Each <code>&lt;li&gt;</code> has a <code>font-size</code> of 80%, therefore the nested list items become progressively smaller as they inherit their sizing from their parent.</p>
+<p>Le prochain exemple utilise des tailles de police définies en pourcentages. Chaque élément <code>&lt;li&gt;</code> a <code>font-size</code> avec 80%, ainsi les éléments de listes imbriqués deviennent de plus en plus petits en héritant de la taille de leur parent.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/percentage-fonts.html", '100%', 650)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/percentage-fonts.html", '100%', 650)}} </p>
 
-<p>Note that, while many value types accept a length or a percentage, there are some that only accept length. You can see which values are accepted on the MDN property reference pages. If the allowed value includes <code><a href="/en-US/docs/Web/CSS/length-percentage">&lt;length-percentage&gt;</a></code> then you can use a length or a percentage. If the allowed value only includes <code>&lt;length&gt;</code>, it is not possible to use a percentage.</p>
+<p>On notera que, bien que de nombreuses propriétés acceptent une longueur ou un pourcentage, il en existe certaines qui n'acceptent que des longueurs. Vous pouvez voir cette information sur les pages de référence de chaque propriété sur MDN. Si les valeurs autorisées incluent le type <code><a href="/fr/docs/Web/CSS/length-percentage">&lt;length-percentage&gt;</a></code>, on peut utiliser une longueur ou un pourcentage. Si les valeurs autorisées n'incluent que <code>&lt;length&gt;</code>, il n'est pas possible d'utiliser un pourcentage.</p>
 
-<h3 id="Numbers">Numbers</h3>
+<h3 id="numbers">Nombres</h3>
 
-<p>Some value types accept numbers, without any unit added to them. An example of a property which accepts a unitless number is the <code>opacity</code> property, which controls the opacity of an element (how transparent it is). This property accepts a number between <code>0</code> (fully transparent) and <code>1</code> (fully opaque).</p>
+<p>Certains types de valeur acceptent des nombres, sans unité. Une telle propriété est, par exemple, <code>opacity</code> qui contrôle l'opacité d'un élément. Cette propriété acceptera une valeur numérique (sans unité) comprise entre <code>0</code> (transparence complète) et <code>1</code> (complètement opaque).</p>
 
-<p><strong>In the below example, try changing the value of <code>opacity</code> to various decimal values between <code>0</code> and <code>1</code> and see how the box and its contents become more or less opaque.</strong></p>
+<p><strong>Dans l'exemple qui suit, essayez de modifier la valeur de la propriété <code>opacity</code> en utilisant différentes valeurs décimales entre <code>0</code> et <code>1</code> afin de voir comment la boîte et son contenu changent en opacité.</strong></p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/opacity.html", '100%', 500)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/opacity.html", '100%', 500)}} </p>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: When you use a number in CSS as a value it should not be surrounded in quotes.</p>
+<div class="notecard note">
+<p><strong>Note :</strong> Lorsqu'on utilise un nombre pour une valeur en CSS, il ne doit pas être écrit avec des guillemets ou quotes autour.</p>
 </div>
 
-<h2 id="Color">Color</h2>
+<h2 id="color">Couleur</h2>
 
-<p>There are many ways to specify color in CSS, some of which are more recently implemented than others. The same color values can be used everywhere in CSS, whether you are specifying text color, background color, or whatever else.</p>
+<p>Il existe de nombreuses façons d'utiliser des couleurs en CSS, certaines ayant été plus récemment implémentées que d'autres. Les mêmes valeurs de couleur peuvent être utilisées n'importe où en CSS, qu'il s'agisse d'une couleur pour du texte, d'une couleur d'arrière-plan ou de toute autre couleur.</p>
 
-<p>The standard color system available in modern computers is 24 bit, which allows the display of about 16.7 million distinct colors via a combination of different red, green and blue channels with 256 different values per channel (256 x 256 x 256 = 16,777,216.) Let's have a look at some of the ways in which we can specify colors in CSS.</p>
+<p>Le système standard de couleurs disponible pour les ordinateurs modernes utilise 24 bits, ce qui permet d'afficher 16,7 millions de couleurs différentes par des combinaisons de canaux rouge, vert et bleu dont chacun peut avoir 256 valeurs distinctes (256 x 256 x 256 = 16&nbsp;777&nbsp;216). Voyons quelques façons d'indiquer des couleurs en CSS.</p>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: In this tutorial we will look at the common methods of specifying color that have good browser support; there are others but they don't have as good support and are less common.</p>
+<div class="notecard note">
+<p><strong>Note :</strong> Dans ce tutoriel, nous verrons les méthodes communément utilisées pour définir les couleurs et qui disposent d'une bonne prise en charge des navigateurs. Il en existe d'autres, mais elles sont moins bien prises en charge et sont moins fréquentes.</p>
 </div>
 
-<h3 id="Color_keywords">Color keywords</h3>
+<h3 id="color_keywords">Mots-clés pour les couleurs</h3>
 
-<p>Quite often in examples here in the learn section or elsewhere on MDN you will see the color keywords used, as they are a simple and understandable way of specifying color. There are a number of these keywords, some of which have fairly entertaining names! You can see a full list on the page for the <code><a href="/en-US/docs/Web/CSS/color_value">&lt;color&gt;</a></code> value type.</p>
+<p>Dans la plupart des exemples de cette section d'apprentissage ou à d'autres endroits sur MDN, vous verrez des mots-clés utilisés pour définir des couleurs : il s'agit d'une méthode simple et compréhensible pour indiquer une couleur. Il existe de nombreux mots-clés, certains avec des noms plutôt amusants. Vous pouvez consulter la liste complète sur la page pour le type de valeur <code><a href="/fr/docs/Web/CSS/color_value">&lt;color&gt;</a></code>.</p>
 
-<p><strong>Try playing with different color values in the live examples below, to get more of an idea how they work.</strong></p>
+<p><strong>Essayez de manipuler les différentes valeurs de couleur dans l'exemple ci-après afin de mieux comprendre comment celles-ci fonctionnent.</strong></p>
 
-<h3 id="Hexadecimal_RGB_values">Hexadecimal RGB values</h3>
+<h3 id="hexadecimal_rgb_values">Valeurs RGB hexadécimales</h3>
 
-<p>The next type of color value you are likely to encounter is hexadecimal codes. Each hex value consists of a hash/pound symbol (#) followed by six hexadecimal numbers, each of which can take one of 16 values between 0 and f (which represents 15) — so <code>0123456789abcdef</code>. Each pair of values represents one of the channels — red, green and blue — and allows us to specify any of the 256 available values for each (16 x 16 = 256.)</p>
+<p>Les autres valeurs de couleur que vous rencontrerez assez souvent sont celles représentées avec des codes hexadécimaux. Chaque valeur hexadécimale se compose d'un croisillon (#) suivi de six chiffres hexadécimaux dont chacun peut prendre une valeur parmi 16 : de 0 à f (la lettre utilisée pour représentée 15) (les chiffres hexadécimaux sont&nbsp;: <code>0123456789abcdef</code>). Dans ces six chiffres, chaque paire de chiffre représente la valeur pour l'un des canaux de couleurs (rouge, vert et bleu) et permet d'indiquer l'une des 256 valeurs disponibles.</p>
 
-<p>These values are a bit more complex and less easy to understand, but they are a lot more versatile than keywords — you can use hex values to represent any color you want to use in your color scheme.</p>
+<p>Ces valeurs sont un peu plus complexes et moins faciles à comprendre, mais elles permettent d'exprimer beaucoup plus de couleurs que les mots-clés. Vous pouvez utiliser les valeurs hexadécimales pour représenter n'importe quelle couleur dans votre palette.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-hex.html", '100%', 700)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-hex.html", '100%', 700)}} </p>
 
-<p><strong>Again, try changing the values to see how the colors vary.</strong></p>
+<p><strong>Là encore, essayez de modifier les valeurs pour voir comment les couleurs varient.</strong></p>
 
-<h3 id="RGB_and_RGBA_values">RGB and RGBA values</h3>
+<h3 id="rgb_and_rgba_values">Les valeurs RGB et RGBA</h3>
 
-<p>The third scheme we'll talk about here is RGB. An RGB value is a function — <code>rgb()</code> — which is given three parameters that represent the red, green, and blue channel values of the colors, in much the same way as hex values. The difference with RGB is that each channel is represented not by two hex digits, but by a decimal number between 0 and 255 — somewhat easier to understand.</p>
+<p>La troisième façon que nous aborderons ici est RGB (pour «&nbsp;<i lang="en">Red, Green, Blue</i>&nbsp;» soit&nbsp;: rouge, vert, bleu en français). Une valeur RGB est une fonction <code>rgb()</code> à laquelle on passe trois paramètres qui représentent respectivement les valeurs des canaux rouge, vert, bleu (de la même façon que pour les valeurs hexadécimales). Contrairement aux valeurs hexadécimales, les valeurs des composantes ne sont pas exprimées en hexadécimal (avec des chiffres de 0 à f) mais avec un nombre décimal compris entre 0 et 255. Cela rend la compréhension de la valeur plus simple.</p>
 
-<p>Let's rewrite our last example to use RGB colors:</p>
+<p>Réécrivons notre dernier exemple afin d'utiliser les couleurs RGB&nbsp;:</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-rgb.html", '100%', 700)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-rgb.html", '100%', 700)}} </p>
 
-<p>You can also use RGBA colors — these work in exactly the same way as RGB colors, and so you can use any RGB values. However, there is a fourth value that represents the alpha channel of the color, which controls opacity. If you set this value to <code>0</code> it will make the color fully transparent, whereas <code>1</code> will make it fully opaque. Values in between give you different levels of transparency.</p>
+<p>Il est aussi possible d'utiliser des couleurs RGBA&nbsp;: celles-ci fonctionnent exactement comme les couleurs RGB (et il est donc possible d'utiliser n'importe quelle valeur RGB pour une valeur RGBA). Toutefois, les valeurs RGBA utilisent une quatrième valeur qui représente le canal alpha de la couleur qui contrôle son opacité. Avec une valeur de <code>0</code> pour le canal alpha, la couleur sera complètement transparente tandis qu'avec <code>1</code>, elle sera complètement opaque. Les valeurs intermédiaires fourniront des niveaux progressifs d'opacité.</p>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: Setting an alpha channel on a color has one key difference to using the {{cssxref("opacity")}} property we looked at earlier. When you use opacity you make the element and everything inside it opaque, whereas using RGBA colors only makes the color you are specifying opaque.</p>
+<div class="notecard note">
+<p><strong>Note :</strong> Définir un canal alpha sur une couleur n'est pas exactement la même chose qu'utiliser la propriété <a href="/fr/docs/Web/CSS/opacity"><code>opacity</code></a> dont nous avons parlé auparavant. Lorsqu'on utilise <code>opacity</code>, c'est tout l'élément et ce qu'il contient qui devient plus ou moins opaque/transparent alors que lorsqu'on définit une couleur RGBA, seule la couleur est plus ou moins opaque.</p>
 </div>
 
-<p>In the example below I have added a background image to the containing block of our colored boxes. I have then set the boxes to have different opacity values — notice how the background shows through more when the alpha channel value is smaller.</p>
+<p>Dans l'exemple qui suit, on a ajouté une image d'arrière-plan au bloc englobant les boîtes colorées. On a ensuite réglé différentes valeurs d'opacité pour les différentes boîtes&nbsp;: vous pouvez voir comment l'arrière-plan est de plus en plus visible au fur et à mesure que la valeur du canal alpha est faible.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-rgba.html", '100%', 770)}}</p>
 
-<p><strong>In this example, try changing the alpha channel values to see how it affects the color output. </strong></p>
+<p><strong>Dans cet exemple, essayez de modifier les valeurs pour le canal alpha afin de voir comment la couleur est modifiée.</strong></p>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: At some point modern browsers were updated so that <code>rgba()</code> and <code>rgb()</code>, and <code>hsl()</code> and <code>hsla()</code> (see below), became pure aliases of each other and started to behave exactly the same. So for example both <code>rgba()</code> and <code>rgb()</code> accept colors with and without alpha channel values. Try changing the above example's <code>rgba()</code> functions to <code>rgb()</code> and see if the colors still work! Which style you use is up to you, but separating out non-transparent and transparent color definitions to use the different functions gives (very) slightly better browser support and can act as a visual indicator of where transparent colors are being defined in your code.</p>
+<div class="notecard note">
+<h4>Note :</h4>
+<p>Avec la spécification <i lang="en">CSS Colors Level 4</i>, <code>rgba()</code> est un alias pour <code>rgb()</code> et <code>hsla()</code> est un alias pour <code>hsl()</code> (voir ci-après). Pour les navigateurs qui implémentent ce standard, ces fonctions synonymes acceptent les mêmes paramètres et se comportent de la même façon. Essayez de modifier l'exemple qui précède pour passer de fonctions <code>rgba()</code> à des fonctions <code>rgb()</code> pour voir si les couleurs fonctionnent toujours. Le style que vous utiliserez ne dépend que de vous mais séparer les définitions de couleurs transparentes et de couleurs non-transparentes fournira une prise en charge navigateur (légèrement) meilleure tout en explicitant visuellement (dans votre code) où les couleurs transparentes sont définies.</p>
 </div>
 
-<h3 id="HSL_and_HSLA_values">HSL and HSLA values</h3>
+<h3 id="hsl_and_hsla_values">Valeurs HSL et HSLA</h3>
 
-<p>Slightly less well-supported than RGB is the HSL color model (not supported on old versions of IE), which was implemented after much interest from designers. Instead of red, green, and blue values, the <code>hsl()</code> function accepts hue, saturation, and lightness values, which are used to distinguish between the 16.7 million colors, but in a different way:</p>
+<p>Avec une prise en charge légèrement plus faible que RGB, on a le modèle de couleurs HSL (non pris en charge pour d'anciennes versions d'Internet Explorer) qui a été implémentée après un intérêt marqué de la part des designers. Plutôt que d'indiquer des valeurs pour les canaux rouge, vert, bleu, la fonction <code>hsl()</code> prend des paramètres pour la teinte (<i lang="en">hue</i> en anglais), la saturation et la luminosité. Cela permet aussi d'obtenir 16,7 millions de couleurs mais différemment&nbsp;:</p>
 
 <ul>
- <li><strong>Hue</strong>: The base shade of the color. This takes a value between 0 and 360, representing the angles around a color wheel.</li>
- <li><strong>Saturation</strong>: How saturated is the color? This takes a value from 0–100%, where 0 is no color (it will appear as a shade of grey), and 100% is full color saturation</li>
- <li><strong>Lightness</strong>: How light or bright is the color? This takes a value from 0–100%, where 0 is no light (it will appear completely black) and 100% is full light (it will appear completely white)</li>
+ <li><strong>Teinte (<i lang="en">hue</i>)</strong>&nbsp;: La couleur de base. La valeur utilisée est comprise entre 0 et 360 et représente l'angle sur une roue de couleurs.</li>
+ <li><strong>Saturation</strong>&nbsp;: La saturation de la couleur. La valeur est comprise entre 0 et 100% où 0 indique qu'il n'y a pas de couleur (ce sera une nuance de gris) et où 100% indique une saturation en couleur complète.</li>
+ <li><strong>Luminosité</strong>&nbsp;: La clarté ou la luminosité de la couleur. La valeur est comprise entre 0 et 100%, où 0 indique qu'il n'y a pas de luminosité (la couleur sera complètement noire) et où 100% indique une lumière pure (la couleur sera complètement blanche).</li>
 </ul>
 
-<p>We can update the RGB example to use HSL colors like this:</p>
+<p>On peut mettre à jour notre exemple RGB afin d'utiliser les couleurs HSL&nbsp;:</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-hsl.html", '100%', 700)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-hsl.html", '100%', 700)}}</p>
 
-<p>Just as RGB has RGBA, HSL has an HSLA equivalent, which gives you the same ability to specify the alpha channel. I've demonstrated this below by changing my RGBA example to use HSLA colors.</p>
+<p>À l'instar de RGBA pour RGB, il existe un équivalent HSLA à HSL qui permet aussi d'indiquer une valeur pour le canal alpha. Voici un exemple où on a converti l'exemple RGBA afin d'utiliser des couleurs HSLA.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-hsla.html", '100%', 770)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/color-hsla.html", '100%', 770)}} </p>
 
-<p>You can use any of these color values in your projects. It is likely that for most projects you will decide on a color palette and then use those colors — and your chosen method of specifying color — throughout the whole project. You can mix and match color models, however for consistency it is usually best if your entire project uses the same one!</p>
+<p>Vous pouvez utiliser n'importe laquelle de ces couleurs dans vos projets et il est probable que, pour la plupart des projets, vous décidiez d'une palette de couleurs pour vous limiter à elles dans un souci de cohérence, de même pour la méthode utilisée pour définir les couleurs. Vous pouvez bien entendu mélanger les différents modèles de définition des couleurs, mais il est souvent mieux d'être cohérent et d'en fixer un seul pour un même projet&nbsp;!</p>
 
-<h2 id="Images">Images</h2>
+<h2 id="images">Images</h2>
 
-<p>The <code><a href="/en-US/docs/Web/CSS/image">&lt;image&gt;</a></code> value type is used wherever an image is a valid value. This can be an actual image file pointed to via a <code>url()</code> function, or a gradient.</p>
+<p>Le type de valeur <code><a href="/fr/docs/Web/CSS/image">&lt;image&gt;</a></code> est utilisé à chaque endroit où une image est une valeur valide. Il peut s'agir d'une image à proprement parler dans un fichier (avec une fonction <code>url()</code> qui utilisera l'adresse du fichier avec l'image) ou d'un dégradé.</p>
 
-<p>In the example below, we have demonstrated an image and a gradient in use as a value for the CSS <code>background-image</code> property.</p>
+<p>Voici un exemple où on utilise une image et un dégradé pour la propriété CSS <code>background-image</code>.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/image.html", '100%', 740)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/image.html", '100%', 740)}} </p>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: there are some other possible values for <code>&lt;image&gt;</code>, however these are newer and currently have poor browser support. Check out the page on MDN for the <code><a href="/en-US/docs/Web/CSS/image">&lt;image&gt;</a></code> data type if you want to read about them.</p>
+<div class="notecard note">
+<p><strong>Note :</strong> il existe d'autres valeurs possibles pour le type <code>&lt;image&gt;</code>, toutefois celles-ci sont plus récentes et moins bien prises en charge par les navigateurs. Consultez la page MDN pour le type de données <code><a href="/fr/docs/Web/CSS/image">&lt;image&gt;</a></code> si vous voulez en savoir plus.</p>
 </div>
 
-<h2 id="Position">Position</h2>
+<h2 id="position">Position</h2>
 
-<p>The <code><a href="/en-US/docs/Web/CSS/position_value">&lt;position&gt;</a></code> value type represents a set of 2D coordinates, used to position an item such as a background image (via <code><a href="/en-US/docs/Web/CSS/background-position">background-position</a></code>). It can take keywords such as <code>top</code>, <code>left</code>, <code>bottom</code>, <code>right</code>, and <code>center</code> to align items with specific bounds of a 2D box, along with lengths, which represent offsets from the top and left-hand edges of the box.</p>
+<p>Le type de valeur <code><a href="/fr/docs/Web/CSS/position_value">&lt;position&gt;</a></code> représente un ensemble de coordonnées sur deux dimensions, utilisé pour positionner un objet comme une image d'arrière-plan (via <code><a href="/fr/docs/Web/CSS/background-position">background-position</a></code>). Ces valeurs peuvent être indiquées avec des mots-clés comme <code>top</code>, <code>left</code>, <code>bottom</code>, <code>right</code>, et  <code>center</code> afin d'aligner les objets sur les bords d'une boîte en deux dimensions et avec des longueurs qui représentent les décalages par rapport au coin supérieur gauche de la boîte.</p>
 
-<p>A typical position value consists of two values — the first sets the position horizontally, the second vertically. If you only specify values for one axis the other will default to <code>center</code>.</p>
+<p>Une position se compose généralement de deux valeurs&nbsp;: la première indiquant la position horizontale et la seconde indiquant la position verticale. Si une seule valeur est fournie, l'autre valeur sera <code>center</code> par défaut.</p>
 
-<p>In the following example we have positioned a background image 40px from the top and to the right of the container using a keyword.</p>
+<p>Dans l'exemple suivant, on a positionné une image d'arrière-plan à 40px du bord haut et vers la droite du conteneur en utilisant un mot-clé.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/position.html", '100%', 720)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/position.html", '100%', 720)}} </p>
 
-<p><strong>Play around with these values to see how you can push the image around.</strong></p>
+<p><strong>Manipulez, modifiez ces valeurs pour voir comment décaler l'image dans le conteneur.</strong></p>
 
-<h2 id="Strings_and_identifiers">Strings and identifiers</h2>
+<h2 id="strings_and_identifiers">Chaînes de caractères et identifiants</h2>
 
-<p>Throughout the examples above, we've seen places where keywords are used as a value (for example <code>&lt;color&gt;</code> keywords like <code>red</code>, <code>black</code>, <code>rebeccapurple</code>, and <code>goldenrod</code>). These keywords are more accurately described as <em>identifiers</em>, a special value that CSS understands. As such they are not quoted — they are not treated as strings.</p>
+<p>Dans les différents exemples qui précèdent, on a vu des endroits où les mots-clés sont utilisés comme valeur (par exemple <code>&lt;color&gt;</code> qui peut utiliser des mots-clés comme <code>red</code>, <code>black</code>, <code>rebeccapurple</code>, et <code>goldenrod</code>). Si on veut être plus précis, on dira que ces mots-clés sont des <em>identifiants</em>, une valeur spéciale comprise par le moteur CSS. Ces identifiants n'ont pas besoin d'être délimités par des guillemets/quotes&nbsp;: ce ne sont pas des chaînes de caractères.</p>
 
-<p>There are places where you use strings in CSS. For example <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#Generating_content_with_before_and_after">when specifying generated content</a>. In this case, the value is quoted to demonstrate that it is a string. In the below example we use unquoted color keywords along with a quoted generated content string.</p>
+<p>À d'autres endroits en CSS, on utilise des chaînes de caractères, comme <a href="/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#generating_content_with_before_and_after">lorsqu'on définit du contenu généré</a>. Dans ces cas, la valeur est délimitée par des quotes (" ou ') pour indiquer qu'il s'agit bien d'une chaîne de caractères. Dans l'exemple qui suit, on utilise des mots-clés de couleur (des identifiants sans quote) ainsi qu'une chaîne de caractères pour du contenu généré.</p>
 
-<p>{{EmbedGHLiveSample("css-examples/learn/values-units/strings-idents.html", '100%', 550)}} </p>
+<p>{{EmbedGHLiveSample("css-examples/learn/values-units/strings-idents.html", '100%', 550)}} </p>
 
-<h2 id="Functions">Functions</h2>
+<h2 id="functions">Functions</h2>
 
-<p>The final type of value we will take a look at is the group of values known as functions. In programming, a function is a reusable section of code that can be run multiple times to complete a repetitive task with minimum effort on the part of both the developer and the computer. Functions are usually associated with languages like JavaScript, Python, or C++, but they do exist in CSS too, as property values. We've already seen functions in action in the Colors section — <code>rgb()</code>, <code>hsl()</code>, etc. The value used to return an image from a file — <code>url()</code> — is also a function.</p>
+<p>Les dernières valeurs que nous verrons ici sont les fonctions. En programmation, une fonction est une section de code réutilisable qui peut être exécutée plusieurs fois afin de réaliser une tâche de façon répétitive avec le minimum effort de la part du développeur ou de l'ordinateur. Les fonctions sont généralement associées à des langages comme JavaScript, Python ou C++ mais elles existent en CSS également pour être utilisées comme valeurs de propriétés. En fait, nous avons déjà vu des fonctions dans la section à propos des couleurs&nbsp;: <code>rgb()</code>, <code>hsl()</code>, etc. La valeur utilisée pour récupérer une image à partir d'un fichier, <code>url()</code> est également une fonction.</p>
 
-<p>A value that behaves more like something you might find in a traditional programming language is the <code>calc()</code> CSS function. This function gives you the ability to do simple calculations inside your CSS. It's particularly useful if you want to work out values that you can't define when writing the CSS for your project, and need the browser to work out for you at runtime.</p>
+<p>Une fonction qui est peut-être plus proche des langages de programmation traditionnels est la fonction CSS <code>calc()</code>. Cette fonction permet de réaliser des calculs simples à l'intérieur du code CSS. Elle s'avère particulièrement utile pour déterminer des valeurs qui ne sont pas connues d'avance lorsqu'on écrit la feuille de style CSS et pour lesquelles ce sera le navigateur qui pourra les déterminer lors de l'exécution.</p>
 
-<p>For example, below we are using <code>calc()</code> to make the box <code>20% + 100px</code> wide. The 20% is calculated from the width of the parent container <code>.wrapper</code> and so will change if that width changes. We can't do this calculation beforehand because we don't know what 20% of the parent will be, so we use <code>calc()</code> to tell the browser to do it for us.</p>
+<p>Dans le prochain exemple, on utilise <code>calc()</code> afin que la boîte soit large de <code>20% + 100px</code>. Les 20% sont calculés à partir de la largeur du conteneur parent&nbsp;: <code>.wrapper</code> et changeront donc lorsque la largeur du parent changera. Ce calcul ne peut pas être effectué au préalable, car on ne peut pas savoir à l'avance ce que représenteront ces 20%. Aussi, on utilise <code>calc()</code> pour indiquer au navigateur de réaliser ce calcul.</p>
 
 <p>{{EmbedGHLiveSample("css-examples/learn/values-units/calc.html", '100%', 450)}}</p>
 
-<h2 id="Test_your_skills!">Test your skills!</h2>
+<h2 id="test_your_skills!">Testez vos compétences&nbsp;!</h2>
 
-<p>We have covered a lot in this article, but can you remember the most important information? You can find some further tests to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/CSS/Building_blocks/Values_tasks">Test your skills: Values and units</a>.</p>
+<p>Nous avons abordé de nombreuses notions dans cet article. Avez-vous retenu les informations essentielles&nbsp;? Vous pourrez trouver différents exercices pour vérifier que vous avez retenu les bonnes informations avant de poursuivre&nbsp;: rendez-vous sur <a href="/fr/docs/Learn/CSS/Building_blocks/Values_tasks">Testez vos compétences&nbsp;: valeurs et unités CSS</a>.</p>
 
-<h2 id="Summary">Summary</h2>
+<h2 id="summary">Résumé</h2>
 
-<p>This has been a quick run-through of the most common types of values and units you might encounter. You can have a look at all of the different types on the <a href="/en-US/docs/Web/CSS/CSS_Values_and_Units">CSS Values and units</a> reference page; you will encounter many of these in use as you work through these lessons.</p>
+<p>Voici un rapide tour des types de valeur et unités que vous pourrez rencontrer en CSS. Vous pouvez consulter la liste exhaustive des différents types sur <a href="/fr/docs/Web/CSS/CSS_Values_and_Units">la page de référence MDN sur les valeurs et unités CSS</a>. Vous verrez de nombreuses types et valeurs à mesure que vous progresserez dans ces leçons.</p>
 
-<p>The key thing to remember is that each property has a defined list of allowed value types, and each value type has a definition explaining what the values are. You can then look up the specifics here on MDN.</p>
+<p>La notion cruciale à garder en mémoire est que chaque propriété possède une liste de types de valeur autorisés et que chaque type de valeur possède une définition indiquant les valeurs possibles. Vous pourrez trouver toutes les informations et détails sur MDN.</p>
 
-<p>For example, understanding that <code><a href="/en-US/docs/Web/CSS/image">&lt;image&gt;</a></code> also allows you to create a color gradient is useful but perhaps non-obvious knowledge to have!</p>
+<p>Par exemple, comprendre le type <code><a href="/fr/docs/Web/CSS/image">&lt;image&gt;</a></code> vous permettra de comprendre comment créer un dégradé de couleur. C'est utile mais ce n'est pas forcément évident de prime abord.</p>
 
 <p>{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}</p>
 
-<h2 id="In_this_module">In this module</h2>
+<h2 id="in_this_module">Dans ce module</h2>
 
 <ol>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Cascade and inheritance</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">CSS selectors</a>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance">Cascade et héritage</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors">Sélecteurs CSS</a>
   <ul>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">Type, class, and ID selectors</a></li>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Attribute selectors</a></li>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">Pseudo-classes and pseudo-elements</a></li>
-   <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors/Combinators">Combinators</a></li>
+   <li><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors">Sélecteurs de type, de classe et d'ID</a></li>
+   <li><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors">Sélecteurs d'attributs</a></li>
+   <li><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements">Pseudo-classes et pseudo-éléments</a></li>
+   <li><a href="/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators">Combinateurs</a></li>
   </ul>
  </li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">The box model</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Backgrounds and borders</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Handling different text directions</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Overflowing_content">Overflowing content</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">Values and units</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Sizing items in CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Images_media_form_elements">Images, media, and form elements</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Styling_tables">Styling tables</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS">Debugging CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Organizing">Organizing your CSS</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/The_box_model">Le modèle de boîte</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders">Arrière-plans et bordures</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions">Gestion de différentes directions de texte</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Overflowing_content">Débordements de contenu</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Values_and_units">Valeurs et unités CSS</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS">Définir la taille des éléments en CSS</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Images_media_form_elements">Images, médias et éléments de formulaire</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Styling_tables">Mise en page de tableaux</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS">Débogage de CSS</a></li>
+ <li><a href="/fr/docs/Learn/CSS/Building_blocks/Organizing">Organiser votre CSS</a></li>
 </ol>
