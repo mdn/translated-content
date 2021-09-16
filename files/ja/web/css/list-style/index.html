@@ -104,7 +104,7 @@ List 2
 
 <h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティの考慮事項</h2>
 
-<p>Safari は順序なしリストで <code>list-style</code> の値に <code>none</code> が適用されると、アクセシビリティツリー上でリストとして認識されないという問題があります。これを解決するためには、それぞれのリスト項目の前に<a href="https://ja.wikipedia.org/wiki/%E3%82%BC%E3%83%AD%E5%B9%85%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9">ゼロ幅スペース</a>を<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/content">擬似コンテンツ</a>として追加してください。これでデザインがこのバグの影響を受けず、リスト項目が正しくない記述にはなりません。</p>
+<p>Safari は順序なしリストで <code>list-style</code> の値に <code>none</code> が適用されると、アクセシビリティツリー上でリストとして認識されないという問題があります。これを解決するためには、それぞれのリスト項目の前に<a href="https://ja.wikipedia.org/wiki/%E3%82%BC%E3%83%AD%E5%B9%85%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9">ゼロ幅スペース</a>を<a href="/ja/docs/Web/CSS/content">擬似コンテンツ</a>として追加してください。これでデザインがこのバグの影響を受けず、リスト項目が正しくない記述にはなりません。</p>
 
 <pre class="brush: css">ul {
   list-style: none;

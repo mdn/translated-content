@@ -11979,6 +11979,12 @@
       "wlalele"
     ]
   },
+  "Web/API/Blob/size": {
+    "modified": "2019-03-18T21:38:36.545Z",
+    "contributors": [
+      "loella16"
+    ]
+  },
   "Web/API/Blob/type": {
     "modified": "2020-10-15T21:55:27.760Z",
     "contributors": [
@@ -12011,14 +12017,6 @@
     "modified": "2020-10-15T22:01:50.239Z",
     "contributors": [
       "loella16"
-    ]
-  },
-  "Web/API/ByteString": {
-    "modified": "2019-03-23T22:50:30.417Z",
-    "contributors": [
-      "BEHOUBA",
-      "SphinxKnight",
-      "Hell_Carlito"
     ]
   },
   "Web/API/CDATASection": {
@@ -15875,14 +15873,8 @@
       "jean_pierre"
     ]
   },
-  "Web/API/File/fileName": {
+  "Web/API/File/name": {
     "modified": "2019-03-18T21:38:44.194Z",
-    "contributors": [
-      "loella16"
-    ]
-  },
-  "Web/API/File/fileSize": {
-    "modified": "2019-03-18T21:38:36.545Z",
     "contributors": [
       "loella16"
     ]
@@ -38297,18 +38289,11 @@
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/String": {
-    "modified": "2020-10-15T21:09:29.467Z",
+    "modified": "2019-03-23T22:50:30.417Z",
     "contributors": [
+      "BEHOUBA",
       "SphinxKnight",
-      "Brack0",
-      "grandoc",
-      "LCaba49",
-      "gabrielvv",
-      "tregagnon",
-      "teoli",
-      "fscholz",
-      "daniel35310",
-      "rat"
+      "Hell_Carlito"
     ]
   },
   "Web/JavaScript/Reference/Global_Objects/String/@@iterator": {

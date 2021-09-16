@@ -574,7 +574,7 @@ add(2, 3, 4, 5); // 14
 avg(2, 3, 4, 5); // 3.5
 </pre>
 
-<p>Это довольно  полезно, но при этом кажется излишне подробным. Для уменьшения количества кода взглянем на замену использования массива аргументов способом  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">Rest parameter syntax</a>. В этом случае мы можем передавать в функцию любое количество аргументов, сохраняя код минималистичным. <strong>Rest parameter operator</strong> используется в списке параметров функции в формате: <strong>...variable</strong> и включает в себя целый список аргументов, с которыми функция будет вызвана. Мы будем также использовать замену цикла <strong>for</strong>  циклом <strong>for...of</strong> для получения значений, которые будет содержать наша переменная.</p>
+<p>Это довольно  полезно, но при этом кажется излишне подробным. Для уменьшения количества кода взглянем на замену использования массива аргументов <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">синтаксисом остаточных параметров</a>. В этом случае мы можем передавать в функцию любое количество аргументов, сохраняя код минималистичным. <strong>Оператор остаточных параметров</strong> используется в списке параметров функции в формате: <strong>...variable</strong> и включает в себя целый список аргументов, с которыми функция будет вызвана. Мы будем также использовать замену цикла <strong>for</strong>  циклом <strong>for...of</strong> для получения значений, которые будет содержать наша переменная.</p>
 
 <pre class="brush: js notranslate">function avg(...args) {
   var sum = 0;
@@ -828,7 +828,7 @@ s.toString(); // "&lt;Person: Simon Willison&gt;"</pre>
 }
 </pre>
 
-<p>Это не точная копия <code>new</code>, так как она не устанавливает цепочку прототипов (это сложно ). Метод <code><a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">apply()</a></code> применяется не очень часто, но знать его важно. В примере выше, запись <code>...args</code> (включая многоточие) называется "<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">rest arguments</a>"— она включает в себя все оставшиеся аргументы.</p>
+<p>Это не точная копия <code>new</code>, так как она не устанавливает цепочку прототипов (это сложно ). Метод <code><a href="/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/apply">apply()</a></code> применяется не очень часто, но знать его важно. В примере выше, синтаксис <code>...args</code> (включая многоточие) называется <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/rest_parameters">остаточными параметрами</a>, потому что они включают в себя все оставшиеся аргументы.</p>
 
 <p>Вызов</p>
 
