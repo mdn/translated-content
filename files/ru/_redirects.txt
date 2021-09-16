@@ -301,6 +301,7 @@
 /ru/docs/Web/API/AudioContext/createPanner	/ru/docs/Web/API/BaseAudioContext/createPanner
 /ru/docs/Web/API/AudioContext/currentTime	/ru/docs/Web/API/BaseAudioContext/currentTime
 /ru/docs/Web/API/AudioContext/decodeAudioData	/ru/docs/Web/API/BaseAudioContext/decodeAudioData
+/ru/docs/Web/API/ByteString	/ru/docs/conflicting/Web/JavaScript/Reference/Global_Objects/String
 /ru/docs/Web/API/CSS_Object_Model/ориентация_экрана	/ru/docs/Web/API/CSS_Object_Model/Managing_screen_orientation
 /ru/docs/Web/API/Canvas_API/Tutorial/Использование_изображений	/ru/docs/Web/API/Canvas_API/Tutorial/Using_images
 /ru/docs/Web/API/Canvas_API/Tutorial/Композиции	/ru/docs/Web/API/Canvas_API/Tutorial/Compositing
@@ -322,6 +323,7 @@
 /ru/docs/Web/API/Element.insertAdjacentHTML	/ru/docs/Web/API/Element/insertAdjacentHTML
 /ru/docs/Web/API/Element/accessKey	/ru/docs/Web/API/HTMLElement/accessKey
 /ru/docs/Web/API/EventTarget.addEventListener	/ru/docs/Web/API/EventTarget/addEventListener
+/ru/docs/Web/API/File/fileName	/ru/docs/conflicting/Web/API/File/name
 /ru/docs/Web/API/File_and_Directory_Entries_API/Введение	/ru/docs/Web/API/File_and_Directory_Entries_API/Introduction
 /ru/docs/Web/API/Geolocation/Using_geolocation	/ru/docs/Web/API/Geolocation_API
 /ru/docs/Web/API/Geolocation/Using_geolocation/Using_the_Geolocation_API	/ru/docs/Web/API/Geolocation_API/Using_the_Geolocation_API
@@ -340,6 +342,8 @@
 /ru/docs/Web/API/HTMLHyperlinkElementUtils/toString	/ru/docs/Web/API/HTMLAnchorElement/toString
 /ru/docs/Web/API/HTMLHyperlinkElementUtils/username	/ru/docs/Web/API/HTMLAnchorElement/username
 /ru/docs/Web/API/HTMLImageElement.Image	/ru/docs/Web/API/HTMLImageElement/Image
+/ru/docs/Web/API/KeyboardEvent/which	/ru/docs/Web/API/UIEvent/which
+/ru/docs/Web/API/MouseEvent/which	/ru/docs/conflicting/Web/API/UIEvent/which
 /ru/docs/Web/API/NetworkInformation/connection	/ru/docs/Web/API/Navigator/connection
 /ru/docs/Web/API/Node.appendChild	/ru/docs/Web/API/Node/appendChild
 /ru/docs/Web/API/Node.contains	/ru/docs/Web/API/Node/contains

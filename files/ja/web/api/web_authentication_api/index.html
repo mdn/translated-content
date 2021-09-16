@@ -86,7 +86,7 @@ translation_of: Web/API/Web_Authentication_API
 
 <ol start="0">
  <li><strong>アプリケーションが認証要求を行う</strong> - アプリケーションが最初の認証要求を行います。この要求のプロトコルとフォーマットはWebAuthnによる規定の対象範囲外です。</li>
- <li><strong>サーバからのチャレンジ送信</strong> - サーバがJavaScriptプログラムに対してチャレンジを送ります。サーバとのコミュニケーションに用いられるプロトコルに指定はなく、WebAuthnによる規定の対象範囲外です。通常、サーバーは HTTPS 通信を使って {{Glossary("REST")}} で接続します(恐らく{{domxref("XMLHttpRequest")}} や {{domxref("Fetch_API", "Fetch")}}を用いるでしょう)が、安全なプロトコルでありさえすれば {{Glossary("SOAP")}} や <a href="https://tools.ietf.org/html/rfc2549">RFC 2549</a> 、その他ほぼどのようなプロトコルを使用しても構いません。サーバから受信したパラメータはほとんどの場合少しもしくは全く改変されずに  <a href="/en-US/docs/Web/API/CredentialsContainer/get">get()</a> の呼び出しに渡されます。<br>
+ <li><strong>サーバからのチャレンジ送信</strong> - サーバがJavaScriptプログラムに対してチャレンジを送ります。サーバとのコミュニケーションに用いられるプロトコルに指定はなく、WebAuthnによる規定の対象範囲外です。通常、サーバーは HTTPS 通信を使って {{Glossary("REST")}} で接続します(恐らく{{domxref("XMLHttpRequest")}} や {{domxref("Fetch_API", "Fetch")}}を用いるでしょう)が、安全なプロトコルでありさえすれば {{Glossary("SOAP")}} や <a href="https://tools.ietf.org/html/rfc2549">RFC 2549</a> 、その他ほぼどのようなプロトコルを使用しても構いません。サーバから受信したパラメータはほとんどの場合少しもしくは全く改変されずに  <a href="/ja/docs/Web/API/CredentialsContainer/get">get()</a> の呼び出しに渡されます。<br>
   <strong>次の事項は極めて重要です。</strong><br>
   <strong>・challenge はランダム情報のバッファー(少なくとも16バイト以上)であること</strong><br>
   <strong>・challenge は登録過程のセキュリティを確保するために必ずサーバー上で生成すること</strong></li>

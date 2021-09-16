@@ -29,7 +29,7 @@ translation_of: Web/CSS/Specificity
 <ol>
  <li><a href="/ja/docs/Web/CSS/Type_selectors">要素型セレクター</a> (例えば <code>h1</code>) と 擬似要素 (例えば <code>::before</code>)</li>
  <li><a href="/ja/docs/Web/CSS/Class_selectors">クラスセレクター</a> (例えば <code>.example</code>)、属性セレクター (例えば <code>[type="radio"]</code>)、擬似クラス (例えば <code>:hover</code>)</li>
- <li><a href="/en-US/docs/Web/CSS/ID_selectors">ID セレクター</a> (例えば <code>#example</code>)</li>
+ <li><a href="/ja/docs/Web/CSS/ID_selectors">ID セレクター</a> (例えば <code>#example</code>)</li>
 </ol>
 
 <p>全称セレクター ({{CSSxRef("Universal_selectors", "*")}}), 結合子 ({{CSSxRef("Adjacent_sibling_combinator", "+")}}, {{CSSxRef("Child_combinator", "&gt;")}}, {{CSSxRef("General_sibling_combinator", "~")}}, <a href="/ja/docs/Web/CSS/Descendant_combinator" style="white-space: nowrap;">'<code> </code>'</a>, {{CSSxRef("Column_combinator", "||")}}), 否定擬似クラス ({{CSSxRef(":not", ":not()")}}) は詳細度に影響を与えません。 (但し、 <code>:not()</code> の<em>中で</em>宣言されたセレクターは影響を与えます。)</p>
@@ -40,7 +40,7 @@ translation_of: Web/CSS/Specificity
 
 <h3 id="The_!important_exception" name="The_!important_exception">!important の例外</h3>
 
-<p><code>!important</code> 規則がスタイル宣言で使われたとき、それが宣言リストのどこであっても、この宣言は CSS 内で作られたその他の宣言を上書きします。技術的には <code>!important</code> は詳細度とは無関係ですが、直接作用します。しかし、スタイルの自然の<a href="/en-US/docs/Web/CSS/Cascade">カスケード</a>を破壊するためデバッグが難しくなるので、 <code>!important</code> を使用することは<strong>悪い習慣</strong>であり、使用を避けるべきです。同じ要素に二つの競合する宣言が <code>!important</code> 規則付きで適用された場合、より高い詳細度の宣言が適用されます。</p>
+<p><code>!important</code> 規則がスタイル宣言で使われたとき、それが宣言リストのどこであっても、この宣言は CSS 内で作られたその他の宣言を上書きします。技術的には <code>!important</code> は詳細度とは無関係ですが、直接作用します。しかし、スタイルの自然の<a href="/ja/docs/Web/CSS/Cascade">カスケード</a>を破壊するためデバッグが難しくなるので、 <code>!important</code> を使用することは<strong>悪い習慣</strong>であり、使用を避けるべきです。同じ要素に二つの競合する宣言が <code>!important</code> 規則付きで適用された場合、より高い詳細度の宣言が適用されます。</p>
 
 <p><strong>いくつかの経験則</strong></p>
 
