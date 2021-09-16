@@ -1,34 +1,38 @@
 ---
-title: AggregateError() constructor
+title: AggregateError() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/AggregateError/AggregateError
 tags:
-  - Constructor
+  - コンストラクター
   - JavaScript
-  - Reference
+  - リファレンス
+  - ポリフィル
+browser-compat: javascript.builtins.AggregateError.AggregateError
 translation_of: Web/JavaScript/Reference/Global_Objects/AggregateError/AggregateError
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><code><strong>AggregateError()</strong></code> コンストラクタは、単一のエラーにラップする必要があるいくつかのエラーに対してエラーを作成します。</p>
+**`AggregateError()`** コンストラクターは、単一のエラーにラップする必要があるいくつかのエラーに対してエラーを作成します。
 
-<h2 id="構文">構文</h2>
+## 構文
 
-<pre class="syntaxbox notranslate">new AggregateError(errors[, message])</pre>
+```js
+new AggregateError(errors)
+new AggregateError(errors, message)
+```
 
-<h3 id="値">値</h3>
+### 引数
 
-<dl>
- <dt><code>errors</code></dt>
- <dd>エラーの反復可能であり、実際には {{JSxRef("Error")}} インスタンスではない場合があります。</dd>
- <dt><code>message</code>{{Optional_Inline}}</dt>
- <dd>集計エラーのオプションのヒューマンリーダブルの説明。</dd>
-</dl>
+- `errors`
+  - : エラーの反復可能オブジェクトであり、実際には {{JSxRef("Error")}} インスタンスではない場合があります。
+- `message`{{Optional_Inline}}
+  - : オプションで、統合エラーの人間可読な説明です。
 
-<h2 id="例">例</h2>
+## 例
 
-<h3 id="AggregateError_の作成"><code>AggregateError</code> の作成</h3>
+### `AggregateError` の作成
 
-<pre class="brush: js; notranslate">try {
+```js
+try {
   throw new AggregateError([
     new Error("some error"),
   ], 'Hello');
@@ -37,33 +41,18 @@ translation_of: Web/JavaScript/Reference/Global_Objects/AggregateError/Aggregate
   console.log(e.message);                   // "Hello"
   console.log(e.name);                      // "AggregateError"
   console.log(e.errors);                    // [ Error: "some error" ]
-}</pre>
+}
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Promise.any', '#sec-aggregate-error-constructor', 'AggregateError()')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+## ブラウザーの互換性
 
-<div>
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("javascript.builtins.AggregateError.AggregateError")}}</p>
-</div>
-
-<h2 id="関連項目">関連項目</h2>
-
-<ul>
- <li>{{jsxref("Promise.any")}}</li>
-</ul>
+- `AggregateError` のポリフィルが [`core-js`](https://github.com/zloirock/core-js#ecmascript-promise) で利用できます
+- {{jsxref("Promise.any")}}
