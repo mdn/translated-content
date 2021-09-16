@@ -4,74 +4,61 @@ slug: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
 tags:
   - BigInt
   - JavaScript
-  - Method
-  - Reference
-  - asUintN
   - メソッド
+  - リファレンス
+  - asUintN
+browser-compat: javascript.builtins.BigInt.asUintN
 translation_of: Web/JavaScript/Reference/Global_Objects/BigInt/asUintN
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>BigInt.asUintN</code></strong> 静的メソッドは、 BigInt 値を 0 から 2<sup>width</sup>-1 までの間の符号なし整数に丸めるために使われます。</p>
+**`BigInt.asUintN`** 静的メソッドは、 BigInt 値を符号なし整数に丸め、その値を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/bigint-asuintn.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/bigint-asuintn.html", "taller")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+BigInt.asUintN(bits, bigint);
+```
 
-<pre class="syntaxbox">BigInt.asUintN(<var>width</var>, <var>bigint</var>);</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `bits`
+  - : 整数の大きさのために利用できるビット数。
+- `bigint`
+  - : 指定されたビット数に収めるよう丸める整数値。
 
-<dl>
- <dt><code><var>width</var></code></dt>
- <dd>整数の大きさのために利用できるビットの数。</dd>
- <dt><code><var>bigint</var></code></dt>
- <dd>指定されたビットに収めるよう丸める整数値。</dd>
-</dl>
+## 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+`bigint` を 2^`bits` で割った剰余の値の符号なし整数です。
 
-<p><code><var>bigint</var></code> を 2<sup><code><var>width</var></code></sup> で割った剰余の値の符号なし整数です。</p>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### 64ビットの範囲に収める
 
-<h3 id="Staying_in_64-bit_ranges" name="Staying_in_64-bit_ranges">64ビットの範囲に収める</h3>
+`BigInt.asUintN()` メソッドは、64ビットの数値の範囲に収めるのに便利です。
 
-<p><code>BigInt.asUintN()</code> メソッドは、64ビットの数値の範囲に収めるのに便利です。</p>
-
-<pre class="brush: js">const max = 2n ** 64n - 1n;
+```js
+const max = 2n ** 64n - 1n;
 
 BigInt.asUintN(64, max);
 // ↪ 18446744073709551615n
 
 BigInt.asUintN(64, max + 1n);
 // ↪ 0n
-// オーバーフローするのでゼロになる</pre>
+// オーバーフローするのでゼロになる
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-bigint.asuintn', 'BigInt.asUintN()')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.builtins.BigInt.asUintN")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{JSxRef("BigInt")}}</li>
- <li>{{JSxRef("BigInt.asIntN()")}}</li>
-</ul>
+- {{JSxRef("BigInt")}}
+- {{JSxRef("BigInt.asIntN()")}}
