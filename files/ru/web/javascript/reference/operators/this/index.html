@@ -368,14 +368,14 @@ for (var i = 0; i &lt; elements.length; i++) {
 
 <h3 id="В_инлайновом_обработчике_событий">В инлайновом обработчике событий</h3>
 
-<p>Когда код вызван из инлайнового обработчика, <code>this</code> указывает на DOM элемент, в котором расположен код события:</p>
+<p>Когда код вызван из инлайнового обработчика, <code>this</code> указывает на DOM-элемент, в котором расположен код события:</p>
 
 <pre class="brush:js">&lt;button onclick="alert(this.tagName.toLowerCase());"&gt;
   Показать this
 &lt;/button&gt;
 </pre>
 
-<p>Код выше выведет '<code>button</code>'. Следует отметить, что <code>this</code> будет указывать на DOM элемент только во внешних (не вложенных) функциях:</p>
+<p>Код выше выведет '<code>button</code>'. Следует отметить, что <code>this</code> будет указывать на DOM-элемент только во внешних (не вложенных) функциях:</p>
 
 <pre class="brush:js">&lt;button onclick="alert((function() {return this;} ()));"&gt;
   Показать вложенный this

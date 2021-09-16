@@ -17,7 +17,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/captureVisibleTab
 
 <p>指定ウィンドウの選択タブの表示領域の画像をエンコードしたデータ URI を作成します。このメソッドを使うには <code>&lt;all_urls&gt;</code> <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">パーミッション</a> が必要です (Chrome の場合、<code>activeTab</code> <a href="/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions">パーミッション</a> があり、ユーザーが許可の操作を行えば、このメソッドを使うことができます)。</p>
 
-<p>これは、<code><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> を返す非同期関数です。</p>
+<p>これは、<code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> を返す非同期関数です。</p>
 
 <h2 id="Syntax" name="Syntax">構文</h2>
 
@@ -38,7 +38,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/captureVisibleTab
 
 <h3 id="Return_value" name="Return_value">戻り値</h3>
 
-<p><code><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> であり、キャプチャーされたタブの表示領域の画像をエンコードしたデータ URL で fulfilled 状態にされる。このデータ URL は、HTML イメージ要素の 'src' 属性に設定することで、画像を表示できる。もし何らかのエラーが発生した場合、Promise はエラーメッセージによって rejected 状態にされる。</p>
+<p><code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code> であり、キャプチャーされたタブの表示領域の画像をエンコードしたデータ URL で fulfilled 状態にされる。このデータ URL は、HTML イメージ要素の 'src' 属性に設定することで、画像を表示できる。もし何らかのエラーが発生した場合、Promise はエラーメッセージによって rejected 状態にされる。</p>
 
 <h2 id="Examples" name="Examples">使用例</h2>
 

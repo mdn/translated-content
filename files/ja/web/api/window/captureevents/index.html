@@ -48,7 +48,7 @@ function page_click() {
 
 <p>ユーザーの操作によって DOM 内で発生したイベント (ボタンのクリックや現在の文書からのフォーカス移動など) は、通常、イベントを開始したオブジェクトに到達する前に、まず高レベルの <a href="/ja/docs/Web/API/Window"><code>window</code></a> や <a href="/ja/docs/Web/API/Document"><code>document</code></a> オブジェクトを通過します。</p>
 
-<p><a href="/en-US/docs/Web/API/Window"><code>window</code></a> の <code>captureEvents()</code> メソッドを呼び出すと、指定した種類のイベント (例えば <code>Event.CLICK</code>) は、階層内の「下位」オブジェクトに通過しなくなります。イベントを通常のように「バブルアップ」させるためには、 <a href="/en-US/docs/Web/API/Window/releaseEvents"><code>window.releaseEvents()</code></a> ({{deprecated_inline}}) を window 上で呼び出し、イベントをトラップしないようにしなければなりません。</p>
+<p><a href="/ja/docs/Web/API/Window"><code>window</code></a> の <code>captureEvents()</code> メソッドを呼び出すと、指定した種類のイベント (例えば <code>Event.CLICK</code>) は、階層内の「下位」オブジェクトに通過しなくなります。イベントを通常のように「バブルアップ」させるためには、 <a href="/ja/docs/Web/API/Window/releaseEvents"><code>window.releaseEvents()</code></a> ({{deprecated_inline}}) を window 上で呼び出し、イベントをトラップしないようにしなければなりません。</p>
 
 <p>なお、次の構文を使用することでこのメソッドにイベントのリストを渡すことができます。
   <code>window.captureEvents(Event.KEYPRESS | Event.KEYDOWN | Event.KEYUP)</code>.</p>

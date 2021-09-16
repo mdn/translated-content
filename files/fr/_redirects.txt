@@ -3467,6 +3467,7 @@
 /fr/docs/Web/API/AudioContext/createGain	/fr/docs/Web/API/BaseAudioContext/createGain
 /fr/docs/Web/API/Body	/fr/docs/orphaned/Web/API/Body
 /fr/docs/Web/API/Body/json	/fr/docs/orphaned/Web/API/Body/json
+/fr/docs/Web/API/ByteString	/fr/docs/Web/JavaScript/Reference/Global_Objects/String
 /fr/docs/Web/API/CSSMatrix	/fr/docs/Web/API/DOMMatrix
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas	/fr/docs/Web/API/Canvas_API/Tutorial
 /fr/docs/Web/API/Canvas_API/Tutoriel_canvas/Advanced_animations	/fr/docs/Web/API/Canvas_API/Tutorial/Advanced_animations
@@ -3646,6 +3647,8 @@
 /fr/docs/Web/API/EventTarget/attachEvent	/fr/docs/Web/API/EventTarget/addEventListener
 /fr/docs/Web/API/EventTarget/detachEvent	/fr/docs/Web/API/EventTarget/removeEventListener
 /fr/docs/Web/API/EventTarget/fireEvent	/fr/docs/Web/API/EventTarget/dispatchEvent
+/fr/docs/Web/API/File/fileName	/fr/docs/Web/API/File/name
+/fr/docs/Web/API/File/fileSize	/fr/docs/Web/API/Blob/size
 /fr/docs/Web/API/FileList/FileList	/fr/docs/Web/API/FileList
 /fr/docs/Web/API/FileReader/FileList	/fr/docs/Web/API/FileList
 /fr/docs/Web/API/FormData/Utilisation_objets_FormData	/fr/docs/Web/API/FormData/Using_FormData_Objects

@@ -26,7 +26,7 @@ foo = true;  // foo is a Boolean now
 <p>最新的 ECMAScript 标准定义了 8 种数据类型:</p>
 
 <ul>
- <li>6 种{{Glossary("Primitive", "原始类型")}}，使用 {{Glossary("typeof")}} 运算符检查:
+ <li>7 种{{Glossary("Primitive", "原始类型")}}，使用 {{Glossary("typeof")}} 运算符检查:
   <ul>
    <li>{{Glossary("undefined")}}：<code>typeof instance === "undefined"</code></li>
    <li>{{Glossary("Boolean")}}：<code>typeof instance === "boolean"</code></li>
@@ -34,9 +34,9 @@ foo = true;  // foo is a Boolean now
    <li>{{Glossary("String")}}：<code>typeof instance === "string</code></li>
    <li>{{Glossary("BigInt")}}：<code>typeof instance === "bigint"</code></li>
    <li>{{Glossary("Symbol")}} ：<code>typeof instance === "symbol"</code></li>
+   <li>{{Glossary("null")}}：<code>typeof instance === "object"</code>。</li>
   </ul>
  </li>
- <li>{{Glossary("null")}}：<code>typeof instance === "object"</code>。</li>
  <li>{{Glossary("Object")}}：<code>typeof instance === "object"</code>。任何 {{Glossary("constructed")}} 对象实例的特殊非数据结构类型，也用做数据结构：new {{Glossary("Object")}}，new {{Glossary("Array")}}，new {{Glossary("Map")}}，new {{Glossary("Set")}}，new {{Glossary("WeakMap")}}，new {{Glossary("WeakSet")}}，new {{Glossary("Date")}}，和几乎所有通过 {{Glossary("new keyword")}} 创建的东西。</li>
 </ul>
 
