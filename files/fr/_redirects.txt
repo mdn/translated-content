@@ -3647,6 +3647,8 @@
 /fr/docs/Web/API/EventTarget/attachEvent	/fr/docs/Web/API/EventTarget/addEventListener
 /fr/docs/Web/API/EventTarget/detachEvent	/fr/docs/Web/API/EventTarget/removeEventListener
 /fr/docs/Web/API/EventTarget/fireEvent	/fr/docs/Web/API/EventTarget/dispatchEvent
+/fr/docs/Web/API/File/fileName	/fr/docs/Web/API/File/name
+/fr/docs/Web/API/File/fileSize	/fr/docs/Web/API/Blob/size
 /fr/docs/Web/API/FileList/FileList	/fr/docs/Web/API/FileList
 /fr/docs/Web/API/FileReader/FileList	/fr/docs/Web/API/FileList
 /fr/docs/Web/API/FormData/Utilisation_objets_FormData	/fr/docs/Web/API/FormData/Using_FormData_Objects
