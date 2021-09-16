@@ -15,7 +15,7 @@ translation_of: Web/API/WebSockets_API/Writing_WebSocket_servers
 
 <p>Un serveur WebSocket est compris ici en "bas niveau" (<em>c'est-à-dire plus proche du langage machine que du langage humain</em>. Les WebSockets sont souvent séparés et spécialisés vis-à-vis de leurs homologues serveurs (pour des questions de montées en charge ou d'autres raisons), donc vous devez souvent utiliser un <a href="https://fr.wikipedia.org/wiki/Proxy_inverse">proxy inverse</a> (<em>c'est-à-dire de l'extérieur vers l'intérieur du réseau local, comme pour un serveur HTTP classique</em>) pour détecter les "poignées de mains" spécifiques au WebSocket, qui précédent l'échange et permettent d'aiguiller les clients vers le bon logiciel. Dans ce cas, vous ne devez pas ajouter à votre serveur des <em>cookies</em> et d'autres méthodes d'authentification. </p>
 
-<h2 id="La_poignée_de_mains_du_WebSocket"><a id="PoignéeDeMain" name="PoignéeDeMain">La "poignée de mains" du WebSocket</a></h2>
+<h2 id="La_poignée_de_mains_du_WebSocket">La "poignée de mains" du WebSocket</h2>
 
 <p>En tout premier lieu, le serveur doit écouter les connexions sockets entrantes utilisant le protocole TCP standard. Suivant votre plateforme, celui-ci peut déjà le faire pour vous. Pour l'exemple qui suit, nous prenons pour acquis que votre serveur écoute le domaine <em>exemple.com</em> sur le port 8000 et votre serveur socket répond aux requêtes de type GET sur le chemin <em>/chat</em>. </p>
 
@@ -184,7 +184,7 @@ for (var i = 0; i &lt; ENCODED.length; i++) {
 
 <p>La connexion peut être close à l'initiative du client ou du serveur grâce à l'envoi d'une trame de contrôle contenant des données spécifiques permettant d'interrompre la poignée de main (de lever définitivement le masque pour être plus précis ; voir la <a href="http://tools.ietf.org/html/rfc6455#section-5.5.1">section 5.5.1</a>). Dès la réception de la trame, le récepteur envoit une trame spécifique de fermeture en retour (pour signifier la bonne compréhension de la fin de connexion). C'est l'émetteur à l'origine de la fermeture qui doit clore la connexion ; toutes les données supplémentaires sont éliminés / ignorés. </p>
 
-<h2 id="Diverses_informations_utiles"><a id="Miscellaneous" name="Miscellaneous">Diverses informations utiles</a></h2>
+<h2 id="Diverses_informations_utiles">Diverses informations utiles</h2>
 
 <div class="note">
 <p>L'ensemble des codes, extensions et sous-protocoles liés aux WebSocket sont enregistrés dans le (registre) <a href="http://www.iana.org/assignments/websocket/websocket.xml">IANA WebSocket Protocol Registry</a>.</p>

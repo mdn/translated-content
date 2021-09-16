@@ -20,21 +20,91 @@ translation_of: Web/API/Element/scrollHeight
 
 <h2 id="Exemple" name="Exemple">Exemple</h2>
 
-<div id="offsetContainer" style="margin: 26px 0px; background-color: rgb(255, 255, 204); border: 4px dashed black; color: black; position: absolute; left: 260px;">
-<div id="idDiv" style="margin: 24px 29px; border: 24px black solid; padding: 0px 28px; width: 199px; height: 102px; overflow: auto; background-color: white; font-size: 13px!important; font-family: Arial, sans-serif;">
-<p id="PaddingTopLabel" style="text-align: center; font-style: italic; font-weight: bold; font-size: 13px!important; font-family: Arial, sans-serif; margin: 0px;">padding-top</p>
+<h2>Exemple</h2>
 
-<p>Gentle, individualistic and very loyal, Birman cats fall between Siamese and Persian in character. If you admire cats that are non aggressive, that enjoy being with humans and tend to be on the quiet side, you may well find that Birman cats are just the felines for you.</p>
+<p>Avec l'évènement {{domxref("GlobalEventHandlers/onscroll", "onscroll")}}, cette équivalence peut s'avérer utile afin de déterminer si un utilisateur a lu du texte ou non (voir aussi les propriétés {{domxref("element.scrollTop")}} et {{domxref("element.clientHeight")}}).</p>
 
-<p>All Birmans have colorpointed features, dark coloration of the face, ears, legs and tail.</p>
+<p>La case à cocher de la démo est désactivée et ne peut être cochée tant que l'ensemble du contenu n'a pas défilé.</p>
 
-<p>Cat image and text coming from <a class="external" href="http://www.best-cat-art.com/">www.best-cat-art.com</a></p>
+<h3 id="HTML">HTML</h3>
 
-<p id="PaddingBottomLabel" style="text-align: center; font-style: italic; font-weight: bold; font-size: 13px!important; font-family: Arial, sans-serif; margin: 0px;">padding-bottom</p>
-</div>
-<strong style="">Left</strong><strong style="">Top</strong><strong style="color: blue; font-family: Arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 370px; position: absolute; top: 85px;">Right</strong><strong style="color: blue; font-family: Arial,sans-serif; font-size: 13px!important; font-weight: bold; left: 164px; position: absolute; top: 203px;">Bottom</strong><em>margin-top</em><em>margin-bottom</em><em>border-top</em><em>border-bottom</em>{{ mediawiki.external('if IE') }}&gt;&lt;span id="MrgLeft" style="position: absolute; left: 8px; top: 65px; font: bold 13px Arial, sans-serif !important; writing-mode: tb-rl;"&gt;margin-left&lt;/span&gt;&lt;span id="BrdLeft" style="position: absolute; left: 33px; top: 65px; color: white; font: bold 13px Arial, sans-serif !important; writing-mode: tb-rl;"&gt;border-left&lt;/span&gt;&lt;span id="PdgLeft" style="position: absolute; left: 55px; top: 65px; font: bold 13px Arial, sans-serif !important; writing-mode: tb-rl;"&gt;padding-left&lt;/span&gt;&lt;span id="PdgRight" style="position: absolute; left: 275px; top: 60px; color: black; font: bold 13px Arial, sans-serif !important; writing-mode: tb-rl; white-space: nowrap;"&gt;padding-right&lt;/span&gt;&lt;span id="BrdRight" style="position: absolute; left: 310px; top: 65px; color: white; font: bold 13px Arial, sans-serif !important; writing-mode: tb-rl;"&gt;border-right&lt;/span&gt;&lt;span id="MrgRight" style="position: absolute; left: 340px; top: 65px; font: bold 13px Arial, sans-serif !important; writing-mode: tb-rl;"&gt;margin-right&lt;/span&gt;&lt;!{{ mediawiki.external('endif') }}</div>
+<pre class="brush: html">&lt;form name="registration"&gt;
+  &lt;p&gt;
+    &lt;textarea id="rules"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at laoreet magna.
+Aliquam erat volutpat. Praesent molestie, dolor ut eleifend aliquam, mi ligula ultrices sapien, quis cursus
+neque dui nec risus. Duis tincidunt lobortis purus eu aliquet. Quisque in dignissim magna. Aenean ac lorem at
+velit ultrices consequat. Nulla luctus nisi ut libero cursus ultrices. Pellentesque nec dignissim enim. Phasellus
+ut quam lacus, sed ultricies diam. Vestibulum convallis rutrum dolor, sit amet egestas velit scelerisque id.
+Proin non dignissim nisl. Sed mi odio, ullamcorper eget mattis id, malesuada vitae libero. Integer dolor lorem,
+mattis sed dapibus a, faucibus id metus. Duis iaculis dictum pulvinar. In nisi nibh, dapibus ac blandit at, porta
+at arcu. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent
+dictum ipsum aliquet erat eleifend sit amet sollicitudin felis tempus. Aliquam congue cursus venenatis. Maecenas
+luctus pellentesque placerat. Mauris nisl odio, condimentum sed fringilla a, consectetur id ligula. Praesent sem
+sem, aliquet non faucibus vitae, iaculis nec elit. Nullam volutpat, lectus et blandit bibendum, nulla lorem congue
+turpis, ac pretium tortor sem ut nibh. Donec vel mi in ligula hendrerit sagittis. Donec faucibus viverra fermentum.
+Fusce in arcu arcu. Nullam at dignissim massa. Cras nibh est, pretium sit amet faucibus eget, sollicitudin in
+ligula. Vivamus vitae urna mauris, eget euismod nunc. Aenean semper gravida enim non feugiat. In hac habitasse
+platea dictumst. Cras eleifend nisl volutpat ante condimentum convallis. Donec varius dolor malesuada erat
+consequat congue. Donec eu lacus ut sapien venenatis tincidunt. Quisque sit amet tellus et enim bibendum varius et
+a orci. Donec aliquet volutpat scelerisque. Proin et tortor dolor. Ut aliquet, dolor a mattis sodales, odio diam
+pulvinar sem, egestas pretium magna eros vitae felis. Nam vitae magna lectus, et ornare elit. Morbi feugiat, ipsum
+ac mattis congue, quam neque mollis tortor, nec mollis nisl dolor a tortor. Maecenas varius est sit amet elit
+interdum quis placerat metus posuere. Duis malesuada justo a diam vestibulum vel aliquam nisi ornare. Integer
+laoreet nisi a odio ornare non congue turpis eleifend. Cum sociis natoque penatibus et magnis dis parturient montes,
+nascetur ridiculus mus. Cras vulputate libero sed arcu iaculis nec lobortis orci fermentum.
+    &lt;/textarea&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;input type="checkbox" id="agree" name="accept" /&gt;
+    &lt;label for="agree"&gt;I agree&lt;/label&gt;
+    &lt;input type="submit" id="nextstep" value="Next" /&gt;
+  &lt;/p&gt;
+&lt;/form&gt;</pre>
 
-<p style="margin-top: 270px;"><img alt="Image:scrollHeight.png" src="/@api/deki/files/840/=ScrollHeight.png"></p>
+<h3 id="CSS">CSS</h3>
+
+<pre class="brush: css">#notice {
+  display: inline-block;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  width: 600px;
+  padding: 5px;
+  border: 2px #7FDF55 solid;
+}
+
+#rules {
+  width: 600px;
+  height: 130px;
+  padding: 5px;
+  border: #2A9F00 solid 2px;
+  border-radius: 5px;
+}</pre>
+
+<h3 id="JavaScript">JavaScript</h3>
+
+<pre class="brush: js">function checkReading () {
+  if (checkReading.read) {
+    return;
+  }
+  checkReading.read = this.scrollHeight - Math.round(this.scrollTop) === this.clientHeight;
+  document.registration.accept.disabled = document.getElementById("nextstep").disabled = !checkReading.read;
+  checkReading.noticeBox.textContent = checkReading.read ? "Thank you." : "Please, scroll and read the following text.";
+}
+
+onload = function () {
+  var oToBeRead = document.getElementById("rules");
+  checkReading.noticeBox = document.createElement("span");
+  document.registration.accept.checked = false;
+  checkReading.noticeBox.id = "notice";
+  oToBeRead.parentNode.insertBefore(checkReading.noticeBox, oToBeRead);
+  oToBeRead.parentNode.insertBefore(document.createElement("br"), oToBeRead);
+  oToBeRead.onscroll = checkReading;
+  checkReading.call(oToBeRead);
+}</pre>
+
+<h3>Résultat</h3>
+
+<p>{{EmbedLiveSample('Exemple', '640', '400')}}</p>
 
 <h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Problèmes et solutions</h2>
 

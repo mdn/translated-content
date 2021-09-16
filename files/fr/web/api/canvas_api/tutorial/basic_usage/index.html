@@ -29,7 +29,6 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Utilisation_de_base
 
 <p>L'élément <code>&lt;canvas&gt;</code> peut être stylisé comme n'importe quelle image normale (marges, contours, arrière-plan, etc). Si aucun style n'est donné, le canvas sera par défaut complètement transparent. Il faut noter que peu importe quels styles sont utilisés, le style n'affectera pas l'acte de dessiner sur le canvas. Nous verrons en détail la stylisation des canvas plus tard dans ce tutoriel.</p>
 
-<div id="section_2">
 <h3 id="Contenu_de_repli">Contenu de repli</h3>
 
 <p>Puisque certains plus anciens navigateurs ne supportent pas l'élément {{HTMLElement("canvas")}} (les plus communs étant les versions d'Internet Explorer avant la version 9), il est mieux d'avoir du contenu de repli pour afficher.</p>
@@ -67,7 +66,6 @@ var ctx = canvas.getContext('2d');</pre>
 
 <p>La première ligne obtient le {{HTMLElement("canvas")}} dans le DOM en appelant {{domxref("document.getElementById()")}}. Lorsque nous avons l'élément canvas, nous pouvons accéder au contexte de rendu en utilisant sa méthode <code>getContext()</code>.</p>
 
-<div id="section_5">
 <h2 id="Vérification_de_la_prise_en_charge">Vérification de la prise en charge</h2>
 
 <p>Le contenu de repli est affiché dans les navigateurs qui ne prennent pas en charge l'élément {{HTMLElement("canvas")}}. Les scripts peuvent aussi vérifier la prise en charge de manière programmatique en vérifiant la présence de la méthode <code>getContext()</code>. Notre extrait de code ci-dessus se transforme donc en ceci :</p>
@@ -80,8 +78,7 @@ if (canvas.getContext) {
 } else {
   // code pour le cas où canvas ne serait pas supporté
 }</pre>
-</div>
-</div>
+
 
 <h2 id="Un_modèle_basique">Un modèle basique</h2>
 

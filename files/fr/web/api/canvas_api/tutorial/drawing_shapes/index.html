@@ -24,7 +24,6 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Formes_géométriques
 
 <p>Au contraire de <a href="/fr/docs/Web/SVG" rel="internal" title="en/SVG">SVG</a>, le {{HTMLElement("canvas")}} ne supporte qu'une seule forme primitive : le rectangle. Toute autre forme doit être créée en combinant un ou plusieurs trajets, c'est-à-dire des listes de points reliés par des lignes. Heureusement, nous avons un assortiment de fonctions de dessin de trajets, qui rendent possible la composition de formes très complexes.</p>
 
-<div id="section_3">
 <p>Commençons par le rectangle. Il y a trois fonctions qui dessinent des rectangles sur le canvas :</p>
 
 <dl>
@@ -491,14 +490,11 @@ function rectArrondi(ctx, x, y, largeur, hauteur, rayon) {
 
 <p>L'image résultante ressemble à ce qui suit :</p>
 
-<div id="section_18">
 <p>{{EmbedLiveSample("Combiner_les_possibilités", 160, 160)}}</p>
 
 <p>Nous ne l'expliquerons pas plus en détails, du fait que c'est étonnament simple. Les choses les plus importantes à noter sont l'utilisation de la propriété <code>fillStyle</code> sur le contexte du dessin, et l'utilisation d'une fonction utilitaire dans ce cas, rectArrondi<code>())</code>. L'utilisation de fonctions utilitaires pour des éléments de dessin que vous faites souvent peut être très utile, et peut réduire la quantité de code dont vous avez besoin, ainsi que sa complexité.</p>
 
 <p>Nous reviendrons sur <code>fillStyle</code> plus en détail plus loin dans ce tutoriel. Pour l'instant, tout ce que nous faisons est de l'utiliser pour changer en blanc la couleur pour les trajets depuis la couleur noire par défaut, et inversement ensuite.</p>
-</div>
-</div>
 
 <h2 id="Objets_Path2D">Objets Path2D</h2>
 

@@ -17,13 +17,13 @@ translation_of: Web/API/Web_Audio_API
  <br>
  Un processus de développement typique avec web audio ressemble à ceci :</p>
 
-<ol>
+<ul>
  <li>Création d'un contexte audio</li>
  <li>Dans ce contexte, création des sources — comme <code>&lt;audio&gt;</code>, oscillator, stream</li>
  <li>Création de noeuds d'effets, comme la réverbération, les filtres biquad, la balance, le compresseur</li>
  <li>Choix de la sortie audio (appelée destination), par exemple les enceintes du système</li>
  <li>Connection des sources aux effets, et des effets à la destination</li>
-</ol>
+</ul>
 
 <p><img alt="A simple box diagram with an outer box labeled Audio context, and three inner boxes labeled Sources, Effects and Destination. The three inner boxes have arrow between them pointing from left to right, indicating the flow of audio information." src="https://mdn.mozillademos.org/files/12523/webaudioAPI.svg" style="display: block; height: 143px; margin: 0px auto; width: 643px;"></p>
 
@@ -378,28 +378,24 @@ function muterVoix() { // allumer / éteindre le son
  <li><a href="https://github.com/mattlima/mooog">Mooog</a>: jQuery-style chaining of AudioNodes, mixer-style sends/returns, and more.</li>
 </ul>
 
-<section id="Quick_Links">
-<h3 id="Quicklinks">Quicklinks</h3>
+<h3 id="guides">Guides</h3>
 
-<ol>
- <li data-default-state="open"><strong><a href="#">Guides</a></strong>
-
-  <ol>
+  <ul>
    <li><a href="/fr/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API">Les concepts de base de la Web Audio API</a></li>
    <li><a href="/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API">Utiliser la Web Audio API</a></li>
    <li><a href="/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API">Visualizations with Web Audio API</a></li>
    <li><a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialisation_basics">Web audio spatialisation basics</a></li>
    <li><a href="/en-US/docs/Web/API/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext" title="/en-US/docs/Web_Audio_API/Porting_webkitAudioContext_code_to_standards_based_AudioContext">Porting webkitAudioContext code to standards based AudioContext</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><strong><a href="#">Exemples</a></strong>
-  <ol>
+  </ul>
+
+<h3 id="démos">Démos</h3>
+  <ul>
    <li><a href="http://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a></li>
    <li><a href="http://mdn.github.io/violent-theremin/">Violent Theremin</a></li>
-  </ol>
- </li>
- <li data-default-state="open"><strong><a href="#">Objets</a></strong>
-  <ol>
+  </ul>
+
+<h3 id="api">API</h3>
+  <ul>
    <li>{{domxref("AnalyserNode")}}</li>
    <li>{{domxref("AudioBuffer")}}</li>
    <li>{{domxref("AudioBufferSourceNode")}}</li>
@@ -429,7 +425,5 @@ function muterVoix() { // allumer / éteindre le son
    <li>{{domxref("PeriodicWave")}}</li>
    <li>{{domxref("ScriptProcessorNode")}}</li>
    <li>{{domxref("WaveShaperNode")}}</li>
-  </ol>
- </li>
-</ol>
-</section>
+  </ul>
+

@@ -214,9 +214,7 @@ Pour appliquer une règle de sécurité au <em>worker</em>, il faudra fournir un
 <br>
 Si l'origine du script du <em>worker</em> est un identifiant global unique (si son URL utilise le schéma <code>data://</code> ou <code>blob://</code> par exemple), le <em>worker</em> héritera du CSP associé au document responsable de sa création.</div>
 
-<div></div>
-
-<h2 id="Échanger_des_données_avec_les_workers_plus_de_détails"><a id="échange" name="échange">Échanger des données avec les <em>workers</em> : plus de détails</a></h2>
+<h2 id="Échanger_des_données_avec_les_workers_plus_de_détails">Échanger des données avec les <em>workers</em> : plus de détails</h2>
 
 <p>Les données échangées entre le document principal et les <em>workers</em> sont <strong>copiées</strong> et non partagées. Lorsqu'ils sont envoyés au <em>worker</em>, les objets sont sérialisés (puis désérialisés à leur réception). La page et le <em>worker</em> <strong>ne partagent pas le même exemplaire </strong>et on a donc deux versions d'une part et d'autre. La plupart des navigateurs implémentent cette approche avec <a href="/fr/docs/Web/API/Web_Workers_API/algorithme_clonage_structure">une clonage structurel</a>.</p>
 

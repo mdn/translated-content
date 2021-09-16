@@ -40,19 +40,19 @@ var transaction = db.transaction('my-store-name');</pre>
   </thead>
   <tbody>
    <tr>
-    <td id="readonly"><code>readonly</code></td>
+    <td><code>readonly</code></td>
     <td>permet de prendre des objets dans les magasins d'objets, de lire les index et de faire des curseurs.</td>
    </tr>
    <tr>
-    <td id="readwrite"><code>readwrite</code></td>
+    <td><code>readwrite</code></td>
     <td>Permet en plus de que l'on peut faire en readonly, d’ajouter et mettre à jour des objets dans les magasins d'objets.</td>
    </tr>
-   <tr id="versionchange">
+   <tr>
     <td><code>versionchange</code></td>
     <td>Permet toute les opérations, y compris celles qui suppriment ou ajoutent des {{domxref("IDBOjectStore","magasins d'objets")}} ou des {{domxref("IDBIndex","index")}}. Ce mode met à jour le numéro de version de la base de données, il se sert au début de {{domxref ("IDBDatabase.setVersion")}}. Les {{domxref("IDBTransaction","transactions")}} dans ce mode ne peuvent pas fonctionner en même temps que d'autres.</td>
    </tr>
    <tr>
-    <td id="readwriteflush "><code>readwriteflush</code></td>
+    <td><code>readwriteflush</code></td>
     <td>
      <p>Si vous devez vous assurer de l'efficacité d'une transaction pour une raison quelconque (par exemple, vous stockez des données critiques qui ne peuvent être recalculées plus tard), vous pouvez forcer l’enregistrement complet sur disque avant de déclencher l’événement <code>complete</code> en utilisant le mode <code>readwriteflush</code> (non standard) expérimental ( voir {{domxref("IDBDatabase.transaction")}} ). C'est expérimental, et ne peut être utilisé que si le <code> dom.indexedDB.experimental </code> pref est réglé sur <code> true </code> dans <code> about:config.</code></p>
 

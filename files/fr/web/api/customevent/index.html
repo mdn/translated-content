@@ -65,13 +65,9 @@ translation_of: Web/API/CustomEvent
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilité des navigateurs</h2>
 
-
-
 <p>{{Compat("api.CustomEvent")}}</p>
 
-<div id="compat-desktop">
 <h2 id="Déclenchement_à_partir_de_code_privilégié_vers_du_code_non-privilégié">Déclenchement à partir de code privilégié vers du code non-privilégié</h2>
-</div>
 
 <p>Lors du déclenchement d'un CustomEvent depuis du code privilégié (une extension, par exemple) vers du code non-privilégié (une page web par exemple), vous devez prendre en considération la sécurité. Firefox et les autres applications Gecko empêchent qu'un objet créé dans un contexte soit utilisé dans un autre, ce qui empêchera généralement les failles de sécurité, mais ces restrictions peuvent aussi empêcher votre code de s'executer comme prévu.</p>
 
