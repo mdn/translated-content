@@ -12,7 +12,7 @@ translation_of: Web/API/Element/removeAttributeNode
 
 <p><code>removeAttributeNode</code> enlève l'attribut spécifié de l'élément courant.</p>
 
-<h2 id="Syntaxe" name="Syntaxe">Syntaxe</h2>
+<h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="eval"><em>removedAttr</em> =<em>element</em>.removeAttributeNode(<em>attributeNode</em>)
 </pre>
@@ -22,7 +22,7 @@ translation_of: Web/API/Element/removeAttributeNode
  <li><code>removedAttr</code> est le nœud <code>Attr</code> qui vient d'être enlevé.</li>
 </ul>
 
-<h2 id="Exemple" name="Exemple">Exemple</h2>
+<h2 id="Exemple">Exemple</h2>
 
 <pre class="line-numbers  language-html"><code class="language-html">// &lt;div id="top" align="center" /&gt;
 var d = document.getElementById("top");
@@ -30,7 +30,7 @@ var d_align = d.getAttributeNode("align");
 d.removeAttributeNode(d_align);
 // align est maintenant supprimé : &lt;div id="top" /&gt;</code></pre>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <p>Si l'attribut enlevé a une valeur par défaut, celle-ci remplace immédiatement l'ancienne. Lorsque c'est possible, l'attribut de remplacement conserve la même URI d'espace de noms et le même nom local, ainsi que le préfixe original.</p>
 
@@ -38,7 +38,7 @@ d.removeAttributeNode(d_align);
 
 <p>{{ DOMAttributeMethods() }}</p>
 
-<h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Spécification</h2>
+<h2 id="Sp.C3.A9cification">Spécification</h2>
 
 <ul>
  <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-D589198">DOM Level 2 Core : removeAttributeNode</a> — <small><a class="external" href="http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-D589198">traduction en français</a> (non normative)</small></li>

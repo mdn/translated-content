@@ -6,10 +6,10 @@ translation_of: Web/API/Window/matchMedia
 <div>{{ApiRef}}</div>
 
 <p>Retourne un nouvel objet {{domxref("MediaQueryList")}} contenant les résultats de la chaîne de caractères <a href="/en-US/docs/CSS/Media_queries" title="CSS/Media queries">media query</a> spécifiée.</p>
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 <pre class="syntaxbox"><em>mql</em> = window.matchMedia(<em>mediaQueryString</em>)</pre>
 <p>Ici, <code>mediaQueryString</code> est une chaîne de caractère représentant la media query pour laquelle on retourne un nouvel objet {{domxref("MediaQueryList")}}.</p>
-<h2 id="Example" name="Example">Exemple</h2>
+<h2 id="Example">Exemple</h2>
 <pre class="brush: js">if (window.matchMedia("(min-width: 400px)").matches) {
   /* the view port is at least 400 pixels wide */
 } else {

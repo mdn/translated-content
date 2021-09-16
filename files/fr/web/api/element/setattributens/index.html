@@ -12,7 +12,7 @@ translation_of: Web/API/Element/setAttributeNS
 
 <p><code>setAttributeNS</code> ajoute un nouvel attribut ou modifie la valeur d'un attribut avec un espace de noms et un nom donnés.</p>
 
-<h2 id="Syntaxe" name="Syntaxe">Syntaxe</h2>
+<h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="eval line-numbers  language-html"><code class="language-html">element.setAttributeNS(
 namespace,
@@ -25,19 +25,19 @@ value)</code></pre>
  <li><code>value</code> est la valeur chaîne désirée pour le nouvel attribut.</li>
 </ul>
 
-<h2 id="Exemple" name="Exemple">Exemple</h2>
+<h2 id="Exemple">Exemple</h2>
 
 <pre class="eval">var d = document.getElementById("d1");
 d.setAttributeNS("http://www.mozilla.org/ns/specialspace", "align", "center");
 </pre>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <p>{{ DOMAttributeMethods() }}</p>
 
 <p><code>setAttributeNS</code>  est la seule méthode pour les attributs d'espace nom qui attend le nom qualifié complet, c'est-à-dire <code>"namespace:localname"</code>.</p>
 
-<h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Spécification</h2>
+<h2 id="Sp.C3.A9cification">Spécification</h2>
 
 <ul>
  <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAttrNS">DOM Level 2 Core: setAttributeNS (en)</a> <small>— <a class="external" href="http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-ElSetAttrNS">traduction en français</a> (non normative)</small></li>

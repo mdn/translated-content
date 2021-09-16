@@ -13,12 +13,12 @@ translation_of: Web/API/TreeWalker/nextNode
 
 <p>La méthode <strong><code>TreeWalker.nextNode()</code></strong> déplace le {{domxref("Node")}} courant au noeud suivant <em>visible</em> dans l'ordre du document et renvoie le noeud trouvé. Elle déplace aussi le noeud courant vers celui-ci. Si aucun noeud n'existe, elle renvoie <code>null</code> et le noeud courant est inchangé.</p>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
 <pre class="syntaxbox"><em>node</em> = <em>treeWalker</em>.nextNode();
 </pre>
 
-<h2 id="Example" name="Example">Exemple</h2>
+<h2 id="Example">Exemple</h2>
 
 <pre class="brush: js">var treeWalker = document.createTreeWalker(
     document.body,
@@ -30,7 +30,7 @@ var node = treeWalker.nextNode(); // renvoie le premier enfant de la racine, car
 
 </pre>
 
-<h2 id="Specification" name="Specification">Spécifications</h2>
+<h2 id="Specification">Spécifications</h2>
 
 <table class="standard-table">
  <tbody>

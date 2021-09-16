@@ -13,7 +13,7 @@ translation_of: Web/API/Node/cloneNode
 
 <p>La méthode <strong><code>Node.cloneNode()</code></strong> renvoie une copie du nœud sur lequel elle a été appelée.</p>
 
-<h2 id="Syntaxe" name="Syntaxe">Syntaxe</h2>
+<h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="syntaxbox">var <em><var>dupNode</var></em> = <em><var>node</var></em>.cloneNode([<em><var>deep]</var></em>);
 </pre>
@@ -33,13 +33,13 @@ translation_of: Web/API/Node/cloneNode
 <p>Le comportement a été modifié dans la dernière spécification et, s'il est omis, la méthode doit agir comme si la valeur de <code>deep</code> était <strong><code>false</code></strong>. Bien que ce soit toujours facultatif, vous devriez toujours fournir l'argument <code>deep</code> pour la compatibilité amont et aval. Avec Gecko 28.0 {{geckoRelease(28)}}), la console a averti les développeurs de ne pas omettre l'argument. À partir de Gecko 29.0 {{geckoRelease(29)}}), un clone superficiel est défini par défaut au lieu d'un clone profond.</p>
 </div>
 
-<h2 id="Exemple" name="Exemple">Exemple</h2>
+<h2 id="Exemple">Exemple</h2>
 
 <pre>p = document.getElementById("para1");
 p_prime = p.cloneNode(true);
 </pre>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <p>Cloner un nœud copie tous ses attributs ainsi que leurs valeurs, y compris les auditeurs intrinsèques (en ligne). Il ne copie pas les auditeurs d'évènement ajoutés avec <a href="https://developer.mozilla.org/en-US/docs/DOM/element.addEventListener"><code>addEventListener()</code></a> ou ceux assignés au propriétés d'éléments (par exemple <code>node.onclick = fn</code>). De plus, pour un élément {{HTMLElement("canvas")}} l'image peinte n'est pas copiée.</p>
 
@@ -58,7 +58,7 @@ p_prime = p.cloneNode(true);
 
 <p>Pour cloner un noeud à ajouter dans un document différent, utilisez  {{domxref("Document.importNode()")}} à la place.</p>
 
-<h3 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Spécification</h3>
+<h3 id="Sp.C3.A9cification">Spécification</h3>
 
 <table class="standard-table">
  <thead>

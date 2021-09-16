@@ -12,7 +12,7 @@ original_slug: Web/Guide/API/Gamepad
  <p><strong>Note</strong><strong>:</strong> Dans Firefox 29 et plus, l'API Gamepad est activée par défaut, tout comme pour les versions Nightly et Aurora. Depuis Firefox 24, l'API Gamepad était déjà disponible derrière une option dans les préférences. Il est possible de l'activer dans ces versions en ouvrant <code>about:config</code> et en activant <code>dom.gamepad.enabled</code>.</p>
 </div>
 <p>L'API Gamepad introduit de nouveaux évènements à l'objet {{ domxref("Window") }} pour lire l'état des contrôleurs. En plus de ces événements, l'API ajoute aussi un objet {{ domxref("Gamepad") }} que vous pouvez utiliser pour récupérer l'état d'un contrôleur connecté, et une méthode {{ domxref("navigator.getGamepads") }} que vous pouvez utiliser pour obtenir la liste des contrôleurs connus par la page.</p>
-<h2 id="conntecting" name="conntecting">Connexion au contrôleur</h2>
+<h2 id="conntecting">Connexion au contrôleur</h2>
 <p>Lorsqu'un nouveau contrôleur est connecté à l'ordinateur, la page active reçoit tout d'abord un événement {{ domxref("Window.gamepadconnected") }}. Si un contrôleur est déjà connecté lorsque la page termine de charger, l'événement {{ domxref("Window.gamepadconnected") }} est envoyé à la page active lorsque l'utilisateur appuie sur un bouton ou bouge un axe.</p>
 <div class="geckoVersionNote">
  <p>Dans Firefox, les contrôleurs ne sont rendus visibles à une page que lorsque l'utilisateur s'en sert alors que cette page est active. Cela permet d'éviter que les contrôleurs soient utilisés pour identifier l'utilisateur. Dès lors qu'un contrôleur a été utilisé, les autres contrôleurs connectés seront rendus visibles automatiquement.</p>
@@ -28,7 +28,7 @@ original_slug: Web/Guide/API/Gamepad
 <div class="note">
  <p><strong>Note</strong>: À l'écriture de ces lignes, Chrome n'implémente pas les événements {{ domxref("Window.gamepadconnected") }} et {{ domxref("Window.gamepaddisconnected") }}. Vous devez utiliser {{ domxref("navigator.getGamepads") }} pour récupérer la liste des contrôleurs disponibles.</p>
 </div>
-<h2 id="disconnecting" name="disconnecting">Déconnexion du contrôleur</h2>
+<h2 id="disconnecting">Déconnexion du contrôleur</h2>
 <p>Lorsqu'un contrôleur est déconnecté, et si la page avait déjà reçu des données de ce contrôleur auparavant (par exemple par l'événement {{ domxref("Window.gamepadconnected") }}), un second événement est envoyé à la fenêtre active :  {{ domxref("Window.gamepaddisconnected") }}.</p>
 <pre class="brush: js">window.addEventListener("gamepaddisconnected", function(e) {
   console.log("Contrôleur n°%d déconnecté : %s",
@@ -57,7 +57,7 @@ window.addEventListener("gamepaddisconnected", function(e) { gamepadHandler(e, f
  [PAGE NON TRADUITE DEPUIS ICI...]</div>
 <div>
   </div>
-<h2 id="querying" name="querying">Querying the Gamepad object</h2>
+<h2 id="querying">Querying the Gamepad object</h2>
 <p>As you can see, the <strong>gamepad</strong> events discussed above include a <code>gamepad</code> property on the event object, which returns a {{ domxref("Gamepad") }} object. We can use this in order to determine which gamepad (i.e., its ID) had caused the event, since multiple gamepads might be connected at once. We can do much more with the {{ domxref("Gamepad") }} object, including holding a reference to it and querying it to find out which buttons and axes are being pressed at any one time. Doing so is often desirable for games or other interactive web pages that need to know the state of a gamepad now vs. the next time an event fires.</p>
 <p>Performing such checks tends to involve using the {{ domxref("Gamepad") }} object in conjunction with an animation loop (e.g., {{ domxref("requestAnimationFrame") }}), where developers want to make decisions for the current frame based on the state of the gamepad or gamepads.</p>
 <div class="note">

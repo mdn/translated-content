@@ -13,13 +13,13 @@ translation_of: Web/API/Node/parentNode
 
 <p>La propriété en lecture seule <strong>parentNode</strong> renvoie le parent du nœud spécifié dans l'arborescence de DOM .</p>
 
-<h2 id="Syntaxe" name="Syntaxe">Syntaxe</h2>
+<h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="syntaxbox"><em>parentNode</em> = <em>node</em>.parentNode</pre>
 
 <p><code>parentNode</code> est l'élément parent du nœud courant. Le parent d'un élément est un nœud <code>Element</code> , un nœud <code>Document</code> ou un nœud <code>DocumentFragment</code> .</p>
 
-<h2 id="Exemple" name="Exemple">Exemple</h2>
+<h2 id="Exemple">Exemple</h2>
 
 <pre class="brush:js line-numbers  language-js"><code class="language-js">if (node.parentNode) {
   // supprime un noeud  de l'arbre, 
@@ -27,7 +27,7 @@ translation_of: Web/API/Node/parentNode
   node.parentNode.removeChild(node);
 }</code></pre>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <p>Les <a href="https://developer.mozilla.org/en-US/docs/DOM/Node.nodeType" title="DOM/Node.nodeType">noeuds </a><code>Document</code> et <code>DocumentFragment</code> ne peuvent jamais avoir de parent, alors  <code>parentNode</code>  retournera toujours <code>null</code> .</p>
 

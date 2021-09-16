@@ -13,7 +13,7 @@ translation_of: Web/API/Element/insertAdjacentElement
 
 <p>La méthode <code>insertAdjacentElement()</code> insère un noeud d'élément donné à une position donnée par rapport à l'élément sur lequel il est appelé.</p>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
 <pre><em>targetElement</em>.insertAdjacentElement(<em>position</em>, <em>element</em>);</pre>
 
@@ -70,7 +70,7 @@ foo
 
 <div class="note"><strong>Note :</strong> Les positions <code>beforebegin</code> et <code>afterend</code> ne fonctionnent que si le noeud est dans l'arbre et s'il possède un élément parent.</div>
 
-<h2 id="Example" name="Example">Exemple</h2>
+<h2 id="Example">Exemple</h2>
 
 <pre class="brush: js">beforeBtn.addEventListener('click', function() {
   var tempDiv = document.createElement('div');
@@ -92,7 +92,7 @@ afterBtn.addEventListener('click', function() {
 
 <p>Une démo de notre <a href="https://mdn.github.io/dom-examples/insert-adjacent/insertAdjacentElement.html">insertAdjacentElement.html</a> est disponible sur Github ( avec le <a href="https://github.com/mdn/dom-examples/blob/master/insert-adjacent/insertAdjacentElement.html">code source</a> ). Nous avons un ensemble d'éléments {{htmlelement("div")}} dans un conteneur. Quand un élément reçoit un clic, il est sélectionné et vous pouvez appuyer sur les boutons <em>Insert before</em> (<em>insérer avant</em>) et <em>Insert after</em> (<em>insérer après</em>) pour insérer de nouveaux divs avant ou après l'élement sélectionné en utilisant <code>insertAdjacentElement()</code>.</p>
 
-<h2 id="Specification" name="Specification">Spécification</h2>
+<h2 id="Specification">Spécification</h2>
 
 <table class="standard-table">
  <thead>

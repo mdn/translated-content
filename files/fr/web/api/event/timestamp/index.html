@@ -17,18 +17,18 @@ translation_of: Web/API/Event/timeStamp
 <p>Note : Cette propriété fonctionne seulement si le système d'évènements le prend en charge pour des évènements particuliers.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
 <pre class="syntaxbox">event.timeStamp
 </pre>
 
-<h3 id="Examples" name="Examples">Valeur</h3>
+<h3 id="Examples">Valeur</h3>
 
 <p>Cette valeur est un nombre de millisecondes écoulées depuis le début du temps de vie du document courant jusqu'à la création de l'évènement.</p>
 
 <p>Dans les nouvelles implémentations, la valeur est un {{domxref("DOMHighResTimeStamp")}} dont la précision est de 5 microsecondes (0,005 ms). Dans les implémentations plus anciennes, la valeur est un {{domxref("DOMTimeStamp")}} de précision d'une milliseconde.</p>
 
-<h2 id="Examples" name="Examples">Exemple</h2>
+<h2 id="Examples">Exemple</h2>
 
 <h3 id="HTML">HTML</h3>
 
@@ -50,7 +50,7 @@ document.body.addEventListener("keypress", getTime);</code></pre>
 
 <p>{{EmbedLiveSample("Example", "100%", 100)}}</p>
 
-<h2 id="Notes" name="Notes">Précision du temps réduite</h2>
+<h2 id="Notes">Précision du temps réduite</h2>
 
 <p>Pour offrir une protection contre les attaques de synchronisation et les empreintes digitales, la précision de <code>event.timeStamp</code> peut être arrondie en fonction des paramètres du navigateur.<br>
  Dans Firefox, la préférence <code>privacy.reduceTimerPrecision</code> est activée et à 20 us par défaut dans Firefox 59 ; en version 60 ce sera 2 ms.</p>
@@ -72,7 +72,7 @@ event.timeStamp;
 
 <p>Dans Firefox, vous pouvez aussi activer <code>privacy.resistFingerprinting</code>, la précision sera de 100 ms ou la valeur de <code>privacy.resistFingerprinting.reduceTimerPrecision.microseconds</code>, selon la valeur la plus grande.</p>
 
-<h2 id="Specifications" name="Specifications">Spécifications</h2>
+<h2 id="Specifications">Spécifications</h2>
 
 <table class="standard-table">
  <thead>

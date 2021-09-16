@@ -12,13 +12,13 @@ translation_of: Web/API/Node/textContent
 
 <p>La propriété <code><strong>Node.textContent</strong></code>  représente le contenu textuel d'un nœud et de ses descendants.</p>
 
-<h2 id="Syntaxe" name="Syntaxe">Syntaxe</h2>
+<h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="syntaxbox">var <em>text</em> = element.textContent;
 element.textContent = "ceci est un simple exemple de texte";
 </pre>
 
-<h2 id="Notes" name="Notes">Description</h2>
+<h2 id="Notes">Description</h2>
 
 <ul>
  <li><code>textContent</code> renvoie <code>null</code> si l'élément est un <a href="https://developer.mozilla.org/fr/docs/Web/API/document">document</a>, un type de document (doctype) ou une notation. Pour saisir toutes les données textuelles et CDATA pour l'ensemble du document, on peut utiliser <code> <a href="https://developer.mozilla.org/fr/docs/Web/API/document/documentElement">document.documentElement</a>.textContent</code> .</li>
@@ -42,7 +42,7 @@ element.textContent = "ceci est un simple exemple de texte";
 
 <p>{{domxref("Element.innerHTML")}} renvoie le HTML comme son nom l'indique. Souvent, pour récupérer ou écrire du texte dans un élément, les utilisateurs utilisent <code>innerHTML</code>. Cependant, <code>textContent</code> a souvent de meilleures performances car le texte n'est pas analysé en HTML. De plus, l'utilisation de <code>textContent</code> peut empêcher les attaques XSS.</p>
 
-<h2 id="Exemple" name="Exemple">Exemple</h2>
+<h2 id="Exemple">Exemple</h2>
 
 <pre class="eval">// Étant donné le fragment de HTML suivant :
 //   &lt;div id="divA"&gt;Ceci est un &lt;span&gt;exemple de&lt;/span&gt; texte&lt;/div&gt;
@@ -89,7 +89,7 @@ if (Object.defineProperty
 
 <p>{{Compat("api.Node.textContent")}}</p>
 
-<h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Spécifications</h2>
+<h2 id="Sp.C3.A9cification">Spécifications</h2>
 
 <table class="spectable standard-table">
  <tbody>

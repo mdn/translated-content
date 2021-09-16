@@ -12,7 +12,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Composition
 
 <p>Dans tous nos <a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Transformations">exemples précédents</a>, les formes étaient toutes dessinées les unes au dessus des autres. C'est plus que suffisant pour la plupart des situations, mais cela limite l'ordre dans lequel les formes composées sont construites. Nous pouvons cependant changer ce comportement en définissant la propriété <code>globalCompositeOperation</code>. En complément, la propriété <code>clip</code> nous permet de cacher les parties des formes que nous ne désirons pas.</p>
 
-<h2 id="globalCompositeOperation" name="globalCompositeOperation"><code>globalCompositeOperation</code></h2>
+<h2 id="globalCompositeOperation"><code>globalCompositeOperation</code></h2>
 
 <p>Nous pouvons non seulement dessiner de nouvelles formes derrière des formes existantes mais nous pouvons aussi les utiliser pour masquer certaines zones, supprimer des sections du canvas (ce n'est pas limité aux rectangles comme pour la méthode {{domxref("CanvasRenderingContext2D.clearRect", "clearRect()")}}) et davantage.</p>
 
@@ -25,7 +25,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Composition
 
 <p>{{EmbedLiveSample("Exemple_de_composition", 750, 6750, "" ,"/Tutoriel_canvas/Composition/Example")}}</p>
 
-<h2 id="Clipping_paths" name="Clipping_paths">Détourage</h2>
+<h2 id="Clipping_paths">Détourage</h2>
 
 <p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/209/Canvas_clipping_path.png" style="float: right;">Un détourage (<em>clipping path</em> en anglais) est comme une forme de canvas standard, à la différence près qu'elle sert à masquer certaines parties du canvas. Voyez l'image de droite, la forme rouge (en étoile) est un détourage du canvas. Tout ce qui est en dehors du chemin n'est pas dessiné sur le canvas.</p>
 
@@ -42,7 +42,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Composition
 
 <p>Par défault, l'élément {{HTMLElement("canvas")}} possède un détourage aux mêmes dimensions que le canvas lui-même. Donc, par défaut aucune découpe n'est apparente.</p>
 
-<h3 id="A_clip_example" name="A_clip_example">Un exemple de <code>clip</code></h3>
+<h3 id="A_clip_example">Un exemple de <code>clip</code></h3>
 
 <p>Dans cet exemple, nous allons utiliser un détourage circulaire pour restreindre le dessin d'un essemble d'étoiles aléatoires à une zone particulière (et circulaire...).</p>
 

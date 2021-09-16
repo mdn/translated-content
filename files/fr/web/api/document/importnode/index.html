@@ -14,7 +14,7 @@ translation_of: Web/API/Document/importNode
 
 <p>La méthode {{domxref ("Document")}} <code>importNode()</code> crée une nouvelle copie du {{domxref ("Node")}} ou {{domxref ("DocumentFragment")}} spécifié à partir d'un autre document, afin qu'il puisse être inséré dans le document actuel. Il n'est pas encore inclus dans l'arbre des documents; Pour ce faire, vous devez appeler une méthode telle que {{domxref ("Node.appendChild", "appendChild ()")}} ou {{domxref ("Node.insertBefore", "insertBefore ()")}}.</p>
 
-<h3 id="Syntaxe" name="Syntaxe">Syntaxe</h3>
+<h3 id="Syntaxe">Syntaxe</h3>
 
 <pre class="syntaxbox">var <em>node</em> = <em>document</em>.importNode(<em>externalNode</em>, <em>deep</em>);
 </pre>
@@ -39,7 +39,7 @@ var oldNode = iframe.contentWindow.document.getElementById("myNode");
 var newNode = document.importNode(oldNode, true);
 document.getElementById("container").appendChild(newNode);</code></pre>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <p>Le noeud d'origine n'est pas supprimé du document d'origine. Le noeud importé est un clone de l'original.</p>
 
@@ -51,7 +51,7 @@ document.getElementById("container").appendChild(newNode);</code></pre>
 
 <p> </p>
 
-<h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Spécifications</h2>
+<h2 id="Sp.C3.A9cification">Spécifications</h2>
 
 <table class="standard-table">
  <tbody>

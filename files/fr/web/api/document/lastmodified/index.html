@@ -7,12 +7,12 @@ translation_of: Web/API/Document/lastModified
 
 <p>Retourne une chaîne de caractère contenant la date et l'heure à laquelle le présent document a été modifié pour la dernière fois.</p>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
 <pre class="syntaxbox"><var>string</var> = document.lastModified;
 </pre>
 
-<h2 id="Example" name="Example">Exemples</h2>
+<h2 id="Example">Exemples</h2>
 
 <h3 id="Exemple_1_Utilisation_simple">Exemple #1: Utilisation simple</h3>
 
@@ -30,7 +30,7 @@ translation_of: Web/API/Document/lastModified
 <pre class="brush:js">var nLastModif = Date.parse(document.lastModified);
 </pre>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <p>Veuillez noter qu'en tant que chaîne de caractères, <code>lastModified </code>ne peut être <em>facilement </em>utilisé pour des comparaisons entre les dates modifées des documents. Voici un exemple possible qui montre comment afficher une alerte quand la page change (voir aussi: <a href="/en-US/docs/DOM/document.cookie" title="/en-US/docs/DOM/document.cookie">API des cookies en JavaScript</a>):</p>
 
@@ -58,7 +58,7 @@ if (isNaN(nLastVisit) || nLastModif &gt; nLastVisit) {
 
 <p>Si vous voulez savoir <strong>si <em>une page externe</em> a changé, </strong>veuillez lire <a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Get_last_modified_date" title="/en-US/docs/Web/API/document.lastModified">ce paragraphe à propos de l'API <code>XMLHttpRequest()</code></a>.</p>
 
-<h2 id="Specification" name="Specification">Spécification</h2>
+<h2 id="Specification">Spécification</h2>
 
 <p>HTML5</p>
 

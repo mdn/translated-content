@@ -16,7 +16,7 @@ translation_of: Web/API/Document/getElementById
 
 <p>Si vous avez besoin d'accéder à un élément qui n'a pas d'ID, vous pouvez utiliser {{domxref("Document.querySelector","querySelector()")}} pour trouver l'élément en utilisant un {{Glossary("CSS selector","sélecteur")}}.</p>
 
-<h2 id="Syntaxe" name="Syntaxe">Syntaxe</h2>
+<h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="brush: js"><em>var element</em> = document.getElementById(<em>id</em>);
 </pre>
@@ -33,7 +33,7 @@ translation_of: Web/API/Document/getElementById
 
 <p>Un objet {{domxref("Element")}} décrivant l'objet élément du DOM correspondant à l'ID spécifié ou <code>null</code> si aucun n'a été trouvé dans le document.</p>
 
-<h2 id="Exemple" name="Exemple">Exemple</h2>
+<h2 id="Exemple">Exemple</h2>
 
 <h3 id="Contenu_HTML">Contenu HTML</h3>
 
@@ -55,11 +55,11 @@ translation_of: Web/API/Document/getElementById
   elem.style.color = newColor;
 }</code></pre>
 
-<h3 id="Notes" name="Notes">Résultat</h3>
+<h3 id="Notes">Résultat</h3>
 
 <p>{{ EmbedLiveSample('Example1', 250, 100) }}</p>
 
-<h2 id="Notes" name="Notes">Notes d'utilisation</h2>
+<h2 id="Notes">Notes d'utilisation</h2>
 
 <p>L'écriture de la lettre capitale de « Id » dans le nom de cette méthode <em>doit</em> être respectée pour que le code fonctionne ; <code>getElementByID()</code> n'est pas valide et ne fonctionnera <em>pas</em>, même si elle semble naturelle.</p>
 
@@ -99,7 +99,7 @@ var el = document.getElementById('testqq'); // el vaudra null !</code></pre>
 
 <p><strong>Les documents non-HTML.</strong> Les implémentations du DOM doivent avoir une information qui précise quels attributs sont de type ID. Un attribut portant le nom « id » n'est pas de type ID tant qu'il n'a pas été explicitement défini ainsi (dans la DTD du document). L'attribut <code>id</code> est défini comme étant de type ID dans les langages courants comme <a href="/fr/XHTML" title="fr/XHTML">XHTML</a> ou <a href="/fr/XUL" title="fr/XUL">XUL</a>. Les implémentations ne sachant pas déterminer si les attributs sont de type ID ou non sont supposées renvoyer <code>null</code>.</p>
 
-<h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Spécification</h2>
+<h2 id="Sp.C3.A9cification">Spécification</h2>
 
 <table class="standard-table">
  <tbody>

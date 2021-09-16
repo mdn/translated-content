@@ -16,7 +16,7 @@ translation_of: Web/API/Document/getElementsByTagNameNS
 
 <p>Renvoie une liste d'éléments avec la balise de nom donnée appartenant à l'espace de noms donné. Le document complet est recherché, y compris le noeud racine.</p>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
 <pre class="eval"><em>elements</em> = document.getElementsByTagNameNS(<em>namespace</em>,<em>name</em>)
 </pre>
@@ -29,7 +29,7 @@ translation_of: Web/API/Document/getElementsByTagNameNS
 
 <div class="note"><strong>Note :</strong> Tandis que la spécification W3C indique que les <code>elements</code> sont des <code>NodeList</code>, cette méthode renvoie une {{domxref("HTMLCollection")}} dans Gecko et Internet Explorer. Opera retourne une <code>NodeList</code>, mais avec une méthode implémentée <code>namedItem</code>, ce qui la rend similaire à une <code>HTMLCollection</code>. À partir de Janvier 2012, dans les navigateurs WebKit seulement, la valeur retournée est une pure <code>NodeList</code>. Voir <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=14869" title="https://bugzilla.mozilla.org/show_bug.cgi?id=14869">bug 14869</a> pour plus de détails.</div>
 
-<h2 id="Example" name="Example">Exemple</h2>
+<h2 id="Example">Exemple</h2>
 
 <p>Dans l'exemple suivant, <code>getElementsByTagNameNS</code> commence à partir d'un élément parent particulier et cherche dans le DOM récursivement de haut en bas à partir de cet élément parent, les éléments enfants correspondant au paramètre <code>name</code> de la balise.</p>
 
@@ -109,7 +109,7 @@ function div2ParaElems()
 &lt;/html&gt;
 </pre>
 
-<h2 id="Potential_Workaround_for_other_browsers_which_do_not_support" name="Potential_Workaround_for_other_browsers_which_do_not_support">Solution de contournement potentielle pour les navigateurs qui ne prennent pas en charge XPath</h2>
+<h2 id="Potential_Workaround_for_other_browsers_which_do_not_support">Solution de contournement potentielle pour les navigateurs qui ne prennent pas en charge XPath</h2>
 
 <p>Si le navigateur souhaité ne supporte pas XPath, une autre approche (comme traverser le DOM à travers tous ses enfants, identifier toutes les instances de @xmlns, etc.) serait nécessaire pour trouver toutes les balises avec le nom local et l'espace de noms, mais XPath est beaucoup plus rapide. (Pour adapter à Explorer, on pourrait appeler un wrapper XPath au lieu du XPath dans la fonction ci-dessous (comme Explorer supporte XPath avec une API différente), comme <a class="external" href="http://www.davidflanagan.com/javascript5/display.php?n=21-10&amp;f=21/10.js">cette classe wrapper</a>.)</p>
 
@@ -131,6 +131,6 @@ function div2ParaElems()
 }
 </pre>
 
-<h2 id="Specification" name="Specification">Spécifications</h2>
+<h2 id="Specification">Spécifications</h2>
 
 <p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-getElBTNNS">DOM Level 2 Core: Document.getElementsByTagNameNS</a></p>

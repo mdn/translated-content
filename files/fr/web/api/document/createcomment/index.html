@@ -12,19 +12,19 @@ translation_of: Web/API/Document/createComment
 
 <p><code>createComment()</code> crée et retourne un nouveau noeud de type commentaire.</p>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
 <pre class="syntaxbox"><em>CommentNode</em> = document.createComment(data)
 </pre>
 
-<h3 id="Parameters" name="Parameters">Paramètres</h3>
+<h3 id="Parameters">Paramètres</h3>
 
 <dl>
  <dt><code>data</code></dt>
  <dd>Une chaîne de caractères représentant le contenu du commentaire.</dd>
 </dl>
 
-<h2 id="Example" name="Example">Exemple</h2>
+<h2 id="Example">Exemple</h2>
 
 <pre class="brush:js">var docu = new DOMParser().parseFromString('&lt;xml&gt;&lt;/xml&gt;',  "application/xml");
 var comment = docu.createComment('Voici un commentaire pas très bien caché');

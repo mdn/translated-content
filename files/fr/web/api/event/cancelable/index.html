@@ -17,7 +17,7 @@ translation_of: Web/API/Event/cancelable
 
 <p>La plupart des événements natifs du navigateur qui peuvent être annulés sont ceux qui résultent de l'interaction de l'utilisateur avec la page. L'annulation des événements <a href="https://developer.mozilla.org/fr/docs/Web/Events/click">click</a>, <a href="https://developer.mozilla.org/fr/docs/Web/Events/scroll">scroll</a> ou <a href="https://developer.mozilla.org/fr/docs/Web/Events/beforeunload">beforeunload</a> empêcherait l'utilisateur de cliquer sur un élément, de faire défiler la page ou de la quitter, respectivement.</p>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
 <pre class="syntaxbox"><var>bool</var> = <em>event</em>.cancelable
 </pre>
@@ -26,7 +26,7 @@ translation_of: Web/API/Event/cancelable
  <li>Le résultat est un <code>booléen</code> qui est <code>true</code> (<em>vrai</em>) si l'événement peut être annulé.</li>
 </ul>
 
-<h2 id="Example" name="Example">Exemple</h2>
+<h2 id="Example">Exemple</h2>
 
 <p>Par exemple, les vendeurs de navigateurs proposent que l'<a href="https://developer.mozilla.org/fr/docs/Web/Events/wheel">évènement wheel </a>puisse être annulable seulement  <a href="https://github.com/WICG/interventions/issues/33" rel="external">la première fois que l'écouteur est appelé</a> (en) ; les évènements  <code>wheel</code> suivants ne peuvent être annulés.</p>
 
@@ -46,13 +46,13 @@ document.addEventListener('wheel', preventCancelableEvents);</code></pre>
 
 <p> </p>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <p>Si l'événement peut être annulé, ou non, est déterminé au moment de l'initialisation de celui-ci.</p>
 
 <p>Pour annuler un événement, utiliser la méthode {{domxref("event.preventDefault", "preventDefault()")}} sur celui-ci. Cela permet d'empêcher l'action par défaut associée à l'événement de s'exécuter.</p>
 
-<h2 id="Specifications" name="Specifications">Spécifications</h2>
+<h2 id="Specifications">Spécifications</h2>
 
 <table class="standard-table">
  <thead>

@@ -5,7 +5,7 @@ tags:
   - DOM
 translation_of: Web/API/Document_Object_Model/Whitespace
 ---
-<h2 id="Le_probl.C3.A8me" name="Le_probl.C3.A8me">Le problème</h2>
+<h2 id="Le_probl.C3.A8me">Le problème</h2>
 
 <p>La présence d'espaces et de blancs dans le <a href="fr/DOM">DOM</a> peut rendre la manipulation de l'arbre de contenu difficile dans des aspects qu'on ne prévoit pas forcément. Dans Mozilla, tous les espaces et blancs dans le contenu texte du document original sont représentés dans le DOM (cela ne concerne pas les blancs à l'intérieur des balises). (C'est nécessaire en interne afin que l'éditeur puisse conserver le formatage des documents et que l'instruction <code>white-space: pre</code> en <a href="fr/CSS">CSS</a> fonctionne.) Cela signifie que :</p>
 
@@ -34,7 +34,7 @@ translation_of: Web/API/Document_Object_Model/Whitespace
 
 <p>Ceci peut rendre les choses un peu plus difficiles pour les utilisateurs du DOM qui aimeraient parcourir le contenu, sans se préoccuper des blancs.</p>
 
-<h2 id="Rendre_les_choses_plus_faciles" name="Rendre_les_choses_plus_faciles">Rendre les choses plus faciles</h2>
+<h2 id="Rendre_les_choses_plus_faciles">Rendre les choses plus faciles</h2>
 
 <p>On peut formater leur code comme indiqué ci-dessous pour contourner le problème:</p>
 
@@ -206,7 +206,7 @@ function data_of( txt )
   return data;
 }</code></pre>
 
-<h2 id="Exemple" name="Exemple">Exemple</h2>
+<h2 id="Exemple">Exemple</h2>
 
 <p>Le code qui suit montre l'utilisation des fonctions présentées plus haut. Il parcourt les enfants d'un élément (dont les enfants sont tous des éléments) pour trouver celui dont le texte est <code>"Ceci est le troisième paragraphe"</code>, et change ensuite l'attribut <code>class</code> et le contenu de ce paragraphe.</p>
 
@@ -222,7 +222,7 @@ while (cur)
 }</code></pre>
 
 <div class="originaldocinfo">
-<h3 id="Informations_sur_le_document_original" name="Informations_sur_le_document_original">Informations sur le document original</h3>
+<h3 id="Informations_sur_le_document_original">Informations sur le document original</h3>
 
 <ul>
  <li>Auteur : <a class="external" href="http://dbaron.org">L. David Baron</a></li>

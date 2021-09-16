@@ -13,7 +13,7 @@ translation_of: Web/API/Document/getElementsByName
 
 <p>Renvoie une liste des éléments portant un {{domxref("element.name","name")}} donné dans le document (X)HTML.</p>
 
-<h2 id="Syntaxe" name="Syntaxe">Syntaxe</h2>
+<h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="eval"><em>elements</em> = document.getElementsByName(<em>name</em>)
 </pre>
@@ -23,7 +23,7 @@ translation_of: Web/API/Document/getElementsByName
  <li><code>name</code> est la valeur de l'attribut <code>name</code> des éléments.</li>
 </ul>
 
-<h2 id="Exemple" name="Exemple">Exemple</h2>
+<h2 id="Exemple">Exemple</h2>
 
 <pre class="brush:html line-numbers  language-html"><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -42,13 +42,13 @@ console.log(up_forms[0].tagName); // retourne "FORM"
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <p>L'attribut <code><a href="https://developer.mozilla.org/fr/docs/Web/API/Element/name">name</a></code> est uniquement applicable aux documents (X) HTML. La méthode renvoie une collection  {{domxref("NodeList")}}  en cours qui contient tous les éléments avec une valeur donnée pour l'attribut name, tels que  {{htmlelement("meta")}}  ou  {{htmlelement("object")}}  ou même si le nom est placé sur des éléments qui ne supportent pas du tout un attribut <code>name</code>.</p>
 
 <p>La méthode <strong>getElementsByName</strong> fonctionne différemment dans différents navigateurs. Dans IE &lt;10, la méthode getElementsByName () renvoie également les éléments qui ont un attribut id avec la valeur spécifiée. Vous devriez donc faire attention à ne pas utiliser la même chaîne pour le nom et l'identifiant.</p>
 
-<h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Spécifications</h2>
+<h2 id="Sp.C3.A9cification">Spécifications</h2>
 
 <ul>
  <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-71555259">DOM Level 2 HTML : getElementsByName</a> — <a class="external" href="http://www.yoyodesign.org/doc/w3c/dom2-html/html.html#ID-71555259">traduction en français</a> (non normative)</li>
@@ -75,7 +75,7 @@ console.log(up_forms[0].tagName); // retourne "FORM"
  </tbody>
 </table>
 
-<h2 id="See_also" name="See_also">Voir aussi</h2>
+<h2 id="See_also">Voir aussi</h2>
 
 <ul>
  <li>{{domxref("document.getElementById()")}} pour retourner une référence à un élément par son ID</li>

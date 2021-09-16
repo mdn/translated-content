@@ -16,7 +16,7 @@ translation_of: Web/API/Window/openDialog
 
 <p style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.7em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;">Notez que l'appel à la méthode <code style="color: rgb(37, 34, 29); font-weight: inherit;">openDialog()</code> se termine immédiatement. Si vous souhaitez le bloquer jusqu'à ce que l'utilisateur ferme la boîte de dialogue, utilisez la valeur <code style="color: rgb(37, 34, 29); font-weight: inherit;">modal</code> pour le paramètre f<code style="color: rgb(37, 34, 29); font-weight: inherit;">eatures</code>. En conséquence, l'utilisateur ne pourra pas interagir avec la fenêtre parente jusqu'à ce qu'il ferme la boîte de dialogue modale.</p>
 
-<h3 id="Syntax" name="Syntax">Syntaxe</h3>
+<h3 id="Syntax">Syntaxe</h3>
 
 <pre class="eval"><em>newWindow</em> = openDialog(<em>url</em>, <em>name</em>, <em>features</em>, <em>arg1</em>, <em>arg2</em>, ...)
 </pre>
@@ -34,13 +34,13 @@ translation_of: Web/API/Window/openDialog
  <dd style="margin-left: 0px; margin-bottom: 20px; padding-left: 16px; border-bottom-width: 1px; border-bottom-style: dashed; margin-top: 0px; margin-right: 0px; padding-top: 2px; padding-right: 0px; padding-bottom: 4px;">Les arguments à passer à la nouvelle fenêtre (optionnel).</dd>
 </dl>
 
-<h3 id="Example" name="Example">Exemple</h3>
+<h3 id="Example">Exemple</h3>
 
 <pre class="brush: js">var win = openDialog("http://example.tld/zzz.xul", "dlg", "", "pizza", 6.98);</pre>
 
-<h3 id="Notes" name="Notes">Notes</h3>
+<h3 id="Notes">Notes</h3>
 
-<h4 id="New_Features" name="New_Features">Nouvelles fonctionnalités</h4>
+<h4 id="New_Features">Nouvelles fonctionnalités</h4>
 
 <dl>
  <dt><code>all</code></dt>
@@ -50,11 +50,11 @@ translation_of: Web/API/Window/openDialog
  <dd>Active ou désactive (<code>"all=no"</code>) toutes les fonctionnalités (excepté <code>chrome</code>, <code>dialog</code> et <code>modal</code>). Peut être utilisé conjointement avec les autres drapeaux (par exemple, <code>"menubar=no, all"</code> active toutes les fonctionnalités excepté <code>menubar</code>). Ce drapeau est ignorée par la méthode <a href="/fr/DOM/window.open" title="fr/DOM/window.open">window.open()</a> mais pas par window.openDialog().</dd>
 </dl>
 
-<h4 id="Default_behaviour" name="Default_behaviour">Comportement</h4>
+<h4 id="Default_behaviour">Comportement</h4>
 
 <p style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.7em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;">La méthode <code>window.openDialog()</code> traite l'absence du paramètre <code>features</code> de la même manière que <a href="/fr/DOM/window.open" title="fr/DOM/window.open">window.open()</a> (une chaîne vide désactive toutes les fonctionnalités) excepté pour <code>chrome</code> et <code>dialog</code> qui sont activés par défaut et peuvent être explicitement désactivées par "<code style="color: rgb(37, 34, 29); font-weight: inherit;">chrome=no</code>".</p>
 
-<h4 id="Passing_extra_parameters_to_the_dialog" name="Passing_extra_parameters_to_the_dialog">Passage de paramètres supplémentaires</h4>
+<h4 id="Passing_extra_parameters_to_the_dialog">Passage de paramètres supplémentaires</h4>
 
 <p style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.7em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;">Pour passer des paramètres supplémentaires à la boîte de dialogue, vous pouvez simplement les ajouter après le paramètre f<code style="color: rgb(37, 34, 29); font-weight: inherit;">eatures</code> :</p>
 
@@ -69,7 +69,7 @@ var price = window.arguments[1];</pre>
 
 <p style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.7em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;">Notez que vous pouvez accéder à cette propriété depuis n'importe où dans le script. (<a href="/en/Code_snippets/Dialogs_and_Prompts#Passing_arguments_and_displaying_a_dialog" title="en/Code snippets/Dialogs and Prompts#Passing arguments and displaying a dialog">Autre exemple</a>).</p>
 
-<h4 id="Returning_values_from_the_dialog" name="Returning_values_from_the_dialog">Retourner des arguments depuis la boîte de dialogue</h4>
+<h4 id="Returning_values_from_the_dialog">Retourner des arguments depuis la boîte de dialogue</h4>
 
 <p style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.7em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;">Depuis que <code style="color: rgb(37, 34, 29); font-weight: inherit;"><a href="/fr/DOM/window.close" title="fr/DOM/window.close">window.close()</a></code> efface toutes les propriétés associées à la boîte de dialogue (c'est-à-dire les variables spécifiées depuis le code JavaScript chargé depuis la boîte de dialogue), il n'est pas possible de retourner des valeur après la fermeture de la boîte de dialogue en utilisant des variables globales (ou toute autre méthode).</p>
 
@@ -89,7 +89,7 @@ retVals.delivery = "immediate";</pre>
 <p style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.7em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;">Voir aussi <a class="external" href="http://groups.google.com/group/netscape.public.dev.xul/msg/02075a1736406b40" title="http://groups.google.com/group/netscape.public.dev.xul/msg/02075a1736406b40">ce message</a>. (<a href="/en/Code_snippets/Dialogs_and_Prompts#Passing_arguments_and_displaying_a_dialog" style="text-decoration: none; color: rgb(4, 137, 183) !important; cursor: default;" title="en/Code_snippets/Dialogs_and_Prompts#Passing_arguments_and_displaying_a_dialog">Autre exemple</a>).<br>
  Voir aussi <a href="/fr/DOM/window.importDialog" title="fr/DOM/window.importDialog">window.importDialog()</a>.</p>
 
-<h3 id="Specification" name="Specification">Spécification</h3>
+<h3 id="Specification">Spécification</h3>
 
 <p style="margin-top: 0px; margin-right: 0px; margin-bottom: 1.7em; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px;">{{ DOM0() }}</p>
 

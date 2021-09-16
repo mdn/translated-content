@@ -13,7 +13,7 @@ translation_of: Web/API/Element/hasAttribute
 
 <p>La méthode  <strong><code>Element.hasAttribute()</code></strong>  renvoie une <strong>valeur booléenne</strong> indiquant si l'élément courant possède l'attribut spécifié ou non.</p>
 
-<h2 id="Syntaxe" name="Syntaxe">Syntaxe</h2>
+<h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="syntaxbox"><var>var <em>result</em></var> = <em><var>element</var></em>.hasAttribute(<em><var>name</var></em>);
 </pre>
@@ -25,14 +25,14 @@ translation_of: Web/API/Element/hasAttribute
  <dd>est une chaine de caractères représentant le nom de l'attribut.</dd>
 </dl>
 
-<h2 id="Exemple" name="Exemple">Exemple</h2>
+<h2 id="Exemple">Exemple</h2>
 
 <pre class="brush:js line-numbers  language-js"><code class="language-js">var foo = document.getElementById("foo");
 if (foo.hasAttribute("bar")) {
     // faire quelque chose
 }</code></pre>
 
-<h2 id="Notes" name="Notes">Polyfill</h2>
+<h2 id="Notes">Polyfill</h2>
 
 <pre class="brush:js line-numbers  language-js"><code class="language-js">;(function(prototype) {
     prototype.hasAttribute = prototype.hasAttribute || function(name) {
@@ -41,11 +41,11 @@ if (foo.hasAttribute("bar")) {
     }
 })(Element.prototype);</code></pre>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <p>{{DOMAttributeMethods}}</p>
 
-<h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Spécification</h2>
+<h2 id="Sp.C3.A9cification">Spécification</h2>
 
 <table class="standard-table">
  <tbody>

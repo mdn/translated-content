@@ -19,7 +19,7 @@ original_slug: WebAPI/Pointer_Lock
  <br>
  Comme Pointer lock continue de déclencher des évènements même quand le curseur est en dehors des limites du navigateur ou de l'écran, les joueurs peuvent cliquer sur les boutons et déplacer le curseur de la souris sans se soucier de quitter la zone de jeu et de cliquer accidentellement sur une autre application qui changerait le focus de la souris en dehors du jeu.</p>
 
-<h2 id="basics" name="basics">Concepts de base</h2>
+<h2 id="basics">Concepts de base</h2>
 
 <p>Pointer Lock partage des similtudes avec la <a href="/fr/docs/Web/API/Element/setCapture" title="element.setCapture">capture de souris</a>. La capture de souris offre un flot ininterrompu d'évènements sur un élément cible quand la souris glisse mais s'arrête quand le bouton est relaché. Pour cette raison, Pointer lock diffère de la capture de souris sur les points suivants :</p>
 
@@ -30,7 +30,7 @@ original_slug: WebAPI/Pointer_Lock
  <li>Cache le curseur.</li>
 </ul>
 
-<h2 id="method_overview" name="method_overview">Vue d'ensemble des méthodes/propriétées</h2>
+<h2 id="method_overview">Vue d'ensemble des méthodes/propriétées</h2>
 
 <p>Cette section fournit une brève description de chaque propriété et méthode associée à la spécification de Pointer Lock.</p>
 
@@ -79,7 +79,7 @@ if (document.pointerLockElement === someElement) {
 document.exitPointerLock();
 </pre>
 
-<h2 id="mouselocklostevent" name="mouselocklostevent">Événement pointerlockchange</h2>
+<h2 id="mouselocklostevent">Événement pointerlockchange</h2>
 
 <p>Quand l'état de verrouillage du pointeur change — par exemple quand on appelle {{domxref("Element.requestPointerLock","requestPointerLock()")}}, {{domxref("Document.exitPointerLock","exitPointerLock()")}}, que l'utilisateur presse la touche ECHAP, etc.—l'événement {{event("pointerlockchange")}} est envoyé au <code>document</code>. C'est un simple événement qui ne contient pas de données supplémentaires.</p>
 
@@ -100,7 +100,7 @@ document.addEventListener('mozpointerlockchange', pointerLockChange, false);
 document.addEventListener('webkitpointerlockchange', pointerLockChange, false);
 </pre>
 
-<h2 id="mouselocklostevent" name="mouselocklostevent">Événement pointerlockerror</h2>
+<h2 id="mouselocklostevent">Événement pointerlockerror</h2>
 
 <p>Quand une erreur est causée par l'appel de {{domxref("Element.requestPointerLock","requestPointerLock()")}} ou {{domxref("Document.exitPointerLock","exitPointerLock()")}}, l'événement {{event("pointerlockerror")}} est envoyé au <code>document</code>. C'est un simple événement qui ne contient pas de données supplémentaires.</p>
 
@@ -115,21 +115,21 @@ function lockError(e) {
 
 <div class="note"><strong>Note</strong>: Jusqu'à Firefox 50, les événements ci-dessus étaient préfixés avec <code>moz</code>.</div>
 
-<h2 id="extensions" name="extensions">Extensions aux événements de souris</h2>
+<h2 id="extensions">Extensions aux événements de souris</h2>
 
 <p>L'API Pointer lock étend l'interface {{domxref("MouseEvent")}} normale avec les attributs de mouvement. Deux nouveaux attributs sont ajoutés aux événements de souris —{{domxref("MouseEvent.movementX","movementX")}} et {{domxref("MouseEvent.movementY","movementY")}}— fournissant le changement de position de la souris. Ces paramètres ont pour valeur les différences entre les valeurs des propriétés de {{domxref("MouseEvent.screenX","screenX")}} / {{domxref("MouseEvent.screenY","screenY")}} stockées dans les événements {{event("mousemove")}}, <code>eNow</code> et <code>ePrevious</code>. En d'autres termes, <code>movementX = eNow.screenX - ePrevious.screenX</code>.</p>
 
-<h3 id="locked_state" name="locked_state">État verrouillé</h3>
+<h3 id="locked_state">État verrouillé</h3>
 
 <p>Quand le verrouillage du pointeur est activé, les propriétés standard {{domxref("MouseEvent.clientX","clientX")}}, {{domxref("MouseEvent.clientY","clientY")}}, {{domxref("MouseEvent.screenX","screenX")}}, et {{domxref("MouseEvent.screenY","screenY")}} sont gardées constantes, comme si la souris ne bougeait pas. Les propriétés {{domxref("MouseEvent.movementX","movementX")}} et {{domxref("MouseEvent.movementY","movementY")}} continuent de fournir le changement de position de la souris. Il n'y a pas de limite aux valeurs {{domxref("MouseEvent.movementX","movementX")}} et {{domxref("MouseEvent.movementY","movementY")}}, si la souris continue de bouger toujours dans la même direction. Le curseur de la souris n'existe pas et il ne peut pas sortir de la fenêtre ou être bloqué par un bord de l'écran.</p>
 
-<h3 id="unlocked_state" name="unlocked_state">État déverrouillé</h3>
+<h3 id="unlocked_state">État déverrouillé</h3>
 
 <p>Les paramètres {{domxref("MouseEvent.movementX","movementX")}} et {{domxref("MouseEvent.movementY","movementY")}} sont disponibles quel que soit l'état de la souris, verrou ou non.</p>
 
 <p>Quand la souris est déverrouillée, il est possible que le curseur soit en dehors de la fenêtre et il est alors remis automatiquement à l'intérieur. Si cela arrive, {{domxref("MouseEvent.movementX","movementX")}} et {{domxref("MouseEvent.movementY","movementY")}} sont définis à zéro.</p>
 
-<h2 id="example" name="example">Simple exemple pas à pas</h2>
+<h2 id="example">Simple exemple pas à pas</h2>
 
 <p>Nous avons écrit une <a href="https://mdn.github.io/dom-examples/pointer-lock/">démo de verrouillage de pointer</a> pour vous montrer comment l'utiliser pour mettre en place un système de contrôle simple (<a href="https://github.com/mdn/dom-examples/tree/master/pointer-lock">voir le code source</a>). La démo ressemble à ça:</p>
 

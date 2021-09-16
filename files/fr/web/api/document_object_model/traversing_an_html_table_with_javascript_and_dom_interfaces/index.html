@@ -13,13 +13,13 @@ original_slug: Explorer_un_tableau_HTML_avec_des_interfaces_DOM_et_JavaScript
 ---
 <p> </p>
 
-<h2 id="Introduction" name="Introduction">Introduction</h2>
+<h2 id="Introduction">Introduction</h2>
 
 <p>Cet article propose une vue d'ensemble de certaines méthodes DOM Level 1 fondamentales et la façon de les utiliser depuis JavaScript. Vous y apprendrez à créer, accéder, contrôler et supprimer dynamiquement des éléments HTML. Les méthodes DOM décrites ne sont pas spécifiques au HTML et s'appliquent également au XML. Les exemples fonctionneront dans tous les navigateurs offrant le support complet du DOM niveau 1, ce qui est le cas de tous les navigateurs basés sur Mozilla comme Firefox ou Netscape. Les morceaux de code de ce document fonctionneront également dans Internet Explorer 5.</p>
 
 <div class="note">Les méthodes décrites ici font partie de la spécification Document Object Model level 1 (Core). DOM level 1 comprend des méthodes destinées à l'accès et à la manipulation des documents (DOM 1 core) ainsi que des méthodes spécifiques aux documents HTML (DOM 1 HTML).</div>
 
-<h2 id="Overview_of_Sample1.html" name="Overview_of_Sample1.html">Exemple: Création d'un tableau HTML dynamiquement (<code>Sample1.html</code>)</h2>
+<h2 id="Overview_of_Sample1.html">Exemple: Création d'un tableau HTML dynamiquement (<code>Sample1.html</code>)</h2>
 
 <h3 id="Contenu_HTML">Contenu HTML</h3>
 
@@ -112,7 +112,7 @@ original_slug: Explorer_un_tableau_HTML_avec_des_interfaces_DOM_et_JavaScript
 
 <p>Vous pouvez construire ce tableau ainsi que ses éléments enfants internes en utilisant juste quelques méthodes DOM. Conservez à l'esprit le modèle en arbre des structures que vous comptez créer, cela rendra plus facile l'écriture du code nécessaire. Dans l'arbre &lt;table&gt; de la figure 1, l'élément &lt;table&gt; a un enfant, l'élément &lt;tbody&gt;, qui lui-même a deux enfants &lt;tr&gt;, qui à leur tour ont chacun un enfant &lt;td&gt;. Enfin, chacun de ces éléments &lt;td&gt; a un enfant, un nœud texte.</p>
 
-<h2 id="M.C3.A9thodes_DOM_fondamentales_-_Exemple2.html" name="M.C3.A9thodes_DOM_fondamentales_-_Exemple2.html">Exemple : Définition de la couleur d'arrière-plan d'un paragraphe</h2>
+<h2 id="M.C3.A9thodes_DOM_fondamentales_-_Exemple2.html">Exemple : Définition de la couleur d'arrière-plan d'un paragraphe</h2>
 
 <p><code>getElementsByTagName</code> est à la fois une méthode de l'interface Document et de l'interface Element. Lorsqu'il est appelé, il renvoie un tableau avec tous les descendants de l'élément correspondant au nom de l'étiquette. Le premier élément de la liste se trouve à la position [0] dans le tableau.</p>
 
@@ -163,7 +163,7 @@ original_slug: Explorer_un_tableau_HTML_avec_des_interfaces_DOM_et_JavaScript
 // ajoute une propriété de style inline
 </pre>
 
-<h3 id="Cr.C3.A9ation_de_n.C5.93uds_texte_avec_document.createTextNode.28.22...22.29" name="Cr.C3.A9ation_de_n.C5.93uds_texte_avec_document.createTextNode.28.22...22.29">Création de nœuds texte avec <code>document.createTextNode("..")</code></h3>
+<h3 id="Cr.C3.A9ation_de_n.C5.93uds_texte_avec_document.createTextNode.28.22...22.29">Création de nœuds texte avec <code>document.createTextNode("..")</code></h3>
 
 <p>Employez l'objet <code>document</code> pour appeler la méthode <code>createTextNode</code> et créer un nœud texte. Il suffit de lui communiquer le contenu texte, et la valeur renvoyée est un objet représentant le nœud texte.</p>
 
@@ -171,7 +171,7 @@ original_slug: Explorer_un_tableau_HTML_avec_des_interfaces_DOM_et_JavaScript
 
 <p>Ce morceau de code crée un nœud de type TEXT_NODE qui contient la donnée texte <code>"world"</code>, et <code>monNoeudTexte</code> est la référence de l'objet nœud créé. Pour afficher ce texte sur votre page HTML, vous devez ensuite définir ce nœud texte comme l'enfant d'un autre élément nœud.</p>
 
-<h3 id="Insertion_d.27.C3.A9l.C3.A9ments_avec_appendChild.28....29" name="Insertion_d.27.C3.A9l.C3.A9ments_avec_appendChild.28....29">Insertion d'éléments avec appendChild(...)</h3>
+<h3 id="Insertion_d.27.C3.A9l.C3.A9ments_avec_appendChild.28....29">Insertion d'éléments avec appendChild(...)</h3>
 
 <p>En invoquant <code>myP.appendChild</code> ({{mediawiki.external('node_element')}}) , vous définissez <code>element_nœud</code> comme un nouvel enfant du second élément <code>p</code> (<code>myP</code> a été défini plus haut comme étant le second élément p).</p>
 
@@ -184,7 +184,7 @@ original_slug: Explorer_un_tableau_HTML_avec_des_interfaces_DOM_et_JavaScript
 
 <div class="note">L'utilisation de <code>createTextNode</code> et de <code>appendChild</code> permet aisément d'ajouter un espace entre ces deux mots. Notez cependant que la méthode <code>appendChild</code> ajoute le nouvel enfant à la suite de ceux déjà présents, à la manière de « world » placé après « hello ». Pour ajouter un nœud texte entre « hello » et « world » (par exemple un espace), utilisez <code>insertBefore</code> à la place de <code>appendChild</code>.</div>
 
-<h3 id="Cr.C3.A9ation_de_nouveaux_.C3.A9l.C3.A9ments_avec_l.27objet_document_et_la_m.C3.A9thode_createElement.28....29" name="Cr.C3.A9ation_de_nouveaux_.C3.A9l.C3.A9ments_avec_l.27objet_document_et_la_m.C3.A9thode_createElement.28....29">Création de nouveaux éléments avec l'objet document et la méthode <code>createElement(...)</code></h3>
+<h3 id="Cr.C3.A9ation_de_nouveaux_.C3.A9l.C3.A9ments_avec_l.27objet_document_et_la_m.C3.A9thode_createElement.28....29">Création de nouveaux éléments avec l'objet document et la méthode <code>createElement(...)</code></h3>
 
 <p>Vous pouvez créer de nouveaux éléments, dont des éléments HTML, avec <code>createElement</code>. Pour créer un élément &lt;p&gt; enfant de l'élément &lt;body&gt;, vous pouvez vous servir de <code>body</code> défini dans l'exemple précédent et lui greffer un nouvel élément nœud. Pour ce faire, invoquez <code>document.createElement("nombalise")</code>. Voici un exemple :</p>
 
@@ -194,7 +194,7 @@ body.appendChild(nouveauNoeudBALISEP);
 
 <p><img alt="Image:sample2c.jpg" src="https://developer.mozilla.org/@api/deki/files/836/=Sample2c.jpg"></p>
 
-<h3 id="Suppression_de_n.C5.93uds_avec_la_m.C3.A9thode_removeChild.28....29" name="Suppression_de_n.C5.93uds_avec_la_m.C3.A9thode_removeChild.28....29">Suppression de nœuds avec la méthode <code>removeChild(...)</code></h3>
+<h3 id="Suppression_de_n.C5.93uds_avec_la_m.C3.A9thode_removeChild.28....29">Suppression de nœuds avec la méthode <code>removeChild(...)</code></h3>
 
 <p>Tous les nœuds peuvent être supprimés. La ligne ci-dessous supprime de <code>myP</code> (deuxième élément &lt;p&gt;) le nœud texte contenant le mot « world » :</p>
 
@@ -210,15 +210,15 @@ body.appendChild(nouveauNoeudBALISEP);
 
 <p><img alt="Image:sample2d.jpg" src="https://developer.mozilla.org/@api/deki/files/837/=Sample2d.jpg"></p>
 
-<h2 id="Cr.C3.A9ation_dynamique_d.27un_tableau_.28Exemple1.html.29" name="Cr.C3.A9ation_dynamique_d.27un_tableau_.28Exemple1.html.29">Création dynamique d'un tableau (retour à Sample1.html)</h2>
+<h2 id="Cr.C3.A9ation_dynamique_d.27un_tableau_.28Exemple1.html.29">Création dynamique d'un tableau (retour à Sample1.html)</h2>
 
 <p>Jusqu'à la fin de cet article, nous travaillons de nouveau sur Exemple1.html. Le schéma qui suit vous rappelle la structure de l'arbre des objets pour le tableau créé dans l'exemple.</p>
 
-<h3 id="Rappel_de_la_structure_arborescente_d.27un_tableau_HTML" name="Rappel_de_la_structure_arborescente_d.27un_tableau_HTML">Rappel de la structure arborescente d'un tableau HTML</h3>
+<h3 id="Rappel_de_la_structure_arborescente_d.27un_tableau_HTML">Rappel de la structure arborescente d'un tableau HTML</h3>
 
 <p><img alt="Image:sample1-tabledom.jpg" src="https://developer.mozilla.org/@api/deki/files/833/=Sample1-tabledom.jpg"></p>
 
-<h3 id="Cr.C3.A9ation_et_insertion_des_.C3.A9l.C3.A9ments_dans_l.27arborescence" name="Cr.C3.A9ation_et_insertion_des_.C3.A9l.C3.A9ments_dans_l.27arborescence">Création et insertion des éléments dans l'arborescence</h3>
+<h3 id="Cr.C3.A9ation_et_insertion_des_.C3.A9l.C3.A9ments_dans_l.27arborescence">Création et insertion des éléments dans l'arborescence</h3>
 
 <p>On peut décomposer la création du tableau de Exemple1.html en trois étapes :</p>
 
@@ -276,9 +276,9 @@ body.appendChild(nouveauNoeudBALISEP);
 &lt;/html&gt;
 </pre>
 
-<h2 id="Manipulation_du_tableau_avec_DOM_et_CSS" name="Manipulation_du_tableau_avec_DOM_et_CSS">Manipulation du tableau avec DOM et CSS</h2>
+<h2 id="Manipulation_du_tableau_avec_DOM_et_CSS">Manipulation du tableau avec DOM et CSS</h2>
 
-<h3 id="R.C3.A9cup.C3.A9rer_un_n.C5.93ud_texte_dans_le_tableau" name="R.C3.A9cup.C3.A9rer_un_n.C5.93ud_texte_dans_le_tableau">Récupérer un nœud texte dans le tableau</h3>
+<h3 id="R.C3.A9cup.C3.A9rer_un_n.C5.93ud_texte_dans_le_tableau">Récupérer un nœud texte dans le tableau</h3>
 
 <p>Cet exemple présente deux nouveaux attributs DOM. D'abord, l'attribut <code>childNodes</code> qui est utilisé pour récupérer la liste des nœuds enfants de <code>cel</code>. A la différence de <code>getElementsByTagName</code>, la liste renvoyée par <code>childNodes</code> comporte tous les enfants sans considération de type. Une fois la liste obtenue, la méthode <code>{{ mediawiki.external('x') }}</code> est employée pour sélectionner l'élément enfant désiré. Dans cet exemple, le nœud texte de la seconde cellule de la seconde ligne du tableau est enregistré dans <code>celtext</code>. Ensuite, un nouveau nœud texte contenant les données de <code>celtext</code> est greffé en tant qu'enfant sur l'élément &lt;body&gt;.</p>
 
@@ -297,13 +297,13 @@ myceltext=mycel.childNodes[0];
 currenttext=document.createTextNode(myceltext.data);
 mybody.appendChild(currenttext);</code></pre>
 
-<h3 id="R.C3.A9cup.C3.A9rer_la_valeur_d.27un_attribut" name="R.C3.A9cup.C3.A9rer_la_valeur_d.27un_attribut">Récupérer la valeur d'un attribut</h3>
+<h3 id="R.C3.A9cup.C3.A9rer_la_valeur_d.27un_attribut">Récupérer la valeur d'un attribut</h3>
 
 <p>A la fin d'Exemple1, l'appel à <code>setAttribute</code> sur l'objet <code>table</code> définit la propriété <code>border</code> du tableau. Si vous désirez simplement récupérez la valeur de cet attribut, vous pouvez employer la méthode <code>getAttribute</code> :</p>
 
 <pre class="line-numbers  language-html"><code class="language-html">mytable.getAttribute("border");</code></pre>
 
-<h3 id="Cacher_une_colonne_en_changeant_les_propri.C3.A9t.C3.A9s_de_style" name="Cacher_une_colonne_en_changeant_les_propri.C3.A9t.C3.A9s_de_style">Cacher une colonne en changeant les propriétés de style</h3>
+<h3 id="Cacher_une_colonne_en_changeant_les_propri.C3.A9t.C3.A9s_de_style">Cacher une colonne en changeant les propriétés de style</h3>
 
 <p>Une fois que vous avez l'objet dans une variable JavaScript, vous pouvez définir les propriétés directement. Le code qui suit est une version modifiée de Exemple1.html où les cellules de la seconde colonne sont cachées, et le fond de celles de la première colonne est rouge. Remarquez que la propriété de style y est définie directement.</p>
 
@@ -340,7 +340,7 @@ mybody.appendChild(currenttext);</code></pre>
 &lt;/html&gt;
 </pre>
 
-<h4 id="Original_Document_Information" name="Original_Document_Information">Original Document Information</h4>
+<h4 id="Original_Document_Information">Original Document Information</h4>
 
 <dl>
  <dt>Author(s)</dt>

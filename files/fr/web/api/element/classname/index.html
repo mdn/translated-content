@@ -13,7 +13,7 @@ translation_of: Web/API/Element/className
 
 <p>La propriété <strong>className</strong> de l'interface {{domxref("Element")}} récupère et définit la valeur de l'<a href="/fr/docs/Web/HTML/Attributs_universels/class">attribut <code>class</code></a> de l'élément spécifié.</p>
 
-<h2 id="Syntaxe_et_valeurs" name="Syntaxe_et_valeurs">Syntaxe</h2>
+<h2 id="Syntaxe_et_valeurs">Syntaxe</h2>
 
 <pre class="syntaxbox"><var>var cName</var> = <var>elementNodeReference</var>.className;
 <var>elementNodeReference</var>.className = <var>cName</var>;</pre>
@@ -22,7 +22,7 @@ translation_of: Web/API/Element/className
  <li><em><var>cName</var> est une String (chaîne de caractères) représentant la classe (ou les classes séparées par des espaces) de l'élément courant.</em></li>
 </ul>
 
-<h2 id="Exemple" name="Exemple">Exemple</h2>
+<h2 id="Exemple">Exemple</h2>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js">let elm = document.getElementById('item');
 
@@ -32,7 +32,7 @@ if(elm.className === 'active'){
     elm.className = 'active';
 }</code></pre>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <p>Le nom <code>className</code> est utilisé pour cette propriété au lieu de <code>class</code> à cause de conflits éventuels avec le mot-clé « class » dans beaucoup de langages utilisés pour manipuler le DOM.</p>
 
@@ -41,7 +41,7 @@ if(elm.className === 'active'){
 <pre class="brush: js"><code>elm.setAttribute('class', elm.getAttribute('class'))</code>
 </pre>
 
-<h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Spécifications</h2>
+<h2 id="Sp.C3.A9cification">Spécifications</h2>
 
 <table class="standard-table">
  <tbody>

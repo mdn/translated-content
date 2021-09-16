@@ -7,15 +7,15 @@ translation_of: Web/API/Window/requestIdleCallback
 
 <p>La méthode <code><strong>window.requestIdleCallback() </strong></code>mémorise une fonction qui sera appellée lorsque le navigateur n'aura plus aucune autre tâche en cours. Cela offre au développeur la possibilité de réaliser des tâches à basse priorité en arrière-plan sur le thread principal, sans impacter l'expérience utilisateur (ralentissement des animations, etc). L'ordre des appels aux fonctions est généralement premier entré, premier sorti, sauf si le timeout défini au moment de l'enregistrement est atteint avant que le navigateur n'ait eu le temps d'appeler la fonction en question.</p>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
 <pre class="syntaxbox"><code>var idleCallbackId = window.requestIdleCallback(fonction[, options])</code></pre>
 
-<h3 id="Returns" name="Returns">Retour de l'appel</h3>
+<h3 id="Returns">Retour de l'appel</h3>
 
 <p>Un entier long non-signé qui peut être utilisé pour annulé l'appel à la fonction via la méthode {{domxref("window.cancelIdleCallback()")}}.</p>
 
-<h3 id="Parameters" name="Parameters">Paramètres</h3>
+<h3 id="Parameters">Paramètres</h3>
 
 <dl>
  <dt>fonction</dt>

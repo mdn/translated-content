@@ -12,7 +12,7 @@ translation_of: Web/API/Node/previousSibling
 
 <p>La propriété en lecture seule  <code><strong>Node.previousSibling</strong></code> renvoie le nœud (<code>node</code>) précédant immédiatement le nœud courant dans la liste {{domxref("Node.childNodes", "childNodes")}} de son parent, ou <code>null</code> s'il s'agit du premier nœud de la liste.</p>
 
-<h2 id="Syntaxe" name="Syntaxe">Syntaxe</h2>
+<h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="syntaxbox"><var>previousNode</var> = <em>node</em>.previousSibling;
 </pre>
@@ -24,7 +24,7 @@ translation_of: Web/API/Node/previousSibling
 alert(document.getElementById("b1").previousSibling); // null
 alert(document.getElementById("b2").previousSibling.id); // "b1"</code></pre>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <p></p><p>Les navigateurs basés sur Gecko insèrent des nœuds texte dans un document pour représenter des espaces
     vides dans le balisage source. Par conséquent, un nœud obtenu par exemple via <a href="/fr/docs/Web/API/Node/firstChild" title="La propriété en lecture seule Node.firstChild renvoie le premier nœud enfant de l'arbre ou null s'il n'en a pas. Si le noeud est un Document , il renvoie le premier noeud de la liste de ses enfants directs."><code>Node.firstChild</code></a> ou
@@ -37,7 +37,7 @@ alert(document.getElementById("b2").previousSibling.id); // "b1"</code></pre>
 
 <p>L'opération inverse <code><a href="https://developer.mozilla.org/fr/docs/Web/API/Node/nextSibling">Node.nextSibling</a></code> permet de rechercher l'élément suivant.</p>
 
-<h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Spécifications</h2>
+<h2 id="Sp.C3.A9cification">Spécifications</h2>
 
 <ul>
  <li><a class="external" href="http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#attribute-previousSibling">DOM Level 1 Core: previousSibling</a> <small>— <a class="external" href="http://xmlfr.org/w3c/TR/REC-DOM-Level-1/level-one-core.html#attribute-previousSibling">traduction</a> (non normative)</small></li>

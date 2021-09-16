@@ -14,7 +14,7 @@ translation_of: Web/API/Document/getElementsByTagName
 
 <p>Renvoie une {{domxref ("HTMLCollection")}} des éléments avec le nom de balise donné. Le document complet est recherché, y compris le nœud racine. Le <code>HTMLCollection</code> renvoyée est en direct, ce qui signifie qu'elle se met à jour automatiquement pour rester synchronisée avec l'arborescence DOM sans avoir à rappeler document.getElementsByTagName ().</p>
 
-<h2 id="Syntaxe" name="Syntaxe">Syntaxe</h2>
+<h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="syntaxbox">var <var>elements</var> = document.getElementsByTagName(<em>name</em>);</pre>
 
@@ -27,7 +27,7 @@ translation_of: Web/API/Document/getElementsByTagName
 <p><strong>Note :</strong> <a href="https://dom.spec.whatwg.org/">La dernière spécification W3C</a> dit que  <code>elements</code> est une   <code>HTMLCollection</code> ; cependant cette méthode renvoie une  {{domxref("NodeList")}} dans les navigateurs WebKit. Voir  {{bug(14869)}} pour plus de détails.</p>
 </div>
 
-<h2 id="Exemple" name="Exemple">Exemple</h2>
+<h2 id="Exemple">Exemple</h2>
 
 <p>Dans l'exemple suivant, <code>getElementsByTagName()</code> commence à partir d'un élément parent particulier et effectue une recherche descendante récursive dans le DOM à partir de cet élément parent, en créant une collection de tous les éléments descendants qui correspondent au paramètre de <code>name</code>. Cela démontre à la fois <code>document.getElementsByTagName()</code> et son homologue {{domxref ("Element.getElementsByTagName ()")}}, qui lance la recherche sur un élément spécifique dans l'arbre DOM.</p>
 
@@ -90,13 +90,13 @@ translation_of: Web/API/Document/getElementsByTagName
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 
-<h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Notes</h2>
+<h2 id="Sp.C3.A9cification">Notes</h2>
 
 <p>Lorsqu'elle est appelée sur un document HTML, <code>getElementsByTagName()</code> classe son argument avant de continuer. Cela n'est pas souhaitable lorsque vous essayez de faire correspondre des éléments camelCase SVG dans un sous-arbre dans un document HTML. {{Domxref ("document.getElementsByTagNameNS ()")}} est utile dans ce cas. Voir aussi {{Bug (499656)}}.<br>
  <br>
  <code>document.getElementsByTagName()</code> est similaire à {{domxref ("element.getElementsByTagName ()")}}, sauf que sa recherche englobe tout le document.</p>
 
-<h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Spécifications</h2>
+<h2 id="Sp.C3.A9cification">Spécifications</h2>
 
 <ul>
  <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-A6C9094">DOM Level 2 Core : getElementsByTagName</a> <small>— <a class="external" href="http://www.yoyodesign.org/doc/w3c/dom2/core/core.html#ID-A6C9094">traduction</a> (non normative)</small></li>

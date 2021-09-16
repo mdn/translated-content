@@ -12,7 +12,7 @@ translation_of: Web/API/Element/insertAdjacentHTML
 
 <p><code>insertAdjacentHTML()</code> analyse le texte spécifié en tant que HTML ou XML et insère les noeuds résultants dans le DOM à la position spécifiée. L'élement qui est utilisé n'est pas réanalysé et les élements qu'il contient ne sont donc pas corrompus. Ceci, et le fait d'éviter la sérialisation supplémentaire, rend la fonction plus rapide et directe que <strong><span style="font-family: courier new,andale mono,monospace;">innerHTML</span>.</strong></p>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
 <pre class="line-numbers  language-html"><code class="language-html">element.insertAdjacentHTML(position, text);</code></pre>
 
@@ -51,7 +51,7 @@ translation_of: Web/API/Element/insertAdjacentHTML
 
 <div class="note"><strong>Note :</strong> Les positions <code>beforebegin</code> et <code>afterend</code> ne fonctionnent que si le noeud est un arbre et a un élément parent.</div>
 
-<h2 id="Example" name="Example">Exemple</h2>
+<h2 id="Example">Exemple</h2>
 
 <pre class="brush: js">// &lt;div id="one"&gt;one&lt;/div&gt;
 var d1 = document.getElementById('one');
@@ -60,7 +60,7 @@ d1.insertAdjacentHTML('afterend', '&lt;div id="two"&gt;two&lt;/div&gt;');
 // Ici la nouvelle structure est :
 // &lt;div id="one"&gt;one&lt;/div&gt;&lt;div id="two"&gt;two&lt;/div&gt;</pre>
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Notes</h2>
+<h2 id="Browser_Compatibility">Notes</h2>
 
 <h3 id="Considérations_de_sécurité">Considérations de sécurité</h3>
 

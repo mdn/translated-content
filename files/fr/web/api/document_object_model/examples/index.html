@@ -9,7 +9,7 @@ original_slug: Web/API/Document_Object_Model/Exemples
 ---
 <p>Cette page présente quelques exemples plus détaillés de développement Web et XML utilisant le DOM. Partout où c'est possible, les exemples utilisent des API courantes, des astuces et des modèles en JavaScript pour manipuler l'objet de document.</p>
 
-<h2 id="Exemple_1_:_height_et_width" name="Exemple_1_:_height_et_width">Exemple 1 : <em>height</em> (hauteur) et width <em>(largeur)</em></h2>
+<h2 id="Exemple_1_:_height_et_width">Exemple 1 : <em>height</em> (hauteur) et width <em>(largeur)</em></h2>
 
 <p>L'exemple qui suit montre l'utilisation des propriétés <code>height</code> et <code>width</code> pour dimensionner des images de diverses tailles :</p>
 
@@ -65,7 +65,7 @@ function init() {
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 
-<h2 id="Exemple_2_:_attributs_d.27image" name="Exemple_2_:_attributs_d.27image">Exemple 2 : attributs d'image</h2>
+<h2 id="Exemple_2_:_attributs_d.27image">Exemple 2 : attributs d'image</h2>
 
 <pre class="brush:html line-numbers  language-html"><code class="language-html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -95,7 +95,7 @@ function setBorderWidth(width) {
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 
-<h2 id="Exemple_3_:_manipulation_de_styles" name="Exemple_3_:_manipulation_de_styles">Exemple 3 : manipulation de styles</h2>
+<h2 id="Exemple_3_:_manipulation_de_styles">Exemple 3 : manipulation de styles</h2>
 
 <p>Dans cet exemple simple, on accède à certaines propriétés basiques de style d'un élément de paragraphe HTML à l'aide de son objet style. L'objet style de l'élément et ses propriétés de style CSS peuvent être récupérés et définis depuis le DOM. Dans ce cas-ci, les styles individuels sont manipulés directement. Dans l'exemple suivant (l'exemple 4), on utilisera les feuilles de style et leurs règles pour changer les styles de documents entiers.</p>
 
@@ -124,7 +124,7 @@ function changeText() {
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 
-<h2 id="Exemple_4_:_utilisation_de_feuilles_de_style" name="Exemple_4_:_utilisation_de_feuilles_de_style">Exemple 4 : utilisation de feuilles de style</h2>
+<h2 id="Exemple_4_:_utilisation_de_feuilles_de_style">Exemple 4 : utilisation de feuilles de style</h2>
 
 <p>La propriété <code>styleSheets</code> de l'objet <code>document</code> renvoie une liste des feuilles de style qui ont été chargées pour ce document. On peut accéder à ces feuilles de style et leurs règles individuelles à l'aide des objets <code>stylesheet</code>, <code>style</code> et <code>CSSRule</code>, comme montré dans cet exemple qui affiche tous les sélecteurs de règles de style dans la console.</p>
 
@@ -197,7 +197,7 @@ function load() {
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 
-<h2 id="Exemple_6_:_getComputedStyle" name="Exemple_6_:_getComputedStyle">Exemple 6 : getComputedStyle</h2>
+<h2 id="Exemple_6_:_getComputedStyle">Exemple 6 : getComputedStyle</h2>
 
 <p>Cet exemple montre comment la méthode {{domxref("window.getComputedStyle")}} peut être utilisée pour obtenir les styles d'un élément qui ne sont pas définis dans l'attribut <code>style</code> ou à l'aide de JavaScript (c'est-à-dire, <code>elem.style.backgroundColor="rgb(173, 216, 230)"</code>). Ces derniers types de styles peuvent être récupérés avec la propriété plus directe {{domxref("element.style", "elt.style")}} , dont les propriétés sont listées dans la <a href="https://developer.mozilla.org/fr/docs/Web/CSS/Reference">liste des propriétés DOM CSS</a>.</p>
 
@@ -256,7 +256,7 @@ function cStyles() {
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 
-<h2 id="Exemple_7_:_affichage_des_propri.C3.A9t.C3.A9s_d.27un_objet_event" name="Exemple_7_:_affichage_des_propri.C3.A9t.C3.A9s_d.27un_objet_event">Exemple 7 : affichage des propriétés d'un objet <code>event</code></h2>
+<h2 id="Exemple_7_:_affichage_des_propri.C3.A9t.C3.A9s_d.27un_objet_event">Exemple 7 : affichage des propriétés d'un objet <code>event</code></h2>
 
 <p>Cet exemple utilise des méthodes DOM pour afficher les propriétés d'un objet {{domxref("window.onload")}} {{domxref("event")}}   et leurs valeurs dans un tableau. Il montre également une technique utile utilisant une boucle <code>for..in</code> pour parcourir les propriétés d'un objet et obtenir leurs valeurs.</p>
 
@@ -326,7 +326,7 @@ window.onload = function(event){
 
 &lt;/html&gt;</code></pre>
 
-<h2 id="Exemple_8_:_utilisation_de_l.27interface_DOM_Table" name="Exemple_8_:_utilisation_de_l.27interface_DOM_Table">Exemple 8 : utilisation de l'interface DOM Table</h2>
+<h2 id="Exemple_8_:_utilisation_de_l.27interface_DOM_Table">Exemple 8 : utilisation de l'interface DOM Table</h2>
 
 <p>L'interface DOM HTMLTableElement fournit certaines méthodes utilitaires permettant de créer et de manipuler des tableaux. Deux méthodes utilisées fréquemment sont {{domxref("HTMLTableElement.insertRow")}} et {{domxref("tableRow.insertCell")}}</p>
 
@@ -352,7 +352,7 @@ for (var i = 0; i &lt; 2; i++) {
 }
 &lt;/script&gt;</code></pre>
 
-<h4 id="Notes" name="Notes">Notes</h4>
+<h4 id="Notes">Notes</h4>
 
 <ul>
  <li>N'utilisez jamais la propriété {{domxref("element.innerHTML","innerHTML")}} d'un tableau pour le modifier, même si vous pouvez l'utiliser pour créer un tableau entier ou le contenu d'une cellule.</li>

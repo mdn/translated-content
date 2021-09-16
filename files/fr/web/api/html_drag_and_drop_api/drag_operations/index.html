@@ -8,7 +8,7 @@ original_slug: Web/API/API_HTML_Drag_and_Drop/Opérations_de_glissement
 
 <p class="note">Les opérations de glisser décrits dans ce document utilisent l'interface {{domxref("DataTransfer")}}. Ce document n'utilise pas l'interface {{domxref("DataTransferItem")}} ni l'interface {{domxref("DataTransferItemList")}}.</p>
 
-<h2 id="draggableattribute" name="draggableattribute">L'attribut draggable</h2>
+<h2 id="draggableattribute">L'attribut draggable</h2>
 
 <p>Dans une page Web, certains cas nécessitent l'usage du Glisser Déposer. Il peut servir pour des sélections de texte, d'images ou de liens. Lorsqu'une image ou un lien sont glissés, l'URL de l'image ou du lien est défini comme données du glissement, et le Glisser commence. Pour d'autres éléments, il peut s'agir d'une sélection effectuée qui servira au glissement. Pour voir cet effet, sélectionnez une zone dans une page Web, puis cliquez dedans en maintenant le bouton de la souris et glissez la sélection. Un rendu translucide de la sélection apparaitra en suivant le pointeur de la souris. Il s'agit toutefois du comportement par défaut du glissement si aucun scrutateur n'a été défini pour traiter les données.</p>
 
@@ -40,7 +40,7 @@ original_slug: Web/API/API_HTML_Drag_and_Drop/Opérations_de_glissement
 
 <p> </p>
 
-<h2 id="dragstart" name="dragstart">Démarrer une opération de glissement</h2>
+<h2 id="dragstart">Démarrer une opération de glissement</h2>
 
 <p>Dans cet exemple, un scrutateur est ajouté à l'événement dragstart en utilisant l'attribut <code>ondragstart</code>.</p>
 
@@ -51,7 +51,7 @@ original_slug: Web/API/API_HTML_Drag_and_Drop/Opérations_de_glissement
 
 <p>Lorsqu'un utilisateur commence un glissement, l'événement dragstart est déclenché. Dans cet exemple, le scrutateur dragstart a été ajouté à l'élément à déplacer lui-même. Vous pouvez toutefois mettre le scrutateur sur un ancètre plus élevé car l'événement drag diffuse comme le font les autres événements. À l'intérieur de l'événement dragstart, vous devez spécifier la donnée de glissement, l'image filligrane et les effets du glissement tels que décrits ci-dessous. Cependant, seule la donnée de glissement est nécessaire ; l'image et les effets du glissement par défaut sont suffisants pour la majorité des cas.</p>
 
-<h2 id="dragdata" name="dragdata">Donnée de glissement</h2>
+<h2 id="dragdata">Donnée de glissement</h2>
 
 <p>Tous les événements de glissement ont une propriété appelée <a class="internal" href="/Fr/GlisserD%C3%A9poser/DataTransfer" title="Fr/GlisserDéposer/DataTransfer">dataTransfer</a> utilisée pour contenir la donnée de glissement.</p>
 
@@ -91,7 +91,7 @@ dt.setData("text/plain", "http://www.mozilla.org");
 
 <p>L'argument de type de la méthode <a class="internal" href="/Fr/GlisserD%C3%A9poser/DataTransfer#clearData" title="Fr/GlisserDéposer/DataTransfer#clearData">clearData</a> est optionnel. S'il n'est pas précisé, la donnée associée à tous les types est effacée. Et si aucune donnée à glisser n'est ajoutée, alors l'opération de glissement ne s'effectue pas.</p>
 
-<h2 id="dragfeedback" name="dragfeedback">Définir l'image filigrane d'un glissement</h2>
+<h2 id="dragfeedback">Définir l'image filigrane d'un glissement</h2>
 
 <p>Lorsqu'un glissement a lieu, une image translucide est générée à partir de l'origine du glissement (l'élément d'origine ayant déclenché l'événement), et cette image suit le déplacement de la souris. Elle est créée automatiquement donc vous n'avez pas à le faire vous même. Toutefois, vous pouvez personnaliser cette image filigrane grâce à <a class="internal" href="/Fr/GlisserD%C3%A9poser/DataTransfer#setDragImage" title="Fr/GlisserDéposer/DataTransfer#setDragImage">setDragImage</a>.</p>
 
@@ -123,7 +123,7 @@ dt.setData("text/plain", "http://www.mozilla.org");
 
 <p>Les deuxième et troisième arguments de la méthode <a class="internal" href="/Fr/GlisserD%C3%A9poser/DataTransfer#setDragImage" title="Fr/GlisserDéposer/DataTransfer#setDragImage">setDragImage</a> sont les décalages de l'image par rapport au pointeur de la souris. Dans cet exemple, comme le canvas fait 50 pixels de large et 50 pixels de haut, nous utilisons son centre (soit 25 et 25) pour que l'image soit centrée sur le pointeur de la souris.</p>
 
-<h2 id="drageffects" name="drageffects">Effets du glissement</h2>
+<h2 id="drageffects">Effets du glissement</h2>
 
 <p>Lors d'un glisser/déposer, plusieur opérations se déroulent. L'opération <code>copy</code> indique que la donnée glissée sera copiée de son emplacement d'origine au lieu de dépot. L'opération <code>move</code> indique que la donnée glissée sera déplacée, et l'opération <code>link</code> indique une forme de relation ou de connexion entre l'origine et le lieu de dépot.</p>
 
@@ -171,7 +171,7 @@ event.dataTransfer.dropEffect = "copy";
 
 <p>Vous pouvez utiliser la valeur <code>none</code> pour interdir tout dépôt à cet emplacement.</p>
 
-<h2 id="droptargets" name="droptargets">Spécifier les cibles de dépôt</h2>
+<h2 id="droptargets">Spécifier les cibles de dépôt</h2>
 
 <p>Un scrutateur pour les événements <code>dragenter</code> et <code>dragover</code> est utilisé pour indiquer des cibles de dépôt valides, c'est-à-dire là où les items pourront être déposés. La plupart des zones d'une page Web ne sont pas des endroits valides pour déposer des données. Ainsi, le comportement par défaut pour ces événements ne permet pas un dépôt.</p>
 
@@ -197,7 +197,7 @@ event.dataTransfer.dropEffect = "copy";
 
 <p>Vous pouvez également définir une propriété <a class="internal" href="/fr/GlisserD%C3%A9poser/DataTransfer#effectAllowed" title="fr/GlisserDéposer/DataTransfer#effectAllowed">effectAllowed</a> ou <a class="internal" href="/fr/GlisserD%C3%A9poser/DataTransfer#dropEffect" title="fr/GlisserDéposer/DataTransfer#dropEffect">dropEffect</a> ou les deux à la fois si vous souhaitez être plus précis sur le type d'opération autorisé. Naturellement, le changement de propriété n'aura aucun effet si vous n'avez pas annulé l'événement.</p>
 
-<h2 id="dropfeedback" name="dropfeedback">Retour d'information du dépôt</h2>
+<h2 id="dropfeedback">Retour d'information du dépôt</h2>
 
 <p>Il y a de nombreuses manières d'indiquer à l'utilisateur que le dépot est autorisé dans une certaine zone. Le pointeur de la souris va être mis à jour en fonction de la valeur de la propriété <a href="/En/DragDrop/DataTransfer#dropEffect.28.29" title="dropEffect">dropEffect</a>. L'apparence exacte dépend de la plateforme de l'utilisateur, généralement il s'agit d'un icone représentant un signe plus qui apparaît pour une copie par exemple, et un 'impossible de déposer ici' peut apparaître quand le dépôt n'est pas autorisé. Cette information contextuelle est suffisante dans la plupart des cas.</p>
 
@@ -216,7 +216,7 @@ event.dataTransfer.dropEffect = "copy";
 
 <p>Finally, the <code>dragleave</code> event will fire at an element when the drag leaves the element. This is the time when you should remove any insertion markers or highlighting. You do not need to cancel this event. Any highlighting or other visual effects specified using the <code>-moz-drag-over</code> pseudoclass will be removed automatically. The <code>dragleave</code> event will always fire, even if the drag is cancelled, so you can always ensure that any insertion point cleanup can be done during this event.</p>
 
-<h2 id="drop" name="drop">Performing a Drop</h2>
+<h2 id="drop">Performing a Drop</h2>
 
 <p>When the user releases the mouse, the drag and drop operation ends. If the mouse was released over an element that is a valid drop target, that is, one that cancelled the last <code>dragenter</code> or <code>dragover</code> event, then the drop will be successful, and a <code>drop</code> event will fire at the target. Otherwise, the drag operation is cancelled and no <code>drop</code> event is fired.</p>
 
@@ -284,7 +284,7 @@ event.dataTransfer.dropEffect = "copy";
 
 <p>This method relies on JavaScript functionality available in Firefox 3. However the code could be adjusted to support other platforms.</p>
 
-<h2 id="dragend" name="dragend">Finishing a Drag</h2>
+<h2 id="dragend">Finishing a Drag</h2>
 
 <p>Once the drag is complete, a <code>dragend</code> is fired at the source of the drag (the same element that received the <code>dragstart</code> event). This event will fire if the drag was successful or if it was cancelled. However, you can use the <a href="/En/DragDrop/DataTransfer#dropEffect.28.29" title="dropEffect">dropEffect</a> to determine what drop operation occurred.</p>
 

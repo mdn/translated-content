@@ -18,7 +18,7 @@ original_slug: Web/API/Element/innertHTML
 
 <p>Pour insérer le HTML dans le document, plutôt que de remplacer le contenu d'un élément, utilisez la méthode {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.</p>
 
-<h2 id="Syntaxe" name="Syntaxe">Syntaxe</h2>
+<h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="syntaxbox">const <em>content</em> = <em>element</em>.innerHTML;
 
@@ -104,7 +104,7 @@ el.innerHTML = name; // affiche l'alerte</code></pre>
 <p><strong>Attention :</strong> Si votre projet est soumis à une vérification de sécurité, l'utilisation de <code>innerHTML</code> entraînera probablement le rejet de votre code. Par exemple, si vous utilisez <code>innerHTML</code> dans une extension de navigateur et soumettez l'extension à addons.mozilla.org, elle ne passera pas le processus de révision automatique.</p>
 </div>
 
-<h2 id="Exemple" name="Exemple">Exemple</h2>
+<h2 id="Exemple">Exemple</h2>
 
 <p>Cet exemple utilise <code>innerHTML</code> pour créer un mécanisme pour consigner des messages dans une boîte sur une page Web.</p>
 
@@ -151,7 +151,7 @@ boxElem.addEventListener("mouseleave", logEvent);</code></pre>
 
 <p>Le {{HTMLElement ("div")}} avec la classe <code>"box"</code> est juste un conteneur pour la mise en page, présentant le contenu avec une boîte autour de lui. Le <code>&lt;div&gt;</code> dont la classe est <code>"log"</code> est le conteneur pour le texte du journal lui-même.</p>
 
-<h3 id="Notes" name="Notes">CSS</h3>
+<h3 id="Notes">CSS</h3>
 
 <p>Les styles CSS suivants pour notre exemple de contenu.</p>
 
@@ -175,7 +175,7 @@ boxElem.addEventListener("mouseleave", logEvent);</code></pre>
 
 <p>{{EmbedLiveSample("Exemple", 640, 350)}}</p>
 
-<h2 id="Specification" name="Specification">Spécification</h2>
+<h2 id="Specification">Spécification</h2>
 
 <table class="standard-table">
  <thead>
@@ -194,7 +194,7 @@ boxElem.addEventListener("mouseleave", logEvent);</code></pre>
  </tbody>
 </table>
 
-<h2 id="References" name="References">Voir aussi</h2>
+<h2 id="References">Voir aussi</h2>
 
 <ul>
  <li>{{domxref("Node.textContent")}} and {{domxref("Node.innerText")}}</li>

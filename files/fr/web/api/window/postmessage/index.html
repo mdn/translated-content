@@ -17,7 +17,7 @@ translation_of: Web/API/Window/postMessage
 
 <p>La méthode <code>window.postMessage</code>, quand elle est appelée, provoque l'envoi d'un {{domxref("MessageEvent")}} à la fenêtre ciblée une fois que tout script en attente a terminé son exécution (par exemple, les gestionnaires d'évènements restants si <code>window.postMessage</code> est appelée depuis un gestionnaire d'évènement, des timeouts en attente enregistrées auparavant, etc.) Le {{domxref("MessageEvent")}} est de type <code>message</code>, a une propriété <code>data</code> qui est initialisée à la valeur du premier argument passé à<code> window.postMessage</code>, une propriété <code>origin</code> correspondant à l'origine du document principal de la fenêtre appelant <code>window.postMessage</code> au moment où <code>window.postMessage</code> a été appelée, et une propriété <code>source</code> qui est la fenêtre depuis laquelle <code>window.postMessage</code> est appelée. (les autres propriétés standard d'évènement sont présentes avec leurs valeurs attendues).</p>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
 <pre class="syntaxbox"><em>otherWindow</em>.postMessage(<em>message</em>, <em>targetOrigin</em>, [<em>transfer</em>]);</pre>
 
@@ -32,7 +32,7 @@ translation_of: Web/API/Window/postMessage
  <dd>Séquence d'objets {{domxref("Transferable")}} qui sera transmise avec le message. La possession de ces objets est cédée à la destination et ils ne sont plus utilisables du côté de l'expéditeur.</dd>
 </dl>
 
-<h2 id="The_dispatched_event" name="The_dispatched_event">L'évènement envoyé</h2>
+<h2 id="The_dispatched_event">L'évènement envoyé</h2>
 
 <p><code>otherWindow</code> peut surveiller les messages envoyés en exécutant le JavaScript suivant :</p>
 
@@ -61,7 +61,7 @@ function receiveMessage(event)
 <dl>
 </dl>
 
-<h2 id="Security_concerns" name="Security_concerns">Précautions de sécurité</h2>
+<h2 id="Security_concerns">Précautions de sécurité</h2>
 
 <p><strong>Si vous ne prévoyez pas de recevoir de messages depuis d'autres sites, n'ajoutez pas de gestionnaire d'évènement pour les évènements <code>message</code>.</strong> C'est un moyen sûr d'éviter les problèmes de sécurité.</p>
 
@@ -69,7 +69,7 @@ function receiveMessage(event)
 
 <p><strong>Spécifiez toujours explicitement une origine de destination, jamais <code>*</code>, quand vous utilisez <code>postMessage</code> pour envoyer des données à d'autres fenêtres.</strong> Un site malicieux peut changer l'adresse de la fenêtre à votre insu, et ainsi intercepter les données envoyées à l'aide de <code>postMessage</code>.</p>
 
-<h2 id="Example" name="Example">Exemple</h2>
+<h2 id="Example">Exemple</h2>
 
 <pre class="brush: js">/*
  * Dans les scripts de la fenêtre A, avec A sur &lt;http://example.com:8080&gt;:
@@ -126,7 +126,7 @@ function receiveMessage(event)
 window.addEventListener("message", receiveMessage, false);
 </pre>
 
-<h3 id="Notes" name="Notes">Notes</h3>
+<h3 id="Notes">Notes</h3>
 
 <p>Toute fenêtre peut accéder à cette méthode sur toute autre fenêtre, à tout moment, peu importe l'adresse du document dans la fenêtre, pour y envoyer un message. Par conséquent, tout gestionnaire d'évènement utilisé pour recevoir des messages <strong>doit</strong> d'abord vérifier l'identité de l'expéditeur du message, en utilisant les propriétés <code>origin</code> et si possible <code>source</code>. Cela ne peut pas être minimisé : <strong>ne pas vérifier les propriétés <code>origin</code> et si possible <code>source</code> permet des attaques inter-site.</strong></p>
 

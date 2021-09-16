@@ -11,7 +11,7 @@ original_slug: Web/API/Document_object_model/Utilisation_du_DOM_Level_1_Core_du_
 ---
 <p>Le DOM Level 1 Core du W3C est un modèle objet puissant permettant de modifier l'arbre de contenu de documents. Il est géré dans Mozilla (sur lequel Firefox et Netscape sont basés) et (pour la plus grande partie) dans Internet Explorer 5 pour Windows. Il s'agit d'une base essentielle du scripting sur le Web dans l'avenir.</p>
 
-<h2 id="D.C3.A9finition_d.27un_arbre_de_contenu" name="D.C3.A9finition_d.27un_arbre_de_contenu">Définition d'un arbre de contenu</h2>
+<h2 id="D.C3.A9finition_d.27un_arbre_de_contenu">Définition d'un arbre de contenu</h2>
 
 <p>Beaucoup d'auteurs HTML peuvent penser qu'HTML est quelque chose de plat — un gros amas de texte avec quelques balises au milieu. Cependant, c'est aussi beaucoup plus que ça. Tout document HTML (ou, par ailleurs, tout document SGML ou XML) forme une structure arborescente. Par exemple, le document et la structure arborescente qui suivent sont similaires (bien que non identiques — consultez les notes sur <a href="https://developer.mozilla.org/fr/docs/Gestion_des_espaces_dans_le_DOM">les espaces dans le DOM</a>) :</p>
 
@@ -32,11 +32,11 @@ original_slug: Web/API/Document_object_model/Utilisation_du_DOM_Level_1_Core_du_
 
 <p>Les termes utilisés pour décrire des arbres apparaissent souvent dans le DOM Level 1 Core. Chacune des boîtes dessinées dans l'arbre ci-dessus est un nœud dans l'arbre. La ligne au dessus d'un nœud représente une relation parent-enfant : le nœud supérieur est le parent, et le nœud inférieur est l'enfant. Deux enfants du même parent sont par conséquent des frères du même niveau. De même, on peut se référer à des ancêtres et des descendants. (Parler de cousins devient un peu compliqué par contre.)</p>
 
-<h2 id="Ce_que_permet_le_DOM_Level_1_Core" name="Ce_que_permet_le_DOM_Level_1_Core">Ce que permet le DOM Level 1 Core</h2>
+<h2 id="Ce_que_permet_le_DOM_Level_1_Core">Ce que permet le DOM Level 1 Core</h2>
 
 <p>Le DOM Level 1 permet de modifier l'arbre du contenu<em>selon vos désirs</em>. Il est suffisamment puissant pour construire n'importe quel document HTML depuis rien. Il permet aux auteurs de modifier quoi que ce soit dans le document, depuis un script, à n'importe quel moment. La manière la plus simple pour les auteurs de pages Web de modifier le DOM dynamiquement est d'utiliser JavaScript. En JavaScript, le document est accessible de la même manière qu'il l'était dans les navigateurs plus anciens : depuis la propriété <code>document</code> de l'objet global. Cet objet <code>document</code> implémente l'<a class="external" href="http://xmlfr.org/w3c/TR/REC-DOM-Level-1/level-one-core.html#i-Document">interface Document</a> de la spécification DOM Level 1 du W3C.</p>
 
-<h2 id="Un_exemple_simple" name="Un_exemple_simple">Un exemple simple</h2>
+<h2 id="Un_exemple_simple">Un exemple simple</h2>
 
 <p>Supposons que l'auteur désire prendre le document présenté plus haut et changer le contenu du titre, ainsi qu'écrire deux paragraphes plutôt qu'un seul. Le script suivant le permettrait :</p>
 
@@ -77,7 +77,7 @@ original_slug: Web/API/Document_object_model/Utilisation_du_DOM_Level_1_Core_du_
 
 <p>Vous pouvez voir ce script dans <a class="external" href="http://www.mozilla.org/docs/dom/technote/intro/example.html">un exemple complet</a>.</p>
 
-<h3 id="Pour_en_savoir_plus" name="Pour_en_savoir_plus">Pour en apprendre plus</h3>
+<h3 id="Pour_en_savoir_plus">Pour en apprendre plus</h3>
 
 <p>Maintenant que vous êtes familiarisé avec les concepts basiques du DOM, il existe un document expliquant <a href="https://developer.mozilla.org/fr/docs/Explorer_un_tableau_HTML_avec_des_interfaces_DOM_et_JavaScript">les méthodes fondamentales de DOM Level 1</a>. C'est la suite de ce document.</p>
 

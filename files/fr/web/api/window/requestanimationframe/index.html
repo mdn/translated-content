@@ -17,14 +17,14 @@ translation_of: Web/API/window/requestAnimationFrame
 
 <p>Le callback possède un seul argument, un {{domxref("DOMHighResTimeStamp")}}, qui est le temps, en millisecondes avec une précision minimum de 10 µs, durant lequel l'exécution du rafraîchissement est prévu.</p>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
 <pre class="brush: js"><em>requestID</em> = window.requestAnimationFrame(<em>callback</em>);       // Firefox 23 / IE 10 / Chrome / Safari 7 (incl. iOS)
 <em>requestID</em> = window.mozRequestAnimationFrame(<em>callback</em>);    // Firefox &lt; 23
 <em>requestID</em> = window.webkitRequestAnimationFrame(callback); // Anciennes versions de Safari / Chrome
 </pre>
 
-<h3 id="Parameters" name="Parameters">Paramètres</h3>
+<h3 id="Parameters">Paramètres</h3>
 
 <dl>
  <dt><code>callback</code></dt>
@@ -35,7 +35,7 @@ translation_of: Web/API/window/requestAnimationFrame
 
 <p><code>requestID</code> est un entier <code>long</code> unique identifiant l'élément dans la liste des callbacks. C'est une valeur différente de zéro, mais il est prudent de ne pas faire de suppositions sur cette valeur. En passant cette valeur en paramètre de la méthode {{domxref("window.cancelAnimationFrame()")}},  vous annulez l'appel du callback.</p>
 
-<h2 id="Notes" name="Notes">Exemple</h2>
+<h2 id="Notes">Exemple</h2>
 
 <pre class="brush: js">window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame ||
                               window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
@@ -58,13 +58,13 @@ function step(timestamp) {
 requestAnimationFrame(step);
 </pre>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilités</h2>
+<h2 id="Browser_compatibility">Compatibilités</h2>
 
 <div>
 <p>{{Compat("api.Window.requestAnimationFrame")}}</p>
 </div>
 
-<h3 id="Specification" name="Specification">Notes pour Gecko</h3>
+<h3 id="Specification">Notes pour Gecko</h3>
 
 <p>[1] Avant Gecko 11.0 {{geckoRelease("11.0")}}, <code>mozRequestAnimationFrame()</code> pouvait être appelée sans paramètres d'entrée. Cela n'est plus supporté et n'est pas susceptible d'être standardisé.</p>
 
@@ -74,7 +74,7 @@ requestAnimationFrame(step);
 
 <p>La syntaxe correcte, dans Chrome, pour annuler l'exécution est<code> window.cancelAnimationFrame()</code>. Dans les anciennes versions, <code>window.webkitCancelAnimationFrame()</code> &amp; <code>window.webkitCancelRequestAnimationFrame() sont obsolètes</code> mais sont toujours supportées pour le moment.</p>
 
-<h2 id="Specification" name="Specification">Specification</h2>
+<h2 id="Specification">Specification</h2>
 
 <p>{{spec("http://www.w3.org/TR/animation-timing/#requestAnimationFrame", "Timing control for script-based animations: requestAnimationFrame", "WD")}}</p>
 

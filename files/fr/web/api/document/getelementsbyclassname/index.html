@@ -12,7 +12,7 @@ translation_of: Web/API/Document/getElementsByClassName
 
 <p>Renvoie un objet de type tableau de tous les éléments enfants qui ont tous les noms de classe donnés. Lorsqu'il est appelé sur l'objet document, le document complet est recherché, y compris le nœud racine. Vous pouvez également appeler {{domxref ("Element.getElementsByClassName", "getElementsByClassName ()")}} sur n'importe quel élément; il retournera uniquement les éléments qui sont les descendants de l'élément racine spécifié avec les noms de classes donnés.</p>
 
-<h2 id="Syntaxe" name="Syntaxe">Syntaxe</h2>
+<h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="syntaxbox"><var>var elements</var> = document.getElementsByClassName(<em>names</em>); // or:
 <var>var elements</var> = rootElement.getElementsByClassName(<em>names</em>);</pre>
@@ -23,7 +23,7 @@ translation_of: Web/API/Document/getElementsByClassName
  <li>getElementsByClassName peut être appelé sur n'importe quel élément, pas seulement sur le document. L'élément sur lequel il est appelé sera utilisé comme racine de la recherche.</li>
 </ul>
 
-<h2 id="Exemples" name="Exemples">Exemples</h2>
+<h2 id="Exemples">Exemples</h2>
 
 <p>Trouve tous les éléments ayant la classe « test » :</p>
 
@@ -49,7 +49,7 @@ var testDivs = Array.prototype.filter.call(testElements, function(testElement){
 
 <p>XXX writeme == Notes == Une méthode semblable existe pour &lt;code&gt;Element&lt;/code&gt;</p>
 
-<h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Obtenir la classe  des éléments test</h2>
+<h2 id="Sp.C3.A9cification">Obtenir la classe  des éléments test</h2>
 
 <p>C'est la méthode d'opération la plus couramment utilisée.</p>
 
@@ -85,7 +85,7 @@ var testDivs = Array.prototype.filter.call(testElements, function(testElement){
 
 
 
-<h2 id="Specification" name="Specification">Spécification</h2>
+<h2 id="Specification">Spécification</h2>
 
 <ul>
  <li><a href="https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-document-getelementsbyclassname" title="https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-document-getelementsbyclassname">W3C: getElementsByClassName</a></li>

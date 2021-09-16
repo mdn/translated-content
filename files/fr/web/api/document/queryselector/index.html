@@ -20,7 +20,7 @@ translation_of: Web/API/Document/querySelector
 <p><strong>Note :</strong> La correspondance est effectuée en utilisant le parcours pré-ordonné profondeur-d'abord des nœuds du document, en partant du premier élément dans le balisage du document et en itérant à travers les nœuds en séquence, par ordre du compte de nœuds enfants.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
 <pre class="brush: js">element = document.querySelector(sélecteurs);
 </pre>
@@ -49,7 +49,7 @@ translation_of: Web/API/Document/querySelector
  <dd>La syntaxe des sélecteurs spécifiés est invalide.</dd>
 </dl>
 
-<h2 id="Notes" name="Notes">Notes d'utilisation</h2>
+<h2 id="Notes">Notes d'utilisation</h2>
 
 <p>Si le sélecteur correspond à un ID et que cet ID est utilisé de façon erronée plusieurs fois dans le document, le premier élément en correspondance est retourné.</p>
 
@@ -75,7 +75,7 @@ translation_of: Web/API/Document/querySelector
 &lt;/script&gt;
 </pre>
 
-<h2 id="Exemple" name="Exemple">Exemples</h2>
+<h2 id="Exemple">Exemples</h2>
 
 <h3 id="Trouver_le_premier_élément_correspondant_à_une_classe">Trouver le premier élément correspondant à une classe</h3>
 
@@ -83,13 +83,13 @@ translation_of: Web/API/Document/querySelector
 
 <pre class="brush: js">var el = document.querySelector(".maclasse");</pre>
 
-<h3 id="Notes" name="Notes">Un sélecteur plus complexe</h3>
+<h3 id="Notes">Un sélecteur plus complexe</h3>
 
 <p>Les <em>sélecteurs</em> peuvent également être réellement puissants comme le montre l'exemple suivant. Ici, le premier élément <code>&lt;input name="identifiant"/&gt;</code> dans un <code>&lt;div class="panneau-utilisateur principal"&gt;</code> dans le document est retourné :</p>
 
 <pre class="brush: js line-numbers  language-js"><code class="language-js">var el = document.querySelector("div.panneau-utilisateur.principal input[name='</code><code>identifiant</code><code class="language-js">']");</code></pre>
 
-<h2 id="Browser_Compatibility" name="Browser_Compatibility">Spécifications</h2>
+<h2 id="Browser_Compatibility">Spécifications</h2>
 
 <table class="standard-table">
  <tbody>

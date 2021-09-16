@@ -19,7 +19,7 @@ original_slug: Web/API/API_IndexedDB/Using_IndexedDB
 
 <p>Pour la documentation de référence sur l'API d'IndexedDB, voyez l'article <a href="/fr/docs/Web/API/Indexeddb_API" title="IndexedDB">IndexedDB</a> et ses sous-parties, qui détaille les types d'objets utilisés par IndexedDB, ainsi que les méthodes sur l'API asynchrone (l'API synchrone a été retirée de la spécification).</p>
 
-<h2 id="pattern" name="pattern">Modèle de base</h2>
+<h2 id="pattern">Modèle de base</h2>
 
 <p>Le modèle de base qu'IndexedDB utilise est le suivant :</p>
 
@@ -37,7 +37,7 @@ original_slug: Web/API/API_IndexedDB/Using_IndexedDB
 
 <p>Maintenant que nous avons ces grands concepts en poche, nous pouvons voir des choses plus concrètes.</p>
 
-<h2 id="open" name="open">Créer et structurer l'objet de stockage</h2>
+<h2 id="open">Créer et structurer l'objet de stockage</h2>
 
 <p>Étant donné que la spécification évolue encore, les implémentations actuelles de IndexedDB se cachent sous les préfixes du navigateur. Les fournisseurs de navigateurs peuvent avoir des implémentations différentes de l'API IndexedDB standard jusqu'à ce que la spécification se soit solidifiée. Mais une fois qu'un consensus est atteint sur la norme, les fournisseurs l'implémentent sans les balises de préfixe. Actuellement, certaines implémentations ont supprimé le préfixe : Internet Explorer 10, Firefox 16, Chrome 24. Lorsqu'ils utilisent un préfixe, les navigateurs basés sur Gecko utilisent le préfixe  <code>moz</code>, tandis que les navigateurs WebKit utilisent le préfixe  <code>webkit</code>.</p>
 
@@ -632,7 +632,7 @@ function useDatabase(db) {
 <p><strong>Note </strong>: Cette fonctionnalité est couramment cachée derrière une marque (flag) — pour l'activer et l'expérimenter, aller à <a>about:config</a> et activez <code>dom.indexedDB.experimental</code>.</p>
 </div>
 
-<h2 id="Full_IndexedDB_example" name="Full_IndexedDB_example">Exemple complet d'IndexedDB</h2>
+<h2 id="Full_IndexedDB_example">Exemple complet d'IndexedDB</h2>
 
 <h3 id="HTML_Content">HTML Content</h3>
 

@@ -23,7 +23,7 @@ translation_of: Web/API/KeyboardEvent/charCode
 <p>Utilisez plutôt {{domxref("KeyboardEvent.key")}}.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
 <pre class="syntaxbox"><em>var value</em> = <em>event</em>.charCode;
 </pre>
@@ -32,7 +32,7 @@ translation_of: Web/API/KeyboardEvent/charCode
  <li><em><code>value</code></em> est la valeur Unicode du caractère associé à la touche pressée.</li>
 </ul>
 
-<h2 id="Example" name="Example">Exemple</h2>
+<h2 id="Example">Exemple</h2>
 
 <pre class="brush: js">&lt;html&gt;
   &lt;head&gt;
@@ -58,7 +58,7 @@ translation_of: Web/API/KeyboardEvent/charCode
 &lt;/html&gt;
 </pre>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <p>Après un évènement {{ domxref("element.onkeypress", "keypress") }}, la valeur Unicode de la touche pressée est stockée dans l'une ou l'autre des propriétés <code>{{ domxref("event.keyCode", "keyCode") }}</code> et <code>charCode</code>, jamais les deux à la fois. Si la touche pressée génère un caractère (ex. 'a'), <code>charCode</code> prend la valeur du code de ce caractère, en respectant la casse. (i.e. <code>charCode</code> tient compte d'une touche Maj. enfoncée). Sinon, le code est stocké dans <code>keyCode</code>.</p>
 
@@ -72,7 +72,7 @@ translation_of: Web/API/KeyboardEvent/charCode
 
 <p>Pour une liste de valeurs de <code>charCode</code> associées à leurs touches, lancez l'exemple dans <a href="/en/Gecko_DOM_Reference/Examples#Example_7:_Displaying_Event_Object_Constants" title="en/Gecko_DOM_Reference/Examples#Example_7:_Displaying_Event_Object_Constants">Gecko DOM Reference:Examples #Example 7: Displaying Event Object Constants</a> (en anglais) et regardez le tableau HTML résultant.</p>
 
-<h2 id="Specifications" name="Specifications">Spécifications</h2>
+<h2 id="Specifications">Spécifications</h2>
 
 <table class="standard-table">
  <thead>

@@ -15,7 +15,7 @@ original_slug: Web/Guide/DOM/Using_full_screen_mode
 
 <div class="note"><strong>Note :</strong> Pour le moment, tous les navigateurs n'utilisent pas la version non préfixée de cet API. Consultez le tableau récapitulant les <a href="#Préfixes">préfixes</a> et les différences de noms entre eux (vous pouvez également utiliser  <a href="https://github.com/rafrex/fscreen">Fscreen</a>  pour l'accès du fournisseur à l'API).</div>
 
-<h2 id="Specification" name="Specification">Activation du mode plein écran</h2>
+<h2 id="Specification">Activation du mode plein écran</h2>
 
 <p>En partant d'un élément que vous aimeriez afficher en plein écran ({{ HTMLElement("video") }}, par exemple), vous pouvez le passer en mode plein écran simplement en appelant sa méthode {{ domxref("Element.requestFullscreen()") }} .</p>
 
@@ -73,13 +73,13 @@ if (elem.requestFullscreen) {
  <dd>L'attribut <code>fullscreenEnabled</code> vous indique si le document est actuellement dans un état qui permettrait d'activer le mode plein écran ou non.</dd>
 </dl>
 
-<h2 id="Things_your_users_want_to_know" name="Things_your_users_want_to_know">Choses que vos utilisateurs doivent savoir</h2>
+<h2 id="Things_your_users_want_to_know">Choses que vos utilisateurs doivent savoir</h2>
 
 <p>Vous voulez faire savoir à vos utilisateurs qu'il peuvent utiliser la touche <kbd>ECHAP</kbd>  (ou  <kbd>F11</kbd>) pour sortir du mode plein écran.</p>
 
 <p>En même temps, naviguer sur une autre page, changer d'onglet, ou changer d'application (en utilisant, par exemple, <kbd>Alt</kbd>-<kbd>Tab</kbd> ) pendant le mode plein écran, implique la sortie du mode plein écran de toute façon.</p>
 
-<h2 id="Specification" name="Specification">Exemple</h2>
+<h2 id="Specification">Exemple</h2>
 
 <p>Dans cet exemple, une vidéo est affichée dans une page web. Taper sur l'une des touches  <kbd>Retour</kbd>  ou <kbd>Entrée</kbd>, permet à l'utilisateur de passer d'une présentation dans une fenêtre à une présentation en mode plein écran de la vidéo.</p>
 
@@ -114,7 +114,7 @@ if (elem.requestFullscreen) {
 
 <p>Si le mode plein écran est déjà activé (<code>fullscreenElement</code> est non nul), nous appelons  {{ domxref("document.exitFullscreen()") }}.</p>
 
-<h2 id="Préfixes_2"><a name="Préfixes">Préfixes</a></h2>
+<h2 id="Préfixes_2"><a>Préfixes</a></h2>
 
 <p>Pour le moment, tous les navigateurs n'ont pas implémenté la version sans préfixe de l'API (pour l'accès du fournisseur de l'API, vous pouvez utiliser <a href="https://github.com/rafrex/fscreen">Fscreen</a>) . Voici le tableau résumant les préfixes et les différences de noms entre eux :</p>
 
@@ -187,7 +187,7 @@ if (elem.requestFullscreen) {
  </thead>
 </table>
 
-<h2 id="Specification" name="Specification">Spécifications</h2>
+<h2 id="Specification">Spécifications</h2>
 
 <table class="standard-table">
  <thead>

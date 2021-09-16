@@ -10,17 +10,17 @@ translation_of: Web/API/CSSRuleList
 
 <p>A <code>CSSRuleList</code> est un objet de type tableau contenant une collection ordonnée d'objects <code><a href="/en/DOM/cssRule" title="en/DOM/cssRule">CSSRule</a></code>.</p>
 
-<h2 id="Syntax" name="Syntax">Description</h2>
+<h2 id="Syntax">Description</h2>
 
 <p>Chaque règle <code>CSSRule</code> peut être atteinte via <code><var>rules</var>.item(<var>index</var>),</code> ou simplement <code><var>rules</var>[<var>index</var>]</code>, où <code><var>rules</var></code> est un objet implementant l'interface  <code>CSSRuleList</code>, et <code><var>index</var></code> est l'index de la règle (commence à zéro comme les tableaux), dans l'ordre dans lequel elle apparait dans la feuille de style CSS. Le nombre d'objets est <code><var>rules</var>.length</code>.</p>
 
-<h2 id="Example" name="Example">Exemple</h2>
+<h2 id="Example">Exemple</h2>
 
 <pre class="brush: js">// récuperer la première règle de la première feuille de style
 var firstRule = document.styleSheets[0].cssRules[0];
 </pre>
 
-<h2 id="Notes" name="Notes">Voir aussi</h2>
+<h2 id="Notes">Voir aussi</h2>
 
 <ul>
  <li><code><a href="/en/DOM/cssRule" title="en/DOM/CSSRule">CSSRule</a></code></li>
@@ -37,7 +37,7 @@ var firstRule = document.styleSheets[0].cssRules[0];
  <li>{{ domxref("CSSMozDocumentRule") }} property {{ domxref("CSSMozDocumentRule/cssRules", "cssRules") }}</li>
 </ul>
 
-<h2 id="Specification" name="Specification">Spécification</h2>
+<h2 id="Specification">Spécification</h2>
 
 <ul>
  <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Style/css.html#CSS-CSSRuleList">DOM Level 2 Style: <code>CSSRuleList</code> interface</a></li>

@@ -18,7 +18,7 @@ translation_of: Web/API/Document/adoptNode
 
 <p><strong>Pris en charge depuis Gecko 1.9 (Firefox 3)</strong></p>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
 <pre><var>node</var> = <em>document</em>.adoptNode(<var>externalNode</var>);
 </pre>
@@ -30,7 +30,7 @@ translation_of: Web/API/Document/adoptNode
  <dd>est le noeud à adopter existant dans un autre document.</dd>
 </dl>
 
-<h2 id="Example" name="Example">Exemple</h2>
+<h2 id="Example">Exemple</h2>
 
 <pre class="brush: js">var iframe = document.getElementById('my-iframe');
 var iframeImages = iframe.contentDocument.getElementsByTagName('img');
@@ -42,7 +42,7 @@ for (var i = 0; i &lt; iframeImages.length; i++) {
 }
 </pre>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <p>En général l'appel de <code>adoptNode</code> peut échouer en raison du nœud source provenant d'une implémentation différente, mais cela ne devrait pas poser de problème avec les implémentations du navigateur.</p>
 
@@ -55,7 +55,7 @@ for (var i = 0; i &lt; iframeImages.length; i++) {
     <code>WRONG_DOCUMENT_ERR</code> est déclenchée (<code>NS_ERROR_DOM_WRONG_DOCUMENT_ERR</code>). implémentation dans le <a class="external" href="https://bugzilla.mozilla.org/show_bug.cgi?id=47903" rel="noopener" title="FIXED: WRONG_DOCUMENT_ERR not being thrown">bug 47903</a>.</p><p></p>
 
 
-<h2 id="Specification" name="Specification">Spécification</h2>
+<h2 id="Specification">Spécification</h2>
 
 <ul>
  <li><a href="http://www.w3.org/TR/DOM-Level-3-Core/core.html#Document3-adoptNode">DOM Level 3 Core: Document.adoptNode</a></li>

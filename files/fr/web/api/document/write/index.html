@@ -17,7 +17,7 @@ translation_of: Web/API/Document/write
 <p><strong>Note :</strong> comme <code>document.write</code> écrit dans le flux de documents, appeler <code>document.write</code> sur un document fermé (chargé) appelle automatiquement <code>document.open</code>, ce qui efface le document.</p>
 </div>
 
-<h2 id="Syntaxe" name="Syntaxe">Syntaxe</h2>
+<h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="eval">document.write(<em>balisage</em>);
 </pre>
@@ -29,7 +29,7 @@ translation_of: Web/API/Document/write
  <dd>est une chaîne de caractères contenant le texte à écrire dans le document.</dd>
 </dl>
 
-<h3 id="Exemple" name="Exemple">Exemple</h3>
+<h3 id="Exemple">Exemple</h3>
 
 <pre>&lt;html&gt;
 
@@ -55,7 +55,7 @@ document.close();
 &lt;/html&gt;
 </pre>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <p>Écrire dans un document qui a déjà été chargé sans appeler <a href="https://developer.mozilla.org/fr/docs/Web/API/Document/open">document.open()</a> provoquera un appel automatique à <code>document.open</code>. Une fois l'écriture terminée, il est recommandé d'appeler <a href="https://developer.mozilla.org/fr/docs/Web/API/Document/close">document.close()</a> pour indiquer au navigateur qu'il peut terminer de charger la page. Le texte fourni est analysé et intégré à la structure du modèle de document. Dans l'exemple ci-dessus, l'élément <code>h1</code> devient un nœud dans le document.</p>
 
@@ -81,7 +81,7 @@ document.close();
 <p><strong>Note :</strong> À partir de la version 55, Chrome n'exécute pas les éléments <code>&lt;script&gt;</code> injectés via <code>document.write()</code> en cas d'échec de cache HTTP pour les utilisateurs sur une connexion 2G.</p>
 </div>
 
-<h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Spécification</h2>
+<h2 id="Sp.C3.A9cification">Spécification</h2>
 
 <ul>
  <li><a class="external external-icon" href="http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-75233634">DOM Level 2 HTML: <code>write()</code> Method</a></li>

@@ -10,12 +10,12 @@ translation_of: Web/API/Document/head
 
 <p>Retourne l'élément {{HTMLElement("head")}} du document courant. S'il y a plus d'un élément &lt;head&gt;, le premier est retourné.</p>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
 <pre class="syntaxbox"><em>var objRef</em> = document.head;
 </pre>
 
-<h2 id="Example" name="Example">Exemple</h2>
+<h2 id="Example">Exemple</h2>
 
 <pre class="brush: js">// en HTML: &lt;head id="my-document-head"&gt;
 var aHead = document.head;
@@ -25,7 +25,7 @@ alert(aHead.id); // "my-document-head";
 alert( document.head === document.querySelector("head") ); // true
 </pre>
 
-<h2 id="Example" name="Example">Notes</h2>
+<h2 id="Example">Notes</h2>
 
 <p><code>document.head</code> est en lecture seule. Essayer d'assigner une valeur à cettre propriété échouera en silence ou lancera une <code>TypeError</code> si le mode strict d'ECMAScript est activé dans un navigateur Gecko.</p>
 

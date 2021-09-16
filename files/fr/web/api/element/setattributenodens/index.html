@@ -12,7 +12,7 @@ translation_of: Web/API/Element/setAttributeNodeNS
 
 <p><code>setAttributeNodeNS</code> ajoute un nouveau nœud attribut avec l'espace de noms et le nom spécifiés.</p>
 
-<h2 id="Syntaxe" name="Syntaxe">Syntaxe</h2>
+<h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="eval"><em>replacedAttr</em> = element.setAttributeNodeNS(<em>attributeNode</em>)
 </pre>
@@ -24,7 +24,7 @@ translation_of: Web/API/Element/setAttributeNodeNS
  <dd>Un nœud <code>Attr</code>.</dd>
 </dl>
 
-<h2 id="Exemple" name="Exemple">Exemple</h2>
+<h2 id="Exemple">Exemple</h2>
 
 <pre>// &lt;div id="one" special-align="utterleft"&gt;one&lt;/div&gt;
 // &lt;div id="two"&gt;two&lt;/div&gt;
@@ -38,7 +38,7 @@ d2.setAttributeNodeNS(a);
 alert(d2.attributes[1].value) // renvoie : "utterleft"
 </pre>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <p>Si l'attribut spécifié existe déjà sur l'élément, cet attribut est remplacé par le nouveau et l'ancien est renvoyé.</p>
 
@@ -46,7 +46,7 @@ alert(d2.attributes[1].value) // renvoie : "utterleft"
 
 <p>{{ DOMAttributeMethods() }}</p>
 
-<h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Spécification</h2>
+<h2 id="Sp.C3.A9cification">Spécification</h2>
 
 <ul>
  <li><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-ElSetAtNodeNS">DOM Level 2 Core: setAttributeNodeNS (en)</a> <small>— <a class="external" href="http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-ElSetAtNodeNS">traduction en français</a> (non normative)</small></li>

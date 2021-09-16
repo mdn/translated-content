@@ -12,20 +12,20 @@ translation_of: Web/API/Navigator/doNotTrack
 
 <p>Renvoi le paramètre utilisateur de <strong>do-not-track</strong>. Cette valeur est "1" si l´utilisateur a demandé de ne pas être suivi par les sites web, le contenu ou la publicité.</p>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
 <pre class="eval"><em>dnt</em> = <em>navigator</em>.doNotTrack;
 </pre>
 
 <p>La valeur reflète celle de l'en-tête "do-not-track" <em>(ne pas suivre)</em>, c'est-à-dire {"1", "0", "unspecified" }. Note : Avant Gecko 32, Gecko a utilisé les valeurs { "yes", "no", "unspecified"} (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=887703">bug 887703</a>).</p>
 
-<h2 id="Example" name="Example">Exemple</h2>
+<h2 id="Example">Exemple</h2>
 
 <pre class="eval">dump(window.navigator.doNotTrack);
 //  écrit "1" si DNT est activé; "0" si l'utilisateur a opté pour le suivi; sinon c'est "unspecified" <em>(non spécifié)</em>
 </pre>
 
-<h2 id="Specification" name="Specification">Spécifications</h2>
+<h2 id="Specification">Spécifications</h2>
 
 <table class="standard-table">
  <thead>
