@@ -36,7 +36,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy-Report-Only
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox notranslate">Content-Security-Policy-Report-Only: &lt;policy-directive&gt;; &lt;policy-directive&gt;
+<pre class="syntaxbox">Content-Security-Policy-Report-Only: &lt;policy-directive&gt;; &lt;policy-directive&gt;
 </pre>
 
 <h2 id="Directives">Directives</h2>
@@ -49,11 +49,11 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy-Report-Only
 
 <p>Cet en-tête rapporte les violations qui seront constatées. Vous pouvez l'utiliser pour améliorer vos CSP. Vous pouvez observer comment votre site fonctionne en consultant les rapports ou <a href="https://secure.wphackedhelp.com/blog/wordpress-malware-redirect-hack-cleanup/">redirections malicieuses</a>, puis choisir les règles voulues pour bloquer le contenu avec l'en-tête {{HTTPHeader("Content-Security-Policy")}}.</p>
 
-<pre class="notranslate">Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/</pre>
+<pre>Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/</pre>
 
 <p>Si vous voulez toujours recevoir des rapports, mais aussi imposer des règles, utilisez l'en-tête {{HTTPHeader("Content-Security-Policy")}} avec la directive {{CSP("report-uri")}}.</p>
 
-<pre class="notranslate">Content-Security-Policy: default-src https:; report-uri /csp-violation-report-endpoint/</pre>
+<pre>Content-Security-Policy: default-src https:; report-uri /csp-violation-report-endpoint/</pre>
 
 <h2 id="Syntaxe_dun_rapport_de_violation">Syntaxe d'un rapport de violation</h2>
 
@@ -85,12 +85,12 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy-Report-Only
 <div>Considérons une page à l'adresse <code>http://example.com/signup.html</code>. Elle utilise la règle CSP suivante, interdisant tout excepté les feuilles de styles chargées depuis <code>cdn.example.com</code>.</div>
 
 <div>
-<pre class="notranslate">Content-Security-Policy-Report-Only: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports</pre>
+<pre>Content-Security-Policy-Report-Only: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports</pre>
 </div>
 
 <div>La page HTML correspondant à l'adresse <code>signup.html</code> ressemble à :</div>
 
-<pre class="brush: html notranslate">&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;title&gt;Sign Up&lt;/title&gt;
@@ -105,7 +105,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy-Report-Only
 
 <div>Les feuilles de styles ne sont acceptées que si elles sont chargées depuis <code>cdn.example.com</code>, et pourtant le site tente d'en charger une depuis sa propre origine (<code>http://example.com</code>). Un navigateur capable d'imposer des règles CSP enverra le rapport de violation suivant sous la forme d'une requête POST à l'adresse <code>http://example.com/_/csp-reports</code> quand la page sera visitée :</div>
 
-<pre class="brush: js notranslate">{
+<pre class="brush: js">{
   "csp-report": {
     "document-uri": "http://example.com/signup.html",
     "referrer": "",

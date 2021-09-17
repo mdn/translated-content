@@ -16,10 +16,10 @@ translation_of: Web/HTTP/Headers/Feature-Policy
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><span class="seoSummary">L'en-tête HTTP <strong><code>Feature-Policy</code></strong> est un mécanisme permettant de permettre ou d'interdire l'utilisation de fonctionnalités du navigateur dans son propre cadre et dans ceux de tous les éléments {{HTMLElement("iframe")}} que le document contient.</span></p>
+<p>L'en-tête HTTP <strong><code>Feature-Policy</code></strong> est un mécanisme permettant de permettre ou d'interdire l'utilisation de fonctionnalités du navigateur dans son propre cadre et dans ceux de tous les éléments {{HTMLElement("iframe")}} que le document contient.</p>
 
 <div class="note">
-<p>Cet en-tête est toujours au stade expérimental, et est sujet à être modifié à tout moment. Méfiez-vous en si vous souhaitez l'implanter sur vos sites. Il a maintenant été renommé <code>Permissions-Policy</code> dans la spécification, et cet article sera mis à jour pour refléter ce changement.</p>
+<p><strong>Note :</strong> Cet en-tête est toujours au stade expérimental, et est sujet à être modifié à tout moment. Méfiez-vous en si vous souhaitez l'implanter sur vos sites. Il a maintenant été renommé <code>Permissions-Policy</code> dans la spécification, et cet article sera mis à jour pour refléter ce changement.</p>
 </div>
 
 <p>Pour plus d'informations, vour l'article principal sur <a href="/docs/Web/HTTP/Feature_Policy">Feature Policy</a>.</p>
@@ -39,7 +39,7 @@ translation_of: Web/HTTP/Headers/Feature-Policy
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox notranslate">Feature-Policy: &lt;directive&gt; &lt;allowlist&gt;</pre>
+<pre class="syntaxbox">Feature-Policy: &lt;directive&gt; &lt;allowlist&gt;</pre>
 
 <dl>
  <dt><code>&lt;directive&gt;</code></dt>
@@ -126,7 +126,7 @@ translation_of: Web/HTTP/Headers/Feature-Policy
 
 <p>SecureCorp Inc. souhaite désactiver les API du microphone et de géolocalisation dans son application. Elle peut le faire en délivrant l'en-tête de réponse HTTP suivant pour définir une réglementation des fonctionnalités :</p>
 
-<pre class="notranslate">Feature-Policy: microphone 'none'; geolocation 'none'</pre>
+<pre>Feature-Policy: microphone 'none'; geolocation 'none'</pre>
 
 <p>En spécifiant la valeur <code>'none'</code> pour liste des origines, les fonctionnalités auquel la valeur est appliquée seront désactivées pour tous les contextes de navigation (incluant tout les cadres <code>&lt;iframe&gt;</code>), quelle que soit leur origine.</p>
 

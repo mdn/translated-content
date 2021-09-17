@@ -39,7 +39,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/media-src
 
 <p>Une ou plusieurs sources peuvent être autorisées pour cette directive :</p>
 
-<pre class="syntaxbox notranslate">Content-Security-Policy: media-src &lt;source&gt;;
+<pre class="syntaxbox">Content-Security-Policy: media-src &lt;source&gt;;
 Content-Security-Policy: media-src &lt;source&gt; &lt;source&gt;;
 </pre>
 
@@ -53,11 +53,11 @@ Content-Security-Policy: media-src &lt;source&gt; &lt;source&gt;;
 
 <p>Soit cet en-tête CSP :</p>
 
-<pre class="brush: bash notranslate">Content-Security-Policy: media-src https://example.com/</pre>
+<pre class="brush: bash">Content-Security-Policy: media-src https://example.com/</pre>
 
 <p>Ces éléments {{HTMLElement("audio")}}, {{HTMLElement("video")}} et {{HTMLElement("track")}} seront bloqués et ne se chargeront pas :</p>
 
-<pre class="brush: html notranslate">&lt;audio src="https://not-example.com/audio"&gt;&lt;/audio&gt;
+<pre class="brush: html">&lt;audio src="https://not-example.com/audio"&gt;&lt;/audio&gt;
 
 &lt;video src="https://not-example.com/video"&gt;
   &lt;track kind="subtitles" src="https://not-example.com/subtitles"&gt;

@@ -22,7 +22,7 @@ translation_of: Web/HTTP/Headers/Access-Control-Allow-Origin
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox notranslate">Access-Control-Allow-Origin: *
+<pre class="syntaxbox">Access-Control-Allow-Origin: *
 Access-Control-Allow-Origin: &lt;origin&gt;
 Access-Control-Allow-Origin: null
 </pre>
@@ -40,17 +40,17 @@ Access-Control-Allow-Origin: null
 
 <p>Pour permettre à n'importe quelle ressource d'accéder à vos ressources, vous pouvez indiquer :</p>
 
-<pre class="notranslate">Access-Control-Allow-Origin: *</pre>
+<pre>Access-Control-Allow-Origin: *</pre>
 
 <p>Pour permettre <code>https://developer.mozilla.org</code> d'accéder à vos ressources, vous pouvez indiquer :</p>
 
-<pre class="notranslate">Access-Control-Allow-Origin: https://developer.mozilla.org</pre>
+<pre>Access-Control-Allow-Origin: https://developer.mozilla.org</pre>
 
 <h3 id="CORS_et_le_cache">CORS et le cache</h3>
 
 <p>Si le serveur spécifie un hôte d'origine plutôt que "*", il doit également inclure "<em>Origin</em>" dans l'en-tête de réponse "<em><a href="/fr/docs/Web/HTTP/Headers/Vary">Vary</a></em>" pour indiquer aux clients que les réponses du serveur seront différentes en fonction de la valeur de la demande d'origine entête.</p>
 
-<pre class="notranslate">Access-Control-Allow-Origin: https://developer.mozilla.org
+<pre>Access-Control-Allow-Origin: https://developer.mozilla.org
 Vary: Origin</pre>
 
 <h2 id="Caractéristiques">Caractéristiques</h2>
