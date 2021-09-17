@@ -7,31 +7,20 @@ tags:
   - HTTP
 translation_of: Web/HTTP/Status/425
 ---
-<p>{{SeeCompatTable}}{{HTTPSidebar}}</p>
+{{SeeCompatTable}}{{HTTPSidebar}}
 
-<p>Le code de réponse d’erreur HyperText Transfer Protocol (HTTP) <code><strong>425 Too Early</strong></code> signifie que le serveur refuse la requête qui a été récemment répétée par exemple de peur d’une attaque DDoS </p>
+Le code de réponse d’erreur HyperText Transfer Protocol (HTTP) **`425 Too Early`** signifie que le serveur refuse la requête qui a été récemment répétée par exemple de peur d’une attaque DDoS
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="syntaxbox">425 Too Early</pre>
+    425 Too Early
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("8470", "425: Early Data", "5.2")}}</td>
-   <td>Using Early Data in HTTP</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                            | Title                    |
+| -------------------------------------------------------- | ------------------------ |
+| {{RFC("8470", "425: Early Data", "5.2")}} | Using Early Data in HTTP |
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+## Browser compatibility
 
-<p>{{Compat("http.status.425")}}</p>
+{{Compat("http.status.425")}}

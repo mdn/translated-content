@@ -8,41 +8,30 @@ tags:
   - Référence(2)
 translation_of: Web/HTTP/Status/416
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Le code de réponse d'erreur HTTP <code><strong>416</strong></code><strong><code> Range Not Satisfiable</code></strong> indique que le serveur ne peut pas servir les plages demandées. L'explication la plus probable est que le document ne contient pas de telles plages, ou que la valeur de l'en-tête {{HTTPHeader("Range")}} n'a aucun sens bien que sa syntaxe soit correcte.</p>
+Le code de réponse d'erreur HTTP **`416`\*\***` Range Not Satisfiable`\*\* indique que le serveur ne peut pas servir les plages demandées. L'explication la plus probable est que le document ne contient pas de telles plages, ou que la valeur de l'en-tête {{HTTPHeader("Range")}} n'a aucun sens bien que sa syntaxe soit correcte.
 
-<p>Le message de réponse  <code>416</code> contient un en-tête {{HTTPHeader("Content-Range")}} qui indique une plage qui n'est pas satisfaite (représentée par <code>'*'</code>) suivie par <code>'/'</code> puis la ressource courante (par exemple <code>Content-Range: */12777</code>).</p>
+Le message de réponse  `416` contient un en-tête {{HTTPHeader("Content-Range")}} qui indique une plage qui n'est pas satisfaite (représentée par `'*'`) suivie par `'/'` puis la ressource courante (par exemple `Content-Range: */12777`).
 
-<p>Lorsqu'ils rencontrent cette erreur, les navigateurs abandonnent généralement l'opération en cours (un téléchargement ne pourra pas être repris par exemple) ou ils redemandent le document dans son intégralité.</p>
+Lorsqu'ils rencontrent cette erreur, les navigateurs abandonnent généralement l'opération en cours (un téléchargement ne pourra pas être repris par exemple) ou ils redemandent le document dans son intégralité.
 
-<h2 id="Statut">Statut</h2>
+## Statut
 
-<pre class="syntaxbox">416 Range Not Satisfiable</pre>
+    416 Range Not Satisfiable
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Titre</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7233", "416 Request Not Satisfiable" , "4.4")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Range Requests</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                            | Titre                                                  |
+| ------------------------------------------------------------------------ | ------------------------------------------------------ |
+| {{RFC("7233", "416 Request Not Satisfiable" , "4.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("http/status", "416")}}</p>
+{{Compat("http/status", "416")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTTPStatus(206)}} <code>Partial Content</code></li>
- <li>{{HTTPHeader("Content-Range")}}</li>
- <li>{{HTTPHeader("Range")}}</li>
-</ul>
+- {{HTTPStatus(206)}} `Partial Content`
+- {{HTTPHeader("Content-Range")}}
+- {{HTTPHeader("Range")}}

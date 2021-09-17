@@ -9,86 +9,80 @@ tags:
 translation_of: Web/HTTP/Methods/DELETE
 original_slug: Web/HTTP/Méthode/DELETE
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>La <strong>méthode HTTP DELETE</strong> supprime la ressource indiquée.</p>
+La **méthode HTTP DELETE** supprime la ressource indiquée.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">La requête a un corps</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">Une réponse de succès a un corps</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Sûre")}}</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Idempotente")}}</th>
-   <td>Oui</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Peut être mise en cache")}}</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">Autorisée dans les  <a href="https://developer.mozilla.org/fr/docs/Web/Guide/HTML/Formulaires">formulaires HTML</a></th>
-   <td>Non</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">La requête a un corps</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">Une réponse de succès a un corps</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Sûre")}}</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Idempotente")}}</th>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Peut être mise en cache")}}</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        Autorisée dans les 
+        <a
+          href="https://developer.mozilla.org/fr/docs/Web/Guide/HTML/Formulaires"
+          >formulaires HTML</a
+        >
+      </th>
+      <td>Non</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">DELETE /file.html HTTP/1.1
-</pre>
+    DELETE /file.html HTTP/1.1
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<h3 id="Requête">Requête</h3>
+### Requête
 
-<pre>DELETE /file.html HTTP/1.1</pre>
+    DELETE /file.html HTTP/1.1
 
-<h3 id="Réponses">Réponses</h3>
+### Réponses
 
-<p>Si une méthode <code>DELETE</code> est appliquée avec succès, il y a plusieurs codes de statut de réponse possibles :</p>
+Si une méthode `DELETE` est appliquée avec succès, il y a plusieurs codes de statut de réponse possibles :
 
-<ul>
- <li>Un code de statut {{HTTPStatus("202")}} (<code>Accepted</code>) si l'action est en passe de réussir mais n'a pas encore été confirmée.</li>
- <li>Un code de statut {{HTTPStatus("204")}} (<code>No Content</code>) si l'action a été confirmée et qu'aucune information supplémentaire n'est à fournir.</li>
- <li>Un code de statut {{HTTPStatus("200")}} (<code>OK</code>) si l'action a été confirmée et que le message de réponse inclut une représentation décrivant le statut.</li>
-</ul>
+- Un code de statut {{HTTPStatus("202")}} (`Accepted`) si l'action est en passe de réussir mais n'a pas encore été confirmée.
+- Un code de statut {{HTTPStatus("204")}} (`No Content`) si l'action a été confirmée et qu'aucune information supplémentaire n'est à fournir.
+- Un code de statut {{HTTPStatus("200")}} (`OK`) si l'action a été confirmée et que le message de réponse inclut une représentation décrivant le statut.
 
-<pre>HTTP/1.1 200 OK
-Date: Wed, 21 Oct 2015 07:28:00 GMT
+<!---->
 
-&lt;html&gt;
-  &lt;body&gt;
-    &lt;h1&gt;File deleted.&lt;/h1&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+    HTTP/1.1 200 OK
+    Date: Wed, 21 Oct 2015 07:28:00 GMT
 
-<h2 id="Spécifications">Spécifications</h2>
+    <html>
+      <body>
+        <h1>File deleted.</h1>
+      </body>
+    </html>
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Titre</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "DELETE", "4.3.5")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+## Spécifications
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+| Spécification                                | Titre                                                         |
+| -------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "DELETE", "4.3.5")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<ul>
- <li>HTTP status: {{HTTPStatus("200")}}, {{HTTPStatus("202")}}, {{HTTPStatus("204")}}</li>
-</ul>
+## Voir aussi
+
+- HTTP status: {{HTTPStatus("200")}}, {{HTTPStatus("202")}}, {{HTTPStatus("204")}}

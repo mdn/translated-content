@@ -8,38 +8,27 @@ tags:
   - Reference
 translation_of: Web/HTTP/Status/412
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Le code de réponse d'erreur HTTP <code><strong>412</strong></code><strong><code> Precondition Failed</code></strong> indique que l'accès à la ressource visée a été refusé. Cela arrive avec les requêtes conditionnelles lorsque les méthodes utilisées ne sont pas  {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}} et que la condition définie par les en-têtes  {{HTTPHeader("If-Unmodified-Since")}} ou {{HTTPHeader("If-None-Match")}} n'est pas respectée. Dans ce cas, la requête, généralement un téléversement ou une modification d'une ressource, ne peut être appliquée et ce code de réponse d'erreur est renvoyé.</p>
+Le code de réponse d'erreur HTTP **`412`\*\***` Precondition Failed`\*\* indique que l'accès à la ressource visée a été refusé. Cela arrive avec les requêtes conditionnelles lorsque les méthodes utilisées ne sont pas  {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}} et que la condition définie par les en-têtes  {{HTTPHeader("If-Unmodified-Since")}} ou {{HTTPHeader("If-None-Match")}} n'est pas respectée. Dans ce cas, la requête, généralement un téléversement ou une modification d'une ressource, ne peut être appliquée et ce code de réponse d'erreur est renvoyé.
 
-<h2 id="Statut">Statut</h2>
+## Statut
 
-<pre class="syntaxbox">412 Precondition Failed</pre>
+    412 Precondition Failed
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Titre</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7232", "412 Precondition Failed" , "4.2")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                        | Titre                                                        |
+| -------------------------------------------------------------------- | ------------------------------------------------------------ |
+| {{RFC("7232", "412 Precondition Failed" , "4.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("http/status", "412")}}</p>
+{{Compat("http/status", "412")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTTPStatus("304")}}</li>
- <li>{{HTTPHeader("If-Unmodified-Since")}}</li>
- <li>{{HTTPHeader("If-None-Match")}}</li>
- <li>{{HTTPStatus("428")}}</li>
-</ul>
+- {{HTTPStatus("304")}}
+- {{HTTPHeader("If-Unmodified-Since")}}
+- {{HTTPHeader("If-None-Match")}}
+- {{HTTPStatus("428")}}

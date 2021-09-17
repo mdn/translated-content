@@ -7,29 +7,18 @@ tags:
   - HTTP
 translation_of: Web/HTTP/Status/507
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Le code de réponse HTTP <code><strong>507 Insufficient Storage</strong></code> peut être donné dans le contexte du protocol <code><strong>Web Distributed Authoring and Versioning</strong></code>(WebDAV) (voir <a href="https://tools.ietf.org/html/rfc4918">RFC 4918</a>).</p>
+Le code de réponse HTTP **`507 Insufficient Storage`** peut être donné dans le contexte du protocol **`Web Distributed Authoring and Versioning`**(WebDAV) (voir [RFC 4918](https://tools.ietf.org/html/rfc4918)).
 
-<p>Il indique que la méthode ne peut pas être traité car le serveur ne peut pas stocker la représentation nécessaire pour accomplir la requête avec succès.</p>
+Il indique que la méthode ne peut pas être traité car le serveur ne peut pas stocker la représentation nécessaire pour accomplir la requête avec succès.
 
-<h2 id="Status">Status</h2>
+## Status
 
-<pre class="syntaxbox">507 Insufficient Storage</pre>
+    507 Insufficient Storage
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("4918", "507 Insufficient Storage" , "11.5")}}</td>
-   <td>Web Distributed Authoring and Versioning</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                        | Title                                    |
+| -------------------------------------------------------------------- | ---------------------------------------- |
+| {{RFC("4918", "507 Insufficient Storage" , "11.5")}} | Web Distributed Authoring and Versioning |

@@ -8,110 +8,97 @@ tags:
   - samesite
 translation_of: Web/HTTP/Headers/Set-Cookie/SameSite
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>L'attribut <strong><code>SameSite</code></strong> de l'en-tête de réponse HTTP {{HTTPHeader("Set-Cookie")}} vous permet de déclarer si vos cookies doivent être restreints au site visité, à des tiers, ou à des sous-domaines du site actuel.</p>
+L'attribut **`SameSite`** de l'en-tête de réponse HTTP {{HTTPHeader("Set-Cookie")}} vous permet de déclarer si vos cookies doivent être restreints au site visité, à des tiers, ou à des sous-domaines du site actuel.
 
-<h2 id="Valeurs">Valeurs</h2>
+## Valeurs
 
-<p>L'attribut <code>SameSite</code> accepte trois valeurs possibles :</p>
+L'attribut `SameSite` accepte trois valeurs possibles :
 
-<h3 id="Lax"><code>Lax</code></h3>
+### `Lax`
 
-<p>Les cookies sont transférables depuis le site actuel vers des sites de niveaux inférieurs et seront envoyés lors de requêtes GET initialisées par des sites tiers. C'est la valeur par défaut des navigateurs les plus récents.</p>
+Les cookies sont transférables depuis le site actuel vers des sites de niveaux inférieurs et seront envoyés lors de requêtes GET initialisées par des sites tiers. C'est la valeur par défaut des navigateurs les plus récents.
 
-<h3 id="Strict"><code>Strict</code></h3>
+### `Strict`
 
-<p>Les cookies ne seront envoyés qu'avec les requêtes effectuées sur le domaine de même niveau, et ne seront pas envoyées sur les requêtes vers des sites tiers.</p>
+Les cookies ne seront envoyés qu'avec les requêtes effectuées sur le domaine de même niveau, et ne seront pas envoyées sur les requêtes vers des sites tiers.
 
-<h3 id="None"><code>None</code></h3>
+### `None`
 
-<p>Les cookies seront envoyés dans tous les contextes, rendant possibles les requêtes de type <em>cross-origin</em>.</p>
+Les cookies seront envoyés dans tous les contextes, rendant possibles les requêtes de type _cross-origin_.
 
-<p><code>None</code> était la valeur par défaut des navigateurs, mais les navigateurs les plus récents optent désormais pour la valeur <code>Lax</code> comme valeur par défaut pour une meilleure défense contre les attaques de type <em>cross-site request forgery</em> ({{Glossary("CSRF")}}).</p>
+`None` était la valeur par défaut des navigateurs, mais les navigateurs les plus récents optent désormais pour la valeur `Lax` comme valeur par défaut pour une meilleure défense contre les attaques de type _cross-site request forgery_ ({{Glossary("CSRF")}}).
 
-<p><code>None</code> requiert l'attribut <code>Secure</code> dans les dernières versions des navigateurs les plus récents. Voir plus bas pour plus d'informations.</p>
+`None` requiert l'attribut `Secure` dans les dernières versions des navigateurs les plus récents. Voir plus bas pour plus d'informations.
 
-<h2 id="Corriger_les_erreurs_les_plus_communes">Corriger les erreurs les plus communes</h2>
+## Corriger les erreurs les plus communes
 
-<h3 id="SameSiteNone_requiert_Secure"><code>SameSite=None</code> requiert <code>Secure</code></h3>
+### `SameSite=None` requiert `Secure`
 
-<p>Une alerte de ce type peut apparaître dans la console de votre navigateur :</p>
+Une alerte de ce type peut apparaître dans la console de votre navigateur :
 
-<blockquote>
-<p><em>Some cookies are misusing the “sameSite“ attribute, so it won’t work as expected.<br>
- Cookie “</em>myCookie<em>” rejected because it has the “sameSite=none” attribute but is missing the “secure” attribute.</em></p>
-</blockquote>
+> *Some cookies are misusing the “sameSite“ attribute, so it won’t work as expected.
+> Cookie “*myCookie*” rejected because it has the “sameSite=none” attribute but is missing the “secure” attribute.*
 
-<p>Cet alerte apparaît dans les cas où des cookies requièrent l'attribut <code>SameSite=None</code> et ne sont pas marqués <code>Secure</code>, étant donc refusés par le navigateur.</p>
+Cet alerte apparaît dans les cas où des cookies requièrent l'attribut `SameSite=None` et ne sont pas marqués `Secure`, étant donc refusés par le navigateur.
 
-<pre class="example-bad">Set-Cookie: flavor=choco; SameSite=None</pre>
+```plain example-bad
+Set-Cookie: flavor=choco; SameSite=None
+```
 
-<p>Pour corriger cette erreur, vous devez ajouter l'attribut <code>Secure</code> à vos cookies marqués avec l'attribut <code>SameSite=None</code>.</p>
+Pour corriger cette erreur, vous devez ajouter l'attribut `Secure` à vos cookies marqués avec l'attribut `SameSite=None`.
 
-<pre class="example-good">Set-Cookie: flavor=choco; SameSite=None; <strong>Secure</strong></pre>
+```plain example-good
+Set-Cookie: flavor=choco; SameSite=None; Secure
+```
 
-<p>Un cookie <code>Secure</code> ne sera envoyé au serveur que par le biais de requêtes utilisant le protocole HTTPS. Il est à noter que les sites non sécurisés (<code>http:</code>) ne peuvent pas être marqués <code>Secure</code>.</p>
+Un cookie `Secure` ne sera envoyé au serveur que par le biais de requêtes utilisant le protocole HTTPS. Il est à noter que les sites non sécurisés (`http:`) ne peuvent pas être marqués `Secure`.
 
-<h3 id="Les_cookies_sans_lattribut_SameSite_utilisent_SameSiteLax_par_défaut">Les cookies sans l'attribut <code>SameSite</code> utilisent <code>SameSite=Lax</code> par défaut</h3>
+### Les cookies sans l'attribut `SameSite` utilisent `SameSite=Lax` par défaut
 
-<p>Les dernières versions des navigateurs récents fournissent une valeur par défaut de <code>SameSite</code> plus sécurisée pour vos cookies, il se peut donc que le message suivant apparaisse dans la console de votre navigateur :</p>
+Les dernières versions des navigateurs récents fournissent une valeur par défaut de `SameSite` plus sécurisée pour vos cookies, il se peut donc que le message suivant apparaisse dans la console de votre navigateur :
 
-<blockquote>
-<p><em>Some cookies are misusing the “sameSite“ attribute, so it won’t work as expected.<br>
- Cookie “</em>myCookie<em>” has “sameSite” policy set to “lax” because it is missing a “sameSite” attribute, and “sameSite=lax” is the default value for this attribute.</em></p>
-</blockquote>
+> *Some cookies are misusing the “sameSite“ attribute, so it won’t work as expected.
+> Cookie “*myCookie*” has “sameSite” policy set to “lax” because it is missing a “sameSite” attribute, and “sameSite=lax” is the default value for this attribute.*
 
-<p>Cette alerte apparait car la stratégie de <code>SameSite</code> pour le cookie n'a pas été spécifiée explicitement :</p>
+Cette alerte apparait car la stratégie de `SameSite` pour le cookie n'a pas été spécifiée explicitement :
 
-<pre class="example-bad">Set-Cookie: flavor=choco</pre>
+```plain example-bad
+Set-Cookie: flavor=choco
+```
 
-<p>Même si vous pouvez compter sur la valeur par défaut <code>SameSite=Lax</code> des navigateurs récents, vous devriez tout de même spécifier la stratégie à appliquer pour ce cookie afin de communiquer clairement votre intention. Cela améliorera également l'expérience sur les autres navigateurs si ceux-ci n'utilisent pas encore la valeur par défaut <code>Lax</code>.</p>
+Même si vous pouvez compter sur la valeur par défaut `SameSite=Lax` des navigateurs récents, vous devriez tout de même spécifier la stratégie à appliquer pour ce cookie afin de communiquer clairement votre intention. Cela améliorera également l'expérience sur les autres navigateurs si ceux-ci n'utilisent pas encore la valeur par défaut `Lax`.
 
-<pre class="example-good">Set-Cookie: flavor=choco; <strong>SameSite=Lax</strong></pre>
+```plain example-good
+Set-Cookie: flavor=choco; SameSite=Lax
+```
 
-<h2 id="Exemples"><strong>Exemples</strong></h2>
+## **Exemples**
 
-<pre>RewriteEngine on
-RewriteBase "/"
-RewriteCond "%{HTTP_HOST}"       "^example\.org$" [NC]
-RewriteRule "^(.*)"              "https://www.example.org/index.html" [R=301,L,QSA]
-RewriteRule "^(.*)\.ht$"         "index.php?nav=$1 [NC,L,QSA,CO=RewriteRule:01:https://www.example.org:30/:SameSite=None:Secure]
-RewriteRule "^(.*)\.htm$"        "index.php?nav=$1 [NC,L,QSA,CO=RewriteRule:02:https://www.example.org:30/:SameSite=None:Secure]
-RewriteRule "^(.*)\.html$"       "index.php?nav=$1 [NC,L,QSA,CO=RewriteRule:03:https://www.example.org:30/:SameSite=None:Secure]
-[...]
-RewriteRule "^admin/(.*)\.html$" "admin/index.php?nav=$1 [NC,L,QSA,CO=RewriteRule:09:https://www.example.org:30/:SameSite=Strict:Secure]
-</pre>
+    RewriteEngine on
+    RewriteBase "/"
+    RewriteCond "%{HTTP_HOST}"       "^example\.org$" [NC]
+    RewriteRule "^(.*)"              "https://www.example.org/index.html" [R=301,L,QSA]
+    RewriteRule "^(.*)\.ht$"         "index.php?nav=$1 [NC,L,QSA,CO=RewriteRule:01:https://www.example.org:30/:SameSite=None:Secure]
+    RewriteRule "^(.*)\.htm$"        "index.php?nav=$1 [NC,L,QSA,CO=RewriteRule:02:https://www.example.org:30/:SameSite=None:Secure]
+    RewriteRule "^(.*)\.html$"       "index.php?nav=$1 [NC,L,QSA,CO=RewriteRule:03:https://www.example.org:30/:SameSite=None:Secure]
+    [...]
+    RewriteRule "^admin/(.*)\.html$" "admin/index.php?nav=$1 [NC,L,QSA,CO=RewriteRule:09:https://www.example.org:30/:SameSite=Strict:Secure]
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Titre</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{RFC("6265", "Set-Cookie", "4.1")}}</td>
-   <td>HTTP State Management Mechanism</td>
-  </tr>
-  <tr>
-   <td><a href="https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-05">draft-ietf-httpbis-rfc6265bis-05</a></td>
-   <td>Cookie Prefixes, Same-Site Cookies, and Strict Secure Cookies</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | Titre                                                         |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
+| {{RFC("6265", "Set-Cookie", "4.1")}}                                                 | HTTP State Management Mechanism                               |
+| [draft-ietf-httpbis-rfc6265bis-05](https://tools.ietf.org/html/draft-ietf-httpbis-rfc6265bis-05) | Cookie Prefixes, Same-Site Cookies, and Strict Secure Cookies |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("http.headers.Set-Cookie", 5)}}</p>
+{{Compat("http.headers.Set-Cookie", 5)}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/HTTP/Cookies">Les cookies HTTP</a></li>
- <li>{{HTTPHeader("Cookie")}}</li>
- <li>{{domxref("Document.cookie")}}</li>
-</ul>
+- [Les cookies HTTP](/fr/docs/Web/HTTP/Cookies)
+- {{HTTPHeader("Cookie")}}
+- {{domxref("Document.cookie")}}

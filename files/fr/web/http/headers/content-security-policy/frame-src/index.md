@@ -14,82 +14,70 @@ tags:
   - source
 translation_of: Web/HTTP/Headers/Content-Security-Policy/frame-src
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <code><strong>frame-src</strong></code> spécifie les sources valides pour des contextes de navigation imbriqués chargés d'éléments tels que {{HTMLElement("frame")}} et {{HTMLElement("iframe")}}.</p>
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-src`** spécifie les sources valides pour des contextes de navigation imbriqués chargés d'éléments tels que {{HTMLElement("frame")}} et {{HTMLElement("iframe")}}.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Version de CSP</th>
-   <td>1</td>
-  </tr>
-  <tr>
-   <th scope="row">Type de directive</th>
-   <td>{{Glossary("Fetch directive")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td>Si cette directive est absente, l'agent utilisateur consultera la directive {{CSP("child-src")}}, qui a pour valeur par défaut celle de la directive {{CSP("default-src")}}</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Version de CSP</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type de directive</th>
+      <td>{{Glossary("Fetch directive")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td>
+        Si cette directive est absente, l'agent utilisateur consultera la
+        directive {{CSP("child-src")}}, qui a pour valeur par défaut
+        celle de la directive {{CSP("default-src")}}
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Une ou plusieurs sources peuvent être autorisées pour cette directive :</p>
+Une ou plusieurs sources peuvent être autorisées pour cette directive :
 
-<pre class="syntaxbox">Content-Security-Policy: frame-src &lt;source&gt;;
-Content-Security-Policy: frame-src &lt;source&gt; &lt;source&gt;;
-</pre>
+    Content-Security-Policy: frame-src <source>;
+    Content-Security-Policy: frame-src <source> <source>;
 
-<h3 id="Sources">Sources</h3>
+### Sources
 
-<p>{{page("fr/Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}</p>
+{{page("fr/Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Cas_de_violation">Cas de violation</h3>
+### Cas de violation
 
-<p>Soit cet en-tête CSP :</p>
+Soit cet en-tête CSP :
 
-<pre class="brush: bash">Content-Security-Policy: frame-src https://example.com/</pre>
+```bash
+Content-Security-Policy: frame-src https://example.com/
+```
 
-<p>Cet élément {{HTMLElement("iframe")}} est bloqué et ne se chargera pas :</p>
+Cet élément {{HTMLElement("iframe")}} est bloqué et ne se chargera pas :
 
-<pre class="brush: html">&lt;iframe src="https://not-example.com/"&gt;&lt;/iframe&gt;</pre>
+```html
+<iframe src="https://not-example.com/"></iframe>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{specName("CSP 3.0", "#directive-frame-src", "frame-src")}}</td>
-   <td>{{Spec2('CSP 3.0')}}</td>
-   <td>Réappréciation de <code>frame-src</code>.</td>
-  </tr>
-  <tr>
-   <td>{{specName("CSP 1.1", "#directive-frame-src", "frame-src")}}</td>
-   <td>{{Spec2('CSP 1.1')}}</td>
-   <td>Dépréciation de <code>frame-src</code>.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | Statut                       | Commentaire                    |
+| -------------------------------------------------------------------------------- | ---------------------------- | ------------------------------ |
+| {{specName("CSP 3.0", "#directive-frame-src", "frame-src")}} | {{Spec2('CSP 3.0')}} | Réappréciation de `frame-src`. |
+| {{specName("CSP 1.1", "#directive-frame-src", "frame-src")}} | {{Spec2('CSP 1.1')}} | Dépréciation de `frame-src`.   |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("http.headers.csp.Content-Security-Policy.frame-src")}}</p>
+{{Compat("http.headers.csp.Content-Security-Policy.frame-src")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li>{{HTMLElement("frame")}} and {{HTMLElement("iframe")}}</li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- {{HTMLElement("frame")}} and {{HTMLElement("iframe")}}

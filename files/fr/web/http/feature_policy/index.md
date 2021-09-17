@@ -17,157 +17,126 @@ tags:
   - permission
 translation_of: Web/HTTP/Feature_Policy
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Feature Policy ("réglementation des fonctionnalités" en français) permet aux développeurs web d'activer, de modifier ou de désactiver spécifiquement le comportement de certaines fonctionnalités et API dans le navigateur. Elle est similaire à {{Glossary("CSP", "Content Security Policy")}} mais contrôle les fonctionnalités plus que la sécurité.</p>
+Feature Policy ("réglementation des fonctionnalités" en français) permet aux développeurs web d'activer, de modifier ou de désactiver spécifiquement le comportement de certaines fonctionnalités et API dans le navigateur. Elle est similaire à {{Glossary("CSP", "Content Security Policy")}} mais contrôle les fonctionnalités plus que la sécurité.
 
-<div class="note">
-<p><strong>Note :</strong> L'en-tête <code>Feature-Policy</code> a maintenant été renommé <code>Permissions-Policy</code> dans la spécification, et cet article va possiblement être modifié en conséquence.</p>
-</div>
+> **Note :** L'en-tête `Feature-Policy` a maintenant été renommé `Permissions-Policy` dans la spécification, et cet article va possiblement être modifié en conséquence.
 
-<h2 id="En_résumé">En résumé</h2>
+## En résumé
 
-<p>Feature Policy est un mécanisme vous permettant de déclarer explicitement quelles fonctionnalités sont utilisées ou non par votre site web. Ceci vous permet donc de mettre en place des bonnes pratiques en limitant les fonctionnalités disponibles, et ce bien que votre code source évoluera avec le temps et que du contenu externe puisse être intégré postérieurement et plus sainement.</p>
+Feature Policy est un mécanisme vous permettant de déclarer explicitement quelles fonctionnalités sont utilisées ou non par votre site web. Ceci vous permet donc de mettre en place des bonnes pratiques en limitant les fonctionnalités disponibles, et ce bien que votre code source évoluera avec le temps et que du contenu externe puisse être intégré postérieurement et plus sainement.
 
-<p>Avec Feature Policy, vous pouvez opter pour un ensemble de "règles" que le navigateur imposera à certaines fonctionnalités utilisées sur un site web. Ces règles restreignent quelles API le site peut utiliser ou comment il peut modifier le comportement par défaut du navigateur pour utiliser certaines fonctionnalités.</p>
+Avec Feature Policy, vous pouvez opter pour un ensemble de "règles" que le navigateur imposera à certaines fonctionnalités utilisées sur un site web. Ces règles restreignent quelles API le site peut utiliser ou comment il peut modifier le comportement par défaut du navigateur pour utiliser certaines fonctionnalités.
 
-<p>Par exemple, voici des choses que vous pourrez faire avec Feature Policy :</p>
+Par exemple, voici des choses que vous pourrez faire avec Feature Policy :
 
-<ul>
- <li>Changer le comportement par défaut de la lecture automatique sur mobile ou pour les vidéos de source externe,</li>
- <li>Vous interdire d'utiliser les API sensitives comme l'appareil photographique ou le microphone.</li>
- <li>Permettre aux iframes d'utiliser l'<a href="/en-US/docs/Web/API/Fullscreen_API">API plein écran</a>.</li>
- <li>Empêcher l'utilisateur d'API obsolètes comme les <a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest">XHR synchrones</a> ou {{domxref("document.write()")}}.</li>
- <li>Vous assurer que les images sont dimensionnées correctement et ne sont pas trop grosses pour le cadre de la fenêtre.</li>
-</ul>
+- Changer le comportement par défaut de la lecture automatique sur mobile ou pour les vidéos de source externe,
+- Vous interdire d'utiliser les API sensitives comme l'appareil photographique ou le microphone.
+- Permettre aux iframes d'utiliser l'[API plein écran](/en-US/docs/Web/API/Fullscreen_API).
+- Empêcher l'utilisateur d'API obsolètes comme les [XHR synchrones](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest) ou {{domxref("document.write()")}}.
+- Vous assurer que les images sont dimensionnées correctement et ne sont pas trop grosses pour le cadre de la fenêtre.
 
-<h2 id="Concepts_et_utilisation">Concepts et utilisation</h2>
+## Concepts et utilisation
 
-<p>Feature Policy vous permet de contrôler quelles origines peuvent utiliser quelles fonctionnalités, à la fois au niveau supérieur de navigation et dans cadres embarqués. Essentiellement, vous devez écrire une règle qui fournit une liste d'origines permises pour chaque fonctionnalité. Celles contrôlées par Feature Policy ne seront activées que dans les documents ou cadres si leur origine respective est présente dans la liste de permissions associée à cette fonctionnalité.</p>
+Feature Policy vous permet de contrôler quelles origines peuvent utiliser quelles fonctionnalités, à la fois au niveau supérieur de navigation et dans cadres embarqués. Essentiellement, vous devez écrire une règle qui fournit une liste d'origines permises pour chaque fonctionnalité. Celles contrôlées par Feature Policy ne seront activées que dans les documents ou cadres si leur origine respective est présente dans la liste de permissions associée à cette fonctionnalité.
 
-<p>Pour chaque fonctionnalités contrôlée, le navigateurs entretient une liste d'origines (dite "liste de permissions" ou <em>allowlist</em>) pour lesquelles la fonctionnalité est activée. Si vous ne spécifiez aucune règle pour une fonctionnalité, alors la liste de permissions par défaut sera utilisée. Celle-ci est spécifique à chaque fonctionnalité.</p>
+Pour chaque fonctionnalités contrôlée, le navigateurs entretient une liste d'origines (dite "liste de permissions" ou _allowlist_) pour lesquelles la fonctionnalité est activée. Si vous ne spécifiez aucune règle pour une fonctionnalité, alors la liste de permissions par défaut sera utilisée. Celle-ci est spécifique à chaque fonctionnalité.
 
-<h3 id="Écrire_une_règle">Écrire une règle</h3>
+### Écrire une règle
 
-<p>Une règle est composée d'un ensemble de directives individuelles. Chaque directive est une combinaison d'un nom de fonctionnalités et d'une liste de permissions pour les origines qui pourront utiliser la fonctionnalité.</p>
+Une règle est composée d'un ensemble de directives individuelles. Chaque directive est une combinaison d'un nom de fonctionnalités et d'une liste de permissions pour les origines qui pourront utiliser la fonctionnalité.
 
-<h3 id="Appliquer_votre_règle">Appliquer votre règle</h3>
+### Appliquer votre règle
 
-<p>Feature Policy fournit deux manières d'appliquer des règles pour contrôler les fonctionnalités :</p>
+Feature Policy fournit deux manières d'appliquer des règles pour contrôler les fonctionnalités :
 
-<ul>
- <li>L'en-tête HTTP {{httpheader("Feature-Policy")}}.</li>
- <li>L'attribut {{HTMLElement("iframe","<code>allow</code>","#Attributes")}} sur les iframes.</li>
-</ul>
+- L'en-tête HTTP {{httpheader("Feature-Policy")}}.
+- L'attribut {{HTMLElement("iframe","<code>allow</code>","#Attributes")}} sur les iframes.
 
-<p>La principale différence entre les deux est que que l'attribut ne contrôle les fonctionnalités que dans l'iframe tandis que l'en-tête les contrôle dans la réponse et chacun des contenus imbriqués dans la page.</p>
+La principale différence entre les deux est que que l'attribut ne contrôle les fonctionnalités que dans l'iframe tandis que l'en-tête les contrôle dans la réponse et chacun des contenus imbriqués dans la page.
 
-<p>Pour plus de détails, voir <a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Utiliser Feature Policy</a>.</p>
+Pour plus de détails, voir [Utiliser Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy).
 
-<h3 id="Déterminer_la_règle">Déterminer la règle</h3>
+### Déterminer la règle
 
-<p>Les scripts peuvent demander programmatiquement à savoir quelles règles s'appliquent au moyen de l'objet {{DOMxRef("FeaturePolicy")}} avec {{DOMxRef("Document.featurePolicy")}} ou {{DOMxRef("HTMLIFrameElement.featurePolicy")}}.</p>
+Les scripts peuvent demander programmatiquement à savoir quelles règles s'appliquent au moyen de l'objet {{DOMxRef("FeaturePolicy")}} avec {{DOMxRef("Document.featurePolicy")}} ou {{DOMxRef("HTMLIFrameElement.featurePolicy")}}.
 
-<h2 id="Types_de_fonctionnalités_contrôlables">Types de fonctionnalités contrôlables</h2>
+## Types de fonctionnalités contrôlables
 
-<p>Bien que Feature Policy fournit un moyen de contrôler de multiples fonctionnalités en utilisant une syntaxe constante, le comportement des fonctionnaltiés contrôlées varie et dépend de plusieurs facteurs.</p>
+Bien que Feature Policy fournit un moyen de contrôler de multiples fonctionnalités en utilisant une syntaxe constante, le comportement des fonctionnaltiés contrôlées varie et dépend de plusieurs facteurs.
 
-<p>Le principe général est qu'il devrait y avoir un moyen intuitif et fiable pour les développeurs web de savoir quand une fonctionnalité dont ils ont besoin est désactivée. Les fonctionnalités récemment introduites peuvent fournir une API explicitement conçue pour signaler un tel cas, mais celles préexistantes et qui ont intégré tardivement Feature Policy utilisent typiquement des mécanismes plus anciens, par exemple :</p>
+Le principe général est qu'il devrait y avoir un moyen intuitif et fiable pour les développeurs web de savoir quand une fonctionnalité dont ils ont besoin est désactivée. Les fonctionnalités récemment introduites peuvent fournir une API explicitement conçue pour signaler un tel cas, mais celles préexistantes et qui ont intégré tardivement Feature Policy utilisent typiquement des mécanismes plus anciens, par exemple :
 
-<ul>
- <li>Retourner "permission denied" pour les API JavaScript qui requièrent une élévation de privilèges de la part de l'utilisateur,</li>
- <li>Retourner <code>false</code> ou jeter une erreur depuis une API JavaScript qui permet d'accéder à une fonctionnalité,</li>
- <li>Modifier les valeurs par défaut ou les options qui contrôlent le comportement de la fonctionnalité.</li>
-</ul>
+- Retourner "permission denied" pour les API JavaScript qui requièrent une élévation de privilèges de la part de l'utilisateur,
+- Retourner `false` ou jeter une erreur depuis une API JavaScript qui permet d'accéder à une fonctionnalité,
+- Modifier les valeurs par défaut ou les options qui contrôlent le comportement de la fonctionnalité.
 
-<p>L'ensemble actuel des fonctionnalités contrôlables se résume donc à deux grandes catégories :</p>
+L'ensemble actuel des fonctionnalités contrôlables se résume donc à deux grandes catégories :
 
-<ul>
- <li>Imposer des bonnes pratiques pour une bonne expérience d'utilisation,</li>
- <li>Fournir un contrôle granulaire sur les fonctionnalités sensitives ou puissantes.</li>
-</ul>
+- Imposer des bonnes pratiques pour une bonne expérience d'utilisation,
+- Fournir un contrôle granulaire sur les fonctionnalités sensitives ou puissantes.
 
-<h3 id="Bonnes_pratiques_pour_une_bonne_expérience_dutilisation">Bonnes pratiques pour une bonne expérience d'utilisation</h3>
+### Bonnes pratiques pour une bonne expérience d'utilisation
 
-<p>Il y a plusieurs fonctionnalités contrôlables pour vous aider à mettre en place de bonnes pratiques afin d'assurer de bonnes performances et une expérience d'utilisation agréable.</p>
+Il y a plusieurs fonctionnalités contrôlables pour vous aider à mettre en place de bonnes pratiques afin d'assurer de bonnes performances et une expérience d'utilisation agréable.
 
-<p>Dans la plupart des cas, les fonctionnalités contrôlables sont celles qui, si utilisées, vont affecter négativement l'expérience d'utilisation. Pour éviter de faire dysfonctionner un site web déjà existant, ces fonctionnalités autorisent par défaut leur usage par toutes les origines. Une bonne pratique est donc d'utiliser des règles qui désactivent ces fonctionnalités pour certaines origines.</p>
+Dans la plupart des cas, les fonctionnalités contrôlables sont celles qui, si utilisées, vont affecter négativement l'expérience d'utilisation. Pour éviter de faire dysfonctionner un site web déjà existant, ces fonctionnalités autorisent par défaut leur usage par toutes les origines. Une bonne pratique est donc d'utiliser des règles qui désactivent ces fonctionnalités pour certaines origines.
 
-<p>La liste de ces fonctionnalités est :</p>
+La liste de ces fonctionnalités est :
 
-<ul>
- <li>Animations de rafraichissement de l'affichage,</li>
- <li>Formats d'image du passé,</li>
- <li>Images surdimensionnées,</li>
- <li>Scripts synchrones,</li>
- <li>Requêtes XMLHTTPRequest sychrones,</li>
- <li>Images non optimisées,</li>
- <li>Médias non dimensionnés.</li>
-</ul>
+- Animations de rafraichissement de l'affichage,
+- Formats d'image du passé,
+- Images surdimensionnées,
+- Scripts synchrones,
+- Requêtes XMLHTTPRequest sychrones,
+- Images non optimisées,
+- Médias non dimensionnés.
 
-<h3 id="Contrôle_granulaire_sur_certaines_fonctionnalités">Contrôle granulaire sur certaines fonctionnalités</h3>
+### Contrôle granulaire sur certaines fonctionnalités
 
-<p>Le web fournit des fonctionnalités et API que peuvent affecter l'anonymat, la vie privée et la sécurité si leur usage est abusif. Dans certains cas, vous pourriez avoir envie de limiter strictement la manière dont de telles fonctionnalités sont utilisées sur un site web. Il y a des moyens de permettre à des fonctionnalités d'être activées ou désactivées pour des origines ou des cadres spécifiques dans un site web. Quand ils sont disponibles, les moyens intègrent avec l'API Permissions ou des mécanismes propres à eux-mêmes la possibilité de vérifier si la fonctionnalité est disponible.</p>
+Le web fournit des fonctionnalités et API que peuvent affecter l'anonymat, la vie privée et la sécurité si leur usage est abusif. Dans certains cas, vous pourriez avoir envie de limiter strictement la manière dont de telles fonctionnalités sont utilisées sur un site web. Il y a des moyens de permettre à des fonctionnalités d'être activées ou désactivées pour des origines ou des cadres spécifiques dans un site web. Quand ils sont disponibles, les moyens intègrent avec l'API Permissions ou des mécanismes propres à eux-mêmes la possibilité de vérifier si la fonctionnalité est disponible.
 
-<p>Les fonctionnalités incluent (voir la <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy#Directives">liste des Features</a>) :</p>
+Les fonctionnalités incluent (voir la [liste des Features](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy#Directives)) :
 
-<ul>
- <li>Accéléromètre</li>
- <li>Capteur de luminosité ambiante</li>
- <li>Lecture automatique</li>
- <li>Appareil photographique</li>
- <li>Médias chiffrés</li>
- <li>Plein écran</li>
- <li>Géolocalisation</li>
- <li>Gyroscope</li>
- <li>Magnétomètre</li>
- <li>Microphone</li>
- <li>MIDI</li>
- <li>PaymentRequest</li>
- <li>Picture-in-picture</li>
- <li>USB</li>
- <li>Web Share API</li>
- <li>VR / XR</li>
-</ul>
+- Accéléromètre
+- Capteur de luminosité ambiante
+- Lecture automatique
+- Appareil photographique
+- Médias chiffrés
+- Plein écran
+- Géolocalisation
+- Gyroscope
+- Magnétomètre
+- Microphone
+- MIDI
+- PaymentRequest
+- Picture-in-picture
+- USB
+- Web Share API
+- VR / XR
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Utiliser Feature Policy</a></li>
- <li>Voir <a href="http://feature-policy-demos.appspot.com/">Démonstrations de Feature Policy</a> pour un exemple d'utilisation de plusieurs règles.</li>
-</ul>
+- [Utiliser Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
+- Voir [Démonstrations de Feature Policy](http://feature-policy-demos.appspot.com/) pour un exemple d'utilisation de plusieurs règles.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Feature Policy","#feature-policy-http-header-field","Feature-Policy")}}</td>
-   <td>{{Spec2("Feature Policy")}}</td>
-   <td>Définition initiale. Définit l'en-tête {{httpheader("Feature-Policy")}}. Les directives sont définies dans la spécification pour les fonctionnalités qu'elles contrôlent. Voir les pages individuelles des directives pour plus de détails.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | Statut                               | Commentaire                                                                                                                                                                                                                                             |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName("Feature Policy","#feature-policy-http-header-field","Feature-Policy")}} | {{Spec2("Feature Policy")}} | Définition initiale. Définit l'en-tête {{httpheader("Feature-Policy")}}. Les directives sont définies dans la spécification pour les fonctionnalités qu'elles contrôlent. Voir les pages individuelles des directives pour plus de détails. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
+{{Compat("http.headers.Feature-Policy")}}
 
+## Voir aussi
 
-<p>{{Compat("http.headers.Feature-Policy")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Utiliser Feature Policy</a></li>
- <li>{{HTTPHeader("Feature-Policy")}} HTTP header</li>
- <li>{{HTMLElement("iframe","<code>allow</code>","#Attributes")}} attribute on iframes</li>
- <li><a href="https://developers.google.com/web/updates/2018/06/feature-policy">Introduction à Feature Policy</a></li>
- <li><a href="https://www.chromestatus.com/features#component%3A%20Blink%3EFeaturePolicy">Feature policies sur www.chromestatus.com</a></li>
- <li><a href="https://chrome.google.com/webstore/detail/feature-policy-tester-dev/pchamnkhkeokbpahnocjaeednpbpacop">Feature-Policy Tester (extension Chrome Developer Tools)</a></li>
- <li><a href="/en-US/docs/Web/Privacy">Anonymat, permissions et informations sur la sécurité</a></li>
-</ul>
+- [Utiliser Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
+- {{HTTPHeader("Feature-Policy")}} HTTP header
+- {{HTMLElement("iframe","<code>allow</code>","#Attributes")}} attribute on iframes
+- [Introduction à Feature Policy](https://developers.google.com/web/updates/2018/06/feature-policy)
+- [Feature policies sur www.chromestatus.com](https://www.chromestatus.com/features#component%3A%20Blink%3EFeaturePolicy)
+- [Feature-Policy Tester (extension Chrome Developer Tools)](https://chrome.google.com/webstore/detail/feature-policy-tester-dev/pchamnkhkeokbpahnocjaeednpbpacop)
+- [Anonymat, permissions et informations sur la sécurité](/en-US/docs/Web/Privacy)

@@ -3,96 +3,75 @@ title: Trailer
 slug: Web/HTTP/Headers/Trailer
 translation_of: Web/HTTP/Headers/Trailer
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>L'en-tête <strong>Trailer</strong> permet à l'expéditeur d'inclure des champs supplémentaires à la fin des blocs de messages pour fournir des métadonnées supplémentaires qui peuvent être générées de manière dynamique pendant que le corps du message sera envoyé, il peut s'agir de la vérification de l'intégrité du message, une signature numérique, ou encore un statut après le traitement.</p>
+L'en-tête **Trailer** permet à l'expéditeur d'inclure des champs supplémentaires à la fin des blocs de messages pour fournir des métadonnées supplémentaires qui peuvent être générées de manière dynamique pendant que le corps du message sera envoyé, il peut s'agir de la vérification de l'intégrité du message, une signature numérique, ou encore un statut après le traitement.
 
-<div class="note">
-<p><strong>Note :</strong> L'en-tête {{HTTPHeader("TE")}} de la requête devra être définie en tant que "trailers" pour autoriser les champs de type "trailer".</p>
-</div>
+> **Note :** L'en-tête {{HTTPHeader("TE")}} de la requête devra être définie en tant que "trailers" pour autoriser les champs de type "trailer".
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Type d'en-tête</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>yes</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Type d'en-tête</th>
+      <td>{{Glossary("Response header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>yes</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Trailer: header-names</pre>
+    Trailer: header-names
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
- <dt><code>header-names</code></dt>
- <dd>HTTP header fields which will be present in the trailer part of chunked messages. These header fields are <strong>disallowed</strong>:
- <ul>
-  <li>message framing headers (e.g., {{HTTPHeader("Transfer-Encoding")}} and {{HTTPHeader("Content-Length")}}),</li>
-  <li>routing headers (e.g., {{HTTPHeader("Host")}}),</li>
-  <li>request modifiers (e.g., controls and conditionals, like {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Max-Forwards")}}, or {{HTTPHeader("TE")}}), </li>
-  <li>authentication headers (e.g., {{HTTPHeader("Authorization")}} or {{HTTPHeader("Set-Cookie")}}),</li>
-  <li>or {{HTTPHeader("Content-Encoding")}}, {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Content-Range")}}, and <code>Trailer</code> itself.</li>
- </ul>
- </dd>
-</dl>
+- `header-names`
 
-<h2 id="Exemple">Exemple</h2>
+  - : HTTP header fields which will be present in the trailer part of chunked messages. These header fields are **disallowed**:
 
-<h3 id="Encodage_de_transfert_en_bloc_en_utilisant_les_en-têtes_trailer."><strong>Encodage de transfert en bloc</strong> en utilisant les en-têtes "trailer".</h3>
+    - message framing headers (e.g., {{HTTPHeader("Transfer-Encoding")}} and {{HTTPHeader("Content-Length")}}),
+    - routing headers (e.g., {{HTTPHeader("Host")}}),
+    - request modifiers (e.g., controls and conditionals, like {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Max-Forwards")}}, or {{HTTPHeader("TE")}}),
+    - authentication headers (e.g., {{HTTPHeader("Authorization")}} or {{HTTPHeader("Set-Cookie")}}),
+    - or {{HTTPHeader("Content-Encoding")}}, {{HTTPHeader("Content-Type")}}, {{HTTPHeader("Content-Range")}}, and `Trailer` itself.
 
-<p>Dans cet exemple, l'en-tête {{HTTPHeader("Expires")}} est utilisée à la fin du bloc du message et sert en tant qu'un "trailing header".</p>
+## Exemple
 
-<pre>HTTP/1.1 200 OK
-Content-Type: text/plain
-Transfer-Encoding: chunked
-Trailer: Expires
+### **Encodage de transfert en bloc** en utilisant les en-têtes "trailer".
 
-7\r\n
-Mozilla\r\n
-9\r\n
-Developer\r\n
-7\r\n
-Network\r\n
-0\r\n
-\r\n
-Expires: Wed, 21 Oct 2015 07:28:00 GMT</pre>
+Dans cet exemple, l'en-tête {{HTTPHeader("Expires")}} est utilisée à la fin du bloc du message et sert en tant qu'un "trailing header".
 
-<h2 id="Spécifications">Spécifications</h2>
+    HTTP/1.1 200 OK
+    Content-Type: text/plain
+    Transfer-Encoding: chunked
+    Trailer: Expires
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Title</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7230", "Trailer", "4.4")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</td>
-  </tr>
-  <tr>
-   <td>{{RFC("7230", "Chunked trailer part", "4.1.2")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</td>
-  </tr>
- </tbody>
-</table>
+    7\r\n
+    Mozilla\r\n
+    9\r\n
+    Developer\r\n
+    7\r\n
+    Network\r\n
+    0\r\n
+    \r\n
+    Expires: Wed, 21 Oct 2015 07:28:00 GMT
 
-<h2 id="Browser_compatibility">Compatibilités</h2>
+## Spécifications
 
-<p>{{Compat("http/headers/trailer")}}</p>
+| Specification                                                    | Title                                                              |
+| ---------------------------------------------------------------- | ------------------------------------------------------------------ |
+| {{RFC("7230", "Trailer", "4.4")}}                     | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
+| {{RFC("7230", "Chunked trailer part", "4.1.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Compatibilités
 
-<ul>
- <li>{{HTTPHeader("Transfer-Encoding")}}</li>
- <li>{{HTTPHeader("TE")}}</li>
- <li>
-  <p><a href="https://fr.wikipedia.org/wiki/Chunked_transfer_encoding">Encodage de transfert en bloc</a></p>
- </li>
-</ul>
+{{Compat("http/headers/trailer")}}
+
+## Voir aussi
+
+- {{HTTPHeader("Transfer-Encoding")}}
+- {{HTTPHeader("TE")}}
+- [Encodage de transfert en bloc](https://fr.wikipedia.org/wiki/Chunked_transfer_encoding)

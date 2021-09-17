@@ -7,56 +7,42 @@ tags:
   - header
 translation_of: Web/HTTP/Headers/Content-Length
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>L'en-tête (<em>header</em>) <strong><code>Content-Length</code></strong> indique la taille en octets (exprimée en base 10) du corps de la réponse envoyée au client.</p>
+L'en-tête (_header_) **`Content-Length`** indique la taille en octets (exprimée en base 10) du corps de la réponse envoyée au client.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Type d'en-tête</th>
-   <td>{{Glossary("Entity header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>oui</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Type d'en-tête</th>
+      <td>{{Glossary("Entity header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>oui</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Content-Length: &lt;longueur&gt;
-</pre>
+    Content-Length: <longueur>
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
- <dt>&lt;longueur&gt;</dt>
- <dd>La longueur en octet (en base 10).</dd>
-</dl>
+- \<longueur>
+  - : La longueur en octet (en base 10).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Titre</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7230", "Content-Length", "3.3.2")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                            | Titre                                                              |
+| -------------------------------------------------------- | ------------------------------------------------------------------ |
+| {{RFC("7230", "Content-Length", "3.3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("http/headers/content-length")}}</p>
+{{Compat("http/headers/content-length")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTTPHeader("Transfer-Encoding")}}</li>
-</ul>
+- {{HTTPHeader("Transfer-Encoding")}}

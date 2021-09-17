@@ -14,86 +14,73 @@ tags:
   - source
 translation_of: Web/HTTP/Headers/Content-Security-Policy/media-src
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <code><strong>media-src</strong></code> spécifie les sources valides pour charger des médias en utilisant des éléments tels que {{HTMLElement("audio")}} et {{HTMLElement("video")}}.</p>
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`media-src`** spécifie les sources valides pour charger des médias en utilisant des éléments tels que {{HTMLElement("audio")}} et {{HTMLElement("video")}}.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Version de CSP</th>
-   <td>1</td>
-  </tr>
-  <tr>
-   <th scope="row">Type de directive</th>
-   <td>{{Glossary("Fetch directive")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{CSP("default-src")}} par défaut</th>
-   <td>Oui, si cette directive est absente, l'agent utilisateur consultera la directive <code>default-src</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Version de CSP</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type de directive</th>
+      <td>{{Glossary("Fetch directive")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{CSP("default-src")}} par défaut</th>
+      <td>
+        Oui, si cette directive est absente, l'agent utilisateur consultera la
+        directive <code>default-src</code>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Une ou plusieurs sources peuvent être autorisées pour cette directive :</p>
+Une ou plusieurs sources peuvent être autorisées pour cette directive :
 
-<pre class="syntaxbox">Content-Security-Policy: media-src &lt;source&gt;;
-Content-Security-Policy: media-src &lt;source&gt; &lt;source&gt;;
-</pre>
+    Content-Security-Policy: media-src <source>;
+    Content-Security-Policy: media-src <source> <source>;
 
-<h3 id="Sources">Sources</h3>
+### Sources
 
-<p>{{page("fr/Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}</p>
+{{page("fr/Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Cas_de_violation">Cas de violation</h3>
+### Cas de violation
 
-<p>Soit cet en-tête CSP :</p>
+Soit cet en-tête CSP :
 
-<pre class="brush: bash">Content-Security-Policy: media-src https://example.com/</pre>
+```bash
+Content-Security-Policy: media-src https://example.com/
+```
 
-<p>Ces éléments {{HTMLElement("audio")}}, {{HTMLElement("video")}} et {{HTMLElement("track")}} seront bloqués et ne se chargeront pas :</p>
+Ces éléments {{HTMLElement("audio")}}, {{HTMLElement("video")}} et {{HTMLElement("track")}} seront bloqués et ne se chargeront pas :
 
-<pre class="brush: html">&lt;audio src="https://not-example.com/audio"&gt;&lt;/audio&gt;
+```html
+<audio src="https://not-example.com/audio"></audio>
 
-&lt;video src="https://not-example.com/video"&gt;
-  &lt;track kind="subtitles" src="https://not-example.com/subtitles"&gt;
-&lt;/video&gt;</pre>
+<video src="https://not-example.com/video">
+  <track kind="subtitles" src="https://not-example.com/subtitles">
+</video>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{specName("CSP 3.0", "#directive-media-src", "media-src")}}</td>
-   <td>{{Spec2('CSP 3.0')}}</td>
-   <td>Inchangé.</td>
-  </tr>
-  <tr>
-   <td>{{specName("CSP 1.1", "#directive-media-src", "media-src")}}</td>
-   <td>{{Spec2('CSP 1.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | Statut                       | Commentaire          |
+| -------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{specName("CSP 3.0", "#directive-media-src", "media-src")}} | {{Spec2('CSP 3.0')}} | Inchangé.            |
+| {{specName("CSP 1.1", "#directive-media-src", "media-src")}} | {{Spec2('CSP 1.1')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("http.headers.csp.Content-Security-Policy.media-src")}}</p>
+{{Compat("http.headers.csp.Content-Security-Policy.media-src")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li>{{HTMLElement("audio")}}, {{HTMLElement("video")}} and {{HTMLElement("track")}}</li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- {{HTMLElement("audio")}}, {{HTMLElement("video")}} and {{HTMLElement("track")}}

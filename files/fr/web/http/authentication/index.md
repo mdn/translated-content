@@ -3,128 +3,128 @@ title: Authentification HTTP
 slug: Web/HTTP/Authentication
 translation_of: Web/HTTP/Authentication
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP fournit la structure permettant le contrôle d'accès ainsi que l'authentification. Le schéma d'authentification HTTP le plus courant est « l'<em>authentification basique</em> » (« <em>Basic authentication</em> » en anglais). Cette page a pour but de présenter ce schéma d'authentification, et montre comment l'utiliser pour restreindre l'accès à votre serveur.</p>
+HTTP fournit la structure permettant le contrôle d'accès ainsi que l'authentification. Le schéma d'authentification HTTP le plus courant est « l'_authentification basique_ » (« _Basic authentication_ » en anglais). Cette page a pour but de présenter ce schéma d'authentification, et montre comment l'utiliser pour restreindre l'accès à votre serveur.
 
-<h2 id="the_general_http_authentication_framework">La structure d'authentification HTTP</h2>
+## La structure d'authentification HTTP
 
-<p>La <a href="https://tools.ietf.org/html/rfc7235">RFC 7235</a> définit la structure d'authentification HTTP qui est utilisable par un serveur pour <a href="/fr/docs/Glossary/challenge">défier</a> une requête d'un client, et inversement par un client pour fournir des informations d'authentification à un serveur.</p>
+La [RFC 7235](https://tools.ietf.org/html/rfc7235) définit la structure d'authentification HTTP qui est utilisable par un serveur pour [défier](/fr/docs/Glossary/challenge) une requête d'un client, et inversement par un client pour fournir des informations d'authentification à un serveur.
 
-<p>Le fonctionnement du défi/réponse se déroule ainsi :</p>
+Le fonctionnement du défi/réponse se déroule ainsi :
 
-<ol>
-  <li>Le serveur répond à un client avec un statut <a href="/fr/docs/Web/HTTP/Status/401"><code>401</code></a> (« Unauthorized ») et fournit l'information permettant l'autorisation via un en-tête de réponse <a href="/fr/docs/Web/HTTP/Headers/WWW-Authenticate"><code>WWW-Authenticate</code></a> contenant au moins un défi.</li>
-  <li>Le client désirant s'authentifier peut ensuite le faire en incluant un en-tête de requête <a href="/fr/docs/Web/HTTP/Headers/Authorization"><code>Authorization</code></a> contenant ses identifiants.</li>
-  <li>Très souvent, le client va demander à l'utilisateur un mot de passe et ensuite envoyer la requête au serveur en incluant cette information dans l'en-tête <code>Authorization</code>.</li>
-</ol>
+1.  Le serveur répond à un client avec un statut [`401`](/fr/docs/Web/HTTP/Status/401) (« Unauthorized ») et fournit l'information permettant l'autorisation via un en-tête de réponse [`WWW-Authenticate`](/fr/docs/Web/HTTP/Headers/WWW-Authenticate) contenant au moins un défi.
+2.  Le client désirant s'authentifier peut ensuite le faire en incluant un en-tête de requête [`Authorization`](/fr/docs/Web/HTTP/Headers/Authorization) contenant ses identifiants.
+3.  Très souvent, le client va demander à l'utilisateur un mot de passe et ensuite envoyer la requête au serveur en incluant cette information dans l'en-tête `Authorization`.
 
-<p><img alt="Un diagramme de séquence illustrant les messages HTTP entre un client et la ligne de vie du serveur" src="HTTPAuth.png"></p>
+![Un diagramme de séquence illustrant les messages HTTP entre un client et la ligne de vie du serveur](HTTPAuth.png)
 
-<p>Dans le cadre d'une authentification basique comme montré dans l'image ci-dessus, les échanges <strong>doivent</strong> s'effectuer au travers d'une connection HTTPS (TLS) afin d'être sécurisée.</p>
+Dans le cadre d'une authentification basique comme montré dans l'image ci-dessus, les échanges **doivent** s'effectuer au travers d'une connection HTTPS (TLS) afin d'être sécurisée.
 
-<h3 id="proxy_authentication">Authentification par procuration</h3>
+### Authentification par procuration
 
-<p>Le même mécanisme de défi et réponse peut être utilisée pour <em>l'authentification par procuration</em> (« <em>Proxy authentication</em> » en anglais). Dans ce cas, c'est un système de procuration intermédiaire qui requiert l'authentification. Comme les deux authentifications (celle de la ressource et celle du système de procuration) peuvent coexister, un autre jeu d'en-têtes et de codes de réponses HTTP est nécessaire. Dans le cadre des systèmes de procuration, le code HTTP de défi est <a href="/fr/docs/Web/HTTP/Status/407"><code>407</code></a> (« Proxy Authentication Required »), l'en-tête de réponse <a href="/fr/docs/Web/HTTP/Headers/Proxy-Authenticate"><code>Proxy-Authenticate</code></a> contient au moins un défi applicable au système de procuration et l'en-tête de requête <a href="/fr/docs/Web/HTTP/Headers/Proxy-Authorization"><code>Proxy-Authorization</code></a> est utilisé pour fournir les identifiants au serveur de procuration.</p>
+Le même mécanisme de défi et réponse peut être utilisée pour _l'authentification par procuration_ (« _Proxy authentication_ » en anglais). Dans ce cas, c'est un système de procuration intermédiaire qui requiert l'authentification. Comme les deux authentifications (celle de la ressource et celle du système de procuration) peuvent coexister, un autre jeu d'en-têtes et de codes de réponses HTTP est nécessaire. Dans le cadre des systèmes de procuration, le code HTTP de défi est [`407`](/fr/docs/Web/HTTP/Status/407) (« Proxy Authentication Required »), l'en-tête de réponse [`Proxy-Authenticate`](/fr/docs/Web/HTTP/Headers/Proxy-Authenticate) contient au moins un défi applicable au système de procuration et l'en-tête de requête [`Proxy-Authorization`](/fr/docs/Web/HTTP/Headers/Proxy-Authorization) est utilisé pour fournir les identifiants au serveur de procuration.
 
-<h3 id="access_forbidden">Accès interdit</h3>
+### Accès interdit
 
-<p>Si un serveur de procuration reçoit des identifiants valides ne permettant pas d'avoir accès à une ressource donnée, le serveur doit répondre avec un code de réponse <a href="/fr/docs/Web/HTTP/Status/403"><code>403</code></a> (« Forbidden »). Dans ce cas, à l'inverse des codes <a href="/fr/docs/Web/HTTP/Status/401"><code>401</code></a> (« Unauthorized ») ou <a href="/fr/docs/Web/HTTP/Status/407"><code>407</code></a> (« Proxy Authentication Required »), l'authentification n'est pas possible pour cet utilisateur.</p>
+Si un serveur de procuration reçoit des identifiants valides ne permettant pas d'avoir accès à une ressource donnée, le serveur doit répondre avec un code de réponse [`403`](/fr/docs/Web/HTTP/Status/403) (« Forbidden »). Dans ce cas, à l'inverse des codes [`401`](/fr/docs/Web/HTTP/Status/401) (« Unauthorized ») ou [`407`](/fr/docs/Web/HTTP/Status/407) (« Proxy Authentication Required »), l'authentification n'est pas possible pour cet utilisateur.
 
-<h3 id="authentication_of_cross-origin_images">Authentification des images multi-origines</h3>
+### Authentification des images multi-origines
 
-<p>Une faille de sécurité potentielle qui a été récemment corrigée par les navigateurs est l'authentification des images multi-origines. À partir de <a href="/fr/docs/Mozilla/Firefox/Releases/59">Firefox 59</a> et versions ultérieures, les images chargées depuis des origines différentes du site courant ne sont plus en mesure de déclencher l'ouverture d'une fenêtre de dialogue (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1423146">bug 1423146</a>) demandant l'authentification HTTP, empêchant ainsi le vol d'identifiants utilisateurs si des personnes mal-intentionnées étaient en mesure d'embarquer une image aléatoire dans une page.</p>
+Une faille de sécurité potentielle qui a été récemment corrigée par les navigateurs est l'authentification des images multi-origines. À partir de [Firefox 59](/fr/docs/Mozilla/Firefox/Releases/59) et versions ultérieures, les images chargées depuis des origines différentes du site courant ne sont plus en mesure de déclencher l'ouverture d'une fenêtre de dialogue ([bug 1423146](https://bugzilla.mozilla.org/show_bug.cgi?id=1423146)) demandant l'authentification HTTP, empêchant ainsi le vol d'identifiants utilisateurs si des personnes mal-intentionnées étaient en mesure d'embarquer une image aléatoire dans une page.
 
-<h3 id="character_encoding_of_http_authentication">Encodage de caractère de l'authentification HTTP</h3>
+### Encodage de caractère de l'authentification HTTP
 
-<p>Les navigateurs utilisent l'encodage de caractère <code>utf-8</code> pour les noms d'utilisateur ainsi que les mots de passe. Firefox utilisait auparavant l'encodage <code>ISO-8859-1</code>, mais l'a remplacé par <code>utf-8</code> afin de s'aligner avec les autres navigateurs et ainsi éviter les potentiels problèmes, comme décrit dans le <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1419658">bug 1419658</a>.</p>
+Les navigateurs utilisent l'encodage de caractère `utf-8` pour les noms d'utilisateur ainsi que les mots de passe. Firefox utilisait auparavant l'encodage `ISO-8859-1`, mais l'a remplacé par `utf-8` afin de s'aligner avec les autres navigateurs et ainsi éviter les potentiels problèmes, comme décrit dans le [bug 1419658](https://bugzilla.mozilla.org/show_bug.cgi?id=1419658).
 
-<h3 id="www-authenticate_and_proxy-authenticate_headers">En-têtes WWW-Authenticate et Proxy-Authenticate</h3>
+### En-têtes WWW-Authenticate et Proxy-Authenticate
 
-<p>Les en-têtes de réponse <a href="/fr/docs/Web/HTTP/Headers/WWW-Authenticate"><code>WWW-Authenticate</code></a> et <a href="/fr/docs/Web/HTTP/Headers/Proxy-Authenticate"><code>Proxy-Authenticate</code></a> définissent le schéma d'authentification devant être utilisée pour accéder à une ressource, afin que le client désirant y accéder puisse savoir comment fournir les identifiants.</p>
+Les en-têtes de réponse [`WWW-Authenticate`](/fr/docs/Web/HTTP/Headers/WWW-Authenticate) et [`Proxy-Authenticate`](/fr/docs/Web/HTTP/Headers/Proxy-Authenticate) définissent le schéma d'authentification devant être utilisée pour accéder à une ressource, afin que le client désirant y accéder puisse savoir comment fournir les identifiants.
 
-<p>La syntaxe pour ces en-têtes est la suivante :</p>
+La syntaxe pour ces en-têtes est la suivante :
 
-<pre class="brush: html">WWW-Authenticate: &lt;type&gt; realm=&lt;realm&gt;
-Proxy-Authenticate: &lt;type&gt; realm=&lt;realm&gt;</pre>
+```html
+WWW-Authenticate: <type> realm=<realm>
+Proxy-Authenticate: <type> realm=<realm>
+```
 
-<p>Ici, <code>&lt;type&gt;</code> est le schéma d'authentification (« Basic » est le plus courant des schémas, et est présenté <a href="#basic_authentication_scheme">ici</a>). Le <code>realm</code> (« <em>domaine</em> » en français) est utilisé pour décrire la « zone » protégée, ou pour indiquer la portée de la protection. Cela pourrait être un message, par exemple « Accès au site de pré-production », pour que l'utilisateur puisse savoir à quel espace il est en train d'accéder.</p>
+Ici, `<type>` est le schéma d'authentification (« Basic » est le plus courant des schémas, et est présenté [ici](#basic_authentication_scheme)). Le `realm` (« _domaine_ » en français) est utilisé pour décrire la « zone » protégée, ou pour indiquer la portée de la protection. Cela pourrait être un message, par exemple « Accès au site de pré-production », pour que l'utilisateur puisse savoir à quel espace il est en train d'accéder.
 
-<h3 id="authorization_and_proxy-authorization_headers">En-têtes Authorization et Proxy-Authorization</h3>
+### En-têtes Authorization et Proxy-Authorization
 
-<p>Les en-têtes de requête <a href="/fr/docs/Web/HTTP/Headers/Authorization"><code>Authorization</code></a> et <a href="/fr/docs/Web/HTTP/Headers/Proxy-Authorization"><code>Proxy-Authorization</code></a> contiennent les identifiants pour authentifier un client avec un serveur (de procuration). Ici, le type est encore une fois nécessaire, suivi par les identifiants, qui peuvent être encodés voire encryptés selon le schéma d'authentification utilisé.</p>
+Les en-têtes de requête [`Authorization`](/fr/docs/Web/HTTP/Headers/Authorization) et [`Proxy-Authorization`](/fr/docs/Web/HTTP/Headers/Proxy-Authorization) contiennent les identifiants pour authentifier un client avec un serveur (de procuration). Ici, le type est encore une fois nécessaire, suivi par les identifiants, qui peuvent être encodés voire encryptés selon le schéma d'authentification utilisé.
 
-<pre class="brush: html">Authorization: &lt;type&gt; &lt;credentials&gt;
-Proxy-Authorization: &lt;type&gt; &lt;credentials&gt;</pre>
+```html
+Authorization: <type> <credentials>
+Proxy-Authorization: <type> <credentials>
+```
 
-<h3 id="authentication_schemes">Schéma d'authentification</h3>
+### Schéma d'authentification
 
-<p>La structure d'authentification HTTP est utilisée par plusieurs schémas d'authentification. Ils diffèrent de par leur niveau de sécurité ainsi que par leur disponibilité dans les systèmes client ou serveur.</p>
+La structure d'authentification HTTP est utilisée par plusieurs schémas d'authentification. Ils diffèrent de par leur niveau de sécurité ainsi que par leur disponibilité dans les systèmes client ou serveur.
 
-<p>Le plus commun est le schéma d'authentification « Basique » (« Basic » en anglais), qui est présenté plus en détail ci-dessous. IANA maintient une <a href="https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml">liste des schémas d'authentification</a>, mais ils y en a d'autres fournit par des services d'hébergement comme Amazon AWS. Les schémas communs sont :</p>
+Le plus commun est le schéma d'authentification « Basique » (« Basic » en anglais), qui est présenté plus en détail ci-dessous. IANA maintient une [liste des schémas d'authentification](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml), mais ils y en a d'autres fournit par des services d'hébergement comme Amazon AWS. Les schémas communs sont :
 
-<dl>
-  <dt>Basic</dt>
-  <dd>Voir <a href="https://tools.ietf.org/html/rfc7617">RFC 7617</a>, identifiants encodés en base64. Voir ci-dessous pour plus de détails.</dd>
-  <dt>Bearer</dt>
-  <dd>Voir <a href="https://tools.ietf.org/html/rfc6750">RFC 6750</a>, jetons <em>bearer</em> (« porteur » en français) pour accéder à des ressources protégées par OAuth 2.0.</dd>
-  <dt>Digest</dt>
-  <dd>Voir <a href="https://tools.ietf.org/html/rfc7616">RFC 7616</a>, Firefox n'est compatible qu'avec le chiffrement md5, voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=472823">bug 472823</a> pour la compatibilité avec le chiffrement SHA.</dd>
-  <dt>HOBA</dt>
-  <dd>Voir <a href="https://tools.ietf.org/html/rfc7486">RFC 7486</a>, <strong>H</strong>TTP <strong>O</strong>rigin-<strong>B</strong>ound <strong>A</strong>uthentication, basé sur une signature digitale.</dd>
-  <dt>Mutual</dt>
-  <dd>Voir <a href="https://tools.ietf.org/html/draft-ietf-httpauth-mutual-11">draft-ietf-httpauth-mutual</a>.</dd>
-  <dt>AWS4-HMAC-SHA256</dt>
-  <dd>Voir la <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html">Documentation AWS</a>.</dd>
-</dl>
+- Basic
+  - : Voir [RFC 7617](https://tools.ietf.org/html/rfc7617), identifiants encodés en base64. Voir ci-dessous pour plus de détails.
+- Bearer
+  - : Voir [RFC 6750](https://tools.ietf.org/html/rfc6750), jetons _bearer_ (« porteur » en français) pour accéder à des ressources protégées par OAuth 2.0.
+- Digest
+  - : Voir [RFC 7616](https://tools.ietf.org/html/rfc7616), Firefox n'est compatible qu'avec le chiffrement md5, voir [bug 472823](https://bugzilla.mozilla.org/show_bug.cgi?id=472823) pour la compatibilité avec le chiffrement SHA.
+- HOBA
+  - : Voir [RFC 7486](https://tools.ietf.org/html/rfc7486), **H**TTP **O**rigin-**B**ound **A**uthentication, basé sur une signature digitale.
+- Mutual
+  - : Voir [draft-ietf-httpauth-mutual](https://tools.ietf.org/html/draft-ietf-httpauth-mutual-11).
+- AWS4-HMAC-SHA256
+  - : Voir la [Documentation AWS](https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html).
 
-<h2 id="basic_authentication_scheme">Schéma d'authentification basique</h2>
+## Schéma d'authentification basique
 
-<p>Le schéma d'authentification « basique » est défini dans la <a href="https://tools.ietf.org/html/rfc7617">RFC 7617</a>, et transmet les identifiants via des ensembles ID_utilisateur/mot_de_passe, encodés avec base64.</p>
+Le schéma d'authentification « basique » est défini dans la [RFC 7617](https://tools.ietf.org/html/rfc7617), et transmet les identifiants via des ensembles ID_utilisateur/mot_de_passe, encodés avec base64.
 
-<h3 id="security_of_basic_authentication">Sécurité de l'authentification basique</h3>
+### Sécurité de l'authentification basique
 
-<p>Étant donné que l'ID utilisateur et le mot de passe transitent sur le réseau en clair (base64 étant un encodage réversible), le schéma d'authentification basique n'est pas sécurisé. C'est pourquoi HTTPS / TLS doivent être utilisés avec ce type d'authentification. Sans cela, ce schéma <strong>ne doit pas</strong> être utilisé pour protéger des informations sensibles.</p>
+Étant donné que l'ID utilisateur et le mot de passe transitent sur le réseau en clair (base64 étant un encodage réversible), le schéma d'authentification basique n'est pas sécurisé. C'est pourquoi HTTPS / TLS doivent être utilisés avec ce type d'authentification. Sans cela, ce schéma **ne doit pas** être utilisé pour protéger des informations sensibles.
 
-<h3 id="restricting_access_with_apache_and_basic_authentication">Restreindre l'accès avec Apache et l'authentification basique</h3>
+### Restreindre l'accès avec Apache et l'authentification basique
 
-<p>Pour protéger avec un mot de passe un répertoire sur un serveur Apache, vous aurez besoin d'utiliser un ou plusieurs fichiers <code>.htaccess</code> et <code>.htpasswd</code>.</p>
+Pour protéger avec un mot de passe un répertoire sur un serveur Apache, vous aurez besoin d'utiliser un ou plusieurs fichiers `.htaccess` et `.htpasswd`.
 
-<p>Le fichier <code>.htaccess</code> ressemble à ceci :</p>
+Le fichier `.htaccess` ressemble à ceci :
 
-<pre>AuthType Basic
-AuthName "Accès au site de pré-production"
-AuthUserFile /chemin/vers/.htpasswd
-Require valid-user</pre>
+    AuthType Basic
+    AuthName "Accès au site de pré-production"
+    AuthUserFile /chemin/vers/.htpasswd
+    Require valid-user
 
-<p>Le fichier <code>.htaccess</code> fait référence à un fichier <code>.htpasswd</code> dans lequel chaque ligne contient un nom d'utilisateur et un mot de passe séparés par deux-points (« : »). Vous ne pouvez pas déchiffrer les mots de passe à l'intérieur, car ils sont <a href="https://httpd.apache.org/docs/2.4/misc/password_encryptions.html">chiffrées</a> (en md5 en l'occurrence). Vous pouvez tout à fait nommer votre fichier <code>.htpasswd</code> différemment si vous le désirez, mais gardez en tête que ce fichier ne doit pas être accessible à quiconque (Apache est normalement configuré pour empêcher l'accès aux fichiers <code>.ht*</code>).</p>
+Le fichier `.htaccess` fait référence à un fichier `.htpasswd` dans lequel chaque ligne contient un nom d'utilisateur et un mot de passe séparés par deux-points (« : »). Vous ne pouvez pas déchiffrer les mots de passe à l'intérieur, car ils sont [chiffrées](https://httpd.apache.org/docs/2.4/misc/password_encryptions.html) (en md5 en l'occurrence). Vous pouvez tout à fait nommer votre fichier `.htpasswd` différemment si vous le désirez, mais gardez en tête que ce fichier ne doit pas être accessible à quiconque (Apache est normalement configuré pour empêcher l'accès aux fichiers `.ht*`).
 
-<pre>aladdin:$apr1$ZjTqBB3f$IF9gdYAGlMrs2fuINjHsz.
-user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/</pre>
+    aladdin:$apr1$ZjTqBB3f$IF9gdYAGlMrs2fuINjHsz.
+    user2:$apr1$O04r.y2H$/vEkesPhVInBByJUkXitA/
 
-<h3 id="restricting_access_with_nginx_and_basic_authentication">Restreindre l'accès avec nginx et l'authentification basique</h3>
+### Restreindre l'accès avec nginx et l'authentification basique
 
-<p>Pour nginx, vous aurez besoin de spécifier une zone ou emplacement (<em>location</em> en anglais) à protéger, ainsi que la directive <code>auth_basic</code> définissant le nom de cette zone. La directive <code>auth_basic_user_file</code> fait référence à un fichier .htpasswd contenant les identifiants utilisateurs encryptés, exactement comme dans l'exemple avec Apache ci-dessus.</p>
+Pour nginx, vous aurez besoin de spécifier une zone ou emplacement (_location_ en anglais) à protéger, ainsi que la directive `auth_basic` définissant le nom de cette zone. La directive `auth_basic_user_file` fait référence à un fichier .htpasswd contenant les identifiants utilisateurs encryptés, exactement comme dans l'exemple avec Apache ci-dessus.
 
-<pre>location /status {
-  auth_basic           "Access to the staging site";
-  auth_basic_user_file /etc/apache2/.htpasswd;
-}</pre>
+    location /status {
+      auth_basic           "Access to the staging site";
+      auth_basic_user_file /etc/apache2/.htpasswd;
+    }
 
-<h3 id="access_using_credentials_in_the_url">Accès avec identifiants dans l'URL</h3>
+### Accès avec identifiants dans l'URL
 
-<p>Beaucoup de clients permettent d'éviter la fenêtre de dialogue demandant les identifiants en utilisant une URL contenant le nom d'utilisateur ainsi que le mot de passe comme suit :</p>
+Beaucoup de clients permettent d'éviter la fenêtre de dialogue demandant les identifiants en utilisant une URL contenant le nom d'utilisateur ainsi que le mot de passe comme suit :
 
-<pre class="example-bad">https://utilisateur:password@www.example.com/</pre>
+```plain example-bad
+https://utilisateur:password@www.example.com/
+```
 
-<p><strong>L'utilisation de ces URLs est dépréciée</strong>. Dans Chrome, la partie <code>username:password@</code> dans les URLs est même <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7">retirée pour des raisons de sécurité</a>. Dans Firefox, le site est testé afin de savoir s'il requiert ou non l'authentification et si ce n'est pas le cas, Firefox va avertir l'utilisateur avec une fenêtre de dialogue « Vous êtes sur le point de vous connecter au site "www.example.com" avec le nom d'utilisateur "username", mais le site ne requiert pas d'authentification. Ceci pourrait être une tentative pour vous piéger. »</p>
+**L'utilisation de ces URLs est dépréciée**. Dans Chrome, la partie `username:password@` dans les URLs est même [retirée pour des raisons de sécurité](https://bugs.chromium.org/p/chromium/issues/detail?id=82250#c7). Dans Firefox, le site est testé afin de savoir s'il requiert ou non l'authentification et si ce n'est pas le cas, Firefox va avertir l'utilisateur avec une fenêtre de dialogue « Vous êtes sur le point de vous connecter au site "www\.example.com" avec le nom d'utilisateur "username", mais le site ne requiert pas d'authentification. Ceci pourrait être une tentative pour vous piéger. »
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li>L'entête <a href="/fr/docs/Web/HTTP/Headers/WWW-Authenticate"><code>WWW-Authenticate</code></a></li>
-  <li>L'entête <a href="/fr/docs/Web/HTTP/Headers/Authorization"><code>Authorization</code></a></li>
-  <li>L'entête <a href="/fr/docs/Web/HTTP/Headers/Proxy-Authorization"><code>Proxy-Authorization</code></a></li>
-  <li>L'entête <a href="/fr/docs/Web/HTTP/Headers/Proxy-Authenticate"><code>Proxy-Authenticate</code></a></li>
-  <li>Les codes de statut : <a href="/fr/docs/Web/HTTP/Status/401"><code>401</code></a>, <a href="/fr/docs/Web/HTTP/Status/403"><code>403</code></a> et <a href="/fr/docs/Web/HTTP/Status/407"><code>407</code></a></li>
-</ul>
+- L'entête [`WWW-Authenticate`](/fr/docs/Web/HTTP/Headers/WWW-Authenticate)
+- L'entête [`Authorization`](/fr/docs/Web/HTTP/Headers/Authorization)
+- L'entête [`Proxy-Authorization`](/fr/docs/Web/HTTP/Headers/Proxy-Authorization)
+- L'entête [`Proxy-Authenticate`](/fr/docs/Web/HTTP/Headers/Proxy-Authenticate)
+- Les codes de statut : [`401`](/fr/docs/Web/HTTP/Status/401), [`403`](/fr/docs/Web/HTTP/Status/403) et [`407`](/fr/docs/Web/HTTP/Status/407)

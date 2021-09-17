@@ -13,90 +13,76 @@ tags:
   - navigate-to
 translation_of: Web/HTTP/Headers/Content-Security-Policy/navigate-to
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <code><strong>navigate</strong></code><strong><code>-to</code></strong> restreint les URL vers lesquelles un document peut initier une navigation de quelque manière que ce soit, dont {{HTMLElement("form")}} (si {{CSP("form-action")}} n'est pas spécifié), {{HTMLElement("a")}}, {{DOMxRef("window.location")}}, {{DOMxRef("window.open")}}, etc. Elle permet de renforcer les navigations que le document peut initier et <strong>non</strong> les adresses vers lesquelles ce document peut naviguer.</p>
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`navigate`\*\***`-to`** restreint les URL vers lesquelles un document peut initier une navigation de quelque manière que ce soit, dont {{HTMLElement("form")}} (si {{CSP("form-action")}} n'est pas spécifié), {{HTMLElement("a")}}, {{DOMxRef("window.location")}}, {{DOMxRef("window.open")}}, etc. Elle permet de renforcer les navigations que le document peut initier et **non\*\* les adresses vers lesquelles ce document peut naviguer.
 
-<div class="note">
-<p><strong>Note :</strong> Si la directive {{CSP("form-action")}} est présente, la directive <code>navigate-to</code> ne sera pas appliquée sur la navigation par la soumission de formulaire.</p>
-</div>
+> **Note :** Si la directive {{CSP("form-action")}} est présente, la directive `navigate-to` ne sera pas appliquée sur la navigation par la soumission de formulaire.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Version de CSP</th>
-   <td>3</td>
-  </tr>
-  <tr>
-   <th scope="row">Type de directive</th>
-   <td>{{Glossary("Navigation directive")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{CSP("default-src")}} par défaut</th>
-   <td>Non, ne pas la définir autorise toutes les adresses.</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Version de CSP</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th scope="row">Type de directive</th>
+      <td>{{Glossary("Navigation directive")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{CSP("default-src")}} par défaut</th>
+      <td>Non, ne pas la définir autorise toutes les adresses.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Une ou plusieurs sources peuvent être utilisées pour cette directive :</p>
+Une ou plusieurs sources peuvent être utilisées pour cette directive :
 
-<pre class="syntaxbox">Content-Security-Policy: navigate-to &lt;source&gt;;
-Content-Security-Policy: navigate-to &lt;source&gt; &lt;source&gt;;
-</pre>
+    Content-Security-Policy: navigate-to <source>;
+    Content-Security-Policy: navigate-to <source> <source>;
 
-<h3 id="Sources">Sources</h3>
+### Sources
 
-<p>{{page("fr/Web/HTTP/Headers/Content-Security-Policy/default-src", "Sources")}}</p>
+{{page("fr/Web/HTTP/Headers/Content-Security-Policy/default-src", "Sources")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Configuration_par_balise_&lt;meta>">Configuration par balise &lt;meta&gt;</h3>
+### Configuration par balise \<meta>
 
-<pre class="brush: html">&lt;meta http-equiv="Content-Security-Policy" content="navigate-to 'none'"&gt;
-</pre>
+```html
+<meta http-equiv="Content-Security-Policy" content="navigate-to 'none'">
+```
 
-<h3 id="Cas_de_violation">Cas de violation</h3>
+### Cas de violation
 
-<p>Utiliser l'élément {{HTMLElement("form")}} avec un attribut <code>action</code> défini à un script embarqué en JavaScript résultera en une violation de CSP :</p>
+Utiliser l'élément {{HTMLElement("form")}} avec un attribut `action` défini à un script embarqué en JavaScript résultera en une violation de CSP :
 
-<pre class="brush: html; example-bad">&lt;meta http-equiv="Content-Security-Policy" content="navigate-to 'none'"&gt;
+```html example-bad
+<meta http-equiv="Content-Security-Policy" content="navigate-to 'none'">
 
-&lt;form action="javascript:alert('Foo')" id="form1" method="post"&gt;
-  &lt;input type="text" name="fieldName" value="fieldValue"&gt;
-  &lt;input type="submit" id="submit" value="submit"&gt;
-&lt;/form&gt;
-</pre>
+<form action="javascript:alert('Foo')" id="form1" method="post">
+  <input type="text" name="fieldName" value="fieldValue">
+  <input type="submit" id="submit" value="submit">
+</form>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{specName("CSP 3.0", "#directive-navigate-to", "navigate-to")}}</td>
-   <td>{{Spec2("CSP 3.0")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | Statut                       | Commentaire          |
+| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{specName("CSP 3.0", "#directive-navigate-to", "navigate-to")}} | {{Spec2("CSP 3.0")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("http.headers.csp.Content-Security-Policy.navigate-to")}}</p>
+{{Compat("http.headers.csp.Content-Security-Policy.navigate-to")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTTPheader("Content-Security-Policy")}}</li>
- <li>{{CSP("form-action")}}</li>
- <li>Attribut <code>href</code> {{HTMLElement("a")}}</li>
- <li>{{HTMLElement("form")}}</li>
- <li>{{DOMxRef("window.location")}}</li>
- <li>{{DOMxRef("window.open")}}</li>
-</ul>
+- {{HTTPheader("Content-Security-Policy")}}
+- {{CSP("form-action")}}
+- Attribut `href` {{HTMLElement("a")}}
+- {{HTMLElement("form")}}
+- {{DOMxRef("window.location")}}
+- {{DOMxRef("window.open")}}

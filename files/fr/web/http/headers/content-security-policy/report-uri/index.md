@@ -11,55 +11,55 @@ tags:
   - Sécurité
 translation_of: Web/HTTP/Headers/Content-Security-Policy/report-uri
 ---
-<div>{{HTTPSidebar}}{{deprecated_header}}</div>
+{{HTTPSidebar}}{{deprecated_header}}
 
-<p>La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <code><strong>report-uri</strong></code> demande à l'agent utilisateur de rapporter les violations de règles CSP. Ces rapports de violation sont constituées d'un document JSON envoyé via une requête HTTP POST à l'URI fournie.</p>
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`report-uri`** demande à l'agent utilisateur de rapporter les violations de règles CSP. Ces rapports de violation sont constituées d'un document JSON envoyé via une requête HTTP POST à l'URI fournie.
 
-<div class="warning">
-<p><strong>Attention :</strong> Bien que la directive {{CSP("report-to")}} est prévue remplacer la directive <code><strong>report-uri</strong></code> maintenant dépréciée, {{CSP("report-to")}} n'est pas encore supportée par la plupart des navigateurs modernes. Par rétrocompatibilité avec les navigateurs courants et tout en prévoyant une compatibilité future quand les navigateurs supporteront {{CSP("report-to")}}, vous pouvez spécifier les deux directives <code><strong>report-uri</strong></code> et {{CSP("report-to")}}:</p>
+> **Attention :** Bien que la directive {{CSP("report-to")}} est prévue remplacer la directive **`report-uri`** maintenant dépréciée, {{CSP("report-to")}} n'est pas encore supportée par la plupart des navigateurs modernes. Par rétrocompatibilité avec les navigateurs courants et tout en prévoyant une compatibilité future quand les navigateurs supporteront {{CSP("report-to")}}, vous pouvez spécifier les deux directives **`report-uri`** et {{CSP("report-to")}}:
+>
+>     Content-Security-Policy: ...; report-uri https://endpoint.com; report-to groupname
+>
+> Dans les navigateurs qui supportent {{CSP("report-to")}}, la directive **`report-uri`** sera ignorée.
 
-<pre class="syntaxbox">Content-Security-Policy: ...; report-uri https://endpoint.com; report-to groupname</pre>
-
-<p>Dans les navigateurs qui supportent {{CSP("report-to")}}, la directive <code><strong>report-uri</strong></code> sera ignorée.</p>
-</div>
-
-<p>Cette directive n'a aucun effet en elle-même, mais prend tout son sens en étant combinée à d'autres directives.</p>
+Cette directive n'a aucun effet en elle-même, mais prend tout son sens en étant combinée à d'autres directives.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Version de CSP</th>
-   <td>1</td>
-  </tr>
-  <tr>
-   <th scope="row">Type de directive</th>
-   <td>{{Glossary("Reporting directive")}}</td>
-  </tr>
-  <tr>
-   <th colspan="2" scope="row">Cette directive n'est pas supportée dans l'élément {{HTMLElement("meta")}}.</th>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Version de CSP</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type de directive</th>
+      <td>{{Glossary("Reporting directive")}}</td>
+    </tr>
+    <tr>
+      <th colspan="2" scope="row">
+        Cette directive n'est pas supportée dans l'élément
+        {{HTMLElement("meta")}}.
+      </th>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Content-Security-Policy: report-uri &lt;uri&gt;;
-Content-Security-Policy: report-uri &lt;uri&gt; &lt;uri&gt;;</pre>
+    Content-Security-Policy: report-uri <uri>;
+    Content-Security-Policy: report-uri <uri> <uri>;
 
-<dl>
- <dt>&lt;uri&gt;</dt>
- <dd>Une URI où envoyer la requête POST contenant le rapport de violation.</dd>
-</dl>
+- \<uri>
+  - : Une URI où envoyer la requête POST contenant le rapport de violation.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Voir {{HTTPHeader("Content-Security-Policy-Report-Only")}} pour plus d'informations et d'exemples.</p>
+Voir {{HTTPHeader("Content-Security-Policy-Report-Only")}} pour plus d'informations et d'exemples.
 
-<pre>Content-Security-Policy: default-src https:; report-uri /csp-violation-report-endpoint/</pre>
+    Content-Security-Policy: default-src https:; report-uri /csp-violation-report-endpoint/
 
-<p><code>/csp-violation-report-endpoint/</code> pourrait par exemple exécuter un script PHP similaire au suivant qui journaliserait le JSON détaillant la violation et, si elle est la première ajoutée au journal, enverrait un courril à l'administrateur :</p>
+`/csp-violation-report-endpoint/` pourrait par exemple exécuter un script PHP similaire au suivant qui journaliserait le JSON détaillant la violation et, si elle est la première ajoutée au journal, enverrait un courril à l'administrateur :
 
-<pre class="brush: php">&lt;?php
+```php
+<?php
 
 // Start configure
 $log_file = dirname(__FILE__) . '/csp-violations.log';
@@ -88,44 +88,26 @@ if ($json_data = json_decode($json_data)) {
       $log_file;
     mail($email_address, $email_subject, $message,
          'Content-Type: text/plain;charset=utf-8');
-  } else if (filesize($log_file) &gt; $log_file_size_limit) {
+  } else if (filesize($log_file) > $log_file_size_limit) {
     exit(0);
   }
 
   file_put_contents($log_file, $json_data, FILE_APPEND | LOCK_EX);
 }
+```
 
-</pre>
+## Spécifications
 
-<h2 id="Spécifications">Spécifications</h2>
+| Spécification                                                                        | Statut                       | Commentaire          |
+| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{specName("CSP 3.0", "#directive-report-uri", "report-uri")}} | {{Spec2('CSP 3.0')}} | Inchangé.            |
+| {{specName("CSP 1.1", "#directive-report-uri", "report-uri")}} | {{Spec2('CSP 1.1')}} | Définition initiale. |
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{specName("CSP 3.0", "#directive-report-uri", "report-uri")}}</td>
-   <td>{{Spec2('CSP 3.0')}}</td>
-   <td>Inchangé.</td>
-  </tr>
-  <tr>
-   <td>{{specName("CSP 1.1", "#directive-report-uri", "report-uri")}}</td>
-   <td>{{Spec2('CSP 1.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+## Compatibilité des navigateurs
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+{{Compat("http.headers.csp.Content-Security-Policy.report-uri")}}
 
-<p>{{Compat("http.headers.csp.Content-Security-Policy.report-uri")}}</p>
+## Voir aussi
 
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li>{{HTTPHeader("Content-Security-Policy-Report-Only")}}</li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- {{HTTPHeader("Content-Security-Policy-Report-Only")}}

@@ -14,82 +14,69 @@ tags:
   - source
 translation_of: Web/HTTP/Headers/Content-Security-Policy/img-src
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>La directive HTTP {{HTTPHeader("Content-Security-Policy")}} <code><strong>img-src</strong></code> sépcifie les sources valides d'images et de favicons.</p>
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} **`img-src`** sépcifie les sources valides d'images et de favicons.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Version de CSP</th>
-   <td>1</td>
-  </tr>
-  <tr>
-   <th scope="row">Type de directive</th>
-   <td>{{Glossary("Fetch directive")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{CSP("default-src")}} par défaut</th>
-   <td>Oui, si cette directive est absente, l'agent utilisateur consultera la directive <code>default-src</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Version de CSP</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type de directive</th>
+      <td>{{Glossary("Fetch directive")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{CSP("default-src")}} par défaut</th>
+      <td>
+        Oui, si cette directive est absente, l'agent utilisateur consultera la
+        directive <code>default-src</code>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Une ou plusieurs sources peuvent être autorisées pour cette directive :</p>
+Une ou plusieurs sources peuvent être autorisées pour cette directive :
 
-<pre class="syntaxbox">Content-Security-Policy: img-src &lt;source&gt;;
-Content-Security-Policy: img-src &lt;source&gt; &lt;source&gt;;
-</pre>
+    Content-Security-Policy: img-src <source>;
+    Content-Security-Policy: img-src <source> <source>;
 
-<h3 id="Sources">Sources</h3>
+### Sources
 
-<p>{{page("fr/Web/HTTP/Headers/Content-Security-Policy/default-src", "Sources")}}</p>
+{{page("fr/Web/HTTP/Headers/Content-Security-Policy/default-src", "Sources")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Cas_de_violation">Cas de violation</h3>
+### Cas de violation
 
-<p>Soit cet en-tête CSP :</p>
+Soit cet en-tête CSP :
 
-<pre class="brush: bash">Content-Security-Policy: img-src https://example.com/</pre>
+```bash
+Content-Security-Policy: img-src https://example.com/
+```
 
-<p>Cet élément {{HTMLElement("img")}} est bloqué et ne se chargera pas :</p>
+Cet élément {{HTMLElement("img")}} est bloqué et ne se chargera pas :
 
-<pre class="brush: html">&lt;img src="https://not-example.com/foo.jpg" alt="example picture"&gt;</pre>
+```html
+<img src="https://not-example.com/foo.jpg" alt="example picture">
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{specName("CSP 3.0", "#directive-img-src", "img-src")}}</td>
-   <td>{{Spec2('CSP 3.0')}}</td>
-   <td>Inchangé.</td>
-  </tr>
-  <tr>
-   <td>{{specName("CSP 1.1", "#directive-img-src", "img-src")}}</td>
-   <td>{{Spec2('CSP 1.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | Statut                       | Commentaire          |
+| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{specName("CSP 3.0", "#directive-img-src", "img-src")}} | {{Spec2('CSP 3.0')}} | Inchangé.            |
+| {{specName("CSP 1.1", "#directive-img-src", "img-src")}} | {{Spec2('CSP 1.1')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("http.headers.csp.Content-Security-Policy.img-src")}}</p>
+{{Compat("http.headers.csp.Content-Security-Policy.img-src")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li>{{HTMLElement("img")}}</li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- {{HTMLElement("img")}}

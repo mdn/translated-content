@@ -8,34 +8,23 @@ tags:
   - Reference
 translation_of: Web/HTTP/Status/411
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Le code de réponse d'erreur HTTP <code><strong>411</strong></code><strong><code> Length Required</code></strong> indique que le serveur refuse d'accepter la requête si celle-ci ne contient pas d'en-tête {{HTTPHeader("Content-Length")}}.</p>
+Le code de réponse d'erreur HTTP **`411`\*\***` Length Required`\*\* indique que le serveur refuse d'accepter la requête si celle-ci ne contient pas d'en-tête {{HTTPHeader("Content-Length")}}.
 
-<p>On notera que, selon la spécification, lors de l'envoi de données en plusieurs fragments, l'en-tête <code>Content-Length</code> est absent et il est nécessaire d'ajouter la longueur du fragment courant au format hexadécimal. Pour plus de détails, se référer à la page sur l'en-tête {{HTTPHeader("Transfer-Encoding")}}.</p>
+On notera que, selon la spécification, lors de l'envoi de données en plusieurs fragments, l'en-tête `Content-Length` est absent et il est nécessaire d'ajouter la longueur du fragment courant au format hexadécimal. Pour plus de détails, se référer à la page sur l'en-tête {{HTTPHeader("Transfer-Encoding")}}.
 
-<h2 id="Statut">Statut</h2>
+## Statut
 
-<pre class="syntaxbox">411 Length Required</pre>
+    411 Length Required
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Titre</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "411 Length Required" , "6.5.10")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                    | Titre                                                         |
+| ---------------------------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "411 Length Required" , "6.5.10")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTTPHeader("Content-Length")}}</li>
- <li>{{HTTPHeader("Transfer-Encoding")}}</li>
-</ul>
+- {{HTTPHeader("Content-Length")}}
+- {{HTTPHeader("Transfer-Encoding")}}

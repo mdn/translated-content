@@ -9,33 +9,22 @@ tags:
   - Reference
 translation_of: Web/HTTP/Status/417
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Le code de réponse d'erreur HTTP <strong><code>417 Expectation Failed</code></strong> indique que les attentes indiquées par l'en-tête {{HTTPHeader ("Expect")}} n'ont pu être satisfaites.</p>
+Le code de réponse d'erreur HTTP **`417 Expectation Failed`** indique que les attentes indiquées par l'en-tête {{HTTPHeader ("Expect")}} n'ont pu être satisfaites.
 
-<p>Voir la page sur l'en-tête {{HTTPHeader("Expect")}} pour plus de détails.</p>
+Voir la page sur l'en-tête {{HTTPHeader("Expect")}} pour plus de détails.
 
-<h2 id="Statut">Statut</h2>
+## Statut
 
-<pre class="syntaxbox">417 Expectation Failed</pre>
+    417 Expectation Failed
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Titre</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "417 Expectation Failed" , "6.5.14")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                        | Titre                                                         |
+| -------------------------------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "417 Expectation Failed" , "6.5.14")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTTPHeader("Expect")}}</li>
-</ul>
+- {{HTTPHeader("Expect")}}

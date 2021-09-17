@@ -13,56 +13,40 @@ tags:
   - block-all-mixed-content
 translation_of: Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <code><strong>block-all-mixed-content</strong></code> bloque le chargement de ressources via HTTP lorsque la page utilise HTTPS.</p>
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`block-all-mixed-content`** bloque le chargement de ressources via HTTP lorsque la page utilise HTTPS.
 
-<p>Toutes les requêtes vers des <a href="/fr/docs/Sécurité/MixedContent">contenus mixtes</a> sont alors bloquées, y compris les ressources actives et passives. Cela s'applique aussi aux documents {{HTMLElement("iframe")}}, assurant que la page est complètement protégée contre les contenus mixtes.</p>
+Toutes les requêtes vers des [contenus mixtes](/fr/docs/Sécurité/MixedContent) sont alors bloquées, y compris les ressources actives et passives. Cela s'applique aussi aux documents {{HTMLElement("iframe")}}, assurant que la page est complètement protégée contre les contenus mixtes.
 
-<div class="note">
-<p><strong>Note :</strong> La directive {{CSP("upgrade-insecure-requests")}} est évaluée avant <code>block-all-mixed-content</code>. Si elle est définie, alors <code>block-all-mixed-content</code> n'est pas nécessaire, à moins que vous souhaitiez forcer HTTPS sur les anciens navigateurs qui ne le font pas après une redirection vers HTTP.</p>
-</div>
+> **Note :** La directive {{CSP("upgrade-insecure-requests")}} est évaluée avant `block-all-mixed-content`. Si elle est définie, alors `block-all-mixed-content` n'est pas nécessaire, à moins que vous souhaitiez forcer HTTPS sur les anciens navigateurs qui ne le font pas après une redirection vers HTTP.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Content-Security-Policy: block-all-mixed-content;</pre>
+    Content-Security-Policy: block-all-mixed-content;
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre>Content-Security-Policy: block-all-mixed-content;
+    Content-Security-Policy: block-all-mixed-content;
 
-&lt;meta http-equiv="Content-Security-Policy" content="block-all-mixed-content"&gt;
-</pre>
+    <meta http-equiv="Content-Security-Policy" content="block-all-mixed-content">
 
-<p>Pour interdire l'usage de HTTP de manière plus fine, vous pouvez aussi configurer individuellement chaque directive sur <code>https:</code>. Par exemple, pour interdire les images HTTP non sécurisées :</p>
+Pour interdire l'usage de HTTP de manière plus fine, vous pouvez aussi configurer individuellement chaque directive sur `https:`. Par exemple, pour interdire les images HTTP non sécurisées :
 
-<pre>Content-Security-Policy: img-src https:</pre>
+    Content-Security-Policy: img-src https:
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{specName("Mixed Content", "#block-all-mixed-content", "block-all-mixed-content")}}</td>
-   <td>{{Spec2('Mixed Content')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                    | Statut                               | Commentaire          |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{specName("Mixed Content", "#block-all-mixed-content", "block-all-mixed-content")}} | {{Spec2('Mixed Content')}} | Définition initiale. |
 
-<h2 id="Compatibilités_navigateurs">Compatibilités navigateurs</h2>
+## Compatibilités navigateurs
 
-<p>{{Compat("http.headers.csp.block-all-mixed-content")}}</p>
+{{Compat("http.headers.csp.block-all-mixed-content")}}
 
-<h2 id="Voir_également">Voir également</h2>
+## Voir également
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li>{{CSP("upgrade-insecure-requests")}}</li>
- <li><a href="/en-US/docs/Web/Security/Mixed_content">Mixed content</a></li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- {{CSP("upgrade-insecure-requests")}}
+- [Mixed content](/en-US/docs/Web/Security/Mixed_content)

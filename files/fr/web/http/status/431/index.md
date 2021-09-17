@@ -8,33 +8,22 @@ tags:
   - Reference
 translation_of: Web/HTTP/Status/431
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Le code de statut de réponse HTTP <code><strong>431 Request Header Fields Too Large</strong></code> indique que le serveur n'est pas disposé à traiter la requête, car les champs d'en-têtes sont trop grands. La requête peut être renvoyée une fois que les champs des en-têtes de la requête auront été réduits.</p>
+Le code de statut de réponse HTTP **`431 Request Header Fields Too Large`** indique que le serveur n'est pas disposé à traiter la requête, car les champs d'en-têtes sont trop grands. La requête peut être renvoyée une fois que les champs des en-têtes de la requête auront été réduits.
 
-<p>Ce code peut être utilisé lorsque tous les champs sont trop grands ou qu'un seul champ est trop grand. Cette erreur ne devrait pas se produire pour les systèmes en production mais peut être employée lorsqu'on teste un nouveau système pour lequel tous les contrôles n'ont pas encore été mis en place.</p>
+Ce code peut être utilisé lorsque tous les champs sont trop grands ou qu'un seul champ est trop grand. Cette erreur ne devrait pas se produire pour les systèmes en production mais peut être employée lorsqu'on teste un nouveau système pour lequel tous les contrôles n'ont pas encore été mis en place.
 
-<h2 id="Statut">Statut</h2>
+## Statut
 
-<pre class="syntaxbox">431 Request Header Fields Too Large</pre>
+    431 Request Header Fields Too Large
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Titre</th>
-  </tr>
-  <tr>
-   <td>{{RFC("6585", "431 Request Header Fields Too Large" , "5")}}</td>
-   <td>Additional HTTP Status Codes</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | Titre                        |
+| -------------------------------------------------------------------------------- | ---------------------------- |
+| {{RFC("6585", "431 Request Header Fields Too Large" , "5")}} | Additional HTTP Status Codes |
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{Glossary("En-tête")}}</li>
-</ul>
+- {{Glossary("En-tête")}}

@@ -1,29 +1,29 @@
 ---
 title: 201 Created
 slug: Web/HTTP/Status/201
-browser-compat: http.status.201
 translation_of: Web/HTTP/Status/201
+browser-compat: http.status.201
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Le code de statut HTTP <strong><code>201 Created</code></strong> indique que la requête a réussi et qu'une ressource a été créée en conséquence. La nouvelle ressource est effectivement créée avant que la réponse soit renvoyée et cette nouvelle ressource est renvoyée dans le corps du message. Son emplacement est indiqué par l'URL de la requête ou le contenu de l'en-tête <a href="/fr/docs/Web/HTTP/Headers/Location"><code>Location</code></a>.</p>
+Le code de statut HTTP **`201 Created`** indique que la requête a réussi et qu'une ressource a été créée en conséquence. La nouvelle ressource est effectivement créée avant que la réponse soit renvoyée et cette nouvelle ressource est renvoyée dans le corps du message. Son emplacement est indiqué par l'URL de la requête ou le contenu de l'en-tête [`Location`](/fr/docs/Web/HTTP/Headers/Location).
 
-<p>Ce code de statut est généralement obtenu comme résultat suite à une requête utilisant la méthode <a href="/fr/docs/Web/HTTP/Methods/POST"><code>POST</code></a>.</p>
+Ce code de statut est généralement obtenu comme résultat suite à une requête utilisant la méthode [`POST`](/fr/docs/Web/HTTP/Methods/POST).
 
-<h2 id="status">Statut</h2>
+## Statut
 
-<pre class="brush: html">201 Created</pre>
+```html
+201 Created
+```
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/Web/HTTP/Methods">Les différentes méthodes pour les requêtes HTTP</a></li>
-</ul>
+- [Les différentes méthodes pour les requêtes HTTP](/fr/docs/Web/HTTP/Methods)

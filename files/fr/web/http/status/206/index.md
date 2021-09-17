@@ -6,75 +6,64 @@ tags:
   - HTTP
 translation_of: Web/HTTP/Status/206
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Le code de statut de réponse succès HTTP <strong><code>206 Partial Content</code></strong> indique que la requête a bien abouti et que le corps de la réponse contient les plages de données demandées, tel que décrit dans l'en-tête {{HTTPHeader("Range")}} de la requête.</p>
+Le code de statut de réponse succès HTTP **`206 Partial Content`** indique que la requête a bien abouti et que le corps de la réponse contient les plages de données demandées, tel que décrit dans l'en-tête {{HTTPHeader("Range")}} de la requête.
 
-<p>S'il n'y a qu'une seule plage, l'entête {{HTTPHeader("Content-Type")}} de la réponse correspondra au type du document et l'en-tête {{HTTPHeader("Content-Range")}} sera fourni.</p>
+S'il n'y a qu'une seule plage, l'entête {{HTTPHeader("Content-Type")}} de la réponse correspondra au type du document et l'en-tête {{HTTPHeader("Content-Range")}} sera fourni.
 
-<p>Si plusieurs plages sont renvoyées, l'en-tête {{HTTPHeader("Content-Type")}} vaudra <code>multipart/byteranges</code> et chaque fragment couvrira une plage, décrite par les en-têtes {{HTTPHeader("Content-Range")}} et {{HTTPHeader("Content-Type")}}.</p>
+Si plusieurs plages sont renvoyées, l'en-tête {{HTTPHeader("Content-Type")}} vaudra `multipart/byteranges` et chaque fragment couvrira une plage, décrite par les en-têtes {{HTTPHeader("Content-Range")}} et {{HTTPHeader("Content-Type")}}.
 
-<h2 id="Statut">Statut</h2>
+## Statut
 
-<pre class="syntaxbox">206 Partial Content</pre>
+    206 Partial Content
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Une réponse qui contient une seule plage :</p>
+Une réponse qui contient une seule plage :
 
-<pre>HTTP/1.1 206 Partial Content
-Date: Wed, 15 Nov 2015 06:25:24 GMT
-Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
-Content-Range: bytes 21010-47021/47022
-Content-Length: 26012
-Content-Type: image/gif
+    HTTP/1.1 206 Partial Content
+    Date: Wed, 15 Nov 2015 06:25:24 GMT
+    Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
+    Content-Range: bytes 21010-47021/47022
+    Content-Length: 26012
+    Content-Type: image/gif
 
-... 26012 bytes of partial image data ...</pre>
+    ... 26012 bytes of partial image data ...
 
-<p>Une réponse qui contient plusieurs plages :</p>
+Une réponse qui contient plusieurs plages :
 
-<pre>HTTP/1.1 206 Partial Content
-Date: Wed, 15 Nov 2015 06:25:24 GMT
-Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
-Content-Length: 1741
-Content-Type: multipart/byteranges; boundary=String_separator
+    HTTP/1.1 206 Partial Content
+    Date: Wed, 15 Nov 2015 06:25:24 GMT
+    Last-Modified: Wed, 15 Nov 2015 04:58:08 GMT
+    Content-Length: 1741
+    Content-Type: multipart/byteranges; boundary=String_separator
 
---String_separator
-Content-Type: application/pdf
-Content-Range: bytes 234-639/8000
+    --String_separator
+    Content-Type: application/pdf
+    Content-Range: bytes 234-639/8000
 
-...la première plage...
---String_separator
-Content-Type: application/pdf
-Content-Range: bytes 4590-7999/8000
+    ...la première plage...
+    --String_separator
+    Content-Type: application/pdf
+    Content-Range: bytes 4590-7999/8000
 
-...La seconde plage
---String_separator--</pre>
+    ...La seconde plage
+    --String_separator--
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Titre</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7233", "206 Partial Content" , "4.1")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Range Requests</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                | Titre                                                  |
+| ------------------------------------------------------------ | ------------------------------------------------------ |
+| {{RFC("7233", "206 Partial Content" , "4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("http/status", "206")}}</p>
+{{Compat("http/status", "206")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTTPHeader("If-Range")}}</li>
- <li>{{HTTPHeader("Range")}}</li>
- <li>{{HTTPHeader("Content-Range")}}</li>
- <li>{{HTTPHeader("Content-Type")}}</li>
-</ul>
+- {{HTTPHeader("If-Range")}}
+- {{HTTPHeader("Range")}}
+- {{HTTPHeader("Content-Range")}}
+- {{HTTPHeader("Content-Type")}}

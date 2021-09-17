@@ -8,37 +8,26 @@ tags:
   - Reference
 translation_of: Web/HTTP/Status/504
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Le code de réponse HTTP d'erreur serveur <code><strong>504</strong></code><strong><code> Gateway Timeout</code></strong> indique que le serveur, agissant comme passerelle ou proxy, ne peut pas recevoir de réponse dans les temps.</p>
+Le code de réponse HTTP d'erreur serveur **`504`\*\***` Gateway Timeout`\*\* indique que le serveur, agissant comme passerelle ou proxy, ne peut pas recevoir de réponse dans les temps.
 
-<p>Une {{interwiki("wikipedia", "Passerelle_(informatique)", "Passerelle")}} peut faire référence à différents éléments en réseaux et une erreur 504 est habituellement quelque chose que vous ne pouvez pas corriger mais qui nécessite une correction sur le serveur web ou sur le proxy par lequel vous passez pour y accéder.</p>
+Une {{interwiki("wikipedia", "Passerelle_(informatique)", "Passerelle")}} peut faire référence à différents éléments en réseaux et une erreur 504 est habituellement quelque chose que vous ne pouvez pas corriger mais qui nécessite une correction sur le serveur web ou sur le proxy par lequel vous passez pour y accéder.
 
-<h2 id="Statut">Statut</h2>
+## Statut
 
-<pre class="syntaxbox">504 Gateway Timeout</pre>
+    504 Gateway Timeout
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Titre</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "504 Gateway Timeout" , "6.6.4")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                    | Titre                                                         |
+| ---------------------------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "504 Gateway Timeout" , "6.6.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("http/status", "504")}}</p>
+{{Compat("http/status", "504")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTTPStatus(502)}}</li>
-</ul>
+- {{HTTPStatus(502)}}

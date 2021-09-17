@@ -7,42 +7,29 @@ tags:
   - Reference
 translation_of: Web/HTTP/Status/308
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Le code de statut de réponse de redirection <code><strong>308</strong></code><strong><code> Permanent Redirect</code></strong> indique que la ressource demandée à définitivement été déplacée vers l'URL contenue dans l'en-tête {{HTTPHeader("Location")}}. Un navigateur redirigera vers cette page et les moteurs de recherche mettront à jour leurs liens vers la ressource (en termes de référencement, cela implique que le flux de référencement est envoyé vers la nouvelle URL).</p>
+Le code de statut de réponse de redirection **`308`\*\***` Permanent Redirect`\*\* indique que la ressource demandée à définitivement été déplacée vers l'URL contenue dans l'en-tête {{HTTPHeader("Location")}}. Un navigateur redirigera vers cette page et les moteurs de recherche mettront à jour leurs liens vers la ressource (en termes de référencement, cela implique que le flux de référencement est envoyé vers la nouvelle URL).
 
-<p>La méthode de requête et son corps ne sont pas modifiés, toutefois {{HTTPStatus("301")}} peut parfois changer la méthode vers {{HTTPHeader("GET")}}.</p>
+La méthode de requête et son corps ne sont pas modifiés, toutefois {{HTTPStatus("301")}} peut parfois changer la méthode vers {{HTTPHeader("GET")}}.
 
-<div class="note">
-<p><strong>Note :</strong> Certaines applications Web peuvent utiliser <code>308 Permanent Redirect</code> de façon non standard et pour d'autres usages. Par exemple, Google Drive utilise la réponse <code>308 Resume Incomplete</code> pour indiquer au client un chargement incomplet qui est bloqué (<a href="https://developers.google.com/drive/v3/web/manage-uploads#resumable">source</a>).</p>
-</div>
+> **Note :** Certaines applications Web peuvent utiliser `308 Permanent Redirect` de façon non standard et pour d'autres usages. Par exemple, Google Drive utilise la réponse `308 Resume Incomplete` pour indiquer au client un chargement incomplet qui est bloqué ([source](https://developers.google.com/drive/v3/web/manage-uploads#resumable)).
 
-<h2 id="Statut">Statut</h2>
+## Statut
 
-<pre class="syntaxbox">308 Permanent Redirect</pre>
+    308 Permanent Redirect
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Titre</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7538", "308 Permanent Redirect" , "3")}}</td>
-   <td>The Hypertext Transfer Protocol Status Code 308 (Permanent Redirect)</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                    | Titre                                                                |
+| ---------------------------------------------------------------- | -------------------------------------------------------------------- |
+| {{RFC("7538", "308 Permanent Redirect" , "3")}} | The Hypertext Transfer Protocol Status Code 308 (Permanent Redirect) |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("http/status", "308")}}</p>
+{{Compat("http/status", "308")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTTPStatus("301")}} <code>Moved Permanently</code></li>
- <li>{{HTTPStatus("302")}} <code>Found</code>, la redirection temporaire</li>
-</ul>
+- {{HTTPStatus("301")}} `Moved Permanently`
+- {{HTTPStatus("302")}} `Found`, la redirection temporaire
