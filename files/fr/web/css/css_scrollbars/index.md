@@ -7,81 +7,66 @@ tags:
   - css scrollbars
 translation_of: Web/CSS/CSS_Scrollbars
 ---
-<div>{{CSSRef}} {{SeeCompatTable}}</div>
+{{CSSRef}} {{SeeCompatTable}}
 
-<p>Le module de spécification <em>CSS Scrollbars</em> standardise la mise en forme des barres de défilement (<em>scrollbar</em>) notamment introduite en 2000 avec Windows IE 5.5.</p>
+Le module de spécification _CSS Scrollbars_ standardise la mise en forme des barres de défilement (_scrollbar_) notamment introduite en 2000 avec Windows IE 5.5.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans l'exemple qui suit, on crée une barre de défilement fine avec une piste verte et un curseur violet.</p>
+Dans l'exemple qui suit, on crée une barre de défilement fine avec une piste verte et un curseur violet.
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">.scroller {
+```css
+.scroller {
   width: 300px;
   height: 100px;
   overflow-y: scroll;
   scrollbar-color: rebeccapurple green;
   scrollbar-width: thin;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="scroller"&gt;Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.&lt;/div&gt;</pre>
+```html
+<div class="scroller">Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Référence">Référence</h2>
+## Référence
 
-<h3 id="Propriétés">Propriétés</h3>
+### Propriétés
 
-<ul>
- <li>{{cssxref("scrollbar-width")}}</li>
- <li>{{cssxref("scrollbar-color")}}</li>
-</ul>
+- {{cssxref("scrollbar-width")}}
+- {{cssxref("scrollbar-color")}}
 
-<h2 id="Accessibilité">Accessibilité</h2>
+## Accessibilité
 
-<p>Lors du paramétrage des barres de défilement, on s'assurera que le contraste avec les éléments alentour est suffisant et que la surface d'interaction est suffisamment grande pour les personnes qui utilisent une interface tactile.</p>
+Lors du paramétrage des barres de défilement, on s'assurera que le contraste avec les éléments alentour est suffisant et que la surface d'interaction est suffisamment grande pour les personnes qui utilisent une interface tactile.
 
-<ul>
- <li><a href="http://adrianroselli.com/2019/01/baseline-rules-for-scrollbar-usability.html">Règles de base pour l'utilisabilité des barres de défilement, par Adrian Roselli (en anglais)</a></li>
-</ul>
+- [Règles de base pour l'utilisabilité des barres de défilement, par Adrian Roselli (en anglais)](http://adrianroselli.com/2019/01/baseline-rules-for-scrollbar-usability.html)
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Scrollbars')}}</td>
-   <td>{{Spec2('CSS Scrollbars')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                            | État                                 | Commentaires        |
+| ---------------------------------------- | ------------------------------------ | ------------------- |
+| {{SpecName('CSS Scrollbars')}} | {{Spec2('CSS Scrollbars')}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<h3 id="scrollbar-width">scrollbar-width</h3>
+### scrollbar-width
 
-<div>{{Compat("css.properties.scrollbar-width")}}</div>
+{{Compat("css.properties.scrollbar-width")}}
 
-<h3 id="scrollbar-color">scrollbar-color</h3>
+### scrollbar-color
 
-<div>{{Compat("css.properties.scrollbar-color")}}</div>
+{{Compat("css.properties.scrollbar-color")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{CSSxRef("::-webkit-scrollbar")}}</li>
- <li>{{CSSxRef("-ms-overflow-style")}}</li>
-</ul>
+- {{CSSxRef("::-webkit-scrollbar")}}
+- {{CSSxRef("-ms-overflow-style")}}

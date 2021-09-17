@@ -9,23 +9,24 @@ tags:
   - Reference
 translation_of: Web/CSS/inline-size
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propriété <strong><code>inline-size</code></strong> définit la taille verticale ou horizontale d'un élément de bloc selon son mode d'écriture. Selon la valeur de {{cssxref("writing-mode")}}, cette propriété correspond à {{cssxref("width")}} quand le mode d'écriture n'est pas vertical ou à {{cssxref("height")}} sinon.</p>
+La propriété **`inline-size`** définit la taille verticale ou horizontale d'un élément de bloc selon son mode d'écriture. Selon la valeur de {{cssxref("writing-mode")}}, cette propriété correspond à {{cssxref("width")}} quand le mode d'écriture n'est pas vertical ou à {{cssxref("height")}} sinon.
 
-<div>{{EmbedInteractiveExample("pages/css/inline-size.html")}}</div>
+{{EmbedInteractiveExample("pages/css/inline-size.html")}}
 
-<p>Cette propriété est à rapprocher de {{cssxref("block-size")}} qui définit l'autre dimension de l'élément.</p>
+Cette propriété est à rapprocher de {{cssxref("block-size")}} qui définit l'autre dimension de l'élément.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs de longueur */
-/* Type &lt;length&gt;       */
+```css
+/* Valeurs de longueur */
+/* Type <length>       */
 inline-size: 300px;
 inline-size: 25em;
 
 /* Valeurs proportionnelles relatives */
-/* Type &lt;percentage&gt;                  */
+/* Type <percentage>                  */
 inline-size: 75%;
 
 /* Valeurs avec un mot-clé */
@@ -41,68 +42,55 @@ inline-size: auto;
 inline-size: inherit;
 inline-size: initial;
 inline-size: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<p>La propriété <code>inline-size</code> peut prendre les mêmes valeurs que les propriétés {{cssxref("width")}} et {{cssxref("height")}}.</p>
+La propriété `inline-size` peut prendre les mêmes valeurs que les propriétés {{cssxref("width")}} et {{cssxref("height")}}.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.exemple {
+```css
+.exemple {
   writing-mode: vertical-rl;
   background-color: yellow;
   inline-size: 110px;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="exemple"&gt;Texte d'exemple&lt;/p&gt;
-</pre>
+```html
+<p class="exemple">Texte d'exemple</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#logical-dimension-properties", "inline-size")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | État                                             | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
+| {{SpecName("CSS Logical Properties", "#logical-dimension-properties", "inline-size")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.inline-size")}}</p>
+{{Compat("css.properties.inline-size")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Les propriétés physiques correspondantes :
-  <ul>
-   <li>{{cssxref("width")}}</li>
-   <li>{{cssxref("height")}}</li>
-  </ul>
- </li>
- <li>{{cssxref("writing-mode")}}</li>
-</ul>
+- Les propriétés physiques correspondantes :
+
+  - {{cssxref("width")}}
+  - {{cssxref("height")}}
+
+- {{cssxref("writing-mode")}}

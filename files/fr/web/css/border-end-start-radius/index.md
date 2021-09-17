@@ -9,12 +9,13 @@ tags:
   - Reference
 translation_of: Web/CSS/border-end-start-radius
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propriété <strong><code>border-end-start-radius</code></strong> définit le rayon de courbure de la bordure pour un angle d'un élément. Cette propriété logique correspond à une propriété physique de rayon de bordure selon la directionalité du texte et le mode d'écriture. Autrement dit, cette propriété concerne un angle différent selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.</p>
+La propriété **`border-end-start-radius`** définit le rayon de courbure de la bordure pour un angle d'un élément. Cette propriété logique correspond à une propriété physique de rayon de bordure selon la directionalité du texte et le mode d'écriture. Autrement dit, cette propriété concerne un angle différent selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
 
-<pre class="brush:css no-line-numbers">/* Valeurs de longueur */
-/* Type &lt;length&gt; */
+```css
+/* Valeurs de longueur */
+/* Type <length> */
 /* Avec une valeur, le coin sera circulaire */
 border-end-start-radius: 10px;
 border-end-start-radius: 1em;
@@ -26,28 +27,27 @@ border-end-start-radius: 1em 2em;
 border-end-start-radius: inherit;
 border-end-start-radius: initial;
 border-end-start-radius: unset;
-</pre>
+```
 
-<p>Ainsi, avec un mode d'écriture <code>horizontal-tb</code>, cette propriété logique correspondra à la propriété physique {{CSSxRef("border-top-right-radius")}}.</p>
+Ainsi, avec un mode d'écriture `horizontal-tb`, cette propriété logique correspondra à la propriété physique {{CSSxRef("border-top-right-radius")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;length-percentage&gt;</code></dt>
- <dd>Cette valeur exprime le rayon de courbure ou les demi-axes d'une ellipse. Pour les valeurs qui expriment une longueur, on peut utiliser n'importe quelle valeur du type de donnée {{cssxref("&lt;length&gt;")}}. Les pourcentages sur l'axe horizontal sont relatifs à la largeur de la boîte et à la hauteur de la boîte pour l'axe vertical. Les valeurs négatives sont invalides.</dd>
-</dl>
+- `<length-percentage>`
+  - : Cette valeur exprime le rayon de courbure ou les demi-axes d'une ellipse. Pour les valeurs qui expriment une longueur, on peut utiliser n'importe quelle valeur du type de donnée {{cssxref("&lt;length&gt;")}}. Les pourcentages sur l'axe horizontal sont relatifs à la largeur de la boîte et à la hauteur de la boîte pour l'axe vertical. Les valeurs négatives sont invalides.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{CSSSyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: rebeccapurple;
   width: 120px;
   height: 120px;
@@ -59,47 +59,34 @@ border-end-start-radius: unset;
   padding: 10px;
   background-color: #fff;
   border-end-start-radius: 10px;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="texteExemple"&gt;Exemple&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="texteExemple">Exemple</p>
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", 140, 140)}}</p>
+{{EmbedLiveSample("Exemples", 140, 140)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-border-end-start-radius", "border-end-start-radius")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                            | État                                             | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
+| {{SpecName("CSS Logical Properties", "#propdef-border-end-start-radius", "border-end-start-radius")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.border-end-start-radius")}}</p>
+{{Compat("css.properties.border-end-start-radius")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>La propriété physique correspondante : {{CSSxRef("border-top-right-radius")}}</li>
- <li>{{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}</li>
-</ul>
+- La propriété physique correspondante : {{CSSxRef("border-top-right-radius")}}
+- {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}

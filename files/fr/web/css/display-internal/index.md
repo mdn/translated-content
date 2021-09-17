@@ -7,65 +7,59 @@ tags:
   - Type de donnée
 translation_of: Web/CSS/display-internal
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Certains modes de disposition tels que <code>table</code> et <code>ruby</code> possèdent une structure interne complexe avec différents roles pour les éléments enfants et descendants. Cette page décrit ces valeurs « internes » pour <code>display</code> et qui s'appliquent dans un mode donné.</p>
+Certains modes de disposition tels que `table` et `ruby` possèdent une structure interne complexe avec différents roles pour les éléments enfants et descendants. Cette page décrit ces valeurs « internes » pour `display` et qui s'appliquent dans un mode donné.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Sauf mention contraire, le type d'affichage intérieur et extérieur sont définis simultanément par le mot-clé indiqué.</p>
+Sauf mention contraire, le type d'affichage intérieur et extérieur sont définis simultanément par le mot-clé indiqué.
 
-<dl>
- <dt><code>table-row-group</code></dt>
- <dd>Ces éléments se comportent comme des éléments HTML {{HTMLElement("tbody")}}.</dd>
- <dt><code>table-header-group</code></dt>
- <dd>Ces éléments se comportent comme des éléments HTML {{HTMLElement("thead")}}.</dd>
- <dt><code>table-footer-group</code></dt>
- <dd>Ces éléments se comportent comme des éléments HTML {{HTMLElement("tfoot")}}.</dd>
- <dt><code>table-row</code></dt>
- <dd>Ces éléments se comportent comme des éléments HTML {{HTMLElement("tr")}}.</dd>
- <dt><code>table-cell</code></dt>
- <dd>Ces éléments se comportent comme des éléments HTML {{HTMLElement("td")}}.</dd>
- <dt><code>table-column-group</code></dt>
- <dd>Ces éléments se comportent comme des éléments HTML {{HTMLElement("colgroup")}}.</dd>
- <dt><code>table-column</code></dt>
- <dd>Ces éléments se comportent comme des éléments HTML {{HTMLElement("col")}}.</dd>
- <dt><code>table-caption</code></dt>
- <dd>Ces éléments se comportent comme des éléments HTML {{HTMLElement("caption")}}.</dd>
- <dt><code>ruby-base</code> {{Experimental_Inline}}</dt>
- <dd>Ces éléments se comportent comme des éléments HTML {{HTMLElement("rb")}}.</dd>
- <dt><code>ruby-text</code> {{Experimental_Inline}}</dt>
- <dd>Ces éléments se comportent comme des éléments HTML {{HTMLElement("rt")}}.</dd>
- <dt><code>ruby-base-container</code> {{Experimental_Inline}}</dt>
- <dd>Ces éléments se comportent comme des éléments HTML {{HTMLElement("rbc")}} générés comme des boîtes anonymes.</dd>
- <dt><code>ruby-text-container</code> {{Experimental_Inline}}</dt>
- <dd>Ces éléments se comportent comme des éléments HTML {{HTMLElement("rtc")}}.</dd>
-</dl>
+- `table-row-group`
+  - : Ces éléments se comportent comme des éléments HTML {{HTMLElement("tbody")}}.
+- `table-header-group`
+  - : Ces éléments se comportent comme des éléments HTML {{HTMLElement("thead")}}.
+- `table-footer-group`
+  - : Ces éléments se comportent comme des éléments HTML {{HTMLElement("tfoot")}}.
+- `table-row`
+  - : Ces éléments se comportent comme des éléments HTML {{HTMLElement("tr")}}.
+- `table-cell`
+  - : Ces éléments se comportent comme des éléments HTML {{HTMLElement("td")}}.
+- `table-column-group`
+  - : Ces éléments se comportent comme des éléments HTML {{HTMLElement("colgroup")}}.
+- `table-column`
+  - : Ces éléments se comportent comme des éléments HTML {{HTMLElement("col")}}.
+- `table-caption`
+  - : Ces éléments se comportent comme des éléments HTML {{HTMLElement("caption")}}.
+- `ruby-base` {{Experimental_Inline}}
+  - : Ces éléments se comportent comme des éléments HTML {{HTMLElement("rb")}}.
+- `ruby-text` {{Experimental_Inline}}
+  - : Ces éléments se comportent comme des éléments HTML {{HTMLElement("rt")}}.
+- `ruby-base-container` {{Experimental_Inline}}
+  - : Ces éléments se comportent comme des éléments HTML {{HTMLElement("rbc")}} générés comme des boîtes anonymes.
+- `ruby-text-container` {{Experimental_Inline}}
+  - : Ces éléments se comportent comme des éléments HTML {{HTMLElement("rtc")}}.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<h3 id="Prise_en_charge_pour_les_valeurs_liées_à_table">Prise en charge pour les valeurs liées à <code>table</code></h3>
+### Prise en charge pour les valeurs liées à `table`
 
-<p><code>table</code>, <code>table-cell</code>, <code>table-column</code>, <code>table-column-group</code>, <code>table-footer-group</code>, <code>table-header-group</code>, <code>table-row</code> et <code>table-row-group</code></p>
+`table`, `table-cell`, `table-column`, `table-column-group`, `table-footer-group`, `table-header-group`, `table-row` et `table-row-group`
 
-<p>{{Compat("css.properties.display.table_values", 10)}}</p>
+{{Compat("css.properties.display.table_values", 10)}}
 
-<h3 id="Prise_en_charge_pour_les_valeurs_ruby">Prise en charge pour les valeurs <code>ruby</code></h3>
+### Prise en charge pour les valeurs `ruby`
 
-<p><code>ruby</code>, <code>ruby-base</code>, <code>ruby-base-container</code>, <code>ruby-text</code> et <code>ruby-text-container</code></p>
+`ruby`, `ruby-base`, `ruby-base-container`, `ruby-text` et `ruby-text-container`
 
-<p>{{Compat("css.properties.display.ruby_values", 10)}}</p>
+{{Compat("css.properties.display.ruby_values", 10)}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{CSSxRef("display")}}
-  <ul>
-   <li>{{CSSxRef("&lt;display-outside&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-inside&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-listitem&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-box&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-legacy&gt;")}}</li>
-  </ul>
- </li>
-</ul>
+- {{CSSxRef("display")}}
+
+  - {{CSSxRef("&lt;display-outside&gt;")}}
+  - {{CSSxRef("&lt;display-inside&gt;")}}
+  - {{CSSxRef("&lt;display-listitem&gt;")}}
+  - {{CSSxRef("&lt;display-box&gt;")}}
+  - {{CSSxRef("&lt;display-legacy&gt;")}}

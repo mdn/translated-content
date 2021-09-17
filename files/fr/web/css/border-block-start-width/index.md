@@ -9,38 +9,38 @@ tags:
   - Reference
 translation_of: Web/CSS/border-block-start-width
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propriété <strong><code>border-block-start-width</code></strong> définit la largeur de la bordure pour le côté de bloc du début « logique » de l'élément. Cette propriété logique correspond à l'une des propriétés physiques équivalentes en fonction du mode d'écriture, de la directionnalité et de l'orientation du texte. Autrement dit, elle correspondra à  {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}} ou a {{cssxref("border-left-width")}} selon les valeurs des propriétés pour {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.</p>
+La propriété **`border-block-start-width`** définit la largeur de la bordure pour le côté de bloc du début « logique » de l'élément. Cette propriété logique correspond à l'une des propriétés physiques équivalentes en fonction du mode d'écriture, de la directionnalité et de l'orientation du texte. Autrement dit, elle correspondra à  {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}} ou a {{cssxref("border-left-width")}} selon les valeurs des propriétés pour {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/border-block-start-width.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-block-start-width.html")}}
 
-<p>Cette propriété logique est à rapprocher des autres propriétés logiques {{cssxref("border-inline-start-width")}}, {{cssxref("border-block-end-width")}} et {{cssxref("border-inline-end-width")}} qui permettent de définir la largeur de la bordure pour les différents côtés de l'élément.</p>
+Cette propriété logique est à rapprocher des autres propriétés logiques {{cssxref("border-inline-start-width")}}, {{cssxref("border-block-end-width")}} et {{cssxref("border-inline-end-width")}} qui permettent de définir la largeur de la bordure pour les différents côtés de l'élément.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeur de longueur */
-/* Type &lt;length&gt; */
+```css
+/* Valeur de longueur */
+/* Type <length> */
 border-block-start-width: 5px;
 border-block-start-width: thick;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;'border-width'&gt;</code></dt>
- <dd>Voir {{cssxref("border-width")}}</dd>
-</dl>
+- `<'border-width'>`
+  - : Voir {{cssxref("border-width")}}
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -50,54 +50,40 @@ border-block-start-width: thick;
   writing-mode: vertical-lr;
   border: 1px solid blue;
   border-block-start-width: 5px;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exemple"&gt;Texte d'exemple&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exemple">Texte d'exemple</p>
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", 140, 140)}}</p>
+{{EmbedLiveSample("Exemples", 140, 140)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-border-block-start-width", "border-block-start-width")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                            | État                                             | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
+| {{SpecName("CSS Logical Properties", "#propdef-border-block-start-width", "border-block-start-width")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.border-block-start-width")}}</p>
+{{Compat("css.properties.border-block-start-width")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Les propriétés physiques correspondantes :
-  <ul>
-   <li>{{cssxref("border-top-width")}}</li>
-   <li>{{cssxref("border-right-width")}}</li>
-   <li>{{cssxref("border-bottom-width")}}</li>
-   <li>{{cssxref("border-left-width")}}</li>
-  </ul>
- </li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- Les propriétés physiques correspondantes :
+
+  - {{cssxref("border-top-width")}}
+  - {{cssxref("border-right-width")}}
+  - {{cssxref("border-bottom-width")}}
+  - {{cssxref("border-left-width")}}
+
+- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

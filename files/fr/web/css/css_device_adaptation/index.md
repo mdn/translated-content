@@ -6,39 +6,24 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Device_Adaptation
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Device Adapation</strong> est un module CSS qui permet de définir les dimensions, le facteur d'agrandissement et l'orientation de la zone d'affichage (<em>viewport</em>).</p>
+**CSS Device Adapation** est un module CSS qui permet de définir les dimensions, le facteur d'agrandissement et l'orientation de la zone d'affichage (_viewport_).
 
-<h2 id="Référence">Référence</h2>
+## Référence
 
-<h3 id="Règles">Règles @</h3>
+### Règles @
 
-<ul>
- <li>{{cssxref("@viewport")}}</li>
-</ul>
+- {{cssxref("@viewport")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Device")}}</td>
-   <td>{{Spec2("CSS3 Device")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                        | État                             | Commentaires         |
+| ------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName("CSS3 Device")}} | {{Spec2("CSS3 Device")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<h3 id="viewport"><code>@viewport</code></h3>
+### `@viewport`
 
-<p>{{Compat("css.at-rules.viewport")}}</p>
+{{Compat("css.at-rules.viewport")}}

@@ -8,15 +8,16 @@ tags:
   - Reference
 translation_of: Web/CSS/place-items
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété raccourcie <code><strong>place</strong></code><strong><code>-items</code></strong> définit les valeurs utilisées pour les propriétés {{cssxref("align-items")}} et {{cssxref("justify-items")}}. La première valeur fournie est utilisée pour <code>align-items</code> et la seconde est utilisée pour <code>justify-items</code>. S'il n'y a pas de seconde valeur fournie, c'est la première qui est reprise pour <code>justify-items</code>.</p>
+La propriété raccourcie **`place`\*\***`-items`\*\* définit les valeurs utilisées pour les propriétés {{cssxref("align-items")}} et {{cssxref("justify-items")}}. La première valeur fournie est utilisée pour `align-items` et la seconde est utilisée pour `justify-items`. S'il n'y a pas de seconde valeur fournie, c'est la première qui est reprise pour `justify-items`.
 
-<div>{{EmbedInteractiveExample("pages/css/place-items.html")}}</div>
+{{EmbedInteractiveExample("pages/css/place-items.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 place-items: auto center;
 place-items: normal start;
 
@@ -41,61 +42,59 @@ place-items: stretch auto;
 place-items: inherit;
 place-items: initial;
 place-items: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>La valeur utilisée est celle de <code>justify-items</code> pour l'élément parent sauf si l'élément n'a pas de parent ou qu'il est positionné de façon absolue auquel cas <code>auto</code> sera synonyme de <code>normal</code>.</dd>
- <dt><code>normal</code></dt>
- <dd>L'effet de ce mot-clé depend du mode de disposition utilisé :
- <ul>
-  <li>Pour les dispositions en bloc, ce mot-clé est synonyme de <code>start</code>.</li>
-  <li>Pour les dispositions absolues, ce mot-clé se comporte comme <code>start</code> pour les éléments remplacés ou comme <code>stretch</code> pour tous les autres éléments.</li>
-  <li>Pour les cellules de tableaux, ce mot-clé n'a pas de sens et cette propriété est ignorée.</li>
-  <li>Pour les dispositions utilisant des boîtes flexibles, ce mot-clé n'a pas de sens et cette propriété est ignorée<em>.</em></li>
-  <li>Pour les dispositions en grille, ce mot-clé se comporte comme <code>stretch</code> sauf pour les éléments qui ont des dimensions intrinsèques ou des contraintes de ratio, auquel cas cette valeur est synonyme de <code>start</code>.</li>
- </ul>
- </dd>
- <dt><code>start</code></dt>
- <dd>L'élément est aligné au début de l'axe dans la direction correspondante.</dd>
- <dt><code>end</code></dt>
- <dd>L'élément est aligné à la fin de l'axe dans la direction correspondante.</dd>
- <dt><code>flex-start</code></dt>
- <dd>Les éléments sont regroupés vers le début du conteneur flexible pour l'axe correspondant.<br>
- Cette valeur ne s'applique qu'aux éléments flexibles. Pour les éléments qui ne font pas partie d'un conteneur flexible, cette valeur correspond à <code>start</code>.</dd>
- <dt><code>flex-end</code></dt>
- <dd>Les éléments sont regroupés vers la fin du conteneur flexible pour l'axe correspondant.<br>
- Cette valeur ne s'applique qu'aux éléments flexibles. Pour les éléments qui ne font pas partie d'un conteneur flexible, cette valeur correspond à <code>end</code>.</dd>
- <dt><code>self-start</code></dt>
- <dd>Les éléments sont alignés sur le bord de leur boîte vers le début de l'axe correspondant.</dd>
- <dt><code>self-end</code></dt>
- <dd>Les éléments sont alignés sur le bord de leur boîte vers la fin de l'axe correspondant.</dd>
- <dt><code>center</code></dt>
- <dd>L'élément est centré le long de l'axe correspondant.</dd>
- <dt><code>left</code></dt>
- <dd>L'élément est aligné sur le bord gauche du conteneur. Si l'axe de la propriété n'est pas parallèle à l'axe en ligne, cette valeur se comporte comme <code>start</code>.</dd>
- <dt><code>right</code></dt>
- <dd>L'élément est aligné sur le bord droit du conteneur. Si l'axe de la propriété n'est pas parallèle à l'axe en ligne, cette valeur se comporte comme <code>start</code>.</dd>
- <dt><code>baseline<br>
- first baseline</code><br>
- <code>last baseline</code></dt>
- <dd>Ces valeurs permettent de définir l'alignement par rapport à la ligne de base pour l'élément du conteneur avec la ligne de base la plus haute ou la plus basse.<br>
- Si <code>first baseline</code> n'est pas prise en charge, la valeur correspondra à <code>start</code>, si <code>last baseline</code> n'est pas prise en charge, la valeur correspondra à <code>end</code>.</dd>
- <dt><code>stretch</code></dt>
- <dd>Si la somme des tailles des éléments est inférieure à la taille du conteneur, les éléments dimensionnés automatiquement seront élargis de la même longueur tout en respectant les contraintes imposées par {{cssxref("max-height")}}/{{cssxref("max-width")}} (ou par les fonctionnalités équivalentes), afin que l'ensemble des éléments remplisse exactement le conteneur.</dd>
-</dl>
+- `auto`
+  - : La valeur utilisée est celle de `justify-items` pour l'élément parent sauf si l'élément n'a pas de parent ou qu'il est positionné de façon absolue auquel cas `auto` sera synonyme de `normal`.
+- `normal`
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+  - : L'effet de ce mot-clé depend du mode de disposition utilisé :
+
+    - Pour les dispositions en bloc, ce mot-clé est synonyme de `start`.
+    - Pour les dispositions absolues, ce mot-clé se comporte comme `start` pour les éléments remplacés ou comme `stretch` pour tous les autres éléments.
+    - Pour les cellules de tableaux, ce mot-clé n'a pas de sens et cette propriété est ignorée.
+    - Pour les dispositions utilisant des boîtes flexibles, ce mot-clé n'a pas de sens et cette propriété est ignorée*.*
+    - Pour les dispositions en grille, ce mot-clé se comporte comme `stretch` sauf pour les éléments qui ont des dimensions intrinsèques ou des contraintes de ratio, auquel cas cette valeur est synonyme de `start`.
+
+- `start`
+  - : L'élément est aligné au début de l'axe dans la direction correspondante.
+- `end`
+  - : L'élément est aligné à la fin de l'axe dans la direction correspondante.
+- `flex-start`
+  - : Les éléments sont regroupés vers le début du conteneur flexible pour l'axe correspondant.
+    Cette valeur ne s'applique qu'aux éléments flexibles. Pour les éléments qui ne font pas partie d'un conteneur flexible, cette valeur correspond à `start`.
+- `flex-end`
+  - : Les éléments sont regroupés vers la fin du conteneur flexible pour l'axe correspondant.
+    Cette valeur ne s'applique qu'aux éléments flexibles. Pour les éléments qui ne font pas partie d'un conteneur flexible, cette valeur correspond à `end`.
+- `self-start`
+  - : Les éléments sont alignés sur le bord de leur boîte vers le début de l'axe correspondant.
+- `self-end`
+  - : Les éléments sont alignés sur le bord de leur boîte vers la fin de l'axe correspondant.
+- `center`
+  - : L'élément est centré le long de l'axe correspondant.
+- `left`
+  - : L'élément est aligné sur le bord gauche du conteneur. Si l'axe de la propriété n'est pas parallèle à l'axe en ligne, cette valeur se comporte comme `start`.
+- `right`
+  - : L'élément est aligné sur le bord droit du conteneur. Si l'axe de la propriété n'est pas parallèle à l'axe en ligne, cette valeur se comporte comme `start`.
+- `baseline first baseline`
+  `last baseline`
+  - : Ces valeurs permettent de définir l'alignement par rapport à la ligne de base pour l'élément du conteneur avec la ligne de base la plus haute ou la plus basse.
+    Si `first baseline` n'est pas prise en charge, la valeur correspondra à `start`, si `last baseline` n'est pas prise en charge, la valeur correspondra à `end`.
+- `stretch`
+  - : Si la somme des tailles des éléments est inférieure à la taille du conteneur, les éléments dimensionnés automatiquement seront élargis de la même longueur tout en respectant les contraintes imposées par {{cssxref("max-height")}}/{{cssxref("max-width")}} (ou par les fonctionnalités équivalentes), afin que l'ensemble des éléments remplisse exactement le conteneur.
+
+### Syntaxe formelle
 
 {{CSSSyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#container {
+```css
+#container {
   height:200px;
   width: 240px;
   place-items: center; /* Cette valeur peut être modifiée dans l'exemple */
@@ -111,9 +110,10 @@ place-items: unset;
   display: grid;
   grid-template-columns: repeat(auto-fill, 50px);
 }
-</pre>
+```
 
-<pre class="brush: css hidden">div &gt; div {
+```css hidden
+div > div {
   box-sizing: border-box;
   border: 2px solid #8c8c8c;
   width: 50px;
@@ -159,53 +159,56 @@ select {
 
 .row {
   margin-top: 10px;
-}</pre>
+}
+```
 
-<pre class="brush: html hidden">&lt;div id="container" class="flex"&gt;
-  &lt;div id="item1"&gt;1&lt;/div&gt;
-  &lt;div id="item2"&gt;2&lt;/div&gt;
-  &lt;div id="item3"&gt;3&lt;/div&gt;
-  &lt;div id="item4"&gt;4&lt;/div&gt;
-  &lt;div id="item5"&gt;5&lt;/div&gt;
-  &lt;div id="item6"&gt;6&lt;/div&gt;
-&lt;/div&gt;
+```html hidden
+<div id="container" class="flex">
+  <div id="item1">1</div>
+  <div id="item2">2</div>
+  <div id="item3">3</div>
+  <div id="item4">4</div>
+  <div id="item5">5</div>
+  <div id="item6">6</div>
+</div>
 
-&lt;div class="row"&gt;
-  &lt;label for="display"&gt;display: &lt;/label&gt;
-  &lt;select id="display"&gt;
-    &lt;option value="flex"&gt;flex&lt;/option&gt;
-    &lt;option value="grid"&gt;grid&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;
+<div class="row">
+  <label for="display">display: </label>
+  <select id="display">
+    <option value="flex">flex</option>
+    <option value="grid">grid</option>
+  </select>
+</div>
 
-&lt;div class="row"&gt;
-  &lt;label for="values"&gt;place-items: &lt;/label&gt;
-  &lt;select id="values"&gt;
-    &lt;option value="start"&gt;start&lt;/option&gt;
-    &lt;option value="center"&gt;center&lt;/option&gt;
-    &lt;option value="end"&gt;end&lt;/option&gt;
-    &lt;option value="left"&gt;left&lt;/option&gt;
-    &lt;option value="right"&gt;right&lt;/option&gt;
-    &lt;option value="auto center"&gt;auto center&lt;/option&gt;
-    &lt;option value="normal start"&gt;normal start&lt;/option&gt;
-    &lt;option value="center normal"&gt;center normal&lt;/option&gt;
-    &lt;option value="start auto"&gt;start auto&lt;/option&gt;
-    &lt;option value="end normal"&gt;end normal&lt;/option&gt;
-    &lt;option value="self-start auto"&gt;self-start auto&lt;/option&gt;
-    &lt;option value="self-end normal"&gt;self-end normal&lt;/option&gt;
-    &lt;option value="flex-start auto"&gt;flex-start auto&lt;/option&gt;
-    &lt;option value="flex-end normal"&gt;flex-end normal&lt;/option&gt;
-    &lt;option value="left auto"&gt;left auto&lt;/option&gt;
-    &lt;option value="right normal"&gt;right normal&lt;/option&gt;
-    &lt;option value="baseline normal"&gt;baseline normal&lt;/option&gt;
-    &lt;option value="first baseline auto"&gt;first baseline auto&lt;/option&gt;
-    &lt;option value="last baseline normal"&gt;last baseline normal&lt;/option&gt;
-    &lt;option value="stretch auto"&gt;stretch auto&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;
-</pre>
+<div class="row">
+  <label for="values">place-items: </label>
+  <select id="values">
+    <option value="start">start</option>
+    <option value="center">center</option>
+    <option value="end">end</option>
+    <option value="left">left</option>
+    <option value="right">right</option>
+    <option value="auto center">auto center</option>
+    <option value="normal start">normal start</option>
+    <option value="center normal">center normal</option>
+    <option value="start auto">start auto</option>
+    <option value="end normal">end normal</option>
+    <option value="self-start auto">self-start auto</option>
+    <option value="self-end normal">self-end normal</option>
+    <option value="flex-start auto">flex-start auto</option>
+    <option value="flex-end normal">flex-end normal</option>
+    <option value="left auto">left auto</option>
+    <option value="right normal">right normal</option>
+    <option value="baseline normal">baseline normal</option>
+    <option value="first baseline auto">first baseline auto</option>
+    <option value="last baseline normal">last baseline normal</option>
+    <option value="stretch auto">stretch auto</option>
+  </select>
+</div>
+```
 
-<pre class="brush: js hidden">var values = document.getElementById('values');
+```js hidden
+var values = document.getElementById('values');
 var display = document.getElementById('display');
 var container = document.getElementById('container');
 
@@ -216,56 +219,40 @@ values.addEventListener('change', function (evt) {
 display.addEventListener('change', function (evt) {
   container.className = evt.target.value;
 });
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", 260, 290)}}</p>
+{{EmbedLiveSample("Exemples", 260, 290)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Box Alignment", "#place-items-property", "place-items")}}</td>
-   <td>{{Spec2('CSS3 Box Alignment')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                                     | Commentaires         |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName("CSS3 Box Alignment", "#place-items-property", "place-items")}} | {{Spec2('CSS3 Box Alignment')}} | Définition initiale. |
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<h3 id="Prise_en_charge_pour_les_dispositions_flexibles">Prise en charge pour les dispositions flexibles</h3>
+### Prise en charge pour les dispositions flexibles
 
-<p>{{Compat("css.properties.place-items.flex_context")}}</p>
+{{Compat("css.properties.place-items.flex_context")}}
 
-<h3 id="Prise_en_charge_pour_les_grilles">Prise en charge pour les grilles</h3>
+### Prise en charge pour les grilles
 
-<p>{{Compat("css.properties.place-items.grid_context")}}</p>
+{{Compat("css.properties.place-items.grid_context")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Guide sur les grilles : <em><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_CSS">Aligner des objets dans une grille</a></em></li>
- <li>Guide sur les boîtes flexibles : <em><a href="/fr/docs/Web/CSS/Disposition_flexbox_CSS/Concepts_de_base_flexbox">Les concepts de bases</a></em></li>
- <li>Guide sur les boîtes flexibles : <em><a href="/fr/docs/Web/CSS/Disposition_flexbox_CSS/Aligner_des_éléments_dans_un_conteneur_flexible">Aligner des objets dans un conteneur flexible</a></em></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Box_Alignment">Le module de spécification CSS Box Alignment</a></li>
- <li>Les propriétés détaillées correspondantes :
-  <ul>
-   <li>{{cssxref("align-items")}}</li>
-   <li>{{cssxref("justify-items")}}</li>
-  </ul>
- </li>
- <li>{{cssxref("justify-self")}}</li>
- <li>{{cssxref("align-self")}}</li>
-</ul>
+- Guide sur les grilles : _[Aligner des objets dans une grille](/fr/docs/Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_CSS)_
+- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Concepts_de_base_flexbox)_
+- Guide sur les boîtes flexibles : _[Aligner des objets dans un conteneur flexible](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Aligner_des_éléments_dans_un_conteneur_flexible)_
+- [Le module de spécification CSS Box Alignment](/fr/docs/Web/CSS/CSS_Box_Alignment)
+- Les propriétés détaillées correspondantes :
+
+  - {{cssxref("align-items")}}
+  - {{cssxref("justify-items")}}
+
+- {{cssxref("justify-self")}}
+- {{cssxref("align-self")}}

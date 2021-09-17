@@ -7,21 +7,22 @@ tags:
   - Reference
 translation_of: Web/CSS/text-overflow
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>text-overflow</code></strong> définit la façon dont le contenu textuel qui dépasse d'une boîte est signalé pour les utilisateurs. Le texte peut être rogné (<em>clipping</em>), afficher une ellipse ('<code>…</code>', <code>U+2026 Horizontal Ellipsis</code>) ou afficher une chaîne de caractères choisie.</p>
+La propriété **`text-overflow`** définit la façon dont le contenu textuel qui dépasse d'une boîte est signalé pour les utilisateurs. Le texte peut être rogné (_clipping_), afficher une ellipse ('`…`', `U+2026 Horizontal Ellipsis`) ou afficher une chaîne de caractères choisie.
 
-<div>{{EmbedInteractiveExample("pages/css/text-overflow.html")}}</div>
+{{EmbedInteractiveExample("pages/css/text-overflow.html")}}
 
-<p>Le rognage se fera à la bordure de la boîte. Afin que le rognage se fasse plus tôt, à la limite des caractères, on peut utiliser la chaîne vide (<code>''</code>).</p>
+Le rognage se fera à la bordure de la boîte. Afin que le rognage se fasse plus tôt, à la limite des caractères, on peut utiliser la chaîne vide (`''`).
 
-<p>Cette propriété n'affecte que le contenu qui dépasse de la boîte englobante dans le sens de la progression en ligne. Par exemple, on ne parle pas ici du texte qui dépasserait vers le bas d'une boîte. Le texte peut dépasser lorsqu'on empêche le retour automatique à la ligne (par exemple avec <code>white-space: nowrap</code>) ou lorsqu'un seul mot est trop long pour tenir dans le conteneur.</p>
+Cette propriété n'affecte que le contenu qui dépasse de la boîte englobante dans le sens de la progression en ligne. Par exemple, on ne parle pas ici du texte qui dépasserait vers le bas d'une boîte. Le texte peut dépasser lorsqu'on empêche le retour automatique à la ligne (par exemple avec `white-space: nowrap`) ou lorsqu'un seul mot est trop long pour tenir dans le conteneur.
 
-<p>Cette  propriété CSS ne force pas le dépassement. Pour ce faire et afin que <code>text-overflow</code> soit appliqué, l'auteur devra ajouter des propriétés supplémentaires sur l'élément, notamment : {{cssxref("overflow")}} avec <code>hidden</code> et {{cssxref("white-space")}} avec <code>nowrap</code>.</p>
+Cette  propriété CSS ne force pas le dépassement. Pour ce faire et afin que `text-overflow` soit appliqué, l'auteur devra ajouter des propriétés supplémentaires sur l'élément, notamment : {{cssxref("overflow")}} avec `hidden` et {{cssxref("white-space")}} avec `nowrap`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css no-line-numbers">/* On gère le dépassement en fin de ligne
+```css
+/* On gère le dépassement en fin de ligne
     - à droite en LTR,
     - à gauche en RTL */
 text-overflow: clip;
@@ -44,76 +45,73 @@ text-overflow: fade(5%) fade(5%);
 text-overflow: inherit;
 text-overflow: initial;
 text-overflow: unset;
-</pre>
+```
 
-<p>La propriété <code>text-overflow</code> peut être définie grâce à une ou deux valeurs.</p>
+La propriété `text-overflow` peut être définie grâce à une ou deux valeurs.
 
-<p>Si une valeur est fournie, celle-ci indique le comportement du dépassement en fin de ligne (c'est-à-dire l'extrêmité droite pour les textes écrits de gauche à droite et l'extrêmité gauche pour les textes écrits de droite à gauche). Si deux valeurs sont fournies, la première précisera la comportement pour le dépassement à l'extrêmité gauche de la ligne et la seconde indiquera le comportement du dépassement pour l'extrêmité droite de la ligne.</p>
+Si une valeur est fournie, celle-ci indique le comportement du dépassement en fin de ligne (c'est-à-dire l'extrêmité droite pour les textes écrits de gauche à droite et l'extrêmité gauche pour les textes écrits de droite à gauche). Si deux valeurs sont fournies, la première précisera la comportement pour le dépassement à l'extrêmité gauche de la ligne et la seconde indiquera le comportement du dépassement pour l'extrêmité droite de la ligne.
 
-<p>Chacune des valeurs se compose :</p>
+Chacune des valeurs se compose :
 
-<ul>
- <li>D'un des mots-clés : <code><a href="#clip">clip</a></code>, <code><a href="#ellipsis">ellipsis</a></code>, <code><a href="#fade">fade</a></code></li>
- <li>De la fonction <code><a href="#fade_fun">fade()</a></code> à laquelle on passe une valeur de type {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} qui permet de contrôler la distance d'effacement</li>
- <li>D'<a href="#string">une chaîne de caractères <code>&lt;string&gt;</code></a>.</li>
-</ul>
+- D'un des mots-clés : [`clip`](#clip), [`ellipsis`](#ellipsis), [`fade`](#fade)
+- De la fonction [`fade()`](#fade_fun) à laquelle on passe une valeur de type {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} qui permet de contrôler la distance d'effacement
+- D'[une chaîne de caractères `<string>`](#string).
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>clip</code></dt>
- <dd>La valeur par défaut de cette propriété. Ce mot-clé indique qu'on tronque le texte à la limite de <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">la boîte de contenu</a>. La troncature peut donc arriver sur le milieu d'un caractère. Pour que celle-ci soit appliquée entre deux caractères, on devra utiliser la chaîne vide (<code>''</code>) comme valeur pour cette propriété.</dd>
- <dt><code>ellipsis</code></dt>
- <dd>Ce mot-clé indique qu'on affiche une ellipse (<code>'…'</code>, <code>U+2026 Horizontal Ellipsis</code>) pour représenter le texte rogné. L'ellipse est affichée à l'intérieur de <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">la boîte de contenu</a> et réduit donc la quantité de texte affichée. S'il n'y a pas assez de place pour afficher l'ellipse, celle-ci est rognée.</dd>
- <dt><code>fade</code> {{experimental_inline}}</dt>
- <dd>Ce mot-clé indique que le contenu qui dépasse est rogné avec un effet de dégradé en transparence. Au bout de la boîte, le contenu est totalement transparent.</dd>
- <dt><code>fade( &lt;length&gt; | &lt;percentage&gt; )</code> {{experimental_inline}}</dt>
- <dd>Cette fonction permet de rogner le contenu qui dépasse et d'appliquer un effet de dégradé en transparence. Au bout de la boîte, on a une transparence totale.<br>
- L'argument passé à la fonction détermine la distance sur laquelle cet effet est appliqué. La valeur en pourcentage est relative à la largeur de la boîte. Les valeurs inférieures à <code>0</code> sont ramenées à <code>0</code>. Les valeurs supérieures à la largeur de la boîte sont écrétées à la largeur de la boîte.</dd>
- <dt><code>&lt;string&gt;</code> {{experimental_inline}}</dt>
- <dd>Une chaîne de caractères (type {{cssxref("&lt;string&gt;")}}) utilisée pour représentée le texte rogné. La chaîne est affichée à l'intérieur de <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">la boîte de contenu</a> et réduit donc la quantité de texte affichée. S'il n'y a pas assez de place pour afficher la chaîne choisie, celle-ci est rognée.</dd>
-</dl>
+- `clip`
+  - : La valeur par défaut de cette propriété. Ce mot-clé indique qu'on tronque le texte à la limite de [la boîte de contenu](/en-US/docs/Learn/CSS/Building_blocks/The_box_model). La troncature peut donc arriver sur le milieu d'un caractère. Pour que celle-ci soit appliquée entre deux caractères, on devra utiliser la chaîne vide (`''`) comme valeur pour cette propriété.
+- `ellipsis`
+  - : Ce mot-clé indique qu'on affiche une ellipse (`'…'`, `U+2026 Horizontal Ellipsis`) pour représenter le texte rogné. L'ellipse est affichée à l'intérieur de [la boîte de contenu](/en-US/docs/Learn/CSS/Building_blocks/The_box_model) et réduit donc la quantité de texte affichée. S'il n'y a pas assez de place pour afficher l'ellipse, celle-ci est rognée.
+- `fade` {{experimental_inline}}
+  - : Ce mot-clé indique que le contenu qui dépasse est rogné avec un effet de dégradé en transparence. Au bout de la boîte, le contenu est totalement transparent.
+- `fade( <length> | <percentage> )` {{experimental_inline}}
+  - : Cette fonction permet de rogner le contenu qui dépasse et d'appliquer un effet de dégradé en transparence. Au bout de la boîte, on a une transparence totale.
+    L'argument passé à la fonction détermine la distance sur laquelle cet effet est appliqué. La valeur en pourcentage est relative à la largeur de la boîte. Les valeurs inférieures à `0` sont ramenées à `0`. Les valeurs supérieures à la largeur de la boîte sont écrétées à la largeur de la boîte.
+- `<string>` {{experimental_inline}}
+  - : Une chaîne de caractères (type {{cssxref("&lt;string&gt;")}}) utilisée pour représentée le texte rogné. La chaîne est affichée à l'intérieur de [la boîte de contenu](/en-US/docs/Learn/CSS/Building_blocks/The_box_model) et réduit donc la quantité de texte affichée. S'il n'y a pas assez de place pour afficher la chaîne choisie, celle-ci est rognée.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<h3 id="one-value_syntax">Syntaxe avec une valeur</h3>
+### Syntaxe avec une valeur
 
-<p>Cet exemple illustre différentes valeurs pour <code>text-overflow</code>, appliquée à un paragraphe, pour des textes écrits de gauche à droite et de droite à gauche.</p>
+Cet exemple illustre différentes valeurs pour `text-overflow`, appliquée à un paragraphe, pour des textes écrits de gauche à droite et de droite à gauche.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">
+```html
 
-&lt;div class="ltr"&gt;
-  &lt;h2&gt;Left to right text&lt;/h2&gt;
-  &lt;pre&gt;clip&lt;/pre&gt;
-  &lt;p class="overflow-clip"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
-  &lt;pre&gt;ellipsis&lt;/pre&gt;
-  &lt;p class="overflow-ellipsis"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
-  &lt;pre&gt;" [..]"&lt;/pre&gt;
-  &lt;p class="overflow-string"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
-&lt;/div&gt;
+<div class="ltr">
+  <h2>Left to right text</h2>
+  <pre>clip</pre>
+  <p class="overflow-clip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <pre>ellipsis</pre>
+  <p class="overflow-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <pre>" [..]"</pre>
+  <p class="overflow-string">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+</div>
 
-&lt;div class="rtl"&gt;
-  &lt;h2&gt;Right to left text&lt;/h2&gt;
-  &lt;pre&gt;clip&lt;/pre&gt;
-  &lt;p class="overflow-clip"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
-  &lt;pre&gt;ellipsis&lt;/pre&gt;
-  &lt;p class="overflow-ellipsis"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
-  &lt;pre&gt;" [..]"&lt;/pre&gt;
-  &lt;p class="overflow-string"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+<div class="rtl">
+  <h2>Right to left text</h2>
+  <pre>clip</pre>
+  <p class="overflow-clip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <pre>ellipsis</pre>
+  <p class="overflow-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  <pre>" [..]"</pre>
+  <p class="overflow-string">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   width: 200px;
   border: 1px solid;
   padding: 2px 5px;
@@ -147,32 +145,33 @@ body {
 .rtl > p {
   direction: rtl;
 }
-</pre>
+```
 
-<h4 id="result">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('one-value_syntax', 600, 320)}}</p>
+{{EmbedLiveSample('one-value_syntax', 600, 320)}}
 
-<h3 id="two-value_syntax">Syntaxe avec deux valeurs</h3>
+### Syntaxe avec deux valeurs
 
-<p>Cette exemple illustre la syntaxe à deux valeurs pour <code>text-overflow</code>, où on peut définir un comportement de débordement différent pour le début et la fin du texte. Pour illustrer l'effet, on doit faire défiler la ligne et le début de la ligne est donc caché.</p>
+Cette exemple illustre la syntaxe à deux valeurs pour `text-overflow`, où on peut définir un comportement de débordement différent pour le début et la fin du texte. Pour illustrer l'effet, on doit faire défiler la ligne et le début de la ligne est donc caché.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">
-&lt;pre&gt;clip clip&lt;/pre&gt;
-&lt;p class="overflow-clip-clip"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
-&lt;pre&gt;clip ellipsis&lt;/pre&gt;
-&lt;p class="overflow-clip-ellipsis"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
-&lt;pre&gt;ellipsis ellipsis&lt;/pre&gt;
-&lt;p class="overflow-ellipsis-ellipsis"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
-&lt;pre&gt;ellipsis " [..]"&lt;/pre&gt;
-&lt;p class="overflow-ellipsis-string"&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;/p&gt;
-</pre>
+```html
+<pre>clip clip</pre>
+<p class="overflow-clip-clip">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<pre>clip ellipsis</pre>
+<p class="overflow-clip-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<pre>ellipsis ellipsis</pre>
+<p class="overflow-ellipsis-ellipsis">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+<pre>ellipsis " [..]"</pre>
+<p class="overflow-ellipsis-string">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   width: 200px;
   border: 1px solid;
   padding: 2px 5px;
@@ -197,58 +196,39 @@ body {
 .overflow-ellipsis-string {
   text-overflow: ellipsis " [..]";
 }
-</pre>
+```
 
+#### JavaScript
 
-<h4 id="JavaScript">JavaScript</h4>
-
-<pre class="brush: js">// On fait défiler chaque paragraphe afin que le début soit également caché
+```js
+// On fait défiler chaque paragraphe afin que le début soit également caché
 const paras = document.querySelectorAll("p");
 
 for (let para of paras) {
   para.scroll(100, 0);
 }
-</pre>
+```
 
-<h4 id="result">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('two-value_syntax', 600, 360)}}</p>
+{{EmbedLiveSample('two-value_syntax', 600, 360)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 UI', '#text-overflow', 'text-overflow')}}</td>
-   <td>{{Spec2('CSS4 UI')}}</td>
-   <td>Ajout des valeurs <code>&lt;string&gt;</code> et <code>fade</code> et de la fonction <code>fade()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Overflow', '#text-overflow', 'text-overflow')}}</td>
-   <td>{{Spec2('CSS3 Overflow')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                                 | Commentaires                                                       |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------ |
+| {{SpecName('CSS4 UI', '#text-overflow', 'text-overflow')}}         | {{Spec2('CSS4 UI')}}         | Ajout des valeurs `<string>` et `fade` et de la fonction `fade()`. |
+| {{SpecName('CSS3 Overflow', '#text-overflow', 'text-overflow')}} | {{Spec2('CSS3 Overflow')}} | Définition initiale.                                               |
 
-<p>Une version précédente de cette interface avait atteint le statut de <em>Candidate Recommendation</em>. Certaines fonctionnalités devaient être retirées et n'étaient pas listées parmi les fonctionnalités à risque, la spécification a donc été déchue au niveau <em>Working Draft</em>. Cela explique pourquoi les navigateurs ont implémenté cette propriété sans préfixe bien qu'elle ne soit pas une CR.</p>
+Une version précédente de cette interface avait atteint le statut de _Candidate Recommendation_. Certaines fonctionnalités devaient être retirées et n'étaient pas listées parmi les fonctionnalités à risque, la spécification a donc été déchue au niveau _Working Draft_. Cela explique pourquoi les navigateurs ont implémenté cette propriété sans préfixe bien qu'elle ne soit pas une CR.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.text-overflow")}}</p>
+{{Compat("css.properties.text-overflow")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("overflow")}}</li>
- <li>{{cssxref("white-space")}}</li>
-</ul>
+- {{cssxref("overflow")}}
+- {{cssxref("white-space")}}

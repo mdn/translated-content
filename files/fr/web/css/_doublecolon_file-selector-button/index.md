@@ -9,45 +9,48 @@ tags:
 translation_of: Web/CSS/::file-selector-button
 original_slug: Web/CSS/::-webkit-file-upload-button
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>Le pseudo-élément <strong><code>::-webkit-file-upload-button</code></strong> représente le bouton d'un élément {{HTMLElement("input")}} de type <code>file</code>.</p>
+Le pseudo-élément **`::-webkit-file-upload-button`** représente le bouton d'un élément {{HTMLElement("input")}} de type `file`.
 
-<p>Ce pseudo-élément n'est pas standard et est uniquement pris en charge par les navigateurs basés sur WebKit/Blink.</p>
+Ce pseudo-élément n'est pas standard et est uniquement pris en charge par les navigateurs basés sur WebKit/Blink.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>selecteur</var>::-webkit-file-upload-button
-</pre>
+    selecteur::-webkit-file-upload-button
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">input, label {
+```css
+input, label {
   display: block;
 }
 
 input[type=file]::-webkit-file-upload-button {
   border: 1px solid grey;
   background: #FFFAAA;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;label for="fileUpload"&gt;Uploader un fichier&lt;/label&gt;&lt;br&gt;
-  &lt;input type="file" id="fileUpload"&gt;
-&lt;/form&gt;</pre>
+```html
+<form>
+  <label for="fileUpload">Uploader un fichier</label><br>
+  <input type="file" id="fileUpload">
+</form>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples')}}</p>
+{{EmbedLiveSample('Exemples')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink et ne fait partie d'aucune spécification.</p>
+Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink et ne fait partie d'aucune spécification.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.-webkit-file-upload-button")}}</p>
+{{Compat("css.selectors.-webkit-file-upload-button")}}

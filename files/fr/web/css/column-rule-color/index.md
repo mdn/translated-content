@@ -7,16 +7,17 @@ tags:
   - Reference
 translation_of: Web/CSS/column-rule-color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété<strong> <code>column-rule-color</code></strong> permet de définir la couleur de la ligne tracée entre les colonnes lorsqu'on utilise une disposition en colonnes.</p>
+La propriété** `column-rule-color`** permet de définir la couleur de la ligne tracée entre les colonnes lorsqu'on utilise une disposition en colonnes.
 
-<div>{{EmbedInteractiveExample("pages/css/column-rule-color.html")}}</div>
+{{EmbedInteractiveExample("pages/css/column-rule-color.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs de couleur */
-/* Type &lt;color&gt; */
+```css
+/* Valeurs de couleur */
+/* Type <color> */
 column-rule-color: red;
 column-rule-color: rgb(192, 56, 78);
 column-rule-color: transparent;
@@ -26,35 +27,36 @@ column-rule-color: hsla(0, 100%, 50%, 0.6);
 column-rule-color: inherit;
 column-rule-color: initial;
 column-rule-color: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;color&gt;</code></dt>
- <dd>Une valeur de couleur (type {{cssxref("&lt;color&gt;")}}) qui indique la couleur du trait entre les colonnes.</dd>
-</dl>
+- `<color>`
+  - : Une valeur de couleur (type {{cssxref("&lt;color&gt;")}}) qui indique la couleur du trait entre les colonnes.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">.exemple {
+```css
+.exemple {
   border: 10px solid #000000;
 
   columns:3;
   column-rule-width: thick;
   column-rule-color: blue;
   column-rule-style: solid;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class=exemple&gt;
+```html
+<p class=exemple>
   « Mais alors, » pensa Alice, « ne serai-je donc
   jamais plus vieille que je ne le suis maintenant ?
   D’un côté cela aura ses avantages, ne jamais être
@@ -65,41 +67,27 @@ column-rule-color: unset;
   « Comment pourriez-vous apprendre des leçons ici ?
   Il y a à peine de la place pour vous, et il n’y en
   a pas du tout pour vos livres de leçons. »
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Multicol', '#crc', 'column-rule-color')}}</td>
-   <td>{{Spec2('CSS3 Multicol')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | État                                 | Commentaires |
+| ---------------------------------------------------------------------------- | ------------------------------------ | ------------ |
+| {{SpecName('CSS3 Multicol', '#crc', 'column-rule-color')}} | {{Spec2('CSS3 Multicol')}} |              |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.column-rule-color")}}</p>
+{{Compat("css.properties.column-rule-color")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Le type de donnée {{cssxref("&lt;color&gt;")}}</li>
- <li>Les autres propriétés relatives aux couleurs : {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}} et {{cssxref("caret-color")}}</li>
- <li><a href="/fr/docs/Web/HTML/Applying_color">Appliquer des couleurs aux éléments HTML grâce à CSS</a></li>
-</ul>
+- Le type de donnée {{cssxref("&lt;color&gt;")}}
+- Les autres propriétés relatives aux couleurs : {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}} et {{cssxref("caret-color")}}
+- [Appliquer des couleurs aux éléments HTML grâce à CSS](/fr/docs/Web/HTML/Applying_color)

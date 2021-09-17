@@ -8,22 +8,23 @@ tags:
   - display
 translation_of: Web/CSS/display
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>display</code></strong> définit le type d'affichage utilisée pour le rendu d'un élément (<a href="/fr/docs/Web/CSS/CSS_Flow_Layout">de bloc ou en ligne</a>) et la disposition utilisée pour ses éléments fils : <a href="/fr/docs/Web/CSS/CSS_Grid_Layout">grille</a> ou <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout">boîtes flexibles</a>.</p>
+La propriété **`display`** définit le type d'affichage utilisée pour le rendu d'un élément ([de bloc ou en ligne](/fr/docs/Web/CSS/CSS_Flow_Layout)) et la disposition utilisée pour ses éléments fils : [grille](/fr/docs/Web/CSS/CSS_Grid_Layout) ou [boîtes flexibles](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout).
 
-<p>Le type d'affichage donné par <code>display</code> possède deux composantes : le type d'affichage extérieur qui définit comment la boîte participe au <a href="/fr/docs/Web/CSS/CSS_Flow_Layout">flux</a> et le type d'affichage intérieur qui définit l'organisation des éléments enfants.</p>
+Le type d'affichage donné par `display` possède deux composantes : le type d'affichage extérieur qui définit comment la boîte participe au [flux](/fr/docs/Web/CSS/CSS_Flow_Layout) et le type d'affichage intérieur qui définit l'organisation des éléments enfants.
 
-<p>Certaines valeurs de <code>display</code> sont définies dans des spécifications séparées. Pour plus d'informations, voir la section Spécifications ci-après.</p>
+Certaines valeurs de `display` sont définies dans des spécifications séparées. Pour plus d'informations, voir la section Spécifications ci-après.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs de type &lt;display-outside&gt; */
+```css
+/* Valeurs de type <display-outside> */
 display: block;
 display: inline;
 display: run-in;
 
-/* Valeurs de type &lt;display-inside&gt; */
+/* Valeurs de type <display-inside> */
 display: flow;
 display: flow-root;
 display: table;
@@ -32,12 +33,12 @@ display: grid;
 display: ruby;
 
 /* Combinaison de valeurs */
-/* &lt;display-outside&gt; et &lt;display-inside&gt; */
+/* <display-outside> et <display-inside> */
 display: block flow;
 display: inline table;
 display: flex run-in;
 
-/* Valeurs de type &lt;display-listitem&gt; */
+/* Valeurs de type <display-listitem> */
 display: list-item;
 display: list-item block;
 display: list-item inline;
@@ -47,7 +48,7 @@ display: list-item block flow;
 display: list-item block flow-root;
 display: flow list-item block;
 
-/* Valeurs de type &lt;display-internal&gt; */
+/* Valeurs de type <display-internal> */
 display: table-row-group;
 display: table-header-group;
 display: table-footer-group;
@@ -61,11 +62,11 @@ display: ruby-text;
 display: ruby-base-container;
 display: ruby-text-container;
 
-/* Valeurs de type &lt;display-box&gt; */
+/* Valeurs de type <display-box> */
 display: contents;
 display: none;
 
-/* Valeurs de type &lt;display-legacy&gt; */
+/* Valeurs de type <display-legacy> */
 display: inline-block;
 display: inline-table;
 display: inline-flex;
@@ -75,161 +76,125 @@ display: inline-grid;
 display: inherit;
 display: initial;
 display: unset;
-</pre>
+```
 
-<p>La propriété <code>display</code> est définie à l'aide de mots-clés. Ces valeurs sont rangées selon six catégories.</p>
+La propriété `display` est définie à l'aide de mots-clés. Ces valeurs sont rangées selon six catégories.
 
-<dl>
- <dt>{{CSSxRef("&lt;display-outside&gt;")}}</dt>
- <dd>Ces mots-clés définissent le type d'affichage extérieur de l'élément. Autrement dit, ils définissent comment l'élément participe au flux.</dd>
- <dt>{{CSSxRef("&lt;display-inside&gt;")}}</dt>
- <dd>Ces mots-clés définissent le type d'affichage intérieur de l'élément qui définit le contexte de formatage qui organisera le contenu de l'élément (si celui-ci n'est pas un élément remplacé).</dd>
- <dt>{{CSSxRef("&lt;display-listitem&gt;")}}</dt>
- <dd>L'élément génère une boîte de bloc pour le contenu et une boîte en ligne séparée pour l'élément de liste.</dd>
- <dt>{{CSSxRef("&lt;display-internal&gt;")}}</dt>
- <dd>Certains modes de dispositions, tels que <code><span class="css">table</span></code> et <code>ruby</code> possèdent une structure interne complexe avec différents rôles possibles pour les éléments descendants. Cette section définit ces rôles internes qui s'appliquent uniquement pour un mode de disposition donné.</dd>
- <dt>{{CSSxRef("&lt;display-box&gt;")}}</dt>
- <dd>Ces valeurs définissent si un élément génère une boîte ou non.</dd>
- <dt>{{CSSxRef("&lt;display-legacy&gt;")}}</dt>
- <dd>CSS 2 utilise une syntaxe avec un seul mot-clé pour la propriété <code>display</code> et il faut donc des mots-clés distincts pour les variantes bloc/en ligne d'un même mode de disposition.</dd>
-</dl>
+- {{CSSxRef("&lt;display-outside&gt;")}}
+  - : Ces mots-clés définissent le type d'affichage extérieur de l'élément. Autrement dit, ils définissent comment l'élément participe au flux.
+- {{CSSxRef("&lt;display-inside&gt;")}}
+  - : Ces mots-clés définissent le type d'affichage intérieur de l'élément qui définit le contexte de formatage qui organisera le contenu de l'élément (si celui-ci n'est pas un élément remplacé).
+- {{CSSxRef("&lt;display-listitem&gt;")}}
+  - : L'élément génère une boîte de bloc pour le contenu et une boîte en ligne séparée pour l'élément de liste.
+- {{CSSxRef("&lt;display-internal&gt;")}}
+  - : Certains modes de dispositions, tels que `table` et `ruby` possèdent une structure interne complexe avec différents rôles possibles pour les éléments descendants. Cette section définit ces rôles internes qui s'appliquent uniquement pour un mode de disposition donné.
+- {{CSSxRef("&lt;display-box&gt;")}}
+  - : Ces valeurs définissent si un élément génère une boîte ou non.
+- {{CSSxRef("&lt;display-legacy&gt;")}}
+  - : CSS 2 utilise une syntaxe avec un seul mot-clé pour la propriété `display` et il faut donc des mots-clés distincts pour les variantes bloc/en ligne d'un même mode de disposition.
 
-<h3 id="Valeurs_historiques_de_display">Valeurs historiques de <code>display</code></h3>
+### Valeurs historiques de `display`
 
-<p>La spécification de niveau 3 permet d'utiliser deux valeurs pour définir la propriété <code>display</code> afin de définir explicitement le type d'affichage intérieur et le type d'affichage extérieur. Toutefois, cette syntaxe sur deux valeurs n'est pas encore prise en charge de façon homogène par les navigateurs.</p>
+La spécification de niveau 3 permet d'utiliser deux valeurs pour définir la propriété `display` afin de définir explicitement le type d'affichage intérieur et le type d'affichage extérieur. Toutefois, cette syntaxe sur deux valeurs n'est pas encore prise en charge de façon homogène par les navigateurs.
 
-<p>Les méthodes d'affichage historiques permettent d'obtenir les mêmes résultats avec un seul mot-clé. Ces valeurs devraient être privilégiées tant que la prise en charge de la syntaxe sur deux valeurs n'est pas mieux prise en charge. Ainsi, il est possible d'utiliseur deux valeur afin de définir un conteneur flexible en ligne :</p>
+Les méthodes d'affichage historiques permettent d'obtenir les mêmes résultats avec un seul mot-clé. Ces valeurs devraient être privilégiées tant que la prise en charge de la syntaxe sur deux valeurs n'est pas mieux prise en charge. Ainsi, il est possible d'utiliseur deux valeur afin de définir un conteneur flexible en ligne :
 
-<pre class="brush: css">.container {
+```css
+.container {
   display: inline flex;
-}</pre>
+}
+```
 
-<p>On pourra obtenir un comportement équivalent en écrivant cela avec une seule valeur.</p>
+On pourra obtenir un comportement équivalent en écrivant cela avec une seule valeur.
 
-<pre class="brush: css">.container {
+```css
+.container {
   display: inline-flex;
 }
-</pre>
+```
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>En plus de l'exemple qui suit, vous pouvez voir d'autres exemples sur les sections dédiées aux différents modes de disposition :</p>
+En plus de l'exemple qui suit, vous pouvez voir d'autres exemples sur les sections dédiées aux différents modes de disposition :
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Grid_Layout">Grilles CSS</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout">Boîtes flexibles (<em>flexbox</em>) CSS</a></li>
- <li><a href="/fr/docs/Apprendre/CSS/CSS_layout">Apprendre la disposition en CSS</a></li>
-</ul>
+- [Grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout)
+- [Boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout)
+- [Apprendre la disposition en CSS](/fr/docs/Apprendre/CSS/CSS_layout)
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   Texte visible
-&lt;/p&gt;
-&lt;p class="secret"&gt;
+</p>
+<p class="secret">
   Texte invisible
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p.secret {
+```css
+p.secret {
   display: none;
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", 300, 60)}}</p>
+{{EmbedLiveSample("Exemples", 300, 60)}}
 
-<h2 id="Accessibilité">Accessibilité</h2>
+## Accessibilité
 
-<h3 id="display_none"><code>display: none;</code></h3>
+### `display: none;`
 
-<p>Utiliser la propriété <code>display</code> avec la valeur <code>none</code> sur un élément entraînera son retrait de l'<a href="/fr/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs">arbre d'accessibilité</a>. Cet élément ainsi que ses descendants ne seront plus annoncés par les lecteurs d'écrans.</p>
+Utiliser la propriété `display` avec la valeur `none` sur un élément entraînera son retrait de l'[arbre d'accessibilité](/fr/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs). Cet élément ainsi que ses descendants ne seront plus annoncés par les lecteurs d'écrans.
 
-<p>Si vous souhaitez masquer un élément visuellement, une alternative plus accessible consiste à utiliser <a href="https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link">une combinaison de propriétés</a> afin de le retirer de l'écran mais de le conserver lisible pour les technologies d'assistance.</p>
+Si vous souhaitez masquer un élément visuellement, une alternative plus accessible consiste à utiliser [une combinaison de propriétés](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link) afin de le retirer de l'écran mais de le conserver lisible pour les technologies d'assistance.
 
-<h3 id="display_contents"><code>display: contents;</code></h3>
+### `display: contents;`
 
-<p>Tout élément ciblé avec <code>display: contents</code> sera retiré de l'arbre d'accessibilité par la plupart des navigateurs. Ainsi, l'élément et ses descendants ne seront plus annoncés par les outils d'assistance tels que les lecteurs d'écran. Ce comportement est incorrect selon <a href="https://drafts.csswg.org/css-display/#the-display-properties">la spécification CSSWG</a>.</p>
+Tout élément ciblé avec `display: contents` sera retiré de l'arbre d'accessibilité par la plupart des navigateurs. Ainsi, l'élément et ses descendants ne seront plus annoncés par les outils d'assistance tels que les lecteurs d'écran. Ce comportement est incorrect selon [la spécification CSSWG](https://drafts.csswg.org/css-display/#the-display-properties).
 
-<ul>
- <li><a href="https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html"><code>display: contents</code> n'est pas un outil de réinitialisation CSS, par Adrian Roselli, en anglais</a></li>
- <li><a href="https://hiddedevries.nl/en/blog/2018-04-21-more-accessible-markup-with-display-contents">Obtenir un balisage plus accessible grâce à <code>display: contents</code>, en anglais, par Hidde de Vries</a></li>
-</ul>
+- [`display: contents` n'est pas un outil de réinitialisation CSS, par Adrian Roselli, en anglais](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
+- [Obtenir un balisage plus accessible grâce à `display: contents`, en anglais, par Hidde de Vries](https://hiddedevries.nl/en/blog/2018-04-21-more-accessible-markup-with-display-contents)
 
-<h3 id="Les_tableaux">Les tableaux</h3>
+### Les tableaux
 
-<p>Modifier la valeur de <code>display</code> pour un élément de <a href="/en-US/docs/Web/HTML/Element/table">tableau</a> afin d'utiliser la valeur <code>block</code>, <code>grid</code> ou <code>flex</code> modifiera sa représentation au sein de l'<a href="/fr/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs">arbre d'accessibilité</a>. Aussi, le tableau ne sera plus correctement annoncé par les technologies d'assistance.</p>
+Modifier la valeur de `display` pour un élément de [tableau](/en-US/docs/Web/HTML/Element/table) afin d'utiliser la valeur `block`, `grid` ou `flex` modifiera sa représentation au sein de l'[arbre d'accessibilité](/fr/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs). Aussi, le tableau ne sera plus correctement annoncé par les technologies d'assistance.
 
-<ul>
- <li><a href="https://developer.paciellogroup.com/blog/2018/03/short-note-on-what-css-display-properties-do-to-table-semantics/">Une rapide note sur l'impact de la propriété CSS <code>display</code> sur la sémantique des tableaux — The Paciello Group (en anglais)</a></li>
- <li><a href="https://gomakethings.com/hidden-content-for-better-a11y/">Du contenu masqué avec une meilleure accessibilité - Go Make Things (en anglais)</a></li>
- <li><a href="/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways">Comprendre les règles WCAG 1.3</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html"><em>Understanding Success Criterion 1.3.1, W3C Understanding WCAG 2.0</em> (en anglais)</a></li>
-</ul>
+- [Une rapide note sur l'impact de la propriété CSS `display` sur la sémantique des tableaux — The Paciello Group (en anglais)](https://developer.paciellogroup.com/blog/2018/03/short-note-on-what-css-display-properties-do-to-table-semantics/)
+- [Du contenu masqué avec une meilleure accessibilité - Go Make Things (en anglais)](https://gomakethings.com/hidden-content-for-better-a11y/)
+- [Comprendre les règles WCAG 1.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
+- [_Understanding Success Criterion 1.3.1, W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Display', '#the-display-properties', 'display')}}</td>
-   <td>{{Spec2('CSS3 Display')}}</td>
-   <td>Ajout des valeurs <code>run-in</code>, <code>contents</code>, <code>flow</code>, <code>flow-root</code> et des valeurs avec plusieurs mots-clés.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Ruby', '#ruby-display', 'display')}}</td>
-   <td>{{Spec2('CSS3 Ruby')}}</td>
-   <td>Ajout des valeurs <code>ruby</code>, <code>ruby-base</code>, <code>ruby-text</code>, <code>ruby-base-container</code> et <code>ruby-text-container</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Grid', '#grid-containers', 'display')}}</td>
-   <td>{{Spec2('CSS3 Grid')}}</td>
-   <td>Ajout des valeurs pour le modèle de boîtes en grille.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Flexbox', '#flex-containers', 'display')}}</td>
-   <td>{{Spec2('CSS3 Flexbox')}}</td>
-   <td>Ajout des valeurs pour le modèle de boîtes flexibles.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visuren.html#display-prop', 'display')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Ajout des valeurs pour le modèle de boîte pour les tableaux et de la valeur <code>inline-block<em>.</em></code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#display', 'display')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Définition initiale. Définitions des valeurs basiques : <code>none</code>, <code>block</code>, <code>inline</code>, et <code>list-item</code>.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                             | Commentaires                                                                                         |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS3 Display', '#the-display-properties', 'display')}} | {{Spec2('CSS3 Display')}} | Ajout des valeurs `run-in`, `contents`, `flow`, `flow-root` et des valeurs avec plusieurs mots-clés. |
+| {{SpecName('CSS3 Ruby', '#ruby-display', 'display')}}                 | {{Spec2('CSS3 Ruby')}}     | Ajout des valeurs `ruby`, `ruby-base`, `ruby-text`, `ruby-base-container` et `ruby-text-container`.  |
+| {{SpecName('CSS3 Grid', '#grid-containers', 'display')}}             | {{Spec2('CSS3 Grid')}}     | Ajout des valeurs pour le modèle de boîtes en grille.                                                |
+| {{SpecName('CSS3 Flexbox', '#flex-containers', 'display')}}         | {{Spec2('CSS3 Flexbox')}} | Ajout des valeurs pour le modèle de boîtes flexibles.                                                |
+| {{SpecName('CSS2.1', 'visuren.html#display-prop', 'display')}}     | {{Spec2('CSS2.1')}}         | Ajout des valeurs pour le modèle de boîte pour les tableaux et de la valeur `inline-block.`          |
+| {{SpecName('CSS1', '#display', 'display')}}                                 | {{Spec2('CSS1')}}         | Définition initiale. Définitions des valeurs basiques : `none`, `block`, `inline`, et `list-item`.   |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.display",10)}}</p>
+{{Compat("css.properties.display",10)}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("visibility")}}</li>
- <li>{{cssxref("float")}}</li>
- <li>{{cssxref("position")}}</li>
- <li>{{cssxref("flex")}}</li>
- <li>{{cssxref("grid")}}</li>
- <li><a href="/fr/docs/Web/CSS/CSS_Flow_Layout/Explications_contextes_formatage">Explications sur les contextes de formatage</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Flow_Layout/Disposition_de_bloc_en_ligne_avec_flux_normal">Les dispositions de bloc et en ligne dans un flux normal</a></li>
-</ul>
+- {{cssxref("visibility")}}
+- {{cssxref("float")}}
+- {{cssxref("position")}}
+- {{cssxref("flex")}}
+- {{cssxref("grid")}}
+- [Explications sur les contextes de formatage](/fr/docs/Web/CSS/CSS_Flow_Layout/Explications_contextes_formatage)
+- [Les dispositions de bloc et en ligne dans un flux normal](/fr/docs/Web/CSS/CSS_Flow_Layout/Disposition_de_bloc_en_ligne_avec_flux_normal)

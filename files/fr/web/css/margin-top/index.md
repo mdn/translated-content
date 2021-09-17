@@ -7,18 +7,19 @@ tags:
   - Reference
 translation_of: Web/CSS/margin-top
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>margin-top</code></strong> définit l'espace vertical pour la marge appliquée en haut de l'élément. Une valeur négative peut être utilisée.</p>
+La propriété **`margin-top`** définit l'espace vertical pour la marge appliquée en haut de l'élément. Une valeur négative peut être utilisée.
 
-<div>{{EmbedInteractiveExample("pages/css/margin-top.html")}}</div>
+{{EmbedInteractiveExample("pages/css/margin-top.html")}}
 
-<p>Cette propriété n'a aucun effet sur les éléments non-remplacés en ligne (<em>inline</em>) tels que {{HTMLElement("tt")}} ou {{HTMLElement("span")}}.</p>
+Cette propriété n'a aucun effet sur les éléments non-remplacés en ligne (_inline_) tels que {{HTMLElement("tt")}} ou {{HTMLElement("span")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs de longueur */
-/* Type &lt;length&gt;       */
+```css
+/* Valeurs de longueur */
+/* Type <length>       */
 margin-top: 10px;  /* Une longueur absolue */
 margin-top: 1em;   /* Une longueur proportionnelle à la taille du texte */
 margin-top: 5%;    /* Une marge relative à la largeur */
@@ -31,30 +32,29 @@ margin-top: auto;
 margin-top: inherit;
 margin-top: initial;
 margin-top: unset;
-</pre>
+```
 
-<p>Le mot-clé <code>auto</code> ou une valeur de longueur (<code>&lt;length&gt;</code>) ou de pourcentage (<code>&lt;percentage&gt;</code>).</p>
+Le mot-clé `auto` ou une valeur de longueur (`<length>`) ou de pourcentage (`<percentage>`).
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Cette valeur définit une largeur fixée. Pour les valeurs qui peuvent être utilisées, voir la page sur le type {{cssxref("&lt;length&gt;")}}.</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>Une valeur en pourcentage (type {{cssxref("&lt;percentage&gt;")}} qui est relative à la <strong>largeur</strong> du bloc englobant.</dd>
- <dt><code>auto</code></dt>
- <dd>Voir {{cssxref("margin")}}.</dd>
-</dl>
+- `<length>`
+  - : Cette valeur définit une largeur fixée. Pour les valeurs qui peuvent être utilisées, voir la page sur le type {{cssxref("&lt;length&gt;")}}.
+- `<percentage>`
+  - : Une valeur en pourcentage (type {{cssxref("&lt;percentage&gt;")}} qui est relative à la **largeur** du bloc englobant.
+- `auto`
+  - : Voir {{cssxref("margin")}}.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: blue;
   background-clip: border-box;
   width: 50px;
@@ -64,58 +64,36 @@ margin-top: unset;
   margin-top: 3em;
   background-color: gold;
   background-clip: border-box;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;&lt;/div&gt;
-&lt;p class=exemple&gt;
+```html
+<div></div>
+<p class=exemple>
   C’est ce qui arriva en effet, et bien plus tôt
   qu’elle ne s’y attendait. Elle n’avait pas bu
   la moitié de la bouteille, que sa tête touchait
   au plafond et qu’elle fut forcée de se baisser
-  pour ne pas se casser le cou.&lt;/p&gt;</pre>
+  pour ne pas se casser le cou.</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Box', '#the-margin', 'margin-top')}}</td>
-   <td>{{Spec2('CSS3 Box')}}</td>
-   <td>Aucun changement significatif</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'margin-top')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td><code>margin-top</code> peut désormais être animée.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'box.html#margin-properties', 'margin-top')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>L'effet sur les éléments en ligne (<em>inline</em>) est retiré.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#margin-top', 'margin-top')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                                     | Commentaires                                             |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------- |
+| {{SpecName('CSS3 Box', '#the-margin', 'margin-top')}}                 | {{Spec2('CSS3 Box')}}             | Aucun changement significatif                            |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'margin-top')}} | {{Spec2('CSS3 Transitions')}} | `margin-top` peut désormais être animée.                 |
+| {{SpecName('CSS2.1', 'box.html#margin-properties', 'margin-top')}} | {{Spec2('CSS2.1')}}                 | L'effet sur les éléments en ligne (_inline_) est retiré. |
+| {{SpecName('CSS1', '#margin-top', 'margin-top')}}                         | {{Spec2('CSS1')}}                 | Définition initiale.                                     |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.margin-top")}}</p>
+{{Compat("css.properties.margin-top")}}

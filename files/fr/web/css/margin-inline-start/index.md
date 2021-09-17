@@ -8,18 +8,19 @@ tags:
   - Reference
 translation_of: Web/CSS/margin-inline-start
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propriété <strong><code>margin-inline-start</code></strong> définit la marge logique appliquée au début des éléments en ligne, selon le mode d'écriture, la directionalité et l'orientation du texte. Selon les valeurs utilisées pour {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}, elle peut correspondre à {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} ou {{cssxref("margin-left")}}.</p>
+La propriété **`margin-inline-start`** définit la marge logique appliquée au début des éléments en ligne, selon le mode d'écriture, la directionalité et l'orientation du texte. Selon les valeurs utilisées pour {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}, elle peut correspondre à {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} ou {{cssxref("margin-left")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/margin-inline-start.html")}}</div>
+{{EmbedInteractiveExample("pages/css/margin-inline-start.html")}}
 
-<p>Cette propriété est à rapprocher de {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}} et de {{cssxref("margin-inline-end")}} qui définissent les autres marges appliquées à l'élément.</p>
+Cette propriété est à rapprocher de {{cssxref("margin-block-start")}}, {{cssxref("margin-block-end")}} et de {{cssxref("margin-inline-end")}} qui définissent les autres marges appliquées à l'élément.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs de longueur */
-/* Type &lt;length&gt;       */
+```css
+/* Valeurs de longueur */
+/* Type <length>       */
 margin-inline-start: 10px;      /* Une longueur absolue */
 margin-inline-start: 1em;       /* Une longueur relative à la taille du texte */
 margin-inline-start: 5%;        /* Une largeur relative à la
@@ -30,21 +31,22 @@ margin-inline-start: auto;
 
 /* Valeurs globales */
 margin-inline-start: inherit;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<p>La propriété <code>margin-inline-start</code> peut prendre les mêmes valeurs que la propriété {{cssxref("margin-left")}}.</p>
+La propriété `margin-inline-start` peut prendre les mêmes valeurs que la propriété {{cssxref("margin-left")}}.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -54,57 +56,43 @@ margin-inline-start: inherit;
   writing-mode: vertical-lr;
   margin-inline-start: 20px;
   background-color: #c8c800;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exemple"&gt;Texte d'exemple&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exemple">Texte d'exemple</p>
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", 140, 140)}}</p>
+{{EmbedLiveSample("Exemples", 140, 140)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-margin-inline-start", "margin-inline-start")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                | État                                             | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
+| {{SpecName("CSS Logical Properties", "#propdef-margin-inline-start", "margin-inline-start")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.margin-inline-start")}}</p>
+{{Compat("css.properties.margin-inline-start")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Les propriétés physiques correspondantes :
-  <ul>
-   <li>{{cssxref("margin-top")}},</li>
-   <li>{{cssxref("margin-right")}},</li>
-   <li>{{cssxref("margin-bottom")}}</li>
-   <li>{{cssxref("margin-left")}}</li>
-  </ul>
- </li>
- <li>{{cssxref("margin-inline-end")}}</li>
- <li>{{cssxref("writing-mode")}}</li>
- <li>{{cssxref("direction")}}</li>
- <li>{{cssxref("text-orientation")}}</li>
-</ul>
+- Les propriétés physiques correspondantes :
+
+  - {{cssxref("margin-top")}},
+  - {{cssxref("margin-right")}},
+  - {{cssxref("margin-bottom")}}
+  - {{cssxref("margin-left")}}
+
+- {{cssxref("margin-inline-end")}}
+- {{cssxref("writing-mode")}}
+- {{cssxref("direction")}}
+- {{cssxref("text-orientation")}}

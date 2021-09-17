@@ -7,15 +7,16 @@ tags:
   - Reference
 translation_of: Web/CSS/border-image-repeat
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>border-image-repeat</code></strong> définit la façon dont les zones de l'image de bordure sont utilisée pour s'étendre sur chacun des côtés de la bordure. Cette propriété est multi-valuée : une valeur indiquera le comportement pour tous les côtés et deux valeurs indiqueront respectivement le comportement pour les côtés horizontaux et verticaux.</p>
+La propriété **`border-image-repeat`** définit la façon dont les zones de l'image de bordure sont utilisée pour s'étendre sur chacun des côtés de la bordure. Cette propriété est multi-valuée : une valeur indiquera le comportement pour tous les côtés et deux valeurs indiqueront respectivement le comportement pour les côtés horizontaux et verticaux.
 
-<div>{{EmbedInteractiveExample("pages/css/border-image-repeat.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-image-repeat.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* border-image-repeat                      */
+```css
+/* border-image-repeat                      */
 /* Une valeur : s'applique à tous les côtés */
 border-image-repeat: stretch;
 
@@ -28,77 +29,63 @@ border-image-repeat: round stretch;
 border-image-repeat: inherit;
 border-image-repeat: initial;
 border-image-repeat: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>stretch</code></dt>
- <dd>Un mot-clé qui indique que la zone de l'image doit être étirée pour remplir l'espace entre les deux bordures.</dd>
- <dt><code>repeat</code></dt>
- <dd>Un mot-clé qui indique que la zone de l'image doit être répétée jusqu'à remplir l'espace entre les deux bordures.</dd>
- <dt><code>round</code></dt>
- <dd>Un mot-clé qui indique que la zone de l'image doit être répétée jusqu'à remplir l'espace entre les deux bordures. Si on ne peut pas remplir cet espace avec un nombre entier de motifs, ceux-ci seront étirés pour qu'il y ait une répétition entière et que l'espace soit parfaitement rempli.</dd>
- <dt><code>space</code></dt>
- <dd>Un mot-clé qui indique que la zone de l'image est répétée afin de remplir la zone entre les deux bordures. Si on ne peut pas remplir exactement la zone avec un nombre entier de motifs, l'espace restant sera répartis entre ces motifs.</dd>
-</dl>
+- `stretch`
+  - : Un mot-clé qui indique que la zone de l'image doit être étirée pour remplir l'espace entre les deux bordures.
+- `repeat`
+  - : Un mot-clé qui indique que la zone de l'image doit être répétée jusqu'à remplir l'espace entre les deux bordures.
+- `round`
+  - : Un mot-clé qui indique que la zone de l'image doit être répétée jusqu'à remplir l'espace entre les deux bordures. Si on ne peut pas remplir cet espace avec un nombre entier de motifs, ceux-ci seront étirés pour qu'il y ait une répétition entière et que l'espace soit parfaitement rempli.
+- `space`
+  - : Un mot-clé qui indique que la zone de l'image est répétée afin de remplir la zone entre les deux bordures. Si on ne peut pas remplir exactement la zone avec un nombre entier de motifs, l'espace restant sera répartis entre ces motifs.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
  border-image-source: url("https://mdn.mozillademos.org/files/10470/border.png");
  border-image-slice: 30;
  border-image-width: 20px;
  border-image-repeat: round;
  padding: 40px;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+```html
+<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
   eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
   At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
   no sea takimata sanctus est Lorem ipsum dolor sit amet.
-&lt;/p&gt;
-</pre>
+</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', '480', '320')}}</p>
+{{EmbedLiveSample('Exemples', '480', '320')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-border-image-repeat', 'border-image-repeat')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                                     | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName('CSS3 Backgrounds', '#the-border-image-repeat', 'border-image-repeat')}} | {{Spec2('CSS3 Backgrounds')}} | Définition initiale. |
 
-<div>{{cssinfo}}</div>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.border-image-repeat")}}</p>
+{{Compat("css.properties.border-image-repeat")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="https://css-tricks.com/almanac/properties/b/border-image/">L'article de CSS Tricks sur <code>border-image</code> (en anglais)</a></li>
-</ul>
+- [L'article de CSS Tricks sur `border-image` (en anglais)](https://css-tricks.com/almanac/properties/b/border-image/)

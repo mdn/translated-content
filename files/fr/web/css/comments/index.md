@@ -7,20 +7,20 @@ tags:
   - Reference
 translation_of: Web/CSS/Comments
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Les commentaires sont utilisés afin d'ajouter des notes explicatives ou pour empêcher le navigateur d'interpréter certaines parties de la feuille de style. Les commentaires n'ont donc aucun impact sur la disposition d'un document.</p>
+Les commentaires sont utilisés afin d'ajouter des notes explicatives ou pour empêcher le navigateur d'interpréter certaines parties de la feuille de style. Les commentaires n'ont donc aucun impact sur la disposition d'un document.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>On peut utiliser des commentaires à chaque endroit où un blanc est autorisé.</p>
+On peut utiliser des commentaires à chaque endroit où un blanc est autorisé.
 
-<pre class="syntaxbox">/* Commentaire */
-</pre>
+    /* Commentaire */
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: css">/* Commentaire sur une ligne */
+```css
+/* Commentaire sur une ligne */
 
 /*
 Commentaire
@@ -37,18 +37,14 @@ span {
   font-size: 1.5em;
 }
 */
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>La syntaxe des commentaires avec <code>/* */</code> est utilisée pour étaler un commentaire sur une ou plusieurs lignes. On ne peut pas utiliser d'autres moyens pour les commentaires dans une feuille de style externe. Lorsqu'on utilise l'élément {{HTMLElement("style")}}, on peut utiliser les commentaires HTML <code>&lt;!-- --&gt;</code> pour masquer du CSS sur des navigateurs plus anciens mais cela n'est pas une méthode recommandée.</p>
+La syntaxe des commentaires avec `/* */` est utilisée pour étaler un commentaire sur une ou plusieurs lignes. On ne peut pas utiliser d'autres moyens pour les commentaires dans une feuille de style externe. Lorsqu'on utilise l'élément {{HTMLElement("style")}}, on peut utiliser les commentaires HTML `<!-- -->` pour masquer du CSS sur des navigateurs plus anciens mais cela n'est pas une méthode recommandée.
 
-<p>À l'instar des autres langages de programmation programmation qui utilisent <code>/* */</code> pour les commentaires, il est impossible de les imbriquer. Autrement dit, la première apparition de <code>*/</code> suivant un <code>/*</code>, ferme le commentaire.</p>
+À l'instar des autres langages de programmation programmation qui utilisent `/* */` pour les commentaires, il est impossible de les imbriquer. Autrement dit, la première apparition de `*/` suivant un `/*`, ferme le commentaire.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<ul>
- <li>
-  <div><a href="/fr/docs/Web/CSS/Reference">La référence CSS</a></div>
- </li>
-</ul>
+- [La référence CSS](/fr/docs/Web/CSS/Reference)

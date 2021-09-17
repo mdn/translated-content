@@ -8,19 +8,20 @@ tags:
   - Reference
 translation_of: Web/CSS/mask-image
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété CSS <strong><code>mask-image</code></strong> définit l'image qui sera utilisée comme masque pour un élément.</p>
+La propriété CSS **`mask-image`** définit l'image qui sera utilisée comme masque pour un élément.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeur avec un mot-clé */
+```css
+/* Valeur avec un mot-clé */
 mask-image: none;
 
-/* Valeur de type &lt;mask-source&gt; */
+/* Valeur de type <mask-source> */
 mask-image: url(masks.svg#mask1);
 
-/* Valeurs de type &lt;image&gt; */
+/* Valeurs de type <image> */
 mask-image: linear-gradient(rgba(0, 0, 0, 1.0), transparent);
 mask-image: image(url(mask.png), skyblue);
 
@@ -31,64 +32,51 @@ mask-image: image(url(mask.png), skyblue, linear-gradient(rgba(0, 0, 0, 1.0), tr
 mask-image: inherit;
 mask-image: initial;
 mask-image: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Le masque défini par ce mot-clé sera une image noire transparente.</dd>
- <dt><code>&lt;mask-source&gt;</code></dt>
- <dd>Une référence {{cssxref("&lt;url&gt;")}} vers un masque ({{SVGElement("mask")}}) ou une image CSS.</dd>
- <dt>{{cssxref("&lt;image&gt;")}}</dt>
- <dd>Une image utilisée pour le masque.</dd>
-</dl>
+- `none`
+  - : Le masque défini par ce mot-clé sera une image noire transparente.
+- `<mask-source>`
+  - : Une référence {{cssxref("&lt;url&gt;")}} vers un masque ({{SVGElement("mask")}}) ou une image CSS.
+- {{cssxref("&lt;image&gt;")}}
+  - : Une image utilisée pour le masque.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css;">#masked {
+```css
+#masked {
   width: 100px;
   height: 100px;
   background-color: #8cffa0;
   -webkit-mask-image: url(https://mdn.mozillademos.org/files/12676/star.svg);
   mask-image: url(https://mdn.mozillademos.org/files/12676/star.svg);
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="masked"&gt;&lt;/div&gt;
-</pre>
+```html
+<div id="masked"></div>
+```
 
-<p>{{EmbedLiveSample("Exemples", "100px", "100px",'', '', 'hide-codepen-jsfiddle') }}</p>
+{{EmbedLiveSample("Exemples", "100px", "100px",'', '', 'hide-codepen-jsfiddle') }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Masks", "#the-mask-image", "mask-image")}}</td>
-   <td>{{Spec2("CSS Masks")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | État                         | Commentaires         |
+| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName("CSS Masks", "#the-mask-image", "mask-image")}} | {{Spec2("CSS Masks")}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.mask-image")}}</p>
+{{Compat("css.properties.mask-image")}}

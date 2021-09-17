@@ -1,6 +1,6 @@
 ---
 title: ':defined'
-slug: 'Web/CSS/:defined'
+slug: Web/CSS/:defined
 tags:
   - CSS
   - Layout
@@ -8,14 +8,15 @@ tags:
   - Reference
   - Selector
   - Web
-translation_of: 'Web/CSS/:defined'
+translation_of: Web/CSS/:defined
 browser-compat: css.selectors.defined
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <strong><code>:defined</code></strong> représente n'importe quel élément ayant été défini. Cela inclut les éléments standards provenant du navigateur, ainsi que les éléments personnalisés (« <em>custom elements</em> ») ayant correctement été définis (c'est-à-dire grâce à la méthode <a href="/fr/docs/Web/API/CustomElementRegistry/define"><code>CustomElementRegistry.define()</code></a>).</p>
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:defined`** représente n'importe quel élément ayant été défini. Cela inclut les éléments standards provenant du navigateur, ainsi que les éléments personnalisés (« _custom elements_ ») ayant correctement été définis (c'est-à-dire grâce à la méthode [`CustomElementRegistry.define()`](/fr/docs/Web/API/CustomElementRegistry/define)).
 
-<pre class="brush: css">/* Cette règle cible tout élément défini */
+```css
+/* Cette règle cible tout élément défini */
 :defined {
   font-style: italic;
 }
@@ -24,19 +25,20 @@ browser-compat: css.selectors.defined
 simple-custom:defined {
   display: block;
 }
-</pre>
+```
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
 {{csssyntax}}
 
-<h2 id="examples">Exemples</h2>
+## Exemples
 
-<p>Les fragments de code qui suivent sont tirés <a href="https://github.com/mdn/web-components-examples/tree/master/defined-pseudo-class">du dépôt <code>defined-pseudo-class</code></a> (<a href="https://mdn.github.io/web-components-examples/defined-pseudo-class/">voir le résultat en <em>live</em></a>).</p>
+Les fragments de code qui suivent sont tirés [du dépôt `defined-pseudo-class`](https://github.com/mdn/web-components-examples/tree/master/defined-pseudo-class) ([voir le résultat en _live_](https://mdn.github.io/web-components-examples/defined-pseudo-class/)).
 
-<p>Pour cette démonstration on définit un élément personnalisé trivial :</p>
+Pour cette démonstration on définit un élément personnalisé trivial :
 
-<pre class="brush: js">customElements.define('simple-custom',
+```js
+customElements.define('simple-custom',
   class extends HTMLElement {
     constructor() {
       super();
@@ -47,17 +49,21 @@ simple-custom:defined {
       let shadowRoot = this.attachShadow({mode: 'open'})
         .appendChild(divElem);
   }
-})</pre>
+})
+```
 
-<p>On insère ensuite une copie de cet élément dans le document, à côté d'un paragraphe classique {<code>&lt;p&gt;</code> :</p>
+On insère ensuite une copie de cet élément dans le document, à côté d'un paragraphe classique {`<p>` :
 
-<pre class="brush: html">&lt;simple-custom text="Le texte de l'élément personnalisé"&gt;&lt;/simple-custom&gt;
+```html
+<simple-custom text="Le texte de l'élément personnalisé"></simple-custom>
 
-&lt;p&gt;Un paragraphe normal&lt;/p&gt;</pre>
+<p>Un paragraphe normal</p>
+```
 
-<p>Dans la feuille CSS, on inclut d'abord les règles suivantes :</p>
+Dans la feuille CSS, on inclut d'abord les règles suivantes :
 
-<pre class="brush: css">// On utilise deux arrières-plans distincts pour ces deux éléments
+```css
+// On utilise deux arrières-plans distincts pour ces deux éléments
 p {
   background: yellow;
 }
@@ -69,30 +75,31 @@ simple-custom {
 // On met en italique le texte de ces deux éléments
 :defined {
   font-style: italic;
-}</pre>
+}
+```
 
-<p>Ensuite, on fournit les deux règles suivantes afin de masquer les instances de l'élément personnalisé qui ne sont pas définies et, pour celles qui sont définies, on indique que ce sont des éléments de bloc :</p>
+Ensuite, on fournit les deux règles suivantes afin de masquer les instances de l'élément personnalisé qui ne sont pas définies et, pour celles qui sont définies, on indique que ce sont des éléments de bloc :
 
-<pre class="brush: css">simple-custom:not(:defined) {
+```css
+simple-custom:not(:defined) {
   display: none;
 }
 
 simple-custom:defined {
   display: block;
-}</pre>
+}
+```
 
-<p>Ces dernières règles sont utiles lorsqu'on a un élément personnalisé complexe qui met du temps à charger : pour ceux-là, on peut vouloir les masquer jusqu'à ce que la définition soit complète afin de ne pas avoir de scintillement d'éléments non mis en forme sur la page.</p>
+Ces dernières règles sont utiles lorsqu'on a un élément personnalisé complexe qui met du temps à charger : pour ceux-là, on peut vouloir les masquer jusqu'à ce que la définition soit complète afin de ne pas avoir de scintillement d'éléments non mis en forme sur la page.
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
 {{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/Web/Web_Components">Les composants web</a></li>
-</ul>
+- [Les composants web](/fr/docs/Web/Web_Components)

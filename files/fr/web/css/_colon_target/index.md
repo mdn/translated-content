@@ -1,43 +1,46 @@
 ---
 title: ':target'
-slug: 'Web/CSS/:target'
+slug: Web/CSS/:target
 tags:
   - CSS
   - Pseudo-classe
   - Reference
-translation_of: 'Web/CSS/:target'
+translation_of: Web/CSS/:target
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <strong><code>:target</code></strong> permet de cibler l'unique élément (s'il existe) dont l'attribut {{htmlattrxref("id")}} correspond au fragment d'identifiant de l'URI du document.</p>
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:target`** permet de cibler l'unique élément (s'il existe) dont l'attribut {{htmlattrxref("id")}} correspond au fragment d'identifiant de l'URI du document.
 
-<pre class="brush: css no-line-numbers">/* Cible un élément dont l'identifiant      */
+```css
+/* Cible un élément dont l'identifiant      */
 /* correspond au fragment de l'URL courante */
 :target {
   border: 2px solid black;
-}</pre>
+}
+```
 
-<p>Les URI comportant des fragments d'identifiant peuvent être utilisées pour créer des liens vers un élément donné d'un document qu'on appellera l'élément cible (<em>target element</em>). Voici un exemple d'URI qui pointe vers une <em>ancre</em> intitulée <code>section2</code> :</p>
+Les URI comportant des fragments d'identifiant peuvent être utilisées pour créer des liens vers un élément donné d'un document qu'on appellera l'élément cible (_target element_). Voici un exemple d'URI qui pointe vers une _ancre_ intitulée `section2` :
 
-<pre>http://exemple.com/chemin/document.html#section2</pre>
+    http://exemple.com/chemin/document.html#section2
 
-<p>L'élément suivant sera donc ciblé par le sélecteur <code>:target</code> avec l'URL précédente :</p>
+L'élément suivant sera donc ciblé par le sélecteur `:target` avec l'URL précédente :
 
-<pre class="brush: html">&lt;section id="section2"&gt;Exemple&lt;/section&gt;</pre>
+```html
+<section id="section2">Exemple</section>
+```
 
-<div class="note">
-  <p><strong>Note :</strong> L'attribut <code>id</code> a été ajouté avec HTML 4 (décembre 1997). Dans les anciennes versions de HTML, <code>&lt;a&gt;</code> était nécessairement l'élément cible. La pseudo-classe <code>:target</code> permet également de gérer ces cibles.</p>
-</div>
+> **Note :** L'attribut `id` a été ajouté avec HTML 4 (décembre 1997). Dans les anciennes versions de HTML, `<a>` était nécessairement l'élément cible. La pseudo-classe `:target` permet également de gérer ces cibles.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Exemples_simples">Exemples simples</h3>
+### Exemples simples
 
-<pre class="brush:css">/* Exemple de code pouvant être utilisé dans une feuille
+```css
+/* Exemple de code pouvant être utilisé dans une feuille
    de style utilisateur. Une flèche rouge/jaune indique
    l'élément cible. */
 
@@ -56,44 +59,48 @@ translation_of: 'Web/CSS/:target'
   margin-right:   0.13em;
   vertical-align: 20%;
 }
-</pre>
+```
 
-<h3 id="Manipuler_les_éléments_avec_display_none">Manipuler les éléments avec <code>display: none</code></h3>
+### Manipuler les éléments avec `display: none`
 
-<p>La pseudo-classe <code>:target</code> s'accommode également des éléments qui ne sont pas affichés.</p>
+La pseudo-classe `:target` s'accommode également des éléments qui ne sont pas affichés.
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">#newcomment {
+```css
+#newcomment {
   display: none;
 }
 
 #newcomment:target {
   display: block;
-}</pre>
+}
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;&lt;a href="#newcomment"&gt;Ajouter un commentaire&lt;/a&gt;&lt;/p&gt;
-&lt;div id="newcomment"&gt;
-  &lt;form&gt;
-  &lt;p&gt;Saisir un commentaire :&lt;br /&gt;
-  &lt;textarea&gt;&lt;/textarea&gt;&lt;/p&gt;
-  &lt;/form&gt;
-&lt;/div&gt;
-</pre>
+```html
+<p><a href="#newcomment">Ajouter un commentaire</a></p>
+<div id="newcomment">
+  <form>
+  <p>Saisir un commentaire :<br />
+  <textarea></textarea></p>
+  </form>
+</div>
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Manipuler_les_éléments_avec_display:_none")}}</p>
+{{EmbedLiveSample("Manipuler_les_éléments_avec_display:_none")}}
 
-<h3 id="Révéler_des_éléments">Révéler des éléments</h3>
+### Révéler des éléments
 
-<p><code>:target</code> peut être utile afin de révéler/masquer certains éléments invisibles.</p>
+`:target` peut être utile afin de révéler/masquer certains éléments invisibles.
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div.lightbox {
+```css
+div.lightbox {
   display: none;
   position: fixed;
   left: 0;
@@ -173,68 +180,48 @@ div.lightbox figure .closemsg, div.lightbox figure figcaption {
   height: 100%;
   background-color: #000000;
   opacity: 0.85;
-}</pre>
+}
+```
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;Un texte pour l'exemple&amp;hellip;&lt;/p&gt;
-&lt;p&gt;[ &lt;a href="#exemple1"&gt;Ouvrir l'exemple n°1&lt;/a&gt; | &lt;a href="#exemple2"&gt; Ouvrir l'exemple n°2&lt;/a&gt; ]&lt;/p&gt;
-&lt;p&gt;Un autre texte pour l'exemple&amp;hellip;&lt;/p&gt;
-&lt;div class="lightbox" id="exemple1"&gt;
-  &lt;figure&gt;
-    &lt;a href="#" class="closemsg"&gt;&lt;/a&gt;
-    &lt;figcaption&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis enim, placerat id eleifend eu, semper vel sem. Sed interdum commodo enim venenatis pulvinar. Proin mattis lorem vitae diam scelerisque hendrerit. Fusce cursus imperdiet mauris, vitae hendrerit velit dignissim a. Suspendisse potenti. Aenean feugiat facilisis diam, in posuere sapien mattis vel. Proin molestie rutrum diam, pharetra feugiat ligula sollicitudin sed. Etiam cursus diam quis tellus aliquam gravida. Aliquam erat volutpat.&lt;br /&gt;
-    Etiam varius adipiscing mi eget imperdiet. Nulla quis vestibulum leo. Integer molestie massa ut massa commodo in blandit purus aliquam. Mauris sit amet posuere massa. Ut a eleifend augue. Proin sodales mauris nec tellus pharetra dictum.&lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;
+```html
+<p>Un texte pour l'exemple&hellip;</p>
+<p>[ <a href="#exemple1">Ouvrir l'exemple n°1</a> | <a href="#exemple2"> Ouvrir l'exemple n°2</a> ]</p>
+<p>Un autre texte pour l'exemple&hellip;</p>
+<div class="lightbox" id="exemple1">
+  <figure>
+    <a href="#" class="closemsg"></a>
+    <figcaption>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis enim, placerat id eleifend eu, semper vel sem. Sed interdum commodo enim venenatis pulvinar. Proin mattis lorem vitae diam scelerisque hendrerit. Fusce cursus imperdiet mauris, vitae hendrerit velit dignissim a. Suspendisse potenti. Aenean feugiat facilisis diam, in posuere sapien mattis vel. Proin molestie rutrum diam, pharetra feugiat ligula sollicitudin sed. Etiam cursus diam quis tellus aliquam gravida. Aliquam erat volutpat.<br />
+    Etiam varius adipiscing mi eget imperdiet. Nulla quis vestibulum leo. Integer molestie massa ut massa commodo in blandit purus aliquam. Mauris sit amet posuere massa. Ut a eleifend augue. Proin sodales mauris nec tellus pharetra dictum.</figcaption>
+  </figure>
+</div>
 
-&lt;div class="lightbox" id="exemple2"&gt;
-  &lt;figure&gt;
-    &lt;a href="#" class="closemsg"&gt;&lt;/a&gt;
-    &lt;figcaption&gt;Cras risus odio, pharetra nec ultricies et, mollis ac augue. Nunc et diam quis sapien dignissim auctor. Quisque quis neque arcu, nec gravida magna. Etiam ullamcorper augue quis orci posuere et tincidunt augue semper. Maecenas varius augue eu orci auctor bibendum tristique ligula egestas. Morbi pharetra tortor iaculis erat porta id aliquam leo cursus. Ut nec elit vel mauris dapibus lacinia eget sed odio.&lt;/figcaption&gt;
-  &lt;/figure&gt;
-&lt;/div&gt;</pre>
+<div class="lightbox" id="exemple2">
+  <figure>
+    <a href="#" class="closemsg"></a>
+    <figcaption>Cras risus odio, pharetra nec ultricies et, mollis ac augue. Nunc et diam quis sapien dignissim auctor. Quisque quis neque arcu, nec gravida magna. Etiam ullamcorper augue quis orci posuere et tincidunt augue semper. Maecenas varius augue eu orci auctor bibendum tristique ligula egestas. Morbi pharetra tortor iaculis erat porta id aliquam leo cursus. Ut nec elit vel mauris dapibus lacinia eget sed odio.</figcaption>
+  </figure>
+</div>
+```
 
-<h4 id="Résultat_2">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Révéler_des_éléments")}}</p>
+{{EmbedLiveSample("Révéler_des_éléments")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("HTML WHATWG", "browsers.html#selector-target", ":target")}}</td>
-   <td>{{Spec2("HTML WHATWG")}}</td>
-   <td>Définition de la sémantique relative à HTML.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#the-target-pseudo", ":target")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td>Aucune modification.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Selectors", "#target-pseudo", ":target")}}</td>
-   <td>{{Spec2("CSS3 Selectors")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | État                                 | Commentaires                                 |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------------------------------- |
+| {{SpecName("HTML WHATWG", "browsers.html#selector-target", ":target")}} | {{Spec2("HTML WHATWG")}}     | Définition de la sémantique relative à HTML. |
+| {{SpecName("CSS4 Selectors", "#the-target-pseudo", ":target")}}             | {{Spec2("CSS4 Selectors")}} | Aucune modification.                         |
+| {{SpecName("CSS3 Selectors", "#target-pseudo", ":target")}}                 | {{Spec2("CSS3 Selectors")}} | Définition initiale.                         |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.target")}}</p>
+{{Compat("css.selectors.target")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Selectors/Using_the_%3Atarget_pseudo-class_in_selectors">Utiliser la pseudo-classe <code>:target</code> dans les sélecteurs</a></li>
- <li><a href="https://madmurphy.github.io/takefive.css/">Un exemple d'utilisation de <code>:target</code> pour un système de diapositives, sur GitHub</a></li>
-</ul>
+- [Utiliser la pseudo-classe `:target` dans les sélecteurs](/fr/docs/Web/CSS/CSS_Selectors/Using_the_%3Atarget_pseudo-class_in_selectors)
+- [Un exemple d'utilisation de `:target` pour un système de diapositives, sur GitHub](https://madmurphy.github.io/takefive.css/)

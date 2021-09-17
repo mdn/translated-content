@@ -7,23 +7,21 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Miscellaneous
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Cette page regroupe des propriétés CSS qui sont hautement expérimentales ou qui ne rentrent dans aucune autre catégorie.</p>
+Cette page regroupe des propriétés CSS qui sont hautement expérimentales ou qui ne rentrent dans aucune autre catégorie.
 
-<h2 id="Référence">Référence</h2>
+## Référence
 
-<h3 id="Propriétés">Propriétés</h3>
+### Propriétés
 
-<ul>
- <li>{{cssxref("all")}}</li>
- <li>{{cssxref("text-rendering")}}</li>
-</ul>
+- {{cssxref("all")}}
+- {{cssxref("text-rendering")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p><em>Ces propriétés n'ont pour la plupart pas de lien entre elles, consultez leur pages respectives pour connaître leurs spécifications.</em></p>
+_Ces propriétés n'ont pour la plupart pas de lien entre elles, consultez leur pages respectives pour connaître leurs spécifications._
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p><em>Ces propriétés n'ont pour la plupart pas de lien entre elles, consultez leurs pages respectives pour connaître leur disponibilité dans les navigateurs.</em></p>
+_Ces propriétés n'ont pour la plupart pas de lien entre elles, consultez leurs pages respectives pour connaître leur disponibilité dans les navigateurs._

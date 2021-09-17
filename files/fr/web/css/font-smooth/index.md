@@ -8,64 +8,53 @@ tags:
   - Reference
 translation_of: Web/CSS/font-smooth
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>La propriété <strong><code>font-smooth</code></strong> permet de contrôler l'application d'algorithmes anti-crénelage (<em>anti-aliasing</em>) sur le rendu des fontes de caractères.</p>
+La propriété **`font-smooth`** permet de contrôler l'application d'algorithmes anti-crénelage (_anti-aliasing_) sur le rendu des fontes de caractères.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css">/* Valeurs avec mot-clé */
+```css
+/* Valeurs avec mot-clé */
 font-smooth: auto;
 font-smooth: never;
 font-smooth: always;
 
-/* Valeurs de type &lt;length&gt; */
+/* Valeurs de type <length> */
 font-smooth: 2em;
-</pre>
+```
 
-<div class="note">
-<p><strong>Note :</strong> Webkit implémente <strong><code>-webkit-font-smoothing</code></strong> avec d'autres valeurs, <strong>là aussi c'est une propriété non-standard qui ne devrait pas être utilisée</strong>.</p>
+> **Note :** Webkit implémente **`-webkit-font-smoothing`** avec d'autres valeurs, **là aussi c'est une propriété non-standard qui ne devrait pas être utilisée**.
+>
+> - `auto` : c'est le navigateur qui décide la meilleure approche
+> - `none` - l'anti-crénelage est désactivé.
+> - `antialiased `- lisse les caractères au niveau du pixel (et non par sous-échantillonnage). Pour des textes clairs sur fonds sombres, cette méthode fait paraître le texte plus clair.
+> - `subpixel-antialiased` - sur la plupart des affichages non-Retina, cela donnera le texte le plus lisse.
 
-<ul>
- <li><code>auto</code> : c'est le navigateur qui décide la meilleure approche</li>
- <li><code>none</code> - l'anti-crénelage est désactivé.</li>
- <li><code>antialiased </code> - lisse les caractères au niveau du pixel (et non par sous-échantillonnage). Pour des textes clairs sur fonds sombres, cette méthode fait paraître le texte plus clair.</li>
- <li><code>subpixel-antialiased</code> - sur la plupart des affichages non-Retina, cela donnera le texte le plus lisse.</li>
-</ul>
-</div>
+> **Note :** Firefox implémente **`-moz-osx-font-smoothing`** avec d'autres valeurs, **là aussi c'est une propriété non-standard qui ne devrait pas être utilisée**.
+>
+> - `auto` - le choix est laissé au navigateur. Cela correspond généralement à `grayscale`.
+> - `grayscale` - On applique un anti-crénelage par niveau de gris (et non par sous-échantillonnage). Pour des textes clairs sur fonds sombres, cette méthode fait paraître le texte plus clair.
 
-<div class="note">
-<p><strong>Note :</strong> Firefox implémente <strong><code>-moz-osx-font-smoothing</code></strong> avec d'autres valeurs, <strong>là aussi c'est une propriété non-standard qui ne devrait pas être utilisée</strong>.</p>
+## Spécifications
 
-<ul>
- <li><code>auto</code> - le choix est laissé au navigateur. Cela correspond généralement à <code>grayscale</code>.</li>
- <li><code>grayscale</code> - On applique un anti-crénelage par niveau de gris (et non par sous-échantillonnage). Pour des textes clairs sur fonds sombres, cette méthode fait paraître le texte plus clair.</li>
-</ul>
-</div>
+Bien que mentionnée dans les premiers brouillons pour [CSS3 Fonts](https://www.w3.org/TR/WD-font/#font-smooth), `font-smooth` a été retirée de cette spécification et ne fait plus partie du standard.
 
-<h2 id="Spécifications">Spécifications</h2>
 
-<p>Bien que mentionnée dans les premiers brouillons pour <a href="https://www.w3.org/TR/WD-font/#font-smooth">CSS3 Fonts</a>, <code>font-smooth</code> a été retirée de cette spécification et ne fait plus partie du standard.</p>
 
-<p> </p>
+- Valeur initiale : `auto`
+- S'applique à tous les éléments et au contenu généré
+- Héritée : oui
+- Valeurs relatives : par rapport à la taille de police utilisée sur l'élément parent
+- Type de média : Visuel
+- Valeur calculée : comme la valeur définie
 
-<ul>
- <li>Valeur initiale : <code>auto</code></li>
- <li>S'applique à tous les éléments et au contenu généré</li>
- <li>Héritée : oui</li>
- <li>Valeurs relatives : par rapport à la taille de police utilisée sur l'élément parent</li>
- <li>Type de média : Visuel</li>
- <li>Valeur calculée : comme la valeur définie</li>
-</ul>
 
-<p> </p>
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.font-smooth")}}</p>
+{{Compat("css.properties.font-smooth")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="https://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/">Il faut arrêter de vouloir « réparer » le lissage des fontes – UsabilityPost (en anglais)</a></li>
-</ul>
+- [Il faut arrêter de vouloir « réparer » le lissage des fontes – UsabilityPost (en anglais)](https://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/)

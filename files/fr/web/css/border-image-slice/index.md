@@ -7,25 +7,26 @@ tags:
   - Reference
 translation_of: Web/CSS/border-image-slice
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>border-image-slice</code></strong> permet de découper l'image fournie via la propriété {{cssxref("border-image-source")}} en 9 régions : quatre pour les coins, quatre pour les côtés et une pour le milieu. Ces régions sont définies à l'aide de quatre valeurs mesurées depuis les bords vers l'intérieur de l'image.</p>
+La propriété **`border-image-slice`** permet de découper l'image fournie via la propriété {{cssxref("border-image-source")}} en 9 régions : quatre pour les coins, quatre pour les côtés et une pour le milieu. Ces régions sont définies à l'aide de quatre valeurs mesurées depuis les bords vers l'intérieur de l'image.
 
-<div>{{EmbedInteractiveExample("pages/css/border-image-slice.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-image-slice.html")}}
 
-<p><img alt="Les 9 zones définies par border-image-slice" src="border-image-slice.png"></p>
+![Les 9 zones définies par border-image-slice](border-image-slice.png)
 
-<p>Les quatre valeurs contrôlent les positions des lignes de découpe. Si certaines ne sont pas définies, leurs valeurs sont déduites des valeurs fournies (se référer à la section sur la syntaxe).</p>
+Les quatre valeurs contrôlent les positions des lignes de découpe. Si certaines ne sont pas définies, leurs valeurs sont déduites des valeurs fournies (se référer à la section sur la syntaxe).
 
-<p>La zone du milieu ne sera pas utilisée par la bordure même mais pourra être utilisée comme image d'arrière-plan si on utilise le mot-clé <code>fill</code>. Ce mot-clé peut être utilisé à n'importe quelle position dans la déclaration (avant, après ou entre les autres valeurs).</p>
+La zone du milieu ne sera pas utilisée par la bordure même mais pourra être utilisée comme image d'arrière-plan si on utilise le mot-clé `fill`. Ce mot-clé peut être utilisé à n'importe quelle position dans la déclaration (avant, après ou entre les autres valeurs).
 
-<p>Les propriétés {{cssxref("border-image-repeat")}}, {{cssxref("border-image-width")}}, {{cssxref("border-image-outset")}} définissent la façon dont ces images seront utilisées.</p>
+Les propriétés {{cssxref("border-image-repeat")}}, {{cssxref("border-image-width")}}, {{cssxref("border-image-outset")}} définissent la façon dont ces images seront utilisées.
 
-<p>La propriété raccourcie {{cssxref("border-image")}} peut éventuellement réinitialiser cette propriété avec sa valeur par défaut.</p>
+La propriété raccourcie {{cssxref("border-image")}} peut éventuellement réinitialiser cette propriété avec sa valeur par défaut.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* border-image-slice :                       */
+```css
+/* border-image-slice :                       */
 /* Une valeur qui s'applique aux quatre côtés */
 border-image-slice: 30%;
 
@@ -56,73 +57,59 @@ border-image-slice: 10% fill 7 12;
 border-image-slice: inherit;
 border-image-slice: initial;
 border-image-slice: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>slice</code></dt>
- <dd>Une valeur de type {{cssxref("&lt;number&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} qui indique le décalage entre le bord de l'image et la droite utilisée pour « découper » l'image. On notera qu'une valeur de type {{cssxref("&lt;length&gt;")}} n'est pas autorisée et est donc invalide. Une valeur de type {{cssxref("&lt;number&gt;")}} correspondra à des <em>pixels</em> pour les images matricielles et à des coordonnées pour les images vectorielles. Les valeurs de type {{cssxref("&lt;percentage&gt;")}} sont relatives à la hauteur de l'image pour les axes verticaux et à la largeur de l'image pour les axes horizontaux. Les valeurs négatives sont invalides et les valeurs dépassant les bornes sont ramenées à <code>100%</code>. Il est préférable d'utiliser des pourcentages pour les images vectorielles.</dd>
- <dt><code>fill</code></dt>
- <dd>Un mot-clé qui, s'il est présent, force la zone centrale de l'image à être affichée par dessus l'image d'arrière plan de l'élément. La hauteur et la largeur de l'image sont redimensionnées comme les tranches haute et gauche.</dd>
-</dl>
+- `slice`
+  - : Une valeur de type {{cssxref("&lt;number&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} qui indique le décalage entre le bord de l'image et la droite utilisée pour « découper » l'image. On notera qu'une valeur de type {{cssxref("&lt;length&gt;")}} n'est pas autorisée et est donc invalide. Une valeur de type {{cssxref("&lt;number&gt;")}} correspondra à des _pixels_ pour les images matricielles et à des coordonnées pour les images vectorielles. Les valeurs de type {{cssxref("&lt;percentage&gt;")}} sont relatives à la hauteur de l'image pour les axes verticaux et à la largeur de l'image pour les axes horizontaux. Les valeurs négatives sont invalides et les valeurs dépassant les bornes sont ramenées à `100%`. Il est préférable d'utiliser des pourcentages pour les images vectorielles.
+- `fill`
+  - : Un mot-clé qui, s'il est présent, force la zone centrale de l'image à être affichée par dessus l'image d'arrière plan de l'élément. La hauteur et la largeur de l'image sont redimensionnées comme les tranches haute et gauche.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
  border-image-source: url("https://mdn.mozillademos.org/files/10470/border.png");
  border-image-slice: 30;
  border-image-width: 20px;
  border-image-repeat: round;
  padding: 40px;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+```html
+<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
   eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
   At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
   no sea takimata sanctus est Lorem ipsum dolor sit amet.
-&lt;/p&gt;
-</pre>
+</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', '480', '320')}}</p>
+{{EmbedLiveSample('Exemples', '480', '320')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-border-image-slice', 'border-image-slice')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | État                                     | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
+| {{SpecName('CSS3 Backgrounds', '#the-border-image-slice', 'border-image-slice')}} | {{Spec2('CSS3 Backgrounds')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.border-image-slice")}}</p>
+{{Compat("css.properties.border-image-slice")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/Shorthand_properties#quelques_cas_aux_limites_%c3%a9pineux">Description illustrée de la syntaxe multi-valuée</a></li>
-</ul>
+- [Description illustrée de la syntaxe multi-valuée](/fr/docs/Web/CSS/Shorthand_properties#quelques_cas_aux_limites_%c3%a9pineux)

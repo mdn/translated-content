@@ -1,19 +1,20 @@
 ---
 title: accent-color
 slug: Web/CSS/accent-color
-browser-compat: css.properties.accent-color
 translation_of: Web/CSS/accent-color
+browser-compat: css.properties.accent-color
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propriété <a href="/fr/docs/Web/CSS">CSS</a> <strong><code>accent-color</code></strong> définit la couleur d'accentuation ({{Glossary("accent")}}) des éléments. Une accentuation est présente sur des éléments HTML tels que des {{HTMLElement("input")}} de type <code><a href="/fr/docs/Web/HTML/Element/input/checkbox">checkbox</a></code> ou <code><a href="/fr/docs/Web/HTML/Element/input/radio">radio</a></code>.</p>
+La propriété [CSS](/fr/docs/Web/CSS) **`accent-color`** définit la couleur d'accentuation ({{Glossary("accent")}}) des éléments. Une accentuation est présente sur des éléments HTML tels que des {{HTMLElement("input")}} de type [`checkbox`](/fr/docs/Web/HTML/Element/input/checkbox) ou [`radio`](/fr/docs/Web/HTML/Element/input/radio).
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 accent-color: auto;
 
-/* Valeurs de &lt;color&gt; */
+/* Valeurs de <color> */
 accent-color: red;
 accent-color: #5729e9;
 accent-color: rgb(0, 200, 0);
@@ -23,38 +24,39 @@ accent-color: hsl(228, 4%, 24%);
 accent-color: inherit;
 accent-color: initial;
 accent-color: revert;
-accent-color: unset;</pre>
+accent-color: unset;
+```
 
-<h3 id="Values">Valeurs</h3>
+### Valeurs
 
-<dl>
-  <dt><code>auto</code></dt>
-  <dd>Représente une couleur déterminée par l'agent utilisateur, qui devrait correspondre à la couleur d'accentuation de la plateforme, s'il y en a une.
-  </dd>
-  <dt>{{cssxref("&lt;color&gt;")}}</dt>
-  <dd>Spécifie la couleur à utiliser en tant que couleur d'accentuation.</dd>
-</dl>
+- `auto`
+  - : Représente une couleur déterminée par l'agent utilisateur, qui devrait correspondre à la couleur d'accentuation de la plateforme, s'il y en a une.
+- {{cssxref("&lt;color&gt;")}}
+  - : Spécifie la couleur à utiliser en tant que couleur d'accentuation.
 
-<h2 id="Formal_definition">Définition formelle</h2>
+## Définition formelle
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Syntaxe formelle</h2>
+## Syntaxe formelle
 
-<p>{{csssyntax}}</p>
+{{csssyntax}}
 
-<h2 id="Examples">Exemples</h2>
+## Exemples
 
-<h3 id="Setting_a_custom_accent_color">Définir une couleur d'accentuation personnalisée</h3>
+### Définir une couleur d'accentuation personnalisée
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;input type="checkbox" checked /&gt;
-&lt;input type="checkbox" class="custom" checked /&gt;</pre>
+```html
+<input type="checkbox" checked />
+<input type="checkbox" class="custom" checked />
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">input {
+```css
+input {
   accent-color: auto;
   display: block;
   width: 30px;
@@ -64,25 +66,23 @@ accent-color: unset;</pre>
 input.custom {
   accent-color: rebeccapurple;
 }
-</pre>
+```
 
-<h4 id="Result">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('Setting_a_custom_accent_color', 500, 200)}}</p>
+{{EmbedLiveSample('Setting_a_custom_accent_color', 500, 200)}}
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li>L'élément {{HTMLElement("input")}}</li>
-  <li><a href="/fr/docs/Web/HTML/Applying_color">Appliquer des couleurs aux éléments HTML grâce à CSS</a></li>
-  <li>Le type de donnée {{cssxref("&lt;color&gt;")}}</li>
-  <li>Les autres propriétés relatives aux couleurs : {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}} et {{cssxref("column-rule-color")}}</li>
-</ul>
+- L'élément {{HTMLElement("input")}}
+- [Appliquer des couleurs aux éléments HTML grâce à CSS](/fr/docs/Web/HTML/Applying_color)
+- Le type de donnée {{cssxref("&lt;color&gt;")}}
+- Les autres propriétés relatives aux couleurs : {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}} et {{cssxref("column-rule-color")}}

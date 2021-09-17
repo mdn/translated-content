@@ -7,18 +7,19 @@ tags:
   - Reference
 translation_of: Web/CSS/backdrop-filter
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propriété CSS <code><strong>backdrop-filter</strong></code> permet d'obtenir un effet de flou ou de diffusion de la couleur sur la zone derrière l'élément. L'effet étant situé <em>derrière</em> l'élément, il pourra être observé en ajustant la transparence de l'élément.</p>
+La propriété CSS **`backdrop-filter`** permet d'obtenir un effet de flou ou de diffusion de la couleur sur la zone derrière l'élément. L'effet étant situé _derrière_ l'élément, il pourra être observé en ajustant la transparence de l'élément.
 
-<pre class="brush: css no-line-numbers">/* Valeur avec un mot-clé */
+```css
+/* Valeur avec un mot-clé */
 backdrop-filter: none;
 
 /* Une valeur d'URL vers un filtre SVG */
 backdrop-filter: url(commonfilters.svg#filter);
 
 /* Les notations fonctionnelles pour les filtres */
-/* Valeur de type &lt;filter-function&gt; */
+/* Valeur de type <filter-function> */
 backdrop-filter: blur(2px);
 backdrop-filter: brightness(60%);
 backdrop-filter: contrast(40%);
@@ -37,30 +38,29 @@ backdrop-filter: url(filters.svg#filter) blur(4px) saturate(150%);
 backdrop-filter: inherit;
 backdrop-filter: initial;
 backdrop-filter: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Un mot-clé qui indique qu'aucun filtre n'est appliqué sur l'ombre portée.</dd>
- <dt><code>&lt;filter-function-list&gt;</code></dt>
- <dd>Une liste de fonctions de filtre (cf. {{cssxref("&lt;filter-function&gt;")}}), séparées par des espaces et qui seront appliquées à l'ombre. Les différentes fonctions qui peuvent être utilisées sont les mêmes que pour la propriété {{cssxref("filter")}}. On peut également utilisere <a href="/fr/docs/Web/SVG/Element/filter">un filtre SVG</a>.</dd>
-</dl>
+- `none`
+  - : Un mot-clé qui indique qu'aucun filtre n'est appliqué sur l'ombre portée.
+- `<filter-function-list>`
+  - : Une liste de fonctions de filtre (cf. {{cssxref("&lt;filter-function&gt;")}}), séparées par des espaces et qui seront appliquées à l'ombre. Les différentes fonctions qui peuvent être utilisées sont les mêmes que pour la propriété {{cssxref("filter")}}. On peut également utilisere [un filtre SVG](/fr/docs/Web/SVG/Element/filter).
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css language-css">.box {
+```css
+.box {
   background-color: rgba(255, 255, 255, 0.95);
   border-radius: 5px;
   font-family: sans-serif;
@@ -91,46 +91,34 @@ body {
   justify-content: center;
   height: 100%;
   width: 100%;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="container"&gt;
-  &lt;div class="box"&gt;
-    &lt;p&gt;backdrop-filter: blur(10px)&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="container">
+  <div class="box">
+    <p>backdrop-filter: blur(10px)</p>
+  </div>
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', "600", "400")}}</p>
+{{EmbedLiveSample('Exemples', "600", "400")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Filters 2.0', '#BackdropFilterProperty', 'backdrop-filter')}}</td>
-   <td>{{Spec2('Filters 2.0')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | État                             | Commentaires         |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName('Filters 2.0', '#BackdropFilterProperty', 'backdrop-filter')}} | {{Spec2('Filters 2.0')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.backdrop-filter")}}</p>
+{{Compat("css.properties.backdrop-filter")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("filter")}}</li>
- <li><a href="https://product.voxmedia.com/til/2015/2/17/8053347/css-ios-transparency-with-webkit-backdrop-filter">Construire des effets de transparences comme sur iOS avec <code>backdrop-filter</code> (en anglais)</a></li>
-</ul>
+- {{cssxref("filter")}}
+- [Construire des effets de transparences comme sur iOS avec `backdrop-filter` (en anglais)](https://product.voxmedia.com/til/2015/2/17/8053347/css-ios-transparency-with-webkit-backdrop-filter)

@@ -7,19 +7,20 @@ tags:
   - Reference
 translation_of: Web/CSS/align-content
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété CSS <strong><code>align-content</code></strong> définit la façon dont l'espace est réparti entre et autour des éléments le long de l'axe en bloc du conteneur (c'est-à-dire l'axe orthogonal à l'axe d'écriture) lorsque celui-ci est <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout">un conteneur de boîte flexible</a> et le long de l'axe principal lorsque le conteneur est une grille.</p>
+La propriété CSS **`align-content`** définit la façon dont l'espace est réparti entre et autour des éléments le long de l'axe en bloc du conteneur (c'est-à-dire l'axe orthogonal à l'axe d'écriture) lorsque celui-ci est [un conteneur de boîte flexible](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout) et le long de l'axe principal lorsque le conteneur est une grille.
 
-<p>L'exemple qui suit utilise une grille comme conteneur afin d'illustrer le comportement des valeurs de cette propriété.</p>
+L'exemple qui suit utilise une grille comme conteneur afin d'illustrer le comportement des valeurs de cette propriété.
 
-<div>{{EmbedInteractiveExample("pages/css/align-content.html")}}</div>
+{{EmbedInteractiveExample("pages/css/align-content.html")}}
 
-<p>Cette propriété n'aura aucun effet sur les boîtes flexibles disposées sur une seule ligne (celles avec <code>flex-wrap: nowrap</code> par exemple).</p>
+Cette propriété n'aura aucun effet sur les boîtes flexibles disposées sur une seule ligne (celles avec `flex-wrap: nowrap` par exemple).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Alignement le long de l'axe */
+```css
+/* Alignement le long de l'axe */
 /* Note : align-content ne prend pas en charge les valeurs left et right */
 align-content: center;     /* Les éléments sont groupés au centre */
 align-content: start;      /* Les éléments sont groupés au début  */
@@ -56,51 +57,50 @@ align-content: unsafe center;
 /* Valeurs globales */
 align-content: inherit;
 align-content: initial;
-align-content: unset;</pre>
+align-content: unset;
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>start</code></dt>
- <dd>Les éléments sont regroupés vers le bord au début de l'axe de bloc.</dd>
- <dt><code>end</code></dt>
- <dd>Les éléments sont regroupés vers le bord à la fin de l'axe de bloc.</dd>
- <dt><code>flex-start</code></dt>
- <dd>Les éléments flexibles sont regroupés vers le bord au début de l'axe de bloc. Cette valeur ne s'applique qu'aux éléments fils d'un conteneur flexible, sinon elle est synonyme de <code>start</code>.</dd>
- <dt><code>flex-end</code></dt>
- <dd>Les éléments flexibles sont regroupés vers le bord au début de l'axe de bloc. Cette valeur ne s'applique qu'aux éléments fils d'un conteneur flexible, sinon elle est synonyme de <code>end</code>.</dd>
- <dt><code>center</code></dt>
- <dd>Les éléments sont regroupés au centre de l'axe de bloc.</dd>
- <dt><code>normal</code></dt>
- <dd>Les éléments sont groupés sur leur position par défaut, comme si <code>align-content</code> n'avait pas été défini.</dd>
- <dt><code>baseline<br>
- first baseline</code><br>
- <code>last baseline</code></dt>
- <dd><img alt="La ligne de base est la ligne sur laquelle reposent la plupart des lettres et en dessous de laquelle le jambage des caractéres descend." src="410px-typography_line_terms.svg.png">Ces valeurs permettent de définir l'alignement par rapport à la ligne de base pour l'élément du conteneur avec la ligne de base la plus haute ou la plus basse.<br>
- Si <code>first baseline</code> n'est pas prise en charge, la valeur correspondra à <code>start</code>, si <code>last baseline</code> n'est pas prise en charge, la valeur correspondra à <code>end</code>.</dd>
- <dt><code>space-between</code></dt>
- <dd>Les éléments sont équirépartis le long de l'axe en bloc. L'espace obtenu est le même entre chaque élément, le premier élément est aligné sur le bord au début du conteneur et le dernier élément est aligné sur le bord à la fin du conteneur.</dd>
- <dt><code>space-around</code></dt>
- <dd>Les éléments sont équirépartis le long de l'axe en bloc. L'espace obtenu est le même entre chaque élément, la moitié de cet espace est utilisée entre le premier élément et le bord au début du conteneur et la moitié de cet espace est utilisée entre le dernier élément et le bord à la fin du conteneur</dd>
- <dt><code>space-evenly</code></dt>
- <dd>Les éléments sont équirépartis le long de l'axe en bloc. L'espace obtenu est le même entre chaque élément, entre le premier élément et le bord du conteneur et entre le dernier élément et le bord du conteneur.</dd>
- <dt><code>stretch</code></dt>
- <dd>Si la somme des tailles des éléments est inférieure à la taille du conteneur pour l'axe en bloc, les éléments dimensionnés automatiquement seront élargis de la même longueur tout en respectant les contraintes imposées par {{cssxref("max-height")}}/{{cssxref("max-width")}} (ou par les fonctionnalités équivalentes), afin que l'ensemble des éléments remplisse exactement le conteneur.</dd>
- <dt><code>safe</code></dt>
- <dd>Ce mot-clé est utilisé avec un mot-clé pour l'alignement. Si l'élément dépasse du conteneur avec la valeur d'alignement indiquée, l'élément sera alors aligné avec la valeur <code>start</code>.</dd>
- <dt><code>unsafe</code></dt>
- <dd>Ce mot-clé est utilisé avec un mot-clé pour l'alignement. Quelle que soit la taille et le dépassement éventuellement occasionné, l'élément est aligné avec la valeur indiquée.</dd>
-</dl>
+- `start`
+  - : Les éléments sont regroupés vers le bord au début de l'axe de bloc.
+- `end`
+  - : Les éléments sont regroupés vers le bord à la fin de l'axe de bloc.
+- `flex-start`
+  - : Les éléments flexibles sont regroupés vers le bord au début de l'axe de bloc. Cette valeur ne s'applique qu'aux éléments fils d'un conteneur flexible, sinon elle est synonyme de `start`.
+- `flex-end`
+  - : Les éléments flexibles sont regroupés vers le bord au début de l'axe de bloc. Cette valeur ne s'applique qu'aux éléments fils d'un conteneur flexible, sinon elle est synonyme de `end`.
+- `center`
+  - : Les éléments sont regroupés au centre de l'axe de bloc.
+- `normal`
+  - : Les éléments sont groupés sur leur position par défaut, comme si `align-content` n'avait pas été défini.
+- `baseline first baseline`
+  `last baseline`
+  - : ![La ligne de base est la ligne sur laquelle reposent la plupart des lettres et en dessous de laquelle le jambage des caractéres descend.](410px-typography_line_terms.svg.png)Ces valeurs permettent de définir l'alignement par rapport à la ligne de base pour l'élément du conteneur avec la ligne de base la plus haute ou la plus basse.
+    Si `first baseline` n'est pas prise en charge, la valeur correspondra à `start`, si `last baseline` n'est pas prise en charge, la valeur correspondra à `end`.
+- `space-between`
+  - : Les éléments sont équirépartis le long de l'axe en bloc. L'espace obtenu est le même entre chaque élément, le premier élément est aligné sur le bord au début du conteneur et le dernier élément est aligné sur le bord à la fin du conteneur.
+- `space-around`
+  - : Les éléments sont équirépartis le long de l'axe en bloc. L'espace obtenu est le même entre chaque élément, la moitié de cet espace est utilisée entre le premier élément et le bord au début du conteneur et la moitié de cet espace est utilisée entre le dernier élément et le bord à la fin du conteneur
+- `space-evenly`
+  - : Les éléments sont équirépartis le long de l'axe en bloc. L'espace obtenu est le même entre chaque élément, entre le premier élément et le bord du conteneur et entre le dernier élément et le bord du conteneur.
+- `stretch`
+  - : Si la somme des tailles des éléments est inférieure à la taille du conteneur pour l'axe en bloc, les éléments dimensionnés automatiquement seront élargis de la même longueur tout en respectant les contraintes imposées par {{cssxref("max-height")}}/{{cssxref("max-width")}} (ou par les fonctionnalités équivalentes), afin que l'ensemble des éléments remplisse exactement le conteneur.
+- `safe`
+  - : Ce mot-clé est utilisé avec un mot-clé pour l'alignement. Si l'élément dépasse du conteneur avec la valeur d'alignement indiquée, l'élément sera alors aligné avec la valeur `start`.
+- `unsafe`
+  - : Ce mot-clé est utilisé avec un mot-clé pour l'alignement. Quelle que soit la taille et le dépassement éventuellement occasionné, l'élément est aligné avec la valeur indiquée.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#container {
+```css
+#container {
   height:200px;
   width: 240px;
   align-content: center; /* Cette valeur peut être changée dans la démonstration */
@@ -117,7 +117,7 @@ align-content: unset;</pre>
   grid-template-columns: repeat(auto-fill, 50px);
 }
 
-div &gt; div {
+div > div {
   box-sizing: border-box;
   border: 2px solid #8c8c8c;
   width: 50px;
@@ -164,61 +164,63 @@ select {
 .row {
   margin-top: 10px;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="container" class="flex"&gt;
-  &lt;div id="item1"&gt;1&lt;/div&gt;
-  &lt;div id="item2"&gt;2&lt;/div&gt;
-  &lt;div id="item3"&gt;3&lt;/div&gt;
-  &lt;div id="item4"&gt;4&lt;/div&gt;
-  &lt;div id="item5"&gt;5&lt;/div&gt;
-  &lt;div id="item6"&gt;6&lt;/div&gt;
-&lt;/div&gt;
+```html
+<div id="container" class="flex">
+  <div id="item1">1</div>
+  <div id="item2">2</div>
+  <div id="item3">3</div>
+  <div id="item4">4</div>
+  <div id="item5">5</div>
+  <div id="item6">6</div>
+</div>
 
-&lt;div class="row"&gt;
-  &lt;label for="display"&gt;display: &lt;/label&gt;
-  &lt;select id="display"&gt;
-    &lt;option value="flex"&gt;flex&lt;/option&gt;
-    &lt;option value="grid"&gt;grid&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;
+<div class="row">
+  <label for="display">display: </label>
+  <select id="display">
+    <option value="flex">flex</option>
+    <option value="grid">grid</option>
+  </select>
+</div>
 
-&lt;div class="row"&gt;
-  &lt;label for="values"&gt;align-content: &lt;/label&gt;
-  &lt;select id="values"&gt;
-    &lt;option value="normal"&gt;normal&lt;/option&gt;
-    &lt;option value="stretch"&gt;stretch&lt;/option&gt;
-    &lt;option value="flex-start"&gt;flex-start&lt;/option&gt;
-    &lt;option value="flex-end"&gt;flex-end&lt;/option&gt;
-    &lt;option value="center" selected&gt;center&lt;/option&gt;
-    &lt;option value="space-between"&gt;space-between&lt;/option&gt;
-    &lt;option value="space-around"&gt;space-around&lt;/option&gt;
-    &lt;option value="space-evenly"&gt;space-evenly&lt;/option&gt;
+<div class="row">
+  <label for="values">align-content: </label>
+  <select id="values">
+    <option value="normal">normal</option>
+    <option value="stretch">stretch</option>
+    <option value="flex-start">flex-start</option>
+    <option value="flex-end">flex-end</option>
+    <option value="center" selected>center</option>
+    <option value="space-between">space-between</option>
+    <option value="space-around">space-around</option>
+    <option value="space-evenly">space-evenly</option>
 
-    &lt;option value="start"&gt;start&lt;/option&gt;
-    &lt;option value="end"&gt;end&lt;/option&gt;
-    &lt;option value="left"&gt;left&lt;/option&gt;
-    &lt;option value="right"&gt;right&lt;/option&gt;
+    <option value="start">start</option>
+    <option value="end">end</option>
+    <option value="left">left</option>
+    <option value="right">right</option>
 
-    &lt;option value="baseline"&gt;baseline&lt;/option&gt;
-    &lt;option value="first baseline"&gt;first baseline&lt;/option&gt;
-    &lt;option value="last baseline"&gt;last baseline&lt;/option&gt;
+    <option value="baseline">baseline</option>
+    <option value="first baseline">first baseline</option>
+    <option value="last baseline">last baseline</option>
 
-    &lt;option value="safe center"&gt;safe center&lt;/option&gt;
-    &lt;option value="unsafe center"&gt;unsafe center&lt;/option&gt;
-    &lt;option value="safe right"&gt;safe right&lt;/option&gt;
-    &lt;option value="unsafe right"&gt;unsafe right&lt;/option&gt;
-    &lt;option value="safe end"&gt;safe end&lt;/option&gt;
-    &lt;option value="unsafe end"&gt;unsafe end&lt;/option&gt;
-    &lt;option value="safe flex-end"&gt;safe flex-end&lt;/option&gt;
-    &lt;option value="unsafe flex-end"&gt;unsafe flex-end&lt;/option&gt;
-  &lt;/select&gt;
-&lt;/div&gt;
-</pre>
+    <option value="safe center">safe center</option>
+    <option value="unsafe center">unsafe center</option>
+    <option value="safe right">safe right</option>
+    <option value="unsafe right">unsafe right</option>
+    <option value="safe end">safe end</option>
+    <option value="unsafe end">unsafe end</option>
+    <option value="safe flex-end">safe flex-end</option>
+    <option value="unsafe flex-end">unsafe flex-end</option>
+  </select>
+</div>
+```
 
-<pre class="brush: js hidden">var values = document.getElementById('values');
+```js hidden
+var values = document.getElementById('values');
 var display = document.getElementById('display');
 var container = document.getElementById('container');
 
@@ -229,56 +231,37 @@ values.addEventListener('change', function (evt) {
 display.addEventListener('change', function (evt) {
   container.className = evt.target.value;
 });
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", 260, 290)}}</p>
+{{EmbedLiveSample("Exemples", 260, 290)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Box Alignment", "#propdef-align-content", "align-content")}}</td>
-   <td>{{Spec2("CSS3 Box Alignment")}}</td>
-   <td>Ajout des valeurs <code>[ first | last ]? baseline</code>, <code>start</code>, <code>end</code>, <code>left</code>, <code>right</code> et <code>unsafe | safe</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Flexbox", "#align-content", "align-content")}}</td>
-   <td>{{Spec2("CSS3 Flexbox")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | État                                     | Commentaires                                                                                          |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------- |
+| {{SpecName("CSS3 Box Alignment", "#propdef-align-content", "align-content")}} | {{Spec2("CSS3 Box Alignment")}} | Ajout des valeurs `[ first \| last ]? baseline`, `start`, `end`, `left`, `right` et `unsafe \| safe`. |
+| {{SpecName("CSS3 Flexbox", "#align-content", "align-content")}}                     | {{Spec2("CSS3 Flexbox")}}         | Définition initiale.                                                                                  |
 
-<div>{{cssinfo}}</div>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.align-content")}}</p>
+{{Compat("css.properties.align-content")}}
 
-<h3 id="Prise_en_charge_pour_les_dispositions_flexibles_(Flexbox)">Prise en charge pour les dispositions flexibles (<em>Flexbox</em>)</h3>
+### Prise en charge pour les dispositions flexibles (_Flexbox_)
 
-<p>{{Compat("css.properties.align-content.flex_context")}}</p>
+{{Compat("css.properties.align-content.flex_context")}}
 
-<h3 id="Prise_en_charge_pour_les_dispositions_avec_les_grilles_CSS">Prise en charge pour les dispositions avec les grilles CSS</h3>
+### Prise en charge pour les dispositions avec les grilles CSS
 
-<p>{{Compat("css.properties.align-content.grid_context")}}</p>
+{{Compat("css.properties.align-content.grid_context")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Utiliser les boîtes flexibles</a></li>
- <li>Guide sur les grilles : <em><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Aligner des objets dans une grille</a></em></li>
- <li>Guide sur les boîtes flexibles : <em><a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Les concepts de bases</a></em></li>
- <li>Guide sur les boîtes flexibles : <em><a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligner des objets dans un conteneur flexible</a></em></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Box_Alignment">Le module de spécification CSS Box Alignment</a></li>
-</ul>
+- [Utiliser les boîtes flexibles](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+- Guide sur les grilles : _[Aligner des objets dans une grille](/fr/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
+- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- Guide sur les boîtes flexibles : _[Aligner des objets dans un conteneur flexible](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
+- [Le module de spécification CSS Box Alignment](/fr/docs/Web/CSS/CSS_Box_Alignment)

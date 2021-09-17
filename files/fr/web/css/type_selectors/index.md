@@ -8,74 +8,52 @@ tags:
 translation_of: Web/CSS/Type_selectors
 original_slug: Web/CSS/Sélecteurs_de_type
 ---
-<div>{{CSSRef("Selectors")}}</div>
+{{CSSRef("Selectors")}}
 
-<p>Les sélecteurs de type CSS ciblent des éléments en fonction du nom de leur nœud. Ainsi, lorsqu'un sélecteur de type est utilisé seul, il ciblera tous les éléments de ce type (autrement dit tous les nœuds avec ce nom) contenus dans le document.</p>
+Les sélecteurs de type CSS ciblent des éléments en fonction du nom de leur nœud. Ainsi, lorsqu'un sélecteur de type est utilisé seul, il ciblera tous les éléments de ce type (autrement dit tous les nœuds avec ce nom) contenus dans le document.
 
-<pre class="brush: css no-line-numbers">/* Cibler tous les éléments &lt;a&gt;. */
+```css
+/* Cibler tous les éléments <a>. */
 a {
   color: red;
-}</pre>
+}
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">élément { <em>style propriétés</em> }
-</pre>
+    élément { style propriétés }
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">span {
+```css
+span {
   background-color: skyblue;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;span&gt;Voici un élément &lt;code&gt;span&lt;/code&gt; avec du texte.&lt;/span&gt;
-&lt;p&gt;Et là un élément &lt;code&gt;p&lt;/code&gt;.&lt;/p&gt;
-&lt;span&gt;Enfin, un autre élément &lt;code&gt;span&lt;/code&gt;.&lt;/span&gt;
-</pre>
+```html
+<span>Voici un élément <code>span</code> avec du texte.</span>
+<p>Et là un élément <code>p</code>.</p>
+<span>Enfin, un autre élément <code>span</code>.</span>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', 200, 150)}}</p>
+{{EmbedLiveSample('Exemples', 200, 150)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#type-selectors', 'Type (tag name) selector')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Aucune modification.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#type-selectors', 'type selectors')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Aucune modification.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'selector.html#type-selectors', 'type selectors')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#basic-concepts', 'type selectors')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | État                                 | Commentaires         |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName('CSS4 Selectors', '#type-selectors', 'Type (tag name) selector')}} | {{Spec2('CSS4 Selectors')}} | Aucune modification. |
+| {{SpecName('CSS3 Selectors', '#type-selectors', 'type selectors')}}                 | {{Spec2('CSS3 Selectors')}} | Aucune modification. |
+| {{SpecName('CSS2.1', 'selector.html#type-selectors', 'type selectors')}}         | {{Spec2('CSS2.1')}}             |                      |
+| {{SpecName('CSS1', '#basic-concepts', 'type selectors')}}                             | {{Spec2('CSS1')}}             | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.type")}}</p>
+{{Compat("css.selectors.type")}}

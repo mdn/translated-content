@@ -9,45 +9,31 @@ tags:
   - Web
 translation_of: Web/CSS/flex_value
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Le type de donnée <a href="/fr/docs/Web/CSS">CSS</a> <strong><code>&lt;flex&gt;</code></strong> permet de représenter une longueur flexible à l'intérieur d'un conteneur en grille, qui est déclarée comme une dimension d'unité <code>fr</code>. Il est notamment utilisé pour les propriétés {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}} ainsi que d'autres.</p>
+Le type de donnée [CSS](/fr/docs/Web/CSS) **`<flex>`** permet de représenter une longueur flexible à l'intérieur d'un conteneur en grille, qui est déclarée comme une dimension d'unité `fr`. Il est notamment utilisé pour les propriétés {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}} ainsi que d'autres.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Le type de donnée <code>&lt;flex&gt;</code> est défini par un nombre ({{cssxref("&lt;number&gt;")}} suivi de l'unité <code>fr</code>. L'unité <code>fr</code> représente une <strong>fr</strong>action de l'espace restant dans le conteneur en grille. Comme pour les autres dimensions, il n'y a pas d'espace entre la valeur et l'unité.</p>
+Le type de donnée `<flex>` est défini par un nombre ({{cssxref("&lt;number&gt;")}} suivi de l'unité `fr`. L'unité `fr` représente une **fr**action de l'espace restant dans le conteneur en grille. Comme pour les autres dimensions, il n'y a pas d'espace entre la valeur et l'unité.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: css">1fr    /* Utilisation d'une valeur entière */
+```css
+1fr    /* Utilisation d'une valeur entière */
 2.5fr  /* Utilisation d'une valeur flottante */
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Grid", "#typedef-flex", "&lt;flex&gt;")}}</td>
-   <td>{{Spec2("CSS Grid")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | État                         | Commentaire         |
+| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName("CSS Grid", "#typedef-flex", "&lt;flex&gt;")}} | {{Spec2("CSS Grid")}} | Définition initiale |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.types.flex")}}</p>
+{{Compat("css.types.flex")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Grid_Layout">Le mode de disposition en grille (CSS Grid)</a></li>
-</ul>
+- [Le mode de disposition en grille (CSS Grid)](/fr/docs/Web/CSS/CSS_Grid_Layout)

@@ -7,21 +7,20 @@ tags:
   - Reference
 translation_of: Web/CSS/background-origin
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>background-origin</code></strong> détermine l'origine de l'arrière-plan {{cssxref("background-image")}} à partir de la bordure, à l'intérieur de la bordure ou à l'intérieur de la zone de remplissage (<em>padding</em>).</p>
+La propriété **`background-origin`** détermine l'origine de l'arrière-plan {{cssxref("background-image")}} à partir de la bordure, à l'intérieur de la bordure ou à l'intérieur de la zone de remplissage (_padding_).
 
-<div>{{EmbedInteractiveExample("pages/css/background-origin.html")}}</div>
+{{EmbedInteractiveExample("pages/css/background-origin.html")}}
 
-<p>Attention, <code>background-origin</code> est ignorée lorsque {{cssxref("background-attachment")}} vaut <code>fixed</code>.</p>
+Attention, `background-origin` est ignorée lorsque {{cssxref("background-attachment")}} vaut `fixed`.
 
-<div class="note">
-  <p><strong>Note :</strong> Cette propriété est rattachée à la propriété raccourcie {{cssxref("background")}}. Aussi, si on a une déclaration <code>background-origin</code> avant la propriété raccourcie et que cette dernière ne définit pas la valeur de l'origine, ce sera la valeur initiale par défaut qui sera prise en compte pour <code>background-origin</code>.</p>
-</div>
+> **Note :** Cette propriété est rattachée à la propriété raccourcie {{cssxref("background")}}. Aussi, si on a une déclaration `background-origin` avant la propriété raccourcie et que cette dernière ne définit pas la valeur de l'origine, ce sera la valeur initiale par défaut qui sera prise en compte pour `background-origin`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 background-origin: border-box;
 background-origin: padding-box;
 background-origin: content-box;
@@ -30,28 +29,27 @@ background-origin: content-box;
 background-origin: inherit;
 background-origin: initial;
 background-origin: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>border-box</code></dt>
- <dd>L'arrière-plan est positionné relativement à la boîte de bordure.</dd>
- <dt><code>padding-box</code></dt>
- <dd>L'arrière-plan est positionné relativement à la boîte de remplissage (<em>padding</em>).</dd>
- <dt><code>content-box</code></dt>
- <dd>L'arrière-plan est positionné relativement à la boîte de contenu.</dd>
-</dl>
+- `border-box`
+  - : L'arrière-plan est positionné relativement à la boîte de bordure.
+- `padding-box`
+  - : L'arrière-plan est positionné relativement à la boîte de remplissage (_padding_).
+- `content-box`
+  - : L'arrière-plan est positionné relativement à la boîte de contenu.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css;">div {
+```css
+div {
   width: 200px;
   height: 100px;
 }
@@ -65,43 +63,30 @@ background-origin: unset;
   background-origin: content-box;
   background-repeat: no-repeat;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="exemple"&gt;&lt;/div&gt;</pre>
+```html
+<div class="exemple"></div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples","300","200")}}</p>
+{{EmbedLiveSample("Exemples","300","200")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-background-origin', 'background-origin')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | État                                     | Commentaires         |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName('CSS3 Backgrounds', '#the-background-origin', 'background-origin')}} | {{Spec2('CSS3 Backgrounds')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.background-origin")}}</p>
+{{Compat("css.properties.background-origin")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("background-clip")}}</li>
-</ul>
+- {{cssxref("background-clip")}}

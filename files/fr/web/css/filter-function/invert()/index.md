@@ -8,31 +8,29 @@ tags:
   - Reference
 translation_of: Web/CSS/filter-function/invert()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La fonction CSS <strong><code>invert()</code></strong> permet d'inverser les couleurs de l'image. La valeur obtenue par cette fonction est de type {{cssxref("&lt;filter-function&gt;")}}.</p>
+La fonction CSS **`invert()`** permet d'inverser les couleurs de l'image. La valeur obtenue par cette fonction est de type {{cssxref("&lt;filter-function&gt;")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/function-invert.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-invert.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">invert(<em>multiplicateur</em>)</pre>
+    invert(multiplicateur)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>multiplicateur</code></dt>
- <dd>L'intensité de la conversion, indiquée sous la forme d'un nombre ({{cssxref("&lt;number&gt;")}}) ou d'un pourcentage ({{cssxref("&lt;percentage&gt;")}}). Avec <code>100%</code>, les couleurs seront entièrement inversées (ce sera un négatif de l'image originale). Une valeur de <code>0%</code> ne modifiera pas l'image. Les valeurs intermédiaires auront un effet proportionnel. Lors d'une interpolation, la valeur utilisée par défaut est <code>0</code>.</dd>
-</dl>
+- `multiplicateur`
+  - : L'intensité de la conversion, indiquée sous la forme d'un nombre ({{cssxref("&lt;number&gt;")}}) ou d'un pourcentage ({{cssxref("&lt;percentage&gt;")}}). Avec `100%`, les couleurs seront entièrement inversées (ce sera un négatif de l'image originale). Une valeur de `0%` ne modifiera pas l'image. Les valeurs intermédiaires auront un effet proportionnel. Lors d'une interpolation, la valeur utilisée par défaut est `0`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: css">invert(0);     /* Aucun effet */
+```css
+invert(0);     /* Aucun effet */
 invert(.6);    /* Inversion à 60% */
-invert(100%);  /* Négatif de l'image originale */</pre>
+invert(100%);  /* Négatif de l'image originale */
+```
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("&lt;filter-function&gt;")}}</li>
-</ul>
+- {{cssxref("&lt;filter-function&gt;")}}

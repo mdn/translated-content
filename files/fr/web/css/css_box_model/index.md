@@ -10,97 +10,64 @@ tags:
 translation_of: Web/CSS/CSS_Box_Model
 original_slug: Web/CSS/Modèle_de_boîte_CSS
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>Le modèle de boîte CSS</strong> (<em>Basic Box Model</em> en anglais) est un module CSS qui définit les boîtes rectangulaires (y compris leurs zones de remplissage (<em>padding</em>) et de marges) qui sont générées pour disposer les éléments selon leur modèle de mise en forme visuelle.</p>
+**Le modèle de boîte CSS** (_Basic Box Model_ en anglais) est un module CSS qui définit les boîtes rectangulaires (y compris leurs zones de remplissage (_padding_) et de marges) qui sont générées pour disposer les éléments selon leur modèle de mise en forme visuelle.
 
-<h2 id="Référence">Référence</h2>
+## Référence
 
-<h3 id="Propriétés">Propriétés</h3>
+### Propriétés
 
-<h4 id="Les_propriétés_qui_définissent_le_flux_du_contenu_dans_une_boîte">Les propriétés qui définissent le flux du contenu dans une boîte</h4>
+#### Les propriétés qui définissent le flux du contenu dans une boîte
 
-<ul>
- <li>{{cssxref("overflow")}}</li>
- <li>{{cssxref("overflow-x")}}</li>
- <li>{{cssxref("overflow-y")}}</li>
-</ul>
+- {{cssxref("overflow")}}
+- {{cssxref("overflow-x")}}
+- {{cssxref("overflow-y")}}
 
-<h4 id="Les_propriétés_qui_définissent_la_taille_d'une_boîte">Les propriétés qui définissent la taille d'une boîte</h4>
+#### Les propriétés qui définissent la taille d'une boîte
 
-<ul>
- <li>{{cssxref("height")}}</li>
- <li>{{cssxref("width")}}</li>
- <li>{{cssxref("max-height")}}</li>
- <li>{{cssxref("max-width")}}</li>
- <li>{{cssxref("min-height")}}</li>
- <li>{{cssxref("min-width")}}</li>
-</ul>
+- {{cssxref("height")}}
+- {{cssxref("width")}}
+- {{cssxref("max-height")}}
+- {{cssxref("max-width")}}
+- {{cssxref("min-height")}}
+- {{cssxref("min-width")}}
 
-<h4 id="Les_propriétés_qui_définissent_les_marges_d'une_boîte">Les propriétés qui définissent les marges d'une boîte</h4>
+#### Les propriétés qui définissent les marges d'une boîte
 
-<ul>
- <li>{{cssxref("margin")}}</li>
- <li>{{cssxref("margin-bottom")}}</li>
- <li>{{cssxref("margin-left")}}</li>
- <li>{{cssxref("margin-right")}}</li>
- <li>{{cssxref("margin-top")}}</li>
- <li>{{CSSxRef("margin-trim")}} {{Experimental_Inline}}</li>
-</ul>
+- {{cssxref("margin")}}
+- {{cssxref("margin-bottom")}}
+- {{cssxref("margin-left")}}
+- {{cssxref("margin-right")}}
+- {{cssxref("margin-top")}}
+- {{CSSxRef("margin-trim")}} {{Experimental_Inline}}
 
-<h4 id="Les_propriétés_qui_définissent_le_remplissage_(padding)_d'une_boîte">Les propriétés qui définissent le remplissage (<em>padding</em>) d'une boîte</h4>
+#### Les propriétés qui définissent le remplissage (_padding_) d'une boîte
 
-<ul>
- <li>{{cssxref("padding")}}</li>
- <li>{{cssxref("padding-bottom")}}</li>
- <li>{{cssxref("padding-left")}}</li>
- <li>{{cssxref("padding-right")}}</li>
- <li>{{cssxref("padding-top")}}</li>
-</ul>
+- {{cssxref("padding")}}
+- {{cssxref("padding-bottom")}}
+- {{cssxref("padding-left")}}
+- {{cssxref("padding-right")}}
+- {{cssxref("padding-top")}}
 
-<h4 id="Les_autres_propriétés">Les autres propriétés</h4>
+#### Les autres propriétés
 
-<ul>
- <li>{{cssxref("box-shadow")}}</li>
- <li>{{cssxref("visibility")}}</li>
-</ul>
+- {{cssxref("box-shadow")}}
+- {{cssxref("visibility")}}
 
-<h2 id="Guides">Guides</h2>
+## Guides
 
-<dl>
- <dt><a href="/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte">Une introduction au modèle de boîte CSS</a></dt>
- <dd>Cet article explique un des concepts clé de CSS : le modèle de boîte. Il définit notamment les notions de marge, de remplissage (<em>padding</em>) ainsi que les différentes zones qui forment une boîte.</dd>
- <dt><a href="/fr/docs/Web/CSS/Fusion_des_marges">Maîtriser la fusion des marges</a></dt>
- <dd>Dans certains cas, deux marges adjacentes sont fusionnées en une seule. Cet article explique quand cela se produit et comment contrôler ce comportement.</dd>
- <dt><a href="/fr/docs/Web/CSS/Modèle_de_mise_en_forme_visuelle">Le modèle de mise en forme visuel</a></dt>
- <dd>Cet article explique le modèle de mise en forme visuel.</dd>
-</dl>
+- [Une introduction au modèle de boîte CSS](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte)
+  - : Cet article explique un des concepts clé de CSS : le modèle de boîte. Il définit notamment les notions de marge, de remplissage (_padding_) ainsi que les différentes zones qui forment une boîte.
+- [Maîtriser la fusion des marges](/fr/docs/Web/CSS/Fusion_des_marges)
+  - : Dans certains cas, deux marges adjacentes sont fusionnées en une seule. Cet article explique quand cela se produit et comment contrôler ce comportement.
+- [Le modèle de mise en forme visuel](/fr/docs/Web/CSS/Modèle_de_mise_en_forme_visuelle)
+  - : Cet article explique le modèle de mise en forme visuel.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Box")}}</td>
-   <td>{{Spec2("CSS3 Box")}}</td>
-   <td>Added <code>margin-trim</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1", "box.html")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS1")}}</td>
-   <td>{{Spec2("CSS1")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                | État                         | Commentaires         |
+| -------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName("CSS3 Box")}}             | {{Spec2("CSS3 Box")}} | Added `margin-trim`  |
+| {{SpecName("CSS2.1", "box.html")}} | {{Spec2("CSS2.1")}}     |                      |
+| {{SpecName("CSS1")}}                 | {{Spec2("CSS1")}}     | Définition initiale. |

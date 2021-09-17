@@ -9,12 +9,13 @@ tags:
   - Reference
 translation_of: Web/CSS/inset
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propriété <strong><code>inset</code></strong> définit les décalages physiques d'un élément. Bien qu'elle fasse partie de la spécification sur les propriétés logiques, sa valeur ne dépend pas du mode d'écriture de l'élément, de sa direction ou de l'orientation du texte. La syntaxe de cette propriété suit la même structure que {{cssxref("margin")}}, <code>inset</code> est une propriété raccourcie permettant de définir les propriétés {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} et/ou {{cssxref("left")}}.</p>
+La propriété **`inset`** définit les décalages physiques d'un élément. Bien qu'elle fasse partie de la spécification sur les propriétés logiques, sa valeur ne dépend pas du mode d'écriture de l'élément, de sa direction ou de l'orientation du texte. La syntaxe de cette propriété suit la même structure que {{cssxref("margin")}}, `inset` est une propriété raccourcie permettant de définir les propriétés {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} et/ou {{cssxref("left")}}.
 
-<pre class="brush:css no-line-numbers">/* Valeurs de longueurs */
-/* Type &lt;length&gt; */
+```css
+/* Valeurs de longueurs */
+/* Type <length> */
 inset: 10px; /* la valeur est appliquée à l'ensemble des côtés */
 inset: 4px 8px; /* haut/bas gauche/droit */
 inset: 5px 15px 10px; /* haut gauche/droit bas */
@@ -30,24 +31,24 @@ inset: auto;
 inset: inherit;
 inset: initial;
 inset: unset;
+```
 
-</pre>
+## Syntaxe
 
-<h2 id="Syntaxe">Syntaxe</h2>
+### Valeurs
 
-<h3 id="Valeurs">Valeurs</h3>
+La propriété `inset` prend les mêmes valeurs que la propriété {{cssxref("left")}}.
 
-<p>La propriété <code>inset</code> prend les mêmes valeurs que la propriété {{cssxref("left")}}.</p>
-
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 150px;
   height: 120px;
@@ -59,55 +60,41 @@ inset: unset;
   position: absolute;
   inset: 20px 40px 30px 10px;
   background-color: #c8c800;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;span class="texteExemple"&gt;Texte d'exemple&lt;/span&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <span class="texteExemple">Texte d'exemple</span>
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", 140, 140)}}</p>
+{{EmbedLiveSample("Exemples", 140, 140)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-inset", "inset")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                                             | Commentaires         |
+| ---------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
+| {{SpecName("CSS Logical Properties", "#propdef-inset", "inset")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.inset")}}</p>
+{{Compat("css.properties.inset")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>La propriété raccourcie physique {{cssxref("margin")}}</li>
- <li>Les propriétés physiques détaillées :
-  <ul>
-   <li>{{cssxref("top")}},</li>
-   <li>{{cssxref("right")}},</li>
-   <li>{{cssxref("bottom")}},</li>
-   <li>{{cssxref("left")}}</li>
-  </ul>
- </li>
- <li>Les propriétés utilisées pour les autres propriétés logiques {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- La propriété raccourcie physique {{cssxref("margin")}}
+- Les propriétés physiques détaillées :
+
+  - {{cssxref("top")}},
+  - {{cssxref("right")}},
+  - {{cssxref("bottom")}},
+  - {{cssxref("left")}}
+
+- Les propriétés utilisées pour les autres propriétés logiques {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

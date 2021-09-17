@@ -8,16 +8,15 @@ tags:
   - Reference
 translation_of: Web/CSS/box-flex
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<div class="warning">
-  <p><strong>Attention :</strong> Cette propriété est utilisée pour contrôler certaines parties du modèle de boîtes XUL. Elle ne correspond ni à l'ancienne version de la spécification pour <code>box-flex</code> ni au comportement de <code>-webkit-box-flex</code>. Voir la page <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Flexbox</a> pour plus d'informations sur ce qui doit être utilisé à la place.</p>
-</div>
+> **Attention :** Cette propriété est utilisée pour contrôler certaines parties du modèle de boîtes XUL. Elle ne correspond ni à l'ancienne version de la spécification pour `box-flex` ni au comportement de `-webkit-box-flex`. Voir la page [Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) pour plus d'informations sur ce qui doit être utilisé à la place.
 
-<p>Les propriétés <strong><code>-moz-box-flex</code></strong> et <strong><code>-webkit-box-flex</code></strong> définissent la façon dont une boîte <code>-moz-box</code> ou <code>-webkit-box</code> s'étend pour remplir la boîte englobante, dans la direction indiquée par la disposition de la boîte. Pour plus de détails, se référer à la page <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Flexbox</a> qui décrit les différentes propriétés des boîtes flexibles.</p>
+Les propriétés **`-moz-box-flex`** et **`-webkit-box-flex`** définissent la façon dont une boîte `-moz-box` ou `-webkit-box` s'étend pour remplir la boîte englobante, dans la direction indiquée par la disposition de la boîte. Pour plus de détails, se référer à la page [Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) qui décrit les différentes propriétés des boîtes flexibles.
 
-<pre class="brush:css no-line-numbers">/* Valeurs numériques */
-/* Type &lt;number&gt;      */
+```css
+/* Valeurs numériques */
+/* Type <number>      */
 -moz-box-flex: 0;
 -moz-box-flex: 2;
 -moz-box-flex: 3.5;
@@ -32,79 +31,78 @@ translation_of: Web/CSS/box-flex
 -webkit-box-flex: inherit;
 -webkit-box-flex: initial;
 -webkit-box-flex: unset;
-</pre>
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;number&gt;</code></dt>
- <dd>Une valeur de type {{cssxref("&lt;number&gt;")}}. Si la valeur vaut 0, la boîte ne s'étend pas. Si elle est supérieure à 0, la boîte s'étendra sur l'espace disponible de façon proportionnelle.</dd>
-</dl>
+- `<number>`
+  - : Une valeur de type {{cssxref("&lt;number&gt;")}}. Si la valeur vaut 0, la boîte ne s'étend pas. Si elle est supérieure à 0, la boîte s'étendra sur l'espace disponible de façon proportionnelle.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div.exemple {
+```css
+div.exemple {
   display: -moz-box;
   display: -webkit-box;
   border: 1px solid black;
   width: 100%;
 }
 
-div.exemple &gt; p:nth-child(1) {
+div.exemple > p:nth-child(1) {
   -moz-box-flex: 1; /* Mozilla */
   -webkit-box-flex: 1; /* WebKit */
   border: 1px solid black;
 }
 
-div.exemple &gt; p:nth-child(2) {
+div.exemple > p:nth-child(2) {
   -moz-box-flex: 0; /* Mozilla */
   -webkit-box-flex: 0; /* WebKit */
   border: 1px solid black;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="exemple"&gt;
-  &lt;p&gt;Je m'étends sur l'espace.&lt;/p&gt;
-  &lt;p&gt;Je ne me dilate pas.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="exemple">
+  <p>Je m'étends sur l'espace.</p>
+  <p>Je ne me dilate pas.</p>
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples","200","200")}}</p>
+{{EmbedLiveSample("Exemples","200","200")}}
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>La boîte englobante distribue l'espace supplémentaire en fonction de la valeur de <code>flex</code> de chaque élément. Les éléments pour lesquels ce coefficient est nul ne s'agrandiront pas. Si un seul élément possède un coefficient non nul, celui-ci occupera l'espace supplémentaires.</p>
+La boîte englobante distribue l'espace supplémentaire en fonction de la valeur de `flex` de chaque élément. Les éléments pour lesquels ce coefficient est nul ne s'agrandiront pas. Si un seul élément possède un coefficient non nul, celui-ci occupera l'espace supplémentaires.
 
-<p>Les éléments qui possèdent le même coefficient grandiront de la même façon.</p>
+Les éléments qui possèdent le même coefficient grandiront de la même façon.
 
-<p>Si la valeur de cette propriété est définie via l'attribut XUL <code>flex</code>, la déclaration est ignorée. Afin que les éléments XUL d'une même boîte aient la même taille, on utilisera l'attribut <code>equalsize</code> avec la valeur <code>always</code>. Il n'existe pas de propriété CSS correspondante.</p>
+Si la valeur de cette propriété est définie via l'attribut XUL `flex`, la déclaration est ignorée. Afin que les éléments XUL d'une même boîte aient la même taille, on utilisera l'attribut `equalsize` avec la valeur `always`. Il n'existe pas de propriété CSS correspondante.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette propriété n'est pas une propriété standard. <a href="https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">Une ancienne version de la spécification CSS3 pour les boîtes flexibles</a> définissait une propriété <code>box-flex</code> mais ce brouillon a depuis été remplacé.</p>
+Cette propriété n'est pas une propriété standard. [Une ancienne version de la spécification CSS3 pour les boîtes flexibles](https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/) définissait une propriété `box-flex` mais ce brouillon a depuis été remplacé.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<div>{{Compat("css.properties.box-flex")}}</div>
+{{Compat("css.properties.box-flex")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("box-orient")}},</li>
- <li>{{cssxref("box-pack")}},</li>
- <li>{{cssxref("box-direction")}},</li>
- <li>{{cssxref("flex")}}.</li>
-</ul>
+- {{cssxref("box-orient")}},
+- {{cssxref("box-pack")}},
+- {{cssxref("box-direction")}},
+- {{cssxref("flex")}}.

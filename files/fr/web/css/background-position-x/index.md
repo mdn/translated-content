@@ -8,31 +8,30 @@ tags:
   - Reference
 translation_of: Web/CSS/background-position-x
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>background-position-x</code></strong> définit la position horizontale initiale de chaque image d'arrière-plan par rapport à l'origine, définie avec {{cssxref("background-origin")}}.</p>
+La propriété **`background-position-x`** définit la position horizontale initiale de chaque image d'arrière-plan par rapport à l'origine, définie avec {{cssxref("background-origin")}}.
 
-<p>Pour plus d'informations, se référer à la documentation de la propriété {{cssxref("background-position")}} qui existe depuis plus longtemps.</p>
+Pour plus d'informations, se référer à la documentation de la propriété {{cssxref("background-position")}} qui existe depuis plus longtemps.
 
-<div>{{EmbedInteractiveExample("pages/css/background-position-x.html")}}</div>
+{{EmbedInteractiveExample("pages/css/background-position-x.html")}}
 
-<div class="note">
-  <p><strong>Note :</strong> La valeur de cette propriété sera surchargée par n'importe quelle déclaration avec  {{cssxref("background")}} ou {{cssxref("background-position")}} située après la déclaration de <code>background-position-x</code>.</p>
-</div>
+> **Note :** La valeur de cette propriété sera surchargée par n'importe quelle déclaration avec  {{cssxref("background")}} ou {{cssxref("background-position")}} située après la déclaration de `background-position-x`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 background-position-x: left;
 background-position-x: right;
 background-position-x: center;
 
 /* Valeurs proportionnelles */
-/* Type &lt;percentage&gt;        */
+/* Type <percentage>        */
 background-position-x: 25%;
 
 /* Valeurs de longueur */
-/* Type &lt;length&gt;       */
+/* Type <length>       */
 background-position-x: 0px;
 background-position-x: 1cm;
 background-position-x: 8em;
@@ -49,58 +48,41 @@ background-position-x: 0px, center;
 background-position-x: inherit;
 background-position-x: initial;
 background-position-x: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>left</code></dt>
- <dd>Le bord gauche de l'image d'arrière-plan est aligné avec le bord gauche de la zone dédiée à l'arrière-plan.</dd>
- <dt><code>center</code></dt>
- <dd>L'image d'arrière-plan est centrée horizontalement par rapport à la zone dédiée à l'arrière-plan.</dd>
- <dt><code>right</code></dt>
- <dd>Le côté droit de l'image d'arrière-plan est aligné avec le côté droit de la zone dédiée à l'arrière-plan.</dd>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) qui définit le décalage horizontal de l'arrière-plan correspondant par rapport à un bord vertical de la zone d'arrière-plan. Si aucun côté n'est indiqué, l'écart fera référence au côté gauche.</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>Une valeur en pourcentages (type {{cssxref("&lt;percentage&gt;")}}) qui définit le décalage horizontal de l'arrière-plan correspondant par rapport à un bord vertical de la zone d'arrière-plan, proportionnellement à la largeur de la zone. Si aucun côté n'est indiqué, l'écart fera référence au côté gauche.</dd>
-</dl>
+- `left`
+  - : Le bord gauche de l'image d'arrière-plan est aligné avec le bord gauche de la zone dédiée à l'arrière-plan.
+- `center`
+  - : L'image d'arrière-plan est centrée horizontalement par rapport à la zone dédiée à l'arrière-plan.
+- `right`
+  - : Le côté droit de l'image d'arrière-plan est aligné avec le côté droit de la zone dédiée à l'arrière-plan.
+- `<length>`
+  - : Une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) qui définit le décalage horizontal de l'arrière-plan correspondant par rapport à un bord vertical de la zone d'arrière-plan. Si aucun côté n'est indiqué, l'écart fera référence au côté gauche.
+- `<percentage>`
+  - : Une valeur en pourcentages (type {{cssxref("&lt;percentage&gt;")}}) qui définit le décalage horizontal de l'arrière-plan correspondant par rapport à un bord vertical de la zone d'arrière-plan, proportionnellement à la largeur de la zone. Si aucun côté n'est indiqué, l'écart fera référence au côté gauche.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Backgrounds', '#background-position-longhands', 'background-position-x')}}</td>
-   <td>{{Spec2('CSS4 Backgrounds')}}</td>
-   <td>Spécification initiale pour les propriétés détaillées de {{cssxref("background-position")}}, implémentée depuis longtemps.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | État                                     | Commentaires                                                                                                                         |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('CSS4 Backgrounds', '#background-position-longhands', 'background-position-x')}} | {{Spec2('CSS4 Backgrounds')}} | Spécification initiale pour les propriétés détaillées de {{cssxref("background-position")}}, implémentée depuis longtemps. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.background-position-x")}}</p>
+{{Compat("css.properties.background-position-x")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("background-position")}}</li>
- <li>{{cssxref("background-position-y")}}</li>
- <li>{{cssxref("background-position-inline")}}</li>
- <li>{{cssxref("background-position-block")}}</li>
- <li><a href="/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds">Manipuler plusieurs arrière-plans</a></li>
-</ul>
+- {{cssxref("background-position")}}
+- {{cssxref("background-position-y")}}
+- {{cssxref("background-position-inline")}}
+- {{cssxref("background-position-block")}}
+- [Manipuler plusieurs arrière-plans](/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)

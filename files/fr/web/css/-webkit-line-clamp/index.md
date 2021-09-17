@@ -6,27 +6,26 @@ tags:
   - Propriété
 translation_of: Web/CSS/-webkit-line-clamp
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété CSS <strong><code>-webkit-line-clamp</code></strong> permet de limiter l'affichage du contenu d'un bloc à un nombre donné de lignes.</p>
+La propriété CSS **`-webkit-line-clamp`** permet de limiter l'affichage du contenu d'un bloc à un nombre donné de lignes.
 
-<p>Cette propriété fonctionne uniquement si {{cssxref("display")}} vaut <code>-webkit-box</code> ou <code>-webkit-inline-box</code> et si {{cssxref("-webkit-box-orient")}} vaut <code>vertical</code>.</p>
+Cette propriété fonctionne uniquement si {{cssxref("display")}} vaut `-webkit-box` ou `-webkit-inline-box` et si {{cssxref("-webkit-box-orient")}} vaut `vertical`.
 
-<p>Dans la plupart des cas, on utilisera également {{cssxref("overflow")}} avec la valeur <code>hidden</code>, afin de masquer le contenu qui dépasse (plutôt que d'afficher une ellipse en dehors de la boîte).</p>
+Dans la plupart des cas, on utilisera également {{cssxref("overflow")}} avec la valeur `hidden`, afin de masquer le contenu qui dépasse (plutôt que d'afficher une ellipse en dehors de la boîte).
 
-<p>Lorsqu'on applique ce style à une ancre, la troncature pourra intervenir au milieu du texte (et pas nécessairement à la fin).</p>
+Lorsqu'on applique ce style à une ancre, la troncature pourra intervenir au milieu du texte (et pas nécessairement à la fin).
 
-<div class="note">
-<p><strong>Note :</strong> Au départ, cette propriété était implémentée dans WebKit avec quelques problèmes. Elle a été standardisée à des fins de support pour les sites historiques. Le module de spécification <a href="https://www.w3.org/TR/css-overflow-3/#propdef--webkit-line-clamp">CSS Overflow Module Level 3</a> définit également une propriété {{cssxref("line-clamp")}} qui doit remplacer <code>-webkit-line-clamp</code>.</p>
-</div>
+> **Note :** Au départ, cette propriété était implémentée dans WebKit avec quelques problèmes. Elle a été standardisée à des fins de support pour les sites historiques. Le module de spécification [CSS Overflow Module Level 3](https://www.w3.org/TR/css-overflow-3/#propdef--webkit-line-clamp) définit également une propriété {{cssxref("line-clamp")}} qui doit remplacer `-webkit-line-clamp`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 -webkit-line-clamp: none;
 
 /* Valeurs entières */
-/* Type &lt;integer&gt; */
+/* Type <integer> */
 -webkit-line-clamp: 3;
 -webkit-line-clamp: 10;
 
@@ -34,66 +33,53 @@ translation_of: Web/CSS/-webkit-line-clamp
 -webkit-line-clamp: inherit;
 -webkit-line-clamp: initial;
 -webkit-line-clamp: unset;
-</pre>
+```
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Cette valeur indique que le contenu ne sera pas rogné.</dd>
- <dt>{{cssxref("integer")}}</dt>
- <dd>Cette valeur indique le nombre de lignes après lequel tronquer le contenu. Cette valeur doit être supérieure à 0.</dd>
-</dl>
+- `none`
+  - : Cette valeur indique que le contenu ne sera pas rogné.
+- {{cssxref("integer")}}
+  - : Cette valeur indique le nombre de lignes après lequel tronquer le contenu. Cette valeur doit être supérieure à 0.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;
-  Dans cet exemple &lt;code&gt;-webkit-line-clamp&lt;/code&gt; vaut &lt;code&gt;3&lt;/code&gt;, ce qui signifie que le texte sera rogné après trois lignes.
+```html
+<p>
+  Dans cet exemple <code>-webkit-line-clamp</code> vaut <code>3</code>, ce qui signifie que le texte sera rogné après trois lignes.
   Une ellipse sera affichée au n ellipsis will be shown at the point where the text is clamped.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   width: 300px;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", "100%", "100")}}</p>
+{{EmbedLiveSample("Exemples", "100%", "100")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Overflow", "#propdef--webkit-line-clamp", "-webkit-line-clamp")}}</td>
-   <td>{{Spec2("CSS3 Overflow")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | État                                 | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
+| {{SpecName("CSS3 Overflow", "#propdef--webkit-line-clamp", "-webkit-line-clamp")}} | {{Spec2("CSS3 Overflow")}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.-webkit-line-clamp")}}</p>
+{{Compat("css.properties.-webkit-line-clamp")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="https://css-tricks.com/line-clampin/">Line Clampin’ (Truncating Multiple Line Text)</a></li>
- <li>{{cssxref("line-clamp")}}</li>
-</ul>
+- [Line Clampin’ (Truncating Multiple Line Text)](https://css-tricks.com/line-clampin/)
+- {{cssxref("line-clamp")}}

@@ -8,22 +8,21 @@ tags:
   - Reference
 translation_of: Web/CSS/font
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>font</code></strong> est :</p>
+La propriété **`font`** est :
 
-<ul>
- <li>une propriété raccourcie permettant de définir rapidement {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-weight")}},  {{cssxref("font-stretch")}}, {{cssxref("font-size")}}, {{cssxref("line-height")}} et {{cssxref("font-family")}}</li>
- <li>ou une propriété permettant d'utiliser une police système pour la police de caractères d'un élément grâce à certains mots-clés spécifiques.</li>
-</ul>
+- une propriété raccourcie permettant de définir rapidement {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-weight")}},  {{cssxref("font-stretch")}}, {{cssxref("font-size")}}, {{cssxref("line-height")}} et {{cssxref("font-family")}}
+- ou une propriété permettant d'utiliser une police système pour la police de caractères d'un élément grâce à certains mots-clés spécifiques.
 
-<div>{{EmbedInteractiveExample("pages/css/font.html")}}</div>
+{{EmbedInteractiveExample("pages/css/font.html")}}
 
-<p>Comme pour les autres propriétés CSS, les valeurs qui ne sont pas définies avec la propriété raccourcie sont définies avec leur valeur initiale, ce qui peut surcharger les valeurs définies précédemment avec les propriétés « détaillées ». Bien qu'elles ne puissent pas directement être paramétrées avec <code>font</code>, les propriétés détaillées, {{cssxref("font-size-adjust")}}, et {{cssxref("font-kerning")}} sont également réinitialisées avec leurs valeurs initiales.</p>
+Comme pour les autres propriétés CSS, les valeurs qui ne sont pas définies avec la propriété raccourcie sont définies avec leur valeur initiale, ce qui peut surcharger les valeurs définies précédemment avec les propriétés « détaillées ». Bien qu'elles ne puissent pas directement être paramétrées avec `font`, les propriétés détaillées, {{cssxref("font-size-adjust")}}, et {{cssxref("font-kerning")}} sont également réinitialisées avec leurs valeurs initiales.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css">/* size | family */
+```css
+/* size | family */
 font: 2em "Open Sans", sans-serif;
 
 /* style | size | family */
@@ -44,96 +43,104 @@ font: icon;
 font: inherit;
 font: initial;
 font: unset;
-</pre>
+```
 
-<p>La propriété <code>font</code> peut être définie avec un seul mot-clé (qui sélectionnera la police système à utiliser) ou comme propriété raccourcie pour paramétrer les différentes propriétés relatives aux polices.</p>
+La propriété `font` peut être définie avec un seul mot-clé (qui sélectionnera la police système à utiliser) ou comme propriété raccourcie pour paramétrer les différentes propriétés relatives aux polices.
 
-<p>Si <code>font</code> est définie grâce à un mot-clé, ce mot-clé doit être : <a href="#keyword"><code>caption</code>, <code>icon</code>, <code>menu</code>, <code>message-box</code>, <code>small-caption</code> ou <code>status-bar</code></a>.</p>
+Si `font` est définie grâce à un mot-clé, ce mot-clé doit être : [`caption`, `icon`, `menu`, `message-box`, `small-caption` ou `status-bar`](#keyword).
 
-<p>Si <code>font</code> est définie comme une propriété raccourcie :</p>
+Si `font` est définie comme une propriété raccourcie :
 
-<ul>
- <li>La déclaration devra inclure des valeurs pour :
-  <ul>
-   <li>{{cssxref("&lt;font-size&gt;")}}</li>
-   <li>{{cssxref("&lt;font-family&gt;")}}</li>
-  </ul>
- </li>
- <li>La déclaration pourra éventuellement inclure des valeurs pour :
-  <ul>
-   <li>{{cssxref("&lt;font-style&gt;")}}</li>
-   <li>{{cssxref("&lt;font-variant&gt;")}}</li>
-   <li>{{cssxref("&lt;font-weight&gt;")}}</li>
-   <li>{{cssxref("&lt;font-stretch&gt;")}}</li>
-   <li>{{cssxref("&lt;line-height&gt;")}}</li>
-  </ul>
- </li>
- <li>Les valeurs pour <code>font-style</code>, <code>font-variant</code> et <code>font-weight</code> doivent précéder la valeur pour <code>font-size</code></li>
- <li>La valeur de <code>font-variant</code> ne peut utiliser que les valeurs définies en CSS 2.1 : <code>normal</code> et <code>small-caps</code></li>
- <li>La valeur de <code>font-stretch</code> ne peut être qu'un mot-clé.</li>
- <li>La valeur pour <code>line-height</code> doit immédiatement suivre la valeur pour <code>font-size</code>, séparée par une barre oblique (par exemple "<code>16px/3</code>")</li>
- <li>La valeur pour <code>font-family</code> doit être la dernière fournie.</li>
-</ul>
+- La déclaration devra inclure des valeurs pour :
 
-<h3 id="Valeurs">Valeurs</h3>
+  - {{cssxref("&lt;font-size&gt;")}}
+  - {{cssxref("&lt;font-family&gt;")}}
 
-<dl>
- <dt><code>&lt;'font-style'&gt;</code></dt>
- <dd>Voir la propriété {{cssxref("font-style")}}.</dd>
- <dt><code>&lt;'font-variant'&gt;</code></dt>
- <dd>Voir la propriété {{cssxref("font-variant")}}.</dd>
- <dt><code>&lt;'font-weight'&gt;</code></dt>
- <dd>Voir la propriété {{cssxref("font-weight")}}.</dd>
- <dt><code>&lt;'font-stretch'&gt;</code></dt>
- <dd>Voir la propriété {{cssxref("font-stretch")}}.</dd>
- <dt><code>&lt;'font-size'&gt;</code></dt>
- <dd>Voir la propriété {{cssxref("font-size")}}.</dd>
- <dt><code>&lt;'line-height'&gt;</code></dt>
- <dd>Voir la propriété {{cssxref("line-height")}}.</dd>
- <dt><code>&lt;'font-family'&gt;</code></dt>
- <dd>Voir la propriété {{cssxref("font-family")}}.</dd>
- <dt>Polices système :<code>caption</code> <code>icon</code> <code>menu</code> <code>message-box</code> <code>small-caption</code> <code>status-bar</code></dt>
- <dd>Un mot-clé peut être utilisé pour indiquer une police système spécifique :
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <td><code>caption</code></td>
-    <td>La police système utilisée pour les libellés des contrôles (par exemples les boutons, listes déroulantes, etc.).</td>
-   </tr>
-   <tr>
-    <td><code>icon</code></td>
-    <td>La police système utilisée pour les textes accompagnant les icônes.</td>
-   </tr>
-   <tr>
-    <td><code>menu</code></td>
-    <td>La police système utilisée pour les menus.</td>
-   </tr>
-   <tr>
-    <td><code>message-box</code></td>
-    <td>La police système utilisée dans les boîtes de dialogue.</td>
-   </tr>
-   <tr>
-    <td><code>small-caption</code></td>
-    <td>La police système utilisée pour les libellés des contrôles de petite taille.</td>
-   </tr>
-   <tr>
-    <td><code>status-bar</code></td>
-    <td>La police système utilisée dans les barres de statut de la fenêtre.</td>
-   </tr>
-  </tbody>
- </table>
- La plupart du temps, les navigateurs implémentent d'autres valeurs, préfixées. Par exemple, Gecko implémente <code>-moz-window</code>, <code>-moz-document</code>, <code>-moz-desktop</code>, <code>-moz-info</code>, <code>-moz-dialog</code>, <code>-moz-button</code>, <code>-moz-pull-down-menu</code>, <code>-moz-list</code> and <code>-moz-field</code>.</dd>
-</dl>
+- La déclaration pourra éventuellement inclure des valeurs pour :
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+  - {{cssxref("&lt;font-style&gt;")}}
+  - {{cssxref("&lt;font-variant&gt;")}}
+  - {{cssxref("&lt;font-weight&gt;")}}
+  - {{cssxref("&lt;font-stretch&gt;")}}
+  - {{cssxref("&lt;line-height&gt;")}}
+
+- Les valeurs pour `font-style`, `font-variant` et `font-weight` doivent précéder la valeur pour `font-size`
+- La valeur de `font-variant` ne peut utiliser que les valeurs définies en CSS 2.1 : `normal` et `small-caps`
+- La valeur de `font-stretch` ne peut être qu'un mot-clé.
+- La valeur pour `line-height` doit immédiatement suivre la valeur pour `font-size`, séparée par une barre oblique (par exemple "`16px/3`")
+- La valeur pour `font-family` doit être la dernière fournie.
+
+### Valeurs
+
+- `<'font-style'>`
+  - : Voir la propriété {{cssxref("font-style")}}.
+- `<'font-variant'>`
+  - : Voir la propriété {{cssxref("font-variant")}}.
+- `<'font-weight'>`
+  - : Voir la propriété {{cssxref("font-weight")}}.
+- `<'font-stretch'>`
+  - : Voir la propriété {{cssxref("font-stretch")}}.
+- `<'font-size'>`
+  - : Voir la propriété {{cssxref("font-size")}}.
+- `<'line-height'>`
+  - : Voir la propriété {{cssxref("line-height")}}.
+- `<'font-family'>`
+  - : Voir la propriété {{cssxref("font-family")}}.
+- Polices système :`caption` `icon` `menu` `message-box` `small-caption` `status-bar`
+
+  - : Un mot-clé peut être utilisé pour indiquer une police système spécifique :
+
+    <table class="standard-table">
+      <tbody>
+        <tr>
+          <td><code>caption</code></td>
+          <td>
+            La police système utilisée pour les libellés des contrôles (par exemples
+            les boutons, listes déroulantes, etc.).
+          </td>
+        </tr>
+        <tr>
+          <td><code>icon</code></td>
+          <td>
+            La police système utilisée pour les textes accompagnant les icônes.
+          </td>
+        </tr>
+        <tr>
+          <td><code>menu</code></td>
+          <td>La police système utilisée pour les menus.</td>
+        </tr>
+        <tr>
+          <td><code>message-box</code></td>
+          <td>La police système utilisée dans les boîtes de dialogue.</td>
+        </tr>
+        <tr>
+          <td><code>small-caption</code></td>
+          <td>
+            La police système utilisée pour les libellés des contrôles de petite
+            taille.
+          </td>
+        </tr>
+        <tr>
+          <td><code>status-bar</code></td>
+          <td>
+            La police système utilisée dans les barres de statut de la fenêtre.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    La plupart du temps, les navigateurs implémentent d'autres valeurs, préfixées. Par exemple, Gecko implémente `-moz-window`, `-moz-document`, `-moz-desktop`, `-moz-info`, `-moz-dialog`, `-moz-button`, `-moz-pull-down-menu`, `-moz-list` and `-moz-field`.
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">/* La corps de la police sera  12px */
+```css
+/* La corps de la police sera  12px */
 /* La hauteur de ligne 14px et la   */
 /* famille de polices sans-serif    */
 
@@ -162,71 +169,53 @@ font: unset;
 /* la barre de statut de la fenêtre.  */
 .statut {
   font: status-bar;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="exemple1"&gt;
+```html
+<p class="exemple1">
   « Toujours aussi mouillée, » dit Alice tristement.
   « Je ne sèche que d’ennui. »
-&lt;/p&gt;
+</p>
 
-&lt;p class="exemple2"&gt;
+<p class="exemple2">
   « Dans ce cas, » dit le Dodo avec emphase, se
   dressant sur ses pattes, « je propose l’ajournement,
   et l’adoption immédiate de mesures énergiques. »
-&lt;/p&gt;
+</p>
 
-&lt;p class="gras_italique_serif"&gt;
+<p class="gras_italique_serif">
   « Parlez français, » dit l’Aiglon ; « je ne
   comprends pas la moitié de ces grands mots, et, qui
   plus est, je ne crois pas que vous les compreniez
   vous-même. » L’Aiglon baissa la tête pour cacher
   un sourire, et quelques-uns des autres oiseaux
   ricanèrent tout haut.
-&lt;/p&gt;
+</p>
 
-&lt;p class="statut"&gt;
+<p class="statut">
   « J’allais proposer, » dit le Dodo d’un ton vexé,
   « une course cocasse ; c’est ce que nous pouvons
   faire de mieux pour nous sécher. »
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples","300","500")}}</p>
+{{EmbedLiveSample("Exemples","300","500")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#font-prop', 'font')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>Prise en charge des valeurs de <code>font-stretch</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'fonts.html#font-shorthand', 'font-weight')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Prise en charge des mots-clés.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#font', 'font')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                             | Commentaires                                   |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ---------------------------------------------- |
+| {{SpecName('CSS3 Fonts', '#font-prop', 'font')}}                         | {{Spec2('CSS3 Fonts')}} | Prise en charge des valeurs de `font-stretch`. |
+| {{SpecName('CSS2.1', 'fonts.html#font-shorthand', 'font-weight')}} | {{Spec2('CSS2.1')}}         | Prise en charge des mots-clés.                 |
+| {{SpecName('CSS1', '#font', 'font')}}                                         | {{Spec2('CSS1')}}         | Définition initiale.                           |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.font")}}</p>
+{{Compat("css.properties.font")}}

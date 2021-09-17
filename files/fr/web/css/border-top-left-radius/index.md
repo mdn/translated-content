@@ -7,19 +7,18 @@ tags:
   - Reference
 translation_of: Web/CSS/border-top-left-radius
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>border-top-left-radius</code></strong> définit le rayon de courbure de la bordure pour le coin en haut à gauche de la boîte. L'arrondi peut être un fragment de cercle ou d'ellipse. Si une des valeurs vaut <code>0</code>, aucun arrondi n'a lieu et le coin est un angle droit.Un arrière-plan (que ce soit une couleur ou une image) sera rogné selon la bordure même si celle-ci est arrondie. L'endroit du rognage est défini selon la valeur de {{cssxref("background-clip")}}.</p>
+La propriété **`border-top-left-radius`** définit le rayon de courbure de la bordure pour le coin en haut à gauche de la boîte. L'arrondi peut être un fragment de cercle ou d'ellipse. Si une des valeurs vaut `0`, aucun arrondi n'a lieu et le coin est un angle droit.Un arrière-plan (que ce soit une couleur ou une image) sera rogné selon la bordure même si celle-ci est arrondie. L'endroit du rognage est défini selon la valeur de {{cssxref("background-clip")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/border-top-left-radius.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-top-left-radius.html")}}
 
-<div class="note">
-  <p><strong>Note :</strong> Si la valeur de cette propriété n'est pas définie par la propriété raccourcie {{cssxref("border-radius")}} et que cette dernière est appliquée après <code>border-top-left-radius</code>, cela aura pour effet de réinitialiser la valeur avec la valeur initiale de <a href="/fr/docs/Web/CSS/Shorthand_properties">la propriété raccourcie</a>.</p>
-</div>
+> **Note :** Si la valeur de cette propriété n'est pas définie par la propriété raccourcie {{cssxref("border-radius")}} et que cette dernière est appliquée après `border-top-left-radius`, cela aura pour effet de réinitialiser la valeur avec la valeur initiale de [la propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Le coin est un quart de cercle         */
+```css
+/* Le coin est un quart de cercle         */
 /* La valeur indique le rayon de courbure */
 border-top-left-radius: 3px;
 
@@ -30,36 +29,31 @@ border-top-left-radius: 3px;
 border-top-left-radius: 0.5em 1em;
 
 border-top-left-radius: inherit;
-</pre>
+```
 
-<p>Cette propriété peut prendre deux formes :</p>
+Cette propriété peut prendre deux formes :
 
-<ul>
- <li>Une première avec une longueur (<code>&lt;length&gt;</code>) ou un pourcentage (<code>&lt;percentage&gt;</code>) qui indique le rayon de courbure pour ce coin</li>
- <li>Une seconde avec deux valeurs
-  <ul>
-   <li>La première est une longueur (<code>&lt;length&gt;</code>) ou un pourcentage (<code>&lt;percentage&gt;</code>) qui indique le rayon de courbure de l'axe horizontal de l'ellipse pour ce coin</li>
-   <li>La seconde est une longueur (<code>&lt;length&gt;</code>) ou un pourcentage (<code>&lt;percentage&gt;</code>) qui indique le rayon de courbure de l'axe vertical de l'ellipse pour ce coin</li>
-  </ul>
- </li>
-</ul>
+- Une première avec une longueur (`<length>`) ou un pourcentage (`<percentage>`) qui indique le rayon de courbure pour ce coin
+- Une seconde avec deux valeurs
 
-<h3 id="Valeurs">Valeurs</h3>
+  - La première est une longueur (`<length>`) ou un pourcentage (`<percentage>`) qui indique le rayon de courbure de l'axe horizontal de l'ellipse pour ce coin
+  - La seconde est une longueur (`<length>`) ou un pourcentage (`<percentage>`) qui indique le rayon de courbure de l'axe vertical de l'ellipse pour ce coin
 
-<dl>
- <dt><code>&lt;length-percentage&gt;</code></dt>
- <dd>La mesure du rayon ou de l'un des demi-axes de l'ellipse. Une valeur absolue peut être exprimée dans n'importe quelle unité autorisée pour le type {{cssxref("&lt;length&gt;")}}. Les valeurs exprimées en pourcentage font référence à la hauteur de la boîte pour les valeurs verticales et à la largeur de la boîte pour les valeurs horizontales. Les valeurs négatives ne sont pas autorisées.</dd>
-</dl>
+### Valeurs
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+- `<length-percentage>`
+  - : La mesure du rayon ou de l'un des demi-axes de l'ellipse. Une valeur absolue peut être exprimée dans n'importe quelle unité autorisée pour le type {{cssxref("&lt;length&gt;")}}. Les valeurs exprimées en pourcentage font référence à la hauteur de la boîte pour les valeurs verticales et à la largeur de la boîte pour les valeurs horizontales. Les valeurs négatives ne sont pas autorisées.
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: lightgreen;
   border: solid 1px black;
   width: 100px;
@@ -84,53 +78,38 @@ border-top-left-radius: inherit;
   background-color: rgb(250,20,70);
   background-clip: content-box; // essayez margin-box...
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html"> &lt;div class="arc_cercle"&gt;&lt;/div&gt;
- &lt;div class="arc_ellipse"&gt;&lt;/div&gt;
- &lt;div class="pourcentage"&gt;&lt;/div&gt;
- &lt;div class="rognage"&gt;&lt;/div&gt;</pre>
+```html
+ <div class="arc_cercle"></div>
+ <div class="arc_ellipse"></div>
+ <div class="pourcentage"></div>
+ <div class="rognage"></div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples","200","540")}}</p>
+{{EmbedLiveSample("Exemples","200","540")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-border-radius', 'border-top-left-radius')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | État                                     | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
+| {{SpecName('CSS3 Backgrounds', '#the-border-radius', 'border-top-left-radius')}} | {{Spec2('CSS3 Backgrounds')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.border-top-left-radius")}}</p>
+{{Compat("css.properties.border-top-left-radius")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>La propriété raccourcie {{cssxref("border-radius")}}</li>
- <li>Les propriétés pour les autres coins :
-  <ul>
-   <li>{{cssxref("border-top-right-radius")}},</li>
-   <li>{{cssxref("border-bottom-right-radius")}},</li>
-   <li>{{cssxref("border-bottom-left-radius")}}.</li>
-  </ul>
- </li>
-</ul>
+- La propriété raccourcie {{cssxref("border-radius")}}
+- Les propriétés pour les autres coins :
+
+  - {{cssxref("border-top-right-radius")}},
+  - {{cssxref("border-bottom-right-radius")}},
+  - {{cssxref("border-bottom-left-radius")}}.

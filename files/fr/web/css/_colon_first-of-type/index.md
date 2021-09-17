@@ -1,93 +1,73 @@
 ---
 title: ':first-of-type'
-slug: 'Web/CSS/:first-of-type'
+slug: Web/CSS/:first-of-type
 tags:
   - CSS
   - Pseudo-classe
   - Reference
-translation_of: 'Web/CSS/:first-of-type'
+translation_of: Web/CSS/:first-of-type
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <strong><code>:first-of-type</code></strong> permet de cibler le premier élément d'un type donné parmi ceux d'un même élément parent (et de même niveau).</p>
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:first-of-type`** permet de cibler le premier élément d'un type donné parmi ceux d'un même élément parent (et de même niveau).
 
-<pre class="brush: css no-line-numbers">/* Cible le premier élément &lt;p&gt; d'un type donné */
+```css
+/* Cible le premier élément <p> d'un type donné */
 /* parmi ses éléments voisins */
 p:first-of-type {
   color: red;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note :</strong> Dans la version initiale de la spécification (CSS3), l'élément ciblé devait avoir un parent, ce prérequis a désormais été abandonné (cf. spécification des sélecteurs pour CSS4).</p>
-</div>
+> **Note :** Dans la version initiale de la spécification (CSS3), l'élément ciblé devait avoir un parent, ce prérequis a désormais été abandonné (cf. spécification des sélecteurs pour CSS4).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div :first-of-type {
+```css
+div :first-of-type {
   background-color: lime;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;span&gt;Voici le premier span !&lt;/span&gt;
-  &lt;span&gt;Un autre span, pas le premier.&lt;/span&gt;
-  &lt;span&gt;Quid de cet &lt;em&gt;élément imbriqué &lt;/em&gt;?&lt;/span&gt;
-  &lt;b&gt;Un autre type d'élément.&lt;/b&gt;
-  &lt;span&gt;Ce type là est déjà apparu.&lt;/span&gt;
-&lt;/div&gt;
-</pre>
-
-<h3 id="Résultat">Résultat</h3>
-
-<div>{{EmbedLiveSample('Exemples','100%', '120')}}</div>
-
-<div class="note">
-<p><strong>Note :</strong> On peut voir ici que c'est le sélecteur universel qui est pris en compte quand aucun sélecteur simple n'est écrit directement avec la pseudo-classe.</p>
+```html
+<div>
+  <span>Voici le premier span !</span>
+  <span>Un autre span, pas le premier.</span>
+  <span>Quid de cet <em>élément imbriqué </em>?</span>
+  <b>Un autre type d'élément.</b>
+  <span>Ce type là est déjà apparu.</span>
 </div>
+```
 
-<div class="note">
-<p><strong>Note :</strong> Les modifications de styles s'appliquent également aux éléments imbriqués, vous pouvez essayer de modifier l'exemple précédent pour cibler le <code>&lt;div&gt;</code>.</p>
-</div>
+### Résultat
 
-<h2 id="Spécifications">Spécifications</h2>
+{{EmbedLiveSample('Exemples','100%', '120')}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#first-of-type-pseudo', ':first-of-type')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Les éléments ciblés ne doivent pas nécessairement avoir de parent.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#first-of-type-pseudo', ':first-of-type')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+> **Note :** On peut voir ici que c'est le sélecteur universel qui est pris en compte quand aucun sélecteur simple n'est écrit directement avec la pseudo-classe.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+> **Note :** Les modifications de styles s'appliquent également aux éléments imbriqués, vous pouvez essayer de modifier l'exemple précédent pour cibler le `<div>`.
 
-<p>{{Compat("css.selectors.first-of-type")}}</p>
+## Spécifications
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+| Spécification                                                                                    | État                                 | Commentaires                                                       |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------ |
+| {{SpecName('CSS4 Selectors', '#first-of-type-pseudo', ':first-of-type')}} | {{Spec2('CSS4 Selectors')}} | Les éléments ciblés ne doivent pas nécessairement avoir de parent. |
+| {{SpecName('CSS3 Selectors', '#first-of-type-pseudo', ':first-of-type')}} | {{Spec2('CSS3 Selectors')}} | Définition initiale.                                               |
 
-<ul>
- <li>{{cssxref(":nth-of-type")}},</li>
- <li>{{cssxref(":last-of-type")}}</li>
- <li>{{cssxref(":first-child")}}</li>
-</ul>
+## Compatibilité des navigateurs
+
+{{Compat("css.selectors.first-of-type")}}
+
+## Voir aussi
+
+- {{cssxref(":nth-of-type")}},
+- {{cssxref(":last-of-type")}}
+- {{cssxref(":first-child")}}

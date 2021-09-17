@@ -7,26 +7,26 @@ tags:
   - Reference
 translation_of: Web/CSS/font-family
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>font-family</code></strong> permet de définir une liste, ordonnée par priorité, de polices à utiliser pour mettre en forme le texte de l'élément ciblé.</p>
+La propriété **`font-family`** permet de définir une liste, ordonnée par priorité, de polices à utiliser pour mettre en forme le texte de l'élément ciblé.
 
-<div>{{EmbedInteractiveExample("pages/css/font-family.html")}}</div>
+{{EmbedInteractiveExample("pages/css/font-family.html")}}
 
-<p>Les valeurs sont séparées par des virgules, indiquant chacune une police alternative. Le moteur choisira la première valeur pour laquelle la police correspondante est installée sur l'ordinateur ou qui peut être téléchargée via la règle @ {{cssxref("@font-face")}} définie.</p>
+Les valeurs sont séparées par des virgules, indiquant chacune une police alternative. Le moteur choisira la première valeur pour laquelle la police correspondante est installée sur l'ordinateur ou qui peut être téléchargée via la règle @ {{cssxref("@font-face")}} définie.
 
-<p>Pour fixer <code>font-family</code> et d'autres propriétés liées aux polices de caractères, on pourra utiliser la propriété raccourcie {{cssxref("font")}}.</p>
+Pour fixer `font-family` et d'autres propriétés liées aux polices de caractères, on pourra utiliser la propriété raccourcie {{cssxref("font")}}.
 
-<p>Les auteurs doivent toujours inclure une famille de police générique dans cette liste car il n'y a aucune certitude qu'une police donnée aura été installée sur l'ordinateur ni qu'elle pourra être téléchargée grâce à {{cssxref("@font-face")}}. L'utilisation d'une famille de police générique permet au navigateur d'utiliser une police acceptable en recours si besoin.</p>
+Les auteurs doivent toujours inclure une famille de police générique dans cette liste car il n'y a aucune certitude qu'une police donnée aura été installée sur l'ordinateur ni qu'elle pourra être téléchargée grâce à {{cssxref("@font-face")}}. L'utilisation d'une famille de police générique permet au navigateur d'utiliser une police acceptable en recours si besoin.
 
-<div class="note">
-  <p><strong>Note :</strong> La propriété <code>font-family</code> définit une liste de police, ordonnée par priorité, de la plus haute à la plus basse. La sélection de la police ne se fait pas pour l'ensemble du texte mais<strong> caractère par caractère</strong>. Ainsi si une police ne dispose pas du caractère à représenter, ce sera la police suivante qui sera utilisée pour représenter le caractère. Pour Internet Explorer, cela ne fonctionne pas avec la version 6 et les version antérieures.</p>
-  <p>Les propriétés {{cssxref("font-style")}}, {{cssxref("font-variant")}} et {{cssxref("font-size")}} permettront d'influencer le choix en fonction du style, de la variante ou de la taille disponible parmi les polices de la liste.</p>
-</div>
+> **Note :** La propriété `font-family` définit une liste de police, ordonnée par priorité, de la plus haute à la plus basse. La sélection de la police ne se fait pas pour l'ensemble du texte mais **caractère par caractère**. Ainsi si une police ne dispose pas du caractère à représenter, ce sera la police suivante qui sera utilisée pour représenter le caractère. Pour Internet Explorer, cela ne fonctionne pas avec la version 6 et les version antérieures.
+>
+> Les propriétés {{cssxref("font-style")}}, {{cssxref("font-variant")}} et {{cssxref("font-size")}} permettront d'influencer le choix en fonction du style, de la variante ou de la taille disponible parmi les polices de la liste.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Un nom de police suivi d'un nom de famille générique */
+```css
+/* Un nom de police suivi d'un nom de famille générique */
 font-family: "Gill Sans Extrabold", sans-serif;
 font-family: "Goudy Bookletter 1911", sans-serif;
 
@@ -45,79 +45,81 @@ font-family: fangsong;
 font-family: inherit;
 font-family: initial;
 font-family: unset;
-</pre>
+```
 
-<p>La propriété <code>font-family</code> permet de lister différentes familles de police, séparées par des virgules. Chaque nom de famille est une valeur <code><a href="#family-name">&lt;family-name&gt;</a></code> ou <code><a href="#generic-name">&lt;generic-name&gt;</a></code>.</p>
+La propriété `font-family` permet de lister différentes familles de police, séparées par des virgules. Chaque nom de famille est une valeur [`<family-name>`](#family-name) ou [`<generic-name>`](#generic-name).
 
-<p>Dans l'exemple suivant, on liste deux familles de police, la première utilise une valeur <code>&lt;family-name&gt;</code> et la seconde utilise une valeur <code>&lt;generic-name&gt;</code> :</p>
+Dans l'exemple suivant, on liste deux familles de police, la première utilise une valeur `<family-name>` et la seconde utilise une valeur `<generic-name>` :
 
-<pre class="brush: css;">font-family: Gill Sans Extrabold, sans-serif;</pre>
+```css
+font-family: Gill Sans Extrabold, sans-serif;
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;family-name&gt;</code></dt>
- <dd>Le nom d'une famille de polices ; par exemple « Times » ou « Helvetica » sont des noms de famille de polices. Les noms de familles qui comportent des blancs doivent être encadrées par des doubles quotes (").</dd>
- <dt><code>&lt;generic-name&gt;</code></dt>
- <dd>
- <p>Les noms de famille génériques sont utilisés comme mécanisme de secours pour conserver l'intention de mise en forme de l'auteur lorsqu'aucune des polices indiquées n'est disponible. Les noms de famille génériques sont des mots-clés et ne doivent pas être encadrés par des doubles quotes. Un nom de famille générique devrait être utilisé comme dernier élément de la liste des noms. Les mots-clés suivants sont définis :</p>
+- `<family-name>`
+  - : Le nom d'une famille de polices ; par exemple « Times » ou « Helvetica » sont des noms de famille de polices. Les noms de familles qui comportent des blancs doivent être encadrées par des doubles quotes (").
+- `<generic-name>`
 
- <dl>
-  <dt><code>serif</code></dt>
-  <dd>Les caractères possèdent des <a href="https://fr.wikipedia.org/wiki/Empattement_(typographie)">empattements</a>.<br>
-  Voici des exemples de polices avec empattement : Lucida Bright, Lucida Fax, Palatino, "Palatino Linotype", Palladio, "URW Palladio", serif.</dd>
-  <dt><code>sans-serif</code></dt>
-  <dd>Les caractères n'ont pas d'empattement, leurs extrémités sont anguleuses.<br>
-  Voici des exemples de polices correspondantes : "Open Sans", "Fira Sans", "Lucida Sans", "Lucida Sans Unicode", "Trebuchet MS", "Liberation Sans", "Nimbus Sans L", sans-serif.</dd>
-  <dt><code>monospace</code></dt>
-  <dd>Tous les caractères mesurent la même largeur, on dit que la police est à <a href="https://fr.wikipedia.org/wiki/Chasse_(typographie)">chasse</a> fixe.<br>
-  Les polices "Fira Mono", "DejaVu Sans Mono", Menlo, Consolas, "Liberation Mono", Monaco, "Lucida Console", monospace sont à chasse fixe.</dd>
-  <dt><code>cursive</code></dt>
-  <dd>Les caractères des polices cursives possèdent des extrémités permettant de les joindre les uns aux autres, partiellement ou complètement. Cela donne un résultat semblable à l'écriture manuelle au crayon plutôt qu'à des caractères d'imprimerie.<br>
-  Voici quelques exemples de polices cursives : "Brush Script MT", "Brush Script Std", "Lucida Calligraphy", "Lucida Handwriting", "Apple Chancery", cursive.</dd>
-  <dt><code>fantasy</code></dt>
-  <dd>Les polices fantaisie sont des polices décoratives pour lesquelles les caractères sont représentées de façon légère.<br>
-  Les polices suivantes sont des exemples de cette famille : Papyrus, Herculanum, Party LET, Curlz MT, Harrington, fantasy.</dd>
-  <dt><code>system-ui</code></dt>
-  <dd>Les glyphes utilisés sont ceux de l'interface utilisateur par défaut pour le système d'exploitation de la plateforme. Les variantes typographiques différant grandement d'une région à l'autre, cette famille générique est utilisée pour les polices qui ne correspondent pas aux autres familles génériques.</dd>
-  <dt><code>math</code></dt>
-  <dd>Une police utilisée pour les mise en forme relatives aux mathématiques comme les indices, les exposants, les accolades sur plusieurs lignes, etc.</dd>
-  <dt><code>emoji</code></dt>
-  <dd>Une police conçue spécifiquement pour l'affichage des emoji.</dd>
-  <dt><code>fangsong</code></dt>
-  <dd>Un style de caractères chinois particulier se situant entre le style serif Song et la forme cursive Kai. Ce style est généralement utilisé pour les documents officiels du gouvernement.</dd>
- </dl>
- </dd>
-</dl>
+  - : Les noms de famille génériques sont utilisés comme mécanisme de secours pour conserver l'intention de mise en forme de l'auteur lorsqu'aucune des polices indiquées n'est disponible. Les noms de famille génériques sont des mots-clés et ne doivent pas être encadrés par des doubles quotes. Un nom de famille générique devrait être utilisé comme dernier élément de la liste des noms. Les mots-clés suivants sont définis :
 
-<h3 id="Validité_des_noms_de_famille">Validité des noms de famille</h3>
+    - `serif`
+      - : Les caractères possèdent des [empattements](<https://fr.wikipedia.org/wiki/Empattement_(typographie)>).
+        Voici des exemples de polices avec empattement : Lucida Bright, Lucida Fax, Palatino, "Palatino Linotype", Palladio, "URW Palladio", serif.
+    - `sans-serif`
+      - : Les caractères n'ont pas d'empattement, leurs extrémités sont anguleuses.
+        Voici des exemples de polices correspondantes : "Open Sans", "Fira Sans", "Lucida Sans", "Lucida Sans Unicode", "Trebuchet MS", "Liberation Sans", "Nimbus Sans L", sans-serif.
+    - `monospace`
+      - : Tous les caractères mesurent la même largeur, on dit que la police est à [chasse](<https://fr.wikipedia.org/wiki/Chasse_(typographie)>) fixe.
+        Les polices "Fira Mono", "DejaVu Sans Mono", Menlo, Consolas, "Liberation Mono", Monaco, "Lucida Console", monospace sont à chasse fixe.
+    - `cursive`
+      - : Les caractères des polices cursives possèdent des extrémités permettant de les joindre les uns aux autres, partiellement ou complètement. Cela donne un résultat semblable à l'écriture manuelle au crayon plutôt qu'à des caractères d'imprimerie.
+        Voici quelques exemples de polices cursives : "Brush Script MT", "Brush Script Std", "Lucida Calligraphy", "Lucida Handwriting", "Apple Chancery", cursive.
+    - `fantasy`
+      - : Les polices fantaisie sont des polices décoratives pour lesquelles les caractères sont représentées de façon légère.
+        Les polices suivantes sont des exemples de cette famille : Papyrus, Herculanum, Party LET, Curlz MT, Harrington, fantasy.
+    - `system-ui`
+      - : Les glyphes utilisés sont ceux de l'interface utilisateur par défaut pour le système d'exploitation de la plateforme. Les variantes typographiques différant grandement d'une région à l'autre, cette famille générique est utilisée pour les polices qui ne correspondent pas aux autres familles génériques.
+    - `math`
+      - : Une police utilisée pour les mise en forme relatives aux mathématiques comme les indices, les exposants, les accolades sur plusieurs lignes, etc.
+    - `emoji`
+      - : Une police conçue spécifiquement pour l'affichage des emoji.
+    - `fangsong`
+      - : Un style de caractères chinois particulier se situant entre le style serif Song et la forme cursive Kai. Ce style est généralement utilisé pour les documents officiels du gouvernement.
 
-<p>Les noms de famille de polices doivent être encadrés par des doubles ou doivent former une série d'un ou plusieurs identifiants valides. Cela signifie que les signes de ponctuation et les chiffres débutant chaque fragment doivent être échappés pour les noms de famille qui ne sont pas encadrés par des quotes.</p>
+### Validité des noms de famille
 
-<p>Les déclarations suivantes sont valides :</p>
+Les noms de famille de polices doivent être encadrés par des doubles ou doivent former une série d'un ou plusieurs identifiants valides. Cela signifie que les signes de ponctuation et les chiffres débutant chaque fragment doivent être échappés pour les noms de famille qui ne sont pas encadrés par des quotes.
 
-<pre class="brush:css">font-family: "Gill Sans Extrabold", sans-serif;
-font-family: "Goudy Bookletter 1911", sans-serif;</pre>
+Les déclarations suivantes sont valides :
 
-<p>Et ces déclarations sont <strong>invalides </strong>:</p>
+```css
+font-family: "Gill Sans Extrabold", sans-serif;
+font-family: "Goudy Bookletter 1911", sans-serif;
+```
 
-<pre class="brush:css example-bad">font-family: Goudy Bookletter 1911, sans-serif;
+Et ces déclarations sont **invalides** :
+
+```css example-bad
+font-family: Goudy Bookletter 1911, sans-serif;
 font-family: Red/Black, sans-serif;
 font-family: "Lucida" Grande, sans-serif;
 font-family: Ahem!, sans-serif;
 font-family: test@foo, sans-serif;
 font-family: #POUND, sans-serif;
-font-family: Hawaii 5-0, sans-serif;</pre>
+font-family: Hawaii 5-0, sans-serif;
+```
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css;">.exempleserif {
+```css
+.exempleserif {
   font-family: Times, "Times New Roman", Georgia, serif;
 }
 
@@ -148,82 +150,59 @@ font-family: Hawaii 5-0, sans-serif;</pre>
 .exemplefangsong {
   font-family: fangsong;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="exempleserif"&gt;
+```html
+<div class="exempleserif">
 Voici un exemple de police avec empattement (serif).
-&lt;/div&gt;
+</div>
 
-&lt;div class="exemplesansserif"&gt;
+<div class="exemplesansserif">
 Voici un exemple de police sans empattement (sans-serif).
-&lt;/div&gt;
+</div>
 
-&lt;div class="exemplemonospace"&gt;
+<div class="exemplemonospace">
 Voici un exemple de police à chasse fixe (monospace).
-&lt;/div&gt;
+</div>
 
-&lt;div class="exemplecursive"&gt;
+<div class="exemplecursive">
 Voici un exemple de police cursive.
-&lt;/div&gt;
+</div>
 
-&lt;div class="exemplefantasy"&gt;
+<div class="exemplefantasy">
 Voici un exemple de police fantaisie.
-&lt;/div&gt;
+</div>
 
-&lt;div class="exemplemath"&gt;
+<div class="exemplemath">
 Voici un exemple de police mathématique.
-&lt;/div&gt;
+</div>
 
-&lt;div class="exempleemoji"&gt;
+<div class="exempleemoji">
 Voici un exemple de police emoji.
-&lt;/div&gt;
+</div>
 
-&lt;div class="exemplefangsong"&gt;
+<div class="exemplefangsong">
 Voici un exemple de police fangsong.
-&lt;/div&gt;</pre>
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples',600,120)}}</p>
+{{EmbedLiveSample('Exemples',600,120)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Fonts', '#generic-font-families', 'generic font families')}}</td>
-   <td>{{Spec2('CSS4 Fonts')}}</td>
-   <td>Ajout de nouvelles familles génériques dont : <code>system-ui</code>, <code>emoji</code>, <code>math</code> et <code>fangsong</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#font-family-prop', 'font-family')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>Aucune modification significative.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'fonts.html#propdef-font-family', 'font-family')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Aucune modification significative.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#font-family', 'font-family')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | État                             | Commentaires                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------------- |
+| {{SpecName('CSS4 Fonts', '#generic-font-families', 'generic font families')}} | {{Spec2('CSS4 Fonts')}} | Ajout de nouvelles familles génériques dont : `system-ui`, `emoji`, `math` et `fangsong`. |
+| {{SpecName('CSS3 Fonts', '#font-family-prop', 'font-family')}}                     | {{Spec2('CSS3 Fonts')}} | Aucune modification significative.                                                        |
+| {{SpecName('CSS2.1', 'fonts.html#propdef-font-family', 'font-family')}}         | {{Spec2('CSS2.1')}}         | Aucune modification significative.                                                        |
+| {{SpecName('CSS1', '#font-family', 'font-family')}}                                     | {{Spec2('CSS1')}}         | Définition initiale.                                                                      |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.font-family")}}</p>
+{{Compat("css.properties.font-family")}}

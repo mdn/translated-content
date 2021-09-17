@@ -7,19 +7,18 @@ tags:
   - Reference
 translation_of: Web/CSS/text-underline-offset
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété CSS <strong><code>text-underline-offset</code></strong> définit le décalage de la ligne de décoration du texte par rapport à sa position originale.</p>
+La propriété CSS **`text-underline-offset`** définit le décalage de la ligne de décoration du texte par rapport à sa position originale.
 
-<div>{{EmbedInteractiveExample("pages/css/text-underline-offset.html")}}</div>
+{{EmbedInteractiveExample("pages/css/text-underline-offset.html")}}
 
-<div class="note">
-<p><strong>Note :</strong> <code>text-underline-offset</code> n'est pas une propriété détaillée de {{cssxref('text-decoration')}}. Bien qu'un élément puisse avoir plusieurs lignes décoratives, <code>text-underline-offset</code> n'aura qu'un impact sur le soulignage (et pas sur les autres lignes telles que celles fournies par {{cssxref('text-decoration-line')}} avec <code>overline</code> ou <code>line-through</code>).</p>
-</div>
+> **Note :** `text-underline-offset` n'est pas une propriété détaillée de {{cssxref('text-decoration')}}. Bien qu'un élément puisse avoir plusieurs lignes décoratives, `text-underline-offset` n'aura qu'un impact sur le soulignage (et pas sur les autres lignes telles que celles fournies par {{cssxref('text-decoration-line')}} avec `overline` ou `line-through`).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeur simple */
+```css
+/* Valeur simple */
 text-underline-offset: none;
 text-underline-offset: from-font;
 text-underline-offset: 0.2em;
@@ -28,30 +27,29 @@ text-underline-offset: 0.2em;
 text-underline-offset: inherit;
 text-underline-offset: initial;
 text-underline-offset: unset;
-</pre>
+```
 
-<p>La propriété <code>text-underline-offset</code> est définie avec le mot-clé <code>none</code> ou avec une valeur de la liste suivante.</p>
+La propriété `text-underline-offset` est définie avec le mot-clé `none` ou avec une valeur de la liste suivante.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Le navigateur choisit un décalage approprié pour le soulignage.</dd>
- <dt><code>from-font</code></dt>
- <dd>Si le fichier de fonte inclut des informations quant à un décalage préféré, c'est cette valeur qui sera utilisée. Si le fichier de fonte n'a pas cette information, cette valeur se comportera comme <code>auto</code>.</dd>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Une longueur (valeur de type {{cssxref("&lt;length&gt;")}}) indiquant le décalage à utiliser. Il est recommandé d'utiliser des <code><a href="/fr/docs/Web/CSS/length#em">em</a></code> comme unité afin que le décalage suive la taille de la police (quand on zoome par exemple).</dd>
-</dl>
+- `auto`
+  - : Le navigateur choisit un décalage approprié pour le soulignage.
+- `from-font`
+  - : Si le fichier de fonte inclut des informations quant à un décalage préféré, c'est cette valeur qui sera utilisée. Si le fichier de fonte n'a pas cette information, cette valeur se comportera comme `auto`.
+- `<length>`
+  - : Une longueur (valeur de type {{cssxref("&lt;length&gt;")}}) indiquant le décalage à utiliser. Il est recommandé d'utiliser des [`em`](/fr/docs/Web/CSS/length#em) comme unité afin que le décalage suive la taille de la police (quand on zoome par exemple).
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   text-decoration-line: underline;
   text-decoration-style: wavy;
   text-decoration-color: red;
@@ -60,49 +58,37 @@ text-underline-offset: unset;
 
 .deuxlignes{
   text-decoration-line: underline overline;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="uneligne"&gt;
+```html
+<p class="uneligne">
   Voici un texte souligné avec une ligne ondulée rouge !
-&lt;/p&gt;
-&lt;p class="deuxlignes"&gt;
+</p>
+<p class="deuxlignes">
   Ce texte a une ligne en dessous et une ligne au dessus.
   Seule la ligne du dessous est déplacée.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', '', '', '')}}</p>
+{{EmbedLiveSample('Exemples', '', '', '')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Text Decoration', '#<span class="pl-s">underline-offset</span>', 'text-underline-offset')}}</td>
-   <td>{{Spec2('CSS4 Text Decoration')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                    | État                                         | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------- |
+| {{SpecName('CSS4 Text Decoration', '#<span class="pl-s">underline-offset</span>', 'text-underline-offset')}} | {{Spec2('CSS4 Text Decoration')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.text-underline-offset")}}</p>
+{{Compat("css.properties.text-underline-offset")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("text-decoration")}}</li>
-</ul>
+- {{cssxref("text-decoration")}}

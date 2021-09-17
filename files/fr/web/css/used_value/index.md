@@ -9,46 +9,43 @@ tags:
 translation_of: Web/CSS/used_value
 original_slug: Web/CSS/Valeur_utilisée
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p>La <strong>valeur utilisée</strong> de n'importe quelle propriété CSS est la valeur finale d'une propriété après que tous les calculs aient été réalisés.</p>
+La **valeur utilisée** de n'importe quelle propriété CSS est la valeur finale d'une propriété après que tous les calculs aient été réalisés.
 
-<p>Une fois qu'un agent utilisateur a terminé les calculs, chaque propriété CSS possède une valeur utilisée. Les valeurs utilisées des dimensions (par exemple <code>width</code>,<code> height</code>) sont exprimées en pixels et les propriétés raccourcies (comme <code>background</code>) sont cohérentes avec leurs propriétés composantes (par exemple <code>background-color</code>), <code>display</code> est cohérente avec <code>position</code> et <code>float</code>.</p>
+Une fois qu'un agent utilisateur a terminé les calculs, chaque propriété CSS possède une valeur utilisée. Les valeurs utilisées des dimensions (par exemple `width`,` height`) sont exprimées en pixels et les propriétés raccourcies (comme `background`) sont cohérentes avec leurs propriétés composantes (par exemple `background-color`), `display` est cohérente avec `position` et `float`.
 
-<p>Les valeurs utilisées pour certaines propriétés peuvent être retrouvées en appelant la méthode JavaScript <code><a href="/fr/docs/DOM/window.getComputedStyle">window.getComputedStyle()</a></code>.</p>
+Les valeurs utilisées pour certaines propriétés peuvent être retrouvées en appelant la méthode JavaScript [`window.getComputedStyle()`](/fr/docs/DOM/window.getComputedStyle).
 
-<h2 id="Détails">Détails</h2>
+## Détails
 
-<p>Quatre étapes permettent de déterminer la valeur finale de n'importe quelle propriété CSS.</p>
+Quatre étapes permettent de déterminer la valeur finale de n'importe quelle propriété CSS.
 
-<ol>
- <li>Tout d'abord, la <a href="/fr/docs/CSS/Valeur_spécifiée">valeur spécifiée</a> est le résultat de la cascade (on choisit la règle la plus spécifique qui change la propriété), de l'<a href="/fr/docs/CSS/Héritage">héritage</a> (on utilise la valeur calculée d'un parent si la propriété peut être héritée) ou alors c'est la valeur par défaut est utilisée.</li>
- <li>Ensuite, la <a href="/fr/docs/CSS/Valeur_calculée">valeur calculée</a> est déterminée selon la spécification (par exemple, un <code>span</code> avec <code>position: absolute</code> aura <code>display</code> qui passera à <code>block</code> pour la valeur calculée).</li>
- <li>Ensuite, la mise en page est calculée (les dimensions qui ont pour valeur <code>auto</code> ou des pourcentages relatifs à des parents sont remplacées par des valeurs en pixels), et le résultat est la <strong>valeur utilisée</strong>.</li>
- <li>Enfin, la valeur est transformée selon les limites de l'environnement actuel, le résultat est <a href="/fr/docs/Web/CSS/valeur_reelle">la valeur réelle</a>. La valeur finalement utilisée est la valeur réelle, éventuellement approximée en fonction des contraintes de l'agent utilisateur. Ces valeurs sont calculées de manière interne ; un script peut seulement lire les valeurs utilisées finales grâce à <code><a href="/fr/docs/DOM/window.getComputedStyle">window.getComputedStyle</a></code>  (bien que cette méthode peut renvoyer la valeur calculée selon la propriété, la valeur renvoyée par cette méthode est généralement appelée <a href="/fr/docs/Web/CSS/valeur_r%C3%A9solue">valeur résolue</a>).</li>
-</ol>
+1.  Tout d'abord, la [valeur spécifiée](/fr/docs/CSS/Valeur_spécifiée) est le résultat de la cascade (on choisit la règle la plus spécifique qui change la propriété), de l'[héritage](/fr/docs/CSS/Héritage) (on utilise la valeur calculée d'un parent si la propriété peut être héritée) ou alors c'est la valeur par défaut est utilisée.
+2.  Ensuite, la [valeur calculée](/fr/docs/CSS/Valeur_calculée) est déterminée selon la spécification (par exemple, un `span` avec `position: absolute` aura `display` qui passera à `block` pour la valeur calculée).
+3.  Ensuite, la mise en page est calculée (les dimensions qui ont pour valeur `auto` ou des pourcentages relatifs à des parents sont remplacées par des valeurs en pixels), et le résultat est la **valeur utilisée**.
+4.  Enfin, la valeur est transformée selon les limites de l'environnement actuel, le résultat est [la valeur réelle](/fr/docs/Web/CSS/valeur_reelle). La valeur finalement utilisée est la valeur réelle, éventuellement approximée en fonction des contraintes de l'agent utilisateur. Ces valeurs sont calculées de manière interne ; un script peut seulement lire les valeurs utilisées finales grâce à [`window.getComputedStyle`](/fr/docs/DOM/window.getComputedStyle)  (bien que cette méthode peut renvoyer la valeur calculée selon la propriété, la valeur renvoyée par cette méthode est généralement appelée [valeur résolue](/fr/docs/Web/CSS/valeur_r%C3%A9solue)).
 
-<h2 id="Différence_avec_les_valeurs_calculées">Différence avec les valeurs calculées</h2>
+## Différence avec les valeurs calculées
 
-<p>CSS 2.0 définissait la <a href="/fr/docs/CSS/Valeur_calculée">valeur calculée</a> comme la dernière étape du calcul de la valeur. CSS 2.1 a introduit une définition distincte de la valeur utilisée afin qu'un élément puisse hériter d'une largeur ou d'une hauteur d'un parent de manière explicite si la valeur calculée du parent est un pourcentage. Pour les propriétés CSS qui ne dépendent pas de la mise en page (comme <code>display</code>, <code>font-size</code> ou <code>line-height</code>), les valeurs calculées et les valeurs utilisées sont identiques. Voici les propriétés qui dépendent de la mise en page et dont les valeurs calculées sont différentes des valeurs utilisées (extrait de <em><a href="https://www.w3.org/TR/CSS2/changes.html#q36">CSS 2.1 Changes: Specified, computed, and actual values</a></em>) :</p>
+CSS 2.0 définissait la [valeur calculée](/fr/docs/CSS/Valeur_calculée) comme la dernière étape du calcul de la valeur. CSS 2.1 a introduit une définition distincte de la valeur utilisée afin qu'un élément puisse hériter d'une largeur ou d'une hauteur d'un parent de manière explicite si la valeur calculée du parent est un pourcentage. Pour les propriétés CSS qui ne dépendent pas de la mise en page (comme `display`, `font-size` ou `line-height`), les valeurs calculées et les valeurs utilisées sont identiques. Voici les propriétés qui dépendent de la mise en page et dont les valeurs calculées sont différentes des valeurs utilisées (extrait de _[CSS 2.1 Changes: Specified, computed, and actual values](https://www.w3.org/TR/CSS2/changes.html#q36)_) :
 
-<ul>
- <li><code>background-position</code></li>
- <li><code>bottom</code>, <code>left</code>, <code>right</code>, <code>top</code></li>
- <li><code>height</code>, <code>width</code></li>
- <li><code>margin-bottom</code>, <code>margin-left</code>, <code>margin-right</code>, <code>margin-top</code></li>
- <li><code>min-height</code>, <code>min-width</code></li>
- <li><code>padding-bottom</code>, <code>padding-left</code>, <code>padding-right</code>, <code>padding-top</code></li>
- <li><code>text-indent</code></li>
-</ul>
+- `background-position`
+- `bottom`, `left`, `right`, `top`
+- `height`, `width`
+- `margin-bottom`, `margin-left`, `margin-right`, `margin-top`
+- `min-height`, `min-width`
+- `padding-bottom`, `padding-left`, `padding-right`, `padding-top`
+- `text-indent`
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cet exemple illustre et calcule les largeurs <em>utilisées</em> pour les trois éléments.</p>
+Cet exemple illustre et calcule les largeurs _utilisées_ pour les trois éléments.
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#no-width {
+```css
+#no-width {
   width: auto;
 }
 
@@ -64,29 +61,32 @@ original_slug: Web/CSS/Valeur_utilisée
 div {
   border: 1px solid red;
   padding: 8px;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="no-width"&gt;
-  &lt;p&gt;Pas de largeur explicite.&lt;/p&gt;
-  &lt;p class="show-used-width"&gt;..&lt;/p&gt;
+```html
+<div id="no-width">
+  <p>Pas de largeur explicite.</p>
+  <p class="show-used-width">..</p>
 
-  &lt;div id="width-50"&gt;
-    &lt;p&gt;Largeur explicite : 50%.&lt;/p&gt;
-    &lt;p class="show-used-width"&gt;..&lt;/p&gt;
+  <div id="width-50">
+    <p>Largeur explicite : 50%.</p>
+    <p class="show-used-width">..</p>
 
-    &lt;div id="width-inherit"&gt;
-      &lt;p&gt;Largeur explicite: héritée avec &lt;code&gt;inherit&lt;/code&gt;.&lt;/p&gt;
-      &lt;p class="show-used-width"&gt;..&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+    <div id="width-inherit">
+      <p>Largeur explicite: héritée avec <code>inherit</code>.</p>
+      <p class="show-used-width">..</p>
+    </div>
+  </div>
+</div>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">function updateUsedWidth(id) {
+```js
+function updateUsedWidth(id) {
   var div = document.querySelector(`#${id}`);
   var par = div.querySelector('.show-used-width');
   var wid = window.getComputedStyle(div)["width"];
@@ -101,45 +101,25 @@ function updateAllUsedWidths() {
 
 updateAllUsedWidths();
 window.addEventListener('resize', updateAllUsedWidths);
+```
 
-</pre>
+### Résultat
 
-<h3 id="Résultat">Résultat</h3>
+{{EmbedLiveSample('Exemples', '80%', '372px')}}
 
-<p>{{EmbedLiveSample('Exemples', '80%', '372px')}}</p>
+## Spécifications
 
-<h2 id="Spécifications">Spécifications</h2>
+| Spécification                                                                        | État                     | Commentaires         |
+| ------------------------------------------------------------------------------------ | ------------------------ | -------------------- |
+| {{SpecName("CSS2.2", "cascade.html#used-value", "used value")}} | {{Spec2("CSS2.2")}} |                      |
+| {{SpecName("CSS2.1", "cascade.html#used-value", "used value")}} | {{Spec2("CSS2.1")}} | Définition initiale. |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS2.2", "cascade.html#used-value", "used value")}}</td>
-   <td>{{Spec2("CSS2.2")}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1", "cascade.html#used-value", "used value")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+## Voir aussi
 
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li><a href="/fr/docs/Web/CSS/Reference">La référence CSS</a></li>
- <li><a href="/fr/docs/Web/CSS/Valeur_initiale">La notion de valeur initiale</a></li>
- <li><a href="/fr/docs/Web/CSS/Valeur_calculée">La notion de valeur calculée</a></li>
- <li><a href="/fr/docs/Web/CSS/Valeur_spécifiée">La notion de valeur définie</a></li>
- <li><a href="/fr/docs/Web/CSS/valeur_r%C3%A9solue">La notion de valeur résolue</a></li>
- <li><a href="/fr/docs/Web/CSS/valeur_reelle">La notion de valeur réelle</a></li>
- <li><code><a href="/fr/docs/DOM/window.getComputedStyle">window.getComputedStyle()</a></code></li>
-</ul>
+- [La référence CSS](/fr/docs/Web/CSS/Reference)
+- [La notion de valeur initiale](/fr/docs/Web/CSS/Valeur_initiale)
+- [La notion de valeur calculée](/fr/docs/Web/CSS/Valeur_calculée)
+- [La notion de valeur définie](/fr/docs/Web/CSS/Valeur_spécifiée)
+- [La notion de valeur résolue](/fr/docs/Web/CSS/valeur_r%C3%A9solue)
+- [La notion de valeur réelle](/fr/docs/Web/CSS/valeur_reelle)
+- [`window.getComputedStyle()`](/fr/docs/DOM/window.getComputedStyle)

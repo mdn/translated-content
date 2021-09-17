@@ -1,47 +1,48 @@
 ---
 title: ':dir'
-slug: 'Web/CSS/:dir'
+slug: Web/CSS/:dir
 tags:
   - CSS
   - Experimental
   - Pseudo-classe
   - Reference
-translation_of: 'Web/CSS/:dir'
+translation_of: Web/CSS/:dir
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <strong> <code>:dir</code></strong> permet de cibler un élément selon la direction du texte qu'il contient. En HTML, la direction est définie grâce à l'attribut {{htmlattrxref("dir", "html")}}. Pour les autres types de document, cela peut être déterminé autrement.</p>
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:dir`** permet de cibler un élément selon la direction du texte qu'il contient. En HTML, la direction est définie grâce à l'attribut {{htmlattrxref("dir", "html")}}. Pour les autres types de document, cela peut être déterminé autrement.
 
-<pre class="brush: css">/* Cible le contenu avec du texte */
+```css
+/* Cible le contenu avec du texte */
 /* écrit de droite à gauche */
 :dir(rtl) {
   background-color: red;
-}</pre>
+}
+```
 
-<p>On notera que la pseudo-classe <code>:dir()</code> ne fonctionne pas de la même façon que le sélecteur d'attribut <code>[dir=…]</code>. Ce dernier utilise la valeur de l'attribut {{htmlattrxref("dir", "html")}} et il n'y a aucune correspondance lorsque l'attribut n'est pas défini (même si l'élément HTML hérite de la valeur de son élément parent). De la même façon <code>[dir=rtl]</code> ou <code>[dir=ltr]</code> ne pourront pas correspondre à la valeur <code>auto</code> qui peut être utilisée sur l'attribut <code>dir</code>. Au contraire, <code>:dir()</code> calculera la correspondance en fonction de la valeur utilisée par l'agent utilisateur (qu'elle soit héritée ou qu'elle vaille <code>auto</code>).</p>
+On notera que la pseudo-classe `:dir()` ne fonctionne pas de la même façon que le sélecteur d'attribut `[dir=…]`. Ce dernier utilise la valeur de l'attribut {{htmlattrxref("dir", "html")}} et il n'y a aucune correspondance lorsque l'attribut n'est pas défini (même si l'élément HTML hérite de la valeur de son élément parent). De la même façon `[dir=rtl]` ou `[dir=ltr]` ne pourront pas correspondre à la valeur `auto` qui peut être utilisée sur l'attribut `dir`. Au contraire, `:dir()` calculera la correspondance en fonction de la valeur utilisée par l'agent utilisateur (qu'elle soit héritée ou qu'elle vaille `auto`).
 
-<p><code>:dir()</code> ne prend en compte que la valeur <em>sémantique</em> de la direction, celle qui est définie par le document (la plupart du temps un document HTML). Elle ne tiendra pas compte de la direction liée à la mise en forme, purement stylistique, modifiée par des propriétés telles que {{cssxref("direction")}}.</p>
+`:dir()` ne prend en compte que la valeur _sémantique_ de la direction, celle qui est définie par le document (la plupart du temps un document HTML). Elle ne tiendra pas compte de la direction liée à la mise en forme, purement stylistique, modifiée par des propriétés telles que {{cssxref("direction")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>La pseudo-classe <code>:dir()</code> nécessite un paramètre qui indique la direction du texte qu'on souhaite cibler</p>
+La pseudo-classe `:dir()` nécessite un paramètre qui indique la direction du texte qu'on souhaite cibler
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>direction</code></dt>
- <dd>La direction du texte pour les éléments qu'on souhaite sélectionner. La valeur peut être <code>ltr</code> (texte écrit de gauche à droite) ou <code>rtl</code> (texte écrit de droite à gauche).</dd>
-</dl>
+- `direction`
+  - : La direction du texte pour les éléments qu'on souhaite sélectionner. La valeur peut être `ltr` (texte écrit de gauche à droite) ou `rtl` (texte écrit de droite à gauche).
 
-<h3 id="Syntaxe_formelle_2">Syntaxe formelle</h3>
+### Syntaxe formelle
 
-<p>{{csssyntax}}</p>
+{{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">:-moz-dir(rtl) {
+```css
+:-moz-dir(rtl) {
   color: lime;
 }
 
@@ -55,53 +56,36 @@ translation_of: 'Web/CSS/:dir'
 
 :dir(ltr) {
   color: black;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html;">&lt;div dir="rtl"&gt;
-  &lt;span&gt;test1&lt;/span&gt;
-  &lt;div dir="ltr"&gt;test2
-    &lt;div dir="auto"&gt;עִבְרִית&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div dir="rtl">
+  <span>test1</span>
+  <div dir="ltr">test2
+    <div dir="auto">עִבְרִית</div>
+  </div>
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", "100%", 70)}}</p>
+{{EmbedLiveSample("Exemples", "100%", 70)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'scripting.html#selector-ltr', ':dir(ltr)')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Aucune modification.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#the-dir-pseudo', ':dir()')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | État                                 | Commentaires         |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
+| {{SpecName('HTML WHATWG', 'scripting.html#selector-ltr', ':dir(ltr)')}} | {{Spec2('HTML WHATWG')}}     | Aucune modification. |
+| {{SpecName('CSS4 Selectors', '#the-dir-pseudo', ':dir()')}}                 | {{Spec2('CSS4 Selectors')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.dir")}}</p>
+{{Compat("css.selectors.dir")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref(":lang")}}</li>
- <li>{{cssxref(":dir")}}</li>
-</ul>
+- {{cssxref(":lang")}}
+- {{cssxref(":dir")}}

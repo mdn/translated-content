@@ -7,16 +7,17 @@ tags:
   - Reference
 translation_of: Web/CSS/outline-offset
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>outline-offset</code></strong> définit l'espace qu'il y a entre la bordure dessinée par {{cssxref("outline")}} et le bord de <a href="/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte">la boîte de bordure</a> d'un élément. Cet espace est transparent et la couleur visible en arrière-plan sera déterminée par l'élément parent.</p>
+La propriété **`outline-offset`** définit l'espace qu'il y a entre la bordure dessinée par {{cssxref("outline")}} et le bord de [la boîte de bordure](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte) d'un élément. Cet espace est transparent et la couleur visible en arrière-plan sera déterminée par l'élément parent.
 
-<div>{{EmbedInteractiveExample("pages/css/outline-offset.html")}}</div>
+{{EmbedInteractiveExample("pages/css/outline-offset.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs de longueur */
-/* Type &lt;length&gt;       */
+```css
+/* Valeurs de longueur */
+/* Type <length>       */
 outline-offset: 3px;
 outline-offset: 0.2em;
 
@@ -24,24 +25,23 @@ outline-offset: 0.2em;
 outline-offset: inherit;
 outline-offset: initial;
 outline-offset: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>La largeur de l'espace, voir la page {{cssxref("&lt;length&gt;")}} pour plus d'informations. Les valeurs négatives sont utilisées et font que la bordure dessinée est dessinée dans l'élément.</dd>
-</dl>
+- `<length>`
+  - : La largeur de l'espace, voir la page {{cssxref("&lt;length&gt;")}} pour plus d'informations. Les valeurs négatives sont utilisées et font que la bordure dessinée est dessinée dans l'élément.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.exemple {
+```css
+.exemple {
   outline: 1px dashed red;
   /* On décale la ligne de 10px */
   outline-offset: 10px;
@@ -49,42 +49,27 @@ outline-offset: unset;
   margin: 15px;
   border: 1px solid black;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="exemple"&gt;La bordure est décalée&lt;p&gt;</pre>
+```html
+<p class="exemple">La bordure est décalée<p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples')}}</p>
+{{EmbedLiveSample('Exemples')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'outline-offset')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td><code>outline-offset</code> peut désormais être animée.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Basic UI', '#outline-offset', 'outline-offset')}}</td>
-   <td>{{Spec2('CSS3 Basic UI')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | Statut                                   | Commentaires                                 |
+| -------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------- |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'outline-offset')}} | {{Spec2('CSS3 Transitions')}} | `outline-offset` peut désormais être animée. |
+| {{SpecName('CSS3 Basic UI', '#outline-offset', 'outline-offset')}}     | {{Spec2('CSS3 Basic UI')}}     | Définition initiale.                         |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.outline-offset")}}</p>
+{{Compat("css.properties.outline-offset")}}

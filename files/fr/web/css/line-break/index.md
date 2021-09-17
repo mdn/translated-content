@@ -7,11 +7,12 @@ tags:
   - Reference
 translation_of: Web/CSS/line-break
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propriété <strong><code>line-break</code></strong> définit la façon dont les sauts de ligne sont gérés. Cette propriété affecte uniquement les textes en chinois, japonais ou coréen (CJK).</p>
+La propriété **`line-break`** définit la façon dont les sauts de ligne sont gérés. Cette propriété affecte uniquement les textes en chinois, japonais ou coréen (CJK).
 
-<pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 line-break: auto;
 line-break: loose;
 line-break: normal;
@@ -21,48 +22,33 @@ line-break: strict;
 line-break: inherit;
 line-break: initial;
 line-break: unset;
-</pre>
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Les sauts de ligne sont gérés avec la règle par défaut.</dd>
- <dt><code>loose</code></dt>
- <dd>Les sauts de ligne sont appliqués afin d'obtenir des lignes courtes (comme pour un journal). L'agent utilisateur fixera une règle souple en fonction des conventions liées à la langue utilisée.</dd>
- <dt><code>normal</code></dt>
- <dd>L'agent utilisateur utilisera les règles normales liées à la langue utilisée</dd>
- <dt><code>strict</code></dt>
- <dd>L'agent utilisateur utilisera des règles strictes et passera à la ligne dès que ce sera nécessaire au vu des caractères du langage utilisé.</dd>
-</dl>
+- `auto`
+  - : Les sauts de ligne sont gérés avec la règle par défaut.
+- `loose`
+  - : Les sauts de ligne sont appliqués afin d'obtenir des lignes courtes (comme pour un journal). L'agent utilisateur fixera une règle souple en fonction des conventions liées à la langue utilisée.
+- `normal`
+  - : L'agent utilisateur utilisera les règles normales liées à la langue utilisée
+- `strict`
+  - : L'agent utilisateur utilisera des règles strictes et passera à la ligne dès que ce sera nécessaire au vu des caractères du langage utilisé.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Text', '#line-break-property', 'line-break')}}</td>
-   <td>{{Spec2('CSS3 Text')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                         | Commentaires         |
+| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{SpecName('CSS3 Text', '#line-break-property', 'line-break')}} | {{Spec2('CSS3 Text')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.line-break")}}</p>
+{{Compat("css.properties.line-break")}}

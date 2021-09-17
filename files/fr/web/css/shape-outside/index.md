@@ -7,15 +7,16 @@ tags:
   - Reference
 translation_of: Web/CSS/shape-outside
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>shape-outside</code></strong> définit une forme (qui peut ne pas être un rectangle) autour de laquelle le contenu en ligne devra « s'écouler ». Par défaut, le contenu en ligne évolue autour de la boîte de marge de l'élément flottant. La propriété <code>shape-outside</code> permet de personnaliser ce contour et d'obtenir un texte qui s'écoule autour d'objets plus complexes que des rectangles.</p>
+La propriété **`shape-outside`** définit une forme (qui peut ne pas être un rectangle) autour de laquelle le contenu en ligne devra « s'écouler ». Par défaut, le contenu en ligne évolue autour de la boîte de marge de l'élément flottant. La propriété `shape-outside` permet de personnaliser ce contour et d'obtenir un texte qui s'écoule autour d'objets plus complexes que des rectangles.
 
-<div>{{EmbedInteractiveExample("pages/css/shape-outside.html")}}</div>
+{{EmbedInteractiveExample("pages/css/shape-outside.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css  no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 shape-outside: none;
 shape-outside: margin-box;
 shape-outside: content-box;
@@ -29,66 +30,65 @@ shape-outside: inset(10px 10px 10px 10px);
 shape-outside: polygon(10px 10px, 20px 20px, 30px 30px);
 shape-outside: linear-gradient(45deg, rgba(255,255,255,0) 150px, red 150px);
 
-/* Valeur de type &lt;url&gt; */
+/* Valeur de type <url> */
 shape-outside: url(image.png);
 
 
-/* Valeur de type &lt;gradient&gt; */
+/* Valeur de type <gradient> */
 shape-outside: linear-gradient(45deg, rgba(255, 255, 255, 0) 150px, red 150px);
 
 /* Valeurs globales */
 shape-outside: initial;
 shape-outside: inherit;
 shape-outside: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>none</code></dt>
- <dd>La zone de flottement n'est pas modifiée. Le contenu en ligne épouse le contour de la boîte de marge normalement.</dd>
- <dt><code>&lt;shape-box&gt;</code></dt>
- <dd>La forme est calculée selon '<code>margin-box</code>', '<code>border-box</code>', '<code>padding-box</code>' or '<code>content-box</code>' qui correspondent chacune aux boîtes de marge, bordure, remplissage et de contenu. La boîte ainsi définie inclue les courbures induites par {{cssxref("border-radius")}}. On a un effet semblable à {{cssxref("background-clip")}}.</dd>
- <dt><code>&lt;basic-shape&gt;</code></dt>
- <dd>Une valeur de type {{cssxref("&lt;basic-shape&gt;")}}. La forme est calculée selon une valeur parmi <code><a href="/fr/docs/Web/CSS/basic-shape#inset()">inset()</a></code>, <code><a href="/fr/docs/Web/CSS/basic-shape#circle()">circle()</a></code>, <code><a href="/fr/docs/Web/CSS/basic-shape#ellipse()">ellipse()</a></code>, ou <code><a href="/fr/docs/Web/CSS/basic-shape#polygon()">polygon()</a></code>. Si une valeur <code>&lt;shape-box&gt;</code> est fournie, cela définira la boîte de référence dans laquelle appliquée la forme définie avec la fonction <code>&lt;basic-shape&gt;</code>. Si <code>&lt;shape-box&gt;</code> n'est pas fournie, la valeur par défaut sera '<code>margin-box</code>'.</dd>
- <dt><code>&lt;image&gt;</code></dt>
- <dd>La forme est extraite et calculée à partir du canal alpha de l'image {{cssxref("image")}} en utilisant l propriété {{cssxref("shape-image-threshold")}}. Les agents utilisateurs doivent utiliser la méthode <code>fetch</code>, éventuellement avec CORS pour les URL utilisées dans <code>shape-outside</code>. Lors de l'accès à la ressource, les agents utilisateurs doivent utiliser le mode Anonymous et définir la source du <em>referrer</em> comme l'URL de la feuille de style, l'origine de l'URL doit être celle du document. S'il y a des erreurs réseau empêchant de récupérer l'image, l'effet sera le même que celui obtenu avec la valeur <code><strong>none</strong></code>.</dd>
-</dl>
+- `none`
+  - : La zone de flottement n'est pas modifiée. Le contenu en ligne épouse le contour de la boîte de marge normalement.
+- `<shape-box>`
+  - : La forme est calculée selon '`margin-box`', '`border-box`', '`padding-box`' or '`content-box`' qui correspondent chacune aux boîtes de marge, bordure, remplissage et de contenu. La boîte ainsi définie inclue les courbures induites par {{cssxref("border-radius")}}. On a un effet semblable à {{cssxref("background-clip")}}.
+- `<basic-shape>`
+  - : Une valeur de type {{cssxref("&lt;basic-shape&gt;")}}. La forme est calculée selon une valeur parmi [`inset()`](</fr/docs/Web/CSS/basic-shape#inset()>), [`circle()`](</fr/docs/Web/CSS/basic-shape#circle()>), [`ellipse()`](</fr/docs/Web/CSS/basic-shape#ellipse()>), ou [`polygon()`](</fr/docs/Web/CSS/basic-shape#polygon()>). Si une valeur `<shape-box>` est fournie, cela définira la boîte de référence dans laquelle appliquée la forme définie avec la fonction `<basic-shape>`. Si `<shape-box>` n'est pas fournie, la valeur par défaut sera '`margin-box`'.
+- `<image>`
+  - : La forme est extraite et calculée à partir du canal alpha de l'image {{cssxref("image")}} en utilisant l propriété {{cssxref("shape-image-threshold")}}. Les agents utilisateurs doivent utiliser la méthode `fetch`, éventuellement avec CORS pour les URL utilisées dans `shape-outside`. Lors de l'accès à la ressource, les agents utilisateurs doivent utiliser le mode Anonymous et définir la source du _referrer_ comme l'URL de la feuille de style, l'origine de l'URL doit être celle du document. S'il y a des erreurs réseau empêchant de récupérer l'image, l'effet sera le même que celui obtenu avec la valeur **`none`**.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Interpolation">Interpolation</h2>
+## Interpolation
 
-<p>Afin de pouvoir interpoler entre deux formes, on appliquera les règles suivantes. Les valeurs avec des fonctions sont interpolées comme une liste simple. Les valeurs d'une liste sont interpolées comme des longueurs, des pourcentages ou des valeurs calculées lorsque c'est possible. Si les valeurs de la liste n'ont pas ces types mais sont identiques (par exemple, on trouve <code>nonzero</code> à la même position dans les deux listes), les valeurs pourront interopérer.</p>
+Afin de pouvoir interpoler entre deux formes, on appliquera les règles suivantes. Les valeurs avec des fonctions sont interpolées comme une liste simple. Les valeurs d'une liste sont interpolées comme des longueurs, des pourcentages ou des valeurs calculées lorsque c'est possible. Si les valeurs de la liste n'ont pas ces types mais sont identiques (par exemple, on trouve `nonzero` à la même position dans les deux listes), les valeurs pourront interopérer.
 
-<ul>
- <li>Les deux formes doivent utiliser la même boîtes de référence.</li>
- <li>Si les deux formes sont du même type, que ce type est <code>ellipse()</code> ou <code>circle()</code> et qu'aucun des rayons n'utilise les mots-clés <code>closest-side</code> ou <code>farthest-side</code>, on aura une interpolation entre chaque valeur.</li>
- <li>Si les deux formes sont du type <code>inset()</code>, on aura une interpolation entre chaque valeur.</li>
- <li>Si les deux formes sont du types <code>polygon()</code>, que les deux polygones ont le même nombre de côtés et utilisent la même règle <code>&lt;fill-rule&gt;</code>, on aura une interpolation entre chaque valeur.</li>
- <li>Dans les autres cas, on n'a pas d'interpolation définie.</li>
-</ul>
+- Les deux formes doivent utiliser la même boîtes de référence.
+- Si les deux formes sont du même type, que ce type est `ellipse()` ou `circle()` et qu'aucun des rayons n'utilise les mots-clés `closest-side` ou `farthest-side`, on aura une interpolation entre chaque valeur.
+- Si les deux formes sont du type `inset()`, on aura une interpolation entre chaque valeur.
+- Si les deux formes sont du types `polygon()`, que les deux polygones ont le même nombre de côtés et utilisent la même règle `<fill-rule>`, on aura une interpolation entre chaque valeur.
+- Dans les autres cas, on n'a pas d'interpolation définie.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="main"&gt;
-  &lt;div class="left"&gt;&lt;/div&gt;
-  &lt;div class="right"&gt;&lt;/div&gt;
-  &lt;p&gt;
+```html
+<div class="main">
+  <div class="left"></div>
+  <div class="right"></div>
+  <p>
     Sometimes a web page's text content appears to be
     funneling your attention towards a spot on the page
     to drive you to follow a particular link.  Sometimes
     you don't notice.
-  &lt;/p&gt;
-&lt;/div&gt;</pre>
+  </p>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.main {
+```css
+.main {
   width: 530px;
 }
 
@@ -117,46 +117,32 @@ shape-outside: unset;
 
 p {
   text-align: center;
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', "100%", 130)}}</p>
+{{EmbedLiveSample('Exemples', "100%", 130)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Shapes', '#shape-outside-property', 'shape-outside')}}</td>
-   <td>{{Spec2('CSS Shapes')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                             | Commentaires         |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('CSS Shapes', '#shape-outside-property', 'shape-outside')}} | {{Spec2('CSS Shapes')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.shape-outside")}}</p>
+{{Compat("css.properties.shape-outside")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Shapes">Les formes CSS : le module de spécification <em>CSS Shapes</em></a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes">Un aperçu des formes CSS</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Shapes/From_box_values">Créer des formes à partir des boîtes</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Shapes/Basic_Shapes">Les formes simples : le type de donnée <code>&lt;basic-shape&gt;</code></a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Shapes/Shapes_From_Images">Créer des formes à partir d'images</a></li>
- <li>{{cssxref("&lt;basic-shape&gt;")}}</li>
- <li>{{cssxref("shape-margin")}}</li>
- <li>{{cssxref("shape-image-threshold")}}</li>
-</ul>
+- [Les formes CSS : le module de spécification _CSS Shapes_](/fr/docs/Web/CSS/CSS_Shapes)
+- [Un aperçu des formes CSS](/fr/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes)
+- [Créer des formes à partir des boîtes](/fr/docs/Web/CSS/CSS_Shapes/From_box_values)
+- [Les formes simples : le type de donnée `<basic-shape>`](/fr/docs/Web/CSS/CSS_Shapes/Basic_Shapes)
+- [Créer des formes à partir d'images](/fr/docs/Web/CSS/CSS_Shapes/Shapes_From_Images)
+- {{cssxref("&lt;basic-shape&gt;")}}
+- {{cssxref("shape-margin")}}
+- {{cssxref("shape-image-threshold")}}

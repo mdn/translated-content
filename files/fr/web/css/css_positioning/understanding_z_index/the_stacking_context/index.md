@@ -9,93 +9,76 @@ tags:
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context
 original_slug: Web/CSS/Comprendre_z-index/Empilement_de_couches
 ---
-<div>{{CSSRef}}{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Ajout_de_z-index","Web/CSS/Comprendre_z-index/Exemple_1", "Web/CSS/Comprendre_z-index")}}</div>
+{{CSSRef}}{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Ajout_de_z-index","Web/CSS/Comprendre_z-index/Exemple_1", "Web/CSS/Comprendre_z-index")}}
 
-<h2 id="Le_contexte_dempilement">Le contexte d'empilement</h2>
+## Le contexte d'empilement
 
-<p>Dans l'exemple précédent, <a href="/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index">Ajout de z-index</a>, les blocs <em>DIV</em> sont rendus les uns au dessus des autres (de l'arrière vers l'avant), en commençant par celui dont la valeur de {{cssxref("z-index")}} est la plus faible et en finissant par celui dont la valeur de <code>z-index</code> est la plus forte. Dans cet exemple, il n'y a qu'un seul <em>contexte d'empilement</em>, qui est l'élément <code>HTML</code> racine de la page.</p>
+Dans l'exemple précédent, [Ajout de z-index](/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index), les blocs _DIV_ sont rendus les uns au dessus des autres (de l'arrière vers l'avant), en commençant par celui dont la valeur de {{cssxref("z-index")}} est la plus faible et en finissant par celui dont la valeur de `z-index` est la plus forte. Dans cet exemple, il n'y a qu'un seul _contexte d'empilement_, qui est l'élément `HTML` racine de la page.
 
-<p>Dans certaines conditions, un contexte d'empilement enfant peut être créé à l'intérieur d'un bloc <em>DIV</em> (ou un autre élément) n'importe où dans le document. En particulier, un élément positionné (en absolu ou en relatif) possédant une valeur de <code>z-index</code> différente de <em>auto</em> crée son propre contexte d'empilement : tous ses éléments enfants sont entièrement empilés dans ce contexte, suivant les mêmes règles que celles expliquées précédemment. Les valeurs de <code>z-index</code> de ses enfants n'ont de signification que dans ce contexte. Le bloc <em>DIV</em> entier et son contenu sont empilés comme un seul élément dans le contexte d'empilement de leur parent.</p>
+Dans certaines conditions, un contexte d'empilement enfant peut être créé à l'intérieur d'un bloc _DIV_ (ou un autre élément) n'importe où dans le document. En particulier, un élément positionné (en absolu ou en relatif) possédant une valeur de `z-index` différente de _auto_ crée son propre contexte d'empilement : tous ses éléments enfants sont entièrement empilés dans ce contexte, suivant les mêmes règles que celles expliquées précédemment. Les valeurs de `z-index` de ses enfants n'ont de signification que dans ce contexte. Le bloc _DIV_ entier et son contenu sont empilés comme un seul élément dans le contexte d'empilement de leur parent.
 
-<p>Un contexte d'empilement est formé dans le document par n'importe quel élément qui répond à l'un de ces critères :</p>
+Un contexte d'empilement est formé dans le document par n'importe quel élément qui répond à l'un de ces critères :
 
-<ul>
- <li>L'élément racine du document (HTML)</li>
- <li>Un élément pour lequel {{cssxref("position")}} vaut <code>absolute</code> ou <code>relative</code> et pour lequel {{cssxref("z-index")}} est différente de <code>auto</code></li>
- <li>Un élément pour lequel {{cssxref("position")}} vaut <code>fixed</code> ou <code>sticky</code></li>
- <li>Un élément qui est le fils d'un conteneur flexible ({{cssxref("flexbox")}}) pour lequel {{cssxref("z-index")}} est différente de <code>auto</code></li>
- <li>Un élément qui est le fils d'un conteneur en grille ({{cssxref("grid")}}) pour lequel {{cssxref("z-index")}} est différente de <code>auto</code></li>
- <li>Un élément pour lequel {{cssxref("opacity")}} est inférieure à 1 (cf. <a href="https://www.w3.org/TR/css3-color/#transparency">la spécification</a>)</li>
- <li>Un élément pour lequel {{cssxref("mix-blend-mode")}} est différente de <code>normal</code></li>
- <li>Un élément pour lequel n'importe laquelle de ces propriétés est différente de <code>none</code> :
-  <ul>
-   <li>{{cssxref("transform")}}</li>
-   <li>{{cssxref("filter")}}</li>
-   <li>{{cssxref("perspective")}}</li>
-   <li>{{cssxref("clip-path")}}</li>
-   <li>{{cssxref("mask")}} / {{cssxref("mask-image")}} / {{cssxref("mask-border")}}</li>
-  </ul>
- </li>
- <li>Un élément pour lequel {{cssxref("isolation")}} vaut <code>isolate</code></li>
- <li>Un élément pour lequel {{cssxref("-webkit-overflow-scrolling")}} vaut <code>touch</code>.</li>
- <li>Un élément pour lequel la valeur de la propriété {{cssxref("will-change")}} concerne une propriété qui créerait un contexte d'empilement avec une valeur non-initiale.</li>
- <li>Un élément pour lequel la valeur de la propriété {{cssxref("contain")}} est <code>layout</code>, <code>paint</code> ou une valeur composite contenant un de ces mots-clés (par exemple <code>contain: strict</code> ou <code>contain: content</code>).</li>
-</ul>
+- L'élément racine du document (HTML)
+- Un élément pour lequel {{cssxref("position")}} vaut `absolute` ou `relative` et pour lequel {{cssxref("z-index")}} est différente de `auto`
+- Un élément pour lequel {{cssxref("position")}} vaut `fixed` ou `sticky`
+- Un élément qui est le fils d'un conteneur flexible ({{cssxref("flexbox")}}) pour lequel {{cssxref("z-index")}} est différente de `auto`
+- Un élément qui est le fils d'un conteneur en grille ({{cssxref("grid")}}) pour lequel {{cssxref("z-index")}} est différente de `auto`
+- Un élément pour lequel {{cssxref("opacity")}} est inférieure à 1 (cf. [la spécification](https://www.w3.org/TR/css3-color/#transparency))
+- Un élément pour lequel {{cssxref("mix-blend-mode")}} est différente de `normal`
+- Un élément pour lequel n'importe laquelle de ces propriétés est différente de `none` :
 
-<p>Sans contexte d'empilement, les éléments fils sont empilés selon les règles vues avant. Les valeurs des <code>z-index</code> pour les contextes d'empilement des éléments fils ont uniquement un sens pour l'élément parent. Les contextes d'empilement sont traités de façon atomique, comme une seule unité, dans le contexte de l'élément parent.</p>
+  - {{cssxref("transform")}}
+  - {{cssxref("filter")}}
+  - {{cssxref("perspective")}}
+  - {{cssxref("clip-path")}}
+  - {{cssxref("mask")}} / {{cssxref("mask-image")}} / {{cssxref("mask-border")}}
 
-<p>En bref :</p>
+- Un élément pour lequel {{cssxref("isolation")}} vaut `isolate`
+- Un élément pour lequel {{cssxref("-webkit-overflow-scrolling")}} vaut `touch`.
+- Un élément pour lequel la valeur de la propriété {{cssxref("will-change")}} concerne une propriété qui créerait un contexte d'empilement avec une valeur non-initiale.
+- Un élément pour lequel la valeur de la propriété {{cssxref("contain")}} est `layout`, `paint` ou une valeur composite contenant un de ces mots-clés (par exemple `contain: strict` ou `contain: content`).
 
-<ul>
- <li>Les contextes d'empilement peuvent être enfants d'autres contextes d'empilement, et ensemble forment une hiérarchie de contextes d'empilement.</li>
- <li>Chaque contexte d'empilement est indépendant de ses voisins : seuls les éléments enfants sont pris en compte lorsque l'empilement est traité.</li>
- <li>Chaque contexte d'empilement est autonome : Une fois que le contenu de l'élément est empilé, l'élément entier est pris en compte dans l'ordre d'empilement du contexte parent.</li>
-</ul>
+Sans contexte d'empilement, les éléments fils sont empilés selon les règles vues avant. Les valeurs des `z-index` pour les contextes d'empilement des éléments fils ont uniquement un sens pour l'élément parent. Les contextes d'empilement sont traités de façon atomique, comme une seule unité, dans le contexte de l'élément parent.
 
-<div class="note">
-  <p><strong>Note :</strong> La hiérarchie des contextes d'empilement est un sous-ensemble de la hiérarchie des éléments HTML, car seuls les éléments positionnés dans l'espace (avec la propriété <code>z-index</code> créent des contextes d'empilement. On peut dire que les éléments qui ne créent pas leur propre contexte d'empilement sont <em>assimilés</em> par le contexte d'empilement parent.</p>
-</div>
+En bref :
 
-<h4 id="Illustration">Illustration</h4>
+- Les contextes d'empilement peuvent être enfants d'autres contextes d'empilement, et ensemble forment une hiérarchie de contextes d'empilement.
+- Chaque contexte d'empilement est indépendant de ses voisins : seuls les éléments enfants sont pris en compte lorsque l'empilement est traité.
+- Chaque contexte d'empilement est autonome : Une fois que le contenu de l'élément est empilé, l'élément entier est pris en compte dans l'ordre d'empilement du contexte parent.
 
-<p><img alt="Figure 1. Exemple de règles d'empilement modifiées avec la propriété z-index" src="understanding_zindex_04.png"></p>
+> **Note :** La hiérarchie des contextes d'empilement est un sous-ensemble de la hiérarchie des éléments HTML, car seuls les éléments positionnés dans l'espace (avec la propriété `z-index` créent des contextes d'empilement. On peut dire que les éléments qui ne créent pas leur propre contexte d'empilement sont _assimilés_ par le contexte d'empilement parent.
 
-<p>Dans cet exemple, tous les éléments positionnés créent leur propre contexte d'empilement, du fait de leur positionnement et de leur valeur <code>z-index</code>. La hiérarchie des contextes d'empilement est organisée comme suit :</p>
+#### Illustration
 
-<ul>
- <li>Racine
-  <ul>
-   <li>DIV #1</li>
-   <li>DIV #2</li>
-   <li>DIV #3
-    <ul>
-     <li>DIV #4</li>
-     <li>DIV #5</li>
-     <li>DIV #6</li>
-    </ul>
-   </li>
-  </ul>
- </li>
-</ul>
+![Figure 1. Exemple de règles d'empilement modifiées avec la propriété z-index](understanding_zindex_04.png)
 
-<p>Il est important de noter que les blocs <em>DIV #4</em>, <em>DIV #5</em> et <em>DIV #6</em> sont les enfants du bloc <em>DIV #3</em>, donc leur empilement est complètement résolu à l'intérieur de ce dernier. Une fois que l'empilement et le rendu à l'intérieur du bloc 3 sont définis, la totalité de l'élément <em>DIV #3</em> est prise en compte pour l'empilement dans l'élément racine par rapport à ses <em>DIV</em> voisins.</p>
+Dans cet exemple, tous les éléments positionnés créent leur propre contexte d'empilement, du fait de leur positionnement et de leur valeur `z-index`. La hiérarchie des contextes d'empilement est organisée comme suit :
 
-<div class="note">
-<p><strong>Note :</strong>
+- Racine
 
-<ul>
- <li><em>DIV #4</em> est rendu dans le bloc <em>DIV #1</em> car le <code>z-index</code> (5) de celui-ci est valide à l'intérieur du contexte d'empilement de l'élément racine, alors que le <code>z-index</code> (6) du bloc <em>DIV #4</em> est valide à l'intérieur du contexte d'empilement du bloc <em>DIV #3</em>. Ainsi, DIV #4 se trouve sous <em>DIV #1</em>, parce que <em>DIV #4</em> appartient à <em>DIV #3</em>, qui possède une valeur de <code>z-index</code> plus petite.</li>
- <li>Pour la même raison <em>DIV #2</em> (dont le <code>z-index</code> est 2) est rendu sous <em>DIV#5</em> (de <code>z-index</code> égal à 1) parce que <em>DIV #5</em> appartient à <em>DIV #3</em>, qui possède une valeur de <code>z-index</code> plus grande.</li>
- <li>Le <code>z-index</code> du bloc <em>DIV #3</em> est 4, mais cette valeur est indépendante du <code>z-index</code> du bloc <em>DIV #4</em>, <em>DIV #5</em> et <em>DIV #6</em>, parce qu'il appartient à un contexte d'empilement différent.</li>
-</ul>
-</p>
-</div>
+  - DIV #1
+  - DIV #2
+  - DIV #3
 
-<h2 id="Exemple">Exemple</h2>
+    - DIV #4
+    - DIV #5
+    - DIV #6
 
-<h3 id="CSS">CSS</h3>
+Il est important de noter que les blocs _DIV #4_, _DIV #5_ et _DIV #6_ sont les enfants du bloc _DIV #3_, donc leur empilement est complètement résolu à l'intérieur de ce dernier. Une fois que l'empilement et le rendu à l'intérieur du bloc 3 sont définis, la totalité de l'élément _DIV #3_ est prise en compte pour l'empilement dans l'élément racine par rapport à ses _DIV_ voisins.
 
-<pre class="brush: css">* {
+> **Note :**
+>
+> - _DIV #4_ est rendu dans le bloc _DIV #1_ car le `z-index` (5) de celui-ci est valide à l'intérieur du contexte d'empilement de l'élément racine, alors que le `z-index` (6) du bloc _DIV #4_ est valide à l'intérieur du contexte d'empilement du bloc _DIV #3_. Ainsi, DIV #4 se trouve sous _DIV #1_, parce que _DIV #4_ appartient à _DIV #3_, qui possède une valeur de `z-index` plus petite.
+> - Pour la même raison _DIV #2_ (dont le `z-index` est 2) est rendu sous _DIV#5_ (de `z-index` égal à 1) parce que _DIV #5_ appartient à _DIV #3_, qui possède une valeur de `z-index` plus grande.
+> - Le `z-index` du bloc _DIV #3_ est 4, mais cette valeur est indépendante du `z-index` du bloc _DIV #4_, _DIV #5_ et _DIV #6_, parce qu'il appartient à un contexte d'empilement différent.
+
+## Exemple
+
+### CSS
+
+```css
+* {
   margin: 0;
 }
 
@@ -169,49 +152,50 @@ h1 {
   padding-top: 125px;
   background-color: #ddf;
   text-align: ce        }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="div1"&gt;
-  &lt;h1&gt;Division Element #1&lt;/h1&gt;
-  &lt;code&gt;position: relative;&lt;br/&gt;
-  z-index: 5;&lt;/code&gt;
-&lt;/div&gt;
+```html
+<div id="div1">
+  <h1>Division Element #1</h1>
+  <code>position: relative;<br/>
+  z-index: 5;</code>
+</div>
 
-&lt;div id="div2"&gt;
-  &lt;h1&gt;Division Element #2&lt;/h1&gt;
-  &lt;code&gt;position: relative;&lt;br/&gt;
-  z-index: 2;&lt;/code&gt;
-&lt;/div&gt;
+<div id="div2">
+  <h1>Division Element #2</h1>
+  <code>position: relative;<br/>
+  z-index: 2;</code>
+</div>
 
-&lt;div id="div3"&gt;
+<div id="div3">
 
-  &lt;div id="div4"&gt;
-    &lt;h1&gt;Division Element #4&lt;/h1&gt;
-    &lt;code&gt;position: relative;&lt;br/&gt;
-    z-index: 6;&lt;/code&gt;
-  &lt;/div&gt;
+  <div id="div4">
+    <h1>Division Element #4</h1>
+    <code>position: relative;<br/>
+    z-index: 6;</code>
+  </div>
 
-  &lt;h1&gt;Division Element #3&lt;/h1&gt;
-  &lt;code&gt;position: absolute;&lt;br/&gt;
-  z-index: 4;&lt;/code&gt;
+  <h1>Division Element #3</h1>
+  <code>position: absolute;<br/>
+  z-index: 4;</code>
 
-  &lt;div id="div5"&gt;
-    &lt;h1&gt;Division Element #5&lt;/h1&gt;
-    &lt;code&gt;position: relative;&lt;br/&gt;
-    z-index: 1;&lt;/code&gt;
-  &lt;/div&gt;
+  <div id="div5">
+    <h1>Division Element #5</h1>
+    <code>position: relative;<br/>
+    z-index: 1;</code>
+  </div>
 
-  &lt;div id="div6"&gt;
-    &lt;h1&gt;Division Element #6&lt;/h1&gt;
-    &lt;code&gt;position: absolute;&lt;br/&gt;
-    z-index: 3;&lt;/code&gt;
-  &lt;/div&gt;
-</pre>
+  <div id="div6">
+    <h1>Division Element #6</h1>
+    <code>position: absolute;<br/>
+    z-index: 3;</code>
+  </div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemple","556","396")}}</p>
+{{EmbedLiveSample("Exemple","556","396")}}
 
-<div>{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Ajout_de_z-index","Web/CSS/Comprendre_z-index/Exemple_1", "Web/CSS/Comprendre_z-index")}}</div>
+{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Ajout_de_z-index","Web/CSS/Comprendre_z-index/Exemple_1", "Web/CSS/Comprendre_z-index")}}

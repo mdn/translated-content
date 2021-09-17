@@ -10,11 +10,12 @@ tags:
   - 'recipe: css-property'
 translation_of: Web/CSS/font-synthesis
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>font-synthesis</code></strong> indique au navigateur s'il peut synthétiser la graisse ou la mise en italique des polices utilisées si ces variantes sont absentes.</p>
+La propriété **`font-synthesis`** indique au navigateur s'il peut synthétiser la graisse ou la mise en italique des polices utilisées si ces variantes sont absentes.
 
-<pre class="brush:css">font-synthesis: none;
+```css
+font-synthesis: none;
 font-synthesis: weight;
 font-synthesis: style;
 font-synthesis: weight style;
@@ -23,71 +24,57 @@ font-synthesis: weight style;
 font-synthesis: initial;
 font-synthesis: inherit;
 font-synthesis: unset;
-</pre>
+```
 
-<p>La plupart des polices occidentales incluent les variantes de graisse et d'italique mais certaines polices récentes ou utilisées pour le chinois, le japonais, le coréen ou d'autres scripts ont tendance à ne pas inclure ces éléments. La synthèse automatique du gras ou de l'italique par le navigateur peut réduire la lisibilité du texte et il est alors préférable de désactiver l'émulation du gras et de l'italique du navigateur.</p>
+La plupart des polices occidentales incluent les variantes de graisse et d'italique mais certaines polices récentes ou utilisées pour le chinois, le japonais, le coréen ou d'autres scripts ont tendance à ne pas inclure ces éléments. La synthèse automatique du gras ou de l'italique par le navigateur peut réduire la lisibilité du texte et il est alors préférable de désactiver l'émulation du gras et de l'italique du navigateur.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Cette propriété peut prendre l'une des formes suivantes :</p>
+Cette propriété peut prendre l'une des formes suivantes :
 
-<ul>
- <li>le mot-clé <code>none</code></li>
- <li>le mot-clé <code>weight</code> ou le mot-clé <code>style</code></li>
- <li>la valeur <code>weight style</code></li>
-</ul>
+- le mot-clé `none`
+- le mot-clé `weight` ou le mot-clé `style`
+- la valeur `weight style`
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Ce mot-clé indique que la graisse ou l'italique ne doivent pas être synthétisés.</dd>
- <dt><code>weight</code></dt>
- <dd>Ce mot-clé indique qu'une fonte grasse peut être synthétisée si besoin.</dd>
- <dt><code>style</code></dt>
- <dd>Ce mot-clé indique qu'une fonte italique peut être synthétisée si besoin.</dd>
-</dl>
+- `none`
+  - : Ce mot-clé indique que la graisse ou l'italique ne doivent pas être synthétisés.
+- `weight`
+  - : Ce mot-clé indique qu'une fonte grasse peut être synthétisée si besoin.
+- `style`
+  - : Ce mot-clé indique qu'une fonte italique peut être synthétisée si besoin.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="syn"&gt;Ne me synthétisez pas !&lt;/div&gt;</pre>
+```html
+<div class="syn">Ne me synthétisez pas !</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.syn {font-synthesis: none;}
-</pre>
+```css
+.syn {font-synthesis: none;}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples')}}</p>
+{{EmbedLiveSample('Exemples')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#propdef-font-synthesis', 'font-synthesis')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | État                             | Commentaires        |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | ------------------- |
+| {{SpecName('CSS3 Fonts', '#propdef-font-synthesis', 'font-synthesis')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.font-synthesis")}}</p>
+{{Compat("css.properties.font-synthesis")}}

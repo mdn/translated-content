@@ -7,19 +7,18 @@ tags:
   - Reference
 translation_of: Web/CSS/visibility
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>visibility</code></strong> peut être utilisée afin de cacher un élément tout en conservant occupé l'espace dans lequel il aurait été visible. Elle permet aussi de masquer des lignes ou des colonnes dans un tableau (cf. {{HTMLElement("table")}}).</p>
+La propriété **`visibility`** peut être utilisée afin de cacher un élément tout en conservant occupé l'espace dans lequel il aurait été visible. Elle permet aussi de masquer des lignes ou des colonnes dans un tableau (cf. {{HTMLElement("table")}}).
 
-<div>{{EmbedInteractiveExample("pages/css/visibility.html")}}</div>
+{{EmbedInteractiveExample("pages/css/visibility.html")}}
 
-<div class="note">
-<p><strong>Note :</strong> Afin de cacher un élément et de le retirer de la disposition du document, on utilisera plutôt la propriété {{cssxref("display")}} avec la valeur <code>none</code>.</p>
-</div>
+> **Note :** Afin de cacher un élément et de le retirer de la disposition du document, on utilisera plutôt la propriété {{cssxref("display")}} avec la valeur `none`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css no-line-numbers">/* Avec un mot-clé */
+```css
+/* Avec un mot-clé */
 visibility: visible;
 visibility: hidden;
 visibility: collapse;
@@ -28,59 +27,57 @@ visibility: collapse;
 visibility: inherit;
 visibility: initial;
 visibility: unset;
-</pre>
+```
 
-<p>La propriété <code>visibility</code> est définie avec l'un des mots-clés suivants.</p>
+La propriété `visibility` est définie avec l'un des mots-clés suivants.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>visible</code></dt>
- <dd>La valeur par défaut, la boîte est visible.</dd>
- <dt><code>hidden</code></dt>
- <dd>La boîte est invisible (totalement transparente, rien n'est dessiné) mais continue d'avoir un impact sur la disposition. Les fils de l'élément seront visibles s'ils ont <code>visibility:visible</code>. L'élément ne pourra plus recevoir le focus (cf. <a href="/fr/docs/Web/HTML/Global_attributes/tabindex">la navigation au clavier avec les tabulations</a>).</dd>
- <dt><code>collapse</code></dt>
- <dd>
-  <p>Le mot-clé <code>collapse</code> a différents effets selon les éléments :</p>
- <ul>
-  <li>Pour les lignes, les colonnes, les groupes de lignes et les groupes de colonnes d'un tableau, les éléments sont masqués et l'espace occupé est retiré (comme si on avait appliqué <code>{{cssxref("display")}}: none</code> aux colonnes/lignes du tableau). La taille des autres lignes et colonnes continue d'être calculée comme si les lignes et colonnes masquées étaient présentes. Cela a été conçu afin de pouvoir retirer rapidement des lignes et/ou des colonnes sans avoir à recalculer les dimensions pour l'ensemble du tableau.</li>
-  <li>Les éléments flexibles sont masqués et l'espace qu'ils auraient occupé est retiré.</li>
-  <li>Pour les éléments XUL, la taille calculée des éléments vaut toujours zéro, quel que soit les autres styles qui pourraient affecter la taille, les marges continuent de s'appliquer.</li>
-  <li>Pour les autres éléments, <code>collapse</code> est traité comme <code>hidden</code>.</li>
- </ul>
- </dd>
-</dl>
+- `visible`
+  - : La valeur par défaut, la boîte est visible.
+- `hidden`
+  - : La boîte est invisible (totalement transparente, rien n'est dessiné) mais continue d'avoir un impact sur la disposition. Les fils de l'élément seront visibles s'ils ont `visibility:visible`. L'élément ne pourra plus recevoir le focus (cf. [la navigation au clavier avec les tabulations](/fr/docs/Web/HTML/Global_attributes/tabindex)).
+- `collapse`
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+  - : Le mot-clé `collapse` a différents effets selon les éléments :
+
+    - Pour les lignes, les colonnes, les groupes de lignes et les groupes de colonnes d'un tableau, les éléments sont masqués et l'espace occupé est retiré (comme si on avait appliqué `{{cssxref("display")}}: none` aux colonnes/lignes du tableau). La taille des autres lignes et colonnes continue d'être calculée comme si les lignes et colonnes masquées étaient présentes. Cela a été conçu afin de pouvoir retirer rapidement des lignes et/ou des colonnes sans avoir à recalculer les dimensions pour l'ensemble du tableau.
+    - Les éléments flexibles sont masqués et l'espace qu'ils auraient occupé est retiré.
+    - Pour les éléments XUL, la taille calculée des éléments vaut toujours zéro, quel que soit les autres styles qui pourraient affecter la taille, les marges continuent de s'appliquer.
+    - Pour les autres éléments, `collapse` est traité comme `hidden`.
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Interpolation">Interpolation</h2>
+## Interpolation
 
-<p>Les valeurs de visibilité peuvent être interpolées entre <em>visible</em> et <em>masqué</em>. L'une des valeurs de début ou de fin doit donc être <code>visible</code>, sinon il n'y aura pas d'interpolation. L'interpolation est discrète (passage direct d'un état à l'autre), les valeurs supérieures à 0 sont considérées équivalentes à <code>visible</code>. On pourra plutôt utiliser {{cssxref("opacity")}} pour créer un effet doux plutôt que de masquer/rendre visible l'élément brusquement.</p>
+Les valeurs de visibilité peuvent être interpolées entre _visible_ et _masqué_. L'une des valeurs de début ou de fin doit donc être `visible`, sinon il n'y aura pas d'interpolation. L'interpolation est discrète (passage direct d'un état à l'autre), les valeurs supérieures à 0 sont considérées équivalentes à `visible`. On pourra plutôt utiliser {{cssxref("opacity")}} pour créer un effet doux plutôt que de masquer/rendre visible l'élément brusquement.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Exemple_simple">Exemple simple</h3>
+### Exemple simple
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   On peut dire tout ce qu'on veut ici,
   ce ne sera pas lisible de toute façon.
-&lt;/p&gt;
-&lt;p class="coucou"&gt;
+</p>
+<p class="coucou">
   Alors que là, on a la bonne classe.
   Coucou tout le monde :)
-&lt;/p&gt;
-&lt;p&gt;
+</p>
+<p>
   Et on repasse en mode invisible.
-&lt;/p&gt;
-</pre>
+</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush:css">p {
+```css
+p {
   /* les paragraphes ne seront pas visibles */
   visibility: hidden;
 }
@@ -89,99 +86,72 @@ p.coucou {
   /* sauf ceux avec la classe coucou */
   visibility: visible;
 }
-</pre>
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Exemple_simple")}}</p>
+{{EmbedLiveSample("Exemple_simple")}}
 
-<h3 id="Exemple_sur_un_tableau">Exemple sur un tableau</h3>
+### Exemple sur un tableau
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Jean&lt;/td&gt;
-    &lt;td&gt;Biche&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr class="col"&gt;
-    &lt;td&gt;Hit&lt;/td&gt;
-    &lt;td&gt;Girl&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Super&lt;/td&gt;
-    &lt;td&gt;Cochon&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-</pre>
+```html
+<table>
+  <tr>
+    <td>Jean</td>
+    <td>Biche</td>
+  </tr>
+  <tr class="col">
+    <td>Hit</td>
+    <td>Girl</td>
+  </tr>
+  <tr>
+    <td>Super</td>
+    <td>Cochon</td>
+  </tr>
+</table>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">tr.col {
+```css
+tr.col {
   /* les lignes de tableau avec la classe */
   /* col seront repliées */
   visibility: collapse;
 }
-</pre>
+```
 
-<h4 id="Résultat_2">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Exemple_sur_un_tableau")}}</p>
+{{EmbedLiveSample("Exemple_sur_un_tableau")}}
 
-<h2 id="Accessibilité">Accessibilité</h2>
+## Accessibilité
 
-<p>Utiliser la propriété <code>visibility</code> avec la valeur <code>hidden</code> retirera l'objet de <a href="/fr/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis">l'arbre d'accessibilité</a>. Les éléments ciblés, ainsi que leurs éléments descendants ne seront plus annoncés par les lecteurs d'écran.</p>
+Utiliser la propriété `visibility` avec la valeur `hidden` retirera l'objet de [l'arbre d'accessibilité](/fr/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis). Les éléments ciblés, ainsi que leurs éléments descendants ne seront plus annoncés par les lecteurs d'écran.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<ul>
- <li>Le support de <code>visibility:collapse</code> est absent ou incorrect pour certains navigateurs récents. Dans de nombreux cas, il n'est pas correctement traité comme <code>visibility:hidden</code> sur les éléments qui ne sont pas des lignes et/ou des colonnes de tableau.</li>
- <li><code>visibility:collapse</code> peut modifier la disposition d'un tableau si le tableau possède des tableaux imbriqués dont les cellules sont repliées, sauf si <code>visibility:visible</code> est défini explicitement sur les tableaux imbriqués.</li>
-</ul>
+- Le support de `visibility:collapse` est absent ou incorrect pour certains navigateurs récents. Dans de nombreux cas, il n'est pas correctement traité comme `visibility:hidden` sur les éléments qui ne sont pas des lignes et/ou des colonnes de tableau.
+- `visibility:collapse` peut modifier la disposition d'un tableau si le tableau possède des tableaux imbriqués dont les cellules sont repliées, sauf si `visibility:visible` est défini explicitement sur les tableaux imbriqués.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Flexbox', '#visibility-collapse', 'visibility')}}</td>
-   <td>{{Spec2('CSS3 Flexbox')}}</td>
-   <td>Définition de la valeur <code>collapse</code> pour les éléments flexibles.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Box', '#visibility-prop', 'visibility')}}</td>
-   <td>{{Spec2('CSS3 Box')}}</td>
-   <td>Aucune modification.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'visibility')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td><code>visibility</code> peut désormais être animée.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visufx.html#visibility', 'visibility')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                                     | Commentaires                                                    |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------- |
+| {{SpecName('CSS3 Flexbox', '#visibility-collapse', 'visibility')}} | {{Spec2('CSS3 Flexbox')}}         | Définition de la valeur `collapse` pour les éléments flexibles. |
+| {{SpecName('CSS3 Box', '#visibility-prop', 'visibility')}}             | {{Spec2('CSS3 Box')}}             | Aucune modification.                                            |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'visibility')}} | {{Spec2('CSS3 Transitions')}} | `visibility` peut désormais être animée.                        |
+| {{SpecName('CSS2.1', 'visufx.html#visibility', 'visibility')}}     | {{Spec2('CSS2.1')}}                 | Définition initiale.                                            |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.visibility")}}</p>
+{{Compat("css.properties.visibility")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("display")}}</li>
- <li>{{cssxref("opacity")}}</li>
-</ul>
+- {{cssxref("display")}}
+- {{cssxref("opacity")}}

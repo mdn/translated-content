@@ -9,44 +9,44 @@ tags:
   - Web
 translation_of: Web/CSS/fit-content
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La fonction CSS <strong><code>fit-content()</code></strong> permet d'obtenir une dimension restreinte à un intervalle donnée (en utilisant la formule  <code>min(<var>taille maximale</var>, max(<var>taille minimale</var>, <var>argument</var>))</code>.</p>
+La fonction CSS **`fit-content()`** permet d'obtenir une dimension restreinte à un intervalle donnée (en utilisant la formule  `min(taille maximale, max(taille minimale, argument))`.
 
-<pre class="brush: css no-line-numbers">/* Valeurs de type &lt;length&gt; */
+```css
+/* Valeurs de type <length> */
 fit-content(200px)
 fit-content(5cm)
 fit-content(30vw)
 fit-content(100ch)
 
-/* Valeurs de type &lt;percentage&gt; */
+/* Valeurs de type <percentage> */
 fit-content(40%)
-</pre>
+```
 
-<p>Cette fonction peut être utilisée pour définir la taille d'une piste via les propriétés relatives aux grilles CSS où la taille maximale est définie par <code><a href="/fr/docs/Web/CSS/grid-template-columns#max-content">max-content</a></code> et où la taille minimale est définie par <code><a href="/fr/docs/Web/CSS/grid-template-columns#auto">auto</a></code> et qui est calculée de façon similaire à <code>auto</code> (i.e. <code><a href="/fr/docs/Web/CSS/minmax()">minmax(auto, max-content)</a></code>), sauf que la taille de la piste est ramenée à <var>argument</var> si celui-ci est supérieur à <code>auto</code>.</p>
+Cette fonction peut être utilisée pour définir la taille d'une piste via les propriétés relatives aux grilles CSS où la taille maximale est définie par [`max-content`](/fr/docs/Web/CSS/grid-template-columns#max-content) et où la taille minimale est définie par [`auto`](/fr/docs/Web/CSS/grid-template-columns#auto) et qui est calculée de façon similaire à `auto` (i.e. [`minmax(auto, max-content)`](</fr/docs/Web/CSS/minmax()>)), sauf que la taille de la piste est ramenée à _argument_ si celui-ci est supérieur à `auto`.
 
-<p>Elle peut également être utilisée pour définir la taille d'une boîte avec {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} et {{cssxref("max-height")}} où la taille maximale fait référence à la taille maximale du contenu et où la taille minimale fait référence à la taille minimale du contenu.</p>
+Elle peut également être utilisée pour définir la taille d'une boîte avec {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} et {{cssxref("max-height")}} où la taille maximale fait référence à la taille maximale du contenu et où la taille minimale fait référence à la taille minimale du contenu.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Une longueur (valeur de type {{cssxref("&lt;length&gt;")}}) exprimée de façon absolue.</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>Un pourcentage (valeur de type {{cssxref("&lt;percentage&gt;")}}) relatif à l'espace disponible sur l'axe indiqué (la hauteur ou la largeur). Pour les propriétés qui concernent les grilles, le pourcentage est relative à la dimension en ligne du conteneur de la grille pour les pistes qui sont disposées en colonnes et à la dimension en block pour les pistes qui sont disposées en lignes. Sinon, le pourcentage est relatif à la dimension en ligne ou en bloc selon le mode d'écriture utilisé.</dd>
-</dl>
+- `<length>`
+  - : Une longueur (valeur de type {{cssxref("&lt;length&gt;")}}) exprimée de façon absolue.
+- `<percentage>`
+  - : Un pourcentage (valeur de type {{cssxref("&lt;percentage&gt;")}}) relatif à l'espace disponible sur l'axe indiqué (la hauteur ou la largeur). Pour les propriétés qui concernent les grilles, le pourcentage est relative à la dimension en ligne du conteneur de la grille pour les pistes qui sont disposées en colonnes et à la dimension en block pour les pistes qui sont disposées en lignes. Sinon, le pourcentage est relatif à la dimension en ligne ou en bloc selon le mode d'écriture utilisé.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#container {
+```css
+#container {
   display: grid;
   grid-template-columns: fit-content(300px) fit-content(300px) 1fr;
   grid-gap: 5px;
@@ -57,51 +57,36 @@ fit-content(40%)
   padding: 10px;
 }
 
-#container &gt; div {
+#container > div {
   background-color: #8ca0ff;
   padding: 5px;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="container"&gt;
-  &lt;div&gt;Item as wide as the content.&lt;/div&gt;
-  &lt;div&gt;
+```html
+<div id="container">
+  <div>Item as wide as the content.</div>
+  <div>
     Item with more text in it. Because the contents of it are
     wider than the maximum width, it is clamped at 300 pixels.
-  &lt;/div&gt;
-  &lt;div&gt;Flexible item&lt;/div&gt;
-&lt;/div&gt;</pre>
+  </div>
+  <div>Flexible item</div>
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", "100%", 200)}}</p>
+{{EmbedLiveSample("Exemples", "100%", 200)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Spécification</th>
-   <th>État</th>
-   <th>Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Sizing", "#valdef-width-fit-content-length-percentage", "fit-content()")}}</td>
-   <td>{{Spec2("CSS3 Sizing")}}</td>
-   <td>Définition de la fonction pour les dimensions de boîte avec les propriétés  {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} et {{cssxref("max-height")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS Grid", "#valdef-grid-template-columns-fit-content", "fit-content()")}}</td>
-   <td>{{Spec2("CSS Grid")}}</td>
-   <td>Définition initiale, la fonction peut être utilisée pour définir la taille d'une piste au sein d'une grille CSS.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | État                             | Commentaires                                                                                                                                                                                                                                                                      |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName("CSS3 Sizing", "#valdef-width-fit-content-length-percentage", "fit-content()")}} | {{Spec2("CSS3 Sizing")}} | Définition de la fonction pour les dimensions de boîte avec les propriétés  {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} et {{cssxref("max-height")}}. |
+| {{SpecName("CSS Grid", "#valdef-grid-template-columns-fit-content", "fit-content()")}}     | {{Spec2("CSS Grid")}}     | Définition initiale, la fonction peut être utilisée pour définir la taille d'une piste au sein d'une grille CSS.                                                                                                                                                                  |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.grid-template-columns.fit-content")}}</p>
+{{Compat("css.properties.grid-template-columns.fit-content")}}

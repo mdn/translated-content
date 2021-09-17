@@ -7,32 +7,33 @@ tags:
   - Reference
 translation_of: Web/CSS/left
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>left</code></strong> permet de définir une partie de la position des éléments positionnés. Elle n'a aucun effet pour les éléments non-positionnés.</p>
+La propriété **`left`** permet de définir une partie de la position des éléments positionnés. Elle n'a aucun effet pour les éléments non-positionnés.
 
-<div>{{EmbedInteractiveExample("pages/css/left.html")}}</div>
+{{EmbedInteractiveExample("pages/css/left.html")}}
 
-<p>Pour les éléments positionnés de façon absolue (ceux pour lesquels {{cssxref("position")}}<code>: absolute</code> ou <code>position: fixed</code>), elle définit la distance entre le bord gauche de la marge de l'élément et le bord gauche de son bloc englobant (le bloc englobant étant l'ancêtre par rapport auquel l'élément est positionné de façon relative).</p>
+Pour les éléments positionnés de façon absolue (ceux pour lesquels {{cssxref("position")}}`: absolute` ou `position: fixed`), elle définit la distance entre le bord gauche de la marge de l'élément et le bord gauche de son bloc englobant (le bloc englobant étant l'ancêtre par rapport auquel l'élément est positionné de façon relative).
 
-<p>Pour les éléments positionnés grâce à {{cssxref("position")}}<code>: relative</code>, c'est le décalage ajouté à gauche de l'élément (qui est donc déplacé vers la droite de sa position normale).</p>
+Pour les éléments positionnés grâce à {{cssxref("position")}}`: relative`, c'est le décalage ajouté à gauche de l'élément (qui est donc déplacé vers la droite de sa position normale).
 
-<p>Pour les éléments positionnés grâce à {{cssxref("position")}}<code>: sticky</code>, cette propriété se comportera comme avec <code>relative</code> lorsque l'élément fait partie de la zone d'affichage (<em>viewport</em>) et comme avec <code>fixed</code> lorsque l'élément est en dehors de la zone d'affichage.</p>
+Pour les éléments positionnés grâce à {{cssxref("position")}}`: sticky`, cette propriété se comportera comme avec `relative` lorsque l'élément fait partie de la zone d'affichage (_viewport_) et comme avec `fixed` lorsque l'élément est en dehors de la zone d'affichage.
 
-<p>Lorsque {{cssxref("position")}}<code>: static</code>, la propriété <code>left</code> n'a aucun effet.</p>
+Lorsque {{cssxref("position")}}`: static`, la propriété `left` n'a aucun effet.
 
-<p>Si les deux propriétés <code>left</code> et {{cssxref("right")}} sont définies et que l'élément ne peut pas s'étendre afin de satisfaire ces contraintes, la position de l'élément est « sur-définie ». Dans ce cas, la valeur <code>left</code> aura la priorité si le conteneur est orienté de gauche à droite (dans ce cas, la valeur calculée de <code>right</code> vaudra <code>-left</code>) et si le conteneur est orienté de droite à gauche, c'est la valeur <code>right</code> qui aura la priorité (auquel cas, la valeur calculée de <code>left</code> vaudra <code>-right</code>).</p>
+Si les deux propriétés `left` et {{cssxref("right")}} sont définies et que l'élément ne peut pas s'étendre afin de satisfaire ces contraintes, la position de l'élément est « sur-définie ». Dans ce cas, la valeur `left` aura la priorité si le conteneur est orienté de gauche à droite (dans ce cas, la valeur calculée de `right` vaudra `-left`) et si le conteneur est orienté de droite à gauche, c'est la valeur `right` qui aura la priorité (auquel cas, la valeur calculée de `left` vaudra `-right`).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs de longueur */
-/* Type &lt;length&gt;       */
+```css
+/* Valeurs de longueur */
+/* Type <length>       */
 left: 3px;
 left: 2.4em;
 
 /* Valeurs proportionnelles à   */
 /* la largeur du bloc englobant */
-/* Type &lt;percentage&gt;            */
+/* Type <percentage>            */
 left: 10%;
 
 /* Valeur avec un mot-clé */
@@ -42,40 +43,38 @@ left: auto;
 left: inherit;
 left: initial;
 left: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Une valeur de longueur qui peut être positive, nulle ou négative et qui représente :
- <ul>
-  <li>La distance au bord gauche du bloc englobant <em>pour les éléments positionnés de façon absolue</em></li>
-  <li>Le décalage vers la gauche qui est appliqué à l'élément par rapport à sa position normale dans le flux <em>pour les éléments positionnés de façon relative</em>.</li>
- </ul>
+- `<length>`
 
- <p>Pour plus d'informations sur les valeurs possibles, voir {{cssxref("&lt;length&gt;")}}.</p>
- </dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>Une valeur en pourcentage (type {{cssxref("&lt;percentage&gt;")}} par rapport à la largeur du bloc englobant.</dd>
- <dt><code>auto</code></dt>
- <dd>Un mot-clé qui représente :
- <ul>
-  <li>Pour les éléments positionnés de façon absolue : la position de l'élément selon la valeur de la propriété {{cssxref("right")}}, on considère <code>width: auto</code> comme une largeur basée sur le contenu.</li>
-  <li>Pour les éléments positionnés de façon relative : le décalage à gauche de l'élément par rapport à sa position initiale selon la valeur de la propriété {{cssxref("right")}}. SI <code>right</code> vaut également <code>auto</code>, il n'y a aucun décalage.</li>
- </ul>
- </dd>
-</dl>
+  - : Une valeur de longueur qui peut être positive, nulle ou négative et qui représente :
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+    - La distance au bord gauche du bloc englobant _pour les éléments positionnés de façon absolue_
+    - Le décalage vers la gauche qui est appliqué à l'élément par rapport à sa position normale dans le flux _pour les éléments positionnés de façon relative_.
+
+    Pour plus d'informations sur les valeurs possibles, voir {{cssxref("&lt;length&gt;")}}.
+
+- `<percentage>`
+  - : Une valeur en pourcentage (type {{cssxref("&lt;percentage&gt;")}} par rapport à la largeur du bloc englobant.
+- `auto`
+
+  - : Un mot-clé qui représente :
+
+    - Pour les éléments positionnés de façon absolue : la position de l'élément selon la valeur de la propriété {{cssxref("right")}}, on considère `width: auto` comme une largeur basée sur le contenu.
+    - Pour les éléments positionnés de façon relative : le décalage à gauche de l'élément par rapport à sa position initiale selon la valeur de la propriété {{cssxref("right")}}. SI `right` vaut également `auto`, il n'y a aucun décalage.
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#wrap {
+```css
+#wrap {
   width: 700px;
   margin: 0 auto;
   background: #5C5C5C;
@@ -122,93 +121,73 @@ pre {
   bottom:10px;
   right:20px;
   background-color:#FFC7E4;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="wrap"&gt;
-  &lt;div id="exemple_1"&gt;
-    &lt;pre&gt;
+```html
+<div id="wrap">
+  <div id="exemple_1">
+    <pre>
       position: absolute;
       left: 20px;
       top: 20px;
-    &lt;/pre&gt;
-    &lt;p&gt;Le seul élément englobant pour ce div est la fenêtre principale. Elle se positionne par rapport à elle.&lt;/p&gt;
-  &lt;/div&gt;
+    </pre>
+    <p>Le seul élément englobant pour ce div est la fenêtre principale. Elle se positionne par rapport à elle.</p>
+  </div>
 
-  &lt;div id="exemple_2"&gt;
-    &lt;pre&gt;
+  <div id="exemple_2">
+    <pre>
       position: relative;
       top: 0;
       right: 0;
-    &lt;/pre&gt;
-    &lt;p&gt;La position est relative par rapport aux voisins.&lt;/p&gt;
-  &lt;/div&gt;
+    </pre>
+    <p>La position est relative par rapport aux voisins.</p>
+  </div>
 
-  &lt;div id="exemple_3"&gt;
-    &lt;pre&gt;
+  <div id="exemple_3">
+    <pre>
       float: right;
       position: relative;
       top: 20px;
       left: 20px;
-    &lt;/pre&gt;
-    &lt;p&gt;La position est relative par rapport au div voisin mais on le retire du flux.&lt;/p&gt;
+    </pre>
+    <p>La position est relative par rapport au div voisin mais on le retire du flux.</p>
 
-    &lt;div id="exemple_4"&gt;
-      &lt;pre&gt;
+    <div id="exemple_4">
+      <pre>
         position: absolute;
         bottom: 10px;
         right: 20px;
-      &lt;/pre&gt;
-      &lt;p&gt;La position est absolue à l'intérieur d'un parent positionné de façon relative.&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+      </pre>
+      <p>La position est absolue à l'intérieur d'un parent positionné de façon relative.</p>
+    </div>
+  </div>
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples',1200,650)}}</p>
+{{EmbedLiveSample('Exemples',1200,650)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'left')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td><code>left</code> peut désormais être animée.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Positioning', '#propdef-left', 'left')}}</td>
-   <td>{{Spec2('CSS3 Positioning')}}</td>
-   <td>Décrit le comportement pour le positionnement adhérent (<em>sticky</em>).</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visuren.html#propdef-left', 'left')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | État                                     | Commentaires                                                       |
+| -------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------ |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'left')}} | {{Spec2('CSS3 Transitions')}} | `left` peut désormais être animée.                                 |
+| {{SpecName('CSS3 Positioning', '#propdef-left', 'left')}}     | {{Spec2('CSS3 Positioning')}} | Décrit le comportement pour le positionnement adhérent (_sticky_). |
+| {{SpecName('CSS2.1', 'visuren.html#propdef-left', 'left')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                                               |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.left")}}</p>
+{{Compat("css.properties.left")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("position")}}</li>
- <li>{{cssxref("right")}}</li>
- <li>{{cssxref("bottom")}}</li>
- <li>{{cssxref("top")}}</li>
-</ul>
+- {{cssxref("position")}}
+- {{cssxref("right")}}
+- {{cssxref("bottom")}}
+- {{cssxref("top")}}

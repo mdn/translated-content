@@ -7,19 +7,18 @@ tags:
   - Reference
 translation_of: Web/CSS/flex-basis
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>flex-basis</code></strong> détermine la base de flexibilité utilisée comme taille initiale principale pour un élément flexible. Cette propriété détermine la taille de la boîte de contenu sauf si une autre boîte est visée par {{cssxref("box-sizing")}}.</p>
+La propriété **`flex-basis`** détermine la base de flexibilité utilisée comme taille initiale principale pour un élément flexible. Cette propriété détermine la taille de la boîte de contenu sauf si une autre boîte est visée par {{cssxref("box-sizing")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/flex-basis.html")}}</div>
+{{EmbedInteractiveExample("pages/css/flex-basis.html")}}
 
-<div class="note">
-<p><strong>Note :</strong> Dans le cas où <code>flex-basis</code> (avec une valeur différente de <code>auto</code>) et <code>width</code> (ou <code>height</code> si <code>flex-direction: column</code>) sont définis pour un élément, c'est <code>flex-basis</code> qui a la priorité.</p>
-</div>
+> **Note :** Dans le cas où `flex-basis` (avec une valeur différente de `auto`) et `width` (ou `height` si `flex-direction: column`) sont définis pour un élément, c'est `flex-basis` qui a la priorité.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css  no-line-numbers">/* On définit une largeur */
+```css
+/* On définit une largeur */
 flex-basis: 10em;
 flex-basis: 3px;
 flex-basis: auto;
@@ -39,53 +38,52 @@ flex-basis: content;
 flex-basis: inherit;
 flex-basis: initial;
 flex-basis: unset;
-</pre>
+```
 
-<p>La propriété <code>flex-basis</code> est définie grâce au mot-clé <code><a href="#content">content</a></code> ou grâce à une valeur de type <code><a href="#width">&lt;'width'&gt;</a></code>.</p>
+La propriété `flex-basis` est définie grâce au mot-clé [`content`](#content) ou grâce à une valeur de type [`<'width'>`](#width).
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;'width'&gt;</code></dt>
- <dd>Un longueur absolue (type {{cssxref("&lt;length&gt;")}} ou un pourcentage (type {{cssxref("&lt;percentage&gt;")}})relatif à la taille principale du conteneur flexible ou encore le mot-clé <code>auto</code>. Les valeurs négatives ne sont pas autorisées. La valeur par défaut est <code>auto</code>.</dd>
- <dt><code>content</code></dt>
- <dd>Le dimensionnement se fera de façon automatique selon le contenu de l'élément flexible. <div class="note"><p><strong>Note :</strong> Cette valeur n'était pas définie par la première version de la spécification sur les boîtes flexibles. Aussi, certaines anciennes implémentations se basant sur cette version de la spécification ne prendront pas cette valeur en charge. Un effet équivalent peut être obtenu en réglant la taille principale ({{cssxref("width")}} ou {{cssxref("height")}}) avec <code>auto</code>.</p></div>
+- `<'width'>`
+  - : Un longueur absolue (type {{cssxref("&lt;length&gt;")}} ou un pourcentage (type {{cssxref("&lt;percentage&gt;")}})relatif à la taille principale du conteneur flexible ou encore le mot-clé `auto`. Les valeurs négatives ne sont pas autorisées. La valeur par défaut est `auto`.
+- `content`
 
- <div class="note"><p><strong>Note :</strong> Voici un rapide historique pour cette propriété :
+  - : Le dimensionnement se fera de façon automatique selon le contenu de l'élément flexible.
 
- <ul>
-  <li>Au début, <code>flex-basis:auto</code> signifiait « se référer à ma propriété <code>width</code> ou <code>height</code> »</li>
-  <li>Ensuite, <code>flex-basis:auto</code> a été modifiée pour indiquer un dimensionnement automatique et le mot-clé <code>main-size</code> fut introduit pour faire référence à la propriété <code>width</code> ou <code>height</code>. L'implémentation dans Gecko a été suivie avec le bug {{bug("1032922")}}.</li>
-  <li>Cette modification a été annulée avec le bug {{bug("1093316")}} afin qu'<code>auto</code> fasse à nouveau référence à la propriété <code>height</code> ou <code>width</code>. Le mot-clé <code>content</code> a été introduit pour déclencher un dimensionnement automatique (c'est le bug {{bug("1105111")}} qui couvre cette implémentation).</li>
- </ul>
-</p></div>
- </dd>
-</dl>
+    > **Note :** Cette valeur n'était pas définie par la première version de la spécification sur les boîtes flexibles. Aussi, certaines anciennes implémentations se basant sur cette version de la spécification ne prendront pas cette valeur en charge. Un effet équivalent peut être obtenu en réglant la taille principale ({{cssxref("width")}} ou {{cssxref("height")}}) avec `auto`.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+    > **Note :** Voici un rapide historique pour cette propriété :
+    >
+    > - Au début, `flex-basis:auto` signifiait « se référer à ma propriété `width` ou `height` »
+    > - Ensuite, `flex-basis:auto` a été modifiée pour indiquer un dimensionnement automatique et le mot-clé `main-size` fut introduit pour faire référence à la propriété `width` ou `height`. L'implémentation dans Gecko a été suivie avec le bug {{bug("1032922")}}.
+    > - Cette modification a été annulée avec le bug {{bug("1093316")}} afin qu'`auto` fasse à nouveau référence à la propriété `height` ou `width`. Le mot-clé `content` a été introduit pour déclencher un dimensionnement automatique (c'est le bug {{bug("1105111")}} qui couvre cette implémentation).
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ul class="container"&gt;
-  &lt;li class="flex flex1"&gt;1: flex-basis test&lt;/li&gt;
-  &lt;li class="flex flex2"&gt;2: flex-basis test&lt;/li&gt;
-  &lt;li class="flex flex3"&gt;3: flex-basis test&lt;/li&gt;
-  &lt;li class="flex flex4"&gt;4: flex-basis test&lt;/li&gt;
-  &lt;li class="flex flex5"&gt;5: flex-basis test&lt;/li&gt;
-&lt;/ul&gt;
+```html
+<ul class="container">
+  <li class="flex flex1">1: flex-basis test</li>
+  <li class="flex flex2">2: flex-basis test</li>
+  <li class="flex flex3">3: flex-basis test</li>
+  <li class="flex flex4">4: flex-basis test</li>
+  <li class="flex flex5">5: flex-basis test</li>
+</ul>
 
-&lt;ul class="container"&gt;
-  &lt;li class="flex flex6"&gt;6: flex-basis test&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+<ul class="container">
+  <li class="flex flex6">6: flex-basis test</li>
+</ul>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.container {
+```css
+.container {
   font-family: arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -163,41 +161,26 @@ flex-basis: unset;
 .flex6:after {
   content: 'fill';
 }
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', '860', '360')}}</p>
+{{EmbedLiveSample('Exemples', '860', '360')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Spécification</th>
-   <th>État</th>
-   <th>Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Flexbox', '#propdef-flex-basis', 'flex-basis')}}</td>
-   <td>{{Spec2('CSS3 Flexbox')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                             | Commentaires         |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('CSS3 Flexbox', '#propdef-flex-basis', 'flex-basis')}} | {{Spec2('CSS3 Flexbox')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.flex-basis")}}</p>
+{{Compat("css.properties.flex-basis")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("width")}}</li>
- <li>Guide sur les boîtes flexibles : <em><a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Les concepts de bases</a></em></li>
- <li>Guide sur les boîtes flexibles : <em><a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">Contrôler les proportions des boîtes flexibles le long de l'axe principal</a></em></li>
-</ul>
+- {{cssxref("width")}}
+- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- Guide sur les boîtes flexibles : _[Contrôler les proportions des boîtes flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_

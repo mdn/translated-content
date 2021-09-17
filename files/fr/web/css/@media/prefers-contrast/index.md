@@ -7,78 +7,59 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/prefers-contrast
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}{{draft}}</div>
+{{CSSRef}}{{SeeCompatTable}}{{draft}}
 
-<p>La <a href="/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries#Caractéristiques_média_(media_features)">caractéristique média</a> <strong><code>prefers-contrast</code></strong> permet de détecter si l'utilisateur a configuré son système pour utiliser un contraste élevé.</p>
+La [caractéristique média](</fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries#Caractéristiques_média_(media_features)>) **`prefers-contrast`** permet de détecter si l'utilisateur a configuré son système pour utiliser un contraste élevé.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<dl>
- <dt><code><dfn>no-preference</dfn></code></dt>
- <dd>Cette valeur indique que l'utilisateur n'a exprimé aucune préférence particulière. La valeur de ce mot-clé est évaluée à <code>false</code> dans un contexte booléen.</dd>
- <dt><code>high</code></dt>
- <dd>Cette valeur indique que l'utilisateur a configuré son système pour avoir un contraste plus élevé.</dd>
- <dt><code><dfn>low</dfn></code></dt>
- <dd>Cette valeur indique que l'utilisateur a configuré son système afin d'avoir un niveau de contraste plus faible.</dd>
-</dl>
+- `no-preference`
+  - : Cette valeur indique que l'utilisateur n'a exprimé aucune préférence particulière. La valeur de ce mot-clé est évaluée à `false` dans un contexte booléen.
+- `high`
+  - : Cette valeur indique que l'utilisateur a configuré son système pour avoir un contraste plus élevé.
+- `low`
+  - : Cette valeur indique que l'utilisateur a configuré son système afin d'avoir un niveau de contraste plus faible.
 
-<h2 id="Préférences_utilisateur">Préférences utilisateur</h2>
+## Préférences utilisateur
 
-<p>À l'heure actuelle, aucun agent utilisateur n'implémente cette fonctionnalité bien que différents systèmes d'exploitation prennent en charge ce type de paramètre.</p>
+À l'heure actuelle, aucun agent utilisateur n'implémente cette fonctionnalité bien que différents systèmes d'exploitation prennent en charge ce type de paramètre.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Par défaut, cet exemple présente un contraste trop faible pour la lisibilité.</p>
+Par défaut, cet exemple présente un contraste trop faible pour la lisibilité.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre>&lt;div class="contrast"&gt;Une boîte avec un contraste faible.&lt;/div&gt;
-</pre>
+    <div class="contrast">Une boîte avec un contraste faible.</div>
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre>.contrast {
-  color: grey;
-}
+    .contrast {
+      color: grey;
+    }
 
-@media (prefers-contrast: high) {
-  .contrast {
-    color: black;
-  }
-}
-</pre>
+    @media (prefers-contrast: high) {
+      .contrast {
+        color: black;
+      }
+    }
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS5 Media Queries', '#descdef-media-prefers-contrast', 'prefers-contrast')}}</td>
-   <td>{{Spec2('CSS5 Media Queries')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                                                                                            | État                                     | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
+| {{SpecName('CSS5 Media Queries', '#descdef-media-prefers-contrast', 'prefers-contrast')}} | {{Spec2('CSS5 Media Queries')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.at-rules.media.prefers-contrast")}}</p>
+{{Compat("css.at-rules.media.prefers-contrast")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>La caractéristique média spécifique à Microsoft <code><a href="https://msdn.microsoft.com/library/Hh771830">-ms-high-contrast</a></code></li>
-</ul>
+- La caractéristique média spécifique à Microsoft [`-ms-high-contrast`](https://msdn.microsoft.com/library/Hh771830)
 
-<p>{{QuickLinksWithSubpages("/fr/docs/Web/CSS/@media/")}}</p>
+{{QuickLinksWithSubpages("/fr/docs/Web/CSS/@media/")}}

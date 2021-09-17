@@ -1,26 +1,24 @@
 ---
 title: ':-moz-handler-crashed'
-slug: 'Web/CSS/:-moz-handler-crashed'
+slug: Web/CSS/:-moz-handler-crashed
 tags:
   - CSS
   - Non-standard
   - Pseudo-classe
   - Reference
-translation_of: 'Web/CSS/:-moz-handler-crashed'
+translation_of: Web/CSS/:-moz-handler-crashed
 ---
-<div>{{Non-standard_header}}{{CSSRef}}{{gecko_minversion_header("2.0")}}</div>
+{{Non-standard_header}}{{CSSRef}}{{gecko_minversion_header("2.0")}}
 
-<p>La pseudo-classe <strong><code>:-moz-handler-crashed</code></strong> permet de cibler un élément qui ne peut pas être affiché car le plugin sensé le dessiner a planté.</p>
+La pseudo-classe **`:-moz-handler-crashed`** permet de cibler un élément qui ne peut pas être affiché car le plugin sensé le dessiner a planté.
 
-<p>Cette pseudo-classe est principalement destinée aux développeurs de thèmes.</p>
+Cette pseudo-classe est principalement destinée aux développeurs de thèmes.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.}</p>
+Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref(":-moz-handler-blocked")}}</li>
- <li>{{cssxref(":-moz-handler-disabled")}}</li>
-</ul>
+- {{cssxref(":-moz-handler-blocked")}}
+- {{cssxref(":-moz-handler-disabled")}}

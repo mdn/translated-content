@@ -8,53 +8,50 @@ tags:
   - Type
 translation_of: Web/CSS/filter-function/drop-shadow()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La fonction CSS <strong><code>drop-shadow()</code></strong> permet d'appliquer une ombre portée sur une image. Le résultat obtenu par cette fonction est une valeur {{cssxref("&lt;filter-function&gt;")}}.</p>
+La fonction CSS **`drop-shadow()`** permet d'appliquer une ombre portée sur une image. Le résultat obtenu par cette fonction est une valeur {{cssxref("&lt;filter-function&gt;")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/function-drop-shadow.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-drop-shadow.html")}}
 
-<p>En pratique, une ombre portée correspond à une version floutée et décalée du masque alpha de l'image, dessiné dans une couleur donnée et fusionné sous l'image.</p>
+En pratique, une ombre portée correspond à une version floutée et décalée du masque alpha de l'image, dessiné dans une couleur donnée et fusionné sous l'image.
 
-<div class="note">
-<p><strong>Note :</strong> Cette fonction s'apparente à la propriété {{cssxref("box-shadow")}}. La propriété <code>box-shadow</code> permet de créer une ombre rectangulaire sous <strong>la boîte entière</strong> d'un élément. En revanche, la fonction <code>drop-shadow()</code> permet de créer un ombre qui épouse la forme (le canal alpha) de <strong>l'image même</strong>.</p>
-</div>
+> **Note :** Cette fonction s'apparente à la propriété {{cssxref("box-shadow")}}. La propriété `box-shadow` permet de créer une ombre rectangulaire sous **la boîte entière** d'un élément. En revanche, la fonction `drop-shadow()` permet de créer un ombre qui épouse la forme (le canal alpha) de **l'image même**.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">drop-shadow(<em>décalage-x</em>, <em>décalage-y</em>, <em>rayon-flou</em>, <em>rayon-étalement</em>, <em>couleur</em>)</pre>
+    drop-shadow(décalage-x, décalage-y, rayon-flou, rayon-étalement, couleur)
 
-<p>La fonction <code>drop-shadow()</code> accepte un paramètre de type <code>&lt;shadow&gt;</code> (défini avec la propriété {{cssxref("box-shadow")}}), mais où le mot-clé <code>inset</code> n'est pas autorisé.</p>
+La fonction `drop-shadow()` accepte un paramètre de type `<shadow>` (défini avec la propriété {{cssxref("box-shadow")}}), mais où le mot-clé `inset` n'est pas autorisé.
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>décalage-x</code> <code>décalage-y</code></dt>
- <dd>Deux longueurs ({{cssxref("&lt;length&gt;")}}) qui déterminent le décalage de l'ombre sous l'image. <code>décalage-x</code> indique la distance horizontale (les valeurs négatives décalent l'ombre vers la gauche et les valeurs positives la décalent vers la droite). <code>décalage-y</code> indique la distance verticale (les valeurs négatives décalent l'ombre vers le haut et les valeurs positives vers le bas). Si les deux valeurs sont égales à <code>0</code>, l'ombre est directement placée sous l'image.</dd>
- <dt><code>rayon-flou</code> {{optional_inline}}</dt>
- <dd>Une longueur ({{cssxref("&lt;length&gt;")}}) qui représente le rayon du flou. Plus la valeur est élevée, plus l'ombre sera grande et floue. La valeur par défaut est <code>0</code> ce qui correspond à un contour net, sans flou. Il n'est pas possible d'utiliser des valeurs négatives</dd>
- <dt><code>rayon-étalement</code>{{optional_inline}}</dt>
- <dd>Le rayon d'étalement de l'ombre, défini sous la forme d'une longueur ({{cssxref("&lt;length&gt;")}}). Les valeurs positives permettent d'avoir une ombre plus grande et plus étendue et les valeurs négatives permettent de réduire la zone d'ombre. La valeur par défaut est <code>0</code> : l'ombre a alors la même taille que l'image.
- <div class="warning">
-   <p><strong>Attention :</strong> Chrome et Safari (basés sur WebKit) ne prennent pas en charge ce paramètre. S'il est utilisé, l'effet ne sera pas applique du tout.</p></div>
- </dd>
- <dt><code>couleur</code>{{optional_inline}}</dt>
- <dd>La couleur de l'ombre, indiquée sous la forme d'une valeur {{cssxref("&lt;color&gt;")}}. La valeur par défaut dépend du navigateur. Pour Firefox et Internet Explorer, c'est la valeur de la propriété {{cssxref("color")}} qui sera utilisée alors que les navigateurs basés sur WebKit utiliseront une ombre transparente par défaut.</dd>
-</dl>
+- `décalage-x` `décalage-y`
+  - : Deux longueurs ({{cssxref("&lt;length&gt;")}}) qui déterminent le décalage de l'ombre sous l'image. `décalage-x` indique la distance horizontale (les valeurs négatives décalent l'ombre vers la gauche et les valeurs positives la décalent vers la droite). `décalage-y` indique la distance verticale (les valeurs négatives décalent l'ombre vers le haut et les valeurs positives vers le bas). Si les deux valeurs sont égales à `0`, l'ombre est directement placée sous l'image.
+- `rayon-flou` {{optional_inline}}
+  - : Une longueur ({{cssxref("&lt;length&gt;")}}) qui représente le rayon du flou. Plus la valeur est élevée, plus l'ombre sera grande et floue. La valeur par défaut est `0` ce qui correspond à un contour net, sans flou. Il n'est pas possible d'utiliser des valeurs négatives
+- `rayon-étalement`{{optional_inline}}
 
-<h2 id="Exemples">Exemples</h2>
+  - : Le rayon d'étalement de l'ombre, défini sous la forme d'une longueur ({{cssxref("&lt;length&gt;")}}). Les valeurs positives permettent d'avoir une ombre plus grande et plus étendue et les valeurs négatives permettent de réduire la zone d'ombre. La valeur par défaut est `0` : l'ombre a alors la même taille que l'image.
 
-<pre class="brush: css">/* Une ombre noire avec un flou de 10px de rayon. */
+    > **Attention :** Chrome et Safari (basés sur WebKit) ne prennent pas en charge ce paramètre. S'il est utilisé, l'effet ne sera pas applique du tout.
+
+- `couleur`{{optional_inline}}
+  - : La couleur de l'ombre, indiquée sous la forme d'une valeur {{cssxref("&lt;color&gt;")}}. La valeur par défaut dépend du navigateur. Pour Firefox et Internet Explorer, c'est la valeur de la propriété {{cssxref("color")}} qui sera utilisée alors que les navigateurs basés sur WebKit utiliseront une ombre transparente par défaut.
+
+## Exemples
+
+```css
+/* Une ombre noire avec un flou de 10px de rayon. */
 drop-shadow(16px 16px 10px black)
 
 /* Une ombre rouge avec un flou de 1rem de rayon et de .3rem d'étalement */
 /* Attention, à l'heure actuelle, ce type d'ombre n'est pas pris en charge */
 /* par l'ensemble des navigateurs */
-drop-shadow(.5rem .5rem 1rem .3rem #e23)</pre>
+drop-shadow(.5rem .5rem 1rem .3rem #e23)
+```
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("&lt;filter-function&gt;")}}</li>
- <li>La propriété CSS {{cssxref("box-shadow")}}</li>
-</ul>
+- {{cssxref("&lt;filter-function&gt;")}}
+- La propriété CSS {{cssxref("box-shadow")}}

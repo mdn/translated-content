@@ -8,16 +8,15 @@ tags:
   - Reference
 translation_of: Web/CSS/image-orientation
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>image-orientation</code></strong> décrit la façon d'obtenir l'orientation correcte d'une image quelle que soit la disposition du document. Cette propriété ne doit pas être utilisée afin de tourner l'image pour d'autres cas, si besoin, on pourra utiliser la propriété {{cssxref("transform")}} avec la fonction <code>rotate</code>.</p>
+La propriété **`image-orientation`** décrit la façon d'obtenir l'orientation correcte d'une image quelle que soit la disposition du document. Cette propriété ne doit pas être utilisée afin de tourner l'image pour d'autres cas, si besoin, on pourra utiliser la propriété {{cssxref("transform")}} avec la fonction `rotate`.
 
-<div class="warning">
-<p><strong>Attention :</strong> Cette propriété sera vraisemblablement dépréciée prochainement. Les fonctionnalités associées deviendront des propriétés de l'élément {{HTMLElement("img")}} et/ou de l'élément {{HTMLElement("picture")}} (excepté peut-être <code>from-image</code>).</p>
-</div>
+> **Attention :** Cette propriété sera vraisemblablement dépréciée prochainement. Les fonctionnalités associées deviendront des propriétés de l'élément {{HTMLElement("img")}} et/ou de l'élément {{HTMLElement("picture")}} (excepté peut-être `from-image`).
 
-<pre class="brush:css no-line-numbers">/* Valeurs d'angle */
-/* Type &lt;angle&gt;    */
+```css
+/* Valeurs d'angle */
+/* Type <angle>    */
 image-orientation: 0deg;
 image-orientation: 6.4deg;     /* Arrondie à 0deg */
 image-orientation: -90deg;     /* Équivalent à 270deg, la
@@ -37,98 +36,80 @@ image-orientation: 90deg flip; /* Rotation de 90deg, puis
 image-orientation: inherit;
 image-orientation: initial;
 image-orientation: unset;
-</pre>
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>from-image</code></dt>
- <dd>Les informations EXIF contenues dans l'image seront utilisées pour tourner l'image de façon appropriée.</dd>
- <dt><code>&lt;angle&gt;</code></dt>
- <dd>Une valeur de type {{cssxref("&lt;angle&gt;")}} qui indique la rotation à appliquer à l'image. Cette valeur est arrondie au quart de tour le plus proche.</dd>
- <dt><code>flip</code></dt>
- <dd>L'image est retournée horizontalement (comme une réflexion) après que la rotation d'angle indiqué par le premier paramètre ait été appliquée. Si aucun argument d'angle n'a été fourni, la valeur <code>0deg</code> sera utilisée.</dd>
-</dl>
+- `from-image`
+  - : Les informations EXIF contenues dans l'image seront utilisées pour tourner l'image de façon appropriée.
+- `<angle>`
+  - : Une valeur de type {{cssxref("&lt;angle&gt;")}} qui indique la rotation à appliquer à l'image. Cette valeur est arrondie au quart de tour le plus proche.
+- `flip`
+  - : L'image est retournée horizontalement (comme une réflexion) après que la rotation d'angle indiqué par le premier paramètre ait été appliquée. Si aucun argument d'angle n'a été fourni, la valeur `0deg` sera utilisée.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Notes_d'utilisation">Notes d'utilisation</h2>
+## Notes d'utilisation
 
-<p>Cette propriété n'est pas conçue pour appliquer une rotation arbitraire sur une image. Elle permet uniquement de corriger un orientation erronée. C'est pour cette raison que la valeur est arrondie au quart de tour le plus proche.</p>
+Cette propriété n'est pas conçue pour appliquer une rotation arbitraire sur une image. Elle permet uniquement de corriger un orientation erronée. C'est pour cette raison que la valeur est arrondie au quart de tour le plus proche.
 
-<p>De la même façon, cette propriété n'est pas conçue pour gérer le passage de paysage en portrait. <code>image-orientation</code> ne modifie que les images, il faudrait apporter les modifications au niveau de la disposition.</p>
+De la même façon, cette propriété n'est pas conçue pour gérer le passage de paysage en portrait. `image-orientation` ne modifie que les images, il faudrait apporter les modifications au niveau de la disposition.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#image {
+```css
+#image {
   /* Peut-être modifiée dans l'exemple */
   image-orientation: flip;
 }
-</pre>
+```
 
-<pre class="brush: html hidden">&lt;img id="image" src="https://mdn.mozillademos.org/files/12668/MDN.svg"
-    alt="Orientation déterminée à partir de l'image"/&gt;
-&lt;select id="imageOrientation"&gt;
-  &lt;option value="from-image"&gt;from-image&lt;/option&gt;
-  &lt;option value="90deg"&gt;90deg&lt;/option&gt;
-  &lt;option value="flip" selected&gt;flip&lt;/option&gt;
-&lt;/select&gt;
-</pre>
+```html hidden
+<img id="image" src="https://mdn.mozillademos.org/files/12668/MDN.svg"
+    alt="Orientation déterminée à partir de l'image"/>
+<select id="imageOrientation">
+  <option value="from-image">from-image</option>
+  <option value="90deg">90deg</option>
+  <option value="flip" selected>flip</option>
+</select>
+```
 
-<pre class="brush: js hidden">var imageOrientation = document.getElementById("imageOrientation");
+```js hidden
+var imageOrientation = document.getElementById("imageOrientation");
 imageOrientation.addEventListener("change", function (evt) {
   document.getElementById("image").style.imageOrientation = evt.target.value;
 });
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", "100%", 240)}}</p>
+{{EmbedLiveSample("Exemples", "100%", 240)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Images', '#image-orientation', 'image-orientation')}}</td>
-   <td>{{Spec2('CSS4 Images')}}</td>
-   <td>Ajout des mots-clés <code>from-image</code> et <code>flip</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Images', '#image-orientation', 'image-orientation')}}</td>
-   <td>{{Spec2('CSS3 Images')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                             | Commentaires                                |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------- |
+| {{SpecName('CSS4 Images', '#image-orientation', 'image-orientation')}} | {{Spec2('CSS4 Images')}} | Ajout des mots-clés `from-image` et `flip`. |
+| {{SpecName('CSS3 Images', '#image-orientation', 'image-orientation')}} | {{Spec2('CSS3 Images')}} | Définition initiale.                        |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.image-orientation")}}</p>
+{{Compat("css.properties.image-orientation")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("object-fit")}}</li>
- <li>{{cssxref("object-position")}}</li>
- <li>{{cssxref("image-orientation")}}</li>
- <li>{{cssxref("image-rendering")}}</li>
- <li>{{cssxref("image-resolution")}}</li>
- <li>{{cssxref("transform")}}</li>
- <li>{{cssxref("rotate")}}</li>
-</ul>
+- {{cssxref("object-fit")}}
+- {{cssxref("object-position")}}
+- {{cssxref("image-orientation")}}
+- {{cssxref("image-rendering")}}
+- {{cssxref("image-resolution")}}
+- {{cssxref("transform")}}
+- {{cssxref("rotate")}}

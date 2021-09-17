@@ -8,31 +8,29 @@ tags:
   - Reference
 translation_of: Web/CSS/filter-function/blur()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La fonction CSS <strong><code>blur()</code></strong> permet d'appliquer <a href="https://en.wikipedia.org/wiki/Gaussian_blur">une flou gaussien</a> sur l'image d'entrée. Le résultat de cette fonction est une valeur {{cssxref("&lt;filter-function&gt;")}}.</p>
+La fonction CSS **`blur()`** permet d'appliquer [une flou gaussien](https://en.wikipedia.org/wiki/Gaussian_blur) sur l'image d'entrée. Le résultat de cette fonction est une valeur {{cssxref("&lt;filter-function&gt;")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/function-blur.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-blur.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">blur(<em>rayon</em>)</pre>
+    blur(rayon)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>rayon</code></dt>
- <dd>Le rayon d'application du flou, défini par une longueur CSS ({{cssxref("&lt;length&gt;")}}). Cela définit l'écart-type de la fonction gaussienne appliquée (c'est-à-dire le nombre de pixels qui se mélangeront). Ainsi, plus la valeur est grande, plus le flou sera prononcé. Si on utilise la longueur nulle <code>0</code>, l'image ne sera pas modifiée. La valeur utilisée par défaut lors d'une interpolation est <code>0</code>.</dd>
-</dl>
+- `rayon`
+  - : Le rayon d'application du flou, défini par une longueur CSS ({{cssxref("&lt;length&gt;")}}). Cela définit l'écart-type de la fonction gaussienne appliquée (c'est-à-dire le nombre de pixels qui se mélangeront). Ainsi, plus la valeur est grande, plus le flou sera prononcé. Si on utilise la longueur nulle `0`, l'image ne sera pas modifiée. La valeur utilisée par défaut lors d'une interpolation est `0`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: css">blur(0);        /* Aucun effet */
+```css
+blur(0);        /* Aucun effet */
 blur(8px);      /* Un flou avec un rayon de 8px */
-blur(1.17rem);  /* Un flou avec un rayon de 1.17rem */</pre>
+blur(1.17rem);  /* Un flou avec un rayon de 1.17rem */
+```
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("&lt;filter-function&gt;")}}</li>
-</ul>
+- {{cssxref("&lt;filter-function&gt;")}}

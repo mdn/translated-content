@@ -7,81 +7,60 @@ tags:
   - Reference
 translation_of: Web/CSS/inherit
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Le mot-clé <strong><code>inherit</code></strong> est une valeur qui peut être utilisée pour qu'une propriété prenne <a href="/fr/docs/Web/CSS/Valeur_calculée">la valeur calculée</a> de la propriété pour l'élément parent. Cette valeur peut être utilisée sur n'importe quelle propriété CSS, y compris sur la propriété raccourcie {{cssxref("all")}}.</p>
+Le mot-clé **`inherit`** est une valeur qui peut être utilisée pour qu'une propriété prenne [la valeur calculée](/fr/docs/Web/CSS/Valeur_calculée) de la propriété pour l'élément parent. Cette valeur peut être utilisée sur n'importe quelle propriété CSS, y compris sur la propriété raccourcie {{cssxref("all")}}.
 
-<p>Pour <a href="/fr/docs/Web/CSS/Héritage#Propriétés_héritées" title="en/CSS/inheritance">les propriétés héritées</a>, cela accentue le comportement par défaut et ce mot-clé n'est nécessaire que pour surcharger une autre règle.</p>
+Pour [les propriétés héritées](/fr/docs/Web/CSS/Héritage#Propriétés_héritées "en/CSS/inheritance"), cela accentue le comportement par défaut et ce mot-clé n'est nécessaire que pour surcharger une autre règle.
 
-<p>Pour <a href="/fr/docs/Web/CSS/Héritage#Propriétés_non_héritées" title="en/CSS/inheritance">les propriétés non-héritées</a>, cela permettra d'obtenir le comportement indiqué. Ce comportement a peu d'intérêt dans ces cas et mieux vaudra utiliser {{cssxref("initial")}} ou {{cssxref("unset")}}.</p>
+Pour [les propriétés non-héritées](/fr/docs/Web/CSS/Héritage#Propriétés_non_héritées "en/CSS/inheritance"), cela permettra d'obtenir le comportement indiqué. Ce comportement a peu d'intérêt dans ces cas et mieux vaudra utiliser {{cssxref("initial")}} ou {{cssxref("unset")}}.
 
-<p>L'héritage provient toujours de l'élément parent par rapport à l'arbre du document, même si cet élément n'est pas le bloc englobant.</p>
+L'héritage provient toujours de l'élément parent par rapport à l'arbre du document, même si cet élément n'est pas le bloc englobant.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   color: green;
 }
 
 .exemple {
   color: inherit;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Alice remarqua, avec quelque surprise, qu’en
+```html
+<p>Alice remarqua, avec quelque surprise, qu’en
    tombant sur le plancher les cailloux se changeaient
    en petits gâteaux, et une brillante idée lui
-   traversa l’esprit.&lt;/p&gt;
-&lt;p class="exemple"&gt;Elle avala un des gâteaux, et s’aperçut avec
-   joie qu’elle diminuait rapidement&lt;/p&gt;
-</pre>
+   traversa l’esprit.</p>
+<p class="exemple">Elle avala un des gâteaux, et s’aperçut avec
+   joie qu’elle diminuait rapidement</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Spécification</th>
-   <th>État</th>
-   <th>Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Cascade', '#inherit', 'inherit')}}</td>
-   <td>{{Spec2('CSS4 Cascade')}}</td>
-   <td>Aucun changement.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Values', "#common-keywords", "inherit")}}</td>
-   <td>{{Spec2('CSS3 Values')}}</td>
-   <td>Aucun changement {{SpecName('CSS2.1')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', "cascade.html#value-def-inherit", "inherit")}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                             | Commentaires                                  |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------- |
+| {{SpecName('CSS4 Cascade', '#inherit', 'inherit')}}                     | {{Spec2('CSS4 Cascade')}} | Aucun changement.                             |
+| {{SpecName('CSS3 Values', "#common-keywords", "inherit")}}             | {{Spec2('CSS3 Values')}} | Aucun changement {{SpecName('CSS2.1')}} |
+| {{SpecName('CSS2.1', "cascade.html#value-def-inherit", "inherit")}} | {{Spec2('CSS2.1')}}         | Définition initiale.                          |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.types.global_keywords.inherit")}}</p>
+{{Compat("css.types.global_keywords.inherit")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/Héritage">L'héritage</a></li>
- <li>La propriété {{cssxref("all")}}</li>
- <li>Les propriétés globales {{cssxref("initial")}}, {{cssxref("unset")}} et {{cssxref("revert")}}.</li>
- <li>La propriété {{cssxref("all")}} permet de réinitialiser l'ensemble des propriétés avec leurs valeurs initiales, héritées, annulées ou indéfinies.</li>
-</ul>
+- [L'héritage](/fr/docs/Web/CSS/Héritage)
+- La propriété {{cssxref("all")}}
+- Les propriétés globales {{cssxref("initial")}}, {{cssxref("unset")}} et {{cssxref("revert")}}.
+- La propriété {{cssxref("all")}} permet de réinitialiser l'ensemble des propriétés avec leurs valeurs initiales, héritées, annulées ou indéfinies.

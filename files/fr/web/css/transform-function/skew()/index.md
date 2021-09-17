@@ -8,63 +8,104 @@ tags:
   - Transformations CSS
 translation_of: Web/CSS/transform-function/skew()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La fonction <strong><code>skew()</code></strong> permet d'opérer une distorsion en étirant chaque point de l'élément d'un certain angle dans une direction du plan. Pour cela, on augmente l'ordonnée d'un élément d'une valeur proportionnelle à l'angle donné et à la distance de l'origine. Plus le point est éloigné de l'origine, plus le décalage obtenu sera important.</p>
+La fonction **`skew()`** permet d'opérer une distorsion en étirant chaque point de l'élément d'un certain angle dans une direction du plan. Pour cela, on augmente l'ordonnée d'un élément d'une valeur proportionnelle à l'angle donné et à la distance de l'origine. Plus le point est éloigné de l'origine, plus le décalage obtenu sera important.
 
-<div>{{EmbedInteractiveExample("pages/css/function-skew.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-skew.html")}}
 
-<p>La valeur obtenue par cette fonction est de type {{cssxref("&lt;transform-function&gt;")}}.</p>
+La valeur obtenue par cette fonction est de type {{cssxref("&lt;transform-function&gt;")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">skew(<em>ax</em>)
-skew(<em>ax</em>, <em>ay</em>)
-</pre>
+    skew(ax)
+    skew(ax, ay)
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>ax</code></dt>
- <dd>Une valeur de type {{cssxref("&lt;angle&gt;")}} qui représente l'angle avec lequel appliquer la distorsion selon l'axe des abscisses (axe horizontal).</dd>
- <dt><code>ay</code></dt>
- <dd>Une valeur de type {{cssxref("&lt;angle&gt;")}} qui représente l'angle avec lequel appliquer la distorsion selon l'axe des ordonnées (axe vertical).</dd>
-</dl>
+- `ax`
+  - : Une valeur de type {{cssxref("&lt;angle&gt;")}} qui représente l'angle avec lequel appliquer la distorsion selon l'axe des abscisses (axe horizontal).
+- `ay`
+  - : Une valeur de type {{cssxref("&lt;angle&gt;")}} qui représente l'angle avec lequel appliquer la distorsion selon l'axe des ordonnées (axe vertical).
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-   <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-   <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-   <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>tan(ax)</mtd></mtr><mtr>tan(ay)<mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-   <td><math> <mfenced><mtable><mtr>1<mtd>tan(ax)</mtd><mtd>0</mtd></mtr><mtr>tan(ay)<mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr><mtr></mtr></mtable> </mfenced> </math></td>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>tan(ax)</mtd><mtd>0</mtd></mtr><mtr>tan(ay)<mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>tan(ax)</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr>tan(ay)<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-  </tr>
-  <tr>
-   <td><code>[1 tan(ay) tan(ax) 1 0 0]</code></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
+      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
+      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
+      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>1<mtd>tan(ax)</mtd></mtr
+              ><mtr>tan(ay)<mtd>1</mtd></mtr></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td>
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>1<mtd>tan(ax)</mtd><mtd>0</mtd></mtr
+              ><mtr>tan(ay)<mtd>1</mtd><mtd>0</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
+              ><mtr></mtr></mtable></mfenced
+        ></math>
+      </td>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>1<mtd>tan(ax)</mtd><mtd>0</mtd></mtr
+              ><mtr>tan(ay)<mtd>1</mtd><mtd>0</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>1<mtd>tan(ax)</mtd><mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr>tan(ay)<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
+              ><mtr
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+    </tr>
+    <tr>
+      <td><code>[1 tan(ay) tan(ax) 1 0 0]</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utiliser_une_distorsion_horizontale">Utiliser une distorsion horizontale</h3>
+### Utiliser une distorsion horizontale
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;toto&lt;/p&gt;
-&lt;p class="transformation"&gt;truc&lt;/p&gt;</pre>
+```html
+<p>toto</p>
+<p class="transformation">truc</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   width: 50px;
   height: 50px;
   background-color: teal;
@@ -75,22 +116,25 @@ skew(<em>ax</em>, <em>ay</em>)
   transform: skew(10deg);
   background-color: blue;
 }
-</pre>
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Utiliser_une_distorsion_horizontale","100%","200")}}</p>
+{{EmbedLiveSample("Utiliser_une_distorsion_horizontale","100%","200")}}
 
-<h3 id="Utiliser_deux_angles">Utiliser deux angles</h3>
+### Utiliser deux angles
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;toto&lt;/p&gt;
-&lt;p class="transformation"&gt;truc&lt;/p&gt;</pre>
+```html
+<p>toto</p>
+<p class="transformation">truc</p>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   width: 50px;
   height: 50px;
   background-color: teal;
@@ -100,38 +144,23 @@ skew(<em>ax</em>, <em>ay</em>)
   transform: skew(10deg, 10deg);
   background-color: blue;
 }
-</pre>
+```
 
-<h4 id="Résultat_2">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Utiliser_deux_angles","100%","200")}}</p>
+{{EmbedLiveSample("Utiliser_deux_angles","100%","200")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Transforms", "#funcdef-transform-skew", "skew()")}}</td>
-   <td>{{Spec2("CSS3 Transforms")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                                 | Commentaires         |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName("CSS3 Transforms", "#funcdef-transform-skew", "skew()")}} | {{Spec2("CSS3 Transforms")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>Voir la page sur le type de donnée <code><a href="/fr/docs/Web/CSS/transform-function#compatibilité_des_navigateurs">&lt;transform-function&gt;</a></code> pour les informations de compatibilité associées.</p>
+Voir la page sur le type de donnée [`<transform-function>`](/fr/docs/Web/CSS/transform-function#compatibilité_des_navigateurs) pour les informations de compatibilité associées.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("transform")}}</li>
- <li>{{cssxref("&lt;transform-function&gt;")}}</li>
-</ul>
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}

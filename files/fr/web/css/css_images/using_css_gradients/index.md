@@ -8,176 +8,198 @@ tags:
 translation_of: Web/CSS/CSS_Images/Using_CSS_gradients
 original_slug: Web/CSS/Utilisation_de_dégradés_CSS
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Les <strong>dégradés CSS</strong> sont représentés par le type de donnée {{cssxref("&lt;gradient&gt;")}} qui est un sous-ensemble du type {{cssxref("&lt;image&gt;")}}. L'utilisation de dégradés CSS permet d'afficher des transitions douces entre deux couleurs ou plus. Il existe trois sortes de degradés : les dégradés linéaires (cf. {{cssxref("linear-gradient")}}, les dégradés radiaux (cf. {{cssxref("radial-gradient")}}) et les dégradés coniques (cf. {{cssxref("conic-gradient")}}).</p>
+Les **dégradés CSS** sont représentés par le type de donnée {{cssxref("&lt;gradient&gt;")}} qui est un sous-ensemble du type {{cssxref("&lt;image&gt;")}}. L'utilisation de dégradés CSS permet d'afficher des transitions douces entre deux couleurs ou plus. Il existe trois sortes de degradés : les dégradés linéaires (cf. {{cssxref("linear-gradient")}}, les dégradés radiaux (cf. {{cssxref("radial-gradient")}}) et les dégradés coniques (cf. {{cssxref("conic-gradient")}}).
 
-<p>Les dégradés peuvent être répétés avec {{cssxref("repeating-linear-gradient")}}, {{cssxref("repeating-radial-gradient")}} et {{cssxref("repeating-conic-gradient")}}.</p>
+Les dégradés peuvent être répétés avec {{cssxref("repeating-linear-gradient")}}, {{cssxref("repeating-radial-gradient")}} et {{cssxref("repeating-conic-gradient")}}.
 
-<p>Les dégradés peuvent être utilisés à chaque endroit où on peut utiliser une image (par exemple les arrière-plans). En évitant d'utiliser des images pour ces effets, le temps de téléchargement et la bande passante utilisée sont réduits. En outre, comme le dégradé est généré par le navigateur, les objets concernés se comporteront mieux en cas de zoom et votre mise en page peut être ajustée de manière plus flexible.</p>
+Les dégradés peuvent être utilisés à chaque endroit où on peut utiliser une image (par exemple les arrière-plans). En évitant d'utiliser des images pour ces effets, le temps de téléchargement et la bande passante utilisée sont réduits. En outre, comme le dégradé est généré par le navigateur, les objets concernés se comporteront mieux en cas de zoom et votre mise en page peut être ajustée de manière plus flexible.
 
-<p>Dans cet article, nous verrons d'abord les dégradés linéaires et détaillerons les fonctionnalités associées avant de passer aux dégradés radiaux, coniques et à leurs formes répétées.</p>
+Dans cet article, nous verrons d'abord les dégradés linéaires et détaillerons les fonctionnalités associées avant de passer aux dégradés radiaux, coniques et à leurs formes répétées.
 
-<h2 id="Dégradés_linéaires">Dégradés linéaires</h2>
+## Dégradés linéaires
 
-<p>Pour créer un dégradé linéaire, définissez un point de départ et une direction (sous la forme d'un angle) selon laquelle l'effet de dégradé sera appliqué.</p>
+Pour créer un dégradé linéaire, définissez un point de départ et une direction (sous la forme d'un angle) selon laquelle l'effet de dégradé sera appliqué.
 
-<h3 id="Dégradés_linéaires_simples">Dégradés linéaires simples</h3>
+### Dégradés linéaires simples
 
-<p>Voici un dégradé linéaire qui commence au centre (horizontalement) et en haut (verticalement), du bleu vers le blanc.</p>
+Voici un dégradé linéaire qui commence au centre (horizontalement) et en haut (verticalement), du bleu vers le blanc.
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.linear-gradient {
+```css
+.linear-gradient {
   background: linear-gradient(blue, white);
 }
 
 div {
   width: 120px;
   height: 120px;
-}</pre>
+}
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="linear-gradient"&gt;&lt;/div&gt;</pre>
+```html
+<div class="linear-gradient"></div>
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Dégradés_linéaires_simples",120,120)}}</p>
+{{EmbedLiveSample("Dégradés_linéaires_simples",120,120)}}
 
-<h3 id="Appliquer_un_dégradé_de_gauche_à_droite">Appliquer un dégradé de gauche à droite</h3>
+### Appliquer un dégradé de gauche à droite
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.linear-gradient {
+```css
+.linear-gradient {
   background: linear-gradient(to right, blue, white);
 }
 
 div {
   width: 120px;
   height: 120px;
-}</pre>
+}
+```
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="linear-gradient"&gt;&lt;/div&gt;
-</pre>
+```html
+<div class="linear-gradient"></div>
+```
 
-<h4 id="Résultat_2">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Appliquer_un_dégradé_de_gauche_à_droite",120,120)}}</p>
+{{EmbedLiveSample("Appliquer_un_dégradé_de_gauche_à_droite",120,120)}}
 
-<h3 id="Appliquer_un_dégradé_en_diagonale">Appliquer un dégradé en diagonale</h3>
+### Appliquer un dégradé en diagonale
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.linear-gradient {
+```css
+.linear-gradient {
   background: linear-gradient(to bottom right, blue, white);
 }
 
 div {
   width: 200px;
   height: 100px;
-}</pre>
+}
+```
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="linear-gradient"&gt;&lt;/div&gt;
-</pre>
+```html
+<div class="linear-gradient"></div>
+```
 
-<h4 id="Résultat_3">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Appliquer_un_dégradé_en_diagonale",200,100)}}</p>
+{{EmbedLiveSample("Appliquer_un_dégradé_en_diagonale",200,100)}}
 
-<h3 id="Utilisation_d’angles">Utilisation d’angles</h3>
+### Utilisation d’angles
 
-<p>Si aucun angle n'est spécifié, il sera déterminé automatiquement à partir de la position de départ. Si vous désirez un meilleur contrôle sur la direction du dégradé, vous pouvez définir cet angle précisément.</p>
+Si aucun angle n'est spécifié, il sera déterminé automatiquement à partir de la position de départ. Si vous désirez un meilleur contrôle sur la direction du dégradé, vous pouvez définir cet angle précisément.
 
-<h4 id="CSS_4">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.linear-gradient {
+```css
+.linear-gradient {
   background: linear-gradient(70deg, blue, pink);
 }
 
 div {
   width: 120px;
   height: 120px;
-}</pre>
+}
+```
 
-<h4 id="HTML_4">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="linear-gradient"&gt;&lt;/div&gt;
-</pre>
+```html
+<div class="linear-gradient"></div>
+```
 
-<h4 id="Résultat_4">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Utilisation_d’angles",120,120)}}</p>
+{{EmbedLiveSample("Utilisation_d’angles",120,120)}}
 
-<p>L'angle est spécifié entre une ligne verticale et la ligne de dégradé, dans le sens inverse des aiguilles d'une montre. Autrement dit, <code>0deg</code> crée un dégradé vertical de bas en haut, tandis que <code>90deg</code> génère un dégradé horizontal de la gauche vers la droite :</p>
+L'angle est spécifié entre une ligne verticale et la ligne de dégradé, dans le sens inverse des aiguilles d'une montre. Autrement dit, `0deg` crée un dégradé vertical de bas en haut, tandis que `90deg` génère un dégradé horizontal de la gauche vers la droite :
 
-<p><img src="linear_red_angles.png"></p>
+![](linear_red_angles.png)
 
-<pre class="brush: css">background: linear-gradient(&lt;angle&gt;, red, white);</pre>
+```css
+background: linear-gradient(<angle>, red, white);
+```
 
-<h2 id="Créer_des_effets_et_manipuler_les_couleurs">Créer des effets et manipuler les couleurs</h2>
+## Créer des effets et manipuler les couleurs
 
-<h3 id="Utiliser_plus_de_deux_couleurs">Utiliser plus de deux couleurs</h3>
+### Utiliser plus de deux couleurs
 
-<p>Les dégradés CSS ne sont pas limités à deux couleurs, il est possible d'en utiliser autant que souhaité :</p>
+Les dégradés CSS ne sont pas limités à deux couleurs, il est possible d'en utiliser autant que souhaité :
 
-<h4 id="CSS_5">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.linear-gradient {
+```css
+.linear-gradient {
   background: linear-gradient(red, yellow, blue, orange);
 }
 
 div {
   width: 120px;
   height: 120px;
-}</pre>
+}
+```
 
-<h4 id="HTML_5">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="linear-gradient"&gt;&lt;/div&gt;
-</pre>
+```html
+<div class="linear-gradient"></div>
+```
 
-<h4 id="Résultat_5">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Utiliser_plus_de_deux_couleurs",120,120)}}</p>
+{{EmbedLiveSample("Utiliser_plus_de_deux_couleurs",120,120)}}
 
-<h3 id="Arrêts_de_couleurs">Arrêts de couleurs</h3>
+### Arrêts de couleurs
 
-<p>Les arrêts de couleurs sont des points sur la ligne de dégradé qui doivent avoir une couleur précise. Leur emplacement peut être spécifié sous la forme d'un pourcentage de la longueur de la ligne, ou d'une longueur absolue. Vous pouvez en spécifier autant que vous voulez pour obtenir l'effet désiré. Si vous spécifiez un pourcentage, <code>0%</code> indique le point de départ, et <code>100%</code> le point d'arrivée ; il est cependant possible d'utiliser des valeurs en dehors de cet intervalle si nécessaire pour obtenir l'effet désiré.</p>
+Les arrêts de couleurs sont des points sur la ligne de dégradé qui doivent avoir une couleur précise. Leur emplacement peut être spécifié sous la forme d'un pourcentage de la longueur de la ligne, ou d'une longueur absolue. Vous pouvez en spécifier autant que vous voulez pour obtenir l'effet désiré. Si vous spécifiez un pourcentage, `0%` indique le point de départ, et `100%` le point d'arrivée ; il est cependant possible d'utiliser des valeurs en dehors de cet intervalle si nécessaire pour obtenir l'effet désiré.
 
-<h4 id="CSS_6">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.linear-gradient {
+```css
+.linear-gradient {
   background: linear-gradient(to left, lime, lime 28px, red 77%, cyan);
 }
 
 div {
   width: 120px;
   height: 120px;
-}</pre>
+}
+```
 
-<h4 id="HTML_6">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="linear-gradient"&gt;&lt;/div&gt;
-</pre>
+```html
+<div class="linear-gradient"></div>
+```
 
-<h4 id="Résultat_6">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Arrêts_de_couleur",120,120)}}</p>
+{{EmbedLiveSample("Arrêts_de_couleur",120,120)}}
 
-<p>Notez que la première et la dernière couleur n'indiquent pas d'emplacement ; en conséquence les valeurs 0% et 100% sont assignées automatiquement. La couleur centrale indique un emplacement à 80%, ce qui la place proche du bas.</p>
+Notez que la première et la dernière couleur n'indiquent pas d'emplacement ; en conséquence les valeurs 0% et 100% sont assignées automatiquement. La couleur centrale indique un emplacement à 80%, ce qui la place proche du bas.
 
-<h3 id="Utiliser_des_indications_de_couleurs">Utiliser des indications de couleurs</h3>
+### Utiliser des indications de couleurs
 
-<p>Par défaut, les dégradés passent linéairement d'une couleur à une autre. On peut également utiliser une indication afin de définir l'emplacement où la couleur médiane sera atteinte. Dans l'exemple qui suit, plutôt que d'attendre la moitié de la transition au milieu, on la place à 10% de l'axe.</p>
+Par défaut, les dégradés passent linéairement d'une couleur à une autre. On peut également utiliser une indication afin de définir l'emplacement où la couleur médiane sera atteinte. Dans l'exemple qui suit, plutôt que d'attendre la moitié de la transition au milieu, on la place à 10% de l'axe.
 
-<h4 id="CSS_7">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   width:120px;
   height: 120px;
   float: left;
@@ -190,25 +212,28 @@ div {
 
 .simple-linear {
   background: linear-gradient(blue, pink);
-}</pre>
+}
+```
 
-<h4 id="HTML_7">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="color-hint"&gt;&lt;/div&gt;
-&lt;div class="simple-linear"&gt;&lt;/div&gt;
-</pre>
+```html
+<div class="color-hint"></div>
+<div class="simple-linear"></div>
+```
 
-<h4 id="Résultat_7">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Utiliser_des_indications_de_couleurs",120,120)}}</p>
+{{EmbedLiveSample("Utiliser_des_indications_de_couleurs",120,120)}}
 
-<h3 id="Transparence_et_dégradés">Transparence et dégradés</h3>
+### Transparence et dégradés
 
-<p>Les gradients gèrent la transparence. Vous pouvez l'utiliser, par exemple, en superposant plusieurs fonds pour créer des effets sur les images. Par exemple :</p>
+Les gradients gèrent la transparence. Vous pouvez l'utiliser, par exemple, en superposant plusieurs fonds pour créer des effets sur les images. Par exemple :
 
-<h4 id="CSS_8">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.linear-gradient {
+```css
+.linear-gradient {
   background: linear-gradient(to right, transparent, mistyrose),
     url("https://mdn.mozillademos.org/files/15525/critters.png");
 }
@@ -216,52 +241,63 @@ div {
 div {
   width: 300px;
   height: 150px;
-}</pre>
+}
+```
 
-<h4 id="HTML_8">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="linear-gradient"&gt;&lt;/div&gt;
-</pre>
+```html
+<div class="linear-gradient"></div>
+```
 
-<h4 id="Résultat_8">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Transparence_et_dégradés",300,150)}}</p>
+{{EmbedLiveSample("Transparence_et_dégradés",300,150)}}
 
-<p>Les fonds sont superposés avec le premier fond spécifié au dessus, et chaque fond supplémentaire par dessous.</p>
+Les fonds sont superposés avec le premier fond spécifié au dessus, et chaque fond supplémentaire par dessous.
 
-<h3 id="Créer_des_lignes_franches">Créer des lignes franches</h3>
+### Créer des lignes franches
 
-<p>Pour créer une ligne franche entre deux couleurs et avoir deux bandes plutôt qu'un dégradé progressif, on peut définir deux points d'arrêt de couleur au même endroit. Dans l'exemple suivant, on a deux couleurs pour un même emplacement de point d'arrêt situé à <code>50%</code>:</p>
+Pour créer une ligne franche entre deux couleurs et avoir deux bandes plutôt qu'un dégradé progressif, on peut définir deux points d'arrêt de couleur au même endroit. Dans l'exemple suivant, on a deux couleurs pour un même emplacement de point d'arrêt situé à `50%`:
 
-<pre class="brush: html hidden">&lt;div class="striped"&gt;&lt;/div&gt;
-</pre>
+```html hidden
+<div class="striped"></div>
+```
 
-<pre class="brush: css hidden">div {
+```css hidden
+div {
   width: 120px;
   height: 120px;
-}</pre>
+}
+```
 
-<pre class="brush: css">.striped {
+```css
+.striped {
    background: linear-gradient(to bottom left, cyan 50%, palegoldenrod 50%);
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('Créer_des_lignes_franches', 120, 120)}}</p>
+{{EmbedLiveSample('Créer_des_lignes_franches', 120, 120)}}
 
-<h3 id="Créer_des_bandes_de_couleur">Créer des bandes de couleur</h3>
+### Créer des bandes de couleur
 
-<p>Pour inclure une bande d'une couleur donnée, sans transition au sein du dégradé, on utilisera deux points d'arrêt successif avec la même couleur. Ainsi, la couleur sera atteinte au premier point d'arrêt puis sera conservée jusqu'au suivant.</p>
+Pour inclure une bande d'une couleur donnée, sans transition au sein du dégradé, on utilisera deux points d'arrêt successif avec la même couleur. Ainsi, la couleur sera atteinte au premier point d'arrêt puis sera conservée jusqu'au suivant.
 
-<pre class="brush: html hidden">&lt;div class="multiposition-stops"&gt;&lt;/div&gt;
-&lt;div class="multiposition-stop2"&gt;&lt;/div&gt;
-</pre>
+```html hidden
+<div class="multiposition-stops"></div>
+<div class="multiposition-stop2"></div>
+```
 
-<pre class="brush: css hidden">div {
+```css hidden
+div {
   width: 120px;
   height: 120px;
   float: left; margin-right: 10px; box-sizing: border-box;
-}</pre>
+}
+```
 
-<pre class="brush: css">.multiposition-stops {
+```css
+.multiposition-stops {
    background: linear-gradient(to left,
        lime 20%, red 30%, red 45%, cyan 55%, cyan 70%, yellow 80% );
    background: linear-gradient(to left,
@@ -273,45 +309,49 @@ div {
    background: linear-gradient(to left,
       lime 25%, red 25% 50%, cyan 50% 75%, yellow 75% );
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Créer_des_bandes_de_couleur', 120, 120)}}</p>
+{{EmbedLiveSample('Créer_des_bandes_de_couleur', 120, 120)}}
 
-<p>Dans le premier exemple ci-avant, le bleu vert commence au début puis progresse jusqu'à 20% avant de transitionner vers le rouge pendant les 10% qui suivent. Le rouge reste vif entre 30% et 45% avant de transitionner vers un cyan pendant 15% etc.</p>
+Dans le premier exemple ci-avant, le bleu vert commence au début puis progresse jusqu'à 20% avant de transitionner vers le rouge pendant les 10% qui suivent. Le rouge reste vif entre 30% et 45% avant de transitionner vers un cyan pendant 15% etc.
 
-<p>Dans le deuxième exemple, le deuxième point d'arrêt pour chaque couleur est situé au même emplacement que le premier point d'arrêt pour la couleur suivante et on obtient donc des bandes successives.</p>
+Dans le deuxième exemple, le deuxième point d'arrêt pour chaque couleur est situé au même emplacement que le premier point d'arrêt pour la couleur suivante et on obtient donc des bandes successives.
 
-<h3 id="Contrôler_la_progression_du_dégradé">Contrôler la progression du dégradé</h3>
+### Contrôler la progression du dégradé
 
-<p>Par défaut, un dégradé progresse linéairement entre les deux couleurs et la couleur médiane est atteinte à la moitié du parcours. Toutefois, si on veut atteindre cette couleur médiane plus tôt ou plus tard, on peut fournir une indication permettant de définir l'emplacement du milieu de la transition. Dans l'exemple qui suit, la couleur est à la moitié de la transition entre le vert et le cyan à 20% du dégradé (et non à 50%). Le deuxième exemple ne contient pas de telle indication et la transition s'effectue linéairement. Vous pouvez ainsi observer l'impact d'une telle indication.</p>
+Par défaut, un dégradé progresse linéairement entre les deux couleurs et la couleur médiane est atteinte à la moitié du parcours. Toutefois, si on veut atteindre cette couleur médiane plus tôt ou plus tard, on peut fournir une indication permettant de définir l'emplacement du milieu de la transition. Dans l'exemple qui suit, la couleur est à la moitié de la transition entre le vert et le cyan à 20% du dégradé (et non à 50%). Le deuxième exemple ne contient pas de telle indication et la transition s'effectue linéairement. Vous pouvez ainsi observer l'impact d'une telle indication.
 
-<pre class="brush: html hidden">&lt;div class="colorhint-gradient"&gt;&lt;/div&gt; &lt;div class="regular-progression"&gt;&lt;/div&gt;
+```html hidden
+<div class="colorhint-gradient"></div> <div class="regular-progression"></div>
+```
 
-</pre>
-
-<pre class="brush: css hidden">div {
+```css hidden
+div {
   width: 120px;
   height: 120px;
   float: left; margin-right: 10px; box-sizing: border-box;
-}</pre>
+}
+```
 
-<pre class="brush: css">.colorhint-gradient {
+```css
+.colorhint-gradient {
   background: linear-gradient(to top, black, 20%, cyan);
 }
 .regular-progression {
   background: linear-gradient(to top, black, cyan);
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample("Contrôler_la_progression_du_dégradé", 120, 120)}}</p>
+{{EmbedLiveSample("Contrôler_la_progression_du_dégradé", 120, 120)}}
 
-<h3 id="Empilement_de_dégradés">Empilement de dégradés</h3>
+### Empilement de dégradés
 
-<p>Il est possible d' « empiler » différents dégradés. Il suffit que les dégradés sur les couches supérieures ne soient pas complètement opaques pour qu'on puisse voir ceux des couches inférieures.</p>
+Il est possible d' « empiler » différents dégradés. Il suffit que les dégradés sur les couches supérieures ne soient pas complètement opaques pour qu'on puisse voir ceux des couches inférieures.
 
-<h4 id="CSS_9">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.linear-gradient {
+```css
+.linear-gradient {
   background:
     linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
     linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%),
@@ -321,159 +361,187 @@ div {
 div {
   width: 100px;
   height: 100px;
-}</pre>
+}
+```
 
-<h4 id="HTML_9">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="linear-gradient"&gt;&lt;/div&gt;
-</pre>
+```html
+<div class="linear-gradient"></div>
+```
 
-<h4 id="Résultat_9">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Empilement_de_dégradés")}}</p>
+{{EmbedLiveSample("Empilement_de_dégradés")}}
 
-<h2 id="Dégradés_radiaux">Dégradés radiaux</h2>
+## Dégradés radiaux
 
-<p>Les dégradés radiaux sont similaire aux dégradés linéaires mais permettent d'obtenir un effet qui rayonne à partir d'un point. Il est possible de créer des dégradés circulaires ou elliptiques.</p>
+Les dégradés radiaux sont similaire aux dégradés linéaires mais permettent d'obtenir un effet qui rayonne à partir d'un point. Il est possible de créer des dégradés circulaires ou elliptiques.
 
-<h3 id="Un_dégradé_radial_simple">Un dégradé radial simple</h3>
+### Un dégradé radial simple
 
-<div class="note">
-<p><strong>Note :</strong> Dans les exemples suivants, nous continuons d'utiliser le même {{HTMLElement("div")}} et, pour ne pas surcharger la lecture, n'afficherons plus que la règle CSS spécifique au dégradé.</p>
-</div>
+> **Note :** Dans les exemples suivants, nous continuons d'utiliser le même {{HTMLElement("div")}} et, pour ne pas surcharger la lecture, n'afficherons plus que la règle CSS spécifique au dégradé.
 
-<p>De la même façon qu'avec les dégradés linéaires, il suffit de deux couleurs pour créer un dégradé radial.</p>
+De la même façon qu'avec les dégradés linéaires, il suffit de deux couleurs pour créer un dégradé radial.
 
-<pre class="brush: html hidden">&lt;div class="simple-radial"&gt;&lt;/div&gt;
-</pre>
+```html hidden
+<div class="simple-radial"></div>
+```
 
-<pre class="brush: css hidden">div {
+```css hidden
+div {
   width: 120px;
   height: 120px;
-}</pre>
+}
+```
 
-<pre class="brush: css">.simple-radial {
+```css
+.simple-radial {
   background: radial-gradient(red, blue);
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Un_dégradé_radial_simple', 120, 120)}}</p>
+{{EmbedLiveSample('Un_dégradé_radial_simple', 120, 120)}}
 
-<h3 id="Positionner_les_points_d’arrêt">Positionner les points d’arrêt</h3>
+### Positionner les points d’arrêt
 
-<p>À nouveau, comme pour les dégradés linéaires, il est possible de placer des arrêts de couleur en précisant un pourcentage ou une distance.</p>
+À nouveau, comme pour les dégradés linéaires, il est possible de placer des arrêts de couleur en précisant un pourcentage ou une distance.
 
-<pre class="brush: html hidden">&lt;div class="radial-gradient"&gt;&lt;/div&gt;
-</pre>
+```html hidden
+<div class="radial-gradient"></div>
+```
 
-<pre class="brush: css hidden">div {
+```css hidden
+div {
   width: 120px;
   height: 120px;
-}</pre>
+}
+```
 
-<pre class="brush: css">.radial-gradient {
+```css
+.radial-gradient {
   background: radial-gradient(red 10px, yellow 30%, #1e90ff 50%);
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample("Positionner_les_points_d’arrêt", 120, 120)}}</p>
+{{EmbedLiveSample("Positionner_les_points_d’arrêt", 120, 120)}}
 
-<h3 id="Positionner_le_centre_du_dégradé">Positionner le centre du dégradé</h3>
+### Positionner le centre du dégradé
 
-<p>La position du centre du dégradé peut être définie avec des mots-clés, des pourcetages ou des longueurs. Deux valeurs permettent de placer le centre sur les deux axes. Si une seule valeur est fournie, elle sera utilisée pour les deux axes.</p>
+La position du centre du dégradé peut être définie avec des mots-clés, des pourcetages ou des longueurs. Deux valeurs permettent de placer le centre sur les deux axes. Si une seule valeur est fournie, elle sera utilisée pour les deux axes.
 
-<pre class="brush: html hidden">&lt;div class="radial-gradient"&gt;&lt;/div&gt;
-</pre>
+```html hidden
+<div class="radial-gradient"></div>
+```
 
-<pre class="brush: css hidden">div {
+```css hidden
+div {
   width: 120px;
   height: 240px;
-}</pre>
+}
+```
 
-<pre class="brush: css">.radial-gradient {
+```css
+.radial-gradient {
   background: radial-gradient(at 0% 30%, red 10px, yellow 30%, #1e90ff 50%);
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Utiliser_closest-side_pour_les_ellipses', 240, 100)}}</p>
+{{EmbedLiveSample('Utiliser_closest-side_pour_les_ellipses', 240, 100)}}
 
-<h3 id="Dimensionner_les_dégradés_radiaux">Dimensionner les dégradés radiaux</h3>
+### Dimensionner les dégradés radiaux
 
-<p>À la différence des dégradés linéaires, il est possible de définir la taille d'un dégradé radial.</p>
+À la différence des dégradés linéaires, il est possible de définir la taille d'un dégradé radial.
 
-<h4 id="Utiliser_closest-side_pour_les_ellipses">Utiliser <code>closest-side</code> pour les ellipses</h4>
+#### Utiliser `closest-side` pour les ellipses
 
-<p>Dans l'exemple qui suit, on utilise la valeur <code>closest-side</code> pour la taille. Cela signifie que la taille du dégradé sera définie par la distance entre le point central de départ et le côté le plus proche de la boîte englobante.</p>
+Dans l'exemple qui suit, on utilise la valeur `closest-side` pour la taille. Cela signifie que la taille du dégradé sera définie par la distance entre le point central de départ et le côté le plus proche de la boîte englobante.
 
-<pre class="brush: html hidden">&lt;div class="radial-ellipse-side"&gt;&lt;/div&gt;
-</pre>
+```html hidden
+<div class="radial-ellipse-side"></div>
+```
 
-<pre class="brush: css hidden">div {
+```css hidden
+div {
   width: 240px;
   height: 100px;
-}</pre>
+}
+```
 
-<pre class="brush: css">.radial-ellipse-side {
+```css
+.radial-ellipse-side {
   background: radial-gradient(ellipse closest-side,
       red, yellow 10%, #1e90ff 50%, beige);
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Utiliser_closest-side_pour_les_ellipses', 240, 100)}}</p>
+{{EmbedLiveSample('Utiliser_closest-side_pour_les_ellipses', 240, 100)}}
 
-<h4 id="Utiliser_farthest-corner_pour_les_ellipses">Utiliser <code>farthest-corner</code> pour les ellipses</h4>
+#### Utiliser `farthest-corner` pour les ellipses
 
-<p>Cet exemple ressemble fortement au précédent mais on utilise ici <code>farthest-corner</code> qui crée un dégradé dont la distance est celle entre le point de départ central et le côté le plus éloigné de la boîte englobante.</p>
+Cet exemple ressemble fortement au précédent mais on utilise ici `farthest-corner` qui crée un dégradé dont la distance est celle entre le point de départ central et le côté le plus éloigné de la boîte englobante.
 
-<pre class="brush: html hidden">&lt;div class="radial-ellipse-far"&gt;&lt;/div&gt;
-</pre>
+```html hidden
+<div class="radial-ellipse-far"></div>
+```
 
-<pre class="brush: css hidden">div {
+```css hidden
+div {
   width: 240px;
   height: 100px;
-}</pre>
+}
+```
 
-<pre class="brush: css">.radial-ellipse-far {
+```css
+.radial-ellipse-far {
   background: radial-gradient(ellipse farthest-corner,
       red, yellow 10%, #1e90ff 50%, beige);
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Utiliser_farthest-corner_pour_les_ellipses', 240, 100)}}</p>
+{{EmbedLiveSample('Utiliser_farthest-corner_pour_les_ellipses', 240, 100)}}
 
-<h4 id="Utiliser_closest-side_pour_les_cercles">Utiliser <code>closest-side</code> pour les cercles</h4>
+#### Utiliser `closest-side` pour les cercles
 
-<p>Pour cet exemple, on utilise <code>closest-side</code> qui permet de créer un cercle dont le rayon est la distance entre le point de départ central et le côté le plus proche de la boîte englobante. Ici, le rayon du cercle est donc la moitié de la hauteur de la boîte car les bords haut et bas sont équidistants du point de départ et plus proches que les côtés gauche et droit.</p>
+Pour cet exemple, on utilise `closest-side` qui permet de créer un cercle dont le rayon est la distance entre le point de départ central et le côté le plus proche de la boîte englobante. Ici, le rayon du cercle est donc la moitié de la hauteur de la boîte car les bords haut et bas sont équidistants du point de départ et plus proches que les côtés gauche et droit.
 
-<pre class="brush: html hidden">&lt;div class="radial-circle-close"&gt;&lt;/div&gt;
-</pre>
+```html hidden
+<div class="radial-circle-close"></div>
+```
 
-<pre class="brush: css hidden">div {
+```css hidden
+div {
   width: 240px;
   height: 120px;
-}</pre>
+}
+```
 
-<pre class="brush: css">.radial-circle-close {
+```css
+.radial-circle-close {
   background: radial-gradient(circle closest-side,
       red, yellow 10%, #1e90ff 50%, beige);
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Utiliser_closest-side_pour_les_cercles', 240, 120)}}</p>
+{{EmbedLiveSample('Utiliser_closest-side_pour_les_cercles', 240, 120)}}
 
-<h3 id="Empiler_des_dégradés_radiaux">Empiler des dégradés radiaux</h3>
+### Empiler des dégradés radiaux
 
-<p>À l'instar des dégradés linéaires, on peut empiler des dégradés radiaux. Le premier dégradé indiqué sera celui sur la couche la plus haute et le dernier sera celui sur la couche la plus basse.</p>
+À l'instar des dégradés linéaires, on peut empiler des dégradés radiaux. Le premier dégradé indiqué sera celui sur la couche la plus haute et le dernier sera celui sur la couche la plus basse.
 
-<pre class="brush: html hidden">&lt;div class="stacked-radial"&gt;&lt;/div&gt;
-</pre>
+```html hidden
+<div class="stacked-radial"></div>
+```
 
-<pre class="brush: css hidden">div {
+```css hidden
+div {
   width: 200px;
   height: 200px;
-}</pre>
+}
+```
 
-<pre class="brush: css">.stacked-radial {
+```css
+.stacked-radial {
   background:
       radial-gradient(circle at 50% 0,
         rgba(255,0,0,.5),
@@ -486,115 +554,129 @@ div {
         rgba(0,255,0,0) 70.71%) beige;
   border-radius: 50%;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Empiler_des_dégradés_radiaux', 200, 200)}}</p>
+{{EmbedLiveSample('Empiler_des_dégradés_radiaux', 200, 200)}}
 
-<h2 id="Dégradés_coniques">Dégradés coniques</h2>
+## Dégradés coniques
 
-<p>La fonction <strong><code>conic-gradient()</code></strong> permet de créer une image composée d'un dégradé de couleurs tournant autour d'un point (plutôt qu'une progression radiale). On pourra ainsi utiliser des dégradés coniques pour créer des camemberts ou des éventails de couleurs.</p>
+La fonction **`conic-gradient()`** permet de créer une image composée d'un dégradé de couleurs tournant autour d'un point (plutôt qu'une progression radiale). On pourra ainsi utiliser des dégradés coniques pour créer des camemberts ou des éventails de couleurs.
 
-<p>La syntaxe de <code>conic-gradient()</code> est semblable à celle de <code>radial-gradient()</code> mais les arrêts de couleur seront placés le long d'un arc plutôt que le long de la ligne émise depuis le centre. Les arrêts de couleur seront exprimés en pourcentages ou en degrés, ils ne pourront pas être exprimés sous forme de longueurs absolues.</p>
+La syntaxe de `conic-gradient()` est semblable à celle de `radial-gradient()` mais les arrêts de couleur seront placés le long d'un arc plutôt que le long de la ligne émise depuis le centre. Les arrêts de couleur seront exprimés en pourcentages ou en degrés, ils ne pourront pas être exprimés sous forme de longueurs absolues.
 
-<p>Pour un dégradé radial, la transition entre les couleurs forme une ellipse qui progresse vers l'extérieur dans toutes les directions. Un dégradé conique verra la transition progresser le long de l'arc autour du cercle, dans le sens horaire. À l'instar des dégradés radiaux, il est possible de positionner le centre du dégradé et à l'instar des dégradés linéaires, on peut modifier l'angle du dégradé.</p>
+Pour un dégradé radial, la transition entre les couleurs forme une ellipse qui progresse vers l'extérieur dans toutes les directions. Un dégradé conique verra la transition progresser le long de l'arc autour du cercle, dans le sens horaire. À l'instar des dégradés radiaux, il est possible de positionner le centre du dégradé et à l'instar des dégradés linéaires, on peut modifier l'angle du dégradé.
 
-<div>
-<h3 id="Un_dégradé_conique_simple">Un dégradé conique simple</h3>
+### Un dégradé conique simple
 
-<p>Comme pour les dégradés linéaires et radiaux, il suffit de deux couleurs pour créer un dégradé conique. Par défaut, le centre du dégradé sera situé au centre (point 50% 50%) et le début du dégradé commencera vers le haut :</p>
+Comme pour les dégradés linéaires et radiaux, il suffit de deux couleurs pour créer un dégradé conique. Par défaut, le centre du dégradé sera situé au centre (point 50% 50%) et le début du dégradé commencera vers le haut :
 
-<pre class="brush: html hidden">&lt;div class="simple-conic"&gt;&lt;/div&gt;
-</pre>
+```html hidden
+<div class="simple-conic"></div>
+```
 
-<pre class="brush: css hidden">div {
+```css hidden
+div {
   width: 120px;
   height: 120px;
-}</pre>
+}
+```
 
-<pre class="brush: css">.simple-conic {
+```css
+.simple-conic {
   background: conic-gradient(red, blue);
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Un_dégradé_conique_simple', 120, 120)}}</p>
-</div>
+{{EmbedLiveSample('Un_dégradé_conique_simple', 120, 120)}}
 
-<div>
-<h3 id="Positionner_le_centre">Positionner le centre</h3>
+### Positionner le centre
 
-<p>À l'instar des dégradés radiaux, on peut placer le centre d'un dégradé conique à l'aide de mots-clés, de valeurs (longueurs ou pourcentages) avec le mot-clé <code>at</code>.</p>
+À l'instar des dégradés radiaux, on peut placer le centre d'un dégradé conique à l'aide de mots-clés, de valeurs (longueurs ou pourcentages) avec le mot-clé `at`.
 
-<pre class="brush: html hidden">&lt;div class="conic-gradient"&gt;&lt;/div&gt;
-</pre>
+```html hidden
+<div class="conic-gradient"></div>
+```
 
-<pre class="brush: css hidden">div {
+```css hidden
+div {
   width: 120px;
   height: 120px;
-}</pre>
+}
+```
 
-<pre class="brush: css">.conic-gradient {
+```css
+.conic-gradient {
   background: conic-gradient(at 0% 30%, red 10%, yellow 30%, #1e90ff 50%);
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Positionner_le_centre', 120, 120)}}</p>
-</div>
+{{EmbedLiveSample('Positionner_le_centre', 120, 120)}}
 
-<div>
-<h3 id="Modifier_l’angle">Modifier l’angle</h3>
+### Modifier l’angle
 
-<pre class="brush: html hidden">&lt;div class="conic-gradient"&gt;&lt;/div&gt;
-</pre>
+```html hidden
+<div class="conic-gradient"></div>
+```
 
-<pre class="brush: css hidden">div {
+```css hidden
+div {
   width: 120px;
   height: 120px;
-}</pre>
+}
+```
 
-<pre class="brush: css">.conic-gradient {
+```css
+.conic-gradient {
   background: conic-gradient(from 45deg, red, orange, yellow, green, blue, purple);
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample("Modifier_l’angle", 120, 120)}}</p>
-</div>
+{{EmbedLiveSample("Modifier_l’angle", 120, 120)}}
 
-<h2 id="Répéter_des_dégradés">Répéter des dégradés</h2>
+## Répéter des dégradés
 
-<p>Les propriétés {{cssxref("linear-gradient")}}, {{cssxref("radial-gradient")}} et {{cssxref("conic-gradient")}} ne permettent pas automatiquement de répéter les arrêts de couleur. Toutefois, les fonctions {{cssxref("repeating-linear-gradient")}}, {{cssxref("repeating-radial-gradient")}} et {{cssxref("repeating-conic-gradient")}} offrent cette fonctionnalité.</p>
+Les propriétés {{cssxref("linear-gradient")}}, {{cssxref("radial-gradient")}} et {{cssxref("conic-gradient")}} ne permettent pas automatiquement de répéter les arrêts de couleur. Toutefois, les fonctions {{cssxref("repeating-linear-gradient")}}, {{cssxref("repeating-radial-gradient")}} et {{cssxref("repeating-conic-gradient")}} offrent cette fonctionnalité.
 
-<p>La taille de la portion (ligne ou arc) répétée est donnée par la longueur (ou l'arc) entre le premier arrêt de couleur et le dernier arrêt de couleur. Si on n'indique pas de coordonnées pour le premier et le dernier arrêts, ceux-ci prendront respectivement 0 et 100%. Aussi, le motif unitaire couvrira l'ensemble du dégradé et il n'y aura pas de répétition. Il faut donc indiquer au moins un des deux arrêts (entre le premier et le dernier) pour créer une répétition.</p>
+La taille de la portion (ligne ou arc) répétée est donnée par la longueur (ou l'arc) entre le premier arrêt de couleur et le dernier arrêt de couleur. Si on n'indique pas de coordonnées pour le premier et le dernier arrêts, ceux-ci prendront respectivement 0 et 100%. Aussi, le motif unitaire couvrira l'ensemble du dégradé et il n'y aura pas de répétition. Il faut donc indiquer au moins un des deux arrêts (entre le premier et le dernier) pour créer une répétition.
 
-<h3 id="Répéter_un_dégradé_linéaire">Répéter un dégradé linéaire</h3>
+### Répéter un dégradé linéaire
 
-<p>Dans cet exemple, on utilise la fonction {{cssxref("repeating-linear-gradient")}} afin de créer un dégradé linéaire qui se répète le long d'une ligne. Les couleurs forment un cycle lorsque le motif se répète.</p>
+Dans cet exemple, on utilise la fonction {{cssxref("repeating-linear-gradient")}} afin de créer un dégradé linéaire qui se répète le long d'une ligne. Les couleurs forment un cycle lorsque le motif se répète.
 
-<pre class="brush: html hidden">&lt;div class="repeating-linear"&gt;&lt;/div&gt;
-</pre>
+```html hidden
+<div class="repeating-linear"></div>
+```
 
-<pre class="brush: css hidden">div {
+```css hidden
+div {
   width: 120px;
   height: 120px;
-}</pre>
+}
+```
 
-<pre class="brush: css">.repeating-linear {
+```css
+.repeating-linear {
   background: repeating-linear-gradient(-45deg, red, red 5px, blue 5px, blue 10px);
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Répéter_un_dégradé_linéaire', 120, 120)}}</p>
+{{EmbedLiveSample('Répéter_un_dégradé_linéaire', 120, 120)}}
 
-<h3 id="Répéter_plusieurs_dégradés_linéaires">Répéter plusieurs dégradés linéaires</h3>
+### Répéter plusieurs dégradés linéaires
 
-<pre class="brush: html hidden">&lt;div class="multi-repeating-linear"&gt;&lt;/div&gt;
-</pre>
+```html hidden
+<div class="multi-repeating-linear"></div>
+```
 
-<pre class="brush: css hidden">div {
+```css hidden
+div {
   width: 600px;
   height: 400px;
-}</pre>
+}
+```
 
-<pre class="brush: css">.multi-repeating-linear {
+```css
+.multi-repeating-linear {
   background:
       repeating-linear-gradient(190deg, rgba(255, 0, 0, 0.5) 40px,
         rgba(255, 153, 0, 0.5) 80px, rgba(255, 255, 0, 0.5) 120px,
@@ -610,20 +692,25 @@ div {
         yellow 150px, green 200px, blue 250px,
         indigo 300px, violet 350px, red 370px);
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Répéter_plusieurs_dégradés_linéaires', 600, 400)}}</p>
+{{EmbedLiveSample('Répéter_plusieurs_dégradés_linéaires', 600, 400)}}
 
-<h3 id="Créer_un_tartan">Créer un tartan</h3>
+### Créer un tartan
 
-<pre class="brush: html hidden">&lt;div class="plaid-gradient"&gt;&lt;/div&gt;</pre>
+```html hidden
+<div class="plaid-gradient"></div>
+```
 
-<pre class="brush: css hidden">div {
+```css hidden
+div {
   width: 200px;
   height: 200px;
-}</pre>
+}
+```
 
-<pre class="brush: css">.plaid-gradient {
+```css
+.plaid-gradient {
   background:
       repeating-linear-gradient(90deg, transparent, transparent 50px,
         rgba(255, 127, 0, 0.25) 50px, rgba(255, 127, 0, 0.25) 56px,
@@ -642,40 +729,48 @@ div {
       repeating-linear-gradient(45deg, transparent, transparent 5px,
         rgba(143, 77, 63, 0.25) 5px, rgba(143, 77, 63, 0.25) 10px);
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Créer_un_tartan', 200, 200)}}</p>
+{{EmbedLiveSample('Créer_un_tartan', 200, 200)}}
 
-<h3 id="Répéter_des_dégradés_radiaux">Répéter des dégradés radiaux</h3>
+### Répéter des dégradés radiaux
 
-<p>Ici, on utilise la fonction {{cssxref("repeating-radial-gradient")}} afin de créer un dégradé radial qui se répète. Les couleurs utilisées forment un cycle lorsque le motif unitaire recommence.</p>
+Ici, on utilise la fonction {{cssxref("repeating-radial-gradient")}} afin de créer un dégradé radial qui se répète. Les couleurs utilisées forment un cycle lorsque le motif unitaire recommence.
 
-<pre class="brush: html hidden">&lt;div class="repeating-radial"&gt;&lt;/div&gt;
-</pre>
+```html hidden
+<div class="repeating-radial"></div>
+```
 
-<pre class="brush: css hidden">div {
+```css hidden
+div {
   width: 120px;
   height: 120px;
-}</pre>
+}
+```
 
-<pre class="brush: css">.repeating-radial {
+```css
+.repeating-radial {
   background: repeating-radial-gradient(black, black 5px, white 5px, white 10px);
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Répéter_des_dégradés_radiaux', 120, 120)}}</p>
+{{EmbedLiveSample('Répéter_des_dégradés_radiaux', 120, 120)}}
 
-<h3 id="Répéter_plusieurs_dégradés_radiaux">Répéter plusieurs dégradés radiaux</h3>
+### Répéter plusieurs dégradés radiaux
 
-<pre class="brush: html hidden">&lt;div class="multi-target"&gt;&lt;/div&gt;
-</pre>
+```html hidden
+<div class="multi-target"></div>
+```
 
-<pre class="brush: css hidden">div {
+```css hidden
+div {
   width: 250px;
   height: 150px;
-}</pre>
+}
+```
 
-<pre class="brush: css">.multi-target {
+```css
+.multi-target {
   background:
       repeating-radial-gradient(ellipse at 80% 50%,rgba(0,0,0,0.5),
         rgba(0,0,0,0.5) 15px, rgba(255,255,255,0.5) 15px,
@@ -685,28 +780,23 @@ div {
         rgba(255,255,255,0.5) 20px) top left no-repeat yellow;
   background-size: 200px 200px, 150px 150px;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Répéter_plusieurs_dégradés_radiaux', 250, 150)}}</p>
+{{EmbedLiveSample('Répéter_plusieurs_dégradés_radiaux', 250, 150)}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Les fonctions de manipulation des dégradés
-  <ul>
-   <li>{{cssxref("linear-gradient")}}, {{cssxref("radial-gradient")}}, {{cssxref("conic-gradient")}}, {{cssxref("repeating-linear-gradient")}}, {{cssxref("repeating-radial-gradient")}}, {{cssxref("repeating-conic-gradient")}}</li>
-  </ul>
- </li>
- <li>Les types de donnée CSS relatifs aux dégradés
-  <ul>
-   <li>{{cssxref("&lt;gradient&gt;")}}, {{cssxref("&lt;image&gt;")}}</li>
-  </ul>
- </li>
- <li>Certaines propriétés CSS qui permettent d'utiliser des dégradés
-  <ul>
-   <li>{{cssxref("background")}}, {{cssxref("background-image")}}</li>
-  </ul>
- </li>
- <li><a href="https://lea.verou.me/css3patterns/">Une bibliothèque de motifs de dégradés CSS, créée par Lea Verou</a></li>
- <li><a href="https://cssgenerator.org/gradient-css-generator.html">Un générateur de dégradé CSS</a></li>
-</ul>
+- Les fonctions de manipulation des dégradés
+
+  - {{cssxref("linear-gradient")}}, {{cssxref("radial-gradient")}}, {{cssxref("conic-gradient")}}, {{cssxref("repeating-linear-gradient")}}, {{cssxref("repeating-radial-gradient")}}, {{cssxref("repeating-conic-gradient")}}
+
+- Les types de donnée CSS relatifs aux dégradés
+
+  - {{cssxref("&lt;gradient&gt;")}}, {{cssxref("&lt;image&gt;")}}
+
+- Certaines propriétés CSS qui permettent d'utiliser des dégradés
+
+  - {{cssxref("background")}}, {{cssxref("background-image")}}
+
+- [Une bibliothèque de motifs de dégradés CSS, créée par Lea Verou](https://lea.verou.me/css3patterns/)
+- [Un générateur de dégradé CSS](https://cssgenerator.org/gradient-css-generator.html)

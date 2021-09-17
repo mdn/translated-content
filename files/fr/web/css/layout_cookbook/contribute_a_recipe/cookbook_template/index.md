@@ -7,57 +7,52 @@ tags:
 translation_of: Web/CSS/Layout_cookbook/Contribute_a_recipe/Cookbook_template
 original_slug: Web/CSS/Layout_cookbook/Contribuer_à_une_recette/Cookbook_template
 ---
-<p>{{CSSRef}}</p>
+{{CSSRef}}
 
-<div class="note">
-  <p><strong>Note :</strong> Voici un modèle de contenu pour les pages de « recette » CSS. Vous êtes invité⋅e à utiliser cette page comme modèle lorsque vous créez une nouvelle recette.</p>
-  <p><em>Les commentaires en italiques sont des informations sur l'utilisation de telle ou telle partie du modèle.</em>
-</p></div>
+> **Note :** Voici un modèle de contenu pour les pages de « recette » CSS. Vous êtes invité⋅e à utiliser cette page comme modèle lorsque vous créez une nouvelle recette.
+>
+> _Les commentaires en italiques sont des informations sur l'utilisation de telle ou telle partie du modèle._
 
-<p><em>Une description du problème qu'on souhaite résoudre ou du motif qu'on illustre avec cette recette.</em></p>
+_Une description du problème qu'on souhaite résoudre ou du motif qu'on illustre avec cette recette._
 
-<h2 id="Spécifications_sommaires">Spécifications sommaires</h2>
+## Spécifications sommaires
 
-<p><em>Que cherche-t-on à faire avec cette recette ? Quel problème résout-on ici ? Il faut expliquer de façon concise ce que l'on souhaite faire.</em></p>
+_Que cherche-t-on à faire avec cette recette ? Quel problème résout-on ici ? Il faut expliquer de façon concise ce que l'on souhaite faire._
 
-<h2 id="Recette">Recette</h2>
+## Recette
 
-<p><em>Il faudra changer le chemin de la macro pour correspondre à celui de votre exemple une fois que celui-ci a été fusionné sur le dépôt principal. Le dernier paramètre correspond à la hauteur qui peut être adaptée si besoin.</em></p>
+_Il faudra changer le chemin de la macro pour correspondre à celui de votre exemple une fois que celui-ci a été fusionné sur le dépôt principal. Le dernier paramètre correspond à la hauteur qui peut être adaptée si besoin._
 
-<p>{{EmbedGHLiveSample("css-examples/css-cookbook/center.html", '100%', 720)}}</p>
+{{EmbedGHLiveSample("css-examples/css-cookbook/center.html", '100%', 720)}}
 
-<p><em>Il faut modifier le lien pour cibler la version téléchargeable de votre exemple.</em></p>
+_Il faut modifier le lien pour cibler la version téléchargeable de votre exemple._
 
-<div class="note">
-<p><strong>Note :</strong> <a href="https://github.com/mdn/css-examples/blob/master/css-cookbook/center--download.html">Télécharger cet exemple</a>.</p>
-</div>
+> **Note :** [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/center--download.html).
 
-<h2 id="Choix_effectués">Choix effectués</h2>
+## Choix effectués
 
-<p><em>Expliquez ici les décisions prises pour réaliser cette  recette. Pourquoi avez-vous choisi telle méthode de disposition ? Vous pouvez inclure ici d'autres exemples. Cette section est assez flexible car la complexité d'une recette peut varier grandement.</em></p>
+_Expliquez ici les décisions prises pour réaliser cette  recette. Pourquoi avez-vous choisi telle méthode de disposition ? Vous pouvez inclure ici d'autres exemples. Cette section est assez flexible car la complexité d'une recette peut varier grandement._
 
-<h2 id="Méthodes_de_recours_ou_alternatives">Méthodes de recours ou alternatives</h2>
+## Méthodes de recours ou alternatives
 
-<p><em>S'il existe d'autres méthodes ou des méthodes qui permettent une amélioration progressive pour les navigateurs qui ne prennent pas en charge les fonctionnalités récentes utilisées, vous pouvez les décrire ici.</em></p>
+_S'il existe d'autres méthodes ou des méthodes qui permettent une amélioration progressive pour les navigateurs qui ne prennent pas en charge les fonctionnalités récentes utilisées, vous pouvez les décrire ici._
 
-<h2 id="Accessibilité">Accessibilité</h2>
+## Accessibilité
 
-<p><em>Inclure ici les aspects spécifiquement liés à l'accessibilité pour cette recette. Cette section peut être omise si rien de notable ne concerne l'accessiblité pour cette recette.</em></p>
+_Inclure ici les aspects spécifiquement liés à l'accessibilité pour cette recette. Cette section peut être omise si rien de notable ne concerne l'accessiblité pour cette recette._
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>Les différentes méthodes évoquées plus haut peuvent disposer d'une prise en charge différente selon les navigateurs, se référer à chacun des tableaux suivant pour plus de détails sur la prise en charge de chaque propriété.</p>
+Les différentes méthodes évoquées plus haut peuvent disposer d'une prise en charge différente selon les navigateurs, se référer à chacun des tableaux suivant pour plus de détails sur la prise en charge de chaque propriété.
 
-<p><em>Inclure ici les données de compatibilité pour les principales propriétés utilisées. Comme exemple, voici comment faire pour inclure les données concernant <code>align-items</code>.</em></p>
+_Inclure ici les données de compatibilité pour les principales propriétés utilisées. Comme exemple, voici comment faire pour inclure les données concernant `align-items`._
 
-<h3 id="align-items">align-items</h3>
+### align-items
 
-<p>{{Compat("css.properties.align-items")}}</p>
+{{Compat("css.properties.align-items")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><em>Liste de liens sur les propriétés concernées : {{Cssxref("example-property")}}</em></li>
- <li><em>Liens vers des articles qui expliquent comment utiliser telles propriétés en contexte</em></li>
- <li><em>Liens vers des ressources externes. Il ne faut pas hésiter à pointer vers de bonnes ressources externes mais leur contenu ne doit pas se limiter à des points de détail.</em></li>
-</ul>
+- _Liste de liens sur les propriétés concernées : {{Cssxref("example-property")}}_
+- _Liens vers des articles qui expliquent comment utiliser telles propriétés en contexte_
+- _Liens vers des ressources externes. Il ne faut pas hésiter à pointer vers de bonnes ressources externes mais leur contenu ne doit pas se limiter à des points de détail._

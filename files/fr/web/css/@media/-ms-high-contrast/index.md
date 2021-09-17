@@ -10,44 +10,37 @@ tags:
 translation_of: Web/CSS/@media/-ms-high-contrast
 original_slug: Web/CSS/-ms-high-contrast
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>La <a href="/fr/docs/Web/CSS/Media_Queries/Using_media_queries#cibler_des_caract%c3%a9ristiques_m%c3%a9dia">caractéristique média</a> <code><strong>-ms-high-contrast</strong></code>, relative à la règle @ <code><a href="/fr/docs/Web/CSS/@media">@media</a></code>, est une <a href="/en-US/docs/Web/CSS/Microsoft_extensions">extension Microsoft </a>qui décrit si l'application est affichée dans un mode de contraste élevé et, si c'est le cas, quelle est la variation de couleur affichée.</p>
+La [caractéristique média](/fr/docs/Web/CSS/Media_Queries/Using_media_queries#cibler_des_caract%c3%a9ristiques_m%c3%a9dia) **`-ms-high-contrast`**, relative à la règle @ [`@media`](/fr/docs/Web/CSS/@media), est une [extension Microsoft ](/en-US/docs/Web/CSS/Microsoft_extensions)qui décrit si l'application est affichée dans un mode de contraste élevé et, si c'est le cas, quelle est la variation de couleur affichée.
 
-<p>Cette caractéristique média s'applique aux média de type matriciel (<em>bitmap</em>). Elle ne gère pas les préfixes <code>min</code> et <code>max</code>.</p>
+Cette caractéristique média s'applique aux média de type matriciel (_bitmap_). Elle ne gère pas les préfixes `min` et `max`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>La caractéristique média <strong><code>-ms-high-contrast</code></strong> est définie avec une des valeurs définies ci-après.</p>
+La caractéristique média **`-ms-high-contrast`** est définie avec une des valeurs définies ci-après.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>active</code></dt>
- <dd>
- <p>Cette valeur indique que les règles de mise en forme qui suivent sont appliquées lorsque le système utilise un affichage avec contraste élevé, quel que soit la variation de couleur.</p>
- </dd>
- <dt><code>none</code>{{deprecated_inline}}</dt>
- <dd>Cette valeur n'est plus prise en charge par Edge.</dd>
- <dt><code>black-on-white</code></dt>
- <dd>
- <p>Cette valeur indique que les règles de mise en forme qui suivent sont appliquées lorsque le système utilise un affichage avec contraste élevé en noir sur blanc.</p>
- </dd>
- <dt><code>white-on-black</code></dt>
- <dd>
- <p>Cette valeur indique que les règles de mise en forme qui suivent sont appliquées lorsque le système utilise un affichage avec contraste élevé en blanc sur noir.</p>
- </dd>
-</dl>
+- `active`
+  - : Cette valeur indique que les règles de mise en forme qui suivent sont appliquées lorsque le système utilise un affichage avec contraste élevé, quel que soit la variation de couleur.
+- `none`{{deprecated_inline}}
+  - : Cette valeur n'est plus prise en charge par Edge.
+- `black-on-white`
+  - : Cette valeur indique que les règles de mise en forme qui suivent sont appliquées lorsque le système utilise un affichage avec contraste élevé en noir sur blanc.
+- `white-on-black`
+  - : Cette valeur indique que les règles de mise en forme qui suivent sont appliquées lorsque le système utilise un affichage avec contraste élevé en blanc sur noir.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{CSSSyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Les déclarations suivantes s'appliqueront respectivement sur des applications utilisées avec un mode de contraste élevé, avec une variation en noir sur blanc et enfin avec une variation en blanc sur noir.</p>
+Les déclarations suivantes s'appliqueront respectivement sur des applications utilisées avec un mode de contraste élevé, avec une variation en noir sur blanc et enfin avec une variation en blanc sur noir.
 
-<pre class="brush: css">@media screen and (-ms-high-contrast: active) {
+```css
+@media screen and (-ms-high-contrast: active) {
   /* Règles utilisées dans tous les cas si
      le contraste élevé est utilisé */
 }
@@ -57,16 +50,16 @@ original_slug: Web/CSS/-ms-high-contrast
 @media screen and (-ms-high-contrast: white-on-black) {
   div { background-image: url('image-wb.png'); }
 }
-</pre>
+```
 
-<h2 id="Specification">Spécifications</h2>
+## Spécifications
 
-<p>Cette caractéristique est propre à Microsoft et n'est décrite dans aucune spécification.</p>
+Cette caractéristique est propre à Microsoft et n'est décrite dans aucune spécification.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>À partir de Microsoft Edge, <code><strong>-ms-high-contrast: none</strong></code> n'est plus pris en charge.</p>
+À partir de Microsoft Edge, **`-ms-high-contrast: none`** n'est plus pris en charge.
 
-<p>La caractéristique média <code><strong>-ms-high-contrast</strong></code> fonctionne avec la propriété {{cssxref("-ms-high-contrast-adjust")}}.</p>
+La caractéristique média **`-ms-high-contrast`** fonctionne avec la propriété {{cssxref("-ms-high-contrast-adjust")}}.
 
-<p>La caractéristique média <code><strong>-ms-high-contrast</strong></code> a été introduite avec Windows 8.</p>
+La caractéristique média **`-ms-high-contrast`** a été introduite avec Windows 8.

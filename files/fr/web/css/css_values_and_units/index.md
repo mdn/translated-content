@@ -7,489 +7,339 @@ tags:
 translation_of: Web/CSS/CSS_Values_and_Units
 original_slug: Web/CSS/Valeurs_et_unités_CSS
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Chaque déclaration CSS inclut une paire constituée d'une propriété et d'une valeur. La plupart de celles-ci sont définies dans le module de spécification <em><a href="https://www.w3.org/TR/css-values-4/">CSS Values and Units</a></em> (Valeurs et unités CSS). Dans cet article, nous verrons ces différents types et valeurs ainsi que des notions de base quant à leur utilisation. Pour obtenir des informattions plus détaillées, vous pouvez consulter la page de chacun de ces types.</p>
+Chaque déclaration CSS inclut une paire constituée d'une propriété et d'une valeur. La plupart de celles-ci sont définies dans le module de spécification _[CSS Values and Units](https://www.w3.org/TR/css-values-4/)_ (Valeurs et unités CSS). Dans cet article, nous verrons ces différents types et valeurs ainsi que des notions de base quant à leur utilisation. Pour obtenir des informattions plus détaillées, vous pouvez consulter la page de chacun de ces types.
 
-<h2 id="Types_de_données_textuels">Types de données textuels</h2>
+## Types de données textuels
 
-<ul>
- <li>{{cssxref("&lt;custom-ident&gt;")}}</li>
- <li>Des mots-clés prédéfinis tels que les identifiants (<code>&lt;ident&gt;</code>)</li>
- <li>{{cssxref("&lt;string&gt;")}}</li>
- <li>{{cssxref("&lt;url&gt;")}}</li>
-</ul>
+- {{cssxref("&lt;custom-ident&gt;")}}
+- Des mots-clés prédéfinis tels que les identifiants (`<ident>`)
+- {{cssxref("&lt;string&gt;")}}
+- {{cssxref("&lt;url&gt;")}}
 
-<p>Une valeur dont le type de donnée est textuel peut être un identifiant CSS (<code>&lt;ident&gt;</code>) ou une chaîne de caractères (<code>&lt;string&gt;</code>). Lorsqu'il s'agit d'un identifiant CSS, celui-ci ne doit pas être entouré de doubles quotes (guillemets anglais). En revanche, les chaînes de caractères (<code>&lt;string&gt;</code>) doivent être délimitées par des quotes ou des doubles quotes.</p>
+Une valeur dont le type de donnée est textuel peut être un identifiant CSS (`<ident>`) ou une chaîne de caractères (`<string>`). Lorsqu'il s'agit d'un identifiant CSS, celui-ci ne doit pas être entouré de doubles quotes (guillemets anglais). En revanche, les chaînes de caractères (`<string>`) doivent être délimitées par des quotes ou des doubles quotes.
 
-<p>Dans les spécifications, les valeurs qui peuvent être définies par un développeur web sont indiquées comme {{cssxref("&lt;custom-ident&gt;")}} ; ce type de valeur se comportera comme n'importe quel autre identifiant CSS. Ainsi, pour la propriété {{cssxref("grid-area")}}, on peut utiliser une valeur de type <code>&lt;custom-ident&gt;</code> et si on a une zone de grille nommée <code>content</code>, on l'indiquera sans quotes :</p>
+Dans les spécifications, les valeurs qui peuvent être définies par un développeur web sont indiquées comme {{cssxref("&lt;custom-ident&gt;")}} ; ce type de valeur se comportera comme n'importe quel autre identifiant CSS. Ainsi, pour la propriété {{cssxref("grid-area")}}, on peut utiliser une valeur de type `<custom-ident>` et si on a une zone de grille nommée `content`, on l'indiquera sans quotes :
 
-<pre class="brush: css">.item {
+```css
+.item {
   grid-area: content;
 }
-</pre>
+```
 
-<p>En revanche, lorsqu'on manipule une valeur de type {{cssxref("&lt;string&gt;")}}, comme ça peut être le cas lorsqu'on utilise la propriété {{cssxref("content")}}, il faut l'entourer de quotes :</p>
+En revanche, lorsqu'on manipule une valeur de type {{cssxref("&lt;string&gt;")}}, comme ça peut être le cas lorsqu'on utilise la propriété {{cssxref("content")}}, il faut l'entourer de quotes :
 
-<pre class="brush: css">.item::after {
+```css
+.item::after {
   content: "Voici le contenu.";
 }
-</pre>
+```
 
-<p>Si le type indiqué dans la spécification est <code>&lt;custom-ident&gt; | &lt;string&gt;</code>, cela nidiquera que les quotes sont optionnelles. C'est par exemple le cas avec les noms des animations :</p>
+Si le type indiqué dans la spécification est `<custom-ident> | <string>`, cela nidiquera que les quotes sont optionnelles. C'est par exemple le cas avec les noms des animations :
 
-<pre class="brush: bash">@keyframe identifiantValide {
+```bash
+@keyframe identifiantValide {
   /* on place les keyframes ici */
 }
 
 @keyframe 'chaineValide' {
   /* on place les keyframes ici */
-}</pre>
+}
+```
 
-<p>Bien qu'on puisse généralement utiliser presque n'importe nom (y compris en le composant d'emojis), un identifiant ne peut pas être <code>none</code>, <code>unset</code>, <code>initial</code> ou <code>inherit</code>, ne peut pas commencer par un chiffre ou par deux tirets. De façon générale, il ne faut pas qu'un identifiant soit un mot-clé CSS existant. Pour plus d'informations, voir les pages {{cssxref("&lt;custom-ident&gt;")}} et {{cssxref("&lt;string&gt;")}}.</p>
+Bien qu'on puisse généralement utiliser presque n'importe nom (y compris en le composant d'emojis), un identifiant ne peut pas être `none`, `unset`, `initial` ou `inherit`, ne peut pas commencer par un chiffre ou par deux tirets. De façon générale, il ne faut pas qu'un identifiant soit un mot-clé CSS existant. Pour plus d'informations, voir les pages {{cssxref("&lt;custom-ident&gt;")}} et {{cssxref("&lt;string&gt;")}}.
 
-<h3 id="Mots-clés_prédéfinis">Mots-clés prédéfinis</h3>
+### Mots-clés prédéfinis
 
-<p>Les spécifications définissent également des mots-clés utilisables comme valeurs pour certaines propriétés. Ces mots-clés sont également des identifiants CSS et ne doivent pas être entourés de guillemets.</p>
+Les spécifications définissent également des mots-clés utilisables comme valeurs pour certaines propriétés. Ces mots-clés sont également des identifiants CSS et ne doivent pas être entourés de guillemets.
 
-<p>Lorsque vous consultez une spécification ou un article de MDN à propos d'une propriété, vous pourrez voir les mots-clés autorisés sous la forme suivante. Voici un exemple avec les valeurs autorisées pour la propriété {{cssxref("break-inside")}}.</p>
+Lorsque vous consultez une spécification ou un article de MDN à propos d'une propriété, vous pourrez voir les mots-clés autorisés sous la forme suivante. Voici un exemple avec les valeurs autorisées pour la propriété {{cssxref("break-inside")}}.
 
-<pre class="syntaxbox">auto | avoid | avoid-page | avoid-column | avoid-region</pre>
+    auto | avoid | avoid-page | avoid-column | avoid-region
 
-<p>Dans une déclaration, on pourra donc écrire (sans quote) :</p>
+Dans une déclaration, on pourra donc écrire (sans quote) :
 
-<pre class="brush: css">.box {
+```css
+.box {
   break-inside: avoid;
 }
-</pre>
+```
 
-<h3 id="Mots-clés_généraux">Mots-clés généraux</h3>
+### Mots-clés généraux
 
-<p>En complément des mots-clés définis pour certaines propriétés, il existe trois mots-clés utilisables pour l'ensemble des propriétés CSS : {{cssxref("initial")}}, {{cssxref("inherit")}} et {{cssxref("unset")}}.</p>
+En complément des mots-clés définis pour certaines propriétés, il existe trois mots-clés utilisables pour l'ensemble des propriétés CSS : {{cssxref("initial")}}, {{cssxref("inherit")}} et {{cssxref("unset")}}.
 
-<p>Le mot-clé <code>initial</code> représente la valeur définie comme la valeur initiale de la propriété. Le mot-clé <code>inherit</code> correspond à la valeur calculée de la propriété sur l'élément parent si celle-ci est héritée.</p>
+Le mot-clé `initial` représente la valeur définie comme la valeur initiale de la propriété. Le mot-clé `inherit` correspond à la valeur calculée de la propriété sur l'élément parent si celle-ci est héritée.
 
-<p>Le mot-clé <code>unset</code> agit comme <code>inherit</code> ou <code>initial</code> selon que la propriété soit héritée ou non.</p>
+Le mot-clé `unset` agit comme `inherit` ou `initial` selon que la propriété soit héritée ou non.
 
-<p>Une quatrième valeur, {{cssxref("revert")}}, a été ajoutée dans le module de spécification de niveau 4 sur la cascade mais sa prise en charge est encore faible et hétérogène (en février 2019).</p>
+Une quatrième valeur, {{cssxref("revert")}}, a été ajoutée dans le module de spécification de niveau 4 sur la cascade mais sa prise en charge est encore faible et hétérogène (en février 2019).
 
-<h3 id="URL">URL</h3>
+### URL
 
-<p>Une valeur de type {{cssxref("&lt;url&gt;")}} s'utilise avec une notation fonctionnelle qui prend une chaîne de caractères (type <code>&lt;string&gt;</code>) comme argument et qui est une URL. La chaîne de caractères peut être une URL absolue ou relative. Ainsi, si on souhaite inclure une image d'arrière-plan, on pourra utiliser l'une ou l'autre de ces déclarations.</p>
+Une valeur de type {{cssxref("&lt;url&gt;")}} s'utilise avec une notation fonctionnelle qui prend une chaîne de caractères (type `<string>`) comme argument et qui est une URL. La chaîne de caractères peut être une URL absolue ou relative. Ainsi, si on souhaite inclure une image d'arrière-plan, on pourra utiliser l'une ou l'autre de ces déclarations.
 
-<pre class="brush: css"><code>.box {
+```css
+.box {
   background-image: url("images/mon-arriere-plan.png");
-}</code>
+}
 
-<code>.box {
+.box {
   background-image: url("https://www.exammple.com/images/mon-arriere-plan.png");
-}</code>
-</pre>
+}
+```
 
-<p>On notera que la valeur passée à <code>url()</code> peut ne pas contenir de quotes. Dans ce cas, elle sera analysée comme une valeur <code>&lt;url-token&gt;</code> et devra respecter certaines règles supplémentaires quant à l'échappement de certains caractères. Voir la page {{cssxref("&lt;url&gt;")}} pour plus d'informations.</p>
+On notera que la valeur passée à `url()` peut ne pas contenir de quotes. Dans ce cas, elle sera analysée comme une valeur `<url-token>` et devra respecter certaines règles supplémentaires quant à l'échappement de certains caractères. Voir la page {{cssxref("&lt;url&gt;")}} pour plus d'informations.
 
-<h2 id="Types_de_données_numériques">Types de données numériques</h2>
+## Types de données numériques
 
-<ul>
- <li>{{cssxref("&lt;integer&gt;")}}</li>
- <li>{{cssxref("&lt;number&gt;")}}</li>
- <li>{{cssxref("&lt;dimension&gt;")}}</li>
- <li>{{cssxref("&lt;percentage&gt;")}}</li>
-</ul>
+- {{cssxref("&lt;integer&gt;")}}
+- {{cssxref("&lt;number&gt;")}}
+- {{cssxref("&lt;dimension&gt;")}}
+- {{cssxref("&lt;percentage&gt;")}}
 
-<h3 id="Entiers">Entiers</h3>
+### Entiers
 
-<p>Un entier ({{cssxref("&lt;integer&gt;")}}) se compose d'un ou plusieurs chiffres entre <code>0</code> et <code>9</code> (exemple de valeurs : <code>1024</code> ou <code>-55</code>). Un entier peut être précédé d'un signe <code>+</code> ou <code>-</code>.</p>
+Un entier ({{cssxref("&lt;integer&gt;")}}) se compose d'un ou plusieurs chiffres entre `0` et `9` (exemple de valeurs : `1024` ou `-55`). Un entier peut être précédé d'un signe `+` ou `-`.
 
-<h3 id="Nombres">Nombres</h3>
+### Nombres
 
-<p>Un nombre ({{cssxref("&lt;number&gt;")}}) représente un nombre décimal pouvant avoir (ou non) une composante décimale. Le séparateur décimal utilisé est le point. Ainsi, <code>1</code> et <code>1.2</code> sont des nombres en CSS. Les nombres peuvent être précédés d'un signe <code>+</code> ou <code>-</code>.</p>
+Un nombre ({{cssxref("&lt;number&gt;")}}) représente un nombre décimal pouvant avoir (ou non) une composante décimale. Le séparateur décimal utilisé est le point. Ainsi, `1` et `1.2` sont des nombres en CSS. Les nombres peuvent être précédés d'un signe `+` ou `-`.
 
-<h3 id="Dimensions">Dimensions</h3>
+### Dimensions
 
-<p>Une valeur {{cssxref("&lt;dimension&gt;")}} est un nombre (<code>&lt;number&gt;</code>) suivi directement d'une unité (par exemple <code>10px</code>). L'identifiant utilisé pour exprimer l'unité est insensible à la casse et est lui-même un identifiant. Il n'y a jamais d'espace entre le nombre et l'unité (<code>1 cm</code> ne sera pas valide). CSS utilise les dimensions pour les types suivants :</p>
+Une valeur {{cssxref("&lt;dimension&gt;")}} est un nombre (`<number>`) suivi directement d'une unité (par exemple `10px`). L'identifiant utilisé pour exprimer l'unité est insensible à la casse et est lui-même un identifiant. Il n'y a jamais d'espace entre le nombre et l'unité (`1 cm` ne sera pas valide). CSS utilise les dimensions pour les types suivants :
 
-<ul>
- <li>{{cssxref("&lt;length&gt;")}} (longueurs avec des unités de distance)</li>
- <li>{{cssxref("&lt;angle&gt;")}}</li>
- <li>{{cssxref("&lt;time&gt;")}}</li>
- <li>{{cssxref("&lt;frequency&gt;")}}</li>
- <li>{{cssxref("&lt;resolution&gt;")}}</li>
-</ul>
+- {{cssxref("&lt;length&gt;")}} (longueurs avec des unités de distance)
+- {{cssxref("&lt;angle&gt;")}}
+- {{cssxref("&lt;time&gt;")}}
+- {{cssxref("&lt;frequency&gt;")}}
+- {{cssxref("&lt;resolution&gt;")}}
 
-<p>Nous verrons chacun de ces types dans les sections suivantes.</p>
+Nous verrons chacun de ces types dans les sections suivantes.
 
-<ul>
-</ul>
+#### Unités de distance
 
-<h4 id="Unités_de_distance">Unités de distance</h4>
+Lorsqu'on peut utiliser une distance comme valeur d'une propriété, cette valeur est décrite avec le type {{cssxref("&lt;length&gt;")}}. Il existe deux types de longueur en CSS : les longueurs absolues d'une part et les longueurs relatives d'autre part.
 
-<p>Lorsqu'on peut utiliser une distance comme valeur d'une propriété, cette valeur est décrite avec le type {{cssxref("&lt;length&gt;")}}. Il existe deux types de longueur en CSS : les longueurs absolues d'une part et les longueurs relatives d'autre part.</p>
+Les unités de longueur relative permettent d'exprimer une distance relative à une autre grandeur. Ainsi, l'unité `em` sera relative à la taille (corps) de la police pour l'élément ; l'unité `vh` sera relative à la hauteur de la zone d'affichage (_viewport_).
 
-<p>Les unités de longueur relative permettent d'exprimer une distance relative à une autre grandeur. Ainsi, l'unité <code>em</code> sera relative à la taille (corps) de la police pour l'élément ; l'unité <code>vh</code> sera relative à la hauteur de la zone d'affichage (<em>viewport</em>).</p>
+| Unité  | Relative à                                                                                                                                         |
+| ------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `em`   | La taille (corps) de police de l'élément                                                                                                           |
+| `ex`   | La hauteur d'un x avec la police utilisée par l'élément                                                                                            |
+| `cap`  | La hauteur d'une majuscule nominale avec la police utilisée par l'élément                                                                          |
+| `ch`   | La largeur moyenne d'un glyphe étroit et de l'espace alentour pour la police utilisée par l'élément (le glyphe concerné étant “0” (ZERO, U+0030)). |
+| `ic`   | La largeur moyenne d'un glyphe large et de l'espace alentour pour la police utilisée par l'élément (exemple de glyphe “水” ).                      |
+| `rem`  | La taille (corps) de police de l'élément racine                                                                                                    |
+| `lh`   | La hauteur de la ligne de l'élément                                                                                                                |
+| `rlh`  | La hauteur de la ligne de l'élément racine                                                                                                         |
+| `vw`   | 1% de la largeur de la zone d'affichage (_viewport_)                                                                                               |
+| `vh`   | 1% de la hauteur de la zone d'affichage (_viewport_)                                                                                               |
+| `vi`   | 1% de la taille de la zone d'affichage sur l'axe en ligne (_inline axis_)                                                                          |
+| `vb`   | 1% de la taille de la zone d'affichage sur l'axe de bloc (_block axis_)                                                                            |
+| `vmin` | 1% de la zone d'affichage selon sa plus petite dimension                                                                                           |
+| `vmax` | 1% de la zone d'affichage selon sa plus grande dimension                                                                                           |
 
-<table class="standard-table">
- <caption>Récapitulatif des unités relatives</caption>
- <thead>
-  <tr>
-   <th scope="col">Unité</th>
-   <th scope="col">Relative à</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>em</code></td>
-   <td>La taille (corps) de police de l'élément</td>
-  </tr>
-  <tr>
-   <td><code>ex</code></td>
-   <td>La hauteur d'un x avec la police utilisée par l'élément</td>
-  </tr>
-  <tr>
-   <td><code>cap</code></td>
-   <td>La hauteur d'une majuscule nominale avec la police utilisée par l'élément</td>
-  </tr>
-  <tr>
-   <td><code>ch</code></td>
-   <td>La largeur moyenne d'un glyphe étroit et de l'espace alentour pour la police utilisée par l'élément (le glyphe concerné étant “0” (ZERO, U+0030)).</td>
-  </tr>
-  <tr>
-   <td><code>ic</code></td>
-   <td>La largeur moyenne d'un glyphe large et de l'espace alentour pour la police utilisée par l'élément (exemple de glyphe “水” ).</td>
-  </tr>
-  <tr>
-   <td><code>rem</code></td>
-   <td>La taille (corps) de police de l'élément racine</td>
-  </tr>
-  <tr>
-   <td><code>lh</code></td>
-   <td>La hauteur de la ligne de l'élément</td>
-  </tr>
-  <tr>
-   <td><code>rlh</code></td>
-   <td>La hauteur de la ligne de l'élément racine</td>
-  </tr>
-  <tr>
-   <td><code>vw</code></td>
-   <td>1% de la largeur de la zone d'affichage (<em>viewport</em>)</td>
-  </tr>
-  <tr>
-   <td><code>vh</code></td>
-   <td>1% de la hauteur de la zone d'affichage (<em>viewport</em>)</td>
-  </tr>
-  <tr>
-   <td><code>vi</code></td>
-   <td>1% de la taille de la zone d'affichage sur l'axe en ligne (<em>inline axis</em>)</td>
-  </tr>
-  <tr>
-   <td><code>vb</code></td>
-   <td>1% de la taille de la zone d'affichage sur l'axe de bloc (<em>block axis</em>)</td>
-  </tr>
-  <tr>
-   <td><code>vmin</code></td>
-   <td>1% de la zone d'affichage selon sa plus petite dimension</td>
-  </tr>
-  <tr>
-   <td><code>vmax</code></td>
-   <td>1% de la zone d'affichage selon sa plus grande dimension</td>
-  </tr>
- </tbody>
-</table>
+Les unités de longueur absolue correspondent à des mesures physiques et sont ainsi particulièrement adaptées lors que le média d'affichage possède une taille fixe (l'impression par exemple). Ainsi, l'unité `cm` correspond à un centimètre physique.
 
-<p>Les unités de longueur absolue correspondent à des mesures physiques et sont ainsi particulièrement adaptées lors que le média d'affichage possède une taille fixe (l'impression par exemple). Ainsi, l'unité <code>cm</code> correspond à un centimètre physique.</p>
+| Unité | Nom                 | Équivalence         |
+| ----- | ------------------- | ------------------- |
+| `cm`  | Centimètre          | 1cm = 96px/2.54     |
+| `mm`  | Millimètre          | 1mm = 1/10e de 1cm  |
+| `Q`   | Quart de millimètre | 1Q = 1/40e de 1cm   |
+| `in`  | Pouces (_inches_)   | 1in = 2.54cm = 96px |
+| `pc`  | Picas               | 1pc = 1/16e de 1in  |
+| `pt`  | Points              | 1pt = 1/72e de 1in  |
+| `px`  | Pixels              | 1px = 1/96e de 1in  |
 
-<table class="standard-table">
- <caption>Récapitulatif des unités de longueur absolue</caption>
- <thead>
-  <tr>
-   <th scope="col">Unité</th>
-   <th scope="col">Nom</th>
-   <th scope="col">Équivalence</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>cm</code></td>
-   <td>Centimètre</td>
-   <td>1cm = 96px/2.54</td>
-  </tr>
-  <tr>
-   <td><code>mm</code></td>
-   <td>Millimètre</td>
-   <td>1mm = 1/10e de 1cm</td>
-  </tr>
-  <tr>
-   <td><code>Q</code></td>
-   <td>Quart de millimètre</td>
-   <td>1Q = 1/40e de 1cm</td>
-  </tr>
-  <tr>
-   <td><code>in</code></td>
-   <td>Pouces (<em>inches</em>)</td>
-   <td>1in = 2.54cm = 96px</td>
-  </tr>
-  <tr>
-   <td><code>pc</code></td>
-   <td>Picas</td>
-   <td>1pc = 1/16e de 1in</td>
-  </tr>
-  <tr>
-   <td><code>pt</code></td>
-   <td>Points</td>
-   <td>1pt = 1/72e de 1in</td>
-  </tr>
-  <tr>
-   <td><code>px</code></td>
-   <td>Pixels</td>
-   <td>1px = 1/96e de 1in</td>
-  </tr>
- </tbody>
-</table>
+Lorsqu'on utilise une longueur nulle (sa valeur est `0`), l'identifiant correspondant à l'unité n'est pas obligatoire. Dans tous les autres cas, l'unité doit être écrite juste après la valeur (sans espace). L'identifiant de l'unité est insensible à la casse.
 
-<p>Lorsqu'on utilise une longueur nulle (sa valeur est <code>0</code>), l'identifiant correspondant à l'unité n'est pas obligatoire. Dans tous les autres cas, l'unité doit être écrite juste après la valeur (sans espace). L'identifiant de l'unité est insensible à la casse.</p>
+#### Unités angulaires
 
-<h4 id="Unités_angulaires">Unités angulaires</h4>
+Les valeurs angulaires sont représentées avec le type {{cssxref("&lt;angle&gt;")}} et peuvent être décrites avec les unités suivantes :
 
-<p>Les valeurs angulaires sont représentées avec le type {{cssxref("&lt;angle&gt;")}} et peuvent être décrites avec les unités suivantes :</p>
+| Unité  | Nom             | Description                              |
+| ------ | --------------- | ---------------------------------------- |
+| `deg`  | Degrés          | Un cercle se divise en 360 degrés égaux. |
+| `grad` | Grades/Gradians | Un cercle se compose de 400 grades.      |
+| `rad`  | Radians         | Un cercle se compose de 2π radians.      |
+| `turn` | Tours           | Un cercle se compose d'un tour.          |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Unité</th>
-   <th scope="col">Nom</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>deg</code></td>
-   <td>Degrés</td>
-   <td>Un cercle se divise en 360 degrés égaux.</td>
-  </tr>
-  <tr>
-   <td><code>grad</code></td>
-   <td>Grades/Gradians</td>
-   <td>Un cercle se compose de 400 grades.</td>
-  </tr>
-  <tr>
-   <td><code>rad</code></td>
-   <td>Radians</td>
-   <td>Un cercle se compose de 2π radians.</td>
-  </tr>
-  <tr>
-   <td><code>turn</code></td>
-   <td>Tours</td>
-   <td>Un cercle se compose d'un tour.</td>
-  </tr>
- </tbody>
-</table>
+#### Unités temporelles
 
-<h4 id="Unités_temporelles">Unités temporelles</h4>
+Les valeurs temporelles sont de type {{cssxref("&lt;time&gt;")}} et utilisent les unités suivantes.
 
-<p>Les valeurs temporelles sont de type {{cssxref("&lt;time&gt;")}} et utilisent les unités suivantes.</p>
+| Unité | Nom           | Description             |
+| ----- | ------------- | ----------------------- |
+| `s`   | Secondes      |                         |
+| `ms`  | Millisecondes | Un millième de seconde. |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Unité</th>
-   <th scope="col">Nom</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>s</code></td>
-   <td>Secondes</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td><code>ms</code></td>
-   <td>Millisecondes</td>
-   <td>Un millième de seconde.</td>
-  </tr>
- </tbody>
-</table>
+#### Unités de fréquence
 
-<h4 id="Unités_de_fréquence">Unités de fréquence</h4>
+Les valeurs de fréquence ont le type {{cssxref("&lt;frequency&gt;")}} et utilisent les valeurs suivantes.
 
-<p>Les valeurs de fréquence ont le type {{cssxref("&lt;frequency&gt;")}} et utilisent les valeurs suivantes.</p>
+| Unité | Nom       | Description                 |
+| ----- | --------- | --------------------------- |
+| `Hz`  | Hertz     | Nombre de fois par seconde. |
+| `kHz` | Kilohertz | 1000 Hertz.                 |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Unité</th>
-   <th scope="col">Nom</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>Hz</code></td>
-   <td>Hertz</td>
-   <td>Nombre de fois par seconde.</td>
-  </tr>
-  <tr>
-   <td><code>kHz</code></td>
-   <td>Kilohertz</td>
-   <td>1000 Hertz.</td>
-  </tr>
- </tbody>
-</table>
+#### Unités de résolution
 
-<h4 id="Unités_de_résolution">Unités de résolution</h4>
+Les résolutions sont représentées par des valeurs de type {{cssxref("&lt;resolution&gt;")}}. Elles correspondent à la taille d'un point sur une représentation graphique et décrivent la quantité de ces points sur un pixel, pouce ou centimètre CSS.
 
-<p>Les résolutions sont représentées par des valeurs de type {{cssxref("&lt;resolution&gt;")}}. Elles correspondent à la taille d'un point sur une représentation graphique et décrivent la quantité de ces points sur un pixel, pouce ou centimètre CSS.</p>
+| Unité       | Description            |
+| ----------- | ---------------------- |
+| `dpi`       | Points par pouce.      |
+| `dpcm`      | Points par centimètre. |
+| `dppx`, `x` | Points par unité px.   |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Unité</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>dpi</code></td>
-   <td>Points par pouce.</td>
-  </tr>
-  <tr>
-   <td><code>dpcm</code></td>
-   <td>Points par centimètre.</td>
-  </tr>
-  <tr>
-   <td><code>dppx</code>, <code>x</code></td>
-   <td>Points par unité px.</td>
-  </tr>
- </tbody>
-</table>
+### Pourcentages
 
-<h3 id="Pourcentages">Pourcentages</h3>
+Une valeur de type {{cssxref("&lt;percentage&gt;")}} représente une fraction d'une autre valeur de référence.
 
-<p>Une valeur de type {{cssxref("&lt;percentage&gt;")}} représente une fraction d'une autre valeur de référence.</p>
+Les valeurs exprimées en pourcentages sont relatives à d'autres quantités (une longueur par exemple). Chaque propriété qui permet d'utiliser un pourcentage définit également la quantité à laquelle se réfère ce pourcentage. Cette quantité peut être une valeur d'une autre propriété du même élément, la valeur de la propriété sur un élément ancêtre, une caractéristique du bloc englobant ou autre chose.
 
-<p>Les valeurs exprimées en pourcentages sont relatives à d'autres quantités (une longueur par exemple). Chaque propriété qui permet d'utiliser un pourcentage définit également la quantité à laquelle se réfère ce pourcentage. Cette quantité peut être une valeur d'une autre propriété du même élément, la valeur de la propriété sur un élément ancêtre, une caractéristique du bloc englobant ou autre chose.</p>
+Ainsi, si on utilise {{cssxref("width")}} avec un pourcentage sur une boîte. Ce pourcentage fera référence à la largeur calculée de l'élément parent de la boîte :
 
-<p>Ainsi, si on utilise {{cssxref("width")}} avec un pourcentage sur une boîte. Ce pourcentage fera référence à la largeur calculée de l'élément parent de la boîte :</p>
-
-<pre class="brush: css">.box {
+```css
+.box {
   width: 50%;
-}</pre>
+}
+```
 
-<h3 id="Mélanges_entre_les_pourcentages_et_les_dimensions">Mélanges entre les pourcentages et les dimensions</h3>
+### Mélanges entre les pourcentages et les dimensions
 
-<p>Certaines propriétés permettent d'utiliser une dimension avec deux types possibles (par exemple une longueur ou un pourcentage). Dans ce cas, la valeur mentionnée dans la spécification a une unité composite (ex. {{cssxref("&lt;length-percentage&gt;")}}). Voici les différentes unités composites qui existent :</p>
+Certaines propriétés permettent d'utiliser une dimension avec deux types possibles (par exemple une longueur ou un pourcentage). Dans ce cas, la valeur mentionnée dans la spécification a une unité composite (ex. {{cssxref("&lt;length-percentage&gt;")}}). Voici les différentes unités composites qui existent :
 
-<ul>
- <li>{{cssxref("&lt;frequency-percentage&gt;")}}</li>
- <li>{{cssxref("&lt;angle-percentage&gt;")}}</li>
- <li>{{cssxref("&lt;time-percentage&gt;")}}</li>
-</ul>
+- {{cssxref("&lt;frequency-percentage&gt;")}}
+- {{cssxref("&lt;angle-percentage&gt;")}}
+- {{cssxref("&lt;time-percentage&gt;")}}
 
-<h3 id="Types_de_données_spéciaux_(définis_via_d'autres_spécifications)">Types de données spéciaux (définis via d'autres spécifications)</h3>
+### Types de données spéciaux (définis via d'autres spécifications)
 
-<ul>
- <li>{{cssxref("&lt;color&gt;")}}</li>
- <li>{{cssxref("&lt;image&gt;")}}</li>
- <li>{{cssxref("&lt;position&gt;")}}</li>
-</ul>
+- {{cssxref("&lt;color&gt;")}}
+- {{cssxref("&lt;image&gt;")}}
+- {{cssxref("&lt;position&gt;")}}
 
-<h4 id="Couleur">Couleur</h4>
+#### Couleur
 
-<p>Une valeur de type {{cssxref("&lt;color&gt;")}} permet de représenter une couleur pour un élément (par exemple la couleur de son arrière-plan). Ce type est défini dans le module de spécification <em><a href="https://drafts.csswg.org/css-color-3/">CSS Color</a></em>.</p>
+Une valeur de type {{cssxref("&lt;color&gt;")}} permet de représenter une couleur pour un élément (par exemple la couleur de son arrière-plan). Ce type est défini dans le module de spécification _[CSS Color](https://drafts.csswg.org/css-color-3/)_.
 
-<h4 id="Image">Image</h4>
+#### Image
 
-<p>Une valeur de type {{cssxref("&lt;image&gt;")}} permet de représenter une image utilisable en CSS. Ce type est défini dans le module de spécification <em><a href="https://www.w3.org/TR/css-images-4/">CSS Image Values and Replaced Content Module</a></em>.</p>
+Une valeur de type {{cssxref("&lt;image&gt;")}} permet de représenter une image utilisable en CSS. Ce type est défini dans le module de spécification _[CSS Image Values and Replaced Content Module](https://www.w3.org/TR/css-images-4/)_.
 
-<h4 id="Position">Position</h4>
+#### Position
 
-<p>Le type {{cssxref("&lt;position&gt;")}} définit le positionnement, sur deux dimensions, d'un objet sur une zone de positionnement. Ce peut être le positionnement d'une image d'arrière-plan par rapport à son conteneur par exemple. Ce type est interprété comme {{cssxref("background-position")}} et est donc spécifié avec le module <a href="https://www.w3.org/TR/css-backgrounds-3/"><em>CSS Backgrounds and Borders</em></a>.</p>
+Le type {{cssxref("&lt;position&gt;")}} définit le positionnement, sur deux dimensions, d'un objet sur une zone de positionnement. Ce peut être le positionnement d'une image d'arrière-plan par rapport à son conteneur par exemple. Ce type est interprété comme {{cssxref("background-position")}} et est donc spécifié avec le module [_CSS Backgrounds and Borders_](https://www.w3.org/TR/css-backgrounds-3/).
 
-<h3 id="Notations_fonctionnelles_(fonctions)">Notations fonctionnelles (fonctions)</h3>
+### Notations fonctionnelles (fonctions)
 
-<ul>
- <li>{{cssxref("calc()")}}</li>
- <li>{{cssxref("min()", "min()")}}</li>
- <li>{{cssxref("max()", "max()")}}</li>
- <li>{{cssxref("clamp()", "clamp()")}}</li>
- <li>{{cssxref("toggle", "toggle()")}}</li>
- <li>{{cssxref("attr()", "attr()")}}</li>
-</ul>
+- {{cssxref("calc()")}}
+- {{cssxref("min()", "min()")}}
+- {{cssxref("max()", "max()")}}
+- {{cssxref("clamp()", "clamp()")}}
+- {{cssxref("toggle", "toggle()")}}
+- {{cssxref("attr()", "attr()")}}
 
-<p>Les notations fonctionnelles sont des types de valeur qui peuvent représenter des types plus complexes ou qui impliquent un traitement spécifique du moteur de rendu. La syntaxe commence par le nom de la fonction, immédiatement suivi d'une parenthèse gauche <code>(</code> suivie des arguments de la notation, suivis d'une parenthèse droite<code>)</code>. Les fonctions peuvent prendre plusieurs arguments qui ont une forme analogue à celle utilisée pour les valeurs des propriétés.</p>
+Les notations fonctionnelles sont des types de valeur qui peuvent représenter des types plus complexes ou qui impliquent un traitement spécifique du moteur de rendu. La syntaxe commence par le nom de la fonction, immédiatement suivi d'une parenthèse gauche `(` suivie des arguments de la notation, suivis d'une parenthèse droite`)`. Les fonctions peuvent prendre plusieurs arguments qui ont une forme analogue à celle utilisée pour les valeurs des propriétés.
 
-<p>Les espaces sont optionnels mais autorisés à l'intérieur des parenthèses.</p>
+Les espaces sont optionnels mais autorisés à l'intérieur des parenthèses.
 
-<div class="note">
-<p><strong>Note :</strong> Contrairement à d'autres langages, la virgule n'est pas toujours le séparateur utilisé entre les arguments d'une notation fonctionnelle.</p>
-</div>
+> **Note :** Contrairement à d'autres langages, la virgule n'est pas toujours le séparateur utilisé entre les arguments d'une notation fonctionnelle.
 
-<p>Certaines notations fonctionnelles historiques telles que <code>rgba()</code> utilisent des virgules pour séparer des arguments mais la plupart du temps, les virgules sont uniquement utilisées afin de séparer les éléments d'une liste. Si une virgule est utilisée comme séparateur entre des arguments, on peut ajouter un espace optionnel avant et après la virgule.</p>
+Certaines notations fonctionnelles historiques telles que `rgba()` utilisent des virgules pour séparer des arguments mais la plupart du temps, les virgules sont uniquement utilisées afin de séparer les éléments d'une liste. Si une virgule est utilisée comme séparateur entre des arguments, on peut ajouter un espace optionnel avant et après la virgule.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Values")}}</td>
-   <td>{{Spec2("CSS4 Values")}}</td>
-   <td>Ajout des unités <code>vi</code>, <code>vb</code>, <code>ic</code>, <code>cap</code>, <code>lh</code> et <code>rlh</code>.<br>
-    Ajout des notations fonctionnelles  <code>min()</code>, <code>max()</code> et <code>clamp()</code>.<br>
-    Ajout de  <code>toggle()</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Values")}}</td>
-   <td>{{Spec2("CSS3 Values")}}</td>
-   <td>Ajout de <code>calc()</code>, <code>ch</code>, <code>rem</code>, <code>vw</code>, <code>vw</code>, <code>vmin</code>,<code> vmax</code>, <code>Q</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS4 Colors")}}</td>
-   <td>{{Spec2("CSS4 Colors")}}</td>
-   <td>Ajout des syntaxes sans virgule pour les fonctions <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code> et <code>hsla()</code>. Ajout des valeurs alpha pour  <code>rgb()</code> et <code>hsl()</code>, transformant ainsi <code>rgba()</code> et <code>hsla()</code> en alias respectifs (dépréciés).<br>
-    Ajout du mot-clé de couleur <code>rebeccapurple</code>.<br>
-    Ajout des couleurs sur 4 et 8 chiffres hexadécimaux où le dernier chiffre représente la valeur alpha.<br>
-    Ajout des fonctions <code>hwb()</code>, <code>device-cmyk()</code> et <code>color()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Colors")}}</td>
-   <td>{{Spec2("CSS3 Colors")}}</td>
-   <td>Dépréciation des couleurs système. Ajout des couleurs SVG. Ajout des fonctions <code>rgba()</code>, <code>hsl()</code> et <code>hsla()</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS4 Images")}}</td>
-   <td>{{Spec2("CSS4 Images")}}</td>
-   <td>
-    <p>Ajout des notations fonctionnelles <code>element()</code>, <code>image()</code>, <code>image-set()</code>, <code>conic-gradient()</code></p>
-   </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Images")}}</td>
-   <td>{{Spec2("CSS3 Images")}}</td>
-   <td>Définition initiale du type <code>image</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS1")}}</td>
-   <td>{{Spec2("CSS1")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Spécification</th>
+      <th scope="col">État</th>
+      <th scope="col">Commentaires</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{SpecName("CSS4 Values")}}</td>
+      <td>{{Spec2("CSS4 Values")}}</td>
+      <td>
+        Ajout des unités <code>vi</code>, <code>vb</code>, <code>ic</code>,
+        <code>cap</code>, <code>lh</code> et <code>rlh</code>.<br />Ajout des
+        notations fonctionnelles  <code>min()</code>, <code>max()</code> et
+        <code>clamp()</code>.<br />Ajout de  <code>toggle()</code>
+      </td>
+    </tr>
+    <tr>
+      <td>{{SpecName("CSS3 Values")}}</td>
+      <td>{{Spec2("CSS3 Values")}}</td>
+      <td>
+        Ajout de
+        <code>calc()</code
+        >, <code>ch</code>, <code>rem</code>, <code>vw</code>, <code>vw</code>, <code>vmin</code>,<code> vmax</code>, <code
+          >Q</code
+        >
+      </td>
+    </tr>
+    <tr>
+      <td>{{SpecName("CSS4 Colors")}}</td>
+      <td>{{Spec2("CSS4 Colors")}}</td>
+      <td>
+        Ajout des syntaxes sans virgule pour les fonctions
+        <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code> et
+        <code>hsla()</code>. Ajout des valeurs alpha pour  <code>rgb()</code> et
+        <code>hsl()</code>, transformant ainsi <code>rgba()</code> et
+        <code>hsla()</code> en alias respectifs (dépréciés).<br />Ajout du
+        mot-clé de couleur <code>rebeccapurple</code>.<br />Ajout des couleurs
+        sur 4 et 8 chiffres hexadécimaux où le dernier chiffre représente la
+        valeur alpha.<br />Ajout des fonctions <code>hwb()</code>, <code
+          >device-cmyk()</code
+        >
+        et <code>color()</code>.
+      </td>
+    </tr>
+    <tr>
+      <td>{{SpecName("CSS3 Colors")}}</td>
+      <td>{{Spec2("CSS3 Colors")}}</td>
+      <td>
+        Dépréciation des couleurs système. Ajout des couleurs SVG. Ajout des
+        fonctions <code>rgba()</code>, <code>hsl()</code> et
+        <code>hsla()</code>.
+      </td>
+    </tr>
+    <tr>
+      <td>{{SpecName("CSS4 Images")}}</td>
+      <td>{{Spec2("CSS4 Images")}}</td>
+      <td>
+        <p>
+          Ajout des notations fonctionnelles <code>element()</code>,
+          <code>image()</code>, <code>image-set()</code>,
+          <code>conic-gradient()</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>{{SpecName("CSS3 Images")}}</td>
+      <td>{{Spec2("CSS3 Images")}}</td>
+      <td>Définition initiale du type <code>image</code>.</td>
+    </tr>
+    <tr>
+      <td>{{SpecName("CSS2.1")}}</td>
+      <td>{{Spec2("CSS2.1")}}</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>{{SpecName("CSS1")}}</td>
+      <td>{{Spec2("CSS1")}}</td>
+      <td>Définition initiale.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Types">Les types de donnée de base en CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">Introduction à CSS : les valeurs et les unités</a></li>
-</ul>
+- [Les types de donnée de base en CSS](/fr/docs/Web/CSS/CSS_Types)
+- [Introduction à CSS : les valeurs et les unités](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)

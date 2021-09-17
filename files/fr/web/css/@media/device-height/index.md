@@ -8,44 +8,29 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/device-height
 ---
-<div>{{CSSRef}}{{deprecated_header}}</div>
+{{CSSRef}}{{deprecated_header}}
 
-<p><strong><code>device-height</code></strong> est une caractéristique média (cf. {{cssxref("@media")}}) dépréciée dont la valeur correspond à la hauteur de la surface de rendu pour l'appareil d'affichage.</p>
+**`device-height`** est une caractéristique média (cf. {{cssxref("@media")}}) dépréciée dont la valeur correspond à la hauteur de la surface de rendu pour l'appareil d'affichage.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>La caractéristique <code>device-height</code> est définie comme une longueur (type  {{cssxref("&lt;length&gt;")}}). C'est une caractéristique d'intervalle ce qui signifie qu'on peut utiliser les variantes préfixées <strong><code>min-device-height</code></strong> et <code><strong>max-device-height</strong></code> afin d'utiliser des critères de minimum et maximum.</p>
+La caractéristique `device-height` est définie comme une longueur (type  {{cssxref("&lt;length&gt;")}}). C'est une caractéristique d'intervalle ce qui signifie qu'on peut utiliser les variantes préfixées **`min-device-height`** et **`max-device-height`** afin d'utiliser des critères de minimum et maximum.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Ce fragment HTML applique une feuille de style spécifique pour les appareils dont la hauteur est inférieure à 800 pixels.</p>
+Ce fragment HTML applique une feuille de style spécifique pour les appareils dont la hauteur est inférieure à 800 pixels.
 
-<pre class="brush: html">&lt;link rel="stylesheet" media="screen and (max-device-height: 799px)" href="http://toto.truc.com/short-styles.css" /&gt;</pre>
+```html
+<link rel="stylesheet" media="screen and (max-device-height: 799px)" href="http://toto.truc.com/short-styles.css" />
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Media Queries', '#device-height', 'device-height')}}</td>
-   <td>{{Spec2('CSS4 Media Queries')}}</td>
-   <td>Dépréciation dans la spécification de niveau 4 pour les requêtes média.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Media Queries', '#device-height', 'device-height')}}</td>
-   <td>{{Spec2('CSS3 Media Queries')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                                     | Commentaires                                                            |
+| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------- |
+| {{SpecName('CSS4 Media Queries', '#device-height', 'device-height')}} | {{Spec2('CSS4 Media Queries')}} | Dépréciation dans la spécification de niveau 4 pour les requêtes média. |
+| {{SpecName('CSS3 Media Queries', '#device-height', 'device-height')}} | {{Spec2('CSS3 Media Queries')}} | Définition initiale.                                                    |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.at-rules.media.device-height")}}</p>
+{{Compat("css.at-rules.media.device-height")}}

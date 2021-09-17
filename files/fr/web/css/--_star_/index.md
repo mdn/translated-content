@@ -9,40 +9,40 @@ tags:
   - Variables CSS
 translation_of: Web/CSS/--*
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>Les noms des propriétés qui sont préfixés par deux tirets : <code>--</code> (par exemple : <code>--nom-exemple</code>) représentent des propriétés personnalisées (<em>custom properties</em>) qui peuvent contenir une valeur qui pourra être réutilisée dans le document grâce à la fonction {{cssxref("var")}}.</p>
+Les noms des propriétés qui sont préfixés par deux tirets : `--` (par exemple : `--nom-exemple`) représentent des propriétés personnalisées (_custom properties_) qui peuvent contenir une valeur qui pourra être réutilisée dans le document grâce à la fonction {{cssxref("var")}}.
 
-<p>La portée des propriétés personnalisées est celle des éléments sur lesquels elles sont déclarées. Ces personnalisées contribuent à la cascade : la valeur utilisée d'une propriété personnalisée sera déterminée par l'algorithme de la cascade.</p>
+La portée des propriétés personnalisées est celle des éléments sur lesquels elles sont déclarées. Ces personnalisées contribuent à la cascade : la valeur utilisée d'une propriété personnalisée sera déterminée par l'algorithme de la cascade.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">--unmotcle: left;
---unecouleur: #0000ff;
---unevaleurcomplexe: 3px 6px rgb(20, 32, 54);
-</pre>
+    --unmotcle: left;
+    --unecouleur: #0000ff;
+    --unevaleurcomplexe: 3px 6px rgb(20, 32, 54);
 
-<dl>
- <dt><code>&lt;declaration-value&gt;</code></dt>
- <dd>Cette valeur correspond à une séquence de un ou plusieurs fragments tant que la séquence ne contient pas de fragments interdits. Elle représente l'intégralité de ce qu'une déclaration valide peut avoir comme valeur.</dd>
-</dl>
+- `<declaration-value>`
+  - : Cette valeur correspond à une séquence de un ou plusieurs fragments tant que la séquence ne contient pas de fragments interdits. Elle représente l'intégralité de ce qu'une déclaration valide peut avoir comme valeur.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p id="premierParagraphe"&gt;Ce paragraphe devrait être sur fond bleu avec un texte jaune.&lt;/p&gt;
-&lt;p id="secondParagraphe"&gt;Ce paragraphe devrait être sur fond jaune avec un texte bleu.&lt;/p&gt;</pre>
+```html
+<p id="premierParagraphe">Ce paragraphe devrait être sur fond bleu avec un texte jaune.</p>
+<p id="secondParagraphe">Ce paragraphe devrait être sur fond jaune avec un texte bleu.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">:root {
+```css
+:root {
   --premiere-couleur: #488cff;
   --seconde-couleur: #ffff8c;
 }
@@ -55,37 +55,23 @@ translation_of: Web/CSS/--*
 #secondParagraphe {
   background-color: var(--seconde-couleur);
   color: var(--premiere-couleur);
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', 500, 100)}}</p>
+{{EmbedLiveSample('Exemples', 500, 100)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Variables", "#defining-variables", "--*")}}</td>
-   <td>{{Spec2("CSS3 Variables")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | État                                 | Commentaires         |
+| -------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName("CSS3 Variables", "#defining-variables", "--*")}} | {{Spec2("CSS3 Variables")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.custom-property")}}</p>
+{{Compat("css.properties.custom-property")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/Les_variables_CSS">Utiliser les variables CSS</a></li>
-</ul>
+- [Utiliser les variables CSS](/fr/docs/Web/CSS/Les_variables_CSS)

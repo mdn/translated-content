@@ -1,41 +1,43 @@
 ---
 title: ':host'
-slug: 'Web/CSS/:host'
+slug: Web/CSS/:host
 tags:
   - CSS
   - Pseudo-classe
   - Reference
-translation_of: 'Web/CSS/:host'
+translation_of: Web/CSS/:host
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <strong><code>:host</code></strong> permet de cibler l'hôte d'un <em><a href="/fr/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM</a></em> contenant le CSS à utiliser pour cet hôte. Autrement dit, elle permet de sélectionner un élément personnalisé (<em>custom element</em>) depuis l'intérieur du <em>shadow DOM</em>.</p>
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:host`** permet de cibler l'hôte d'un _[shadow DOM](/fr/docs/Web/Web_Components/Using_shadow_DOM)_ contenant le CSS à utiliser pour cet hôte. Autrement dit, elle permet de sélectionner un élément personnalisé (_custom element_) depuis l'intérieur du _shadow DOM_.
 
-<div class="note">
-<p><strong>Note :</strong> Cette pseudo-classe n'a aucun effet lorsqu'elle est utilisée à l'extérieur d'un <em>shadow DOM</em>.</p>
-</div>
+> **Note :** Cette pseudo-classe n'a aucun effet lorsqu'elle est utilisée à l'extérieur d'un _shadow DOM_.
 
-<pre class="brush: css no-line-numbers">/* Cible la racine d'un hôte de shadow DOM */
+```css
+/* Cible la racine d'un hôte de shadow DOM */
 :host {
   font-weight: bold;
 }
-</pre>
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Les fragments de code qui suivent sont extraits du dépôt d'exemple <a href="https://github.com/mdn/web-components-examples/tree/master/host-selectors"><em>host-selectors</em></a> (<a href="https://mdn.github.io/web-components-examples/host-selectors/">voir le résultat <em>live</em></a>).</p>
+Les fragments de code qui suivent sont extraits du dépôt d'exemple [_host-selectors_](https://github.com/mdn/web-components-examples/tree/master/host-selectors) ([voir le résultat _live_](https://mdn.github.io/web-components-examples/host-selectors/)).
 
-<p>Dans cet exemple, on dispose d'un élément personnalisé <code>&lt;context-span&gt;</code>  qui peut contenir du texte :</p>
+Dans cet exemple, on dispose d'un élément personnalisé `<context-span>`  qui peut contenir du texte :
 
-<pre class="brush: html">&lt;h1&gt;Host selectors &lt;a href="#"&gt;&lt;context-span&gt;example&lt;/context-span&gt;&lt;/a&gt;&lt;/h1&gt;</pre>
+```html
+<h1>Host selectors <a href="#"><context-span>example</context-span></a></h1>
+```
 
-<p>Pour le constructeur de cet élément, on crée des éléments <code>style</code> et <code>span</code> : l'élément <code>span</code> recevra le contenu de l'élément personnalisé et <code>style</code> recevra quelques règles CSS :</p>
+Pour le constructeur de cet élément, on crée des éléments `style` et `span` : l'élément `span` recevra le contenu de l'élément personnalisé et `style` recevra quelques règles CSS :
 
-<pre class="brush: js">let style = document.createElement('style');
+```js
+let style = document.createElement('style');
 let span = document.createElement('span');
 span.textContent = this.textContent;
 
@@ -48,37 +50,23 @@ style.textContent = 'span:hover { text-decoration: underline; }' +
                     ':host-context(h1):after { content: " - no links in headers!" }' +
                     ':host-context(article, aside) { color: gray; }' +
                     ':host(.footer) { color : red; }' +
-                    ':host { background: rgba(0,0,0,0.1); padding: 2px 5px; }';</pre>
+                    ':host { background: rgba(0,0,0,0.1); padding: 2px 5px; }';
+```
 
-<p>La règle <code>:host { background: rgba(0,0,0,0.1); padding: 2px 5px; }</code> permet de cibler l'ensemble des instances de <code>&lt;context-span&gt;</code> (qui est l'hôte ici) dans le document.</p>
+La règle `:host { background: rgba(0,0,0,0.1); padding: 2px 5px; }` permet de cibler l'ensemble des instances de `<context-span>` (qui est l'hôte ici) dans le document.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Scope', '#host-selector', ':host')}}</td>
-   <td>{{Spec2('CSS Scope')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                        | État                         | Commentaires         |
+| -------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('CSS Scope', '#host-selector', ':host')}} | {{Spec2('CSS Scope')}} | Définition initiale. |
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.host")}}</p>
+{{Compat("css.selectors.host")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/Web_Components">Les composants web</a></li>
- <li>{{cssxref(":host()")}}</li>
- <li>{{cssxref(":host-context()")}}</li>
-</ul>
+- [Les composants web](/fr/docs/Web/Web_Components)
+- {{cssxref(":host()")}}
+- {{cssxref(":host-context()")}}

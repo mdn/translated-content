@@ -7,15 +7,14 @@ tags:
   - Reference
 translation_of: Web/CSS/text-align
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>text-align</code></strong> définit l'alignement horizontal d'un élément de bloc ou de la boîte d'une cellule de tableau. Cette propriété fonctionne donc de façon analogue à {{cssxref("vertical-align")}} mais dans le sens horizontal.</p>
+La propriété **`text-align`** définit l'alignement horizontal d'un élément de bloc ou de la boîte d'une cellule de tableau. Cette propriété fonctionne donc de façon analogue à {{cssxref("vertical-align")}} mais dans le sens horizontal.
 
-<div>{{EmbedInteractiveExample("pages/css/text-align.html")}}</div
+{{EmbedInteractiveExample("pages/css/text-align.html")}}Syntaxe
 
-<h2 id="Syntaxe">Syntaxe</h2>
-
-<pre class="brush: css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 text-align: left;
 text-align: right;
 text-align: center;
@@ -38,186 +37,166 @@ text-align: -webkit-center;
 text-align: inherit;
 text-align: initial;
 text-align: unset;
-</pre>
+```
 
-<p>La propriété <code>text-align</code> peut être définie grâce à l'un des mots-clés de la liste qui suit.</p>
+La propriété `text-align` peut être définie grâce à l'un des mots-clés de la liste qui suit.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>start</code> {{experimental_inline}}</dt>
- <dd>Cette valeur a le même effet que la valeur <code>left</code> si la direction du texte va de gauche à droite ou le même effet que <code>right</code> si la direction du texte va de droite à gauche.</dd>
- <dt><code>end</code> {{experimental_inline}}</dt>
- <dd>Cette valeur a le même effet que la valeur <code>right</code> si la direction du texte va de gauche à droite ou le même effet que <code>left</code> si la direction du texte va de droite à gauche.</dd>
- <dt><code>left</code></dt>
- <dd>Les contenus en ligne (<em>inline</em>) sont alignés sur le bord gauche de la boîte contenant la ligne.</dd>
- <dt><code>right</code></dt>
- <dd>Les contenus en ligne (<em>inline</em>) sont alignés sur le bord droit de la boîte contenant la ligne.</dd>
- <dt><code>center</code></dt>
- <dd>Les contenus en ligne (<em>inline</em>) sont horizontalement centrés par rapport à la boîte contenant la ligne.</dd>
- <dt><code>justify</code></dt>
- <dd>Le texte est justifié. Les bords gauche et droit du texte sont alignés avec les bord gauche et droit du paragraphe.</dd>
- <dt><code>justify-all</code>{{experimental_inline}}</dt>
- <dd>Comportement analogue à <code>justify</code> mais avec la dernière ligne nécessairement justifiée.</dd>
- <dt><code>match-parent</code> {{experimental_inline}}</dt>
- <dd>Semblable à <code>inherit</code> mais les valeurs <code>start</code> et <code>end</code> sont calculées selon la valeur de {{cssxref("direction")}} pour le parent et sont remplacées par <code>left</code> ou <code>right</code> selon ce qui est adéquat.</dd>
- <dt>{{cssxref("&lt;string&gt;")}} {{experimental_inline}}</dt>
- <dd>Lorsque cette valeur est appliquée sur une cellule de tableau, elle indique le caractère sur lequel doit être aligné le contenu de la cellule.</dd>
-</dl>
+- `start` {{experimental_inline}}
+  - : Cette valeur a le même effet que la valeur `left` si la direction du texte va de gauche à droite ou le même effet que `right` si la direction du texte va de droite à gauche.
+- `end` {{experimental_inline}}
+  - : Cette valeur a le même effet que la valeur `right` si la direction du texte va de gauche à droite ou le même effet que `left` si la direction du texte va de droite à gauche.
+- `left`
+  - : Les contenus en ligne (_inline_) sont alignés sur le bord gauche de la boîte contenant la ligne.
+- `right`
+  - : Les contenus en ligne (_inline_) sont alignés sur le bord droit de la boîte contenant la ligne.
+- `center`
+  - : Les contenus en ligne (_inline_) sont horizontalement centrés par rapport à la boîte contenant la ligne.
+- `justify`
+  - : Le texte est justifié. Les bords gauche et droit du texte sont alignés avec les bord gauche et droit du paragraphe.
+- `justify-all`{{experimental_inline}}
+  - : Comportement analogue à `justify` mais avec la dernière ligne nécessairement justifiée.
+- `match-parent` {{experimental_inline}}
+  - : Semblable à `inherit` mais les valeurs `start` et `end` sont calculées selon la valeur de {{cssxref("direction")}} pour le parent et sont remplacées par `left` ou `right` selon ce qui est adéquat.
+- {{cssxref("&lt;string&gt;")}} {{experimental_inline}}
+  - : Lorsque cette valeur est appliquée sur une cellule de tableau, elle indique le caractère sur lequel doit être aligné le contenu de la cellule.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Alignement_à_gauche">Alignement à gauche</h3>
+### Alignement à gauche
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p class="exemple"&gt;
+```html
+<p class="exemple">
   Il y avait en Vestphalie, dans le château de M. le baron de
   Thunder-ten-tronckh, un jeune garçon à qui la nature avait
   donné les moeurs les plus douces. Sa physionomie annonçait
   son âme. Il avait le jugement assez droit, avec l’esprit le plus
   simple ; c’est, je crois, pour cette raison qu’on le nommait Candide.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.exemple {
+```css
+.exemple {
   text-align: left;
   border: solid;
-}</pre>
+}
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Alignement_à_gauche","100%","100%")}}</p>
+{{EmbedLiveSample("Alignement_à_gauche","100%","100%")}}
 
-<h3 id="Texte_centré">Texte centré</h3>
+### Texte centré
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p class="exemple"&gt;
+```html
+<p class="exemple">
   Il y avait en Vestphalie, dans le château de M. le baron de
   Thunder-ten-tronckh, un jeune garçon à qui la nature avait
   donné les moeurs les plus douces. Sa physionomie annonçait
   son âme. Il avait le jugement assez droit, avec l’esprit le plus
   simple ; c’est, je crois, pour cette raison qu’on le nommait Candide.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.exemple {
+```css
+.exemple {
   text-align: center;
   border: solid;
-}</pre>
+}
+```
 
-<h4 id="Résultat_2">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Texte_centré","100%","100%")}}</p>
+{{EmbedLiveSample("Texte_centré","100%","100%")}}
 
-<h3 id="Justification">Justification</h3>
+### Justification
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p class="exemple"&gt;
+```html
+<p class="exemple">
   Il y avait en Vestphalie, dans le château de M. le baron de
   Thunder-ten-tronckh, un jeune garçon à qui la nature avait
   donné les moeurs les plus douces. Sa physionomie annonçait
   son âme. Il avait le jugement assez droit, avec l’esprit le plus
   simple ; c’est, je crois, pour cette raison qu’on le nommait Candide.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.exemple {
+```css
+.exemple {
   text-align: justify;
   border: solid;
-}</pre>
+}
+```
 
-<h4 id="Résultat_3">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Justification","100%","100%")}}</p>
+{{EmbedLiveSample("Justification","100%","100%")}}
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<p>La méthode la plus générique pour centrer un bloc plutot que de centrer son contenu est d'utiliser la propriété {{cssxref("margin")}} avec les valeurs <code>left</code> et <code>right</code> à <code>auto</code>, e.g. :</p>
+La méthode la plus générique pour centrer un bloc plutot que de centrer son contenu est d'utiliser la propriété {{cssxref("margin")}} avec les valeurs `left` et `right` à `auto`, e.g. :
 
-<pre class="brush: css">.classe {
+```css
+.classe {
   margin: auto;
 }
-</pre>
+```
 
-<pre class="brush: css">.classe {
+```css
+.classe {
   margin: 0 auto;
 }
-</pre>
+```
 
-<pre class="brush: css">.classe {
+```css
+.classe {
   margin-left: auto;
   margin-right: auto;
 }
-</pre>
+```
 
-<h2 id="Accessibilité">Accessibilité</h2>
+## Accessibilité
 
-<p>L'espacement créé entre les mots par la justification du texte peut rendre la lecture difficile pour les personnes dyslexiques ou souffrant de troubles cognitifs.</p>
+L'espacement créé entre les mots par la justification du texte peut rendre la lecture difficile pour les personnes dyslexiques ou souffrant de troubles cognitifs.
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">Comprendre les règles WCAG 1.4</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html"><em>Understanding Success Criterion 1.4.8  | Understanding WCAG 2.0</em> (en anglais)</a></li>
-</ul>
+- [Comprendre les règles WCAG 1.4](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [_Understanding Success Criterion 1.4.8  | Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Logical Properties', '#text-align', 'text-align')}}</td>
-   <td>{{Spec2('CSS Logical Properties')}}</td>
-   <td>Aucun changement</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Text', '#alignment', 'text-align')}}</td>
-   <td>{{Spec2('CSS4 Text')}}</td>
-   <td>Ajout de la gestion des valeurs <code>&lt;string&gt;</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Text', '#text-align-property', 'text-align')}}</td>
-   <td>{{Spec2('CSS3 Text')}}</td>
-   <td>Ajout des valeurs <code>start</code>, <code>end</code> et <code>match-parent</code>. La valeur initiale qui n'était pas nommée est bien définie avec <code>start</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'text.html#alignment-prop', 'text-align')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Aucun changement</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#text-align', 'text-align')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                                             | Commentaires                                                                                                                 |
+| ---------------------------------------------------------------------------------------- | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS Logical Properties', '#text-align', 'text-align')}} | {{Spec2('CSS Logical Properties')}} | Aucun changement                                                                                                             |
+| {{SpecName('CSS4 Text', '#alignment', 'text-align')}}                 | {{Spec2('CSS4 Text')}}                     | Ajout de la gestion des valeurs `<string>`.                                                                                  |
+| {{SpecName('CSS3 Text', '#text-align-property', 'text-align')}}     | {{Spec2('CSS3 Text')}}                     | Ajout des valeurs `start`, `end` et `match-parent`. La valeur initiale qui n'était pas nommée est bien définie avec `start`. |
+| {{SpecName('CSS2.1', 'text.html#alignment-prop', 'text-align')}}     | {{Spec2('CSS2.1')}}                         | Aucun changement                                                                                                             |
+| {{SpecName('CSS1', '#text-align', 'text-align')}}                         | {{Spec2('CSS1')}}                         | Définition initiale.                                                                                                         |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.text-align")}}</p>
+{{Compat("css.properties.text-align")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("margin","margin:auto")}}</li>
- <li>{{cssxref("margin-left","margin-left:auto")}}</li>
- <li>{{cssxref("vertical-align")}}</li>
-</ul>
+- {{cssxref("margin","margin:auto")}}
+- {{cssxref("margin-left","margin-left:auto")}}
+- {{cssxref("vertical-align")}}

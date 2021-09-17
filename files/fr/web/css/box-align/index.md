@@ -8,11 +8,12 @@ tags:
   - Reference
 translation_of: Web/CSS/box-align
 ---
-<div>{{CSSRef}}{{Non-standard_header}}{{warning("Cette propriété s'inscrivait dans une ancienne version du standard pour le module CSS sur les boîtes flexibles et a été remplacée dans une nouvelle version du standard.")}}</div>
+{{CSSRef}}{{Non-standard_header}}{{warning("Cette propriété s'inscrivait dans une ancienne version du standard pour le module CSS sur les boîtes flexibles et a été remplacée dans une nouvelle version du standard.")}}
 
-<p>La propriété CSS <strong><code>box-align</code></strong> définit comment un élément aligne son contenu par rapport à l'axe orthogonal à la disposition. L'effet obtenu ne sera visible que s'il y a de l'espace supplémentaire dans la boîte flexible. Voir la page <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Utilisation_des_flexbox_en_CSS" title="CSS/Flexible_boxes">Flexbox</a> pour plus d'informations.</p>
+La propriété CSS **`box-align`** définit comment un élément aligne son contenu par rapport à l'axe orthogonal à la disposition. L'effet obtenu ne sera visible que s'il y a de l'espace supplémentaire dans la boîte flexible. Voir la page [Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Utilisation_des_flexbox_en_CSS "CSS/Flexible_boxes") pour plus d'informations.
 
-<pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 box-align: start;
 box-align: center;
 box-align: end;
@@ -23,38 +24,37 @@ box-align: stretch;
 box-lines: inherit;
 box-lines: initial;
 box-lines: unset;
-</pre>
+```
 
-<p>La direction de l'élément dépend de son orientation.</p>
+La direction de l'élément dépend de son orientation.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>La propriété <code>box-align</code> est paramétrée grâce à l'un des mots-clés suivants.</p>
+La propriété `box-align` est paramétrée grâce à l'un des mots-clés suivants.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>start</code></dt>
- <dd>La boîte aligne son contenu au début (l'espace restant est alors situé à la fin).</dd>
- <dt><code>center</code></dt>
- <dd>La boîte aligne son contenu sur le centre (l'espace restant est équitablement réparti entre le début et la fin).</dd>
- <dt><code>end</code></dt>
- <dd>La boîte aligne son contenu au début (l'espace restant est alors situé au début).</dd>
- <dt><code>baseline</code></dt>
- <dd>La boîte aligne les lignes de base des contenus (le texte sera sur la même ligne). Cela ne s'applique que si l'orientation de la boîte est horizontale.</dd>
- <dt><code>stretch</code></dt>
- <dd>Les boîtes s'étirent afin qu'il n'y ait plus d'espace restant dans la boîte.</dd>
-</dl>
+- `start`
+  - : La boîte aligne son contenu au début (l'espace restant est alors situé à la fin).
+- `center`
+  - : La boîte aligne son contenu sur le centre (l'espace restant est équitablement réparti entre le début et la fin).
+- `end`
+  - : La boîte aligne son contenu au début (l'espace restant est alors situé au début).
+- `baseline`
+  - : La boîte aligne les lignes de base des contenus (le texte sera sur la même ligne). Cela ne s'applique que si l'orientation de la boîte est horizontale.
+- `stretch`
+  - : Les boîtes s'étirent afin qu'il n'y ait plus d'espace restant dans la boîte.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div.exemple {
+```css
+div.exemple {
   display: box;
   display: -moz-box; /* Mozilla */
   display: -webkit-box; /* WebKit */
@@ -86,47 +86,46 @@ box-lines: unset;
   -webkit-box-pack: end; /* WebKit */
 }
 
-div.exemple &gt; p {
+div.exemple > p {
   /* On réduit les éléments fils pour que
      box-align ait un impact. */
   width: 200px;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="exemple"&gt;
-  &lt;p&gt;Je serai deuxième en partant du bas, centré horizontalement.&lt;/p&gt;
-  &lt;p&gt;Je serai en bas de div.exemple, centré horizontalement.&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="exemple">
+  <p>Je serai deuxième en partant du bas, centré horizontalement.</p>
+  <p>Je serai en bas de div.exemple, centré horizontalement.</p>
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples","500","500")}}</p>
+{{EmbedLiveSample("Exemples","500","500")}}
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Le bord de la boîte qui est indiqué par <code>start</code> dépend de l'orientation de la boîte : si celle-ci est orientée horizontalement, ce sera le côté haut, si elle est orientée verticalement, ce sera le côté bas. Le côté désigné par <code>end</code> est le côté opposé à <code>start</code>.</p>
+Le bord de la boîte qui est indiqué par `start` dépend de l'orientation de la boîte : si celle-ci est orientée horizontalement, ce sera le côté haut, si elle est orientée verticalement, ce sera le côté bas. Le côté désigné par `end` est le côté opposé à `start`.
 
-<p>Si l'alignement est défini via l'attribut HTML <code>align</code>, la déclaration sera alors ignorée.</p>
+Si l'alignement est défini via l'attribut HTML `align`, la déclaration sera alors ignorée.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<ul>
- <li><a href="http://www.w3.org/TR/css3-flexbox/">Brouillon de travail pour le module des boîtes flexibles (W3C)</a> {{Note("L'état actuel de cette spécification ne reflète pas l'implémentation de Gecko ou WebKit.")}}</li>
- <li><a href="http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">Ancienne version de la spécification</a> {{Note("Les implémentations de WebKit et Gecko reflètent cette version de la spécification.")}}</li>
-</ul>
+- [Brouillon de travail pour le module des boîtes flexibles (W3C)](http://www.w3.org/TR/css3-flexbox/) {{Note("L'état actuel de cette spécification ne reflète pas l'implémentation de Gecko ou WebKit.")}}
+- [Ancienne version de la spécification](http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/) {{Note("Les implémentations de WebKit et Gecko reflètent cette version de la spécification.")}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.box-align")}}</p>
+{{Compat("css.properties.box-align")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("align-items")}},</li>
- <li>{{cssxref("box-orient")}},</li>
- <li>{{cssxref("box-direction")}},</li>
- <li>{{cssxref("box-pack")}}.</li>
-</ul>
+- {{cssxref("align-items")}},
+- {{cssxref("box-orient")}},
+- {{cssxref("box-direction")}},
+- {{cssxref("box-pack")}}.

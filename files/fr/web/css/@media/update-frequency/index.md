@@ -7,36 +7,36 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/update-frequency
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>update</code></strong> est une caractéristique média (cf. {{cssxref("@media")}}) qui permet de vérifier la vitesse à laquelle l'appareil d'affichage peut modifier l'apparence du contenu.</p>
+**`update`** est une caractéristique média (cf. {{cssxref("@media")}}) qui permet de vérifier la vitesse à laquelle l'appareil d'affichage peut modifier l'apparence du contenu.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>La caractéristique <code>update</code> est définie avec un mot-clé parmi ceux de la liste ci-après.</p>
+La caractéristique `update` est définie avec un mot-clé parmi ceux de la liste ci-après.
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Une fois le document affiché, son apparence ne peut plus être modifiée (ex. le document est imprimé sur du papier).</dd>
- <dt><code>slow</code></dt>
- <dd>Une fois le document affiché, son apparence peut évoluer mais lentement (ex. des livres électroniques utilisant une encre électronique ou des appareils de lecture avec un niveau d'énergie faible).</dd>
- <dt><code>fast</code></dt>
- <dd>Une fois le document affiché, son apparence peut évoluer rapidement (ex. un ordinateur qui serait capable de gérer les transitions CSS).</dd>
-</dl>
+- `none`
+  - : Une fois le document affiché, son apparence ne peut plus être modifiée (ex. le document est imprimé sur du papier).
+- `slow`
+  - : Une fois le document affiché, son apparence peut évoluer mais lentement (ex. des livres électroniques utilisant une encre électronique ou des appareils de lecture avec un niveau d'énergie faible).
+- `fast`
+  - : Une fois le document affiché, son apparence peut évoluer rapidement (ex. un ordinateur qui serait capable de gérer les transitions CSS).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   Si ce texte est animé, cela signifie que vous utilisez
   un appareil avec un affichage qui évolue rapidement.
-&lt;/p&gt;
-</pre>
+</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">@keyframes jiggle {
+```css
+@keyframes jiggle {
   from {
     transform: translateY(0);
   }
@@ -50,31 +50,19 @@ translation_of: Web/CSS/@media/update-frequency
   p {
     animation: 1s jiggle linear alternate infinite;
   }
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Media Queries', '#update', 'update')}}</td>
-   <td>{{Spec2('CSS4 Media Queries')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                            | État                                     | Commentaires         |
+| ------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
+| {{SpecName('CSS4 Media Queries', '#update', 'update')}} | {{Spec2('CSS4 Media Queries')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.at-rules.media.update")}}</p>
+{{Compat("css.at-rules.media.update")}}

@@ -1,37 +1,34 @@
 ---
 title: ':-moz-submit-invalid'
-slug: 'Web/CSS/:-moz-submit-invalid'
+slug: Web/CSS/:-moz-submit-invalid
 tags:
   - CSS
   - Non-standard
   - Pseudo-classe
   - Reference
-translation_of: 'Web/CSS/:-moz-submit-invalid'
+translation_of: Web/CSS/:-moz-submit-invalid
 ---
-<div>{{Non-standard_header}}{{CSSRef}}</div>
+{{Non-standard_header}}{{CSSRef}}
 
-<p>La <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> CSS <strong><code>:-moz-submit-invalid</code></strong> représente tout bouton {{HTMLElement("input")}} de type <code>submit</code> présent sur un formulaire dont le contenu n'est pas valide compte-tenu de ses <a href="/fr/docs/Web/Guide/HTML/Forms_in_HTML#Constraint_Validation" title="en/HTML/HTML5/Forms in HTML5#Constraint Validation">contraintes de validation</a>.</p>
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) CSS **`:-moz-submit-invalid`** représente tout bouton {{HTMLElement("input")}} de type `submit` présent sur un formulaire dont le contenu n'est pas valide compte-tenu de ses [contraintes de validation](/fr/docs/Web/Guide/HTML/Forms_in_HTML#Constraint_Validation "en/HTML/HTML5/Forms in HTML5#Constraint Validation").
 
-<p>Par défaut, aucun style n'est appliqué. Vous pouvez utiliser cette pseudo-classe afin de personnaliser l'apparence du bouton <code>submit</code> lorsqu'il y a des champs de formulaire invalides.</p>
+Par défaut, aucun style n'est appliqué. Vous pouvez utiliser cette pseudo-classe afin de personnaliser l'apparence du bouton `submit` lorsqu'il y a des champs de formulaire invalides.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">:-moz-submit-invalid
-</pre>
+    :-moz-submit-invalid
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.</p>
+Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.-moz-submit-invalid")}}</p>
+{{Compat("css.selectors.-moz-submit-invalid")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref(":valid")}}</li>
- <li>{{cssxref(":invalid")}}</li>
- <li>{{cssxref(":required")}}</li>
- <li>{{cssxref(":optional")}}</li>
-</ul>
+- {{cssxref(":valid")}}
+- {{cssxref(":invalid")}}
+- {{cssxref(":required")}}
+- {{cssxref(":optional")}}

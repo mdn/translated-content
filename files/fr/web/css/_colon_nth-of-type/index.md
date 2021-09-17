@@ -9,49 +9,51 @@ tags:
   - Web
 translation_of: Web/CSS/:nth-of-type
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <strong><code>:nth-of-type()</code></strong> correspond à des éléments d'un type donné, en fonction de leur position au sein d'un groupe de frères et sœurs.</p>
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:nth-of-type()`** correspond à des éléments d'un type donné, en fonction de leur position au sein d'un groupe de frères et sœurs.
 
-<pre class="brush: css no-line-numbers  language-css">/* Sélectionne chaque élément de type &lt;p&gt; dont
-la position parmi l'ensemble des éléments de type &lt;p&gt;
+```css
+/* Sélectionne chaque élément de type <p> dont
+la position parmi l'ensemble des éléments de type <p>
 descendants directement du même élément parent,
 est un multiple de 4. */
 p:nth-of-type(4n) {
   color: lime;
-}</pre>
+}
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>La pseudo-classe <code>nth-of-type</code> ne prend qu'un argument qui représente le motif de répétition pour les éléments ciblés.</p>
+La pseudo-classe `nth-of-type` ne prend qu'un argument qui représente le motif de répétition pour les éléments ciblés.
 
-<p>Pour une explication plus détaillée de sa syntax voir {{Cssxref(":nth-child")}}</p>
+Pour une explication plus détaillée de sa syntax voir {{Cssxref(":nth-child")}}
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans cet exemple nous allons colorer un paragrapher sur deux avec des couleurs différentes et mettre le premier paragraphe en gras</p>
+Dans cet exemple nous allons colorer un paragrapher sur deux avec des couleurs différentes et mettre le premier paragraphe en gras
 
+### HTML
 
+```html
+<div>
+  <div>Cet élément n'est pas compté.</div>
+  <p>1er paragraphe.</p>
+  <p>2e paragraphe.</p>
+  <div>Cet élément n'est pas compté.</div>
+  <p>3e paragraphe.</p>
+  <p>4e paragraphe.</p>
+</div>
+```
 
-<h3 id="HTML">HTML</h3>
+### CSS
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;div&gt;Cet élément n'est pas compté.&lt;/div&gt;
-  &lt;p&gt;1er paragraphe.&lt;/p&gt;
-  &lt;p&gt;2e paragraphe.&lt;/p&gt;
-  &lt;div&gt;Cet élément n'est pas compté.&lt;/div&gt;
-  &lt;p&gt;3e paragraphe.&lt;/p&gt;
-  &lt;p&gt;4e paragraphe.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
-
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css line-numbers  language-css">/* Paragraphes impairs */
+```css
+/* Paragraphes impairs */
 p:nth-of-type(2n+1) {
   color: red;
 }
@@ -64,43 +66,25 @@ p:nth-of-type(2n) {
 /* Premier paragraphe */
 p:nth-of-type(1) {
   font-weight: bold;
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<div>{{EmbedLiveSample('Exemples','250','200')}}</div>
+{{EmbedLiveSample('Exemples','250','200')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#nth-of-type-pseudo', ':nth-of-type')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>L'élément ciblé ne doit pas nécessairement avoir un élément parent.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#nth-of-type-pseudo', ':nth-of-type')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                                 | Commentaires                                                        |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------- |
+| {{SpecName('CSS4 Selectors', '#nth-of-type-pseudo', ':nth-of-type')}} | {{Spec2('CSS4 Selectors')}} | L'élément ciblé ne doit pas nécessairement avoir un élément parent. |
+| {{SpecName('CSS3 Selectors', '#nth-of-type-pseudo', ':nth-of-type')}} | {{Spec2('CSS3 Selectors')}} | Définition initiale.                                                |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.nth-of-type")}}</p>
+{{Compat("css.selectors.nth-of-type")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref(":nth-child")}}</li>
- <li>{{cssxref(":nth-last-of-type")}}</li>
-</ul>
+- {{cssxref(":nth-child")}}
+- {{cssxref(":nth-last-of-type")}}

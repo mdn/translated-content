@@ -7,21 +7,20 @@ tags:
   - Reference
 translation_of: Web/CSS/column-rule
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Lorsqu'on utilise une disposition sur plusieurs colonnes, la <a href="/fr/docs/Web/CSS/Propriétés_raccourcies">propriété raccourcie</a> <strong><code>column-rule</code></strong> permet de définir l'affichage d'une ligne droite (aussi appelée « règle ») entre chaque colonne.</p>
+Lorsqu'on utilise une disposition sur plusieurs colonnes, la [propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) **`column-rule`** permet de définir l'affichage d'une ligne droite (aussi appelée « règle ») entre chaque colonne.
 
-<div>{{EmbedInteractiveExample("pages/css/column-rule.html")}}</div>
+{{EmbedInteractiveExample("pages/css/column-rule.html")}}
 
-<p>Cette propriété est une propriété raccourcie qui permet de définir {{cssxref("column-rule-width")}}, {{cssxref("column-rule-style")}} et {{cssxref("column-rule-color")}} (plutôt que d'avoir à les définir une par une, ce qui est plus laborieux).</p>
+Cette propriété est une propriété raccourcie qui permet de définir {{cssxref("column-rule-width")}}, {{cssxref("column-rule-style")}} et {{cssxref("column-rule-color")}} (plutôt que d'avoir à les définir une par une, ce qui est plus laborieux).
 
-<div class="note">
-<p><strong>Note :</strong> Cette propriété étant une propriété raccourcie, elle surcharge toutes les déclarations avec les propriétés individuelles écrites avant au sein d'une même règle.</p>
-</div>
+> **Note :** Cette propriété étant une propriété raccourcie, elle surcharge toutes les déclarations avec les propriétés individuelles écrites avant au sein d'une même règle.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css">/* Syntaxe avec des mots-clés */
+```css
+/* Syntaxe avec des mots-clés */
 column-rule: dotted;
 column-rule: solid blue;
 column-rule: solid 8px;
@@ -31,72 +30,59 @@ column-rule: thick inset blue;
 column-rule: inherit;
 column-rule: initial;
 column-rule: unset;
-</pre>
+```
 
-<p>Cette propriété peut être définie avec une, deux ou trois valeurs telles que définies ci-après, dans n'importe quel ordre.</p>
+Cette propriété peut être définie avec une, deux ou trois valeurs telles que définies ci-après, dans n'importe quel ordre.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;'column-rule-width'&gt;</code></dt>
- <dd>Une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) ou l'un des mots-clés <code>thin</code>, <code>medium</code> ou <code>thick</code>. Pour plus de détails, voir {{cssxref("border-width")}}.</dd>
- <dt><code>&lt;'column-rule-style'&gt;</code></dt>
- <dd>Voir {{cssxref("border-style")}} pour les différentes valeurs possibles.</dd>
- <dt><code>&lt;'column-rule-color'&gt;</code></dt>
- <dd>Une valeur de couleur (type {{cssxref("&lt;color&gt;")}}).</dd>
-</dl>
+- `<'column-rule-width'>`
+  - : Une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) ou l'un des mots-clés `thin`, `medium` ou `thick`. Pour plus de détails, voir {{cssxref("border-width")}}.
+- `<'column-rule-style'>`
+  - : Voir {{cssxref("border-style")}} pour les différentes valeurs possibles.
+- `<'column-rule-color'>`
+  - : Une valeur de couleur (type {{cssxref("&lt;color&gt;")}}).
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="col_rul"&gt;
-  &lt;p&gt; column one &lt;/p&gt;
-  &lt;p&gt; column two &lt;/p&gt;
-  &lt;p&gt; column three &lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div id="col_rul">
+  <p> column one </p>
+  <p> column two </p>
+  <p> column three </p>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#col_rul{
+```css
+#col_rul{
   padding: 0.3em;
   background: gold;
   border: groove 2px gold;
   column-rule: inset 2px gold;
   column-count: 3;
 }
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Multicol', '#column-rule', 'column-rule')}}</td>
-   <td>{{Spec2('CSS3 Multicol')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | État                                 | Commentaires         |
+| -------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName('CSS3 Multicol', '#column-rule', 'column-rule')}} | {{Spec2('CSS3 Multicol')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.column-rule")}}</p>
+{{Compat("css.properties.column-rule")}}

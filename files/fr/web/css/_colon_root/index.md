@@ -1,60 +1,46 @@
 ---
 title: ':root'
-slug: 'Web/CSS/:root'
+slug: Web/CSS/:root
 tags:
   - CSS
   - Pseudo-classe
   - Reference
-translation_of: 'Web/CSS/:root'
+translation_of: Web/CSS/:root
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <strong><code>:root</code></strong> permet de cibler la racine de l'arbre représentant le document. Pour un document HTML, <code>:root</code> ciblera donc l'élément {{HTMLElement("html")}} et aura le même comportement que le sélecteur <code>html</code> mais <a href="/fr/Apprendre/CSS/Introduction_à_CSS/La_cascade_et_l_héritage#Le_poids_des_sélecteurs">sa spécificité</a> sera plus forte.</p>
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:root`** permet de cibler la racine de l'arbre représentant le document. Pour un document HTML, `:root` ciblera donc l'élément {{HTMLElement("html")}} et aura le même comportement que le sélecteur `html` mais [sa spécificité](/fr/Apprendre/CSS/Introduction_à_CSS/La_cascade_et_l_héritage#Le_poids_des_sélecteurs) sera plus forte.
 
-<pre class="brush: css no-line-numbers">/* Sélectionne l'élément racine du document */
-/* Pour un document HTML, c'est &lt;html&gt; */
+```css
+/* Sélectionne l'élément racine du document */
+/* Pour un document HTML, c'est <html> */
 :root {
   background: yellow;
-}</pre>
+}
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p><code>:root</code> peut être utile lorsqu'on déclare <a href="/fr/docs/Web/CSS/--*">des propriétés CSS personnalisées globales</a> :</p>
+`:root` peut être utile lorsqu'on déclare [des propriétés CSS personnalisées globales](/fr/docs/Web/CSS/--*) :
 
-<pre class="brush: css">:root {
+```css
+:root {
   --main-color: hotpink;
   --pane-padding: 5px 42px;
 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#root-pseudo', ':root')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Aucune modification.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#root-pseudo', ':root')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                            | État                                 | Commentaires         |
+| ------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
+| {{SpecName('CSS4 Selectors', '#root-pseudo', ':root')}} | {{Spec2('CSS4 Selectors')}} | Aucune modification. |
+| {{SpecName('CSS3 Selectors', '#root-pseudo', ':root')}} | {{Spec2('CSS3 Selectors')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.root")}}</p>
+{{Compat("css.selectors.root")}}

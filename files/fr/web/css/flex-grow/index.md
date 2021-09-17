@@ -7,62 +7,63 @@ tags:
   - Reference
 translation_of: Web/CSS/flex-grow
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété CSS <strong><code>flex-grow</code></strong> définit le facteur d'expansion d'un élément flexible selon sa dimension principale. Elle indique la quantité d'espace restant que l'élément devrait consommer dans un conteneur flexible relativement à la taille des autres éléments du même conteneur.</p>
+La propriété CSS **`flex-grow`** définit le facteur d'expansion d'un élément flexible selon sa dimension principale. Elle indique la quantité d'espace restant que l'élément devrait consommer dans un conteneur flexible relativement à la taille des autres éléments du même conteneur.
 
-<p>La dimension principale correspond à la hauteur ou à la largeur de l'élément selon la valeur de {{cssxref("flex-direction")}}.</p>
+La dimension principale correspond à la hauteur ou à la largeur de l'élément selon la valeur de {{cssxref("flex-direction")}}.
 
-<p>L'espace restant qui est réparti correspond à la taille du conteneur flexible moins la somme des tailles des éléments flexibles. Si tous les éléments voisins possèdent le même facteur d'expansion, ils recevront tous la même part d'espace.</p>
+L'espace restant qui est réparti correspond à la taille du conteneur flexible moins la somme des tailles des éléments flexibles. Si tous les éléments voisins possèdent le même facteur d'expansion, ils recevront tous la même part d'espace.
 
-<p>La plupart du temps <code>flex-grow</code> est utilisé avec les autres propriétés flexibles {{cssxref("flex-shrink")}} et {{cssxref("flex-basis")}}. On pourra utiliser la propriété raccourcie {{cssxref("flex")}} afin de s'assurer que toutes les valeurs des propriétés flexibles auront été définies.</p>
+La plupart du temps `flex-grow` est utilisé avec les autres propriétés flexibles {{cssxref("flex-shrink")}} et {{cssxref("flex-basis")}}. On pourra utiliser la propriété raccourcie {{cssxref("flex")}} afin de s'assurer que toutes les valeurs des propriétés flexibles auront été définies.
 
-<div>{{EmbedInteractiveExample("pages/css/flex-grow.html")}}</div>
+{{EmbedInteractiveExample("pages/css/flex-grow.html")}}
 
-<p>Pour plus d'informations, voir la page <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Utilisation_des_flexbox_en_CSS">Utiliser les boîtes flexibles (<em>flexbox</em>) CSS</a>.</p>
+Pour plus d'informations, voir la page [Utiliser les boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Utilisation_des_flexbox_en_CSS).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">flex-grow: 2;
+```css
+flex-grow: 2;
 flex-grow: 0.6;
 
 /* Valeurs globales */
 flex-shrink: inherit;
 flex-shrink: initial;
 flex-shrink: unset;
-</pre>
+```
 
-<p>La propriété <code>flex-grow</code> se définit avec une valeur de type <code><a href="#number">&lt;number&gt;</a></code>.</p>
+La propriété `flex-grow` se définit avec une valeur de type [`<number>`](#number).
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;number&gt;</code></dt>
- <dd>Un nombre (type {{cssxref("&lt;number&gt;")}} qui correspond au facteur de grossissement utilisé. Plus la valeur est élevée, plus l'élément sera étendu si nécessaire. Les valeurs négatives sont invalides. La valeur par défaut est 0.</dd>
-</dl>
+- `<number>`
+  - : Un nombre (type {{cssxref("&lt;number&gt;")}} qui correspond au facteur de grossissement utilisé. Plus la valeur est élevée, plus l'élément sera étendu si nécessaire. Les valeurs négatives sont invalides. La valeur par défaut est 0.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;h4&gt;A,B,C et F ont flex-shrink:1 . D et E ont flex-grow:1 .&lt;/h4&gt;
-&lt;div id="content"&gt;
-  &lt;div class="box" style="background-color:red;"&gt;A&lt;/div&gt;
-  &lt;div class="box" style="background-color:lightblue;"&gt;B&lt;/div&gt;
-  &lt;div class="box" style="background-color:yellow;"&gt;C&lt;/div&gt;
-  &lt;div class="box1" style="background-color:brown;"&gt;D&lt;/div&gt;
-  &lt;div class="box1" style="background-color:lightgreen;"&gt;E&lt;/div&gt;
-  &lt;div class="box" style="background-color:brown;"&gt;F&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<h4>A,B,C et F ont flex-shrink:1 . D et E ont flex-grow:1 .</h4>
+<div id="content">
+  <div class="box" style="background-color:red;">A</div>
+  <div class="box" style="background-color:lightblue;">B</div>
+  <div class="box" style="background-color:yellow;">C</div>
+  <div class="box1" style="background-color:brown;">D</div>
+  <div class="box1" style="background-color:lightgreen;">E</div>
+  <div class="box" style="background-color:brown;">F</div>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#content {
+```css
+#content {
   display: flex;
 
   justify-content: space-around;
@@ -79,41 +80,26 @@ flex-shrink: unset;
   flex-grow: 1;
   border: 3px solid rgba(0,0,0,.2);
 }
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', '700px', '300px')}}</p>
+{{EmbedLiveSample('Exemples', '700px', '300px')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Spécification</th>
-   <th>État</th>
-   <th>Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Flexbox','#flex-grow-property','flex-grow')}}</td>
-   <td>{{Spec2('CSS3 Flexbox')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                             | Commentaires         |
+| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName('CSS3 Flexbox','#flex-grow-property','flex-grow')}} | {{Spec2('CSS3 Flexbox')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.flex-grow")}}</p>
+{{Compat("css.properties.flex-grow")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="https://css-tricks.com/flex-grow-is-weird/"><code>flex-grow</code> est étrange ?</a> un article (en anglais) écrit par Manuel Matuzovic sur CSS-Tricks et qui illustre le fonctionnement de <code>flex-grow</code></li>
- <li>Guide sur les boîtes flexibles : <em><a href="/fr/docs/Web/CSS/Disposition_flexbox_CSS/Concepts_de_base_flexbox">Les concepts de bases</a></em></li>
- <li>Guide sur les boîtes flexibles : <em><a href="/fr/docs/Web/CSS/Disposition_flexbox_CSS/Contrôler_les_proportions_des_boîtes_flexibles_le_long_de_l_axe_principal">Contrôler les proportions des boîtes flexibles le long de l'axe principal</a></em></li>
-</ul>
+- [`flex-grow` est étrange ?](https://css-tricks.com/flex-grow-is-weird/) un article (en anglais) écrit par Manuel Matuzovic sur CSS-Tricks et qui illustre le fonctionnement de `flex-grow`
+- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Concepts_de_base_flexbox)_
+- Guide sur les boîtes flexibles : _[Contrôler les proportions des boîtes flexibles le long de l'axe principal](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Contrôler_les_proportions_des_boîtes_flexibles_le_long_de_l_axe_principal)_

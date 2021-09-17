@@ -9,17 +9,16 @@ tags:
   - Reference
 translation_of: Web/CSS/offset
 ---
-<div>{{CSSRef}}{{Draft}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{Draft}}{{SeeCompatTable}}
 
-<p>La propriété <strong><code>offset</code></strong> est une propriété raccourcie pour les propriétés {{cssxref("offset-path")}}, {{cssxref("offset-position")}}, {{cssxref("offset-distance")}}, {{cssxref("offset-rotate")}} et {{cssxref("offset-anchor")}}. Elle permet d'animer un élément sur un tracé défini.</p>
+La propriété **`offset`** est une propriété raccourcie pour les propriétés {{cssxref("offset-path")}}, {{cssxref("offset-position")}}, {{cssxref("offset-distance")}}, {{cssxref("offset-rotate")}} et {{cssxref("offset-anchor")}}. Elle permet d'animer un élément sur un tracé défini.
 
-<div class="note">
-<p><strong>Note :</strong> Dans les premières versions de la spécification, cette propriété était intitulée <code>motion</code>.</p>
-</div>
+> **Note :** Dans les premières versions de la spécification, cette propriété était intitulée `motion`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css">/* Position de décalage */
+```css
+/* Position de décalage */
 offset: auto
 offset: 10px 30px;
 offset: none;
@@ -40,22 +39,24 @@ offset: url(circle.svg) 50px 20deg;
 offset: ray(45deg closest-side) / 40px 20px;
 offset: url(arc.svg) 2cm / 0.5cm 3cm;
 offset: url(arc.svg) 30deg / 50px 100px;
-</pre>
+```
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="offsetElement"&gt;&lt;/div&gt;
-</pre>
+```html
+<div id="offsetElement"></div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">@keyframes move {
+```css
+@keyframes move {
   from {
     offset-distance: 0%;
   }
@@ -72,31 +73,20 @@ offset: url(arc.svg) 30deg / 50px 100px;
   offset: path("M 100 100 L 300 100 L 200 300 z") auto;
   animation: move 3s linear infinite;
 }
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", 350, 350)}}</p>
+{{EmbedLiveSample("Exemples", 350, 350)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Spécification</th>
-   <th>État</th>
-   <th>Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Motion Path Level 1', '#offset-shorthand', 'offset')}}</td>
-   <td>{{Spec2('Motion Path Level 1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                                         | Commentaires         |
+| ---------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
+| {{SpecName('Motion Path Level 1', '#offset-shorthand', 'offset')}} | {{Spec2('Motion Path Level 1')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.offset")}}</p>
+{{Compat("css.properties.offset")}}

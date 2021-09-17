@@ -9,12 +9,13 @@ tags:
   - Reference
 translation_of: Web/CSS/padding-inline
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propriété <strong><code>padding-inline</code></strong> définit l'espace de remplissage (<em>padding</em>) pour le début et la fin de l'axe en ligne de l'élément. Cette propriété logique peut correspondre à différentes propriétés physiques selon le mode d'écriture de l'élément, sa direction et l'orientation du texte. Autrement dit, cette propriété peut correspondre aux propriétés {{cssxref("padding-top")}} et  {{cssxref("padding-bottom")}} ou à {{cssxref("padding-right")}} et {{cssxref("padding-left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.</p>
+La propriété **`padding-inline`** définit l'espace de remplissage (_padding_) pour le début et la fin de l'axe en ligne de l'élément. Cette propriété logique peut correspondre à différentes propriétés physiques selon le mode d'écriture de l'élément, sa direction et l'orientation du texte. Autrement dit, cette propriété peut correspondre aux propriétés {{cssxref("padding-top")}} et  {{cssxref("padding-bottom")}} ou à {{cssxref("padding-right")}} et {{cssxref("padding-left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
 
-<pre class="brush:css no-line-numbers">/* Valeurs de longueur */
-/* Type &lt;length&gt; */
+```css
+/* Valeurs de longueur */
+/* Type <length> */
 padding-inline: 10px 20px;  /* Des longueurs absolues */
 padding-inline: 1em 2em;    /* Des longueurs relatives à la taille du texte */
 padding-inline: 5% 2%;      /* Des longueurs relatives à la taille du bloc englobant */
@@ -27,25 +28,26 @@ padding-inline: auto;
 padding-inline: inherit;
 padding-inline: initial;
 padding-inline: unset;
-</pre>
+```
 
-<p>Ces valeurs peuvent être définies individuellement grâce aux propriétés détaillées {{cssxref("padding-inline-start")}} et {{cssxref("padding-inline-end")}}. Pour définir le remplissage sur l'axe de bloc, on pourra utiliser la propriété logique raccourcie {{cssxref("padding-block")}} qui définit {{cssxref("padding-block-start")}} et {{cssxref("padding-block-end")}}.</p>
+Ces valeurs peuvent être définies individuellement grâce aux propriétés détaillées {{cssxref("padding-inline-start")}} et {{cssxref("padding-inline-end")}}. Pour définir le remplissage sur l'axe de bloc, on pourra utiliser la propriété logique raccourcie {{cssxref("padding-block")}} qui définit {{cssxref("padding-block-start")}} et {{cssxref("padding-block-end")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeur">Valeur</h3>
+### Valeur
 
-<p>La propriété <code>padding-inline</code> peut prendre les mêmes valeurs que la propriété {{cssxref("padding-left")}}.</p>
+La propriété `padding-inline` peut prendre les mêmes valeurs que la propriété {{cssxref("padding-left")}}.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -55,60 +57,44 @@ padding-inline: unset;
   writing-mode: vertical-rl;
   padding-inline: 20px 40px;
   background-color: #c8c800;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="texteExemple"&gt;Texte d'exemple&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="texteExemple">Texte d'exemple</p>
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", 140, 140)}}</p>
+{{EmbedLiveSample("Exemples", 140, 140)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-padding-inline", "padding-inline")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                                             | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
+| {{SpecName("CSS Logical Properties", "#propdef-padding-inline", "padding-inline")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.padding-inline")}}</p>
+{{Compat("css.properties.padding-inline")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Les propriétés physiques correspondantes :
-  <ul>
-   <li>{{cssxref("padding-top")}},</li>
-   <li>{{cssxref("padding-right")}},</li>
-   <li>{{cssxref("padding-bottom")}},</li>
-   <li>{{cssxref("padding-left")}}</li>
-  </ul>
- </li>
- <li>Les propriétés influençant les propriétés logiques :
-  <ul>
-   <li>{{cssxref("writing-mode")}},</li>
-   <li>{{cssxref("direction")}},</li>
-   <li>{{cssxref("text-orientation")}}</li>
-  </ul>
- </li>
-</ul>
+- Les propriétés physiques correspondantes :
+
+  - {{cssxref("padding-top")}},
+  - {{cssxref("padding-right")}},
+  - {{cssxref("padding-bottom")}},
+  - {{cssxref("padding-left")}}
+
+- Les propriétés influençant les propriétés logiques :
+
+  - {{cssxref("writing-mode")}},
+  - {{cssxref("direction")}},
+  - {{cssxref("text-orientation")}}

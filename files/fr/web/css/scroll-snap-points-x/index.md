@@ -8,11 +8,12 @@ tags:
   - Reference
 translation_of: Web/CSS/scroll-snap-points-x
 ---
-<div>{{CSSRef}}{{deprecated_header}}</div>
+{{CSSRef}}{{deprecated_header}}
 
-<p>La propriété <strong><code>scroll-snap-points-x</code></strong> définit le positionnement horizontal des points d'accroche dans le conteneur de défilement auquel ils s'appliquent.</p>
+La propriété **`scroll-snap-points-x`** définit le positionnement horizontal des points d'accroche dans le conteneur de défilement auquel ils s'appliquent.
 
-<pre class="brush: css no-line-numbers">/* Valeur avec un mot-clé */
+```css
+/* Valeur avec un mot-clé */
 scroll-snap-points-x: none;
 
 /* Répétition des points d'accroche */
@@ -22,36 +23,37 @@ scroll-snap-points-x: repeat(400px);
 scroll-snap-points-x: inherit;
 scroll-snap-points-x: initial;
 scroll-snap-points-x: unset;
-</pre>
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Le conteneur ne possède pas de points d'accroche. Les éléments contenus à l'intérieur peuvent définir leurs propres points d'accroche.</dd>
- <dt><code>repeat(&lt;length-percentage&gt;)</code></dt>
- <dd>Cette valeur permet de définir un intervalle de répétition pour les points d'accroche, en commençant par le bord (pertinent) du conteneur. Seules les longueurs positives sont autorisées. Les pourcentages sont relatifs à la largeur du conteneur.</dd>
-</dl>
+- `none`
+  - : Le conteneur ne possède pas de points d'accroche. Les éléments contenus à l'intérieur peuvent définir leurs propres points d'accroche.
+- `repeat(<length-percentage>)`
+  - : Cette valeur permet de définir un intervalle de répétition pour les points d'accroche, en commençant par le bord (pertinent) du conteneur. Seules les longueurs positives sont autorisées. Les pourcentages sont relatifs à la largeur du conteneur.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="container"&gt;
-  &lt;div&gt;1&lt;/div&gt;
-  &lt;div&gt;2&lt;/div&gt;
-  &lt;div&gt;3&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div id="container">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#container {
+```css
+#container {
   width: 200px;
   overflow: auto;
   white-space: nowrap;
@@ -60,7 +62,7 @@ scroll-snap-points-x: unset;
   font-size: 0;
 }
 
-#container &gt; div {
+#container > div {
   width: 200px;
   height: 200px;
   display: inline-block;
@@ -69,24 +71,25 @@ scroll-snap-points-x: unset;
   font-size: 100px;
 }
 
-#container &gt; div:nth-child(even) {
+#container > div:nth-child(even) {
   background-color: #87ea87;
 }
 
-#container &gt; div:nth-child(odd) {
+#container > div:nth-child(odd) {
   background-color: #87ccea;
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", 220, 220)}}</p>
+{{EmbedLiveSample("Exemples", 220, 220)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette propriété avait été définie dans <a href="http://www.w3.org/TR/2015/WD-css-snappoints-1-20150326/#scroll-snap-points">un brouillon de spécification pour le module CSS sur les points d'accroche</a> mais <a href="https://github.com/w3c/csswg-drafts/commit/922af86be789222b8490c92038d1a5142e1c1198">a ensuite été retirée</a> de la spécification pour être remplacée par <a href="https://lists.w3.org/Archives/Public/www-style/2015Nov/0266.html">l'accroche basée sur les éléments</a>.</p>
+Cette propriété avait été définie dans [un brouillon de spécification pour le module CSS sur les points d'accroche](http://www.w3.org/TR/2015/WD-css-snappoints-1-20150326/#scroll-snap-points) mais [a ensuite été retirée](https://github.com/w3c/csswg-drafts/commit/922af86be789222b8490c92038d1a5142e1c1198) de la spécification pour être remplacée par [l'accroche basée sur les éléments](https://lists.w3.org/Archives/Public/www-style/2015Nov/0266.html).
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.scroll-snap-points-x")}}</p>
+{{Compat("css.properties.scroll-snap-points-x")}}

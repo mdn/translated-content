@@ -8,58 +8,54 @@ tags:
   - Tableaux CSS
 translation_of: Web/CSS/border-spacing
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>border-spacing</code></strong> définit la distance qu'il y a entre les bordures de cellules adjacentes d'un tableau (uniquement lorsque {{cssxref("border-collapse")}} vaut <code>separate</code>). Cette propriété est équivalente à l'attribut HTML déprécié {{htmlattrxref("cellspacing","table")}} mais une deuxième valeur peut être utilisée afin d'obtenir un espacement vertical différent de l'espacement horizontal.</p>
+La propriété **`border-spacing`** définit la distance qu'il y a entre les bordures de cellules adjacentes d'un tableau (uniquement lorsque {{cssxref("border-collapse")}} vaut `separate`). Cette propriété est équivalente à l'attribut HTML déprécié {{htmlattrxref("cellspacing","table")}} mais une deuxième valeur peut être utilisée afin d'obtenir un espacement vertical différent de l'espacement horizontal.
 
-<div>{{EmbedInteractiveExample("pages/css/border-spacing.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-spacing.html")}}
 
-<p>La valeur de <code>border-spacing</code> est également utilisée le long du bord extérieur du tableau, où la distance entre la bordure du tableau et les cellules dans la première/dernière colonne ou ligne est la somme du <code>border-spacing</code> approprié (horizontal ou vertical) et du {{cssxref("padding")}} correspondant (top, right, bottom ou left).</p>
+La valeur de `border-spacing` est également utilisée le long du bord extérieur du tableau, où la distance entre la bordure du tableau et les cellules dans la première/dernière colonne ou ligne est la somme du `border-spacing` approprié (horizontal ou vertical) et du {{cssxref("padding")}} correspondant (top, right, bottom ou left).
 
-<div class="note">
-<p><strong>Note :</strong> La propriété <code>border-spacing</code> équivaut à l'attribut déprécié <code>cellspacing</code> de l'élément <code>&lt;table&gt;</code>, sauf qu'il possède une seconde valeur optionnelle qui peut être utilisée pour définir différents espacements horizontaux et verticaux.</p>
-</div>
+> **Note :** La propriété `border-spacing` équivaut à l'attribut déprécié `cellspacing` de l'élément `<table>`, sauf qu'il possède une seconde valeur optionnelle qui peut être utilisée pour définir différents espacements horizontaux et verticaux.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css  no-line-numbers">/* Une valeur de longueur */
-/* Type &lt;length&gt;         */
+```css
+/* Une valeur de longueur */
+/* Type <length>         */
 border-spacing: 2px;
 
 /* La première valeur indique */
 /* l'espacement horizontal et */
-/* la seconde le vertical.    <em>*/</em>
+/* la seconde le vertical.    */
 border-spacing: 1cm 2em;
 
 /* Valeurs globales */
 border-spacing: inherit;
 border-spacing: initial;
 border-spacing: unset;
-</pre>
+```
 
-<p>La propriété <code>border-spacing</code> peut être définie avec une ou deux valeurs :</p>
+La propriété `border-spacing` peut être définie avec une ou deux valeurs :
 
-<ul>
- <li>Avec une valeur de type {{cssxref("&lt;length&gt;")}}, la valeur est utilisée pour l'espacement vertical ainsi que pour l'espacement horizontal.</li>
- <li>Avec deux valeurs de type {{cssxref("&lt;length&gt;")}}, la première définit l'espacement horizontal (entre les colonnes) et la seconde définit l'espacement vertical (entre les lignes).</li>
-</ul>
+- Avec une valeur de type {{cssxref("&lt;length&gt;")}}, la valeur est utilisée pour l'espacement vertical ainsi que pour l'espacement horizontal.
+- Avec deux valeurs de type {{cssxref("&lt;length&gt;")}}, la première définit l'espacement horizontal (entre les colonnes) et la seconde définit l'espacement vertical (entre les lignes).
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>length</code></dt>
- <dd>Une valeur de longueur ({{cssxref("&lt;length&gt;")}} qui décrit l'espacement entre les cellules.</dd>
-</dl>
+- `length`
+  - : Une valeur de longueur ({{cssxref("&lt;length&gt;")}} qui décrit l'espacement entre les cellules.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">table {
+```css
+table {
   border-collapse: separate;
   border: 1px solid #000;
 }
@@ -75,59 +71,47 @@ td {
 
 .deuxvaleurs {
   border-spacing: 5px 10px;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;table class="unevaleur"&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Ces cellules&lt;/td&gt;
-    &lt;td&gt;sont séparées par 5px&lt;/td&gt;
-    &lt;td&gt;tout autour.&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-&lt;br /&gt;
-&lt;table class="deuxvaleurs"&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Ces cellules&lt;/td&gt;
-    &lt;td&gt;sont séparées par 5px d'écart horizontal&lt;/td&gt;
-    &lt;td&gt;et 10px d'écart vertical.&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
-
-<h3 id="Résultat">Résultat</h3>
-
-<p>{{EmbedLiveSample("Exemples","300","300")}}</p>
-
-<h2 id="Spécifications">Spécifications</h2>
-
-<table class="standard-table">
- <thead>
+```html
+<table class="unevaleur">
   <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
+    <td>Ces cellules</td>
+    <td>sont séparées par 5px</td>
+    <td>tout autour.</td>
   </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'tables.html#separated-borders', 'border-spacing')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
 </table>
+<br />
+<table class="deuxvaleurs">
+  <tr>
+    <td>Ces cellules</td>
+    <td>sont séparées par 5px d'écart horizontal</td>
+    <td>et 10px d'écart vertical.</td>
+  </tr>
+</table>
+```
 
-<p>{{cssinfo}}</p>
+### Résultat
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+{{EmbedLiveSample("Exemples","300","300")}}
 
-<p>{{Compat("css.properties.border-spacing")}}</p>
+## Spécifications
 
-<h2 id="Voir_auss">Voir auss</h2>
+| Spécification                                                                                    | État                     | Commentaires         |
+| ------------------------------------------------------------------------------------------------ | ------------------------ | -------------------- |
+| {{SpecName('CSS2.1', 'tables.html#separated-borders', 'border-spacing')}} | {{Spec2('CSS2.1')}} | Définition initiale. |
 
-<ul>
- <li>{{cssxref("border-collapse")}}</li>
- <li>{{cssxref("border-style")}}</li>
- <li>L'élément HTML {{htmlelement("table")}}</li>
-</ul>
+{{cssinfo}}
+
+## Compatibilité des navigateurs
+
+{{Compat("css.properties.border-spacing")}}
+
+## Voir auss
+
+- {{cssxref("border-collapse")}}
+- {{cssxref("border-style")}}
+- L'élément HTML {{htmlelement("table")}}

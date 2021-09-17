@@ -10,29 +10,30 @@ tags:
   - env()
 translation_of: Web/CSS/env()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La fonction CSS <strong><code>env()</code></strong> peut être utilisée afin d'insérer la valeur d'une variable d'environnement dans une règle. Les variables d'environnement sont globales pour un document donné, à la différence des <a href="/fr/docs/Web/CSS/--*">propriétés personnalisées</a>. Les variables d'environnement sont définies au niveau de l'agent utilisateur et non par l'utilisateur/le concepteur.</p>
+La fonction CSS **`env()`** peut être utilisée afin d'insérer la valeur d'une variable d'environnement dans une règle. Les variables d'environnement sont globales pour un document donné, à la différence des [propriétés personnalisées](/fr/docs/Web/CSS/--*). Les variables d'environnement sont définies au niveau de l'agent utilisateur et non par l'utilisateur/le concepteur.
 
-<p><code>env()</code> peut être utilisée aux endroits où on souhaite remplacer la valeur, à la façon de la fonction <code><a href="/fr/docs/Web/CSS/var()">var()</a></code>.</p>
+`env()` peut être utilisée aux endroits où on souhaite remplacer la valeur, à la façon de la fonction [`var()`](</fr/docs/Web/CSS/var()>).
 
-<pre class="brush: css">body {
+```css
+body {
   padding:
     env(safe-area-inset-top, 20px)
     env(safe-area-inset-right, 20px)
     env(safe-area-inset-bottom, 20px)
     env(safe-area-inset-left, 20px);
-}</pre>
+}
+```
 
-<p>La fonction <code>env()</code> peut être utilisée à n'importe quel endroit où une valeur peut être associée à une propriété, à n'importe quel endroit où une valeur peut être utilisée dans un descripteur d'une règle @ (ex. dans une <a href="/fr/docs/Web/CSS/@media">requête média</a>) et, de façon générale, à n'importe quel endroit où les valeurs CSS sont autorisées. Selon les évolutions de la spécification, cette fonction pourrait également être utilisées à d'autres endroits comme les sélecteurs.</p>
+La fonction `env()` peut être utilisée à n'importe quel endroit où une valeur peut être associée à une propriété, à n'importe quel endroit où une valeur peut être utilisée dans un descripteur d'une règle @ (ex. dans une [requête média](/fr/docs/Web/CSS/@media)) et, de façon générale, à n'importe quel endroit où les valeurs CSS sont autorisées. Selon les évolutions de la spécification, cette fonction pourrait également être utilisées à d'autres endroits comme les sélecteurs.
 
-<div class="note">
-<p><strong>Note :</strong> Les variables d'environnement furent initialement fournies par le navigateur iOS afin de permettre aux développeurs de placer le contenu sur une zone sûre de la zone d'affichage (<em>viewport</em>) et d'éviter le décrochement formé en haut de l'écran sur certains des appareils.</p>
-</div>
+> **Note :** Les variables d'environnement furent initialement fournies par le navigateur iOS afin de permettre aux développeurs de placer le contenu sur une zone sûre de la zone d'affichage (_viewport_) et d'éviter le décrochement formé en haut de l'écran sur certains des appareils.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css">/* Utilisation des quatre zones sûres */
+```css
+/* Utilisation des quatre zones sûres */
 env(safe-area-inset-top)
 env(safe-area-inset-right)
 env(safe-area-inset-bottom)
@@ -43,41 +44,40 @@ env(safe-area-inset-top, 20px);
 env(safe-area-inset-right, 1em);
 env(safe-area-inset-bottom, 0.5vh);
 env(safe-area-inset-left, 1.4rem);
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>safe-area-inset-top</code>, <code>safe-area-inset-right</code>, <code>safe-area-inset-bottom</code>, <code>safe-area-inset-left</code></dt>
- <dd>Ces mots-clés sont des variables d'environnement qui définissent un rectangle avec les décalages par rapport à chacun des côtés de la zone d'affichage (<em>viewport</em>) dans lequel on pourra placer du contenu sans que ce dernier puisse être rogné du fait de la forme non rectangulaire de l'affichage.</dd>
-</dl>
+- `safe-area-inset-top`, `safe-area-inset-right`, `safe-area-inset-bottom`, `safe-area-inset-left`
+  - : Ces mots-clés sont des variables d'environnement qui définissent un rectangle avec les décalages par rapport à chacun des côtés de la zone d'affichage (_viewport_) dans lequel on pourra placer du contenu sans que ce dernier puisse être rogné du fait de la forme non rectangulaire de l'affichage.
 
-<div class="note">
-<p><strong>Note :</strong> À la différence des autres propriétés CSS, les identifiants provenant de l'agent utilisateur sont sensibles à la casse.</p>
-</div>
+> **Note :** À la différence des autres propriétés CSS, les identifiants provenant de l'agent utilisateur sont sensibles à la casse.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Examples">Examples</h2>
+## Examples
 
-<p>Dans l'exemple qui suit, on utilise le deuxième paramètre de la notation fonctionnelle <code>env()</code> afin de fournir une valeur de recours lorsque la variable d'environnement n'est pas disponible.</p>
+Dans l'exemple qui suit, on utilise le deuxième paramètre de la notation fonctionnelle `env()` afin de fournir une valeur de recours lorsque la variable d'environnement n'est pas disponible.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;
-  Si la fonction &lt;code&gt;env()&lt;/code&gt; est prise en charge dans votre
+```html
+<p>
+  Si la fonction <code>env()</code> est prise en charge dans votre
   navigateur, le texte de ce paragraphe aura 50 pixels de padding avec
   la bordure gauche mais pas la droite / basse et haute.
-  En effet, le code CSS associé est équivalent à &lt;code&gt;padding: 0 0 0 50px&lt;/code&gt;
+  En effet, le code CSS associé est équivalent à <code>padding: 0 0 0 50px</code>
   car les noms des propriétés CSS associées aux agents utilisateurs sont
   sensibles à la casse (contrairement aux autres propriétés).
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   width: 300px;
   border: 2px solid red;
   padding:
@@ -85,15 +85,17 @@ env(safe-area-inset-left, 1.4rem);
     env(safe-area-inset-right, 50px)
     env(safe-area-inset-bottom, 50px)
     env(SAFE-AREA-INSET-LEFT, 50px);
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h3 id="Exemples_de_valeurs">Exemples de valeurs</h3>
+### Exemples de valeurs
 
-<pre class="brush: css">/* zéro pour les agents utilisateurs rectangulaires */
+```css
+/* zéro pour les agents utilisateurs rectangulaires */
 padding: env(safe-area-inset-bottom, 50px);
 
 /* 50px car les propriétés de l'agent sont sensibles à la casse */
@@ -106,43 +108,26 @@ padding: env(x, 50px 20px);
 /* ignorée car '50px, 20px' n'est pas une valeur de padding correcte
    et que x n'est pas une variable d'environnement */
 padding: env(x, 50px, 20px);
-</pre>
+```
 
-<p>Pour la deuxième valeur, il est possible d'utiliser des virgules afin de fournir un ensemble composite de valeurs à la propriété. Toutefois, si la propriété en question ne permet pas de gérer plusieurs valeurs, la déclaration sera invalide.</p>
+Pour la deuxième valeur, il est possible d'utiliser des virgules afin de fournir un ensemble composite de valeurs à la propriété. Toutefois, si la propriété en question ne permet pas de gérer plusieurs valeurs, la déclaration sera invalide.
 
-<div class="note">
-<p><strong>Note :</strong> Les propriétés relatives à l'agent utilisateur ne sont pas réinitialisées avec la propriété {{cssxref("all")}}.</p>
-</div>
+> **Note :** Les propriétés relatives à l'agent utilisateur ne sont pas réinitialisées avec la propriété {{cssxref("all")}}.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Environment Variables", "#env-function", "env()")}}</td>
-   <td>{{Spec2("CSS3 Environment Variables")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                                                 | Commentaires         |
+| -------------------------------------------------------------------------------------------- | ---------------------------------------------------- | -------------------- |
+| {{SpecName("CSS3 Environment Variables", "#env-function", "env()")}} | {{Spec2("CSS3 Environment Variables")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.custom-property.env")}}</p>
+{{Compat("css.properties.custom-property.env")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{CSSxRef("var", "var(…)")}}</li>
- <li><a href="/fr/docs/Web/CSS/CSS_Variables">Les propriétés personnalisées et la cascade</a></li>
- <li><a href="/fr/docs/Web/CSS/--*">Les propriétés personnalisées (--*)</a></li>
- <li><a href="/fr/docs/Web/CSS/Les_variables_CSS">Utiliser les propriétés CSS personnalisées</a></li>
- <li>{{CSSxRef("@viewport/viewport-fit", "viewport-fit (@viewport)")}}</li>
-</ul>
+- {{CSSxRef("var", "var(…)")}}
+- [Les propriétés personnalisées et la cascade](/fr/docs/Web/CSS/CSS_Variables)
+- [Les propriétés personnalisées (--\*)](/fr/docs/Web/CSS/--*)
+- [Utiliser les propriétés CSS personnalisées](/fr/docs/Web/CSS/Les_variables_CSS)
+- {{CSSxRef("@viewport/viewport-fit", "viewport-fit (@viewport)")}}

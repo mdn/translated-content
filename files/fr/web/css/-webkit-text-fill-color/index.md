@@ -8,12 +8,13 @@ tags:
   - Reference
 translation_of: Web/CSS/-webkit-text-fill-color
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>La propriété <strong><code>-webkit-text-fill-color</code></strong> définit la couleur utilisée pour dessiner le contenu des lettres qui forment un texte. Si cette propriété n'est pas définie, c'est la valeur de la propriété {{cssxref("color")}} qui sera utilisée.</p>
+La propriété **`-webkit-text-fill-color`** définit la couleur utilisée pour dessiner le contenu des lettres qui forment un texte. Si cette propriété n'est pas définie, c'est la valeur de la propriété {{cssxref("color")}} qui sera utilisée.
 
-<pre class="brush: css no-line-numbers">/* Valeurs de couleurs */
-/* Type &lt;color&gt;        */
+```css
+/* Valeurs de couleurs */
+/* Type <color>        */
 -webkit-text-fill-color: red;
 -webkit-text-fill-color: #000000;
 -webkit-text-fill-color: rgb(100, 200, 0);
@@ -22,77 +23,58 @@ translation_of: Web/CSS/-webkit-text-fill-color
 -webkit-text-fill-color: inherit;
 -webkit-text-fill-color: initial;
 -webkit-text-fill-color: unset;
-</pre>
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;color&gt;</code></dt>
- <dd>La couleur utilisée pour colorer les lettres du texte.</dd>
-</dl>
+- `<color>`
+  - : La couleur utilisée pour colorer les lettres du texte.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   margin: 0;
   font-size: 3em;
   -webkit-text-fill-color: green;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Ce texte est vert.&lt;/p&gt;
-</pre>
+```html
+<p>Ce texte est vert.</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Example", "380px", "60px")}}</p>
+{{EmbedLiveSample("Example", "380px", "60px")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Compat', '#the-webkit-text-fill-color', '-webkit-text-fill-color')}}</td>
-   <td>{{Spec2('Compat')}}</td>
-   <td>Définition initiale dans un standard.</td>
-  </tr>
-  <tr>
-   <td><a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266--webkit-text-fill-color">Référence CSS Safari -webkit-text-fill-color' dans ce document.</a></td>
-   <td>Documentation non-officielle, non-standard.</td>
-   <td>Documentation initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                                                                                                                                   | État                                        | Commentaires                          |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------- |
+| {{SpecName('Compat', '#the-webkit-text-fill-color', '-webkit-text-fill-color')}}                                                                                                                                                    | {{Spec2('Compat')}}                    | Définition initiale dans un standard. |
+| [Référence CSS Safari -webkit-text-fill-color' dans ce document.](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266--webkit-text-fill-color) | Documentation non-officielle, non-standard. | Documentation initiale.               |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.-webkit-text-fill-color")}}</p>
+{{Compat("css.properties.-webkit-text-fill-color")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="https://www.webkit.org/blog/85/introducing-text-stroke/">Le billet de <em>Surfin' Safari</em> qui annonce cette fonctionnalité (en anglais)</a></li>
- <li><a href="https://css-tricks.com/adding-stroke-to-web-text/">L'article de CSS-Tricks qui décrit cette fonctionnalité (en anglais)</a></li>
- <li>{{cssxref("-webkit-text-stroke-color")}}</li>
- <li>{{cssxref("-webkit-text-stroke-width")}}</li>
- <li>{{cssxref("-webkit-text-stroke")}}</li>
-</ul>
+- [Le billet de _Surfin' Safari_ qui annonce cette fonctionnalité (en anglais)](https://www.webkit.org/blog/85/introducing-text-stroke/)
+- [L'article de CSS-Tricks qui décrit cette fonctionnalité (en anglais)](https://css-tricks.com/adding-stroke-to-web-text/)
+- {{cssxref("-webkit-text-stroke-color")}}
+- {{cssxref("-webkit-text-stroke-width")}}
+- {{cssxref("-webkit-text-stroke")}}

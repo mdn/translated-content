@@ -8,42 +8,42 @@ tags:
   - Reference
 translation_of: Web/CSS/-moz-outline-radius-bottomright
 ---
-<div>{{Non-standard_header}}{{CSSRef}}</div>
+{{Non-standard_header}}{{CSSRef}}
 
-<p>Dans les applications Mozilla, la propriété <strong><code>-moz-outline-radius-</code></strong><strong><code>bottomright</code></strong> définit l'arrondi du coin inférieur droit du contour.</p>
+Dans les applications Mozilla, la propriété **`-moz-outline-radius-`\*\***`bottomright`\*\* définit l'arrondi du coin inférieur droit du contour.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Regardez le coin inférieur droit de ce paragraphe.&lt;/p&gt;</pre>
+```html
+<p>Regardez le coin inférieur droit de ce paragraphe.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   margin: 5px;
   border: solid cyan;
   outline: dotted red;
   -moz-outline-radius-bottomright: 2em;
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Example")}}</p>
+{{EmbedLiveSample("Example")}}
 
-<div class="note">
-<p><strong>Note :</strong> Cette propriété étant spécifique à Firefox, l'exemple ci-avant ne fonctionnera pas dans un autre navigateur.</p>
-</div>
+> **Note :** Cette propriété étant spécifique à Firefox, l'exemple ci-avant ne fonctionnera pas dans un autre navigateur.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette propriété est une propriété propriétaire liée à Mozilla/Gecko et ne fait partie d'aucune spécification.</p>
+Cette propriété est une propriété propriétaire liée à Mozilla/Gecko et ne fait partie d'aucune spécification.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>La propriété raccourcie {{cssxref("-moz-outline-radius")}}</li>
- <li>La propriété standard {{cssxref("outline")}}</li>
-</ul>
+- La propriété raccourcie {{cssxref("-moz-outline-radius")}}
+- La propriété standard {{cssxref("outline")}}

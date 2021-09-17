@@ -8,11 +8,12 @@ tags:
   - Reference
 translation_of: Web/CSS/-moz-float-edge
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>La propriété <strong><code>-moz-float-edge</code></strong> définit si les propriétés de hauteur et de larguer d'un élément incluent la marge, la bordure et/ou le remplissage (<em>padding</em>).</p>
+La propriété **`-moz-float-edge`** définit si les propriétés de hauteur et de larguer d'un élément incluent la marge, la bordure et/ou le remplissage (_padding_).
 
-<pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 -moz-float-edge: border-box;
 -moz-float-edge: content-box;
 -moz-float-edge: margin-box;
@@ -22,61 +23,61 @@ translation_of: Web/CSS/-moz-float-edge
 -moz-float-edge: inherit;
 -moz-float-edge: initial;
 -moz-float-edge: unset;
-</pre>
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>border-box</code></dt>
- <dd>Les propriétés de hauteur et de largeur incluent le contenu, le remplissage et la bordure mais pas la marge.</dd>
- <dt><code>content-box</code></dt>
- <dd>Les propriétés de hauteur et de largeur incluent le contenu, mais pas le remplissage, la bordure et la marge.</dd>
- <dt><code>margin-box</code></dt>
- <dd>Les propriétés de hauteur et de largeur incluent le contenu, le remplissage, la bordure et la marge.</dd>
- <dt><code>padding-box</code></dt>
- <dd>Les propriétés de hauteur et de largeur incluent le contenu et le remplissage mais pas la bordure ni la marge.</dd>
-</dl>
+- `border-box`
+  - : Les propriétés de hauteur et de largeur incluent le contenu, le remplissage et la bordure mais pas la marge.
+- `content-box`
+  - : Les propriétés de hauteur et de largeur incluent le contenu, mais pas le remplissage, la bordure et la marge.
+- `margin-box`
+  - : Les propriétés de hauteur et de largeur incluent le contenu, le remplissage, la bordure et la marge.
+- `padding-box`
+  - : Les propriétés de hauteur et de largeur incluent le contenu et le remplissage mais pas la bordure ni la marge.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.box {
+```css
+.box {
   display: block;
   height: 5px;
   margin: 0.5em auto 0.5em auto;
   color: gray;
   -moz-float-edge: margin-box;
   box-sizing: border-box;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="html">&lt;div class="box"&gt;
-   &lt;p&gt;
+```html
+<div class="box">
+   <p>
       Lorem ipsum dolor sit amet,
       consectetur adipiscing elit.
-   &lt;/p&gt;
-&lt;/div&gt;</pre>
+   </p>
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples')}}</p>
+{{EmbedLiveSample('Exemples')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.</p>
+Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{bug(432891)}}</li>
-</ul>
+- {{bug(432891)}}

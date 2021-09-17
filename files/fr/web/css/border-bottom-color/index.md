@@ -7,17 +7,18 @@ tags:
   - Reference
 translation_of: Web/CSS/border-bottom-color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>border-bottom-color</code></strong> permet de définir la couleur utilisée pour la bordure basse d'un élément.</p>
+La propriété **`border-bottom-color`** permet de définir la couleur utilisée pour la bordure basse d'un élément.
 
-<p>Pour avoir une formulation plus concise, on pourra utiliser les propriétés raccourcies {{cssxref("border-color")}} et/ou {{cssxref("border-bottom")}}.</p>
+Pour avoir une formulation plus concise, on pourra utiliser les propriétés raccourcies {{cssxref("border-color")}} et/ou {{cssxref("border-bottom")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/border-bottom-color.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-bottom-color.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs de type &lt;color&gt; */
+```css
+/* Valeurs de type <color> */
 border-bottom-color: red;
 border-bottom-color: rgb(255, 128, 0);
 border-bottom-color: hsla(100%, 50%, 25%, 0.75);
@@ -29,24 +30,23 @@ border-bottom-color: transparent;
 border-bottom-color: inherit;
 border-bottom-color: initial;
 border-bottom-color: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt>&lt;<code>color&gt;</code></dt>
- <dd>Une valeur de couleur (type {{cssxref("&lt;color&gt;")}}) qui décrit la couleur utilisée pour la bordure du côté inférieur.</dd>
-</dl>
+- <`color>`
+  - : Une valeur de couleur (type {{cssxref("&lt;color&gt;")}}) qui décrit la couleur utilisée pour la bordure du côté inférieur.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.maboite {
+```css
+.maboite {
   border: solid 0.3em gold;
   border-bottom-color: red;
   width: auto;
@@ -54,71 +54,51 @@ border-bottom-color: unset;
 
 .texterouge {
   color: red;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="maboite"&gt;
-  &lt;p&gt;Une boîte avec une bordure autour.
+```html
+<div class="maboite">
+  <p>Une boîte avec une bordure autour.
      Notez le côté de la boîte qui est
-     &lt;span class="texterouge"&gt;rouge&lt;/span&gt;.&lt;/p&gt;
-&lt;/div&gt;</pre>
+     <span class="texterouge">rouge</span>.</p>
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples')}}</p>
+{{EmbedLiveSample('Exemples')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#border-bottom-color', 'border-bottom-color')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Pas de modification significative, la valeur <code>transparent</code> a été supprimée car elle fait désormais partie du type {{cssxref("&lt;color&gt;")}} qui a été étendu.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'box.html#propdef-border-bottom-color', 'border-bottom-color')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                                     | Commentaires                                                                                                                                                             |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('CSS3 Backgrounds', '#border-bottom-color', 'border-bottom-color')}}         | {{Spec2('CSS3 Backgrounds')}} | Pas de modification significative, la valeur `transparent` a été supprimée car elle fait désormais partie du type {{cssxref("&lt;color&gt;")}} qui a été étendu. |
+| {{SpecName('CSS2.1', 'box.html#propdef-border-bottom-color', 'border-bottom-color')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                                                                                                                                                     |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.border-bottom-color")}}</p>
+{{Compat("css.properties.border-bottom-color")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Les propriétés raccourciées liées aux bordures
-  <ul>
-   <li>{{cssxref("border")}},</li>
-   <li>{{cssxref("border-bottom")}},</li>
-   <li>{{cssxref("border-color")}}.</li>
-  </ul>
- </li>
- <li>Les propriétés de couleur pour les autres bordures :
-  <ul>
-   <li>{{cssxref("border-right-color")}},</li>
-   <li>{{cssxref("border-top-color")}},</li>
-   <li>{{cssxref("border-left-color")}}.</li>
-  </ul>
- </li>
- <li>Les autres propriétés liées à la bordure du haut :
-  <ul>
-   <li>{{cssxref("border-bottom-style")}},</li>
-   <li>{{cssxref("border-bottom-width")}}.</li>
-  </ul>
- </li>
-</ul>
+- Les propriétés raccourciées liées aux bordures
+
+  - {{cssxref("border")}},
+  - {{cssxref("border-bottom")}},
+  - {{cssxref("border-color")}}.
+
+- Les propriétés de couleur pour les autres bordures :
+
+  - {{cssxref("border-right-color")}},
+  - {{cssxref("border-top-color")}},
+  - {{cssxref("border-left-color")}}.
+
+- Les autres propriétés liées à la bordure du haut :
+
+  - {{cssxref("border-bottom-style")}},
+  - {{cssxref("border-bottom-width")}}.

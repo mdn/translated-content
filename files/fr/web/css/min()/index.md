@@ -7,63 +7,66 @@ tags:
   - Reference
 translation_of: Web/CSS/min()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La fonction CSS <code><strong>min()</strong></code> permet d'obtenir la plus petite valeurs parmi une liste d'expressions, séparées par des virgules afin d'utiliser ce minimum comme valeur d'une propriété CSS. La fonction <code>min()</code> peut être utilisée à tout endroit où une valeur de type {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}} ou {{cssxref("&lt;integer&gt;")}} est autorisée.</p>
+La fonction CSS **`min()`** permet d'obtenir la plus petite valeurs parmi une liste d'expressions, séparées par des virgules afin d'utiliser ce minimum comme valeur d'une propriété CSS. La fonction `min()` peut être utilisée à tout endroit où une valeur de type {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;percentage&gt;")}}, {{cssxref("&lt;number&gt;")}} ou {{cssxref("&lt;integer&gt;")}} est autorisée.
 
-<pre class="brush: css no-line-numbers">/* property: min(expression<code class="css plain"> [, expression]</code>) */
+```css
+/* property: min(expression [, expression]) */
 width: min(10vw, 4em, 80px);
-</pre>
+```
 
-<p>Dans l'exemple précédent, la largeur mesurera au plus 80 pixels de large, sera moins large si la zone d'affichage (<em>viewport</em>) est moins large que 800 pixels ou si un <code>em</code> vaut moins que 20 pixels de large. Autrement dit, la valeur fournie <code>min()</code> est calculée comme un seuil et généralement, on aura un seuil maximal dans une expression <code>min()</code> (ce qui peut paraître contradictoire à juste titre).</p>
+Dans l'exemple précédent, la largeur mesurera au plus 80 pixels de large, sera moins large si la zone d'affichage (_viewport_) est moins large que 800 pixels ou si un `em` vaut moins que 20 pixels de large. Autrement dit, la valeur fournie `min()` est calculée comme un seuil et généralement, on aura un seuil maximal dans une expression `min()` (ce qui peut paraître contradictoire à juste titre).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>La fonction <code>min()</code> prend comme arguments une ou plusieurs expressions, séparées par des virgules. Elle renvoie comme valeur le plus petit résultat des évaluations des expressions passées en arguments.</p>
+La fonction `min()` prend comme arguments une ou plusieurs expressions, séparées par des virgules. Elle renvoie comme valeur le plus petit résultat des évaluations des expressions passées en arguments.
 
-<p>Les expressions passées à cette fonction peuvent utiliser des fonctions mathématiques (cf. {{CSSxRef("calc", "calc()")}}), des valeurs littérales ou d'autres expressions (ex. avec {{CSSxRef("attr", "attr()")}}). Il est nécessaire que ces expressions fournissent une valeur d'un type valide (ex. {{cssxref("&lt;length&gt;")}}).</p>
+Les expressions passées à cette fonction peuvent utiliser des fonctions mathématiques (cf. {{CSSxRef("calc", "calc()")}}), des valeurs littérales ou d'autres expressions (ex. avec {{CSSxRef("attr", "attr()")}}). Il est nécessaire que ces expressions fournissent une valeur d'un type valide (ex. {{cssxref("&lt;length&gt;")}}).
 
-<p>Il est tout à fait possible de combiner des valeurs avec différentes unités dans les expressions passées en arguments. On peut également utiliser des parenthèses à l'intérieur des expressions afin de s'assurer de la précédence des opérateurs.</p>
+Il est tout à fait possible de combiner des valeurs avec différentes unités dans les expressions passées en arguments. On peut également utiliser des parenthèses à l'intérieur des expressions afin de s'assurer de la précédence des opérateurs.
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<ul>
- <li>Les expressions mathématiques qui utilisent des pourcentages pour les hauteurs et largeurs de colonnes de tableaux, de groupes de colonnes de tableaux, pour les lignes de tableaux, pour les groupes de lignes de tableaux et pour les cellules de tableau seront considérées comme <code>auto</code> si le tableau suit une disposition automatique ou fixée.</li>
- <li>Il est possible d'imbriquer des fonctions <code>min()</code> et <code>min()</code> dans les expressions et d'utiliser les opérateurs mathématiques d'addition, soustraction, multiplication, division sans nécessairement recourir à <code>calc()</code>.</li>
-</ul>
+- Les expressions mathématiques qui utilisent des pourcentages pour les hauteurs et largeurs de colonnes de tableaux, de groupes de colonnes de tableaux, pour les lignes de tableaux, pour les groupes de lignes de tableaux et pour les cellules de tableau seront considérées comme `auto` si le tableau suit une disposition automatique ou fixée.
+- Il est possible d'imbriquer des fonctions `min()` et `min()` dans les expressions et d'utiliser les opérateurs mathématiques d'addition, soustraction, multiplication, division sans nécessairement recourir à `calc()`.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Garantir_une_taille_maximale_pour_des_images">Garantir une taille maximale pour des images</h3>
+### Garantir une taille maximale pour des images
 
-<p><code>min()</code> permet de simplifier la définition d'une taille <strong>maximale</strong>, par exemple la largeur d'une image. Dans cet exemple, la règle CSS permet d'obtenir un logo qui s'étire sur la moitié de la fenêtre pour les fenêtres les moins larges, sans dépasser 300 pixels et sans avoir à utiliser des requêtes média.</p>
+`min()` permet de simplifier la définition d'une taille **maximale**, par exemple la largeur d'une image. Dans cet exemple, la règle CSS permet d'obtenir un logo qui s'étire sur la moitié de la fenêtre pour les fenêtres les moins larges, sans dépasser 300 pixels et sans avoir à utiliser des requêtes média.
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.logo {
+```css
+.logo {
   width: min(50vw, 300px);
 }
-</pre>
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;img src="https://developer.mozilla.org/static/img/web-docs-sprite.svg" alt="MDN Web Docs" class="logo"&gt;</pre>
+```html
+<img src="https://developer.mozilla.org/static/img/web-docs-sprite.svg" alt="MDN Web Docs" class="logo">
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('Garantir_une_taille_minimale_pour_des_images', '100%', '110')}}</p>
+{{EmbedLiveSample('Garantir_une_taille_minimale_pour_des_images', '100%', '110')}}
 
-<h3 id="Définir_une_taille_maximale_pour_un_champ_de_saisie_et_son_libellé">Définir une taille maximale pour un champ de saisie et son libellé</h3>
+### Définir une taille maximale pour un champ de saisie et son libellé
 
-<p>La fonction <code>min()</code> peut également être utilisée pour définir la taille maximale d'un contrôle dans un formulaire et permettre de réduire le champ et le libellé associé lorsque la largeur de l'écran diminue.</p>
+La fonction `min()` peut également être utilisée pour définir la taille maximale d'un contrôle dans un formulaire et permettre de réduire le champ et le libellé associé lorsque la largeur de l'écran diminue.
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">input, label {
+```css
+input, label {
   padding: 2px;
   box-sizing: border-box;
   display: inline-block;
@@ -76,63 +79,49 @@ form {
   border: 1px solid black;
   padding: 4px;
 }
-</pre>
+```
 
-<p>On a ici la règle qui s'applique au formulaire et qui occupe 100% de la largeur de son parent. On déclare avec <code>min()</code> que la largeur doit mesurer au plus 400 pixels ou 40% de la largeur du formulaire. Autrement dit, la taille la plus grande que pourra atteindre le champ et le libellé sera 400 pixels. La largeur la plus étroite sera nécessairement 40% (ce qui peut être tout petit sur l'affichage d'une montre par exemple).</p>
+On a ici la règle qui s'applique au formulaire et qui occupe 100% de la largeur de son parent. On déclare avec `min()` que la largeur doit mesurer au plus 400 pixels ou 40% de la largeur du formulaire. Autrement dit, la taille la plus grande que pourra atteindre le champ et le libellé sera 400 pixels. La largeur la plus étroite sera nécessairement 40% (ce qui peut être tout petit sur l'affichage d'une montre par exemple).
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;label&gt;Saisir quelque chose :&lt;/label&gt;
-  &lt;input type="text"&gt;
-&lt;/form&gt;
-</pre>
+```html
+<form>
+  <label>Saisir quelque chose :</label>
+  <input type="text">
+</form>
+```
 
-<p>{{EmbedLiveSample("Définir_une_taille_maximale_pour_un_champ_de_saisie_et_son_libellé", '100%', '110')}}</p>
+{{EmbedLiveSample("Définir_une_taille_maximale_pour_un_champ_de_saisie_et_son_libellé", '100%', '110')}}
 
-<h2 id="Accessibilité">Accessibilité</h2>
+## Accessibilité
 
-<p>Lorsqu'on utilise <code>min()</code> afin de contrôler la taille du texte, il faut s'assurer que le texte puisse toujours être suffisamment grand pour être lisible. Pour cela, on peut imbriquer l'appel à <code>min()</code> dans <code><a href="/fr/docs/Web/CSS/max">max()</a></code> utilisant <a href="/fr/docs/Web/CSS/length#Unités_de_longueur_relatives">une unité de longueur relative</a> en deuxième argument afin de garantir une lisibilité minimale :</p>
+Lorsqu'on utilise `min()` afin de contrôler la taille du texte, il faut s'assurer que le texte puisse toujours être suffisamment grand pour être lisible. Pour cela, on peut imbriquer l'appel à `min()` dans [`max()`](/fr/docs/Web/CSS/max) utilisant [une unité de longueur relative](/fr/docs/Web/CSS/length#Unités_de_longueur_relatives) en deuxième argument afin de garantir une lisibilité minimale :
 
-<pre class="brush: css">small {
+```css
+small {
   font-size: max(min(0.5vw, 0.5em), 1rem);
-}</pre>
+}
+```
 
-<p>On aura ainsi une taille minimale de <code>1rem</code> et la taille du texte qui se met à l'échelle si on zoome sur la page.</p>
+On aura ainsi une taille minimale de `1rem` et la taille du texte qui se met à l'échelle si on zoome sur la page.
 
-<ul>
- <li><a href="/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">Comprendre les règles 1.4 du WCAG</a> (MDN)</li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html">Comprendre le critère de réussite 1.4.4 du WCAG 2.0 (W3C)</a></li>
-</ul>
+- [Comprendre les règles 1.4 du WCAG](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background) (MDN)
+- [Comprendre le critère de réussite 1.4.4 du WCAG 2.0 (W3C)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Values', '#calc-notation', 'min()')}}</td>
-   <td>{{Spec2('CSS4 Values')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                            | État                             | Commentaires |
+| ------------------------------------------------------------------------ | -------------------------------- | ------------ |
+| {{SpecName('CSS4 Values', '#calc-notation', 'min()')}} | {{Spec2('CSS4 Values')}} |              |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.types.min")}}</p>
+{{Compat("css.types.min")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{CSSxRef("calc", "calc()")}}</li>
- <li>{{CSSxRef("clamp", "clamp()")}}</li>
- <li>{{CSSxRef("max", "max()")}}</li>
- <li><a href="/fr/docs/Apprendre/CSS/Introduction_à_CSS/Values_and_units">Valeurs et unités en CSS</a></li>
-</ul>
+- {{CSSxRef("calc", "calc()")}}
+- {{CSSxRef("clamp", "clamp()")}}
+- {{CSSxRef("max", "max()")}}
+- [Valeurs et unités en CSS](/fr/docs/Apprendre/CSS/Introduction_à_CSS/Values_and_units)

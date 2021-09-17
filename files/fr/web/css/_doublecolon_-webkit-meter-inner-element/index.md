@@ -1,22 +1,23 @@
 ---
 title: '::-webkit-meter-inner-element'
-slug: 'Web/CSS/::-webkit-meter-inner-element'
+slug: Web/CSS/::-webkit-meter-inner-element
 tags:
   - CSS
   - Non-standard
   - Pseudo-element
   - Reference
-translation_of: 'Web/CSS/::-webkit-meter-inner-element'
+translation_of: Web/CSS/::-webkit-meter-inner-element
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>Le pseudo-élément <strong><code>::-webkit-meter-inner-element</code></strong> est un pseudo-élément qui permet de sélectionner et d'appliquer des styles au conteneur d'un élément {{htmlelement("meter")}}.</p>
+Le pseudo-élément **`::-webkit-meter-inner-element`** est un pseudo-élément qui permet de sélectionner et d'appliquer des styles au conteneur d'un élément {{htmlelement("meter")}}.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">meter {
+```css
+meter {
   /* Réinitialise l'apparence par défaut */
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -27,35 +28,34 @@ meter::-webkit-meter-inner-element {
   -webkit-appearance: inherit;
   box-sizing: inherit;
   border: 1px solid #aaa;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;meter min="0" max="10" value="6"&gt;Score out of 10&lt;/meter&gt;</pre>
+```html
+<meter min="0" max="10" value="6">Score out of 10</meter>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', '100%', 50)}}</p>
+{{EmbedLiveSample('Exemples', '100%', 50)}}
 
-<div class="note">
-<p><strong>Note :</strong> Cela ne fonctionne que pour les navigateurs Webkit/Blink.</p>
-</div>
+> **Note :** Cela ne fonctionne que pour les navigateurs Webkit/Blink.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink et ne fait partie d'aucune spécification.</p>
+Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink et ne fait partie d'aucune spécification.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.-webkit-meter-inner-element")}}</p>
+{{Compat("css.selectors.-webkit-meter-inner-element")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<p>Les pseudo-éléments utilisés par WebKit/Blink pour mettre en forme les autres parties d'un élément {{htmlelement("meter")}} :</p>
+Les pseudo-éléments utilisés par WebKit/Blink pour mettre en forme les autres parties d'un élément {{htmlelement("meter")}} :
 
-<ul>
- <li>{{cssxref("::-webkit-meter-bar")}}</li>
- <li>{{cssxref("::-webkit-meter-even-less-good-value")}}</li>
- <li>{{cssxref("::-webkit-meter-optimum-value")}}</li>
- <li>{{cssxref("::-webkit-meter-suboptimum-value")}}</li>
-</ul>
+- {{cssxref("::-webkit-meter-bar")}}
+- {{cssxref("::-webkit-meter-even-less-good-value")}}
+- {{cssxref("::-webkit-meter-optimum-value")}}
+- {{cssxref("::-webkit-meter-suboptimum-value")}}

@@ -7,23 +7,22 @@ tags:
   - Reference
 translation_of: Web/CSS/offset-path
 ---
-<div>{{SeeCompatTable}}{{CSSRef}}</div>
+{{SeeCompatTable}}{{CSSRef}}
 
-<p>La propriété <code><strong>offset</strong></code><strong><code>-path</code></strong> définit le tracé d'un mouvement sur lequel un élément est positionné, relativement au conteneur parent ou au système de coordonnées SVG.</p>
+La propriété **`offset`\*\***`-path`\*\* définit le tracé d'un mouvement sur lequel un élément est positionné, relativement au conteneur parent ou au système de coordonnées SVG.
 
-<div>{{EmbedInteractiveExample("pages/css/offset-path.html")}}</div>
+{{EmbedInteractiveExample("pages/css/offset-path.html")}}
 
-<p>Cette propriété sert à définir un chemin qu'un élément va suivre lors d'une animation.</p>
+Cette propriété sert à définir un chemin qu'un élément va suivre lors d'une animation.
 
-<p>La position exacte de l'élément sur ce tracé est déterminée grâce à la propriété {{cssxref("offset-distance")}}. Le tracé d'un mouvement peut être défini grâce à un chemin ou à plusieurs chemins successifs ou encore grâce à la géométrie d'une forme. Chaque forme ou chemin doit définir une position initiale pour la valeur calculée <code>0</code> de {{cssxref("offset-distance")}} ainsi qu'une direction initiale qui définit la rotation de l'objet dans sa position initiale.</p>
+La position exacte de l'élément sur ce tracé est déterminée grâce à la propriété {{cssxref("offset-distance")}}. Le tracé d'un mouvement peut être défini grâce à un chemin ou à plusieurs chemins successifs ou encore grâce à la géométrie d'une forme. Chaque forme ou chemin doit définir une position initiale pour la valeur calculée `0` de {{cssxref("offset-distance")}} ainsi qu'une direction initiale qui définit la rotation de l'objet dans sa position initiale.
 
-<div class="note">
-<p><strong>Note :</strong> Dans des versions antérieures des spécifications, cette propriété était intitulée <code>motion-path</code>. Le nom a été modifié en <code>offset-path</code> afin de décrire un chemin statique plutôt qu'un chemin en mouvement.</p>
-</div>
+> **Note :** Dans des versions antérieures des spécifications, cette propriété était intitulée `motion-path`. Le nom a été modifié en `offset-path` afin de décrire un chemin statique plutôt qu'un chemin en mouvement.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css">/* Valeur par défaut */
+```css
+/* Valeur par défaut */
 offset-path: none;
 
 /* Valeurs avec une notation fonctionnelle */
@@ -46,41 +45,38 @@ offset-path: stroke-box;
 offset-path: inherit;
 offset-path: initial;
 offset-path: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<div class="warning">
-  <p><strong>Attention :</strong> À l'heure actuelle, seule la notation <code>path()</code> est prise en charge par les navigateurs.</p>
-</div>
+> **Attention :** À l'heure actuelle, seule la notation `path()` est prise en charge par les navigateurs.
 
-<dl>
- <dt><code>ray()</code></dt>
- <dd>Cette notation fonctionnelle prend jusqu'à trois valeurs et définit un chemin qui est un ligne commençant à la position de la boîte et qui suit la direction de l'angle indiqué (la valeur 0deg correspond à une direction verticale, vers le haut et les angles allant dans le sens horaire). La valeur de la taille est définie de façon semblable à celle utilisée pour les dégradés entre <code>closest-side</code> et <code>farthest-corner</code> avec le mot-clé <code>contain</code>.</dd>
- <dt><code>url()</code></dt>
- <dd>Cette notation fonctionnelle permet de faire référence à l'identifiant d'une forme SVG : <code>circle</code>, <code>ellipse</code>, <code>line</code>, <code>path</code>, <code>polygon</code>, <code>polyline</code> ou <code>rect</code> et d'utiliser la géométrie de la forme visée pour construire le chemin.</dd>
- <dt><code>&lt;basic-shape&gt;</code></dt>
- <dd>Cette valeur indique une <a href="/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes">forme CSS</a> en utilisant les notations fonctionnelles <code>circle()</code>, <code>ellipse()</code>, <code>inset()</code>, <code>polygon()</code> ou <code>path()</code>.
- <dl>
-  <dt><code>path()</code></dt>
-  <dd>Une chaîne de caractères qui définit un chemin avec la syntaxe des coordonnées SVG. À l'heure actuelle (16 novembre 2018), c'est la seule valeur qui est prise en charge.</dd>
- </dl>
- </dd>
- <dt><code>none</code></dt>
- <dd>Aucun chemin de mouvement n'est indiqué.</dd>
-</dl>
+- `ray()`
+  - : Cette notation fonctionnelle prend jusqu'à trois valeurs et définit un chemin qui est un ligne commençant à la position de la boîte et qui suit la direction de l'angle indiqué (la valeur 0deg correspond à une direction verticale, vers le haut et les angles allant dans le sens horaire). La valeur de la taille est définie de façon semblable à celle utilisée pour les dégradés entre `closest-side` et `farthest-corner` avec le mot-clé `contain`.
+- `url()`
+  - : Cette notation fonctionnelle permet de faire référence à l'identifiant d'une forme SVG : `circle`, `ellipse`, `line`, `path`, `polygon`, `polyline` ou `rect` et d'utiliser la géométrie de la forme visée pour construire le chemin.
+- `<basic-shape>`
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+  - : Cette valeur indique une [forme CSS](/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes) en utilisant les notations fonctionnelles `circle()`, `ellipse()`, `inset()`, `polygon()` ou `path()`.
+
+    - `path()`
+      - : Une chaîne de caractères qui définit un chemin avec la syntaxe des coordonnées SVG. À l'heure actuelle (16 novembre 2018), c'est la seule valeur qui est prise en charge.
+
+- `none`
+  - : Aucun chemin de mouvement n'est indiqué.
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>L'exemple qui suit est tiré de <a href="https://codepen.io/ericwilligers/pen/bwVkNa">cette démo présente sur CodePen</a>. Le code SVG dessine la forme d'une maison avec une cheminée. Les propriétés <code>offset-path</code> utilisées permettent de déplacer l'icône (des ciseaux) autour de la maison. On notera que la pseudo-classe <code>:path()</code> est utilisée avec <code>offset-path</code> et que le document SVG contient <code>&lt;path&gt;</code>. Si on compare ces deux données, on verra qu'elles sont identiques.</p>
+L'exemple qui suit est tiré de [cette démo présente sur CodePen](https://codepen.io/ericwilligers/pen/bwVkNa). Le code SVG dessine la forme d'une maison avec une cheminée. Les propriétés `offset-path` utilisées permettent de déplacer l'icône (des ciseaux) autour de la maison. On notera que la pseudo-classe `:path()` est utilisée avec `offset-path` et que le document SVG contient `<path>`. Si on compare ces deux données, on verra qu'elles sont identiques.
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.scissorHalf {
+```css
+.scissorHalf {
   offset-path: path('M900,190  L993,245 V201  A11,11 0 0,1 1004,190  H1075  A11,11 0 0,1 1086,201  V300  L1294,423 H1216  A11,11 0 0,0 1205,434  V789  A11,11 0 0,1 1194,800  H606  A11,11 0 0,1 595,789  V434  A11,11 0 0,0 584,423  H506 L900,190');
   animation: followpath 4s linear infinite;
 }
@@ -90,33 +86,35 @@ offset-path: unset;
      motion-offset: 100%;
      offset-distance: 100%;
    }
-}</pre>
+}
+```
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<p>Les moitiés supérieure et inférieure des ciseaux apparaîtront dans le coin en haut à gauche du canevas si elles ne sont pas positionnés sur le point de départ avec <code>offset-path</code>.</p>
+Les moitiés supérieure et inférieure des ciseaux apparaîtront dans le coin en haut à gauche du canevas si elles ne sont pas positionnés sur le point de départ avec `offset-path`.
 
-<pre class="brush: html">&lt;svg xmlns="http://www.w3.org/2000/svg"
+```html
+<svg xmlns="http://www.w3.org/2000/svg"
      width="700"
      height="450"
-     viewBox="350 0 1400 900"&gt;
-  &lt;title&gt;House and Scissors&lt;/title&gt;
-  &lt;rect x="595"
+     viewBox="350 0 1400 900">
+  <title>House and Scissors</title>
+  <rect x="595"
         y="423"
         width="610"
         height="377"
-        fill="blue" /&gt;
-  &lt;polygon points="506,423 900,190 1294,423"
-           fill="yellow" /&gt;
-  &lt;polygon points="993,245 993,190 1086,190 1086,300"
-           fill="red" /&gt;
-  &lt;path id="house" d="M900,190 L993,245 V201 A11,11 0 0,1 1004,190 H1075 A11,11 0 0,1 1086,201 V300 L1294,423 H1216 A11,11 0 0,0 1205,434 V789 A11,11 0 0,1 1194,800 H606 A11,11 0 0,1 595,789 V434 A11,11 0 0,0 584,423 H506 L900,190"
+        fill="blue" />
+  <polygon points="506,423 900,190 1294,423"
+           fill="yellow" />
+  <polygon points="993,245 993,190 1086,190 1086,300"
+           fill="red" />
+  <path id="house" d="M900,190 L993,245 V201 A11,11 0 0,1 1004,190 H1075 A11,11 0 0,1 1086,201 V300 L1294,423 H1216 A11,11 0 0,0 1205,434 V789 A11,11 0 0,1 1194,800 H606 A11,11 0 0,1 595,789 V434 A11,11 0 0,0 584,423 H506 L900,190"
         fill="none"
         stroke="black"
         stroke-width="13"
         stroke-linejoin="round"
-        stroke-linecap="round" /&gt;
-  &lt;path id="firstScissorHalf" class="scissorHalf"
+        stroke-linecap="round" />
+  <path id="firstScissorHalf" class="scissorHalf"
         d="M30,0 H-10 A10,10 0 0,0 -20,10 A20,20 0 1,1 -40,-10 H20 A10,10 0 0,1 30,0 M-40,20 A10,10 1 0,0 -40,0 A10,10 1 0,0 -40,20 M0,0"
         transform="translate(0,0)"
         fill="green"
@@ -124,8 +122,8 @@ offset-path: unset;
         stroke-width="5"
         stroke-linejoin="round"
         stroke-linecap="round"
-        fill-rule="evenodd" /&gt;
-  &lt;path id="secondScissorHalf" class="scissorHalf"
+        fill-rule="evenodd" />
+  <path id="secondScissorHalf" class="scissorHalf"
         d="M30,0 H-10 A10,10 0 0,1 -20,-10 A20,20 0 1,0 -40,10 H20 A10,10 0 0,0 30,0 M-40,-20 A10,10 1 0,0 -40,0 A10,10 1 0,0 -40,-20 M0,0"
         transform="translate(0,0)"
         fill="forestgreen"
@@ -133,43 +131,31 @@ offset-path: unset;
         stroke-width="5"
         stroke-linejoin="round"
         stroke-linecap="round"
-        fill-rule="evenodd" /&gt;
-&lt;/svg&gt;</pre>
+        fill-rule="evenodd" />
+</svg>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', '100%', '450')}}</p>
+{{EmbedLiveSample('Exemples', '100%', '450')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Spécification</th>
-   <th>État</th>
-   <th>Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Motion Path Level 1', '#offset-path-property', 'offset-path')}}</td>
-   <td>{{Spec2('Motion Path Level 1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                                         | Commentaires         |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
+| {{SpecName('Motion Path Level 1', '#offset-path-property', 'offset-path')}} | {{Spec2('Motion Path Level 1')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.offset-path")}}</p>
+{{Compat("css.properties.offset-path")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("offset")}}</li>
- <li>{{cssxref("offset-distance")}}</li>
- <li>{{cssxref("offset-rotation")}}</li>
- <li>{{cssxref("offset-anchor")}}</li>
- <li>{{cssxref("offset-position")}}</li>
- <li>{{SVGElement("path")}}</li>
-</ul>
+- {{cssxref("offset")}}
+- {{cssxref("offset-distance")}}
+- {{cssxref("offset-rotation")}}
+- {{cssxref("offset-anchor")}}
+- {{cssxref("offset-position")}}
+- {{SVGElement("path")}}

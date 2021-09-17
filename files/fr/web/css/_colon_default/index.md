@@ -1,111 +1,86 @@
 ---
 title: ':default'
-slug: 'Web/CSS/:default'
+slug: Web/CSS/:default
 tags:
   - CSS
   - Pseudo-classe
   - Reference
-translation_of: 'Web/CSS/:default'
+translation_of: Web/CSS/:default
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <strong><code>:default</code></strong> représente un élément de l'interface utilisateur qui est l'élément par défaut parmi d'autres éléments semblables (par exemple le bouton par défaut d'un groupe de boutons).</p>
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:default`** représente un élément de l'interface utilisateur qui est l'élément par défaut parmi d'autres éléments semblables (par exemple le bouton par défaut d'un groupe de boutons).
 
-<pre class="brush: css no-line-numbers">/* Cible l'élément par défaut d'un groupe */
+```css
+/* Cible l'élément par défaut d'un groupe */
 :default {
   background-color: lime;
-}</pre>
+}
+```
 
-<p>Ainsi, le bouton actionné par défaut parmi plusieurs boutons pourra être mis en forme en le ciblant avec cette pseudo-classe.</p>
+Ainsi, le bouton actionné par défaut parmi plusieurs boutons pourra être mis en forme en le ciblant avec cette pseudo-classe.
 
-<p>Ce sélecteur peut être utilisé sur des éléments {{htmlelement("button")}}, <code><a href="/fr/docs/Web/HTML/Element/input/checkbox">&lt;input type="checkbox"&gt;</a></code>, <code><a href="/fr/docs/Web/HTML/Element/input/radio">&lt;input type="radio"&gt;</a></code> et {{htmlelement("option")}} :</p>
+Ce sélecteur peut être utilisé sur des éléments {{htmlelement("button")}}, [`<input type="checkbox">`](/fr/docs/Web/HTML/Element/input/checkbox), [`<input type="radio">`](/fr/docs/Web/HTML/Element/input/radio) et {{htmlelement("option")}} :
 
-<ul>
- <li>Un élément <code>&lt;option&gt;</code> par défaut est le premier qui possède l'attribut <code>selected</code> ou le premier qui est activé selon l'ordre du DOM.</li>
- <li>Les éléments <code>&lt;input type="checkbox"&gt;</code> et <code>&lt;input type="radio"&gt;</code> seront ciblés s'ils possèdent l'attribut <code>checked</code>.</li>
- <li>L'élément <code>&lt;button&gt;</code> est ciblé si c'est le bouton d'envoi par défaut d'un formulaire, c'est-à-dire le premier bouton (selon l'ordre du DOM) appartenant au formulaire (cela vaut également pour les éléments {{htmlelement("input")}} dont le type permet d'envoyer des formulaires tels que <code>image</code> ou <code>submit</code>).</li>
-</ul>
+- Un élément `<option>` par défaut est le premier qui possède l'attribut `selected` ou le premier qui est activé selon l'ordre du DOM.
+- Les éléments `<input type="checkbox">` et `<input type="radio">` seront ciblés s'ils possèdent l'attribut `checked`.
+- L'élément `<button>` est ciblé si c'est le bouton d'envoi par défaut d'un formulaire, c'est-à-dire le premier bouton (selon l'ordre du DOM) appartenant au formulaire (cela vaut également pour les éléments {{htmlelement("input")}} dont le type permet d'envoyer des formulaires tels que `image` ou `submit`).
 
-<div class="note">
-<p><strong>Note :</strong> La spécification WHATWG HTML définit cela dans <a href="https://html.spec.whatwg.org/multipage/semantics-other.html#selector-default">le paragraphe 4.16.3</a>.</p>
-</div>
+> **Note :** La spécification WHATWG HTML définit cela dans [le paragraphe 4.16.3](https://html.spec.whatwg.org/multipage/semantics-other.html#selector-default).
 
-<p>Les éléments de l'interface utilisateur qui permette une sélection multiple peuvent avoir plusieurs éléments par défaut. Dans ce cas, tous les éléments par défaut sont ciblés via la pseudo-classe <code>:default</code>.</p>
+Les éléments de l'interface utilisateur qui permette une sélection multiple peuvent avoir plusieurs éléments par défaut. Dans ce cas, tous les éléments par défaut sont ciblés via la pseudo-classe `:default`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">input:default {
+```css
+input:default {
   box-shadow: 0 0 2px 1px coral;
 }
 
 input:default + label {
   color: coral;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;fieldset&gt;
-  &lt;legend&gt;Saison préférée&lt;/legend&gt;
+```html
+<fieldset>
+  <legend>Saison préférée</legend>
 
-  &lt;input type="radio" name="season" id="spring"&gt;
-  &lt;label for="spring"&gt;Printemps&lt;/label&gt;
+  <input type="radio" name="season" id="spring">
+  <label for="spring">Printemps</label>
 
-  &lt;input type="radio" name="season" id="summer" checked&gt;
-  &lt;label for="summer"&gt;Eté&lt;/label&gt;
+  <input type="radio" name="season" id="summer" checked>
+  <label for="summer">Eté</label>
 
-  &lt;input type="radio" name="season" id="fall"&gt;
-  &lt;label for="fall"&gt;Automne&lt;/label&gt;
+  <input type="radio" name="season" id="fall">
+  <label for="fall">Automne</label>
 
-  &lt;input type="radio" name="season" id="winter"&gt;
-  &lt;label for="winter"&gt;Hiver&lt;/label&gt;
-&lt;/fieldset&gt;
-</pre>
+  <input type="radio" name="season" id="winter">
+  <label for="winter">Hiver</label>
+</fieldset>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#selector-default', ':default')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Aucune modification.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', '#selector-default', ':default')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>La sémantique liée au HTML est définie et les contraintes de validation sont également définies.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#default-pseudo', ':default')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Aucune modification.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Basic UI', '#pseudo-default', ':default')}}</td>
-   <td>{{Spec2('CSS3 Basic UI')}}</td>
-   <td>Définition initiale de la pseudo-classe mais pas de la sémantique associée.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | État                                 | Commentaires                                                                                     |
+| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| {{SpecName('HTML WHATWG', '#selector-default', ':default')}} | {{Spec2('HTML WHATWG')}}     | Aucune modification.                                                                             |
+| {{SpecName('HTML5 W3C', '#selector-default', ':default')}}     | {{Spec2('HTML5 W3C')}}         | La sémantique liée au HTML est définie et les contraintes de validation sont également définies. |
+| {{SpecName('CSS4 Selectors', '#default-pseudo', ':default')}} | {{Spec2('CSS4 Selectors')}} | Aucune modification.                                                                             |
+| {{SpecName('CSS3 Basic UI', '#pseudo-default', ':default')}} | {{Spec2('CSS3 Basic UI')}} | Définition initiale de la pseudo-classe mais pas de la sémantique associée.                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.default")}}</p>
+{{Compat("css.selectors.default")}}

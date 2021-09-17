@@ -8,11 +8,12 @@ tags:
   - Reference
 translation_of: Web/CSS/-webkit-box-reflect
 ---
-<div>{{Non-standard_header}}{{CSSRef}}</div>
+{{Non-standard_header}}{{CSSRef}}
 
-<p>La propriété <strong><code>-webkit-box-reflect</code></strong> peut être utilisée afin de créer un effet de réflexion d'un élément dans une direction donnée.</p>
+La propriété **`-webkit-box-reflect`** peut être utilisée afin de créer un effet de réflexion d'un élément dans une direction donnée.
 
-<pre class="brush:css no-line-numbers">/* Valeurs de directions */
+```css
+/* Valeurs de directions */
 -webkit-box-reflect: above;
 -webkit-box-reflect: below;
 -webkit-box-reflect: left;
@@ -28,43 +29,37 @@ translation_of: Web/CSS/-webkit-box-reflect
 -webkit-box-reflect: inherit;
 -webkit-box-reflect: initial;
 -webkit-box-reflect: unset;
-</pre>
+```
 
-<div class="warning">
-  <p><strong>Attention :</strong> Cette fonctionnalité ne doit pas être utilisée sur le Web. Pour créer des effets de reflet sur le Web, on pourra utiliser la fonction CSS standard {{cssxref("element()", "element()")}}.</p>
-</div>
+> **Attention :** Cette fonctionnalité ne doit pas être utilisée sur le Web. Pour créer des effets de reflet sur le Web, on pourra utiliser la fonction CSS standard {{cssxref("element()", "element()")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>above</code><em>, </em><code>below</code><em>, </em><code>right</code><em>, </em><code>left</code></dt>
- <dd>Des mots-clés qui indiquent la direction dans laquelle créer la réflexion (respectivement : au-dessus, en-dessous, à droite, à gauche).</dd>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>La taille du reflet créé, cf. {{cssxref("&lt;length&gt;")}} sur les valeurs possibles.</dd>
- <dt><code>&lt;image&gt;</code></dt>
- <dd>Le masque à appliquer au reflet, cf. {{cssxref("&lt;image&gt;")}} sur les valeurs possibles.</dd>
-</dl>
+- `above`_,_ `below`_,_ `right`_,_ `left`
+  - : Des mots-clés qui indiquent la direction dans laquelle créer la réflexion (respectivement : au-dessus, en-dessous, à droite, à gauche).
+- `<length>`
+  - : La taille du reflet créé, cf. {{cssxref("&lt;length&gt;")}} sur les valeurs possibles.
+- `<image>`
+  - : Le masque à appliquer au reflet, cf. {{cssxref("&lt;image&gt;")}} sur les valeurs possibles.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette propriété n'est pas en voie de standardisation et ne fera pas partie de CSS. Pour créer des reflets en CSS, on pourra utiliser la fonction standard {{cssxref("element()", "element()")}}.</p>
+Cette propriété n'est pas en voie de standardisation et ne fera pas partie de CSS. Pour créer des reflets en CSS, on pourra utiliser la fonction standard {{cssxref("element()", "element()")}}.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.-webkit-box-reflect")}}</p>
+{{Compat("css.properties.-webkit-box-reflect")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="https://developer.apple.com/library/safari/documentation/appleapplications/reference/safaricssref/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW16">La documentation Apple</a></li>
- <li><a href="https://www.webkit.org/blog/182/css-reflections/">La spécification WebKit</a></li>
- <li>L'article de Lea Verou sur les réflexions CSS <a href="https://lea.verou.me/2011/06/css-reflections-for-firefox-with-moz-element-and-svg-masks/">en utilisant les fonctionnalités en voie de standardisation</a></li>
-</ul>
+- [La documentation Apple](https://developer.apple.com/library/safari/documentation/appleapplications/reference/safaricssref/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW16)
+- [La spécification WebKit](https://www.webkit.org/blog/182/css-reflections/)
+- L'article de Lea Verou sur les réflexions CSS [en utilisant les fonctionnalités en voie de standardisation](https://lea.verou.me/2011/06/css-reflections-for-firefox-with-moz-element-and-svg-masks/)

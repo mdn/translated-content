@@ -8,39 +8,24 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Namespaces
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><em><strong>CSS Namespaces</strong></em> (ou « espaces de noms CSS ») est un module CSS qui permet aux auteurs de spécifier des <a href="/en-US/docs/Namespaces">espaces de noms XML</a> en CSS.</p>
+**_CSS Namespaces_** (ou « espaces de noms CSS ») est un module CSS qui permet aux auteurs de spécifier des [espaces de noms XML](/en-US/docs/Namespaces) en CSS.
 
-<h2 id="Référence">Référence</h2>
+## Référence
 
-<h3 id="Règles">Règles @</h3>
+### Règles @
 
-<ul>
- <li>{{cssxref("@namespace")}}</li>
-</ul>
+- {{cssxref("@namespace")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Namespaces")}}</td>
-   <td>{{Spec2("CSS3 Namespaces")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                            | État                                 | Commentaires         |
+| ---------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName("CSS3 Namespaces")}} | {{Spec2("CSS3 Namespaces")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<h3 id="namespace"><code>@namespace</code></h3>
+### `@namespace`
 
-<p>{{Compat("css.at-rules.namespace")}}</p>
+{{Compat("css.at-rules.namespace")}}

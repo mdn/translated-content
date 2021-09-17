@@ -7,33 +7,33 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/orientation
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>orientation</code></strong> est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui peut être utilisée pour vérifier l'orientation de la zone d'affichage (<em>viewport</em>) (ou la boîte de la page pour les média paginés).</p>
+**`orientation`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui peut être utilisée pour vérifier l'orientation de la zone d'affichage (_viewport_) (ou la boîte de la page pour les média paginés).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>La caractéristique <code>orientation</code> se définit grâce à l'un des mots-clés suivants :</p>
+La caractéristique `orientation` se définit grâce à l'un des mots-clés suivants :
 
-<dl>
- <dt><code>portrait</code></dt>
- <dd>La zone d'affichage est en mode portrait (la hauteur est la plus grande dimension).</dd>
- <dt><code>landscape</code></dt>
- <dd>La zone d'affichage est en mode paysage (la largeur est la plus grande dimension).</dd>
-</dl>
+- `portrait`
+  - : La zone d'affichage est en mode portrait (la hauteur est la plus grande dimension).
+- `landscape`
+  - : La zone d'affichage est en mode paysage (la largeur est la plus grande dimension).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;Boîte 1&lt;/div&gt;
-&lt;div&gt;Boîte 2&lt;/div&gt;
-&lt;div&gt;Boîte 3&lt;/div&gt;
-</pre>
+```html
+<div>Boîte 1</div>
+<div>Boîte 2</div>
+<div>Boîte 3</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">body {
+```css
+body {
   display: flex;
 }
 
@@ -51,36 +51,20 @@ div {
   body {
     flex-direction: column;
   }
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Media Queries', '#orientation', 'orientation')}}</td>
-   <td>{{Spec2('CSS4 Media Queries')}}</td>
-   <td>Aucune modification.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Media Queries', '#orientation', 'orientation')}}</td>
-   <td>{{Spec2('CSS3 Media Queries')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                                     | Commentaires         |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName('CSS4 Media Queries', '#orientation', 'orientation')}} | {{Spec2('CSS4 Media Queries')}} | Aucune modification. |
+| {{SpecName('CSS3 Media Queries', '#orientation', 'orientation')}} | {{Spec2('CSS3 Media Queries')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.at-rules.media.orientation")}}</p>
+{{Compat("css.at-rules.media.orientation")}}

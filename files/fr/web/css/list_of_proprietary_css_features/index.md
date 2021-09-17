@@ -8,162 +8,144 @@ tags:
 translation_of: Web/CSS/List_of_Proprietary_CSS_Features
 original_slug: Web/CSS/Liste_de_Fonctionnalités_CSS_Propriétaires
 ---
-<p>{{CSSRef}}{{Draft}}</p>
+{{CSSRef}}{{Draft}}
 
-<div class="note">
-<p><strong>Note :</strong> Cette page est un brouillon et son contenu est incomplet voire obsolète. À lire avec un œil critique.</strong></p>
-</div>
+> **Note :** Cette page est un brouillon et son contenu est incomplet voire obsolète. À lire avec un œil critique.
 
-<div class="warning">
-<p><strong>Attention :</strong> Cette page est incomplète et n'est pas à jour. Se référer aux pages suivantes pour plus d'informations :</p>
+> **Attention :** Cette page est incomplète et n'est pas à jour. Se référer aux pages suivantes pour plus d'informations :
+>
+> - [Les extensions Microsoft à CSS](/fr/docs/Web/CSS/Microsoft_Extensions)
+> - [Les extensions Mozilla à CSS](/fr/docs/Web/CSS/Mozilla_Extensions)
+> - [Les extensions WebKit à CSS](/fr/docs/Web/CSS/WebKit_Extensions)
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/Microsoft_Extensions">Les extensions Microsoft à CSS</a></li>
- <li><a href="/fr/docs/Web/CSS/Mozilla_Extensions">Les extensions Mozilla à CSS</a></li>
- <li><a href="/fr/docs/Web/CSS/WebKit_Extensions">Les extensions WebKit à CSS</a></li>
-</ul>
-</div>
+Cette liste contient les extensions propriétaires des CSS en fonction des moteurs des différents navigateurs ; il ne s'agit pas des implémentations expérimentales des fonctionnalités en cours de standardisation (voir [Implémentation des fonctionnalités CSS à l'état de brouillon](/fr/docs/conflicting/Web/CSS/Mozilla_Extensions "en/CSS/Draft_Implementations_of_CSS_Features") pour une liste de ces dernières).
 
-<p>Cette liste contient les extensions propriétaires des CSS en fonction des moteurs des différents navigateurs ; il ne s'agit pas des implémentations expérimentales des fonctionnalités en cours de standardisation (voir <a href="/fr/docs/conflicting/Web/CSS/Mozilla_Extensions" title="en/CSS/Draft_Implementations_of_CSS_Features">Implémentation des fonctionnalités CSS à l'état de brouillon</a> pour une liste de ces dernières).</p>
+## Gecko
 
-<h2 id="Gecko">Gecko</h2>
+### Propriétés
 
-<h3 id="Propriétés">Propriétés</h3>
+- {{ Cssxref("-moz-force-broken-image-icon") }}
+- {{ Cssxref("-moz-image-region") }}
+- {{ Cssxref("margin-inline-end") }}
+- {{ Cssxref("margin-inline-start") }}
+- {{ Cssxref("-moz-orient") }}
+- {{ Cssxref("padding-inline-end") }}
+- {{ Cssxref("padding-inline-start") }}
+- {{ Cssxref("-moz-stack-sizing") }}
+- {{ Cssxref("-moz-window-shadow") }}
 
-<ul>
- <li>{{ Cssxref("-moz-force-broken-image-icon") }}</li>
- <li>{{ Cssxref("-moz-image-region") }}</li>
- <li>{{ Cssxref("margin-inline-end") }}</li>
- <li>{{ Cssxref("margin-inline-start") }}</li>
- <li>{{ Cssxref("-moz-orient") }}</li>
- <li>{{ Cssxref("padding-inline-end") }}</li>
- <li>{{ Cssxref("padding-inline-start") }}</li>
- <li>{{ Cssxref("-moz-stack-sizing") }}</li>
- <li>{{ Cssxref("-moz-window-shadow") }}</li>
-</ul>
+### Valeurs
 
-<h3 id="Valeurs">Valeurs</h3>
+#### {{ cssxref("background-image") }}
 
-<h4 id="cssxref(background-image)">{{ cssxref("background-image") }}</h4>
+- Portions d'images
 
-<ul>
- <li>Portions d'images
-  <ul>
-   <li>{{ cssxref("-moz-image-rect") }}</li>
-  </ul>
- </li>
-</ul>
+  - {{ cssxref("-moz-image-rect") }}
 
-<h3 id="Pseudo-éléments_et_pseudo-classes">Pseudo-éléments et pseudo-classes</h3>
+### Pseudo-éléments et pseudo-classes
 
-<p>...</p>
+...
 
-<h3 id="Règles_At">Règles At</h3>
+### Règles At
 
-<p>...</p>
+...
 
-<h3 id="Requêtes_de_média">Requêtes de média</h3>
+### Requêtes de média
 
-<p>...</p>
+...
 
-<h3 id="Autres">Autres</h3>
+### Autres
 
-<p>...</p>
+...
 
-<h2 id="Opera">Opera</h2>
+## Opera
 
-<h3 id="Propriétés_2">Propriétés</h3>
+### Propriétés
 
-<p>...</p>
+...
 
-<h3 id="Valeurs_2">Valeurs</h3>
+### Valeurs
 
-<h4 id="cssxref(background-image)_2">{{ cssxref("background-image") }}</h4>
+#### {{ cssxref("background-image") }}
 
-<ul>
- <li>{{ cssxref("-o-double-rainbow") }}</li>
-</ul>
+- {{ cssxref("-o-double-rainbow") }}
 
-<h3 id="Pseudo-éléments_et_pseudo-classes_2">Pseudo-éléments et pseudo-classes</h3>
+### Pseudo-éléments et pseudo-classes
 
-<p>...</p>
+...
 
-<h3 id="Règles_At_2">Règles At</h3>
+### Règles At
 
-<p>...</p>
+...
 
-<h3 id="Requêtes_de_média_2">Requêtes de média</h3>
+### Requêtes de média
 
-<p>...</p>
+...
 
-<h3 id="Autres_2">Autres</h3>
+### Autres
 
-<p>...</p>
+...
 
-<h2 id="Trident_(IE)">Trident (IE)</h2>
+## Trident (IE)
 
-<h3 id="Propriétés_3">Propriétés</h3>
+### Propriétés
 
-<ul>
- <li>{{ cssxref("-ms-accelerator") }}</li>
-</ul>
+- {{ cssxref("-ms-accelerator") }}
 
-<h3 id="Valeurs_3">Valeurs</h3>
+### Valeurs
 
-<p>...</p>
+...
 
-<h3 id="Pseudo-éléments_et_pseudo-classes_3">Pseudo-éléments et pseudo-classes</h3>
+### Pseudo-éléments et pseudo-classes
 
-<p>...</p>
+...
 
-<h3 id="Règles_At_3">Règles At</h3>
+### Règles At
 
-<p>...</p>
+...
 
-<h3 id="Requêtes_de_média_3">Requêtes de média</h3>
+### Requêtes de média
 
-<p>...</p>
+...
 
-<h3 id="Autres_3">Autres</h3>
+### Autres
 
-<p>...</p>
+...
 
-<h2 id="WebKit">WebKit</h2>
+## WebKit
 
-<h3 id="Propriétés_4">Propriétés</h3>
+### Propriétés
 
-<ul>
- <li>{{ Cssxref("-webkit-box-reflect") }}</li>
- <li>{{ Cssxref("-webkit-mask") }}</li>
- <li>{{ Cssxref("-webkit-mask-attachment") }}</li>
- <li>{{ Cssxref("-webkit-mask-composite") }}</li>
- <li>{{ Cssxref("-webkit-mask-image") }}</li>
- <li>{{ Cssxref("-webkit-mask-origin") }}</li>
- <li>{{ Cssxref("-webkit-mask-repeat") }}</li>
- <li>{{ Cssxref("-webkit-tap-highlight-color") }}</li>
- <li>{{ Cssxref("-webkit-text-decorations-in-effect") }}</li>
- <li>{{ Cssxref("-webkit-text-stroke") }}</li>
- <li>{{ Cssxref("-webkit-text-stroke-color") }}</li>
- <li>{{ Cssxref("-webkit-text-stroke-width") }}</li>
- <li>{{ Cssxref("-webkit-touch-callout") }}</li>
-</ul>
+- {{ Cssxref("-webkit-box-reflect") }}
+- {{ Cssxref("-webkit-mask") }}
+- {{ Cssxref("-webkit-mask-attachment") }}
+- {{ Cssxref("-webkit-mask-composite") }}
+- {{ Cssxref("-webkit-mask-image") }}
+- {{ Cssxref("-webkit-mask-origin") }}
+- {{ Cssxref("-webkit-mask-repeat") }}
+- {{ Cssxref("-webkit-tap-highlight-color") }}
+- {{ Cssxref("-webkit-text-decorations-in-effect") }}
+- {{ Cssxref("-webkit-text-stroke") }}
+- {{ Cssxref("-webkit-text-stroke-color") }}
+- {{ Cssxref("-webkit-text-stroke-width") }}
+- {{ Cssxref("-webkit-touch-callout") }}
 
-<h3 id="Valeurs_4">Valeurs</h3>
+### Valeurs
 
-<p>...</p>
+...
 
-<h3 id="Pseudo-éléments_et_pseudo-classes_4">Pseudo-éléments et pseudo-classes</h3>
+### Pseudo-éléments et pseudo-classes
 
-<p>...</p>
+...
 
-<h3 id="Règles_At_4">Règles At</h3>
+### Règles At
 
-<p>...</p>
+...
 
-<h3 id="Requêtes_de_média_4">Requêtes de média</h3>
+### Requêtes de média
 
-<p>...</p>
+...
 
-<h3 id="Autres_4">Autres</h3>
+### Autres
 
-<p>...</p>
+...

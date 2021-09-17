@@ -7,42 +7,25 @@ tags:
   - Type
 translation_of: Web/CSS/time-percentage
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Le type de donnée <strong><code>&lt;time-percentage&gt;</code></strong> représente une valeur qui peut être de type {{Cssxref("time")}} ou une valeur qui peut être de type {{Cssxref("percentage")}}.</p>
+Le type de donnée **`<time-percentage>`** représente une valeur qui peut être de type {{Cssxref("time")}} ou une valeur qui peut être de type {{Cssxref("percentage")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Se référer à la documentation des types {{Cssxref("time")}} et {{Cssxref("percentage")}} pour plus de détails sur les syntaxes possibles pour chacun de ces types.</p>
+Se référer à la documentation des types {{Cssxref("time")}} et {{Cssxref("percentage")}} pour plus de détails sur les syntaxes possibles pour chacun de ces types.
 
-<h2 id="Utilisation_avec_calc()">Utilisation avec <code>calc()</code></h2>
+## Utilisation avec `calc()`
 
-<p>Lorsqu'une valeur de type <code>&lt;time-percentage&gt;</code> est autorisée dans une déclaration, cela signifie que le pourcentage sera résolu comme un temps et qu'il peut donc être utilisée dans une expression {{Cssxref("calc()")}}.</p>
+Lorsqu'une valeur de type `<time-percentage>` est autorisée dans une déclaration, cela signifie que le pourcentage sera résolu comme un temps et qu'il peut donc être utilisée dans une expression {{Cssxref("calc()")}}.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Values', '#mixed-percentages', '&lt;time-percentage&gt;')}}</td>
-   <td>{{Spec2('CSS4 Values')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Values', '#mixed-percentages', '&lt;time-percentage&gt;')}}</td>
-   <td>{{Spec2('CSS3 Values')}}</td>
-   <td>Définition du type <code>&lt;time-percentage&gt;</code>. Ajout de <code>calc()</code></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                             | Commentaires                                              |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | --------------------------------------------------------- |
+| {{SpecName('CSS4 Values', '#mixed-percentages', '&lt;time-percentage&gt;')}} | {{Spec2('CSS4 Values')}} |                                                           |
+| {{SpecName('CSS3 Values', '#mixed-percentages', '&lt;time-percentage&gt;')}} | {{Spec2('CSS3 Values')}} | Définition du type `<time-percentage>`. Ajout de `calc()` |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.types.time-percentage")}}</p>
+{{Compat("css.types.time-percentage")}}

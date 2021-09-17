@@ -7,39 +7,38 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/pointer
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>pointer</code></strong> est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui permet de vérifier si le dispositif de saisie/d'entrée principal est un dispositif de pointage et, le cas échéant, de connaître sa précision.</p>
+**`pointer`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui permet de vérifier si le dispositif de saisie/d'entrée principal est un dispositif de pointage et, le cas échéant, de connaître sa précision.
 
-<div class="note">
-<p><strong>Note :</strong> Si on souhaite tester la précision de n'importe quel dispositif de pointage, on utilisera plutôt la caractéristique <code><a href="/fr/docs/Web/CSS/@media/any-pointer">any-pointer</a></code>.</p>
-</div>
+> **Note :** Si on souhaite tester la précision de n'importe quel dispositif de pointage, on utilisera plutôt la caractéristique [`any-pointer`](/fr/docs/Web/CSS/@media/any-pointer).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Cette caractéristique est définie avec un mot-clé parmi les suivants :</p>
+Cette caractéristique est définie avec un mot-clé parmi les suivants :
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Le mécanisme de saisie principal n'inclut pas de dispositif de pointage.</dd>
- <dt><code>coarse</code></dt>
- <dd>Le mécanisme de saisie principal inclut un dispositif de pointage dont la précision est limitée.</dd>
- <dt><code>fine</code></dt>
- <dd>Le mécanisme de saisie principal inclut un dispositif de pointage précis.</dd>
-</dl>
+- `none`
+  - : Le mécanisme de saisie principal n'inclut pas de dispositif de pointage.
+- `coarse`
+  - : Le mécanisme de saisie principal inclut un dispositif de pointage dont la précision est limitée.
+- `fine`
+  - : Le mécanisme de saisie principal inclut un dispositif de pointage précis.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans cet exemple, on crée une petite case à cocher pour les utilisateurs qui disposent d'un pointage précis et une case à cocher plus grande lorsque le mécanisme de pointage est moins précis.</p>
+Dans cet exemple, on crée une petite case à cocher pour les utilisateurs qui disposent d'un pointage précis et une case à cocher plus grande lorsque le mécanisme de pointage est moins précis.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;input id="test" type="checkbox" /&gt;
-&lt;label for="test"&gt;Coucou !&lt;/label&gt;</pre>
+```html
+<input id="test" type="checkbox" />
+<label for="test">Coucou !</label>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">input[type="checkbox"]:checked {
+```css
+input[type="checkbox"]:checked {
   background: gray;
 }
 
@@ -63,37 +62,23 @@ translation_of: Web/CSS/@media/pointer
     height: 30px;
     border: 2px solid red;
   }
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Media Queries', '#pointer', 'pointer')}}</td>
-   <td>{{Spec2('CSS4 Media Queries')}}</td>
-   <td>Ajout dans la spécification de niveau 4 pour les requêtes média.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | État                                     | Commentaires                                                     |
+| ---------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------- |
+| {{SpecName('CSS4 Media Queries', '#pointer', 'pointer')}} | {{Spec2('CSS4 Media Queries')}} | Ajout dans la spécification de niveau 4 pour les requêtes média. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.at-rules.media.pointer")}}</p>
+{{Compat("css.at-rules.media.pointer")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/@media/any-pointer">La caractéristique média <code>any-pointer</code></a></li>
-</ul>
+- [La caractéristique média `any-pointer`](/fr/docs/Web/CSS/@media/any-pointer)

@@ -7,48 +7,44 @@ tags:
   - Reference
 translation_of: Web/CSS/animation-duration
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>animation-duration</code></strong> définit la durée d'une animation pour parcourir un cycle.</p>
+La propriété **`animation-duration`** définit la durée d'une animation pour parcourir un cycle.
 
-<div>{{EmbedInteractiveExample("pages/css/animation-duration.html")}}</div>
+{{EmbedInteractiveExample("pages/css/animation-duration.html")}}
 
-<p>La valeur par défaut est <code>0s</code>, ce qui indique qu'aucune animation ne doit avoir lieu.</p>
+La valeur par défaut est `0s`, ce qui indique qu'aucune animation ne doit avoir lieu.
 
-<p>Généralement, on passera par la propriété raccourcie {{cssxref("animation")}} afin de définir, en une seule déclaration, les différentes propriétés liées aux animations.</p>
+Généralement, on passera par la propriété raccourcie {{cssxref("animation")}} afin de définir, en une seule déclaration, les différentes propriétés liées aux animations.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">animation-duration: 6s;
+```css
+animation-duration: 6s;
 animation-duration: 120ms;
 animation-duration: 1s, 15s;
 animation-duration: 10s, 30s, 230ms;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;time&gt;</code></dt>
- <dd>La durée d'un cycle pour l'animation. Cette valeur peut être indiquée en secondes (<code>s</code> comme suffixe pour l'unité) ou en millisecondes (<code>ms</code> comme suffixe pour l'unité). Si aucune unité n'est définie, la déclaration sera considérée comme invalide.</dd>
-</dl>
+- `<time>`
+  - : La durée d'un cycle pour l'animation. Cette valeur peut être indiquée en secondes (`s` comme suffixe pour l'unité) ou en millisecondes (`ms` comme suffixe pour l'unité). Si aucune unité n'est définie, la déclaration sera considérée comme invalide.
 
-<div class="note">
-  <p><strong>Note :</strong> Les valeurs négatives sont considérées comme invalides. Certaines implémentations, préfixées, considèrent parfois que ces valeurs sont synonymes de <code>0s</code>.</p>
-</div>
+> **Note :** Les valeurs négatives sont considérées comme invalides. Certaines implémentations, préfixées, considèrent parfois que ces valeurs sont synonymes de `0s`.
 
-<div class="note">
-  <p><strong>Note :</strong> Lorsqu'on utiliser plusieurs valeurs, séparées par des virgules, pour une propriété <code>animation-*</code>, selon leur quantité, elles seront différemment affectées aux animations définies par {{cssxref("animation-name")}}. Pour plus d'informations, voir : paramétrer <a href="/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations">les valeurs des propriétés pour plusieurs animations</a>.</p>
-</div>
+> **Note :** Lorsqu'on utiliser plusieurs valeurs, séparées par des virgules, pour une propriété `animation-*`, selon leur quantité, elles seront différemment affectées aux animations définies par {{cssxref("animation-name")}}. Pour plus d'informations, voir : paramétrer [les valeurs des propriétés pour plusieurs animations](/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations).
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   animation-duration: 15s;
   animation-name: glissement;
   animation-iteration-count: infinite;
@@ -63,48 +59,36 @@ animation-duration: 10s, 30s, 230ms;
     margin-left: 0%;
     width: 100%;
   }
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   La Chenille et Alice se considérèrent un instant en silence.
   Enfin la Chenille sortit le houka de sa bouche, et lui adressa
   la parole d’une voix endormie et traînante.
-&lt;/p&gt; </pre>
+</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples","300","200")}}</p>
+{{EmbedLiveSample("Exemples","300","200")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Animations', '#animation-duration', 'animation-duration')}}</td>
-   <td>{{Spec2('CSS3 Animations')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                                 | Commentaires         |
+| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName('CSS3 Animations', '#animation-duration', 'animation-duration')}} | {{Spec2('CSS3 Animations')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.animation-duration")}}</p>
+{{Compat("css.properties.animation-duration")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations">Manipuler les animations CSS</a></li>
- <li>{{domxref("AnimationEvent", "AnimationEvent")}}</li>
-</ul>
+- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations)
+- {{domxref("AnimationEvent", "AnimationEvent")}}

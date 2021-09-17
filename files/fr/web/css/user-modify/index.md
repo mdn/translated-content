@@ -8,11 +8,12 @@ tags:
   - Reference
 translation_of: Web/CSS/user-modify
 ---
-<div>{{Non-standard_header}}{{CSSRef}}{{deprecated_header}}</div>
+{{Non-standard_header}}{{CSSRef}}{{deprecated_header}}
 
-<p>La propriété <strong><code>user-modify</code></strong> n'a aucun effet. Elle était initialement conçue pour déterminer si le contenu d'un élément peut être édité ou non par l'utilisateur.</p>
+La propriété **`user-modify`** n'a aucun effet. Elle était initialement conçue pour déterminer si le contenu d'un élément peut être édité ou non par l'utilisateur.
 
-<pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 user-modify: read-only;
 user-modify: read-write;
 user-modify: write-only;
@@ -21,68 +22,64 @@ user-modify: write-only;
 user-modify: inherit;
 user-modify: initial;
 user-modify: unset;
-</pre>
+```
 
-<div class="warning">
-<p><strong>Attention :</strong> Cette propriété a été remplacée par l'attribut {{HTMLAttrxref("contenteditable")}}.</p>
-</div>
+> **Attention :** Cette propriété a été remplacée par l'attribut {{HTMLAttrxref("contenteditable")}}.
 
-<p>Cette propriété est similaire à l'attribut HTML {{htmlattrxref("contenteditable")}}. Une propriété similaire : <code>user-focus</code> a été proposée <a href="https://www.w3.org/TR/2000/WD-css3-userint-20000216">pour des brouillons de la spécification CSS3 pour les interfaces utilisateur</a> mais fut rejetée par le groupe de travail. <strong>Elle a été désactivée de Firefox et n'a donc pas d'effet.</strong></p>
+Cette propriété est similaire à l'attribut HTML {{htmlattrxref("contenteditable")}}. Une propriété similaire : `user-focus` a été proposée [pour des brouillons de la spécification CSS3 pour les interfaces utilisateur](https://www.w3.org/TR/2000/WD-css3-userint-20000216) mais fut rejetée par le groupe de travail. **Elle a été désactivée de Firefox et n'a donc pas d'effet.**
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>La propriété <code>user-modify</code> est définie grâce à un mot-clé parmi ceux de la liste ci-après.</p>
+La propriété `user-modify` est définie grâce à un mot-clé parmi ceux de la liste ci-après.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>read-only</code></dt>
- <dd>La valeur par défaut, le contenu ne peut pas être modifié.</dd>
- <dt><code>read-write</code></dt>
- <dd>L'utilisateur peut lire et modifier le contenu.</dd>
- <dt><code>read-write-plaintext-only</code> {{Non-standard_inline}}</dt>
- <dd>Identique à <code>read-write</code> mais la mise en forme du texte sera perdue.</dd>
- <dt><code>write-only</code></dt>
- <dd>L'utilisateur peut éditer le contenu mais ne peut pas le lire.</dd>
-</dl>
+- `read-only`
+  - : La valeur par défaut, le contenu ne peut pas être modifié.
+- `read-write`
+  - : L'utilisateur peut lire et modifier le contenu.
+- `read-write-plaintext-only` {{Non-standard_inline}}
+  - : Identique à `read-write` mais la mise en forme du texte sera perdue.
+- `write-only`
+  - : L'utilisateur peut éditer le contenu mais ne peut pas le lire.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">.readwrite {
+```css
+.readwrite {
   -moz-user-modify: read-write;
   -webkit-user-modify: read-write;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html">&lt;div class="readwrite"&gt;L'utilisateur est capable de modifier ce texte.&lt;/div&gt;
-</pre>
+```html
+<div class="readwrite">L'utilisateur est capable de modifier ce texte.</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", 300, 30)}}</p>
+{{EmbedLiveSample("Exemples", 300, 30)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p><code>user-modify</code> a <a href="https://www.w3.org/TR/2000/WD-css3-userint-20000216#user-modify">été proposée pour la spécification CSS 3 sur les interfaces utilisateurs</a> (le brouillon de travail de février 2000 qui est désormais remplacé par le module <em>Basic User Interface</em> de <em>CSS 3</em>).</p>
+`user-modify` a [été proposée pour la spécification CSS 3 sur les interfaces utilisateurs](https://www.w3.org/TR/2000/WD-css3-userint-20000216#user-modify) (le brouillon de travail de février 2000 qui est désormais remplacé par le module _Basic User Interface_ de _CSS 3_).
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.user-modify")}}</p>
+{{Compat("css.properties.user-modify")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("-moz-user-focus")}}</li>
- <li>{{cssxref("-moz-user-input")}}</li>
- <li>{{cssxref("-moz-user-select")}}</li>
-</ul>
+- {{cssxref("-moz-user-focus")}}
+- {{cssxref("-moz-user-input")}}
+- {{cssxref("-moz-user-select")}}

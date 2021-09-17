@@ -8,11 +8,12 @@ tags:
   - Reference
 translation_of: Web/CSS/-webkit-mask-attachment
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>Si la propriété {{cssxref("-webkit-mask-image")}} est définie, <strong><code>-webkit-mask-attachment</code></strong> permet de déterminer si la position de l'image est fixe par rapport à la zone d'affichage ou si elle défile avec le bloc qui l'englobe.</p>
+Si la propriété {{cssxref("-webkit-mask-image")}} est définie, **`-webkit-mask-attachment`** permet de déterminer si la position de l'image est fixe par rapport à la zone d'affichage ou si elle défile avec le bloc qui l'englobe.
 
-<pre class="brush: css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 -webkit-mask-attachment: scroll;
 -webkit-mask-attachment: fixed;
 -webkit-mask-attachment: local;
@@ -25,49 +26,46 @@ translation_of: Web/CSS/-webkit-mask-attachment
 -webkit-mask-attachment: inherit;
 -webkit-mask-attachment: initial;
 -webkit-mask-attachment: unset;
-</pre>
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>scroll</code></dt>
- <dd>Si le mot-clé <code>scroll</code> est utilisé, l'image de masque défilera avec le bloc qui l'englobe.</dd>
- <dt><code>fixed</code></dt>
- <dd>Si le mot-clé <code>fixed</code> est utilisé, l'image de masque ne défilera pas. Sa position sera fixe pour la zone d'affichag (<em>viewport</em>).</dd>
-</dl>
+- `scroll`
+  - : Si le mot-clé `scroll` est utilisé, l'image de masque défilera avec le bloc qui l'englobe.
+- `fixed`
+  - : Si le mot-clé `fixed` est utilisé, l'image de masque ne défilera pas. Sa position sera fixe pour la zone d'affichag (_viewport_).
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: css">body {
+```css
+body {
   -webkit-mask-image: url('images/mask.png');
   -webkit-mask-attachment: fixed;
 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne fait partie d'aucune spécification.</p>
+Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne fait partie d'aucune spécification.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.-webkit-mask-attachment")}}</p>
+{{Compat("css.properties.-webkit-mask-attachment")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("-webkit-mask")}}</li>
- <li>{{cssxref("-webkit-mask-clip")}}</li>
- <li>{{cssxref("-webkit-mask-box-image")}}</li>
- <li>{{cssxref("-webkit-mask-origin")}}</li>
- <li>{{cssxref("-webkit-mask-image")}}</li>
- <li>{{cssxref("-webkit-mask-composite")}}</li>
- <li>{{cssxref("-webkit-mask-repeat")}}</li>
-</ul>
+- {{cssxref("-webkit-mask")}}
+- {{cssxref("-webkit-mask-clip")}}
+- {{cssxref("-webkit-mask-box-image")}}
+- {{cssxref("-webkit-mask-origin")}}
+- {{cssxref("-webkit-mask-image")}}
+- {{cssxref("-webkit-mask-composite")}}
+- {{cssxref("-webkit-mask-repeat")}}

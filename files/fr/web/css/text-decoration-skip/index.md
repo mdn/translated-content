@@ -8,11 +8,12 @@ tags:
   - Reference
 translation_of: Web/CSS/text-decoration-skip
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>text-decoration-skip</code></strong> définit la façon dont les lignes décoratives doivent être appliquées aux éléments et aux caractères. Elle contrôle les lignes décoratives dessinées par l'élément courant ainsi que celles de ses ancêtres.</p>
+La propriété **`text-decoration-skip`** définit la façon dont les lignes décoratives doivent être appliquées aux éléments et aux caractères. Elle contrôle les lignes décoratives dessinées par l'élément courant ainsi que celles de ses ancêtres.
 
-<pre class="brush: css no-line-numbers">/* Syntaxe avec un mot-clé */
+```css
+/* Syntaxe avec un mot-clé */
 text-decoration-skip: none;
 text-decoration-skip: objects;
 text-decoration-skip: edges;
@@ -28,77 +29,64 @@ text-decoration-skip: objects edges box-decoration;
 text-decoration-skip: inherit;
 text-decoration-skip: initial;
 text-decoration-skip: unset;
-</pre>
+```
 
-<div class="note">
-<p><strong>Note :</strong> La valeur <code>ink</code> initialement définie pour cette propriété a été déplacée vers la propriété {{cssxref("text-decoration-skip-ink")}}.</p>
-</div>
+> **Note :** La valeur `ink` initialement définie pour cette propriété a été déplacée vers la propriété {{cssxref("text-decoration-skip-ink")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>none</code></dt>
- <dd>La propriété <code>text-decoration</code> s'applique à tous les éléments sélectionnés.</dd>
- <dt><code>objects</code></dt>
- <dd>La propriété <code>text-decoration</code> n'est pas appliquée pour les éléments en lignes atomiques telles que les images ou les blocs en lignes.</dd>
- <dt><code>spaces</code></dt>
- <dd>Les décorations ne sont pas appliquées où il y a des espaces (c'est-à-dire <a href="https://www.unicode.org/reports/tr44/#White_Space">des caractères Unicode considérés comme des blancs</a>, des séparateurs de mots et toute propriété {{cssxref("letter-spacing")}} ou {{cssxref("word-spacing")}} adjacente).</dd>
- <dt><code>leading-spaces</code></dt>
- <dd>Comportement analogue à <code>spaces</code> mais seuls les espaces avant les mots sont ignorés.</dd>
- <dt><code>trailing-spaces</code></dt>
- <dd>Comportement analogue à <code>spaces</code> mais seuls les espaces après les mots sont ignorés.</dd>
- <dt><code>edges</code></dt>
- <dd>La décoration de <code>text-decoration</code> est rognée vers l'intérieur de la moitié de la largueur de la ligne, vers la droite et la gauche. <img alt='An example of "text-decoration-skip: edges;".' src="decoration-skip-edges.png"></dd>
- <dt><code>box-decoration</code></dt>
- <dd>La propriété <code>text-decoration</code> n'est pas appliquée pour les marges, bordures et zones de remplissage (<em>padding</em>) des éléments fils.</dd>
-</dl>
+- `none`
+  - : La propriété `text-decoration` s'applique à tous les éléments sélectionnés.
+- `objects`
+  - : La propriété `text-decoration` n'est pas appliquée pour les éléments en lignes atomiques telles que les images ou les blocs en lignes.
+- `spaces`
+  - : Les décorations ne sont pas appliquées où il y a des espaces (c'est-à-dire [des caractères Unicode considérés comme des blancs](https://www.unicode.org/reports/tr44/#White_Space), des séparateurs de mots et toute propriété {{cssxref("letter-spacing")}} ou {{cssxref("word-spacing")}} adjacente).
+- `leading-spaces`
+  - : Comportement analogue à `spaces` mais seuls les espaces avant les mots sont ignorés.
+- `trailing-spaces`
+  - : Comportement analogue à `spaces` mais seuls les espaces après les mots sont ignorés.
+- `edges`
+  - : La décoration de `text-decoration` est rognée vers l'intérieur de la moitié de la largueur de la ligne, vers la droite et la gauche. ![An example of "text-decoration-skip: edges;".](decoration-skip-edges.png)
+- `box-decoration`
+  - : La propriété `text-decoration` n'est pas appliquée pour les marges, bordures et zones de remplissage (_padding_) des éléments fils.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   margin: 0;
   font-size: 3em;
   text-decoration: underline;
   text-decoration-skip: edge;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Bonjour tout le monde, quelle journée !&lt;/p&gt;</pre>
+```html
+<p>Bonjour tout le monde, quelle journée !</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", "100%", 60)}}</p>
+{{EmbedLiveSample("Exemples", "100%", 60)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Text Decoration", "#text-decoration-skip-property", "text-decoration-skip")}}</td>
-   <td>{{Spec2("CSS4 Text Decoration")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                | État                                         | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
+| {{SpecName("CSS4 Text Decoration", "#text-decoration-skip-property", "text-decoration-skip")}} | {{Spec2("CSS4 Text Decoration")}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.text-decoration-skip")}}</p>
+{{Compat("css.properties.text-decoration-skip")}}

@@ -7,19 +7,18 @@ tags:
   - Reference
 translation_of: Web/CSS/overflow-x
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>overflow-x</code></strong> permet de définir les mécanismes à utiliser (rognage, ascenseurs, dépassement, etc.) lorsque le contenu dépasse des bords droit et gauche de la boîte de contenu.</p>
+La propriété **`overflow-x`** permet de définir les mécanismes à utiliser (rognage, ascenseurs, dépassement, etc.) lorsque le contenu dépasse des bords droit et gauche de la boîte de contenu.
 
-<div class="note">
-<p><strong>Note :</strong> Si {{cssxref("overflow-y")}} vaut <code>hidden</code>, <code>scroll</code> ou <code>auto</code> et que cette propriété vaut <code>visible</code> (la valeur par défaut), sa valeur calculée sera implicitement <code>auto</code>.</p>
-</div>
+> **Note :** Si {{cssxref("overflow-y")}} vaut `hidden`, `scroll` ou `auto` et que cette propriété vaut `visible` (la valeur par défaut), sa valeur calculée sera implicitement `auto`.
 
-<div>{{EmbedInteractiveExample("pages/css/overflow-x.html")}}</div>
+{{EmbedInteractiveExample("pages/css/overflow-x.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 overflow-x: visible;
 overflow-x: hidden;
 overflow-x: scroll;
@@ -29,61 +28,61 @@ overflow-x: auto;
 overflow-x: inherit;
 overflow-x: initial;
 overflow-x: unset;
-</pre>
+```
 
-<p>La propriété <code>overflow-x</code> est définie avec l'un des mots-clés définis ci-après.</p>
+La propriété `overflow-x` est définie avec l'un des mots-clés définis ci-après.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>visible</code></dt>
- <dd>Le contenu n'est pas rogné. Il peut être affiché en dehors de la boîte de remplissage (<em>padding</em>) à droite et à gauche malgré le manque d'espace.</dd>
- <dt><code>hidden</code></dt>
- <dd>Le contenu est rogné afin de tenir horizontalement dans la boîte de remplissage (<em>padding</em>) et aucun ascenseur horizontal n'est affiché.</dd>
- <dt><code>scroll</code></dt>
- <dd>Le contenu est rogné afin de tenir horizontalement dans la boîte de remplissage et le navigateur affiche des barres de défilement (ascenseurs) dans tous les cas. Cela permet d'éviter d'avoir des barres qui apparaissent / disparaissent dans un environnement dynamique. Les imprimantes peuvent imprimer le contenu qui dépasse.</dd>
- <dt><code>auto</code></dt>
- <dd>Le comportement dépend de l'agent utilisateur. Les navigateurs de bureau comme Firefox peuvent afficher des barres de défilement si le contenu dépasse.</dd>
-</dl>
+- `visible`
+  - : Le contenu n'est pas rogné. Il peut être affiché en dehors de la boîte de remplissage (_padding_) à droite et à gauche malgré le manque d'espace.
+- `hidden`
+  - : Le contenu est rogné afin de tenir horizontalement dans la boîte de remplissage (_padding_) et aucun ascenseur horizontal n'est affiché.
+- `scroll`
+  - : Le contenu est rogné afin de tenir horizontalement dans la boîte de remplissage et le navigateur affiche des barres de défilement (ascenseurs) dans tous les cas. Cela permet d'éviter d'avoir des barres qui apparaissent / disparaissent dans un environnement dynamique. Les imprimantes peuvent imprimer le contenu qui dépasse.
+- `auto`
+  - : Le comportement dépend de l'agent utilisateur. Les navigateurs de bureau comme Firefox peuvent afficher des barres de défilement si le contenu dépasse.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;overflow-x:hidden&lt;/code&gt; — cache le texte en dehors de la boîte
-    &lt;div id="div1"&gt;
+```html
+<ul>
+  <li><code>overflow-x:hidden</code> — cache le texte en dehors de la boîte
+    <div id="div1">
       ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    &lt;/div&gt;
-  &lt;/li&gt;
+    </div>
+  </li>
 
-  &lt;li&gt;&lt;code&gt;overflow-x:scroll&lt;/code&gt; — ajoute toujours un ascenseur
-    &lt;div id="div2"&gt;
+  <li><code>overflow-x:scroll</code> — ajoute toujours un ascenseur
+    <div id="div2">
       ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    &lt;/div&gt;
-  &lt;/li&gt;
+    </div>
+  </li>
 
-  &lt;li&gt;&lt;code&gt;overflow-x:visible&lt;/code&gt; — affiche le texte en dehors de la boîte si besoin
-    &lt;div id="div3"&gt;
+  <li><code>overflow-x:visible</code> — affiche le texte en dehors de la boîte si besoin
+    <div id="div3">
       ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    &lt;/div&gt;
-  &lt;/li&gt;
+    </div>
+  </li>
 
-  &lt;li&gt;&lt;code&gt;overflow-x:auto&lt;/code&gt; — sur la plupart des navigateurs, cela sera équivalent à &lt;code&gt;scroll&lt;/code&gt;
-    &lt;div id="div4"&gt;
+  <li><code>overflow-x:auto</code> — sur la plupart des navigateurs, cela sera équivalent à <code>scroll</code>
+    <div id="div4">
       ABCDEFGHIJKLMOPQRSTUVWXYZABCDEFGHIJKLMOPQRSTUVWXYZ
-    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+    </div>
+  </li>
+</ul>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#div1, #div2, #div3, #div4 {
+```css
+#div1, #div2, #div3, #div4 {
   border: 1px solid black;
   width:  250px;
   margin-bottom: 12px;
@@ -104,44 +103,29 @@ overflow-x: unset;
 #div4 {
   overflow-x: auto;
 }
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", "100%", "270")}}</p>
+{{EmbedLiveSample("Exemples", "100%", "270")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Overflow', '#propdef-overflow-x', 'overflow-x')}}</td>
-   <td>{{Spec2('CSS3 Overflow')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                                 | Commentaires |
+| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------ |
+| {{SpecName('CSS3 Overflow', '#propdef-overflow-x', 'overflow-x')}} | {{Spec2('CSS3 Overflow')}} |              |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.overflow-x")}}</p>
+{{Compat("css.properties.overflow-x")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("text-overflow")}},</li>
- <li>{{cssxref("white-space")}},</li>
- <li>{{cssxref("overflow")}},</li>
- <li>{{cssxref("overflow-y")}},</li>
- <li>{{cssxref("clip")}},</li>
- <li>{{cssxref("display")}}</li>
-</ul>
+- {{cssxref("text-overflow")}},
+- {{cssxref("white-space")}},
+- {{cssxref("overflow")}},
+- {{cssxref("overflow-y")}},
+- {{cssxref("clip")}},
+- {{cssxref("display")}}

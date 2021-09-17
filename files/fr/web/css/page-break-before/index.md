@@ -7,15 +7,14 @@ tags:
   - Reference
 translation_of: Web/CSS/page-break-before
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<div class="warning">
-<p><strong>Attention :</strong> Cette propriété a été remplacée par la propriété {{cssxref("break-before")}}.</p>
-</div>
+> **Attention :** Cette propriété a été remplacée par la propriété {{cssxref("break-before")}}.
 
-<p>La propriété CSS <strong><code>page-break-before</code></strong> permet d'ajuster les sauts de page placés <em>avant</em> l'élément courant.Cette propriété s'applique aux éléments de blocs qui génèrent une boîte. Elle ne s'appliquera pas à un {{HTMLElement("div")}} qui ne génère pas de boîte.</p>
+La propriété CSS **`page-break-before`** permet d'ajuster les sauts de page placés _avant_ l'élément courant.Cette propriété s'applique aux éléments de blocs qui génèrent une boîte. Elle ne s'appliquera pas à un {{HTMLElement("div")}} qui ne génère pas de boîte.
 
-<pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 page-break-before: auto;
 page-break-before: always;
 page-break-before: avoid;
@@ -28,122 +27,75 @@ page-break-before: verso;
 page-break-before: inherit;
 page-break-before: initial;
 page-break-before: unset;
-</pre>
+```
 
-<h2 id="Synonymes_avec_break-before">Synonymes avec <code>break-before</code></h2>
+## Synonymes avec `break-before`
 
-<p>La propriété <code>page-break-before</code> est désormais remplacée par {{cssxref("break-before")}}.</p>
+La propriété `page-break-before` est désormais remplacée par {{cssxref("break-before")}}.
 
-<p>Pour des raisons de compatibilité, si on traite <code>page-break-before</code> comme un synonyme de <code>break-before</code>, on pourra utiliser le tableau de correspondance suivant :</p>
+Pour des raisons de compatibilité, si on traite `page-break-before` comme un synonyme de `break-before`, on pourra utiliser le tableau de correspondance suivant :
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col"><code>page-break-before</code></th>
-   <th scope="col"><code>break-before</code></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>auto</code></td>
-   <td><code>auto</code></td>
-  </tr>
-  <tr>
-   <td><code>left</code></td>
-   <td><code>left</code></td>
-  </tr>
-  <tr>
-   <td><code>right</code></td>
-   <td><code>right</code></td>
-  </tr>
-  <tr>
-   <td><code>avoid</code></td>
-   <td><code>avoid</code></td>
-  </tr>
-  <tr>
-   <td><code>always</code></td>
-   <td><code>page</code></td>
-  </tr>
- </tbody>
-</table>
+| `page-break-before` | `break-before` |
+| ------------------- | -------------- |
+| `auto`              | `auto`         |
+| `left`              | `left`         |
+| `right`             | `right`        |
+| `avoid`             | `avoid`        |
+| `always`            | `page`         |
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Valeur initiale. Les sauts de page sont automatiques (ni forcés, ni interdits).</dd>
- <dt><code>always</code></dt>
- <dd>Le saut de page est toujours forcé avant l'élément.</dd>
- <dt><code>avoid</code></dt>
- <dd>Les sauts de page sont évités avant l'élément.</dd>
- <dt><code>left</code></dt>
- <dd>Le saut de page est forcé avant l'élément afin que la prochaine page soit mise en forme comme une page gauche.</dd>
- <dt><code>right</code></dt>
- <dd>Le saut de page est forcé avant l'élément afin que la prochaine page soit mise en forme comme une page droite.</dd>
- <dt><code>recto</code> {{experimental_inline}}</dt>
- <dd>Si la page progresse de gauche à droite, cette valeur est équivalente à <code>right</code>. Si la page progresse de droite à gauche, elle est synonyme de <code>left</code>.</dd>
- <dt><code>verso</code> {{experimental_inline}}</dt>
- <dd>Si la page progresse de gauche à droite, cette valeur est équivalente à <code>left</code>. Si la page progresse de droite à gauche, elle est synonyme de <code>right</code>.</dd>
-</dl>
+- `auto`
+  - : Valeur initiale. Les sauts de page sont automatiques (ni forcés, ni interdits).
+- `always`
+  - : Le saut de page est toujours forcé avant l'élément.
+- `avoid`
+  - : Les sauts de page sont évités avant l'élément.
+- `left`
+  - : Le saut de page est forcé avant l'élément afin que la prochaine page soit mise en forme comme une page gauche.
+- `right`
+  - : Le saut de page est forcé avant l'élément afin que la prochaine page soit mise en forme comme une page droite.
+- `recto` {{experimental_inline}}
+  - : Si la page progresse de gauche à droite, cette valeur est équivalente à `right`. Si la page progresse de droite à gauche, elle est synonyme de `left`.
+- `verso` {{experimental_inline}}
+  - : Si la page progresse de gauche à droite, cette valeur est équivalente à `left`. Si la page progresse de droite à gauche, elle est synonyme de `right`.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: css">/* Pour éviter d'avoir un saut de page avant */
+```css
+/* Pour éviter d'avoir un saut de page avant */
 /* une note dans un div                      */
 div.note {
     page-break-before: avoid;
 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Logical Properties', '#logical-page', 'recto and verso')}}</td>
-   <td>{{Spec2('CSS Logical Properties')}}</td>
-   <td>Ajout des valeurs <code>recto</code> et <code>verso</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Paged Media', '#page-break-before', 'page-break-before')}}</td>
-   <td>{{Spec2('CSS3 Paged Media')}}</td>
-   <td>Cette propriété peut désormais être étendues aux lignes de tableau et aux groupe de lignes de tableau.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'page.html#propdef-page-break-before', 'page-break-before')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | État                                             | Commentaires                                                                                           |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| {{SpecName('CSS Logical Properties', '#logical-page', 'recto and verso')}}         | {{Spec2('CSS Logical Properties')}} | Ajout des valeurs `recto` et `verso`.                                                                  |
+| {{SpecName('CSS3 Paged Media', '#page-break-before', 'page-break-before')}}         | {{Spec2('CSS3 Paged Media')}}         | Cette propriété peut désormais être étendues aux lignes de tableau et aux groupe de lignes de tableau. |
+| {{SpecName('CSS2.1', 'page.html#propdef-page-break-before', 'page-break-before')}} | {{Spec2('CSS2.1')}}                         | Définition initiale.                                                                                   |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.page-break-before")}}</p>
+{{Compat("css.properties.page-break-before")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("break-before")}}</li>
- <li>{{cssxref("break-after")}}</li>
- <li>{{cssxref("break-inside")}}</li>
- <li>{{cssxref("page-break-after")}}</li>
- <li>{{cssxref("page-break-inside")}}</li>
- <li>{{cssxref("orphans")}}</li>
- <li>{{cssxref("widows")}}</li>
-</ul>
+- {{cssxref("break-before")}}
+- {{cssxref("break-after")}}
+- {{cssxref("break-inside")}}
+- {{cssxref("page-break-after")}}
+- {{cssxref("page-break-inside")}}
+- {{cssxref("orphans")}}
+- {{cssxref("widows")}}

@@ -3,13 +3,14 @@ title: offset-position
 slug: Web/CSS/offset-position
 translation_of: Web/CSS/offset-position
 ---
-<div>{{CSSRef}}{{seecompattable}}</div>
+{{CSSRef}}{{seecompattable}}
 
-<p>La propriété <a href="/fr/docs/Web/CSS">CSS</a> <strong><code>offset-position</code></strong> définit la <a href="https://www.w3.org/TR/motion-1/#valdef-offsetpath-initial-position">position initiale</a> de {{cssxref("offset-path")}}.</p>
+La propriété [CSS](/fr/docs/Web/CSS) **`offset-position`** définit la [position initiale](https://www.w3.org/TR/motion-1/#valdef-offsetpath-initial-position) de {{cssxref("offset-path")}}.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
-<pre class="brush: css no-line-numbers">/* Valeurs de mots clefs */
+```css
+/* Valeurs de mots clefs */
 offset-position: auto;
 offset-position: top;
 offset-position: bottom;
@@ -17,10 +18,10 @@ offset-position: left;
 offset-position: right;
 offset-position: center;
 
-/* Valeurs de &lt;pourcentage&gt; */
+/* Valeurs de <pourcentage> */
 offset-position: 25% 75%;
 
-/* Valeurs de &lt;longueur&gt; */
+/* Valeurs de <longueur> */
 offset-position: 0 0;
 offset-position: 1cm 2cm;
 offset-position: 10ch 8em;
@@ -35,33 +36,33 @@ offset-position: top right 10px;
 offset-position: inherit;
 offset-position: initial;
 offset-position: unset;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>La position initiale est la position de la boîte spécifiée par la propriété {{cssxref("position")}}.</dd>
- <dt><code>&lt;position&gt;</code></dt>
- <dd>Une {{cssxref("&lt;position&gt;")}}. Une position définit des coordonnées x/y pour positionner un élément de façon relative aux bords de la boîte de cet élément. Elles peuvent être définies en utilisant une à quatre valeurs. Si deux valeurs qui ne sont pas des mots clefs sont utilisées, la première valeur représente la position horizontale et la seconde représente la position verticale. Si seulement une valeur est définie, la seconde est considérée comme <code>center</code>. Si trois ou quatre valeurs sont utilisées, les valeurs en pourcentage sont des écarts du mot clef qui les précéde. Pour plus d'explications sur ces types de valeur, consultez {{cssxref("background-position")}}.</dd>
-</dl>
+- `auto`
+  - : La position initiale est la position de la boîte spécifiée par la propriété {{cssxref("position")}}.
+- `<position>`
+  - : Une {{cssxref("&lt;position&gt;")}}. Une position définit des coordonnées x/y pour positionner un élément de façon relative aux bords de la boîte de cet élément. Elles peuvent être définies en utilisant une à quatre valeurs. Si deux valeurs qui ne sont pas des mots clefs sont utilisées, la première valeur représente la position horizontale et la seconde représente la position verticale. Si seulement une valeur est définie, la seconde est considérée comme `center`. Si trois ou quatre valeurs sont utilisées, les valeurs en pourcentage sont des écarts du mot clef qui les précéde. Pour plus d'explications sur ces types de valeur, consultez {{cssxref("background-position")}}.
 
-<h2 id="Définition_formelle">Définition formelle</h2>
+## Définition formelle
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntax_formelle">Syntax formelle</h2>
+## Syntax formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Définir_la_valeur_initiale_de_offset-position">Définir la valeur initiale de offset-position</h3>
+### Définir la valeur initiale de offset-position
 
-<pre class="brush: html">&lt;div id="motion-demo"&gt;&lt;/div&gt;
-</pre>
+```html
+<div id="motion-demo"></div>
+```
 
-<pre class="brush: css">#motion-demo {
+```css
+#motion-demo {
   offset-path: path('M20,20 C20,100 200,0 200,100');
   offset-position: left top;
   animation: move 3000ms infinite alternate ease-in-out;
@@ -77,27 +78,15 @@ offset-position: unset;
   100% {
     offset-distance: 100%;
   }
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Spécification</th>
-   <th>Statut</th>
-   <th>Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Motion Path Level 1', '#offset-position-property', 'offset-position')}}</td>
-   <td>{{Spec2('Motion Path Level 1')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | Statut                                       | Commentaire         |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ------------------- |
+| {{SpecName('Motion Path Level 1', '#offset-position-property', 'offset-position')}} | {{Spec2('Motion Path Level 1')}} | Définition initiale |
 
-<h2 id="Compatibilité_de_navigateur">Compatibilité de navigateur</h2>
+## Compatibilité de navigateur
 
-<p>{{Compat("css.properties.offset-position")}}</p>
+{{Compat("css.properties.offset-position")}}

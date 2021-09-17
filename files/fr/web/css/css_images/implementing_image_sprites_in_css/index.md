@@ -8,45 +8,47 @@ tags:
 translation_of: Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS
 original_slug: Web/CSS/CSS_Images/Sprites_CSS
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Les <em>sprites</em> sont utilisées dans de nombreuses applications web où de multiples images sont utilisées. Au lieu d'avoir une image par fichier, on économise de la bande passante et de la mémoire en les envoyant toute dans le même fichier, ainsi, le nombre de requêtes HTTP diminue. On utilise alors <code>background-position</code> pour choisir l'image qu'on souhaite utiliser.</p>
+Les _sprites_ sont utilisées dans de nombreuses applications web où de multiples images sont utilisées. Au lieu d'avoir une image par fichier, on économise de la bande passante et de la mémoire en les envoyant toute dans le même fichier, ainsi, le nombre de requêtes HTTP diminue. On utilise alors `background-position` pour choisir l'image qu'on souhaite utiliser.
 
-<div class="note">
-<p><strong>Note :</strong> Avec HTTP/2, il peut être plus judicieux d'utiliser de nombreuses « petites » requêtes.</p>
-</div>
+> **Note :** Avec HTTP/2, il peut être plus judicieux d'utiliser de nombreuses « petites » requêtes.
 
-<h2 id="Implémentation">Implémentation</h2>
+## Implémentation
 
-<p>Supposons qu'une image est affichée pour chaque élement de la classe <code>toolbtn</code> :</p>
+Supposons qu'une image est affichée pour chaque élement de la classe `toolbtn` :
 
-<pre class="brush:css">.toolbtn {
+```css
+.toolbtn {
   background: url('myfile.png');
   display: inline-block;
   height: 20px;
   width: 20px;
-}</pre>
+}
+```
 
-<p>Une position peut être ajoutée avec les valeurs x et y après {{cssxref("url()")}} pour décaler l'image de fond ({{cssxref("background")}}). Cela fonctionne aussi avec {{cssxref("background-position")}}. Par exemple :</p>
+Une position peut être ajoutée avec les valeurs x et y après {{cssxref("url()")}} pour décaler l'image de fond ({{cssxref("background")}}). Cela fonctionne aussi avec {{cssxref("background-position")}}. Par exemple :
 
-<pre class="brush:css">#btn1 {
+```css
+#btn1 {
   background-position: -20px 0px;
 }
 
 #btn2 {
   background-position: -40px 0px;
-}</pre>
+}
+```
 
-<p>L'élément avec l'ID « btn1 » bouge vers la gauche de 20 pixels et l'élément avec l'ID « btn2 » vers la gauche de 40 pixels (en présumant que ces deux éléments aient aussi la classe <code>toolbtn</code>).</p>
+L'élément avec l'ID « btn1 » bouge vers la gauche de 20 pixels et l'élément avec l'ID « btn2 » vers la gauche de 40 pixels (en présumant que ces deux éléments aient aussi la classe `toolbtn`).
 
-<p>De la même manière, vous pouvez faire un effet de transition au survol :</p>
+De la même manière, vous pouvez faire un effet de transition au survol :
 
-<pre class="brush:css">#btn:hover {
-  background-position: <var>&lt;pixels shifted right&gt;</var>px <var>&lt;pixels shifted down&gt;</var>px;
-}</pre>
+```css
+#btn:hover {
+  background-position: <pixels shifted right>px <pixels shifted down>px;
+}
+```
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="https://css-tricks.com/snippets/css/perfect-css-sprite-sliding-doors-button/">Une démonstration sur CSS Tricks</a></li>
-</ul>
+- [Une démonstration sur CSS Tricks](https://css-tricks.com/snippets/css/perfect-css-sprite-sliding-doors-button/)

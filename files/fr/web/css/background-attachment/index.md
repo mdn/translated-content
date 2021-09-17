@@ -7,15 +7,16 @@ tags:
   - Reference
 translation_of: Web/CSS/background-attachment
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>background-attachment</code></strong> définit si la position de l'image d'arrière-plan est fixée dans la zone d'affichage (<em>viewport</em>) ou si celle-ci défile avec le bloc englobant.</p>
+La propriété **`background-attachment`** définit si la position de l'image d'arrière-plan est fixée dans la zone d'affichage (_viewport_) ou si celle-ci défile avec le bloc englobant.
 
-<div>{{EmbedInteractiveExample("pages/css/background-attachment.html")}}</div>
+{{EmbedInteractiveExample("pages/css/background-attachment.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 background-attachment: scroll;
 background-attachment: fixed;
 background-attachment: local;
@@ -24,65 +25,69 @@ background-attachment: local;
 background-attachment: inherit;
 background-attachment: initial;
 background-attachment: unset;
-</pre>
+```
 
-<p>La propriété <code>background-attachment</code> est définie avec un des mots-clés de la liste suivante.</p>
+La propriété `background-attachment` est définie avec un des mots-clés de la liste suivante.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>fixed</code></dt>
- <dd>Ce mot-clé indique que l'arrière-plan est fixe par rapport à la zone d'affichage (<em>viewport</em>). Ainsi, même si l'élément dispose d'outils de défilement, l'arrière-plan ciblé ne se déplacera pas avec l'élément (cette valeur n'est pas compatible avec {{cssxref("background-clip", "background-clip: text", "#text")}}).</dd>
- <dt><code>local</code></dt>
- <dd>Ce mot-clé indique que l'arrière-plan se déplace avec le contenu de l'élément associé. Ainsi, si l'élément défile, l'arrière-plan défilera avec. Les zones de positionnement et de dessin de l'arrière-plan sont relatives à la zone de l'élément plutôt qu'au cadre extérieur.</dd>
- <dt><code>scroll</code></dt>
- <dd>Ce mot-clé indique que l'arrière-plan est fixé par rapport au contenu de l'élément (il ne défile pas avec) mais est rattaché à la bordure de l'élément.</dd>
-</dl>
+- `fixed`
+  - : Ce mot-clé indique que l'arrière-plan est fixe par rapport à la zone d'affichage (_viewport_). Ainsi, même si l'élément dispose d'outils de défilement, l'arrière-plan ciblé ne se déplacera pas avec l'élément (cette valeur n'est pas compatible avec {{cssxref("background-clip", "background-clip: text", "#text")}}).
+- `local`
+  - : Ce mot-clé indique que l'arrière-plan se déplace avec le contenu de l'élément associé. Ainsi, si l'élément défile, l'arrière-plan défilera avec. Les zones de positionnement et de dessin de l'arrière-plan sont relatives à la zone de l'élément plutôt qu'au cadre extérieur.
+- `scroll`
+  - : Ce mot-clé indique que l'arrière-plan est fixé par rapport au contenu de l'élément (il ne défile pas avec) mais est rattaché à la bordure de l'élément.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Exemple_simple">Exemple simple</h3>
+### Exemple simple
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush:css">p {
+```css
+p {
   background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif");
   background-attachment: fixed;
 }
-</pre>
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   There were doors all round the hall, but they were all locked; and when
   Alice had been all the way down one side and up the other, trying every
   door, she walked sadly down the middle, wondering how she was ever to
   get out again.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Exemple_simple")}}</p>
+{{EmbedLiveSample("Exemple_simple")}}
 
-<h3 id="Gestion_de_plusieurs_arrière-plans">Gestion de plusieurs arrière-plans</h3>
+### Gestion de plusieurs arrière-plans
 
-<p>On peut utiliser cette propriété lorsqu'on travaille avec plusieurs images en arrière-plan. On peut définir, pour chaque image, un <code>background-attachment</code> spécifique. Pour cela, on utilisera une liste, séparée par des virgules. Les images seront associées dans l'ordre à chaque propriété d'attachement.</p>
+On peut utiliser cette propriété lorsqu'on travaille avec plusieurs images en arrière-plan. On peut définir, pour chaque image, un `background-attachment` spécifique. Pour cela, on utilisera une liste, séparée par des virgules. Les images seront associées dans l'ordre à chaque propriété d'attachement.
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush:css">p {
+```css
+p {
   background-image: url("https://mdn.mozillademos.org/files/12057/starsolid.gif"), url("https://mdn.mozillademos.org/files/12059/startransparent.gif");
   background-attachment: fixed, scroll;
   background-repeat: no-repeat, repeat-y;
-}</pre>
+}
+```
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   There were doors all round the hall, but they were all locked; and when
   Alice had been all the way down one side and up the other, trying every
   door, she walked sadly down the middle, wondering how she was ever to
@@ -96,49 +101,27 @@ background-attachment: unset;
   time round, she came upon a low curtain she had not noticed before, and
   behind it was a little door about fifteen inches high: she tried the
   little golden key in the lock, and to her great delight it fitted!
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h4 id="Résultat_2">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Gestion_de_plusieurs_arrière-plans")}}</p>
+{{EmbedLiveSample("Gestion_de_plusieurs_arrière-plans")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-background-attachment', 'background-attachment')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>La propriété a été étendue pour gérer plusieurs arrière-plans et la valeur <code>local</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'colors.html#propdef-background-attachment', 'background-attachment')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Aucune modification significative.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#background-attachment', 'background-attachment')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                | État                                     | Commentaires                                                                        |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------------------- |
+| {{SpecName('CSS3 Backgrounds', '#the-background-attachment', 'background-attachment')}}         | {{Spec2('CSS3 Backgrounds')}} | La propriété a été étendue pour gérer plusieurs arrière-plans et la valeur `local`. |
+| {{SpecName('CSS2.1', 'colors.html#propdef-background-attachment', 'background-attachment')}} | {{Spec2('CSS2.1')}}                 | Aucune modification significative.                                                  |
+| {{SpecName('CSS1', '#background-attachment', 'background-attachment')}}                             | {{Spec2('CSS1')}}                 | Définition initiale.                                                                |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.background-attachment")}}</p>
+{{Compat("css.properties.background-attachment")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Utiliser_plusieurs_arrière-plans" title="CSS/Multiple backgrounds">Gérer plusieurs arrière-plans</a></li>
-</ul>
+- [Gérer plusieurs arrière-plans](/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Utiliser_plusieurs_arrière-plans "CSS/Multiple backgrounds")

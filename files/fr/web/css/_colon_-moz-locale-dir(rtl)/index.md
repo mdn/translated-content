@@ -1,6 +1,6 @@
 ---
 title: ':-moz-locale-dir(rtl)'
-slug: 'Web/CSS/:-moz-locale-dir(rtl)'
+slug: Web/CSS/:-moz-locale-dir(rtl)
 tags:
   - CSS
   - Droite-à-gauche
@@ -8,40 +8,41 @@ tags:
   - Non-standard
   - Pseudo-classe
   - Reference
-translation_of: 'Web/CSS/:-moz-locale-dir(rtl)'
+translation_of: Web/CSS/:-moz-locale-dir(rtl)
 ---
-<div>{{Non-standard_header}}{{CSSRef}}{{gecko_minversion_header("1.9.2")}}</div>
+{{Non-standard_header}}{{CSSRef}}{{gecko_minversion_header("1.9.2")}}
 
-<p>La <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classe CSS</a> <strong><code>:-moz-locale-dir(rtl)</code></strong> correspond à un élément si l'interface utilisateur est affichée de droite à gauche. Elle est déterminée par la préférence <code>intl.uidirection.</code><em><code>locale</code></em> (où <em><code>locale</code></em> est la langue courante) qui est fixée à <code>"rtl"</code>.</p>
+La [pseudo-classe CSS](/fr/docs/Web/CSS/Pseudo-classes) **`:-moz-locale-dir(rtl)`** correspond à un élément si l'interface utilisateur est affichée de droite à gauche. Elle est déterminée par la préférence `intl.uidirection.`_`locale`_ (où _`locale`_ est la langue courante) qui est fixée à `"rtl"`.
 
-<p>Cela permet aux extensions (et thèmes) d'adapter facilement leur interface utilisateur basée sur les besoins de la langue de l'utilisateur. Cela peut varier d'une fenêtre à une autre et même d'un onglet à un autre. Cela permet aussi aux extensions de fonctionner même si elles ne prennent pas en compte la langue de l'utilisateur par défaut, puisqu'elles peuvent prendre en compte les agencements de gauche à droite et de droite à gauche sans être inquiétées par les spécificités de la langue.</p>
+Cela permet aux extensions (et thèmes) d'adapter facilement leur interface utilisateur basée sur les besoins de la langue de l'utilisateur. Cela peut varier d'une fenêtre à une autre et même d'un onglet à un autre. Cela permet aussi aux extensions de fonctionner même si elles ne prennent pas en compte la langue de l'utilisateur par défaut, puisqu'elles peuvent prendre en compte les agencements de gauche à droite et de droite à gauche sans être inquiétées par les spécificités de la langue.
 
-<p>Ce sélecteur ne fonctionne pas correctement pour des documents HTML ; il ne fait jamais correspondre, peu importe si la langue de l'interface utilisateur va de gauche à droite ou de droite à gauche.</p>
+Ce sélecteur ne fonctionne pas correctement pour des documents HTML ; il ne fait jamais correspondre, peu importe si la langue de l'interface utilisateur va de gauche à droite ou de droite à gauche.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p:-moz-locale-dir(rtl) {
+```css
+p:-moz-locale-dir(rtl) {
   color: red;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;En utilisant une interface de droite à gauche, ce texte sera rouge.&lt;/p&gt;
-</pre>
+```html
+<p>En utilisant une interface de droite à gauche, ce texte sera rouge.</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.</p>
+Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref(":-moz-locale-dir(ltr)")}}</li>
- <li><a href="/en-US/docs/Making_Sure_Your_Theme_Works_with_RTL_Locales">Garantir le fonctionnement de votre thème avec les locales RTL</a></li>
-</ul>
+- {{cssxref(":-moz-locale-dir(ltr)")}}
+- [Garantir le fonctionnement de votre thème avec les locales RTL](/en-US/docs/Making_Sure_Your_Theme_Works_with_RTL_Locales)

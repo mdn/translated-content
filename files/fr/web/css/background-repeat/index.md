@@ -7,17 +7,18 @@ tags:
   - Reference
 translation_of: Web/CSS/background-repeat
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>background-repeat</code></strong> définit la façon dont les images utilisées en arrière-plan sont répétées. Une image d'arrière-plan pourra ainsi être répétée sur l'axe horizontal, l'axe vertical ou bien ne pas être répétée.</p>
+La propriété **`background-repeat`** définit la façon dont les images utilisées en arrière-plan sont répétées. Une image d'arrière-plan pourra ainsi être répétée sur l'axe horizontal, l'axe vertical ou bien ne pas être répétée.
 
-<div>{{EmbedInteractiveExample("pages/css/background-repeat.html")}}</div>
+{{EmbedInteractiveExample("pages/css/background-repeat.html")}}
 
-<p>Par défaut, les images répétées sont rognées à la taille de l'élément mais elles peuvent être redimensionnées pour occuper l'espace avec un nombre entier de répétitions (<code>round</code>) voire être distribuées avec des espaces entre les motifs pour remplir la zone (<code>space</code>).</p>
+Par défaut, les images répétées sont rognées à la taille de l'élément mais elles peuvent être redimensionnées pour occuper l'espace avec un nombre entier de répétitions (`round`) voire être distribuées avec des espaces entre les motifs pour remplir la zone (`space`).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 background-repeat: repeat-x;
 background-repeat: repeat-y;
 background-repeat: repeat;
@@ -37,78 +38,104 @@ background-repeat: no-repeat round;
 background-repeat: inherit;
 background-repeat: initial;
 background-repeat: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;repeat-style&gt;</code></dt>
- <dd>Un mot-clé qui peut être utilisé dans la syntaxe à une valeur ou à deux valeurs. La syntaxe utilisant une valeur est une notation raccourcie dont voici le tableau de correspondance :
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <td><strong>Une seule valeur</strong></td>
-    <td><strong>Équivalent avec deux-valeurs</strong></td>
-   </tr>
-   <tr>
-    <td><code>repeat-x</code></td>
-    <td><code>repeat no-repeat</code></td>
-   </tr>
-   <tr>
-    <td><code>repeat-y</code></td>
-    <td><code>no-repeat repeat</code></td>
-   </tr>
-   <tr>
-    <td><code>repeat</code></td>
-    <td><code>repeat repeat</code></td>
-   </tr>
-   <tr>
-    <td><code>space</code></td>
-    <td><code>space space</code></td>
-   </tr>
-   <tr>
-    <td><code>round</code></td>
-    <td><code>round round</code></td>
-   </tr>
-   <tr>
-    <td><code>no-repeat</code></td>
-    <td><code>no-repeat no-repeat</code></td>
-   </tr>
-  </tbody>
- </table>
- Lorsqu'on utilise la syntaxe à deux valeurs, la première indique la méthode de répétition pour l'axe horizontal et la seconde celle pour l'axe vertical. Voici un tableau décrivant chacune des options :
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <td><code>repeat</code></td>
-    <td>L'image est répétée autant de fois que nécessaire pour recouvrir la zone dédiée à l'arrière-plan. La dernière image sera rognée si nécessaire.</td>
-   </tr>
-   <tr>
-    <td><code>space</code></td>
-    <td>L'image est répétée autant que possible sans rognage. La première et la dernière image sont accolées aux bords de l'élément et des espaces sont repartis de façon égale entre les images. La propriété {{cssxref("background-position")}} est ignorée sauf s'il n'y a qu'une seule image qui puisse être affichée sans être rognée. Le seul cas où <code>space</code> est utilisé et qu'une image est rognée se produit lorsque l'image est trop grande pour être affichée.</td>
-   </tr>
-   <tr>
-    <td><code>round</code></td>
-    <td>L'image est répétée autant que possible et est étirée si nécessaire afin qu'il n'y ait ni rognage ni espace restant. Dès qu'il y a la place d'ajouter une image, les autres sont compressées pour lui laisser la place. Ainsi, une image avec une largeur originale de 260px, répétée trois fois, pourra être étirée pour que chaque exemplaire mesure 300 pixels de large, lorsqu'une autre image sera ajoutée, elles seront compressées sur 225 pixels.</td>
-   </tr>
-   <tr>
-    <td><code>no-repeat</code></td>
-    <td>Il n'y a aucune répétition de l'image (dès lors, il est possible que toute la zone ne soit pas recouverte par cette image). La position de l'image est définie grâce à la propriété {{cssxref("background-position")}}.</td>
-   </tr>
-  </tbody>
- </table>
- </dd>
-</dl>
+- `<repeat-style>`
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+  - : Un mot-clé qui peut être utilisé dans la syntaxe à une valeur ou à deux valeurs. La syntaxe utilisant une valeur est une notation raccourcie dont voici le tableau de correspondance :
+
+    <table class="standard-table">
+      <tbody>
+        <tr>
+          <td><strong>Une seule valeur</strong></td>
+          <td><strong>Équivalent avec deux-valeurs</strong></td>
+        </tr>
+        <tr>
+          <td><code>repeat-x</code></td>
+          <td><code>repeat no-repeat</code></td>
+        </tr>
+        <tr>
+          <td><code>repeat-y</code></td>
+          <td><code>no-repeat repeat</code></td>
+        </tr>
+        <tr>
+          <td><code>repeat</code></td>
+          <td><code>repeat repeat</code></td>
+        </tr>
+        <tr>
+          <td><code>space</code></td>
+          <td><code>space space</code></td>
+        </tr>
+        <tr>
+          <td><code>round</code></td>
+          <td><code>round round</code></td>
+        </tr>
+        <tr>
+          <td><code>no-repeat</code></td>
+          <td><code>no-repeat no-repeat</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    Lorsqu'on utilise la syntaxe à deux valeurs, la première indique la méthode de répétition pour l'axe horizontal et la seconde celle pour l'axe vertical. Voici un tableau décrivant chacune des options :
+
+    <table class="standard-table">
+      <tbody>
+        <tr>
+          <td><code>repeat</code></td>
+          <td>
+            L'image est répétée autant de fois que nécessaire pour recouvrir la zone
+            dédiée à l'arrière-plan. La dernière image sera rognée si nécessaire.
+          </td>
+        </tr>
+        <tr>
+          <td><code>space</code></td>
+          <td>
+            L'image est répétée autant que possible sans rognage. La première et la
+            dernière image sont accolées aux bords de l'élément et des espaces sont
+            repartis de façon égale entre les images. La propriété
+            {{cssxref("background-position")}} est ignorée sauf s'il n'y a
+            qu'une seule image qui puisse être affichée sans être rognée. Le seul
+            cas où <code>space</code> est utilisé et qu'une image est rognée se
+            produit lorsque l'image est trop grande pour être affichée.
+          </td>
+        </tr>
+        <tr>
+          <td><code>round</code></td>
+          <td>
+            L'image est répétée autant que possible et est étirée si nécessaire afin
+            qu'il n'y ait ni rognage ni espace restant. Dès qu'il y a la place
+            d'ajouter une image, les autres sont compressées pour lui laisser la
+            place. Ainsi, une image avec une largeur originale de 260px, répétée
+            trois fois, pourra être étirée pour que chaque exemplaire mesure 300
+            pixels de large, lorsqu'une autre image sera ajoutée, elles seront
+            compressées sur 225 pixels.
+          </td>
+        </tr>
+        <tr>
+          <td><code>no-repeat</code></td>
+          <td>
+            Il n'y a aucune répétition de l'image (dès lors, il est possible que
+            toute la zone ne soit pas recouverte par cette image). La position de
+            l'image est définie grâce à la propriété
+            {{cssxref("background-position")}}.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">/* Commun à tous les DIVS */
+```css
+/* Commun à tous les DIVS */
 ol, li {
   margin: 0;
   padding: 0;
@@ -151,77 +178,57 @@ div {
     background-repeat: repeat-x,
                        repeat-y;
     height: 144px;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ol&gt;
-    &lt;li&gt;no-repeat
-        &lt;div class="one"&gt;&lt;/div&gt;
-    &lt;/li&gt;
-    &lt;li&gt;repeat
-        &lt;div class="two"&gt;&lt;/div&gt;
-    &lt;/li&gt;
-    &lt;li&gt;repeat-x
-        &lt;div class="three"&gt;&lt;/div&gt;
-    &lt;/li&gt;
-    &lt;li&gt;repeat-y
-        &lt;div class="four"&gt;&lt;/div&gt;
-    &lt;/li&gt;
-    &lt;li&gt;space
-        &lt;div class="five"&gt;&lt;/div&gt;
-    &lt;/li&gt;
-    &lt;li&gt;round
-        &lt;div class="six"&gt;&lt;/div&gt;
-    &lt;/li&gt;
-    &lt;li&gt;repeat-x, repeat-y (plusieurs images)
-        &lt;div class="seven"&gt;&lt;/div&gt;
-    &lt;/li&gt;
-&lt;/ol&gt;</pre>
+```html
+<ol>
+    <li>no-repeat
+        <div class="one"></div>
+    </li>
+    <li>repeat
+        <div class="two"></div>
+    </li>
+    <li>repeat-x
+        <div class="three"></div>
+    </li>
+    <li>repeat-y
+        <div class="four"></div>
+    </li>
+    <li>space
+        <div class="five"></div>
+    </li>
+    <li>round
+        <div class="six"></div>
+    </li>
+    <li>repeat-x, repeat-y (plusieurs images)
+        <div class="seven"></div>
+    </li>
+</ol>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>Dans cet exemple, chaque élément de la liste illustre une valeur différente de <code>background-repeat</code>.</p>
+Dans cet exemple, chaque élément de la liste illustre une valeur différente de `background-repeat`.
 
-<p>{{EmbedLiveSample('Exemples', 240, 560)}}</p>
+{{EmbedLiveSample('Exemples', 240, 560)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-background-repeat', 'background-repeat')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Ajout de la prise en charge de plusieurs images d'arrière-plan. La syntaxe avec deux valeurs permet d'avoir des motifs de répétition différents pour les deux axes. Les mots-clés <code>space</code> et <code>round</code> sont ajoutés. La définition de la zone de dessin pour l'arrière-plan est mieux définie pour les éléments en ligne.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'colors.html#propdef-background-repeat', 'background-repeat')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Aucune modification significative.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#background-repeat', 'background-repeat')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                                     | Commentaires                                                                                                                                                                                                                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS3 Backgrounds', '#the-background-repeat', 'background-repeat')}}         | {{Spec2('CSS3 Backgrounds')}} | Ajout de la prise en charge de plusieurs images d'arrière-plan. La syntaxe avec deux valeurs permet d'avoir des motifs de répétition différents pour les deux axes. Les mots-clés `space` et `round` sont ajoutés. La définition de la zone de dessin pour l'arrière-plan est mieux définie pour les éléments en ligne. |
+| {{SpecName('CSS2.1', 'colors.html#propdef-background-repeat', 'background-repeat')}} | {{Spec2('CSS2.1')}}                 | Aucune modification significative.                                                                                                                                                                                                                                                                                      |
+| {{SpecName('CSS1', '#background-repeat', 'background-repeat')}}                             | {{Spec2('CSS1')}}                 | Définition initiale.                                                                                                                                                                                                                                                                                                    |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.background-repeat")}}</p>
+{{Compat("css.properties.background-repeat")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds">Utiliser plusieurs arrières-plans en CSS</a></li>
-</ul>
+- [Utiliser plusieurs arrières-plans en CSS](/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)

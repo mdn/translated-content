@@ -7,29 +7,30 @@ tags:
   - Reference
 translation_of: Web/CSS/grid-column
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>grid-column</code></strong> est une <a href="/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies">propriété raccourcie</a> pour {{cssxref("grid-column-start")}} et {{cssxref("grid-column-end")}}. Elle permet de définir la taille et l'emplacement d'un élément sur la grille en indiquant l'emplacement du début, de la fin et/ou sa taille.</p>
+La propriété **`grid-column`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) pour {{cssxref("grid-column-start")}} et {{cssxref("grid-column-end")}}. Elle permet de définir la taille et l'emplacement d'un élément sur la grille en indiquant l'emplacement du début, de la fin et/ou sa taille.
 
-<div>{{EmbedInteractiveExample("pages/css/grid-column.html")}}</div>
+{{EmbedInteractiveExample("pages/css/grid-column.html")}}
 
-<p>Si deux valeurs <code><strong>&lt;grid-line&gt;</strong></code> sont utilisées pour la propriété, la valeur de <strong><code>grid-column-start</code></strong> sera définie avec la première valeur avant la barre oblique et la valeur de <strong><code>grid-column-end</code></strong> sera définie avec celle qui est située après la barre oblique.</p>
+Si deux valeurs **`<grid-line>`** sont utilisées pour la propriété, la valeur de **`grid-column-start`** sera définie avec la première valeur avant la barre oblique et la valeur de **`grid-column-end`** sera définie avec celle qui est située après la barre oblique.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 grid-column: auto;
 grid-column: auto / auto;
 
-/* Valeurs &lt;custom-ident&gt; */
+/* Valeurs <custom-ident> */
 grid-column: unezonedegrille;
 grid-column: unezonedegrille / unezonedegrille;
 
-/* Valeurs &lt;integer&gt; + &lt;custom-ident&gt; */
+/* Valeurs <integer> + <custom-ident> */
 grid-column: unezonedegrille 4;
 grid-column: 4 unezonedegrille / 6;
 
-/* Valeurs span + &lt;integer&gt; + &lt;custom-ident&gt; */
+/* Valeurs span + <integer> + <custom-ident> */
 grid-column: span 3;
 grid-column: span unezonedegrille;
 grid-column: 5 unezonedegrille span;
@@ -41,54 +42,56 @@ grid-column: 5 unezonedegrille span / 2 span;
 grid-column: inherit;
 grid-column: initial;
 grid-column: unset;
-</pre>
+```
 
-<p>Cette propriété est définie grâce à une ou deux valeurs <code>&lt;grid-line&gt;</code>. Si deux valeurs <code>&lt;grid-line&gt;</code> sont fournies, elles doivent être séparées par une barre oblique (/)</p>
+Cette propriété est définie grâce à une ou deux valeurs `<grid-line>`. Si deux valeurs `<grid-line>` sont fournies, elles doivent être séparées par une barre oblique (/)
 
-<p>Une valeur <code>&lt;grid-line&gt;</code> peut être définie avec :</p>
+Une valeur `<grid-line>` peut être définie avec :
 
-<ul>
- <li>le mot-clé <code>auto</code></li>
- <li>ou une valeur <code>&lt;custom-ident&gt;</code></li>
- <li>ou une valeur <code>&lt;integer&gt;</code></li>
- <li>ou une valeur <code>&lt;custom-ident&gt;</code> et un <code>&lt;integer&gt;</code> séparés par un espace</li>
- <li>ou le mot-clé <code>span</code> avec une valeur <code>&lt;custom-ident&gt;</code> ou un <code>&lt;integer&gt;</code> ou les deux.</li>
-</ul>
+- le mot-clé `auto`
+- ou une valeur `<custom-ident>`
+- ou une valeur `<integer>`
+- ou une valeur `<custom-ident>` et un `<integer>` séparés par un espace
+- ou le mot-clé `span` avec une valeur `<custom-ident>` ou un `<integer>` ou les deux.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Un mot-clé qui indique que la propriété ne contribue pas au placement de l'élément sur la grille. Cela indique un placement automatique, une taille de fragment (<em>span</em>) automatique ou une taille par défaut de <code>1</code>.</dd>
- <dt><code>&lt;custom-ident&gt;</code></dt>
- <dd>S'il existe une ligne nommée avec '&lt;custom-ident&gt;-start'/'&lt;custom-ident&gt;-end', la première colonne correspondante contribue au placement de l'élément sur la grille.
- <div class="note"><p><strong>Note :</strong> Les noms des zones de grille sont générés implicitement. Ainsi, en utilisant <code>grid-column-start: foo;</code> cela sélectionnera le début de la grille nommée correspondante (sauf si une autre colonne <code>foo-start</code>/<code>foo-end</code> a été explicitement déclarée).</p></div>
+- `auto`
+  - : Un mot-clé qui indique que la propriété ne contribue pas au placement de l'élément sur la grille. Cela indique un placement automatique, une taille de fragment (_span_) automatique ou une taille par défaut de `1`.
+- `<custom-ident>`
 
- <p>Sinon, la valeur est traitée comme si on avait utilisé <code>&lt;custom-ident&gt;</code> et la valeur <code>1</code>.</p>
- </dd>
- <dt><code>&lt;integer&gt; &amp;&amp; &lt;custom-ident&gt;?</code></dt>
- <dd>La n-ième ligne de la grille contribue au placement de l'élément sur la grille. Si un entier négatif est utilisé, le comptage sera fait depuis la fin de la grille explicite.
- <p>Si un nom est fourni pour &lt;custom-ident&gt;, seules les lignes ayant ce nom seront comptées. S'il n'y a pas suffisamment de lignes existant avec ce nom, toutes les lignes implicites seront comptées afin de trouver la position.</p>
+  - : S'il existe une ligne nommée avec '\<custom-ident>-start'/'\<custom-ident>-end', la première colonne correspondante contribue au placement de l'élément sur la grille.
 
- <p>Si la valeur entière utilisée est <code>0</code>, la règle est invalide.</p>
- </dd>
- <dt><code>span &amp;&amp; [ &lt;integer&gt; || &lt;custom-ident&gt; ]</code></dt>
- <dd>Un fragment de grille est utilisé pour le placement de l'élément sur la grille afin que le début de la ligne pour l'élément de la grille soit placé à n lignes du bord de fin.
- <p>Si un nom fourni pour &lt;custom-ident&gt;, seules les lignes ayant ce nom seront comptées. S'il n'y a pas suffisamment de lignes existantes avec ce nom, tout les lignes implicites du côté de la grille explicite et qui correspondent à la direction de la recherche seront comptées afin de placer ce fragment.</p>
+    > **Note :** Les noms des zones de grille sont générés implicitement. Ainsi, en utilisant `grid-column-start: foo;` cela sélectionnera le début de la grille nommée correspondante (sauf si une autre colonne `foo-start`/`foo-end` a été explicitement déclarée).
 
- <p>Si l'entier n'est pas défini, la valeur par défaut qui sera utilisée sera <code>1</code>. Les entiers négatifs ou nuls sont invalides.</p>
- </dd>
-</dl>
+    Sinon, la valeur est traitée comme si on avait utilisé `<custom-ident>` et la valeur `1`.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+- `<integer> && <custom-ident>?`
+
+  - : La n-ième ligne de la grille contribue au placement de l'élément sur la grille. Si un entier négatif est utilisé, le comptage sera fait depuis la fin de la grille explicite.
+
+    Si un nom est fourni pour \<custom-ident>, seules les lignes ayant ce nom seront comptées. S'il n'y a pas suffisamment de lignes existant avec ce nom, toutes les lignes implicites seront comptées afin de trouver la position.
+
+    Si la valeur entière utilisée est `0`, la règle est invalide.
+
+- `span && [ <integer> || <custom-ident> ]`
+
+  - : Un fragment de grille est utilisé pour le placement de l'élément sur la grille afin que le début de la ligne pour l'élément de la grille soit placé à n lignes du bord de fin.
+
+    Si un nom fourni pour \<custom-ident>, seules les lignes ayant ce nom seront comptées. S'il n'y a pas suffisamment de lignes existantes avec ce nom, tout les lignes implicites du côté de la grille explicite et qui correspondent à la direction de la recherche seront comptées afin de placer ce fragment.
+
+    Si l'entier n'est pas défini, la valeur par défaut qui sera utilisée sera `1`. Les entiers négatifs ou nuls sont invalides.
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#grid {
+```css
+#grid {
   display: grid;
   height: 100px;
   grid-template-columns: repeat(6, 1fr);
@@ -107,57 +110,45 @@ grid-column: unset;
 #item3 {
   background-color: blue;
   grid-column: span 2 / 7;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="grid"&gt;
-  &lt;div id="item1"&gt;&lt;/div&gt;
-  &lt;div id="item2"&gt;&lt;/div&gt;
-  &lt;div id="item3"&gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div id="grid">
+  <div id="item1"></div>
+  <div id="item2"></div>
+  <div id="item3"></div>
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", "100%", "100px")}}</p>
+{{EmbedLiveSample("Exemples", "100%", "100px")}}
 
-<h2 id="Prothèse_d'émulation_(polyfill)">Prothèse d'émulation (<em>polyfill</em>)</h2>
+## Prothèse d'émulation (_polyfill_)
 
-<p>IE11 ne prend pas en charge le placement automatique des objets sur la grille.Tous les objets finiront sur la première colonne / ligne si ceux-ci ne sont pas marqués avec les propriétés <code>-ms-</code>{{cssxref("grid-column")}} et <code>-ms-</code>{{cssxref("grid-row")}}. Pour effectuer cette annotation automatiquement, on peut utiliser du JavaScript (cf. <a href="https://github.com/motine/css_grid_annotator">ce dépôt</a>).</p>
+IE11 ne prend pas en charge le placement automatique des objets sur la grille.Tous les objets finiront sur la première colonne / ligne si ceux-ci ne sont pas marqués avec les propriétés `-ms-`{{cssxref("grid-column")}} et `-ms-`{{cssxref("grid-row")}}. Pour effectuer cette annotation automatiquement, on peut utiliser du JavaScript (cf. [ce dépôt](https://github.com/motine/css_grid_annotator)).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Grid", "#propdef-grid-column", "grid-column")}}</td>
-   <td>{{Spec2("CSS3 Grid")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                         | Commentaires         |
+| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{SpecName("CSS3 Grid", "#propdef-grid-column", "grid-column")}} | {{Spec2("CSS3 Grid")}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.grid-column")}}</p>
+{{Compat("css.properties.grid-column")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("grid-row")}}</li>
- <li>{{cssxref("grid-row-start")}}</li>
- <li>{{cssxref("grid-row-end")}}</li>
- <li>{{cssxref("grid-column-start")}}</li>
- <li>{{cssxref("grid-column-end")}}</li>
- <li><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Guide : le placement sur les lignes d'une grille CSS</a></li>
- <li>Tutoriel vidéo : <a href="https://gridbyexample.com/video/series-line-based-placement/">le placement sur les lignes (en anglais)</a></li>
-</ul>
+- {{cssxref("grid-row")}}
+- {{cssxref("grid-row-start")}}
+- {{cssxref("grid-row-end")}}
+- {{cssxref("grid-column-start")}}
+- {{cssxref("grid-column-end")}}
+- [Guide : le placement sur les lignes d'une grille CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
+- Tutoriel vidéo : [le placement sur les lignes (en anglais)](https://gridbyexample.com/video/series-line-based-placement/)

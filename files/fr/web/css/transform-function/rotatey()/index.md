@@ -8,60 +8,89 @@ tags:
   - Transformations CSS
 translation_of: Web/CSS/transform-function/rotateY()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La fonction <strong><code>rotateY()</code></strong> définit une rotation, qui déplace l'élément autour de l'axe des ordonnées, sans le déformer. L'angle de rotation est défini par l'argument passé à la fonction. Si l'angle indiqué est positif, le mouvement sera appliqué dans le sens horaire et sinon il sera appliqué dans le sens inverse des aiguilles d'une montre.</p>
+La fonction **`rotateY()`** définit une rotation, qui déplace l'élément autour de l'axe des ordonnées, sans le déformer. L'angle de rotation est défini par l'argument passé à la fonction. Si l'angle indiqué est positif, le mouvement sera appliqué dans le sens horaire et sinon il sera appliqué dans le sens inverse des aiguilles d'une montre.
 
-<div>{{EmbedInteractiveExample("pages/css/function-rotateY.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-rotateY.html")}}
 
-<p>L'axe de la rotation passe par l'origine du repère, définie par la propriété {{cssxref("transform-origin")}}.</p>
+L'axe de la rotation passe par l'origine du repère, définie par la propriété {{cssxref("transform-origin")}}.
 
-<p><code>rotateY(a)</code> est une notation raccourcie, équivalente à <code>rotate3D(0, 1, 0, a)</code>.</p>
+`rotateY(a)` est une notation raccourcie, équivalente à `rotate3D(0, 1, 0, a)`.
 
-<div class="note">
-  <p><strong>Note :</strong> Contrairement aux rotations appliqués dans le plan, la composition de rotations dans l'espace n'est pas commutative. Autrement dit, l'ordre dans lequel on applique les rotations est déterminant.</p>
-</div>
+> **Note :** Contrairement aux rotations appliqués dans le plan, la composition de rotations dans l'espace n'est pas commutative. Autrement dit, l'ordre dans lequel on applique les rotations est déterminant.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">rotateY(<em>a</em>)
-</pre>
+    rotateY(a)
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>a</code></dt>
- <dd>Une valeur de type {{cssxref("&lt;angle&gt;")}} qui représente l'angle de la rotation. Un angle positif indique une rotation appliquée dans le sens horaire, un angle négatif applique une rotation dans le sens anti-horaire.</dd>
-</dl>
+- `a`
+  - : Une valeur de type {{cssxref("&lt;angle&gt;")}} qui représente l'angle de la rotation. Un angle positif indique une rotation appliquée dans le sens horaire, un angle négatif applique une rotation dans le sens anti-horaire.
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-   <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-   <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-   <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td colspan="2">Cette transformation s'applique dans l'espace (3D) et ne peut pas être représentée en deux dimensions.</td>
-   <td colspan="1"><math> <mfenced><mtable><mtr><mtd>cos(a)</mtd><mtd>0</mtd><mtd>sin(a)</mtd></mtr><mtr><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>-sin(a)</mtd><mtd>0</mtd><mtd>cos(a)</mtd></mtr></mtable> </mfenced> </math></td>
-   <td colspan="1"><math><mfenced><mtable><mtr><mtd>cos(a)</mtd><mtd>0</mtd><mtd>sin(a)</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr><mtd>-sin(a)</mtd><mtd>0</mtd><mtd>cos(a)</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
+      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
+      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
+      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="2">
+        Cette transformation s'applique dans l'espace (3D) et ne peut pas être
+        représentée en deux dimensions.
+      </td>
+      <td colspan="1">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr><mtd>cos(a)</mtd><mtd>0</mtd><mtd>sin(a)</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
+              ><mtr
+                ><mtd>-sin(a)</mtd><mtd>0</mtd><mtd>cos(a)</mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td colspan="1">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd>cos(a)</mtd><mtd>0</mtd><mtd>sin(a)</mtd><mtd>0</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr
+                ><mtd>-sin(a)</mtd><mtd>0</mtd><mtd>cos(a)</mtd
+                ><mtd>0</mtd></mtr
+              ><mtr
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;toto&lt;/p&gt;
-&lt;p class="transformation"&gt;truc&lt;/p&gt;</pre>
+```html
+<p>toto</p>
+<p class="transformation">truc</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   width: 50px;
   height: 50px;
   background-color: teal;
@@ -71,38 +100,23 @@ translation_of: Web/CSS/transform-function/rotateY()
   transform: rotateY(60deg);
   background-color: blue;
 }
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples","100%","200")}}</p>
+{{EmbedLiveSample("Exemples","100%","200")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Transforms 2", "#funcdef-rotatey", "rotateY()")}}</td>
-   <td>{{Spec2("CSS Transforms 2")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                                     | Commentaires         |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName("CSS Transforms 2", "#funcdef-rotatey", "rotateY()")}} | {{Spec2("CSS Transforms 2")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>Voir la page sur le type de donnée <code><a href="/fr/docs/Web/CSS/transform-function#compatibilité_des_navigateurs">&lt;transform-function&gt;</a></code> pour les informations de compatibilité associées.</p>
+Voir la page sur le type de donnée [`<transform-function>`](/fr/docs/Web/CSS/transform-function#compatibilité_des_navigateurs) pour les informations de compatibilité associées.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("transform")}}</li>
- <li>{{cssxref("&lt;transform-function&gt;")}}</li>
-</ul>
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}

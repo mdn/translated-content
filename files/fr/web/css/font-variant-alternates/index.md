@@ -7,11 +7,12 @@ tags:
   - Reference
 translation_of: Web/CSS/font-variant-alternates
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>font-variant-alternates</code></strong> contrôle l'utilisation de glyphes alternatifs. Ces glyphes peuvent être référencé par les noms définis avec la règle @ {{cssxref("@font-feature-values")}}.</p>
+La propriété **`font-variant-alternates`** contrôle l'utilisation de glyphes alternatifs. Ces glyphes peuvent être référencé par les noms définis avec la règle @ {{cssxref("@font-feature-values")}}.
 
-<pre class="brush:css">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 font-variant-alternates: normal;
 font-variant-alternates: historical-forms;
 
@@ -28,58 +29,57 @@ font-variant-alternates: swash(ident1) annotation(ident2);
 font-variant-alternates: initial;
 font-variant-alternates: inherit;
 font-variant-alternates: unset;
-</pre>
+```
 
-<p>Ces règles @ définissent les noms associés aux valeurs OpenType pour les différents types de glyphes alternatifs (<code>stylistic</code>, <code>styleset</code>, <code>character-variant</code>, <code>swash</code>, <code>ornament</code> ou <code>annotation</code>). Ces propriétés permettent d'utiliser des noms adaptés (définis avec {{cssxref("@font-feature-values")}}) dans la feuille de style.</p>
+Ces règles @ définissent les noms associés aux valeurs OpenType pour les différents types de glyphes alternatifs (`stylistic`, `styleset`, `character-variant`, `swash`, `ornament` ou `annotation`). Ces propriétés permettent d'utiliser des noms adaptés (définis avec {{cssxref("@font-feature-values")}}) dans la feuille de style.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Cette propriété peut être définie selon deux formes :</p>
+Cette propriété peut être définie selon deux formes :
 
-<ul>
- <li>la première avec le mot-clé <code>normal</code></li>
- <li>la seconde avec un ou plusieurs mots-clés parmi ceux listés ci-aprés. S'il y a plusieurs mots-clés, ils sont séparés par des espaces. Les mots-clés peuvent être dans n'importe quel ordre.</li>
-</ul>
+- la première avec le mot-clé `normal`
+- la seconde avec un ou plusieurs mots-clés parmi ceux listés ci-aprés. S'il y a plusieurs mots-clés, ils sont séparés par des espaces. Les mots-clés peuvent être dans n'importe quel ordre.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Ce mot-clé désactive l'utilisation de tels glyphes alternatifs.</dd>
- <dt><code>historical-forms</code></dt>
- <dd>Ce mot-clé active l'affichage de formes historiques, c'est-à-dire des glyphes communs par le passé qui ne sont plus utilisés aujourd'hui. Cette valeur correspond à la valeur OpenType <code>hist</code>.</dd>
- <dt><code>stylistic()</code></dt>
- <dd>Cette fonction active l'affichage de formes stylistiques alternatives. Le paramètre passé à la fonction est un nom spécifique à la fonte associé à un nombre. Elle correspond à la valeur OpenType <code>salt</code>, par exemple <code>salt 2</code>.</dd>
- <dt><code>styleset()</code></dt>
- <dd>Cette fonction active l'utilisation d'un ensemble de caractères d'un style alternatif. Le paramètre est un nom spécifique à la fonte, associé à un nombre. Elle correspond à la valeur OpenType <code>ssXY</code> (par exemple <code>ss02</code>).</dd>
- <dt><code>character-variant()</code></dt>
- <dd>Cette fonction active l'utilisation d'un ensemble de caractères stylistiques alternatifs. Elle est semblable à <code>styleset()</code> mais n'implique pas de cohérence entre les différents caractères. Avec cette valeur, les différents caractères peuvent avoir un style indépendant qui peut ne pas être cohérent. Le paramètre passé à la fonction est un nom lié à la fonte auquel est associé un nombre. Elle correspond à la valeur OpenType <code>cvXY</code> (par exemple <code>cv02</code>).</dd>
- <dt><code>swash()</code></dt>
- <dd>Cette fonction active l'affichage des glypes <a href="https://fr.wikipedia.org/wiki/Lettre_orn%C3%A9e">pour les lettres ornées</a>. Le paramètre passé à la fonction est un nom lié à la fonte auquel est associé un nombre. Elle correspond aux valeurs OpenType <code>swsh</code> et <code>cswh</code> (par exemple <code>swsh 2</code> ou <code>cswh 2</code>).</dd>
- <dt><code>ornaments()</code></dt>
- <dd>Cette fonction active l'affichage des ornements tels que les <a href="https://fr.wikipedia.org/wiki/Fleuron_(typographie)">fleurons</a> et autres casseaux. Le paramètre passé à la fonction est un nom lié à la fonte auquel est associé un nombre. Cette valeur correspond à la valeur OpenType <code>ornm</code> (par exemple <code>ornm 2</code>).
- <div class="note">
-   <p><strong>Note :</strong> afin de préserver la sémantique de la fonte, les fondeurs sont invités à ne pas créer de casseaux qui correspondent aux caractères Unicode déjà définis comme variantes d'ornement pour la puce (U+2022). De nombreuses fontes passent outre cette règle et perdent ainsi en qualité.</p></div>
- </dd>
- <dt><code>annotation()</code></dt>
- <dd>Cette fonction active l'affichage des annotations (telles que les chiffres entourés ou les caractères inversés). Le paramètre est un nom lié à la fonte auquel est associé un nombre. Cette valeur correspond à la valeur OpenType <code>nalt</code> (par exemple <code>nalt 2</code>).</dd>
-</dl>
+- `normal`
+  - : Ce mot-clé désactive l'utilisation de tels glyphes alternatifs.
+- `historical-forms`
+  - : Ce mot-clé active l'affichage de formes historiques, c'est-à-dire des glyphes communs par le passé qui ne sont plus utilisés aujourd'hui. Cette valeur correspond à la valeur OpenType `hist`.
+- `stylistic()`
+  - : Cette fonction active l'affichage de formes stylistiques alternatives. Le paramètre passé à la fonction est un nom spécifique à la fonte associé à un nombre. Elle correspond à la valeur OpenType `salt`, par exemple `salt 2`.
+- `styleset()`
+  - : Cette fonction active l'utilisation d'un ensemble de caractères d'un style alternatif. Le paramètre est un nom spécifique à la fonte, associé à un nombre. Elle correspond à la valeur OpenType `ssXY` (par exemple `ss02`).
+- `character-variant()`
+  - : Cette fonction active l'utilisation d'un ensemble de caractères stylistiques alternatifs. Elle est semblable à `styleset()` mais n'implique pas de cohérence entre les différents caractères. Avec cette valeur, les différents caractères peuvent avoir un style indépendant qui peut ne pas être cohérent. Le paramètre passé à la fonction est un nom lié à la fonte auquel est associé un nombre. Elle correspond à la valeur OpenType `cvXY` (par exemple `cv02`).
+- `swash()`
+  - : Cette fonction active l'affichage des glypes [pour les lettres ornées](https://fr.wikipedia.org/wiki/Lettre_orn%C3%A9e). Le paramètre passé à la fonction est un nom lié à la fonte auquel est associé un nombre. Elle correspond aux valeurs OpenType `swsh` et `cswh` (par exemple `swsh 2` ou `cswh 2`).
+- `ornaments()`
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+  - : Cette fonction active l'affichage des ornements tels que les [fleurons](<https://fr.wikipedia.org/wiki/Fleuron_(typographie)>) et autres casseaux. Le paramètre passé à la fonction est un nom lié à la fonte auquel est associé un nombre. Cette valeur correspond à la valeur OpenType `ornm` (par exemple `ornm 2`).
+
+    > **Note :** afin de préserver la sémantique de la fonte, les fondeurs sont invités à ne pas créer de casseaux qui correspondent aux caractères Unicode déjà définis comme variantes d'ornement pour la puce (U+2022). De nombreuses fontes passent outre cette règle et perdent ainsi en qualité.
+
+- `annotation()`
+  - : Cette fonction active l'affichage des annotations (telles que les chiffres entourés ou les caractères inversés). Le paramètre est un nom lié à la fonte auquel est associé un nombre. Cette valeur correspond à la valeur OpenType `nalt` (par exemple `nalt 2`).
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;MDN c'est là !&lt;/p&gt;
-&lt;p class="variant"&gt;MDN c'est là !&lt;/p&gt;
-</pre>
+```html
+<p>MDN c'est là !</p>
+<p class="variant">MDN c'est là !</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">@font-feature-values "Leitura Display Swashes" {
+```css
+@font-feature-values "Leitura Display Swashes" {
   @swash { fancy: 1 }
 }
 
@@ -90,35 +90,23 @@ p {
 .variant {
   font-family: Leitura Display Swashes;
   font-variant-alternates: swash(fancy);
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>Pour que cet exemple fonctionne, il faut avoir installé la fonte Open Type Leitura Display Swashes. Une version de test est disponible sur <a href="https://fontsgeek.com">fontsgeek.com</a>.</p>
+Pour que cet exemple fonctionne, il faut avoir installé la fonte Open Type Leitura Display Swashes. Une version de test est disponible sur [fontsgeek.com](https://fontsgeek.com).
 
-<p>{{EmbedLiveSample('Exemples', '', '', '', 'Web/CSS/font-variant-alternates')}}</p>
+{{EmbedLiveSample('Exemples', '', '', '', 'Web/CSS/font-variant-alternates')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#propdef-font-variant-alternates', 'font-variant-alternates')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | État                             | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName('CSS3 Fonts', '#propdef-font-variant-alternates', 'font-variant-alternates')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.font-variant-alternates")}}</p>
+{{Compat("css.properties.font-variant-alternates")}}

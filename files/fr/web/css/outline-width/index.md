@@ -7,60 +7,61 @@ tags:
   - Reference
 translation_of: Web/CSS/outline-width
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété CSS <strong><code>outline-width</code></strong> est utilisée afin de définir l'épaisseur de la bordure (<em>outline</em>) d'un élément. Cette bordure est dessinée autour des éléments et délimite <a href="/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte">la boîte de bordure</a>. Visuellement, cela permet de faire ressortir l'élément.</p>
+La propriété CSS **`outline-width`** est utilisée afin de définir l'épaisseur de la bordure (_outline_) d'un élément. Cette bordure est dessinée autour des éléments et délimite [la boîte de bordure](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte). Visuellement, cela permet de faire ressortir l'élément.
 
-<div>{{EmbedInteractiveExample("pages/css/outline-width.html")}}</div>
+{{EmbedInteractiveExample("pages/css/outline-width.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs avec un mot clé */
+```css
+/* Valeurs avec un mot clé */
 outline-width: thin;
 outline-width: medium;
 outline-width: thick;
 
 /* Valeurs de longueur */
-/* Type &lt;length&gt;       */
+/* Type <length>       */
 outline-width: 1px;
 outline-width: 0.1em;
 
 /* Valeurs globales */
 outline-width: inherit;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>thin</code></dt>
- <dd>La largeur appliquée dépendra de l'agent utilisateur. On attend une largeur fine. Généralement, pour les navigateurs de bureau comme Firefox, cela correspondra à <code>1px</code>.</dd>
- <dt><code>medium</code></dt>
- <dd>La largeur appliquée dépendra de l'agent utilisateur. On attend une largeur moyenne. Généralement, pour les navigateurs de bureau comme Firefox, cela correspondra à <code>3px</code>.</dd>
- <dt><code>thick</code></dt>
- <dd>La largeur appliquée dépendra de l'agent utilisateur. On attend une largeur de trait prononcée. Généralement, pour les navigateurs de bureau comme Firefox, cela correspondra à <code>5px</code>.</dd>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Voir la page sur le type {{cssxref("&lt;length&gt;")}} pour les différentes valeurs correspondantes.</dd>
-</dl>
+- `thin`
+  - : La largeur appliquée dépendra de l'agent utilisateur. On attend une largeur fine. Généralement, pour les navigateurs de bureau comme Firefox, cela correspondra à `1px`.
+- `medium`
+  - : La largeur appliquée dépendra de l'agent utilisateur. On attend une largeur moyenne. Généralement, pour les navigateurs de bureau comme Firefox, cela correspondra à `3px`.
+- `thick`
+  - : La largeur appliquée dépendra de l'agent utilisateur. On attend une largeur de trait prononcée. Généralement, pour les navigateurs de bureau comme Firefox, cela correspondra à `5px`.
+- `<length>`
+  - : Voir la page sur le type {{cssxref("&lt;length&gt;")}} pour les différentes valeurs correspondantes.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;span id="thin"&gt;thin&lt;/span&gt;
-&lt;span id="medium"&gt;medium&lt;/span&gt;
-&lt;span id="thick"&gt;thick&lt;/span&gt;
-&lt;span id="deuxpixels"&gt;2px&lt;/span&gt;
-&lt;span id="unex"&gt;1ex&lt;/span&gt;
-&lt;span id="deuxem"&gt;2em&lt;/span&gt;
-</pre>
+```html
+<span id="thin">thin</span>
+<span id="medium">medium</span>
+<span id="thick">thick</span>
+<span id="deuxpixels">2px</span>
+<span id="unex">1ex</span>
+<span id="deuxem">2em</span>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">span {
+```css
+span {
   outline-style: solid;
   display: inline-block;
   margin: 20px;
@@ -89,43 +90,22 @@ outline-width: inherit;
 #deuxem {
   outline-width: 2em;
 }
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', '100%', '80')}}</p>
+{{EmbedLiveSample('Exemples', '100%', '80')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Basic UI', '#outline-width', 'outline-width')}}</td>
-   <td>{{Spec2('CSS3 Basic UI')}}</td>
-   <td>Aucun changement</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'outline-width')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td><code>outline-width</code> peut désormais être animée.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'ui.html#propdef-outline-width', 'outline-width')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | État                                     | Commentaires                                |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------- |
+| {{SpecName('CSS3 Basic UI', '#outline-width', 'outline-width')}}             | {{Spec2('CSS3 Basic UI')}}     | Aucun changement                            |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'outline-width')}}     | {{Spec2('CSS3 Transitions')}} | `outline-width` peut désormais être animée. |
+| {{SpecName('CSS2.1', 'ui.html#propdef-outline-width', 'outline-width')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                        |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.outline-width")}}</p>
+{{Compat("css.properties.outline-width")}}

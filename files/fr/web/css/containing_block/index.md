@@ -8,87 +8,78 @@ tags:
 translation_of: Web/CSS/Containing_block
 original_slug: Web/CSS/A_Propos_Du_Bloc_Conteneur
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Le <strong>bloc englobant (<em>containing block</em>)</strong> affecte souvent la taille et la position d'un élément. La plupart du temps, le bloc englobant est la <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model#les_propri%c3%a9t%c3%a9s_des_bo%c3%aetes">zone de contenu</a> de l'ancêtre de <a href="/fr/docs/Web/HTML/Block-level_elements">bloc</a> le plus proche mais cette règle n'est pas absolue. Dans cet article, nous verrons les différents facteurs qui participent à la définition du bloc englobant.</p>
+Le **bloc englobant (_containing block_)** affecte souvent la taille et la position d'un élément. La plupart du temps, le bloc englobant est la [zone de contenu](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#les_propri%c3%a9t%c3%a9s_des_bo%c3%aetes) de l'ancêtre de [bloc](/fr/docs/Web/HTML/Block-level_elements) le plus proche mais cette règle n'est pas absolue. Dans cet article, nous verrons les différents facteurs qui participent à la définition du bloc englobant.
 
-<p>Lorsqu'un agent utilisateur (un navigateur web par exemple) dispose un document, il génère une boîte pour chaque élément du document. Chaque boîte est divisée en quatre zones :</p>
+Lorsqu'un agent utilisateur (un navigateur web par exemple) dispose un document, il génère une boîte pour chaque élément du document. Chaque boîte est divisée en quatre zones :
 
-<ol>
- <li>La zone de contenu (<em>content area</em>)</li>
- <li>La zone de remplissage (<em>padding area</em>)</li>
- <li>La zone de bordure (<em>border area</em>)</li>
- <li>La zone de marge (<em>margin area</em>)</li>
-</ol>
+1.  La zone de contenu (_content area_)
+2.  La zone de remplissage (_padding area_)
+3.  La zone de bordure (_border area_)
+4.  La zone de marge (_margin area_)
 
-<p><img alt="Diagram of the box model" src="box-model.png"></p>
+![Diagram of the box model](box-model.png)
 
-<div class="note">
-<p><strong>Note :</strong> Voir <a href="/fr/docs/Apprendre/CSS/Introduction_%C3%A0_CSS/Le_mod%C3%A8le_de_bo%C3%AEte">cet article pour découvrir le modèle de boîtes</a> en CSS.</p>
-</div>
+> **Note :** Voir [cet article pour découvrir le modèle de boîtes](/fr/docs/Apprendre/CSS/Introduction_%C3%A0_CSS/Le_mod%C3%A8le_de_bo%C3%AEte) en CSS.
 
-<p>On pourrait penser que le bloc englobant d'un élément est toujours la zone de contenu de son élément parent. Toutefois, ce n'est pas toujours le cas. Voyons donc les facteurs qui déterminent ce bloc englobant.</p>
+On pourrait penser que le bloc englobant d'un élément est toujours la zone de contenu de son élément parent. Toutefois, ce n'est pas toujours le cas. Voyons donc les facteurs qui déterminent ce bloc englobant.
 
-<h2 id="Les_effets_du_bloc_englobant">Les effets du bloc englobant</h2>
+## Les effets du bloc englobant
 
-<p>Avant d'aller plus loin, voyons l'impact du bloc englobant sur un élément.</p>
+Avant d'aller plus loin, voyons l'impact du bloc englobant sur un élément.
 
-<p>Les dimensions et la position d'un élément sont souvent dépendants du bloc englobant. Les valeurs en pourcentages appliquées à des propriétés comme {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("margin")}} sont calculées relativement à la taille du bloc englobant. Il en va de même pour les propriétés de décalage des éléments positionnés de façon absolue (c'est-à-dire avec {{cssxref("position")}} qui vaut <code>absolute</code> ou <code>fixed</code>).</p>
+Les dimensions et la position d'un élément sont souvent dépendants du bloc englobant. Les valeurs en pourcentages appliquées à des propriétés comme {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("margin")}} sont calculées relativement à la taille du bloc englobant. Il en va de même pour les propriétés de décalage des éléments positionnés de façon absolue (c'est-à-dire avec {{cssxref("position")}} qui vaut `absolute` ou `fixed`).
 
-<h2 id="Identifier_le_bloc_englobant">Identifier le bloc englobant</h2>
+## Identifier le bloc englobant
 
-<p>Le bloc englobant est entièrement déterminé par la valeur de la propriété {{cssxref("position")}} pour l'élément :</p>
+Le bloc englobant est entièrement déterminé par la valeur de la propriété {{cssxref("position")}} pour l'élément :
 
-<ul>
- <li>Si la propriété <code>position</code><strong> </strong>vaut <code><strong>static</strong></code>, <code><strong>relative</strong></code> ou <code><strong>sticky</strong></code>, le bloc englobant est constitué par le bord de la boîte de contenu de l'ancêtre le plus proche qui est un conteneur de bloc (c'est-à-dire qui est un élément avec <code>display</code> qui vaut <code>inline-block</code>, <code>block</code> ou <code>list-item</code>) ou qui crée un contexte de formatage (tel qu'un conteneur de tableau, un conteneur flexible, un conteneur de grille ou le conteneur du bloc même).</li>
- <li>Si la propriété <code>position</code> vaut <code><strong>absolute</strong></code>, le bloc englobant est constitué par le bord de la boîte de remplissage (<em>padding</em>) de l'ancêtre le plus proche dont la valeur de <code>position</code> est différente de <code>static</code> (<code>fixed</code>, <code>absolute</code>, <code>relative</code> ou <code>sticky</code>).</li>
- <li>Si la propriété <code>position</code> vaut <code><strong>fixed</strong></code>, le bloc englobant est formé par le {{glossary("viewport")}} (ou la page dans le cas des média paginés).</li>
- <li>Si la propriété <code>position</code><strong> </strong>vaut <code><strong>absolute</strong></code> ou <code><strong>fixed</strong></code>, le bloc englobant peut également être constitué par le bord de la boîte de remplissage le plus proche qui a :
-  <ol>
-   <li>Une propriété {{cssxref("transform")}} ou {{cssxref("perspective")}} avec une valeur différente de <code>none</code></li>
-   <li>Une propriété {{cssxref("will-change")}} qui vaut <code>transform</code> ou <code>perspective</code></li>
-   <li>Une propriété {{cssxref("filter")}} différente de <code>none</code> ou une propriété <code>will-change</code> différente of <code>filter</code> (ne fonctionne que pour Firefox).</li>
-   <li>Une propriété {{cssxref("contain")}} qui vaut <code>paint</code>.</li>
-  </ol>
- </li>
-</ul>
+- Si la propriété `position`\*\* **vaut **`static`**, **`relative`** ou **`sticky`\*\*, le bloc englobant est constitué par le bord de la boîte de contenu de l'ancêtre le plus proche qui est un conteneur de bloc (c'est-à-dire qui est un élément avec `display` qui vaut `inline-block`, `block` ou `list-item`) ou qui crée un contexte de formatage (tel qu'un conteneur de tableau, un conteneur flexible, un conteneur de grille ou le conteneur du bloc même).
+- Si la propriété `position` vaut **`absolute`**, le bloc englobant est constitué par le bord de la boîte de remplissage (_padding_) de l'ancêtre le plus proche dont la valeur de `position` est différente de `static` (`fixed`, `absolute`, `relative` ou `sticky`).
+- Si la propriété `position` vaut **`fixed`**, le bloc englobant est formé par le {{glossary("viewport")}} (ou la page dans le cas des média paginés).
+- Si la propriété `position`\*\* **vaut **`absolute`** ou **`fixed`\*\*, le bloc englobant peut également être constitué par le bord de la boîte de remplissage le plus proche qui a :
 
-<div class="note">
-<p><strong>Note :</strong> Le bloc englobant contenant l'élément racine ({{HTMLElement("html")}}) est situé dans un rectangle appelé <strong>bloc englobant initial</strong>. Ce dernier a les dimensions de la zone d'affichage (<em>viewport</em>) ou de la page (pour les média paginés).</p>
-</div>
+  1.  Une propriété {{cssxref("transform")}} ou {{cssxref("perspective")}} avec une valeur différente de `none`
+  2.  Une propriété {{cssxref("will-change")}} qui vaut `transform` ou `perspective`
+  3.  Une propriété {{cssxref("filter")}} différente de `none` ou une propriété `will-change` différente of `filter` (ne fonctionne que pour Firefox).
+  4.  Une propriété {{cssxref("contain")}} qui vaut `paint`.
 
-<h2 id="Calcul_des_pourcentages_à_partir_du_bloc_englobant">Calcul des pourcentages à partir du bloc englobant</h2>
+> **Note :** Le bloc englobant contenant l'élément racine ({{HTMLElement("html")}}) est situé dans un rectangle appelé **bloc englobant initial**. Ce dernier a les dimensions de la zone d'affichage (_viewport_) ou de la page (pour les média paginés).
 
-<p>Comme mentionné ci-avant, lorsque certaines propriétés ont une valeur en pourcentage, la valeur calculée dépend du bloc contenant l'élément. Les propriétés qui fonctionnent de cette manière sont les propriétés <em><strong>box model</strong></em> et <em><strong>offset</strong></em> :</p>
+## Calcul des pourcentages à partir du bloc englobant
 
-<ol>
- <li>Les valeurs calculées des propriétés {{cssxref("height")}}, {{cssxref("top")}} et {{cssxref("bottom")}} sont construites à partir de la hauteur du bloc englobant.</li>
- <li>Les valeurs calculées des propriétés {{cssxref("width")}}, {{cssxref("left")}}, {{cssxref("right")}}, {{cssxref("padding")}} et {{cssxref("margin")}} sont calculées à partir de la largeur (<code>width</code>) du bloc englobant.</li>
-</ol>
+Comme mentionné ci-avant, lorsque certaines propriétés ont une valeur en pourcentage, la valeur calculée dépend du bloc contenant l'élément. Les propriétés qui fonctionnent de cette manière sont les propriétés **_box model_** et **_offset_** :
 
-<h2 id="Quelques_exemples">Quelques exemples</h2>
+1.  Les valeurs calculées des propriétés {{cssxref("height")}}, {{cssxref("top")}} et {{cssxref("bottom")}} sont construites à partir de la hauteur du bloc englobant.
+2.  Les valeurs calculées des propriétés {{cssxref("width")}}, {{cssxref("left")}}, {{cssxref("right")}}, {{cssxref("padding")}} et {{cssxref("margin")}} sont calculées à partir de la largeur (`width`) du bloc englobant.
 
-<p>Le code HTML utilisé pour les exemples suivants sera :</p>
+## Quelques exemples
 
-<pre class="brush: html">&lt;body&gt;
-  &lt;section&gt;
-    &lt;p&gt;Et voici un paragraphe !&lt;/p&gt;
-  &lt;/section&gt;
-&lt;/body&gt;
-</pre>
+Le code HTML utilisé pour les exemples suivants sera :
 
-<h3 id="Premier_exemple">Premier exemple</h3>
+```html
+<body>
+  <section>
+    <p>Et voici un paragraphe !</p>
+  </section>
+</body>
+```
 
-<p>Dans cet exemple, le paragraphe est positionné de façon statique et son bloc englobant est la zone de contenu de {{HTMLElement("section")}} car cet élément est l'ancêtre le plus proche qui est un conteneur de bloc.</p>
+### Premier exemple
 
-<pre class="brush: html hidden">&lt;body&gt;
-  &lt;section&gt;
-    &lt;p&gt;Et voici un paragraphe !&lt;/p&gt;
-  &lt;/section&gt;
-&lt;/body&gt;
-</pre>
+Dans cet exemple, le paragraphe est positionné de façon statique et son bloc englobant est la zone de contenu de {{HTMLElement("section")}} car cet élément est l'ancêtre le plus proche qui est un conteneur de bloc.
 
-<pre class="brush: css">body {
+```html hidden
+<body>
+  <section>
+    <p>Et voici un paragraphe !</p>
+  </section>
+</body>
+```
+
+```css
+body {
   background: beige;
 }
 
@@ -106,22 +97,24 @@ p {
   padding: 5%;  /* == 400px * .05 = 20px */
   background: cyan;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Premier_exemple','100%','300')}}</p>
+{{EmbedLiveSample('Premier_exemple','100%','300')}}
 
-<h3 id="Deuxième_exemple">Deuxième exemple</h3>
+### Deuxième exemple
 
-<p>Dans cet exemple, le bloc englobant est formé par l'élément {{HTMLElement("body")}}<strong> </strong>car <code>&lt;section&gt;</code> n'est pas un conteneur de bloc en raison de <code>display: inline</code> et il ne crée pas de contexte de formatage.</p>
+Dans cet exemple, le bloc englobant est formé par l'élément {{HTMLElement("body")}}\*\* \*\*car `<section>` n'est pas un conteneur de bloc en raison de `display: inline` et il ne crée pas de contexte de formatage.
 
-<pre class="brush: html">&lt;body&gt;
-  &lt;section&gt;
-    &lt;p&gt;Et voici un paragraphe !&lt;/p&gt;
-  &lt;/section&gt;
-&lt;/body&gt;
-</pre>
+```html
+<body>
+  <section>
+    <p>Et voici un paragraphe !</p>
+  </section>
+</body>
+```
 
-<pre class="brush: css">body {
+```css
+body {
   background: beige;
 }
 
@@ -135,22 +128,24 @@ p {
   height: 200px;  /* Note: a percentage would be 0 */
   background: cyan;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Deuxième_exemple','100%','300')}}</p>
+{{EmbedLiveSample('Deuxième_exemple','100%','300')}}
 
-<h3 id="Troisième_exemple">Troisième exemple</h3>
+### Troisième exemple
 
-<p>Ici, le bloc englobant du paragraphe est <code>&lt;section&gt;</code> car la propriété <code>position</code> de ce dernier vaut <code>absolute</code>. Les valeurs exprimées en pourcentages et associées au paragraphe sont relatives à la zone de remplissage du bloc englobant (ce ne serait pas le cas si la propriété {{cssxref("box-sizing")}} du bloc englobant valait <code>border-box</code>).</p>
+Ici, le bloc englobant du paragraphe est `<section>` car la propriété `position` de ce dernier vaut `absolute`. Les valeurs exprimées en pourcentages et associées au paragraphe sont relatives à la zone de remplissage du bloc englobant (ce ne serait pas le cas si la propriété {{cssxref("box-sizing")}} du bloc englobant valait `border-box`).
 
-<pre class="brush: html hidden">&lt;body&gt;
-  &lt;section&gt;
-    &lt;p&gt;Et voici un paragraphe !&lt;/p&gt;
-  &lt;/section&gt;
-&lt;/body&gt;
-</pre>
+```html hidden
+<body>
+  <section>
+    <p>Et voici un paragraphe !</p>
+  </section>
+</body>
+```
 
-<pre class="brush: css">body {
+```css
+body {
   background: beige;
 }
 
@@ -172,22 +167,24 @@ p {
   padding: 5%;  /* == (400px + 20px + 20px) * .05 = 22px */
   background: cyan;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Troisième_exemple','100%','300')}}</p>
+{{EmbedLiveSample('Troisième_exemple','100%','300')}}
 
-<h3 id="Quatrième_exemple">Quatrième exemple</h3>
+### Quatrième exemple
 
-<p>Dans cet exemple, la propriété <code>position</code> du paragraphe vaut <code>fixed</code>. Le bloc englobant est donc le bloc englobant initial (c'est-à-dire le <em>viewport</em> pour les écrans). Aussi, les dimensions du paragraphe changent selon la taille de la fenêtre du navigateur.</p>
+Dans cet exemple, la propriété `position` du paragraphe vaut `fixed`. Le bloc englobant est donc le bloc englobant initial (c'est-à-dire le _viewport_ pour les écrans). Aussi, les dimensions du paragraphe changent selon la taille de la fenêtre du navigateur.
 
-<pre class="brush: html hidden">&lt;body&gt;
-  &lt;section&gt;
-    &lt;p&gt;Et voici un paragraphe !&lt;/p&gt;
-  &lt;/section&gt;
-&lt;/body&gt;
-</pre>
+```html hidden
+<body>
+  <section>
+    <p>Et voici un paragraphe !</p>
+  </section>
+</body>
+```
 
-<pre class="brush: css">body {
+```css
+body {
   background: beige;
 }
 
@@ -207,22 +204,24 @@ p {
   padding: 5%;  /* == (5vw - (width of vertical scrollbar)) */
   background: cyan;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Quatrième_exemple','100%','300')}}</p>
+{{EmbedLiveSample('Quatrième_exemple','100%','300')}}
 
-<h3 id="Cinquième_exemple">Cinquième exemple</h3>
+### Cinquième exemple
 
-<p>Dans cet exemple, la propriété <code>position</code> du paragraphe vaut <code>absolute</code>. Son bloc englobant est donc <code>&lt;section&gt;</code> car c'est l'ancêtre le plus proche dont la propriété {{cssxref("transform")}} ne vaut pas <code>none</code>.</p>
+Dans cet exemple, la propriété `position` du paragraphe vaut `absolute`. Son bloc englobant est donc `<section>` car c'est l'ancêtre le plus proche dont la propriété {{cssxref("transform")}} ne vaut pas `none`.
 
-<pre class="brush: html hidden">&lt;body&gt;
-  &lt;section&gt;
-    &lt;p&gt;Et voici un paragraphe !&lt;/p&gt;
-  &lt;/section&gt;
-&lt;/body&gt;
-</pre>
+```html hidden
+<body>
+  <section>
+    <p>Et voici un paragraphe !</p>
+  </section>
+</body>
+```
 
-<pre class="brush: css">body {
+```css
+body {
   background: beige;
 }
 
@@ -243,12 +242,10 @@ p {
   padding: 5%;  /* == 20px */
   background: cyan;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Cinquième_exemple','100%','300')}}</p>
+{{EmbedLiveSample('Cinquième_exemple','100%','300')}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>La propriété {{cssxref("all")}} permet de réinitialiser l'ensemble des déclarations CSS dans un certain état.</li>
-</ul>
+- La propriété {{cssxref("all")}} permet de réinitialiser l'ensemble des déclarations CSS dans un certain état.

@@ -8,44 +8,37 @@ tags:
 translation_of: Web/CSS/CSS_Flexible_Box_Layout/Mixins
 original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Voici un ensemble de <em>mixins</em> pour vous permettre de bidouiller avec les boîtes flexibles grâce au support natif des navigateurs actuels.</p>
+Voici un ensemble de _mixins_ pour vous permettre de bidouiller avec les boîtes flexibles grâce au support natif des navigateurs actuels.
 
-<p>Dans ces <em>mixins</em>, on utilisera :</p>
+Dans ces _mixins_, on utilisera :
 
-<ul>
- <li>Des <em>fallbacks</em> avec l'ancienne syntaxe 'box' (Firefox et les anciens WebKit) et les syntaxes préfixées (IE10, les navigateurs WebKit sans ajout de <code>flex</code>)</li>
- <li>La syntaxe finale standard (Firefox, Safari, Chrome, IE11, Opera)</li>
-</ul>
+- Des _fallbacks_ avec l'ancienne syntaxe 'box' (Firefox et les anciens WebKit) et les syntaxes préfixées (IE10, les navigateurs WebKit sans ajout de `flex`)
+- La syntaxe finale standard (Firefox, Safari, Chrome, IE11, Opera)
 
-<p>Ces <em>mixins</em> ont été inspirés par : <a href="https://dev.opera.com/articles/advanced-cross-browser-flexbox/">https://dev.opera.com/articles/view/advanced-cross-browser-flexbox/</a></p>
+Ces _mixins_ ont été inspirés par : [https://dev.opera.com/articles/view/advanced-cross-browser-flexbox/](https://dev.opera.com/articles/advanced-cross-browser-flexbox/)
 
-<p>Et les articles suivants ont été d'une aide précieuse :</p>
+Et les articles suivants ont été d'une aide précieuse :
 
-<ul>
- <li><a href="https://w3.org/tr/css3-flexbox/">https://w3.org/tr/css3-flexbox/</a></li>
- <li><a href="https://msdn.microsoft.com/en-us/library/ie/hh772069(v=vs.85).aspx">https://msdn.microsoft.com/en-us/library/ie/hh772069(v=vs.85).aspx</a></li>
- <li><a href="https://css-tricks.com/using-flexbox/">https://css-tricks.com/using-flexbox/</a></li>
- <li><a href="https://dev.opera.com/articles/view/advanced-cross-browser-flexbox/">https://dev.opera.com/articles/view/advanced-cross-browser-flexbox/</a></li>
- <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Un guide complet sur Flexbox | CSS-Tricks</a></li>
- <li><a href="https://demos.scotch.io/visual-guide-to-css3-flexbox-flexbox-playground/demos/">Un guide visuel pour les flexbox CSS3 : Flexbox Playground</a></li>
-</ul>
+- <https://w3.org/tr/css3-flexbox/>
+- <https://msdn.microsoft.com/en-us/library/ie/hh772069(v=vs.85).aspx>
+- <https://css-tricks.com/using-flexbox/>
+- <https://dev.opera.com/articles/view/advanced-cross-browser-flexbox/>
+- [Un guide complet sur Flexbox | CSS-Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [Un guide visuel pour les flexbox CSS3 : Flexbox Playground](https://demos.scotch.io/visual-guide-to-css3-flexbox-flexbox-playground/demos/)
 
-<div class="note">
-<p><strong>Note :</strong> Actuellement, les mixins ne sont pas pris en charge nativement par les navigateurs. Il faut utiliser un pré-processeur CSS afin de tirer parti des techniques suivantes. Cependant, les pré-processeurs ne font que générer du code CSS valide et on pourra donc appliquer les techniques précédentes en utilisant du « pur » CSS si on le souhaite.</p>
-</div>
+> **Note :** Actuellement, les mixins ne sont pas pris en charge nativement par les navigateurs. Il faut utiliser un pré-processeur CSS afin de tirer parti des techniques suivantes. Cependant, les pré-processeurs ne font que générer du code CSS valide et on pourra donc appliquer les techniques précédentes en utilisant du « pur » CSS si on le souhaite.
 
-<h3 id="Les_conteneurs_flexibles">Les conteneurs flexibles</h3>
+### Les conteneurs flexibles
 
-<p>En utilisant la valeur <code>flex</code> pour la propriété {{cssxref("display")}}, on génère une boîte pour un conteneur flexible de bloc. La valeur <code>inline-flex</code> permet quant à elle de générer un conteneur flexible en ligne (<em>inline</em>).</p>
+En utilisant la valeur `flex` pour la propriété {{cssxref("display")}}, on génère une boîte pour un conteneur flexible de bloc. La valeur `inline-flex` permet quant à elle de générer un conteneur flexible en ligne (_inline_).
 
-<ul>
- <li>Valeurs : <code>flex</code> | <code>inline-flex</code></li>
- <li><a href="https://drafts.csswg.org/css-flexbox/#flex-containers">Spécifications</a></li>
-</ul>
+- Valeurs : `flex` | `inline-flex`
+- [Spécifications](https://drafts.csswg.org/css-flexbox/#flex-containers)
 
-<pre class="brush: css">@mixin flexbox {
+```css
+@mixin flexbox {
   display: -webkit-box;
   display: -moz-box;
   display: -webkit-flex;
@@ -54,9 +47,11 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
 }
 
 // Exemple d'utilisation
-%flexbox { @include flexbox; }</pre>
+%flexbox { @include flexbox; }
+```
 
-<pre class="brush: css">@mixin inline-flex {
+```css
+@mixin inline-flex {
   display: -webkit-inline-box;
   display: -moz-inline-box;
   display: -webkit-inline-flex;
@@ -64,18 +59,18 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
   display: inline-flex;
 }
 
-%inline-flex { @include inline-flex; }</pre>
+%inline-flex { @include inline-flex; }
+```
 
-<h3 id="Direction_des_boîtes_flexibles">Direction des boîtes flexibles</h3>
+### Direction des boîtes flexibles
 
-<p>La propriété {{cssxref("flex-direction")}} indique la façon dont les objets flexibles sont organisés dans le conteneur flexible en définissant la direction principale du conteneur. Autrement dit, elle détermine la direction selon laquelle les éléments flexibles sont disposés.</p>
+La propriété {{cssxref("flex-direction")}} indique la façon dont les objets flexibles sont organisés dans le conteneur flexible en définissant la direction principale du conteneur. Autrement dit, elle détermine la direction selon laquelle les éléments flexibles sont disposés.
 
-<ul>
- <li>Valeurs possibles : <code>row</code> (la valeur par défaut)| <code>row-reverse</code> | <code>column</code> | <code>column-reverse</code></li>
- <li><a href="https://drafts.csswg.org/css-flexbox/#flex-direction-property">Spécification</a></li>
-</ul>
+- Valeurs possibles : `row` (la valeur par défaut)| `row-reverse` | `column` | `column-reverse`
+- [Spécification](https://drafts.csswg.org/css-flexbox/#flex-direction-property)
 
-<pre class="brush: css">@mixin flex-direction($value: row) {
+```css
+@mixin flex-direction($value: row) {
   @if $value == row-reverse {
     -webkit-box-direction: reverse;
     -webkit-box-orient: horizontal;
@@ -103,18 +98,18 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
 }
 
 // Version plus courte :
-@mixin flex-dir($args...) { @include flex-direction($args...); }</pre>
+@mixin flex-dir($args...) { @include flex-direction($args...); }
+```
 
-<h3 id="flex-wrap"><code>flex-wrap</code></h3>
+### `flex-wrap`
 
-<p>La propriété {{cssxref("flex-wrap")}} permet de contrôler si le conteneur flexible s'étend sur une ou sur un plusieurs lignes ainsi que la direction de l'axe secondaire (qui définit la direction dans laquelle les lignes sont « empilées »).</p>
+La propriété {{cssxref("flex-wrap")}} permet de contrôler si le conteneur flexible s'étend sur une ou sur un plusieurs lignes ainsi que la direction de l'axe secondaire (qui définit la direction dans laquelle les lignes sont « empilées »).
 
-<ul>
- <li>Valeurs possibles : <code>nowrap</code> (la valeur par défaut)| <code>wrap</code> | <code>wrap-reverse</code></li>
- <li><a href="https://drafts.csswg.org/css-flexbox/#flex-wrap-property">Spécification</a></li>
-</ul>
+- Valeurs possibles : `nowrap` (la valeur par défaut)| `wrap` | `wrap-reverse`
+- [Spécification](https://drafts.csswg.org/css-flexbox/#flex-wrap-property)
 
-<pre class="brush: css">@mixin flex-wrap($value: nowrap) {
+```css
+@mixin flex-wrap($value: nowrap) {
   // No Webkit/FF Box fallback.
   -webkit-flex-wrap: $value;
   @if $value == nowrap {
@@ -123,98 +118,98 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
     -ms-flex-wrap: $value;
   }
   flex-wrap: $value;
-}</pre>
+}
+```
 
-<h3 id="flex-flow"><code>flex-flow</code></h3>
+### `flex-flow`
 
-<p>La propriété {{cssxref("flex-flow")}} est <a href="/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies">une propriété raccourcie</a> pour définir <code>flex-direction</code> et <code>flex-wrap</code> qui permettent respectivement de définir l'axe principal et l'axe secondaire.</p>
+La propriété {{cssxref("flex-flow")}} est [une propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) pour définir `flex-direction` et `flex-wrap` qui permettent respectivement de définir l'axe principal et l'axe secondaire.
 
-<ul>
- <li>Valeur par défaut : <code>row</code> (la valeur par défaut)| <code>nowrap</code></li>
- <li><a href="https://drafts.csswg.org/css-flexbox/#flex-flow-property">Spécification</a></li>
-</ul>
+- Valeur par défaut : `row` (la valeur par défaut)| `nowrap`
+- [Spécification](https://drafts.csswg.org/css-flexbox/#flex-flow-property)
 
-<pre class="brush: css">@mixin flex-flow($values: (row nowrap)) {
+```css
+@mixin flex-flow($values: (row nowrap)) {
   // No Webkit/FF Box fallback.
   -webkit-flex-flow: $values;
   -ms-flex-flow: $values;
   flex-flow: $values;
-}</pre>
+}
+```
 
-<h3 id="order"><code>order</code></h3>
+### `order`
 
-<p>La propriété {{cssxref("order")}}  contrôle l'ordre dans lequel les éléments apparaissent dans le conteneur flexible en les affectant à des groupes ordinaux.</p>
+La propriété {{cssxref("order")}}  contrôle l'ordre dans lequel les éléments apparaissent dans le conteneur flexible en les affectant à des groupes ordinaux.
 
-<ul>
- <li>Valeur : un entier ({{cssxref("&lt;integer&gt;")}} (0 est la valeur par défaut)</li>
- <li><a href="https://drafts.csswg.org/css-flexbox/#order-property">Spécification</a></li>
-</ul>
+- Valeur : un entier ({{cssxref("&lt;integer&gt;")}} (0 est la valeur par défaut)
+- [Spécification](https://drafts.csswg.org/css-flexbox/#order-property)
 
-<pre class="brush: css">@mixin order($int: 0) {
+```css
+@mixin order($int: 0) {
   -webkit-box-ordinal-group: $int + 1;
   -moz-box-ordinal-group: $int + 1;
   -webkit-order: $int;
   -ms-flex-order: $int;
   order: $int;
-}</pre>
+}
+```
 
-<h3 id="flex-grow"><code>flex-grow</code></h3>
+### `flex-grow`
 
-<p>La propriété {{cssxref("flex-grow")}} définit le facteur d'expansion flexible. Les nombres négatifs ne sont pas autorisés.</p>
+La propriété {{cssxref("flex-grow")}} définit le facteur d'expansion flexible. Les nombres négatifs ne sont pas autorisés.
 
-<ul>
- <li>Valeur : un entier ({{cssxref("&lt;integer&gt;")}} (1 est la valeur par défaut)</li>
- <li><a href="https://drafts.csswg.org/css-flexbox/#flex-grow-property">Spécification</a></li>
-</ul>
+- Valeur : un entier ({{cssxref("&lt;integer&gt;")}} (1 est la valeur par défaut)
+- [Spécification](https://drafts.csswg.org/css-flexbox/#flex-grow-property)
 
-<pre class="brush: css">@mixin flex-grow($int: 1) {
+```css
+@mixin flex-grow($int: 1) {
   -webkit-box-flex: $int;
   -moz-box-flex: $int;
   -webkit-flex-grow: $int;
   -ms-flex: $int;
   flex-grow: $int;
-}</pre>
+}
+```
 
-<h3 id="flex-shrink"><code>flex-shrink</code></h3>
+### `flex-shrink`
 
-<p>La propriété {{cssxref("flex-shrink")}} permet de définir le facteur de réduction des éléments flexibles. Les nombres négatifs ne sont pas autorisés.</p>
+La propriété {{cssxref("flex-shrink")}} permet de définir le facteur de réduction des éléments flexibles. Les nombres négatifs ne sont pas autorisés.
 
-<ul>
- <li>Valeur : un entier ({{cssxref("&lt;integer&gt;")}} (1 est la valeur par défaut)</li>
- <li><a href="https://drafts.csswg.org/css-flexbox/#flex-shrink-property">Spécification</a></li>
-</ul>
+- Valeur : un entier ({{cssxref("&lt;integer&gt;")}} (1 est la valeur par défaut)
+- [Spécification](https://drafts.csswg.org/css-flexbox/#flex-shrink-property)
 
-<pre class="brush: css">@mixin flex-shrink($int: 0) {
+```css
+@mixin flex-shrink($int: 0) {
   -webkit-flex-shrink: $int;
   -moz-flex-shrink: $int;
   -ms-flex: $int;
   flex-shrink: $int;
-}</pre>
+}
+```
 
-<h3 id="flex-basis"><code>flex-basis</code></h3>
+### `flex-basis`
 
-<p>La propriété {{cssxref("flex-basis")}} permet de définir la longueur de base à partir de laquelle s'étendre ou se réduire. Les longueurs négatives ne sont pas autorisées.</p>
+La propriété {{cssxref("flex-basis")}} permet de définir la longueur de base à partir de laquelle s'étendre ou se réduire. Les longueurs négatives ne sont pas autorisées.
 
-<ul>
- <li>Valeurs : voir la page {{cssxref("flex-basis")}}, la valeur par défaut est <code>auto</code>.</li>
- <li><a href="https://drafts.csswg.org/css-flexbox/#flex-basis-property">Spécification</a></li>
-</ul>
+- Valeurs : voir la page {{cssxref("flex-basis")}}, la valeur par défaut est `auto`.
+- [Spécification](https://drafts.csswg.org/css-flexbox/#flex-basis-property)
 
-<pre class="brush: css">@mixin flex-basis($value: auto) {
+```css
+@mixin flex-basis($value: auto) {
   -webkit-flex-basis: $value;
   flex-basis: $value;
-}</pre>
+}
+```
 
-<h3 id="flex"><code>flex</code></h3>
+### `flex`
 
-<p>La <a href="/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies">propriété raccourcie</a> {{cssxref("flex")}} permet de définir les composants d'une longueur flexible : le facteur d'expansion (<code>flex-grow</code>), le facteur de réduction (<code>flex-shrink</code>) et la longueur de base (<code>flex-basis</code>). Lorsqu'un élément est un élément flexible, c'est <code>flex</code> qui sera utilisée (plutôt que <code>width</code> ou <code>height</code>) afin de déterminer la taille de l'élément. Si l'élément n'est pas un objet flexible, <code>flex</code> n'aura aucun effet.</p>
+La [propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) {{cssxref("flex")}} permet de définir les composants d'une longueur flexible : le facteur d'expansion (`flex-grow`), le facteur de réduction (`flex-shrink`) et la longueur de base (`flex-basis`). Lorsqu'un élément est un élément flexible, c'est `flex` qui sera utilisée (plutôt que `width` ou `height`) afin de déterminer la taille de l'élément. Si l'élément n'est pas un objet flexible, `flex` n'aura aucun effet.
 
-<ul>
- <li>Valeur : voir la page {{cssxref("flex")}} pour les valeurs possibles et la valeur par défaut</li>
- <li><a href="https://drafts.csswg.org/css-flexbox/#flex-property">Spécification</a></li>
-</ul>
+- Valeur : voir la page {{cssxref("flex")}} pour les valeurs possibles et la valeur par défaut
+- [Spécification](https://drafts.csswg.org/css-flexbox/#flex-property)
 
-<pre class="brush: css">@mixin flex($fg: 1, $fs: 0, $fb: auto) {
+```css
+@mixin flex($fg: 1, $fs: 0, $fb: auto) {
 
   // Définir une variable pour l'utiliser
   // avec les propriétés box-flex
@@ -231,22 +226,20 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
   -webkit-flex: $fg $fs $fb;
   -ms-flex: $fg $fs $fb;
   flex: $fg $fs $fb;
-}</pre>
+}
+```
 
-<h3 id="justify-content"><code>justify-content</code></h3>
+### `justify-content`
 
-<p>La propriété {{cssxref("justify-content")}} permet d'aligner les éléments flexibles le long de l'axe principal pour la ligne en cours dans le conteneur flexible. Cet alignement s'effectue après que les longueurs flexibles et les marges automatiques aient été résolues. Généralement, cela permet de distribuer l'espace restant entre les éléments d'une ligne qui ne sont pas flexibles ou qui ont atteint leur taille maximale. Cela contrôle également le comportement des éléments lorsqu'ils dépassent de la ligne.</p>
+La propriété {{cssxref("justify-content")}} permet d'aligner les éléments flexibles le long de l'axe principal pour la ligne en cours dans le conteneur flexible. Cet alignement s'effectue après que les longueurs flexibles et les marges automatiques aient été résolues. Généralement, cela permet de distribuer l'espace restant entre les éléments d'une ligne qui ne sont pas flexibles ou qui ont atteint leur taille maximale. Cela contrôle également le comportement des éléments lorsqu'ils dépassent de la ligne.
 
-<div class="note">
-<p><strong>Note :</strong> Les valeurs de la forme <code>space-*</code> ne sont pas prises en charge avec les anciennes syntaxes.</p>
-</div>
+> **Note :** Les valeurs de la forme `space-*` ne sont pas prises en charge avec les anciennes syntaxes.
 
-<ul>
- <li>Valeurs : <code>flex-start</code> (la valeur par défaut)| <code>flex-end</code> | <code>center</code> | <code>space-between</code> | <code>space-around</code></li>
- <li><a href="https://drafts.csswg.org/css-flexbox/#justify-content-property">Spécification</a></li>
-</ul>
+- Valeurs : `flex-start` (la valeur par défaut)| `flex-end` | `center` | `space-between` | `space-around`
+- [Spécification](https://drafts.csswg.org/css-flexbox/#justify-content-property)
 
-<pre class="brush: css">@mixin justify-content($value: flex-start) {
+```css
+@mixin justify-content($value: flex-start) {
   @if $value == flex-start {
     -webkit-box-pack: start;
     -moz-box-pack: start;
@@ -270,18 +263,18 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
   justify-content: $value;
 }
   // Version plus courte :
-  @mixin flex-just($args...) { @include justify-content($args...); }</pre>
+  @mixin flex-just($args...) { @include justify-content($args...); }
+```
 
-<h3 id="align-items"><code>align-items</code></h3>
+### `align-items`
 
-<p>Les objets flexibles peuvent être alignés le long de l'axe secondaire (comme pour <code>justify-content</code> mais dans l'axe perpendiculaire). {{cssxref("align-items")}} définit l'alignement par défaut de tous les objets du conteneur flexible. <code>align-self</code> permet aux objets flexibles de surcharger cette valeur (pour les objets anonymes, <code>align-self</code> correspondra toujours à <code>align-items</code>).</p>
+Les objets flexibles peuvent être alignés le long de l'axe secondaire (comme pour `justify-content` mais dans l'axe perpendiculaire). {{cssxref("align-items")}} définit l'alignement par défaut de tous les objets du conteneur flexible. `align-self` permet aux objets flexibles de surcharger cette valeur (pour les objets anonymes, `align-self` correspondra toujours à `align-items`).
 
-<ul>
- <li>Valeurs : <code>flex-start</code> | <code>flex-end</code> | <code>center</code> | <code>baseline</code> | <code>stretch</code> (la valeur par défaut)</li>
- <li><a href="https://drafts.csswg.org/css-flexbox/#align-items-property">Spécification</a></li>
-</ul>
+- Valeurs : `flex-start` | `flex-end` | `center` | `baseline` | `stretch` (la valeur par défaut)
+- [Spécification](https://drafts.csswg.org/css-flexbox/#align-items-property)
 
-<pre class="brush: css">@mixin align-items($value: stretch) {
+```css
+@mixin align-items($value: stretch) {
   @if $value == flex-start {
     -webkit-box-align: start;
     -moz-box-align: start;
@@ -297,16 +290,16 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
   }
   -webkit-align-items: $value;
   align-items: $value;
-}</pre>
+}
+```
 
-<h3 id="align-self"><code>align-self</code></h3>
+### `align-self`
 
-<ul>
- <li>Valeurs : <code>auto</code> (la valeur par défaut)| <code>flex-start</code> | <code>flex-end</code> | <code>center</code> | <code>baseline</code> | <code>stretch</code></li>
- <li><a href="https://drafts.csswg.org/css-flexbox/#align-items-property">Spécification</a></li>
-</ul>
+- Valeurs : `auto` (la valeur par défaut)| `flex-start` | `flex-end` | `center` | `baseline` | `stretch`
+- [Spécification](https://drafts.csswg.org/css-flexbox/#align-items-property)
 
-<pre class="brush: css">@mixin align-self($value: auto) {
+```css
+@mixin align-self($value: auto) {
   // No Webkit Box Fallback.
   -webkit-align-self: $value;
   @if $value == flex-start {
@@ -317,18 +310,18 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
     -ms-flex-item-align: $value;
   }
   align-self: $value;
-}</pre>
+}
+```
 
-<h3 id="align-content"><code>align-content</code></h3>
+### `align-content`
 
-<p>La propriété {{cssxref("align-content")}} permet d'aligner les lignes créées dans le conteneur flexible lorsqu'il reste de l'espace le long de l'axe secondaire. Cette propriété n'a aucun effet lorsqu'il n'y a qu'une seule ligne.</p>
+La propriété {{cssxref("align-content")}} permet d'aligner les lignes créées dans le conteneur flexible lorsqu'il reste de l'espace le long de l'axe secondaire. Cette propriété n'a aucun effet lorsqu'il n'y a qu'une seule ligne.
 
-<ul>
- <li>Valeurs : <code>flex-start</code> | <code>flex-end</code> | <code>center</code> | <code>space-between</code> | <code>space-around</code> | <code>stretch</code> (la valeur par défaut)</li>
- <li><a href="https://drafts.csswg.org/css-flexbox/#align-content-property">Spécification</a></li>
-</ul>
+- Valeurs : `flex-start` | `flex-end` | `center` | `space-between` | `space-around` | `stretch` (la valeur par défaut)
+- [Spécification](https://drafts.csswg.org/css-flexbox/#align-content-property)
 
-<pre class="brush: css">@mixin align-content($value: stretch) {
+```css
+@mixin align-content($value: stretch) {
   // No Webkit Box Fallback.
   -webkit-align-content: $value;
   @if $value == flex-start {
@@ -339,4 +332,5 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
     -ms-flex-line-pack: $value;
   }
   align-content: $value;
-}</pre>
+}
+```

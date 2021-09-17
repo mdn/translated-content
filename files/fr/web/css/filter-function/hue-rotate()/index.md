@@ -8,34 +8,31 @@ tags:
   - Reference
 translation_of: Web/CSS/filter-function/hue-rotate()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La fonction CSS <strong><code>hue-rotate()</code></strong> permet d'appliquer une rotation de teinte sur une image. Le résultat de cette fonction est une valeur {{cssxref("&lt;filter-function&gt;")}}.</p>
+La fonction CSS **`hue-rotate()`** permet d'appliquer une rotation de teinte sur une image. Le résultat de cette fonction est une valeur {{cssxref("&lt;filter-function&gt;")}}.
 
-<div>{ {EmbedInteractiveExample("pages/css/function-hue-rotate.html")}}</div>
+{ {EmbedInteractiveExample("pages/css/function-hue-rotate.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">hue-rotate(<em>angle</em>)</pre>
+    hue-rotate(angle)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>angle</code></dt>
- <dd>L'angle de rotation sur le cercle des couleurs, exprimé avec une valeur de type {{cssxref("&lt;angle&gt;")}}. Une valeur de <code>0deg</code> laissera l'image inchangée. La valeur utilisée par défaut pour une interpolation sera <code>0</code>. Bien qu'il n'y ait pas de valeur maximale, la valeur de l'angle est toujours ramenée entre <code>360deg</code> et <code>0deg</code>.</dd>
-</dl>
+- `angle`
+  - : L'angle de rotation sur le cercle des couleurs, exprimé avec une valeur de type {{cssxref("&lt;angle&gt;")}}. Une valeur de `0deg` laissera l'image inchangée. La valeur utilisée par défaut pour une interpolation sera `0`. Bien qu'il n'y ait pas de valeur maximale, la valeur de l'angle est toujours ramenée entre `360deg` et `0deg`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: css">hue-rotate(-90deg);  /* Correspond à une rotation de 270deg */
+```css
+hue-rotate(-90deg);  /* Correspond à une rotation de 270deg */
 hue-rotate(0deg);    /* Sans effet */
 hue-rotate(90deg);   /* Rotation de 90deg */
 hue-rotate(.5turn);  /* Rotation de 180deg */
 hue-rotate(405deg);  /* Correspond à une rotation de 45deg */
-</pre>
+```
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("&lt;filter-function&gt;")}}</li>
-</ul>
+- {{cssxref("&lt;filter-function&gt;")}}

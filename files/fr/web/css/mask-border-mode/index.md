@@ -8,13 +8,14 @@ tags:
   - Reference
 translation_of: Web/CSS/mask-border-mode
 ---
-<div>{{cssref}}{{SeeCompatTable}}</div>
+{{cssref}}{{SeeCompatTable}}
 
-<p>La propriété CSS <strong><code>mask-border-mode</code></strong> indique le mode de fusion utilisé pour <a href="/fr/docs/Web/CSS/mask-border">le masque de bordure</a>.</p>
+La propriété CSS **`mask-border-mode`** indique le mode de fusion utilisé pour [le masque de bordure](/fr/docs/Web/CSS/mask-border).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 mask-border-mode: luminance;
 mask-border-mode: alpha;
 
@@ -22,42 +23,27 @@ mask-border-mode: alpha;
 mask-border-mode: inherit;
 mask-border-mode: initial;
 mask-border-mode: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>luminance</code></dt>
- <dd>Les valeurs de luminance proventant de l'image de masque sont utilisées pour le masque.</dd>
- <dt><code>alpha</code></dt>
- <dd>Les valeurs du canal alpha proventant de l'image de masque sont utilisées pour le masque.</dd>
-</dl>
+- `luminance`
+  - : Les valeurs de luminance proventant de l'image de masque sont utilisées pour le masque.
+- `alpha`
+  - : Les valeurs du canal alpha proventant de l'image de masque sont utilisées pour le masque.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Masks", "#propdef-mask-border-mode", "mask-border-mode")}}</td>
-   <td>{{Spec2("CSS Masks")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                         | Commentaires         |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName("CSS Masks", "#propdef-mask-border-mode", "mask-border-mode")}} | {{Spec2("CSS Masks")}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>TBD</p>
+TBD

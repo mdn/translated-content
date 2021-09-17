@@ -7,15 +7,14 @@ tags:
   - Reference
 translation_of: Web/CSS/page-break-inside
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<div class="warning">
-<p><strong>Attention :</strong> Cette propriété a été remplacée par la propriété {{cssxref("break-inside")}}.</p>
-</div>
+> **Attention :** Cette propriété a été remplacée par la propriété {{cssxref("break-inside")}}.
 
-<p>La propriété <strong><code>page-break-inside</code></strong> ajuste la façon dont sont appliqués les sauts de page au sein de l'élément courant.</p>
+La propriété **`page-break-inside`** ajuste la façon dont sont appliqués les sauts de page au sein de l'élément courant.
 
-<pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 page-break-inside: auto;
 page-break-inside: avoid;
 
@@ -23,73 +22,60 @@ page-break-inside: avoid;
 page-break-inside: inherit;
 page-break-inside: initial;
 page-break-inside: unset;
-</pre>
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Valeur initiale. Les sauts de page sont automatiques (ni forcés, ni interdits).</dd>
- <dt><code>avoid</code></dt>
- <dd>L'agent utilisateur évite d'insérer un saut de page au sein de l'élément.</dd>
-</dl>
+- `auto`
+  - : Valeur initiale. Les sauts de page sont automatiques (ni forcés, ni interdits).
+- `avoid`
+  - : L'agent utilisateur évite d'insérer un saut de page au sein de l'élément.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Alias_avec_break-inside">Alias avec <code>break-inside</code></h2>
+## Alias avec `break-inside`
 
-<p>La propriété <code>page-break-inside</code> a désormais été remplacée par la propriété {{cssxref("break-inside")}}.</p>
+La propriété `page-break-inside` a désormais été remplacée par la propriété {{cssxref("break-inside")}}.
 
-<p>Pour des raisons de compatibilité, <code>page-break-inside</code> devrait être considérée par les navigateurs comme synonyme de <code>break-inside</code>. De cette façon, les sites utilisant <code>page-break-inside</code> pourront continuer de fonctionner. Voici un sous-ensemble des valeurs de cette propriété et des correspondances</p>
+Pour des raisons de compatibilité, `page-break-inside` devrait être considérée par les navigateurs comme synonyme de `break-inside`. De cette façon, les sites utilisant `page-break-inside` pourront continuer de fonctionner. Voici un sous-ensemble des valeurs de cette propriété et des correspondances
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col"><code>page-break-inside</code></th>
-   <th scope="col"><code>break-inside</code></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>auto</code></td>
-   <td><code>auto</code></td>
-  </tr>
-  <tr>
-   <td><code>avoid</code></td>
-   <td><code>avoid</code></td>
-  </tr>
- </tbody>
-</table>
+| `page-break-inside` | `break-inside` |
+| ------------------- | -------------- |
+| `auto`              | `auto`         |
+| `avoid`             | `avoid`        |
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="page"&gt;
-  &lt;p&gt;Un premier paragraphe.&lt;/p&gt;
-  &lt;section class="list"&gt;
-    &lt;span&gt;Une liste&lt;/span&gt;
-    &lt;ol&gt;
-      &lt;li&gt;Un&lt;/li&gt;
-&lt;!--       &lt;li&gt;Deux&lt;/li&gt; --&gt;
-    &lt;/ol&gt;
-  &lt;/section&gt;
-  &lt;ul&gt;
-    &lt;li&gt;Un&lt;/li&gt;
-&lt;!--     &lt;li&gt;Deux&lt;/li&gt; --&gt;
-  &lt;/ul&gt;
-  &lt;p&gt;Un deuxième paragraphe.&lt;/p&gt;
-  &lt;p&gt;Un troisième paragraphe, un peu plus long.&lt;/p&gt;
-  &lt;p&gt;Un quatrième paragraphe, un peu plus long voire plus long que le troisième.&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="page">
+  <p>Un premier paragraphe.</p>
+  <section class="list">
+    <span>Une liste</span>
+    <ol>
+      <li>Un</li>
+<!--       <li>Deux</li> -->
+    </ol>
+  </section>
+  <ul>
+    <li>Un</li>
+<!--     <li>Deux</li> -->
+  </ul>
+  <p>Un deuxième paragraphe.</p>
+  <p>Un troisième paragraphe, un peu plus long.</p>
+  <p>Un quatrième paragraphe, un peu plus long voire plus long que le troisième.</p>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.page {
+```css
+.page {
   background-color: #8cffa0;
   height: 90px;
   width: 200px;
@@ -113,50 +99,32 @@ ol, ul, .list {
 
 p:first-child {
   margin-top: 0;
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", 400, 160)}}</p>
+{{EmbedLiveSample("Exemples", 400, 160)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Paged Media', '#page-break-inside', 'page-break-inside')}}</td>
-   <td>{{Spec2('CSS3 Paged Media')}}</td>
-   <td>Permet d'appliquer cette propriété sur plus d'éléments.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'page.html#propdef-page-break-inside', 'page-break-inside')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | État                                     | Commentaires                                            |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------- |
+| {{SpecName('CSS3 Paged Media', '#page-break-inside', 'page-break-inside')}}         | {{Spec2('CSS3 Paged Media')}} | Permet d'appliquer cette propriété sur plus d'éléments. |
+| {{SpecName('CSS2.1', 'page.html#propdef-page-break-inside', 'page-break-inside')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                                    |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.page-break-inside")}}</p>
+{{Compat("css.properties.page-break-inside")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("break-before")}}</li>
- <li>{{cssxref("break-after")}}</li>
- <li>{{cssxref("break-inside")}}</li>
- <li>{{cssxref("page-break-after")}}</li>
- <li>{{cssxref("page-break-before")}}</li>
- <li>{{cssxref("orphans")}}</li>
- <li>{{cssxref("widows")}}</li>
-</ul>
+- {{cssxref("break-before")}}
+- {{cssxref("break-after")}}
+- {{cssxref("break-inside")}}
+- {{cssxref("page-break-after")}}
+- {{cssxref("page-break-before")}}
+- {{cssxref("orphans")}}
+- {{cssxref("widows")}}

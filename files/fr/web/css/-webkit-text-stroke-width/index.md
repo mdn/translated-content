@@ -8,21 +8,22 @@ tags:
   - Reference
 translation_of: Web/CSS/-webkit-text-stroke-width
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>La propriété <strong><code>-webkit-text-stroke-width</code></strong> permet de définir l'épaisseur du trait qui entoure les lettres du texte.</p>
+La propriété **`-webkit-text-stroke-width`** permet de définir l'épaisseur du trait qui entoure les lettres du texte.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 -webkit-text-stroke-width: thin;
 -webkit-text-stroke-width: medium;
 -webkit-text-stroke-width: thick;
 
 /* Valeurs de longueur */
-/* Type &lt;length&gt;       */
+/* Type <length>       */
 -webkit-text-stroke-width: 2px;
 -webkit-text-stroke-width: 0.1em;
 -webkit-text-stroke-width: 1mm;
@@ -32,24 +33,23 @@ translation_of: Web/CSS/-webkit-text-stroke-width
 -webkit-text-stroke-width: inherit;
 -webkit-text-stroke-width: initial;
 -webkit-text-stroke-width: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;line-width&gt;</code></dt>
- <dd>La largeur du trait utilisé pour entourer les lettres du texte.</dd>
-</dl>
+- `<line-width>`
+  - : La largeur du trait utilisé pour entourer les lettres du texte.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   margin: 0;
   font-size: 4em;
   -webkit-text-stroke-color: red;
@@ -66,53 +66,35 @@ translation_of: Web/CSS/-webkit-text-stroke-width
 #thick {
   -webkit-text-stroke-width: 1.5mm;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p id="thin"&gt;Trait fin&lt;/p&gt;
-&lt;p id="medium"&gt;Trait moyen&lt;/p&gt;
-&lt;p id="thick"&gt;Trait épais&lt;/p&gt;
-</pre>
+```html
+<p id="thin">Trait fin</p>
+<p id="medium">Trait moyen</p>
+<p id="thick">Trait épais</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", "450px", "230px")}}</p>
+{{EmbedLiveSample("Exemples", "450px", "230px")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Compat', '#the-webkit-text-stroke-width', '-webkit-text-stroke-width')}}</td>
-   <td>{{Spec2('Compat')}}</td>
-   <td>Définition initiale dans un standard.</td>
-  </tr>
-  <tr>
-   <td><a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266--webkit-text-stroke-width">Référence CSS Safari -webkit-text-stroke-width dans ce document.</a></td>
-   <td>Documentation non-officielle, non-standard.</td>
-   <td>Documentation initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                                                                                                                                      | État                                        | Commentaires                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------- | ------------------------------------- |
+| {{SpecName('Compat', '#the-webkit-text-stroke-width', '-webkit-text-stroke-width')}}                                                                                                                                                   | {{Spec2('Compat')}}                    | Définition initiale dans un standard. |
+| [Référence CSS Safari -webkit-text-stroke-width dans ce document.](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266--webkit-text-stroke-width) | Documentation non-officielle, non-standard. | Documentation initiale.               |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.-webkit-text-stroke-width")}}</p>
+{{Compat("css.properties.-webkit-text-stroke-width")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="https://www.webkit.org/blog/85/introducing-text-stroke/">Le billet de <em>Surfin' Safari</em> qui annonce cette fonctionnalité (en anglais)</a></li>
- <li><a href="https://css-tricks.com/adding-stroke-to-web-text/">L'article de CSS-Tricks à propos de cette fonctionnalité (en anglais)</a></li>
- <li>{{cssxref("-webkit-text-stroke-color")}}</li>
- <li>{{cssxref("-webkit-text-stroke")}}</li>
- <li>{{cssxref("-webkit-text-fill-color")}}</li>
-</ul>
+- [Le billet de _Surfin' Safari_ qui annonce cette fonctionnalité (en anglais)](https://www.webkit.org/blog/85/introducing-text-stroke/)
+- [L'article de CSS-Tricks à propos de cette fonctionnalité (en anglais)](https://css-tricks.com/adding-stroke-to-web-text/)
+- {{cssxref("-webkit-text-stroke-color")}}
+- {{cssxref("-webkit-text-stroke")}}
+- {{cssxref("-webkit-text-fill-color")}}

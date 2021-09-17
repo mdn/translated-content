@@ -7,91 +7,66 @@ tags:
   - Reference
 translation_of: Web/CSS/:hover
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <strong><code>:hover</code></strong> permet de spécifier l'apparence d'un élément au moment où l'utilisateur le survole avec le pointeur, sans nécessairement l'activer.</p>
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:hover`** permet de spécifier l'apparence d'un élément au moment où l'utilisateur le survole avec le pointeur, sans nécessairement l'activer.
 
-<pre class="brush: css no-line-numbers">/* Cible n'importe quel élément &lt;a&gt; lorsque  */
+```css
+/* Cible n'importe quel élément <a> lorsque  */
 /* celui-ci est survolé */
 a:hover {
   background-color: gold;
-}</pre>
+}
+```
 
-<p>La mise en forme ciblée par cette pseudo-classe peut être surchargée par d'autres pseudo-classes relatives aux liens hypertextes comme {{cssxref(":link")}}, {{cssxref(":visited")}}, et {{cssxref(":active")}}, apparaissant dans des règles subséquentes. Pour décorer les liens sans effet de bord problématique, on placera la règle <code>:hover</code> après les règles <code>:link</code> et <code>:visited</code> mais avant la règle <code>:active</code> (l'ordre est  <code>:link</code> — <code>:visited</code> — <code>:hover</code> — <code>:active</code> – un moyen mnémotechnique est de se souvenir des initiales LVHA) tandis que l'ordre de la règle {{cssxref(":focus")}} est indifférent.</p>
+La mise en forme ciblée par cette pseudo-classe peut être surchargée par d'autres pseudo-classes relatives aux liens hypertextes comme {{cssxref(":link")}}, {{cssxref(":visited")}}, et {{cssxref(":active")}}, apparaissant dans des règles subséquentes. Pour décorer les liens sans effet de bord problématique, on placera la règle `:hover` après les règles `:link` et `:visited` mais avant la règle `:active` (l'ordre est  `:link` — `:visited` — `:hover` — `:active` – un moyen mnémotechnique est de se souvenir des initiales LVHA) tandis que l'ordre de la règle {{cssxref(":focus")}} est indifférent.
 
-<p>La pseudo-classe <code>:hover</code> peut être appliquée à n'importe quel <a href="/fr/docs/Web/CSS/Pseudo-elements">pseudo-élément</a>. {{experimental_inline}}</p>
+La pseudo-classe `:hover` peut être appliquée à n'importe quel [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements). {{experimental_inline}}
 
-<div class="note">
-  <p><strong>Note :</strong> sur les écrans tactiles, <code>:hover</code> est problématique voire impossible. La pseudo-classe <code>:hover</code> n'est jamais valide, ou seulement pendant un très court instant après avoir touché l'élément. Puisque les appareils à écrans tactiles sont très courants, il est important que les développeurs web ne placent pas de contenu accessible seulement lors du survol, puisque ce contenu sera caché pour les utilisateurs de tels appareils.</p>
-</div>
+> **Note :** sur les écrans tactiles, `:hover` est problématique voire impossible. La pseudo-classe `:hover` n'est jamais valide, ou seulement pendant un très court instant après avoir touché l'élément. Puisque les appareils à écrans tactiles sont très courants, il est important que les développeurs web ne placent pas de contenu accessible seulement lors du survol, puisque ce contenu sera caché pour les utilisateurs de tels appareils.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">a:hover {
+```css
+a:hover {
   background-color: gold;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;
-  &lt;a href="#"&gt;Ce lien sera écrit sur un fond doré lors du survol.&lt;/a&gt;
-&lt;/p&gt;</pre>
+```html
+<p>
+  <a href="#">Ce lien sera écrit sur un fond doré lors du survol.</a>
+</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples')}}</p>
+{{EmbedLiveSample('Exemples')}}
 
-<div class="note">
-<p><strong>Note :</strong> On peut utiliser la pseudo-classe <code>:checked</code> dans une galerie d'images afin d'afficher une version agrandie de l'image lorsqu'on survole la vignette.</p>
-</div>
+> **Note :** On peut utiliser la pseudo-classe `:checked` dans une galerie d'images afin d'afficher une version agrandie de l'image lorsqu'on survole la vignette.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Commentaires</th>
-   <th scope="col">Retours</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'scripting.html#selector-hover', ':hover')}}</td>
-   <td> </td>
-   <td><a href="https://github.com/whatwg/html/issues"><em>Issues</em> GitHub du WHATWG HTML (en anglais)</a></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#the-hover-pseudo', ':hover')}}</td>
-   <td>Permet d'appliquer <code>:hover</code> à n'importe quel pseudo-élément.</td>
-   <td><a href="https://github.com/w3c/csswg-drafts/issues">Issues GitHub pour les brouillons du groupe de travail CSS (en anglais)</a></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#the-user-action-pseudo-classes-hover-act', ':hover')}}</td>
-   <td> </td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'selector.html#dynamic-pseudo-classes', ':hover')}}</td>
-   <td>Définition initiale.</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | Commentaires                                                 | Retours                                                                                                               |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', 'scripting.html#selector-hover', ':hover')}}                     |                                                              | [_Issues_ GitHub du WHATWG HTML (en anglais)](https://github.com/whatwg/html/issues)                                  |
+| {{SpecName('CSS4 Selectors', '#the-hover-pseudo', ':hover')}}                                 | Permet d'appliquer `:hover` à n'importe quel pseudo-élément. | [Issues GitHub pour les brouillons du groupe de travail CSS (en anglais)](https://github.com/w3c/csswg-drafts/issues) |
+| {{SpecName('CSS3 Selectors', '#the-user-action-pseudo-classes-hover-act', ':hover')}} |                                                              |                                                                                                                       |
+| {{SpecName('CSS2.1', 'selector.html#dynamic-pseudo-classes', ':hover')}}                 | Définition initiale.                                         |                                                                                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.hover")}}</p>
+{{Compat("css.selectors.hover")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="https://code.google.com/p/chromium/issues/detail?id=370155">Bogue Chromium #370155 : Don't make :hover sticky on tap on sites that set a mobile viewport</a></li>
- <li><a href="https://code.google.com/p/chromium/issues/detail?id=306581">Bogue Chromium #306581 : Immediately show hover and active states on touch when page isn't scrollable</a></li>
-</ul>
+- [Bogue Chromium #370155 : Don't make :hover sticky on tap on sites that set a mobile viewport](https://code.google.com/p/chromium/issues/detail?id=370155)
+- [Bogue Chromium #306581 : Immediately show hover and active states on touch when page isn't scrollable](https://code.google.com/p/chromium/issues/detail?id=306581)

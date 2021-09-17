@@ -7,25 +7,24 @@ tags:
   - Reference
 translation_of: Web/CSS/width
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>width</code></strong> permet de définir la largeur de la <a href="/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte">boîte du contenu</a> d'un élément. Par défaut, sa valeur est <strong><code>auto</code></strong>, c'est à dire la largeur automatiquement calculée de son contenu. Si {{cssxref("box-sizing")}} vaut <code>border-box</code>, la valeur appliquée incluera les dimensions de la boîte d'encadrement (<em>border</em>) et de la boîte de remplissage (<em>padding</em>).</p>
+La propriété **`width`** permet de définir la largeur de la [boîte du contenu](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte) d'un élément. Par défaut, sa valeur est **`auto`**, c'est à dire la largeur automatiquement calculée de son contenu. Si {{cssxref("box-sizing")}} vaut `border-box`, la valeur appliquée incluera les dimensions de la boîte d'encadrement (_border_) et de la boîte de remplissage (_padding_).
 
-<div>{{EmbedInteractiveExample("pages/css/width.html")}}</div>
+{{EmbedInteractiveExample("pages/css/width.html")}}
 
-<div class="note">
-<p><strong>Note :</strong> Les propriétés {{cssxref("min-width")}} et {{cssxref("max-width")}} permettent de surcharger {{cssxref("width")}}.</p>
-</div>
+> **Note :** Les propriétés {{cssxref("min-width")}} et {{cssxref("max-width")}} permettent de surcharger {{cssxref("width")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css">/* Valeurs de longueur */
-/* Type &lt;length&gt; */
+```css
+/* Valeurs de longueur */
+/* Type <length> */
 width: 300px;
 width: 25em;
 
 /* Valeurs en pourcentages */
-/* Type &lt;percentage&gt; */
+/* Type <percentage> */
 width: 75%;
 
 /* Avec un mot-clé */
@@ -41,64 +40,64 @@ width: auto;
 width: inherit;
 width: initial;
 width: unset;
-</pre>
+```
 
-<p>La propriété <code>width</code> se définit avec</p>
+La propriété `width` se définit avec
 
-<ul>
- <li>un des mots-clés suivants : <code><a href="#available">available</a></code>, <code><a href="#min-content">min-content</a></code>, <code><a href="#max-content">max-content</a></code>, <code><a href="#fit-content">fit-content</a></code>, <code><a href="#auto">auto</a></code>.</li>
- <li>ou une valeur de longeur (<code><a href="#length">&lt;length&gt;</a></code>) ou de pourcentage (<code><a href="#percentage">&lt;percentage&gt;</a></code>) éventuellement suivie par le mots-clé <code><a href="#border-box">border-box</a></code> ou <code><a href="#content-box">content-box</a></code>.</li>
-</ul>
+- un des mots-clés suivants : [`available`](#available), [`min-content`](#min-content), [`max-content`](#max-content), [`fit-content`](#fit-content), [`auto`](#auto).
+- ou une valeur de longeur ([`<length>`](#length)) ou de pourcentage ([`<percentage>`](#percentage)) éventuellement suivie par le mots-clé [`border-box`](#border-box) ou [`content-box`](#content-box).
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Voir {{cssxref("&lt;length&gt;")}} pour les unités qui peuvent être utilisées.</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>Permet de définir la largeur en pourcentages ({{cssxref("&lt;percentage&gt;")}}) par rapport à la largeur du bloc contenant le bloc courant. Si la largeur du bloc englobant dépend de la largeur de l'élément, la disposition est indéfinie.</dd>
- <dt><code>border-box</code>{{experimental_inline}}</dt>
- <dd>Si cette valeur est présente, la longueur ({{cssxref("&lt;length&gt;")}}) ou le pourcentage ({{cssxref("&lt;percentage&gt;")}}) est appliqué à la boîte de bordure (<em>border</em>) de l'élément.</dd>
- <dt><code>content-box</code> {{experimental_inline}}</dt>
- <dd>Si cette valeur est présente, la longueur ({{cssxref("&lt;length&gt;")}}) ou le pourcentage ({{cssxref("&lt;percentage&gt;")}}) est appliqué à la boîte de contenu de l'élément.</dd>
- <dt><code>auto</code></dt>
- <dd>Le navigateur calculera et sélectionnera une largeur pour l'élément.</dd>
- <dt><code>fill</code> {{experimental_inline}}</dt>
- <dd>Utilise la taille <code>fill-available</code> dans l'axe du sens de lecture ou la taille <code>fill-available</code> dans l'axe perpendiculaire au sens de lecture selon le mode d'écriture.</dd>
- <dt><code>max-content</code> {{experimental_inline}}</dt>
- <dd>La largeur intrinsèque préférée.</dd>
- <dt><code>min-content</code> {{experimental_inline}}</dt>
- <dd>La largeur intrinsèque minimum.</dd>
- <dt><code>available</code> {{experimental_inline}}</dt>
- <dd>La largeur du bloc contenant le bloc courant, moins la marge horizontale, la bordure et le remplissage (<em>padding</em>).</dd>
- <dt><code>fit-content</code> {{experimental_inline}}</dt>
- <dd>La quantité la plus grande entre :
- <ul>
-  <li>La largeur intrinsèque minimum</li>
-  <li>Le minimum entre la largeur intrinsèque préférée et la largeur disponible</li>
- </ul>
- </dd>
-</dl>
+- `<length>`
+  - : Voir {{cssxref("&lt;length&gt;")}} pour les unités qui peuvent être utilisées.
+- `<percentage>`
+  - : Permet de définir la largeur en pourcentages ({{cssxref("&lt;percentage&gt;")}}) par rapport à la largeur du bloc contenant le bloc courant. Si la largeur du bloc englobant dépend de la largeur de l'élément, la disposition est indéfinie.
+- `border-box`{{experimental_inline}}
+  - : Si cette valeur est présente, la longueur ({{cssxref("&lt;length&gt;")}}) ou le pourcentage ({{cssxref("&lt;percentage&gt;")}}) est appliqué à la boîte de bordure (_border_) de l'élément.
+- `content-box` {{experimental_inline}}
+  - : Si cette valeur est présente, la longueur ({{cssxref("&lt;length&gt;")}}) ou le pourcentage ({{cssxref("&lt;percentage&gt;")}}) est appliqué à la boîte de contenu de l'élément.
+- `auto`
+  - : Le navigateur calculera et sélectionnera une largeur pour l'élément.
+- `fill` {{experimental_inline}}
+  - : Utilise la taille `fill-available` dans l'axe du sens de lecture ou la taille `fill-available` dans l'axe perpendiculaire au sens de lecture selon le mode d'écriture.
+- `max-content` {{experimental_inline}}
+  - : La largeur intrinsèque préférée.
+- `min-content` {{experimental_inline}}
+  - : La largeur intrinsèque minimum.
+- `available` {{experimental_inline}}
+  - : La largeur du bloc contenant le bloc courant, moins la marge horizontale, la bordure et le remplissage (_padding_).
+- `fit-content` {{experimental_inline}}
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+  - : La quantité la plus grande entre :
+
+    - La largeur intrinsèque minimum
+    - Le minimum entre la largeur intrinsèque préférée et la largeur disponible
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Valeur_par_défaut">Valeur par défaut</h3>
+### Valeur par défaut
 
-<pre class="brush:css">p.goldie {
+```css
+p.goldie {
   background: gold;
-}</pre>
+}
+```
 
-<pre class="brush:html">&lt;p class="goldie"&gt;La communauté Mozilla ressemble à un panda roux.&lt;/p&gt;</pre>
+```html
+<p class="goldie">La communauté Mozilla ressemble à un panda roux.</p>
+```
 
-<p>{{EmbedLiveSample('Valeur_par_défaut', '500px', '64px')}}</p>
+{{EmbedLiveSample('Valeur_par_défaut', '500px', '64px')}}
 
-<h3 id="En_utilisant_les_pixels_et_les_em">En utilisant les pixels et les <code>em</code></h3>
+### En utilisant les pixels et les `em`
 
-<pre class="brush: css">.longueur_px {
+```css
+.longueur_px {
   width: 200px;
   background-color: red;
   color: white;
@@ -111,101 +110,86 @@ width: unset;
   color: red;
   border: 1px solid black;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="longueur_px"&gt;Largeur mesurée en pixels&lt;/div&gt;
-&lt;div class="longueur_em"&gt;Largeur mesurée en ems&lt;/div&gt;</pre>
+```html
+<div class="longueur_px">Largeur mesurée en pixels</div>
+<div class="longueur_em">Largeur mesurée en ems</div>
+```
 
-<p>{{EmbedLiveSample('En_utilisant_les_pixels_et_les_em', '500px', '64px')}}</p>
+{{EmbedLiveSample('En_utilisant_les_pixels_et_les_em', '500px', '64px')}}
 
-<h3 id="En_utilisant_les_pourcentages">En utilisant les pourcentages</h3>
+### En utilisant les pourcentages
 
-<pre class="brush: css">.pourcent {
+```css
+.pourcent {
   width: 20%;
   background-color: silver;
   border: 1px solid red;
-}</pre>
+}
+```
 
-<pre class="brush: html">&lt;div class="pourcent"&gt;Largeur exprimée en pourcentages&lt;/div&gt;</pre>
+```html
+<div class="pourcent">Largeur exprimée en pourcentages</div>
+```
 
-<p>{{EmbedLiveSample('En_utilisant_les_pourcentages', '500px', '64px')}}</p>
+{{EmbedLiveSample('En_utilisant_les_pourcentages', '500px', '64px')}}
 
-<h3 id="En_utilisant_max-content">En utilisant <code>max-content</code></h3>
+### En utilisant `max-content`
 
-<pre class="brush:css;">p.maxgreen {
+```css
+p.maxgreen {
   background: lightgreen;
   width: intrinsic;           /* Safari/WebKit utilisent un nom non-standard */
   width: -moz-max-content;    /* Firefox/Gecko */
   width: -webkit-max-content; /* Chrome */
-}</pre>
+}
+```
 
-<pre class="brush:html">&lt;p class="maxgreen"&gt;La communauté Mozilla ressemble à un panda roux.&lt;/p&gt;</pre>
+```html
+<p class="maxgreen">La communauté Mozilla ressemble à un panda roux.</p>
+```
 
-<p>{{EmbedLiveSample('En_utilisant_max-content', '500px', '64px')}}</p>
+{{EmbedLiveSample('En_utilisant_max-content', '500px', '64px')}}
 
-<h3 id="En_utilisant_min-content">En utilisant <code>min-content</code></h3>
+### En utilisant `min-content`
 
-<pre class="brush:css">p.minblue {
+```css
+p.minblue {
   background: lightblue;
   width: -moz-min-content;    /* Firefox */
   width: -webkit-min-content; /* Chrome */
-}</pre>
+}
+```
 
-<pre class="brush:html">&lt;p class="minblue"&gt;La communauté Mozilla ressemble à un panda roux.&lt;/p&gt;</pre>
+```html
+<p class="minblue">La communauté Mozilla ressemble à un panda roux.</p>
+```
 
-<p>{{EmbedLiveSample('En_utilisant_min-content', '500px', '155px')}}</p>
+{{EmbedLiveSample('En_utilisant_min-content', '500px', '155px')}}
 
-<h2 id="Accessibilité">Accessibilité</h2>
+## Accessibilité
 
-<p>Il faut s'assurer que les éléments sur lesquels on utilise <code>width</code> ne sont pas tronqués et ne masquent pas d'autre contenu sur la page lorsque l'utilisateur zoome afin d'agrandir la taille du texte.</p>
+Il faut s'assurer que les éléments sur lesquels on utilise `width` ne sont pas tronqués et ne masquent pas d'autre contenu sur la page lorsque l'utilisateur zoome afin d'agrandir la taille du texte.
 
-<ul>
- <li><a href="/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">Comprendre les règles WCAG 1.4</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html" rel="noopener"><em>Understanding Success Criterion 1.4.4  | Understanding WCAG 2.0</em> (en anglais)</a></li>
-</ul>
+- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [_Understanding Success Criterion 1.4.4  | Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Sizing', '#width-height-keywords', 'width')}}</td>
-   <td>{{Spec2('CSS3 Sizing')}}</td>
-   <td>Ajout des mots-clés <code>max-content</code>, <code>min-content</code>, <code>available</code>, <code>fit-content</code>, <code>border-box</code> et <code>content-box</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'width')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td><code>width</code> peut désormais être animée.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visudet.html#the-width-property', 'width')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Précision sur les éléments auxquels peuvent être appliquée la propriété.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#width', 'width')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                                     | Commentaires                                                                                                 |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('CSS3 Sizing', '#width-height-keywords', 'width')}}     | {{Spec2('CSS3 Sizing')}}         | Ajout des mots-clés `max-content`, `min-content`, `available`, `fit-content`, `border-box` et `content-box`. |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'width')}}         | {{Spec2('CSS3 Transitions')}} | `width` peut désormais être animée.                                                                          |
+| {{SpecName('CSS2.1', 'visudet.html#the-width-property', 'width')}} | {{Spec2('CSS2.1')}}                 | Précision sur les éléments auxquels peuvent être appliquée la propriété.                                     |
+| {{SpecName('CSS1', '#width', 'width')}}                                     | {{Spec2('CSS1')}}                 | Définition initiale.                                                                                         |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.width")}}</p>
+{{Compat("css.properties.width")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/Modèle_de_boîte">Le modèle de boîtes</a>, {{cssxref("height")}}, {{cssxref("box-sizing")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}</li>
-</ul>
+- [Le modèle de boîtes](/fr/docs/Web/CSS/Modèle_de_boîte), {{cssxref("height")}}, {{cssxref("box-sizing")}}, {{cssxref("min-width")}}, {{cssxref("max-width")}}

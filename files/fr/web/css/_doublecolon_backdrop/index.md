@@ -7,72 +7,58 @@ tags:
   - Reference
 translation_of: Web/CSS/::backdrop
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Le <a href="/fr/docs/Web/CSS/Pseudo-%C3%A9l%C3%A9ments">pseudo-élément</a> <code><strong>::backdrop</strong></code> est une boîte de la taille de la zone d'affichage (<em>viewport</em>) qui est affichée immédiatement sous un élément lorsque ce dernier est affiché en plein écran. Cela correspond aux éléments passés en plein écran via l'<a href="/fr/docs/Web/API/Fullscreen_API">API Fullscreen</a> et aux éléments {{HTMLElement("dialog")}}.</p>
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-%C3%A9l%C3%A9ments) **`::backdrop`** est une boîte de la taille de la zone d'affichage (_viewport_) qui est affichée immédiatement sous un élément lorsque ce dernier est affiché en plein écran. Cela correspond aux éléments passés en plein écran via l'[API Fullscreen](/fr/docs/Web/API/Fullscreen_API) et aux éléments {{HTMLElement("dialog")}}.
 
-<p>Lorsque plusieurs éléments sont en plein écran, ce pseudo-élément est dessiné derrière l'élément qui est le plus en avant et par dessus les autres éléments.</p>
+Lorsque plusieurs éléments sont en plein écran, ce pseudo-élément est dessiné derrière l'élément qui est le plus en avant et par dessus les autres éléments.
 
-<pre class="brush: css no-line-numbers">// Cette ombre n'est affichée que lorsque la boîte de dialogue
+```css
+// Cette ombre n'est affichée que lorsque la boîte de dialogue
 // est ouverte avec dialog.showModal()
 dialog::backdrop {
   background: rgba(255,0,0,.25);
-}</pre>
+}
+```
 
-<div class="note">
-  <p><strong>Note :</strong> L'élément <code>::backdrop</code> peut être utilisé comme un arrière-plan/masque pour l'élément afin de cacher le document en-dessous lorsque l'élément est affiché en plein écran selon la spécification.</p>
-</div>
+> **Note :** L'élément `::backdrop` peut être utilisé comme un arrière-plan/masque pour l'élément afin de cacher le document en-dessous lorsque l'élément est affiché en plein écran selon la spécification.
 
-<p>Ce pseudo-élément n'hérite d'aucun autre élément et aucun autre élément n'hérite de ce pseudo-élément. Aucune restriction ne s'applique pour les propriétés qui peuvent être appliquées à ce pseudo-élément.</p>
+Ce pseudo-élément n'hérite d'aucun autre élément et aucun autre élément n'hérite de ce pseudo-élément. Aucune restriction ne s'applique pour les propriétés qui peuvent être appliquées à ce pseudo-élément.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
 {{CSSSyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans cet exemple, on indique que l'ombre derrière la vidéo en plein écran doit être bleu-gris plutôt que noire.</p>
+Dans cet exemple, on indique que l'ombre derrière la vidéo en plein écran doit être bleu-gris plutôt que noire.
 
-<pre class="brush: css">video::backdrop {
+```css
+video::backdrop {
   background-color: #448;
 }
-</pre>
+```
 
-<p>Voici le résultat obtenu :</p>
+Voici le résultat obtenu :
 
-<p><img alt="" src="bbb-backdrop.png"></p>
+![](bbb-backdrop.png)
 
-<p>On peut voir ici les bandes bleu-gris au dessus et en dessous de la vidéo alors que la zone est normalement noire.</p>
+On peut voir ici les bandes bleu-gris au dessus et en dessous de la vidéo alors que la zone est normalement noire.
 
-<p>Vous pouvez <a href="https://fullscreen-requestfullscreen-demo.glitch.me/">voir cette démonstration en <em>live</em></a> ou <a href="https://glitch.com/edit/#!/fullscreen-requestfullscreen-demo">voir et modifier le code sur Glitch</a>.</p>
+Vous pouvez [voir cette démonstration en _live_](https://fullscreen-requestfullscreen-demo.glitch.me/) ou [voir et modifier le code sur Glitch](https://glitch.com/edit/#!/fullscreen-requestfullscreen-demo).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Fullscreen', '#::backdrop-pseudo-element', '::backdrop')}}</td>
-   <td>{{Spec2('Fullscreen')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                             | Commentaires         |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('Fullscreen', '#::backdrop-pseudo-element', '::backdrop')}} | {{Spec2('Fullscreen')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.backdrop")}}</p>
+{{Compat("css.selectors.backdrop")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>La pseudo-classe {{cssxref(":fullscreen")}}</li>
- <li>L'élément HTML {{HTMLElement("dialog")}}</li>
- <li><a href="/fr/docs/Web/API/Fullscreen_API">L'API Fullscreen</a></li>
-</ul>
+- La pseudo-classe {{cssxref(":fullscreen")}}
+- L'élément HTML {{HTMLElement("dialog")}}
+- [L'API Fullscreen](/fr/docs/Web/API/Fullscreen_API)

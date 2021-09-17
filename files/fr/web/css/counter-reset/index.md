@@ -7,19 +7,18 @@ tags:
   - Reference
 translation_of: Web/CSS/counter-reset
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>counter-reset</code></strong> permet de réinitialiser un <a href="/fr/docs/Web/CSS/Compteurs_CSS">compteur CSS</a> avec une valeur donnée.</p>
+La propriété **`counter-reset`** permet de réinitialiser un [compteur CSS](/fr/docs/Web/CSS/Compteurs_CSS) avec une valeur donnée.
 
-<div>{{EmbedInteractiveExample("pages/css/counter-reset.html")}}</div>
+{{EmbedInteractiveExample("pages/css/counter-reset.html")}}
 
-<div class="note">
-<p><strong>Note :</strong> Pour incrémenter ou décrémenter le compteur, on pourra utiliser la propriété CSS {{cssxref("counter-increment")}}.</p>
-</div>
+> **Note :** Pour incrémenter ou décrémenter le compteur, on pourra utiliser la propriété CSS {{cssxref("counter-increment")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* On réinitialise nom-compteur à 0 */
+```css
+/* On réinitialise nom-compteur à 0 */
 counter-reset: nom-compteur;
 
 /* On réinitialise nom-compteur à -1 */
@@ -37,35 +36,32 @@ counter-reset: none;
 counter-reset: inherit;
 counter-reset: initial;
 counter-reset: unset;
-</pre>
+```
 
-<p>Cette propriété se définit grâce à :</p>
+Cette propriété se définit grâce à :
 
-<ul>
- <li>un identifiant (<code>&lt;custom-ident&gt;</code>) qui représente le compteur, éventuellement suivi par un entier (<code>&lt;integer&gt;</code>). Cela peut être répété plusieurs fois avec un espace en tant que séparateur.</li>
- <li>ou grâce au mot-clé <code>none</code>.</li>
-</ul>
+- un identifiant (`<custom-ident>`) qui représente le compteur, éventuellement suivi par un entier (`<integer>`). Cela peut être répété plusieurs fois avec un espace en tant que séparateur.
+- ou grâce au mot-clé `none`.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt>{{cssxref("custom-ident", "&lt;custom-ident&gt;")}}</dt>
- <dd>Le nom du compteur qu'on souhaite incrémenter. L'identifiant peut se composer d'une combinaison de lettres entre <code>a</code> et <code>z</code> (sensible à la casse), de nombres compris entre <code>0</code> et <code>9</code>, de tirets bas (<code>_</code> ou <em>underscores</em>) et/ou de tirets. Le premier caractère qui n'est pas un tiret doit être une lettre. Il est également interdit d'utiliser deux tirets au début d'un identifiant. Enfin, un identifiant ne doit pas être <code>none</code>, <code>unset</code>, <code>initial</code> ou <code>inherit</code> quelque soit la combinaison de la casse.</dd>
- <dt>{{cssxref("&lt;integer&gt;")}}</dt>
- <dd>La valeur avec laquelle on souhaite réinitialiser le compteur pour chaque occurrence de l'élément. La valeur par défaut est <code>0</code>.</dd>
- <dt><code>none</code></dt>
- <dd>Un mot-clé indiquant qu'il ne faut pas réinitialiser le compteur. Cette valeur peut être utilisée pour masquer des réinitialisations provenant de règles moins spécifiques.</dd>
-</dl>
+- {{cssxref("custom-ident", "&lt;custom-ident&gt;")}}
+  - : Le nom du compteur qu'on souhaite incrémenter. L'identifiant peut se composer d'une combinaison de lettres entre `a` et `z` (sensible à la casse), de nombres compris entre `0` et `9`, de tirets bas (`_` ou _underscores_) et/ou de tirets. Le premier caractère qui n'est pas un tiret doit être une lettre. Il est également interdit d'utiliser deux tirets au début d'un identifiant. Enfin, un identifiant ne doit pas être `none`, `unset`, `initial` ou `inherit` quelque soit la combinaison de la casse.
+- {{cssxref("&lt;integer&gt;")}}
+  - : La valeur avec laquelle on souhaite réinitialiser le compteur pour chaque occurrence de l'élément. La valeur par défaut est `0`.
+- `none`
+  - : Un mot-clé indiquant qu'il ne faut pas réinitialiser le compteur. Cette valeur peut être utilisée pour masquer des réinitialisations provenant de règles moins spécifiques.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">ol {
+```css
+ol {
   list-style-type: none;
   counter-reset: compteListe;
 }
@@ -78,60 +74,42 @@ li::before {
 .reinit {
   counter-reset: compteListe;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ol&gt;
-  &lt;li&gt;Et de un&lt;/li&gt;
-  &lt;li&gt;Et de deux&lt;/li&gt;
-  &lt;li&gt;Et de trois&lt;/li&gt;
-  &lt;li class="reinit"&gt;Et ça repart&lt;/li&gt;
-  &lt;li&gt;Et de deux&lt;/li&gt;
-&lt;/ol&gt;
-</pre>
+```html
+<ol>
+  <li>Et de un</li>
+  <li>Et de deux</li>
+  <li>Et de trois</li>
+  <li class="reinit">Et ça repart</li>
+  <li>Et de deux</li>
+</ol>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Lists', '#counter-reset', 'counter-reset')}}</td>
-   <td>{{Spec2('CSS3 Lists')}}</td>
-   <td>Aucune modification.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'generate.html#propdef-counter-reset', 'counter-reset')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | État                             | Commentaires         |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('CSS3 Lists', '#counter-reset', 'counter-reset')}}                         | {{Spec2('CSS3 Lists')}} | Aucune modification. |
+| {{SpecName('CSS2.1', 'generate.html#propdef-counter-reset', 'counter-reset')}} | {{Spec2('CSS2.1')}}         | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.counter-reset")}}</p>
+{{Compat("css.properties.counter-reset")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/Compteurs_CSS">Les compteurs CSS</a></li>
- <li>{{cssxref("counter-increment")}}</li>
- <li>{{cssxref("@counter-style")}}</li>
- <li>{{cssxref("counter-set")}}</li>
- <li>{{cssxref("counter")}} et {{cssxref("counters")}}</li>
- <li>{{cssxref("content")}}</li>
-</ul>
+- [Les compteurs CSS](/fr/docs/Web/CSS/Compteurs_CSS)
+- {{cssxref("counter-increment")}}
+- {{cssxref("@counter-style")}}
+- {{cssxref("counter-set")}}
+- {{cssxref("counter")}} et {{cssxref("counters")}}
+- {{cssxref("content")}}

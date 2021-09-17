@@ -1,82 +1,65 @@
 ---
 title: '::cue-region'
-slug: 'Web/CSS/::cue-region'
+slug: Web/CSS/::cue-region
 tags:
   - CSS
   - Media
   - Pseudo-element
   - Reference
-translation_of: 'Web/CSS/::cue-region'
+translation_of: Web/CSS/::cue-region
 ---
-<p>{{CSSRef}}{{Draft}}{{SeeCompatTable}}</p>
+{{CSSRef}}{{Draft}}{{SeeCompatTable}}
 
-<p>Le pseudo-élément CSS <strong><code>::cue-region</code></strong> correspond à une piste {{DOMxRef("WebVTT API", "WebVTT", "", 1)}} de l'élément ciblé. Il peut être utilisé afin de <a href="/docs/Web/API/WebVTT_API#Styling_WebTT_cues">mettre en forme des sous-titres et autres indications textuelles</a> de pistes VTT.</p>
+Le pseudo-élément CSS **`::cue-region`** correspond à une piste {{DOMxRef("WebVTT API", "WebVTT", "", 1)}} de l'élément ciblé. Il peut être utilisé afin de [mettre en forme des sous-titres et autres indications textuelles](/docs/Web/API/WebVTT_API#Styling_WebTT_cues) de pistes VTT.
 
-<pre class="brush: css; no-line-numbers">::cue-region {
+```css
+::cue-region {
   color: yellow;
   font-weight: bold;
-}</pre>
+}
+```
 
-<h2 id="Propriétés_autorisées">Propriétés autorisées</h2>
+## Propriétés autorisées
 
-<p>Les règles utilisant <code>::cue-region</code> sont limitées aux propriétés CSS suivantes :</p>
+Les règles utilisant `::cue-region` sont limitées aux propriétés CSS suivantes :
 
-<ul>
- <li>{{CSSxRef("background")}} ainsi que les propriétés détaillées correspondantes</li>
- <li>{{CSSxRef("color")}}</li>
- <li>{{CSSxRef("font")}} ainsi que les propriétés détaillées correspondantes</li>
- <li>{{CSSxRef("line-height")}}</li>
- <li>{{CSSxRef("opacity")}}</li>
- <li>{{CSSxRef("outline")}} ainsi que les propriétés détaillées correspondantes</li>
- <li>{{CSSxRef("ruby-position")}}</li>
- <li>{{CSSxRef("text-combine-upright")}}</li>
- <li>{{CSSxRef("text-decoration")}} ainsi que les propriétés détaillées correspondantes</li>
- <li>{{CSSxRef("text-shadow")}}</li>
- <li>{{CSSxRef("visibility")}}</li>
- <li>{{CSSxRef("white-space")}}</li>
-</ul>
+- {{CSSxRef("background")}} ainsi que les propriétés détaillées correspondantes
+- {{CSSxRef("color")}}
+- {{CSSxRef("font")}} ainsi que les propriétés détaillées correspondantes
+- {{CSSxRef("line-height")}}
+- {{CSSxRef("opacity")}}
+- {{CSSxRef("outline")}} ainsi que les propriétés détaillées correspondantes
+- {{CSSxRef("ruby-position")}}
+- {{CSSxRef("text-combine-upright")}}
+- {{CSSxRef("text-decoration")}} ainsi que les propriétés détaillées correspondantes
+- {{CSSxRef("text-shadow")}}
+- {{CSSxRef("visibility")}}
+- {{CSSxRef("white-space")}}
 
-<p>Les propriétés sont appliquées à l'intégralité des indications textuelles comme si celles-ci formaient une seule unité. La seulle exception à ce comportement est l'application de <code>background</code> (et/ou des propriétés détaillées correspondantes) : cette propriété s'applique distinctement à chaque partie du texte séparément afin d'éviter de masquer ou d'obscurcir de grandes zones de texte sur le média.</p>
+Les propriétés sont appliquées à l'intégralité des indications textuelles comme si celles-ci formaient une seule unité. La seulle exception à ce comportement est l'application de `background` (et/ou des propriétés détaillées correspondantes) : cette propriété s'applique distinctement à chaque partie du texte séparément afin d'éviter de masquer ou d'obscurcir de grandes zones de texte sur le média.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
 {{CSSSyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<div class="note">
-<p><strong>Note :</strong> Un exemple doit être construit pour cette page, n'hésitez pas à le faire sur la version anglaise d'abord avant de le reporter ici.</p>
-</div>
+> **Note :** Un exemple doit être construit pour cette page, n'hésitez pas à le faire sur la version anglaise d'abord avant de le reporter ici.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("WebVTT", "#the-cue-region-pseudo-element", "the <code>::cue-region</code> pseudo-element")}}</td>
-   <td>{{Spec2("WebVTT")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                | État                     | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ | -------------------- |
+| {{SpecName("WebVTT", "#the-cue-region-pseudo-element", "the <code>::cue-region</code> pseudo-element")}} | {{Spec2("WebVTT")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.cue-region")}}</p>
+{{Compat("css.selectors.cue-region")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Les autres sélecteurs {{DOMxRef("WebVTT API", "WebVTT", "", 1)}} :
-  <ul>
-   <li>{{CSSxRef("::cue")}}</li>
-   <li>{{CSSxRef(":past")}}</li>
-   <li>{{CSSxRef(":future")}}</li>
-  </ul>
- </li>
-</ul>
+- Les autres sélecteurs {{DOMxRef("WebVTT API", "WebVTT", "", 1)}} :
+
+  - {{CSSxRef("::cue")}}
+  - {{CSSxRef(":past")}}
+  - {{CSSxRef(":future")}}

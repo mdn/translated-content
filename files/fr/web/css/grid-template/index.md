@@ -7,17 +7,18 @@ tags:
   - Reference
 translation_of: Web/CSS/grid-template
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>grid-template</code></strong> est une <a href="/fr/docs/Web/CSS/Shorthand_properties">propriété raccourcie</a> permettant de définir les colonnes, grilles et zones d'une grille.</p>
+La propriété **`grid-template`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) permettant de définir les colonnes, grilles et zones d'une grille.
 
-<div>{{EmbedInteractiveExample("pages/css/grid-template.html")}}</div>
+{{EmbedInteractiveExample("pages/css/grid-template.html")}}
 
-<p>Les propriétés détaillées sont {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}} et {{cssxref("grid-template-areas")}}.</p>
+Les propriétés détaillées sont {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}} et {{cssxref("grid-template-areas")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css no-line-numbers">/* Valeur avec un mot-clé */
+```css
+/* Valeur avec un mot-clé */
 grid-template: none;
 
 /* Valeurs utilisant grid-template-rows / grid-template-columns */
@@ -39,32 +40,32 @@ grid-template: [header-top] "a a a"     [header-bottom]
 grid-template: inherit;
 grid-template: initial;
 grid-template: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Un mot-clé qui applique <code>none</code> sur les trois propriétés détaillées et qui indique qu'il n'y a pas de grille explicite. Il n'y a pas de zone de grille nommée. Les lignes et les colonnes seront générées de façon implicite et leurs tailles seront déterminées par les propriétés {{cssxref("grid-auto-rows")}} et {{cssxref("grid-auto-columns")}}.</dd>
- <dt><code>&lt;'grid-template-rows'&gt; / &lt;'grid-template-columns'&gt;</code></dt>
- <dd>Voir {{cssxref("grid-template-rows")}} et {{cssxref("grid-template-columns")}} pour les valeurs définies. {{cssxref("grid-template-areas")}} recevra la valeur <code>none</code>.</dd>
- <dt><code>[ &lt;line-names&gt;? &lt;string&gt; &lt;track-size&gt;? &lt;line-names&gt;? ]+ [ / &lt;track-list&gt; ]?</code></dt>
- <dd>{{cssxref("grid-template-areas")}} est définie avec les chaînes listées, {{cssxref("grid-template-rows")}} est définie avec les tailles de piste suivant chaque chaîne (<code>auto</code> sera utilisé pour les tailles manquantes), les lignes seront découpées selon les noms avant et après chaque taille. {{cssxref("grid-template-columns")}} sera définie avec la valeur listée après la barre oblique (ou <code>none</code> sinon).
- <div class="note"><p><strong>Note :</strong> La fonction {{cssxref("repeat()")}} n'est pas autorisée parmi les listes de pistes car les pistes sont conçues pour correspondre à la disposition finale (à la façon d'un dessin en ASCII).</p></div>
- </dd>
-</dl>
+- `none`
+  - : Un mot-clé qui applique `none` sur les trois propriétés détaillées et qui indique qu'il n'y a pas de grille explicite. Il n'y a pas de zone de grille nommée. Les lignes et les colonnes seront générées de façon implicite et leurs tailles seront déterminées par les propriétés {{cssxref("grid-auto-rows")}} et {{cssxref("grid-auto-columns")}}.
+- `<'grid-template-rows'> / <'grid-template-columns'>`
+  - : Voir {{cssxref("grid-template-rows")}} et {{cssxref("grid-template-columns")}} pour les valeurs définies. {{cssxref("grid-template-areas")}} recevra la valeur `none`.
+- `[ <line-names>? <string> <track-size>? <line-names>? ]+ [ / <track-list> ]?`
 
-<div class="note"><p><strong>Note :</strong> La propriété raccourcie {{cssxref("grid")}} accepte la même syntaxe mais réinitialise également les propriétés implicites avec leurs valeurs initiales. On pourra utiliser <code>grid</code> (plutôt que <code>grid-template</code>) pour empêcher les valeurs de suivre la cascade de façon séparée.</p></div>
+  - : {{cssxref("grid-template-areas")}} est définie avec les chaînes listées, {{cssxref("grid-template-rows")}} est définie avec les tailles de piste suivant chaque chaîne (`auto` sera utilisé pour les tailles manquantes), les lignes seront découpées selon les noms avant et après chaque taille. {{cssxref("grid-template-columns")}} sera définie avec la valeur listée après la barre oblique (ou `none` sinon).
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+    > **Note :** La fonction {{cssxref("repeat()")}} n'est pas autorisée parmi les listes de pistes car les pistes sont conçues pour correspondre à la disposition finale (à la façon d'un dessin en ASCII).
+
+> **Note :** La propriété raccourcie {{cssxref("grid")}} accepte la même syntaxe mais réinitialise également les propriétés implicites avec leurs valeurs initiales. On pourra utiliser `grid` (plutôt que `grid-template`) pour empêcher les valeurs de suivre la cascade de façon séparée.
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">#page {
+```css
+#page {
   display: grid;
   width: 100%;
   height: 200px;
@@ -92,53 +93,41 @@ main {
 footer {
   background-color: red;
   grid-column: foot;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html">&lt;section id="page"&gt;
-  &lt;header&gt;En-tête&lt;/header&gt;
-  &lt;nav&gt;Navigation&lt;/nav&gt;
-  &lt;main&gt;Zone principale&lt;/main&gt;
-  &lt;footer&gt;Bas de page&lt;/footer&gt;
-&lt;/section&gt;</pre>
+```html
+<section id="page">
+  <header>En-tête</header>
+  <nav>Navigation</nav>
+  <main>Zone principale</main>
+  <footer>Bas de page</footer>
+</section>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", "100%", "200px")}}</p>
+{{EmbedLiveSample("Exemples", "100%", "200px")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Grid", "#propdef-grid-template", "grid-template")}}</td>
-   <td>{{Spec2("CSS3 Grid")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName("CSS3 Grid", "#propdef-grid-template", "grid-template")}} | {{Spec2("CSS3 Grid")}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.grid-template")}}</p>
+{{Compat("css.properties.grid-template")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("grid-template-rows")}}</li>
- <li>{{cssxref("grid-template-areas")}}</li>
- <li>{{cssxref("grid-template-columns")}}</li>
- <li><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Guide : Placer les éléments d'une grille sur les lignes</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#les_propri%c3%a9t%c3%a9s_raccourcies_pour_les_grilles_css">Guide : Les zones de grilles et les propriétés raccourcies</a></li>
- <li>Tutoriel vidéo : <a href="https://gridbyexample.com/video/grid-template-shorthand/">les propriétés raccourcies pour les zones de grille (en anglais)</a></li>
-</ul>
+- {{cssxref("grid-template-rows")}}
+- {{cssxref("grid-template-areas")}}
+- {{cssxref("grid-template-columns")}}
+- [Guide : Placer les éléments d'une grille sur les lignes](/fr/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
+- [Guide : Les zones de grilles et les propriétés raccourcies](/fr/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas#les_propri%c3%a9t%c3%a9s_raccourcies_pour_les_grilles_css)
+- Tutoriel vidéo : [les propriétés raccourcies pour les zones de grille (en anglais)](https://gridbyexample.com/video/grid-template-shorthand/)

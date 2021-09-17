@@ -1,93 +1,109 @@
 ---
 title: ':placeholder-shown'
-slug: 'Web/CSS/:placeholder-shown'
+slug: Web/CSS/:placeholder-shown
 tags:
   - CSS
   - Pseudo-classe
   - Reference
-translation_of: 'Web/CSS/:placeholder-shown'
+translation_of: Web/CSS/:placeholder-shown
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <strong><code>:placeholder-shown</code></strong> permet de représenter n'importe quel élément {{htmlElement("input")}} ou {{htmlElement("textarea")}} affichant <a href="/fr/docs/Web/Guide/HTML/Forms_in_HTML#The_placeholder_attribute">un texte de substitution</a>.</p>
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:placeholder-shown`** permet de représenter n'importe quel élément {{htmlElement("input")}} ou {{htmlElement("textarea")}} affichant [un texte de substitution](/fr/docs/Web/Guide/HTML/Forms_in_HTML#The_placeholder_attribute).
 
-<pre class="brush: css no-line-numbers">/* Cible tout élément &lt;input&gt; ou &lt;textarea&gt; avec un */
+```css
+/* Cible tout élément <input> ou <textarea> avec un */
 /* attribut placeholder actuellement affiché        */
 :placeholder-shown {
   border: 2px solid silver;
-}</pre>
+}
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Exemple_simple">Exemple simple</h3>
+### Exemple simple
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css hidden">input:-ms-input-placeholder {
+```css hidden
+input:-ms-input-placeholder {
   border-color: silver;
 }
 
 input:-moz-placeholder {
   border-color: silver;
-}</pre>
+}
+```
 
-<pre class="brush: css">input {
+```css
+input {
   border: 2px solid black;
   padding: 3px;
 }
 
 :placeholder-shown {
   border-color: silver;
-}</pre>
+}
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;input placeholder="Saisir quelque chose ici"&gt;</pre>
+```html
+<input placeholder="Saisir quelque chose ici">
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Exemples", 200, 60)}}</p>
+{{EmbedLiveSample("Exemples", 200, 60)}}
 
-<h3 id="Dépassement_du_texte">Dépassement du texte</h3>
+### Dépassement du texte
 
-<p>Sur certains écrans plus étroits (tels que ceux des smartphones), la largeur des boîtes de recherche et celle des champs de formulaire peut être réduite fortement. Le texte de substitution peut donc être tronqué de façon indésirable. On peut alors utiliser {{cssxref("text-overflow")}} pour gérer cela gracieusement.</p>
+Sur certains écrans plus étroits (tels que ceux des smartphones), la largeur des boîtes de recherche et celle des champs de formulaire peut être réduite fortement. Le texte de substitution peut donc être tronqué de façon indésirable. On peut alors utiliser {{cssxref("text-overflow")}} pour gérer cela gracieusement.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;input placeholder="Veuillez saisir quelque chose dans ce champ s'il vous plaît !"&gt;</pre>
+```html
+<input placeholder="Veuillez saisir quelque chose dans ce champ s'il vous plaît !">
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css hidden">input:-ms-input-placeholder {
+```css hidden
+input:-ms-input-placeholder {
   text-overflow: ellipsis;
 }
 
 input:-moz-placeholder {
   text-overflow: ellipsis;
-}</pre>
-</div>
+}
+```
 
-<pre class="brush: css">input:placeholder-shown {
+```css
+input:placeholder-shown {
   text-overflow: ellipsis;
-}</pre>
+}
+```
 
-<h4 id="Résultat_2">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Dépassement_du_texte", 200, 60)}}</p>
+{{EmbedLiveSample("Dépassement_du_texte", 200, 60)}}
 
-<h3 id="Texte_coloré">Texte coloré</h3>
+### Texte coloré
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;input placeholder="Saisir quelque chose ici"&gt;</pre>
+```html
+<input placeholder="Saisir quelque chose ici">
+```
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css hidden">input:-ms-input-placeholder {
+```css hidden
+input:-ms-input-placeholder {
   color: red;
   font-style: italic;
 }
@@ -95,41 +111,46 @@ input:-moz-placeholder {
 input:-moz-placeholder {
   color: red;
   font-style: italic;
-}</pre>
+}
+```
 
-<pre class="brush: css">input:placeholder-shown {
+```css
+input:placeholder-shown {
   color: red;
   font-style: italic;
 }
-</pre>
+```
 
-<h4 id="Résultat_3">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Texte_coloré")}}</p>
+{{EmbedLiveSample("Texte_coloré")}}
 
-<h3 id="Champ_de_saisie_personnalisé">Champ de saisie personnalisé</h3>
+### Champ de saisie personnalisé
 
-<h4 id="HTML_4">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;form id="test"&gt;
-  &lt;p&gt;
-    &lt;label for="name"&gt;Enter Student Name:&lt;/label&gt;
-    &lt;input id="name" placeholder="Student Name"/&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;label for="branch"&gt;Enter Student Branch:&lt;/label&gt;
-    &lt;input id="branch" placeholder="Student Branch"/&gt;
-  &lt;/p&gt;
-  &lt;p&gt;
-    &lt;label for="sid"&gt;Enter Student ID:&lt;/label&gt;
-    &lt;input type="number" pattern="[0-9]{8}" title="8 digit ID" id="sid" class="studentid" placeholder="8 digit id"/&gt;
-  &lt;/p&gt;
-  &lt;input type="submit"/&gt;
-&lt;/form&gt;</pre>
+```html
+<form id="test">
+  <p>
+    <label for="name">Enter Student Name:</label>
+    <input id="name" placeholder="Student Name"/>
+  </p>
+  <p>
+    <label for="branch">Enter Student Branch:</label>
+    <input id="branch" placeholder="Student Branch"/>
+  </p>
+  <p>
+    <label for="sid">Enter Student ID:</label>
+    <input type="number" pattern="[0-9]{8}" title="8 digit ID" id="sid" class="studentid" placeholder="8 digit id"/>
+  </p>
+  <input type="submit"/>
+</form>
+```
 
-<h4 id="CSS_4">CSS</h4>
+#### CSS
 
-<pre class="brush: css hidden">input.studentid:-ms-input-placeholder {
+```css hidden
+input.studentid:-ms-input-placeholder {
   background-color: yellow;
   color: red;
   font-style: italic;
@@ -139,9 +160,11 @@ input.studentid:-moz-placeholder {
   background-color: yellow;
   color: red;
   font-style: italic;
-}</pre>
+}
+```
 
-<pre class="brush: css">input {
+```css
+input {
   background-color: #E8E8E8;
   color: black;
 }
@@ -150,41 +173,27 @@ input.studentid:placeholder-shown {
   background-color: yellow;
   color: red;
   font-style: italic;
-}</pre>
+}
+```
 
-<h4 id="Résultat_4">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Champ_de_saisie_personnalisé", 200, 180)}}</p>
+{{EmbedLiveSample("Champ_de_saisie_personnalisé", 200, 180)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#placeholder", ":placeholder-shown")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                                 | Commentaires         |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName("CSS4 Selectors", "#placeholder", ":placeholder-shown")}} | {{Spec2("CSS4 Selectors")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.placeholder-shown")}}</p>
+{{Compat("css.selectors.placeholder-shown")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("::placeholder")}}</li>
- <li>{{cssxref("::-moz-placeholder")}}</li>
- <li>{{HTMLElement("input")}}</li>
- <li>{{HTMLElement("textarea")}}</li>
- <li><a href="/fr/docs/Web/Guide/HTML/Formulaires">Les formulaires HTML</a></li>
-</ul>
+- {{cssxref("::placeholder")}}
+- {{cssxref("::-moz-placeholder")}}
+- {{HTMLElement("input")}}
+- {{HTMLElement("textarea")}}
+- [Les formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires)

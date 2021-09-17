@@ -7,35 +7,20 @@ tags:
   - Type
 translation_of: Web/CSS/translation-value
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Le type de donnée <strong><code>&lt;translation-value&gt;</code></strong> est utilisé dans les arguments pour certaines fonctions de <a href="/fr/docs/Web/CSS/transform" title="CSS/transform">transformation</a> dont <code><a href="/fr/docs/Web/CSS/transform-function/translate">translate()</a></code>, <code><a href="/fr/docs/Web/CSS/transform-function/translateX">translateX()</a></code>, <code><a href="/fr/docs/Web/CSS/transform-function/translateY">translateY()</a></code>, et <code><a href="/fr/docs/Web/CSS/transform-function/translate3d">translate3d()</a></code>. </p>
+Le type de donnée **`<translation-value>`** est utilisé dans les arguments pour certaines fonctions de [transformation](/fr/docs/Web/CSS/transform "CSS/transform") dont [`translate()`](/fr/docs/Web/CSS/transform-function/translate), [`translateX()`](/fr/docs/Web/CSS/transform-function/translateX), [`translateY()`](/fr/docs/Web/CSS/transform-function/translateY), et [`translate3d()`](/fr/docs/Web/CSS/transform-function/translate3d).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Un argument <code>&lt;translation-value&gt;</code> peut être une valeur de type {{cssxref("&lt;length&gt;")}} ou de type {{cssxref("&lt;percentage&gt;")}}.</p>
+Un argument `<translation-value>` peut être une valeur de type {{cssxref("&lt;length&gt;")}} ou de type {{cssxref("&lt;percentage&gt;")}}.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Spécification</th>
-   <th>Statut</th>
-   <th>Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Transforms', '#transform-functions', 'The Transform Functions')}}</td>
-   <td>{{Spec2('CSS3 Transforms')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | Statut                               | Commentaires |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------ |
+| {{SpecName('CSS3 Transforms', '#transform-functions', 'The Transform Functions')}} | {{Spec2('CSS3 Transforms')}} |              |
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("transform")}}</li>
-</ul>
+- {{cssxref("transform")}}

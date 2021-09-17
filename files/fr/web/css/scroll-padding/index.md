@@ -8,21 +8,22 @@ tags:
   - Reference
 translation_of: Web/CSS/scroll-padding
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <code><strong>scroll-padding</strong></code> est une <a href="/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies">propriété raccourcie</a> qui permet de définir l'ensemble des propriétés <code>scroll-padding-top</code>, <code>scroll-padding-right</code>, <code>scroll-padding-bottom</code> et <code>scroll-padding-left</code> (de la même façon que la propriété {{cssxref("padding")}} permet de définir les propriétés détaillées associées).</p>
+La propriété **`scroll-padding`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) qui permet de définir l'ensemble des propriétés `scroll-padding-top`, `scroll-padding-right`, `scroll-padding-bottom` et `scroll-padding-left` (de la même façon que la propriété {{cssxref("padding")}} permet de définir les propriétés détaillées associées).
 
-<div>{{EmbedInteractiveExample("pages/css/scroll-padding.html")}}</div>
+{{EmbedInteractiveExample("pages/css/scroll-padding.html")}}
 
-<p>Les propriétés <code>scroll-padding-*</code> permettent de définir des décalages par rapport à la zone de défilement de l'élément (<em>scrollport</em>). On peut ainsi éviter à un élément d'être affiché là où d'autres barres sont présentes ou encore donner plus d'espace entre un élément et les barres de défilement pour y naviguer.</p>
+Les propriétés `scroll-padding-*` permettent de définir des décalages par rapport à la zone de défilement de l'élément (_scrollport_). On peut ainsi éviter à un élément d'être affiché là où d'autres barres sont présentes ou encore donner plus d'espace entre un élément et les barres de défilement pour y naviguer.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 scroll-padding: auto;
 
 /* Valeurs de longueur */
-/* Type &lt;length&gt; */
+/* Type <length> */
 scroll-padding: 10px;
 scroll-padding: 1em .5em 1em 1em;
 scroll-padding: 10%;
@@ -31,42 +32,27 @@ scroll-padding: 10%;
 scroll-padding: inherit;
 scroll-padding: initial;
 scroll-padding: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;length-percentage&gt;</code></dt>
- <dd>Un décalage intérieur entre la boîte de défilement et le bord correspondant de l'élément. Cette valeur, de type {{cssxref("&lt;length-percentage&gt;")}}, est une longueur ({{cssxref("&lt;length&gt;")}}) ou un pourcentage ({{cssxref("&lt;percentage&gt;")}}) valide.</dd>
- <dt><code>auto</code></dt>
- <dd>Le décalage est déterminé par l'agent utilisateur. Cette valeur correspond généralement à <code>0px</code> mais le navigateur peut utiliser une heuristique et déterminer si une valeur non nulle est préférable au regard du contexte dans lequel se trouve l'élément.</dd>
-</dl>
+- `<length-percentage>`
+  - : Un décalage intérieur entre la boîte de défilement et le bord correspondant de l'élément. Cette valeur, de type {{cssxref("&lt;length-percentage&gt;")}}, est une longueur ({{cssxref("&lt;length&gt;")}}) ou un pourcentage ({{cssxref("&lt;percentage&gt;")}}) valide.
+- `auto`
+  - : Le décalage est déterminé par l'agent utilisateur. Cette valeur correspond généralement à `0px` mais le navigateur peut utiliser une heuristique et déterminer si une valeur non nulle est préférable au regard du contexte dans lequel se trouve l'élément.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Scroll Snap Points", "#propdef-scroll-padding", "scroll-padding")}}</td>
-   <td>{{Spec2("CSS Scroll Snap Points")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                                             | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
+| {{SpecName("CSS Scroll Snap Points", "#propdef-scroll-padding", "scroll-padding")}} | {{Spec2("CSS Scroll Snap Points")}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.scroll-padding")}}</p>
+{{Compat("css.properties.scroll-padding")}}

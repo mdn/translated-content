@@ -1,17 +1,19 @@
 ---
 title: color-scheme
 slug: Web/CSS/color-scheme
-browser-compat: css.properties.color-scheme
 translation_of: Web/CSS/color-scheme
+browser-compat: css.properties.color-scheme
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété CSS <strong><code>color-scheme</code></strong> permet d'indiquer les jeux de couleurs dans lesquels un élément peut être rendu sans risque.</p>
-<p>Les jeux de couleurs communément utilisés par les systèmes d'exploitation sont <i>light</i> (clair) et <i>dark</i> (sombre), ou <i>day mode</i> (mode jour) et <i>night mode</i> (mode nuit). Lorsqu'un utilisateur sélectionne un de ces jeux de couleurs, le système d'exploitation fait des ajustements à l'interface utilisateur. Cela comprend les contrôles de formulaires, les barres de défilement et les valeurs utilisées par le système de couleurs CSS.</p>
+La propriété CSS **`color-scheme`** permet d'indiquer les jeux de couleurs dans lesquels un élément peut être rendu sans risque.
 
-<h2 id="Syntax">Syntaxe</h2>
+Les jeux de couleurs communément utilisés par les systèmes d'exploitation sont _light_ (clair) et _dark_ (sombre), ou _day mode_ (mode jour) et _night mode_ (mode nuit). Lorsqu'un utilisateur sélectionne un de ces jeux de couleurs, le système d'exploitation fait des ajustements à l'interface utilisateur. Cela comprend les contrôles de formulaires, les barres de défilement et les valeurs utilisées par le système de couleurs CSS.
 
-<pre class="brush: css">color-scheme: normal;
+## Syntaxe
+
+```css
+color-scheme: normal;
 color-scheme: light;
 color-scheme: dark;
 color-scheme: light dark;
@@ -20,53 +22,51 @@ color-scheme: light dark;
 color-scheme: inherit;
 color-scheme: initial;
 color-scheme: revert;
-color-scheme: unset;</pre>
+color-scheme: unset;
+```
 
-<p>La valeur de la propriété <code>color-scheme</code> doit être un des mots-clés suivants.</p>
+La valeur de la propriété `color-scheme` doit être un des mots-clés suivants.
 
-<h3 id="Values">Valeurs</h3>
+### Valeurs
 
-<dl>
-  <dt><code>normal</code></dt>
-  <dd>Indique que l'élément ne tient pas compte d'un éventuel jeu de couleurs et qu'il devrait être rendu à l'aide du jeu de couleurs par défaut du navigateur.</dd>
-  <dt><code>light</code></dt>
-  <dd>Indique que l'élément peut être rendu en utilisant le jeu de couleurs claires du système d'exploitation.</dd>
-  <dt><code>dark</code></dt>
-  <dd>Indique que l'élément peut être rendu en utilisant le jeu de couleurs sombres du système d'exploitation.</dd>
-</dl>
+- `normal`
+  - : Indique que l'élément ne tient pas compte d'un éventuel jeu de couleurs et qu'il devrait être rendu à l'aide du jeu de couleurs par défaut du navigateur.
+- `light`
+  - : Indique que l'élément peut être rendu en utilisant le jeu de couleurs claires du système d'exploitation.
+- `dark`
+  - : Indique que l'élément peut être rendu en utilisant le jeu de couleurs sombres du système d'exploitation.
 
-<h2 id="Formal_definition">Définition formelle</h2>
+## Définition formelle
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Formal_syntax">Syntaxe formelle</h2>
+## Syntaxe formelle
 
-<p>{{csssyntax}}</p>
+{{csssyntax}}
 
-<h2 id="Examples">Exemples</h2>
+## Exemples
 
-<h3 id="Adapting_to_color_schemes">Adaptation aux jeux de couleurs</h3>
+### Adaptation aux jeux de couleurs
 
-<p>Pour activer la préférence de jeu de couleurs de l'utilisateur sur l'ensemble de la page, <code>color-scheme</code> peut être déclaré sur l'élément {{cssxref(":root")}}.</p>
+Pour activer la préférence de jeu de couleurs de l'utilisateur sur l'ensemble de la page, `color-scheme` peut être déclaré sur l'élément {{cssxref(":root")}}.
 
-<pre class="brush: css">:root {
+```css
+:root {
   color-scheme: light dark;
 }
-</pre>
+```
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/Web/HTML/Applying_color">Appliquer des couleurs aux éléments HTML grâce à CSS</a></li>
-  <li>Les autres propriétés relatives aux couleurs : {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}} et {{cssxref("column-rule-color")}}</li>
-  <li>{{cssxref("background-image")}}</li>
-  <li>{{cssxref("-webkit-print-color-adjust")}}</li>
-</ul>
+- [Appliquer des couleurs aux éléments HTML grâce à CSS](/fr/docs/Web/HTML/Applying_color)
+- Les autres propriétés relatives aux couleurs : {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}} et {{cssxref("column-rule-color")}}
+- {{cssxref("background-image")}}
+- {{cssxref("-webkit-print-color-adjust")}}

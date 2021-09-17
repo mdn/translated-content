@@ -8,44 +8,42 @@ tags:
   - Reference
 translation_of: Web/CSS/border-inline-start-style
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propriété <strong><code>border-inline-start-style</code></strong> définit le style de la bordure utilisé pour le côté du début de l'élément dans l'axe de lecture. Cette propriété logique correspondra à une propriété physique selon le mode d'écriture, la directionnalité et l'orientation du texte. Autrement dit, elle correspond à {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}} ou à {{cssxref("border-left-style")}} selon les valeurs de {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.</p>
+La propriété **`border-inline-start-style`** définit le style de la bordure utilisé pour le côté du début de l'élément dans l'axe de lecture. Cette propriété logique correspondra à une propriété physique selon le mode d'écriture, la directionnalité et l'orientation du texte. Autrement dit, elle correspond à {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}} ou à {{cssxref("border-left-style")}} selon les valeurs de {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/border-inline-start-style.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-inline-start-style.html")}}
 
-<p>Les autres propriétés logiques permettant de définir le style de la bordure sont les suivantes :</p>
+Les autres propriétés logiques permettant de définir le style de la bordure sont les suivantes :
 
-<ul>
- <li>{{cssxref("border-block-start-style")}}</li>
- <li>{{cssxref("border-block-end-style")}}</li>
- <li>{{cssxref("border-inline-end-style")}}.</li>
-</ul>
+- {{cssxref("border-block-start-style")}}
+- {{cssxref("border-block-end-style")}}
+- {{cssxref("border-inline-end-style")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeur avec un mot-clé<em> */</em>
+```css
+/* Valeur avec un mot-clé */
 border-inline-start-style: dashed;
 border-inline-start-style: dotted;
 border-inline-start-style: groove;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;'border-style'&gt;</code></dt>
- <dd>Le style de la ligne utilisé pour la bordure, voir {{cssxref("border-style")}}.</dd>
-</dl>
+- `<'border-style'>`
+  - : Le style de la ligne utilisé pour la bordure, voir {{cssxref("border-style")}}.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -55,54 +53,40 @@ border-inline-start-style: groove;
   writing-mode: vertical-lr;
   border: 5px solid blue;
   border-inline-start-style: dashed;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exemple"&gt;Texte d'exemple&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exemple">Texte d'exemple</p>
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", 140, 140)}}</p>
+{{EmbedLiveSample("Exemples", 140, 140)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-border-inline-start-style", "border-inline-start-style")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                | État                                             | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
+| {{SpecName("CSS Logical Properties", "#propdef-border-inline-start-style", "border-inline-start-style")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.border-inline-start-style")}}</p>
+{{Compat("css.properties.border-inline-start-style")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Les propriétés physiques correspondantes :
-  <ul>
-   <li>{{cssxref("border-top-style")}},</li>
-   <li>{{cssxref("border-right-style")}},</li>
-   <li>{{cssxref("border-bottom-style")}},</li>
-   <li>{{cssxref("border-left-style")}}</li>
-  </ul>
- </li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- Les propriétés physiques correspondantes :
+
+  - {{cssxref("border-top-style")}},
+  - {{cssxref("border-right-style")}},
+  - {{cssxref("border-bottom-style")}},
+  - {{cssxref("border-left-style")}}
+
+- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

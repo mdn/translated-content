@@ -7,15 +7,16 @@ tags:
   - Reference
 translation_of: Web/CSS/font-size
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>font-size</code></strong> définit la taille de fonte utilisée pour le texte. La modification de cette taille peut entraîner la modification de la taille d'autres éléments car elle est utilisée pour calculer les valeurs des longueurs relatives (type {{cssxref("&lt;length&gt;")}}) (par exemple exprimées avec les unités <code>em</code> ou <code>ex</code>).</p>
+La propriété **`font-size`** définit la taille de fonte utilisée pour le texte. La modification de cette taille peut entraîner la modification de la taille d'autres éléments car elle est utilisée pour calculer les valeurs des longueurs relatives (type {{cssxref("&lt;length&gt;")}}) (par exemple exprimées avec les unités `em` ou `ex`).
 
-<div>{{EmbedInteractiveExample("pages/css/font-size.html")}}</div>
+{{EmbedInteractiveExample("pages/css/font-size.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs dont la taille est absolue */
+```css
+/* Valeurs dont la taille est absolue */
 font-size: xx-small;
 font-size: x-small;
 font-size: small;
@@ -29,129 +30,132 @@ font-size: larger;
 font-size: smaller;
 
 /* Valeurs de longueurs */
-/* Type &lt;length&gt;        */
+/* Type <length>        */
 font-size: 12px;
 font-size: 0.8em;
 
 /* Valeurs proportionnelles */
-/* Type &lt;percentage&gt;        */
+/* Type <percentage>        */
 font-size: 80%;
 
 /* Valeurs globales */
 font-size: inherit;
 font-size: initial;
 font-size: unset;
-</pre>
+```
 
-<p>La propriété <code>font-size</code> peut être définie de deux façons :</p>
+La propriété `font-size` peut être définie de deux façons :
 
-<ul>
- <li>Comme un mot-clé désignant <a href="#absolue">une taille absolue</a> ou <a href="#relative">une taille relative</a></li>
- <li>Comme une valeur de type <code>&lt;length&gt;</code> ou de <code>&lt;percentage&gt;</code></li>
-</ul>
+- Comme un mot-clé désignant [une taille absolue](#absolue) ou [une taille relative](#relative)
+- Comme une valeur de type `<length>` ou de `<percentage>`
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>xx-small, x-small, small, medium, large, x-large, xx-large</code></dt>
- <dd>Un ensemble de mots-clés désignant des valeurs absolues basées sur la taille par défaut de l'utilisateur (qui vaut <code>medium</code>). Le comportement est analogue à ce qu'on obtient en utilisant le code HTML <code>&lt;font size="1"&gt;</code> à <code>&lt;font size="7"&gt;</code> lorsque la taille par défaut de l'utilisateur vaut <code>&lt;font size="4"&gt;</code>.</dd>
- <dt><code>larger, smaller</code></dt>
- <dd>La taille de la fonte est plus grande (<code>larger</code>) ou plus petite (<code>smaller</code>) que celle de l'élément parent. Le ratio d'agrandissement/réduction est le même que celui qui sépare les mots-clés présentés avant.</dd>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Une longueur positive (type {{cssxref("&lt;length&gt;")}} ou un pourcentage (type {{cssxref("&lt;percentage&gt;")}}). Lorsque les valeurs sont exprimées avec les unités <code>em</code> ou <code>ex</code>, la taille est alors relative à la taille de la fonte de l'élément parent. Ainsi, une valeur de <code>0.5em</code> indiquera que la taille de fonte pour l'élément courant est la moitié de celle utilisée pour l'élément parent. Lorsque l'unité utilisée est <code>rem</code>, la taille est alors relative à la taille de la fonte utilisée pour l'élément racine <code>html</code>.</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>Les valeurs exprimées en pourcentages (type {{cssxref("&lt;percentage&gt;")}}) sont proportionnelles à la taille de fonte de l'élément parent.</dd>
-</dl>
+- `xx-small, x-small, small, medium, large, x-large, xx-large`
+  - : Un ensemble de mots-clés désignant des valeurs absolues basées sur la taille par défaut de l'utilisateur (qui vaut `medium`). Le comportement est analogue à ce qu'on obtient en utilisant le code HTML `<font size="1">` à `<font size="7">` lorsque la taille par défaut de l'utilisateur vaut `<font size="4">`.
+- `larger, smaller`
+  - : La taille de la fonte est plus grande (`larger`) ou plus petite (`smaller`) que celle de l'élément parent. Le ratio d'agrandissement/réduction est le même que celui qui sépare les mots-clés présentés avant.
+- `<length>`
+  - : Une longueur positive (type {{cssxref("&lt;length&gt;")}} ou un pourcentage (type {{cssxref("&lt;percentage&gt;")}}). Lorsque les valeurs sont exprimées avec les unités `em` ou `ex`, la taille est alors relative à la taille de la fonte de l'élément parent. Ainsi, une valeur de `0.5em` indiquera que la taille de fonte pour l'élément courant est la moitié de celle utilisée pour l'élément parent. Lorsque l'unité utilisée est `rem`, la taille est alors relative à la taille de la fonte utilisée pour l'élément racine `html`.
+- `<percentage>`
+  - : Les valeurs exprimées en pourcentages (type {{cssxref("&lt;percentage&gt;")}}) sont proportionnelles à la taille de fonte de l'élément parent.
 
-<div class="note">
-<p><strong>Note :</strong> Il est généralement préférable d'utiliser des valeurs relatives à la taille par défaut choisie par l'utilisateur.</p>
-</div>
+> **Note :** Il est généralement préférable d'utiliser des valeurs relatives à la taille par défaut choisie par l'utilisateur.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Les_différentes_approches">Les différentes approches</h2>
+## Les différentes approches
 
-<p>Plusieurs méthodes existent pour définir la taille de fonte utilisée : des mots-clés ou des valeurs numériques exprimées en pixels ou en ems. Selon les besoins, on utilisera une méthode différente.</p>
+Plusieurs méthodes existent pour définir la taille de fonte utilisée : des mots-clés ou des valeurs numériques exprimées en pixels ou en ems. Selon les besoins, on utilisera une méthode différente.
 
-<h3 id="Les_mots-clés">Les mots-clés</h3>
+### Les mots-clés
 
-<p>Les mots-clés sont une méthode simple et efficace pour déterminer la taille de fonte à utiliser. En utilisant un mot-clé sur l'élément {{HTMLElement("body")}}, on peut définir des tailles relatives sur toute la page et réduire ou augmenter la taille de la fonte en conséquence.</p>
+Les mots-clés sont une méthode simple et efficace pour déterminer la taille de fonte à utiliser. En utilisant un mot-clé sur l'élément {{HTMLElement("body")}}, on peut définir des tailles relatives sur toute la page et réduire ou augmenter la taille de la fonte en conséquence.
 
-<h3 id="Les_pixels">Les pixels</h3>
+### Les pixels
 
-<p>L'utilisation des pixels (<code>px</code>) permet d'obtenir un résultat statique, absolu et indépendant du système d'exploitation et du navigateur. Cependant, cette méthode est déconseillée car elle n'est pas accessible. Ainsi, les utilisateurs ne peuvent pas adapter la taille du texte avec leurs réglages si besoin.</p>
+L'utilisation des pixels (`px`) permet d'obtenir un résultat statique, absolu et indépendant du système d'exploitation et du navigateur. Cependant, cette méthode est déconseillée car elle n'est pas accessible. Ainsi, les utilisateurs ne peuvent pas adapter la taille du texte avec leurs réglages si besoin.
 
-<h3 id="Les_ems">Les ems</h3>
+### Les ems
 
-<p>On peut également définir la taille de la fonte en <code>em</code>. La taille d'une valeur exprimée en <code>em</code> est dynamique. Lorsqu'on définit la propriété <code>font-size</code>, un <code>em</code> est équivalent à la taille de fonte appliquée à l'élément parent de l'élément courant. Si cette taille n'a pas été définie pour l'élément parent, elle correspondra à la taille par défaut du navigateur (généralement 16px). Ainsi, si on définit <code>font-size</code> avec une valeur de <code>20px</code> sur l'élément <code>body</code>, <code>1em</code> correspondra à <code>20px</code> et <code>2em</code> à <code>40px</code>. Ici, la valeur 2 est un facteur multiplicateur de la taille.</p>
+On peut également définir la taille de la fonte en `em`. La taille d'une valeur exprimée en `em` est dynamique. Lorsqu'on définit la propriété `font-size`, un `em` est équivalent à la taille de fonte appliquée à l'élément parent de l'élément courant. Si cette taille n'a pas été définie pour l'élément parent, elle correspondra à la taille par défaut du navigateur (généralement 16px). Ainsi, si on définit `font-size` avec une valeur de `20px` sur l'élément `body`, `1em` correspondra à `20px` et `2em` à `40px`. Ici, la valeur 2 est un facteur multiplicateur de la taille.
 
-<p>Pour calculer une équivalence entre <code>em</code> et un résultat exprimé en pixels, on peut utiliser cette formule :</p>
+Pour calculer une équivalence entre `em` et un résultat exprimé en pixels, on peut utiliser cette formule :
 
-<pre class="brush: css">em = taille visée en px / font-size du parent en pixels</pre>
+```css
+em = taille visée en px / font-size du parent en pixels
+```
 
-<p>Ainsi, si la taille <code>font-size</code> de <code>body</code> vaut <code>1em</code> et que l'échelle par défaut du navigateur indique <code>1em</code> = <code>16px</code> et qu'on souhaite obtenir une <code>font-size</code> équivalente à <code>12px</code>, on pourra utiliser la valeur <code>0.75em</code> (car 12/16 = 0.75). De même, si on veut une taille analogue à <code>10px</code>, on utilisera <code>0.625em</code> (10/16 = 0.625).</p>
+Ainsi, si la taille `font-size` de `body` vaut `1em` et que l'échelle par défaut du navigateur indique `1em` = `16px` et qu'on souhaite obtenir une `font-size` équivalente à `12px`, on pourra utiliser la valeur `0.75em` (car 12/16 = 0.75). De même, si on veut une taille analogue à `10px`, on utilisera `0.625em` (10/16 = 0.625).
 
-<p>L'unité <code>em</code> est très utile car elle s'adapte automatiquement à la taille de fonte choisie par l'utilisateur.</p>
+L'unité `em` est très utile car elle s'adapte automatiquement à la taille de fonte choisie par l'utilisateur.
 
-<p>Un autre aspect important est la <strong>composition</strong> des valeurs exprimées avec cette unité. Si on prend le fragment HTML suivant :</p>
+Un autre aspect important est la **composition** des valeurs exprimées avec cette unité. Si on prend le fragment HTML suivant :
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;span&gt;
+```html
+<div>
+  <span>
     Extérieur
-      &lt;span&gt;Intérieur&lt;/span&gt;
+      <span>Intérieur</span>
     Extérieur
-  &lt;/span&gt;
-&lt;/div&gt;
-</pre>
+  </span>
+</div>
+```
 
-<p>Et qu'on applique la feuille de style suivante :</p>
+Et qu'on applique la feuille de style suivante :
 
-<pre class="brush: css">body {
+```css
+body {
   font-size: 62.5%;
 }
 span {
   font-size: 1.6em;
-}</pre>
+}
+```
 
-<p>On obtiendra le résultat suivant :</p>
+On obtiendra le résultat suivant :
 
-<p>{{EmbedLiveSample("Les_ems", 400, 40)}}</p>
+{{EmbedLiveSample("Les_ems", 400, 40)}}
 
-<p>Si la taille par défaut du navigateur est 16px, le mot « Extérieur » sera affiché avec 16 pixels et le mot « Intérieur » sera affiché avec 25.6 pixes. En effet, la taille de <code>font-size</code> pour le bloc <code>span</code> vaut <code>1.6em</code> et cette valeur est relative à la valeur de <code>font-size</code> pour son élément parent, elle-même relative à la valeur de <code>font-size</code> pour son élément parent. C'est ce qu'on appelle <strong>la composition</strong>.</p>
+Si la taille par défaut du navigateur est 16px, le mot « Extérieur » sera affiché avec 16 pixels et le mot « Intérieur » sera affiché avec 25.6 pixes. En effet, la taille de `font-size` pour le bloc `span` vaut `1.6em` et cette valeur est relative à la valeur de `font-size` pour son élément parent, elle-même relative à la valeur de `font-size` pour son élément parent. C'est ce qu'on appelle **la composition**.
 
-<h3 id="Les_rems">Les rems</h3>
+### Les rems
 
-<p>L'unité <code>rem</code> a été conçue pour régler les problèmes engendrés par la composition. Les valeurs exprimées en <code>rem</code> sont relatives à l'élément {{HTMLElement("html")}} et pas à l'élément parent. Autrement dit, cette unité permet d'exprimer une taille relative sans être impacté par la taille de l'élément parent, court-circuitant ainsi la composition.</p>
+L'unité `rem` a été conçue pour régler les problèmes engendrés par la composition. Les valeurs exprimées en `rem` sont relatives à l'élément {{HTMLElement("html")}} et pas à l'élément parent. Autrement dit, cette unité permet d'exprimer une taille relative sans être impacté par la taille de l'élément parent, court-circuitant ainsi la composition.
 
-<p>La feuille de style qui suit ressemble fortement à celle utilisée dans l'exemple précédent, on a simplement remplacé l'unité par <code>rem</code>.</p>
+La feuille de style qui suit ressemble fortement à celle utilisée dans l'exemple précédent, on a simplement remplacé l'unité par `rem`.
 
-<pre class="brush: css">html {
+```css
+html {
   font-size: 62.5%;
 }
 span {
   font-size: 1.6rem;
 }
-</pre>
+```
 
-<p>On utilisera le même fragment de HTML :</p>
+On utilisera le même fragment de HTML :
 
-<pre class="brush: html">&lt;span&gt;
+```html
+<span>
   Extérieur
-    &lt;span&gt;Intérieur&lt;/span&gt;
+    <span>Intérieur</span>
   Extérieur
-&lt;/span&gt;</pre>
+</span>
+```
 
-<p>{{EmbedLiveSample("Les_rems", 400, 40)}}</p>
+{{EmbedLiveSample("Les_rems", 400, 40)}}
 
-<p>Dans cet exemple, si la taille par défaut du navigateur vaut <code>16px</code>, tous les mots seront affichés avec une hauteur de <code>16px</code>.</p>
+Dans cet exemple, si la taille par défaut du navigateur vaut `16px`, tous les mots seront affichés avec une hauteur de `16px`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Premiers_exemples">Premiers exemples</h3>
+### Premiers exemples
 
-<pre class="brush: css">/* Le paragraphe sera écrit avec une grande */
+```css
+/* Le paragraphe sera écrit avec une grande */
 /* fonte.                                   */
 p { font-size: xx-large }
 
@@ -162,13 +166,14 @@ h1 { font-size: 250% }
 /* Le texte contenu dans des éléments span */
 /* mesurera 16px                           */
 span { font-size: 16px; }
-</pre>
+```
 
-<h3 id="Démonstration">Démonstration</h3>
+### Démonstration
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.small {
+```css
+.small {
   font-size: xx-small;
 }
 .larger {
@@ -180,59 +185,36 @@ span { font-size: 16px; }
 .percent {
   font-size: 200%;
 }
-</pre>
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;h1 class="small"&gt;Petit H1&lt;/h1&gt;
-&lt;h1 class="larger"&gt;H1 plus grand&lt;/h1&gt;
-&lt;h1 class="point"&gt;H1 de 24 points&lt;/h1&gt;
-&lt;h1 class="percent"&gt;H1 à 200%&lt;/h1&gt;</pre>
+```html
+<h1 class="small">Petit H1</h1>
+<h1 class="larger">H1 plus grand</h1>
+<h1 class="point">H1 de 24 points</h1>
+<h1 class="percent">H1 à 200%</h1>
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('Démonstration','600','200')}}</p>
+{{EmbedLiveSample('Démonstration','600','200')}}
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Les unités <code>em</code> et <code>ex</code> pour la propriété {{Cssxref("font-size")}} sont relatives à la taille de la fonte de l'élément parent. Pour les autres propriétés, en utilisant ces unités, on aura une valeur relative à la taille de fonte de l'élément courant. Cela signifie que les valeurs exprimées en <code>em</code> ou en pourcents ont le même comportement pour {{cssxref("font-size")}}.</p>
+Les unités `em` et `ex` pour la propriété {{Cssxref("font-size")}} sont relatives à la taille de la fonte de l'élément parent. Pour les autres propriétés, en utilisant ces unités, on aura une valeur relative à la taille de fonte de l'élément courant. Cela signifie que les valeurs exprimées en `em` ou en pourcents ont le même comportement pour {{cssxref("font-size")}}.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#font-size-prop', 'font-size')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>Aucune modification.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'font-size')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td><code>font-size</code> peut désormais être animée.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'fonts.html#propdef-font-size', 'font-size')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Aucune modification.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#font-size', 'font-size')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                                     | Commentaires                            |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------- |
+| {{SpecName('CSS3 Fonts', '#font-size-prop', 'font-size')}}             | {{Spec2('CSS3 Fonts')}}         | Aucune modification.                    |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'font-size')}}     | {{Spec2('CSS3 Transitions')}} | `font-size` peut désormais être animée. |
+| {{SpecName('CSS2.1', 'fonts.html#propdef-font-size', 'font-size')}} | {{Spec2('CSS2.1')}}                 | Aucune modification.                    |
+| {{SpecName('CSS1', '#font-size', 'font-size')}}                         | {{Spec2('CSS1')}}                 | Définition initiale.                    |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.font-size")}}</p>
+{{Compat("css.properties.font-size")}}

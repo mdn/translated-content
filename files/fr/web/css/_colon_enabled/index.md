@@ -1,102 +1,76 @@
 ---
 title: ':enabled'
-slug: 'Web/CSS/:enabled'
+slug: Web/CSS/:enabled
 tags:
   - CSS
   - Pseudo-classe
   - Reference
-translation_of: 'Web/CSS/:enabled'
+translation_of: Web/CSS/:enabled
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <strong><code>:enabled</code></strong> permet de cibler un élément activé. Un élément est activé s'il peut être sélectionné, si on peut cliquer dessus ou si on peut y saisir du texte ou y passer le focus (un élément peut également être dans un état désactivé).</p>
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:enabled`** permet de cibler un élément activé. Un élément est activé s'il peut être sélectionné, si on peut cliquer dessus ou si on peut y saisir du texte ou y passer le focus (un élément peut également être dans un état désactivé).
 
-<pre class="brush: css no-line-numbers">/* Cible n'importe quel élément &lt;input&gt; actif */
+```css
+/* Cible n'importe quel élément <input> actif */
 input:enabled {
   color: #22AA22;
-}</pre>
+}
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans cet exemple, les textes des éléments activés seront verts alors que ceux des éléments désactivés seront gris. L'utilisateur peut ainsi reconnaître les éléments avec lesquels interagir.</p>
+Dans cet exemple, les textes des éléments activés seront verts alors que ceux des éléments désactivés seront gris. L'utilisateur peut ainsi reconnaître les éléments avec lesquels interagir.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html">&lt;form action="url_of_form"&gt;
-  &lt;label for="PremierChamp"&gt;Premier champ (activé) :&lt;/label&gt;
-  &lt;input type="text" id="PremierChamp" value="Titi"&gt;&lt;br /&gt;
+```html
+<form action="url_of_form">
+  <label for="PremierChamp">Premier champ (activé) :</label>
+  <input type="text" id="PremierChamp" value="Titi"><br />
 
-  &lt;label for="DeuxiemeChamp"&gt;Deuxième champ (désactivé) :&lt;/label&gt;
-  &lt;input type="text" id="DeuxiemeChamp" value="Toto" disabled="disabled"&gt;&lt;br /&gt;
+  <label for="DeuxiemeChamp">Deuxième champ (désactivé) :</label>
+  <input type="text" id="DeuxiemeChamp" value="Toto" disabled="disabled"><br />
 
-  &lt;input type="button" value="Envoyer"/&gt;
-&lt;/form&gt;
-</pre>
+  <input type="button" value="Envoyer"/>
+</form>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css; highlight:[1,4]">input:enabled {
+```css
+input:enabled {
   color: #22AA22;
 }
 
 input:disabled {
   color: #D9D9D9;
 }
-  </pre>
 
-<h3 id="Résultat">Résultat</h3>
+```
 
-<div>{{EmbedLiveSample("Exemples",550,95)}}</div>
+### Résultat
 
-<h2 id="Spécifications">Spécifications</h2>
+{{EmbedLiveSample("Exemples",550,95)}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#selector-enabled', ':enabled')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Aucune modification.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', '#selector-enabled', ':enabled')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Définition de la sémantique dans le contexte de HTML et des formulaires.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#enableddisabled', ':enabled')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Aucune modification.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Basic UI', '#pseudo-classes', ':enabled')}}</td>
-   <td>{{Spec2('CSS3 Basic UI')}}</td>
-   <td>Lien vers la spécification des sélecteurs de niveau 3.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#enableddisabled', ':enabled')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Définition de la pseudo-classe mais pas de la sémantique associée.</td>
-  </tr>
- </tbody>
-</table>
+## Spécifications
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+| Spécification                                                                        | État                                 | Commentaires                                                             |
+| ------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------------ |
+| {{SpecName('HTML WHATWG', '#selector-enabled', ':enabled')}}     | {{Spec2('HTML WHATWG')}}     | Aucune modification.                                                     |
+| {{SpecName('HTML5 W3C', '#selector-enabled', ':enabled')}}         | {{Spec2('HTML5 W3C')}}         | Définition de la sémantique dans le contexte de HTML et des formulaires. |
+| {{SpecName('CSS4 Selectors', '#enableddisabled', ':enabled')}} | {{Spec2('CSS4 Selectors')}} | Aucune modification.                                                     |
+| {{SpecName('CSS3 Basic UI', '#pseudo-classes', ':enabled')}}     | {{Spec2('CSS3 Basic UI')}} | Lien vers la spécification des sélecteurs de niveau 3.                   |
+| {{SpecName('CSS3 Selectors', '#enableddisabled', ':enabled')}} | {{Spec2('CSS3 Selectors')}} | Définition de la pseudo-classe mais pas de la sémantique associée.       |
 
-<p>{{Compat("css.selectors.enabled")}}</p>
+## Compatibilité des navigateurs
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+{{Compat("css.selectors.enabled")}}
 
-<ul>
- <li>{{cssxref(":disabled")}}</li>
-</ul>
+## Voir aussi
+
+- {{cssxref(":disabled")}}

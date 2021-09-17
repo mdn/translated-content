@@ -8,69 +8,65 @@ tags:
 translation_of: Web/CSS/CSS_Logical_Properties/Basic_concepts
 original_slug: Web/CSS/CSS_Logical_Properties/Concepts_de_base
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La spécification relative aux propriétés et valeurs logiques introduit une correspondance relative au flux pour de nombreuses propriétés et valeurs CSS. Dans cet article, nous verrons une introduction de cette spécification et expliquerons les propriétés et valeurs relatives au flux.</p>
+La spécification relative aux propriétés et valeurs logiques introduit une correspondance relative au flux pour de nombreuses propriétés et valeurs CSS. Dans cet article, nous verrons une introduction de cette spécification et expliquerons les propriétés et valeurs relatives au flux.
 
-<h2 id="Quel_intérêt_pour_les_propriétés_logiques">Quel intérêt pour les propriétés logiques ?</h2>
+## Quel intérêt pour les propriétés logiques ?
 
-<p>Historiquement, CSS permettait de dimensionner des objets selon les dimensions physiques de l'écran. On pouvait alors décrire des boîtes avec une certaine largeur ({{CSSxRef("width")}}) et une certaine hauteur ({{CSSxRef("height")}}), positionner les éléments à partir du haut (<code>top</code>) et de la gauche (<code>left</code>), faire flotter les objets, créer des bordures, des marges, du remplissage (<em>padding</em>) en haut, à droite, en bas et à gauche (resp. <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code>, etc.). La spécification <a href="https://drafts.csswg.org/css-logical/">sur les propriétés et valeurs logiques</a> définit des correspondances entres ces valeurs physiques et des valeurs logiques, relatives au flux : <code>start</code> et <code>end</code> plutôt que <code>left</code> et <code>right</code> ou <code>top</code> et <code>bottom</code>.</p>
+Historiquement, CSS permettait de dimensionner des objets selon les dimensions physiques de l'écran. On pouvait alors décrire des boîtes avec une certaine largeur ({{CSSxRef("width")}}) et une certaine hauteur ({{CSSxRef("height")}}), positionner les éléments à partir du haut (`top`) et de la gauche (`left`), faire flotter les objets, créer des bordures, des marges, du remplissage (_padding_) en haut, à droite, en bas et à gauche (resp. `top`, `right`, `bottom`, `left`, etc.). La spécification [sur les propriétés et valeurs logiques](https://drafts.csswg.org/css-logical/) définit des correspondances entres ces valeurs physiques et des valeurs logiques, relatives au flux : `start` et `end` plutôt que `left` et `right` ou `top` et `bottom`.
 
-<p>Prenons un exemple pour comprendre la nécessité de telles propriétés et valeurs logiques. On dispose d'une grille CSS et le conteneur de la grille possède une certaine largeur. On y utilise {{CSSxRef("align-self")}} et {{CSSxRef("justify-self")}} afin d'aligner les éléments à l'intérieur de la grille. Ces propriétés sont relatives au flux : <code>justify-self: start</code> aligne l'élément au début de l'axe en ligne et <code>align-self: start</code> aligne l'élément au début de l'axe de bloc.</p>
+Prenons un exemple pour comprendre la nécessité de telles propriétés et valeurs logiques. On dispose d'une grille CSS et le conteneur de la grille possède une certaine largeur. On y utilise {{CSSxRef("align-self")}} et {{CSSxRef("justify-self")}} afin d'aligner les éléments à l'intérieur de la grille. Ces propriétés sont relatives au flux : `justify-self: start` aligne l'élément au début de l'axe en ligne et `align-self: start` aligne l'élément au début de l'axe de bloc.
 
-<p><img alt="A grid in a horizontal writing mode" src="grid-horizontal-width-sm.png"></p>
+![A grid in a horizontal writing mode](grid-horizontal-width-sm.png)
 
-<p>Si on change le mode d'écriture de ce composant grâce à la propriété {{CSSxRef("writing-mode")}} et avec la valeur <code>vertical-rl</code>, l'alignement continue de fonctionner de la même façon : l'axe en ligne est désormais l'axe vertical et l'axe de bloc court horizontalement. La grille n'a cependant pas la même allure car la largeur est nécessairement définie pour l'axe horizontal : de façon physique et pas relativement au flux de texte.</p>
+Si on change le mode d'écriture de ce composant grâce à la propriété {{CSSxRef("writing-mode")}} et avec la valeur `vertical-rl`, l'alignement continue de fonctionner de la même façon : l'axe en ligne est désormais l'axe vertical et l'axe de bloc court horizontalement. La grille n'a cependant pas la même allure car la largeur est nécessairement définie pour l'axe horizontal : de façon physique et pas relativement au flux de texte.
 
-<p><img alt="A grid in vertical writing mode." src="grid-vertical-width-sm.png"></p>
+![A grid in vertical writing mode.](grid-vertical-width-sm.png)
 
-<p>Si on avait utilisé la propriété logique {{CSSxRef("inline-size")}} plutôt que <code>width</code>, le composant aurait gardé les mêmes proportions, quel que soit le mode d'écriture utilisé.</p>
+Si on avait utilisé la propriété logique {{CSSxRef("inline-size")}} plutôt que `width`, le composant aurait gardé les mêmes proportions, quel que soit le mode d'écriture utilisé.
 
-<p><img alt="A grid layout in vertical writing mode" src="grid-vertical-inline-size-small.png"></p>
+![A grid layout in vertical writing mode](grid-vertical-inline-size-small.png)
 
-<p>Vous pouvez essayer ces différentes valeurs dans l'exemple qui suit et notamment modifier la propriété <code>writing-mode</code> pour la passer de <code>vertical-rl</code> à <code>horizontal-tb</code> sur le sélecteur <code>.box</code> afin d'observer la façon dont les différentes propriétés modifient la disposition.</p>
+Vous pouvez essayer ces différentes valeurs dans l'exemple qui suit et notamment modifier la propriété `writing-mode` pour la passer de `vertical-rl` à `horizontal-tb` sur le sélecteur `.box` afin d'observer la façon dont les différentes propriétés modifient la disposition.
 
-<p>{{EmbedGHLiveSample("css-examples/logical/intro-grid-example.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("css-examples/logical/intro-grid-example.html", '100%', 700)}}
 
-<p>Lorsqu'on travaille sur un site où on utilise un mode d'écriture qui n'est pas horizontal et progressant du haut vers le bas ou qu'on travaille sur un concept créatif, pouvoir utiliser des concepts relatifs au flux plutôt que des valeurs géométriques absolues.</p>
+Lorsqu'on travaille sur un site où on utilise un mode d'écriture qui n'est pas horizontal et progressant du haut vers le bas ou qu'on travaille sur un concept créatif, pouvoir utiliser des concepts relatifs au flux plutôt que des valeurs géométriques absolues.
 
-<h2 id="Axe_de_bloc_et_axe_en_ligne">Axe de bloc et axe en ligne</h2>
+## Axe de bloc et axe en ligne
 
-<p>Lorsqu'on travaille avec les propriétés et les valeurs logiques, il y a deux concepts majeurs : l'axe de bloc et l'axe en ligne qui sont les deux dimensions de l'espace. Comme nous l'avons vu avant, les nouvelles méthodes de disposition CSS (comme les boîtes flexibles et les grilles CSS) utilisent les concepts de <code>block</code> et <code>inline</code> plutôt que <code>right</code> et <code>left</code>/<code>top</code> et <code>bottom</code> pour l'alignement des objets.</p>
+Lorsqu'on travaille avec les propriétés et les valeurs logiques, il y a deux concepts majeurs : l'axe de bloc et l'axe en ligne qui sont les deux dimensions de l'espace. Comme nous l'avons vu avant, les nouvelles méthodes de disposition CSS (comme les boîtes flexibles et les grilles CSS) utilisent les concepts de `block` et `inline` plutôt que `right` et `left`/`top` et `bottom` pour l'alignement des objets.
 
-<p>La dimension en ligne (<em>inline</em>) correspond à l'axe selon lequel les lignes de texte sont écrites pour ce mode d'écriture. Ainsi, pour un document français, le texte sera écrit horizontalement de gauche à droite et pour un document arabe écrit de droite à gauche, la dimension en ligne est l'axe horizontal. Si on utilise un mode d'écriture vertical (le japonais par exempl), la dimension en ligne sera verticale car les lignes de texte de ce mode sont écrites verticalement.</p>
+La dimension en ligne (_inline_) correspond à l'axe selon lequel les lignes de texte sont écrites pour ce mode d'écriture. Ainsi, pour un document français, le texte sera écrit horizontalement de gauche à droite et pour un document arabe écrit de droite à gauche, la dimension en ligne est l'axe horizontal. Si on utilise un mode d'écriture vertical (le japonais par exempl), la dimension en ligne sera verticale car les lignes de texte de ce mode sont écrites verticalement.
 
-<p>La dimension de bloc correspond à l'axe orthogonal et généralement à la direction selon laquelle les blocs de texte (les paragraphes) sont agencés. En français ou en arabe, cet axe est vertical, pour les modes d'écritures écrits verticalement, cet axe est horizontal.</p>
+La dimension de bloc correspond à l'axe orthogonal et généralement à la direction selon laquelle les blocs de texte (les paragraphes) sont agencés. En français ou en arabe, cet axe est vertical, pour les modes d'écritures écrits verticalement, cet axe est horizontal.
 
-<p>Le diagramme ci-après illustre l'organisation des axes en ligne et des axes de bloc pour un mode d'écriture horizontal :</p>
+Le diagramme ci-après illustre l'organisation des axes en ligne et des axes de bloc pour un mode d'écriture horizontal :
 
-<p><img alt="diagram showing the inline axis running horizontally, block axis vertically." src="mdn-horizontal.png"></p>
+![diagram showing the inline axis running horizontally, block axis vertically.](mdn-horizontal.png)
 
-<p>Le diagramme suivant illustre l'axe en ligne et l'axe de bloc pour un mode d'écriture vertical :</p>
+Le diagramme suivant illustre l'axe en ligne et l'axe de bloc pour un mode d'écriture vertical :
 
-<p><img alt="Diagram showing the block axis running horizontally the inline axis vertically." src="mdn-vertical.png"></p>
+![Diagram showing the block axis running horizontally the inline axis vertically.](mdn-vertical.png)
 
-<h2 id="Prise_en_charge_des_navigateurs">Prise en charge des navigateurs</h2>
+## Prise en charge des navigateurs
 
-<p>Les propriétés et valeurs logiques peuvent être catégorisées selon différents groupes, notamment pour la compatibilité des navigateurs. Certaines des propriétés logiques sont essentiellement des correspondances de propriétés physiques équivalentes ({{CSSxRef("inline-size")}} sera la propriété logique pouvant correspondre à la propriété physique {{CSSxRef("width")}} et {{CSSxRef("margin-inline-start")}} la propriété physique correspondant à {{CSSxRef("margin-left")}}). La prise en charge de ces propriétés logiques correspondant à des propriétés physiques est plutôt correcte pour les navigateurs récents, vous pouvez consulter les pages <a href="/en-US/docs/Web/CSS/CSS_Logical_Properties#reference">de référence pour ces propriétés sur MDN</a>, seul Edge ne prend pas en charge ces propriétés à date (décembre 2018).</p>
+Les propriétés et valeurs logiques peuvent être catégorisées selon différents groupes, notamment pour la compatibilité des navigateurs. Certaines des propriétés logiques sont essentiellement des correspondances de propriétés physiques équivalentes ({{CSSxRef("inline-size")}} sera la propriété logique pouvant correspondre à la propriété physique {{CSSxRef("width")}} et {{CSSxRef("margin-inline-start")}} la propriété physique correspondant à {{CSSxRef("margin-left")}}). La prise en charge de ces propriétés logiques correspondant à des propriétés physiques est plutôt correcte pour les navigateurs récents, vous pouvez consulter les pages [de référence pour ces propriétés sur MDN](/en-US/docs/Web/CSS/CSS_Logical_Properties#reference), seul Edge ne prend pas en charge ces propriétés à date (décembre 2018).
 
-<p>On a également un groupe de propriétés qui ne possèdent pas de correspondances directes avec les propriétés physiques. Ces propriétés sont des propriétés raccourcies qui font référence aux deux extrêmités d'un axe. Ainsi {{CSSxRef("margin-block")}} sera une propriété raccourcie pour {{CSSxRef("margin-block-start")}} et {{CSSxRef("margin-block-end")}}. Ce deuxième groupe n'est actuellement pas pris en charge par les navigateurs.</p>
+On a également un groupe de propriétés qui ne possèdent pas de correspondances directes avec les propriétés physiques. Ces propriétés sont des propriétés raccourcies qui font référence aux deux extrêmités d'un axe. Ainsi {{CSSxRef("margin-block")}} sera une propriété raccourcie pour {{CSSxRef("margin-block-start")}} et {{CSSxRef("margin-block-end")}}. Ce deuxième groupe n'est actuellement pas pris en charge par les navigateurs.
 
-<div class="note">
-<p><strong>Note :</strong> Le groupe de travail CSS est actuellement en réflexion pour les propriétés raccourcies avec quatre valeurs pour les propriétés logiques. Autrement dit, comment définir les marges logiques de la façon dont on utilise la propriété {{CSSxRef("margin")}}. Il faudrait en effet une sorte de modificateur si on continue d'utiliser le nom <code>margin</code> pour les propriétés relatives au flux. Pour en savoir plus sur les suggestions et commentaires, vous pouvez consulter l'<em>issue</em> GitHub <a href="https://github.com/w3c/csswg-drafts/issues/1282">n°1282</a>.</p>
-</div>
+> **Note :** Le groupe de travail CSS est actuellement en réflexion pour les propriétés raccourcies avec quatre valeurs pour les propriétés logiques. Autrement dit, comment définir les marges logiques de la façon dont on utilise la propriété {{CSSxRef("margin")}}. Il faudrait en effet une sorte de modificateur si on continue d'utiliser le nom `margin` pour les propriétés relatives au flux. Pour en savoir plus sur les suggestions et commentaires, vous pouvez consulter l'_issue_ GitHub [n°1282](https://github.com/w3c/csswg-drafts/issues/1282).
 
-<h3 id="Tester_la_compatibilité_des_navigateurs">Tester la compatibilité des navigateurs</h3>
+### Tester la compatibilité des navigateurs
 
-<p>Il est possible de tester la prise en charge des propriétés et valeurs logiques en utilisant une requête de fonctionnalité (<code>@supports</code>). Ainsi, on pourrait définit une propriété {{CSSxRef("width")}}, tester si {{CSSxRef("inline-size")}} est prise en charge et, le cas échéant, définir <code>width</code> avec <code>auto</code> et <code>inline-size</code> avec la valeur initialement utilisée pour <code>width</code>.</p>
+Il est possible de tester la prise en charge des propriétés et valeurs logiques en utilisant une requête de fonctionnalité (`@supports`). Ainsi, on pourrait définit une propriété {{CSSxRef("width")}}, tester si {{CSSxRef("inline-size")}} est prise en charge et, le cas échéant, définir `width` avec `auto` et `inline-size` avec la valeur initialement utilisée pour `width`.
 
-<p>{{EmbedGHLiveSample("css-examples/logical/intro-feature-queries.html", "100%", 700)}}</p>
+{{EmbedGHLiveSample("css-examples/logical/intro-feature-queries.html", "100%", 700)}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">L'alignement des boîtes pour une disposition en grille</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox">L'alignement des boîtes pour une disposition flexible</a></li>
- <li><a href="https://www.smashingmagazine.com/2018/03/understanding-logical-properties-values/">Comprendre les propriétés et les valeurs logiques</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes">Les modes d'écriture</a></li>
-</ul>
+- [L'alignement des boîtes pour une disposition en grille](/fr/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
+- [L'alignement des boîtes pour une disposition flexible](/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
+- [Comprendre les propriétés et les valeurs logiques](https://www.smashingmagazine.com/2018/03/understanding-logical-properties-values/)
+- [Les modes d'écriture](/fr/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes)

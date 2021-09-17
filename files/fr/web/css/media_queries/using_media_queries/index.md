@@ -4,376 +4,265 @@ slug: Web/CSS/Media_Queries/Using_media_queries
 translation_of: Web/CSS/Media_Queries/Using_media_queries
 original_slug: Web/CSS/Requêtes_média/Utiliser_les_Media_queries
 ---
-<div>{{CSSRef}}</div>
-
-<p><strong>Les requêtes média (<em>media queries</em>)</strong> permettent de modifier l'apparence d'un site ou d'une application en fonction du type d'appareil (impression ou écran par exemple) et de ses caractéristiques (la résolution d'écran ou la largeur de la zone d'affichage (<em>viewport</em>) par exemple).</p>
-
-<p>Les requêtes média sont utilisées afin :</p>
-
-<ul>
- <li>D'appliquer certains styles de façon conditionnelle avec le <a href="/fr/docs/Web/CSS">CSS</a> grâce <a href="/fr/docs/Web/CSS/At-rule">aux règles @</a> <a href="/fr/docs/Web/CSS/@media"><code>@media</code></a> et <a href="/fr/docs/Web/CSS/@import"><code>@import</code></a>.</li>
- <li>De cibler certains médias pour les éléments <a href="/fr/docs/Web/HTML/Element/style"><code>&lt;style&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a>, <a href="/fr/docs/Web/HTML/Element/Source"><code>&lt;source&gt;</code></a> et d'autres éléments <a href="/fr/docs/Web/HTML">HTML</a> grâce à l'attribut <code>media=</code>.</li>
- <li>De <a href="/fr/docs/Web/CSS/Media_Queries/Testing_media_queries">tester et surveiller l'état d'un média</a> grâce aux méthodes <a href="/fr/docs/Web/API/Window/matchMedia"><code>Window.matchMedia()</code></a> et <a href="/fr/docs/Web/API/MediaQueryList/addListener"><code>MediaQueryList.addListener()</code></a>.</li>
-</ul>
-
-<div class="note">
-<p><strong>Note :</strong> Les exemples de cet article utilisent <code>@media</code> à des fins d'illustration. Toutefois, la syntaxe est la même pour les différents types de requêtes média.</p>
-</div>
-
-<h2 id="syntax">Syntaxe</h2>
-
-<p>Une requête média se compose d'un <em>type de média</em> optionnel et d'une ou plusieurs expressions de <em>caractéristiques de média</em>. Plusieurs requêtes peuvent être combinées entre elles grâce à des opérateurs logiques. Les requêtes média ne sont pas sensibles à la casse.</p>
-
-<p>Une requête média vaut <code>true</code> si le type de média correspond à l'appareil utilisé pour l'affichage du document et si toutes les expressions relatives aux caractéristiques sont vraies. Les requêtes qui utilisent des types de média inconnus valent toujours <code>false</code>.</p>
-
-<div class="note">
-<p><strong>Note :</strong> Lorsqu'une feuille de style est attachée à un élément <a href="/fr/docs/Web/HTML/Element/link"><code>&lt;link&gt;</code></a> comportant une requếte média, cette feuille de style <a href="http://scottjehl.github.com/CSS-Download-Tests/">sera toujours téléchargée</a>, même si la requête renvoie <code>false</code>. Toutefois, le contenu de cette feuille n'est pas appliquée tant que le résultat de la requête ne devient pas <code>true</code>.</p>
-</div>
-
-<h3 id="media_types">Types de média</h3>
-
-<p>Un type de média définit une catégorie générale d'appareil. Le type de média est optionnel dans une requête média, sauf si celle-ci utilise les opérateurs logiques <code>not</code> ou <code>only</code>. Par défaut, le type de média utilisé est <code>all</code>.</p>
-
-<dl>
- <dt><code>all</code></dt>
- <dd>Correspond pour tous les appareils.</dd>
- <dt><code>print</code></dt>
- <dd>Correspond aux matériaux paginés et aux documents consultés en aperçu avant impression. Pour plus d'informations, voir l'article sur <a href="/fr/docs/Web/CSS/Paged_Media">les médias paginés</a>.</dd>
- <dt><code>screen</code></dt>
- <dd>Correspond aux appareils dotés d'un écran.</dd>
- <dt><code>speech</code></dt>
- <dd>Correspond aux outils de synthèse vocale.</dd>
-</dl>
-
-<div class="note">
-  <p><strong>Note :</strong> Les types de média dépréciés CSS2.1 et <a href="https://drafts.csswg.org/mediaqueries-3/#background">Media Queries 3</a> ont défini plusieurs types additionnels (<code>tty</code>, <code>tv</code>, <code>projection</code>, <code>handheld</code>, <code>braille</code>, <code>embossed</code>, and <code>aural</code>) qui ont ensuite été dépréciés avec <a href="https://dev.w3.org/csswg/mediaqueries/#media-types">Media Queries 4</a>. Ces types ne doivent donc plus être utilisés. Le type <code>aural</code> a été remplacé par le type <code>speech</code>.</p>
-</div>
-
-<h3 id="media_features">Caractéristiques média (<i lang="en">media features</i>)</h3>
-
-<p>Les caractéristiques média décrivent certaines caractéristiques spécifiques de l'agent utilisateur, de l'appareil d'affichage ou de l'environnement. Les expressions de caractéristique média testent leur présence ou leur valeur. Chaque expression de caractéristique doit être entourée de parenthèses.</p>
-
-<table>
- <thead>
-  <tr>
-   <th>Nom</th>
-   <th>Résumé</th>
-   <th>Notes</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{cssxref("@media/width","width")}}</td>
-   <td>La largeur de la zone d'affichage (<em>viewport</em>)</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/height","height")}}</td>
-   <td>La hauteur de la zone d'affichage</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/aspect-ratio","aspect-ratio")}}</td>
-   <td>Le rapport largeur/hauteur de la zone d'affichage</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/orientation","orientation")}}</td>
-   <td>L'orientation la zone d'affichage</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/resolution","resolution")}}</td>
-   <td>La densité de pixel pour l'appareil d'affichage</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/scan","scan")}}</td>
-   <td>Le processus de scan de l'appareil d'affichage</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/grid","grid")}}</td>
-   <td>Le type d'écran de l'appareil : matriciel ou grille ?</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/update-frequency","update")}}</td>
-   <td>La fréquence de modification du contenu par l'appareil d'affichage</td>
-   <td>Ajoutée avec le niveau 4 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/overflow-block","overflow-block")}}</td>
-   <td>La façon dont l'appareil d'affichage gère le contenu qui dépasse de la zone d'affichage selon l'axe de bloc</td>
-   <td>Ajoutée avec le niveau 4 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/overflow-inline","overflow-inline")}}</td>
-   <td>La possibilité de faire défiler (<em>scroll</em>) le contenu qui dépasse de la zone d'affichage sur l'axe en ligne</td>
-   <td>Ajoutée avec le niveau 4 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/color","color")}}</td>
-   <td>Le nombre de bits pour chaque composante de couleur pour l'appareil d'affichage (ou 0 si l'appareil ne gère pas les couleurs)</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/color-gamut","color-gamut")}}</td>
-   <td>Un intervalle approximatif des couleurs prises en charge par l'agent utilisateur et l'appareil d'affichage</td>
-   <td>Ajoutée avec le niveau 4 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/color-index","color-index")}}</td>
-   <td>Le nombre d'éléments dans le tableau des couleurs de l'appareil d'affichage (ou 0 si l'appareil ne dispose pas d'un tel tableau)</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/display-mode","display-mode")}}</td>
-   <td>Le mode d'affichage de l'application, tel qu'indiqué par la propriété <a href="/fr/docs/Web/Manifest#display"><code>display</code></a> du manifeste</td>
-   <td>Définie dans <a href="https://w3c.github.io/manifest/#the-display-mode-media-feature">la spécification pour les manifestes des applications web</a>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/monochrome","monochrome")}}</td>
-   <td>Le nombre de bits par pixel pour le <em>frame buffer</em> monochrome de l'appareil d'affichage ou 0 si l'appareil n'est pas monochrome</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/inverted-colors","inverted-colors")}}</td>
-   <td>L'inversion (ou non) des couleurs par l'agent utilisateur ou le système d'exploitation</td>
-   <td>Reportée au niveau 5 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/pointer","pointer")}}</td>
-   <td>La présence d'un appareil de pointage comme mécanisme de saisie principal et sa précision</td>
-   <td>Ajoutée avec le niveau 4 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/hover","hover")}}</td>
-   <td>La capacité du mécanisme de saisie principal à survoler les éléments</td>
-   <td>Ajoutée avec le niveau 4 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/any-pointer","any-pointer")}}</td>
-   <td>La présence d'un appareil de pointage parmi les mécanismes de saisie et sa précision</td>
-   <td>Ajoutée avec le niveau 4 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/any-hover","any-hover")}}</td>
-   <td>La capacité d'un des mécanismes de saisie à survoler les éléments</td>
-   <td>Ajoutée avec le niveau 4 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/light-level","light-level")}}</td>
-   <td>Le niveau de luminosité de l'environnement</td>
-   <td>Ajoutée avec le niveau 5 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}}</td>
-   <td>L'utilisateur préfère que la quantité de mouvement sur la page soit réduite.</td>
-   <td>Ajoutée avec le niveau 5 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/prefers-reduced-transparency", "prefers-reduced-transparency")}}</td>
-   <td>L'utilisateur préfère que la transparence utilisée sur la page soit réduite.</td>
-   <td>Ajoutée avec le niveau 5 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/prefers-contrast", "prefers-contrast")}}</td>
-   <td>L'utilisateur préfère que le contraste soit augmenté ou réduit entre des couleurs proches.</td>
-   <td>Ajoutée avec le niveau 5 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}</td>
-   <td>L'utilisateur préfère utiliser un thème clair ou un thème sombre.</td>
-   <td>Ajoutée avec le niveau 5 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/forced-colors", "forced-colors")}}</td>
-   <td>Détecte si l'agent utilisateur restreint la palette de couleurs.</td>
-   <td>Ajoutée avec le niveau 5 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/scripting","scripting")}}</td>
-   <td>La disponibilité des fonctions de script (JavaScript par exemple)</td>
-   <td>Reportée au niveau 5 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/device-width","device-width")}} {{obsolete_inline}}</td>
-   <td>La largeur de la surface de rendu pour l'appareil d'affichage</td>
-   <td>Dépréciée par le niveau 4 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/device-height","device-height")}} {{obsolete_inline}}</td>
-   <td>La hauteur de la surface de rendu pour l'appareil d'affichage</td>
-   <td>Dépréciée par le niveau 4 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("@media/device-aspect-ratio","device-aspect-ratio")}} {{obsolete_inline}}</td>
-   <td>Le rapport largeur/hauteur de la surface de rendu pour l'appareil d'affichage</td>
-   <td>Dépréciée par le niveau 4 du module de spécification <em>Media Queries</em>.</td>
-  </tr>
- </tbody>
-</table>
-
-<h3 id="logical_operators">Opérateurs logiques</h3>
-
-<p>Les opérateurs logiques <code>not</code>, <code>and</code> et <code>only</code> peuvent être utilisés afin de construire une requête média complexe. Il est aussi possible de combiner plusieurs requêtes média en les séparant par des virgules.</p>
-
-<h4 id="and"><code>and</code></h4>
-
-<p>L'opérateur <code>and</code> permet de combiner plusieurs requêtes média en une seule. Pour que la requête résultante soit vraie, il faut que chacune des sous-requêtes soit vraie. Cet opérateur est également utilisé afin de relier des caractéristiques média avec des types de média.</p>
-
-<h4 id="not"><code>not</code></h4>
-
-<p>L'opérateur <code>not</code> est utilisé afin d'obtenir le résultat opposé d'une requête média (il renvoie <code>true</code> si l'opérande renvoie <code>false</code>). S'il est utilisé dans une liste de requêtes séparées par des virgules, il ne nie que la requête sur laquelle il est appliqué. Si l'opérateur <code>not</code> est utilisé, la requête doit nécessairement contenir un type de média.</p>
-
-<div class="note">
-<p><strong>Note :</strong> Pour la spécification de niveau 3, l'opérateur <code>not</code> ne peut pas être utilisé afin de prendre l'opposé d'une expression de caractéristique de média, il ne peut servir qu'à l'échelle d'une requête média entière.</p>
-</div>
-
-<h4 id="only"><code>only</code></h4>
-
-<p>L'opérateur <code>only</code> est utilisé afin d'appliquer un style uniquement si l'intégralité de la requête est vérifiée. Il permet d'empêcher les anciens navigateurs d'appliquer les styles concernés. Si on utilise pas <code>only</code>, un ancien navigateur interprètera <code>screen and (max-width: 500px)</code> comme <code>screen</code> uniquement (appliquant ainsi le style à tous les écrans). Si l'opérateur <code>only</code> est utilisé, la requête doit nécessairement contenir un type de média.</p>
-
-<h4 id="virgule"><code>,</code> (virgule)</h4>
-
-<p>Les virgules permettent de combiner plusieurs requêtes en une. Chaque requête est traitée séparément. Autrement dit, si une des requêtes de la liste renvoie <code>true</code>, toute la requête combinée renverra <code>true</code>. En ce sens, l'opérateur <code>,</code> agit comme un opérateur booléen <code>or</code>.</p>
-
-<h2 id="targeting_media_types">Cibler des types de média</h2>
-
-<p>Les types de média décrivent la catégorie générale de l'appareil utilisé. Bien que la plupart des sites web soient principalement conçus pour être affichés sur des écrans, il est possible d'avoir des styles spécifiques pour les impressions ou pour les lecteurs d'écran. Voici une requête qui permet de cibler les imprimantes ou autres appareils imprimant le contenu sur plusieurs pages :</p>
-
-<pre class="brush: css">@media print { ... }</pre>
+{{CSSRef}}
 
-<p>Il est possible de cibler plusieurs types à la fois. La règle suivante permet de cibler les écrans et les appareils d'impression :</p>
+**Les requêtes média (_media queries_)** permettent de modifier l'apparence d'un site ou d'une application en fonction du type d'appareil (impression ou écran par exemple) et de ses caractéristiques (la résolution d'écran ou la largeur de la zone d'affichage (_viewport_) par exemple).
 
-<pre class="brush: css">@media screen, print { ... }</pre>
+Les requêtes média sont utilisées afin :
 
-<p>Pour une liste complète des types de média, voir <a href="#types">ci-avant</a>. Ces types étant très génériques, peu de valeurs sont disponibles. Afin d'avoir un ciblage plus fin, on pourra utiliser les caractéristiques média.</p>
+- D'appliquer certains styles de façon conditionnelle avec le [CSS](/fr/docs/Web/CSS) grâce [aux règles @](/fr/docs/Web/CSS/At-rule) [`@media`](/fr/docs/Web/CSS/@media) et [`@import`](/fr/docs/Web/CSS/@import).
+- De cibler certains médias pour les éléments [`<style>`](/fr/docs/Web/HTML/Element/style), [`<link>`](/fr/docs/Web/HTML/Element/link), [`<source>`](/fr/docs/Web/HTML/Element/Source) et d'autres éléments [HTML](/fr/docs/Web/HTML) grâce à l'attribut `media=`.
+- De [tester et surveiller l'état d'un média](/fr/docs/Web/CSS/Media_Queries/Testing_media_queries) grâce aux méthodes [`Window.matchMedia()`](/fr/docs/Web/API/Window/matchMedia) et [`MediaQueryList.addListener()`](/fr/docs/Web/API/MediaQueryList/addListener).
 
-<h2 id="targeting_media_features">Cibler des caractéristiques média</h2>
+> **Note :** Les exemples de cet article utilisent `@media` à des fins d'illustration. Toutefois, la syntaxe est la même pour les différents types de requêtes média.
 
-<p>Les caractéristiques média décrivent les caractéristiques spécifiques d'un agent utilisateur, d'un appareil d'affichage ou de l'environnement. On peut ainsi cibler différents styles pour les écrans larges, pour les ordinateurs qui disposent d'une souris ou pour les appareils utilisés dans une faible luminosité. Dans l'exemple qui suit, on a une requête qui vérifie si le mécanisme de saisie principal de l'appareil peut survoler les éléments :</p>
+## Syntaxe
 
-<pre class="brush: css">@media (hover: hover) { ... }</pre>
+Une requête média se compose d'un _type de média_ optionnel et d'une ou plusieurs expressions de _caractéristiques de média_. Plusieurs requêtes peuvent être combinées entre elles grâce à des opérateurs logiques. Les requêtes média ne sont pas sensibles à la casse.
 
-<p>De nombreuses caractéristiques média sont des caractéristiques portant sur un intervalle et peuvent être préfixées par <code>min-</code> ou <code>max-</code> afin d'exprimer des seuils de valeurs. Par exemple, la requête suivante permet d'appliquer des styles à condition que la largeur de la zone d'affichage (<em>viewport</em>) soit inférieure à 1250px :</p>
+Une requête média vaut `true` si le type de média correspond à l'appareil utilisé pour l'affichage du document et si toutes les expressions relatives aux caractéristiques sont vraies. Les requêtes qui utilisent des types de média inconnus valent toujours `false`.
 
-<pre class="brush: css">@media (max-width: 1250px) { ... }</pre>
+> **Note :** Lorsqu'une feuille de style est attachée à un élément [`<link>`](/fr/docs/Web/HTML/Element/link) comportant une requếte média, cette feuille de style [sera toujours téléchargée](http://scottjehl.github.com/CSS-Download-Tests/), même si la requête renvoie `false`. Toutefois, le contenu de cette feuille n'est pas appliquée tant que le résultat de la requête ne devient pas `true`.
 
-<div class="note">
-<p><strong>Note :</strong> Selon la spécification du W3C, les barres de défilement font partie des dimensions de la page. Ainsi la barre de défilement vertical s'ajoute à la largeur du document tandis que la barre de défilement horizontal s'ajoute à la hauteur du document. Cependant tous les navigateurs n'ont pas adopté cette recommandation (Chrome par exemple) et tous n'ont pas opté pour la même taille de barre de défilement, ce qui mène à un développement plus difficile pour assurer une comptabilité sur tous les navigateurs.</p>
-</div>
+### Types de média
 
-<p>Si on utilise une caractéristique média sans indiquer de valeur, la requête sera vérifiée tant que la valeur de cette caractéristique n'est pas nulle (ou <code>none</code> pour la spécification de niveau 4). Ainsi, la requête suivante permettra d'appliquer les styles qu'elle contient si l'appareil peut afficher des couleurs :</p>
+Un type de média définit une catégorie générale d'appareil. Le type de média est optionnel dans une requête média, sauf si celle-ci utilise les opérateurs logiques `not` ou `only`. Par défaut, le type de média utilisé est `all`.
 
-<pre class="brush: css">@media (color) { ... }</pre>
+- `all`
+  - : Correspond pour tous les appareils.
+- `print`
+  - : Correspond aux matériaux paginés et aux documents consultés en aperçu avant impression. Pour plus d'informations, voir l'article sur [les médias paginés](/fr/docs/Web/CSS/Paged_Media).
+- `screen`
+  - : Correspond aux appareils dotés d'un écran.
+- `speech`
+  - : Correspond aux outils de synthèse vocale.
 
-<p>Si une caractéristique ne s'applique pas à l'appareil, les expressions utilisant cette caractéristique renverront <code>false</code>. Ainsi, la requête suivante aura toujours la valeur <code>false</code> car aucun appareil de synthèse vocale ne possède de caractéristique relative à ses proportions d'écran :</p>
+> **Note :** Les types de média dépréciés CSS2.1 et [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) ont défini plusieurs types additionnels (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, and `aural`) qui ont ensuite été dépréciés avec [Media Queries 4](https://dev.w3.org/csswg/mediaqueries/#media-types). Ces types ne doivent donc plus être utilisés. Le type `aural` a été remplacé par le type `speech`.
 
-<pre class="brush: css">@media speech and (aspect-ratio: 11/5) { ... }</pre>
+### Caractéristiques média (<i lang="en">media features</i>)
 
-<p>Pour plus d'exemples, voir les pages de référence de chacune de ces caractéristiques depuis <a href="#caractéristiques">le tableau ci-dessus</a>.</p>
+Les caractéristiques média décrivent certaines caractéristiques spécifiques de l'agent utilisateur, de l'appareil d'affichage ou de l'environnement. Les expressions de caractéristique média testent leur présence ou leur valeur. Chaque expression de caractéristique doit être entourée de parenthèses.
 
-<h2 id="creating_complex_media_queries">Créer des requêtes média complexes</h2>
+| Nom                                                                                                           | Résumé                                                                                                                           | Notes                                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| {{cssxref("@media/width","width")}}                                                              | La largeur de la zone d'affichage (_viewport_)                                                                                   |                                                                                                                                           |
+| {{cssxref("@media/height","height")}}                                                              | La hauteur de la zone d'affichage                                                                                                |                                                                                                                                           |
+| {{cssxref("@media/aspect-ratio","aspect-ratio")}}                                              | Le rapport largeur/hauteur de la zone d'affichage                                                                                |                                                                                                                                           |
+| {{cssxref("@media/orientation","orientation")}}                                              | L'orientation la zone d'affichage                                                                                                |                                                                                                                                           |
+| {{cssxref("@media/resolution","resolution")}}                                                  | La densité de pixel pour l'appareil d'affichage                                                                                  |                                                                                                                                           |
+| {{cssxref("@media/scan","scan")}}                                                                  | Le processus de scan de l'appareil d'affichage                                                                                   |                                                                                                                                           |
+| {{cssxref("@media/grid","grid")}}                                                                  | Le type d'écran de l'appareil : matriciel ou grille ?                                                                            |                                                                                                                                           |
+| {{cssxref("@media/update-frequency","update")}}                                              | La fréquence de modification du contenu par l'appareil d'affichage                                                               | Ajoutée avec le niveau 4 du module de spécification _Media Queries_.                                                                      |
+| {{cssxref("@media/overflow-block","overflow-block")}}                                      | La façon dont l'appareil d'affichage gère le contenu qui dépasse de la zone d'affichage selon l'axe de bloc                      | Ajoutée avec le niveau 4 du module de spécification _Media Queries_.                                                                      |
+| {{cssxref("@media/overflow-inline","overflow-inline")}}                                      | La possibilité de faire défiler (_scroll_) le contenu qui dépasse de la zone d'affichage sur l'axe en ligne                      | Ajoutée avec le niveau 4 du module de spécification _Media Queries_.                                                                      |
+| {{cssxref("@media/color","color")}}                                                              | Le nombre de bits pour chaque composante de couleur pour l'appareil d'affichage (ou 0 si l'appareil ne gère pas les couleurs)    |                                                                                                                                           |
+| {{cssxref("@media/color-gamut","color-gamut")}}                                              | Un intervalle approximatif des couleurs prises en charge par l'agent utilisateur et l'appareil d'affichage                       | Ajoutée avec le niveau 4 du module de spécification _Media Queries_.                                                                      |
+| {{cssxref("@media/color-index","color-index")}}                                              | Le nombre d'éléments dans le tableau des couleurs de l'appareil d'affichage (ou 0 si l'appareil ne dispose pas d'un tel tableau) |                                                                                                                                           |
+| {{cssxref("@media/display-mode","display-mode")}}                                              | Le mode d'affichage de l'application, tel qu'indiqué par la propriété [`display`](/fr/docs/Web/Manifest#display) du manifeste    | Définie dans [la spécification pour les manifestes des applications web](https://w3c.github.io/manifest/#the-display-mode-media-feature). |
+| {{cssxref("@media/monochrome","monochrome")}}                                                  | Le nombre de bits par pixel pour le _frame buffer_ monochrome de l'appareil d'affichage ou 0 si l'appareil n'est pas monochrome  |                                                                                                                                           |
+| {{cssxref("@media/inverted-colors","inverted-colors")}}                                      | L'inversion (ou non) des couleurs par l'agent utilisateur ou le système d'exploitation                                           | Reportée au niveau 5 du module de spécification _Media Queries_.                                                                          |
+| {{cssxref("@media/pointer","pointer")}}                                                          | La présence d'un appareil de pointage comme mécanisme de saisie principal et sa précision                                        | Ajoutée avec le niveau 4 du module de spécification _Media Queries_.                                                                      |
+| {{cssxref("@media/hover","hover")}}                                                              | La capacité du mécanisme de saisie principal à survoler les éléments                                                             | Ajoutée avec le niveau 4 du module de spécification _Media Queries_.                                                                      |
+| {{cssxref("@media/any-pointer","any-pointer")}}                                              | La présence d'un appareil de pointage parmi les mécanismes de saisie et sa précision                                             | Ajoutée avec le niveau 4 du module de spécification _Media Queries_.                                                                      |
+| {{cssxref("@media/any-hover","any-hover")}}                                                      | La capacité d'un des mécanismes de saisie à survoler les éléments                                                                | Ajoutée avec le niveau 4 du module de spécification _Media Queries_.                                                                      |
+| {{cssxref("@media/light-level","light-level")}}                                              | Le niveau de luminosité de l'environnement                                                                                       | Ajoutée avec le niveau 5 du module de spécification _Media Queries_.                                                                      |
+| {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}}                  | L'utilisateur préfère que la quantité de mouvement sur la page soit réduite.                                                     | Ajoutée avec le niveau 5 du module de spécification _Media Queries_.                                                                      |
+| {{cssxref("@media/prefers-reduced-transparency", "prefers-reduced-transparency")}}  | L'utilisateur préfère que la transparence utilisée sur la page soit réduite.                                                     | Ajoutée avec le niveau 5 du module de spécification _Media Queries_.                                                                      |
+| {{cssxref("@media/prefers-contrast", "prefers-contrast")}}                                  | L'utilisateur préfère que le contraste soit augmenté ou réduit entre des couleurs proches.                                       | Ajoutée avec le niveau 5 du module de spécification _Media Queries_.                                                                      |
+| {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}                      | L'utilisateur préfère utiliser un thème clair ou un thème sombre.                                                                | Ajoutée avec le niveau 5 du module de spécification _Media Queries_.                                                                      |
+| {{cssxref("@media/forced-colors", "forced-colors")}}                                          | Détecte si l'agent utilisateur restreint la palette de couleurs.                                                                 | Ajoutée avec le niveau 5 du module de spécification _Media Queries_.                                                                      |
+| {{cssxref("@media/scripting","scripting")}}                                                      | La disponibilité des fonctions de script (JavaScript par exemple)                                                                | Reportée au niveau 5 du module de spécification _Media Queries_.                                                                          |
+| {{cssxref("@media/device-width","device-width")}} {{obsolete_inline}}                     | La largeur de la surface de rendu pour l'appareil d'affichage                                                                    | Dépréciée par le niveau 4 du module de spécification _Media Queries_.                                                                     |
+| {{cssxref("@media/device-height","device-height")}} {{obsolete_inline}}                 | La hauteur de la surface de rendu pour l'appareil d'affichage                                                                    | Dépréciée par le niveau 4 du module de spécification _Media Queries_.                                                                     |
+| {{cssxref("@media/device-aspect-ratio","device-aspect-ratio")}} {{obsolete_inline}} | Le rapport largeur/hauteur de la surface de rendu pour l'appareil d'affichage                                                    | Dépréciée par le niveau 4 du module de spécification _Media Queries_.                                                                     |
 
-<p>Il est parfois nécessaire d'avoir une requête qui repose sur plusieurs conditions. Pour cela, on peut utiliser les opérateurs logiques : <code>not</code>, <code>and</code>, <code>only</code> et la virgule (<code>,</code>) afin de combiner plusieurs requêtes média.</p>
+### Opérateurs logiques
 
-<p>Dans l'exemple précédent, on a utilisé l'opérateur <code>and</code> afin de combiner un type de média et une caractéristique média. Cet opérateur peut également servir à assembler plusieurs requêtes média pour en former la conjonction logique. L'opérateur <code>not</code> permet d'obtenir la négation d'une requête média tandis que l'opérateur <code>only</code> empêche les anciens navigateurs d'appliquer les styles qu'une requête contient.</p>
+Les opérateurs logiques `not`, `and` et `only` peuvent être utilisés afin de construire une requête média complexe. Il est aussi possible de combiner plusieurs requêtes média en les séparant par des virgules.
 
-<div class="note">
-<p><strong>Note :</strong> Dans la plupart des cas, le type de média <code>all</code> est utilisé par défaut si aucun autre type n'est fourni. Toutefois, lorsqu'on utilise les opérateurs <code>not</code> ou <code>only</code>, il est nécessaire de fournir un type de média explicite.</p>
-</div>
+#### `and`
 
-<h3 id="combining_multiple_types_or_features">Combiner plusieurs types ou caractéristiques</h3>
+L'opérateur `and` permet de combiner plusieurs requêtes média en une seule. Pour que la requête résultante soit vraie, il faut que chacune des sous-requêtes soit vraie. Cet opérateur est également utilisé afin de relier des caractéristiques média avec des types de média.
 
-<p>Le mot-clé <code>and</code> permet de combiner une caractéristique média avec un type de média ou avec d'autres caractéristiques média. L'exemple suivant permet de restreindre l'application d'un style aux appareils orientés en mode paysage et dont la largeur mesure au moins 30ems :</p>
+#### `not`
 
-<pre class="brush: css">@media (min-width: 30em) and (orientation: landscape) { ... }</pre>
+L'opérateur `not` est utilisé afin d'obtenir le résultat opposé d'une requête média (il renvoie `true` si l'opérande renvoie `false`). S'il est utilisé dans une liste de requêtes séparées par des virgules, il ne nie que la requête sur laquelle il est appliqué. Si l'opérateur `not` est utilisé, la requête doit nécessairement contenir un type de média.
 
-<p>Si on souhaite restreindre ces règles aux écrans, on pourra ajouter une clause avec le type de média <code>screen</code> :</p>
+> **Note :** Pour la spécification de niveau 3, l'opérateur `not` ne peut pas être utilisé afin de prendre l'opposé d'une expression de caractéristique de média, il ne peut servir qu'à l'échelle d'une requête média entière.
 
-<pre class="brush: css">@media screen and (min-width: 30em) and (orientation: landscape) { ... }</pre>
+#### `only`
 
-<h3 id="testing_for_multiple_queries">Tester plusieurs requêtes</h3>
+L'opérateur `only` est utilisé afin d'appliquer un style uniquement si l'intégralité de la requête est vérifiée. Il permet d'empêcher les anciens navigateurs d'appliquer les styles concernés. Si on utilise pas `only`, un ancien navigateur interprètera `screen and (max-width: 500px)` comme `screen` uniquement (appliquant ainsi le style à tous les écrans). Si l'opérateur `only` est utilisé, la requête doit nécessairement contenir un type de média.
 
-<p>La virgule peut être utilisée afin de créer une disjonction (un OU logique) sur différentes clauses (types de média, caractéristiques ou états). Dans l'exemple qui suit, les styles de la requête sont appliqués si l'appareil possède une hauteur supérieure ou égale à 680 pixels ou si l'écran est en mode portrait :</p>
+#### `,` (virgule)
 
-<pre class="brush: css">@media (min-height: 680px), screen and (orientation: portrait) { ... }</pre>
+Les virgules permettent de combiner plusieurs requêtes en une. Chaque requête est traitée séparément. Autrement dit, si une des requêtes de la liste renvoie `true`, toute la requête combinée renverra `true`. En ce sens, l'opérateur `,` agit comme un opérateur booléen `or`.
 
-<p>Avec cet exemple, si l'utilisateur utilise une imprimante et que la page mesure 800 pixels de haut, la requête média aurait été vérifiée. Il en aurait été de même si l'utilisateur avait utilisé un smartphone avec une zone d'affichage haute de 480 pixels en portrait car la deuxième clause aurait renvoyée <code>true</code>.</p>
+## Cibler des types de média
 
-<h3 id="inverting_a_querys_meaning">Opérer une négation</h3>
+Les types de média décrivent la catégorie générale de l'appareil utilisé. Bien que la plupart des sites web soient principalement conçus pour être affichés sur des écrans, il est possible d'avoir des styles spécifiques pour les impressions ou pour les lecteurs d'écran. Voici une requête qui permet de cibler les imprimantes ou autres appareils imprimant le contenu sur plusieurs pages :
 
-<p>Le mot-clé <code>not</code> permet d'inverser le résultat d'une requête. Il inversera uniquement la requête sur laquelle il est appliqué (et non la liste des requêtes s'il est utilisé au sein de requêtes séparées par des virgules). Le mot-clé <code>not</code> ne peut pas être utilisé afin d'inverser une caractéristique média, il peut uniquement être utilisé pour une requête média complète. Dans la requête qui suit, l'opérateur <code>not</code> est évalué en dernier :</p>
+```css
+@media print { ... }
+```
 
-<pre class="brush: css">@media not all and (monochrome) { ... }
-</pre>
+Il est possible de cibler plusieurs types à la fois. La règle suivante permet de cibler les écrans et les appareils d'impression :
 
-<p>La requête précédente est donc équivalente à :</p>
+```css
+@media screen, print { ... }
+```
 
-<pre class="brush: css">@media not (all and (monochrome)) { ... }
-</pre>
+Pour une liste complète des types de média, voir [ci-avant](#types). Ces types étant très génériques, peu de valeurs sont disponibles. Afin d'avoir un ciblage plus fin, on pourra utiliser les caractéristiques média.
 
-<p>Mais elle n'est pas équivalente à :</p>
+## Cibler des caractéristiques média
 
-<pre class="brush: css example-bad">@media (not all) and (monochrome) { ... }</pre>
+Les caractéristiques média décrivent les caractéristiques spécifiques d'un agent utilisateur, d'un appareil d'affichage ou de l'environnement. On peut ainsi cibler différents styles pour les écrans larges, pour les ordinateurs qui disposent d'une souris ou pour les appareils utilisés dans une faible luminosité. Dans l'exemple qui suit, on a une requête qui vérifie si le mécanisme de saisie principal de l'appareil peut survoler les éléments :
 
-<p>De même :</p>
+```css
+@media (hover: hover) { ... }
+```
 
-<pre class="brush: css">@media not screen and (color), print and (color) { ... }
-</pre>
+De nombreuses caractéristiques média sont des caractéristiques portant sur un intervalle et peuvent être préfixées par `min-` ou `max-` afin d'exprimer des seuils de valeurs. Par exemple, la requête suivante permet d'appliquer des styles à condition que la largeur de la zone d'affichage (_viewport_) soit inférieure à 1250px :
 
-<p>sera évaluée comme :</p>
+```css
+@media (max-width: 1250px) { ... }
+```
 
-<pre class="brush: css">@media (not (screen and (color))), print and (color) { ... }</pre>
+> **Note :** Selon la spécification du W3C, les barres de défilement font partie des dimensions de la page. Ainsi la barre de défilement vertical s'ajoute à la largeur du document tandis que la barre de défilement horizontal s'ajoute à la hauteur du document. Cependant tous les navigateurs n'ont pas adopté cette recommandation (Chrome par exemple) et tous n'ont pas opté pour la même taille de barre de défilement, ce qui mène à un développement plus difficile pour assurer une comptabilité sur tous les navigateurs.
 
-<h3 id="improving_compatibility_with_older_browsers">Améliorer la compatibilité avec les anciens navigateurs</h3>
+Si on utilise une caractéristique média sans indiquer de valeur, la requête sera vérifiée tant que la valeur de cette caractéristique n'est pas nulle (ou `none` pour la spécification de niveau 4). Ainsi, la requête suivante permettra d'appliquer les styles qu'elle contient si l'appareil peut afficher des couleurs :
 
-<p>Le mot-clé <code>only</code> empêche les navigateurs qui ne prennent pas en charge les requêtes média avec les caractéristiques média d'appliquer les styles concernés. Cet opérateur n'a aucun effet pour les navigateurs modernes<em>.</em></p>
+```css
+@media (color) { ... }
+```
 
-<pre class="brush: css">@media only screen and (color) { ... }
-</pre>
+Si une caractéristique ne s'applique pas à l'appareil, les expressions utilisant cette caractéristique renverront `false`. Ainsi, la requête suivante aura toujours la valeur `false` car aucun appareil de synthèse vocale ne possède de caractéristique relative à ses proportions d'écran :
 
-<h2 id="syntax_improvements_in_level_4">Améliorations syntaxiques avec la spécification de niveau 4</h2>
+```css
+@media speech and (aspect-ratio: 11/5) { ... }
+```
 
-<p>La spécification de niveau 4 pour les requêtes média ajoute des améliorations syntaxiques pour les requêtes média qui portent sur un intervalle (par exemple les critères de largeur et de hauteur). On peut par exemple utiliser le préfixe <code>max-</code> pour les largeurs et écrire :</p>
+Pour plus d'exemples, voir les pages de référence de chacune de ces caractéristiques depuis [le tableau ci-dessus](#caractéristiques).
 
-<pre class="brush: css">@media (max-width: 30em) { ... }</pre>
+## Créer des requêtes média complexes
 
-<p>Avec les requêtes média de niveau 4, on peut écrire :</p>
+Il est parfois nécessaire d'avoir une requête qui repose sur plusieurs conditions. Pour cela, on peut utiliser les opérateurs logiques : `not`, `and`, `only` et la virgule (`,`) afin de combiner plusieurs requêtes média.
 
-<pre class="brush: css">@media (width &lt;= 30em) { ... }</pre>
+Dans l'exemple précédent, on a utilisé l'opérateur `and` afin de combiner un type de média et une caractéristique média. Cet opérateur peut également servir à assembler plusieurs requêtes média pour en former la conjonction logique. L'opérateur `not` permet d'obtenir la négation d'une requête média tandis que l'opérateur `only` empêche les anciens navigateurs d'appliquer les styles qu'une requête contient.
 
-<p>Si on utilise <code>min-</code> et <code>max-</code> conjointement, on peut tester l'appartenance d'une valeur à un intervalle :</p>
+> **Note :** Dans la plupart des cas, le type de média `all` est utilisé par défaut si aucun autre type n'est fourni. Toutefois, lorsqu'on utilise les opérateurs `not` ou `only`, il est nécessaire de fournir un type de média explicite.
 
-<pre class="brush: css">@media (min-width: 30em) and (max-width: 50em) { ... }</pre>
+### Combiner plusieurs types ou caractéristiques
 
-<p>Avec les requêtes média de niveau 4, on peut écrire :</p>
+Le mot-clé `and` permet de combiner une caractéristique média avec un type de média ou avec d'autres caractéristiques média. L'exemple suivant permet de restreindre l'application d'un style aux appareils orientés en mode paysage et dont la largeur mesure au moins 30ems :
 
-<pre class="brush: css">@media (30em &lt;= width &lt;= 50em ) { ... }
-</pre>
+```css
+@media (min-width: 30em) and (orientation: landscape) { ... }
+```
 
-<p>Les requêtes média de niveau 4 permettent également d'utiliser une logique booléenne avec les opérateurs <code>and</code>, <code>not</code> et <code>or</code>.</p>
+Si on souhaite restreindre ces règles aux écrans, on pourra ajouter une clause avec le type de média `screen` :
 
-<h3 id="negating_a_feature_with_not">Tester l'absence d'une caractéristique avec <code>not</code></h3>
+```css
+@media screen and (min-width: 30em) and (orientation: landscape) { ... }
+```
 
-<p>On peut utiliser l'opérateur <code>not()</code> autour d'une caractéristique média afin de tester l'absence de cette caractéristique. Ainsi, on peut <code>not(hover)</code> pour cibler les appareils qui ne permettent pas le survol d'un élément :</p>
+### Tester plusieurs requêtes
 
-<pre class="brush: css">@media (not(hover)) { ... }</pre>
+La virgule peut être utilisée afin de créer une disjonction (un OU logique) sur différentes clauses (types de média, caractéristiques ou états). Dans l'exemple qui suit, les styles de la requête sont appliqués si l'appareil possède une hauteur supérieure ou égale à 680 pixels ou si l'écran est en mode portrait :
 
-<h3 id="testing_for_multiple_features_with_or">Tester plusieurs caractéristiques avec <code>or</code></h3>
+```css
+@media (min-height: 680px), screen and (orientation: portrait) { ... }
+```
 
-<p>Il est possible d'utiliser l'opérateur <code>or</code> pour tester une correspondance sur plus d'une caractéristique. Dans l'exemple suivant, on cible les appareils qui ont un affichage monochrome (<code>not (color)</code>) ou qui permettent de survoler les éléments (<code>hover</code>) :</p>
+Avec cet exemple, si l'utilisateur utilise une imprimante et que la page mesure 800 pixels de haut, la requête média aurait été vérifiée. Il en aurait été de même si l'utilisateur avait utilisé un smartphone avec une zone d'affichage haute de 480 pixels en portrait car la deuxième clause aurait renvoyée `true`.
 
-<pre class="brush: css">@media (not (color)) or (hover) { ... }
-</pre>
+### Opérer une négation
 
-<h2 id="see_also">Voir aussi</h2>
+Le mot-clé `not` permet d'inverser le résultat d'une requête. Il inversera uniquement la requête sur laquelle il est appliqué (et non la liste des requêtes s'il est utilisé au sein de requêtes séparées par des virgules). Le mot-clé `not` ne peut pas être utilisé afin d'inverser une caractéristique média, il peut uniquement être utilisé pour une requête média complète. Dans la requête qui suit, l'opérateur `not` est évalué en dernier :
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/Media_Queries/Testing_media_queries">Tester des requêtes média en script</a></li>
- <li><a href="https://davidwalsh.name/animate-media-queries">Utiliser les animations CSS entre les requêtes média (en anglais)</a></li>
- <li><a href="/fr/docs/Web/CSS/Mozilla_Extensions#caract%c3%a9ristiques">Les caractéristiques média spécifiques à Mozilla</a></li>
- <li><a href="/fr/docs/Web/CSS/WebKit_Extensions#caract%c3%a9ristiques_m%c3%a9dia">Les caractéristiques média spécifiques à WebKit</a></li>
-</ul>
+```css
+@media not all and (monochrome) { ... }
+```
+
+La requête précédente est donc équivalente à :
+
+```css
+@media not (all and (monochrome)) { ... }
+```
+
+Mais elle n'est pas équivalente à :
+
+```css example-bad
+@media (not all) and (monochrome) { ... }
+```
+
+De même :
+
+```css
+@media not screen and (color), print and (color) { ... }
+```
+
+sera évaluée comme :
+
+```css
+@media (not (screen and (color))), print and (color) { ... }
+```
+
+### Améliorer la compatibilité avec les anciens navigateurs
+
+Le mot-clé `only` empêche les navigateurs qui ne prennent pas en charge les requêtes média avec les caractéristiques média d'appliquer les styles concernés. Cet opérateur n'a aucun effet pour les navigateurs modernes*.*
+
+```css
+@media only screen and (color) { ... }
+```
+
+## Améliorations syntaxiques avec la spécification de niveau 4
+
+La spécification de niveau 4 pour les requêtes média ajoute des améliorations syntaxiques pour les requêtes média qui portent sur un intervalle (par exemple les critères de largeur et de hauteur). On peut par exemple utiliser le préfixe `max-` pour les largeurs et écrire :
+
+```css
+@media (max-width: 30em) { ... }
+```
+
+Avec les requêtes média de niveau 4, on peut écrire :
+
+```css
+@media (width <= 30em) { ... }
+```
+
+Si on utilise `min-` et `max-` conjointement, on peut tester l'appartenance d'une valeur à un intervalle :
+
+```css
+@media (min-width: 30em) and (max-width: 50em) { ... }
+```
+
+Avec les requêtes média de niveau 4, on peut écrire :
+
+```css
+@media (30em <= width <= 50em ) { ... }
+```
+
+Les requêtes média de niveau 4 permettent également d'utiliser une logique booléenne avec les opérateurs `and`, `not` et `or`.
+
+### Tester l'absence d'une caractéristique avec `not`
+
+On peut utiliser l'opérateur `not()` autour d'une caractéristique média afin de tester l'absence de cette caractéristique. Ainsi, on peut `not(hover)` pour cibler les appareils qui ne permettent pas le survol d'un élément :
+
+```css
+@media (not(hover)) { ... }
+```
+
+### Tester plusieurs caractéristiques avec `or`
+
+Il est possible d'utiliser l'opérateur `or` pour tester une correspondance sur plus d'une caractéristique. Dans l'exemple suivant, on cible les appareils qui ont un affichage monochrome (`not (color)`) ou qui permettent de survoler les éléments (`hover`) :
+
+```css
+@media (not (color)) or (hover) { ... }
+```
+
+## Voir aussi
+
+- [Tester des requêtes média en script](/fr/docs/Web/CSS/Media_Queries/Testing_media_queries)
+- [Utiliser les animations CSS entre les requêtes média (en anglais)](https://davidwalsh.name/animate-media-queries)
+- [Les caractéristiques média spécifiques à Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions#caract%c3%a9ristiques)
+- [Les caractéristiques média spécifiques à WebKit](/fr/docs/Web/CSS/WebKit_Extensions#caract%c3%a9ristiques_m%c3%a9dia)

@@ -8,31 +8,29 @@ tags:
   - Reference
 translation_of: Web/CSS/filter-function/grayscale()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La fonction CSS <code><strong>grayscale()</strong></code> convertit une image en niveaux de gris. Le résultat de cette fonction est une valeur {{cssxref("&lt;filter-function&gt;")}}.</p>
+La fonction CSS **`grayscale()`** convertit une image en niveaux de gris. Le résultat de cette fonction est une valeur {{cssxref("&lt;filter-function&gt;")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/function-grayscale.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-grayscale.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">grayscale(<em>multiplicateur</em>)</pre>
+    grayscale(multiplicateur)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>multiplicateur</code></dt>
- <dd>L'intensité de la conversion, indiquée sous la forme d'un nombre ({{cssxref("&lt;number&gt;")}}) ou d'un pourcentage ({{cssxref("&lt;percentage&gt;")}}). Avec une valeur égale à <code>100%</code>, l'image obtenue sera complètement en niveaux de gris. Avec une valeur égale à <code>0%</code>, l'image source restera inchangée. Les valeurs comprises entre <code>0%</code> et <code>100%</code> auront un effet intermédiaire (progression linéaire). Dans le cas d'une interpolation, la valeur par défaut utilisée est <code>0</code>.</dd>
-</dl>
+- `multiplicateur`
+  - : L'intensité de la conversion, indiquée sous la forme d'un nombre ({{cssxref("&lt;number&gt;")}}) ou d'un pourcentage ({{cssxref("&lt;percentage&gt;")}}). Avec une valeur égale à `100%`, l'image obtenue sera complètement en niveaux de gris. Avec une valeur égale à `0%`, l'image source restera inchangée. Les valeurs comprises entre `0%` et `100%` auront un effet intermédiaire (progression linéaire). Dans le cas d'une interpolation, la valeur par défaut utilisée est `0`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: css">grayscale(0)     /* Aucun effet */
+```css
+grayscale(0)     /* Aucun effet */
 grayscale(.7)    /* Converti à 70% en niveaux de gris */
-grayscale(100%)  /* Uniquement en niveaux de gris */</pre>
+grayscale(100%)  /* Uniquement en niveaux de gris */
+```
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("&lt;filter-function&gt;")}}</li>
-</ul>
+- {{cssxref("&lt;filter-function&gt;")}}

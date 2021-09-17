@@ -7,20 +7,21 @@ tags:
   - Reference
 translation_of: Web/CSS/border-image-source
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>border-image-source</code></strong> définit l'image (type {{cssxref("&lt;image&gt;")}}) qu'on souhaite utiliser pour mettre en forme la bordure. Si la valeur de cette propriété vaut <code>none</code>, ce sera la mise en forme définie par la propriété {{cssxref("border-style")}} qui sera utilisée.</p>
+La propriété **`border-image-source`** définit l'image (type {{cssxref("&lt;image&gt;")}}) qu'on souhaite utiliser pour mettre en forme la bordure. Si la valeur de cette propriété vaut `none`, ce sera la mise en forme définie par la propriété {{cssxref("border-style")}} qui sera utilisée.
 
-<div>{{EmbedInteractiveExample("pages/css/border-image-source.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-image-source.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeur avec un mot-clé */
+```css
+/* Valeur avec un mot-clé */
 /* Ici, pas de border-image, */
 /* on utilise border-style */
 border-image-source: none;
 
-/* Valeur de type &lt;image&gt; */
+/* Valeur de type <image> */
 border-image-source: url(image.jpg);
 border-image-source: linear-gradient(to top, red, yellow);
 
@@ -28,58 +29,41 @@ border-image-source: linear-gradient(to top, red, yellow);
 border-image-source: inherit;
 border-image-source: initial;
 border-image-source: unset;
-</pre>
+```
 
-<p>La propriété {{cssxref("border-image-slice")}} peut être utilisée afin de diviser une image source en régions qui seront insérées dynamiquement pour constituer la bordure imagée finale.</p>
+La propriété {{cssxref("border-image-slice")}} peut être utilisée afin de diviser une image source en régions qui seront insérées dynamiquement pour constituer la bordure imagée finale.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Cette valeur permet d'indiquer qu'aucune image ne doit être utilisée pour la bordure. Ce sera le style défini par la propriété {{cssxref("border-style")}} qui sera utilisé.</dd>
- <dt><code>&lt;image&gt;</code></dt>
- <dd>Une référence vers l'Image qu'on souhaite utiliser pour dessiner la bordure. Voir {{cssxref("&lt;image&gt;")}}.</dd>
-</dl>
+- `none`
+  - : Cette valeur permet d'indiquer qu'aucune image ne doit être utilisée pour la bordure. Ce sera le style défini par la propriété {{cssxref("border-style")}} qui sera utilisé.
+- `<image>`
+  - : Une référence vers l'Image qu'on souhaite utiliser pour dessiner la bordure. Voir {{cssxref("&lt;image&gt;")}}.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Voir la page de la propriété raccourcie {{cssxref("border-image")}} et les différents exemples.</p>
+Voir la page de la propriété raccourcie {{cssxref("border-image")}} et les différents exemples.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-border-image-source', 'border-image-source')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                                     | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName('CSS3 Backgrounds', '#the-border-image-source', 'border-image-source')}} | {{Spec2('CSS3 Backgrounds')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.border-image-source")}}</p>
+{{Compat("css.properties.border-image-source")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("border")}}</li>
- <li>{{cssxref("outline")}}</li>
- <li>{{cssxref("box-shadow")}}</li>
- <li>{{cssxref("background-image")}}</li>
- <li>{{cssxref("url()", "url()")}}</li>
-</ul>
+- {{cssxref("border")}}
+- {{cssxref("outline")}}
+- {{cssxref("box-shadow")}}
+- {{cssxref("background-image")}}
+- {{cssxref("url()", "url()")}}

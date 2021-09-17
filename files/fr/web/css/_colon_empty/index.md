@@ -7,29 +7,30 @@ tags:
   - Reference
 translation_of: Web/CSS/:empty
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <strong><code>:empty</code></strong> correspond à un élément qui n'a aucun enfant. Seules les feuilles de l'arbre et le texte (espaces inclus) sont pris en compte. Les commentaires, les attributs ou le contenu généré en CSS avec {{cssxref("content")}} n'ont pas d'influence sur le contenu de l'élément (autrement dit, si un élément ne contient que des commentaires, il sera considéré comme vide).</p>
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:empty`** correspond à un élément qui n'a aucun enfant. Seules les feuilles de l'arbre et le texte (espaces inclus) sont pris en compte. Les commentaires, les attributs ou le contenu généré en CSS avec {{cssxref("content")}} n'ont pas d'influence sur le contenu de l'élément (autrement dit, si un élément ne contient que des commentaires, il sera considéré comme vide).
 
-<pre class="brush: css no-line-numbers">/* Cible tous les éléments &lt;div&gt; qui */
+```css
+/* Cible tous les éléments <div> qui */
 /* n'ont  pas de contenu */
 div:empty {
   background: lime;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note :</strong> Avec {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}}, le sélecteur <code>:empty</code> a été modifié afin de se comporter comme {{CSSxRef(":-moz-only-whitespace")}} mais, à l'heure actuelle, aucun navigateur ne prend en charge cette fonctionnalité.</p>
-</div>
+> **Note :** Avec {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}}, le sélecteur `:empty` a été modifié afin de se comporter comme {{CSSxRef(":-moz-only-whitespace")}} mais, à l'heure actuelle, aucun navigateur ne prend en charge cette fonctionnalité.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">body {
+```css
+body {
   display: flex;
   justify-content: space-around;
 }
@@ -43,63 +44,49 @@ div:empty {
 .box:empty {
   background: blue;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="box"&gt;&lt;!-- Je serai bleu. --&gt;&lt;/div&gt;
-&lt;div class="box"&gt;Je serai rouge.&lt;/div&gt;
-&lt;div class="box"&gt;
-    &lt;!-- Je serai rouge à cause des espaces autour du commentaire --&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="box"><!-- Je serai bleu. --></div>
+<div class="box">Je serai rouge.</div>
+<div class="box">
+    <!-- Je serai rouge à cause des espaces autour du commentaire -->
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples','100%','105')}}</p>
+{{EmbedLiveSample('Exemples','100%','105')}}
 
-<h2 id="Accessibilité">Accessibilité</h2>
+## Accessibilité
 
-<p>Les technologies d'assistance telles que les lecteurs d'écran ne peuvent pas analyser un contenu interactif vide. Tout contenu interactif doit avoir un nom accessible, fourni sous la forme d'une valeur textuelle via l'élément parent du contrôle ({{HTMLElement("a")}}, {{HTMLElement("button")}}, etc.). Les noms accessibles pemettent d'exposer le contrôle interactif au sein de <a href="/fr/docs/Learn/Accessibility/What_is_accessibility">l'arbre d'accessibilité</a>, une API communiquant des informations qui peuvent être utilisées par les technologies d'assistance.</p>
+Les technologies d'assistance telles que les lecteurs d'écran ne peuvent pas analyser un contenu interactif vide. Tout contenu interactif doit avoir un nom accessible, fourni sous la forme d'une valeur textuelle via l'élément parent du contrôle ({{HTMLElement("a")}}, {{HTMLElement("button")}}, etc.). Les noms accessibles pemettent d'exposer le contrôle interactif au sein de [l'arbre d'accessibilité](/fr/docs/Learn/Accessibility/What_is_accessibility), une API communiquant des informations qui peuvent être utilisées par les technologies d'assistance.
 
-<p>Le texte fournissant le nom accessible peut être masqué grâce <a href="https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link" rel="noopener">à des propriétés</a> afin de le retirer visuellement mais de le conserver pour les technologies d'assistance. Cette méthode est généralement utilisée pour les boutons utilisant une simple icône comme indication.</p>
+Le texte fournissant le nom accessible peut être masqué grâce [à des propriétés](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link) afin de le retirer visuellement mais de le conserver pour les technologies d'assistance. Cette méthode est généralement utilisée pour les boutons utilisant une simple icône comme indication.
 
-<ul>
- <li><a href="https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/">Qu'est-ce qu'un nom accessible ? The Paciello Group (en anglais)</a></li>
- <li><a href="https://gomakethings.com/hidden-content-for-better-a11y/"><i lang="en">Hidden content for better a11y</i> (en anglais)</a></li>
- <li><a href="/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_%E2%80%94_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are">Comprendre la règle WCAG 2.4</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html"><i lang="en">Understanding Success Criterion 2.4.4</i> (en anglais) </a></li>
-</ul>
+- [Qu'est-ce qu'un nom accessible ? The Paciello Group (en anglais)](https://developer.paciellogroup.com/blog/2017/04/what-is-an-accessible-name/)
+- <i lang="en">Hidden content for better a11y</i>
 
-<h2 id="Spécifications">Spécifications</h2>
+  [<i lang="en">Hidden content for better a11y</i> (en anglais)](https://gomakethings.com/hidden-content-for-better-a11y/)
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#the-empty-pseudo", ":empty")}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Modifier afin d'obtenir le comportement de {{CSSxRef(":-moz-only-whitespace")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Selectors", "#empty-pseudo", ":empty")}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+- [Comprendre la règle WCAG 2.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.4_%E2%80%94_Navigable_Provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- <i lang="en">Understanding Success Criterion 2.4.4</i>
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+  [<i lang="en">Understanding Success Criterion 2.4.4</i> (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html)
 
-<p>{{Compat("css.selectors.empty")}}</p>
+## Spécifications
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+| Spécification                                                                    | État                                 | Commentaires                                                                                 |
+| -------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------------------------------------------------- |
+| {{SpecName("CSS4 Selectors", "#the-empty-pseudo", ":empty")}} | {{Spec2('CSS4 Selectors')}} | Modifier afin d'obtenir le comportement de {{CSSxRef(":-moz-only-whitespace")}}. |
+| {{SpecName("CSS3 Selectors", "#empty-pseudo", ":empty")}}     | {{Spec2('CSS3 Selectors')}} | Définition initiale.                                                                         |
 
-<ul>
- <li>{{cssxref(":blank")}}{{Experimental_inline}}</li>
-</ul>
+## Compatibilité des navigateurs
+
+{{Compat("css.selectors.empty")}}
+
+## Voir aussi
+
+- {{cssxref(":blank")}}{{Experimental_inline}}

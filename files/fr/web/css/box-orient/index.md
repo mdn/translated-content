@@ -8,17 +8,16 @@ tags:
   - Reference
 translation_of: Web/CSS/box-orient
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<div class="warning">
-<p><strong>Attention :</strong> Cette propriété fait partie de la première version du standard pour les boîtes flexibles (<em>flexbox</em>) et sera remplacée dans une prochaine version.</p>
-</div>
+> **Attention :** Cette propriété fait partie de la première version du standard pour les boîtes flexibles (_flexbox_) et sera remplacée dans une prochaine version.
 
-<p>La propriété CSS <strong><code>box-orient</code></strong> définit si un élément organise son contenu horizontalement ou verticalement.</p>
+La propriété CSS **`box-orient`** définit si un élément organise son contenu horizontalement ou verticalement.
 
-<p>Pour plus de détails, se référer à la page <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Flexbox</a> qui décrit les différentes propriétés des boîtes flexibles.</p>
+Pour plus de détails, se référer à la page [Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) qui décrit les différentes propriétés des boîtes flexibles.
 
-<pre class="brush:css">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 box-orient: horizontal;
 box-orient: vertical;
 box-orient: inline-axis;
@@ -28,38 +27,37 @@ box-orient: block-axis;
 box-orient: inherit;
 box-orient: initial;
 box-orient: unset;
-</pre>
+```
 
-<p>Ainsi, les éléments XUL {{XULElem("box")}} et {{XULElem("hbox")}} disposent leurs contenus horizontalement par défaut alors que  {{XULElem("vbox")}} organise son contenu de façon verticale par défaut.</p>
+Ainsi, les éléments XUL {{XULElem("box")}} et {{XULElem("hbox")}} disposent leurs contenus horizontalement par défaut alors que  {{XULElem("vbox")}} organise son contenu de façon verticale par défaut.
 
-<p>Les éléments HTML disposent leurs contenus selon l'axe <em>inline</em> par défaut. Cette propriété CSS ne s'applique qu'aux éléments HTML pour lesquels la propriété {{cssxref("display")}} vaut {{cssxref("box")}} ou {{cssxref("inline-box")}}.</p>
+Les éléments HTML disposent leurs contenus selon l'axe _inline_ par défaut. Cette propriété CSS ne s'applique qu'aux éléments HTML pour lesquels la propriété {{cssxref("display")}} vaut {{cssxref("box")}} ou {{cssxref("inline-box")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>horizontal</code></dt>
- <dd>La boîte organise son contenu horizontalement.</dd>
- <dt><code>vertical</code></dt>
- <dd>La boîte organise son contenu verticalement.</dd>
- <dt><code>inline-axis</code> (HTML)</dt>
- <dd>La boîte organise son contenu (ses éléments-fils) dans le sens de l'axe de lecture (axe <em>inline</em>).</dd>
- <dt><code>block-axis</code> (HTML)</dt>
- <dd>La boîte organise son contenu (ses éléments-fils) dans le sens perpendiculaire à l'axe de lecteur (axe <em>block</em>).</dd>
-</dl>
+- `horizontal`
+  - : La boîte organise son contenu horizontalement.
+- `vertical`
+  - : La boîte organise son contenu verticalement.
+- `inline-axis` (HTML)
+  - : La boîte organise son contenu (ses éléments-fils) dans le sens de l'axe de lecture (axe _inline_).
+- `block-axis` (HTML)
+  - : La boîte organise son contenu (ses éléments-fils) dans le sens perpendiculaire à l'axe de lecteur (axe _block_).
 
-<p>Les axes <em>inline</em> et <em>block</em> dépendent du mode d'écriture (pour l'anglais, ils correspondront, respectivement, à <code>horizontal</code> et <code>vertical</code>.</p>
+Les axes _inline_ et _block_ dépendent du mode d'écriture (pour l'anglais, ils correspondront, respectivement, à `horizontal` et `vertical`.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div.exemple {
+```css
+div.exemple {
   display: -moz-box; /* Mozilla */
   display: -webkit-box; /* WebKit */
   display: box; /* On utilise les boîtes */
@@ -67,43 +65,42 @@ box-orient: unset;
   -moz-box-orient: horizontal; /* Mozilla */
   -webkit-box-orient: horizontal; /* WebKit */
   box-orient: horizontal; /* spécifié */
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="exemple"&gt;
-  &lt;p&gt;Je serai à gauche de mon voisin.&lt;/p&gt;
-  &lt;p&gt;Et moi à droite de mon voisin.&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="exemple">
+  <p>Je serai à gauche de mon voisin.</p>
+  <p>Et moi à droite de mon voisin.</p>
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>On aura les deux paragraphes situés côte à côte.</p>
+On aura les deux paragraphes situés côte à côte.
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Pour les éléments XUL, si l'orientation est définie avec l'attribut {{XULAttr("orient")}} cette propriété est ignorée.</p>
+Pour les éléments XUL, si l'orientation est définie avec l'attribut {{XULAttr("orient")}} cette propriété est ignorée.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<ul>
- <li><a href="https://www.w3.org/TR/css3-flexbox/">Brouillon de travail pour le module des boîtes flexibles (W3C)</a> {{Note("L'état actuel de cette spécification ne reflète pas l'implémentation de Gecko ou WebKit.")}}</li>
- <li><a href="https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">Ancienne version de la spécification.</a> {{Note("Les implémentations de WebKit et Gecko reflètent cette version de la spécification.")}}</li>
-</ul>
+- [Brouillon de travail pour le module des boîtes flexibles (W3C)](https://www.w3.org/TR/css3-flexbox/) {{Note("L'état actuel de cette spécification ne reflète pas l'implémentation de Gecko ou WebKit.")}}
+- [Ancienne version de la spécification.](https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/) {{Note("Les implémentations de WebKit et Gecko reflètent cette version de la spécification.")}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.box-orient")}}</p>
+{{Compat("css.properties.box-orient")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("box-direction")}},</li>
- <li>{{cssxref("box-pack")}},</li>
- <li>{{cssxref("box-align")}},</li>
- <li>{{cssxref("flex-direction")}}.</li>
-</ul>
+- {{cssxref("box-direction")}},
+- {{cssxref("box-pack")}},
+- {{cssxref("box-align")}},
+- {{cssxref("flex-direction")}}.

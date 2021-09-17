@@ -8,36 +8,32 @@ tags:
   - Reference
 translation_of: Web/CSS/filter-function/opacity()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La fonction CSS <strong><code>opacity()</code></strong> permet de modifier la transparence de l'image. Le résultat obtenu par cette fonction est une valeur {{cssxref("&lt;filter-function&gt;")}}.</p>
+La fonction CSS **`opacity()`** permet de modifier la transparence de l'image. Le résultat obtenu par cette fonction est une valeur {{cssxref("&lt;filter-function&gt;")}}.
 
-<div>{ {EmbedInteractiveExample("pages/css/function-opacity.html")}}</div>
+{ {EmbedInteractiveExample("pages/css/function-opacity.html")}}
 
-<div class="note">
-<p><strong>Note :</strong> Cette fonction est proche de la propriété {{cssxref("opacity")}} mais, selon le navigateur, les filtres CSS peuvent bénéficier de l'accélération matérielle pour de meilleures performances.</p>
-</div>
+> **Note :** Cette fonction est proche de la propriété {{cssxref("opacity")}} mais, selon le navigateur, les filtres CSS peuvent bénéficier de l'accélération matérielle pour de meilleures performances.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">opacity(<em>multiplicateur</em>)</pre>
+    opacity(multiplicateur)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>multiplicateur</code></dt>
- <dd>L'intensité de l'opacité, indiquée comme un nombre ({{cssxref("&lt;number&gt;")}}) ou comme un pourcentage ({{cssxref("&lt;percentage&gt;")}}). Une  valeur de <code>0%</code> entraînera une image complètement transparente. Une valeur de <code>100%</code> laissera l'image inchangée. Les valeurs intermédiaires auront un effet proportionnel. Lors d'une interpolation, la valeur par défaut utilisée sera <code>1</code>.</dd>
-</dl>
+- `multiplicateur`
+  - : L'intensité de l'opacité, indiquée comme un nombre ({{cssxref("&lt;number&gt;")}}) ou comme un pourcentage ({{cssxref("&lt;percentage&gt;")}}). Une  valeur de `0%` entraînera une image complètement transparente. Une valeur de `100%` laissera l'image inchangée. Les valeurs intermédiaires auront un effet proportionnel. Lors d'une interpolation, la valeur par défaut utilisée sera `1`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: css">opacity(0%);   /* Complètement transparente */
+```css
+opacity(0%);   /* Complètement transparente */
 opacity(50%);  /* 50% transparent */
-opacity(1);    /* Aucun effet */</pre>
+opacity(1);    /* Aucun effet */
+```
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("&lt;filter-function&gt;")}}</li>
- <li>La propriété CSS {{cssxref("opacity")}}</li>
-</ul>
+- {{cssxref("&lt;filter-function&gt;")}}
+- La propriété CSS {{cssxref("opacity")}}

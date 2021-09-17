@@ -7,17 +7,18 @@ tags:
   - Reference
 translation_of: Web/CSS/text-decoration-line
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>text-decoration-line</code></strong> définit la façon dont les décorations linéaires sont ajoutées à un élément et notamment leur position (sous le texte, au-dessus ou en travers de celui-ci).</p>
+La propriété **`text-decoration-line`** définit la façon dont les décorations linéaires sont ajoutées à un élément et notamment leur position (sous le texte, au-dessus ou en travers de celui-ci).
 
-<div>{{EmbedInteractiveExample("pages/css/text-decoration-line.html")}}</div>
+{{EmbedInteractiveExample("pages/css/text-decoration-line.html")}}
 
-<p>La propriété raccourcie {{cssxref("text-decoration")}} permet de paramétrer cette propriété et d'autres propriétés associées aux décorations.</p>
+La propriété raccourcie {{cssxref("text-decoration")}} permet de paramétrer cette propriété et d'autres propriétés associées aux décorations.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 text-decoration-line: none;
 text-decoration-line: underline;
 text-decoration-line: overline;
@@ -31,74 +32,61 @@ text-decoration-line: overline underline line-through;   /* On a plusieurs déco
 text-decoration-line: inherit;
 text-decoration-line: initial;
 text-decoration-line: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<p>Cette propriété peut avoir une ou plusieurs valeurs séparées par des espaces. Si aucune valeur n'est fournie, il n'y a pas de décoration ajoutée :</p>
+Cette propriété peut avoir une ou plusieurs valeurs séparées par des espaces. Si aucune valeur n'est fournie, il n'y a pas de décoration ajoutée :
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Aucune ligne ne décore le texte.</dd>
- <dt><code>underline</code></dt>
- <dd>Chaque ligne de texte est soulignée.</dd>
- <dt><code>overline</code></dt>
- <dd>Une ligne est dessinée au-dessus de chaque ligne de texte.</dd>
- <dt><code>line-through</code></dt>
- <dd>Une ligne est dessinée au milieu de chaque ligne de texte.</dd>
- <dt><code>blink</code> {{deprecated_inline}}</dt>
- <dd>Le texte clignote. Les agents utilisateurs conformes peuvent ne pas suivre cette directive. Cette valeur est dépréciée et il est conseillé d'utiliser les <a href="/fr/docs/Web/CSS/animation">animations CSS</a> pour obtenir un effet similaire.</dd>
-</dl>
+- `none`
+  - : Aucune ligne ne décore le texte.
+- `underline`
+  - : Chaque ligne de texte est soulignée.
+- `overline`
+  - : Une ligne est dessinée au-dessus de chaque ligne de texte.
+- `line-through`
+  - : Une ligne est dessinée au milieu de chaque ligne de texte.
+- `blink` {{deprecated_inline}}
+  - : Le texte clignote. Les agents utilisateurs conformes peuvent ne pas suivre cette directive. Cette valeur est dépréciée et il est conseillé d'utiliser les [animations CSS](/fr/docs/Web/CSS/animation) pour obtenir un effet similaire.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Voici un texte souligné avec une vaguelette rouge.&lt;/p&gt;</pre>
+```html
+<p>Voici un texte souligné avec une vaguelette rouge.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   text-decoration-line: underline;
   text-decoration-style: wavy;
   text-decoration-color: red;
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', 300, 60)}}</p>
+{{EmbedLiveSample('Exemples', 300, 60)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Text Decoration', '#text-decoration-line', 'text-decoration-line')}}</td>
-   <td>{{Spec2('CSS3 Text Decoration')}}</td>
-   <td>Définition initiale. La propriété {{cssxref("text-decoration")}} n'était pas une propriété raccourcie auparavant.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                                         | Commentaires                                                                                                                |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS3 Text Decoration', '#text-decoration-line', 'text-decoration-line')}} | {{Spec2('CSS3 Text Decoration')}} | Définition initiale. La propriété {{cssxref("text-decoration")}} n'était pas une propriété raccourcie auparavant. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.text-decoration-line")}}</p>
+{{Compat("css.properties.text-decoration-line")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>La propriété raccourcie {{cssxref("text-decoration")}} qui permet, entre autres, de paramétrer <code>text-decoration-line</code>.</li>
-</ul>
+- La propriété raccourcie {{cssxref("text-decoration")}} qui permet, entre autres, de paramétrer `text-decoration-line`.

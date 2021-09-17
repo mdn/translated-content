@@ -8,58 +8,100 @@ tags:
   - Transformations CSS
 translation_of: Web/CSS/transform-function/skewY()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La fonction <strong><code>skewY()</code></strong> permet d'opérer une distorsion verticale en étirant chaque point de l'élément d'un certain angle dans la direction verticale. Pour cela, on augmente l'ordonnée d'un élément d'une valeur proportionnelle à l'angle donné et à la distance de l'origine. Plus le point est éloigné de l'origine et loin de l'axe, plus le décalage obtenu sera important.</p>
+La fonction **`skewY()`** permet d'opérer une distorsion verticale en étirant chaque point de l'élément d'un certain angle dans la direction verticale. Pour cela, on augmente l'ordonnée d'un élément d'une valeur proportionnelle à l'angle donné et à la distance de l'origine. Plus le point est éloigné de l'origine et loin de l'axe, plus le décalage obtenu sera important.
 
-<div>{{EmbedInteractiveExample("pages/css/function-skewY.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-skewY.html")}}
 
-<p>La valeur obtenue par cette fonction est de type {{cssxref("&lt;transform-function&gt;")}}.</p>
+La valeur obtenue par cette fonction est de type {{cssxref("&lt;transform-function&gt;")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">skewY(a)
-</pre>
+    skewY(a)
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>a</code></dt>
- <dd>Une valeur de type {{cssxref("&lt;angle&gt;")}} qui représente l'angle avec lequel appliquer la distorsion selon l'axe des ordonnées (axe vertical).</dd>
-</dl>
+- `a`
+  - : Une valeur de type {{cssxref("&lt;angle&gt;")}} qui représente l'angle avec lequel appliquer la distorsion selon l'axe des ordonnées (axe vertical).
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-   <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-   <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-   <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>0</mtd></mtr><mtr>tan(ax)<mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-   <td><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>0</mtd></mtr><mtr>tan(ax)<mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>0</mtd></mtr><mtr>tan(ax)<mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr>tan(ax)<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-  </tr>
-  <tr>
-   <td><code>[1 tan(a) 0 1 0 0]</code></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
+      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
+      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
+      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>1<mtd>0</mtd></mtr
+              ><mtr>tan(ax)<mtd>1</mtd></mtr></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td>
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>1<mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr>tan(ax)<mtd>1</mtd><mtd>0</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>1<mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr>tan(ax)<mtd>1</mtd><mtd>0</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr>tan(ax)<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
+              ><mtr
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+    </tr>
+    <tr>
+      <td><code>[1 tan(a) 0 1 0 0]</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;toto&lt;/p&gt;
-&lt;p class="transformation"&gt;truc&lt;/p&gt;</pre>
+```html
+<p>toto</p>
+<p class="transformation">truc</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   width: 50px;
   height: 50px;
   background-color: teal;
@@ -69,38 +111,23 @@ translation_of: Web/CSS/transform-function/skewY()
   transform: skewY(40deg);
   background-color: blue;
 }
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples","100%","250")}}</p>
+{{EmbedLiveSample("Exemples","100%","250")}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Transforms", "#funcdef-transform-skewy", "skewY()")}}</td>
-   <td>{{Spec2("CSS3 Transforms")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                                 | Commentaires         |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName("CSS3 Transforms", "#funcdef-transform-skewy", "skewY()")}} | {{Spec2("CSS3 Transforms")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>Voir la page sur le type de donnée <code><a href="/fr/docs/Web/CSS/transform-function#compatibilité_des_navigateurs">&lt;transform-function&gt;</a></code> pour les informations de compatibilité associées.</p>
+Voir la page sur le type de donnée [`<transform-function>`](/fr/docs/Web/CSS/transform-function#compatibilité_des_navigateurs) pour les informations de compatibilité associées.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("transform")}}</li>
- <li>{{cssxref("&lt;transform-function&gt;")}}</li>
-</ul>
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}

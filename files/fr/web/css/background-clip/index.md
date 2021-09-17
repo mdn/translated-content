@@ -7,17 +7,18 @@ tags:
   - Reference
 translation_of: Web/CSS/background-clip
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>background-clip</code></strong> définit la façon dont l'arrière-plan d'un élément (que ce soit l'image ou la couleur) s'étend sous la boîte de bordure, la boîte de remplissage (<em>padding</em>) ou la boîte de contenu.</p>
+La propriété **`background-clip`** définit la façon dont l'arrière-plan d'un élément (que ce soit l'image ou la couleur) s'étend sous la boîte de bordure, la boîte de remplissage (_padding_) ou la boîte de contenu.
 
-<div>{{EmbedInteractiveExample("pages/css/background-clip.html")}}</div>
+{{EmbedInteractiveExample("pages/css/background-clip.html")}}
 
-<p>Si aucune image ({{cssxref("background-image")}}) ni couleur ({{cssxref("background-color")}}) d'arrière-plan n'est définie, cette propriété aura uniquement un effet visuel lorsque la bordure possède des régions transparentes (via {{cssxref("border-style")}} ou {{cssxref("border-image")}}). Dans les autres cas, la bordure recouvrira la zone où se situera la différence .</p>
+Si aucune image ({{cssxref("background-image")}}) ni couleur ({{cssxref("background-color")}}) d'arrière-plan n'est définie, cette propriété aura uniquement un effet visuel lorsque la bordure possède des régions transparentes (via {{cssxref("border-style")}} ou {{cssxref("border-image")}}). Dans les autres cas, la bordure recouvrira la zone où se situera la différence .
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs utilisant un mot-clé */
+```css
+/* Valeurs utilisant un mot-clé */
 background-clip: border-box;
 background-clip: padding-box;
 background-clip: content-box;
@@ -27,30 +28,29 @@ background-clip: text;
 background-clip: inherit;
 background-clip: initial;
 background-clip: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>border-box</code></dt>
- <dd>L'arrière-plan s'étend jusqu'à la limite externe de la bordure. L'arrière-plan sera situé sous la bordure en termes d'ordre z.</dd>
- <dt><code>padding-box</code></dt>
- <dd>Aucun arrière-plan n'est dessiné dans la boîte de bordure. L'arrière-plan s'étend jusqu'à la limite de la boîte de remplissage (<em>padding</em>).</dd>
- <dt><code>content-box</code></dt>
- <dd>L'arrière-plan est limité (rogné) à la boîte de contenu.</dd>
- <dt><code>text</code> {{experimental_inline}}</dt>
- <dd>L'arrière-plan est limité (rogné) au texte en premier plan.</dd>
-</dl>
+- `border-box`
+  - : L'arrière-plan s'étend jusqu'à la limite externe de la bordure. L'arrière-plan sera situé sous la bordure en termes d'ordre z.
+- `padding-box`
+  - : Aucun arrière-plan n'est dessiné dans la boîte de bordure. L'arrière-plan s'étend jusqu'à la limite de la boîte de remplissage (_padding_).
+- `content-box`
+  - : L'arrière-plan est limité (rogné) à la boîte de contenu.
+- `text` {{experimental_inline}}
+  - : L'arrière-plan est limité (rogné) au texte en premier plan.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
  border: 10px navy;
  border-style: dotted double;
  margin: 1em;
@@ -76,72 +76,53 @@ background-clip: unset;
   background-clip: text;
   color: rgba(0,0,0,.2);
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="border-box"&gt;
+```html
+<p class="border-box">
   L'arrière-plan s'étend sous la bordure.
-&lt;/p&gt;
-&lt;p class="padding-box"&gt;
+</p>
+<p class="padding-box">
   L'arrière-plan s'étend jusqu'avant la
   bordure.
-&lt;/p&gt;
-&lt;p class="content-box"&gt;
+</p>
+<p class="content-box">
   L'arrière-plan s'arrête à la boîte de
   contenu.
-&lt;/p&gt;
-&lt;p class="text"&gt;
+</p>
+<p class="text">
   L'arrière-plan se limite au texte au
   premier-plan.
-&lt;/p&gt;
-</pre>
+</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', 600, 580)}}</p>
+{{EmbedLiveSample('Exemples', 600, 580)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-background-clip', 'background-clip')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Backgrounds', '#background-clip', 'background-clip')}}</td>
-   <td>{{Spec2('CSS4 Backgrounds')}}</td>
-   <td>Ajout de la valeur <code>text</code>.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                                     | Commentaires               |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------- |
+| {{SpecName('CSS3 Backgrounds', '#the-background-clip', 'background-clip')}} | {{Spec2('CSS3 Backgrounds')}} | Définition initiale.       |
+| {{SpecName('CSS4 Backgrounds', '#background-clip', 'background-clip')}}     | {{Spec2('CSS4 Backgrounds')}} | Ajout de la valeur `text`. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.background-clip")}}</p>
+{{Compat("css.properties.background-clip")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("clip-path")}}</li>
- <li>Les propriétés relatives à l'arrière-plan :
-  <ul>
-   <li>{{cssxref("background")}}</li>
-   <li>{{cssxref("background-color")}}</li>
-   <li>{{cssxref("background-image")}}</li>
-   <li>{{cssxref("background-origin")}}</li>
-  </ul>
- </li>
- <li><a href="/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte">Le modèle de boîtes CSS</a></li>
-</ul>
+- {{cssxref("clip-path")}}
+- Les propriétés relatives à l'arrière-plan :
+
+  - {{cssxref("background")}}
+  - {{cssxref("background-color")}}
+  - {{cssxref("background-image")}}
+  - {{cssxref("background-origin")}}
+
+- [Le modèle de boîtes CSS](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte)

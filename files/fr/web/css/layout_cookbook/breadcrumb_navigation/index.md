@@ -7,42 +7,38 @@ tags:
 translation_of: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 original_slug: Web/CSS/Layout_cookbook/Navigation_Breadcrumb
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La navigation avec un fil d'Ariane (<em>breadcrumb</em>) permet à un utilisateur de comprendre l'emplacement auquel il se trouve au sein du site web en fournissant un fil d'Ariane permettant de revenir à la page de départ.</p>
+La navigation avec un fil d'Ariane (_breadcrumb_) permet à un utilisateur de comprendre l'emplacement auquel il se trouve au sein du site web en fournissant un fil d'Ariane permettant de revenir à la page de départ.
 
-<p><img alt="Links displayed inline with separators" src="breadcrumb-navigation.png"></p>
+![Links displayed inline with separators](breadcrumb-navigation.png)
 
-<h2 id="Spécifications_sommaires">Spécifications sommaires</h2>
+## Spécifications sommaires
 
-<p>Les différents éléments formant le chemin sont affichés sur une ligne avec un séparateur qui permet d'identifier la hiérarchie entre les pages.</p>
+Les différents éléments formant le chemin sont affichés sur une ligne avec un séparateur qui permet d'identifier la hiérarchie entre les pages.
 
-<h2 id="Exemple_appliqué">Exemple appliqué</h2>
+## Exemple appliqué
 
-<p>{{EmbedGHLiveSample("css-examples/css-cookbook/breadcrumb-navigation.html", '100%', 530)}}</p>
+{{EmbedGHLiveSample("css-examples/css-cookbook/breadcrumb-navigation.html", '100%', 530)}}
 
-<div class="note">
-<p><strong>Note :</strong> <a href="https://github.com/mdn/css-examples/blob/master/css-cookbook/breadcrumb-navigation--download.html">Télécharger cet exemple</a></p>
-</div>
+> **Note :** [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/breadcrumb-navigation--download.html)
 
-<h2 id="Choix_effectués">Choix effectués</h2>
+## Choix effectués
 
-<p>L'ensemble est organisé dans un conteneur flexible. Les séparateurs sont générés à partir de pseudo-éléments et le séparateur choisi ici peut être modifié à votre convenance.</p>
+L'ensemble est organisé dans un conteneur flexible. Les séparateurs sont générés à partir de pseudo-éléments et le séparateur choisi ici peut être modifié à votre convenance.
 
-<h2 id="Accessibilité">Accessibilité</h2>
+## Accessibilité
 
-<p>On utilise ici les attributs <code>aria-label</code> et <code>aria-current</code> afin d'aider les utilisateurs à comprendre cette navigation et l'emplacement de la page actuelle dans la structure. Pour plus d'informations, voir les liens ci-après.</p>
+On utilise ici les attributs `aria-label` et `aria-current` afin d'aider les utilisateurs à comprendre cette navigation et l'emplacement de la page actuelle dans la structure. Pour plus d'informations, voir les liens ci-après.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<h3 id="Boîtes_flexibles">Boîtes flexibles</h3>
+### Boîtes flexibles
 
-<p>{{Compat("css.properties.flex")}}</p>
+{{Compat("css.properties.flex")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout">Les boîtes flexibles CSS</a></li>
- <li><a href="https://www.w3.org/TR/WCAG20-TECHS/G65.html">Fournir un fil d'Ariane</a></li>
- <li><a href="https://tink.uk/using-the-aria-current-attribute/">Utiliser l'attribut <code>aria-current</code></a></li>
-</ul>
+- [Les boîtes flexibles CSS](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout)
+- [Fournir un fil d'Ariane](https://www.w3.org/TR/WCAG20-TECHS/G65.html)
+- [Utiliser l'attribut `aria-current`](https://tink.uk/using-the-aria-current-attribute/)

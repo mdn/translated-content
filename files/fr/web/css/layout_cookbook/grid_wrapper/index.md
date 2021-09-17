@@ -7,33 +7,32 @@ tags:
   - Recette
 translation_of: Web/CSS/Layout_cookbook/Grid_wrapper
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Ce motif permet d'aligner le contenu d'une grille au centre grâce à un élément qui l'enveloppe. On peut également choisir quels éléments aligner au centre et lesquels adosser aux côtés.</p>
+Ce motif permet d'aligner le contenu d'une grille au centre grâce à un élément qui l'enveloppe. On peut également choisir quels éléments aligner au centre et lesquels adosser aux côtés.
 
-<h2 id="Spécifications_sommaires">Spécifications sommaires</h2>
+## Spécifications sommaires
 
-<p>Les éléments placés sur la grille devraient pouvoir être alignés au centre et/ou sur les bords.</p>
+Les éléments placés sur la grille devraient pouvoir être alignés au centre et/ou sur les bords.
 
-<h2 id="Recette">Recette</h2>
+## Recette
 
-<p>{{EmbedGHLiveSample("css-examples/css-cookbook/grid-wrapper.html", '100%', 720)}}</p>
+{{EmbedGHLiveSample("css-examples/css-cookbook/grid-wrapper.html", '100%', 720)}}
 
-<div class="note">
-<p><strong>Note :</strong> <a href="https://github.com/mdn/css-examples/blob/master/css-cookbook/grid-wrapper--download.html">Télécharger cet exemple</a>.</p>
-</div>
+> **Note :** [Télécharger cet exemple](https://github.com/mdn/css-examples/blob/master/css-cookbook/grid-wrapper--download.html).
 
-<h2 id="Choix_effectués">Choix effectués</h2>
+## Choix effectués
 
-<p>Cette recette utilise la fonction {{cssxref("minmax()")}} afin de définir les tailles des pistes pour la propriété {{cssxref("grid-template-columns")}}.</p>
+Cette recette utilise la fonction {{cssxref("minmax()")}} afin de définir les tailles des pistes pour la propriété {{cssxref("grid-template-columns")}}.
 
-<p>Les deux colonnes extérieures ont une taille maximale de <code>1fr</code>, ce qui signifie qu'elles occuperont tout l'espace disponible dans le conteneur de grille.</p>
+Les deux colonnes extérieures ont une taille maximale de `1fr`, ce qui signifie qu'elles occuperont tout l'espace disponible dans le conteneur de grille.
 
-<h2 id="Méthodes_de_recours_ou_alternatives">Méthodes de recours ou alternatives</h2>
+## Méthodes de recours ou alternatives
 
-<p>Si cette recette est utilisée pour une page entière, il peut s'avérer utile de définir <code>max-width</code> et des marges horzontales avec <code>auto</code> afin que le contenu soit centré horizontalement :</p>
+Si cette recette est utilisée pour une page entière, il peut s'avérer utile de définir `max-width` et des marges horzontales avec `auto` afin que le contenu soit centré horizontalement :
 
-<pre class="brush: css">.grid {
+```css
+.grid {
   max-width: 1200px;
   margin: 0 auto; // on centre le conteneur en horizontal
   display: grid;
@@ -47,33 +46,34 @@ translation_of: Web/CSS/Layout_cookbook/Grid_wrapper
     max-width: none;
     margin: 0;
   }
-}</pre>
+}
+```
 
-<p>Pour qu'un élément soit isolé et colle au bord du <em>viewport</em>, on peut utiliser cette astuce de <a href="https://una.im/">Una Kravets</a> :</p>
+Pour qu'un élément soit isolé et colle au bord du _viewport_, on peut utiliser cette astuce de [Una Kravets](https://una.im/) :
 
-<pre class="brush: css">.item {
+```css
+.item {
   width: 100vw;
   margin-left: 50%;
   transform: translate3d(-50%, 0, 0);
-}</pre>
+}
+```
 
-<p>On a ainsi une méthode plus compatible mais qui ne permet pas d'aligner les éléments aussi facilement que sur une grille CSS.</p>
+On a ainsi une méthode plus compatible mais qui ne permet pas d'aligner les éléments aussi facilement que sur une grille CSS.
 
-<h2 id="Accessibilité">Accessibilité</h2>
+## Accessibilité
 
-<p>Bien que les grilles CSS nous permettent potentiellement de positionner n'importe où on le souhaite, il est important que l'ordre des éléments dans le document soit le même que l'ordre visuel, utilisé pour la navigation (voir <a href="/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">les grilles CSS et l'accessibilité</a> pour plus de détails).</p>
+Bien que les grilles CSS nous permettent potentiellement de positionner n'importe où on le souhaite, il est important que l'ordre des éléments dans le document soit le même que l'ordre visuel, utilisé pour la navigation (voir [les grilles CSS et l'accessibilité](/en-US/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility) pour plus de détails).
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<h3 id="grid-template-columns"><code>grid-template-columns</code></h3>
+### `grid-template-columns`
 
-<p>{{Compat("css.properties.grid-template-columns")}}</p>
+{{Compat("css.properties.grid-template-columns")}}
 
-<h2 id="See_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{Cssxref("grid-template-columns")}}</li>
- <li><a href="/fr/docs/Web/CSS/CSS_Grid_Layout">Les grilles CSS sur MDN</a></li>
- <li>Article :<a href="https://css-irl.info/more-flexibility-with-minmax/"> Les grilles CSS, plus de flexibilité avec <code>minmax()</code> (en anglais)</a></li>
- <li>Article : <a href="https://rachelandrew.co.uk/archives/2017/06/01/breaking-out-with-css-grid-explained/">Isoler des éléments sur une grille CSS (en anglais)</a></li>
-</ul>
+- {{Cssxref("grid-template-columns")}}
+- [Les grilles CSS sur MDN](/fr/docs/Web/CSS/CSS_Grid_Layout)
+- Article :[ Les grilles CSS, plus de flexibilité avec `minmax()` (en anglais)](https://css-irl.info/more-flexibility-with-minmax/)
+- Article : [Isoler des éléments sur une grille CSS (en anglais)](https://rachelandrew.co.uk/archives/2017/06/01/breaking-out-with-css-grid-explained/)

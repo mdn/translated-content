@@ -7,15 +7,16 @@ tags:
   - Reference
 translation_of: Web/CSS/resize
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>resize</code></strong> permet de contrôler le caractère redimensionnable d'un élément et notamment la direction dans laquelle celui-ci peut être redimensionné.</p>
+La propriété **`resize`** permet de contrôler le caractère redimensionnable d'un élément et notamment la direction dans laquelle celui-ci peut être redimensionné.
 
-<div>{{EmbedInteractiveExample("pages/css/resize.html")}}</div>
+{{EmbedInteractiveExample("pages/css/resize.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 resize: none;
 resize: both;
 resize: horizontal;
@@ -27,63 +28,63 @@ resize: inline;
 resize: inherit;
 resize: initial;
 resize: unset;
-</pre>
+```
 
-<p>La propriété <code>resize</code> peut être définie avec l'un des mots-clés suivants.</p>
+La propriété `resize` peut être définie avec l'un des mots-clés suivants.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>none</code></dt>
- <dd>L'élément n'offre aucune méthode à l'utilisateur pour que celui-ci le redimensionne.</dd>
- <dt><code>both</code></dt>
- <dd>L'élément affiche un mécanisme afin que l'utilisateur puisse le redimensionner, horizontalement et verticalement.</dd>
- <dt><code>horizontal</code></dt>
- <dd>L'élément affiche un mécanisme afin que l'utilisateur puisse le redimensionner horizontalement (pas de redimensionnement vertical).</dd>
- <dt><code>vertical</code></dt>
- <dd>L'élément affiche un mécanisme afin que l'utilisateur puisse le redimensionner verticalement (pas de redimensionnement horizontal).</dd>
- <dt><code>block</code> {{experimental_inline}}</dt>
- <dd>Selon les valeurs de {{cssxref("writing-mode")}} et {{cssxref("direction")}}, l'élément affiche un mécanisme pour que l'utilisateur puisse le redimensionner, horizontalement ou verticalement, dans la direction du bloc.</dd>
- <dt><code>inline</code> {{experimental_inline}}</dt>
- <dd>Selon les valeurs de {{cssxref("writing-mode")}} et {{cssxref("direction")}}, l'élément affiche un mécanisme pour que l'utilisateur puisse le redimensionner, horizontalement ou verticalement, dans la direction du flux en ligne.</dd>
-</dl>
+- `none`
+  - : L'élément n'offre aucune méthode à l'utilisateur pour que celui-ci le redimensionne.
+- `both`
+  - : L'élément affiche un mécanisme afin que l'utilisateur puisse le redimensionner, horizontalement et verticalement.
+- `horizontal`
+  - : L'élément affiche un mécanisme afin que l'utilisateur puisse le redimensionner horizontalement (pas de redimensionnement vertical).
+- `vertical`
+  - : L'élément affiche un mécanisme afin que l'utilisateur puisse le redimensionner verticalement (pas de redimensionnement horizontal).
+- `block` {{experimental_inline}}
+  - : Selon les valeurs de {{cssxref("writing-mode")}} et {{cssxref("direction")}}, l'élément affiche un mécanisme pour que l'utilisateur puisse le redimensionner, horizontalement ou verticalement, dans la direction du bloc.
+- `inline` {{experimental_inline}}
+  - : Selon les valeurs de {{cssxref("writing-mode")}} et {{cssxref("direction")}}, l'élément affiche un mécanisme pour que l'utilisateur puisse le redimensionner, horizontalement ou verticalement, dans la direction du flux en ligne.
 
-<div class="note">
-  <p><strong>Note :</strong> <code>resize</code> ne s'applique pas aux blocs dont la propriété {{cssxref("overflow")}} vaut <code>visible</code>.</p>
-</div>
+> **Note :** `resize` ne s'applique pas aux blocs dont la propriété {{cssxref("overflow")}} vaut `visible`.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Désactiver_le_redimensionnement_des_éléments_textarea">Désactiver le redimensionnement des éléments <code>textarea</code></h3>
+### Désactiver le redimensionnement des éléments `textarea`
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<p>Par défaut, les éléments {{HTMLElement("textarea")}} peuvent être redimensionnés. Ce comportement peut être modifié grâce à ce fragment CSS :</p>
+Par défaut, les éléments {{HTMLElement("textarea")}} peuvent être redimensionnés. Ce comportement peut être modifié grâce à ce fragment CSS :
 
-<pre class="brush: css">textarea.exemple {
+```css
+textarea.exemple {
   resize: none;
 }
-</pre>
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;textarea class="exemple"&gt;Saisir du texte ici.&lt;/textarea&gt;</pre>
+```html
+<textarea class="exemple">Saisir du texte ici.</textarea>
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Désactiver_le_redimensionnement_des_éléments_textarea","200","100")}}</p>
+{{EmbedLiveSample("Désactiver_le_redimensionnement_des_éléments_textarea","200","100")}}
 
-<h3 id="Utiliser_resize_sur_des_éléments_quelconques">Utiliser <code>resize</code> sur des éléments quelconques</h3>
+### Utiliser `resize` sur des éléments quelconques
 
-<p>La propriété <code>resize</code> peut être utilisée afin de pouvoir redimensionner n'importe quel élément. Dans l'exemple qui suit, on a une boîte {{HTMLElement("div")}} redimensionnable qui contient un paragraphe (({{HTMLElement("p")}}) lui-même redimensionnable) :</p>
+La propriété `resize` peut être utilisée afin de pouvoir redimensionner n'importe quel élément. Dans l'exemple qui suit, on a une boîte {{HTMLElement("div")}} redimensionnable qui contient un paragraphe (({{HTMLElement("p")}}) lui-même redimensionnable) :
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.redimensionnable {
+```css
+.redimensionnable {
   resize: both;
   overflow: scroll;
   border: 1px solid black;
@@ -98,54 +99,36 @@ p {
   height: 200px;
   width: 200px;
 }
-</pre>
+```
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="redimensionnable"&gt;
-  &lt;p class="redimensionnable"&gt;
+```html
+<div class="redimensionnable">
+  <p class="redimensionnable">
     Ce paragraphe peut être redimensionné car la propriété
     CSS resize vaut 'both' sur cet élément.
-  &lt;/p&gt;
-&lt;/div&gt;
-</pre>
+  </p>
+</div>
+```
 
-<h4 id="Résultat_2">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Utiliser_resize_sur_des_éléments_quelconques","450","450")}}</p>
+{{EmbedLiveSample("Utiliser_resize_sur_des_éléments_quelconques","450","450")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Logical Properties', '#resize', 'resize')}}</td>
-   <td>{{Spec2('CSS Logical Properties')}}</td>
-   <td>Ajout des valeurs <code>block</code> et <code>inline</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Basic UI', '#resize', 'resize')}}</td>
-   <td>{{Spec2('CSS3 Basic UI')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | Statut                                           | Commentaires                           |
+| -------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------------------------- |
+| {{SpecName('CSS Logical Properties', '#resize', 'resize')}} | {{Spec2('CSS Logical Properties')}} | Ajout des valeurs `block` et `inline`. |
+| {{SpecName('CSS3 Basic UI', '#resize', 'resize')}}             | {{Spec2('CSS3 Basic UI')}}             | Définition initiale.                   |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.resize")}}</p>
+{{Compat("css.properties.resize")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTMLElement("textarea")}}</li>
-</ul>
+- {{HTMLElement("textarea")}}

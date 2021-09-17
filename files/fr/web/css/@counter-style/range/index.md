@@ -7,26 +7,25 @@ tags:
   - Reference
 translation_of: Web/CSS/@counter-style/range
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Le descripteur <code><strong>range</strong></code>, associé à la règle @ {{cssxref("@counter-style")}}, permet de définir l'intervalle de valeurs pris en compte par le compteur personnalisé. Si la valeur du compteur de la liste est en dehors de cet intervalle, ce sera la mise en forme de secours qui sera utilisée pour représenter le marqueur du compteur. La valeur de <code>range</code> peut être <code>auto</code> ou une liste de majorants/minorants, séparés par des virgules.</p>
+Le descripteur **`range`**, associé à la règle @ {{cssxref("@counter-style")}}, permet de définir l'intervalle de valeurs pris en compte par le compteur personnalisé. Si la valeur du compteur de la liste est en dehors de cet intervalle, ce sera la mise en forme de secours qui sera utilisée pour représenter le marqueur du compteur. La valeur de `range` peut être `auto` ou une liste de majorants/minorants, séparés par des virgules.
 
-<p>Si <code>range</code> vaut <code>auto</code> :</p>
+Si `range` vaut `auto` :
 
-<ul>
- <li>Lorsque le descripteur <code>system</code> vaut <code>cyclic</code>, <code>numeric</code> ou <code>fixed</code>, l'intervalle considéré sera entre moins l'infini et plus l'infini.</li>
- <li>Si <code>system</code> vaut <code>alphabetic</code> ou <code>symbolic</code>, l'intervalle considéré s'étendra entre 1 et l'infini.</li>
- <li>Si <code>system</code> vaut <code>additive</code>, l'intervalle considéré ira de 0 à l'infini.</li>
- <li>Enfin, lorsque <code>system</code> vaut <code>extends</code>, l'intervalle correspond à ce qui est produit par le système étendu avec cette valeur.</li>
-</ul>
+- Lorsque le descripteur `system` vaut `cyclic`, `numeric` ou `fixed`, l'intervalle considéré sera entre moins l'infini et plus l'infini.
+- Si `system` vaut `alphabetic` ou `symbolic`, l'intervalle considéré s'étendra entre 1 et l'infini.
+- Si `system` vaut `additive`, l'intervalle considéré ira de 0 à l'infini.
+- Enfin, lorsque `system` vaut `extends`, l'intervalle correspond à ce qui est produit par le système étendu avec cette valeur.
 
-<p>Si <code>range</code> est défini par des entiers, on peut utiliser le mot-clé <code>infinite</code> pour indiquer l'infini. Lorsque <code>infinite</code> est indiqué comme la première valeur d'un intervalle, il est interprété comme l'infini négatif, sinon comme l'infini positif.</p>
+Si `range` est défini par des entiers, on peut utiliser le mot-clé `infinite` pour indiquer l'infini. Lorsque `infinite` est indiqué comme la première valeur d'un intervalle, il est interprété comme l'infini négatif, sinon comme l'infini positif.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css">/* Valeur avec un mot-clé */
+```css
+/* Valeur avec un mot-clé */
 range: auto;
 
 /* Valeurs encadrant un intervalle */
@@ -38,26 +37,25 @@ range: infinite infinite;
 /* Valeurs indiquant plusieurs intervalles */
 range: 2 5, 8 10;
 range: infinite 6, 10 infinite;
-</pre>
+```
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>L'intervalle dépend du système choisi pour le compteur comme indiqué ci-avant.</dd>
- <dt><code>[ [ | infinite ]{2} ]#</code></dt>
- <dd>Une liste d'intervalles séparées par des virgule. Pour chaque intervalle, la première valeur représente le minorant de l'intervalle inférieure et la deuxième représente le majorant. L'intervalle est un segment et inclue donc le minorant et le majorant. Si le mot-clé <code>infinite</code> est utilisé en premier, il indique l'infini négatif comme borne inférieure et s'il est utilisé comme seconde valeur pour l'intervalle, il correspondra à l'infini positif (utilisé alors comme borne supérieure). L'intervalle sur lequel s'applique le compteur défini correspond à l'union des intervalles qui composent cette liste. Si un minorant indiqué est supérieur à un majorant, le descripteur sera considéré comme invalide et sera ignoré.</dd>
-</dl>
+- `auto`
+  - : L'intervalle dépend du système choisi pour le compteur comme indiqué ci-avant.
+- `[ [ | infinite ]{2} ]#`
+  - : Une liste d'intervalles séparées par des virgule. Pour chaque intervalle, la première valeur représente le minorant de l'intervalle inférieure et la deuxième représente le majorant. L'intervalle est un segment et inclue donc le minorant et le majorant. Si le mot-clé `infinite` est utilisé en premier, il indique l'infini négatif comme borne inférieure et s'il est utilisé comme seconde valeur pour l'intervalle, il correspondra à l'infini positif (utilisé alors comme borne supérieure). L'intervalle sur lequel s'applique le compteur défini correspond à l'union des intervalles qui composent cette liste. Si un minorant indiqué est supérieur à un majorant, le descripteur sera considéré comme invalide et sera ignoré.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">@counter-style range-multi-example {
+```css
+@counter-style range-multi-example {
   system: cyclic;
   symbols: "\25A0" "\25A1";
   range: 2 4, 7 9;
@@ -65,55 +63,43 @@ range: infinite 6, 10 infinite;
 
 .exemple {
   list-style: range-multi-example;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ul class="exemple"&gt;
-  &lt;li&gt;Un&lt;/li&gt;
-  &lt;li&gt;Deux&lt;/li&gt;
-  &lt;li&gt;Trois&lt;/li&gt;
-  &lt;li&gt;Quatre&lt;/li&gt;
-  &lt;li&gt;Cinq&lt;/li&gt;
-  &lt;li&gt;Six&lt;/li&gt;
-  &lt;li&gt;Sept&lt;/li&gt;
-  &lt;li&gt;Huit&lt;/li&gt;
-  &lt;li&gt;Neuf&lt;/li&gt;
-  &lt;li&gt;Dix&lt;/li&gt;
-&lt;/ul&gt;</pre>
-
-<p>Résultat</p>
-
-<p>{{EmbedLiveSample("Exemples")}}</p>
-
-<h2 id="Spécifications">Spécifications</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Counter Styles", "#counter-style-range", "range")}}</td>
-   <td>{{Spec2('CSS3 Counter Styles')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<p>{{Compat("css.at-rules.counter-style.range")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>{{cssxref("list-style")}},</li>
- <li>{{cssxref("list-style-image")}},</li>
- <li>{{cssxref("list-style-position")}},</li>
- <li>{{cssxref("symbols", "symbols()")}}, la notation fonctionnelle qui permet de créer des styles de compteur anonymes.</li>
+```html
+<ul class="exemple">
+  <li>Un</li>
+  <li>Deux</li>
+  <li>Trois</li>
+  <li>Quatre</li>
+  <li>Cinq</li>
+  <li>Six</li>
+  <li>Sept</li>
+  <li>Huit</li>
+  <li>Neuf</li>
+  <li>Dix</li>
 </ul>
+```
+
+Résultat
+
+{{EmbedLiveSample("Exemples")}}
+
+## Spécifications
+
+| Spécification                                                                                | État                                         | Commentaires         |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
+| {{SpecName("CSS3 Counter Styles", "#counter-style-range", "range")}} | {{Spec2('CSS3 Counter Styles')}} | Définition initiale. |
+
+## Compatibilité des navigateurs
+
+{{Compat("css.at-rules.counter-style.range")}}
+
+## Voir aussi
+
+- {{cssxref("list-style")}},
+- {{cssxref("list-style-image")}},
+- {{cssxref("list-style-position")}},
+- {{cssxref("symbols", "symbols()")}}, la notation fonctionnelle qui permet de créer des styles de compteur anonymes.

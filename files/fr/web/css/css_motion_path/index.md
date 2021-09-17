@@ -10,42 +10,27 @@ tags:
 translation_of: Web/CSS/CSS_Motion_Path
 original_slug: Web/CSS/Motion_Path
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p><em><strong>Motion Path</strong></em> est un module de la spécification CSS qui permet aux auteurs d'animer des objets graphiques le long d'une ligne appelée <em>chemin</em>.</p>
+**_Motion Path_** est un module de la spécification CSS qui permet aux auteurs d'animer des objets graphiques le long d'une ligne appelée _chemin_.
 
-<h2 id="Référence">Référence</h2>
+## Référence
 
-<h3 id="Propriétés">Propriétés</h3>
+### Propriétés
 
-<ul>
- <li>{{cssxref("offset")}}</li>
- <li>{{cssxref("offset-distance")}}</li>
- <li>{{cssxref("offset-path")}}</li>
- <li>{{cssxref("offset-rotate")}}</li>
-</ul>
+- {{cssxref("offset")}}
+- {{cssxref("offset-distance")}}
+- {{cssxref("offset-path")}}
+- {{cssxref("offset-rotate")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Spécification</th>
-   <th>État</th>
-   <th>Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Motion Path Level 1')}}</td>
-   <td>{{Spec2('Motion Path Level 1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                    | État                                         | Commentaires         |
+| ------------------------------------------------ | -------------------------------------------- | -------------------- |
+| {{SpecName('Motion Path Level 1')}} | {{Spec2('Motion Path Level 1')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<h3 id="offset"><code>offset</code></h3>
+### `offset`
 
-<p>{{Compat("css.properties.offset")}}</p>
+{{Compat("css.properties.offset")}}

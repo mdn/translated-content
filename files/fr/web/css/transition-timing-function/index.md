@@ -7,120 +7,116 @@ tags:
   - Reference
 translation_of: Web/CSS/transition-timing-function
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>transition-timing-function</code></strong> décrit la façon dont les valeurs intermédiaires des propriétés CSS affectées par un <a href="/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">effet de transition</a> sont calculées. Ceci permet donc de définir une courbe d'accelération, de manière à ce que la vitesse de la transition varie au cours de sa durée.</p>
+La propriété **`transition-timing-function`** décrit la façon dont les valeurs intermédiaires des propriétés CSS affectées par un [effet de transition](/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) sont calculées. Ceci permet donc de définir une courbe d'accelération, de manière à ce que la vitesse de la transition varie au cours de sa durée.
 
-<div>{{EmbedInteractiveExample("pages/css/transition-timing-function.html")}}</div>
+{{EmbedInteractiveExample("pages/css/transition-timing-function.html")}}
 
-<p>Cette courbe d'accelération est définie en utilisant une {{cssxref("&lt;timing-function&gt;")}} pour chacune des propriétés à animer.</p>
+Cette courbe d'accelération est définie en utilisant une {{cssxref("&lt;timing-function&gt;")}} pour chacune des propriétés à animer.
 
-<p>Il est possible de définir plusieurs fonctions de temporisation dans une même déclaration ; chacune sera appliquée à la propriété correspondante listée avec la propriété {{cssxref("transition-property")}}, qui agit comme liste maîtresse :</p>
+Il est possible de définir plusieurs fonctions de temporisation dans une même déclaration ; chacune sera appliquée à la propriété correspondante listée avec la propriété {{cssxref("transition-property")}}, qui agit comme liste maîtresse :
 
-<ul>
- <li>S'il y a moins de fonctions définies que d'éléments dans la liste, les valeurs manquantes sont remplacées par la valeur par défaut (<code>ease</code>).</li>
- <li>S'il y a trop de fonctions de temporisation, la liste est simplement tronquée à la bonne dimension.</li>
-</ul>
+- S'il y a moins de fonctions définies que d'éléments dans la liste, les valeurs manquantes sont remplacées par la valeur par défaut (`ease`).
+- S'il y a trop de fonctions de temporisation, la liste est simplement tronquée à la bonne dimension.
 
-<p>Dans les deux cas, la déclaration CSS reste valide.</p>
+Dans les deux cas, la déclaration CSS reste valide.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">/* Valeurs avec un mot-clé */
-transition-timing-function: ease;
-transition-timing-function: ease-in;
-transition-timing-function: ease-out;
-transition-timing-function: ease-in-out;
-transition-timing-function: linear;
-transition-timing-function: step-start;
-transition-timing-function: step-end;
+    /* Valeurs avec un mot-clé */
+    transition-timing-function: ease;
+    transition-timing-function: ease-in;
+    transition-timing-function: ease-out;
+    transition-timing-function: ease-in-out;
+    transition-timing-function: linear;
+    transition-timing-function: step-start;
+    transition-timing-function: step-end;
 
-/* Valeurs fonctionnelles */
-transition-timing-function: steps(4, jump-end);
-transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
+    /* Valeurs fonctionnelles */
+    transition-timing-function: steps(4, jump-end);
+    transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1);
 
-/* Valeurs avec une fonction en escalier */
-transition-timing-function: steps(4, jump-start);
-transition-timing-function: steps(10, jump-end);
-transition-timing-function: steps(20, jump-none);
-transition-timing-function: steps(5, jump-both);
-transition-timing-function: steps(6, start);
-transition-timing-function: steps(8, end);
+    /* Valeurs avec une fonction en escalier */
+    transition-timing-function: steps(4, jump-start);
+    transition-timing-function: steps(10, jump-end);
+    transition-timing-function: steps(20, jump-none);
+    transition-timing-function: steps(5, jump-both);
+    transition-timing-function: steps(6, start);
+    transition-timing-function: steps(8, end);
 
-/* Utilisation de plusieurs fonctions */
-transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
+    /* Utilisation de plusieurs fonctions */
+    transition-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
 
-/* Valeurs globales */
-transition-timing-function: inherit;
-transition-timing-function: initial;
-transition-timing-function: unset;
-</pre>
+    /* Valeurs globales */
+    transition-timing-function: inherit;
+    transition-timing-function: initial;
+    transition-timing-function: unset;
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;timing-function&gt;</code></dt>
- <dd>Chaque valeur {{cssxref("&lt;timing-function&gt;")}} représente une fonction temporelle à rattacher à chaque propriété de la transition définies grâce à {{cssxref("transition-property")}}.
- <p>Les valeurs avec des mots-clés (<code>ease</code>, <code>linear</code>, <code>ease-in-out</code>, etc.) correspondent à une courbe de Bézier cubique fixe avec quatre valeurs prédéfinies; La fonction <code>cubic-bezier()</code> permet de paramétrer une courbe spécifique. Les fonctions en escalier permettent de diviser la transition en intervalles de même durée.</p>
+- `<timing-function>`
 
- <dl>
-  <dt><code>ease</code></dt>
-  <dd>Correspond à <code>cubic-bezier(0.25, 0.1, 0.25, 1.0)</code> : c'est la valeur par défaut, la vitesse de la transition augmente au milieu de celle-ci puis ralentit à la fin.</dd>
-  <dt><code>linear</code></dt>
-  <dd>Correspond à <code>cubic-bezier(0.0, 0.0, 1.0, 1.0)</code> : la transition s'effectue à vitesse constante.</dd>
-  <dt><code>ease-in</code></dt>
-  <dd>Correspond à <code>cubic-bezier(0.42, 0, 1.0, 1.0)</code> : la transition commence doucement puis la vitesse augmente jusqu'à ce qu'elle soit terminée.</dd>
-  <dt><code>ease-out</code></dt>
-  <dd>Correspond à <code>cubic-bezier(0, 0, 0.58, 1.0)</code> : la transition commence rapidement puis ralentit jusqu'à la fin.</dd>
-  <dt><code>ease-in-out</code></dt>
-  <dd>Correspond à <code>cubic-bezier(0.42, 0, 0.58, 1.0)</code> : la transition commence lentement, accèlere puis ralentit à nouveau avant la fin.</dd>
-  <dt><code>cubic-bezier(p1, p2, p3, p4)</code></dt>
-  <dd>Une courbe de Bézier paramétrable à l'aide de quatre coefficient compris entre 0 et 1.</dd>
-  <dt><code>steps( n, &lt;jumpterm&gt;)</code></dt>
-  <dd>La transition s'effectue selon <em>n</em> étapes de durées égales. Ainsi, si n vaut 5, la transition se composera de cinq paliers. Selon la valeur du paramètre <em>jumpterm</em>, ces paliers se trouveront entre 0%, 20%, 40%, 60% et 80%, ou entre 20%, 40%, 60%, 80% et 100%, or ou inclueront également 0% et 100% (soit 0%, 25%, 50%, 75% et 100%) :
-  <dl>
-   <dt><code>jump-start</code></dt>
-   <dd>La fonction est continue à gauche et le premier saut se produit au début de la transition.</dd>
-   <dt><code>jump-end</code></dt>
-   <dd>La fonction est continue à droite et le dernier saut se produit à la fin de la transition.</dd>
-   <dt><code>jump-none</code></dt>
-   <dd>Il n'y a aucune rupture au début ou à la fin. Il y a un palier constant après 0% et un palier constant avant 100% (chacun durant 1/n).</dd>
-   <dt><code>jump-both</code></dt>
-   <dd>Une pause est présente aux niveaux 0% et 100%, ce qui ajoute un niveau pendant la transition.</dd>
-   <dt><code>start</code></dt>
-   <dd>Identique à <code>jump-start.</code></dd>
-   <dt><code>end</code></dt>
-   <dd>Identique à <code>jump-end.</code></dd>
-  </dl>
-  </dd>
-  <dt><code>step-start</code></dt>
-  <dd>Synonyme de <code>steps(1, jump-start)</code></dd>
-  <dt><code>step-end</code></dt>
-  <dd>Synonyme de <code>steps(1, jump-end)</code></dd>
- </dl>
- </dd>
-</dl>
+  - : Chaque valeur {{cssxref("&lt;timing-function&gt;")}} représente une fonction temporelle à rattacher à chaque propriété de la transition définies grâce à {{cssxref("transition-property")}}.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+    Les valeurs avec des mots-clés (`ease`, `linear`, `ease-in-out`, etc.) correspondent à une courbe de Bézier cubique fixe avec quatre valeurs prédéfinies; La fonction `cubic-bezier()` permet de paramétrer une courbe spécifique. Les fonctions en escalier permettent de diviser la transition en intervalles de même durée.
+
+    - `ease`
+      - : Correspond à `cubic-bezier(0.25, 0.1, 0.25, 1.0)` : c'est la valeur par défaut, la vitesse de la transition augmente au milieu de celle-ci puis ralentit à la fin.
+    - `linear`
+      - : Correspond à `cubic-bezier(0.0, 0.0, 1.0, 1.0)` : la transition s'effectue à vitesse constante.
+    - `ease-in`
+      - : Correspond à `cubic-bezier(0.42, 0, 1.0, 1.0)` : la transition commence doucement puis la vitesse augmente jusqu'à ce qu'elle soit terminée.
+    - `ease-out`
+      - : Correspond à `cubic-bezier(0, 0, 0.58, 1.0)` : la transition commence rapidement puis ralentit jusqu'à la fin.
+    - `ease-in-out`
+      - : Correspond à `cubic-bezier(0.42, 0, 0.58, 1.0)` : la transition commence lentement, accèlere puis ralentit à nouveau avant la fin.
+    - `cubic-bezier(p1, p2, p3, p4)`
+      - : Une courbe de Bézier paramétrable à l'aide de quatre coefficient compris entre 0 et 1.
+    - `steps( n, <jumpterm>)`
+
+      - : La transition s'effectue selon _n_ étapes de durées égales. Ainsi, si n vaut 5, la transition se composera de cinq paliers. Selon la valeur du paramètre _jumpterm_, ces paliers se trouveront entre 0%, 20%, 40%, 60% et 80%, ou entre 20%, 40%, 60%, 80% et 100%, or ou inclueront également 0% et 100% (soit 0%, 25%, 50%, 75% et 100%) :
+
+        - `jump-start`
+          - : La fonction est continue à gauche et le premier saut se produit au début de la transition.
+        - `jump-end`
+          - : La fonction est continue à droite et le dernier saut se produit à la fin de la transition.
+        - `jump-none`
+          - : Il n'y a aucune rupture au début ou à la fin. Il y a un palier constant après 0% et un palier constant avant 100% (chacun durant 1/n).
+        - `jump-both`
+          - : Une pause est présente aux niveaux 0% et 100%, ce qui ajoute un niveau pendant la transition.
+        - `start`
+          - : Identique à `jump-start.`
+        - `end`
+          - : Identique à `jump-end.`
+
+    - `step-start`
+      - : Synonyme de `steps(1, jump-start)`
+    - `step-end`
+      - : Synonyme de `steps(1, jump-end)`
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<div>
-<h3 id="Courbes_de_Bézier_cubiques">Courbes de Bézier cubiques</h3>
+### Courbes de Bézier cubiques
 
-<pre class="brush:html hidden">&lt;div class="parent"&gt;
-  &lt;div class="ease"&gt;ease&lt;/div&gt;
-  &lt;div class="easein"&gt;ease-in&lt;/div&gt;
-  &lt;div class="easeout"&gt;ease-out&lt;/div&gt;
-  &lt;div class="easeinout"&gt;ease-in-out&lt;/div&gt;
-  &lt;div class="linear"&gt;linear&lt;/div&gt;
-  &lt;div class="cb"&gt;cubic-bezier(0.2,-2,0.8,2)&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html hidden
+<div class="parent">
+  <div class="ease">ease</div>
+  <div class="easein">ease-in</div>
+  <div class="easeout">ease-out</div>
+  <div class="easeinout">ease-in-out</div>
+  <div class="linear">linear</div>
+  <div class="cb">cubic-bezier(0.2,-2,0.8,2)</div>
+</div>
+```
 
-<pre class="brush:css hidden">.parent {}
-.parent &gt; div[class] {
+```css hidden
+.parent {}
+.parent > div[class] {
     width: 12em;
     min-width: 12em;
     margin-bottom: 4px;
@@ -130,7 +126,7 @@ transition-timing-function: unset;
     transition-property: all;
     transition-duration: 7s;
 }
-.parent &gt; div.box1{
+.parent > div.box1{
     width: 90vw;
     min-width: 24em;
     background-color: magenta;
@@ -139,19 +135,21 @@ transition-timing-function: unset;
     transition-property: all;
     transition-duration: 2s;
 }
-</pre>
+```
 
-<pre class="brush:js hidden">function updateTransition() {
-  var els = document.querySelectorAll(".parent &gt; div[class]");
-  for(var c = els.length, i = 0; i &lt; c; i++) {
+```js hidden
+function updateTransition() {
+  var els = document.querySelectorAll(".parent > div[class]");
+  for(var c = els.length, i = 0; i < c; i++) {
      els[i].classList.toggle("box1");
   }
 }
 
 var intervalID = window.setInterval(updateTransition, 10000);
-</pre>
+```
 
-<pre class="brush: css">.ease {
+```css
+.ease {
    transition-timing-function: ease;
 }
 .easein {
@@ -168,25 +166,27 @@ var intervalID = window.setInterval(updateTransition, 10000);
 }
 .cb {
    transition-timing-function: cubic-bezier(0.2,-2,0.8,2);
-}</pre>
+}
+```
 
-<div>{{EmbedLiveSample("Courbes_de_Bézier_cubiques")}}</div>
+{{EmbedLiveSample("Courbes_de_Bézier_cubiques")}}
+
+### Fonctions en créneaux
+
+```html hidden
+<div class="parent">
+  <div class="jump-start">jump-start</div>
+  <div class="jump-end">jump-end</div>
+  <div class="jump-both">jump-both</div>
+  <div class="jump-none">jump-none</div>
+  <div class="step-start">step-start</div>
+  <div class="step-end">step-end</div>
 </div>
+```
 
-<div>
-<h3 id="Fonctions_en_créneaux">Fonctions en créneaux</h3>
-
-<pre class="brush:html hidden">&lt;div class="parent"&gt;
-  &lt;div class="jump-start"&gt;jump-start&lt;/div&gt;
-  &lt;div class="jump-end"&gt;jump-end&lt;/div&gt;
-  &lt;div class="jump-both"&gt;jump-both&lt;/div&gt;
-  &lt;div class="jump-none"&gt;jump-none&lt;/div&gt;
-  &lt;div class="step-start"&gt;step-start&lt;/div&gt;
-  &lt;div class="step-end"&gt;step-end&lt;/div&gt;
-&lt;/div&gt;</pre>
-
-<pre class="brush:css hidden">.parent {}
-.parent &gt; div[class] {
+```css hidden
+.parent {}
+.parent > div[class] {
     width: 12em;
     min-width: 12em;
     margin-bottom: 4px;
@@ -196,7 +196,7 @@ var intervalID = window.setInterval(updateTransition, 10000);
     transition-property: all;
     transition-duration:7s;
 }
-.parent &gt; div.box1{
+.parent > div.box1{
     width: 90vw;
     min-width: 24em;
     background-color: magenta;
@@ -205,19 +205,21 @@ var intervalID = window.setInterval(updateTransition, 10000);
     transition-property: all;
     transition-duration:2s;
 }
-</pre>
+```
 
-<pre class="brush:js hidden">function updateTransition() {
-  var els = document.querySelectorAll(".parent &gt; div[class]");
-  for(var c = els.length, i = 0; i &lt; c; i++) {
+```js hidden
+function updateTransition() {
+  var els = document.querySelectorAll(".parent > div[class]");
+  for(var c = els.length, i = 0; i < c; i++) {
      els[i].classList.toggle("box1");
   }
 }
 
 var intervalID = window.setInterval(updateTransition, 10000);
-</pre>
+```
 
-<pre class="brush: css">.jump-start {
+```css
+.jump-start {
    transition-timing-function: steps(5, jump-start);
 }
 .jump-end {
@@ -234,45 +236,30 @@ var intervalID = window.setInterval(updateTransition, 10000);
 }
 .step-end {
    transition-timing-function: step-end;
-}</pre>
+}
+```
 
-<div>{{EmbedLiveSample("Fonctions_en_créneaux")}}</div>
-</div>
+{{EmbedLiveSample("Fonctions_en_créneaux")}}
 
-<h2 id="Accessibilité">Accessibilité</h2>
+## Accessibilité
 
-<p>Certaines animations permettent de guider les utilisateurs vers les actions possibles et utiles, d'illustrer les relations qui existent entre les éléments d'interface et d'informer les utilisateurs quant aux actions qui se sont produites. Les animations réduisent ainsi la charge cognitive et améliorent la perception du changement.</p>
+Certaines animations permettent de guider les utilisateurs vers les actions possibles et utiles, d'illustrer les relations qui existent entre les éléments d'interface et d'informer les utilisateurs quant aux actions qui se sont produites. Les animations réduisent ainsi la charge cognitive et améliorent la perception du changement.
 
-<p>Toutefois, certaines animations s'avèrent problématiques pour les personnes souffrant de troubles cognitifs, d'épilepsie ou autre. Pour cela, on prévoira d'intégrer un mécanisme qui permette de suspendre ou de désactiver l'animation. De même, on pourra tirer parti de <a href="/fr/docs/Web/CSS/@media/prefers-reduced-motion">la requête média sur la réduction de mouvements</a> afin de créer une expérience complémentaire pour les personnes ayant exprimé leur souhait d'absence d'animation.</p>
+Toutefois, certaines animations s'avèrent problématiques pour les personnes souffrant de troubles cognitifs, d'épilepsie ou autre. Pour cela, on prévoira d'intégrer un mécanisme qui permette de suspendre ou de désactiver l'animation. De même, on pourra tirer parti de [la requête média sur la réduction de mouvements](/fr/docs/Web/CSS/@media/prefers-reduced-motion) afin de créer une expérience complémentaire pour les personnes ayant exprimé leur souhait d'absence d'animation.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État/th&gt;</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#transition-timing-function-property', 'transition-timing-function')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                            | État/th>                                 | Commentaires        |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- |
+| {{SpecName('CSS3 Transitions', '#transition-timing-function-property', 'transition-timing-function')}} | {{Spec2('CSS3 Transitions')}} | Définition initiale |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.transition-timing-function")}}</p>
+{{Compat("css.properties.transition-timing-function")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Transitions/Utiliser_transitions_CSS" title="en/CSS/CSS transitions">Utiliser les transitions CSS</a></li>
- <li>{{domxref("TransitionEvent")}}</li>
-</ul>
+- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_Transitions/Utiliser_transitions_CSS "en/CSS/CSS transitions")
+- {{domxref("TransitionEvent")}}

@@ -7,11 +7,12 @@ tags:
   - Reference
 translation_of: Web/CSS/user-select
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <code><strong>user-select</strong></code> permet de contrôler l'opération de <a href="/fr/docs/Web/API/Selection">sélection</a>. Cela n'a aucun effet sur le contenu qui est chargé dans les éléments de l'interface ({{Glossary("Chrome", "chrome")}}), sauf pour les boîtes de texte.</p>
+La propriété **`user-select`** permet de contrôler l'opération de [sélection](/fr/docs/Web/API/Selection). Cela n'a aucun effet sur le contenu qui est chargé dans les éléments de l'interface ({{Glossary("Chrome", "chrome")}}), sauf pour les boîtes de texte.
 
-<pre class="brush:css">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 user-select: none;
 user-select: auto;
 user-select: text;
@@ -37,47 +38,44 @@ user-select: unset;
 -ms-user-select: none;
 -ms-user-select: text;
 -ms-user-select: element;
-</pre>
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<dl>
- <dt><code>none</code></dt>
- <dd>On ne pourra pas sélectionner le texte de l'élément et celui de ses descendants. Toutefois, l'objet {{domxref("Selection")}} pourra contenir ces éléments. À partir de Firefox 21, <code>none</code> se comporte comme <code>-moz-none</code> et la sélection peut donc être réactivée sur les éléments fils avec <code>-moz-user-select:text</code>.</dd>
- <dt><code>auto</code></dt>
- <dd>
- <p>Le texte sera sélectionné avec les propriétés par défaut appliquées par l'agent utilisateur. La valeur calculée est déterminée de la façon suivante :</p>
+- `none`
+  - : On ne pourra pas sélectionner le texte de l'élément et celui de ses descendants. Toutefois, l'objet {{domxref("Selection")}} pourra contenir ces éléments. À partir de Firefox 21, `none` se comporte comme `-moz-none` et la sélection peut donc être réactivée sur les éléments fils avec `-moz-user-select:text`.
+- `auto`
 
- <ul>
-  <li>Pour les pseudo-éléments <code>::before</code> et <code>::after</code>, la valeur calculée sera <code>none</code></li>
-  <li>Si l'élément est un élément éditable, la valeur calculée est <code>contain</code></li>
-  <li>Sinon, si la valeur calculée de  <code>user-select</code> pour l'élément parent est <code>all</code>, la valeur calculée sera <code>all</code></li>
-  <li>Sinon, si la valeur calculée de  <code>user-select</code> pour l'élément parent est <code>all</code>, la valeur calculée sera <code>none</code></li>
-  <li>Sinon, la valeur calculée est <code>text</code></li>
- </ul>
- </dd>
- <dt><code>text</code></dt>
- <dd>Le texte peut être sélectionné par l'utilisateur<code>.</code></dd>
- <dt><code>all</code></dt>
- <dd>Dans un éditeur HTML, si un double clic ou si un clic contextuel se produit sur les éléments fils, c'est la valeur de l'ancêtre le plus haut qui sera sélectionnée.</dd>
- <dt><code>contain</code></dt>
- <dt><code>element</code> {{non-standard_inline}} (alias spécifique à IE)</dt>
- <dd>Uniquement supporté par Internet Explorer. Cela permet d'activer la sélection au sein de l'élément, celle-ci ne pourra pas « sortir » de cet élément.</dd>
-</dl>
+  - : Le texte sera sélectionné avec les propriétés par défaut appliquées par l'agent utilisateur. La valeur calculée est déterminée de la façon suivante :
 
-<div class="note">
-<p><strong>Note :</strong> CSS UI 4 <a href="https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05">a renommé <code>user-select: element</code> en <code>contain</code></a>.</p>
-</div>
+    - Pour les pseudo-éléments `::before` et `::after`, la valeur calculée sera `none`
+    - Si l'élément est un élément éditable, la valeur calculée est `contain`
+    - Sinon, si la valeur calculée de  `user-select` pour l'élément parent est `all`, la valeur calculée sera `all`
+    - Sinon, si la valeur calculée de  `user-select` pour l'élément parent est `all`, la valeur calculée sera `none`
+    - Sinon, la valeur calculée est `text`
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+- `text`
+  - : Le texte peut être sélectionné par l'utilisateur`.`
+- `all`
+  - : Dans un éditeur HTML, si un double clic ou si un clic contextuel se produit sur les éléments fils, c'est la valeur de l'ancêtre le plus haut qui sera sélectionnée.
+- `contain`
+
+  `element` {{non-standard_inline}} (alias spécifique à IE)
+
+  - : Uniquement supporté par Internet Explorer. Cela permet d'activer la sélection au sein de l'élément, celle-ci ne pourra pas « sortir » de cet élément.
+
+> **Note :** CSS UI 4 [a renommé `user-select: element` en `contain`](https://github.com/w3c/csswg-drafts/commit/3f1d9db96fad8d9fc787d3ed66e2d5ad8cfadd05).
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.unselectable {
+```css
+.unselectable {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
@@ -90,46 +88,32 @@ user-select: unset;
   -ms-user-select: all;
   user-select: all;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Vous devriez pouvoir sélectionner ce texte.&lt;/p&gt;
-&lt;p class="unselectable"&gt;Hop, vous ne pouvez pas sélectionner ce texte !&lt;/p&gt;
-&lt;p class="all"&gt;Cliquer une fois permettra de sélectionner l'ensemble du texte.&lt;/p&gt;
-</pre>
+```html
+<p>Vous devriez pouvoir sélectionner ce texte.</p>
+<p class="unselectable">Hop, vous ne pouvez pas sélectionner ce texte !</p>
+<p class="all">Cliquer une fois permettra de sélectionner l'ensemble du texte.</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 UI', '#propdef-user-select', 'user-select')}}</td>
-   <td>{{Spec2('CSS4 UI')}}</td>
-   <td>Définition initiale. <code>-webkit-user-select</code> est indiqué comme étant un alias déprécié de <code>user-select</code>.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                         | Commentaires                                                                                           |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------------------------------------ |
+| {{SpecName('CSS4 UI', '#propdef-user-select', 'user-select')}} | {{Spec2('CSS4 UI')}} | Définition initiale. `-webkit-user-select` est indiqué comme étant un alias déprécié de `user-select`. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.user-select")}}</p>
+{{Compat("css.properties.user-select")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("::selection")}}</li>
- <li>L'objet JavaScript {{domxref("Selection")}}.</li>
- <li><code><a href="https://www.w3.org/TR/css-ui-4/#propdef-user-select">user-select</a></code> dans <a href="https://www.w3.org/TR/css-ui-4/">CSS Basic User Interface Module Level 4</a>.</li>
-</ul>
+- {{cssxref("::selection")}}
+- L'objet JavaScript {{domxref("Selection")}}.
+- [`user-select`](https://www.w3.org/TR/css-ui-4/#propdef-user-select) dans [CSS Basic User Interface Module Level 4](https://www.w3.org/TR/css-ui-4/).

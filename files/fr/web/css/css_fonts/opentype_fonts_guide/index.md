@@ -9,181 +9,166 @@ tags:
 translation_of: Web/CSS/CSS_Fonts/OpenType_fonts_guide
 original_slug: Web/CSS/CSS_Fonts/Guide_caractéristiques_police_OpenType
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Les caractéristiques de police ou variantes font référence à différents glyphes ou styles de caractère contenus dans une police OpenType. Cela inclut notamment les ligatures (des caractères spéciaux qui permettent de combiner des caractères entre eux comme œ qui est la ligature entre o et e), le crénage (<em>kerning</em> en anglais) qui définit l'espacement entre certaines lettres, les fractions et styles numériques, etc. Toutes ces caractéristiques sont des caractéristiques OpenType Features et peuvent être utilisées sur le Web grâce à certaines propriétés spécifiques qui permettent un contrôle de bas niveau comme {{cssxref("font-feature-settings")}}. Dans cet article, nous verrons tout ce qu'il faut savoir pour manipuler les caractéristiques OpenType avec  CSS.</p>
+Les caractéristiques de police ou variantes font référence à différents glyphes ou styles de caractère contenus dans une police OpenType. Cela inclut notamment les ligatures (des caractères spéciaux qui permettent de combiner des caractères entre eux comme œ qui est la ligature entre o et e), le crénage (_kerning_ en anglais) qui définit l'espacement entre certaines lettres, les fractions et styles numériques, etc. Toutes ces caractéristiques sont des caractéristiques OpenType Features et peuvent être utilisées sur le Web grâce à certaines propriétés spécifiques qui permettent un contrôle de bas niveau comme {{cssxref("font-feature-settings")}}. Dans cet article, nous verrons tout ce qu'il faut savoir pour manipuler les caractéristiques OpenType avec  CSS.
 
-<p>Pour certaines polices, une ou plusieurs caractéristiques sont activées par défaut (le crénage et les ligatures classiques sont souvent activées par exemple). D'autres caractéristiques sont inactives et peuvent être activées par choix dans certaines situations.</p>
+Pour certaines polices, une ou plusieurs caractéristiques sont activées par défaut (le crénage et les ligatures classiques sont souvent activées par exemple). D'autres caractéristiques sont inactives et peuvent être activées par choix dans certaines situations.
 
-<p>En plus des caractéristiques communément utilisées telles que les ligatures ou <a href="https://fr.wikipedia.org/wiki/Chiffres_elz%C3%A9viriens">les chiffres elzéviriens</a>, il existe d'autres caractéristiques spécifiques telles que les ensembles stylistiques, les ensembles alternatifs voire des ensembles avec des altérations spécifiques pour une langue donnée. Pour ce dernier cas, ces altérations sont nécessaires à l'expression correcte du langage et il s'agit donc d'une caractéristique qui dépasse largement l'aspect purement stylistique d'autres caractéristiques.</p>
+En plus des caractéristiques communément utilisées telles que les ligatures ou [les chiffres elzéviriens](https://fr.wikipedia.org/wiki/Chiffres_elz%C3%A9viriens), il existe d'autres caractéristiques spécifiques telles que les ensembles stylistiques, les ensembles alternatifs voire des ensembles avec des altérations spécifiques pour une langue donnée. Pour ce dernier cas, ces altérations sont nécessaires à l'expression correcte du langage et il s'agit donc d'une caractéristique qui dépasse largement l'aspect purement stylistique d'autres caractéristiques.
 
-<div class="warning">
-<p><strong>Attention :</strong> Il existe de nombreuses propriétés CSS qui permettent de manipuler les caractéristiques de police. Cependant, la plupart ne sont pas encore complètement implémentées ni prises en charge de façon homogène. Nous les verrons dans cet article mais il faudra la plupart du temps utiliser {{cssxref("font-feature-settings")}} pour les définir à un plus bas niveau. Il est possible d'écrire du CSS qui gère ces deux cas mais c'est plus laborieux. Mais lorsqu'on utilise <code>font-feature-settings</code> pour chaque caractéristique, il est nécessaire de réécrire la chaîne entière même si on ne souhaite changer qu'une caractéristique.</p>
-</div>
+> **Attention :** Il existe de nombreuses propriétés CSS qui permettent de manipuler les caractéristiques de police. Cependant, la plupart ne sont pas encore complètement implémentées ni prises en charge de façon homogène. Nous les verrons dans cet article mais il faudra la plupart du temps utiliser {{cssxref("font-feature-settings")}} pour les définir à un plus bas niveau. Il est possible d'écrire du CSS qui gère ces deux cas mais c'est plus laborieux. Mais lorsqu'on utilise `font-feature-settings` pour chaque caractéristique, il est nécessaire de réécrire la chaîne entière même si on ne souhaite changer qu'une caractéristique.
 
-<h2 id="Découvrir_la_disponibilité_des_caractéristiques_pour_certaines_polices">Découvrir la disponibilité des caractéristiques pour certaines polices</h2>
+## Découvrir la disponibilité des caractéristiques pour certaines polices
 
-<p>Il est parfois délicat de savoir quelles caractéristiques sont disponibles pour une police donnée si celle-ci n'est pas accompagnée d'une documentation (la plupart des fonderies proposeront une page d'exemple et du CSS). Certains sites permettent de contourner ce problème : vous pouvez visiter <a href="https://wakamaifondue.com">wakamaifondue.com</a>, y uploader le fichier de la police et recevoir un rapport complet peu de temps après ; le site <a href="https://axis-praxis.org">Axis-praxis.org</a> fournit des fonctionnalités analogues et permet de cliquer pour activer/désactiver une ou plusieurs caractéristiques sur un bloc de texte donné.</p>
+Il est parfois délicat de savoir quelles caractéristiques sont disponibles pour une police donnée si celle-ci n'est pas accompagnée d'une documentation (la plupart des fonderies proposeront une page d'exemple et du CSS). Certains sites permettent de contourner ce problème : vous pouvez visiter [wakamaifondue.com](https://wakamaifondue.com), y uploader le fichier de la police et recevoir un rapport complet peu de temps après ; le site [Axis-praxis.org](https://axis-praxis.org) fournit des fonctionnalités analogues et permet de cliquer pour activer/désactiver une ou plusieurs caractéristiques sur un bloc de texte donné.
 
-<h2 id="Pourquoi_utiliser_les_caractéristiques_d'une_police">Pourquoi utiliser les caractéristiques d'une police ?</h2>
+## Pourquoi utiliser les caractéristiques d'une police ?
 
-<p>Étant donné que ces caractéristiques peuvent être difficilement accessibles, on peut légitiement se demander pourquoi il faudrait les utiliser. Pour répondre à cette question, il faut voir comment ces caractéristiques peuvent aider à rendre un site plus lisible, accessible, élégant :</p>
+Étant donné que ces caractéristiques peuvent être difficilement accessibles, on peut légitiement se demander pourquoi il faudrait les utiliser. Pour répondre à cette question, il faut voir comment ces caractéristiques peuvent aider à rendre un site plus lisible, accessible, élégant :
 
-<ul>
- <li><strong>Les ligatures</strong> telles que œ ou celles qui existent entre 'ff' répartissent plus également l'espace entre les lettres et permettent un lecture plus douce.</li>
- <li><strong>Les fractions</strong> permettent d'améliorer la compréhension et la lecture de certains textes (des recettes par exemple).</li>
- <li><strong>L'écriture des nombres</strong> au sein de paragraphes qui suivent la ligne de base du texte ou au contraire dont les jambages passent sous la ligne de base.</li>
-</ul>
+- **Les ligatures** telles que œ ou celles qui existent entre 'ff' répartissent plus également l'espace entre les lettres et permettent un lecture plus douce.
+- **Les fractions** permettent d'améliorer la compréhension et la lecture de certains textes (des recettes par exemple).
+- **L'écriture des nombres** au sein de paragraphes qui suivent la ligne de base du texte ou au contraire dont les jambages passent sous la ligne de base.
 
-<p>Bien qu'aucune de ces caractéristiques ne soit critique pour l'utilisabilité d'un site, chacune d'elle peut rendre un site plus lisible voire raffiné</p>
+Bien qu'aucune de ces caractéristiques ne soit critique pour l'utilisabilité d'un site, chacune d'elle peut rendre un site plus lisible voire raffiné
 
-<blockquote>
-<p>Les caractéristiques OpenType ressemblent à des compartiments secrets : en les déverouillant, une police peut évoluer de façon subtile ou complète. Toutes les caractéristiques OpenType ne doivent pas être utilisées tout le temps mais certaines d'entre elles sont majeures pour obtenir une typographie de premier rang. <em>Tim Brown, Directeur de la typographie chez Adobe</em>.</p>
-</blockquote>
+> Les caractéristiques OpenType ressemblent à des compartiments secrets : en les déverouillant, une police peut évoluer de façon subtile ou complète. Toutes les caractéristiques OpenType ne doivent pas être utilisées tout le temps mais certaines d'entre elles sont majeures pour obtenir une typographie de premier rang. _Tim Brown, Directeur de la typographie chez Adobe_.
 
-<h3 id="Au-delà_du_style_le_contenu_même">Au-delà du style : le contenu même</h3>
+### Au-delà du style : le contenu même
 
-<p>Il existe certains cas (notamment avec {{cssxref("font-variant-east-asian")}}) où les caractéristiques OpenType sont directement liées à l'utilisation de formes différentes pour certains glyphes. Ces caractéristiques auront un impact sur la lisibilité mais aussi et surtout sur la signification du texte. Dans ces cas, les caractéristiques de police ne sont pas un outil de style mais font partie intégrante du contenu.</p>
+Il existe certains cas (notamment avec {{cssxref("font-variant-east-asian")}}) où les caractéristiques OpenType sont directement liées à l'utilisation de formes différentes pour certains glyphes. Ces caractéristiques auront un impact sur la lisibilité mais aussi et surtout sur la signification du texte. Dans ces cas, les caractéristiques de police ne sont pas un outil de style mais font partie intégrante du contenu.
 
-<h2 id="Les_caractéristiques">Les caractéristiques</h2>
+## Les caractéristiques
 
-<p>Il existe une variété de caractéristiques. Nous les avons ici regroupées selon leurs attributs principaux et les options développées dans les spécifications du W3C.</p>
+Il existe une variété de caractéristiques. Nous les avons ici regroupées selon leurs attributs principaux et les options développées dans les spécifications du W3C.
 
-<div class="note">
-<p><strong>Note :</strong> Les exemples qui suivent illustrent certaines propriétés et des combinaisons d'exemple et sont accompagnés des équivalents utilisant la syntaxe de plus bas niveau. Il est possible que ces deux versions d'exemple ne correspondent pas exactement selon l'implémentation des navigateurs. Les polices utilisées ici sont Playfair Display, Source Serif Pro, IBM Plex Serif, Dancing Script et Kokoro (qui sont libres d'utilisation et disponibles via différents services tels que Google Fonts).</p>
-</div>
+> **Note :** Les exemples qui suivent illustrent certaines propriétés et des combinaisons d'exemple et sont accompagnés des équivalents utilisant la syntaxe de plus bas niveau. Il est possible que ces deux versions d'exemple ne correspondent pas exactement selon l'implémentation des navigateurs. Les polices utilisées ici sont Playfair Display, Source Serif Pro, IBM Plex Serif, Dancing Script et Kokoro (qui sont libres d'utilisation et disponibles via différents services tels que Google Fonts).
 
-<h3 id="Le_crénage_(kerning)_(cssxref(font-kerning))">Le crénage (<em>kerning</em>) ({{cssxref("font-kerning")}})</h3>
+### Le crénage (_kerning_) ({{cssxref("font-kerning")}})
 
-<p>Le crénage correspond à l'espace entre les caractères pour certaines combinaisons de caractères. Cette caractéristique, comme recommandé par la spécification OpenType, est généralement activée par défaut. On notera également que la propriété {{cssxref("letter-spacing")}} permet d'imposer un crénage supplémentaire au texte.</p>
+Le crénage correspond à l'espace entre les caractères pour certaines combinaisons de caractères. Cette caractéristique, comme recommandé par la spécification OpenType, est généralement activée par défaut. On notera également que la propriété {{cssxref("letter-spacing")}} permet d'imposer un crénage supplémentaire au texte.
 
-<div>{{EmbedGHLiveSample("css-examples/font-features/font-kerning.html", '100%', 520)}}</div>
+{{EmbedGHLiveSample("css-examples/font-features/font-kerning.html", '100%', 520)}}
 
-<h3 id="Les_formes_alternatives_(cssxref(font-variant-alternates))">Les formes alternatives ({{cssxref("font-variant-alternates")}})</h3>
+### Les formes alternatives ({{cssxref("font-variant-alternates")}})
 
-<p>Les polices peuvent fournir différentes formes pour différents glyphes. Cette propriété permet d'activer un ensemble de formes alternatives ou une forme alternative spécifique selon la valeur utilisée. Dans l'exemple qui suit, on voit différentes formes d'utilisation des caractères alternatifs. Les polices qui possèdent des glyphes alternatifs peuvent les rendre disponibles sur la grille de caractères ou dans des ensembles stylistiques séparés voire pour des caractères individuels. Dans cet exemple, on utilise deux polices et la règle-@ {{cssxref("@font-feature-values")}}. Cette méthode permet de définir des raccourcis ou des options nommées qui peuvent ensuite être utilisée sur un ensemble de polices. Ainsi, on peut avoir une option appliquée à une police ou appliquée plus généralement.</p>
+Les polices peuvent fournir différentes formes pour différents glyphes. Cette propriété permet d'activer un ensemble de formes alternatives ou une forme alternative spécifique selon la valeur utilisée. Dans l'exemple qui suit, on voit différentes formes d'utilisation des caractères alternatifs. Les polices qui possèdent des glyphes alternatifs peuvent les rendre disponibles sur la grille de caractères ou dans des ensembles stylistiques séparés voire pour des caractères individuels. Dans cet exemple, on utilise deux polices et la règle-@ {{cssxref("@font-feature-values")}}. Cette méthode permet de définir des raccourcis ou des options nommées qui peuvent ensuite être utilisée sur un ensemble de polices. Ainsi, on peut avoir une option appliquée à une police ou appliquée plus généralement.
 
-<div>{{EmbedGHLiveSample("css-examples/font-features/font-variant-alternates.html", '100%', 800)}}</div>
+{{EmbedGHLiveSample("css-examples/font-features/font-variant-alternates.html", '100%', 800)}} Dans ce cas, `@stylistic(alternates)` affichera tous les caractères alternatifs pour chacune des polices. En appliquant uniquement ces règles au mot 'My', seul l'affichage de la lettre 'M' est modifié. Si on applique  `@styleset(alt-a)`, seule l'apparence de la lettre a minuscule changera.
 
-<div> </div>
+Vous pouvez modifier :
 
-<div>Dans ce cas, <code>@stylistic(alternates)</code> affichera tous les caractères alternatifs pour chacune des polices. En appliquant uniquement ces règles au mot 'My', seul l'affichage de la lettre 'M' est modifié. Si on applique  <code>@styleset(alt-a)</code>, seule l'apparence de la lettre a minuscule changera.</div>
+```css
+font-variant-alternates: styleset(alt-a);
+```
 
-<p>Vous pouvez modifier :</p>
+en :
 
-<pre class="brush: css">font-variant-alternates: styleset(alt-a);</pre>
+```css
+font-variant-alternates: styleset(alt-g);
+```
 
-<p>en :</p>
+et voir comment la lettre a retrouve sa forme normale et comment la lettre g est modifiée.
 
-<pre class="brush: css">font-variant-alternates: styleset(alt-g);
-</pre>
+#### En savoir plus sur les formes alternatives
 
-<p>et voir comment la lettre a retrouve sa forme normale et comment la lettre g est modifiée.</p>
+- [Lien vers la spécification de la propriété `font-variant-alternates`](https://www.w3.org/TR/css-fonts-4/#propdef-font-variant-alternates)
+- {{cssxref("font-variante-alternates")}}
 
-<h4 id="En_savoir_plus_sur_les_formes_alternatives">En savoir plus sur les formes alternatives</h4>
+### Les ligatures ({{cssxref("font-variant-ligatures")}})
 
-<ul>
- <li><a href="https://www.w3.org/TR/css-fonts-4/#propdef-font-variant-alternates">Lien vers la spécification de la propriété <code>font-variant-alternates</code></a></li>
- <li>{{cssxref("font-variante-alternates")}}</li>
-</ul>
+Les ligatures sont des glyphes qui remplacent deux ou plusieurs glyphes afin de les représenter de façon plus harmonieuse (pour l'espacement et l'esthétique notamment). Certaines de ces ligatures sont fréquemment utilisées (œ) et d'autres sont plus spécialisées et moins usitées (on parle de « ligatures discrétionaires », de « ligatures historiques » ou encore d' « alternatifs contextuels »).
 
-<h3 id="Les_ligatures_(cssxref(font-variant-ligatures))">Les ligatures ({{cssxref("font-variant-ligatures")}})</h3>
+Bien qu'elles soient plus fréquemment utilisées avec les polices d'écriture, dans l'exemple qui suit, on les utilise afin de créer des flèches :
 
-<p>Les ligatures sont des glyphes qui remplacent deux ou plusieurs glyphes afin de les représenter de façon plus harmonieuse (pour l'espacement et l'esthétique notamment). Certaines de ces ligatures sont fréquemment utilisées (œ) et d'autres sont plus spécialisées et moins usitées (on parle de « ligatures discrétionaires », de « ligatures historiques » ou encore d' « alternatifs contextuels »).</p>
+{{EmbedGHLiveSample("css-examples/font-features/font-variant-ligatures.html", '100%', 540)}}
 
-<p>Bien qu'elles soient plus fréquemment utilisées avec les polices d'écriture, dans l'exemple qui suit, on les utilise afin de créer des flèches :</p>
+### Les positions ({{cssxref("font-variant-position")}})
 
-<div>{{EmbedGHLiveSample("css-examples/font-features/font-variant-ligatures.html", '100%', 540)}}</div>
+Les variantes de positions permettent d'activer le support typographique des glyphes pour les exposants et les indices. Celles-ci sont utilisées dans le texte sans modifier la ligne de base ou l'interlignage (c'est un des avantages par rapport à l'utilisation des éléments HTML {{htmlelement("sub")}} et {{cssxref("sup")}}).
 
-<h3 id="Les_positions_(cssxref(font-variant-position))">Les positions ({{cssxref("font-variant-position")}})</h3>
+{{EmbedGHLiveSample("css-examples/font-features/font-variant-position.html", '100%', 550)}}
 
-<p>Les variantes de positions permettent d'activer le support typographique des glyphes pour les exposants et les indices. Celles-ci sont utilisées dans le texte sans modifier la ligne de base ou l'interlignage (c'est un des avantages par rapport à l'utilisation des éléments HTML {{htmlelement("sub")}} et {{cssxref("sup")}}).</p>
+### Les capitales ({{cssxref("font-variant-caps")}})
 
-<div>{{EmbedGHLiveSample("css-examples/font-features/font-variant-position.html", '100%', 550)}}</div>
+Une utilisation fréquente des caractéristiques OpenType est l'activation de « vraies » [petites capitales](https://fr.wikipedia.org/wiki/Petite_capitale) qui sont généralement utilisées pour les acronymes et les abréviations.
 
-<h3 id="Les_capitales_(cssxref(font-variant-caps))">Les capitales ({{cssxref("font-variant-caps")}})</h3>
+{{EmbedGHLiveSample("css-examples/font-features/font-variant-caps.html", '100%', 620)}}
 
-<p>Une utilisation fréquente des caractéristiques OpenType est l'activation de « vraies » <a href="https://fr.wikipedia.org/wiki/Petite_capitale">petites capitales</a> qui sont généralement utilisées pour les acronymes et les abréviations.</p>
+### Les chiffres ({{cssxref("font-variant-numeric")}})
 
-<div>{{EmbedGHLiveSample("css-examples/font-features/font-variant-caps.html", '100%', 620)}}</div>
+Il existe généralement différents types de chiffre dans les polices :
 
-<h3 id="Les_chiffres_(cssxref(font-variant-numeric))">Les chiffres ({{cssxref("font-variant-numeric")}})</h3>
+- Les chiffres classiques (ou chiffres Didot) qui sont alignées sur la ligne de base du texte et qui ont la même hauteur que les majuscules
+- [Les chiffres elzéviriens](https://fr.wikipedia.org/wiki/Chiffres_elz%C3%A9viriens) qui ont des jambages et des hampes à la façon des autres lettres minuscules. Ces chiffres sont conçus pour être utilisés en incise et se « fondre » au sein des glyphes alentours, à la manières des petites capitales.
 
-<p>Il existe généralement différents types de chiffre dans les polices :</p>
+On y retrouve également la notion d'espacement. L'espacement proportionnel est le réglage par défaut et l'espacement tabulaire permet d'avoir un espace identique entre chaque chiffre, quelle que soit la largeur du caractère. Ce dernier mode est notamment utile pour l'affichage de nombre dans des tableaux (où on peut souhaiter comparer des montants d'une ligne à l'autre).
 
-<ul>
- <li>Les chiffres classiques (ou chiffres Didot) qui sont alignées sur la ligne de base du texte et qui ont la même hauteur que les majuscules</li>
- <li><a href="https://fr.wikipedia.org/wiki/Chiffres_elz%C3%A9viriens">Les chiffres elzéviriens</a> qui ont des jambages et des hampes à la façon des autres lettres minuscules. Ces chiffres sont conçus pour être utilisés en incise et se « fondre » au sein des glyphes alentours, à la manières des petites capitales.</li>
-</ul>
+Deux types de fractions peuvent être prises en charge avec cette propriété :
 
-<p>On y retrouve également la notion d'espacement. L'espacement proportionnel est le réglage par défaut et l'espacement tabulaire permet d'avoir un espace identique entre chaque chiffre, quelle que soit la largeur du caractère. Ce dernier mode est notamment utile pour l'affichage de nombre dans des tableaux (où on peut souhaiter comparer des montants d'une ligne à l'autre).</p>
+- Les fractions avec barre diagonale.
+- Les fractions empilées verticalement.
 
-<p>Deux types de fractions peuvent être prises en charge avec cette propriété :</p>
+Les nombres ordinaux peuvent également être pris en charge (« 1er », « 2e ») s'ils sont présents dans la police. De même on peut utiliser un zéro barré si celui-ci est disponible.
 
-<ul>
- <li>Les fractions avec barre diagonale.</li>
- <li>Les fractions empilées verticalement.</li>
-</ul>
+#### Chiffres classiques et chiffres elzéviriens
 
-<p>Les nombres ordinaux peuvent également être pris en charge (« 1er », « 2e ») s'ils sont présents dans la police. De même on peut utiliser un zéro barré si celui-ci est disponible.</p>
+{{EmbedGHLiveSample("css-examples/font-features/font-variant-numeric.html", '100%', 560)}}
 
-<h4 id="Chiffres_classiques_et_chiffres_elzéviriens">Chiffres classiques et chiffres elzéviriens</h4>
+#### Fractions, nombres ordinaux et zéro barré
 
-<div>{{EmbedGHLiveSample("css-examples/font-features/font-variant-numeric.html", '100%', 560)}}</div>
+{{EmbedGHLiveSample("css-examples/font-features/font-variant-numeric-frac.html", '100%', 600)}}
 
-<h4 id="Fractions_nombres_ordinaux_et_zéro_barré">Fractions, nombres ordinaux et zéro barré</h4>
+### Caractères d'Asie orientale ({{cssxref("font-variant-east-asian")}})
 
-<div>{{EmbedGHLiveSample("css-examples/font-features/font-variant-numeric-frac.html", '100%', 600)}}</div>
+Cette caractéristique permet d'accéder à différentes formes alternatives de glyphes dans une police. L'exemple qui suit illustre une chaîne de glyphes où seul l'ensemble OpenType 'jis78' est activé. Vous pouvez décocher la case et voir alors d'autres caractères s'afficher.
 
-<h3 id="Caractères_d'Asie_orientale_(cssxref(font-variant-east-asian))">Caractères d'Asie orientale ({{cssxref("font-variant-east-asian")}})</h3>
+{{EmbedGHLiveSample("css-examples/font-features/font-variant-east-asian.html", '100%', 750)}}
 
-<p>Cette caractéristique permet d'accéder à différentes formes alternatives de glyphes dans une police. L'exemple qui suit illustre une chaîne de glyphes où seul l'ensemble OpenType 'jis78' est activé. Vous pouvez décocher la case et voir alors d'autres caractères s'afficher.</p>
+> **Note :** Ces glyphes ont été copiés à partir d'un exemple et le texte qu'ils constituent n'ont aucun sens particulier.
 
-<div>{{EmbedGHLiveSample("css-examples/font-features/font-variant-east-asian.html", '100%', 750)}}</div>
+### Propriété raccourcie ({{Cssxref("font-variant")}})
 
-<div class="note">
-<p><strong>Note :</strong> Ces glyphes ont été copiés à partir d'un exemple et le texte qu'ils constituent n'ont aucun sens particulier.</p>
-</div>
+La propriété raccourcie `font-variant` permet de définir l'ensemble des caractéristiques précédentes. Lorsqu'on utilise la valeur `normal`, toutes les caractéristiques sont réinitialisées et retrouvent leurs valeurs par défaut. En utilisant `none`,  `font-variant-ligatures` vaudra `none` et toutes les autres propriétés récupèreront leurs valeurs initiales (cela signifie entre autres que si le crénage est activé par défaut, il sera toujours activé, même lorsque `none` est fourni).
 
-<h3 id="Propriété_raccourcie_(Cssxref(font-variant))">Propriété raccourcie ({{Cssxref("font-variant")}})</h3>
+{{EmbedGHLiveSample("css-examples/font-features/font-variant.html", '100%', 600)}}
 
-<p>La propriété raccourcie <code>font-variant</code> permet de définir l'ensemble des caractéristiques précédentes. Lorsqu'on utilise la valeur <code>normal</code>, toutes les caractéristiques sont réinitialisées et retrouvent leurs valeurs par défaut. En utilisant <code>none</code>,  <code>font-variant-ligatures</code> vaudra <code>none</code> et toutes les autres propriétés récupèreront leurs valeurs initiales (cela signifie entre autres que si le crénage est activé par défaut, il sera toujours activé, même lorsque <code>none</code> est fourni).</p>
+## Utiliser `font-feature-settings`
 
-<div>{{EmbedGHLiveSample("css-examples/font-features/font-variant.html", '100%', 600)}}</div>
+La propriété {{cssxref("font-feature-settings")}} permet d'utiliser une syntaxe « bas niveau » qui permet un accès explicite à chaque caractéristique OpenType disponible. On dispose ainsi d'un contrôle accru mais on perd l'héritage et il faut tout redéclarer à chaque fois qu'on souhaite modifier une caractéristique (sauf à utiliser [des propriétés CSS personnalisées](/en-US/docs/Web/CSS/Using_CSS_custom_properties) afin de définir les valeurs). Aussi, mieux vaut utiliser les propriétés standards lorsque c'est possible.
 
-<h2 id="Utiliser_font-feature-settings">Utiliser <code>font-feature-settings</code></h2>
+Il existe une myriade de caractéristiques possibles. Vous pouvez en voir quelques exemples ici et il existe plusieurs ressources pour en exploiter d'autres.
 
-<p>La propriété {{cssxref("font-feature-settings")}} permet d'utiliser une syntaxe « bas niveau » qui permet un accès explicite à chaque caractéristique OpenType disponible. On dispose ainsi d'un contrôle accru mais on perd l'héritage et il faut tout redéclarer à chaque fois qu'on souhaite modifier une caractéristique (sauf à utiliser <a href="/en-US/docs/Web/CSS/Using_CSS_custom_properties">des propriétés CSS personnalisées</a> afin de définir les valeurs). Aussi, mieux vaut utiliser les propriétés standards lorsque c'est possible.</p>
+La syntaxe générale suivra cette structure :
 
-<p>Il existe une myriade de caractéristiques possibles. Vous pouvez en voir quelques exemples ici et il existe plusieurs ressources pour en exploiter d'autres.</p>
-
-<p>La syntaxe générale suivra cette structure :</p>
-
-<pre class="brush: css">.small-caps {
+```css
+.small-caps {
   font-feature-settings: "smcp", "c2sc";
 }
-</pre>
+```
 
-<p>Selon la spécification, on peut fournir le code à quatre caractères de la caractéristique ou fournir le code suivi d'un 1 pour activer la fonctionnalité ou suivi d'un 0 pour la désactiver. Ainsi, si on dispose de caractéristiques liées à la ligatures et qui sont activées par défaut, on peut les désactiver de la façon suivante :</p>
+Selon la spécification, on peut fournir le code à quatre caractères de la caractéristique ou fournir le code suivi d'un 1 pour activer la fonctionnalité ou suivi d'un 0 pour la désactiver. Ainsi, si on dispose de caractéristiques liées à la ligatures et qui sont activées par défaut, on peut les désactiver de la façon suivante :
 
-<pre class="brush: css">.no-ligatures {
+```css
+.no-ligatures {
   font-feature-settings: "liga" 0, "dlig" 0;
-}</pre>
+}
+```
 
-<h4 id="En_savoir_plus_sur_les_codes_des_caractéristiques_font-feature-settings">En savoir plus sur les codes des caractéristiques <code>font-feature-settings</code></h4>
+#### En savoir plus sur les codes des caractéristiques `font-feature-settings`
 
-<ul>
- <li><a href="https://sparanoid.com/lab/opentype-features/">Une démonstration des caractéristiques OpenType</a></li>
- <li><a href="https://en.wikipedia.org/wiki/List_of_typographic_features">La liste des caractéristiques OpenType sur Wikipédia</a></li>
-</ul>
+- [Une démonstration des caractéristiques OpenType](https://sparanoid.com/lab/opentype-features/)
+- [La liste des caractéristiques OpenType sur Wikipédia](https://en.wikipedia.org/wiki/List_of_typographic_features)
 
-<h2 id="Utiliser_la_détection_de_fonctionnalités_CSS">Utiliser la détection de fonctionnalités CSS</h2>
+## Utiliser la détection de fonctionnalités CSS
 
-<p>Étant donné que toutes les propriétés ne sont pas implémentées de façon homogène, il est préférable d'utiliser la règle @ {{cssxref("@supports")}} pour vérifier quelles propriétés peuvent être utilisées correctement et s'en remettre à {{cssxref("font-feature-settings")}} si nécessaire.</p>
+Étant donné que toutes les propriétés ne sont pas implémentées de façon homogène, il est préférable d'utiliser la règle @ {{cssxref("@supports")}} pour vérifier quelles propriétés peuvent être utilisées correctement et s'en remettre à {{cssxref("font-feature-settings")}} si nécessaire.
 
-<p>Ainsi, les petites capitales peuvent être activées de différentes façons mais si on veut s'assurer que la mise en forme fonctionne quelle que soit la capitalisation, il faudra 2 paramètres avec <code>font-feature-settings</code> et une seule valeur pour {{cssxref("font-variant-caps")}}.</p>
+Ainsi, les petites capitales peuvent être activées de différentes façons mais si on veut s'assurer que la mise en forme fonctionne quelle que soit la capitalisation, il faudra 2 paramètres avec `font-feature-settings` et une seule valeur pour {{cssxref("font-variant-caps")}}.
 
-<pre class="brush: css">.small-caps {
+```css
+.small-caps {
    font-feature-settings: "smcp", "c2sc";
 }
 
@@ -193,38 +178,27 @@ original_slug: Web/CSS/CSS_Fonts/Guide_caractéristiques_police_OpenType
        font-variant-caps: all-small-caps;
    }
 }
-</pre>
+```
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<h3 id="Démonstrations_de_caractéristiques_OpenType_en_CSS">Démonstrations de caractéristiques OpenType en CSS</h3>
+### Démonstrations de caractéristiques OpenType en CSS
 
-<ul>
- <li><a href="https://sparanoid.com/lab/opentype-features/">Démonstration CSS complète des caractéristiques OpenType (en anglais)</a>
+- [Démonstration CSS complète des caractéristiques OpenType (en anglais)](https://sparanoid.com/lab/opentype-features/)
 
-  <ul>
-   <li>Note : la complétude invoquée dans le titre n'est pas garantie…</li>
-  </ul>
- </li>
-</ul>
+  - Note : la complétude invoquée dans le titre n'est pas garantie…
 
-<h3 id="Outils_web_d'analyse_de_polices">Outils web d'analyse de polices</h3>
+### Outils web d'analyse de polices
 
-<ul>
- <li><a href="https://wakamaifondue.com">Wakamai Fondue (en anglais)</a></li>
- <li><a href="https://axis-praxis.org">Axis Praxis (en anglais)</a></li>
-</ul>
+- [Wakamai Fondue (en anglais)](https://wakamaifondue.com)
+- [Axis Praxis (en anglais)](https://axis-praxis.org)
 
-<h3 id="Spécifications_W3C">Spécifications W3C</h3>
+### Spécifications W3C
 
-<ul>
- <li><a href="https://drafts.csswg.org/css-fonts-3/#font-rend-props">Les propriétés relatives aux caractéristiques de police dans le module CSS Fonts de niveau 3 (en anglais)</a></li>
- <li><a href="https://www.w3.org/TR/css-fonts-4/#propdef-font-variant-alternates"><code>font-variant-alternatives</code>, spécifiée dans le module CSS Fonts de niveau 4 (en anglais)</a></li>
-</ul>
+- [Les propriétés relatives aux caractéristiques de police dans le module CSS Fonts de niveau 3 (en anglais)](https://drafts.csswg.org/css-fonts-3/#font-rend-props)
+- [`font-variant-alternatives`, spécifiée dans le module CSS Fonts de niveau 4 (en anglais)](https://www.w3.org/TR/css-fonts-4/#propdef-font-variant-alternates)
 
-<h3 id="Autres_ressources">Autres ressources</h3>
+### Autres ressources
 
-<ul>
- <li><a href="https://helpx.adobe.com/fonts/using/use-open-type-features.html">Utiliser les caractéristiques OpenType (en anglais)</a>, écrit par Tim Brown</li>
- <li><a href="https://helpx.adobe.com/fonts/using/open-type-syntax.html">La syntaxe Adobe pour les caractéristiques OpenType en CSS (en anglais)</a></li>
-</ul>
+- [Utiliser les caractéristiques OpenType (en anglais)](https://helpx.adobe.com/fonts/using/use-open-type-features.html), écrit par Tim Brown
+- [La syntaxe Adobe pour les caractéristiques OpenType en CSS (en anglais)](https://helpx.adobe.com/fonts/using/open-type-syntax.html)

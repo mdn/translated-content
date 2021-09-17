@@ -1,52 +1,57 @@
 ---
 title: ':nth-last-col'
-slug: 'Web/CSS/:nth-last-col'
+slug: Web/CSS/:nth-last-col
+translation_of: Web/CSS/:nth-last-col
 browser-compat: css.selectors.nth-last-col
-translation_of: 'Web/CSS/:nth-last-col'
 ---
-<p>{{CSSRef}}{{SeeCompatTable}}</p>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <a href="/fr/docs/Web/CSS">CSS</a> <strong><code>:nth-last-col()</code></strong> est conçue pour les tableaux et les grilles. Elle accepte les notations de type <code>An+B</code> telles qu'utilisées avec le sélecteur {{Cssxref(":nth-child")}}, ce qui permet de cibler plusieurs colonnes en comptant à partir de la fin du jeu de colonnes. Les valeurs <i>odd</i> et <i>even</i> sont aussi valides.</p>
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:nth-last-col()`** est conçue pour les tableaux et les grilles. Elle accepte les notations de type `An+B` telles qu'utilisées avec le sélecteur {{Cssxref(":nth-child")}}, ce qui permet de cibler plusieurs colonnes en comptant à partir de la fin du jeu de colonnes. Les valeurs _odd_ et _even_ sont aussi valides.
 
-<pre class="brush: css">/* Sélectionne toutes les valeurs impaires du tableau */
+```css
+/* Sélectionne toutes les valeurs impaires du tableau */
 :nth-last-col(odd) {
   background-color: pink;
-}</pre>
+}
+```
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<p>La pseudo-classe <code>nth-last-col</code> est spécifiée avec un argument unique qui représente le motif utilisé pour faire la correspondance des éléments.</p>
+La pseudo-classe `nth-last-col` est spécifiée avec un argument unique qui représente le motif utilisé pour faire la correspondance des éléments.
 
-<p>Voir {{Cssxref(":nth-child")}} pour une explication plus détaillée de cette syntaxe.</p>
+Voir {{Cssxref(":nth-child")}} pour une explication plus détaillée de cette syntaxe.
 
-<h3 id="formal_syntax">Syntaxe formelle</h3>
+### Syntaxe formelle
 
-<p>{{csssyntax}}</p>
+{{csssyntax}}
 
-<h2 id="examples">Exemples</h2>
+## Exemples
 
-<h3 id="basic_example">Exemple basique</h3>
+### Exemple basique
 
-<h4 id="html">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;table&gt;
-  &lt;tr&gt;
-    &lt;td&gt;un&lt;/td&gt;
-    &lt;td&gt;deux&lt;/td&gt;
-    &lt;td&gt;trois&lt;/td&gt;
-    &lt;td&gt;quatre&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-    &lt;td&gt;un&lt;/td&gt;
-    &lt;td&gt;deux&lt;/td&gt;
-    &lt;td&gt;trois&lt;/td&gt;
-    &lt;td&gt;quatre&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;</pre>
+```html
+<table>
+  <tr>
+    <td>un</td>
+    <td>deux</td>
+    <td>trois</td>
+    <td>quatre</td>
+  </tr>
+  <tr>
+    <td>un</td>
+    <td>deux</td>
+    <td>trois</td>
+    <td>quatre</td>
+  </tr>
+</table>
+```
 
-<h4 id="css">CSS</h4>
+#### CSS
 
-<pre class="brush: css">td {
+```css
+td {
   border: 1px solid #ccc;
   padding: .2em;
 }
@@ -55,22 +60,20 @@ translation_of: 'Web/CSS/:nth-last-col'
 :nth-last-col(2n+1) {
   background-color: pink;
 }
-</pre>
+```
 
-<h4 id="result">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('basic_example', 250, 200)}}</p>
+{{EmbedLiveSample('basic_example', 250, 200)}}
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{Cssxref(":nth-child")}}, {{Cssxref(":nth-last-of-type")}}</li>
-</ul>
+- {{Cssxref(":nth-child")}}, {{Cssxref(":nth-last-of-type")}}

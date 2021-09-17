@@ -8,47 +8,48 @@ tags:
   - Reference
 translation_of: Web/CSS/-webkit-touch-callout
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>La propriété <strong><code>-webkit-touch-callout</code></strong> permet de contrôler l'affichage de la légende (<em>callout</em>) affichée par défaut lorsque le toucher est maintenu sur un élément.</p>
+La propriété **`-webkit-touch-callout`** permet de contrôler l'affichage de la légende (_callout_) affichée par défaut lorsque le toucher est maintenu sur un élément.
 
-<p>Lorsqu'un élément est touché et que la pression est maintenue sur iOS, Safari affiche une bulle d'informations à propos du lien. Cette propriété permet de désactiver ce fonctionnement.</p>
+Lorsqu'un élément est touché et que la pression est maintenue sur iOS, Safari affiche une bulle d'informations à propos du lien. Cette propriété permet de désactiver ce fonctionnement.
 
-<pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 -webkit-touch-callout: default;
 -webkit-touch-callout: none;
 
 /* Valeurs globales */
 -webkit-touch-callout: initial;
 -webkit-touch-callout: inherit;
--webkit-touch-callout: unset;</pre>
+-webkit-touch-callout: unset;
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>default</code></dt>
- <dd>La légende par défaut est activée.</dd>
- <dt><code>none</code></dt>
- <dd>La légende est désactivée.</dd>
-</dl>
+- `default`
+  - : La légende par défaut est activée.
+- `none`
+  - : La légende est désactivée.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: css">.exemple {
+```css
+.exemple {
   -webkit-touch-callout: none;
 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne fait partie d'aucune spécification. Elle est décrite dans <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_touch_callout">la référence CSS de Safari</a>.</p>
+Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne fait partie d'aucune spécification. Elle est décrite dans [la référence CSS de Safari](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-_webkit_touch_callout).
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.-webkit-touch-callout")}}</p>
+{{Compat("css.properties.-webkit-touch-callout")}}

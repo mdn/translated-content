@@ -1,61 +1,51 @@
 ---
 title: path()
 slug: Web/CSS/path()
-translation_of: 'Web/CSS/path()'
+translation_of: Web/CSS/path()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La <a href="/fr/docs/Web/CSS/CSS_Functions">fonction</a> <a href="/fr/docs/Web/CSS">CSS</a> <code><strong>path()</strong></code> accepte comme paramètre une chaîne représentant un tracé SVG. Elle est utilisée dans les formes CSS et les animations de tracés CSS pour permettre de dessiner une forme.</p>
+La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`path()`** accepte comme paramètre une chaîne représentant un tracé SVG. Elle est utilisée dans les formes CSS et les animations de tracés CSS pour permettre de dessiner une forme.
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css">path( [[&lt;'fill-rule'&gt;,]?&lt;string&gt;)</pre>
+```css
+path( [[<'fill-rule'>,]?<string>)
+```
 
-<h3 id="parameters">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>&lt;'fill-rule'&gt;</code></dt>
- <dd>La règle de remplissage de l'intérieur du tracé. Les valeurs possibles sont <code>nonzero</code> ou <code>evenodd</code>. La valeur par défaut est <code>nonzero</code>. Voir <a href="/fr/docs/Web/SVG/Attribute/fill-rule">fill-rule</a> pour plus de détails.</dd>
- <dt><code>&lt;string&gt;</code></dt>
- <dd>Doit être une <a href="/fr/docs/Web/SVG/Element/path">chaîne représentant les données d'un chemin SVG</a>.</dd>
-</dl>
+- `<'fill-rule'>`
+  - : La règle de remplissage de l'intérieur du tracé. Les valeurs possibles sont `nonzero` ou `evenodd`. La valeur par défaut est `nonzero`. Voir [fill-rule](/fr/docs/Web/SVG/Attribute/fill-rule) pour plus de détails.
+- `<string>`
+  - : Doit être une [chaîne représentant les données d'un chemin SVG](/fr/docs/Web/SVG/Element/path).
 
-<h2 id="examples">Exemples</h2>
+## Exemples
 
-<h3 id="examples_of_correct_values_for_path">Exemples de valeurs correctes pour path()</h3>
+### Exemples de valeurs correctes pour path()
 
-<pre class="brush: css">path("M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80");
+```css
+path("M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80");
 path(evenodd,"M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80");
-</pre>
+```
 
-<h3 id="use_in_offset_path">Utilisation en tant que valeur de offset-path</h3>
+### Utilisation en tant que valeur de offset-path
 
-<p>La fonction <code>path()</code> est utilisée pour créer un tracé à suivre pour l'élément. La modification de l'une de ces valeurs conduira celui-ci à ne pas pouvoir suivre le tracé de façon nette lors de l'animation.</p>
+La fonction `path()` est utilisée pour créer un tracé à suivre pour l'élément. La modification de l'une de ces valeurs conduira celui-ci à ne pas pouvoir suivre le tracé de façon nette lors de l'animation.
 
-<p>{{EmbedGHLiveSample("css-examples/path/offset-path.html", '100%', 960)}}</p>
+{{EmbedGHLiveSample("css-examples/path/offset-path.html", '100%', 960)}}
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-     <th scope="col">Spécification</th>
-     <th scope="col">Statut</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('CSS Shapes', '#funcdef-path', 'path()')}}</td>
-      <td>{{Spec2('CSS Shapes')}}</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                            | Statut                           |
+| ------------------------------------------------------------------------ | -------------------------------- |
+| {{SpecName('CSS Shapes', '#funcdef-path', 'path()')}} | {{Spec2('CSS Shapes')}} |
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li>{{cssxref("&lt;shape-outside&gt;")}}</li>
-  <li><a href="/fr/docs/Web/CSS/CSS_Shapes">Formes CSS</a></li>
-  <li><a href="/fr/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes">Vue d'ensemble des formes CSS</a></li>
-  <li><a href="https://css-tricks.com/svg-path-syntax-illustrated-guide/"><i lang="en">SVG Path Syntax Illustrated Guide</i> (en anglais)</a></li>
-</ul>
+- {{cssxref("&lt;shape-outside&gt;")}}
+- [Formes CSS](/fr/docs/Web/CSS/CSS_Shapes)
+- [Vue d'ensemble des formes CSS](/fr/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes)
+- <i lang="en">SVG Path Syntax Illustrated Guide</i>
+
+  [<i lang="en">SVG Path Syntax Illustrated Guide</i> (en anglais)](https://css-tricks.com/svg-path-syntax-illustrated-guide/)

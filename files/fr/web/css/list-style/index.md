@@ -7,19 +7,18 @@ tags:
   - Reference
 translation_of: Web/CSS/list-style
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>list-style</code></strong> est une <a href="/fr/docs/Web/CSS/Propriétés_raccourcies">propriété raccourcie</a> qui permet de définir {{cssxref("list-style-type")}}, {{cssxref("list-style-image")}} et {{cssxref("list-style-position")}}.</p>
+La propriété **`list-style`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) qui permet de définir {{cssxref("list-style-type")}}, {{cssxref("list-style-image")}} et {{cssxref("list-style-position")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/list-style.html")}}</div>
+{{EmbedInteractiveExample("pages/css/list-style.html")}}
 
-<div class="note">
-<p><strong>Note :</strong> Cette propriété s'applique aux éléments d'une liste (c'est-à-dire aux éléments pour lesquels {{cssxref("display")}}<code>: list-item</code><code>;</code>}}). Par défaut, cela inclut les éléments {{HTMLElement("li")}}. Cette propriété peut être héritée par les éléments et si on veut donc gérer une liste de façon uniforme, on pourra appliquer la propriété à l'élément parent (qui correspond en général à {{HTMLElement("ol")}} ou à {{HTMLElement("ul")}}).</p>
-</div>
+> **Note :** Cette propriété s'applique aux éléments d'une liste (c'est-à-dire aux éléments pour lesquels {{cssxref("display")}}` : list-item``; `}}). Par défaut, cela inclut les éléments {{HTMLElement("li")}}. Cette propriété peut être héritée par les éléments et si on veut donc gérer une liste de façon uniforme, on pourra appliquer la propriété à l'élément parent (qui correspond en général à {{HTMLElement("ol")}} ou à {{HTMLElement("ul")}}).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Type */
+```css
+/* Type */
 list-style: square;
 
 /* Image */
@@ -40,112 +39,93 @@ list-style: none;
 list-style: inherit;
 list-style: initial;
 list-style: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<p>Cette propriété raccourcie peut prendre un, deux ou trois mots-clés, dans n'importe quel ordre. Si {{cssxref("list-style-type")}} et {{cssxref("list-style-image")}} sont tous les deux définis, <code>list-style-type</code> sera utilisé si l'image est indisponible.</p>
+Cette propriété raccourcie peut prendre un, deux ou trois mots-clés, dans n'importe quel ordre. Si {{cssxref("list-style-type")}} et {{cssxref("list-style-image")}} sont tous les deux définis, `list-style-type` sera utilisé si l'image est indisponible.
 
-<dl>
- <dt><code>&lt;'list-style-type'&gt;</code></dt>
- <dd>Voir {{cssxref("list-style-type")}}</dd>
- <dt><code>&lt;'list-style-image'&gt;</code></dt>
- <dd>Voir {{cssxref("list-style-image")}}</dd>
- <dt><code>&lt;'list-style-position'&gt;</code></dt>
- <dd>Voir {{cssxref("list-style-position")}}</dd>
- <dt><code>none</code></dt>
- <dd>Aucun style n'est utilisé.</dd>
-</dl>
+- `<'list-style-type'>`
+  - : Voir {{cssxref("list-style-type")}}
+- `<'list-style-image'>`
+  - : Voir {{cssxref("list-style-image")}}
+- `<'list-style-position'>`
+  - : Voir {{cssxref("list-style-position")}}
+- `none`
+  - : Aucun style n'est utilisé.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.un {
+```css
+.un {
   list-style: circle;
 }
 
 .deux {
   list-style: square inside;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">Liste 1
-&lt;ul class="un"&gt;
-  &lt;li&gt;Élément 1&lt;/li&gt;
-  &lt;li&gt;Élément 2&lt;/li&gt;
-  &lt;li&gt;Élément 3&lt;/li&gt;
-&lt;/ul&gt;
+```html
+Liste 1
+<ul class="un">
+  <li>Élément 1</li>
+  <li>Élément 2</li>
+  <li>Élément 3</li>
+</ul>
 Liste 2
-&lt;ul class="deux"&gt;
-  &lt;li&gt;Élément A&lt;/li&gt;
-  &lt;li&gt;Élément B&lt;/li&gt;
-  &lt;li&gt;Élément C&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+<ul class="deux">
+  <li>Élément A</li>
+  <li>Élément B</li>
+  <li>Élément C</li>
+</ul>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples','auto', 220)}}</p>
+{{EmbedLiveSample('Exemples','auto', 220)}}
 
-<h2 id="Accessibilité">Accessibilité</h2>
+## Accessibilité
 
-<p>Safari ne reconnait pas (incorrectement) les listes non ordonnées lorsque <code>list-style:none</code> leur est appliqué et ne les ajoute pas dans l'arbre d'accessibilité (utilisé par les lecteurs d'écrans). Pour pallier ce problème, on peut ajouter un <a href="https://fr.wikipedia.org/wiki/Espace_sans_chasse">espace sans chasse</a> comme <a href="/fr/docs/Web/CSS/content">pseudo-contenu</a> avant chaque élément de liste afin que la liste soit correctement annoncée.</p>
+Safari ne reconnait pas (incorrectement) les listes non ordonnées lorsque `list-style:none` leur est appliqué et ne les ajoute pas dans l'arbre d'accessibilité (utilisé par les lecteurs d'écrans). Pour pallier ce problème, on peut ajouter un [espace sans chasse](https://fr.wikipedia.org/wiki/Espace_sans_chasse) comme [pseudo-contenu](/fr/docs/Web/CSS/content) avant chaque élément de liste afin que la liste soit correctement annoncée.
 
-<pre class="brush: css">ul {
+```css
+ul {
   list-style: none;
 }
 
 ul li::before {
   content: "\200B";
 }
-</pre>
+```
 
-<ul>
- <li><a href="https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/">VoiceOver et <code>list-style-type: none</code> – Unfettered Thoughts (en anglais)</a></li>
- <li><a href="/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways">Comprendre les règles WCAG 1.3</a></li>
- <li><em><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html" rel="noopener">Understanding Success Criterion 1.3.1, W3C Understanding WCAG 2.0 </a></em><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html" rel="noopener">(en anglais)</a></li>
-</ul>
+- [VoiceOver et `list-style-type: none` – Unfettered Thoughts (en anglais)](https://unfetteredthoughts.net/2017/09/26/voiceover-and-list-style-type-none/)
+- [Comprendre les règles WCAG 1.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
+- _[Understanding Success Criterion 1.3.1, W3C Understanding WCAG 2.0 ](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)_[(en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Lists', '#list-style-property', 'list-style')}}</td>
-   <td>{{Spec2('CSS3 Lists')}}</td>
-   <td>Aucun changement.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'generate.html#propdef-list-style', 'list-style')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | État                             | Commentaires         |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName('CSS3 Lists', '#list-style-property', 'list-style')}}             | {{Spec2('CSS3 Lists')}} | Aucun changement.    |
+| {{SpecName('CSS2.1', 'generate.html#propdef-list-style', 'list-style')}} | {{Spec2('CSS2.1')}}         | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.list-style")}}</p>
+{{Compat("css.properties.list-style")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("list-style-type")}}</li>
- <li>{{cssxref("list-style-image")}}</li>
- <li>{{cssxref("list-style-position")}}</li>
-</ul>
+- {{cssxref("list-style-type")}}
+- {{cssxref("list-style-image")}}
+- {{cssxref("list-style-position")}}

@@ -7,23 +7,24 @@ tags:
   - Type
 translation_of: Web/CSS/number
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Le type de donnée CSS <strong><code>&lt;number&gt;</code></strong> permet de représenter des nombres entiers ou décimaux. C'est donc un type qui englobe le type de données {{cssxref("&lt;integer&gt;")}} (permettant de représenter des entiers).</p>
+Le type de donnée CSS **`<number>`** permet de représenter des nombres entiers ou décimaux. C'est donc un type qui englobe le type de données {{cssxref("&lt;integer&gt;")}} (permettant de représenter des entiers).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Pour représenter des nombres décimaux, on utilisera le point (.) comme séparateur. Comme pour {{cssxref("&lt;integer&gt;")}}, il n'y a aucune unité associée aux valeurs de type <code>&lt;number&gt;</code> (ce n'est donc pas une dimension).</p>
+Pour représenter des nombres décimaux, on utilisera le point (.) comme séparateur. Comme pour {{cssxref("&lt;integer&gt;")}}, il n'y a aucune unité associée aux valeurs de type `<number>` (ce n'est donc pas une dimension).
 
-<h2 id="Interpolation">Interpolation</h2>
+## Interpolation
 
-<p>Les valeurs de type <code>&lt;number&gt;</code> peuvent être interpolées afin d'être utilisées dans les animations. Les valeurs de ce type seront interpolées comme des nombres réels à virgule flottante. La vitesse de l'interpolation sera définie grâce <a href="/fr/docs/Web/CSS/easing-function">à la fonction de temporisation</a> associée à l'animation.</p>
+Les valeurs de type `<number>` peuvent être interpolées afin d'être utilisées dans les animations. Les valeurs de ce type seront interpolées comme des nombres réels à virgule flottante. La vitesse de l'interpolation sera définie grâce [à la fonction de temporisation](/fr/docs/Web/CSS/easing-function) associée à l'animation.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Voici des exemples de valeurs <code>&lt;number&gt;</code> valides :</p>
+Voici des exemples de valeurs `<number>` valides :
 
-<pre class="brush: css example-good">12          Un entier (<a href="/fr/docs/Web/CSS/integer">&lt;integer&gt;</a>) est également un &lt;number&gt;
+```css example-good
+12          Un entier (<integer>) est également un <number>
 4.01        Un nombre (décimal) positif
 -456.8      Un nombre décimal négatif
 0.0         Zéro
@@ -32,55 +33,29 @@ translation_of: Web/CSS/number
 .60         Les chiffres avant le point sont facultatifs
 10e3        On peut utiliser la notation scientifique
 -3.4e-2     Un cas d'utilisation de notation scientifique plus complexe
-</pre>
+```
 
-<p>Voici des exemples de valeurs invalides :</p>
+Voici des exemples de valeurs invalides :
 
-<pre class="brush: css example-bad">12.         Le point doit être suivi par des chiffres
+```css example-bad
+12.         Le point doit être suivi par des chiffres
 +-12.2      Seul un +/- est autorisé.
 12.1.1      Seul un point est autorisé.
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Values", "#numbers", "&lt;number&gt;")}}</td>
-   <td>{{Spec2("CSS4 Values")}}</td>
-   <td>Aucune modification significative.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Values', '#numbers', '&lt;number&gt;')}}</td>
-   <td>{{Spec2('CSS3 Values')}}</td>
-   <td>Aucune modification significative depuis la spécification CSS de niveau 2 (première révision).</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'syndata.html#numbers', '&lt;number&gt;')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Définition explicite du type de données.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '', '&lt;number&gt;')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Définition implicite du type de données.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                             | Commentaires                                                                                   |
+| ------------------------------------------------------------------------------------ | -------------------------------- | ---------------------------------------------------------------------------------------------- |
+| {{SpecName("CSS4 Values", "#numbers", "&lt;number&gt;")}}         | {{Spec2("CSS4 Values")}} | Aucune modification significative.                                                             |
+| {{SpecName('CSS3 Values', '#numbers', '&lt;number&gt;')}}         | {{Spec2('CSS3 Values')}} | Aucune modification significative depuis la spécification CSS de niveau 2 (première révision). |
+| {{SpecName('CSS2.1', 'syndata.html#numbers', '&lt;number&gt;')}} | {{Spec2('CSS2.1')}}         | Définition explicite du type de données.                                                       |
+| {{SpecName('CSS1', '', '&lt;number&gt;')}}                             | {{Spec2('CSS1')}}         | Définition implicite du type de données.                                                       |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.types.number")}}</p>
+{{Compat("css.types.number")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("&lt;integer&gt;")}}</li>
-</ul>
+- {{cssxref("&lt;integer&gt;")}}

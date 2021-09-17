@@ -10,102 +10,66 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><em><strong>CSS Color</strong></em> est un module des spécifications CSS qui décrit la gestion des couleurs, les types de donnée associés, la fusion des couleurs et la gestion de l'opacitié. Ce module ne contient pas l'ensemble des propriétés CSS qui prennent une valeur de type {{cssxref("&lt;color&gt;")}}, toutefois, ces propriétés dépendent des notions et règles définies dans cette spécification.</p>
+**_CSS Color_** est un module des spécifications CSS qui décrit la gestion des couleurs, les types de donnée associés, la fusion des couleurs et la gestion de l'opacitié. Ce module ne contient pas l'ensemble des propriétés CSS qui prennent une valeur de type {{cssxref("&lt;color&gt;")}}, toutefois, ces propriétés dépendent des notions et règles définies dans cette spécification.
 
-<h2 id="Référence">Référence</h2>
+## Référence
 
-<h3 id="Propriétés">Propriétés</h3>
+### Propriétés
 
-<ul>
- <li>{{cssxref("color")}}</li>
- <li>{{cssxref("opacity")}}</li>
- <li>{{cssxref("color-adjust")}}</li>
-</ul>
+- {{cssxref("color")}}
+- {{cssxref("opacity")}}
+- {{cssxref("color-adjust")}}
 
-<h3 id="Types_de_données">Types de données</h3>
+### Types de données
 
-<ul>
- <li>{{cssxref("&lt;color&gt;")}}</li>
-</ul>
+- {{cssxref("&lt;color&gt;")}}
 
-<h2 id="Guides">Guides</h2>
+## Guides
 
-<dl>
- <dt><a href="/fr/docs/Web/HTML/Appliquer_des_couleurs">Appliquer des couleurs à des éléments HTML grâce à CSS</a></dt>
- <dd>Un guide décrivant comment utiliser CSS pour colorer différents types de contenu. Cet article couvre l'ensemble des propriétés CSS ayant trait aux couleurs.</dd>
-</dl>
+- [Appliquer des couleurs à des éléments HTML grâce à CSS](/fr/docs/Web/HTML/Appliquer_des_couleurs)
+  - : Un guide décrivant comment utiliser CSS pour colorer différents types de contenu. Cet article couvre l'ensemble des propriétés CSS ayant trait aux couleurs.
 
-<h2 id="Outils">Outils</h2>
+## Outils
 
-<dl>
- <dt><a href="/fr/docs/Web/CSS/Couleurs_CSS/Sélecteur_de_couleurs">Sélecteur de couleurs</a></dt>
- <dd>Cet outil permet de créer, ajuster et tester des couleurs sur mesure.</dd>
-</dl>
+- [Sélecteur de couleurs](/fr/docs/Web/CSS/Couleurs_CSS/Sélecteur_de_couleurs)
+  - : Cet outil permet de créer, ajuster et tester des couleurs sur mesure.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Colors')}}</td>
-   <td>{{Spec2('CSS4 Colors')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Colors')}}</td>
-   <td>{{Spec2('CSS3 Colors')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'colors.html')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                    | État                             | Commentaires         |
+| ------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName('CSS4 Colors')}}             | {{Spec2('CSS4 Colors')}} |                      |
+| {{SpecName('CSS3 Colors')}}             | {{Spec2('CSS3 Colors')}} |                      |
+| {{SpecName('CSS2.1', 'colors.html')}} | {{Spec2('CSS2.1')}}         |                      |
+| {{SpecName('CSS1')}}                     | {{Spec2('CSS1')}}         | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<h3 id="color_property"><code>color</code> property</h3>
+### `color` property
 
-<p>{{Compat("css.properties.color")}}</p>
+{{Compat("css.properties.color")}}
 
-<h3 id="color-adjust_property"><code>color-adjust</code> property</h3>
+### `color-adjust` property
 
-<p>{{Compat("css.properties.color-adjust")}}</p>
+{{Compat("css.properties.color-adjust")}}
 
-<h3 id="opacity_property"><code>opacity</code> property</h3>
+### `opacity` property
 
-<p>{{Compat("css.properties.opacity")}}</p>
+{{Compat("css.properties.opacity")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Des propriétés liées aux couleurs mais qui font partie d'autres spécifications :
-  <ul>
-   <li>{{cssxref("background-color")}},</li>
-   <li>{{cssxref("border-color")}},</li>
-   <li>{{cssxref("outline-color")}},</li>
-   <li>{{cssxref("text-decoration-color")}},</li>
-   <li>{{cssxref("text-emphasis-color")}},</li>
-   <li>{{cssxref("text-shadow")}},</li>
-   <li>{{cssxref("caret-color")}},</li>
-   <li>{{cssxref("column-rule-color")}}</li>
-  </ul>
- </li>
- <li>En CSS, les dégradés ne sont pas des couleurs mais des <a href="/fr/docs/Web/CSS/CSS_Images">images</a>.</li>
-</ul>
+- Des propriétés liées aux couleurs mais qui font partie d'autres spécifications :
+
+  - {{cssxref("background-color")}},
+  - {{cssxref("border-color")}},
+  - {{cssxref("outline-color")}},
+  - {{cssxref("text-decoration-color")}},
+  - {{cssxref("text-emphasis-color")}},
+  - {{cssxref("text-shadow")}},
+  - {{cssxref("caret-color")}},
+  - {{cssxref("column-rule-color")}}
+
+- En CSS, les dégradés ne sont pas des couleurs mais des [images](/fr/docs/Web/CSS/CSS_Images).

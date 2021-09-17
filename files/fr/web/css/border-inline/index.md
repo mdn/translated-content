@@ -9,45 +9,45 @@ tags:
   - Reference
 translation_of: Web/CSS/border-inline
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propriété <strong><code>border-inline</code></strong> est une <a href="/fr/docs/Web/CSS/Propriétés_raccourcies">propriété raccourcie</a> qui permet de paramétrer les différentes propriétés logiques relatives à la bordure sur l'axe en ligne.</p>
+La propriété **`border-inline`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) qui permet de paramétrer les différentes propriétés logiques relatives à la bordure sur l'axe en ligne.
 
-<pre class="brush:css no-line-numbers">border-inline: 1px;
+```css
+border-inline: 1px;
 border-inline: 2px dotted;
 border-inline: medium dashed blue;
-</pre>
+```
 
-<p><code>border-inline</code> peut être utilisée afin de définir une ou plusieurs propriétés parmi {{cssxref("border-inline-width")}}, {{cssxref("border-inline-style")}} et {{cssxref("border-inline-color")}}. La bordure est donc paramétrée de la même façon pour le début et la fin de l'axe de en ligne. Les propriétés physiques correspondantes dépendront du mode d'écriture, de la direction et de l'orientation du texte. Autrement dit, cette propriété peut correspondre à {{cssxref("border-top")}} et {{cssxref("border-bottom")}} ou à {{cssxref("border-right")}} et {{cssxref("border-left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.</p>
+`border-inline` peut être utilisée afin de définir une ou plusieurs propriétés parmi {{cssxref("border-inline-width")}}, {{cssxref("border-inline-style")}} et {{cssxref("border-inline-color")}}. La bordure est donc paramétrée de la même façon pour le début et la fin de l'axe de en ligne. Les propriétés physiques correspondantes dépendront du mode d'écriture, de la direction et de l'orientation du texte. Autrement dit, cette propriété peut correspondre à {{cssxref("border-top")}} et {{cssxref("border-bottom")}} ou à {{cssxref("border-right")}} et {{cssxref("border-left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
 
-<p>Les bordures sur l'autre dimension peuvent être définies grâce à {{cssxref("border-block")}}, (qui est la proprété raccourcie pour {{cssxref("border-block-start")}} et {{cssxref("border-block-end")}}).</p>
+Les bordures sur l'autre dimension peuvent être définies grâce à {{cssxref("border-block")}}, (qui est la proprété raccourcie pour {{cssxref("border-block-start")}} et {{cssxref("border-block-end")}}).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<p>La propriété <code>border-inline</code> peut être utilisée avec une ou plusieurs de ces valeurs, quel que soit l'ordre.</p>
+La propriété `border-inline` peut être utilisée avec une ou plusieurs de ces valeurs, quel que soit l'ordre.
 
-<dl>
- <dt><code>&lt;'border-width'&gt;</code></dt>
- <dd>La largeur de la bordure. Voir {{cssxref("border-width")}}.</dd>
- <dt><code>&lt;'border-style'&gt;</code></dt>
- <dd>Le style pour la ligne de la bordure. Voir {{cssxref("border-style")}}.</dd>
- <dt><code>&lt;'color'&gt;</code></dt>
- <dd>La couleur de la bordure. Voir {{cssxref("color")}}.</dd>
-</dl>
+- `<'border-width'>`
+  - : La largeur de la bordure. Voir {{cssxref("border-width")}}.
+- `<'border-style'>`
+  - : Le style pour la ligne de la bordure. Voir {{cssxref("border-style")}}.
+- `<'color'>`
+  - : La couleur de la bordure. Voir {{cssxref("color")}}.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p> </p>
 
-<h3 id="CSS">CSS</h3>
 
-<pre class="brush: css">div {
+### CSS
+
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -56,56 +56,42 @@ border-inline: medium dashed blue;
 .exempleTexte {
   writing-mode: vertical-rl;
   border-inline: 5px dashed blue;
-}</pre>
+}
+```
 
-<p> </p>
 
-<h3 id="HTML">HTML</h3>
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exempleTexte"&gt;Texte exemple&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+### HTML
 
-<h3 id="Résultat">Résultat</h3>
+```html
+<div>
+  <p class="exempleTexte">Texte exemple</p>
+</div>
+```
 
-<p>{{EmbedLiveSample("Exemples", 140, 140)}}</p>
+### Résultat
 
-<h2 id="Spécifications">Spécifications</h2>
+{{EmbedLiveSample("Exemples", 140, 140)}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-border-inline", "border-inline")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+## Spécifications
 
-<p>{{cssinfo}}</p>
+| Spécification                                                                                                | État                                             | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------------------- |
+| {{SpecName("CSS Logical Properties", "#propdef-border-inline", "border-inline")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+{{cssinfo}}
 
-<p>{{Compat("css.properties.border-inline")}}</p>
+## Compatibilité des navigateurs
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+{{Compat("css.properties.border-inline")}}
 
-<ul>
- <li>Les propriétés physiques qui peuvent correspondre à cette propriété logique :
-  <ul>
-   <li>{{cssxref("border-top")}},</li>
-   <li>{{cssxref("border-right")}},</li>
-   <li>{{cssxref("border-bottom")}},</li>
-   <li>{{cssxref("border-left")}}.</li>
-  </ul>
- </li>
- <li>Les propriétés relatives aux propriétés logiques : {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+## Voir aussi
+
+- Les propriétés physiques qui peuvent correspondre à cette propriété logique :
+
+  - {{cssxref("border-top")}},
+  - {{cssxref("border-right")}},
+  - {{cssxref("border-bottom")}},
+  - {{cssxref("border-left")}}.
+
+- Les propriétés relatives aux propriétés logiques : {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

@@ -7,28 +7,27 @@ tags:
   - Reference
 translation_of: Web/CSS/z-index
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>z-index</code></strong> définit le « <em>z-order</em> » (NdT : « ordre z » n'est pas usité) d'un élément <a href="/fr/docs/Web/CSS/position">positionné</a> et de ses éléments fils ou de ses éléments flexibles (les enfants d'un élément avec <code>display: flex</code>). Lorsque des éléments se chevauchent, le <em>z-order</em> détermine l'ordre des différentes couches que formeront les éléments. Généralement, un élément couvrira un autre élément si sa valeur de  <code>z-index</code> est supérieure à celle du deuxième élément.</p>
+La propriété **`z-index`** définit le « _z-order_ » (NdT : « ordre z » n'est pas usité) d'un élément [positionné](/fr/docs/Web/CSS/position) et de ses éléments fils ou de ses éléments flexibles (les enfants d'un élément avec `display: flex`). Lorsque des éléments se chevauchent, le _z-order_ détermine l'ordre des différentes couches que formeront les éléments. Généralement, un élément couvrira un autre élément si sa valeur de  `z-index` est supérieure à celle du deuxième élément.
 
-<div>{{EmbedInteractiveExample("pages/css/z-index.html")}}</div>
+{{EmbedInteractiveExample("pages/css/z-index.html")}}
 
-<p>Pour les boîtes positionnées (celles pour lesquelles <code>position</code> est différent de <code>static</code>), la propriété <code>z-index</code> définit :</p>
+Pour les boîtes positionnées (celles pour lesquelles `position` est différent de `static`), la propriété `z-index` définit :
 
-<ol>
- <li>Le niveau de la boîte dans la pile par rapport <a href="/fr/docs/Web/CSS/Comprendre_z-index/L'empilement_de_couches">au contexte d'empilement</a> courant</li>
- <li>Si la boîte crée un contexte d'empilement local.</li>
-</ol>
+1.  Le niveau de la boîte dans la pile par rapport [au contexte d'empilement](/fr/docs/Web/CSS/Comprendre_z-index/L'empilement_de_couches) courant
+2.  Si la boîte crée un contexte d'empilement local.
 
-<p>L'exemple ci-avant illustre l'impact de <code>z-index</code>. À gauche, on a dessiné trois boîtes qui se chevauchent avec <a href="/fr/docs/Learn/CSS/CSS_layout/Positioning#Absolute_positioning">un positionnement absolu</a>. Par défaut, les éléments sont empilés dans l'ordre dans lequel ils sont déclarés dans le document HTML. À droite, on présente le même document mais l'ordre des couches a été inversé grâce à <code>z-index</code>.</p>
+L'exemple ci-avant illustre l'impact de `z-index`. À gauche, on a dessiné trois boîtes qui se chevauchent avec [un positionnement absolu](/fr/docs/Learn/CSS/CSS_layout/Positioning#Absolute_positioning). Par défaut, les éléments sont empilés dans l'ordre dans lequel ils sont déclarés dans le document HTML. À droite, on présente le même document mais l'ordre des couches a été inversé grâce à `z-index`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Avec un mot-clé */
+```css
+/* Avec un mot-clé */
 z-index: auto;
 
 /* valeurs entières */
-/* type &lt;integer&gt; */
+/* type <integer> */
 z-index: 0;
 z-index: 3;
 z-index: 289;
@@ -41,36 +40,36 @@ z-index: -1;
 z-index: inherit;
 z-index: initial;
 z-index: unset;
-</pre>
+```
 
-<p>La propriété <code>z-index</code> se définit grâce au mot-clé <code><a href="#auto">auto</a></code> ou grâce à une valeur entière (<code><a href="#integer">&lt;integer&gt;</a></code>).</p>
+La propriété `z-index` se définit grâce au mot-clé [`auto`](#auto) ou grâce à une valeur entière ([`<integer>`](#integer)).
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>La boîte ne crée pas de nouveau contexte d'empilement. Le niveau d'empilement de la boîte dans le contexte d'empilement courant est le même que celui de la boîte parente.</dd>
- <dt><code>&lt;integer&gt;</code></dt>
- <dd>L'entier fourni (type {{cssxref("&lt;integer&gt;")}}) sera le niveau de la boîte dans la pile d'empilement pour le contexte d'empilement courant. La boîte crée un nouveau contexte d'empilement pour lequel son niveau est <code>0</code>. Cela signifie que les index z des descendants ne sont pas comparés à ceux des éléments en dehors de l'élément.</dd>
-</dl>
+- `auto`
+  - : La boîte ne crée pas de nouveau contexte d'empilement. Le niveau d'empilement de la boîte dans le contexte d'empilement courant est le même que celui de la boîte parente.
+- `<integer>`
+  - : L'entier fourni (type {{cssxref("&lt;integer&gt;")}}) sera le niveau de la boîte dans la pile d'empilement pour le contexte d'empilement courant. La boîte crée un nouveau contexte d'empilement pour lequel son niveau est `0`. Cela signifie que les index z des descendants ne sont pas comparés à ceux des éléments en dehors de l'élément.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="boite-tirets"&gt;Boîte tirets
-  &lt;span class="boite-doree"&gt;Boîte dorée&lt;/span&gt;
-  &lt;span class="boite-verte"&gt;Boîte verte&lt;/span&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="boite-tirets">Boîte tirets
+  <span class="boite-doree">Boîte dorée</span>
+  <span class="boite-verte">Boîte verte</span>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css; highlight:[3,11,19]">.boite-tirets {
+```css
+.boite-tirets {
   position: relative;
   z-index: 1;
   border: dashed;
@@ -96,45 +95,26 @@ z-index: unset;
   height: 7em;
   opacity: 0.9;
 }
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemple', '550', '200', '')}}</p>
+{{EmbedLiveSample('Exemple', '550', '200', '')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', "Comportement de z-index pour l'animation")}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td>Définit <code>z-index</code> comme pouvant être animé.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visuren.html#z-index', 'z-index')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                    | État                                     | Commentaires                                |
+| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------- |
+| {{SpecName('CSS3 Transitions', '#animatable-css', "Comportement de z-index pour l'animation")}} | {{Spec2('CSS3 Transitions')}} | Définit `z-index` comme pouvant être animé. |
+| {{SpecName('CSS2.1', 'visuren.html#z-index', 'z-index')}}                                                     | {{Spec2('CSS2.1')}}                 | Définition initiale                         |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.z-index")}}</p>
+{{Compat("css.properties.z-index")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>La propriété CSS {{cssxref("position")}}</li>
- <li><a href="/fr/docs/Web/CSS/Comprendre_z-index">Comprendre le fonctionnement de <code>z-index</code></a></li>
-</ul>
+- La propriété CSS {{cssxref("position")}}
+- [Comprendre le fonctionnement de `z-index`](/fr/docs/Web/CSS/Comprendre_z-index)

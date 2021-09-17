@@ -8,50 +8,46 @@ tags:
   - Reference
 translation_of: Web/CSS/revert
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Le mot-clé <strong><code>revert</code></strong> permet de <em>remonter</em> la cascade afin que la propriété puisse prendre la valeur qui aurait été utilisée sans mise en forme particulière (la valeur qu'elle aurait eu sans mise en forme appliquée par la feuille de style de l'auteur, de l'utilisateur ou de l'agent utilisateur). Ainsi, si la propriété hérite de son parent, elle prendra la valeur héritée et sinon la valeur par défaut de l'agent utilisateur (ou de la feuille de style utilisateur).</p>
+Le mot-clé **`revert`** permet de _remonter_ la cascade afin que la propriété puisse prendre la valeur qui aurait été utilisée sans mise en forme particulière (la valeur qu'elle aurait eu sans mise en forme appliquée par la feuille de style de l'auteur, de l'utilisateur ou de l'agent utilisateur). Ainsi, si la propriété hérite de son parent, elle prendra la valeur héritée et sinon la valeur par défaut de l'agent utilisateur (ou de la feuille de style utilisateur).
 
-<p>Cette valeur peut être utilisée pour n'importe quelle propriété CSS, y compris la propriété raccourcie {{cssxref("all")}}.</p>
+Cette valeur peut être utilisée pour n'importe quelle propriété CSS, y compris la propriété raccourcie {{cssxref("all")}}.
 
-<p>La remontée de la cascade sera plus ou moins prononcée selon l'endroit où est utilisé <code>revert</code> :</p>
+La remontée de la cascade sera plus ou moins prononcée selon l'endroit où est utilisé `revert` :
 
-<ul>
- <li>Si <code>revert</code> est utilisé dans une feuille de style d'un site, ce sera la valeur définie dans la feuille de style de l'utilisateur qui sera utilisée ou celle de l'agent utilisateur par défaut sinon.</li>
- <li>Si <code>revert</code> est utilisé dans une feuille de style utilisateur ou si le style a été appliqué par l'utilisateur, <code>revert</code> entraînera l'utilisation de la valeur par défaut de l'agent utilisateur.</li>
- <li>Si <code>revert</code> est utilisé comme style par défaut de l'agent utilisateur, il aura un comportement équivalent à {{cssxref("unset")}}</li>
-</ul>
+- Si `revert` est utilisé dans une feuille de style d'un site, ce sera la valeur définie dans la feuille de style de l'utilisateur qui sera utilisée ou celle de l'agent utilisateur par défaut sinon.
+- Si `revert` est utilisé dans une feuille de style utilisateur ou si le style a été appliqué par l'utilisateur, `revert` entraînera l'utilisation de la valeur par défaut de l'agent utilisateur.
+- Si `revert` est utilisé comme style par défaut de l'agent utilisateur, il aura un comportement équivalent à {{cssxref("unset")}}
 
-<p>Le mot-clé <code>revert</code> fonctionne comme <code>unset</code> pour de nombreux cas. Les seules différences observables se produisent quand les valeurs sont définies par le navigateur ou dans une feuille de style utilisateur.</p>
+Le mot-clé `revert` fonctionne comme `unset` pour de nombreux cas. Les seules différences observables se produisent quand les valeurs sont définies par le navigateur ou dans une feuille de style utilisateur.
 
-<p><code>revert</code> n'aura pas d'effet sur les éléments fils de l'élément ciblé (mais supprimera l'effet d'une règle du parent qui s'appliquerait indirectement aux enfants).</p>
+`revert` n'aura pas d'effet sur les éléments fils de l'élément ciblé (mais supprimera l'effet d'une règle du parent qui s'appliquerait indirectement aux enfants).
 
-<div class="note">
-<p><strong>Note :</strong> <code>revert</code> est une simple valeur, il est toujours possible de la surcharger par une autre avec une règle d'une <a href="/fr/docs/Apprendre/CSS/Introduction_à_CSS/La_cascade_et_l_héritage#Spécificité">spécificité</a> supérieure.</p>
-</div>
+> **Note :** `revert` est une simple valeur, il est toujours possible de la surcharger par une autre avec une règle d'une [spécificité](/fr/docs/Apprendre/CSS/Introduction_à_CSS/La_cascade_et_l_héritage#Spécificité) supérieure.
 
-<div class="note">
-<p><strong>Note :</strong> Le mot-clé <code>revert</code> est différent de {{cssxref("initial")}} et ne doit pas être confondu avec ce dernier. {{cssxref("initial")}} utilise <a href="/fr/docs/Web/CSS/Valeur_initiale">la valeur initiale</a>, définie pour chaque propriété par les spécifications CSS. En revanche, les feuilles de style des agents utilisateurs définissent des valeurs par défaut selon les sélecteurs CSS. Par exemple, <a href="/fr/docs/Web/CSS/Valeur_initiale">la valeur initiale</a> de {{cssxref("display")}} est <code>inline</code> mais un agent utilisateur pourra définir les valeurs par défaut suivante dans sa feuille de style : <code>block</code> pour {{HTMLElement("div")}}, <code>table</code> pour {{HTMLElement("table")}} etc.</p>
-</div>
+> **Note :** Le mot-clé `revert` est différent de {{cssxref("initial")}} et ne doit pas être confondu avec ce dernier. {{cssxref("initial")}} utilise [la valeur initiale](/fr/docs/Web/CSS/Valeur_initiale), définie pour chaque propriété par les spécifications CSS. En revanche, les feuilles de style des agents utilisateurs définissent des valeurs par défaut selon les sélecteurs CSS. Par exemple, [la valeur initiale](/fr/docs/Web/CSS/Valeur_initiale) de {{cssxref("display")}} est `inline` mais un agent utilisateur pourra définir les valeurs par défaut suivante dans sa feuille de style : `block` pour {{HTMLElement("div")}}, `table` pour {{HTMLElement("table")}} etc.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Exemple_simple">Exemple simple</h3>
+### Exemple simple
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;section&gt;
-  &lt;p&gt;Voici une section !&lt;/p&gt;
+```html
+<section>
+  <p>Voici une section !</p>
 
-  &lt;aside class="widget"&gt;
-    &lt;p&gt;Et un petit widget.&lt;/p&gt;
-  &lt;/aside&gt;
-&lt;/section&gt;
-</pre>
+  <aside class="widget">
+    <p>Et un petit widget.</p>
+  </aside>
+</section>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">section p {
+```css
+section p {
   color: blue;
   font-family: sans-serif;
   font-weight: bold;
@@ -59,83 +55,93 @@ translation_of: Web/CSS/revert
 
 .widget p {
   all: revert;
-}</pre>
+}
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('Exemple_simple')}}</p>
+{{EmbedLiveSample('Exemple_simple')}}
 
-<h3 id="revert_et_unset"><code>revert</code> et <code>unset</code></h3>
+### `revert` et `unset`
 
-<p>Bien que <code>revert</code> et <code>unset</code> soient semblables, il y a quelques différences pour certaines propriétés de certains éléments.</p>
+Bien que `revert` et `unset` soient semblables, il y a quelques différences pour certaines propriétés de certains éléments.
 
-<p>Dans l'exemple qui suit, on indique une valeur spécifique pour <code>font-weight</code> au niveau de la feuille de style globale sur laquelle on revient avec <code>unset</code> et <code>revert</code>. <code>unset</code> conservera un texte normal car c'est la valeur initiale pour <code>font-weight</code> tandis que <code>revert</code> rendra le texte en gras car c'est la valeur par défaut pour les titres pour la plupart des navigateurs.</p>
+Dans l'exemple qui suit, on indique une valeur spécifique pour `font-weight` au niveau de la feuille de style globale sur laquelle on revient avec `unset` et `revert`. `unset` conservera un texte normal car c'est la valeur initiale pour `font-weight` tandis que `revert` rendra le texte en gras car c'est la valeur par défaut pour les titres pour la plupart des navigateurs.
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">h3 {
+```css
+h3 {
   font-weight: normal;
   color: blue;
-}</pre>
+}
+```
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;h3 style="font-weight: unset; color: unset;"&gt;
+```html
+<h3 style="font-weight: unset; color: unset;">
   Ceci aura toujours font-weight: normal mais color: black
-&lt;/h3&gt;
-&lt;p&gt;
+</h3>
+<p>
   Juste un peu de texte
-&lt;/p&gt;
-&lt;h3 style="font-weight: revert; color: revert;"&gt;
+</p>
+<h3 style="font-weight: revert; color: revert;">
   Ceci devrait avoir font-weight: bold (la valeur originale)
   et color: black
-&lt;/h3&gt;
-&lt;p&gt;
+</h3>
+<p>
  Juste un peu de texte
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h4 id="Résultat_2">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('revert_et_unset')}}</p>
+{{EmbedLiveSample('revert_et_unset')}}
 
-<h3 id="all"><code>all</code></h3>
+### `all`
 
-<p>Revenir sur toutes les valeurs peut s'avérer utile lorsqu'on veut annuler l'effet de modifications lourdes. Si on poursuit avec l'exemple précédent, plutôt que de revenir séparément sur <code>font-weight</code> et <code>color</code>, on utilise <code>all</code> à la place.</p>
+Revenir sur toutes les valeurs peut s'avérer utile lorsqu'on veut annuler l'effet de modifications lourdes. Si on poursuit avec l'exemple précédent, plutôt que de revenir séparément sur `font-weight` et `color`, on utilise `all` à la place.
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css">h3 {
+```css
+h3 {
   font-weight: normal;
   color: blue;
   border-bottom: 1px solid grey;
-}</pre>
+}
+```
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;h3&gt;
+```html
+<h3>
   Un style spécifique
-&lt;/h3&gt;
-&lt;p&gt;
+</h3>
+<p>
   Juste un peu de texte
-&lt;/p&gt;
-&lt;h3 style="all: revert"&gt;
+</p>
+<h3 style="all: revert">
   Retour aux réglages par défaut pour toutes les propriétés
-&lt;/h3&gt;
-&lt;p&gt;
+</h3>
+<p>
   Juste un peu de texte
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h4 id="Résultat_3">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('all')}}</p>
+{{EmbedLiveSample('all')}}
 
-<h3 id="Revenir_sur_une_propriété_du_parent">Revenir sur une propriété du parent</h3>
+### Revenir sur une propriété du parent
 
-<p>Utiliser <code>revert</code> annule la valeur d'une propriété pour le seul élément ciblé. Pour illustrer ce principe, nous utiliserons une couleur verte pour une section et rouge pour un paragraphe.</p>
+Utiliser `revert` annule la valeur d'une propriété pour le seul élément ciblé. Pour illustrer ce principe, nous utiliserons une couleur verte pour une section et rouge pour un paragraphe.
 
-<h4 id="CSS_4">CSS</h4>
+#### CSS
 
-<pre class="brush: css">section {
+```css
+section {
   color: darkgreen;
 }
 p {
@@ -144,55 +150,42 @@ p {
 section.with-revert {
   color: revert;
 }
-</pre>
+```
 
-<h4 id="HTML_4">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;section&gt;
-  &lt;h3&gt;Ce texte sera vert foncé&lt;/h3&gt;
-  &lt;p&gt;Ce texte sera rouge.&lt;/p&gt;
+```html
+<section>
+  <h3>Ce texte sera vert foncé</h3>
+  <p>Ce texte sera rouge.</p>
   Ce texte sera aussi vert.
-&lt;/section&gt;
-&lt;section class="with-revert"&gt;
-  &lt;h3&gt;Ce texte sera noir&lt;/h3&gt;
-  &lt;p&gt;Ce texte sera rouge.&lt;/p&gt;
+</section>
+<section class="with-revert">
+  <h3>Ce texte sera noir</h3>
+  <p>Ce texte sera rouge.</p>
   Ce texte sera aussi noir.
-&lt;/section&gt;</pre>
+</section>
+```
 
-<p>On voit ici que le paragraphe reste en rouge malgré l'utilisation de <code>revert</code> pour la section. On voit également que le titre et le nœud texte de la deuxième section sont en noir : comme si <code>section { color: darkgreen }</code> n'existait pas pour cette section.</p>
+On voit ici que le paragraphe reste en rouge malgré l'utilisation de `revert` pour la section. On voit également que le titre et le nœud texte de la deuxième section sont en noir : comme si `section { color: darkgreen }` n'existait pas pour cette section.
 
-<h4 id="Résultat_4">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('Revenir_sur_une_propriété_du_parent')}}</p>
+{{EmbedLiveSample('Revenir_sur_une_propriété_du_parent')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Cascade', '#default', 'revert')}}</td>
-   <td>{{Spec2('CSS4 Cascade')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                        | Statut                           | Commentaires         |
+| -------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('CSS4 Cascade', '#default', 'revert')}} | {{Spec2('CSS4 Cascade')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.types.global_keywords.revert")}}</p>
+{{Compat("css.types.global_keywords.revert")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("initial")}}</li>
- <li>{{cssxref("inherit")}}</li>
- <li>{{cssxref("unset")}}</li>
- <li>La propriété {{cssxref("all")}} permet de réinitialiser l'ensemble des propriétés avec leurs valeurs initiales, héritées, annulées ou par défaut.</li>
-</ul>
+- {{cssxref("initial")}}
+- {{cssxref("inherit")}}
+- {{cssxref("unset")}}
+- La propriété {{cssxref("all")}} permet de réinitialiser l'ensemble des propriétés avec leurs valeurs initiales, héritées, annulées ou par défaut.

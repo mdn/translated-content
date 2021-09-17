@@ -7,39 +7,40 @@ tags:
   - Reference
 translation_of: Web/CSS/grid-area
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>grid-area</code></strong> est une propriété raccourcie pour {{cssxref("grid-row-start")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-row-end")}} et {{cssxref("grid-column-end")}} qui permet de définir la taille d'un objet de la grille et son emplacement via les bords de sa zone de grille.</p>
+La propriété **`grid-area`** est une propriété raccourcie pour {{cssxref("grid-row-start")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-row-end")}} et {{cssxref("grid-column-end")}} qui permet de définir la taille d'un objet de la grille et son emplacement via les bords de sa zone de grille.
 
-<div>{{EmbedInteractiveExample("pages/css/grid-area.html")}}</div>
+{{EmbedInteractiveExample("pages/css/grid-area.html")}}
 
-<p>Si quatre valeurs <code>&lt;grid-line&gt;</code> sont fournies, la première sera appliquée à <code>grid-row-start</code>, la deuxième à <code>grid-column-start</code>, la troisième à <code>grid-row-end</code> et la quatrième à <code>grid-column-end</code>.</p>
+Si quatre valeurs `<grid-line>` sont fournies, la première sera appliquée à `grid-row-start`, la deuxième à `grid-column-start`, la troisième à `grid-row-end` et la quatrième à `grid-column-end`.
 
-<p>Lorsqu'il n'y a pas de valeur pour <code>grid-column-end</code>, si <code>grid-column-start</code> est un identifiant de zone ({{cssxref("&lt;custom-ident&gt;")}}, <code>grid-column-end</code> sera défini avec cet identifiant, sinon il sera défini avec <code>auto</code>.</p>
+Lorsqu'il n'y a pas de valeur pour `grid-column-end`, si `grid-column-start` est un identifiant de zone ({{cssxref("&lt;custom-ident&gt;")}}, `grid-column-end` sera défini avec cet identifiant, sinon il sera défini avec `auto`.
 
-<p>Lorsqu'il n'y a pas de valeur pour <code>grid-row-end</code>, si <code>grid-row-start</code> est un identifiant de zone, <code>grid-row-end</code> sera défini avec cet identifiant, sinon il sera défini avec <code>auto</code>.</p>
+Lorsqu'il n'y a pas de valeur pour `grid-row-end`, si `grid-row-start` est un identifiant de zone, `grid-row-end` sera défini avec cet identifiant, sinon il sera défini avec `auto`.
 
-<p>Lorsqu'il n'y  a pas de valeur pour <code>grid-column-start</code>, si <code>grid-row-start</code> est un identifiant de zone, les quatres propriétés seront définies avec cette valeur. Sinon, elles vaudront <code>auto</code>.</p>
+Lorsqu'il n'y  a pas de valeur pour `grid-column-start`, si `grid-row-start` est un identifiant de zone, les quatres propriétés seront définies avec cette valeur. Sinon, elles vaudront `auto`.
 
-<p>La propriété <code>grid-area</code> peut également prendre comme valeur un identifiant personnalisé ({{cssxref("&lt;custom-ident&gt;")}}) qui pourra être utilisé comme nom pour une zone de la grille placée grâce à la propriété {{cssxref("grid-template-areas")}}.</p>
+La propriété `grid-area` peut également prendre comme valeur un identifiant personnalisé ({{cssxref("&lt;custom-ident&gt;")}}) qui pourra être utilisé comme nom pour une zone de la grille placée grâce à la propriété {{cssxref("grid-template-areas")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 grid-area: auto;
 grid-area: auto / auto;
 grid-area: auto / auto / auto;
 grid-area: auto / auto / auto / auto;
 
-/* Valeurs de type &lt;custom-ident&gt; */
+/* Valeurs de type <custom-ident> */
 grid-area: une-zone-de-grille;
 grid-area: une-zone-de-grille / une-autre-zone;
 
-/* Forme : &lt;integer&gt; &amp;&amp; &lt;custom-ident&gt;? */
+/* Forme : <integer> && <custom-ident>? */
 grid-area: une-zone-de-grille 4;
 grid-area: une-zone-de-grille 4 / 2 une-autre-zone;
 
-/* Forme span &amp;&amp; [ &lt;integer&gt; || &lt;custom-ident&gt; ] */
+/* Forme span && [ <integer> || <custom-ident> ] */
 grid-area: span 3;
 grid-area: span 3 / span une-zone-de-grille;
 grid-area: 2 span / une-autre-zone span;
@@ -47,42 +48,47 @@ grid-area: 2 span / une-autre-zone span;
 /* Valeurs globales */
 grid-area: inherit;
 grid-area: initial;
-grid-area: unset;</pre>
+grid-area: unset;
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Un mot-clé qui indique que la propriété ne contribue pas au placement de l'élément sur la grille. Cela indique un placement automatique, une taille de fragment (<em>span</em>) automatique ou une taille par défaut de <code>1</code>.</dd>
- <dt><code>&lt;custom-ident&gt;</code></dt>
- <dd>S'il existe une ligne nommée avec '&lt;custom-ident&gt;-start', la première ligne correspondante contribue au placement de l'élément sur la grille.
- <div class="note"><p><strong>Note :</strong> Les noms des zones de grille sont générés implicitement. Ainsi, en utilisant <code>grid-area: foo;</code> cela sélectionnera le début de la grille nommée correspondante (sauf si une autre ligne <code>foo-start</code> a été explicitement déclarée).</p></div>
+- `auto`
+  - : Un mot-clé qui indique que la propriété ne contribue pas au placement de l'élément sur la grille. Cela indique un placement automatique, une taille de fragment (_span_) automatique ou une taille par défaut de `1`.
+- `<custom-ident>`
 
- <p>Sinon, la valeur est traitée comme si on avait utilisé <code>&lt;custom-ident&gt;</code> et la valeur <code>1</code>.</p>
- </dd>
- <dt><code>&lt;integer&gt; &amp;&amp; &lt;custom-ident&gt;?</code></dt>
- <dd>La n-ième ligne de la grille contribue au placement de l'élément sur la grille. Si un entier négatif est utilisé, le comptage sera fait depuis la fin de la grille explicite.
- <p>Si un nom est fourni pour &lt;custom-ident&gt;, seules les lignes ayant ce nom seront comptées. S'il n'y a pas suffisamment de lignes existant avec ce nom, toutes les lignes implicites seront comptées afin de trouver la position.</p>
+  - : S'il existe une ligne nommée avec '\<custom-ident>-start', la première ligne correspondante contribue au placement de l'élément sur la grille.
 
- <p>Si la valeur entière utilisée est <code>0</code>, la règle est invalide.</p>
- </dd>
- <dt><code>span &amp;&amp; [ &lt;integer&gt; || &lt;custom-ident&gt; ]</code></dt>
- <dd>Un fragment de grille est utilisé pour le placement de l'élément sur la grille afin que le début de la ligne pour l'élément de la grille soit placé à n lignes du bord de fin.
- <p>Si un nom fourni pour &lt;custom-ident&gt;, seules les lignes ayant ce nom seront comptées. S'il n'y a pas suffisamment de lignes existantes avec ce nom, tout les lignes implicites du côté de la grille explicite et qui correspondent à la direction de la recherche seront comptées afin de placer ce fragment.</p>
+    > **Note :** Les noms des zones de grille sont générés implicitement. Ainsi, en utilisant `grid-area: foo;` cela sélectionnera le début de la grille nommée correspondante (sauf si une autre ligne `foo-start` a été explicitement déclarée).
 
- <p>Si l'entier n'est pas défini, la valeur par défaut qui sera utilisée sera <code>1</code>. Les entiers négatifs ou nuls sont invalides.</p>
- </dd>
-</dl>
+    Sinon, la valeur est traitée comme si on avait utilisé `<custom-ident>` et la valeur `1`.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+- `<integer> && <custom-ident>?`
+
+  - : La n-ième ligne de la grille contribue au placement de l'élément sur la grille. Si un entier négatif est utilisé, le comptage sera fait depuis la fin de la grille explicite.
+
+    Si un nom est fourni pour \<custom-ident>, seules les lignes ayant ce nom seront comptées. S'il n'y a pas suffisamment de lignes existant avec ce nom, toutes les lignes implicites seront comptées afin de trouver la position.
+
+    Si la valeur entière utilisée est `0`, la règle est invalide.
+
+- `span && [ <integer> || <custom-ident> ]`
+
+  - : Un fragment de grille est utilisé pour le placement de l'élément sur la grille afin que le début de la ligne pour l'élément de la grille soit placé à n lignes du bord de fin.
+
+    Si un nom fourni pour \<custom-ident>, seules les lignes ayant ce nom seront comptées. S'il n'y a pas suffisamment de lignes existantes avec ce nom, tout les lignes implicites du côté de la grille explicite et qui correspondent à la direction de la recherche seront comptées afin de placer ce fragment.
+
+    Si l'entier n'est pas défini, la valeur par défaut qui sera utilisée sera `1`. Les entiers négatifs ou nuls sont invalides.
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#grid {
+```css
+#grid {
   display: grid;
   height: 100px;
   grid-template: repeat(4, 1fr) / 50px 100px;
@@ -99,54 +105,42 @@ grid-area: unset;</pre>
 
 #item3 {
   background-color: blue;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="grid"&gt;
-  &lt;div id="item1"&gt;&lt;/div&gt;
-  &lt;div id="item2"&gt;&lt;/div&gt;
-  &lt;div id="item3"&gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div id="grid">
+  <div id="item1"></div>
+  <div id="item2"></div>
+  <div id="item3"></div>
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", "100%", "150px")}}</p>
+{{EmbedLiveSample("Exemples", "100%", "150px")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Grid", "#propdef-grid-area", "grid-area")}}</td>
-   <td>{{Spec2("CSS3 Grid")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | État                         | Commentaires         |
+| -------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName("CSS3 Grid", "#propdef-grid-area", "grid-area")}} | {{Spec2("CSS3 Grid")}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.grid-area")}}</p>
+{{Compat("css.properties.grid-area")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("grid-row")}}</li>
- <li>{{cssxref("grid-row-start")}}</li>
- <li>{{cssxref("grid-row-end")}}</li>
- <li>{{cssxref("grid-column")}}</li>
- <li>{{cssxref("grid-column-start")}}</li>
- <li>{{cssxref("grid-column-end")}}</li>
- <li><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas">Guide : les zones des grilles CSS</a></li>
- <li>Tutoriel vidéo : <a href="https://gridbyexample.com/video/grid-template-areas/">les zones des grilles CSS (en anglais)</a></li>
-</ul>
+- {{cssxref("grid-row")}}
+- {{cssxref("grid-row-start")}}
+- {{cssxref("grid-row-end")}}
+- {{cssxref("grid-column")}}
+- {{cssxref("grid-column-start")}}
+- {{cssxref("grid-column-end")}}
+- [Guide : les zones des grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout/Grid_Template_Areas)
+- Tutoriel vidéo : [les zones des grilles CSS (en anglais)](https://gridbyexample.com/video/grid-template-areas/)

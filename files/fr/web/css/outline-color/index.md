@@ -7,23 +7,24 @@ tags:
   - Reference
 translation_of: Web/CSS/outline-color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>outline-color</code></strong> permet de définir la couleur avec laquelle on trace le conteur de l'élément. Ce contour est tracé autour de <a href="/fr/Apprendre/CSS/Les_bases/Le_mod%C3%A8le_de_bo%C3%AEte">la boîte de bordure</a> et peut être utilisé pour faire ressortir l'élément.</p>
+La propriété **`outline-color`** permet de définir la couleur avec laquelle on trace le conteur de l'élément. Ce contour est tracé autour de [la boîte de bordure](/fr/Apprendre/CSS/Les_bases/Le_mod%C3%A8le_de_bo%C3%AEte) et peut être utilisé pour faire ressortir l'élément.
 
-<div>{{EmbedInteractiveExample("pages/css/outline-color.html")}}</div>
+{{EmbedInteractiveExample("pages/css/outline-color.html")}}
 
-<p>À la différence de la bordure, le contour est tracé en dehors du cadre de l'élément et peut donc chevaucher d'autres contenus. La bordure, en revanche, modifiera la disposition de la page afin de s'assurer qu'aucun chevauchement involontaire ne se produit.La propriété <code>outline-color</code> est également synthétisée avec la propriété raccourcie {{cssxref("outline")}}.</p>
+À la différence de la bordure, le contour est tracé en dehors du cadre de l'élément et peut donc chevaucher d'autres contenus. La bordure, en revanche, modifiera la disposition de la page afin de s'assurer qu'aucun chevauchement involontaire ne se produit.La propriété `outline-color` est également synthétisée avec la propriété raccourcie {{cssxref("outline")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p> </p>
 
-<pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé */
+
+```css
+/* Valeurs avec un mot-clé */
 outline-color: invert;
 
 /* Valeurs de couleur */
-/* Type &lt;color&gt;       */
+/* Type <color>       */
 outline-color: red;
 outline-color: #f92525;
 outline-color: rgb(30,222,121);
@@ -32,34 +33,35 @@ outline-color: rgb(30,222,121);
 outline-color: inherit;
 outline-color: initial;
 outline-color: unset;
-</pre>
+```
 
-<p> </p>
 
-<p>La propriété <code>outline-color</code> est définie avec une des valeurs listées ci-après.</p>
 
-<h3 id="Valeurs">Valeurs</h3>
+La propriété `outline-color` est définie avec une des valeurs listées ci-après.
 
-<dl>
- <dt><code>&lt;color&gt;</code></dt>
- <dd>Voir la page {{cssxref("&lt;color&gt;")}} pour plus d'informations sur les valeurs utilisables avec ce type.</dd>
- <dt><code>invert</code></dt>
- <dd>Afin de s'assurer que la bordure est visible, on applique une inversion de couleur avec l'arrière-plan. Cela permet de renforcer le contraste, quelle que soit la couleur de l'arrière-plan. Cette valeur ne doit pas nécessairement être supportée par les navigateurs. Si elle ne l'est pas, ils considèreront la règle comme invalide.</dd>
-</dl>
+### Valeurs
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+- `<color>`
+  - : Voir la page {{cssxref("&lt;color&gt;")}} pour plus d'informations sur les valeurs utilisables avec ce type.
+- `invert`
+  - : Afin de s'assurer que la bordure est visible, on applique une inversion de couleur avec l'arrière-plan. Cela permet de renforcer le contraste, quelle que soit la couleur de l'arrière-plan. Cette valeur ne doit pas nécessairement être supportée par les navigateurs. Si elle ne l'est pas, ils considèreront la règle comme invalide.
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html;">&lt;p class="exemple"&gt;Mon contour est blue, da ba dee.&lt;/p&gt;</pre>
+```html
+<p class="exemple">Mon contour est blue, da ba dee.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css; highlight:[3]">.exemple {
+```css
+.exemple {
   /* Tout d'abord on utiliser outline */
   /* pour définir le contour          */
   outline: 2px solid;
@@ -67,63 +69,39 @@ outline-color: unset;
   /* Ensuite on précise sa couleur avec */
   /* outline-color                      */
   outline-color: #0000FF;
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples","100%","100%")}}</p>
+{{EmbedLiveSample("Exemples","100%","100%")}}
 
-<h2 id="Accessibilité">Accessibilité</h2>
+## Accessibilité
 
-<p><a href="/fr/docs/Web/CSS/:focus">L'utilisation d'un focus personnalisé</a> s'accompagne généralement d'une modification de la propriété {{cssxref("outline")}}. Si la couleur du contour est modifiée, il est nécessaire de vérifier que le contraste entre le contour et l'arrière-plan est suffisant afin que le contour puisse clairement être distingué.</p>
+[L'utilisation d'un focus personnalisé](/fr/docs/Web/CSS/:focus) s'accompagne généralement d'une modification de la propriété {{cssxref("outline")}}. Si la couleur du contour est modifiée, il est nécessaire de vérifier que le contraste entre le contour et l'arrière-plan est suffisant afin que le contour puisse clairement être distingué.
 
-<p>Le ratio de contraste est déterminé en comparaisant les luminosités des deux couleurs. Pour le contraste entre un texte et son arrière-plan, les recommandations <a href="https://www.w3.org/WAI/intro/wcag">Web Content Accessibility Guidelines (WCAG)</a> requièrent un ratio de 4.5:1 pour le contenu textuel et un ratio de 3:1 pour les titres ou les textes plus grands (18.66px et en gras ou 24px ou plus grand).</p>
+Le ratio de contraste est déterminé en comparaisant les luminosités des deux couleurs. Pour le contraste entre un texte et son arrière-plan, les recommandations [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/intro/wcag) requièrent un ratio de 4.5:1 pour le contenu textuel et un ratio de 3:1 pour les titres ou les textes plus grands (18.66px et en gras ou 24px ou plus grand).
 
-<ul>
- <li><a href="https://webaim.org/resources/contrastchecker/">Vérificateur de contraste WebAIM (en anglais)</a></li>
- <li><a href="/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">Comprendre les règles WCAG 1.4</a></li>
- <li><em><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html">Understanding Success Criterion 1.4.3 - W3C Understanding WCAG 2.0</a></em><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html"> (en anglais)</a></li>
-</ul>
+- [Vérificateur de contraste WebAIM (en anglais)](https://webaim.org/resources/contrastchecker/)
+- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- _[Understanding Success Criterion 1.4.3 - W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)_[ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Basic UI', '#outline-color', 'outline-color')}}</td>
-   <td>{{Spec2('CSS3 Basic UI')}}</td>
-   <td>Aucun changement</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'outline-color')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td><code>outline-color</code> peut désormais être animée.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'ui.html#propdef-outline-color', 'outline-color')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | Statut                                   | Commentaires                                |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------- |
+| {{SpecName('CSS3 Basic UI', '#outline-color', 'outline-color')}}             | {{Spec2('CSS3 Basic UI')}}     | Aucun changement                            |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'outline-color')}}     | {{Spec2('CSS3 Transitions')}} | `outline-color` peut désormais être animée. |
+| {{SpecName('CSS2.1', 'ui.html#propdef-outline-color', 'outline-color')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                        |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.outline-color")}}</p>
+{{Compat("css.properties.outline-color")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Le type de donnée {{cssxref("&lt;color&gt;")}}</li>
- <li>Les autres propriétés relatives aux couleurs : {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}} et {{cssxref("column-rule-color")}}</li>
- <li><a href="/fr/docs/Web/HTML/Applying_color">Appliquer des couleurs sur des éléments HTML grâce à CSS</a></li>
-</ul>
+- Le type de donnée {{cssxref("&lt;color&gt;")}}
+- Les autres propriétés relatives aux couleurs : {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}} et {{cssxref("column-rule-color")}}
+- [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/HTML/Applying_color)

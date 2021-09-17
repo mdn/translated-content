@@ -7,112 +7,88 @@ tags:
   - Reference
 translation_of: Web/CSS/padding-top
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>padding-top</code></strong> d'un élément ajuste la hauteur de la boîte de remplissage (<em>padding</em>) en haut de l'élément.</p>
+La propriété **`padding-top`** d'un élément ajuste la hauteur de la boîte de remplissage (_padding_) en haut de l'élément.
 
-<p>La <a href="/fr/Apprendre/CSS/Les_bases/Le_mod%C3%A8le_de_bo%C3%AEte">zone de remplissage</a> correspond à l'espace entre le contenu et la bordure. Contrairement à {{cssxref("margin-top")}}, <code>padding-top</code> ne peut pas recevoir de valeurs négatives.</p>
+La [zone de remplissage](/fr/Apprendre/CSS/Les_bases/Le_mod%C3%A8le_de_bo%C3%AEte) correspond à l'espace entre le contenu et la bordure. Contrairement à {{cssxref("margin-top")}}, `padding-top` ne peut pas recevoir de valeurs négatives.
 
-<div>{{EmbedInteractiveExample("pages/css/padding-top.html")}}</div>
+{{EmbedInteractiveExample("pages/css/padding-top.html")}}
 
-<p>La propriété raccourcie {{cssxref("padding")}} permet de paramétrer les dimensions des quatre côtés de cette boîte (y compris <code>padding-top</code> donc).</p>
+La propriété raccourcie {{cssxref("padding")}} permet de paramétrer les dimensions des quatre côtés de cette boîte (y compris `padding-top` donc).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs de longueur */
-/* Type &lt;length&gt;       */
+```css
+/* Valeurs de longueur */
+/* Type <length>       */
 padding-top: 0.5em;
 padding-top: 0;
 padding-top: 2cm;
 
 /* Valeurs de proportions */
-/* Type &lt;percentage&gt;      */
+/* Type <percentage>      */
 padding-top: 10%;
 
 /* Valeurs globales */
 padding-top: inherit;
 padding-top: initial;
 padding-top: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Cette valeur définit une hauteur positive. Voir {{cssxref("&lt;length&gt;")}} pour plus de détails.</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>Un pourcentage en rapport avec la largeur du bloc englobant. Voir {{cssxref("&lt;percentage&gt;")}} pour plus de détails.</dd>
-</dl>
+- `<length>`
+  - : Cette valeur définit une hauteur positive. Voir {{cssxref("&lt;length&gt;")}} pour plus de détails.
+- `<percentage>`
+  - : Un pourcentage en rapport avec la largeur du bloc englobant. Voir {{cssxref("&lt;percentage&gt;")}} pour plus de détails.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="padd"&gt;
+```html
+<p class="padd">
   Elle n’avait pas bu la moitié de la bouteille,
   que sa tête touchait au plafond et qu’elle fut
   forcée de se baisser pour ne pas se casser le
   cou.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.padd {
+```css
+.padd {
   padding-top: 5em;
   border: solid 1px;
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples","100%","100%")}}</p>
+{{EmbedLiveSample("Exemples","100%","100%")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Box', '#the-padding', 'padding-top')}}</td>
-   <td>{{Spec2('CSS3 Box')}}</td>
-   <td>Aucun changement depuis {{SpecName('CSS2.1', 'box.html#padding-properties', 'padding-top')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'padding-top')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td><code>padding-top</code> peut désormais être animée.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'box.html#padding-properties', 'padding-top')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Aucun changement depuis {{Specname('CSS1', '#padding-top', 'padding-top')}}.</td>
-  </tr>
-  <tr>
-   <td>{{Specname('CSS1', '#padding-top', 'padding-top')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                                     | Commentaires                                                                                                          |
+| -------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS3 Box', '#the-padding', 'padding-top')}}                     | {{Spec2('CSS3 Box')}}             | Aucun changement depuis {{SpecName('CSS2.1', 'box.html#padding-properties', 'padding-top')}}. |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'padding-top')}}     | {{Spec2('CSS3 Transitions')}} | `padding-top` peut désormais être animée.                                                                             |
+| {{SpecName('CSS2.1', 'box.html#padding-properties', 'padding-top')}} | {{Spec2('CSS2.1')}}                 | Aucun changement depuis {{Specname('CSS1', '#padding-top', 'padding-top')}}.                         |
+| {{Specname('CSS1', '#padding-top', 'padding-top')}}                         | {{Spec2('CSS1')}}                 | Définition initiale.                                                                                                  |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.padding-top")}}</p>
+{{Compat("css.properties.padding-top")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/Apprendre/CSS/Introduction_à_CSS/Le_modèle_de_boîte">Le modèle de boîtes CSS</a></li>
- <li>La propriété raccourcie {{cssxref("padding")}} qui permet de paramétrer <code>padding-top</code>, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}} et {{cssxref("padding-left")}}.</li>
-</ul>
+- [Le modèle de boîtes CSS](/fr/Apprendre/CSS/Introduction_à_CSS/Le_modèle_de_boîte)
+- La propriété raccourcie {{cssxref("padding")}} qui permet de paramétrer `padding-top`, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}} et {{cssxref("padding-left")}}.

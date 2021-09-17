@@ -7,62 +7,64 @@ tags:
   - Reference
 translation_of: Web/CSS/flex
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>flex</code></strong> est une propriété raccourcie qui définit la capacité d'un élément flexible à modifier ses dimensions afin de remplir l'espace disponible de son conteneur.</p>
+La propriété **`flex`** est une propriété raccourcie qui définit la capacité d'un élément flexible à modifier ses dimensions afin de remplir l'espace disponible de son conteneur.
 
-<p>Les propriétés détaillées correspondantes à cette propriété raccourcie sont {{cssxref("flex-grow")}}, {{cssxref("flex-shrink")}} et {{cssxref("flex-basis")}}.</p>
+Les propriétés détaillées correspondantes à cette propriété raccourcie sont {{cssxref("flex-grow")}}, {{cssxref("flex-shrink")}} et {{cssxref("flex-basis")}}.
 
-<p>Les éléments flexibles peuvent être étirés ou réduits pour utiliser un espace proportionnel à leur coefficient de grossissement ou de rétrécissement afin de ne pas dépasser d'un conteneur.</p>
+Les éléments flexibles peuvent être étirés ou réduits pour utiliser un espace proportionnel à leur coefficient de grossissement ou de rétrécissement afin de ne pas dépasser d'un conteneur.
 
-<div>{{EmbedInteractiveExample("pages/css/flex.html")}}</div>
+{{EmbedInteractiveExample("pages/css/flex.html")}}
 
-<h2 id="description">Description</h2>
+## Description
 
-<p>Pour la plupart des cas, on utilisera une des valeurs suivantes : <code>auto</code>, <code>initial</code>, <code>none</code> ou un nombre positif sans unité. Pour voir l'effet de ces valeurs, essayez de redimensionner les conteneurs flexibles ci-après :</p>
+Pour la plupart des cas, on utilisera une des valeurs suivantes : `auto`, `initial`, `none` ou un nombre positif sans unité. Pour voir l'effet de ces valeurs, essayez de redimensionner les conteneurs flexibles ci-après :
 
-<pre class="hidden brush: html">&lt;div class="flex-container"&gt;
+```html hidden
+<div class="flex-container">
 
-   &lt;div class="item auto"&gt;auto&lt;/div&gt;
-   &lt;div class="item auto"&gt;auto&lt;/div&gt;
-   &lt;div class="item auto"&gt;auto&lt;/div&gt;
+   <div class="item auto">auto</div>
+   <div class="item auto">auto</div>
+   <div class="item auto">auto</div>
 
-&lt;/div&gt;
+</div>
 
-&lt;div class="flex-container"&gt;
+<div class="flex-container">
 
-   &lt;div class="item auto"&gt;auto&lt;/div&gt;
-   &lt;div class="item initial"&gt;initial&lt;/div&gt;
-   &lt;div class="item initial"&gt;initial&lt;/div&gt;
+   <div class="item auto">auto</div>
+   <div class="item initial">initial</div>
+   <div class="item initial">initial</div>
 
-&lt;/div&gt;
+</div>
 
-&lt;div class="flex-container"&gt;
+<div class="flex-container">
 
-   &lt;div class="item auto"&gt;auto&lt;/div&gt;
-   &lt;div class="item auto"&gt;auto&lt;/div&gt;
-   &lt;div class="item none"&gt;none&lt;/div&gt;
+   <div class="item auto">auto</div>
+   <div class="item auto">auto</div>
+   <div class="item none">none</div>
 
-&lt;/div&gt;
+</div>
 
-&lt;div class="flex-container"&gt;
+<div class="flex-container">
 
-   &lt;div class="item initial"&gt;initial&lt;/div&gt;
-   &lt;div class="item none"&gt;none&lt;/div&gt;
-   &lt;div class="item none"&gt;none&lt;/div&gt;
+   <div class="item initial">initial</div>
+   <div class="item none">none</div>
+   <div class="item none">none</div>
 
-&lt;/div&gt;
+</div>
 
-&lt;div class="flex-container"&gt;
+<div class="flex-container">
 
-   &lt;div class="item four"&gt;4&lt;/div&gt;
-   &lt;div class="item two"&gt;2&lt;/div&gt;
-   &lt;div class="item one"&gt;1&lt;/div&gt;
+   <div class="item four">4</div>
+   <div class="item two">2</div>
+   <div class="item one">1</div>
 
-&lt;/div&gt;
-</pre>
+</div>
+```
 
-<pre class="hidden brush: css">* {
+```css hidden
+* {
   box-sizing: border-box;
 }
 
@@ -107,17 +109,18 @@ translation_of: Web/CSS/flex
 .one {
   flex: 1;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample("description", "100%","370")}}</p>
+{{EmbedLiveSample("description", "100%","370")}}
 
-<p>Par défaut, les éléments flexibles ne se rétrécissent pas en dessous de la taille minimale du contenu. Pour modifier ce comportement, il faudra paramétrer {{cssxref("min-width")}} ou {{cssxref("min-height")}}.</p>
+Par défaut, les éléments flexibles ne se rétrécissent pas en dessous de la taille minimale du contenu. Pour modifier ce comportement, il faudra paramétrer {{cssxref("min-width")}} ou {{cssxref("min-height")}}.
 
-<p>Voir la page <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox" title="CSS/Using_CSS_flexible_boxes">Utiliser les boîtes flexibles (<em>flexbox</em>) CSS</a> pour plus d'informations.</p>
+Voir la page [Utiliser les boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox "CSS/Using_CSS_flexible_boxes") pour plus d'informations.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs de base */
+```css
+/* Valeurs de base */
 flex: auto;
 flex: initial;
 flex: none;
@@ -145,146 +148,122 @@ flex: 2 2 10%;
 flex: inherit;
 flex: initial;
 flex: unset;
-</pre>
+```
 
-<p>La propriété <code>flex</code> peut être définie avec une, deux ou trois valeurs.</p>
+La propriété `flex` peut être définie avec une, deux ou trois valeurs.
 
-<ul>
- <li><strong>Avec une valeur</strong>, la syntaxe doit être :
+- **Avec une valeur**, la syntaxe doit être :
 
-  <ul>
-   <li>un nombre sans unité ({{cssxref("&lt;number&gt;")}}) : celui-ci est alors interprété comme la valeur de <code><a href="#grow">&lt;flex-grow&gt;</a></code></li>
-   <li>ou une valeur de largeur valide ({{cssxref("width")}}) : celle-ci est alors interprétée comme la valeur de <code><a href="#basis">&lt;flex-basis&gt;</a></code></li>
-   <li>ou le mot-clé <code><a href="#none">none</a></code>.</li>
-  </ul>
- </li>
- <li><strong>Avec deux valeurs</strong>
-  <ul>
-   <li>la première doit être un nombre sans unité ({{cssxref("&lt;number&gt;")}}) qui correspond à la valeur de <code><a href="#grow">&lt;flex-grow&gt;</a></code>.</li>
-   <li>la seconde valeur doit être :
-    <ul>
-     <li>un nombre sans unité ({{cssxref("&lt;number&gt;")}}) : celui-ci est alors interprété comme la valeur de <code><a href="#shrink">&lt;flex-shrink&gt;</a></code></li>
-     <li>ou une valeur de largeur valide ({{cssxref("width")}}) : celle-ci est alors interprétée comme la valeur de <code><a href="#basis">&lt;flex-basis&gt;</a></code></li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li><strong>Avec trois valeurs</strong>
-  <ul>
-   <li>la première valeur doit être un nombre sans unité ({{cssxref("&lt;number&gt;")}}) : celui-ci est alors interprété comme la valeur de <code><a href="#grow">&lt;flex-grow&gt;</a></code></li>
-   <li>la deuxième valeur doit être un nombre sans unité ({{cssxref("&lt;number&gt;")}}) : celui-ci est alors interprété comme la valeur de <code><a href="#shrink">&lt;flex-shrink&gt;</a></code></li>
-   <li>la troisième valeur doit être une valeur de largeur valide ({{cssxref("width")}}) : celle-ci est alors interprétée comme la valeur de <code><a href="#basis">&lt;flex-basis&gt;</a></code></li>
-  </ul>
- </li>
-</ul>
+  - un nombre sans unité ({{cssxref("&lt;number&gt;")}}) : celui-ci est alors interprété comme la valeur de [`<flex-grow>`](#grow)
+  - ou une valeur de largeur valide ({{cssxref("width")}}) : celle-ci est alors interprétée comme la valeur de [`<flex-basis>`](#basis)
+  - ou le mot-clé [`none`](#none).
 
-<h3 id="Valeurs">Valeurs</h3>
+- **Avec deux valeurs**
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>L'élément est dimensionné selon ses propriétés <code>width</code> et <code>height</code> mais peut grandir pour absorber l'espace libre disponible dans le conteneur flexible ou rétrécir à sa taille minimale pour rentrer dans le conteneur. Cette valeur est équivalente à "<code>flex: 1 1 auto</code>".</dd>
- <dt><code>initial</code></dt>
- <dd>L'élément est dimensionné selon ses propriétés <code>width</code> et <code>height</code>. Ce comportement est équivalent à la valeur par défaut (<code>0 1 auto</code>). Si besoin, l'élément rétrécit à sa taille minimale pour rentrer dans le conteneur mais il ne grandira pas s'il y a de l'espace disponible dans ce conteneur. Ce mot-clé est équivalent à "<code>flex: 0 1 auto</code>".</dd>
- <dt><code>none</code></dt>
- <dd>L'élément est dimensionné par rapport à ses propriétés <code>width</code> et <code>height</code>. Il n'est pas flexible : il ne peut ni rétrécir ni grandir selon l'espace du conteneur flexible. Ce mot-clé est équivalent à "<code>flex: 0 0 auto</code>".</dd>
- <dt><code>&lt;'flex-grow'&gt;</code></dt>
- <dd>Voir {{cssxref("flex-grow")}}. Les valeurs négatives sont interdites et la valeur par défaut est <code>1</code>.</dd>
- <dt><code>&lt;'flex-shrink'&gt;</code></dt>
- <dd>Voir {{cssxref("flex-shrink")}}. Les valeurs négatives sont interdites et la valeur par défaut est <code>1</code>.</dd>
- <dt><code>&lt;'flex-basis'&gt;</code></dt>
- <dd>Voir {{cssxref("flex-basis")}}. Une valeur valide pour {{cssxref("width")}} et {{cssxref("height")}}. La valeur par défaut est <code>0</code>.</dd>
-</dl>
+  - la première doit être un nombre sans unité ({{cssxref("&lt;number&gt;")}}) qui correspond à la valeur de [`<flex-grow>`](#grow).
+  - la seconde valeur doit être :
 
-<div class="note">
-  <p><strong>Note :</strong> Lorsqu'on utilise une ou deux valeurs sans unité dans la règle, <code>flex-basis</code> vaudra 0. Pour plus d'informations, voir <a href="https://drafts.csswg.org/css-flexbox/#flex-common">le brouillon de spécification du module des boîtes flexibles</a>.</p>
-</div>
+    - un nombre sans unité ({{cssxref("&lt;number&gt;")}}) : celui-ci est alors interprété comme la valeur de [`<flex-shrink>`](#shrink)
+    - ou une valeur de largeur valide ({{cssxref("width")}}) : celle-ci est alors interprétée comme la valeur de [`<flex-basis>`](#basis)
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+- **Avec trois valeurs**
+
+  - la première valeur doit être un nombre sans unité ({{cssxref("&lt;number&gt;")}}) : celui-ci est alors interprété comme la valeur de [`<flex-grow>`](#grow)
+  - la deuxième valeur doit être un nombre sans unité ({{cssxref("&lt;number&gt;")}}) : celui-ci est alors interprété comme la valeur de [`<flex-shrink>`](#shrink)
+  - la troisième valeur doit être une valeur de largeur valide ({{cssxref("width")}}) : celle-ci est alors interprétée comme la valeur de [`<flex-basis>`](#basis)
+
+### Valeurs
+
+- `auto`
+  - : L'élément est dimensionné selon ses propriétés `width` et `height` mais peut grandir pour absorber l'espace libre disponible dans le conteneur flexible ou rétrécir à sa taille minimale pour rentrer dans le conteneur. Cette valeur est équivalente à "`flex: 1 1 auto`".
+- `initial`
+  - : L'élément est dimensionné selon ses propriétés `width` et `height`. Ce comportement est équivalent à la valeur par défaut (`0 1 auto`). Si besoin, l'élément rétrécit à sa taille minimale pour rentrer dans le conteneur mais il ne grandira pas s'il y a de l'espace disponible dans ce conteneur. Ce mot-clé est équivalent à "`flex: 0 1 auto`".
+- `none`
+  - : L'élément est dimensionné par rapport à ses propriétés `width` et `height`. Il n'est pas flexible : il ne peut ni rétrécir ni grandir selon l'espace du conteneur flexible. Ce mot-clé est équivalent à "`flex: 0 0 auto`".
+- `<'flex-grow'>`
+  - : Voir {{cssxref("flex-grow")}}. Les valeurs négatives sont interdites et la valeur par défaut est `1`.
+- `<'flex-shrink'>`
+  - : Voir {{cssxref("flex-shrink")}}. Les valeurs négatives sont interdites et la valeur par défaut est `1`.
+- `<'flex-basis'>`
+  - : Voir {{cssxref("flex-basis")}}. Une valeur valide pour {{cssxref("width")}} et {{cssxref("height")}}. La valeur par défaut est `0`.
+
+> **Note :** Lorsqu'on utilise une ou deux valeurs sans unité dans la règle, `flex-basis` vaudra 0. Pour plus d'informations, voir [le brouillon de spécification du module des boîtes flexibles](https://drafts.csswg.org/css-flexbox/#flex-common).
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#flex-container {
+```css
+#flex-container {
 	display: flex;
 	flex-direction: row;
 }
 
-#flex-container &gt; .flex-item {
+#flex-container > .flex-item {
 	flex: auto;
 }
 
-#flex-container &gt; .raw-item {
+#flex-container > .raw-item {
 	width: 5rem;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="flex-container"&gt;
-    &lt;div class="flex-item" id="flex"&gt;Boîte flexible (cliquer pour passer à la boîte « normale »)&lt;/div&gt;
-    &lt;div class="raw-item" id="raw"&gt;Boîte « normale » &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div id="flex-container">
+    <div class="flex-item" id="flex">Boîte flexible (cliquer pour passer à la boîte « normale »)</div>
+    <div class="raw-item" id="raw">Boîte « normale » </div>
+</div>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var flex = document.getElementById("flex");
+```js
+var flex = document.getElementById("flex");
 var raw = document.getElementById("raw");
 flex.addEventListener("click", function() {
 	raw.style.display = raw.style.display == "none" ? "block" : "none";
 });
-</pre>
+```
 
-<pre class="brush: css">#flex-container {
+```css
+#flex-container {
 	width: 100%;
 	font-family: Consolas, Arial, sans-serif;
 }
 
-#flex-container &gt; div {
+#flex-container > div {
 	border: 1px solid #f00;
 	padding: 1rem;
 }
 
-#flex-container &gt; .raw-item {
+#flex-container > .raw-item {
 	border: 1px solid #000;
 }
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples','100%','60')}}</p>
+{{EmbedLiveSample('Exemples','100%','60')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Spécification</th>
-   <th>État</th>
-   <th>Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Flexbox', '#flex-property', 'flex')}}</td>
-   <td>{{Spec2('CSS3 Flexbox')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                            | État                             | Commentaires         |
+| ------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName('CSS3 Flexbox', '#flex-property', 'flex')}} | {{Spec2('CSS3 Flexbox')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.flex")}}</p>
+{{Compat("css.properties.flex")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Guide sur les boîtes flexibles : <em><a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Les concepts de bases</a></em></li>
- <li>Guide sur les boîtes flexibles : <em><a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">Contrôler les proportions des boîtes flexibles le long de l'axe principal</a></em></li>
-</ul>
+- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- Guide sur les boîtes flexibles : _[Contrôler les proportions des boîtes flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_

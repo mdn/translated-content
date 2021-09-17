@@ -8,45 +8,44 @@ tags:
   - Référence(2)
 translation_of: Web/CSS/-moz-image-region
 ---
-<div>{{Non-standard_header}}{{CSSRef}}</div>
+{{Non-standard_header}}{{CSSRef}}
 
-<p>Pour certains éléments XUL et les pseudo-éléments qui utilisent une image grâce à la propriété {{cssxref("list-style-image")}}, la propriété <code><strong>-moz-image-region</strong></code> définit la partie de l'image qui est utilisée plutôt que l'image toute entière. Cela permet d'utiliser des images qui regroupent des <em>sprites</em> afin d'améliorer les performances.</p>
+Pour certains éléments XUL et les pseudo-éléments qui utilisent une image grâce à la propriété {{cssxref("list-style-image")}}, la propriété **`-moz-image-region`** définit la partie de l'image qui est utilisée plutôt que l'image toute entière. Cela permet d'utiliser des images qui regroupent des _sprites_ afin d'améliorer les performances.
 
-<pre class="brush: css no-line-numbers">/* Valeur avec un mot-clé */
+```css
+/* Valeur avec un mot-clé */
 -moz-image-region: auto;
 
-/* Valeur de type &lt;shape&gt; */
+/* Valeur de type <shape> */
 -moz-image-region: rect(0, 8px, 4px, 4px);
 
 /* Valeurs globales */
 -moz-image-region: inherit;
 -moz-image-region: initial;
--moz-image-region: unset;</pre>
+-moz-image-region: unset;
+```
 
-<p>La syntaxe de cette propriété est semblable à la syntaxe de la propriété {{cssxref("clip")}}. Les quatre valeurs sont relatives au coin en haut à gauche de l'image.</p>
+La syntaxe de cette propriété est semblable à la syntaxe de la propriété {{cssxref("clip")}}. Les quatre valeurs sont relatives au coin en haut à gauche de l'image.
 
-<div class="note">
-<p><strong>Note :</strong> Pour un système qui fonctionne pour n'importe quel arrière-plan, on pourra utiliser la propriété {{cssxref("-moz-image-rect")}}.</p>
-</div>
+> **Note :** Pour un système qui fonctionne pour n'importe quel arrière-plan, on pourra utiliser la propriété {{cssxref("-moz-image-rect")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>La région pour l'image est définie automatiquement</dd>
- <dt><code>&lt;shape&gt;</code></dt>
- <dd>Une forme définit la portion d'image qui doit être utilisée. La fonction <code>rect()</code> permet de définir un rectangle. Les paramètres de cette fonction correspondent respectivement aux décalages des bords haut, droit, bas et gauche. Voir {{cssxref("&lt;shape&gt;")}}.</dd>
-</dl>
+- `auto`
+  - : La région pour l'image est définie automatiquement
+- `<shape>`
+  - : Une forme définit la portion d'image qui doit être utilisée. La fonction `rect()` permet de définir un rectangle. Les paramètres de cette fonction correspondent respectivement aux décalages des bords haut, droit, bas et gauche. Voir {{cssxref("&lt;shape&gt;")}}.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush:css">#example-button {
+```css
+#example-button {
   /* display only the 4x4 area from the top left of this image */
   list-style-image: url("chrome://example/skin/example.png");
   -moz-image-region: rect(0px, 4px, 4px, 0px);
@@ -54,20 +53,19 @@ translation_of: Web/CSS/-moz-image-region
 #example-button:hover {
   /* use the 4x4 area to the right of the first for the hovered button */
   -moz-image-region: rect(0px, 8px, 4px, 4px);
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette propriété est une propriété propriétaire liée à Mozilla/Gecko et ne fait partie d'aucune spécification.</p>
+Cette propriété est une propriété propriétaire liée à Mozilla/Gecko et ne fait partie d'aucune spécification.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.-moz-image-region")}}</p>
+{{Compat("css.properties.-moz-image-region")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("-moz-image-rect")}}</li>
-</ul>
+- {{cssxref("-moz-image-rect")}}

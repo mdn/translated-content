@@ -7,90 +7,39 @@ tags:
   - Reference
 translation_of: Web/CSS/float
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>float</code></strong> indique qu'un élément doit être retiré du flux normal et doit être placé sur le côté droit ou sur le côté gauche de son conteneur. Le texte et les autres éléments en ligne (<em>inline</em>) entoureront alors l'élément flottant. L'élément est retiré du flux normal de la page mais s'inscrit toujours dans le flux (contrairement au <a href="/fr/docs/Web/CSS/position#positionnement_absolu">positionnement absolu</a>).</p>
+La propriété **`float`** indique qu'un élément doit être retiré du flux normal et doit être placé sur le côté droit ou sur le côté gauche de son conteneur. Le texte et les autres éléments en ligne (_inline_) entoureront alors l'élément flottant. L'élément est retiré du flux normal de la page mais s'inscrit toujours dans le flux (contrairement au [positionnement absolu](/fr/docs/Web/CSS/position#positionnement_absolu)).
 
-<div>{{EmbedInteractiveExample("pages/css/float.html")}}</div>
+{{EmbedInteractiveExample("pages/css/float.html")}}
 
-<p>Un <strong>élément flottant</strong> est un élément pour lequel <a href="/fr/docs/Web/CSS/computed_value">la valeur calculée</a> de <code>float</code> est différente de <code>none</code>.</p>
+Un **élément flottant** est un élément pour lequel [la valeur calculée](/fr/docs/Web/CSS/computed_value) de `float` est différente de `none`.
 
-<p><code>float</code> implique l'utilisation d'une disposition en bloc, cette propriété modifie donc la valeur de {{cssxref("display")}} dans certains cas :</p>
+`float` implique l'utilisation d'une disposition en bloc, cette propriété modifie donc la valeur de {{cssxref("display")}} dans certains cas :
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col"><a href="/fr/docs/Web/CSS/specified_value">Valeur spécifiée</a></th>
-   <th scope="col"><a href="/fr/docs/Web/CSS/computed_value">Valeur calculée</a></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>inline</code></td>
-   <td><code>block</code></td>
-  </tr>
-  <tr>
-   <td><code>inline-block</code></td>
-   <td><code>block</code></td>
-  </tr>
-  <tr>
-   <td><code>inline-table</code></td>
-   <td><code>table</code></td>
-  </tr>
-  <tr>
-   <td><code>table-row</code></td>
-   <td><code>block</code></td>
-  </tr>
-  <tr>
-   <td><code>table-row-group</code></td>
-   <td><code>block</code></td>
-  </tr>
-  <tr>
-   <td><code>table-column</code></td>
-   <td><code>block</code></td>
-  </tr>
-  <tr>
-   <td><code>table-column-group</code></td>
-   <td><code>block</code></td>
-  </tr>
-  <tr>
-   <td><code>table-cell</code></td>
-   <td><code>block</code></td>
-  </tr>
-  <tr>
-   <td><code>table-caption</code></td>
-   <td><code>block</code></td>
-  </tr>
-  <tr>
-   <td><code>table-header-group</code></td>
-   <td><code>block</code></td>
-  </tr>
-  <tr>
-   <td><code>table-footer-group</code></td>
-   <td><code>block</code></td>
-  </tr>
-  <tr>
-   <td><code>inline-flex</code></td>
-   <td><code>flex</code></td>
-  </tr>
-  <tr>
-   <td><code>inline-grid</code></td>
-   <td><code>grid</code></td>
-  </tr>
-  <tr>
-   <td><em>autre</em></td>
-   <td><em>inchangée</em></td>
-  </tr>
- </tbody>
-</table>
+| [Valeur spécifiée](/fr/docs/Web/CSS/specified_value) | [Valeur calculée](/fr/docs/Web/CSS/computed_value) |
+| ---------------------------------------------------- | -------------------------------------------------- |
+| `inline`                                             | `block`                                            |
+| `inline-block`                                       | `block`                                            |
+| `inline-table`                                       | `table`                                            |
+| `table-row`                                          | `block`                                            |
+| `table-row-group`                                    | `block`                                            |
+| `table-column`                                       | `block`                                            |
+| `table-column-group`                                 | `block`                                            |
+| `table-cell`                                         | `block`                                            |
+| `table-caption`                                      | `block`                                            |
+| `table-header-group`                                 | `block`                                            |
+| `table-footer-group`                                 | `block`                                            |
+| `inline-flex`                                        | `flex`                                             |
+| `inline-grid`                                        | `grid`                                             |
+| _autre_                                              | _inchangée_                                        |
 
-<div class="note">
-  <p><strong>Note :</strong>Si vous utilisez cette propriété via JavaScript, comme propriété de l'objet {{domxref("HTMLElement.style")}}, la plupart des navigateurs récents permettra d'utiliser <code>float</code> mais il faudra utiliser <code>cssFloat</code> (attention à la casse) pour les navigateurs plus anciens. Pour Internet Explorer 8 et les versions antérieures, elle était appelée <code>styleFloat</code>. Le terme <code>float</code> étant réservé en JavaScript, ce cas de figure était une exception à la règle qui définit que le nom de la propriété DOM est une version <a href="https://fr.wikipedia.org/wiki/CamelCase">CamelCase</a> de la propriété CSS construite avec des tirets. De même, <code>class</code> sera échappée en <code>className</code> et le <code>for</code> des éléments &lt;label&gt; sera converti en <code>htmlFor</code>).</p>
-</div>
+> **Note :**Si vous utilisez cette propriété via JavaScript, comme propriété de l'objet {{domxref("HTMLElement.style")}}, la plupart des navigateurs récents permettra d'utiliser `float` mais il faudra utiliser `cssFloat` (attention à la casse) pour les navigateurs plus anciens. Pour Internet Explorer 8 et les versions antérieures, elle était appelée `styleFloat`. Le terme `float` étant réservé en JavaScript, ce cas de figure était une exception à la règle qui définit que le nom de la propriété DOM est une version [CamelCase](https://fr.wikipedia.org/wiki/CamelCase) de la propriété CSS construite avec des tirets. De même, `class` sera échappée en `className` et le `for` des éléments \<label> sera converti en `htmlFor`).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css">float: left;
+```css
+float: left;
 float: right;
 float: none;
 float: inline-start;
@@ -99,32 +48,32 @@ float: inline-end;
 /* Valeurs globales */
 float: inherit;
 float: initial;
-float: unset;</pre>
+float: unset;
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>left</code></dt>
- <dd>Un mot-clé indiquant que l'élément doit flotter du côté gauche du bloc qui le contient.</dd>
- <dt><code>right</code></dt>
- <dd>Un mot-clé indiquant que l'élément doit flotter du côté droit du bloc qui le contient.</dd>
- <dt><code>none</code></dt>
- <dd>Un mot-clé indiquant que l'élément ne doit pas flotter</dd>
- <dt><code>inline-start</code></dt>
- <dd>Un mot-clé indiquant que l'élément doit flotter du côté du début du bloc qui le contient. Pour les scripts LTR (les langues qui s'écrivent de la gauche vers la droite), c'est le bord gauche ; pour les scripts RTL, c'est le bord droit.</dd>
- <dt><code>inline-end</code></dt>
- <dd>Un mot-clé indiquant que l'élément doit flotter du côté de la fin du bloc qui le contient. Pour les scripts LTR (les langues qui s'écrivent de la gauche vers la droite), c'est le bord droit ; pour les scripts RTL, c'est le bord gauche.</dd>
-</dl>
+- `left`
+  - : Un mot-clé indiquant que l'élément doit flotter du côté gauche du bloc qui le contient.
+- `right`
+  - : Un mot-clé indiquant que l'élément doit flotter du côté droit du bloc qui le contient.
+- `none`
+  - : Un mot-clé indiquant que l'élément ne doit pas flotter
+- `inline-start`
+  - : Un mot-clé indiquant que l'élément doit flotter du côté du début du bloc qui le contient. Pour les scripts LTR (les langues qui s'écrivent de la gauche vers la droite), c'est le bord gauche ; pour les scripts RTL, c'est le bord droit.
+- `inline-end`
+  - : Un mot-clé indiquant que l'élément doit flotter du côté de la fin du bloc qui le contient. Pour les scripts LTR (les langues qui s'écrivent de la gauche vers la droite), c'est le bord droit ; pour les scripts RTL, c'est le bord gauche.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   border: solid red;
   max-width: 70ex;
 }
@@ -132,91 +81,68 @@ float: unset;</pre>
 h4 {
   float: left;
   margin: 0;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;h4&gt;Coucou !&lt;/h4&gt;
+```html
+<div>
+  <h4>Coucou !</h4>
   Voici du texte. Voici du texte. Voici du texte.
   Voici du texte. Voici du texte. Voici du texte.
   Voici du texte. Voici du texte. Voici du texte.
   Voici du texte. Voici du texte. Voici du texte.
-&lt;/div&gt;</pre>
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples')}}</p>
+{{EmbedLiveSample('Exemples')}}
 
-<h2 id="Le_positionnement_des_éléments_flottants">Le positionnement des éléments flottants</h2>
+## Le positionnement des éléments flottants
 
-<p>Comme évoqué ci-avant, lorsqu'un élément flotte, il est retiré du flux normal du document et il est décalé vers la droite ou vers la gauche jusqu'à ce qu'il touche le bord de son conteneur <em>ou un autre élément flottant</em>.</p>
+Comme évoqué ci-avant, lorsqu'un élément flotte, il est retiré du flux normal du document et il est décalé vers la droite ou vers la gauche jusqu'à ce qu'il touche le bord de son conteneur _ou un autre élément flottant_.
 
-<p>Dans l'image suivante, on voit trois carrés rouges. Deux flottent à gauche et un flotte à droite. On voit que le deuxième carré à gauche est placé à droite du premier. Si on ajoutait d'autres carrés, ils s'empileraient sur la gauche jusqu'à remplir le conteneur, ensuite, on passerait sur une autre ligne.</p>
+Dans l'image suivante, on voit trois carrés rouges. Deux flottent à gauche et un flotte à droite. On voit que le deuxième carré à gauche est placé à droite du premier. Si on ajoutait d'autres carrés, ils s'empileraient sur la gauche jusqu'à remplir le conteneur, ensuite, on passerait sur une autre ligne.
 
-<p><img src="floats.png"></p>
+![](floats.png)
 
-<h2 id="Dégager_des_éléments_du_flottement">Dégager des éléments du flottement</h2>
+## Dégager des éléments du flottement
 
-<p>Dans l'illustration précédente, les éléments flottants sont verticalement plus courts que le texte sur lequel ils flottent. Cependant, si le texte n'était pas aussi long et ne dépassait pas des blocs, on pourrait avoir des effets indésirables. Par exemple, si le paragraphe ne contenait que « Lorem ipsum dolor sit amet » et était suivi d'un autre titre (semblable à « Floats Example »), le deuxième titre apparaîtrait entre les boîtes rouges. Or, la plupart du temps, on veut que le titre soit aligné tout à gauche. Pour cela, il faut dégager (<em>clear</em>) l'élément.</p>
+Dans l'illustration précédente, les éléments flottants sont verticalement plus courts que le texte sur lequel ils flottent. Cependant, si le texte n'était pas aussi long et ne dépassait pas des blocs, on pourrait avoir des effets indésirables. Par exemple, si le paragraphe ne contenait que « Lorem ipsum dolor sit amet » et était suivi d'un autre titre (semblable à « Floats Example »), le deuxième titre apparaîtrait entre les boîtes rouges. Or, la plupart du temps, on veut que le titre soit aligné tout à gauche. Pour cela, il faut dégager (_clear_) l'élément.
 
-<p>Pour cela, on pourra utiliser la propriété {{cssxref("clear")}} sur ce deuxième titre afin de s'assurer qu'il est aligné à gauche :</p>
+Pour cela, on pourra utiliser la propriété {{cssxref("clear")}} sur ce deuxième titre afin de s'assurer qu'il est aligné à gauche :
 
-<pre class="brush:css">h2.deuxiemeTitre { clear: both; }
-</pre>
+```css
+h2.deuxiemeTitre { clear: both; }
+```
 
-<p>Cela dit, cette méthode fonctionne uniquement s'il n'y a pas d'autres éléments dans le même <a href="/fr/docs/Web/Guide/CSS/Block_formatting_context">contexte de formatage de bloc</a> pour lesquels on voudrait que l'élément apparaisse à droite. Par exemple, si l'élément <code>H2</code> est entourée de barres latérales à gauche et à droite et qu'on utilise <code>clear</code>, le titre apparaîtra alors en bas, sous les barres, plutôt qu'entre elles.</p>
+Cela dit, cette méthode fonctionne uniquement s'il n'y a pas d'autres éléments dans le même [contexte de formatage de bloc](/fr/docs/Web/Guide/CSS/Block_formatting_context) pour lesquels on voudrait que l'élément apparaisse à droite. Par exemple, si l'élément `H2` est entourée de barres latérales à gauche et à droite et qu'on utilise `clear`, le titre apparaîtra alors en bas, sous les barres, plutôt qu'entre elles.
 
-<p>Aussi, si on ne peut pas dégager un élément, on peut limiter le formatage en bloc au conteneur des éléments flottants. Pour reprendre l'exemple précédent, on voit que toutes les boîtes rouges sont dans un élément {{HTMLElement("p")}}. On peut alors utiliser {{cssxref("overflow")}} avec <code>hidden</code> ou <code>auto</code> afin que l'élément s'agrandisse pour les contenir, sans les faire tomber en bas :</p>
+Aussi, si on ne peut pas dégager un élément, on peut limiter le formatage en bloc au conteneur des éléments flottants. Pour reprendre l'exemple précédent, on voit que toutes les boîtes rouges sont dans un élément {{HTMLElement("p")}}. On peut alors utiliser {{cssxref("overflow")}} avec `hidden` ou `auto` afin que l'élément s'agrandisse pour les contenir, sans les faire tomber en bas :
 
-<pre class="brush:css">p.avecBoitesRouges { overflow: hidden; height: auto; }
-</pre>
+```css
+p.avecBoitesRouges { overflow: hidden; height: auto; }
+```
 
-<div class="note">
-  <p><strong>Note :</strong> En utilisant <code>overflow</code>: <code>scroll</code> on contiendra également les éléments fils flottants mais cela affichera des barres de défilement quelle que soit la hauteur du contenu. Ici, nous utilisons <code>auto</code> pour <code>height</code> afin d'indiquer que le conteneur doit s'agrandir si nécessaire.</p></div>
+> **Note :** En utilisant `overflow`: `scroll` on contiendra également les éléments fils flottants mais cela affichera des barres de défilement quelle que soit la hauteur du contenu. Ici, nous utilisons `auto` pour `height` afin d'indiquer que le conteneur doit s'agrandir si nécessaire.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Logical Properties', '#float-clear', 'float and clear')}}</td>
-   <td>{{Spec2('CSS Logical Properties')}}</td>
-   <td>Les valeurs <code>inline-start</code> et <code>inline-end</code> sont ajoutées.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Box', '#float', 'float')}}</td>
-   <td>{{Spec2('CSS3 Box')}}</td>
-   <td>Introduction de nouvelles valeurs, pas encore clairement définies.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visuren.html#float-position', 'float')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Aucune modification.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#float', 'float')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | État                                             | Commentaires                                                       |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------------------------ |
+| {{SpecName('CSS Logical Properties', '#float-clear', 'float and clear')}} | {{Spec2('CSS Logical Properties')}} | Les valeurs `inline-start` et `inline-end` sont ajoutées.          |
+| {{SpecName('CSS3 Box', '#float', 'float')}}                                         | {{Spec2('CSS3 Box')}}                     | Introduction de nouvelles valeurs, pas encore clairement définies. |
+| {{SpecName('CSS2.1', 'visuren.html#float-position', 'float')}}             | {{Spec2('CSS2.1')}}                         | Aucune modification.                                               |
+| {{SpecName('CSS1', '#float', 'float')}}                                             | {{Spec2('CSS1')}}                         | Définition initiale.                                               |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.float")}}</p>
+{{Compat("css.properties.float")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/Guide/CSS/Block_formatting_context">Le contexte de formatage des blocs</a></li>
-</ul>
+- [Le contexte de formatage des blocs](/fr/docs/Web/Guide/CSS/Block_formatting_context)

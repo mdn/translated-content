@@ -10,13 +10,14 @@ tags:
   - Web
 translation_of: Web/CSS/paint-order
 ---
-<div>{{CSSRef}}{{seecompattable}}</div>
+{{CSSRef}}{{seecompattable}}
 
-<p>La propriété <code><strong>paint-order</strong></code> permet de contrôler l'ordre dans lequel le remplissage, les marqueurs de peinture et le contour du texte et des formes sont dessinés.</p>
+La propriété **`paint-order`** permet de contrôler l'ordre dans lequel le remplissage, les marqueurs de peinture et le contour du texte et des formes sont dessinés.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css no-line-numbers">/* Normal */
+```css
+/* Normal */
 paint-order: normal;
 
 /* Valeur unique */
@@ -34,44 +35,47 @@ paint-order: stroke fill;
 /* Les marqueurs sont dessinés en premiers */
 /* puis le contour, puis le remplissage */
 paint-order: markers stroke fill;
-</pre>
+```
 
-<p>La valeur par défaut, utilisée si aucune valeur n'est fournie, sera <code>fill</code>, <code>stroke</code>, <code>markers</code>.</p>
+La valeur par défaut, utilisée si aucune valeur n'est fournie, sera `fill`, `stroke`, `markers`.
 
-<p>Lorsqu'une seule valeur est indiquée, c'est celle-ci qui est appliquée par défaut suivi des deux autres selon l'ordre par défaut. Lorsque deux valeurs sont indiquées, elles sont appliquées dans cet ordre puis suivi de la troisième.</p>
+Lorsqu'une seule valeur est indiquée, c'est celle-ci qui est appliquée par défaut suivi des deux autres selon l'ordre par défaut. Lorsque deux valeurs sont indiquées, elles sont appliquées dans cet ordre puis suivi de la troisième.
 
-<div class="note">
-<p><strong>Note :</strong> Pour cette propriété, les marqueurs sont uniquement utilisés dans le cas de formes SVG qui utilisent les propriétés <code>marker-*</code> (e.g. <code><a href="/fr/docs/Web/SVG/Attribute/marker-start">marker-start</a></code>) ou l'élément <code><a href="/fr/docs/Web/SVG/Element/marker">&lt;marker&gt;</a></code>. Les marqueurs ne sont pas appliqués sur le texte HTML, dans ce cas, seul l'ordre entre <code>stroke</code> et <code>fill</code> importe.</p>
-</div>
+> **Note :** Pour cette propriété, les marqueurs sont uniquement utilisés dans le cas de formes SVG qui utilisent les propriétés `marker-*` (e.g. [`marker-start`](/fr/docs/Web/SVG/Attribute/marker-start)) ou l'élément [`<marker>`](/fr/docs/Web/SVG/Element/marker). Les marqueurs ne sont pas appliqués sur le texte HTML, dans ce cas, seul l'ordre entre `stroke` et `fill` importe.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Les différents niveaux sont appliqués dans l'ordre normal.</dd>
- <dt><code>stroke</code></dt>
- <dt> </dt>
- <dt><code>fill</code></dt>
- <dt><code>markers</code></dt>
- <dd>Indiquent les valeurs dans l'ordre dans lequel on veut qu'elles soient peintes.</dd>
-</dl>
+- `normal`
+  - : Les différents niveaux sont appliqués dans l'ordre normal.
+- `stroke`
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+
+
+  `fill`
+
+  `markers`
+
+  - : Indiquent les valeurs dans l'ordre dans lequel on veut qu'elles soient peintes.
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="SVG">SVG</h3>
+### SVG
 
-<pre class="brush: html">&lt;svg xmlns="http://www.w3.org/2000/svg" width="400" height="200"&gt;
-  &lt;text x="10" y="75"&gt;stroke in front&lt;/text&gt;
-  &lt;text x="10" y="150" class="stroke-behind"&gt;stroke behind&lt;/text&gt;
-&lt;/svg&gt;</pre>
+```html
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200">
+  <text x="10" y="75">stroke in front</text>
+  <text x="10" y="150" class="stroke-behind">stroke behind</text>
+</svg>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">text {
+```css
+text {
   font-family: sans-serif;
   font-size: 50px;
   font-weight: bold;
@@ -82,33 +86,21 @@ paint-order: markers stroke fill;
 
 .stroke-behind {
   paint-order: stroke fill;
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', '100%', 165)}}</p>
+{{EmbedLiveSample('Exemples', '100%', 165)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('SVG2', 'painting.html#PaintOrder', 'paint-order')}}</td>
-   <td>{{Spec2('SVG2')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                     | Commentaires         |
+| ------------------------------------------------------------------------------------ | ------------------------ | -------------------- |
+| {{SpecName('SVG2', 'painting.html#PaintOrder', 'paint-order')}} | {{Spec2('SVG2')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.paint-order")}}</p>
+{{Compat("css.properties.paint-order")}}

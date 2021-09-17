@@ -7,16 +7,17 @@ tags:
   - Reference
 translation_of: Web/CSS/border-bottom-width
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>border-bottom-width</code></strong> définit l'épaisseur de la bordure pour le côté bas d'un élément.</p>
+La propriété **`border-bottom-width`** définit l'épaisseur de la bordure pour le côté bas d'un élément.
 
-<div>{{EmbedInteractiveExample("pages/css/border-bottom-width.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-bottom-width.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Une valeur de longueur */
-/* Type &lt;length&gt;          */
+```css
+/* Une valeur de longueur */
+/* Type <length>          */
 border-bottom-width: 10em;
 border-bottom-width: 3vmax;
 border-bottom-width: 6px;
@@ -30,30 +31,30 @@ border-bottom-width: thick;
 border-bottom-width: inherit;
 border-bottom-width: initial;
 border-bottom-width: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;line-width&gt;</code></dt>
- <dd>Une valeur de longueur ({{cssxref("&lt;length&gt;")}}) positive ou un mot-clé qui indique l'épaisseur de la bordure pour le bas de la boîte. Si la valeur est un mot-clé, ce doit être l'une des valeurs suivantes :
-  <ul>
-    <li><code>thin</code> (fin)</li>
-    <li><code>medium</code> (intermédiaire)</li>
-    <li><code>thick</code> (épais)</li>
-  </ul>
- La spécification ne précise pas de façon exacte l'épaisseur correspondant à chacun de ces mots-clés (c'est donc à chaque implémentation de choisir). La spécification requiert toutefois que l'inégalité suivante soit respectée <code>thin ≤ medium ≤ thick</code> et que ces valeurs soient constantes pour un même document<code>.</code></dd>
-</dl>
+- `<line-width>`
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+  - : Une valeur de longueur ({{cssxref("&lt;length&gt;")}}) positive ou un mot-clé qui indique l'épaisseur de la bordure pour le bas de la boîte. Si la valeur est un mot-clé, ce doit être l'une des valeurs suivantes :
+
+    - `thin` (fin)
+    - `medium` (intermédiaire)
+    - `thick` (épais)
+
+    La spécification ne précise pas de façon exacte l'épaisseur correspondant à chacun de ces mots-clés (c'est donc à chaque implémentation de choisir). La spécification requiert toutefois que l'inégalité suivante soit respectée `thin ≤ medium ≤ thick` et que ces valeurs soient constantes pour un même document`.`
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.element1{
+```css
+.element1{
   border-bottom: thick solid red;
 }
 .element2{
@@ -62,78 +63,54 @@ border-bottom-width: unset;
 .element3{
   border-bottom: thin solid green;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="element1"&gt;
+```html
+<p class="element1">
   Une bordure épaisse rouge.
-&lt;/p&gt;
+</p>
 
-&lt;p class="element2"&gt;
+<p class="element2">
   Une bordure moyenne orange.
-&lt;/p&gt;
+</p>
 
-&lt;p class="element3"&gt;
+<p class="element3">
   Et une bordure fine verte.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples","200","300")}}</p>
+{{EmbedLiveSample("Exemples","200","300")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-border-width', 'border-bottom-width')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Pas de modification significative.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'box.html#border-width-properties', 'border-bottom-width')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#border-left-width', 'border-bottom-width')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | État                                     | Commentaires                       |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ---------------------------------- |
+| {{SpecName('CSS3 Backgrounds', '#the-border-width', 'border-bottom-width')}}         | {{Spec2('CSS3 Backgrounds')}} | Pas de modification significative. |
+| {{SpecName('CSS2.1', 'box.html#border-width-properties', 'border-bottom-width')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.               |
+| {{SpecName('CSS1', '#border-left-width', 'border-bottom-width')}}                     | {{Spec2('CSS1')}}                 | Définition initiale.               |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.border-bottom-width")}}</p>
+{{Compat("css.properties.border-bottom-width")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Les autres propriétés liées à la largeur de la bordure :
-  <ul>
-   <li>{{cssxref("border-left-width")}},</li>
-   <li>{{cssxref("border-right-width")}},</li>
-   <li>{{cssxref("border-top-width")}},</li>
-   <li>{{cssxref("border-width")}}</li>
-  </ul>
- </li>
- <li>Les autres propriétés CSS liées à la bordure du côté haut :
-  <ul>
-   <li>{{cssxref("border")}},</li>
-   <li>{{cssxref("border-bottom")}},</li>
-   <li>{{cssxref("border-bottom-style")}},</li>
-   <li>{{cssxref("border-bottom-color")}}.</li>
-  </ul>
- </li>
-</ul>
+- Les autres propriétés liées à la largeur de la bordure :
+
+  - {{cssxref("border-left-width")}},
+  - {{cssxref("border-right-width")}},
+  - {{cssxref("border-top-width")}},
+  - {{cssxref("border-width")}}
+
+- Les autres propriétés CSS liées à la bordure du côté haut :
+
+  - {{cssxref("border")}},
+  - {{cssxref("border-bottom")}},
+  - {{cssxref("border-bottom-style")}},
+  - {{cssxref("border-bottom-color")}}.
