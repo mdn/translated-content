@@ -3,80 +3,64 @@ title: Access-Control-Allow-Origin
 slug: Web/HTTP/Headers/Access-Control-Allow-Origin
 translation_of: Web/HTTP/Headers/Access-Control-Allow-Origin
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>L'entête <code><strong>Access-Control-Allow-Origin</strong></code> renvoie une réponse indiquant si les ressources peuvent être partagées avec une <a href="/fr/docs/Glossaire/Origine">origine</a> donnée.</p>
+L'entête **`Access-Control-Allow-Origin`** renvoie une réponse indiquant si les ressources peuvent être partagées avec une [origine](/fr/docs/Glossaire/Origine) donnée.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>no</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Response header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>no</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Access-Control-Allow-Origin: *
-Access-Control-Allow-Origin: &lt;origin&gt;
-Access-Control-Allow-Origin: null
-</pre>
+    Access-Control-Allow-Origin: *
+    Access-Control-Allow-Origin: <origin>
+    Access-Control-Allow-Origin: null
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
- <dt>*</dt>
- <dd>Pour les demandes sans informations d’identification, le serveur peut spécifier « * » comme un caractère générique, permettant ainsi à n’importe quelle origine d'accéder à la ressource.</dd>
- <dt>&lt;origin&gt;</dt>
- <dd>Spécifie un URI qui peut accéder à la ressource. Il n'est possible de spécifier qu'une seule origine.</dd>
-</dl>
+- \*
+  - : Pour les demandes sans informations d’identification, le serveur peut spécifier « \* » comme un caractère générique, permettant ainsi à n’importe quelle origine d'accéder à la ressource.
+- \<origin>
+  - : Spécifie un URI qui peut accéder à la ressource. Il n'est possible de spécifier qu'une seule origine.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Pour permettre à n'importe quelle ressource d'accéder à vos ressources, vous pouvez indiquer :</p>
+Pour permettre à n'importe quelle ressource d'accéder à vos ressources, vous pouvez indiquer :
 
-<pre>Access-Control-Allow-Origin: *</pre>
+    Access-Control-Allow-Origin: *
 
-<p>Pour permettre <code>https://developer.mozilla.org</code> d'accéder à vos ressources, vous pouvez indiquer :</p>
+Pour permettre `https://developer.mozilla.org` d'accéder à vos ressources, vous pouvez indiquer :
 
-<pre>Access-Control-Allow-Origin: https://developer.mozilla.org</pre>
+    Access-Control-Allow-Origin: https://developer.mozilla.org
 
-<h3 id="CORS_et_le_cache">CORS et le cache</h3>
+### CORS et le cache
 
-<p>Si le serveur spécifie un hôte d'origine plutôt que "*", il doit également inclure "<em>Origin</em>" dans l'en-tête de réponse "<em><a href="/fr/docs/Web/HTTP/Headers/Vary">Vary</a></em>" pour indiquer aux clients que les réponses du serveur seront différentes en fonction de la valeur de la demande d'origine entête.</p>
+Si le serveur spécifie un hôte d'origine plutôt que "\*", il doit également inclure "_Origin_" dans l'en-tête de réponse "_[Vary](/fr/docs/Web/HTTP/Headers/Vary)_" pour indiquer aux clients que les réponses du serveur seront différentes en fonction de la valeur de la demande d'origine entête.
 
-<pre>Access-Control-Allow-Origin: https://developer.mozilla.org
-Vary: Origin</pre>
+    Access-Control-Allow-Origin: https://developer.mozilla.org
+    Vary: Origin
 
-<h2 id="Caractéristiques">Caractéristiques</h2>
+## Caractéristiques
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Caractéristiques</th>
-   <th scope="col">Statue</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Fetch','#http-access-control-allow-origin', 'Access-Control-Allow-Origin')}}</td>
-   <td>{{Spec2("Fetch")}}</td>
-   <td>Initial definition.</td>
-  </tr>
- </tbody>
-</table>
+| Caractéristiques                                                                                                     | Statue                   | Commentaire         |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
+| {{SpecName('Fetch','#http-access-control-allow-origin', 'Access-Control-Allow-Origin')}} | {{Spec2("Fetch")}} | Initial definition. |
 
-<h2 id="Compatibilité">Compatibilité</h2>
+## Compatibilité
 
-<p>{{Compat("http.headers.Access-Control-Allow-Origin")}}</p>
+{{Compat("http.headers.Access-Control-Allow-Origin")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTTPHeader("Origin")}}</li>
- <li>{{HTTPHeader("Vary")}}</li>
-</ul>
+- {{HTTPHeader("Origin")}}
+- {{HTTPHeader("Vary")}}

@@ -7,42 +7,29 @@ tags:
   - Reference
 translation_of: Web/HTTP/Status/304
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Le code de réponse de redirection <code><strong>304</strong></code><strong><code> Not Modified</code></strong> indique qu'il n'y a pas besoin de retransmettre les ressources demandées. C'est une redirection implicite vers une ressource mise en cache. Cela survient lorsque la méthode de requête est <em>{{glossary("safe")}}</em> (par exemple une requête {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}}), ou lorsque la requête est conditionnelle et utilise l'en-tête {{HTTPHeader("If-None-Match")}} ou {{HTTPHeader("If-Modified-Since")}}.</p>
+Le code de réponse de redirection **`304`\*\***` Not Modified`\*_ indique qu'il n'y a pas besoin de retransmettre les ressources demandées. C'est une redirection implicite vers une ressource mise en cache. Cela survient lorsque la méthode de requête est _{{glossary("safe")}}\* (par exemple une requête {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}}), ou lorsque la requête est conditionnelle et utilise l'en-tête {{HTTPHeader("If-None-Match")}} ou {{HTTPHeader("If-Modified-Since")}}.
 
-<p>La réponse {{HTTPStatus("200")}} <code>OK</code> équivalente aurait inclus les en-têtes {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Location")}}, {{HTTPHeader("Date")}}, {{HTTPHeader("ETag")}}, {{HTTPHeader("Expires")}}, et {{HTTPHeader("Vary")}}.</p>
+La réponse {{HTTPStatus("200")}} `OK` équivalente aurait inclus les en-têtes {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Content-Location")}}, {{HTTPHeader("Date")}}, {{HTTPHeader("ETag")}}, {{HTTPHeader("Expires")}}, et {{HTTPHeader("Vary")}}.
 
-<div class="note">
-<p><strong>Note :</strong> Dans les navigateurs, <a href="/fr/docs/Outils/Moniteur_réseau">les outils de développement réseau</a> créent des requêtes supplémentaires qui conduisent à des réponses <code>304</code>. Ainsi l'accès au cache local est visible par les développeurs .</p>
-</div>
+> **Note :** Dans les navigateurs, [les outils de développement réseau](/fr/docs/Outils/Moniteur_réseau) créent des requêtes supplémentaires qui conduisent à des réponses `304`. Ainsi l'accès au cache local est visible par les développeurs .
 
-<h2 id="Statut">Statut</h2>
+## Statut
 
-<pre class="syntaxbox">304 Not Modified</pre>
+    304 Not Modified
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Titre</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7232", "304 Not Modified" , "4.1")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                            | Titre                                                        |
+| -------------------------------------------------------- | ------------------------------------------------------------ |
+| {{RFC("7232", "304 Not Modified" , "4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Conditional Requests |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("http/status", "304")}}</p>
+{{Compat("http/status", "304")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTTPHeader("If-Modified-Since")}}</li>
- <li>{{HTTPHeader("If-None-Match")}}</li>
-</ul>
+- {{HTTPHeader("If-Modified-Since")}}
+- {{HTTPHeader("If-None-Match")}}

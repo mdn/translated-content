@@ -12,68 +12,69 @@ tags:
   - report-to
 translation_of: Web/HTTP/Headers/Content-Security-Policy/report-to
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <strong><code>report-to</code></strong> demande à l'agent utilisateur de rapporter les violations de règles CSP à l'adresse fournie dans un groupe de l'en-tête HTTP <code>Report-To</code>.</p>
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`report-to`** demande à l'agent utilisateur de rapporter les violations de règles CSP à l'adresse fournie dans un groupe de l'en-tête HTTP `Report-To`.
 
-<pre class="syntaxbox">Content-Security-Policy: ...; report-to groupname
-</pre>
+    Content-Security-Policy: ...; report-to groupname
 
-<p>Cette directive n'a aucun effet en elle-même, mais prend tout son sens en étant combinée à d'autres directives.</p>
+Cette directive n'a aucun effet en elle-même, mais prend tout son sens en étant combinée à d'autres directives.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Version de CSP</th>
-   <td>1</td>
-  </tr>
-  <tr>
-   <th scope="row">Type de directive</th>
-   <td>{{Glossary("Reporting directive")}}</td>
-  </tr>
-  <tr>
-   <th colspan="2" scope="row">This directive is not supported in the {{HTMLElement("meta")}} element.</th>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Version de CSP</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type de directive</th>
+      <td>{{Glossary("Reporting directive")}}</td>
+    </tr>
+    <tr>
+      <th colspan="2" scope="row">
+        This directive is not supported in the {{HTMLElement("meta")}}
+        element.
+      </th>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre>Content-Security-Policy: report-to &lt;json-field-value&gt;;</pre>
+    Content-Security-Policy: report-to <json-field-value>;
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Voir {{HTTPHeader("Content-Security-Policy-Report-Only")}} pour plus d'informations et d'exemples.</p>
+Voir {{HTTPHeader("Content-Security-Policy-Report-Only")}} pour plus d'informations et d'exemples.
 
-<pre><a href="http://wicg.github.io/reporting/#report-to">Report-To</a>: { "<a href="http://wicg.github.io/reporting/#group">group</a>": "csp-endpoint",
-             "<a href="http://wicg.github.io/reporting/#max-age">max_age</a>": 10886400,
-             "<a href="http://wicg.github.io/reporting/#endpoints">endpoints</a>": [
-               { "<a href="http://wicg.github.io/reporting/#url">url</a>": "https://example.com/csp-reports" }
-             ] },
-           { "<a href="http://wicg.github.io/reporting/#group">group</a>": "hpkp-endpoint",
-             "<a href="http://wicg.github.io/reporting/#max-age">max_age</a>": 10886400,
-             "<a href="http://wicg.github.io/reporting/#endpoints">endpoints</a>": [
-               { "<a href="http://wicg.github.io/reporting/#url">url</a>": "https://example.com/hpkp-reports" }
-             ] }
-<a href="https://w3c.github.io/webappsec-csp/#content-security-policy">Content-Security-Policy</a>: ...; <a href="https://w3c.github.io/webappsec-csp/#directives-reporting">report-to</a> csp-endpoint
-</pre>
+    Report-To: { "group": "csp-endpoint",
+                 "max_age": 10886400,
+                 "endpoints": [
+                   { "url": "https://example.com/csp-reports" }
+                 ] },
+               { "group": "hpkp-endpoint",
+                 "max_age": 10886400,
+                 "endpoints": [
+                   { "url": "https://example.com/hpkp-reports" }
+                 ] }
+    Content-Security-Policy: ...; report-to csp-endpoint
 
-<pre><a href="http://wicg.github.io/reporting/#report-to">Report-To</a>: { "<a href="http://wicg.github.io/reporting/#group">group</a>": "endpoint-1",
-             "<a href="http://wicg.github.io/reporting/#max-age">max_age</a>": 10886400,
-             "<a href="http://wicg.github.io/reporting/#endpoints">endpoints</a>": [
-               { "<a href="http://wicg.github.io/reporting/#url">url</a>": "https://example.com/reports" },
-               { "<a href="http://wicg.github.io/reporting/#url">url</a>": "https://backup.com/reports" }
-             ] }
+<!---->
 
-<a href="https://w3c.github.io/webappsec-csp/#content-security-policy">Content-Security-Policy</a>: ...; <a href="https://w3c.github.io/webappsec-csp/#directives-reporting">report-to</a> endpoint-1</pre>
+    Report-To: { "group": "endpoint-1",
+                 "max_age": 10886400,
+                 "endpoints": [
+                   { "url": "https://example.com/reports" },
+                   { "url": "https://backup.com/reports" }
+                 ] }
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+    Content-Security-Policy: ...; report-to endpoint-1
 
-<p>{{Compat("http.headers.csp.Content-Security-Policy.report-to")}}</p>
+## Compatibilité des navigateurs
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+{{Compat("http.headers.csp.Content-Security-Policy.report-to")}}
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li>{{HTTPHeader("Content-Security-Policy-Report-Only")}}</li>
-</ul>
+## Voir aussi
+
+- {{HTTPHeader("Content-Security-Policy")}}
+- {{HTTPHeader("Content-Security-Policy-Report-Only")}}

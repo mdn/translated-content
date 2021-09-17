@@ -8,83 +8,64 @@ tags:
   - Réponse
 translation_of: Web/HTTP/Headers/X-Content-Type-Options
 ---
-<p>L'entête <code><strong>X-Content-Type-Options</strong></code> est un marqueur utilisé par le serveur pour indiquer que les <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">types MIME</a> annoncés dans les en-têtes {{HTTPHeader("Content-Type")}} ne doivent pas être modifiés ou et suivis. Cela permet de se détacher du sniffing de type <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#MIME_sniffing">MIME</a>, ou, en d'autres termes, c'est une façon de dire que les webmasters savaient ce qu'ils faisaient.</p>
+L'entête **`X-Content-Type-Options`** est un marqueur utilisé par le serveur pour indiquer que les [types MIME](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) annoncés dans les en-têtes {{HTTPHeader("Content-Type")}} ne doivent pas être modifiés ou et suivis. Cela permet de se détacher du sniffing de type [MIME](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types#MIME_sniffing), ou, en d'autres termes, c'est une façon de dire que les webmasters savaient ce qu'ils faisaient.
 
-<p>Cet en-tête a été introduit par Microsoft dans IE 8 comme un moyen pour les webmasters de bloquer le reniflement de contenu qui se passait et pouvait transformer les types MIME non exécutables en types MIME exécutables. Depuis, d'autres navigateurs l'ont introduit, même si leurs algorithmes de reniflage MIME étaient moins agressifs.</p>
+Cet en-tête a été introduit par Microsoft dans IE 8 comme un moyen pour les webmasters de bloquer le reniflement de contenu qui se passait et pouvait transformer les types MIME non exécutables en types MIME exécutables. Depuis, d'autres navigateurs l'ont introduit, même si leurs algorithmes de reniflage MIME étaient moins agressifs.
 
-<p>À partir de Firefox 72, la désactivation du reniflement MIME est également appliqué aux documents de premier niveau si un {{HTTPHeader("Content-type")}} est fourni. Les pages web HTML qui sont servies avec un type MIME différent de <code>text/html</code>, peuvent alors être juste téléchargées au lieu d'êtres rendues (interprétées et affichées par le navigateur). Assurez vous de valoriser correctement ces 2 en-têtes.</p>
+À partir de Firefox 72, la désactivation du reniflement MIME est également appliqué aux documents de premier niveau si un {{HTTPHeader("Content-type")}} est fourni. Les pages web HTML qui sont servies avec un type MIME différent de `text/html`, peuvent alors être juste téléchargées au lieu d'êtres rendues (interprétées et affichées par le navigateur). Assurez vous de valoriser correctement ces 2 en-têtes.
 
-<p>Les testeurs de sécurité du site s'attendent généralement à ce que cet en-tête soit défini.</p>
+Les testeurs de sécurité du site s'attendent généralement à ce que cet en-tête soit défini.
 
-<div class="note">
-  <p><strong>Note :</strong> <code>X-Content-Type-Options</code> ne s'appliquent qu'au <a href="https://fetch.spec.whatwg.org/#should-response-to-request-be-blocked-due-to-nosniff?">blocage des demandes par <code>nosniff</code></a> pour les <a href="https://fetch.spec.whatwg.org/#concept-request-destination">destinations de demandes</a> de  "<code>script</code>" et "<code>style</code>". Il permet également le <a href="https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md#what-types-of-content-are-protected-by-corb">blocage en lecture croisé (CORB)</a> pour les fichiers HTML, TXT, JSON, et XML (à l'exception des images SVG <code>image/svg+xml</code>).</p>
-</div>
+> **Note :** `X-Content-Type-Options` ne s'appliquent qu'au [blocage des demandes par `nosniff`](https://fetch.spec.whatwg.org/#should-response-to-request-be-blocked-due-to-nosniff?) pour les [destinations de demandes](https://fetch.spec.whatwg.org/#concept-request-destination) de  "`script`" et "`style`". Il permet également le [blocage en lecture croisé (CORB)](https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md#what-types-of-content-are-protected-by-corb) pour les fichiers HTML, TXT, JSON, et XML (à l'exception des images SVG `image/svg+xml`).
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Header type</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>Non</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Header type</th>
+      <td>{{Glossary("Response header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>Non</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">X-Content-Type-Options: nosniff
-</pre>
+    X-Content-Type-Options: nosniff
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
- <dt><code>nosniff</code></dt>
- <dd><p>Bloque une requête si la destination de la requête est de type</p>
- <ul>
-  <li>"<code>style</code>" et le MIME n'est pas de type <code>text/css</code>, ou</li>
-  <li>"<code>script</code>" et le MIME n'est pas de type <a href="https://html.spec.whatwg.org/multipage/scripting.html#javascript-mime-type">JavaScript MIME type</a></li>
- </ul>
- <p>Permet le blocage de la lecture croisée pour les types MIME</p>
- <ul>
-  <li><code>text/html</code></li>
-  <li><code>text/plain</code></li>
-  <li><code>text/json</code>, <code>application/json</code> ou tout autre type avec une extension JSON: <code>*/*+json</code></li>
-  <li><code>text/xml</code>, <code>application/xml</code> ou tout autre type avec une extension XML: <code>*/*+xml</code> (hors <code>image/svg+xml</code>)</li>
- </ul>
- </dd>
-</dl>
+- `nosniff`
 
-<h2 id="Caractéristiques">Caractéristiques</h2>
+  - : Bloque une requête si la destination de la requête est de type
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Caractéristique</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("Fetch", "#x-content-type-options-header", "X-Content-Type-Options definition")}}</td>
-   <td>{{Spec2("Fetch")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+    - "`style`" et le MIME n'est pas de type `text/css`, ou
+    - "`script`" et le MIME n'est pas de type [JavaScript MIME type](https://html.spec.whatwg.org/multipage/scripting.html#javascript-mime-type)
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
+    Permet le blocage de la lecture croisée pour les types MIME
 
-<p>{{Compat("http.headers.X-Content-Type-Options")}}</p>
+    - `text/html`
+    - `text/plain`
+    - `text/json`, `application/json` ou tout autre type avec une extension JSON: `*/*+json`
+    - `text/xml`, `application/xml` ou tout autre type avec une extension XML: `*/*+xml` (hors `image/svg+xml`)
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Caractéristiques
 
-<ul>
- <li>{{HTTPHeader("Content-Type")}}</li>
- <li>La <a href="https://blogs.msdn.microsoft.com/ie/2008/09/02/ie8-security-part-vi-beta-2-update/">définition originale</a> de X-Content-Type-Options par Microsoft.</li>
- <li>L'<a href="https://observatory.mozilla.org/">Outil Obserservatoire Mozilla</a> teste la configuration (y compris en-tête) des sites Web pour la sécurité et la sûreté.</li>
- <li><a href="https://blog.mozilla.org/security/2016/08/26/mitigating-mime-confusion-attacks-in-firefox/">Atténuer les attaques MIME Confusion dans Firefox.</a></li>
- <li><a href="https://fetch.spec.whatwg.org/#corb">Blocage de la lecture croisée (CORB)</a></li>
- <li><a href="https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md">Google Docs CORB explicatif</a></li>
-</ul>
+| Caractéristique                                                                                                              | Statut                   | Commentaire         |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------ | ------------------- |
+| {{SpecName("Fetch", "#x-content-type-options-header", "X-Content-Type-Options definition")}} | {{Spec2("Fetch")}} | Définition initiale |
+
+## Browser compatibility
+
+{{Compat("http.headers.X-Content-Type-Options")}}
+
+## Voir aussi
+
+- {{HTTPHeader("Content-Type")}}
+- La [définition originale](https://blogs.msdn.microsoft.com/ie/2008/09/02/ie8-security-part-vi-beta-2-update/) de X-Content-Type-Options par Microsoft.
+- L'[Outil Obserservatoire Mozilla](https://observatory.mozilla.org/) teste la configuration (y compris en-tête) des sites Web pour la sécurité et la sûreté.
+- [Atténuer les attaques MIME Confusion dans Firefox.](https://blog.mozilla.org/security/2016/08/26/mitigating-mime-confusion-attacks-in-firefox/)
+- [Blocage de la lecture croisée (CORB)](https://fetch.spec.whatwg.org/#corb)
+- [Google Docs CORB explicatif](https://chromium.googlesource.com/chromium/src/+/master/services/network/cross_origin_read_blocking_explainer.md)

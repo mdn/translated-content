@@ -8,37 +8,26 @@ tags:
   - Reference
 translation_of: Web/HTTP/Status/428
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Le code de statut de réponse HTTP <code><strong>428 Precondition Required</strong></code> indique que le serveur requiert que la requête soit <a href="/fr/docs/Web/HTTP/Conditional_requests">conditionnelle</a>.</p>
+Le code de statut de réponse HTTP **`428 Precondition Required`** indique que le serveur requiert que la requête soit [conditionnelle](/fr/docs/Web/HTTP/Conditional_requests).
 
-<p>Généralement, cela signifie qu'il <strong>manque</strong> un en-tête de précondition, comme {{HTTPHeader("If-Match")}}.</p>
+Généralement, cela signifie qu'il **manque** un en-tête de précondition, comme {{HTTPHeader("If-Match")}}.
 
-<p>Lorsqu'un en-tête de précondition <strong>ne correspond pas</strong> à l'état du serveur, la réponse doit être {{HTTPStatus(412)}} <code>Precondition Failed</code>.</p>
+Lorsqu'un en-tête de précondition **ne correspond pas** à l'état du serveur, la réponse doit être {{HTTPStatus(412)}} `Precondition Failed`.
 
-<h2 id="Statut">Statut</h2>
+## Statut
 
-<pre class="syntaxbox">428 Precondition Required</pre>
+    428 Precondition Required
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Titre</th>
-  </tr>
-  <tr>
-   <td>{{RFC("6585", "428 Precondition Required" , "3")}}</td>
-   <td>Additional HTTP Status Codes</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                        | Titre                        |
+| -------------------------------------------------------------------- | ---------------------------- |
+| {{RFC("6585", "428 Precondition Required" , "3")}} | Additional HTTP Status Codes |
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/HTTP/Conditional_requests">Les requêtes conditionnelles en HTTP</a></li>
- <li>{{HTTPHeader("If-Match")}}</li>
- <li>{{HTTPStatus(412)}}</li>
-</ul>
+- [Les requêtes conditionnelles en HTTP](/fr/docs/Web/HTTP/Conditional_requests)
+- {{HTTPHeader("If-Match")}}
+- {{HTTPStatus(412)}}

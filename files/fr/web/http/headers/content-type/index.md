@@ -7,109 +7,92 @@ tags:
   - en-tête
 translation_of: Web/HTTP/Headers/Content-Type
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>L'en-tête <strong><code>Content-Type</code></strong> sert à indiquer le type MIME de la ressource.</p>
+L'en-tête **`Content-Type`** sert à indiquer le type MIME de la ressource.
 
-<p>Dans les réponses, un en-tête <code>Content-Type</code> indique au client le type de contenu réellement renvoyé. Il peut arriver que les navigateurs cherchent à détecter le type MIME du contenu en l'inspectant plutôt qu'en respectant la valeur de cet en-tête. Pour empêcher ce comportement, on peut paramétrer l'en-tête {{HTTPHeader("X-Content-Type-Options")}} avec la valeur <code>nosniff</code>.</p>
+Dans les réponses, un en-tête `Content-Type` indique au client le type de contenu réellement renvoyé. Il peut arriver que les navigateurs cherchent à détecter le type MIME du contenu en l'inspectant plutôt qu'en respectant la valeur de cet en-tête. Pour empêcher ce comportement, on peut paramétrer l'en-tête {{HTTPHeader("X-Content-Type-Options")}} avec la valeur `nosniff`.
 
-<p>Dans les requêtes, (telles que {{HTTPMethod("POST")}} ou {{HTTPMethod("PUT")}}), le client indique au serveur quel type de données a réellement été envoyé.</p>
+Dans les requêtes, (telles que {{HTTPMethod("POST")}} ou {{HTTPMethod("PUT")}}), le client indique au serveur quel type de données a réellement été envoyé.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Type d'en-tête</th>
-   <td>En-tête d'entité</td>
-  </tr>
-  <tr>
-   <th scope="row">Nom d'en-tête interdit</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">En-tête de réponse simple pour le CORS</th>
-   <td>Oui</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Type d'en-tête</th>
+      <td>En-tête d'entité</td>
+    </tr>
+    <tr>
+      <th scope="row">Nom d'en-tête interdit</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">En-tête de réponse simple pour le CORS</th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Content-Type: text/html; charset=utf-8
-Content-Type: multipart/form-data; boundary=something
-</pre>
+    Content-Type: text/html; charset=utf-8
+    Content-Type: multipart/form-data; boundary=something
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
- <dt><code>media-type</code></dt>
- <dd>Le <a href="/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types">type MIME</a> de la ressource ou des données.</dd>
- <dt><code>charset</code></dt>
- <dd>L'encodage utilisé pour les caractères des données.</dd>
- <dt><code>boundary</code></dt>
- <dd>Pour les entités fragmentées (<em>multipart</em>), la directive <code>boundary</code> est nécessaire. Elle ne se termine pas par un espace et est composée de 1 à 70 caractères qui proviennent d'un ensemble de caractères connus pour ne pas être transformés/modifiés par les différents composants au travers desquels transitent les emails. Cette directive est utilisée afin d'encapsuler les limites des différents fragments d'un message fragmenté.</dd>
-</dl>
+- `media-type`
+  - : Le [type MIME](/fr/docs/Web/HTTP/Basics_of_HTTP/MIME_types) de la ressource ou des données.
+- `charset`
+  - : L'encodage utilisé pour les caractères des données.
+- `boundary`
+  - : Pour les entités fragmentées (_multipart_), la directive `boundary` est nécessaire. Elle ne se termine pas par un espace et est composée de 1 à 70 caractères qui proviennent d'un ensemble de caractères connus pour ne pas être transformés/modifiés par les différents composants au travers desquels transitent les emails. Cette directive est utilisée afin d'encapsuler les limites des différents fragments d'un message fragmenté.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Content-Type_dans_les_formulaires_HTML"><code>Content-Type</code> dans les formulaires HTML</h3>
+### `Content-Type` dans les formulaires HTML
 
-<p>Dans une requête {{HTTPMethod("POST")}}, qui vient d'une soumission d'un formulaire HTML, le <code>Content-Type</code> de la requête est précisé par l'attribut <code>enctype</code> de l'élément {{HTMLElement("form")}}.</p>
+Dans une requête {{HTTPMethod("POST")}}, qui vient d'une soumission d'un formulaire HTML, le `Content-Type` de la requête est précisé par l'attribut `enctype` de l'élément {{HTMLElement("form")}}.
 
-<pre class="brush: html">&lt;form action="/" method="post" enctype="multipart/form-data"&gt;
-  &lt;input type="text" name="description" value="du texte"&gt;
-  &lt;input type="file" name="monFichier"&gt;
-  &lt;button type="submit"&gt;Envoyer&lt;/button&gt;
-&lt;/form&gt;
-</pre>
+```html
+<form action="/" method="post" enctype="multipart/form-data">
+  <input type="text" name="description" value="du texte">
+  <input type="file" name="monFichier">
+  <button type="submit">Envoyer</button>
+</form>
+```
 
-<p>La requête ressemble à peu près à ceci (les en-têtes moins intéressants ont été ici volontairement omis) :</p>
+La requête ressemble à peu près à ceci (les en-têtes moins intéressants ont été ici volontairement omis) :
 
-<pre>POST /toto HTTP/1.1
-Content-Length: 68137
-Content-Type: multipart/form-data; boundary=---------------------------974767299852498929531610575
-Content-Disposition: form-data; name="description"
+    POST /toto HTTP/1.1
+    Content-Length: 68137
+    Content-Type: multipart/form-data; boundary=---------------------------974767299852498929531610575
+    Content-Disposition: form-data; name="description"
 
----------------------------974767299852498929531610575
+    ---------------------------974767299852498929531610575
 
-du texte par ici
+    du texte par ici
 
----------------------------974767299852498929531610575
-Content-Disposition: form-data; name="monFichier"; filename="toto.txt"
-Content-Type: text/plain
+    ---------------------------974767299852498929531610575
+    Content-Disposition: form-data; name="monFichier"; filename="toto.txt"
+    Content-Type: text/plain
 
-(contenu du fichier envoyé en ligne toto.txt)
+    (contenu du fichier envoyé en ligne toto.txt)
 
----------------------------974767299852498929531610575
-</pre>
+    ---------------------------974767299852498929531610575
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Titre</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7233", "Content-Type in multipart", "4.1")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Range Requests</td>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "Content-Type", "3.1.1.5")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                        | Titre                                                         |
+| -------------------------------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7233", "Content-Type in multipart", "4.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Range Requests        |
+| {{RFC("7231", "Content-Type", "3.1.1.5")}}             | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Compatibilité_selon_les_navigateurs">Compatibilité selon les navigateurs</h2>
+## Compatibilité selon les navigateurs
 
-<p>{{Compat("http/headers/content-type")}}</p>
+{{Compat("http/headers/content-type")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTTPHeader("Accept")}} et {{HTTPHeader("Accept-Charset")}}</li>
- <li>{{HTTPHeader("Content-Disposition")}}</li>
- <li>{{HTTPStatus("206")}} <code>Partial Content</code></li>
- <li>{{HTTPHeader("X-Content-Type-Options")}}</li>
-</ul>
+- {{HTTPHeader("Accept")}} et {{HTTPHeader("Accept-Charset")}}
+- {{HTTPHeader("Content-Disposition")}}
+- {{HTTPStatus("206")}} `Partial Content`
+- {{HTTPHeader("X-Content-Type-Options")}}

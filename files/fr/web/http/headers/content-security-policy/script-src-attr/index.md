@@ -16,79 +16,66 @@ tags:
   - source
 translation_of: Web/HTTP/Headers/Content-Security-Policy/script-src-attr
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <code><strong>script-src-attr</strong></code> spécifie les sources valides pour du code JavaScript embarqué dans des éléments {{HTMLElement("script")}} ou dans des gestionnaires d'évènements par attribut comme <code>onclick</code>, mais non les URL chargées par des éléments {{HTMLElement("script")}}.</p>
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`script-src-attr`** spécifie les sources valides pour du code JavaScript embarqué dans des éléments {{HTMLElement("script")}} ou dans des gestionnaires d'évènements par attribut comme `onclick`, mais non les URL chargées par des éléments {{HTMLElement("script")}}.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Version de CSP</th>
-   <td>3</td>
-  </tr>
-  <tr>
-   <th scope="row">Type de directive</th>
-   <td>{{Glossary("Fetch directive")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{CSP("default-src")}} par défaut</th>
-   <td>Oui, si cette directive est absente, l'agent utilisateur consultera la directive {{CSP("script-src")}}, qui a pour valeur par défaut celle de la directive <code>default-src</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Version de CSP</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th scope="row">Type de directive</th>
+      <td>{{Glossary("Fetch directive")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{CSP("default-src")}} par défaut</th>
+      <td>
+        Oui, si cette directive est absente, l'agent utilisateur consultera la
+        directive {{CSP("script-src")}}, qui a pour valeur par défaut
+        celle de la directive <code>default-src</code>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Une ou plusieurs sources peuvent être autorisées pour cette directive :</p>
+Une ou plusieurs sources peuvent être autorisées pour cette directive :
 
-<pre class="syntaxbox">Content-Security-Policy: script-src-attr &lt;source&gt;;
-Content-Security-Policy: script-src-attr &lt;source&gt; &lt;source&gt;;
-</pre>
+    Content-Security-Policy: script-src-attr <source>;
+    Content-Security-Policy: script-src-attr <source> <source>;
 
-<p><code>script-src-attr</code>  peut être utilisée conjointement à  {{CSP("script-src")}} :</p>
+`script-src-attr`  peut être utilisée conjointement à  {{CSP("script-src")}} :
 
-<pre class="syntaxbox">Content-Security-Policy: script-src &lt;source&gt;;
-Content-Security-Policy: script-src-attr &lt;source&gt;;
-</pre>
+    Content-Security-Policy: script-src <source>;
+    Content-Security-Policy: script-src-attr <source>;
 
-<h3 id="Sources">Sources</h3>
+### Sources
 
-<p>{{page("fr/Web/HTTP/Headers/Content-Security-Policy/default-src", "Sources")}}</p>
+{{page("fr/Web/HTTP/Headers/Content-Security-Policy/default-src", "Sources")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Valeur_par_défaut_avec_script-src">Valeur par défaut avec script-src</h3>
+### Valeur par défaut avec script-src
 
-<p>Si la directive <code>script-src-attr</code> est absente, l'agent utilisateur se rabat sur la valeur de la directive {{CSP("script-src")}}, qui elle-même a pour valeur par défaut celle de la directive {{CSP("default-src")}}.</p>
+Si la directive `script-src-attr` est absente, l'agent utilisateur se rabat sur la valeur de la directive {{CSP("script-src")}}, qui elle-même a pour valeur par défaut celle de la directive {{CSP("default-src")}}.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{specName("CSP 3.0", "#directive-script-src-attr", "script-src-attr")}}</td>
-   <td>{{Spec2("CSP 3.0")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | Statut                       | Commentaire          |
+| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{specName("CSP 3.0", "#directive-script-src-attr", "script-src-attr")}} | {{Spec2("CSP 3.0")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("http.headers.csp.Content-Security-Policy.script-src-attr")}}</p>
+{{Compat("http.headers.csp.Content-Security-Policy.script-src-attr")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li>{{HTMLElement("script")}}</li>
- <li>{{CSP("script-src")}}</li>
- <li>{{CSP("script-src-elem")}}</li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- {{HTMLElement("script")}}
+- {{CSP("script-src")}}
+- {{CSP("script-src-elem")}}

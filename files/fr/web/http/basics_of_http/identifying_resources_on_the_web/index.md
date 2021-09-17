@@ -6,165 +6,100 @@ tags:
 translation_of: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
 original_slug: Web/HTTP/Basics_of_HTTP/Identifier_des_ressources_sur_le_Web
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>La cible d'une requête HTTP est appelée une "ressource", elle ne possède pas de type particulier. Il peut s'agir d'un document, d'une photo ou de n'importe quoi d'autre. Chaque ressource est identifiée à l'aide d'une <em>Uniform Resource Identifier</em> ({{Glossary("URI")}}) utilisé au sein de HTTP pour identifier les ressources.</p>
+La cible d'une requête HTTP est appelée une "ressource", elle ne possède pas de type particulier. Il peut s'agir d'un document, d'une photo ou de n'importe quoi d'autre. Chaque ressource est identifiée à l'aide d'une _Uniform Resource Identifier_ ({{Glossary("URI")}}) utilisé au sein de HTTP pour identifier les ressources.
 
-<p>L'identité et l'emplacement d'une ressource sur le Web sont souvent déterminées via une URL (<em>Uniform Resource Locator</em>° un type d'URI. Il existe des cas valides où l'identité et l'emplacement d'une ressource ne sont pas obtenus par la même URI comme lorsque l'en-tête {{HTTPHeader("Alt-Svc")}} est utilisé. La ressource requise par le client doit alors être récupérée à partir d'un emplacement différent.</p>
+L'identité et l'emplacement d'une ressource sur le Web sont souvent déterminées via une URL (*Uniform Resource Locator*° un type d'URI. Il existe des cas valides où l'identité et l'emplacement d'une ressource ne sont pas obtenus par la même URI comme lorsque l'en-tête {{HTTPHeader("Alt-Svc")}} est utilisé. La ressource requise par le client doit alors être récupérée à partir d'un emplacement différent.
 
-<h2 id="URLs_et_URNs">URLs et URNs</h2>
+## URLs et URNs
 
-<h3 id="URLs">URLs</h3>
+### URLs
 
-<p>La forme la plus commune des URI est l'URL (<em>Uniform Resource Locator</em> ({{Glossary("URL")}})) que l'on connaît sous le nom d'adresse web.</p>
+La forme la plus commune des URI est l'URL (_Uniform Resource Locator_ ({{Glossary("URL")}})) que l'on connaît sous le nom d'adresse web.
 
-<pre>https://developer.mozilla.org
-https://developer.mozilla.org/fr/docs/Learn/
-https://developer.mozilla.org/fr/search?q=URL</pre>
+    https://developer.mozilla.org
+    https://developer.mozilla.org/fr/docs/Learn/
+    https://developer.mozilla.org/fr/search?q=URL
 
-<p>Vous pouvez entrer chacune de ces URLs dans votre navigateur pour lui demander de charger la page associée (il s'agit ici de la ressource).</p>
+Vous pouvez entrer chacune de ces URLs dans votre navigateur pour lui demander de charger la page associée (il s'agit ici de la ressource).
 
-<p>Une URL est composée de différentes parties, certaines obligatoires et d'autres facultatives. Voici un exemple plus complet :</p>
+Une URL est composée de différentes parties, certaines obligatoires et d'autres facultatives. Voici un exemple plus complet :
 
-<pre>http://www.example.com:80/path/to/myfile.html?key1=value1&amp;key2=value2#SomewhereInTheDocument</pre>
+    http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereInTheDocument
 
-<h3 id="URNs">URNs</h3>
+### URNs
 
-<p>Une URN ou <em>Uniform Resource Name</em> est une URI qui identifie une ressource à l'aide d'un nom dans un espace de noms (namespace) particulier.</p>
+Une URN ou _Uniform Resource Name_ est une URI qui identifie une ressource à l'aide d'un nom dans un espace de noms (namespace) particulier.
 
-<pre>urn:isbn:9780141036144
-urn:ietf:rfc:7230
-</pre>
+    urn:isbn:9780141036144
+    urn:ietf:rfc:7230
 
-<p>Ces deux URNs correspondent :</p>
+Ces deux URNs correspondent :
 
-<ul>
- <li>au livre 1984 de George Orwell,</li>
- <li>La spécification IETF 7230, Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing.</li>
-</ul>
+- au livre 1984 de George Orwell,
+- La spécification IETF 7230, Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing.
 
-<h2 id="Syntaxe_des_URIs_(Uniform_Resource_Identifiers)">Syntaxe des URIs (Uniform Resource Identifiers)</h2>
+## Syntaxe des URIs (Uniform Resource Identifiers)
 
-<h3 id="Schéma_ou_protocole">Schéma ou protocole</h3>
+### Schéma ou protocole
 
-<dl>
- <dt><img alt="Protocole" src="mdn-url-protocol@x2.png"></dt>
- <dd><code>http://</code> constitue le protocole, il indique le protocole qui doit être utilisé par le navigateur. Il s'agit généralement de HTTP ou de sa variante sécurisée HTTPS. Le Web nécessite l'un ou l'autre de ces protocoles néanmoins, les navigateurs sont capables de gérer d'autres protocoles tels que <code>mailto:</code> (pour ouvrir un client mail) or <code>ftp:</code> pour gérer un transfert de fichier. Essayez, lorsque vous naviguez, d'identifier les protocoles utilisés. Les schémas usuels sont :</dd>
-</dl>
+- ![Protocole](mdn-url-protocol@x2.png)
+  - : `http://` constitue le protocole, il indique le protocole qui doit être utilisé par le navigateur. Il s'agit généralement de HTTP ou de sa variante sécurisée HTTPS. Le Web nécessite l'un ou l'autre de ces protocoles néanmoins, les navigateurs sont capables de gérer d'autres protocoles tels que `mailto:` (pour ouvrir un client mail) or `ftp:` pour gérer un transfert de fichier. Essayez, lorsque vous naviguez, d'identifier les protocoles utilisés. Les schémas usuels sont :
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Schéma</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>data</td>
-   <td><a href="/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">URIs de données</a></td>
-  </tr>
-  <tr>
-   <td>file</td>
-   <td>Fichiers du système hôte sur lequel est installé le navigateur</td>
-  </tr>
-  <tr>
-   <td>ftp</td>
-   <td><a href="/fr/docs/Glossary/FTP">File Transfer Protocol</a></td>
-  </tr>
-  <tr>
-   <td>http/https</td>
-   <td><a href="/fr/docs/Glossary/HTTP">Hyper text transfer protocol (sécurisé)</a></td>
-  </tr>
-  <tr>
-   <td>mailto</td>
-   <td>Adresse électronique</td>
-  </tr>
-  <tr>
-   <td>ssh</td>
-   <td>Secure shell</td>
-  </tr>
-  <tr>
-   <td>tel</td>
-   <td>téléphone</td>
-  </tr>
-  <tr>
-   <td>urn</td>
-   <td>Uniform Resource Names</td>
-  </tr>
-  <tr>
-   <td>view-source</td>
-   <td>code source de la ressource</td>
-  </tr>
-  <tr>
-   <td>ws/wss</td>
-   <td>connexions (chiffrées) <a href="/fr/docs/Web/API/WebSockets_API">WebSocket</a></td>
-  </tr>
- </tbody>
-</table>
+| Schéma      | Description                                                         |
+| ----------- | ------------------------------------------------------------------- |
+| data        | [URIs de données](/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URIs)       |
+| file        | Fichiers du système hôte sur lequel est installé le navigateur      |
+| ftp         | [File Transfer Protocol](/fr/docs/Glossary/FTP)                     |
+| http/https  | [Hyper text transfer protocol (sécurisé)](/fr/docs/Glossary/HTTP)   |
+| mailto      | Adresse électronique                                                |
+| ssh         | Secure shell                                                        |
+| tel         | téléphone                                                           |
+| urn         | Uniform Resource Names                                              |
+| view-source | code source de la ressource                                         |
+| ws/wss      | connexions (chiffrées) [WebSocket](/fr/docs/Web/API/WebSockets_API) |
 
-<h3 id="Autorité">Autorité</h3>
+### Autorité
 
-<dl>
- <dt><img alt="Nom de domaine" src="mdn-url-domain@x2.png"></dt>
- <dd><code>www.exemple.com</code> est le nom de domaine ou l'autorité qui gère cet espace de noms. Il indique quel serveur Web est appelé. Il est aussi possible d'utiliser directement une adresse IP ({{Glossary("IP address")}}), néanmoins elles sont moins pratiques à manipuler pour des humains et sont donc moins fréquemment utilisées pour accéder à une ressource sur le Web.</dd>
-</dl>
+- ![Nom de domaine](mdn-url-domain@x2.png)
+  - : `www.exemple.com` est le nom de domaine ou l'autorité qui gère cet espace de noms. Il indique quel serveur Web est appelé. Il est aussi possible d'utiliser directement une adresse IP ({{Glossary("IP address")}}), néanmoins elles sont moins pratiques à manipuler pour des humains et sont donc moins fréquemment utilisées pour accéder à une ressource sur le Web.
 
-<h3 id="Port">Port</h3>
+### Port
 
-<dl>
- <dt><img alt="Port" src="mdn-url-port@x2.png"></dt>
- <dd><code>:80</code> constitue le port. Il indique la "porte" technique à utiliser pour accéder à une ressource sur un serveur web. Il est généralement omis puisque le serveur web utilisera par défaut les ports standards pour HTTP (port 80 pour HTTP et 443 pour HTTPS) pour permettre l'accès aux ressources qu'il héberge. Dans le cas où le port par défaut n'est pas celui utilisé, il est obligatoire de le spécifier.</dd>
-</dl>
+- ![Port](mdn-url-port@x2.png)
+  - : `:80` constitue le port. Il indique la "porte" technique à utiliser pour accéder à une ressource sur un serveur web. Il est généralement omis puisque le serveur web utilisera par défaut les ports standards pour HTTP (port 80 pour HTTP et 443 pour HTTPS) pour permettre l'accès aux ressources qu'il héberge. Dans le cas où le port par défaut n'est pas celui utilisé, il est obligatoire de le spécifier.
 
-<h3 id="Chemin">Chemin</h3>
+### Chemin
 
-<dl>
- <dt><img alt="Chemin du fichier" src="mdn-url-path@x2.png"></dt>
- <dd><code>/chemin/du/fichier.html</code> constitue le chemin d'accès à la ressource sur le serveur web. Au début du Web, le chemin représentait un emplacement physique où le fichier était stocké, à l'heure actuelle il s'agit d'une abstraction gérée par le serveur web sans réelle existence physique..</dd>
-</dl>
+- ![Chemin du fichier](mdn-url-path@x2.png)
+  - : `/chemin/du/fichier.html` constitue le chemin d'accès à la ressource sur le serveur web. Au début du Web, le chemin représentait un emplacement physique où le fichier était stocké, à l'heure actuelle il s'agit d'une abstraction gérée par le serveur web sans réelle existence physique..
 
-<h3 id="Requête">Requête</h3>
+### Requête
 
-<dl>
- <dt><img alt="Paramètres" src="mdn-url-parameters@x2.png"></dt>
- <dd><code>?key1=value1&amp;key2=value2</code> sont des paramètres additionnels fournis au serveur web. Ces paramètres sont un ensemble de clés/valeurs séparé par le symbole <code>&amp;</code>. Le serveur web peut utiliser ces paramètres pour effectuer des tâches avant de retourner une ressource au client. Chaque serveur web possède ses propres règles en ce qui concerne la gestion des paramètres.</dd>
-</dl>
+- ![Paramètres](mdn-url-parameters@x2.png)
+  - : `?key1=value1&key2=value2` sont des paramètres additionnels fournis au serveur web. Ces paramètres sont un ensemble de clés/valeurs séparé par le symbole `&`. Le serveur web peut utiliser ces paramètres pour effectuer des tâches avant de retourner une ressource au client. Chaque serveur web possède ses propres règles en ce qui concerne la gestion des paramètres.
 
-<h3 id="Fragment">Fragment</h3>
+### Fragment
 
-<dl>
- <dt><img alt="Ancre" src="mdn-url-anchor@x2.png"></dt>
- <dd><code>#QuelquePartDansLeDocument</code> est une ancre vers un morceau de la ressource en particulier, elle constitue une sorte de marque-page à l'intérieur de la ressource. Cela permet au navigateur de savoir où aller pour afficher le contenu à l'emplacement de l'ancre. Au sein d'une page HTML par exemple, le navigateur défilera jusqu'à ce point. Pour un document vidéo ou audio, le navigateur essaiera d'accéder au temps indiqué par l'ancre. On notera que la partie située après le caractère #, aussi appelé le fragment, n'est jamais envoyé au serveur avec la requête.</dd>
-</dl>
+- ![Ancre](mdn-url-anchor@x2.png)
+  - : `#QuelquePartDansLeDocument` est une ancre vers un morceau de la ressource en particulier, elle constitue une sorte de marque-page à l'intérieur de la ressource. Cela permet au navigateur de savoir où aller pour afficher le contenu à l'emplacement de l'ancre. Au sein d'une page HTML par exemple, le navigateur défilera jusqu'à ce point. Pour un document vidéo ou audio, le navigateur essaiera d'accéder au temps indiqué par l'ancre. On notera que la partie située après le caractère #, aussi appelé le fragment, n'est jamais envoyé au serveur avec la requête.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre>https://developer.mozilla.org/en-US/docs/Learn
-tel:+1-816-555-1212
-git@github.com:mdn/browser-compat-data.git
-ftp://example.org/resource.txt
-urn:isbn:9780141036144
-</pre>
+    https://developer.mozilla.org/en-US/docs/Learn
+    tel:+1-816-555-1212
+    git@github.com:mdn/browser-compat-data.git
+    ftp://example.org/resource.txt
+    urn:isbn:9780141036144
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Titre</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7230", "Uniform Resource Identifiers", "2.7")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                            | Titre                                                              |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------ |
+| {{RFC("7230", "Uniform Resource Identifiers", "2.7")}} | Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing |
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Learn/Common_questions/What_is_a_URL">Qu'est-ce qu'une URL ?</a></li>
- <li><a href="https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml">La liste des différents schémas des URIs, maintenue par l'IANA</a></li>
-</ul>
+- [Qu'est-ce qu'une URL ?](/fr/docs/Learn/Common_questions/What_is_a_URL)
+- [La liste des différents schémas des URIs, maintenue par l'IANA](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)

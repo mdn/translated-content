@@ -14,106 +14,90 @@ tags:
   - Sécurité
 translation_of: Web/HTTP/Headers/Content-Security-Policy/plugin-types
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <code><strong>plugin-types</strong></code> restreint l'ensemble des greffons pouvant être intégrés dans un document en limitant les types de ressources pouvant être chargées.</p>
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`plugin-types`** restreint l'ensemble des greffons pouvant être intégrés dans un document en limitant les types de ressources pouvant être chargées.
 
-<p>L'instanciation d'éléments {{HTMLElement("embed")}}, {{HTMLElement("object")}} ou {{HTMLElement("applet")}} échouera si :</p>
+L'instanciation d'éléments {{HTMLElement("embed")}}, {{HTMLElement("object")}} ou {{HTMLElement("applet")}} échouera si :
 
-<ul>
- <li>l'élément à charger ne déclarer pas de type MIME valide,</li>
- <li>le type déclaré ne correspond pas à un des types spécifiés dans la directive <code>plugin-types</code>,</li>
- <li>les ressources demandées ne correspondent pas au type déclaré.</li>
-</ul>
+- l'élément à charger ne déclarer pas de type MIME valide,
+- le type déclaré ne correspond pas à un des types spécifiés dans la directive `plugin-types`,
+- les ressources demandées ne correspondent pas au type déclaré.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Version de CSP</th>
-   <td>2</td>
-  </tr>
-  <tr>
-   <th scope="row">Type de directive</th>
-   <td>{{Glossary("Document directive")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{CSP("default-src")}} par défaut</th>
-   <td>Non, ne pas la définir autorise toutes les ressources</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Version de CSP</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th scope="row">Type de directive</th>
+      <td>{{Glossary("Document directive")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{CSP("default-src")}} par défaut</th>
+      <td>Non, ne pas la définir autorise toutes les ressources</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Un ou plusieurs <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">types MIME</a> peuvent être autorisées pour cette directive :</p>
+Un ou plusieurs [types MIME](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) peuvent être autorisées pour cette directive :
 
-<pre class="syntaxbox">Content-Security-Policy: plugin-types &lt;type&gt;/&lt;subtype&gt;;
-Content-Security-Policy: plugin-types &lt;type&gt;/&lt;subtype&gt; &lt;type&gt;/&lt;subtype&gt;;
-</pre>
+    Content-Security-Policy: plugin-types <type>/<subtype>;
+    Content-Security-Policy: plugin-types <type>/<subtype> <type>/<subtype>;
 
-<dl>
- <dt>&lt;type&gt;/&lt;subtype&gt;</dt>
- <dd>Un <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types">type MIME</a> valide.</dd>
-</dl>
+- \<type>/\<subtype>
+  - : Un [type MIME](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Complete_list_of_MIME_types) valide.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Interdire_les_greffons">Interdire les greffons</h3>
+### Interdire les greffons
 
-<p>Pour intedire tous les greffons, la directive {{CSP("object-src")}} doit être définie à <code>'none'</code>. La directive <code>plugin-types</code> n'est utilisée que si vous autorisez au préalable les greffons avec <code>object-src</code>.</p>
+Pour intedire tous les greffons, la directive {{CSP("object-src")}} doit être définie à `'none'`. La directive `plugin-types` n'est utilisée que si vous autorisez au préalable les greffons avec `object-src`.
 
-<pre class="brush: html">&lt;meta http-equiv="Content-Security-Policy" content="object-src 'none'"&gt;</pre>
+```html
+<meta http-equiv="Content-Security-Policy" content="object-src 'none'">
+```
 
-<h3 id="Autoriser_le_contenu_Flash">Autoriser le contenu Flash</h3>
+### Autoriser le contenu Flash
 
-<p>Soit cet en-tête CSP :</p>
+Soit cet en-tête CSP :
 
-<pre class="brush: bash">Content-Security-Policy: plugin-types application/x-shockwave-flash</pre>
+```bash
+Content-Security-Policy: plugin-types application/x-shockwave-flash
+```
 
-<p>Cet objet Flash sera autorisé et se chargera (dans la mesure où le navigateur gère Flash) :</p>
+Cet objet Flash sera autorisé et se chargera (dans la mesure où le navigateur gère Flash) :
 
-<pre class="brush: html">&lt;object data="https://example.com/flash" type="application/x-shockwave-flash"&gt;&lt;/object&gt;</pre>
+```html
+<object data="https://example.com/flash" type="application/x-shockwave-flash"></object>
+```
 
-<h3 id="Autoriser_les_applets_Java">Autoriser les applets Java</h3>
+### Autoriser les applets Java
 
-<p>Pour charger une {{HTMLElement("applet")}}, vous devez spécifier la valeur <code>application/x-java-applet</code> :</p>
+Pour charger une {{HTMLElement("applet")}}, vous devez spécifier la valeur `application/x-java-applet` :
 
-<pre class="brush: bash">Content-Security-Policy: plugin-types application/x-java-applet</pre>
+```bash
+Content-Security-Policy: plugin-types application/x-java-applet
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{specName("CSP 3.0", "#directive-plugin-types", "plugin-types")}}</td>
-   <td>{{Spec2('CSP 3.0')}}</td>
-   <td>Inchangé.</td>
-  </tr>
-  <tr>
-   <td>{{specName("CSP 1.1", "#directive-plugin-types", "plugin-types")}}</td>
-   <td>{{Spec2('CSP 1.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | Statut                       | Commentaire          |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{specName("CSP 3.0", "#directive-plugin-types", "plugin-types")}} | {{Spec2('CSP 3.0')}} | Inchangé.            |
+| {{specName("CSP 1.1", "#directive-plugin-types", "plugin-types")}} | {{Spec2('CSP 1.1')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("http.headers.csp.Content-Security-Policy.plugin-types")}}</p>
+{{Compat("http.headers.csp.Content-Security-Policy.plugin-types")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}: {{CSP("object-src")}}</li>
- <li>{{HTMLElement("object")}}</li>
- <li>{{HTMLElement("embed")}}</li>
- <li>{{HTMLElement("applet")}}</li>
- <li>{{HTTPHeader("X-Content-Type-Options")}}</li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}: {{CSP("object-src")}}
+- {{HTMLElement("object")}}
+- {{HTMLElement("embed")}}
+- {{HTMLElement("applet")}}
+- {{HTTPHeader("X-Content-Type-Options")}}

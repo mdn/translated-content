@@ -12,100 +12,99 @@ tags:
   - header
 translation_of: Web/HTTP/Headers/Content-Security-Policy-Report-Only
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>L'en-tête de réponse HTTP <strong><code>Content-Security-Policy-Report-Only</code></strong> permet aux développeurs web d'expérimenter avec les règles CSP en contrôlant leur application sans bloquer de contenu. Ces rapports de violations sont constitués d'un document {{Glossary("JSON")}} envoyé via une requête HTTP <code>POST</code> à l'URI spécifiée.</p>
+L'en-tête de réponse HTTP **`Content-Security-Policy-Report-Only`** permet aux développeurs web d'expérimenter avec les règles CSP en contrôlant leur application sans bloquer de contenu. Ces rapports de violations sont constitués d'un document {{Glossary("JSON")}} envoyé via une requête HTTP `POST` à l'URI spécifiée.
 
-<p>Pour plus d'informations, voir aussi cet article sur les <a href="/en-US/docs/Web/HTTP/CSP">Content Security Policy (CSP)</a>.</p>
+Pour plus d'informations, voir aussi cet article sur les [Content Security Policy (CSP)](/en-US/docs/Web/HTTP/CSP).
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Type d'en-tête</th>
-   <td>{{Glossary("Response header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>non</td>
-  </tr>
-  <tr>
-   <th colspan="2" scope="row">Cet en-tête n'est pas supporté au sein d'un élément {{HTMLElement("meta")}}.</th>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Type d'en-tête</th>
+      <td>{{Glossary("Response header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>non</td>
+    </tr>
+    <tr>
+      <th colspan="2" scope="row">
+        Cet en-tête n'est pas supporté au sein d'un élément
+        {{HTMLElement("meta")}}.
+      </th>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Content-Security-Policy-Report-Only: &lt;policy-directive&gt;; &lt;policy-directive&gt;
-</pre>
+    Content-Security-Policy-Report-Only: <policy-directive>; <policy-directive>
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<p>Les directives de l'en-tête {{HTTPHeader("Content-Security-Policy")}} peuvent aussi être appliquées à l'en-tête <code>Content-Security-Policy-Report-Only</code>.</p>
+Les directives de l'en-tête {{HTTPHeader("Content-Security-Policy")}} peuvent aussi être appliquées à l'en-tête `Content-Security-Policy-Report-Only`.
 
-<p>La directive CSP {{CSP("report-uri")}} doit être utilisée avec celui-ci, ou définir cet en-tête ne servirait à rien puisqu'aucun rapport ne serait envoyé.</p>
+La directive CSP {{CSP("report-uri")}} doit être utilisée avec celui-ci, ou définir cet en-tête ne servirait à rien puisqu'aucun rapport ne serait envoyé.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cet en-tête rapporte les violations qui seront constatées. Vous pouvez l'utiliser pour améliorer vos CSP. Vous pouvez observer comment votre site fonctionne en consultant les rapports ou <a href="https://secure.wphackedhelp.com/blog/wordpress-malware-redirect-hack-cleanup/">redirections malicieuses</a>, puis choisir les règles voulues pour bloquer le contenu avec l'en-tête {{HTTPHeader("Content-Security-Policy")}}.</p>
+Cet en-tête rapporte les violations qui seront constatées. Vous pouvez l'utiliser pour améliorer vos CSP. Vous pouvez observer comment votre site fonctionne en consultant les rapports ou [redirections malicieuses](https://secure.wphackedhelp.com/blog/wordpress-malware-redirect-hack-cleanup/), puis choisir les règles voulues pour bloquer le contenu avec l'en-tête {{HTTPHeader("Content-Security-Policy")}}.
 
-<pre>Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/</pre>
+    Content-Security-Policy-Report-Only: default-src https:; report-uri /csp-violation-report-endpoint/
 
-<p>Si vous voulez toujours recevoir des rapports, mais aussi imposer des règles, utilisez l'en-tête {{HTTPHeader("Content-Security-Policy")}} avec la directive {{CSP("report-uri")}}.</p>
+Si vous voulez toujours recevoir des rapports, mais aussi imposer des règles, utilisez l'en-tête {{HTTPHeader("Content-Security-Policy")}} avec la directive {{CSP("report-uri")}}.
 
-<pre>Content-Security-Policy: default-src https:; report-uri /csp-violation-report-endpoint/</pre>
+    Content-Security-Policy: default-src https:; report-uri /csp-violation-report-endpoint/
 
-<h2 id="Syntaxe_dun_rapport_de_violation">Syntaxe d'un rapport de violation</h2>
+## Syntaxe d'un rapport de violation
 
-<p>L'objet de rapport JSON contient les informations suivantes :</p>
+L'objet de rapport JSON contient les informations suivantes :
 
-<dl>
- <dt><code>blocked-uri</code></dt>
- <dd>L'URI de la ressource dont le chargement a été bloqué par les règles Content Security Policy. Si l'URI bloquée est d'une origine différente que celle du document (<code>document-uri</code>), alors l'URI bloquée est tronquée pour contenir uniquement le schéma, l'hôte et le port.</dd>
- <dt><code>disposition</code></dt>
- <dd>Soit <code>"enforce"</code>, soit <code>"report"</code>, selon que l'en-tête qui a déclenché l'envoi du rapport est {{HTTPHeader("Content-Security-Policy")}} ou <code>Content-Security-Policy-Report-Only</code>.</dd>
- <dt><code>document-uri</code></dt>
- <dd>L'URI du document dans lequel la violation a eu lieu.</dd>
- <dt><code>effective-directive</code></dt>
- <dd>La directive qui a causé la violation.</dd>
- <dt><code>original-policy</code></dt>
- <dd>La règle originale telle que spécifiée par l'en-tête <code>Content-Security-Policy-Report-Only</code>.</dd>
- <dt><code>referrer</code></dt>
- <dd>Le référent du document dans lequel la violation a eu lieu.</dd>
- <dt><code>script-sample</code></dt>
- <dd>Les 40 premiers caractères du script embarqué, du gestionnaire d'évènements par attribut ou de la feuille de style qui a causé la violation.</dd>
- <dt><code>status-code</code></dt>
- <dd>Le code de statut HTTP de la ressource sur laquelle l'objet global a été instancié.</dd>
- <dt><code>violated-directive</code></dt>
- <dd>Le nom de la directive qui a été violée.</dd>
-</dl>
+- `blocked-uri`
+  - : L'URI de la ressource dont le chargement a été bloqué par les règles Content Security Policy. Si l'URI bloquée est d'une origine différente que celle du document (`document-uri`), alors l'URI bloquée est tronquée pour contenir uniquement le schéma, l'hôte et le port.
+- `disposition`
+  - : Soit `"enforce"`, soit `"report"`, selon que l'en-tête qui a déclenché l'envoi du rapport est {{HTTPHeader("Content-Security-Policy")}} ou `Content-Security-Policy-Report-Only`.
+- `document-uri`
+  - : L'URI du document dans lequel la violation a eu lieu.
+- `effective-directive`
+  - : La directive qui a causé la violation.
+- `original-policy`
+  - : La règle originale telle que spécifiée par l'en-tête `Content-Security-Policy-Report-Only`.
+- `referrer`
+  - : Le référent du document dans lequel la violation a eu lieu.
+- `script-sample`
+  - : Les 40 premiers caractères du script embarqué, du gestionnaire d'évènements par attribut ou de la feuille de style qui a causé la violation.
+- `status-code`
+  - : Le code de statut HTTP de la ressource sur laquelle l'objet global a été instancié.
+- `violated-directive`
+  - : Le nom de la directive qui a été violée.
 
-<h2 id="Extrait_de_rapport_de_violation">Extrait de rapport de violation</h2>
+## Extrait de rapport de violation
 
-<div>Considérons une page à l'adresse <code>http://example.com/signup.html</code>. Elle utilise la règle CSP suivante, interdisant tout excepté les feuilles de styles chargées depuis <code>cdn.example.com</code>.</div>
+Considérons une page à l'adresse `http://example.com/signup.html`. Elle utilise la règle CSP suivante, interdisant tout excepté les feuilles de styles chargées depuis `cdn.example.com`.
 
-<div>
-<pre>Content-Security-Policy-Report-Only: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports</pre>
-</div>
+    Content-Security-Policy-Report-Only: default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports
 
-<div>La page HTML correspondant à l'adresse <code>signup.html</code> ressemble à :</div>
+La page HTML correspondant à l'adresse `signup.html` ressemble à :
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Sign Up&lt;/title&gt;
-    &lt;link rel="stylesheet" href="css/style.css"&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
     ... Content ...
-  &lt;/body&gt;
-&lt;/html&gt;</pre>
+  </body>
+</html>
+```
 
-<div>Avez-vous identifié une violation ?</div>
+Avez-vous identifié une violation ?Les feuilles de styles ne sont acceptées que si elles sont chargées depuis `cdn.example.com`, et pourtant le site tente d'en charger une depuis sa propre origine (`http://example.com`). Un navigateur capable d'imposer des règles CSP enverra le rapport de violation suivant sous la forme d'une requête POST à l'adresse `http://example.com/_/csp-reports` quand la page sera visitée :
 
-<div>Les feuilles de styles ne sont acceptées que si elles sont chargées depuis <code>cdn.example.com</code>, et pourtant le site tente d'en charger une depuis sa propre origine (<code>http://example.com</code>). Un navigateur capable d'imposer des règles CSP enverra le rapport de violation suivant sous la forme d'une requête POST à l'adresse <code>http://example.com/_/csp-reports</code> quand la page sera visitée :</div>
-
-<pre class="brush: js">{
+```js
+{
   "csp-report": {
     "document-uri": "http://example.com/signup.html",
     "referrer": "",
@@ -114,43 +113,25 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy-Report-Only
     "original-policy": "default-src 'none'; style-src cdn.example.com; report-uri /_/csp-reports",
     "disposition": "report"
   }
-}</pre>
+}
+```
 
-<p>Comme vous le voyez, la rapport inclut le chemin complet de la ressource à l'origine de la violaton dans la propriété <code>blocked-uri</code>. Ce n'est pas toujours le cas. Par exemple, quand la page <code>signup.html</code> essaiera de charger un CSS depuis <code>http://anothercdn.example.com/stylesheet.css</code>, le navigateur n'inclura pas le chemin complet mais seulement son origine (<code>http://anothercdn.example.com</code>). Cela est fait pour empêcher les fuites d'informations sensibles à propos de ressources externes.</p>
+Comme vous le voyez, la rapport inclut le chemin complet de la ressource à l'origine de la violaton dans la propriété `blocked-uri`. Ce n'est pas toujours le cas. Par exemple, quand la page `signup.html` essaiera de charger un CSS depuis `http://anothercdn.example.com/stylesheet.css`, le navigateur n'inclura pas le chemin complet mais seulement son origine (`http://anothercdn.example.com`). Cela est fait pour empêcher les fuites d'informations sensibles à propos de ressources externes.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{specName("CSP 3.0")}}</td>
-   <td>{{Spec2('CSP 3.0')}}</td>
-   <td>Inchangé.</td>
-  </tr>
-  <tr>
-   <td>{{specName("CSP 1.1")}}</td>
-   <td>{{Spec2('CSP 1.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                    | Statut                       | Commentaire          |
+| -------------------------------- | ---------------------------- | -------------------- |
+| {{specName("CSP 3.0")}} | {{Spec2('CSP 3.0')}} | Inchangé.            |
+| {{specName("CSP 1.1")}} | {{Spec2('CSP 1.1')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("http.headers.Content-Security-Policy-Report-Only")}}</p>
+{{Compat("http.headers.Content-Security-Policy-Report-Only")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li>CSP {{CSP("report-uri")}} directive</li>
- <li><a href="/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy">Content Security in WebExtensions</a></li>
- <li><a href="/en-US/docs/Tools/GCLI/Display_security_and_privacy_policies">Display security and privacy policies In Firefox Developer Tools</a></li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- CSP {{CSP("report-uri")}} directive
+- [Content Security in WebExtensions](/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy)
+- [Display security and privacy policies In Firefox Developer Tools](/en-US/docs/Tools/GCLI/Display_security_and_privacy_policies)

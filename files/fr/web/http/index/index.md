@@ -6,10 +6,10 @@ tags:
   - Index
 translation_of: Web/HTTP/Index
 ---
-<p>{{HTTPSidebar}}</p>
+{{HTTPSidebar}}
 
-<h2 id="Pages_MDN_HTTP">Pages MDN HTTP</h2>
+## Pages MDN HTTP
 
-<p>Cette page liste toutes les pages de MDN sur le HTTP avec leur résumé et balises.</p>
+Cette page liste toutes les pages de MDN sur le HTTP avec leur résumé et balises.
 
-<p>{{Index("fr/docs/Web/HTTP")}}</p>
+{{Index("fr/docs/Web/HTTP")}}

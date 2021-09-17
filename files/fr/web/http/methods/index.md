@@ -8,65 +8,40 @@ tags:
 translation_of: Web/HTTP/Methods
 original_slug: Web/HTTP/Méthode
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>HTTP définit un ensemble de <strong>méthodes de requête</strong> qui indiquent l'action que l'on souhaite réaliser sur la ressource indiquée. Bien qu'on rencontre également des noms (en anglais), ces méthodes sont souvent appelées <em>verbes HTTP</em>. Chacun d'eux implémente une sémantique différente mais certaines fonctionnalités courantes peuvent être partagées par différentes méthodes (e.g. une méthode de requête peut être sûre (<em>safe</em>), idempotente ou être mise en cache (<em>cacheable</em>)).</p>
+HTTP définit un ensemble de **méthodes de requête** qui indiquent l'action que l'on souhaite réaliser sur la ressource indiquée. Bien qu'on rencontre également des noms (en anglais), ces méthodes sont souvent appelées _verbes HTTP_. Chacun d'eux implémente une sémantique différente mais certaines fonctionnalités courantes peuvent être partagées par différentes méthodes (e.g. une méthode de requête peut être sûre (_safe_), idempotente ou être mise en cache (_cacheable_)).
 
-<dl>
- <dt><code><a href="/fr/docs/Web/HTTP/Méthode/GET">GET</a></code></dt>
- <dd>La méthode GET demande une représentation de la ressource spécifiée. Les requêtes GET doivent uniquement être utilisées afin de récupérer des données.</dd>
- <dt><code><a href="/fr/docs/Web/HTTP/Méthode/HEAD">HEAD</a></code></dt>
- <dd>La méthode <code>HEAD</code> demande une réponse identique à une requête GET pour laquelle on aura omis le corps de la réponse (on a uniquement l'en-tête).</dd>
- <dt><code><a href="/fr/docs/Web/HTTP/Méthode/POST">POST</a></code></dt>
- <dd>La méthode <code>POST</code> est utilisée pour envoyer une entité vers la ressource indiquée. Cela  entraîne généralement un changement d'état ou des effets de bord sur le serveur.</dd>
- <dt><code><a href="/fr/docs/Web/HTTP/Méthode/PUT">PUT</a></code></dt>
- <dd>
- <p>La méthode <code>PUT</code> remplace toutes les représentations actuelles de la ressource visée par le contenu de la requête.</p>
- </dd>
- <dt><code><a href="/fr/docs/Web/HTTP/Méthode/DELETE">DELETE</a></code></dt>
- <dd>La méthode <code>DELETE</code> supprime la ressource indiquée.</dd>
- <dt><code><a href="/fr/docs/Web/HTTP/Méthode/CONNECT">CONNECT</a></code></dt>
- <dd>
- <p>La méthode <code>CONNECT</code> établit un tunnel vers le serveur identifié par la ressource cible.</p>
- </dd>
- <dt><code><a href="/fr/docs/Web/HTTP/Méthode/OPTIONS">OPTIONS</a></code></dt>
- <dd>La méthode <code>OPTIONS</code> est utilisée pour décrire les options de communications avec la ressource visée.</dd>
- <dt><code><a href="/fr/docs/Web/HTTP/Méthode/TRACE">TRACE</a></code></dt>
- <dd>
- <p>La méthode <code>TRACE</code> réalise un message de test aller/retour en suivant le chemin de la ressource visée.</p>
- </dd>
- <dt><code><a href="/fr/docs/Web/HTTP/Méthode/PATCH">PATCH</a></code></dt>
- <dd>La méthode <code>PATCH</code> est utilisée pour appliquer des modifications partielles à une ressource.</dd>
-</dl>
+- [`GET`](/fr/docs/Web/HTTP/Méthode/GET)
+  - : La méthode GET demande une représentation de la ressource spécifiée. Les requêtes GET doivent uniquement être utilisées afin de récupérer des données.
+- [`HEAD`](/fr/docs/Web/HTTP/Méthode/HEAD)
+  - : La méthode `HEAD` demande une réponse identique à une requête GET pour laquelle on aura omis le corps de la réponse (on a uniquement l'en-tête).
+- [`POST`](/fr/docs/Web/HTTP/Méthode/POST)
+  - : La méthode `POST` est utilisée pour envoyer une entité vers la ressource indiquée. Cela  entraîne généralement un changement d'état ou des effets de bord sur le serveur.
+- [`PUT`](/fr/docs/Web/HTTP/Méthode/PUT)
+  - : La méthode `PUT` remplace toutes les représentations actuelles de la ressource visée par le contenu de la requête.
+- [`DELETE`](/fr/docs/Web/HTTP/Méthode/DELETE)
+  - : La méthode `DELETE` supprime la ressource indiquée.
+- [`CONNECT`](/fr/docs/Web/HTTP/Méthode/CONNECT)
+  - : La méthode `CONNECT` établit un tunnel vers le serveur identifié par la ressource cible.
+- [`OPTIONS`](/fr/docs/Web/HTTP/Méthode/OPTIONS)
+  - : La méthode `OPTIONS` est utilisée pour décrire les options de communications avec la ressource visée.
+- [`TRACE`](/fr/docs/Web/HTTP/Méthode/TRACE)
+  - : La méthode `TRACE` réalise un message de test aller/retour en suivant le chemin de la ressource visée.
+- [`PATCH`](/fr/docs/Web/HTTP/Méthode/PATCH)
+  - : La méthode `PATCH` est utilisée pour appliquer des modifications partielles à une ressource.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Titre</th>
-   <th scope="col">Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "Request methods", "4")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-   <td>Définition de GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS et TRACE.</td>
-  </tr>
-  <tr>
-   <td>{{RFC("5789", "Patch method", "2")}}</td>
-   <td>PATCH Method for HTTP</td>
-   <td>Définition de PATCH.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                        | Titre                                                         | Commentaires                                                           |
+| ---------------------------------------------------- | ------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| {{RFC("7231", "Request methods", "4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content | Définition de GET, HEAD, POST, PUT, DELETE, CONNECT, OPTIONS et TRACE. |
+| {{RFC("5789", "Patch method", "2")}}     | PATCH Method for HTTP                                         | Définition de PATCH.                                                   |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("http/methods")}}</p>
+{{Compat("http/methods")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/HTTP/Headers">Les en-têtes (<em>headers</em>) HTTP</a></li>
-</ul>
+- [Les en-têtes (_headers_) HTTP](/fr/docs/HTTP/Headers)

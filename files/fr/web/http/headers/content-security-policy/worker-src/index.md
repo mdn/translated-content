@@ -11,88 +11,88 @@ tags:
   - Sécurité
 translation_of: Web/HTTP/Headers/Content-Security-Policy/worker-src
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <code><strong>worker-src</strong></code> spécifie les sources valides pour les scripts {{domxref("Worker")}}, {{domxref("SharedWorker")}} et {{domxref("ServiceWorker")}}.</p>
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`worker-src`** spécifie les sources valides pour les scripts {{domxref("Worker")}}, {{domxref("SharedWorker")}} et {{domxref("ServiceWorker")}}.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Version de CSP</th>
-   <td>3</td>
-  </tr>
-  <tr>
-   <th scope="row">Type de directive</th>
-   <td>{{Glossary("Fetch directive")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">Valeur par défaut</th>
-   <td>
-    <p>Si cette directive est absente, l'agent utilisateur consultera d'abord la directive {{CSP("child-src")}}, puis la directive {{CSP("script-src")}} et enfin la directive {{CSP("default-src")}}, concernant la gestion l'exécution des workers.</p>
-
-    <p>Chrome 59 et plus ne consultent pas la directive {{CSP("child-src")}}.</p>
-
-    <p>Edge 17 ne consulte pas la directive {{CSP("script-src")}} (<a href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/17415478/">bug</a>).</p>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Version de CSP</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th scope="row">Type de directive</th>
+      <td>{{Glossary("Fetch directive")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">Valeur par défaut</th>
+      <td>
+        <p>
+          Si cette directive est absente, l'agent utilisateur consultera d'abord
+          la directive {{CSP("child-src")}}, puis la directive
+          {{CSP("script-src")}} et enfin la directive
+          {{CSP("default-src")}}, concernant la gestion l'exécution des
+          workers.
+        </p>
+        <p>
+          Chrome 59 et plus ne consultent pas la directive
+          {{CSP("child-src")}}.
+        </p>
+        <p>
+          Edge 17 ne consulte pas la directive {{CSP("script-src")}} (<a
+            href="https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/17415478/"
+            >bug</a
+          >).
+        </p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Une ou plusieurs sources peuvent être autorisées pour cette directive :</p>
+Une ou plusieurs sources peuvent être autorisées pour cette directive :
 
-<pre class="syntaxbox">Content-Security-Policy: worker-src &lt;source&gt;;
-Content-Security-Policy: worker-src &lt;source&gt; &lt;source&gt;;
-</pre>
+    Content-Security-Policy: worker-src <source>;
+    Content-Security-Policy: worker-src <source> <source>;
 
-<h3 id="Sources">Sources</h3>
+### Sources
 
-<p>{{page("fr/Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}</p>
+{{page("fr/Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Cas_de_violation">Cas de violation</h3>
+### Cas de violation
 
-<p>Soit cet en-tête CSP :</p>
+Soit cet en-tête CSP :
 
-<pre class="brush: bash">Content-Security-Policy: worker-src https://example.com/</pre>
+```bash
+Content-Security-Policy: worker-src https://example.com/
+```
 
-<p>{{domxref("Worker")}}, {{domxref("SharedWorker")}} et {{domxref("ServiceWorker")}} seront bloqués et ne se chargeront pas :</p>
+{{domxref("Worker")}}, {{domxref("SharedWorker")}} et {{domxref("ServiceWorker")}} seront bloqués et ne se chargeront pas :
 
-<pre class="brush: html">&lt;script&gt;
+```html
+<script>
   var blockedWorker = new Worker("data:application/javascript,...");
   blockedWorker = new SharedWorker("https://not-example.com/");
   navigator.serviceWorker.register('https://not-example.com/sw.js');
-&lt;/script&gt;</pre>
+</script>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{specName("CSP 3.0", "#directive-worker-src", "worker-src")}}</td>
-   <td>{{Spec2('CSP 3.0')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | Statut                       | Commentaire          |
+| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{specName("CSP 3.0", "#directive-worker-src", "worker-src")}} | {{Spec2('CSP 3.0')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("http.headers.csp.Content-Security-Policy.worker-src")}}</p>
+{{Compat("http.headers.csp.Content-Security-Policy.worker-src")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li><a href="/docs/Web/API/Web_Workers_API/Using_web_workers#Content_security_policy">CSP for Web Workers</a></li>
- <li>{{domxref("Worker")}}, {{domxref("SharedWorker")}}, {{domxref("ServiceWorker")}}</li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- [CSP for Web Workers](/docs/Web/API/Web_Workers_API/Using_web_workers#Content_security_policy)
+- {{domxref("Worker")}}, {{domxref("SharedWorker")}}, {{domxref("ServiceWorker")}}

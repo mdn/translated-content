@@ -9,43 +9,32 @@ tags:
   - WebSockets
 translation_of: Web/HTTP/Status/101
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Le code de réponse HTTP <code><strong>101 Switching Protocol</strong></code> indique que le protocole a changé, comme demandé par le client via l'en-tête {{HTTPHeader("Upgrade")}}.</p>
+Le code de réponse HTTP **`101 Switching Protocol`** indique que le protocole a changé, comme demandé par le client via l'en-tête {{HTTPHeader("Upgrade")}}.
 
-<p>Le serveur envoie alors une réponse avec un en-tête {{HTTPHeader("Upgrade")}} qui indique le nouveau protocole utilisé.</p>
+Le serveur envoie alors une réponse avec un en-tête {{HTTPHeader("Upgrade")}} qui indique le nouveau protocole utilisé.
 
-<h2 id="Statut">Statut</h2>
+## Statut
 
-<pre class="syntaxbox">101 Switching Protocol</pre>
+    101 Switching Protocol
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Les changements de protocole peuvent être utilisés avec <a href="/fr/docs/WebSockets">WebSockets</a>.</p>
+Les changements de protocole peuvent être utilisés avec [WebSockets](/fr/docs/WebSockets).
 
-<pre>HTTP/1.1 101 Switching Protocols
-Upgrade: websocket
-Connection: Upgrade</pre>
+    HTTP/1.1 101 Switching Protocols
+    Upgrade: websocket
+    Connection: Upgrade
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Titre</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "101 Switching Protocol" , "6.2.2")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                        | Titre                                                         |
+| -------------------------------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "101 Switching Protocol" , "6.2.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/WebSockets">WebSockets</a></li>
- <li>{{HTTPHeader("Upgrade")}}</li>
- <li>{{HTTPStatus("426")}}<code> Upgrade Required</code></li>
-</ul>
+- [WebSockets](/fr/docs/WebSockets)
+- {{HTTPHeader("Upgrade")}}
+- {{HTTPStatus("426")}}` Upgrade Required`

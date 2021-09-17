@@ -5,35 +5,24 @@ tags:
   - HTTP
 translation_of: Web/HTTP/Status/418
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Le statut erreur client HTTP <code>418 I'm a teapot</code> qui signifie "Je suis une théière" informe que le serveur refuse de préparer du café, car il s'agit d'une théière. Cette erreur est une référence au protocole Hyper Text Coffee Pot Control Protocol qui est le poisson d'avril des RFCs en 1998.</p>
+Le statut erreur client HTTP `418 I'm a teapot` qui signifie "Je suis une théière" informe que le serveur refuse de préparer du café, car il s'agit d'une théière. Cette erreur est une référence au protocole Hyper Text Coffee Pot Control Protocol qui est le poisson d'avril des RFCs en 1998.
 
-<h2 id="Statut">Statut</h2>
+## Statut
 
-<pre class="syntaxbox">418 I'm a teapot</pre>
+    418 I'm a teapot
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Titre</th>
-  </tr>
-  <tr>
-   <td>{{RFC("2324", "418 I'm a teapot" , "2.3.2")}}</td>
-   <td>Hyper Text Coffee Pot Control Protocol (HTCPCP/1.0): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                | Titre                                                                      |
+| ------------------------------------------------------------ | -------------------------------------------------------------------------- |
+| {{RFC("2324", "418 I'm a teapot" , "2.3.2")}} | Hyper Text Coffee Pot Control Protocol (HTCPCP/1.0): Semantics and Content |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("http.status.418")}}</p>
+{{Compat("http.status.418")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="https://fr.wikipedia.org/wiki/Hyper_Text_Coffee_Pot_Control_Protocol">Hyper Text Coffee Pot Control Protocol sur Wikipédia</a></li>
-</ul>
+- [Hyper Text Coffee Pot Control Protocol sur Wikipédia](https://fr.wikipedia.org/wiki/Hyper_Text_Coffee_Pot_Control_Protocol)

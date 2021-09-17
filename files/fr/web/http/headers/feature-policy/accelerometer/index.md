@@ -10,55 +10,34 @@ tags:
   - Reference
 translation_of: Web/HTTP/Headers/Feature-Policy/accelerometer
 ---
-<p>{{HTTPSidebar}} {{SeeCompatTable}}</p>
+{{HTTPSidebar}} {{SeeCompatTable}}
 
-<p>La directive <code>accelerometer</code> de l'en-tête HTTP {{HTTPHeader('Feature-Policy')}} contrôle la possibilité pour le document courant de recueillir des informations à propos de l'accélération de l'appareil au moyen de l'interface {{domxref('Accelerometer')}}.</p>
+La directive `accelerometer` de l'en-tête HTTP {{HTTPHeader('Feature-Policy')}} contrôle la possibilité pour le document courant de recueillir des informations à propos de l'accélération de l'appareil au moyen de l'interface {{domxref('Accelerometer')}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre>Feature-Policy: accelerometer &lt;listePermissions&gt;;</pre>
+    Feature-Policy: accelerometer <listePermissions>;
 
-<dl>
- <dt>&lt;listePermissions&gt;</dt>
- <dd>{{page('fr/Web/HTTP/Feature_Policy/Using_Feature_Policy', 'allowlist')}}</dd>
-</dl>
+- \<listePermissions>
+  - : {{page('fr/Web/HTTP/Feature_Policy/Using_Feature_Policy', 'allowlist')}}
 
-<h2 id="Valeur_par_défaut">Valeur par défaut</h2>
+## Valeur par défaut
 
-<p>La valeur par défaut est <code>'self'</code>.</p>
+La valeur par défaut est `'self'`.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Feature Policy')}}</td>
-   <td>{{Spec2('Feature Policy')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Accelerometer','#accelerometer-interface','Accelerometer')}}</td>
-   <td>{{Spec2('Accelerometer')}}</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | État                                 | Commentaire          |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
+| {{SpecName('Feature Policy')}}                                                         | {{Spec2('Feature Policy')}} | Définition initiale. |
+| {{SpecName('Accelerometer','#accelerometer-interface','Accelerometer')}} | {{Spec2('Accelerometer')}} |                      |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat('http.headers.Feature-Policy.accelerometer')}}</p>
+{{Compat('http.headers.Feature-Policy.accelerometer')}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>en-tête {{HTTPHeader('Feature-Policy')}}</li>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy">Feature Policy</a></li>
- <li><a href="/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy">Utiliser Feature Policy</a></li>
-</ul>
+- en-tête {{HTTPHeader('Feature-Policy')}}
+- [Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy)
+- [Utiliser Feature Policy](/en-US/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)

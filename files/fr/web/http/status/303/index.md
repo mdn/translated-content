@@ -7,35 +7,24 @@ tags:
   - Référence(2)
 translation_of: Web/HTTP/Status/303
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Le code de statut de réponse de redirection <code><strong>303</strong></code><strong><code> See Other</code></strong>, généralement renvoyé comme résultat d'une opération {{HTTPMethod("PUT")}} ou {{HTTPMethod("POST")}}, indique que la redirection ne fait pas le lien vers la ressource nouvellement téléversé mais vers une autre page (par exemple une page de confirmation ou qui affiche l'avancement du téléversement). La méthode utilisée pour afficher la page redirigée est toujours {{HTTPMethod("GET")}}.</p>
+Le code de statut de réponse de redirection **`303`\*\***` See Other`\*\*, généralement renvoyé comme résultat d'une opération {{HTTPMethod("PUT")}} ou {{HTTPMethod("POST")}}, indique que la redirection ne fait pas le lien vers la ressource nouvellement téléversé mais vers une autre page (par exemple une page de confirmation ou qui affiche l'avancement du téléversement). La méthode utilisée pour afficher la page redirigée est toujours {{HTTPMethod("GET")}}.
 
-<h2 id="Statut">Statut</h2>
+## Statut
 
-<pre class="syntaxbox">303 See Other</pre>
+    303 See Other
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Titre</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "303 See Other" , "6.4.4")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                            | Titre                                                         |
+| -------------------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "303 See Other" , "6.4.4")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("http/status", "303")}}</p>
+{{Compat("http/status", "303")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTTPStatus("302")}} <code>Found</code>, la redirection temporaire.</li>
-</ul>
+- {{HTTPStatus("302")}} `Found`, la redirection temporaire.

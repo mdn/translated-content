@@ -8,81 +8,69 @@ tags:
   - Reference
 translation_of: Web/HTTP/Headers/Accept
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Le paramètre d'entête de requête HTTP <code><strong>Accept</strong></code> indique quels sont les types de contenu, exprimés sous la forme de types MIME, que le client sera capable d'interpréter. Par le biais de la résolution de contenu -(<a href="/en-US/docs/Web/HTTP/Content_negotiation">content negotiation</a>), le serveur sélectionne ensuite une proposition parmi toutes, l'utilise et informe le client de son choix avec l'entête de réponse {{HTTPHeader("Content-Type")}}. Les navigateurs fixent des valeurs adéquates pour cet entête selon le contexte où la requête a été exécutée : selon que l'utilisateur souhaite récupérer une feuille de style css,  ou qu'il souhaite récupérer une image, une vidéo ou un script, la valeur fixée pour la requête ne sera pas la même.</p>
+Le paramètre d'entête de requête HTTP **`Accept`** indique quels sont les types de contenu, exprimés sous la forme de types MIME, que le client sera capable d'interpréter. Par le biais de la résolution de contenu -([content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)), le serveur sélectionne ensuite une proposition parmi toutes, l'utilise et informe le client de son choix avec l'entête de réponse {{HTTPHeader("Content-Type")}}. Les navigateurs fixent des valeurs adéquates pour cet entête selon le contexte où la requête a été exécutée : selon que l'utilisateur souhaite récupérer une feuille de style css,  ou qu'il souhaite récupérer une image, une vidéo ou un script, la valeur fixée pour la requête ne sera pas la même.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Type d'entête</th>
-   <td>{{Glossary("Request header")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Forbidden header name")}}</th>
-   <td>non</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Simple header", "CORS-safelisted request-header")}}</th>
-   <td>oui</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Type d'entête</th>
+      <td>{{Glossary("Request header")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <td>non</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Simple header", "CORS-safelisted request-header")}}
+      </th>
+      <td>oui</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Accept: &lt;MIME_type&gt;/&lt;MIME_subtype&gt;
-Accept: &lt;MIME_type&gt;/*
-Accept: */*
+    Accept: <MIME_type>/<MIME_subtype>
+    Accept: <MIME_type>/*
+    Accept: */*
 
-// Types multiples, pondérés {{glossary("quality values", "quality value")}} par la syntaxe :
-Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8</pre>
+    // Types multiples, pondérés {{glossary("quality values", "quality value")}} par la syntaxe :
+    Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
 
-<h2 id="Directives">Directives</h2>
+## Directives
 
-<dl>
- <dt><code>&lt;MIME_type&gt;/&lt;MIME_subtype&gt;</code></dt>
- <dd>Un type MIME unique et déterminé <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME type</a>, comme par exemple <code>text/html</code>.</dd>
- <dt><code>&lt;MIME_type&gt;/*</code></dt>
- <dd>un type MIME type ne comprenant pas de sous-type. <code>image/*</code> prendra en charge <code>image/png</code>, <code>image/svg</code>, <code>image/gif</code> et tous autres types d'image.</dd>
- <dt><code>*/*</code></dt>
- <dd>Tout type MIME </dd>
- <dt><code>;q=</code> (facteur de pondération q)</dt>
- <dd>N'importe quelle valeur utilisée est placée selon un ordre de préférence exprimé par une valeur de qualité (<a href="/en-US/docs/Glossary/Quality_values">quality value</a>) relative appelée le <em>poids</em>.</dd>
-</dl>
+- `<MIME_type>/<MIME_subtype>`
+  - : Un type MIME unique et déterminé [MIME type](/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types), comme par exemple `text/html`.
+- `<MIME_type>/*`
+  - : un type MIME type ne comprenant pas de sous-type. `image/*` prendra en charge `image/png`, `image/svg`, `image/gif` et tous autres types d'image.
+- `*/*`
+  - : Tout type MIME
+- `;q=` (facteur de pondération q)
+  - : N'importe quelle valeur utilisée est placée selon un ordre de préférence exprimé par une valeur de qualité ([quality value](/en-US/docs/Glossary/Quality_values)) relative appelée le _poids_.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre>Accept: text/html
+    Accept: text/html
 
-Accept: image/*
+    Accept: image/*
 
-Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
-</pre>
+    Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-   <th scope="col">Titre</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "Accept", "5.3.2")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Vocabulaire et cas d'usage</td>
-  </tr>
- </tbody>
-</table>
+| Specification                                | Titre                                                              |
+| -------------------------------------------- | ------------------------------------------------------------------ |
+| {{RFC("7231", "Accept", "5.3.2")}} | Hypertext Transfer Protocol (HTTP/1.1): Vocabulaire et cas d'usage |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("http.headers.Accept")}}</p>
+{{Compat("http.headers.Accept")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>HTTP <a href="/en-US/docs/Web/HTTP/Content_negotiation">content negotiation</a></li>
- <li>Entête avec le résultat de la résolution de contenu : {{HTTPHeader("Content-Type")}}</li>
- <li>Autres entêtes similaires : {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Language")}}</li>
-</ul>
+- HTTP [content negotiation](/en-US/docs/Web/HTTP/Content_negotiation)
+- Entête avec le résultat de la résolution de contenu : {{HTTPHeader("Content-Type")}}
+- Autres entêtes similaires : {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Language")}}

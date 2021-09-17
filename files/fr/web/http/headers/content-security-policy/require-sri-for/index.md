@@ -13,49 +13,48 @@ tags:
   - require-sri-for
 translation_of: Web/HTTP/Headers/Content-Security-Policy/require-sri-for
 ---
-<div>{{Obsolete_header}}</div>
+{{Obsolete_header}}
 
-<p>La directive HTTP {{HTTPHeader("Content-Security-Policy")}} <code><strong>require-sri-for</strong></code> informe l'agent utilisateur de requérir la vérification <a href="/en-US/docs/Web/Security/Subresource_Integrity">d'intégrité des sous-ressources</a> pour les scripts et styles de la page.</p>
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} **`require-sri-for`** informe l'agent utilisateur de requérir la vérification [d'intégrité des sous-ressources](/en-US/docs/Web/Security/Subresource_Integrity) pour les scripts et styles de la page.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">Content-Security-Policy: require-sri-for script;
-Content-Security-Policy: require-sri-for style;
-Content-Security-Policy: require-sri-for script style;
-</pre>
+    Content-Security-Policy: require-sri-for script;
+    Content-Security-Policy: require-sri-for style;
+    Content-Security-Policy: require-sri-for script style;
 
-<dl>
- <dt><code>script</code></dt>
- <dd>Requiert {{Glossary("SRI")}} pour les scripts.</dd>
- <dt><code>style</code></dt>
- <dd>Requiert {{Glossary("SRI")}} pour les feuilles de styles.</dd>
- <dt><code>script style</code></dt>
- <dd>Requiert {{Glossary("SRI")}} pour les deux, scripts et feuilles de styles.</dd>
-</dl>
+- `script`
+  - : Requiert {{Glossary("SRI")}} pour les scripts.
+- `style`
+  - : Requiert {{Glossary("SRI")}} pour les feuilles de styles.
+- `script style`
+  - : Requiert {{Glossary("SRI")}} pour les deux, scripts et feuilles de styles.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Soit cet en-tête CSP :</p>
+Soit cet en-tête CSP :
 
-<pre>Content-Security-Policy: require-sri-for script style</pre>
+    Content-Security-Policy: require-sri-for script style
 
-<p>Cet élément {{HTMLElement("script")}} sera chargé et exécuté puisqu'il utilise un attribut <code>integrity</code> valide.</p>
+Cet élément {{HTMLElement("script")}} sera chargé et exécuté puisqu'il utilise un attribut `integrity` valide.
 
-<pre class="brush: html; example-good">&lt;script src="https://code.jquery.com/jquery-3.1.1.slim.js"
+```html example-good
+<script src="https://code.jquery.com/jquery-3.1.1.slim.js"
         integrity="sha256-5i/mQ300M779N2OVDrl16lbohwXNUdzL/R2aVUXyXWA="
-        crossorigin="anonymous"&gt;&lt;/script&gt;</pre>
+        crossorigin="anonymous"></script>
+```
 
-<p>Toutefois, ce script sera bloqué car il n'utilise pas cet attribut :</p>
+Toutefois, ce script sera bloqué car il n'utilise pas cet attribut :
 
-<pre class="brush: html; example-bad">&lt;script src="https://code.jquery.com/jquery-3.1.1.slim.js"&gt;&lt;/script&gt;</pre>
+```html example-bad
+<script src="https://code.jquery.com/jquery-3.1.1.slim.js"></script>
+```
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("http.headers.csp.Content-Security-Policy.require-sri-for")}}</p>
+{{Compat("http.headers.csp.Content-Security-Policy.require-sri-for")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li><a href="/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity</a></li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- [Subresource Integrity](/en-US/docs/Web/Security/Subresource_Integrity)

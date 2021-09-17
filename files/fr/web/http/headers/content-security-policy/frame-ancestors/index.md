@@ -13,112 +13,93 @@ tags:
   - source
 translation_of: Web/HTTP/Headers/Content-Security-Policy/frame-ancestors
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <code><strong>frame-ancestors</strong></code> spécifie les parents pouvant intégrer une page en utilisant {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, ou {{HTMLElement("applet")}}.</p>
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** spécifie les parents pouvant intégrer une page en utilisant {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}}, {{HTMLElement("embed")}}, ou {{HTMLElement("applet")}}.
 
-<p>Définir cette directive à <code>'none'</code> est comparable à len-tête HTTP {{HTTPHeader("X-Frame-Options")}}<code>: deny</code> (aussi supporté sur les anciens navigateurs).</p>
+Définir cette directive à `'none'` est comparable à len-tête HTTP {{HTTPHeader("X-Frame-Options")}}`: deny` (aussi supporté sur les anciens navigateurs).
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">CSP version</th>
-   <td>2</td>
-  </tr>
-  <tr>
-   <th scope="row">Directive type</th>
-   <td>{{Glossary("Navigation directive")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{CSP("default-src")}} fallback</th>
-   <td>No. Not setting this allows anything.</td>
-  </tr>
-  <tr>
-   <th colspan="2" scope="row">This directive is not supported in the {{HTMLElement("meta")}} element.</th>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">CSP version</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th scope="row">Directive type</th>
+      <td>{{Glossary("Navigation directive")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{CSP("default-src")}} fallback</th>
+      <td>No. Not setting this allows anything.</td>
+    </tr>
+    <tr>
+      <th colspan="2" scope="row">
+        This directive is not supported in the {{HTMLElement("meta")}}
+        element.
+      </th>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Une ou plusieurs sources peuvent être autorisées pour cette directive :</p>
+Une ou plusieurs sources peuvent être autorisées pour cette directive :
 
-<pre class="syntaxbox">Content-Security-Policy: frame-ancestors &lt;source&gt;;
-Content-Security-Policy: frame-ancestors &lt;source&gt; &lt;source&gt;;
-</pre>
+    Content-Security-Policy: frame-ancestors <source>;
+    Content-Security-Policy: frame-ancestors <source> <source>;
 
-<h3 id="Sources">Sources</h3>
+### Sources
 
-<p>La &lt;source&gt; peut être une des suivantes :</p>
+La \<source> peut être une des suivantes :
 
-<div class="note">
-<p><strong>Note :</strong> The <code>frame-ancestors</code> directive’s syntax is similar to a source list of other directives (e.g. {{CSP("default-src")}}), but doesn't allow <code>'unsafe-eval'</code> or <code>'unsafe-inline'</code> for example. It will also not fall back to a <code>default-src</code> setting. Only the sources listed below are allowed:</p>
-</div>
+> **Note :** The `frame-ancestors` directive’s syntax is similar to a source list of other directives (e.g. {{CSP("default-src")}}), but doesn't allow `'unsafe-eval'` or `'unsafe-inline'` for example. It will also not fall back to a `default-src` setting. Only the sources listed below are allowed:
 
-<dl>
- <dt>&lt;host-source&gt;</dt>
- <dd>Des hôtes Internet par leur nom de domaine ou adresse IP, aussi bien qu'un <a href="/fr/docs/URIs_and_URLs">protocole</a> et/ou un numéro de port. L'adresse du site peut inclure un caractère de remplacement optionnel (l'astérisque <code>'*'</code>), qui ne peut être utilisée que pour indiquer un sous-domaine ou que tous les ports existants sont des sources valides. Vous ne devez pas mettre de guillemets simples.<br>
- Exemples :
- <ul>
-  <li><code>http://*.example.com</code>: correspondra à toutes les tentatives d'accès pour tous les sous-domaines de example.com via le protocole <code>http:</code>.</li>
-  <li><code>mail.example.com:443</code>: correspondra à toutes les tentatives d'accès sur le port 443 de mail.example.com.</li>
-  <li><code>https://store.example.com</code>: correspondra à toutes les tentatives d'accès à store.example.com via le protocole <code>https:</code>.</li>
- </ul>
+- \<host-source>
 
- <div class="warning">
- <p><strong>Attention :</strong> Si aucun schéma d'URL n'est spécifié comme <code>host-source</code> et que l'{{HTMLElement("iframe")}} est chargée via une URL <code>https:</code>, la page chargeant l'iframe doit aussi être chargée en <code>https:</code>, selon la spécification du W3C sur <a href="https://w3c.github.io/webappsec-csp/2/#match-source-expression">les correspondances de valeurs de sources</a>.</p>
- </div>
- </dd>
- <dt>&lt;scheme-source&gt;</dt>
- <dd>Un protocole tel que <code>http:</code> or <code>https:</code>. Les deux-points sont nécessaires et vous ne devez pas mettre de guillemets. Vous pouvez aussi spécifier des schémas de données bien que ce ne soit pas recommandé.
- <ul>
-  <li><code>data:</code> Autorise <a href="/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">les URI <code>data:</code></a> à être utilisées comme source de contenu.<em> Cette pratique manque de sécurité ; une personne malveillante peut aussi injecter des URI data: arbitraires. Utilisez cette valeur avec parcimonie et certainement pas pour des scripts.</em></li>
-  <li><code>mediastream:</code> permet aux <a href="/fr/docs/Web/API/MediaStream_API">URI <code>mediastream:</code></a> d'être utilisées comme source de contenu.</li>
-  <li><code>blob:</code> permet aux <a href="/fr/docs/Web/API/Blob">URI <code>blob:</code></a> d'être utilisées comme source de contenu.</li>
-  <li><code>filesystem:</code> Allows <a href="/fr/docs/Web/API/FileSystem">URI <code>filesystem:</code></a> d'être utilisées comme source de contenu.</li>
- </ul>
- </dd>
- <dt><code>'self'</code></dt>
- <dd>Cette valeur fait référence au domaine dont est originaire le document protégé, y compris le protocole et le numéro de port. Vous devez mettre cette valeur entre guillemets. Certains navigateurs excluent spécifiquement les valeurs <code>blob</code> et <code>filesystem</code> des directives de source. Les sites nécessitant une permission pour ces types de contenu peuvent les spécifier en utilisant l'attribut Data.</dd>
- <dt><code>'none'</code></dt>
- <dd>Aucune source n'est admise. Vous devez mettre cette valeur entre guillemets.</dd>
-</dl>
+  - : Des hôtes Internet par leur nom de domaine ou adresse IP, aussi bien qu'un [protocole](/fr/docs/URIs_and_URLs) et/ou un numéro de port. L'adresse du site peut inclure un caractère de remplacement optionnel (l'astérisque `'*'`), qui ne peut être utilisée que pour indiquer un sous-domaine ou que tous les ports existants sont des sources valides. Vous ne devez pas mettre de guillemets simples.
+    Exemples :
 
-<h2 id="Exemples">Exemples</h2>
+    - `http://*.example.com`: correspondra à toutes les tentatives d'accès pour tous les sous-domaines de example.com via le protocole `http:`.
+    - `mail.example.com:443`: correspondra à toutes les tentatives d'accès sur le port 443 de mail.example.com.
+    - `https://store.example.com`: correspondra à toutes les tentatives d'accès à store.example.com via le protocole `https:`.
 
-<pre class="brush: bash">Content-Security-Policy: frame-ancestors 'none';
+    > **Attention :** Si aucun schéma d'URL n'est spécifié comme `host-source` et que l'{{HTMLElement("iframe")}} est chargée via une URL `https:`, la page chargeant l'iframe doit aussi être chargée en `https:`, selon la spécification du W3C sur [les correspondances de valeurs de sources](https://w3c.github.io/webappsec-csp/2/#match-source-expression).
 
-Content-Security-Policy: frame-ancestors 'self' https://www.example.org;</pre>
+- \<scheme-source>
 
-<h2 id="Spécifications">Spécifications</h2>
+  - : Un protocole tel que `http:` or `https:`. Les deux-points sont nécessaires et vous ne devez pas mettre de guillemets. Vous pouvez aussi spécifier des schémas de données bien que ce ne soit pas recommandé.
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{specName("CSP 3.0", "#directive-frame-ancestors", "frame-ancestors")}}</td>
-   <td>{{Spec2('CSP 3.0')}}</td>
-   <td>Inchangé.</td>
-  </tr>
-  <tr>
-   <td>{{specName("CSP 1.1", "#directive-frame-ancestors", "frame-ancestors")}}</td>
-   <td>{{Spec2('CSP 1.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+    - `data:` Autorise [les URI `data:`](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) à être utilisées comme source de contenu. _Cette pratique manque de sécurité ; une personne malveillante peut aussi injecter des URI data: arbitraires. Utilisez cette valeur avec parcimonie et certainement pas pour des scripts._
+    - `mediastream:` permet aux [URI `mediastream:`](/fr/docs/Web/API/MediaStream_API) d'être utilisées comme source de contenu.
+    - `blob:` permet aux [URI `blob:`](/fr/docs/Web/API/Blob) d'être utilisées comme source de contenu.
+    - `filesystem:` Allows [URI `filesystem:`](/fr/docs/Web/API/FileSystem) d'être utilisées comme source de contenu.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+- `'self'`
+  - : Cette valeur fait référence au domaine dont est originaire le document protégé, y compris le protocole et le numéro de port. Vous devez mettre cette valeur entre guillemets. Certains navigateurs excluent spécifiquement les valeurs `blob` et `filesystem` des directives de source. Les sites nécessitant une permission pour ces types de contenu peuvent les spécifier en utilisant l'attribut Data.
+- `'none'`
+  - : Aucune source n'est admise. Vous devez mettre cette valeur entre guillemets.
 
-<p>{{Compat("http.headers.csp.Content-Security-Policy.frame-ancestors")}}</p>
+## Exemples
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+```bash
+Content-Security-Policy: frame-ancestors 'none';
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li>{{HTTPHeader("X-Frame-Options")}}</li>
-</ul>
+Content-Security-Policy: frame-ancestors 'self' https://www.example.org;
+```
+
+## Spécifications
+
+| Spécification                                                                                    | Statut                       | Commentaire          |
+| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{specName("CSP 3.0", "#directive-frame-ancestors", "frame-ancestors")}} | {{Spec2('CSP 3.0')}} | Inchangé.            |
+| {{specName("CSP 1.1", "#directive-frame-ancestors", "frame-ancestors")}} | {{Spec2('CSP 1.1')}} | Définition initiale. |
+
+## Compatibilité des navigateurs
+
+{{Compat("http.headers.csp.Content-Security-Policy.frame-ancestors")}}
+
+## Voir aussi
+
+- {{HTTPHeader("Content-Security-Policy")}}
+- {{HTTPHeader("X-Frame-Options")}}

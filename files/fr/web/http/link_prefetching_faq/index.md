@@ -9,125 +9,111 @@ tags:
 translation_of: Web/HTTP/Link_prefetching_FAQ
 original_slug: Web/HTTP/FAQ_sur_le_préchargement_des_liens
 ---
-<h3 id="Qu.E2.80.99est_ce_que_le_pr.C3.A9chargement_de_liens_.3F">Qu’est ce que le préchargement de liens ?</h3>
+### Qu’est ce que le préchargement de liens ?
 
-<p>Le préchargement de liens est un mécanisme du navigateur qui utilise le temps disponible du navigateur pour télécharger ou<em> précharger</em> les documents que les utilisateurs pourraient visiter juste après. Une page web fournit un ensemble de cibles à précharger au navigateur. Une fois que le navigateur a fini de charger la page, il commence, de façon transparente, à précharger les documents spécifiés et les emmagasine dans son cache. Quand l’utilisateur visite un de ces documents préchargés, il peut être ressorti rapidement du cache du navigateur.</p>
+Le préchargement de liens est un mécanisme du navigateur qui utilise le temps disponible du navigateur pour télécharger ou _précharger_ les documents que les utilisateurs pourraient visiter juste après. Une page web fournit un ensemble de cibles à précharger au navigateur. Une fois que le navigateur a fini de charger la page, il commence, de façon transparente, à précharger les documents spécifiés et les emmagasine dans son cache. Quand l’utilisateur visite un de ces documents préchargés, il peut être ressorti rapidement du cache du navigateur.
 
-<h3 id="Le_préchargement_fonctionne-t-il_avec_HTTPS">Le préchargement fonctionne-t-il avec HTTPS ?</h3>
+### Le préchargement fonctionne-t-il avec HTTPS ?
 
-<p>À partir de Gecko 1.9.1 (Firefox 3.5), le contenu HTTPS peut être préchargé.</p>
+À partir de Gecko 1.9.1 (Firefox 3.5), le contenu HTTPS peut être préchargé.
 
-<h3 id="Quelles_sont_les_cibles_.C3.A0__pr.C3.A9charger_.3F">Quelles sont les cibles à précharger ?</h3>
+### Quelles sont les cibles à précharger ?
 
-<p>Le navigateur cherche soit une balise HTML <code>link</code>, soit un en-tête HTTP <code>Link:</code> avec un type de relation <code>next</code> ou <code>prefetch</code>. Ci-dessous, un exemple d’utilisation de la balise <code>link</code> :</p>
+Le navigateur cherche soit une balise HTML `link`, soit un en-tête HTTP `Link:` avec un type de relation `next` ou `prefetch`. Ci-dessous, un exemple d’utilisation de la balise `link` :
 
-<pre class="eval">&lt;link rel="prefetch" href="/images/big.jpeg"&gt;
-</pre>
+    <link rel="prefetch" href="/images/big.jpeg">
 
-<p>La même cible à précharger, cette fois avec un en-tête HTTP <code>Link:</code> :</p>
+La même cible à précharger, cette fois avec un en-tête HTTP `Link:` :
 
-<pre class="eval">Link: &lt;/images/big.jpeg&gt;; rel=prefetch
-</pre>
+    Link: </images/big.jpeg>; rel=prefetch
 
-<p>L’en-tête <code>Link:</code> peut également être spécifiée à l’intérieur d’un document HTML en utilisant une balise HTML <code>meta</code> :</p>
+L’en-tête `Link:` peut également être spécifiée à l’intérieur d’un document HTML en utilisant une balise HTML `meta` :
 
-<pre class="eval">&lt;meta http-equiv="Link" content="&amp;lt;/images/big.jpeg&amp;gt;; rel=prefetch"&gt;
-</pre>
+    <meta http-equiv="Link" content="&lt;/images/big.jpeg&gt;; rel=prefetch">
 
-<p>Le format pour l’en-tête <code>Link:</code>est décrit dans le <a class="external" href="http://tools.ietf.org/html/rfc2068">RFC 2068</a> section 19.6.2.4.</p>
+Le format pour l’en-tête `Link:`est décrit dans le [RFC 2068](http://tools.ietf.org/html/rfc2068) section 19.6.2.4.
 
-<div class="note">
-  <p><strong>Note :</strong> Nous avons intentionnellement pris pour référence une version dépassée de la spécification HTTP/1.1 car la plus récente <a class="external" href="http://tools.ietf.org/html/rfc2616">RFC 2616</a> ne décrit pas l’en-tête <code>Link:</code>. Bien que les en-têtes <code>Link:</code> ne fassent pas partie du standard révisé, ils sont toujours utilisés en pratique par les serveurs, pour renseigner les feuilles de styles CSS. Donc nous faisons usage de la même fonction ici.</p>
-</div>
+> **Note :** Nous avons intentionnellement pris pour référence une version dépassée de la spécification HTTP/1.1 car la plus récente [RFC 2616](http://tools.ietf.org/html/rfc2616) ne décrit pas l’en-tête `Link:`. Bien que les en-têtes `Link:` ne fassent pas partie du standard révisé, ils sont toujours utilisés en pratique par les serveurs, pour renseigner les feuilles de styles CSS. Donc nous faisons usage de la même fonction ici.
 
-<p>Le navigateur surveille toutes ces cibles et met en attente chaque requête unique qui doit ensuite être préchargée quand le navigateur est disponible. Il peut y avoir de multiples cibles par page, ainsi on peut comprendre l'utilité de précharger de multiples documents. Par exemple, le document suivant peut contenir plusieurs images lourdes.</p>
+Le navigateur surveille toutes ces cibles et met en attente chaque requête unique qui doit ensuite être préchargée quand le navigateur est disponible. Il peut y avoir de multiples cibles par page, ainsi on peut comprendre l'utilité de précharger de multiples documents. Par exemple, le document suivant peut contenir plusieurs images lourdes.
 
-<p>Quelques exemples en plus, ci-dessous :</p>
+Quelques exemples en plus, ci-dessous :
 
-<pre class="eval">&lt;link rel="prefetch alternate stylesheet" title="Designed for Mozilla" href="mozspecific.css"&gt;
-&lt;link rel="next" href="2.html"&gt;
-</pre>
+    <link rel="prefetch alternate stylesheet" title="Designed for Mozilla" href="mozspecific.css">
+    <link rel="next" href="2.html">
 
-<h3 id="Les_balises_ancres_.28.3Ca.3E.29_sont-elles_pr.C3.A9charg.C3.A9es_.3F">Les balises ancres (&lt;a&gt;) sont-elles préchargées ?</h3>
+### Les balises ancres (\<a>) sont-elles préchargées ?
 
-<p>Non, seulement les balises <code>&lt;link&gt;</code> avec une relation de type <code>next</code> ou <code>prefetch</code> sont préchargées. Toutefois, si l'intérêt en est suffisant, on peut étendre le support du préchargement de liens pour inclure le préchargement des balises &lt;a&gt;, lesquelles devront inclure un type de relation <code>next</code> ou <code>prefetch</code>. Cela aiderait probablement les fournisseurs de contenus à éviter le problème du préchargement de liens morts.</p>
+Non, seulement les balises `<link>` avec une relation de type `next` ou `prefetch` sont préchargées. Toutefois, si l'intérêt en est suffisant, on peut étendre le support du préchargement de liens pour inclure le préchargement des balises \<a>, lesquelles devront inclure un type de relation `next` ou `prefetch`. Cela aiderait probablement les fournisseurs de contenus à éviter le problème du préchargement de liens morts.
 
-<h3 id="Le_pr.C3.A9chargement_de_liens_est-il_respectueux_des_standards_.3F">Le préchargement de liens est-il respectueux des standards ?</h3>
+### Le préchargement de liens est-il respectueux des standards ?
 
-<p>Oui, le préchargement de liens, comme exposé dans ce document, ne viole aucun standard Web existant. En fait, la spécification HTML 4.01 prend explicitement en compte la définition de nouveaux types de relation pour les liens (<a class="external" href="http://www.la-grange.net/w3c/html4.01/types.html#h-6.12">Section 6.12: types de liens (fr)</a>). Toutefois, le mécanisme exact employé par Mozilla n’est pas encore standardisé. Une ébauche de spécification est en cours.</p>
+Oui, le préchargement de liens, comme exposé dans ce document, ne viole aucun standard Web existant. En fait, la spécification HTML 4.01 prend explicitement en compte la définition de nouveaux types de relation pour les liens ([Section 6.12: types de liens (fr)](http://www.la-grange.net/w3c/html4.01/types.html#h-6.12)). Toutefois, le mécanisme exact employé par Mozilla n’est pas encore standardisé. Une ébauche de spécification est en cours.
 
-<h3 id="Comment_le_temps_disponible_du_navigateur_est-il_d.C3.A9termin.C3.A9_.3F">Comment le temps disponible du navigateur est-il déterminé ?</h3>
+### Comment le temps disponible du navigateur est-il déterminé ?
 
-<p>Dans l’implémentation actuelle (Mozilla 1.2), le temps disponible est déterminé par l’utilisation de l’API <code>nsIWebProgressListener</code>. On attache un écouteur à l’objet de haut-niveau <code>nsIWebProgress</code> ("@mozilla.org/docloaderservice;1"). De celui-ci, on reçoit les notifications de lancement et d’arrêt du document et nous estimons le temps disponible comme étant la période entre l’arrêt du dernier document et le lancement du document suivant. La dernière notification d’arrêt apparaît à peu près lorsque le gestionnaire <code>onLoad</code> se lance pour le document parent. C’est à ce moment que démarrent les requêtes de préchargement. Si une sous-frame contient des cibles à précharger, le préchargement ne commencera que lorsque la frame la plus haute et toutes ses frames filles auront fini de charger.</p>
+Dans l’implémentation actuelle (Mozilla 1.2), le temps disponible est déterminé par l’utilisation de l’API `nsIWebProgressListener`. On attache un écouteur à l’objet de haut-niveau `nsIWebProgress` ("@mozilla.org/docloaderservice;1"). De celui-ci, on reçoit les notifications de lancement et d’arrêt du document et nous estimons le temps disponible comme étant la période entre l’arrêt du dernier document et le lancement du document suivant. La dernière notification d’arrêt apparaît à peu près lorsque le gestionnaire `onLoad` se lance pour le document parent. C’est à ce moment que démarrent les requêtes de préchargement. Si une sous-frame contient des cibles à précharger, le préchargement ne commencera que lorsque la frame la plus haute et toutes ses frames filles auront fini de charger.
 
-<h3 id="Que_se_passe-t-il_si_je_clique_sur_un_lien_pendant_un_pr.C3.A9chargement_.3F">Que se passe-t-il si je clique sur un lien pendant un préchargement ?</h3>
+### Que se passe-t-il si je clique sur un lien pendant un préchargement ?
 
-<p>Quand un utilisateur clique sur un lien ou initie toutes sortes de chargements de page, le préchargement des liens s’arrête et les préchargements de cibles sont abandonnés. Si un document préchargé est partiellement stocké, alors il est emmagasiné dans le cache à condition que le serveur envoie un en-tête de réponse de type <code>Accept-Ranges: bytes</code>. Cet en-tête est typiquement généré par les serveurs web quand ils gèrent du contenu statique. Quand l’utilisateur visite réellement un document préchargé, la portion restante est chargée en utilisant une requête HTTP byte-range.</p>
+Quand un utilisateur clique sur un lien ou initie toutes sortes de chargements de page, le préchargement des liens s’arrête et les préchargements de cibles sont abandonnés. Si un document préchargé est partiellement stocké, alors il est emmagasiné dans le cache à condition que le serveur envoie un en-tête de réponse de type `Accept-Ranges: bytes`. Cet en-tête est typiquement généré par les serveurs web quand ils gèrent du contenu statique. Quand l’utilisateur visite réellement un document préchargé, la portion restante est chargée en utilisant une requête HTTP byte-range.
 
-<h3 id="Si_je_t.C3.A9l.C3.A9charge_quelque-chose_en_t.C3.A2che_de_fond_.3F_Le_pr.C3.A9chargement_de_liens_viendra-t-il_en_concurrence_pour_la_bande_passante_.3F">Et si je télécharge quelque chose en tâche de fond ? Le préchargement de liens viendra-t-il en concurrence pour la bande passante ?</h3>
+### Et si je télécharge quelque chose en tâche de fond ? Le préchargement de liens viendra-t-il en concurrence pour la bande passante ?
 
-<p>Oui et non. Si vous téléchargez quelque chose en utilisant Mozilla, le préchargement de liens sera retardé jusqu'à ce que les téléchargements en arrière-plan soit complets. Par exemple, si vous chargez un groupe de marque-pages (qui ouvre plusieurs onglets), toutes les requêtes de préchargement initiées par une de ces marque-pages ne se lanceront que lorsque tous les onglets auront fini de se charger. Si vous avez lancé une autre application qui utilise le réseau, le préchargement de liens dans Mozilla sera en compétition pour la bande passante, avec l’autre application. C’est un problème que nous espérons régler dans le futur en s’appuyant sur les services du système d’exploitation pour contrôler le temps disponible sur le réseau.</p>
+Oui et non. Si vous téléchargez quelque chose en utilisant Mozilla, le préchargement de liens sera retardé jusqu'à ce que les téléchargements en arrière-plan soit complets. Par exemple, si vous chargez un groupe de marque-pages (qui ouvre plusieurs onglets), toutes les requêtes de préchargement initiées par une de ces marque-pages ne se lanceront que lorsque tous les onglets auront fini de se charger. Si vous avez lancé une autre application qui utilise le réseau, le préchargement de liens dans Mozilla sera en compétition pour la bande passante, avec l’autre application. C’est un problème que nous espérons régler dans le futur en s’appuyant sur les services du système d’exploitation pour contrôler le temps disponible sur le réseau.
 
-<h3 id="Existe-t-il_des_restrictions_sur_ce_qui_peut_.C3.AAtre_pr.C3.A9charg.C3.A9_.3F">Existe-t-il des restrictions sur ce qui peut être préchargé ?</h3>
+### Existe-t-il des restrictions sur ce qui peut être préchargé ?
 
-<p>Oui, uniquement les URL http:// (et, à partir de {{ Gecko("1.9.1") }}, https://) peuvent être préchargées. Les autres protocoles (comme FTP) ne fournissent pas de support suffisamment riche pour la gestion du cache côté client. En plus de cette restriction, les URL ayant une chaîne de paramètres ne sont pas préchargées. Ceci parce que de telles URL sont souvent dans des documents qui ne peuvent pas être réutilisés en dehors du cache du navigateur. Donc précharger de telles URL n’apporterait pas grand chose. Nous avons constaté que des sites existants utilisent la balise &lt;link rel="next"&gt; avec des URL contenant des chaînes de paramètres pour référencer le document suivant dans une série de documents. Bugzilla est un de ces sites et il s'avère que les rapports de bug dans Bugzilla ne peuvent être mis en cache, aussi précharger ces URL reviendrait à peu près à doubler la charge de ce pauvre Bugzilla ! On peut se douter que d’autres sites ont été conçus comme Bugzilla donc on ne fait explicitement pas de préchargement d’URL contenant des chaînes de paramètres. (Il pourrait être sensé d’autoriser le préchargement de ces documents avec une relation de type <code>rel=prefetch</code>, puisque cela n'apparait pas dans aucun contenu existant). Il n’y a pas d’autres restrictions en ce qui concerne les URL préchargées.</p>
+Oui, uniquement les URL http\:// (et, à partir de {{ Gecko("1.9.1") }}, https\://) peuvent être préchargées. Les autres protocoles (comme FTP) ne fournissent pas de support suffisamment riche pour la gestion du cache côté client. En plus de cette restriction, les URL ayant une chaîne de paramètres ne sont pas préchargées. Ceci parce que de telles URL sont souvent dans des documents qui ne peuvent pas être réutilisés en dehors du cache du navigateur. Donc précharger de telles URL n’apporterait pas grand chose. Nous avons constaté que des sites existants utilisent la balise \<link rel="next"> avec des URL contenant des chaînes de paramètres pour référencer le document suivant dans une série de documents. Bugzilla est un de ces sites et il s'avère que les rapports de bug dans Bugzilla ne peuvent être mis en cache, aussi précharger ces URL reviendrait à peu près à doubler la charge de ce pauvre Bugzilla ! On peut se douter que d’autres sites ont été conçus comme Bugzilla donc on ne fait explicitement pas de préchargement d’URL contenant des chaînes de paramètres. (Il pourrait être sensé d’autoriser le préchargement de ces documents avec une relation de type `rel=prefetch`, puisque cela n'apparait pas dans aucun contenu existant). Il n’y a pas d’autres restrictions en ce qui concerne les URL préchargées.
 
-<h3 id="Mozilla_peut-il_pr.C3.A9charger_un_document_d.E2.80.99un_h.C3.B4te_diff.C3.A9rent_.3F">Mozilla peut-il précharger un document d’un hôte différent ?</h3>
+### Mozilla peut-il précharger un document d’un hôte différent ?
 
-<p>Oui. Il n’est pas nécessaire que les documents aient la même origine pour le préchargement de liens. Limiter le préchargement uniquement à des URL du même serveur n’augmenterait pas la sécurité du navigateur.</p>
+Oui. Il n’est pas nécessaire que les documents aient la même origine pour le préchargement de liens. Limiter le préchargement uniquement à des URL du même serveur n’augmenterait pas la sécurité du navigateur.
 
-<h3 id="Les_requ.C3.AAtes_pr.C3.A9charg.C3.A9es_contiennent-elles_un_en-t.C3.AAte_Referer:_.3F">Les requêtes préchargées contiennent-elles un en-tête <code>Referer:</code> ?</h3>
+### Les requêtes préchargées contiennent-elles un en-tête `Referer:` ?
 
-<p>Oui, les requêtes préchargées incluent une entête HTTP <code>Referer:</code> qui indique le document duquel la cible de préchargement a été extraite.</p>
+Oui, les requêtes préchargées incluent une entête HTTP `Referer:` qui indique le document duquel la cible de préchargement a été extraite.
 
-<p>Cela peut impacter l'analyse de l'affluence qui est communément utilisée sur de nombreux sites. Pour cette raison, le préchargement de liens peut ne pas être approprié pour toutes sortes de contenus. Toutefois, il est possible de contraindre Mozilla à valider un document préchargé quand l'utilisateur suit un <code>href</code> vers le document préchargé en spécifiant un en-tête de réponse HTTP <code>Cache-control: must-revalidate</code>. Cet en-tête permet la mise en cache mais requiert une requête de validation <code>If-Modified-Since</code> ou <code>If-None-Match</code> pour que le document soit servi à partir du cache du navigateur.</p>
+Cela peut impacter l'analyse de l'affluence qui est communément utilisée sur de nombreux sites. Pour cette raison, le préchargement de liens peut ne pas être approprié pour toutes sortes de contenus. Toutefois, il est possible de contraindre Mozilla à valider un document préchargé quand l'utilisateur suit un `href` vers le document préchargé en spécifiant un en-tête de réponse HTTP `Cache-control: must-revalidate`. Cet en-tête permet la mise en cache mais requiert une requête de validation `If-Modified-Since` ou `If-None-Match` pour que le document soit servi à partir du cache du navigateur.
 
-<h3 id="En_tant_qu.27administrateur_serveur.2C_puis-je_distinguer_les_requ.C3.AAtes_pr.C3.A9charg.C3.A9es.2C_des_requ.C3.AAtes_normales_.3F">En tant qu'administrateur serveur, puis-je distinguer les requêtes préchargées, des requêtes normales ?</h3>
+### En tant qu'administrateur serveur, puis-je distinguer les requêtes préchargées, des requêtes normales ?
 
-<p>Oui, l'en-tête suivant est envoyé avec chaque requête préchargée :</p>
+Oui, l'en-tête suivant est envoyé avec chaque requête préchargée :
 
-<pre class="eval"> X-moz: prefetch
-</pre>
+     X-moz: prefetch
 
-<p>Bien sûr, cet en-tête de requête n'est absolument pas standardisé et il peut changer dans les futures versions de Mozilla.</p>
+Bien sûr, cet en-tête de requête n'est absolument pas standardisé et il peut changer dans les futures versions de Mozilla.
 
-<h3 id="Existe-t-il_une_pr.C3.A9f.C3.A9rence_pour_d.C3.A9sactiver_le_pr.C3.A9chargement_de_liens_.3F">Existe-t-il une préférence pour désactiver le préchargement de liens ?</h3>
+### Existe-t-il une préférence pour désactiver le préchargement de liens ?
 
-<p>Oui, il existe une préférence cachée pour désactiver le préchargement de liens. Ajoutez cette ligne dans votre fichier prefs.js qui se trouve dans votre répertoire de profil (ou faite le changement approprié via <code>about:config</code>) :</p>
+Oui, il existe une préférence cachée pour désactiver le préchargement de liens. Ajoutez cette ligne dans votre fichier prefs.js qui se trouve dans votre répertoire de profil (ou faite le changement approprié via `about:config`) :
 
-<pre class="eval"> user_pref("network.prefetch-next", false);
-</pre>
+     user_pref("network.prefetch-next", false);
 
-<p>Toutefois, la théorie est que si le préchargement de liens a besoin d'être désactivé c'est qu'il doit y avoir un problème dans l'implémentation. On doit améliorer l'implémentation si ça ne marche pas correctement plutôt que d'attendre que l'utilisateur trouve et modifie une obscure préférence.</p>
+Toutefois, la théorie est que si le préchargement de liens a besoin d'être désactivé c'est qu'il doit y avoir un problème dans l'implémentation. On doit améliorer l'implémentation si ça ne marche pas correctement plutôt que d'attendre que l'utilisateur trouve et modifie une obscure préférence.
 
-<h3 id="Et_pour_les_gens_qui_payent_.C3.A0_la_bande_passante_utilis.C3.A9e_.3F">Et pour les gens qui payent à la bande passante utilisée ?</h3>
+### Et pour les gens qui payent à la bande passante utilisée ?
 
-<p>En fait, il y a deux façons d'aborder ce problème :</p>
+En fait, il y a deux façons d'aborder ce problème :
 
-<ol>
- <li>Les sites Web peuvent provoquer le chargement de choses de façon transparente en utilisant des hacks JS/DOM.</li>
- <li>Le préchargement est une fonctionnalité du navigateur, les utilisateurs devraient pouvoir le désactiver facilement.</li>
-</ol>
+1.  Les sites Web peuvent provoquer le chargement de choses de façon transparente en utilisant des hacks JS/DOM.
+2.  Le préchargement est une fonctionnalité du navigateur, les utilisateurs devraient pouvoir le désactiver facilement.
 
-<p>Il est important que les sites web adoptent la balise <code>&lt;link&gt;</code> pour le préchargement, plutôt que d'essayer d'initier le chargement en tâche de fond avec des hacks JS/DOM. La balise <code>&lt;link&gt;</code> donne au navigateur la capacité de savoir quels sites sont à charger et on peut utiliser cette information pour améliorer le système de priorité du préchargement des liens. La préférence utilisateur pour désactiver le préchargement par la balise <code>&lt;link&gt;</code> encourage simplement les sites Web à s'abstenir d'utiliser des hacks JS/DOM. Cela n'apporterait rien de positif aux utilisateurs. C'est une des raisons pour lesquelles le préchargement est activé par défaut.</p>
+Il est important que les sites web adoptent la balise `<link>` pour le préchargement, plutôt que d'essayer d'initier le chargement en tâche de fond avec des hacks JS/DOM. La balise `<link>` donne au navigateur la capacité de savoir quels sites sont à charger et on peut utiliser cette information pour améliorer le système de priorité du préchargement des liens. La préférence utilisateur pour désactiver le préchargement par la balise `<link>` encourage simplement les sites Web à s'abstenir d'utiliser des hacks JS/DOM. Cela n'apporterait rien de positif aux utilisateurs. C'est une des raisons pour lesquelles le préchargement est activé par défaut.
 
-<h3 id="Quels_navigateurs_supportent_le_pr.C3.A9chargement_de_liens_.3F">Quels navigateurs supportent le préchargement de liens ?</h3>
+### Quels navigateurs supportent le préchargement de liens ?
 
-<p>Les navigateurs basés sur Mozilla 1.2 (ou +) aussi bien que ceux basés sur Mozilla 1.0.2 (ou +) supportent le préchargement. Cela inclut Firefox et Netscape 7.02+. Les compilations Camino, en Mars 2003, sont basées sur Mozilla 1.0.1 et donc ne supportent pas le préchargement. <a class="external" href="http://gemal.dk/browserspy/prefetch.php">Testez</a> votre navigateur pour vérifier s'il supporte le préchargement de liens.</p>
+Les navigateurs basés sur Mozilla 1.2 (ou +) aussi bien que ceux basés sur Mozilla 1.0.2 (ou +) supportent le préchargement. Cela inclut Firefox et Netscape 7.02+. Les compilations Camino, en Mars 2003, sont basées sur Mozilla 1.0.1 et donc ne supportent pas le préchargement. [Testez](http://gemal.dk/browserspy/prefetch.php) votre navigateur pour vérifier s'il supporte le préchargement de liens.
 
-<h3 id="D.27autres_questions_.3F">D'autres questions ?</h3>
+### D'autres questions ?
 
-<p>Si vous avez des questions ou des commentaires sur le préchargement de liens, n'hésitez pas à me les envoyer :-)</p>
+Si vous avez des questions ou des commentaires sur le préchargement de liens, n'hésitez pas à me les envoyer :-)
 
-<h4 id="Voir_.C3.A9galement">Voir également</h4>
+#### Voir également
 
-<ul>
- <li><a class="external" href="http://www.edochan.com/programming/pf.htm">Prefetching Hints (en)</a></li>
-</ul>
+- [Prefetching Hints (en)](http://www.edochan.com/programming/pf.htm)
 
-<h3 id="Informations_sur_le_document_original">Informations sur le document original</h3>
+### Informations sur le document original
 
-<ul>
- <li>Auteur(s) :Darin Fisher (darin at meer dot net)</a></li>
- <li>Date de dernière mise à jour : 3 mars 2003</li>
-</ul>
+- Auteur(s) :Darin Fisher (darin at meer dot net)
+- Date de dernière mise à jour : 3 mars 2003

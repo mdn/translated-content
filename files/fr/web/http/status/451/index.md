@@ -8,57 +8,46 @@ tags:
   - Reference
 translation_of: Web/HTTP/Status/451
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Le code de réponse d'erreur HTTP <code><strong>451</strong></code><strong><code> Unavailable For Legal Reasons</code></strong> indique que l'utilisateur a demandé une ressource qui n'est pas disponible pour des raisons légales (par exemple une page web sous le coup d'une action en justice).</p>
+Le code de réponse d'erreur HTTP **`451`\*\***` Unavailable For Legal Reasons`\*\* indique que l'utilisateur a demandé une ressource qui n'est pas disponible pour des raisons légales (par exemple une page web sous le coup d'une action en justice).
 
-<h2 id="Statut">Statut</h2>
+## Statut
 
-<pre class="syntaxbox">451 Unavailable For Legal Reasons</pre>
+    451 Unavailable For Legal Reasons
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Cet exemple de réponse est tiré de la RFC IETF (cf. ci-après), et contient une référence à {{interwiki("wikipedia", "Monty_Python's_Life_of_Brian", "<em>Monty Python : La Vie de Brian</em>")}}.</p>
+Cet exemple de réponse est tiré de la RFC IETF (cf. ci-après), et contient une référence à {{interwiki("wikipedia", "Monty_Python's_Life_of_Brian", "<em>Monty Python : La Vie de Brian</em>")}}.
 
-<p>Notez que l'en-tête {{HTTPHeader("Link")}} peut aussi contenir une relation  <code>rel="blocked-by"</code> identifiant l'entité responsable de l'indisponibilité de la ressource (par exemple le nom de la personne ou de l'organisation à l'origine de la demande légale ayant entraîné le retrait du contenu).</p>
+Notez que l'en-tête {{HTTPHeader("Link")}} peut aussi contenir une relation  `rel="blocked-by"` identifiant l'entité responsable de l'indisponibilité de la ressource (par exemple le nom de la personne ou de l'organisation à l'origine de la demande légale ayant entraîné le retrait du contenu).
 
-<pre>HTTP/1.1 451 Unavailable For Legal Reasons
-Link: &lt;https://spqr.example.org/legislatione&gt;; rel="blocked-by"
-Content-Type: text/html
+    HTTP/1.1 451 Unavailable For Legal Reasons
+    Link: <https://spqr.example.org/legislatione>; rel="blocked-by"
+    Content-Type: text/html
 
-&lt;html&gt;
-&lt;head&gt;&lt;title&gt;Unavailable For Legal Reasons&lt;/title&gt;&lt;/head&gt;
-&lt;body&gt;
-&lt;h1&gt;Unavailable For Legal Reasons&lt;/h1&gt;
-&lt;p&gt;This request may not be serviced in the Roman Province
-of Judea due to the Lex Julia Majestatis, which disallows
-access to resources hosted on servers deemed to be
-operated by the People's Front of Judea.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre>
+    <html>
+    <head><title>Unavailable For Legal Reasons</title></head>
+    <body>
+    <h1>Unavailable For Legal Reasons</h1>
+    <p>This request may not be serviced in the Roman Province
+    of Judea due to the Lex Julia Majestatis, which disallows
+    access to resources hosted on servers deemed to be
+    operated by the People's Front of Judea.</p>
+    </body>
+    </html>
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Titre</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7725", "451 Unavailable For Legal Reasons")}}</td>
-   <td>An HTTP Status Code to Report Legal Obstacles</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                        | Titre                                         |
+| -------------------------------------------------------------------- | --------------------------------------------- |
+| {{RFC("7725", "451 Unavailable For Legal Reasons")}} | An HTTP Status Code to Report Legal Obstacles |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("http/status", "451")}}</p>
+{{Compat("http/status", "451")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{interwiki("wikipedia", "HTTP_451", "Wikipedia: HTTP 451")}}</li>
- <li>{{interwiki("wikipedia", "Fahrenheit_451", "Wikipedia: Fahrenheit 451")}} (qui a donné son numéro à ce code de statut)</li>
-</ul>
+- {{interwiki("wikipedia", "HTTP_451", "Wikipedia: HTTP 451")}}
+- {{interwiki("wikipedia", "Fahrenheit_451", "Wikipedia: Fahrenheit 451")}} (qui a donné son numéro à ce code de statut)

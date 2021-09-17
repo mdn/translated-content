@@ -16,82 +16,70 @@ tags:
   - style-src-elem
 translation_of: Web/HTTP/Headers/Content-Security-Policy/style-src-elem
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <code><strong>style</strong></code><strong><code>-src-elem</code></strong> spécifie les sources valides pour les feuilles de styles embarquées avec l'élément {{HTMLElement("style")}} et pour l'élément {{HTMLElement("link")}} avec l'attribut <code>rel="stylesheet"</code>.</p>
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`style`\*\***`-src-elem`\*\* spécifie les sources valides pour les feuilles de styles embarquées avec l'élément {{HTMLElement("style")}} et pour l'élément {{HTMLElement("link")}} avec l'attribut `rel="stylesheet"`.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Version de CSP</th>
-   <td>3</td>
-  </tr>
-  <tr>
-   <th scope="row">Type de directive</th>
-   <td>{{Glossary("Fetch directive")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{CSP("default-src")}} par défaut</th>
-   <td>
-    <p>Oui, si cette directive est absente, l'agent utilisateur consultera la directive {{CSP("style-src")}}, qui a pour valeur par défaut celle de la directive <code>default-src</code></p>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Version de CSP</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th scope="row">Type de directive</th>
+      <td>{{Glossary("Fetch directive")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{CSP("default-src")}} par défaut</th>
+      <td>
+        <p>
+          Oui, si cette directive est absente, l'agent utilisateur consultera la
+          directive {{CSP("style-src")}}, qui a pour valeur par défaut
+          celle de la directive <code>default-src</code>
+        </p>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Une ou plusieurs sources peuvent être autorisées pour cette directive :</p>
+Une ou plusieurs sources peuvent être autorisées pour cette directive :
 
-<pre class="syntaxbox">Content-Security-Policy: style-src-elem &lt;source&gt;;
-Content-Security-Policy: style-src-elem &lt;source&gt; &lt;source&gt;;
-</pre>
+    Content-Security-Policy: style-src-elem <source>;
+    Content-Security-Policy: style-src-elem <source> <source>;
 
-<p><code>style-src-elem</code> peut être utilisée conjointement à {{CSP("style-src")}} :</p>
+`style-src-elem` peut être utilisée conjointement à {{CSP("style-src")}} :
 
-<pre>Content-Security-Policy: <code>style</code>-src &lt;source&gt;;
-Content-Security-Policy: <code>style</code>-src-elem &lt;source&gt;;</pre>
+    Content-Security-Policy: style-src <source>;
+    Content-Security-Policy: style-src-elem <source>;
 
-<h3 id="Sources">Sources</h3>
+### Sources
 
-<p>{{page("fr/Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}</p>
+{{page("fr/Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}
 
-<dl>
- <dt>'report-sample'</dt>
- <dd>Requiert qu'un échantillon du code violant la directive soit inclus dans le rapport envoyé.</dd>
-</dl>
+- 'report-sample'
+  - : Requiert qu'un échantillon du code violant la directive soit inclus dans le rapport envoyé.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{specName("CSP 3.0", "#directive-style-src-elem", "style-src-elem")}}</td>
-   <td>{{Spec2("CSP 3.0")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | Statut                       | Commentaire          |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{specName("CSP 3.0", "#directive-style-src-elem", "style-src-elem")}} | {{Spec2("CSP 3.0")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("http.headers.csp.Content-Security-Policy.style-src-elem")}}</p>
+{{Compat("http.headers.csp.Content-Security-Policy.style-src-elem")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li>{{CSP("style-src")}}</li>
- <li>{{CSP("style-src-attr")}}</li>
- <li>{{HTTPHeader("Link")}} header</li>
- <li>{{HTMLElement("style")}}, {{HTMLElement("link")}}</li>
- <li>{{cssxref("@import")}}</li>
- <li>{{domxref("CSSStyleSheet.insertRule()")}}</li>
- <li>{{domxref("CSSGroupingRule.insertRule()")}}</li>
- <li>{{domxref("CSSStyleDeclaration.cssText")}}</li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- {{CSP("style-src")}}
+- {{CSP("style-src-attr")}}
+- {{HTTPHeader("Link")}} header
+- {{HTMLElement("style")}}, {{HTMLElement("link")}}
+- {{cssxref("@import")}}
+- {{domxref("CSSStyleSheet.insertRule()")}}
+- {{domxref("CSSGroupingRule.insertRule()")}}
+- {{domxref("CSSStyleDeclaration.cssText")}}

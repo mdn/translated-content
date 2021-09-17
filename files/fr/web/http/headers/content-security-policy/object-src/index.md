@@ -14,91 +14,76 @@ tags:
   - source
 translation_of: Web/HTTP/Headers/Content-Security-Policy/object-src
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>La directive HTTP {{HTTPHeader("Content-Security-Policy")}} <code><strong>object-src</strong></code> spécifie les sources valides pour les éléments {{HTMLElement("object")}}, {{HTMLElement("embed")}} et {{HTMLElement("applet")}}.</p>
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} **`object-src`** spécifie les sources valides pour les éléments {{HTMLElement("object")}}, {{HTMLElement("embed")}} et {{HTMLElement("applet")}}.
 
-<p>Pour définir des types autorisés pour les éléments {{HTMLElement("object")}}, {{HTMLElement("embed")}} et {{HTMLElement("applet")}}, voir la directive {{CSP("plugin-types")}}.</p>
+Pour définir des types autorisés pour les éléments {{HTMLElement("object")}}, {{HTMLElement("embed")}} et {{HTMLElement("applet")}}, voir la directive {{CSP("plugin-types")}}.
 
-<div class="notecard note">
-  <p><strong>Note :</strong> Les éléments contrôlés par <code>object-src</code> sont considérés peut-être par coïcidence comme des éléments HTML du passé et ne recevront de nouvelles fonctionnalités normalisées (comme les attributs de sécurité <code>sandbox</code> et <code>allow</code> pour <code>&lt;iframe&gt;</code>). De ce fait, il est <a href="https://csp.withgoogle.com/docs/strict-csp.html">recommandé</a> de restreindre cette directive, c'est-à-dire la définir explicitement à <code>object-src 'none'</code> dans la mesure du possible.</p>
-</div>
+> **Note :** Les éléments contrôlés par `object-src` sont considérés peut-être par coïcidence comme des éléments HTML du passé et ne recevront de nouvelles fonctionnalités normalisées (comme les attributs de sécurité `sandbox` et `allow` pour `<iframe>`). De ce fait, il est [recommandé](https://csp.withgoogle.com/docs/strict-csp.html) de restreindre cette directive, c'est-à-dire la définir explicitement à `object-src 'none'` dans la mesure du possible.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Version de CSP</th>
-   <td>1</td>
-  </tr>
-  <tr>
-   <th scope="row">Type de directive</th>
-   <td>{{Glossary("Fetch directive")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{CSP("default-src")}} par défaut</th>
-   <td>Oui, si cette directive est absente, l'agent utilisateur consultera la directive <code>default-src</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Version de CSP</th>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th scope="row">Type de directive</th>
+      <td>{{Glossary("Fetch directive")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{CSP("default-src")}} par défaut</th>
+      <td>
+        Oui, si cette directive est absente, l'agent utilisateur consultera la
+        directive <code>default-src</code>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Une ou plusieurs sources peuvent être autorisées pour cette directive :</p>
+Une ou plusieurs sources peuvent être autorisées pour cette directive :
 
-<pre class="syntaxbox">Content-Security-Policy: object-src &lt;source&gt;;
-Content-Security-Policy: object-src &lt;source&gt; &lt;source&gt;;
-</pre>
+    Content-Security-Policy: object-src <source>;
+    Content-Security-Policy: object-src <source> <source>;
 
-<h3 id="Sources">Sources</h3>
+### Sources
 
-<p>{{page("fr/Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}</p>
+{{page("fr/Web/HTTP/Headers/Content-Security-Policy/connect-src", "Sources")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Cas_de_violation">Cas de violation</h3>
+### Cas de violation
 
-<p>Soit cet en-tête CSP :</p>
+Soit cet en-tête CSP :
 
-<pre class="brush: bash">Content-Security-Policy: object-src https://example.com/</pre>
+```bash
+Content-Security-Policy: object-src https://example.com/
+```
 
-<p>Ces éléments {{HTMLElement("object")}}, {{HTMLElement("embed")}} et {{HTMLElement("applet")}} seront bloqués et ne se chargeront pas :</p>
+Ces éléments {{HTMLElement("object")}}, {{HTMLElement("embed")}} et {{HTMLElement("applet")}} seront bloqués et ne se chargeront pas :
 
-<pre class="brush: html">&lt;embed src="https://not-example.com/flash"&gt;&lt;/embed&gt;
-&lt;object data="https://not-example.com/plugin"&gt;&lt;/object&gt;
-&lt;applet archive="https://not-example.com/java"&gt;&lt;/applet&gt;</pre>
+```html
+<embed src="https://not-example.com/flash"></embed>
+<object data="https://not-example.com/plugin"></object>
+<applet archive="https://not-example.com/java"></applet>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{specName("CSP 3.0", "#directive-object-src", "object-src")}}</td>
-   <td>{{Spec2('CSP 3.0')}}</td>
-   <td>Inchangé.</td>
-  </tr>
-  <tr>
-   <td>{{specName("CSP 1.1", "#directive-object-src", "object-src")}}</td>
-   <td>{{Spec2('CSP 1.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | Statut                       | Commentaire          |
+| ------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{specName("CSP 3.0", "#directive-object-src", "object-src")}} | {{Spec2('CSP 3.0')}} | Inchangé.            |
+| {{specName("CSP 1.1", "#directive-object-src", "object-src")}} | {{Spec2('CSP 1.1')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("http.headers.csp.Content-Security-Policy.object-src")}}</p>
+{{Compat("http.headers.csp.Content-Security-Policy.object-src")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
- <li>{{HTMLElement("object")}}, {{HTMLElement("embed")}}, and {{HTMLElement("applet")}}</li>
- <li>{{CSP("plugin-types")}}</li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}
+- {{HTMLElement("object")}}, {{HTMLElement("embed")}}, and {{HTMLElement("applet")}}
+- {{CSP("plugin-types")}}

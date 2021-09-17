@@ -4,87 +4,81 @@ slug: Web/HTTP/Methods/PATCH
 translation_of: Web/HTTP/Methods/PATCH
 original_slug: Web/HTTP/Méthode/PATCH
 ---
-<p>La <strong>méthode <code>PATCH</code> d'une requête HTTP</strong> applique des modifications partielles à une ressource.</p>
+La **méthode `PATCH` d'une requête HTTP** applique des modifications partielles à une ressource.
 
-<p>La méthode HTTP {{HTTPMethod("PUT")}} est déjà définie pour écraser une ressource avec un nouveau corps complet de message, et pour la méthode HTTP {{HTTPMethod("POST")}}, il n'existe aucun moyen standard pour découvrir le support de format de patch. Tout comme <code>POST</code>, la méthode HTTP <code>PATCH</code> n'est pas listée comme étant idempotent, contrairement à <code>PUT</code>. Cela signifie que les requêtes patch identiques et successives auront des effets différents sur l'objet manipulé.</p>
+La méthode HTTP {{HTTPMethod("PUT")}} est déjà définie pour écraser une ressource avec un nouveau corps complet de message, et pour la méthode HTTP {{HTTPMethod("POST")}}, il n'existe aucun moyen standard pour découvrir le support de format de patch. Tout comme `POST`, la méthode HTTP `PATCH` n'est pas listée comme étant idempotent, contrairement à `PUT`. Cela signifie que les requêtes patch identiques et successives auront des effets différents sur l'objet manipulé.
 
-<p>Pour découvrir si un serveur supporte la méthode PATCH, un serveur peut annoncer son support en l'ajoutant à la liste des méthodes autorisées dans les headers de la réponse {{HTTPHeader ("Allow")}} ou encore {{HTTPHeader ("Access-Control-Allow-Methods")}} (pour CORS).</p>
+Pour découvrir si un serveur supporte la méthode PATCH, un serveur peut annoncer son support en l'ajoutant à la liste des méthodes autorisées dans les headers de la réponse {{HTTPHeader ("Allow")}} ou encore {{HTTPHeader ("Access-Control-Allow-Methods")}} (pour CORS).
 
-<p>Une autre indication (implicite) que la méthode PATCH est autorisée est la présence du header {{HTTPHeader("Accept-Patch")}}.</p>
+Une autre indication (implicite) que la méthode PATCH est autorisée est la présence du header {{HTTPHeader("Accept-Patch")}}.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">La requête possède un corps de message (body)</th>
-   <td>Oui</td>
-  </tr>
-  <tr>
-   <th scope="row">Une requête traitée avec succès retourne une réponse avec un corps de message (body)</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Safe")}}</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Idempotent")}}</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Cacheable")}}</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">Utilisation au sein des <a href="/fr/docs/Web/Guide/HTML/Formulaires">formulaires HTML</a></th>
-   <td>Non</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">La requête possède un corps de message (body)</th>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        Une requête traitée avec succès retourne une réponse avec un corps de
+        message (body)
+      </th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Safe")}}</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Idempotent")}}</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Cacheable")}}</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        Utilisation au sein des
+        <a href="/fr/docs/Web/Guide/HTML/Formulaires">formulaires HTML</a>
+      </th>
+      <td>Non</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">PATCH /file.txt HTTP/1.1
-</pre>
+    PATCH /file.txt HTTP/1.1
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<h3 id="Requête">Requête</h3>
+### Requête
 
-<pre>PATCH /file.txt HTTP/1.1
-Host: www.example.com
-Content-Type: application/example
-If-Match: "e0023aa4e"
-Content-Length: 100
+    PATCH /file.txt HTTP/1.1
+    Host: www.example.com
+    Content-Type: application/example
+    If-Match: "e0023aa4e"
+    Content-Length: 100
 
-[description des changements]</pre>
+    [description des changements]
 
-<h3 id="Réponse">Réponse</h3>
+### Réponse
 
-<p>Une requête traitée avec succès retourne une réponse accompagnée d'un code de réponse {{HTTPStatus("204")}}. Dans ce cas-ci, la réponse ne contient un corps de message.</p>
+Une requête traitée avec succès retourne une réponse accompagnée d'un code de réponse {{HTTPStatus("204")}}. Dans ce cas-ci, la réponse ne contient un corps de message.
 
-<pre>HTTP/1.1 204 No Content
-Content-Location: /file.txt
-ETag: "e0023aa4f"</pre>
+    HTTP/1.1 204 No Content
+    Content-Location: /file.txt
+    ETag: "e0023aa4f"
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Titre</th>
-  </tr>
-  <tr>
-   <td>{{RFC("5789", "PATCH")}}</td>
-   <td>Méthode PATCH pour HTTP (PATCH Method for HTTP)</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                    | Titre                                           |
+| -------------------------------- | ----------------------------------------------- |
+| {{RFC("5789", "PATCH")}} | Méthode PATCH pour HTTP (PATCH Method for HTTP) |
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTTPStatus("204")}}</li>
- <li>{{HTTPHeader("Allow")}}, {{HTTPHeader("Access-Control-Allow-Methods")}}</li>
- <li>{{HTTPHeader("Accept-Patch")}} – spécifie les formats de document de patch acceptés par le serveur.</li>
-</ul>
+- {{HTTPStatus("204")}}
+- {{HTTPHeader("Allow")}}, {{HTTPHeader("Access-Control-Allow-Methods")}}
+- {{HTTPHeader("Accept-Patch")}} – spécifie les formats de document de patch acceptés par le serveur.

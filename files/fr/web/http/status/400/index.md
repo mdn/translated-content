@@ -8,25 +8,16 @@ tags:
   - Reference
 translation_of: Web/HTTP/Status/400
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Le code de statut de réponse HTTP <code><strong>400</strong></code><strong><code> Bad Request</code></strong> indique que le serveur ne peut pas comprendre la requête en raison d'une syntaxe invalide. Le client ne devrait pas répéter la requête sans modification.</p>
+Le code de statut de réponse HTTP **`400`\*\***` Bad Request`\*\* indique que le serveur ne peut pas comprendre la requête en raison d'une syntaxe invalide. Le client ne devrait pas répéter la requête sans modification.
 
-<h2 id="Statut">Statut</h2>
+## Statut
 
-<pre class="syntaxbox">400 Bad Request </pre>
+    400 Bad Request
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Titre</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "400 Bad Request" , "6.5.1")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                | Titre                                                         |
+| ------------------------------------------------------------ | ------------------------------------------------------------- |
+| {{RFC("7231", "400 Bad Request" , "6.5.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |

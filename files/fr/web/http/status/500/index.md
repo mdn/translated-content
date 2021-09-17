@@ -7,33 +7,24 @@ tags:
   - HTTP
 translation_of: Web/HTTP/Status/500
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Le code de réponse HyperText Transfer Protocol (HTTP) d'erreur serveur <code><strong>500</strong></code><strong><code> Internal Server Error</code></strong> indique que le serveur a rencontré un problème inattendu qui l'empêche de répondre à la requête.</p>
+Le code de réponse HyperText Transfer Protocol (HTTP) d'erreur serveur **`500`\*\***` Internal Server Error`\*\* indique que le serveur a rencontré un problème inattendu qui l'empêche de répondre à la requête.
 
-<p>Cette réponse d'erreur est une réponse générique « fourre-tout ». Souvent, les administrateurs des serveurs enregistreront les erreurs qui entraînent un code 500 avec d'autres informations à propos de la requête afin d'empêcher que l'erreur ne se reproduise à nouveau.</p>
+Cette réponse d'erreur est une réponse générique « fourre-tout ». Souvent, les administrateurs des serveurs enregistreront les erreurs qui entraînent un code 500 avec d'autres informations à propos de la requête afin d'empêcher que l'erreur ne se reproduise à nouveau.
 
-<h2 id="Statut">Statut</h2>
+## Statut
 
-<pre class="syntaxbox">500 Internal Server Error</pre>
+    500 Internal Server Error
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Titre</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "500 Internal Server Error" , "6.6.1")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                            | Titre                                                         |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------- |
+| {{RFC("7231", "500 Internal Server Error" , "6.6.1")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>L'information ci-dessous provient du dépôt GitHub de MDN (<a href="https://github.com/mdn/browser-compat-data">https://github.com/mdn/browser-compat-data</a>).</p>
+L'information ci-dessous provient du dépôt GitHub de MDN (<https://github.com/mdn/browser-compat-data>).
 
-<p>{{Compat("http/status", "500")}}</p>
+{{Compat("http/status", "500")}}

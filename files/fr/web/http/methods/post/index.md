@@ -8,111 +8,100 @@ tags:
 translation_of: Web/HTTP/Methods/POST
 original_slug: Web/HTTP/Méthode/POST
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>La <strong>méthode HTTP <code>POST</code></strong> envoie des données au serveur. Le type du corps de la requête est indiqué par l'en-tête {{HTTPHeader("Content-Type")}}.</p>
+La **méthode HTTP `POST`** envoie des données au serveur. Le type du corps de la requête est indiqué par l'en-tête {{HTTPHeader("Content-Type")}}.
 
-<p>La différence entre <code>PUT</code> et {{HTTPMethod("POST")}} tient au fait que <code>PUT</code> est une méthode idempotente. Une requête <code>PUT</code>, envoyée une ou plusieurs fois avec succès, aura toujours le même effet (il n'y a pas d'effet de bord). À l'inverse, des requêtes <code>POST</code> successives et identiques peuvent avoir des effets additionnels, ce qui peut revenir par exemple à passer plusieurs fois une commande.</p>
+La différence entre `PUT` et {{HTTPMethod("POST")}} tient au fait que `PUT` est une méthode idempotente. Une requête `PUT`, envoyée une ou plusieurs fois avec succès, aura toujours le même effet (il n'y a pas d'effet de bord). À l'inverse, des requêtes `POST` successives et identiques peuvent avoir des effets additionnels, ce qui peut revenir par exemple à passer plusieurs fois une commande.
 
-<p>Une requête <code>POST</code> est habituellement envoyée via un <a href="/en-US/docs/Web/Guide/HTML/Forms">formulaire HTML</a> et a pour résultat un changement sur le serveur. Dans ce cas, le type du contenu est sélectionné en mettant la chaîne de caractères adéquate dans l'attribut<dfn> {{htmlattrxref("enctype", "form")}} de l'élément {{HTMLElement("form")}} ou dans l'attribut {{htmlattrxref("formenctype", "input")}} de l'élément {{HTMLElement("input") }}, voir celui des éléments {{HTMLElement("button")}}</dfn> :</p>
+Une requête `POST` est habituellement envoyée via un [formulaire HTML](/en-US/docs/Web/Guide/HTML/Forms) et a pour résultat un changement sur le serveur. Dans ce cas, le type du contenu est sélectionné en mettant la chaîne de caractères adéquate dans l'attribut* {{htmlattrxref("enctype", "form")}} de l'élément {{HTMLElement("form")}} ou dans l'attribut {{htmlattrxref("formenctype", "input")}} de l'élément {{HTMLElement("input") }}, voir celui des éléments {{HTMLElement("button")}}* :
 
-<ul>
- <li><code>application/</code><dfn><code>x-www-form-urlencoded</code> : les valeurs sont encodées sous forme de couples clé-valeur séparés par <code>'&amp;'</code>, avec un <code>'='</code> entre la clé et la valeur. Les caractères non alphanumériques sont {{glossary("percent encoded")}} : c'est la raison pour laquelle ce type de format n'est pas adapté à une utilisation avec des données binaires  (utilisez <code>multipart/form-data</code> à la place)</dfn></li>
- <li><dfn><code>multipart/form-data</code></dfn></li>
- <li><dfn><code>text/plain</code></dfn></li>
-</ul>
+- `application/`_`x-www-form-urlencoded` : les valeurs sont encodées sous forme de couples clé-valeur séparés par `'&'`, avec un `'='` entre la clé et la valeur. Les caractères non alphanumériques sont {{glossary("percent encoded")}} : c'est la raison pour laquelle ce type de format n'est pas adapté à une utilisation avec des données binaires  (utilisez `multipart/form-data` à la place)_
+- _`multipart/form-data`_
+- _`text/plain`_
 
-<p>Lorsque la requête <code>POST</code> est envoyée par un autre moyen qu'un formulaire HTML, par exemple via {{domxref("XMLHttpRequest")}}, le corps peut être de n'importe quel type. Comme décrit dans la spécification HTTP 1.1, <code>la méthode POST</code> est conçue pour permettre une méthode uniforme couvrant les fonctions suivantes :</p>
+Lorsque la requête `POST` est envoyée par un autre moyen qu'un formulaire HTML, par exemple via {{domxref("XMLHttpRequest")}}, le corps peut être de n'importe quel type. Comme décrit dans la spécification HTTP 1.1, `la méthode POST` est conçue pour permettre une méthode uniforme couvrant les fonctions suivantes :
 
-<ul>
- <li>Annotation de ressources existantes</li>
- <li>Publication d'un message sur un tableau d'affichage, un groupe de discussion, une liste de diffusion, ou un groupe similaire d'articles;</li>
- <li>Apport d'un bloc de données, tel que le résultat produit par la soumission d'un formulaire, à un processus de traitement de données;</li>
- <li>Extension d'une base de données au travers d'une opération d'ajout.</li>
-</ul>
+- Annotation de ressources existantes
+- Publication d'un message sur un tableau d'affichage, un groupe de discussion, une liste de diffusion, ou un groupe similaire d'articles;
+- Apport d'un bloc de données, tel que le résultat produit par la soumission d'un formulaire, à un processus de traitement de données;
+- Extension d'une base de données au travers d'une opération d'ajout.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">La requête a un corps</th>
-   <td>Oui</td>
-  </tr>
-  <tr>
-   <th scope="row">Une réponse inclut un corps</th>
-   <td>Oui</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Safe","Sûre")}}</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Idempotent","Idempotente")}}</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Cacheable","Peut être mise en cache")}}</th>
-   <td>Seulement si une information de péremption est incluse</td>
-  </tr>
-  <tr>
-   <th scope="row">Autorisée dans les  <a href="/fr/docs/Web/Guide/HTML/Formulaires">formulaires HTML</a></th>
-   <td>Oui</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">La requête a un corps</th>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <th scope="row">Une réponse inclut un corps</th>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Safe","Sûre")}}</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Idempotent","Idempotente")}}</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("Cacheable","Peut être mise en cache")}}
+      </th>
+      <td>Seulement si une information de péremption est incluse</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        Autorisée dans les 
+        <a href="/fr/docs/Web/Guide/HTML/Formulaires">formulaires HTML</a>
+      </th>
+      <td>Oui</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">POST /index.html
-</pre>
+    POST /index.html
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Un formulaire simple utilisant le type de contenu par défaut <code>application/x-www-form-urlencoded</code> :</p>
+Un formulaire simple utilisant le type de contenu par défaut `application/x-www-form-urlencoded` :
 
-<pre>POST / HTTP/1.1
-Host: foo.com
-Content-Type: application/x-www-form-urlencoded
-Content-Length: 13
+    POST / HTTP/1.1
+    Host: foo.com
+    Content-Type: application/x-www-form-urlencoded
+    Content-Length: 13
 
-say=Hi&amp;to=Mom</pre>
+    say=Hi&to=Mom
 
-<p>Un formulaire utilisant le type de contenu <code>multipart/form-data</code> :</p>
+Un formulaire utilisant le type de contenu `multipart/form-data` :
 
-<pre>POST /test.html HTTP/1.1
-Host: example.org
-Content-Type: multipart/form-data;boundary="boundary"
+    POST /test.html HTTP/1.1
+    Host: example.org
+    Content-Type: multipart/form-data;boundary="boundary"
 
---boundary
-Content-Disposition: form-data; name="field1"
+    --boundary
+    Content-Disposition: form-data; name="field1"
 
-value1
---boundary
-Content-Disposition: form-data; name="field2"; filename="example.txt"
+    value1
+    --boundary
+    Content-Disposition: form-data; name="field2"; filename="example.txt"
 
-value2</pre>
+    value2
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Titre</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "POST", "4.3.3")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                | Titre                                                         |
+| -------------------------------------------- | ------------------------------------------------------------- |
+| {{RFC("7231", "POST", "4.3.3")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("http.methods.POST")}}</p>
+{{Compat("http.methods.POST")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTTPHeader("Content-Type")}}</li>
- <li>{{HTTPHeader("Content-Disposition")}}</li>
-</ul>
+- {{HTTPHeader("Content-Type")}}
+- {{HTTPHeader("Content-Disposition")}}

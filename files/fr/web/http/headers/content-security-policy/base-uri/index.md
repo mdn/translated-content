@@ -12,98 +12,88 @@ tags:
   - source
 translation_of: Web/HTTP/Headers/Content-Security-Policy/base-uri
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <strong><code>base-uri</code></strong> restreint les URL qui peuvent être utilisées comme valeur d'un élément {{HTMLElement("base")}}. Si cette valeur est absente, alors toutes les adresses sont autorisées. Si cette directive est absente, l'agent utilisateur va utiliser la valeur dans l'élément {{HTMLElement("base")}}.</p>
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`base-uri`** restreint les URL qui peuvent être utilisées comme valeur d'un élément {{HTMLElement("base")}}. Si cette valeur est absente, alors toutes les adresses sont autorisées. Si cette directive est absente, l'agent utilisateur va utiliser la valeur dans l'élément {{HTMLElement("base")}}.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Version de CSP</th>
-   <td>2</td>
-  </tr>
-  <tr>
-   <th scope="row">Type de directive</th>
-   <td>{{Glossary("Document directive")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{CSP("default-src")}} par défaut</th>
-   <td>Non, ne pas la définir autorise toutes les URL</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Version de CSP</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th scope="row">Type de directive</th>
+      <td>{{Glossary("Document directive")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{CSP("default-src")}} par défaut</th>
+      <td>Non, ne pas la définir autorise toutes les URL</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Une ou plusieurs <em>sources</em> peuvent être autorisées pour cette directive :</p>
+Une ou plusieurs _sources_ peuvent être autorisées pour cette directive :
 
-<pre class="syntaxbox">Content-Security-Policy: base-uri &lt;source&gt;;
-Content-Security-Policy: base-uri &lt;source&gt; &lt;source&gt;;
-</pre>
+    Content-Security-Policy: base-uri <source>;
+    Content-Security-Policy: base-uri <source> <source>;
 
-<h3 id="Sources">Sources</h3>
+### Sources
 
-<p>Bien que cette directive utilise les mêmes arguments que d'autres directives CSP, certains d'entre eux n'ont pas de sens concernant l'élément {{HTMLElement("base")}}, comme les valeurs <code>'unsafe-inline'</code> et <code>'strict-dynamic'</code></p>
+Bien que cette directive utilise les mêmes arguments que d'autres directives CSP, certains d'entre eux n'ont pas de sens concernant l'élément {{HTMLElement("base")}}, comme les valeurs `'unsafe-inline'` et `'strict-dynamic'`
 
-<p>{{page("fr/Web/HTTP/Headers/Content-Security-Policy/default-src", "Sources")}}</p>
+{{page("fr/Web/HTTP/Headers/Content-Security-Policy/default-src", "Sources")}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Configuration_par_balise_&lt;meta>">Configuration par balise &lt;meta&gt;</h3>
+### Configuration par balise \<meta>
 
-<pre class="brush: html">&lt;meta http-equiv="Content-Security-Policy" content="base-uri 'self'"&gt;</pre>
+```html
+<meta http-equiv="Content-Security-Policy" content="base-uri 'self'">
+```
 
-<h3 id="Configuration_par_Apache">Configuration par Apache</h3>
+### Configuration par Apache
 
-<pre class="brush: bash">&lt;IfModule mod_headers.c&gt;
+```bash
+<IfModule mod_headers.c>
 Header set Content-Security-Policy "base-uri 'self'";
-&lt;/IfModule&gt;</pre>
+</IfModule>
+```
 
-<h3 id="Configuration_par_Nginx">Configuration par Nginx</h3>
+### Configuration par Nginx
 
-<pre class="brush: bash">add_header Content-Security-Policy "base-uri 'self';"</pre>
+```bash
+add_header Content-Security-Policy "base-uri 'self';"
+```
 
-<h3 id="Cas_de_violation">Cas de violation</h3>
+### Cas de violation
 
-<p>À partir du moment où votre domaine n'est pas <code>example.com</code>, un élément {{HTMLElement("base")}} avec son attribut <code>href</code> défini à <code>https://example.com</code> résultera en une violation de CSP.</p>
+À partir du moment où votre domaine n'est pas `example.com`, un élément {{HTMLElement("base")}} avec son attribut `href` défini à `https://example.com` résultera en une violation de CSP.
 
-<pre class="brush: html; example-bad">&lt;meta http-equiv="Content-Security-Policy" content="base-uri 'self'"&gt;
-&lt;base href="https://example.com/"&gt;
+```html example-bad
+<meta http-equiv="Content-Security-Policy" content="base-uri 'self'">
+<base href="https://example.com/">
 
 // Error: Refused to set the document's base URI to 'https://example.com/'
 // because it violates the following Content Security Policy
-// directive: "base-uri 'self'"</pre>
+// directive: "base-uri 'self'"
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
-  <tr>
-   <td>{{specName("CSP 3.0", "#directive-base-uri", "base-uri")}}</td>
-   <td>{{Spec2('CSP 3.0')}}</td>
-   <td>Inchangé.</td>
-  </tr>
-  <tr>
-   <td>{{specName("CSP 1.1", "#directive-base-uri", "base-uri")}}</td>
-   <td>{{Spec2('CSP 1.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | Statut                       | Commentaire          |
+| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{specName("CSP 3.0", "#directive-base-uri", "base-uri")}} | {{Spec2('CSP 3.0')}} | Inchangé.            |
+| {{specName("CSP 1.1", "#directive-base-uri", "base-uri")}} | {{Spec2('CSP 1.1')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("http.headers.csp.base-uri")}}</p>
+{{Compat("http.headers.csp.base-uri")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTTPheader("Content-Security-Policy")}}</li>
- <li>{{HTMLElement("base")}}</li>
- <li>{{domxref("Node.baseURI")}}</li>
-</ul>
+- {{HTTPheader("Content-Security-Policy")}}
+- {{HTMLElement("base")}}
+- {{domxref("Node.baseURI")}}

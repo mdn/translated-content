@@ -11,78 +11,64 @@ tags:
   - source
 translation_of: Web/HTTP/Headers/Content-Security-Policy/prefetch-src
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <code><strong>prefetch-src</strong></code> spécifie les ressources pouvant être préchargées ou préaffichées.</p>
+La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`prefetch-src`** spécifie les ressources pouvant être préchargées ou préaffichées.
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">Version de CSP</th>
-   <td>3</td>
-  </tr>
-  <tr>
-   <th scope="row">Type de directive</th>
-   <td>{{Glossary("Fetch directive")}}</td>
-  </tr>
-  <tr>
-   <th scope="row">{{CSP("default-src")}} par défaut</th>
-   <td>Oui, si cette directive est absente, l'agent utilisateur consultera la directive <code>default-src</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">Version de CSP</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th scope="row">Type de directive</th>
+      <td>{{Glossary("Fetch directive")}}</td>
+    </tr>
+    <tr>
+      <th scope="row">{{CSP("default-src")}} par défaut</th>
+      <td>
+        Oui, si cette directive est absente, l'agent utilisateur consultera la
+        directive <code>default-src</code>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Une ou plusieurs sources peuvent être autorisées pour cette directive :</p>
+Une ou plusieurs sources peuvent être autorisées pour cette directive :
 
-<pre class="syntaxbox">Content-Security-Policy: prefetch-src &lt;source&gt;;
-Content-Security-Policy: prefetch-src &lt;source&gt; &lt;source&gt;;
-</pre>
+    Content-Security-Policy: prefetch-src <source>;
+    Content-Security-Policy: prefetch-src <source> <source>;
 
-<h3 id="Sources">Sources</h3>
+### Sources
 
-<p>{{page("/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src", "common_sources")}}</p>
+{{page("/fr/docs/Web/HTTP/Headers/Content-Security-Policy/default-src", "common_sources")}}
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<h3 id="Cas_de_violation">Cas de violation</h3>
+### Cas de violation
 
-<p>Soit cet en-tête CSP :</p>
+Soit cet en-tête CSP :
 
-<pre>Content-Security-Policy: prefetch-src https://example.com/
-</pre>
+    Content-Security-Policy: prefetch-src https://example.com/
 
-<p>Les requêtes émises par ce code généreront des erreurs de réseau puisque les URL demandées ne correspondant pas à la liste de permissions de la directive <code>prefetch-src</code> :</p>
+Les requêtes émises par ce code généreront des erreurs de réseau puisque les URL demandées ne correspondant pas à la liste de permissions de la directive `prefetch-src` :
 
-<pre>&lt;link rel="prefetch" src="https://example.org/"&gt;&lt;/link&gt;
-&lt;link rel="prerender" src="https://example.org/"&gt;&lt;/link&gt;</pre>
+    <link rel="prefetch" src="https://example.org/"></link>
+    <link rel="prerender" src="https://example.org/"></link>
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaire</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{specName("CSP 3.0", "#prefetch-src", "prefetch-src")}}</td>
-   <td>{{Spec2("CSP 3.0")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | Statut                       | Commentaire          |
+| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{specName("CSP 3.0", "#prefetch-src", "prefetch-src")}} | {{Spec2("CSP 3.0")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("http.headers.csp.Content-Security-Policy.prefetch-src")}}</p>
+{{Compat("http.headers.csp.Content-Security-Policy.prefetch-src")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTTPHeader("Content-Security-Policy")}}</li>
-</ul>
+- {{HTTPHeader("Content-Security-Policy")}}

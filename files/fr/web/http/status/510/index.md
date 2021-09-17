@@ -9,27 +9,18 @@ tags:
   - Status code
 translation_of: Web/HTTP/Status/510
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Le code de statut de réponse HTTP <code><strong>510 Not Extended</strong></code> est envoyé dans le contexte de "l'HTTP Extension Framework", defini dans le <a href="https://tools.ietf.org/html/rfc2774">RFC 2774</a>.</p>
+Le code de statut de réponse HTTP **`510 Not Extended`** est envoyé dans le contexte de "l'HTTP Extension Framework", defini dans le [RFC 2774](https://tools.ietf.org/html/rfc2774).
 
-<p>Dans cette spécification, un client peut envoyer une demande qui contient une déclaration d'extension et qui décrit l'extension à utiliser. Si le serveur reçoit une telle demande, mais que les extensions décrites ne sont pas prises en charge pour la requête, alors, le serveur répond avec le code de statut 510.</p>
+Dans cette spécification, un client peut envoyer une demande qui contient une déclaration d'extension et qui décrit l'extension à utiliser. Si le serveur reçoit une telle demande, mais que les extensions décrites ne sont pas prises en charge pour la requête, alors, le serveur répond avec le code de statut 510.
 
-<h2 id="Statut">Statut</h2>
+## Statut
 
-<pre class="syntaxbox">510 Not Extended</pre>
+    510 Not Extended
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Titre</th>
-  </tr>
-  <tr>
-   <td>{{RFC("2774", "510 Not Extended" , "7")}}</td>
-   <td>Cadre pour les extensions HTTP (<em>An HTTP Extension Framework</em>)</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                            | Titre                                                          |
+| -------------------------------------------------------- | -------------------------------------------------------------- |
+| {{RFC("2774", "510 Not Extended" , "7")}} | Cadre pour les extensions HTTP (_An HTTP Extension Framework_) |

@@ -8,78 +8,72 @@ tags:
 translation_of: Web/HTTP/Methods/CONNECT
 original_slug: Web/HTTP/Méthode/CONNECT
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>La <strong>méthode HTTP <code>CONNECT</code></strong> crée une communication bidirectionnelle avec la ressource demandée. Elle peut être utilisée pour ouvrir un tunnel.</p>
+La **méthode HTTP `CONNECT`** crée une communication bidirectionnelle avec la ressource demandée. Elle peut être utilisée pour ouvrir un tunnel.
 
-<p>Par exemple, la méthode <code>CONNECT</code> peut être utilisée pour accéder à des sites web qui utilisent {{Glossary("SSL")}} ({{Glossary("HTTPS")}}). Le client demande à un serveur Proxy HTTP de créer un tunnel TCP vers la destination désirée. Le serveur poursuit alors afin d'établir la connexion pour le compte du client. Une fois que la connexion a été établie par le serveur, le serveur Proxy continue de gérer le flux TCP à destination et en provenance du client.</p>
+Par exemple, la méthode `CONNECT` peut être utilisée pour accéder à des sites web qui utilisent {{Glossary("SSL")}} ({{Glossary("HTTPS")}}). Le client demande à un serveur Proxy HTTP de créer un tunnel TCP vers la destination désirée. Le serveur poursuit alors afin d'établir la connexion pour le compte du client. Une fois que la connexion a été établie par le serveur, le serveur Proxy continue de gérer le flux TCP à destination et en provenance du client.
 
-<p><code>CONNECT</code> est une méthode "saut-par-saut".</p>
+`CONNECT` est une méthode "saut-par-saut".
 
 <table class="properties">
- <tbody>
-  <tr>
-   <th scope="row">La requête a un corps</th>
-   <td>Oui</td>
-  </tr>
-  <tr>
-   <th scope="row">Une réponse de succès a un corps</th>
-   <td>Oui</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Sûre")}}</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Idempotente")}}</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">{{Glossary("Peut être mise en cache")}}</th>
-   <td>Non</td>
-  </tr>
-  <tr>
-   <th scope="row">Autorisée dans les  <a href="https://developer.mozilla.org/fr/docs/Web/Guide/HTML/Formulaires">formulaires HTML</a></th>
-   <td>Non</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th scope="row">La requête a un corps</th>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <th scope="row">Une réponse de succès a un corps</th>
+      <td>Oui</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Sûre")}}</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Idempotente")}}</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Peut être mise en cache")}}</th>
+      <td>Non</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        Autorisée dans les 
+        <a
+          href="https://developer.mozilla.org/fr/docs/Web/Guide/HTML/Formulaires"
+          >formulaires HTML</a
+        >
+      </th>
+      <td>Non</td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">CONNECT www.example.com:443 HTTP/1.1
-</pre>
+    CONNECT www.example.com:443 HTTP/1.1
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<p>Certains serveurs proxy pourraient avoir besoin d'une autorisation pour créer un tunnel. Voir aussi l'en-tête {{HTTPHeader("Proxy-Authorization")}}.</p>
+Certains serveurs proxy pourraient avoir besoin d'une autorisation pour créer un tunnel. Voir aussi l'en-tête {{HTTPHeader("Proxy-Authorization")}}.
 
-<pre>CONNECT server.example.com:80 HTTP/1.1
-Host: server.example.com:80
-Proxy-Authorization: basic aGVsbG86d29ybGQ=</pre>
+    CONNECT server.example.com:80 HTTP/1.1
+    Host: server.example.com:80
+    Proxy-Authorization: basic aGVsbG86d29ybGQ=
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Titre</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "CONNECT", "4.3.6")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                    | Titre                                                         |
+| ------------------------------------------------ | ------------------------------------------------------------- |
+| {{RFC("7231", "CONNECT", "4.3.6")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("http/methods", "CONNECT")}}</p>
+{{Compat("http/methods", "CONNECT")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{Glossary("Proxy server")}}</li>
- <li>{{HTTPHeader("Proxy-Authorization")}}</li>
-</ul>
+- {{Glossary("Proxy server")}}
+- {{HTTPHeader("Proxy-Authorization")}}

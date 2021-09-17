@@ -8,50 +8,39 @@ tags:
   - Reference
 translation_of: Web/HTTP/Status/401
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Le code de statut de réponse HTTP <strong><code>401 Unauthorized</code></strong> indique que la requête n'a pas été effectuée car il manque des informations d'authentification valides pour la ressource visée.</p>
+Le code de statut de réponse HTTP **`401 Unauthorized`** indique que la requête n'a pas été effectuée car il manque des informations d'authentification valides pour la ressource visée.
 
-<p>Ce statut est envoyé avec un en-tête {{HTTPHeader("WWW-Authenticate")}} qui décrit la méthode pour s'authentifier correctement.</p>
+Ce statut est envoyé avec un en-tête {{HTTPHeader("WWW-Authenticate")}} qui décrit la méthode pour s'authentifier correctement.
 
-<p>Ce statut est similaire à {{HTTPStatus("403")}} mais, dans ce cas, une authentification est possible.</p>
+Ce statut est similaire à {{HTTPStatus("403")}} mais, dans ce cas, une authentification est possible.
 
-<h2 id="Statut">Statut</h2>
+## Statut
 
-<pre class="syntaxbox">401 Unauthorized</pre>
+    401 Unauthorized
 
-<h2 id="Exemple_de_réponse">Exemple de réponse</h2>
+## Exemple de réponse
 
-<pre>HTTP/1.1 401 Unauthorized
-Date: Wed, 21 Oct 2015 07:28:00 GMT
-WWW-Authenticate: Basic realm="Access to staging site"</pre>
+    HTTP/1.1 401 Unauthorized
+    Date: Wed, 21 Oct 2015 07:28:00 GMT
+    WWW-Authenticate: Basic realm="Access to staging site"
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Titre</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7235", "401 Unauthorized" , "3.1")}}</td>
-   <td>HTTP/1.1: Authentication</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                            | Titre                    |
+| -------------------------------------------------------- | ------------------------ |
+| {{RFC("7235", "401 Unauthorized" , "3.1")}} | HTTP/1.1: Authentication |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("http/status", "401")}}</p>
+{{Compat("http/status", "401")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/HTTP/Authentication">La gestion de l'authentification en HTTP</a></li>
- <li>{{HTTPHeader("WWW-Authenticate")}}</li>
- <li>{{HTTPHeader("Authorization")}}</li>
- <li>{{HTTPHeader("Proxy-Authorization")}}</li>
- <li>{{HTTPHeader("Proxy-Authenticate")}}</li>
- <li>{{HTTPStatus("403")}}, {{HTTPStatus("407")}}</li>
-</ul>
+- [La gestion de l'authentification en HTTP](/fr/docs/Web/HTTP/Authentication)
+- {{HTTPHeader("WWW-Authenticate")}}
+- {{HTTPHeader("Authorization")}}
+- {{HTTPHeader("Proxy-Authorization")}}
+- {{HTTPHeader("Proxy-Authenticate")}}
+- {{HTTPStatus("403")}}, {{HTTPStatus("407")}}

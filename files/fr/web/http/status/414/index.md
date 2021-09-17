@@ -8,39 +8,26 @@ tags:
   - Reference
 translation_of: Web/HTTP/Status/414
 ---
-<div>{{HTTPSidebar}}</div>
+{{HTTPSidebar}}
 
-<p>Le code de statut de réponse HTTP <code><strong>414 URI Too Long</strong></code> indique que l'URI demandé par le client est plus longue que ce que le serveur est disposé à interpréter.</p>
+Le code de statut de réponse HTTP **`414 URI Too Long`** indique que l'URI demandé par le client est plus longue que ce que le serveur est disposé à interpréter.
 
-<p>Il existe quelques rares cas de figure pour lesquels cela peut se produire :</p>
+Il existe quelques rares cas de figure pour lesquels cela peut se produire :
 
-<ul>
- <li>un client a mal converti une requête {{HTTPMethod("POST")}} vers une requête {{HTTPMethod("GET")}} qui contient de nombreuses informations,</li>
- <li>un client est descendu dans une boucle de redirection (par exemple, un URI de redirection qui pointe vers un suffixe de lui-même),</li>
- <li>un serveur est sous le coup d'une attaque par un client qui tente d'exploiter des failles de sécurité potentielles.</li>
-</ul>
+- un client a mal converti une requête {{HTTPMethod("POST")}} vers une requête {{HTTPMethod("GET")}} qui contient de nombreuses informations,
+- un client est descendu dans une boucle de redirection (par exemple, un URI de redirection qui pointe vers un suffixe de lui-même),
+- un serveur est sous le coup d'une attaque par un client qui tente d'exploiter des failles de sécurité potentielles.
 
-<h2 id="Statut">Statut</h2>
+## Statut
 
-<pre class="syntaxbox">414 URI Too Long</pre>
+    414 URI Too Long
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Titre</th>
-  </tr>
-  <tr>
-   <td>{{RFC("7231", "414 URI Too Long" , "6.5.12")}}</td>
-   <td>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                | Titre                                                         |
+| ------------------------------------------------------------ | ------------------------------------------------------------- |
+| {{RFC("7231", "414 URI Too Long" , "6.5.12")}} | Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content |
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{Glossary("URI")}}</li>
-</ul>
+- {{Glossary("URI")}}
