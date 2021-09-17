@@ -2,121 +2,154 @@
 title: getter
 slug: Web/JavaScript/Reference/Functions/get
 tags:
-  - 자바스크립트
-  - 함수
+  - ECMAScript 2015
+  - ECMAScript 5
+  - Functions
+  - JavaScript
+  - Language feature
+  - Reference
+browser-compat: javascript.functions.get
 translation_of: Web/JavaScript/Reference/Functions/get
 ---
-<div>{{jsSidebar("Functions")}}</div>
+{{jsSidebar("Functions")}}
 
-<p><strong><code>get</code></strong> 구문은 객체의 프로퍼티를 그 프로퍼티를 가져올 때 호출되는 함수로 바인딩합니다.</p>
+**`get`** 구문은 객체의 속성 접근 시 호출할 함수를 바인딩합니다.
 
-<p>{{EmbedInteractiveExample("pages/js/functions-getter.html")}}</p>
+{{EmbedInteractiveExample("pages/js/functions-getter.html")}}
 
+## 구문
 
+```js
+{get prop() { ... } }
+{get [expression]() { ... } }
+```
 
-<h2 id="구문">구문</h2>
+### 매개변수
 
-<pre class="syntaxbox">{get <em>prop</em>() { ... } } {get <em>[expression]</em>() { ... } }</pre>
+- `prop`
+  - : 주어진 함수를 바인딩할 속성 이름.
+- `expression`
+  - : ECMAScript 2015 이후, 주어진 함수를 바인딩할 속성 이름을 구하는 표현식을 사용할 수도 있습니다.
 
-<h3 id="매개변수">매개변수</h3>
+## 설명
 
-<dl>
- <dt><code>prop</code></dt>
- <dd>주어진 함수를 바인딩할 프로퍼티의 이름입니다.</dd>
- <dt>expression</dt>
- <dd>ECMAScript 2015가 도입되면서, 함수의 이름을 계산하기 위해 표현식을 사용할 수 있습니다.</dd>
-</dl>
+때로는 동적으로 계산한 값을 반환하는 속성이 필요하거나, 명시적인 함수 호출 없이도 객체의 내부 변수 상태를 반영하는 값을 나타내고 싶은 경우가 있습니다. JavaScript에서는 이런 경우 사용할 수 있도록 접근자(_getter_)라는 기능을 제공합니다.
 
-<h2 id="설명">설명</h2>
+어떤 속성에 접근자를 바인딩하는 동시에, 해당 속성이 값도 가지도록 할 수는 없습니다. 그러나 접근자와 설정자(_setter_)를 함께 사용해서, 접근과 할당 모두 되는 '유사 속성'을 만들 수는 있습니다.
 
-<p>어떤 프로퍼티에 접근할 때마다 그 값을 계산하도록 해야 하거나, 내부 변수의 상태를 명시적인 함수 호출 없이 보여주고 싶을 때, JavaScript의 <em>getter</em>를 이용할 수 있습니다. getter가 바인딩된 프로퍼티는 동시에 실제 값을 가질 수는 없지만, getter와 setter를 동시에 바인딩해 일종의 유사 프로퍼티(pseudo-property)를 만들 수는 있습니다.</p>
+`get` 구문을 이용할 때는 다음 사항을 주의하세요.
 
-<p><code>get</code> 구문을 이용할 때는 다음을 유의하세요.</p>
+- 접근자의 식별자는 숫자나 문자열일 수 있습니다.
+- 접근자 함수는 매개변수를 가질 수 없습니다.
+- 객체 리터럴에서, 같은 속성 키에 다수의 접근자를 바인딩할 수 없습니다.
+  ```js example-bad
+  {
+    get x() { }, get x() { }
+  }
+  ```
+- 객체 리터럴에서, 접근자는 데이터 속성과 같은 키를 사용할 수 없습니다.
+  ```js example-bad
+  {
+    x: ..., get x() { }
+  }
+  ```
 
-<div>
-<ul>
- <li>숫자나 문자열로 구성된 식별자를 이용할 수 있습니다.</li>
- <li>getter는 절대로 매개변수를 가져서는 안 됩니다. (<a class="external" href="http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/" rel="external nofollow">Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments</a> 를 참조하세요.)</li>
- <li>하나의 객체 리터럴에 또다른 getter나 데이터 바인딩은 불가능합니다. (<code>{ get x() { }, get x() { } }</code> 나 <code>{ x: ..., get x() { } }</code> 는 사용할 수 없습니다.)</li>
-</ul>
-</div>
+## 예제
 
-<p>getter는 <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code> 연산자를 이용해 삭제할 수 있습니다.</p>
+### 객체 초기자에서 새로운 객체의 접근자 정의하기
 
-<h2 id="예">예</h2>
+다음 예제는 객체 `obj`에 유사 속성 `latest`를 생성합니다. `latest`는 배열 `log`의 마지막 요소를 반환합니다.
 
-<h3 id="getter를_객체_초기자에서_정의하기">getter를 객체 초기자에서 정의하기</h3>
-
-<p>객체 <code>obj</code>에 유사 프로퍼티 <code>latest</code>를 생성합니다. <code>latest</code>는 배열 <code>log</code>의 마지막 요소를 반환합니다.</p>
-
-<pre><code>var obj = {
+```js
+const obj = {
   log: ['example','test'],
   get latest() {
-    if (this.log.length == 0) return undefined;
+    if (this.log.length === 0) return undefined;
     return this.log[this.log.length - 1];
   }
 }
-console.log(obj.latest); // "test".</code></pre>
+console.log(obj.latest); // "test"
+```
 
-<p><code>latest</code>에 어떤 값을 할당하려고 시도해도 그 값이 바뀌지 않는다는 점을 유의하세요.</p>
+`latest`에 다른 값을 할당하려 해도 아무 변화도 없을 것입니다.
 
-<h3 id="delete연산자를_이용해_getter_삭제하기"><code>delete</code>연산자를 이용해 getter 삭제하기</h3>
+### `delete` 연산자로 접근자 제거하기
 
-<p>getter를 삭제하고 싶다면, <code><a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code>를 이용하면 됩니다.</p>
+접근자를 삭제하려면 간단히 {{jsxref("Operators/delete", "delete")}} 연산자를 사용하세요.
 
-<pre class="brush: js">delete obj.latest;
-</pre>
+```js
+delete obj.latest;
+```
 
-<h3 id="defineProperty를_이용해_이미_존재하는_객체에_getter_정의하기"><code>defineProperty</code>를 이용해 이미 존재하는 객체에 getter 정의하기</h3>
+### `defineProperty`를 이용해 이미 존재하는 객체에 접근자 정의하기
 
-<p>이미 존재하는 객체에 getter를 추가하고자 한다면, {{jsxref("Object.defineProperty()")}}를 이용하면 됩니다.</p>
+이미 존재하는 객체에 접근자를 추가하려면 {{jsxref("Object.defineProperty()")}}를 사용하세요.
 
-<pre class="brush: js">var o = { a:0 }
+```js
+const o = {a: 0};
 
-Object.defineProperty(o, "b", { get: function () { return this.a + 1; } });
+Object.defineProperty(o, 'b', { get: function() { return this.a + 1; } });
 
-console.log(o.b) // getter를 실행합니다. a + 1 (= 1)이 반환됩니다.</pre>
+console.log(o.b) // 접근자 실행, a + 1 반환 (0 + 1 = 1)
+```
 
-<h3 id="계산된_(computed)_프로퍼티_이름">계산된 (computed) 프로퍼티 이름</h3>
+### 계산된 속성 이름 사용하기
 
-<pre class="brush: js">var expr = "foo";
+```js
+const expr = 'foo';
 
-var obj = {
-  get [expr]() { return "bar"; }
+const obj = {
+  get [expr]() { return 'bar'; }
 };
 
-console.log(obj.foo); // "bar"</pre>
+console.log(obj.foo); // "bar"
+```
 
-<h3 id="똑똑한(Smart)_스스로_덮어쓰는(self-overwriting)_느긋한(lazy)_getter">똑똑한(Smart) / 스스로 덮어쓰는(self-overwriting) / 느긋한(lazy) getter</h3>
+### 정적 접근자 정의하기
 
-<p>Getter는 객체에 프로퍼티를 정의할 수 있도록 하지만, 그 프로퍼티에 접근하기 전까지는 값을 계산하지 않습니다. getter는 값을 계산하는 비용을 실제 값이 필요할 때까지 미루며, 그 값이 필요없다면 계산 비용도 들지 않습니다.</p>
+```js
+class MyConstants {
+  static get foo() {
+    return 'foo';
+  }
+}
 
-<p>또다른 최적화 기법으로는 계산 미루기와 함께 프로퍼티 값을 나중에 접근하기 위해 캐싱하는 것이 있습니다. 이를<strong> 똑똑한(smart), 혹은 메모화된(<a href="https://en.wikipedia.org/wiki/Memoization">memoized</a>) getter</strong>라고 부릅니다. 값은 getter가 호출될 때 처음 계산되며, 캐싱됩니다. 이후의 호출에는 다시 계산하지 않고 이 캐시값을 반환합니다. 이는 다음과 같은 상황에 유용합니다.</p>
+console.log(MyConstants.foo); // 'foo'
+MyConstants.foo = 'bar';
+console.log(MyConstants.foo); // 'foo', 정적 접근자의 값 변경 불가
+```
 
-<ul>
- <li>값의 계산 비용이 큰 경우. (RAM이나 CPU 시간을 많이 소모하거나, worker thread를 생성하거나, 원격 파일을 불러오는 등)</li>
- <li>값이 당장은 필요하지 않지만 나중에 사용되어야 할 경우, 혹은 절대로 이용되지 않을 수도 있는 경우.</li>
- <li>값이 여러 차례 이용되지만 절대 변경되지 않아 매번 다시 계산할 필요가 없는 경우, 혹은 다시 계산되어서는 안 되는 경우.</li>
-</ul>
+### 똑똑한 / 느긋한 접근자
 
-<p>똑똑한 getter는 값을 다시 계산하지 않기 때문에, 값의 변경이 예상되는 경우에는 똑똑한 getter를 이용해서는 안 됩니다.</p>
+접근자를 사용하면 객체에 속성을 **정의**하되, 접근하기 전에는 속성의 값을 **계산**하지 않을 수 있습니다. 접근자는 값이 실제로 필요한 상황이 오기 전까지 계산 비용을 미루는 것입니다. 사용하지 않으면 비용을 지불할 일도 없습니다.
 
-<p>다음 예제에서, 객체는 원래 프로퍼티로 getter를 가집니다. 프로퍼티를 가져올 때, getter는 삭제되며 대신 명시적인 값이 저장됩니다. 최종적으로 값을 반환합니다.</p>
+속성 값의 계산을 느긋(_lazy_)하게 만들거나 미루고, 추가 접근에 사용할 수 있도록 캐시에 저장하는 추가 최적화 기법은 **똑똑한(_smart_) 또는 메모화([메모이제이션](https://ko.wikipedia.org/wiki/%EB%A9%94%EB%AA%A8%EC%9D%B4%EC%A0%9C%EC%9D%B4%EC%85%98)) 접근자**라고 합니다. 똑똑한 접근자 속성의 값은 접근자를 처음 호출할 때 계산하는 동시에 캐시에 저장됩니다. 덕분에 속성에 추가 접근 시 캐시에서 값을 즉시 반환하므로 값을 다시 계산하는 수고를 피할 수 있습니다. 똑똑한 접근자는 다음과 같은 상황에 유용합니다.
 
-<pre class="brush: js">get notifier() {
+- 값의 계산 비용이 큰 경우. (RAM이나 CPU 시간을 많이 소모하거나, 워커 스레드를 생성하거나, 원격 파일을 불러오는 등)
+- 값이 지금 당장 필요하지 않은 경우. 나중에 사용할 수도 있고, 일부 상황에선 아예 사용하지 않을 수 있는 경우입니다.
+- 절대 바뀌지 않는 값이거나 다시 계산해서는 안 되는 값을 여러 번 사용하는 경우.
+
+> **참고:** 달리 말하자면, 변화할 수 있는 값에 똑똑한 접근자를 사용해서는 안됩니다. 값이 바뀌어야 하는 상황에서도 접근자의 값은 항상 동일할 것이기 때문입니다.
+>
+> 모든 접근자가 처음부터 '느긋'하며 '메모화'되는 것은 아닙니다. 이런 동작이 필요하면 직접 구현해야 합니다.
+
+다음 예제의 접근자 속성은 어느 객체의 자체 속성으로 존재합니다. 이 속성에 접근하는 순간, 접근자는 스스로 자신을 객체에서 제거하는 동시에 같은 이름의 속성을 다시 추가하지만, 이때는 접근자가 아니라 데이터 속성으로 추가합니다. 마지막으로 그 속성의 값을 반환합니다.
+
+```js
+get notifier() {
   delete this.notifier;
   return this.notifier = document.getElementById("bookmarked-notification-anchor");
-},</pre>
+},
+```
 
-<p>Firefox 코드의 경우,  <code><a href="/en-US/docs/Mozilla/JavaScript_code_modules/XPCOMUtils.jsm#defineLazyGetter()">defineLazyGetter()</a></code> 함수를 정의하고 있는 XPCOMUtils.jsm 모듈을 참조하세요.</p>
+### `get` Vs. `defineProperty`
 
-<h3 id="get_Vs._defineProperty"><code>get</code> Vs. <code>defineProperty</code></h3>
+`get` 키워드와 {{jsxref("Object.defineProperty()")}}는 비슷한 결과를 내지만, {{jsxref("classes", "클래스", "", 1)}}에 사용할 경우 미묘한 차이가 생깁니다.
 
-<p>While using the <code>get</code> 키워드와 {{jsxref("Object.defineProperty()")}}를 사용하면 비슷한 결과를 얻지만, {{jsxref("classes")}}에서 사용되는 두 가지 경우에는 미묘한 차이가 있습니다.</p>
+`get`을 사용할 경우, 해당 속성은 인스턴스의 프로토타입에 정의됩니다. 그러나 {{jsxref("Object.defineProperty()")}}를 사용할 경우 속성을 인스턴스 자체에 직접 정의하게 됩니다.
 
-<p>get을 사용할 때 속성은 {{jsxref("Object.defineProperty()")}} 를 사용하는 동안 객체의 프로토 타입에 정의 될 것이고, 속성은 그것이 적용되는 인스턴스에 정의 될 것입니다.</p>
-
-<pre class="brush: js"><code>class Example {
+```js
+class Example {
   get hello() {
     return 'world';
   }
@@ -125,53 +158,31 @@ console.log(obj.foo); // "bar"</pre>
 const obj = new Example();
 console.log(obj.hello);
 // "world"
+
 console.log(Object.getOwnPropertyDescriptor(obj, 'hello'));
 // undefined
-console.log(Object.getOwnPropertyDescriptor(Object.getPrototypeOf(obj), 'hello'));
-// { configurable: true, enumerable: false, get: function get hello() { return 'world'; }, set: undefined }</code></pre>
 
-<p> </p>
+console.log(
+  Object.getOwnPropertyDescriptor(
+    Object.getPrototypeOf(obj), 'hello'
+  )
+);
+// { configurable: true, enumerable: false, get: function get hello() { return 'world'; }, set: undefined }
+```
 
-<h2 id="스펙">스펙</h2>
+## 명세
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">스펙</th>
-   <th scope="col">상태</th>
-   <th scope="col">설명</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-11.1.5', 'Object Initializer')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td>최초로 정의되었습니다.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-method-definitions', 'Method definitions')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>계산된 프로퍼티 이름이 추가되었습니다.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-method-definitions', 'Method definitions')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specification}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## 브라우저 호환성
 
-<p>{{Compat("javascript.functions.get")}}</p>
+{{Compat}}
 
-<p> </p>
+## 같이 보기
 
-<h2 id="참조">참조</h2>
-
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/set">setter</a></li>
- <li>{{jsxref("Operators/delete", "delete")}}</li>
- <li>{{jsxref("Object.defineProperty()")}}</li>
- <li>{{jsxref("Object.defineGetter", "__defineGetter__")}}</li>
- <li>{{jsxref("Object.defineSetter", "__defineSetter__")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">Defining Getters and Setters</a> in JavaScript Guide</li>
-</ul>
+- [설정자](/ko/docs/Web/JavaScript/Reference/Functions/set)
+- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Object.defineGetter", "__defineGetter__")}}
+- {{jsxref("Object.defineSetter", "__defineSetter__")}}
+- JavaScript 안내서의 [접근자와 설정자 정의하기](/ko/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)
