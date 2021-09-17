@@ -51,13 +51,13 @@ arguments[2] // 3 番目の引数
 var args = [].slice.call(arguments);
 </pre>
 
-<p><code>arguments</code> に限らず、配列様オブジェクトは ES2015 の {{jsxref("Array.from()")}} メソッドや<a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Operators/Spread_operator">スプレッド構文</a>によって、本当の配列に変換することができます。</p>
+<p><code>arguments</code> に限らず、配列様オブジェクトは ES2015 の {{jsxref("Array.from()")}} メソッドや<a href="/ja/docs/Web/JavaScript/Reference/Operators/Spread_operator">スプレッド構文</a>によって、本当の配列に変換することができます。</p>
 
 <pre class="brush: js notranslate">var args = Array.from(arguments);
 var args = [...arguments];
 </pre>
 
-<p><code>arguments</code> オブジェクトは、あらかじめ定義された引数の数よりも多くの引数で呼び出される関数に便利です。このテクニックは <code><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/min">Math.min()</a></code> などの 可変数の引数を受け入れる関数に便利です。この例の関数は、任意の数の文字列が引数で、引数の中で一番長い文字列を返します。</p>
+<p><code>arguments</code> オブジェクトは、あらかじめ定義された引数の数よりも多くの引数で呼び出される関数に便利です。このテクニックは <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/min">Math.min()</a></code> などの 可変数の引数を受け入れる関数に便利です。この例の関数は、任意の数の文字列が引数で、引数の中で一番長い文字列を返します。</p>
 
 <pre class="brush: js notranslate">function longestString() {
   var longest = '';
@@ -152,7 +152,7 @@ foo(1, 2, 3); // [1, 2, 3]
 <p>厳格モードでは、 <code>arguments</code> オブジェクトは関数に残余引数、デフォルト引数、分割引数が渡されたかどうかにかかわらず同じ動作をします。すなわち、関数の本体で変数に新しい値を代入しても、 <code>arguments</code> オブジェクトには影響しません。また、 <code>arguments</code> オブジェクトに新しい変数を代入しても、変数の値には影響ありません。</p>
 
 <div class="blockIndicator note">
-<p><strong>注:</strong> <code>"use strict";</code> ディレクティブを、残余引数、デフォルト引数、分割引数を受け付ける関数の本体に書くことはできません。そうすると、<a href="/en-US/docs/Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params">構文エラー</a>が発生します。</p>
+<p><strong>注:</strong> <code>"use strict";</code> ディレクティブを、残余引数、デフォルト引数、分割引数を受け付ける関数の本体に書くことはできません。そうすると、<a href="/ja/docs/Web/JavaScript/Reference/Errors/Strict_Non_Simple_Params">構文エラー</a>が発生します。</p>
 </div>
 
 <p>厳格モードでない関数で、単純な引数のみを渡した場合 (すなわち、残余引数、デフォルト引数、分割引数ではない場合)、関数の本体で変数の値を新しい値にすると、 <code>arguments</code> オブジェクトと同期します。</p>
