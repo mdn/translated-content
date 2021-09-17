@@ -1,116 +1,139 @@
 ---
 title: setter
 slug: Web/JavaScript/Reference/Functions/set
-translation_of: Web/JavaScript/Reference/Functions/set
+tags:
+  - ECMAScript 5
+  - Functions
+  - JavaScript
+  - Language feature
+  - Reference
 browser-compat: javascript.functions.set
+translation_of: Web/JavaScript/Reference/Functions/set
 ---
-<div>{{jsSidebar("Functions")}}</div>
+{{jsSidebar("Functions")}}
 
-<p><strong><code>set</code></strong> syntax는 어떤 객체의 속성에 이 속성을 설정하려고 할 때 호출되는 함수를 바인드한다.</p>
+**`set`** 구문은 객체의 속성에 할당을 시도할 때 호출할 함수를 바인딩합니다.
 
-<h2 id="구문">구문</h2>
+{{EmbedInteractiveExample("pages/js/functions-setter.html")}}
 
-<pre class="syntaxbox">{set <em>prop</em>(<em>val</em>) { . . . }}
-{set [expression](<em>val</em>) { . . . }}</pre>
+## 구문
 
-<h3 id="매개변수">매개변수</h3>
+```js
+{set prop(val) { . . . }}
+{set [expression](val) { . . . }}
+```
 
-<dl>
- <dt><code>prop</code></dt>
- <dd>주어진 함수를 바인드할 속성의 이름</dd>
-</dl>
+### 매개변수
 
-<dl>
- <dt><code>val</code></dt>
- <dd><code>prop에 설정될 값을 가지고 있는 변수의 별명.</code></dd>
- <dt>expression</dt>
- <dd>ECMAScript 6부터는, 주어진 함수에 바인드 되는 속성 이름은 계산(computed)을 통해 얻을 수 있고 이것을 위한 expressions을 사용할 수 있다.</dd>
-</dl>
+- `prop`
+  - : 주어진 함수를 바인딩할 속성 이름.
+- `val`
+  - : `prop`에 할당을 시도한 값.
+- `expression`
+  - : ECMAScript 2015 이후, 주어진 함수를 바인딩할 속성 이름을 구하는 표현식을 사용할 수도 있습니다.
 
-<h2 id="설명">설명</h2>
+## 설명
 
-<p> 자바스크립트에서, setter는 특정한 속성에 값이 변경되어 질 때마다 함수를 실행하는데 사용될 수 있다. Setter는 유사(pseudo)-property 타입을 생성하는 getter와 함께 가장 자주 사용된다. 실제 값을 가지는 property와 이  property의 setter 를  동시에 갖는 것은 불가능하다.</p>
+JavaScript의 설정자(_setter_)를 사용하면 지정한 속성 값의 변경을 시도할 때마다 함수를 호출할 수 있습니다. 설정자는 보통 접근자(_getter_)와 함께 '유사 속성'을 정의할 때 사용합니다. 어떤 속성에 설정자를 바인딩하는 동시에, 해당 속성이 값도 가지도록 할 수는 없습니다.
 
-<p><code>set</code> 문법을 사용할 때 다음을 주의한다:</p>
+`set` 구문을 이용할 때는 다음 사항을 주의하세요.
 
-<div>
-<ul>
- <li>숫자혹은 문자로된 식별자를 가질 수 있다;</li>
- <li>한 개의 파라메터만 가질 수 있다.(더 자세한 정보는 <a class="external" href="http://whereswalden.com/2010/08/22/incompatible-es5-change-literal-getter-and-setter-functions-must-now-have-exactly-zero-or-one-arguments/" rel="external nofollow">Incompatible ES5 change: literal getter and setter functions must now have exactly zero or one arguments</a>를 본다);</li>
- <li>오브젝트 리터럴에 동일한 property에 대한  다른 set나  데이터 항목이 올 수 없다.<br>
-  ( <code>{ set x(v) { }, set x(v) { } }</code> 그리고 <code>{ x: ..., set x(v) { } }</code> 는 허용되지 않는다.)</li>
-</ul>
-</div>
+- 설정자의 식별자는 숫자나 문자열일 수 있습니다.
+- 설정자 함수는 최대 한 개의 매개변수만 가질 수 있습니다.
+- 객체 리터럴에서, 같은 속성 키에 다수의 설정자를 바인딩할 수 없습니다.
+  ```js example-bad
+  {
+    set x() { }, set x() { }
+  }
+  ```
+- 객체 리터럴에서, 설정자는 데이터 속성과 같은 키를 사용할 수 없습니다.
+  ```js example-bad
+  {
+    x: ..., set x() { }
+  }
+  ```
 
-<p>setter는   <a href="/en-US/docs/Web/JavaScript/Reference/Operators/delete" title="en-US/docs/JavaScript/Reference/Operators/Special/delete"><code>delete</code></a> operator를 사용하여 제거할 수 있다.</p>
+## 예제
 
-<h2 id="예">예</h2>
+### 객체 초기자에서 새로운 객체의 설정자 정의하기
 
-<h3 id="새로운_객체의_setter를_객체의_initializer에서_정의하기">새로운 객체의 setter를 객체의 initializer에서 정의하기 </h3>
+다음 예제는 객체 `language`에 유사 속성 `current`를 생성합니다. `current`에 값을 할당하면, 해당 값을 `log` 속성에 저장합니다.
 
-<p>다음은 객체 o의 유사 프로러티(pseudo-property )인 <code>current를 정의한다. 이것은 값이 설정될 때, 이 값으로 로그를 갱신 한다.</code></p>
-
-<pre class="brush: js">var o = {
-  set current (str) {
-    this.log[this.log.length] = str;
+```js
+const language = {
+  set current(name) {
+    this.log.push(name);
   },
   log: []
 }
-</pre>
 
-<p>다음 사항에 주의한다. current는 정의 되지 않았고 이것에 접근하는 모든 시도는 undefined 값을 얻게될 것이다.</p>
+language.current = 'EN';
+console.log(language.log); // ['EN']
 
-<h3 id="delete_operator로_setter를_제거하기"><code>delete</code> operator로 setter를 제거하기</h3>
+language.current = 'FA';
+console.log(language.log); // ['EN', 'FA']
+```
 
-<p>만약 setter를 제거하기 원한다면, 그냥 그것을 <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a></code> 하면 된다:</p>
+`current`의 값은 정의하지 않았으므로, 할당이 아니라 접근을 시도하면 `undefined`만 반환하는 것에 주의하세요.
 
-<pre class="brush: js">delete o.current;
-</pre>
+### `delete` 연산자로 설정자 제거하기
 
-<h3 id="defineProperty를_사용하여_이미_존재하는_객체에_setter를_정의하기"><code>defineProperty를 사용하여 이미 존재하는 객체에 </code>setter를 정의하기</h3>
+접근자를 삭제하려면 간단히 {{jsxref("Operators/delete", "delete")}} 연산자를 사용하세요.
 
-<p>setter를 이미 존재하는 object에 나중에 언제라도 추가하기 위해서, {{jsxref("Object.defineProperty()")}}를 사용한다.</p>
+```js
+delete language.current;
+```
 
-<pre class="brush: js">var o = { a:0 };
+### `defineProperty`를 이용해 이미 존재하는 객체에 설정자 정의하기
 
-Object.defineProperty(o, "b", { set: function (x) { this.a = x / 2; } });
+이미 존재하는 객체에 설정자를 추가하려면 {{jsxref("Object.defineProperty()")}}를 사용하세요.
 
-o.b = 10; // Runs the setter, which assigns 10 / 2 (5) to the 'a' property
-console.log(o.a) // 5</pre>
+```js
+const o = {a: 0};
 
-<h3 id="연산된(computed)_property_name_사용하기">연산된(computed) property name 사용하기</h3>
+Object.defineProperty(o, 'b', {
+  set: function(x) { this.a = x / 2; }
+});
 
-<div class="note">
-<p><strong>Note:</strong> 계산된(Computed) properties는 실험적인 기술이고,  ECMAScript 6 proposal의 부분이다. 아직 많은 브라우저가 지원하지 않는다. 이것 때문에 지원하지 않는 환경에서는  문법 오류가 발생할 것이다.</p>
-</div>
+o.b = 10;
+// 설정자 실행, a 속성에 10 / 2 = 5 할당
 
-<pre class="brush: js">var expr = "foo";
+console.log(o.a)
+// 5
+```
 
-var obj = {
-  baz: "bar",
+### 계산된 속성 이름 사용하기
+
+```js
+const expr = 'foo';
+
+const obj = {
+  baz: 'bar',
   set [expr](v) { this.baz = v; }
 };
 
-console.log(obj.baz); // "bar"
-obj.foo = "baz";      // run the setter
-console.log(obj.baz); // "baz"
-</pre>
+console.log(obj.baz);
+//  "bar"
 
-<h2 id="specifications">명세</h2>
+obj.foo = 'baz';
+//  run the setter
 
-<p>{{Specifications}}</p>
+console.log(obj.baz);
+//  "baz"
+```
+## 명세
 
-<h2 id="browser_compatibility">브라우저 호환성</h2>
+{{Specifications}}
 
-<p>{{Compat}}</p>
+## 브라우저 호환성
 
-<h2 id="See_also">See also</h2>
+{{Compat}}
 
-<ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Functions/get">getter</a></li>
- <li>{{jsxref("Operators/delete", "delete")}}</li>
- <li>{{jsxref("Object.defineProperty()")}}</li>
- <li>{{jsxref("Object.defineGetter", "__defineGetter__")}}</li>
- <li>{{jsxref("Object.defineSetter", "__defineSetter__")}}</li>
- <li><a href="/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters">Defining Getters and Setters</a> in JavaScript Guide</li>
-</ul>
+## See also
+
+- [접근자](/ko/docs/Web/JavaScript/Reference/Functions/get)
+- {{jsxref("Operators/delete", "delete")}}
+- {{jsxref("Object.defineProperty()")}}
+- {{jsxref("Object.defineGetter", "__defineGetter__")}}
+- {{jsxref("Object.defineSetter", "__defineSetter__")}}
+- JavaScript 안내서의 [접근자와 설정자 정의하기](/ko/docs/Web/JavaScript/Guide/Working_with_Objects#Defining_getters_and_setters)
