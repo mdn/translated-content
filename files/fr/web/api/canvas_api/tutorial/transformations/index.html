@@ -39,7 +39,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Transformations
 
 <p>Cet exemple tente d'illustrer comment fonctionne la pile d'états de dessin en dessinant un ensemble de rectangles consécutifs.</p>
 
-<pre class="brush: js; highlight:[5,10,15,18]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   ctx.fillRect(0, 0, 150, 150);   // Dessine un rectangle avec les réglages par défaut
@@ -128,7 +128,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Transformations
 <p><strong>Rappel :</strong> Les angles sont en radians, pas en degrés. Pour convertir en degrés, nous utilisons : <code>radians = (Math.PI/180)*degrees</code>.</p>
 </div>
 
-<pre class="brush: js; highlight:[9, 23]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // rectangles de gauche, rotation depuis l'origine du canevas
@@ -183,7 +183,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Transformations
 
 <p>Dans ce dernier exemple, nous allons dessiner des  formes avec différents facteurs d'échelle.</p>
 
-<pre class="brush: js; highlight:[6,11]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   // dessine un rectangle simple, mais le met à l'échelle.
@@ -240,7 +240,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Transformations
 
 <h3 id="Exemple_pour_transform_et_setTransform">Exemple pour <code>transform</code> et <code>setTransform</code></h3>
 
-<pre class="brush: js; highlight:[12,15]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   var sin = Math.sin(Math.PI / 6);

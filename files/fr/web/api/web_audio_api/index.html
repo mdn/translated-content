@@ -182,7 +182,7 @@ translation_of: Web/API/Web_Audio_API
 
 <p>Les lignes qui concernent la Web Audio API sont surlignées; si vous voulez en savoir davantage sur les différentes méthodes, consultez la documentation.</p>
 
-<pre class="brush: js; highlight:[1,2,9,10,11,12,36,37,38,39,40,41,62,63,72,114,115,121,123,124,125,147,151]">var contexteAudio = new (window.AudioContext || window.webkitAudioContext)(); // définition du contexte audio
+<pre class="brush: js">var contexteAudio = new (window.AudioContext || window.webkitAudioContext)(); // définition du contexte audio
 // les navigateurs avec un moteur Webkit/blink demandent un préfixe
 
 var voixSelectionnee = document.getElementById("voice"); // case à cocher pour la sélection d'effets de voix

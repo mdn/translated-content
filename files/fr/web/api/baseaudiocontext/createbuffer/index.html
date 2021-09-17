@@ -64,7 +64,7 @@ var tampon = ctxAudio.createBuffer(1, 22050, 22050);</pre>
 
 <p>Examinons maintenant un exemple de <code>createBuffer()</code> plus complexe, dans lequel nous créons un tampon de deux secondes, le remplissons de bruit blanc, puis le reproduisons via {{domxref("AudioBufferSourceNode")}}. Le commentaire devrait clairement faire comprendre ce qui se passe. Vous pouvez également exécuter le code en direct ou regarder le source.</p>
 
-<pre class="brush: js;highlight[14]">var ctxAudio = new (window.AudioContext || window.webkitAudioContext)();
+<pre class="brush: js">var ctxAudio = new (window.AudioContext || window.webkitAudioContext)();
 
 // Création d'un tampon stéréo vide de trois secondes à la fréquence d'échantillonnage de l'AudioContext
 var monArrayBuffer = ctxAudio.createBuffer(2, ctxAudio.sampleRate * 3, ctxAudio.sampleRate);

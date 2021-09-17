@@ -29,7 +29,7 @@ translation_of: Web/API/IDBEnvironment
 
 <p>Dans le fragment de code suivant, on crée une requête asynchrone sur une base de données et on utilise le gestionnaire d'évènements <code>onsuccess</code> de la requête :</p>
 
-<pre class="brush: js;highlight:[3]">var db;
+<pre class="brush: js">var db;
 function openDB() {
  var DBOpenRequest = window.indexedDB.open("toDoList");
  DBOpenRequest.onsuccess = function(e) {

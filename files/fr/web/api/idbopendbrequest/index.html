@@ -43,7 +43,7 @@ translation_of: Web/API/IDBOpenDBRequest
 
 <p>Dans l'exemple ci-dessous,  le gestionnaire <code>onupgradeneeded</code> est utilisé pour mettre à jour la structure de la base de données, si une base plus récente est chargée. Pour voir un exemple complet, référez-vous à notre application <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<u><a href="http://mdn.github.io/to-do-notifications/">voir cet exemple réel</a></u>)</p>
 
-<pre class="brush: js; highlight:[15,25,26,28,29,30,31,32,33,34]">var db;
+<pre class="brush: js">var db;
 
 // Ouvre la base de données.
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);

@@ -60,7 +60,7 @@ translation_of: Web/API/IDBDatabase
 
 <p>Dans le fragment de code suivant, on ouvre une base de données de façon asynchrone avec {{domxref("IDBFactory")}} puis on gère les cas de succès et d'erreur avant de créer un nouveau magasin d'objet au cas où une mise à jour est nécessaire ({{domxref("IDBdatabase")}}). Pour étudier un exemple complet et fonctionnel, voir notre application <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">voir l'exemple <em>live</em></a>).</p>
 
-<pre class="brush: js;highlight:[13,24,26,27,28,32]">// On ouvre la base de données
+<pre class="brush: js">// On ouvre la base de données
   var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
   // On ajoute les deux gestionnaires d'événements

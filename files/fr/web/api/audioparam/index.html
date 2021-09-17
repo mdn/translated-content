@@ -67,7 +67,7 @@ translation_of: Web/API/AudioParam
 
 <p>Ce premier exemple simple montre la définition de la valeur de  <code>gain </code>d'un<code> </code>{{domxref("GainNode")}}. <code>gain</code> est un exemple de paramètre audio de type a-rate, car sa valeur peut potentiellement être différente pour chaque trame d'échantillon.</p>
 
-<pre class="brush: js;highlight[5]">var AudioContext = window.AudioContext || window.webkitAudioContext;
+<pre class="brush: js">var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
 var gainNode = audioCtx.createGain();
@@ -75,7 +75,7 @@ gainNode.gain.value = 0;</pre>
 
 <p>Ce deuxième exemple montre la définition de plusieurs paramètres d'un {{ domxref("BiquadFilterNode") }}. Ce sont des exemples de paramètre audio de type k-rate AudioParam's, comme les valeurs sont définies une fois pour l'ensemble des échantillons.</p>
 
-<pre class="brush: js;highlight[6,7,8]">var AudioContext = window.AudioContext || window.webkitAudioContext;
+<pre class="brush: js">var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
 var biquadFilter = audioCtx.createBiquadFilter();

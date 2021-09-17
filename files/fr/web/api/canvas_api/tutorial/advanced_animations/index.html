@@ -42,7 +42,7 @@ ball.draw();</pre>
 
 <p>Maintenant que nous avons une balle, nous sommes prêts à ajouter une animation simple comme nous avons pu le voir dans le <a href="https://developer.mozilla.org/fr/docs/Tutoriel_canvas/Animations_basiques">dernier chapitre</a> de ce tutoriel. Une fois encore, {{domxref("window.requestAnimationFrame()")}} nous aide à contrôler l'animation. Il est possible de déplacer la balle en ajoutant un vecteur de vitesse à la position. Pour chaque "frame", nous avons aussi {{domxref("CanvasRenderingContext2D.clearRect", "clear", "", 1)}} <em>(nettoyé)</em> les canvas pour supprimer les anciens cercles des "frames" précédents.</p>
 
-<pre class="brush: js; highlight:[8,9,24,25]">var canvas = document.getElementById('canvas');
+<pre class="brush: js">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var raf;
 

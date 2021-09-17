@@ -44,7 +44,7 @@ ctx.fillStyle = 'rgba(255, 165, 0, 1)';</pre>
 
 <p>Dans cet exemple, nous utilisons une nouvelle fois deux boucles <code>for</code> pour dessiner une grille de rectangles, chacun dans une couleur différente. L'image résultante devrait ressembler à la capture d'écran. Il n'y a rien de spectaculaire ici. Nous utilisons les deux variables <code>i</code> et <code>j</code> pour générer une couleur RVB unique pour chaque carré, et seulement modifier les valeurs rouges et vertes. Le canal bleu a une valeur fixe. En modifiant les canaux, vous pouvez générer toutes sortes de palettes. En augmentant les étapes, vous pouvez obtenir quelque chose qui ressemble à des palettes de couleurs que Photoshop utilise.</p>
 
-<pre class="brush: js;highlight[5,6]">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   for (var i = 0; i &lt; 6; i++) {
     for (var j = 0; j &lt; 6; j++) {

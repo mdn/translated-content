@@ -58,7 +58,7 @@ translation_of: Web/API/WebGLRenderingContext/enableVertexAttribArray
 
 <p>Ce code — un extrait de l'exemple complet <a href="/fr-FR/docs/Web/API/WebGL_API/Basic_2D_animation_example">Un exemple d'animation 2D WebGL de base</a> — montre l'utilisation de <code>enableVertexArray()</code> pour activer l'attribut qui sera utilisé par la couche WebGL pour passer des sommets individuels depuis le tampon des sommets à la fonction shader de sommet.</p>
 
-<pre class="brush: js highlight[6]">gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
+<pre class="brush: js">gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
 
 aVertexPosition =
     gl.getAttribLocation(programmeShader, "aVertexPosition");
