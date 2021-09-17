@@ -11,7 +11,7 @@ translation_of: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 
 <h2 id="Création_d'un_objet_WebSocket">Création d'un objet WebSocket</h2>
 
-<p>Pour utiliser le protocole WebSocket, il faut créer un objet <a href="/en/WebSockets/WebSockets_reference/WebSocket" title="en/WebSockets/WebSockets reference/WebSocket"><code>WebSocket</code></a> ; celui-ci essaiera automatiquement d'ouvrir une connexion avec le server.</p>
+<p>Pour utiliser le protocole WebSocket, il faut créer un objet <a href="/en/WebSockets/WebSockets_reference/WebSocket"><code>WebSocket</code></a> ; celui-ci essaiera automatiquement d'ouvrir une connexion avec le server.</p>
 
 <p>Le constructeur WebSocket accepte un paramètre obligatoire et un paramètre optionnel :</p>
 
@@ -45,9 +45,9 @@ WebSocket WebSocket(
 
 <h3 id="Erreurs_de_connexion">Erreurs de connexion</h3>
 
-<p>Si une erreur se produit lors de la tentative de connexion, un  évènement nommé "error" est d'abord renvoyé à l'objet  <a href="/en/WebSockets/WebSockets_reference/WebSocket" title="WebSocket"><code>WebSocket</code></a> (invoquant ainsi son gestionnaire d'évènement <code>onerror</code>) suivi d'un évènement <a href="/en/WebSockets/WebSockets_reference/CloseEvent" title="CloseEvent"><code>CloseEvent</code></a> (qui invoque alors son gestionnaire d'évènement <code>onclose</code>) indiquant la raison de la clôture.</p>
+<p>Si une erreur se produit lors de la tentative de connexion, un  évènement nommé "error" est d'abord renvoyé à l'objet  <a href="/en/WebSockets/WebSockets_reference/WebSocket"><code>WebSocket</code></a> (invoquant ainsi son gestionnaire d'évènement <code>onerror</code>) suivi d'un évènement <a href="/en/WebSockets/WebSockets_reference/CloseEvent"><code>CloseEvent</code></a> (qui invoque alors son gestionnaire d'évènement <code>onclose</code>) indiquant la raison de la clôture.</p>
 
-<p>A partir de Firefox 11, un message d'erreur descriptif est envoyé à la console de la plateforme Mozilla, et un code de fermeture tel que défini dans la <a class="external" href="http://tools.ietf.org/html/rfc6455#section-7.4" title="RFC 6455 Section 7.4">RFC 6455, Section 7.4</a> est envoyé à travers l'évènement <a href="/en/WebSockets/WebSockets_reference/CloseEvent" title="CloseEvent"><code>CloseEvent</code></a>.</p>
+<p>A partir de Firefox 11, un message d'erreur descriptif est envoyé à la console de la plateforme Mozilla, et un code de fermeture tel que défini dans la <a href="http://tools.ietf.org/html/rfc6455#section-7.4">RFC 6455, Section 7.4</a> est envoyé à travers l'évènement <a href="/en/WebSockets/WebSockets_reference/CloseEvent"><code>CloseEvent</code></a>.</p>
 
 <h3 id="Exemples">Exemples</h3>
 
@@ -69,9 +69,9 @@ WebSocket WebSocket(
 
 <h2 id="Envoi_de_données_vers_le_serveur">Envoi de données vers le serveur</h2>
 
-<p>Une fois la connexion ouverte on peut commencer à tranférer des données vers le serveur en appelant la méthode  <a href="/en/WebSockets/WebSockets_reference/WebSocket#send()" title="en/WebSockets/WebSockets reference/WebSocket#send()"><code>send()</code></a> de l'objet <code>WebSocket</code> pour chaque message que l'on veut envoyer :</p>
+<p>Une fois la connexion ouverte on peut commencer à tranférer des données vers le serveur en appelant la méthode  <a href="/en/WebSockets/WebSockets_reference/WebSocket#send()"><code>send()</code></a> de l'objet <code>WebSocket</code> pour chaque message que l'on veut envoyer :</p>
 
-<p>Les données peuvent être envoyées sous forme de chaîne {{ domxref("Blob") }} ou de  <a href="/en/JavaScript_typed_arrays/ArrayBuffer" title="en/JavaScript typed arrays/ArrayBuffer"><code>ArrayBuffer</code></a>.</p>
+<p>Les données peuvent être envoyées sous forme de chaîne {{ domxref("Blob") }} ou de  <a href="/en/JavaScript_typed_arrays/ArrayBuffer"><code>ArrayBuffer</code></a>.</p>
 
 <div class="note"><strong>Note:</strong> Avant la version 11, Firefox supportait l'envoi de données uniquement sous forme de chaîne.</div>
 
@@ -84,7 +84,7 @@ WebSocket WebSocket(
 
 <h3 id="Utilisation_de_JSON_pour_transmettre_des_objets">Utilisation de JSON pour transmettre des objets</h3>
 
-<p>Il peut être utile d'utiliser <a href="/en/JSON" title="en/JSON">JSON</a> pour envoyer des données complexes au serveur. Par exemple, un programme de chat peut interagir avec un serveur en utilisant un protocole qui implémente l'échange de paquets contenant des données encapsulées en JSON:</p>
+<p>Il peut être utile d'utiliser <a href="/en/JSON">JSON</a> pour envoyer des données complexes au serveur. Par exemple, un programme de chat peut interagir avec un serveur en utilisant un protocole qui implémente l'échange de paquets contenant des données encapsulées en JSON:</p>
 
 <pre class="brush: js">// Envoi d'un texte à tous les utilisateurs à travers le serveur
 function sendText() {
@@ -165,7 +165,7 @@ function sendText() {
 };
 </pre>
 
-<p>Ici nous utilisons <a href="/en/JavaScript/Reference/Global_Objects/JSON/parse" title="en/JavaScript/Reference/Global Objects/JSON/parse"><code>JSON.parse()</code></a> pour convertir l'objet JSON en l'objet original, avant de l'examiner et le traiter.</p>
+<p>Ici nous utilisons <a href="/en/JavaScript/Reference/Global_Objects/JSON/parse"><code>JSON.parse()</code></a> pour convertir l'objet JSON en l'objet original, avant de l'examiner et le traiter.</p>
 
 <h3 id="Encodage_du_texte">Encodage du texte</h3>
 
@@ -175,7 +175,7 @@ function sendText() {
 
 <h2 id="Fermeture_de_la_connexion">Fermeture de la connexion</h2>
 
-<p>Quand on n'a plus besoin de la connexion WebSocket, on appelle la méthode <a href="/en/WebSockets/WebSockets_reference/WebSocket#close()" title="en/WebSockets/WebSockets reference/WebSocket#close()"><code>close()</code></a> de l'objet WebSocket:</p>
+<p>Quand on n'a plus besoin de la connexion WebSocket, on appelle la méthode <a href="/en/WebSockets/WebSockets_reference/WebSocket#close()"><code>close()</code></a> de l'objet WebSocket:</p>
 
 <pre class="brush: js">exampleSocket.close();
 </pre>

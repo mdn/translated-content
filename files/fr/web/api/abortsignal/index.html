@@ -35,11 +35,11 @@ translation_of: Web/API/AbortSignal
 
 <h2 id="Exemples">Exemples</h2>
 
-<p>Dans l'extrait suivant, nous visons à télécharger une vidéo en utilisant l'<a href="https://developer.mozilla.org/fr/docs/Web/API/Fetch_API">API Fetch</a>.</p>
+<p>Dans l'extrait suivant, nous visons à télécharger une vidéo en utilisant l'<a href="/fr/docs/Web/API/Fetch_API">API Fetch</a>.</p>
 
 <p>Tout d'abord, nous créons un contrôleur en utilisant le constructeur {{domxref("AbortController.AbortController","AbortController()")}}, puis nous saisissons une référence associée à son objet {{domxref("AbortSignal")}} au moyen de la propriété {{domxref("AbortController.signal")}}.</p>
 
-<p>Lorsque la  <a href="https://developer.mozilla.org/fr/docs/Web/API/GlobalFetch/fetch">requête fetch</a> (<em>extraction</em>) est lancée, nous transmettons le paramètre <code>AbortSignal</code> en tant qu'option dans l'objet d'options de la requête (voir <code>{signal}</code> ci-dessous). Cela associe le signal et le contrôleur à la requête d'extraction et nous permet de l'annuler en appelant {{domxref("AbortController.abort()")}}, comme indiqué ci-dessous dans le second écouteur d'événements.</p>
+<p>Lorsque la  <a href="/fr/docs/Web/API/GlobalFetch/fetch">requête fetch</a> (<em>extraction</em>) est lancée, nous transmettons le paramètre <code>AbortSignal</code> en tant qu'option dans l'objet d'options de la requête (voir <code>{signal}</code> ci-dessous). Cela associe le signal et le contrôleur à la requête d'extraction et nous permet de l'annuler en appelant {{domxref("AbortController.abort()")}}, comme indiqué ci-dessous dans le second écouteur d'événements.</p>
 
 <pre class="brush: js">var controller = new AbortController();
 var signal = controller.signal;
@@ -93,6 +93,6 @@ function fetchVideo() {
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/fr/docs/Web/API/Fetch_API">API Fetch</a></li>
+ <li><a href="/fr/docs/Web/API/Fetch_API">API Fetch</a></li>
  <li><a href="https://developers.google.com/web/updates/2017/09/abortable-fetch">Abortable Fetch</a> par Jake Archibald (en)</li>
 </ul>

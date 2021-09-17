@@ -15,9 +15,9 @@ original_slug: Web/API/API_IndexedDB/Using_IndexedDB
 
 <h2 id="À_propos_de_ce_document">À propos de ce document</h2>
 
-<p>Ce tutoriel vous guide à travers l'utilisation de l'API asynchrone de IndexedDB. Si vous n'êtes pas familier avec le principe de IndexedDB, vous devriez d'abord lire <a href="/fr/docs/Web/API/Indexeddb_API/Basic_Concepts_Behind_IndexedDB" title="IndexedDB - Les concepts basiques">les concepts basiques d'IndexedDB</a>.</p>
+<p>Ce tutoriel vous guide à travers l'utilisation de l'API asynchrone de IndexedDB. Si vous n'êtes pas familier avec le principe de IndexedDB, vous devriez d'abord lire <a href="/fr/docs/Web/API/Indexeddb_API/Basic_Concepts_Behind_IndexedDB">les concepts basiques d'IndexedDB</a>.</p>
 
-<p>Pour la documentation de référence sur l'API d'IndexedDB, voyez l'article <a href="/fr/docs/Web/API/Indexeddb_API" title="IndexedDB">IndexedDB</a> et ses sous-parties, qui détaille les types d'objets utilisés par IndexedDB, ainsi que les méthodes sur l'API asynchrone (l'API synchrone a été retirée de la spécification).</p>
+<p>Pour la documentation de référence sur l'API d'IndexedDB, voyez l'article <a href="/fr/docs/Web/API/Indexeddb_API">IndexedDB</a> et ses sous-parties, qui détaille les types d'objets utilisés par IndexedDB, ainsi que les méthodes sur l'API asynchrone (l'API synchrone a été retirée de la spécification).</p>
 
 <h2 id="pattern">Modèle de base</h2>
 
@@ -70,7 +70,7 @@ var request = window.indexedDB.open("MyTestDatabase", 3);
 
 <p>Vous avez vu ? Ouvrir une base de données est comme n'importe quelle autre opération — vous avez juste à le "demander".</p>
 
-<p>La requête "open" n'ouvre pas la base de données ni ne démarre une transaction aussitôt. L'appel de la fonction <code>open()</code> retourne un objet <a href="/en-US/docs/IndexedDB/IDBOpenDBRequest" title="/en-US/docs/IndexedDB/IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a> avec un résultat  (success) ou une valeur d'erreur qui permet de la gérer comme un évènement. La plupart des autres fonctions asynchrones dans IndexedDB fonctionnent de la même façon ; Elles retournent un objet <a href="/en-US/docs/IndexedDB/IDBRequest" title="/en-US/docs/IndexedDB/IDBRequest"><code style="font-size: 14px; color: rgb(51, 51, 51);">IDBRequest</code></a> avec le résultat ou une erreur. Le résultat de la fonction "open" est une instance de <code style="font-size: 14px; color: rgb(51, 51, 51);"><a href="/en-US/docs/IndexedDB/IDBDatabase" title="/en-US/docs/IndexedDB/IDBDatabase">IDBDatabase</a></code>.</p>
+<p>La requête "open" n'ouvre pas la base de données ni ne démarre une transaction aussitôt. L'appel de la fonction <code>open()</code> retourne un objet <a href="/en-US/docs/IndexedDB/IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a> avec un résultat  (success) ou une valeur d'erreur qui permet de la gérer comme un évènement. La plupart des autres fonctions asynchrones dans IndexedDB fonctionnent de la même façon ; Elles retournent un objet <a href="/en-US/docs/IndexedDB/IDBRequest"><code style="font-size: 14px; color: rgb(51, 51, 51);">IDBRequest</code></a> avec le résultat ou une erreur. Le résultat de la fonction "open" est une instance de <code style="font-size: 14px; color: rgb(51, 51, 51);"><a href="/en-US/docs/IndexedDB/IDBDatabase">IDBDatabase</a></code>.</p>
 
 <p>Le second paramètre de la méthode open est la version de la base de données. La version de la base détermine le schéma de celle-ci — Les objets stockés dans la base de données et leur structure. Si la base de données n'existe pas déjà, elle est créée via l'opération <code>open()</code>, puis, un événement <code>onupgradeneeded</code> est déclenché et vous créez le schéma de la base dans le gestionnaire pour cet événement. Si la base de données existe, mais que vous spécifiez un numéro de version plus élevé, un événement <code>onupgradeneeded</code> est déclenché  immédiatement, vous permettant de mettre à jour le schéma dans son gestionnaire – plus d'informations dans <a href="#Updating_the_version_of_the_database">Updating the version of the database</a> plus bas et la page référence {{ domxref("IDBFactory.open") }}.</p>
 
@@ -92,7 +92,7 @@ request.onsuccess = function(event) {
 
 <p>Laquelle de ces deux fonctions, <code>onsuccess()</code> or <code>onerror()</code>, sera appelée ? Si tout se passe bien, un évènement success (qui est un évènement DOM dont la propriété <code>type</code> est à <code>"success"</code>) est déclenché avec <code>request</code> comme cible. Une fois déclenché, la fonction <code>onsuccess()</code> de <code>request</code> est lancée avec l'évènement success comme argument. S’il y avait un quelconque problème, un évènement erreur (qui est un évènement DOM dont la propriété <code>type</code> est définie à <code>"error"</code>) est lancée dans <code>request</code>. Cela déclenche la fonction <code><code>onerror()</code></code> avec l'évènement d'erreur comme argument.</p>
 
-<p>L'API IndexedDB est conçue pour minimiser le recours à la gestion des erreurs, donc vous ne serez pas amené à voir beaucoup d'évènements erreurs (du moins, pas tant que vous utilisez l'API !). Cependant, dans le cas d'une ouverture de base de données, il y a quelques conditions qui génèrent des évènements d'erreurs. Le problème le plus courant est que l'utilisateur a décidé d'interdire l'accès à la création de base de données. Un des principaux objectifs d’IndexedDB est de permettre un stockage important de données pour l'utilisation hors-ligne. (Pour en savoir plus sur la capacité de stockage de chaque navigateur, voyez <a href="/en/IndexedDB#Storage_limits" title="https://developer.mozilla.org/en/IndexedDB#Storage_limits">Storage limits</a>).</p>
+<p>L'API IndexedDB est conçue pour minimiser le recours à la gestion des erreurs, donc vous ne serez pas amené à voir beaucoup d'évènements erreurs (du moins, pas tant que vous utilisez l'API !). Cependant, dans le cas d'une ouverture de base de données, il y a quelques conditions qui génèrent des évènements d'erreurs. Le problème le plus courant est que l'utilisateur a décidé d'interdire l'accès à la création de base de données. Un des principaux objectifs d’IndexedDB est de permettre un stockage important de données pour l'utilisation hors-ligne. (Pour en savoir plus sur la capacité de stockage de chaque navigateur, voyez <a href="/en/IndexedDB#Storage_limits">Storage limits</a>).</p>
 
 <p>Évidemment, les navigateurs ne peuvent permettre qu'une publicité en ligne ou un site malicieux pollue votre ordinateur, donc ils informent l’utilisateur la première fois qu'une application web tente d'ouvrir un espace de stockage IndexedDB. L'utilisateur peut choisir de permettre ou refuser l'accès. En ce qui concerne l’utilisation d’IndexedDB en mode privé, les données restent en mémoire jusqu’à ce que la session privée soit close (Navigation privée pour Firefox et mode Incognito pour Chrome, mais dans Firefox, cela <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=781982">n'est pas encore implémenté</a> depuis novembre 2015, aussi vous ne pouvez pas utiliser IndexedDB dans le mode privé de Firefo du tout).</p>
 
@@ -138,11 +138,11 @@ request.onupgradeneeded = function(event) {
 
 <p>Si l'évènement <code>onupgradeneeded</code> quitte avec succès, le gestionnaire <code>onsuccess</code> de la requête d'ouverture de la base de données sera déclenché. </p>
 
-<p>Blink/Webkit supporte la version courante de la spécification, telle que livrée dans Chrome 23+ et Opera 17+ ; IE10+ également. Les autres implémentations plus anciennes ne prennent pas en charge <code>indexedDB.open(name, version).onupgradeneeded</code>. Pour plus d'informations sur la mise à jour de version de base de données sur les anciens Webkit/Blink, référez vous à <a href="https://developer.mozilla.org/en/IndexedDB/IDBDatabase#setVersion%28%29_.0A.0ADeprecated" title="https://developer.mozilla.org/en/IndexedDB/IDBDatabase#setVersion()_.0A.0ADeprecated">IDBDatabase reference article</a>.</p>
+<p>Blink/Webkit supporte la version courante de la spécification, telle que livrée dans Chrome 23+ et Opera 17+ ; IE10+ également. Les autres implémentations plus anciennes ne prennent pas en charge <code>indexedDB.open(name, version).onupgradeneeded</code>. Pour plus d'informations sur la mise à jour de version de base de données sur les anciens Webkit/Blink, référez vous à <a href="/en/IndexedDB/IDBDatabase#setVersion%28%29_.0A.0ADeprecated">IDBDatabase reference article</a>.</p>
 
 <h3 id="Structurer_la_base_de_données">Structurer la base de données</h3>
 
-<p>Maintenant, structurons la base de données. IndexedDB utilise des objets de stockage plutôt que des tableaux, et une seule base de données peut contenir un nombre quelconque d'objets de stockage. Chaque fois qu'une valeur est stockée dans un objet de stockage, elle est associée à une clé. Il y a différentes manières pour une clé d'être définie, selon que l'objet de stockage utilise un <a href="/en/IndexedDB#gloss_key_path" title="https://developer.mozilla.org/en/IndexedDB#gloss_key_path">key path</a> <em>(chemin de clé)</em> ou un <a href="/en/IndexedDB#gloss_key_generator" title="en/IndexedDB#gloss key generator">key generator</a> <em>(générateur de clé)</em>.</p>
+<p>Maintenant, structurons la base de données. IndexedDB utilise des objets de stockage plutôt que des tableaux, et une seule base de données peut contenir un nombre quelconque d'objets de stockage. Chaque fois qu'une valeur est stockée dans un objet de stockage, elle est associée à une clé. Il y a différentes manières pour une clé d'être définie, selon que l'objet de stockage utilise un <a href="/en/IndexedDB#gloss_key_path">key path</a> <em>(chemin de clé)</em> ou un <a href="/en/IndexedDB#gloss_key_generator">key generator</a> <em>(générateur de clé)</em>.</p>
 
 <p>Le tableau suivant montre les différentes manières d'attribuer des clés.</p>
 
@@ -236,7 +236,7 @@ request.onupgradeneeded = function(event) {
 
 <p>Nous avons aussi demandé un index nommé "name" qui examine la propriété <code>name</code> dans les objets stockés. Comme avec<code> createObjectStore()</code>, <code>createIndex()</code> prend un paramètre de type objet facultatif (<code>options</code>) qui définit le type d’index à créer. Ajouter des objets qui n’auront pas de propriété <code>name</code> fonctionnera, mais ces objets n'apparaîtront pas dans l'index "name".</p>
 
-<p>Nous pouvons récupérer les objets client stockés, en utilisant directement leur <code>ssn</code> dans l'objet de stockage, ou en utilisant leur nom via l’index <code>name</code>. Pour en savoir plus sur ce fonctionnement, se référer à la section <a href="https://developer.mozilla.org/en/IndexedDB/Using_IndexedDB#Using_an_index" title="Using IndexedDB#Using an index">utiliser un index</a>.</p>
+<p>Nous pouvons récupérer les objets client stockés, en utilisant directement leur <code>ssn</code> dans l'objet de stockage, ou en utilisant leur nom via l’index <code>name</code>. Pour en savoir plus sur ce fonctionnement, se référer à la section <a href="/en/IndexedDB/Using_IndexedDB#Using_an_index">utiliser un index</a>.</p>
 
 <h3 id="Utiliser_le_générateur_de_clés">Utiliser le générateur de clés</h3>
 
@@ -283,7 +283,7 @@ request.onupgradeneeded = function (event) {
 
 <ul>
  <li>Lorsque vous définissez la portée, spécifiez uniquement les objets de stockage dont vous avez besoin. De cette manière, vous pouvez exécuter plusieurs transactions simultanément sans qu'elles se chevauchent.</li>
- <li>Spécifier le mode <code>readwrite</code> pour une transaction seulement lorsque c'est nécessaire. Vous pouvez exécuter simulaténement plusieurs transactions <code>readonly</code> avec chevauchements, mais vous ne pouvez avoir qu'une seule transaction <code>readwrite</code> dans un objet de stockage. Pour en savoir plus, regardez la définition des <dfn><a href="https://developer.mozilla.org/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#Database">transactions</a></dfn> dans l'article des <a href="https://developer.mozilla.org/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB">concepts de base</a>.</li>
+ <li>Spécifier le mode <code>readwrite</code> pour une transaction seulement lorsque c'est nécessaire. Vous pouvez exécuter simulaténement plusieurs transactions <code>readonly</code> avec chevauchements, mais vous ne pouvez avoir qu'une seule transaction <code>readwrite</code> dans un objet de stockage. Pour en savoir plus, regardez la définition des <dfn><a href="/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#Database">transactions</a></dfn> dans l'article des <a href="/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB">concepts de base</a>.</li>
 </ul>
 
 <h3 id="Ajouter_des_données_dans_la_base_de_données">Ajouter des données dans la base de données</h3>
@@ -363,8 +363,8 @@ request.onsuccess = function(event) {
 <p>Vous pouvez accélérer l’accès à vos données  en limitant la portée et le mode de la transaction. Voici deux astuces :</p>
 
 <ul>
- <li>Lors de la définition de la <a href="https://developer.mozilla.org/fr/docs/IndexedDB/Using_IndexedDB$edit#scope">scope</a> <em>(portée)</em>, spécifiez seulement l’objet de stockage dont vous avez besoin. De cette manière, vous pouvez avoir de multiples opérations simultanées sans qu’elles se chevauchent.</li>
- <li>Spécifier une transaction en mode readwrite uniquement lorsque c’est nécessaire. Vous pouvez avoir de multiples opérations simultanées en lecture seule, mais vous ne pouvez avoir qu’une transaction "readwrite" <em>(lecture/écriture)</em> sur un objet de stockage. Pour en savoir plus, voir la définition relative aux <a href="https://developer.mozilla.org/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction">transactions in the Basic Concepts article</a>.</li>
+ <li>Lors de la définition de la <a href="/fr/docs/IndexedDB/Using_IndexedDB$edit#scope">scope</a> <em>(portée)</em>, spécifiez seulement l’objet de stockage dont vous avez besoin. De cette manière, vous pouvez avoir de multiples opérations simultanées sans qu’elles se chevauchent.</li>
+ <li>Spécifier une transaction en mode readwrite uniquement lorsque c’est nécessaire. Vous pouvez avoir de multiples opérations simultanées en lecture seule, mais vous ne pouvez avoir qu’une transaction "readwrite" <em>(lecture/écriture)</em> sur un objet de stockage. Pour en savoir plus, voir la définition relative aux <a href="/en-US/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction">transactions in the Basic Concepts article</a>.</li>
 </ul>
 
 <h3 id="Mettre_à_jour_une_entrée_dans_la_base_de_données">Mettre à jour une entrée dans la base de données</h3>
@@ -540,7 +540,7 @@ index.openCursor(boundKeyRange).onsuccess = function(event) {
   }
 };</pre>
 
-<p>Voyez "<a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor?redirectlocale=en-US&amp;redirectslug=IndexedDB%2FIDBCursor#Constants">IDBCursor Constants</a>" pour les arguments de direction valides.</p>
+<p>Voyez "<a href="/en-US/docs/Web/API/IDBCursor?redirectlocale=en-US&amp;redirectslug=IndexedDB%2FIDBCursor#Constants">IDBCursor Constants</a>" pour les arguments de direction valides.</p>
 
 <h2 id="La_version_change_alors_quune_application_Web_est_ouverte_dans_un_autre_onglet">La version change alors qu'une application Web est ouverte dans un autre onglet</h2>
 
@@ -1314,18 +1314,18 @@ input {
 <p>Référence :</p>
 
 <ul>
- <li><a href="/en/IndexedDB" title="https://developer.mozilla.org/en/IndexedDB">IndexedDB API Reference</a></li>
- <li><a class="external" href="http://www.w3.org/TR/IndexedDB/">Indexed Database API Specification</a></li>
- <li><a href="/en-US/docs/IndexedDB/Using_IndexedDB_in_chrome" title="/en-US/docs/IndexedDB/Using_IndexedDB_in_chrome">Using IndexedDB in chrome</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_JavaScript_Generators_in_Firefox">Using JavaScript generators in Firefox</a></li>
- <li>IndexedDB <a class="link-https" href="https://mxr.mozilla.org/mozilla-central/find?text=&amp;string=dom%2FindexedDB%2F.*%5C.idl&amp;regexp=1" title="https://mxr.mozilla.org/mozilla-central/find?text=&amp;string=dom/indexedDB/.*\.idl&amp;regexp=1">interface files</a> dans le code source de Firefox</li>
+ <li><a href="/en/IndexedDB">IndexedDB API Reference</a></li>
+ <li><a href="http://www.w3.org/TR/IndexedDB/">Indexed Database API Specification</a></li>
+ <li><a href="/en-US/docs/IndexedDB/Using_IndexedDB_in_chrome">Using IndexedDB in chrome</a></li>
+ <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_JavaScript_Generators_in_Firefox">Using JavaScript generators in Firefox</a></li>
+ <li>IndexedDB <a class="link-https" href="https://mxr.mozilla.org/mozilla-central/find?text=&amp;string=dom%2FindexedDB%2F.*%5C.idl&amp;regexp=1">interface files</a> dans le code source de Firefox</li>
 </ul>
 
 <p>Tutoriels :</p>
 
 <ul>
  <li><a href="http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/">Databinding UI Elements with IndexedDB</a></li>
- <li><a class="external external-icon" href="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx">IndexedDB — The Store in Your Browser</a></li>
+ <li><a href="http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx">IndexedDB — The Store in Your Browser</a></li>
 </ul>
 
 <p>Bibliothèques :</p>

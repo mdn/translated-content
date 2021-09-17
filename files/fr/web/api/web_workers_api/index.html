@@ -20,7 +20,7 @@ translation_of: Web/API/Web_Workers_API
 
 <p>Les données sont envoyées entre les workers et le thread principal au moyen d'un sytème de messages — des deux côtés les messages sont envoyés en utilisant la méthode <code>postMessage()</code>, et la réponse leur parvient au moyen du gestionnaire d'événement <code>onmessage</code> (le message est contenu dans l'attribut <code>data</code> de l'événement {{event("Message")}}.) Les données sont copiées plutôt que partagées.</p>
 
-<p>Les workers peuvent à leur tour engendrer de nouveaux workers, aussi longtemps que ces workers partagent la même origine que la page parente.  De plus, les workers peuvent utiliser <a class="internal" href="/fr/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a> pour les E/S réseau, à l'exception que les attributs <code>responseXML</code> et <code>channel</code> de <code>XMLHttpRequest</code> retournent toujours <code>null</code>.</p>
+<p>Les workers peuvent à leur tour engendrer de nouveaux workers, aussi longtemps que ces workers partagent la même origine que la page parente.  De plus, les workers peuvent utiliser <a href="/fr/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a> pour les E/S réseau, à l'exception que les attributs <code>responseXML</code> et <code>channel</code> de <code>XMLHttpRequest</code> retournent toujours <code>null</code>.</p>
 
 <p>En plus des workers dédiés, il y a d'autres types de worker :</p>
 

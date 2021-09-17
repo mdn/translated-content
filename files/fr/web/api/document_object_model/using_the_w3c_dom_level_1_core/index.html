@@ -13,7 +13,7 @@ original_slug: Web/API/Document_object_model/Utilisation_du_DOM_Level_1_Core_du_
 
 <h2 id="D.C3.A9finition_d.27un_arbre_de_contenu">Définition d'un arbre de contenu</h2>
 
-<p>Beaucoup d'auteurs HTML peuvent penser qu'HTML est quelque chose de plat — un gros amas de texte avec quelques balises au milieu. Cependant, c'est aussi beaucoup plus que ça. Tout document HTML (ou, par ailleurs, tout document SGML ou XML) forme une structure arborescente. Par exemple, le document et la structure arborescente qui suivent sont similaires (bien que non identiques — consultez les notes sur <a href="https://developer.mozilla.org/fr/docs/Gestion_des_espaces_dans_le_DOM">les espaces dans le DOM</a>) :</p>
+<p>Beaucoup d'auteurs HTML peuvent penser qu'HTML est quelque chose de plat — un gros amas de texte avec quelques balises au milieu. Cependant, c'est aussi beaucoup plus que ça. Tout document HTML (ou, par ailleurs, tout document SGML ou XML) forme une structure arborescente. Par exemple, le document et la structure arborescente qui suivent sont similaires (bien que non identiques — consultez les notes sur <a href="/fr/docs/Gestion_des_espaces_dans_le_DOM">les espaces dans le DOM</a>) :</p>
 
 <pre class="eval">&lt;html&gt;
 &lt;head&gt;
@@ -26,7 +26,7 @@ original_slug: Web/API/Document_object_model/Utilisation_du_DOM_Level_1_Core_du_
 &lt;/html&gt;
 </pre>
 
-<p><img alt="image:Using_the_W3C_DOM_Level_1_Core-doctree.jpg" class="internal" src="https://developer.mozilla.org/@api/deki/files/415/=Using_the_W3C_DOM_Level_1_Core-doctree.jpg"></p>
+<p><img src="/@api/deki/files/415/=Using_the_W3C_DOM_Level_1_Core-doctree.jpg"></p>
 
 <p>Lorsque Mozilla examine un document, un arbre de contenu est construit et ensuite utilisé pour l'affichage.</p>
 
@@ -34,7 +34,7 @@ original_slug: Web/API/Document_object_model/Utilisation_du_DOM_Level_1_Core_du_
 
 <h2 id="Ce_que_permet_le_DOM_Level_1_Core">Ce que permet le DOM Level 1 Core</h2>
 
-<p>Le DOM Level 1 permet de modifier l'arbre du contenu<em>selon vos désirs</em>. Il est suffisamment puissant pour construire n'importe quel document HTML depuis rien. Il permet aux auteurs de modifier quoi que ce soit dans le document, depuis un script, à n'importe quel moment. La manière la plus simple pour les auteurs de pages Web de modifier le DOM dynamiquement est d'utiliser JavaScript. En JavaScript, le document est accessible de la même manière qu'il l'était dans les navigateurs plus anciens : depuis la propriété <code>document</code> de l'objet global. Cet objet <code>document</code> implémente l'<a class="external" href="http://xmlfr.org/w3c/TR/REC-DOM-Level-1/level-one-core.html#i-Document">interface Document</a> de la spécification DOM Level 1 du W3C.</p>
+<p>Le DOM Level 1 permet de modifier l'arbre du contenu<em>selon vos désirs</em>. Il est suffisamment puissant pour construire n'importe quel document HTML depuis rien. Il permet aux auteurs de modifier quoi que ce soit dans le document, depuis un script, à n'importe quel moment. La manière la plus simple pour les auteurs de pages Web de modifier le DOM dynamiquement est d'utiliser JavaScript. En JavaScript, le document est accessible de la même manière qu'il l'était dans les navigateurs plus anciens : depuis la propriété <code>document</code> de l'objet global. Cet objet <code>document</code> implémente l'<a href="http://xmlfr.org/w3c/TR/REC-DOM-Level-1/level-one-core.html#i-Document">interface Document</a> de la spécification DOM Level 1 du W3C.</p>
 
 <h2 id="Un_exemple_simple">Un exemple simple</h2>
 
@@ -75,19 +75,19 @@ original_slug: Web/API/Document_object_model/Utilisation_du_DOM_Level_1_Core_du_
 
 <p>{{ EmbedLiveSample('A_simple_example', 800, 300) }}</p>
 
-<p>Vous pouvez voir ce script dans <a class="external" href="http://www.mozilla.org/docs/dom/technote/intro/example.html">un exemple complet</a>.</p>
+<p>Vous pouvez voir ce script dans <a href="http://www.mozilla.org/docs/dom/technote/intro/example.html">un exemple complet</a>.</p>
 
 <h3 id="Pour_en_savoir_plus">Pour en apprendre plus</h3>
 
-<p>Maintenant que vous êtes familiarisé avec les concepts basiques du DOM, il existe un document expliquant <a href="https://developer.mozilla.org/fr/docs/Explorer_un_tableau_HTML_avec_des_interfaces_DOM_et_JavaScript">les méthodes fondamentales de DOM Level 1</a>. C'est la suite de ce document.</p>
+<p>Maintenant que vous êtes familiarisé avec les concepts basiques du DOM, il existe un document expliquant <a href="/fr/docs/Explorer_un_tableau_HTML_avec_des_interfaces_DOM_et_JavaScript">les méthodes fondamentales de DOM Level 1</a>. C'est la suite de ce document.</p>
 
-<p>Consultez également la <a class="external" href="http://xmlfr.org/w3c/TR/REC-DOM-Level-1/level-one-core.html">spécification DOM Level 1 Core</a> du W3C (traduction en français non normative). C'est une spécification relativement claire, même si elle est un peu formelle. Ce qui est surtout intéressant pour les auteurs, c'est la description des différents objets DOM et de toutes leurs propriétés et méthodes. Voyez encore notre <a href="https://developer.mozilla.org/fr/docs/Web/API/Document_Object_Model">documentation complète sur le DOM</a>.</p>
+<p>Consultez également la <a href="http://xmlfr.org/w3c/TR/REC-DOM-Level-1/level-one-core.html">spécification DOM Level 1 Core</a> du W3C (traduction en français non normative). C'est une spécification relativement claire, même si elle est un peu formelle. Ce qui est surtout intéressant pour les auteurs, c'est la description des différents objets DOM et de toutes leurs propriétés et méthodes. Voyez encore notre <a href="/fr/docs/Web/API/Document_Object_Model">documentation complète sur le DOM</a>.</p>
 
 <div class="originaldocinfo">
 <p><strong>Informations sur le document original</strong></p>
 
 <ul>
  <li>Auteur(s) : L. David Baron &lt;dbaron at dbaron dot org&gt;</li>
- <li>Copyright : © 1998-2005 par des contributeurs individuels à mozilla.org ; le contenu est disponible sous une <a class="external" href="http://www.mozilla.org/foundation/licensing/website-content.html">licence Creative Commons</a></li>
+ <li>Copyright : © 1998-2005 par des contributeurs individuels à mozilla.org ; le contenu est disponible sous une <a href="http://www.mozilla.org/foundation/licensing/website-content.html">licence Creative Commons</a></li>
 </ul>
 </div>

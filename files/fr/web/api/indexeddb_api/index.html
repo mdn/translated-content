@@ -22,7 +22,7 @@ original_slug: Web/API/API_IndexedDB
 
 <h2 id="Concepts_clés_et_utilisation">Concepts clés et utilisation</h2>
 
-<p>IndexedDB est un système de gestion de base de données transactionnel, similaire à un SGBD relationnel basé sur SQL. Cependant contrairement aux SGBD relationnels, qui utilisent des tables avec des colonnes fixes, IndexedDB est une base de données orientée objet basée sur JavaScript. IndexedDB vous permet de stocker et de récupérer des objets qui sont indexés avec une <strong style="line-height: 1.5;">clef</strong>; tout objet supporté par <a href="https://developer.mozilla.org/fr/docs/Web/API/Web_Workers_API/algorithme_clonage_structure">l'algorithme de clônage structuré</a> peut être stocké. Vous devez spécifier le schéma de la base de données, ouvrir une connexion à votre base de données, puis récupérer et mettre à jour des données dans une série de <strong style="line-height: 1.5;">transactions</strong>.</p>
+<p>IndexedDB est un système de gestion de base de données transactionnel, similaire à un SGBD relationnel basé sur SQL. Cependant contrairement aux SGBD relationnels, qui utilisent des tables avec des colonnes fixes, IndexedDB est une base de données orientée objet basée sur JavaScript. IndexedDB vous permet de stocker et de récupérer des objets qui sont indexés avec une <strong style="line-height: 1.5;">clef</strong>; tout objet supporté par <a href="/fr/docs/Web/API/Web_Workers_API/algorithme_clonage_structure">l'algorithme de clônage structuré</a> peut être stocké. Vous devez spécifier le schéma de la base de données, ouvrir une connexion à votre base de données, puis récupérer et mettre à jour des données dans une série de <strong style="line-height: 1.5;">transactions</strong>.</p>
 
 <ul>
  <li>Plus d'informations sur les <a href="/fr/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB">concepts derrière IndexedDB</a>.</li>
@@ -31,7 +31,7 @@ original_slug: Web/API/API_IndexedDB
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: Comme la plupart des solutions de stockage en ligne, IndexedDB suit la politique <a class="external" href="http://www.w3.org/Security/wiki/Same_Origin_Policy">same-origin policy</a>. Alors même que vous pouvez accèder à des données stockées au sein d'un domaine, vous ne pouvez pas accéder à des données sur plusieurs domaines.</p>
+<p><strong>Note</strong>: Comme la plupart des solutions de stockage en ligne, IndexedDB suit la politique <a href="http://www.w3.org/Security/wiki/Same_Origin_Policy">same-origin policy</a>. Alors même que vous pouvez accèder à des données stockées au sein d'un domaine, vous ne pouvez pas accéder à des données sur plusieurs domaines.</p>
 </div>
 
 <h3 id="Synchrone_et_asynchrone">Synchrone et asynchrone</h3>
@@ -118,9 +118,9 @@ original_slug: Web/API/API_IndexedDB
 <h2 id="Example">Exemples</h2>
 
 <ul>
- <li><a class="external external-icon" href="http://marco-c.github.io/eLibri/">eLibri:</a> Une application puissante de bibliothèque et de lecteur de livres électroniques, écrit par Marco Castelluccio, gagnant du <em>DevDerby IndexedDB</em> de Mozilla.</li>
- <li><a class="external external-icon" href="https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external external-icon" href="http://mdn.github.io/to-do-notifications/">voir la démonstration en ligne</a>): L'application de référence pour les exemples de la documentation.</li>
- <li><a class="external external-icon" href="http://hacks.mozilla.org/2012/02/storing-images-and-files-in-indexeddb/">Stocker des images et des fichiers dans IndexedDB</a></li>
+ <li><a href="http://marco-c.github.io/eLibri/">eLibri:</a> Une application puissante de bibliothèque et de lecteur de livres électroniques, écrit par Marco Castelluccio, gagnant du <em>DevDerby IndexedDB</em> de Mozilla.</li>
+ <li><a href="https://github.com/chrisdavidmills/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">voir la démonstration en ligne</a>): L'application de référence pour les exemples de la documentation.</li>
+ <li><a href="http://hacks.mozilla.org/2012/02/storing-images-and-files-in-indexeddb/">Stocker des images et des fichiers dans IndexedDB</a></li>
 </ul>
 
 <h2 id="Browser_compatibility">Spécifications</h2>
@@ -148,10 +148,10 @@ original_slug: Web/API/API_IndexedDB
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a class="external" href="https://localforage.github.io/localForage/">localForage</a>: Un <em>Polyfill</em> fournissant une syntaxe clé-valeurs simple pour un stockage côté client; il utilise IndexedDB en arrière plan, mais se retourne d'abord sur WebSQL puis sur localStorage pour les navigateurs qui ne supportent pas IndexedDB.</li>
- <li><a class="external" href="http://www.dexie.org/">dexie.js</a> : Un <em>wrapper </em>pour IndexedDB qui permet un développement plus rapide avec une syntaxe simple.</li>
- <li><a class="external" href="https://github.com/erikolson186/zangodb">ZangoDB </a>: Une interface MongoDB-like pour indexedDB qui prend en charge la plupart des fonctionnalités familières de filtrage, projection, tri, mise à jour et agrégation de MongoDB.</li>
- <li><a class="external" href="http://jsstore.net/">JsStore </a>: Un contenu indexedDB avec SQL comme syntaxe.</li>
- <li><a class="external" href="https://github.com/mWater/minimongo">MiniMongo</a></li>
- <li><a class="external" href="https://pouchdb.com">PouchDB</a></li>
+ <li><a href="https://localforage.github.io/localForage/">localForage</a>: Un <em>Polyfill</em> fournissant une syntaxe clé-valeurs simple pour un stockage côté client; il utilise IndexedDB en arrière plan, mais se retourne d'abord sur WebSQL puis sur localStorage pour les navigateurs qui ne supportent pas IndexedDB.</li>
+ <li><a href="http://www.dexie.org/">dexie.js</a> : Un <em>wrapper </em>pour IndexedDB qui permet un développement plus rapide avec une syntaxe simple.</li>
+ <li><a href="https://github.com/erikolson186/zangodb">ZangoDB </a>: Une interface MongoDB-like pour indexedDB qui prend en charge la plupart des fonctionnalités familières de filtrage, projection, tri, mise à jour et agrégation de MongoDB.</li>
+ <li><a href="http://jsstore.net/">JsStore </a>: Un contenu indexedDB avec SQL comme syntaxe.</li>
+ <li><a href="https://github.com/mWater/minimongo">MiniMongo</a></li>
+ <li><a href="https://pouchdb.com">PouchDB</a></li>
 </ul>

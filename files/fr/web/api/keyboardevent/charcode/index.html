@@ -62,7 +62,7 @@ translation_of: Web/API/KeyboardEvent/charCode
 
 <p>Après un évènement {{ domxref("element.onkeypress", "keypress") }}, la valeur Unicode de la touche pressée est stockée dans l'une ou l'autre des propriétés <code>{{ domxref("event.keyCode", "keyCode") }}</code> et <code>charCode</code>, jamais les deux à la fois. Si la touche pressée génère un caractère (ex. 'a'), <code>charCode</code> prend la valeur du code de ce caractère, en respectant la casse. (i.e. <code>charCode</code> tient compte d'une touche Maj. enfoncée). Sinon, le code est stocké dans <code>keyCode</code>.</p>
 
-<p>Quand une ou plusieurs touche modificatrices sont pressées, il y a quelques règles complexes pour <code>charCode</code>, jetez un oeil à <a href="/en/Gecko_Keypress_Event" title="en/Gecko Keypress Event">Gecko Keypress Event</a> (en anglais) pour le détail.</p>
+<p>Quand une ou plusieurs touche modificatrices sont pressées, il y a quelques règles complexes pour <code>charCode</code>, jetez un oeil à <a href="/en/Gecko_Keypress_Event">Gecko Keypress Event</a> (en anglais) pour le détail.</p>
 
 <p><code>charCode</code> n'est jamais défini lors d'évènements {{ domxref("element.onkeydown", "keydown") }} et {{ domxref("element.onkeyup", "keyup") }}. Dans ces cas, <code>keyCode</code> is set instead.</p>
 
@@ -70,7 +70,7 @@ translation_of: Web/API/KeyboardEvent/charCode
 
 <p>Les caractères entrés via IME ne s'enregistrent pas sous <code>keyCode</code> ou <code>charCode</code>. Actually with the Chinese IME I'm using, entering the IME results in a keypress event with keyCode = 229 and no other key events fire until the IME exits (which may happen after multiple characters are inputted). I'm not sure if other IME's work this way.</p>
 
-<p>Pour une liste de valeurs de <code>charCode</code> associées à leurs touches, lancez l'exemple dans <a href="/en/Gecko_DOM_Reference/Examples#Example_7:_Displaying_Event_Object_Constants" title="en/Gecko_DOM_Reference/Examples#Example_7:_Displaying_Event_Object_Constants">Gecko DOM Reference:Examples #Example 7: Displaying Event Object Constants</a> (en anglais) et regardez le tableau HTML résultant.</p>
+<p>Pour une liste de valeurs de <code>charCode</code> associées à leurs touches, lancez l'exemple dans <a href="/en/Gecko_DOM_Reference/Examples#Example_7:_Displaying_Event_Object_Constants">Gecko DOM Reference:Examples #Example 7: Displaying Event Object Constants</a> (en anglais) et regardez le tableau HTML résultant.</p>
 
 <h2 id="Specifications">Spécifications</h2>
 

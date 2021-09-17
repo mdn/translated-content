@@ -65,9 +65,9 @@ console.log(child_nodes.length); // devrait afficher "3"</pre>
 }
 </pre>
 
-<p>Ne soyez pas tenté d'utiliser <code><a href="/fr/docs/JavaScript/Reference/Instructions/for...in" title="JavaScript/ Reference/Statements/for...in">for… in</a></code> ou <code><a href="/fr/docs/JavaScript/Reference/Instructions/for_each…in" title="JavaScript/ Reference/Statements/for each...in">for each… in</a></code> pour énumérer les éléments de la liste, car cela énumère également la taille (<code>length</code>) et les propriétés du <code>NodeList</code> et cause des erreurs si votre script ne gère que les objets de type {{domxref("element")}}. De plus, <code>for… in</code> ne garantit pas de visiter les propriétés dans un ordre particulier.</p>
+<p>Ne soyez pas tenté d'utiliser <code><a href="/fr/docs/JavaScript/Reference/Instructions/for...in">for… in</a></code> ou <code><a href="/fr/docs/JavaScript/Reference/Instructions/for_each…in">for each… in</a></code> pour énumérer les éléments de la liste, car cela énumère également la taille (<code>length</code>) et les propriétés du <code>NodeList</code> et cause des erreurs si votre script ne gère que les objets de type {{domxref("element")}}. De plus, <code>for… in</code> ne garantit pas de visiter les propriétés dans un ordre particulier.</p>
 
-<p>Les boucles <code><a href="/fr/docs/JavaScript/Référence_JavaScript/Instructions/for...of" title="JavaScript/Reference/Statements/for...of">for… of</a></code> boucleront correctement sur les objets <code>NodeList</code> :</p>
+<p>Les boucles <code><a href="/fr/docs/JavaScript/Référence_JavaScript/Instructions/for...of">for… of</a></code> boucleront correctement sur les objets <code>NodeList</code> :</p>
 
 <pre class="brush: js">var list = document.querySelectorAll( 'input[type=checkbox]' );
 for (var item of list) {

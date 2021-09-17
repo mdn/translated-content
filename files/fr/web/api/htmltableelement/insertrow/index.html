@@ -21,9 +21,9 @@ translation_of: Web/API/HTMLTableElement/insertRow
 <pre class="syntaxbox">var <em>ligne</em> = <em>HTMLTableElement</em>.insertRow(<em>optionnel indice = -1</em>);</pre>
 
 <ul>
- <li><a href="/en-US/docs/DOM/HTMLTableElement" title="DOM/HTMLTableElement"><code>HTMLTableElement</code></a> est une référence à un élément table HTML.</li>
+ <li><a href="/en-US/docs/DOM/HTMLTableElement"><code>HTMLTableElement</code></a> est une référence à un élément table HTML.</li>
  <li><code>indice</code> est l'indice de ligne de la nouvelle ligne.</li>
- <li><code>ligne</code> reçoit la référence à la nouvelle ligne. Une référence à un <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLTableRowElement">HTMLTableRowElement</a>. Si l'indice est -1 ou est égal au nombre de lignes, la ligne est ajoutée comme dernière ligne. Si <code>indice</code> est plus grand que le nombre de lignes, une exception IndexSizeError sera générée. Si indice est omis, sa  valeur sera -1 par défaut.</li>
+ <li><code>ligne</code> reçoit la référence à la nouvelle ligne. Une référence à un <a href="/en-US/docs/Web/API/HTMLTableRowElement">HTMLTableRowElement</a>. Si l'indice est -1 ou est égal au nombre de lignes, la ligne est ajoutée comme dernière ligne. Si <code>indice</code> est plus grand que le nombre de lignes, une exception IndexSizeError sera générée. Si indice est omis, sa  valeur sera -1 par défaut.</li>
  <li>Si une table a plusieurs éléments <code>tbody</code>, par défaut, la nouvelle ligne est ajoutée dans le dernier <code>tbody</code>. Pour insérer la ligne dans un <code>tbody</code> particulier :<br>
   <code>var <em>tbody_particulier</em></code><code>=document.getElementById(<em>id_tbody</em>);<br>
   var <em>ligne</em>=tbody_particulier.</code><code>insertRow(<em>indice</em>)</code></li>
@@ -60,7 +60,7 @@ ajouteLigne('TableA');
 
 <p>Pour être valide dans un document HTML, un élément TR doit avoir au moins un élément TD.</p>
 
-<p>Remarquez que <code>insertRow</code> insère directement la ligne dans la table et renvoie une référence à la nouvelle ligne. La ligne n'a pas besoin d'être ajoutée séparement comme cela aurait été le cas si <code><a href="/en-US/docs/DOM/document.createElement" title="DOM/document.createElement">document.createElement()</a></code> avait été utilisé pour créer un nouvel élement TR.</p>
+<p>Remarquez que <code>insertRow</code> insère directement la ligne dans la table et renvoie une référence à la nouvelle ligne. La ligne n'a pas besoin d'être ajoutée séparement comme cela aurait été le cas si <code><a href="/en-US/docs/DOM/document.createElement">document.createElement()</a></code> avait été utilisé pour créer un nouvel élement TR.</p>
 
 <h2 id="Spécifications">Spécifications</h2>
 

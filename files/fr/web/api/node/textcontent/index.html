@@ -21,8 +21,8 @@ element.textContent = "ceci est un simple exemple de texte";
 <h2 id="Notes">Description</h2>
 
 <ul>
- <li><code>textContent</code> renvoie <code>null</code> si l'élément est un <a href="https://developer.mozilla.org/fr/docs/Web/API/document">document</a>, un type de document (doctype) ou une notation. Pour saisir toutes les données textuelles et CDATA pour l'ensemble du document, on peut utiliser <code> <a href="https://developer.mozilla.org/fr/docs/Web/API/document/documentElement">document.documentElement</a>.textContent</code> .</li>
- <li>Si le nœud est une section CDATA, un commentaire, une instruction de traitement ou un nœud texte, <code>textContent</code> renvoie le texte à l'intérieur du nœud (la valeur <a href="https://developer.mozilla.org/fr/docs/Web/API/Node/nodeValue">nodeValue</a>).</li>
+ <li><code>textContent</code> renvoie <code>null</code> si l'élément est un <a href="/fr/docs/Web/API/document">document</a>, un type de document (doctype) ou une notation. Pour saisir toutes les données textuelles et CDATA pour l'ensemble du document, on peut utiliser <code> <a href="/fr/docs/Web/API/document/documentElement">document.documentElement</a>.textContent</code> .</li>
+ <li>Si le nœud est une section CDATA, un commentaire, une instruction de traitement ou un nœud texte, <code>textContent</code> renvoie le texte à l'intérieur du nœud (la valeur <a href="/fr/docs/Web/API/Node/nodeValue">nodeValue</a>).</li>
  <li>Pour les autres types de nœuds, <code>textContent</code> renvoie la concaténation des valeurs de propriété <code>textContent</code> de chaque nœud enfant, à l'exception des commentaires et nœuds d'instructions de traitement. Si le nœud n'a pas d'enfants, il s'agira d'une chaîne vide.</li>
  <li>En définissant cette propriété sur un nœud, on enlève tous ses enfants et ceux-ci sont remplacés par un seul nœud texte avec la valeur donnée.</li>
 </ul>

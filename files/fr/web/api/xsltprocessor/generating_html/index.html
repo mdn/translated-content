@@ -16,13 +16,13 @@ original_slug: XSLT_dans_Gecko/Génération_de_HTML
 
 <p>Une application courante de XSLT dans les navigateurs est la transformation de code XML en HTML du coté du client. Le second exemple va transformer un document d'entrée (example2.xml), qui contient des informations à propos d'un article, en un document HTML.</p>
 
-<p>L'élément <code>&lt;body&gt;</code> de l'article contient maintenant des éléments HTML (des balises <code>&lt;strong&gt;</code> et <code>&lt;em&gt;</code>, voir la figure 2). Le document XML contient à la fois des éléments HTML et éléments XML, mais un seul espace de nommage est nécessaire, pour les éléments XML. Comme il n'existe pas d'espace de nommage HTML, et que l'utilisation de l'espace de nommage XHTML forcerait le XSL à créer un document XML qui pourrait ne pas se comporter comme un document HTML, le nœud <code>xsl:output</code> de la feuille de style assure que le document résultant sera bien traité comme du HTML. Pour les éléments XML, nous avons besoin de notre propre espace de nommage, <code><a class="external" href="http://devedge.netscape.com/2002/de" rel="freelink">http://devedge.netscape.com/2002/de</a></code>, à qui nous donnons le préfixe myNS <code>(xmlns:myNS="http://devedge.netscape.com/2002/de")</code>.</p>
+<p>L'élément <code>&lt;body&gt;</code> de l'article contient maintenant des éléments HTML (des balises <code>&lt;strong&gt;</code> et <code>&lt;em&gt;</code>, voir la figure 2). Le document XML contient à la fois des éléments HTML et éléments XML, mais un seul espace de nommage est nécessaire, pour les éléments XML. Comme il n'existe pas d'espace de nommage HTML, et que l'utilisation de l'espace de nommage XHTML forcerait le XSL à créer un document XML qui pourrait ne pas se comporter comme un document HTML, le nœud <code>xsl:output</code> de la feuille de style assure que le document résultant sera bien traité comme du HTML. Pour les éléments XML, nous avons besoin de notre propre espace de nommage, <code><a href="http://devedge.netscape.com/2002/de" rel="freelink">http://devedge.netscape.com/2002/de</a></code>, à qui nous donnons le préfixe myNS <code>(xmlns:myNS="http://devedge.netscape.com/2002/de")</code>.</p>
 
 <p><small><strong>Figure 2 : fichier XML (example2.xml)voir l'exemple | voir le source</strong></small> Document XML (example2.xml): &lt;div style="background: #EEE; font-size: 1.1em; line-height: 1.1em; border: dashed #666 1px; padding: 15px 20px 15px 20px; overflow: auto;"&gt;</p>
 
 <pre class="eval">&lt;?xml version="1.0"?&gt;
 &lt;?xml-stylesheet type="text/xsl" href="example.xsl"?&gt;
-  &lt;myNS:Article xmlns:myNS="<a class="external" href="http://devedge.netscape.com/2002/de" rel="freelink">http://devedge.netscape.com/2002/de</a>"&gt;
+  &lt;myNS:Article xmlns:myNS="<a href="http://devedge.netscape.com/2002/de" rel="freelink">http://devedge.netscape.com/2002/de</a>"&gt;
     &lt;myNS:Title&gt;Mon article&lt;/myNS:Title&gt;
     &lt;myNS:Authors&gt;
       &lt;myNS:Author company="Foopy Corp."&gt;M. Foo&lt;/myNS:Author&gt;

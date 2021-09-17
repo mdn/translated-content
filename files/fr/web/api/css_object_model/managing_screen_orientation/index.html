@@ -12,12 +12,12 @@ translation_of: Web/API/CSS_Object_Model/Managing_screen_orientation
 
 <h2 id="Sommaire">Sommaire</h2>
 
-<p>L'orientation de l'écran est quelque chose de légèrement différent de <a href="/fr/docs/WebAPI/Detecting_device_orientation" title="/en-US/docs/WebAPI/Detecting_device_orientation">l'orientation de l'appareil</a>. Même si un appareil n'a pas la capacité de détecter sa propre orientation, un écran en possède toujours une. Et si on est capable de connaître son orientation, il est bon d'avoir la possibilité de contrôler l'orientation de l'écran afin de préserver ou d'adapter l'interface d'une application web.</p>
+<p>L'orientation de l'écran est quelque chose de légèrement différent de <a href="/fr/docs/WebAPI/Detecting_device_orientation">l'orientation de l'appareil</a>. Même si un appareil n'a pas la capacité de détecter sa propre orientation, un écran en possède toujours une. Et si on est capable de connaître son orientation, il est bon d'avoir la possibilité de contrôler l'orientation de l'écran afin de préserver ou d'adapter l'interface d'une application web.</p>
 
 <p>Il y a plusieurs manières de gérer l'orientation de l'écran, à la fois avec CSS et JavaScript:</p>
 
 <ul>
- <li>La première est la <a href="/fr/docs/Web/CSS/Requ%C3%AAtes_m%C3%A9dia/Utiliser_les_Media_queries#orientation" title="en-US/CSS/Media queries#orientation">media query orientation</a>. Cela permet au contenu d'ajuster sa mise en forme à l'aide de CSS, selon que la fenêtre soit en mode paysage (c'est à dire que la largeur est plus grande que la hauteur) ou en mode portrait (que sa hauteur est plus grande que sa largeur).</li>
+ <li>La première est la <a href="/fr/docs/Web/CSS/Requ%C3%AAtes_m%C3%A9dia/Utiliser_les_Media_queries#orientation">media query orientation</a>. Cela permet au contenu d'ajuster sa mise en forme à l'aide de CSS, selon que la fenêtre soit en mode paysage (c'est à dire que la largeur est plus grande que la hauteur) ou en mode portrait (que sa hauteur est plus grande que sa largeur).</li>
  <li>La deuxième est l'API JavaScript d'orientation d'écran, qui peut être utilisée pour récupérer l'orientation en cours de l'écran et éventuellement de la verrouiller.</li>
 </ul>
 
@@ -132,7 +132,7 @@ li {
 <h2 id="Verrouiller_l'orientation_de_l'écran">Verrouiller l'orientation de l'écran</h2>
 
 <div class="warning">
-<p><strong>Attention:</strong> Cette API est expérimentale et est actuellement disponible sur <a href="/en-US/docs/Mozilla/Firefox_OS" title="/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a> et <a href="/en-US/docs/Mozilla/Firefox_for_Android" title="/en-US/docs/Mozilla/Firefox_for_Android">Firefox pour Android</a> avec le préfixe <code>moz</code>, et sur Internet Explorer pour Windows 8.1 et plus avec le préfixe <code>ms</code>.</p>
+<p><strong>Attention:</strong> Cette API est expérimentale et est actuellement disponible sur <a href="/en-US/docs/Mozilla/Firefox_OS">Firefox OS</a> et <a href="/en-US/docs/Mozilla/Firefox_for_Android">Firefox pour Android</a> avec le préfixe <code>moz</code>, et sur Internet Explorer pour Windows 8.1 et plus avec le préfixe <code>ms</code>.</p>
 </div>
 
 <p>Certains appareils (principalement les appareils mobiles) peuvent changer dynamiquement d'orientation d'écran selon leur propre orientation, garantissant que l'utilisateur sera toujours capable de lire ce qu'il y a sur l'écran. Bien que ce comportement soit parfaitement adapté au contenu texte, certains contenus peuvent être affectés négativement par ce changement. Par exemple, les jeux basés sur l'orientation de l'appareil être gachés par un tel changement.</p>
@@ -175,6 +175,6 @@ li {
  <li>{{domxref("Screen.lockOrientation()")}}</li>
  <li>{{domxref("Screen.unlockOrientation()")}}</li>
  <li>{{domxref("Screen.onorientationchange")}}</li>
- <li><a href="/fr/docs/Web/CSS/Requ%C3%AAtes_m%C3%A9dia/Utiliser_les_Media_queries#orientation" title="en-US/CSS/Media queries#orientation">Media query orientation</a></li>
- <li><a class="external" href="http://hacks.mozilla.org/2009/06/media-queries/" title="http://hacks.mozilla.org/2009/06/media-queries/">A short introduction to media queries in Firefox 3.5</a></li>
+ <li><a href="/fr/docs/Web/CSS/Requ%C3%AAtes_m%C3%A9dia/Utiliser_les_Media_queries#orientation">Media query orientation</a></li>
+ <li><a href="http://hacks.mozilla.org/2009/06/media-queries/">A short introduction to media queries in Firefox 3.5</a></li>
 </ul>

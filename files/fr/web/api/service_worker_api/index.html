@@ -19,14 +19,14 @@ translation_of: Web/API/Service_Worker_API
 
 <h2 id="Service_worker_concepts_et_usage">Service worker, concepts et usage</h2>
 
-<p>Un service worker est un <a href="https://developer.mozilla.org/en-US/docs/Web/API/Worker">worker</a> événementiel enregistré auprès d'une origine et d'un chemin. Il prend la forme d'un fichier JavaScript qui peut contrôler la page ou le site web auquel il est associé, en interceptant et en modifiant la navigation et les requêtes de ressources, et en mettant en cache les ressources selon une granularité très fine pour vous donner une maîtrise complète de la manière dont doit se comporter votre application dans certaines situations (l'une des plus évidentes étant l'indisponibilité du réseau.)</p>
+<p>Un service worker est un <a href="/en-US/docs/Web/API/Worker">worker</a> événementiel enregistré auprès d'une origine et d'un chemin. Il prend la forme d'un fichier JavaScript qui peut contrôler la page ou le site web auquel il est associé, en interceptant et en modifiant la navigation et les requêtes de ressources, et en mettant en cache les ressources selon une granularité très fine pour vous donner une maîtrise complète de la manière dont doit se comporter votre application dans certaines situations (l'une des plus évidentes étant l'indisponibilité du réseau.)</p>
 
 <p>Un service worker fonctionne dans le contexte d'un worker : il n'a donc pas d'accès au DOM, et s'exécute dans une tâche différente de celle du script principal de votre application, ainsi il est non-bloquant. Il est conçu pour être totalement asynchrone; en conséquence, des APIs telles que <a href="/fr/docs/Web/API/XMLHttpRequest">XHR</a> en synchrone et <a href="/fr/docs/Web/API/Web_Storage_API">localStorage</a> ne peuvent pas être utilisées au sein d'un service worker.</p>
 
 <p>Les service workers fonctionnent uniquement sur HTTPS, pour des raisons de sécurité. Laisser des requêtes réseau modifiées sans défense face aux attaques de l'homme du milieu est une bien mauvaise chose.</p>
 
 <div class="note">
-<p><strong>Remarque </strong>: les service workers ont rallié à eux des tentatives précédemment effectuées dans les mêmes domaines comme l'API <a class="external" href="http://alistapart.com/article/application-cache-is-a-douchebag">AppCache</a> parce qu'ils ne présument pas de ce que vous essayez de faire et ainsi s'interrompent quand ces suppositions ne sont pas tout à fait exactes; tout peut faire l'objet d'un contrôle d'une granularité très fine.</p>
+<p><strong>Remarque </strong>: les service workers ont rallié à eux des tentatives précédemment effectuées dans les mêmes domaines comme l'API <a href="http://alistapart.com/article/application-cache-is-a-douchebag">AppCache</a> parce qu'ils ne présument pas de ce que vous essayez de faire et ainsi s'interrompent quand ces suppositions ne sont pas tout à fait exactes; tout peut faire l'objet d'un contrôle d'une granularité très fine.</p>
 </div>
 
 <div class="note">
@@ -86,7 +86,7 @@ translation_of: Web/API/Service_Worker_API
 <p>À l'avenir, les service workers seront capables de réaliser nombre d'autres tâches utiles au sein d'une plate-forme web, ce qui les rapprochera de la viabilité des applications natives. Il est intéressant de noter que d'autres spécifications peuvent ou commencent à faire usage du contexte des service workers, par exemple :</p>
 
 <ul>
- <li><a class="external" href="https://github.com/slightlyoff/BackgroundSync">Synchronisation en arrière-plan</a> : démarrer un service worker même lorsqu'aucun utilisateur est sur le site, afin de mettre à jour les caches, etc.</li>
+ <li><a href="https://github.com/slightlyoff/BackgroundSync">Synchronisation en arrière-plan</a> : démarrer un service worker même lorsqu'aucun utilisateur est sur le site, afin de mettre à jour les caches, etc.</li>
  <li><a href="/fr/docs/Web/API/Push_API">Réagir à des messages de push </a>: démarrer un service worker pour envoyer aux utilisateurs un message leur signalant qu'un nouveau contenu est disponible.</li>
  <li>Réagir à une date particulière</li>
  <li>Enregistrer une géo-localisation</li>
@@ -165,10 +165,10 @@ translation_of: Web/API/Service_Worker_API
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a class="external" href="https://serviceworke.rs">ServiceWorker Cookbook</a></li>
+ <li><a href="https://serviceworke.rs">ServiceWorker Cookbook</a></li>
  <li><a href="/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers" lang="fr">Utilisation des Service Workers</a></li>
- <li><a class="external" href="https://github.com/mdn/sw-test">Exemple basique de Service workers</a></li>
- <li><a class="external" href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
+ <li><a href="https://github.com/mdn/sw-test">Exemple basique de Service workers</a></li>
+ <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
  <li><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promises</a></li>
  <li><a href="/fr/docs/Utilisation_des_web_workers">Utilisation des web workers</a></li>
 </ul>

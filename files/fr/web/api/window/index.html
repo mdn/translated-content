@@ -14,7 +14,7 @@ translation_of: Web/API/Window
 
 <p>L'objet <code>window</code> représente une fenêtre contenant un document DOM ; la propriété <code>document</code> pointe vers le <a href="/fr-FR/docs/DOM/document">document DOM</a> chargé dans cette fenêtre. Une fenêtre pour un document donné peut être obtenue en utilisant la propriété {{Domxref("document.defaultView")}}.</p>
 
-<p>Cette section fournit une brève référence pour toutes les méthodes, propriétés et événements disponibles via l'objet DOM <code>window</code>. L'objet <code>window</code> implémente l'interface <code>Window</code>, qui à son tour hérite de l'interface <code><a href="http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView">AbstractView</a></code>. Certaines fonctions globales supplémentaires, espaces de noms, objets, interfaces et constructeurs, non typiquement associés à la fenêtre, mais disponibles sur celle-ci, sont répertoriés dans la <a href="/fr-FR/docs/JavaScript/Reference">Référence JavaScript</a> et la <a href="/fr-FR/docs/Web/API/Document_Object_Model" title="/fr-FR/docs/Web/API/Document_Object_Model">Référence DOM</a>.</p>
+<p>Cette section fournit une brève référence pour toutes les méthodes, propriétés et événements disponibles via l'objet DOM <code>window</code>. L'objet <code>window</code> implémente l'interface <code>Window</code>, qui à son tour hérite de l'interface <code><a href="http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView">AbstractView</a></code>. Certaines fonctions globales supplémentaires, espaces de noms, objets, interfaces et constructeurs, non typiquement associés à la fenêtre, mais disponibles sur celle-ci, sont répertoriés dans la <a href="/fr-FR/docs/JavaScript/Reference">Référence JavaScript</a> et la <a href="/fr-FR/docs/Web/API/Document_Object_Model">Référence DOM</a>.</p>
 
 <p>Dans un navigateur utilisant des onglets, comme Firefox, chaque onglet contient son propre objet <code>window</code> (et si vous écrivez une extension, la fenêtre du navigateur elle-même est un objet <code>window</code> séparé — consultez <a href="/fr/docs/Mozilla/Working_with_windows_in_chrome_code#Fen.C3.AAtres_de_contenu">Travailler avec des fenêtres dans du code chrome</a> pour plus d'informations). C'est-à-dire que l'objet <code>window</code> n'est pas partagé entre les onglets dans la même fenêtre. Certaines méthodes, notamment {{ Domxref("window.resizeTo") }} et {{ Domxref("window.resizeBy") }}, s'appliquent à la fenêtre entière et non à l'onglet spécifique auquel l'objet <code>window</code> appartient. En général, ce qui ne peut raisonnablement pas concerner un onglet se rapporte à la fenêtre à la place.</p>
 
@@ -36,7 +36,7 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.controllers")}}{{non-standard_inline}}{{ReadOnlyInline}}</dt>
  <dd>Renvoie les objets du contrôleur XUL pour la fenêtre chrome en cours.</dd>
  <dt>{{domxref("Window.customElements")}}{{ReadOnlyInline}}</dt>
- <dd>renvoie une référence à l'objet {{domxref("CustomElementRegistry")}}, qui peut être utilisée pour enregistrer de nouveaux <a href="https://developer.mozilla.org/fr-FR/docs/Web/Web_Components/Using_custom_elements">éléments personnalisés</a> et obtenir des informations à propos d'éléments personnalisés précédemment enregistrés.</dd>
+ <dd>renvoie une référence à l'objet {{domxref("CustomElementRegistry")}}, qui peut être utilisée pour enregistrer de nouveaux <a href="/fr-FR/docs/Web/Web_Components/Using_custom_elements">éléments personnalisés</a> et obtenir des informations à propos d'éléments personnalisés précédemment enregistrés.</dd>
  <dt>{{domxref("Window.crypto")}} {{readOnlyInline}}</dt>
  <dd>Retourne l'objet crypto du navigateur.</dd>
  <dt>{{domxref("Window.defaultStatus")}} {{Obsolete_inline("gecko23")}}</dt>
@@ -192,7 +192,7 @@ translation_of: Web/API/Window
  <dd>Affiche une boîte de message d'alerte.</dd>
 </dl>
 
-<p>base64 func <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=287112" rel="freelink">https://bugzilla.mozilla.org/show_bug.cgi?id=287112</a> (see last comments) <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=123003" rel="freelink">https://bugzilla.mozilla.org/show_bug.cgi?id=123003</a> <a class="external" href="http://lxr.mozilla.org/seamonkey/source/dom/src/base/nsGlobalWindow.cpp#4946" rel="freelink">http://lxr.mozilla.org/seamonkey/sou...indow.cpp#4946</a></p>
+<p>base64 func <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=287112">https://bugzilla.mozilla.org/show_bug.cgi?id=287112</a> (see last comments) <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=123003">https://bugzilla.mozilla.org/show_bug.cgi?id=123003</a> <a href="http://lxr.mozilla.org/seamonkey/source/dom/src/base/nsGlobalWindow.cpp#4946">http://lxr.mozilla.org/seamonkey/sou...indow.cpp#4946</a></p>
 
 <dl>
  <dt>{{domxref("Window.back()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
@@ -631,7 +631,7 @@ translation_of: Web/API/Window
 
 <h2 id="Constructeurs">Constructeurs</h2>
 
-<p>Voir aussi les <a href="/fr-FR/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">Interfaces DOM</a>.</p>
+<p>Voir aussi les <a href="/fr-FR/docs/DOM/DOM_Reference">Interfaces DOM</a>.</p>
 
 <dl>
  <dt>{{domxref("DOMParser")}}</dt>
@@ -647,7 +647,7 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.XMLSerializer")}}</dt>
  <dd>{{todo("NeedsContents")}}</dd>
  <dt>{{domxref("Worker")}}</dt>
- <dd>Used for creating a <a href="https://developer.mozilla.org/en-US/docs/DOM/Using_web_workers">Web worker</a></dd>
+ <dd>Used for creating a <a href="/en-US/docs/DOM/Using_web_workers">Web worker</a></dd>
  <dt>{{domxref("Window.XPCNativeWrapper")}}</dt>
  <dd>{{todo("NeedsContents")}}</dd>
  <dt>{{domxref("Window.XPCSafeJSObjectWrapper")}}</dt>

@@ -13,7 +13,7 @@ translation_of: Web/API/DeviceMotionEvent/accelerationIncludingGravity
 ---
 <p>{{ ApiRef("Device Orientation Events") }}</p>
 
-<p>La propriété <strong><code>accelerationIncludingGravity</code></strong> renvoie la valeur d'accélération enregistrée par l'appareil, en <a href="https://fr.wikipedia.org/wiki/M%C3%A8tre_par_seconde_carr%C3%A9e" title="https://en.wikipedia.org/wiki/Meter_per_second_squared">mètres par seconde au carré (m/s<sup>2</sup>)</a>. Contrairement à  {{domxref("DeviceMotionEvent.acceleration")}} qui compense pour tenir compte de l'influence de la gravité, sa valeur est la somme de l'accélération de l'appareil induite par l'utilisateur et de celle provoquée par la gravité.</p>
+<p>La propriété <strong><code>accelerationIncludingGravity</code></strong> renvoie la valeur d'accélération enregistrée par l'appareil, en <a href="https://fr.wikipedia.org/wiki/M%C3%A8tre_par_seconde_carr%C3%A9e">mètres par seconde au carré (m/s<sup>2</sup>)</a>. Contrairement à  {{domxref("DeviceMotionEvent.acceleration")}} qui compense pour tenir compte de l'influence de la gravité, sa valeur est la somme de l'accélération de l'appareil induite par l'utilisateur et de celle provoquée par la gravité.</p>
 
 <p>Cette valeur n'est pas  aussi utile que {{domxref("DeviceMotionEvent.acceleration")}}, mais elle peut être la seule disponible, par exemple pour un appareil qui ne peut supprimer la gravité des données d'accélération puisqu'il ne l'utilise pas, comme les périphériques sans gyroscope.</p>
 
@@ -66,6 +66,6 @@ translation_of: Web/API/DeviceMotionEvent/accelerationIncludingGravity
  <li>{{ domxref("window.ondevicemotion") }}</li>
  <li>{{ event("deviceorientation") }}</li>
  <li>{{ domxref("DeviceOrientationEvent") }}</li>
- <li><a href="https://developer.mozilla.org/fr/docs/WebAPI/Detecting_device_orientation#Accelerometer_values_explained" title="/en-US/docs/WebAPI/Detecting_device_orientation">Détecter l'orientation de l'appareil</a></li>
- <li><a href="https://developer.mozilla.org/fr/docs/Web/Guide/DOM/Events/Les_donn%C3%A9es_d_orientation_et_de_mouvement_expliqu%C3%A9es" title="Orientation and motion data explained">Les données d'orientation et de mouvement expliquées</a></li>
+ <li><a href="/fr/docs/WebAPI/Detecting_device_orientation#Accelerometer_values_explained">Détecter l'orientation de l'appareil</a></li>
+ <li><a href="/fr/docs/Web/Guide/DOM/Events/Les_donn%C3%A9es_d_orientation_et_de_mouvement_expliqu%C3%A9es">Les données d'orientation et de mouvement expliquées</a></li>
 </ul>

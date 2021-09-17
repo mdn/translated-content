@@ -199,7 +199,7 @@ function load() {
 
 <h2 id="Exemple_6_:_getComputedStyle">Exemple 6 : getComputedStyle</h2>
 
-<p>Cet exemple montre comment la méthode {{domxref("window.getComputedStyle")}} peut être utilisée pour obtenir les styles d'un élément qui ne sont pas définis dans l'attribut <code>style</code> ou à l'aide de JavaScript (c'est-à-dire, <code>elem.style.backgroundColor="rgb(173, 216, 230)"</code>). Ces derniers types de styles peuvent être récupérés avec la propriété plus directe {{domxref("element.style", "elt.style")}} , dont les propriétés sont listées dans la <a href="https://developer.mozilla.org/fr/docs/Web/CSS/Reference">liste des propriétés DOM CSS</a>.</p>
+<p>Cet exemple montre comment la méthode {{domxref("window.getComputedStyle")}} peut être utilisée pour obtenir les styles d'un élément qui ne sont pas définis dans l'attribut <code>style</code> ou à l'aide de JavaScript (c'est-à-dire, <code>elem.style.backgroundColor="rgb(173, 216, 230)"</code>). Ces derniers types de styles peuvent être récupérés avec la propriété plus directe {{domxref("element.style", "elt.style")}} , dont les propriétés sont listées dans la <a href="/fr/docs/Web/CSS/Reference">liste des propriétés DOM CSS</a>.</p>
 
 <p><code>getComputedStyle()</code> renvoie un objet <code>ComputedCSSStyleDeclaration</code>, dont les propriétés de style individuelles peuvent être référencées à l'aide de sa méthode <code>getPropertyValue()</code> comme montré dans l'exemple suivant.</p>
 
@@ -260,7 +260,7 @@ function cStyles() {
 
 <p>Cet exemple utilise des méthodes DOM pour afficher les propriétés d'un objet {{domxref("window.onload")}} {{domxref("event")}}   et leurs valeurs dans un tableau. Il montre également une technique utile utilisant une boucle <code>for..in</code> pour parcourir les propriétés d'un objet et obtenir leurs valeurs.</p>
 
-<p>Les propriétés des objets <code>event</code> diffèrent sensiblement entre les différents navigateurs, la <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events/events.html">spécification norme DOM</a> liste les propriétés standard, mais beaucoup de navigateurs ont ajouté un bon nombre de propriétés supplémentaires.</p>
+<p>Les propriétés des objets <code>event</code> diffèrent sensiblement entre les différents navigateurs, la <a href="http://www.w3.org/TR/DOM-Level-2-Events/events.html">spécification norme DOM</a> liste les propriétés standard, mais beaucoup de navigateurs ont ajouté un bon nombre de propriétés supplémentaires.</p>
 
 <p>Placez le code qui suit dans une fichier texte vide et chargez-le dans différents navigateurs, vous serez surpris des différences entre le nombre et le nom des propriétés. Vous pouvez également ajouter quelques éléments à la page et appeler cette fonction depuis d'autres gestionnaires d'évènements.</p>
 
@@ -357,14 +357,14 @@ for (var i = 0; i &lt; 2; i++) {
 <ul>
  <li>N'utilisez jamais la propriété {{domxref("element.innerHTML","innerHTML")}} d'un tableau pour le modifier, même si vous pouvez l'utiliser pour créer un tableau entier ou le contenu d'une cellule.</li>
  <li>Si vous utilisez les méthodes DOM Core {{domxref("document.createElement")}} et {{domxref("Node.appendChild")}} pour créer des lignes et cellules de tableau, il est nécessaire de les ajouter à un élément <code>tbody</code> dans Internet Explorer, tandis que les autres navigateurs vous permettront de les ajouter à un élément <code>table</code> (les lignes seront ajoutées au dernier élément <code>tbody</code>).</li>
- <li>Un certain nombre d'autres méthodes utilitaires faisant partie de l'<a href="https://developer.mozilla.org/fr/docs/Web/API/HTMLTableElement#M%C3%A9thodes">interface table</a> peuvent être utilisées pour créer et modifier des tableaux.</li>
+ <li>Un certain nombre d'autres méthodes utilitaires faisant partie de l'<a href="/fr/docs/Web/API/HTMLTableElement#M%C3%A9thodes">interface table</a> peuvent être utilisées pour créer et modifier des tableaux.</li>
 </ul>
 
 <h2 id="Subnav">Subnav</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/fr/docs/Web/API/Document_Object_Model">Référence DOM</a></li>
- <li><a href="https://developer.mozilla.org/fr/docs/Web/API/Document_Object_Model/Introduction">Introduction à DOM</a></li>
- <li><a href="https://developer.mozilla.org/fr/docs/Web/API/Document_Object_Model/Events">Les événements et DOM</a></li>
- <li><a href="https://developer.mozilla.org/fr/docs/Web/API/Document_Object_Model/Exemples">Exemples</a></li>
+ <li><a href="/fr/docs/Web/API/Document_Object_Model">Référence DOM</a></li>
+ <li><a href="/fr/docs/Web/API/Document_Object_Model/Introduction">Introduction à DOM</a></li>
+ <li><a href="/fr/docs/Web/API/Document_Object_Model/Events">Les événements et DOM</a></li>
+ <li><a href="/fr/docs/Web/API/Document_Object_Model/Exemples">Exemples</a></li>
 </ul>

@@ -5,15 +5,15 @@ translation_of: Web/API/LocalFileSystem
 ---
 <div>{{APIRef("File System API")}}{{non-standard_header()}}</div>
 
-<p>L'interface <code>LocalFileSystem</code>, appartenant à l'API <a href="/fr/docs/Web/API/File_and_Directory_Entries_API/Introduction" title="en/DOM/File_API/File_System_APIB">File System</a> fournit un accès à un système de fichier placé dans un bac à sable (<em>sandboxed file system</em>). Les méthodes de cette interface sont implémentées par les objets implémentants <code><a href="/fr/docs/Web/API/Window" title="cn/DOM/window">Window</a></code> ou <code><a href="/fr/docs/Web/API/Worker" title="En/DOM/Worker">Worker</a></code>.</p>
+<p>L'interface <code>LocalFileSystem</code>, appartenant à l'API <a href="/fr/docs/Web/API/File_and_Directory_Entries_API/Introduction">File System</a> fournit un accès à un système de fichier placé dans un bac à sable (<em>sandboxed file system</em>). Les méthodes de cette interface sont implémentées par les objets implémentants <code><a href="/fr/docs/Web/API/Window">Window</a></code> ou <code><a href="/fr/docs/Web/API/Worker">Worker</a></code>.</p>
 
 <h2 id="Concepts_de_base">Concepts de base</h2>
 
 <h3 id="Créer_un_nouvel_espace_de_stockage">Créer un nouvel espace de stockage</h3>
 
-<p>Il est possible de demander l'accès à un système de fichier dans un bac à sable en utilisant la méthode <code>window.requestFileSystem()</code>. Lorsque la création de cet espace est effectuée, une fonction de rappel (<em>callback</em>) est appelée avec un objet <code><a href="/fr/docs/Web/API/FileSystem" title="en/DOM/File_API/File_System_API/FileSystem">FileSystem</a></code> contenant deux propriétés : le nom et la racine du système de fichier ainsi créé.</p>
+<p>Il est possible de demander l'accès à un système de fichier dans un bac à sable en utilisant la méthode <code>window.requestFileSystem()</code>. Lorsque la création de cet espace est effectuée, une fonction de rappel (<em>callback</em>) est appelée avec un objet <code><a href="/fr/docs/Web/API/FileSystem">FileSystem</a></code> contenant deux propriétés : le nom et la racine du système de fichier ainsi créé.</p>
 
-<p>Il est possible d'appeler cette méthode plusieurs fois pour différentes situations : on peut créer un espace de stockage temporaire et/ou un espace de stockage permanent (voir <a href="/fr/docs/Web/API/File_and_Directory_Entries_API/Introduction" title="https://developer.mozilla.org/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API#The_File_System_API_can_use_different_storage_types">l'article sur les concepts de base</a> pour approfondir). On peut ainsi créer un espace de stockage temporaire pour mettre en cache certains fichiers (des images par exemple) afin d'améliorer les performances ou créer un espace de stockage pour des données applicatives (ex. des brouillons de messages créés par l'utilisateur) qui ne devraient pas être supprimées avant d'être répliquées sur les serveurs distants.</p>
+<p>Il est possible d'appeler cette méthode plusieurs fois pour différentes situations : on peut créer un espace de stockage temporaire et/ou un espace de stockage permanent (voir <a href="/fr/docs/Web/API/File_and_Directory_Entries_API/Introduction">l'article sur les concepts de base</a> pour approfondir). On peut ainsi créer un espace de stockage temporaire pour mettre en cache certains fichiers (des images par exemple) afin d'améliorer les performances ou créer un espace de stockage pour des données applicatives (ex. des brouillons de messages créés par l'utilisateur) qui ne devraient pas être supprimées avant d'être répliquées sur les serveurs distants.</p>
 
 <h3 id="Utiliser_un_stockage_persistent">Utiliser un stockage persistent</h3>
 
@@ -37,7 +37,7 @@ navigator.webkitPersistentStorage.requestQuota (
 
 <h3 id="Origine_unique">Origine unique</h3>
 
-<p>Le système de fichier est accessible depuis une seule origine. Cela signifie que votre application ne peut pas lire ou écrire des fichiers dans les systèmes de fichier éventuellement créés par d'autres applications. Par ailleurs, votre application ne peut pas accéder aux fichiers d'un répertoire arbitraire (ex. Mes Images, Mes Documents) sur le disque de l'utilisateur. Pour plus d'informations, voir <a href="/fr/docs/Web/API/File_and_Directory_Entries_API/Introduction" title="https://developer.mozilla.org/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API#Restrictions">l'article d'introduction aux concepts de base</a>.</p>
+<p>Le système de fichier est accessible depuis une seule origine. Cela signifie que votre application ne peut pas lire ou écrire des fichiers dans les systèmes de fichier éventuellement créés par d'autres applications. Par ailleurs, votre application ne peut pas accéder aux fichiers d'un répertoire arbitraire (ex. Mes Images, Mes Documents) sur le disque de l'utilisateur. Pour plus d'informations, voir <a href="/fr/docs/Web/API/File_and_Directory_Entries_API/Introduction">l'article d'introduction aux concepts de base</a>.</p>
 
 <h3 id="Exemple">Exemple</h3>
 
@@ -99,7 +99,7 @@ window.requestFileSystem(window.PERSISTENT, 1024*1024,onInitFs,errorHandler);
  <dt><code>size</code></dt>
  <dd>L'espace de stockage, exprimé en octets, nécessaire à l'application.</dd>
  <dt><code>successCallback</code></dt>
- <dd>Une fonction de rappel à invoquer lorsque le navigateur fournit bien l'accès au système de fichier. Cette fonction reçoit en argument un objet <code><a href="/fr/docs/Web/API/FileSystem" title="en/DOM/File_API/File_System_API/FileSystem">FileSystem</a></code> avec deux propriétés :
+ <dd>Une fonction de rappel à invoquer lorsque le navigateur fournit bien l'accès au système de fichier. Cette fonction reçoit en argument un objet <code><a href="/fr/docs/Web/API/FileSystem">FileSystem</a></code> avec deux propriétés :
  <ul>
   <li><code>name</code> - le nom unique, assigné par le navigateur au système de fichiers.</li>
   <li><code>root</code> - un objet <code>DirectoryEntry</code> en lecture seule qui représente la racine du système de fichier.</li>
@@ -117,7 +117,7 @@ window.requestFileSystem(window.PERSISTENT, 1024*1024,onInitFs,errorHandler);
 
 <h5 id="Exceptions">Exceptions</h5>
 
-<p>Cette méthode peut lever une exception <code><a href="/en-US/docs/Web/API/FileError" title="en/DOM/File_API/File_System_API/FileException">FileError</a></code> avec le code suivant :</p>
+<p>Cette méthode peut lever une exception <code><a href="/en-US/docs/Web/API/FileError">FileError</a></code> avec le code suivant :</p>
 
 <table class="standard-table">
  <thead>
@@ -127,7 +127,7 @@ window.requestFileSystem(window.PERSISTENT, 1024*1024,onInitFs,errorHandler);
   </tr>
   <tr>
    <td><code>SECURITY_ERROR</code></td>
-   <td>L'application n'est pas autorisée à accéder à l'interface <em>File System</em>. Par exemple, il est interdit d'utiliser <code>file://</code>. Pour plus de détails, consulter <a href="/fr/docs/Web/API/File_and_Directory_Entries_API/Introduction#restrictions" title="https://developer.mozilla.org/en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API#You_cannot_run_your_app_from_file:.2F.2F">l'article d'introduction aux concepts de base</a>.</td>
+   <td>L'application n'est pas autorisée à accéder à l'interface <em>File System</em>. Par exemple, il est interdit d'utiliser <code>file://</code>. Pour plus de détails, consulter <a href="/fr/docs/Web/API/File_and_Directory_Entries_API/Introduction#restrictions">l'article d'introduction aux concepts de base</a>.</td>
   </tr>
  </thead>
 </table>
@@ -162,7 +162,7 @@ window.requestFileSystem(window.PERSISTENT, 1024*1024,onInitFs,errorHandler);
 
 <h5 id="Exceptions_2">Exceptions</h5>
 
-<p>Cette méthode peut lever une exception <code><a href="/fr/docs/Web/API/FileError" title="en/DOM/File_API/File_System_API/FileException">FileError</a></code> avec l'un des code suivants :</p>
+<p>Cette méthode peut lever une exception <code><a href="/fr/docs/Web/API/FileError">FileError</a></code> avec l'un des code suivants :</p>
 
 <table class="standard-table">
  <thead>
@@ -195,6 +195,6 @@ window.requestFileSystem(window.PERSISTENT, 1024*1024,onInitFs,errorHandler);
 
 <ul>
  <li>La spécification : {{spec("http://dev.w3.org/2009/dap/file-system/pub/FileSystem/", "File API: Directories and System Specification", "WD")}}</li>
- <li><a href="/fr/docs/Web/API/File_and_Directory_Entries_API/Introduction" title="en/DOM/File_API/File_System_API">La référence pour l'API <em>File System</em></a></li>
- <li><a href="/fr/docs/Web/API/File_and_Directory_Entries_API/Introduction" title="en/DOM/File_APIs/Filesystem/Basic_Concepts_About_the_Filesystem_API">Une introduction aux concepts de base de l'API <em>File System</em></a></li>
+ <li><a href="/fr/docs/Web/API/File_and_Directory_Entries_API/Introduction">La référence pour l'API <em>File System</em></a></li>
+ <li><a href="/fr/docs/Web/API/File_and_Directory_Entries_API/Introduction">Une introduction aux concepts de base de l'API <em>File System</em></a></li>
 </ul>

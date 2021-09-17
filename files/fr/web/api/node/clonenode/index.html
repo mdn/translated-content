@@ -41,7 +41,7 @@ p_prime = p.cloneNode(true);
 
 <h2 id="Notes">Notes</h2>
 
-<p>Cloner un nœud copie tous ses attributs ainsi que leurs valeurs, y compris les auditeurs intrinsèques (en ligne). Il ne copie pas les auditeurs d'évènement ajoutés avec <a href="https://developer.mozilla.org/en-US/docs/DOM/element.addEventListener"><code>addEventListener()</code></a> ou ceux assignés au propriétés d'éléments (par exemple <code>node.onclick = fn</code>). De plus, pour un élément {{HTMLElement("canvas")}} l'image peinte n'est pas copiée.</p>
+<p>Cloner un nœud copie tous ses attributs ainsi que leurs valeurs, y compris les auditeurs intrinsèques (en ligne). Il ne copie pas les auditeurs d'évènement ajoutés avec <a href="/en-US/docs/DOM/element.addEventListener"><code>addEventListener()</code></a> ou ceux assignés au propriétés d'éléments (par exemple <code>node.onclick = fn</code>). De plus, pour un élément {{HTMLElement("canvas")}} l'image peinte n'est pas copiée.</p>
 
 <p>Le nœud dupliqué renvoyé par <code>cloneNode</code> ne fera pas partie du document tant qu'il n'y est pas ajouté via la méthode  {{domxref("Node.appendChild()")}} ou une méthode similaire. De même, il n'a pas de parent tant qu'il n'a pas été ajouté à un autre nœud.</p>
 

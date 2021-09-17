@@ -15,7 +15,7 @@ translation_of: Web/API/Document/createElementNS
 
 <p>Crée un élément avec l'URI de l'espace de noms spécifié et un nom qualifié.</p>
 
-<p>Pour créer un élément sans spécifier d'URI d'espace de noms, utilisez la méthode <a href="https://developer.mozilla.org/fr/docs/Web/API/Document/createElement" title="createElement">createElement </a><a href="https://developer.mozilla.org/fr/docs/Web/API/Document/createElement"> </a>.</p>
+<p>Pour créer un élément sans spécifier d'URI d'espace de noms, utilisez la méthode <a href="/fr/docs/Web/API/Document/createElement">createElement </a><a href="/fr/docs/Web/API/Document/createElement"> </a>.</p>
 
 <h2 id="Syntax">Syntaxe</h2>
 
@@ -25,18 +25,18 @@ translation_of: Web/API/Document/createElementNS
 
 <dl>
  <dt><code>namespaceURI</code></dt>
- <dd>est une chaîne de caractères qui spécifie <a class="external" href="http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI">l'URI de l'espace de noms</a> à associer à l'élément. La propriété <a href="https://developer.mozilla.org/fr/docs/Web/API/Node/namespaceURI">namespaceURI</a> de l'élément créé est initialisée avec la valeur de <code>namespaceURI</code>. voir <a href="#URI_d'espaces_de_nom_valides">URI d'espaces de nom valides</a></dd>
+ <dd>est une chaîne de caractères qui spécifie <a href="http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/glossary.html#dt-namespaceURI">l'URI de l'espace de noms</a> à associer à l'élément. La propriété <a href="/fr/docs/Web/API/Node/namespaceURI">namespaceURI</a> de l'élément créé est initialisée avec la valeur de <code>namespaceURI</code>. voir <a href="#URI_d'espaces_de_nom_valides">URI d'espaces de nom valides</a></dd>
  <dt><code>qualifiedName</code></dt>
- <dd>est une chaîne de caractères qui spécifie le type de l'élément à créer. La propriété <a href="https://developer.mozilla.org/fr/docs/Web/API/Node/nodeName">nodeName</a> de l'élément créé est initialisée avec la valeur de <code>qualifiedName</code></dd>
+ <dd>est une chaîne de caractères qui spécifie le type de l'élément à créer. La propriété <a href="/fr/docs/Web/API/Node/nodeName">nodeName</a> de l'élément créé est initialisée avec la valeur de <code>qualifiedName</code></dd>
  <dt><code>Options </code>Facultatif</dt>
- <dd>Un objet facultatif <code>ElementCreationOptions</code> contient une propriété unique nommée <code>is</code>, dont la valeur est le nom de la balise pour un élément personnalisé défini précédemment à l'aide de  <code>customElements.define()</code> . Pour la rétro-compatibilité avec les versions précédentes de la <a href="https://www.w3.org/TR/custom-elements/">spécification des éléments personnalisés</a>, quelques navigateurs vous permettront de passer ici une chaîne de caractères à la place d'un objet, pour laquelle la valeur est un nom d'élément personnalisé. Voir  <a class="external external-icon" href="https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml">Extending native HTML elements</a>  pour plus d'informations sur la façon d'utiliser ce paramètre.</dd>
+ <dd>Un objet facultatif <code>ElementCreationOptions</code> contient une propriété unique nommée <code>is</code>, dont la valeur est le nom de la balise pour un élément personnalisé défini précédemment à l'aide de  <code>customElements.define()</code> . Pour la rétro-compatibilité avec les versions précédentes de la <a href="https://www.w3.org/TR/custom-elements/">spécification des éléments personnalisés</a>, quelques navigateurs vous permettront de passer ici une chaîne de caractères à la place d'un objet, pour laquelle la valeur est un nom d'élément personnalisé. Voir  <a href="https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml">Extending native HTML elements</a>  pour plus d'informations sur la façon d'utiliser ce paramètre.</dd>
  <dd>Le nouvel élément recevra un attribut <code>is</code> dont la valeur est le nom de la balise de l'élément personnalisé. Les éléments personnalisés sont une fonctionnalité expérimentale disponible uniquement dans certains navigateurs.</dd>
 </dl>
 
 <h3 id="Valeur_de_retour">Valeur de retour</h3>
 
 <dl>
- <dd>Le nouvel <code><a href="https://developer.mozilla.org/fr/docs/Web/API/Element" title="DOM/element">element</a></code>.</dd>
+ <dd>Le nouvel <code><a href="/fr/docs/Web/API/Element">element</a></code>.</dd>
 </dl>
 
 <h2 id="Example">URI d'espaces de nom valides</h2>
@@ -50,7 +50,7 @@ translation_of: Web/API/Document/createElementNS
 
 <h2 id="Example">Exemple</h2>
 
-<p>Cet exemple crée un nouvel élément &lt;div&gt; dans l'espace de noms <a href="https://developer.mozilla.org/fr/docs/XHTML" title="XHTML">XHTML</a> et l'ajoute à l'élément vbox. Bien que ce ne soit pas un document <a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL" title="XUL">XUL</a> très utile, cela montre l'utilisation d'éléments de deux espaces de noms différents au sein d'un même document :</p>
+<p>Cet exemple crée un nouvel élément &lt;div&gt; dans l'espace de noms <a href="/fr/docs/XHTML">XHTML</a> et l'ajoute à l'élément vbox. Bien que ce ne soit pas un document <a href="/fr/docs/Mozilla/Tech/XUL">XUL</a> très utile, cela montre l'utilisation d'éléments de deux espaces de noms différents au sein d'un même document :</p>
 
 <pre class="brush:xml">&lt;?xml version="1.0"?&gt;
 &lt;page xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
@@ -111,6 +111,6 @@ translation_of: Web/API/Document/createElementNS
 <ul>
  <li><a href="document.createElement">document.createElement</a></li>
  <li><a href="document.createTextNode">document.createTextNode</a></li>
- <li><a href="https://developer.mozilla.org/fr/docs/Web/API/Node/namespaceURI">Node.namespaceURI</a></li>
- <li><a class="external external-icon" href="http://www.w3.org/TR/1999/REC-xml-names-19990114">Namespaces in XML</a></li>
+ <li><a href="/fr/docs/Web/API/Node/namespaceURI">Node.namespaceURI</a></li>
+ <li><a href="http://www.w3.org/TR/1999/REC-xml-names-19990114">Namespaces in XML</a></li>
 </ul>

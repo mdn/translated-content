@@ -11,7 +11,7 @@ translation_of: Web/API/Element/getElementsByTagName
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p>La méthode <code><strong>Element.getElementsByTagName()</strong></code> retourne une liste des éléments portant le <a href="https://developer.mozilla.org/fr/docs/Web/API/Element/tagName" title="fr/DOM/element.tagName">nom de balise</a> donné. La recherche porte sur le sous-arbre de l'élément spécifié, à l'exception de cet élément lui-même. La liste retournée est <em>live</em>, c'est à dire qu'elle se met à jour automatiquement à chaque changement de l'arbre DOM. Par conséquent, il n'est pas nécessaire d'appeller plusieurs fois  <code>Element.getElementsByTagName()</code>  avec le même élément et les mêmes arguments.</p>
+<p>La méthode <code><strong>Element.getElementsByTagName()</strong></code> retourne une liste des éléments portant le <a href="/fr/docs/Web/API/Element/tagName">nom de balise</a> donné. La recherche porte sur le sous-arbre de l'élément spécifié, à l'exception de cet élément lui-même. La liste retournée est <em>live</em>, c'est à dire qu'elle se met à jour automatiquement à chaque changement de l'arbre DOM. Par conséquent, il n'est pas nécessaire d'appeller plusieurs fois  <code>Element.getElementsByTagName()</code>  avec le même élément et les mêmes arguments.</p>
 
 <p>Quand elle est appelée sur un élément HTML dans un document HTML, <code>getElementsByTagName </code>place son argument en minuscule avant de continuer. Cela n'est pas souhaitable lorsque vous tentez de faire correspondre des éléments SVG " camel-cased"  dans une sous-arborescence dans un document HTML. {{domxref("Element.getElementsByTagNameNS()")}} fonctionne dans ce cas.</p>
 

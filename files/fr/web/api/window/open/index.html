@@ -20,7 +20,7 @@ translation_of: Web/API/Window/open
 
 <dl>
  <dt><code>WindowObjectReference</code></dt>
- <dd>Il s'agit de la référence pointant vers la fenêtre de navigation nouvellement créée. Cette référence est la valeur renvoyée par la méthode <code>open()</code> ; elle sera à <code>null</code> si pour une raison ou une autre l'appel n'a pas réussi à ouvrir une fenêtre. Une variable globale est le meilleur endroit pour stocker une telle référence. Il est alors possible, par exemple, de l'utiliser pour obtenir certaines propriétés de la nouvelle fenêtre, ou accéder à certaines de ses méthodes, à condition que la relation entre votre fenêtre principale et votre fenêtre secondaire se conforme avec les paramètres de sécurité de même origine (<em><a class="external" href="http://www.mozilla.org/projects/security/components/same-origin.html">Same origin policy</a> security requirements</em> ).</dd>
+ <dd>Il s'agit de la référence pointant vers la fenêtre de navigation nouvellement créée. Cette référence est la valeur renvoyée par la méthode <code>open()</code> ; elle sera à <code>null</code> si pour une raison ou une autre l'appel n'a pas réussi à ouvrir une fenêtre. Une variable globale est le meilleur endroit pour stocker une telle référence. Il est alors possible, par exemple, de l'utiliser pour obtenir certaines propriétés de la nouvelle fenêtre, ou accéder à certaines de ses méthodes, à condition que la relation entre votre fenêtre principale et votre fenêtre secondaire se conforme avec les paramètres de sécurité de même origine (<em><a href="http://www.mozilla.org/projects/security/components/same-origin.html">Same origin policy</a> security requirements</em> ).</dd>
 </dl>
 
 <dl>
@@ -83,7 +83,7 @@ function openRequestedPopup() {
 <p><strong>Astuce</strong> : Si vous utilisez le paramètre <var>strWindowFeatures</var>, listez uniquement les fonctionnalités dont vous avez besoin, qui doivent être activées ou affichées. Les autres (à l'exception de <var>titlebar</var> et <var>close</var>) seront désactivées ou enlevées.</p>
 </div>
 
-<p style="border: 1px dotted green;"><img alt="Illustration des barres d'outils du chrome de Firefox" class="internal" src="/@api/deki/files/1286/=FirefoxChromeToolbarsDescription7a.png"></p>
+<p><img alt="Illustration des barres d'outils du chrome de Firefox" src="/@api/deki/files/1286/=FirefoxChromeToolbarsDescription7a.png"></p>
 
 <h4 id="Fonctionnalit.C3.A9s_de_position_et_de_taille">Fonctionnalités de position et de taille</h4>
 
@@ -162,22 +162,22 @@ function openRequestedPopup() {
 <dl>
  <dt>menubar </dt>
  <dd>Si cette fonctionnalité est définie à <var>yes</var>, la nouvelle fenêtre secondaire disposera d'une barre de menus.</dd>
- <dd>Les utilisateurs de Mozilla et Firefox peuvent obliger les nouvelles fenêtres à toujours avoir une barre de menus en positionnant <code>dom.disable_window_open_feature.menubar</code> à <var>true</var> dans <kbd>about:config</kbd> ou dans leur <a class="external" href="http://www.mozilla.org/support/firefox/edit#user">fichier user.js</a>.</dd>
+ <dd>Les utilisateurs de Mozilla et Firefox peuvent obliger les nouvelles fenêtres à toujours avoir une barre de menus en positionnant <code>dom.disable_window_open_feature.menubar</code> à <var>true</var> dans <kbd>about:config</kbd> ou dans leur <a href="http://www.mozilla.org/support/firefox/edit#user">fichier user.js</a>.</dd>
  <dd>Reconnu par : , , , ,</dd>
 </dl>
 
 <dl>
  <dt>toolbar </dt>
  <dd>Si cette fonctionnalité est définie à <var>yes</var>, la nouvelle fenêtre secondaire disposera d'une barre de navigation (boutons Précédente, Suivante, Actualiser et Arrêter). En plus de la barre de navigation, les navigateurs basés sur Mozilla afficheront également la barre d'onglets si elle est toujours visible et présente dans la fenêtre parente.</dd>
- <dd>Les utilisateurs de Mozilla et Firefox peuvent obliger les nouvelles fenêtres à toujours afficher la barre de navigation en positionnant <code>dom.disable_window_open_feature.toolbar</code> à <var>true</var> dans <kbd>about:config</kbd> ou dans leur <a class="external" href="http://www.mozilla.org/support/firefox/edit#user">fichier user.js</a>.</dd>
+ <dd>Les utilisateurs de Mozilla et Firefox peuvent obliger les nouvelles fenêtres à toujours afficher la barre de navigation en positionnant <code>dom.disable_window_open_feature.toolbar</code> à <var>true</var> dans <kbd>about:config</kbd> ou dans leur <a href="http://www.mozilla.org/support/firefox/edit#user">fichier user.js</a>.</dd>
  <dd>Reconnu par : , , , ,</dd>
 </dl>
 
 <dl>
  <dt>location </dt>
  <dd>Si cette fonctionnalité est définie à <var>yes</var>, la nouvelle fenêtre secondaire affichera une barre d'adresse (ou d'emplacement).</dd>
- <dd>Les utilisateurs de Mozilla et Firefox peuvent obliger les nouvelles fenêtres à toujours afficher la barre d'adresse en positionnant <code>dom.disable_window_open_feature.location</code> à <var>true</var> dans <kbd>about:config</kbd> ou dans leur <a class="external" href="http://www.mozilla.org/support/firefox/edit#user">fichier user.js</a>.</dd>
- <dd>Notez qu'Internet Explorer 7 force la présence de la barre d'adresse : « Nous pensons que la barre d'adresse est aussi importante pour les utilisateurs <strong>à voir dans les fenêtres pop-up</strong>. Une barre d'adresse manquante crée une opportunité pour un fraudeur de contrefaire une adresse. Pour aider à contrer cela, <strong>IE7 va afficher une barre d'adresse sur toutes les fenêtres de navigation pour aider les utilisateurs à voir où ils sont</strong>. » provenant de <a class="external" href="http://blogs.msdn.com/ie/archive/2005/11/21.aspx">Better Website Identification</a>.</dd>
+ <dd>Les utilisateurs de Mozilla et Firefox peuvent obliger les nouvelles fenêtres à toujours afficher la barre d'adresse en positionnant <code>dom.disable_window_open_feature.location</code> à <var>true</var> dans <kbd>about:config</kbd> ou dans leur <a href="http://www.mozilla.org/support/firefox/edit#user">fichier user.js</a>.</dd>
+ <dd>Notez qu'Internet Explorer 7 force la présence de la barre d'adresse : « Nous pensons que la barre d'adresse est aussi importante pour les utilisateurs <strong>à voir dans les fenêtres pop-up</strong>. Une barre d'adresse manquante crée une opportunité pour un fraudeur de contrefaire une adresse. Pour aider à contrer cela, <strong>IE7 va afficher une barre d'adresse sur toutes les fenêtres de navigation pour aider les utilisateurs à voir où ils sont</strong>. » provenant de <a href="http://blogs.msdn.com/ie/archive/2005/11/21.aspx">Better Website Identification</a>.</dd>
  <dd>Il est également dans les intentions de Mozilla de forcer la présence de la Barre d'adresse dans une prochaine version de Firefox :</dd>
  <dd>
  <div class="bug">{{bug(337344) }}</div>
@@ -191,7 +191,7 @@ function openRequestedPopup() {
 <dl>
  <dt>directories </dt>
  <dd>Si cette fonctionnalité est définie à <var>yes</var>, la nouvelle fenêtre secondaire affichera la barre personnelle dans les navigateurs Netscape 6.x, Netscape 7.x, Mozilla et Firefox. Dans Internet Explorer 5+, la barre de liens sera affichée. En plus de la barre personnelle, les navigateurs Mozilla afficheront la barre de navigation du site si celle-ci est visible et présente dans la fenêtre parente.</dd>
- <dd>Les utilisateurs de Mozilla et Firefox peuvent obliger les nouvelles fenêtres à toujours afficher leur barre personnelle en positionnant<code>dom.disable_window_open_feature.directories</code> à <var>true</var> dans <kbd>about:config</kbd> ou dans leur <a class="external" href="http://www.mozilla.org/support/firefox/edit#user">fichier user.js</a>.</dd>
+ <dd>Les utilisateurs de Mozilla et Firefox peuvent obliger les nouvelles fenêtres à toujours afficher leur barre personnelle en positionnant<code>dom.disable_window_open_feature.directories</code> à <var>true</var> dans <kbd>about:config</kbd> ou dans leur <a href="http://www.mozilla.org/support/firefox/edit#user">fichier user.js</a>.</dd>
  <dd>Reconnu par : , , , ,</dd>
 </dl>
 
@@ -222,7 +222,7 @@ function openRequestedPopup() {
 </div>
 
 <dl>
- <dd>Les utilisateurs de Mozilla et Firefox peuvent obliger les nouvelles fenêtres à être facilement redimensionnables en positionnant <code>dom.disable_window_open_feature.resizable</code> à <var>true</var> dans <kbd>about:config</kbd> ou dans leur <a class="external" href="http://www.mozilla.org/support/firefox/edit#user">fichier user.js</a>.</dd>
+ <dd>Les utilisateurs de Mozilla et Firefox peuvent obliger les nouvelles fenêtres à être facilement redimensionnables en positionnant <code>dom.disable_window_open_feature.resizable</code> à <var>true</var> dans <kbd>about:config</kbd> ou dans leur <a href="http://www.mozilla.org/support/firefox/edit#user">fichier user.js</a>.</dd>
  <dd>Reconnu par : , , , ,</dd>
 </dl>
 
@@ -236,7 +236,7 @@ function openRequestedPopup() {
 </div>
 
 <dl>
- <dd>Les utilisateurs de Mozilla et Firefox peuvent obliger cette option à être toujours activée en positionnant <code>dom.disable_window_open_feature.scrollbars</code> à <var>true</var> dans <kbd>about:config</kbd> ou dans leur <a class="external" href="http://www.mozilla.org/support/firefox/edit#user">fichier user.js</a>.</dd>
+ <dd>Les utilisateurs de Mozilla et Firefox peuvent obliger cette option à être toujours activée en positionnant <code>dom.disable_window_open_feature.scrollbars</code> à <var>true</var> dans <kbd>about:config</kbd> ou dans leur <a href="http://www.mozilla.org/support/firefox/edit#user">fichier user.js</a>.</dd>
  <dd><a href="#Note_sur_les_barres_de_d.C3.A9filement">Note sur les barres de défilement</a></dd>
  <dd>Reconnu par : , , , ,</dd>
 </dl>
@@ -295,7 +295,7 @@ function openRequestedPopup() {
 <dl>
  <dt>titlebar </dt>
  <dd>Par défaut, toutes les nouvelles fenêtres secondaires ont une barre de titre. Si défini à <var>no</var>, ce paramètre enlève la barre de titre de la nouvelle fenêtre secondaire.</dd>
- <dd>Les utilisateurs de Mozilla et Firefox peuvent obliger les nouvelles fenêtres à toujours avoir une barre de titre en positionnant<code>dom.disable_window_open_feature.titlebar</code> à <var>true</var> dans <kbd>about:config</kbd> ou dans leur <a class="external" href="http://www.mozilla.org/support/firefox/edit#user">fichier user.js</a>.</dd>
+ <dd>Les utilisateurs de Mozilla et Firefox peuvent obliger les nouvelles fenêtres à toujours avoir une barre de titre en positionnant<code>dom.disable_window_open_feature.titlebar</code> à <var>true</var> dans <kbd>about:config</kbd> ou dans leur <a href="http://www.mozilla.org/support/firefox/edit#user">fichier user.js</a>.</dd>
  <dd>Reconnu par : , , ,</dd>
 </dl>
 
@@ -319,7 +319,7 @@ function openRequestedPopup() {
 <dl>
  <dt>close </dt>
  <dd>Lorsque défini à <var>no</var>, ce paramètre supprime l'icône système de fermeture de la fenêtre, et l'élément de menu correspondant. Il fonctionnera uniquement pour les fenêtres de dialogue (avec la fonctionnalité <code>dialog</code> activée). <code>close=no</code> a précédence sur <code>minimizable=yes</code>.</dd>
- <dd>Les utilisateurs de Mozilla et Firefox peuvent obliger les nouvelles fenêtres à toujours avoir un bouton de fermeture en positionnant <code>dom.disable_window_open_feature.close</code> à <var>true</var> dans <kbd>about:config</kbd> ou dans leur <a class="external" href="http://www.mozilla.org/support/firefox/edit#user">fichier user.js</a>.</dd>
+ <dd>Les utilisateurs de Mozilla et Firefox peuvent obliger les nouvelles fenêtres à toujours avoir un bouton de fermeture en positionnant <code>dom.disable_window_open_feature.close</code> à <var>true</var> dans <kbd>about:config</kbd> ou dans leur <a href="http://www.mozilla.org/support/firefox/edit#user">fichier user.js</a>.</dd>
  <dd>Reconnu par : , , ,</dd>
 </dl>
 
@@ -375,9 +375,9 @@ l'adoption de Firefox&lt;/a&gt;&lt;/p&gt;
 
 <p>Plus d'informations sur l'utilisation de l'attribut target :</p>
 
-<p><a class="external" href="http://www.la-grange.net/w3c/html4.01/present/frames.html#h-16.3.2">HTML 4.01, section 16.3.2 La sémantique de cible</a></p>
+<p><a href="http://www.la-grange.net/w3c/html4.01/present/frames.html#h-16.3.2">HTML 4.01, section 16.3.2 La sémantique de cible</a></p>
 
-<p><a class="external" href="http://www.htmlhelp.com/fr/faq/html/links.html#new-window">Comment créer un lien qui ouvre une nouvelle fenêtre?</a></p>
+<p><a href="http://www.htmlhelp.com/fr/faq/html/links.html#new-window">Comment créer un lien qui ouvre une nouvelle fenêtre?</a></p>
 
 <p>Vous pouvez également paramétriser la fonction pour la rendre polyvalente, fonctionnelle dans plus de situations, et donc réutilisable dans d'autres scripts et pages Web :</p>
 
@@ -470,7 +470,7 @@ de Firefox&lt;/a&gt;&lt;/p&gt;
 
 <dl>
  <dt>Comment redimensionner une fenêtre en fonction de son contenu ?</dt>
- <dd>Ce n'est pas faisable de manière fiable, car les utilisateurs peuvent empêcher la fenêtre d'être redimensionnée en décochant la case <code style="white-space: normal;">Édition/Préférences/Avancé/Scripts &amp; plugins/Autoriser les scripts à/ Déplacer ou redimensionner des fenêtres existantes</code> dans Mozilla ou <code style="white-space: normal;">Outils/Options/Contenu/Activer JavaScript/Bouton Avancé/Déplacer ou redimensionner des fenêtres existantes</code> dans Firefox, ou en positionnant <code>dom.disable_window_move_resize</code> à <var>true</var> dans <kbd>about:config</kbd> ou encore en éditant leur <a class="external" href="http://www.mozilla.org/support/firefox/edit#user">fichier user.js</a>.</dd>
+ <dd>Ce n'est pas faisable de manière fiable, car les utilisateurs peuvent empêcher la fenêtre d'être redimensionnée en décochant la case <code style="white-space: normal;">Édition/Préférences/Avancé/Scripts &amp; plugins/Autoriser les scripts à/ Déplacer ou redimensionner des fenêtres existantes</code> dans Mozilla ou <code style="white-space: normal;">Outils/Options/Contenu/Activer JavaScript/Bouton Avancé/Déplacer ou redimensionner des fenêtres existantes</code> dans Firefox, ou en positionnant <code>dom.disable_window_move_resize</code> à <var>true</var> dans <kbd>about:config</kbd> ou encore en éditant leur <a href="http://www.mozilla.org/support/firefox/edit#user">fichier user.js</a>.</dd>
 </dl>
 
 <dl>
@@ -483,11 +483,11 @@ de Firefox&lt;/a&gt;&lt;/p&gt;
 
 <dl>
  <dt>Comment ouvrir une ressource référencée par un lien dans un nouvel onglet ? ou dans un onglet spécifique ?</dt>
- <dd>Pour l'instant, ce n'est pas possible. Seul l'utilisateur peut modifier ses préférences avancées pour faire cela. <a class="external" href="http://kmeleon.sourceforge.net/">K-meleon 1.1</a>, un navigateur basé sur Mozilla, donne un contrôle et un pouvoir complet à l'utilisateur sur la manière dont les liens sont ouverts. Certaines extensions avancées donnent également à Mozilla et Firefox un grand pouvoir concernant la manière dont les ressources référencées sont chargées.</dd>
+ <dd>Pour l'instant, ce n'est pas possible. Seul l'utilisateur peut modifier ses préférences avancées pour faire cela. <a href="http://kmeleon.sourceforge.net/">K-meleon 1.1</a>, un navigateur basé sur Mozilla, donne un contrôle et un pouvoir complet à l'utilisateur sur la manière dont les liens sont ouverts. Certaines extensions avancées donnent également à Mozilla et Firefox un grand pouvoir concernant la manière dont les ressources référencées sont chargées.</dd>
 </dl>
 
 <dl>
- <dd>Dans quelques années, la <a class="external" href="http://www.w3.org/TR/2004/WD-css3-hyperlinks-20040224/#target0">propriété target du module CSS3 hyperlien</a> pourrait être implémentée (si le module CSS3 Hyperlink tel qu'il existe à présent est approuvé). Même si cela se fait et lorsque cela se produira, attendez-vous à ce que les développeurs de navigateurs utilisant des onglets donnent un pouvoir de veto à l'utilisateur et un contrôle total de la façon dont les liens peuvent ouvrir des pages Web. La façon d'ouvrir un lien devrait toujours être entièrement sous le contrôle de l'utilisateur.</dd>
+ <dd>Dans quelques années, la <a href="http://www.w3.org/TR/2004/WD-css3-hyperlinks-20040224/#target0">propriété target du module CSS3 hyperlien</a> pourrait être implémentée (si le module CSS3 Hyperlink tel qu'il existe à présent est approuvé). Même si cela se fait et lorsque cela se produira, attendez-vous à ce que les développeurs de navigateurs utilisant des onglets donnent un pouvoir de veto à l'utilisateur et un contrôle total de la façon dont les liens peuvent ouvrir des pages Web. La façon d'ouvrir un lien devrait toujours être entièrement sous le contrôle de l'utilisateur.</dd>
 </dl>
 
 <dl>
@@ -508,7 +508,7 @@ de Firefox&lt;/a&gt;&lt;/p&gt;
 <dl>
  <dt>Je n'arrive pas à accéder aux propriétés de la nouvelle fenêtre secondaire. J'obtiens toujours une erreur dans la console JavaScript disant « Erreur : uncaught exception: Permission denied to get property &lt;property_name or method_name&gt; ». Pourquoi cela ?</dt>
  <dd>Ceci est causé par la restriction de sécurité des scripts entre domaines (aussi appelée<em>Same Origin Policy</em> , « Politique de même origine »). Un script chargé dans une fenêtre (ou cadre) d'une origine donnée (nom de domaine) <strong>ne peut pas obtenir ou modifier</strong> des propriétés d'une autre fenêtre (ou cadre) ou les propriétés d'aucun de ses objets HTML si celle-ci provient d'une autre origine distincte (nom de domaine). C'est pourquoi, avant d'exécuter un script se référant à une fenêtre secondaire depuis la fenêtre principale, le navigateur vérifiera que la fenêtre secondaire possède le même nom de domaine.</dd>
- <dd>Plus d'informations à propos de la restriction de sécurité des scripts entre domaines : <a class="external" href="http://www.mozilla.org/projects/security/components/same-origin.html" rel="freelink">http://www.mozilla.org/projects/secu...me-origin.html</a></dd>
+ <dd>Plus d'informations à propos de la restriction de sécurité des scripts entre domaines : <a href="http://www.mozilla.org/projects/security/components/same-origin.html" rel="freelink">http://www.mozilla.org/projects/secu...me-origin.html</a></dd>
 </dl>
 
 <h3 id="Probl.C3.A8mes_d.27utilisabilit.C3.A9">Problèmes d'utilisabilité</h3>
@@ -546,7 +546,7 @@ de Firefox&lt;/a&gt;&lt;/p&gt;
  <li>Les pseudo-liens « javascript:» ne fonctionnent plus du tout lorsque la gestion de JavaScript est désactivée ou inexistante. Certaines sociétés n'autorisent leurs employés à utiliser le Web que suivant des politiques de sécurité très strictes : JavaScript désactivé, pas de Java, pas d'ActiveX, pas de Flash. Pour diverses raisons (sécurité, accès public, navigateurs texte, etc.), environ 5% à 10% des utilisateurs naviguent sur le Web avec JavaScript désactivé.</li>
  <li>Les liens « javascript: » interfèrent avec les fonctionnalités avancées de la navigation par onglets : entre autres, le clic du milieu sur des liens, le raccourci Ctrl+clic sur un lien, les fonctions de certaines extensions, etc.</li>
  <li>Les liens « javascript: » interfèrent avec le processus d'indexation des pages Web par les moteurs de recherche.</li>
- <li>Les liens « javascript: » interfèrent avec les technologies d'assistance (par exemple les lecteurs vocaux) et diverses applications utilisant le Web (par exemple les <abbr title="Personal Digital Assistant (assistant personnel numérique)">PDA</abbr> ou les navigateurs pour mobiles).</li>
+ <li>Les liens « javascript: » interfèrent avec les technologies d'assistance (par exemple les lecteurs vocaux) et diverses applications utilisant le Web (par exemple les <abbr>PDA</abbr> ou les navigateurs pour mobiles).</li>
  <li>Les liens « javascript: » interfèrent également avec les fonctionnalités de « mouse gestures » proposées par certains navigateurs.</li>
  <li>Le schéma de protocole « javascript: » sera rapporté comme une erreur par les validateurs et vérificateurs de liens.</li>
 </ul>
@@ -554,9 +554,9 @@ de Firefox&lt;/a&gt;&lt;/p&gt;
 <p><strong>Plus d'informations à ce sujet :</strong></p>
 
 <ul>
- <li><a class="external" href="http://www.useit.com/alertbox/20021223.html">Top Ten Web-Design Mistakes of 2002</a>, 6. JavaScript in Links, Jakob Nielsen, Décembre 2002</li>
- <li><a class="external" href="http://www.evolt.org/article/Links_and_JavaScript_Living_Together_in_Harmony/17/20938/">Links &amp; JavaScript Living Together in Harmony</a>, Jeff Howden, Février 2002</li>
- <li><a class="external" href="http://jibbering.com/faq/#FAQ4_24">FAQ de la discussion dans le newsgroup comp.lang.javascript sur les liens "javascript:"</a></li>
+ <li><a href="http://www.useit.com/alertbox/20021223.html">Top Ten Web-Design Mistakes of 2002</a>, 6. JavaScript in Links, Jakob Nielsen, Décembre 2002</li>
+ <li><a href="http://www.evolt.org/article/Links_and_JavaScript_Living_Together_in_Harmony/17/20938/">Links &amp; JavaScript Living Together in Harmony</a>, Jeff Howden, Février 2002</li>
+ <li><a href="http://jibbering.com/faq/#FAQ4_24">FAQ de la discussion dans le newsgroup comp.lang.javascript sur les liens "javascript:"</a></li>
 </ul>
 
 <h5 id="N.27utilisez_jamais_.3Ca_href.3D.22.23.22_onclick.3D.22window.open.28....29.3B.22.3E">N'utilisez jamais <code>&lt;a href="#" onclick="window.open(...);"&gt;</code></h5>
@@ -571,7 +571,7 @@ de Firefox&lt;/a&gt;&lt;/p&gt;
 
 <blockquote>
 <p>« Souvent, les utilisateurs ne remarquent pas qu'une nouvelle fenêtre s'est ouverte, particulièrement si ils utilisent un petit écran où les fenêtres sont agrandies pour utiliser toute la surface de l'écran. Ainsi, l'utilisateur voulant retourner à la page initiale sera dérouté par un bouton<em>Précédente</em> grisé. »<br>
- citation de <a class="external" href="http://www.useit.com/alertbox/990530.html">The Top Ten<em>New</em> Mistakes of Web Design</a>: 2. Opening New Browser Windows, Jakob Nielsen, mai 1999</p>
+ citation de <a href="http://www.useit.com/alertbox/990530.html">The Top Ten<em>New</em> Mistakes of Web Design</a>: 2. Opening New Browser Windows, Jakob Nielsen, mai 1999</p>
 </blockquote>
 
 <p>Lorsque des changements complets de contexte sont identifiés explicitement avant qu'ils se produisent, l'utilisateur peut déterminer s'il désire le faire ou s'y préparer : non seulement il ne sera pas perturbé ni désorienté, mais des utilisateurs plus expérimentés pourront eux-mêmes décider comment ouvrir de tels liens (dans une nouvelle fenêtre ou non, dans la même fenêtre, dans un nouvel onglet ou non, en arrière-plan ou non).</p>
@@ -579,9 +579,9 @@ de Firefox&lt;/a&gt;&lt;/p&gt;
 <p><strong>Références</strong></p>
 
 <ul>
- <li>« Si votre lien crée une nouvelle fenêtre, ou fait apparaitre d'autres fenêtres sur votre affichage, ou déplace le focus du système vers un autre cadre ou une autre fenêtre, alors la chose sympathique à faire est d'indiquer à l'utilisateur que quelque chose de ce genre va se produire. » <a class="external" href="http://www.w3.org/WAI/wcag-curric/sam77-0.htm">World Wide Web Consortium Accessibility Initiative regarding popups</a></li>
- <li>« Utilisez les titres de liens pour donner aux utilisateurs un aperçu d'où chaque lien les emmènera, avant qu'ils aient cliqué dessus. » <a class="external" href="http://www.useit.com/alertbox/991003.html">Ten Good Deeds in Web Design</a>, Jakob Nielsen, octobre 1999</li>
- <li><a class="external" href="http://www.useit.com/alertbox/980111.html">Using Link Titles to Help Users Predict Where They Are Going</a>, Jakob Nielsen, janvier 1998</li>
+ <li>« Si votre lien crée une nouvelle fenêtre, ou fait apparaitre d'autres fenêtres sur votre affichage, ou déplace le focus du système vers un autre cadre ou une autre fenêtre, alors la chose sympathique à faire est d'indiquer à l'utilisateur que quelque chose de ce genre va se produire. » <a href="http://www.w3.org/WAI/wcag-curric/sam77-0.htm">World Wide Web Consortium Accessibility Initiative regarding popups</a></li>
+ <li>« Utilisez les titres de liens pour donner aux utilisateurs un aperçu d'où chaque lien les emmènera, avant qu'ils aient cliqué dessus. » <a href="http://www.useit.com/alertbox/991003.html">Ten Good Deeds in Web Design</a>, Jakob Nielsen, octobre 1999</li>
+ <li><a href="http://www.useit.com/alertbox/980111.html">Using Link Titles to Help Users Predict Where They Are Going</a>, Jakob Nielsen, janvier 1998</li>
 </ul>
 
 <table class="standard-table">
@@ -643,7 +643,7 @@ de Firefox&lt;/a&gt;&lt;/p&gt;
 
 <h3 id="Sp.C3.A9cification">Spécification</h3>
 
-<p>{{ DOM0() }} <code>window.open()</code> ne fait partie d'aucune spécification ou recommandation technique du <abbr title="World Wide Web Consortium">W3C</abbr>.</p>
+<p>{{ DOM0() }} <code>window.open()</code> ne fait partie d'aucune spécification ou recommandation technique du <abbr>W3C</abbr>.</p>
 
 <h3 id="Notes">Notes</h3>
 
@@ -673,7 +673,7 @@ WindowObjectReference = window.open("http://www.wwf.org/",
 
 <p>Les positions et dimensions demandées dans la liste <var>strWindowFeatures</var> ne seront pas respectées et <strong>seront corrigées</strong> si n'importe laquelle de ces valeurs ne permet pas à la fenêtre complète d'être affichée dans la zone de travail des applications du système d'exploitation de l'utilisateur. <strong>Aucune partie de la nouvelle fenêtre ne peut être initialement positionnée hors de l'écran. Ceci est le réglage par défaut de tous les navigateurs basés sur Mozilla.</strong></p>
 
-<p><a class="external" href="http://msdn.microsoft.com/security/productinfo/xpsp2/default.aspx?pull=/library/en-us/dnwxp/html/xpsp2web.asp#xpsp_topic5">Internet Explorer 6 SP2 dispose d'un mécanisme de correction d'erreur similaire</a>, mais celui-ci n'est pas activé par défaut pour tous les niveaux de sécurité : un niveau de sécurité trop bas peut désactiver ce mécanisme de correction d'erreurs.</p>
+<p><a href="http://msdn.microsoft.com/security/productinfo/xpsp2/default.aspx?pull=/library/en-us/dnwxp/html/xpsp2web.asp#xpsp_topic5">Internet Explorer 6 SP2 dispose d'un mécanisme de correction d'erreur similaire</a>, mais celui-ci n'est pas activé par défaut pour tous les niveaux de sécurité : un niveau de sécurité trop bas peut désactiver ce mécanisme de correction d'erreurs.</p>
 
 <h4 id="Note_sur_les_barres_de_d.C3.A9filement">Note sur les barres de défilement</h4>
 
@@ -684,7 +684,7 @@ WindowObjectReference = window.open("http://www.wwf.org/",
  <li>l'utilisateur a augmenté la taille de police du texte via le menu Affichage/Taille du texte (%) dans Mozilla ou Affichage/Taille du texte/Plus grande ou Plus petite dans Firefox</li>
  <li>l'utilisateur a défini une taille minimale de police pour les pages qui est plus grande que celle demandée par l'auteur. Les personnes de plus de 40 ans ou ayant des habitudes particulières de lecture choisissent souvent une taille minimale de police dans les navigateurs basés sur Mozilla.</li>
  <li>l'auteur n'est pas conscient des marges par défaut (et/ou bordures et/ou padding) appliquées à l'élément racine ou nœud <code>body</code> dans les différents navigateurs et versions de ceux-ci</li>
- <li>l'utilisateur utilise une feuille de style utilisateur (<a class="external" href="http://www.mozilla.org/support/firefox/edit#content">userContent.css in Mozilla-based browsers</a>) pour ses habitudes de navigation qui modifie les dimensions habituelles pour ses habitudes de lecture (marges, padding, taille de police par défaut)</li>
+ <li>l'utilisateur utilise une feuille de style utilisateur (<a href="http://www.mozilla.org/support/firefox/edit#content">userContent.css in Mozilla-based browsers</a>) pour ses habitudes de navigation qui modifie les dimensions habituelles pour ses habitudes de lecture (marges, padding, taille de police par défaut)</li>
  <li>l'utilisateur peut personnaliser individuellement la taille (hauteur ou largeur) de la plupart des barres d'outils via son système d'exploitation. Par exemple les bordures de fenêtres, la hauteur de la barre de titre, des menus et des barres de défilement, ainsi que la taille du texte sont entièrement personnalisables par l'utilisateur dans le système d'exploitation Windows XP. Ces dimensions de barres d'outils peuvent également être changées par des thèmes du navigateur, ou du système d'exploitation</li>
  <li>l'auteur ne s'attend pas à ce que la fenêtre de l'utilisateur dispose de barres d'outils spécifiques supplémentaires ; comme des barres de préférences, la barre web developer, des barres d'accessibilité, de blocage de popups et de recherche, etc.</li>
  <li>l'utilisateur utilise des technologies assistives ou addons qui modifient la zone de travail des applications, par exemple Microsoft Magnifier</li>
@@ -694,7 +694,7 @@ WindowObjectReference = window.open("http://www.wwf.org/",
 
 <h4 id="Note_sur_la_barre_d.27.C3.A9tat">Note sur la barre d'état</h4>
 
-<p>Vous devez vous attendre à ce qu'une large majorité des navigateurs affichent la barre d'état, ou qu'une large majorité des utilisateurs voudront forcer sa présence : le mieux est de toujours positionner cette fonctionnalité à yes. De plus, si vous demandez spécifiquement de retirer la barre d'état, les utilisateurs de Firefox ne pourront plus utilser la barre de navigation de site si elle est installée. Dans Mozilla et dans Firefox, toutes les fenêtres peuvent être redimensionnées à partir de la zone inférieure droite de la barre d'état. Celle-ci fournit également des informations sur la connexion http, l'emplacement des ressources hypertextes, la barre de progression du téléchargement, l'icône de chiffrement/connexion sécurisée avec <abbr title="Secure Socket Layer">SSL</abbr> (affichant une icône de cadenas jaune), des icônes de zones de sécurité, de politique de sécurité en matière de cookies, etc. <strong>Enlever la barre d'état retire souvent de très nombreuses fonctionnalités et informations considérées comme utiles (et parfois vitales) par les utilisateurs.</strong></p>
+<p>Vous devez vous attendre à ce qu'une large majorité des navigateurs affichent la barre d'état, ou qu'une large majorité des utilisateurs voudront forcer sa présence : le mieux est de toujours positionner cette fonctionnalité à yes. De plus, si vous demandez spécifiquement de retirer la barre d'état, les utilisateurs de Firefox ne pourront plus utilser la barre de navigation de site si elle est installée. Dans Mozilla et dans Firefox, toutes les fenêtres peuvent être redimensionnées à partir de la zone inférieure droite de la barre d'état. Celle-ci fournit également des informations sur la connexion http, l'emplacement des ressources hypertextes, la barre de progression du téléchargement, l'icône de chiffrement/connexion sécurisée avec <abbr>SSL</abbr> (affichant une icône de cadenas jaune), des icônes de zones de sécurité, de politique de sécurité en matière de cookies, etc. <strong>Enlever la barre d'état retire souvent de très nombreuses fonctionnalités et informations considérées comme utiles (et parfois vitales) par les utilisateurs.</strong></p>
 
 <h4 id="Note_sur_les_probl.C3.A8mes_de_s.C3.A9curit.C3.A9_li.C3.A9s_.C3.A0_la_pr.C3.A9sence_de_la_barre_d.27.C3.A9tat">Note sur les problèmes de sécurité liés à la présence de la barre d'état</h4>
 
@@ -703,7 +703,7 @@ WindowObjectReference = window.open("http://www.wwf.org/",
 <blockquote>
 <p>« Pour les fenêtres ouvertes à l'aide de window.open() :<br>
  Attendez-vous à ce que la barre d'état soit présente, et codez en conséquence. <strong>La barre d'état sera activée par défaut</strong> et fait entre 20 et 25 pixels de haut. (...) »<br>
- citation de <a class="external" href="http://msdn.microsoft.com/security/productinfo/xpsp2/default.aspx?pull=/library/en-us/dnwxp/html/xpsp2web.asp#xpsp_topic5">Fine-Tune Your Web Site for Windows XP Service Pack 2, Browser Window Restrictions in XP SP2</a></p>
+ citation de <a href="http://msdn.microsoft.com/security/productinfo/xpsp2/default.aspx?pull=/library/en-us/dnwxp/html/xpsp2web.asp#xpsp_topic5">Fine-Tune Your Web Site for Windows XP Service Pack 2, Browser Window Restrictions in XP SP2</a></p>
 </blockquote>
 
 <blockquote>
@@ -714,7 +714,7 @@ WindowObjectReference = window.open("http://www.wwf.org/",
  Description détaillée<br>
  <strong>Internet Explorer a été modifié pour ne désactiver la barre d'état pour aucune fenêtre. La barre d'état est toujours visible pour toutes les fenêtres d'Internet Explorer.</strong> (...) Sans ce changement, les fenêtres créées à l'aide de la méthode window.open() peuvent être appelées par des scripts et imiter une fausse interface utilisateur ou bureau, ou pour masquer des informations importantes pour l'utilisateur.<br>
  La barre d'état est une fonction de sécurité des fenêtres d'Internet Explorer qui fournissent à l'utilisateur des informations sur les zones de sécurité. Cette zone ne peut pas être imitée (...)"<br>
- citation de <a class="external" href="http://www.microsoft.com/technet/prodtechnol/winxppro/maintain/sp2brows.mspx#ECAA">Changes to Functionality in Microsoft Windows XP Service Pack 2, Internet Explorer Window Restrictions</a></p>
+ citation de <a href="http://www.microsoft.com/technet/prodtechnol/winxppro/maintain/sp2brows.mspx#ECAA">Changes to Functionality in Microsoft Windows XP Service Pack 2, Internet Explorer Window Restrictions</a></p>
 </blockquote>
 
 <h4 id="Note_sur_le_plein_.C3.A9cran_.28fullscreen.29">Note sur le plein écran (fullscreen)</h4>
@@ -732,11 +732,11 @@ WindowObjectReference = window.open("http://www.wwf.org/",
 <p><em>Références :</em></p>
 
 <ul>
- <li><a class="external" href="http://msdn.microsoft.com/security/productinfo/xpsp2/default.aspx?pull=/library/en-us/dnwxp/html/xpsp2web.asp#xpsp_topic5">Fine-Tune Your Web Site for Windows XP Service Pack 2</a></li>
+ <li><a href="http://msdn.microsoft.com/security/productinfo/xpsp2/default.aspx?pull=/library/en-us/dnwxp/html/xpsp2web.asp#xpsp_topic5">Fine-Tune Your Web Site for Windows XP Service Pack 2</a></li>
 </ul>
 
 <ul>
- <li><a class="external" href="http://www.microsoft.com/technet/prodtechnol/winxppro/maintain/sp2brows.mspx#ECAA">Changes to Functionality in Microsoft Windows XP Service Pack 2, Script sizing of Internet Explorer windows</a></li>
+ <li><a href="http://www.microsoft.com/technet/prodtechnol/winxppro/maintain/sp2brows.mspx#ECAA">Changes to Functionality in Microsoft Windows XP Service Pack 2, Script sizing of Internet Explorer windows</a></li>
 </ul>
 
 <h4 id="Note_sur_la_diff.C3.A9rence_entre_outerHeight_et_height">Note sur la différence entre outerHeight et height</h4>
@@ -747,21 +747,21 @@ WindowObjectReference = window.open("http://www.wwf.org/",
 
 <p><strong>en français :</strong></p>
 
-<p><a class="external" href="http://openweb.eu.org/articles/popup/">Créer des pop-up intelligentes</a> par Fabrice Bonny, OpenWeb</p>
+<p><a href="http://openweb.eu.org/articles/popup/">Créer des pop-up intelligentes</a> par Fabrice Bonny, OpenWeb</p>
 
 <p><strong>en anglais :</strong></p>
 
-<p><a class="external" href="http://www.infimum.dk/HTML/JSwindows.html">JavaScript windows (tutorial)</a> par Lasse Reichstein Nielsen</p>
+<p><a href="http://www.infimum.dk/HTML/JSwindows.html">JavaScript windows (tutorial)</a> par Lasse Reichstein Nielsen</p>
 
-<p><a class="external" href="http://www.accessify.com/tutorials/the-perfect-pop-up.asp">The perfect pop-up (tutorial)</a> par Ian Lloyd</p>
+<p><a href="http://www.accessify.com/tutorials/the-perfect-pop-up.asp">The perfect pop-up (tutorial)</a> par Ian Lloyd</p>
 
-<p><a class="external" href="http://www.gtalbot.org/FirefoxSection/Popup/PopupAndFirefox.html">Popup windows and Firefox (interactive demos)</a> par Gérard Talbot</p>
+<p><a href="http://www.gtalbot.org/FirefoxSection/Popup/PopupAndFirefox.html">Popup windows and Firefox (interactive demos)</a> par Gérard Talbot</p>
 
 <h3 id="R.C3.A9f.C3.A9rences">Références</h3>
 
-<p><a class="external" href="http://www.cs.tut.fi/~jkorpela/www/links.html">Links Want To Be Links</a> by Jukka K. Korpela</p>
+<p><a href="http://www.cs.tut.fi/~jkorpela/www/links.html">Links Want To Be Links</a> by Jukka K. Korpela</p>
 
-<p><a class="external" href="http://www.evolt.org/article/Links_and_JavaScript_Living_Together_in_Harmony/17/20938/">Links &amp; JavaScript Living Together in Harmony</a> by Jeff Howden</p>
+<p><a href="http://www.evolt.org/article/Links_and_JavaScript_Living_Together_in_Harmony/17/20938/">Links &amp; JavaScript Living Together in Harmony</a> by Jeff Howden</p>
 
 
 

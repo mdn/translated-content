@@ -24,14 +24,14 @@ translation_of: Web/API/XSLTProcessor
 
 <dl>
  <dt><code><a href="/en-US/docs/Mozilla/WebIDL_bindings#Throws">[Throws]</a> void </code>{{domxref("XSLTProcessor.importStylesheet")}}<code>(</code>{{domxref("Node")}}<code> styleSheet)</code></dt>
- <dd>Importe une feuille de style XSLT. Si le nœud passé en argument est un nœud de document, vous pouvez passer une transformation XSL complète ou un <a class="external" href="http://www.w3.org/TR/xslt#result-element-stylesheet">transformation d'élèment résultant</a>; sinon, il doit s'agir d'un élèment <code>&lt;xsl:stylesheet&gt;</code> ou <code>&lt;xsl:transform&gt;</code>.</dd>
+ <dd>Importe une feuille de style XSLT. Si le nœud passé en argument est un nœud de document, vous pouvez passer une transformation XSL complète ou un <a href="http://www.w3.org/TR/xslt#result-element-stylesheet">transformation d'élèment résultant</a>; sinon, il doit s'agir d'un élèment <code>&lt;xsl:stylesheet&gt;</code> ou <code>&lt;xsl:transform&gt;</code>.</dd>
  <dt><code><a href="/en-US/docs/Mozilla/WebIDL_bindings#Throws">[Throws]</a> </code>{{domxref("DocumentFragment")}} {{domxref("XSLTProcessor.transformToFragment")}}<code>(</code>{{domxref("Node")}}<code> source, </code>{{domxref("Document")}}<code> owner)</code></dt>
  <dd>Transforme la source du nœud en applicant la fonction {{domxref("XSLTProcessor.importStylesheet()")}}. Le document propriétaire du fragment de document résultant est le nœud propriétaire.</dd>
  <dt><code><a href="/en-US/docs/Mozilla/WebIDL_bindings#Throws">[Throws]</a></code> {{domxref("Document")}} {{domxref("XSLTProcessor.transformToDocument")}}<code>(</code>{{domxref("Node")}}<code> source)</code></dt>
  <dd>
  <p>Transforme la source du nœud en appliquant la feuille de style donnée lors de l'importation à l'aide de la fonction {{domxref ("XSLTProcessor.importStylesheet ()")}}.</p>
 
- <p>L'objet résultant dépend de la <a class="external" href="http://www.w3.org/TR/xslt#output">méthode de sortie</a> de la feuille de style :</p>
+ <p>L'objet résultant dépend de la <a href="http://www.w3.org/TR/xslt#output">méthode de sortie</a> de la feuille de style :</p>
 
  <table class="standard-table">
   <thead>

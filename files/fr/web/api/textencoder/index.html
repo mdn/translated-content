@@ -12,7 +12,7 @@ translation_of: Web/API/TextEncoder
 ---
 <p>{{APIRef("Encoding API")}}{{SeeCompatTable}}</p>
 
-<p><code><strong>TextEncoder</strong></code> prend un flux de points de code en entrée et émet un flux d'octets. Pour une bibliothèque non native plus extensible, voir <a href="/en-US/Add-ons/Code_snippets/StringView" title="/en-US/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code> – une représentation des chaînes de caractères proche de celle de C basée sur les tableaux typés</a>.</p>
+<p><code><strong>TextEncoder</strong></code> prend un flux de points de code en entrée et émet un flux d'octets. Pour une bibliothèque non native plus extensible, voir <a href="/en-US/Add-ons/Code_snippets/StringView"><code>StringView</code> – une représentation des chaînes de caractères proche de celle de C basée sur les tableaux typés</a>.</p>
 
 <div class="blockIndicator note">
 <p><strong>Note</strong>: Firefox, Chrome et Opera ont pour habitude de supporter les types d'encodage autres que <code>utf-8</code> (tels que <code>utf-16</code>, <code>iso-8859-2</code>, <code>koi8</code>, <code>cp1261</code>, et <code>gbk</code>). À partir de Firefox 48 ({{bug(1257877)}}), Chrome 54 (<a href="https://www.chromestatus.com/feature/5630760492990464">ticket</a>) et Opera 41, aucun type d'encodage autre que <code>utf-8</code> n'est disponible, de manière à être en accord avec la <a href="https://www.w3.org/TR/encoding/#dom-textencoder">spécification</a>. Dans tous les cas, passer un type d'encodage au constructeur sera ignoré et un TextEncoder utf-8 sera créé (le {{DOMxRef("TextDecoder")}} permet toujours d'autres types pour le décodage).</p>
@@ -47,7 +47,7 @@ translation_of: Web/API/TextEncoder
 
 <dl>
  <dt>{{DOMxRef("TextEncoder.encode()")}}</dt>
- <dd>Retourne un <a href="/en-US/docs/Web/JavaScript/Typed_arrays/Uint8Array" title="/en-US/docs/Web/JavaScript/Typed_arrays/Uint8Array"><code>Uint8Array</code></a> conternant un texte encodé en utf-8.</dd>
+ <dd>Retourne un <a href="/en-US/docs/Web/JavaScript/Typed_arrays/Uint8Array"><code>Uint8Array</code></a> conternant un texte encodé en utf-8.</dd>
 </dl>
 
 <h2 id="Prothèse_d'émulation">Prothèse d'émulation</h2>
@@ -143,7 +143,7 @@ translation_of: Web/API/TextEncoder
 
 <ul>
  <li>The {{DOMxRef("TextDecoder")}} interface describing the inverse operation.</li>
- <li><a href="/en-US/Add-ons/Code_snippets/StringView" title="/en-US/docs/Web/JavaScript/Typed_arrays/StringView"><code>StringView</code></a> – a C-like representation of strings based on typed arrays</li>
- <li>A <a href="https://github.com/inexorabletash/text-encoding" title="http://code.google.com/p/stringencoding/">shim</a> allowing to use this interface in browsers that don't support it.</li>
+ <li><a href="/en-US/Add-ons/Code_snippets/StringView"><code>StringView</code></a> – a C-like representation of strings based on typed arrays</li>
+ <li>A <a href="https://github.com/inexorabletash/text-encoding">shim</a> allowing to use this interface in browsers that don't support it.</li>
  <li><code><a href="/en-US/docs/Components.utils.importGlobalProperties">Components.utils.importGlobalProperties</a></code></li>
 </ul>

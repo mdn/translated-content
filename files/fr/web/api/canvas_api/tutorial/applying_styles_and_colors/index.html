@@ -12,7 +12,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Ajout_de_styles_et_de_couleurs
 ---
 <div>{{CanvasSidebar}} {{PreviousNext("Tutoriel_canvas/Formes_géométriques", "Dessin_de_texte_avec_canvas")}}</div>
 
-<p>Dans le chapitre sur <a href="https://developer.mozilla.org/fr/docs/Tutoriel_canvas/Formes_g%C3%A9om%C3%A9triques" title="/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">les formes géométriques</a>, nous avons utilisé les styles de lignes et de remplissage par défaut. Ici, nous allons explorer les options de canvas à notre disposition pour rendre nos dessins un peu plus attrayants. Vous apprendrez comment ajouter des couleurs différentes, des styles de ligne, des dégradés, des motifs et des ombres à vos dessins.</p>
+<p>Dans le chapitre sur <a href="/fr/docs/Tutoriel_canvas/Formes_g%C3%A9om%C3%A9triques">les formes géométriques</a>, nous avons utilisé les styles de lignes et de remplissage par défaut. Ici, nous allons explorer les options de canvas à notre disposition pour rendre nos dessins un peu plus attrayants. Vous apprendrez comment ajouter des couleurs différentes, des styles de ligne, des dégradés, des motifs et des ombres à vos dessins.</p>
 
 <h2 id="Colors">Les couleurs</h2>
 
@@ -229,7 +229,7 @@ ctx.fillStyle = "rgba(255, 0, 0, .5)";
 
 <p>Pour l'obtention de lignes nettes, il faut comprendre comment les lignes sont tracées. Ci-dessous, la grille représente la grille de coordonnées. Les carrés sont des pixels réels de l'écran. Dans la première grille, un rectangle (2,1) à (5,5) est rempli. La zone entière couverte par les lignes (rouge clair) tombe sur les limites des pixels, de sorte que le rectangle rempli résultant aura des bords nets.</p>
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/201/Canvas-grid.png"></p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/201/Canvas-grid.png"></p>
 
 <p>Si vous considérez un tracé de (3,1) à (3,5) avec une épaisseur de ligne de <code>1.0</code>, vous vous retrouvez dans la situation de la deuxième grille. La surface réelle à remplir (bleu foncé) se prolonge seulement à moitié sur les pixels de part et d'autre du chemin. Une approximation de ceci doit être rendue, ce qui signifie que ces pixels sont partiellement ombrés, et le résultat est que toute la zone (le bleu clair et bleu foncé) est remplie avec une couleur moitié moins sombre que la couleur du tracé attendu. C'est ce qui arrive avec la largeur de <code>1.0</code> dans l'exemple précédent.</p>
 
@@ -412,7 +412,7 @@ draw();</pre>
 
 <p><code>setLineDash</code> et <code>lineDashOffset</code> précisent le modèle de lignes. <code>setLineDash</code> accepte une liste de nombres qui spécifie les distances pour dessiner alternativement une ligne et un espace et <code>lineDashOffset</code> définit un décalage pour commencer le motif.</p>
 
-<p>Dans cet exemple, nous créons un effet de fourmis en marche. C'est une technique d'animation souvent employée dans les  sélections d'outils des programmes graphiques. Cet effet permet à l'utilisateur de distinguer la frontière de l'image de fond de la sélection en animant la frontière. Dans une partie de ce tutoriel, vous pouvez apprendre comment faire cela et d'autres animations de base <a href="/fr/docs/Web/API/Canvas_API/Tutorial/Basic_animations" title="/fr/docs/Web/API/Canvas_API/Tutorial/Basic_animations">animation basiques.</a><a href="https://developer.mozilla.org/fr/docs/Tutoriel_canvas/Animations_basiques">.</a></p>
+<p>Dans cet exemple, nous créons un effet de fourmis en marche. C'est une technique d'animation souvent employée dans les  sélections d'outils des programmes graphiques. Cet effet permet à l'utilisateur de distinguer la frontière de l'image de fond de la sélection en animant la frontière. Dans une partie de ce tutoriel, vous pouvez apprendre comment faire cela et d'autres animations de base <a href="/fr/docs/Web/API/Canvas_API/Tutorial/Basic_animations">animation basiques.</a><a href="/fr/docs/Tutoriel_canvas/Animations_basiques">.</a></p>
 
 <pre class="brush: html hidden">&lt;canvas id="canvas" width="110" height="110"&gt;&lt;/canvas&gt;</pre>
 
@@ -638,7 +638,7 @@ var ptrn = ctx.createPattern(img, 'repeat');</pre>
 <p>La propriété <code>shadowColor</code> est une valeur de couleur CSS standard indiquant la couleur de l'effet d'ombre ; par défaut, il est entièrement en noir transparent.</p>
 
 <div class="note">
-<p><strong>Note :</strong> Les ombres ne sont dessinées que pour les <a href="https://developer.mozilla.org/fr/docs/Web/API/Canvas_API/Tutorial/Compositing">opérations de composition</a> <code>source-over</code>.</p>
+<p><strong>Note :</strong> Les ombres ne sont dessinées que pour les <a href="/fr/docs/Web/API/Canvas_API/Tutorial/Compositing">opérations de composition</a> <code>source-over</code>.</p>
 </div>
 
 <h3 id="A_shadowed_text_example">Un exemple de texte ombré</h3>
@@ -664,7 +664,7 @@ var ptrn = ctx.createPattern(img, 'repeat');</pre>
 
 <p>{{EmbedLiveSample("A_shadowed_text_example", "180", "100", "https://mdn.mozillademos.org/files/2505/shadowed-string.png")}}</p>
 
-<p>Nous allons regarder la propriété de la  <code>font</code> <em>(police de caratères)</em> et la méthode <code>fillText</code> dans le chapitre suivant sur le <a href="https://developer.mozilla.org/fr/docs/Dessin_de_texte_avec_canvas">dessin de texte</a>.</p>
+<p>Nous allons regarder la propriété de la  <code>font</code> <em>(police de caratères)</em> et la méthode <code>fillText</code> dans le chapitre suivant sur le <a href="/fr/docs/Dessin_de_texte_avec_canvas">dessin de texte</a>.</p>
 
 <h2 id="Canvas_fill_rules">Règles de remplissage Canvas</h2>
 
@@ -673,8 +673,8 @@ var ptrn = ctx.createPattern(img, 'repeat');</pre>
  Deux valeurs sont possibles :</p>
 
 <ul>
- <li><code><strong>"nonzero</strong></code>": la <a class="external external-icon" href="http://en.wikipedia.org/wiki/Nonzero-rule">règle non-zero</a>, qui est la règle par défaut.</li>
- <li><code><strong>"evenodd"</strong></code>: La <a class="external external-icon" href="http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule">règle even-odd</a>.</li>
+ <li><code><strong>"nonzero</strong></code>": la <a href="http://en.wikipedia.org/wiki/Nonzero-rule">règle non-zero</a>, qui est la règle par défaut.</li>
+ <li><code><strong>"evenodd"</strong></code>: La <a href="http://en.wikipedia.org/wiki/Even%E2%80%93odd_rule">règle even-odd</a>.</li>
 </ul>
 
 <p>Dans cet exemple, nous utilisons la règle <code>evenodd</code> .</p>

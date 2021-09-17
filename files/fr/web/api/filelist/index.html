@@ -9,7 +9,7 @@ translation_of: Web/API/FileList
 ---
 <div>{{APIRef("File API")}}{{gecko_minversion_header("1.9")}}</div>
 
-<p>Un objet <strong><code>FileList</code></strong> est renvoyé par la propriété <code>files</code> d'un élément HTML {{HTMLElement("input")}}. Il permet d'accéder à la liste des fichiers sélectionnés via l'élément <code>&lt;input type="file"&gt;</code>. Cet objet peut également être utilisé pour les fichiers glissés-déposés dans du contenu web via l'<a href="/fr/docs/Web/API/API_HTML_Drag_and_Drop">API Drag &amp; Drop</a> (voir l'objet <a href="/fr/docs/Web/API/DataTransfer" title="DragDrop/DataTransfer"><code>DataTransfer</code></a> pour plus de détails).</p>
+<p>Un objet <strong><code>FileList</code></strong> est renvoyé par la propriété <code>files</code> d'un élément HTML {{HTMLElement("input")}}. Il permet d'accéder à la liste des fichiers sélectionnés via l'élément <code>&lt;input type="file"&gt;</code>. Cet objet peut également être utilisé pour les fichiers glissés-déposés dans du contenu web via l'<a href="/fr/docs/Web/API/API_HTML_Drag_and_Drop">API Drag &amp; Drop</a> (voir l'objet <a href="/fr/docs/Web/API/DataTransfer"><code>DataTransfer</code></a> pour plus de détails).</p>
 
 <h2 id="Utiliser_une_liste_de_fichiers">Utiliser une liste de fichiers</h2>
 
@@ -18,7 +18,7 @@ translation_of: Web/API/FileList
 <pre>&lt;input id="fileItem" type="file"&gt;
 </pre>
 
-<p>On pourra utiliser la ligne suivant pour récupérer le premier fichier de la liste sous la forme d'un objet <a href="/fr/docs/Web/API/File" title="DOM/File"><code>File</code></a> :</p>
+<p>On pourra utiliser la ligne suivant pour récupérer le premier fichier de la liste sous la forme d'un objet <a href="/fr/docs/Web/API/File"><code>File</code></a> :</p>
 
 <pre class="brush: js">var file = document.getElementById('fileItem').files[0]</pre>
 
@@ -43,7 +43,7 @@ translation_of: Web/API/FileList
 
 <h3 id="item()"><code>item()</code></h3>
 
-<p>Cette méthode renvoie un objet <a href="/fr/docs/Web/API/File" title="DOM/File"><code>File</code></a> qui représente le fichier à l'indice fourni.</p>
+<p>Cette méthode renvoie un objet <a href="/fr/docs/Web/API/File"><code>File</code></a> qui représente le fichier à l'indice fourni.</p>
 
 <pre> File item(
    index
@@ -59,7 +59,7 @@ translation_of: Web/API/FileList
 
 <h4 id="Valeur_de_retour">Valeur de retour</h4>
 
-<p>L'objet <a href="/fr/docs/Web/API/File" title="DOM/File"><code>File</code></a> qui représente le fichier demandé.</p>
+<p>L'objet <a href="/fr/docs/Web/API/File"><code>File</code></a> qui représente le fichier demandé.</p>
 
 <h2 id="Exemples">Exemples</h2>
 
@@ -142,7 +142,7 @@ document.querySelector("#myFiles").onchange = recupererFichiers;</pre>
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="/fr/docs/Web/API/File/Using_files_from_web_applications" title="Using files from web applications">Utiliser des fichiers dans des applications web</a></li>
- <li><code><a href="/fr/docs/Web/API/File" title="DOM/File">File</a></code></li>
- <li><code><a href="/fr/docs/Web/API/FileReader" title="DOM/FileReader">FileReader</a></code></li>
+ <li><a href="/fr/docs/Web/API/File/Using_files_from_web_applications">Utiliser des fichiers dans des applications web</a></li>
+ <li><code><a href="/fr/docs/Web/API/File">File</a></code></li>
+ <li><code><a href="/fr/docs/Web/API/FileReader">FileReader</a></code></li>
 </ul>

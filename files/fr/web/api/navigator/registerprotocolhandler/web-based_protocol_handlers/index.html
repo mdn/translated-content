@@ -18,7 +18,7 @@ translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_han
 
 <h3 id="Enregistrement">Enregistrement</h3>
 
-<p>La définition d'une application web comme gestionnaire de protocole n'est pas un processus difficile. En gros, l'application web utilise <code><a href="/fr/DOM/window.navigator.registerProtocolHandler" title="fr/DOM/window.navigator.registerProtocolHandler">registerProtocolHandler()</a></code> pour s'enregistrer auprès du navigateur comme gestionnaire potentiel pour un protocole donné. Par exemple :</p>
+<p>La définition d'une application web comme gestionnaire de protocole n'est pas un processus difficile. En gros, l'application web utilise <code><a href="/fr/DOM/window.navigator.registerProtocolHandler">registerProtocolHandler()</a></code> pour s'enregistrer auprès du navigateur comme gestionnaire potentiel pour un protocole donné. Par exemple :</p>
 
 <pre>navigator.registerProtocolHandler("mailto",
                                   "https://www.example.com/?uri=%s",
@@ -35,7 +35,7 @@ translation_of: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_han
 
 <p>Lorsqu'un navigateur exécutera ce code, il devra demander à l'utilisateur la permission d'autoriser l'application web à s'enregistrer comme gestionnaire du protocole. Firefox affichera une question dans une barre de notification :</p>
 
-<p><img alt="Image:wph-notification.png" class="internal" src="/@api/deki/files/1491/=Wph-notification.png"></p>
+<p><img src="/@api/deki/files/1491/=Wph-notification.png"></p>
 
 <p>{{ Note() }}</p>
 

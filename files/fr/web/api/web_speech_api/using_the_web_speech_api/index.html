@@ -67,7 +67,7 @@ var SpeechRecognitionEvent = SpeechRecognitionEvent || webkitSpeechRecognitionEv
 <pre class="brush: js">var colors = [ 'aqua' , 'azure' , 'beige', 'bisque', 'black', 'blue', 'brown', 'chocolate', 'coral' ... ];
 var grammar = '#JSGF V1.0; grammar colors; public &lt;color&gt; = ' + colors.join(' | ') + ' ;'</pre>
 
-<p>The grammar format used is <a class="external external-icon" href="http://www.w3.org/TR/jsgf/">JSpeech Grammar Format</a> (<strong>JSGF</strong>) — you can find a lot more about it at the previous link to its spec. However, for now let's just run through it quickly:</p>
+<p>The grammar format used is <a href="http://www.w3.org/TR/jsgf/">JSpeech Grammar Format</a> (<strong>JSGF</strong>) — you can find a lot more about it at the previous link to its spec. However, for now let's just run through it quickly:</p>
 
 <ul>
  <li>The lines are separated by semi-colons, just like in JavaScript.</li>
@@ -124,7 +124,7 @@ document.body.onclick = function() {
 
 <h4 id="Receiving_and_handling_results">Receiving and handling results</h4>
 
-<p>Once the speech recognition is started, there are many event handlers that can be used to retrieve results, and other pieces of surrounding information (see the <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition#Event_handlers"><code>SpeechRecognition</code> event handlers list</a>.) The most common one you'll probably use is {{domxref("SpeechRecognition.onresult")}}, which is fired once a successful result is received:</p>
+<p>Once the speech recognition is started, there are many event handlers that can be used to retrieve results, and other pieces of surrounding information (see the <a href="/en-US/docs/Web/API/SpeechRecognition#Event_handlers"><code>SpeechRecognition</code> event handlers list</a>.) The most common one you'll probably use is {{domxref("SpeechRecognition.onresult")}}, which is fired once a successful result is received:</p>
 
 <pre class="brush: js">recognition.onresult = function(event) {
   var color = event.results[0][0].transcript;

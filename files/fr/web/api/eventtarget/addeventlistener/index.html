@@ -270,7 +270,7 @@ el.addEventListener("click", () =&gt; {
     &lt;a class="inner1" href="https://www.mozilla.org" target="_blank"&gt;
       intérieur1, passive &amp; preventDefault (ce qui n'est pas autorisé)
     &lt;/a&gt;
-    &lt;a class="inner2" href="https://developer.mozilla.org/" target="_blank"&gt;
+    &lt;a class="inner2" href="/" target="_blank"&gt;
       intérieur2, none-passive &amp; preventDefault (nouvelle page non ouverte)
     &lt;/a&gt;
   &lt;/div&gt;
@@ -746,7 +746,7 @@ if (el.addEventListener) {
 
 <h3 id="Older_way_to_register_event_listeners">Ancienne manière d'enregistrer les écouteurs d'évènements</h3>
 
-<p>La méthode <code>addEventListener()</code> a été ajoutée dans la spécification DOM 2 <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Events">Events</a>. Avant cela, les écouteurs d'évènements étaient enregistrés de la manière suivante :</p>
+<p>La méthode <code>addEventListener()</code> a été ajoutée dans la spécification DOM 2 <a href="http://www.w3.org/TR/DOM-Level-2-Events">Events</a>. Avant cela, les écouteurs d'évènements étaient enregistrés de la manière suivante :</p>
 
 <pre class="brush: js">
 // Passage d'une référence à une fonction

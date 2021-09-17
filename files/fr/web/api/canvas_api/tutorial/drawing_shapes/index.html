@@ -14,15 +14,15 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Formes_géométriques
 ---
 <p>{{CanvasSidebar}} {{PreviousNext("Tutoriel_canvas/Utilisation_de_base", "Tutoriel_canvas/Ajout_de_styles_et_de_couleurs")}}</p>
 
-<p>Maintenant que nous avons défini notre <a href="https://developer.mozilla.org/fr/docs/Tutoriel_canvas/Utilisation_de_base">environnement de canevas</a>, nous pouvons entrer dans les détails de la façon de dessiner sur le canevas. A la fin de cet article, vous aurez appris à tracer des rectangles, des triangles, des lignes, des arcs et des courbes, vous rendant ainsi familier avec certaines des formes de base. Le travail avec les trajets est essentiel lors du dessin d'objets sur le canevas, et nous verrons comment cela peut être fait.</p>
+<p>Maintenant que nous avons défini notre <a href="/fr/docs/Tutoriel_canvas/Utilisation_de_base">environnement de canevas</a>, nous pouvons entrer dans les détails de la façon de dessiner sur le canevas. A la fin de cet article, vous aurez appris à tracer des rectangles, des triangles, des lignes, des arcs et des courbes, vous rendant ainsi familier avec certaines des formes de base. Le travail avec les trajets est essentiel lors du dessin d'objets sur le canevas, et nous verrons comment cela peut être fait.</p>
 
 <h2 id="La_grille">La grille</h2>
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/224/Canvas_default_grid.png" style="float: right; height: 220px; width: 220px;">Avant de pouvoir commencer à dessiner, il nous faut parler de la grille ou <strong>système de coordonnées</strong>. Notre schéma HTML de la page précédente avait un élément canevas large de 150 pixels et haut de 150 pixels. À droite, vous voyez ce canevas avec la grille par défaut superposée. Normalement, 1 unité dans la grille correspond à 1 pixel sur le canevas. L'origine de cette grille est positionnée dans le coin <em>supérieur gauche</em> de coordonnées (0, 0). Tous les éléments sont placés relativement à cette origine. Ainsi, le coin supérieur gauche du carré bleu est à <code>x</code> pixels à partir de la gauche et à <code>y</code> pixels à partir du haut, aux coordonnées (x, y). Plus loin dans ce tutoriel, nous verrons comment déplacer l'origine à une position différente, faire pivoter la grille ou même la mettre à l'échelle ; mais pour l'instant, nous nous en tiendrons aux valeurs par défaut.</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/224/Canvas_default_grid.png" style="float: right; height: 220px; width: 220px;">Avant de pouvoir commencer à dessiner, il nous faut parler de la grille ou <strong>système de coordonnées</strong>. Notre schéma HTML de la page précédente avait un élément canevas large de 150 pixels et haut de 150 pixels. À droite, vous voyez ce canevas avec la grille par défaut superposée. Normalement, 1 unité dans la grille correspond à 1 pixel sur le canevas. L'origine de cette grille est positionnée dans le coin <em>supérieur gauche</em> de coordonnées (0, 0). Tous les éléments sont placés relativement à cette origine. Ainsi, le coin supérieur gauche du carré bleu est à <code>x</code> pixels à partir de la gauche et à <code>y</code> pixels à partir du haut, aux coordonnées (x, y). Plus loin dans ce tutoriel, nous verrons comment déplacer l'origine à une position différente, faire pivoter la grille ou même la mettre à l'échelle ; mais pour l'instant, nous nous en tiendrons aux valeurs par défaut.</p>
 
 <h2 id="Dessin_de_rectangles">Dessin de rectangles</h2>
 
-<p>Au contraire de <a href="/fr/docs/Web/SVG" rel="internal" title="en/SVG">SVG</a>, le {{HTMLElement("canvas")}} ne supporte qu'une seule forme primitive : le rectangle. Toute autre forme doit être créée en combinant un ou plusieurs trajets, c'est-à-dire des listes de points reliés par des lignes. Heureusement, nous avons un assortiment de fonctions de dessin de trajets, qui rendent possible la composition de formes très complexes.</p>
+<p>Au contraire de <a href="/fr/docs/Web/SVG">SVG</a>, le {{HTMLElement("canvas")}} ne supporte qu'une seule forme primitive : le rectangle. Toute autre forme doit être créée en combinant un ou plusieurs trajets, c'est-à-dire des listes de points reliés par des lignes. Heureusement, nous avons un assortiment de fonctions de dessin de trajets, qui rendent possible la composition de formes très complexes.</p>
 
 <p>Commençons par le rectangle. Il y a trois fonctions qui dessinent des rectangles sur le canvas :</p>
 
@@ -75,7 +75,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Formes_géométriques
 
 <ol>
  <li>Tout d'abord, vous devez créer le trajet.</li>
- <li>Ensuite vous devez utiliser des <a href="https://developer.mozilla.org/fr-FR/docs/Web/API/CanvasRenderingContext2D#Paths">instructions de dessin</a> pour dessiner sur le trajet.</li>
+ <li>Ensuite vous devez utiliser des <a href="/fr-FR/docs/Web/API/CanvasRenderingContext2D#Paths">instructions de dessin</a> pour dessiner sur le trajet.</li>
  <li>Finalement, vous devez fermer le trajet.</li>
  <li>Une fois que le trajet a été créé, vous devez le tracer ou le remplir pour le faire apparaître.</li>
 </ol>
@@ -85,7 +85,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Formes_géométriques
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}}</dt>
  <dd>Crée un nouveau trajet. Une fois créé, les fonctions de dessin ultérieures seront dirigées vers le trajet et utilisées pour le construire.</dd>
- <dt><a href="https://developer.mozilla.org/fr-FR/docs/Web/API/CanvasRenderingContext2D#Paths">Méthodes de trajet</a></dt>
+ <dt><a href="/fr-FR/docs/Web/API/CanvasRenderingContext2D#Paths">Méthodes de trajet</a></dt>
  <dd>Méthodes pour définir différents trajets pour les objets.</dd>
  <dt>{{domxref("CanvasRenderingContext2D.closePath", "closePath()")}}</dt>
  <dd>Ferme le trajet pour que les fonctions de dessin ultérieures soient à nouveau dirigées vers le contexte.</dd>
@@ -250,7 +250,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Formes_géométriques
 
 <p>L'exemple suivant est un peu plus complexe que ceux que nous avons vus plus haut. Il dessine 12 arcs différents, avec des angles et des remplissages différents.</p>
 
-<p>Les deux <a href="https://developer.mozilla.org/fr-FR/docs/Web/JavaScript/Reference/Statements/for">boucles <code>for</code></a> bouclent sur les lignes et les colonnes des arcs. Pour chaque arc, on commence un nouveau trajet en appelant <code>beginPath()</code>. Dans le code, chacun des paramètres dans l'arc est une variable pour des raisons de clarté, mais en réalité, vous n'avez pas besoin de le faire.</p>
+<p>Les deux <a href="/fr-FR/docs/Web/JavaScript/Reference/Statements/for">boucles <code>for</code></a> bouclent sur les lignes et les colonnes des arcs. Pour chaque arc, on commence un nouveau trajet en appelant <code>beginPath()</code>. Dans le code, chacun des paramètres dans l'arc est une variable pour des raisons de clarté, mais en réalité, vous n'avez pas besoin de le faire.</p>
 
 <p>Les coordonnées <code>x</code> et <code>y</code> devraient être claires. <code>rayon</code> et <code>angleInitial</code> sont fixés. L'<code>angleFinal</code> commence à 180 degrés (demi-cercle) dans la première colonne et il est augmenté par pas de 90 degrés, pour finir par un cercle complet dans la dernière colonne.</p>
 
@@ -308,7 +308,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Formes_géométriques
  <dd>Dessine une courbe de Bézier cubique depuis la position courante du stylo jusqu'au point spécifié par <code>x</code> et <code>y</code>, en utilisant les points de contrôle (<code>cp1x</code>, <code>cp1y</code>) et (<code>cp2x</code>, <code>cp2y</code>).</dd>
 </dl>
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/223/Canvas_curves.png" style="float: right; height: 190px; width: 190px;">La différence entre ces deux méthodes est mieux décrite par l'image à droite. Une courbe quadratique de Bézier a un point de départ et un point d'arrivée (points bleus), et seulement un <strong>point de contrôle</strong> (indiqué par le point rouge), tandis qu'une courbe de Bézier cubique utilise deux points de contrôle.</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/223/Canvas_curves.png" style="float: right; height: 190px; width: 190px;">La différence entre ces deux méthodes est mieux décrite par l'image à droite. Une courbe quadratique de Bézier a un point de départ et un point d'arrivée (points bleus), et seulement un <strong>point de contrôle</strong> (indiqué par le point rouge), tandis qu'une courbe de Bézier cubique utilise deux points de contrôle.</p>
 
 <p>Les paramètres <code>x</code> et <code>y</code> de ces deux méthodes sont les coordonnées du point d'arrivée. <code>cp1x</code> et <code>cp1y</code> sont les coordonnées du premier point de contrôle, et  <code>cp2x</code> et <code>cp2y</code> sont les coordonnées du second point de contrôle.</p>
 
@@ -503,14 +503,14 @@ function rectArrondi(ctx, x, y, largeur, hauteur, rayon) {
 
 <dl>
  <dt>{{domxref("Path2D.Path2D", "Path2D()")}}</dt>
- <dd>Le constructor <code><strong>Path2D()</strong></code> retourne un objet <code>Path2D</code> nouvellement instancié, optionellement avec un autre trajet comme argument (crée une copie), ou optionellement avec une chaîne constituée de données de <a href="https://developer.mozilla.org/fr-FR/docs/Web/SVG/Tutorial/Paths">trajet SVG</a>.</dd>
+ <dd>Le constructor <code><strong>Path2D()</strong></code> retourne un objet <code>Path2D</code> nouvellement instancié, optionellement avec un autre trajet comme argument (crée une copie), ou optionellement avec une chaîne constituée de données de <a href="/fr-FR/docs/Web/SVG/Tutorial/Paths">trajet SVG</a>.</dd>
 </dl>
 
 <pre class="notranslate"><code>new Path2D();     // objet trajet vide
 new Path2D(trajet); // copie depuis un autre objet Path2D
 new Path2D(d);    // trajet depuis des données de trajet SVG</code></pre>
 
-<p>Toutes les <a href="https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D#Paths">méthodes de trajet</a> telles que <code>moveTo</code>, <code>rect</code>, <code>arc</code> ou <code>quadraticCurveTo</code>, etc., que nous avons appris à connaître ci-dessus, sont disponibles sur les objets <code>Path2D</code>.</p>
+<p>Toutes les <a href="/en-US/docs/Web/API/CanvasRenderingContext2D#Paths">méthodes de trajet</a> telles que <code>moveTo</code>, <code>rect</code>, <code>arc</code> ou <code>quadraticCurveTo</code>, etc., que nous avons appris à connaître ci-dessus, sont disponibles sur les objets <code>Path2D</code>.</p>
 
 <p>L'API <code>Path2D</code> ajoute aussi une manière de combiner des trajets en utilisant la méthode <code>addPath</code>. Cela peut être utile quand vous voulez contruire des objets à partir de plusieurs composants, par exemple.</p>
 
@@ -551,9 +551,9 @@ new Path2D(d);    // trajet depuis des données de trajet SVG</code></pre>
 
 <h3 id="Utilisation_de_trajets_SVG">Utilisation de trajets SVG</h3>
 
-<p>Une autre fonctionnalité puissante de la nouvelle API <code>Path2D</code> de canevas est l'utilisation de <a href="https://developer.mozilla.org/fr-FR/docs/Web/SVG/Tutorial/Paths">données de trajet SVG</a> pour initialiser des trajets sur votre canevas. Cela peut vous permettre de faire circuler des données de trajet et les réutiliser, à la fois en SVG et dans un canevas.</p>
+<p>Une autre fonctionnalité puissante de la nouvelle API <code>Path2D</code> de canevas est l'utilisation de <a href="/fr-FR/docs/Web/SVG/Tutorial/Paths">données de trajet SVG</a> pour initialiser des trajets sur votre canevas. Cela peut vous permettre de faire circuler des données de trajet et les réutiliser, à la fois en SVG et dans un canevas.</p>
 
-<p>Le trajet se déplacera au point (<code>M10 10</code>) et se déplacera alors de 80 points horizontalement vers la droite (<code>h 80</code>), ensuite de 80 points vers le bas (<code>v 80</code>), puis de 80 points vers la gauche (<code>h -80</code>), et reviendra alors au départ (<code>z</code>). Vous pouvez voir cet exemple sur la page du <a href="https://developer.mozilla.org/en-US/docs/Web/API/Path2D.Path2D#Using_SVG_paths">constructeur P<code>ath2D</code></a>.</p>
+<p>Le trajet se déplacera au point (<code>M10 10</code>) et se déplacera alors de 80 points horizontalement vers la droite (<code>h 80</code>), ensuite de 80 points vers le bas (<code>v 80</code>), puis de 80 points vers la gauche (<code>h -80</code>), et reviendra alors au départ (<code>z</code>). Vous pouvez voir cet exemple sur la page du <a href="/en-US/docs/Web/API/Path2D.Path2D#Using_SVG_paths">constructeur P<code>ath2D</code></a>.</p>
 
 <pre class="notranslate"><code>var p = new Path2D("M10 10 h 80 v 80 h -80 Z");</code></pre>
 

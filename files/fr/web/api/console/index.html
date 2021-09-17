@@ -11,7 +11,7 @@ translation_of: Web/API/Console
 ---
 <div>{{APIRef("Console API")}}</div>
 
-<p>L'objet <strong><code>console</code></strong> donne accès à la console de débogage du navigateur (par exemple., la<a href="https://developer.mozilla.org/fr/docs/Outils/Console_Web"> Console Web</a> dans Firefox). Les spécificités de fonctionnement varient d'un navigateur à l'autre, mais il y a tout de même un ensemble de fonctionnalités qui sont fournies de base.</p>
+<p>L'objet <strong><code>console</code></strong> donne accès à la console de débogage du navigateur (par exemple., la<a href="/fr/docs/Outils/Console_Web"> Console Web</a> dans Firefox). Les spécificités de fonctionnement varient d'un navigateur à l'autre, mais il y a tout de même un ensemble de fonctionnalités qui sont fournies de base.</p>
 
 <p>La <code>console</code> est accessible de n'importe quel objet global, {{domxref("Window")}} du cadre de navigation, {{domxref("WorkerGlobalScope")}} et ses variantes spécifiques pour les workers. Elle est exposée comme {{domxref ("Window.console")}} et peut être référencée simplement comme console. Par exemple :</p>
 
@@ -46,35 +46,35 @@ translation_of: Web/API/Console
  <p>Affiche si possible une représentation d'éléments XML/HTML d'un objet spécifié. Sinon, c'est une vue de l'objet JavaScript.</p>
  </dd>
  <dt>{{domxref("Console.error()")}}</dt>
- <dd>Affiche un message d'erreur. Vous pouvez utiliser les <a href="https://developer.mozilla.org/fr/docs/Web/API/console#Utiliser_les_caractères_de_substitution">caractères de substitution</a> et des arguments supplémentaires avec cette méthode.</dd>
+ <dd>Affiche un message d'erreur. Vous pouvez utiliser les <a href="/fr/docs/Web/API/console#Utiliser_les_caractères_de_substitution">caractères de substitution</a> et des arguments supplémentaires avec cette méthode.</dd>
  <dt>{{domxref("Console._exception()")}} {{Non-standard_inline}} {{deprecated_inline}}</dt>
  <dd>Un alias d'<code>error();</code></dd>
  <dt>{{domxref("Console.group()")}}</dt>
- <dd>Crée un nouveau <a href="https://developer.mozilla.org/fr/docs/Web/API/console#Using_groups_in_the_console">groupe</a> en ligne, correspondant à un nouveau niveau d'indentation. Contrairement à <code>group()</code>. Pour revenir au niveau précédent, appeler <code>groupEnd()</code>.</dd>
+ <dd>Crée un nouveau <a href="/fr/docs/Web/API/console#Using_groups_in_the_console">groupe</a> en ligne, correspondant à un nouveau niveau d'indentation. Contrairement à <code>group()</code>. Pour revenir au niveau précédent, appeler <code>groupEnd()</code>.</dd>
  <dt>{{domxref("Console.groupCollapsed()")}}</dt>
- <dd>Crée un nouveau <a href="https://developer.mozilla.org/fr/docs/Web/API/console#Using_groups_in_the_console">groupe</a> en ligne, correspondant à un nouveau niveau d'indentation. Contrairement à <code>group()</code> , cela commence avec le groupe en ligne effondré, nécessitant l'utilisation d'un bouton de divulgation pour l'agrandir. Pour revenir au niveau précédent, appeler <code>groupEnd()</code>.</dd>
+ <dd>Crée un nouveau <a href="/fr/docs/Web/API/console#Using_groups_in_the_console">groupe</a> en ligne, correspondant à un nouveau niveau d'indentation. Contrairement à <code>group()</code> , cela commence avec le groupe en ligne effondré, nécessitant l'utilisation d'un bouton de divulgation pour l'agrandir. Pour revenir au niveau précédent, appeler <code>groupEnd()</code>.</dd>
  <dt>{{domxref("Console.groupEnd()")}}</dt>
- <dd>Quitte le <a href="https://developer.mozilla.org/fr/docs/Web/API/console#Using_groups_in_the_console">groupe</a> d'indentation courant.</dd>
+ <dd>Quitte le <a href="/fr/docs/Web/API/console#Using_groups_in_the_console">groupe</a> d'indentation courant.</dd>
  <dt>{{domxref("Console.info()")}}</dt>
- <dd>Affiche un message d'information. Vous pouvez utiliser les <a href="https://developer.mozilla.org/fr/docs/Web/API/console#Utiliser_les_caractères_de_substitution">caractères de substitution</a> et des arguments supplémentaires avec cette méthode.</dd>
+ <dd>Affiche un message d'information. Vous pouvez utiliser les <a href="/fr/docs/Web/API/console#Utiliser_les_caractères_de_substitution">caractères de substitution</a> et des arguments supplémentaires avec cette méthode.</dd>
  <dt>{{domxref("Console.log()")}}</dt>
- <dd>Permet d'afficher des messages dans la console. Vous pouvez utiliser les <a href="https://developer.mozilla.org/fr/docs/Web/API/console#Utiliser_les_caractères_de_substitution">caractères de substitution</a> et des arguments supplémentaires avec cette méthode.</dd>
+ <dd>Permet d'afficher des messages dans la console. Vous pouvez utiliser les <a href="/fr/docs/Web/API/console#Utiliser_les_caractères_de_substitution">caractères de substitution</a> et des arguments supplémentaires avec cette méthode.</dd>
  <dt>{{domxref("Console.profile()")}} {{Non-standard_inline}}</dt>
- <dd>démarre le profilage du navigateur (par exemple, l'<a href="https://developer.mozilla.org/fr/docs/Outils/Performance">outil performances de Firefox</a>). Vous pouvez spécifier un nom en option pour ce profil.</dd>
+ <dd>démarre le profilage du navigateur (par exemple, l'<a href="/fr/docs/Outils/Performance">outil performances de Firefox</a>). Vous pouvez spécifier un nom en option pour ce profil.</dd>
  <dt>{{domxref("Console.profileEnd()")}} {{Non-standard_inline}}</dt>
- <dd>Arrête le profilage. Vous pouvez voir le résultat de ce dernier dans l'outil « performance » du navigateur (par exemple, l'<a href="https://developer.mozilla.org/fr/docs/Outils/Performance">outil performance Firefox</a>).</dd>
+ <dd>Arrête le profilage. Vous pouvez voir le résultat de ce dernier dans l'outil « performance » du navigateur (par exemple, l'<a href="/fr/docs/Outils/Performance">outil performance Firefox</a>).</dd>
  <dt>{{domxref("Console.table()")}}</dt>
  <dd>Affiche des données tabulaires comme un tableau.</dd>
  <dt>{{domxref("Console.time()")}}</dt>
- <dd>Démarre un <a href="https://developer.mozilla.org/fr/docs/Web/API/console#Timers">chronomètre</a> que l'on peut nommer en le spécifiant en tant que paramètre. Jusqu'à 10 000 chronomètres simultanés peuvent tourner sur une page.</dd>
+ <dd>Démarre un <a href="/fr/docs/Web/API/console#Timers">chronomètre</a> que l'on peut nommer en le spécifiant en tant que paramètre. Jusqu'à 10 000 chronomètres simultanés peuvent tourner sur une page.</dd>
  <dt>{{domxref("Console.timeEnd()")}}</dt>
- <dd>Arrête le <a href="https://developer.mozilla.org/fr/docs/Web/API/console#Timers">chronomètre</a> spécifié et affiche le temps écoulé en millisecondes depuis son démarrage.</dd>
+ <dd>Arrête le <a href="/fr/docs/Web/API/console#Timers">chronomètre</a> spécifié et affiche le temps écoulé en millisecondes depuis son démarrage.</dd>
  <dt>{{domxref("Console.timeStamp()")}} {{Non-standard_inline}}</dt>
- <dd>Ajoute un marqueur dans la <a href="https://developer.chrome.com/devtools/docs/timeline">Timeline</a> du navigateur ou l'outil <a href="https://developer.mozilla.org/fr/docs/Outils/Performance/Waterfall">Waterfall</a>.</dd>
+ <dd>Ajoute un marqueur dans la <a href="https://developer.chrome.com/devtools/docs/timeline">Timeline</a> du navigateur ou l'outil <a href="/fr/docs/Outils/Performance/Waterfall">Waterfall</a>.</dd>
  <dt>{{domxref("Console.trace()")}}</dt>
- <dd>Affiche une <a href="https://developer.mozilla.org/fr/docs/Web/API/console#Traces_d%27appel">trace d'appels</a>.</dd>
+ <dd>Affiche une <a href="/fr/docs/Web/API/console#Traces_d%27appel">trace d'appels</a>.</dd>
  <dt>{{domxref("Console.warn()")}}</dt>
- <dd>Affiche un message d'avertissement. Vous pouvez utiliser les <a href="https://developer.mozilla.org/fr/docs/Web/API/console#Utiliser_les_caractères_de_substitution">caractères de substitution</a> et des arguments supplémentaires avec cette méthode.</dd>
+ <dd>Affiche un message d'avertissement. Vous pouvez utiliser les <a href="/fr/docs/Web/API/console#Utiliser_les_caractères_de_substitution">caractères de substitution</a> et des arguments supplémentaires avec cette méthode.</dd>
 </dl>
 
 
@@ -192,7 +192,7 @@ console.debug("Back to the outer level");
 
 <p>L'affichage ressemblera à ceci :</p>
 
-<p><img alt="nesting.png" class="default internal" src="/@api/deki/files/6082/=nesting.png"></p>
+<p><img alt="nesting.png" src="/@api/deki/files/6082/=nesting.png"></p>
 
 <div>{{h3_gecko_minversion("Timers", "10.0")}}</div>
 
@@ -207,7 +207,7 @@ console.timeEnd("answer time");
 
 <p>affichera le temps pour l'utilisateur dont il a eu besoin pour faire disparaitre la fenêtre d'alerte :</p>
 
-<p><img alt="timerresult.png" class="default internal" src="/@api/deki/files/6084/=timerresult.png"></p>
+<p><img src="/@api/deki/files/6084/=timerresult.png"></p>
 
 <p>Notez que le nom du chronomètre est affiché deux fois, à son départ et quand il se termine.</p>
 
@@ -253,16 +253,16 @@ function foo() {
 <ul>
  <li>Au moins dans Firefox, si une page définit un objet console, cet objet remplace celui créé dans Firefox.</li>
  <li>Antérieur à {{Gecko ("12.0")}}, les méthodes de l'objet console ne fonctionnent que lorsque la console Web est ouverte. À partir de {{Gecko ("12.0")}}, la sortie est mise en cache jusqu'à ce que la console Web soit ouverte, puis affichée à ce moment-là.</li>
- <li>Il est à noter que l'objet de console intégré de Firefox est compatible avec celui fourni par <a class="external" href="http://getfirebug.com/" title="http://getfirebug.com/">Firebug</a>.</li>
+ <li>Il est à noter que l'objet de console intégré de Firefox est compatible avec celui fourni par <a href="http://getfirebug.com/">Firebug</a>.</li>
 </ul>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/fr/docs/Outils" title="Tools">Outils de développement</a></li>
- <li><a href="https://developer.mozilla.org/fr/docs/Outils/Console_Web" title="Web Console">Console web</a> - comment la console Web de Firefox gère les appels d'API de console</li>
- <li><a href="https://developer.mozilla.org/fr/docs/Outils/D%C3%A9bogage_distant">Débogage distant</a> - comment afficher la sortie de la console lorsque la cible de débogage est un périphérique mobile</li>
- <li><a href="https://developer.mozilla.org/fr/docs/Archive/B2G_OS/Debugging/Journalisation_console" title="/en-US/docs/Mozilla/Firefox_OS/Debugging/On-device_console_logging">Journalisation console sur l'appareil</a> - comment se connecter sur les appareils Firefox OS</li>
+ <li><a href="/fr/docs/Outils">Outils de développement</a></li>
+ <li><a href="/fr/docs/Outils/Console_Web">Console web</a> - comment la console Web de Firefox gère les appels d'API de console</li>
+ <li><a href="/fr/docs/Outils/D%C3%A9bogage_distant">Débogage distant</a> - comment afficher la sortie de la console lorsque la cible de débogage est un périphérique mobile</li>
+ <li><a href="/fr/docs/Archive/B2G_OS/Debugging/Journalisation_console">Journalisation console sur l'appareil</a> - comment se connecter sur les appareils Firefox OS</li>
 </ul>
 
 <h3 id="Autres_implémentations">Autres implémentations</h3>

@@ -15,7 +15,7 @@ translation_of: Web/API/Node/childNodes
 
 <h2 id="Syntaxe_et_valeurs">Syntaxe</h2>
 
-<pre class="eval"><a href="/fr/Référence_de_JavaScript_1.5_Core/Instructions/var" title="https://developer.mozilla.org/fr/Référence_de_JavaScript_1.5_Core/Instructions/var">var</a> <var>collNoeuds</var> = elementDeReference.<a href="/fr/DOM/element.childNodes" title="https://developer.mozilla.org/fr/DOM/element.childNodes">childNodes</a>;
+<pre class="eval"><a href="/fr/Référence_de_JavaScript_1.5_Core/Instructions/var">var</a> <var>collNoeuds</var> = elementDeReference.<a href="/fr/DOM/element.childNodes">childNodes</a>;
 </pre>
 
 <h2 id="Exemples">Exemples</h2>
@@ -38,9 +38,9 @@ if (parg.hasChildNodes()) {
 
 <pre>// Voici une manière de supprimer tous les enfants d'un nœud
 // (boite est une référence à un élément ayant des enfants)
-<a href="/fr/Référence_de_JavaScript_1.5_Core/Instructions/while" title="https://developer.mozilla.org/fr/Référence_de_JavaScript_1.5_Core/Instructions/while">while</a>( boite.<a href="/fr/DOM/element.firstChild" title="https://developer.mozilla.org/fr/DOM/element.firstChild">firstChild</a>) {
+<a href="/fr/Référence_de_JavaScript_1.5_Core/Instructions/while">while</a>( boite.<a href="/fr/DOM/element.firstChild">firstChild</a>) {
     // La liste n'est pas une copie, elle sera donc réindexée à chaque appel
-    boite.<a href="/fr/DOM/element.removeChild" title="https://developer.mozilla.org/fr/DOM/element.removeChild">removeChild</a>( boite.<a href="/fr/DOM/element.firstChild" title="https://developer.mozilla.org/fr/DOM/element.firstChild">firstChild</a>);
+    boite.<a href="/fr/DOM/element.removeChild">removeChild</a>( boite.<a href="/fr/DOM/element.firstChild">firstChild</a>);
 }
 </pre>
 
@@ -48,7 +48,7 @@ if (parg.hasChildNodes()) {
 
 <p>Les éléments de la collection de noeuds sont des objets et non des chaînes de caractères. Pour en obtenir les données, vous devez utiliser leurs propriétés (par exemple <code>elementNodeReference.childNodes[1].nodeName</code> pour obtenir son nom, etc.)</p>
 
-<p>L'objet <a href="/fr/DOM/document" title="https://developer.mozilla.org/fr/DOM/document"><code>document</code></a> lui-même a deux enfants : la déclaration <a href="/fr/DOM/document.doctype" title="https://developer.mozilla.org/fr/DOM/document.doctype">Doctype</a> et l'élément racine, généralement appelés  <code>documentElement</code> . (Dans les documents (X)HTML il s'agit d'éléments  <a href="/fr/HTML/Element/html" title="https://developer.mozilla.org/fr/HTML/Element/html"><code>HTML</code></a>).</p>
+<p>L'objet <a href="/fr/DOM/document"><code>document</code></a> lui-même a deux enfants : la déclaration <a href="/fr/DOM/document.doctype">Doctype</a> et l'élément racine, généralement appelés  <code>documentElement</code> . (Dans les documents (X)HTML il s'agit d'éléments  <a href="/fr/HTML/Element/html"><code>HTML</code></a>).</p>
 
 <p><code>childNodes</code>  inclut tous les noeuds enfants, y compris les noeuds qui ne sont pas des éléments comme les noeuds texte et commentaire. Pour obtenir une collection des seuls éléments, utilisez {{domxref("ParentNode.children")}} à la place.</p>
 

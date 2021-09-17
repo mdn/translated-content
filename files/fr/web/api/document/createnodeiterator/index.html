@@ -9,11 +9,11 @@ translation_of: Web/API/Document/createNodeIterator
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p>Renvoie un  nouvel objet <a class="internal" href="https://developer.mozilla.org/fr/docs/Web/API/NodeIterator" title="En/DOM/NodeIterator"><code>NodeIterator</code></a>.</p>
+<p>Renvoie un  nouvel objet <a href="/fr/docs/Web/API/NodeIterator"><code>NodeIterator</code></a>.</p>
 
 <h2 id="Syntax">Syntaxe</h2>
 
-<pre class="eval script">var nodeIterator = document.createNodeIterator(root, whatToShow, filter);
+<pre class="brush: js">var nodeIterator = document.createNodeIterator(root, whatToShow, filter);
 </pre>
 
 <h3 id="Valeurs">Valeurs</h3>
@@ -22,7 +22,7 @@ translation_of: Web/API/Document/createNodeIterator
  <dt><code>root</code></dt>
  <dd>Le noeud racine à partir duquel commencer la traversée de {{domxref("NodeIterator")}}.</dd>
  <dt><code>whatToShow</code> {{ optional_inline() }}</dt>
- <dd>Est un <code>unsigned long</code> (<em>long non signé</em>) facultatif représentant un masque de bits créé par la combinaison des constantes de la propriété <code><a href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter" title="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter">NodeFilter</a></code>. C'est un moyen pratique de filtrage pour certains types de noeuds. Il est par défaut <code>0xFFFFFFFF</code> représentant la constante <code>SHOW_ALL</code>.
+ <dd>Est un <code>unsigned long</code> (<em>long non signé</em>) facultatif représentant un masque de bits créé par la combinaison des constantes de la propriété <code><a href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter">NodeFilter</a></code>. C'est un moyen pratique de filtrage pour certains types de noeuds. Il est par défaut <code>0xFFFFFFFF</code> représentant la constante <code>SHOW_ALL</code>.
  <table class="standard-table">
   <tbody>
    <tr>
@@ -129,9 +129,9 @@ while (currentNode = nodeIterator.nextNode()) {
 <h2 id="Specification">Voir aussi</h2>
 
 <ul>
- <li><a class="external" href="https://developer.mozilla.org/fr/docs/Web/API/Document/createNodeIterator" title="http://msdn.microsoft.com/en-us/library/ie/ff975301(v=vs.85).aspx">createNodeIterator sur MDN</a></li>
+ <li><a href="/fr/docs/Web/API/Document/createNodeIterator">createNodeIterator sur MDN</a></li>
 </ul>
 
 <h2 id="Specification">Spécifications</h2>
 
-<p><a class="external" href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeIterator" title="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeIterator">DOM Level 2 Traversal : NodeIterator</a></p>
+<p><a href="http://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeIterator">DOM Level 2 Traversal : NodeIterator</a></p>

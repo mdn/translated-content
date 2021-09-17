@@ -11,7 +11,7 @@ original_slug: Web/API/Web_Workers_API/Utilisation_des_web_workers
 ---
 <div>{{DefaultAPISidebar("Web Workers API")}}</div>
 
-<p>Les <em>Web Workers</em> sont un outil permettant au contenu web d'exécuter des scripts dans des tâches (<em>threads</em>) d'arrière-plan. Le <em>thread</em> associé au <em>worker</em> peut réaliser des tâches sans qu'il y ait d'interférence avec l'interface utilisateur. De plus, les <em>web workers</em> peuvent réaliser des opérations d'entrée/sortie grâce à <code><a class="internal" href="/fr/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> (bien que les attributs <code>responseXML</code> et <code>channel</code> soient nécessairement vides dans ces cas). Une fois créé, un <em>worker</em> peut envoyer des messages au code JavaScript qui l'a créé. De même, le script initial peut envoyer des messages au <em>worker</em>. Cette communication s'effectue grâce à des gestionnaires d'évènements. Dans cet article, nous verrons une introduction à l'utilisation des <em>web workers</em>.</p>
+<p>Les <em>Web Workers</em> sont un outil permettant au contenu web d'exécuter des scripts dans des tâches (<em>threads</em>) d'arrière-plan. Le <em>thread</em> associé au <em>worker</em> peut réaliser des tâches sans qu'il y ait d'interférence avec l'interface utilisateur. De plus, les <em>web workers</em> peuvent réaliser des opérations d'entrée/sortie grâce à <code><a href="/fr/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> (bien que les attributs <code>responseXML</code> et <code>channel</code> soient nécessairement vides dans ces cas). Une fois créé, un <em>worker</em> peut envoyer des messages au code JavaScript qui l'a créé. De même, le script initial peut envoyer des messages au <em>worker</em>. Cette communication s'effectue grâce à des gestionnaires d'évènements. Dans cet article, nous verrons une introduction à l'utilisation des <em>web workers</em>.</p>
 
 <h2 id="LAPI_Web_Workers">L'API Web Workers</h2>
 
@@ -27,7 +27,7 @@ original_slug: Web/API/Web_Workers_API/Utilisation_des_web_workers
 
 <p>Les données sont échangées entre le <em>thread</em> du <em>worker</em> et le <em>thread</em> principal par l'intermédiaire de messages. Chaque partie peut envoyer des messages à l'aide de la méthode <code>postMessage()</code> et réagir aux messages reçus grâce au gestionnaire d'évènement <code>onmessage</code> (le message sera contenu dans l'attribut <code>data</code> de l'évènement {{event("Message")}} associé). Les données sont copiées dans le message, elles ne sont pas partagées.</p>
 
-<p>Les <em>workers</em> peuvent également déclencher la création d'autres <em>workers</em> tant que ceux-ci restent hébergés sur la même origine que la page parente. De plus, les <em>workers</em> pourront utiliser <a class="internal" href="/fr/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a> pour effectuer des opérations réseau mais les attributs <code>responseXML</code> et <code>channel</code> de <code>XMLHttpRequest</code> renverront nécessairement <code>null</code>.</p>
+<p>Les <em>workers</em> peuvent également déclencher la création d'autres <em>workers</em> tant que ceux-ci restent hébergés sur la même origine que la page parente. De plus, les <em>workers</em> pourront utiliser <a href="/fr/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a> pour effectuer des opérations réseau mais les attributs <code>responseXML</code> et <code>channel</code> de <code>XMLHttpRequest</code> renverront nécessairement <code>null</code>.</p>
 
 <h2 id="Les_workers_dédiés">Les <em>workers</em> dédiés</h2>
 
@@ -103,7 +103,7 @@ deuxiemeNombre.onchange = function() {
 
 <p>Lorsqu'une erreur d'exécution se produit avec le <em>worker</em>, son gestionnaire d'évènement <code>onerror</code> est appelé et reçoit un évènement <code>error</code> qui implémente l'interface <code>ErrorEvent</code>.</p>
 
-<p>Cet évènement ne bouillonne (<em>bubble</em>) pas et peut être annulé. Pour empêcher les conséquences par défaut, on pourra utiliser la méthode <a class="internal" href="/fr/docs/Web/API/Event/preventDefault"> <code>preventDefault()</code></a> rattachée à l'évènement d'erreur.</p>
+<p>Cet évènement ne bouillonne (<em>bubble</em>) pas et peut être annulé. Pour empêcher les conséquences par défaut, on pourra utiliser la méthode <a href="/fr/docs/Web/API/Event/preventDefault"> <code>preventDefault()</code></a> rattachée à l'évènement d'erreur.</p>
 
 <p>L'évènement décrivant l'erreur possède notamment trois propriétés intéressantes :</p>
 

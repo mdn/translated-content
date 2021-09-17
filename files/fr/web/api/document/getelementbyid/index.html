@@ -97,7 +97,7 @@ translation_of: Web/API/Document/getElementById
 element.id = 'testqq';
 var el = document.getElementById('testqq'); // el vaudra null !</pre>
 
-<p><strong>Les documents non-HTML.</strong> Les implémentations du DOM doivent avoir une information qui précise quels attributs sont de type ID. Un attribut portant le nom « id » n'est pas de type ID tant qu'il n'a pas été explicitement défini ainsi (dans la DTD du document). L'attribut <code>id</code> est défini comme étant de type ID dans les langages courants comme <a href="/fr/XHTML" title="fr/XHTML">XHTML</a> ou <a href="/fr/XUL" title="fr/XUL">XUL</a>. Les implémentations ne sachant pas déterminer si les attributs sont de type ID ou non sont supposées renvoyer <code>null</code>.</p>
+<p><strong>Les documents non-HTML.</strong> Les implémentations du DOM doivent avoir une information qui précise quels attributs sont de type ID. Un attribut portant le nom « id » n'est pas de type ID tant qu'il n'a pas été explicitement défini ainsi (dans la DTD du document). L'attribut <code>id</code> est défini comme étant de type ID dans les langages courants comme <a href="/fr/XHTML">XHTML</a> ou <a href="/fr/XUL">XUL</a>. Les implémentations ne sachant pas déterminer si les attributs sont de type ID ou non sont supposées renvoyer <code>null</code>.</p>
 
 <h2 id="Sp.C3.A9cification">Spécification</h2>
 
@@ -131,7 +131,7 @@ var el = document.getElementById('testqq'); // el vaudra null !</pre>
  </tbody>
 </table>
 
-<p>Traduction en français (non normative) : <a class="external" href="http://www.yoyodesign.org/doc/w3c/dom2/core/core.html#ID-getElBId">getElementById</a></p>
+<p>Traduction en français (non normative) : <a href="http://www.yoyodesign.org/doc/w3c/dom2/core/core.html#ID-getElBId">getElementById</a></p>
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 
@@ -142,5 +142,5 @@ var el = document.getElementById('testqq'); // el vaudra null !</pre>
 <ul>
  <li>{{domxref("Document")}} référence pour d'autres méthodes et propriétés que vous pouvez utiliser pour obtenir la référence vers des éléments du document.</li>
  <li>{{domxref("Document.querySelector()")}} pour utiliser des sélecteurs avec des requêtes comme <code>'div.myclass'</code></li>
- <li><a href="/fr/xml/xml:id" title="fr/xml/id">xml:id</a> dispose d'une méthode utilitaire permettant à getElementById d'obtenir les valeur 'xml:id' dans les documents XML (comme ceux qui pourraient être renvoyés par des appels Ajax).</li>
+ <li><a href="/fr/xml/xml:id">xml:id</a> dispose d'une méthode utilitaire permettant à getElementById d'obtenir les valeur 'xml:id' dans les documents XML (comme ceux qui pourraient être renvoyés par des appels Ajax).</li>
 </ul>

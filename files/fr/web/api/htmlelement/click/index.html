@@ -13,7 +13,7 @@ translation_of: Web/API/HTMLElement/click
 <pre class="syntaxbox">element.click()</pre>
 <h2 id="Notes">Notes</h2>
 <p>Lorsque la méthode <code>click</code> est utilisée sur des éléments où elle est gérée (par exemple un {{HTMLElement("input")}}), elle déclenche également l'évènement <code>click</code> de l'élément qui se propagera aux éléments situés plus haut dans l'arbre du document (ou la chaîne évènementielle) et déclenchera aussi leurs évènements <code>click</code>. Cependant, la propagation d'un évènement <code>click</code> ne déclenchera pas la navigation à partir d'un élément {{HTMLElement("a")}} comme si un vrai clic de souris avait été reçu.</p>
-<p>Au moment où sont écrites ces lignes (Opera Next est à la version 12.11), la méthode <code>click</code> d'Opera <strong>sera ignorée silencieusement</strong>, si executée sur un élément {{HTMLElement("input")}} avec un type "file", et une propriété <a href="/fr/docs/CSS" title="/fr/docs/CSS">CSS</a> {{cssxref('display')}} à "none".</p>
+<p>Au moment où sont écrites ces lignes (Opera Next est à la version 12.11), la méthode <code>click</code> d'Opera <strong>sera ignorée silencieusement</strong>, si executée sur un élément {{HTMLElement("input")}} avec un type "file", et une propriété <a href="/fr/docs/CSS">CSS</a> {{cssxref('display')}} à "none".</p>
 <div class="geckoVersionNote">
  <p>{{gecko_callout_heading("5.0")}}</p>
  <p>Avant Gecko 5.0 {{geckoRelease("5.0")}}, Gecko supportait la méthode <code>click</code> qu'avec des éléments {{HTMLElement("input")}} de type
@@ -32,7 +32,7 @@ translation_of: Web/API/HTMLElement/click
   <i>
    submit</i>
   . Gecko n'implémentait pas la méthode <code>click</code> sur d'autres éléments qui auraient pu répondre à des clics de souris comme les liens (éléments {{HTMLElement("a")}}), et ne déclenchait pas nécessairement l'évènement click d'autres éléments.</p>
- <p>Cependant, maintenant Gecko supporte la méthode sur tous les éléments comme requis par <a href="/fr/docs/HTML/HTML5" title="/fr/docs/HTML/HTML5">HTML5</a>.</p>
+ <p>Cependant, maintenant Gecko supporte la méthode sur tous les éléments comme requis par <a href="/fr/docs/HTML/HTML5">HTML5</a>.</p>
  <p>D'autres implémentations du DOM peuvent se comporter différemment.</p>
 </div>
 
@@ -48,7 +48,7 @@ translation_of: Web/API/HTMLElement/click
  </thead>
  <tbody>
   <tr>
-   <td>{{SpecName('DOM2 HTML', 'html.html#ID-2651361')}} <small>— <a class="external" href="http://www.yoyodesign.org/doc/w3c/dom2/html/html.html#ID-2651361">traduction en français</a> (non normative)</small></td>
+   <td>{{SpecName('DOM2 HTML', 'html.html#ID-2651361')}} <small>— <a href="http://www.yoyodesign.org/doc/w3c/dom2/html/html.html#ID-2651361">traduction en français</a> (non normative)</small></td>
    <td>{{Spec2('DOM2 HTML')}}</td>
    <td> </td>
   </tr>

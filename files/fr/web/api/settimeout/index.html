@@ -269,7 +269,7 @@ setTimeout(cb, 0);</pre>
 
 <p>Pour Chrome et Firefox, la limitation est active à partir du cinquième appel de fonction de rappel,  Safari active la limitation à partir du sixième et Edge à partir du troisième. Gecko traite <code>setInterval()</code> de la même façon depuis la <a href="/fr/docs/Mozilla/Firefox/Releases/56">version 56</a>.</p>
 
-<p><a class="external" href="http://code.google.com/p/chromium/issues/detail?id=792#c10">Par le passé</a>, certains navigateurs implémentaient cette limite différemment (pour les appels à <code>setInterval()</code> quelle que soit leur provenance ou lorsqu'un appel <code>setTimeout()</code> était imbriqué dans un autre pour un certain nombre de niveaux d'imbrication.</p>
+<p><a href="http://code.google.com/p/chromium/issues/detail?id=792#c10">Par le passé</a>, certains navigateurs implémentaient cette limite différemment (pour les appels à <code>setInterval()</code> quelle que soit leur provenance ou lorsqu'un appel <code>setTimeout()</code> était imbriqué dans un autre pour un certain nombre de niveaux d'imbrication.</p>
 
 <p>Pour implémenter un minuteur de 0ms, on pourra utiliser {{domxref("window.postMessage()")}}.</p>
 
@@ -278,14 +278,14 @@ setTimeout(cb, 0);</pre>
 </div>
 
 <div class="note">
-<p><strong>Note</strong> : Cette durée de 4 ms est <a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers">définie dans la spécification HTML5</a> et est la même dans l'ensemble des navigateurs à partir de 2010. Avant {{geckoRelease("5.0")}}, la valeur minimale pour les appels imbriqués était 10ms.</p>
+<p><strong>Note</strong> : Cette durée de 4 ms est <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers">définie dans la spécification HTML5</a> et est la même dans l'ensemble des navigateurs à partir de 2010. Avant {{geckoRelease("5.0")}}, la valeur minimale pour les appels imbriqués était 10ms.</p>
 </div>
 
 <h4 id="Précision_minimale_des_minuteurs_pour_les_onglets_inactifs_plus_de_1000ms">Précision minimale des minuteurs pour les onglets inactifs : plus de 1000ms</h4>
 
 <p>Afin de réduire la charge (ainsi que la consommation d'énergie associée) des onglets en arrière-plan, les minuteurs ne sont déclenchés au maximum qu'une fois par seconde pour les onglets inactifs.</p>
 
-<p>Firefox implémente ce comportement depuis Firefox 5 (cf.  {{bug(633421)}}) et la valeur du seuil de 1000ms peut être paramétrée via la préférence <code>dom.min_background_timeout_value</code>. Chrome implémente ce comportement depuis la version 11 (<a class="external" href="http://crbug.com/66078">crbug.com/66078</a>).</p>
+<p>Firefox implémente ce comportement depuis Firefox 5 (cf.  {{bug(633421)}}) et la valeur du seuil de 1000ms peut être paramétrée via la préférence <code>dom.min_background_timeout_value</code>. Chrome implémente ce comportement depuis la version 11 (<a href="http://crbug.com/66078">crbug.com/66078</a>).</p>
 
 <p>Firefox pour Android utilise un minimum de 15 minutes depuis Firefox 14 (cf.  {{bug(736602)}}) et les onglets en arrière-plan peuvent être déchargés complètement.</p>
 

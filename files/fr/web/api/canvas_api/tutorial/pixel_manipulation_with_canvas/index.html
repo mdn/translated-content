@@ -58,11 +58,11 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Pixel_manipulation_with_canvas
 <p><strong>Note </strong>: Tous les pixels en dehors du canevas seront retournés comme noirs transparents dans l'objet <code>ImageData</code> résultant.</p>
 </div>
 
-<p>Cette méthode est aussi présentée dans l'article <a href="https://developer.mozilla.org/fr/docs/HTML/Manipulating_video_using_canvas">Manipulation vidéo utilisant canvas</a>.</p>
+<p>Cette méthode est aussi présentée dans l'article <a href="/fr/docs/HTML/Manipulating_video_using_canvas">Manipulation vidéo utilisant canvas</a>.</p>
 
 <h3 id="Une_pipette_à_couleur">Une pipette à couleur</h3>
 
-<p>Dans cet exemple, nous utilisons la méthode <a href="https://developer.mozilla.org/fr/docs/Web/API/CanvasRenderingContext2D/getImageData">getImageData() </a>pour afficher la couleur en dessous du curseur de la souris. Pour cela, nous avons besoin de la position en cours de la souris donnée par <code>layerX</code> et <code>layerY</code>, nous recherchons ensuite les données pixel à cette position dans le tableau de pixels que <a href="https://developer.mozilla.org/fr/docs/Web/API/CanvasRenderingContext2D/getImageData">getImageData()</a> nous fournit. Finalement, nous utilisons les données du tableau pour définir une couleur d'arrière-plan et un texte dans le <code>&lt;div&gt;</code> pour afficher la couleur.</p>
+<p>Dans cet exemple, nous utilisons la méthode <a href="/fr/docs/Web/API/CanvasRenderingContext2D/getImageData">getImageData() </a>pour afficher la couleur en dessous du curseur de la souris. Pour cela, nous avons besoin de la position en cours de la souris donnée par <code>layerX</code> et <code>layerY</code>, nous recherchons ensuite les données pixel à cette position dans le tableau de pixels que <a href="/fr/docs/Web/API/CanvasRenderingContext2D/getImageData">getImageData()</a> nous fournit. Finalement, nous utilisons les données du tableau pour définir une couleur d'arrière-plan et un texte dans le <code>&lt;div&gt;</code> pour afficher la couleur.</p>
 
 <pre class="brush: html hidden">&lt;canvas id="canvas" width="300" height="227" style="float:left"&gt;&lt;/canvas&gt;
 &lt;div id="color" style="width:200px;height:50px;float:left"&gt;&lt;/div&gt;
@@ -93,7 +93,7 @@ canvas.addEventListener('mousemove', pick);</code></pre>
 
 <h2 id="Peinture_des_données_pixel_dans_un_contexte">Peinture des données pixel dans un contexte</h2>
 
-<p>Vous pouvez utiliser la méthode <a href="https://developer.mozilla.org/fr/docs/Web/API/CanvasRenderingContext2D/putImageData">putImageData() </a>pour peindre les données pixel dans un contexte :</p>
+<p>Vous pouvez utiliser la méthode <a href="/fr/docs/Web/API/CanvasRenderingContext2D/putImageData">putImageData() </a>pour peindre les données pixel dans un contexte :</p>
 
 <pre class="brush: js">ctx.putImageData(monImageData, dx, dy);
 </pre>
@@ -222,7 +222,7 @@ function draw(img) {
 
 <h2 id="Sauvegarde_des_images">Sauvegarde des images</h2>
 
-<p>L' {{domxref ("HTMLCanvasElement")}} fournit une méthode <code>toDataURL ()</code>, utile lors de l'enregistrement d'images. Il retourne un <a href="https://developer.mozilla.org/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">URI de données</a> contenant une représentation de l'image dans le format spécifié par le paramètre de <code>type</code> (par défaut en  <a class="external external-icon" href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a> ). L'image renvoyée est dans une résolution de 96 dpi.</p>
+<p>L' {{domxref ("HTMLCanvasElement")}} fournit une méthode <code>toDataURL ()</code>, utile lors de l'enregistrement d'images. Il retourne un <a href="/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">URI de données</a> contenant une représentation de l'image dans le format spécifié par le paramètre de <code>type</code> (par défaut en  <a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a> ). L'image renvoyée est dans une résolution de 96 dpi.</p>
 
 <dl>
  <dt>{{domxref("HTMLCanvasElement.toDataURL", "canvas.toDataURL('image/png')")}}</dt>
@@ -244,7 +244,7 @@ function draw(img) {
 
 <ul>
  <li>{{domxref("ImageData")}}</li>
- <li><a href="https://developer.mozilla.org/fr/docs/HTML/Manipulating_video_using_canvas">Manipulating video using canvas</a></li>
+ <li><a href="/fr/docs/HTML/Manipulating_video_using_canvas">Manipulating video using canvas</a></li>
  <li><a href="https://codepo8.github.io/canvas-images-and-pixels/">Canevas, images et pixels – par Christian Heilmann (en)</a></li>
 </ul>
 

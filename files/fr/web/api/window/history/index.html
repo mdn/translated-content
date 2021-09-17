@@ -7,7 +7,7 @@ translation_of: Web/API/Window/history
 
 <p>La propriété en lecture seule <strong style="font-family: 'Courier New','Andale Mono',monospace; line-height: inherit;">Window.history</strong> renvoie une référence à l'objet {{domxref("History")}}, qui offre la possibilité de manipuler l'historique de session du navigateur (pages visitées dans l'onglet ou le cadre dans lesquels la page courante est chargée).</p>
 
-<p>L'objet <code style="font-size: 14px; line-height: inherit;">History</code> obtenu a les méthodes suivantes : voir <a href="/en/DOM/Manipulating_the_browser_history" style="line-height: inherit;" title="en/DOM/Manipulating the browser history">la manipulation de l'historique du navigateur</a> pour avoir plus de détails ainsi que des exemples.<br>
+<p>L'objet <code style="font-size: 14px; line-height: inherit;">History</code> obtenu a les méthodes suivantes : voir <a href="/en/DOM/Manipulating_the_browser_history" style="line-height: inherit;">la manipulation de l'historique du navigateur</a> pour avoir plus de détails ainsi que des exemples.<br>
  En particulier, cet article explique les caractéristiques des méthodes <code style="font-size: 14px; line-height: inherit;">pushState()</code> et <code style="font-size: 14px; line-height: inherit;">replaceState()</code>qu'il est utile de connaître avant de les utiliser.</p>
 
 <h2 id="Example">Exemple</h2>
@@ -22,7 +22,7 @@ history.go(-1);     // similaire à history.back();
 
 <p>Pour des raisons de sécurité, l'objet <code style="font-size: 14px; line-height: inherit;">History</code> n'autorise pas l'accès au URL d'autres pages présentes dans l'historique de la session mais autorise d'y naviguer.</p>
 
-<p>Il n'y a pas de possibilité de nettoyer l'historique de la session ou de désactiver les boutons précédent et suivant. La solution éventuelle la plus proche serait la méthode <a href="/en/DOM/window.location#replace" style="line-height: inherit; font-family: 'Courier New', 'Andale Mono', monospace;" title="en/DOM/window.location#replace">location.replace()</a>, permettant de remplacer l'élément actuel de l'historique de la session par l'URL fournie.</p>
+<p>Il n'y a pas de possibilité de nettoyer l'historique de la session ou de désactiver les boutons précédent et suivant. La solution éventuelle la plus proche serait la méthode <a href="/en/DOM/window.location#replace" style="line-height: inherit; font-family: 'Courier New', 'Andale Mono', monospace;">location.replace()</a>, permettant de remplacer l'élément actuel de l'historique de la session par l'URL fournie.</p>
 
 <h2 id="Specification">Spécification</h2>
 

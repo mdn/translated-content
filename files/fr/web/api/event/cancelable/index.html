@@ -15,7 +15,7 @@ translation_of: Web/API/Event/cancelable
 
 <p>L'appel de {{domxref("event.preventDefault", "preventDefault()")}} sur un évènement qui ne peut être annulé produit une erreur, aussi les écouteurs d'évènement qui gèrent de nombreux types d'évènements peuvent être vérifiés avec <code>cancelable</code> avant d'appeler leurs méthodes <code>preventDefault()</code>.</p>
 
-<p>La plupart des événements natifs du navigateur qui peuvent être annulés sont ceux qui résultent de l'interaction de l'utilisateur avec la page. L'annulation des événements <a href="https://developer.mozilla.org/fr/docs/Web/Events/click">click</a>, <a href="https://developer.mozilla.org/fr/docs/Web/Events/scroll">scroll</a> ou <a href="https://developer.mozilla.org/fr/docs/Web/Events/beforeunload">beforeunload</a> empêcherait l'utilisateur de cliquer sur un élément, de faire défiler la page ou de la quitter, respectivement.</p>
+<p>La plupart des événements natifs du navigateur qui peuvent être annulés sont ceux qui résultent de l'interaction de l'utilisateur avec la page. L'annulation des événements <a href="/fr/docs/Web/Events/click">click</a>, <a href="/fr/docs/Web/Events/scroll">scroll</a> ou <a href="/fr/docs/Web/Events/beforeunload">beforeunload</a> empêcherait l'utilisateur de cliquer sur un élément, de faire défiler la page ou de la quitter, respectivement.</p>
 
 <h2 id="Syntax">Syntaxe</h2>
 
@@ -28,7 +28,7 @@ translation_of: Web/API/Event/cancelable
 
 <h2 id="Example">Exemple</h2>
 
-<p>Par exemple, les vendeurs de navigateurs proposent que l'<a href="https://developer.mozilla.org/fr/docs/Web/Events/wheel">évènement wheel </a>puisse être annulable seulement  <a href="https://github.com/WICG/interventions/issues/33" rel="external">la première fois que l'écouteur est appelé</a> (en) ; les évènements  <code>wheel</code> suivants ne peuvent être annulés.</p>
+<p>Par exemple, les vendeurs de navigateurs proposent que l'<a href="/fr/docs/Web/Events/wheel">évènement wheel </a>puisse être annulable seulement  <a href="https://github.com/WICG/interventions/issues/33">la première fois que l'écouteur est appelé</a> (en) ; les évènements  <code>wheel</code> suivants ne peuvent être annulés.</p>
 
 <pre class="brush:js">function preventScrollWheel(event) {
   if (typeof event.cancelable !== 'boolean' || event.cancelable) {

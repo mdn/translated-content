@@ -53,24 +53,24 @@ original_slug: Web/API/API_HTML_Drag_and_Drop/Opérations_de_glissement
 
 <h2 id="dragdata">Donnée de glissement</h2>
 
-<p>Tous les événements de glissement ont une propriété appelée <a class="internal" href="/Fr/GlisserD%C3%A9poser/DataTransfer" title="Fr/GlisserDéposer/DataTransfer">dataTransfer</a> utilisée pour contenir la donnée de glissement.</p>
+<p>Tous les événements de glissement ont une propriété appelée <a href="/Fr/GlisserD%C3%A9poser/DataTransfer">dataTransfer</a> utilisée pour contenir la donnée de glissement.</p>
 
 <p>Lorsqu'un glissement a lieu, une donnée doit être associée au glissement pour identifier ce qui est en train de glisser. Par exemple, lors du glissement d'un texte sélectionné dans un champs de texte, la donnée associée au glissement est le texte lui-même. De même, lors du glissement d'un lien, la donnée associée est l'URL du lien.</p>
 
-<p>La donnée de glissement contient deux informations : son type ou format et sa valeur. Le format est une chaîne de caractère (telle que <a class="internal" href="/Fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#text" title="Fr/GlisserDéposer/Types de glissement recommandés#text">text/plain</a> pour un texte), et la valeur est un texte. Lorsqu'un glissement démarre, vous devez lui ajouter en fournissant un type et la donnée. Dans les scrutateurs des événements <code>dragenter</code> et <code>dragover</code> au cours d'un glissement, vous pouvez vérifier les types de données et indiquer si un dépôt est permis ou non. Par exemple, une cible de dépôt qui accepte que des liens testera les types lien <a class="internal" href="/Fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#link" title="Fr/GlisserDéposer/Types de glissement recommandés#link">text/uri-list</a>. Pendant un évément de dépôt, un scrutateur récupèrera la donnée glissée et l'insèrera dans la zone de dépôt.</p>
+<p>La donnée de glissement contient deux informations : son type ou format et sa valeur. Le format est une chaîne de caractère (telle que <a href="/Fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#text">text/plain</a> pour un texte), et la valeur est un texte. Lorsqu'un glissement démarre, vous devez lui ajouter en fournissant un type et la donnée. Dans les scrutateurs des événements <code>dragenter</code> et <code>dragover</code> au cours d'un glissement, vous pouvez vérifier les types de données et indiquer si un dépôt est permis ou non. Par exemple, une cible de dépôt qui accepte que des liens testera les types lien <a href="/Fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#link">text/uri-list</a>. Pendant un évément de dépôt, un scrutateur récupèrera la donnée glissée et l'insèrera dans la zone de dépôt.</p>
 
-<p>Les types MIME habituels sont <a class="internal" href="/Fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#text" title="Fr/GlisserDéposer/Types de glissement recommandés#text">text/plain</a> ou <a class="internal" href="/Fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#image" title="Fr/GlisserDéposer/Types de glissement recommandés#image">image/jpeg</a>, mais vous pouvez créer vos propres types. La liste des types les plus utilisés est disponible sur <a class="internal" href="/Fr/GlisserD%C3%A9poser/Types_de_glissement" title="Fr/GlisserDéposer/Types de glissement">cette page</a>.</p>
+<p>Les types MIME habituels sont <a href="/Fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#text">text/plain</a> ou <a href="/Fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#image">image/jpeg</a>, mais vous pouvez créer vos propres types. La liste des types les plus utilisés est disponible sur <a href="/Fr/GlisserD%C3%A9poser/Types_de_glissement">cette page</a>.</p>
 
-<p>Un glissement peut fournir une donnée dans différents types. Ceci permet à une donnée d'être disponible dans des types spécifiques, souvent personnalisés, toujours en fournissant un format pour les cibles ne supportant pas ces types spécifiques. Habituellement, il s'agit toujours d'une version textuelle de type <a class="internal" href="/Fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#text" title="Fr/GlisserDéposer/Types de glissement recommandés#text">text/plain</a>. La donnée n'en sera qu'une représentation sous la forme d'un texte.</p>
+<p>Un glissement peut fournir une donnée dans différents types. Ceci permet à une donnée d'être disponible dans des types spécifiques, souvent personnalisés, toujours en fournissant un format pour les cibles ne supportant pas ces types spécifiques. Habituellement, il s'agit toujours d'une version textuelle de type <a href="/Fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#text">text/plain</a>. La donnée n'en sera qu'une représentation sous la forme d'un texte.</p>
 
-<p>Pour définir une donnée dans un dataTransfer, utilisez la méthode <a class="internal" href="/Fr/GlisserD%C3%A9poser/DataTransfer#setData" title="Fr/GlisserDéposer/DataTransfer#setData">setData</a>. Elle prend deux arguments qui sont le type de la donnée et sa valeur. Par exemple :</p>
+<p>Pour définir une donnée dans un dataTransfer, utilisez la méthode <a href="/Fr/GlisserD%C3%A9poser/DataTransfer#setData">setData</a>. Elle prend deux arguments qui sont le type de la donnée et sa valeur. Par exemple :</p>
 
 <pre>event.dataTransfer.setData("text/plain", "Texte à glisser");
 </pre>
 
-<p>Dans ce cas, la valeur de la donnée est "Texte à glisser" et son format est <a class="internal" href="/Fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#text" title="Fr/GlisserDéposer/Types de glissement recommandés#text">text/plain</a>.</p>
+<p>Dans ce cas, la valeur de la donnée est "Texte à glisser" et son format est <a href="/Fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#text">text/plain</a>.</p>
 
-<p>Vous pouvez fournir une donnée dans de multiples formats. Il suffit d'appeler la méthode <a class="internal" href="/Fr/GlisserD%C3%A9poser/DataTransfer#setData" title="Fr/GlisserDéposer/DataTransfer#setData">setData</a> plusieurs fois avec chacun des formats. Vous devez l'appeler dans l'ordre du format le plus spécifique au moins spécifique.</p>
+<p>Vous pouvez fournir une donnée dans de multiples formats. Il suffit d'appeler la méthode <a href="/Fr/GlisserD%C3%A9poser/DataTransfer#setData">setData</a> plusieurs fois avec chacun des formats. Vous devez l'appeler dans l'ordre du format le plus spécifique au moins spécifique.</p>
 
 <pre>var dt = event.dataTransfer;
 dt.setData("application/x-bookmark", bookmarkString);
@@ -80,20 +80,20 @@ dt.setData("text/plain", "http://www.mozilla.org");
 
 <p>Ici, une donnée est ajoutée avec trois types différents. Le premier type 'application/x-bookmark' est un type personnalisé. Toutes les applications ne vont pas supporter ce type, mais vous pouvez l'utiliser pour le glissement entre des zones d'une même application ou d'un même site. En fournissant la donnée avec d'autres types, vous la rendez disponible à moindre échelle pour d'autres applications. Le type 'application/x-bookmark' fournira ainsi plus de détail à l'application qu'avec les autres types qui ne seraient que de simples liens ou textes.</p>
 
-<p>Notez que cet exemple, <a class="internal" href="/Fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#link" title="Fr/GlisserDéposer/Types de glissement recommandés#link">text/uri-list</a> et <a class="internal" href="/Fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#text" title="Fr/GlisserDéposer/Types de glissement recommandés#text">text/plain</a> contiennent la même donnée. C'est souvent le cas, mais pas forcément nécessaire.</p>
+<p>Notez que cet exemple, <a href="/Fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#link">text/uri-list</a> et <a href="/Fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#text">text/plain</a> contiennent la même donnée. C'est souvent le cas, mais pas forcément nécessaire.</p>
 
 <p>Si vous essayez d'ajouter une donnée deux fois avec le même format, alors la nouvelle donnée remplacera l'ancienne, mais à la même position que l'ancienne dans la liste.</p>
 
-<p>Vous pouvez effacer la donnée en utilisant la méthode <a class="internal" href="/Fr/GlisserD%C3%A9poser/DataTransfer#clearData" title="Fr/GlisserDéposer/DataTransfer#clearData">clearData</a>, avec un seul argument qui est le type de la donnée à effacer.</p>
+<p>Vous pouvez effacer la donnée en utilisant la méthode <a href="/Fr/GlisserD%C3%A9poser/DataTransfer#clearData">clearData</a>, avec un seul argument qui est le type de la donnée à effacer.</p>
 
 <pre>event.dataTransfer.clearData("text/uri-list");
 </pre>
 
-<p>L'argument de type de la méthode <a class="internal" href="/Fr/GlisserD%C3%A9poser/DataTransfer#clearData" title="Fr/GlisserDéposer/DataTransfer#clearData">clearData</a> est optionnel. S'il n'est pas précisé, la donnée associée à tous les types est effacée. Et si aucune donnée à glisser n'est ajoutée, alors l'opération de glissement ne s'effectue pas.</p>
+<p>L'argument de type de la méthode <a href="/Fr/GlisserD%C3%A9poser/DataTransfer#clearData">clearData</a> est optionnel. S'il n'est pas précisé, la donnée associée à tous les types est effacée. Et si aucune donnée à glisser n'est ajoutée, alors l'opération de glissement ne s'effectue pas.</p>
 
 <h2 id="dragfeedback">Définir l'image filigrane d'un glissement</h2>
 
-<p>Lorsqu'un glissement a lieu, une image translucide est générée à partir de l'origine du glissement (l'élément d'origine ayant déclenché l'événement), et cette image suit le déplacement de la souris. Elle est créée automatiquement donc vous n'avez pas à le faire vous même. Toutefois, vous pouvez personnaliser cette image filigrane grâce à <a class="internal" href="/Fr/GlisserD%C3%A9poser/DataTransfer#setDragImage" title="Fr/GlisserDéposer/DataTransfer#setDragImage">setDragImage</a>.</p>
+<p>Lorsqu'un glissement a lieu, une image translucide est générée à partir de l'origine du glissement (l'élément d'origine ayant déclenché l'événement), et cette image suit le déplacement de la souris. Elle est créée automatiquement donc vous n'avez pas à le faire vous même. Toutefois, vous pouvez personnaliser cette image filigrane grâce à <a href="/Fr/GlisserD%C3%A9poser/DataTransfer#setDragImage">setDragImage</a>.</p>
 
 <pre>event.dataTransfer.setDragImage(image, xOffset, yOffset);
 </pre>
@@ -121,13 +121,13 @@ dt.setData("text/plain", "http://www.mozilla.org");
 
 <p>Cette technique est utile pour dessiner des images filigranes personnalisées en utilisant l'élément canvas.</p>
 
-<p>Les deuxième et troisième arguments de la méthode <a class="internal" href="/Fr/GlisserD%C3%A9poser/DataTransfer#setDragImage" title="Fr/GlisserDéposer/DataTransfer#setDragImage">setDragImage</a> sont les décalages de l'image par rapport au pointeur de la souris. Dans cet exemple, comme le canvas fait 50 pixels de large et 50 pixels de haut, nous utilisons son centre (soit 25 et 25) pour que l'image soit centrée sur le pointeur de la souris.</p>
+<p>Les deuxième et troisième arguments de la méthode <a href="/Fr/GlisserD%C3%A9poser/DataTransfer#setDragImage">setDragImage</a> sont les décalages de l'image par rapport au pointeur de la souris. Dans cet exemple, comme le canvas fait 50 pixels de large et 50 pixels de haut, nous utilisons son centre (soit 25 et 25) pour que l'image soit centrée sur le pointeur de la souris.</p>
 
 <h2 id="drageffects">Effets du glissement</h2>
 
 <p>Lors d'un glisser/déposer, plusieur opérations se déroulent. L'opération <code>copy</code> indique que la donnée glissée sera copiée de son emplacement d'origine au lieu de dépot. L'opération <code>move</code> indique que la donnée glissée sera déplacée, et l'opération <code>link</code> indique une forme de relation ou de connexion entre l'origine et le lieu de dépot.</p>
 
-<p>Vous pouvez spécifier laquelle de ces trois opérations sera autorisée au niveau de l'origine du glissement, en définissant la propriété <a class="internal" href="/Fr/GlisserD%C3%A9poser/DataTransfer#effectAllowed" title="Fr/GlisserDéposer/DataTransfer#effectAllowed">effectAllowed</a> dans un scrutateur d'événement <code>dragstart</code>.</p>
+<p>Vous pouvez spécifier laquelle de ces trois opérations sera autorisée au niveau de l'origine du glissement, en définissant la propriété <a href="/Fr/GlisserD%C3%A9poser/DataTransfer#effectAllowed">effectAllowed</a> dans un scrutateur d'événement <code>dragstart</code>.</p>
 
 <pre>event.dataTransfer.effectAllowed = "copy";
 </pre>
@@ -153,15 +153,15 @@ dt.setData("text/plain", "http://www.mozilla.org");
  <dd>Copie, déplacement ou lien</dd>
 </dl>
 
-<p>Notez que ces valeurs doivent être écrites exactement comme cela. Si vous ne modifiez pas la propriété <a class="internal" href="/Fr/GlisserD%C3%A9poser/DataTransfer#effectAllowed" title="Fr/GlisserDéposer/DataTransfer#effectAllowed">effectAllowed</a>, alors tous les opérations seront permises comme pour la valeur 'all'. L'usage de cette propriété intervient seulement si vous souhaitez exclure des types spécifiques.</p>
+<p>Notez que ces valeurs doivent être écrites exactement comme cela. Si vous ne modifiez pas la propriété <a href="/Fr/GlisserD%C3%A9poser/DataTransfer#effectAllowed">effectAllowed</a>, alors tous les opérations seront permises comme pour la valeur 'all'. L'usage de cette propriété intervient seulement si vous souhaitez exclure des types spécifiques.</p>
 
-<p>Pendant une opération de glissement, un scrutateur pour les événements <code>dragenter</code> ou <code>dragover</code> peut tester la propriété <a class="internal" href="/Fr/GlisserD%C3%A9poser/DataTransfer#effectAllowed" title="Fr/GlisserDéposer/DataTransfer#effectAllowed">effectAllowed</a> afin de voir quelles opérations sont autorisées. La propriété associée <a class="internal" href="/Fr/GlisserD%C3%A9pose/DataTransfer#dropEffect" title="Fr/GlisserDépose/DataTransfer#dropEffect">dropEffect</a> doit être définie dans un de ces événements pour spécifier ce que chaque opération aura à faire. Les valeurs valides pour <a class="internal" href="/Fr/GlisserD%C3%A9pose/DataTransfer#dropEffect" title="Fr/GlisserDépose/DataTransfer#dropEffect">dropEffect</a> sont <code>none</code>, <code>copy</code>, <code>move</code> ou <code>link</code>. Il n'y a pas de combinaison pour cette propriété.</p>
+<p>Pendant une opération de glissement, un scrutateur pour les événements <code>dragenter</code> ou <code>dragover</code> peut tester la propriété <a href="/Fr/GlisserD%C3%A9poser/DataTransfer#effectAllowed">effectAllowed</a> afin de voir quelles opérations sont autorisées. La propriété associée <a href="/Fr/GlisserD%C3%A9pose/DataTransfer#dropEffect">dropEffect</a> doit être définie dans un de ces événements pour spécifier ce que chaque opération aura à faire. Les valeurs valides pour <a href="/Fr/GlisserD%C3%A9pose/DataTransfer#dropEffect">dropEffect</a> sont <code>none</code>, <code>copy</code>, <code>move</code> ou <code>link</code>. Il n'y a pas de combinaison pour cette propriété.</p>
 
-<p>Pour les événements <code>dragenter</code> et <code>dragover</code>, la propriété <a class="internal" href="/Fr/GlisserD%C3%A9pose/DataTransfer#dropEffect" title="Fr/GlisserDépose/DataTransfer#dropEffect">dropEffect</a> est initialisée avec l'effet attendu par l'utilisateur. L'utilisateur peut modifier l'effet désiré en appuyant sur une touche de modification. Bien que les touches varient selon la plateforme, habituellement, il s'agit d'une combinaison des touches Maj et Control qui permettent de copier, déplacer et créer un raccourci. Le pointeur de la souris change de forme pour montrer l'opération souhaitée, par exemple un signe + à côté de la souris pour une copie.</p>
+<p>Pour les événements <code>dragenter</code> et <code>dragover</code>, la propriété <a href="/Fr/GlisserD%C3%A9pose/DataTransfer#dropEffect">dropEffect</a> est initialisée avec l'effet attendu par l'utilisateur. L'utilisateur peut modifier l'effet désiré en appuyant sur une touche de modification. Bien que les touches varient selon la plateforme, habituellement, il s'agit d'une combinaison des touches Maj et Control qui permettent de copier, déplacer et créer un raccourci. Le pointeur de la souris change de forme pour montrer l'opération souhaitée, par exemple un signe + à côté de la souris pour une copie.</p>
 
-<p>Vous pouvez modifier les propriétés <a class="internal" href="/Fr/GlisserD%C3%A9poser/DataTransfer#effectAllowed" title="Fr/GlisserDéposer/DataTransfer#effectAllowed">effectAllowed</a> et <a class="internal" href="/Fr/GlisserD%C3%A9pose/DataTransfer#dropEffect" title="Fr/GlisserDépose/DataTransfer#dropEffect">dropEffect</a> pendant les événements <code>dragenter</code> ou <code>dragover</code>, si par exemple une cible ne supporte qu'un seul type d'opération. La modification de la propriété <a class="internal" href="/Fr/GlisserD%C3%A9poser/DataTransfer#effectAllowed" title="Fr/GlisserDéposer/DataTransfer#effectAllowed">effectAllowed</a> vous permet de spécifier les opérations autorisées sur une cible donnée. Par exemple, mettre une propriété <code>copyMove</code> permet des opération de copie ou de déplacement, mais pas de créer un lien raccourci.</p>
+<p>Vous pouvez modifier les propriétés <a href="/Fr/GlisserD%C3%A9poser/DataTransfer#effectAllowed">effectAllowed</a> et <a href="/Fr/GlisserD%C3%A9pose/DataTransfer#dropEffect">dropEffect</a> pendant les événements <code>dragenter</code> ou <code>dragover</code>, si par exemple une cible ne supporte qu'un seul type d'opération. La modification de la propriété <a href="/Fr/GlisserD%C3%A9poser/DataTransfer#effectAllowed">effectAllowed</a> vous permet de spécifier les opérations autorisées sur une cible donnée. Par exemple, mettre une propriété <code>copyMove</code> permet des opération de copie ou de déplacement, mais pas de créer un lien raccourci.</p>
 
-<p>Vous pouvez modifier la propriété <a class="internal" href="/Fr/GlisserD%C3%A9pose/DataTransfer#dropEffect" title="Fr/GlisserDépose/DataTransfer#dropEffect">dropEffect</a> en remplaçant l'effet de l'utilisateur, et forcer à obtenir une opération spécifique. Notez que cet effet doit être un de ceux listé dans la propriété <a class="internal" href="/Fr/GlisserD%C3%A9poser/DataTransfer#effectAllowed" title="Fr/GlisserDéposer/DataTransfer#effectAllowed">effectAllowed</a>, sinon une valeur alternative sera attribuée.</p>
+<p>Vous pouvez modifier la propriété <a href="/Fr/GlisserD%C3%A9pose/DataTransfer#dropEffect">dropEffect</a> en remplaçant l'effet de l'utilisateur, et forcer à obtenir une opération spécifique. Notez que cet effet doit être un de ceux listé dans la propriété <a href="/Fr/GlisserD%C3%A9poser/DataTransfer#effectAllowed">effectAllowed</a>, sinon une valeur alternative sera attribuée.</p>
 
 <pre>event.dataTransfer.effectAllowed = "copyMove";
 event.dataTransfer.dropEffect = "copy";
@@ -175,15 +175,15 @@ event.dataTransfer.dropEffect = "copy";
 
 <p>Un scrutateur pour les événements <code>dragenter</code> et <code>dragover</code> est utilisé pour indiquer des cibles de dépôt valides, c'est-à-dire là où les items pourront être déposés. La plupart des zones d'une page Web ne sont pas des endroits valides pour déposer des données. Ainsi, le comportement par défaut pour ces événements ne permet pas un dépôt.</p>
 
-<p>Si vous voulez autoriser un dépôt, vous devez empêcher le comportement par défaut en annulant l'événement. Il suffit soit de retourner <code>false</code> à partir d'un scrutateur d'événement, ou par l'appel de la méthode événementielle <a class="internal" href="/fr/DOM/event.preventDefault" title="fr/DOM/event.preventDefault">event.preventDefault</a>. Cette dernière solution est plus faisable avec une fonction définie dans un script séparé.</p>
+<p>Si vous voulez autoriser un dépôt, vous devez empêcher le comportement par défaut en annulant l'événement. Il suffit soit de retourner <code>false</code> à partir d'un scrutateur d'événement, ou par l'appel de la méthode événementielle <a href="/fr/DOM/event.preventDefault">event.preventDefault</a>. Cette dernière solution est plus faisable avec une fonction définie dans un script séparé.</p>
 
 <pre>&lt;div ondragover="return false"&gt;
 &lt;div ondragover="event.preventDefault()"&gt;
 </pre>
 
-<p>L'appel de la méthode <a class="internal" href="/fr/DOM/event.preventDefault" title="fr/DOM/event.preventDefault">event.preventDefault</a> pendant les événements <code>dragenter</code> et <code>dragover</code> indiquera qu'un dépôt est permis à cet endroit. Toutefois, il est fréquent d'appeler la méthode <a class="internal" href="/fr/DOM/event.preventDefault" title="fr/DOM/event.preventDefault">event.preventDefault</a> seulement dans certaines situations, par exemple si un lien est en train d'être glissé. Pour cela, appelez une fonction qui testera une condition et annulera l'événement seulement si cette condition est rencontrée. Dans le cas contraire, il suffit de ne pas annuler l'événement et aucun dépôt ne se réalisera si l'utilisateur lache le bouton de la souris.</p>
+<p>L'appel de la méthode <a href="/fr/DOM/event.preventDefault">event.preventDefault</a> pendant les événements <code>dragenter</code> et <code>dragover</code> indiquera qu'un dépôt est permis à cet endroit. Toutefois, il est fréquent d'appeler la méthode <a href="/fr/DOM/event.preventDefault">event.preventDefault</a> seulement dans certaines situations, par exemple si un lien est en train d'être glissé. Pour cela, appelez une fonction qui testera une condition et annulera l'événement seulement si cette condition est rencontrée. Dans le cas contraire, il suffit de ne pas annuler l'événement et aucun dépôt ne se réalisera si l'utilisateur lache le bouton de la souris.</p>
 
-<p>Il est plus fréquent d'accepter ou non un dépôt en fonction du type de la donnée glissée. Par exemple, permettre les images ou les liens, ou bien les deux. Pour cela, testez les <a class="internal" href="/fr/GlisserD%C3%A9poser/DataTransfer#types" title="fr/GlisserDéposer/DataTransfer#types">types</a> de l'objet <code>dataTransfer</code>. Les types sont sous la forme d'une liste de chaînes de caractères ajoutées au début du glissement, du plus signifiant au moins signifiant.</p>
+<p>Il est plus fréquent d'accepter ou non un dépôt en fonction du type de la donnée glissée. Par exemple, permettre les images ou les liens, ou bien les deux. Pour cela, testez les <a href="/fr/GlisserD%C3%A9poser/DataTransfer#types">types</a> de l'objet <code>dataTransfer</code>. Les types sont sous la forme d'une liste de chaînes de caractères ajoutées au début du glissement, du plus signifiant au moins signifiant.</p>
 
 <pre>function doDragOver(event)
 {
@@ -193,13 +193,13 @@ event.dataTransfer.dropEffect = "copy";
 }
 </pre>
 
-<p>Dans cet exemple, la méthode <code>contains</code> est utilisée pour vérifier si le type <a class="internal" href="/fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#link" title="fr/GlisserDéposer/Types de glissement recommandés#link">text/uri-list</a> est présent dans la liste des types. S'il l'est, l'événement est annulé, ce qui autorise un dépôt. Si la donnée ne contient pas un lien, l'événement ne sera pas annulé et le dépôt ne sera pas autorisé à cet endroit.</p>
+<p>Dans cet exemple, la méthode <code>contains</code> est utilisée pour vérifier si le type <a href="/fr/GlisserD%C3%A9poser/Types_de_glissement_recommand%C3%A9s#link">text/uri-list</a> est présent dans la liste des types. S'il l'est, l'événement est annulé, ce qui autorise un dépôt. Si la donnée ne contient pas un lien, l'événement ne sera pas annulé et le dépôt ne sera pas autorisé à cet endroit.</p>
 
-<p>Vous pouvez également définir une propriété <a class="internal" href="/fr/GlisserD%C3%A9poser/DataTransfer#effectAllowed" title="fr/GlisserDéposer/DataTransfer#effectAllowed">effectAllowed</a> ou <a class="internal" href="/fr/GlisserD%C3%A9poser/DataTransfer#dropEffect" title="fr/GlisserDéposer/DataTransfer#dropEffect">dropEffect</a> ou les deux à la fois si vous souhaitez être plus précis sur le type d'opération autorisé. Naturellement, le changement de propriété n'aura aucun effet si vous n'avez pas annulé l'événement.</p>
+<p>Vous pouvez également définir une propriété <a href="/fr/GlisserD%C3%A9poser/DataTransfer#effectAllowed">effectAllowed</a> ou <a href="/fr/GlisserD%C3%A9poser/DataTransfer#dropEffect">dropEffect</a> ou les deux à la fois si vous souhaitez être plus précis sur le type d'opération autorisé. Naturellement, le changement de propriété n'aura aucun effet si vous n'avez pas annulé l'événement.</p>
 
 <h2 id="dropfeedback">Retour d'information du dépôt</h2>
 
-<p>Il y a de nombreuses manières d'indiquer à l'utilisateur que le dépot est autorisé dans une certaine zone. Le pointeur de la souris va être mis à jour en fonction de la valeur de la propriété <a href="/En/DragDrop/DataTransfer#dropEffect.28.29" title="dropEffect">dropEffect</a>. L'apparence exacte dépend de la plateforme de l'utilisateur, généralement il s'agit d'un icone représentant un signe plus qui apparaît pour une copie par exemple, et un 'impossible de déposer ici' peut apparaître quand le dépôt n'est pas autorisé. Cette information contextuelle est suffisante dans la plupart des cas.</p>
+<p>Il y a de nombreuses manières d'indiquer à l'utilisateur que le dépot est autorisé dans une certaine zone. Le pointeur de la souris va être mis à jour en fonction de la valeur de la propriété <a href="/En/DragDrop/DataTransfer#dropEffect.28.29">dropEffect</a>. L'apparence exacte dépend de la plateforme de l'utilisateur, généralement il s'agit d'un icone représentant un signe plus qui apparaît pour une copie par exemple, et un 'impossible de déposer ici' peut apparaître quand le dépôt n'est pas autorisé. Cette information contextuelle est suffisante dans la plupart des cas.</p>
 
 <p>De plus, vous pouvez aussi mettre à jour l'interface utilisateur en surlignant au besoin. Pour un simple surlignage, vous pouvez utiliser la pseudo-classe <code>-moz-drag-over</code>sur la cible du dépôt.</p>
 
@@ -208,11 +208,11 @@ event.dataTransfer.dropEffect = "copy";
 }
 </pre>
 
-<p>Dans cet example, l'élement comportant la classe <code>droparea</code> va recevoir un bord noir de un pixel tant que la cible sera valide, ce qui est le cas, si la méthode <a href="/en/DOM/event.preventDefault" title="en/DOM/event.preventDefault">event.preventDefault</a> est appelé durant l'évenement <code>dragenter</code>. Il est à noter que vous devez annuler l'évenement <code>dragenter</code> de cette pseudo-classe tant que l'état n'est pas verifié par l'évenement <code>dragover</code>.</p>
+<p>Dans cet example, l'élement comportant la classe <code>droparea</code> va recevoir un bord noir de un pixel tant que la cible sera valide, ce qui est le cas, si la méthode <a href="/en/DOM/event.preventDefault">event.preventDefault</a> est appelé durant l'évenement <code>dragenter</code>. Il est à noter que vous devez annuler l'évenement <code>dragenter</code> de cette pseudo-classe tant que l'état n'est pas verifié par l'évenement <code>dragover</code>.</p>
 
-<p>For more complex visual effects, you can also perform other operations during the <code>dragenter</code> event, for example, by inserting an element at the location where the drop will occur. For example, this might be an insertion marker or an element that represents the dragged element in its new location. To do this, you could create an <a href="/en/XUL/image" title="image">image</a> or <a href="/en/XUL/separator" title="separator">separator</a> element for example, and simply insert it into the document during the <code>dragenter</code> event.</p>
+<p>For more complex visual effects, you can also perform other operations during the <code>dragenter</code> event, for example, by inserting an element at the location where the drop will occur. For example, this might be an insertion marker or an element that represents the dragged element in its new location. To do this, you could create an <a href="/en/XUL/image">image</a> or <a href="/en/XUL/separator">separator</a> element for example, and simply insert it into the document during the <code>dragenter</code> event.</p>
 
-<p>The <code>dragover</code> event will fire at the element the mouse is pointing at. Naturally, you may need to move the insertion marker around a <code>dragover</code> event as well. You can use the event's <a href="/en/DOM/event.clientX" title="clientX">clientX</a> and <a href="/en/DOM/event.clientY" title="clientY">clientY</a> properties as with other mouse events to determine the location of the mouse pointer.</p>
+<p>The <code>dragover</code> event will fire at the element the mouse is pointing at. Naturally, you may need to move the insertion marker around a <code>dragover</code> event as well. You can use the event's <a href="/en/DOM/event.clientX">clientX</a> and <a href="/en/DOM/event.clientY">clientY</a> properties as with other mouse events to determine the location of the mouse pointer.</p>
 
 <p>Finally, the <code>dragleave</code> event will fire at an element when the drag leaves the element. This is the time when you should remove any insertion markers or highlighting. You do not need to cancel this event. Any highlighting or other visual effects specified using the <code>-moz-drag-over</code> pseudoclass will be removed automatically. The <code>dragleave</code> event will always fire, even if the drag is cancelled, so you can always ensure that any insertion point cleanup can be done during this event.</p>
 
@@ -220,9 +220,9 @@ event.dataTransfer.dropEffect = "copy";
 
 <p>When the user releases the mouse, the drag and drop operation ends. If the mouse was released over an element that is a valid drop target, that is, one that cancelled the last <code>dragenter</code> or <code>dragover</code> event, then the drop will be successful, and a <code>drop</code> event will fire at the target. Otherwise, the drag operation is cancelled and no <code>drop</code> event is fired.</p>
 
-<p>During the <code>drop</code> event, you should retrieve that data that was dropped from the event and insert it at the drop location. You can use the <a href="/En/DragDrop/DataTransfer#dropEffect.28.29" title="dropEffect">dropEffect</a> property to determine which drag operation was desired.</p>
+<p>During the <code>drop</code> event, you should retrieve that data that was dropped from the event and insert it at the drop location. You can use the <a href="/En/DragDrop/DataTransfer#dropEffect.28.29">dropEffect</a> property to determine which drag operation was desired.</p>
 
-<p>As with all drag related events, the event's <code>dataTransfer</code> property will hold the data that is being dragged. The <a href="/En/DragDrop/DataTransfer#getData.28.29" title="getData">getData</a> method may be used to retrieve the data again.</p>
+<p>As with all drag related events, the event's <code>dataTransfer</code> property will hold the data that is being dragged. The <a href="/En/DragDrop/DataTransfer#getData.28.29">getData</a> method may be used to retrieve the data again.</p>
 
 <pre>function onDrop(event)
 {
@@ -232,13 +232,13 @@ event.dataTransfer.dropEffect = "copy";
 }
 </pre>
 
-<p>The <a href="/En/DragDrop/DataTransfer#getData.28.29" title="getData">getData</a> method takes one argument, the type of data to retrieve. It will return the string value that was set when the <a href="/En/DragDrop/DataTransfer#setData.28.29" title="setData">setData</a> was called at the beginning of the drag operation. An empty string will be returned if data of that type does not exist. Naturally though, you would likely know that the right type of data was available, as it was previously checked during a <code>dragover</code> event.</p>
+<p>The <a href="/En/DragDrop/DataTransfer#getData.28.29">getData</a> method takes one argument, the type of data to retrieve. It will return the string value that was set when the <a href="/En/DragDrop/DataTransfer#setData.28.29">setData</a> was called at the beginning of the drag operation. An empty string will be returned if data of that type does not exist. Naturally though, you would likely know that the right type of data was available, as it was previously checked during a <code>dragover</code> event.</p>
 
 <p>In the example here, once we have retrieved the data, we insert the string as the textual content of the target. This has the effect of inserting the dragged text where it was dropped, assuming that the drop target is an area of text such as a <code>p</code> or <code>div</code> element.</p>
 
-<p>In a web page, you should call the <a href="/en/DOM/event.preventDefault" title="en/DOM/event.preventDefault">preventDefault</a> method of the event if you have accepted the drop so that the default browser handling does not handle the droppped data as well. For example, when a link is dragged to a web page, Firefox will open the link. By cancelling the event, this behaviour will be prevented.</p>
+<p>In a web page, you should call the <a href="/en/DOM/event.preventDefault">preventDefault</a> method of the event if you have accepted the drop so that the default browser handling does not handle the droppped data as well. For example, when a link is dragged to a web page, Firefox will open the link. By cancelling the event, this behaviour will be prevented.</p>
 
-<p>You can retrieve other types of data as well. If the data is a link, it should have the type <a href="/En/DragDrop/Recommended_Drag_Types#link" title="text/uri-list">text/uri-list</a>. You could then insert a link into the content.</p>
+<p>You can retrieve other types of data as well. If the data is a link, it should have the type <a href="/En/DragDrop/Recommended_Drag_Types#link">text/uri-list</a>. You could then insert a link into the content.</p>
 
 <pre>function doDrop(event)
 {
@@ -256,7 +256,7 @@ event.dataTransfer.dropEffect = "copy";
 }
 </pre>
 
-<p>This example inserts a link from the dragged data. As you might be able to guess from the name, the <a href="/En/DragDrop/Recommended_Drag_Types#link" title="text/uri-list">text/uri-list</a> type actually may contain a list of URLs, each on a separate line. In this code, we use the <a href="/en/Core_JavaScript_1.5_Reference/Global_Objects/String/split" title="split">split</a> to split the string into lines, then iterate over the list of lines, inserting each as a link into the document. Note also that we skip links starting with a number sign (#) as these are comments.</p>
+<p>This example inserts a link from the dragged data. As you might be able to guess from the name, the <a href="/En/DragDrop/Recommended_Drag_Types#link">text/uri-list</a> type actually may contain a list of URLs, each on a separate line. In this code, we use the <a href="/en/Core_JavaScript_1.5_Reference/Global_Objects/String/split">split</a> to split the string into lines, then iterate over the list of lines, inserting each as a link into the document. Note also that we skip links starting with a number sign (#) as these are comments.</p>
 
 <p>For simple cases, you can use the special type <code>URL</code> to just retrieve the first valid URL in the list. For example:</p>
 
@@ -265,7 +265,7 @@ event.dataTransfer.dropEffect = "copy";
 
 <p>This eliminates the need to check for comments or iterate through lines yourself, however it is limited to only the first URL in the list.</p>
 
-<p>The <code>URL</code> type is a special type used only as a shorthand, and it does not appear within the list of types specified in the <a href="/En/DragDrop/DataTransfer#types.28.29" title="types">types</a> property.</p>
+<p>The <code>URL</code> type is a special type used only as a shorthand, and it does not appear within the list of types specified in the <a href="/En/DragDrop/DataTransfer#types.28.29">types</a> property.</p>
 
 <p>Sometimes you may support a number of different formats, and you want to retrieve the data that is most specific that is supported. In this example, three formats are support by a drop target.</p>
 
@@ -286,10 +286,10 @@ event.dataTransfer.dropEffect = "copy";
 
 <h2 id="dragend">Finishing a Drag</h2>
 
-<p>Once the drag is complete, a <code>dragend</code> is fired at the source of the drag (the same element that received the <code>dragstart</code> event). This event will fire if the drag was successful or if it was cancelled. However, you can use the <a href="/En/DragDrop/DataTransfer#dropEffect.28.29" title="dropEffect">dropEffect</a> to determine what drop operation occurred.</p>
+<p>Once the drag is complete, a <code>dragend</code> is fired at the source of the drag (the same element that received the <code>dragstart</code> event). This event will fire if the drag was successful or if it was cancelled. However, you can use the <a href="/En/DragDrop/DataTransfer#dropEffect.28.29">dropEffect</a> to determine what drop operation occurred.</p>
 
-<p>If the <a href="/En/DragDrop/DataTransfer#dropEffect.28.29" title="dropEffect">dropEffect</a> property has the value <code>none</code> during a <code>dragend</code>, then the drag was cancelled. Otherwise, the effect specifies which operation was performed. The source can use this information after a move operation to remove the dragged item from the old location. The <a href="/En/DragDrop/DataTransfer#mozUserCancelled.28.29" title="dropEffect">mozUserCancelled</a> property will be set to true if the user cancelled the drag (by pressing Escape), and false if the drag was cancelled for other reasons such as an invalid drop target, or if was successful.</p>
+<p>If the <a href="/En/DragDrop/DataTransfer#dropEffect.28.29">dropEffect</a> property has the value <code>none</code> during a <code>dragend</code>, then the drag was cancelled. Otherwise, the effect specifies which operation was performed. The source can use this information after a move operation to remove the dragged item from the old location. The <a href="/En/DragDrop/DataTransfer#mozUserCancelled.28.29">mozUserCancelled</a> property will be set to true if the user cancelled the drag (by pressing Escape), and false if the drag was cancelled for other reasons such as an invalid drop target, or if was successful.</p>
 
-<p>A drop can occur inside the same window or over another application. The <code>dragend</code> event will always fire regardless. The event's <a href="/en/DOM/event.screenX" title="screenX">screenX</a> and <a href="/en/DOM/event.screenY" title="screenY">screenY</a> properties will be set to the screen coordinate where the drop occurred.</p>
+<p>A drop can occur inside the same window or over another application. The <code>dragend</code> event will always fire regardless. The event's <a href="/en/DOM/event.screenX">screenX</a> and <a href="/en/DOM/event.screenY">screenY</a> properties will be set to the screen coordinate where the drop occurred.</p>
 
 <p>After the <code>dragend</code> event has finished propagating, the drag and drop operation is complete.</p>

@@ -112,7 +112,7 @@ original_slug: Web/Guide/DOM/Events/Touch_events
 
 <p>Cela permet d'obtenir les précédentes coordonnées pour chaque toucher et ainsi d'utiliser la méthode adaptée pour dessiner le segment reliant les deux positions.</p>
 
-<p>Une fois le segment dessiné, on appelle <a href="/fr/JavaScript/Reference/Global_Objects/Array/splice" title="en/JavaScript/Reference/Global Objects/Array/splice"><code>Array.splice()</code></a> pour remplacer les informations précédentes sur les points de toucher par les informations courantes contenues dans le tableau <code>ongoingTouches</code>.</p>
+<p>Une fois le segment dessiné, on appelle <a href="/fr/JavaScript/Reference/Global_Objects/Array/splice"><code>Array.splice()</code></a> pour remplacer les informations précédentes sur les points de toucher par les informations courantes contenues dans le tableau <code>ongoingTouches</code>.</p>
 
 <h3 id="Gérer_la_fin_d'un_toucher">Gérer la fin d'un toucher</h3>
 
@@ -139,7 +139,7 @@ original_slug: Web/Guide/DOM/Events/Touch_events
 }
 </pre>
 
-<p>Cette fonction ressemble beaucoup à la précédente sauf qu'ici en appelant <a href="/en/JavaScript/Reference/Global_Objects/Array/splice" title="en/JavaScript/Reference/Global Objects/Array/splice"><code>Array.splice()</code></a>, on retire simplement l'ancien point sans ajouter un point mis à jour. On arrête donc de « suivre » ce point.</p>
+<p>Cette fonction ressemble beaucoup à la précédente sauf qu'ici en appelant <a href="/en/JavaScript/Reference/Global_Objects/Array/splice"><code>Array.splice()</code></a>, on retire simplement l'ancien point sans ajouter un point mis à jour. On arrête donc de « suivre » ce point.</p>
 
 <h3 id="Gérer_l'annulation_d'un_toucher">Gérer l'annulation d'un toucher</h3>
 
@@ -205,7 +205,7 @@ original_slug: Web/Guide/DOM/Events/Touch_events
   if (evt.touches.length &gt; 1 || (evt.type == "touchend" &amp;&amp; evt.touches.length &gt; 0))
     return;
 
-  var newEvt = <a href="https://developer.mozilla.org/en/DOM/document.createEvent" rel="internal" title="en/DOM/document.createEvent">document.createEvent</a>("MouseEvents");
+  var newEvt = document.createEvent("MouseEvents");
   var type = null;
   var touch = null;
   switch (event.type) {
@@ -213,10 +213,10 @@ original_slug: Web/Guide/DOM/Events/Touch_events
     case "touchmove":  type = "mousemove"; touch = event.changedTouches[0];
     case "touchend":   type = "mouseup"; touch = event.changedTouches[0];
   }
-  newEvt.<strong>initMouseEvent</strong>(type, true, true, event.<code><a href="https://developer.mozilla.org/en/DOM/event.originalTarget" rel="custom">originalTarget</a>.ownerDocument.defaultView</code>, 0,
+  newEvt.initMouseEvent(type, true, true, event.originalTarget.ownerDocument.defaultView, 0,
     touch.screenX, touch.screenY, touch.clientX, touch.clientY,
     evt.ctrlKey, evt.altKey, evt.shirtKey, evt.metaKey, 0, null);
-  event.<code><a href="https://developer.mozilla.org/en/DOM/event.originalTarget" rel="custom">originalTarget</a></code>.<a href="https://developer.mozilla.org/en/DOM/element.dispatchEvent" rel="internal" title="en/DOM/element.dispatchEvent">dispatchEvent</a>(newEvt);
+  event.originalTarget.dispatchEvent(newEvt);
 }
 </pre>
 
@@ -239,4 +239,4 @@ original_slug: Web/Guide/DOM/Events/Touch_events
 
 <p>Avant Gecko 12.0 {{ geckoRelease("12.0") }}, Gecko ne supportait pas les contacts multiples simultanés. Seul un toucher à la fois était supporté.</p>
 
-<div class="note"><strong>Note : </strong>Avant Gecko 6.0 {{ geckoRelease("6.0") }}, Gecko permettait d'utiliser une <a href="/en/DOM/Touch_events_(Mozilla_experimental)" title="en/DOM/Touch events (Mozilla experimental)">API propriétaire pour les événements tactile.</a> Cette API est maintenant dépréciée, celle-ci doit être utilisée à la place.</div>
+<div class="note"><strong>Note : </strong>Avant Gecko 6.0 {{ geckoRelease("6.0") }}, Gecko permettait d'utiliser une <a href="/en/DOM/Touch_events_(Mozilla_experimental)">API propriétaire pour les événements tactile.</a> Cette API est maintenant dépréciée, celle-ci doit être utilisée à la place.</div>

@@ -37,9 +37,9 @@ request.open("POST", "http://foo.com/submitform.php");
 request.send(formData);
 </pre>
 
-<div class="note"><strong>Remarque :</strong> les champs « userfile » et « webmasterfile » contiennent tous deux un fichier. Le numéro attribué au champ « accountnum » est immédiatement converti en chaîne par la méthode <a href="/en/DOM/XMLHttpRequest/FormData#append()" title="en/XMLHttpRequest/FormData#append()"><code>FormData.append()</code></a> (la valeur du champ peut être un objet {{ domxref("Blob") }}, {{ domxref("File") }} ou une chaîne : <strong>s’il ne s’agit ni d’un objet Blob, ni d’un objet File, la valeur est convertie en chaîne</strong>).</div>
+<div class="note"><strong>Remarque :</strong> les champs « userfile » et « webmasterfile » contiennent tous deux un fichier. Le numéro attribué au champ « accountnum » est immédiatement converti en chaîne par la méthode <a href="/en/DOM/XMLHttpRequest/FormData#append()"><code>FormData.append()</code></a> (la valeur du champ peut être un objet {{ domxref("Blob") }}, {{ domxref("File") }} ou une chaîne : <strong>s’il ne s’agit ni d’un objet Blob, ni d’un objet File, la valeur est convertie en chaîne</strong>).</div>
 
-<p>Dans cet exemple, une instance <code>FormData</code> contenant les valeurs des champs « username », « accountnum », « userfile » et « webmasterfile » est créée, puis la méthode <code>XMLHttpRequest</code> <a href="/en/DOM/XMLHttpRequest#send()" title="en/XMLHttpRequest#send()"><code>send()</code></a> est utilisée pour envoyer les données du formulaire. Le champ « webmasterfile » est un objet {{domxref("Blob")}}. Un objet <code>Blob</code> représente un objet-fichier de données brutes immuables. Les Blobs représentent des données qui ne sont pas nécessairement dans un format JavaScript natif. L’interface {{ domxref("File") }} se base sur l’objet <code>Blob</code>, elle en hérite les fonctionnalités et les étend pour prendre en charge les fichiers du système de l’utilisateur. Pour construire un <code>Blob</code>, vous pouvez invoquer le {{domxref("Blob.Blob","constructeur Blob()")}}.</p>
+<p>Dans cet exemple, une instance <code>FormData</code> contenant les valeurs des champs « username », « accountnum », « userfile » et « webmasterfile » est créée, puis la méthode <code>XMLHttpRequest</code> <a href="/en/DOM/XMLHttpRequest#send()"><code>send()</code></a> est utilisée pour envoyer les données du formulaire. Le champ « webmasterfile » est un objet {{domxref("Blob")}}. Un objet <code>Blob</code> représente un objet-fichier de données brutes immuables. Les Blobs représentent des données qui ne sont pas nécessairement dans un format JavaScript natif. L’interface {{ domxref("File") }} se base sur l’objet <code>Blob</code>, elle en hérite les fonctionnalités et les étend pour prendre en charge les fichiers du système de l’utilisateur. Pour construire un <code>Blob</code>, vous pouvez invoquer le {{domxref("Blob.Blob","constructeur Blob()")}}.</p>
 
 <h2 id="Récupération_d’un_objet_FormData_dans_un_formulaire_HTML">Récupération d’un objet FormData dans un formulaire HTML</h2>
 
@@ -134,7 +134,7 @@ $.ajax({
 
 <h2 id="Envoi_de_formulaires_et_de_fichiers_via_AJAX_sans_objet_FormData">Envoi de formulaires et de fichiers via AJAX <em>sans</em> objet <code>FormData</code></h2>
 
-<p>Si vous voulez en savoir plus sur la sérialisation des données  et l’envoi d’un formulaire via <a href="/en-US/docs/AJAX" title="/en-US/docs/AJAX">AJAX</a> <em>sans</em> utiliser d’objets FormData, consultez <a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files" title="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files">ce paragraph</a>e.</p>
+<p>Si vous voulez en savoir plus sur la sérialisation des données  et l’envoi d’un formulaire via <a href="/en-US/docs/AJAX">AJAX</a> <em>sans</em> utiliser d’objets FormData, consultez <a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files">ce paragraph</a>e.</p>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 

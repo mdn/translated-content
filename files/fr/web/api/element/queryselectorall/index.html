@@ -26,7 +26,7 @@ translation_of: Web/API/Element/querySelectorAll
 
 <dl>
  <dt><code>selectors</code> </dt>
- <dd>une {{domxref("DOMString")}} contenant un ou plusieurs sélecteurs à comparer. Cette chaîne doit être valide pour les <a href="https://developer.mozilla.org/fr/docs/Web/CSS/S%C3%A9lecteurs_CSS">sélecteurs CSS</a> ; si ce n'est pas le cas, une exception <code>SyntaxError</code> est levée. Voir <a href="https://developer.mozilla.org/fr/docs/Web/API/Document_Object_Model/Localisation_des_%C3%A9l%C3%A9ments_DOM_avec_les_s%C3%A9lecteurs">Localisation des éléments DOM avec les sélecteurs</a> pour plus d'informations sur l'utilisation des sélecteurs pour identifier les éléments. Plusieurs sélecteurs peuvent être spécifiés en les séparant par une virgule.</dd>
+ <dd>une {{domxref("DOMString")}} contenant un ou plusieurs sélecteurs à comparer. Cette chaîne doit être valide pour les <a href="/fr/docs/Web/CSS/S%C3%A9lecteurs_CSS">sélecteurs CSS</a> ; si ce n'est pas le cas, une exception <code>SyntaxError</code> est levée. Voir <a href="/fr/docs/Web/API/Document_Object_Model/Localisation_des_%C3%A9l%C3%A9ments_DOM_avec_les_s%C3%A9lecteurs">Localisation des éléments DOM avec les sélecteurs</a> pour plus d'informations sur l'utilisation des sélecteurs pour identifier les éléments. Plusieurs sélecteurs peuvent être spécifiés en les séparant par une virgule.</dd>
 </dl>
 
 <div class="note">
@@ -38,7 +38,7 @@ translation_of: Web/API/Element/querySelectorAll
 <p>Une {{domxref ("NodeList")}} contenant un objet {{domxref ("Element")}} pour chaque noeud descendant qui correspond à au moins un des sélecteurs spécifiés.</p>
 
 <div class="note">
-<p><strong>Note :</strong> Si le <code>selectors</code> spécifié inclus un <a href="https://developer.mozilla.org/fr/docs/Web/CSS/Pseudo-elements">pseudo-element CSS</a>, la liste renvoyée est toujours vide.</p>
+<p><strong>Note :</strong> Si le <code>selectors</code> spécifié inclus un <a href="/fr/docs/Web/CSS/Pseudo-elements">pseudo-element CSS</a>, la liste renvoyée est toujours vide.</p>
 </div>
 
 <h3 id="Example">Exception</h3>
@@ -65,7 +65,7 @@ translation_of: Web/API/Element/querySelectorAll
 <pre class="brush: js">var container = document.querySelector("#test");
 var matches = container.querySelectorAll("div.highlighted &gt; p");</pre>
 
-<p>Cet exemple utilise un <a href="https://developer.mozilla.org/fr/docs/Web/CSS/S%C3%A9lecteurs_d_attribut">sélecteur d'attribut</a> pour renvoyer une liste d'éléments {{domxref("iframe")}} du document lesquels contiennent un attribut nommé <code>'data-src'</code>:</p>
+<p>Cet exemple utilise un <a href="/fr/docs/Web/CSS/S%C3%A9lecteurs_d_attribut">sélecteur d'attribut</a> pour renvoyer une liste d'éléments {{domxref("iframe")}} du document lesquels contiennent un attribut nommé <code>'data-src'</code>:</p>
 
 <pre class="brush: js">var matches = document.querySelectorAll("iframe[data-src]");</pre>
 
@@ -155,12 +155,12 @@ inner.length; // 0</pre>
 </div>
 
 <ul>
- <li><a href="https://developer.mozilla.org/fr/docs/Web/API/Document_Object_Model/Localisation_des_%C3%A9l%C3%A9ments_DOM_avec_les_s%C3%A9lecteurs">Localisation des éléments DOM avec les sélecteurs</a></li>
- <li><a href="https://developer.mozilla.org/fr/docs/Web/CSS/S%C3%A9lecteurs_d_attribut">Sélecteurs d'attribut</a> dans le guide CSS</li>
- <li><a href="https://developer.mozilla.org/fr/docs/Learn/CSS/Introduction_to_CSS/Attribute_selectors">Sélecteurs d'attribut</a> dans la zone d'apprentissage de MDN</li>
+ <li><a href="/fr/docs/Web/API/Document_Object_Model/Localisation_des_%C3%A9l%C3%A9ments_DOM_avec_les_s%C3%A9lecteurs">Localisation des éléments DOM avec les sélecteurs</a></li>
+ <li><a href="/fr/docs/Web/CSS/S%C3%A9lecteurs_d_attribut">Sélecteurs d'attribut</a> dans le guide CSS</li>
+ <li><a href="/fr/docs/Learn/CSS/Introduction_to_CSS/Attribute_selectors">Sélecteurs d'attribut</a> dans la zone d'apprentissage de MDN</li>
  <li>{{domxref("element.querySelector()")}}</li>
  <li>{{domxref("Document.querySelector()")}} et {{domxref("Document.querySelectorAll()")}}</li>
  <li>{{domxref("DocumentFragment.querySelector()")}} et {{domxref("DocumentFragment.querySelectorAll()")}}</li>
  <li>{{domxref("document.querySelector()")}} et {{domxref("ParentNode.querySelectorAll()")}}</li>
- <li><a href="https://developer.mozilla.org/fr/Add-ons/Code_snippets/QuerySelector" title="Code_snippets/QuerySelector">Extraits de code pour <code>querySelector</code></a></li>
+ <li><a href="/fr/Add-ons/Code_snippets/QuerySelector">Extraits de code pour <code>querySelector</code></a></li>
 </ul>

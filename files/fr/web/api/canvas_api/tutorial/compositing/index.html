@@ -27,11 +27,11 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Composition
 
 <h2 id="Clipping_paths">Détourage</h2>
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/209/Canvas_clipping_path.png" style="float: right;">Un détourage (<em>clipping path</em> en anglais) est comme une forme de canvas standard, à la différence près qu'elle sert à masquer certaines parties du canvas. Voyez l'image de droite, la forme rouge (en étoile) est un détourage du canvas. Tout ce qui est en dehors du chemin n'est pas dessiné sur le canvas.</p>
+<p><img alt="" src="https://mdn.mozillademos.org/files/209/Canvas_clipping_path.png" style="float: right;">Un détourage (<em>clipping path</em> en anglais) est comme une forme de canvas standard, à la différence près qu'elle sert à masquer certaines parties du canvas. Voyez l'image de droite, la forme rouge (en étoile) est un détourage du canvas. Tout ce qui est en dehors du chemin n'est pas dessiné sur le canvas.</p>
 
 <p>Si nous comparons le détourage à la propriété <code>globalCompositeOperation</code> vue précédemment, nous voyons deux modes de composition qui ont plus ou moins les mémes effets qu'avec <code>source-in</code> et <code>source-atop</code>. La différence la plus significative entre les deux est que le détourage n'est jamais dessiné sur le canvas à proprement parler et il n'est jamais affecté par l'ajout de nouvelles formes. Ça le rend idéal pour dessiner plusieurs formes dans une zone restreinte.</p>
 
-<p>Dans le chapitre "<a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes" title="Web/Guide/HTML/Canvas_tutorial/Drawing_shapes#Drawing_paths">dessiner des formes avec le canevas</a>", nous n'avions mentionné que les méthodes <code>stroke()</code> et <code>fill()</code>, mais il y en a une troisième: <code>clip()</code> — elle permet de faire des détourages.</p>
+<p>Dans le chapitre "<a href="/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes">dessiner des formes avec le canevas</a>", nous n'avions mentionné que les méthodes <code>stroke()</code> et <code>fill()</code>, mais il y en a une troisième: <code>clip()</code> — elle permet de faire des détourages.</p>
 
 <dl>
  <dt>{{domxref("CanvasRenderingContext2D.clip", "clip()")}}</dt>

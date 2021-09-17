@@ -40,10 +40,10 @@ Sec-WebSocket-Version: 13
 
 <p>Le client peut solliciter des extensions de protocoles ou des sous-protocoles à cet instant ; voir <a href="#Miscellaneous">Miscellaneous</a> pour les détails. En outre, des en-têtes communs tel que <em>User-Agent</em>, <em>Referer</em>, <em>Cookie</em> ou des en-têtes d'authentification peuvent être envoyés par la même requête : leur usage est laissé libre car ils ne se rapportent pas directement au WebSocket et au processus de poignée de main. A ce titre il semble préférable de les ignorer : d'ailleurs dans de nombreuses configurations communes, un proxy inverse les aura finalement déjà traitées. </p>
 
-<p>Si un des entêtes n'est pas compris ou sa valeur n'est pas correcte, le serveur devrait envoyer une réponse  "<a href="https://developer.mozilla.org/en-US/docs/HTTP/Response_codes#400">400 Bad Request</a>" (<em>erreur 400 : la requête est incorrecte</em>) et clore immédiatement la connexion. Il peut par ailleurs indiquer la raison pour laquelle la poignée de mains a échoué dans le corps de réponse HTTP, mais le message peut ne jamais être affiché par le navigateur (<em>en somme, tout dépend du comportement du client</em>). Si le serveur ne comprend pas la version de WebSockets présentée, il doit envoyer dans la réponse un entête <em>Sec-WebSocket-Version</em> correspondant à la ou les version-s supportée-s. Ici le guide explique la version 13, la plus récente à l'heure de l'écriture du tutoriel (<em>voir le tutoriel en version anglaise pour la date exacte ; il s'agit là d'une traduction</em>). Maintenant, nous allons passer à l'entête attendu : <em>Sec-WebSocket-Key</em>.</p>
+<p>Si un des entêtes n'est pas compris ou sa valeur n'est pas correcte, le serveur devrait envoyer une réponse  "<a href="/en-US/docs/HTTP/Response_codes#400">400 Bad Request</a>" (<em>erreur 400 : la requête est incorrecte</em>) et clore immédiatement la connexion. Il peut par ailleurs indiquer la raison pour laquelle la poignée de mains a échoué dans le corps de réponse HTTP, mais le message peut ne jamais être affiché par le navigateur (<em>en somme, tout dépend du comportement du client</em>). Si le serveur ne comprend pas la version de WebSockets présentée, il doit envoyer dans la réponse un entête <em>Sec-WebSocket-Version</em> correspondant à la ou les version-s supportée-s. Ici le guide explique la version 13, la plus récente à l'heure de l'écriture du tutoriel (<em>voir le tutoriel en version anglaise pour la date exacte ; il s'agit là d'une traduction</em>). Maintenant, nous allons passer à l'entête attendu : <em>Sec-WebSocket-Key</em>.</p>
 
 <div class="note">
-<p><strong>Astuce:</strong>  Un grand nombre de navigateurs enverront un  <a href="https://developer.mozilla.org/en-US/docs/HTTP/Access_control_CORS#Origin"><code>Entête d'origine</code></a>. Vous pouvez alors l'utiliser pour vérifier la sécurité de la transaction (par exemple vérifier la similitude des domaines, listes blanches ou noires, etc.) et éventuellement retourner une réponse <a href="https://developer.mozilla.org/en-US/docs/HTTP/Response_codes#403">403 Forbidden</a> si l'origine ne vous plaît pas. Toutefois garder à l'esprit que cet entête peut être simulé ou trompeur (il peut être ajouté manuellement ou lors du transfert). De nombreuses applications refusent les transactions sans celui-ci. </p>
+<p><strong>Astuce:</strong>  Un grand nombre de navigateurs enverront un  <a href="/en-US/docs/HTTP/Access_control_CORS#Origin"><code>Entête d'origine</code></a>. Vous pouvez alors l'utiliser pour vérifier la sécurité de la transaction (par exemple vérifier la similitude des domaines, listes blanches ou noires, etc.) et éventuellement retourner une réponse <a href="/en-US/docs/HTTP/Response_codes#403">403 Forbidden</a> si l'origine ne vous plaît pas. Toutefois garder à l'esprit que cet entête peut être simulé ou trompeur (il peut être ajouté manuellement ou lors du transfert). De nombreuses applications refusent les transactions sans celui-ci. </p>
 </div>
 
 <div class="note">
@@ -51,7 +51,7 @@ Sec-WebSocket-Version: 13
 </div>
 
 <div class="note">
-<p><strong>Note:</strong> <a href="https://developer.mozilla.org/en-US/docs/HTTP/Response_codes">Les codes réguliers (<em>c-à-d défini par le protocole standard</em>) HTTP</a> ne peuvent être utilisés qu'<strong><em>avant</em></strong> la poignée : ceux après la poignée, sont définis d'une manière spécifique dans la section 7.4 de la documentation sus-nommée. </p>
+<p><strong>Note:</strong> <a href="/en-US/docs/HTTP/Response_codes">Les codes réguliers (<em>c-à-d défini par le protocole standard</em>) HTTP</a> ne peuvent être utilisés qu'<strong><em>avant</em></strong> la poignée : ceux après la poignée, sont définis d'une manière spécifique dans la section 7.4 de la documentation sus-nommée. </p>
 </div>
 
 <h3 id="La_réponse_du_serveur_lors_de_la_poignée_de_mains">La réponse du serveur lors de la poignée de mains </h3>
@@ -248,7 +248,7 @@ Sec-WebSocket-Protocol: wamp
 <h2 id="Contenus_associés">Contenus associés</h2>
 
 <ul>
- <li><a href="/en-US/docs/WebSockets/Writing_WebSocket_server" title="/en-US/docs/WebSockets/Writing_WebSocket_server">Tutorial: Websocket server in C#</a></li>
+ <li><a href="/en-US/docs/WebSockets/Writing_WebSocket_server">Tutorial: Websocket server in C#</a></li>
  <li><a href="/en-US/docs/WebSockets/Writing_WebSocket_client_applications">Writing WebSocket client applications</a></li>
  <li><a href="/en-US/docs/WebSockets/WebSocket_Server_Vb.NET">Tutorial: Websocket server in VB.NET</a></li>
 </ul>
