@@ -37,7 +37,7 @@ translation_of: Web/API/Document/getElementById
 
 <h3 id="Contenu_HTML">Contenu HTML</h3>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
 &lt;head&gt;
   &lt;title&gt;getElementById example&lt;/title&gt;
 &lt;/head&gt;
@@ -46,7 +46,7 @@ translation_of: Web/API/Document/getElementById
   &lt;button onclick="changeColor('blue');"&gt;blue&lt;/button&gt;
   &lt;button onclick="changeColor('red');"&gt;red&lt;/button&gt;
 &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+&lt;/html&gt;</pre>
 
 <h3 id="Contenu_JavaScript">Contenu JavaScript</h3>
 
@@ -67,7 +67,7 @@ translation_of: Web/API/Document/getElementById
 
 <h2 id="Exemple_2">Exemple</h2>
 
-<pre class="line-numbers  language-html"><code class="language-html">&lt;!doctype html&gt;
+<pre class="brush: html">&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
@@ -83,11 +83,11 @@ translation_of: Web/API/Document/getElementById
     &lt;script&gt;
         var parentDOM = document.getElementById('parent-id');
         var test1=parentDOM.getElementById('test1');
-        //</code>erreur de lancement <code class="language-html">
-        //</code>TypeError inattendu : parentDOM.getElementById n'est pas une fonction <code class="language-html">
+        //erreur de lancement 
+        //TypeError inattendu : parentDOM.getElementById n'est pas une fonction 
     &lt;/script&gt;
 &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+&lt;/html&gt;</pre>
 
 <p>S'il n'y a pas d'élément avec l'<code>id</code> fourni, cette fonction retourne <code>null</code>. A noter que le paramètre <code>id</code> est sensible à la casse, ainsi<code> document.getElementById("Main")</code> retournera <code>null</code> au lieu de l'élément <code>&lt;div id="main"&gt;</code> étant donné que "M" et "m" sont différents pour cette méthode.</p>
 

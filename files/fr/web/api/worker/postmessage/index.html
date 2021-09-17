@@ -109,7 +109,7 @@ function sendWorkerArrBuff(aBuf) {
 
 <h4 id="Output_logged">Output logged</h4>
 
-<pre class="line-numbers language-html"><code class="language-html">arrBuf.byteLength pre transfer: 8                              bootstrap.js:40
+<pre class="brush: html">arrBuf.byteLength pre transfer: 8                              bootstrap.js:40
 arrBuf.byteLength post transfer: 0                             bootstrap.js:42
 
 from worker, PRE send back aBuf.byteLength: 8                  myWorker.js:5:2
@@ -117,7 +117,7 @@ from worker, PRE send back aBuf.byteLength: 8                  myWorker.js:5:2
 incoming message from worker, msg: message { ... }             bootstrap.js:20
 got back buf in main thread, aBuf.byteLength: 8                bootstrap.js:12
 
-from worker, POST send back aBuf.byteLength: 0                 myWorker.js:7:2</code></pre>
+from worker, POST send back aBuf.byteLength: 0                 myWorker.js:7:2</pre>
 
 <p><code>byteLength</code> passe à 0 quand il est transferré. Pour voir l'exemple de cette extension de démonstration de Firefox, voir <a href="https://github.com/Noitidart/ChromeWorker/tree/aca57d9cadc4e68af16201bdecbfb6f9a6f9ca6b">GitHub :: ChromeWorker - demo-transfer-arraybuffer</a></p>
 

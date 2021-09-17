@@ -44,7 +44,7 @@ translation_of: Web/API/Node/removeChild
 
 <h2 id="Exemples">Exemples</h2>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;!--Sample HTML code--&gt;
+<pre class="brush: html">&lt;!--Sample HTML code--&gt;
 &lt;div id="top" align="center"&gt; &lt;/div&gt;
 
 &lt;script type="text/javascript"&gt;
@@ -69,13 +69,13 @@ translation_of: Web/API/Node/removeChild
       // ......
       garbage = top.removeChild(nested);   // Cas test 1 : la méthode dans le second appel ici, lance l'exception (1)
 
-&lt;/script&gt;</code></pre>
+&lt;/script&gt;</pre>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;!--Sample HTML code--&gt;
+<pre class="brush: html">&lt;!--Sample HTML code--&gt;
 
 &lt;div id="top" align="center"&gt;
   &lt;div id="nested"&gt;&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;</pre>
 
 <pre class="brush:js">// Supprime un élément spécifié quand son noeud parent est connu
 var d = document.getElementById("top");

@@ -57,7 +57,7 @@ translation_of: Web/API/DOMTokenList
 
 <p>D'abord HTML :</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;p class="a b c"&gt;&lt;/p&gt;</code></pre>
+<pre class="brush: html">&lt;p class="a b c"&gt;&lt;/p&gt;</pre>
 
 <p>Puis Javascript :</p>
 
@@ -74,7 +74,7 @@ para.textContent = 'paragraph classList is "' + classes + '"';</pre>
 
 <p>Les méthodes qui modifient la <code>DOMTokenList</code> (comme {{domxref("DOMTokenList.add()")}}) suppriment automatiquement les espaces en excès et les valeurs en double de la liste. Par exemple :</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;span class="    d   d e f"&gt;&lt;/span&gt;</code></pre>
+<pre class="brush: html">&lt;span class="    d   d e f"&gt;&lt;/span&gt;</pre>
 
 <pre class="brush: js">var span = document.querySelector("span");
 var classes = span.classList;

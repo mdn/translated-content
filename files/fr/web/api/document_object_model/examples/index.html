@@ -13,7 +13,7 @@ original_slug: Web/API/Document_Object_Model/Exemples
 
 <p>L'exemple qui suit montre l'utilisation des propriétés <code>height</code> et <code>width</code> pour dimensionner des images de diverses tailles :</p>
 
-<pre class="brush:html line-numbers  language-html"><code class="language-html">&lt;!DOCTYPE html&gt;
+<pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
 &lt;title&gt;width/height example&lt;/title&gt;
@@ -63,11 +63,11 @@ function init() {
 
 &lt;div id="output"&gt; &lt;/div&gt;
 &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+&lt;/html&gt;</pre>
 
 <h2 id="Exemple_2_:_attributs_d.27image">Exemple 2 : attributs d'image</h2>
 
-<pre class="brush:html line-numbers  language-html"><code class="language-html">&lt;!DOCTYPE html&gt;
+<pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
 &lt;title&gt;Modifying an image border&lt;/title&gt;
@@ -93,13 +93,13 @@ function setBorderWidth(width) {
 &lt;/form&gt;
 
 &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+&lt;/html&gt;</pre>
 
 <h2 id="Exemple_3_:_manipulation_de_styles">Exemple 3 : manipulation de styles</h2>
 
 <p>Dans cet exemple simple, on accède à certaines propriétés basiques de style d'un élément de paragraphe HTML à l'aide de son objet style. L'objet style de l'élément et ses propriétés de style CSS peuvent être récupérés et définis depuis le DOM. Dans ce cas-ci, les styles individuels sont manipulés directement. Dans l'exemple suivant (l'exemple 4), on utilisera les feuilles de style et leurs règles pour changer les styles de documents entiers.</p>
 
-<pre class="brush:html line-numbers  language-html"><code class="language-html">&lt;!DOCTYPE html&gt;
+<pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
 &lt;title&gt;Changing color and font-size example&lt;/title&gt;
@@ -122,7 +122,7 @@ function changeText() {
 &lt;/form&gt;
 
 &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+&lt;/html&gt;</pre>
 
 <h2 id="Exemple_4_:_utilisation_de_feuilles_de_style">Exemple 4 : utilisation de feuilles de style</h2>
 
@@ -156,7 +156,7 @@ P
 
 <p>Cependant, <code>stopEvent</code> appelle également une méthode d'objet <code>event</code>, {{domxref("event.stopPropagation")}} , qui empêche l'évènement de se propager (bubbling) plus haut dans le DOM. Notez que le tableau lui-même dispose d'un gestionnaire d'évènement {{domxref("element.onclick","onclick")}} qui devrait afficher un message lorsqu'on clique sur le tableau. Mais comme la méthode <code>stopEvent</code> a interrompu la propagation, après que les données du tableau aient été mises à jour, la phase évènementielle est effectivement arrêtée et un message d'alerte est affiché pour le confirmer.</p>
 
-<pre class="brush:html line-numbers  language-html"><code class="language-html">&lt;!DOCTYPE html&gt;
+<pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
 &lt;title&gt;Event Propagation&lt;/title&gt;
@@ -195,7 +195,7 @@ function load() {
 &lt;/table&gt;
 
 &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+&lt;/html&gt;</pre>
 
 <h2 id="Exemple_6_:_getComputedStyle">Exemple 6 : getComputedStyle</h2>
 
@@ -203,7 +203,7 @@ function load() {
 
 <p><code>getComputedStyle()</code> renvoie un objet <code>ComputedCSSStyleDeclaration</code>, dont les propriétés de style individuelles peuvent être référencées à l'aide de sa méthode <code>getPropertyValue()</code> comme montré dans l'exemple suivant.</p>
 
-<pre class="brush:html line-numbers  language-html"><code class="language-html">&lt;!DOCTYPE html&gt;
+<pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
 
@@ -254,7 +254,7 @@ function cStyles() {
 &lt;/form&gt;
 
 &lt;/body&gt;
-&lt;/html&gt;</code></pre>
+&lt;/html&gt;</pre>
 
 <h2 id="Exemple_7_:_affichage_des_propri.C3.A9t.C3.A9s_d.27un_objet_event">Exemple 7 : affichage des propriétés d'un objet <code>event</code></h2>
 
@@ -264,7 +264,7 @@ function cStyles() {
 
 <p>Placez le code qui suit dans une fichier texte vide et chargez-le dans différents navigateurs, vous serez surpris des différences entre le nombre et le nom des propriétés. Vous pouvez également ajouter quelques éléments à la page et appeler cette fonction depuis d'autres gestionnaires d'évènements.</p>
 
-<pre class="brush:html line-numbers  language-html"><code class="language-html">&lt;!DOCTYPE html&gt;
+<pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
 &lt;meta charset="utf-8"/&gt;
@@ -324,7 +324,7 @@ window.onload = function(event){
 &lt;h1&gt;Properties of the DOM &lt;span id="eventType"&gt;&lt;/span&gt; Event Object&lt;/h1&gt;
 &lt;/body&gt;
 
-&lt;/html&gt;</code></pre>
+&lt;/html&gt;</pre>
 
 <h2 id="Exemple_8_:_utilisation_de_l.27interface_DOM_Table">Exemple 8 : utilisation de l'interface DOM Table</h2>
 
@@ -332,7 +332,7 @@ window.onload = function(event){
 
 <p>Pour ajouter une ligne et quelques cellules à un tableau existant :</p>
 
-<pre class="brush:html line-numbers  language-html"><code class="language-html">&lt;table id="table0"&gt;
+<pre class="brush:html">&lt;table id="table0"&gt;
  &lt;tr&gt;
   &lt;td&gt;Row 0 Cell 0&lt;/td&gt;
   &lt;td&gt;Row 0 Cell 1&lt;/td&gt;
@@ -350,7 +350,7 @@ for (var i = 0; i &lt; 2; i++) {
   text = 'Row ' + row.rowIndex + ' Cell ' + i;
   cell.appendChild(document.createTextNode(text));
 }
-&lt;/script&gt;</code></pre>
+&lt;/script&gt;</pre>
 
 <h4 id="Notes">Notes</h4>
 

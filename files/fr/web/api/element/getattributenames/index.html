@@ -32,7 +32,7 @@ for(let name of element.getAttributeNames())
 
 <h2 id="Polyfill">Polyfill</h2>
 
-<pre class="line-numbers  language-html"><code class="language-html">if (Element.prototype.getAttributeNames == undefined) {
+<pre class="brush: html">if (Element.prototype.getAttributeNames == undefined) {
   Element.prototype.getAttributeNames = function () {
     var attributes = this.attributes;
     var length = attributes.length;
@@ -42,7 +42,7 @@ for(let name of element.getAttributeNames())
     }
     return result;
   };
-}</code></pre>
+}</pre>
 
 <h2 id="Spécifications">Spécifications</h2>
 

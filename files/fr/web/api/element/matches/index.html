@@ -27,7 +27,7 @@ translation_of: Web/API/Element/matches
 
 <h2 id="Example">Exemple</h2>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;ul id="birds"&gt;
+<pre class="brush: html">&lt;ul id="birds"&gt;
   &lt;li&gt;perroquet amazone&lt;/li&gt;
   &lt;li class="endangered"&gt;aigle des Philippines&lt;/li&gt;
   &lt;li&gt;pélican blanc&lt;/li&gt;
@@ -41,7 +41,7 @@ translation_of: Web/API/Element/matches
       console.log('Le - ' + birds[i].textContent + '- est en voie de disparition !');
     }
   }
-&lt;/script&gt;</code></pre>
+&lt;/script&gt;</pre>
 
 <p>Ce code affichera l'alerte "Le - aigle des Philippines - est en voie de disparition !" sur la console, puisque l'élèment possède l'attribut<code> class </code>de valeur <code>endangered</code>.</p>
 
@@ -73,9 +73,9 @@ translation_of: Web/API/Element/matches
 
 <p>Cependant, étant donné la possibilité de prendre en charge les anciens navigateurs, les éléments suivants devraient suffire pour la plupart (sinon tous) des cas pratiques (c'est-à-dire le support IE9 +).</p>
 
-<pre class="line-numbers  language-html"><code class="language-html">if (!Element.prototype.matches) {
+<pre class="brush: html">if (!Element.prototype.matches) {
     Element.prototype.matches = Element.prototype.msMatchesSelector;
-}</code></pre>
+}</pre>
 
 <h2 id="Spécification">Spécification</h2>
 

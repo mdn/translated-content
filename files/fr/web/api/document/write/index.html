@@ -61,9 +61,9 @@ document.close();
 
 <p>Si l'appel à <code>document.write()</code> est intégré directement dans le code HTML, il n'appellera pas <code>document.open()</code>. Par exemple :</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;script&gt;
+<pre class="brush: html">&lt;script&gt;
   document.write("&lt;h1&gt;Main title&lt;/h1&gt;")
-&lt;/script&gt;</code></pre>
+&lt;/script&gt;</pre>
 
 <div class="note">
 <p><strong>Note :</strong> <code>document.write</code> et <code>document.writeln <a href="https://developer.mozilla.org/fr/docs/Archive/Web/Writing_JavaScript_for_HTML">ne fonctionnent pas dans les documents XHTML</a> (vous obtiendrez une erreur </code> "Operation is not supported" [<code>NS_ERROR_DOM_NOT_SUPPORTED_ERR</code>] dans la console d'erreurs). Cela arrive lors de l'ouverture d'un fichier local avec l'extension de fichier  .xhtm ou pour tout document servi avec une  <code>application/xhtml+xml</code> de <a href="https://developer.mozilla.org/fr/docs/Glossaire/Type_MIME">type MIME</a>. Plus d'informations disponibles dans la   <a class="external external-icon" href="http://www.w3.org/MarkUp/2004/xhtml-faq#docwrite">foire aux questions W3C XHTML (en)</a>.</p>
