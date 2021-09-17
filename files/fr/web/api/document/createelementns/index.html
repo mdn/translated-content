@@ -52,7 +52,7 @@ translation_of: Web/API/Document/createElementNS
 
 <p>Cet exemple crée un nouvel élément &lt;div&gt; dans l'espace de noms <a href="https://developer.mozilla.org/fr/docs/XHTML" title="XHTML">XHTML</a> et l'ajoute à l'élément vbox. Bien que ce ne soit pas un document <a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL" title="XUL">XUL</a> très utile, cela montre l'utilisation d'éléments de deux espaces de noms différents au sein d'un même document :</p>
 
-<pre class="brush:xml line-numbers  language-xml"><code class="language-xml">&lt;?xml version="1.0"?&gt;
+<pre class="brush:xml">&lt;?xml version="1.0"?&gt;
 &lt;page xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
       xmlns:html="http://www.w3.org/1999/xhtml"
       title="||Working with elements||"
@@ -79,7 +79,7 @@ translation_of: Web/API/Document/createElementNS
   &lt;/html:div&gt;
  &lt;/vbox&gt;
 
-&lt;/page&gt;</code></pre>
+&lt;/page&gt;</pre>
 
 <div class="note">
 <p><strong>Note :</strong> Cet exemple utilise un script interne, ce qui n'est pas recommandé dans les documents XHTML. Cet exemple particulier est en fait un document XUL intégrant du XHTML. Cependant, la recommandation s'applique quand même.</p>
