@@ -1,5 +1,5 @@
 ---
-title: setter
+title: 설정자
 slug: Web/JavaScript/Reference/Functions/set
 tags:
   - ECMAScript 5

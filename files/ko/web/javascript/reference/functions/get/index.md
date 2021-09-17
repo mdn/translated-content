@@ -1,5 +1,5 @@
 ---
-title: getter
+title: 접근자
 slug: Web/JavaScript/Reference/Functions/get
 tags:
   - ECMAScript 2015
