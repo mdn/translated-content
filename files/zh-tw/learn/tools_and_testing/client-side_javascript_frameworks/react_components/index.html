@@ -23,14 +23,14 @@ tags:
 
 <div>{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}</div>
 
-<p class="summary">現在，我們的應用程式已是個龐然大物。在我們讓它做點事之前，我們需要將它拆分成可管理的、描述性的元件。React對什麼是元件沒有任何硬性規定——這取決於你！在本文中，我們將向你展示一種將應用程式拆分成元件的合理作法。</p>
+<p class="summary">現在，我們的應用程式已是個龐然大物。我們需要先將它拆分成可管理的、描述性的元件，好實作更多後續的功能。React對什麼是元件沒有任何硬性規定——這一切由你決定！在本文中，我們將向你展示一種將應用程式拆分成元件的合理作法。</p>
 
 <table>
  <tbody>
   <tr>
    <th scope="row">預備知識：</th>
    <td>
-    <p>熟悉基本的<a href="/zh-TW/docs/Learn/HTML">HTML</a>、<a href="/zh-TW/docs/Learn/CSS">CSS</a>、以及<a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a>程式語言，具備<a href="/en-US/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">終端機/命令列環境</a>的基本知識。</p>
+    <p>熟悉基本的<a href="/zh-TW/docs/Learn/HTML">HTML</a>、<a href="/zh-TW/docs/Learn/CSS">CSS</a>、以及<a href="/zh-TW/docs/Learn/JavaScript">JavaScript</a>程式語言，具備<a href="/zh-TW/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">終端機、命令列環境</a>的基本知識。</p>
    </td>
   </tr>
   <tr>
@@ -42,27 +42,27 @@ tags:
 
 <h2 id="Defining_our_first_component">定義我們的第一個元件</h2>
 
-<p>在你進行一些實踐之前，定義元件似乎很棘手，但定義元件的要點是：</p>
+<p>對缺乏實務經驗的人來說，定義元件不是件簡單的事，下列為一些判斷的要點：</p>
 
 <ul>
- <li>如果它代表你應用程式中明顯的「區塊(chunk)」，則它可能是一個元件。</li>
- <li>如果它經常被重複使用，則它可能是一個元件</li>
+ <li>如果某段程式碼在應用程式中有明顯的「段落感(chunk)」，則它可能是一個元件。</li>
+ <li>如果某段程式碼經常被重複使用，則它也可能是一個元件</li>
 </ul>
 
-<p>第二點特別重要：使用常見UI元素製作元件，這允許你在同個地方修改程式碼，並在使用該元件的任何地方查看這些更改。你也不必立即將所有內容拆分為元件。讓我們以第二個要點為靈感，並將最常重複使用、最重要UI部分製作一個元件：待辦事項清單。</p>
+<p>第二點特別重要：把常見的介面元素製作成元件，可以讓你在同個地方修改程式碼，並在任何使用該元件的地方查看這些變動。你不需要馬上將所有內容拆分為元件。讓我們先以第二點為靈感，將最常重複使用、最重要介面部分製作一個元件：待辦事項清單。</p>
 
 <h2 id="Make_a_&lt;Todo_&gt;">建立一個<code>&lt;Todo /&gt;</code>元件</h2>
 
-<p>在我們製作元件之前，我們應該為它建立一個新檔案。事實上，我們應該為我們的元件建立一個目錄。下面的指令會建立一個<code>components</code>資料夾目錄，然後在其中創建一個名為<code>Todo.js</code>的檔案。在執行這些之前，請確保你位於應用程式的根目錄資料夾中！</p>
+<p>在我們製作元件之前，我們應該為它建立一個新檔案。事實上，我們所定義的元件都應歸納到一個目錄中。下面的指令會建立一個<code>components</code>資料夾目錄，然後在其中創建一個名為<code>Todo.js</code>的檔案。在執行這些之前，請確保你的終端機、命令列位於應用程式的根目錄資料夾中！</p>
 
 <pre class="brush: bash">mkdir src/components
 touch src/components/Todo.js</pre>
 
-<p>我們的新<code>Todo.js</code>檔案目前是空的！打開並對它寫下第一行：</p>
+<p>我們的新<code>Todo.js</code>檔案目前是空的！打開並寫下第一行：</p>
 
 <pre class="brush: js">import React from "react";</pre>
 
-<p>由於我們將建立一個名為<code>Todo</code>的元件，因此你也可以開始將其程式碼添加到<code>Todo.js</code>中，如下所示。在這段程式碼中，我們定義了函式並將其匯出到同一行：</p>
+<p>因為我們要建立一個名為<code>Todo</code>的元件，你可以開始添加如下所示的程式碼到<code>Todo.js</code>中。在這段程式碼中，我們定義了函式並在同一行將其匯出：</p>
 
 <pre class="brush: js">export default function Todo() {
   return (
@@ -70,7 +70,7 @@ touch src/components/Todo.js</pre>
   );
 }</pre>
 
-<p>到目前為止都還OK，但是我們的元件必須回傳一些東西！返回到<code>src/App.js</code>中，從無序清單中複製第一個<code><a href="/en-US/docs/Web/HTML/Element/li">&lt;li&gt;</a></code>，並將其貼到<code>Todo.js</code>中，使其讀起來像這樣：</p>
+<p>到目前為止都還OK，但是我們的元件必須回傳一些東西！返回到<code>src/App.js</code>中，從無序清單中複製第一個<code><a href="/zh-TW/docs/Web/HTML/Element/li">&lt;li&gt;</a></code>，並將其貼到<code>Todo.js</code>中，使其讀起來像這樣：</p>
 
 <pre class="brush: js">export default function Todo() {
   return (
@@ -94,10 +94,10 @@ touch src/components/Todo.js</pre>
 }</pre>
 
 <div class="notecard note">
-<p><strong>注意：</strong>元件總是必須回傳一些東西。如果你嘗試渲染一個不回傳任何內容的元件，React將在你的瀏覽器中顯示錯誤訊息。</p>
+<p><strong>注意：</strong>元件一定要回傳一些東西。如果你嘗試渲染一個不回傳任何內容的元件，React將在你的瀏覽器中顯示錯誤訊息。</p>
 </div>
 
-<p>我們的<code>Todo</code>元件完成了，至少現在是這樣；現在我們可以來使用它。在<code>App.js</code>中程式碼開頭頂部添加下面這行，以引入<code>Todo</code>元件：</p>
+<p>我們的<code>Todo</code>元件完成了，至少目前如此；現在我們可以來使用它。在<code>App.js</code>中程式碼開頭頂部添加下面這行，以引入<code>Todo</code>元件：</p>
 
 <pre class="brush: js">import Todo from "./components/Todo";</pre>
 
@@ -113,15 +113,15 @@ touch src/components/Todo.js</pre>
   &lt;Todo /&gt;
 &lt;/ul&gt;</pre>
 
-<p>當你轉頭查看瀏覽器時，你會注意到一些糟糕的事情：你的清單現在重複第一個任務三遍！</p>
+<p>當你轉頭查看瀏覽器時，會注意到一些糟糕的事情：任務清單現在重複第一個任務三次！</p>
 
 <p><img alt="Our todo list app, with todo components repeating because the label is hardcoded into the component" src="todo-list-repeating-todos.png"></p>
 
-<p>我們不只是想吃東西；我們還有其他事情要做——呃..其他事——要做。接下來我們將看看如何調用不同元件以呈現獨特的內容。</p>
+<p>我們不僅想要吃；同時還有其他事要做。接下來我們將看如何呼叫不同元件以呈現獨特的內容。</p>
 
 <h2 id="Make_a_unique_&lt;Todo_&gt;">建立<em>唯一的</em><code>&lt;Todo /&gt;</code>元件</h2>
 
-<p>元件之所以強大，是因為它讓我們可以重複使用UI的各個部分，並在同個地方作為引用該UI的程式來源。問題是，我們通常不想重複使用每個元件；我們希望重複使用大部分零件，並更改小的細節。這時props就派上用場了。</p>
+<p>元件之所以強大，是因為它讓我們可以重複使用介面的各個部分，並引用該介面同個程式碼來源。問題是，我們通常不會重複使用一模一樣的元件；我們比較希望重複使用該元件大部分的結構，並調整其中的小細節。這時props就派上用場了。</p>
 
 <h3 id="Whats_in_a_name"><code>name</code>裡有什麼?</h3>
 
@@ -133,13 +133,13 @@ touch src/components/Todo.js</pre>
 &lt;Todo name="Sleep" /&gt;
 &lt;Todo name="Repeat" /&gt;</pre>
 
-<p>當你重新整理瀏覽器時，你將會看到...和以前完全一樣的畫面。我們給予<code>&lt;Todo /&gt;</code>元件傳遞了一些props參數，但我們還沒有使用到props它們。讓我們返回<code>Todo.js</code>中解決這個問題。</p>
+<p>當你重新整理瀏覽器時，你將會看到...和以前完全一樣的畫面。雖然我們傳遞了一些props參數給<code>&lt;Todo /&gt;</code>元件，但還沒有使用到props。讓我們返回<code>Todo.js</code>中解決這個問題。</p>
 
-<p>首先修改你定義的<code>Todo()</code>函式，使其將<code>props</code>作為參數傳入。如果你想檢查它們是否被元件正確接收到，你可以像我們以前那樣用<code>console.log()</code>來顯示你的<code>props</code>參數。</p>
+<p>首先修改你定義的<code>Todo()</code>函式，使其將<code>props</code>作為參數傳入。如果你想檢查props是否被元件正確接收到，你可以像之前那樣用<code>console.log()</code>來顯示你的<code>props</code>參數。</p>
 
-<p>一旦你確定元件已取得<code>props</code>參數，你可以用你的props<code>name</code>來替換每次出現的<code>Eat</code>。記住：當你處於JSX表達式中間時，你可以使用花括號（<code>{</code>與<code>}</code>）來注入變數的值。</p>
+<p>一旦你確定元件已取得<code>props</code>參數，你可以用props<code>name</code>來替換每次出現的<code>Eat</code>。記住：當處於JSX表達式中間時，你可以使用花括號（<code>{</code>與<code>}</code>）來注入變數的值。</p>
 
-<p>把這些全部放在一起，你的<code>Todo()</code>函式應該會像這樣：</p>
+<p>綜合以上的內容，你的<code>Todo()</code>函式應該會像這樣：</p>
 
 <pre class="brush: js">export default function Todo(props) {
   return (
@@ -168,7 +168,7 @@ touch src/components/Todo.js</pre>
 
 <h3 id="Is_it_completed">那麼，完成<code>completed</code>了嗎？</h3>
 
-<p>在我們原來的靜態清單中，只有<code>Eat</code>被選取到。那麼再一次，我們希望只改變一件事，就能重複使用<em>大部分</em>UI來組成<code>&lt;Todo /&gt;</code>元件。該是另一個prop派上用場的時候了！給予每個在<code>App.js</code>中使用的<code>&lt;Todo /&gt;</code>元件一個新prop<code>completed</code>。第一個（<code>Eat</code>）的值應該是<code>true</code>；其餘的應該是<code>false</code>：</p>
+<p>在我們原來的靜態清單中，只有<code>Eat</code>被選取到。那麼再一次，我們希望只改變一件事，就能重複使用<em>大部分</em>介面來組成<code>&lt;Todo /&gt;</code>元件。該是另一個prop派上用場的時候了！給予每個在<code>App.js</code>中使用的<code>&lt;Todo /&gt;</code>元件一個新prop<code>completed</code>。第一個（<code>Eat</code>）值是<code>true</code>；其餘的是<code>false</code>：</p>
 
 <pre class="brush: js">&lt;Todo name="Eat" completed={true} /&gt;
 &lt;Todo name="Sleep" completed={false} /&gt;
@@ -178,7 +178,7 @@ touch src/components/Todo.js</pre>
 
 <pre class="brush: js">&lt;input id="todo-0" type="checkbox" defaultChecked={props.completed} /&gt;</pre>
 
-<p>並且你的瀏覽器應該更新顯示被選中的<code>Eat</code>：</p>
+<p>此時你的瀏覽器應該更新顯示被選中的<code>Eat</code>：</p>
 
 <p><img alt="Our todo list app, now with differing checked states - some checkboxes are checked, others not" src="todo-list-differing-checked-states.png"></p>
 
@@ -186,7 +186,7 @@ touch src/components/Todo.js</pre>
 
 <h3 id="Gimme_some_id_please">請設定一些<code>id</code></h3>
 
-<p>現在，我們的 <code>&lt;Todo /&gt;</code>元件賦予了每個任務相同的<code>id</code>屬性<code>todo-0</code>。這是一段糟糕的HTML，因為<a href="/en-US/docs/Web/HTML/Global_attributes/id"><code>id</code>屬性</a>必須是唯一的（它們被CSS、JavaScript..等用來作為文件片段的唯一識別碼。）。這意味著我們應該給我們的元件一個<code>id</code>屬性，這個<code>id</code>屬性會為每個<code>Todo</code>提供一個唯一值。</p>
+<p>現在，我們的 <code>&lt;Todo /&gt;</code>元件賦予了每個任務相同的<code>id</code>屬性<code>todo-0</code>。這是一段糟糕的HTML，因為<a href="/zh-TW/docs/Web/HTML/Global_attributes/id"><code>id</code>屬性</a>必須是唯一的（它們被CSS、JavaScript..等當作文件片段的唯一識別碼。）。這意味著我們應該給元件一個<code>id</code>屬性，而這個<code>id</code>屬性會為每個<code>Todo</code>提供一個唯一值。</p>
 
 <p>遵循我們最初的模式，讓我們給<code>&lt;Todo /&gt;</code>元件的每個實體一個<code>todo-i</code>格式的ID，其中的<code>i</code>數值每次都會加1變多：</p>
 
@@ -205,13 +205,13 @@ touch src/components/Todo.js</pre>
 
 <h2 id="So_far_so_good">到目前為止，一切還算順利？</h2>
 
-<p>目前我們很好地使用了React，但我們可以做得更好！我們的程式碼有重複的部分。渲染<code>&lt;Todo /&gt;</code>元件的程式碼有三行幾乎相同，它們只有一個差異：每個prop的值不同。</p>
+<p>目前我們很好地使用了React，但還可以做得更好！我們的程式碼有重複的部分。渲染<code>&lt;Todo /&gt;</code>元件的程式碼有三行幾乎相同，它們只有一個差異：每個prop的值不同。</p>
 
 <p>我們可以使用JavaScript的核心功能之一——迭代（iteration）來清理（clean up）程式碼。要使用迭代，首先應該重新考慮我們的任務。</p>
 
 <h2 id="Tasks_as_data">將任務們轉換成數據資料</h2>
 
-<p>目前我們的每個任務都包含三資訊：它的名稱、它是否被檢查過，以及它的唯一ID。這些資料可以很好地轉換成物件格式。尤於我們有好幾個任務，因此一個包含有數個物件的陣列資料結構（array of objects）可以很好地表示這些資料。</p>
+<p>目前每個任務都包含三個資訊：它的名稱、它是否被檢查過，以及它唯一的ID。這些資料可以很好地轉換成物件格式。尤於我們還有好幾個任務，因此一個包含有數個物件的陣列資料結構（array of objects）可以很好地表示這些資料。</p>
 
 <p>在<code>src/index.js</code>中，在最後一個<code>import</code>引入語法的程式碼下方，且在<code>ReactDOM.render()</code>上方的段落撰寫宣告一個新的<code>const</code>常數：</p>
 
@@ -225,7 +225,7 @@ touch src/components/Todo.js</pre>
 
 <pre class="brush: js">ReactDOM.render(&lt;App tasks={DATA} /&gt;, document.getElementById("root"));</pre>
 
-<p>這個陣列現在作為<code>props.tasks</code>提供給App元件。如果你想的話，你還可以用<code>console.log()</code>來檢查一下。</p>
+<p>這個陣列現在作為<code>props.tasks</code>提供給App元件。如果你想的話還可以用<code>console.log()</code>來檢查一下。</p>
 
 <div class="notecard note">
 <p><strong>注意：</strong><code>ALL_CAPS</code>常數名稱在JavaScript中沒有特殊意義；它們是一個約定，告訴其他開發人員「這些數據資料在此定義後將永遠不會改變」。</p>
@@ -233,7 +233,7 @@ touch src/components/Todo.js</pre>
 
 <h2 id="Rendering_with_iteration">迭代渲染</h2>
 
-<p>為了要渲染含有物件的陣列資料結構（array of objects），我們須要將每個物件都轉換成一個<code>&lt;Todo /&gt;</code>元件。JavaScript為我們提供了一種將資料轉換為其他內容的陣列方法：<code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">Array.prototype.map()</a></code>。</p>
+<p>為了要渲染含有物件的陣列資料結構（array of objects），我們須要將每個物件都轉換成一個<code>&lt;Todo /&gt;</code>元件。JavaScript為我們提供了一種將資料轉換為其他內容的陣列方法：<code><a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/map">Array.prototype.map()</a></code>。</p>
 
 <p>在<code>App()</code>的return語句之前，新建一個<code>const</code>常數並命名名為<code>taskList</code>，並且使用<code>map()</code>來轉換它。讓我們開始將<code>tasks</code>陣列轉換成一些簡單的東西：例如每個任務的<code>name</code>：</p>
 
@@ -249,7 +249,7 @@ touch src/components/Todo.js</pre>
   {taskList}
 &lt;/ul&gt;</pre>
 
-<p>這使我們能夠再次顯示所有元件，但我們還有更多工作要做：瀏覽器顯示目前每個任務名稱為非結構化的字串。我們的HTML結構缺少<code>&lt;li&gt;</code>標籤以及其複選框與按鈕！</p>
+<p>這是另一種重新顯示所有元件的方法，只是我們還有更多工作要做：瀏覽器顯示目前每個任務名稱為非結構化的字串。我們的HTML結構缺少<code>&lt;li&gt;</code>標籤以及其複選框與按鈕！</p>
 
 <p><img alt="Our todo list app with the todo item labels just shown bunched up on one line" src="todo-list-unstructured-names.png"></p>
 
@@ -257,17 +257,17 @@ touch src/components/Todo.js</pre>
 
 <pre class="brush: js"> const taskList = props.tasks.map(task =&gt; &lt;Todo /&gt;);</pre>
 
-<p>再看看你的應用程式；現在我們的任務看起來更像以前的樣子了，但它們還缺少任務本身的名稱。請記得，我們希望傳遞給<code>&lt;Todo /&gt;</code>元件每個映射的任務，都要有<code>id</code>、<code>name</code>與<code>checked</code>屬性。如果我們把這些知識合在一起，我們會得到這樣的程式碼：</p>
+<p>再看看你的應用程式；現在任務看起來更像以前的樣子了，但還缺少任務本身的名稱。請記住，我們希望傳遞給<code>&lt;Todo /&gt;</code>元件每個映射的任務，都要有<code>id</code>、<code>name</code>與<code>checked</code>屬性。如果我們應用這些知識，會得到這樣的程式碼：</p>
 
 <pre class="brush: js">const taskList = props.tasks.map(task =&gt; (
   &lt;Todo id={task.id} name={task.name} completed={task.completed} /&gt;
 ));</pre>
 
-<p>現在應用程式看起來和以前一樣，而且我們的程式碼沒有重複部分了。</p>
+<p>現在應用程式看起來和以前一樣，而且程式碼沒有重複部分了。</p>
 
 <h2 id="Unique_keys">唯一的鍵值（Unique keys）</h2>
 
-<p>現在React正從陣列資料中來渲染我們的任務項目，React必須追蹤<strong>哪個是哪個</strong>以便正確渲染顯示項目。React會嘗試通過自己的猜測來追踪事情，但我們可以通過將<code>key</code>prop屬性傳遞給我們的<code>&lt;Todo /&gt;</code>元件來幫助它。<code>key</code>是一個由React管理的特殊prop——你不能將<code>key</code>這個詞用在其他目的上。</p>
+<p>現在React正從陣列資料中來渲染我們的任務項目，React會依據陣列資料找到對應的任務，以正確地渲染項目。雖然React會試著自己推斷來追踪事情的變化，但我們可以通過將<code>key</code>prop屬性傳遞給我們的<code>&lt;Todo /&gt;</code>元件來幫助它。<code>key</code>是一個由React管理的特殊prop，所以你不能將<code>key</code>這個詞用在其他目的上。</p>
 
 <p>因為鍵（keys）應該是唯一的，我們將重新使用每個任務物件的<code>id</code>作為其鍵（key）。像這樣更新你的<code>taskList</code>常數：</p>
 
@@ -281,18 +281,18 @@ touch src/components/Todo.js</pre>
   )
 );</pre>
 
-<p><strong>你應該始終將唯一鍵（unique keys）傳遞給任何你用迭代渲染的東西裡。</strong>在你的瀏覽器中沒有什麼明顯變化，但如果你不使用唯一鍵（unique keys），React就會到你的console控制台發出警告訊息，並且你的應用程式可能會表現的很奇怪！</p>
+<p><strong>你應該始終將唯一鍵（unique keys）傳遞給任何你迭代渲染的東西裡。</strong>雖然這麼做瀏覽器畫面不會有明顯變化，但如果你不使用唯一鍵（unique keys），React就會到你的console控制台發出警告訊息，並且你的應用程式可能會表現的很奇怪！</p>
 
 <h2 id="Componentizing_the_rest_of_the_app">將應用程式的剩餘部分也元件化</h2>
 
-<p>現在我們已整理好最重要的元件，我們可以將應用程式的剩餘部分也轉成元件。要記住元件要馬是明顯的UI部分，要馬是重複使用的UI部分，或者兩者都是，我們可以再製作兩個元件：</p>
+<p>現在我們已整理好最重要的元件，我們可以將應用程式的剩餘部分也轉成元件。要記住元件可能是明顯的介面部分，也可能是重複使用的介面部分，又或者兩者都是，我們可以再製作兩個元件：</p>
 
 <ul>
  <li><code>&lt;Form/&gt;</code></li>
  <li><code>&lt;FilterButton/&gt;</code></li>
 </ul>
 
-<p>鑒於我們知道這兩個元件都是需要的，我們可以使用終端機指令批次處理一些建立檔案的工作。注意你位於應用程式的根目錄中，在終端機執行此指令：</p>
+<p>既然我們知道這兩個元件都是需要的，我們可以使用終端機指令批次處理建立檔案的工作。注意你的終端機、命令行要位於應用程式的根目錄中，接著就可以在終端機執行此指令：</p>
 
 <pre class="brush: bash">touch src/components/Form.js src/components/FilterButton.js</pre>
 
@@ -301,10 +301,10 @@ touch src/components/Todo.js</pre>
 <p>打開<code>components/Form.js</code>檔案並執行下列操作：</p>
 
 <ul>
- <li>在文件檔案的最開頭Import引入<code>React</code>，就像我們在<code>Todo.js</code>做的一樣。</li>
- <li>建立一個基本結構與<code>Todo()</code>相同的新<code>Form()</code>元件，並將匯出。</li>
+ <li>在檔案的最開頭引入<code>React</code>，就像我們在<code>Todo.js</code>做的一樣。</li>
+ <li>建立一個基本結構與<code>Todo()</code>相同的新<code>Form()</code>元件，並將其匯出。</li>
  <li>從<code>App.js</code>內複製<code>&lt;form&gt;</code>標籤以及它們之間的所有內容，並將它們轉貼到<code>Form()</code>的<code>return</code>語句那邊。</li>
- <li>在文件檔案的最末段Export匯出<code>Form</code></li>
+ <li>在檔案的最末段匯出<code>Form</code></li>
 </ul>
 
 <p>你的<code>Form.js</code>檔案看起來應該是這樣：</p>
@@ -337,7 +337,7 @@ export default Form;</pre>
 
 <h3 id="The_&lt;FilterButton_&gt;">&lt;FilterButton /&gt;元件</h3>
 
-<p>執行與在<code>FilterButton.js</code>中建立<code>Form.js</code>一樣的操作，從<code>App.js</code>中調用元件<code>FilterButton()</code>，並複製在<code>&lt;div&gt;</code>元素內第一個按鈕的HTML，從<code>class</code>到<code>filters</code>的段落至<code>return</code>這邊。</p>
+<p>執行與在<code>FilterButton.js</code>中建立<code>Form.js</code>一樣的操作，從<code>App.js</code>中呼叫元件<code>FilterButton()</code>，並複製在<code>&lt;div&gt;</code>元素內第一個按鈕的HTML，從<code>class</code>到<code>filters</code>的段落至<code>return</code>這邊。</p>
 
 <p>現在檔案看起來應該像這樣：</p>
 
@@ -356,7 +356,7 @@ function FilterButton(props) {
 export default FilterButton;</pre>
 
 <div class="notecard note">
-<p><strong>注意：</strong>你可能會注意到，我們在這裡犯了與第一次為<code>&lt;Todo /&gt;</code>元件犯的相同的錯誤，因為每個按鈕都是相同的。沒關係！我們稍後會在<a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#back_to_the_filter_buttons">Back to the filter buttons</a>章節修好這個元件。</p>
+<p><strong>注意：</strong>你可能會注意到，我們犯了第一次在<code>&lt;Todo /&gt;</code>元件中相同的錯誤，因為每個按鈕都是相同的。沒關係！我們稍後會在<a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering#back_to_the_filter_buttons">Back to the filter buttons</a>章節修好這個元件。</p>
 </div>
 
 <h2 id="Importing_all_our_components">引入我們所有的元件</h2>
@@ -405,7 +405,7 @@ function App(props) {
 
 export default App;</pre>
 
-<p>有了這個，我們<em>幾乎</em>準備好在我們的React應用程式中解決一些互動性問題！</p>
+<p>到了這裡，我們<em>幾乎</em>準備好在React應用程式中解決一些互動性問題！</p>
 
 <h2 id="Summary">總結</h2>
 
@@ -416,62 +416,62 @@ export default App;</pre>
 <h2 id="In_this_module">在這個模組中</h2>
 
 <ul>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
- <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
+ <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction">Introduction to client-side frameworks</a></li>
+ <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features">Framework main features</a></li>
  <li>React
   <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started">Getting started with React</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning">Beginning our React todo list</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components">Componentizing our React app</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state">React interactivity: Events and state</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering">React interactivity: Editing, filtering, conditional rendering</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_accessibility">Accessibility in React</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_resources">React resources</a></li>
   </ul>
  </li>
  <li>Ember
   <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_getting_started">Getting started with Ember</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_structure_componentization">Ember app structure and componentization</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_interactivity_events_state">Ember interactivity: Events, classes and state</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_conditional_footer">Ember Interactivity: Footer functionality, conditional rendering</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_routing">Routing in Ember</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Ember_resources">Ember resources and troubleshooting</a></li>
   </ul>
- </li>
+ </li> 
  <li>Vue
   <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_getting_started">Getting started with Vue</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component">Creating our first Vue component</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists">Rendering a list of Vue components</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models">Adding a new todo form: Vue events, methods, and models</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_styling">Styling Vue components with CSS</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_computed_properties">Using Vue computed properties</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_conditional_rendering">Vue conditional rendering: editing existing todos</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management">Focus management with Vue refs</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_resources">Vue resources</a></li>
   </ul>
  </li>
  <li>Svelte
   <ul>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
-   <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started">Getting started with Svelte</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_Todo_list_beginning">Starting our Svelte Todo list app</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_variables_props">Dynamic behavior in Svelte: working with variables and props</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components">Componentizing our Svelte app</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_reactivity_lifecycle_accessibility">Advanced Svelte: Reactivity, lifecycle, accessibility</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores">Working with Svelte stores</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_TypeScript">TypeScript support in Svelte</a></li>
+   <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next">Deployment and next steps</a></li>
   </ul>
  </li>
  <li>Angular
    <ul>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
-    <li><a href="/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">Getting started with Angular</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning">Beginning our Angular todo list app</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling">Styling our Angular app</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component">Creating an item component</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering">Filtering our to-do items</a></li>
+    <li><a href="/zh-TW/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building">Building Angular applications and further resources</a></li>
    </ul>
  </li>
 </ul>
