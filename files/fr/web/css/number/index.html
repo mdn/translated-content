@@ -17,13 +17,13 @@ translation_of: Web/CSS/number
 
 <h2 id="Interpolation">Interpolation</h2>
 
-<p>Les valeurs de type <code>&lt;number&gt;</code> peuvent être interpolées afin d'être utilisées dans les animations. Les valeurs de ce type seront interpolées comme des nombres réels à virgule flottante. La vitesse de l'interpolation sera définie grâce <a href="/fr/docs/Web/CSS/timing-function">à la fonction de temporisation</a> associée à l'animation.</p>
+<p>Les valeurs de type <code>&lt;number&gt;</code> peuvent être interpolées afin d'être utilisées dans les animations. Les valeurs de ce type seront interpolées comme des nombres réels à virgule flottante. La vitesse de l'interpolation sera définie grâce <a href="/fr/docs/Web/CSS/easing-function">à la fonction de temporisation</a> associée à l'animation.</p>
 
 <h2 id="Exemples">Exemples</h2>
 
 <p>Voici des exemples de valeurs <code>&lt;number&gt;</code> valides :</p>
 
-<pre class="eval example-good">12          Un entier (<a href="/fr/docs/Web/CSS/integer">&lt;integer&gt;</a>) est également un &lt;number&gt;
+<pre class="brush: css example-good">12          Un entier (<a href="/fr/docs/Web/CSS/integer">&lt;integer&gt;</a>) est également un &lt;number&gt;
 4.01        Un nombre (décimal) positif
 -456.8      Un nombre décimal négatif
 0.0         Zéro
@@ -36,7 +36,7 @@ translation_of: Web/CSS/number
 
 <p>Voici des exemples de valeurs invalides :</p>
 
-<pre class="eval example-bad">12.         Le point doit être suivi par des chiffres
+<pre class="brush: css example-bad">12.         Le point doit être suivi par des chiffres
 +-12.2      Seul un +/- est autorisé.
 12.1.1      Seul un point est autorisé.
 </pre>

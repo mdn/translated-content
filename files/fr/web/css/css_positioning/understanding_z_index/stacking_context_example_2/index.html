@@ -14,7 +14,7 @@ original_slug: Web/CSS/Comprendre_z-index/Exemple_2
 
 <p>Ce deuxième exemple est très simple, mais il est essentiel à la compréhension du concept de <em>contexte d'empilement</em>. Nous avons les 4 mêmes blocs que l'exemple précédent, mais maintenant, nous appliquons des propriétés {{cssxref("z-index")}} aux deux niveaux de la hiérarchie.</p>
 
-<p><img alt="Figure 6 : Exemple de contexte d'empilement 2" class="internal" src="/@api/deki/files/1455/=Understanding_zindex_06.png"></p>
+<p>{{ EmbedLiveSample('Exemple', '352', '270') }}</p>
 
 <p>Vous pouvez voir que le bloc <em>DIV #2</em> (z-index : 2) est au dessus du bloc <em>DIV #3</em> (z-index : 1), parce qu'ils appartiennent tout les deux au même contexte d'empilement (celui de la racine), donc les valeurs de <code>z-index</code> régissent l'empilement des éléments.</p>
 
@@ -35,7 +35,9 @@ original_slug: Web/CSS/Comprendre_z-index/Exemple_2
  </li>
 </ul>
 
-<div class="note"><strong>Note :</strong> Il est important de se souvenir qu'en général, la hiérarchie HTML est différente de la hiérarchie du contexte d'empilement. Dans la hiérarchie du contexte d'empilement, les éléments qui ne créent pas un contexte d'empilement sont regroupés avec leur parents.</div>
+<div class="note">
+  <p><strong>Note :</strong> Il est important de se souvenir qu'en général, la hiérarchie HTML est différente de la hiérarchie du contexte d'empilement. Dans la hiérarchie du contexte d'empilement, les éléments qui ne créent pas un contexte d'empilement sont regroupés avec leur parents.</p>
+</div>
 
 <h2 id="Exemple">Exemple</h2>
 
@@ -122,8 +124,5 @@ span.bold {
 &lt;/div&gt;
 </pre>
 
-<h3 id="Résultat">Résultat</h3>
-
-<p>{{EmbedLiveSample("Exemple")}}</p>
 
 <div>{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Exemple_1","Web/CSS/Comprendre_z-index/Exemple_3", "Web/CSS/Comprendre_z-index")}}</div>

@@ -15,14 +15,14 @@ translation_of: Web/CSS/clamp()
 <p><strong>Note :</strong> l'expression  <code>clamp(MIN, VAL, MAX)</code> sera résolue comme <code>max(MIN, min(VAL, MAX)))</code>.</p>
 </div>
 
-<pre class="brush: css no-line-numbers notranslate">width: clamp(10px, 4em, 80px);
+<pre class="brush: css no-line-numbers">width: clamp(10px, 4em, 80px);
 </pre>
 
 <p>Dans l'exemple précédent, la largeur fera au plus 80 pixels et au moins 10 pixels mais mesurera 4em de large si un em mesure entre 2.5 et 20px.</p>
 
 <p>Prenons comme hypothèse qu'un em mesure 16px de large :</p>
 
-<pre class="brush: css no-line-numbers notranslate">width: clamp(10px, 4em, 80px);
+<pre class="brush: css no-line-numbers">width: clamp(10px, 4em, 80px);
 /* avec 1em = 16px, on a 4em = 16px * 4 = 64px */
 width: clamp(10px, 64px, 80px);
 /* clamp(MIN, VAL, MAX) est résolue comme max(MIN, min(VAL, MAX))) */
@@ -65,7 +65,7 @@ width: 64px;
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">h1 {
+<pre class="brush: css">h1 {
   font-size: 2rem;
 }
 h1.responsive {
@@ -77,7 +77,7 @@ h1.responsive {
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;h1&gt;Ce texte est toujours lisible mais sa taille ne change pas.&lt;/h1&gt;
+<pre class="brush: html">&lt;h1&gt;Ce texte est toujours lisible mais sa taille ne change pas.&lt;/h1&gt;
 &lt;h1 class="responsive"&gt;Ce texte est toujours lisible et s'adapte dans une certaine mesure.&lt;/h1&gt;
 </pre>
 

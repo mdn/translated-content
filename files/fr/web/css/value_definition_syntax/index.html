@@ -118,7 +118,9 @@ original_slug: Web/CSS/Syntaxe_de_définition_des_valeurs
  <li><code>bold 1em bold</code> car les deux composants doivent apparaître exactement une fois.</li>
 </ul>
 
-<div class="note"><strong>Note :</strong> La juxtaposition est prioritaire par rapport à la double esperluette. <code>bold thin &amp;&amp; &lt;length&gt;</code> est donc équivalent à <code>[ </code><code>bold thin ] &amp;&amp; &lt;length&gt;</code>. Il décrit <code>bold thin &lt;length&gt;</code> ou <code>&lt;length&gt;</code><code> bold thin</code> mais pas <code>bold &lt;length&gt;</code><code> thin</code>.</div>
+<div class="note">
+  <p><strong>Note :</strong> La juxtaposition est prioritaire par rapport à la double esperluette. <code>bold thin &amp;&amp; &lt;length&gt;</code> est donc équivalent à <code>[ </code><code>bold thin ] &amp;&amp; &lt;length&gt;</code>. Il décrit <code>bold thin &lt;length&gt;</code> ou <code>&lt;length&gt;</code><code> bold thin</code> mais pas <code>bold &lt;length&gt;</code><code> thin</code>.</p>
+</div>
 
 <h3 id="Double_barre">Double barre</h3>
 
@@ -142,7 +144,9 @@ original_slug: Web/CSS/Syntaxe_de_définition_des_valeurs
  <li><code>bold</code> car le mot-clé n'est pas permis pour aucune valeur de l'entité.</li>
 </ul>
 
-<div class="note"><strong>Note :</strong> La double esperluette est prioritaire par rapport à la double barre. <code>bold || thin &amp;&amp; &lt;length&gt;</code> est équivalent à <code>bold || [ thin &amp;&amp; &lt;length&gt; ]</code> qui décrit <code>bold</code>, <code>thin</code> <code>&lt;length&gt;</code>, <code>bold thin</code> <code>&lt;length&gt;</code>, ou <code>thin &lt;length&gt; bold</code> mais pas <code>&lt;length&gt;</code><code> bold thin</code> car bold, s'il est présent doit apparaître avant <code>thin &amp;&amp; &lt;length&gt;</code>.</div>
+<div class="note">
+  <p><strong>Note :</strong> La double esperluette est prioritaire par rapport à la double barre. <code>bold || thin &amp;&amp; &lt;length&gt;</code> est équivalent à <code>bold || [ thin &amp;&amp; &lt;length&gt; ]</code> qui décrit <code>bold</code>, <code>thin</code> <code>&lt;length&gt;</code>, <code>bold thin</code> <code>&lt;length&gt;</code>, ou <code>thin &lt;length&gt; bold</code> mais pas <code>&lt;length&gt;</code><code> bold thin</code> car bold, s'il est présent doit apparaître avant <code>thin &amp;&amp; &lt;length&gt;</code>.</p>
+</div>
 
 <h3 id="La_barre_verticale">La barre verticale</h3>
 

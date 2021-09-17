@@ -12,19 +12,17 @@ translation_of: Web/CSS/text-decoration
 
 <p>La propriété <strong><code>text-decoration</code></strong> est utilisée pour « décorer » le texte en ajoutant une ligne pouvant être positionnée sous, sur ou à travers le texte. C'est une <a href="/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies">propriété raccourcie</a> qui permet de paramétrer simultanément les propriétés « détaillées » : {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}} et {{cssxref("text-decoration-style")}}.</p>
 
-<div>{{EmbedInteractiveExample("pages/css/text-decoration.html")}}</div>
-
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
+<div>{{EmbedInteractiveExample("pages/css/text-decoration.html")}}</div
 
 <p>Ces décorations se propagent sur les différents éléments enfants. Cela signifie qu'il n'est pas possible de désactiver la décoration d'un élément descendant pour lequel un ancêtre est décoré. Par exemple, avec ce fragment de HTML <code>&lt;p&gt;Ce texte a &lt;em&gt; des mots mis en avant&lt;/em&gt; dedans.&lt;/p&gt;</code>, et cette règle CSS <code>p { text-decoration: underline; }</code>, on aura tout le  paragraphe souligné, même si on applique la règle <code>em { text-decoration: none; }</code>, cela n'aurait aucun impact. En revanche, ajouter la règle <code>em { text-decoration: overline; }</code> entraînerait un cumul des décorations pour « des mots mis en avant ».</p>
 
-<div class="note style-wrap">
-<p><strong>Note : </strong>La spécification CSS Text Decoration de niveau 3 indique que cette propriété est une propriété raccourcie pour les trois propriétés {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}} et {{cssxref("text-decoration-style")}}. Comme pour les autres propriétés raccourcies, cela signifie que la valeur de chaque « sous-propriété » est réinitialisée avec sa valeur par défaut si elle n'est pas explicitement définie dans la propriété raccourcie.</p>
+<div class="note">
+<p><strong>Note :</strong> La spécification CSS Text Decoration de niveau 3 indique que cette propriété est une propriété raccourcie pour les trois propriétés {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}} et {{cssxref("text-decoration-style")}}. Comme pour les autres propriétés raccourcies, cela signifie que la valeur de chaque « sous-propriété » est réinitialisée avec sa valeur par défaut si elle n'est pas explicitement définie dans la propriété raccourcie.</p>
 </div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="brush: css no-line-numbers notranslate">/* Valeurs avec mots-clés */
+<pre class="brush: css no-line-numbers">/* Valeurs avec mots-clés */
 text-decoration: none;                 /* Aucune décoration */
 text-decoration: underline red;        /* On souligne en rouge */
 text-decoration: underline wavy red;   /* On souligne en rouge avec */
@@ -55,7 +53,7 @@ text-decoration: unset;
 
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css notranslate">.under {
+<pre class="brush: css">.under {
   text-decoration: underline red;
 }
 
@@ -82,7 +80,7 @@ text-decoration: unset;
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;p class="under"&gt;Ce texte a une ligne en dessous.&lt;/p&gt;
+<pre class="brush: html">&lt;p class="under"&gt;Ce texte a une ligne en dessous.&lt;/p&gt;
 &lt;p class="over"&gt;Ce texte a une ligne au dessus.&lt;/p&gt;
 &lt;p class="line"&gt;Ce texte est barré d'une ligne.&lt;/p&gt;
 &lt;p&gt;Ce &lt;a class="plain" href="#"&gt;lien ne sera pas souligné&lt;/a&gt;,

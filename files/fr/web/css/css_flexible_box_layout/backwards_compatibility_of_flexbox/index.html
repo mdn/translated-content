@@ -10,7 +10,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary">Voici un ensemble de <em>mixins</em> pour vous permettre de bidouiller avec les boîtes flexibles grâce au support natif des navigateurs actuels.</p>
+<p>Voici un ensemble de <em>mixins</em> pour vous permettre de bidouiller avec les boîtes flexibles grâce au support natif des navigateurs actuels.</p>
 
 <p>Dans ces <em>mixins</em>, on utilisera :</p>
 
@@ -45,7 +45,6 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
  <li><a href="https://drafts.csswg.org/css-flexbox/#flex-containers">Spécifications</a></li>
 </ul>
 
-<div class="highlight">
 <pre class="brush: css">@mixin flexbox {
   display: -webkit-box;
   display: -moz-box;
@@ -56,9 +55,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
 
 // Exemple d'utilisation
 %flexbox { @include flexbox; }</pre>
-</div>
 
-<div class="highlight">
 <pre class="brush: css">@mixin inline-flex {
   display: -webkit-inline-box;
   display: -moz-inline-box;
@@ -68,7 +65,6 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
 }
 
 %inline-flex { @include inline-flex; }</pre>
-</div>
 
 <h3 id="Direction_des_boîtes_flexibles">Direction des boîtes flexibles</h3>
 
@@ -79,7 +75,6 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
  <li><a href="https://drafts.csswg.org/css-flexbox/#flex-direction-property">Spécification</a></li>
 </ul>
 
-<div class="highlight">
 <pre class="brush: css">@mixin flex-direction($value: row) {
   @if $value == row-reverse {
     -webkit-box-direction: reverse;
@@ -109,7 +104,6 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
 
 // Version plus courte :
 @mixin flex-dir($args...) { @include flex-direction($args...); }</pre>
-</div>
 
 <h3 id="flex-wrap"><code>flex-wrap</code></h3>
 
@@ -120,7 +114,6 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
  <li><a href="https://drafts.csswg.org/css-flexbox/#flex-wrap-property">Spécification</a></li>
 </ul>
 
-<div class="highlight">
 <pre class="brush: css">@mixin flex-wrap($value: nowrap) {
   // No Webkit/FF Box fallback.
   -webkit-flex-wrap: $value;
@@ -131,7 +124,6 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
   }
   flex-wrap: $value;
 }</pre>
-</div>
 
 <h3 id="flex-flow"><code>flex-flow</code></h3>
 
@@ -142,14 +134,12 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
  <li><a href="https://drafts.csswg.org/css-flexbox/#flex-flow-property">Spécification</a></li>
 </ul>
 
-<div class="highlight">
 <pre class="brush: css">@mixin flex-flow($values: (row nowrap)) {
   // No Webkit/FF Box fallback.
   -webkit-flex-flow: $values;
   -ms-flex-flow: $values;
   flex-flow: $values;
 }</pre>
-</div>
 
 <h3 id="order"><code>order</code></h3>
 
@@ -160,7 +150,6 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
  <li><a href="https://drafts.csswg.org/css-flexbox/#order-property">Spécification</a></li>
 </ul>
 
-<div class="highlight">
 <pre class="brush: css">@mixin order($int: 0) {
   -webkit-box-ordinal-group: $int + 1;
   -moz-box-ordinal-group: $int + 1;
@@ -168,7 +157,6 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
   -ms-flex-order: $int;
   order: $int;
 }</pre>
-</div>
 
 <h3 id="flex-grow"><code>flex-grow</code></h3>
 
@@ -179,7 +167,6 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
  <li><a href="https://drafts.csswg.org/css-flexbox/#flex-grow-property">Spécification</a></li>
 </ul>
 
-<div class="highlight">
 <pre class="brush: css">@mixin flex-grow($int: 1) {
   -webkit-box-flex: $int;
   -moz-box-flex: $int;
@@ -187,7 +174,6 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
   -ms-flex: $int;
   flex-grow: $int;
 }</pre>
-</div>
 
 <h3 id="flex-shrink"><code>flex-shrink</code></h3>
 
@@ -198,14 +184,12 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
  <li><a href="https://drafts.csswg.org/css-flexbox/#flex-shrink-property">Spécification</a></li>
 </ul>
 
-<div class="highlight">
 <pre class="brush: css">@mixin flex-shrink($int: 0) {
   -webkit-flex-shrink: $int;
   -moz-flex-shrink: $int;
   -ms-flex: $int;
   flex-shrink: $int;
 }</pre>
-</div>
 
 <h3 id="flex-basis"><code>flex-basis</code></h3>
 
@@ -216,12 +200,10 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
  <li><a href="https://drafts.csswg.org/css-flexbox/#flex-basis-property">Spécification</a></li>
 </ul>
 
-<div class="highlight">
 <pre class="brush: css">@mixin flex-basis($value: auto) {
   -webkit-flex-basis: $value;
   flex-basis: $value;
 }</pre>
-</div>
 
 <h3 id="flex"><code>flex</code></h3>
 
@@ -232,7 +214,6 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
  <li><a href="https://drafts.csswg.org/css-flexbox/#flex-property">Spécification</a></li>
 </ul>
 
-<div class="highlight">
 <pre class="brush: css">@mixin flex($fg: 1, $fs: 0, $fb: auto) {
 
   // Définir une variable pour l'utiliser
@@ -251,7 +232,6 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
   -ms-flex: $fg $fs $fb;
   flex: $fg $fs $fb;
 }</pre>
-</div>
 
 <h3 id="justify-content"><code>justify-content</code></h3>
 
@@ -266,7 +246,6 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
  <li><a href="https://drafts.csswg.org/css-flexbox/#justify-content-property">Spécification</a></li>
 </ul>
 
-<div class="highlight">
 <pre class="brush: css">@mixin justify-content($value: flex-start) {
   @if $value == flex-start {
     -webkit-box-pack: start;
@@ -292,7 +271,6 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
 }
   // Version plus courte :
   @mixin flex-just($args...) { @include justify-content($args...); }</pre>
-</div>
 
 <h3 id="align-items"><code>align-items</code></h3>
 
@@ -303,7 +281,6 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
  <li><a href="https://drafts.csswg.org/css-flexbox/#align-items-property">Spécification</a></li>
 </ul>
 
-<div class="highlight">
 <pre class="brush: css">@mixin align-items($value: stretch) {
   @if $value == flex-start {
     -webkit-box-align: start;
@@ -321,7 +298,6 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
   -webkit-align-items: $value;
   align-items: $value;
 }</pre>
-</div>
 
 <h3 id="align-self"><code>align-self</code></h3>
 
@@ -330,7 +306,6 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
  <li><a href="https://drafts.csswg.org/css-flexbox/#align-items-property">Spécification</a></li>
 </ul>
 
-<div class="highlight">
 <pre class="brush: css">@mixin align-self($value: auto) {
   // No Webkit Box Fallback.
   -webkit-align-self: $value;
@@ -343,7 +318,6 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
   }
   align-self: $value;
 }</pre>
-</div>
 
 <h3 id="align-content"><code>align-content</code></h3>
 
@@ -354,7 +328,6 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
  <li><a href="https://drafts.csswg.org/css-flexbox/#align-content-property">Spécification</a></li>
 </ul>
 
-<div class="highlight">
 <pre class="brush: css">@mixin align-content($value: stretch) {
   // No Webkit Box Fallback.
   -webkit-align-content: $value;
@@ -367,4 +340,3 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Mixins
   }
   align-content: $value;
 }</pre>
-</div>

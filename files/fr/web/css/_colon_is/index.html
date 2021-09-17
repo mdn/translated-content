@@ -1,19 +1,19 @@
 ---
 title: ':is() (:matches(), :any())'
-slug: 'Web/CSS/:is'
+slug: Web/CSS/:is
 tags:
   - CSS
   - Experimental
   - Pseudo-classe
   - Reference
   - Web
-translation_of: 'Web/CSS/:is'
+translation_of: Web/CSS/:is
 ---
 <div>{{CSSRef}}{{SeeCompatTable}}</div>
 
 <p>La <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <strong><code>:is()</code></strong> prend comme argument une liste de sélecteurs, et cible tous les éléments sélectionnés par chaque sélecteur de cette liste. Cela permet d'écrire des sélecteurs expansifs de façon plus concise.</p>
 
-<p>La plupart des navigateurs prennent encore en charge cette fonctionnalité via <code>:matches()</code>, ou via la pseudo-classe préfixée — <code>:any()</code> (anciennes versions de Chrome, Firefox et Safari). <code>:any()</code> fonctionne exactement comme <code>:matches()</code> et <code>:is()</code> mais nécessite l'utilisation de préfixes et ne prend pas en charge <a href="/fr/docs/Apprendre/CSS/Introduction_à_CSS/Les_sélecteurs">les sélecteurs complexes</a>.</p>
+<p>La plupart des navigateurs prennent encore en charge cette fonctionnalité via <code>:matches()</code>, ou via la pseudo-classe préfixée — <code>:any()</code> (anciennes versions de Chrome, Firefox et Safari). <code>:any()</code> fonctionne exactement comme <code>:matches()</code> et <code>:is()</code> mais nécessite l'utilisation de préfixes et ne prend pas en charge <a href="/en-US/docs/Learn/CSS/Building_blocks/Selectors">les sélecteurs complexes</a>.</p>
 
 <div class="note">
 <p><strong>Note :</strong> <code>:matches()</code> a été renommé en <code>is()</code> d'après <a href="https://github.com/w3c/csswg-drafts/issues/3258">l'<em>issue</em> 3258 du CSSWG</a>.</p>
@@ -158,13 +158,13 @@ dir ol dir,   dir ul dir,   dir menu dir,   dir dir dir {
   list-style-type: square;
 }</pre>
 
-<p>En revanche, le modèle d'usage suivant n'est pas recommandée (cf. <a href="#Issues_with_performance_and_specificity">la section qui suit sur les performances</a>) :</p>
+<p>En revanche, le modèle d'usage suivant n'est pas recommandée (cf. <a href="#issues_with_performance_and_specificity">la section qui suit sur les performances</a>) :</p>
 
 <pre class="brush: css">:matches(ol, ul, menu, dir) :matches(ol, ul, menu, dir) :matches(ul, menu, dir) {
   list-style-type: square;
 }</pre>
 
-<h3 id="Notes" name="Notes">Simplifier les sélecteurs de section</h3>
+<h3 id="Notes">Simplifier les sélecteurs de section</h3>
 
 <p>La pseudo-classe <code>:matches</code> est particulièrement utile lorsqu'on manipule les <a href="/en-US/docs/Sections_and_Outlines_of_an_HTML5_document" title="Sections and Outlines of an HTML5 document">sections et en-têtes</a> HTML5. {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}} et {{HTMLElement("nav")}} étant souvent imbriqués les uns dans les autres, les mettre en forme (sans <code>:matches()</code>) s'avèrerait plutôt compliqué.</p>
 
@@ -230,7 +230,7 @@ h1 {
 
 <h2 id="Notes_2">Notes</h2>
 
-<h3 id="Issues_with_performance_and_specificity" name="Issues_with_performance_and_specificity">Problèmes de performances avec <code>any():</code> et la spécificité</h3>
+<h3 id="Issues_with_performance_and_specificity">Problèmes de performances avec <code>any():</code> et la spécificité</h3>
 
 <p>{{Bug(561154)}} suit un problème de spécificité relatif à <code>:-moz-any()</code>. L'implémentation  place <code>:-moz-any()</code> dans la catégorie des règles universelles, ce qui signifie que si on l'utilise comme sélecteur le plus à droite, ce sera plus lent que d'utiliser un sélecteur d'identifiant, de classe ou de balise comme premier sélecteur.</p>
 
@@ -269,7 +269,7 @@ h1 {
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilité des navigateurs</h2>
+<h2 id="Browser_compatibility">Compatibilité des navigateurs</h2>
 
 <p>{{Compat("css.selectors.is")}}</p>
 
