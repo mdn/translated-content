@@ -113,7 +113,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     > 安全でないサイト (`http:`) では、 `Secure` 属性のクッキーを設定できません (Chrome 52、Firefox 52 以降)。Firefox では、`Secure` 属性が localhost で設定されている場合、https: の要件は無視されます (Firefox 75以降)。
 
 - `HttpOnly` {{optional_inline}}
-  - : JavaScript が {{domxref("Document.cookie")}} プロパティなどを介してこのクッキーにアクセスすることを禁止します。HttpOnly で作成されたクッキーは、JavaScript で開始されたリクエスト、例えば、 {{domxref("XMLHttpRequest.send()")}} や {{domxref("fetch()")}} と共に送信されます。これにより、クロスサイトスクリプティング ({{Glossary("XSS")}}) 攻撃を軽減します。
+  - : JavaScript が {{domxref("Document.cookie")}} プロパティなどを介してこのクッキーにアクセスすることを禁止します。HttpOnly で作成されたクッキーは、JavaScript で開始されたリクエスト、例えば、 {{domxref("XMLHttpRequest.send()")}} や {{domxref("fetch()")}} と共に送信されます。これにより、クロスサイトスクリプティング ({{Glossary("Cross-site_scripting", "XSS")}}) 攻撃を軽減します。
 - `SameSite=<samesite-value>` {{optional_inline}}
 
   - : クッキーがオリジン間リクエストで送信されないことを主張することで、クロスサイトリクエストフォージェリ攻撃 ({{Glossary("CSRF")}}) に対していくらか防御することができます。
