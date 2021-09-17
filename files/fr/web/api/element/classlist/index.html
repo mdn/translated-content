@@ -44,7 +44,7 @@ translation_of: Web/API/Element/classList
 
 <h2 id="Exemples">Exemples</h2>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">const div = document.createElement('div');
+<pre class="brush: js">const div = document.createElement('div');
 div.className = 'foo';
 
 // notre point de départ: &lt;div class="foo"&gt;&lt;/div&gt;
@@ -75,7 +75,7 @@ div.classList.add(...cls);
 div.classList.remove(...cls);
 
 // remplacer la classe "foo" par la classe "bar"
-div.classList.replace("foo", "bar");</code></pre>
+div.classList.replace("foo", "bar");</pre>
 
 <div class="note">
 <p class="brush: js">Les versions de Firefox antérieures à la 26 n'implémentent pas l'utilisation de plusieurs arguments dans les méthodes add/remove/toggle. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=814014">https://bugzilla.mozilla.org/show_bug.cgi?id=814014</a></p>

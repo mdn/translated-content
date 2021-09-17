@@ -19,31 +19,31 @@ translation_of: Web/API/URL
 
 <p>Le constructeur prend un paramètre url et un paramètre de base facultatif à utiliser comme base si le paramètre url est une URL relative :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">const url = new URL('../cats', 'http://www.example.com/dogs');
+<pre class="brush: js">const url = new URL('../cats', 'http://www.example.com/dogs');
 console.log(url.hostname); // "www.example.com"
-console.log(url.pathname); // "/cats"</code></pre>
+console.log(url.pathname); // "/cats"</pre>
 
 <p>Les propriétés de l'URL peuvent être définies pour construire l'URL :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">url.hash = 'tabby';
-console.log(url.href); // "http://www.example.com/cats#tabby"</code></pre>
+<pre class="brush: js">url.hash = 'tabby';
+console.log(url.href); // "http://www.example.com/cats#tabby"</pre>
 
 <p>Les URL seront encodées selon la norme RFC 3986:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">url.pathname = 'démonstration.html';
-console.log(url.href); // "http://www.example.com/d%C3%A9monstration.html"</code></pre>
+<pre class="brush: js">url.pathname = 'démonstration.html';
+console.log(url.href); // "http://www.example.com/d%C3%A9monstration.html"</pre>
 
 <p>L'interface {{domxref("URLSearchParams")}}  peut être utilisée pour construire et manipuler la chaîne de requête de l'URL.</p>
 
 <p>Pour obtenir les paramètres de recherche à partir de l'URL de la fenêtre en cours :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">// https://some.site/?id=123
+<pre class="brush: js">// https://some.site/?id=123
 var parsedUrl = new URL(window.location.href);
-console.log(parsedUrl.searchParams.get("id")); // 123</code></pre>
+console.log(parsedUrl.searchParams.get("id")); // 123</pre>
 
 <p>La méthode <code>stringifier</code> de l' <code>URL</code> est la propriété <code>href</code> , ainsi le constructeur peut être utilisé pour normaliser et encoder directement une URL :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">const response = await fetch(new URL('http://www.example.com/démonstration.html'));</code></pre>
+<pre class="brush: js">const response = await fetch(new URL('http://www.example.com/démonstration.html'));</pre>
 
 <h2 id="Constructeur">Constructeur</h2>
 

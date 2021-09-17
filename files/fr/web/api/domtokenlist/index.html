@@ -61,10 +61,10 @@ translation_of: Web/API/DOMTokenList
 
 <p>Puis Javascript :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var para = document.querySelector("p");
+<pre class="brush: js">var para = document.querySelector("p");
 var classes = para.classList;
 para.classList.add("d");
-para.textContent = 'paragraph classList is "' + classes + '"';</code></pre>
+para.textContent = 'paragraph classList is "' + classes + '"';</pre>
 
 <p>La sortie ressemble à ceci :</p>
 
@@ -76,10 +76,10 @@ para.textContent = 'paragraph classList is "' + classes + '"';</code></pre>
 
 <pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;span class="    d   d e f"&gt;&lt;/span&gt;</code></pre>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var span = document.querySelector("span");
+<pre class="brush: js">var span = document.querySelector("span");
 var classes = span.classList;
 span.classList.add("x");
-span.textContent = 'span classList is "' + classes + '"';</code></pre>
+span.textContent = 'span classList is "' + classes + '"';</pre>
 
 <p>La sortie ressemble à ceci :</p>
 

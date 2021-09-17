@@ -49,15 +49,15 @@ translation_of: Web/API/SharedWorker
 
 <p>L'extrait de code suivant illustre la création d'un objet <code>SharedWorker</code> en utilisant le constructeur {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}}. Les deux scripts contiennent ceci :</p>
 
-<pre class="brush: js  language-js"><code class="language-js">var myWorker = new SharedWorker("worker.js");</code></pre>
+<pre class="brush: js">var myWorker = new SharedWorker("worker.js");</pre>
 
 <p>Les deux scripts accèdent alors au worker à travers un objet {{domxref("MessagePort")}} créé en utilisant la propriété {{domxref("SharedWorker.port")}} — le port est démarré au moyen de sa méthode <code>start()</code> :</p>
 
-<pre class="brush: js  language-js"><code class="language-js">myWorker.port.start();</code></pre>
+<pre class="brush: js">myWorker.port.start();</pre>
 
 <p>Lorsque le port est démarré, les deux scripts envoient des messages au worker et gèrent les messages qu'il renvoie en utilisant respectivement <code>port.postMessage()</code> et <code>port.onmessage</code> :</p>
 
-<pre class="brush: js  language-js"><code class="language-js">first.onchange = function() {
+<pre class="brush: js">first.onchange = function() {
     myWorker.port.postMessage([first.value,second.value]);
     console.log('Message envoyé au worker');
   }
@@ -70,11 +70,11 @@ translation_of: Web/API/SharedWorker
   myWorker.port.onmessage = function(e) {
     result1.textContent = e.data;
     console.log('Message reçu du worker');
-  }</code></pre>
+  }</pre>
 
 <p>Au sein du worker, nous utilisons le gestionnaire {{domxref("SharedWorkerGlobalScope.onconnect")}} pour se connecter au même port dont il a été question plus haut. Les ports associés au worker sont accessibles dans la propriété <code>ports</code> de l'événement {{event("connect")}} — nous utilisons alors la méthode {{domxref("MessagePort")}} <code>start()</code> pour démarrer le port, et le gestionnaire <code>onmessage</code> pour s'occuper des messages en provenance des threads principaux.</p>
 
-<pre class="brush: js  language-js"><code class="language-js">onconnect = function(e) {
+<pre class="brush: js">onconnect = function(e) {
     var port = e.ports[0];
 
     port.onmessage = function(e) {
@@ -83,7 +83,7 @@ translation_of: Web/API/SharedWorker
     }
 
     port.start();
-}</code></pre>
+}</pre>
 
 <h2 id="Spécifications">Spécifications</h2>
 

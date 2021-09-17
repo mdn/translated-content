@@ -27,7 +27,7 @@ translation_of: Web/API/Event/bubbles
 
 <h2 id="Syntax">Exemple</h2>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function goInput(e) {
+<pre class="brush: js">function goInput(e) {
   // vérifie la propagation et
   if (!e.bubbles) {
      // la lance si elle ne l'a pas été
@@ -35,7 +35,7 @@ translation_of: Web/API/Event/bubbles
   }
   // déjà propagé
   doOutput(e)
-}</code></pre>
+}</pre>
 
 <div class="note">
 <p><strong>Note </strong>: Certains évènements seulement peuvent se propager. Ceux dont cette propriété est définie à  <code>true</code>. Vous pouvez utiliser cette propriété pour vérifier si un évènement est autorisé à se propager ou non.</p>

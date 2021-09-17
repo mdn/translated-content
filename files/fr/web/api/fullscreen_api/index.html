@@ -29,10 +29,10 @@ original_slug: Web/Guide/DOM/Using_full_screen_mode
 
 <p>Nous pouvons mettre cet élément video en plein écran avec un script de cette façon :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var elem = document.getElementById("myvideo");
+<pre class="brush: js">var elem = document.getElementById("myvideo");
 if (elem.requestFullscreen) {
   elem.requestFullscreen();
-}</code></pre>
+}</pre>
 
 <h3 id="Différences_de_présentation">Différences de présentation</h3>
 
@@ -100,7 +100,7 @@ if (elem.requestFullscreen) {
 
 <p>Ce code est appelé lorsque l'utilisateur appuie sur la touche <kbd>Entrée</kbd>, comme vu plus haut.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function toggleFullScreen() {
+<pre class="brush: js">function toggleFullScreen() {
   if (!document.fullscreenElement) {
       document.documentElement.requestFullscreen();
   } else {
@@ -108,7 +108,7 @@ if (elem.requestFullscreen) {
       document.exitFullscreen();
     }
   }
-}</code></pre>
+}</pre>
 
 <p> Dans un premier temps, la valeur de l'attribut <code>fullscreenElement</code> est analysée dans le {{ domxref("document") }} (en contrôlant s'il est préfixé par <code>moz-, ms-</code> ou <code>webkit-</code>). Si la valeur est nulle, le document est actuellement en mode normal, donc nous devons passer en mode plein écran. Le passage en mode plein écran est assuré en appelant {{ domxref("element.requestFullscreen()") }}.</p>
 

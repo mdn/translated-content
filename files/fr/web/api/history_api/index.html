@@ -118,12 +118,12 @@ history.pushState(stateObj, "page 2", "bar.html");
 
 <p>Supposons que http://mozilla.org/foo.html exécute le code JavaScript suivant :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var stateObj = { foo: "bar" };
-history.pushState(stateObj, "page 2", "bar.html");</code></pre>
+<pre class="brush: js">var stateObj = { foo: "bar" };
+history.pushState(stateObj, "page 2", "bar.html");</pre>
 
 <p>L'explication des deux lignes ci-dessus peut être trouvée dans la section "<a href="#">Exemple de la méthode pushState()</a>". Supposons ensuite que http://mozilla.org/bar.html exécute le code JavaScript suivant :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">history.replaceState(stateObj, "page 3", "bar2.html");</code></pre>
+<pre class="brush: js">history.replaceState(stateObj, "page 3", "bar2.html");</pre>
 
 <p>Cela entraînera l'affichage de la barre d'URL http://mozilla.org/bar2.html, mais le navigateur ne chargera pas <code>bar2.html</code> ou même vérifiera que <code>bar2.html</code> existe.</p>
 

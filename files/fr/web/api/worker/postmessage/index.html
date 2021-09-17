@@ -32,7 +32,7 @@ translation_of: Web/API/Worker/postMessage
 
 <p>L'extrait de code suivant montre la création d'un objet {{domxref("Worker")}} en utilisant le constructeur {{domxref("Worker.Worker", "Worker()")}}. Quand les deux champs de formulaire (<code>fisrt</code> et <code>second</code>) ont été changés, les évènements {{event("change")}} invoquent <code>postMessage()</code> pour envoyer la valeur des deux entrées au <em>worker</em> courant.</p>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">var myWorker = new Worker('worker.js');
+<pre class="brush: js">var myWorker = new Worker('worker.js');
 
 first.onchange = function() {
   myWorker.postMessage([first.value,second.value]);
@@ -42,7 +42,7 @@ first.onchange = function() {
 second.onchange = function() {
   myWorker.postMessage([first.value,second.value]);
   console.log('Message posted to worker');
-}</code></pre>
+}</pre>
 
 <p>Pour l'exemple en entier, voir <a href="https://github.com/mdn/simple-web-worker">Basic dedicated worder example</a> (<a href="http://mdn.github.io/simple-web-worker/">démonstration</a>).</p>
 
@@ -56,7 +56,7 @@ second.onchange = function() {
 
 <h4 id="Main_thread_code">Main thread code:</h4>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">var myWorker = new ChromeWorker(self.path + 'myWorker.js');
+<pre class="brush: js">var myWorker = new ChromeWorker(self.path + 'myWorker.js');
 
 function handleMessageFromWorker(msg) {
     console.log('incoming message from worker, msg:', msg);
@@ -85,11 +85,11 @@ myWorker.postMessage(
     ]
 );
 
-console.info('arrBuf.byteLength post transfer:', arrBuf.byteLength);</code></pre>
+console.info('arrBuf.byteLength post transfer:', arrBuf.byteLength);</pre>
 
 <h4 id="Worker_code">Worker code</h4>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">self.onmessage = function (msg) {
+<pre class="brush: js">self.onmessage = function (msg) {
     switch (msg.data.aTopic) {
         case 'do_sendWorkerArrBuff':
                 sendWorkerArrBuff(msg.data.aBuf)
@@ -105,7 +105,7 @@ function sendWorkerArrBuff(aBuf) {
     self.postMessage({aTopic:'do_sendMainArrBuff', aBuf:aBuf}, [aBuf]);
 
     console.info('from worker, POST send back aBuf.byteLength:', aBuf.byteLength);
-}</code></pre>
+}</pre>
 
 <h4 id="Output_logged">Output logged</h4>
 

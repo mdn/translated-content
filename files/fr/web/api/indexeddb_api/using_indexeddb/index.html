@@ -124,13 +124,13 @@ request.onsuccess = function(event) {
 
 <p>Lorsque vous créez une nouvelle base de données, ou que vous augmentez le numéro de version d'une base existante (en spécifiant un numéro de version supérieur à celui que vous aviez auparavant, lors de {{ anch("Ouvrir une base de données") }}), l'évènement <code style="font-size: 14px; color: rgb(51, 51, 51);">onupgradeneeded</code> sera déclenché et un objet <code>IDBVersionChangeEvent</code> sera passé à un évènement <code>onversionchange</code> dans <code>request.result</code> (la variable <code>db</code> dans l'exemple). Dans le gestionnaire d’évènement <code>upgradeneeded</code>, vous devez créer les objets de stockage requis pour cette version de base :</p>
 
-<pre class="brush:js;  language-js"><code class="language-js">// Cet évènement est seulement implémenté dans des navigateurs récents
+<pre class="brush:js;">// Cet évènement est seulement implémenté dans des navigateurs récents
 request.onupgradeneeded = function(event) {
   var db = event.target.result;
 
-  // Crée un </code>objet de stockage<code class="language-js"> pour cette base de données
+  // Crée un objet de stockage pour cette base de données
   var objectStore = db.createObjectStore("name", { keyPath: "myKey" });
-};</code></pre>
+};</pre>
 
 <p>Dans ce cas, la base de données disposera aussitôt des objets de stockage de la version précédente de la base, donc vous n’aurez pas à créer de nouveau ces objets de stockage. Vous aurez seulement besoin de créer de nouveaux objets de stockage, ou d'en supprimer de la version précédente si vous n'en avez plus besoin. Si vous avez besoin de changer un objet de stockage existant  (par exemple, pour changer la <code>keyPath</code>), alors vous devez supprimer l’ancien objet de stockage et le créer à nouveau avec les nouveaux paramètres. Notez que ceci supprimera les informations dans l'objet de stockage ! Si vous avez besoin de sauvegarder ces informations, vous devez les lire et les sauvegarder quelque part avant de mettre à jour la base de données.</p>
 
@@ -184,17 +184,17 @@ request.onupgradeneeded = function(event) {
 
 <p>Cela peut sembler confus, mais ce simple exemple devrait illustrer ces concepts. D'abord, nous définissons quelques données client à utiliser dans notre exemple :</p>
 
-<pre class="brush: js  language-js"><code class="language-js">// Voici à quoi ressemblent nos données client.
+<pre class="brush: js">// Voici à quoi ressemblent nos données client.
 const customerData = [
   { ssn: "444-44-4444", name: "Bill", age: 35, email: "bill@company.com" },
   { ssn: "555-55-5555", name: "Donna", age: 32, email: "donna@home.org" }
-];</code></pre>
+];</pre>
 
 <p>Bien sûr, vous n'utiliseriez pas le numéro de sécurité sociale comme clé primaire dans une table clients parce que tout le monde n'a pas de numéro de sécurité sociale, et vous pourriez stocker leur date de naissance au lieu de leur âge, mais laissons ces choix non pertinents pour des raisons de commodité et continuons.</p>
 
 <p>Maintenant, voyons la création d'une base de données pour stocker ces données :</p>
 
-<pre class="brush: js  language-js"><code class="language-js">const dbName = "the_name";
+<pre class="brush: js">const dbName = "the_name";
 
 var request = indexedDB.open(dbName, 2);
 
@@ -226,7 +226,7 @@ request.onupgradeneeded = function(event) {
       customerObjectStore.add(customerData[i]);
     }
   }
-};</code></pre>
+};</pre>
 
 <div>Comme indiqué précédemment, <code>onupgradeneeded</code> est le seul endroit où vous pouvez modifier la structure de la base de données. Dans cette méthode, vous pouvez créer et supprimer des objets de stockage, construire et supprimer des index.</div>
 
@@ -246,7 +246,7 @@ request.onupgradeneeded = function(event) {
 
 <p>Nous pouvons créer un autre objet de stockage avec un générateur de clés comme ci-dessous :</p>
 
-<pre class="brush: js  language-js"><code class="language-js">// Ouverture d'indexedDB.
+<pre class="brush: js">// Ouverture d'indexedDB.
 var request = indexedDB.open(dbName, 3);
 
 request.onupgradeneeded = function (event) {
@@ -263,7 +263,7 @@ request.onupgradeneeded = function (event) {
     for (var i in customerData) {
         objStore.add(customerData[i].name);
     }
-}</code></pre>
+}</pre>
 
 <p>Pour plus de détails sur le générateur de clés, voyez <a href="http://www.w3.org/TR/IndexedDB/#key-generator-concept">"W3C Key Generators"</a>.</p>
 
@@ -290,10 +290,10 @@ request.onupgradeneeded = function (event) {
 
 <p>Si vous venez juste de créer une base de données, alors vous souhaitez probablement écrire dedans. Voici comment ça se passe :</p>
 
-<pre class="brush:js;  language-js"><code class="language-js">var transaction = db.transaction(["customers"], "readwrite");
+<pre class="brush:js;">var transaction = db.transaction(["customers"], "readwrite");
 // Note: Les anciennes implémentations utilisent la constante dépréciée IDBTransaction.READ_WRITE au lieu de "readwrite".
 // Au cas où vous souhaitiez mettre en oeuvre ces implémentations, vous pouvez écrire :
-// var transaction = db.transaction(["customers"], IDBTransaction.READ_WRITE);</code></pre>
+// var transaction = db.transaction(["customers"], IDBTransaction.READ_WRITE);</pre>
 
 <p>La fonction <code>transaction()</code> prend deux arguments (bien que l'un d'eux soit facultatif) et retourne un objet transaction. Le premier argument est une liste d'objets de stockage que la transaction va traiter. Vous pouvez passer un tableau vide si vous voulez que la transaction traite l'ensemble des objets de stockage, mais ne le faites pas, parce que la spécification indique qu'un tableau vide devrait générer une InvalidAccessError. Si vous ne spécifiez rien pour le deuxième argument, vous démarrerez une transaction "read-only" <em>(lecture seule)</em> . Si vous souhaitez aussi écrire, vous devrez passer l'option <code>"readwrite"</code> <em>(lecture/écriture)</em>.</p>
 
@@ -303,7 +303,7 @@ request.onupgradeneeded = function (event) {
 
 <p>Maintenant que vous avons une transaction, nous avons besoin de récupérer l'objet de stockage de celle-ci. Les transactions vous permettent seulement d'avoir l'objet de stockage que vous avez spécifié lors de la création de la transaction. Puis, vous pouvez ajouter toutes les données dont vous avez besoin.</p>
 
-<pre class="brush: js  language-js"><code class="language-js">// Faire quelque chose lorsque toutes les données sont ajoutées à la base de données.
+<pre class="brush: js">// Faire quelque chose lorsque toutes les données sont ajoutées à la base de données.
 transaction.oncomplete = function(event) {
   alert("All done!");
 };
@@ -318,7 +318,7 @@ for (var i in customerData) {
   request.onsuccess = function(event) {
     // event.target.result == customerData[i].ssn;
   };
-}</code></pre>
+}</pre>
 
 <div>La méthode <code>result</code> d’une requête venant d'un appel à <code>add()</code> est la clé de la valeur qui vient d'être ajoutée. Dans ce cas, ce devrait être équivalent à la propriété <code>ssn</code> de l'objet qui vient d'être ajouté, puisque l'objet de stockage utilise la propriété <code>ssn</code> pour le key path. Notez que la fonction <code>add()</code> requiert qu'aucun objet déjà présent dans la base ait la même clé. Si vous essayez de modifier une entrée existante, ou si vous ne vous en occupez pas, vous pouvez utiliser la fonction <code>put()</code>, comme montré plus loin dans la section {{ anch("Updating an entry in the database") }}.</div>
 
@@ -328,18 +328,18 @@ for (var i in customerData) {
 
 <p>Supprimer des données est très similaire :</p>
 
-<pre class="brush: js  language-js"><code class="language-js">var request = db.transaction(["customers"], "readwrite")
+<pre class="brush: js">var request = db.transaction(["customers"], "readwrite")
                 .objectStore("customers")
                 .delete("444-44-4444");
 request.onsuccess = function(event) {
   // c'est supprimé !
-};</code></pre>
+};</pre>
 
 <h3 id="Récupérer_des_données_de_la_base_de_données">Récupérer des données de la base de données</h3>
 
 <p>Maintenant que la base de données dispose de quelques informations, vous pouvez les récupérer de plusieurs façons. D'abord, la plus simple <code>get()</code>. Vous devez fournir une clé pour récupérer la valeur, comme ceci :</p>
 
-<pre class="brush: js  language-js"><code class="language-js">var transaction = db.transaction(["customers"]);
+<pre class="brush: js">var transaction = db.transaction(["customers"]);
 var objectStore = transaction.objectStore("customers");
 var request = objectStore.get("444-44-4444");
 request.onerror = function(event) {
@@ -348,13 +348,13 @@ request.onerror = function(event) {
 request.onsuccess = function(event) {
   // Faire quelque chose avec request.result !
   alert("Name for SSN 444-44-4444 is " + request.result.name);
-};</code></pre>
+};</pre>
 
 <p>Ça fait beaucoup de code pour une "simple" récupération. Voici comment le raccourcir un peu, en supposant que vous gériez les erreurs au niveau de la base de données :</p>
 
-<pre class="brush: js  language-js"><code class="language-js">db.transaction("customers").objectStore("customers").get("444-44-4444").onsuccess = function(event) {
+<pre class="brush: js">db.transaction("customers").objectStore("customers").get("444-44-4444").onsuccess = function(event) {
   alert("Name for SSN 444-44-4444 is " + event.target.result.name);
-};</code></pre>
+};</pre>
 
 <div>Vous voyez comment ça fonctionne ? Comme il n'y a qu'un seul objet de stockage, vous pouvez éviter de passer une liste d'objets dont vous avez besoin dans votre transaction, et juste passer le nom comme une chaîne de caractères. Aussi, nous faisons seulement une lecture de la base, donc nous n'avons pas besoin d'une transaction <code>"readwrite"</code>. Appeler une <code>transaction()</code> sans spécifier de mode nous donne une transaction <code>"readonly"</code>. Une autre subtilité ici est que nous n'enregistrons pas l'objet de notre requête dans une variable. Comme l’évènement DOM a la requête comme cible, vous pouvez utiliser l'évènement pour récupérer la propriété <code>result</code>.</div>
 
@@ -371,7 +371,7 @@ request.onsuccess = function(event) {
 
 <p>Maintenant que nous avons récupéréré quelques données, les mettre à jour et en insérer est assez simple. Mettons à jour l’exemple précédent :</p>
 
-<pre class="brush: js  language-js"><code class="language-js">var objectStore = db.transaction(["customers"], "readwrite").objectStore("customers");
+<pre class="brush: js">var objectStore = db.transaction(["customers"], "readwrite").objectStore("customers");
 var request = objectStore.get("444-44-4444");
 request.onerror = function(event) {
   // Gestion des erreurs!
@@ -391,7 +391,7 @@ request.onsuccess = function(event) {
    requestUpdate.onsuccess = function(event) {
      // Succès - la donnée est mise à jour !
    };
-};</code></pre>
+};</pre>
 
 <div>Ici, nous avons créé une variable <code>objectStore</code> et nous avons recherché un enregistrement d’un client, identifié par la valeur ssn (<code>444-44-4444</code>). Nous avons ensuite mis le résultat dans une variable (<code>data</code>), mis à jour la propriété <code>age</code> de cet objet, puis créé une deuxième requête (<code>requestUpdate</code>) pour mettre l'enregistrement du client dans l'<code>objectStore</code>, en écrasant la valeur précédente.</div>
 
@@ -403,7 +403,7 @@ request.onsuccess = function(event) {
 
 <p>Utiliser <code>get()</code> nécessite de connaître la clé que vous souhaitez récupérer. Si vous voulez parcourir toutes les valeurs de l’objet de stockage, alors vous devez utiliser un curseur. Voici comment ça marche :</p>
 
-<pre class="brush: js  language-js"><code class="language-js">var objectStore = db.transaction("customers").objectStore("customers");
+<pre class="brush: js">var objectStore = db.transaction("customers").objectStore("customers");
 
 objectStore.openCursor().onsuccess = function(event) {
   var cursor = event.target.result;
@@ -414,13 +414,13 @@ objectStore.openCursor().onsuccess = function(event) {
   else {
     alert("No more entries!");
   }
-};</code></pre>
+};</pre>
 
 <p>La fonction <code>openCursor()</code> prend en compte plusieurs arguments. En premier, vous pouvez spécifier une plage de résultats à récupérer en utilisant un objet  "key range" que nous allons voir dans une minute. En deuxième, vous pouvez spécifier la direction vers laquelle vous souhaitez itérer. Dans l’exemple ci-dessus, nous avons itéré tous les objets dans l’ordre ascendant. Le "callback" <em>(rappel)</em> de réussite pour les curseurs est un peu spécial. L'objet cursor lui-même est le <code>result</code> <em>(résutat)</em> de la requête (au-dessus, nous utilisons le raccourci <code>event.target.result</code>). Puis la clé et valeur courante peuvent être trouvées dans les propriétés <code>key</code><em>(clé)</em>  et <code>value</code> <em>(valeur)</em> de l’objet cursor. Si vous souhaitez continuer, vous devez appeler <code>continue()</code> sur le curseur. Lorsque vous avez atteint la fin des données (ou s’il n’y a plus d’entrées qui correspondent à votre requête <code>openCursor()</code> ) , vous aurez toujours votre callback  success, mais la propriété <code>result</code> sera <code>undefined</code>.</p>
 
 <p>Une utilisation classique avec les curseurs est de récupérer tous les objets dans un objet de stockage et de les mettre dans un tableau, comme ceci :</p>
 
-<pre class="brush: js  language-js"><code class="language-js">var customers = [];
+<pre class="brush: js">var customers = [];
 
 objectStore.openCursor().onsuccess = function(event) {
   var cursor = event.target.result;
@@ -431,14 +431,14 @@ objectStore.openCursor().onsuccess = function(event) {
   else {
     alert("Got all customers: " + customers);
   }
-};</code></pre>
+};</pre>
 
 <div class="note">
 <p><strong>Note</strong>: Mozilla a aussi implémenté <code>getAll()</code> pour gérer ce cas (et <code>getAllKeys()</code>, qui est actuellement caché derrière la préférence <code>dom.indexedDB.experimental</code>  dans about:config) . ceux-ci ne font pas partie d' IndexedDB standard, et peuvent disparaître dans le futur. Nous les avons inclus partceque nous pensons qu'ils sont utiles. Le code suivant fait exactement la même chose que ci-dessus :</p>
 
-<pre class="brush: js  language-js"><code class="language-js">objectStore.getAll().onsuccess = function(event) {
+<pre class="brush: js">objectStore.getAll().onsuccess = function(event) {
   alert("Got all customers: " + event.target.result);
-};</code></pre>
+};</pre>
 
 <p>Il y a un coût de performance associé avec la recherche de la propriété <code>value</code> du curseur, parce que l'objet est créé paresseusement. Quand vous utilisez <code>getAll()</code> par exemple, Gecko doit créer tous les objets à la fois. Si vous êtes seulement intéressé par la lecture de chaque clé, pour l'instance, il est beaucoup plus efficace d'utiliser un curseur que <code>getAll()</code>. Si vous essayez d'obtenir un tableau de tous les objets d'un objet de stockage, utilisez <code>getAll()</code>.</p>
 </div>
@@ -447,7 +447,7 @@ objectStore.openCursor().onsuccess = function(event) {
 
 <p>Le stockage des données des clients utilisant le SSN comme clé est logique puisque le SSN identifie un individu unique. (Que ce soit une bonne idée pour la vie privée est une question différente, et en dehors du champ de cet article). Si vous devez rechercher un client par son nom, vous devrez toutefois faire itérer sur toutes les clés SSN dans la base de données jusqu'à ce que vous trouviez la bonne. La recherche de cette manière serait très lente, alors, vous pouvez utiliser un index.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">// D'abord, assurez-vous de créer un index dans request.onupgradeneeded:
+<pre class="brush: js line-numbers">// D'abord, assurez-vous de créer un index dans request.onupgradeneeded:
 // objectStore.createIndex("name", "name");
 // Autrement, vous obtiendrez une DOMException.
 
@@ -455,13 +455,13 @@ var index = objectStore.index("name");
 
 index.get("Donna").onsuccess = function(event) {
   alert("Donna's SSN is " + event.target.result.ssn);
-};</code></pre>
+};</pre>
 
 <p>Le "name" du curseur n'est pas unique, donc il pourrait y avoir plus d'une entrée avec le <code>name</code> attribué à  <code>"Donna"</code>. Dans ce cas, vous obtenez toujours celui qui a la valeur clé la plus basse .</p>
 
 <p>Si vous avez besoin d'accèder à toutes les entrées avec un <code>name</code> donné, vous pouvez utiliser un curseur. Vous pouvez ouvrir deux types différents de curseurs sur les index. Un curseur normal situe la propriété index de l'objet dans l'objet de stockage. Un curseur de clés situe la propriété index des clés utilisées pour stocker l'objet dans l'objet de stockage. Les différences sont illustrées ici :</p>
 
-<pre class="brush: js  language-js"><code class="language-js">// Utilisation d'un curseur normal pour saisir tous les enregistrements des objets client
+<pre class="brush: js">// Utilisation d'un curseur normal pour saisir tous les enregistrements des objets client
 index.openCursor().onsuccess = function(event) {
   var cursor = event.target.result;
   if (cursor) {
@@ -476,17 +476,17 @@ index.openKeyCursor().onsuccess = function(event) {
   var cursor = event.target.result;
   if (cursor) {
     // cursor.key est un nom, comme "Bill", et cursor.value est le SSN.
-    // </code>Pas moyen d'obtenir directement le reste de l'objet stocké <code class="language-js">.
+    // Pas moyen d'obtenir directement le reste de l'objet stocké .
     alert("Name: " + cursor.key + ", SSN: " + cursor.value);
     cursor.continue();
   }
-};</code></pre>
+};</pre>
 
 <h3 id="Spécifier_lintervalle_et_la_direction_du_curseur">Spécifier l'intervalle et la direction du curseur</h3>
 
 <p>Si vous souhaitez limiter l'intervalle de valeurs que vous voyez dans un curseur, vous pouvez utiliser un objet <code>IDBKeyRange</code> et le donner comme premier argument à <code>openCursor()</code> ou <code>openKeyCursor()</code> . Vous pouvez créer un intervalle de clés qui n'autorise qu'une seule clé, ou qui a des limites inférieure et supérieure, ou qui a des bornes inférieure et supérieure. La limite peut être "closed" <em>(fermée)</em> (c'est-à-dire que l'intervalle de clés comprend les valeurs données) ou "open" <em>(ouverte)</em> (c'est-à-dire que la plage de clés n'inclut pas les valeurs données. Voici comment cela fonctionne :</p>
 
-<pre class="brush: js  language-js"><code class="language-js">// Correspond seulement à "Donna"
+<pre class="brush: js">// Correspond seulement à "Donna"
 var singleKeyRange = IDBKeyRange.only("Donna");
 
 // Correspond à n'importe quoi contenant "Bill", y compris "Bill"
@@ -508,37 +508,37 @@ index.openCursor(boundKeyRange).onsuccess = function(event) {
     // Faire quelque chose avec la sélection.
     cursor.continue();
   }
-};</code></pre>
+};</pre>
 
 <p>Parfois, vous voudrez peut-être itérer dans l'ordre décroissant plutôt que dans l'ordre croissant (la direction par défaut pour tous les curseurs). Le changement de direction est réalisé en passant <code>prev</code>  à la fonction  <code>openCursor()</code>  antérieure comme second argument :</p>
 
-<pre class="brush: js  language-js"><code class="language-js">objectStore.openCursor(boundKeyRange, "prev").onsuccess = function(event) {
+<pre class="brush: js">objectStore.openCursor(boundKeyRange, "prev").onsuccess = function(event) {
   var cursor = event.target.result;
   if (cursor) {
     // Faire quelque chose avec les entrées.
     cursor.continue();
   }
-};</code></pre>
+};</pre>
 
 <p>Si vous souhaitez simplement spécifier un changement de direction, mais ne pas limiter les résultats, vous pouvez simplement passer "null" comme premier argument :</p>
 
-<pre class="brush: js  language-js"><code class="language-js">objectStore.openCursor(null, "prev").onsuccess = function(event) {
+<pre class="brush: js">objectStore.openCursor(null, "prev").onsuccess = function(event) {
   var cursor = event.target.result;
   if (cursor) {
     // Faire quelque chose avec les entrées.
     cursor.continue();
   }
-};</code></pre>
+};</pre>
 
 <p>Étant donné que l'index "name" n'est pas unique, il peut y avoir plusieurs entrées où le  <code>name</code>  est le même. Notez qu'une telle situation ne peut pas se produire avec les objets stockés car la clé doit toujours être unique. Si vous souhaitez filtrer les doublons pendant l'itération du curseur sur les index, vous pouvez passer  <code>nextunique</code>  (ou  <code>prevunique</code>  si vous revenez en arrière) comme paramètre de direction. Lorsque nextunique ou prevunique sont utilisés, l'entrée avec la clé la plus basse est toujours celle retournée.</p>
 
-<pre class="brush: js  language-js"><code class="language-js">index.openKeyCursor(null, "nextunique").onsuccess = function(event) {
+<pre class="brush: js">index.openKeyCursor(null, "nextunique").onsuccess = function(event) {
   var cursor = event.target.result;
   if (cursor) {
     // Faire quelque chose avec les entrées.
     cursor.continue();
   }
-};</code></pre>
+};</pre>
 
 <p>Voyez "<a href="https://developer.mozilla.org/en-US/docs/Web/API/IDBCursor?redirectlocale=en-US&amp;redirectslug=IndexedDB%2FIDBCursor#Constants">IDBCursor Constants</a>" pour les arguments de direction valides.</p>
 
@@ -546,10 +546,10 @@ index.openCursor(boundKeyRange).onsuccess = function(event) {
 
 <p>Lorsque votre application Web change de telle sorte qu'une modification de version est nécessaire pour votre base de données, vous devez considérer ce qui se passe si l'utilisateur a l'ancienne version de votre application ouverte dans un onglet, puis charge la nouvelle version de votre application dans une autre . Lorsque vous appelez  <code>open()</code>  avec une version plus grande que la version actuelle de la base de données, toutes les autres bases de données ouvertes doivent reconnaître explicitement la demande avant de commencer à modifier la base de données (un événement  <code>onblocked</code>  <em>(bloqué)</em> est déclenché jusqu'à ce qu'elles soient fermées ou rechargées). Voici comment cela fonctionne :</p>
 
-<pre class="brush: js  language-js"><code class="language-js">var openReq = mozIndexedDB.open("MyTestDatabase", 2);
+<pre class="brush: js">var openReq = mozIndexedDB.open("MyTestDatabase", 2);
 
 openReq.onblocked = function(event) {
-  // </code> Si un autre onglet est chargé avec la base de données, il doit être fermé <code class="language-js">
+  //  Si un autre onglet est chargé avec la base de données, il doit être fermé 
   // avant que nous puissions continuer.
   alert("Veuillez fermer tous les ongles ouverts sur ce site!");
 };
@@ -567,17 +567,17 @@ openReq.onsuccess = function(event) {
 }
 
 function useDatabase(db) {
-  // </code>Assurez-vous d'ajouter un gestionnaire pour être averti si une autre page demande <code class="language-js">
-  // un changement de version. Nous devons fermer la base de données. </code>
-<code class="language-js">  // </code>Cela permet à l'autre page de mettre à niveau la base de données. <code class="language-js">
-  // </code> Si vous ne le faites pas, la mise à niveau ne se produira que lorsque l'utilisateur fermera l'onglet <code class="language-js">.
+  // Assurez-vous d'ajouter un gestionnaire pour être averti si une autre page demande 
+  // un changement de version. Nous devons fermer la base de données. 
+  // Cela permet à l'autre page de mettre à niveau la base de données. 
+  //  Si vous ne le faites pas, la mise à niveau ne se produira que lorsque l'utilisateur fermera l'onglet .
   db.onversionchange = function(event) {
     db.close();
     alert("A new version of this page is ready. Please reload!");
   };
 
-  // </code> Faire quelque chose avec la base de données <code class="language-js">.
-}</code></pre>
+  //  Faire quelque chose avec la base de données .
+}</pre>
 
 <p>Vous devriez également écouter les erreurs  <code>VersionError</code>  pour gérer le cas où les applications déjà ouvertes déclencheraient un code conduisant à une nouvelle tentative d'ouverture de la base de données, mais en utilisant une version désuète.</p>
 
@@ -858,7 +858,7 @@ input {
 
 <h3 id="JavaScript_Content">JavaScript Content</h3>
 
-<pre class="brush: js  language-js"><code class="language-js">(function () {
+<pre class="brush: js">(function () {
   var COMPAT_ENVS = [
     ['Firefox', "&gt;= 16.0"],
     ['Google Chrome',
@@ -872,20 +872,20 @@ input {
   });
 
   const DB_NAME = 'mdn-demo-indexeddb-epublications';
-  const DB_VERSION = 1; // </code> Utilisez un "long long" pour cette valeur (ne pas utiliser un flottant (float)) <code class="language-js">
+  const DB_VERSION = 1; //  Utilisez un "long long" pour cette valeur (ne pas utiliser un flottant (float)) 
   const DB_STORE_NAME = 'publications';
 
   var db;
 
-  // </code> Utilisé pour garder une trace de la vue affichée pour éviter de la recharger inutilement<code class="language-js">
+  //  Utilisé pour garder une trace de la vue affichée pour éviter de la recharger inutilement
   var current_view_pub_key;
 
   function openDb() {
     console.log("openDb ...");
     var req = indexedDB.open(DB_NAME, DB_VERSION);
     req.onsuccess = function (evt) {
-      // </code> Le mieux utiliser "this" que "req" pour obtenir le résultat et éviter  <code class="language-js">
-      // </code>les problèmes avec "<code class="language-js">garbage collection".
+      //  Le mieux utiliser "this" que "req" pour obtenir le résultat et éviter  
+      // les problèmes avec "garbage collection".
       // db = req.result;
       db = this.result;
       console.log("openDb DONE");
@@ -949,15 +949,15 @@ input {
     pub_msg.empty();
     var pub_list = $('#pub-list');
     pub_list.empty();
-    // </code> Réinitialisation de l'iframe afin qu'il n'indique pas le contenu précédent <code class="language-js">
+    //  Réinitialisation de l'iframe afin qu'il n'indique pas le contenu précédent 
     newViewerFrame();
 
     var req;
     req = store.count();
-    // </code>Les requêtes sont exécutées dans l'ordre où elles ont été faites en-dehors de la <code class="language-js">
-    // transaction, </code> et leurs résultats sont retournés dans le même ordre. <code class="language-js">
-    // </code>Ainsi, le texte du compteur ci-dessous sera affiché avant la liste de pub actuelle <code class="language-js">
-    // </code>(ce n'est pas algorithmiquement important dans ce cas) <code class="language-js">.
+    // Les requêtes sont exécutées dans l'ordre où elles ont été faites en-dehors de la 
+    // transaction,  et leurs résultats sont retournés dans le même ordre. 
+    // Ainsi, le texte du compteur ci-dessous sera affiché avant la liste de pub actuelle 
+    // (ce n'est pas algorithmiquement important dans ce cas) .
     req.onsuccess = function(evt) {
       pub_msg.append('&lt;p&gt;There are &lt;strong&gt;' + evt.target.result +
                      '&lt;/strong&gt; record(s) in the object store.&lt;/p&gt;');
@@ -972,7 +972,7 @@ input {
     req.onsuccess = function(evt) {
       var cursor = evt.target.result;
 
-      // </code> Si le curseur pointe vers quelque chose, demandez les données <code class="language-js">
+      //  Si le curseur pointe vers quelque chose, demandez les données 
       if (cursor) {
         console.log("displayPubList cursor:", cursor);
         req = store.get(cursor.key);
@@ -1000,7 +1000,7 @@ input {
           pub_list.append(list_item);
         };
 
-        // </code> Passer à l'objet de stockage suivant<code class="language-js">
+        //  Passer à l'objet de stockage suivant
         cursor.continue();
 
         // Ce compteur sert seulement à créer des identifiants distincts
@@ -1032,8 +1032,8 @@ input {
       console.log("setInViewer blob:", blob);
       var iframe = newViewerFrame();
 
-      // </code>Il n'est pas possible de définir un lien direct vers <code class="language-js">
-      // </code>le blob pour fournir un moyen de le télécharger directement. <code class="language-js">
+      // Il n'est pas possible de définir un lien direct vers 
+      // le blob pour fournir un moyen de le télécharger directement. 
       if (blob.type == 'text/html') {
         var reader = new FileReader();
         reader.onload = (function(evt) {
@@ -1083,7 +1083,7 @@ input {
 
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
-    // </code> Définir le type de réponse recherché à "blob<code>"</code> <code class="language-js">
+    //  Définir le type de réponse recherché à "blob<code>"</code> 
     // http://www.w3.org/TR/XMLHttpRequest2/#the-response-attribute
     xhr.responseType = 'blob';
     xhr.onload = function (evt) {
@@ -1099,8 +1099,8 @@ input {
                          };
     xhr.send();
 
-    // </code>Nous ne pouvons pas utiliser jQuery ici car, à partir de jQuery 1.8.3<code>,</code> <code class="language-js">
-    // </code>le nouveau "blob" <code class="language-js">responseType n'est pas géré.
+    // Nous ne pouvons pas utiliser jQuery ici car, à partir de jQuery 1.8.3<code>,</code> 
+    // le nouveau "blob" responseType n'est pas géré.
     // http://bugs.jquery.com/ticket/11461
     // http://bugs.jquery.com/ticket/7248
     // $.ajax({
@@ -1193,8 +1193,8 @@ input {
         displayActionFailure("No matching record found");
         return;
       }
-      // Attention: </code> La même clé utilisée pour la création doit être transmise pour <code class="language-js">
-      // la suppression. </code> Si la clé était un nombre pour la création, elle <code>doit</code><code class="language-js">
+      // Attention:  La même clé utilisée pour la création doit être transmise pour 
+      // la suppression.  Si la clé était un nombre pour la création, elle <code>doit</code>
       // être un nombre pour la suppression.
       req = store.delete(key);
       req.onsuccess = function(evt) {
@@ -1258,8 +1258,8 @@ input {
       var file_input = $('#pub-file');
       var selected_file = file_input.get(0).files[0];
       console.log("selected_file:", selected_file);
-      // </code>Garder une référence sur la façon de réinitialiser l'entrée du fichier dans l'interface<code class="language-js">
-      // </code>utilisateur une fois que nous<code> avons sa valeur</code><code class="language-js">, mais au lieu de faire cela nous utiliserons
+      // Garder une référence sur la façon de réinitialiser l'entrée du fichier dans l'interface
+      // utilisateur une fois que nous<code> avons sa valeur</code>, mais au lieu de faire cela nous utiliserons
       // plutôt un type "reset" entré dans le formulaire HTML .
       // file_input.val(null);
       var file_url = $('#pub-file-url').val();
@@ -1305,7 +1305,7 @@ input {
   openDb();
   addEventListeners();
 
-})(); // Immediately-Invoked Function Expression (IIFE)</code></pre>
+})(); // Immediately-Invoked Function Expression (IIFE)</pre>
 
 <p>{{ LiveSampleLink('Full_IndexedDB_example', "Test the online live demo") }}</p>
 

@@ -128,13 +128,13 @@ function changeText() {
 
 <p>La propriété <code>styleSheets</code> de l'objet <code>document</code> renvoie une liste des feuilles de style qui ont été chargées pour ce document. On peut accéder à ces feuilles de style et leurs règles individuelles à l'aide des objets <code>stylesheet</code>, <code>style</code> et <code>CSSRule</code>, comme montré dans cet exemple qui affiche tous les sélecteurs de règles de style dans la console.</p>
 
-<pre class="brush:js line-numbers  language-js"><code class="language-js">var ss = document.styleSheets;
+<pre class="brush:js">var ss = document.styleSheets;
 
 for(var i = 0; i &lt; ss.length; i++) {
   for(var j = 0; j &lt; ss[i].cssRules.length; j++) {
     dump( ss[i].cssRules[j].selectorText + "\n" );
   }
-}</code></pre>
+}</pre>
 
 <p>Pour un document avec une seule feuille de style dans laquelle les trois règles suivantes sont définies :</p>
 

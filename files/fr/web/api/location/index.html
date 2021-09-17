@@ -105,9 +105,9 @@ body {display:table-cell; text-align:center; vertical-align:middle; font-family:
 
 <h2 id="Exemples">Exemples</h2>
 
-<pre class="brush: js line-numbers language-js"><code class="language-js">// Crée un élèment ancre et utilise la propriété href </code>dans le but de cet exemple
-<code class="language-js">// </code>Une alternative plus correcte est de naviguer vers l'URL et d'utiliser document.location ou window.location
-<code class="language-js">var url = document.createElement('a');
+<pre class="brush: js">// Crée un élèment ancre et utilise la propriété href dans le but de cet exemple
+// Une alternative plus correcte est de naviguer vers l'URL et d'utiliser document.location ou window.location
+var url = document.createElement('a');
 url.href = 'https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container';
 console.log(url.href);      // https://developer.mozilla.org:8080/en-US/search?q=URL#search-results-close-container
 console.log(url.protocol);  // https:
@@ -117,7 +117,7 @@ console.log(url.port);      // 8080
 console.log(url.pathname);  // /en-US/search
 console.log(url.search);    // ?q=URL
 console.log(url.hash);      // #search-results-close-container
-console.log(url.origin);    // https://developer.mozilla.org:8080</code></pre>
+console.log(url.origin);    // https://developer.mozilla.org:8080</pre>
 
 <h2 id="Spécifications">Spécifications</h2>
 

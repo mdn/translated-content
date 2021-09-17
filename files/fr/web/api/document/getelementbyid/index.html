@@ -50,10 +50,10 @@ translation_of: Web/API/Document/getElementById
 
 <h3 id="Contenu_JavaScript">Contenu JavaScript</h3>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function changeColor(newColor) {
+<pre class="brush: js">function changeColor(newColor) {
   var elem = document.getElementById('para');
   elem.style.color = newColor;
-}</code></pre>
+}</pre>
 
 <h3 id="Notes">Résultat</h3>
 
@@ -93,9 +93,9 @@ translation_of: Web/API/Document/getElementById
 
 <p><strong>Les éléments absents du document</strong> ne sont pas cherchés par <code>getElementById()</code>. Quand vous créez un élément et y assignez un ID, vous devez insérer l'élément dans l'arbre du document avec {{domxref("Node.insertBefore()")}} ou une méthode similaire avant de pouvoir y accéder avec <code>getElementById()</code> :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var element = document.createElement('div');
+<pre class="brush: js">var element = document.createElement('div');
 element.id = 'testqq';
-var el = document.getElementById('testqq'); // el vaudra null !</code></pre>
+var el = document.getElementById('testqq'); // el vaudra null !</pre>
 
 <p><strong>Les documents non-HTML.</strong> Les implémentations du DOM doivent avoir une information qui précise quels attributs sont de type ID. Un attribut portant le nom « id » n'est pas de type ID tant qu'il n'a pas été explicitement défini ainsi (dans la DTD du document). L'attribut <code>id</code> est défini comme étant de type ID dans les langages courants comme <a href="/fr/XHTML" title="fr/XHTML">XHTML</a> ou <a href="/fr/XUL" title="fr/XUL">XUL</a>. Les implémentations ne sachant pas déterminer si les attributs sont de type ID ou non sont supposées renvoyer <code>null</code>.</p>
 

@@ -85,7 +85,7 @@ translation_of: Web/API/AudioBufferSourceNode
 <p><strong>Note</strong>: Vous pouvez aussi <a class="external external-icon" href="http://mdn.github.io/audio-buffer/">exécuter the code</a>, ou <a class="external external-icon" href="https://github.com/mdn/audio-buffer">regarder le code source</a>.</p>
 </div>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
+<pre class="brush: js">var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
 var bouton = document.querySelector('button');
 var pre = document.querySelector('pre');
 var monScript = document.querySelector('script');
@@ -124,7 +124,7 @@ bouton.onclick = function() {
   source.connect(contexteAudio.destination);
   // lance la lecture de la source
   source.start();
-}</code></pre>
+}</pre>
 
 <div class="note">
 <p><strong>Note</strong>: Pour un exemple de <code>decodeAudioData</code>(), voir la page {{domxref("AudioContext.decodeAudioData")}}.</p>

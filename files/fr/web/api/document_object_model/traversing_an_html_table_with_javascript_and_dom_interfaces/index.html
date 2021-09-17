@@ -27,7 +27,7 @@ original_slug: Explorer_un_tableau_HTML_avec_des_interfaces_DOM_et_JavaScript
 
 <h3 id="Contenu_JavaScript">Contenu JavaScript</h3>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function generate_table() {
+<pre class="brush: js">function generate_table() {
   // get the reference for the body
   var body = document.getElementsByTagName("body")[0];
 
@@ -60,7 +60,7 @@ original_slug: Explorer_un_tableau_HTML_avec_des_interfaces_DOM_et_JavaScript
   body.appendChild(tbl);
   // sets the border attribute of tbl to 2;
   tbl.setAttribute("border", "2");
-}</code></pre>
+}</pre>
 
 <p>{{ EmbedLiveSample('Overview_of_Sample1.html') }}</p>
 
@@ -126,18 +126,18 @@ original_slug: Explorer_un_tableau_HTML_avec_des_interfaces_DOM_et_JavaScript
 
 <h3 id="Contenu_JavaScript_2">Contenu JavaScript</h3>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function set_background() {
-  // </code>récupère une liste de tous les éléments body (il n'y en aura qu'un)<code class="language-js">,
-  // </code>et sélectionne le premier (indice 0) de ces éléments<code class="language-js">
+<pre class="brush: js">function set_background() {
+  // récupère une liste de tous les éléments body (il n'y en aura qu'un),
+  // et sélectionne le premier (indice 0) de ces éléments
   myBody = document.getElementsByTagName("body")[0];
 
-  // </code>à présent, trouve tous les éléments p enfants de cet élément body<code class="language-js">
+  // à présent, trouve tous les éléments p enfants de cet élément body
   myBodyElements = myBody.getElementsByTagName("p");
 
-  // </code>récupère le second élément de cette liste d'éléments p<code class="language-js">
+  // récupère le second élément de cette liste d'éléments p
   myP = myBodyElements[1];
   myP.style.background = "rgb(255,0,0)";
-}</code></pre>
+}</pre>
 
 <p>{{ EmbedLiveSample('Setting_background_of_a_paragraph') }}</p>
 
@@ -284,7 +284,7 @@ body.appendChild(nouveauNoeudBALISEP);
 
 <div class="note">Si l'objet est un nœud texte, vous pouvez récupérer le texte qu'il contient en employant l'attribut <code>data</code>.</div>
 
-<pre class="brush:js line-numbers  language-js"><code class="language-js">mybody = document.getElementsByTagName("body")[0];
+<pre class="brush:js">mybody = document.getElementsByTagName("body")[0];
 mytable = mybody.getElementsByTagName("table")[0];
 mytablebody = mytable.getElementsByTagName("tbody")[0];
 myrow = mytablebody.getElementsByTagName("tr")[1];
@@ -293,9 +293,9 @@ mycel = myrow.getElementsByTagName("td")[1];
 // premier élément du noeud liste des enfants de mycel
 myceltext=mycel.childNodes[0];
 
-// </code> contenu de currenttext est le contenu des données de<code class="language-js"> myceltext
+//  contenu de currenttext est le contenu des données de myceltext
 currenttext=document.createTextNode(myceltext.data);
-mybody.appendChild(currenttext);</code></pre>
+mybody.appendChild(currenttext);</pre>
 
 <h3 id="R.C3.A9cup.C3.A9rer_la_valeur_d.27un_attribut">Récupérer la valeur d'un attribut</h3>
 

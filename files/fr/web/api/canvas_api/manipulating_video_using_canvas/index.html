@@ -67,7 +67,7 @@ original_slug: HTML/Manipulating_video_using_canvas
 
 <p>La métode <code>doLoad()</code> est appelée quand le document XHTML se charge. Cette méthode sert à initialiser chaque variable nécessaire au code traitant l'incrustation (<em>chroma-key</em>), ainsi qu'à associer un écouteur d'évènement qui détectera le moment où l'utilisateur lancera la vidéo.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var processor;
+<pre class="brush: js">var processor;
 
   processor.doLoad = function doLoad() {
     this.video = document.getElementById('video');
@@ -81,7 +81,7 @@ original_slug: HTML/Manipulating_video_using_canvas
         self.height = self.video.videoHeight / 2;
         self.timerCallback();
       }, false);
-  },</code></pre>
+  },</pre>
 
 <p>Le code récupère les références aux élément XHTML qui nous intéressent, à savoir l'élément <code>video</code> et les deux éléments <code>canvas</code>. Il définit également les contextes graphique de chacun des éléments <code>canvas</code>. Ce sera utile pour la suite, lorsque nous créerons l'effet d'incrustation.</p>
 
@@ -91,7 +91,7 @@ original_slug: HTML/Manipulating_video_using_canvas
 
 <p>Le rappel du minuteur est initialisé lorsque la vidéo commence à jouer (lorsque l'événement "play" se produit), puis est chargé d'établir le rappel périodique afin de lancer l'effet d'ajustement pour chaque "frame".</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">processor.timerCallback = function timerCallback() {
+<pre class="brush: js">processor.timerCallback = function timerCallback() {
     if (this.video.paused || this.video.ended) {
       return;
     }
@@ -100,7 +100,7 @@ original_slug: HTML/Manipulating_video_using_canvas
     setTimeout(function() {
         self.timerCallback();
       }, 0);
-  },</code></pre>
+  },</pre>
 
 <p>La première chose que le rappel fait est de vérifier si la vidéo est en train de jouer. Si ce n'est pas le cas, le rappel revient immédiatement sans rien faire.</p>
 
@@ -112,7 +112,7 @@ original_slug: HTML/Manipulating_video_using_canvas
 
 <p>La méthode <code>computeFrame()</code> , présentée ci-dessous, est en charge de récupérer les données de chaque image et d'y appliquer l'effet d'incrustation.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">processor.computeFrame = function computeFrame() {
+<pre class="brush: js">processor.computeFrame = function computeFrame() {
     this.ctx1.drawImage(this.video, 0, 0, this.width, this.height);
     let frame = this.ctx1.getImageData(0, 0, this.width, this.height);
     let l = frame.data.length / 4;
@@ -126,7 +126,7 @@ original_slug: HTML/Manipulating_video_using_canvas
     }
     this.ctx2.putImageData(frame, 0, 0);
     return;
-  }</code></pre>
+  }</pre>
 
 <p>²</p>
 

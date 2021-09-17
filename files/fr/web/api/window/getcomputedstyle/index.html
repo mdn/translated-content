@@ -55,7 +55,7 @@ var style = window.getComputedStyle(elem1, null);
 &lt;/script&gt;
 </pre>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function dumpComputedStyles(elem,prop) {
+<pre class="brush: js">function dumpComputedStyles(elem,prop) {
 
   var cs = window.getComputedStyle(elem,null);
   if (prop) {
@@ -69,7 +69,7 @@ var style = window.getComputedStyle(elem1, null);
     console.log(style+" : "+cs.getPropertyValue(style));
   }
 
-}</code></pre>
+}</pre>
 
 <h2 id="Description">Description</h2>
 

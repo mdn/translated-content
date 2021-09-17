@@ -109,7 +109,7 @@ translation_of: Web/API/MouseEvent
 
 <p>Cet exemple illustre la simulation d'un clic (générant par programmation un événement click) sur une case à cocher en utilisant les méthodes DOM.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function simulateClick() {
+<pre class="brush: js">function simulateClick() {
   var evt = new MouseEvent("click", {
     bubbles: true,
     cancelable: true,
@@ -125,7 +125,7 @@ translation_of: Web/API/MouseEvent
     alert("not canceled");
   }
 }
-document.getElementById("button").addEventListener('click', simulateClick);</code></pre>
+document.getElementById("button").addEventListener('click', simulateClick);</pre>
 
 <pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;p&gt;&lt;label&gt;&lt;input type="checkbox" id="checkbox"&gt; Checked&lt;/label&gt;
 &lt;p&gt;&lt;button id="button"&gt;Click me&lt;/button&gt;</code></pre>

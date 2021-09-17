@@ -21,7 +21,7 @@ translation_of: Web/API/Event/target
 
 <p>La propriété <code>event.target</code> peut être utilisée pour implémenter la <strong>délégation d'événements</strong>.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">// Produit une liste
+<pre class="brush: js">// Produit une liste
 var ul = document.createElement('ul');
 document.body.appendChild(ul);
 
@@ -38,7 +38,7 @@ function hide(e){
 
 // Attache l'écouteur à la liste
 // Il se déclenche pour chaque &lt;li&gt; clické
-ul.addEventListener('click', hide, false);</code></pre>
+ul.addEventListener('click', hide, false);</pre>
 
 <h2 id="Spécifications">Spécifications</h2>
 

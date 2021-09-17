@@ -42,10 +42,10 @@ translation_of: Web/API/Document/getElementsByClassName
 
 <p>Nous pouvons également utiliser les méthodes de Array.prototype sur toute {{domxref ("HTMLCollection")}} en passant HTMLCollection comme valeur de la méthode. Ici, nous allons trouver tous les éléments div qui ont une classe de 'test':</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var testElements = document.getElementsByClassName('test');
+<pre class="brush: js">var testElements = document.getElementsByClassName('test');
 var testDivs = Array.prototype.filter.call(testElements, function(testElement){
     return testElement.nodeName === 'DIV';
-});</code></pre>
+});</pre>
 
 <p>XXX writeme == Notes == Une méthode semblable existe pour &lt;code&gt;Element&lt;/code&gt;</p>
 

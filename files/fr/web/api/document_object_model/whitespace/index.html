@@ -61,7 +61,7 @@ translation_of: Web/API/Document_Object_Model/Whitespace
 
 <p>Le code JavaScript ci-dessous définit plusieurs fonctions facilitant la manipulation d'espaces dans le DOM :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">/**
+<pre class="brush: js">/**
  * Tout au long, les espaces sont définis comme l'un des caractères
  *  "\t" TAB \u0009
  *  "\n" LF  \u000A
@@ -204,13 +204,13 @@ function data_of( txt )
   if (data.charAt(data.length - 1) == " ")
     data = data.substring(0, data.length - 1);
   return data;
-}</code></pre>
+}</pre>
 
 <h2 id="Exemple">Exemple</h2>
 
 <p>Le code qui suit montre l'utilisation des fonctions présentées plus haut. Il parcourt les enfants d'un élément (dont les enfants sont tous des éléments) pour trouver celui dont le texte est <code>"Ceci est le troisième paragraphe"</code>, et change ensuite l'attribut <code>class</code> et le contenu de ce paragraphe.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var cur = first_child(document.getElementById("test"));
+<pre class="brush: js">var cur = first_child(document.getElementById("test"));
 while (cur)
 {
   if (data_of(cur.firstChild) == "This is the third paragraph.")
@@ -219,7 +219,7 @@ while (cur)
       cur.firstChild.textContent = "This is the magic paragraph.";
   }
   cur = node_after(cur);
-}</code></pre>
+}</pre>
 
 <div class="originaldocinfo">
 <h3 id="Informations_sur_le_document_original">Informations sur le document original</h3>

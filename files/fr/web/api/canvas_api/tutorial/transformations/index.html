@@ -89,7 +89,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Transformations
 
 <p>Dans la fonction <code>draw ()</code>, nous appelons la fonction <code>fillRect ()</code> neuf fois en utilisant deux boucles <code>for</code> . Dans chaque boucle, le canevas est déplacé, le rectangle est dessiné et le canevas est retourné à son état d'origine. Notez comment l'appel à <code>fillRect ()</code> utilise les mêmes coordonnées à chaque fois, en s'appuyant sur <code>translate ()</code> pour ajuster la position du dessin.</p>
 
-<pre class="brush: js; highlight:[7] language-js">function draw() {
+<pre class="brush: js">function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
   for (var i = 0; i &lt; 3; i++) {
     for (var j = 0; j &lt; 3; j++) {

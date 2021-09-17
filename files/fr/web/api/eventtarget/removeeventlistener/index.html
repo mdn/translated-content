@@ -74,12 +74,12 @@ element.removeEventListener("mousedown", handleMouseDown, true);</pre>
 
 <p>Maintenant, regardez chacun de ces appels successifs à <code>removeEventListener()</code>. N'importe lequel d'entre eux dans lequel <code>capture</code> ou <code>useCapture</code> est <code>true</code> (<em>vrai</em>) échoue ; tous les autres réussissent. Seul le paramètre de <code>capture</code> est important pour <code>removeEventListener()</code>.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">element.removeEventListener("mousedown", handleMouseDown, { passive: true });     // Réussit
+<pre class="brush: js">element.removeEventListener("mousedown", handleMouseDown, { passive: true });     // Réussit
 element.removeEventListener("mousedown", handleMouseDown, { capture: false });    // Réussit
 element.removeEventListener("mousedown", handleMouseDown, { capture: true });     // Échoue
 element.removeEventListener("mousedown", handleMouseDown, { passive: false });    // Réussit
 element.removeEventListener("mousedown", handleMouseDown, false);                 // Réussit
-element.removeEventListener("mousedown", handleMouseDown, true);                  // Échoue</code>
+element.removeEventListener("mousedown", handleMouseDown, true);                  // Échoue
 </pre>
 
 <p>Il est à noter que certaines versions du navigateur ont été incohérentes à ce sujet, et sauf si vous avez des raisons spécifiques, il est probablement sage d'utiliser les mêmes valeurs que pour l'appel à <code>addEventListener()</code> lors de l'appel de <code>removeEventListener()</code>.</p>

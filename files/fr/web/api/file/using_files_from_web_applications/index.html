@@ -459,20 +459,20 @@ if (isset($_FILES['myFile'])) {
 
 <p>Et voici comment modifier la valeur de l'attribut <code>src</code> :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var obj_url = window.URL.createObjectURL(blob);
+<pre class="brush: js">var obj_url = window.URL.createObjectURL(blob);
 var iframe = document.getElementById('viewer');
 iframe.setAttribute('src', obj_url);
-window.URL.revokeObjectURL(obj_url);</code></pre>
+window.URL.revokeObjectURL(obj_url);</pre>
 
 <h2 id="Exemple_Utiliser_un_objet_URLs_avec_d'autres_types_de_fichiers">Exemple : Utiliser un objet URLs avec d'autres types de fichiers</h2>
 
 <p>Vous pouvez manipuler de la même façon des fichiers d'autres formats. Voici comment prévisualiser une vidéo téléchargée sur le serveur :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var video = document.getElementById('video');
+<pre class="brush: js">var video = document.getElementById('video');
 var obj_url = window.URL.createObjectURL(blob);
 video.src = obj_url;
 video.play()
-window.URL.revokeObjectURL(obj_url);</code></pre>
+window.URL.revokeObjectURL(obj_url);</pre>
 
 <h2 id="Specification">Spécifications</h2>
 

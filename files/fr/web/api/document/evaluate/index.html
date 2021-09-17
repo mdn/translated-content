@@ -33,7 +33,7 @@ translation_of: Web/API/Document/evaluate
 
 <h2 id="Exemples">Exemples</h2>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"> var  headings  =  document .  evaluate  ( " / html / body //h2", document, null, XPathResult.ANY_TYPE, null);
+<pre class="brush: js "> var  headings  =  document .  evaluate  ( " / html / body //h2", document, null, XPathResult.ANY_TYPE, null);
  /* Cherche le document pour tout élément h2.
  * Le résultat sera probablement un itérateur de noeuds non ordonné. */
  var  thisHeading  =  headings .  iterateNext  (  )  ;
@@ -42,13 +42,13 @@ translation_of: Web/API/Document/evaluate
   alertText  +  =  thisHeading . textContent  +   "\n"  ;
   thisHeading  =  headings .  iterateNext  (  )  ;
  }
- alert  ( alertText )  ;   // Alerte le texte de tout élément h2 </code></pre>
+ alert  ( alertText )  ;   // Alerte le texte de tout élément h2 </pre>
 
 <p>Note : dans l'exemple ci-dessus, un XPath plus verbeux est préféré aux raccourcis communs tels que <code>//h2</code>. Généralement, des sélecteurs XPath plus spécifiques, comme dans l'exemple ci-dessus, améliorent de façon significative les performances, en particulier pour les documents très volumineux. C'est parce que l'évaluation de la requête ne perd pas de temps à visiter des noeuds inutiles. L'utilisation de // est généralement lente car elle visite tous les nœuds de la racine et tous les sous-nœuds à la recherche de correspondances possibles.</p>
 
 <p>Une optimisation supplémentaire peut être obtenue en utilisant soigneusement le paramètre de contexte. Par exemple, si vous savez que le contenu que vous recherchez se trouve quelque part dans la balise body, vous pouvez utiliser ceci :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">document .  evaluate  ( " .  //h2", document.body, null, XPathResult.ANY_TYPE, null); </code></pre>
+<pre class="brush: js">document .  evaluate  ( " .  //h2", document.body, null, XPathResult.ANY_TYPE, null); </pre>
 
 <p>Remarquez ci-dessus,  <code>document.body</code> a été utilisé comme contexte plutôt que comme document, de sorte que le XPath commence à partir de l'élément body. (Dans cet exemple, le <code>"."</code> est important pour indiquer que l'interrogation doit commencer à partir du noeud contextuel, document.body . Si le "." est omis (en quittant <code>//h2</code>), la requête démarrera à partir du noeud racine ( <code>html</code>) ce qui serait plus inutile.)</p>
 

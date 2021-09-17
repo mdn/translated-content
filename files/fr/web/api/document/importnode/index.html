@@ -34,10 +34,10 @@ translation_of: Web/API/Document/importNode
 
 <h2 id="Exemple">Exemple</h2>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var iframe = document.getElementsByTagName("iframe")[0];
+<pre class="brush: js">var iframe = document.getElementsByTagName("iframe")[0];
 var oldNode = iframe.contentWindow.document.getElementById("myNode");
 var newNode = document.importNode(oldNode, true);
-document.getElementById("container").appendChild(newNode);</code></pre>
+document.getElementById("container").appendChild(newNode);</pre>
 
 <h2 id="Notes">Notes</h2>
 

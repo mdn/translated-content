@@ -36,16 +36,16 @@ original_slug: Web/API/ParentNode/childElementCount
 
 <h2 id="Exemple">Exemple</h2>
 
-<pre class="brush:js line-numbers  language-js"><code class="language-js">var foo = document.getElementById("foo");
+<pre class="brush:js">var foo = document.getElementById("foo");
 if (foo.childElementCount &gt; 0) {
     // faire quelque chose
-}</code></pre>
+}</pre>
 
 <h2 id="Polyfill_pour_IE8_IE9_Safari">Polyfill pour IE8 &amp; IE9 &amp; Safari</h2>
 
 <p>Cette propriété n'est pas supportée par les versions antérieures à IE9 ni par IE9 ni par Safari. Ainsi, les objets Document, DocumentFragment dans ces navigateurs ne l'ont pas.</p>
 
-<pre class="brush:js line-numbers  language-js"><code class="language-js">;(function(constructor) {
+<pre class="brush:js">;(function(constructor) {
     if (constructor &amp;&amp;
         constructor.prototype &amp;&amp;
         constructor.prototype.childElementCount == null) {
@@ -59,7 +59,7 @@ if (foo.childElementCount &gt; 0) {
             }
         });
     }
-})(window.Node || window.Element);</code></pre>
+})(window.Node || window.Element);</pre>
 
 <h2 id="Spécification">Spécification</h2>
 

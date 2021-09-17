@@ -81,13 +81,13 @@ translation_of: Web/API/Worker
 
 <p>L'extrait de code suivant montre la création d'un objet {{domxref("Worker")}} en utilisant le constructeur {{domxref("Worker.Worker", "Worker()")}} et l'utilisation de l'objet:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var monWorker = new Worker("worker.js");
+<pre class="brush: js">var monWorker = new Worker("worker.js");
 var premier = document.querySelector('#numero1');
 
 premier.onchange = function() {
   monWorker.postMessage([premiere.valeur, deuxieme.valeur]);
   console.log('Message envoyé au worker');
-}</code></pre>
+}</pre>
 
 <p>Pour un exemple complet, voir <a class="external external-icon" href="https://github.com/mdn/simple-web-worker">Exemple basique de worker dédié</a> (<a class="external external-icon" href="http://mdn.github.io/simple-web-worker/">exécuter le worker dédié</a>).</p>
 

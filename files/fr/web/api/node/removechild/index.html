@@ -77,23 +77,23 @@ translation_of: Web/API/Node/removeChild
   &lt;div id="nested"&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
 
-<pre class="brush:js line-numbers  language-js"><code class="language-js">// Supprime un élément spécifié quand son noeud parent est connu
+<pre class="brush:js">// Supprime un élément spécifié quand son noeud parent est connu
 var d = document.getElementById("top");
 var d_nested = document.getElementById("nested");
-var throwawayNode = d.removeChild(d_nested);</code></pre>
+var throwawayNode = d.removeChild(d_nested);</pre>
 
-<pre class="brush:js line-numbers  language-js"><code class="language-js">// Supprime un élément spécifié sans avoir à spécifier son noeud parent
+<pre class="brush:js">// Supprime un élément spécifié sans avoir à spécifier son noeud parent
 var node = document.getElementById("nested");
 if (node.parentNode) {
   node.parentNode.removeChild(node);
-}</code></pre>
+}</pre>
 
-<pre class="brush:js line-numbers  language-js">
-<code class="language-js">// Supprime tous les enfant d'un élément
+<pre class="brush:js">
+// Supprime tous les enfant d'un élément
 var element = document.getElementById("top");
 while (element.firstChild) {
   element.removeChild(element.firstChild);
-}</code></pre>
+}</pre>
 
 <h2 id="Sp.C3.A9cification">Spécifications</h2>
 

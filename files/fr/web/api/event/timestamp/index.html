@@ -40,11 +40,11 @@ translation_of: Web/API/Event/timeStamp
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function getTime(event) {
+<pre class="brush: js">function getTime(event) {
   var time = document.getElementById("time");
   time.firstChild.nodeValue = event.timeStamp;
 }
-document.body.addEventListener("keypress", getTime);</code></pre>
+document.body.addEventListener("keypress", getTime);</pre>
 
 <h3 id="Résultat">Résultat</h3>
 
@@ -55,7 +55,7 @@ document.body.addEventListener("keypress", getTime);</code></pre>
 <p>Pour offrir une protection contre les attaques de synchronisation et les empreintes digitales, la précision de <code>event.timeStamp</code> peut être arrondie en fonction des paramètres du navigateur.<br>
  Dans Firefox, la préférence <code>privacy.reduceTimerPrecision</code> est activée et à 20 us par défaut dans Firefox 59 ; en version 60 ce sera 2 ms.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">// Précision du temps réduite (2ms) dans Firefox 60
+<pre class="brush: js">// Précision du temps réduite (2ms) dans Firefox 60
 event.timeStamp;
 // 1519211809934
 // 1519211810362
@@ -68,7 +68,7 @@ event.timeStamp;
 // 1519129853500
 // 1519129858900
 // 1519129864400
-// ...</code></pre>
+// ...</pre>
 
 <p>Dans Firefox, vous pouvez aussi activer <code>privacy.resistFingerprinting</code>, la précision sera de 100 ms ou la valeur de <code>privacy.resistFingerprinting.reduceTimerPrecision.microseconds</code>, selon la valeur la plus grande.</p>
 

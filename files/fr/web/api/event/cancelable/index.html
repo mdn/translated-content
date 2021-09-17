@@ -30,7 +30,7 @@ translation_of: Web/API/Event/cancelable
 
 <p>Par exemple, les vendeurs de navigateurs proposent que l'<a href="https://developer.mozilla.org/fr/docs/Web/Events/wheel">évènement wheel </a>puisse être annulable seulement  <a href="https://github.com/WICG/interventions/issues/33" rel="external">la première fois que l'écouteur est appelé</a> (en) ; les évènements  <code>wheel</code> suivants ne peuvent être annulés.</p>
 
-<pre class="brush:js line-numbers  language-js"><code class="language-js">function preventScrollWheel(event) {
+<pre class="brush:js">function preventScrollWheel(event) {
   if (typeof event.cancelable !== 'boolean' || event.cancelable) {
     // L'événement peut être annulé, alors nous le faisons.
     event.preventDefault();
@@ -42,7 +42,7 @@ translation_of: Web/API/Event/cancelable
   }
 }
 
-document.addEventListener('wheel', preventCancelableEvents);</code></pre>
+document.addEventListener('wheel', preventCancelableEvents);</pre>
 
 <p> </p>
 

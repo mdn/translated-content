@@ -38,15 +38,15 @@ translation_of: Web/API/Node/appendChild
 
 <p>Le chaînage peut ne pas fonctionner comme prévu en raison de <code>appendChild()</code> renvoyant l'élément enfant :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var aBlock = doc.createElement('block').appendChild(doc.createElement('b'));</code></pre>
+<pre class="brush: js">var aBlock = doc.createElement('block').appendChild(doc.createElement('b'));</pre>
 
 <p>Définit <code>aBlock</code> pour <code>&lt;b&gt;&lt;/b&gt;</code> uniquement, ce que vous ne voulez probablement pas.</p>
 
 <h2 id="Exemple">Exemple</h2>
 
-<pre class="brush:js line-numbers  language-js"><code class="language-js">// Crée un nouvel élément paragraphe et l'ajoute à la fin du corps du document
+<pre class="brush:js">// Crée un nouvel élément paragraphe et l'ajoute à la fin du corps du document
 var p = document.createElement("p");
-document.body.appendChild(p);</code></pre>
+document.body.appendChild(p);</pre>
 
 <h2 id="Spécification">Spécification</h2>
 

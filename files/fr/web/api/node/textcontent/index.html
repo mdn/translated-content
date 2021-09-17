@@ -58,7 +58,7 @@ document.getElementById("divA").textContent = "Ceci est un exemple de texte";
 
 <h2 id="Polyfill_pour_IE8">Polyfill pour IE8</h2>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">// Source: Eli Grey @ http://eligrey.com/blog/post/textcontent-in-ie8
+<pre class="brush: js">// Source: Eli Grey @ http://eligrey.com/blog/post/textcontent-in-ie8
 if (Object.defineProperty
   &amp;&amp; Object.getOwnPropertyDescriptor
   &amp;&amp; Object.getOwnPropertyDescriptor(Element.prototype, "textContent")
@@ -78,7 +78,7 @@ if (Object.defineProperty
      }
    );
   })();
-}</code></pre>
+}</pre>
 
 <ul>
 </ul>

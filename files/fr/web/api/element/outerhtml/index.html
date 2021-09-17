@@ -67,9 +67,9 @@ console.log(container.firstChild.nodeName); // affiche "P"
 
 <p>Si un élément n'a pas de noeud parent, définir sa propriété <code>outerHTML</code> ne le modifiera pas, ni ses descendants. De nombreux navigateurs déclencheront aussi une exception. Par exemple :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var div = document.createElement("div");
+<pre class="brush: js">var div = document.createElement("div");
 div.outerHTML = "&lt;div class=\"test\"&gt;test&lt;/div&gt;";
-console.log(div.outerHTML); // output: "&lt;div&gt;&lt;/div&gt;"</code></pre>
+console.log(div.outerHTML); // output: "&lt;div&gt;&lt;/div&gt;"</pre>
 
 <p>Aussi, lorsqu'un élément va être remplacé dans le document, la variable dont la propriété <code>outerHTML</code> a été modifiée contiendra toujours une référence à l'élément initial :</p>
 

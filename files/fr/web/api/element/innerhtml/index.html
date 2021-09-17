@@ -46,7 +46,7 @@ original_slug: Web/API/Element/innertHTML
 
 <p>La lecture de <code>innerHTML</code> amène l'agent utilisateur à sérialiser le fragment HTML ou XML composé des descendants de l'élément. La chaîne résultante est renvoyée.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">let contents = myElement.innerHTML;</code></pre>
+<pre class="brush: js">let contents = myElement.innerHTML;</pre>
 
 <p>Cela vous permet de regarder le balisage HTML des nœuds de contenu de l'élément.</p>
 
@@ -60,13 +60,13 @@ original_slug: Web/API/Element/innertHTML
 
 <p>Par exemple, vous pouvez effacer le contenu entier du document en effaçant le contenu de l'attribut {{domxref("Document.body", "body")}} du document.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">document.body.innerHTML = "";</code></pre>
+<pre class="brush: js">document.body.innerHTML = "";</pre>
 
 <p>Cet exemple récupère le balisage HTML actuel du document et remplace les caractères <code>"&lt;"</code> par l'entité HTML <code>"&amp; lt;"</code>, convertissant ainsi essentiellement le code HTML en texte brut. Ceci est ensuite inclus dans un élément {{HTMLElement ("pre")}}. Puis, la valeur de <code>innerHTML</code> est modifiée dans cette nouvelle chaîne. Par conséquent, le contenu du document est remplacé par un affichage du code source entier de la page.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">document.documentElement.innerHTML = "&lt;pre&gt;" +
+<pre class="brush: js">document.documentElement.innerHTML = "&lt;pre&gt;" +
          document.documentElement.innerHTML.replace(/&lt;/g,"&amp;lt;") +
-            "&lt;/pre&gt;";</code></pre>
+            "&lt;/pre&gt;";</pre>
 
 <h4 id="Détails_opérationnels">Détails opérationnels</h4>
 
@@ -82,21 +82,21 @@ original_slug: Web/API/Element/innertHTML
 
 <p>Il n'est pas rare de voir <code>innerHTML</code> utilisé pour insérer du texte dans une page Web. Il est possible que ceci devienne un vecteur d'attaque sur un site, ce qui crée potentiellement un risque de sécurité.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">const name = "John";
+<pre class="brush: js">const name = "John";
 // en supposant que 'el' est un élément de document HTML
 el.innerHTML = name; // inoffensif dans ce cas
 
 // ...
 
 name = "&lt;script&gt;alert('I am John in an annoying alert!')&lt;/script&gt;";
-el.innerHTML = name; // inoffensif dans ce cas</code></pre>
+el.innerHTML = name; // inoffensif dans ce cas</pre>
 
 <p>Bien que cela puisse ressembler à une attaque {{interwiki ("wikipedia", "cross-site_scripting","cross-site scripting")}}, le résultat est inoffensif. HTML5 spécifie qu'une balise {{HTMLElement ("script")}} insérée avec <code>innerHTML</code> <a href="https://www.w3.org/TR/2008/WD-html5-20080610/dom.html#innerhtml0">ne doit pas s'exécuter</a>.</p>
 
 <p>Cependant, il existe des moyens d'exécuter JavaScript sans utiliser les éléments {{HTMLElement ("script")}}, donc il existe toujours un risque de sécurité chaque fois que vous utilisez <code>innerHTML</code> pour définir des chaînes sur lesquelles vous n'avez aucun contrôle. Par exemple :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">const name = "&lt;img src='x' onerror='alert(1)'&gt;";
-el.innerHTML = name; // affiche l'alerte</code></pre>
+<pre class="brush: js">const name = "&lt;img src='x' onerror='alert(1)'&gt;";
+el.innerHTML = name; // affiche l'alerte</pre>
 
 <p>Pour cette raison, il est recommandé de ne pas utiliser <code>innerHTML</code> pour insérer du texte brut ; à la place, utilisez {{domxref("Node.textContent")}}. Cela n'analyse pas le contenu passé en HTML, mais l'insère à la place en tant que texte brut.</p>
 
@@ -110,7 +110,7 @@ el.innerHTML = name; // affiche l'alerte</code></pre>
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function log(msg) {
+<pre class="brush: js">function log(msg) {
   var logElem = document.querySelector(".log");
 
   var time = new Date();
@@ -118,27 +118,27 @@ el.innerHTML = name; // affiche l'alerte</code></pre>
   logElem.innerHTML += timeStr + ": " + msg + "&lt;br/&gt;";
 }
 
-log("Logging mouse events inside this container...");</code></pre>
+log("Logging mouse events inside this container...");</pre>
 
 <p>La fonction <code>log()</code> crée la sortie du journal en récupérant l'heure actuelle à partir d'un objet {{jsxref ("Date")}} en utilisant {{jsxref ("Date.toLocaleTimeString", "toLocaleTimeString ()")}} et en créant une chaîne avec l'horodatage et le texte du message. Ensuite, le message est ajouté à la boîte avec la classe <code>"log"</code>.</p>
 
 <p>Nous ajoutons une seconde méthode qui enregistre des informations sur les événements basés sur {{domxref ("MouseEvent")}} (tels que {{event ("mousedown")}}, {{event ("click")}} et {{event ("mouseenter") }}) :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">function logEvent(event) {
+<pre class="brush: js">function logEvent(event) {
   var msg = "Event &lt;strong&gt;" + event.type + "&lt;/strong&gt; at &lt;em&gt;" +
             event.clientX + ", " + event.clientY + "&lt;/em&gt;";
   log(msg);
-}</code></pre>
+}</pre>
 
 <p>Alors, nous utilisons ceci comme un gestionnaire d'évènements pour un certain nombre d'évènements de souris sur la boîte qui contient notre journal.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var boxElem = document.querySelector(".box");
+<pre class="brush: js">var boxElem = document.querySelector(".box");
 
 boxElem.addEventListener("mousedown", logEvent);
 boxElem.addEventListener("mouseup", logEvent);
 boxElem.addEventListener("click", logEvent);
 boxElem.addEventListener("mouseenter", logEvent);
-boxElem.addEventListener("mouseleave", logEvent);</code></pre>
+boxElem.addEventListener("mouseleave", logEvent);</pre>
 
 <h3 id="HTML">HTML</h3>
 

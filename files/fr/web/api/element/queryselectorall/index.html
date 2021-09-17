@@ -54,25 +54,25 @@ translation_of: Web/API/Element/querySelectorAll
 
 <p>Pour obtenir une {{domxref("NodeList")}} de tous les éléments {{HTMLElement("p")}} contenus dans l'élément <code>"myBox"</code> :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var matches = myBox.querySelectorAll("p");</code></pre>
+<pre class="brush: js">var matches = myBox.querySelectorAll("p");</pre>
 
 <p>Cet exemple renvoie une liste de tous les éléments {{HTMLElement("div")}} dans <code>"myBox"</code>  avec une classe  "<code>note</code>" ou  "<code>alert</code>" :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var matches = myBox.querySelectorAll("div.note, div.alert");</code></pre>
+<pre class="brush: js">var matches = myBox.querySelectorAll("div.note, div.alert");</pre>
 
 <p>Ici, nous obtenons une liste d'éléments <code>p</code> du document, dont le parent immédiat est un {{domxref("div")}}  qui a la classe <code>'highlighted'</code> et qui sont inclus dans un conteneur dont l'ID est <code>"test"</code> :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var container = document.querySelector("#test");
-var matches = container.querySelectorAll("div.highlighted &gt; p");</code></pre>
+<pre class="brush: js">var container = document.querySelector("#test");
+var matches = container.querySelectorAll("div.highlighted &gt; p");</pre>
 
 <p>Cet exemple utilise un <a href="https://developer.mozilla.org/fr/docs/Web/CSS/S%C3%A9lecteurs_d_attribut">sélecteur d'attribut</a> pour renvoyer une liste d'éléments {{domxref("iframe")}} du document lesquels contiennent un attribut nommé <code>'data-src'</code>:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var matches = document.querySelectorAll("iframe[data-src]");</code></pre>
+<pre class="brush: js">var matches = document.querySelectorAll("iframe[data-src]");</pre>
 
 <p>Ici, un sélecteur d'attribut est utilisé pour renvoyer une liste des éléments de la liste contenus dans une liste dont l'ID est <code>"userlist"</code> et qui ont un attribut <code>"data-active"</code> dont la valeur est <code>"1"</code>:</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var container = document.querySelector("#userlist");
-var matches = container.querySelectorAll("li[data-active=1]");</code></pre>
+<pre class="brush: js">var container = document.querySelector("#userlist");
+var matches = container.querySelectorAll("li[data-active=1]");</pre>
 
 <h3 id="Accès_aux_correspondances">Accès aux correspondances</h3>
 
@@ -80,11 +80,11 @@ var matches = container.querySelectorAll("li[data-active=1]");</code></pre>
 
 <p>Sinon, vous pouvez simplement utiliser la notation de tableau standard pour accéder au contenu de la liste. Vous pouvez utiliser n'importe quelle instruction de boucle commune, telle que :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var highlightedItems = userList.querySelectorAll(".highlighted");
+<pre class="brush: js">var highlightedItems = userList.querySelectorAll(".highlighted");
 
 highlightedItems.forEach(function(userItem) {
   deleteUser(userItem);
-});</code></pre>
+});</pre>
 
 <h2 id="Notes">Notes d'utilisation</h2>
 
@@ -103,17 +103,17 @@ highlightedItems.forEach(function(userItem) {
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var select = document.querySelector('.select');
+<pre class="brush: js">var select = document.querySelector('.select');
 var inner = select.querySelectorAll('.outer .inner');
-inner.length; // 1, pas 0!</code></pre>
+inner.length; // 1, pas 0!</pre>
 
 <p>Dans cet exemple, en sélectionnant <code>".outer .inner"</code> dans le contexte <code>&lt;div&gt; </code>avec la classe <code>"select"</code>, l'élément avec la classe <code>".inner"</code> est toujours trouvé, même si <code>.outer</code> n'est pas un descendant de l'élément sur lequel la recherche est effectuée <code>(".select")</code>. Par défaut, <code>querySelectorAll()</code> vérifie uniquement que le dernier élément du sélecteur se trouve dans la portée de la recherche.</p>
 
 <p>La pseudo-classe {{cssxref (": scope")}} restaure le comportement attendu, ne faisant correspondre les sélecteurs que sur les descendants de l'élément de base :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var select = document.querySelector('.select');
+<pre class="brush: js">var select = document.querySelector('.select');
 var inner = select.querySelectorAll(':scope .outer .inner');
-inner.length; // 0</code></pre>
+inner.length; // 0</pre>
 
 <h2 id="Spécifications">Spécifications</h2>
 

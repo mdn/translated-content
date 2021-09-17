@@ -99,7 +99,7 @@ translation_of: Web/API/AnalyserNode
 
 <p>L'exemple suivant montre comment créer simplement un  <code>AnalyserNode</code> avec {{domxref("AudioContext")}}, puis utiliser  {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} et {{htmlelement("canvas")}} pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a>  (et en particulier <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js lines 128–205</a>).</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
+<pre class="brush: js">var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
 var analyseur = contexteAudio.createAnalyser();
 
   ...
@@ -110,8 +110,7 @@ var tableauDonnees = new Uint8Array(tailleMemoireTampon);
 analyseur.getByteTimeDomainData(tableauDonnees);
 
 // dessine un oscilloscope de la source audio
-</code>
-<code class="language-js">var canvas = document.getElementById("oscilloscope");
+var canvas = document.getElementById("oscilloscope");
 var contexteCanvas = canvas.getContext("2d");
 
 function dessiner() {
@@ -149,7 +148,7 @@ function dessiner() {
       contexteCanvas.stroke();
     };
 
-    dessiner();</code></pre>
+    dessiner();</pre>
 
 <h2 id="Spécifications">Spécifications</h2>
 

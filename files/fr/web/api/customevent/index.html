@@ -73,12 +73,12 @@ translation_of: Web/API/CustomEvent
 
 <p>Lors de la création d'un objet CustomEvent, vous devez créer l'objet à partir de la même <a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL/window">fenêtre</a> que celle où vous déclencherez l'évenement.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">// doc est une référence au contenu du document
+<pre class="brush: js">// doc est une référence au contenu du document
 function dispatchCustomEvent(doc) {
   var eventDetail = Components.utils.cloneInto({foo: 'bar'}, doc.defaultView);
   var myEvent = doc.defaultView.CustomEvent("mytype", eventDetail);
   doc.dispatchEvent(myEvent);
-}</code></pre>
+}</pre>
 
 <p>Notez qu'exposer une fonction permettra au script de l'exécuter avec les privilèges qu'accorde Chrome ce qui peut ouvrir une faille de sécurité.</p>
 
