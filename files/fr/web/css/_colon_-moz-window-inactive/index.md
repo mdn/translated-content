@@ -1,53 +1,53 @@
 ---
 title: ':-moz-window-inactive'
-slug: 'Web/CSS/:-moz-window-inactive'
+slug: Web/CSS/:-moz-window-inactive
 tags:
   - CSS
   - Non-standard
   - Pseudo-classe
   - Reference
-translation_of: 'Web/CSS/:-moz-window-inactive'
+translation_of: Web/CSS/:-moz-window-inactive
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>La pseudo-classe <strong><code>:-moz-window-inactive</code></strong>, spécifique à Mozilla, correspond à n'importe quel élément qui se trouve sur une fenêtre inactive.</p>
+La pseudo-classe **`:-moz-window-inactive`**, spécifique à Mozilla, correspond à n'importe quel élément qui se trouve sur une fenêtre inactive.
 
-<div class="note">
-  <p><strong>Note :</strong> Avant l'existence de cette pseudo-classe, on pouvait donner des styles différents aux fenêtres avec l'attribut <code>active="true"</code> sur la fenêtre XUL de plus haut niveau. Cet attribut n'est plus utilisé.</p>
-</div>
+> **Note :** Avant l'existence de cette pseudo-classe, on pouvait donner des styles différents aux fenêtres avec l'attribut `active="true"` sur la fenêtre XUL de plus haut niveau. Cet attribut n'est plus utilisé.
 
-<p><code>:-moz-window-inactive</code> fonctionne également pour le contenu des documents HTML.</p>
+`:-moz-window-inactive` fonctionne également pour le contenu des documents HTML.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Cet exemple illustre la modification de l'apparence de l'arrière-plan d'une boîte selon que la fenêtre est active ou non.</p>
+Cet exemple illustre la modification de l'apparence de l'arrière-plan d'une boîte selon que la fenêtre est active ou non.
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">#maboite {
+```css
+#maboite {
   background: linear-gradient(to bottom, blue, cyan);
 }
 
 #maboite:-moz-window-inactive {
   background: cyan;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="maboite" style="width:200px; height:200px;"&gt;
-  &lt;p&gt;Une boîte :)&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div id="maboite" style="width:200px; height:200px;">
+  <p>Une boîte :)</p>
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples","220","220")}}</p>
+{{EmbedLiveSample("Exemples","220","220")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.</p>
+Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.-moz-window-inactive")}}</p>
+{{Compat("css.selectors.-moz-window-inactive")}}

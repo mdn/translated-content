@@ -1,100 +1,84 @@
 ---
 title: ':last-of-type'
-slug: 'Web/CSS/:last-of-type'
+slug: Web/CSS/:last-of-type
 tags:
   - CSS
   - Pseudo-classe
   - Reference
-translation_of: 'Web/CSS/:last-of-type'
+translation_of: Web/CSS/:last-of-type
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <strong><code>:last-of-type</code></strong> cible un élément qui est le dernier enfant d'un type donné dans la liste des enfants de l'élément parent.</p>
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:last-of-type`** cible un élément qui est le dernier enfant d'un type donné dans la liste des enfants de l'élément parent.
 
-<pre class="brush: css no-line-numbers">/* Cible n'importe quel paragraphe qui est     */
+```css
+/* Cible n'importe quel paragraphe qui est     */
 /* le dernier paragraphe de son élément parent */
 p:last-of-type {
   color: lime;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note :</strong> Dans la version initiale de la spécification (CSS3), l'élément ciblé devait avoir un parent, ce n'est plus nécessaire depuis (spécification pour les sélecteurs de CSS4).</p>
-</div>
+> **Note :** Dans la version initiale de la spécification (CSS3), l'élément ciblé devait avoir un parent, ce n'est plus nécessaire depuis (spécification pour les sélecteurs de CSS4).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Pour cibler le dernier élément {{HTMLElement("em")}} au sein d'un élément {{HTMLElement("p")}}, on pourra utiliser la règle qui suit (illustrée ensuite sur un fragment HTML).</p>
+Pour cibler le dernier élément {{HTMLElement("em")}} au sein d'un élément {{HTMLElement("p")}}, on pourra utiliser la règle qui suit (illustrée ensuite sur un fragment HTML).
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p em:last-of-type {
+```css
+p em:last-of-type {
   color: lime;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;
-  &lt;em&gt;Je ne suis pas vert :(&lt;/em&gt;
-  &lt;strong&gt;Je ne suis pas vert :(&lt;/strong&gt;
-  &lt;em&gt;Je suis vert :D&lt;/em&gt;
-  &lt;strong&gt;Je ne suis pas vert non plus :(&lt;/strong&gt;
-&lt;/p&gt;
+```html
+<p>
+  <em>Je ne suis pas vert :(</em>
+  <strong>Je ne suis pas vert :(</strong>
+  <em>Je suis vert :D</em>
+  <strong>Je ne suis pas vert non plus :(</strong>
+</p>
 
-&lt;p&gt;
-  &lt;em&gt;Je ne suis pas vert :(&lt;/em&gt;
-  &lt;span&gt;
-    &lt;em&gt;Je suis vert !&lt;/em&gt;
-  &lt;/span&gt;
-  &lt;strong&gt;Je ne suis pas vert :(&lt;/strong&gt;
-  &lt;em&gt;Je suis vert :D&lt;/em&gt;
-  &lt;span&gt;
-    &lt;em&gt;Je suis aussi vert !&lt;/em&gt;
-    &lt;strike&gt;Je ne suis pas vert&lt;/strike&gt;
-  &lt;/span&gt;
-  &lt;strong&gt;Je ne suis pas vert non plus :(&lt;/strong&gt;
-&lt;/p&gt;</pre>
+<p>
+  <em>Je ne suis pas vert :(</em>
+  <span>
+    <em>Je suis vert !</em>
+  </span>
+  <strong>Je ne suis pas vert :(</strong>
+  <em>Je suis vert :D</em>
+  <span>
+    <em>Je suis aussi vert !</em>
+    <strike>Je ne suis pas vert</strike>
+  </span>
+  <strong>Je ne suis pas vert non plus :(</strong>
+</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<div>{{EmbedLiveSample('Exemples','100%', '120')}}</div>
+{{EmbedLiveSample('Exemples','100%', '120')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#last-of-type-pseudo', ':last-of-type')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>L'élément ciblé ne doit pas nécessairement avoir un élément parent.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#last-of-type-pseudo', ':last-of-type')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | État                                 | Commentaires                                                        |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------- |
+| {{SpecName('CSS4 Selectors', '#last-of-type-pseudo', ':last-of-type')}} | {{Spec2('CSS4 Selectors')}} | L'élément ciblé ne doit pas nécessairement avoir un élément parent. |
+| {{SpecName('CSS3 Selectors', '#last-of-type-pseudo', ':last-of-type')}} | {{Spec2('CSS3 Selectors')}} | Définition initiale.                                                |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.last-of-type")}}</p>
+{{Compat("css.selectors.last-of-type")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref(":nth-last-of-type")}}</li>
- <li>{{cssxref(":first-of-type")}}</li>
- <li>{{cssxref(":last-child")}}</li>
-</ul>
+- {{cssxref(":nth-last-of-type")}}
+- {{cssxref(":first-of-type")}}
+- {{cssxref(":last-child")}}

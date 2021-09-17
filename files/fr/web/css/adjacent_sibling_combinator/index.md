@@ -8,76 +8,57 @@ tags:
 translation_of: Web/CSS/Adjacent_sibling_combinator
 original_slug: Web/CSS/Combinateur_de_voisin_direct
 ---
-<div>{{CSSRef("Selectors")}}</div>
+{{CSSRef("Selectors")}}
 
-<p>Cette forme de combinateur permet de sélectionner un élément uniquement si celui-ci « suit » un élément donné et que les deux éléments sont les fils d'un même élément parent.</p>
+Cette forme de combinateur permet de sélectionner un élément uniquement si celui-ci « suit » un élément donné et que les deux éléments sont les fils d'un même élément parent.
 
-<pre class="brush: css">/* Ne cible que les paragraphes situé directement après une image */
+```css
+/* Ne cible que les paragraphes situé directement après une image */
 img + p {
   font-style: bold;
-}</pre>
+}
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">premier_element + element_cible { <em>styles</em> }
-</pre>
+    premier_element + element_cible { styles }
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">li:first-of-type + li {
+```css
+li:first-of-type + li {
   color: red;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;Un&lt;/li&gt;
-  &lt;li&gt;Deux&lt;/li&gt;
-  &lt;li&gt;Trois&lt;/li&gt;
-&lt;/ul&gt;</pre>
-
-<h3 id="Résultat">Résultat</h3>
-
-<p>{{EmbedLiveSample('Exemples', 200, 100)}}</p>
-
-<h2 id="Spécifications">Spécifications</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#adjacent-sibling-combinators', 'next-sibling combinator')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Renomme ce sélecteur en « <em>next-sibling combinator</em> ».</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#adjacent-sibling-combinators', 'Adjacent sibling combinator')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'selector.html#adjacent-selectors', 'Adjacent sibling selectors')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<p>{{Compat("css.selectors.adjacent_sibling")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
+```html
 <ul>
- <li><a href="/fr/docs/Web/CSS/Sélecteurs_de_voisins_généraux">Les combinateurs d'éléments voisins</a></li>
+  <li>Un</li>
+  <li>Deux</li>
+  <li>Trois</li>
 </ul>
+```
+
+### Résultat
+
+{{EmbedLiveSample('Exemples', 200, 100)}}
+
+## Spécifications
+
+| Spécification                                                                                                                | État                                 | Commentaires                                           |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------ |
+| {{SpecName('CSS4 Selectors', '#adjacent-sibling-combinators', 'next-sibling combinator')}}     | {{Spec2('CSS4 Selectors')}} | Renomme ce sélecteur en « _next-sibling combinator_ ». |
+| {{SpecName('CSS3 Selectors', '#adjacent-sibling-combinators', 'Adjacent sibling combinator')}} | {{Spec2('CSS3 Selectors')}} |                                                        |
+| {{SpecName('CSS2.1', 'selector.html#adjacent-selectors', 'Adjacent sibling selectors')}}         | {{Spec2('CSS2.1')}}             | Définition initiale.                                   |
+
+## Compatibilité des navigateurs
+
+{{Compat("css.selectors.adjacent_sibling")}}
+
+## Voir aussi
+
+- [Les combinateurs d'éléments voisins](/fr/docs/Web/CSS/Sélecteurs_de_voisins_généraux)

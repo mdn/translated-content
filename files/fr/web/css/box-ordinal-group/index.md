@@ -8,18 +8,17 @@ tags:
   - Reference
 translation_of: Web/CSS/box-ordinal-group
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<div class="warning">
-<p><strong>Attention :</strong> Cette propriété fait partie de la première version du standard pour les boîtes flexibles (<em>flexbox</em>) et sera remplacée dans une prochaine version.</p>
-</div>
+> **Attention :** Cette propriété fait partie de la première version du standard pour les boîtes flexibles (_flexbox_) et sera remplacée dans une prochaine version.
 
-<p>La propriété <strong><code>box-ordinal-group</code></strong> permet d'affecter les éléments fils d'une boîtes flexible à un groupe numéroté. Pour plus de détails, se référer à la page <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Flexbox</a> qui décrit les différentes propriétés des boîtes flexibles.</p>
+La propriété **`box-ordinal-group`** permet d'affecter les éléments fils d'une boîtes flexible à un groupe numéroté. Pour plus de détails, se référer à la page [Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) qui décrit les différentes propriétés des boîtes flexibles.
 
-<p>Voir la page <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Flexbox</a> pour plus d'informations.</p>
+Voir la page [Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) pour plus d'informations.
 
-<pre class="brush:css">/* Un entier indiquant le groupe */
-/* Type &lt;integer&gt;                */
+```css
+/* Un entier indiquant le groupe */
+/* Type <integer>                */
 box-ordinal-group: 1;
 box-ordinal-group: 5;
 
@@ -27,35 +26,31 @@ box-ordinal-group: 5;
 box-ordinal-group: inherit;
 box-ordinal-group: initial;
 box-ordinal-group: unset;
-</pre>
+```
 
-<p>Les groupes ordinaux peuvent être utilisés avec la propriété {{cssxref("box-direction")}} afin de contrôler l'ordre dans lequel les éléments fils apparaissent dans la boîte. Lorsque <a href="/fr/docs/Web/CSS/computed_value">la valeur calculée</a> de <strong><code>box-direction</code></strong> est <code>normal</code>, une boîte affichera ses éléments en commençant par le groupe dont l'ordre est le plus faible et les disposera de gauche à droite pour les boîtes horizontales et du haut vers le bas pour les boîtes verticales. Les éléments dont l'ordre est égal seront disposés dans l'ordre dans lequel ils apparaissent. Lorsque la direction est inversée, les ordres sont gérés de la même façon, les éléments apparaîtront dans l'ordre inverse.</p>
+Les groupes ordinaux peuvent être utilisés avec la propriété {{cssxref("box-direction")}} afin de contrôler l'ordre dans lequel les éléments fils apparaissent dans la boîte. Lorsque [la valeur calculée](/fr/docs/Web/CSS/computed_value) de **`box-direction`** est `normal`, une boîte affichera ses éléments en commençant par le groupe dont l'ordre est le plus faible et les disposera de gauche à droite pour les boîtes horizontales et du haut vers le bas pour les boîtes verticales. Les éléments dont l'ordre est égal seront disposés dans l'ordre dans lequel ils apparaissent. Lorsque la direction est inversée, les ordres sont gérés de la même façon, les éléments apparaîtront dans l'ordre inverse.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Cette propriété se définit avec un entier positif.</p>
+Cette propriété se définit avec un entier positif.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<ul>
- <li><a href="https://www.w3.org/TR/css3-flexbox/">Brouillon de travail pour le module des boîtes flexibles (W3C)</a>{{Note("L'état actuel de cette spécification ne reflète pas l'implémentation de Gecko ou WebKit.")}}</li>
- <li><a href="https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">Ancienne version de la spécification.</a>{{Note("Les implémentations de WebKit et Gecko reflètent cette version de la spécification.")}}</li>
-</ul>
+- [Brouillon de travail pour le module des boîtes flexibles (W3C)](https://www.w3.org/TR/css3-flexbox/){{Note("L'état actuel de cette spécification ne reflète pas l'implémentation de Gecko ou WebKit.")}}
+- [Ancienne version de la spécification.](https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/){{Note("Les implémentations de WebKit et Gecko reflètent cette version de la spécification.")}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.box-ordinal-group")}}</p>
+{{Compat("css.properties.box-ordinal-group")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("box-flex")}},</li>
- <li>{{cssxref("box-flex-group")}},</li>
- <li>{{cssxref("box-pack")}}</li>
-</ul>
+- {{cssxref("box-flex")}},
+- {{cssxref("box-flex-group")}},
+- {{cssxref("box-pack")}}

@@ -7,15 +7,16 @@ tags:
   - Reference
 translation_of: Web/CSS/column-rule-style
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>column-rule-style</code></strong> permet de définir le style de la ligne tracée entre plusieurs colonnes lorsqu'on utilise une disposition en colonnes.</p>
+La propriété **`column-rule-style`** permet de définir le style de la ligne tracée entre plusieurs colonnes lorsqu'on utilise une disposition en colonnes.
 
-<div>{{EmbedInteractiveExample("pages/css/column-rule-style.html")}}</div>
+{{EmbedInteractiveExample("pages/css/column-rule-style.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 column-rule-style: none;
 column-rule-style: hidden;
 column-rule-style: dotted;
@@ -31,37 +32,38 @@ column-rule-style: outset;
 column-rule-style: inherit;
 column-rule-style: initial;
 column-rule-style: unset;
-</pre>
+```
 
-<p>La propriété <code>column-rule-style</code> avec une valeur unique de type <code>&lt;br-style&gt;</code>.</p>
+La propriété `column-rule-style` avec une valeur unique de type `<br-style>`.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;br-style&gt; </code></dt>
- <dd>Un mot-clé (défini comme pour {{cssxref("border-style")}}) qui permet de définir le style appliqué au trait. Les épaisseurs résultantes sont calculées avec la même méthode que pour les bordures (cf. <em><a href="https://www.w3.org/TR/CSS2/tables.html#collapsing-borders">collapsing border model</a></em>).</dd>
-</dl>
+- `<br-style> `
+  - : Un mot-clé (défini comme pour {{cssxref("border-style")}}) qui permet de définir le style appliqué au trait. Les épaisseurs résultantes sont calculées avec la même méthode que pour les bordures (cf. _[collapsing border model](https://www.w3.org/TR/CSS2/tables.html#collapsing-borders)_).
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">.exemple {
+```css
+.exemple {
   border: 10px solid #000000;
 
   columns:3;
   column-rule-width: thick;
   column-rule-color: blue;
   column-rule-style: dashed;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class=exemple&gt;
+```html
+<p class=exemple>
   « Mais alors, » pensa Alice, « ne serai-je donc
   jamais plus vieille que je ne le suis maintenant ?
   D’un côté cela aura ses avantages, ne jamais être
@@ -72,33 +74,21 @@ column-rule-style: unset;
   « Comment pourriez-vous apprendre des leçons ici ?
   Il y a à peine de la place pour vous, et il n’y en
   a pas du tout pour vos livres de leçons. »
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Multicol', '#crs', 'column-rule-style')}}</td>
-   <td>{{Spec2('CSS3 Multicol')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | État                                 | Commentaires         |
+| ---------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName('CSS3 Multicol', '#crs', 'column-rule-style')}} | {{Spec2('CSS3 Multicol')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.column-rule-style")}}</p>
+{{Compat("css.properties.column-rule-style")}}

@@ -8,19 +8,20 @@ tags:
   - Reference
 translation_of: Web/CSS/scroll-behavior
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété<strong> <code>scroll-behavior</code></strong> définit le comportement du défilement pour une boîte de défilement lorsque celui-ci provient de la navigation ou des API CSSOM.</p>
+La propriété** `scroll-behavior`** définit le comportement du défilement pour une boîte de défilement lorsque celui-ci provient de la navigation ou des API CSSOM.
 
-<p>Pour les autres défilements, appliqués par l'utilisateur, cette propriété n'a aucun impact. Lorsque cette propriété est définie sur l'élément racine, elle s'applique à la zone d'affichage (<em>viewport</em>).</p>
+Pour les autres défilements, appliqués par l'utilisateur, cette propriété n'a aucun impact. Lorsque cette propriété est définie sur l'élément racine, elle s'applique à la zone d'affichage (_viewport_).
 
-<div>{{EmbedInteractiveExample("pages/css/scroll-behavior.html")}}</div>
+{{EmbedInteractiveExample("pages/css/scroll-behavior.html")}}
 
-<p>Les agents utilisateur peuvent choisir d'ignorer cette propriété. Lorsque cette propriété est indiquée sur l'élément <code>body</code>, elle ne se propage pas à la zone d'affichage (<em>viewport</em>).</p>
+Les agents utilisateur peuvent choisir d'ignorer cette propriété. Lorsque cette propriété est indiquée sur l'élément `body`, elle ne se propage pas à la zone d'affichage (_viewport_).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 scroll-behavior: auto;
 scroll-behavior: smooth;
 
@@ -28,28 +29,27 @@ scroll-behavior: smooth;
 scroll-behavior: inherit;
 scroll-behavior: initial;
 scroll-behavior: unset;
-</pre>
+```
 
-<p>La propriété <code>scroll-behavior</code> est définie avec l'un des mots-clés suivants.</p>
+La propriété `scroll-behavior` est définie avec l'un des mots-clés suivants.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>La boîte de défilement progresse de façon instantanée.</dd>
- <dt><code>smooth</code></dt>
- <dd>Le défilement est doux et utilise une fonction de minutage définie par l'agent utilisateur pendant une période définie par l'agent utilisateur. Les agents utilisateur doivent respecter les conventions de la plate-forme s'il y en a.</dd>
-</dl>
+- `auto`
+  - : La boîte de défilement progresse de façon instantanée.
+- `smooth`
+  - : Le défilement est doux et utilise une fonction de minutage définie par l'agent utilisateur pendant une période définie par l'agent utilisateur. Les agents utilisateur doivent respecter les conventions de la plate-forme s'il y en a.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">a {
+```css
+a {
   display: inline-block;
   width: 50px;
   text-decoration: none;
@@ -78,32 +78,35 @@ scroll-page {
   height: 100%;
   font-size: 5em;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;nav&gt;
-  &lt;a href="#page-1"&gt;1&lt;/a&gt;
-  &lt;a href="#page-2"&gt;2&lt;/a&gt;
-  &lt;a href="#page-3"&gt;3&lt;/a&gt;
-&lt;/nav&gt;
-&lt;scroll-container&gt;
-  &lt;scroll-page id="page-1"&gt;1&lt;/scroll-page&gt;
-  &lt;scroll-page id="page-2"&gt;2&lt;/scroll-page&gt;
-  &lt;scroll-page id="page-3"&gt;3&lt;/scroll-page&gt;
-&lt;/scroll-container&gt;</pre>
+```html
+<nav>
+  <a href="#page-1">1</a>
+  <a href="#page-2">2</a>
+  <a href="#page-3">3</a>
+</nav>
+<scroll-container>
+  <scroll-page id="page-1">1</scroll-page>
+  <scroll-page id="page-2">2</scroll-page>
+  <scroll-page id="page-3">3</scroll-page>
+</scroll-container>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", "100%", 250)}}</p>
+{{EmbedLiveSample("Exemples", "100%", 250)}}
 
-<h2 id="Accessibilité">Accessibilité</h2>
+## Accessibilité
 
-<p><a href="https://fr.wikipedia.org/wiki/Syst%C3%A8me_vestibulaire">Les troubles du système vestibulaires</a> peuvent être causés par la maladie, l'âge ou des blessures. Ces troubles entraînent des vertiges, fatigues et nausées suite aux mouvements.</p>
+[Les troubles du système vestibulaires](https://fr.wikipedia.org/wiki/Syst%C3%A8me_vestibulaire) peuvent être causés par la maladie, l'âge ou des blessures. Ces troubles entraînent des vertiges, fatigues et nausées suite aux mouvements.
 
-<p>En utilisant la caractéristique média <code>prefers-reduced-motion</code>, on peut désactiver le défilement instantanné pour les utilisateurs qui ont paramétré leur système/navigateur afin de réduire les animations et mouvements :</p>
+En utilisant la caractéristique média `prefers-reduced-motion`, on peut désactiver le défilement instantanné pour les utilisateurs qui ont paramétré leur système/navigateur afin de réduire les animations et mouvements :
 
-<pre class="brush: css">html {
+```css
+html {
   scroll-behavior: smooth;
 }
 
@@ -111,29 +114,17 @@ scroll-page {
   html {
     scroll-behavior: auto;
   }
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM View', "#propdef-scroll-behavior", 'scroll-behavior')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | État                             | Commentaires         |
+| ------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName('CSSOM View', "#propdef-scroll-behavior", 'scroll-behavior')}} | {{Spec2('CSSOM View')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.scroll-behavior")}}</p>
+{{Compat("css.properties.scroll-behavior")}}

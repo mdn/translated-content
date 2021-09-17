@@ -7,25 +7,26 @@ tags:
   - Reference
 translation_of: Web/CSS/text-indent
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>text-indent</code></strong> définit la longueur qui doit être laissée avant le début de la première ligne d'un élément contenant du texte.</p>
+La propriété **`text-indent`** définit la longueur qui doit être laissée avant le début de la première ligne d'un élément contenant du texte.
 
-<p>L'espacement horizontal se fait en accord avec la bord gauche (ou droit pour les dispositions de droite à gauche) de l'élément contenant le texte. Par défaut, cela ne contrôle que l'indentation de la première ligne du bloc mais les mots-clés <code>hanging</code> et <code>each-line</code> peuvent être utilisés pour modifier ce comportement.</p>
+L'espacement horizontal se fait en accord avec la bord gauche (ou droit pour les dispositions de droite à gauche) de l'élément contenant le texte. Par défaut, cela ne contrôle que l'indentation de la première ligne du bloc mais les mots-clés `hanging` et `each-line` peuvent être utilisés pour modifier ce comportement.
 
-<div>{{EmbedInteractiveExample("pages/css/text-indent.html")}}</div>
+{{EmbedInteractiveExample("pages/css/text-indent.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css no-line-numbers">/* Valeurs de longueur */
-/* Type &lt;length&gt;       */
+```css
+/* Valeurs de longueur */
+/* Type <length>       */
 text-indent: 3mm;
 text-indent: 40px;
 
 /* Valeurs de pourcentages */
 /* relatives à la largeur  */
 /* du bloc englobant       */
-/* Type &lt;percentage&gt;       */
+/* Type <percentage>       */
 text-indent: 15%;
 
 /* Valeurs avec un mot-clé */
@@ -37,104 +38,84 @@ text-indent: 5em hanging each-line;
 text-indent: inherit;
 text-indent: initial;
 text-indent: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>L'indentation est définie de façon absolue avec une longueur ({{cssxref("&lt;length&gt;")}}). On peut utiliser des valeurs négatives. Voir la page sur {{cssxref("&lt;length&gt;")}} pour les différentes unités possibles.</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>L'indentation est définie en proportion de la largeur du bloc englobant (type {{cssxref("&lt;percentage&gt;")}}).</dd>
- <dt><code>each-line</code> {{experimental_inline}}</dt>
- <dd>L'indentation n'affecte que la première ligne du bloc et chaque ligne située après un saut de ligne forcé. Cela n'affecte pas les lignes situées après un retour à la ligne automatique (<em>wrap</em>).</dd>
- <dt><code>hanging</code> {{experimental_inline}}</dt>
- <dd>Inverse les lignes indentées. Toutes les lignes, sauf la première, seront indentées.</dd>
-</dl>
+- `<length>`
+  - : L'indentation est définie de façon absolue avec une longueur ({{cssxref("&lt;length&gt;")}}). On peut utiliser des valeurs négatives. Voir la page sur {{cssxref("&lt;length&gt;")}} pour les différentes unités possibles.
+- `<percentage>`
+  - : L'indentation est définie en proportion de la largeur du bloc englobant (type {{cssxref("&lt;percentage&gt;")}}).
+- `each-line` {{experimental_inline}}
+  - : L'indentation n'affecte que la première ligne du bloc et chaque ligne située après un saut de ligne forcé. Cela n'affecte pas les lignes situées après un retour à la ligne automatique (_wrap_).
+- `hanging` {{experimental_inline}}
+  - : Inverse les lignes indentées. Toutes les lignes, sauf la première, seront indentées.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Indentation_simple">Indentation simple</h3>
+### Indentation simple
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.&lt;/p&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.&lt;/p&gt;
-</pre>
+```html
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   text-indent: 5em;
   background: powderblue;
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Indentation_simple','100%','100%') }}</p>
+{{EmbedLiveSample('Indentation_simple','100%','100%') }}
 
-<h3 id="Indentation_proportionnelle">Indentation proportionnelle</h3>
+### Indentation proportionnelle
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.&lt;/p&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.&lt;/p&gt; </pre>
+```html
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   text-indent: 30%;
   background: plum;
-}</pre>
+}
+```
 
-<h4 id="Résultat_2">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('Indentation_proportionnelle','100%','100%')}}</p>
+{{EmbedLiveSample('Indentation_proportionnelle','100%','100%')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Text', '#text-indent-property', 'text-indent')}}</td>
-   <td>{{Spec2('CSS3 Text')}}</td>
-   <td>Ajout des mots-clés <code>hanging</code> et <code>each-line</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'text-indent')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td><code>text-indent</code> peut être animée.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'text.html#indentation-prop', 'text-indent')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>The behavior with <code>display: inline-block</code> and anonymous block boxes have been explicitly defined.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#text-indent', 'text-indent')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                                     | Commentaires                                                                                      |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS3 Text', '#text-indent-property', 'text-indent')}} | {{Spec2('CSS3 Text')}}             | Ajout des mots-clés `hanging` et `each-line`.                                                     |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'text-indent')}} | {{Spec2('CSS3 Transitions')}} | `text-indent` peut être animée.                                                                   |
+| {{SpecName('CSS2.1', 'text.html#indentation-prop', 'text-indent')}} | {{Spec2('CSS2.1')}}                 | The behavior with `display: inline-block` and anonymous block boxes have been explicitly defined. |
+| {{SpecName('CSS1', '#text-indent', 'text-indent')}}                     | {{Spec2('CSS1')}}                 | Définition initiale.                                                                              |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.text-indent")}}</p>
+{{Compat("css.properties.text-indent")}}

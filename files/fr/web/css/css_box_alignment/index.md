@@ -7,239 +7,211 @@ tags:
   - Guide
 translation_of: Web/CSS/CSS_Box_Alignment
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Le module de spécification <em>CSS Box Alignment</em> (alignement des boîtes en CSS) décrit les fonctionnalités relatives à l'alignement des boîtes pour les différents modes de disposition CSS : disposition en bloc, en tableau, disposition flexible et disposition en grille. L'objectif de ce module est d'obtenir des méthodes d'alignement cohérentes pour tout CSS. Dans ce guide, nous verrons les différents concepts utilisés par cette spécification.</p>
+Le module de spécification _CSS Box Alignment_ (alignement des boîtes en CSS) décrit les fonctionnalités relatives à l'alignement des boîtes pour les différents modes de disposition CSS : disposition en bloc, en tableau, disposition flexible et disposition en grille. L'objectif de ce module est d'obtenir des méthodes d'alignement cohérentes pour tout CSS. Dans ce guide, nous verrons les différents concepts utilisés par cette spécification.
 
-<div class="note">
-<p><strong>Note :</strong> La documentation relative à chaque méthode de disposition explicitera comment le module d'alignement est appliqué pour cette méthode.</p>
-</div>
+> **Note :** La documentation relative à chaque méthode de disposition explicitera comment le module d'alignement est appliqué pour cette méthode.
 
-<h2 id="Anciennes_méthodes_d'alignement">Anciennes méthodes d'alignement</h2>
+## Anciennes méthodes d'alignement
 
-<p>Par le passé, CSS disposait de peu d'outils pour l'alignement. Le texte pouvait être aligné grâce à {{cssxref("text-align")}}, les blocs pouvaient être centrés avec des marges ({{cssxref("margin")}}) automatique et les tableaux ou éléments en affichage <em>inline-block</em> pouvaient tirer parti de {{cssxref("vertical-align")}}. Désormais, l'alignement du texte est couvert par les modules <a href="https://www.w3.org/TR/css-inline-3/">Inline Layout</a> et <a href="https://www.w3.org/TR/css-text-3/">CSS Text</a> et, pour la première fois, avec le module <em>Box Alignment</em>, on dispose d'outils complets pour l'alignement vertical et horizontal.</p>
+Par le passé, CSS disposait de peu d'outils pour l'alignement. Le texte pouvait être aligné grâce à {{cssxref("text-align")}}, les blocs pouvaient être centrés avec des marges ({{cssxref("margin")}}) automatique et les tableaux ou éléments en affichage _inline-block_ pouvaient tirer parti de {{cssxref("vertical-align")}}. Désormais, l'alignement du texte est couvert par les modules [Inline Layout](https://www.w3.org/TR/css-inline-3/) et [CSS Text](https://www.w3.org/TR/css-text-3/) et, pour la première fois, avec le module _Box Alignment_, on dispose d'outils complets pour l'alignement vertical et horizontal.
 
-<p>Si vous connaissez déjà <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout">les boîtes flexibles (<em>flexbox</em>)</a>, vous reconnaitrez certaines propriétés faisant partie de la spécification de niveau 1 pour Flexbox. Toutefois, la spécification indique que la spécification <em>Box Alignment</em> est prioritaire car elle peut décrire certaines fonctionnalités supplémentaires.</p>
+Si vous connaissez déjà [les boîtes flexibles (_flexbox_)](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout), vous reconnaitrez certaines propriétés faisant partie de la spécification de niveau 1 pour Flexbox. Toutefois, la spécification indique que la spécification _Box Alignment_ est prioritaire car elle peut décrire certaines fonctionnalités supplémentaires.
 
-<h2 id="Exemples_simples">Exemples simples</h2>
+## Exemples simples
 
-<p>Dans les exemples suivants, nous allons voir comment certaines des propriétés d'alignement peuvent être appliquées sur des dispositions <a href="/fr/docs/Web/CSS/CSS_Grid_Layout">en grille</a> ou utilisant <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout">les boîtes flexibles</a>.</p>
+Dans les exemples suivants, nous allons voir comment certaines des propriétés d'alignement peuvent être appliquées sur des dispositions [en grille](/fr/docs/Web/CSS/CSS_Grid_Layout) ou utilisant [les boîtes flexibles](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout).
 
-<h3 id="Alignement_pour_une_disposition_en_grille">Alignement pour une disposition en grille</h3>
+### Alignement pour une disposition en grille
 
-<p>Dans cet exemple avec une grille, on dispose d'un espace restant dans le conteneur après avoir placé les pistes de largeur fixe le long de l'axe en ligne (l'axe principal). L'espace est réparti grâce à la propriété {{cssxref("justify-content")}}. Sur l'axe de bloc (l'axe secondaire), l'alignement des éléments sur la grille est dicté par {{cssxref("align-items")}}. Le premier objet surcharge la règle fournie par <code>align-items</code> en utilisant {{cssxref("align-self")}} avec la valeur <code>center</code>.</p>
+Dans cet exemple avec une grille, on dispose d'un espace restant dans le conteneur après avoir placé les pistes de largeur fixe le long de l'axe en ligne (l'axe principal). L'espace est réparti grâce à la propriété {{cssxref("justify-content")}}. Sur l'axe de bloc (l'axe secondaire), l'alignement des éléments sur la grille est dicté par {{cssxref("align-items")}}. Le premier objet surcharge la règle fournie par `align-items` en utilisant {{cssxref("align-self")}} avec la valeur `center`.
 
-<p>{{EmbedGHLiveSample("css-examples/box-alignment/overview/grid-align-items.html", '100%', 500)}}</p>
+{{EmbedGHLiveSample("css-examples/box-alignment/overview/grid-align-items.html", '100%', 500)}}
 
-<h3 id="Alignement_pour_une_disposition_flexible_(flexbox)">Alignement pour une disposition flexible (<em>flexbox</em>)</h3>
+### Alignement pour une disposition flexible (_flexbox_)
 
-<p>Dans cet exemple, trois objets flexibles sont alignés le long de l'axe principal avec <code>justify-content</code> et selon l'axe secondaire avec <code>align-items</code>. Le premier objet surcharge la règle indiquée avec <code>align-items</code> grâce à la propriété <code>align-self</code> qui vaut ici <code>center</code>.</p>
+Dans cet exemple, trois objets flexibles sont alignés le long de l'axe principal avec `justify-content` et selon l'axe secondaire avec `align-items`. Le premier objet surcharge la règle indiquée avec `align-items` grâce à la propriété `align-self` qui vaut ici `center`.
 
-<p>{{EmbedGHLiveSample("css-examples/box-alignment/overview/flex-align-items.html", '100%', 500)}}</p>
+{{EmbedGHLiveSample("css-examples/box-alignment/overview/flex-align-items.html", '100%', 500)}}
 
-<h2 id="Concepts_majeurs_et_terminologie">Concepts majeurs et terminologie</h2>
+## Concepts majeurs et terminologie
 
-<p>Ce module de spécification définit des termes relatifs à l'alignement afin de pouvoir se référer à ces concepts sans qu'ils soient particulièrement liés à l'implémentation particulière d'un mode de disposition. Ces concepts sont communs à l'ensemble des méthodes de disposition.</p>
+Ce module de spécification définit des termes relatifs à l'alignement afin de pouvoir se référer à ces concepts sans qu'ils soient particulièrement liés à l'implémentation particulière d'un mode de disposition. Ces concepts sont communs à l'ensemble des méthodes de disposition.
 
-<h3 id="Liens_avec_les_modes_d'écriture">Liens avec les modes d'écriture</h3>
+### Liens avec les modes d'écriture
 
-<p>L'alignement est lié aux modes d'écriture et, lorsqu'on aligne un élément, on ne l'aligne pas selon des axes « physiques » (haut, droit, bas, gauche) mais selon le début ou la fin des dimensions utilisées par ce mode d'écriture. Cela permet de s'assurer que l'alignement fonctionne de la même façon, quel que soit le mode d'écriture utilisé par le document.</p>
+L'alignement est lié aux modes d'écriture et, lorsqu'on aligne un élément, on ne l'aligne pas selon des axes « physiques » (haut, droit, bas, gauche) mais selon le début ou la fin des dimensions utilisées par ce mode d'écriture. Cela permet de s'assurer que l'alignement fonctionne de la même façon, quel que soit le mode d'écriture utilisé par le document.
 
-<h3 id="Deux_dimensions_pour_l'alignement">Deux dimensions pour l'alignement</h3>
+### Deux dimensions pour l'alignement
 
-<p>Lorsqu'on utilise les propriétés d'alignement, on aligne le contenu selon deux axes : l'axe en ligne (<em>inline axis</em>) et l'axe de bloc (<em>block axis</em>). L'axe en ligne correspond à l'axe selon lequel les mots sont écrits pour ce mode d'écriture. En français, par exemple, l'axe en ligne est un axe horizontal dirigé de la gauche vers la droite. L'axe de bloc est orthogonal à l'axe en ligne et suit la direction selon laquelle les blocs de texte sont disposés les uns à la suite des autres.</p>
+Lorsqu'on utilise les propriétés d'alignement, on aligne le contenu selon deux axes : l'axe en ligne (_inline axis_) et l'axe de bloc (_block axis_). L'axe en ligne correspond à l'axe selon lequel les mots sont écrits pour ce mode d'écriture. En français, par exemple, l'axe en ligne est un axe horizontal dirigé de la gauche vers la droite. L'axe de bloc est orthogonal à l'axe en ligne et suit la direction selon laquelle les blocs de texte sont disposés les uns à la suite des autres.
 
-<p><img alt="" src="two-axes.png"></p>
+![](two-axes.png)
 
-<p>Lorsqu'on aligne des objets le long de l'axe en ligne, on utilisera les propriétés qui commencent par <code>justify-</code>:</p>
+Lorsqu'on aligne des objets le long de l'axe en ligne, on utilisera les propriétés qui commencent par `justify-`:
 
-<ul>
- <li>{{cssxref("justify-items")}}</li>
- <li>{{cssxref("justify-self")}}</li>
- <li>{{cssxref("justify-content")}}</li>
-</ul>
+- {{cssxref("justify-items")}}
+- {{cssxref("justify-self")}}
+- {{cssxref("justify-content")}}
 
-<p>Lorsqu'on aligne des objets le long de l'axe de bloc, on utilisera les propriétés qui commencent par <code>align-</code>:</p>
+Lorsqu'on aligne des objets le long de l'axe de bloc, on utilisera les propriétés qui commencent par `align-`:
 
-<ul>
- <li>{{cssxref("align-items")}}</li>
- <li>{{cssxref("align-self")}}</li>
- <li>{{cssxref("align-content")}}</li>
-</ul>
+- {{cssxref("align-items")}}
+- {{cssxref("align-self")}}
+- {{cssxref("align-content")}}
 
-<p>Flexbox ajoute un niveau de complexité car si {{cssxref("flex-direction")}} vaut <code>row</code>, ces règles sont vraies mais si <code>flex-direction</code> vaut <code>column</code>, elles sont inversées. Toutefois, lorsqu'on travaille avec les boîtes flexibles, il est préférable de penser en termes d'axe principal et d'axe secondaire plutôt qu'en termes d'axe en ligne et d'axe de bloc. Les propriétés <code>justify-</code> permettent toujours d'aligner selon l'axe principal et les propriétés <code>align-</code> d'aligner selon l'axe secondaire.</p>
+Flexbox ajoute un niveau de complexité car si {{cssxref("flex-direction")}} vaut `row`, ces règles sont vraies mais si `flex-direction` vaut `column`, elles sont inversées. Toutefois, lorsqu'on travaille avec les boîtes flexibles, il est préférable de penser en termes d'axe principal et d'axe secondaire plutôt qu'en termes d'axe en ligne et d'axe de bloc. Les propriétés `justify-` permettent toujours d'aligner selon l'axe principal et les propriétés `align-` d'aligner selon l'axe secondaire.
 
-<h3 id="Le_sujet_de_l'alignement_(alignment_subject)">Le sujet de l'alignement (<em>alignment subject</em>)</h3>
+### Le sujet de l'alignement (_alignment subject_)
 
-<p>Le <strong>sujet de l'alignement</strong> est l'objet qu'on aligne. Pour <code>justify-self</code> ou <code>align-self</code>, ou lorsqu'on paramètre ces valeurs pour un group avec <code>justify-items</code> ou <code>align-items</code>, cela correspondra à la boîte de marge de l'élément sur lequel la propriété est appliqué. Les propriétés <code>justify-content</code> et <code>align-content</code> varient selon la méthode de disposition utilisée.</p>
+Le **sujet de l'alignement** est l'objet qu'on aligne. Pour `justify-self` ou `align-self`, ou lorsqu'on paramètre ces valeurs pour un group avec `justify-items` ou `align-items`, cela correspondra à la boîte de marge de l'élément sur lequel la propriété est appliqué. Les propriétés `justify-content` et `align-content` varient selon la méthode de disposition utilisée.
 
-<h3 id="Le_conteneur_d'alignement_(alignment_container)">Le conteneur d'alignement (<em>alignment container</em>)</h3>
+### Le conteneur d'alignement (_alignment container_)
 
-<p>Le <strong>conteneur d'alignement</strong> est la boîte au sein de laquelle le sujet est aligné. Il s'agit généralement du bloc englobant du sujet de l'alignement. Un conteneur d'alignement peut contenir un ou plusieurs sujets.</p>
+Le **conteneur d'alignement** est la boîte au sein de laquelle le sujet est aligné. Il s'agit généralement du bloc englobant du sujet de l'alignement. Un conteneur d'alignement peut contenir un ou plusieurs sujets.
 
-<p>Dans l'image qui suit, on voit un conteneur d'alignement qui contient deux sujets.</p>
+Dans l'image qui suit, on voit un conteneur d'alignement qui contient deux sujets.
 
-<p><img alt="" src="align-container-subjects.png"></p>
+![](align-container-subjects.png)
 
-<h3 id="L'alignement_de_recours_(fallback)">L'alignement de recours (<em>fallback</em>)</h3>
+### L'alignement de recours (_fallback_)
 
-<p>Si l'alignement défini ne peut pas être respecté, on utilisera un alignement de recours (<em>fallback alignment</em>) qui déterminera comment gérer l'espace disponible. L'alignement de recours est défini spécifiquement pour chaque méthode de disposition.</p>
+Si l'alignement défini ne peut pas être respecté, on utilisera un alignement de recours (_fallback alignment_) qui déterminera comment gérer l'espace disponible. L'alignement de recours est défini spécifiquement pour chaque méthode de disposition.
 
-<h2 id="Types_d'alignement">Types d'alignement</h2>
+## Types d'alignement
 
-<p>Il existe trois types d'alignement définis par la spécification et qui fonctionnent avec des mots-clés.</p>
+Il existe trois types d'alignement définis par la spécification et qui fonctionnent avec des mots-clés.
 
-<ul>
- <li><strong>Alignement en position </strong>: la position du sujet est définie relativement à celle du conteneur.</li>
- <li><strong>Alignement selon la ligne de base </strong>: ces mots-clés définissent l'alignement comme une relation entre les lignes de base des sujets au sein d'un contexte d'alignement.</li>
- <li><strong>Alignement distribué </strong>: ces mots-clés définissent l'alignement comme une distribution de l'espace entre les sujets.</li>
-</ul>
+- **Alignement en position** : la position du sujet est définie relativement à celle du conteneur.
+- **Alignement selon la ligne de base** : ces mots-clés définissent l'alignement comme une relation entre les lignes de base des sujets au sein d'un contexte d'alignement.
+- **Alignement distribué** : ces mots-clés définissent l'alignement comme une distribution de l'espace entre les sujets.
 
-<h3 id="Alignement_en_position_avec_des_mots-clés">Alignement en position avec des mots-clés</h3>
+### Alignement en position avec des mots-clés
 
-<p>Les valeurs suivantes permettent de réaliser un alignement en position et peuvent être utilisées comme valeurs pour <code>justify-content</code>, <code>align-content</code> ainsi que pour <code>justify-self</code> et <code>align-self</code>.</p>
+Les valeurs suivantes permettent de réaliser un alignement en position et peuvent être utilisées comme valeurs pour `justify-content`, `align-content` ainsi que pour `justify-self` et `align-self`.
 
-<ul>
- <li><code>center</code></li>
- <li><code>start</code></li>
- <li><code>end</code></li>
- <li><code>self-start</code></li>
- <li><code>self-end</code></li>
- <li><code>flex-start</code> (uniquement pour les boîtes flexibles)</li>
- <li><code>flex-end</code> (uniquement pour les boîtes flexibles)</li>
- <li><code>left</code></li>
- <li><code>right</code></li>
-</ul>
+- `center`
+- `start`
+- `end`
+- `self-start`
+- `self-end`
+- `flex-start` (uniquement pour les boîtes flexibles)
+- `flex-end` (uniquement pour les boîtes flexibles)
+- `left`
+- `right`
 
-<p>En dehors des valeurs <em>physiques</em> <code>left</code> et <code>right</code> qui sont relatives à la disposition physique de l'écran, les autres valeurs sont des valeurs <em>logiques</em> qui font référence au mode d'écriture du contenu.</p>
+En dehors des valeurs _physiques_ `left` et `right` qui sont relatives à la disposition physique de l'écran, les autres valeurs sont des valeurs _logiques_ qui font référence au mode d'écriture du contenu.
 
-<p>Si on prendre l'exemple d'une disposition en grille : en français, utiliser <code>justify-content</code> avec <code>start</code> déplacera les éléments sur l'axe en ligne au début, ce qui correspondra, dans ce cas, à la gauche. Si on utilise cette même règle avec un document écrit en arabe, qui s'écrit de droite à gauche, la valeur <code>start</code> regroupera les éléments sur le côté droit de la page.</p>
+Si on prendre l'exemple d'une disposition en grille : en français, utiliser `justify-content` avec `start` déplacera les éléments sur l'axe en ligne au début, ce qui correspondra, dans ce cas, à la gauche. Si on utilise cette même règle avec un document écrit en arabe, qui s'écrit de droite à gauche, la valeur `start` regroupera les éléments sur le côté droit de la page.
 
-<p>On voit ici que ces deux exemples utilisent <code>justify-content: start</code> mais que l'emplacement des sujets varie selon le mode d'écriture.</p>
+On voit ici que ces deux exemples utilisent `justify-content: start` mais que l'emplacement des sujets varie selon le mode d'écriture.
 
-<p><img alt="" src="writing-mode-start.png"></p>
+![](writing-mode-start.png)
 
-<h3 id="Alignement_selon_la_ligne_de_base">Alignement selon la ligne de base</h3>
+### Alignement selon la ligne de base
 
-<p>Les mots-clés pour l'alignement sur les lignes de bases permettent d'aligner les lignes de bases des boîtes parmi un groupe de sujets. Ces valeurs peuvent être utilisées avec <code>justify-content</code>, <code>align-content</code> ou avec <code>justify-self</code> et <code>align-self</code>.</p>
+Les mots-clés pour l'alignement sur les lignes de bases permettent d'aligner les lignes de bases des boîtes parmi un groupe de sujets. Ces valeurs peuvent être utilisées avec `justify-content`, `align-content` ou avec `justify-self` et `align-self`.
 
-<ul>
- <li><code>baseline</code></li>
- <li><code>first baseline</code></li>
- <li><code>last baseline</code></li>
-</ul>
+- `baseline`
+- `first baseline`
+- `last baseline`
 
-<p>L'alignement du contenu selon la ligne de base (c'est-à-dire avec <code>justify-content</code> ou <code>align-content</code>) fonctionne pour les méthodes de disposition qui organisent les objets en lignes. Les sujets sont alignés sur une ligne de base commune en ajoutant du remplissage (<em>padding</em>) à l'intérieur de chaque boîte si nécessaire.</p>
+L'alignement du contenu selon la ligne de base (c'est-à-dire avec `justify-content` ou `align-content`) fonctionne pour les méthodes de disposition qui organisent les objets en lignes. Les sujets sont alignés sur une ligne de base commune en ajoutant du remplissage (_padding_) à l'intérieur de chaque boîte si nécessaire.
 
-<p>L'alignement des éléments (<em>self alignment</em>) (c'est-à-dire avec <code>justify-self</code> ou <code>align-self</code> pour des sujets distincts ou avec <code>justify-items</code> et <code>align-items</code> pour des groupes) décale les boîtes afin de les aligner sur une ligne de base en ajoutant une marge à l'extérieur des boîtes.</p>
+L'alignement des éléments (_self alignment_) (c'est-à-dire avec `justify-self` ou `align-self` pour des sujets distincts ou avec `justify-items` et `align-items` pour des groupes) décale les boîtes afin de les aligner sur une ligne de base en ajoutant une marge à l'extérieur des boîtes.
 
-<h3 id="Alignement_distribué">Alignement distribué</h3>
+### Alignement distribué
 
-<p>Les mots-clés permettant de décrire un <strong>alignement distribué</strong> sont utilisés avec les propriétés <code>align-content</code> et <code>justify-content</code>. Ces mots-clés définissent ce qui se produit lorsqu'il reste de l'espace après que les sujets aient été affichés. Les valeurs correspondantes sont :</p>
+Les mots-clés permettant de décrire un **alignement distribué** sont utilisés avec les propriétés `align-content` et `justify-content`. Ces mots-clés définissent ce qui se produit lorsqu'il reste de l'espace après que les sujets aient été affichés. Les valeurs correspondantes sont :
 
-<ul>
- <li><code>stretch</code></li>
- <li><code>space-between</code></li>
- <li><code>space-around</code></li>
- <li><code>space-evenly</code></li>
-</ul>
+- `stretch`
+- `space-between`
+- `space-around`
+- `space-evenly`
 
-<p>Ainsi, si des objets flexibles sont alignés avec <code>flex-start</code> et qu'on travaille dans un mode d'écriture horizontal de gauche à droite et de haut en bas (comme le français) avec <code>flex-direction</code> qui vaut <code>row</code>, les sujets commenceront à gauche et l'espace disponible sera affiché à droite après que les sujets aient été placés.</p>
+Ainsi, si des objets flexibles sont alignés avec `flex-start` et qu'on travaille dans un mode d'écriture horizontal de gauche à droite et de haut en bas (comme le français) avec `flex-direction` qui vaut `row`, les sujets commenceront à gauche et l'espace disponible sera affiché à droite après que les sujets aient été placés.
 
-<p><img alt="" src="justify-content-start.png"></p>
+![](justify-content-start.png)
 
-<p>Si on utilise <code>justify-content: space-between</code> sur le conteneur flexible, l'espace disponible sera alors réparti entre les objets.</p>
+Si on utilise `justify-content: space-between` sur le conteneur flexible, l'espace disponible sera alors réparti entre les objets.
 
-<p><img alt="" src="justify-content-space-between.png"></p>
+![](justify-content-space-between.png)
 
-<p>Pour que ces mots-clés aient un effet, il est nécessaire qu'il reste de l'espace supplémentaire. S'il n'y a plus d'espace, aucune distribution ne pourra être effectuée.</p>
+Pour que ces mots-clés aient un effet, il est nécessaire qu'il reste de l'espace supplémentaire. S'il n'y a plus d'espace, aucune distribution ne pourra être effectuée.
 
-<h2 id="Gestion_du_dépassement">Gestion du dépassement</h2>
+## Gestion du dépassement
 
-<p>Les mots-clés <code>safe</code> et <code>unsafe</code> permettent de définir le comportement obtenu lorsque le sujet d'alignement est plus grand que le conteneur. Le mot-clé <code>safe</code> alignera selon <code>start</code> si l'alignement indiqué provoque un dépassement, afin de réduire la « perte de données » visible en dehors du conteneur et sur laquelle l'utilisateur ne pourra pas avoir accès.</p>
+Les mots-clés `safe` et `unsafe` permettent de définir le comportement obtenu lorsque le sujet d'alignement est plus grand que le conteneur. Le mot-clé `safe` alignera selon `start` si l'alignement indiqué provoque un dépassement, afin de réduire la « perte de données » visible en dehors du conteneur et sur laquelle l'utilisateur ne pourra pas avoir accès.
 
-<p>La valeur <code>unsafe</code> permet de respecter l'alignement indiqué, même si celui-ci provoque un dépassement entraînant une telle perte de données.</p>
+La valeur `unsafe` permet de respecter l'alignement indiqué, même si celui-ci provoque un dépassement entraînant une telle perte de données.
 
-<h2 id="Espaces_entre_les_boîtes">Espaces entre les boîtes</h2>
+## Espaces entre les boîtes
 
-<p>La spécification pour l'alignement des boîtes inclut également les propriétés <code>gap</code>, <code>row-gap</code> et <code>column-gap</code>. Ces propriétés permettent d'obtenir un espacement cohérents entre les objets d'une ligne ou d'une colonne pour tout mode de disposition organisant les objets de cette façon.</p>
+La spécification pour l'alignement des boîtes inclut également les propriétés `gap`, `row-gap` et `column-gap`. Ces propriétés permettent d'obtenir un espacement cohérents entre les objets d'une ligne ou d'une colonne pour tout mode de disposition organisant les objets de cette façon.
 
-<p>La propriété <code>gap</code> est une propriété raccourcie pour <code>row-gap</code> et <code>column-gap</code> et qui permet de définir ces deux propriétés en une seule règle.</p>
+La propriété `gap` est une propriété raccourcie pour `row-gap` et `column-gap` et qui permet de définir ces deux propriétés en une seule règle.
 
-<ul>
- <li>{{cssxref("row-gap")}}</li>
- <li>{{cssxref("column-gap")}}</li>
- <li>{{cssxref("gap")}}</li>
-</ul>
+- {{cssxref("row-gap")}}
+- {{cssxref("column-gap")}}
+- {{cssxref("gap")}}
 
-<p>Dans l'exemple suivant, on a une disposition en grille et on utilise la propriété raccourcie <code>gap</code> afin de définir un espace de <code>10px</code> entre chaque piste de ligne et un espace de <code>2em</code> entre chaque piste de colonne.</p>
+Dans l'exemple suivant, on a une disposition en grille et on utilise la propriété raccourcie `gap` afin de définir un espace de `10px` entre chaque piste de ligne et un espace de `2em` entre chaque piste de colonne.
 
-<p>{{EmbedGHLiveSample("css-examples/box-alignment/overview/grid-gap.html", '100%', 500)}}</p>
+{{EmbedGHLiveSample("css-examples/box-alignment/overview/grid-gap.html", '100%', 500)}}
 
-<p>Dans cet exemple, on utilise la propriété {{cssxref("gap")}} en plus de la propriété {{cssxref("gap")}}. Les propriétés d'espacement, initialement définies pour la disposition en grille, étaient préfixées par <code>grid-</code> et certains navigateurs ne prennent encore en charge que ces versions préfixées :</p>
+Dans cet exemple, on utilise la propriété {{cssxref("gap")}} en plus de la propriété {{cssxref("gap")}}. Les propriétés d'espacement, initialement définies pour la disposition en grille, étaient préfixées par `grid-` et certains navigateurs ne prennent encore en charge que ces versions préfixées :
 
-<ul>
- <li>{{cssxref("row-gap")}}</li>
- <li>{{cssxref("grid-column-gap")}}</li>
- <li>{{cssxref("gap")}}</li>
-</ul>
+- {{cssxref("row-gap")}}
+- {{cssxref("grid-column-gap")}}
+- {{cssxref("gap")}}
 
-<p>Ces versions préfixées seront maintenues comme des alias des propriétés non-préfixées. Toutefois, il est toujours possible de les dédoubler comme on le fait avec les propriétés préfixées des différents éditeurs : déclarer la propriété <code>grid-gap</code> puis <code>gap</code> avec la même valeur.</p>
+Ces versions préfixées seront maintenues comme des alias des propriétés non-préfixées. Toutefois, il est toujours possible de les dédoubler comme on le fait avec les propriétés préfixées des différents éditeurs : déclarer la propriété `grid-gap` puis `gap` avec la même valeur.
 
-<p>Attention, d'autres éléments peuvent rentrer en jeu et ajouter de l'espace (les mots-clés de distribution ou les marges sur les éléments par exemple).</p>
+Attention, d'autres éléments peuvent rentrer en jeu et ajouter de l'espace (les mots-clés de distribution ou les marges sur les éléments par exemple).
 
-<h2 id="Pages_associées_à_chaque_propriété_d'alignement">Pages associées à chaque propriété d'alignement</h2>
+## Pages associées à chaque propriété d'alignement
 
-<p>Les propriétés d'alignement des boîtes CSS sont implémentées différemment selon le mode de disposition utilisé. Vous pouvez vous référer aux pages suivantes afin de connaître les détails de ces différences :</p>
+Les propriétés d'alignement des boîtes CSS sont implémentées différemment selon le mode de disposition utilisé. Vous pouvez vous référer aux pages suivantes afin de connaître les détails de ces différences :
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox">L'alignement des boîtes avec Flexbox</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout">L'alignement des boîtes avec les grilles CSS</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Multi-column_Layout">L'alignement des boîtes avec une disposition en colonne</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables">L'alignement des boîtes pour les dispositions en bloc, les dispositions absolues et en tableau</a></li>
-</ul>
+- [L'alignement des boîtes avec Flexbox](/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Flexbox)
+- [L'alignement des boîtes avec les grilles CSS](/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Grid_Layout)
+- [L'alignement des boîtes avec une disposition en colonne](/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_in_Multi-column_Layout)
+- [L'alignement des boîtes pour les dispositions en bloc, les dispositions absolues et en tableau](/fr/docs/Web/CSS/CSS_Box_Alignment/Box_Alignment_In_Block_Abspos_Tables)
 
-<h2 id="Référence">Référence</h2>
+## Référence
 
-<h3 id="Propriétés_CSS">Propriétés CSS</h3>
+### Propriétés CSS
 
-<ul>
- <li>{{cssxref("justify-content")}}</li>
- <li>{{cssxref("align-content")}}</li>
- <li>{{cssxref("place-content")}}</li>
- <li>{{cssxref("justify-items")}}</li>
- <li>{{cssxref("align-items")}}</li>
- <li>{{cssxref("place-items")}}</li>
- <li>{{cssxref("justify-self")}}</li>
- <li>{{cssxref("align-self")}}</li>
- <li>{{cssxref("place-self")}}</li>
- <li>{{cssxref("row-gap")}}</li>
- <li>{{cssxref("column-gap")}}</li>
- <li>{{cssxref("gap")}}</li>
-</ul>
+- {{cssxref("justify-content")}}
+- {{cssxref("align-content")}}
+- {{cssxref("place-content")}}
+- {{cssxref("justify-items")}}
+- {{cssxref("align-items")}}
+- {{cssxref("place-items")}}
+- {{cssxref("justify-self")}}
+- {{cssxref("align-self")}}
+- {{cssxref("place-self")}}
+- {{cssxref("row-gap")}}
+- {{cssxref("column-gap")}}
+- {{cssxref("gap")}}
 
-<h3 id="Termes_du_glossaire">Termes du glossaire</h3>
+### Termes du glossaire
 
-<ul>
- <li><a href="/fr/docs/Glossary/Cross_Axis">Axe secondaire</a></li>
- <li><a href="/fr/docs/Glossary/Main_Axis">Axe principal</a></li>
- <li><a href="/fr/docs/Glossary/Alignment_Container">Conteneur d'alignement</a></li>
- <li><a href="/fr/docs/Glossary/Alignment_Subject">Sujet d'alignement</a></li>
- <li><a href="/fr/docs/Glossary/Fallback_Alignment">Alignement de recours</a></li>
-</ul>
+- [Axe secondaire](/fr/docs/Glossary/Cross_Axis)
+- [Axe principal](/fr/docs/Glossary/Main_Axis)
+- [Conteneur d'alignement](/fr/docs/Glossary/Alignment_Container)
+- [Sujet d'alignement](/fr/docs/Glossary/Alignment_Subject)
+- [Alignement de recours](/fr/docs/Glossary/Fallback_Alignment)
 
-<h2 id="Guides">Guides</h2>
+## Guides
 
-<ul>
- <li>Guide CSS sur Flexbox : <em><a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Les concepts de base de Flexbox</a></em></li>
- <li>Guide CSS sur Flexbox : <em><a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligner les éléments d'un conteneur flexible</a></em></li>
- <li>Guide CSS sur les grilles : <em><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Aligner les boîtes dans une disposition en grille</a></em></li>
-</ul>
+- Guide CSS sur Flexbox : _[Les concepts de base de Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- Guide CSS sur Flexbox : _[Aligner les éléments d'un conteneur flexible](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container)_
+- Guide CSS sur les grilles : _[Aligner les boîtes dans une disposition en grille](/fr/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)_
 
-<h2 id="Ressources_externes">Ressources externes</h2>
+## Ressources externes
 
-<ul>
- <li><a href="https://rachelandrew.co.uk/css/cheatsheets/box-alignment">Anti-sèche pour l'alignement des boîtes (en anglais)</a></li>
- <li><a href="https://www.smashingmagazine.com/2016/11/css-grids-flexbox-box-alignment-new-layout-standard/">Alignement pour les grilles, les boîtes flexibles et les boîtes (en anglais)</a></li>
- <li><a href="https://blogs.igalia.com/jfernandez/2017/05/03/can-i-use-css-box-alignment/">Quelques pensées sur les implémentations partielles de <em>Box Alignment</em> (en anglais)</a></li>
-</ul>
+- [Anti-sèche pour l'alignement des boîtes (en anglais)](https://rachelandrew.co.uk/css/cheatsheets/box-alignment)
+- [Alignement pour les grilles, les boîtes flexibles et les boîtes (en anglais)](https://www.smashingmagazine.com/2016/11/css-grids-flexbox-box-alignment-new-layout-standard/)
+- [Quelques pensées sur les implémentations partielles de _Box Alignment_ (en anglais)](https://blogs.igalia.com/jfernandez/2017/05/03/can-i-use-css-box-alignment/)

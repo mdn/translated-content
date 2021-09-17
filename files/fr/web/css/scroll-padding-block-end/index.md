@@ -8,21 +8,22 @@ tags:
   - Reference
 translation_of: Web/CSS/scroll-padding-block-end
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <code><strong>scroll-padding-block-end</strong></code> est une propriété qui permet de définir le remplissage, à la fin de l'axe de bloc, entre l'élément et la zone de défilement.</p>
+La propriété **`scroll-padding-block-end`** est une propriété qui permet de définir le remplissage, à la fin de l'axe de bloc, entre l'élément et la zone de défilement.
 
-<p>Les propriétés pour le remplissage de la zone de défilement permettent de définir des décalages par rapport à la zone de défilement de l'élément (<em>scrollport</em>). On peut ainsi éviter à un élément d'être affiché là où d'autres barres sont présentes ou encore donner plus d'espace entre un élément et les barres de défilement pour y naviguer.</p>
+Les propriétés pour le remplissage de la zone de défilement permettent de définir des décalages par rapport à la zone de défilement de l'élément (_scrollport_). On peut ainsi éviter à un élément d'être affiché là où d'autres barres sont présentes ou encore donner plus d'espace entre un élément et les barres de défilement pour y naviguer.
 
-<div>{{EmbedInteractiveExample("pages/css/scroll-padding-block-end.html")}}</div>
+{{EmbedInteractiveExample("pages/css/scroll-padding-block-end.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 scroll-padding-block-end: auto;
 
 /* Valeurs de longueur */
-/* Type &lt;length&gt; */
+/* Type <length> */
 scroll-padding-block-end: 10px;
 scroll-padding-block-end: 1em;
 scroll-padding-block-end: 10%;
@@ -31,42 +32,27 @@ scroll-padding-block-end: 10%;
 scroll-padding-block-end: inherit;
 scroll-padding-block-end: initial;
 scroll-padding-block-end: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;length-percentage&gt;</code></dt>
- <dd>Un décalage intérieur entre la boîte de défilement et le bord correspondant de l'élément. C'est une longueur ou un pourcentage valide.</dd>
- <dt><code>auto</code></dt>
- <dd>Le décalage est déterminé par l'agent utilisateur. Cette valeur correspond généralement à <code>0px</code> mais le navigateur peut utiliser une heuristique et déterminer si une valeur non nulle est préférable au regard du contexte dans lequel se trouve l'élément.</dd>
-</dl>
+- `<length-percentage>`
+  - : Un décalage intérieur entre la boîte de défilement et le bord correspondant de l'élément. C'est une longueur ou un pourcentage valide.
+- `auto`
+  - : Le décalage est déterminé par l'agent utilisateur. Cette valeur correspond généralement à `0px` mais le navigateur peut utiliser une heuristique et déterminer si une valeur non nulle est préférable au regard du contexte dans lequel se trouve l'élément.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Scroll Snap Points", "#propdef-scroll-padding-block-end", "scroll-padding-block-end")}}</td>
-   <td>{{Spec2("CSS Scroll Snap Points")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                            | État                                             | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
+| {{SpecName("CSS Scroll Snap Points", "#propdef-scroll-padding-block-end", "scroll-padding-block-end")}} | {{Spec2("CSS Scroll Snap Points")}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.scroll-padding-block-end")}}</p>
+{{Compat("css.properties.scroll-padding-block-end")}}

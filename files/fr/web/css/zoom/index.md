@@ -8,53 +8,72 @@ tags:
   - Reference
 translation_of: Web/CSS/zoom
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>La propriété non-standard <strong><code>zoom</code></strong> permet de manipuler l'effet d'agrandissement d'un élément. Plutôt que cette propriété non-standard, mieux vaudra utiliser <a href="/fr/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms">les transformations CSS</a>, si possible. Cependant, contrairement aux transformations CSS, <strong><code>zoom</code></strong> affecte la taille de l'élément.</p>
+La propriété non-standard **`zoom`** permet de manipuler l'effet d'agrandissement d'un élément. Plutôt que cette propriété non-standard, mieux vaudra utiliser [les transformations CSS](/fr/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms), si possible. Cependant, contrairement aux transformations CSS, **`zoom`** affecte la taille de l'élément.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 zoom: normal;
 zoom: reset;
 
 /* VAleurs exprimées en pourcents */
-/* Type &lt;percentage&gt; */
+/* Type <percentage> */
 zoom: 50%;
 zoom: 200%;
 
 /* Valeurs numériques */
-/* Type &lt;number&gt; */
+/* Type <number> */
 zoom: 1.1;
 zoom: 0.7;
 
 /* Valeurs globales */
 zoom: inherit;
 zoom: initial;
-zoom: unset;</pre>
+zoom: unset;
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>L'élément est affiché avec sa taille normale.</dd>
- <dt><code>reset</code> {{non-standard_inline}}</dt>
- <dd>Do not (de)magnify this element if the user applies non-pinch-based zooming (e.g. by pressing <kbd>Ctrl</kbd>-<kbd>-</kbd> ou <kbd>Ctrl</kbd>+<kbd>+</kbd>) to the document. Only supported by WebKit (and possibly Blink).</dd>
- <dt>{{cssxref("&lt;percentage&gt;")}}</dt>
- <dd>Le facteur de zoom à appliquer. <code>100%</code> est équivalent au mot-clé <code>normal</code>. Les valeurs supérieures à <code>100%</code> agrandissent l'élément et les valeurs inférieures le réduisent.</dd>
- <dt>{{cssxref("&lt;number&gt;")}}</dt>
- <dd>Le facteur de zoom à appliquer. La valeur fonctionne de la même façon que les pourcentages :  <code>1.0</code> correspond à <code>normal</code> (ou <code>100%</code>) , les valeurs supérieures à <code>1.0</code> agrandissent l'élément et les valeurs inférieures le réduisent.</dd>
-</dl>
+- `normal`
+  - : L'élément est affiché avec sa taille normale.
+- `reset` {{non-standard_inline}}
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+  - : Do not (de)magnify this element if the user applies non-pinch-based zooming (e.g. by pressing
+
+    <kbd>Ctrl</kbd>
+
+    \-
+
+    <kbd>-</kbd>
+
+    ou
+
+    <kbd>Ctrl</kbd>
+
+    \+
+
+    <kbd>+</kbd>
+
+    ) to the document. Only supported by WebKit (and possibly Blink).
+
+- {{cssxref("&lt;percentage&gt;")}}
+  - : Le facteur de zoom à appliquer. `100%` est équivalent au mot-clé `normal`. Les valeurs supérieures à `100%` agrandissent l'élément et les valeurs inférieures le réduisent.
+- {{cssxref("&lt;number&gt;")}}
+  - : Le facteur de zoom à appliquer. La valeur fonctionne de la même façon que les pourcentages :  `1.0` correspond à `normal` (ou `100%`) , les valeurs supérieures à `1.0` agrandissent l'élément et les valeurs inférieures le réduisent.
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p.petit {
+```css
+p.petit {
   zoom: 75%;
 }
 p.normal {
@@ -68,32 +87,33 @@ p {
 }
 p:hover {
   zoom: reset;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="petit"&gt;Petit&lt;/p&gt;
-&lt;p class="normal"&gt;Normal&lt;/p&gt;
-&lt;p class="gros"&gt;Gros&lt;/p&gt;</pre>
+```html
+<p class="petit">Petit</p>
+<p class="normal">Normal</p>
+<p class="gros">Gros</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples","100%","200")}}</p>
+{{EmbedLiveSample("Exemples","100%","200")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette propriété n'est pas standard et est née avec Internet Explorer. Apple la décrit <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW15">dans la référence CSS pour Safari</a>. Rossen Atanassov, de Microsoft, a dressé <a href="https://cdn.rawgit.com/atanassov/css-zoom/master/Overview.html">un brouillon de spécification sur GitHub</a></p>
+Cette propriété n'est pas standard et est née avec Internet Explorer. Apple la décrit [dans la référence CSS pour Safari](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266-SW15). Rossen Atanassov, de Microsoft, a dressé [un brouillon de spécification sur GitHub](https://cdn.rawgit.com/atanassov/css-zoom/master/Overview.html)
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.zoom")}}</p>
+{{Compat("css.properties.zoom")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="https://css-tricks.com/almanac/properties/z/zoom/">L'article de CSS-Tricks sur <code>zoom</code></a></li>
- <li>Le descripteur <code><a href="/fr/docs/conflicting/Web/CSS/@viewport_e065ce90bde08c9679692adbe64f6518">zoom</a></code> pour la règle @ <code><a href="/fr/docs/Web/CSS/@viewport">@viewport</a></code></li>
- <li>{{bug("390936")}} à propos de l'implémentation de la propriété dans Firefox</li>
-</ul>
+- [L'article de CSS-Tricks sur `zoom`](https://css-tricks.com/almanac/properties/z/zoom/)
+- Le descripteur [`zoom`](/fr/docs/conflicting/Web/CSS/@viewport_e065ce90bde08c9679692adbe64f6518) pour la règle @ [`@viewport`](/fr/docs/Web/CSS/@viewport)
+- {{bug("390936")}} à propos de l'implémentation de la propriété dans Firefox

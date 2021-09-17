@@ -8,29 +8,26 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/prefers-color-scheme
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<div class="note">
-<p><strong>Note :</strong> Si vous avez modifié <code>privacy.resistFingerprinting</code> à <strong>vrai</strong>, le paramètre {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} sera redéfini à <code>light</code>.<br>
- Sinon, vous pouvez créer le paramètre numérique <code>ui.systemUsesDarkTheme</code> pour redéfinier le comportement par défaut et retourner <code>light</code> (valeur : 0), <code>dark</code> (valeur : 1), or <code>no-preference</code> (valeur : 2). (Firefox retournera<code>light</code> si une autre valeur est utilisée.)</p>
-</div>
+> **Note :** Si vous avez modifié `privacy.resistFingerprinting` à **vrai**, le paramètre {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}} sera redéfini à `light`.
+> Sinon, vous pouvez créer le paramètre numérique `ui.systemUsesDarkTheme` pour redéfinier le comportement par défaut et retourner `light` (valeur : 0), `dark` (valeur : 1), or `no-preference` (valeur : 2). (Firefox retournera`light` si une autre valeur est utilisée.)
 
-<p>La caractéristique média <strong><code>prefers-color-scheme</code></strong> permet de détecter les préférences exprimées par l'utilisateur quant au thème à utiliser (sombre ou clair).</p>
+La caractéristique média **`prefers-color-scheme`** permet de détecter les préférences exprimées par l'utilisateur quant au thème à utiliser (sombre ou clair).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<dl>
- <dt><code><dfn>light</dfn></code></dt>
- <dd>Cette valeur indique que l'utilisateur a exprimé le choix d'utiliser une interface avec une dominante claire, ou qu'il n'a pas exprimé son choix.</dd>
- <dt><code>dark</code></dt>
- <dd>Cette valeur indique que l'utilisateur a exprimé le choix d'utiliser une interface avec une dominante sombre.</dd>
-</dl>
+- `light`
+  - : Cette valeur indique que l'utilisateur a exprimé le choix d'utiliser une interface avec une dominante claire, ou qu'il n'a pas exprimé son choix.
+- `dark`
+  - : Cette valeur indique que l'utilisateur a exprimé le choix d'utiliser une interface avec une dominante sombre.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.day   { background: #eee; color: black; }
+```css
+.day   { background: #eee; color: black; }
 .night { background: #333; color: white; }
 
 @media (prefers-color-scheme: dark) {
@@ -50,52 +47,38 @@ translation_of: Web/CSS/@media/prefers-color-scheme
   height: 2em;
   vertical-align: middle;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="day"&gt;Jour (initial)&lt;/div&gt;
-&lt;div class="day light-scheme"&gt;Jour (modifié si utilisation d'un thème clair)&lt;/div&gt;
-&lt;div class="day dark-scheme"&gt;Jour (modifié si utilisation d'un thème sombre)&lt;/div&gt; &lt;br&gt;
+```html
+<div class="day">Jour (initial)</div>
+<div class="day light-scheme">Jour (modifié si utilisation d'un thème clair)</div>
+<div class="day dark-scheme">Jour (modifié si utilisation d'un thème sombre)</div> <br>
 
-&lt;div class="night"&gt;Nuit (initial)&lt;/div&gt;
-&lt;div class="night light-scheme"&gt;Nuit (modifié si utilisation d'un thème clair)&lt;/div&gt;
-&lt;div class="night dark-scheme"&gt;Nuit (modifié si utilisation d'un thème sombre)&lt;/div&gt;
-</pre>
+<div class="night">Nuit (initial)</div>
+<div class="night light-scheme">Nuit (modifié si utilisation d'un thème clair)</div>
+<div class="night dark-scheme">Nuit (modifié si utilisation d'un thème sombre)</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS5 Media Queries', '#descdef-media-prefers-color-scheme', 'prefers-color-scheme')}}</td>
-   <td>{{Spec2('CSS5 Media Queries')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                    | État                                     | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName('CSS5 Media Queries', '#descdef-media-prefers-color-scheme', 'prefers-color-scheme')}} | {{Spec2('CSS5 Media Queries')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.at-rules.media.prefers-color-scheme")}}</p>
+{{Compat("css.at-rules.media.prefers-color-scheme")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="https://www.youtube.com/watch?v=jmepqJ5UbuM">Tutoriel vidéo (en anglais) : « Coding a Dark Mode for your Website », Coder un thème sombre pour votre site web</a></li>
- <li><a href="https://stuffandnonsense.co.uk/blog/redesigning-your-product-and-website-for-dark-mode">Revoir la conception d'un produit ou d'un site pour le mode sombre </a></li>
- <li>Modifier le thème du system sur <a href="https://blogs.windows.com/windowsexperience/2019/04/01/windows-10-tip-dark-theme-in-file-explorer/">Windows</a>, <a href="https://developer.apple.com/design/human-interface-guidelines/macos/visual-design/dark-mode/">macOS</a> et <a href="https://www.phonandroid.com/android-10-comment-activer-le-theme-fonce.html">Android</a>.</li>
-</ul>
+- [Tutoriel vidéo (en anglais) : « Coding a Dark Mode for your Website », Coder un thème sombre pour votre site web](https://www.youtube.com/watch?v=jmepqJ5UbuM)
+- [Revoir la conception d'un produit ou d'un site pour le mode sombre](https://stuffandnonsense.co.uk/blog/redesigning-your-product-and-website-for-dark-mode)
+- Modifier le thème du system sur [Windows](https://blogs.windows.com/windowsexperience/2019/04/01/windows-10-tip-dark-theme-in-file-explorer/), [macOS](https://developer.apple.com/design/human-interface-guidelines/macos/visual-design/dark-mode/) et [Android](https://www.phonandroid.com/android-10-comment-activer-le-theme-fonce.html).
 
-<div>{{QuickLinksWithSubpages("/fr/docs/Web/CSS/@media/")}}</div>
+{{QuickLinksWithSubpages("/fr/docs/Web/CSS/@media/")}}

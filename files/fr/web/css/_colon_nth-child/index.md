@@ -1,91 +1,84 @@
 ---
 title: ':nth-child'
-slug: 'Web/CSS/:nth-child'
+slug: Web/CSS/:nth-child
 tags:
   - CSS
   - Pseudo-classe
   - Reference
-translation_of: 'Web/CSS/:nth-child'
+translation_of: Web/CSS/:nth-child
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <strong><code>:nth-child(an+b)</code></strong> permet de cibler un élément qui possède <code><em>a</em>n+<em>b</em>-1</code> éléments voisins (au même niveau) avant lui dans l'arbre du document pour des valeurs entières <code>n</code> et qui possède un élément parent. Autrement dit, un sélecteur utilisant cette pseudo-classe permettra de cibler les éléments fils d'un élément dont les positions correspondent au motif <em>an+b</em>.</p>
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:nth-child(an+b)`** permet de cibler un élément qui possède `an+b-1` éléments voisins (au même niveau) avant lui dans l'arbre du document pour des valeurs entières `n` et qui possède un élément parent. Autrement dit, un sélecteur utilisant cette pseudo-classe permettra de cibler les éléments fils d'un élément dont les positions correspondent au motif _an+b_.
 
-<pre class="brush: css no-line-numbers">/* Cible les éléments en fonction de leur position dans */
+```css
+/* Cible les éléments en fonction de leur position dans */
 /* le document : ici le 4e, 8e, 16e, 20e, etc. quel que */
 /* soit le type de l'élément */
 body :nth-child(4n) {
   background-color: lime;
-}</pre>
+}
+```
 
-<div class="note">
-<p><strong>Note :</strong> Pour CSS3, pour que l'élément soit ciblé, il faut qu'il ait un élément parent. En CSS4, cette restriction a été levée.</p>
-</div>
+> **Note :** Pour CSS3, pour que l'élément soit ciblé, il faut qu'il ait un élément parent. En CSS4, cette restriction a été levée.
 
-<p>Illustrons cela avec quelques exemples :</p>
+Illustrons cela avec quelques exemples :
 
-<ul>
- <li><code>1n+0</code> ou <code>n</code> ciblera chaque élément fils. <code>n</code> ne cible aucun élément pour le navigateur Android jusqu'à la version 4.3 alors qu'<code>1n</code> fonctionne. <code>1n</code> est synonyme de <code>1n+0</code> et les deux peuvent donc être utilisés de façon équivalente.</li>
- <li><code>2n+0</code> ou <code>2n</code> ciblera les éléments fils 2, 4, 6, 8, etc. On pourra utiliser le mot-clé <strong><code>even</code></strong> à la place de cette expression.</li>
- <li><code>2n+1</code> ciblera les éléments fils 1, 3, 5, 7, etc. On pourra utiliser le mot-clé <strong><code>odd</code></strong> à la place de cette expression.</li>
- <li><code>3n+4</code> permettra de cibler les éléments fils 4, 7, 10, 13, etc.</li>
- <li><code>0n+3</code> (ou plus simplement <code>3</code>) permettra de cibler le troisième élément.</li>
-</ul>
+- `1n+0` ou `n` ciblera chaque élément fils. `n` ne cible aucun élément pour le navigateur Android jusqu'à la version 4.3 alors qu'`1n` fonctionne. `1n` est synonyme de `1n+0` et les deux peuvent donc être utilisés de façon équivalente.
+- `2n+0` ou `2n` ciblera les éléments fils 2, 4, 6, 8, etc. On pourra utiliser le mot-clé **`even`** à la place de cette expression.
+- `2n+1` ciblera les éléments fils 1, 3, 5, 7, etc. On pourra utiliser le mot-clé **`odd`** à la place de cette expression.
+- `3n+4` permettra de cibler les éléments fils 4, 7, 10, 13, etc.
+- `0n+3` (ou plus simplement `3`) permettra de cibler le troisième élément.
 
-<p>Les valeurs des coefficients <code><em>a</em></code> et <code><em>b</em></code> doivent être des entiers et l'indice du premier élément fils commence à 1. Autrement dit, cette pseudo-classe permettra de cibler les éléments fils dont l'indice appartient à l'ensemble <code>{ an + b; n = 0, 1, 2, ... }</code>.</p>
+Les valeurs des coefficients `a` et `b` doivent être des entiers et l'indice du premier élément fils commence à 1. Autrement dit, cette pseudo-classe permettra de cibler les éléments fils dont l'indice appartient à l'ensemble `{ an + b; n = 0, 1, 2, ... }`.
 
-<p>Cette pseudo-classe pourra ainsi être utilisée pour mettre en forme certaines lignes d'un tableau.</p>
+Cette pseudo-classe pourra ainsi être utilisée pour mettre en forme certaines lignes d'un tableau.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>La pseudo-classe <code>nth-child</code> prend un seul argument qui représente le motif de répétition des éléments ciblés.</p>
+La pseudo-classe `nth-child` prend un seul argument qui représente le motif de répétition des éléments ciblés.
 
-<h3 id="Valeurs_avec_un_mot-clé">Valeurs avec un mot-clé</h3>
+### Valeurs avec un mot-clé
 
-<dl>
- <dt><code>odd</code></dt>
- <dd>Représente les éléments dont la position est impaire par rapport à leurs voisins.</dd>
- <dt><code>even</code></dt>
- <dd>Représente les éléments dont la position est paire par rapport à leurs voisins.</dd>
-</dl>
+- `odd`
+  - : Représente les éléments dont la position est impaire par rapport à leurs voisins.
+- `even`
+  - : Représente les éléments dont la position est paire par rapport à leurs voisins.
 
-<h3 id="Notation_fonctionnelle">Notation fonctionnelle</h3>
+### Notation fonctionnelle
 
-<dl>
- <dt><code>&lt;An+B&gt;</code></dt>
- <dd>Représente les éléments dont la position est la <code>An+B</code>-ième avec <code>n</code> qui parcourt les entiers à partir de 0. Les valeurs fournies pour <code>A</code> et <code>B</code> doivent être des entiers ({{cssxref("&lt;integer&gt;")}}).</dd>
-</dl>
+- `<An+B>`
+  - : Représente les éléments dont la position est la `An+B`-ième avec `n` qui parcourt les entiers à partir de 0. Les valeurs fournies pour `A` et `B` doivent être des entiers ({{cssxref("&lt;integer&gt;")}}).
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Exemples_de_sélecteurs">Exemples de sélecteurs</h3>
+### Exemples de sélecteurs
 
-<dl>
- <dt><code>tr:nth-child(2n+1)</code></dt>
- <dd>Permettra de cibler les lignes impaires d'un tableau.</dd>
- <dt><code>tr:nth-child(odd)</code></dt>
- <dd>Permettra de cibler les lignes impaires d'un tableau.</dd>
- <dt><code>tr:nth-child(2n)</code></dt>
- <dd>Permettra de cibler les lignes paires d'un tableau.</dd>
- <dt><code>tr:nth-child(even)</code></dt>
- <dd>Permettra de cibler les lignes paires d'un tableau.</dd>
- <dt><code>span:nth-child(0n+1)</code></dt>
- <dd>Permettra de cibler un élément {{HTMLElement("span")}} qui est le premier fils de son parent. Cela aura le même effet que la pseudo-classe {{cssxref(":first-child")}}.</dd>
- <dt><code>span:nth-child(1)</code></dt>
- <dd>Synonyme à l'exemple précédent.</dd>
- <dt><code>span:nth-child(-n+3)</code></dt>
- <dd>Permettra de cibler un élément si celui-ci fait partie des trois premiers fils d'un parent et que c'est également un élément <code>span</code>.</dd>
-</dl>
+- `tr:nth-child(2n+1)`
+  - : Permettra de cibler les lignes impaires d'un tableau.
+- `tr:nth-child(odd)`
+  - : Permettra de cibler les lignes impaires d'un tableau.
+- `tr:nth-child(2n)`
+  - : Permettra de cibler les lignes paires d'un tableau.
+- `tr:nth-child(even)`
+  - : Permettra de cibler les lignes paires d'un tableau.
+- `span:nth-child(0n+1)`
+  - : Permettra de cibler un élément {{HTMLElement("span")}} qui est le premier fils de son parent. Cela aura le même effet que la pseudo-classe {{cssxref(":first-child")}}.
+- `span:nth-child(1)`
+  - : Synonyme à l'exemple précédent.
+- `span:nth-child(-n+3)`
+  - : Permettra de cibler un élément si celui-ci fait partie des trois premiers fils d'un parent et que c'est également un élément `span`.
 
-<h3 id="Exemple_démonstratif">Exemple démonstratif</h3>
+### Exemple démonstratif
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">html {
+```css
+html {
   font-family: sans-serif;
 }
 
@@ -100,107 +93,90 @@ span, div em {
 .deuxieme span:nth-child(2n+1),
 .troisieme span:nth-of-type(2n+1) {
   background-color: lime;
-}</pre>
+}
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush:html">&lt;p&gt;
-  &lt;code&gt;span:nth-child(2n+1)&lt;/code&gt;,
-  &lt;em&gt;sans&lt;/em&gt; un &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt;
+```html
+<p>
+  <code>span:nth-child(2n+1)</code>,
+  <em>sans</em> un <code>&lt;em&gt;</code>
   parmi les éléments. Les éléments fils 1, 3,
   5 et 7 sont sélectionnés.
-&lt;/p&gt;
+</p>
 
-&lt;div class="premier"&gt;
-  &lt;span&gt;Ce span est sélectionné !&lt;/span&gt;
-  &lt;span&gt;Pas ce span ci. :(&lt;/span&gt;
-  &lt;span&gt;Celui-ci ?&lt;/span&gt;
-  &lt;span&gt;Celui-là ?&lt;/span&gt;
-  &lt;span&gt;Un autre exemple&lt;/span&gt;
-  &lt;span&gt;Et encore un&lt;/span&gt;
-  &lt;span&gt;Puis un dernier&lt;/span&gt;
-&lt;/div&gt;
+<div class="premier">
+  <span>Ce span est sélectionné !</span>
+  <span>Pas ce span ci. :(</span>
+  <span>Celui-ci ?</span>
+  <span>Celui-là ?</span>
+  <span>Un autre exemple</span>
+  <span>Et encore un</span>
+  <span>Puis un dernier</span>
+</div>
 
-&lt;p&gt;
-  &lt;code&gt;span:nth-child(2n+1)&lt;/code&gt;,
-  &lt;em&gt;avec&lt;/em&gt; un élément &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt;
+<p>
+  <code>span:nth-child(2n+1)</code>,
+  <em>avec</em> un élément <code>&lt;em&gt;</code>
   parmi les fils. Les éléments fils 1, 5,
   et 7 sont sélectionnés. 3 est compté
   mais n'est pas ciblé car ce n'est pas
-  &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt;.
-&lt;/p&gt;
+  <code>&lt;span&gt;</code>.
+</p>
 
-&lt;div class="deuxieme"&gt;
-  &lt;span&gt;Ce span est sélectionné !&lt;/span&gt;
-  &lt;span&gt;Pas ce span ci. :(&lt;/span&gt;
-  &lt;em&gt;Ici on a un em.&lt;/em&gt;
-  &lt;span&gt;Qu'en est-il de celui-ci ?&lt;/span&gt;
-  &lt;span&gt;De celui-là ?&lt;/span&gt;
-  &lt;span&gt;Voici un autre exemple&lt;/span&gt;
-  &lt;span&gt;Et encore un&lt;/span&gt;
-  &lt;span&gt;Puis un dernier&lt;/span&gt;
-&lt;/div&gt;
+<div class="deuxieme">
+  <span>Ce span est sélectionné !</span>
+  <span>Pas ce span ci. :(</span>
+  <em>Ici on a un em.</em>
+  <span>Qu'en est-il de celui-ci ?</span>
+  <span>De celui-là ?</span>
+  <span>Voici un autre exemple</span>
+  <span>Et encore un</span>
+  <span>Puis un dernier</span>
+</div>
 
-&lt;p&gt;
-  &lt;code&gt;span:nth-of-type(2n+1)&lt;/code&gt;,
-  &lt;em&gt;avec&lt;/em&gt; un &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt;
+<p>
+  <code>span:nth-of-type(2n+1)</code>,
+  <em>avec</em> un <code>&lt;em&gt;</code>
   parmi les éléments fils. Les éléments fils
   1, 4, 6 et 8 sont sélectionnés. 3 n'est pas
-  compté ni ciblé car c'est un &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt;,
-  et pas un &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt; et
-  &lt;code&gt;nth-of-type&lt;/code&gt; ne sélectionne que les
-  fils de ce type. Ce &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt; est
+  compté ni ciblé car c'est un <code>&lt;em&gt;</code>,
+  et pas un <code>&lt;span&gt;</code> et
+  <code>nth-of-type</code> ne sélectionne que les
+  fils de ce type. Ce <code>&lt;em&gt;</code> est
   sauté et est ignoré.
-&lt;/p&gt;
+</p>
 
-&lt;div class="troisieme"&gt;
-  &lt;span&gt;Ce span est sélectionné !&lt;/span&gt;
-  &lt;span&gt;Pas ce span ci. :(&lt;/span&gt;
-  &lt;em&gt;Ici on a un em.&lt;/em&gt;
-  &lt;span&gt;Qu'en est-il de celui-ci ?&lt;/span&gt;
-  &lt;span&gt;De celui-là ?&lt;/span&gt;
-  &lt;span&gt;Voici un autre exemple&lt;/span&gt;
-  &lt;span&gt;Et encore un&lt;/span&gt;
-  &lt;span&gt;Puis un dernier&lt;/span&gt;
-&lt;/div&gt;
-</pre>
+<div class="troisieme">
+  <span>Ce span est sélectionné !</span>
+  <span>Pas ce span ci. :(</span>
+  <em>Ici on a un em.</em>
+  <span>Qu'en est-il de celui-ci ?</span>
+  <span>De celui-là ?</span>
+  <span>Voici un autre exemple</span>
+  <span>Et encore un</span>
+  <span>Puis un dernier</span>
+</div>
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<div>{{EmbedLiveSample('Exemple_demonstratif','100%', '550')}}</div>
+{{EmbedLiveSample('Exemple_demonstratif','100%', '550')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#nth-child-pseudo', ':nth-child')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Ajout de la syntaxe <code>&lt;selector&gt;</code>. Les éléments ciblés peuvent ne pas avoir d'élément parent.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#nth-child-pseudo', ':nth-child')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                                 | Commentaires                                                                                 |
+| ---------------------------------------------------------------------------------------- | ------------------------------------ | -------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS4 Selectors', '#nth-child-pseudo', ':nth-child')}} | {{Spec2('CSS4 Selectors')}} | Ajout de la syntaxe `<selector>`. Les éléments ciblés peuvent ne pas avoir d'élément parent. |
+| {{SpecName('CSS3 Selectors', '#nth-child-pseudo', ':nth-child')}} | {{Spec2('CSS3 Selectors')}} | Définition initiale.                                                                         |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.nth-child")}}</p>
+{{Compat("css.selectors.nth-child")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref(":nth-of-type")}}</li>
- <li>{{cssxref(":first-child")}}</li>
- <li>{{cssxref(":last-child")}}</li>
-</ul>
+- {{cssxref(":nth-of-type")}}
+- {{cssxref(":first-child")}}
+- {{cssxref(":last-child")}}

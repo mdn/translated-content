@@ -7,21 +7,20 @@ tags:
   - Reference
 translation_of: Web/CSS/overflow-wrap
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>overflow-wrap</code></strong> s'applique aux éléments en ligne (<em>inline</em>) et est utilisée afin de définir si le navigateur peut ou non faire la césure à l'intérieur d'un mot pour éviter le dépassement d'une chaîne qui serait trop longue afin qu'elle ne dépasse pas de la boîte.</p>
+La propriété **`overflow-wrap`** s'applique aux éléments en ligne (_inline_) et est utilisée afin de définir si le navigateur peut ou non faire la césure à l'intérieur d'un mot pour éviter le dépassement d'une chaîne qui serait trop longue afin qu'elle ne dépasse pas de la boîte.
 
-<div>{{EmbedInteractiveExample("pages/css/overflow-wrap.html")}}</div>
+{{EmbedInteractiveExample("pages/css/overflow-wrap.html")}}
 
-<div class="note">
-<p><strong>Note :</strong> À la différence de {{cssxref("word-break")}}, <code>overflow-wrap</code> créera uniquement un saut de ligne si un mot entier ne peut pas être placé sur sa propre ligne sans dépasser.</p>
-</div>
+> **Note :** À la différence de {{cssxref("word-break")}}, `overflow-wrap` créera uniquement un saut de ligne si un mot entier ne peut pas être placé sur sa propre ligne sans dépasser.
 
-<p>À l'origine, cette propriété était une extension non-standard sans préfixe de Microsoft et intitulée <code>word-wrap</code>. Implémentée sous ce nom par la plupart des navigateurs depuis, elle a été renommée en <code>overflow-wrap</code> et <code>word-wrap</code> est devenu un alias.</p>
+À l'origine, cette propriété était une extension non-standard sans préfixe de Microsoft et intitulée `word-wrap`. Implémentée sous ce nom par la plupart des navigateurs depuis, elle a été renommée en `overflow-wrap` et `word-wrap` est devenu un alias.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Avec un mot-clé */
+```css
+/* Avec un mot-clé */
 overflow-wrap: normal;
 overflow-wrap: break-word;
 overflow-wrap: anywhere;
@@ -30,30 +29,29 @@ overflow-wrap: anywhere;
 overflow-wrap: inherit;
 overflow-wrap: initial;
 overflow-wrap: unset;
-</pre>
+```
 
-<p>La propriété <code>overflow-wrap</code> peut être définie avec l'un des mots-clés suivants.</p>
+La propriété `overflow-wrap` peut être définie avec l'un des mots-clés suivants.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Indique que la césure d'une ligne ne peut avoir lieu qu'aux positions de césures normales.</dd>
- <dt><code>anywhere</code></dt>
- <dd>Indique que la césure pourra avoir lieu afin d'éviter le dépassement, y compris s'il n'y a pas de point de césure acceptable sur la ligne. Cela est notamment utile pour éviter le dépassement et qu'on a une longue ligne (un long mot ou une URL). Aucun caractère ne sera ajouté au point de césure. Les possibilités de rupture douces ajoutées par la césure sont prises en compte lors du calcul des tailles <code>min-content</code> intrinsèques.</dd>
- <dt><code>break-word</code></dt>
- <dd>Indique que les mots qui ne subissent habituellement pas de césure peuvent être scindés à n'importe quelle position s'il n'y a pas d'autres positions envisageables pour la césure de la ligne. Les possibilités de rupture douces ajoutées par la césure <strong>ne sont pas</strong> prises en compte lors du calcul des tailles <code>min-content</code> intrinsèques.</dd>
-</dl>
+- `normal`
+  - : Indique que la césure d'une ligne ne peut avoir lieu qu'aux positions de césures normales.
+- `anywhere`
+  - : Indique que la césure pourra avoir lieu afin d'éviter le dépassement, y compris s'il n'y a pas de point de césure acceptable sur la ligne. Cela est notamment utile pour éviter le dépassement et qu'on a une longue ligne (un long mot ou une URL). Aucun caractère ne sera ajouté au point de césure. Les possibilités de rupture douces ajoutées par la césure sont prises en compte lors du calcul des tailles `min-content` intrinsèques.
+- `break-word`
+  - : Indique que les mots qui ne subissent habituellement pas de césure peuvent être scindés à n'importe quelle position s'il n'y a pas d'autres positions envisageables pour la césure de la ligne. Les possibilités de rupture douces ajoutées par la césure **ne sont pas** prises en compte lors du calcul des tailles `min-content` intrinsèques.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
-<p>{{csssyntax}}</p>
+{{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   width: 13em;
   margin: 2px;
   background: gold;
@@ -72,77 +70,63 @@ overflow-wrap: unset;
 }
 
 .hyphens {
-<code>  -webkit-hyphens: auto;
+  -webkit-hyphens: auto;
   -ms-hyphens: auto;
-</code>  hyphens: auto;
+  hyphens: auto;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;h3&gt;&lt;code&gt;normal&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;They say the fishing is excellent at
-  Lake &lt;em class="normal"&gt;Chargoggagoggmanchauggagoggchaubunagungamaugg&lt;/em&gt;,
-  though I've never been there myself.&lt;/p&gt;
-&lt;h3&gt;&lt;code&gt;overflow-wrap: anywhere&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;They say the fishing is excellent at
-  Lake &lt;em class="ow-anywhere"&gt;Chargoggagoggmanchauggagoggchaubunagungamaugg&lt;/em&gt;,
-  though I've never been there myself.&lt;/p&gt;
-&lt;h3&gt;&lt;code&gt;overflow-wrap: break-word&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;They say the fishing is excellent at
-  Lake &lt;em class="ow-break-word"&gt;Chargoggagoggmanchauggagoggchaubunagungamaugg&lt;/em&gt;,
-  though I've never been there myself. &lt;/p&gt;
-&lt;h3&gt;&lt;code&gt;word-break: break-all&lt;/code&gt;&lt;/h3&gt;
-&lt;p&gt;They say the fishing is excellent at
-  Lake &lt;em class="word-break"&gt;Chargoggagoggmanchauggagoggchaubunagungamaugg&lt;/em&gt;,
-  though I've never been there myself.&lt;/p&gt;
-&lt;h3&gt;&lt;code&gt;hyphens: auto&lt;/code&gt;, without &lt;code&gt;lang&lt;/code&gt; attribute&lt;/h3&gt;
-&lt;p class="hyphens"&gt;They say the fishing is excellent at
-  Lake &lt;em&gt;Chargoggagoggmanchauggagoggchaubunagungamaugg&lt;/em&gt;
-  though I've never been there myself. &lt;/p&gt;
-&lt;h3&gt;&lt;code&gt;hyphens: auto&lt;/code&gt;, English rules&lt;/h3&gt;
-&lt;p class="hyphens" lang="en"&gt;They say the fishing is excellent at
-  Lake &lt;em&gt;Chargoggagoggmanchauggagoggchaubunagungamaugg&lt;/em&gt;,
-  though I've never been there myself.&lt;/p&gt;
-&lt;h3&gt;&lt;code&gt;hyphens: auto&lt;/code&gt;, German rules&lt;/h3&gt;
-&lt;p class="hyphens" lang="de"&gt;They say the fishing is excellent at
-  Lake &lt;em&gt;Chargoggagoggmanchauggagoggchaubunagungamaugg&lt;/em&gt;,
-  though I've never been there myself.&lt;/p&gt;
-</pre>
+```html
+<h3><code>normal</code></h3>
+<p>They say the fishing is excellent at
+  Lake <em class="normal">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself.</p>
+<h3><code>overflow-wrap: anywhere</code></h3>
+<p>They say the fishing is excellent at
+  Lake <em class="ow-anywhere">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself.</p>
+<h3><code>overflow-wrap: break-word</code></h3>
+<p>They say the fishing is excellent at
+  Lake <em class="ow-break-word">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself. </p>
+<h3><code>word-break: break-all</code></h3>
+<p>They say the fishing is excellent at
+  Lake <em class="word-break">Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself.</p>
+<h3><code>hyphens: auto</code>, without <code>lang</code> attribute</h3>
+<p class="hyphens">They say the fishing is excellent at
+  Lake <em>Chargoggagoggmanchauggagoggchaubunagungamaugg</em>
+  though I've never been there myself. </p>
+<h3><code>hyphens: auto</code>, English rules</h3>
+<p class="hyphens" lang="en">They say the fishing is excellent at
+  Lake <em>Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself.</p>
+<h3><code>hyphens: auto</code>, German rules</h3>
+<p class="hyphens" lang="de">They say the fishing is excellent at
+  Lake <em>Chargoggagoggmanchauggagoggchaubunagungamaugg</em>,
+  though I've never been there myself.</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", '100%', 520)}}</p>
+{{EmbedLiveSample("Exemples", '100%', 520)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Text', '#propdef-overflow-wrap', 'overflow-wrap')}}</td>
-   <td>{{Spec2('CSS3 Text')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                         | Commentaires        |
+| -------------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName('CSS3 Text', '#propdef-overflow-wrap', 'overflow-wrap')}} | {{Spec2('CSS3 Text')}} | Définition initiale |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.overflow-wrap")}}</p>
+{{Compat("css.properties.overflow-wrap")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("word-break")}}</li>
- <li>{{cssxref("hyphens")}}</li>
- <li>{{cssxref("text-overflow")}}</li>
-</ul>
+- {{cssxref("word-break")}}
+- {{cssxref("hyphens")}}
+- {{cssxref("text-overflow")}}

@@ -8,13 +8,14 @@ tags:
   - offset-rotate
 translation_of: Web/CSS/offset-rotate
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propriété <strong><code>offset-rotate</code></strong> définit l'orientation et la direction de l'élément lorsqu'il est positionné le long du chemin représenté par {{cssxref("offset-path")}}.</p>
+La propriété **`offset-rotate`** définit l'orientation et la direction de l'élément lorsqu'il est positionné le long du chemin représenté par {{cssxref("offset-path")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css">/* Suit la direction du chemin avec un éventuel */
+```css
+/* Suit la direction du chemin avec un éventuel */
 /* décalage angulaire */
 offset-rotate: auto;
 offset-rotate: auto 45deg;
@@ -26,36 +27,28 @@ offset-rotate: reverse;
 /* Conserve une rotation constante quelle que soit la position
 /* sur le chemin  */
 offset-rotate: 90deg;
-offset-rotate: .5turn;</pre>
+offset-rotate: .5turn;
+```
 
-<dl>
- <dt><code><dfn>auto</dfn></code></dt>
- <dd>
- <p>L'élément est tourné avec l'angle donné par la direction du chemin {{cssxref("offset-path")}}, relativement à l'axe des abscisses. C'est la valeur par défaut.</p>
- </dd>
- <dt><code>{{cssxref("&lt;angle&gt;")}}</code></dt>
- <dd>
- <p>L'élément est tourné d'un angle fixe (indiqué dans le sens horaire).</p>
- </dd>
- <dt><code><dfn>auto &lt;angle&gt;</dfn></code></dt>
- <dd>
- <p>Si le mot-clé <code>auto</code> est suivi d'une valeur {{cssxref("&lt;angle&gt;")}}, l'élément est tourné de l'angle donné par rapport à la direction du chemin.</p>
- </dd>
- <dt><code><dfn>reverse</dfn></code></dt>
- <dd>
- <p>L'élément est tourné de façon similaire à <code>auto</code>, mais fait face à la direction opposée. Cette valeur est équivalente à <code>auto 180deg</code>.</p>
- </dd>
-</dl>
+- `auto`
+  - : L'élément est tourné avec l'angle donné par la direction du chemin {{cssxref("offset-path")}}, relativement à l'axe des abscisses. C'est la valeur par défaut.
+- `{{cssxref("&lt;angle&gt;")}}`
+  - : L'élément est tourné d'un angle fixe (indiqué dans le sens horaire).
+- `auto <angle>`
+  - : Si le mot-clé `auto` est suivi d'une valeur {{cssxref("&lt;angle&gt;")}}, l'élément est tourné de l'angle donné par rapport à la direction du chemin.
+- `reverse`
+  - : L'élément est tourné de façon similaire à `auto`, mais fait face à la direction opposée. Cette valeur est équivalente à `auto 180deg`.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   width: 40px;
   height: 40px;
   background: #2BC4A2;
@@ -79,43 +72,31 @@ div:nth-child(3) {
   100% {
     offset-distance: 100%;
   }
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;&lt;/div&gt;
-&lt;div&gt;&lt;/div&gt;
-&lt;div&gt;&lt;/div&gt;</pre>
+```html
+<div></div>
+<div></div>
+<div></div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples')}}</p>
+{{EmbedLiveSample('Exemples')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Motion Path Level 1', '#offset-rotate-property', 'offset-rotate')}}</td>
-   <td>{{Spec2('Motion Path Level 1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | État                                         | Commentaires         |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
+| {{SpecName('Motion Path Level 1', '#offset-rotate-property', 'offset-rotate')}} | {{Spec2('Motion Path Level 1')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<div class="note">
-<p><strong>Note :</strong> Les versions antérieures de la spécification utilisait le nom <code>motion-rotation</code> pour cette propriété.</p>
-</div>
+> **Note :** Les versions antérieures de la spécification utilisait le nom `motion-rotation` pour cette propriété.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.offset-rotate")}}</p>
+{{Compat("css.properties.offset-rotate")}}

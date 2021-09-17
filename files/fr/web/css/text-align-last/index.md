@@ -7,15 +7,16 @@ tags:
   - Reference
 translation_of: Web/CSS/text-align-last
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>text-align-last</code></strong> définit la façon dont la dernière ligne d'un bloc, ou une ligne avant un retour à la ligne forcé, doit être alignée.</p>
+La propriété **`text-align-last`** définit la façon dont la dernière ligne d'un bloc, ou une ligne avant un retour à la ligne forcé, doit être alignée.
 
-<div>{{EmbedInteractiveExample("pages/css/text-align-last.html")}}</div>
+{{EmbedInteractiveExample("pages/css/text-align-last.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs utilisant un mot-clé */
+```css
+/* Valeurs utilisant un mot-clé */
 text-align-last: auto;
 text-align-last: start;
 text-align-last: end;
@@ -28,83 +29,69 @@ text-align-last: justify;
 text-align-last: inherit;
 text-align-last: initial;
 text-align-last: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>La ligne concernée est alignée selon la valeur de {{cssxref("text-align")}} sauf si {{cssxref("text-align")}} vaut <code>justify</code>, auquel cas, cela aura le même effet que d'utiliser la valeur <code>start</code> pour <code>text-align-last</code>.</dd>
- <dt><code>start</code></dt>
- <dd>Cette valeur a le même effet que la valeur <code>left</code> si la direction du texte va de gauche à droite ou le même effet que <code>right</code> si la direction du texte va de droite à gauche.</dd>
- <dt><code>end</code></dt>
- <dd>Cette valeur a le même effet que la valeur <code>right</code> si la direction du texte va de gauche à droite ou le même effet que <code>left</code> si la direction du texte va de droite à gauche.</dd>
- <dt><code>left</code></dt>
- <dd>Les contenus en ligne (<em>inline</em>) sont alignés sur le bord gauche de la boîte contenant la ligne.</dd>
- <dt><code>right</code></dt>
- <dd>Les contenus en ligne (<em>inline</em>) sont alignés sur le bord droit de la boîte contenant la ligne.</dd>
- <dt><code>center</code></dt>
- <dd>Les contenus en ligne (<em>inline</em>) sont horizontalement centrés par rapport à la boîte contenant la ligne.</dd>
- <dt><code>justify</code></dt>
- <dd>Le texte est justifié. Les bords gauche et droit du texte sont alignés avec les bord gauche et droit du paragraphe.</dd>
-</dl>
+- `auto`
+  - : La ligne concernée est alignée selon la valeur de {{cssxref("text-align")}} sauf si {{cssxref("text-align")}} vaut `justify`, auquel cas, cela aura le même effet que d'utiliser la valeur `start` pour `text-align-last`.
+- `start`
+  - : Cette valeur a le même effet que la valeur `left` si la direction du texte va de gauche à droite ou le même effet que `right` si la direction du texte va de droite à gauche.
+- `end`
+  - : Cette valeur a le même effet que la valeur `right` si la direction du texte va de gauche à droite ou le même effet que `left` si la direction du texte va de droite à gauche.
+- `left`
+  - : Les contenus en ligne (_inline_) sont alignés sur le bord gauche de la boîte contenant la ligne.
+- `right`
+  - : Les contenus en ligne (_inline_) sont alignés sur le bord droit de la boîte contenant la ligne.
+- `center`
+  - : Les contenus en ligne (_inline_) sont horizontalement centrés par rapport à la boîte contenant la ligne.
+- `justify`
+  - : Le texte est justifié. Les bords gauche et droit du texte sont alignés avec les bord gauche et droit du paragraphe.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="exemple"&gt;
+```html
+<p class="exemple">
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
   quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
   consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">.exemple {
+```css
+.exemple {
   text-align: justify;
   text-align-last: center;
 }
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples","100%","100%")}}</p>
+{{EmbedLiveSample("Exemples","100%","100%")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Text', '#text-align-last-property', 'text-align-last')}}</td>
-   <td>{{Spec2('CSS3 Text')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | État                         | Commentaires         |
+| ------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{SpecName('CSS3 Text', '#text-align-last-property', 'text-align-last')}} | {{Spec2('CSS3 Text')}} | Définition initiale. |
 
-<div>{{cssinfo}}</div>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.text-align-last")}}</p>
+{{Compat("css.properties.text-align-last")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("text-align")}}</li>
-</ul>
+- {{cssxref("text-align")}}

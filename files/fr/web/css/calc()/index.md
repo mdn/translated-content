@@ -8,54 +8,52 @@ tags:
   - Web
 translation_of: Web/CSS/calc()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La fonction <strong><code>calc()</code></strong> peut être utilisée à n'importe quel endroit où une {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;percentage&gt;")}} ou {{cssxref("&lt;integer&gt;")}} est nécessaire. Grâce à <code>calc()</code>, il est possible de réaliser des calculs pour déterminer la valeur d'une propriété CSS.</p>
+La fonction **`calc()`** peut être utilisée à n'importe quel endroit où une {{cssxref("&lt;length&gt;")}}, {{cssxref("&lt;frequency&gt;")}}, {{cssxref("&lt;angle&gt;")}}, {{cssxref("&lt;time&gt;")}}, {{cssxref("&lt;number&gt;")}}, {{cssxref("&lt;percentage&gt;")}} ou {{cssxref("&lt;integer&gt;")}} est nécessaire. Grâce à `calc()`, il est possible de réaliser des calculs pour déterminer la valeur d'une propriété CSS.
 
-<pre class="brush: css no-line-numbers">/* property: calc(expression) */
+```css
+/* property: calc(expression) */
 width: calc(100% - 80px);
-</pre>
+```
 
-<p>Il est aussi possible d'utiliser <code>calc()</code> dans une autre fonction <code>calc()</code> et ainsi d'imbriquer les fonctions les unes dans les autres.</p>
+Il est aussi possible d'utiliser `calc()` dans une autre fonction `calc()` et ainsi d'imbriquer les fonctions les unes dans les autres.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Une fonction qui prend comme seul argument une expression mathématique et dont le résultat est utilisé comme valeur de retour. L'expression peut être n'importe quelle expression combinant les différents opérateurs suivants, en respectant l'ordre de priorité des opérateurs :</p>
+Une fonction qui prend comme seul argument une expression mathématique et dont le résultat est utilisé comme valeur de retour. L'expression peut être n'importe quelle expression combinant les différents opérateurs suivants, en respectant l'ordre de priorité des opérateurs :
 
-<dl>
- <dt><code>+</code></dt>
- <dd>Addition</dd>
- <dt><code>-</code></dt>
- <dd>Soustraction</dd>
- <dt><code>*</code></dt>
- <dd>Multiplication. Au moins un des arguments doit être un {{cssxref("&lt;number&gt;")}}.</dd>
- <dt><code>/</code></dt>
- <dd>Division. Il n'est pas possible de diviser par une longueur. Ceci peut être utilisé, par exemple, pour que votre longueur soit une fraction d'une longueur existante. L'opérande droit doit être une valeur de type {{cssxref("&lt;number&gt;")}}.</dd>
-</dl>
+- `+`
+  - : Addition
+- `-`
+  - : Soustraction
+- `*`
+  - : Multiplication. Au moins un des arguments doit être un {{cssxref("&lt;number&gt;")}}.
+- `/`
+  - : Division. Il n'est pas possible de diviser par une longueur. Ceci peut être utilisé, par exemple, pour que votre longueur soit une fraction d'une longueur existante. L'opérande droit doit être une valeur de type {{cssxref("&lt;number&gt;")}}.
 
-<p>L'opérande dans l'expression peut utiliser n'importe quelle syntaxe de longueur. Vous pouvez utiliser des unités différentes pour chacune des valeurs si vous le souhaitez. Vous pouvez aussi utiliser les parenthèses pour définir l'ordre des opérations.</p>
+L'opérande dans l'expression peut utiliser n'importe quelle syntaxe de longueur. Vous pouvez utiliser des unités différentes pour chacune des valeurs si vous le souhaitez. Vous pouvez aussi utiliser les parenthèses pour définir l'ordre des opérations.
 
-<h3 id="Notes">Notes</h3>
+### Notes
 
-<ul>
- <li>Une division par zéro aboutit à une erreur qui est générée par le parseur HTML.</li>
- <li>Les opérateurs <code>+</code> et <code>-</code> <strong>doivent toujours être entouré d'espaces</strong>. Par exemple l'opérande de <code>calc(50% -8px)</code> sera interprété comme une valeur en pourcentage suivie d'une longueur négative, l'expression est invalide. L'opérande de <code>calc(50% - 8px)</code> est une valeur en pourcentage suivie d'un signe moins et d'une longueur. Et ainsi, <code>calc(8px + -50%)</code> est interprété comme une longueur suivi d'un signe plus et d'un pourcentage négatif.</li>
- <li>Les opérateurs <code>*</code> et <code>/</code> ne nécessitent pas d'espaces, mais les ajouter pour conserver la cohérence est recommandé.</li>
- <li>Les expressions mathématiques manipulant des pourcentages pour les hauteurs et largeurs de colonnes d'un tableau, de groupes de colonne, de lignes d'un tableau ou de groupes de lignes contribuant à un tableau organisé de façon automatique ou en disposition fixe pourront être traitées comme si c'était <code>auto</code> qui avait été utilisé.</li>
- <li>Il est possible d'imbriquer des fonctions <code>calc()</code>, auquel cas, les appels « internes » sont considérés comme des parenthèses.</li>
-</ul>
+- Une division par zéro aboutit à une erreur qui est générée par le parseur HTML.
+- Les opérateurs `+` et `-` **doivent toujours être entouré d'espaces**. Par exemple l'opérande de `calc(50% -8px)` sera interprété comme une valeur en pourcentage suivie d'une longueur négative, l'expression est invalide. L'opérande de `calc(50% - 8px)` est une valeur en pourcentage suivie d'un signe moins et d'une longueur. Et ainsi, `calc(8px + -50%)` est interprété comme une longueur suivi d'un signe plus et d'un pourcentage négatif.
+- Les opérateurs `*` et `/` ne nécessitent pas d'espaces, mais les ajouter pour conserver la cohérence est recommandé.
+- Les expressions mathématiques manipulant des pourcentages pour les hauteurs et largeurs de colonnes d'un tableau, de groupes de colonne, de lignes d'un tableau ou de groupes de lignes contribuant à un tableau organisé de façon automatique ou en disposition fixe pourront être traitées comme si c'était `auto` qui avait été utilisé.
+- Il est possible d'imbriquer des fonctions `calc()`, auquel cas, les appels « internes » sont considérés comme des parenthèses.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Positionner_un_objet_sur_l’écran_avec_une_marge">Positionner un objet sur l’écran avec une marge</h3>
+### Positionner un objet sur l’écran avec une marge
 
-<p><code>calc()</code> rend le positionnement des objets facile en définissant une marge. Dans cet exemple, le CSS crée une bannière qui s'étend sur toute la fenêtre, avec un espace de 40 pixels entre chaque bout de la bannière et les bords de la fenêtre :</p>
+`calc()` rend le positionnement des objets facile en définissant une marge. Dans cet exemple, le CSS crée une bannière qui s'étend sur toute la fenêtre, avec un espace de 40 pixels entre chaque bout de la bannière et les bords de la fenêtre :
 
-<pre class="brush: css">.banniere {
+```css
+.banniere {
   position: absolute;
   left: 40px;
   width: calc(100% - 80px);
@@ -66,19 +64,22 @@ width: calc(100% - 80px);
   text-align: center;
   box-sizing: border-box;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="banniere"&gt;C'est une bannière !&lt;/div&gt;</pre>
+```html
+<div class="banniere">C'est une bannière !</div>
+```
 
-<p>{{EmbedLiveSample("Positionner_un_objet_sur_l’écran_avec_une_marge", '100%', '60')}}</p>
+{{EmbedLiveSample("Positionner_un_objet_sur_l’écran_avec_une_marge", '100%', '60')}}
 
-<h3 id="Dimensionner_automatiquement_les_champs_d’un_formulaire_pour_s’ajuster_au_conteneur">Dimensionner automatiquement les champs d’un formulaire pour s’ajuster au conteneur</h3>
+### Dimensionner automatiquement les champs d’un formulaire pour s’ajuster au conteneur
 
-<p>Un autre cas d'utilisation de <code>calc()</code> est d'aider à s'assurer que les champs d'un formulaire s'adaptent à l'espace disponible, sans s'étendre au-delà de la bordure du conteneur, tout en conservant une marge appropriée.</p>
+Un autre cas d'utilisation de `calc()` est d'aider à s'assurer que les champs d'un formulaire s'adaptent à l'espace disponible, sans s'étendre au-delà de la bordure du conteneur, tout en conservant une marge appropriée.
 
-<p>Regardons un peu le CSS :</p>
+Regardons un peu le CSS :
 
-<pre class="brush: css">input {
+```css
+input {
   padding: 2px;
   display: block;
   width: calc(100% - 1em);
@@ -89,73 +90,61 @@ width: calc(100% - 80px);
   border: 1px solid black;
   padding: 4px;
 }
-</pre>
+```
 
-<p>Dans ce cas, le formulaire est lui-même défini pour utiliser un sixième de la taille disponible de la fenêtre. Ensuite, pour s'assurer que les champs gardent une taille appropriée, nous utilisons <code>calc()</code> pour définir qu'ils doivent être de la largeur de leur conteneur moins 1em. Enfin, le HTML suivant utilise le CSS défini :</p>
+Dans ce cas, le formulaire est lui-même défini pour utiliser un sixième de la taille disponible de la fenêtre. Ensuite, pour s'assurer que les champs gardent une taille appropriée, nous utilisons `calc()` pour définir qu'ils doivent être de la largeur de leur conteneur moins 1em. Enfin, le HTML suivant utilise le CSS défini :
 
-<pre class="brush: html">&lt;form&gt;
-  &lt;div id="boiteformulaire"&gt;
-  &lt;label&gt;Tapez quelque chose :&lt;/label&gt;
-  &lt;input type="text"&gt;
-  &lt;/div&gt;
-&lt;/form&gt;
-</pre>
+```html
+<form>
+  <div id="boiteformulaire">
+  <label>Tapez quelque chose :</label>
+  <input type="text">
+  </div>
+</form>
+```
 
-<p>{{EmbedLiveSample("Dimensionner_automatiquement_les_champs_d’un_formulaire_pour_s’ajuster_au_conteneur", '100%', '80')}}</p>
+{{EmbedLiveSample("Dimensionner_automatiquement_les_champs_d’un_formulaire_pour_s’ajuster_au_conteneur", '100%', '80')}}
 
-<h3 id="Imbriquer_plusieurs_calc_grâce_aux_variables_CSS">Imbriquer plusieurs <code>calc()</code> grâce aux variables CSS</h3>
+### Imbriquer plusieurs `calc()` grâce aux variables CSS
 
-<p>Prenons la feuille de style suivante :</p>
+Prenons la feuille de style suivante :
 
-<pre class="brush: css">.toto {
+```css
+.toto {
   --largeurA: 100px;
   --largeurB: calc(var(--largeurA) / 2);
   --largeurC: calc(var(--largeurB) / 2);
   width: var(--largeurC);
-}</pre>
+}
+```
 
-<p>Une fois que toutes les variables sont développées, <code>largeurC</code> aura la valeur <code>calc( calc( 100px / 2) / 2)</code> et sera ensuite affectée à la propriété {{cssxref("width")}} des éléments de la classe <code>toto</code>. Tous les <code>calc()</code> imbriqués, quel que soit leur nombre, seront convertis en parenthèses, la valeur sera donc calculée comme <code>calc( ( 100px / 2) / 2)</code> (soit 25px). En résumé, utiliser des <code>calc()</code> imbriqués revient à utiliser des parenthèses.</p>
+Une fois que toutes les variables sont développées, `largeurC` aura la valeur `calc( calc( 100px / 2) / 2)` et sera ensuite affectée à la propriété {{cssxref("width")}} des éléments de la classe `toto`. Tous les `calc()` imbriqués, quel que soit leur nombre, seront convertis en parenthèses, la valeur sera donc calculée comme `calc( ( 100px / 2) / 2)` (soit 25px). En résumé, utiliser des `calc()` imbriqués revient à utiliser des parenthèses.
 
-<h2 id="Accessibilité">Accessibilité</h2>
+## Accessibilité
 
-<p>Lorsque vous utilisez <code>calc()</code> pour définir la taille d'un texte, assurez-vous d'inclure <a href="/fr/docs/Web/CSS/length#Unités_de_longueur_relatives">une unité de longueur relative</a>. Par exemple :</p>
+Lorsque vous utilisez `calc()` pour définir la taille d'un texte, assurez-vous d'inclure [une unité de longueur relative](/fr/docs/Web/CSS/length#Unités_de_longueur_relatives). Par exemple :
 
-<pre class="brush: css">h1 {
+```css
+h1 {
   font-size: calc(1.5rem + 3vw);
-}</pre>
+}
+```
 
-<p>De cette façon, la taille du texte s'adaptera si le lecteur zoome/dézoome.</p>
+De cette façon, la taille du texte s'adaptera si le lecteur zoome/dézoome.
 
-<ul>
- <li><a href="/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">Comprendre les règles WCAG 1.4</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html"><em>Understanding Success Criterion 1.4.4 - W3C Understanding WCAG 2.0</em> (en anglais)</a></li>
-</ul>
+- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [_Understanding Success Criterion 1.4.4 - W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Values', '#calc-notation', 'calc()')}}</td>
-   <td>{{Spec2('CSS3 Values')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                            | État                             | Commentaires         |
+| ------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName('CSS3 Values', '#calc-notation', 'calc()')}} | {{Spec2('CSS3 Values')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.types.calc")}}</p>
+{{Compat("css.types.calc")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="https://hacks.mozilla.org/2010/06/css3-calc/" title="Firefox 4: CSS3 calc() ✩ Mozilla Hacks – the Web developer blog">Firefox 4 : CSS3 <code>calc()</code> sur Mozilla Hacks</a></li>
-</ul>
+- [Firefox 4 : CSS3 `calc()` sur Mozilla Hacks](https://hacks.mozilla.org/2010/06/css3-calc/ "Firefox 4: CSS3 calc() ✩ Mozilla Hacks – the Web developer blog")

@@ -7,11 +7,12 @@ tags:
   - Règle @
 translation_of: Web/CSS/@font-feature-values
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La <a href="/fr/docs/Web/CSS/At-rule">règle @</a> <strong><code>@font-feature-values</code></strong> permet aux auteurs d'utiliser un nom personnalisé dans une règle utilisant la propriété {{cssxref("font-variant-alternates")}} afin de régler finement les caractéristiques OpenType. Elle permet de simplifier les feuilles de style lorsqu'on utilise plusieurs polices.</p>
+La [règle @](/fr/docs/Web/CSS/At-rule) **`@font-feature-values`** permet aux auteurs d'utiliser un nom personnalisé dans une règle utilisant la propriété {{cssxref("font-variant-alternates")}} afin de régler finement les caractéristiques OpenType. Elle permet de simplifier les feuilles de style lorsqu'on utilise plusieurs polices.
 
-<pre class="brush: css">@font-feature-values Font One {
+```css
+@font-feature-values Font One {
 /* On active la caractéristique nice-style
    sur Font One */
   @styleset {
@@ -32,58 +33,41 @@ translation_of: Web/CSS/@font-feature-values
 .nice-look {
   font-variant-alternates: styleset(nice-style);
 }
-</pre>
+```
 
-<p>La règle @ <code>@font-feature-values</code> peut être utilisée au plus haut niveau d'une feuille de style et aussi au sein <a href="/fr/docs/Web/CSS/At-rule" title="CSS/At-rule#Conditional_Group_Rules">d'un groupe de règles conditionnelles</a>.</p>
+La règle @ `@font-feature-values` peut être utilisée au plus haut niveau d'une feuille de style et aussi au sein [d'un groupe de règles conditionnelles](/fr/docs/Web/CSS/At-rule "CSS/At-rule#Conditional_Group_Rules").
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Blocs_liés_aux_caractéristiques">Blocs liés aux caractéristiques</h3>
+### Blocs liés aux caractéristiques
 
-<dl>
- <dt><code>@swash</code></dt>
- <dd>Indique le nom d'une caractéristique qui fonctionnera avec la notation fonctionnelle {{cssxref("font-variant-alternates", "swash()", "#swash()")}}. Une telle caractéristique est définie avec une seule valeur : <code>ident1: 2</code> est valide alors que <code>ident2: 2 4</code> est invalide.</dd>
- <dt><code>@annotation</code></dt>
- <dd>Indique le nom d'une caractéristique qui fonctionnera avec la notation fonctionnelle {{cssxref("font-variant-alternates", "annotation()", "#annotation()")}}. Une telle caractéristique est définie avec une seule valeur : <code>ident1: 2</code> est valide alors que <code>ident2: 2 4</code> est invalide.</dd>
- <dt><code>@ornaments</code></dt>
- <dd>Indique le nom d'une caractéristique qui fonctionnera avec la notation fonctionnelle {{cssxref("font-variant-alternates", "ornaments()", "#ornaments()")}}. La caractéristique d'ornement est définie avec une seule valeur : <code>ident1: 2</code> est valide alors que <code>ident2: 2 4</code> est invalide.</dd>
- <dt><code>@stylistic</code></dt>
- <dd>Indique le nom d'une caractéristique qui fonctionnera avec la notation fonctionnelle {{cssxref("font-variant-alternates", "stylistic()", "#stylistic()")}}. Une telle caractéristique est définie avec une seule valeur : <code>ident1: 2</code> est valide alors que <code>ident2: 2 4</code> est invalide.</dd>
- <dt><code>@styleset</code></dt>
- <dd>Indique le nom d'une caractéristique qui fonctionnera avec la notation fonctionnelle {{cssxref("font-variant-alternates", "styleset()", "#styleset()")}}. Plusieurs valeurs peuvent être utilisées pour cette caractéristique : <code>ident1: 2 4 12 1</code> correspondra aux valeurs OpenType <code>ss02</code>, <code>ss04</code>, <code>ss12</code>, <code>ss01</code>. Les valeurs supérieures à <code>99</code> sont valides mais ne correspondent à aucune valeur OpenType et sont donc ignorées.</dd>
- <dt><code>@character-variant</code></dt>
- <dd>Indique le nom d'une caractéristique qui fonctionnera avec la notation fonctionnelle {{cssxref("font-variant-alternates", "character-variant()", "#character-variant()")}}. Pour cette définition, on peut utiliser une ou deux valeurs : <code>ident1: 2</code>  correspond à <code>cv02=1</code> et <code>ident2: 2 4</code> correspond à  <code>cv02)4</code>, en revanche <code>ident2: 2 4 5</code> est invalide.</dd>
-</dl>
+- `@swash`
+  - : Indique le nom d'une caractéristique qui fonctionnera avec la notation fonctionnelle {{cssxref("font-variant-alternates", "swash()", "#swash()")}}. Une telle caractéristique est définie avec une seule valeur : `ident1: 2` est valide alors que `ident2: 2 4` est invalide.
+- `@annotation`
+  - : Indique le nom d'une caractéristique qui fonctionnera avec la notation fonctionnelle {{cssxref("font-variant-alternates", "annotation()", "#annotation()")}}. Une telle caractéristique est définie avec une seule valeur : `ident1: 2` est valide alors que `ident2: 2 4` est invalide.
+- `@ornaments`
+  - : Indique le nom d'une caractéristique qui fonctionnera avec la notation fonctionnelle {{cssxref("font-variant-alternates", "ornaments()", "#ornaments()")}}. La caractéristique d'ornement est définie avec une seule valeur : `ident1: 2` est valide alors que `ident2: 2 4` est invalide.
+- `@stylistic`
+  - : Indique le nom d'une caractéristique qui fonctionnera avec la notation fonctionnelle {{cssxref("font-variant-alternates", "stylistic()", "#stylistic()")}}. Une telle caractéristique est définie avec une seule valeur : `ident1: 2` est valide alors que `ident2: 2 4` est invalide.
+- `@styleset`
+  - : Indique le nom d'une caractéristique qui fonctionnera avec la notation fonctionnelle {{cssxref("font-variant-alternates", "styleset()", "#styleset()")}}. Plusieurs valeurs peuvent être utilisées pour cette caractéristique : `ident1: 2 4 12 1` correspondra aux valeurs OpenType `ss02`, `ss04`, `ss12`, `ss01`. Les valeurs supérieures à `99` sont valides mais ne correspondent à aucune valeur OpenType et sont donc ignorées.
+- `@character-variant`
+  - : Indique le nom d'une caractéristique qui fonctionnera avec la notation fonctionnelle {{cssxref("font-variant-alternates", "character-variant()", "#character-variant()")}}. Pour cette définition, on peut utiliser une ou deux valeurs : `ident1: 2`  correspond à `cv02=1` et `ident2: 2 4` correspond à  `cv02)4`, en revanche `ident2: 2 4 5` est invalide.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#font-feature-values', '@font-feature-values')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                             | Commentaires         |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('CSS3 Fonts', '#font-feature-values', '@font-feature-values')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.at-rules.font-feature-values")}}</p>
+{{Compat("css.at-rules.font-feature-values")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>La propriété {{cssxref("font-variant-alternates")}} qui utilise la valeur définie par cette règle @.</li>
-</ul>
+- La propriété {{cssxref("font-variant-alternates")}} qui utilise la valeur définie par cette règle @.

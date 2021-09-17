@@ -1,38 +1,38 @@
 ---
 title: ':-moz-user-disabled'
-slug: 'Web/CSS/:-moz-user-disabled'
+slug: Web/CSS/:-moz-user-disabled
 tags:
   - CSS
   - Non-standard
   - Pseudo-classe
   - Reference
-translation_of: 'Web/CSS/:-moz-user-disabled'
+translation_of: Web/CSS/:-moz-user-disabled
 ---
-<div>{{Non-standard_header}}{{CSSRef}}{{gecko_minversion_header("1.9")}}</div>
+{{Non-standard_header}}{{CSSRef}}{{gecko_minversion_header("1.9")}}
 
-<p>La <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classe CSS</a> <code>:-moz-user-disabled</code> correspond aux  éléments représentant des images qui n'ont pas été chargées car elles ont été entièrement désactivées dans les préférences de l'utilisateur.</p>
+La [pseudo-classe CSS](/fr/docs/Web/CSS/Pseudo-classes) `:-moz-user-disabled` correspond aux  éléments représentant des images qui n'ont pas été chargées car elles ont été entièrement désactivées dans les préférences de l'utilisateur.
 
-<p>Ce sélecteur est destiné principalement à une utilisation par les développeurs de thèmes.</p>
+Ce sélecteur est destiné principalement à une utilisation par les développeurs de thèmes.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">:-moz-user-disabled</pre>
+    :-moz-user-disabled
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: css">:-moz-user-disabled {
+```css
+:-moz-user-disabled {
   background-color: lightgray;
   padding: 8px;
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.</p>
+Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref(":-moz-broken")}}</li>
- <li>{{cssxref(":-moz-loading")}}</li>
- <li>{{cssxref(":-moz-suppressed")}}</li>
-</ul>
+- {{cssxref(":-moz-broken")}}
+- {{cssxref(":-moz-loading")}}
+- {{cssxref(":-moz-suppressed")}}

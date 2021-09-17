@@ -7,208 +7,210 @@ tags:
 translation_of: Web/CSS/CSS_Background_and_Borders/Box-shadow_generator
 original_slug: Web/CSS/CSS_Background_and_Borders/Box-shadow_generator
 ---
-<p>Cet outil visuel permet de construire des effets d'ombre et de générer du code pour la propriété {{cssxref("box-shadow")}} qui pourra être ajouté à votre feuille de style.</p>
+Cet outil visuel permet de construire des effets d'ombre et de générer du code pour la propriété {{cssxref("box-shadow")}} qui pourra être ajouté à votre feuille de style.
 
-<pre class="brush: html hidden">&lt;div id="container"&gt;
-    &lt;div class="group section"&gt;
-        &lt;div id="layer_manager"&gt;
-            &lt;div class="group section"&gt;
-                &lt;div class="button" data-type="add"&gt; &lt;/div&gt;
-                &lt;div class="button" data-type="move-up"&gt; &lt;/div&gt;
-                &lt;div class="button" data-type="move-down"&gt; &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div id="stack_container"&gt;&lt;/div&gt;
-        &lt;/div&gt;
+```html hidden
+<div id="container">
+    <div class="group section">
+        <div id="layer_manager">
+            <div class="group section">
+                <div class="button" data-type="add"> </div>
+                <div class="button" data-type="move-up"> </div>
+                <div class="button" data-type="move-down"> </div>
+            </div>
+            <div id="stack_container"></div>
+        </div>
 
-        &lt;div id="preview_zone"&gt;
-            &lt;div id="layer_menu" class="col span_12"&gt;
-                &lt;div class="button" id="element" data-type="subject" data-title="element"&gt; element &lt;/div&gt;
-                &lt;div class="button" id="before" data-type="subject" data-title=":before"&gt;
+        <div id="preview_zone">
+            <div id="layer_menu" class="col span_12">
+                <div class="button" id="element" data-type="subject" data-title="element"> element </div>
+                <div class="button" id="before" data-type="subject" data-title=":before">
                     :before
-                    &lt;span class="delete" data-type="disable"&gt;&lt;/span&gt;
-                &lt;/div&gt;
-                &lt;div class="button" id="after" data-type="subject" data-title=":after"&gt;
+                    <span class="delete" data-type="disable"></span>
+                </div>
+                <div class="button" id="after" data-type="subject" data-title=":after">
                     :after
-                    &lt;span class="delete" data-type="disable"&gt;&lt;/span&gt;
-                &lt;/div&gt;
-                &lt;div class="ui-checkbox" data-topic='before' data-label=":before"&gt;&lt;/div&gt;
-                &lt;div class="ui-checkbox" data-topic='after' data-label=":after"&gt;&lt;/div&gt;
-            &lt;/div&gt;
+                    <span class="delete" data-type="disable"></span>
+                </div>
+                <div class="ui-checkbox" data-topic='before' data-label=":before"></div>
+                <div class="ui-checkbox" data-topic='after' data-label=":after"></div>
+            </div>
 
-            &lt;div id="preview"&gt;
-                &lt;div id="obj-element"&gt;
-                    &lt;div class="content"&gt; &lt;/div&gt;
-                    &lt;div id="obj-before"&gt; &lt;/div&gt;
-                    &lt;div id="obj-after"&gt; &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
+            <div id="preview">
+                <div id="obj-element">
+                    <div class="content"> </div>
+                    <div id="obj-before"> </div>
+                    <div id="obj-after"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    &lt;div id="controls" class="group section"&gt;
-        &lt;div class="wrap-left"&gt;
-            &lt;div class="colorpicker category"&gt;
-                &lt;div class="title"&gt; &lt;/div&gt;
-                &lt;div id="colorpicker" class="group"&gt;
-                    &lt;div id="gradient" class="gradient"&gt;
-                        &lt;div id="gradient_picker"&gt; &lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div id="hue" data-topic="hue" class="hue"&gt;
-                        &lt;div id="hue_selector"&gt; &lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class="info"&gt;
-                        &lt;div class="input" data-topic="hue" data-title='H:' data-action="HSV"&gt;&lt;/div&gt;
-                        &lt;div class="input" data-topic="saturation" data-title='S:' data-action="HSV"&gt;&lt;/div&gt;
-                        &lt;div class="input" data-topic="value" data-title='V:' data-action="HSV"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class="alpha"&gt;
-                        &lt;div id="alpha" data-topic="alpha"&gt;
-                            &lt;div id="alpha_selector"&gt; &lt;/div&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class="info"&gt;
-                        &lt;div class="input" data-topic="r" data-title='R:' data-action="RGB"&gt;&lt;/div&gt;
-                        &lt;div class="input" data-topic="g" data-title='G:' data-action="RGB"&gt;&lt;/div&gt;
-                        &lt;div class="input" data-topic="b" data-title='B:' data-action="RGB"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class="preview block"&gt;
-                        &lt;div id="output_color"&gt; &lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class="block info"&gt;
-                        &lt;div class="input" data-topic="a" data-title='alpha:' data-action="alpha"&gt;&lt;/div&gt;
-                        &lt;div class="input" data-topic="hexa" data-title='' data-action="hexa"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
+    <div id="controls" class="group section">
+        <div class="wrap-left">
+            <div class="colorpicker category">
+                <div class="title"> </div>
+                <div id="colorpicker" class="group">
+                    <div id="gradient" class="gradient">
+                        <div id="gradient_picker"> </div>
+                    </div>
+                    <div id="hue" data-topic="hue" class="hue">
+                        <div id="hue_selector"> </div>
+                    </div>
+                    <div class="info">
+                        <div class="input" data-topic="hue" data-title='H:' data-action="HSV"></div>
+                        <div class="input" data-topic="saturation" data-title='S:' data-action="HSV"></div>
+                        <div class="input" data-topic="value" data-title='V:' data-action="HSV"></div>
+                    </div>
+                    <div class="alpha">
+                        <div id="alpha" data-topic="alpha">
+                            <div id="alpha_selector"> </div>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="input" data-topic="r" data-title='R:' data-action="RGB"></div>
+                        <div class="input" data-topic="g" data-title='G:' data-action="RGB"></div>
+                        <div class="input" data-topic="b" data-title='B:' data-action="RGB"></div>
+                    </div>
+                    <div class="preview block">
+                        <div id="output_color"> </div>
+                    </div>
+                    <div class="block info">
+                        <div class="input" data-topic="a" data-title='alpha:' data-action="alpha"></div>
+                        <div class="input" data-topic="hexa" data-title='' data-action="hexa"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        &lt;div class="wrap-right"&gt;
+        <div class="wrap-right">
 
-            &lt;div id="shadow_properties" class="category"&gt;
-                &lt;div class="title"&gt; Propriétés d'ombre &lt;/div&gt;
-                &lt;div class="group"&gt;
-                    &lt;div class="group property"&gt;
-                        &lt;div class="ui-slider-name"&gt; inset &lt;/div&gt;
-                        &lt;div class="ui-checkbox" data-topic='inset'&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class="slidergroup"&gt;
-                        &lt;div class="ui-slider-name"&gt; Position x &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="posX" data-type="sub"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider" data-topic="posX"
-                            data-min="-500" data-max="500" data-step="1"&gt; &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="posX" data-type="add"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider-input" data-topic="posX" data-unit="px"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class="slidergroup"&gt;
-                        &lt;div class="ui-slider-name"&gt; Position y &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="posY" data-type="sub"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider" data-topic="posY"
-                            data-min="-500" data-max="500" data-step="1"&gt; &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="posY" data-type="add"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider-input" data-topic="posY" data-unit="px"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class="slidergroup"&gt;
-                        &lt;div class="ui-slider-name"&gt; Blur &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="blur" data-type="sub"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider" data-topic="blur"
-                            data-min="0" data-max="200" data-step="1"&gt; &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="blur" data-type="add"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider-input" data-topic="blur" data-unit="px"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class="slidergroup"&gt;
-                        &lt;div class="ui-slider-name"&gt; Spread &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="spread" data-type="sub"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider" data-topic="spread"
-                            data-min="-100"    data-max="100" data-step="1" data-value="50"&gt;
-                        &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="spread" data-type="add"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider-input" data-topic="spread" data-unit="px"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
+            <div id="shadow_properties" class="category">
+                <div class="title"> Propriétés d'ombre </div>
+                <div class="group">
+                    <div class="group property">
+                        <div class="ui-slider-name"> inset </div>
+                        <div class="ui-checkbox" data-topic='inset'></div>
+                    </div>
+                    <div class="slidergroup">
+                        <div class="ui-slider-name"> Position x </div>
+                        <div class="ui-slider-btn-set" data-topic="posX" data-type="sub"></div>
+                        <div class="ui-slider" data-topic="posX"
+                            data-min="-500" data-max="500" data-step="1"> </div>
+                        <div class="ui-slider-btn-set" data-topic="posX" data-type="add"></div>
+                        <div class="ui-slider-input" data-topic="posX" data-unit="px"></div>
+                    </div>
+                    <div class="slidergroup">
+                        <div class="ui-slider-name"> Position y </div>
+                        <div class="ui-slider-btn-set" data-topic="posY" data-type="sub"></div>
+                        <div class="ui-slider" data-topic="posY"
+                            data-min="-500" data-max="500" data-step="1"> </div>
+                        <div class="ui-slider-btn-set" data-topic="posY" data-type="add"></div>
+                        <div class="ui-slider-input" data-topic="posY" data-unit="px"></div>
+                    </div>
+                    <div class="slidergroup">
+                        <div class="ui-slider-name"> Blur </div>
+                        <div class="ui-slider-btn-set" data-topic="blur" data-type="sub"></div>
+                        <div class="ui-slider" data-topic="blur"
+                            data-min="0" data-max="200" data-step="1"> </div>
+                        <div class="ui-slider-btn-set" data-topic="blur" data-type="add"></div>
+                        <div class="ui-slider-input" data-topic="blur" data-unit="px"></div>
+                    </div>
+                    <div class="slidergroup">
+                        <div class="ui-slider-name"> Spread </div>
+                        <div class="ui-slider-btn-set" data-topic="spread" data-type="sub"></div>
+                        <div class="ui-slider" data-topic="spread"
+                            data-min="-100"    data-max="100" data-step="1" data-value="50">
+                        </div>
+                        <div class="ui-slider-btn-set" data-topic="spread" data-type="add"></div>
+                        <div class="ui-slider-input" data-topic="spread" data-unit="px"></div>
+                    </div>
+                </div>
+            </div>
 
-            &lt;div id="element_properties" class="category"&gt;
-                &lt;div class="title"&gt; Propriétés d'ombre &lt;/div&gt;
-                &lt;div class="group"&gt;
-                    &lt;div class="group property"&gt;
-                        &lt;div class="ui-slider-name"&gt; border &lt;/div&gt;
-                        &lt;div class="ui-checkbox" data-topic='border-state' data-state="true"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div id="z-index" class="slidergroup"&gt;
-                        &lt;div class="ui-slider-name"&gt; z-index &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="z-index" data-type="sub"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider" data-topic="z-index"
-                            data-min="-10" data-max="10" data-step="1"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="z-index" data-type="add"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider-input" data-topic="z-index"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class="slidergroup"&gt;
-                        &lt;div class="ui-slider-name"&gt; top &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="top" data-type="sub"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider" data-topic="top"
-                            data-min="-500" data-max="500" data-step="1"&gt; &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="top" data-type="add"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider-input" data-topic="top" data-unit="px"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class="slidergroup"&gt;
-                        &lt;div class="ui-slider-name"&gt; left &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="left" data-type="sub"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider" data-topic="left"
-                            data-min="-300" data-max="700" data-step="1"&gt; &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="left" data-type="add"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider-input" data-topic="left" data-unit="px"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div id="transform_rotate" class="slidergroup"&gt;
-                        &lt;div class="ui-slider-name"&gt; Rotate &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="rotate" data-type="sub"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider" data-topic="rotate"
-                            data-min="-360" data-max="360" data-step="1" data-value="0"&gt;
-                        &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="rotate" data-type="add"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider-input" data-topic="rotate" data-unit="deg"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class="slidergroup"&gt;
-                        &lt;div class="ui-slider-name"&gt; Width &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="width" data-type="sub"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider" data-topic="width"
-                            data-min="0" data-max="1000" data-step="1" data-value="200"&gt;
-                        &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="width" data-type="add"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider-input" data-topic="width"  data-unit="px"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class="slidergroup"&gt;
-                        &lt;div class="ui-slider-name"&gt; Height &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="height" data-type="sub"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider" data-topic="height"
-                            data-min="0" data-max="400" data-step="1" data-value="200"&gt;
-                        &lt;/div&gt;
-                        &lt;div class="ui-slider-btn-set" data-topic="height" data-type="add"&gt;&lt;/div&gt;
-                        &lt;div class="ui-slider-input" data-topic="height" data-unit="px"&gt;&lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
+            <div id="element_properties" class="category">
+                <div class="title"> Propriétés d'ombre </div>
+                <div class="group">
+                    <div class="group property">
+                        <div class="ui-slider-name"> border </div>
+                        <div class="ui-checkbox" data-topic='border-state' data-state="true"></div>
+                    </div>
+                    <div id="z-index" class="slidergroup">
+                        <div class="ui-slider-name"> z-index </div>
+                        <div class="ui-slider-btn-set" data-topic="z-index" data-type="sub"></div>
+                        <div class="ui-slider" data-topic="z-index"
+                            data-min="-10" data-max="10" data-step="1"></div>
+                        <div class="ui-slider-btn-set" data-topic="z-index" data-type="add"></div>
+                        <div class="ui-slider-input" data-topic="z-index"></div>
+                    </div>
+                    <div class="slidergroup">
+                        <div class="ui-slider-name"> top </div>
+                        <div class="ui-slider-btn-set" data-topic="top" data-type="sub"></div>
+                        <div class="ui-slider" data-topic="top"
+                            data-min="-500" data-max="500" data-step="1"> </div>
+                        <div class="ui-slider-btn-set" data-topic="top" data-type="add"></div>
+                        <div class="ui-slider-input" data-topic="top" data-unit="px"></div>
+                    </div>
+                    <div class="slidergroup">
+                        <div class="ui-slider-name"> left </div>
+                        <div class="ui-slider-btn-set" data-topic="left" data-type="sub"></div>
+                        <div class="ui-slider" data-topic="left"
+                            data-min="-300" data-max="700" data-step="1"> </div>
+                        <div class="ui-slider-btn-set" data-topic="left" data-type="add"></div>
+                        <div class="ui-slider-input" data-topic="left" data-unit="px"></div>
+                    </div>
+                    <div id="transform_rotate" class="slidergroup">
+                        <div class="ui-slider-name"> Rotate </div>
+                        <div class="ui-slider-btn-set" data-topic="rotate" data-type="sub"></div>
+                        <div class="ui-slider" data-topic="rotate"
+                            data-min="-360" data-max="360" data-step="1" data-value="0">
+                        </div>
+                        <div class="ui-slider-btn-set" data-topic="rotate" data-type="add"></div>
+                        <div class="ui-slider-input" data-topic="rotate" data-unit="deg"></div>
+                    </div>
+                    <div class="slidergroup">
+                        <div class="ui-slider-name"> Width </div>
+                        <div class="ui-slider-btn-set" data-topic="width" data-type="sub"></div>
+                        <div class="ui-slider" data-topic="width"
+                            data-min="0" data-max="1000" data-step="1" data-value="200">
+                        </div>
+                        <div class="ui-slider-btn-set" data-topic="width" data-type="add"></div>
+                        <div class="ui-slider-input" data-topic="width"  data-unit="px"></div>
+                    </div>
+                    <div class="slidergroup">
+                        <div class="ui-slider-name"> Height </div>
+                        <div class="ui-slider-btn-set" data-topic="height" data-type="sub"></div>
+                        <div class="ui-slider" data-topic="height"
+                            data-min="0" data-max="400" data-step="1" data-value="200">
+                        </div>
+                        <div class="ui-slider-btn-set" data-topic="height" data-type="add"></div>
+                        <div class="ui-slider-input" data-topic="height" data-unit="px"></div>
+                    </div>
+                </div>
+            </div>
 
-            &lt;div id="output" class="category"&gt;
-                &lt;div id="menu" class="menu"&gt;&lt;/div&gt;
-                &lt;div class="title"&gt;    Code CSS &lt;/div&gt;
-                &lt;div class="group" style="border-top-left-radius: 0;"&gt;
-                    &lt;div class="output" data-topic="element" data-name="element"
-                        data-prop="width height background-color position=[relative] box-shadow"&gt;
-                    &lt;/div&gt;
-                    &lt;div class="output" data-topic="before" data-name="element:before"
-                        data-prop="content=[&amp;quot;&amp;quot;] position=[absolute] width height top left z-index background-color box-shadow transform -webkit-transform -ms-transform"&gt;
-                    &lt;/div&gt;
-                    &lt;div class="output" data-topic="after" data-name="element:after"
-                        data-prop="content=[&amp;quot;&amp;quot;] position=[absolute] width height top left z-index background-color box-shadow transform -webkit-transform -ms-transform"&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+            <div id="output" class="category">
+                <div id="menu" class="menu"></div>
+                <div class="title">    Code CSS </div>
+                <div class="group" style="border-top-left-radius: 0;">
+                    <div class="output" data-topic="element" data-name="element"
+                        data-prop="width height background-color position=[relative] box-shadow">
+                    </div>
+                    <div class="output" data-topic="before" data-name="element:before"
+                        data-prop="content=[&quot;&quot;] position=[absolute] width height top left z-index background-color box-shadow transform -webkit-transform -ms-transform">
+                    </div>
+                    <div class="output" data-topic="after" data-name="element:after"
+                        data-prop="content=[&quot;&quot;] position=[absolute] width height top left z-index background-color box-shadow transform -webkit-transform -ms-transform">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+```
 
-<pre class="brush: css hidden">/*  GRID OF TWELVE
+```css hidden
+/*  GRID OF TWELVE
  * ========================================================================== */
 
 .span_12 {
@@ -365,7 +367,7 @@ original_slug: Web/CSS/CSS_Background_and_Borders/Box-shadow_generator
 	cursor: pointer;
 }
 
-.ui-slider-input &gt; input {
+.ui-slider-input > input {
 	margin: 0 10px;
 	padding: 0;
 	width: 50px;
@@ -395,11 +397,11 @@ original_slug: Web/CSS/CSS_Background_and_Borders/Box-shadow_generator
 	user-select: none;
 }
 
-.ui-checkbox &gt; input {
+.ui-checkbox > input {
  	display: none;
 }
 
-.ui-checkbox &gt; label {
+.ui-checkbox > label {
 	font-size: 12px;
 	padding: 0.333em 1.666em 0.5em;
 	height: 1em;
@@ -427,11 +429,11 @@ original_slug: Web/CSS/CSS_Background_and_Borders/Box-shadow_generator
 	background-position: center right 10px;
 }
 
-.ui-checkbox &gt; label:hover {
+.ui-checkbox > label:hover {
 	cursor: pointer;
 }
 
-.ui-checkbox &gt; input:checked + label {
+.ui-checkbox > input:checked + label {
 	background-image: url("https://mdn.mozillademos.org/files/5681/checked.png");
 	background-color: #379B4A;
 }
@@ -721,7 +723,7 @@ body {
 
 /* Checkbox */
 
-#layer_menu .ui-checkbox &gt; label {
+#layer_menu .ui-checkbox > label {
 	height: 15px;
 	line-height: 17px;
 	font-weight: normal;
@@ -729,7 +731,7 @@ body {
 	margin: 0 5px 0 0;
 }
 
-#layer_menu .ui-checkbox &gt; input:checked + label {
+#layer_menu .ui-checkbox > input:checked + label {
 	display: none;
 }
 
@@ -816,11 +818,11 @@ body {
 	overflow: hidden;
 }
 
-.wrap-left &gt; * {
+.wrap-left > * {
 	float: left;
 }
 
-.wrap-right &gt; * {
+.wrap-right > * {
 	float: right;
 }
 
@@ -869,7 +871,7 @@ body {
 	text-align: right;
 }
 
-#controls .category &gt; .group {
+#controls .category > .group {
 	border: 1px solid #CCC;
 	border-radius: 3px;
 }
@@ -1018,7 +1020,7 @@ body {
 	z-index: 1;
 }
 
-#colorpicker .preview &gt; * {
+#colorpicker .preview > * {
 	width: 50%;
 	height: 100%;
 }
@@ -1034,7 +1036,7 @@ body {
 	float: right;
 }
 
-#colorpicker [data-topic="a"] &gt; span {
+#colorpicker [data-topic="a"] > span {
 	width: 50px;
 }
 
@@ -1043,11 +1045,11 @@ body {
 	margin: 10px 0 0 0;
 }
 
-#colorpicker [data-topic="hexa"] &gt; span {
+#colorpicker [data-topic="hexa"] > span {
 	display: none;
 }
 
-#colorpicker [data-topic="hexa"] &gt; input {
+#colorpicker [data-topic="hexa"] > input {
 	width: 85px;
 	padding: 2px 0;
 	-moz-box-sizing: border-box;
@@ -1165,10 +1167,10 @@ body {
 	width: 65%;
 	float: left;
 }
+```
 
-</pre>
+```js hidden
 
-<pre class="brush: js hidden"><code class="language-js">
 
 'use strict';
 
@@ -1190,9 +1192,9 @@ var SliderManager = (function SliderManager() {
 		var topic = node.getAttribute('data-topic');
 
 		this.min = min;
-		this.max = max &gt; 0 ? max : 100;
+		this.max = max > 0 ? max : 100;
 		this.step = step === 0 ? 1 : step;
-		this.value = value &lt;= max &amp;&amp; value &gt;= min ? value : (min + max) / 2 | 0;
+		this.value = value <= max && value >= min ? value : (min + max) / 2 | 0;
 		this.snap = snap === "true" ? true : false;
 		this.topic = topic;
 		this.node = node;
@@ -1255,7 +1257,7 @@ var SliderManager = (function SliderManager() {
 		if (slider === null || slider === undefined)
 			return;
 
-		if (slider.value + slider.step &lt;= slider.max) {
+		if (slider.value + slider.step <= slider.max) {
 			slider.value += slider.step;
 			setValue(slider.topic, slider.value)
 			notify.call(slider);
@@ -1267,7 +1269,7 @@ var SliderManager = (function SliderManager() {
 		if (slider === null || slider === undefined)
 			return;
 
-		if (slider.value - slider.step &gt;= slider.min) {
+		if (slider.value - slider.step >= slider.min) {
 			slider.value -= slider.step;
 			setValue(topic, slider.value)
 			notify.call(slider);
@@ -1282,13 +1284,13 @@ var SliderManager = (function SliderManager() {
 		var delta = this.max - this.min;
 		var offset = this.pointer.clientWidth + 4; // border width * 2
 
-		if (pos &lt; 0) pos = 0;
-		if (pos &gt; width) pos = width;
+		if (pos < 0) pos = 0;
+		if (pos > width) pos = width;
 
 		var value = pos * delta / width | 0;
 		var precision = value % this.step;
 		value = value - precision + this.min;
-		if (precision &gt; this.step / 2)
+		if (precision > this.step / 2)
 			value = value + this.step;
 
 		if (this.snap)
@@ -1303,7 +1305,7 @@ var SliderManager = (function SliderManager() {
 	var setValue = function setValue(topic, value) {
 		var slider = sliders[topic];
 
-		if (value &gt; slider.max || value &lt; slider.min)
+		if (value > slider.max || value < slider.min)
 			return;
 
 		var delta = slider.max - slider.min;
@@ -1352,17 +1354,17 @@ var SliderManager = (function SliderManager() {
 
 		elem = document.querySelectorAll('.ui-slider-btn-set');
 		size = elem.length;
-		for (var i = 0; i &lt; size; i++)
+		for (var i = 0; i < size; i++)
 			setButtonComponent(elem[i]);
 
 		elem = document.querySelectorAll('.ui-slider-input');
 		size = elem.length;
-		for (var i = 0; i &lt; size; i++)
+		for (var i = 0; i < size; i++)
 			setInputComponent(elem[i]);
 
 		elem = document.querySelectorAll('.ui-slider');
 		size = elem.length;
-		for (var i = 0; i &lt; size; i++)
+		for (var i = 0; i < size; i++)
 			new Slider(elem[i]);
 	}
 
@@ -1451,14 +1453,14 @@ var ButtonManager = (function CheckBoxManager() {
 	var notify = function notify() {
 		if (subscribers[this.topic] === undefined)
 			return;
-		for (var i = 0; i &lt; subscribers[this.topic].length; i++)
+		for (var i = 0; i < subscribers[this.topic].length; i++)
 			subscribers[this.topic][i](this.checkbox.checked);
 	}
 
 	var init = function init() {
 		var elem = document.querySelectorAll('.ui-checkbox');
 		var size = elem.length;
-		for (var i = 0; i &lt; size; i++)
+		for (var i = 0; i < size; i++)
 			new CheckBox(elem[i]);
 	}
 
@@ -1548,12 +1550,12 @@ var BoxShadow = (function BoxShadow() {
 		X = (X + m) * precision;
 		m = m * precision;
 
-		if (H &gt;= 0 &amp;&amp; H &lt; 1) {	this.setRGBA(C, X, m);	return; }
-		if (H &gt;= 1 &amp;&amp; H &lt; 2) {	this.setRGBA(X, C, m);	return; }
-		if (H &gt;= 2 &amp;&amp; H &lt; 3) {	this.setRGBA(m, C, X);	return; }
-		if (H &gt;= 3 &amp;&amp; H &lt; 4) {	this.setRGBA(m, X, C);	return; }
-		if (H &gt;= 4 &amp;&amp; H &lt; 5) {	this.setRGBA(X, m, C);	return; }
-		if (H &gt;= 5 &amp;&amp; H &lt; 6) {	this.setRGBA(C, m, X);	return; }
+		if (H >= 0 && H < 1) {	this.setRGBA(C, X, m);	return; }
+		if (H >= 1 && H < 2) {	this.setRGBA(X, C, m);	return; }
+		if (H >= 2 && H < 3) {	this.setRGBA(m, C, X);	return; }
+		if (H >= 3 && H < 4) {	this.setRGBA(m, X, C);	return; }
+		if (H >= 4 && H < 5) {	this.setRGBA(X, m, C);	return; }
+		if (H >= 5 && H < 6) {	this.setRGBA(C, m, X);	return; }
 	}
 
 	Color.prototype.updateHSV = function updateHSV() {
@@ -1575,7 +1577,7 @@ var BoxShadow = (function BoxShadow() {
 		}
 
 		this.hue = 60 * hue | 0;
-		if (this.hue &lt; 0) this.hue += 360;
+		if (this.hue < 0) this.hue += 360;
 		this.saturation = (saturation * 100) | 0;
 		this.value = (cmax * 100) | 0;
 	}
@@ -1602,9 +1604,9 @@ var BoxShadow = (function BoxShadow() {
 		var r = this.r.toString(16);
 		var g = this.g.toString(16);
 		var b = this.b.toString(16);
-		if (this.r &lt; 16) r = '0' + r;
-		if (this.g &lt; 16) g = '0' + g;
-		if (this.b &lt; 16) b = '0' + b;
+		if (this.r < 16) r = '0' + r;
+		if (this.g < 16) g = '0' + g;
+		if (this.b < 16) b = '0' + b;
 		var value = '#' + r + g + b;
 		return value.toUpperCase();
 	}
@@ -1707,13 +1709,13 @@ var BoxShadow = (function BoxShadow() {
 			// width and height should be the same
 			var size = gradient_area.clientWidth;
 
-			if (x &gt; size)
+			if (x > size)
 				x = size;
-			if (y &gt; size)
+			if (y > size)
 				y = size;
 
-			if (x &lt; 0) x = 0;
-			if (y &lt; 0) y = 0;
+			if (x < 0) x = 0;
+			if (y < 0) y = 0;
 
 			var value = 100 - (y * 100 / size) | 0;
 			var saturation = x * 100 / size | 0;
@@ -1729,8 +1731,8 @@ var BoxShadow = (function BoxShadow() {
 			var x = e.pageX - hue_area.offsetLeft;
 			var width = hue_area.clientWidth;
 
-			if (x &lt; 0) x = 0;
-			if (x &gt; width) x = width;
+			if (x < 0) x = 0;
+			if (x > width) x = width;
 
 			var hue = ((360 * x) / width) | 0;
 			if (hue === 360) hue = 359;
@@ -1749,8 +1751,8 @@ var BoxShadow = (function BoxShadow() {
 			var x = e.pageX - alpha_area.offsetLeft;
 			var width = alpha_area.clientWidth;
 
-			if (x &lt; 0) x = 0;
-			if (x &gt; width) x = width;
+			if (x < 0) x = 0;
+			if (x > width) x = width;
 
 			color.a = (x / width).toFixed(2);
 
@@ -1874,8 +1876,8 @@ var BoxShadow = (function BoxShadow() {
 			var node = document.querySelector("#colorpicker " + selector);
 			var value = parseInt(node.value);
 
-			if (typeof value === 'number' &amp;&amp; isNaN(value) === false &amp;&amp;
-				value &gt;= 0 &amp;&amp; value &lt; 360)
+			if (typeof value === 'number' && isNaN(value) === false &&
+				value >= 0 && value < 360)
 				color[topic] = value;
 
 			color.updateRGB();
@@ -1887,8 +1889,8 @@ var BoxShadow = (function BoxShadow() {
 			var node = document.querySelector("#colorpicker " + selector);
 			var value = parseInt(node.value);
 
-			if (typeof value === 'number' &amp;&amp; isNaN(value) === false &amp;&amp;
-				value &gt;= 0 &amp;&amp; value &lt;= 255)
+			if (typeof value === 'number' && isNaN(value) === false &&
+				value >= 0 && value <= 255)
 				color[topic] = value;
 
 			color.updateHSV();
@@ -1900,8 +1902,8 @@ var BoxShadow = (function BoxShadow() {
 			var node = document.querySelector("#colorpicker " + selector);
 			var value = parseFloat(node.value);
 
-			if (typeof value === 'number' &amp;&amp; isNaN(value) === false &amp;&amp;
-				value &gt;= 0 &amp;&amp; value &lt;= 1)
+			if (typeof value === 'number' && isNaN(value) === false &&
+				value >= 0 && value <= 1)
 				color.a = value.toFixed(2);
 
 			updateUI();
@@ -1969,7 +1971,7 @@ var BoxShadow = (function BoxShadow() {
 
 			var elem = document.querySelectorAll('#colorpicker .input');
 			var size = elem.length;
-			for (var i = 0; i &lt; size; i++)
+			for (var i = 0; i < size; i++)
 				setInputComponent(elem[i]);
 
 			setMouseTracking(gradient_area, updateColor);
@@ -2507,7 +2509,7 @@ var BoxShadow = (function BoxShadow() {
 			var uid = this.getUID();
 			var layer = this.createLayer(uid);
 
-			if (this.layer === null &amp;&amp; this.stack.children.length &gt;= 1)
+			if (this.layer === null && this.stack.children.length >= 1)
 				this.layer = this.stack.children[0];
 
 			this.stack.insertBefore(layer, this.layer);
@@ -2538,11 +2540,11 @@ var BoxShadow = (function BoxShadow() {
 
 		// SOLVE IE BUG
 		Stack.prototype.moveLayer = function moveLayer(direction) {
-			if (this.count &lt;= 1 || this.layer === null)
+			if (this.count <= 1 || this.layer === null)
 				return;
-			if (direction === -1 &amp;&amp; this.layerID === (this.count - 1) )
+			if (direction === -1 && this.layerID === (this.count - 1) )
 				return;
-			if (direction === 1 &amp;&amp; this.layerID === 0 )
+			if (direction === 1 && this.layerID === 0 )
 				return;
 
 			if (direction === -1) {
@@ -2582,11 +2584,11 @@ var BoxShadow = (function BoxShadow() {
 
 			Tool.deleteShadow(index);
 
-			if (index &gt; this.layerID)
+			if (index > this.layerID)
 				return;
 
 			if (index == this.layerID) {
-				if (this.count &gt;= 1) {
+				if (this.count >= 1) {
 					this.layerID = 0;
 					this.setActiveLayer(this.stack.children[0], true);
 				}
@@ -2596,7 +2598,7 @@ var BoxShadow = (function BoxShadow() {
 				}
 			}
 
-			if (index &lt; this.layerID) {
+			if (index < this.layerID) {
 				this.layerID--;
 				Tool.setActiveShadow(this.layerID, true);
 			}
@@ -2669,7 +2671,7 @@ var BoxShadow = (function BoxShadow() {
 			elem = document.querySelectorAll('#layer_menu [data-type="subject"]');
 			size = elem.length;
 
-			for (var i = 0; i &lt; size; i++) {
+			for (var i = 0; i < size; i++) {
 				var S = new Stack(elem[i]);
 				stacks[elem[i].id] = S;
 				container.appendChild(S.container);
@@ -2683,16 +2685,16 @@ var BoxShadow = (function BoxShadow() {
 			layerMenu.addEventListener("click", mouseEvents);
 
 			ButtonManager.subscribe("before", function(value) {
-				if (value === false &amp;&amp; active.stack === stacks['before'])
+				if (value === false && active.stack === stacks['before'])
 					setActiveStack(stacks['element'])
-				if (value === true &amp;&amp; active.stack !== stacks['before'])
+				if (value === true && active.stack !== stacks['before'])
 					setActiveStack(stacks['before'])
 			});
 
 			ButtonManager.subscribe("after", function(value) {
-				if (value === false &amp;&amp; active.stack === stacks['after'])
+				if (value === false && active.stack === stacks['after'])
 					setActiveStack(stacks['element'])
-				if (value === true &amp;&amp; active.stack !== stacks['after'])
+				if (value === true && active.stack !== stacks['after'])
 					setActiveStack(stacks['after'])
 			});
 		}
@@ -2823,7 +2825,7 @@ var BoxShadow = (function BoxShadow() {
 
 			var elem = document.querySelectorAll('#output .output');
 			var size = elem.length;
-			for (var i = 0; i &lt; size; i++)
+			for (var i = 0; i < size; i++)
 				OutputClass(elem[i]);
 
 			active = classes['element'];
@@ -2865,14 +2867,10 @@ var BoxShadow = (function BoxShadow() {
 	}
 
 })();
+```
 
+{{EmbedLiveSample('box-shadow_generator', '100%', '1100px', '')}}
 
-</code></pre>
+## Voir aussi
 
-<div>{{EmbedLiveSample('box-shadow_generator', '100%', '1100px', '')}}</div>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li><a href="https://cssgenerator.org/box-shadow-css-generator.html">Le générateur d'ombres CSS</a></li>
-</ul>
+- [Le générateur d'ombres CSS](https://cssgenerator.org/box-shadow-css-generator.html)

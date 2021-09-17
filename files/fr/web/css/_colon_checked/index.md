@@ -7,56 +7,55 @@ tags:
   - Reference
 translation_of: Web/CSS/:checked
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La pseudo-classe <strong><code>:checked</code></strong> représente n'importe quel <strong>bouton radio</strong> (<code><a href="/fr/docs/Web/HTML/Element/Input/radio">&lt;input type="radio"&gt;</a></code>), <strong>case à cocher </strong>(<code><a href="/fr/docs/Web/HTML/Element/Input/checkbox">&lt;input type="checkbox"&gt;</a></code>) ou <strong>option</strong> ({{HTMLElement("option")}} d'un élément {{HTMLElement("select")}}) qui est coché ou activé (<code>on</code>). L'utilisateur peut modifier cet état en cliquant sur l'élément ou en sélectionnant une valeur différente auquel cas la pseudo-classe <code>:checked</code> ne s'applique plus à l'élément en question.</p>
+La pseudo-classe **`:checked`** représente n'importe quel **bouton radio** ([`<input type="radio">`](/fr/docs/Web/HTML/Element/Input/radio)), **case à cocher** ([`<input type="checkbox">`](/fr/docs/Web/HTML/Element/Input/checkbox)) ou **option** ({{HTMLElement("option")}} d'un élément {{HTMLElement("select")}}) qui est coché ou activé (`on`). L'utilisateur peut modifier cet état en cliquant sur l'élément ou en sélectionnant une valeur différente auquel cas la pseudo-classe `:checked` ne s'applique plus à l'élément en question.
 
-<pre class="brush: css no-line-numbers">/* cible n'importe quel bouton radio sélectionné, case
+```css
+/* cible n'importe quel bouton radio sélectionné, case
 /* à cocher cochée ou option sélectionnée */
 input:checked {
   margin-left: 25px;
   border: 1px solid blue;
 }
-</pre>
+```
 
-<div class="note">
-<p><strong>Note :</strong> Les navigateurs considèrent souvent les éléments <code>&lt;option&gt;</code> comme <a href="/fr/docs/Web/CSS/%C3%89l%C3%A9ment_remplac%C3%A9">des éléments remplacés</a>et la possibilité de mise en forme avec <code>:checked</code> varie d'un navigateur à l'autre.</p>
-</div>
+> **Note :** Les navigateurs considèrent souvent les éléments `<option>` comme [des éléments remplacés](/fr/docs/Web/CSS/%C3%89l%C3%A9ment_remplac%C3%A9)et la possibilité de mise en forme avec `:checked` varie d'un navigateur à l'autre.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="exemple_simple">Exemple simple</h3>
+### Exemple simple
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">
-&lt;div&gt;
-  &lt;input type="radio" name="my-input" id="yes"&gt;
-  &lt;label for="yes"&gt;Oui&lt;/label&gt;
+```html
+<div>
+  <input type="radio" name="my-input" id="yes">
+  <label for="yes">Oui</label>
 
-  &lt;input type="radio" name="my-input" id="no"&gt;
-  &lt;label for="no"&gt;Non&lt;/label&gt;
-&lt;/div&gt;
+  <input type="radio" name="my-input" id="no">
+  <label for="no">Non</label>
+</div>
 
-&lt;div&gt;
-  &lt;input type="checkbox" name="my-checkbox" id="opt-in"&gt;
-  &lt;label for="opt-in"&gt;Cochez-moi !&lt;/label&gt;
-&lt;/div&gt;
+<div>
+  <input type="checkbox" name="my-checkbox" id="opt-in">
+  <label for="opt-in">Cochez-moi !</label>
+</div>
 
-&lt;select name="my-select" id="fruit"&gt;
-  &lt;option value="opt1"&gt;Pommes&lt;/option&gt;
-  &lt;option value="opt2"&gt;Raisins&lt;/option&gt;
-  &lt;option value="opt3"&gt;Poires&lt;/option&gt;
-&lt;/select&gt;
-</pre>
+<select name="my-select" id="fruit">
+  <option value="opt1">Pommes</option>
+  <option value="opt2">Raisins</option>
+  <option value="opt3">Poires</option>
+</select>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">
+```css
 div,
 select {
   margin: 8px;
@@ -82,51 +81,22 @@ option:checked {
   box-shadow: 0 0 0 3px lime;
   color: red;
 }
-</pre>
+```
 
-<h4 id="résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("exemple_simple")}}</p>
+{{EmbedLiveSample("exemple_simple")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', '#selector-checked', ':checked')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Aucune modification.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5 W3C', '#selector-checked', ':checked')}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>La sémantique relative au HTML est définie.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#checked', ':checked')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Aucune modification.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Basic UI', '#pseudo-checked', ':checked')}}</td>
-   <td>{{Spec2('CSS3 Basic UI')}}</td>
-   <td>Lien avec la spécification de niveau 3 pour les sélecteurs.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#checked', ':checked')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Définition de la pseudo-classe mais pas de la sémantique associée.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | État                                 | Commentaires                                                       |
+| -------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------ |
+| {{SpecName('HTML WHATWG', '#selector-checked', ':checked')}} | {{Spec2('HTML WHATWG')}}     | Aucune modification.                                               |
+| {{SpecName('HTML5 W3C', '#selector-checked', ':checked')}}     | {{Spec2('HTML5 W3C')}}         | La sémantique relative au HTML est définie.                        |
+| {{SpecName('CSS4 Selectors', '#checked', ':checked')}}         | {{Spec2('CSS4 Selectors')}} | Aucune modification.                                               |
+| {{SpecName('CSS3 Basic UI', '#pseudo-checked', ':checked')}} | {{Spec2('CSS3 Basic UI')}} | Lien avec la spécification de niveau 3 pour les sélecteurs.        |
+| {{SpecName('CSS3 Selectors', '#checked', ':checked')}}         | {{Spec2('CSS3 Selectors')}} | Définition de la pseudo-classe mais pas de la sémantique associée. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.checked")}}</p>
+{{Compat("css.selectors.checked")}}

@@ -8,18 +8,19 @@ tags:
   - Reference
 translation_of: Web/CSS/mask-border-source
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propriété CSS <strong><code>mask-border-source</code></strong> définit l'image à utiliser pour créer <a href="/fr/docs/Web/CSS/mask-border">le masque de bordure</a> d'un élément.</p>
+La propriété CSS **`mask-border-source`** définit l'image à utiliser pour créer [le masque de bordure](/fr/docs/Web/CSS/mask-border) d'un élément.
 
-<p>C'est la propriété {{cssxref("mask-border-slice")}} qui est utilisée afin de découper l'image en tranches/régions ensuite appliquées dynamiquement pour créer le masque final.</p>
+C'est la propriété {{cssxref("mask-border-slice")}} qui est utilisée afin de découper l'image en tranches/régions ensuite appliquées dynamiquement pour créer le masque final.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeur avec un mot-clé */
+```css
+/* Valeur avec un mot-clé */
 mask-border-source: none;
 
-/* Valeurs de type &lt;image&gt; */
+/* Valeurs de type <image> */
 mask-border-source: url(image.jpg);
 mask-border-source: linear-gradient(to top, red, yellow);
 
@@ -27,46 +28,31 @@ mask-border-source: linear-gradient(to top, red, yellow);
 mask-border-source: inherit;
 mask-border-source: initial;
 mask-border-source: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Aucun masque de bordure n'est utilisé.</dd>
- <dt>{{cssxref("&lt;image&gt;")}}</dt>
- <dd>Une référence vers une image qu'on utilise pour le masque de la bordure.</dd>
-</dl>
+- `none`
+  - : Aucun masque de bordure n'est utilisé.
+- {{cssxref("&lt;image&gt;")}}
+  - : Une référence vers une image qu'on utilise pour le masque de la bordure.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Voir la page {{cssxref("mask-border")}}.</p>
+Voir la page {{cssxref("mask-border")}}.
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Masks", "#propdef-mask-border-source", "mask-border-source")}}</td>
-   <td>{{Spec2("CSS Masks")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName("CSS Masks", "#propdef-mask-border-source", "mask-border-source")}} | {{Spec2("CSS Masks")}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>TBD</p>
+TBD

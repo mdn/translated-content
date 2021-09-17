@@ -8,15 +8,16 @@ tags:
   - Reference
 translation_of: Web/CSS/mask-clip
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>mask-clip</code></strong> définit la zone qui est modifiée par un masque. Le contenu « peint » sera restreint à cette zone.</p>
+La propriété **`mask-clip`** définit la zone qui est modifiée par un masque. Le contenu « peint » sera restreint à cette zone.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs de type &lt;geometry-box&gt; */
+```css
+/* Valeurs de type <geometry-box> */
 mask-clip: content-box;
 mask-clip: padding-box;
 mask-clip: border-box;
@@ -42,42 +43,41 @@ mask-clip: view-box, fill-box, border-box;
 mask-clip: inherit;
 mask-clip: initial;
 mask-clip: unset;
-</pre>
+```
 
-<h2 id="Syntaxe_2">Syntaxe</h2>
+## Syntaxe
 
-<p>Un ou plusieurs mots-clés parmi ceux listés ci-après, chacun séparé par une virgule.</p>
+Un ou plusieurs mots-clés parmi ceux listés ci-après, chacun séparé par une virgule.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>content-box</code></dt>
- <dd>La partie qui est « peinte » est rognée sur la boîte de contenu.</dd>
- <dt><code>padding-box</code></dt>
- <dd>La partie qui est « peinte » est rognée sur la boîte de <em>padding</em>.</dd>
- <dt><code>border-box</code></dt>
- <dd>La partie qui est « peinte » est rognée sur la boîte de bordure.</dd>
- <dt><code>margin-box</code></dt>
- <dd>La partie qui est « peinte » est rognée sur la boîte de marge.</dd>
- <dt><code>fill-box</code></dt>
- <dd>La partie qui est « peinte » est rognée sur la boîte contenant l'objet.</dd>
- <dt><code>stroke-box</code></dt>
- <dd>La partie qui est « peinte » est rognée sur la boîte contenant le contour.</dd>
- <dt><code>view-box</code></dt>
- <dd>C'est le <em>viewport</em> du plus proche SVG qui est utilisé comme boîte de référence. Si l'attribut <code><a href="/fr/docs/Web/SVG/Attribute/viewBox">viewBox</a></code> est défini pour l'élément qui crée le <em>viewport</em>, la boîte de référence est positionnée à l'origine du système de coordonnées défini par l'attribut <code>viewBox</code> et les dimensions de la boîtes sont basées sur la hauteur et la largeur de l'attribut <code>viewBox</code>.</dd>
- <dt><code>no-clip</code></dt>
- <dd>La partie qui est « peinte » n'est pas rognée.</dd>
-</dl>
+- `content-box`
+  - : La partie qui est « peinte » est rognée sur la boîte de contenu.
+- `padding-box`
+  - : La partie qui est « peinte » est rognée sur la boîte de _padding_.
+- `border-box`
+  - : La partie qui est « peinte » est rognée sur la boîte de bordure.
+- `margin-box`
+  - : La partie qui est « peinte » est rognée sur la boîte de marge.
+- `fill-box`
+  - : La partie qui est « peinte » est rognée sur la boîte contenant l'objet.
+- `stroke-box`
+  - : La partie qui est « peinte » est rognée sur la boîte contenant le contour.
+- `view-box`
+  - : C'est le _viewport_ du plus proche SVG qui est utilisé comme boîte de référence. Si l'attribut [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) est défini pour l'élément qui crée le _viewport_, la boîte de référence est positionnée à l'origine du système de coordonnées défini par l'attribut `viewBox` et les dimensions de la boîtes sont basées sur la hauteur et la largeur de l'attribut `viewBox`.
+- `no-clip`
+  - : La partie qui est « peinte » n'est pas rognée.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#masked {
+```css
+#masked {
   width: 100px;
   height: 100px;
   background-color: #8cffa0;
@@ -91,38 +91,26 @@ mask-clip: unset;
   -webkit-mask-clip: border;
   mask-clip: border-box;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="masked"&gt;&lt;/div&gt;
-</pre>
+```html
+<div id="masked"></div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", "220px", "250px")}}</p>
+{{EmbedLiveSample("Exemples", "220px", "250px")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Masks", "#the-mask-clip", "mask-clip")}}</td>
-   <td>{{Spec2("CSS Masks")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | État                         | Commentaires        |
+| ---------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName("CSS Masks", "#the-mask-clip", "mask-clip")}} | {{Spec2("CSS Masks")}} | Définition initiale |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.mask-clip")}}</p>
+{{Compat("css.properties.mask-clip")}}

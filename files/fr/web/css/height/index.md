@@ -7,73 +7,72 @@ tags:
   - Reference
 translation_of: Web/CSS/height
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>height</code></strong> définit la hauteur de la boîte de contenu d'un élément. <a href="/fr/docs/CSS/box_model#content">La boîte de contenu</a> est à l'intérieur de la boîte de remplissage (<em>padding</em>) qui est à l'intérieur de la boîte de bordure qui est elle-même à l'intérieur de la boîte de marge de l'élément. Si la propriété {{cssxref("box-sizing")}} vaut <code>border-box</code>, cette propriété détermine la hauteur de <a href="/fr/Apprendre/CSS/Introduction_à_CSS/Le_modèle_de_boîte#Les_propriétés_des_boîtes">la boîte de marge</a>.</p>
+La propriété **`height`** définit la hauteur de la boîte de contenu d'un élément. [La boîte de contenu](/fr/docs/CSS/box_model#content) est à l'intérieur de la boîte de remplissage (_padding_) qui est à l'intérieur de la boîte de bordure qui est elle-même à l'intérieur de la boîte de marge de l'élément. Si la propriété {{cssxref("box-sizing")}} vaut `border-box`, cette propriété détermine la hauteur de [la boîte de marge](/fr/Apprendre/CSS/Introduction_à_CSS/Le_modèle_de_boîte#Les_propriétés_des_boîtes).
 
-<div>{{EmbedInteractiveExample("pages/css/height.html")}}</div>
+{{EmbedInteractiveExample("pages/css/height.html")}}
 
-<p>Les propriétés {{cssxref("min-height")}} et {{cssxref("max-height")}} surchargent la propriété <code>height</code>.</p>
+Les propriétés {{cssxref("min-height")}} et {{cssxref("max-height")}} surchargent la propriété `height`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeur avec un mot-clé */
+```css
+/* Valeur avec un mot-clé */
 height: auto;
 
 /* Valeurs de longueur */
-/* Type &lt;length&gt;       */
+/* Type <length>       */
 height: 120px;
 height: 10em;
 
 /* Valeurs relatives proportionnelles  */
-/* Type &lt;percentage&gt;                   */
+/* Type <percentage>                   */
 height: 75%;
 
 /* Valeurs globales */
 height: inherit;
 height: initial;
 height: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Une valeur de longueur absolue. Voir la page {{cssxref("&lt;length&gt;")}} pour les unités qui peuvent être utilisées.</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>La valeur exprimée correspond à un pourcentage (type {{cssxref("&lt;percentage&gt;")}}) de la hauteur du bloc englobant.</dd>
- <dt><code>border-box </code>{{experimental_inline}}</dt>
- <dd>Si cette valeur est présente, la valeur de longueur ou le pourcentage indiqués avant s'applique à la boîte de bordure de l'élément.</dd>
- <dt><code>content-box</code> {{experimental_inline}}</dt>
- <dd>Si cette valeur est présente, la valeur de longueur ou le pourcentage indiqués avant s'applique à la boîte de contenu de l'élément</dd>
- <dt><code>auto</code></dt>
- <dd>Le navigateur calculera une valeur et sélectionnera une hauteur pour l'élément ciblé.</dd>
- <dt><code>fill</code> {{experimental_inline}}</dt>
- <dd>Utilise la taille <code>fill-available</code> dans l'axe du sens de lecture ou la taille <code>fill-available</code> dans l'axe perpendiculaire au sens de lecture selon le mode d'écriture.</dd>
- <dt><code>max-content</code> {{experimental_inline}}</dt>
- <dd>La hauteur intrinsèque préférrée.</dd>
- <dt><code>min-content</code> {{experimental_inline}}</dt>
- <dd>La hauteur intrinsèque minimale.</dd>
- <dt><code>available</code> {{experimental_inline}}</dt>
- <dd>La hauteur du bloc englobant à laquelle on a soustrait la marge verticale, la bordure verticale et le remplissage (<em>padding</em>) vertical.</dd>
- <dt><code>fit-content</code> {{experimental_inline}}</dt>
- <dd>La plus grande des valeurs entre :
- <ul>
-  <li>La hauteur minimale intrinsèque.</li>
-  <li>Le minimum entre la hauteur intrinsèque préférrée et la hauteur disponible</li>
- </ul>
- </dd>
-</dl>
+- `<length>`
+  - : Une valeur de longueur absolue. Voir la page {{cssxref("&lt;length&gt;")}} pour les unités qui peuvent être utilisées.
+- `<percentage>`
+  - : La valeur exprimée correspond à un pourcentage (type {{cssxref("&lt;percentage&gt;")}}) de la hauteur du bloc englobant.
+- `border-box `{{experimental_inline}}
+  - : Si cette valeur est présente, la valeur de longueur ou le pourcentage indiqués avant s'applique à la boîte de bordure de l'élément.
+- `content-box` {{experimental_inline}}
+  - : Si cette valeur est présente, la valeur de longueur ou le pourcentage indiqués avant s'applique à la boîte de contenu de l'élément
+- `auto`
+  - : Le navigateur calculera une valeur et sélectionnera une hauteur pour l'élément ciblé.
+- `fill` {{experimental_inline}}
+  - : Utilise la taille `fill-available` dans l'axe du sens de lecture ou la taille `fill-available` dans l'axe perpendiculaire au sens de lecture selon le mode d'écriture.
+- `max-content` {{experimental_inline}}
+  - : La hauteur intrinsèque préférrée.
+- `min-content` {{experimental_inline}}
+  - : La hauteur intrinsèque minimale.
+- `available` {{experimental_inline}}
+  - : La hauteur du bloc englobant à laquelle on a soustrait la marge verticale, la bordure verticale et le remplissage (_padding_) vertical.
+- `fit-content` {{experimental_inline}}
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+  - : La plus grande des valeurs entre :
+
+    - La hauteur minimale intrinsèque.
+    - Le minimum entre la hauteur intrinsèque préférrée et la hauteur disponible
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   width: 250px;
   margin-bottom: 5px;
   border: 3px solid #999999;
@@ -94,82 +93,55 @@ height: unset;
 #child {
   height: 50%;
   width: 75%;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="red"&gt;
-  &lt;span&gt;Je mesure 50 pixels de haut.&lt;/span&gt;
-&lt;/div&gt;
-&lt;div id="green"&gt;
-  &lt;span&gt;Et moi je mesure 25 pixels de haut.&lt;/span&gt;
-&lt;/div&gt;
-&lt;div id="parent"&gt;
-  &lt;div id="child"&gt;
-    &lt;span&gt;Je suis moitié moins haut que mon parent.&lt;/span&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div id="red">
+  <span>Je mesure 50 pixels de haut.</span>
+</div>
+<div id="green">
+  <span>Et moi je mesure 25 pixels de haut.</span>
+</div>
+<div id="parent">
+  <div id="child">
+    <span>Je suis moitié moins haut que mon parent.</span>
+  </div>
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemple')}}</p>
+{{EmbedLiveSample('Exemple')}}
 
-<h2 id="Accessibilité">Accessibilité</h2>
+## Accessibilité
 
-<p>Veiller à s'assurer que les éléments ciblés avec une règle utilisant <code>height</code> ne sont pas tronqués ou ne masquent pas d'autre contenu sur la page lorsqu'on zoome pour augmenter la taille du texte.</p>
+Veiller à s'assurer que les éléments ciblés avec une règle utilisant `height` ne sont pas tronqués ou ne masquent pas d'autre contenu sur la page lorsqu'on zoome pour augmenter la taille du texte.
 
-<ul>
- <li><a href="/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">Comprendre les règles WCAG 1.4</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html" rel="noopener"><em>Understanding Success Criterion 1.4.4, W3C Understanding WCAG 2.0</em> (en anglais)</a></li>
-</ul>
+- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [_Understanding Success Criterion 1.4.4, W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Sizing', '#width-height-keywords', 'width')}}</td>
-   <td>{{Spec2('CSS3 Sizing')}}</td>
-   <td>Ajout des mots-clés <code>max-content</code>, <code>min-content</code>, <code>available</code>, <code>fit-content</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'height')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td><code>height</code> peut désormais être animée.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visudet.html#the-height-property', 'height')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Ajout de la prise en charge des valeurs de type {{cssxref("&lt;length&gt;")}} et précision sur les éléments auxquels la propriété s'applique.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#height', 'height')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                                     | Commentaires                                                                                                                                             |
+| -------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS3 Sizing', '#width-height-keywords', 'width')}}         | {{Spec2('CSS3 Sizing')}}         | Ajout des mots-clés `max-content`, `min-content`, `available`, `fit-content`.                                                                            |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'height')}}             | {{Spec2('CSS3 Transitions')}} | `height` peut désormais être animée.                                                                                                                     |
+| {{SpecName('CSS2.1', 'visudet.html#the-height-property', 'height')}} | {{Spec2('CSS2.1')}}                 | Ajout de la prise en charge des valeurs de type {{cssxref("&lt;length&gt;")}} et précision sur les éléments auxquels la propriété s'applique. |
+| {{SpecName('CSS1', '#height', 'height')}}                                     | {{Spec2('CSS1')}}                 | Définition initiale.                                                                                                                                     |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.height")}}</p>
+{{Compat("css.properties.height")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte">Le modèle de boîtes</a></li>
- <li>{{cssxref("width")}}</li>
- <li>{{cssxref("box-sizing")}}</li>
- <li>{{cssxref("min-height")}}</li>
- <li>{{cssxref("max-height")}}</li>
-</ul>
+- [Le modèle de boîtes](/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte)
+- {{cssxref("width")}}
+- {{cssxref("box-sizing")}}
+- {{cssxref("min-height")}}
+- {{cssxref("max-height")}}

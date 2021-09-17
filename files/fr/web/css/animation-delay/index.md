@@ -7,44 +7,42 @@ tags:
   - Reference
 translation_of: Web/CSS/animation-delay
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>animation-delay</code></strong> définit la durée d'attente avant de démarrer une animation une fois qu'elle a été appliquée à un élément.</p>
+La propriété **`animation-delay`** définit la durée d'attente avant de démarrer une animation une fois qu'elle a été appliquée à un élément.
 
-<div>{{EmbedInteractiveExample("pages/css/animation-delay.html")}}</div>
+{{EmbedInteractiveExample("pages/css/animation-delay.html")}}
 
-<p>La valeur par défaut, <code>0s</code>, indique que l'animation doit démarrer dès qu'elle est appliquée. Dans les autres cas, la valeur indique le décalage à observer entre le début de l'animation et le moment où celle-ci a été appliquée sur l'élément.</p>
+La valeur par défaut, `0s`, indique que l'animation doit démarrer dès qu'elle est appliquée. Dans les autres cas, la valeur indique le décalage à observer entre le début de l'animation et le moment où celle-ci a été appliquée sur l'élément.
 
-<p>Si des valeurs négatives sont utilisées, l'animation débutera immédiatement en étant déjà « avancée ». Par exemple, si on utilise la valeur <code>-1s</code> comme durée, l'animation commencera immédiatement avec l'état qu'elle aurait « normalement » eue au bout d'une seconde.</p>
+Si des valeurs négatives sont utilisées, l'animation débutera immédiatement en étant déjà « avancée ». Par exemple, si on utilise la valeur `-1s` comme durée, l'animation commencera immédiatement avec l'état qu'elle aurait « normalement » eue au bout d'une seconde.
 
-<p>Généralement, on passera par la propriété raccourcie {{cssxref("animation")}} afin de définir l'ensemble des propriétés liées aux animations en une seule fois.</p>
+Généralement, on passera par la propriété raccourcie {{cssxref("animation")}} afin de définir l'ensemble des propriétés liées aux animations en une seule fois.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css  no-line-numbers">animation-delay: 3s;
+```css
+animation-delay: 3s;
 animation-delay: 2s, 4ms;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;time&gt;</code></dt>
- <dd>La durée avec laquelle décaler le début de l'animation à partir du moment où celle-ci a été appliquée à l'élément. La valeur peut être indiquée en secondes (<code>s</code> comme suffixe) ou en millisecondes (<code>ms</code> comme suffixe). Si aucune unité n'est définie, la déclaration sera considérée comme invalide.</dd>
-</dl>
+- `<time>`
+  - : La durée avec laquelle décaler le début de l'animation à partir du moment où celle-ci a été appliquée à l'élément. La valeur peut être indiquée en secondes (`s` comme suffixe) ou en millisecondes (`ms` comme suffixe). Si aucune unité n'est définie, la déclaration sera considérée comme invalide.
 
-<div class="note">
-<p><strong>Note :</strong> Lorsqu'on utilise plusieurs valeurs (séparées par des virgules) pour une propriété <code>animation-*</code>, selon leur quantité, elles seront différemment affectées aux animations définies par {{cssxref("animation-name")}}. Pour plus d'informations, voir : paramétrer <a href="/fr/docs/Web/CSS/Animations_CSS/Utiliser_les_animations_CSS">les valeurs des propriétés pour plusieurs animations</a>.</p>
-</div>
+> **Note :** Lorsqu'on utilise plusieurs valeurs (séparées par des virgules) pour une propriété `animation-*`, selon leur quantité, elles seront différemment affectées aux animations définies par {{cssxref("animation-name")}}. Pour plus d'informations, voir : paramétrer [les valeurs des propriétés pour plusieurs animations](/fr/docs/Web/CSS/Animations_CSS/Utiliser_les_animations_CSS).
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   animation-duration: 3s;
   animation-delay: 15s;
   animation-name: glissement;
@@ -60,48 +58,36 @@ animation-delay: 2s, 4ms;
     margin-left: 0%;
     width: 100%;
   }
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   La Chenille et Alice se considérèrent un instant en silence.
   Enfin la Chenille sortit le houka de sa bouche, et lui adressa
   la parole d’une voix endormie et traînante.
-&lt;/p&gt; </pre>
+</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples","300","200")}}</p>
+{{EmbedLiveSample("Exemples","300","200")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Animations', '#animation-delay', 'animation-delay')}}</td>
-   <td>{{Spec2('CSS3 Animations')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                                 | Commentaires         |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName('CSS3 Animations', '#animation-delay', 'animation-delay')}} | {{Spec2('CSS3 Animations')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.animation-delay")}}</p>
+{{Compat("css.properties.animation-delay")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Animations/Utiliser_les_animations_CSS">Manipuler les animations CSS</a></li>
- <li>{{domxref("AnimationEvent", "AnimationEvent")}}</li>
-</ul>
+- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_Animations/Utiliser_les_animations_CSS)
+- {{domxref("AnimationEvent", "AnimationEvent")}}

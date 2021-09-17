@@ -8,15 +8,14 @@ tags:
   - Reference
 translation_of: Web/CSS/box-direction
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<div class="warning">
-<p><strong>Attention :</strong> Cette propriété fait partie de la première version du standard pour les boîtes flexibles (<em>flexbox</em>) et sera remplacée dans une prochaine version. La propriété <code>-moz-box-direction</code> ne peut être utilisée que dans des composants XUL tandis que la propriété <code>box-direction</code> a été remplacée par la propriété standard <code>flex-direction</code>. Voir la page <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Flexbox</a> pour plus d'informations sur ce qui doit être utilisé à la place.</p>
-</div>
+> **Attention :** Cette propriété fait partie de la première version du standard pour les boîtes flexibles (_flexbox_) et sera remplacée dans une prochaine version. La propriété `-moz-box-direction` ne peut être utilisée que dans des composants XUL tandis que la propriété `box-direction` a été remplacée par la propriété standard `flex-direction`. Voir la page [Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) pour plus d'informations sur ce qui doit être utilisé à la place.
 
-<p>La propriété <strong><code>box-direction</code></strong> définit si une boîte doit organiser son contenu dans la direction normale (de haut en bas ou de gauche à droite). Pour plus de détails sur les propriétés des éléments flexibles, voir la page <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Flexbox</a>.</p>
+La propriété **`box-direction`** définit si une boîte doit organiser son contenu dans la direction normale (de haut en bas ou de gauche à droite). Pour plus de détails sur les propriétés des éléments flexibles, voir la page [Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox).
 
-<pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 box-direction: normal;
 box-direction: reverse;
 
@@ -24,55 +23,50 @@ box-direction: reverse;
 box-direction: inherit;
 box-direction: initial;
 box-direction: unset;
-</pre>
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>La boîte répartit son contenu à partir du début (le côté gauche si la boîte est orientée horizontalement ou le côté haut si la boîte est orientée verticalement).</dd>
- <dt><code>reverse</code></dt>
- <dd>La boîte répartit son contenu à partir de la fin (le côté droit si la boîte est orientée horizontalement ou le côté bas si la boîte est orienté verticalement).</dd>
-</dl>
+- `normal`
+  - : La boîte répartit son contenu à partir du début (le côté gauche si la boîte est orientée horizontalement ou le côté haut si la boîte est orientée verticalement).
+- `reverse`
+  - : La boîte répartit son contenu à partir de la fin (le côté droit si la boîte est orientée horizontalement ou le côté bas si la boîte est orienté verticalement).
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush:css">.exemple {
+```css
+.exemple {
   /* du bas vers le haut */
   -moz-box-direction: reverse;      /* Mozilla */
   -webkit-box-direction: reverse;   /* WebKit */
   box-direction: reverse;
 }
-</pre>
+```
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Si la direction de l'élément est définie grâce à l'attribut <code>dir</code>, la déclaration est ignorée.</p>
+Si la direction de l'élément est définie grâce à l'attribut `dir`, la déclaration est ignorée.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<ul>
- <li><a href="https://www.w3.org/TR/css3-flexbox/">Brouillon de travail pour le module des boîtes flexibles (W3C)</a> {{note("L'état de cette spécification ne reflète pas l'implémentation de Mozilla ou Webkit.")}}</li>
- <li><a href="https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">Ancienne version de la spécification</a> {{note("Les implémentations de WebKit et Mozilla se basent sur cette version de la spécification")}}</li>
-</ul>
+- [Brouillon de travail pour le module des boîtes flexibles (W3C)](https://www.w3.org/TR/css3-flexbox/) {{note("L'état de cette spécification ne reflète pas l'implémentation de Mozilla ou Webkit.")}}
+- [Ancienne version de la spécification](https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/) {{note("Les implémentations de WebKit et Mozilla se basent sur cette version de la spécification")}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.box-direction")}}</p>
+{{Compat("css.properties.box-direction")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("box-orient")}},</li>
- <li>{{cssxref("box-pack")}},</li>
- <li>{{cssxref("box-align")}},</li>
- <li>{{cssxref("flex-direction")}}.</li>
-</ul>
+- {{cssxref("box-orient")}},
+- {{cssxref("box-pack")}},
+- {{cssxref("box-align")}},
+- {{cssxref("flex-direction")}}.

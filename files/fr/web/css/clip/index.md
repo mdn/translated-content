@@ -8,15 +8,16 @@ tags:
   - Reference
 translation_of: Web/CSS/clip
 ---
-<div>{{CSSRef}}{{deprecated_header}}</div>
+{{CSSRef}}{{deprecated_header}}
 
-<p>La propriété <strong><code>clip</code></strong> permet de définir la zone d'un élément qui est visible. La propriété <code>clip</code> s'applique uniquement aux éléments positionnés de façon absolue (autrement dit, ceux avec {{cssxref("position","position:absolute")}} ou {{cssxref("position","position:fixed")}}).</p>
+La propriété **`clip`** permet de définir la zone d'un élément qui est visible. La propriété `clip` s'applique uniquement aux éléments positionnés de façon absolue (autrement dit, ceux avec {{cssxref("position","position:absolute")}} ou {{cssxref("position","position:fixed")}}).
 
-<pre class="brush: css  no-line-numbers">/* Valeur avec un mot-clé */
+```css
+/* Valeur avec un mot-clé */
 clip: auto;
 
 /* Valeurs de forme */
-/* Type &lt;shape&gt;     */
+/* Type <shape>     */
 clip: rect(1px 10em 3rem 2ch);
 clip: rect(1px, 10em, 3rem, 2ch);
 
@@ -24,34 +25,31 @@ clip: rect(1px, 10em, 3rem, 2ch);
 clip: inherit;
 clip: initial;
 clip: unset;
-</pre>
+```
 
-<div class="warning">
-<p><strong>Attention :</strong> Cette propriété est dépréciée et ne doit plus être utilisée. La propriété {{cssxref("clip-path")}} peut être utilisée à la place.</p>
-</div>
+> **Attention :** Cette propriété est dépréciée et ne doit plus être utilisée. La propriété {{cssxref("clip-path")}} peut être utilisée à la place.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;shape&gt;</code></dt>
- <dd>Une forme rectangulaire indiquée avec <code>rect(&lt;haut&gt;, &lt;droite&gt;, &lt;bas&gt;, &lt;gauche&gt;)</code> ou avec <code>rect(&lt;haut&gt; &lt;droite&gt; &lt;bas&gt; &lt;gauche&gt;)</code>. <code>&lt;haut&gt;</code> et <code>&lt;bas&gt;</code> indiquent les décalages à partir du haut de la boîte de bordure, <code>&lt;gauche&gt;</code> et <code>&lt;droite&gt;</code> indiquent les décalages à partir du bord gauche de la boîte de bordure.<code>&lt;haut&gt;</code>, <code>&lt;droite&gt;</code>, <code>&lt;bas&gt;</code> et <code>&lt;gauche&gt;</code> peuvent avoir une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) ou<code> auto</code>. Si un des côtés vaut <code>auto</code>, l'élément est rogné sur ce côté avec le bord intérieur de la boîte de bordure.</dd>
- <dt><code>auto</code></dt>
- <dd>L'élément n'est pas rogné (la valeur par défaut). Attention, l'effet obtenu n'est pas le même que <code>rect(auto, auto, auto, auto)</code>.</dd>
-</dl>
+- `<shape>`
+  - : Une forme rectangulaire indiquée avec `rect(<haut>, <droite>, <bas>, <gauche>)` ou avec `rect(<haut> <droite> <bas> <gauche>)`. `<haut>` et `<bas>` indiquent les décalages à partir du haut de la boîte de bordure, `<gauche>` et `<droite>` indiquent les décalages à partir du bord gauche de la boîte de bordure.`<haut>`, `<droite>`, `<bas>` et `<gauche>` peuvent avoir une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) ou` auto`. Si un des côtés vaut `auto`, l'élément est rogné sur ce côté avec le bord intérieur de la boîte de bordure.
+- `auto`
+  - : L'élément n'est pas rogné (la valeur par défaut). Attention, l'effet obtenu n'est pas le même que `rect(auto, auto, auto, auto)`.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">.dotted-border {
+```css
+.dotted-border {
   border: dotted;
   position: relative;
   width: 536px;
@@ -79,63 +77,43 @@ clip: unset;
   left: 200px;
   clip: rect(235px 335px 345px 160px);
   /* non-standard syntax, but supported by all major browsers*/
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html">&lt;p class="dotted-border"&gt;
-  &lt;img src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Original graphic"&gt;
-  &lt;img id="top-left" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped to upper left"&gt;
-  &lt;img id="middle" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped towards middle"&gt;
-  &lt;img id="bottom-right" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped to bottom right"&gt;
-&lt;/p&gt;</pre>
+```html
+<p class="dotted-border">
+  <img src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Original graphic">
+  <img id="top-left" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped to upper left">
+  <img id="middle" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped towards middle">
+  <img id="bottom-right" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped to bottom right">
+</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', '689px', '410px')}}</p>
+{{EmbedLiveSample('Exemples', '689px', '410px')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Masks', '#clip-property', 'clip')}}</td>
-   <td>{{Spec2('CSS Masks')}}</td>
-   <td>Dépréciation de la propriété <code>clip</code> et proposition de  {{cssxref("clip-path")}} comme remplacement.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'clip')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td><code>clip</code> peut être animée.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visufx.html#clipping', 'clip')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | État                                     | Commentaires                                                                                                |
+| -------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS Masks', '#clip-property', 'clip')}}             | {{Spec2('CSS Masks')}}             | Dépréciation de la propriété `clip` et proposition de  {{cssxref("clip-path")}} comme remplacement. |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'clip')}} | {{Spec2('CSS3 Transitions')}} | `clip` peut être animée.                                                                                    |
+| {{SpecName('CSS2.1', 'visufx.html#clipping', 'clip')}}         | {{Spec2('CSS2.1')}}                 | Définition initiale.                                                                                        |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.clip")}}</p>
+{{Compat("css.properties.clip")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>La propriété {{cssxref("clip-path")}} qui doit être utilisée à la place</li>
- <li>{{cssxref("text-overflow")}}</li>
- <li>{{cssxref("white-space")}}</li>
- <li>{{cssxref("overflow-x")}}</li>
- <li>{{cssxref("overflow-y")}}</li>
- <li>{{cssxref("overflow")}}</li>
- <li>{{cssxref("display")}}</li>
- <li>{{cssxref("position")}}</li>
-</ul>
+- La propriété {{cssxref("clip-path")}} qui doit être utilisée à la place
+- {{cssxref("text-overflow")}}
+- {{cssxref("white-space")}}
+- {{cssxref("overflow-x")}}
+- {{cssxref("overflow-y")}}
+- {{cssxref("overflow")}}
+- {{cssxref("display")}}
+- {{cssxref("position")}}

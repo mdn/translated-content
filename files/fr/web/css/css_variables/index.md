@@ -8,33 +8,18 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Variables
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><em><strong>CSS Custom Properties for Cascading Variables</strong></em> ou « module des propriétés personnalisées pour les variables CSS » est un module de la spécification CSS qui permet de créer des propriétés personnalisées afin de les utiliser à plusieurs endroits, sans avoir à répéter de valeurs.</p>
+**_CSS Custom Properties for Cascading Variables_** ou « module des propriétés personnalisées pour les variables CSS » est un module de la spécification CSS qui permet de créer des propriétés personnalisées afin de les utiliser à plusieurs endroits, sans avoir à répéter de valeurs.
 
-<h2 id="Référence">Référence</h2>
+## Référence
 
-<h3 id="Propriétés">Propriétés</h3>
+### Propriétés
 
-<ul>
- <li>{{cssxref("--*")}}</li>
-</ul>
+- {{cssxref("--*")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Variables")}}</td>
-   <td>{{Spec2("CSS3 Variables")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                            | État                                 | Commentaires         |
+| ---------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName("CSS3 Variables")}} | {{Spec2("CSS3 Variables")}} | Définition initiale. |

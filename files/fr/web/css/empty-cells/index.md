@@ -7,17 +7,18 @@ tags:
   - Reference
 translation_of: Web/CSS/empty-cells
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>empty-cells</code></strong> définit la façon dont l'agent utilisateur doit afficher les bordures et l'arrière-plan des cellules d'un tableau ({{HTMLElement("table")}}) qui n'ont aucun contenu visible.</p>
+La propriété **`empty-cells`** définit la façon dont l'agent utilisateur doit afficher les bordures et l'arrière-plan des cellules d'un tableau ({{HTMLElement("table")}}) qui n'ont aucun contenu visible.
 
-<div>{{EmbedInteractiveExample("pages/css/empty-cells.html")}}</div>
+{{EmbedInteractiveExample("pages/css/empty-cells.html")}}
 
-<p>Cette propriété est uniquement appliquée lorsque <code>border-collapse</code> vaut <code>separate</code>.</p>
+Cette propriété est uniquement appliquée lorsque `border-collapse` vaut `separate`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs avec mot-clé */
+```css
+/* Valeurs avec mot-clé */
 empty-cells: show;
 empty-cells: hide;
 
@@ -25,52 +26,52 @@ empty-cells: hide;
 empty-cells: inherit;
 empty-cells: initial;
 empty-cells: unset;
-</pre>
+```
 
-<p>Cette propriété se définit avec l'un des mots-clés suivants.</p>
+Cette propriété se définit avec l'un des mots-clés suivants.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>show</code></dt>
- <dd>Un mot-clé indiquant que les bordures et l'arrière-plan doivent être dessinés comme pour les cellules normales.</dd>
- <dt><code>hide</code></dt>
- <dd>Un mot-clé indiquant qu'aucune bordure ou arrière-plan ne doit être dessiné.</dd>
-</dl>
+- `show`
+  - : Un mot-clé indiquant que les bordures et l'arrière-plan doivent être dessinés comme pour les cellules normales.
+- `hide`
+  - : Un mot-clé indiquant qu'aucune bordure ou arrière-plan ne doit être dessiné.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;table class="table_1"&gt;
-    &lt;tr&gt;
-        &lt;td&gt;Jean&lt;/td&gt;
-        &lt;td&gt;Biche&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;Alice&lt;/td&gt;
-        &lt;td&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-&lt;/table&gt;
-&lt;table class="table_2"&gt;
-    &lt;tr&gt;
-        &lt;td&gt;Jean&lt;/td&gt;
-        &lt;td&gt;Biche&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-        &lt;td&gt;Alice&lt;/td&gt;
-        &lt;td&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-&lt;/table&gt;
-</pre>
+```html
+<table class="table_1">
+    <tr>
+        <td>Jean</td>
+        <td>Biche</td>
+    </tr>
+    <tr>
+        <td>Alice</td>
+        <td></td>
+    </tr>
+</table>
+<table class="table_2">
+    <tr>
+        <td>Jean</td>
+        <td>Biche</td>
+    </tr>
+    <tr>
+        <td>Alice</td>
+        <td></td>
+    </tr>
+</table>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.table_1 {
+```css
+.table_1 {
   empty-cells: show;
 }
 .table_2 {
@@ -81,33 +82,20 @@ td, th {
   border: 1px solid #999;
   padding: 0.5rem;
 }
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', '100%', '200')}}</p>
+{{EmbedLiveSample('Exemples', '100%', '200')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'tables.html#empty-cells', 'empty-cells')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                     | Commentaires         |
+| ------------------------------------------------------------------------------------ | ------------------------ | -------------------- |
+| {{SpecName('CSS2.1', 'tables.html#empty-cells', 'empty-cells')}} | {{Spec2('CSS2.1')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.empty-cells")}}</p>
+{{Compat("css.properties.empty-cells")}}

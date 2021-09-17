@@ -7,92 +7,79 @@ tags:
   - Reference
 translation_of: Web/CSS/:first
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La pseudo-classe <strong><code>:first</code></strong>, liée à la règle @ {{cssxref("@page")}} décrit la mise en forme de la première page lors de l'impression d'un document. ( voir {{cssxref(":first-child")}} pour le premier élément d'un noeud )</p>
+La pseudo-classe **`:first`**, liée à la règle @ {{cssxref("@page")}} décrit la mise en forme de la première page lors de l'impression d'un document. ( voir {{cssxref(":first-child")}} pour le premier élément d'un noeud )
 
-<pre class="brush: css no-line-numbers">/* Cible le contenu de la première page */
+```css
+/* Cible le contenu de la première page */
 /* lorsqu'on imprime */
 @page :first {
   margin-left: 50%;
   margin-top: 50%;
-}</pre>
+}
+```
 
-<p>Seul un sous-ensemble restreint de propriétés peut être modifié via cette pseudo-classe :</p>
+Seul un sous-ensemble restreint de propriétés peut être modifié via cette pseudo-classe :
 
-<ul>
- <li>Les propriétés liées aux marges : {{cssxref("margin")}}</li>
- <li>Les propriétés liées aux lignes veuves et orphelines : {{cssxref("orphans")}} et {{cssxref("widows")}}</li>
- <li>Les propriétés liées aux sauts de page : {{cssxref("page-break")}}</li>
-</ul>
+- Les propriétés liées aux marges : {{cssxref("margin")}}
+- Les propriétés liées aux lignes veuves et orphelines : {{cssxref("orphans")}} et {{cssxref("widows")}}
+- Les propriétés liées aux sauts de page : {{cssxref("page-break")}}
 
-<p>De plus, seules <a href="/fr/docs/Web/CSS/length#unités_de_longueur_absolues">les unités absolues</a> peuvent être utilisées pour les marges.</p>
+De plus, seules [les unités absolues](/fr/docs/Web/CSS/length#unités_de_longueur_absolues) peuvent être utilisées pour les marges.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">@page :first {
+```css
+@page :first {
   margin-left: 50%;
   margin-top: 50%;
 }
 
 p {
   page-break-after: always;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Première page.&lt;/p&gt;
-&lt;p&gt;Deuxième page.&lt;/p&gt;
-&lt;button&gt;Imprimer&lt;/button&gt;</pre>
+```html
+<p>Première page.</p>
+<p>Deuxième page.</p>
+<button>Imprimer</button>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">document.querySelector("button").addEventListener('click', () =&gt; {
+```js
+document.querySelector("button").addEventListener('click', () => {
   window.print();
-});</pre>
+});
+```
 
-<p>Appuyez sur le bouton "Imprimer!" pour imprimer l'exemple. Les mots sur la première page doivent être quelque part autour du centre, tandis que les autres pages auront leur contenu à la position par défaut.</p>
+Appuyez sur le bouton "Imprimer!" pour imprimer l'exemple. Les mots sur la première page doivent être quelque part autour du centre, tandis que les autres pages auront leur contenu à la position par défaut.
 
-<p>{{EmbedLiveSample("Exemples","80%","150px")}}</p>
+{{EmbedLiveSample("Exemples","80%","150px")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Paged Media', '#left-right-first', ':first')}}</td>
-   <td>{{Spec2('CSS3 Paged Media')}}</td>
-   <td>Aucune modification.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'page.html#page-selectors', ':first')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                                     | Commentaires         |
+| ------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
+| {{SpecName('CSS3 Paged Media', '#left-right-first', ':first')}} | {{Spec2('CSS3 Paged Media')}} | Aucune modification. |
+| {{SpecName('CSS2.1', 'page.html#page-selectors', ':first')}}     | {{Spec2('CSS2.1')}}                 | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.first")}}</p>
+{{Compat("css.selectors.first")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("@page")}}</li>
- <li>{{cssxref(":left")}}</li>
- <li>{{cssxref(":right")}}</li>
-</ul>
+- {{cssxref("@page")}}
+- {{cssxref(":left")}}
+- {{cssxref(":right")}}

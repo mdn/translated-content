@@ -9,623 +9,525 @@ tags:
 translation_of: Web/CSS/Mozilla_Extensions
 original_slug: Web/CSS/Extensions_Mozilla
 ---
-<div>{{CSSRef}}</div>
-
-<p>Les applications Mozilla, telles que Firefox, prennent en charge un certain nombre d'extensions spécifiques à <a href="/fr/docs/Web/CSS">CSS</a> : des propriétés, des valeurs, des pseudo-éléments, des pseudo-classes, des règles @ et des requêtes média. Ces extensions utilisent le préfixe <code>-moz</code>.</p>
-
-<h2 id="Propriétés_et_pseudo-classes_spécifiques_à_Mozilla_(ne_pas_utiliser_sur_le_Web)">Propriétés et pseudo-classes spécifiques à Mozilla (ne pas utiliser sur le Web)</h2>
-
-<div class="note">
-<p><strong>Note :</strong> Ces propriétés et pseudo-classes ne fonctionneront que pour les applications Mozilla (Firefox par exemple) et ne sont pas en voie de standardisation. Certaines ne s'applique qu'aux éléments <a href="/fr/docs/Mozilla/Tech/XUL">XUL</a>.</p>
-</div>
-
-<h3 id="B">B</h3>
-
-<ul>
- <li>{{CSSxRef("-moz-binding")}} {{Deprecated_Inline}}</li>
- <li>{{CSSxRef("-moz-border-bottom-colors")}} {{Obsolete_Inline}}</li>
- <li>{{CSSxRef("-moz-border-left-colors")}} {{Obsolete_Inline}}</li>
- <li>{{CSSxRef("-moz-border-right-colors")}} {{Obsolete_Inline}}</li>
- <li>{{CSSxRef("-moz-border-top-colors")}} {{Obsolete_Inline}}</li>
- <li>{{CSSxRef("box-align")}}</li>
- <li>{{CSSxRef("box-direction")}}</li>
- <li>{{CSSxRef("box-flex")}}</li>
- <li>{{CSSxRef("-moz-box-ordinal-group")}}</li>
- <li>{{CSSxRef("box-orient")}}</li>
- <li>{{CSSxRef("box-pack")}}</li>
-</ul>
-
-<h3 id="C_–_I">C – I</h3>
-
-<ul>
- <li>{{CSSxRef("-moz-context-properties")}}</li>
- <li>{{CSSxRef("-moz-float-edge")}}</li>
- <li>{{CSSxRef("-moz-force-broken-image-icon")}}</li>
- <li>{{CSSxRef("-moz-image-region")}}</li>
-</ul>
-
-<h3 id="O">O</h3>
-
-<ul>
- <li>{{CSSxRef("-moz-orient")}}</li>
- <li>{{CSSxRef("-moz-osx-font-smoothing")}}</li>
- <li>{{CSSxRef("-moz-outline-radius")}}</li>
- <li>{{CSSxRef("-moz-outline-radius-bottomleft")}}</li>
- <li>{{CSSxRef("-moz-outline-radius-bottomright")}}</li>
- <li>{{CSSxRef("-moz-outline-radius-topleft")}}</li>
- <li>{{CSSxRef("-moz-outline-radius-topright")}}</li>
- <li>{{CSSxRef("overflow-clip-box")}}</li>
- <li>{{CSSxRef("overflow-clip-box-block")}}</li>
- <li>{{CSSxRef("overflow-clip-box-inline")}}</li>
-</ul>
-
-<h3 id="S_–_Z">S – Z</h3>
-
-<ul>
- <li>{{CSSxRef("-moz-stack-sizing")}}</li>
- <li>{{CSSxRef(":-moz-system-metric(images-in-menus)")}} {{Obsolete_Inline}}</li>
- <li>{{CSSxRef(":-moz-system-metric(mac-graphite-theme)")}} {{Obsolete_Inline}}</li>
- <li>{{CSSxRef(":-moz-system-metric(scrollbar-end-backward)")}} {{Obsolete_Inline}}</li>
- <li>{{CSSxRef(":-moz-system-metric(scrollbar-end-forward)")}} {{Obsolete_Inline}}</li>
- <li>{{CSSxRef(":-moz-system-metric(scrollbar-start-backward)")}} {{Obsolete_Inline}}</li>
- <li>{{CSSxRef(":-moz-system-metric(scrollbar-start-forward)")}} {{Obsolete_Inline}}</li>
- <li>{{CSSxRef(":-moz-system-metric(scrollbar-thumb-proportional)")}} {{Obsolete_Inline}}</li>
- <li>{{CSSxRef(":-moz-system-metric(touch-enabled)")}} {{Obsolete_Inline}}</li>
- <li>{{CSSxRef(":-moz-system-metric(windows-default-theme)")}} {{Obsolete_Inline}}</li>
- <li>{{CSSxRef("-moz-user-focus")}}</li>
- <li>{{CSSxRef("-moz-user-input")}}</li>
- <li>{{CSSxRef("user-modify")}}</li>
- <li>{{CSSxRef("-moz-window-dragging")}}</li>
- <li>{{CSSxRef("-moz-window-shadow")}}</li>
-</ul>
-
-<h2 id="Anciennes_propriétés_spécifiques_désormais_standardisées"><span class="highlight-span">Anciennes propriétés spécifiques, désormais standardisées</span></h2>
-
-<div class="note">
-<p><strong>Note :</strong> Afin d'obtenir la meilleure compatibilité possible, vous devriez utiliser les versions standards, non-préfixées, de ces propriétés plutôt que les versions spécifiques. Généralement, lorsqu'une propriété est standardisée et implémentée, la version préfixée est généralement abandonnée ensuite.</p>
-</div>
-
-<ul>
- <li>
-  <h3 id="A">A</h3>
- </li>
- <li>{{CSSxRef("animation", "-moz-animation")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>{{CSSxRef("animation-delay", "-moz-animation-delay")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>{{CSSxRef("animation-direction", "-moz-animation-direction")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>{{CSSxRef("animation-duration", "-moz-animation-duration")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>{{CSSxRef("animation-fill-mode", "-moz-animation-fill-mode")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>{{CSSxRef("animation-iteration-count", "-moz-animation-iteration-count")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>{{CSSxRef("animation-name", "-moz-animation-name")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>{{CSSxRef("animation-play-state", "-moz-animation-play-state")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>{{CSSxRef("animation-timing-function","-moz-animation-timing-function")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>{{CSSxRef("appearance","-moz-appearance")}} {{Experimental_Inline}}</li>
- <li>
-  <h3 id="B_2">B</h3>
- </li>
- <li>{{CSSxRef("backface-visibility", "-moz-backface-visibility")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>{{CSSxRef("background-clip", "-moz-background-clip")}}{{Obsolete_Inline(2)}}</li>
- <li>{{CSSxRef("background-origin", "-moz-background-origin")}}{{Obsolete_Inline(2)}}</li>
- <li>{{CSSxRef("box-decoration-break")}}{{Obsolete_Inline(32)}} [Remplacée par la version standard {{CSSxRef("box-decoration-break")}}]</li>
- <li>{{CSSxRef("background-size", "-moz-background-size")}}{{Obsolete_Inline(2)}}</li>
- <li>{{CSSxRef("border-inline-end","-moz-border-end")}} {{Deprecated_Inline}} [Remplacée par la version standard {{CSSxRef("border-inline-end")}}]</li>
- <li>{{CSSxRef("border-inline-color","-moz-border-end-color")}} {{Deprecated_Inline}} [Remplacée par la version standard {{CSSxRef("border-inline-end-color")}}]</li>
- <li>{{CSSxRef("border-inline-style","-moz-border-end-style")}} {{Deprecated_Inline}} [Remplacée par la version standard {{CSSxRef("border-inline-end-style")}}]</li>
- <li>{{CSSxRef("border-inline-width","-moz-border-end-width")}} {{Deprecated_Inline}} [Remplacée par la version standard {{CSSxRef("border-inline-end-width")}}]</li>
- <li>{{CSSxRef("border-image","-moz-border-image")}} {{Deprecated_Inline}}</li>
- <li>{{CSSxRef("border-inline-start","-moz-border-start")}} {{Deprecated_Inline}} [Remplacée par la version standard {{CSSxRef("border-inline-start")}}]</li>
- <li>{{CSSxRef("border-inline-start-color","-moz-border-start-color")}} {{Deprecated_Inline}} [Remplacée par la version standard {{CSSxRef("border-inline-start-color")}}]</li>
- <li>{{CSSxRef("border-inline-start-style","-moz-border-start-style")}} {{Deprecated_Inline}} [Remplacée par la version standard {{CSSxRef("border-inline-start-style")}}]</li>
- <li>{{CSSxRef("border-inline-start-width","-moz-border-start-width")}} {{Deprecated_Inline}} [Remplacée par la version standard {{CSSxRef("border-inline-start-width")}}]</li>
- <li>{{CSSxRef("box-sizing", "-moz-box-sizing")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>
-  <h3 id="C">C</h3>
- </li>
- <li>{{CSSxRef("clip-path")}} {{Experimental_Inline}} [Applying to more than SVG]</li>
- <li>{{CSSxRef("column-count","-moz-column-count")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>{{CSSxRef("column-fill","-moz-column-fill")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>{{CSSxRef("column-gap","-moz-column-gap")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>{{CSSxRef("column-width","-moz-column-width")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>{{CSSxRef("column-rule","-moz-column-rule")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>{{CSSxRef("column-rule-width","-moz-column-rule-width")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>{{CSSxRef("column-rule-style","-moz-column-rule-style")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>{{CSSxRef("column-rule-color","-moz-column-rule-color")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>{{CSSxRef("-moz-context-properties")}} {{Experimental_Inline}}</li>
- <li>
-  <h3 id="F_–_M">F – M</h3>
- </li>
- <li>{{CSSxRef("filter")}} {{Experimental_Inline}} [Applying to more than SVG]</li>
- <li>{{CSSxRef("font-feature-settings","-moz-font-feature-settings")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>{{CSSxRef("font-language-override","-moz-font-language-override")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>{{CSSxRef("hyphens","-moz-hyphens")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>{{CSSxRef("margin-inline-end","-moz-margin-end")}} {{Deprecated_Inline}} [Remplacée par la version standard {{CSSxRef("margin-inline-end")}}]</li>
- <li>{{CSSxRef("margin-inline-start","-moz-margin-start")}} {{Deprecated_Inline}} [Remplacée par la version standard {{CSSxRef("margin-inline-start")}}]</li>
- <li>{{CSSxRef("mask")}} {{Experimental_Inline}} [Applying to more than SVG]</li>
- <li>
-  <h3 id="O_2">O</h3>
- </li>
- <li>{{CSSxRef("opacity","-moz-opacity")}}{{Obsolete_Inline("1.9.1")}}</li>
- <li>{{CSSxRef("outline","-moz-outline")}}{{Obsolete_Inline("1.9.2")}}</li>
- <li>{{CSSxRef("outline-color","-moz-outline-color")}}{{Obsolete_Inline("1.9.2")}}</li>
- <li>{{CSSxRef("outline-offset","-moz-outline-offset")}}{{Obsolete_Inline("1.9.2")}}</li>
- <li>{{CSSxRef("outline-style","-moz-outline-style")}}{{Obsolete_Inline("1.9.2")}}</li>
- <li>{{CSSxRef("outline-width","-moz-outline-width")}}{{Obsolete_Inline("1.9.2")}}</li>
- <li>
-  <h3 id="P">P</h3>
- </li>
- <li>{{CSSxRef("padding-inline-end","-moz-padding-end")}} {{Deprecated_Inline}} [Remplacée par la version standard {{CSSxRef("padding-inline-start")}}]</li>
- <li>{{CSSxRef("padding-inline-start","-moz-padding-start")}} {{Deprecated_Inline}} [Remplacée par la version standard {{CSSxRef("padding-inline-end")}}]</li>
- <li>{{CSSxRef("perspective", "-moz-perspective")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>{{CSSxRef("perspective-origin","-moz-perspective-origin")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>{{CSSxRef("pointer-events")}} {{Experimental_Inline}} [Applying to more than SVG]</li>
- <li>
-  <h3 id="T_–_U">T – U</h3>
- </li>
- <li>{{CSSxRef("tab-size","-moz-tab-size")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef("text-align-last","-moz-text-align-last")}}{{Obsolete_Inline("53")}}</li>
- <li>{{CSSxRef("text-decoration-color","-moz-text-decoration-color")}}{{Obsolete_Inline("39")}}</li>
- <li>{{CSSxRef("text-decoration-line","-moz-text-decoration-line")}}{{Obsolete_Inline("39")}}</li>
- <li>{{CSSxRef("text-decoration-style","-moz-text-decoration-style")}}{{Obsolete_Inline("39")}}</li>
- <li>{{CSSxRef("text-size-adjust","-moz-text-size-adjust")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef("transform", "-moz-transform")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>{{CSSxRef("transform-origin", "-moz-transform-origin")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>{{CSSxRef("transform-style", "-moz-transform-style")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>{{CSSxRef("transition", "-moz-transition")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>{{CSSxRef("transition-delay", "-moz-transition-delay")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>{{CSSxRef("transition-duration", "-moz-transition-duration")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>{{CSSxRef("transition-property", "-moz-transition-property")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>{{CSSxRef("transition-timing-function", "-moz-transition-timing-function")}} {{Deprecated_Inline}} [Version préfixée toujours acceptée]</li>
- <li>{{CSSxRef("user-select","-moz-user-select")}} {{Experimental_Inline}}</li>
-</ul>
-
-<h2 id="Valeurs">Valeurs</h2>
-
-<h3 id="Valeurs_globales">Valeurs globales</h3>
-
-<ul>
- <li>{{cssxref("initial","-moz-initial")}}</li>
-</ul>
-
-<h3 id="Cssxref(-moz-appearance)">{{Cssxref("appearance")}}</h3>
-
-<ul>
- <li><code>button</code></li>
- <li><code>button-arrow-down</code></li>
- <li><code>button-arrow-next</code></li>
- <li><code>button-arrow-previous</code></li>
- <li><code>button-arrow-up</code></li>
- <li><code>button-bevel</code></li>
- <li><code>checkbox</code></li>
- <li><code>checkbox-container</code></li>
- <li><code>checkbox-label</code></li>
- <li><code>checkmenuitem</code></li>
- <li><code>dialog</code></li>
- <li><code>groupbox</code></li>
- <li><code>listbox</code></li>
- <li><code>menuarrow</code></li>
- <li><code>menucheckbox</code></li>
- <li><code>menuimage</code></li>
- <li><code>menuitem</code></li>
- <li><code>menuitemtext</code></li>
- <li><code>menulist</code></li>
- <li><code>menulist-button</code></li>
- <li><code>menulist-text</code></li>
- <li><code>menulist-textfield</code></li>
- <li><code>menupopup</code></li>
- <li><code>menuradio</code></li>
- <li><code>menuseparator</code></li>
- <li><code>-moz-mac-unified-toolbar</code></li>
- <li><code>-moz-win-borderless-glass</code></li>
- <li><code>-moz-win-browsertabbar-toolbox</code></li>
- <li><code>-moz-win-communications-toolbox</code></li>
- <li><code>-moz-win-glass</code></li>
- <li><code>-moz-win-media-toolbox</code></li>
- <li><code>-moz-window-button-box</code></li>
- <li><code>-moz-window-button-box-maximized</code></li>
- <li><code>-moz-window-button-close</code></li>
- <li><code>-moz-window-button-maximize</code></li>
- <li><code>-moz-window-button-minimize</code></li>
- <li><code>-moz-window-button-restore</code></li>
- <li><code>-moz-window-titlebar</code></li>
- <li><code>-moz-window-titlebar-maximized</code></li>
- <li><code>progressbar</code></li>
- <li><code>progresschunk</code></li>
- <li><code>radio</code></li>
- <li><code>radio-container</code></li>
- <li><code>radio-label</code></li>
- <li><code>radiomenuitem</code></li>
- <li><code>resizer</code></li>
- <li><code>resizerpanel</code></li>
- <li><code>scale-horizontal</code></li>
- <li><code>scalethumb-horizontal</code></li>
- <li><code>scalethumb-vertical</code></li>
- <li><code>scale-vertical</code></li>
- <li><code>scrollbarbutton-down</code></li>
- <li><code>scrollbarbutton-left</code></li>
- <li><code>scrollbarbutton-right</code></li>
- <li><code>scrollbarbutton-up</code></li>
- <li><code>scrollbar-small</code></li>
- <li><code>scrollbarthumb-horizontal</code></li>
- <li><code>scrollbarthumb-vertical</code></li>
- <li><code>scrollbartrack-horizontal</code></li>
- <li><code>scrollbartrack-vertical</code></li>
- <li><code>separator</code></li>
- <li><code>spinner</code></li>
- <li><code>spinner-downbutton</code></li>
- <li><code>spinner-textfield</code></li>
- <li><code>spinner-upbutton</code></li>
- <li><code>statusbar</code></li>
- <li><code>statusbarpanel</code></li>
- <li><code>tab</code></li>
- <li><code>tabpanels</code></li>
- <li><code>tab-scroll-arrow-back</code></li>
- <li><code>tab-scroll-arrow-forward</code></li>
- <li><code>textfield</code></li>
- <li><code>textfield-multiline</code></li>
- <li><code>toolbar</code></li>
- <li><code>toolbarbutton-dropdown</code></li>
- <li><code>toolbox</code></li>
- <li><code>tooltip</code></li>
- <li><code>treeheadercell</code></li>
- <li><code>treeheadersortarrow</code></li>
- <li><code>treeitem</code></li>
- <li><code>treetwisty</code></li>
- <li><code>treetwistyopen</code></li>
- <li><code>treeview</code></li>
- <li><code>window</code></li>
-</ul>
-
-<h3 id="cssxref(background-image)">{{cssxref("background-image")}}</h3>
-
-<ul>
- <li>
-  <h4 id="Dégradés_Gecko_minversion_inline(1.9.2)">Dégradés </h4>
-
-  <ul>
-   <li>{{CSSxRef("linear-gradient","-moz-linear-gradient")}} {{Deprecated_Inline}}</li>
-   <li>{{CSSxRef("radial-gradient","-moz-radial-gradient")}} {{Deprecated_Inline}}</li>
-  </ul>
- </li>
- <li>
-  <h4 id="Éléments_gecko_minversion_inline(2.0)">Éléments </h4>
-
-  <ul>
-   <li>{{cssxref("-moz-element")}}</li>
-  </ul>
- </li>
- <li>
-  <h4 id="Sub-images_gecko_minversion_inline(2.0)">Sub-images </h4>
-
-  <ul>
-   <li>{{cssxref("-moz-image-rect")}}</li>
-  </ul>
- </li>
-</ul>
-
-<h3 id="Cssxref(border-color)">{{Cssxref("border-color")}}</h3>
-
-<ul>
- <li><code>-moz-use-text-color</code> {{obsolete_inline}} retiré de Gecko (cf. {{bug(1306214)}}) ; <a href="/fr/docs/Web/CSS/color_value#currentcolor_keyword">currentcolor</a> doit être utilisée à la place.</li>
-</ul>
-
-<h3 id="Cssxref(border-style)_et_Cssxref(outline-style)">{{Cssxref("border-style")}} et {{Cssxref("outline-style")}}</h3>
-
-<ul>
- <li><code>-moz-bg-inset</code>{{Obsolete_Inline(1.9)}}</li>
- <li><code>-moz-bg-outset</code>{{Obsolete_Inline(1.9)}}</li>
- <li><code>-moz-bg-solid</code>{{Obsolete_Inline(1.9)}}</li>
-</ul>
-
-<h3 id="Mots-clés_pour_cssxref(&lt;color>)">Mots-clés pour {{cssxref("&lt;color&gt;")}}</h3>
-
-<ul>
- <li><code>-moz-activehyperlinktext</code></li>
- <li><code>-moz-hyperlinktext</code></li>
- <li><code>-moz-visitedhyperlinktext</code></li>
- <li><code>-moz-buttondefault</code></li>
- <li><code>-moz-buttonhoverface</code></li>
- <li><code>-moz-buttonhovertext</code></li>
- <li><code>-moz-default-background-color</code></li>
- <li><code>-moz-default-color</code></li>
- <li><code>-moz-cellhighlight</code></li>
- <li><code>-moz-cellhighlighttext</code></li>
- <li><code>-moz-field</code></li>
- <li><code>-moz-fieldtext</code></li>
- <li><code>-moz-dialog</code></li>
- <li><code>-moz-dialogtext</code></li>
- <li><code>-moz-dragtargetzone</code></li>
- <li><code>-moz-mac-accentdarkestshadow</code></li>
- <li><code>-moz-mac-accentdarkshadow</code></li>
- <li><code>-moz-mac-accentface</code></li>
- <li><code>-moz-mac-accentlightesthighlight</code></li>
- <li><code>-moz-mac-accentlightshadow</code></li>
- <li><code>-moz-mac-accentregularhighlight</code></li>
- <li><code>-moz-mac-accentregularshadow</code></li>
- <li><code>-moz-mac-chrome-active</code></li>
- <li><code>-moz-mac-chrome-inactive</code></li>
- <li><code>-moz-mac-focusring</code></li>
- <li><code>-moz-mac-menuselect</code></li>
- <li><code>-moz-mac-menushadow</code></li>
- <li><code>-moz-mac-menutextselect</code></li>
- <li><code>-moz-menuhover</code></li>
- <li><code>-moz-menuhovertext</code></li>
- <li><code>-moz-win-communicationstext</code></li>
- <li><code>-moz-win-mediatext</code></li>
- <li><code>-moz-nativehyperlinktext</code></li>
-</ul>
-
-<h3 id="Cssxref(display)">{{Cssxref("display")}}</h3>
-
-<ul>
- <li><code>-moz-box</code> {{Deprecated_Inline}}</li>
- <li><code>-moz-inline-block</code> {{Obsolete_Inline}}</li>
- <li><code>-moz-inline-box</code> {{Deprecated_Inline}}</li>
- <li><code>-moz-inline-grid</code>{{Obsolete_Inline(62)}}</li>
- <li><code>-moz-inline-stack</code>{{Obsolete_Inline(62)}}</li>
- <li><code>-moz-inline-table</code> {{Obsolete_Inline}}</li>
- <li><code>-moz-grid</code>{{Obsolete_Inline(62)}}</li>
- <li><code>-moz-grid-group</code>{{Obsolete_Inline(62)}}</li>
- <li><code>-moz-grid-line</code>{{Obsolete_Inline(62)}}</li>
- <li><code>-moz-groupbox</code>{{Obsolete_Inline}}</li>
- <li><code>-moz-deck</code>{{Obsolete_Inline(62)}}</li>
- <li><code>-moz-popup</code>{{Obsolete_Inline(62)}}</li>
- <li><code>-moz-stack</code>{{Obsolete_Inline(62)}}</li>
- <li><code>-moz-marker</code>{{Obsolete_Inline(62)}}</li>
-</ul>
-
-<h3 id="cssxref(empty-cells)">{{cssxref("empty-cells")}}</h3>
-
-<ul>
- <li><code>-moz-show-background</code> (valeur par défaut en <em>quirks mode</em>)</li>
-</ul>
-
-<h3 id="Cssxref(font)">{{Cssxref("font")}}</h3>
-
-<ul>
- <li><code>-moz-button</code></li>
- <li><code>-moz-info</code></li>
- <li><code>-moz-desktop</code></li>
- <li><code>-moz-dialog</code> (également une couleur)</li>
- <li><code>-moz-document</code></li>
- <li><code>-moz-workspace</code></li>
- <li><code>-moz-window</code></li>
- <li><code>-moz-list</code></li>
- <li><code>-moz-pull-down-menu</code></li>
- <li><code>-moz-field</code> (également une couleur)</li>
-</ul>
-
-<h3 id="Cssxref(font-family)">{{Cssxref("font-family")}}</h3>
-
-<ul>
- <li><code>-moz-fixed</code></li>
-</ul>
-
-<h3 id="Cssxref(image-rendering)">{{Cssxref("image-rendering")}}</h3>
-
-<ul>
- <li>{{Cssxref("image-rendering","-moz-crisp-edges")}} </li>
-</ul>
-
-<h3 id="cssxref(&lt;length>)">{{cssxref("&lt;length&gt;")}}</h3>
-
-<ul>
- <li>{{cssxref("-moz-calc")}} </li>
-</ul>
-
-<h3 id="Cssxref(list-style-type)">{{Cssxref("list-style-type")}}</h3>
-
-<ul>
- <li><code>-moz-arabic-indic</code></li>
- <li><code>-moz-bengali</code></li>
- <li><code>-moz-cjk-earthly-branch</code></li>
- <li><code>-moz-cjk-heavenly-stem</code></li>
- <li><code>-moz-devanagari</code></li>
- <li><code>-moz-ethiopic-halehame</code></li>
- <li><code>-moz-ethiopic-halehame-am</code></li>
- <li><code>-moz-ethiopic-halehame-ti-er</code></li>
- <li><code>-moz-ethiopic-halehame-ti-et</code></li>
- <li><code>-moz-ethiopic-numeric</code></li>
- <li><code>-moz-gujarati</code></li>
- <li><code>-moz-gurmukhi</code></li>
- <li><code>-moz-hangul</code></li>
- <li><code>-moz-hangul-consonant</code></li>
- <li><code>-moz-japanese-formal</code></li>
- <li><code>-moz-japanese-informal</code></li>
- <li><code>-moz-kannada</code></li>
- <li><code>-moz-khmer</code></li>
- <li><code>-moz-lao</code></li>
- <li><code>-moz-malayalam</code></li>
- <li><code>-moz-myanmar</code></li>
- <li><code>-moz-oriya</code></li>
- <li><code>-moz-persian</code></li>
- <li><code>-moz-simp-chinese-formal</code></li>
- <li><code>-moz-simp-chinese-informal</code></li>
- <li><code>-moz-tamil</code></li>
- <li><code>-moz-telugu</code></li>
- <li><code>-moz-thai</code></li>
- <li><code>-moz-trad-chinese-formal</code></li>
- <li><code>-moz-trad-chinese-informal</code></li>
- <li><code>-moz-urdu</code></li>
-</ul>
-
-<h3 id="Cssxref(overflow)">{{Cssxref("overflow")}}</h3>
-
-<ul>
- <li>{{Cssxref("-moz-scrollbars-none")}} {{obsolete_inline}}</li>
- <li>{{Cssxref("-moz-scrollbars-horizontal")}} {{Deprecated_inline}}</li>
- <li>{{Cssxref("-moz-scrollbars-vertical")}} {{Deprecated_inline}}</li>
- <li>{{Cssxref("-moz-hidden-unscrollable")}}</li>
-</ul>
-
-<h3 id="Cssxref(text-align)">{{Cssxref("text-align")}}</h3>
-
-<ul>
- <li><code>-moz-center</code></li>
- <li><code>-moz-left</code></li>
- <li><code>-moz-right</code></li>
-</ul>
-
-<h3 id="Cssxref(text-decoration)">{{Cssxref("text-decoration")}}</h3>
-
-<ul>
- <li><code>-moz-anchor-decoration</code></li>
-</ul>
-
-<h3 id="Cssxref(-moz-user-select)">{{Cssxref("-moz-user-select")}}</h3>
-
-<ul>
- <li><code>-moz-all</code></li>
- <li><code>-moz-none</code></li>
-</ul>
-
-<h3 id="Cssxref(width)_Cssxref(min-width)_and_Cssxref(max-width)">{{Cssxref("width")}}, {{Cssxref("min-width")}}, and {{Cssxref("max-width")}}</h3>
-
-<ul>
- <li><code>-moz-min-content</code></li>
- <li><code>-moz-fit-content</code></li>
- <li><code>-moz-max-content</code></li>
- <li><code>-moz-available</code></li>
-</ul>
-
-<h2 id="Pseudo-éléments_et_pseudo-classes">Pseudo-éléments et pseudo-classes</h2>
-
-<ul>
- <li>
-  <h3 id="A_–_D">A – D</h3>
- </li>
- <li>{{CSSxRef("::-moz-anonymous-block")}} eg@:- bug 331432</li>
- <li>{{CSSxRef("::-moz-anonymous-positioned-block")}}</li>
- <li>{{CSSxRef(":-moz-any")}}</li>
- <li>{{CSSxRef(":-moz-any-link")}} [Matches <code>:link</code> and <code>:visited</code>]</li>
- <li>{{CSSxRef(":-moz-broken")}}</li>
- <li>{{CSSxRef("::-moz-canvas")}}</li>
- <li>{{CSSxRef("::-moz-color-swatch")}}</li>
- <li>{{CSSxRef("::-moz-cell-content")}}</li>
- <li>{{CSSxRef(":-moz-drag-over")}}</li>
- <li>
-  <h3 id="F_–_I">F – I</h3>
- </li>
- <li>{{CSSxRef(":-moz-first-node")}}</li>
- <li>{{CSSxRef("::-moz-focus-inner")}}</li>
- <li>{{CSSxRef("::-moz-focus-outer")}}</li>
- <li>{{CSSxRef(":-moz-focusring")}}</li>
- <li>{{CSSxRef(":-moz-full-screen")}}</li>
- <li>{{CSSxRef(":-moz-full-screen-ancestor")}}</li>
- <li>{{CSSxRef(":-moz-handler-blocked")}}</li>
- <li>{{CSSxRef(":-moz-handler-crashed")}}</li>
- <li>{{CSSxRef(":-moz-handler-disabled")}}</li>
- <li>{{CSSxRef("::-moz-inline-table")}}</li>
- <li>
-  <h3 id="L">L</h3>
- </li>
- <li>{{CSSxRef(":-moz-last-node")}}</li>
- <li>{{CSSxRef(":-moz-list-bullet")}}</li>
- <li>{{CSSxRef(":-moz-list-number")}}</li>
- <li>{{CSSxRef(":-moz-loading")}}</li>
- <li>{{CSSxRef(":-moz-locale-dir(ltr)")}}</li>
- <li>{{CSSxRef(":-moz-locale-dir(rtl)")}}</li>
- <li>{{CSSxRef(":-moz-lwtheme")}}</li>
- <li>{{CSSxRef(":-moz-lwtheme-brighttext")}}</li>
- <li>{{CSSxRef(":-moz-lwtheme-darktext")}}</li>
- <li>
-  <h3 id="N_–_R">N – R</h3>
- </li>
- <li>{{CSSxRef(":-moz-native-anonymous")}}</li>
- <li>{{CSSxRef(":-moz-only-whitespace")}}</li>
- <li>{{CSSxRef("::-moz-page")}}</li>
- <li>{{CSSxRef("::-moz-page-sequence")}}</li>
- <li>{{CSSxRef("::-moz-pagebreak")}}</li>
- <li>{{CSSxRef("::-moz-pagecontent")}}</li>
- <li>{{CSSxRef(":placeholder-shown")}}{{Obsolete_Inline("51")}}</li>
- <li>{{CSSxRef("::placeholder")}}{{Deprecated_Inline("51")}}</li>
- <li>{{CSSxRef("::-moz-progress-bar")}}</li>
- <li>{{CSSxRef("::-moz-range-progress")}}</li>
- <li>{{CSSxRef("::-moz-range-thumb")}}</li>
- <li>{{CSSxRef("::-moz-range-track")}}</li>
- <li>{{CSSxRef(":-moz-read-only")}}</li>
- <li>{{CSSxRef(":-moz-read-write")}}</li>
- <li>
-  <h3 id="S">S</h3>
- </li>
- <li>{{CSSxRef("::-moz-scrolled-canvas")}}</li>
- <li>{{CSSxRef("::-moz-scrolled-content")}}</li>
- <li>{{CSSxRef("::-moz-scrolled-page-sequence")}}</li>
- <li>{{CSSxRef("::selection","::-moz-selection")}}{{Deprecated_Inline(62)}}</li>
- <li>{{CSSxRef(":-moz-submit-invalid")}}</li>
- <li>{{CSSxRef(":-moz-suppressed")}}</li>
- <li>{{CSSxRef("::-moz-svg-foreign-content")}}</li>
- <li>
-  <h3 id="T">T</h3>
- </li>
- <li>{{CSSxRef("::-moz-table")}}</li>
- <li>{{CSSxRef("::-moz-table-cell")}}</li>
- <li>{{CSSxRef("::-moz-table-column")}}</li>
- <li>{{CSSxRef("::-moz-table-column-group")}}</li>
- <li>{{CSSxRef("::-moz-table-outer")}}</li>
- <li>{{CSSxRef("::-moz-table-row")}}</li>
- <li>{{CSSxRef("::-moz-table-row-group")}}</li>
- <li>{{CSSxRef(":-moz-tree-cell")}}</li>
- <li>{{CSSxRef(":-moz-tree-cell-text")}}</li>
- <li>{{CSSxRef(":-moz-tree-cell-text(hover)")}}</li>
- <li>{{CSSxRef(":-moz-tree-checkbox")}}</li>
- <li>{{CSSxRef(":-moz-tree-column")}}</li>
- <li>{{CSSxRef(":-moz-tree-drop-feedback")}}</li>
- <li>{{CSSxRef(":-moz-tree-image")}}</li>
- <li>{{CSSxRef(":-moz-tree-indentation")}}</li>
- <li>{{CSSxRef(":-moz-tree-line")}}</li>
- <li>{{CSSxRef(":-moz-tree-progressmeter")}}</li>
- <li>{{CSSxRef(":-moz-tree-row")}}</li>
- <li>{{CSSxRef(":-moz-tree-row(hover)")}}</li>
- <li>{{CSSxRef(":-moz-tree-separator")}}</li>
- <li>{{CSSxRef(":-moz-tree-twisty")}}</li>
- <li>
-  <h3 id="U_–_X">U – X</h3>
- </li>
- <li>{{CSSxRef(":user-invalid")}}</li>
- <li>{{CSSxRef(":-moz-ui-valid")}}</li>
- <li>{{CSSxRef(":-moz-user-disabled")}}</li>
- <li>{{CSSxRef("::-moz-viewport")}}</li>
- <li>{{CSSxRef("::-moz-viewport-scroll")}}</li>
- <li>{{CSSxRef(":-moz-window-inactive")}}</li>
- <li>{{CSSxRef("::-moz-xul-anonymous-block")}}</li>
-</ul>
-
-<h2 id="Règles">Règles @</h2>
-
-<ul>
- <li>{{Cssxref("@-moz-document")}}</li>
-</ul>
-
-<h2 id="Caractéristiques">Caractéristiques</h2>
-
-<ul>
- <li>{{CSSxRef("@media/-moz-mac-graphite-theme", "-moz-mac-graphite-theme")}}</li>
- <li>{{CSSxRef("@media/-moz-maemo-classic", "-moz-maemo-classic")}}</li>
- <li>{{CSSxRef("@media/-moz-device-pixel-ratio", "-moz-device-pixel-ratio")}}</li>
- <li>{{CSSxRef("@media/-moz-os-version", "-moz-os-version")}}</li>
- <li>{{CSSxRef("@media/-moz-scrollbar-end-backward", "-moz-scrollbar-end-backward")}}</li>
- <li>{{CSSxRef("@media/-moz-scrollbar-end-forward", "-moz-scrollbar-end-forward")}}</li>
- <li>{{CSSxRef("@media/-moz-scrollbar-start-backward", "-moz-scrollbar-start-backward")}}</li>
- <li>{{CSSxRef("@media/-moz-scrollbar-start-forward", "-moz-scrollbar-start-forward")}}</li>
- <li>{{CSSxRef("@media/-moz-scrollbar-thumb-proportional", "-moz-scrollbar-thumb-proportional")}}</li>
- <li>{{CSSxRef("@media/-moz-touch-enabled", "-moz-touch-enabled")}}</li>
- <li>{{CSSxRef("@media/-moz-windows-accent-color-in-titlebar", "-moz-windows-accent-color-in-titlebar")}}</li>
- <li>{{CSSxRef("@media/-moz-windows-classic", "-moz-windows-classic")}}</li>
- <li>{{CSSxRef("@media/-moz-windows-compositor", "-moz-windows-compositor")}}</li>
- <li>{{CSSxRef("@media/-moz-windows-default-theme", "-moz-windows-default-theme")}}</li>
- <li>{{CSSxRef("@media/-moz-windows-glass", "-moz-windows-glass")}}</li>
- <li>{{CSSxRef("@media/-moz-windows-theme", "-moz-windows-theme")}}</li>
-</ul>
-
-<h2 id="Autres">Autres</h2>
-
-<ul>
- <li>{{Cssxref("-moz-alt-content")}} {{Bug("11011")}}</li>
-</ul>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li><a href="/fr/docs/Mozilla/Gecko/Chrome/CSS">CSS Mozilla uniquement destiné au chrome (l'interface du navigateur)</a></li>
- <li><a href="/fr/docs/Web/CSS/Microsoft_Extensions">Extensions CSS spécifiques à Microsoft</a></li>
- <li><a href="/fr/docs/Web/CSS/WebKit_Extensions">Extensions CSS spécifiques à WebKit</a></li>
-</ul>
+{{CSSRef}}
+
+Les applications Mozilla, telles que Firefox, prennent en charge un certain nombre d'extensions spécifiques à [CSS](/fr/docs/Web/CSS) : des propriétés, des valeurs, des pseudo-éléments, des pseudo-classes, des règles @ et des requêtes média. Ces extensions utilisent le préfixe `-moz`.
+
+## Propriétés et pseudo-classes spécifiques à Mozilla (ne pas utiliser sur le Web)
+
+> **Note :** Ces propriétés et pseudo-classes ne fonctionneront que pour les applications Mozilla (Firefox par exemple) et ne sont pas en voie de standardisation. Certaines ne s'applique qu'aux éléments [XUL](/fr/docs/Mozilla/Tech/XUL).
+
+### B
+
+- {{CSSxRef("-moz-binding")}} {{Deprecated_Inline}}
+- {{CSSxRef("-moz-border-bottom-colors")}} {{Obsolete_Inline}}
+- {{CSSxRef("-moz-border-left-colors")}} {{Obsolete_Inline}}
+- {{CSSxRef("-moz-border-right-colors")}} {{Obsolete_Inline}}
+- {{CSSxRef("-moz-border-top-colors")}} {{Obsolete_Inline}}
+- {{CSSxRef("box-align")}}
+- {{CSSxRef("box-direction")}}
+- {{CSSxRef("box-flex")}}
+- {{CSSxRef("-moz-box-ordinal-group")}}
+- {{CSSxRef("box-orient")}}
+- {{CSSxRef("box-pack")}}
+
+### C – I
+
+- {{CSSxRef("-moz-context-properties")}}
+- {{CSSxRef("-moz-float-edge")}}
+- {{CSSxRef("-moz-force-broken-image-icon")}}
+- {{CSSxRef("-moz-image-region")}}
+
+### O
+
+- {{CSSxRef("-moz-orient")}}
+- {{CSSxRef("-moz-osx-font-smoothing")}}
+- {{CSSxRef("-moz-outline-radius")}}
+- {{CSSxRef("-moz-outline-radius-bottomleft")}}
+- {{CSSxRef("-moz-outline-radius-bottomright")}}
+- {{CSSxRef("-moz-outline-radius-topleft")}}
+- {{CSSxRef("-moz-outline-radius-topright")}}
+- {{CSSxRef("overflow-clip-box")}}
+- {{CSSxRef("overflow-clip-box-block")}}
+- {{CSSxRef("overflow-clip-box-inline")}}
+
+### S – Z
+
+- {{CSSxRef("-moz-stack-sizing")}}
+- {{CSSxRef(":-moz-system-metric(images-in-menus)")}} {{Obsolete_Inline}}
+- {{CSSxRef(":-moz-system-metric(mac-graphite-theme)")}} {{Obsolete_Inline}}
+- {{CSSxRef(":-moz-system-metric(scrollbar-end-backward)")}} {{Obsolete_Inline}}
+- {{CSSxRef(":-moz-system-metric(scrollbar-end-forward)")}} {{Obsolete_Inline}}
+- {{CSSxRef(":-moz-system-metric(scrollbar-start-backward)")}} {{Obsolete_Inline}}
+- {{CSSxRef(":-moz-system-metric(scrollbar-start-forward)")}} {{Obsolete_Inline}}
+- {{CSSxRef(":-moz-system-metric(scrollbar-thumb-proportional)")}} {{Obsolete_Inline}}
+- {{CSSxRef(":-moz-system-metric(touch-enabled)")}} {{Obsolete_Inline}}
+- {{CSSxRef(":-moz-system-metric(windows-default-theme)")}} {{Obsolete_Inline}}
+- {{CSSxRef("-moz-user-focus")}}
+- {{CSSxRef("-moz-user-input")}}
+- {{CSSxRef("user-modify")}}
+- {{CSSxRef("-moz-window-dragging")}}
+- {{CSSxRef("-moz-window-shadow")}}
+
+## Anciennes propriétés spécifiques, désormais standardisées
+
+> **Note :** Afin d'obtenir la meilleure compatibilité possible, vous devriez utiliser les versions standards, non-préfixées, de ces propriétés plutôt que les versions spécifiques. Généralement, lorsqu'une propriété est standardisée et implémentée, la version préfixée est généralement abandonnée ensuite.
+
+- ### A
+- {{CSSxRef("animation", "-moz-animation")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{CSSxRef("animation-delay", "-moz-animation-delay")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{CSSxRef("animation-direction", "-moz-animation-direction")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{CSSxRef("animation-duration", "-moz-animation-duration")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{CSSxRef("animation-fill-mode", "-moz-animation-fill-mode")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{CSSxRef("animation-iteration-count", "-moz-animation-iteration-count")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{CSSxRef("animation-name", "-moz-animation-name")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{CSSxRef("animation-play-state", "-moz-animation-play-state")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{CSSxRef("animation-timing-function","-moz-animation-timing-function")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{CSSxRef("appearance","-moz-appearance")}} {{Experimental_Inline}}
+- ### B
+- {{CSSxRef("backface-visibility", "-moz-backface-visibility")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{CSSxRef("background-clip", "-moz-background-clip")}}{{Obsolete_Inline(2)}}
+- {{CSSxRef("background-origin", "-moz-background-origin")}}{{Obsolete_Inline(2)}}
+- {{CSSxRef("box-decoration-break")}}{{Obsolete_Inline(32)}} \[Remplacée par la version standard {{CSSxRef("box-decoration-break")}}]
+- {{CSSxRef("background-size", "-moz-background-size")}}{{Obsolete_Inline(2)}}
+- {{CSSxRef("border-inline-end","-moz-border-end")}} {{Deprecated_Inline}} \[Remplacée par la version standard {{CSSxRef("border-inline-end")}}]
+- {{CSSxRef("border-inline-color","-moz-border-end-color")}} {{Deprecated_Inline}} \[Remplacée par la version standard {{CSSxRef("border-inline-end-color")}}]
+- {{CSSxRef("border-inline-style","-moz-border-end-style")}} {{Deprecated_Inline}} \[Remplacée par la version standard {{CSSxRef("border-inline-end-style")}}]
+- {{CSSxRef("border-inline-width","-moz-border-end-width")}} {{Deprecated_Inline}} \[Remplacée par la version standard {{CSSxRef("border-inline-end-width")}}]
+- {{CSSxRef("border-image","-moz-border-image")}} {{Deprecated_Inline}}
+- {{CSSxRef("border-inline-start","-moz-border-start")}} {{Deprecated_Inline}} \[Remplacée par la version standard {{CSSxRef("border-inline-start")}}]
+- {{CSSxRef("border-inline-start-color","-moz-border-start-color")}} {{Deprecated_Inline}} \[Remplacée par la version standard {{CSSxRef("border-inline-start-color")}}]
+- {{CSSxRef("border-inline-start-style","-moz-border-start-style")}} {{Deprecated_Inline}} \[Remplacée par la version standard {{CSSxRef("border-inline-start-style")}}]
+- {{CSSxRef("border-inline-start-width","-moz-border-start-width")}} {{Deprecated_Inline}} \[Remplacée par la version standard {{CSSxRef("border-inline-start-width")}}]
+- {{CSSxRef("box-sizing", "-moz-box-sizing")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- ### C
+- {{CSSxRef("clip-path")}} {{Experimental_Inline}} \[Applying to more than SVG]
+- {{CSSxRef("column-count","-moz-column-count")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{CSSxRef("column-fill","-moz-column-fill")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{CSSxRef("column-gap","-moz-column-gap")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{CSSxRef("column-width","-moz-column-width")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{CSSxRef("column-rule","-moz-column-rule")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{CSSxRef("column-rule-width","-moz-column-rule-width")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{CSSxRef("column-rule-style","-moz-column-rule-style")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{CSSxRef("column-rule-color","-moz-column-rule-color")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{CSSxRef("-moz-context-properties")}} {{Experimental_Inline}}
+- ### F – M
+- {{CSSxRef("filter")}} {{Experimental_Inline}} \[Applying to more than SVG]
+- {{CSSxRef("font-feature-settings","-moz-font-feature-settings")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{CSSxRef("font-language-override","-moz-font-language-override")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{CSSxRef("hyphens","-moz-hyphens")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{CSSxRef("margin-inline-end","-moz-margin-end")}} {{Deprecated_Inline}} \[Remplacée par la version standard {{CSSxRef("margin-inline-end")}}]
+- {{CSSxRef("margin-inline-start","-moz-margin-start")}} {{Deprecated_Inline}} \[Remplacée par la version standard {{CSSxRef("margin-inline-start")}}]
+- {{CSSxRef("mask")}} {{Experimental_Inline}} \[Applying to more than SVG]
+- ### O
+- {{CSSxRef("opacity","-moz-opacity")}}{{Obsolete_Inline("1.9.1")}}
+- {{CSSxRef("outline","-moz-outline")}}{{Obsolete_Inline("1.9.2")}}
+- {{CSSxRef("outline-color","-moz-outline-color")}}{{Obsolete_Inline("1.9.2")}}
+- {{CSSxRef("outline-offset","-moz-outline-offset")}}{{Obsolete_Inline("1.9.2")}}
+- {{CSSxRef("outline-style","-moz-outline-style")}}{{Obsolete_Inline("1.9.2")}}
+- {{CSSxRef("outline-width","-moz-outline-width")}}{{Obsolete_Inline("1.9.2")}}
+- ### P
+- {{CSSxRef("padding-inline-end","-moz-padding-end")}} {{Deprecated_Inline}} \[Remplacée par la version standard {{CSSxRef("padding-inline-start")}}]
+- {{CSSxRef("padding-inline-start","-moz-padding-start")}} {{Deprecated_Inline}} \[Remplacée par la version standard {{CSSxRef("padding-inline-end")}}]
+- {{CSSxRef("perspective", "-moz-perspective")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{CSSxRef("perspective-origin","-moz-perspective-origin")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{CSSxRef("pointer-events")}} {{Experimental_Inline}} \[Applying to more than SVG]
+- ### T – U
+- {{CSSxRef("tab-size","-moz-tab-size")}} {{Experimental_Inline}}
+- {{CSSxRef("text-align-last","-moz-text-align-last")}}{{Obsolete_Inline("53")}}
+- {{CSSxRef("text-decoration-color","-moz-text-decoration-color")}}{{Obsolete_Inline("39")}}
+- {{CSSxRef("text-decoration-line","-moz-text-decoration-line")}}{{Obsolete_Inline("39")}}
+- {{CSSxRef("text-decoration-style","-moz-text-decoration-style")}}{{Obsolete_Inline("39")}}
+- {{CSSxRef("text-size-adjust","-moz-text-size-adjust")}} {{Experimental_Inline}}
+- {{CSSxRef("transform", "-moz-transform")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{CSSxRef("transform-origin", "-moz-transform-origin")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{CSSxRef("transform-style", "-moz-transform-style")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{CSSxRef("transition", "-moz-transition")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{CSSxRef("transition-delay", "-moz-transition-delay")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{CSSxRef("transition-duration", "-moz-transition-duration")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{CSSxRef("transition-property", "-moz-transition-property")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{CSSxRef("transition-timing-function", "-moz-transition-timing-function")}} {{Deprecated_Inline}} \[Version préfixée toujours acceptée]
+- {{CSSxRef("user-select","-moz-user-select")}} {{Experimental_Inline}}
+
+## Valeurs
+
+### Valeurs globales
+
+- {{cssxref("initial","-moz-initial")}}
+
+### {{Cssxref("appearance")}}
+
+- `button`
+- `button-arrow-down`
+- `button-arrow-next`
+- `button-arrow-previous`
+- `button-arrow-up`
+- `button-bevel`
+- `checkbox`
+- `checkbox-container`
+- `checkbox-label`
+- `checkmenuitem`
+- `dialog`
+- `groupbox`
+- `listbox`
+- `menuarrow`
+- `menucheckbox`
+- `menuimage`
+- `menuitem`
+- `menuitemtext`
+- `menulist`
+- `menulist-button`
+- `menulist-text`
+- `menulist-textfield`
+- `menupopup`
+- `menuradio`
+- `menuseparator`
+- `-moz-mac-unified-toolbar`
+- `-moz-win-borderless-glass`
+- `-moz-win-browsertabbar-toolbox`
+- `-moz-win-communications-toolbox`
+- `-moz-win-glass`
+- `-moz-win-media-toolbox`
+- `-moz-window-button-box`
+- `-moz-window-button-box-maximized`
+- `-moz-window-button-close`
+- `-moz-window-button-maximize`
+- `-moz-window-button-minimize`
+- `-moz-window-button-restore`
+- `-moz-window-titlebar`
+- `-moz-window-titlebar-maximized`
+- `progressbar`
+- `progresschunk`
+- `radio`
+- `radio-container`
+- `radio-label`
+- `radiomenuitem`
+- `resizer`
+- `resizerpanel`
+- `scale-horizontal`
+- `scalethumb-horizontal`
+- `scalethumb-vertical`
+- `scale-vertical`
+- `scrollbarbutton-down`
+- `scrollbarbutton-left`
+- `scrollbarbutton-right`
+- `scrollbarbutton-up`
+- `scrollbar-small`
+- `scrollbarthumb-horizontal`
+- `scrollbarthumb-vertical`
+- `scrollbartrack-horizontal`
+- `scrollbartrack-vertical`
+- `separator`
+- `spinner`
+- `spinner-downbutton`
+- `spinner-textfield`
+- `spinner-upbutton`
+- `statusbar`
+- `statusbarpanel`
+- `tab`
+- `tabpanels`
+- `tab-scroll-arrow-back`
+- `tab-scroll-arrow-forward`
+- `textfield`
+- `textfield-multiline`
+- `toolbar`
+- `toolbarbutton-dropdown`
+- `toolbox`
+- `tooltip`
+- `treeheadercell`
+- `treeheadersortarrow`
+- `treeitem`
+- `treetwisty`
+- `treetwistyopen`
+- `treeview`
+- `window`
+
+### {{cssxref("background-image")}}
+
+- #### Dégradés
+
+  - {{CSSxRef("linear-gradient","-moz-linear-gradient")}} {{Deprecated_Inline}}
+  - {{CSSxRef("radial-gradient","-moz-radial-gradient")}} {{Deprecated_Inline}}
+
+- #### Éléments
+
+  - {{cssxref("-moz-element")}}
+
+- #### Sub-images
+
+  - {{cssxref("-moz-image-rect")}}
+
+### {{Cssxref("border-color")}}
+
+- `-moz-use-text-color` {{obsolete_inline}} retiré de Gecko (cf. {{bug(1306214)}}) ; [currentcolor](/fr/docs/Web/CSS/color_value#currentcolor_keyword) doit être utilisée à la place.
+
+### {{Cssxref("border-style")}} et {{Cssxref("outline-style")}}
+
+- `-moz-bg-inset`{{Obsolete_Inline(1.9)}}
+- `-moz-bg-outset`{{Obsolete_Inline(1.9)}}
+- `-moz-bg-solid`{{Obsolete_Inline(1.9)}}
+
+### Mots-clés pour {{cssxref("&lt;color&gt;")}}
+
+- `-moz-activehyperlinktext`
+- `-moz-hyperlinktext`
+- `-moz-visitedhyperlinktext`
+- `-moz-buttondefault`
+- `-moz-buttonhoverface`
+- `-moz-buttonhovertext`
+- `-moz-default-background-color`
+- `-moz-default-color`
+- `-moz-cellhighlight`
+- `-moz-cellhighlighttext`
+- `-moz-field`
+- `-moz-fieldtext`
+- `-moz-dialog`
+- `-moz-dialogtext`
+- `-moz-dragtargetzone`
+- `-moz-mac-accentdarkestshadow`
+- `-moz-mac-accentdarkshadow`
+- `-moz-mac-accentface`
+- `-moz-mac-accentlightesthighlight`
+- `-moz-mac-accentlightshadow`
+- `-moz-mac-accentregularhighlight`
+- `-moz-mac-accentregularshadow`
+- `-moz-mac-chrome-active`
+- `-moz-mac-chrome-inactive`
+- `-moz-mac-focusring`
+- `-moz-mac-menuselect`
+- `-moz-mac-menushadow`
+- `-moz-mac-menutextselect`
+- `-moz-menuhover`
+- `-moz-menuhovertext`
+- `-moz-win-communicationstext`
+- `-moz-win-mediatext`
+- `-moz-nativehyperlinktext`
+
+### {{Cssxref("display")}}
+
+- `-moz-box` {{Deprecated_Inline}}
+- `-moz-inline-block` {{Obsolete_Inline}}
+- `-moz-inline-box` {{Deprecated_Inline}}
+- `-moz-inline-grid`{{Obsolete_Inline(62)}}
+- `-moz-inline-stack`{{Obsolete_Inline(62)}}
+- `-moz-inline-table` {{Obsolete_Inline}}
+- `-moz-grid`{{Obsolete_Inline(62)}}
+- `-moz-grid-group`{{Obsolete_Inline(62)}}
+- `-moz-grid-line`{{Obsolete_Inline(62)}}
+- `-moz-groupbox`{{Obsolete_Inline}}
+- `-moz-deck`{{Obsolete_Inline(62)}}
+- `-moz-popup`{{Obsolete_Inline(62)}}
+- `-moz-stack`{{Obsolete_Inline(62)}}
+- `-moz-marker`{{Obsolete_Inline(62)}}
+
+### {{cssxref("empty-cells")}}
+
+- `-moz-show-background` (valeur par défaut en _quirks mode_)
+
+### {{Cssxref("font")}}
+
+- `-moz-button`
+- `-moz-info`
+- `-moz-desktop`
+- `-moz-dialog` (également une couleur)
+- `-moz-document`
+- `-moz-workspace`
+- `-moz-window`
+- `-moz-list`
+- `-moz-pull-down-menu`
+- `-moz-field` (également une couleur)
+
+### {{Cssxref("font-family")}}
+
+- `-moz-fixed`
+
+### {{Cssxref("image-rendering")}}
+
+- {{Cssxref("image-rendering","-moz-crisp-edges")}}
+
+### {{cssxref("&lt;length&gt;")}}
+
+- {{cssxref("-moz-calc")}}
+
+### {{Cssxref("list-style-type")}}
+
+- `-moz-arabic-indic`
+- `-moz-bengali`
+- `-moz-cjk-earthly-branch`
+- `-moz-cjk-heavenly-stem`
+- `-moz-devanagari`
+- `-moz-ethiopic-halehame`
+- `-moz-ethiopic-halehame-am`
+- `-moz-ethiopic-halehame-ti-er`
+- `-moz-ethiopic-halehame-ti-et`
+- `-moz-ethiopic-numeric`
+- `-moz-gujarati`
+- `-moz-gurmukhi`
+- `-moz-hangul`
+- `-moz-hangul-consonant`
+- `-moz-japanese-formal`
+- `-moz-japanese-informal`
+- `-moz-kannada`
+- `-moz-khmer`
+- `-moz-lao`
+- `-moz-malayalam`
+- `-moz-myanmar`
+- `-moz-oriya`
+- `-moz-persian`
+- `-moz-simp-chinese-formal`
+- `-moz-simp-chinese-informal`
+- `-moz-tamil`
+- `-moz-telugu`
+- `-moz-thai`
+- `-moz-trad-chinese-formal`
+- `-moz-trad-chinese-informal`
+- `-moz-urdu`
+
+### {{Cssxref("overflow")}}
+
+- {{Cssxref("-moz-scrollbars-none")}} {{obsolete_inline}}
+- {{Cssxref("-moz-scrollbars-horizontal")}} {{Deprecated_inline}}
+- {{Cssxref("-moz-scrollbars-vertical")}} {{Deprecated_inline}}
+- {{Cssxref("-moz-hidden-unscrollable")}}
+
+### {{Cssxref("text-align")}}
+
+- `-moz-center`
+- `-moz-left`
+- `-moz-right`
+
+### {{Cssxref("text-decoration")}}
+
+- `-moz-anchor-decoration`
+
+### {{Cssxref("-moz-user-select")}}
+
+- `-moz-all`
+- `-moz-none`
+
+### {{Cssxref("width")}}, {{Cssxref("min-width")}}, and {{Cssxref("max-width")}}
+
+- `-moz-min-content`
+- `-moz-fit-content`
+- `-moz-max-content`
+- `-moz-available`
+
+## Pseudo-éléments et pseudo-classes
+
+- ### A – D
+- {{CSSxRef("::-moz-anonymous-block")}} eg@:- bug 331432
+- {{CSSxRef("::-moz-anonymous-positioned-block")}}
+- {{CSSxRef(":-moz-any")}}
+- {{CSSxRef(":-moz-any-link")}} \[Matches `:link` and `:visited`]
+- {{CSSxRef(":-moz-broken")}}
+- {{CSSxRef("::-moz-canvas")}}
+- {{CSSxRef("::-moz-color-swatch")}}
+- {{CSSxRef("::-moz-cell-content")}}
+- {{CSSxRef(":-moz-drag-over")}}
+- ### F – I
+- {{CSSxRef(":-moz-first-node")}}
+- {{CSSxRef("::-moz-focus-inner")}}
+- {{CSSxRef("::-moz-focus-outer")}}
+- {{CSSxRef(":-moz-focusring")}}
+- {{CSSxRef(":-moz-full-screen")}}
+- {{CSSxRef(":-moz-full-screen-ancestor")}}
+- {{CSSxRef(":-moz-handler-blocked")}}
+- {{CSSxRef(":-moz-handler-crashed")}}
+- {{CSSxRef(":-moz-handler-disabled")}}
+- {{CSSxRef("::-moz-inline-table")}}
+- ### L
+- {{CSSxRef(":-moz-last-node")}}
+- {{CSSxRef(":-moz-list-bullet")}}
+- {{CSSxRef(":-moz-list-number")}}
+- {{CSSxRef(":-moz-loading")}}
+- {{CSSxRef(":-moz-locale-dir(ltr)")}}
+- {{CSSxRef(":-moz-locale-dir(rtl)")}}
+- {{CSSxRef(":-moz-lwtheme")}}
+- {{CSSxRef(":-moz-lwtheme-brighttext")}}
+- {{CSSxRef(":-moz-lwtheme-darktext")}}
+- ### N – R
+- {{CSSxRef(":-moz-native-anonymous")}}
+- {{CSSxRef(":-moz-only-whitespace")}}
+- {{CSSxRef("::-moz-page")}}
+- {{CSSxRef("::-moz-page-sequence")}}
+- {{CSSxRef("::-moz-pagebreak")}}
+- {{CSSxRef("::-moz-pagecontent")}}
+- {{CSSxRef(":placeholder-shown")}}{{Obsolete_Inline("51")}}
+- {{CSSxRef("::placeholder")}}{{Deprecated_Inline("51")}}
+- {{CSSxRef("::-moz-progress-bar")}}
+- {{CSSxRef("::-moz-range-progress")}}
+- {{CSSxRef("::-moz-range-thumb")}}
+- {{CSSxRef("::-moz-range-track")}}
+- {{CSSxRef(":-moz-read-only")}}
+- {{CSSxRef(":-moz-read-write")}}
+- ### S
+- {{CSSxRef("::-moz-scrolled-canvas")}}
+- {{CSSxRef("::-moz-scrolled-content")}}
+- {{CSSxRef("::-moz-scrolled-page-sequence")}}
+- {{CSSxRef("::selection","::-moz-selection")}}{{Deprecated_Inline(62)}}
+- {{CSSxRef(":-moz-submit-invalid")}}
+- {{CSSxRef(":-moz-suppressed")}}
+- {{CSSxRef("::-moz-svg-foreign-content")}}
+- ### T
+- {{CSSxRef("::-moz-table")}}
+- {{CSSxRef("::-moz-table-cell")}}
+- {{CSSxRef("::-moz-table-column")}}
+- {{CSSxRef("::-moz-table-column-group")}}
+- {{CSSxRef("::-moz-table-outer")}}
+- {{CSSxRef("::-moz-table-row")}}
+- {{CSSxRef("::-moz-table-row-group")}}
+- {{CSSxRef(":-moz-tree-cell")}}
+- {{CSSxRef(":-moz-tree-cell-text")}}
+- {{CSSxRef(":-moz-tree-cell-text(hover)")}}
+- {{CSSxRef(":-moz-tree-checkbox")}}
+- {{CSSxRef(":-moz-tree-column")}}
+- {{CSSxRef(":-moz-tree-drop-feedback")}}
+- {{CSSxRef(":-moz-tree-image")}}
+- {{CSSxRef(":-moz-tree-indentation")}}
+- {{CSSxRef(":-moz-tree-line")}}
+- {{CSSxRef(":-moz-tree-progressmeter")}}
+- {{CSSxRef(":-moz-tree-row")}}
+- {{CSSxRef(":-moz-tree-row(hover)")}}
+- {{CSSxRef(":-moz-tree-separator")}}
+- {{CSSxRef(":-moz-tree-twisty")}}
+- ### U – X
+- {{CSSxRef(":user-invalid")}}
+- {{CSSxRef(":-moz-ui-valid")}}
+- {{CSSxRef(":-moz-user-disabled")}}
+- {{CSSxRef("::-moz-viewport")}}
+- {{CSSxRef("::-moz-viewport-scroll")}}
+- {{CSSxRef(":-moz-window-inactive")}}
+- {{CSSxRef("::-moz-xul-anonymous-block")}}
+
+## Règles @
+
+- {{Cssxref("@-moz-document")}}
+
+## Caractéristiques
+
+- {{CSSxRef("@media/-moz-mac-graphite-theme", "-moz-mac-graphite-theme")}}
+- {{CSSxRef("@media/-moz-maemo-classic", "-moz-maemo-classic")}}
+- {{CSSxRef("@media/-moz-device-pixel-ratio", "-moz-device-pixel-ratio")}}
+- {{CSSxRef("@media/-moz-os-version", "-moz-os-version")}}
+- {{CSSxRef("@media/-moz-scrollbar-end-backward", "-moz-scrollbar-end-backward")}}
+- {{CSSxRef("@media/-moz-scrollbar-end-forward", "-moz-scrollbar-end-forward")}}
+- {{CSSxRef("@media/-moz-scrollbar-start-backward", "-moz-scrollbar-start-backward")}}
+- {{CSSxRef("@media/-moz-scrollbar-start-forward", "-moz-scrollbar-start-forward")}}
+- {{CSSxRef("@media/-moz-scrollbar-thumb-proportional", "-moz-scrollbar-thumb-proportional")}}
+- {{CSSxRef("@media/-moz-touch-enabled", "-moz-touch-enabled")}}
+- {{CSSxRef("@media/-moz-windows-accent-color-in-titlebar", "-moz-windows-accent-color-in-titlebar")}}
+- {{CSSxRef("@media/-moz-windows-classic", "-moz-windows-classic")}}
+- {{CSSxRef("@media/-moz-windows-compositor", "-moz-windows-compositor")}}
+- {{CSSxRef("@media/-moz-windows-default-theme", "-moz-windows-default-theme")}}
+- {{CSSxRef("@media/-moz-windows-glass", "-moz-windows-glass")}}
+- {{CSSxRef("@media/-moz-windows-theme", "-moz-windows-theme")}}
+
+## Autres
+
+- {{Cssxref("-moz-alt-content")}} {{Bug("11011")}}
+
+## Voir aussi
+
+- [CSS Mozilla uniquement destiné au chrome (l'interface du navigateur)](/fr/docs/Mozilla/Gecko/Chrome/CSS)
+- [Extensions CSS spécifiques à Microsoft](/fr/docs/Web/CSS/Microsoft_Extensions)
+- [Extensions CSS spécifiques à WebKit](/fr/docs/Web/CSS/WebKit_Extensions)

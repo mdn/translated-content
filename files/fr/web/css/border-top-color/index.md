@@ -7,17 +7,18 @@ tags:
   - Reference
 translation_of: Web/CSS/border-top-color
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>border-top-color</code></strong> définit la couleur utilisée pour la bordure haute d'un élément.</p>
+La propriété **`border-top-color`** définit la couleur utilisée pour la bordure haute d'un élément.
 
-<p>Pour avoir une formulation plus concise, on pourra utiliser les propriétés raccourcies {{cssxref("border-color")}} et/ou {{cssxref("border-top")}}.</p>
+Pour avoir une formulation plus concise, on pourra utiliser les propriétés raccourcies {{cssxref("border-color")}} et/ou {{cssxref("border-top")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/border-top-color.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-top-color.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs de type &lt;color&gt; */
+```css
+/* Valeurs de type <color> */
 border-top-color: red;
 border-top-color: #ffbb00;
 border-top-color: rgb(255, 0, 0);
@@ -29,24 +30,23 @@ border-top-color: transparent;
 border-top-color: inherit;
 border-top-color: initial;
 border-top-color: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;color&gt;</code></dt>
- <dd>Une valeur de couleur (type {{cssxref("&lt;color&gt;")}}) qui décrit la couleur utilisée pour la bordure du côté haut.</dd>
-</dl>
+- `<color>`
+  - : Une valeur de couleur (type {{cssxref("&lt;color&gt;")}}) qui décrit la couleur utilisée pour la bordure du côté haut.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.maboite {
+```css
+.maboite {
   border: solid 0.3em gold;
   border-top-color: red;
   width: auto;
@@ -54,71 +54,51 @@ border-top-color: unset;
 
 .texterouge {
   color: red;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="maboite"&gt;
-  &lt;p&gt;Une boîte avec une bordure autour.
+```html
+<div class="maboite">
+  <p>Une boîte avec une bordure autour.
      Notez le côté de la boîte qui est
-     &lt;span class="texterouge"&gt;rouge&lt;/span&gt;.&lt;/p&gt;
-&lt;/div&gt;</pre>
+     <span class="texterouge">rouge</span>.</p>
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples')}}</p>
+{{EmbedLiveSample('Exemples')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#border-top-color', 'border-top-color')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Pas de modification significative, la valeur <code>transparent</code> a été supprimée car elle fait désormais partie du type {{cssxref("&lt;color&gt;")}} qui a été étendu.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'box.html#propdef-border-top-color', 'border-top-color')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | État                                     | Commentaires                                                                                                                                                             |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName('CSS3 Backgrounds', '#border-top-color', 'border-top-color')}}         | {{Spec2('CSS3 Backgrounds')}} | Pas de modification significative, la valeur `transparent` a été supprimée car elle fait désormais partie du type {{cssxref("&lt;color&gt;")}} qui a été étendu. |
+| {{SpecName('CSS2.1', 'box.html#propdef-border-top-color', 'border-top-color')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                                                                                                                                                     |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.border-top-color")}}</p>
+{{Compat("css.properties.border-top-color")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Les propriétés raccourciées liées aux bordures
-  <ul>
-   <li>{{cssxref("border")}},</li>
-   <li>{{cssxref("border-top")}},</li>
-   <li>{{cssxref("border-color")}}.</li>
-  </ul>
- </li>
- <li>Les propriétés de couleur pour les autres bordures :
-  <ul>
-   <li>{{cssxref("border-right-color")}},</li>
-   <li>{{cssxref("border-bottom-color")}},</li>
-   <li>{{cssxref("border-left-color")}}.</li>
-  </ul>
- </li>
- <li>Les autres propriétés liées à la bordure du haut :
-  <ul>
-   <li>{{cssxref("border-top-style")}},</li>
-   <li>{{cssxref("border-top-width")}}.</li>
-  </ul>
- </li>
-</ul>
+- Les propriétés raccourciées liées aux bordures
+
+  - {{cssxref("border")}},
+  - {{cssxref("border-top")}},
+  - {{cssxref("border-color")}}.
+
+- Les propriétés de couleur pour les autres bordures :
+
+  - {{cssxref("border-right-color")}},
+  - {{cssxref("border-bottom-color")}},
+  - {{cssxref("border-left-color")}}.
+
+- Les autres propriétés liées à la bordure du haut :
+
+  - {{cssxref("border-top-style")}},
+  - {{cssxref("border-top-width")}}.

@@ -7,26 +7,25 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/overflow-inline
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>overflow-inline</code></strong> est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui indique la façon dont l'appareil d'affichage gère le contenu qui dépasse de la zone d'affichage (<em>viewport</em>) dans l'axe logique en ligne (c'est-à-dire le sens correspondant au sens de lecture).</p>
+**`overflow-inline`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui indique la façon dont l'appareil d'affichage gère le contenu qui dépasse de la zone d'affichage (_viewport_) dans l'axe logique en ligne (c'est-à-dire le sens correspondant au sens de lecture).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>La caractéristique <code>overflow-inline</code> est définit avec un mot-clé parmi ceux de la liste suivante :</p>
+La caractéristique `overflow-inline` est définit avec un mot-clé parmi ceux de la liste suivante :
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Le contenu qui dépasse n'est pas affiché.</dd>
- <dt><code>scroll</code></dt>
- <dd>Le contenu qui dépasse peut être visualisé en utilisant une barre de défilement.</dd>
-</dl>
+- `none`
+  - : Le contenu qui dépasse n'est pas affiché.
+- `scroll`
+  - : Le contenu qui dépasse peut être visualisé en utilisant une barre de défilement.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   Nullam ac turpis eleifend, fringilla velit ac, aliquam tellus.
   Vestibulum ante ipsum primis in faucibus orci luctus et
@@ -37,40 +36,29 @@ translation_of: Web/CSS/@media/overflow-inline
   massa et feugiat. Integer rutrum ullamcorper eleifend.
   Proin sit amet tincidunt risus. Sed nec augue congue eros
   accumsan tincidunt sed eget ex.
-&lt;/p&gt;
-</pre>
+</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">@media (overflow-inline: scroll) {
+```css
+@media (overflow-inline: scroll) {
   p {
     color: red;
   }
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Media Queries', '#mf-overflow-inline', 'overflow-inline')}}</td>
-   <td>{{Spec2('CSS4 Media Queries')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                                     | Commentaires         |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName('CSS4 Media Queries', '#mf-overflow-inline', 'overflow-inline')}} | {{Spec2('CSS4 Media Queries')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.at-rules.media.overflow-inline")}}</p>
+{{Compat("css.at-rules.media.overflow-inline")}}

@@ -7,13 +7,14 @@ tags:
   - Reference
 translation_of: Web/CSS/text-decoration-thickness
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété CSS <strong><code>text-decoration-thickness</code></strong> définit l'épaisseur ou la largeur de la ligne de décoration utilisée sur le texte d'un élément (la ligne qui raye, souligne ou surligne le texte).</p>
+La propriété CSS **`text-decoration-thickness`** définit l'épaisseur ou la largeur de la ligne de décoration utilisée sur le texte d'un élément (la ligne qui raye, souligne ou surligne le texte).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Un seul mot-clé*/
+```css
+/* Un seul mot-clé*/
 text-decoration-thickness: auto;
 text-decoration-thickness: from-font;
 
@@ -25,34 +26,35 @@ text-decoration-thickness: 3px;
 text-decoration-thickness: inherit;
 text-decoration-thickness: initial;
 text-decoration-thickness: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Le navigateur choisit l'épaisseur pour la ligne de décoration.</dd>
- <dt><code>from-font</code></dt>
- <dd>Si le fichier de la police indique une épaisseur préférée, c'est cette valeur qui est utilisée. Si le fichier ne contient pas cette information, cette valeur est synonyme de <code>auto</code>.</dd>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Specifies the thickness of text decoration line as a {{cssxref('length')}}, overriding the font file suggestion or the browser default.</dd>
-</dl>
+- `auto`
+  - : Le navigateur choisit l'épaisseur pour la ligne de décoration.
+- `from-font`
+  - : Si le fichier de la police indique une épaisseur préférée, c'est cette valeur qui est utilisée. Si le fichier ne contient pas cette information, cette valeur est synonyme de `auto`.
+- `<length>`
+  - : Specifies the thickness of text decoration line as a {{cssxref('length')}}, overriding the font file suggestion or the browser default.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="longhand"&gt;Voici du texte avec un soulignement rouge de 2px.&lt;/p&gt;
-&lt;p class="under-and-over"&gt;Celui est souligné et surligné.&lt;/p&gt;
-&lt;p class="shorthand"&gt;Ce texte sera souligné avec une ligne bleue de 1px si la formulation raccourcie est prise en charge.&lt;/p&gt;</pre>
+```html
+<p class="longhand">Voici du texte avec un soulignement rouge de 2px.</p>
+<p class="under-and-over">Celui est souligné et surligné.</p>
+<p class="shorthand">Ce texte sera souligné avec une ligne bleue de 1px si la formulation raccourcie est prise en charge.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.longhand {
+```css
+.longhand {
   text-decoration-line: underline;
   text-decoration-style: solid;
   text-decoration-color: red;
@@ -68,42 +70,26 @@ text-decoration-thickness: unset;
 
 .shorthand {
   text-decoration: underline solid blue 1px;
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', '', '', '')}}</p>
+{{EmbedLiveSample('Exemples', '', '', '')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Text Decoration', '#text-decoration-width-property', 'text-decoration-width')}}</td>
-   <td>{{Spec2('CSS4 Text Decoration')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                    | État                                         | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
+| {{SpecName('CSS4 Text Decoration', '#text-decoration-width-property', 'text-decoration-width')}} | {{Spec2('CSS4 Text Decoration')}} | Définition initiale. |
 
-<div class="note">
-<p><strong>Note :</strong> Cette propriété était initialement intitulée <code>text-decoration-width</code> mais fut renommée en 2019 en <code>text-decoration-thickness</code>.</p>
-</div>
+> **Note :** Cette propriété était initialement intitulée `text-decoration-width` mais fut renommée en 2019 en `text-decoration-thickness`.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.text-decoration-thickness")}}</p>
+{{Compat("css.properties.text-decoration-thickness")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("text-decoration")}}</li>
- <li>{{cssxref("text-underline-offset")}}</li>
-</ul>
+- {{cssxref("text-decoration")}}
+- {{cssxref("text-underline-offset")}}

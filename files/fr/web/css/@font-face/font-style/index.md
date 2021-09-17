@@ -7,91 +7,78 @@ tags:
   - Reference
 translation_of: Web/CSS/@font-face/font-style
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Le descripteur <strong><code>font-style</code></strong>, associé à <a href="/fr/docs/Web/CSS/At-rule">la règle @</a> {{cssxref("@font-face")}}, permet d'indiquer le style de police pour la police définie via la règle.</p>
+Le descripteur **`font-style`**, associé à [la règle @](/fr/docs/Web/CSS/At-rule) {{cssxref("@font-face")}}, permet d'indiquer le style de police pour la police définie via la règle.
 
-<p>Pour une police donnée (un ensemble de fontes), les auteurs peuvent télécharger plusieurs fichiers correspondant à la même police mais pour différents styles. Le descripteur <code>font-style</code> peut alors être utilisé afin d'indiquer explicitement le style associé à la fonte. La valeur du descripteur correspond à la propriété de la fonte.</p>
+Pour une police donnée (un ensemble de fontes), les auteurs peuvent télécharger plusieurs fichiers correspondant à la même police mais pour différents styles. Le descripteur `font-style` peut alors être utilisé afin d'indiquer explicitement le style associé à la fonte. La valeur du descripteur correspond à la propriété de la fonte.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css">font-style: normal;
+```css
+font-style: normal;
 font-style: italic;
 font-style: oblique;
 font-style: oblique 30deg;
-font-style: oblique 30deg 50deg;</pre>
+font-style: oblique 30deg 50deg;
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>C'est la fonte « normale » de la police qui est choisie.</dd>
- <dt><code>italic</code></dt>
- <dd>C'est la fonte italique de la police qui est choisie.</dd>
- <dt><code>oblique</code></dt>
- <dd>C'est la fonte, artificiellement penchée à partir de la police normale, de la police qui est choisie.</dd>
- <dt><code>oblique</code> avec un angle</dt>
- <dd>C'est la fonte oblique (c'est-à-dire une version artificiellement penchée, obtenue à partir de la police normale) de la police qui est choisie. L'angle indiqué correspond à la pente du texte.</dd>
- <dt><code>oblique</code> avec un intervalle d'angle</dt>
- <dd>Utilise une fonte comme <code>oblique</code> et indique un intervalle d'angles possibles pour la pente du texte. On notera que l'intervalle est uniquement pris en compte pour la valeur <code>oblique</code>, aucune autre valeur n'est autorisée après <code>normal</code> ou <code>italic</code>.</dd>
-</dl>
+- `normal`
+  - : C'est la fonte « normale » de la police qui est choisie.
+- `italic`
+  - : C'est la fonte italique de la police qui est choisie.
+- `oblique`
+  - : C'est la fonte, artificiellement penchée à partir de la police normale, de la police qui est choisie.
+- `oblique` avec un angle
+  - : C'est la fonte oblique (c'est-à-dire une version artificiellement penchée, obtenue à partir de la police normale) de la police qui est choisie. L'angle indiqué correspond à la pente du texte.
+- `oblique` avec un intervalle d'angle
+  - : Utilise une fonte comme `oblique` et indique un intervalle d'angles possibles pour la pente du texte. On notera que l'intervalle est uniquement pris en compte pour la valeur `oblique`, aucune autre valeur n'est autorisée après `normal` ou `italic`.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans les exemples qui suivent, on utilisera les différentes formes liées à la police Garamond :</p>
+Dans les exemples qui suivent, on utilisera les différentes formes liées à la police Garamond :
 
-<pre class="brush: css">@font-face {
+```css
+@font-face {
   font-family: garamond;
   src: url('garamond.ttf');
-}</pre>
+}
+```
 
-<p><img alt="unstyled Garamond" src="garamondunstyled.jpg"></p>
+![unstyled Garamond](garamondunstyled.jpg)
 
-<p>La version en italique du texte utilisera les mêmes glyphes que la version normale, artificiellement penchés de quelques degrés.</p>
+La version en italique du texte utilisera les mêmes glyphes que la version normale, artificiellement penchés de quelques degrés.
 
-<p><img alt="artificially sloped garamond" src="garamondartificialstyle.jpg"></p>
+![artificially sloped garamond](garamondartificialstyle.jpg)
 
-<p>En revanche, si on dispose d'une vraie version italique, on peut l'indiquer via le descripteur <code>src</code> et indiquer que c'est une police italique via <code>font-style</code>. Une « vraie » police italique utilisera des glyphes différents et la qualité calligraphique obtenue sera meilleure qu'avec les glyphes normaux penchés artificiellement.</p>
+En revanche, si on dispose d'une vraie version italique, on peut l'indiquer via le descripteur `src` et indiquer que c'est une police italique via `font-style`. Une « vraie » police italique utilisera des glyphes différents et la qualité calligraphique obtenue sera meilleure qu'avec les glyphes normaux penchés artificiellement.
 
-<pre class="brush: css">@font-face {
+```css
+@font-face {
   font-family: garamond;
   src: url('garamond-italic.ttf');
   /* On indique ici que la police est italique */
   font-style: italic;
-}</pre>
+}
+```
 
-<p><img alt="italic garamond" src="garamonditalic.jpg"></p>
+![italic garamond](garamonditalic.jpg)
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Fonts', '#font-prop-desc', 'font-style')}}</td>
-   <td>{{Spec2('CSS4 Fonts')}}</td>
-   <td>Ajoute la possibilité d'utiliser le mot-clé <code>oblique</code> suivi par une valeur angulaire.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#font-prop-desc', 'font-style')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | État                             | Commentaires                                                                          |
+| -------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------- |
+| {{SpecName('CSS4 Fonts', '#font-prop-desc', 'font-style')}} | {{Spec2('CSS4 Fonts')}} | Ajoute la possibilité d'utiliser le mot-clé `oblique` suivi par une valeur angulaire. |
+| {{SpecName('CSS3 Fonts', '#font-prop-desc', 'font-style')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale.                                                                  |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.at-rules.font-face.font-style")}}</p>
+{{Compat("css.at-rules.font-face.font-style")}}

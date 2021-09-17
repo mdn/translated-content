@@ -8,85 +8,77 @@ tags:
   - Web
 translation_of: Web/CSS/-webkit-mask-box-image
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>La propriété <strong><code>-webkit-mask-box-image</code></strong> permet de définir l'image de masque utilisée pour la boîte de bordure d'un élément.</p>
+La propriété **`-webkit-mask-box-image`** permet de définir l'image de masque utilisée pour la boîte de bordure d'un élément.
 
-<ul>
- <li>Valeur initiale : <code>none</code></li>
- <li>Applicabilité : à tous les éléments</li>
- <li>Héritée : non</li>
- <li>Type de média : visuel</li>
- <li>Valeur calculée : comme la valeur définie</li>
-</ul>
+- Valeur initiale : `none`
+- Applicabilité : à tous les éléments
+- Héritée : non
+- Type de média : visuel
+- Valeur calculée : comme la valeur définie
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="eval">-webkit-mask-box-image: &lt;mask-box-image&gt; [&lt;top&gt; &lt;right&gt; &lt;bottom&gt; &lt;left&gt; &lt;x-repeat&gt; &lt;y-repeat&gt;]
-</pre>
+    -webkit-mask-box-image: <mask-box-image> [<top> <right> <bottom> <left> <x-repeat> <y-repeat>]
 
-<p>Où :</p>
+Où :
 
-<dl>
- <dt><code>&lt;mask-box-image&gt;</code></dt>
- <dd><code>{{cssxref("&lt;uri&gt;")}} | &lt;gradient&gt; | none</code></dd>
- <dt><code>&lt;top&gt;</code> <code>&lt;right&gt;</code> <code>&lt;bottom&gt;</code> <code>&lt;left&gt;</code></dt>
- <dd><code>&lt;length&gt; | &lt;percentage&gt;</code></dd>
- <dt><code>&lt;x-repeat&gt;</code> <code>&lt;y-repeat&gt;</code></dt>
- <dd><code>repeat | stretch | round</code></dd>
-</dl>
+- `<mask-box-image>`
+  - : `{{cssxref("&lt;uri&gt;")}} | <gradient> | none`
+- `<top>` `<right>` `<bottom>` `<left>`
+  - : `<length> | <percentage>`
+- `<x-repeat>` `<y-repeat>`
+  - : `repeat | stretch | round`
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;uri&gt;</code></dt>
- <dd>L'emplacement de la ressource qui doit être utilisée comme image de masque.</dd>
- <dt><code>&lt;gradient&gt;</code></dt>
- <dd>Une fonction <code>-webkit-gradient</code> utilisée pour générer l'image de masque.</dd>
- <dt><code>none</code></dt>
- <dd>Ce mot-clé indique que la boîte de bordure n'a pas de masque.</dd>
-</dl>
+- `<uri>`
+  - : L'emplacement de la ressource qui doit être utilisée comme image de masque.
+- `<gradient>`
+  - : Une fonction `-webkit-gradient` utilisée pour générer l'image de masque.
+- `none`
+  - : Ce mot-clé indique que la boîte de bordure n'a pas de masque.
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Le décalage à appliquer à l'image de masque (cf. {{cssxref("&lt;length&gt;")}} pour les unités possibles).</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>Le décalage de l'image exprimé en pourcentages relatifs à la dimension de la boîte de bordure de l'élément (la largeur ou la hauteur selon l'axe).</dd>
- <dt><code>repeat</code></dt>
- <dd>L'image est répétée autant de fois que nécessaire pour remplir la boîte de bordure. On pourra avoir des morceaux d'image si les dimensions de celle-ci ne permettent pas d'en copier un nombre entier sur la boîte.</dd>
- <dt><code>stretch</code></dt>
- <dd>L'image de masque est étirée pour être contenue exactement dans la boîte de bordure.</dd>
- <dt><code>round</code></dt>
- <dd> L'image de masque est étirée et répétée de telle façon à ce qu'il n'y ait pas de morceaux d'image vers la fin de la boîte de bordure.</dd>
-</dl>
+<!---->
 
-<h2 id="Exemples">Exemples</h2>
+- `<length>`
+  - : Le décalage à appliquer à l'image de masque (cf. {{cssxref("&lt;length&gt;")}} pour les unités possibles).
+- `<percentage>`
+  - : Le décalage de l'image exprimé en pourcentages relatifs à la dimension de la boîte de bordure de l'élément (la largeur ou la hauteur selon l'axe).
+- `repeat`
+  - : L'image est répétée autant de fois que nécessaire pour remplir la boîte de bordure. On pourra avoir des morceaux d'image si les dimensions de celle-ci ne permettent pas d'en copier un nombre entier sur la boîte.
+- `stretch`
+  - : L'image de masque est étirée pour être contenue exactement dans la boîte de bordure.
+- `round`
+  - :  L'image de masque est étirée et répétée de telle façon à ce qu'il n'y ait pas de morceaux d'image vers la fin de la boîte de bordure.
 
-<pre class="brush: css">.exempleUn {
+## Exemples
+
+```css
+.exempleUn {
   -webkit-mask-box-image: url('mask.png');
 }
 
 .exempleDeux {
   -webkit-mask-box-image: url('logo.png') 100 100 0 0 round round;
 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne fait partie d'aucune spécification.</p>
+Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne fait partie d'aucune spécification.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.-webkit-mask-box-image")}}</p>
+{{Compat("css.properties.-webkit-mask-box-image")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("-webkit-mask")}}</li>
- <li>{{cssxref("-webkit-mask-origin")}}</li>
- <li>{{cssxref("-webkit-mask-attachment")}}</li>
- <li>{{cssxref("-webkit-mask-clip")}}</li>
- <li>{{cssxref("-webkit-mask-image")}}</li>
- <li>{{cssxref("-webkit-mask-composite")}}</li>
- <li>{{cssxref("-webkit-mask-repeat")}}</li>
-</ul>
+- {{cssxref("-webkit-mask")}}
+- {{cssxref("-webkit-mask-origin")}}
+- {{cssxref("-webkit-mask-attachment")}}
+- {{cssxref("-webkit-mask-clip")}}
+- {{cssxref("-webkit-mask-image")}}
+- {{cssxref("-webkit-mask-composite")}}
+- {{cssxref("-webkit-mask-repeat")}}

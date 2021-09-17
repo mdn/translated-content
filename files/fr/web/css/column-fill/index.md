@@ -7,15 +7,16 @@ tags:
   - Reference
 translation_of: Web/CSS/column-fill
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>column-fill</code></strong> permet de contrôler la façon dont le contenu est réparti entre les colonnes. Le contenu peut être équilibré (afin de prendre la même hauteur sur toutes les colonnes) ou être réparti de façon automatique (avec <code>auto</code>) et remplir l'espace nécessaire.</p>
+La propriété **`column-fill`** permet de contrôler la façon dont le contenu est réparti entre les colonnes. Le contenu peut être équilibré (afin de prendre la même hauteur sur toutes les colonnes) ou être réparti de façon automatique (avec `auto`) et remplir l'espace nécessaire.
 
-<div>{{EmbedInteractiveExample("pages/css/column-fill.html")}}</div>
+{{EmbedInteractiveExample("pages/css/column-fill.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 column-fill: auto;
 column-fill: balance;
 column-fill: balance-all;
@@ -24,38 +25,39 @@ column-fill: balance-all;
 column-fill: inherit;
 column-fill: initial;
 column-fill: unset;
-</pre>
+```
 
-<p>Cette propriété est définie grâce à l'un des mots-clés définis ci-après.</p>
+Cette propriété est définie grâce à l'un des mots-clés définis ci-après.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Un mot-clé indiquant que les colonnes sont remplies dans l'ordre.</dd>
- <dt><code>balance</code></dt>
- <dd>Un mot-clé indiquant que le contenu doit être équitablement réparti entre les colonnes. Pour les médias paginés, seule la dernière page est équilibrée.</dd>
- <dt><code>balance-all</code></dt>
- <dd>Un mot-clé indiquant que le contenu doit être équitablement réparti entre les colonnes. Pour les média paginés, toutes les pages sont équilibrées.</dd>
-</dl>
+- `auto`
+  - : Un mot-clé indiquant que les colonnes sont remplies dans l'ordre.
+- `balance`
+  - : Un mot-clé indiquant que le contenu doit être équitablement réparti entre les colonnes. Pour les médias paginés, seule la dernière page est équilibrée.
+- `balance-all`
+  - : Un mot-clé indiquant que le contenu doit être équitablement réparti entre les colonnes. Pour les média paginés, toutes les pages sont équilibrées.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">.exemple {
+```css
+.exemple {
   border: 10px solid #000000;
   column-count:3;
   column-fill: balance;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="exemple"&gt;
+```html
+<p class="exemple">
   « Mais alors, » pensa Alice, « ne serai-je donc
   jamais plus vieille que je ne le suis maintenant ?
   D’un côté cela aura ses avantages, ne jamais être
@@ -66,33 +68,21 @@ column-fill: unset;
   « Comment pourriez-vous apprendre des leçons ici ?
   Il y a à peine de la place pour vous, et il n’y en
   a pas du tout pour vos livres de leçons. »
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples","800","300")}}</p>
+{{EmbedLiveSample("Exemples","800","300")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Multicol', '#cf', 'column-fill')}}</td>
-   <td>{{Spec2('CSS3 Multicol')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                        | État                                 | Commentaires         |
+| -------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName('CSS3 Multicol', '#cf', 'column-fill')}} | {{Spec2('CSS3 Multicol')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.column-fill")}}</p>
+{{Compat("css.properties.column-fill")}}

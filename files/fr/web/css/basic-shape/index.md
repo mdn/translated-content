@@ -7,132 +7,134 @@ tags:
   - Type
 translation_of: Web/CSS/basic-shape
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Le type <strong><code>&lt;basic-shape&gt;</code></strong> permet de définir une forme simple en utilisant des fonctions et est notamment utilisé pour les propriétés {{cssxref("clip-path")}}, {{cssxref("shape-outside")}} ou {{cssxref("offset-path")}}.</p>
+Le type **`<basic-shape>`** permet de définir une forme simple en utilisant des fonctions et est notamment utilisé pour les propriétés {{cssxref("clip-path")}}, {{cssxref("shape-outside")}} ou {{cssxref("offset-path")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/type-basic-shape.html")}}</div>
+{{EmbedInteractiveExample("pages/css/type-basic-shape.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Lorsque cette syntaxe est utilisée pour définir des formes, la boîte de référence sera indiquée par chaque propriété qui utilise des valeurs <code>&lt;basic-shape&gt;</code>. L'origine du repère utilisé se situe dans le coin en haut à gauche de la boîte de référence avec un axe des abscisses allant vers la droite et un axe des ordonnées allant vers le bas. Toutes les longueurs exprimées en pourcentages sont calculées en fonction des dimensions de la boîte de référence.</p>
+Lorsque cette syntaxe est utilisée pour définir des formes, la boîte de référence sera indiquée par chaque propriété qui utilise des valeurs `<basic-shape>`. L'origine du repère utilisé se situe dans le coin en haut à gauche de la boîte de référence avec un axe des abscisses allant vers la droite et un axe des ordonnées allant vers le bas. Toutes les longueurs exprimées en pourcentages sont calculées en fonction des dimensions de la boîte de référence.
 
-<p>Les formes qui suivent sont prises en charge. Toutes les valeurs <code>&lt;basic-shape&gt;</code> sont créées via une notation fonctionnelle (pour analyser la syntaxe, se référer à <a href="/fr/docs/Web/CSS/Syntaxe_de_d%C3%A9finition_des_valeurs">cette page explicative</a>).</p>
+Les formes qui suivent sont prises en charge. Toutes les valeurs `<basic-shape>` sont créées via une notation fonctionnelle (pour analyser la syntaxe, se référer à [cette page explicative](/fr/docs/Web/CSS/Syntaxe_de_d%C3%A9finition_des_valeurs)).
 
-<dl>
- <dt><code>inset()</code></dt>
- <dd>
-   <p>Cette fonction permet de définir un rectangle incrusté (<em>inset</em>).</p>
- <pre class="syntaxbox">inset( &lt;shape-arg&gt;{1,4} [round &lt;border-radius&gt;]? )</pre>
+- `inset()`
 
- <p>Lorsque les quatre premiers arguments sont fournis, ils représentent respectivement les décalages, vers l'intérieur, depuis les côtés haut, droit, bas et gauche par rapport à la boîte de référence. Ces arguments peuvent être utilisés de la même façon que pour {{cssxref("margin")}} afin d'utiliser seulement une, deux ou quatre valeurs.</p>
+  - : Cette fonction permet de définir un rectangle incrusté (_inset_).
 
- <p>L'argument facultatif <code>&lt;border-radius&gt;</code> permet de définir des coins arrondis pour le rectangle incrusté en utilisant la même syntaxe que pour la propriété raccourcie {{cssxref("border-radius")}}.</p>
+        inset( <shape-arg>{1,4} [round <border-radius>]? )
 
- <p>Si on utilise deux valeurs de décalage pour le même axe (par exemple un décalage depuis le bas et un décalage depuis le haut) dont la somme est supérieure à la dimension de la boîte sur cet axe, la forme obtenue ne contiendra aucune zone. On aura alors une zone de flottement vide.</p>
- </dd>
- <dt><code>polygon()</code></dt>
- <dd>
-   <p>Définit un polygone.</p>
- <pre class="syntaxbox">polygon( [&lt;fill-rule&gt;,]? [&lt;shape-arg&gt; &lt;shape-arg&gt;]# )</pre>
+    Lorsque les quatre premiers arguments sont fournis, ils représentent respectivement les décalages, vers l'intérieur, depuis les côtés haut, droit, bas et gauche par rapport à la boîte de référence. Ces arguments peuvent être utilisés de la même façon que pour {{cssxref("margin")}} afin d'utiliser seulement une, deux ou quatre valeurs.
 
- <p><code>&lt;fill-rule&gt;</code> représente <a href="/fr/docs/Web/SVG/Attribute/fill-rule">la règle de remplissage</a> utilisée pour déterminer l'intérieur du polygone. Les valeurs possibles sont <code>nonzero</code> et <code>evenodd</code>. La valeur par défaut pour cet argument est <code>nonzero</code>.</p>
+    L'argument facultatif `<border-radius>` permet de définir des coins arrondis pour le rectangle incrusté en utilisant la même syntaxe que pour la propriété raccourcie {{cssxref("border-radius")}}.
 
- <p>Ensuite, chaque paire d'arguments dans la liste représente les coordonnées <em>xi</em> et <em>yi</em> du i-ème sommet du polygone.</p>
- </dd>
- <dt><code>circle(</code>)</dt>
- <dd>
-  <p>Définit un cercle.</p>
- <pre class="syntaxbox">circle( [&lt;shape-radius&gt;]? [at &lt;position&gt;]? )</pre>
+    Si on utilise deux valeurs de décalage pour le même axe (par exemple un décalage depuis le bas et un décalage depuis le haut) dont la somme est supérieure à la dimension de la boîte sur cet axe, la forme obtenue ne contiendra aucune zone. On aura alors une zone de flottement vide.
 
- <p>L'argument <code>&lt;shape-radius&gt;</code> représente le rayon du cercle. Les valeurs négatives ne sont pas autorisées et les valeurs exprimées en pourcentages seront calculées de la façon suivante en fonction de la hauteur et de la largeur de la boîte de référence <code>sqrt(largeur^2+hauteur^2)/sqrt(2)</code>.</p>
+- `polygon()`
 
- <p>L'argument {{cssxref("&lt;position&gt;")}} définit la position pour le centre du cercle. La valeur par défaut est <code>center</code>.</p>
- </dd>
- <dt><code>ellipse()</code></dt>
- <dd>
-  <p>Définit une ellipse.</p>
- <pre class="syntaxbox">ellipse( [&lt;shape-radius&gt;{2}]? [at &lt;position&gt;]? )</pre>
+  - : Définit un polygone.
 
- <p>Les arguments <code>&lt;shape-radius&gt;</code> représentent les demi-axes horizontaux (r<sub>x</sub>) et verticaux (r<sub>y</sub>) de l'ellipse. Les valeurs négatives ne sont pas autorisées. Les valeurs exprimées en pourcentages sont calculées : en fonction de la hauteur de la boîte de référence pour le demi-axe vertical, en fonction de la largeur de la boîte de référence pour le demi-axe horizontal.</p>
+        polygon( [<fill-rule>,]? [<shape-arg> <shape-arg>]# )
 
- <p>L'argument {{cssxref("&lt;position&gt;")}} définit l'emplacement du centre de l'ellipse. La valeur par défaut est <code>center</code>.</p>
- </dd>
- <dt><code>path()</code></dt>
- <dd>
-  <p>Définit un chemin.</p>
- <pre class="syntaxbox"><code>path( [&lt;fill-rule&gt;,]? &lt;string&gt;)</code></pre>
+    `<fill-rule>` représente [la règle de remplissage](/fr/docs/Web/SVG/Attribute/fill-rule) utilisée pour déterminer l'intérieur du polygone. Les valeurs possibles sont `nonzero` et `evenodd`. La valeur par défaut pour cet argument est `nonzero`.
 
- <p>L'argument optionnel <code>&lt;fill-rule&gt;</code> représente <a href="/fr/docs/Web/SVG/Attribute/fill-rule">la règle de remplissage</a> utilisée pour déterminer l'intérieur du chemin. Les valeurs possibles sont <code>nonzero</code> et <code>evenodd</code>. La valeur par défaut est <code>nonzero</code>.</p>
+    Ensuite, chaque paire d'arguments dans la liste représente les coordonnées _xi_ et _yi_ du i-ème sommet du polygone.
 
- <p>L'argument obligatoire <code>&lt;string&gt;</code> est une chaîne de caractères, entre quotes, représentant <a href="/fr/docs/Web/SVG/Attribute/d">un chemin SVG</a>.</p>
- </dd>
-</dl>
+- `circle(`)
 
-<p>Les arguments qui ne sont pas définis ci-avant suivent cette syntaxe :</p>
+  - : Définit un cercle.
 
-<pre class="syntaxbox">&lt;shape-arg&gt; = &lt;length&gt; | &lt;percentage&gt;
-&lt;shape-radius&gt; = &lt;length&gt; | &lt;percentage&gt; | closest-side | farthest-side</pre>
+        circle( [<shape-radius>]? [at <position>]? )
 
-<p><code>closest-side</code> utilise la distance entre le centre de la forme et le côté le plus proche de la boîte de la référence. Pour les cercles, cela au côté le plus proche dans les deux axes. Pour les ellipses, cela correspond au côté le plus proche dans l'axe du rayon de l'ellipse.</p>
+    L'argument `<shape-radius>` représente le rayon du cercle. Les valeurs négatives ne sont pas autorisées et les valeurs exprimées en pourcentages seront calculées de la façon suivante en fonction de la hauteur et de la largeur de la boîte de référence `sqrt(largeur^2+hauteur^2)/sqrt(2)`.
 
-<p>À l'inverse, <code>farthest-side</code> utilise la distance entre le centre de la forme et le côté le plus éloigné de la boîte de référence.</p>
+    L'argument {{cssxref("&lt;position&gt;")}} définit la position pour le centre du cercle. La valeur par défaut est `center`.
 
-<h2 id="Les_valeurs_calculées_des_formes_simples">Les valeurs calculées des formes simples</h2>
+- `ellipse()`
 
-<p>Les valeurs d'une fonction <code>&lt;basic-shape&gt;</code> sont calculées comme indiqué, avec ces exceptions :</p>
+  - : Définit une ellipse.
 
-<ul>
- <li>Les valeurs absentes sont incluses et leurs valeurs calculées sont leurs valeurs par défaut.</li>
- <li>Une valeur {{cssxref("&lt;position&gt;")}} pour <code>circle()</code> ou  <code>ellipse()</code> est calculée comme une paire de distances indiquant les décalages (horizontaux puis verticaux) depuis l'origine en haut à gauche. Chaque décalage est indiqué comme une combinaison d'une longueur absolue et d'un pourcentage.</li>
- <li>Pour <code>inset()</code>, une valeur {{cssxref("border-radius")}} est calculée comme une liste développée de de huit valeurs {{cssxref("length")}} ou de huit pourcentages.</li>
-</ul>
+        ellipse( [<shape-radius>{2}]? [at <position>]? )
 
-<h2 id="L'interpolation_des_formes_simples">L'interpolation des formes simples</h2>
+    Les arguments `<shape-radius>` représentent les demi-axes horizontaux (r<sub>x</sub>) et verticaux (r<sub>y</sub>) de l'ellipse. Les valeurs négatives ne sont pas autorisées. Les valeurs exprimées en pourcentages sont calculées : en fonction de la hauteur de la boîte de référence pour le demi-axe vertical, en fonction de la largeur de la boîte de référence pour le demi-axe horizontal.
 
-<div>Afin d'obtenir une interpolation entre deux formes simples, il faut que les règles qui suivent soient respectées. Les valeurs des argument des fonctions de formes sont interpolées comme une liste simple. Les valeurs de la liste sont interpolées comme <a href="/fr/docs/Web/CSS/length">des longueurs</a>, <a href="/fr/docs/Web/CSS/percentage">des pourcentages</a> ou <a href="/fr/docs/Web/CSS/calc()">des valeurs calculées</a> lorsque c'est possible. Si les valeurs de la liste ne sont pas de ces types mais sont identiques, ces valeurs seront interpolées.</div>
+    L'argument {{cssxref("&lt;position&gt;")}} définit l'emplacement du centre de l'ellipse. La valeur par défaut est `center`.
 
-<div> </div>
+- `path()`
 
-<ul>
- <li>Les deux formes doivent partager la même boîte de référence.</li>
- <li>Si les deux formes sont du même type et que ce type est <code>ellipse()</code> ou <code>circle()</code>, qu'aucun des rayons n'utilise les mots-clés <code>closest-side</code> ou <code>farthest-side</code>, on aura une interpolation entre chaque valeur.</li>
- <li>Si les deux formes sont de type <code>inset()</code>, on aura une interpolation entre chaque valeur.</li>
- <li>Si les deux formes sont de type <code>polygon()</code>, que les deux polygones possèdent le même nombre de sommets et utilisent la même règle <code>fill-rule</code>, l'interpolation sera appliquée entre chaque valeur.</li>
- <li>Si les deux formes sont de type <code>path()</code>, que les deux chemins possèdent le même nombre de composantes, dans le même ordre et qu'elles sont de même type, les données sont interpolées entre chaque chemin comme des nombres réels.</li>
- <li>Dans les autres cas, aucune interpolation n'est définie.</li>
-</ul>
+  - : Définit un chemin.
 
-<h2 id="Exemples">Exemples</h2>
+        path( [<fill-rule>,]? <string>)
 
-<h3 id="Exemple_simple">Exemple simple</h3>
+    L'argument optionnel `<fill-rule>` représente [la règle de remplissage](/fr/docs/Web/SVG/Attribute/fill-rule) utilisée pour déterminer l'intérieur du chemin. Les valeurs possibles sont `nonzero` et `evenodd`. La valeur par défaut est `nonzero`.
 
-<h4 id="CSS">CSS</h4>
+    L'argument obligatoire `<string>` est une chaîne de caractères, entre quotes, représentant [un chemin SVG](/fr/docs/Web/SVG/Attribute/d).
 
-<pre class="brush: css">.clipped {
+Les arguments qui ne sont pas définis ci-avant suivent cette syntaxe :
+
+    <shape-arg> = <length> | <percentage>
+    <shape-radius> = <length> | <percentage> | closest-side | farthest-side
+
+`closest-side` utilise la distance entre le centre de la forme et le côté le plus proche de la boîte de la référence. Pour les cercles, cela au côté le plus proche dans les deux axes. Pour les ellipses, cela correspond au côté le plus proche dans l'axe du rayon de l'ellipse.
+
+À l'inverse, `farthest-side` utilise la distance entre le centre de la forme et le côté le plus éloigné de la boîte de référence.
+
+## Les valeurs calculées des formes simples
+
+Les valeurs d'une fonction `<basic-shape>` sont calculées comme indiqué, avec ces exceptions :
+
+- Les valeurs absentes sont incluses et leurs valeurs calculées sont leurs valeurs par défaut.
+- Une valeur {{cssxref("&lt;position&gt;")}} pour `circle()` ou  `ellipse()` est calculée comme une paire de distances indiquant les décalages (horizontaux puis verticaux) depuis l'origine en haut à gauche. Chaque décalage est indiqué comme une combinaison d'une longueur absolue et d'un pourcentage.
+- Pour `inset()`, une valeur {{cssxref("border-radius")}} est calculée comme une liste développée de de huit valeurs {{cssxref("length")}} ou de huit pourcentages.
+
+## L'interpolation des formes simples
+
+Afin d'obtenir une interpolation entre deux formes simples, il faut que les règles qui suivent soient respectées. Les valeurs des argument des fonctions de formes sont interpolées comme une liste simple. Les valeurs de la liste sont interpolées comme [des longueurs](/fr/docs/Web/CSS/length), [des pourcentages](/fr/docs/Web/CSS/percentage) ou [des valeurs calculées](</fr/docs/Web/CSS/calc()>) lorsque c'est possible. Si les valeurs de la liste ne sont pas de ces types mais sont identiques, ces valeurs seront interpolées.
+
+- Les deux formes doivent partager la même boîte de référence.
+- Si les deux formes sont du même type et que ce type est `ellipse()` ou `circle()`, qu'aucun des rayons n'utilise les mots-clés `closest-side` ou `farthest-side`, on aura une interpolation entre chaque valeur.
+- Si les deux formes sont de type `inset()`, on aura une interpolation entre chaque valeur.
+- Si les deux formes sont de type `polygon()`, que les deux polygones possèdent le même nombre de sommets et utilisent la même règle `fill-rule`, l'interpolation sera appliquée entre chaque valeur.
+- Si les deux formes sont de type `path()`, que les deux chemins possèdent le même nombre de composantes, dans le même ordre et qu'elles sont de même type, les données sont interpolées entre chaque chemin comme des nombres réels.
+- Dans les autres cas, aucune interpolation n'est définie.
+
+## Exemples
+
+### Exemple simple
+
+#### CSS
+
+```css
+.clipped {
   clip-path: circle(15px at 20px 20px); // bugs 1247229 / 1075457 pour Firefox
-}</pre>
+}
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;img class="clipped" src="https://pixabay.com/static/uploads/photo/2016/01/17/04/29/rain-drops-1144448_960_720.jpg" alt="Rain Drops"&gt;
-</pre>
+```html
+<img class="clipped" src="https://pixabay.com/static/uploads/photo/2016/01/17/04/29/rain-drops-1144448_960_720.jpg" alt="Rain Drops">
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('Exemple_simple',"500","500")}}</p>
+{{EmbedLiveSample('Exemple_simple',"500","500")}}
 
-<h3 id="Polygone_animé">Polygone animé</h3>
+### Polygone animé
 
-<p>Dans cet exemple, on utilise la règle-@ {{cssxref("@keyframes")}} afin d'animer un chemin de rognage entre deux polygones. On notera que les deux polygones ont le même nombre de sommets, une condition nécessaire pour que l'animation fonctionne.</p>
+Dans cet exemple, on utilise la règle-@ {{cssxref("@keyframes")}} afin d'animer un chemin de rognage entre deux polygones. On notera que les deux polygones ont le même nombre de sommets, une condition nécessaire pour que l'animation fonctionne.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;&lt;/div&gt;</pre>
+```html
+<div></div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   width: 300px;
   height: 300px;
   background: red;
@@ -150,39 +152,25 @@ translation_of: Web/CSS/basic-shape
   to {
     clip-path: polygon(44% 26%, 58% 38%, 58% 38%, 44% 81%, 44% 81%, 25% 49%);
   }
-}</pre>
+}
+```
 
-<h4 id="Résultat_2">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('Polygone_animé','100%', '340')}}</p>
+{{EmbedLiveSample('Polygone_animé','100%', '340')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Shapes', '#basic-shape-functions', '&lt;basic-shape&gt;')}}</td>
-   <td>{{Spec2('CSS Shapes')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                             | Commentaires         |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('CSS Shapes', '#basic-shape-functions', '&lt;basic-shape&gt;')}} | {{Spec2('CSS Shapes')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.types.basic-shape")}}</p>
+{{Compat("css.types.basic-shape")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("clip-path")}}</li>
- <li>{{cssxref("shape-outside")}}</li>
- <li><a href="/fr/docs/Outils/Inspecteur/Comment/Edit_CSS_shapes">Éditer des contours de formes CSS avec les outils de développement Firefox</a></li>
-</ul>
+- {{cssxref("clip-path")}}
+- {{cssxref("shape-outside")}}
+- [Éditer des contours de formes CSS avec les outils de développement Firefox](/fr/docs/Outils/Inspecteur/Comment/Edit_CSS_shapes)

@@ -8,46 +8,29 @@ tags:
 translation_of: Web/CSS/actual_value
 original_slug: Web/CSS/valeur_reelle
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La <strong>valeur réelle</strong> d'une propriété CSS est la valeur utilisée par le moteur une fois que toutes les approximations ont été appliquées. Ainsi, un agent utillisateur ne pourra afficher des bordures qu'avec un nombre de pixels entier et pourra ainsi être forcé d'approximer <a href="/fr/docs/Web/CSS/Valeur_calcul%C3%A9e">la valeur calculée</a> pour l'épaisseur de la bordure.</p>
+La **valeur réelle** d'une propriété CSS est la valeur utilisée par le moteur une fois que toutes les approximations ont été appliquées. Ainsi, un agent utillisateur ne pourra afficher des bordures qu'avec un nombre de pixels entier et pourra ainsi être forcé d'approximer [la valeur calculée](/fr/docs/Web/CSS/Valeur_calcul%C3%A9e) pour l'épaisseur de la bordure.
 
-<h2 id="Calculer_la_valeur_réelle_d'une_propriété">Calculer la valeur réelle d'une propriété</h2>
+## Calculer la valeur réelle d'une propriété
 
-<p>La valeur réelle est la valeur finale obtenue lors de la détermination d'une propriété, qui passe par les étapes suivantes :</p>
+La valeur réelle est la valeur finale obtenue lors de la détermination d'une propriété, qui passe par les étapes suivantes :
 
-<ol>
- <li><a href="/fr/docs/Web/CSS/Valeur_initiale">La valeur initiale</a> (indiquée par la spécification).</li>
- <li><a href="/fr/docs/Web/CSS/Valeur_sp%C3%A9cifi%C3%A9e">La valeur définie</a> qui résulte de <a href="/fr/Apprendre/CSS/Introduction_à_CSS/La_cascade_et_l_héritage">l'héritage et de la cascade</a>.</li>
- <li><a href="/fr/docs/Web/CSS/Valeur_calcul%C3%A9e">La valeur calculée</a> est calculée selon la spécification.</li>
- <li>La disposition est calculée, fournissant ainsi <a href="/fr/docs/Web/CSS/Valeur_utilis%C3%A9e">la valeur utilisée</a>.</li>
- <li><em>La valeur réelle</em></li>
-</ol>
+1.  [La valeur initiale](/fr/docs/Web/CSS/Valeur_initiale) (indiquée par la spécification).
+2.  [La valeur définie](/fr/docs/Web/CSS/Valeur_sp%C3%A9cifi%C3%A9e) qui résulte de [l'héritage et de la cascade](/fr/Apprendre/CSS/Introduction_à_CSS/La_cascade_et_l_héritage).
+3.  [La valeur calculée](/fr/docs/Web/CSS/Valeur_calcul%C3%A9e) est calculée selon la spécification.
+4.  La disposition est calculée, fournissant ainsi [la valeur utilisée](/fr/docs/Web/CSS/Valeur_utilis%C3%A9e).
+5.  _La valeur réelle_
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'cascade.html#actual-value', 'actual value')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                     | Commentaires         |
+| ---------------------------------------------------------------------------------------- | ------------------------ | -------------------- |
+| {{SpecName('CSS2.1', 'cascade.html#actual-value', 'actual value')}} | {{Spec2('CSS2.1')}} | Définition initiale. |
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/Valeur_initiale">La valeur initiale</a></li>
- <li><a href="/fr/docs/Web/CSS/Valeur_sp%C3%A9cifi%C3%A9e">La valeur définie</a></li>
- <li><a href="/fr/docs/Web/CSS/Valeur_calcul%C3%A9e">La valeur calculée</a></li>
- <li><a href="/fr/docs/Web/CSS/Reference">La référence CSS</a></li>
-</ul>
+- [La valeur initiale](/fr/docs/Web/CSS/Valeur_initiale)
+- [La valeur définie](/fr/docs/Web/CSS/Valeur_sp%C3%A9cifi%C3%A9e)
+- [La valeur calculée](/fr/docs/Web/CSS/Valeur_calcul%C3%A9e)
+- [La référence CSS](/fr/docs/Web/CSS/Reference)

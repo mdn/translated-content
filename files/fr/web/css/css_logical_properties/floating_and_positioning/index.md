@@ -8,137 +8,76 @@ tags:
 translation_of: Web/CSS/CSS_Logical_Properties/Floating_and_positioning
 original_slug: Web/CSS/CSS_Logical_Properties/Propriétés_logiques_flottements_positionnement
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><a href="https://drafts.csswg.org/css-logical/">La spécification sur les propriétés et valeurs logiques</a> définit des valeurs logiques qui correspondent aux valeurs physiques utilisées pour {{cssxref("float")}} et {{cssxref("clear")}}. Elle définit aussi des propriétés logiques pour le positionnement lorsqu'on utilise une <a href="/fr/docs/Web/CSS/CSS_Positioning">disposition positionnée</a>. Dans ce guide, nous verrons comment utiliser ces valeurs et ces propriétés logiques.</p>
+[La spécification sur les propriétés et valeurs logiques](https://drafts.csswg.org/css-logical/) définit des valeurs logiques qui correspondent aux valeurs physiques utilisées pour {{cssxref("float")}} et {{cssxref("clear")}}. Elle définit aussi des propriétés logiques pour le positionnement lorsqu'on utilise une [disposition positionnée](/fr/docs/Web/CSS/CSS_Positioning). Dans ce guide, nous verrons comment utiliser ces valeurs et ces propriétés logiques.
 
-<h2 id="Correspondance_entre_les_propriétés_et_les_valeurs">Correspondance entre les propriétés et les valeurs</h2>
+## Correspondance entre les propriétés et les valeurs
 
-<p>Le tableau ci-après définit les propriétés et les valeurs que nous verrons dans ce guide et la correspondance avec les propriétés et valeurs physiques si on utilisait un mode d'écriture horizontal allant de gauche à droite.</p>
+Le tableau ci-après définit les propriétés et les valeurs que nous verrons dans ce guide et la correspondance avec les propriétés et valeurs physiques si on utilisait un mode d'écriture horizontal allant de gauche à droite.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Propriété ou valeur logique</th>
-   <th scope="col">Propriété ou valeur physique</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{cssxref("float")}}<code>: inline-start</code></td>
-   <td>{{cssxref("float")}}<code>: left</code></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("float")}}<code>: inline-end</code></td>
-   <td>{{cssxref("float")}}<code>: right</code></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("clear")}}<code>: inline-start</code></td>
-   <td>{{cssxref("clear")}}<code>: left</code></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("clear")}}<code>: inline-end</code></td>
-   <td>{{cssxref("clear")}}<code>: right</code></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("inset-inline-start")}}</td>
-   <td>{{cssxref("left")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("inset-inline-end")}}</td>
-   <td>{{cssxref("right")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("inset-block-start")}}</td>
-   <td>{{cssxref("top")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("inset-block-end")}}</td>
-   <td>{{cssxref("bottom")}}</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("text-align")}}<code>: start</code></td>
-   <td>{{cssxref("text-align")}}<code>: left</code></td>
-  </tr>
-  <tr>
-   <td>{{cssxref("text-align")}}<code>: end</code></td>
-   <td>{{cssxref("text-align")}}<code>: right</code></td>
-  </tr>
- </tbody>
-</table>
+| Propriété ou valeur logique                  | Propriété ou valeur physique              |
+| -------------------------------------------- | ----------------------------------------- |
+| {{cssxref("float")}}`: inline-start` | {{cssxref("float")}}`: left`      |
+| {{cssxref("float")}}`: inline-end`   | {{cssxref("float")}}`: right`     |
+| {{cssxref("clear")}}`: inline-start` | {{cssxref("clear")}}`: left`      |
+| {{cssxref("clear")}}`: inline-end`   | {{cssxref("clear")}}`: right`     |
+| {{cssxref("inset-inline-start")}} | {{cssxref("left")}}                  |
+| {{cssxref("inset-inline-end")}}     | {{cssxref("right")}}              |
+| {{cssxref("inset-block-start")}} | {{cssxref("top")}}                  |
+| {{cssxref("inset-block-end")}}     | {{cssxref("bottom")}}              |
+| {{cssxref("text-align")}}`: start`    | {{cssxref("text-align")}}`: left`  |
+| {{cssxref("text-align")}}`: end`      | {{cssxref("text-align")}}`: right` |
 
-<p>En plus de ces correspondances, certaines propriétés logiques raccourcies ont été ajoutées. Pour celles-ci, qui ciblent les extrêmités des axes en ligne ou de bloc, il n'y a pas de correspondance avec des propriétés physiques existantes à l'exception de {{cssxref("inset")}}.</p>
+En plus de ces correspondances, certaines propriétés logiques raccourcies ont été ajoutées. Pour celles-ci, qui ciblent les extrêmités des axes en ligne ou de bloc, il n'y a pas de correspondance avec des propriétés physiques existantes à l'exception de {{cssxref("inset")}}.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Propriété logique</th>
-   <th scope="col">Objectif</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{cssxref("inset-inline")}}</td>
-   <td>Cette propriété définit simultanément les décalages pour les deux côtés situés sur l'axe en ligne.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("inset-block")}}</td>
-   <td>Cette propriété définit simultanément les décalages pour les deux côtés situés sur l'axe de bloc.</td>
-  </tr>
-  <tr>
-   <td>{{cssxref("inset")}}</td>
-   <td>Cette propriété définit les valeurs des quatre décalages.</td>
-  </tr>
- </tbody>
-</table>
+| Propriété logique                    | Objectif                                                                                           |
+| ------------------------------------ | -------------------------------------------------------------------------------------------------- |
+| {{cssxref("inset-inline")}} | Cette propriété définit simultanément les décalages pour les deux côtés situés sur l'axe en ligne. |
+| {{cssxref("inset-block")}} | Cette propriété définit simultanément les décalages pour les deux côtés situés sur l'axe de bloc.  |
+| {{cssxref("inset")}}         | Cette propriété définit les valeurs des quatre décalages.                                          |
 
-<h2 id="Exemple_d'un_flottement_et_d'un_dégagement">Exemple d'un flottement et d'un dégagement</h2>
+## Exemple d'un flottement et d'un dégagement
 
-<p>Les valeurs physiques utilisées avec les propriétés {{cssxref("float")}} et {{cssxref("clear")}} sont <code>left</code>, <code>right</code> et <code>both</code>. Les valeurs logiques définies par la spécification sont <code>inline-start</code> et <code>inline-end</code> et qui peuvent correspondre à <code>left</code> et <code>right</code> selon le mode d'écriture.</p>
+Les valeurs physiques utilisées avec les propriétés {{cssxref("float")}} et {{cssxref("clear")}} sont `left`, `right` et `both`. Les valeurs logiques définies par la spécification sont `inline-start` et `inline-end` et qui peuvent correspondre à `left` et `right` selon le mode d'écriture.
 
-<p>Dans l'exemple ci-après, on a deux boîtes : la première flotte avec <code>float: left</code> et la deuxième avec <code>float: inline-start</code>. Si on modifie la propriété <code>writing-mode</code> pour la passer en <code>vertical-rl</code> ou si on modifie <code>direction</code> en <code>rtl</code>, on pourra voir que la première boîte flotte toujours à gauche tandis que la boîte ciblée avec <code>inline-start</code> suit la direction et le mode d'écriture.</p>
+Dans l'exemple ci-après, on a deux boîtes : la première flotte avec `float: left` et la deuxième avec `float: inline-start`. Si on modifie la propriété `writing-mode` pour la passer en `vertical-rl` ou si on modifie `direction` en `rtl`, on pourra voir que la première boîte flotte toujours à gauche tandis que la boîte ciblée avec `inline-start` suit la direction et le mode d'écriture.
 
-<p>{{EmbedGHLiveSample("css-examples/logical/float.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("css-examples/logical/float.html", '100%', 700)}}
 
-<h2 id="Exemple_des_propriétés_inset_pour_les_dispositions_positionnées">Exemple des propriétés <code>inset</code> pour les dispositions positionnées</h2>
+## Exemple des propriétés `inset` pour les dispositions positionnées
 
-<p>Le positionnement permet généralement de position un élément de façon relative à son bloc englobant. La plupart du temps, on décale l'objet relativement à la position qu'il aurait occupé sur le flux normal. Par le passé, on utilisait les propriétés physiques {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} et {{cssxref("left")}}.</p>
+Le positionnement permet généralement de position un élément de façon relative à son bloc englobant. La plupart du temps, on décale l'objet relativement à la position qu'il aurait occupé sur le flux normal. Par le passé, on utilisait les propriétés physiques {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} et {{cssxref("left")}}.
 
-<p>Ces propriétés s'utilisent avec une longueur ou avec une pourcentage relatif aux dimensions de l'écran de l'utilisateur.</p>
+Ces propriétés s'utilisent avec une longueur ou avec une pourcentage relatif aux dimensions de l'écran de l'utilisateur.
 
-<p>De nouvelles propriétés ont été définies dans la spécifications des propriétés logiques et permettent de positionner un élément relativement au flux du texte, quel que soit le mode d'écriture. Ces propriétés logiques sont :</p>
+De nouvelles propriétés ont été définies dans la spécifications des propriétés logiques et permettent de positionner un élément relativement au flux du texte, quel que soit le mode d'écriture. Ces propriétés logiques sont :
 
-<ul>
- <li>{{cssxref("inset-block-start")}}</li>
- <li>{{cssxref("inset-block-end")}}</li>
- <li>{{cssxref("inset-inline-start")}}</li>
- <li>{{cssxref("inset-inline-end")}}.</li>
-</ul>
+- {{cssxref("inset-block-start")}}
+- {{cssxref("inset-block-end")}}
+- {{cssxref("inset-inline-start")}}
+- {{cssxref("inset-inline-end")}}.
 
-<p>Dans l'exemple qui suit, on utilise les propriétés <code>inset-block-start</code> et <code>inset-inline-end</code> afin de positionner la boîte bleue de façon absolue dans la zone définie par la bordure grise pointillée et qui a <code>position: relative</code>. En modifiant la propriété <code>writing-mode</code> afin d'utiliser la valeur <code>vertical-rl</code> ou en ajoutant <code>direction: rtl</code>, on pourra voir comment la boîte relative reste dans la direction du texte.</p>
+Dans l'exemple qui suit, on utilise les propriétés `inset-block-start` et `inset-inline-end` afin de positionner la boîte bleue de façon absolue dans la zone définie par la bordure grise pointillée et qui a `position: relative`. En modifiant la propriété `writing-mode` afin d'utiliser la valeur `vertical-rl` ou en ajoutant `direction: rtl`, on pourra voir comment la boîte relative reste dans la direction du texte.
 
-<p>{{EmbedGHLiveSample("css-examples/logical/positioning-inset.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("css-examples/logical/positioning-inset.html", '100%', 700)}}
 
-<h2 id="Nouvelles_propriétés_raccourcies">Nouvelles propriétés raccourcies</h2>
+## Nouvelles propriétés raccourcies
 
-<p>Cette spécification définit également de nouvelles propriétés logiques qui permettent de définir deux voire quatre valeurs avec une seule déclaration. Pour ces propriétés raccourcies, il n'existe pas d'équivalence avec des propriétés physiques.</p>
+Cette spécification définit également de nouvelles propriétés logiques qui permettent de définir deux voire quatre valeurs avec une seule déclaration. Pour ces propriétés raccourcies, il n'existe pas d'équivalence avec des propriétés physiques.
 
-<ul>
- <li>{{cssxref("inset")}} — elle permet de définir les quatre décalages avec une correspondance physique.</li>
- <li>{{cssxref("inset-inline")}} — elle permet de définir les décalages sur l'axe en ligne</li>
- <li>{{cssxref("inset-block")}} — elle permet de définir les décalage sur l'axe de bloc</li>
-</ul>
+- {{cssxref("inset")}} — elle permet de définir les quatre décalages avec une correspondance physique.
+- {{cssxref("inset-inline")}} — elle permet de définir les décalages sur l'axe en ligne
+- {{cssxref("inset-block")}} — elle permet de définir les décalage sur l'axe de bloc
 
-<div class="note">
-<p><strong>Note :</strong> Les navigateurs n'ont, pour l'instant, pas implémenté ces nouvelles propriétés (décembre 2018). Pour plus d'informations sur la compatibilité des navigateurs, vous pouvez vous référer aux tableaux de compatibilité présents à la fin des pages de référence pour ces propriétés.</p>
-</div>
+> **Note :** Les navigateurs n'ont, pour l'instant, pas implémenté ces nouvelles propriétés (décembre 2018). Pour plus d'informations sur la compatibilité des navigateurs, vous pouvez vous référer aux tableaux de compatibilité présents à la fin des pages de référence pour ces propriétés.
 
-<h2 id="Exemple_de_valeurs_logiques_pour_text-align">Exemple de valeurs logiques pour <code>text-align</code></h2>
+## Exemple de valeurs logiques pour `text-align`
 
-<p>La propriété {{cssxref("text-align")}} peut s'utiliser avec quatre valeurs logiques qui sont relatives à la direction du texte. Plutôt que d'utiliser <code>left</code> et <code>right</code>, on pourra utiliser <code>start</code> et <code>end</code>. Dans l'exemple suivant, on définit <code>text-align: right</code> pour le premier bloc et <code>text-align: end</code> pour le second.</p>
+La propriété {{cssxref("text-align")}} peut s'utiliser avec quatre valeurs logiques qui sont relatives à la direction du texte. Plutôt que d'utiliser `left` et `right`, on pourra utiliser `start` et `end`. Dans l'exemple suivant, on définit `text-align: right` pour le premier bloc et `text-align: end` pour le second.
 
-<p>Si on modifie la valeur de <code>direction</code> pour la passer à <code>rtl</code>, on verra que le premier bloc restera aligné à droite tandis que le texte du second s'alignera sur la fin logique.</p>
+Si on modifie la valeur de `direction` pour la passer à `rtl`, on verra que le premier bloc restera aligné à droite tandis que le texte du second s'alignera sur la fin logique.
 
-<p>{{EmbedGHLiveSample("css-examples/logical/text-align.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("css-examples/logical/text-align.html", '100%', 700)}}
 
-<p>Le comportement d'ensemble est plus cohérent lorsqu'on utilise des alignements de boîtes logiques (<code>start</code> et <code>end</code>) plutôt que des alignements basés sur les directions physiques.</p>
+Le comportement d'ensemble est plus cohérent lorsqu'on utilise des alignements de boîtes logiques (`start` et `end`) plutôt que des alignements basés sur les directions physiques.

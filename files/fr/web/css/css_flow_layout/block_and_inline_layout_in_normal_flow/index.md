@@ -8,122 +8,112 @@ tags:
 translation_of: Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow
 original_slug: Web/CSS/CSS_Flow_Layout/Disposition_de_bloc_en_ligne_avec_flux_normal
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Dans ce guide, nous verrons le comportement des éléments de bloc et des éléments en ligne lorsqu'ils sont placés dans le flux normal.</p>
+Dans ce guide, nous verrons le comportement des éléments de bloc et des éléments en ligne lorsqu'ils sont placés dans le flux normal.
 
-<p>Le flux normal est défini par <a href="https://www.w3.org/TR/CSS2/visuren.html#normal-flow">la spécification CSS 2.1</a> qui explique comment les boîtes du flux normal s'inscrivent dans le contexte de formatage. Les boîtes peuvent être de bloc (<em>block</em>) ou en ligne (<em>inline</em>) mais pas les deux à la fois. Les boîtes de bloc contribuent au contexte de formatage des blocs et les boîtes en ligne contribuent au contexte de formatage en ligne.</p>
+Le flux normal est défini par [la spécification CSS 2.1](https://www.w3.org/TR/CSS2/visuren.html#normal-flow) qui explique comment les boîtes du flux normal s'inscrivent dans le contexte de formatage. Les boîtes peuvent être de bloc (_block_) ou en ligne (_inline_) mais pas les deux à la fois. Les boîtes de bloc contribuent au contexte de formatage des blocs et les boîtes en ligne contribuent au contexte de formatage en ligne.
 
-<p>Le comportement des éléments qui ont un contexte de formatage de bloc ou en ligne est également défini dans cette spécification. Pour les éléments avec un contexte de formatage de bloc, voici ce qui est indiqué dans la spécification :</p>
+Le comportement des éléments qui ont un contexte de formatage de bloc ou en ligne est également défini dans cette spécification. Pour les éléments avec un contexte de formatage de bloc, voici ce qui est indiqué dans la spécification :
 
-<blockquote>
-<p>« Dans un contexte de formatage de bloc, les boîtes sont disposées l'une après l'autre, verticalement, en démarrant en haut du bloc englobant. La distance verticale entre deux boîtes voisines est déterminée par les propriétés relatives aux marges. Les marges verticales fusionnent pour deux boîtes de bloc voisines au sein d'un contexte de formatage de bloc.<br>
- <br>
- Dans un contexte de formatage de bloc, chaque bord gauche de chaque boîte touche le bord gauche du bloc englobant (pour les documents écrits de droite à gauche, ce sont les bords droits qui coïncident). » - 9.4.1</p>
-</blockquote>
+> « Dans un contexte de formatage de bloc, les boîtes sont disposées l'une après l'autre, verticalement, en démarrant en haut du bloc englobant. La distance verticale entre deux boîtes voisines est déterminée par les propriétés relatives aux marges. Les marges verticales fusionnent pour deux boîtes de bloc voisines au sein d'un contexte de formatage de bloc.
+>
+> Dans un contexte de formatage de bloc, chaque bord gauche de chaque boîte touche le bord gauche du bloc englobant (pour les documents écrits de droite à gauche, ce sont les bords droits qui coïncident). » - 9.4.1
 
-<p>Quant aux éléments du contexte de formatage en ligne :</p>
+Quant aux éléments du contexte de formatage en ligne :
 
-<blockquote>
-<p>« Dans un contexte de formatage en ligne, les boîtes sont disposées horizontalement les unes après les autres, en démarrant en haut du bloc englobant. Les marges, bordures, espaces de remplissage (<em>padding</em>) entre ces boîtes sont respectées. L'alignement vertical des boîtes peut varier (alignement du bas et du haut ou alignement des lignes de base du texte). La zone rectangulaire contenant les boîtes qui forment une ligne est appelée une "boîte de ligne". » - 9.4.2</p>
-</blockquote>
+> « Dans un contexte de formatage en ligne, les boîtes sont disposées horizontalement les unes après les autres, en démarrant en haut du bloc englobant. Les marges, bordures, espaces de remplissage (_padding_) entre ces boîtes sont respectées. L'alignement vertical des boîtes peut varier (alignement du bas et du haut ou alignement des lignes de base du texte). La zone rectangulaire contenant les boîtes qui forment une ligne est appelée une "boîte de ligne". » - 9.4.2
 
-<p>On notera que la spécification CSS 2.1 décrit des documents dont le mode d'écriture est horizontal, allant de haut en bas. C'est notamment le cas avec la description de la distance verticale entre les boîtes de bloc. Le comportement des éléments de bloc et en ligne est donc le même lorsqu'on a un mode d'écriture vertical. Nous verrons cela dans un article suivant.</p>
+On notera que la spécification CSS 2.1 décrit des documents dont le mode d'écriture est horizontal, allant de haut en bas. C'est notamment le cas avec la description de la distance verticale entre les boîtes de bloc. Le comportement des éléments de bloc et en ligne est donc le même lorsqu'on a un mode d'écriture vertical. Nous verrons cela dans un article suivant.
 
-<h2 id="Les_éléments_qui_participent_à_un_contexte_de_formatage_de_bloc">Les éléments qui participent à un contexte de formatage de bloc</h2>
+## Les éléments qui participent à un contexte de formatage de bloc
 
-<p>Les éléments de bloc organisés avec un mode d'écriture horizontal (un document en français par exemple) sont disposés verticalement les uns au dessus des autres.</p>
+Les éléments de bloc organisés avec un mode d'écriture horizontal (un document en français par exemple) sont disposés verticalement les uns au dessus des autres.
 
-<p><img alt="" src="mdn-horizontal.png"></p>
+![](mdn-horizontal.png)
 
-<p>Avec un mode d'écriture vertical, les boîtes seraient organisées horizontalement.</p>
+Avec un mode d'écriture vertical, les boîtes seraient organisées horizontalement.
 
-<p><img alt="" src="mdn-vertical.png"></p>
+![](mdn-vertical.png)
 
-<p>Dans la suite de ce guide, nous prendrons l'hypothèse d'un mode d'écriture horizontal. Toutefois, tout ce qui est décrit fonctionne de la même façon pour un mode d'écriture vertical.</p>
+Dans la suite de ce guide, nous prendrons l'hypothèse d'un mode d'écriture horizontal. Toutefois, tout ce qui est décrit fonctionne de la même façon pour un mode d'écriture vertical.
 
-<p>Comme indiqué dans la spécification, les marges entre deux boîtes de bloc permettent de créer une séparation entre les éléments. On peut voir ceci dans un exemple simple avec deux paragraphes auxquels on ajoute une bordure. La feuille de style par défaut du navigateur ajoute un espace entre les paragraphes en ajoutant une marge en haut et en bas.</p>
+Comme indiqué dans la spécification, les marges entre deux boîtes de bloc permettent de créer une séparation entre les éléments. On peut voir ceci dans un exemple simple avec deux paragraphes auxquels on ajoute une bordure. La feuille de style par défaut du navigateur ajoute un espace entre les paragraphes en ajoutant une marge en haut et en bas.
 
-<p>{{EmbedGHLiveSample("css-examples/flow/block-inline/normal-flow.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("css-examples/flow/block-inline/normal-flow.html", '100%', 700)}}
 
-<p>Si on définit explicitement des marges nulles sur les paragraphes, les bordures se toucheront.</p>
+Si on définit explicitement des marges nulles sur les paragraphes, les bordures se toucheront.
 
-<p>{{EmbedGHLiveSample("css-examples/flow/block-inline/normal-flow-margin-zero.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("css-examples/flow/block-inline/normal-flow-margin-zero.html", '100%', 700)}}
 
-<p>Par défaut, les éléments de bloc consomment tout l'espace disponible sur l'axe en ligne. Ainsi, les paragraphes « s'étalent » horizontalement autant qu'ils le peuvent au sein du bloc englobant. Si on fixait leur longueur afin que deux paragraphes puissent tenir horizontalement, ils seraient tout de même l'un au dessus de l'autre. Chaque boîte de bloc commencera au début de l'axe de bloc du bloc englobant.</p>
+Par défaut, les éléments de bloc consomment tout l'espace disponible sur l'axe en ligne. Ainsi, les paragraphes « s'étalent » horizontalement autant qu'ils le peuvent au sein du bloc englobant. Si on fixait leur longueur afin que deux paragraphes puissent tenir horizontalement, ils seraient tout de même l'un au dessus de l'autre. Chaque boîte de bloc commencera au début de l'axe de bloc du bloc englobant.
 
-<p>{{EmbedGHLiveSample("css-examples/flow/block-inline/normal-flow-width.html", '100%', 700)}}</p>
+{{EmbedGHLiveSample("css-examples/flow/block-inline/normal-flow-width.html", '100%', 700)}}
 
-<h3 id="La_fusion_des_marges">La fusion des marges</h3>
+### La fusion des marges
 
-<p>La spécification indique que les marges verticales entre chaque éléments de bloc <em>fusionnent</em>. Cela signifie que si un élément avec une marge en haut suit directement un élément avec une marge en bas, plutôt que la marge résultante soit la somme des deux marges, on aura une fusion des marges et ce sera uniquement la plus grande des marges qui sera appliquée.</p>
+La spécification indique que les marges verticales entre chaque éléments de bloc _fusionnent_. Cela signifie que si un élément avec une marge en haut suit directement un élément avec une marge en bas, plutôt que la marge résultante soit la somme des deux marges, on aura une fusion des marges et ce sera uniquement la plus grande des marges qui sera appliquée.
 
-<p>Dans l'exemple suivant, les paragraphes ont une marge en haut qui mesure 20 pixels et une marge en bas qui mesure 40 pixels. La taille de la marge entre les deux paragraphes est donc de <code>40px</code> car la plus petite est « fusionnée » avec la plus grande.</p>
+Dans l'exemple suivant, les paragraphes ont une marge en haut qui mesure 20 pixels et une marge en bas qui mesure 40 pixels. La taille de la marge entre les deux paragraphes est donc de `40px` car la plus petite est « fusionnée » avec la plus grande.
 
-<p>{{EmbedGHLiveSample("css-examples/flow/block-inline/normal-flow-collapsing.html", '100%', 500)}}</p>
+{{EmbedGHLiveSample("css-examples/flow/block-inline/normal-flow-collapsing.html", '100%', 500)}}
 
-<p>Pour en savoir plus à propos de la fusion des marges, vous pouvez lire <a href="/fr/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing">l'article dédié à la fusion des marges</a>.</p>
+Pour en savoir plus à propos de la fusion des marges, vous pouvez lire [l'article dédié à la fusion des marges](/fr/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing).
 
-<div class="note">
-<p><strong>Note :</strong> Si vous n'êtes pas certain⋅e que la fusion des marges a lieu, vous pouvez utiliser les outils de développement de votre navigateur afin de voir la valeur réellement utilisée pour les marges.</p>
+> **Note :** Si vous n'êtes pas certain⋅e que la fusion des marges a lieu, vous pouvez utiliser les outils de développement de votre navigateur afin de voir la valeur réellement utilisée pour les marges.
+>
+> ![](box-model.png)
 
-<p><img alt="" src="box-model.png"></p>
-</div>
+## Les éléments qui participent à un contexte de formatage en ligne
 
-<h2 id="Les_éléments_qui_participent_à_un_contexte_de_formatage_en_ligne">Les éléments qui participent à un contexte de formatage en ligne</h2>
+Les éléments en ligne sont affichés les uns à la suite des autres selon la direction avec laquelle les phrases sont écrites pour ce mode d'écriture. Ces boîtes en ligne se suivent les unes après les autres. S'il n'y a pas suffisamment d'espace dans la boîte englobante, une boîte en ligne pourra être scindée pour passer à la ligne. Les lignes ainsi créées sont appelées des boîtes de ligne. Comme la plupart des objets en CSS, les éléments en ligne disposent bien d'une boîte (qu'on oublie parfois).
 
-<p>Les éléments en ligne sont affichés les uns à la suite des autres selon la direction avec laquelle les phrases sont écrites pour ce mode d'écriture. Ces boîtes en ligne se suivent les unes après les autres. S'il n'y a pas suffisamment d'espace dans la boîte englobante, une boîte en ligne pourra être scindée pour passer à la ligne. Les lignes ainsi créées sont appelées des boîtes de ligne. Comme la plupart des objets en CSS, les éléments en ligne disposent bien d'une boîte (qu'on oublie parfois).</p>
+Dans l'exemple suivant on a trois boîtes en ligne créées par un paragraphe avec un élément {{HTMLElement("strong")}} à l'intérieur.
 
-<p>Dans l'exemple suivant on a trois boîtes en ligne créées par un paragraphe avec un élément {{HTMLElement("strong")}} à l'intérieur.</p>
+{{EmbedGHLiveSample("css-examples/flow/block-inline/inline.html", '100%', 500)}}
 
-<p>{{EmbedGHLiveSample("css-examples/flow/block-inline/inline.html", '100%', 500)}}</p>
+Les boîtes autour des mots, avant et après l'élément {{HTMLElement("&lt;strong&gt;")}} sont qualifiées de boîtes _anonymes_. Ce sont des boîtes qui permettent que tout soit contenu dans une boîte mais on ne peut pas cibler ces boîtes spécifiquement.
 
-<p>Les boîtes autour des mots, avant et après l'élément {{HTMLElement("&lt;strong&gt;")}} sont qualifiées de boîtes <em>anonymes</em>. Ce sont des boîtes qui permettent que tout soit contenu dans une boîte mais on ne peut pas cibler ces boîtes spécifiquement.</p>
+La taille de la boîte de la ligne sur l'axe orthogonal à l'axe de lecture est définie avec la taille de la plus grande boîte qu'elle contient. Dans l'exemple suivant, on a un élément {{HTMLElement("&lt;strong&gt;")}} qui a une taille de 300% et c'est donc son contenu qui détermine la hauteur de la boîte de ligne pour cette ligne.
 
-<p>La taille de la boîte de la ligne sur l'axe orthogonal à l'axe de lecture est définie avec la taille de la plus grande boîte qu'elle contient. Dans l'exemple suivant, on a un élément {{HTMLElement("&lt;strong&gt;")}} qui a une taille de 300% et c'est donc son contenu qui détermine la hauteur de la boîte de ligne pour cette ligne.</p>
+{{EmbedGHLiveSample("css-examples/flow/block-inline/line-box.html", '100%', 500)}}
 
-<p>{{EmbedGHLiveSample("css-examples/flow/block-inline/line-box.html", '100%', 500)}}</p>
+Pour en savoir plus sur le comportement des boîtes en ligne et des boîtes de bloc, vous pouvez consulter [le guide sur le modèle de formatage visuel](/fr/docs/Web/CSS/Visual_formatting_model).
 
-<p>Pour en savoir plus sur le comportement des boîtes en ligne et des boîtes de bloc, vous pouvez consulter <a href="/fr/docs/Web/CSS/Visual_formatting_model">le guide sur le modèle de formatage visuel</a>.</p>
+## La propriété `display` et la disposition de flux
 
-<h2 id="La_propriété_display_et_la_disposition_de_flux">La propriété <code>display</code> et la disposition de flux</h2>
+En plus des règles existantes en CSS 2.1, les spécifications CSS ultérieures décrivent plus en détail le comportement des boîtes en ligne et des boîtes en bloc. La propriété `display` définit la façon dont une boîte, et celles qu'elle contient, se comporte. Avec la spécification _CSS Display Model Level 3_, on en apprend plus sur la façon dont la propriété `display` modifie comportement des boîtes et des boîtes qu'elles génèrent.
 
-<p>En plus des règles existantes en CSS 2.1, les spécifications CSS ultérieures décrivent plus en détail le comportement des boîtes en ligne et des boîtes en bloc. La propriété <code>display</code> définit la façon dont une boîte, et celles qu'elle contient, se comporte. Avec la spécification <em>CSS Display Model Level 3</em>, on en apprend plus sur la façon dont la propriété <code>display</code> modifie comportement des boîtes et des boîtes qu'elles génèrent.</p>
+Le type d'affichage d'un élément définit deux choses :
 
-<p>Le type d'affichage d'un élément définit deux choses :</p>
+- le type d'affichage extérieur, qui décrit comment la boîte s'affiche au sein des éléments du même contexte de formatage
+- le type d'affichage intérieur comment les boîtes situées à l'intérieur de cet élément doivent se comporter
 
-<ul>
- <li>le type d'affichage extérieur, qui décrit comment la boîte s'affiche au sein des éléments du même contexte de formatage</li>
- <li>le type d'affichage intérieur comment les boîtes situées à l'intérieur de cet élément doivent se comporter</li>
-</ul>
+Dans l'exemple suivant, on a un élément {{HTMLElement("div")}} sur lequel on a appliqué `display: flex`. Le conteneur flexible se comporte comme un élément de bloc : il s'affiche sur une nouvelle ligne et occupe tout l'espace du bloc englobant dans l'axe en ligne. Aussi, le type d'affichage extérieur vaut `block`.
 
-<p>Dans l'exemple suivant, on a un élément {{HTMLElement("div")}} sur lequel on a appliqué <code>display: flex</code>. Le conteneur flexible se comporte comme un élément de bloc : il s'affiche sur une nouvelle ligne et occupe tout l'espace du bloc englobant dans l'axe en ligne. Aussi, le type d'affichage extérieur vaut <code>block</code>.</p>
+Les objets flexibles, à l'intérieur, contribuent à un contexte de formatage flexible car leur élément parent a `display: flex`. Aussi, le type d'affichage intérieur vaut `flex` et un nouveau contexte de formatage flexible est mis en place pour les éléments enfants.
 
-<p>Les objets flexibles, à l'intérieur, contribuent à un contexte de formatage flexible car leur élément parent a <code>display: flex</code>. Aussi, le type d'affichage intérieur vaut <code>flex</code> et un nouveau contexte de formatage flexible est mis en place pour les éléments enfants.</p>
+{{EmbedGHLiveSample("css-examples/flow/block-inline/flex.html", '100%', 500)}}
 
-<p>{{EmbedGHLiveSample("css-examples/flow/block-inline/flex.html", '100%', 500)}}</p>
+On peut envisager chaque boîte CSS sous cet angle. La boîte possède un type d'affichage extérieur et sait ainsi comment se comporter avec les boîtes qui l'entourent. Ensuite, la boîte possède un type d'affichage intérieur qui permet d'organiser les éléments qu'elle contient. Ces éléments, à leur tour, disposent d'un type d'affichage extérieur et d'un type d'affichage intérieur. Dans l'exemple précédent, les objets flexibles ont des boîtes flexibles. Le type d'affichage extérieur est dicté par le contexte de formatage flexible. En revanche, leur type d'affichage intérieur est `flow` et leurs éléments enfants participeront à un flux normal. Les éléments enfants s'organiseront comme des éléments en ligne ou de bloc sauf si leur type d'affichage est explicitement modifié.
 
-<p>On peut envisager chaque boîte CSS sous cet angle. La boîte possède un type d'affichage extérieur et sait ainsi comment se comporter avec les boîtes qui l'entourent. Ensuite, la boîte possède un type d'affichage intérieur qui permet d'organiser les éléments qu'elle contient. Ces éléments, à leur tour, disposent d'un type d'affichage extérieur et d'un type d'affichage intérieur. Dans l'exemple précédent, les objets flexibles ont des boîtes flexibles. Le type d'affichage extérieur est dicté par le contexte de formatage flexible. En revanche, leur type d'affichage intérieur est <code>flow</code> et leurs éléments enfants participeront à un flux normal. Les éléments enfants s'organiseront comme des éléments en ligne ou de bloc sauf si leur type d'affichage est explicitement modifié.</p>
+Le concept de type d'affichage extérieur et intérieur est important car il nous indique qu'un conteneur utilisant Flexbox (`display: flex`) ou les grilles CSS (`display: grid`) continue de participer à une disposition bloc/en ligne du fait du type d'affichage extérieur qui est `block`.
 
-<p>Le concept de type d'affichage extérieur et intérieur est important car il nous indique qu'un conteneur utilisant Flexbox (<code>display: flex</code>) ou les grilles CSS (<code>display: grid</code>) continue de participer à une disposition bloc/en ligne du fait du type d'affichage extérieur qui est <code>block</code>.</p>
+### Modifier le contexte de formatage auquel un élément participe
 
-<h3 id="Modifier_le_contexte_de_formatage_auquel_un_élément_participe">Modifier le contexte de formatage auquel un élément participe</h3>
+Les navigateurs affichent les éléments en bloc ou ligne selon ce qui est pertinent pour chaque élément. Ainsi, l'élément {{HTMLElement("strong")}}, utilisé pour mettre en avant un mot (souvent alors affiché en gras), ne crée pas de nouvelle ligne pour afficher son contenu : ce n'est pas un élément de bloc mais un élément en ligne.
 
-<p>Les navigateurs affichent les éléments en bloc ou ligne selon ce qui est pertinent pour chaque élément. Ainsi, l'élément {{HTMLElement("strong")}}, utilisé pour mettre en avant un mot (souvent alors affiché en gras), ne crée pas de nouvelle ligne pour afficher son contenu : ce n'est pas un élément de bloc mais un élément en ligne.</p>
+Si on souhaitait afficher tous les éléments {{HTMLElement("strong")}} comme des éléments de bloc, il suffirait d'ajouter la règle `display: block` en ciblant les éléments `<strong>`. Cela signifie qu'on peut toujours écrire un code HTML qui soit le plus sémantique possible pour le contenu puis modifier la façon dont le document est affiché grâce à CSS.
 
-<p>Si on souhaitait afficher tous les éléments {{HTMLElement("strong")}} comme des éléments de bloc, il suffirait d'ajouter la règle <code>display: block</code> en ciblant les éléments <code>&lt;strong&gt;</code>. Cela signifie qu'on peut toujours écrire un code HTML qui soit le plus sémantique possible pour le contenu puis modifier la façon dont le document est affiché grâce à CSS.</p>
+{{EmbedGHLiveSample("css-examples/flow/block-inline/change-formatting.html", '100%', 500)}}
 
-<p>{{EmbedGHLiveSample("css-examples/flow/block-inline/change-formatting.html", '100%', 500)}}</p>
+## Résumé
 
-<h2 id="Résumé">Résumé</h2>
+Dans ce guide, nous avons vu comment les éléments étaient affichés dans le flux normal, comme éléments de bloc ou comme éléments en ligne. Les éléments HTML s'afficheront par défaut de façon lisible sans CSS. En comprenant comment fonctionne le flux normal, vous comprendrez comment apporter les modifications nécessaires pour parvenir à la disposition désirée.
 
-<p>Dans ce guide, nous avons vu comment les éléments étaient affichés dans le flux normal, comme éléments de bloc ou comme éléments en ligne. Les éléments HTML s'afficheront par défaut de façon lisible sans CSS. En comprenant comment fonctionne le flux normal, vous comprendrez comment apporter les modifications nécessaires pour parvenir à la disposition désirée.</p>
+## Voir aussi
 
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Box_Model">Le module de spécification <em>CSS Basic Box Model</em> qui définit les propriétés de base pour le modèle de boîte</a></li>
- <li><a href="/fr/docs/Learn/CSS/CSS_layout/Normal_Flow">Apprendre - le fonctionnement du flux normal</a></li>
- <li><a href="/fr/docs/Web/HTML/Inline_elements">Les éléments HTML en ligne</a></li>
- <li><a href="/fr/docs/Web/HTML/Block-level_elements">Les éléments HTML de bloc</a></li>
-</ul>
+- [Le module de spécification _CSS Basic Box Model_ qui définit les propriétés de base pour le modèle de boîte](/fr/docs/Web/CSS/CSS_Box_Model)
+- [Apprendre - le fonctionnement du flux normal](/fr/docs/Learn/CSS/CSS_layout/Normal_Flow)
+- [Les éléments HTML en ligne](/fr/docs/Web/HTML/Inline_elements)
+- [Les éléments HTML de bloc](/fr/docs/Web/HTML/Block-level_elements)

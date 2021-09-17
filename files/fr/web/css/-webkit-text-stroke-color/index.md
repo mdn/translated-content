@@ -8,12 +8,13 @@ tags:
   - Reference
 translation_of: Web/CSS/-webkit-text-stroke-color
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>La propriété <strong><code>-webkit-text-stroke-color</code></strong> permet de définir la couleur de la ligne utilisée pour le contour du text. Si cette propriété n'est pas définie, c'est la valeur de {{cssxref("color")}} qui sera utilisée.</p>
+La propriété **`-webkit-text-stroke-color`** permet de définir la couleur de la ligne utilisée pour le contour du text. Si cette propriété n'est pas définie, c'est la valeur de {{cssxref("color")}} qui sera utilisée.
 
-<pre class="brush:css no-line-numbers">/* Valeurs de couleur */
-/* Type &lt;color&gt;       */
+```css
+/* Valeurs de couleur */
+/* Type <color>       */
 -webkit-text-stroke-color: red;
 -webkit-text-stroke-color: #e08ab4;
 -webkit-text-stroke-color: rgb(200, 100, 0);
@@ -22,84 +23,68 @@ translation_of: Web/CSS/-webkit-text-stroke-color
 -webkit-text-stroke-color: inherit;
 -webkit-text-stroke-color: initial;
 -webkit-text-stroke-color: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;color&gt;</code></dt>
- <dd>La couleur du contour pour les lettres.</dd>
-</dl>
+- `<color>`
+  - : La couleur du contour pour les lettres.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Texte avec un contour&lt;/p&gt;
-&lt;input type="color" value="#ff0000"&gt;</pre>
+```html
+<p>Texte avec un contour</p>
+<input type="color" value="#ff0000">
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   margin: 0;
   font-size: 4em;
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: #ff0000;
   /* Cette valeur peut être modifiée */
 }
-</pre>
+```
 
-<pre class="brush: js hidden">var colorPicker = document.querySelector("input");
+```js hidden
+var colorPicker = document.querySelector("input");
 colorPicker.addEventListener("change", function(evt) {
   document.querySelector("p").style.webkitTextStrokeColor = evt.target.value;
-});</pre>
+});
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", "500px", "100px")}}</p>
+{{EmbedLiveSample("Exemples", "500px", "100px")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Compat', '#the-webkit-text-stroke-color', '-webkit-text-stroke-color')}}</td>
-   <td>{{Spec2('Compat')}}</td>
-   <td>Définition initiale dans un standard.</td>
-  </tr>
-  <tr>
-   <td><a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266--webkit-text-stroke-color">Référence CSS Safari -webkit-text-stroke-color dans ce document.</a></td>
-   <td>Documentation non-officielle, non-standard.</td>
-   <td>Documentation initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                                                                                                                                                      | État                                        | Commentaires                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------- | ------------------------------------- |
+| {{SpecName('Compat', '#the-webkit-text-stroke-color', '-webkit-text-stroke-color')}}                                                                                                                                                   | {{Spec2('Compat')}}                    | Définition initiale dans un standard. |
+| [Référence CSS Safari -webkit-text-stroke-color dans ce document.](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/doc/uid/TP30001266--webkit-text-stroke-color) | Documentation non-officielle, non-standard. | Documentation initiale.               |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.-webkit-text-stroke-color")}}</p>
+{{Compat("css.properties.-webkit-text-stroke-color")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="https://www.webkit.org/blog/85/introducing-text-stroke/">Le billet de <em>Surfin' Safari</em> qui annonce cette fonctionnalité (en anglais)</a></li>
- <li><a href="https://css-tricks.com/adding-stroke-to-web-text/">L'article de CSS-Tricks à propos de cette fonctionnalité (en anglais)</a></li>
- <li>{{cssxref("-webkit-text-fill-color")}}</li>
- <li>{{cssxref("-webkit-text-stroke-width")}}</li>
- <li>{{cssxref("-webkit-text-stroke")}}</li>
-</ul>
+- [Le billet de _Surfin' Safari_ qui annonce cette fonctionnalité (en anglais)](https://www.webkit.org/blog/85/introducing-text-stroke/)
+- [L'article de CSS-Tricks à propos de cette fonctionnalité (en anglais)](https://css-tricks.com/adding-stroke-to-web-text/)
+- {{cssxref("-webkit-text-fill-color")}}
+- {{cssxref("-webkit-text-stroke-width")}}
+- {{cssxref("-webkit-text-stroke")}}

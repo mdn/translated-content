@@ -7,11 +7,12 @@ tags:
   - Reference
 translation_of: Web/CSS/@counter-style/system
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La descripteur <strong><code>system</code></strong>, utilisé avec <a href="/fr/docs/Web/CSS/R%C3%A8gles_@">la règle @</a> {{cssxref("@counter-style")}}, permet de définir l'algorithme utilisé pour convertir la valeur entière d'un compteur en une chaîne de caractères.</p>
+La descripteur **`system`**, utilisé avec [la règle @](/fr/docs/Web/CSS/R%C3%A8gles_@) {{cssxref("@counter-style")}}, permet de définir l'algorithme utilisé pour convertir la valeur entière d'un compteur en une chaîne de caractères.
 
-<pre class="brush: css">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 system: cyclic;
 system: numeric;
 system: alphabetic;
@@ -22,50 +23,48 @@ system: fixed;
 /* Combinaison de valeurs */
 system: fixed 3;
 system: extends decimal;
-</pre>
+```
 
-<p>Si l'algorithme défini dans ce descripteur est incapable de construire la chaîne de caractères pour une valeur donnée, ce sera le système de secours qui sera utilisé ({{cssxref("fallback")}}).</p>
+Si l'algorithme défini dans ce descripteur est incapable de construire la chaîne de caractères pour une valeur donnée, ce sera le système de secours qui sera utilisé ({{cssxref("fallback")}}).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Ce descripteur peut prendre l'une de ces trois formes :</p>
+Ce descripteur peut prendre l'une de ces trois formes :
 
-<ul>
- <li>Un des mots-clés parmi <code>cyclic</code>, <code>numeric</code>, <code>alphabetic</code>, <code>symbolic</code>, <code>additive</code>, <code>fixed</code></li>
- <li>Le mot-clé <code>fixed</code> avec un entier</li>
- <li>Le mot-clé <code>extends</code> avec un nom correspondant à un {{cssxref("@counter-style")}}.</li>
-</ul>
+- Un des mots-clés parmi `cyclic`, `numeric`, `alphabetic`, `symbolic`, `additive`, `fixed`
+- Le mot-clé `fixed` avec un entier
+- Le mot-clé `extends` avec un nom correspondant à un {{cssxref("@counter-style")}}.
 
-<dl>
- <dt><code>cyclic</code></dt>
- <dd>Le système itère et boucle parmi la liste des symboles fournis. Une fois que la fin de la liste est atteinte, le système reprend au début de la liste. Ce système est pertinent lorsqu'on a un seul symbole ou une liste non numérotée avec des puces. Afin que le style du compteur soit valide, il faut au moins définir un symbole via le descripteur {{cssxref("symbols()")}}.</dd>
- <dt><code>fixed</code></dt>
- <dd>Cette valeur permet de définir un ensemble fini de symboles. Une fois que le système a utilisé les différents symboles, il poursuivra en utilisant le système de secours. Afin que le style du compteur soit valide, il faut qu'au moins un symbole soit défini avec le descripteur <code>symbols</code>. On peut éventuellement ajouter un entier (valeur {{cssxref("integer")}}) après le système et qui définit la valeur du premier symbole. La valeur par défaut de ce paramètre (s'il est absent) est <code>1</code>.</dd>
- <dt><code>symbolic</code></dt>
- <dd>Le système itère sur la liste des symboles et à chaque boucle, on double, triple, etc. la représentation. Ainsi, si les symboles fournis sont ◽ et ◾, au cycle suivant, on aura ◽◽ puis ◾◾, ensuite ◽◽◽ et ◾◾◾ et ainsi de suite. Afin que le style du compteur soit valide, il faut définir au moins un symbole avec le descripteur <code>symbols</code>. Ce système de compteur ne fonctionne que pour les valeurs positives.</dd>
- <dt><code>alphabetic</code></dt>
- <dd>Le système interprète les symboles comme les chiffres d'un système de numérotation alphabétique. Ainsi, si les lettres <code>a</code> à <code>z</code> sont définies comme symbole dans un style de compteur dont le système est <code>alphabetic</code>, les 26 premières représentations du compteur seront <code>a</code>, <code>b</code>, etc. jusqu'à <code>z</code> (jusqu'ici, le comportement est identique à celui obtenu grâce à <code>symbolic</code>) mais ensuite, le système poursuivra avec <code>aa</code>, <code>ab</code>, <code>ac</code>, etc.
- Pour que le style du compteur soit valide, il faut qu'au moins deux symboles soient fournis. Le premier symbole est interprété comme <code>1</code>, le suivant comme <code>2</code> et ainsi de suite. Ce système ne fonctionne que pour les valeurs positives.</dd>
- <dt><code>numeric</code></dt>
- <dd>Les symboles sont interprétés comme les chiffres d'un <a href="https://fr.wikipedia.org/wiki/Notation_positionnelle">système de notation positionnelle</a>. Ce système est très proche de celui qu'on peut obtenir avec <code>alphabetic</code> sauf que, pour ce dernier, le premier symbole fourni par <code>symbols</code> sera interprété comme <code>1</code>, le suivant  comme <code>2</code> et ainsi de suite alors que pour <code>numeric</code>, le premier symbole est interprété comme 0, le suivant comme <code>1</code>, puis <code>2</code> etc. Pour que le style de compteur soit valide, il faut qu'au moins deux symboles soient définis avec <code>symbols</code>. Le premier symbole qui est fourni sera interprété comme <code>0</code>. Comme on peut le voir dans l'exemple ci-après, si on utilise les chiffres de <code>0</code> à <code>9</code> comme symboles, on obtiendra le même résultat qu'avec le système décimal.</dd>
- <dt><code>additive</code></dt>
- <dd>Ce système peut être utilisé pour représenter <a href="https://fr.wikipedia.org/wiki/Notation_additive_(num%C3%A9ration)">des systèmes de numérotations additives</a> telles que les chiffres romains qui, plutôt que de réutiliser des chiffres pour obtenir différentes valeurs, définissent des chiffres supplémentaires pour représenter de grandes valeurs. La valeur d'un nombre représenté dans ce sytème est obtenue en sommant les différents chiffres qui le représentent. Le descripteur supplémentaire {{cssxref("additive-symbols")}} doit être utilisé avec au moins un tuple additif pour que le style de compteur soit considéré comme valide. Un tuple additif est composé d'un symbole de compteur et d'un poids entier positif. Les tuples additifs doivent être définis dans l'ordre décroissant de leurs poids afin que le système soit valide. On voit dans l'exemple ci-après que <code>range</code> est utilisé afin de définir l'intervalle de validité. Une fois en dehors de cet intervalle, on utilisera la représentation classique avec <code>decimal</code> (le style de secours). Si on veut utiliser les chiffres romains, on pourra utiliser les valeurs de style prédéfinies comme <code>upper-roman</code> ou <code>lower-roman</code> afin d'éviter de réinventer la roue.
- </dd>
- <dt><code>extends</code></dt>
- <dd>Ce mot-clé permet aux auteurs d'utiliser l'algorithme d'un autre style de compteur et de modifier ses autres caractéristiques. Si une règle d'un style de compteur utilise le système <code>extends</code> et que certains de ces descripteurs ne font pas définis, leurs valeurs seront prises depuis le style de compteur indiqué. Si le nom du style référencé n'existe pas, le style de secours (décimal) sera utilisé. Pour que le style de compteur soit valide, il ne doit pas contenir de descripteur <code>symbols</code> ou <code>additive-symbols</code>. Si, selon les différents styles de compteur, on a un cycle de référence (A qui pointe vers B qui pointe vers C qui pointe vers A par exemple), l'agent utilisateur considèrera que tous les styles étendent le style décimal. Dans l'exemple final, le style de compteur utiliser les valeurs du système de compteur <code>lower-alpha</code> mais retire le point comme suffixe et entour les caractères entre parenthèses (pour obtenir <code>(a)</code> <code>(b)</code> etc).</dd>
-</dl>
+<!---->
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+- `cyclic`
+  - : Le système itère et boucle parmi la liste des symboles fournis. Une fois que la fin de la liste est atteinte, le système reprend au début de la liste. Ce système est pertinent lorsqu'on a un seul symbole ou une liste non numérotée avec des puces. Afin que le style du compteur soit valide, il faut au moins définir un symbole via le descripteur {{cssxref("symbols()")}}.
+- `fixed`
+  - : Cette valeur permet de définir un ensemble fini de symboles. Une fois que le système a utilisé les différents symboles, il poursuivra en utilisant le système de secours. Afin que le style du compteur soit valide, il faut qu'au moins un symbole soit défini avec le descripteur `symbols`. On peut éventuellement ajouter un entier (valeur {{cssxref("integer")}}) après le système et qui définit la valeur du premier symbole. La valeur par défaut de ce paramètre (s'il est absent) est `1`.
+- `symbolic`
+  - : Le système itère sur la liste des symboles et à chaque boucle, on double, triple, etc. la représentation. Ainsi, si les symboles fournis sont ◽ et ◾, au cycle suivant, on aura ◽◽ puis ◾◾, ensuite ◽◽◽ et ◾◾◾ et ainsi de suite. Afin que le style du compteur soit valide, il faut définir au moins un symbole avec le descripteur `symbols`. Ce système de compteur ne fonctionne que pour les valeurs positives.
+- `alphabetic`
+  - : Le système interprète les symboles comme les chiffres d'un système de numérotation alphabétique. Ainsi, si les lettres `a` à `z` sont définies comme symbole dans un style de compteur dont le système est `alphabetic`, les 26 premières représentations du compteur seront `a`, `b`, etc. jusqu'à `z` (jusqu'ici, le comportement est identique à celui obtenu grâce à `symbolic`) mais ensuite, le système poursuivra avec `aa`, `ab`, `ac`, etc.
+    Pour que le style du compteur soit valide, il faut qu'au moins deux symboles soient fournis. Le premier symbole est interprété comme `1`, le suivant comme `2` et ainsi de suite. Ce système ne fonctionne que pour les valeurs positives.
+- `numeric`
+  - : Les symboles sont interprétés comme les chiffres d'un [système de notation positionnelle](https://fr.wikipedia.org/wiki/Notation_positionnelle). Ce système est très proche de celui qu'on peut obtenir avec `alphabetic` sauf que, pour ce dernier, le premier symbole fourni par `symbols` sera interprété comme `1`, le suivant  comme `2` et ainsi de suite alors que pour `numeric`, le premier symbole est interprété comme 0, le suivant comme `1`, puis `2` etc. Pour que le style de compteur soit valide, il faut qu'au moins deux symboles soient définis avec `symbols`. Le premier symbole qui est fourni sera interprété comme `0`. Comme on peut le voir dans l'exemple ci-après, si on utilise les chiffres de `0` à `9` comme symboles, on obtiendra le même résultat qu'avec le système décimal.
+- `additive`
+  - : Ce système peut être utilisé pour représenter [des systèmes de numérotations additives](<https://fr.wikipedia.org/wiki/Notation_additive_(num%C3%A9ration)>) telles que les chiffres romains qui, plutôt que de réutiliser des chiffres pour obtenir différentes valeurs, définissent des chiffres supplémentaires pour représenter de grandes valeurs. La valeur d'un nombre représenté dans ce sytème est obtenue en sommant les différents chiffres qui le représentent. Le descripteur supplémentaire {{cssxref("additive-symbols")}} doit être utilisé avec au moins un tuple additif pour que le style de compteur soit considéré comme valide. Un tuple additif est composé d'un symbole de compteur et d'un poids entier positif. Les tuples additifs doivent être définis dans l'ordre décroissant de leurs poids afin que le système soit valide. On voit dans l'exemple ci-après que `range` est utilisé afin de définir l'intervalle de validité. Une fois en dehors de cet intervalle, on utilisera la représentation classique avec `decimal` (le style de secours). Si on veut utiliser les chiffres romains, on pourra utiliser les valeurs de style prédéfinies comme `upper-roman` ou `lower-roman` afin d'éviter de réinventer la roue.
+- `extends`
+  - : Ce mot-clé permet aux auteurs d'utiliser l'algorithme d'un autre style de compteur et de modifier ses autres caractéristiques. Si une règle d'un style de compteur utilise le système `extends` et que certains de ces descripteurs ne font pas définis, leurs valeurs seront prises depuis le style de compteur indiqué. Si le nom du style référencé n'existe pas, le style de secours (décimal) sera utilisé. Pour que le style de compteur soit valide, il ne doit pas contenir de descripteur `symbols` ou `additive-symbols`. Si, selon les différents styles de compteur, on a un cycle de référence (A qui pointe vers B qui pointe vers C qui pointe vers A par exemple), l'agent utilisateur considèrera que tous les styles étendent le style décimal. Dans l'exemple final, le style de compteur utiliser les valeurs du système de compteur `lower-alpha` mais retire le point comme suffixe et entour les caractères entre parenthèses (pour obtenir `(a)` `(b)` etc).
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Utilisation_de_cyclic">Utilisation de <code>cyclic</code></h3>
+### Utilisation de `cyclic`
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">@counter-style fisheye {
+```css
+@counter-style fisheye {
   system: cyclic;
   symbols: ◉;
   suffix: " ";
@@ -73,28 +72,31 @@ system: extends decimal;
 
 .list {
     list-style: fisheye;
-}</pre>
+}
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul class="list"&gt;
-  &lt;li&gt;Un&lt;/li&gt;
-  &lt;li&gt;Deux&lt;/li&gt;
-  &lt;li&gt;Trois&lt;/li&gt;
-  &lt;li&gt;Quatre&lt;/li&gt;
-  &lt;li&gt;Cinq&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+```html
+<ul class="list">
+  <li>Un</li>
+  <li>Deux</li>
+  <li>Trois</li>
+  <li>Quatre</li>
+  <li>Cinq</li>
+</ul>
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('Utilisation_de_cyclic')}}</p>
+{{EmbedLiveSample('Utilisation_de_cyclic')}}
 
-<h3 id="Utilisation_de_fixed">Utilisation de <code>fixed</code></h3>
+### Utilisation de `fixed`
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">@counter-style circled-digits {
+```css
+@counter-style circled-digits {
   system: fixed;
   symbols: ➀ ➁ ➂;
   suffix: ' ';
@@ -103,27 +105,30 @@ system: extends decimal;
 .list {
   list-style: circled-digits;
 }
-</pre>
+```
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul class="list"&gt;
-  &lt;li&gt;Un&lt;/li&gt;
-  &lt;li&gt;Deux&lt;/li&gt;
-  &lt;li&gt;Trois&lt;/li&gt;
-  &lt;li&gt;Quatre&lt;/li&gt;
-  &lt;li&gt;Cinq&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul class="list">
+  <li>Un</li>
+  <li>Deux</li>
+  <li>Trois</li>
+  <li>Quatre</li>
+  <li>Cinq</li>
+</ul>
+```
 
-<h4 id="Résultat_2">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('Utilisation_de_fixed')}}</p>
+{{EmbedLiveSample('Utilisation_de_fixed')}}
 
-<h3 id="Utilisation_de_symbolic">Utilisation de <code>symbolic</code></h3>
+### Utilisation de `symbolic`
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css">@counter-style abc {
+```css
+@counter-style abc {
   system: symbolic;
   symbols: a b c;
   suffix: ". ";
@@ -132,27 +137,30 @@ system: extends decimal;
 .list {
   list-style: abc;
 }
-</pre>
+```
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul class="list"&gt;
-  &lt;li&gt;Un&lt;/li&gt;
-  &lt;li&gt;Deux&lt;/li&gt;
-  &lt;li&gt;Trois&lt;/li&gt;
-  &lt;li&gt;Quatre&lt;/li&gt;
-  &lt;li&gt;Cinq&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul class="list">
+  <li>Un</li>
+  <li>Deux</li>
+  <li>Trois</li>
+  <li>Quatre</li>
+  <li>Cinq</li>
+</ul>
+```
 
-<h4 id="Résultat_3">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('Utilisation_de_symbolic')}}</p>
+{{EmbedLiveSample('Utilisation_de_symbolic')}}
 
-<h3 id="Utilisation_de_alphabetic">Utilisation de <code>alphabetic</code></h3>
+### Utilisation de `alphabetic`
 
-<h4 id="CSS_4">CSS</h4>
+#### CSS
 
-<pre class="brush: css">@counter-style abc {
+```css
+@counter-style abc {
   system: alphabetic;
   symbols: a b c;
   suffix: ". ";
@@ -161,28 +169,30 @@ system: extends decimal;
 .list {
   list-style: abc;
 }
-</pre>
+```
 
-<h4 id="HTML_4">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul class="list"&gt;
-  &lt;li&gt;Un&lt;/li&gt;
-  &lt;li&gt;Deux&lt;/li&gt;
-  &lt;li&gt;Trois&lt;/li&gt;
-  &lt;li&gt;Quatre&lt;/li&gt;
-  &lt;li&gt;Cinq&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+```html
+<ul class="list">
+  <li>Un</li>
+  <li>Deux</li>
+  <li>Trois</li>
+  <li>Quatre</li>
+  <li>Cinq</li>
+</ul>
+```
 
-<h4 id="Résultat_4">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('Utilisation_de_alphabetic')}}</p>
+{{EmbedLiveSample('Utilisation_de_alphabetic')}}
 
-<h3 id="Utilisation_de_numeric_avec_des_lettres">Utilisation de <code>numeric</code> avec des lettres</h3>
+### Utilisation de `numeric` avec des lettres
 
-<h4 id="CSS_5">CSS</h4>
+#### CSS
 
-<pre class="brush: css">@counter-style abc {
+```css
+@counter-style abc {
   system: numeric;
   symbols: a b c;
   suffix: ". ";
@@ -190,27 +200,31 @@ system: extends decimal;
 
 .list {
   list-style: abc;
-}</pre>
+}
+```
 
-<h4 id="HTML_5">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul class="list"&gt;
-  &lt;li&gt;Un&lt;/li&gt;
-  &lt;li&gt;Deux&lt;/li&gt;
-  &lt;li&gt;Trois&lt;/li&gt;
-  &lt;li&gt;Quatre&lt;/li&gt;
-  &lt;li&gt;Cinq&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul class="list">
+  <li>Un</li>
+  <li>Deux</li>
+  <li>Trois</li>
+  <li>Quatre</li>
+  <li>Cinq</li>
+</ul>
+```
 
-<h4 id="Résultat_5">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('Utilisation_de_numeric_avec_des_lettres')}}</p>
+{{EmbedLiveSample('Utilisation_de_numeric_avec_des_lettres')}}
 
-<h3 id="Utilisation_de_numeric_avec_des_chiffres">Utilisation de <code>numeric</code> avec des chiffres</h3>
+### Utilisation de `numeric` avec des chiffres
 
-<h4 id="CSS_6">CSS</h4>
+#### CSS
 
-<pre class="brush: css">@counter-style numbers {
+```css
+@counter-style numbers {
   system: numeric;
   symbols: 0 1 2 3 4 5 6 7 8 9;
   suffix: ". ";
@@ -219,25 +233,28 @@ system: extends decimal;
 .list {
   list-style: numbers;
 }
-</pre>
+```
 
-<h4 id="HTML_6">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul class="list"&gt;
-  &lt;li&gt;Un&lt;/li&gt;
-  &lt;li&gt;Deux&lt;/li&gt;
-  &lt;li&gt;Trois&lt;/li&gt;
-  &lt;li&gt;Quatre&lt;/li&gt;
-  &lt;li&gt;Cinq&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul class="list">
+  <li>Un</li>
+  <li>Deux</li>
+  <li>Trois</li>
+  <li>Quatre</li>
+  <li>Cinq</li>
+</ul>
+```
 
-<p>{{EmbedLiveSample("Utilisation_de_numeric_avec_des_chiffres")}}</p>
+{{EmbedLiveSample("Utilisation_de_numeric_avec_des_chiffres")}}
 
-<h3 id="Utilisation_de_additive">Utilisation de <code>additive</code></h3>
+### Utilisation de `additive`
 
-<h4 id="CSS_7">CSS</h4>
+#### CSS
 
-<pre class="brush: css">@counter-style upper-roman {
+```css
+@counter-style upper-roman {
   system: additive;
   range: 1 3999;
   additive-symbols: 1000 M, 900 CM, 500 D, 400 CD, 100 C, 90 XC, 50 L, 40 XL, 10 X, 9 IX, 5 V, 4 IV, 1 I;
@@ -246,28 +263,30 @@ system: extends decimal;
 .list {
   list-style: upper-roman;
 }
-</pre>
+```
 
-<h4 id="HTML_7">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul class="list"&gt;
-  &lt;li&gt;Un&lt;/li&gt;
-  &lt;li&gt;Deux&lt;/li&gt;
-  &lt;li&gt;Trois&lt;/li&gt;
-  &lt;li&gt;Quatre&lt;/li&gt;
-  &lt;li&gt;Cinq&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+```html
+<ul class="list">
+  <li>Un</li>
+  <li>Deux</li>
+  <li>Trois</li>
+  <li>Quatre</li>
+  <li>Cinq</li>
+</ul>
+```
 
-<h4 id="Résultat_6">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('Utilisation_de_additive')}}</p>
+{{EmbedLiveSample('Utilisation_de_additive')}}
 
-<h3 id="Combinaison_avec_extends">Combinaison avec <code>extends</code></h3>
+### Combinaison avec `extends`
 
-<h4 id="CSS_8">CSS</h4>
+#### CSS
 
-<pre class="brush: css">@counter-style alpha-modified {
+```css
+@counter-style alpha-modified {
   system: extends lower-alpha;
   prefix: "(";
   suffix: ") ";
@@ -276,53 +295,39 @@ system: extends decimal;
 .list {
   list-style: alpha-modified;
 }
-</pre>
+```
 
-<h4 id="HTML_8">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul class="list"&gt;
-  &lt;li&gt;Un&lt;/li&gt;
-  &lt;li&gt;Deux&lt;/li&gt;
-  &lt;li&gt;Trois&lt;/li&gt;
-  &lt;li&gt;Quatre&lt;/li&gt;
-  &lt;li&gt;Cinq&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
-
-<h4 id="Résultat_7">Résultat</h4>
-
-<p>{{EmbedLiveSample('Combinaison_avec_extends')}}</p>
-
-<h2 id="Spécifications">Spécifications</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Counter Styles', '#counter-style-system', 'system')}}</td>
-   <td>{{Spec2('CSS3 Counter Styles')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
-
-<p>{{cssinfo}}</p>
-
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<p>{{Compat("css.at-rules.counter-style.system")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>{{cssxref("list-style")}},</li>
- <li>{{cssxref("list-style-image")}},</li>
- <li>{{cssxref("list-style-position")}},</li>
- <li>{{cssxref("symbols()", "symbols()")}}, la notation fonctionnelle utilisée pour créer des styles de compteur anonymes.</li>
+```html
+<ul class="list">
+  <li>Un</li>
+  <li>Deux</li>
+  <li>Trois</li>
+  <li>Quatre</li>
+  <li>Cinq</li>
 </ul>
+```
+
+#### Résultat
+
+{{EmbedLiveSample('Combinaison_avec_extends')}}
+
+## Spécifications
+
+| Spécification                                                                                | État                                         | Commentaires         |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
+| {{SpecName('CSS3 Counter Styles', '#counter-style-system', 'system')}} | {{Spec2('CSS3 Counter Styles')}} | Définition initiale. |
+
+{{cssinfo}}
+
+## Compatibilité des navigateurs
+
+{{Compat("css.at-rules.counter-style.system")}}
+
+## Voir aussi
+
+- {{cssxref("list-style")}},
+- {{cssxref("list-style-image")}},
+- {{cssxref("list-style-position")}},
+- {{cssxref("symbols()", "symbols()")}}, la notation fonctionnelle utilisée pour créer des styles de compteur anonymes.

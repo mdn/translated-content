@@ -7,11 +7,12 @@ tags:
   - Reference
 translation_of: Web/CSS/text-underline-position
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>text-underline-position</code></strong> définit la position du soulignement utilisé lorsque la propriété {{cssxref("text-decoration")}} prend la valeur <code>underline</code>.</p>
+La propriété **`text-underline-position`** définit la position du soulignement utilisé lorsque la propriété {{cssxref("text-decoration")}} prend la valeur `underline`.
 
-<pre class="brush:css  no-line-numbers">/* Avec un mot-clé */
+```css
+/* Avec un mot-clé */
 text-underline-position: auto;
 text-underline-position: under;
 text-underline-position: left;
@@ -25,58 +26,59 @@ text-underline-position: right under;
 text-underline-position: inherit;
 text-underline-position: initial;
 text-underline-position: unset;
-</pre>
+```
 
-<p>Cette propriété est héritée sur les différents éléments et n'est pas réinitialisée avec la propriété raccourcie {{cssxref("text-decoration")}}, ce qui permet de la définir simplement pour l'ensemble du document.</p>
+Cette propriété est héritée sur les différents éléments et n'est pas réinitialisée avec la propriété raccourcie {{cssxref("text-decoration")}}, ce qui permet de la définir simplement pour l'ensemble du document.
 
-<pre class="brush: css">:root {
+```css
+:root {
   /* Une meilleure règle par défaut pour un document */
   /* avec de nombreuses formules chimiques */
   text-underline-position: under;
 }
-</pre>
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Ce mot-clé permet à l'agent utilisateur d'utiliser un algorithme pour choisir entre <code>under</code> et <code>alphabetic</code>.</dd>
- <dt><code>under</code></dt>
- <dd>Ce mot-clé force la ligne à se situer sous la ligne de base, à une position où elle ne traversera pas de <a href="https://fr.wikipedia.org/wiki/Jambage">jambage</a>. Cela est notamment utile lorsqu'on veut souligner de façon lisible des formules chimiques ou mathématiques (qui utilisent fréquemment des indices).</dd>
- <dt><code>left</code></dt>
- <dd>In vertical writing-modes, this keyword forces the line to be placed on the <em>left</em> of the characters. In horizontal writing-modes, it is a synonym of <code>under.</code></dd>
- <dt><code>right</code></dt>
- <dd>Pour les modes d'écritures verticaux, ce mot-clé force la ligne à être placée à droite des caractères. Pour les modes d'écritures horizontaux, ce mot-clé est synonyme de <code>under.</code></dd>
- <dt><code>auto-pos</code>{{non-standard_inline}}</dt>
- <dd>Ce mot-clé est synonyme de <code>auto</code> et c'est ce dernier qui doit être utilisé à la place.</dd>
- <dt><code>above</code>{{non-standard_inline}}</dt>
- <dd>Ce mot-clé force la ligne à être dessinée au dessus du texte. Lorsqu'on écrit avec un script d'Asie orientale, la valeur <code>auto</code> aura un effet semblable.</dd>
- <dt><code>below</code>{{non-standard_inline}}</dt>
- <dd>Ce mot-clé force la ligne à être dessinée sous le texte. Lorsqu'on utilise un texte alphabétique, la valeur <code>auto</code> aura un effet semblable.</dd>
-</dl>
+- `auto`
+  - : Ce mot-clé permet à l'agent utilisateur d'utiliser un algorithme pour choisir entre `under` et `alphabetic`.
+- `under`
+  - : Ce mot-clé force la ligne à se situer sous la ligne de base, à une position où elle ne traversera pas de [jambage](https://fr.wikipedia.org/wiki/Jambage). Cela est notamment utile lorsqu'on veut souligner de façon lisible des formules chimiques ou mathématiques (qui utilisent fréquemment des indices).
+- `left`
+  - : In vertical writing-modes, this keyword forces the line to be placed on the _left_ of the characters. In horizontal writing-modes, it is a synonym of `under.`
+- `right`
+  - : Pour les modes d'écritures verticaux, ce mot-clé force la ligne à être placée à droite des caractères. Pour les modes d'écritures horizontaux, ce mot-clé est synonyme de `under.`
+- `auto-pos`{{non-standard_inline}}
+  - : Ce mot-clé est synonyme de `auto` et c'est ce dernier qui doit être utilisé à la place.
+- `above`{{non-standard_inline}}
+  - : Ce mot-clé force la ligne à être dessinée au dessus du texte. Lorsqu'on écrit avec un script d'Asie orientale, la valeur `auto` aura un effet semblable.
+- `below`{{non-standard_inline}}
+  - : Ce mot-clé force la ligne à être dessinée sous le texte. Lorsqu'on utilise un texte alphabétique, la valeur `auto` aura un effet semblable.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="chimique"&gt;
-  C&lt;sub&gt;6&lt;/sub&gt;H&lt;sub&gt;12&lt;/sub&gt;O&lt;sub&gt;6&lt;/sub&gt;
-&lt;/p&gt;
-&lt;p class="defaut"&gt;
-  Et là avec des &lt;sub&gt;indices&lt;/sub&gt;
+```html
+<p class="chimique">
+  C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>
+</p>
+<p class="defaut">
+  Et là avec des <sub>indices</sub>
   et du jambage
-&lt;/p&gt;
-</pre>
+</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.chimique {
+```css
+.chimique {
   text-decoration: underline;
   text-underline-position: under;
 }
@@ -84,43 +86,29 @@ text-underline-position: unset;
 .defaut {
   text-decoration: underline;
   text-underline-position: auto;
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples","100%","100%")}}</p>
+{{EmbedLiveSample("Exemples","100%","100%")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Text Decoration', '#text-underline-position-property', 'text-underline-position')}}</td>
-   <td>{{Spec2('CSS3 Text Decoration')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                        | Statut                                       | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------- |
+| {{SpecName('CSS3 Text Decoration', '#text-underline-position-property', 'text-underline-position')}} | {{Spec2('CSS3 Text Decoration')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.text-underline-position")}}</p>
+{{Compat("css.properties.text-underline-position")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("text-decoration")}}</li>
- <li>{{cssxref("text-decoration-line")}}</li>
- <li>{{cssxref("text-decoration-style")}}</li>
- <li>{{cssxref("text-decoration-color")}}</li>
- <li><a href="https://msdn.microsoft.com/en-us/library/ie/ms531176%28v=vs.85%29.aspx">La documentation sur les valeurs non-standard utilisées par Microsoft</a></li>
-</ul>
+- {{cssxref("text-decoration")}}
+- {{cssxref("text-decoration-line")}}
+- {{cssxref("text-decoration-style")}}
+- {{cssxref("text-decoration-color")}}
+- [La documentation sur les valeurs non-standard utilisées par Microsoft](https://msdn.microsoft.com/en-us/library/ie/ms531176%28v=vs.85%29.aspx)

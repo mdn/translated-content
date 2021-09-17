@@ -7,28 +7,29 @@ tags:
   - Reference
 translation_of: Web/CSS/flex-flow
 ---
-<div>{{ CSSRef}}</div>
+{{ CSSRef}}
 
-<p>La propriété CSS <strong><code>flex-flow</code></strong> est une <a href="/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies">propriété raccourcie</a> pour les propriétés {{cssxref("flex-direction")}} et {{cssxref("flex-wrap")}}.</p>
+La propriété CSS **`flex-flow`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) pour les propriétés {{cssxref("flex-direction")}} et {{cssxref("flex-wrap")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/flex-flow.html")}}</div>
+{{EmbedInteractiveExample("pages/css/flex-flow.html")}}
 
-<p>Pour plus d'informations, voir la page <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Utiliser les boîtes flexibles (<em>flexbox</em>) CSS</a>.</p>
+Pour plus d'informations, voir la page [Utiliser les boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* flex-flow: &lt;'flex-direction'&gt; */
+```css
+/* flex-flow: <'flex-direction'> */
 flex-flow: row;
 flex-flow: row-reverse;
 flex-flow: column;
 flex-flow: column-reverse;
 
-/* flex-flow: &lt;'flex-wrap'&gt; */
+/* flex-flow: <'flex-wrap'> */
 flex-flow: nowrap;
 flex-flow: wrap;
 flex-flow: wrap-reverse;
 
-/* flex-flow: &lt;'flex-direction'&gt; et &lt;'flex-wrap'&gt; */
+/* flex-flow: <'flex-direction'> et <'flex-wrap'> */
 flex-flow: row nowrap;
 flex-flow: column wrap;
 flex-flow: column-reverse wrap-reverse;
@@ -37,19 +38,20 @@ flex-flow: column-reverse wrap-reverse;
 flex-flow: inherit;
 flex-flow: initial;
 flex-flow: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<p>Voir {{cssxref("flex-direction")}} et {{cssxref("flex-wrap")}} pour plus d'informations sur les valeurs que peuvent prendre ces deux propriétés.</p>
+Voir {{cssxref("flex-direction")}} et {{cssxref("flex-wrap")}} pour plus d'informations sur les valeurs que peuvent prendre ces deux propriétés.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush:css">element {
+```css
+element {
 
   /* L'axe principal sera la direction de bloc  */
   /* et on commencera par le bas (main-start et */
@@ -59,36 +61,21 @@ flex-flow: unset;
   flex-flow: column-reverse wrap;
 
 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Flexbox','#flex-flow-property','flex-flow')}}</td>
-   <td>{{Spec2('CSS3 Flexbox')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                             | Commentaires         |
+| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName('CSS3 Flexbox','#flex-flow-property','flex-flow')}} | {{Spec2('CSS3 Flexbox')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.flex-flow")}}</p>
+{{Compat("css.properties.flex-flow")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Guide sur les boîtes flexibles : <em><a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Les concepts de bases</a></em></li>
- <li>Guide sur les boîtes flexibles : <em><a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items">Ordonner les éléments flexibles</a></em></li>
-</ul>
+- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- Guide sur les boîtes flexibles : _[Ordonner les éléments flexibles](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_

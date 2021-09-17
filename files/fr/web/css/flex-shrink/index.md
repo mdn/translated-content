@@ -7,20 +7,21 @@ tags:
   - Reference
 translation_of: Web/CSS/flex-shrink
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>flex-shrink</code></strong> définit le facteur de rétrécissement d'un élément flexible. Si la taille de l'ensemble des éléments flexibles est supérieure à la taille du conteneur, les éléments seront comprimés selon leur facteur <code>flex-shrink</code>.</p>
+La propriété **`flex-shrink`** définit le facteur de rétrécissement d'un élément flexible. Si la taille de l'ensemble des éléments flexibles est supérieure à la taille du conteneur, les éléments seront comprimés selon leur facteur `flex-shrink`.
 
-<p><code>flex-shrink</code> est généralement utilisé avec les propriétés {{cssxref("flex-grow")}} et {{cssxref("flex-basis")}}. Elle est souvent définie grâce à la propriété raccourcie {{cssxref("flex")}}.</p>
+`flex-shrink` est généralement utilisé avec les propriétés {{cssxref("flex-grow")}} et {{cssxref("flex-basis")}}. Elle est souvent définie grâce à la propriété raccourcie {{cssxref("flex")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/flex-shrink.html")}}</div>
+{{EmbedInteractiveExample("pages/css/flex-shrink.html")}}
 
-<p>Pour plus d'informations, voir la page <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Utilisation_des_flexbox_en_CSS">Utiliser les boîtes flexibles (<em>flexbox</em>) CSS</a>.</p>
+Pour plus d'informations, voir la page [Utiliser les boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Utilisation_des_flexbox_en_CSS).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs numériques */
-/* Type &lt;number&gt;      */
+```css
+/* Valeurs numériques */
+/* Type <number>      */
 flex-shrink: 2;
 flex-shrink: 0.6;
 
@@ -28,38 +29,38 @@ flex-shrink: 0.6;
 flex-shrink: inherit;
 flex-shrink: initial;
 flex-shrink: unset;
-</pre>
+```
 
-<p>La propriété <code>flex-shrink</code> est définie grâce à une valeur de type <code><a href="#number">&lt;number&gt;</a></code>.</p>
+La propriété `flex-shrink` est définie grâce à une valeur de type [`<number>`](#number).
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;number&gt;</code></dt>
- <dd>Un nombre (type {{cssxref("&lt;number&gt;")}}) qui correspond au facteur de rétrécissement utilisé. Plus la valeur est élevée, plus l'élément sera compressé si nécessaire. Les valeurs négatives sont invalides. La valeur par défaut est <code>1</code>.</dd>
-</dl>
+- `<number>`
+  - : Un nombre (type {{cssxref("&lt;number&gt;")}}) qui correspond au facteur de rétrécissement utilisé. Plus la valeur est élevée, plus l'élément sera compressé si nécessaire. Les valeurs négatives sont invalides. La valeur par défaut est `1`.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;A,B,C ont flex-shrink: 1. D et E ont flex-shrink: 2.&lt;/p&gt;
-&lt;div id="content"&gt;
-  &lt;div class="box" style="background-color:red;"&gt;A&lt;/div&gt;
-  &lt;div class="box" style="background-color:lightblue;"&gt;B&lt;/div&gt;
-  &lt;div class="box" style="background-color:yellow;"&gt;C&lt;/div&gt;
-  &lt;div class="box1" style="background-color:brown;"&gt;D&lt;/div&gt;
-  &lt;div class="box1" style="background-color:lightgreen;"&gt;E&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<p>A,B,C ont flex-shrink: 1. D et E ont flex-shrink: 2.</p>
+<div id="content">
+  <div class="box" style="background-color:red;">A</div>
+  <div class="box" style="background-color:lightblue;">B</div>
+  <div class="box" style="background-color:yellow;">C</div>
+  <div class="box1" style="background-color:brown;">D</div>
+  <div class="box1" style="background-color:lightgreen;">E</div>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#content {
+```css
+#content {
   display: flex;
   width: 500px;
 }
@@ -76,40 +77,25 @@ flex-shrink: unset;
 .box1 {
   flex-shrink: 2;
 }
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', 500, 300)}}</p>
+{{EmbedLiveSample('Exemples', 500, 300)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Flexbox', '#flex-shrink', 'flex-shrink')}}</td>
-   <td>{{Spec2('CSS3 Flexbox')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | État                             | Commentaires         |
+| -------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('CSS3 Flexbox', '#flex-shrink', 'flex-shrink')}} | {{Spec2('CSS3 Flexbox')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.flex-shrink")}}</p>
+{{Compat("css.properties.flex-shrink")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Guide sur les boîtes flexibles : <em><a href="/fr/docs/Web/CSS/Disposition_flexbox_CSS/Concepts_de_base_flexbox">Les concepts de bases</a></em></li>
- <li>Guide sur les boîtes flexibles : <em><a href="/fr/docs/Web/CSS/Disposition_flexbox_CSS/Contrôler_les_proportions_des_boîtes_flexibles_le_long_de_l_axe_principal">Contrôler les proportions des boîtes flexibles le long de l'axe principal</a></em></li>
-</ul>
+- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Concepts_de_base_flexbox)_
+- Guide sur les boîtes flexibles : _[Contrôler les proportions des boîtes flexibles le long de l'axe principal](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Contrôler_les_proportions_des_boîtes_flexibles_le_long_de_l_axe_principal)_

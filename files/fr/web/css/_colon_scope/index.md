@@ -1,82 +1,73 @@
 ---
 title: ':scope'
-slug: 'Web/CSS/:scope'
+slug: Web/CSS/:scope
 tags:
   - CSS
   - Experimental
   - Pseudo-classe
   - Reference
-translation_of: 'Web/CSS/:scope'
+translation_of: Web/CSS/:scope
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <strong><code>:scope</code></strong> correspond aux éléments qui sont un point de référence pour faire correspondre les sélecteurs.</p>
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:scope`** correspond aux éléments qui sont un point de référence pour faire correspondre les sélecteurs.
 
-<pre class="brush: css">/* Sélectionne un élément dans la portée */
+```css
+/* Sélectionne un élément dans la portée */
 :scope {
   background-color: lime;
-}</pre>
+}
+```
 
-<p>À l'heure actuelle, lorsqu'elle est utilisée dans une feuille de style, <code>:scope</code> est identique à {{cssxref(":root")}} car il n'existe pas de moyen pour identifier un élément dont la portée est restreinte. Lorsqu'elle est utilisée à travers des méthodes telles que {{domxref("Element.querySelector", "querySelector()")}}, {{domxref("Element.querySelectorAll", "querySelectorAll()")}}, {{domxref("Element.matches", "matches()")}} ou {{domxref("Element.closest()")}}, <code>:scope</code> correspond à l'élément sur lequel la méthode est appelée.</p>
+À l'heure actuelle, lorsqu'elle est utilisée dans une feuille de style, `:scope` est identique à {{cssxref(":root")}} car il n'existe pas de moyen pour identifier un élément dont la portée est restreinte. Lorsqu'elle est utilisée à travers des méthodes telles que {{domxref("Element.querySelector", "querySelector()")}}, {{domxref("Element.querySelectorAll", "querySelectorAll()")}}, {{domxref("Element.matches", "matches()")}} ou {{domxref("Element.closest()")}}, `:scope` correspond à l'élément sur lequel la méthode est appelée.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans cet exemple, on voit comment utiliser <code>:scope</code> via la méthode {{domxref("Element.matches()")}}.</p>
+Dans cet exemple, on voit comment utiliser `:scope` via la méthode {{domxref("Element.matches()")}}.
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">let paragraphe = document.getElementById("para");
+```js
+let paragraphe = document.getElementById("para");
 let output = document.getElementById("output");
 
 if (paragraphe.matches(":scope")) {
   output.innerText = "Oui l'élément est dans sa propre portée, comme attendu !";
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p id="para"&gt;
+```html
+<p id="para">
   Voici un paragraphe, pas vraiment intéressant mais bon.
-&lt;/p&gt;
-&lt;p id="output"&gt;&lt;/p&gt;</pre>
+</p>
+<p id="output"></p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<div>{{EmbedLiveSample('Exemples')}}</div>
+{{EmbedLiveSample('Exemples')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#the-scope-pseudo', ':scope')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | État                                 | Commentaires         |
+| -------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName('CSS4 Selectors', '#the-scope-pseudo', ':scope')}} | {{Spec2('CSS4 Selectors')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.scope")}}</p>
+{{Compat("css.selectors.scope")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>La <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> {{cssxref(":root")}}</li>
- <li><a href="/fr/docs/Web/API/Document_Object_Model/Localisation_des_éléments_DOM_avec_les_sélecteurs">Localiser des éléments du DOM grâce aux sélecteurs</a></li>
- <li>{{domxref("Element.querySelector()")}} et {{domxref("Element.querySelectorAll()")}}</li>
- <li>{{domxref("Document.querySelector()")}} et {{domxref("Document.querySelectorAll()")}}</li>
- <li>{{domxref("DocumentFragment.querySelector()")}} et {{domxref("DocumentFragment.querySelectorAll()")}}</li>
- <li>{{domxref("ParentNode.querySelector()")}} et {{domxref("ParentNode.querySelectorAll()")}}</li>
-</ul>
+- La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) {{cssxref(":root")}}
+- [Localiser des éléments du DOM grâce aux sélecteurs](/fr/docs/Web/API/Document_Object_Model/Localisation_des_éléments_DOM_avec_les_sélecteurs)
+- {{domxref("Element.querySelector()")}} et {{domxref("Element.querySelectorAll()")}}
+- {{domxref("Document.querySelector()")}} et {{domxref("Document.querySelectorAll()")}}
+- {{domxref("DocumentFragment.querySelector()")}} et {{domxref("DocumentFragment.querySelectorAll()")}}
+- {{domxref("ParentNode.querySelector()")}} et {{domxref("ParentNode.querySelectorAll()")}}

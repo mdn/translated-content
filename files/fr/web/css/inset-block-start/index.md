@@ -9,22 +9,21 @@ tags:
 translation_of: Web/CSS/inset-block-start
 original_slug: inset-block-start
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propriété <strong><code>inset-block-start</code></strong> définit le début du décalage logique en bloc (<em>block</em>) d'un élément, selon le mode d'écriture, la directionnalité et l'orientation. Elle correspond à une des propriétés parmi {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} ou  {{cssxref("left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.</p>
+La propriété **`inset-block-start`** définit le début du décalage logique en bloc (_block_) d'un élément, selon le mode d'écriture, la directionnalité et l'orientation. Elle correspond à une des propriétés parmi {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}} ou  {{cssxref("left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
 
-<div class="note">
-<p><strong>Note :</strong> Avant Firefox 63, cette propriété était implémentée avec le nom <code>offset-block-start</code>. Firefox 63 a mis à jour son implémentation afin de suivre les modifications apportées à la spécification.</p>
-</div>
+> **Note :** Avant Firefox 63, cette propriété était implémentée avec le nom `offset-block-start`. Firefox 63 a mis à jour son implémentation afin de suivre les modifications apportées à la spécification.
 
-<pre class="brush:css no-line-numbers">/* Valeurs de longueur */
-/* Type &lt;length&gt;       */
+```css
+/* Valeurs de longueur */
+/* Type <length>       */
 inset-block-start: 3px;
 inset-block-start: 2.4em;
 
 /* Valeurs relatives à la largeur */
 /* du bloc englobant              */
-/* Type &lt;percentage&gt;              */
+/* Type <percentage>              */
 inset-block-start: 10%;
 
 /* Valeurs avec un mot-clé */
@@ -34,30 +33,32 @@ inset-block-start: auto;
 inset-block-start: inherit;
 inset-block-start: initial;
 inset-block-start: unset;
-</pre>
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<p>La propriété <code>inset-block-start</code> peut prendre les mêmes valeurs que la propriété {{cssxref("left")}}.</p>
+La propriété `inset-block-start` peut prendre les mêmes valeurs que la propriété {{cssxref("left")}}.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exemple"&gt;Texte pour l'exemple&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exemple">Texte pour l'exemple</p>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -68,56 +69,40 @@ inset-block-start: unset;
   position: relative;
   inset-block-start: 20px;
   background-color: #c8c800;
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", 140, 140)}}</p>
+{{EmbedLiveSample("Exemples", 140, 140)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-inset-block-start", "inset-block-start")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | État                                             | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------------------- |
+| {{SpecName("CSS Logical Properties", "#propdef-inset-block-start", "inset-block-start")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.inset-block-start")}}</p>
+{{Compat("css.properties.inset-block-start")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Les propriétés physiques correspondantes :
-  <ul>
-   <li>{{cssxref("top")}}</li>
-   <li>{{cssxref("right")}}</li>
-   <li>{{cssxref("bottom")}}</li>
-   <li>{{cssxref("left")}}</li>
-  </ul>
- </li>
- <li>Les propriétés qui définissent les autres décalages logiques
-  <ul>
-   <li>{{cssxref("inset-block-end")}}</li>
-   <li>{{cssxref("offset-inline-end")}}</li>
-   <li>{{cssxref("offset-inline-start")}}</li>
-  </ul>
- </li>
- <li>{{cssxref("writing-mode")}}</li>
- <li>{{cssxref("direction")}}</li>
- <li>{{cssxref("text-orientation")}}</li>
-</ul>
+- Les propriétés physiques correspondantes :
+
+  - {{cssxref("top")}}
+  - {{cssxref("right")}}
+  - {{cssxref("bottom")}}
+  - {{cssxref("left")}}
+
+- Les propriétés qui définissent les autres décalages logiques
+
+  - {{cssxref("inset-block-end")}}
+  - {{cssxref("offset-inline-end")}}
+  - {{cssxref("offset-inline-start")}}
+
+- {{cssxref("writing-mode")}}
+- {{cssxref("direction")}}
+- {{cssxref("text-orientation")}}

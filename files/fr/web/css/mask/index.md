@@ -8,21 +8,20 @@ tags:
   - SVG
 translation_of: Web/CSS/mask
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>mask</code></strong> permet de masquer un élément partiellement ou complètement en utilisant un masque apposé sur l'image ou en rognant l'image aux positions données. Cette propriété est une propriété raccourcie pour les propriétés {{cssxref("mask-image")}}, {{cssxref("mask-mode")}}, {{cssxref("mask-repeat")}}, {{cssxref("mask-position")}}, {{cssxref("mask-clip")}}, {{cssxref("mask-origin")}}, {{cssxref("mask-size")}} et {{cssxref("mask-composite ")}}.</p>
+La propriété **`mask`** permet de masquer un élément partiellement ou complètement en utilisant un masque apposé sur l'image ou en rognant l'image aux positions données. Cette propriété est une propriété raccourcie pour les propriétés {{cssxref("mask-image")}}, {{cssxref("mask-mode")}}, {{cssxref("mask-repeat")}}, {{cssxref("mask-position")}}, {{cssxref("mask-clip")}}, {{cssxref("mask-origin")}}, {{cssxref("mask-size")}} et {{cssxref("mask-composite ")}}.
 
-<div class="note">
-<p><strong>Note :</strong> La propriété raccourcie réinitialise également {{cssxref("mask-border")}} avec sa valeur initiale. Il est donc recommandé d'utiliser la propriété raccourcie à travers les feuilles de style plutôt que les propriétés raccourcies (sauf en cas d'héritage complexe).</p>
-</div>
+> **Note :** La propriété raccourcie réinitialise également {{cssxref("mask-border")}} avec sa valeur initiale. Il est donc recommandé d'utiliser la propriété raccourcie à travers les feuilles de style plutôt que les propriétés raccourcies (sauf en cas d'héritage complexe).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 mask: none;
 
 /* Valeurs d'image */
-/* Type &lt;image&gt;    */
+/* Type <image>    */
 mask: url(mask.png);                       /* Image matricielle utilisée comme masque */
 mask: url(masks.svg#star);                 /* Élément d'un SVG utilisé comme masque */
 
@@ -38,87 +37,69 @@ mask: url(masks.svg#star) exclude;         /* Élément d'un SVG utilisé comme 
 mask: inherit;
 mask: initial;
 mask: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;mask-reference&gt;</code></dt>
- <dd>Cette valeur permet de définir l'image source pour le masque. Voir {{cssxref("mask-image")}}.</dd>
- <dt><code>&lt;masking-mode&gt;</code></dt>
- <dd>Cette valeur définit le mode du masque. Voir {{cssxref("mask-mode")}}.</dd>
- <dt><code>&lt;position&gt;</code></dt>
- <dd>Cette valeur définit la position de l'image du masque. Voir {{cssxref("mask-position")}}.</dd>
- <dt><code>&lt;bg-size&gt;</code></dt>
- <dd>Cette valeur définit la taille de l'image du masque. Voir {{cssxref("mask-size")}}.</dd>
- <dt><code>&lt;repeat-style&gt;</code></dt>
- <dd>Cette valeur définit le mode de répétition de l'image du masque. Voir {{cssxref("mask-repeat")}}.</dd>
- <dt><code>&lt;geometry-box&gt;</code></dt>
- <dd>Si une seule valeur <code>&lt;geometry-box&gt;</code> est fournie, elle définira les valeurs de {{cssxref("mask-origin")}} et {{cssxref("mask-clip")}}. Si deux valeurs sont fournies, la première sera utilisée pour définir {{cssxref("mask-origin")}} et la deuxième pour définir {{cssxref("mask-clip")}}.</dd>
- <dt><code>&lt;geometry-box&gt; | no-clip</code></dt>
- <dd>Cette valeur définit la zone qui est impactée par l'image du masque. Voir {{cssxref("mask-clip")}}.</dd>
- <dt><code>&lt;compositing-operator&gt;</code></dt>
- <dd>Cette valeur définit l'opération de composition qui est utilisée par rapport à la couche de masque actuelle. Voir {{cssxref("mask-composite")}}.</dd>
-</dl>
+- `<mask-reference>`
+  - : Cette valeur permet de définir l'image source pour le masque. Voir {{cssxref("mask-image")}}.
+- `<masking-mode>`
+  - : Cette valeur définit le mode du masque. Voir {{cssxref("mask-mode")}}.
+- `<position>`
+  - : Cette valeur définit la position de l'image du masque. Voir {{cssxref("mask-position")}}.
+- `<bg-size>`
+  - : Cette valeur définit la taille de l'image du masque. Voir {{cssxref("mask-size")}}.
+- `<repeat-style>`
+  - : Cette valeur définit le mode de répétition de l'image du masque. Voir {{cssxref("mask-repeat")}}.
+- `<geometry-box>`
+  - : Si une seule valeur `<geometry-box>` est fournie, elle définira les valeurs de {{cssxref("mask-origin")}} et {{cssxref("mask-clip")}}. Si deux valeurs sont fournies, la première sera utilisée pour définir {{cssxref("mask-origin")}} et la deuxième pour définir {{cssxref("mask-clip")}}.
+- `<geometry-box> | no-clip`
+  - : Cette valeur définit la zone qui est impactée par l'image du masque. Voir {{cssxref("mask-clip")}}.
+- `<compositing-operator>`
+  - : Cette valeur définit l'opération de composition qui est utilisée par rapport à la couche de masque actuelle. Voir {{cssxref("mask-composite")}}.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
-<p>{{csssyntax}}</p>
+### Syntaxe formelle
 
-<h2 id="Exemples">Exemples</h2>
+{{csssyntax}}
 
-<h3 id="HTML">HTML</h3>
+## Exemples
 
-<pre class="brush: html">&lt;p class="exemple"&gt;Il y avait une table servie sous un arbre devant
+### HTML
+
+```html
+<p class="exemple">Il y avait une table servie sous un arbre devant
  la maison, et le Lièvre y prenait le thé avec le Chapelier. Un Loir
  profondément endormi était assis entre les deux autres qui s’en
  servaient comme d’un coussin, le coude appuyé sur lui et causant
- par-dessus sa tête.&lt;/p&gt;
-</pre>
+ par-dessus sa tête.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.exemple{
+```css
+.exemple{
   mask:url(https://developer.mozilla.org/static/img/favicon72.png) luminance 20%;
 }
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Masks", "#the-mask", 'mask')}}</td>
-   <td>{{Spec2("CSS Masks")}}</td>
-   <td>Extension aux éléments HTML. La syntaxe est étendue et la propriété devient une propriété raccourcie pour les nouvelles propriétés <code>mask-*</code> définies avec cette spécification.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'masking.html#MaskProperty', 'mask')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | État                         | Commentaires                                                                                                                                                                   |
+| -------------------------------------------------------------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| {{SpecName("CSS Masks", "#the-mask", 'mask')}}                     | {{Spec2("CSS Masks")}} | Extension aux éléments HTML. La syntaxe est étendue et la propriété devient une propriété raccourcie pour les nouvelles propriétés `mask-*` définies avec cette spécification. |
+| {{SpecName('SVG1.1', 'masking.html#MaskProperty', 'mask')}} | {{Spec2('SVG1.1')}}     | Définition initiale.                                                                                                                                                           |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.mask")}}</p>
+{{Compat("css.properties.mask")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("clip-path")}}, {{cssxref("filter")}}</li>
- <li><a href="https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/">Les formes CSS : "clipping" et "masking" – comment les utiliser (en anglais)</a></li>
- <li><a href="/fr/docs/Applying_SVG_effects_to_HTML_content">Appliquer des effets SVG à du contenu HTML</a></li>
- <li><a href="/fr/docs/Web/SVG">SVG</a></li>
-</ul>
+- {{cssxref("clip-path")}}, {{cssxref("filter")}}
+- [Les formes CSS : "clipping" et "masking" – comment les utiliser (en anglais)](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)
+- [Appliquer des effets SVG à du contenu HTML](/fr/docs/Applying_SVG_effects_to_HTML_content)
+- [SVG](/fr/docs/Web/SVG)

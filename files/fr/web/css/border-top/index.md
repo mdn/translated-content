@@ -7,116 +7,95 @@ tags:
   - Reference
 translation_of: Web/CSS/border-top
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété CSS <strong><code>border-top</code></strong> est une <a href="/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies">propriété raccourcie</a> qui permet de paramétrer la bordure haute d'un élément.</p>
+La propriété CSS **`border-top`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) qui permet de paramétrer la bordure haute d'un élément.
 
-<p>C'est une propriété raccourcie qui permet de définir les valeurs de :</p>
+C'est une propriété raccourcie qui permet de définir les valeurs de :
 
-<ul>
- <li>{{cssxref("border-top-width")}},</li>
- <li>{{cssxref("border-top-style")}},</li>
- <li>{{cssxref("border-top-color")}}.</li>
-</ul>
+- {{cssxref("border-top-width")}},
+- {{cssxref("border-top-style")}},
+- {{cssxref("border-top-color")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/border-top.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-top.html")}}
 
-<div class="note">
-<p><strong>Note :</strong> Les trois valeurs de la propriété raccourcie peuvent être définies dans n'importe quel ordre et une ou deux d'entre elles peuvent être absentes.</p>
+> **Note :** Les trois valeurs de la propriété raccourcie peuvent être définies dans n'importe quel ordre et une ou deux d'entre elles peuvent être absentes.
+>
+> Comme pour les autres propriétés raccourcies, `border-top` définit toujours les valeurs de toutes les propriétés qu'elle peut définir, même si celles-ci ne sont pas indiquées. Pour les valeurs qui ne sont pas indiquées, on prendra les valeurs par défaut. Ainsi :
+>
+> ```css
+> border-top-style: dotted;
+> border-top: thick green;
+> ```
+>
+> est équivalent à :
+>
+> ```css
+> border-top-style: dotted;
+> border-top: none thick green;
+> ```
+>
+> et la valeur {{cssxref("border-top-style")}} fournie avant `border-top` est ignorée.
+>
+> La valeur par défaut de {{cssxref("border-top-style")}} étant `none`, si on ne définit pas le style de la bordure, on aura la valeur par défaut, c'est-à-dire qu'on aura aucune bordure.
 
-<p>Comme pour les autres propriétés raccourcies, <code>border-top</code> définit toujours les valeurs de toutes les propriétés qu'elle peut définir, même si celles-ci ne sont pas indiquées. Pour les valeurs qui ne sont pas indiquées, on prendra les valeurs par défaut. Ainsi :</p>
+## Syntaxe
 
-<pre class="brush:css">border-top-style: dotted;
-border-top: thick green;
-</pre>
-
-<p>est équivalent à :</p>
-
-<pre class="brush:css">border-top-style: dotted;
-border-top: none thick green;
-</pre>
-
-<p> et la valeur {{cssxref("border-top-style")}} fournie avant <code>border-top</code> est ignorée.</p>
-
-<p>La valeur par défaut de {{cssxref("border-top-style")}} étant <code>none</code>, si on ne définit pas le style de la bordure, on aura la valeur par défaut, c'est-à-dire qu'on aura aucune bordure.</p>
-</div>
-
-<h2 id="Syntaxe">Syntaxe</h2>
-
-<pre class="brush:css no-line-numbers">border-top: 1px;
+```css
+border-top: 1px;
 border-top: 2px dotted;
 border-top: medium dashed green;
-</pre>
+```
 
-<p>Les valeurs de la propriété raccourcie peuvent être fournies dans n'importe quel ordre et une voire deux valeurs peuvent être omises.</p>
+Les valeurs de la propriété raccourcie peuvent être fournies dans n'importe quel ordre et une voire deux valeurs peuvent être omises.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;br-width&gt; </code></dt>
- <dd>Voir {{cssxref("border-top-width")}}.</dd>
- <dt><code>&lt;br-style&gt; </code></dt>
- <dd>Voir {{cssxref("border-top-style")}}.</dd>
- <dt><code>&lt;color&gt; </code></dt>
- <dd>Voir {{cssxref("border-top-color")}}.</dd>
-</dl>
+- `<br-width> `
+  - : Voir {{cssxref("border-top-width")}}.
+- `<br-style> `
+  - : Voir {{cssxref("border-top-style")}}.
+- `<color> `
+  - : Voir {{cssxref("border-top-color")}}.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.exemple {
+```css
+.exemple {
   border-top: 3px dotted orange;
-} </pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="exemple"&gt;
+```html
+<p class="exemple">
   En passant elle prit sur un rayon un pot
   de confiture portant cette étiquette,
   « MARMELADE D’ORANGES. »
-&lt;/p&gt;
-</pre>
+</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples","200","150")}}</p>
+{{EmbedLiveSample("Exemples","200","150")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#border-top', 'border-top')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Pas de modification directe bien que la modification de valeurs pour {{cssxref("border-top-color")}} s'applique.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'box.html#propdef-border-top', 'border-top')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Aucune modification significative.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#border-top', 'border-top')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                                     | Commentaires                                                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS3 Backgrounds', '#border-top', 'border-top')}}         | {{Spec2('CSS3 Backgrounds')}} | Pas de modification directe bien que la modification de valeurs pour {{cssxref("border-top-color")}} s'applique. |
+| {{SpecName('CSS2.1', 'box.html#propdef-border-top', 'border-top')}} | {{Spec2('CSS2.1')}}                 | Aucune modification significative.                                                                                        |
+| {{SpecName('CSS1', '#border-top', 'border-top')}}                         | {{Spec2('CSS1')}}                 | Définition initiale.                                                                                                      |
 
-<div>{{cssinfo}}</div>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.border-top")}}</p>
+{{Compat("css.properties.border-top")}}

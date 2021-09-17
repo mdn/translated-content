@@ -8,21 +8,20 @@ tags:
   - Transformations CSS
 translation_of: Web/CSS/transform
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>transform</code></strong> modifie l'espace de coordonnées utilisé pour la mise en forme visuelle. Grâce à cette propriété, il est possible de translater les éléments, de les tourner, d'appliquer des homothéties, de les distordre pour en changer la perspective.</p>
+La propriété **`transform`** modifie l'espace de coordonnées utilisé pour la mise en forme visuelle. Grâce à cette propriété, il est possible de translater les éléments, de les tourner, d'appliquer des homothéties, de les distordre pour en changer la perspective.
 
-<div>{{EmbedInteractiveExample("pages/css/transform.html")}}</div>
+{{EmbedInteractiveExample("pages/css/transform.html")}}
 
-<p>Si la propriété est différente de <code>none</code>, un <a href="/fr/docs/Web/CSS/Comprendre_z-index/L'empilement_de_couches">contexte d'empilement</a> sera créé. Dans ce cas, l'élément agira comme le bloc englobant pour les éléments qu'il contient et qui ont <code>position</code><code>: fixed;</code> ou <code>position: absolute;</code>.</p>
+Si la propriété est différente de `none`, un [contexte d'empilement](/fr/docs/Web/CSS/Comprendre_z-index/L'empilement_de_couches) sera créé. Dans ce cas, l'élément agira comme le bloc englobant pour les éléments qu'il contient et qui ont ` position``: fixed; ` ou `position: absolute;`.
 
-<div class="warning">
-<p><strong>Attention :</strong> Seuls certains éléments peuvent être transformés. Les éléments dont la disposition est gérée avec des <a href="https://developer.mozilla.org/fr/docs/Web/CSS/Mod%C3%A8le_de_mise_en_forme_visuelle#Les_%C3%A9l%C3%A9ments_en_ligne_et_les_bo%C3%AEtes_en_ligne">boîtes en ligne non-remplacées</a>, des <a href="/fr/docs/Web/HTML/Element/col">colonnes de tableau</a> ou des <a href="/fr/docs/Web/HTML/Element/colgroup">groupes de colonnes de tableau</a> ne peuvent pas être transformés.</p>
-</div>
+> **Attention :** Seuls certains éléments peuvent être transformés. Les éléments dont la disposition est gérée avec des [boîtes en ligne non-remplacées](https://developer.mozilla.org/fr/docs/Web/CSS/Mod%C3%A8le_de_mise_en_forme_visuelle#Les_%C3%A9l%C3%A9ments_en_ligne_et_les_bo%C3%AEtes_en_ligne), des [colonnes de tableau](/fr/docs/Web/HTML/Element/col) ou des [groupes de colonnes de tableau](/fr/docs/Web/HTML/Element/colgroup) ne peuvent pas être transformés.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css no-line-numbers">/* Keyword values */
+```css
+/* Keyword values */
 transform: none;
 
 /* Valeurs fonctionnelles */
@@ -61,38 +60,37 @@ transform: perspective(500px) translate(10px, 0, 20px) rotateY(3deg);
 transform: inherit;
 transform: initial;
 transform: unset;
-</pre>
+```
 
-<p>La propriété <code>transform</code> peut être définie avec le mot-clé <code><a href="#none">none</a></code> ou une ou plusieurs valeurs de type <code><a href="#transform-function">&lt;transform-function&gt;</a></code>.</p>
+La propriété `transform` peut être définie avec le mot-clé [`none`](#none) ou une ou plusieurs valeurs de type [`<transform-function>`](#transform-function).
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt>{{cssxref("&lt;transform-function&gt;")}}</dt>
- <dd>Une ou plusieurs <a href="/fr/docs/Web/CSS/transform-function">fonctions de transformation CSS</a> à appliquer. Les transformations sont composées entre elles de gauche à droite, ce qui signifie que les transformations composées sont en pratique appliquées de droite à gauche.</dd>
- <dt><code>none</code></dt>
- <dd>Aucune transformation ne sera appliquée.</dd>
-</dl>
+- {{cssxref("&lt;transform-function&gt;")}}
+  - : Une ou plusieurs [fonctions de transformation CSS](/fr/docs/Web/CSS/transform-function) à appliquer. Les transformations sont composées entre elles de gauche à droite, ce qui signifie que les transformations composées sont en pratique appliquées de droite à gauche.
+- `none`
+  - : Aucune transformation ne sera appliquée.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<div class="note">
-<p><strong>Note :</strong> Si on utilise plusieurs fonctions dont <code><a href="/fr/docs/Web/CSS/transform-function/perspective()">perspective()</a></code>, celle-ci devra apparaître en premier.</p>
-</div>
+> **Note :** Si on utilise plusieurs fonctions dont [`perspective()`](</fr/docs/Web/CSS/transform-function/perspective()>), celle-ci devra apparaître en premier.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Voir la page sur <a href="/fr/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms">l'utilisation des transformations CSS</a>, {(cssxref("&lt;transform-function&gt;")}} ou l'exemple suivant.</p>
+Voir la page sur [l'utilisation des transformations CSS](/fr/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms), {(cssxref("\<transform-function>")}} ou l'exemple suivant.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;L'élément transformé&lt;/p&gt;</pre>
+```html
+<p>L'élément transformé</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   border: solid red;
 
   -webkit-transform: translate(100px) rotate(20deg);
@@ -100,57 +98,37 @@ transform: unset;
 
   transform: translate(100px) rotate(20deg);
   transform-origin: 0 -250px;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Exemples", "400", "170")}}</p>
+{{EmbedLiveSample("Exemples", "400", "170")}}
 
-<h2 id="Accessibilité">Accessibilité</h2>
+## Accessibilité
 
-<p>Les animations de déplacement ou de zoom peuvent poser des problèmes d'accessibilité en déclenchant certaines migraines. Si vous devez inclure des animations sur votre site web, vous devez fournir aux utilisateurs une méthode qui leur permette de réduire voire de désactiver les animations sur l'ensemble du site.</p>
+Les animations de déplacement ou de zoom peuvent poser des problèmes d'accessibilité en déclenchant certaines migraines. Si vous devez inclure des animations sur votre site web, vous devez fournir aux utilisateurs une méthode qui leur permette de réduire voire de désactiver les animations sur l'ensemble du site.
 
-<p>À cet égard, on pourra utiliser la caractéristique média <code><a href="/fr/docs/Web/CSS/@media/prefers-reduced-motion">prefers-reduced-motion</a></code> qui permet d'utiliser une requête média pour désactiver les animations si l'utilisateur a indiqué une telle préférence via son système / son navigateur.</p>
+À cet égard, on pourra utiliser la caractéristique média [`prefers-reduced-motion`](/fr/docs/Web/CSS/@media/prefers-reduced-motion) qui permet d'utiliser une requête média pour désactiver les animations si l'utilisateur a indiqué une telle préférence via son système / son navigateur.
 
-<p>Pour en savoir plus :</p>
+Pour en savoir plus :
 
-<ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.3_%E2%80%94_Seizures_and_Physical_Reactions_Do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions">MDN : Comprendre WCAG - Explications pour les lignes directrives 2.3</a></li>
- <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions">Comprendre les critères de succès 2.3.3 - W3C - Comprendre WCAG 2.1</a></li>
-</ul>
+- [MDN : Comprendre WCAG - Explications pour les lignes directrives 2.3](https://developer.mozilla.org/en-US/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.3_%E2%80%94_Seizures_and_Physical_Reactions_Do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
+- [Comprendre les critères de succès 2.3.3 - W3C - Comprendre WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Transforms', '#transform-property', 'transform')}}</td>
-   <td>{{Spec2('CSS3 Transforms')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS Transforms 2', '#transform-functions', 'transform')}}</td>
-   <td>{{Spec2('CSS Transforms 2')}}</td>
-   <td>Ajout des fonctions de transformation en 3D.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                                     | Commentaires                                 |
+| -------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------- |
+| {{SpecName('CSS3 Transforms', '#transform-property', 'transform')}}     | {{Spec2('CSS3 Transforms')}}     | Définition initiale.                         |
+| {{SpecName('CSS Transforms 2', '#transform-functions', 'transform')}} | {{Spec2('CSS Transforms 2')}} | Ajout des fonctions de transformation en 3D. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.transform")}}</p>
+{{Compat("css.properties.transform")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms">Utiliser les transformations CSS</a></li>
- <li>Le type de donnée {{cssxref("&lt;transform-function&gt;")}}</li>
- <li><a href="https://paulirish.com/2010/introducing-css3please/#comment-36380">Plus d'informations sur les rotations CSS3 et les filtres matriciels sur le blog de Paul Irish</a></li>
-</ul>
+- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- Le type de donnée {{cssxref("&lt;transform-function&gt;")}}
+- [Plus d'informations sur les rotations CSS3 et les filtres matriciels sur le blog de Paul Irish](https://paulirish.com/2010/introducing-css3please/#comment-36380)

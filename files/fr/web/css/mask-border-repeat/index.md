@@ -8,13 +8,14 @@ tags:
   - Reference
 translation_of: Web/CSS/mask-border-repeat
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propriété CSS <strong><code>mask-border-repeat</code></strong> indique la façon dont les régions du bord du <a href="/fr/docs/Web/CSS/mask-border">masque</a> sont ajustées pour correspondre aux dimensions de la bordure de l'élément.</p>
+La propriété CSS **`mask-border-repeat`** indique la façon dont les régions du bord du [masque](/fr/docs/Web/CSS/mask-border) sont ajustées pour correspondre aux dimensions de la bordure de l'élément.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 mask-border-repeat: stretch;
 mask-border-repeat: repeat;
 mask-border-repeat: round;
@@ -27,53 +28,36 @@ mask-border-repeat: round stretch;
 mask-border-repeat: inherit;
 mask-border-repeat: initial;
 mask-border-repeat: unset;
-</pre>
+```
 
-<p>La propriété <code>mask-border-repeat</code> peut être utilisée avec une ou deux valeurs parmi celles de la liste ci-après.</p>
+La propriété `mask-border-repeat` peut être utilisée avec une ou deux valeurs parmi celles de la liste ci-après.
 
-<ul>
- <li>Lorsqu'une seule valeur est fournie, le même comportement est utilisé pour les quatre côtés.</li>
- <li>Lorsque deux valeurs sont indiquées, la première valeur s'applique aux côtés haut et bas et la deuxième aux côtés gauche et droit.</li>
-</ul>
+- Lorsqu'une seule valeur est fournie, le même comportement est utilisé pour les quatre côtés.
+- Lorsque deux valeurs sont indiquées, la première valeur s'applique aux côtés haut et bas et la deuxième aux côtés gauche et droit.
 
-<h3 id="Values">Values</h3>
+### Values
 
-<dl>
- <dt><code>stretch</code></dt>
- <dd>Les bords de l'image source sont étirés afin de remplir l'espace entre chaque bordure.</dd>
- <dt><code>repeat</code></dt>
- <dd>Les bords de l'image source sont répétés afin de remplir l'espace entre chaque bordure. Les fragments répétés peuvent être rognés afin que le remplissage soit exact.</dd>
- <dt><code>round</code></dt>
- <dd>Les bords de l'image source sont répétés afin de remplir l'espace entre chaque bordure. Les fragments peuvent être étirés afin que le remplissage soit exact.</dd>
- <dt><code>space</code></dt>
- <dd>Les bords de l'image source sont répétés afin de remplir l'espace entre chaque bordure. L'espace supplémentaire est réparti entre les fragments répétés pour que le remplissage soit exact.</dd>
-</dl>
+- `stretch`
+  - : Les bords de l'image source sont étirés afin de remplir l'espace entre chaque bordure.
+- `repeat`
+  - : Les bords de l'image source sont répétés afin de remplir l'espace entre chaque bordure. Les fragments répétés peuvent être rognés afin que le remplissage soit exact.
+- `round`
+  - : Les bords de l'image source sont répétés afin de remplir l'espace entre chaque bordure. Les fragments peuvent être étirés afin que le remplissage soit exact.
+- `space`
+  - : Les bords de l'image source sont répétés afin de remplir l'espace entre chaque bordure. L'espace supplémentaire est réparti entre les fragments répétés pour que le remplissage soit exact.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Masks", "#propdef-mask-border-repeat", "mask-border-repeat")}}</td>
-   <td>{{Spec2("CSS Masks")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | État                         | Commentaires         |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName("CSS Masks", "#propdef-mask-border-repeat", "mask-border-repeat")}} | {{Spec2("CSS Masks")}} | Définition initiale. |
 
-<div>{{cssinfo}}</div>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>TBD</p>
+TBD

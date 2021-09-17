@@ -7,147 +7,150 @@ tags:
 translation_of: Web/CSS/CSS_Background_and_Borders/Border-image_generator
 original_slug: Web/CSS/CSS_Background_and_Borders/Border-image_generator
 ---
-<p>Cet outil peut être utilisé afin de générer des valeurs pour la propriété {{cssxref("border-image")}}.</p>
+Cet outil peut être utilisé afin de générer des valeurs pour la propriété {{cssxref("border-image")}}.
 
-<pre class="brush: html hidden">    &lt;div id="container"&gt;
+```html hidden
+    <div id="container">
 
-        &lt;div id="gallery"&gt;
-            &lt;div id="image-gallery"&gt;
-                &lt;img class="image" src="https://mdn.mozillademos.org/files/6007/border-image-1.png" data-stateID="border1"/&gt;
-                &lt;img class="image" src="https://mdn.mozillademos.org/files/6009/border-image-2.png" data-stateID="border2"/&gt;
-                &lt;img class="image" src="https://mdn.mozillademos.org/files/6011/border-image-3.png" data-stateID="border3"/&gt;
-                &lt;img class="image" src="https://mdn.mozillademos.org/files/6013/border-image-4.png" data-stateID="border4"/&gt;
-                &lt;img class="image" src="https://mdn.mozillademos.org/files/6015/border-image-5.png" data-stateID="border5"/&gt;
-                &lt;img class="image" src="https://mdn.mozillademos.org/files/6017/border-image-6.svg" data-stateID="border6"/&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
+        <div id="gallery">
+            <div id="image-gallery">
+                <img class="image" src="https://mdn.mozillademos.org/files/6007/border-image-1.png" data-stateID="border1"/>
+                <img class="image" src="https://mdn.mozillademos.org/files/6009/border-image-2.png" data-stateID="border2"/>
+                <img class="image" src="https://mdn.mozillademos.org/files/6011/border-image-3.png" data-stateID="border3"/>
+                <img class="image" src="https://mdn.mozillademos.org/files/6013/border-image-4.png" data-stateID="border4"/>
+                <img class="image" src="https://mdn.mozillademos.org/files/6015/border-image-5.png" data-stateID="border5"/>
+                <img class="image" src="https://mdn.mozillademos.org/files/6017/border-image-6.svg" data-stateID="border6"/>
+            </div>
+        </div>
 
-        &lt;div id="load-actions" class="group section"&gt;
-            &lt;div id="toggle-gallery" data-action="hide"&gt; &lt;/div&gt;
-            &lt;div id="load-image" class="button"&gt; Upload image &lt;/div&gt;
-            &lt;input id="remote-url" type="text" placeholder="Charger une image depuis une  URL"/&gt;
-            &lt;div id="load-remote" class="button"&gt; &lt;/div&gt;
-        &lt;/div&gt;
+        <div id="load-actions" class="group section">
+            <div id="toggle-gallery" data-action="hide"> </div>
+            <div id="load-image" class="button"> Upload image </div>
+            <input id="remote-url" type="text" placeholder="Charger une image depuis une  URL"/>
+            <div id="load-remote" class="button"> </div>
+        </div>
 
-        &lt;div id="general-controls" class="group section"&gt;
-            &lt;div class="name"&gt; Options &lt;/div&gt;
-            &lt;div class="separator"&gt;&lt;/div&gt;
-            &lt;div class="property"&gt;
-                &lt;div class="name"&gt;Échelle&lt;/div&gt;
-                &lt;div class="ui-input-slider" data-topic="scale"
-                    data-unit="%" data-max="300" data-sensivity="10"&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class="separator"&gt;&lt;/div&gt;
-            &lt;div class="property"&gt;
-                &lt;div class="name"&gt;Déplaçable&lt;/div&gt;
-                &lt;div class="ui-checkbox" data-topic='drag-subject'&gt;&lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class="property right"&gt;
-                &lt;div class="name"&gt;Hauteur de la section&lt;/div&gt;
-                &lt;div class="ui-input-slider" data-topic="preview-area-height"
-                    data-min="400" data-max="1000"&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
+        <div id="general-controls" class="group section">
+            <div class="name"> Options </div>
+            <div class="separator"></div>
+            <div class="property">
+                <div class="name">Échelle</div>
+                <div class="ui-input-slider" data-topic="scale"
+                    data-unit="%" data-max="300" data-sensivity="10">
+                </div>
+            </div>
+            <div class="separator"></div>
+            <div class="property">
+                <div class="name">Déplaçable</div>
+                <div class="ui-checkbox" data-topic='drag-subject'></div>
+            </div>
+            <div class="property right">
+                <div class="name">Hauteur de la section</div>
+                <div class="ui-input-slider" data-topic="preview-area-height"
+                    data-min="400" data-max="1000">
+                </div>
+            </div>
+        </div>
 
-        &lt;div id="preview_section" class="group section"&gt;
-            &lt;div id="subject"&gt;
-                &lt;div class="guideline" data-axis="Y" data-topic="slice-top"&gt;&lt;/div&gt;
-                &lt;div class="guideline" data-axis="X" data-topic="slice-right"&gt;&lt;/div&gt;
-                &lt;div class="guideline" data-axis="Y" data-topic="slice-bottom"&gt;&lt;/div&gt;
-                &lt;div class="guideline" data-axis="X" data-topic="slice-left"&gt;&lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div id="preview"&gt; &lt;/div&gt;
-        &lt;/div&gt;
+        <div id="preview_section" class="group section">
+            <div id="subject">
+                <div class="guideline" data-axis="Y" data-topic="slice-top"></div>
+                <div class="guideline" data-axis="X" data-topic="slice-right"></div>
+                <div class="guideline" data-axis="Y" data-topic="slice-bottom"></div>
+                <div class="guideline" data-axis="X" data-topic="slice-left"></div>
+            </div>
+            <div id="preview"> </div>
+        </div>
 
-        &lt;!-- controls --&gt;
-        &lt;div id="controls" class="group section"&gt;
+        <!-- controls -->
+        <div id="controls" class="group section">
 
-            &lt;!-- border-image-slice --&gt;
-            &lt;div id="border-slice-control" class="category"&gt;
-                &lt;div class="title"&gt; border-image-slice &lt;/div&gt;
-                &lt;div class="property"&gt;
-                    &lt;div class="name"&gt;fill&lt;/div&gt;
-                    &lt;div class="ui-checkbox" data-topic='slice-fill'&gt;&lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
+            <!-- border-image-slice -->
+            <div id="border-slice-control" class="category">
+                <div class="title"> border-image-slice </div>
+                <div class="property">
+                    <div class="name">fill</div>
+                    <div class="ui-checkbox" data-topic='slice-fill'></div>
+                </div>
+            </div>
 
-            &lt;!-- border-image-width --&gt;
-            &lt;div id="border-width-control" class="category"&gt;
-                &lt;div class="title"&gt; border-image-width &lt;/div&gt;
-            &lt;/div&gt;
+            <!-- border-image-width -->
+            <div id="border-width-control" class="category">
+                <div class="title"> border-image-width </div>
+            </div>
 
-            &lt;!-- border-image-outset --&gt;
-            &lt;div id="border-outset-control" class="category"&gt;
-                &lt;div class="title"&gt; border-image-outset &lt;/div&gt;
-            &lt;/div&gt;
+            <!-- border-image-outset -->
+            <div id="border-outset-control" class="category">
+                <div class="title"> border-image-outset </div>
+            </div>
 
-            &lt;!-- other-settings --&gt;
-            &lt;div id="aditional-properties" class="category"&gt;
-                &lt;div class="title"&gt; Autres propriétés &lt;/div&gt;
-                &lt;div class="property"&gt;
-                    &lt;div class="name"&gt; repeat-x &lt;/div&gt;
-                    &lt;div class="ui-dropdown border-repeat" data-topic="image-repeat-X" data-selected="2"&gt;
-                        &lt;div data-value="0"&gt;repeat&lt;/div&gt;
-                        &lt;div data-value="0"&gt;stretch&lt;/div&gt;
-                        &lt;div data-value="0"&gt;round&lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;div class="property"&gt;
-                    &lt;div class="name"&gt; repeat-y &lt;/div&gt;
-                    &lt;div class="ui-dropdown border-repeat" data-topic="image-repeat-Y" data-selected="2"&gt;
-                        &lt;div data-value="1"&gt;repeat&lt;/div&gt;
-                        &lt;div data-value="1"&gt;stretch&lt;/div&gt;
-                        &lt;div data-value="1"&gt;round&lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;div class="property"&gt;
-                    &lt;div class="ui-input-slider" data-topic="font-size" data-info="em size"
-                        data-unit="px" data-value="12" data-sensivity="3"&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
+            <!-- other-settings -->
+            <div id="aditional-properties" class="category">
+                <div class="title"> Autres propriétés </div>
+                <div class="property">
+                    <div class="name"> repeat-x </div>
+                    <div class="ui-dropdown border-repeat" data-topic="image-repeat-X" data-selected="2">
+                        <div data-value="0">repeat</div>
+                        <div data-value="0">stretch</div>
+                        <div data-value="0">round</div>
+                    </div>
+                </div>
+                <div class="property">
+                    <div class="name"> repeat-y </div>
+                    <div class="ui-dropdown border-repeat" data-topic="image-repeat-Y" data-selected="2">
+                        <div data-value="1">repeat</div>
+                        <div data-value="1">stretch</div>
+                        <div data-value="1">round</div>
+                    </div>
+                </div>
+                <div class="property">
+                    <div class="ui-input-slider" data-topic="font-size" data-info="em size"
+                        data-unit="px" data-value="12" data-sensivity="3">
+                    </div>
+                </div>
 
-                &lt;div class="property"&gt;
-                    &lt;div class="ui-input-slider" data-topic="preview-width" data-info="width"
-                         data-unit=" px" data-min="10" data-max="10000" data-sensivity="3"&gt;&lt;/div&gt;
-                &lt;/div&gt;
-                &lt;div class="property"&gt;
-                    &lt;div class="ui-input-slider" data-topic="preview-height" data-info="height"
-                        data-unit=" px" data-min="10" data-max="10000" data-sensivity="3"&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
+                <div class="property">
+                    <div class="ui-input-slider" data-topic="preview-width" data-info="width"
+                         data-unit=" px" data-min="10" data-max="10000" data-sensivity="3"></div>
+                </div>
+                <div class="property">
+                    <div class="ui-input-slider" data-topic="preview-height" data-info="height"
+                        data-unit=" px" data-min="10" data-max="10000" data-sensivity="3">
+                    </div>
+                </div>
+            </div>
 
 
-            &lt;div id="output" class="category"&gt;
-                &lt;div class="title"&gt; Code CSS &lt;/div&gt;
-                &lt;div class="css-property"&gt;
-                    &lt;span class="name"&gt; border-image-slice: &lt;/span&gt;
-                    &lt;span id="out-border-slice" class="value"&gt; &lt;/span&gt;
-                &lt;/div&gt;
-                &lt;div class="css-property"&gt;
-                    &lt;span class="name"&gt; border-image-width: &lt;/span&gt;
-                    &lt;span id="out-border-width" class="value"&gt; &lt;/span&gt;
-                &lt;/div&gt;
-                &lt;div class="css-property"&gt;
-                    &lt;span class="name"&gt; border-image-outset: &lt;/span&gt;
-                    &lt;span id="out-border-outset" class="value"&gt; &lt;/span&gt;
-                &lt;/div&gt;
-                &lt;div class="css-property"&gt;
-                    &lt;span class="name"&gt; border-image-repeat: &lt;/span&gt;
-                    &lt;span id="out-border-repeat" class="value"&gt; &lt;/span&gt;
-                &lt;/div&gt;
-                &lt;div class="css-property"&gt;
-                    &lt;span class="name"&gt; border-image-source: &lt;/span&gt;
-                    &lt;span id="out-border-source" class="value"&gt;  &lt;/span&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
+            <div id="output" class="category">
+                <div class="title"> Code CSS </div>
+                <div class="css-property">
+                    <span class="name"> border-image-slice: </span>
+                    <span id="out-border-slice" class="value"> </span>
+                </div>
+                <div class="css-property">
+                    <span class="name"> border-image-width: </span>
+                    <span id="out-border-width" class="value"> </span>
+                </div>
+                <div class="css-property">
+                    <span class="name"> border-image-outset: </span>
+                    <span id="out-border-outset" class="value"> </span>
+                </div>
+                <div class="css-property">
+                    <span class="name"> border-image-repeat: </span>
+                    <span id="out-border-repeat" class="value"> </span>
+                </div>
+                <div class="css-property">
+                    <span class="name"> border-image-source: </span>
+                    <span id="out-border-source" class="value">  </span>
+                </div>
+            </div>
 
-        &lt;/div&gt;
-    &lt;/div&gt;</pre>
+        </div>
+    </div>
+```
 
-<pre class="brush: css hidden">/*  GRID OF TWELVE
+```css hidden
+/*  GRID OF TWELVE
  * ========================================================================== */
 
 .span_12 {
@@ -259,7 +262,7 @@ original_slug: Web/CSS/CSS_Background_and_Borders/Border-image_generator
 
 /* Input Slider */
 
-.ui-input-slider &gt; input {
+.ui-input-slider > input {
 	margin: 0;
 	padding: 0;
 	width: 50px;
@@ -403,7 +406,7 @@ original_slug: Web/CSS/CSS_Background_and_Borders/Border-image_generator
 	top: 0;
 }
 
-.ui-dropdown-list &gt; div {
+.ui-dropdown-list > div {
 	width: 100%;
 	height: 1.6em;
 	margin: 0.3em 0;
@@ -415,7 +418,7 @@ original_slug: Web/CSS/CSS_Background_and_Borders/Border-image_generator
 	box-sizing: border-box;
 }
 
-.ui-dropdown-list &gt; div:hover {
+.ui-dropdown-list > div:hover {
 	background: #3490D2;
 	color:#FFF;
 	border-radius: 2px;
@@ -445,11 +448,11 @@ original_slug: Web/CSS/CSS_Background_and_Borders/Border-image_generator
 	user-select: none;
 }
 
-.ui-checkbox &gt; input {
+.ui-checkbox > input {
  	display: none;
 }
 
-.ui-checkbox &gt; label {
+.ui-checkbox > label {
 	font-size: 12px;
 	padding: 0.333em 1.666em 0.5em;
 	height: 1em;
@@ -477,11 +480,11 @@ original_slug: Web/CSS/CSS_Background_and_Borders/Border-image_generator
 	background-position: center right 10px;
 }
 
-.ui-checkbox &gt; label:hover {
+.ui-checkbox > label:hover {
 	cursor: pointer;
 }
 
-.ui-checkbox &gt; input:checked + label {
+.ui-checkbox > input:checked + label {
 	background-image: url("https://mdn.mozillademos.org/files/5681/checked.png");
 	background-color: #379B4A;
 }
@@ -533,7 +536,7 @@ body[data-move='Y'] {
 	cursor: move;
 }
 
-[data-draggable='true']:hover &gt; * {
+[data-draggable='true']:hover > * {
 	cursor: default;
 }
 
@@ -754,7 +757,7 @@ body[data-move='Y'] {
 	color: #555;
 }
 
-#subject [data-active] &gt; * {
+#subject [data-active] > * {
 	opacity: 1;
 }
 
@@ -931,7 +934,7 @@ body[data-move='Y'] {
 	color: #777;
 }
 
-#controls .category &gt; .group {
+#controls .category > .group {
 	border: 1px solid #CCC;
 	border-radius: 2px;
 }
@@ -1068,7 +1071,7 @@ body[data-move='Y'] {
 	width: 200px;
 }
 
-#aditional-properties .ui-input-slider &gt; input {
+#aditional-properties .ui-input-slider > input {
 	width: 80px !important;
 }
 
@@ -1207,10 +1210,10 @@ body[data-move='Y'] {
 	word-break: break-all;
 	float: left;
 }
+```
 
-</pre>
-
-<pre class="brush: js hidden">'use strict';
+```js hidden
+'use strict';
 
 /**
  * UI-SlidersManager
@@ -1290,12 +1293,12 @@ var InputSliderManager = (function InputSliderManager() {
 
 		this.min = isNaN(min) ? 0 : min;
 		this.max = isNaN(max) ? 100 : max;
-		this.precision = precision &gt;= 0 ? precision : 0;
-		this.step = step &lt; 0 || isNaN(step) ? 1 : step.toFixed(precision);
+		this.precision = precision >= 0 ? precision : 0;
+		this.step = step < 0 || isNaN(step) ? 1 : step.toFixed(precision);
 		this.topic = topic;
 		this.node = node;
 		this.unit = unit === null ? '' : unit;
-		this.sensivity = sensivity &gt; 0 ? sensivity : 5;
+		this.sensivity = sensivity > 0 ? sensivity : 5;
 		value = isNaN(value) ? this.min : value;
 
 		var input = new InputComponent(this);
@@ -1332,8 +1335,8 @@ var InputSliderManager = (function InputSliderManager() {
 
 		value = parseFloat(value.toFixed(slider.precision));
 
-		if (value &gt; slider.max) value = slider.max;
-		if (value &lt; slider.min)	value = slider.min;
+		if (value > slider.max) value = slider.max;
+		if (value < slider.min)	value = slider.min;
 
 		slider.value = value;
 		slider.node.setAttribute('data-value', value);
@@ -1404,7 +1407,7 @@ var InputSliderManager = (function InputSliderManager() {
 
 		value = value | 0;
 
-		slider.sensivity = value &gt; 0 ? value : 5;
+		slider.sensivity = value > 0 ? value : 5;
 	};
 
 	var getNode =  function getNode(topic) {
@@ -1433,7 +1436,7 @@ var InputSliderManager = (function InputSliderManager() {
 	var notify = function notify() {
 		if (subscribers[this.topic] === undefined)
 			return;
-		for (var i = 0; i &lt; subscribers[this.topic].length; i++)
+		for (var i = 0; i < subscribers[this.topic].length; i++)
 			subscribers[this.topic][i](this.value);
 	};
 
@@ -1452,7 +1455,7 @@ var InputSliderManager = (function InputSliderManager() {
 	var init = function init() {
 		var elem = document.querySelectorAll('.ui-input-slider');
 		var size = elem.length;
-		for (var i = 0; i &lt; size; i++)
+		for (var i = 0; i < size; i++)
 			new InputSlider(elem[i]);
 	};
 
@@ -1568,7 +1571,7 @@ var DropDownManager = (function DropdownManager() {
 
 	DropDown.prototype.updateValue = function updateValue(e) {
 
-		if (Date.now() - this.time &lt; 500)
+		if (Date.now() - this.time < 500)
 			return;
 
 		if (e.target.className !== "ui-dropdown-list") {
@@ -1609,7 +1612,7 @@ var DropDownManager = (function DropdownManager() {
 
 	var setValue = function setValue(topic, index) {
 		if (dropdowns[topic] === undefined ||
-			index &gt;= dropdowns[topic].dropmenu.children.length)
+			index >= dropdowns[topic].dropmenu.children.length)
 			return;
 
 		dropdowns[topic].setNodeValue(dropdowns[topic].dropmenu.children[index]);
@@ -1640,7 +1643,7 @@ var DropDownManager = (function DropdownManager() {
 
 		elem = document.querySelectorAll('.ui-dropdown');
 		size = elem.length;
-		for (var i = 0; i &lt; size; i++)
+		for (var i = 0; i < size; i++)
 			new DropDown(elem[i]);
 
 	};
@@ -1731,14 +1734,14 @@ var ButtonManager = (function CheckBoxManager() {
 	var notify = function notify() {
 		if (subscribers[this.topic] === undefined)
 			return;
-		for (var i = 0; i &lt; subscribers[this.topic].length; i++)
+		for (var i = 0; i < subscribers[this.topic].length; i++)
 			subscribers[this.topic][i](this.checkbox.checked);
 	};
 
 	var init = function init() {
 		var elem = document.querySelectorAll('.ui-checkbox');
 		var size = elem.length;
-		for (var i = 0; i &lt; size; i++)
+		for (var i = 0; i < size; i++)
 			new CheckBox(elem[i]);
 	};
 
@@ -2026,7 +2029,7 @@ var BorderImage = (function BorderImage() {
 			var value_array;
 
 			for (var i in topics) {
-				for (var j=0; j&lt;4; j++) {
+				for (var j=0; j<4; j++) {
 					topic = topics[i] + '-' + positions[j];
 					unit_array = topics[i] + '_units';
 					value_array = topics[i] + '_values';
@@ -2067,7 +2070,7 @@ var BorderImage = (function BorderImage() {
 			subject.style.width = w + 'px';
 			subject.style.height = h + 'px';
 
-			for (var i = 0; i &lt; positions.length; i++)
+			for (var i = 0; i < positions.length; i++)
 				guidelines['slice-' + positions[i]].updateGuidelinePos();
 		};
 
@@ -2474,7 +2477,7 @@ var BorderImage = (function BorderImage() {
 				});
 			};
 
-			for (var i = 0; i &lt; positions.length; i++) {
+			for (var i = 0; i < positions.length; i++) {
 				var topic = 'slice-' + positions[i];
 				var property = createProperty(topic, i, 0);
 				listenForChanges(topic, i);
@@ -2508,7 +2511,7 @@ var BorderImage = (function BorderImage() {
 				});
 			};
 
-			for (var i = 0; i &lt; positions.length; i++) {
+			for (var i = 0; i < positions.length; i++) {
 				var topic = 'width-' + positions[i];
 				var property = createProperty(topic, i, 1);
 				InputSliderManager.setMax(topic, 1000);
@@ -2536,7 +2539,7 @@ var BorderImage = (function BorderImage() {
 				});
 			};
 
-			for (var i = 0; i &lt; positions.length; i++) {
+			for (var i = 0; i < positions.length; i++) {
 				var topic = 'outset-' + positions[i];
 				var property = createProperty(topic, i, 2);
 				InputSliderManager.setMax(topic, 1000);
@@ -2566,7 +2569,7 @@ var BorderImage = (function BorderImage() {
 
 			var elem = document.querySelectorAll('.guideline');
 			var size = elem.length;
-			for (var i = 0; i &lt; size; i++)
+			for (var i = 0; i < size; i++)
 				new GuideLine(elem[i]);
 
 			PreviewControl.init();
@@ -2611,7 +2614,6 @@ var BorderImage = (function BorderImage() {
 	};
 
 })();
+```
 
-</pre>
-
-<p>{{EmbedLiveSample('Border_Image_Generator', '100%', '1270px')}}</p>
+{{EmbedLiveSample('Border_Image_Generator', '100%', '1270px')}}

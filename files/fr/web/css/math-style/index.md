@@ -1,16 +1,17 @@
 ---
 title: math-style
 slug: Web/CSS/math-style
+translation_of: Web/CSS/math-style
 browser-compat: css.properties.math-style
-translation_of: 'Web/CSS/math-style'
 ---
-<p>{{MDNSidebar}}</p>
+{{MDNSidebar}}
 
-<p>La propriété <code>math-style</code> détermine si les équations MathML devraient être affichées en hauteur normale ou compacte.</p>
+La propriété `math-style` détermine si les équations MathML devraient être affichées en hauteur normale ou compacte.
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 math-style: normal;
 math-style: compact;
 
@@ -19,38 +20,35 @@ math-sytle: inherit;
 math-style: initial;
 math-style: revert;
 math-style: unset;
-</pre>
+```
 
-<h3 id="values">Valeurs</h3>
+### Valeurs
 
-<dl>
-  <dt><code>normal</code></dt>
-  <dd>La valeur initiale, indiquant un rendu normal.</dd>
-  <dt><code>compact</code></dt>
-  <dd>La mise en page des éléments de l'équation est faite de manière à réduire la hauteur de l'ensemble.</dd>
-</dl>
+- `normal`
+  - : La valeur initiale, indiquant un rendu normal.
+- `compact`
+  - : La mise en page des éléments de l'équation est faite de manière à réduire la hauteur de l'ensemble.
 
-<h2 id="formal_definition">Définition formelle</h2>
+## Définition formelle
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="formal_syntax">Syntaxe formelle</h2>
+## Syntaxe formelle
 
-<p>{{CSSSyntax}}</p>
+{{CSSSyntax}}
 
-<h2 id="examples">Exemple</h2>
+## Exemple
 
-<h3 id="css">CSS</h3>
+### CSS
 
-<pre><em>math {
-  math-style: compact;
-}</em>
-</pre>
+    math {
+      math-style: compact;
+    }
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}

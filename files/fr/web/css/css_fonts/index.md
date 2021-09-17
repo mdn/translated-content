@@ -8,17 +8,18 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Fonts
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>CSS Fonts</strong> est un module CSS qui définit des propriétés relatives aux polices de caractères et la façon dont les ressources des polices sont chargées. Il permet de définir le style d'une police, comme sa famille, sa taille ou sa graisse ainsi que la variante du glyphe à utiliser dans le cas des polices disposant de plusieurs glyphes par caractère. Il permet également de définir la hauteur d'une ligne.</p>
+**CSS Fonts** est un module CSS qui définit des propriétés relatives aux polices de caractères et la façon dont les ressources des polices sont chargées. Il permet de définir le style d'une police, comme sa famille, sa taille ou sa graisse ainsi que la variante du glyphe à utiliser dans le cas des polices disposant de plusieurs glyphes par caractère. Il permet également de définir la hauteur d'une ligne.
 
-<h2 id="Exemple_simple">Exemple simple</h2>
+## Exemple simple
 
-<p>L'exemple qui suit illustre l'utilisation simple de propriétés relatives aux polices afin de mettre en forme le texte d'un paragraphe.</p>
+L'exemple qui suit illustre l'utilisation simple de propriétés relatives aux polices afin de mettre en forme le texte d'un paragraphe.
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   width: 600px;
   margin: 0 auto;
   font-family: "Helvetica Neue", "Arial",  sans-serif;
@@ -27,100 +28,72 @@ translation_of: Web/CSS/CSS_Fonts
   font-variant-ligatures: normal;
   font-size: 2rem;
   letter-spacing: 1px;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
    Alice ne fut pas très-étonnée, tant elle commençait à s’habituer aux
    événements extraordinaires. Tandis qu’elle regardait encore l’endroit
    que le Chat venait de quitter, il reparut tout à coup.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemple_simple', '100%', '200')}}</p>
+{{EmbedLiveSample('Exemple_simple', '100%', '200')}}
 
-<h2 id="Exemples_utilisant_les_polices_variables">Exemples utilisant les polices variables</h2>
+## Exemples utilisant les polices variables
 
-<p>Vous pouvez trouver plusieurs exemples utilisant les polices variables sur <a href="https://v-fonts.com/">v-fonts.com</a> et <a href="https://www.axis-praxis.org/">axis-praxis.org</a>. Notre <a href="/fr/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide">guide sur les polices variables</a> contient des informations et des exemples d'utilisation.</p>
+Vous pouvez trouver plusieurs exemples utilisant les polices variables sur [v-fonts.com](https://v-fonts.com/) et [axis-praxis.org](https://www.axis-praxis.org/). Notre [guide sur les polices variables](/fr/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide) contient des informations et des exemples d'utilisation.
 
-<h2 id="Référence">Référence</h2>
+## Référence
 
-<h3 id="Propriétés">Propriétés</h3>
+### Propriétés
 
-<ul>
- <li>{{cssxref("font")}}</li>
- <li>{{cssxref("font-family")}}</li>
- <li>{{cssxref("font-feature-settings")}}</li>
- <li>{{cssxref("font-kerning")}}</li>
- <li>{{cssxref("font-language-override")}}</li>
- <li>{{cssxref("font-optical-sizing")}}</li>
- <li>{{cssxref("font-size")}}</li>
- <li>{{cssxref("font-size-adjust")}}</li>
- <li>{{cssxref("font-stretch")}}</li>
- <li>{{cssxref("font-style")}}</li>
- <li>{{cssxref("font-synthesis")}}</li>
- <li>{{cssxref("font-variant")}}</li>
- <li>{{cssxref("font-variant-alternates")}}</li>
- <li>{{cssxref("font-variant-caps")}}</li>
- <li>{{cssxref("font-variant-east-asian")}}</li>
- <li>{{cssxref("font-variant-ligatures")}}</li>
- <li>{{cssxref("font-variant-numeric")}}</li>
- <li>{{cssxref("font-variant-position")}}</li>
- <li>{{cssxref("font-variation-settings")}}</li>
- <li>{{cssxref("font-weight")}}</li>
- <li>{{cssxref("line-height")}}</li>
-</ul>
+- {{cssxref("font")}}
+- {{cssxref("font-family")}}
+- {{cssxref("font-feature-settings")}}
+- {{cssxref("font-kerning")}}
+- {{cssxref("font-language-override")}}
+- {{cssxref("font-optical-sizing")}}
+- {{cssxref("font-size")}}
+- {{cssxref("font-size-adjust")}}
+- {{cssxref("font-stretch")}}
+- {{cssxref("font-style")}}
+- {{cssxref("font-synthesis")}}
+- {{cssxref("font-variant")}}
+- {{cssxref("font-variant-alternates")}}
+- {{cssxref("font-variant-caps")}}
+- {{cssxref("font-variant-east-asian")}}
+- {{cssxref("font-variant-ligatures")}}
+- {{cssxref("font-variant-numeric")}}
+- {{cssxref("font-variant-position")}}
+- {{cssxref("font-variation-settings")}}
+- {{cssxref("font-weight")}}
+- {{cssxref("line-height")}}
 
-<h3 id="Règles">Règles @</h3>
+### Règles @
 
-<ul>
-  <li>{{cssxref("@font-face")}}</li>
-  <li>{{cssxref("@font-feature-values")}}</li>
- </ul>
+- {{cssxref("@font-face")}}
+- {{cssxref("@font-feature-values")}}
 
-<h2 id="Guides">Guides</h2>
+## Guides
 
-<dl>
- <dt><a href="/fr/docs/Learn/CSS/Styling_text/Fundamentals">Mise en forme du texte et utilisation des polices</a></dt>
- <dd>Dans cet article, destiné aux débutants, nous abordons en détail les fonctionnalités pour la mise en forme du texte et la modification de la police.</dd>
- <dt><a href="/fr/docs/Web/CSS/CSS_Fonts/OpenType_fonts_guide">Guide sur les caractéristiques de police OpenType</a></dt>
- <dd>Les caractéristiques de police ou variantes font référence à différents glyphes ou styles de caractère contenus dans une police OpenType. Cela inclut notamment les ligatures (des caractères spéciaux qui permettent de combiner des caractères entre eux comme œ qui est la ligature entre o et e), le crénage, etc. Toutes ces caractéristiques sont des caractéristiques OpenType Features et peuvent être utilisées sur le Web grâce à certaines propriétés spécifiques qui permettent un contrôle de bas niveau comme {{cssxref("font-feature-settings")}}. Dans cet article, nous verrons tout ce qu'il faut savoir pour manipuler les caractéristiques OpenType avec CSS.</dd>
- <dt><a href="/fr/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide">Guide sur les polices variables</a></dt>
- <dd>Les polices variables sont une évolution de la spécification OpenType qui permet de faire varier différents axes d'une police (provenant d'un seul fichier) plutôt que d'avoir plusieurs polices d'une même fonte. Cet article fournit l'ensemble des informations nécessaires à l'exploration des polices variables.</dd>
-</dl>
+- [Mise en forme du texte et utilisation des polices](/fr/docs/Learn/CSS/Styling_text/Fundamentals)
+  - : Dans cet article, destiné aux débutants, nous abordons en détail les fonctionnalités pour la mise en forme du texte et la modification de la police.
+- [Guide sur les caractéristiques de police OpenType](/fr/docs/Web/CSS/CSS_Fonts/OpenType_fonts_guide)
+  - : Les caractéristiques de police ou variantes font référence à différents glyphes ou styles de caractère contenus dans une police OpenType. Cela inclut notamment les ligatures (des caractères spéciaux qui permettent de combiner des caractères entre eux comme œ qui est la ligature entre o et e), le crénage, etc. Toutes ces caractéristiques sont des caractéristiques OpenType Features et peuvent être utilisées sur le Web grâce à certaines propriétés spécifiques qui permettent un contrôle de bas niveau comme {{cssxref("font-feature-settings")}}. Dans cet article, nous verrons tout ce qu'il faut savoir pour manipuler les caractéristiques OpenType avec CSS.
+- [Guide sur les polices variables](/fr/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)
+  - : Les polices variables sont une évolution de la spécification OpenType qui permet de faire varier différents axes d'une police (provenant d'un seul fichier) plutôt que d'avoir plusieurs polices d'une même fonte. Cet article fournit l'ensemble des informations nécessaires à l'exploration des polices variables.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Fonts')}}</td>
-   <td>{{Spec2('CSS4 Fonts')}}</td>
-   <td>Ajout de <code>font-variation-settings</code> (ainsi que des propriétés de haut niveau associées) et de <code>font-optical-sizing</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>Ajout de <code>font-feature-settings</code> (ainsi que des propriétés de haut niveau associées)</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'fonts.html#font-shorthand', '')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#font', '')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                            | État                             | Commentaires                                                                                                        |
+| ------------------------------------------------------------------------ | -------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS4 Fonts')}}                                     | {{Spec2('CSS4 Fonts')}} | Ajout de `font-variation-settings` (ainsi que des propriétés de haut niveau associées) et de `font-optical-sizing`. |
+| {{SpecName('CSS3 Fonts')}}                                     | {{Spec2('CSS3 Fonts')}} | Ajout de `font-feature-settings` (ainsi que des propriétés de haut niveau associées)                                |
+| {{SpecName('CSS2.1', 'fonts.html#font-shorthand', '')}} | {{Spec2('CSS2.1')}}         |                                                                                                                     |
+| {{SpecName('CSS1', '#font', '')}}                             | {{Spec2('CSS1')}}         | Définition initiale.                                                                                                |

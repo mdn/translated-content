@@ -7,37 +7,34 @@ tags:
   - CSS Transforms
   - Function
   - Reference
-browser-compat: css.types.transform-function
 translation_of: Web/CSS/transform-function/scale()
+browser-compat: css.types.transform-function
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La fonction <strong><code>scale()</code></strong> permet de modifier la taille d'un élément avec un facteur d'échelle sur deux dimensions. Le résultat de cette fonction est une valeur de type <a href="/fr/docs/Web/CSS/transform-function"><code>&lt;transform-function&gt;</code></a>.</p>
+La fonction **`scale()`** permet de modifier la taille d'un élément avec un facteur d'échelle sur deux dimensions. Le résultat de cette fonction est une valeur de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
 
-<p><img src="scale.png"></p>
+![](scale.png)
 
-<p>Cette transformation est définie par un vecteur dont les coordonnées définissent la déformation appliquée dans chaque direction (horizontale et verticale). Si les deux coordonnées du vecteur sont égales, la mise à l'échelle est uniforme (ou isotropique) et la forme de l'élément est conservée.</p>
+Cette transformation est définie par un vecteur dont les coordonnées définissent la déformation appliquée dans chaque direction (horizontale et verticale). Si les deux coordonnées du vecteur sont égales, la mise à l'échelle est uniforme (ou isotropique) et la forme de l'élément est conservée.
 
-<p>Lorsque les coordonnées du vecteur sont en dehors de l'intervalle [<code>-1, 1]</code>, la transformation agrandit la taille de l'élément. Dans cet intervalle, l'élément est réduit.</p>
+Lorsque les coordonnées du vecteur sont en dehors de l'intervalle \[`-1, 1]`, la transformation agrandit la taille de l'élément. Dans cet intervalle, l'élément est réduit.
 
-<div class="note">
-  <p><strong>Note :</strong> La fonction <code>scale()</code> applique une transformation dans le plan (2D). S'il faut que la transformation soit appliquée dans l'espace (3D), on pourra utiliser la fonction <code>scale3D()</code>.</p>
-</div>
+> **Note :** La fonction `scale()` applique une transformation dans le plan (2D). S'il faut que la transformation soit appliquée dans l'espace (3D), on pourra utiliser la fonction `scale3D()`.
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css">scale(<var>sx</var>)
-scale(<var>sx</var>, <var>sy</var>)
-</pre>
+```css
+scale(sx)
+scale(sx, sy)
+```
 
-<h3 id="values">Valeurs</h3>
+### Valeurs
 
-<dl>
-  <dt><code>sx</code></dt>
-  <dd>Une valeur de type <a href="/fr/docs/Web/CSS/number"><code>&lt;number&gt;</code></a> qui représente l'abscisse du vecteur de transformation (le facteur d'échelle selon l'axe horizontal).</dd>
-  <dt><code>sy</code></dt>
-  <dd>Une valeur de type <a href="/fr/docs/Web/CSS/number"><code>&lt;number&gt;</code></a> qui représente l'abscisse du vecteur de transformation (le facteur d'échelle selon l'axe vertical). Si ce paramètre est absent, la valeur par défaut qui sera prise sera <em><strong>sx</strong></em> (on aura ainsi une transformation homogène).</dd>
-</dl>
+- `sx`
+  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/number) qui représente l'abscisse du vecteur de transformation (le facteur d'échelle selon l'axe horizontal).
+- `sy`
+  - : Une valeur de type [`<number>`](/fr/docs/Web/CSS/number) qui représente l'abscisse du vecteur de transformation (le facteur d'échelle selon l'axe vertical). Si ce paramètre est absent, la valeur par défaut qui sera prise sera **_sx_** (on aura ainsi une transformation homogène).
 
 <table class="standard-table">
   <thead>
@@ -50,168 +47,76 @@ scale(<var>sx</var>, <var>sy</var>)
   </thead>
   <tbody>
     <tr>
-      <td rowspan="2"><math>
-          <mfenced>
-            <mtable>
-              <mtr>
-                <mtd>
-                  <mi>sx</mi>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mi>sy</mi>
-                </mtd>
-              </mtr>
-            </mtable>
-          </mfenced>
-        </math></td>
-      <td><math>
-          <mfenced>
-            <mtable>
-              <mtr>
-                <mtd>
-                  <mi>sx</mi>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mi>sy</mi>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>1</mn>
-                </mtd>
-              </mtr>
-            </mtable>
-          </mfenced>
-        </math></td>
-      <td rowspan="2"><math>
-          <mfenced>
-            <mtable>
-              <mtr>
-                <mtd>
-                  <mi>sx</mi>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mi>sy</mi>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>1</mn>
-                </mtd>
-              </mtr>
-            </mtable>
-          </mfenced>
-        </math></td>
-      <td rowspan="2"><math>
-          <mfenced>
-            <mtable>
-              <mtr>
-                <mtd>
-                  <mi>sx</mi>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mi>sy</mi>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>1</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-              </mtr>
-              <mtr>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>0</mn>
-                </mtd>
-                <mtd>
-                  <mn>1</mn>
-                </mtd>
-              </mtr>
-            </mtable>
-          </mfenced>
-        </math></td>
+      <td rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td>
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi> </mtd
+                ><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>1</mn></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi> </mtd
+                ><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>1</mn></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr
+                ><mtd><mi>sx</mi> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mi>sy</mi> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>1</mn> </mtd><mtd><mn>0</mn> </mtd></mtr
+              ><mtr
+                ><mtd><mn>0</mn> </mtd><mtd><mn>0</mn> </mtd
+                ><mtd><mn>0</mn> </mtd><mtd><mn>1</mn></mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
     </tr>
     <tr>
       <td><code>[sx 0 0 sy 0 0]</code></td>
@@ -219,31 +124,32 @@ scale(<var>sx</var>, <var>sy</var>)
   </tbody>
 </table>
 
-<h2 id="accessibility_concerns">Accessibilité</h2>
+## Accessibilité
 
-<p>Les animations utilisées pour les zooms/changement d'échelle peuvent poser problème comme facteurs de déclenchement pour certains types de migraine. Si vous devez inclure de telles animations sur votre site, vous devriez fournir un moyen de désactiver les animations pour le site.</p>
+Les animations utilisées pour les zooms/changement d'échelle peuvent poser problème comme facteurs de déclenchement pour certains types de migraine. Si vous devez inclure de telles animations sur votre site, vous devriez fournir un moyen de désactiver les animations pour le site.
 
-<p>Vous pouvez également tirer parti de la caractéristique média <a href="/fr/docs/Web/CSS/@media/prefers-reduced-motion"><code>prefers-reduced-motion</code></a> et écrire une requête média qui désactivera les animations si l'utilisateur décide de réduire les animations via les préférences du système.</p>
+Vous pouvez également tirer parti de la caractéristique média [`prefers-reduced-motion`](/fr/docs/Web/CSS/@media/prefers-reduced-motion) et écrire une requête média qui désactivera les animations si l'utilisateur décide de réduire les animations via les préférences du système.
 
-<p>Pour en savoir plus :</p>
+Pour en savoir plus :
 
-<ul>
-  <li><a href="/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.3_%e2%80%94_seizures_and_physical_reactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions">Comprendres les règles WCAG 2.3</a></li>
-  <li><a href="https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions">Comprendre les critères de succès WCAG 2.1 / 2.3.3 (W3C)</a></li>
-</ul>
+- [Comprendres les règles WCAG 2.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.3_%e2%80%94_seizures_and_physical_reactions_do_not_design_content_in_a_way_that_is_known_to_cause_seizures_or_physical_reactions)
+- [Comprendre les critères de succès WCAG 2.1 / 2.3.3 (W3C)](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions)
 
-<h2 id="examples">Exemples</h2>
+## Exemples
 
-<h3 id="scaling_the_x_and_y_dimensions_together">Déformation horizontale et verticale</h3>
+### Déformation horizontale et verticale
 
-<h4 id="html">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;Normal&lt;/div&gt;
-&lt;div class="scaled"&gt;Déformé&lt;/div&gt;</pre>
+```html
+<div>Normal</div>
+<div class="scaled">Déformé</div>
+```
 
-<h4 id="css">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   width: 80px;
   height: 80px;
   background-color: skyblue;
@@ -253,22 +159,25 @@ scale(<var>sx</var>, <var>sy</var>)
   transform: scale(0.7); /* Équivalent à scaleX(0.7) scaleY(0.7) */
   background-color: pink;
 }
-</pre>
+```
 
-<h4 id="result">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("scaling_the_x_and_y_dimensions_together", "200", "200")}}</p>
+{{EmbedLiveSample("scaling_the_x_and_y_dimensions_together", "200", "200")}}
 
-<h3 id="scaling_x_and_y_dimensions_separately_and_translating_the_origin">Déformer horizontalement et verticalement avec origine déplacée</h3>
+### Déformer horizontalement et verticalement avec origine déplacée
 
-<h4 id="html_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;Normal&lt;/div&gt;
-&lt;div class="scaled"&gt;Déformé&lt;/div&gt;</pre>
+```html
+<div>Normal</div>
+<div class="scaled">Déformé</div>
+```
 
-<h4 id="css_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   width: 80px;
   height: 80px;
   background-color: skyblue;
@@ -279,24 +188,22 @@ scale(<var>sx</var>, <var>sy</var>)
   transform-origin: left;
   background-color: pink;
 }
-</pre>
+```
 
-<h4 id="result_2">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("scaling_x_and_y_dimensions_separately_and_translating_the_origin", "200", "200")}}</p>
+{{EmbedLiveSample("scaling_x_and_y_dimensions_separately_and_translating_the_origin", "200", "200")}}
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="/fr/docs/Web/CSS/transform"><code>transform</code></a></li>
-  <li><a href="/fr/docs/Web/CSS/transform-function"><code>&lt;transform-function&gt;</code></a></li>
-  <li><a href="/fr/docs/Web/CSS/transform-function/scale3d()"><code>scale3d()</code></a></li>
-</ul>
+- [`transform`](/fr/docs/Web/CSS/transform)
+- [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
+- [`scale3d()`](</fr/docs/Web/CSS/transform-function/scale3d()>)

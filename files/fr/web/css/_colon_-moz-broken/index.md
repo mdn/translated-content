@@ -1,43 +1,45 @@
 ---
 title: ':-moz-broken'
-slug: 'Web/CSS/:-moz-broken'
+slug: Web/CSS/:-moz-broken
 tags:
   - CSS
   - Non-standard
   - Pseudo-classe
   - Reference
-translation_of: 'Web/CSS/:-moz-broken'
+translation_of: Web/CSS/:-moz-broken
 ---
-<div>{{Non-standard_header}}{{CSSRef}}{{gecko_minversion_header("1.9")}}</div>
+{{Non-standard_header}}{{CSSRef}}{{gecko_minversion_header("1.9")}}
 
-<p>La <a href="/en-US/docs/Web/CSS">p</a><a href="/fr/docs/Web/CSS/Pseudo-classes">seudo-class CSS</a> <code>:-moz-broken </code>s'adapte aux éléments qui représentent des liens cassés vers des images.</p>
+La [p](/en-US/docs/Web/CSS)[seudo-class CSS](/fr/docs/Web/CSS/Pseudo-classes) `:-moz-broken `s'adapte aux éléments qui représentent des liens cassés vers des images.
 
-<p>Ce sélecteur est principalement destiné à être utilisé par les développeurs de thèmes.</p>
+Ce sélecteur est principalement destiné à être utilisé par les développeurs de thèmes.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">:-moz-broken</pre>
+    :-moz-broken
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;img src="broken.jpg" alt="Cette image ne fonctionne pas. :-("&gt;</pre>
+```html
+<img src="broken.jpg" alt="Cette image ne fonctionne pas. :-(">
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">:-moz-broken {
+```css
+:-moz-broken {
   background: bisque;
   padding: 8px;
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{bug("11011")}}</li>
- <li>{{cssxref(":-moz-loading")}}, {{cssxref(":-moz-suppressed")}}, {{cssxref(":-moz-user-disabled")}}</li>
-</ul>
+- {{bug("11011")}}
+- {{cssxref(":-moz-loading")}}, {{cssxref(":-moz-suppressed")}}, {{cssxref(":-moz-user-disabled")}}

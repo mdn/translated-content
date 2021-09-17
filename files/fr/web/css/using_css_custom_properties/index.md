@@ -8,58 +8,57 @@ tags:
   - Web
 translation_of: Web/CSS/Using_CSS_custom_properties
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>Les propriétés personnalisées CSS</strong> (<em>custom properties</em> en anglais, aussi parfois appelés <strong>variables CSS</strong>) sont des entités définies par les développeurs ou les utilisateurs d'une page Web, contenant des valeurs spécifiques utilisables à travers le document. Elles sont initialisées avec des propriétés personnalisées (par exemple <strong><code>--main-color: black;</code></strong>) et accessibles en utilisant la notation spécifique {{cssxref("var", "var()")}} (par exemple : <strong><code>color: var(--main-color);</code></strong>).</p>
+**Les propriétés personnalisées CSS** (_custom properties_ en anglais, aussi parfois appelés **variables CSS**) sont des entités définies par les développeurs ou les utilisateurs d'une page Web, contenant des valeurs spécifiques utilisables à travers le document. Elles sont initialisées avec des propriétés personnalisées (par exemple **`--main-color: black;`**) et accessibles en utilisant la notation spécifique {{cssxref("var", "var()")}} (par exemple : **`color: var(--main-color);`**).
 
-<p>Des sites et applications web complexes peuvent avoir des feuilles de style où de nombreuses valeurs sont répétées. Ainsi, la même couleur pourra être utilisée à des centaines d'endroits où il faudra la mettre à jour si besoin. Les propriétés personnalisées permettent de stocker une valeur à un endroit puis de réutiliser cette valeur (on factorise ainsi le code).</p>
+Des sites et applications web complexes peuvent avoir des feuilles de style où de nombreuses valeurs sont répétées. Ainsi, la même couleur pourra être utilisée à des centaines d'endroits où il faudra la mettre à jour si besoin. Les propriétés personnalisées permettent de stocker une valeur à un endroit puis de réutiliser cette valeur (on factorise ainsi le code).
 
-<h2 id="Utilisation_simple">Utilisation simple</h2>
+## Utilisation simple
 
-<p>Voici comment on déclare une variable :</p>
+Voici comment on déclare une variable :
 
-<pre class="brush:css">element {
+```css
+element {
   --main-bg-color: brown;
 }
-</pre>
+```
 
-<p>Et voici comment on l'utilise</p>
+Et voici comment on l'utilise
 
-<pre class="brush:css">element {
+```css
+element {
   background-color: var(--main-bg-color);
 }
-</pre>
+```
 
-<h2 id="Problématique">Problématique</h2>
+## Problématique
 
-<p>Lors de l'élaboration de sites de grande envergure, leurs auteurs font parfois face à des soucis de maintenabilité. De grandes feuilles de styles sont utilisées et de nombreuses informations se répètent. Par exemple, maintenir un thème de couleurs à travers un document nécessite la réutilisation des valeurs des couleurs à plusieurs endroits dans les fichiers CSS. Modifier un thème, en changeant une couleur ou en le récrivant entièrement, devient alors une tâche complexe demandant de la précision, là où un simple trouver et remplacer ne suffit pas.</p>
+Lors de l'élaboration de sites de grande envergure, leurs auteurs font parfois face à des soucis de maintenabilité. De grandes feuilles de styles sont utilisées et de nombreuses informations se répètent. Par exemple, maintenir un thème de couleurs à travers un document nécessite la réutilisation des valeurs des couleurs à plusieurs endroits dans les fichiers CSS. Modifier un thème, en changeant une couleur ou en le récrivant entièrement, devient alors une tâche complexe demandant de la précision, là où un simple trouver et remplacer ne suffit pas.
 
-<p>Le problème peut s'aggraver en utilisant les <em>frameworks</em> CSS puisque modifier une couleur demande de modifier le framework lui-même. Les pré-processeurs comme <a href="https://lesscss.org/">LESS</a> ou <a href="https://sass-lang.com/">Sass</a> peuvent faciliter cette tâche, mais peuvent également complexifier le processus de création en ajoutant une étape de compilation. Les propriétés personnalisées permettent d'utiliser une des principales fonctionnalités des pré-processeurs, sans cette étape de compilation.</p>
+Le problème peut s'aggraver en utilisant les _frameworks_ CSS puisque modifier une couleur demande de modifier le framework lui-même. Les pré-processeurs comme [LESS](https://lesscss.org/) ou [Sass](https://sass-lang.com/) peuvent faciliter cette tâche, mais peuvent également complexifier le processus de création en ajoutant une étape de compilation. Les propriétés personnalisées permettent d'utiliser une des principales fonctionnalités des pré-processeurs, sans cette étape de compilation.
 
-<p>Le deuxième avantage de ces variables vient du fait que le nom lui-même contient des informations sémantiques. Les fichiers CSS deviennent alors plus facile à lire et à comprendre : écrire <code>main-text-color</code> permet de mieux s'y retrouver au fur et à mesure de la lecture qu'une valeur hexadécimale comme <code>#00ff00</code>, surtout si la même couleur est utilisée dans un autre contexte.</p>
+Le deuxième avantage de ces variables vient du fait que le nom lui-même contient des informations sémantiques. Les fichiers CSS deviennent alors plus facile à lire et à comprendre : écrire `main-text-color` permet de mieux s'y retrouver au fur et à mesure de la lecture qu'une valeur hexadécimale comme `#00ff00`, surtout si la même couleur est utilisée dans un autre contexte.
 
-<h2 id="Définition">Définition</h2>
+## Définition
 
-<p>Les propriétés personnalisées ont actuellement deux formes :</p>
+Les propriétés personnalisées ont actuellement deux formes :
 
-<ul>
- <li>les variables, qui sont des associations entre un identifiant et une valeur utilisables à la place de n'importe quelle valeur normale, en utilisant la notation fonctionnelle <code>var()</code> : <code>var(--example-variable)</code> retourne la valeur de <code>--example-variable</code>.</li>
- <li>les propriétés personnalisées, qui sont des propriétés spéciales notées <code>--*</code> où <code>*</code> représente le nom de la variable. Elles sont utilisées pour définir la valeur d'une variable donnée : <code>--example-variable: 20px;</code> est une déclaration en CSS, utilisant la propriété personnalisée <code>--*</code> pour initialiser la valeur de la variable CSS <code>--example-variable</code> à <code>20px</code>.</li>
-</ul>
+- les variables, qui sont des associations entre un identifiant et une valeur utilisables à la place de n'importe quelle valeur normale, en utilisant la notation fonctionnelle `var()` : `var(--example-variable)` retourne la valeur de `--example-variable`.
+- les propriétés personnalisées, qui sont des propriétés spéciales notées `--*` où `*` représente le nom de la variable. Elles sont utilisées pour définir la valeur d'une variable donnée : `--example-variable: 20px;` est une déclaration en CSS, utilisant la propriété personnalisée `--*` pour initialiser la valeur de la variable CSS `--example-variable` à `20px`.
 
-<div class="note">
-  <p><strong>Note :</strong> Le préfixe de propriété personnalisée était noté <code>var-</code> dans les précédentes spécifications, mais a ensuite été changé pour <code>--</code>. Firefox 31 et supérieurs respectent cette nouvelle notation. ({{bug(985838)}})</p>
-</div>
+> **Note :** Le préfixe de propriété personnalisée était noté `var-` dans les précédentes spécifications, mais a ensuite été changé pour `--`. Firefox 31 et supérieurs respectent cette nouvelle notation. ({{bug(985838)}})
 
-<p>Les propriétés personnalisées sont similaires aux propriétés ordinaires. Elles sont sujettes à la cascade et héritent leur valeur de leur parent si elles ne sont pas redéfinies.</p>
+Les propriétés personnalisées sont similaires aux propriétés ordinaires. Elles sont sujettes à la cascade et héritent leur valeur de leur parent si elles ne sont pas redéfinies.
 
-<h2 id="Premiers_pas_avec_les_propriétés_personnalisées_CSS">Premiers pas avec les propriétés personnalisées CSS</h2>
+## Premiers pas avec les propriétés personnalisées CSS
 
-<p>Commençons avec cette feuille CSS simple colorant les éléments de différentes classes avec la même couleur :</p>
+Commençons avec cette feuille CSS simple colorant les éléments de différentes classes avec la même couleur :
 
-<h3>Exemple 1</h3>
+### Exemple 1
 
-<pre class="brush:css">.un {
+```css
+.un {
   color: white;
   background-color: brown;
   margin: 10px;
@@ -92,29 +91,29 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 .cinq {
   background-color: brown;
 }
+```
 
-</pre>
+Appliquons-le à ce code HTML :
 
-<p>Appliquons-le à ce code HTML :</p>
-
-<pre class="brush:html">&lt;div&gt;
-    &lt;div class="un"&gt;Toto&lt;/div&gt;
-    &lt;div class="deux"&gt;Texte &lt;span class="cinq"&gt;- encore du texte&lt;/span&gt;&lt;/div&gt;
-    &lt;input class="trois"&gt;
-    &lt;textarea class="quatre"&gt;Lorem Ipsum&lt;/textarea&gt;
-&lt;/div&gt;
-</pre>
-
-<p>ce qui donne ceci :</p>
-
-<p>{{EmbedLiveSample("exemple_1",600,180)}}</p>
-
-<p>Remarquez la répétition dans le CSS. La couleur d'arrière-plan est définie à <code>brown</code> à plusieurs endroits. Certaines déclarations peuvent être faites plus haut dans la cascade et le problème se résoudra grâce à l'héritage. Mais pour des projets non-triviaux, cela n'est pas toujours possible. En déclarant une variable dans la pseudo-classe {{cssxref(":root")}}, un développeur CSS peut éviter certaines répétitions en utilisant cette variable.</p>
+```html
+<div>
+    <div class="un">Toto</div>
+    <div class="deux">Texte <span class="cinq">- encore du texte</span></div>
+    <input class="trois">
+    <textarea class="quatre">Lorem Ipsum</textarea>
 </div>
+```
 
-<h3>Exemple 2</h3>
+ce qui donne ceci :
 
-<pre class="brush:css">:root {
+{{EmbedLiveSample("exemple_1",600,180)}}
+
+Remarquez la répétition dans le CSS. La couleur d'arrière-plan est définie à `brown` à plusieurs endroits. Certaines déclarations peuvent être faites plus haut dans la cascade et le problème se résoudra grâce à l'héritage. Mais pour des projets non-triviaux, cela n'est pas toujours possible. En déclarant une variable dans la pseudo-classe {{cssxref(":root")}}, un développeur CSS peut éviter certaines répétitions en utilisant cette variable.
+
+### Exemple 2
+
+```css
+:root {
   --main-bg-color: brown;
 }
 
@@ -151,64 +150,63 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 .cinq {
   background-color: var(--main-bg-color);
 }
+```
 
-</pre>
-
-<pre class="brush:html hidden">&lt;div&gt;
-    &lt;div class="un"&gt;Toto&lt;/div&gt;
-    &lt;div class="deux"&gt;Text &lt;span class="cinq"&gt;- more text&lt;/span&gt;&lt;/div&gt;
-    &lt;input class="trois"&gt;
-    &lt;textarea class="quatre"&gt;Lorem Ipsum&lt;/textarea&gt;
-&lt;/div&gt;
-</pre>
-
-<p>Ce code donne le même résultat que précédemment mais permet de n'utiliser la propriété désirée qu'une seule fois.</p>
-
-<h2 id="Héritage_des_propriétés_personnalisées_et_valeurs_par_défaut">Héritage des propriétés personnalisées et valeurs par défaut</h2>
-
-<p>Il y a un héritage des propriétés personnalisées. Cela signifie que si une propriété n'est pas définie sur un élément, la valeur prise en compte sera celle utilisée pour la propriété de l'élément parent. Le fragment de document suivant :</p>
-
-<pre class="brush: html">&lt;div class="un"&gt;
-  &lt;div class="deux"&gt;
-    &lt;div class="trois"&gt;
-    &lt;/div&gt;
-    &lt;div class="quatre"&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+```html hidden
+<div>
+    <div class="un">Toto</div>
+    <div class="deux">Text <span class="cinq">- more text</span></div>
+    <input class="trois">
+    <textarea class="quatre">Lorem Ipsum</textarea>
 </div>
+```
 
-<p>associé à cette feuille de style :</p>
+Ce code donne le même résultat que précédemment mais permet de n'utiliser la propriété désirée qu'une seule fois.
 
-<pre class="brush: css">.deux {
+## Héritage des propriétés personnalisées et valeurs par défaut
+
+Il y a un héritage des propriétés personnalisées. Cela signifie que si une propriété n'est pas définie sur un élément, la valeur prise en compte sera celle utilisée pour la propriété de l'élément parent. Le fragment de document suivant :
+
+```html
+<div class="un">
+  <div class="deux">
+    <div class="trois">
+    </div>
+    <div class="quatre">
+    </div>
+  </div>
+</div>
+```
+
+associé à cette feuille de style :
+
+```css
+.deux {
   --test: 10px;
 }
 
 .trois {
   --test: 2em;
 }
-</pre>
+```
 
-<p>Dans ce cas, les résultats de <code>var(--test)</code> seront :</p>
+Dans ce cas, les résultats de `var(--test)` seront :
 
-<ul>
- <li><code>10px</code> pour l'élément avec <code>class="deux"</code></li>
- <li><code>2em</code> pour l'élément avec <code>class="trois"</code></li>
- <li><code>10px</code> pour l'élément avec <code>class="quatre"</code> : la valeur est héritée depuis le parent</li>
- <li><em>invalid value</em> pour l'élément avec <code>class="un"</code>, c'est la valeur par défaut utilisée pour les différentes propriétés personnalisées.</li>
-</ul>
+- `10px` pour l'élément avec `class="deux"`
+- `2em` pour l'élément avec `class="trois"`
+- `10px` pour l'élément avec `class="quatre"` : la valeur est héritée depuis le parent
+- _invalid value_ pour l'élément avec `class="un"`, c'est la valeur par défaut utilisée pour les différentes propriétés personnalisées.
 
-<p>Gardez à l'esprit qu'il s'agit de propriétés personnalisées et non de propriétés personnalisées réelles. La valeur est calculée là où elle est nécessaire, non stockée pour être utilisée dans d'autres règles. Par exemple, vous ne pouvez pas définir une propriété pour un élément et espérer l'extraire dans la règle du descendant d'un frère. La propriété est uniquement définie pour le sélecteur correspondant et ses descendants, comme tout CSS normal.</p>
+Gardez à l'esprit qu'il s'agit de propriétés personnalisées et non de propriétés personnalisées réelles. La valeur est calculée là où elle est nécessaire, non stockée pour être utilisée dans d'autres règles. Par exemple, vous ne pouvez pas définir une propriété pour un élément et espérer l'extraire dans la règle du descendant d'un frère. La propriété est uniquement définie pour le sélecteur correspondant et ses descendants, comme tout CSS normal.
 
-<p>Avec <code><a href="/fr/docs/Web/CSS/var()">var()</a></code> on peut définir plusieurs valeurs par défaut lorsque la variable donnée n'est pas définie. Cela peut s'avérer utile lorsqu'on travaille avec des éléments personnalisés (<em>Custom Elements</em>) et le <em>Shadow DOM</em>.</p>
+Avec [`var()`](</fr/docs/Web/CSS/var()>) on peut définir plusieurs valeurs par défaut lorsque la variable donnée n'est pas définie. Cela peut s'avérer utile lorsqu'on travaille avec des éléments personnalisés (_Custom Elements_) et le _Shadow DOM_.
 
-<p>Le premier argument passé à la fonction est le nom de la <a href="https://www.w3.org/TR/css-variables/#custom-property" title="CSS Custom Properties for Cascading Variables Module Level 1">propriété personnalisée</a> qui doit être substituée. Le deuxième argument, s'il est fourni, indique la valeur par défaut qui est utilisée lorsque la <a href="https://www.w3.org/TR/css-variables/#custom-property" title="CSS Custom Properties for Cascading Variables Module Level 1">propriété personnalisée</a> en question est invalide.</p>
+Le premier argument passé à la fonction est le nom de la [propriété personnalisée](https://www.w3.org/TR/css-variables/#custom-property "CSS Custom Properties for Cascading Variables Module Level 1") qui doit être substituée. Le deuxième argument, s'il est fourni, indique la valeur par défaut qui est utilisée lorsque la [propriété personnalisée](https://www.w3.org/TR/css-variables/#custom-property "CSS Custom Properties for Cascading Variables Module Level 1") en question est invalide.
 
-<div class="note">
-<p><strong>Note :</strong> Attention, la valeur fournie comme valeur par défaut ne pourra pas être utilisée si le navigateur ne prend pas en charge les propriétés personnalisées CSS. Elle sera uniquement utilisée si la valeur précédente n'a pu être calculée ou si elle est invalide.</p>
-</div>
+> **Note :** Attention, la valeur fournie comme valeur par défaut ne pourra pas être utilisée si le navigateur ne prend pas en charge les propriétés personnalisées CSS. Elle sera uniquement utilisée si la valeur précédente n'a pu être calculée ou si elle est invalide.
 
-<pre class="brush: css">.deux {
+```css
+.deux {
   color: var(--my-var, red);
   /* Red si --my-var n'est pas définie */
 }
@@ -222,79 +220,72 @@ translation_of: Web/CSS/Using_CSS_custom_properties
 .trois {
   background-color: var(--my-var, --my-background, pink);
 }
-</pre>
+```
 
-<div class="note">
-<p><strong>Note :</strong> La syntaxe pour la valeur de recours, comme celle des <a href="https://www.w3.org/TR/css-variables/#custom-property">propriétés personnalisées</a>, permet d'utiliser une virgule. Ainsi, <code>var(--toto, red, blue)</code> définit une valeur de recours égale à <code>red, blue</code>, c'est-à-dire tout ce qui est écrit après la première virgule. Si la deuxième valeur est incorrecte, elle ne pourra pas être utilisée et la règle sera invalide.</p>
+> **Note :** La syntaxe pour la valeur de recours, comme celle des [propriétés personnalisées](https://www.w3.org/TR/css-variables/#custom-property), permet d'utiliser une virgule. Ainsi, `var(--toto, red, blue)` définit une valeur de recours égale à `red, blue`, c'est-à-dire tout ce qui est écrit après la première virgule. Si la deuxième valeur est incorrecte, elle ne pourra pas être utilisée et la règle sera invalide.
+>
+> La syntaxe de la deuxième règle (sur `.trois`) permet d'utiliser une autre variable comme variable de secours et une autre valeur (`pink`) dans le cas où cette deuxième variable ne fonctionne pas.
 
-<p>La syntaxe de la deuxième règle (sur <code>.trois</code>) permet d'utiliser une autre variable comme variable de secours et une autre valeur (<code>pink</code>) dans le cas où cette deuxième variable ne fonctionne pas.</p>
-</div>
+> **Note :** Des problèmes de performances ont pu être observés causant un rendu plus lent des pages car le navigateur doit analyser l'ensemble des variables pour voir si elles sont disponibles.
 
-<div class="note">
-<p><strong>Note :</strong> Des problèmes de performances ont pu être observés causant un rendu plus lent des pages car le navigateur doit analyser l'ensemble des variables pour voir si elles sont disponibles.</p>
-</div>
+## Validité et valeurs
 
-<h2 id="Validité_et_valeurs">Validité et valeurs</h2>
+Le concept classique de validité en CSS, lié à chaque propriété, n'est pas très utile en ce qui concerne les propriétés personnalisées. Quand la valeur d'une propriété personnalisée est lue, le navigateur ne sait pas à quel moment elle sera utilisée. Il doit donc considérer quasiment toutes les valeurs comme _valides_.
 
-<p>Le concept classique de validité en CSS, lié à chaque propriété, n'est pas très utile en ce qui concerne les propriétés personnalisées. Quand la valeur d'une propriété personnalisée est lue, le navigateur ne sait pas à quel moment elle sera utilisée. Il doit donc considérer quasiment toutes les valeurs comme <em>valides</em>.</p>
+Malheureusement, ces valeurs valides peuvent être utilisées, via la notation fonctionnelle `var()`, dans un contexte où cela n'aurait pas de sens. Les propriétés et variables personnalisées peuvent mener à des déclarations CSS invalides, conduisant à un nouveau concept de _valide lors de l'exécution_.
 
-<p>Malheureusement, ces valeurs valides peuvent être utilisées, via la notation fonctionnelle <code>var()</code>, dans un contexte où cela n'aurait pas de sens. Les propriétés et variables personnalisées peuvent mener à des déclarations CSS invalides, conduisant à un nouveau concept de <em>valide lors de l'exécution</em>.</p>
+## Gestion des variables invalides
 
-<h2 id="Gestion_des_variables_invalides">Gestion des variables invalides</h2>
+Lorsque le navigateur analyse une substitution `var()` invalide, c'est la valeur initiale ou héritée de la propriété qui est utilisée. Par exemple :
 
-<p>Lorsque le navigateur analyse une substitution <code>var()</code> invalide, c'est la valeur initiale ou héritée de la propriété qui est utilisée. Par exemple :</p>
+### HTML
 
-<h3 id="HTML">HTML</h3>
+```html
+<p>La couleur initiale d'un paragraphe est noire.</p>
+```
 
-<pre class="brush: html">&lt;p&gt;La couleur initiale d'un paragraphe est noire.&lt;/p&gt; </pre>
+### CSS
 
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">:root { --text-color: 16px; }
+```css
+:root { --text-color: 16px; }
 p { color: blue; }
 p { color: var(--text-color); }
-</pre>
+```
 
-<p>Comme on pourrait s'y attendre, le valeur applique la substitution aec <code>--text-color</code> à la place de <code>var(--text-color)</code> mais <code>16px</code> n'est pas une valeur valide pour {{cssxref("color")}}. Après la substitution, la déclaration n'a plus aucun sens. Le navigateur résoud ce problème en deux étapes :</p>
+Comme on pourrait s'y attendre, le valeur applique la substitution aec `--text-color` à la place de `var(--text-color)` mais `16px` n'est pas une valeur valide pour {{cssxref("color")}}. Après la substitution, la déclaration n'a plus aucun sens. Le navigateur résoud ce problème en deux étapes :
 
-<ol>
- <li>Il vérifie si la propriété peut être héritée (ici <code>color</code>) : c'est bien le cas mais dans notre exemple <code>&lt;p&gt;</code> n'a aucun parent avec une couleur définie, il passe donc à l'étape suivante.</li>
- <li>La valeur utilisée est <strong>la valeur initiale par défaut</strong>, pour <code>color</code>, c'est <code>black</code>.</li>
-</ol>
+1.  Il vérifie si la propriété peut être héritée (ici `color`) : c'est bien le cas mais dans notre exemple `<p>` n'a aucun parent avec une couleur définie, il passe donc à l'étape suivante.
+2.  La valeur utilisée est **la valeur initiale par défaut**, pour `color`, c'est `black`.
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Gestion_des_valeurs_invalides')}}</p>
+{{EmbedLiveSample('Gestion_des_valeurs_invalides')}}
 
-<div class="note">
-<p><strong>Note :</strong> La couleur du paragraphe ne sera pas bleue car une substitution invalide est remplacée par la valeur héritée ou la valeur initiale, pas par les valeurs provenant d'éventuelles autres règles.</p>
+> **Note :** La couleur du paragraphe ne sera pas bleue car une substitution invalide est remplacée par la valeur héritée ou la valeur initiale, pas par les valeurs provenant d'éventuelles autres règles.
+>
+> Si on avait directement écrit `color: 16px` (sans substitution), c'est alors la déclaration précédente qui aurait été utilisée.
 
-<p>Si on avait directement écrit <code>color: 16px</code> (sans substitution), c'est alors la déclaration précédente qui aurait été utilisée.</p>
-</div>
+## Manipulation des variables en JavaScript
 
-<h2 id="Manipulation_des_variables_en_JavaScript">Manipulation des variables en JavaScript</h2>
+Il est possible d'utiliser les valeurs des propriétés personnalisés en JavaScript de la même façon que les propriétés standards.
 
-<p>Il est possible d'utiliser les valeurs des propriétés personnalisés en JavaScript de la même façon que les propriétés standards.</p>
-
-<pre class="brush: js">// obtenir une variable à partir d'un style en ligne (dans un élément html)
+```js
+// obtenir une variable à partir d'un style en ligne (dans un élément html)
 element.style.getPropertyValue("--ma-variable");
 
 // obtenir une variable par ailleurs
 getComputedStyle(element).getPropertyValue("--ma-variable");
 
 // définir une variable dans un style en ligne
-element.style.setProperty("--ma-variable", varJS + 4);</pre>
+element.style.setProperty("--ma-variable", varJS + 4);
+```
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.custom-property")}}</p>
+{{Compat("css.properties.custom-property")}}
 
-<div class="note">
-<p><strong>Note :</strong> Dans les versions antérieures de la spécification, le préfixe indiquant les propriétés personnalisées était <code>var-</code>. Ce préfixe a ensuite été modifié en <code>--</code>. et Firefox 31 et les versions ultérieures respectent cette spécification  (cf. {{bug(985838)}})</p>
-</div>
+> **Note :** Dans les versions antérieures de la spécification, le préfixe indiquant les propriétés personnalisées était `var-`. Ce préfixe a ensuite été modifié en `--`. et Firefox 31 et les versions ultérieures respectent cette spécification  (cf. {{bug(985838)}})
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("--*", "Les propriétés personnalisées")}}</li>
-</ul>
+- {{cssxref("--*", "Les propriétés personnalisées")}}

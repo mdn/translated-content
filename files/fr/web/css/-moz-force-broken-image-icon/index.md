@@ -8,63 +8,59 @@ tags:
   - Reference
 translation_of: Web/CSS/-moz-force-broken-image-icon
 ---
-<div>{{Non-standard_header}}{{ CSSRef}}</div>
+{{Non-standard_header}}{{ CSSRef}}
 
-<p>La propriété <strong><code>-moz-force-broken-image-icon</code></strong> est une propriété CSS non-standard. Lorsqu'elle vaut <code>1</code>, elle permet de forcer l'affichage d'une icône d'image brisée même si l'image possède un attribut {{HTMLElement("img","<code>alt</code>","#attr-alt")}}. Lorsqu'elle vaut <code>0</code>, l'image est utilisée de façon normale et n'affichera que l'attribut <code>alt</code>.</p>
+La propriété **`-moz-force-broken-image-icon`** est une propriété CSS non-standard. Lorsqu'elle vaut `1`, elle permet de forcer l'affichage d'une icône d'image brisée même si l'image possède un attribut {{HTMLElement("img","<code>alt</code>","#attr-alt")}}. Lorsqu'elle vaut `0`, l'image est utilisée de façon normale et n'affichera que l'attribut `alt`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt>{{cssxref("&lt;integer&gt;")}}</dt>
- <dd>Une valeur de 1 indique qu'une icône d'image brisée est affichée même si l'image possède un attribut {{HTMLElement("img", "<code>alt</code>", "#attr-alt")}}. <code>0</code> indique que seul l'attribut <code>alt</code> doit être affiché.
- <div class="note">
-   <p><strong>Note :</strong> Même si la valeur est <code>1</code>, l'attribut <code>alt</code> sera affiché. Voir ci-après.</p></div>
- </dd>
-</dl>
+- {{cssxref("&lt;integer&gt;")}}
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+  - : Une valeur de 1 indique qu'une icône d'image brisée est affichée même si l'image possède un attribut {{HTMLElement("img", "<code>alt</code>", "#attr-alt")}}. `0` indique que seul l'attribut `alt` doit être affiché.
+
+    > **Note :** Même si la valeur est `1`, l'attribut `alt` sera affiché. Voir ci-après.
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css;">img {
+```css
+img {
   -moz-force-broken-image-icon: 1;
   height: 100px;
   width: 100px;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html;">&lt;img src='/lien/vers/image/cassée.png' alt='Un lien vers une image cassée'&gt;</pre>
+```html
+<img src='/lien/vers/image/cassée.png' alt='Un lien vers une image cassée'>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples','125','125','/files/4619/broken%20image%20link.png')}}</p>
+{{EmbedLiveSample('Exemples','125','125','/files/4619/broken%20image%20link.png')}}
 
-<div class="note">
-  <p><strong>Note :</strong> Si <code>-moz-force-broken-image-icon</code> a la valeur <code>1</code> et que ni la hauteur ni largeur de l'image ne sont spécifiées alors l'image ne sera pas affichée et l'attribut <code>alt</code> sera masqué.</p>
-</div>
+> **Note :** Si `-moz-force-broken-image-icon` a la valeur `1` et que ni la hauteur ni largeur de l'image ne sont spécifiées alors l'image ne sera pas affichée et l'attribut `alt` sera masqué.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette propriété est une propriété propriétaire liée à Mozilla/Gecko et ne fait partie d'aucune spécification.</p>
+Cette propriété est une propriété propriétaire liée à Mozilla/Gecko et ne fait partie d'aucune spécification.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<ul>
- <li>Cette propriété ne fonctionne que sur les navigateurs basés sur Gecko.</li>
- <li>L'usage de cette propriété n'est pas recommandée. Une propriété <em>alt</em> adéquate devrait être utilisé.</li>
-</ul>
+- Cette propriété ne fonctionne que sur les navigateurs basés sur Gecko.
+- L'usage de cette propriété n'est pas recommandée. Une propriété _alt_ adéquate devrait être utilisé.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{Bug(58646)}}</li>
-</ul>
+- {{Bug(58646)}}

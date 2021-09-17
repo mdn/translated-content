@@ -1,51 +1,34 @@
 ---
 title: ':blank'
-slug: 'Web/CSS/:blank'
+slug: Web/CSS/:blank
 tags:
   - CSS
   - Draft
   - Experimental
   - Pseudo-classe
   - Reference
-translation_of: 'Web/CSS/:blank'
+translation_of: Web/CSS/:blank
 ---
-<p>{{CSSRef}}{{Draft}}{{SeeCompatTable}}</p>
+{{CSSRef}}{{Draft}}{{SeeCompatTable}}
 
-<div class="note">
-<p><strong>Note :</strong> Le sélecteur <code>:blank</code> est une fonctionnalité considérée risquée car en cours de modification par le CSSWG. Voir <a href="https://github.com/w3c/csswg-drafts/issues/1967" title="[selectors] decide on :blank">l'<em>issue</em> n°1967 à ce propos</a>.</p>
-</div>
+> **Note :** Le sélecteur `:blank` est une fonctionnalité considérée risquée car en cours de modification par le CSSWG. Voir [l'_issue_ n°1967 à ce propos](https://github.com/w3c/csswg-drafts/issues/1967 "[selectors] decide on :blank").
 
-<p>La <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <strong><code>:blank</code></strong> permet de sélectionner les champs saissables par l'utilisateur et qui sont vides (par exemple des éléments {{HTMLElement("input")}} ou {{HTMLElement("textarea")}} où rien n'a encore été saisi).</p>
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:blank`** permet de sélectionner les champs saissables par l'utilisateur et qui sont vides (par exemple des éléments {{HTMLElement("input")}} ou {{HTMLElement("textarea")}} où rien n'a encore été saisi).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
 {{CSSSyntax}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#blank-pseudo", ":blank")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | État                                 | Commentaires         |
+| ---------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName("CSS4 Selectors", "#blank-pseudo", ":blank")}} | {{Spec2("CSS4 Selectors")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.blank")}}</p>
+{{Compat("css.selectors.blank")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{CSSxRef(":empty")}}</li>
-</ul>
+- {{CSSxRef(":empty")}}

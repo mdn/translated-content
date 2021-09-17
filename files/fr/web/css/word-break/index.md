@@ -7,15 +7,16 @@ tags:
   - Reference
 translation_of: Web/CSS/word-break
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété<strong> <code>word-break</code></strong> est utilisée pour définir la façon dont la césure s'applique pour les endroits où le texte dépasserait de sa boîte de contenu.</p>
+La propriété** `word-break`** est utilisée pour définir la façon dont la césure s'applique pour les endroits où le texte dépasserait de sa boîte de contenu.
 
-<div>{{EmbedInteractiveExample("pages/css/word-break.html")}}</div>
+{{EmbedInteractiveExample("pages/css/word-break.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Avec un mot-clé */
+```css
+/* Avec un mot-clé */
 word-break: normal;
 word-break: break-all;
 word-break: keep-all;
@@ -25,44 +26,42 @@ word-break: break-word; /* dépréciée */
 word-break: inherit;
 word-break: initial;
 word-break: unset;
-</pre>
+```
 
-<p>La propriété <code>word-break</code> est définie avec un mot-clé parmi ceux décrits ci-après.</p>
+La propriété `word-break` est définie avec un mot-clé parmi ceux décrits ci-après.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Le passage à la ligne classique est utilisé.</dd>
- <dt><code>break-all</code></dt>
- <dd>La césure peut être insérée après n'importe quel caractère (ne s'applique pas pour les textes en chinois, japonais et coréen).</dd>
- <dt><code>keep-all</code></dt>
- <dd>La césure est interdite pour les textes en chinois, japonais et coréen. Pour les autres types de texte, le comportement est le même que <code>normal</code>.</dd>
- <dt><code>break-word</code>{{deprecated_inline}}</dt>
- <dd>Aura le même effet que <code>word-break: normal</code> et que <code>overflow-wrap: anywhere</code> quelle que soit la valeur de la propriété {{cssxref("overflow-wrap")}}.</dd>
-</dl>
+- `normal`
+  - : Le passage à la ligne classique est utilisé.
+- `break-all`
+  - : La césure peut être insérée après n'importe quel caractère (ne s'applique pas pour les textes en chinois, japonais et coréen).
+- `keep-all`
+  - : La césure est interdite pour les textes en chinois, japonais et coréen. Pour les autres types de texte, le comportement est le même que `normal`.
+- `break-word`{{deprecated_inline}}
+  - : Aura le même effet que `word-break: normal` et que `overflow-wrap: anywhere` quelle que soit la valeur de la propriété {{cssxref("overflow-wrap")}}.
 
-<div class="note">
-<p><strong>Note :</strong> Contrairement à <code>word-break: break-word</code> et à <code>overflow-wrap: break-word</code> (cf. {{cssxref("overflow-wrap")}}), <code>word-break: break-all</code> créera une césure à l'endroit exact où le mot aurait dépassé du conteneur (même si placer le mot entier sur sa propre ligne aurait pu éviter la césure).</p>
-</div>
+> **Note :** Contrairement à `word-break: break-word` et à `overflow-wrap: break-word` (cf. {{cssxref("overflow-wrap")}}), `word-break: break-all` créera une césure à l'endroit exact où le mot aurait dépassé du conteneur (même si placer le mot entier sur sa propre ligne aurait pu éviter la césure).
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="normal étroit"&gt; Voici une Supercalifragilisticexpialidocious califragilisticexpialidocious phrase. グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉 &lt;/p&gt;
-&lt;p class="breakAll étroit"&gt; Voici une Supercalifragilisticexpialidocious califragilisticexpialidocious phrase. グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉 &lt;/p&gt;
-&lt;p class="breakWord étroit"&gt; Voici une Supercalifragilisticexpialidocious califragilisticexpialidocious phrase. グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉 &lt;/p&gt;
-&lt;p class="keep étroit"&gt; Voici une Supercalifragilisticexpialidocious califragilisticexpialidocious phrase.  グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉&lt;/p&gt;
-</pre>
+```html
+<p class="normal étroit"> Voici une Supercalifragilisticexpialidocious califragilisticexpialidocious phrase. グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉 </p>
+<p class="breakAll étroit"> Voici une Supercalifragilisticexpialidocious califragilisticexpialidocious phrase. グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉 </p>
+<p class="breakWord étroit"> Voici une Supercalifragilisticexpialidocious califragilisticexpialidocious phrase. グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉 </p>
+<p class="keep étroit"> Voici une Supercalifragilisticexpialidocious califragilisticexpialidocious phrase.  グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.étroit {
+```css
+.étroit {
   padding: 10px;
   border: 1px solid;
   width: 500px;
@@ -87,40 +86,25 @@ word-break: unset;
 .breakWord {
   word-break: break-word;
 }
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemple','100%',600)}}</p>
+{{EmbedLiveSample('Exemple','100%',600)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Text', '#word-break-property', 'word-break')}}</td>
-   <td>{{Spec2('CSS3 Text')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                         | Commentaires        |
+| ------------------------------------------------------------------------------------ | ---------------------------- | ------------------- |
+| {{SpecName('CSS3 Text', '#word-break-property', 'word-break')}} | {{Spec2('CSS3 Text')}} | Définition initiale |
 
-<div>{{cssinfo}}</div>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.word-break")}}</p>
+{{Compat("css.properties.word-break")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("word-wrap")}}</li>
- <li>{{cssxref("overflow-wrap")}}</li>
-</ul>
+- {{cssxref("word-wrap")}}
+- {{cssxref("overflow-wrap")}}

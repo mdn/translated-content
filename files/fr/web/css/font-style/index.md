@@ -7,19 +7,20 @@ tags:
   - Reference
 translation_of: Web/CSS/font-style
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété<strong> <code>font-style</code></strong> permet de sélectionner une fonte italique (<code>italic</code>) ou (<code>oblique</code>) parmi celles listées par {{cssxref("font-family")}}.</p>
+La propriété** `font-style`** permet de sélectionner une fonte italique (`italic`) ou (`oblique`) parmi celles listées par {{cssxref("font-family")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/font-style.html")}}</div>
+{{EmbedInteractiveExample("pages/css/font-style.html")}}
 
-<p>La forme <strong>italique</strong> est généralement une forme cursive qui utilise moins d'espace horizontal que les autres formes classiques. La forme <strong>oblique</strong> quant à elle est simplement une version penchée de la forme normale. Les formes italique et oblique peuvent être synthétisées par le navigateur si elles sont absente (le moteur penche alors les glyphes de la forme normale), pour plus d'informations sur l'activation de cette synthèse, voir la propriété {{cssxref("font-synthesis")}}.</p>
+La forme **italique** est généralement une forme cursive qui utilise moins d'espace horizontal que les autres formes classiques. La forme **oblique** quant à elle est simplement une version penchée de la forme normale. Les formes italique et oblique peuvent être synthétisées par le navigateur si elles sont absente (le moteur penche alors les glyphes de la forme normale), pour plus d'informations sur l'activation de cette synthèse, voir la propriété {{cssxref("font-synthesis")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>La propriété <code>font-style</code> peut être définie avec l'un des mots-clés suivants.</p>
+La propriété `font-style` peut être définie avec l'un des mots-clés suivants.
 
-<pre class="brush:css no-line-numbers">font-style: normal;
+```css
+font-style: normal;
 font-style: italic;
 font-style: oblique;
 font-style: oblique 10deg;
@@ -28,53 +29,53 @@ font-style: oblique 10deg;
 font-style: inherit;
 font-style: initial;
 font-style: unset;
-</pre>
+```
 
-<p>La propriété <code>font-style</code> s'utilise avec un mot-clé parmi ceux qui suivent. Si ce mot-clé est <code>oblique</code>, il peut également être suivi de l' angle.</p>
+La propriété `font-style` s'utilise avec un mot-clé parmi ceux qui suivent. Si ce mot-clé est `oblique`, il peut également être suivi de l' angle.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Sélectionne une police qualifiée de <code>normal</code> parmi celles de {{cssxref("font-family")}}.</dd>
- <dt><code>italic</code></dt>
- <dd>Sélectionne une police qualifiée d'<code>italic</code>, s'il n'y a pas de version italique, une version <code>oblique</code> sera sélectionnée à la place.</dd>
- <dt><code>oblique</code></dt>
- <dd>Sélectionne une police qualifiée d'<code>oblique</code>, s'il n'y a pas de version oblique, une version <code>italic</code> sera sélectionnée à la place.</dd>
- <dt><code>oblique</code> <code>&lt;angle&gt;</code></dt>
- <dd>Sélectionne une police qualifiée d'<code>oblique</code> et indique l'angle à utiliser pour la pente du texte. Si plusieurs fontes sont disponible pour la police, c'est la fonte avec la pente la plus proche qui est utilisée. Si aucune police oblique n'est disponible, le navigateur <em>synthétisera</em> une police penchée en tournant les caractères d'une fonte normale.<br>
- L'angle indiqué (cf. {{cssxref("&lt;angle&gt;")}}) doit être compris entre <code>-90deg</code> et <code>90deg</code>. Si aucun angle n'est indiqué, la valeur par défaut utilisée sera <code>14deg</code>. Les valeurs positives correspondent à une pente où le haut des caractères penche vers la fin de la ligne et les valeurs négatives permettent d'obtenir une pente orientée vers le début de la ligne.</dd>
-</dl>
+- `normal`
+  - : Sélectionne une police qualifiée de `normal` parmi celles de {{cssxref("font-family")}}.
+- `italic`
+  - : Sélectionne une police qualifiée d'`italic`, s'il n'y a pas de version italique, une version `oblique` sera sélectionnée à la place.
+- `oblique`
+  - : Sélectionne une police qualifiée d'`oblique`, s'il n'y a pas de version oblique, une version `italic` sera sélectionnée à la place.
+- `oblique` `<angle>`
+  - : Sélectionne une police qualifiée d'`oblique` et indique l'angle à utiliser pour la pente du texte. Si plusieurs fontes sont disponible pour la police, c'est la fonte avec la pente la plus proche qui est utilisée. Si aucune police oblique n'est disponible, le navigateur _synthétisera_ une police penchée en tournant les caractères d'une fonte normale.
+    L'angle indiqué (cf. {{cssxref("&lt;angle&gt;")}}) doit être compris entre `-90deg` et `90deg`. Si aucun angle n'est indiqué, la valeur par défaut utilisée sera `14deg`. Les valeurs positives correspondent à une pente où le haut des caractères penche vers la fin de la ligne et les valeurs négatives permettent d'obtenir une pente orientée vers le début de la ligne.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h3 id="Variable_fonts">Variable fonts</h3>
+### Variable fonts
 
-<p>Les polices variables permettent d'obtenir un contrôle fin sur la pente appliqué à la fonte. Pour cela, on pourra utiliser une police variable et <code>font-style</code> avec le mot-clé <code>oblique</code> suivi d'une valeur d'angle.</p>
+Les polices variables permettent d'obtenir un contrôle fin sur la pente appliqué à la fonte. Pour cela, on pourra utiliser une police variable et `font-style` avec le mot-clé `oblique` suivi d'une valeur d'angle.
 
-<p>Pour les polices variables TrueType ou OpenType, c'est l'axe de variation <code>"slnt"</code> qui est utilisé afin d'implémenter les variations de pente. C'est l'axe <code>"ital"</code> qui est utilisé avec une valeur de 1 pour implémenter les fontes italiques. Voir {{cssxref("font-variation-settings")}}.</p>
+Pour les polices variables TrueType ou OpenType, c'est l'axe de variation `"slnt"` qui est utilisé afin d'implémenter les variations de pente. C'est l'axe `"ital"` qui est utilisé avec une valeur de 1 pour implémenter les fontes italiques. Voir {{cssxref("font-variation-settings")}}.
 
-<p>Afin que l'exemple suivant fonctionne, votre navigateur doit prendre en charge la syntaxe <em>CSS Fonts Level 4</em> qui permet d'utiliser <code>font-style: oblique</code> suivi d'un angle.</p>
+Afin que l'exemple suivant fonctionne, votre navigateur doit prendre en charge la syntaxe _CSS Fonts Level 4_ qui permet d'utiliser `font-style: oblique` suivi d'un angle.
 
-<p>{{EmbedLiveSample("Variable_fonts", 1200, 180, "", "", "example-outcome-frame")}}</p>
+{{EmbedLiveSample("Variable_fonts", 1200, 180, "", "", "example-outcome-frame")}}
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;header&gt;
-    &lt;input type="range" id="slant" name="slant" min="-90" max="90" /&gt;
-    &lt;label for="slant"&gt;Slant&lt;/label&gt;
-&lt;/header&gt;
-&lt;div class="container"&gt;
-    &lt;p class="sample"&gt;...it would not be wonderful to meet a Megalosaurus, forty feet long or so, waddling like an elephantine lizard up Holborn Hill.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<header>
+    <input type="range" id="slant" name="slant" min="-90" max="90" />
+    <label for="slant">Slant</label>
+</header>
+<div class="container">
+    <p class="sample">...it would not be wonderful to meet a Megalosaurus, forty feet long or so, waddling like an elephantine lizard up Holborn Hill.</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">/*
-AmstelvarAlpha-VF is created by <span class="col-11 mr-2 text-gray-dark">David Berlow</span> (https://github.com/TypeNetwork/Amstelvar)
+```css
+/*
+AmstelvarAlpha-VF is created by David Berlow (https://github.com/TypeNetwork/Amstelvar)
 and is used here under the terms of its license:
 https://github.com/TypeNetwork/Amstelvar/blob/master/OFL.txt
 */
@@ -97,10 +98,10 @@ label {
 .sample {
   font: 2rem 'AmstelvarAlpha', sans-serif;
 }
+```
 
-</pre>
-
-<pre class="brush: css hidden">html, body {
+```css hidden
+html, body {
   max-height: 100vh;
   max-width: 100vw;
   overflow: hidden;
@@ -119,15 +120,16 @@ header {
   flex-grow: 1;
 }
 
-.container &gt; p {
+.container > p {
   margin-top: 0;
   margin-bottom: 0;
 }
-</pre>
+```
 
-<h4 id="JavaScript">JavaScript</h4>
+#### JavaScript
 
-<pre class="brush: js">let slantLabel = document.querySelector('label[for="slant"]');
+```js
+let slantLabel = document.querySelector('label[for="slant"]');
 let slantInput = document.querySelector('#slant');
 let sampleText = document.querySelector('.sample');
 
@@ -140,13 +142,14 @@ function update() {
 slantInput.addEventListener('input', update);
 
 update();
-</pre>
+```
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS_2">CSS</h3>
+### CSS
 
-<pre class="brush: css">.normal {
+```css
+.normal {
   font-style: normal;
 }
 
@@ -156,72 +159,44 @@ update();
 
 .oblique {
   font-style: oblique;
-}</pre>
+}
+```
 
-<h3 id="HTML_2">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="normal"&gt;Un paragraphe normale.&lt;/p&gt;
-&lt;p class="italic"&gt;Un paragraphe italique.&lt;/p&gt;
-&lt;p class="oblique"&gt;Un paragraphe oblique.&lt;/p&gt;
-</pre>
+```html
+<p class="normal">Un paragraphe normale.</p>
+<p class="italic">Un paragraphe italique.</p>
+<p class="oblique">Un paragraphe oblique.</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples')}}</p>
+{{EmbedLiveSample('Exemples')}}
 
-<div class="note">
-<p><strong>Note :</strong> Toutes les polices ne disposent pas nécessairement de formes pour <code>oblique</code> et <code>italic</code>, si ces formes sont absentes, le moteur simulera la forme absente à partir de celle qui est disponible. Voici un exemple du rendu d'une police qui dispose des différentes formes :</p>
+> **Note :** Toutes les polices ne disposent pas nécessairement de formes pour `oblique` et `italic`, si ces formes sont absentes, le moteur simulera la forme absente à partir de celle qui est disponible. Voici un exemple du rendu d'une police qui dispose des différentes formes :
+>
+> ![](screen_shot_2015-12-05_at_08.41.03.png)
 
-<p><img alt="" src="screen_shot_2015-12-05_at_08.41.03.png"></p>
-</div>
+## Accessibilité
 
-<h2 id="Accessibilité">Accessibilité</h2>
+L'utilisation de grandes portions de textes avec `font-style: italic` peut rendre la lecture difficile pour les personnes dyslexiques ou ayant des troubles cognitifs.
 
-<p>L'utilisation de grandes portions de textes avec <code>font-style: italic</code> peut rendre la lecture difficile pour les personnes dyslexiques ou ayant des troubles cognitifs.</p>
+- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [_Understanding Success Criterion 1.4.8  | W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/WCAG21/#visual-presentation)
 
-<ul>
- <li><a href="/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">Comprendre les règles WCAG 1.4</a></li>
- <li><a href="https://www.w3.org/TR/WCAG21/#visual-presentation"><em>Understanding Success Criterion 1.4.8  | W3C Understanding WCAG 2.0 </em>(en anglais)</a></li>
-</ul>
+## Spécific​ations
 
-<h2 id="Spécific​ations">Spécific​ations</h2>
+| Spécification                                                                                | État                             | Commentaires                                          |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------- |
+| {{SpecName('CSS4 Fonts', '#font-style-prop', 'font-style')}}             | {{Spec2('CSS4 Fonts')}} | Permet d'indiquer un angle après le mot-clé `oblique` |
+|                                                                                              |                                  |                                                       |
+| {{SpecName('CSS3 Fonts', '#font-style-prop', 'font-style')}}             | {{Spec2('CSS3 Fonts')}} | Aucune modification.                                  |
+| {{SpecName('CSS2.1', 'fonts.html#propdef-font-style', 'font-style')}} | {{Spec2('CSS2.1')}}         | Aucune modification.                                  |
+| {{SpecName('CSS1', '#font-style', 'font-style')}}                             | {{Spec2('CSS1')}}         | Définition initiale.                                  |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Fonts', '#font-style-prop', 'font-style')}}</td>
-   <td>{{Spec2('CSS4 Fonts')}}</td>
-   <td>Permet d'indiquer un angle après le mot-clé <code>oblique</code></td>
-  </tr>
-  <tr>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#font-style-prop', 'font-style')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>Aucune modification.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'fonts.html#propdef-font-style', 'font-style')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Aucune modification.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#font-style', 'font-style')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+{{cssinfo}}
 
-<p>{{cssinfo}}</p>
+## Compatibilité des navigateurs
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<p>{{Compat("css.properties.font-style")}}</p>
+{{Compat("css.properties.font-style")}}

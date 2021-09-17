@@ -7,17 +7,18 @@ tags:
   - Reference
 translation_of: Web/CSS/border-image-outset
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>border-image-outset</code></strong> définit la distance avec laquelle la bordure est déplacée par rapport à la boîte de bordure.</p>
+La propriété **`border-image-outset`** définit la distance avec laquelle la bordure est déplacée par rapport à la boîte de bordure.
 
-<div>{{EmbedInteractiveExample("pages/css/border-image-outset.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-image-outset.html")}}
 
-<p>Les fragments de l'image de bordure qui sont affichées en dehors de la boîte de bordure suite à l'utilisation de cette propriété n'entraîneront pas la création de barres de défilement. Ces zones ne capturent ni n'entraînent d'événements de pointeur par rapport à l'élément concerné.</p>
+Les fragments de l'image de bordure qui sont affichées en dehors de la boîte de bordure suite à l'utilisation de cette propriété n'entraîneront pas la création de barres de défilement. Ces zones ne capturent ni n'entraînent d'événements de pointeur par rapport à l'élément concerné.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* border-image-outset :                 */
+```css
+/* border-image-outset :                 */
 /* Une même valeur pour les quatre côtés */
 border-image-outset: 1.5;
 
@@ -43,68 +44,56 @@ border-image-outset: 7px 12px 14px 5px;
 border-image-outset: inherit;
 border-image-outset: initial;
 border-image-outset: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Une valeur de longueur (cf. type {{cssxref("&lt;length&gt;")}}) qui indique l'espace duquel on peut dépasser de la boîte de bordure. Les valeurs négatives ne sont pas autorisées.</dd>
- <dt><code>&lt;number&gt;</code></dt>
- <dd>Une valeur numérique (cf. type {{cssxref("&lt;number&gt;")}}) qui sera multipliée par la valeur calculée de {{cssxref("border-width")}} afin de déterminer la longueur de l'espace duquel dépasser.</dd>
-</dl>
+- `<length>`
+  - : Une valeur de longueur (cf. type {{cssxref("&lt;length&gt;")}}) qui indique l'espace duquel on peut dépasser de la boîte de bordure. Les valeurs négatives ne sont pas autorisées.
+- `<number>`
+  - : Une valeur numérique (cf. type {{cssxref("&lt;number&gt;")}}) qui sera multipliée par la valeur calculée de {{cssxref("border-width")}} afin de déterminer la longueur de l'espace duquel dépasser.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   border-image-source: url("https://mdn.mozillademos.org/files/10470/border.png");
   border-image-slice: 30;
   border-image-width: 20px;
   border-image-repeat: round;
   border-image-outset: 10px;
   padding: 40px;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+```html
+<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
   eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
   At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
   no sea takimata sanctus est Lorem ipsum dolor sit amet.
-&lt;/p&gt;
-</pre>
+</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', '480', '320')}}</p>
+{{EmbedLiveSample('Exemples', '480', '320')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-border-image-outset', 'border-image-outset')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                                     | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName('CSS3 Backgrounds', '#the-border-image-outset', 'border-image-outset')}} | {{Spec2('CSS3 Backgrounds')}} | Définition initiale. |
 
-<div>{{cssinfo}}</div>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.border-image-outset")}}</p>
+{{Compat("css.properties.border-image-outset")}}

@@ -7,41 +7,39 @@ tags:
   - Reference
 translation_of: Web/CSS/orphans
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>orphans</code></strong> définit le nombre <em>minimum</em> de lignes qui doivent rester en bas d'une <a href="/fr/docs/Web/CSS/M%C3%A9dia_pagin%C3%A9s">page</a>, d'une région ou d'une <a href="/fr/docs/Web/CSS/Colonnes_CSS">colonne</a> dans un conteneur de bloc.</p>
+La propriété **`orphans`** définit le nombre _minimum_ de lignes qui doivent rester en bas d'une [page](/fr/docs/Web/CSS/M%C3%A9dia_pagin%C3%A9s), d'une région ou d'une [colonne](/fr/docs/Web/CSS/Colonnes_CSS) dans un conteneur de bloc.
 
-<pre class="brush:css no-line-numbers">/* Valeur numérique entière */
+```css
+/* Valeur numérique entière */
 orphans: 3;
 
 /* Valeurs globales */
 orphans: inherit;
 orphans: initial;
 orphans: unset;
-</pre>
+```
 
-<div class="note">
-<p><strong>Note :</strong> En typographie, un orphelin (<em>orphan</em> en anglais) est la première ligne d'un paragraphe qui apparaît isolée en bas d'une page (le paragraphe poursuivant sur la page suivante).</p>
-</div>
+> **Note :** En typographie, un orphelin (_orphan_ en anglais) est la première ligne d'un paragraphe qui apparaît isolée en bas d'une page (le paragraphe poursuivant sur la page suivante).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;integer&gt;</code></dt>
- <dd>Seules les valeurs positives sont autorisées. Le nombre de lignes qu'on souhaite avoir au minimum avant une rupture.</dd>
-</dl>
+- `<integer>`
+  - : Seules les valeurs positives sont autorisées. Le nombre de lignes qu'on souhaite avoir au minimum avant une rupture.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class=exemple&gt;
+```html
+<p class=exemple>
   Tout en causant ainsi, Alice était entrée dans une petite chambre
   bien rangée, et, comme elle s’y attendait, sur une petite table
   dans l’embrasure de la fenêtre, elle vit un éventail et deux ou
@@ -60,53 +58,36 @@ orphans: unset;
   remit bien vite la bouteille sur la table en se disant : « En voilà
   assez ; j’espère ne pas grandir davantage. Je ne puis déjà plus
   passer par la porte. Oh ! je voudrais bien n’avoir pas tant bu ! »
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.exemple {
+```css
+.exemple {
   orphans: 4;
   columns: 3;
 }
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples","600","500")}}</p>
+{{EmbedLiveSample("Exemples","600","500")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fragmentation', '#widows-orphans', 'orphans')}}</td>
-   <td>{{Spec2('CSS3 Fragmentation')}}</td>
-   <td>La propriété <code>orphans</code> est étendue pour s'appliquer à n'importe quel fragment comme les pages, les régions ou les colonnes.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'page.html#break-inside', 'orphans')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                                     | Commentaires                                                                                                                |
+| ------------------------------------------------------------------------------------ | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS3 Fragmentation', '#widows-orphans', 'orphans')}} | {{Spec2('CSS3 Fragmentation')}} | La propriété `orphans` est étendue pour s'appliquer à n'importe quel fragment comme les pages, les régions ou les colonnes. |
+| {{SpecName('CSS2.1', 'page.html#break-inside', 'orphans')}}     | {{Spec2('CSS2.1')}}                 | Définition initiale.                                                                                                        |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.orphans")}}</p>
+{{Compat("css.properties.orphans")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("widows")}}</li>
- <li><a href="/fr/docs/Web/CSS/Média_paginés">Média paginés</a></li>
-</ul>
+- {{cssxref("widows")}}
+- [Média paginés](/fr/docs/Web/CSS/Média_paginés)

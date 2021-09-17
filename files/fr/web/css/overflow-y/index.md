@@ -7,19 +7,18 @@ tags:
   - Reference
 translation_of: Web/CSS/overflow-y
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>overflow-y</code></strong> permet de définir les mécanismes à utiliser (rognage, ascenseurs, dépassement, etc.) lorsque le contenu dépasse des bords haut et bas de la boîte.</p>
+La propriété **`overflow-y`** permet de définir les mécanismes à utiliser (rognage, ascenseurs, dépassement, etc.) lorsque le contenu dépasse des bords haut et bas de la boîte.
 
-<div class="note">
-<p><strong>Note :</strong> Si {{cssxref("overflow-x")}} vaut <code>hidden</code>, <code>scroll</code> ou <code>auto</code> et que cette propriété vaut <code>visible</code> (la valeur par défaut), la valeur calculée sera implicitement <code>auto</code>.</p>
-</div>
+> **Note :** Si {{cssxref("overflow-x")}} vaut `hidden`, `scroll` ou `auto` et que cette propriété vaut `visible` (la valeur par défaut), la valeur calculée sera implicitement `auto`.
 
-<div>{{EmbedInteractiveExample("pages/css/overflow-y.html")}}</div>
+{{EmbedInteractiveExample("pages/css/overflow-y.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css  no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 overflow-y: visible;
 overflow-y: hidden;
 overflow-y: scroll;
@@ -29,62 +28,61 @@ overflow-y: auto;
 overflow-y: inherit;
 overflow-y: initial;
 overflow-y: unset;
-</pre>
+```
 
-<p>La propriété <code>overflow-y</code> est définie avec un des mots-clés définis ci-après.</p>
+La propriété `overflow-y` est définie avec un des mots-clés définis ci-après.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>visible</code></dt>
- <dd>Le contenu n'est pas rogné. Il peut être affiché en dehors de la boîte de remplissage (<em>padding</em>) en haut et en bas malgré le manque d'espace.</dd>
- <dt><code>hidden</code></dt>
- <dd>Le contenu est rogné afin de tenir verticalement dans la boîte de remplissage (<em>padding</em>) et aucun ascenseur vertical n'est affiché.</dd>
- <dt><code>scroll</code></dt>
- <dd>Le contenu est rogné afin de tenir verticalement au sein de la boîte de remplissage (<em>padding</em>) et le navigateur affiche des barres de défilement (ascenseurs) dans tous les cas. Cela permet d'éviter d'avoir des barres qui apparaissent / disparaissent dans un environnement dynamique. Les imprimantes peuvent imprimer le contenu qui dépasse.</dd>
- <dt><code>auto</code></dt>
- <dd>Le comportement dépend de l'agent utilisateur. Les navigateurs de bureau comme Firefox peuvent afficher des barres de défilement si le contenu dépasse.</dd>
-</dl>
+- `visible`
+  - : Le contenu n'est pas rogné. Il peut être affiché en dehors de la boîte de remplissage (_padding_) en haut et en bas malgré le manque d'espace.
+- `hidden`
+  - : Le contenu est rogné afin de tenir verticalement dans la boîte de remplissage (_padding_) et aucun ascenseur vertical n'est affiché.
+- `scroll`
+  - : Le contenu est rogné afin de tenir verticalement au sein de la boîte de remplissage (_padding_) et le navigateur affiche des barres de défilement (ascenseurs) dans tous les cas. Cela permet d'éviter d'avoir des barres qui apparaissent / disparaissent dans un environnement dynamique. Les imprimantes peuvent imprimer le contenu qui dépasse.
+- `auto`
+  - : Le comportement dépend de l'agent utilisateur. Les navigateurs de bureau comme Firefox peuvent afficher des barres de défilement si le contenu dépasse.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;overflow-y:hidden&lt;/code&gt; — cache le texte en dehors de la boîte
-  &lt;div id="div1"&gt;
+```html
+<ul>
+  <li><code>overflow-y:hidden</code> — cache le texte en dehors de la boîte
+  <div id="div1">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    &lt;/div&gt;
-  &lt;/li&gt;
+    </div>
+  </li>
 
-  &lt;li&gt;&lt;code&gt;overflow-y:scroll&lt;/code&gt; — ajoute toujours un ascenseur
-  &lt;div id="div2"&gt;
+  <li><code>overflow-y:scroll</code> — ajoute toujours un ascenseur
+  <div id="div2">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    &lt;/div&gt;
-  &lt;/li&gt;
+    </div>
+  </li>
 
-  &lt;li&gt;&lt;code&gt;overflow-y:visible&lt;/code&gt; — affiche le texte en dehors de la boîte si besoin
-  &lt;div id="div3"&gt;
+  <li><code>overflow-y:visible</code> — affiche le texte en dehors de la boîte si besoin
+  <div id="div3">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    &lt;/div&gt;
-  &lt;/li&gt;
+    </div>
+  </li>
 
-  &lt;li&gt;&lt;code&gt;overflow-y:auto&lt;/code&gt; — sur la plupart des navigateurs, cela sera équivalent à &lt;code&gt;scroll&lt;/code&gt;
-  &lt;div id="div4"&gt;
+  <li><code>overflow-y:auto</code> — sur la plupart des navigateurs, cela sera équivalent à <code>scroll</code>
+  <div id="div4">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    &lt;/div&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+    </div>
+  </li>
+</ul>
+```
 
-</pre>
+### CSS
 
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">#div1, #div2, #div3,#div4 {
+```css
+#div1, #div2, #div3,#div4 {
   border: 1px solid black;
   width:  250px;
   height: 100px;
@@ -109,44 +107,29 @@ overflow-y: unset;
   overflow-y: auto;
   margin-bottom: 120px;
 }
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", "100%", "780")}}</p>
+{{EmbedLiveSample("Exemples", "100%", "780")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Overflow', '#propdef-overflow-y', 'overflow-y')}}</td>
-   <td>{{Spec2('CSS3 Overflow')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                                 | Commentaires |
+| ---------------------------------------------------------------------------------------- | ------------------------------------ | ------------ |
+| {{SpecName('CSS3 Overflow', '#propdef-overflow-y', 'overflow-y')}} | {{Spec2('CSS3 Overflow')}} |              |
 
-<div>{{cssinfo}}</div>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.overflow-y")}}</p>
+{{Compat("css.properties.overflow-y")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("text-overflow")}}</li>
- <li>{{cssxref("white-space")}}</li>
- <li>{{cssxref("overflow")}}</li>
- <li>{{cssxref("overflow-x")}}</li>
- <li>{{cssxref("clip")}}</li>
- <li>{{cssxref("display")}}</li>
-</ul>
+- {{cssxref("text-overflow")}}
+- {{cssxref("white-space")}}
+- {{cssxref("overflow")}}
+- {{cssxref("overflow-x")}}
+- {{cssxref("clip")}}
+- {{cssxref("display")}}

@@ -7,21 +7,20 @@ tags:
   - Reference
 translation_of: Web/CSS/hyphens
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>hyphens</code></strong> indique au navigateur comment gérer les traits d'union lors des sauts de ligne. Grâce à elle, on peut empêcher l'utilisation des traits d'union en fin de ligne, contrôler quand ils sont ajoutés ou laisser le navigateur décider.</p>
+La propriété **`hyphens`** indique au navigateur comment gérer les traits d'union lors des sauts de ligne. Grâce à elle, on peut empêcher l'utilisation des traits d'union en fin de ligne, contrôler quand ils sont ajoutés ou laisser le navigateur décider.
 
-<div>{{EmbedInteractiveExample("pages/css/hyphens.html")}}</div>
+{{EmbedInteractiveExample("pages/css/hyphens.html")}}
 
-<p>Les règles relatives aux traits d'union en fin de ligne dépendent de la langue utilisée. En HTML, la langue est définie grâce à l'attribut <code><a href="/fr/docs/Web/HTML/Global_attributes/lang">lang</a></code> et les navigateurs n'appliqueront les règles que si cet attribut est présent et que le dictionnaire correspondant (pour la gestion des traits d'union et des fins de ligne) est disponible. Pour des documents XML, on utilisera l'attribut <code><a href="/fr/docs/Web/SVG/Attribute/xml:lang">xml:lang</a></code>.</p>
+Les règles relatives aux traits d'union en fin de ligne dépendent de la langue utilisée. En HTML, la langue est définie grâce à l'attribut [`lang`](/fr/docs/Web/HTML/Global_attributes/lang) et les navigateurs n'appliqueront les règles que si cet attribut est présent et que le dictionnaire correspondant (pour la gestion des traits d'union et des fins de ligne) est disponible. Pour des documents XML, on utilisera l'attribut [`xml:lang`](/fr/docs/Web/SVG/Attribute/xml:lang).
 
-<div class="note">
-  <p><strong>Note :</strong> Les règles exactes qui définissent l'application des traits d'union en fin de ligne ne sont pas explicitement définies par la spécification, aussi, le comportement peut varier entre les navigateurs.</p>
-</div>
+> **Note :** Les règles exactes qui définissent l'application des traits d'union en fin de ligne ne sont pas explicitement définies par la spécification, aussi, le comportement peut varier entre les navigateurs.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 hyphens: none;
 hyphens: manual;
 hyphens: auto;
@@ -30,45 +29,40 @@ hyphens: auto;
 hyphens: inherit;
 hyphens: initial;
 hyphens: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Les mots ne sont pas coupés en fin de ligne et ce même si les caractères invitent à une coupe. Les lignes se termineront uniquement sur des blancs.</dd>
- <dt><code>manual</code></dt>
- <dd>Les mots sont coupés là où des caractères invitant à un saut de ligne sont présents. Voir la section suivante pour plus de détails.</dd>
- <dt><code>auto</code></dt>
- <dd>Le navigateur est libre de couper les mots là où il l'estime approprié selon les règles qu'il choisit. Les emplacements de coupe suggérés par certains caractères devraient être privilégiés par rapport aux coupes automatiques.</dd>
-</dl>
+- `none`
+  - : Les mots ne sont pas coupés en fin de ligne et ce même si les caractères invitent à une coupe. Les lignes se termineront uniquement sur des blancs.
+- `manual`
+  - : Les mots sont coupés là où des caractères invitant à un saut de ligne sont présents. Voir la section suivante pour plus de détails.
+- `auto`
+  - : Le navigateur est libre de couper les mots là où il l'estime approprié selon les règles qu'il choisit. Les emplacements de coupe suggérés par certains caractères devraient être privilégiés par rapport aux coupes automatiques.
 
-<div class="note">
-  <p><strong>Note :</strong> Le comportement défini par <code>auto</code> dépend de la langue indiquée par le document. Aussi, il faut indiquer la langue via l'attribut HTML <code>lang</code> pour s'assurer que les fins de ligne et les traits d'union sont bien gérés selon la langue indiquée.</p>
-</div>
+> **Note :** Le comportement défini par `auto` dépend de la langue indiquée par le document. Aussi, il faut indiquer la langue via l'attribut HTML `lang` pour s'assurer que les fins de ligne et les traits d'union sont bien gérés selon la langue indiquée.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Suggérer_des_emplacements_de_coupe_pour_les_lignes">Suggérer des emplacements de coupe pour les lignes</h2>
+## Suggérer des emplacements de coupe pour les lignes
 
-<p>Deux caractères Unicode peuvent être utilisés manuellement pour indiquer des emplacement où effectuer des sauts de ligne :</p>
+Deux caractères Unicode peuvent être utilisés manuellement pour indiquer des emplacement où effectuer des sauts de ligne :
 
-<dl>
- <dt>U+2010 (HYPHEN)</dt>
- <dd>Un trait d'union « dur » qui indique un emplacement indiqué pour un saut de ligne. Même si la ligne n'est pas coupée à cet endroit, le trait d'union est affiché.</dd>
- <dt>U+00AD (SOFT HYPHEN)</dt>
- <dd>Un trait d'union « doux ». Ce caractère n'est pas affichée de façon visible. Il indique au navigateur un emplacement où effectuer le saut de ligne si nécessaire. En HTML, on peut utiliser l'entité <code>&amp;shy;</code> pour insérer ce caractère.</dd>
-</dl>
+- U+2010 (HYPHEN)
+  - : Un trait d'union « dur » qui indique un emplacement indiqué pour un saut de ligne. Même si la ligne n'est pas coupée à cet endroit, le trait d'union est affiché.
+- U+00AD (SOFT HYPHEN)
+  - : Un trait d'union « doux ». Ce caractère n'est pas affichée de façon visible. Il indique au navigateur un emplacement où effectuer le saut de ligne si nécessaire. En HTML, on peut utiliser l'entité `&shy;` pour insérer ce caractère.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans cet exemple, on crée trois classes CSS pour illustrer chacune des configurations possibles pour la propriété <code>hyphens</code>.</p>
+Dans cet exemple, on crée trois classes CSS pour illustrer chacune des configurations possibles pour la propriété `hyphens`.
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   width: 55px;
   border: 1px solid black;
  }
@@ -86,54 +80,41 @@ p.auto {
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;&lt;code&gt;none&lt;/code&gt;: aucun trait d'union, dépassement si nécessaire
-    &lt;p lang="en" class="none"&gt;An extreme&amp;shy;ly long English word&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;manual&lt;/code&gt;: un trait d'union uniquement à &amp;amp;hyphen; ou &amp;amp;shy; (si nécessaire)
-    &lt;p lang="en" class="manual"&gt;An extreme&amp;shy;ly long English word&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;code&gt;auto&lt;/code&gt;: un trait d'union où l'algorithme l'estime nécessaire
-    &lt;p lang="en" class="auto"&gt;An extreme&amp;shy;ly long English word&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-</pre>
-
-<h3 id="Résultat">Résultat</h3>
-
-<p>{{EmbedLiveSample("Exemples", "100%", "490'")}}</p>
-
-<h2 id="Spécifications">Spécifications</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Text", "#hyphens-property", "hyphens")}}</td>
-   <td>{{Spec2("CSS3 Text")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
-
-<p>{{cssinfo}}</p>
-
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<p>{{Compat("css.properties.hyphens")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
+```html
 <ul>
- <li>{{cssxref("content")}}</li>
+  <li><code>none</code>: aucun trait d'union, dépassement si nécessaire
+    <p lang="en" class="none">An extreme&shy;ly long English word</p>
+  </li>
+  <li><code>manual</code>: un trait d'union uniquement à &amp;hyphen; ou &amp;shy; (si nécessaire)
+    <p lang="en" class="manual">An extreme&shy;ly long English word</p>
+  </li>
+  <li><code>auto</code>: un trait d'union où l'algorithme l'estime nécessaire
+    <p lang="en" class="auto">An extreme&shy;ly long English word</p>
+  </li>
 </ul>
+```
+
+### Résultat
+
+{{EmbedLiveSample("Exemples", "100%", "490'")}}
+
+## Spécifications
+
+| Spécification                                                                | État                         | Commentaires         |
+| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName("CSS3 Text", "#hyphens-property", "hyphens")}} | {{Spec2("CSS3 Text")}} | Définition initiale. |
+
+{{cssinfo}}
+
+## Compatibilité des navigateurs
+
+{{Compat("css.properties.hyphens")}}
+
+## Voir aussi
+
+- {{cssxref("content")}}

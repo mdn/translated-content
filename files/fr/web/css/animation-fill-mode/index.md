@@ -7,15 +7,16 @@ tags:
   - Reference
 translation_of: Web/CSS/animation-fill-mode
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>animation-fill-mode</code></strong> indique la façon dont une animation CSS doit appliquer les styles à sa cible avant et après son exécution.</p>
+La propriété **`animation-fill-mode`** indique la façon dont une animation CSS doit appliquer les styles à sa cible avant et après son exécution.
 
-<div>{{EmbedInteractiveExample("pages/css/animation-fill-mode.html")}}</div>
+{{EmbedInteractiveExample("pages/css/animation-fill-mode.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:  css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 animation-fill-mode: none;
 animation-fill-mode: forwards;
 animation-fill-mode: backwards;
@@ -24,95 +25,49 @@ animation-fill-mode: both;
 /* Gestion de plusieurs animations */
 animation-fill-mode: none, backwards;
 animation-fill-mode: both, forwards, none;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>none</code></dt>
- <dd>L'animation n'appliquera aucun style à la cible, avant et après l'exécution. Le style utilisé sera celui défini par les autres règles CSS.</dd>
- <dt><code>forwards</code></dt>
- <dd>La cible retiendra les valeurs calculées définies lors de la dernière étape (<em>keyframe</em>). La dernière étape considérée dépend de la valeur de {{cssxref("animation-direction")}} et de {{cssxref("animation-iteration-count")}} :
- <table class="standard-table">
-  <thead>
-   <tr>
-    <th scope="col"><code>animation-direction</code></th>
-    <th scope="col"><code>animation-iteration-count</code></th>
-    <th scope="col">dernière <em>keyframe</em></th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>normal</code></td>
-    <td>pair ou impair</td>
-    <td><code>100%</code> ou <code>to</code></td>
-   </tr>
-   <tr>
-    <td><code>reverse</code></td>
-    <td>pair ou impair</td>
-    <td><code>0%</code> ou <code>from</code></td>
-   </tr>
-   <tr>
-    <td><code>alternate</code></td>
-    <td>pair</td>
-    <td><code>0%</code> ou <code>from</code></td>
-   </tr>
-   <tr>
-    <td><code>alternate</code></td>
-    <td>impair</td>
-    <td><code>100%</code> ou <code>to</code></td>
-   </tr>
-   <tr>
-    <td><code>alternate-reverse</code></td>
-    <td>pair</td>
-    <td><code>100%</code> ou <code>to</code></td>
-   </tr>
-   <tr>
-    <td><code>alternate-reverse</code></td>
-    <td>impair</td>
-    <td><code>0%</code> ou <code>from</code></td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt><code>backwards</code></dt>
- <dd>L'animation appliquera les valeur définies par la première <em>keyframe</em> pertinente et les retiendra pendant la durée indiquée par {{cssxref("animation-delay")}}. La première <em>keyframe</em> pertinente dépend de la valeur de {{cssxref("animation-direction")}} :
- <table class="standard-table">
-  <thead>
-   <tr>
-    <th scope="col"><code>animation-direction</code></th>
-    <th scope="col">première <em>keyframe</em></th>
-   </tr>
-  </thead>
-  <tbody>
-   <tr>
-    <td><code>normal</code> ou <code>alternate</code></td>
-    <td><code>0%</code> ou <code>from</code></td>
-   </tr>
-   <tr>
-    <td><code>reverse</code> ou <code>alternate-reverse</code></td>
-    <td><code>100%</code> ou <code>to</code></td>
-   </tr>
-  </tbody>
- </table>
- </dd>
- <dt><code>both</code></dt>
- <dd>L'animation respectera les règles qui s'appliquent à <code>forwards</code> et <code>backwards</code>, entraînant ainsi l'extension des propriétés de l'animation dans les deux directions.</dd>
-</dl>
+- `none`
+  - : L'animation n'appliquera aucun style à la cible, avant et après l'exécution. Le style utilisé sera celui défini par les autres règles CSS.
+- `forwards`
 
-<div class="note">
-<p><strong>Note :</strong> Lorsqu'on utiliser plusieurs valeurs, séparées par des virgules, pour une propriété <code>animation-*</code>, selon leur quantité, elles seront différemment affectées aux animations définies par {{cssxref("animation-name")}}. Pour plus d'informations, voir : paramétrer <a href="/fr/docs/Web/CSS/Animations_CSS/Utiliser_les_animations_CSS">les valeurs des propriétés pour plusieurs animations</a>.</p>
-</div>
+  - : La cible retiendra les valeurs calculées définies lors de la dernière étape (_keyframe_). La dernière étape considérée dépend de la valeur de {{cssxref("animation-direction")}} et de {{cssxref("animation-iteration-count")}} :
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+    | `animation-direction` | `animation-iteration-count` | dernière _keyframe_ |
+    | --------------------- | --------------------------- | ------------------- |
+    | `normal`              | pair ou impair              | `100%` ou `to`      |
+    | `reverse`             | pair ou impair              | `0%` ou `from`      |
+    | `alternate`           | pair                        | `0%` ou `from`      |
+    | `alternate`           | impair                      | `100%` ou `to`      |
+    | `alternate-reverse`   | pair                        | `100%` ou `to`      |
+    | `alternate-reverse`   | impair                      | `0%` ou `from`      |
+
+- `backwards`
+
+  - : L'animation appliquera les valeur définies par la première _keyframe_ pertinente et les retiendra pendant la durée indiquée par {{cssxref("animation-delay")}}. La première _keyframe_ pertinente dépend de la valeur de {{cssxref("animation-direction")}} :
+
+    | `animation-direction`            | première _keyframe_ |
+    | -------------------------------- | ------------------- |
+    | `normal` ou `alternate`          | `0%` ou `from`      |
+    | `reverse` ou `alternate-reverse` | `100%` ou `to`      |
+
+- `both`
+  - : L'animation respectera les règles qui s'appliquent à `forwards` et `backwards`, entraînant ainsi l'extension des propriétés de l'animation dans les deux directions.
+
+> **Note :** Lorsqu'on utiliser plusieurs valeurs, séparées par des virgules, pour une propriété `animation-*`, selon leur quantité, elles seront différemment affectées aux animations définies par {{cssxref("animation-name")}}. Pour plus d'informations, voir : paramétrer [les valeurs des propriétés pour plusieurs animations](/fr/docs/Web/CSS/Animations_CSS/Utiliser_les_animations_CSS).
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.demo {
+```css
+.demo {
   border-top: 100px solid #ccc;
   height: 300px;
   font-family: sans-serif;
@@ -138,48 +93,36 @@ animation-fill-mode: both, forwards, none;
     -webkit-animation-name: grow;
     -webkit-animation-duration: 3s;
     -webkit-animation-fill-mode: forwards;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Déplacez votre souris sur la boîte grise.&lt;/p&gt;
-&lt;div class="demo"&gt;
-  &lt;div class="growsandstays"&gt;La boîte grandit et s'arrête&lt;/div&gt;
-  &lt;div class="grows"&gt;La boîte grandit&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<p>Déplacez votre souris sur la boîte grise.</p>
+<div class="demo">
+  <div class="growsandstays">La boîte grandit et s'arrête</div>
+  <div class="grows">La boîte grandit</div>
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples',700,300)}}</p>
+{{EmbedLiveSample('Exemples',700,300)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Animations', '#animation-fill-mode', 'animation-fill-mode')}}</td>
-   <td>{{Spec2('CSS3 Animations')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | État                                 | Commentaires         |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName('CSS3 Animations', '#animation-fill-mode', 'animation-fill-mode')}} | {{Spec2('CSS3 Animations')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.animation-fill-mode")}}</p>
+{{Compat("css.properties.animation-fill-mode")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Animations/Utiliser_les_animations_CSS">Manipuler les animations CSS</a></li>
- <li>{{domxref("AnimationEvent", "AnimationEvent")}}</li>
-</ul>
+- [Manipuler les animations CSS](/fr/docs/Web/CSS/CSS_Animations/Utiliser_les_animations_CSS)
+- {{domxref("AnimationEvent", "AnimationEvent")}}

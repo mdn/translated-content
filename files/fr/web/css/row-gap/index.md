@@ -7,94 +7,96 @@ tags:
   - Reference
 translation_of: Web/CSS/row-gap
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>row-gap</code></strong> définit la taille des gouttières entre les lignes d'un élément.</p>
+La propriété **`row-gap`** définit la taille des gouttières entre les lignes d'un élément.
 
-<div>{{EmbedInteractiveExample("pages/css/grid-row-gap.html")}}</div>
+{{EmbedInteractiveExample("pages/css/grid-row-gap.html")}}
 
-<div class="note">
-<p><strong>Note :</strong> La propriété {{cssxref("grid-row-gap")}} a d'abord été définie avec le module de spécification <a href="/fr/docs/Web/CSS/CSS_Grid_Layout">CSS Grid Layout</a>. Cette propriété préfixée a ensuite été remplacée par <code>row-gap</code> dans le module <a href="/fr/docs/Web/CSS/CSS_Box_Alignment">CSS Alignment</a> afin d'être généralisée à d'autres modes de disposition. Toutefois, à des fins de compatibilité envers les navigateurs qui n'implémentent pas encore la version non-préfixée, mieux vaut utiliser les deux versions.</p>
-</div>
+> **Note :** La propriété {{cssxref("grid-row-gap")}} a d'abord été définie avec le module de spécification [CSS Grid Layout](/fr/docs/Web/CSS/CSS_Grid_Layout). Cette propriété préfixée a ensuite été remplacée par `row-gap` dans le module [CSS Alignment](/fr/docs/Web/CSS/CSS_Box_Alignment) afin d'être généralisée à d'autres modes de disposition. Toutefois, à des fins de compatibilité envers les navigateurs qui n'implémentent pas encore la version non-préfixée, mieux vaut utiliser les deux versions.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css no-line-numbers">/* Valeurs de longueur */
-/* Type &lt;largeur&gt;      */
+```css
+/* Valeurs de longueur */
+/* Type <largeur>      */
 row-gap: 20px;
 row-gap: 1em;
 row-gap: 3vmin;
 row-gap: 0.5cm;
 
 /* Valeurs proportionnelles */
-/* Type &lt;pourcentage&gt; */
+/* Type <pourcentage> */
 row-gap: 10%;
 
 /* Valeurs globales */
 row-gap: inherit;
 row-gap: initial;
 row-gap: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;pourcentage-largeur&gt;</code></dt>
- <dd>La largeur de la « gouttière » placée entre les lignes de la grille. Les valeurs exprimées en pourcentages sont relatives aux dimensions de l'élément.</dd>
-</dl>
+- `<pourcentage-largeur>`
+  - : La largeur de la « gouttière » placée entre les lignes de la grille. Les valeurs exprimées en pourcentages sont relatives aux dimensions de l'élément.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Disposition_flexible">Disposition flexible</h3>
+### Disposition flexible
 
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">#flexbox {
+```css
+#flexbox {
   display: flex;
   flex-wrap: wrap;
   width: 300px;
   row-gap: 20px;
 }
 
-#flexbox &gt; div {
+#flexbox > div {
   background-color: lime;
   flex: 1 1 auto;
   width: 100px;
   height: 50px;
-}</pre>
+}
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="flexbox"&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div id="flexbox">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('Disposition_flexible', "auto", "120px")}}</p>
+{{EmbedLiveSample('Disposition_flexible', "auto", "120px")}}
 
-<h3 id="Disposition_sur_une_grille">Disposition sur une grille</h3>
+### Disposition sur une grille
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css hidden">#grid {
+```css hidden
+#grid {
   grid-row-gap: 20px;
 }
-</pre>
+```
 
-<pre class="brush: css">#grid {
+```css
+#grid {
   display: grid;
   height: 200px;
   grid-template-columns: 200px;
@@ -102,62 +104,49 @@ row-gap: unset;
   row-gap: 20px;
 }
 
-#grid &gt; div {
+#grid > div {
   background-color: lime;
-}</pre>
+}
+```
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="grid"&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-  &lt;div&gt;&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div id="grid">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+```
 
-<h4 id="Résultat_2">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('Disposition_sur_une_grille', 'auto', 120)}}</p>
+{{EmbedLiveSample('Disposition_sur_une_grille', 'auto', 120)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Box Alignment", "#propdef-row-gap", "row-gap")}}</td>
-   <td>{{Spec2("CSS3 Box Alignment")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                                     | Commentaires         |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName("CSS3 Box Alignment", "#propdef-row-gap", "row-gap")}} | {{Spec2("CSS3 Box Alignment")}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<h3 id="Prise_en_charge_pour_les_dispositions_flexibles">Prise en charge pour les dispositions flexibles</h3>
+### Prise en charge pour les dispositions flexibles
 
-<p>{{Compat("css.properties.row-gap.flex_context")}}</p>
+{{Compat("css.properties.row-gap.flex_context")}}
 
-<h3 id="Prise_en_charge_pour_les_grilles">Prise en charge pour les grilles</h3>
+### Prise en charge pour les grilles
 
-<p>{{Compat("css.properties.row-gap.grid_context")}}</p>
+{{Compat("css.properties.row-gap.grid_context")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Les versions sans préfixe des propriétés :
-  <ul>
-   <li>{{cssxref("column-gap")}}</li>
-   <li>{{cssxref("gap")}}</li>
-  </ul>
- </li>
- <li><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base#Les_gouttières">Guide : les concepts de base : les gouttières</a></li>
- <li><a href="/fr/docs/Web/CSS/Disposition_flexbox_CSS/Concepts_de_base_flexbox">Guide : les concepts de base des boîtes flexibles (flexbox)</a></li>
-</ul>
+- Les versions sans préfixe des propriétés :
+
+  - {{cssxref("column-gap")}}
+  - {{cssxref("gap")}}
+
+- [Guide : les concepts de base : les gouttières](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base#Les_gouttières)
+- [Guide : les concepts de base des boîtes flexibles (flexbox)](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Concepts_de_base_flexbox)

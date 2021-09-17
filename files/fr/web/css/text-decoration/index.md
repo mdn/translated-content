@@ -8,21 +8,18 @@ tags:
   - Reference
 translation_of: Web/CSS/text-decoration
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>text-decoration</code></strong> est utilisée pour « décorer » le texte en ajoutant une ligne pouvant être positionnée sous, sur ou à travers le texte. C'est une <a href="/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies">propriété raccourcie</a> qui permet de paramétrer simultanément les propriétés « détaillées » : {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}} et {{cssxref("text-decoration-style")}}.</p>
+La propriété **`text-decoration`** est utilisée pour « décorer » le texte en ajoutant une ligne pouvant être positionnée sous, sur ou à travers le texte. C'est une [propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) qui permet de paramétrer simultanément les propriétés « détaillées » : {{cssxref("text-decoration-line")}}, {{cssxref("text-decoration-color")}} et {{cssxref("text-decoration-style")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/text-decoration.html")}}</div
+{{EmbedInteractiveExample("pages/css/text-decoration.html")}}Ces décorations se propagent sur les différents éléments enfants. Cela signifie qu'il n'est pas possible de désactiver la décoration d'un élément descendant pour lequel un ancêtre est décoré. Par exemple, avec ce fragment de HTML `<p>Ce texte a <em> des mots mis en avant</em> dedans.</p>`, et cette règle CSS `p { text-decoration: underline; }`, on aura tout le  paragraphe souligné, même si on applique la règle `em { text-decoration: none; }`, cela n'aurait aucun impact. En revanche, ajouter la règle `em { text-decoration: overline; }` entraînerait un cumul des décorations pour « des mots mis en avant ».
 
-<p>Ces décorations se propagent sur les différents éléments enfants. Cela signifie qu'il n'est pas possible de désactiver la décoration d'un élément descendant pour lequel un ancêtre est décoré. Par exemple, avec ce fragment de HTML <code>&lt;p&gt;Ce texte a &lt;em&gt; des mots mis en avant&lt;/em&gt; dedans.&lt;/p&gt;</code>, et cette règle CSS <code>p { text-decoration: underline; }</code>, on aura tout le  paragraphe souligné, même si on applique la règle <code>em { text-decoration: none; }</code>, cela n'aurait aucun impact. En revanche, ajouter la règle <code>em { text-decoration: overline; }</code> entraînerait un cumul des décorations pour « des mots mis en avant ».</p>
+> **Note :** La spécification CSS Text Decoration de niveau 3 indique que cette propriété est une propriété raccourcie pour les trois propriétés {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}} et {{cssxref("text-decoration-style")}}. Comme pour les autres propriétés raccourcies, cela signifie que la valeur de chaque « sous-propriété » est réinitialisée avec sa valeur par défaut si elle n'est pas explicitement définie dans la propriété raccourcie.
 
-<div class="note">
-<p><strong>Note :</strong> La spécification CSS Text Decoration de niveau 3 indique que cette propriété est une propriété raccourcie pour les trois propriétés {{cssxref("text-decoration-color")}}, {{cssxref("text-decoration-line")}} et {{cssxref("text-decoration-style")}}. Comme pour les autres propriétés raccourcies, cela signifie que la valeur de chaque « sous-propriété » est réinitialisée avec sa valeur par défaut si elle n'est pas explicitement définie dans la propriété raccourcie.</p>
-</div>
+## Syntaxe
 
-<h2 id="Syntaxe">Syntaxe</h2>
-
-<pre class="brush: css no-line-numbers">/* Valeurs avec mots-clés */
+```css
+/* Valeurs avec mots-clés */
 text-decoration: none;                 /* Aucune décoration */
 text-decoration: underline red;        /* On souligne en rouge */
 text-decoration: underline wavy red;   /* On souligne en rouge avec */
@@ -32,28 +29,27 @@ text-decoration: underline wavy red;   /* On souligne en rouge avec */
 text-decoration: inherit;
 text-decoration: initial;
 text-decoration: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt>{{cssxref("text-decoration-line")}}</dt>
- <dd>Cette valeur indique le type de décoration utilisée.</dd>
- <dt>{{cssxref("text-decoration-color")}}</dt>
- <dd>Cette valeur indique la couleur de la décoration utilisée.</dd>
- <dt>{{cssxref("text-decoration-style")}}</dt>
- <dd>Cette valeur indique le style à utiliser pour la décoration.</dd>
-</dl>
+- {{cssxref("text-decoration-line")}}
+  - : Cette valeur indique le type de décoration utilisée.
+- {{cssxref("text-decoration-color")}}
+  - : Cette valeur indique la couleur de la décoration utilisée.
+- {{cssxref("text-decoration-style")}}
+  - : Cette valeur indique le style à utiliser pour la décoration.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.under {
+```css
+.under {
   text-decoration: underline red;
 }
 
@@ -76,69 +72,45 @@ text-decoration: unset;
 .blink {
   text-decoration: blink;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="under"&gt;Ce texte a une ligne en dessous.&lt;/p&gt;
-&lt;p class="over"&gt;Ce texte a une ligne au dessus.&lt;/p&gt;
-&lt;p class="line"&gt;Ce texte est barré d'une ligne.&lt;/p&gt;
-&lt;p&gt;Ce &lt;a class="plain" href="#"&gt;lien ne sera pas souligné&lt;/a&gt;,
+```html
+<p class="under">Ce texte a une ligne en dessous.</p>
+<p class="over">Ce texte a une ligne au dessus.</p>
+<p class="line">Ce texte est barré d'une ligne.</p>
+<p>Ce <a class="plain" href="#">lien ne sera pas souligné</a>,
     comme les liens le sont normalement. Attention à ces décorations
     sur les ancres cars le soulignement sert souvent d'indication pour
-    un hyperlien.&lt;/p&gt;
-&lt;p class="underover"&gt;Ce texte a des lignes en dessous et au dessus.&lt;/p&gt;
-&lt;p class="blink"&gt;Ce texte peut clignoter selon le navigateur utilisé.&lt;/p&gt;
-</pre>
+    un hyperlien.</p>
+<p class="underover">Ce texte a des lignes en dessous et au dessus.</p>
+<p class="blink">Ce texte peut clignoter selon le navigateur utilisé.</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples','auto','280')}}</p>
+{{EmbedLiveSample('Exemples','auto','280')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Text Decoration', '#text-decoration-property', 'text-decoration')}}</td>
-   <td>{{Spec2('CSS3 Text Decoration')}}</td>
-   <td>Transformée comme une propriété raccourcie. Ajout du support pour la valeur de {{cssxref('text-decoration-style')}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'text.html#lining-striking-props', 'text-decoration')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Pas de changement significatif.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#text-decoration', 'text-decoration')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                                         | Commentaires                                                                                                                     |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS3 Text Decoration', '#text-decoration-property', 'text-decoration')}} | {{Spec2('CSS3 Text Decoration')}} | Transformée comme une propriété raccourcie. Ajout du support pour la valeur de {{cssxref('text-decoration-style')}}. |
+| {{SpecName('CSS2.1', 'text.html#lining-striking-props', 'text-decoration')}}             | {{Spec2('CSS2.1')}}                     | Pas de changement significatif.                                                                                                  |
+| {{SpecName('CSS1', '#text-decoration', 'text-decoration')}}                                 | {{Spec2('CSS1')}}                     | Définition initiale.                                                                                                             |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.text-decoration")}}</p>
+{{Compat("css.properties.text-decoration")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>L'attribut {{cssxref("list-style")}} qui contrôle la façon dont les éléments apparaissent dans les listes HTML {{HTMLElement("ol")}} et {{HTMLElement("ul")}}.</li>
- <li>Les propriétés détaillées associées à cette propriété raccourcie :
-  <ul>
-   <li>{{cssxref("text-decoration-line")}}</li>
-   <li>{{cssxref("text-decoration-color")}}</li>
-   <li>{{cssxref("text-decoration-style")}}.</li>
-  </ul>
- </li>
-</ul>
+- L'attribut {{cssxref("list-style")}} qui contrôle la façon dont les éléments apparaissent dans les listes HTML {{HTMLElement("ol")}} et {{HTMLElement("ul")}}.
+- Les propriétés détaillées associées à cette propriété raccourcie :
+
+  - {{cssxref("text-decoration-line")}}
+  - {{cssxref("text-decoration-color")}}
+  - {{cssxref("text-decoration-style")}}.

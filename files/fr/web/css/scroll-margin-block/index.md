@@ -9,18 +9,19 @@ tags:
   - Reference
 translation_of: Web/CSS/scroll-margin-block
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>scroll-margin-block</code></strong> est une propriété raccourcie logique qui définit les marges de défilement sur l'axe de bloc (i.e. les propriétés logiques <code>scroll-margin-block-start</code> et <code>scroll-margin-block-end</code>).</p>
+La propriété **`scroll-margin-block`** est une propriété raccourcie logique qui définit les marges de défilement sur l'axe de bloc (i.e. les propriétés logiques `scroll-margin-block-start` et `scroll-margin-block-end`).
 
-<div>{{EmbedInteractiveExample("pages/css/scroll-margin-block.html")}}</div>
+{{EmbedInteractiveExample("pages/css/scroll-margin-block.html")}}
 
-<p>Les valeurs des marges de défilement correspondent aux décalages entre la zone qui est utilisée pour définir les limites du défilement de la boîtes et la zone de défilement normale (<em>snapport</em>). La zone de défilement est déterminée en prenant la boîte de bordure modifiée, en prenant le rectangle englobant puis en ajoutant les décalages indiqués.</p>
+Les valeurs des marges de défilement correspondent aux décalages entre la zone qui est utilisée pour définir les limites du défilement de la boîtes et la zone de défilement normale (_snapport_). La zone de défilement est déterminée en prenant la boîte de bordure modifiée, en prenant le rectangle englobant puis en ajoutant les décalages indiqués.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css">/* Valeurs de longueur */
-/* Type &lt;length&gt; */
+```css
+/* Valeurs de longueur */
+/* Type <length> */
 scroll-margin-block: 10px;
 scroll-margin-block: 1em .5em;
 
@@ -28,40 +29,25 @@ scroll-margin-block: 1em .5em;
 scroll-margin-block: inherit;
 scroll-margin-block: initial;
 scroll-margin-block: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Un décalage par rapport au côté correspondant du conteneur de défilement.</dd>
-</dl>
+- `<length>`
+  - : Un décalage par rapport au côté correspondant du conteneur de défilement.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Scroll Snap Points", "#propdef-scroll-margin-block", "scroll-margin-block")}}</td>
-   <td>{{Spec2("CSS Scroll Snap Points")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                | État                                             | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
+| {{SpecName("CSS Scroll Snap Points", "#propdef-scroll-margin-block", "scroll-margin-block")}} | {{Spec2("CSS Scroll Snap Points")}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.scroll-margin-block")}}</p>
+{{Compat("css.properties.scroll-margin-block")}}

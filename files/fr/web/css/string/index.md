@@ -7,27 +7,26 @@ tags:
   - Type
 translation_of: Web/CSS/string
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Le type de donnée CSS <strong><code>&lt;string&gt;</code></strong> représente une chaîne de caractères. En CSS, les chaînes de caractères sont présentes dans de nombreuses propriétés comme {{cssxref("content")}}, {{cssxref("font-family")}} et {{cssxref("quotes")}}.</p>
+Le type de donnée CSS **`<string>`** représente une chaîne de caractères. En CSS, les chaînes de caractères sont présentes dans de nombreuses propriétés comme {{cssxref("content")}}, {{cssxref("font-family")}} et {{cssxref("quotes")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Une chaîne de caractères CSS est formée d'un ou plusieurs caractères <a href="https://fr.wikipedia.org/wiki/Unicode">Unicode</a> délimités par des quotes (<code>'</code>) ou des doubles quotes (<code>"</code>). Une chaîne délimitée par des doubles quotes ne peut pas contenir de double quotes à moins qu'elles soient échappées à l'aide d'une barre oblique inversée (<code>\</code>). Le même principe s'applique aux chaînes délimitées par des quotes simples, qui ne peuvent contenir de quotes simples sans qu'elles soient échappés à l'aide d'une barre oblique inversée (<code>\</code>).</p>
+Une chaîne de caractères CSS est formée d'un ou plusieurs caractères [Unicode](https://fr.wikipedia.org/wiki/Unicode) délimités par des quotes (`'`) ou des doubles quotes (`"`). Une chaîne délimitée par des doubles quotes ne peut pas contenir de double quotes à moins qu'elles soient échappées à l'aide d'une barre oblique inversée (`\`). Le même principe s'applique aux chaînes délimitées par des quotes simples, qui ne peuvent contenir de quotes simples sans qu'elles soient échappés à l'aide d'une barre oblique inversée (`\`).
 
-<p>Le caractère barre oblique inversée doit être échappé afin de faire partie d'une chaîne de caractère.</p>
+Le caractère barre oblique inversée doit être échappé afin de faire partie d'une chaîne de caractère.
 
-<p>Les nouvelles lignes ne sont pas acceptées, sauf si elles sont échappées à l'aide d'un caractère de saut de ligne tel que <code>\A</code> ou <code>\00000a</code>. Toutefois, des chaînes de caractères peuvent s'étendre sur plusieurs lignes. Dans ce cas, il est possible de couper la chaîne en plusieurs lignes en utilisant une barre oblique inversée (<code>\</code>) comme dernier caractère de chaque ligne.</p>
+Les nouvelles lignes ne sont pas acceptées, sauf si elles sont échappées à l'aide d'un caractère de saut de ligne tel que `\A` ou `\00000a`. Toutefois, des chaînes de caractères peuvent s'étendre sur plusieurs lignes. Dans ce cas, il est possible de couper la chaîne en plusieurs lignes en utilisant une barre oblique inversée (`\`) comme dernier caractère de chaque ligne.
 
-<p>Les caractères peuvent être décrits en utilisant leur <a href="https://fr.wikipedia.org/wiki/Unicode#Partitionnement">point de code Unicode</a> hexadécimal, qui doit alors être échappé à l'aide du caractère <code>\</code>. <code>\27</code> représente par exemple le guillemet droit simple (<code>'</code>) et <code>\A9</code> le symbole du <em>copyright</em> ©.</p>
+Les caractères peuvent être décrits en utilisant leur [point de code Unicode](https://fr.wikipedia.org/wiki/Unicode#Partitionnement) hexadécimal, qui doit alors être échappé à l'aide du caractère `\`. `\27` représente par exemple le guillemet droit simple (`'`) et `\A9` le symbole du _copyright_ ©.
 
-<div class="note">
-<p><strong>Note :</strong> Les <a href="/fr/docs/Glossary/Entity">entités</a> telles que <code>&amp;nbsp;</code> ou <code>&amp;#8212;</code> ne peuvent pas être utilisées pour les chaînes de caractères CSS.</p>
-</div>
+> **Note :** Les [entités](/fr/docs/Glossary/Entity) telles que `&nbsp;` ou `&#8212;` ne peuvent pas être utilisées pour les chaînes de caractères CSS.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: css">"Chaîne avec des guillemets doubles"
+```css
+"Chaîne avec des guillemets doubles"
 "Chaîne avec plusieurs \" guillemets doubles"
 'Chaîne avec des guillemets simples'
 'Chaîne avec plusieurs \' guillemets simples'
@@ -37,49 +36,24 @@ translation_of: Web/CSS/string
 "Une grande chaîne \
 de caractères"
 "Une grande chaîne de caractères"
-</pre>
+```
 
-<div class="note">
-  <p><strong>Note :</strong> on peut également échapper des doubles quotes avec <code>\22</code> et les simples quotes avec <code>\27</code>.</p>
-</div>
+> **Note :** on peut également échapper des doubles quotes avec `\22` et les simples quotes avec `\27`.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Values', '#strings', '')}}</td>
-   <td>{{Spec2('CSS3 Values')}}</td>
-   <td>Aucune modification significative depuis CSS Level 2 (Revision 1)</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'syndata.html#strings', '')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Définition explicite. Les valeurs Unicode échappées sur 6 chiffres sont autorisées.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '', '')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Définition implicite. Les valeurs Unicode échappées sur 4 chiffres sont autorisées.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                        | État                             | Commentaires                                                                        |
+| -------------------------------------------------------------------- | -------------------------------- | ----------------------------------------------------------------------------------- |
+| {{SpecName('CSS3 Values', '#strings', '')}}             | {{Spec2('CSS3 Values')}} | Aucune modification significative depuis CSS Level 2 (Revision 1)                   |
+| {{SpecName('CSS2.1', 'syndata.html#strings', '')}} | {{Spec2('CSS2.1')}}         | Définition explicite. Les valeurs Unicode échappées sur 6 chiffres sont autorisées. |
+| {{SpecName('CSS1', '', '')}}                                 | {{Spec2('CSS1')}}         | Définition implicite. Les valeurs Unicode échappées sur 4 chiffres sont autorisées. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.types.string")}}</p>
+{{Compat("css.types.string")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Values_and_Units">Valeurs et unités en CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">Tutoriel - Introduction aux valeurs et unités CSS</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Types">Types de donnée en CSS</a></li>
-</ul>
+- [Valeurs et unités en CSS](/fr/docs/Web/CSS/CSS_Values_and_Units)
+- [Tutoriel - Introduction aux valeurs et unités CSS](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [Types de donnée en CSS](/fr/docs/Web/CSS/CSS_Types)

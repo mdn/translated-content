@@ -7,13 +7,14 @@ tags:
   - Reference
 translation_of: Web/CSS/offset-anchor
 ---
-<div>{{cssref}}{{seecompattable}}</div>
+{{cssref}}{{seecompattable}}
 
-<p>La propriété CSS <strong><code>offset-anchor</code></strong> définit le point, à l'intérieur d'une boîte d'un élément, qui se déplace le long d'un chemin {{cssxref("offset-path")}}.</p>
+La propriété CSS **`offset-anchor`** définit le point, à l'intérieur d'une boîte d'un élément, qui se déplace le long d'un chemin {{cssxref("offset-path")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css">/* Valeurs avec un movalues */
+```css
+/* Valeurs avec un movalues */
 offset-anchor: top;
 offset-anchor: bottom;
 offset-anchor: left;
@@ -22,11 +23,11 @@ offset-anchor: center;
 offset-anchor: auto;
 
 /* Valeurs de pourcentages */
-/* Type &lt;percentage&gt; */
+/* Type <percentage> */
 offset-anchor: 25% 75%;
 
 /* Valeurs de longueur */
-/* Type &lt;length&gt; */
+/* Type <length> */
 offset-anchor: 0 0;
 offset-anchor: 1cm 2cm;
 offset-anchor: 10ch 8em;
@@ -38,45 +39,46 @@ offset-anchor: right 3em bottom 10px;
 /* Valeurs globales */
 offset-anchor: inherit;
 offset-anchor: initial;
-offset-anchor: unset;</pre>
+offset-anchor: unset;
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>auto</code></dt>
- <dd><code>offset-anchor</code> reçoit la même valeur que {{cssxref("transform-origin")}} sauf si {{cssxref("offset-path")}} vaut <code>none</code>, dans ce cas, elle récupère la valeur de {{cssxref("offset-position")}}.</dd>
- <dt><code>&lt;position&gt;</code></dt>
- <dd>Une position ({{cssxref("&lt;position&gt;")}}) définie par un couple de coordonnées X/Y qui permet de placer un objet par rapport aux bords de sa boîte. On peut définir la position à partir de une à quatre valeurs. Pour plus d'informations, voir les pages sur {{cssxref("&lt;position&gt;")}} et {{cssxref("background-position")}}. La syntaxe à trois valeurs ne fonctionne pas pour <code>&lt;position&gt;</code>, excepté pour <code>background(-position)</code>.</dd>
-</dl>
+- `auto`
+  - : `offset-anchor` reçoit la même valeur que {{cssxref("transform-origin")}} sauf si {{cssxref("offset-path")}} vaut `none`, dans ce cas, elle récupère la valeur de {{cssxref("offset-position")}}.
+- `<position>`
+  - : Une position ({{cssxref("&lt;position&gt;")}}) définie par un couple de coordonnées X/Y qui permet de placer un objet par rapport aux bords de sa boîte. On peut définir la position à partir de une à quatre valeurs. Pour plus d'informations, voir les pages sur {{cssxref("&lt;position&gt;")}} et {{cssxref("background-position")}}. La syntaxe à trois valeurs ne fonctionne pas pour `<position>`, excepté pour `background(-position)`.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans l'exemple suivant, on dispose de trois éléments {{htmlelement("div")}} imbriqués chacun dans un élément {{htmlelement("section")}}. Chaque <code>&lt;div&gt;</code> se déplace sur le même chemin {{cssxref("offset-path")}} (une ligne horizontale mesurant 200 pixels). Les trois blocs possèdent une couleur ({{cssxref("background-color")}}) et une valeur <code>offset-anchor</code> différentes.</p>
+Dans l'exemple suivant, on dispose de trois éléments {{htmlelement("div")}} imbriqués chacun dans un élément {{htmlelement("section")}}. Chaque `<div>` se déplace sur le même chemin {{cssxref("offset-path")}} (une ligne horizontale mesurant 200 pixels). Les trois blocs possèdent une couleur ({{cssxref("background-color")}}) et une valeur `offset-anchor` différentes.
 
-<p>Chaque élément <code>&lt;section&gt;</code> a été mise en forme avec un dégradé linéaire afin de fournir une indication visuelle du chemin.</p>
+Chaque élément `<section>` a été mise en forme avec un dégradé linéaire afin de fournir une indication visuelle du chemin.
 
-<p>On peut voir que la première valeur, <code>auto</code>, déplace l'élément sur son centre. La deuxième et la troisième déplacent le <code>&lt;div&gt;</code> par le coin supérieur droit et le coin inférieur gauche respectivement.</p>
+On peut voir que la première valeur, `auto`, déplace l'élément sur son centre. La deuxième et la troisième déplacent le `<div>` par le coin supérieur droit et le coin inférieur gauche respectivement.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;section&gt;
-  &lt;div class=&quot;offset-anchor1&quot;&gt;&lt;/div&gt;
-&lt;/section&gt;
-&lt;section&gt;
-  &lt;div class=&quot;offset-anchor2&quot;&gt;&lt;/div&gt;
-&lt;/section&gt;
-&lt;section&gt;
-  &lt;div class=&quot;offset-anchor3&quot;&gt;&lt;/div&gt;
-&lt;/section&gt;
-</pre>
+```html
+<section>
+  <div class="offset-anchor1"></div>
+</section>
+<section>
+  <div class="offset-anchor2"></div>
+</section>
+<section>
+  <div class="offset-anchor3"></div>
+</section>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   offset-path: path('M 0,20 L 200,20');
   animation: move 3000ms infinite alternate ease-in-out;
   width: 40px;
@@ -111,40 +113,28 @@ section {
   100% {
     offset-distance: 100%;
   }
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', '100%', '300')}}</p>
+{{EmbedLiveSample('Exemples', '100%', '300')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Spécification</th>
-   <th>État</th>
-   <th>Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('Motion Path Level 1', '#offset-anchor-property', 'offset-anchor')}}</td>
-   <td>{{Spec2('Motion Path Level 1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | État                                         | Commentaires         |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
+| {{SpecName('Motion Path Level 1', '#offset-anchor-property', 'offset-anchor')}} | {{Spec2('Motion Path Level 1')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.offset-anchor")}}</p>
+{{Compat("css.properties.offset-anchor")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("offset")}}</li>
- <li>{{cssxref("offset-distance")}}</li>
- <li>{{cssxref("offset-rotation")}}</li>
- <li><a href="/fr/docs/Web/SVG/Tutorial/Paths">L'élément SVG <code>&lt;path&gt;</code></a></li>
-</ul>
+- {{cssxref("offset")}}
+- {{cssxref("offset-distance")}}
+- {{cssxref("offset-rotation")}}
+- [L'élément SVG `<path>`](/fr/docs/Web/SVG/Tutorial/Paths)

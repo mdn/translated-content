@@ -7,39 +7,40 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/inverted-colors
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>inverted-colors</code></strong> est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui indique si l'agent utilisateur ou si le système d'exploitation sous-jacent inverse les couleurs.</p>
+**`inverted-colors`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui indique si l'agent utilisateur ou si le système d'exploitation sous-jacent inverse les couleurs.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Cette caractéristique est définie avec un des mots-clés parmi ceux qui suivent :</p>
+Cette caractéristique est définie avec un des mots-clés parmi ceux qui suivent :
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Les couleurs sont affichées normalement.</dd>
- <dt><code>inverted</code></dt>
- <dd>Les couleurs des pixels de la zone affichée ont été inversées.</dd>
-</dl>
+- `none`
+  - : Les couleurs sont affichées normalement.
+- `inverted`
+  - : Les couleurs des pixels de la zone affichée ont été inversées.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   Si vous utilisez les couleurs inversées, ce texte devrait
   être bleu sur blanc (l'inverse de jaune sur noir). Sinon,
   il devrait être rouge sur gris clair.
-&lt;/p&gt;
-&lt;p&gt;
+</p>
+<p>
   Si le texte est gris, cela indique que votre navigateur
   ne prend pas en charge la caractéristique média
   `inverted-colors`.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   color: gray;
 }
 
@@ -55,36 +56,20 @@ translation_of: Web/CSS/@media/inverted-colors
     background: #eee;
     color: red;
   }
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS5 Media Queries', '#inverted', 'inverted-colors')}}</td>
-   <td>{{Spec2('CSS5 Media Queries')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Media Queries', '#inverted', 'inverted-colors')}}</td>
-   <td>{{Spec2('CSS4 Media Queries')}}</td>
-   <td>Repoussée à la spécification de niveau 5 pour les requêtes média.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                                     | Commentaires                                                      |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------- |
+| {{SpecName('CSS5 Media Queries', '#inverted', 'inverted-colors')}} | {{Spec2('CSS5 Media Queries')}} |                                                                   |
+| {{SpecName('CSS4 Media Queries', '#inverted', 'inverted-colors')}} | {{Spec2('CSS4 Media Queries')}} | Repoussée à la spécification de niveau 5 pour les requêtes média. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.at-rules.media.inverted-colors")}}</p>
+{{Compat("css.at-rules.media.inverted-colors")}}

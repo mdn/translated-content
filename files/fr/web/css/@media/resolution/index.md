@@ -7,24 +7,26 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/resolution
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>resolution</code></strong> est une caractéristique média CSS dont la valeur représente la densité de pixels de l'appareil d'affichage.</p>
+**`resolution`** est une caractéristique média CSS dont la valeur représente la densité de pixels de l'appareil d'affichage.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>La caractéristique <code>resolution</code> est une valeur de type {{cssxref("&lt;resolution&gt;")}} qui représente la densité de pixels de l'appareil d'affichage. C'est une caractéristique d'intervalle, cela signifie qu'on peut utiliser les variantes préfixées <code><strong>min-resolution</strong></code> et <strong><code>max-resolution</code></strong> afin d'établir des règles selon un minimum ou un maximum.</p>
+La caractéristique `resolution` est une valeur de type {{cssxref("&lt;resolution&gt;")}} qui représente la densité de pixels de l'appareil d'affichage. C'est une caractéristique d'intervalle, cela signifie qu'on peut utiliser les variantes préfixées **`min-resolution`** et **`max-resolution`** afin d'établir des règles selon un minimum ou un maximum.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Un test pour la densité de pixels de votre appareil.&lt;/p&gt;
-</pre>
+```html
+<p>Un test pour la densité de pixels de votre appareil.</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">/* Résolution exacte  */
+```css
+/* Résolution exacte  */
 @media (resolution: 150dpi) {
   p {
     color: red;
@@ -43,31 +45,19 @@ translation_of: Web/CSS/@media/resolution
   p {
     background: yellow;
   }
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Media Queries', '#resolution', 'resolution')}}</td>
-   <td>{{Spec2('CSS3 Media Queries')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                                     | Commentaires         |
+| ------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
+| {{SpecName('CSS3 Media Queries', '#resolution', 'resolution')}} | {{Spec2('CSS3 Media Queries')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.at-rules.media.resolution")}}</p>
+{{Compat("css.at-rules.media.resolution")}}

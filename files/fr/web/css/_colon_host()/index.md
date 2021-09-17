@@ -1,44 +1,46 @@
 ---
 title: ':host()'
-slug: 'Web/CSS/:host()'
+slug: Web/CSS/:host()
 tags:
   - CSS
   - Pseudo-classe
   - Reference
-translation_of: 'Web/CSS/:host()'
+translation_of: Web/CSS/:host()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La fonction de <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <strong><code>:host()</code></strong> permet de sélectionner l'hôte du <em>shadow DOM</em> contenant le CSS à utiliser, uniquement si le sélecteur passé en argument correspond à l'élément hôte.</p>
+La fonction de [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:host()`** permet de sélectionner l'hôte du _shadow DOM_ contenant le CSS à utiliser, uniquement si le sélecteur passé en argument correspond à l'élément hôte.
 
-<p>Le scénario principal pour utiliser cette fonction consiste à vouloir cibler une certaine classe d'éléments personnalisés : pour cela, on passera la classe comme argument de la fonction <code>:host()</code>. Cette fonction ne peut pas être utilisée avec un sélecteur de descendant, pour cela il faudra utiliser  {{cssxref(":host-context()")}}.</p>
+Le scénario principal pour utiliser cette fonction consiste à vouloir cibler une certaine classe d'éléments personnalisés : pour cela, on passera la classe comme argument de la fonction `:host()`. Cette fonction ne peut pas être utilisée avec un sélecteur de descendant, pour cela il faudra utiliser  {{cssxref(":host-context()")}}.
 
-<div class="note">
-<p><strong>Note :</strong> Cette fonction n'a aucun effet si elle est utilisée en dehors d'un <em>shadow DOM</em>.</p>
-</div>
+> **Note :** Cette fonction n'a aucun effet si elle est utilisée en dehors d'un _shadow DOM_.
 
-<pre class="brush: css no-line-numbers">/* On cible l'hôte du shadow DOM uniquement s'il
+```css
+/* On cible l'hôte du shadow DOM uniquement s'il
    correspond au sélecteur passé en argument */
 :host(.special-custom-element) {
   font-weight: bold;
 }
-</pre>
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Les fragments de code suivants sont extraits du dépôt d'exemple <a href="https://github.com/mdn/web-components-examples/tree/master/host-selectors"><em>host-selectors</em></a><em> </em>(<a href="https://mdn.github.io/web-components-examples/host-selectors/">voir le résultat <em>live</em></a>).</p>
+Les fragments de code suivants sont extraits du dépôt d'exemple [_host-selectors_](https://github.com/mdn/web-components-examples/tree/master/host-selectors)\* *([voir le résultat *live\*](https://mdn.github.io/web-components-examples/host-selectors/)).
 
-<p>Dans cet exemple, on dispose d'un élément personnalisé,  <code>&lt;context-span&gt;</code>, qui peut contenir du texte :</p>
+Dans cet exemple, on dispose d'un élément personnalisé,  `<context-span>`, qui peut contenir du texte :
 
-<pre class="brush: html">&lt;h1&gt;Host selectors &lt;a href="#"&gt;&lt;context-span&gt;example&lt;/context-span&gt;&lt;/a&gt;&lt;/h1&gt;</pre>
+```html
+<h1>Host selectors <a href="#"><context-span>example</context-span></a></h1>
+```
 
-<p>Dans le constructeur de l'élément, on crée un élément <code>style</code> et un élément <code>span</code>. Ce dernier recevra le contenu textuel de l'élément personnalisé et l'élément <code>style</code> recevra quelques règles CSS :</p>
+Dans le constructeur de l'élément, on crée un élément `style` et un élément `span`. Ce dernier recevra le contenu textuel de l'élément personnalisé et l'élément `style` recevra quelques règles CSS :
 
-<pre class="brush: js">let style = document.createElement('style');
+```js
+let style = document.createElement('style');
 let span = document.createElement('span');
 span.textContent = this.textContent;
 
@@ -51,37 +53,23 @@ style.textContent = 'span:hover { text-decoration: underline; }' +
                     ':host-context(h1):after { content: " - no links in headers!" }' +
                     ':host-context(article, aside) { color: gray; }' +
                     ':host(.footer) { color : red; }' +
-                    ':host { background: rgba(0,0,0,0.1); padding: 2px 5px; }';</pre>
+                    ':host { background: rgba(0,0,0,0.1); padding: 2px 5px; }';
+```
 
-<p>La règle <code>:host(.footer) { color : red; }</code> s'applique à toutes les instances de l'élément <code>&lt;context-span&gt;</code> (il s'agit ici de l'hôte) du document qui possèdent la classe <code>footer</code>. Ici, pour ces éléments donnés, on utilise une couleur spécifique.</p>
+La règle `:host(.footer) { color : red; }` s'applique à toutes les instances de l'élément `<context-span>` (il s'agit ici de l'hôte) du document qui possèdent la classe `footer`. Ici, pour ces éléments donnés, on utilise une couleur spécifique.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Scope', '#host-selector', ':host()')}}</td>
-   <td>{{Spec2('CSS Scope')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                            | État                         | Commentaires         |
+| ------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{SpecName('CSS Scope', '#host-selector', ':host()')}} | {{Spec2('CSS Scope')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.hostfunction")}}</p>
+{{Compat("css.selectors.hostfunction")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/Web_Components">Les composants web</a></li>
- <li>{{cssxref(":host")}}</li>
- <li>{{cssxref(":host-context()")}}</li>
-</ul>
+- [Les composants web](/fr/docs/Web/Web_Components)
+- {{cssxref(":host")}}
+- {{cssxref(":host-context()")}}

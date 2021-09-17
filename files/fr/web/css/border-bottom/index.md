@@ -7,116 +7,95 @@ tags:
   - Reference
 translation_of: Web/CSS/border-bottom
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>border-bottom</code></strong> est une propriété raccourcie qui définit la bordure du côté bas d'un élément.</p>
+La propriété **`border-bottom`** est une propriété raccourcie qui définit la bordure du côté bas d'un élément.
 
-<p>C'est une propriété raccourcie qui synthétise :</p>
+C'est une propriété raccourcie qui synthétise :
 
-<ul>
- <li>{{cssxref("border-bottom-width")}},</li>
- <li>{{cssxref("border-bottom-color")}},</li>
- <li>{{cssxref("border-bottom-style")}}.</li>
-</ul>
+- {{cssxref("border-bottom-width")}},
+- {{cssxref("border-bottom-color")}},
+- {{cssxref("border-bottom-style")}}.
 
-<p>Ces propriétés permettent de décrire la bordure du côté bas d'un élément.</p>
+Ces propriétés permettent de décrire la bordure du côté bas d'un élément.
 
-<div>{{EmbedInteractiveExample("pages/css/border-bottom.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-bottom.html")}}
 
-<div class="note">
-<p><strong>Note :</strong> Comme pour les autres propriétés raccourcies, <code>border-bottom</code> définit toujours les valeurs de toutes les propriétés qu'elle peut définir, même si celles-ci ne sont pas indiquées. Pour les valeurs qui ne sont pas indiquées, on prendra les valeurs par défaut. Ainsi :</p>
+> **Note :** Comme pour les autres propriétés raccourcies, `border-bottom` définit toujours les valeurs de toutes les propriétés qu'elle peut définir, même si celles-ci ne sont pas indiquées. Pour les valeurs qui ne sont pas indiquées, on prendra les valeurs par défaut. Ainsi :
+>
+> ```css
+>   border-bottom-style: dotted;
+>   border-bottom: thick green;
+> ```
+>
+> est équivalent à :
+>
+> ```css
+>   border-bottom-style: dotted;
+>   border-bottom: none thick green;
+> ```
+>
+> et la valeur {{cssxref("border-bottom-style")}} fournie avant `border-bottom` est ignorée.
+>
+> La valeur par défaut de {{cssxref("border-bottom-style")}} étant `none`, si on ne définit pas le style de la bordure, on aura la valeur par défaut, c'est-à-dire qu'on aura aucune bordure.
 
-<pre class="brush:css">  border-bottom-style: dotted;
-  border-bottom: thick green;
-</pre>
+## Syntaxe
 
-<p>est équivalent à :</p>
-
-<pre class="brush:css">  border-bottom-style: dotted;
-  border-bottom: none thick green;
-</pre>
-
-<p> et la valeur {{cssxref("border-bottom-style")}} fournie avant <code>border-bottom</code> est ignorée.</p>
-
-<p>La valeur par défaut de {{cssxref("border-bottom-style")}} étant <code>none</code>, si on ne définit pas le style de la bordure, on aura la valeur par défaut, c'est-à-dire qu'on aura aucune bordure.</p>
-</div>
-
-<h2 id="Syntaxe">Syntaxe</h2>
-
-<pre class="brush:css no-line-numbers">border-bottom: 1px;
+```css
+border-bottom: 1px;
 border-bottom: 2px dotted;
 border-bottom: medium dashed green;
-</pre>
+```
 
-<p>Les trois valeurs de la propriété raccourcie peuvent être définies dans n'importe quel ordre et une ou deux d'entre elles peuvent être absentes.</p>
+Les trois valeurs de la propriété raccourcie peuvent être définies dans n'importe quel ordre et une ou deux d'entre elles peuvent être absentes.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;br-width&gt; </code></dt>
- <dd>Voir {{cssxref("border-bottom-width")}}.</dd>
- <dt><code>&lt;br-style&gt; </code></dt>
- <dd>Voir {{cssxref("border-bottom-style")}}.</dd>
- <dt><code>&lt;color&gt; </code></dt>
- <dd>Voir {{cssxref("border-bottom-color")}}.</dd>
-</dl>
+- `<br-width> `
+  - : Voir {{cssxref("border-bottom-width")}}.
+- `<br-style> `
+  - : Voir {{cssxref("border-bottom-style")}}.
+- `<color> `
+  - : Voir {{cssxref("border-bottom-color")}}.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.exemple {
+```css
+.exemple {
   border-bottom: 3px dotted orange;
-} </pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="exemple"&gt;
+```html
+<p class="exemple">
   En passant elle prit sur un rayon un pot
   de confiture portant cette étiquette,
   « MARMELADE D’ORANGES. »
-&lt;/p&gt;
-</pre>
+</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples","200","150")}}</p>
+{{EmbedLiveSample("Exemples","200","150")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#border-bottom', 'border-bottom')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Pas de modification directe bien que la modification de valeurs pour {{cssxref("border-bottom-color")}} s'applique.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'box.html#propdef-border-bottom', 'border-bottom')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Aucune modification significative.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#border-bottom', 'border-bottom')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | État                                     | Commentaires                                                                                                                  |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS3 Backgrounds', '#border-bottom', 'border-bottom')}}         | {{Spec2('CSS3 Backgrounds')}} | Pas de modification directe bien que la modification de valeurs pour {{cssxref("border-bottom-color")}} s'applique. |
+| {{SpecName('CSS2.1', 'box.html#propdef-border-bottom', 'border-bottom')}} | {{Spec2('CSS2.1')}}                 | Aucune modification significative.                                                                                            |
+| {{SpecName('CSS1', '#border-bottom', 'border-bottom')}}                         | {{Spec2('CSS1')}}                 | Définition initiale.                                                                                                          |
 
-<div>{{cssinfo}}</div>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.border-bottom")}}</p>
+{{Compat("css.properties.border-bottom")}}

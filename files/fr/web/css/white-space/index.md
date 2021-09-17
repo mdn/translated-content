@@ -7,19 +7,18 @@ tags:
   - Reference
 translation_of: Web/CSS/white-space
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>white-space</code></strong> est utilisée pour décrire la façon dont les blancs sont gérés au sein de l'élément.</p>
+La propriété **`white-space`** est utilisée pour décrire la façon dont les blancs sont gérés au sein de l'élément.
 
-<div>{{EmbedInteractiveExample("pages/css/white-space.html")}}</div>
+{{EmbedInteractiveExample("pages/css/white-space.html")}}
 
-<div class="note">
-<p><strong>Note :</strong> Afin d'obtenir une césure au sein des mots, il faudra utiliser {{cssxref("overflow-wrap")}}, {{cssxref("word-break")}} ou bien {{cssxref("hyphens")}}.</p>
-</div>
+> **Note :** Afin d'obtenir une césure au sein des mots, il faudra utiliser {{cssxref("overflow-wrap")}}, {{cssxref("word-break")}} ou bien {{cssxref("hyphens")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css no-line-numbers">/* Avec un mot-clé */
+```css
+/* Avec un mot-clé */
 white-space: normal;
 white-space: nowrap;
 white-space: pre;
@@ -31,96 +30,95 @@ white-space: break-spaces;
 white-space: inherit;
 white-space: initial;
 white-space: unset;
-</pre>
+```
 
-<p>La propriété <code>white-space</code> se définit avec l'un des mots-clés suivants.</p>
+La propriété `white-space` se définit avec l'un des mots-clés suivants.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>break-spaces</code></dt>
- <dd>Le comportement est identique à celui de <code>pre-wrap</code> mais chaque séquence de blancs continue d'occuper un espace, y compris en fin de ligne. Il y aura une opportunité de saut de ligne après chaque blanc. De tels espaces auront un impact sur les dimensions intrinsèques de la boîte (<code>min-content</code> et <code>max-content</code>).</dd>
- <dt><code>normal</code></dt>
- <dd>Les séries de blancs sont regroupées, les caractères de saut de ligne sont gérés comme les autres blancs. Les passages à la ligne sont faits naturellement pour remplir les boîtes.</dd>
- <dt><code>nowrap</code></dt>
- <dd>Les blancs sont regroupés comme avec <code>normal</code> mais les passages à la ligne automatiques sont supprimés.</dd>
- <dt><code>pre</code></dt>
- <dd>Les séries de blancs sont conservées telles quelles. Les sauts de ligne ont uniquement lieu avec les caractères de saut de ligne et avec les éléments {{HTMLElement("br")}}.</dd>
- <dt><code>pre-wrap</code></dt>
- <dd>Les séries de blancs sont conservées telles quelles. Les sauts de ligne ont lieu avec les caractères de saut de ligne, avec {{HTMLElement("br")}} et on a des passages à la ligne automatiques.</dd>
- <dt><code>pre-line</code></dt>
- <dd>Les séries de blancs sont regroupées, les sauts de lignes ont lieu avec les caractères de saut de ligne, les éléments {{HTMLElement("br")}} et on a des passages à la ligne automatiques.</dd>
-</dl>
+- `break-spaces`
+  - : Le comportement est identique à celui de `pre-wrap` mais chaque séquence de blancs continue d'occuper un espace, y compris en fin de ligne. Il y aura une opportunité de saut de ligne après chaque blanc. De tels espaces auront un impact sur les dimensions intrinsèques de la boîte (`min-content` et `max-content`).
+- `normal`
+  - : Les séries de blancs sont regroupées, les caractères de saut de ligne sont gérés comme les autres blancs. Les passages à la ligne sont faits naturellement pour remplir les boîtes.
+- `nowrap`
+  - : Les blancs sont regroupés comme avec `normal` mais les passages à la ligne automatiques sont supprimés.
+- `pre`
+  - : Les séries de blancs sont conservées telles quelles. Les sauts de ligne ont uniquement lieu avec les caractères de saut de ligne et avec les éléments {{HTMLElement("br")}}.
+- `pre-wrap`
+  - : Les séries de blancs sont conservées telles quelles. Les sauts de ligne ont lieu avec les caractères de saut de ligne, avec {{HTMLElement("br")}} et on a des passages à la ligne automatiques.
+- `pre-line`
+  - : Les séries de blancs sont regroupées, les sauts de lignes ont lieu avec les caractères de saut de ligne, les éléments {{HTMLElement("br")}} et on a des passages à la ligne automatiques.
 
-<p>Le tableau qui suit résume le comportement des différentes valeurs :</p>
+Le tableau qui suit résume le comportement des différentes valeurs :
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th></th>
-   <th>Nouvelles lignes</th>
-   <th>Espaces et tabulations</th>
-   <th>Retour à la ligne automatique</th>
-   <th>Espaces en fin de ligne</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th><code>normal</code></th>
-   <td>Regroupées</td>
-   <td>Regroupés</td>
-   <td>Oui</td>
-   <td>Retirés</td>
-  </tr>
-  <tr>
-   <th><code>nowrap</code></th>
-   <td>Regroupées</td>
-   <td>Regroupés</td>
-   <td>Non</td>
-   <td>Retirés</td>
-  </tr>
-  <tr>
-   <th><code>pre</code></th>
-   <td>Préservées</td>
-   <td>Préservés</td>
-   <td>Non</td>
-   <td>Conservés</td>
-  </tr>
-  <tr>
-   <th><code>pre-wrap</code></th>
-   <td>Préservées</td>
-   <td>Préservés</td>
-   <td>Oui</td>
-   <td>Suspendus</td>
-  </tr>
-  <tr>
-   <th><code>pre-line</code></th>
-   <td>Préservées</td>
-   <td>Regroupés</td>
-   <td>Oui</td>
-   <td>Retirés</td>
-  </tr>
-  <tr>
-   <th><code>break-spaces</code></th>
-   <td>Préservées</td>
-   <td>Regroupés</td>
-   <td>Oui</td>
-   <td>Passent à la ligne.</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Nouvelles lignes</th>
+      <th>Espaces et tabulations</th>
+      <th>Retour à la ligne automatique</th>
+      <th>Espaces en fin de ligne</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th><code>normal</code></th>
+      <td>Regroupées</td>
+      <td>Regroupés</td>
+      <td>Oui</td>
+      <td>Retirés</td>
+    </tr>
+    <tr>
+      <th><code>nowrap</code></th>
+      <td>Regroupées</td>
+      <td>Regroupés</td>
+      <td>Non</td>
+      <td>Retirés</td>
+    </tr>
+    <tr>
+      <th><code>pre</code></th>
+      <td>Préservées</td>
+      <td>Préservés</td>
+      <td>Non</td>
+      <td>Conservés</td>
+    </tr>
+    <tr>
+      <th><code>pre-wrap</code></th>
+      <td>Préservées</td>
+      <td>Préservés</td>
+      <td>Oui</td>
+      <td>Suspendus</td>
+    </tr>
+    <tr>
+      <th><code>pre-line</code></th>
+      <td>Préservées</td>
+      <td>Regroupés</td>
+      <td>Oui</td>
+      <td>Retirés</td>
+    </tr>
+    <tr>
+      <th><code>break-spaces</code></th>
+      <td>Préservées</td>
+      <td>Regroupés</td>
+      <td>Oui</td>
+      <td>Passent à la ligne.</td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Exemple_simple">Exemple simple</h3>
+### Exemple simple
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;code&gt;
+```html
+<code>
 var coucou = function(){
   // on notera l'indentation
   // avec deux espaces
@@ -132,73 +130,61 @@ var coucou = function(){
   }
   toto();
 }
-&lt;/code&gt;</pre>
+</code>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">code {
+```css
+code {
   white-space: pre;
-}</pre>
+}
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Exemple_simple")}}</p>
+{{EmbedLiveSample("Exemple_simple")}}
 
-<h3 id="Passage_automatique_à_la_ligne_dans_un_élément_pre">Passage automatique à la ligne dans un élément <code>pre</code></h3>
+### Passage automatique à la ligne dans un élément `pre`
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;pre&gt;
+```html
+<pre>
 function jeNAuraisJamaisDuAppelerCetteFonctionAvecUnNomAussiLong(toto){
   console.log("Tout ça pour ça");
 }
-&lt;/pre&gt;</pre>
+</pre>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">pre {
+```css
+pre {
   word-wrap: break-word;      /* IE 5.5-7 */
   white-space: pre-wrap;      /* current browsers */
-}</pre>
+}
+```
 
-<h4 id="Résultat_2">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Passage_automatique_à_la_ligne_dans_un_élément_pre")}}</p>
+{{EmbedLiveSample("Passage_automatique_à_la_ligne_dans_un_élément_pre")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Text', '#propdef-white-space', 'white-space')}}</td>
-   <td>{{Spec2('CSS3 Text')}}</td>
-   <td>Définition de l'algorithme des césures de ligne et ajout de <code>break-spaces</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'text.html#white-space-prop', 'white-space')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                         | Commentaires                                                                |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | --------------------------------------------------------------------------- |
+| {{SpecName('CSS3 Text', '#propdef-white-space', 'white-space')}}     | {{Spec2('CSS3 Text')}} | Définition de l'algorithme des césures de ligne et ajout de `break-spaces`. |
+| {{SpecName('CSS2.1', 'text.html#white-space-prop', 'white-space')}} | {{Spec2('CSS2.1')}}     | Définition initiale.                                                        |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<div>{{Compat("css.properties.white-space")}}</div>
+{{Compat("css.properties.white-space")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("overflow-wrap")}}</li>
- <li>{{cssxref("word-break")}}</li>
- <li>{{cssxref("hyphens")}}</li>
-</ul>
+- {{cssxref("overflow-wrap")}}
+- {{cssxref("word-break")}}
+- {{cssxref("hyphens")}}

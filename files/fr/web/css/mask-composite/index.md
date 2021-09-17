@@ -8,11 +8,12 @@ tags:
   - Reference
 translation_of: Web/CSS/mask-composite
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propriété <strong><code>mask-composite</code></strong> permet d'effectuer une opération de composition entre le masque situé sur la couche de l'élément et le masque présent en dessous.</p>
+La propriété **`mask-composite`** permet d'effectuer une opération de composition entre le masque situé sur la couche de l'élément et le masque présent en dessous.
 
-<pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé*/
+```css
+/* Valeurs avec un mot-clé*/
 mask-composite: add;
 mask-composite: subtract;
 mask-composite: intersect;
@@ -22,36 +23,35 @@ mask-composite: exclude;
 mask-composite: inherit;
 mask-composite: initial;
 mask-composite: unset;
-</pre>
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Un ou plusieurs mots-clés parmi ceux listés ci-après, chacun séparé par une virgule.</p>
+Un ou plusieurs mots-clés parmi ceux listés ci-après, chacun séparé par une virgule.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<p>La couche du masque de l'élément est appelée <em>source</em> et les couches inférieures sont appelées <em>destination</em>.</p>
+La couche du masque de l'élément est appelée _source_ et les couches inférieures sont appelées _destination_.
 
-<dl>
- <dt><code>add</code></dt>
- <dd>La source est placée sur la destination.</dd>
- <dt><code>subtract</code></dt>
- <dd>La source est placée lorsque la destination est vide à cet endroit.</dd>
- <dt><code>intersect</code></dt>
- <dd>Les endroits de la source qui chevauchent la destination prennent le pas sur la destination.</dd>
- <dt><code>exclude</code></dt>
- <dd>Les régions de la source et de la destination qui ne se chevauchent pas sont combinées.The non-overlapping regions of source and destination are combined.</dd>
-</dl>
+- `add`
+  - : La source est placée sur la destination.
+- `subtract`
+  - : La source est placée lorsque la destination est vide à cet endroit.
+- `intersect`
+  - : Les endroits de la source qui chevauchent la destination prennent le pas sur la destination.
+- `exclude`
+  - : Les régions de la source et de la destination qui ne se chevauchent pas sont combinées.The non-overlapping regions of source and destination are combined.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#masked {
+```css
+#masked {
   width: 100px;
   height: 100px;
   background-color: #8cffa0;
@@ -63,47 +63,36 @@ mask-composite: unset;
   -webkit-mask-composite: add;
   mask-composite: add; /* peut-être modifiée dans la démo */
 }
-</pre>
+```
 
-<pre class="brush: html hidden">&lt;div id="masked"&gt;
-&lt;/div&gt;
-&lt;select id="compositeMode"&gt;
-  &lt;option value="add"&gt;add&lt;/option&gt;
-  &lt;option value="subtract"&gt;subtract&lt;/option&gt;
-  &lt;option value="intersect"&gt;intersect&lt;/option&gt;
-  &lt;option value="exclude"&gt;exclude&lt;/option&gt;
-&lt;/select&gt;
-</pre>
+```html hidden
+<div id="masked">
+</div>
+<select id="compositeMode">
+  <option value="add">add</option>
+  <option value="subtract">subtract</option>
+  <option value="intersect">intersect</option>
+  <option value="exclude">exclude</option>
+</select>
+```
 
-<pre class="brush: js hidden">var clipBox = document.getElementById("compositeMode");
+```js hidden
+var clipBox = document.getElementById("compositeMode");
 clipBox.addEventListener("change", function (evt) {
   document.getElementById("masked").style.maskClip = evt.target.value;
 });
-</pre>
+```
 
-<p>{{EmbedLiveSample("Exemples", "200px", "200px")}}</p>
+{{EmbedLiveSample("Exemples", "200px", "200px")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Masks", "#the-mask-composite", "mask-composite")}}</td>
-   <td>{{Spec2("CSS Masks")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                         | Commentaires        |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName("CSS Masks", "#the-mask-composite", "mask-composite")}} | {{Spec2("CSS Masks")}} | Définition initiale |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.mask-composite")}}</p>
+{{Compat("css.properties.mask-composite")}}

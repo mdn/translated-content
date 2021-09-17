@@ -7,16 +7,17 @@ tags:
   - Reference
 translation_of: Web/CSS/letter-spacing
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>letter-spacing</code></strong> définit <a href="https://fr.wikipedia.org/wiki/Interlettre">l'interlettre</a> utilisée pour les caractères qui composent le texte.</p>
+La propriété **`letter-spacing`** définit [l'interlettre](https://fr.wikipedia.org/wiki/Interlettre) utilisée pour les caractères qui composent le texte.
 
-<div>{{EmbedInteractiveExample("pages/css/letter-spacing.html")}}</div>
+{{EmbedInteractiveExample("pages/css/letter-spacing.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs de longueur */
-/* Type &lt;length&gt;       */
+```css
+/* Valeurs de longueur */
+/* Type <length>       */
 letter-spacing: 0.3em;
 letter-spacing: 3px;
 letter-spacing: .3px;
@@ -28,100 +29,68 @@ letter-spacing: normal;
 letter-spacing: inherit;
 letter-spacing: initial;
 letter-spacing: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>L'interlettre est dictée par la police utilisée. À la différence de 0, cette valeur permet à l'agent utilisateur de modifier l'espace entre les caractères afin de le justifier.</dd>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Cette valeur indique l'espace <strong>ajouté</strong> à l'espace par défaut. Les valeurs peuvent être négatives mais les limites imposées dépendent de l'implémentation du moteur. Les agents utilisateurs ne pourront plus augmenter ou réduire l'interlettre afin de justifier le texte. Pour les différentes unités possibles, se référer à la page {{cssxref("&lt;length&gt;")}}.</dd>
-</dl>
+- `normal`
+  - : L'interlettre est dictée par la police utilisée. À la différence de 0, cette valeur permet à l'agent utilisateur de modifier l'espace entre les caractères afin de le justifier.
+- `<length>`
+  - : Cette valeur indique l'espace **ajouté** à l'espace par défaut. Les valeurs peuvent être négatives mais les limites imposées dépendent de l'implémentation du moteur. Les agents utilisateurs ne pourront plus augmenter ou réduire l'interlettre afin de justifier le texte. Pour les différentes unités possibles, se référer à la page {{cssxref("&lt;length&gt;")}}.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.premier    { letter-spacing: 0.4em; }
+```css
+.premier    { letter-spacing: 0.4em; }
 .deuxieme   { letter-spacing: 1em; }
 .troisieme  { letter-spacing: -0.05em; }
-.quatrieme  { letter-spacing: 6px; }</pre>
+.quatrieme  { letter-spacing: 6px; }
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="premier"&gt;Et voici l'interlettre&lt;/p&gt;
-&lt;p class="deuxieme"&gt;Et voici l'interlettre&lt;/p&gt;
-&lt;p class="troisieme"&gt;Et voici l'interlettre&lt;/p&gt;
-&lt;p class="quatrieme"&gt;Et voici l'interlettre&lt;/p&gt;
-</pre>
+```html
+<p class="premier">Et voici l'interlettre</p>
+<p class="deuxieme">Et voici l'interlettre</p>
+<p class="troisieme">Et voici l'interlettre</p>
+<p class="quatrieme">Et voici l'interlettre</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', 440, 185)}}</p>
+{{EmbedLiveSample('Exemples', 440, 185)}}
 
-<h2 id="Accessibilité">Accessibilité</h2>
+## Accessibilité
 
-<p>Utiliser une valeur trop grande (positive ou négative) pour <code>letter-spacing</code> rendra les mots illisibles. Si une valeur positive trop importante est utilisée, les lettres seront trop éloignées les unes des autres et on ne pourra pas distinguer les mots. Si une valeur négative trop faible est employée, les lettres se chevaucheront et on ne pourra pas lire le texte.</p>
+Utiliser une valeur trop grande (positive ou négative) pour `letter-spacing` rendra les mots illisibles. Si une valeur positive trop importante est utilisée, les lettres seront trop éloignées les unes des autres et on ne pourra pas distinguer les mots. Si une valeur négative trop faible est employée, les lettres se chevaucheront et on ne pourra pas lire le texte.
 
-<p>L'espacement doit être déterminé au cas par cas car chaque famille de polices utilise des caractères de largeurs différentes. Il n'existe pas de valeur unique qui permette de s'assurer que, quelle que soit la police utilisée, le texte soit lisible.</p>
+L'espacement doit être déterminé au cas par cas car chaque famille de polices utilise des caractères de largeurs différentes. Il n'existe pas de valeur unique qui permette de s'assurer que, quelle que soit la police utilisée, le texte soit lisible.
 
-<ul>
- <li><a href="/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">Comprendre les règles WCAG 1.4</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html" rel="noopener"><em>Understanding Success Criterion 1.4.8, W3C Understanding WCAG 2.0</em> (en anglais)</a></li>
-</ul>
+- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [_Understanding Success Criterion 1.4.8, W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Text', '#letter-spacing-property', 'letter-spacing')}}</td>
-   <td>{{Spec2('CSS3 Text')}}</td>
-   <td>Aucune modification.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'letter-spacing')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td><code>letter-spacing</code> peut désormais être animée.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'text.html#propdef-letter-spacing', 'letter-spacing')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Aucune modification.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'text.html#LetterSpacingProperty', 'letter-spacing')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Définition initiale pour SVG.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#letter-spacing', 'letter-spacing')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                                     | Commentaires                                 |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------------------------------- |
+| {{SpecName('CSS3 Text', '#letter-spacing-property', 'letter-spacing')}}     | {{Spec2('CSS3 Text')}}             | Aucune modification.                         |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'letter-spacing')}}         | {{Spec2('CSS3 Transitions')}} | `letter-spacing` peut désormais être animée. |
+| {{SpecName('CSS2.1', 'text.html#propdef-letter-spacing', 'letter-spacing')}} | {{Spec2('CSS2.1')}}                 | Aucune modification.                         |
+| {{SpecName('SVG1.1', 'text.html#LetterSpacingProperty', 'letter-spacing')}} | {{Spec2('SVG1.1')}}                 | Définition initiale pour SVG.                |
+| {{SpecName('CSS1', '#letter-spacing', 'letter-spacing')}}                         | {{Spec2('CSS1')}}                 | Définition initiale.                         |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.letter-spacing")}}</p>
+{{Compat("css.properties.letter-spacing")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("font-kerning")}}</li>
-</ul>
+- {{cssxref("font-kerning")}}

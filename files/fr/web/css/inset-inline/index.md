@@ -9,19 +9,20 @@ tags:
   - Reference
 translation_of: Web/CSS/inset-inline
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propriété <strong><code>inset-inline</code></strong> définit le décalage d'un élément par rapport au début et à la fin de l'axe en ligne de l'élément. Cette propriété logique correspond à une propriété physique donnée selon le mode d'écriture de l'élément, sa direction et l'orientation de son texte. Autrement dit, cette propriété peut correspondre à {{cssxref("top")}} et {{cssxref("bottom")}} ou à {{cssxref("right")}} et {{cssxref("left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.</p>
+La propriété **`inset-inline`** définit le décalage d'un élément par rapport au début et à la fin de l'axe en ligne de l'élément. Cette propriété logique correspond à une propriété physique donnée selon le mode d'écriture de l'élément, sa direction et l'orientation de son texte. Autrement dit, cette propriété peut correspondre à {{cssxref("top")}} et {{cssxref("bottom")}} ou à {{cssxref("right")}} et {{cssxref("left")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
 
-<pre class="brush:css no-line-numbers">/* Valeurs de longueur */
-/* Type &lt;length&gt; */
+```css
+/* Valeurs de longueur */
+/* Type <length> */
 inset-inline: 3px 10px;
 inset-inline: 2.4em 3em;
 inset-inline: 10px; /* La valeur est appliquée des deux côtés */
 
 /* Les valeurs en pourcentage sont relatives à la */
 /* largeur ou à la hauteur du bloc englobant */
-/* Type &lt;percentage&gt; */
+/* Type <percentage> */
 inset-inline: 10% 5%;
 
 /* Valeur avec un mot-clé */
@@ -31,25 +32,26 @@ inset-inline: auto;
 inset-inline: inherit;
 inset-inline: initial;
 inset-inline: unset;
-</pre>
+```
 
-<p>Pour gérer les décalages sur la dimension orthogonale, on pourra utiliser la propriété logique {{cssxref("inset-block")}} qui est une propriété raccourcie pour {{cssxref("inset-block-start")}}, and {{cssxref("inset-block-end")}}.</p>
+Pour gérer les décalages sur la dimension orthogonale, on pourra utiliser la propriété logique {{cssxref("inset-block")}} qui est une propriété raccourcie pour {{cssxref("inset-block-start")}}, and {{cssxref("inset-block-end")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<p>La propriété <code>inset-inline</code> peut prendre les mêmes valeurs que la propriété {{cssxref("left")}}.</p>
+La propriété `inset-inline` peut prendre les mêmes valeurs que la propriété {{cssxref("left")}}.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -60,47 +62,34 @@ inset-inline: unset;
   position: relative;
   inset-inline: 20px 50px;
   background-color: #c8c800;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="texteExemple"&gt;Texte d'exemple&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="texteExemple">Texte d'exemple</p>
+</div>
+```
 
-<h3 id="Exemples_2">Exemples</h3>
+### Exemples
 
-<p>{{EmbedLiveSample("Exemples", 140, 140)}}</p>
+{{EmbedLiveSample("Exemples", 140, 140)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-inset-inline", "inset-inline")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | État                                             | Commentaires         |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
+| {{SpecName("CSS Logical Properties", "#propdef-inset-inline", "inset-inline")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.inset-inline")}}</p>
+{{Compat("css.properties.inset-inline")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Les propriétés physiques correspondantes : {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}}</li>
- <li>Les propriétés influençant les propriétés logiques {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- Les propriétés physiques correspondantes : {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, and {{cssxref("left")}}
+- Les propriétés influençant les propriétés logiques {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

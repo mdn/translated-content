@@ -8,25 +8,26 @@ tags:
   - Transformations CSS
 translation_of: Web/CSS/perspective
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>perspective</code></strong> détermine la distance entre le plan d'équation z = 0 et la position de l'utilisateur afin de donner une perspective aux objets positionnés dans l'espace 3D. Chaque élément pour lequel la côte (z) est positif sera plus grand et chaque élément pour lequel z est négatif apparaîtra plus petit. La force de cet effet est déterminée par la valeur de cette propriété.</p>
+La propriété **`perspective`** détermine la distance entre le plan d'équation z = 0 et la position de l'utilisateur afin de donner une perspective aux objets positionnés dans l'espace 3D. Chaque élément pour lequel la côte (z) est positif sera plus grand et chaque élément pour lequel z est négatif apparaîtra plus petit. La force de cet effet est déterminée par la valeur de cette propriété.
 
-<div>{{EmbedInteractiveExample("pages/css/perspective.html")}}</div>
+{{EmbedInteractiveExample("pages/css/perspective.html")}}
 
-<p>Les parties des éléments 3D qui se situent derrière l'utilisateur (c'est-à-dire ceux pour lesquels leur coordonnée en z est plus grande que la valeur de la propriété <code>perspective</code>) ne sont pas dessiné.</p>
+Les parties des éléments 3D qui se situent derrière l'utilisateur (c'est-à-dire ceux pour lesquels leur coordonnée en z est plus grande que la valeur de la propriété `perspective`) ne sont pas dessiné.
 
-<p>Par défaut, le point de fuite est placé au centre de l'élément mais il peut être déplacé grâce à la propriété {{cssxref("perspective-origin")}}.</p>
+Par défaut, le point de fuite est placé au centre de l'élément mais il peut être déplacé grâce à la propriété {{cssxref("perspective-origin")}}.
 
-<p>Si on utilise cette propriété avec une valeur différente de <code>0</code> ou <code>none</code>, cela créera un nouveau <a href="/fr/docs/Web/CSS/Comprendre_z-index/L'empilement_de_couches">contexte d'empilement</a>. Et l'objet joue alors le rôle de bloc englobant pour les éléments qu'il contient et qui ont <code>position: fixed</code> ou <code>position: absolute</code></p>
+Si on utilise cette propriété avec une valeur différente de `0` ou `none`, cela créera un nouveau [contexte d'empilement](/fr/docs/Web/CSS/Comprendre_z-index/L'empilement_de_couches). Et l'objet joue alors le rôle de bloc englobant pour les éléments qu'il contient et qui ont `position: fixed` ou `position: absolute`
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css no-line-numbers">/* Valeur avec un mot-clé */
+```css
+/* Valeur avec un mot-clé */
 perspective: none;
 
 /* Valeurs de longueur */
-/* Type &lt;length&gt;       */
+/* Type <length>       */
 perspective: 20px;
 perspective: 3.5em;
 
@@ -34,98 +35,99 @@ perspective: 3.5em;
 perspective: inherit;
 perspective: initial;
 perspective: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Un mot-clé qui indique qu'on n'applique aucune perspective.</dd>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Une longueur (une valeur de type {{cssxref("&lt;length&gt;")}}) qui indique la distance entre l'utilisateur et le plan d'équation z = 0. Elle est utilisée pour appliquer une perspective à l'élément et à son contenu. Si elle vaut <code>0</code> ou qu'elle est négative, aucune transformation de perspective ne sera appliquée.</dd>
-</dl>
+- `none`
+  - : Un mot-clé qui indique qu'on n'applique aucune perspective.
+- `<length>`
+  - : Une longueur (une valeur de type {{cssxref("&lt;length&gt;")}}) qui indique la distance entre l'utilisateur et le plan d'équation z = 0. Elle est utilisée pour appliquer une perspective à l'élément et à son contenu. Si elle vaut `0` ou qu'elle est négative, aucune transformation de perspective ne sera appliquée.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Trois_cubes">Trois cubes</h3>
+### Trois cubes
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;th&gt;&lt;code&gt;perspective: 250px;&lt;/code&gt;
-      &lt;/th&gt;
-      &lt;th&gt;&lt;code&gt;perspective: 350px;&lt;/code&gt;
-      &lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;
-        &lt;div class="container"&gt;
-          &lt;div class="cube pers250"&gt;
-            &lt;div class="face front"&gt;1&lt;/div&gt;
-            &lt;div class="face back"&gt;2&lt;/div&gt;
-            &lt;div class="face right"&gt;3&lt;/div&gt;
-            &lt;div class="face left"&gt;4&lt;/div&gt;
-            &lt;div class="face top"&gt;5&lt;/div&gt;
-            &lt;div class="face bottom"&gt;6&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-      &lt;td&gt;
-        &lt;div class="container"&gt;
-          &lt;div class="cube pers350"&gt;
-            &lt;div class="face front"&gt;1&lt;/div&gt;
-            &lt;div class="face back"&gt;2&lt;/div&gt;
-            &lt;div class="face right"&gt;3&lt;/div&gt;
-            &lt;div class="face left"&gt;4&lt;/div&gt;
-            &lt;div class="face top"&gt;5&lt;/div&gt;
-            &lt;div class="face bottom"&gt;6&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;th&gt;&lt;code&gt;perspective: 500px;&lt;/code&gt;
-      &lt;/th&gt;
-      &lt;th&gt;&lt;code&gt;perspective: 650px;&lt;/code&gt;
-      &lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;
-        &lt;div class="container"&gt;
-          &lt;div class="cube pers500"&gt;
-            &lt;div class="face front"&gt;1&lt;/div&gt;
-            &lt;div class="face back"&gt;2&lt;/div&gt;
-            &lt;div class="face right"&gt;3&lt;/div&gt;
-            &lt;div class="face left"&gt;4&lt;/div&gt;
-            &lt;div class="face top"&gt;5&lt;/div&gt;
-            &lt;div class="face bottom"&gt;6&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
-      &lt;/td&gt;
-      &lt;td&gt;
-        &lt;div class="container"&gt;
-          &lt;div class="cube pers650"&gt;
-            &lt;div class="face front"&gt;1&lt;/div&gt;
-            &lt;div class="face back"&gt;2&lt;/div&gt;
-            &lt;div class="face right"&gt;3&lt;/div&gt;
-            &lt;div class="face left"&gt;4&lt;/div&gt;
-            &lt;div class="face top"&gt;5&lt;/div&gt;
-            &lt;div class="face bottom"&gt;6&lt;/div&gt;
-          &lt;/div&gt;
-      &lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</pre>
+```html
+<table>
+  <tbody>
+    <tr>
+      <th><code>perspective: 250px;</code>
+      </th>
+      <th><code>perspective: 350px;</code>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <div class="container">
+          <div class="cube pers250">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="container">
+          <div class="cube pers350">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <th><code>perspective: 500px;</code>
+      </th>
+      <th><code>perspective: 650px;</code>
+      </th>
+    </tr>
+    <tr>
+      <td>
+        <div class="container">
+          <div class="cube pers500">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+        </div>
+      </td>
+      <td>
+        <div class="container">
+          <div class="cube pers650">
+            <div class="face front">1</div>
+            <div class="face back">2</div>
+            <div class="face right">3</div>
+            <div class="face left">4</div>
+            <div class="face top">5</div>
+            <div class="face bottom">6</div>
+          </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">/* Des classes pour les différentes valeurs */
+```css
+/* Des classes pour les différentes valeurs */
 .pers250 {
     perspective: 250px;
 }
@@ -207,39 +209,25 @@ th, p, td {
    padding: 10px;
    font-family: sans-serif;
    text-align: left;
-}</pre>
+}
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('Trois_cubes', 660, 700)}}</p>
+{{EmbedLiveSample('Trois_cubes', 660, 700)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{Specname('CSS Transforms 2', '#propdef-perspective', 'perspective')}}</td>
-   <td>{{Spec2('CSS Transforms 2')}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | État                                     | Commentaires        |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------- |
+| {{Specname('CSS Transforms 2', '#propdef-perspective', 'perspective')}} | {{Spec2('CSS Transforms 2')}} | Définition initiale |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.perspective")}}</p>
+{{Compat("css.properties.perspective")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Transforms/Utilisation_des_transformations_CSS">Utiliser les transformations CSS</a></li>
-</ul>
+- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_Transforms/Utilisation_des_transformations_CSS)

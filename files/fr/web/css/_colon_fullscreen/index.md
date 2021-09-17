@@ -1,91 +1,80 @@
 ---
 title: ':fullscreen'
-slug: 'Web/CSS/:fullscreen'
+slug: Web/CSS/:fullscreen
 tags:
   - CSS
   - Fullscreen API
   - Pseudo-classe
   - Reference
-translation_of: 'Web/CSS/:fullscreen'
+translation_of: Web/CSS/:fullscreen
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <strong><code>:fullscreen</code></strong> permet de cibler tout élément qui est en mode plein écran. Si plusieurs éléments ont été mis en plein écran, tous ces éléments seront ciblés.</p>
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:fullscreen`** permet de cibler tout élément qui est en mode plein écran. Si plusieurs éléments ont été mis en plein écran, tous ces éléments seront ciblés.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
 {{csssyntax}}
 
-<h2 id="Notes_dutilisation">Notes d'utilisation</h2>
+## Notes d'utilisation
 
-<p>La pseudo-classe <code>:fullscreen</code> permet de configurer la taille, le style ou la disposition du contenu lorsque les éléments passent de l'état plein écran à l'état normal et vice versa.</p>
+La pseudo-classe `:fullscreen` permet de configurer la taille, le style ou la disposition du contenu lorsque les éléments passent de l'état plein écran à l'état normal et vice versa.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans cet exemple, on change la couleur d'un bouton selon que le document est en plein écran ou non. On n'utilise pas JavaScript pour changer les styles.</p>
+Dans cet exemple, on change la couleur d'un bouton selon que le document est en plein écran ou non. On n'utilise pas JavaScript pour changer les styles.
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<p>On utilise deux règles. La première qui permet de définir la couleur d'arrière plan pour le bouton « Passer en mode plein écran » lorsque l'élément n'est pas en plein écran. Pour distinguer ce cas, on utilise <code>:not(:fullscreen)</code>, qui permet de cibler les éléments qui n'ont pas la pseudo-classe <code>:fullscreen</code>.</p>
+On utilise deux règles. La première qui permet de définir la couleur d'arrière plan pour le bouton « Passer en mode plein écran » lorsque l'élément n'est pas en plein écran. Pour distinguer ce cas, on utilise `:not(:fullscreen)`, qui permet de cibler les éléments qui n'ont pas la pseudo-classe `:fullscreen`.
 
-<pre class="brush: css">#fs-toggle:not(:fullscreen) {
+```css
+#fs-toggle:not(:fullscreen) {
   background-color: #afa;
 }
-</pre>
+```
 
-<p>Lorsque le document est en mode plein écran, on utilise cette fois-ci la pseudo-classe <code>:fullscreen</code> et on définit une autre couleur (ici un rouge pâle).</p>
+Lorsque le document est en mode plein écran, on utilise cette fois-ci la pseudo-classe `:fullscreen` et on définit une autre couleur (ici un rouge pâle).
 
-<pre class="brush: css">#fs-toggle:fullscreen {
+```css
+#fs-toggle:fullscreen {
   background-color: #faa;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;h1&gt;MDN Web Docs Demo: :fullscreen pseudo-class&lt;/h1&gt;
+```html
+<h1>MDN Web Docs Demo: :fullscreen pseudo-class</h1>
 
-&lt;p&gt;This demo uses the &lt;code&gt;:fullscreen&lt;/code&gt; pseudo-class to automatically
+<p>This demo uses the <code>:fullscreen</code> pseudo-class to automatically
   change the style of a button used to toggle full-screen mode on and off,
-  entirely using CSS.&lt;/p&gt;
+  entirely using CSS.</p>
 
-&lt;button id="fs-toggle"&gt;Toggle Fullscreen&lt;/button&gt;</pre>
+<button id="fs-toggle">Toggle Fullscreen</button>
+```
 
-<p>Dans ce fragment de code HTML, c'est l'élément {{HTMLElement("button")}} avec l'identifiant <code>"fs-toggle"</code> qui changera d'une couleur à une autre selon que le document est en plein écran ou non.</p>
+Dans ce fragment de code HTML, c'est l'élément {{HTMLElement("button")}} avec l'identifiant `"fs-toggle"` qui changera d'une couleur à une autre selon que le document est en plein écran ou non.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Fullscreen', '#:fullscreen-pseudo-class', ':fullscreen')}}</td>
-   <td>{{Spec2('Fullscreen')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                             | Commentaires         |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('Fullscreen', '#:fullscreen-pseudo-class', ':fullscreen')}} | {{Spec2('Fullscreen')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.fullscreen")}}</p>
+{{Compat("css.selectors.fullscreen")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/Fullscreen_API">L'API Fullscreen</a></li>
- <li><a href="/fr/docs/Web/API/Fullscreen_API/Guide">Le guide de l'API Fullscreen</a></li>
- <li>{{cssxref("::backdrop")}}</li>
- <li>Les API DOM :
-  <ul>
-   <li>{{domxref("Element.requestFullscreen()")}},</li>
-   <li>{{domxref("Document.exitFullscreen()")}},</li>
-   <li>{{domxref("Document.fullscreenElement")}}</li>
-  </ul>
- </li>
- <li>L'attribut {{HTMLAttrXRef("allowfullscreen", "iframe")}}</li>
-</ul>
+- [L'API Fullscreen](/fr/docs/Web/API/Fullscreen_API)
+- [Le guide de l'API Fullscreen](/fr/docs/Web/API/Fullscreen_API/Guide)
+- {{cssxref("::backdrop")}}
+- Les API DOM :
+
+  - {{domxref("Element.requestFullscreen()")}},
+  - {{domxref("Document.exitFullscreen()")}},
+  - {{domxref("Document.fullscreenElement")}}
+
+- L'attribut {{HTMLAttrXRef("allowfullscreen", "iframe")}}

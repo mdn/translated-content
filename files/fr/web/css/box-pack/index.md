@@ -8,15 +8,14 @@ tags:
   - Reference
 translation_of: Web/CSS/box-pack
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<div class="warning">
-<p><strong>Attention :</strong> Cette propriété fait partie de la première version du standard pour les boîtes flexibles (<em>flexbox</em>) et sera remplacée dans une prochaine version.</p>
-</div>
+> **Attention :** Cette propriété fait partie de la première version du standard pour les boîtes flexibles (_flexbox_) et sera remplacée dans une prochaine version.
 
-<div>Les propriétés CSS <strong><code>-moz-box-pack</code></strong> et <strong><code>-webkit-box-pack</code></strong> définissent la façon dont une boîte <code>-moz-box</code> ou <code>-webkit-box</code> groupe son contenu dans la direction de la disposition. L'effet de cette propriété n'est visible que s'il reste de l'espace supplémentaire dans la boîte. Pour plus de détails, se référer à la page <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Flexbox</a> qui décrit les différentes propriétés des boîtes flexibles.</div>
+Les propriétés CSS **`-moz-box-pack`** et **`-webkit-box-pack`** définissent la façon dont une boîte `-moz-box` ou `-webkit-box` groupe son contenu dans la direction de la disposition. L'effet de cette propriété n'est visible que s'il reste de l'espace supplémentaire dans la boîte. Pour plus de détails, se référer à la page [Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) qui décrit les différentes propriétés des boîtes flexibles.
 
-<pre class="brush:css no-line-numbers">/*  Valeurs avec un mot-clé */
+```css
+/*  Valeurs avec un mot-clé */
 box-pack: start;
 box-pack: center;
 box-pack: end;
@@ -26,38 +25,37 @@ box-pack: justify;
 box-pack: inherit;
 box-pack: initial;
 box-pack: unset;
-</pre>
+```
 
-<p>Voir la page <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Flexbox</a> pour plus d'informations.</p>
+Voir la page [Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) pour plus d'informations.
 
-<p>La direction de la disposition dépend de l'orientation de l'élément : horizontale ou verticale.</p>
+La direction de la disposition dépend de l'orientation de l'élément : horizontale ou verticale.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Cette propriété se définit grâce à l'un des mots-clés définis ci-après.</p>
+Cette propriété se définit grâce à l'un des mots-clés définis ci-après.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>start</code></dt>
- <dd>La boîte regroupe son contenu au début. L'espace restant est donc laissé à la fin.</dd>
- <dt><code>center</code></dt>
- <dd>La boîte regroupe son contenu au centre. L'espace restant est divisé de façon égale entre le début et la fin.</dd>
- <dt><code>end</code></dt>
- <dd>La boîte regroupe son contenu à la fin. L'espace restant est donc laissé au début.</dd>
- <dt><code>justify</code></dt>
- <dd>L'espace est réparti entre chacun des éléments fils sans qu'un espace soit placé avant le premier fils ou après le dernier. S'il y a un seul élément fils, la valeur est synonyme de <code>start</code>.</dd>
-</dl>
+- `start`
+  - : La boîte regroupe son contenu au début. L'espace restant est donc laissé à la fin.
+- `center`
+  - : La boîte regroupe son contenu au centre. L'espace restant est divisé de façon égale entre le début et la fin.
+- `end`
+  - : La boîte regroupe son contenu à la fin. L'espace restant est donc laissé au début.
+- `justify`
+  - : L'espace est réparti entre chacun des éléments fils sans qu'un espace soit placé avant le premier fils ou après le dernier. S'il y a un seul élément fils, la valeur est synonyme de `start`.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div.exemple {
+```css
+div.exemple {
   border-style: solid;
 
   display: -moz-box; /* Mozilla */
@@ -88,60 +86,59 @@ div.exemple p {
      qu'il y ait de la place pour box-align */
   width: 200px;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="exemple"&gt;
-  &lt;p&gt;Je serai 2nd en partant du bas de div.exemple, centré horizontalement.&lt;/p&gt;
-  &lt;p&gt;Je serai tout en bas de div.exemple, centré horizontalement.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="exemple">
+  <p>Je serai 2nd en partant du bas de div.exemple, centré horizontalement.</p>
+  <p>Je serai tout en bas de div.exemple, centré horizontalement.</p>
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', 310, 310)}}</p>
+{{EmbedLiveSample('Exemples', 310, 310)}}
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<p>Le « début » et la « fin » de la boîte dépendent de l'orientation et de la direction de la boîte. Voici le tableau indiquant le début de la boîte en fonction de l'orientation et de la direction :</p>
+Le « début » et la « fin » de la boîte dépendent de l'orientation et de la direction de la boîte. Voici le tableau indiquant le début de la boîte en fonction de l'orientation et de la direction :
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th> </th>
-   <th><strong>Normal</strong></th>
-   <th><strong>Inverse</strong></th>
-  </tr>
-  <tr>
-   <th><strong>Horizontal</strong></th>
-   <td>gauche</td>
-   <td>droit</td>
-  </tr>
-  <tr>
-   <th><strong>Vertical</strong></th>
-   <td>hau</td>
-   <td>bas</td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th> </th>
+      <th><strong>Normal</strong></th>
+      <th><strong>Inverse</strong></th>
+    </tr>
+    <tr>
+      <th><strong>Horizontal</strong></th>
+      <td>gauche</td>
+      <td>droit</td>
+    </tr>
+    <tr>
+      <th><strong>Vertical</strong></th>
+      <td>hau</td>
+      <td>bas</td>
+    </tr>
+  </tbody>
 </table>
 
-<p>Si le regroupement utilise l'attribut <code>pack</code> de l'élément, le style est ignoré.</p>
+Si le regroupement utilise l'attribut `pack` de l'élément, le style est ignoré.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette propriété n'est pas standard mais une propriété semblable est apparue <a href="https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">avec les brouillons de spécification pour les boîtes flexibles CSS3</a> et a été remplacée dans les versions suivantes de la spécification.</p>
+Cette propriété n'est pas standard mais une propriété semblable est apparue [avec les brouillons de spécification pour les boîtes flexibles CSS3](https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/) et a été remplacée dans les versions suivantes de la spécification.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<div>{{Compat("css.properties.box-pack")}}</div>
+{{Compat("css.properties.box-pack")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("box-orient")}},</li>
- <li>{{cssxref("box-direction")}},</li>
- <li>{{cssxref("box-align")}}</li>
-</ul>
+- {{cssxref("box-orient")}},
+- {{cssxref("box-direction")}},
+- {{cssxref("box-align")}}

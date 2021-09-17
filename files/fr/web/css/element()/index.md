@@ -7,32 +7,31 @@ tags:
   - Reference
 translation_of: Web/CSS/element()
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La fonction <strong><code>element()</code></strong> définit une valeur {{cssxref("&lt;image&gt;")}} générée à partir d'un élément HTML arbitraire. L'image est calculée dynamiquement : si l'élément HTML change, les propriétés CSS utilisant la valeur seront automatiquement mis à jour.</p>
+La fonction **`element()`** définit une valeur {{cssxref("&lt;image&gt;")}} générée à partir d'un élément HTML arbitraire. L'image est calculée dynamiquement : si l'élément HTML change, les propriétés CSS utilisant la valeur seront automatiquement mis à jour.
 
-<p>Un scénario pour lequel cette fonction est particulièrement utile : on génère une image dans un élément HTML {{HTMLElement("canvas")}} et on l'utilise comme arrière-plan.</p>
+Un scénario pour lequel cette fonction est particulièrement utile : on génère une image dans un élément HTML {{HTMLElement("canvas")}} et on l'utilise comme arrière-plan.
 
-<p>Pour les navigateurs basés sur Gecko, on peut utiliser la méthode {{domxref("document.mozSetImageElement()")}} pour modifier l'élément utilisé comme arrière-plan pour un <code>background</code> CSS donné.</p>
+Pour les navigateurs basés sur Gecko, on peut utiliser la méthode {{domxref("document.mozSetImageElement()")}} pour modifier l'élément utilisé comme arrière-plan pour un `background` CSS donné.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">element(<var>id</var>)</pre>
+    element(id)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><strong><code>id</code></strong></dt>
- <dd>L'identifiant (correspondant à l'attribut {{htmlattrxref("id")}}) de l'élément HTML visé.</dd>
-</dl>
+- **`id`**
+  - : L'identifiant (correspondant à l'attribut {{htmlattrxref("id")}}) de l'élément HTML visé.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Un_premier_exemple_réaliste">Un premier exemple réaliste</h3>
+### Un premier exemple réaliste
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.exemple {
+```css
+.exemple {
   width: 400px;
   height: 400px;
   background: -moz-element(#monArrierePlan) no-repeat;
@@ -54,38 +53,41 @@ translation_of: Web/CSS/element()
   overflow: hidden;
   height: 0;
 }
-</pre>
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="exemple"&gt;
-  &lt;p&gt;
+```html
+<div class="exemple">
+  <p>
     Cet élément utilise l'élément
     #monArrierePlan comme image
     de fond !
-  &lt;/p&gt;
-&lt;/div&gt;
+  </p>
+</div>
 
-&lt;div class="cache"&gt;
-  &lt;div id="monArrierePlan"&gt;
-    &lt;p class="paragraphe"&gt;
+<div class="cache">
+  <div id="monArrierePlan">
+    <p class="paragraphe">
       Et voici un texte inscrit sur
       l'arrière-plan.
-    &lt;/p&gt;
-  &lt;div&gt;
-&lt;div&gt;</pre>
+    </p>
+  <div>
+<div>
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>Pour les navigateurs qui prennent en charge <code>element</code>, on peut ici voir un arrière-plan généré avec un paragraphe HTML.</p>
+Pour les navigateurs qui prennent en charge `element`, on peut ici voir un arrière-plan généré avec un paragraphe HTML.
 
-<p>{{EmbedLiveSample("Un_premier_exemple_réaliste","400","400")}}</p>
+{{EmbedLiveSample("Un_premier_exemple_réaliste","400","400")}}
 
-<h3 id="Un_second_exemple_plus_méchant">Un second exemple plus méchant</h3>
+### Un second exemple plus méchant
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.exemple {
+```css
+.exemple {
   width: 400px;
   height: 100px;
   background: -moz-element(#monArrierePlan);
@@ -94,54 +96,42 @@ translation_of: Web/CSS/element()
 .cache {
   overflow: hidden;
   height: 0;
-} </pre>
+}
+```
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="exemple"&gt;&lt;/div&gt;
+```html
+<div class="exemple"></div>
 
-&lt;div class="cache"&gt;
-  &lt;button id="monArrierePlan" type="button"&gt;
+<div class="cache">
+  <button id="monArrierePlan" type="button">
     Méchant bouton
-  &lt;/button&gt;
-&lt;/div&gt;</pre>
+  </button>
+</div>
+```
 
-<h4 id="Résultat_2">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Un_second_exemple_plus_méchant","400","400")}}</p>
+{{EmbedLiveSample("Un_second_exemple_plus_méchant","400","400")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Spécification</th>
-   <th>État</th>
-   <th>Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Images', '#element-notation', 'Using Elements as Images: the element() notation')}}</td>
-   <td>{{Spec2('CSS4 Images')}}</td>
-   <td>Reporté pour CSS4</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                        | État                             | Commentaires      |
+| ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------- |
+| {{SpecName('CSS4 Images', '#element-notation', 'Using Elements as Images: the element() notation')}} | {{Spec2('CSS4 Images')}} | Reporté pour CSS4 |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.types.image.element")}}</p>
+{{Compat("css.types.image.element")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{domxref("document.mozSetImageElement()")}}</li>
- <li>{{cssxref("_image", "image()")}}</li>
- <li>{{cssxref("image-set", "image-set()")}}</li>
- <li>{{cssxref("&lt;image&gt;")}}</li>
- <li>{{cssxref("&lt;gradient&gt;")}}</li>
- <li>{{cssxref("element()")}}</li>
- <li>{{cssxref("cross-fade")}}</li>
- <li>{{domxref("document.mozSetImageElement()")}}</li>
-</ul>
+- {{domxref("document.mozSetImageElement()")}}
+- {{cssxref("_image", "image()")}}
+- {{cssxref("image-set", "image-set()")}}
+- {{cssxref("&lt;image&gt;")}}
+- {{cssxref("&lt;gradient&gt;")}}
+- {{cssxref("element()")}}
+- {{cssxref("cross-fade")}}
+- {{domxref("document.mozSetImageElement()")}}

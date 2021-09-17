@@ -10,67 +10,63 @@ tags:
 translation_of: Web/CSS/CSS_Shapes/From_box_values
 original_slug: Web/CSS/CSS_Shapes/Créer_formes_boîtes
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Une méthode permettant de créer des formes consiste à utiliser les valeurs provenant du modèle de boîte CSS. Dans cet article, nous verrons comment les utiliser.</p>
+Une méthode permettant de créer des formes consiste à utiliser les valeurs provenant du modèle de boîte CSS. Dans cet article, nous verrons comment les utiliser.
 
-<p>Les <a href="https://drafts.csswg.org/css-shapes-1/#shapes-from-box-values">valeurs de boîte</a> qui sont autorisées pour les formes sont :</p>
+Les [valeurs de boîte](https://drafts.csswg.org/css-shapes-1/#shapes-from-box-values) qui sont autorisées pour les formes sont :
 
-<ul>
- <li><code>content-box</code></li>
- <li><code>padding-box</code></li>
- <li><code>border-box</code></li>
- <li><code>margin-box</code></li>
-</ul>
+- `content-box`
+- `padding-box`
+- `border-box`
+- `margin-box`
 
-<p>Les valeurs <code>border-radius</code> sont également prises en charge et on peut donc avoir une forme qui possède une bordure arrondie.</p>
+Les valeurs `border-radius` sont également prises en charge et on peut donc avoir une forme qui possède une bordure arrondie.
 
-<h2 id="Le_modèle_de_boîte_CSS">Le modèle de boîte CSS</h2>
+## Le modèle de boîte CSS
 
-<p>Les valeurs énumérées ci-avant correspondent aux différentes boîtes du modèle de boîte CSS. En CSS, une boîte possède un contenu (<em>content</em>), du remplissage (<em>padding</em>), une bordure (<em>border</em>) ainsi qu'une marge (<em>margin</em>).</p>
+Les valeurs énumérées ci-avant correspondent aux différentes boîtes du modèle de boîte CSS. En CSS, une boîte possède un contenu (_content_), du remplissage (_padding_), une bordure (_border_) ainsi qu'une marge (_margin_).
 
-<p><img alt="The Box Model consists of the margin, border, padding and content boxes." src="box-model.png"></p>
+![The Box Model consists of the margin, border, padding and content boxes.](box-model.png)
 
-<p>En utilisant une de ces valeurs, il est possible de suivre le contour d'une de ces zones. Dans les exemples qui suivent, on utilise un élément qui possède du remplissage, une bordure et une marge afin d'observer l'impact de ces différentes valeurs pour la définition d'une forme et le comportement du contenu alentour.</p>
+En utilisant une de ces valeurs, il est possible de suivre le contour d'une de ces zones. Dans les exemples qui suivent, on utilise un élément qui possède du remplissage, une bordure et une marge afin d'observer l'impact de ces différentes valeurs pour la définition d'une forme et le comportement du contenu alentour.
 
-<h3 id="margin-box"><code>margin-box</code></h3>
+### `margin-box`
 
-<p>La valeur <code>margin-box</code> correspond à la forme de la boîte de marge et suit le bord extérieur de la marge en prenant en compte les coins arrondis de la forme si {{cssxref("border-radius")}} a été utilisé sur l'élément.</p>
+La valeur `margin-box` correspond à la forme de la boîte de marge et suit le bord extérieur de la marge en prenant en compte les coins arrondis de la forme si {{cssxref("border-radius")}} a été utilisé sur l'élément.
 
-<p>Dans l'exemple suivant, on a un élément circulaire mauve qui est un élément {{htmlelement("div")}} avec une hauteur, une largeur et une couleur d'arrière-plan. La propriété <code>border-radius</code> a été utilisée afin de créer le cercle avec <code>border-radius: 50%</code>. L'élément ayant une marge, on peut voir le contenu évoluer autour de cette forme circulaire en prenant la marge en compte.</p>
+Dans l'exemple suivant, on a un élément circulaire mauve qui est un élément {{htmlelement("div")}} avec une hauteur, une largeur et une couleur d'arrière-plan. La propriété `border-radius` a été utilisée afin de créer le cercle avec `border-radius: 50%`. L'élément ayant une marge, on peut voir le contenu évoluer autour de cette forme circulaire en prenant la marge en compte.
 
-<p>{{EmbedGHLiveSample("css-examples/shapes/box/margin-box.html", '100%', 800)}}</p>
+{{EmbedGHLiveSample("css-examples/shapes/box/margin-box.html", '100%', 800)}}
 
-<h3 id="border-box"><code>border-box</code></h3>
+### `border-box`
 
-<p>La valeur <code>border-box</code> correspond à la forme définie par le bord extérieur de la bordure. La forme épouse la bordure et les éventuels arrondis qui lui sont appliqués. Un élément possède toujours une bordure même si {{cssxref("border")}} n'a pas explicitement été utilisé. Si c'est le cas, <code>border-box</code> sera équivalent à <code>padding-box</code> et la forme suivra le bord extérieur de la boîte de remplissage.</p>
+La valeur `border-box` correspond à la forme définie par le bord extérieur de la bordure. La forme épouse la bordure et les éventuels arrondis qui lui sont appliqués. Un élément possède toujours une bordure même si {{cssxref("border")}} n'a pas explicitement été utilisé. Si c'est le cas, `border-box` sera équivalent à `padding-box` et la forme suivra le bord extérieur de la boîte de remplissage.
 
-<p>Avec l'exemple qui suit, on peut voir que le texte suit désormais les lignes créées par la bordure. Vous pouvez modifier la taille de cette bordure pour voir le déplacement du contenu autour.</p>
+Avec l'exemple qui suit, on peut voir que le texte suit désormais les lignes créées par la bordure. Vous pouvez modifier la taille de cette bordure pour voir le déplacement du contenu autour.
 
-<p>{{EmbedGHLiveSample("css-examples/shapes/box/border-box.html", '100%', 800)}}</p>
+{{EmbedGHLiveSample("css-examples/shapes/box/border-box.html", '100%', 800)}}
 
-<h3 id="padding-box"><code>padding-box</code></h3>
+### `padding-box`
 
-<p>La valeur <code>padding-box</code> correspond à la forme définie par le bord extérieur de la boîte de remplissage (<em>padding</em>). La forme suit les règles d'arrondies appliquées à la bordure. Si aucun remplissage n'est appliqué, <code>padding-box</code> sera équivalent à <code>content-box</code>.</p>
+La valeur `padding-box` correspond à la forme définie par le bord extérieur de la boîte de remplissage (_padding_). La forme suit les règles d'arrondies appliquées à la bordure. Si aucun remplissage n'est appliqué, `padding-box` sera équivalent à `content-box`.
 
-<p>{{EmbedGHLiveSample("css-examples/shapes/box/padding-box.html", '100%', 800)}}</p>
+{{EmbedGHLiveSample("css-examples/shapes/box/padding-box.html", '100%', 800)}}
 
-<h3 id="content-box"><code>content-box</code></h3>
+### `content-box`
 
-<p>La valeur <code>content-box</code> correspond à la forme définie par le bord extérieur de la boîte de contenu. Chaque coin possède un rayon de courbure qui est le maximum entre <code>0</code> et <code>border-radius − border-width − padding</code>. Cela signifie qu'il est impossible d'avoir une valeur négative pour cette boîte.</p>
+La valeur `content-box` correspond à la forme définie par le bord extérieur de la boîte de contenu. Chaque coin possède un rayon de courbure qui est le maximum entre `0` et `border-radius − border-width − padding`. Cela signifie qu'il est impossible d'avoir une valeur négative pour cette boîte.
 
-<p>{{EmbedGHLiveSample("css-examples/shapes/box/content-box.html", '100%', 800)}}</p>
+{{EmbedGHLiveSample("css-examples/shapes/box/content-box.html", '100%', 800)}}
 
-<div class="note">
-<p><strong>Note :</strong> Pour en savoir plus sur le modèle de boîte CSS, voir <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">cet article</a>.</p>
-</div>
+> **Note :** Pour en savoir plus sur le modèle de boîte CSS, voir [cet article](/en-US/docs/Learn/CSS/Building_blocks/The_box_model).
 
-<h2 id="Quand_utiliser_les_valeurs_de_boîte">Quand utiliser les valeurs de boîte</h2>
+## Quand utiliser les valeurs de boîte
 
-<p>Les valeurs correspondant aux boîtes permettent de créer des formes simplement. Toutefois, cela ne fonctionne que pour des formes simples, définies en partie avec la propriété <code>border-radius</code>. Les exemples ci-avant montrent un tel cas d'utilisation (on crée une forme circulaire grâce à cette propriété).</p>
+Les valeurs correspondant aux boîtes permettent de créer des formes simplement. Toutefois, cela ne fonctionne que pour des formes simples, définies en partie avec la propriété `border-radius`. Les exemples ci-avant montrent un tel cas d'utilisation (on crée une forme circulaire grâce à cette propriété).
 
-<p>Malgré cela, il est possible de créer des effets intéressants en n'utilisant que cette technique. Pour ce dernier exemple, on a deux éléments qui flottent à droite et à gauche et on leur affecte une valeur <code>border-radius</code> de 100% dans la direction la plus proche du texte.</p>
+Malgré cela, il est possible de créer des effets intéressants en n'utilisant que cette technique. Pour ce dernier exemple, on a deux éléments qui flottent à droite et à gauche et on leur affecte une valeur `border-radius` de 100% dans la direction la plus proche du texte.
 
-<p>{{EmbedGHLiveSample("css-examples/shapes/box/bottom-margin-box.html", '100%', 800)}}</p>
+{{EmbedGHLiveSample("css-examples/shapes/box/bottom-margin-box.html", '100%', 800)}}
 
-<p>Pour obtenir des formes plus complexes, il faudra utiliser les valeurs de <a href="/fr/docs/Web/CSS/CSS_Shapes/Basic_Shapes">type <code>&lt;basic-shape&gt;</code> (les formes simples)</a> ou <a href="/fr/docs/Web/CSS/CSS_Shapes/Shapes_From_Images">définir une forme à partir d'une image</a>, tel que nous le verrons dans les autres guides de cette section.</p>
+Pour obtenir des formes plus complexes, il faudra utiliser les valeurs de [type `<basic-shape>` (les formes simples)](/fr/docs/Web/CSS/CSS_Shapes/Basic_Shapes) ou [définir une forme à partir d'une image](/fr/docs/Web/CSS/CSS_Shapes/Shapes_From_Images), tel que nous le verrons dans les autres guides de cette section.

@@ -7,47 +7,47 @@ tags:
   - Reference
 translation_of: Web/CSS/shape-margin
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété CSS <strong><code>shape-margin</code></strong> définit la marge autour d'une forme CSS créée avec {{cssxref("shape-outside")}}.</p>
+La propriété CSS **`shape-margin`** définit la marge autour d'une forme CSS créée avec {{cssxref("shape-outside")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/shape-margin.html")}}</div>
+{{EmbedInteractiveExample("pages/css/shape-margin.html")}}
 
-<p>La marge permet d'ajuster la distance entre le contour de la forme (l'élément flottant) et le contenu autour.</p>
+La marge permet d'ajuster la distance entre le contour de la forme (l'élément flottant) et le contenu autour.
 
-<pre class="brush:css no-line-numbers">/* Valeur de longueur */
-/* Type &lt;length&gt; */
+```css
+/* Valeur de longueur */
+/* Type <length> */
 shape-margin: 10px;
 shape-margin: 20mm;
 
 /* Valeur proportionnelle */
-/* Type &lt;percentage&gt; */
+/* Type <percentage> */
 shape-margin: 60%;
 
 /* Valeurs globales */
 shape-margin: inherit;
 shape-margin: initial;
 shape-margin: unset;
-</pre>
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;length-percentage&gt;</code></dt>
- <dd>Cette valeur définit la marge entre la forme et le texte alentour grâce à une longueur (cf. {{cssxref("&lt;length&gt;")}}) ou à un pourcentage ({{cssxref("&lt;percentage&gt;")}}) proportionnel à la largeur du bloc englobant de l'élément.</dd>
-</dl>
+- `<length-percentage>`
+  - : Cette valeur définit la marge entre la forme et le texte alentour grâce à une longueur (cf. {{cssxref("&lt;length&gt;")}}) ou à un pourcentage ({{cssxref("&lt;percentage&gt;")}}) proportionnel à la largeur du bloc englobant de l'élément.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">section {
+```css
+section {
   max-width: 400px;
 }
 
@@ -59,12 +59,14 @@ shape-margin: unset;
   clip-path: polygon(0 0, 150px 150px, 0 150px);
   shape-outside: polygon(0 0, 150px 150px, 0 150px);
   shape-margin: 20px;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;section&gt;
-  &lt;div class="shape"&gt;&lt;/div&gt;
+```html
+<section>
+  <div class="shape"></div>
   We are not quite sure of any one thing in biology; our knowledge of geology
   is relatively very slight, and the economic laws of society are
   uncertain to every one except some individual who attempts to set them
@@ -72,43 +74,29 @@ shape-margin: unset;
   was equal to the sum of the squares on the other two sides of a right
   triangle, and it will be so after this world is dead; and the inhabitant
   of Mars, if he exists, probably knows its truth as we know it.
-&lt;/section&gt;</pre>
+</section>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", 500, 250)}}</p>
+{{EmbedLiveSample("Exemples", 500, 250)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Shapes', '#shape-margin-property', 'shape-margin')}}</td>
-   <td>{{Spec2('CSS Shapes')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                             | Commentaires         |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('CSS Shapes', '#shape-margin-property', 'shape-margin')}} | {{Spec2('CSS Shapes')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.shape-margin")}}</p>
+{{Compat("css.properties.shape-margin")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Shapes">Les formes CSS</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Shapes/Aperçu_formes_CSS">Un aperçu des formes CSS</a></li>
- <li>{{cssxref("shape-outside")}}</li>
- <li>{{cssxref("shape-image-threshold")}}</li>
- <li>{{cssxref("&lt;basic-shape&gt;")}}</li>
-</ul>
+- [Les formes CSS](/fr/docs/Web/CSS/CSS_Shapes)
+- [Un aperçu des formes CSS](/fr/docs/Web/CSS/CSS_Shapes/Aperçu_formes_CSS)
+- {{cssxref("shape-outside")}}
+- {{cssxref("shape-image-threshold")}}
+- {{cssxref("&lt;basic-shape&gt;")}}

@@ -8,22 +8,23 @@ tags:
   - Reference
 translation_of: Web/CSS/-webkit-mask-position-y
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>La propriété <strong><code>-webkit-mask-position-y</code></strong> permet de définir la position verticale initiale d'une image de masque.</p>
+La propriété **`-webkit-mask-position-y`** permet de définir la position verticale initiale d'une image de masque.
 
-<pre class="brush: css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 -webkit-mask-position-y: top;
 -webkit-mask-position-y: center;
 -webkit-mask-position-y: bottom;
 
 /* Valeurs proportionnelles */
-/* Type &lt;percentage&gt;        */
+/* Type <percentage>        */
 -webkit-mask-position-y: 100%;
 -webkit-mask-position-y: -50%;
 
 /* Valeurs de longueur */
-/* Type &lt;length&gt;       */
+/* Type <length>       */
 -webkit-mask-position-y: 50px;
 -webkit-mask-position-y: -1cm;
 
@@ -34,32 +35,31 @@ translation_of: Web/CSS/-webkit-mask-position-y
 -webkit-mask-position-y: inherit;
 -webkit-mask-position-y: initial;
 -webkit-mask-position-y: unset;
-</pre>
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;length-percentage&gt;</code></dt>
- <dd>Une longueur indiquant la position du haut de l'image à partir du bord haut de la boîte de remplissage (<em>padding</em>). Les pourcentages sont calculés relativement à la dimension verticale de la boîte de remplissage (<code>0%</code> indique que le bord haut de l'image est aligné avec le bord haut de la boîte de remplissage et <code>100%</code> indique que le bord bas de l'image est aligné avec le bord bas de la boîte de remplissage).</dd>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Une longueur, mesurée à partir du bord haut de la boîte de remplissage (<em>padding</em>), qui indique la position verticale de l'image.</dd>
- <dt><code><strong>top</strong></code></dt>
- <dd>Un mot-clé équivalent à <code>0%</code>.</dd>
- <dt><code><strong>bottom</strong></code></dt>
- <dd>Un mot-clé équivalent à <code>100%</code>.</dd>
- <dt><code><strong>center</strong></code></dt>
- <dd>Un mot-clé équivalent à <code>50%</code>.</dd>
-</dl>
+- `<length-percentage>`
+  - : Une longueur indiquant la position du haut de l'image à partir du bord haut de la boîte de remplissage (_padding_). Les pourcentages sont calculés relativement à la dimension verticale de la boîte de remplissage (`0%` indique que le bord haut de l'image est aligné avec le bord haut de la boîte de remplissage et `100%` indique que le bord bas de l'image est aligné avec le bord bas de la boîte de remplissage).
+- `<length>`
+  - : Une longueur, mesurée à partir du bord haut de la boîte de remplissage (_padding_), qui indique la position verticale de l'image.
+- **`top`**
+  - : Un mot-clé équivalent à `0%`.
+- **`bottom`**
+  - : Un mot-clé équivalent à `100%`.
+- **`center`**
+  - : Un mot-clé équivalent à `50%`.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush:css">.exempleUn {
+```css
+.exempleUn {
   -webkit-mask-image: url(mask.png);
   -webkit-mask-position-y: bottom;
 }
@@ -68,23 +68,21 @@ translation_of: Web/CSS/-webkit-mask-position-y
   -webkit-mask-image: url(mask.png);
   -webkit-mask-position-y: 25%;
 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne fait partie d'aucune spécification.</p>
+Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne fait partie d'aucune spécification.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.-webkit-mask-position-y")}}</p>
+{{Compat("css.properties.-webkit-mask-position-y")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("-webkit-mask-position")}}</li>
- <li>{{cssxref("-webkit-mask-position-x")}}</li>
- <li>{{cssxref("-webkit-mask-origin")}}</li>
- <li>{{cssxref("-webkit-mask-attachment")}}</li>
-</ul>
+- {{cssxref("-webkit-mask-position")}}
+- {{cssxref("-webkit-mask-position-x")}}
+- {{cssxref("-webkit-mask-origin")}}
+- {{cssxref("-webkit-mask-attachment")}}

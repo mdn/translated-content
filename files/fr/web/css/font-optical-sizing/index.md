@@ -7,19 +7,18 @@ tags:
   - Reference
 translation_of: Web/CSS/font-optical-sizing
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété CSS <strong><code>font-optical-sizing</code></strong> permet de contrôler la façon dont l'agent utilisateur rend le texte avec (ou non) différentes représentations visuelles en fonction de la taille.  Cette propriété ne fonctionne qu'avec les polices qui disposent d'un axe de variation pour la taille optique.</p>
+La propriété CSS **`font-optical-sizing`** permet de contrôler la façon dont l'agent utilisateur rend le texte avec (ou non) différentes représentations visuelles en fonction de la taille.  Cette propriété ne fonctionne qu'avec les polices qui disposent d'un axe de variation pour la taille optique.
 
-<p>Par exemple, les textes de petites tailles sont généralement affichés avec des traits plus épais et des empattements (<em>serifs</em>) plus grands. En revanche, les textes plus grands sont souvent plus fins et utilisent plus de contrastes entre les traits fins et épais.</p>
+Par exemple, les textes de petites tailles sont généralement affichés avec des traits plus épais et des empattements (_serifs_) plus grands. En revanche, les textes plus grands sont souvent plus fins et utilisent plus de contrastes entre les traits fins et épais.
 
-<div class="note">
-<p><strong>Note :</strong> L'axe de variation pour la taille optique est représenté par <code>opsz</code> dans {{cssxref("font-variation-settings")}}.</p>
-</div>
+> **Note :** L'axe de variation pour la taille optique est représenté par `opsz` dans {{cssxref("font-variation-settings")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 font-optical-sizing: none;
 font-optical-sizing: auto; /* valeur initiale */
 
@@ -27,26 +26,25 @@ font-optical-sizing: auto; /* valeur initiale */
 font-optical-sizing: inherit;
 font-optical-sizing: initial;
 font-optical-sizing: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>none</code></dt>
- <dd>L'agent utilisateur ne modifiera pas la forme des glyphes pour une vue optimale.</dd>
- <dt><code>auto</code></dt>
- <dd>L'agent utilisateur modifiera la forme des glyphes pour une vue optimale.</dd>
-</dl>
+- `none`
+  - : L'agent utilisateur ne modifiera pas la forme des glyphes pour une vue optimale.
+- `auto`
+  - : L'agent utilisateur modifiera la forme des glyphes pour une vue optimale.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">@font-face {
+```css
+@font-face {
     src: url('AmstelvarAlpha-VF.ttf');
     font-family:'Amstelvar';
     font-style: normal;
@@ -59,42 +57,30 @@ p {
 
 .no-optical-sizing {
   font-optical-sizing: none;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="optical-sizing"&gt;Ce paragraphe est dimensionné pour une meilleure
- lecture. C'est le comportement par défaut.&lt;/p&gt;
+```html
+<p class="optical-sizing">Ce paragraphe est dimensionné pour une meilleure
+ lecture. C'est le comportement par défaut.</p>
 
-&lt;p class="no-optical-sizing"&gt;Ce paragraphe n'est pas adapté pour une
+<p class="no-optical-sizing">Ce paragraphe n'est pas adapté pour une
  meilleure lecture. Vous devriez voir une différence avec les navigateurs
- qui prennent en charge cette fonctionnalité.&lt;/p&gt;</pre>
+ qui prennent en charge cette fonctionnalité.</p>
+```
 
-<div class="note">
-<p><strong>Note :</strong> La police utilisée dans cet exemple possède un dimensionnement optique et est disponible sous licence libre <a href="https://github.com/TypeNetwork/Amstelvar/releases">en téléchargement sur GitHub</a>.</p>
-</div>
+> **Note :** La police utilisée dans cet exemple possède un dimensionnement optique et est disponible sous licence libre [en téléchargement sur GitHub](https://github.com/TypeNetwork/Amstelvar/releases).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Fonts', '#font-optical-sizing-def', 'font-optical-sizing')}}</td>
-   <td>{{Spec2('CSS4 Fonts')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | État                             | Commentaires |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------ |
+| {{SpecName('CSS4 Fonts', '#font-optical-sizing-def', 'font-optical-sizing')}} | {{Spec2('CSS4 Fonts')}} |              |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.font-optical-sizing")}}</p>
+{{Compat("css.properties.font-optical-sizing")}}

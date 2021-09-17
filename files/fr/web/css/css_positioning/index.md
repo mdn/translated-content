@@ -8,52 +8,31 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Positioning
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><em><strong>CSS Positioned Layout</strong></em> (ou module CSS de disposition positionnée) est un module CSS qui définit comment positionner des éléments sur une page.</p>
+**_CSS Positioned Layout_** (ou module CSS de disposition positionnée) est un module CSS qui définit comment positionner des éléments sur une page.
 
-<h2 id="Référence">Référence</h2>
+## Référence
 
-<h3 id="Propriétés">Propriétés</h3>
+### Propriétés
 
-<ul>
- <li>{{cssxref("bottom")}}</li>
- <li>{{cssxref("clear")}}</li>
- <li>{{cssxref("float")}}</li>
- <li>{{cssxref("left")}}</li>
- <li>{{cssxref("position")}}</li>
- <li>{{cssxref("right")}}</li>
- <li>{{cssxref("top")}}</li>
- <li>{{cssxref("z-index")}}</li>
-</ul>
+- {{cssxref("bottom")}}
+- {{cssxref("clear")}}
+- {{cssxref("float")}}
+- {{cssxref("left")}}
+- {{cssxref("position")}}
+- {{cssxref("right")}}
+- {{cssxref("top")}}
+- {{cssxref("z-index")}}
 
-<h2 id="Guides">Guides</h2>
+## Guides
 
-<dl>
- <dt><a href="/fr/docs/Web/CSS/Comprendre_z-index">Comprendre <code>z-index</code> en CSS</a></dt>
- <dd>Présente la notion de contexte d'empilement et explique comment fonctionne le tri sur z avec plusieurs exemples.</dd>
-</dl>
+- [Comprendre `z-index` en CSS](/fr/docs/Web/CSS/Comprendre_z-index)
+  - : Présente la notion de contexte d'empilement et explique comment fonctionne le tri sur z avec plusieurs exemples.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Positioning')}}</td>
-   <td>{{Spec2('CSS3 Positioning') }}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visuren.html')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                        | État                                     | Commentaires |
+| ---------------------------------------------------- | ---------------------------------------- | ------------ |
+| {{SpecName('CSS3 Positioning')}}         | {{Spec2('CSS3 Positioning') }} |              |
+| {{SpecName('CSS2.1', 'visuren.html')}} | {{Spec2('CSS2.1')}}                 |              |

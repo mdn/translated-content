@@ -8,59 +8,85 @@ tags:
   - Transformations CSS
 translation_of: Web/CSS/transform-function/scaleZ()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La fonction <strong><code>scaleZ()</code></strong> modifie la coordonnée en Z de chaque point de l'élément avec un facteur multiplicateur donné. Si ce facteur vaut 1, l'opération appliqué sera l'identité. L'homothétie n'est pas isotropique et les angles de l'élément ne sont pas conservés. La valeur obtenue par cette fonction est de type {{cssxref("&lt;transform-function&gt;")}}.</p>
+La fonction **`scaleZ()`** modifie la coordonnée en Z de chaque point de l'élément avec un facteur multiplicateur donné. Si ce facteur vaut 1, l'opération appliqué sera l'identité. L'homothétie n'est pas isotropique et les angles de l'élément ne sont pas conservés. La valeur obtenue par cette fonction est de type {{cssxref("&lt;transform-function&gt;")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/function-scaleZ.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-scaleZ.html")}}
 
-<p><code>scaleZ(sz)</code> est une notation raccourcie équivalente à <code>scale3d(1, 1, sz)</code>.</p>
+`scaleZ(sz)` est une notation raccourcie équivalente à `scale3d(1, 1, sz)`.
 
-<p><code>scaleZ(-1)</code> définit une symétrie axiale selon l'axe Z qui passe par l'origine (définie grâce à la propriété {{cssxref("transform-origin")}}).</p>
+`scaleZ(-1)` définit une symétrie axiale selon l'axe Z qui passe par l'origine (définie grâce à la propriété {{cssxref("transform-origin")}}).
 
-<p>Dans les exemples interactifs ci-avant, <code>perspective: 500px;</code> a été utilisée afin de créer un espace en trois dimensions et <code>transform-style: preserve-3d</code> permet de positionner les éléments enfants dans cet espace 3D.</p>
+Dans les exemples interactifs ci-avant, `perspective: 500px;` a été utilisée afin de créer un espace en trois dimensions et `transform-style: preserve-3d` permet de positionner les éléments enfants dans cet espace 3D.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">scaleZ(s)
-</pre>
+    scaleZ(s)
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>s</code></dt>
- <dd>Une valeur de type {{cssxref("&lt;number&gt;")}} qui représente le facteur d'échelle à appliquer sur la côte (coordonnées en Z) de chaque point de l'élément.</dd>
-</dl>
+- `s`
+  - : Une valeur de type {{cssxref("&lt;number&gt;")}} qui représente le facteur d'échelle à appliquer sur la côte (coordonnées en Z) de chaque point de l'élément.
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-   <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-   <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-   <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td colspan="2" rowspan="2">Cette transformation s'applique sur l'espace en trois dimensions et ne peut donc être représentée sous la forme d'une transformation plane.</td>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>0</mtd></mtr><mtr>0<mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>s</mtd></mtr></mtable> </mfenced> </math></td>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>s</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
+      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
+      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
+      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="2" rowspan="2">
+        Cette transformation s'applique sur l'espace en trois dimensions et ne
+        peut donc être représentée sous la forme d'une transformation plane.
+      </td>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>1<mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr>0<mtd>1</mtd><mtd>0</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>s</mtd></mtr></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>s</mtd><mtd>0</mtd></mtr
+              ><mtr
+                ><mtd>0</mtd><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;toto&lt;/p&gt;
-&lt;p class="translation"&gt;Translaté&lt;/p&gt;
-&lt;p class="homothetie"&gt;Échelle&lt;/p&gt;</pre>
+```html
+<p>toto</p>
+<p class="translation">Translaté</p>
+<p class="homothetie">Échelle</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   width: 50px;
   height: 50px;
   background-color: teal;
@@ -75,41 +101,26 @@ translation_of: Web/CSS/transform-function/scaleZ()
   /* On ajoute une perspective pour créer un volume 3D */
   transform: perspective(500px) scaleZ(2) translateZ(100px);
 }
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples","100%","200")}}</p>
+{{EmbedLiveSample("Exemples","100%","200")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Transforms 2", "#funcdef-scalez", "scaleZ()")}}</td>
-   <td>{{Spec2("CSS Transforms 2")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                                     | Commentaires         |
+| ------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
+| {{SpecName("CSS Transforms 2", "#funcdef-scalez", "scaleZ()")}} | {{Spec2("CSS Transforms 2")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>Voir la page sur le type de donnée <code><a href="/fr/docs/Web/CSS/transform-function#compatibilité_des_navigateurs">&lt;transform-function&gt;</a></code> pour les informations de compatibilité associées.</p>
+Voir la page sur le type de donnée [`<transform-function>`](/fr/docs/Web/CSS/transform-function#compatibilité_des_navigateurs) pour les informations de compatibilité associées.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><code><a href="/fr/docs/Web/CSS/transform-function/scaleX()">scaleX()</a></code></li>
- <li><code><a href="/fr/docs/Web/CSS/transform-function/scaleY()">scaleY()</a></code></li>
- <li>{{cssxref("transform")}}</li>
- <li>{{cssxref("&lt;transform-function&gt;")}}</li>
- <li>{{cssxref("transform-origin")}}</li>
-</ul>
+- [`scaleX()`](</fr/docs/Web/CSS/transform-function/scaleX()>)
+- [`scaleY()`](</fr/docs/Web/CSS/transform-function/scaleY()>)
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}
+- {{cssxref("transform-origin")}}

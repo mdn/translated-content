@@ -8,11 +8,12 @@ tags:
   - Reference
 translation_of: Web/CSS/-moz-outline-radius
 ---
-<div>{{Non-standard_header}}{{CSSRef}}</div>
+{{Non-standard_header}}{{CSSRef}}
 
-<p>Dans les applications Mozilla (ex. Firefox), la propriété <strong><code>-moz-outline-radius</code></strong> peut être utilisée afin que le contour dessiné autour d'un élément ait des angles arrondis. Le contour ({{cssxref("outline")}}) est dessiné autour des éléments pour les faire ressortir.</p>
+Dans les applications Mozilla (ex. Firefox), la propriété **`-moz-outline-radius`** peut être utilisée afin que le contour dessiné autour d'un élément ait des angles arrondis. Le contour ({{cssxref("outline")}}) est dessiné autour des éléments pour les faire ressortir.
 
-<pre class="brush:css no-line-numbers">/* Une seule valeur */
+```css
+/* Une seule valeur */
 -moz-outline-radius: 25px;
 
 /* Deux valeurs */
@@ -28,45 +29,40 @@ translation_of: Web/CSS/-moz-outline-radius
 -moz-outline-radius: inherit;
 -moz-outline-radius: initial;
 -moz-outline-radius: unset;
-</pre>
+```
 
-<p>La propriété <code>-moz-outline-radius</code> est une propriété raccourcie qui permet de définir les quatre propriétés destinées à chacun des angles {{cssxref("-moz-outline-radius-topleft")}}, {{cssxref("-moz-outline-radius-topright")}}, {{cssxref("-moz-outline-radius-bottomright")}} et {{cssxref("-moz-outline-radius-bottomleft")}}.</p>
+La propriété `-moz-outline-radius` est une propriété raccourcie qui permet de définir les quatre propriétés destinées à chacun des angles {{cssxref("-moz-outline-radius-topleft")}}, {{cssxref("-moz-outline-radius-topright")}}, {{cssxref("-moz-outline-radius-bottomright")}} et {{cssxref("-moz-outline-radius-bottomleft")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<div class="note">
-  <p><strong>Note :</strong> Les valeurs pour les coefficients elliptiques et les valeurs de type <code>&lt;percentage&gt;</code> respectent la même syntaxe que pour {{cssxref("border-radius")}}.</p>
-</div>
+> **Note :** Les valeurs pour les coefficients elliptiques et les valeurs de type `<percentage>` respectent la même syntaxe que pour {{cssxref("border-radius")}}.
 
-<p>Une, deux, trois ou quatre valeurs <code>&lt;outline-radius&gt;</code> dont chacune peut être de type :</p>
+Une, deux, trois ou quatre valeurs `<outline-radius>` dont chacune peut être de type :
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Voir {{cssxref("&lt;length&gt;")}} pour les valeurs possibles.</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>Voir {{cssxref("&lt;percentage&gt;")}}, voir {{cssxref("border-radius")}} pour plus de détails sur la proportionnalité des pourcentages.</dd>
-</dl>
+- `<length>`
+  - : Voir {{cssxref("&lt;length&gt;")}} pour les valeurs possibles.
+- `<percentage>`
+  - : Voir {{cssxref("&lt;percentage&gt;")}}, voir {{cssxref("border-radius")}} pour plus de détails sur la proportionnalité des pourcentages.
 
-<h3 id="Gestion_des_valeurs_multiples">Gestion des valeurs multiples :</h3>
+### Gestion des valeurs multiples :
 
-<ul>
- <li>Si une seule valeur est définie, celle-ci s'applique pour les 4 angles.</li>
- <li>Si deux valeurs sont fournies, la première s'applique aux angles en haut à gauche et en bas à droite et la seconde s'applique aux angles en haut à droite et en bas à gauche.</li>
- <li>Si trois valeurs sont fournies, la première s'applique à l'angle en haut à gauche, la deuxième aux angles en haut à droite et en bas à gauche et la troisième s'applique à l'angle en bas à droite.</li>
- <li>Si quatre valeurs sont fournies, la première s'applique à l'angle en haut à gauche, la deuxième en haut à droite, la troisième en bas à droite et la quatrième en bas à gauche.</li>
-</ul>
+- Si une seule valeur est définie, celle-ci s'applique pour les 4 angles.
+- Si deux valeurs sont fournies, la première s'applique aux angles en haut à gauche et en bas à droite et la seconde s'applique aux angles en haut à droite et en bas à gauche.
+- Si trois valeurs sont fournies, la première s'applique à l'angle en haut à gauche, la deuxième aux angles en haut à droite et en bas à gauche et la troisième s'applique à l'angle en bas à droite.
+- Si quatre valeurs sont fournies, la première s'applique à l'angle en haut à gauche, la deuxième en haut à droite, la troisième en bas à droite et la quatrième en bas à gauche.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.exemple1 {
+```css
+.exemple1 {
   border: 1px solid black;
   outline: dotted red;
   -moz-outline-radius: 12% 1em 25px;
@@ -79,39 +75,37 @@ translation_of: Web/CSS/-moz-outline-radius
   -moz-outline-radius-topright: 1em;
   -moz-outline-radius-bottomright: 35px;
   -moz-outline-radius-bottomleft: 1em;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="exemple1"&gt;
+```html
+<p class="exemple1">
   La propriété outline-style en utilisant -moz-outline-radius
-&lt;/p&gt;
-&lt;p class="exemple2"&gt;
+</p>
+<p class="exemple2">
   Un exemple légèrement plus compliqué avec -moz-outline-radius-xxx
-&lt;/p&gt;
-</pre>
+</p>
+```
 
-<h3 id="Résultat"><strong>Résultat</strong></h3>
+### **Résultat**
 
-<p>{{EmbedLiveSample('Exemples', '200', '200')}}</p>
+{{EmbedLiveSample('Exemples', '200', '200')}}
 
-<div class="note">
-<p><strong>Note :</strong> Cette propriété étant spécifique à Firefox, l'exemple ci-avant ne fonctionnera pas dans un autre navigateur.</p>
-</div>
+> **Note :** Cette propriété étant spécifique à Firefox, l'exemple ci-avant ne fonctionnera pas dans un autre navigateur.
 
-<h2 id="Notes">Notes</h2>
+## Notes
 
-<ul>
- <li>Les coins pour lesquels on utilise la valeur <code>dotted</code> ou <code>dashed</code> sont affichés avec des lignes pleines (cf. {{bug("382721")}}) jusqu'à Firefox 50.</li>
- <li>Cette propriété sera vraisemblablement abandonnée dans les prochaines versions de Gecko (cf. {{bug("593717")}}).</li>
-</ul>
+- Les coins pour lesquels on utilise la valeur `dotted` ou `dashed` sont affichés avec des lignes pleines (cf. {{bug("382721")}}) jusqu'à Firefox 50.
+- Cette propriété sera vraisemblablement abandonnée dans les prochaines versions de Gecko (cf. {{bug("593717")}}).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette propriété est une propriété propriétaire liée à Mozilla/Gecko et ne fait partie d'aucune spécification.</p>
+Cette propriété est une propriété propriétaire liée à Mozilla/Gecko et ne fait partie d'aucune spécification.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.-moz-outline-radius")}}</p>
+{{Compat("css.properties.-moz-outline-radius")}}

@@ -1,97 +1,79 @@
 ---
 title: '::marker'
-slug: 'Web/CSS/::marker'
+slug: Web/CSS/::marker
 tags:
   - CSS
   - Experimental
   - Pseudo-element
   - Reference
-translation_of: 'Web/CSS/::marker'
+translation_of: Web/CSS/::marker
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>Le pseudo-élément <strong><code>::marker</code></strong> représente le marqueur d'un élément d'une liste (par exemple la puce ou le numéro de l'élément d'un élément {{HTMLElement("li")}}). Ce pseudo-élément ne fonctionne que pour les éléments ou pseudo-éléments pour lesquels {{cssxref("display")}} vaut <code>list-item</code> (par défaut c'est le cas des éléments {{htmlelement("li")}} et {{htmlelement("summary")}}).</p>
+Le pseudo-élément **`::marker`** représente le marqueur d'un élément d'une liste (par exemple la puce ou le numéro de l'élément d'un élément {{HTMLElement("li")}}). Ce pseudo-élément ne fonctionne que pour les éléments ou pseudo-éléments pour lesquels {{cssxref("display")}} vaut `list-item` (par défaut c'est le cas des éléments {{htmlelement("li")}} et {{htmlelement("summary")}}).
 
-<pre class="brush: css no-line-numbers">::marker {
+```css
+::marker {
   color: red;
   font-size: 1.5em;
-}</pre>
+}
+```
 
-<h2 id="Propriétés_autorisées">Propriétés autorisées</h2>
+## Propriétés autorisées
 
-<p>Seul un sous-ensemble de propriétés CSS peuvent être utilisées pour une règle qui utilise <code>::marker</code> :</p>
+Seul un sous-ensemble de propriétés CSS peuvent être utilisées pour une règle qui utilise `::marker` :
 
-<ul>
- <li>{{cssxref("color")}},</li>
- <li>{{cssxref("text-combine-upright")}}, {{cssxref("unicode-bidi")}} et {{cssxref("direction")}}</li>
- <li>{{cssxref("content")}}</li>
- <li><a href="/fr/docs/Web/CSS/CSS_Fonts">Toutes les propriétés liées aux polices (font).</a></li>
-</ul>
+- {{cssxref("color")}},
+- {{cssxref("text-combine-upright")}}, {{cssxref("unicode-bidi")}} et {{cssxref("direction")}}
+- {{cssxref("content")}}
+- [Toutes les propriétés liées aux polices (font).](/fr/docs/Web/CSS/CSS_Fonts)
 
-<div class="note">
-<p><strong>Note :</strong> La spécification indique que d'autres propriétés CSS pourraient être prises en charge à l'avenir.</p>
-</div>
+> **Note :** La spécification indique que d'autres propriétés CSS pourraient être prises en charge à l'avenir.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
 {{CSSSyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">li::marker {
+```css
+li::marker {
   color:red;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ol&gt;
- &lt;li&gt;Savoir lacer ses chaussures&lt;/li&gt;
- &lt;li&gt;Et compter deux par deux.&lt;/li&gt;
-&lt;/ol&gt;</pre>
+```html
+<ol>
+ <li>Savoir lacer ses chaussures</li>
+ <li>Et compter deux par deux.</li>
+</ol>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples","200","150")}}</p>
+{{EmbedLiveSample("Exemples","200","150")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Pseudo-Elements', '#marker-pseudo', '::marker')}}</td>
-   <td>{{Spec2('CSS4 Pseudo-Elements')}}</td>
-   <td>Aucune modification significative.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Lists', '#marker-pseudo', '::marker')}}</td>
-   <td>{{Spec2('CSS3 Lists')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                                         | Commentaires                       |
+| ---------------------------------------------------------------------------------------- | -------------------------------------------- | ---------------------------------- |
+| {{SpecName('CSS4 Pseudo-Elements', '#marker-pseudo', '::marker')}} | {{Spec2('CSS4 Pseudo-Elements')}} | Aucune modification significative. |
+| {{SpecName('CSS3 Lists', '#marker-pseudo', '::marker')}}             | {{Spec2('CSS3 Lists')}}             | Définition initiale.               |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.marker")}}</p>
+{{Compat("css.selectors.marker")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Les éléments HTML relatifs aux listes :
-  <ul>
-   <li>{{htmlelement("ul")}}</li>
-   <li>{{htmlelement("ol")}}</li>
-   <li>{{htmlelement("li")}}</li>
-  </ul>
- </li>
- <li>{{htmlelement("summary")}}</li>
-</ul>
+- Les éléments HTML relatifs aux listes :
+
+  - {{htmlelement("ul")}}
+  - {{htmlelement("ol")}}
+  - {{htmlelement("li")}}
+
+- {{htmlelement("summary")}}

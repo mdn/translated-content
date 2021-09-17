@@ -7,18 +7,19 @@ tags:
   - Reference
 translation_of: Web/CSS/margin-bottom
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>margin-bottom</code></strong> définit la marge basse appliquée à un élément. On peut définir une marge négative qui rapprochera l'élément de ses voisins ou une marge positive qui l'en écartera..</p>
+La propriété **`margin-bottom`** définit la marge basse appliquée à un élément. On peut définir une marge négative qui rapprochera l'élément de ses voisins ou une marge positive qui l'en écartera..
 
-<div>{{EmbedInteractiveExample("pages/css/margin-bottom.html")}}</div>
+{{EmbedInteractiveExample("pages/css/margin-bottom.html")}}
 
-<p>Cette propriété n'a aucun effet sur les éléments en ligne (<em>inline</em>) qui ne sont pas remplacés comme {{HTMLElement("tt")}} ou {{HTMLElement("span")}}.</p>
+Cette propriété n'a aucun effet sur les éléments en ligne (_inline_) qui ne sont pas remplacés comme {{HTMLElement("tt")}} ou {{HTMLElement("span")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs de longueur */
-/* Type &lt;length&gt;     */
+```css
+/* Valeurs de longueur */
+/* Type <length>     */
 margin-bottom: 10px;    /* Une longueur absolue */
 margin-bottom: 1em;     /* Une longueur relative à la taille du texte */
 margin-bottom: 5%;      /* Une longueur relative à la
@@ -31,32 +32,31 @@ margin-bottom: auto;
 margin-bottom: inherit;
 margin-bottom: initial;
 margin-bottom: unset;
-</pre>
+```
 
-<p>La valeur de cette propriété peut être le mot-clé <code>auto</code>, une longueur (<code>&lt;length&gt;</code>) ou un pourcentage (<code>&lt;percentage</code><code>&gt;</code>). Cette valeur peut être nulle, positive ou négative.</p>
+La valeur de cette propriété peut être le mot-clé `auto`, une longueur (`<length>`) ou un pourcentage (` <percentage``> `). Cette valeur peut être nulle, positive ou négative.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Cette valeur définit une largeur fixée. Pour les valeurs qui peuvent être utilisées, voir la page sur le type {{cssxref("&lt;length&gt;")}}.</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>Une valeur en pourcentage (type {{cssxref("&lt;percentage&gt;")}} qui est relative à la <strong>largeur</strong> du bloc englobant.</dd>
- <dt><code>auto</code></dt>
- <dd>Voir {{cssxref("margin")}}.</dd>
-</dl>
+- `<length>`
+  - : Cette valeur définit une largeur fixée. Pour les valeurs qui peuvent être utilisées, voir la page sur le type {{cssxref("&lt;length&gt;")}}.
+- `<percentage>`
+  - : Une valeur en pourcentage (type {{cssxref("&lt;percentage&gt;")}} qui est relative à la **largeur** du bloc englobant.
+- `auto`
+  - : Voir {{cssxref("margin")}}.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<p>Grâce à la feuille de style on définit la marge basse et la hauteur des différentes <code>div</code> :</p>
+Grâce à la feuille de style on définit la marge basse et la hauteur des différentes `div` :
 
-<pre class="brush: css">.box0 {
+```css
+.box0 {
   margin-bottom:1em;
   height:3em;
 }
@@ -69,12 +69,12 @@ margin-bottom: unset;
   border-width:1px 0;
   margin-bottom:2em;
 }
+```
 
-</pre>
+On ajoute quelques règles afin de mieux visualiser les effets obtenus :
 
-<p>On ajoute quelques règles afin de mieux visualiser les effets obtenus :</p>
-
-<pre class="brush: css">.container {
+```css
+.container {
   background-color:orange;
   width:320px;
   border:1px solid black;
@@ -82,56 +82,34 @@ margin-bottom: unset;
 div {
   width:320px;
   background-color:gold;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="container"&gt;
-&lt;div class="box0"&gt;Boîte 0&lt;/div&gt;
-&lt;div class="box1"&gt;Boîte 1&lt;/div&gt;
-&lt;div class="box2"&gt;La marge négative de 1 m'attire vers le haut&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="container">
+<div class="box0">Boîte 0</div>
+<div class="box1">Boîte 1</div>
+<div class="box2">La marge négative de 1 m'attire vers le haut</div>
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples',350,200)}}</p>
+{{EmbedLiveSample('Exemples',350,200)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Box', '#margin-bottom', 'margin-bottom')}}</td>
-   <td>{{Spec2('CSS3 Box')}}</td>
-   <td>Pas de modification significative.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'margin-bottom')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td><code>margin-bottom</code> peut désormais être animée.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'box.html#margin-properties', 'margin-bottom')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>L'effet sur les éléments en ligne est supprimé.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#margin-bottom', 'margin-bottom')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                                     | Commentaires                                    |
+| -------------------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------- |
+| {{SpecName('CSS3 Box', '#margin-bottom', 'margin-bottom')}}             | {{Spec2('CSS3 Box')}}             | Pas de modification significative.              |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'margin-bottom')}} | {{Spec2('CSS3 Transitions')}} | `margin-bottom` peut désormais être animée.     |
+| {{SpecName('CSS2.1', 'box.html#margin-properties', 'margin-bottom')}} | {{Spec2('CSS2.1')}}                 | L'effet sur les éléments en ligne est supprimé. |
+| {{SpecName('CSS1', '#margin-bottom', 'margin-bottom')}}                     | {{Spec2('CSS1')}}                 | Définition initiale.                            |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.margin-bottom")}}</p>
+{{Compat("css.properties.margin-bottom")}}

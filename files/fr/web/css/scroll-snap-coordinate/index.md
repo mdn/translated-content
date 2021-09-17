@@ -8,16 +8,17 @@ tags:
   - Reference
 translation_of: Web/CSS/scroll-snap-coordinate
 ---
-<div>{{CSSRef}}{{deprecated_header}}</div>
+{{CSSRef}}{{deprecated_header}}
 
-<p>La propriété <strong> <code>scroll-snap-coordinate</code></strong> définit les coordonnées horizontale et verticale, au sein de l'élément, qui s'aligneront avec les points définis par {{cssxref("scroll-snap-destination")}} dans le conteneur le plus proche en termes de parenté.</p>
+La propriété **`scroll-snap-coordinate`** définit les coordonnées horizontale et verticale, au sein de l'élément, qui s'aligneront avec les points définis par {{cssxref("scroll-snap-destination")}} dans le conteneur le plus proche en termes de parenté.
 
-<p>Si l'élément a été transformé, les coordonnées sont transformées de la même façon afin d'aligner le point d'accroche avec l'élément tel qu'il est affiché.</p>
+Si l'élément a été transformé, les coordonnées sont transformées de la même façon afin d'aligner le point d'accroche avec l'élément tel qu'il est affiché.
 
-<pre class="brush: css no-line-numbers">/* Valeur avec un mot-clé */
+```css
+/* Valeur avec un mot-clé */
 scroll-snap-coordinate: none;
 
-/* Valeurs de &lt;position&gt; */
+/* Valeurs de <position> */
 /* Une paire de coordonnées */
 scroll-snap-coordinate: 50px 50px;
 /* Plusieurs coordonnées */
@@ -27,64 +28,64 @@ scroll-snap-coordinate: 100px 100px, 100px bottom;
 scroll-snap-coordinate: inherit;
 scroll-snap-coordinate: initial;
 scroll-snap-coordinate: unset;
-</pre>
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>none</code></dt>
- <dd>L'élément ne contribue à aucun point d'accrochage.</dd>
- <dt><code>&lt;position&gt;</code></dt>
- <dd>Définit le décalage du point d'accrochage par rapport à la boîte de bordure le l'élément. Pour chaque paire, la première valeur indique l'abscisse et la seconde, l'ordonnée. Pour plus d'informations sur les valeurs possibles, voir {{cssxref("&lt;position&gt;")}}.</dd>
-</dl>
+- `none`
+  - : L'élément ne contribue à aucun point d'accrochage.
+- `<position>`
+  - : Définit le décalage du point d'accrochage par rapport à la boîte de bordure le l'élément. Pour chaque paire, la première valeur indique l'abscisse et la seconde, l'ordonnée. Pour plus d'informations sur les valeurs possibles, voir {{cssxref("&lt;position&gt;")}}.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="container"&gt;
-  &lt;div&gt;
-    &lt;p&gt;Coordonnées (0, 0)&lt;/p&gt;
-    &lt;div class="scrollContainer coordinate0"&gt;
-      &lt;div&gt;1&lt;/div&gt;
-      &lt;div&gt;2&lt;/div&gt;
-      &lt;div&gt;3&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+```html
+<div id="container">
+  <div>
+    <p>Coordonnées (0, 0)</p>
+    <div class="scrollContainer coordinate0">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </div>
 
-  &lt;div&gt;
-    &lt;p&gt;Coordonnées (25, 0)&lt;/p&gt;
-    &lt;div class="scrollContainer coordinate25"&gt;
-      &lt;div&gt;1&lt;/div&gt;
-      &lt;div&gt;2&lt;/div&gt;
-      &lt;div&gt;3&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+  <div>
+    <p>Coordonnées (25, 0)</p>
+    <div class="scrollContainer coordinate25">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </div>
 
-  &lt;div&gt;
-    &lt;p&gt;Coordonnées (50, 0)&lt;/p&gt;
-    &lt;div class="scrollContainer coordinate50"&gt;
-      &lt;div&gt;1&lt;/div&gt;
-      &lt;div&gt;2&lt;/div&gt;
-      &lt;div&gt;3&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+  <div>
+    <p>Coordonnées (50, 0)</p>
+    <div class="scrollContainer coordinate50">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </div>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#container {
+```css
+#container {
   display: flex;
 }
 
-#container &gt; div:nth-child(-n+2) {
+#container > div:nth-child(-n+2) {
   margin-right: 20px;
 }
 
@@ -96,7 +97,7 @@ scroll-snap-coordinate: unset;
   font-size: 0;
 }
 
-.scrollContainer &gt; div {
+.scrollContainer > div {
   width: 100px;
   height: 100px;
   display: inline-block;
@@ -105,51 +106,39 @@ scroll-snap-coordinate: unset;
   font-size: 50px;
 }
 
-.coordinate0 &gt; div {
+.coordinate0 > div {
   scroll-snap-coordinate: 0 0;
 }
 
-.coordinate25 &gt; div {
+.coordinate25 > div {
   scroll-snap-coordinate: 25px 0;
 }
 
-.coordinate50 &gt; div {
+.coordinate50 > div {
   scroll-snap-coordinate: 50px 0;
 }
 
-.scrollContainer &gt; div:nth-child(even) {
+.scrollContainer > div:nth-child(even) {
   background-color: #87ea87;
 }
 
-.scrollContainer &gt; div:nth-child(odd) {
+.scrollContainer > div:nth-child(odd) {
   background-color: #87ccea;
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", "100%", "170")}}</p>
+{{EmbedLiveSample("Exemples", "100%", "170")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Scroll Snap Points", "#propdef-scroll-snap-coordinate", "scroll-snap-coordinate")}}</td>
-   <td>{{Spec2("CSS Scroll Snap Points")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                        | Statut                                           | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------------------- |
+| {{SpecName("CSS Scroll Snap Points", "#propdef-scroll-snap-coordinate", "scroll-snap-coordinate")}} | {{Spec2("CSS Scroll Snap Points")}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.scroll-snap-coordinate")}}</p>
+{{Compat("css.properties.scroll-snap-coordinate")}}

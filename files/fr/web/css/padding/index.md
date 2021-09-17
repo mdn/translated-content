@@ -8,21 +8,20 @@ tags:
   - Reference
 translation_of: Web/CSS/padding
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>padding</code></strong> est <a href="/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies">une propriété raccourcie</a> qui permet de définir les différents écarts de remplissage sur les quatre côtés d'un élément (cf. <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model#les_propri%c3%a9t%c3%a9s_des_bo%c3%aetes">les boîtes CSS</a>). Elle synthétise {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}.</p>
+La propriété **`padding`** est [une propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) qui permet de définir les différents écarts de remplissage sur les quatre côtés d'un élément (cf. [les boîtes CSS](/en-US/docs/Learn/CSS/Building_blocks/The_box_model#les_propri%c3%a9t%c3%a9s_des_bo%c3%aetes)). Elle synthétise {{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-bottom")}}, {{cssxref("padding-left")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/padding.html")}}</div>
+{{EmbedInteractiveExample("pages/css/padding.html")}}
 
-<p>La <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model" title="http://developer.mozilla.org/en/CSS/Box_model#padding">zone de remplissage</a> correspond à l'espace entre le contenu de l'élément et sa bordure. Les valeurs négatives ne sont pas autorisées.</p>
+La [zone de remplissage](/en-US/docs/Learn/CSS/Building_blocks/The_box_model "http://developer.mozilla.org/en/CSS/Box_model#padding") correspond à l'espace entre le contenu de l'élément et sa bordure. Les valeurs négatives ne sont pas autorisées.
 
-<div class="note">
-<p><strong>Note :</strong> Le <em>padding</em> permet de créer un espace supplémentaire à l'intérieur d'un élément. La marge ({{cssxref("margin")}}) permet quant à elle de créer un espace supplémentaire à l'extérieur de l'élément.</p>
-</div>
+> **Note :** Le _padding_ permet de créer un espace supplémentaire à l'intérieur d'un élément. La marge ({{cssxref("margin")}}) permet quant à elle de créer un espace supplémentaire à l'extérieur de l'élément.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css">/* On applique la même valeur aux quatre côtés */
+```css
+/* On applique la même valeur aux quatre côtés */
 padding: 1em;
 
 /* vertical | horizontal */
@@ -38,43 +37,41 @@ padding: 5px 1em 0 2em;
 padding: inherit;
 padding: initial;
 padding: unset;
-</pre>
+```
 
-<p>Selon la quantité de valeurs utilisées, on a un effet différent. Chaque valeur peut être une longueur (<code><a href="#length">&lt;length&gt;</a></code>) ou un pourcentage (<code><a href="#percentage">&lt;percentage&gt;</a></code>). Les valeurs négatives ne sont pas autorisées.</p>
+Selon la quantité de valeurs utilisées, on a un effet différent. Chaque valeur peut être une longueur ([`<length>`](#length)) ou un pourcentage ([`<percentage>`](#percentage)). Les valeurs négatives ne sont pas autorisées.
 
-<ul>
- <li><strong>Une valeur</strong> applique le même écart aux 4 côtés.</li>
- <li><strong>Deux valeurs</strong> appliquent le premier écart en haut et en bas et le second sur les côtés droit et gauche.</li>
- <li><strong>Trois valeurs</strong> appliquent le premier écart en haut, le deuxième à droite et à gauche et le troisième en bas.</li>
- <li><strong>Quatre valeurs</strong> appliquent le premier écart en haut, le deuxième à droite, le troisième en bas et le quatrième à gauche.</li>
-</ul>
+- **Une valeur** applique le même écart aux 4 côtés.
+- **Deux valeurs** appliquent le premier écart en haut et en bas et le second sur les côtés droit et gauche.
+- **Trois valeurs** appliquent le premier écart en haut, le deuxième à droite et à gauche et le troisième en bas.
+- **Quatre valeurs** appliquent le premier écart en haut, le deuxième à droite, le troisième en bas et le quatrième à gauche.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<p>Les valeurs permettent de définir une, deux, trois ou quatre valeurs pour les écarts de remplissage. On peut utiliser des valeurs de type :</p>
+Les valeurs permettent de définir une, deux, trois ou quatre valeurs pour les écarts de remplissage. On peut utiliser des valeurs de type :
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Définit un écart fixe. Voir la page {{cssxref("&lt;length&gt;")}} sur les valeurs de ce type.</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>Définit un écart relatif à la <strong>largeur</strong> du bloc englobant. Voir la page {{cssxref("&lt;percentage&gt;")}} pour plus d'informations sur les valeurs de ce type.</dd>
-</dl>
+- `<length>`
+  - : Définit un écart fixe. Voir la page {{cssxref("&lt;length&gt;")}} sur les valeurs de ce type.
+- `<percentage>`
+  - : Définit un écart relatif à la **largeur** du bloc englobant. Voir la page {{cssxref("&lt;percentage&gt;")}} pour plus d'informations sur les valeurs de ce type.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;h4&gt;Coucou le monde !&lt;/h4&gt;
-&lt;h3&gt;Le remplissage n'est pas le même ici.&lt;/h3&gt;
-</pre>
+```html
+<h4>Coucou le monde !</h4>
+<h3>Le remplissage n'est pas le même ici.</h3>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">h4 {
+```css
+h4 {
   background-color: green;
   padding: 50px 20px 20px 50px;
 }
@@ -83,62 +80,33 @@ h3 {
   background-color: blue;
   padding: 400px 5%;
 }
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples',"100%","100%")}}</p>
+{{EmbedLiveSample('Exemples',"100%","100%")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Box', '#the-padding', 'padding')}}</td>
-   <td>{{Spec2('CSS3 Box')}}</td>
-   <td>Aucun changement.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'padding')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td><code>padding</code> peut être animée.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'box.html#propdef-padding', 'padding')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Aucun changement.</td>
-  </tr>
-  <tr>
-   <td>{{Specname('CSS1', '#padding', 'padding')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                                     | Commentaires                |
+| ------------------------------------------------------------------------------------ | ---------------------------------------- | --------------------------- |
+| {{SpecName('CSS3 Box', '#the-padding', 'padding')}}                 | {{Spec2('CSS3 Box')}}             | Aucun changement.           |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'padding')}} | {{Spec2('CSS3 Transitions')}} | `padding` peut être animée. |
+| {{SpecName('CSS2.1', 'box.html#propdef-padding', 'padding')}}     | {{Spec2('CSS2.1')}}                 | Aucun changement.           |
+| {{Specname('CSS1', '#padding', 'padding')}}                             | {{Spec2('CSS1')}}                 | Définition initiale.        |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.padding")}}</p>
+{{Compat("css.properties.padding")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">CSS : Le modèle de boîtes</a></li>
- <li>Les quatres propriétés détaillées synthétisées par <code>padding</code> :
-  <ul>
-   <li>{{cssxref("padding-top")}}</li>
-   <li>{{cssxref("padding-right")}}</li>
-   <li>{{cssxref("padding-bottom")}}</li>
-   <li>{{cssxref("padding-left")}}.</li>
-  </ul>
- </li>
-</ul>
+- [CSS : Le modèle de boîtes](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+- Les quatres propriétés détaillées synthétisées par `padding` :
+
+  - {{cssxref("padding-top")}}
+  - {{cssxref("padding-right")}}
+  - {{cssxref("padding-bottom")}}
+  - {{cssxref("padding-left")}}.

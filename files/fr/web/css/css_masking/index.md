@@ -9,57 +9,38 @@ tags:
 translation_of: Web/CSS/CSS_Masking
 original_slug: Web/CSS/CSS_Masks
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><em><strong>CSS Masking</strong></em> (ou « masques CSS ») est un module CSS qui définit les moyens, dont les masques et le <em>clipping</em>, pour dissimuler des parties d'éléments visuels, partiellement ou en totalité.</p>
+**_CSS Masking_** (ou « masques CSS ») est un module CSS qui définit les moyens, dont les masques et le _clipping_, pour dissimuler des parties d'éléments visuels, partiellement ou en totalité.
 
-<h2 id="Référence">Référence</h2>
+## Référence
 
-<h3 id="Propriétés">Propriétés</h3>
+### Propriétés
 
-<ul>
- <li>{{cssxref("clip")}} {{deprecated_inline}}</li>
- <li>{{cssxref("clip-path")}}</li>
- <li>{{cssxref("clip-rule")}}</li>
- <li>{{cssxref("mask")}}</li>
- <li>{{cssxref("mask-border")}}</li>
- <li>{{cssxref("mask-border-mode")}}</li>
- <li>{{cssxref("mask-border-outset")}}</li>
- <li>{{cssxref("mask-border-repeat")}}</li>
- <li>{{cssxref("mask-border-slice")}}</li>
- <li>{{cssxref("mask-border-source")}}</li>
- <li>{{cssxref("mask-border-width")}}</li>
- <li>{{cssxref("mask-clip")}}</li>
- <li>{{cssxref("mask-composite")}}</li>
- <li>{{cssxref("mask-image")}}</li>
- <li>{{cssxref("mask-mode")}}</li>
- <li>{{cssxref("mask-origin")}}</li>
- <li>{{cssxref("mask-position")}}</li>
- <li>{{cssxref("mask-repeat")}}</li>
- <li>{{cssxref("mask-size")}}</li>
- <li>{{cssxref("mask-type")}}</li>
-</ul>
+- {{cssxref("clip")}} {{deprecated_inline}}
+- {{cssxref("clip-path")}}
+- {{cssxref("clip-rule")}}
+- {{cssxref("mask")}}
+- {{cssxref("mask-border")}}
+- {{cssxref("mask-border-mode")}}
+- {{cssxref("mask-border-outset")}}
+- {{cssxref("mask-border-repeat")}}
+- {{cssxref("mask-border-slice")}}
+- {{cssxref("mask-border-source")}}
+- {{cssxref("mask-border-width")}}
+- {{cssxref("mask-clip")}}
+- {{cssxref("mask-composite")}}
+- {{cssxref("mask-image")}}
+- {{cssxref("mask-mode")}}
+- {{cssxref("mask-origin")}}
+- {{cssxref("mask-position")}}
+- {{cssxref("mask-repeat")}}
+- {{cssxref("mask-size")}}
+- {{cssxref("mask-type")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Masks")}}</td>
-   <td>{{Spec2("CSS Masks")}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('SVG1.1', 'masking.html#MaskProperty', 'mask')}}</td>
-   <td>{{Spec2('SVG1.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | État                         | Commentaires         |
+| -------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName("CSS Masks")}}                                                 | {{Spec2("CSS Masks")}} |                      |
+| {{SpecName('SVG1.1', 'masking.html#MaskProperty', 'mask')}} | {{Spec2('SVG1.1')}}     | Définition initiale. |

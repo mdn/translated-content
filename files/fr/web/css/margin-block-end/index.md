@@ -8,18 +8,17 @@ tags:
   - Reference
 translation_of: Web/CSS/margin-block-end
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propriété <strong><code>margin-block-end</code></strong> définit la marge logique appliquée à la fin des éléments de bloc, selon le mode d'écriture, la directionnalité et l'orientation du texte. Selon les valeurs utilisées pour {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}, elle peut correspondre à {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} ou {{cssxref("margin-left")}}.</p>
+La propriété **`margin-block-end`** définit la marge logique appliquée à la fin des éléments de bloc, selon le mode d'écriture, la directionnalité et l'orientation du texte. Selon les valeurs utilisées pour {{cssxref("writing-mode")}}, {{cssxref("direction")}}, and {{cssxref("text-orientation")}}, elle peut correspondre à {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}} ou {{cssxref("margin-left")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/margin-block-end.html")}}</div
+{{EmbedInteractiveExample("pages/css/margin-block-end.html")}}Cette propriété est à rapprocher de {{cssxref("margin-block-start")}}, {{cssxref("margin-inline-end")}} et de {{cssxref("margin-inline-start")}} qui définissent les autres marges appliquées à l'élément.
 
-<p>Cette propriété est à rapprocher de {{cssxref("margin-block-start")}}, {{cssxref("margin-inline-end")}} et de {{cssxref("margin-inline-start")}} qui définissent les autres marges appliquées à l'élément.</p>
+## Syntaxe
 
-<h2 id="Syntaxe">Syntaxe</h2>
-
-<pre class="brush:css no-line-numbers">/* Valeurs de longueur */
-/* Type &lt;length&gt;       */
+```css
+/* Valeurs de longueur */
+/* Type <length>       */
 margin-block-end: 10px;      /* Une longueur absolue */
 margin-block-end: 1em;       /* Une longueur relative à la taille du texte */
 margin-block-end: 5%;        /* Une largeur relative à la
@@ -30,21 +29,22 @@ margin-block-end: auto;
 
 /* Valeurs globales */
 margin-block-end: inherit;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<p>La propriété <code>margin-block-end</code> peut prendre les mêmes valeurs que la propriété {{cssxref("margin-left")}}.</p>
+La propriété `margin-block-end` peut prendre les mêmes valeurs que la propriété {{cssxref("margin-left")}}.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -54,56 +54,42 @@ margin-block-end: inherit;
   writing-mode: vertical-lr;
   margin-block-end: 20px;
   background-color: #c8c800;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exemple"&gt;Texte d'exemple&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exemple">Texte d'exemple</p>
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", 140, 140)}}</p>
+{{EmbedLiveSample("Exemples", 140, 140)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-margin-block-end", "margin-block-end")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | État                                             | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
+| {{SpecName("CSS Logical Properties", "#propdef-margin-block-end", "margin-block-end")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.margin-block-end")}}</p>
+{{Compat("css.properties.margin-block-end")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Les propriétés physiques correspondantes :
-  <ul>
-   <li>{{cssxref("margin-top")}},</li>
-   <li>{{cssxref("margin-right")}},</li>
-   <li>{{cssxref("margin-bottom")}}</li>
-   <li>{{cssxref("margin-left")}}</li>
-  </ul>
- </li>
- <li>{{cssxref("writing-mode")}}</li>
- <li>{{cssxref("direction")}}</li>
- <li>{{cssxref("text-orientation")}}</li>
-</ul>
+- Les propriétés physiques correspondantes :
+
+  - {{cssxref("margin-top")}},
+  - {{cssxref("margin-right")}},
+  - {{cssxref("margin-bottom")}}
+  - {{cssxref("margin-left")}}
+
+- {{cssxref("writing-mode")}}
+- {{cssxref("direction")}}
+- {{cssxref("text-orientation")}}

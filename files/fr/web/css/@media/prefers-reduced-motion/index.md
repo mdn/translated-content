@@ -10,48 +10,44 @@ tags:
   - media feature
 translation_of: Web/CSS/@media/prefers-reduced-motion
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La <a href="/fr/docs/Web/CSS/Media_Queries/Using_media_queries#media_features">requêtes média</a> <a href="/fr/docs/Web/CSS">CSS</a> <strong><code>prefers-reduced-motion</code></strong> détecte si l'utilisateur a demandé au système de minimiser la quantité d'animation ou de mouvement.</p>
+La [requêtes média](/fr/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) [CSS](/fr/docs/Web/CSS) **`prefers-reduced-motion`** détecte si l'utilisateur a demandé au système de minimiser la quantité d'animation ou de mouvement.
 
-<div class="warning">
-  <p><strong>Attention :</strong> Un exemple intégré au bas de cette page comporte un mouvement d'échelle qui peut poser problème à certains lecteurs. Les lecteurs souffrant de troubles du mouvement vestibulaire peuvent souhaiter activer la fonction de réduction du mouvement sur leur appareil avant de visionner l'animation.</p>
-</div>
+> **Attention :** Un exemple intégré au bas de cette page comporte un mouvement d'échelle qui peut poser problème à certains lecteurs. Les lecteurs souffrant de troubles du mouvement vestibulaire peuvent souhaiter activer la fonction de réduction du mouvement sur leur appareil avant de visionner l'animation.
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<dl>
-  <dt><code><dfn>no-preference</dfn></code></dt>
-  <dd>Cette valeur indique que l'utilisateur n'a rien indiqué au système.</dd>
-  <dt><code><dfn>reduce</dfn></code></dt>
-  <dd>Cette valeur indique que l'utilisateur souhaite utiliser une interface qui minimise la quantité d'animation, au point où tout mouvement qui n'est pas essentiel a été retiré.</dd>
-</dl>
+- `no-preference`
+  - : Cette valeur indique que l'utilisateur n'a rien indiqué au système.
+- `reduce`
+  - : Cette valeur indique que l'utilisateur souhaite utiliser une interface qui minimise la quantité d'animation, au point où tout mouvement qui n'est pas essentiel a été retiré.
 
-<h2 id="user_preferences">Gestion des préférences</h2>
+## Gestion des préférences
 
-<p>Dans Firefox, la valeur <code>reduce</code> est utilisée par le moteur selon des conditions provenant du système d'exploitation/environnement de bureau :</p>
+Dans Firefox, la valeur `reduce` est utilisée par le moteur selon des conditions provenant du système d'exploitation/environnement de bureau :
 
-<ul>
-  <li>Pour GTK/Gnome, si <code>gtk-enable-animation</code> vaut <code>false</code>. Cela peut être configuré par le menu « Ajustements » de Gnome.</li>
-  <li>Pour Windows 10 : Paramètres &gt; Options d'ergonomie &gt; Vision &gt; Afficher &gt; Afficher les animations dans windows</li>
-  <li>Pour macOS : Préférences système &gt; Accessibilité &gt; Affichage &gt; Réduire les animations.</li>
-  <li>Dans iOS : Paramètres &gt ; Général &gt ; Accessibilité &gt ; Réduire les animations.</li>
-	<li>Dans Android 9+ : Paramètres &gt ; Accessibilité &gt ; Supprimer les animations.</li>
-	<li>Dans la page <code>about:config</code> de Firefox : Ajoutez une préférence numérique appelée <code>ui.prefersReducedMotion</code> et définissez sa valeur soit à <code>0</code> pour des animations complètes, soit à <code>1</code> pour indiquer une préférence pour des mouvements réduits. Les modifications apportées à cette préférence prennent effet immédiatement.</li>
-</ul>
+- Pour GTK/Gnome, si `gtk-enable-animation` vaut `false`. Cela peut être configuré par le menu « Ajustements » de Gnome.
+- Pour Windows 10 : Paramètres > Options d'ergonomie > Vision > Afficher > Afficher les animations dans windows
+- Pour macOS : Préférences système > Accessibilité > Affichage > Réduire les animations.
+- Dans iOS : Paramètres > ; Général > ; Accessibilité > ; Réduire les animations.
+- Dans Android 9+ : Paramètres > ; Accessibilité > ; Supprimer les animations.
+- Dans la page `about:config` de Firefox : Ajoutez une préférence numérique appelée `ui.prefersReducedMotion` et définissez sa valeur soit à `0` pour des animations complètes, soit à `1` pour indiquer une préférence pour des mouvements réduits. Les modifications apportées à cette préférence prennent effet immédiatement.
 
-<h2 id="example">Exemple</h2>
+## Exemple
 
-<p>Cet exemple possède une animation désagréable qui sera exécutée à moins d'activer la réduction de mouvement dans les préférences relatives à l'accessibilité.</p>
+Cet exemple possède une animation désagréable qui sera exécutée à moins d'activer la réduction de mouvement dans les préférences relatives à l'accessibilité.
 
-<h3 id="html">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="animation"&gt;boîte animée&lt;/div&gt;
-</pre>
+```html
+<div class="animation">boîte animée</div>
+```
 
-<h3 id="css">CSS</h3>
+### CSS
 
-<pre class="brush: css">.animation {
+```css
+.animation {
   animation: vibrate 0.3s linear infinite both;
 }
 
@@ -60,9 +56,10 @@ translation_of: Web/CSS/@media/prefers-reduced-motion
   animation: none;
   }
 }
-</pre>
+```
 
-<pre class="brush: css hidden">.animation {
+```css hidden
+.animation {
   background-color: rebeccapurple;
   color: #fff;
   font: 1.2em Helvetica, arial, sans-serif;
@@ -103,38 +100,23 @@ translation_of: Web/CSS/@media/prefers-reduced-motion
       transform: translate(0);
   }
 }
-</pre>
+```
 
-<h3 id="result">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("example")}}</p>
+{{EmbedLiveSample("example")}}
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
-  <thead>
-    <tr>
-      <th scope="col">Spécification</th>
-      <th scope="col">Statut</th>
-      <th scope="col">Commentaire</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{SpecName('CSS5 Media Queries', '#descdef-media-prefers-reduced-motion', 'prefers-reduced-motion')}}</td>
-      <td>{{Spec2('CSS5 Media Queries')}}</td>
-      <td>Définition initiale.</td>
-    </tr>
-  </tbody>
-</table>
+| Spécification                                                                                                                            | Statut                                   | Commentaire          |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName('CSS5 Media Queries', '#descdef-media-prefers-reduced-motion', 'prefers-reduced-motion')}} | {{Spec2('CSS5 Media Queries')}} | Définition initiale. |
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.at-rules.media.prefers-reduced-motion")}}</p>
+{{Compat("css.at-rules.media.prefers-reduced-motion")}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-  <li><a href="https://css-tricks.com/introduction-reduced-motion-media-query/">Une introduction aux requêtes média pour la réduction de mouvement</a></li>
-  <li><a href="https://webkit.org/blog/7551/responsive-design-for-motion/">Responsive Design for Motion (WebKit Blog)</a> comprend des exemples de déclencheurs de mouvements vestibulaires.</li>
-</ul>
+- [Une introduction aux requêtes média pour la réduction de mouvement](https://css-tricks.com/introduction-reduced-motion-media-query/)
+- [Responsive Design for Motion (WebKit Blog)](https://webkit.org/blog/7551/responsive-design-for-motion/) comprend des exemples de déclencheurs de mouvements vestibulaires.

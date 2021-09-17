@@ -1,44 +1,45 @@
 ---
 title: ':-moz-drag-over'
-slug: 'Web/CSS/:-moz-drag-over'
+slug: Web/CSS/:-moz-drag-over
 tags:
   - CSS
   - Non-standard
   - Pseudo-classe
   - Reference
-translation_of: 'Web/CSS/:-moz-drag-over'
+translation_of: Web/CSS/:-moz-drag-over
 ---
-<div>{{Non-standard_header}}{{CSSRef}}</div>
+{{Non-standard_header}}{{CSSRef}}
 
-<p>La pseudo-classe <strong><code>:-moz-drag-over</code></strong> permet de mettre en forme un élément lorsqu'un événement <code>drag-over</code> est appelé dessus.</p>
+La pseudo-classe **`:-moz-drag-over`** permet de mettre en forme un élément lorsqu'un événement `drag-over` est appelé dessus.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>element</var>:-moz-drag-over { <em>propriétés de mise en forme</em> }
-</pre>
+    element:-moz-drag-over { propriétés de mise en forme }
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">td:-moz-drag-over {
+```css
+td:-moz-drag-over {
   color: red;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html">&lt;table border="1"&gt;
-  &lt;tr&gt;
-    &lt;td width="100px" height="100px"&gt;Drag Over&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
-</pre>
+```html
+<table border="1">
+  <tr>
+    <td width="100px" height="100px">Drag Over</td>
+  </tr>
+</table>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples","200","200")}}</p>
+{{EmbedLiveSample("Exemples","200","200")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.</p>
+Cette pseudo-classe est une pseudo-classe propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification.

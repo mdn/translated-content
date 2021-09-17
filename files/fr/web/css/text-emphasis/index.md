@@ -7,27 +7,26 @@ tags:
   - Reference
 translation_of: Web/CSS/text-emphasis
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>text-emphasis</code></strong> est une propriété raccourcie qui permet de définir {{cssxref("text-emphasis-style")}} et {{cssxref("text-emphasis-color")}} avec une seule déclaration. Cette propriété appliquera les marques d'emphase définies sur chaque caractères du texte de l'élément sauf pour les séparateurs (comme les espaces) et les caractères de contrôle.</p>
+La propriété **`text-emphasis`** est une propriété raccourcie qui permet de définir {{cssxref("text-emphasis-style")}} et {{cssxref("text-emphasis-color")}} avec une seule déclaration. Cette propriété appliquera les marques d'emphase définies sur chaque caractères du texte de l'élément sauf pour les séparateurs (comme les espaces) et les caractères de contrôle.
 
-<div>{{EmbedInteractiveExample("pages/css/text-emphasis.html")}}</div>
+{{EmbedInteractiveExample("pages/css/text-emphasis.html")}}
 
-<p>La propriété <code>text-emphasis</code> est différente de {{cssxref("text-decoration")}}. La propriété <code>text-decoration</code> n'a pas d'héritage et la décoration est appliquée sur tout l'élément. Cependant, <code>text-emphasis</code> a un héritage et il est donc possible de changer la marque selon les « descendants » d'un élément.</p>
+La propriété `text-emphasis` est différente de {{cssxref("text-decoration")}}. La propriété `text-decoration` n'a pas d'héritage et la décoration est appliquée sur tout l'élément. Cependant, `text-emphasis` a un héritage et il est donc possible de changer la marque selon les « descendants » d'un élément.
 
-<p>La taille du symbole d'emphase, comme celle des symboles Ruby, représente environ 50% de la taille de la police du texte. <code>text-emphasis</code> peut modifier la hauteur de la ligne lorsque l'interlignage n'est pas suffisant pour placer les marques.</p>
+La taille du symbole d'emphase, comme celle des symboles Ruby, représente environ 50% de la taille de la police du texte. `text-emphasis` peut modifier la hauteur de la ligne lorsque l'interlignage n'est pas suffisant pour placer les marques.
 
-<div class="note">
-<p><strong>Note :</strong> <code>text-emphasis</code> ne réinitialise pas la valeur de {{cssxref("text-emphasis-position")}}. En effet, bien que la couleur et le style des marques puisse varier, il est très peu probable qu'on change leurs positions au cours du même document.</p>
-</div>
+> **Note :** `text-emphasis` ne réinitialise pas la valeur de {{cssxref("text-emphasis-position")}}. En effet, bien que la couleur et le style des marques puisse varier, il est très peu probable qu'on change leurs positions au cours du même document.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css  no-line-numbers">/* Valeur initiale */
+```css
+/* Valeur initiale */
 text-emphasis: none; /* Pas de marque */
 
 /* Chaîne de caractères */
-/* Type &lt;string&gt;        */
+/* Type <string>        */
 text-emphasis: 'x';
 text-emphasis: '点';
 text-emphasis: '\25B2';
@@ -49,82 +48,69 @@ text-emphasis: filled sesame #555;
 text-emphasis: inherit;
 text-emphasis: initial;
 text-emphasis: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Il n'y aura pas de marques d'emphase appliquées.</dd>
- <dt><code>filled</code></dt>
- <dd>La forme de la marque est remplie avec une couleur unie. Si aucun des mots-clés parmi <code>filled</code> ou <code>open</code> n'est présent, ce sera la valeur par défaut.</dd>
- <dt><code>open</code></dt>
- <dd>La forme de la marque est évidée.</dd>
- <dt><code>dot</code></dt>
- <dd>La forme de la marque est un petit cercle. Le cercle plein est le caractère <code>'•'</code> (<code>U+2022</code>) et celui qui est évidé est <code>'◦'</code> (<code>U+25E6</code>).</dd>
- <dt><code>circle</code></dt>
- <dd>La forme de la marque est un grand cercle. Le cercle plein est le caractère <code>'●'</code> (<code>U+25CF</code>) et celui du cercle évidé est <code>'○'</code> (<code>U+25CB</code>). Lorsqu'aucune forme n'est spécifiée, c'est la forme par défaut utilisée pour les modes d'écriture horizontaux.</dd>
- <dt><code>double-circle</code></dt>
- <dd>La forme de la marque est un double-cercle. Le double-cercle plein est le caractère <code>'◉'</code> (<code>U+25C9</code>), celui du double-cercle évidé est <code>'◎'</code> (<code>U+25CE</code>).</dd>
- <dt><code>triangle</code></dt>
- <dd>La forme de la marque est un triangle. Le triangle plein correspond au caractère <code>'▲'</code> (<code>U+25B2</code>) et celui du triangle évidé correspond à <code>'△'</code> (<code>U+25B3</code>).</dd>
- <dt><code>sesame</code></dt>
- <dd>La forme de la marque est un sésame. Le sésame plein correspond au caractère <code>'﹅'</code> (<code>U+FE45</code>) et celui du sésame évidé correspond à <code>'﹆'</code> (<code>U+FE46</code>). Lorsqu'aucune forme n'a été définie, c'est la forme par défaut qui est utilisée pour les marques d'emphase pour les modes d'écriture verticaux.</dd>
- <dt><code>&lt;string&gt;</code></dt>
- <dd>La marque affichée sera la chaîne de caractères. Attention à n'utiliser que des chaînes d'un seul caractère. L'agent utilisateur peut tronquer ou ignorer les chaînes qui comportent plusieurs graphèmes.</dd>
- <dt><code>&lt;color&gt;</code></dt>
- <dd>Définit la couleur utilisée pour la marque. Si aucune couleur n'est définie, la valeur utilisée par défaut sera <code>currentColor</code>.</dd>
-</dl>
+- `none`
+  - : Il n'y aura pas de marques d'emphase appliquées.
+- `filled`
+  - : La forme de la marque est remplie avec une couleur unie. Si aucun des mots-clés parmi `filled` ou `open` n'est présent, ce sera la valeur par défaut.
+- `open`
+  - : La forme de la marque est évidée.
+- `dot`
+  - : La forme de la marque est un petit cercle. Le cercle plein est le caractère `'•'` (`U+2022`) et celui qui est évidé est `'◦'` (`U+25E6`).
+- `circle`
+  - : La forme de la marque est un grand cercle. Le cercle plein est le caractère `'●'` (`U+25CF`) et celui du cercle évidé est `'○'` (`U+25CB`). Lorsqu'aucune forme n'est spécifiée, c'est la forme par défaut utilisée pour les modes d'écriture horizontaux.
+- `double-circle`
+  - : La forme de la marque est un double-cercle. Le double-cercle plein est le caractère `'◉'` (`U+25C9`), celui du double-cercle évidé est `'◎'` (`U+25CE`).
+- `triangle`
+  - : La forme de la marque est un triangle. Le triangle plein correspond au caractère `'▲'` (`U+25B2`) et celui du triangle évidé correspond à `'△'` (`U+25B3`).
+- `sesame`
+  - : La forme de la marque est un sésame. Le sésame plein correspond au caractère `'﹅'` (`U+FE45`) et celui du sésame évidé correspond à `'﹆'` (`U+FE46`). Lorsqu'aucune forme n'a été définie, c'est la forme par défaut qui est utilisée pour les marques d'emphase pour les modes d'écriture verticaux.
+- `<string>`
+  - : La marque affichée sera la chaîne de caractères. Attention à n'utiliser que des chaînes d'un seul caractère. L'agent utilisateur peut tronquer ou ignorer les chaînes qui comportent plusieurs graphèmes.
+- `<color>`
+  - : Définit la couleur utilisée pour la marque. Si aucune couleur n'est définie, la valeur utilisée par défaut sera `currentColor`.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;&lt;em&gt;Coucou&lt;/em&gt;, je suis &lt;em&gt;là&lt;/em&gt;&lt;/p&gt;</pre>
+```html
+<p><em>Coucou</em>, je suis <em>là</em></p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">em {
+```css
+em {
   text-emphasis: sesame blue;
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Text Decoration', '#text-emphasis-property', 'text-emphasis')}}</td>
-   <td>{{Spec2('CSS3 Text Decoration')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | État                                         | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------ | -------------------------------------------- | -------------------- |
+| {{SpecName('CSS3 Text Decoration', '#text-emphasis-property', 'text-emphasis')}} | {{Spec2('CSS3 Text Decoration')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.text-emphasis")}}</p>
+{{Compat("css.properties.text-emphasis")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref('text-emphasis-style')}}</li>
- <li>{{cssxref('text-emphasis-color')}}</li>
- <li>{{cssxref('text-emphasis-position')}}</li>
-</ul>
+- {{cssxref('text-emphasis-style')}}
+- {{cssxref('text-emphasis-color')}}
+- {{cssxref('text-emphasis-position')}}

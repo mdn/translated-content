@@ -8,11 +8,12 @@ tags:
   - Reference
 translation_of: Web/CSS/mask-mode
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propriété <strong><code>mask-mode</code></strong> détermine si le masque défini par {{cssxref("mask-image")}} est considéré comme un masque de luminance ou un masque alpha (transparence).</p>
+La propriété **`mask-mode`** détermine si le masque défini par {{cssxref("mask-image")}} est considéré comme un masque de luminance ou un masque alpha (transparence).
 
-<pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 mask-mode: alpha;
 mask-mode: luminance;
 mask-mode: match-source;
@@ -24,38 +25,36 @@ mask-mode: alpha, match-source;
 mask-mode: inherit;
 mask-mode: initial;
 mask-mode: unset;
-</pre>
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>La propriété <code>mask-mode</code> est définie avec un ou plusieurs mots-clés parmi ceux de la liste suivante, séparés par des virgules.</p>
+La propriété `mask-mode` est définie avec un ou plusieurs mots-clés parmi ceux de la liste suivante, séparés par des virgules.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>alpha</code></dt>
- <dd>Ce mot-clé indique que ce sont les valeurs du canal alpha (le canal de transparence) qui sont utilisées comme valeurs de masque.</dd>
- <dt><code>luminance</code></dt>
- <dd>Ce mot-clé indique que ce sont les valeurs de luminance qui sont utilisées comme valeurs de masque.</dd>
- <dt><code>match-source</code></dt>
- <dd>
- <p>Si la propriété {{cssxref("mask-image")}} est de type <code>&lt;mask-source&gt;</code>, les valeurs de luminance de l'image doivent être utilisée comme valeurs pour le masque.</p>
+- `alpha`
+  - : Ce mot-clé indique que ce sont les valeurs du canal alpha (le canal de transparence) qui sont utilisées comme valeurs de masque.
+- `luminance`
+  - : Ce mot-clé indique que ce sont les valeurs de luminance qui sont utilisées comme valeurs de masque.
+- `match-source`
 
- <p>Si elle est de type {{cssxref("&lt;image&gt;")}}, ce seront les valeurs de transparence (canal alpha) qui seront utilisées.</p>
- </dd>
-</dl>
+  - : Si la propriété {{cssxref("mask-image")}} est de type `<mask-source>`, les valeurs de luminance de l'image doivent être utilisée comme valeurs pour le masque.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+    Si elle est de type {{cssxref("&lt;image&gt;")}}, ce seront les valeurs de transparence (canal alpha) qui seront utilisées.
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Alpha">Alpha</h3>
+### Alpha
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">#masked {
+```css
+#masked {
   width: 100px;
   height: 100px;
   background: blue linear-gradient(red, blue);
@@ -66,22 +65,24 @@ mask-mode: unset;
   -webkit-mask-mode: alpha;
   mask-mode: alpha;
 }
-</pre>
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="masked"&gt;&lt;/div&gt;
-</pre>
+```html
+<div id="masked"></div>
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Alpha", "110px", "130px")}}</p>
+{{EmbedLiveSample("Alpha", "110px", "130px")}}
 
-<h3 id="Luminance">Luminance</h3>
+### Luminance
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">#masked {
+```css
+#masked {
   width: 100px;
   height: 100px;
   background-color: #8cffa0;
@@ -92,38 +93,26 @@ mask-mode: unset;
   -webkit-mask-mode: luminance;
   mask-mode: luminance;
 }
-</pre>
+```
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="masked"&gt;&lt;/div&gt;
-</pre>
+```html
+<div id="masked"></div>
+```
 
-<h4 id="Résultat_2">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Luminance", "110px", "130px")}}</p>
+{{EmbedLiveSample("Luminance", "110px", "130px")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Masks", "#the-mask-mode", "mask-mode")}}</td>
-   <td>{{Spec2("CSS Masks")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | État                         | Commentaires         |
+| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName("CSS Masks", "#the-mask-mode", "mask-mode")}} | {{Spec2("CSS Masks")}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.mask-mode")}}</p>
+{{Compat("css.properties.mask-mode")}}

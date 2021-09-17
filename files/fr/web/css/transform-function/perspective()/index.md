@@ -7,55 +7,74 @@ tags:
   - Transformations CSS
 translation_of: Web/CSS/transform-function/perspective()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La fonction <strong><code>perspective()</code></strong> définit la distance entre le plan d'équation z = 0 et l'œil de l'utilisateur afin de fournir une perspective aux éléments positionnés dans l'espace (3D). Chaque élément pour lequel z est positif apparaîtra plus grand et chaque élément pour lequel z est négatif apparaîtra plus petit. La « force » de cet effet est déterminée par la valeur de cette propriété. La valeur obtenue comme résultat de cette fonction est de type {{cssxref("&lt;transform-function&gt;")}}.</p>
+La fonction **`perspective()`** définit la distance entre le plan d'équation z = 0 et l'œil de l'utilisateur afin de fournir une perspective aux éléments positionnés dans l'espace (3D). Chaque élément pour lequel z est positif apparaîtra plus grand et chaque élément pour lequel z est négatif apparaîtra plus petit. La « force » de cet effet est déterminée par la valeur de cette propriété. La valeur obtenue comme résultat de cette fonction est de type {{cssxref("&lt;transform-function&gt;")}}.
 
-<p>Le résultat de cette fonction est une valeur de type {{cssxref("&lt;transform-function&gt;")}}.</p>
+Le résultat de cette fonction est une valeur de type {{cssxref("&lt;transform-function&gt;")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/function-perspective.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-perspective.html")}}
 
-<p>La fonction de transformation <code>perspective()</code>s'applique à l'élément qu'on veut transformer. En revanche, les propriétés {{cssxref('perspective')}} et {{cssxref('perspective-origin')}} s'appliquent sur l'élément parent de l'enfant qu'on veut placer dans un espace 3D.</p>
+La fonction de transformation `perspective()`s'applique à l'élément qu'on veut transformer. En revanche, les propriétés {{cssxref('perspective')}} et {{cssxref('perspective-origin')}} s'appliquent sur l'élément parent de l'enfant qu'on veut placer dans un espace 3D.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">perspective(<var>l</var>)
-</pre>
+    perspective(l)
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><var>l</var></dt>
- <dd>Une valeur de type {{cssxref("&lt;length&gt;")}} qui définit la distance entre l'œil de l'utilisateur et le plan décrit par l'équation <code>z = 0</code>. Si la valeur est nulle ou négative, aucune perspective ne sera appliquée.</dd>
-</dl>
+- _l_
+  - : Une valeur de type {{cssxref("&lt;length&gt;")}} qui définit la distance entre l'œil de l'utilisateur et le plan décrit par l'équation `z = 0`. Si la valeur est nulle ou négative, aucune perspective ne sera appliquée.
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-   <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-   <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-   <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td colspan="2" rowspan="2">
-    <p>Cette transformation s'applique dans l'espace (3D) et ne peut pas être représentée en deux dimensions.</p>
-   </td>
-   <td colspan="1" rowspan="2">Une perspective n'est pas une transformation linéaire de ℝ<sup>3</sup> et ne peut donc pas être représentée en utilisant une matrice du système cartésien.</td>
-   <td colspan="1" rowspan="2"><math> <mfenced><mtable><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr><mtr><mtd>0</mtd><mtd>0</mtd><mtd><mo>−</mo>1<mo>/</mo>d</mtd><mtd>1</mtd></mtr></mtable> </mfenced> </math></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
+      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
+      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
+      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="2" rowspan="2">
+        <p>
+          Cette transformation s'applique dans l'espace (3D) et ne peut pas être
+          représentée en deux dimensions.
+        </p>
+      </td>
+      <td colspan="1" rowspan="2">
+        Une perspective n'est pas une transformation linéaire de ℝ<sup>3</sup>
+        et ne peut donc pas être représentée en utilisant une matrice du système
+        cartésien.
+      </td>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr
+              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
+              ><mtr
+                ><mtd>0</mtd><mtd>0</mtd><mtd><mo>−</mo>1<mo>/</mo>d</mtd
+                ><mtd>1</mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Appliquer_une_perspective_sur_un_objet_3D">Appliquer une perspective sur un objet 3D</h3>
+### Appliquer une perspective sur un objet 3D
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.face {
+```css
+.face {
   position: absolute;
   width: 100px;
   height: 100px;
@@ -96,62 +115,48 @@ p + div {
   background-color: limegreen;
   transform: translate3d(0, 0, 50px);
 }
-</pre>
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;Sans perspective :&lt;/p&gt;
-&lt;div class="no-perspective-box"&gt;
-  &lt;div class="face front"&gt;A&lt;/div&gt;
-  &lt;div class="face top"&gt;B&lt;/div&gt;
-  &lt;div class="face left"&gt;C&lt;/div&gt;
-&lt;/div&gt;
+```html
+<p>Sans perspective :</p>
+<div class="no-perspective-box">
+  <div class="face front">A</div>
+  <div class="face top">B</div>
+  <div class="face left">C</div>
+</div>
 
-&lt;p&gt;Avec une perspective (9cm) :&lt;/p&gt;
-&lt;div class="perspective-box-far"&gt;
-  &lt;div class="face front"&gt;A&lt;/div&gt;
-  &lt;div class="face top"&gt;B&lt;/div&gt;
-  &lt;div class="face left"&gt;C&lt;/div&gt;
-&lt;/div&gt;
+<p>Avec une perspective (9cm) :</p>
+<div class="perspective-box-far">
+  <div class="face front">A</div>
+  <div class="face top">B</div>
+  <div class="face left">C</div>
+</div>
 
-&lt;p&gt;Avec une perspective (4cm) :&lt;/p&gt;
-&lt;div class="perspective-box-closer"&gt;
-  &lt;div class="face front"&gt;A&lt;/div&gt;
-  &lt;div class="face top"&gt;B&lt;/div&gt;
-  &lt;div class="face left"&gt;C&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+<p>Avec une perspective (4cm) :</p>
+<div class="perspective-box-closer">
+  <div class="face front">A</div>
+  <div class="face top">B</div>
+  <div class="face left">C</div>
+</div>
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('Appliquer_une_perspective_sur_un_objet_3D', '100%', '350', '', 'Web/CSS/transform-function/perspective')}}</p>
+{{EmbedLiveSample('Appliquer_une_perspective_sur_un_objet_3D', '100%', '350', '', 'Web/CSS/transform-function/perspective')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Transforms 2", "#funcdef-perspective", "perspective()")}}</td>
-   <td>{{Spec2("CSS Transforms 2")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | État                                     | Commentaires         |
+| ------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
+| {{SpecName("CSS Transforms 2", "#funcdef-perspective", "perspective()")}} | {{Spec2("CSS Transforms 2")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>Voir la page sur le type de donnée <code><a href="/fr/docs/Web/CSS/transform-function#compatibilité_des_navigateurs">&lt;transform-function&gt;</a></code> pour les informations de compatibilité associées.</p>
+Voir la page sur le type de donnée [`<transform-function>`](/fr/docs/Web/CSS/transform-function#compatibilité_des_navigateurs) pour les informations de compatibilité associées.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("transform")}}</li>
- <li>{{cssxref("&lt;transform-function&gt;")}}</li>
-</ul>
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}

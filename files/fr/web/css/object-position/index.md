@@ -7,20 +7,19 @@ tags:
   - Reference
 translation_of: Web/CSS/object-position
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>object-position</code></strong> détermine l'alignement d'un <a href="/fr/docs/Web/CSS/%C3%89l%C3%A9ment_remplac%C3%A9">élément remplacé</a> au sein de sa boîte. Les zones de la boîtes qui ne sont pas recouvertes par le contenu de l'élément remplacé montreront l'arrière-plan de l'élément.</p>
+La propriété **`object-position`** détermine l'alignement d'un [élément remplacé](/fr/docs/Web/CSS/%C3%89l%C3%A9ment_remplac%C3%A9) au sein de sa boîte. Les zones de la boîtes qui ne sont pas recouvertes par le contenu de l'élément remplacé montreront l'arrière-plan de l'élément.
 
-<div>{{EmbedInteractiveExample("pages/css/object-position.html")}}</div>
+{{EmbedInteractiveExample("pages/css/object-position.html")}}
 
-<div class="note">
-<p><strong>Note :</strong> Il est possible d'ajuster la taille de l'élément remplacé au sein de la boîte de l'élément grâce à la propriété {{cssxref("object-fit")}}.</p>
-</div>
+> **Note :** Il est possible d'ajuster la taille de l'élément remplacé au sein de la boîte de l'élément grâce à la propriété {{cssxref("object-fit")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css  no-line-numbers">/* Valeurs de positionnement */
-/* Type &lt;position&gt;           */
+```css
+/* Valeurs de positionnement */
+/* Type <position>           */
 object-position: center top;
 object-position: 100px 50px;
 
@@ -28,30 +27,30 @@ object-position: 100px 50px;
 object-position: inherit;
 object-position: initial;
 object-position: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;position&gt;</code></dt>
- <dd>Une valeur de type {{cssxref("&lt;position&gt;")}}, c'est-à-dire une à quatre valeurs permettant de définir une position en deux dimensions par rapport aux limites de la boîte dans laquelle est placé l'élément. On peut donner des décalages absolus ou relatifs. On notera que la position peut être définie en dehors de la boîte de l'élément.</dd>
-</dl>
+- `<position>`
+  - : Une valeur de type {{cssxref("&lt;position&gt;")}}, c'est-à-dire une à quatre valeurs permettant de définir une position en deux dimensions par rapport aux limites de la boîte dans laquelle est placé l'élément. On peut donner des décalages absolus ou relatifs. On notera que la position peut être définie en dehors de la boîte de l'élément.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;img id="object-position-1" src="https://mdn.mozillademos.org/files/12668/MDN.svg" alt="MDN Logo"/&gt;
-&lt;img id="object-position-2" src="https://mdn.mozillademos.org/files/12668/MDN.svg" alt="MDN Logo"/&gt;
-</pre>
+```html
+<img id="object-position-1" src="https://mdn.mozillademos.org/files/12668/MDN.svg" alt="MDN Logo"/>
+<img id="object-position-2" src="https://mdn.mozillademos.org/files/12668/MDN.svg" alt="MDN Logo"/>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">img {
+```css
+img {
    width: 300px;
    height: 250px;
    border: 1px solid black;
@@ -67,46 +66,29 @@ object-position: unset;
 #object-position-2 {
   object-position: 100% 10%;
 }
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', '100%','300px')}}</p>
+{{EmbedLiveSample('Exemples', '100%','300px')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Images', '#the-object-position', 'object-position')}}</td>
-   <td>{{Spec2('CSS3 Images')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                             | Commentaires         |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('CSS3 Images', '#the-object-position', 'object-position')}} | {{Spec2('CSS3 Images')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.object-position")}}</p>
+{{Compat("css.properties.object-position")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Les autres propriétés CSS liées aux images :
-  <ul>
-   <li>{{cssxref("object-fit")}}</li>
-   <li>{{cssxref("image-orientation")}}</li>
-   <li>{{cssxref("image-rendering")}}</li>
-   <li>{{cssxref("image-resolution")}}</li>
-  </ul>
- </li>
-</ul>
+- Les autres propriétés CSS liées aux images :
+
+  - {{cssxref("object-fit")}}
+  - {{cssxref("image-orientation")}}
+  - {{cssxref("image-rendering")}}
+  - {{cssxref("image-resolution")}}

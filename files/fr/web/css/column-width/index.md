@@ -7,21 +7,22 @@ tags:
   - Reference
 translation_of: Web/CSS/column-width
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>column-width</code></strong> définit une largeur de colonne idéale lorsqu'on utilise une disposition en colonnes. Aussi, on aura le plus de colonnes possible et pour lesquelles aucune n'est moins large que <code>column-width</code>. La colonne réelle peut être plus petite que cette taille si son conteneur est moins large que cette valeur.</p>
+La propriété **`column-width`** définit une largeur de colonne idéale lorsqu'on utilise une disposition en colonnes. Aussi, on aura le plus de colonnes possible et pour lesquelles aucune n'est moins large que `column-width`. La colonne réelle peut être plus petite que cette taille si son conteneur est moins large que cette valeur.
 
-<div>{{EmbedInteractiveExample("pages/css/column-width.html")}}</div>
+{{EmbedInteractiveExample("pages/css/column-width.html")}}
 
-<p>Ainsi, si on a une colonne large de 300px avec un écart de 0px, on pourrait placer une seule colonne sur 599px mais avoir deux colonnes avec 600px. Ce réglage permet donc d'obtenir des effets qui s'adaptent aux différentes tailles d'écrans. Manipulée avec la propriété {{cssxref("column-count")}} qui a la précédence, il est nécessaire de définir toutes les valeurs de longueur pour avoir une largeur de colonne CSS exacte. Pour du texte horizontal, ces propriétés sont {{cssxref('width')}}, {{cssxref('column-width')}}, {{cssxref('column-gap')}} et {{cssxref('column-rule-width')}}.</p>
+Ainsi, si on a une colonne large de 300px avec un écart de 0px, on pourrait placer une seule colonne sur 599px mais avoir deux colonnes avec 600px. Ce réglage permet donc d'obtenir des effets qui s'adaptent aux différentes tailles d'écrans. Manipulée avec la propriété {{cssxref("column-count")}} qui a la précédence, il est nécessaire de définir toutes les valeurs de longueur pour avoir une largeur de colonne CSS exacte. Pour du texte horizontal, ces propriétés sont {{cssxref('width')}}, {{cssxref('column-width')}}, {{cssxref('column-gap')}} et {{cssxref('column-rule-width')}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeur avec un mot-clé */
+```css
+/* Valeur avec un mot-clé */
 column-width: auto;
 
 /* Valeurs de longueur */
-/* Type &lt;length&gt;       */
+/* Type <length>       */
 column-width: 60px;
 column-width: 15.5em;
 column-width: 3.3vw;
@@ -30,80 +31,63 @@ column-width: 3.3vw;
 column-width: inherit;
 column-width: initial;
 column-width: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) qui fournit une indication sur la largeur optimale d'une colonne. La colonne réelle peut être plus large que cette longueur (pour remplir l'espace disponible) ou plus étroite (uniquement si l'espace disponible est inférieur à la largeur indiquée). La longueur exprimée doit être strictement positive sinon la déclaration est considérée invalide. Les valeurs exprimées en pourcentages sont invalides.</dd>
- <dt><code>auto</code></dt>
- <dd>Un mot-clé indiquant que la largeur de la colonne doit être déterminée grâce aux autres propriétés CSS comme {{cssxref("column-count")}}.</dd>
-</dl>
+- `<length>`
+  - : Une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) qui fournit une indication sur la largeur optimale d'une colonne. La colonne réelle peut être plus large que cette longueur (pour remplir l'espace disponible) ou plus étroite (uniquement si l'espace disponible est inférieur à la largeur indiquée). La longueur exprimée doit être strictement positive sinon la déclaration est considérée invalide. Les valeurs exprimées en pourcentages sont invalides.
+- `auto`
+  - : Un mot-clé indiquant que la largeur de la colonne doit être déterminée grâce aux autres propriétés CSS comme {{cssxref("column-count")}}.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.content-box {
+```css
+.content-box {
   border: 10px solid #0ff;
 
   -webkit-column-width: 100px;
   -moz-column-width: 100px;
   column-width: 100px;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="content-box"&gt;
+```html
+<div class="content-box">
   Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
   sed diam nonummy nibh euismod tincidunt ut laoreet dolore
   magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
   quis nostrud exerci tation ullamcorper suscipit lobortis
   nisl ut aliquip ex ea commodo consequat.
-&lt;/div&gt;</pre>
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', '300px', '200px')}}</p>
+{{EmbedLiveSample('Exemples', '300px', '200px')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Writing Modes', '#auto-multicol', 'column-width')}}</td>
-   <td>{{Spec2('CSS4 Writing Modes')}}</td>
-   <td>Ajoutes des tailles intrinsèques grâce aux mots-clés <code>min-content</code>, <code>max-content</code>, <code>fill-available</code> et <code>fit-content</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Multicol', '#cw', 'column-width')}}</td>
-   <td>{{Spec2('CSS3 Multicol')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                                     | Commentaires                                                                                                          |
+| -------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS4 Writing Modes', '#auto-multicol', 'column-width')}} | {{Spec2('CSS4 Writing Modes')}} | Ajoutes des tailles intrinsèques grâce aux mots-clés `min-content`, `max-content`, `fill-available` et `fit-content`. |
+| {{SpecName('CSS3 Multicol', '#cw', 'column-width')}}                         | {{Spec2('CSS3 Multicol')}}     | Définition initiale.                                                                                                  |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.column-width")}}</p>
+{{Compat("css.properties.column-width")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout">Apprendre - La disposition multi-colonnes</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol">Les concepts de base pour la disposition multi-colonnes</a></li>
-</ul>
+- [Apprendre - La disposition multi-colonnes](/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [Les concepts de base pour la disposition multi-colonnes](/fr/docs/Web/CSS/CSS_Columns/Basic_Concepts_of_Multicol)

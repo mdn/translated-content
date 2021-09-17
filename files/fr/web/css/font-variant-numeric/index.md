@@ -7,79 +7,90 @@ tags:
   - Reference
 translation_of: Web/CSS/font-variant-numeric
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>font-variant-numeric</code></strong> permet de contrôler l'utilisation de glyphes alternatifs pour les nombres, fractions et les marqueurs ordinaux.</p>
+La propriété **`font-variant-numeric`** permet de contrôler l'utilisation de glyphes alternatifs pour les nombres, fractions et les marqueurs ordinaux.
 
-<div>{{EmbedInteractiveExample("pages/css/font-variant-numeric.html")}}</div>
+{{EmbedInteractiveExample("pages/css/font-variant-numeric.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">font-variant-numeric: normal;
+```css
+font-variant-numeric: normal;
 font-variant-numeric: ordinal;
 font-variant-numeric: slashed-zero;
-font-variant-numeric: lining-nums;         /* &lt;numeric-figure-values&gt; */
-font-variant-numeric: oldstyle-nums;       /* &lt;numeric-figure-values&gt; */
-font-variant-numeric: proportional-nums;   /* &lt;numeric-spacing-values&gt; */
-font-variant-numeric: tabular-nums;        /* &lt;numeric-spacing-values&gt; */
-font-variant-numeric: diagonal-fractions;  /* &lt;numeric-fraction-values&gt; */
-font-variant-numeric: stacked-fractions;   /* &lt;numeric-fraction-values&gt; */
+font-variant-numeric: lining-nums;         /* <numeric-figure-values> */
+font-variant-numeric: oldstyle-nums;       /* <numeric-figure-values> */
+font-variant-numeric: proportional-nums;   /* <numeric-spacing-values> */
+font-variant-numeric: tabular-nums;        /* <numeric-spacing-values> */
+font-variant-numeric: diagonal-fractions;  /* <numeric-fraction-values> */
+font-variant-numeric: stacked-fractions;   /* <numeric-fraction-values> */
 font-variant-numeric: oldstyle-nums stacked-fractions;
 
 /* Valeurs globales */
 font-variant-numeric: inherit;
 font-variant-numeric: initial;
 font-variant-numeric: unset;
-</pre>
+```
 
-<p>La valeur de cette propriété peut être définie selon deux formes :</p>
+La valeur de cette propriété peut être définie selon deux formes :
 
-<ul>
- <li>la première avec le mot-clé <code>normal</code></li>
- <li>la seconde avec une ou plusieurs valeurs parmi celles définies ci-après, séparées par des espaces et dans n'importe quel ordre.</li>
-</ul>
+- la première avec le mot-clé `normal`
+- la seconde avec une ou plusieurs valeurs parmi celles définies ci-après, séparées par des espaces et dans n'importe quel ordre.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Ce mot-clé désactive l'utilisation des glyphes alternatifs.</dd>
- <dt><code>ordinal</code></dt>
- <dd>Ce mot-clé permet de forcer l'utilisation de glyphes spéciaux pour les marqueurs ordinaux utilisés par exemple pour 1<sup>er</sup>, 2<sup>e</sup>, 3<sup>e</sup>, etc. Il correspond aux valeurs OpenType values <code>ordn</code>.</dd>
- <dt><code>slashed-zero</code></dt>
- <dd>Ce mot-clé permet de forcer l'application d'une barre oblique après un 0. Cela peut être utile quand on cherche à distinguer un O majuscule d'un 0. Il correspond aux valeurs  OpenType <code>zero</code>.</dd>
- <dt><em>&lt;numeric-figure-values</em>&gt;</dt>
- <dd>Ces valeurs contrôlent les chiffres utilisés pour les nombres. Deux valeurs peuvent être utilisées :
- <ul>
-  <li><code>lining-nums</code> permet d'activer l'ensemble de chiffres pour lequel tous les nombres sont apposés sur la ligne de base. Elle correspond aux valeurs OpenType <code>lnum</code>.</li>
-  <li><code>oldstyle-nums</code> permet d'activer l'ensemble de chiffres pour lequel certains nombres, comme 3, 4, 7, 9, ont un jambage. Elle correspond aux valleurs OpenType <code>onum</code>.</li>
- </ul>
- </dd>
- <dt><em>&lt;numeric-spacing-values</em>&gt;</dt>
- <dd>Ces valeurs permettent de contrôler la taille des chiffres utilisés pour les nombres. On peut utiliser deux valelurs :
- <ul>
-  <li><code>proportional-nums</code> permet d'activer l'ensemble où les chiffres ne sont pas tous de la même taille. Elle correspond aux valeurs OpenType <code>pnum</code>.</li>
-  <li><code>tabular-nums</code> permet d'activer l'ensemble où les chiffres ont la même taille (ce qui leur permet d'être facilement alignés dans des tableaux). Elle correspond aux valeurs OpenType <code>tnum</code>.</li>
- </ul>
- </dd>
- <dt><em>&lt;numeric-fraction-values</em>&gt;</dt>
- <dd>Ces valeurs permettent de contrôler les glyphes utilisés pour afficher les fractions :
- <ul>
-  <li><code>diagonal-fractions</code> permet d'utiliser l'ensemble où le numérateur et le dénominateur sont plus petits et séparés par une barre oblique. Elle correspond aux valeurs OpenType <code>frac</code>.</li>
-  <li><code>stacked-fractions</code> permet d'utiliser l'ensemble où les chiffres du numérateur et du dénominateur sont plus petits et séparés par une ligne horizontale. Elle correspond aux valeurs OpenType <code>afrc</code>.</li>
- </ul>
- </dd>
-</dl>
+- `normal`
+  - : Ce mot-clé désactive l'utilisation des glyphes alternatifs.
+- `ordinal`
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+  - : Ce mot-clé permet de forcer l'utilisation de glyphes spéciaux pour les marqueurs ordinaux utilisés par exemple pour 1
+
+    <sup>er</sup>
+
+    , 2
+
+    <sup>e</sup>
+
+    , 3
+
+    <sup>e</sup>
+
+    , etc. Il correspond aux valeurs OpenType values `ordn`.
+
+- `slashed-zero`
+  - : Ce mot-clé permet de forcer l'application d'une barre oblique après un 0. Cela peut être utile quand on cherche à distinguer un O majuscule d'un 0. Il correspond aux valeurs  OpenType `zero`.
+- _\<numeric-figure-values_>
+
+  - : Ces valeurs contrôlent les chiffres utilisés pour les nombres. Deux valeurs peuvent être utilisées :
+
+    - `lining-nums` permet d'activer l'ensemble de chiffres pour lequel tous les nombres sont apposés sur la ligne de base. Elle correspond aux valeurs OpenType `lnum`.
+    - `oldstyle-nums` permet d'activer l'ensemble de chiffres pour lequel certains nombres, comme 3, 4, 7, 9, ont un jambage. Elle correspond aux valleurs OpenType `onum`.
+
+- _\<numeric-spacing-values_>
+
+  - : Ces valeurs permettent de contrôler la taille des chiffres utilisés pour les nombres. On peut utiliser deux valelurs :
+
+    - `proportional-nums` permet d'activer l'ensemble où les chiffres ne sont pas tous de la même taille. Elle correspond aux valeurs OpenType `pnum`.
+    - `tabular-nums` permet d'activer l'ensemble où les chiffres ont la même taille (ce qui leur permet d'être facilement alignés dans des tableaux). Elle correspond aux valeurs OpenType `tnum`.
+
+- _\<numeric-fraction-values_>
+
+  - : Ces valeurs permettent de contrôler les glyphes utilisés pour afficher les fractions :
+
+    - `diagonal-fractions` permet d'utiliser l'ensemble où le numérateur et le dénominateur sont plus petits et séparés par une barre oblique. Elle correspond aux valeurs OpenType `frac`.
+    - `stacked-fractions` permet d'utiliser l'ensemble où les chiffres du numérateur et du dénominateur sont plus petits et séparés par une ligne horizontale. Elle correspond aux valeurs OpenType `afrc`.
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">/*
+```css
+/*
 Cet exemple utilise la police Source Sans Pro OpenType développée par Adobe
 et utilisée ici sous les termes de la licence SIL Open Font en Version 1.1 :
 http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web
@@ -96,37 +107,26 @@ http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web
   font-variant-numeric: ordinal;
   font-family: "Source Sans Pro";
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="ordinal"&gt;Premier, deuxième, troisième, quatrième, cinquième&lt;/p&gt;</pre>
+```html
+<p class="ordinal">Premier, deuxième, troisième, quatrième, cinquième</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#propdef-font-variant-numeric', 'font-variant-numeric')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                             | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('CSS3 Fonts', '#propdef-font-variant-numeric', 'font-variant-numeric')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.font-variant-numeric")}}</p>
+{{Compat("css.properties.font-variant-numeric")}}

@@ -7,36 +7,35 @@ tags:
   - Reference
 translation_of: Web/CSS/border-width
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété CSS <strong><code>border-width</code></strong> est une <a href="/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies">propriété raccourcie</a> qui définit la largeur de la bordure d'un élément.</p>
+La propriété CSS **`border-width`** est une [propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) qui définit la largeur de la bordure d'un élément.
 
-<p>Cette propriété raccourcie définit les propriétés détaillées</p>
+Cette propriété raccourcie définit les propriétés détaillées
 
-<ul>
- <li>{{cssxref("border-top-width")}},</li>
- <li>{{cssxref("border-right-width")}},</li>
- <li>{{cssxref("border-bottom-width")}}</li>
- <li>{{cssxref("border-left-width")}}.</li>
-</ul>
+- {{cssxref("border-top-width")}},
+- {{cssxref("border-right-width")}},
+- {{cssxref("border-bottom-width")}}
+- {{cssxref("border-left-width")}}.
 
-<p>Si on utilise les propriétés logiques, elle définit {{cssxref("border-block-start-width")}}, {{cssxref("border-block-end-width")}}, {{cssxref("border-inline-start-width")}} et {{cssxref("border-inline-end-width")}}.</p>
+Si on utilise les propriétés logiques, elle définit {{cssxref("border-block-start-width")}}, {{cssxref("border-block-end-width")}}, {{cssxref("border-inline-start-width")}} et {{cssxref("border-inline-end-width")}}.
 
-<p>Afin de paramétrer une bordure de façon plus pratique, on pourra utiliser la propriété raccourcie {{cssxref("border")}}.</p>
+Afin de paramétrer une bordure de façon plus pratique, on pourra utiliser la propriété raccourcie {{cssxref("border")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/border-width.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-width.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 border-width: thin;
 border-width: medium;
 border-width: thick;
 
 /* Une largeur pour chaque côté */
-/* Valeur de type &lt;length&gt; */<em>
-</em>border-width: 5px;<em>
-</em>
+/* Valeur de type <length> */
+border-width: 5px;
+
 /* largeur verticale puis horizontale */
 border-width: 2px 1.5em;
 
@@ -50,63 +49,63 @@ border-width: 1px 2em 0 4rem;
 border-width: inherit;
 border-width: initial;
 border-width: unset;
-</pre>
+```
 
-<p>La propriété <code>border-width</code> peut être définie avec une, deux, trois ou quatre valeurs.</p>
+La propriété `border-width` peut être définie avec une, deux, trois ou quatre valeurs.
 
-<ul>
- <li>Lorsqu'une valeur est fournie, elle est appliquée comme largeur pour les quatre côtés</li>
- <li>Lorsque deux valeurs sont fournies, la première est appliquée comme largeur pour la bordure basse et haute et la seconde pour la bordure gauche et droite</li>
- <li>Lorsque trois valeurs sont fournies, la première est appliquée à la bordure haute, la deuxième à la bordure gauche et à la bordure droite et la troisième à la bordure basse</li>
- <li>Lorsque quatres valeurs sont fournies, elles s'appliquent respectivement aux cotés haut, droit, bas et gauche (sens des aiguilles d'une montre).</li>
-</ul>
+- Lorsqu'une valeur est fournie, elle est appliquée comme largeur pour les quatre côtés
+- Lorsque deux valeurs sont fournies, la première est appliquée comme largeur pour la bordure basse et haute et la seconde pour la bordure gauche et droite
+- Lorsque trois valeurs sont fournies, la première est appliquée à la bordure haute, la deuxième à la bordure gauche et à la bordure droite et la troisième à la bordure basse
+- Lorsque quatres valeurs sont fournies, elles s'appliquent respectivement aux cotés haut, droit, bas et gauche (sens des aiguilles d'une montre).
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;line-width&gt;</code></dt>
- <dd>Une valeur de longueur (type {{cssxref("&lt;length&gt;")}} ou un mot-clé indiquant l'épaisseur de la bordure. Le mot-clé doit être l'une des valeurs suivantes :
-  <ul>
-    <li><code>thin</code> (fin)</li>
-    <li><code>medium</code> (intermédiaire)</li>
-    <li><code>thick</code> (épais)</li>
-  </ul>
-  La spécification ne définit pas précisément l'épaisseur correspondante à chacun de ces mots-clés, les rendant dépendants de l'implémentation. Toutefois, la spécification indique que l'épaisseur doit suivre la relation d'inégalité suivante : <code>thin ≤ medium ≤ thick</code> et que les valeurs pour chaque mot-clé doivent être constantes pour un même document.</dd>
-</dl>
+- `<line-width>`
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+  - : Une valeur de longueur (type {{cssxref("&lt;length&gt;")}} ou un mot-clé indiquant l'épaisseur de la bordure. Le mot-clé doit être l'une des valeurs suivantes :
+
+    - `thin` (fin)
+    - `medium` (intermédiaire)
+    - `thick` (épais)
+
+    La spécification ne définit pas précisément l'épaisseur correspondante à chacun de ces mots-clés, les rendant dépendants de l'implémentation. Toutefois, la spécification indique que l'épaisseur doit suivre la relation d'inégalité suivante : `thin ≤ medium ≤ thick` et que les valeurs pour chaque mot-clé doivent être constantes pour un même document.
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p id="unevaleur"&gt;
+```html
+<p id="unevaleur">
   Une valeur : la bordure fait 6px sur les 4 côtés.
-&lt;/p&gt;
+</p>
 
-&lt;p id="deuxvaleurs"&gt;
+<p id="deuxvaleurs">
   Deux valeurs différentes : elle fait 2px en haut
   et en bas et elle mesure 10px pour les bords droit
   et gauche.
-&lt;/p&gt;
+</p>
 
-&lt;p id="troisvaleurs"&gt;
+<p id="troisvaleurs">
   Trois valeurs différentes : 0.3em pour le haut,
   9px pour le bas et zéro pour la droite et la
   gauche.
-&lt;/p&gt;
+</p>
 
-&lt;p id="quatrevaleurs"&gt;
+<p id="quatrevaleurs">
   Quatre valeurs différentes : "thin" pour le haut,
   "medium" pour la droite, "thick" pour le bas
   et 1em pour la gauche.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#unevaleur {
+```css
+#unevaleur {
   border: ridge #ccc;
   border-width: 6px;
 }
@@ -130,63 +129,38 @@ p {
   width: auto;
   margin: 0.25em;
   padding: 0.25em;
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', 300, 180) }}</p>
+{{EmbedLiveSample('Exemples', 300, 180) }}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#the-border-width', 'border-width')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Pas de modification directe. La modification du type de données {{cssxref("&lt;length&gt;")}} impacte cette propriété.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'box.html#border-width-properties', 'border-width')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Ajout de la contrainte indiquant que la signification des valeurs doit être constante au sein d'un document.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#border-width', 'border-width')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                                     | Commentaires                                                                                                                      |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS3 Backgrounds', '#the-border-width', 'border-width')}}         | {{Spec2('CSS3 Backgrounds')}} | Pas de modification directe. La modification du type de données {{cssxref("&lt;length&gt;")}} impacte cette propriété. |
+| {{SpecName('CSS2.1', 'box.html#border-width-properties', 'border-width')}} | {{Spec2('CSS2.1')}}                 | Ajout de la contrainte indiquant que la signification des valeurs doit être constante au sein d'un document.                      |
+| {{SpecName('CSS1', '#border-width', 'border-width')}}                             | {{Spec2('CSS1')}}                 | Définition initiale.                                                                                                              |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.border-width")}}</p>
+{{Compat("css.properties.border-width")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Les propriétés raccourcies liées aux bordures
-  <ul>
-   <li>{{cssxref("border")}},</li>
-   <li>{{cssxref("border-style")}}</li>
-   <li>{{cssxref("border-color")}}</li>
-  </ul>
- </li>
- <li>Les propriétés liées à la largeur des bordures
-  <ul>
-   <li>{{cssxref("border-bottom-width")}},</li>
-   <li>{{cssxref("border-left-width")}},</li>
-   <li>{{cssxref("border-right-width")}},</li>
-   <li>{{cssxref("border-top-width")}}</li>
-  </ul>
- </li>
-</ul>
+- Les propriétés raccourcies liées aux bordures
+
+  - {{cssxref("border")}},
+  - {{cssxref("border-style")}}
+  - {{cssxref("border-color")}}
+
+- Les propriétés liées à la largeur des bordures
+
+  - {{cssxref("border-bottom-width")}},
+  - {{cssxref("border-left-width")}},
+  - {{cssxref("border-right-width")}},
+  - {{cssxref("border-top-width")}}

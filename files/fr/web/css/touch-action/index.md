@@ -7,11 +7,12 @@ tags:
   - Reference
 translation_of: Web/CSS/touch-action
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>touch-action</code></strong> définit si une région donnée peut être manipulée par l'utilisateur grâce à des interactions tactiles (en déplaçant ou en zoomant) et comment cette interaction fonctionnera.</p>
+La propriété **`touch-action`** définit si une région donnée peut être manipulée par l'utilisateur grâce à des interactions tactiles (en déplaçant ou en zoomant) et comment cette interaction fonctionnera.
 
-<pre class="brush:css no-line-numbers">/* Avec un mot-clé */
+```css
+/* Avec un mot-clé */
 touch-action: auto;
 touch-action: none;
 touch-action: pan-x;
@@ -27,132 +28,101 @@ touch-action: manipulation;
 touch-action: inherit;
 touch-action: initial;
 touch-action: unset;
-</pre>
+```
 
-<p>Par défaut, le déplacement et le zoom sont exclusivement gérés par le navigateur, ce qui déclenche un évènement {{event("pointercancel")}} à destination de l'application. En désactivant la prise en charge de ces gestes, l'application peut alors fournir ses propres gestionnaires d'évènements pour {{event("pointermove")}}, {{event("pointerup")}}.</p>
+Par défaut, le déplacement et le zoom sont exclusivement gérés par le navigateur, ce qui déclenche un évènement {{event("pointercancel")}} à destination de l'application. En désactivant la prise en charge de ces gestes, l'application peut alors fournir ses propres gestionnaires d'évènements pour {{event("pointermove")}}, {{event("pointerup")}}.
 
-<p>On utilise parfois cette propriété pour désactiver les interactions tactiles sur un élément pour un jeu ou une carte qui fournissent leur propre gestion tactile.</p>
+On utilise parfois cette propriété pour désactiver les interactions tactiles sur un élément pour un jeu ou une carte qui fournissent leur propre gestion tactile.
 
-<p>Lorsqu'une interaction tactile a lieu, le navigateur inspecte les valeurs de <code>touch-action</code> pour l'élément et ses ancêtres jusqu'à atteindre l'élément qui implémente le geste (c'est-à-dire celui qui peut défiler/zoomer). En pratique, <code>touch-action</code> est généralement uniquement appliquée aux éléments de plus haut niveau ayant besoin d'un comportement spécifique. Il n'est pas nécessaire de redéfinir <code>touch-action</code> sur les descendants.</p>
+Lorsqu'une interaction tactile a lieu, le navigateur inspecte les valeurs de `touch-action` pour l'élément et ses ancêtres jusqu'à atteindre l'élément qui implémente le geste (c'est-à-dire celui qui peut défiler/zoomer). En pratique, `touch-action` est généralement uniquement appliquée aux éléments de plus haut niveau ayant besoin d'un comportement spécifique. Il n'est pas nécessaire de redéfinir `touch-action` sur les descendants.
 
-<div class="note">
-<p><strong>Note :</strong> Lorsqu'un geste est déjà initié, tout changement sur <code>touch-action</code> n'aura aucun impact sur le geste en cours.</p>
-</div>
+> **Note :** Lorsqu'un geste est déjà initié, tout changement sur `touch-action` n'aura aucun impact sur le geste en cours.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>La propriété <code>touch-action</code> peut être définie grâce à :</p>
+La propriété `touch-action` peut être définie grâce à :
 
-<ul>
- <li>l'un des mots-clés parmi <code><a href="#auto">auto</a></code>, <code><a href="#none">none</a></code>, <code><a href="#manipulation">manipulation</a></code><em> ou</em></li>
- <li>un mot-clé parmi <code><a href="#pan-x">pan-x</a></code>, <code><a href="#pan-keywords">pan-left</a></code>, <code><a href="#pan-keywords">pan-right</a></code>, et/ou un mot-clé parmi <code><a href="#pan-y">pan-y</a></code>, <code><a href="#pan-keywords">pan-up</a></code>, <code><a href="#pan-keywords">pan-down</a></code> et éventuellement le mot-clé <code><a href="#">pinch-zoom</a></code>.</li>
-</ul>
+- l'un des mots-clés parmi [`auto`](#auto), [`none`](#none), [`manipulation`](#manipulation) _ou_
+- un mot-clé parmi [`pan-x`](#pan-x), [`pan-left`](#pan-keywords), [`pan-right`](#pan-keywords), et/ou un mot-clé parmi [`pan-y`](#pan-y), [`pan-up`](#pan-keywords), [`pan-down`](#pan-keywords) et éventuellement le mot-clé [`pinch-zoom`](#).
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>L'agent utilisateur détermine les interactions tactiles possibles (zoomer, déplacer le viewport) lorsque l'élément est touché.</dd>
- <dt><code>manipulation</code></dt>
- <dd>Les gestes de déplacement et de zoom sont autorisés mais les gestes non-standards (ex. double touche pour zoomer) sont désactivés. Cette valeur est un alias pour <code>pan-x pan-y pinch-zoom</code>.</dd>
- <dt><code>none</code></dt>
- <dd>Cette valeur désactive tous les comportements par défaut et permet au contenu de gérer les interaction tactiles (les touches qui commencent sur l'élément ne doivent pas déclencher de comportements tactiles par défaut).</dd>
- <dt><code>pan-x</code></dt>
- <dd>L'agent utilisateur peut considérer que les touchers qui débutent sur l'élément ont pour but de faire défiler horizontalement le plus proche ancêtre de l'élément qui possède du contenu en défilement horizontal. Cette valeur peut être combinée avec <code>pan-y</code>, <code>pan-up</code>, <code>pan-down</code> et/ou <code>pinch-zoom</code>.</dd>
- <dt><code>pan-y</code></dt>
- <dd>L'agent utilisateur peut considérer que les touchers qui débutent sur l'élément ont pour but de faire défiler verticalement le plus proche ancêtre de l'élément qui possède du contenu en défilement vertical. Cette valeur peut être combinée avec <code>pan-x</code>, <code>pan-left</code>, <code>pan-right</code> et/ou <code>pinch-zoom</code>.</dd>
- <dt><code>pan-left</code>, <code>pan-right</code> {{experimental_inline}}</dt>
- <dd>L'agent utilisateur peut considérer que les touchers qui commencent sur l'élément n'ont pour but que de faire défiler horizontalement le contenu du plus proche ancêtre de l'élément qui possède du contenu qui peut défiler (<em>scrollable</em>) horizontalement.</dd>
- <dt><code>pan-up</code>, <code>pan-down</code> {{experimental_inline}}</dt>
- <dd>L'agent utilisateur peut considérer que les touchers qui commencent sur l'élément n'ont pour but que de faire défiler verticalement le contenu du plus proche ancêtre de l'élément qui possède du contenu qui peut défiler (<em>scrollable</em>) verticalement.</dd>
- <dt><code>pinch-zoom</code></dt>
- <dd>L'agent utilisateur peut considérer que les touches qui commencent sur l'élément n'ont pour but que de zoomer sur l'ancêtre le plus proche qui contient du contenu sur lequel on peut zoomer.</dd>
-</dl>
+- `auto`
+  - : L'agent utilisateur détermine les interactions tactiles possibles (zoomer, déplacer le viewport) lorsque l'élément est touché.
+- `manipulation`
+  - : Les gestes de déplacement et de zoom sont autorisés mais les gestes non-standards (ex. double touche pour zoomer) sont désactivés. Cette valeur est un alias pour `pan-x pan-y pinch-zoom`.
+- `none`
+  - : Cette valeur désactive tous les comportements par défaut et permet au contenu de gérer les interaction tactiles (les touches qui commencent sur l'élément ne doivent pas déclencher de comportements tactiles par défaut).
+- `pan-x`
+  - : L'agent utilisateur peut considérer que les touchers qui débutent sur l'élément ont pour but de faire défiler horizontalement le plus proche ancêtre de l'élément qui possède du contenu en défilement horizontal. Cette valeur peut être combinée avec `pan-y`, `pan-up`, `pan-down` et/ou `pinch-zoom`.
+- `pan-y`
+  - : L'agent utilisateur peut considérer que les touchers qui débutent sur l'élément ont pour but de faire défiler verticalement le plus proche ancêtre de l'élément qui possède du contenu en défilement vertical. Cette valeur peut être combinée avec `pan-x`, `pan-left`, `pan-right` et/ou `pinch-zoom`.
+- `pan-left`, `pan-right` {{experimental_inline}}
+  - : L'agent utilisateur peut considérer que les touchers qui commencent sur l'élément n'ont pour but que de faire défiler horizontalement le contenu du plus proche ancêtre de l'élément qui possède du contenu qui peut défiler (_scrollable_) horizontalement.
+- `pan-up`, `pan-down` {{experimental_inline}}
+  - : L'agent utilisateur peut considérer que les touchers qui commencent sur l'élément n'ont pour but que de faire défiler verticalement le contenu du plus proche ancêtre de l'élément qui possède du contenu qui peut défiler (_scrollable_) verticalement.
+- `pinch-zoom`
+  - : L'agent utilisateur peut considérer que les touches qui commencent sur l'élément n'ont pour but que de zoomer sur l'ancêtre le plus proche qui contient du contenu sur lequel on peut zoomer.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ul&gt;Ma list
-  &lt;li&gt;UnLongTexteQuiDevraitTenirSurUneLigneHeureusementQuOnAOverflowScroll&lt;/li&gt;
-  &lt;li&gt;UnAutreLongTexteQuiDevraitTenirSurUneLigneHeureusementQuOnAOverflowScroll&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+```html
+<ul>Ma list
+  <li>UnLongTexteQuiDevraitTenirSurUneLigneHeureusementQuOnAOverflowScroll</li>
+  <li>UnAutreLongTexteQuiDevraitTenirSurUneLigneHeureusementQuOnAOverflowScroll</li>
+</ul>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">ul {
+```css
+ul {
   width: 200px;
   height: 50px;
   overflow-x: scroll;
 }
 
-ul &gt; li {
+ul > li {
   touch-action: pan-x pinch-zoom;
 }
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples')}}</p>
+{{EmbedLiveSample('Exemples')}}
 
-<div class="note">
-<p><strong>Note :</strong> La propriété <code>touch-action</code> est également utilisée afin de supprimer le délai donné à l'évènement {{event("click")}} pour prendre en charge le zoom via la double-touche.</p>
-</div>
+> **Note :** La propriété `touch-action` est également utilisée afin de supprimer le délai donné à l'évènement {{event("click")}} pour prendre en charge le zoom via la double-touche.
 
-<h2 id="Accessibilité">Accessibilité</h2>
+## Accessibilité
 
-<p>Une déclaration <code>touch action: none;</code> empêchera le navigateur de zoomer. Cela peut empêcher les personnes à faible vision de lire et de comprendre le contenu de la page.</p>
+Une déclaration `touch action: none;` empêchera le navigateur de zoomer. Cela peut empêcher les personnes à faible vision de lire et de comprendre le contenu de la page.
 
-<ul>
- <li><a href="/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">Comprendre les règles WCAG 1.4</a></li>
- <li><em><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html">Understanding Success Criterion 1.4.4 - Understanding WCAG 2.0</a></em><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html"> (en anglais)</a></li>
-</ul>
+- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- _[Understanding Success Criterion 1.4.4 - Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)_[ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Compat', '#touch-action', 'touch-action')}}</td>
-   <td>{{Spec2('Compat')}}</td>
-   <td>Ajout de la valeur <code>pinch-zoom</code> pour la propriété.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events 2 Ext', '#additional-touch-action-values', 'touch-action')}}</td>
-   <td>{{Spec2('Pointer Events 2 Ext')}}</td>
-   <td>Ajout des valeurs <code>pan-left</code>, <code>pan-right</code>, <code>pan-up</code>, <code>pan-down</code> pour la propriété.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('Pointer Events', '#the-touch-action-css-property', 'touch-action')}}</td>
-   <td>{{Spec2('Pointer Events')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | État                                         | Commentaires                                                                       |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | ---------------------------------------------------------------------------------- |
+| {{SpecName('Compat', '#touch-action', 'touch-action')}}                                             | {{Spec2('Compat')}}                     | Ajout de la valeur `pinch-zoom` pour la propriété.                                 |
+| {{SpecName('Pointer Events 2 Ext', '#additional-touch-action-values', 'touch-action')}} | {{Spec2('Pointer Events 2 Ext')}} | Ajout des valeurs `pan-left`, `pan-right`, `pan-up`, `pan-down` pour la propriété. |
+| {{SpecName('Pointer Events', '#the-touch-action-css-property', 'touch-action')}}         | {{Spec2('Pointer Events')}}         | Définition initiale.                                                               |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{compat("css.properties.touch-action")}}</p>
+{{compat("css.properties.touch-action")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/Pointer_events">Les événements de pointage</a></li>
- <li>Un billet du blog WebKit : <a href="https://webkit.org/blog/5610/more-responsive-tapping-on-ios/">une gestion plus responsive du toucher sur iOS (en anglais)</a></li>
- <li><a href="*https://developers.google.com/web/updates/2017/01/scrolling-intervention">Rendre le défilement tactile rapide, par défaut sur le Google Developers Blog</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Scroll_Snap">Le module de spécification CSS Scroll Snap</a></li>
-</ul>
+- [Les événements de pointage](/fr/docs/Web/API/Pointer_events)
+- Un billet du blog WebKit : [une gestion plus responsive du toucher sur iOS (en anglais)](https://webkit.org/blog/5610/more-responsive-tapping-on-ios/)
+- [Rendre le défilement tactile rapide, par défaut sur le Google Developers Blog](*https://developers.google.com/web/updates/2017/01/scrolling-intervention)
+- [Le module de spécification CSS Scroll Snap](/fr/docs/Web/CSS/CSS_Scroll_Snap)

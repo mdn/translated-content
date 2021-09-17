@@ -9,44 +9,46 @@ tags:
   - offset-distance
 translation_of: Web/CSS/offset-distance
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propriété <strong><code>offset-distance</code></strong> définit une position le long d'un chemin {{CSSxRef("offset-path")}}.</p>
+La propriété **`offset-distance`** définit une position le long d'un chemin {{CSSxRef("offset-path")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css">/* Valeur par défaut */
+```css
+/* Valeur par défaut */
 offset-distance: 0;
 
 /* La position à la moitié de offset-path */
 offset-distance: 50%;
 
 /* Une position absolue le long du chemin */
-offset-distance: 40px;</pre>
+offset-distance: 40px;
+```
 
-<dl>
- <dt><code>{{cssxref('&lt;length-percentage&gt;')}}</code></dt>
- <dd>Une longueur qui définit l'emplacement de l'élément le long du chemin (défini par {{cssxref('offset-path')}}). La valeur 100% représente la longueur totale du chemin (lorsque <code>offset-path</code> est défini par une forme simple ou grâce à la fonction <code>path()</code>).</dd>
-</dl>
+- `{{cssxref('&lt;length-percentage&gt;')}}`
+  - : Une longueur qui définit l'emplacement de l'élément le long du chemin (défini par {{cssxref('offset-path')}}). La valeur 100% représente la longueur totale du chemin (lorsque `offset-path` est défini par une forme simple ou grâce à la fonction `path()`).
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{CSSSyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Animation">Animation</h3>
+### Animation
 
-<p>La notion de mouvement contenue dans <em>CSS Motion Path</em> vient principalement de la propriété <code>offset-distance</code>. Si on souhaite animer un élément le long du chemin, on définira un chemin avec {{cssxref('offset-path')}} et on utilisera une animation qui fera évoluer <code>offset-distance</code> de <code>0%</code> à <code>100%</code>.</p>
+La notion de mouvement contenue dans _CSS Motion Path_ vient principalement de la propriété `offset-distance`. Si on souhaite animer un élément le long du chemin, on définira un chemin avec {{cssxref('offset-path')}} et on utilisera une animation qui fera évoluer `offset-distance` de `0%` à `100%`.
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="motion-demo"&gt;&lt;/div&gt;
-</pre>
+```html
+<div id="motion-demo"></div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">#motion-demo {
+```css
+#motion-demo {
   offset-path: path('M20,20 C20,100 200,0 200,100');
   animation: move 3000ms infinite alternate ease-in-out;
   width: 40px;
@@ -61,37 +63,23 @@ offset-distance: 40px;</pre>
   100% {
     offset-distance: 100%;
   }
-}</pre>
+}
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('Animation')}}</p>
+{{EmbedLiveSample('Animation')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Motion Path Level 1', '#offset-distance-property', 'offset-distance')}}</td>
-   <td>{{Spec2('Motion Path Level 1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                                         | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | -------------------- |
+| {{SpecName('Motion Path Level 1', '#offset-distance-property', 'offset-distance')}} | {{Spec2('Motion Path Level 1')}} | Définition initiale. |
 
-<p>{{CSSInfo}}</p>
+{{CSSInfo}}
 
-<div class="note">
-<p><strong>Note :</strong> Dans les versions antérieures de la spécification, cette propriété était intitulée <code>motion-offset</code>.</p>
-</div>
+> **Note :** Dans les versions antérieures de la spécification, cette propriété était intitulée `motion-offset`.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.offset-distance")}}</p>
+{{Compat("css.properties.offset-distance")}}

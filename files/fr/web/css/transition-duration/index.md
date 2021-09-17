@@ -8,18 +8,19 @@ tags:
   - Transitions
 translation_of: Web/CSS/transition-duration
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>transition-duration</code></strong> définit le nombre de secondes ou de millisecondes que doit durer une animation. La valeur par défaut, <code>0s</code>, indique qu'il n'y aura aucune animation.</p>
+La propriété **`transition-duration`** définit le nombre de secondes ou de millisecondes que doit durer une animation. La valeur par défaut, `0s`, indique qu'il n'y aura aucune animation.
 
-<div>{{EmbedInteractiveExample("pages/css/transition-duration.html")}}</div>
+{{EmbedInteractiveExample("pages/css/transition-duration.html")}}
 
-<p>Il est possible de définir plusieurs durées, chacune sera appliquée à la propriété correspondante listée par {{cssxref("transition-property")}} (qui agit comme un index des propriétés impactées par les animations). S'il y a moins de durées que d'éléments dans cette liste, l'agent utilisateur dupliquera les durées. S'il y a trop de durées, la liste sera tronquée. Dans les deux cas, la déclaration CSS sera considérée comme valide.</p>
+Il est possible de définir plusieurs durées, chacune sera appliquée à la propriété correspondante listée par {{cssxref("transition-property")}} (qui agit comme un index des propriétés impactées par les animations). S'il y a moins de durées que d'éléments dans cette liste, l'agent utilisateur dupliquera les durées. S'il y a trop de durées, la liste sera tronquée. Dans les deux cas, la déclaration CSS sera considérée comme valide.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs temporelles */
-/* Type &lt;time&gt; */
+```css
+/* Valeurs temporelles */
+/* Type <time> */
 transition-duration: 6s;
 transition-duration: 120ms;
 transition-duration: 1s, 15s;
@@ -29,38 +30,36 @@ transition-duration: 10s, 30s, 230ms;
 transition-duration: inherit;
 transition-duration: initial;
 transition-duration: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;time&gt;</code></dt>
- <dd>Une valeur {{cssxref("&lt;time&gt;")}} qui définit la durée que doit prendre l'animation pour changer la valeur d'une propriété (entre l'ancienne valeur et la nouvelle). Une durée de <code>0s</code> qu'aucune transition ne sera appliquée et que le passage d'un état à l'autre sera instantanné. Si la valeur utilisée est négative, la déclaration sera considérée comme invalide.</dd>
-</dl>
+- `<time>`
+  - : Une valeur {{cssxref("&lt;time&gt;")}} qui définit la durée que doit prendre l'animation pour changer la valeur d'une propriété (entre l'ancienne valeur et la nouvelle). Une durée de `0s` qu'aucune transition ne sera appliquée et que le passage d'un état à l'autre sera instantanné. Si la valeur utilisée est négative, la déclaration sera considérée comme invalide.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="exemple_illustrant_differentes_durees">Exemple illustrant différentes durées</h3>
+### Exemple illustrant différentes durées
 
-<h4>HTML</h4>
+#### HTML
 
-<pre class="brush:html">
-  &lt;div class="box duration-1"&gt;0,5 secondes&lt;/div&gt;
+```html
+  <div class="box duration-1">0,5 secondes</div>
 
-  &lt;div class="box duration-2"&gt;2 secondes&lt;/div&gt;
+  <div class="box duration-2">2 secondes</div>
 
-  &lt;div class="box duration-3"&gt;4 secondes&lt;/div&gt;
+  <div class="box duration-3">4 secondes</div>
 
-  &lt;button id="change"&gt;Changer&lt;/button&gt;
-</pre>
+  <button id="change">Changer</button>
+```
 
-<h4>CSS</h4>
+#### CSS
 
-<pre class="brush:css;">
+```css
 .box {
   margin: 20px;
   padding: 10px;
@@ -93,11 +92,12 @@ transition-duration: unset;
 .duration-3 {
   transition-duration: 4s;
 }
-</pre>
+```
 
-<h4>JavaScript</h4>
+#### JavaScript
 
-<pre class="brush:js">function change() {
+```js
+function change() {
   const elements = document.querySelectorAll("div.box");
   for (let element of elements) {
     element.classList.toggle("transformed-state");
@@ -106,41 +106,25 @@ transition-duration: unset;
 
 const changeButton = document.querySelector("#change");
 changeButton.addEventListener("click", change);
-</pre>
+```
 
-<h4>Résultat</h4>
+#### Résultat
 
-<div>{{EmbedLiveSample("exemple_illustrant_differentes_durees",275,200)}}</div>
+{{EmbedLiveSample("exemple_illustrant_differentes_durees",275,200)}}
 
+## Spécifications
 
-<h2 id="Spécifications">Spécifications</h2>
+| Spécification                                                                                            | État                                     | Commentaires         |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName('CSS3 Transitions', '#transition-duration', 'transition-duration')}} | {{Spec2('CSS3 Transitions')}} | Définition initiale. |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#transition-duration', 'transition-duration')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+{{cssinfo}}
 
-<p>{{cssinfo}}</p>
+## Compatibilité des navigateurs
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+{{Compat("css.properties.transition-duration")}}
 
-<p>{{Compat("css.properties.transition-duration")}}</p>
+## Voir aussi
 
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li><a href="/fr/docs/CSS/Using_CSS_transitions" title="en/CSS/CSS transitions">Utiliser les transitions CSS</a></li>
- <li>{{domxref("TransitionEvent")}}</li>
-</ul>
+- [Utiliser les transitions CSS](/fr/docs/CSS/Using_CSS_transitions "en/CSS/CSS transitions")
+- {{domxref("TransitionEvent")}}

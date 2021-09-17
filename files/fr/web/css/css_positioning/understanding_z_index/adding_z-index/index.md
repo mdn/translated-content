@@ -9,83 +9,77 @@ tags:
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index
 original_slug: Web/CSS/Comprendre_z-index/Ajout_de_z-index
 ---
-<div>{{CSSRef}}{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Empilement_et_float","Web/CSS/Comprendre_z-index/Empilement_de_couches", "Web/CSS/Comprendre_z-index")}}</div>
+{{CSSRef}}{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Empilement_et_float","Web/CSS/Comprendre_z-index/Empilement_de_couches", "Web/CSS/Comprendre_z-index")}}
 
-<h2 id="Ajouter_z-index">Ajouter <code>z-index</code></h2>
+## Ajouter `z-index`
 
-<p>Dans le premier exemple, <a href="/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index">« empilement sans <code>z-index</code> »</a>,  illustre comment l'empilement fonctionne par défaut. Pour définir un ordre d'empilement différent, il faut utiliser la propriété CSS {{cssxref("z-index")}}.</p>
+Dans le premier exemple, [« empilement sans `z-index` »](/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index),  illustre comment l'empilement fonctionne par défaut. Pour définir un ordre d'empilement différent, il faut utiliser la propriété CSS {{cssxref("z-index")}}.
 
-<p>Cette propriété, dont l'attribut est une valeur entière (positive ou négative), représente la position de l'élément le long de l'axe Z. Pour se représenter cette notion, on peut imaginer que la page possède plusieurs couches, les unes au dessus des autres. Chaque couche est numérotée. Un couche avec une grande valeur de <code>z-index</code> est affichée par dessus toutes celles dont la valeur est inférieure à la sienne.</p>
+Cette propriété, dont l'attribut est une valeur entière (positive ou négative), représente la position de l'élément le long de l'axe Z. Pour se représenter cette notion, on peut imaginer que la page possède plusieurs couches, les unes au dessus des autres. Chaque couche est numérotée. Un couche avec une grande valeur de `z-index` est affichée par dessus toutes celles dont la valeur est inférieure à la sienne.
 
-<div class="warning">
-<p><strong>Attention :</strong> <code>z-index</code> a un effet sur les éléments uniquement si ceux-ci sont <a href="/fr/docs/Web/CSS/position">positionnés</a>.</p>
+> **Attention :** `z-index` a un effet sur les éléments uniquement si ceux-ci sont [positionnés](/fr/docs/Web/CSS/position).
+
+- _Bas : couche la plus lointaine de l'observateur_
+- …
+- Couche -3
+- Couche -2
+- Couche -1
+- Couche 0 _couche de rendu par défaut_
+- Couche 1
+- Couche 2
+- Couche 3
+- …
+- _Haut : couche la plus proche de l'observateur_
+
+> **Note :**
+>
+> - Lorsque la propriété `z-index` n'est pas définie, les éléments sont rendus sur la couche 0 par défaut.
+> - Si plusieurs éléments possède la même valeur de `z-index` (c'est-à-dire qu'ils sont placés sur la même couche), alors les règles d'empilement expliquées dans [empilement sans `z-index`](/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index) s'appliquent.
+
+Dans l'exemple qui suit, l'empilement des couches a été réordonné en utilisant `z-index`. Le `z-index` du bloc DIV#5 n'a pas d'effet, l'élément n'étant pas positionné.
+
+{{EmbedLiveSample("Code_source_de_l’exemple", '468', '365')}}
+
+## **Code source de l’exemple**
+
+### HTML
+
+```html
+<div id="abs1">
+  <b>DIV #1</b>
+  <br />position: absolute;
+  <br />z-index: 5;
 </div>
 
-<ul>
- <li><em>Bas : couche la plus lointaine de l'observateur</em></li>
- <li>…</li>
- <li>Couche -3</li>
- <li>Couche -2</li>
- <li>Couche -1</li>
- <li>Couche 0 <em>couche de rendu par défaut</em></li>
- <li>Couche 1</li>
- <li>Couche 2</li>
- <li>Couche 3</li>
- <li>…</li>
- <li><em>Haut : couche la plus proche de l'observateur</em></li>
-</ul>
-
-<div class="note">
-<p><strong>Note :</strong>
-
-<ul>
- <li>Lorsque la propriété <code>z-index</code> n'est pas définie, les éléments sont rendus sur la couche 0 par défaut.</li>
- <li>Si plusieurs éléments possède la même valeur de <code>z-index</code> (c'est-à-dire qu'ils sont placés sur la même couche), alors les règles d'empilement expliquées dans <a href="/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index">empilement sans <code>z-index</code></a> s'appliquent.</li>
-</ul></p>
+<div id="rel1">
+  <b>DIV #2</b>
+  <br />position: relative;
+  <br />z-index: 3;
 </div>
 
-<p>Dans l'exemple qui suit, l'empilement des couches a été réordonné en utilisant <code>z-index</code>. Le <code>z-index</code> du bloc DIV#5 n'a pas d'effet, l'élément n'étant pas positionné.</p>
+<div id="rel2">
+  <b>DIV #3</b>
+  <br />position: relative;
+  <br />z-index: 2;
+</div>
 
-<p>{{EmbedLiveSample("Code_source_de_l’exemple", '468', '365')}}</p>
+<div id="abs2">
+  <b>DIV #4</b>
+  <br />position: absolute;
+  <br />z-index: 1;
+</div>
 
-<h2 id="Code_source_de_l’exemple"><strong>Code source de l’exemple</strong></h2>
+<div id="sta1">
+  <b>DIV #5</b>
+  <br />no positioning
+  <br />z-index: 8;
+</div>
+```
 
-<h3 id="HTML">HTML</h3>
+### CSS
 
-<pre class="brush: html">&lt;div id="abs1"&gt;
-  &lt;b&gt;DIV #1&lt;/b&gt;
-  &lt;br /&gt;position: absolute;
-  &lt;br /&gt;z-index: 5;
-&lt;/div&gt;
-
-&lt;div id="rel1"&gt;
-  &lt;b&gt;DIV #2&lt;/b&gt;
-  &lt;br /&gt;position: relative;
-  &lt;br /&gt;z-index: 3;
-&lt;/div&gt;
-
-&lt;div id="rel2"&gt;
-  &lt;b&gt;DIV #3&lt;/b&gt;
-  &lt;br /&gt;position: relative;
-  &lt;br /&gt;z-index: 2;
-&lt;/div&gt;
-
-&lt;div id="abs2"&gt;
-  &lt;b&gt;DIV #4&lt;/b&gt;
-  &lt;br /&gt;position: absolute;
-  &lt;br /&gt;z-index: 1;
-&lt;/div&gt;
-
-&lt;div id="sta1"&gt;
-  &lt;b&gt;DIV #5&lt;/b&gt;
-  &lt;br /&gt;no positioning
-  &lt;br /&gt;z-index: 8;
-&lt;/div&gt;
-</pre>
-
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">div {
+```css
+div {
   padding: 10px;
   opacity: 0.7;
   text-align: center;
@@ -145,6 +139,6 @@ b {
   background-color: #ffc;
   margin: 0px 50px 0px 50px;
 }
-</pre>
+```
 
-<p>{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Empilement_et_float","Web/CSS/Comprendre_z-index/Empilement_de_couches", "Web/CSS/Comprendre_z-index")}}</p>
+{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Empilement_et_float","Web/CSS/Comprendre_z-index/Empilement_de_couches", "Web/CSS/Comprendre_z-index")}}

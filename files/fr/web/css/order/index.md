@@ -7,19 +7,18 @@ tags:
   - Reference
 translation_of: Web/CSS/order
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>order</code></strong> définit l'ordre avec lequel on dessine les éléments d'un conteneur d'éléments flexibles ou d'une grille d'éléments. Les éléments sont appliqués dans l'ordre croissant des valeurs de <code>order</code>. Les éléments ayant la même valeur pour <code>order</code> seront appliqués dans l'ordre selon lequel ils apparaissent dans le code source du document.</p>
+La propriété **`order`** définit l'ordre avec lequel on dessine les éléments d'un conteneur d'éléments flexibles ou d'une grille d'éléments. Les éléments sont appliqués dans l'ordre croissant des valeurs de `order`. Les éléments ayant la même valeur pour `order` seront appliqués dans l'ordre selon lequel ils apparaissent dans le code source du document.
 
-<div>{{EmbedInteractiveExample("pages/css/order.html")}}</div>
+{{EmbedInteractiveExample("pages/css/order.html")}}
 
-<div class="note">
-<p><strong>Note :</strong> <code>order</code> est uniquement conçue pour affecter <strong>l'ordre visuel</strong>. Elle ne doit pas être utilisée pour modifier l'ordre logique ou l'ordre de tabulation. <code><strong>order</strong></code> ne doit pas être utilisée avec les média non visuels comme les informations vocales.</p>
-</div>
+> **Note :** `order` est uniquement conçue pour affecter **l'ordre visuel**. Elle ne doit pas être utilisée pour modifier l'ordre logique ou l'ordre de tabulation. **`order`** ne doit pas être utilisée avec les média non visuels comme les informations vocales.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs entières (type &lt;integer&gt;) */
+```css
+/* Valeurs entières (type <integer>) */
 /* positives ou négatives */
 order: 5;
 order: -5;
@@ -28,99 +27,84 @@ order: -5;
 order: inherit;
 order: initial;
 order: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;integer&gt;</code></dt>
- <dd>Un nombre entier (cf. {{cssxref("&lt;integer&gt;")}}) indiquant l'ordre à appliquer pour l'élément.</dd>
-</dl>
+- `<integer>`
+  - : Un nombre entier (cf. {{cssxref("&lt;integer&gt;")}}) indiquant l'ordre à appliquer pour l'élément.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html;">&lt;div id='main'&gt;
-   &lt;article&gt;Lorem ipsum&lt;/article&gt;
-   &lt;nav&gt; consectetur adipisicing elit, sed do eiusmod&lt;/nav&gt;
-   &lt;aside&gt;tempor incididunt ut labore et dolore magna&lt;/aside&gt;
-&lt;/div&gt;</pre>
+```html
+<div id='main'>
+   <article>Lorem ipsum</article>
+   <nav> consectetur adipisicing elit, sed do eiusmod</nav>
+   <aside>tempor incididunt ut labore et dolore magna</aside>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<p>Grâce à ces déclarations CSS, on crée un disposition avec deux barres entourant un bloc de contenu. Le module de disposition des boîtes flexibles crée des bloc de tailles verticales égales et utilise autant d'espace horizontal qu'il y en a de disponible.</p>
+Grâce à ces déclarations CSS, on crée un disposition avec deux barres entourant un bloc de contenu. Le module de disposition des boîtes flexibles crée des bloc de tailles verticales égales et utilise autant d'espace horizontal qu'il y en a de disponible.
 
-<pre class="brush:css;">#main {
+```css
+#main {
   display: flex;
 }
 
-#main &gt; article {
+#main > article {
   flex:1;
   order: 2;
   border: 1px dotted orange;
 }
 
-#main &gt; nav {
+#main > nav {
   width: 200px;
   order: 1;
   border: 1px dotted blue;
 }
 
-#main &gt; aside {
+#main > aside {
   width: 200px;
   order: 3;
   border: 1px dotted blue;
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Accessibilité">Accessibilité</h2>
+## Accessibilité
 
-<p>La propriété <code>order</code> créera une incohérence entre l'ordre de présentation visuelle et celui du DOM. Cela aura un impact négatif pour les utilisateurs avec des troubles de la vision et qui utilisent des outils d'assistance comme les lecteurs d'écran. Si l'ordre visuel est important, les utilisateurs de lecteurs d'écran n'auront pas accès à l'ordre correct.</p>
+La propriété `order` créera une incohérence entre l'ordre de présentation visuelle et celui du DOM. Cela aura un impact négatif pour les utilisateurs avec des troubles de la vision et qui utilisent des outils d'assistance comme les lecteurs d'écran. Si l'ordre visuel est important, les utilisateurs de lecteurs d'écran n'auront pas accès à l'ordre correct.
 
-<ul>
- <li><a href="https://tink.uk/flexbox-the-keyboard-navigation-disconnect/"><em>Flexbox &amp; the keyboard navigation disconnect — Tink</em> (en anglais)</a></li>
- <li><a href="https://adrianroselli.com/2015/09/source-order-matters.html"><em>Source Order Matters, Adrian Roselli</em> (en anglais)</a></li>
- <li><a href="/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways">Comprendre les règles du WCAG 1.3</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html"><em>Understanding Success Criterion 1.3.2, W3C Understanding WCAG 2.0</em> (en anglais)</a></li>
-</ul>
+- [_Flexbox & the keyboard navigation disconnect — Tink_ (en anglais)](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)
+- [_Source Order Matters, Adrian Roselli_ (en anglais)](https://adrianroselli.com/2015/09/source-order-matters.html)
+- [Comprendre les règles du WCAG 1.3](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
+- [_Understanding Success Criterion 1.3.2, W3C Understanding WCAG 2.0_ (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html)
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Flexbox', '#order-property', 'order')}}</td>
-   <td>{{Spec2('CSS3 Flexbox')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | État                             | Commentaires         |
+| ---------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('CSS3 Flexbox', '#order-property', 'order')}} | {{Spec2('CSS3 Flexbox')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.order")}}</p>
+{{Compat("css.properties.order")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Le guide CSS sur les boîtes flexibles : <em><a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Les concepts de base</a></em></li>
- <li>Le guide CSS sur les boîtes flexibles : <em><a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items">Ordonner les éléments flexibles</a></em></li>
- <li>Le guide sur la grille CSS : <em><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility">La disposition en grille et l'accessibilité</a></em></li>
-</ul>
+- Le guide CSS sur les boîtes flexibles : _[Les concepts de base](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- Le guide CSS sur les boîtes flexibles : _[Ordonner les éléments flexibles](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordering_Flex_Items)_
+- Le guide sur la grille CSS : _[La disposition en grille et l'accessibilité](/fr/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)_

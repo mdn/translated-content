@@ -7,38 +7,23 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Table
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><em><strong>CSS Table</strong></em> (ou module des tableaux CSS) est un module CSS qui définit comment disposer les données de tableaux.</p>
+**_CSS Table_** (ou module des tableaux CSS) est un module CSS qui définit comment disposer les données de tableaux.
 
-<h2 id="Référence">Référence</h2>
+## Référence
 
-<h3 id="Propriétés">Propriétés</h3>
+### Propriétés
 
-<ul>
- <li>{{cssxref("border-collapse")}}</li>
- <li>{{cssxref("border-spacing")}}</li>
- <li>{{cssxref("caption-side")}}</li>
- <li>{{cssxref("empty-cells")}}</li>
- <li>{{cssxref("table-layout")}}</li>
- <li>{{cssxref("vertical-align")}}</li>
-</ul>
+- {{cssxref("border-collapse")}}
+- {{cssxref("border-spacing")}}
+- {{cssxref("caption-side")}}
+- {{cssxref("empty-cells")}}
+- {{cssxref("table-layout")}}
+- {{cssxref("vertical-align")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS2.1", "tables.html")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                    | État                     | Commentaires         |
+| ------------------------------------------------ | ------------------------ | -------------------- |
+| {{SpecName("CSS2.1", "tables.html")}} | {{Spec2("CSS2.1")}} | Définition initiale. |

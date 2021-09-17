@@ -7,13 +7,14 @@ tags:
   - Reference
 translation_of: Web/CSS/scroll-snap-align
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>scroll-snap-align</code></strong> définit la position de la boîte d'accroche (<em>snap positions</em>) comme un alignement entre la zone d'accroche et le conteneur (la boîte de défilement de l'élément). Les deux valeurs fournies à cette propriété s'appliquent respectivement à l'axe de bloc et à l'axe en ligne. Lorsqu'une seule valeur est fournie, la seconde prendra par défaut la valeur de la première.</p>
+La propriété **`scroll-snap-align`** définit la position de la boîte d'accroche (_snap positions_) comme un alignement entre la zone d'accroche et le conteneur (la boîte de défilement de l'élément). Les deux valeurs fournies à cette propriété s'appliquent respectivement à l'axe de bloc et à l'axe en ligne. Lorsqu'une seule valeur est fournie, la seconde prendra par défaut la valeur de la première.
 
-<h2 id="Syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 scroll-snap-align: none;
 scroll-snap-align: start end;
 scroll-snap-align: center;
@@ -22,50 +23,33 @@ scroll-snap-align: center;
 scroll-snap-align: inherit;
 scroll-snap-align: initial;
 scroll-snap-align: unset;
-</pre>
+```
 
-<h3 id="Values">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>none</code></dt>
- <dd>La boîte ne définit aucune position d'accroche sur cet axe.</dd>
- <dt><code>start</code></dt>
- <dd>Le point d'alignement situé au début de l'axe et sur le bord de la boîte de défilement est une position d'accroche sur cet axe.</dd>
- <dt><code>end</code></dt>
- <dd>Le point d'alignement situé à la fin de l'axe et sur le bord de la boîte de défilement est une position d'accroche sur cet axe.</dd>
- <dt><code>center</code></dt>
- <dd>Le point d'alignement situé au centre de l'axe et à l'intérieur de la boîte de défilement est une position d'accroche sur cet axe.</dd>
-</dl>
+- `none`
+  - : La boîte ne définit aucune position d'accroche sur cet axe.
+- `start`
+  - : Le point d'alignement situé au début de l'axe et sur le bord de la boîte de défilement est une position d'accroche sur cet axe.
+- `end`
+  - : Le point d'alignement situé à la fin de l'axe et sur le bord de la boîte de défilement est une position d'accroche sur cet axe.
+- `center`
+  - : Le point d'alignement situé au centre de l'axe et à l'intérieur de la boîte de défilement est une position d'accroche sur cet axe.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Scroll Snap Points", "#propdef-scroll-snap-align", "scroll-snap-align")}}</td>
-   <td>{{Spec2("CSS Scroll Snap Points")}}</td>
-   <td>Initial definition</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | État                                             | Commentaires       |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | ------------------ |
+| {{SpecName("CSS Scroll Snap Points", "#propdef-scroll-snap-align", "scroll-snap-align")}} | {{Spec2("CSS Scroll Snap Points")}} | Initial definition |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.scroll-snap-align")}}</p>
+{{Compat("css.properties.scroll-snap-align")}}
 
-<div class="warning">
-<p><strong>Attention :</strong> Pour Safari, la syntaxe utilisant les deux valeurs intervertit les deux valeurs (la première cible l'alignement en ligne et la seconde l'alignement en bloc). Voir <a href="https://bugs.webkit.org/show_bug.cgi?id=191865">le bug n°191865</a>.</p>
-</div>
+> **Attention :** Pour Safari, la syntaxe utilisant les deux valeurs intervertit les deux valeurs (la première cible l'alignement en ligne et la seconde l'alignement en bloc). Voir [le bug n°191865](https://bugs.webkit.org/show_bug.cgi?id=191865).

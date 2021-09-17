@@ -8,51 +8,49 @@ tags:
   - Reference
 translation_of: Web/CSS/border-block-start
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propriété <strong><code>border-block-start</code></strong> est une propriété raccourcie qui permet de définir la bordure d'un élément pour le côté correspondant au début de l'élément dans l'axe orthogonal au sens de lecture. Elle peut être utilisée pour définir les valeurs de {{cssxref("border-block-start-width")}}, {{cssxref("border-block-start-style")}} et {{cssxref("border-block-start-color")}}.</p>
+La propriété **`border-block-start`** est une propriété raccourcie qui permet de définir la bordure d'un élément pour le côté correspondant au début de l'élément dans l'axe orthogonal au sens de lecture. Elle peut être utilisée pour définir les valeurs de {{cssxref("border-block-start-width")}}, {{cssxref("border-block-start-style")}} et {{cssxref("border-block-start-color")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/border-block-start.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-block-start.html")}}
 
-<p>Cette propriété logique correspond à l'une des propriété physique équivalente selon le mode d'écriture, la directionnalité et l'orientation du texte. Autrement dit, elle correspond à l'une des propriétés {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}} ou {{cssxref("border-left")}} selon les valeurs utilisées pour {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.</p>
+Cette propriété logique correspond à l'une des propriété physique équivalente selon le mode d'écriture, la directionnalité et l'orientation du texte. Autrement dit, elle correspond à l'une des propriétés {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}} ou {{cssxref("border-left")}} selon les valeurs utilisées pour {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
 
-<p>On peut rapprocher cette propriété des autres propriétés logiques raccourcies définissant les bordures des autres côtés :</p>
+On peut rapprocher cette propriété des autres propriétés logiques raccourcies définissant les bordures des autres côtés :
 
-<ul>
- <li>{{cssxref("border-block-end")}},</li>
- <li>{{cssxref("border-inline-end")}},</li>
- <li>{{cssxref("border-inline-start")}}.</li>
-</ul>
+- {{cssxref("border-block-end")}},
+- {{cssxref("border-inline-end")}},
+- {{cssxref("border-inline-start")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css  no-line-numbers">border-block-start: 1px;
+```css
+border-block-start: 1px;
 border-block-start: 2px dotted;
 border-block-start: medium dashed green;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<p>Une ou plusieurs valeurs parmi les suivantes, dans n'importe quel ordre :</p>
+Une ou plusieurs valeurs parmi les suivantes, dans n'importe quel ordre :
 
-<dl>
- <dt><code>&lt;'border-width'&gt;</code></dt>
- <dd>La largeur utilisée pour la bordure de ce côté, voir {{cssxref("border-width")}}.</dd>
- <dt><code>&lt;'border-style'&gt;</code></dt>
- <dd>Le style utilisé pour la ligne de la bordure de ce côté, voir {{cssxref("border-style")}}.</dd>
- <dt><code>&lt;'color'&gt;</code></dt>
- <dd>La couleur de la bordure de ce côté, voir {{cssxref("color")}}.</dd>
-</dl>
+- `<'border-width'>`
+  - : La largeur utilisée pour la bordure de ce côté, voir {{cssxref("border-width")}}.
+- `<'border-style'>`
+  - : Le style utilisé pour la ligne de la bordure de ce côté, voir {{cssxref("border-style")}}.
+- `<'color'>`
+  - : La couleur de la bordure de ce côté, voir {{cssxref("color")}}.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -61,54 +59,40 @@ border-block-start: medium dashed green;
 .exemple {
   writing-mode: vertical-rl;
   border-block-start: 5px dashed blue;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exemple"&gt;Texte d'exemple&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exemple">Texte d'exemple</p>
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", 140, 140)}}</p>
+{{EmbedLiveSample("Exemples", 140, 140)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-border-block-start", "border-block-start")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | État                                             | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------ | -------------------- |
+| {{SpecName("CSS Logical Properties", "#propdef-border-block-start", "border-block-start")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.border-block-start")}}</p>
+{{Compat("css.properties.border-block-start")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Les propriétés physiques correspondantes :
-  <ul>
-   <li>{{cssxref("border-top")}},</li>
-   <li>{{cssxref("border-right")}},</li>
-   <li>{{cssxref("border-bottom")}},</li>
-   <li>{{cssxref("border-left")}}</li>
-  </ul>
- </li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- Les propriétés physiques correspondantes :
+
+  - {{cssxref("border-top")}},
+  - {{cssxref("border-right")}},
+  - {{cssxref("border-bottom")}},
+  - {{cssxref("border-left")}}
+
+- {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

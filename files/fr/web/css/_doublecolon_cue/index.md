@@ -1,79 +1,68 @@
 ---
 title: '::cue'
-slug: 'Web/CSS/::cue'
+slug: Web/CSS/::cue
 tags:
   - CSS
   - Pseudo-element
   - Reference
   - WebVTT
-translation_of: 'Web/CSS/::cue'
+translation_of: Web/CSS/::cue
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Le pseudo-élément CSS <strong><code>::cue</code></strong> permet de cibler les indications textuelles <a href="/fr/docs/Web/API/WebVTT_API">WebVTT</a> d'un élément. Ce pseudo-élément peut être utilisé afin de mettre en forme <a href="/fr/docs/Web/API/WebVTT_API#Styling_WebTT_cues">les légendes et autres indications textuelles</a> pour les médias avec des pistes VTT.</p>
+Le pseudo-élément CSS **`::cue`** permet de cibler les indications textuelles [WebVTT](/fr/docs/Web/API/WebVTT_API) d'un élément. Ce pseudo-élément peut être utilisé afin de mettre en forme [les légendes et autres indications textuelles](/fr/docs/Web/API/WebVTT_API#Styling_WebTT_cues) pour les médias avec des pistes VTT.
 
-<pre class="brush: css no-line-numbers">::cue {
+```css
+::cue {
   color: yellow;
   font-weight: bold;
-}</pre>
+}
+```
 
-<h2 id="Propriétés_autorisées">Propriétés autorisées</h2>
+## Propriétés autorisées
 
-<p>Seul un sous-ensemble des propriétés CSS peut être utilisé avec le pseudo-élément <code>::cue</code> :</p>
+Seul un sous-ensemble des propriétés CSS peut être utilisé avec le pseudo-élément `::cue` :
 
-<ul>
- <li>{{CSSxRef("background")}} et les propriétés détaillées associées</li>
- <li>{{CSSxRef("color")}}</li>
- <li>{{CSSxRef("font")}} et les propriétés détaillées associées</li>
- <li>{{CSSxRef("line-height")}}</li>
- <li>{{CSSxRef("opacity")}}</li>
- <li>{{CSSxRef("outline")}} et les propriétés détaillées associées</li>
- <li>{{CSSxRef("ruby-position")}}</li>
- <li>{{CSSxRef("text-combine-upright")}}</li>
- <li>{{CSSxRef("text-decoration")}} et les propriétés détaillées associées</li>
- <li>{{CSSxRef("text-shadow")}}</li>
- <li>{{CSSxRef("visibility")}}</li>
- <li>{{CSSxRef("white-space")}}</li>
-</ul>
+- {{CSSxRef("background")}} et les propriétés détaillées associées
+- {{CSSxRef("color")}}
+- {{CSSxRef("font")}} et les propriétés détaillées associées
+- {{CSSxRef("line-height")}}
+- {{CSSxRef("opacity")}}
+- {{CSSxRef("outline")}} et les propriétés détaillées associées
+- {{CSSxRef("ruby-position")}}
+- {{CSSxRef("text-combine-upright")}}
+- {{CSSxRef("text-decoration")}} et les propriétés détaillées associées
+- {{CSSxRef("text-shadow")}}
+- {{CSSxRef("visibility")}}
+- {{CSSxRef("white-space")}}
 
-<p>Les propriétés sont appliquées à l'ensembles des indications (comme si celles-ci formaient un seul ensemble). Seule <code>background</code> (ou les propriétés raccourcies associées) s'appliquent à chaque indication séparément (afin d'éviter de créer des boîtes qui masqueraient de grandes zones sur le média).</p>
+Les propriétés sont appliquées à l'ensembles des indications (comme si celles-ci formaient un seul ensemble). Seule `background` (ou les propriétés raccourcies associées) s'appliquent à chaque indication séparément (afin d'éviter de créer des boîtes qui masqueraient de grandes zones sur le média).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>La règle CSS suivante permet d'avoir les indications textuelles dans un texte blanc et sur un arrière-plan qui est une boîte noire transparent.</p>
+La règle CSS suivante permet d'avoir les indications textuelles dans un texte blanc et sur un arrière-plan qui est une boîte noire transparent.
 
-<pre class="brush: css">::cue {
+```css
+::cue {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.6);
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th>Spécification</th>
-   <th>État</th>
-   <th>Commentaires</th>
-  </tr>
-  <tr>
-   <td>{{SpecName("WebVTT", "#the-cue-pseudo-element", "::cue")}}</td>
-   <td>{{Spec2("WebVTT")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | État                     | Commentaires         |
+| ---------------------------------------------------------------------------- | ------------------------ | -------------------- |
+| {{SpecName("WebVTT", "#the-cue-pseudo-element", "::cue")}} | {{Spec2("WebVTT")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.cue")}}</p>
+{{Compat("css.selectors.cue")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/API/WebVTT_API">Web Video Tracks Format (WebVTT)</a></li>
-</ul>
+- [Web Video Tracks Format (WebVTT)](/fr/docs/Web/API/WebVTT_API)

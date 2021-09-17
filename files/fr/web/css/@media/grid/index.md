@@ -7,27 +7,30 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/grid
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>grid</code></strong> est une caractéristique média CSS (cf {{cssxref("@media")}}) dont la valeur est un booléen qui indique si l'appareil d'affichage fonctionne grâce à une grille (ex. un terminal ou un appareil qui ne dispose que d'une police à chasse fixe) ou grâce à une matrice d'affichage (avec des pixels « classiques »).</p>
+**`grid`** est une caractéristique média CSS (cf {{cssxref("@media")}}) dont la valeur est un booléen qui indique si l'appareil d'affichage fonctionne grâce à une grille (ex. un terminal ou un appareil qui ne dispose que d'une police à chasse fixe) ou grâce à une matrice d'affichage (avec des pixels « classiques »).
 
-<p>La plupart des ordinateurs actuels possèdent des écrans matriciels. Parmi les appareils qui utilisent un affichage en grille, on trouve les appareils qui n'affichent que du texte dans un terminal ou des téléphones simples avec une seule police fixe.</p>
+La plupart des ordinateurs actuels possèdent des écrans matriciels. Parmi les appareils qui utilisent un affichage en grille, on trouve les appareils qui n'affichent que du texte dans un terminal ou des téléphones simples avec une seule police fixe.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>La caractéristique <code>grid</code> est une valeur booléenne (<code>0</code> ou <code>1</code>) (type {{cssxref("&lt;mq-boolean&gt;")}}) qui indique si l'appareil d'affichage fonctionne selon une grille.</p>
+La caractéristique `grid` est une valeur booléenne (`0` ou `1`) (type {{cssxref("&lt;mq-boolean&gt;")}}) qui indique si l'appareil d'affichage fonctionne selon une grille.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="unknown"&gt;Impossible de savoir si l'affichage fonctionne sur une grille. :-(&lt;/p&gt;
-&lt;p class="bitmap"&gt;L'appareil dispose d'un affichage matriciel.&lt;/p&gt;
-&lt;p class="grid"&gt;L'appareil utilise une grille pour l'affichage !&lt;/p&gt;</pre>
+```html
+<p class="unknown">Impossible de savoir si l'affichage fonctionne sur une grille. :-(</p>
+<p class="bitmap">L'appareil dispose d'un affichage matriciel.</p>
+<p class="grid">L'appareil utilise une grille pour l'affichage !</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">:not(.unknown) {
+```css
+:not(.unknown) {
   color: lightgray;
 }
 
@@ -51,31 +54,19 @@ translation_of: Web/CSS/@media/grid
     color: black;
     text-transform: uppercase;
   }
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Media Queries', '#grid', 'grid')}}</td>
-   <td>{{Spec2('CSS3 Media Queries')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                        | État                                     | Commentaires         |
+| -------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName('CSS3 Media Queries', '#grid', 'grid')}} | {{Spec2('CSS3 Media Queries')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.at-rules.media.grid")}}</p>
+{{Compat("css.at-rules.media.grid")}}

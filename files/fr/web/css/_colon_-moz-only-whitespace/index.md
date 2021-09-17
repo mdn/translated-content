@@ -1,36 +1,36 @@
 ---
 title: ':-moz-only-whitespace'
-slug: 'Web/CSS/:-moz-only-whitespace'
+slug: Web/CSS/:-moz-only-whitespace
 tags:
   - CSS
   - Non-standard
   - Pseudo-classe
   - Reference
   - Sélecteur
-translation_of: 'Web/CSS/:-moz-only-whitespace'
+translation_of: Web/CSS/:-moz-only-whitespace
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<div class="note">
-<p><strong>Note :</strong> Dans la spécification {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}}, le sélecteur {{CSSxRef(":empty")}} a été modifié pour se comporter comme <code>:-moz-only-whitespace</code> mais aucun navigateur ne prend actuellement en charge cette fonctionnalité.</p>
-</div>
+> **Note :** Dans la spécification {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}}, le sélecteur {{CSSxRef(":empty")}} a été modifié pour se comporter comme `:-moz-only-whitespace` mais aucun navigateur ne prend actuellement en charge cette fonctionnalité.
 
-<p>La <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <strong><code>:-moz-only-whitespace</code></strong> correspond aux éléments qui n'ont aucun nœud enfant, aux nœuds texte vides ou aux nœuds texte ne possédant que des espaces.</p>
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:-moz-only-whitespace`** correspond aux éléments qui n'ont aucun nœud enfant, aux nœuds texte vides ou aux nœuds texte ne possédant que des espaces.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
 {{CSSSyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt; &lt;/div&gt;
-</pre>
+```html
+<div> </div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css hidden">:root {
+```css hidden
+:root {
   overflow: hidden;
   max-width: 100vw;
   max-height: 100vh;
@@ -43,31 +43,31 @@ div {
   min-height: 16px;
   min-height: 1rem;
 }
-</pre>
+```
 
-<pre class="brush: css">div {
+```css
+div {
   border: 4px solid red;
 }
 
 :-moz-only-whitespace {
   border-color: lime;
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemple", "100%", "50")}}</p>
+{{EmbedLiveSample("Exemple", "100%", "50")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette pseudo-classe a été renommée en <code>:blank</code> dans {{SpecName("CSS4 Selectors", "#changes-2018-02")}} puis la fonctionnalité a été fusionnée avec {{CSSxRef(":empty")}} et {{CSSxRef(":blank")}} a été redéfinie afin d'indiquer un élément {{HTMLElement("input")}} vide.</p>
+Cette pseudo-classe a été renommée en `:blank` dans {{SpecName("CSS4 Selectors", "#changes-2018-02")}} puis la fonctionnalité a été fusionnée avec {{CSSxRef(":empty")}} et {{CSSxRef(":blank")}} a été redéfinie afin d'indiquer un élément {{HTMLElement("input")}} vide.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.moz-only-whitespace")}}</p>
+{{Compat("css.selectors.moz-only-whitespace")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{CSSxRef(":blank")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef(":empty")}}</li>
-</ul>
+- {{CSSxRef(":blank")}} {{Experimental_Inline}}
+- {{CSSxRef(":empty")}}

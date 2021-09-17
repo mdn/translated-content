@@ -8,17 +8,16 @@ tags:
   - Reference
 translation_of: Web/CSS/box-lines
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<div class="warning">
-<p><strong>Attention :</strong> Cette propriété fait partie de la première version du standard pour les boîtes flexibles (<em>flexbox</em>) et sera remplacée dans une prochaine version.</p>
-</div>
+> **Attention :** Cette propriété fait partie de la première version du standard pour les boîtes flexibles (_flexbox_) et sera remplacée dans une prochaine version.
 
-<p>Voir la page <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Flexbox</a> pour plus d'informations.</p>
+Voir la page [Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) pour plus d'informations.
 
-<p>La propriété <strong><code>box-lines</code></strong> détermine si la boîte se compose d'une ou plusieurs rangées (des lignes pour les boîtes orientées horizontalement et des colonnes pour les boîtes orientées verticalement). Pour plus de détails, se référer à la page <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Flexbox</a> qui décrit les différentes propriétés des boîtes flexibles.</p>
+La propriété **`box-lines`** détermine si la boîte se compose d'une ou plusieurs rangées (des lignes pour les boîtes orientées horizontalement et des colonnes pour les boîtes orientées verticalement). Pour plus de détails, se référer à la page [Flexbox](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox) qui décrit les différentes propriétés des boîtes flexibles.
 
-<pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 box-lines: single;
 box-lines: multiple;
 
@@ -26,52 +25,46 @@ box-lines: multiple;
 box-lines: inherit;
 box-lines: initial;
 box-lines: unset;
-</pre>
+```
 
-<p>Par défaut, une boîte horizontale organisera ses éléments sur une seule ligne et une boîte verticale les organisera sur une seule colonne. On peut modifier ce comportement en utilisant <strong><code>box-lines</code></strong>. La valeur par défaut est <strong><code>single</code></strong> (ce qui correspond au cas expliqué avant) et les éléments qui ne peuvent être contenus dans cette ligne ou cette colonne dépasseront.</p>
+Par défaut, une boîte horizontale organisera ses éléments sur une seule ligne et une boîte verticale les organisera sur une seule colonne. On peut modifier ce comportement en utilisant **`box-lines`**. La valeur par défaut est **`single`** (ce qui correspond au cas expliqué avant) et les éléments qui ne peuvent être contenus dans cette ligne ou cette colonne dépasseront.
 
-<p>Si, au contraire, on utilise la valeur <strong><code>multiple</code></strong>, la boîte pourra s'étendre sur plusieurs rangées (des lignes ou des colonnes) afin de contenir ses différents éléments fils. La boîte utilisera alors le moins de lignes ou de colonnes possibles et réduira les éléments à leur taille minimale si nécessaire.</p>
+Si, au contraire, on utilise la valeur **`multiple`**, la boîte pourra s'étendre sur plusieurs rangées (des lignes ou des colonnes) afin de contenir ses différents éléments fils. La boîte utilisera alors le moins de lignes ou de colonnes possibles et réduira les éléments à leur taille minimale si nécessaire.
 
-<p>Si les éléments fils d'une boîte horizontale ne rentrent pas dans une ligne après avoir été réduits à leur taille minimale, ils sont déplacés sur une nouvelle ligne jusqu'à ce que rien ne dépasse de la ligne précédente. Le procédé est répété autant de fois que nécessaire. Si une ligne contient un seul élément et que celui-ci est trop grand, ce dernier restera sur cette ligne et dépassera en dehors de la boîte. Les nouvelles lignes sont créées en dessous des premières lorsque la direction de la boîte est <code>normal</code>, dans le sens inverse (<code>reverse</code>) elles seront empilées les unes au dessus des autres. La hauteur d'une ligne sera égale à la plus grande hauteur des éléments portés sur cette ligne. Aucun espace ne sera ajouté entre les lignes en dehors des marges décrites par les plus grands éléments. Lors du calcul de la hauteur, les éléments avec une marge dont la valeur calculée est <code>auto</code> seront traités comme si la marge était nulle (<code>0</code>).</p>
+Si les éléments fils d'une boîte horizontale ne rentrent pas dans une ligne après avoir été réduits à leur taille minimale, ils sont déplacés sur une nouvelle ligne jusqu'à ce que rien ne dépasse de la ligne précédente. Le procédé est répété autant de fois que nécessaire. Si une ligne contient un seul élément et que celui-ci est trop grand, ce dernier restera sur cette ligne et dépassera en dehors de la boîte. Les nouvelles lignes sont créées en dessous des premières lorsque la direction de la boîte est `normal`, dans le sens inverse (`reverse`) elles seront empilées les unes au dessus des autres. La hauteur d'une ligne sera égale à la plus grande hauteur des éléments portés sur cette ligne. Aucun espace ne sera ajouté entre les lignes en dehors des marges décrites par les plus grands éléments. Lors du calcul de la hauteur, les éléments avec une marge dont la valeur calculée est `auto` seront traités comme si la marge était nulle (`0`).
 
-<p>On aura un fonctionnement analogue avec une disposition verticale.</p>
+On aura un fonctionnement analogue avec une disposition verticale.
 
-<p>Une fois que le nombre de rangées a été calculé, les éléments pour lesquels {{cssxref("box-flex")}} a une valeur calculée différentes de <code>0</code> seront étirés afin de remplir les espaces restants sur les lignes. Ces étirements sont calculés de façon indépendante selon chaque ligne (notamment pour {{cssxref("box-flex")}} et {{cssxref("box-flex-group")}}). Il en va de même pour le regroupement des éléments sur une ligne avec la propriété {{cssxref("box-pack")}}.</p>
+Une fois que le nombre de rangées a été calculé, les éléments pour lesquels {{cssxref("box-flex")}} a une valeur calculée différentes de `0` seront étirés afin de remplir les espaces restants sur les lignes. Ces étirements sont calculés de façon indépendante selon chaque ligne (notamment pour {{cssxref("box-flex")}} et {{cssxref("box-flex-group")}}). Il en va de même pour le regroupement des éléments sur une ligne avec la propriété {{cssxref("box-pack")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Cette propriété est définie grâce à l'un des mots-clés suivants.</p>
+Cette propriété est définie grâce à l'un des mots-clés suivants.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>single</code></dt>
- <dd>Les éléments d'une boîte sont disposés sur une seule ligne ou sur une seule colonne.</dd>
- <dt><code>multiple</code></dt>
- <dd>Les éléments de la boîte sont disposés sur plusieurs lignes ou colonnes si nécessaire.</dd>
-</dl>
+- `single`
+  - : Les éléments d'une boîte sont disposés sur une seule ligne ou sur une seule colonne.
+- `multiple`
+  - : Les éléments de la boîte sont disposés sur plusieurs lignes ou colonnes si nécessaire.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<ul>
- <li><a href="https://www.w3.org/TR/css3-flexbox/">Brouillon de travail pour le module des boîtes flexibles (W3C)</a> {{Note("L'état actuel de cette spécification ne reflète pas l'implémentation de Gecko ou WebKit.")}}</li>
- <li><a href="https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">Ancienne version de la spécification.</a> {{Note("Les implémentations de WebKit et Gecko reflètent cette version de la spécification.")}}</li>
-</ul>
+- [Brouillon de travail pour le module des boîtes flexibles (W3C)](https://www.w3.org/TR/css3-flexbox/) {{Note("L'état actuel de cette spécification ne reflète pas l'implémentation de Gecko ou WebKit.")}}
+- [Ancienne version de la spécification.](https://www.w3.org/TR/2009/WD-css3-flexbox-20090723/) {{Note("Les implémentations de WebKit et Gecko reflètent cette version de la spécification.")}}
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<div>{{Compat("css.properties.box-lines")}}</div>
+{{Compat("css.properties.box-lines")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("box-flex")}},</li>
- <li>{{cssxref("box-flex-groups")}},</li>
- <li>{{cssxref("box-pack")}}</li>
-</ul>
+- {{cssxref("box-flex")}},
+- {{cssxref("box-flex-groups")}},
+- {{cssxref("box-pack")}}

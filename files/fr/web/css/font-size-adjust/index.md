@@ -7,84 +7,86 @@ tags:
   - Reference
 translation_of: Web/CSS/font-size-adjust
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>font-size-adjust</code></strong> permet de choisir une taille de police selon la taille des caractères en minuscules plutôt que selon la taille des majuscules.</p>
+La propriété **`font-size-adjust`** permet de choisir une taille de police selon la taille des caractères en minuscules plutôt que selon la taille des majuscules.
 
-<pre class="brush:css  no-line-numbers">/* On utilise la taille de fonte définie */
+```css
+/* On utilise la taille de fonte définie */
 font-size-adjust: none;
 
 /* On utilise une fonte pour laquelle
    les minuscules font la moitié de la
    taille définie */
-/* Type &lt;number&gt; */
+/* Type <number> */
 font-size-adjust: 0.5;
 
 /* Valeurs globales */
 font-size-adjust: inherit;
 font-size-adjust: initial;
 font-size-adjust: unset;
-</pre>
+```
 
-<p>Cela est particulièrement utile lorsque la lisibilité des fontes, notamment celles de petite taille, est déterminée par la taille des minuscules plutôt que par celle des majuscules.</p>
+Cela est particulièrement utile lorsque la lisibilité des fontes, notamment celles de petite taille, est déterminée par la taille des minuscules plutôt que par celle des majuscules.
 
-<p>La lisibilité peut devenir un problème lorsque la première police indiquée par {{cssxref("font-family")}} n'est pas disponible et que la police de remplacement possède un facteur de forme très différent (ce facteur correspond au ratio de la taille des minuscules sur la taille de la fonte).</p>
+La lisibilité peut devenir un problème lorsque la première police indiquée par {{cssxref("font-family")}} n'est pas disponible et que la police de remplacement possède un facteur de forme très différent (ce facteur correspond au ratio de la taille des minuscules sur la taille de la fonte).
 
-<p>Pour utiliser cette propriété d'une façon compatible avec les navigateurs qui ne prennent pas en charge <code>font-size-adjust</code>, on définira le facteur par lequel on multiplie la valeur de la propriété {{Cssxref("font-size")}}. Cela signifie généralement que la propriété doit correspondre au facteur de forme de la première fonte. Ainsi, lorsqu'une feuille de style définit :</p>
+Pour utiliser cette propriété d'une façon compatible avec les navigateurs qui ne prennent pas en charge `font-size-adjust`, on définira le facteur par lequel on multiplie la valeur de la propriété {{Cssxref("font-size")}}. Cela signifie généralement que la propriété doit correspondre au facteur de forme de la première fonte. Ainsi, lorsqu'une feuille de style définit :
 
-<pre class="brush: css">font-size: 14px;
+```css
+font-size: 14px;
 font-size-adjust: 0.5;
-</pre>
+```
 
-<p>On indique en fait que les minuscules de la fonte utilisée doivent mesurer <code>7px</code> de haut (0.5 × 14px).</p>
+On indique en fait que les minuscules de la fonte utilisée doivent mesurer `7px` de haut (0.5 × 14px).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>none</code></dt>
- <dd>La taille de la fonte est uniquement choisie grâce à la propriété {{cssxref("font-size")}}.</dd>
- <dt><code>&lt;number&gt;</code></dt>
- <dd>
- <p>La taille de la fonte est choisie afin que les minuscules (selon la taille horizontale de la fonte) mesurent X fois {{cssxref("font-size")}}.</p>
+- `none`
+  - : La taille de la fonte est uniquement choisie grâce à la propriété {{cssxref("font-size")}}.
+- `<number>`
 
- <p>Le nombre indiqué (cf. le type {{cssxref("&lt;number&gt;")}}) devrait la plupart du temps correspondre au facteur de forme de la première fonte listée avec {{cssxref("font-family")}}. Cela permet d'obtenir le même résultat dans les différents navigateurs, qu'ils supportent <code>font-size-adjust</code> ou non.</p>
+  - : La taille de la fonte est choisie afin que les minuscules (selon la taille horizontale de la fonte) mesurent X fois {{cssxref("font-size")}}.
 
- <p><code>0</code> entraînera une haute nulle pour le texte (qui sera donc caché). Pour d'anciens navigateurs, comme Firefox avant la version 40, <code>0</code> était géré comme <code>none</code>.</p>
- </dd>
-</dl>
+    Le nombre indiqué (cf. le type {{cssxref("&lt;number&gt;")}}) devrait la plupart du temps correspondre au facteur de forme de la première fonte listée avec {{cssxref("font-family")}}. Cela permet d'obtenir le même résultat dans les différents navigateurs, qu'ils supportent `font-size-adjust` ou non.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+    `0` entraînera une haute nulle pour le texte (qui sera donc caché). Pour d'anciens navigateurs, comme Firefox avant la version 40, `0` était géré comme `none`.
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Exemples pour &lt;code&gt;font-size-adjust&lt;/code&gt;&lt;/p&gt;
+```html
+<p>Exemples pour <code>font-size-adjust</code></p>
 
-&lt;p class="times"&gt;
+<p class="times">
   Voici la fonte Times sur 10 px,
   difficile à lire en petit.
-&lt;/p&gt;
+</p>
 
-&lt;p class="verdana"&gt;
+<p class="verdana">
   Voici la fonte Verdana sur 10px,
   plus lisible car sans empattement
   (serif).
-&lt;/p&gt;
+</p>
 
-&lt;p class="adjtimes"&gt;
+<p class="adjtimes">
   et voilà le texte ajusté pour
   avoir le même facteur de forme
   qu'avec Verdana.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.times {
+```css
+.times {
   font-family: Times, serif;
   font-size: 10 px;
 }
@@ -98,41 +100,26 @@ font-size-adjust: 0.5;
   font-family: Times, serif;
   font-size-adjust: 0.58;
 }
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', '500', '300')}}</p>
+{{EmbedLiveSample('Exemples', '500', '300')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#propdef-font-size-adjust', 'font-size-adjust')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                             | Commentaires         |
+| ---------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('CSS3 Fonts', '#propdef-font-size-adjust', 'font-size-adjust')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale. |
 
-<p>La propriété CSS <code>font-size-adjust</code> fut initialement définie avec CSS 2 mais a été abandonnée dans CSS 2.1. Elle a de nouveau été définie avec CSS 3.</p>
+La propriété CSS `font-size-adjust` fut initialement définie avec CSS 2 mais a été abandonnée dans CSS 2.1. Elle a de nouveau été définie avec CSS 3.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.font-size-adjust")}}</p>
+{{Compat("css.properties.font-size-adjust")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1144885">Un billet de David Baron sur <code>font-size-adjust</code> (en anglais)</a></li>
-</ul>
+- [Un billet de David Baron sur `font-size-adjust` (en anglais)](https://bugzilla.mozilla.org/show_bug.cgi?id=1144885)

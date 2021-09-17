@@ -9,62 +9,60 @@ tags:
 translation_of: Web/CSS/Pseudo-elements
 original_slug: Web/CSS/Pseudo-éléments
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Un <strong>pseudo-élément</strong> est un mot-clé ajouté à un sélecteur qui permet de mettre en forme certaines parties de l'élément ciblé par la règle. Ainsi, le pseudo-élément {{cssxref("::first-line")}} permettra de ne cibler que la première ligne d'un élément visé par le sélecteur.</p>
+Un **pseudo-élément** est un mot-clé ajouté à un sélecteur qui permet de mettre en forme certaines parties de l'élément ciblé par la règle. Ainsi, le pseudo-élément {{cssxref("::first-line")}} permettra de ne cibler que la première ligne d'un élément visé par le sélecteur.
 
-<pre class="brush: css no-line-numbers">/* La première ligne de chaque élément &lt;p&gt;. */
+```css
+/* La première ligne de chaque élément <p>. */
 p::first-line {
   color: blue;
   text-transform: uppercase;
 }
-</pre>
+```
 
+> **Note :** À la différence des pseudo-éléments, [les pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) peuvent être utilisées afin de mettre en forme un élément en fonction de son état.
 
+## Syntaxe
 
-<div class="note">
-<p><strong>Note :</strong> À la différence des pseudo-éléments, <a href="/fr/docs/Web/CSS/Pseudo-classes">les pseudo-classes</a> peuvent être utilisées afin de mettre en forme un élément en fonction de son état.</p>
-</div>
+    sélecteur::pseudo-élément {
+      propriété: valeur;
+    }
 
-<h2 id="Syntaxe">Syntaxe</h2>
+On ne peut utiliser qu'un seul pseudo-élément dans un sélecteur. Le pseudo-élément doit apparaître après les sélecteurs simple de la déclaration
 
-<pre class="syntaxbox">sélecteur::pseudo-élément {
-  propriété: valeur;
-}</pre>
+Depuis CSS3, on utilise deux fois le caractère deux-points (:) pour préfixer les pseudo-éléments (afin de pouvoir les différencier des pseudo-classes). Toutefois, la plupart des navigateurs prennent en charge les pseudo-éléments pour lesquels le préfixe n'est formé que d'un seul « : ».
 
-<p>On ne peut utiliser qu'un seul pseudo-élément dans un sélecteur. Le pseudo-élément doit apparaître après les sélecteurs simple de la déclaration</p>
+## Liste des pseudo-éléments
 
-<p>Depuis CSS3, on utilise deux fois le caractère deux-points (:) pour préfixer les pseudo-éléments (afin de pouvoir les différencier des pseudo-classes). Toutefois, la plupart des navigateurs prennent en charge les pseudo-éléments pour lesquels le préfixe n'est formé que d'un seul « : ».</p>
+- {{CSSxRef("::after", "::after (:after)")}}
+- {{CSSxRef("::backdrop")}} {{Experimental_Inline}}
+- {{CSSxRef("::before", "::before (:before)")}}
+- {{CSSxRef("::cue", "::cue (:cue)")}}
+- {{CSSxRef("::first-letter", "::first-letter (:first-letter)")}}
+- {{CSSxRef("::first-line", "::first-line (:first-line)")}}
+- {{CSSxRef("::grammar-error")}} {{Experimental_Inline}}
+- {{CSSxRef("::marker")}} {{Experimental_Inline}}
+- {{CSSxRef("::part")}} {{Experimental_inline}}
+- {{CSSxRef("::placeholder")}} {{Experimental_Inline}}
+- {{CSSxRef("::selection")}}
+- {{CSSxRef("::slotted", "::slotted()")}}
+- {{CSSxRef("::spelling-error")}} {{Experimental_Inline}}
 
-<h2 id="Liste_des_pseudo-éléments">Liste des pseudo-éléments</h2>
+## Exemples
 
-<ul>
- <li>{{CSSxRef("::after", "::after (:after)")}}</li>
- <li>{{CSSxRef("::backdrop")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef("::before", "::before (:before)")}}</li>
- <li>{{CSSxRef("::cue", "::cue (:cue)")}}</li>
- <li>{{CSSxRef("::first-letter", "::first-letter (:first-letter)")}}</li>
- <li>{{CSSxRef("::first-line", "::first-line (:first-line)")}}</li>
- <li>{{CSSxRef("::grammar-error")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef("::marker")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef("::part")}} {{Experimental_inline}}</li>
- <li>{{CSSxRef("::placeholder")}} {{Experimental_Inline}}</li>
- <li>{{CSSxRef("::selection")}}</li>
- <li>{{CSSxRef("::slotted", "::slotted()")}}</li>
- <li>{{CSSxRef("::spelling-error")}} {{Experimental_Inline}}</li>
-</ul>
+### CSS
 
-<h2 id="Exemples">Exemples</h2>
-
-<h3 id="CSS">CSS</h3>
-
-<pre class="brush: css">p::first-line {
+```css
+p::first-line {
   color: blue;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
   C’était le Lapin Blanc qui revenait en trottinant,
   et qui cherchait de tous côtés, d’un air inquiet,
   comme s’il avait perdu quelque chose ; Alice
@@ -76,56 +74,55 @@ p::first-line {
   qu’il cherchait l’éventail et la paire de gants paille,
   et, comme elle avait bon cœur, elle se mit à les
   chercher aussi ; mais pas moyen de les trouver.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', 250, 200)}}</p>
+{{EmbedLiveSample('Exemples', 250, 200)}}
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th>Navigateur</th>
-   <th>Version minimale</th>
-   <th>Prise en charge de :</th>
-  </tr>
-  <tr>
-   <td rowspan="2">Internet Explorer</td>
-   <td>8.0</td>
-   <td><code>:pseudo-element</code></td>
-  </tr>
-  <tr>
-   <td>9.0</td>
-   <td><code>:pseudo-element ::pseudo-element</code></td>
-  </tr>
-  <tr>
-   <td rowspan="2">Firefox (Gecko)</td>
-   <td>1.0 (1.0)</td>
-   <td><code>:pseudo-element</code></td>
-  </tr>
-  <tr>
-   <td>1.0 (1.5)</td>
-   <td><code>:pseudo-element ::pseudo-element</code></td>
-  </tr>
-  <tr>
-   <td rowspan="2">Opera</td>
-   <td>4.0</td>
-   <td><code>:pseudo-element</code></td>
-  </tr>
-  <tr>
-   <td>7.0</td>
-   <td><code>:pseudo-element ::pseudo-element</code></td>
-  </tr>
-  <tr>
-   <td>Safari (WebKit)</td>
-   <td>1.0 (85)</td>
-   <td><code>:pseudo-element ::pseudo-element</code></td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <th>Navigateur</th>
+      <th>Version minimale</th>
+      <th>Prise en charge de :</th>
+    </tr>
+    <tr>
+      <td rowspan="2">Internet Explorer</td>
+      <td>8.0</td>
+      <td><code>:pseudo-element</code></td>
+    </tr>
+    <tr>
+      <td>9.0</td>
+      <td><code>:pseudo-element ::pseudo-element</code></td>
+    </tr>
+    <tr>
+      <td rowspan="2">Firefox (Gecko)</td>
+      <td>1.0 (1.0)</td>
+      <td><code>:pseudo-element</code></td>
+    </tr>
+    <tr>
+      <td>1.0 (1.5)</td>
+      <td><code>:pseudo-element ::pseudo-element</code></td>
+    </tr>
+    <tr>
+      <td rowspan="2">Opera</td>
+      <td>4.0</td>
+      <td><code>:pseudo-element</code></td>
+    </tr>
+    <tr>
+      <td>7.0</td>
+      <td><code>:pseudo-element ::pseudo-element</code></td>
+    </tr>
+    <tr>
+      <td>Safari (WebKit)</td>
+      <td>1.0 (85)</td>
+      <td><code>:pseudo-element ::pseudo-element</code></td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/Pseudo-classes">Les pseudo-classes</a></li>
-</ul>
+- [Les pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes)

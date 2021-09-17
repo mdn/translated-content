@@ -8,11 +8,12 @@ tags:
   - Reference
 translation_of: Web/CSS/-webkit-mask-composite
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>La propriété <strong><code>-webkit-mask-composite</code></strong> définit la façon dont plusieurs images de masque sont appliquées pour un même élément. Les images de masques sont composées dans l'ordre inverse dans lequel elles sont listées dans la propriété {{cssxref("-webkit-mask-image")}}.</p>
+La propriété **`-webkit-mask-composite`** définit la façon dont plusieurs images de masque sont appliquées pour un même élément. Les images de masques sont composées dans l'ordre inverse dans lequel elles sont listées dans la propriété {{cssxref("-webkit-mask-image")}}.
 
-<pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 -webkit-mask-composite: clear;
 -webkit-mask-composite: copy;
 -webkit-mask-composite: source-over;
@@ -29,65 +30,60 @@ translation_of: Web/CSS/-webkit-mask-composite
 -webkit-mask-composite: inherit;
 -webkit-mask-composite: initial;
 -webkit-mask-composite: unset;
-</pre>
+```
 
-<div class="note">
-<p><strong>Note :</strong> La propriété {{cssxref("mask-composite")}} couvre certains aspects de cette propriété non-standard avec des mots-clés différents.</p>
-</div>
+> **Note :** La propriété {{cssxref("mask-composite")}} couvre certains aspects de cette propriété non-standard avec des mots-clés différents.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>clear</code></dt>
- <dd>Les pixels qui se recouvrent entre l'image source et l'image de destination sont enlevés.</dd>
- <dt><code>copy</code></dt>
- <dd>Les pixels du masque source remplacent ceux du masque de destination.</dd>
- <dt><code>source-over</code></dt>
- <dd>Le contenu du masque source est appliqué sur l'image du masque de destination.</dd>
- <dt><code>source-in</code></dt>
- <dd>Les pixels qui se recouvrent sont remplacés par les pixels de l'image du masque source. Tous les autres pixels sont enlevés.</dd>
- <dt><code>source-out</code></dt>
- <dd>Les pixels qui se recouvrent sont enlevés et on prend les autres pixels de l'image de masque source.</dd>
- <dt><code>source-atop</code></dt>
- <dd>Les pixels de l'image de masque de destination sont utilisés. Les pixels de l'image de masque source sont utilisés uniquement s'ils ne recouvrent pas une portion de l'image de destination. Cela fait que l'image source n'a aucun effet.</dd>
- <dt><code>destination-over</code></dt>
- <dd>L'image de masque de destination est affichée par dessus l'image de masque source.</dd>
- <dt><code>destination-in</code></dt>
- <dd>Les pixels qui se recouvrent sont remplacés par ceux de l'image de destination. Tous les autres pixels sont enlevés.</dd>
- <dt><code>destination-out</code></dt>
- <dd>Les pixels qui se recouvrent sont enlevés et on prend les autres pixels de l'image de destination.</dd>
- <dt><code>destination-atop</code></dt>
- <dd>Les pixels de l'image source sont affichés. Les pixels de l'image de destination sont uniquement utilisés s'ils ne chevauchent pas des portions non-transparentes de l'image source. Cela fait que l'image de destination n'a aucun effet.</dd>
- <dt><code>xor</code></dt>
- <dd>Les pixels qui se chevauchent deviennent complètement transparents s'ils étaient complètement opaques.</dd>
-</dl>
+- `clear`
+  - : Les pixels qui se recouvrent entre l'image source et l'image de destination sont enlevés.
+- `copy`
+  - : Les pixels du masque source remplacent ceux du masque de destination.
+- `source-over`
+  - : Le contenu du masque source est appliqué sur l'image du masque de destination.
+- `source-in`
+  - : Les pixels qui se recouvrent sont remplacés par les pixels de l'image du masque source. Tous les autres pixels sont enlevés.
+- `source-out`
+  - : Les pixels qui se recouvrent sont enlevés et on prend les autres pixels de l'image de masque source.
+- `source-atop`
+  - : Les pixels de l'image de masque de destination sont utilisés. Les pixels de l'image de masque source sont utilisés uniquement s'ils ne recouvrent pas une portion de l'image de destination. Cela fait que l'image source n'a aucun effet.
+- `destination-over`
+  - : L'image de masque de destination est affichée par dessus l'image de masque source.
+- `destination-in`
+  - : Les pixels qui se recouvrent sont remplacés par ceux de l'image de destination. Tous les autres pixels sont enlevés.
+- `destination-out`
+  - : Les pixels qui se recouvrent sont enlevés et on prend les autres pixels de l'image de destination.
+- `destination-atop`
+  - : Les pixels de l'image source sont affichés. Les pixels de l'image de destination sont uniquement utilisés s'ils ne chevauchent pas des portions non-transparentes de l'image source. Cela fait que l'image de destination n'a aucun effet.
+- `xor`
+  - : Les pixels qui se chevauchent deviennent complètement transparents s'ils étaient complètement opaques.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: css">.exemple {
+```css
+.exemple {
   -webkit-mask-image: url(mask1.png), url('mask2.png');
   -webkit-mask-composite: xor, source-over;
 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne fait partie d'aucune spécification.</p>
+Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne fait partie d'aucune spécification.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.-webkit-mask-composite")}}</p>
+{{Compat("css.properties.-webkit-mask-composite")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("mask-composite")}}</li>
-</ul>
+- {{cssxref("mask-composite")}}

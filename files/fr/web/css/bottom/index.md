@@ -7,30 +7,29 @@ tags:
   - Reference
 translation_of: Web/CSS/bottom
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>bottom</code></strong> contribue à la définition de l'emplacement vertical des <a href="/fr/docs/Web/CSS/position">éléments positionnés</a>. Elle n'a aucun effet pour les éléments non-positionnés.</p>
+La propriété **`bottom`** contribue à la définition de l'emplacement vertical des [éléments positionnés](/fr/docs/Web/CSS/position). Elle n'a aucun effet pour les éléments non-positionnés.
 
-<div>{{EmbedInteractiveExample("pages/css/bottom.html")}}</div
+{{EmbedInteractiveExample("pages/css/bottom.html")}}Pour les **éléments positionnés de façon absolue**, c'est-à-dire ceux dont la valeur de la propriété {{cssxref("position")}} vaut `absolute` ou `fixed`, la propriété `bottom` définit la distance entre le bord bas de la marge de l'élément et le bord bas du bloc qui contient l'élément.
 
-<p>Pour les <strong>éléments positionnés de façon absolue</strong>, c'est-à-dire ceux dont la valeur de la propriété {{cssxref("position")}} vaut <code>absolute</code> ou <code>fixed</code>, la propriété <code>bottom</code> définit la distance entre le bord bas de la marge de l'élément et le bord bas du bloc qui contient l'élément.</p>
+Pour les **éléments positionnés de façon relative**, c'est-à-dire ceux dont la valeur de propriété {{cssxref("position")}} est `relative`, la propriété `bottom` définit la distance dont le bord bas de l'élément est déplacé au-dessus de sa position normale.
 
-<p>Pour les <strong>éléments positionnés de façon relative</strong>, c'est-à-dire ceux dont la valeur de propriété {{cssxref("position")}} est <code>relative</code>, la propriété <code>bottom</code> définit la distance dont le bord bas de l'élément est déplacé au-dessus de sa position normale.</p>
+Pour les éléments adhérents, c'est-à-dire ceux dont la valeur de la propriété {{cssxref("position")}} est `sticky`
 
-<p>Pour les éléments adhérents, c'est-à-dire ceux dont la valeur de la propriété {{cssxref("position")}} est <code>sticky</code></p>
+Lorsque les propriétés {{cssxref("top")}} et `bottom` sont définies et que {{cssxref("height")}} n'est pas définie ou vaut `auto` ou `100%`, les distances indiquées par {{cssxref("top")}} et `bottom` sont respectées. Dans les autres cas, si {{cssxref("height")}} est contrainte, la propriété {{cssxref("top")}} prendra le pas sur la propriété `bottom` qui sera alors ignorée.
 
-<p>Lorsque les propriétés {{cssxref("top")}} et <code>bottom</code> sont définies et que {{cssxref("height")}} n'est pas définie ou vaut <code>auto</code> ou <code>100%</code>, les distances indiquées par {{cssxref("top")}} et <code>bottom</code> sont respectées. Dans les autres cas, si {{cssxref("height")}} est contrainte, la propriété {{cssxref("top")}} prendra le pas sur la propriété <code>bottom</code> qui sera alors ignorée.</p>
+## Syntaxe
 
-<h2 id="Syntaxe">Syntaxe</h2>
-
-<pre class="brush:css no-line-numbers">/* Valeurs de longueur */
-/* Type &lt;length&gt;       */
+```css
+/* Valeurs de longueur */
+/* Type <length>       */
 bottom: 3px;
 bottom: 2.4em;
 
 /* Valeurs proportionnelles à la hauteur */
 /* du bloc englobant                     */
-/* Type &lt;percentages&gt;                    */
+/* Type <percentages>                    */
 bottom: 10%;
 
 /* Valeurs avec un mot-clé */
@@ -40,42 +39,41 @@ bottom: auto;
 bottom: inherit;
 bottom: initial;
 bottom: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Une longueur (type {{cssxref("&lt;length&gt;")}} qui représente :
- <ul>
-  <li>La distance depuis le bord bas du bloc englobant pour les éléments positionnés de façon absolue</li>
-  <li>Le décalage avec lequel l'élément est déplacé au-dessus de sa position normale dans le flux pour pour les éléments positionnés de façon relative.</li>
- </ul>
- </dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>Une valeur de pourcentage (type {{cssxref("&lt;percentage&gt;")}} exprimée par rapport à la hauteur du bloc englobant.</dd>
- <dt><code>auto</code></dt>
- <dd> Indique pour :
- <ul>
-  <li>Les éléments positionnés de façon absolue : la position de l'élément se base sur la propriété {{cssxref("top")}} et <code>height: auto</code> est traitée comme une hauteur basée sur la taille du contenu</li>
-  <li>Les éléments positionnés de façon relative : le décalage avec lequel l'élément est déplacé est construit à partir de la propriété {{cssxref("top")}} et si celle-ci vaut également <code>auto</code>, l'élément n'est pas déplacé verticalement.</li>
- </ul>
- </dd>
- <dt><code>inherit</code></dt>
- <dd>Cette valeur indique que la valeur est la même que la valeur calculée pour l'élément parent (qui peut ne pas être le bloc englobant). Cette valeur calculée est gérée comme si elle était une longueur, un pourcentage ou le mot-clé <code>auto</code>.</dd>
-</dl>
+- `<length>`
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+  - : Une longueur (type {{cssxref("&lt;length&gt;")}} qui représente :
+
+    - La distance depuis le bord bas du bloc englobant pour les éléments positionnés de façon absolue
+    - Le décalage avec lequel l'élément est déplacé au-dessus de sa position normale dans le flux pour pour les éléments positionnés de façon relative.
+
+- `<percentage>`
+  - : Une valeur de pourcentage (type {{cssxref("&lt;percentage&gt;")}} exprimée par rapport à la hauteur du bloc englobant.
+- `auto`
+
+  - : Indique pour :
+
+    - Les éléments positionnés de façon absolue : la position de l'élément se base sur la propriété {{cssxref("top")}} et `height: auto` est traitée comme une hauteur basée sur la taille du contenu
+    - Les éléments positionnés de façon relative : le décalage avec lequel l'élément est déplacé est construit à partir de la propriété {{cssxref("top")}} et si celle-ci vaut également `auto`, l'élément n'est pas déplacé verticalement.
+
+- `inherit`
+  - : Cette valeur indique que la valeur est la même que la valeur calculée pour l'élément parent (qui peut ne pas être le bloc englobant). Cette valeur calculée est gérée comme si elle était une longueur, un pourcentage ou le mot-clé `auto`.
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans l'exemple qui suit, on illustre la différence de comportement de la propriété <code>bottom</code> lorsque {{cssxref("position")}} vaut <code>absolute</code> ou lorsqu'elle vaut <code>fixed</code>. When the regular text becomes taller than the viewable portion of the page (that is, the browser window's viewport), blocks positioned with <code>position:absolute</code> scroll with the page, while blocks positioned with <code>position:fixed</code> don't.</p>
+Dans l'exemple qui suit, on illustre la différence de comportement de la propriété `bottom` lorsque {{cssxref("position")}} vaut `absolute` ou lorsqu'elle vaut `fixed`. When the regular text becomes taller than the viewable portion of the page (that is, the browser window's viewport), blocks positioned with `position:absolute` scroll with the page, while blocks positioned with `position:fixed` don't.
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   font-size:30px;
   line-height:3em;
 }
@@ -96,67 +94,47 @@ div#fix {
   position:fixed;
   bottom:0;
   right:0;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;
-  Voici &lt;br&gt;un&lt;br&gt;grand&lt;br&gt;grand,&lt;br&gt;grand,
-  &lt;br&gt;grand,&lt;br&gt;grand,&lt;br&gt;grand&lt;br&gt;contenu.
-&lt;/p&gt;
+```html
+<p>
+  Voici <br>un<br>grand<br>grand,<br>grand,
+  <br>grand,<br>grand,<br>grand<br>contenu.
+</p>
 
-&lt;div id="fix" class="pos"&gt;
-  &lt;p&gt;Fixe&lt;/p&gt;
-&lt;/div&gt;
+<div id="fix" class="pos">
+  <p>Fixe</p>
+</div>
 
-&lt;div id="abs" class="pos"&gt;
-  &lt;p&gt;Absolu&lt;/p&gt;
-&lt;/div&gt;</pre>
+<div id="abs" class="pos">
+  <p>Absolu</p>
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples","300","300")}}</p>
+{{EmbedLiveSample("Exemples","300","300")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visuren.html#choose-position', 'bottom')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#animatable-css', 'bottom')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td><code>bottom</code> peut désormais être animée.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Positioning', '#propdef-bottom', 'bottom')}}</td>
-   <td>{{Spec2('CSS3 Positioning')}}</td>
-   <td>Décrit le comportement pour le positionnement adhérent (<em>sticky</em>).</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                                     | Commentaires                                                       |
+| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------ |
+| {{SpecName('CSS2.1', 'visuren.html#choose-position', 'bottom')}} | {{Spec2('CSS2.1')}}                 | Définition initiale.                                               |
+| {{SpecName('CSS3 Transitions', '#animatable-css', 'bottom')}}     | {{Spec2('CSS3 Transitions')}} | `bottom` peut désormais être animée.                               |
+| {{SpecName('CSS3 Positioning', '#propdef-bottom', 'bottom')}}     | {{Spec2('CSS3 Positioning')}} | Décrit le comportement pour le positionnement adhérent (_sticky_). |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.bottom")}}</p>
+{{Compat("css.properties.bottom")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("position")}},</li>
- <li>{{cssxref("top")}},</li>
- <li>{{cssxref("left")}},</li>
- <li>{{cssxref("right")}}</li>
-</ul>
+- {{cssxref("position")}},
+- {{cssxref("top")}},
+- {{cssxref("left")}},
+- {{cssxref("right")}}

@@ -7,22 +7,23 @@ tags:
   - Reference
 translation_of: Web/CSS/flex-direction
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>flex-direction</code></strong> définit la façon dont les éléments flexibles sont placés dans un conteneur flexible : elle définit l'axe principal et la direction des éléments (normale ou inversée).</p>
+La propriété **`flex-direction`** définit la façon dont les éléments flexibles sont placés dans un conteneur flexible : elle définit l'axe principal et la direction des éléments (normale ou inversée).
 
-<div>{{EmbedInteractiveExample("pages/css/flex-direction.html")}}</div>
+{{EmbedInteractiveExample("pages/css/flex-direction.html")}}
 
-<p>On notera que les valeurs <code>row</code> et <code>row-reverse</code> sont impactées par la direction du conteneur. Si {{htmlattrxref("dir")}} vaut <code>ltr</code>, <code>row</code> représente l'axe horizontal allant de la gauche vers la droite et <code>row-reverse</code> représente le même axe allant de la droite vers la gauche. Si <code>dir</code> vaut <code>rtl</code>, <code>row</code> correspondra à l'axe horizontal orienté de la droite vers la gauche et <code>row-reverse</code> de la gauche vers la droite.</p>
+On notera que les valeurs `row` et `row-reverse` sont impactées par la direction du conteneur. Si {{htmlattrxref("dir")}} vaut `ltr`, `row` représente l'axe horizontal allant de la gauche vers la droite et `row-reverse` représente le même axe allant de la droite vers la gauche. Si `dir` vaut `rtl`, `row` correspondra à l'axe horizontal orienté de la droite vers la gauche et `row-reverse` de la gauche vers la droite.
 
-<p>Pour plus d'informations, voir la page <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Utilisation_des_flexbox_en_CSS">Utiliser les boîtes flexibles (<em>flexbox</em>) CSS</a>.</p>
+Pour plus d'informations, voir la page [Utiliser les boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Utilisation_des_flexbox_en_CSS).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* La direction suit une ligne */
+```css
+/* La direction suit une ligne */
 flex-direction: row;
 
-/* Semblable à &lt;row&gt; mais dans */
+/* Semblable à <row> mais dans */
 /* la direction opposée        */
 flex-direction: row-reverse;
 
@@ -30,7 +31,7 @@ flex-direction: row-reverse;
 /* empilées                 */
 flex-direction: column;
 
-/* Semblable à &lt;column&gt; mais dans */
+/* Semblable à <column> mais dans */
 /* la direction opposée           */
 flex-direction: column-reverse;
 
@@ -38,46 +39,46 @@ flex-direction: column-reverse;
 flex-direction: inherit;
 flex-direction: initial;
 flex-direction: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>row</code></dt>
- <dd>L'axe principal du conteneur flexible suit la direction du texte. Les points <strong>main-start</strong> et <strong>main-end</strong> vont dans la même direction que le contenu.</dd>
- <dt><code>row-reverse</code></dt>
- <dd>L'axe principal du conteneur flexible suit la direction du texte. Les points <strong>main-start</strong> et <strong>main-end</strong> vont dans la direction opposée au contenu.</dd>
- <dt><code>column</code></dt>
- <dd>L'axe principal du conteneur flexible suit l'axe de bloc (perpendiculaire à la direction du texte). Les points <strong>main-start</strong> et <strong>main-end</strong> correspondent aux points <strong>before</strong> et <strong>after</strong> de {{cssxref("writing-mode")}}.</dd>
- <dt><code>column-reverse</code></dt>
- <dd>Se comporte comme <code>column</code> mais <strong>main-start</strong> et <strong>main-end</strong> sont échangés.</dd>
-</dl>
+- `row`
+  - : L'axe principal du conteneur flexible suit la direction du texte. Les points **main-start** et **main-end** vont dans la même direction que le contenu.
+- `row-reverse`
+  - : L'axe principal du conteneur flexible suit la direction du texte. Les points **main-start** et **main-end** vont dans la direction opposée au contenu.
+- `column`
+  - : L'axe principal du conteneur flexible suit l'axe de bloc (perpendiculaire à la direction du texte). Les points **main-start** et **main-end** correspondent aux points **before** et **after** de {{cssxref("writing-mode")}}.
+- `column-reverse`
+  - : Se comporte comme `column` mais **main-start** et **main-end** sont échangés.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;h4&gt;Un exemple avec column-reverse&lt;/h4&gt;
-&lt;div id="content"&gt;
-    &lt;div class="box" style="background-color:red;"&gt;A&lt;/div&gt;
-    &lt;div class="box" style="background-color:lightblue;"&gt;B&lt;/div&gt;
-    &lt;div class="box" style="background-color:yellow;"&gt;C&lt;/div&gt;
-&lt;/div&gt;
-&lt;h4&gt;Un exemple avec row-reverse&lt;/h4&gt;
-&lt;div id="content1"&gt;
-    &lt;div class="box" style="background-color:red;"&gt;A&lt;/div&gt;
-    &lt;div class="box" style="background-color:lightblue;"&gt;B&lt;/div&gt;
-    &lt;div class="box" style="background-color:yellow;"&gt;C&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<h4>Un exemple avec column-reverse</h4>
+<div id="content">
+    <div class="box" style="background-color:red;">A</div>
+    <div class="box" style="background-color:lightblue;">B</div>
+    <div class="box" style="background-color:yellow;">C</div>
+</div>
+<h4>Un exemple avec row-reverse</h4>
+<div id="content1">
+    <div class="box" style="background-color:red;">A</div>
+    <div class="box" style="background-color:lightblue;">B</div>
+    <div class="box" style="background-color:yellow;">C</div>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#content {
+```css
+#content {
   width: 200px;
   height: 200px;
   border: 1px solid #c3c3c3;
@@ -96,51 +97,35 @@ flex-direction: unset;
 .box {
   width: 50px;
   height: 50px;
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', '', '300')}}</p>
+{{EmbedLiveSample('Exemples', '', '300')}}
 
-<h2 id="Accessibilité">Accessibilité</h2>
+## Accessibilité
 
-<p>Lorsqu'on utilise <code>flex-direction</code> avec les valeurs <code>row-reverse</code> ou <code>column-reverse</code>, on crée une déconnexion entre la présentation visuelle du contenu et l'ordre du DOM. Cela aura un impact négatif pour les utilisateurs qui naviguent à l'aide d'outils d'assistance tels que les les lecteurs d'écran. Si l'ordre visuel est important, les utilisateurs de lecteurs d'écran n'auront pas accès à l'ordre correct pour la lecture.</p>
+Lorsqu'on utilise `flex-direction` avec les valeurs `row-reverse` ou `column-reverse`, on crée une déconnexion entre la présentation visuelle du contenu et l'ordre du DOM. Cela aura un impact négatif pour les utilisateurs qui naviguent à l'aide d'outils d'assistance tels que les les lecteurs d'écran. Si l'ordre visuel est important, les utilisateurs de lecteurs d'écran n'auront pas accès à l'ordre correct pour la lecture.
 
-<ul>
- <li><a href="https://tink.uk/flexbox-the-keyboard-navigation-disconnect/">Les boîtes flexibles et la déconnexion par rapport à la navigation au clavier, Tink (en anglais)</a></li>
- <li><a href="http://adrianroselli.com/2015/09/source-order-matters.html">L'importance de l'ordre de la source, Adrian Roselli (en anglais)</a></li>
- <li><a href="/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways">Comprendre les règles 1.3 du WCAG</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html">Comprendre les critères de réussite 1.3.2 WCAG 2.0, W3C (en anglais)</a></li>
-</ul>
+- [Les boîtes flexibles et la déconnexion par rapport à la navigation au clavier, Tink (en anglais)](https://tink.uk/flexbox-the-keyboard-navigation-disconnect/)
+- [L'importance de l'ordre de la source, Adrian Roselli (en anglais)](http://adrianroselli.com/2015/09/source-order-matters.html)
+- [Comprendre les règles 1.3 du WCAG](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
+- [Comprendre les critères de réussite 1.3.2 WCAG 2.0, W3C (en anglais)](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html)
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Spécification</th>
-   <th>État</th>
-   <th>Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Flexbox', '#flex-direction', 'flex-direction')}}</td>
-   <td>{{Spec2('CSS3 Flexbox')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                             | Commentaires         |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('CSS3 Flexbox', '#flex-direction', 'flex-direction')}} | {{Spec2('CSS3 Flexbox')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.flex-direction")}}</p>
+{{Compat("css.properties.flex-direction")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Guide CSS sur les boîtes flexibles : <em><a href="/fr/docs/Web/CSS/Disposition_flexbox_CSS/Concepts_de_base_flexbox">Concepts de base</a></em></li>
- <li>Guide CSS sur les boîtes flexibles : <em><a href="/fr/docs/Web/CSS/Disposition_flexbox_CSS/Ordering_Flex_Items">Ordonner les éléments flexibles</a></em></li>
-</ul>
+- Guide CSS sur les boîtes flexibles : _[Concepts de base](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Concepts_de_base_flexbox)_
+- Guide CSS sur les boîtes flexibles : _[Ordonner les éléments flexibles](/fr/docs/Web/CSS/Disposition_flexbox_CSS/Ordering_Flex_Items)_

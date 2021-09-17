@@ -1,54 +1,58 @@
 ---
 title: '::slotted()'
-slug: 'Web/CSS/::slotted'
+slug: Web/CSS/::slotted
 tags:
   - CSS
   - Pseudo-element
   - Reference
   - Web
-translation_of: 'Web/CSS/::slotted'
+translation_of: Web/CSS/::slotted
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Le <a href="/fr/docs/Web/CSS/Pseudo-éléments">pseudo-élément</a> CSS <strong><code>::slotted()</code></strong> représente n'importe quel élément ayant été placé à l'intérieur d'un emplacement (<em>slot</em>) au sein d'un gabarit (<em>template</em>) HTML (cf. <a href="/fr/docs/Web/Web_Components/Using_templates_and_slots">Utiliser les gabarits et les emplacements</a> pour plus d'informations).</p>
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-éléments) CSS **`::slotted()`** représente n'importe quel élément ayant été placé à l'intérieur d'un emplacement (_slot_) au sein d'un gabarit (_template_) HTML (cf. [Utiliser les gabarits et les emplacements](/fr/docs/Web/Web_Components/Using_templates_and_slots) pour plus d'informations).
 
-<p>Cela ne fonctionne que pour du CSS placé à l'intérieur d'un élément {{htmlelement("template")}} et/ou dans le <em><a href="/fr/docs/Web/Web_Components/Using_shadow_DOM">shadow DOM</a></em>. On notera également que ce sélecteur ne sélectionnera pas les noeuds texte placés dans les emplacements, il ne cible que les éléments.</p>
+Cela ne fonctionne que pour du CSS placé à l'intérieur d'un élément {{htmlelement("template")}} et/ou dans le _[shadow DOM](/fr/docs/Web/Web_Components/Using_shadow_DOM)_. On notera également que ce sélecteur ne sélectionnera pas les noeuds texte placés dans les emplacements, il ne cible que les éléments.
 
-<pre class="brush: css no-line-numbers">/* Cible n'importe quel élément placé dans un emplacement */
+```css
+/* Cible n'importe quel élément placé dans un emplacement */
 ::slotted(*) {
   font-weight: bold;
 }
 
-/* Cible n'importe quel élément &lt;span&gt; placé dans un emplacement */
+/* Cible n'importe quel élément <span> placé dans un emplacement */
 ::slotted(span) {
   font-weight: bold;
 }
-</pre>
+```
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Les fragments de code suivants sont tirés du dépôt <code><a href="https://github.com/mdn/web-components-examples/tree/master/slotted-pseudo-element">slotted-pseudo-element</a></code> (<a href="https://mdn.github.io/web-components-examples/slotted-pseudo-element/">voir le résultat en <em>live</em></a>).</p>
+Les fragments de code suivants sont tirés du dépôt [`slotted-pseudo-element`](https://github.com/mdn/web-components-examples/tree/master/slotted-pseudo-element) ([voir le résultat en _live_](https://mdn.github.io/web-components-examples/slotted-pseudo-element/)).
 
-<p>Dans cette démonstration, on utilise un gabarit avec trois emplacements :</p>
+Dans cette démonstration, on utilise un gabarit avec trois emplacements :
 
-<pre class="brush: html">&lt;template id="person-template"&gt;
-  &lt;div&gt;
-    &lt;h2&gt;Carte d'identité d'une personne&lt;/h2&gt;
-    &lt;slot name="person-name"&gt;NOM ABSENT&lt;/slot&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;slot name="person-age"&gt;AGE ABSENT&lt;/slot&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;slot name="person-occupation"&gt;POSTE ABSENT&lt;/slot&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/div&gt;
-&lt;/template&gt;</pre>
+```html
+<template id="person-template">
+  <div>
+    <h2>Carte d'identité d'une personne</h2>
+    <slot name="person-name">NOM ABSENT</slot>
+    <ul>
+      <li><slot name="person-age">AGE ABSENT</slot></li>
+      <li><slot name="person-occupation">POSTE ABSENT</slot></li>
+    </ul>
+  </div>
+</template>
+```
 
-<p>Un élément personnalisé — <code>&lt;person-details&gt;</code> — est défini de la façon suivante :</p>
+Un élément personnalisé — `<person-details>` — est défini de la façon suivante :
 
-<pre class="brush: js">customElements.define('person-details',
+```js
+customElements.define('person-details',
   class extends HTMLElement {
     constructor() {
       super();
@@ -67,43 +71,31 @@ translation_of: 'Web/CSS/::slotted'
       shadowRoot.appendChild(style);
       shadowRoot.appendChild(templateContent.cloneNode(true));
   }
-})</pre>
+})
+```
 
-<p>On voit ici que, lorsqu'on renseigne le <code>style</code> de l'élément, on sélectionne tous les éléments présents dans les emplacements (<code>::slotted(*)</code>) afin de leur fournir différentes polices et couleurs. Cela permet d'avoir une meilleur vision des emplacements qui ne sont pas encore occupés.</p>
+On voit ici que, lorsqu'on renseigne le `style` de l'élément, on sélectionne tous les éléments présents dans les emplacements (`::slotted(*)`) afin de leur fournir différentes polices et couleurs. Cela permet d'avoir une meilleur vision des emplacements qui ne sont pas encore occupés.
 
-<p>Voici ce à quoi ressemblera l'élément lorsqu'il sera inséré dans la page :</p>
+Voici ce à quoi ressemblera l'élément lorsqu'il sera inséré dans la page :
 
-<pre class="brush: html">&lt;person-details&gt;
-  &lt;p slot="person-name"&gt;Dr. Shazaam&lt;/p&gt;
-  &lt;span slot="person-age"&gt;Immortel&lt;/span&gt;
-  &lt;span slot="person-occupation"&gt;Super-héros&lt;/span&gt;
-&lt;/person-details&gt;</pre>
+```html
+<person-details>
+  <p slot="person-name">Dr. Shazaam</p>
+  <span slot="person-age">Immortel</span>
+  <span slot="person-occupation">Super-héros</span>
+</person-details>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Scope', '#slotted-pseudo', '::slotted')}}</td>
-   <td>{{Spec2('CSS Scope')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | État                         | Commentaires         |
+| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('CSS Scope', '#slotted-pseudo', '::slotted')}} | {{Spec2('CSS Scope')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.slotted")}}</p>
+{{Compat("css.selectors.slotted")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/Web_Components">Les composants web</a></li>
-</ul>
+- [Les composants web](/fr/docs/Web/Web_Components)

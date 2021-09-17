@@ -8,32 +8,30 @@ tags:
   - Reference
 translation_of: Web/CSS/filter-function/contrast()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La fonction CSS <code><strong>contrast()</strong></code> permet d'ajuster le contraste d'une image. Le résultat de cette fonction est une valeur de type {{cssxref("&lt;filter-function&gt;")}}.</p>
+La fonction CSS **`contrast()`** permet d'ajuster le contraste d'une image. Le résultat de cette fonction est une valeur de type {{cssxref("&lt;filter-function&gt;")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/function-contrast.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-contrast.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">contrast(<em>multiplicateur</em>)</pre>
+    contrast(multiplicateur)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>multiplicateur</code></dt>
- <dd>La modification de contraste à appliquer à l'image, exprimée sous la forme d'un nombre ({{cssxref("&lt;number&gt;")}}) ou d'un pourcentage ({{cssxref("&lt;percentage&gt;")}}). Une valeur inférieure à <code>100%</code> réduira le contraste et une valeur supérieure à <code>100%</code> accentuera le contraste. Une valeur de <code>0%</code> permettra d'obtenir une image complètement grise et une valeur de <code>100%</code> laissera l'image inchangée. La valeur par défaut utilisée pour les interpolations est <code>1</code>.</dd>
-</dl>
+- `multiplicateur`
+  - : La modification de contraste à appliquer à l'image, exprimée sous la forme d'un nombre ({{cssxref("&lt;number&gt;")}}) ou d'un pourcentage ({{cssxref("&lt;percentage&gt;")}}). Une valeur inférieure à `100%` réduira le contraste et une valeur supérieure à `100%` accentuera le contraste. Une valeur de `0%` permettra d'obtenir une image complètement grise et une valeur de `100%` laissera l'image inchangée. La valeur par défaut utilisée pour les interpolations est `1`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: css">contrast(0);     /* Completely gray */
+```css
+contrast(0);     /* Completely gray */
 contrast(65%);   /* 65% contrast */
 contrast(1);     /* No effect */
-contrast(200%);  /* Double contrast */</pre>
+contrast(200%);  /* Double contrast */
+```
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("&lt;filter-function&gt;")}}</li>
-</ul>
+- {{cssxref("&lt;filter-function&gt;")}}

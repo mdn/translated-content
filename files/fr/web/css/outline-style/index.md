@@ -7,17 +7,18 @@ tags:
   - Reference
 translation_of: Web/CSS/outline-style
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>outline-style</code></strong> permet de définir la mise en forme utilisée pour dessiner la bordure d'un élément. Cette bordure est dessinée autour de <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">la boîte de bordure</a> et peut être utilisée afin de faire ressortir l'élément.</p>
+La propriété **`outline-style`** permet de définir la mise en forme utilisée pour dessiner la bordure d'un élément. Cette bordure est dessinée autour de [la boîte de bordure](/en-US/docs/Learn/CSS/Building_blocks/The_box_model) et peut être utilisée afin de faire ressortir l'élément.
 
-<div>{{EmbedInteractiveExample("pages/css/outline-style.html")}}</div>
+{{EmbedInteractiveExample("pages/css/outline-style.html")}}
 
-<p>Cette propriété est synthétisée grâce à la propriété {{cssxref("outline")}} qui regroupe outline-style, {{cssxref("outline-width")}} et {{cssxref("outline-color")}}.</p>
+Cette propriété est synthétisée grâce à la propriété {{cssxref("outline")}} qui regroupe outline-style, {{cssxref("outline-width")}} et {{cssxref("outline-color")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 outline-style: auto;
 outline-style: none;
 outline-style: dotted;
@@ -33,44 +34,43 @@ outline-style: outset;
 outline-style: inherit;
 outline-style: initial;
 outline-style: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>L'agent utilisateur peut afficher une bordure avec une mise en forme par défaut.</dd>
- <dt><code>none</code></dt>
- <dd>Aucune bordure n'est dessinée (équivalent à {{cssxref("outline-width")}} avec la valeur <code>0</code>).</dd>
- <dt><code>dotted</code></dt>
- <dd>Le bordure est dessinée avec une série de points.</dd>
- <dt><code>dashed</code></dt>
- <dd>La bordure est dessinée avec des tirets.</dd>
- <dt><code>solid</code></dt>
- <dd>La bordure est dessinée avec une ligne continue.</dd>
- <dt><code>double</code></dt>
- <dd>La bordure est dessinée avec deux lignes continues. La valeur de la propriété {{cssxref("outline-width")}} désigne la somme de la largeur des deux lignes et de l'espace entre elles.</dd>
- <dt><code>groove</code></dt>
- <dd>La bordure est dessinée comme si elle était gravée dans le document.</dd>
- <dt><code>ridge</code></dt>
- <dd>La forme obtenue est opposée à <code>groove</code> : la bordure semble dépasser du document.</dd>
- <dt><code>inset</code></dt>
- <dd>La bordure semble être intégrée dans le document..</dd>
- <dt><code>outset</code></dt>
- <dd>La forme obtenue est opposée à <code>inset</code> : la bordure semble ressortir du document.</dd>
-</dl>
+- `auto`
+  - : L'agent utilisateur peut afficher une bordure avec une mise en forme par défaut.
+- `none`
+  - : Aucune bordure n'est dessinée (équivalent à {{cssxref("outline-width")}} avec la valeur `0`).
+- `dotted`
+  - : Le bordure est dessinée avec une série de points.
+- `dashed`
+  - : La bordure est dessinée avec des tirets.
+- `solid`
+  - : La bordure est dessinée avec une ligne continue.
+- `double`
+  - : La bordure est dessinée avec deux lignes continues. La valeur de la propriété {{cssxref("outline-width")}} désigne la somme de la largeur des deux lignes et de l'espace entre elles.
+- `groove`
+  - : La bordure est dessinée comme si elle était gravée dans le document.
+- `ridge`
+  - : La forme obtenue est opposée à `groove` : la bordure semble dépasser du document.
+- `inset`
+  - : La bordure semble être intégrée dans le document..
+- `outset`
+  - : La forme obtenue est opposée à `inset` : la bordure semble ressortir du document.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Exemple_simple">Exemple simple</h3>
+### Exemple simple
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.exemple-groove {
+```css
+.exemple-groove {
   outline-style: groove;
   outline-color: red;
   outline-width: 2px;
@@ -80,67 +80,56 @@ outline-style: unset;
   outline-style: outset;
   outline-color: green;
   outline-width: 1px;
-}</pre>
+}
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p class="exemple-groove"&gt;Ça c'est le groove&lt;/p&gt;
-&lt;p class="exemple-outset"&gt;Et ça c'est outset&lt;/p&gt;
-</pre>
+```html
+<p class="exemple-groove">Ça c'est le groove</p>
+<p class="exemple-outset">Et ça c'est outset</p>
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Exemple_simple","100%","100%")}}</p>
+{{EmbedLiveSample("Exemple_simple","100%","100%")}}
 
-<h3 id="utilisation_de_la_valeur_auto">Utilisation de la valeur auto</h3>
+### Utilisation de la valeur auto
 
-<p>La valeur <code>auto</code> indique une bordure sur mesure selon l'interface du système d'exploitation ou de l'agent utilisateur.</p>
+La valeur `auto` indique une bordure sur mesure selon l'interface du système d'exploitation ou de l'agent utilisateur.
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.auto {
+```css
+.auto {
   outline-style: auto; /* same result as "outline: auto" */
 }
 
 /* To make the Demo clearer */
-* { outline-width: 10px; padding: 15px; } </pre>
+* { outline-width: 10px; padding: 15px; }
+```
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="auto"&gt;Outline Demo&lt;/p&gt;
-&lt;/div&gt; </pre>
+```html
+<div>
+  <p class="auto">Outline Demo</p>
+</div>
+```
 
-<h4 id="Résulat">Résulat</h4>
+#### Résulat
 
-<p>{{EmbedLiveSample('Example_0_-_auto')}}</p>
+{{EmbedLiveSample('Example_0_-_auto')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Basic UI', '#outline-style', 'outline-style')}}</td>
-   <td>{{Spec2('CSS3 Basic UI')}}</td>
-   <td>La valeur <code>auto</code> a été ajoutée.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'ui.html#propdef-outline-style', 'outline-style')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | État                                 | Commentaires                    |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------- |
+| {{SpecName('CSS3 Basic UI', '#outline-style', 'outline-style')}}             | {{Spec2('CSS3 Basic UI')}} | La valeur `auto` a été ajoutée. |
+| {{SpecName('CSS2.1', 'ui.html#propdef-outline-style', 'outline-style')}} | {{Spec2('CSS2.1')}}             | Définition initiale.            |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.outline-style")}}</p>
+{{Compat("css.properties.outline-style")}}

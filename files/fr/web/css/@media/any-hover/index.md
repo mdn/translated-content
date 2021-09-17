@@ -7,64 +7,51 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/any-hover
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>any-hover</code></strong> est une caractéristique média CSS qui permet de vérifier si un mécanisme de saisie/d'entrée permet à l'utilisateur de survoler les éléments.</p>
+**`any-hover`** est une caractéristique média CSS qui permet de vérifier si un mécanisme de saisie/d'entrée permet à l'utilisateur de survoler les éléments.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>La caractéristique <code>any-hover</code> est définie avec un mot-clé parmi ceux de la liste ci-après.</p>
+La caractéristique `any-hover` est définie avec un mot-clé parmi ceux de la liste ci-après.
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Parmi les mécanismes de saisi, aucun ne permet de survoler les éléments (ou il n'existe aucun dispositif de pointage).</dd>
- <dt><code>hover</code></dt>
- <dd>Un ou plusieurs mécanismes de saisie permettent de survoler le contenu simplement.</dd>
-</dl>
+- `none`
+  - : Parmi les mécanismes de saisi, aucun ne permet de survoler les éléments (ou il n'existe aucun dispositif de pointage).
+- `hover`
+  - : Un ou plusieurs mécanismes de saisie permettent de survoler le contenu simplement.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;a href="#"&gt;Essayez de me survoler !&lt;/a&gt;</pre>
+```html
+<a href="#">Essayez de me survoler !</a>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">@media (any-hover: hover) {
+```css
+@media (any-hover: hover) {
   a:hover {
     background: yellow;
   }
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Media Queries', '#descdef-media-any-hover', 'any-hover')}}</td>
-   <td>{{Spec2('CSS4 Media Queries')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | État                                     | Commentaires         |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName('CSS4 Media Queries', '#descdef-media-any-hover', 'any-hover')}} | {{Spec2('CSS4 Media Queries')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.at-rules.media.any-hover")}}</p>
+{{Compat("css.at-rules.media.any-hover")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/@media/hover">La caractéristique média <code>hover</code></a></li>
-</ul>
+- [La caractéristique média `hover`](/fr/docs/Web/CSS/@media/hover)

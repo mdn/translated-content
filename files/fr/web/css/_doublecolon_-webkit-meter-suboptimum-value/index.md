@@ -1,54 +1,54 @@
 ---
 title: '::-webkit-meter-suboptimum-value'
-slug: 'Web/CSS/::-webkit-meter-suboptimum-value'
+slug: Web/CSS/::-webkit-meter-suboptimum-value
 tags:
   - CSS
   - Non-standard
   - Pseudo-element
   - Reference
-translation_of: 'Web/CSS/::-webkit-meter-suboptimum-value'
+translation_of: Web/CSS/::-webkit-meter-suboptimum-value
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>Le pseudo-élément <strong><code>::-webkit-meter-suboptimum-value</code></strong> donne une couleur jaune à l'élément {{HTMLElement("meter")}} lorsque la valeur de l'attribut est en dehors de l'intervalle haut des valeurs.</p>
+Le pseudo-élément **`::-webkit-meter-suboptimum-value`** donne une couleur jaune à l'élément {{HTMLElement("meter")}} lorsque la valeur de l'attribut est en dehors de l'intervalle haut des valeurs.
 
-<h2 id="Exemples"><strong>Exemples</strong></h2>
+## **Exemples**
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">meter::-webkit-meter-suboptimum-value {
+```css
+meter::-webkit-meter-suboptimum-value {
   background: -webkit-gradient linear, left top, left bottom;
   height: 100%;
   box-sizing: border-box;
-}</pre>
+}
+```
 
-<h3 id="HTML"><strong>HTML</strong></h3>
+### **HTML**
 
-<pre class="brush: html">&lt;meter min="0" max="10" value="6"&gt;Score sur 10&lt;/meter&gt;</pre>
+```html
+<meter min="0" max="10" value="6">Score sur 10</meter>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Examples', '100%', 50)}}</p>
+{{EmbedLiveSample('Examples', '100%', 50)}}
 
-<div class="note">
-<p><strong>Note :</strong> Cette fonctionnalité ne sera visible que depuis un navigateur WebKit/Blink.</p>
-</div>
+> **Note :** Cette fonctionnalité ne sera visible que depuis un navigateur WebKit/Blink.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink et ne fait partie d'aucune spécification.</p>
+Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink et ne fait partie d'aucune spécification.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.-webkit-meter-suboptimum-value")}}</p>
+{{Compat("css.selectors.-webkit-meter-suboptimum-value")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<p>Les pseudo-éléments utilisés par WebKit/Blink pour mettre en forme les autres parties d'un élément {{htmlelement("meter")}} :</p>
+Les pseudo-éléments utilisés par WebKit/Blink pour mettre en forme les autres parties d'un élément {{htmlelement("meter")}} :
 
-<ul>
- <li>{{cssxref("::-webkit-meter-inner-element")}}</li>
- <li>{{cssxref("::-webkit-meter-bar")}}</li>
- <li>{{cssxref("::-webkit-meter-even-less-good-value")}}</li>
- <li>{{cssxref("::-webkit-meter-optimum-value")}}</li>
-</ul>
+- {{cssxref("::-webkit-meter-inner-element")}}
+- {{cssxref("::-webkit-meter-bar")}}
+- {{cssxref("::-webkit-meter-even-less-good-value")}}
+- {{cssxref("::-webkit-meter-optimum-value")}}

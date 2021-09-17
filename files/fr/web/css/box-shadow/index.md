@@ -7,19 +7,18 @@ tags:
   - Reference
 translation_of: Web/CSS/box-shadow
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété CSS <strong><code>box-shadow</code></strong> ajoute des ombres à la boîte d'un élément via une liste d'ombres séparées par des virgules. Une boîte d'ombre est définie avec des décalages horizontal et vertical par rapport à l'élément, avec des rayons de flou et d'étalement et avec une couleur.</p>
+La propriété CSS **`box-shadow`** ajoute des ombres à la boîte d'un élément via une liste d'ombres séparées par des virgules. Une boîte d'ombre est définie avec des décalages horizontal et vertical par rapport à l'élément, avec des rayons de flou et d'étalement et avec une couleur.
 
-<div>{{EmbedInteractiveExample("pages/css/box-shadow.html")}}</div
+{{EmbedInteractiveExample("pages/css/box-shadow.html")}}Elle permet de projeter une ombre depuis un élément. Si une {{cssxref("border-radius")}} est définie sur l'élément avec l'ombre, la boîte de l'ombre prendra les mêmes arrondis. L'ordre des couches (_z order_) pour plusieurs ombres sera le même [que pour les ombres texte](/fr/docs/Web/CSS/text-shadow) (la première ombre est sur le dessus).
 
-<p>Elle permet de projeter une ombre depuis un élément. Si une {{cssxref("border-radius")}} est définie sur l'élément avec l'ombre, la boîte de l'ombre prendra les mêmes arrondis. L'ordre des couches (<em>z order</em>) pour plusieurs ombres sera le même <a href="/fr/docs/Web/CSS/text-shadow">que pour les ombres texte</a> (la première ombre est sur le dessus).</p>
+[Le générateur de `box-shadow`](/fr/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator) est un outil interactif qui permet de générer des valeurs pour `box-shadow`.
 
-<p><a href="/fr/docs/Web/CSS/CSS_Box_Model/Box-shadow_generator">Le générateur de <code>box-shadow</code></a> est un outil interactif qui permet de générer des valeurs pour <code>box-shadow</code>.</p>
+## Syntaxe
 
-<h2 id="Syntaxe">Syntaxe</h2>
-
-<pre class="brush: css no-line-numbers">/* offset-x | offset-y | color */
+```css
+/* offset-x | offset-y | color */
 box-shadow: 60px -16px teal;
 
 /* offset-x | offset-y | blur-radius | color */
@@ -38,52 +37,48 @@ box-shadow: 3px 3px red, -1em 0 0.4em olive;
 box-shadow: inherit;
 box-shadow: initial;
 box-shadow: unset;
-</pre>
+```
 
-<p>La propriété <code>box-shadow</code> peut être définie grâce :</p>
+La propriété `box-shadow` peut être définie grâce :
 
-<ul>
- <li>À deux, trois ou quatre valeurs de longueur ({{cssxref("&lt;length&gt;")}}) :
-  <ul>
-   <li>Avec deux valeurs, celles-ci sont respectivement considérées comme les coordonnées de décalage de l'ombre : <a href="#offset"><code>&lt;offset-x&gt;</code> et <code>&lt;offset-y&gt;</code></a></li>
-   <li>Si une troisième valeur est fournie, celle-ci correspondra au rayon du flou : <code><a href="#blur">&lt;blur-radius&gt;</a></code></li>
-   <li>Si une quatrième valeur est fournie, celle-ci correspondra au rayon d'étalement : <code><a href="#spread">&lt;spread-radius&gt;</a></code>.</li>
-  </ul>
- </li>
- <li>Au mot-clé optionnel <code><a href="#inset">inset</a></code></li>
- <li>À une valeur de couleur (<code><a href="#color">&lt;color&gt;</a></code>) optionnelle.</li>
-</ul>
+- À deux, trois ou quatre valeurs de longueur ({{cssxref("&lt;length&gt;")}}) :
 
-<h3 id="Valeurs">Valeurs</h3>
+  - Avec deux valeurs, celles-ci sont respectivement considérées comme les coordonnées de décalage de l'ombre : [`<offset-x>` et `<offset-y>`](#offset)
+  - Si une troisième valeur est fournie, celle-ci correspondra au rayon du flou : [`<blur-radius>`](#blur)
+  - Si une quatrième valeur est fournie, celle-ci correspondra au rayon d'étalement : [`<spread-radius>`](#spread).
 
-<dl>
- <dt><code>inset</code></dt>
- <dd>Si la valeur n'est pas définie (le cas par défaut), l'ombre sera une ombre portée (comme si la boîte était élevée au-dessus du contenu).<br>
- La présence du mot-clé <code>inset</code> modifie l'ombre afin qu'elle soit tournée vers l'intérieur du cadre (comme si le contenu était enfoncé dans la boîte). Les ombres tournées vers l'intérieur sont dessinées à l'intérieur de la bordure (même les transparentes), au-dessus de l'arrière-plan mais sous le contenu.</dd>
- <dt><code>&lt;offset-x&gt;</code> <code>&lt;offset-y&gt;</code></dt>
- <dd>Deux valeurs de longueur ({{cssxref("&lt;length&gt;")}} qui permettent de définir le décalage de l'ombre. <code>&lt;offset-x&gt;</code> définit la distance horizontale du décalage et les valeurs négatives placeront l'ombre à gauche de l'élément. <code>&lt;offset-y&gt;</code> définit la distance verticale et les distances négatives placent l'ombre au-dessus de l'élément (cf. {{cssxref("&lt;length&gt;")}} pour les différentes unités possibles).<br>
- Si les deux valeurs sont <code>0</code>, l'ombre est placée derrière l'élément (et peut générer un effet de flou si <code>&lt;blur-radius&gt;</code> et/ou <code>&lt;spread-radius&gt;</code> est utilisé).</dd>
- <dt><code>&lt;blur-radius&gt;</code></dt>
- <dd>Une troisième valeur de longueur ({{cssxref("&lt;length&gt;")}}). Plus cette valeur sera grande, plus le flou de l'ombre sera diffus : l'ombre sera donc plus étalée et plus légère. Les valeurs négatives ne sont pas autorisées. Si la valeur n'est pas définie, sa valeur par défaut est <code>0</code> (le côté de l'ombre est rectiligne).</dd>
- <dt><code>&lt;spread-radius&gt;</code></dt>
- <dd>Une quatrième valeur de longueur ({{cssxref("&lt;length&gt;")}}). Les valeurs positives étaleront l'ombre et les valeurs négatives rétréciront l'ombre. Si elle n'est pas définie, la valeur par défaut est <code>0</code> (l'ombre aura la même taille que l'élément).</dd>
- <dt><code>&lt;color&gt;</code></dt>
- <dd>Une valeur de couleur ({{cssxref("&lt;color&gt;")}}). Si la valeur n'est pas définie, la couleur utilisée dépend du navigateur ce sera généralement la propriété {{cssxref("color")}} mais Safari affiche une ombre transparente.</dd>
-</dl>
+- Au mot-clé optionnel [`inset`](#inset)
+- À une valeur de couleur ([`<color>`](#color)) optionnelle.
 
-<h3 id="Interpolation">Interpolation</h3>
+### Valeurs
 
-<p>Chaque ombre de la liste (<code>none</code> sera traitée comme une liste de longueur nulle) est interpolée via la couleur, le décalage horizontal et vertical, le rayon de flou et l'étalement (lorsque c'est pertinent). Pour chaque ombre, si les deux ombres sont ou ne sont pas <code>inset</code>, l'ombre interpolée doit respecter cette valeur. Si l'une des ombres a <code>inset</code> et l'autre non, la liste d'ombres ne peut pas être interpolée. Si les listes d'ombres ont des longueurs différentes, la liste la plus courte sera complétée à la fin avec des ombres dont la couleur est <code>transparent</code>, toutes les longueurs valent <code>0</code> et <code>inset</code> pour que la valeur corresponde à la plus longue liste.</p>
+- `inset`
+  - : Si la valeur n'est pas définie (le cas par défaut), l'ombre sera une ombre portée (comme si la boîte était élevée au-dessus du contenu).
+    La présence du mot-clé `inset` modifie l'ombre afin qu'elle soit tournée vers l'intérieur du cadre (comme si le contenu était enfoncé dans la boîte). Les ombres tournées vers l'intérieur sont dessinées à l'intérieur de la bordure (même les transparentes), au-dessus de l'arrière-plan mais sous le contenu.
+- `<offset-x>` `<offset-y>`
+  - : Deux valeurs de longueur ({{cssxref("&lt;length&gt;")}} qui permettent de définir le décalage de l'ombre. `<offset-x>` définit la distance horizontale du décalage et les valeurs négatives placeront l'ombre à gauche de l'élément. `<offset-y>` définit la distance verticale et les distances négatives placent l'ombre au-dessus de l'élément (cf. {{cssxref("&lt;length&gt;")}} pour les différentes unités possibles).
+    Si les deux valeurs sont `0`, l'ombre est placée derrière l'élément (et peut générer un effet de flou si `<blur-radius>` et/ou `<spread-radius>` est utilisé).
+- `<blur-radius>`
+  - : Une troisième valeur de longueur ({{cssxref("&lt;length&gt;")}}). Plus cette valeur sera grande, plus le flou de l'ombre sera diffus : l'ombre sera donc plus étalée et plus légère. Les valeurs négatives ne sont pas autorisées. Si la valeur n'est pas définie, sa valeur par défaut est `0` (le côté de l'ombre est rectiligne).
+- `<spread-radius>`
+  - : Une quatrième valeur de longueur ({{cssxref("&lt;length&gt;")}}). Les valeurs positives étaleront l'ombre et les valeurs négatives rétréciront l'ombre. Si elle n'est pas définie, la valeur par défaut est `0` (l'ombre aura la même taille que l'élément).
+- `<color>`
+  - : Une valeur de couleur ({{cssxref("&lt;color&gt;")}}). Si la valeur n'est pas définie, la couleur utilisée dépend du navigateur ce sera généralement la propriété {{cssxref("color")}} mais Safari affiche une ombre transparente.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Interpolation
+
+Chaque ombre de la liste (`none` sera traitée comme une liste de longueur nulle) est interpolée via la couleur, le décalage horizontal et vertical, le rayon de flou et l'étalement (lorsque c'est pertinent). Pour chaque ombre, si les deux ombres sont ou ne sont pas `inset`, l'ombre interpolée doit respecter cette valeur. Si l'une des ombres a `inset` et l'autre non, la liste d'ombres ne peut pas être interpolée. Si les listes d'ombres ont des longueurs différentes, la liste la plus courte sera complétée à la fin avec des ombres dont la couleur est `transparent`, toutes les longueurs valent `0` et `inset` pour que la valeur corresponde à la plus longue liste.
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   height: 5em;
   width: 300px;
   background-color: rgba(128,128,128,0.1);
@@ -100,53 +95,40 @@ box-shadow: unset;
 .ombres_multiples_diffuses {
   box-shadow: inset 0 0 1em gold, 0 0 2em red;
   /* deux ombres dans la liste et des rayons de flou pour chacune */
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="ombre_droite_haut"&gt;Déportée dans l'autre sens&lt;/p&gt;
+```html
+<p class="ombre_droite_haut">Déportée dans l'autre sens</p>
 
-&lt;p class="ombre_interieure"&gt;L'ombre est dans le contenu !&lt;/p&gt;
+<p class="ombre_interieure">L'ombre est dans le contenu !</p>
 
-&lt;p class="ombres_multiples_diffuses"&gt;Du rouge dehors et du doré dedans&lt;/p&gt;
-</pre>
+<p class="ombres_multiples_diffuses">Du rouge dehors et du doré dedans</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples","400","300")}}</p>
+{{EmbedLiveSample("Exemples","400","300")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#box-shadow', 'box-shadow')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | État                                     | Commentaires         |
+| -------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName('CSS3 Backgrounds', '#box-shadow', 'box-shadow')}} | {{Spec2('CSS3 Backgrounds')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.box-shadow")}}</p>
+{{Compat("css.properties.box-shadow")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="https://www.elektronotdienst-nuernberg.de/bugs/box-shadow_inset.html">Quelques tests sur <code>box-shadow</code> (en anglais)</a></li>
- <li><a href="https://markusstange.wordpress.com/2009/02/15/fun-with-box-shadows/">Tutoriel et box-shadow tutorial and examples</a></li>
- <li><a href="https://cssgenerator.org/box-shadow-css-generator.html">Générateur d'ombres CSS</a></li>
- <li><a href="/fr/docs/Web/HTML/Applying_color">Appliquer des couleurs sur des éléments HTML grâce à CSS</a></li>
- <li>Le type de données {{cssxref("&lt;color&gt;")}}</li>
- <li>Les autres propriétés relatives aux couleurs : {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}} et {{cssxref("column-rule-color")}}.</li>
-</ul>
+- [Quelques tests sur `box-shadow` (en anglais)](https://www.elektronotdienst-nuernberg.de/bugs/box-shadow_inset.html)
+- [Tutoriel et box-shadow tutorial and examples](https://markusstange.wordpress.com/2009/02/15/fun-with-box-shadows/)
+- [Générateur d'ombres CSS](https://cssgenerator.org/box-shadow-css-generator.html)
+- [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/HTML/Applying_color)
+- Le type de données {{cssxref("&lt;color&gt;")}}
+- Les autres propriétés relatives aux couleurs : {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}} et {{cssxref("column-rule-color")}}.

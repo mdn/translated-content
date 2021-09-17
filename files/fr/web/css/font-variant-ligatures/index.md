@@ -7,80 +7,79 @@ tags:
   - Reference
 translation_of: Web/CSS/font-variant-ligatures
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>font-variant-ligatures</code></strong> contrôle quelles {{Glossary("ligatures")}} et {{Glossary("formes contextuelles")}} sont utilisées dans les éléments textuels auxquels elle s'applique. Ceci vise à harmoniser l'affichage du texte.</p>
+La propriété **`font-variant-ligatures`** contrôle quelles {{Glossary("ligatures")}} et {{Glossary("formes contextuelles")}} sont utilisées dans les éléments textuels auxquels elle s'applique. Ceci vise à harmoniser l'affichage du texte.
 
-<div>{{EmbedInteractiveExample("pages/css/font-variant-ligatures.html")}}</div>
+{{EmbedInteractiveExample("pages/css/font-variant-ligatures.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">font-variant-ligatures: normal;
+```css
+font-variant-ligatures: normal;
 font-variant-ligatures: none;
-font-variant-ligatures: common-ligatures;           /* &lt;common-lig-values&gt; */
-font-variant-ligatures: no-common-ligatures;        /* &lt;common-lig-values&gt; */
-font-variant-ligatures: discretionary-ligatures;    /* &lt;discretionary-lig-values&gt; */
-font-variant-ligatures: no-discretionary-ligatures; /* &lt;discretionary-lig-values&gt; */
-font-variant-ligatures: historical-ligatures;       /* &lt;historical-lig-values&gt; */
-font-variant-ligatures: no-historical-ligatures;    /* &lt;historical-lig-values&gt; */
-font-variant-ligatures: contextual;                 /* &lt;contextual-alt-values&gt; */
-font-variant-ligatures: no-contextual;              /* &lt;contextual-alt-values&gt; */
-font-variant-ligatures: contextual;                 /* &lt;no-historical-ligatures&gt; &lt;common-ligatures&gt; */
+font-variant-ligatures: common-ligatures;           /* <common-lig-values> */
+font-variant-ligatures: no-common-ligatures;        /* <common-lig-values> */
+font-variant-ligatures: discretionary-ligatures;    /* <discretionary-lig-values> */
+font-variant-ligatures: no-discretionary-ligatures; /* <discretionary-lig-values> */
+font-variant-ligatures: historical-ligatures;       /* <historical-lig-values> */
+font-variant-ligatures: no-historical-ligatures;    /* <historical-lig-values> */
+font-variant-ligatures: contextual;                 /* <contextual-alt-values> */
+font-variant-ligatures: no-contextual;              /* <contextual-alt-values> */
+font-variant-ligatures: contextual;                 /* <no-historical-ligatures> <common-ligatures> */
 
 /* Valeurs globales */
 font-variant-ligatures: inherit;
 font-variant-ligatures: initial;
 font-variant-ligatures: unset;
-</pre>
+```
 
-<p>La valeur de cette propriété peut être l'un des mots-clés définis ci-après.</p>
+La valeur de cette propriété peut être l'un des mots-clés définis ci-après.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Cette valeur active les ligatures et les formes contextuelles courantes pour un rendu correct. Les ligatures et formes activées dépendent de la police utilisée, de la langue et de certains scripts. C'est la valeur par défaut.</dd>
- <dt><code>none</code></dt>
- <dd>Cette valeur désactive toutes les ligatures et formes contextuelles, y compris celles couramment utilisées.</dd>
- <dt>&lt;common-lig-values&gt;</dt>
- <dd>Ces valeurs contrôlent les ligatures les plus courantes, comme <code>fi</code>, <code>ffi</code>, <code>th</code> et autres. Elles correspondent aux valeurs OpenType <code>liga</code> and <code>clig</code>. Deux valeurs sont possibles:
- <ul>
-  <li><code>common-ligatures</code> active ces ligatures. Notez que la valeur <code>normal</code> active ces ligatures.</li>
-  <li><code>no-common-ligatures</code> désactive ces ligatures.</li>
- </ul>
- </dd>
- <dt><em>&lt;discretionary-lig-values&gt;</em></dt>
- <dd>Ces valeurs contrôlent les ligatures spécifiques, spécifiques à la police et définies par le fondeur. Elles correspondent à la valeur OpenType <code>dlig</code>. Deux valeurs sont possibles:
- <ul>
-  <li><code>discretionary-ligatures</code> active ces ligatures.</li>
-  <li><code>no-discretionary-ligatures</code> désactive ces ligatures. Notez que la valeur <code>normal</code> désactive ces ligatures.</li>
- </ul>
- </dd>
- <dt><em>&lt;historical-lig-values&gt;</em></dt>
- <dd>Ces valeurs contrôlent les ligatures historiques, utilisées dans les livres anciens, comme l'allemand tz qui devient ß. Elles correspondent à la valeur OpenType <code>hlig</code>. Deux valeurs sont possibles:
- <ul>
-  <li><code>historical-ligatures</code> active ces ligatures.</li>
-  <li><code>no-historical-ligatures</code> désactive ces ligatures. Notez que la valeur <code>normal</code> désactive ces ligatures.</li>
- </ul>
- </dd>
- <dt><em>&lt;contextual-alt-values&gt;</em></dt>
- <dd>Ces valeurs contrôlent la manière dont les lettres s'adaptent à leur contexte, c'est-à-dire aux lettres qui les entourent. Elles correspondent à la valeur OpenType <code>calt</code>. Deux valeurs sont possibles:
- <ul>
-  <li><code>contextual</code> précise que des alternatives contextuelles peuvent être utilisées. Notez que la valeur <code>normal</code> active ces ligatures.</li>
-  <li><code>no-contextual</code> interdit leur utilisation.</li>
- </ul>
- </dd>
-</dl>
+- `normal`
+  - : Cette valeur active les ligatures et les formes contextuelles courantes pour un rendu correct. Les ligatures et formes activées dépendent de la police utilisée, de la langue et de certains scripts. C'est la valeur par défaut.
+- `none`
+  - : Cette valeur désactive toutes les ligatures et formes contextuelles, y compris celles couramment utilisées.
+- \<common-lig-values>
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+  - : Ces valeurs contrôlent les ligatures les plus courantes, comme `fi`, `ffi`, `th` et autres. Elles correspondent aux valeurs OpenType `liga` and `clig`. Deux valeurs sont possibles:
+
+    - `common-ligatures` active ces ligatures. Notez que la valeur `normal` active ces ligatures.
+    - `no-common-ligatures` désactive ces ligatures.
+
+- _\<discretionary-lig-values>_
+
+  - : Ces valeurs contrôlent les ligatures spécifiques, spécifiques à la police et définies par le fondeur. Elles correspondent à la valeur OpenType `dlig`. Deux valeurs sont possibles:
+
+    - `discretionary-ligatures` active ces ligatures.
+    - `no-discretionary-ligatures` désactive ces ligatures. Notez que la valeur `normal` désactive ces ligatures.
+
+- _\<historical-lig-values>_
+
+  - : Ces valeurs contrôlent les ligatures historiques, utilisées dans les livres anciens, comme l'allemand tz qui devient ß. Elles correspondent à la valeur OpenType `hlig`. Deux valeurs sont possibles:
+
+    - `historical-ligatures` active ces ligatures.
+    - `no-historical-ligatures` désactive ces ligatures. Notez que la valeur `normal` désactive ces ligatures.
+
+- _\<contextual-alt-values>_
+
+  - : Ces valeurs contrôlent la manière dont les lettres s'adaptent à leur contexte, c'est-à-dire aux lettres qui les entourent. Elles correspondent à la valeur OpenType `calt`. Deux valeurs sont possibles:
+
+    - `contextual` précise que des alternatives contextuelles peuvent être utilisées. Notez que la valeur `normal` active ces ligatures.
+    - `no-contextual` interdit leur utilisation.
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">p {
+```css
+p {
   font-size: 2rem;
   font-family: Lora, serif;
 }
@@ -127,82 +126,70 @@ font-variant-ligatures: unset;
 .contextual {
   font-variant-ligatures: contextual;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;link href="//fonts.googleapis.com/css?family=Lora" rel="stylesheet"&gt;
-&lt;p class="normal"&gt;
-  normal&lt;br&gt;
+```html
+<link href="//fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+<p class="normal">
+  normal<br>
   if fi ff tf ft jf fj
-&lt;/p&gt;
-&lt;p class="none"&gt;
-  none&lt;br&gt;
+</p>
+<p class="none">
+  none<br>
   if fi ff tf ft jf fj
-&lt;/p&gt;
-&lt;p class="common-ligatures"&gt;
-  common-ligatures&lt;br&gt;
+</p>
+<p class="common-ligatures">
+  common-ligatures<br>
   if fi ff tf ft jf fj
-&lt;/p&gt;
-&lt;p class="no-common-ligatures"&gt;
-  no-common-ligatures&lt;br&gt;
+</p>
+<p class="no-common-ligatures">
+  no-common-ligatures<br>
   if fi ff tf ft jf fj
-&lt;/p&gt;
-&lt;p class="discretionary-ligatures"&gt;
-  discretionary-ligatures&lt;br&gt;
+</p>
+<p class="discretionary-ligatures">
+  discretionary-ligatures<br>
   if fi ff tf ft jf fj
-&lt;/p&gt;
-&lt;p class="no-discretionary-ligatures"&gt;
-  no-discretionary-ligatures&lt;br&gt;
+</p>
+<p class="no-discretionary-ligatures">
+  no-discretionary-ligatures<br>
   if fi ff tf ft jf fj
-&lt;/p&gt;
-&lt;p class="historical-ligatures"&gt;
-  historical-ligatures&lt;br&gt;
+</p>
+<p class="historical-ligatures">
+  historical-ligatures<br>
   if fi ff tf ft jf fj
-&lt;/p&gt;
-&lt;p class="no-historical-ligatures"&gt;
-  no-historical-ligatures&lt;br&gt;
+</p>
+<p class="no-historical-ligatures">
+  no-historical-ligatures<br>
   if fi ff tf ft jf fj
-&lt;/p&gt;
-&lt;p class="contextual"&gt;
-  contextual&lt;br&gt;
+</p>
+<p class="contextual">
+  contextual<br>
   if fi ff tf ft jf fj
-&lt;/p&gt;
-&lt;p class="no-contextual"&gt;
-  no-contextual&lt;br&gt;
+</p>
+<p class="no-contextual">
+  no-contextual<br>
   if fi ff tf ft jf fj
-&lt;/p&gt;
-&lt;p class="contextual"&gt;
-  contextual&lt;br&gt;
+</p>
+<p class="contextual">
+  contextual<br>
   if fi ff tf ft jf fj
-&lt;/p&gt;
-</pre>
+</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', '', '', '', 'Web/CSS/font-variant-ligatures')}}</p>
+{{EmbedLiveSample('Exemples', '', '', '', 'Web/CSS/font-variant-ligatures')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#propdef-font-variant-ligatures', 'font-variant-ligatures')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | État                             | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('CSS3 Fonts', '#propdef-font-variant-ligatures', 'font-variant-ligatures')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.font-variant-ligatures")}}</p>
+{{Compat("css.properties.font-variant-ligatures")}}

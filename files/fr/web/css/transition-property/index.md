@@ -7,26 +7,25 @@ tags:
   - Reference
 translation_of: Web/CSS/transition-property
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>transition-property</code></strong> désigne les noms des propriétés CSS sur lesquelles <a href="/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">un effet de transition</a> devrait être appliqué.</p>
+La propriété **`transition-property`** désigne les noms des propriétés CSS sur lesquelles [un effet de transition](/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) devrait être appliqué.
 
-<div>{{EmbedInteractiveExample("pages/css/transition-property.html")}}</div>
+{{EmbedInteractiveExample("pages/css/transition-property.html")}}
 
-<div class="note">
-  <p><strong>Note :</strong> <a href="/fr/docs/Web/CSS/CSS_animated_properties">L'ensemble des propriétés CSS qui peuvent être animées</a> évolue. Vous devriez donc éviter de lister ici des propriétés qui, actuellement, ne sont pas animées car elles pourraient l'être demain et cela pourrait affecter votre document.</p>
-</div>
+> **Note :** [L'ensemble des propriétés CSS qui peuvent être animées](/fr/docs/Web/CSS/CSS_animated_properties) évolue. Vous devriez donc éviter de lister ici des propriétés qui, actuellement, ne sont pas animées car elles pourraient l'être demain et cela pourrait affecter votre document.
 
-<p>Si vous définissez une propriété raccourcie (par exemple {{cssxref("background")}}), toutes les propriétés détaillées correspondantes seront animées de la même façon.</p>
+Si vous définissez une propriété raccourcie (par exemple {{cssxref("background")}}), toutes les propriétés détaillées correspondantes seront animées de la même façon.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css no-line-numbers">/* Avec un mot-clé */
+```css
+/* Avec un mot-clé */
 transition-property: none;
 transition-property: all;
 
 /* Valeurs utilisant un identifiant */
-/* &lt;custom-ident&gt; */
+/* <custom-ident> */
 transition-property: test1;
 transition-property: test_05;
 transition-property: -specific;
@@ -41,55 +40,38 @@ transition-property: all, -moz-specific, sliding;
 transition-property: inherit;
 transition-property: initial;
 transition-property: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Aucune propriété n'est concernée par les transitions.</dd>
- <dt><code>all</code></dt>
- <dd>Toutes les propriétés qui peuvent avoir une transition animée seront concernées.</dd>
- <dt><code>&lt;custom-ident&gt;</code></dt>
- <dd>Une chaîne de caractère qui identifie la propriété pour laquelle on doit appliquer un effet de transition lorsque sa valeur change. Pour plus de détails sur la forme de cet identifiant, voir la page sur le type {{cssxref("&lt;custom-ident&gt;")}}.</dd>
-</dl>
+- `none`
+  - : Aucune propriété n'est concernée par les transitions.
+- `all`
+  - : Toutes les propriétés qui peuvent avoir une transition animée seront concernées.
+- `<custom-ident>`
+  - : Une chaîne de caractère qui identifie la propriété pour laquelle on doit appliquer un effet de transition lorsque sa valeur change. Pour plus de détails sur la forme de cet identifiant, voir la page sur le type {{cssxref("&lt;custom-ident&gt;")}}.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Il y a plusieurs exemples sur les transitions CSS qui se trouvent dans <a href="/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">l'article sur les transitions CSS</a>.</p>
+Il y a plusieurs exemples sur les transitions CSS qui se trouvent dans [l'article sur les transitions CSS](/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Transitions', '#transition-property-property', 'transition-property')}}</td>
-   <td>{{Spec2('CSS3 Transitions')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | État                                     | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName('CSS3 Transitions', '#transition-property-property', 'transition-property')}} | {{Spec2('CSS3 Transitions')}} | Définition initiale. |
 
-<div>{{cssinfo}}</div>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.transition-property")}}</p>
+{{Compat("css.properties.transition-property")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions">Utiliser les transitions CSS</a></li>
- <li>{{domxref("TransitionEvent")}}</li>
-</ul>
+- [Utiliser les transitions CSS](/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- {{domxref("TransitionEvent")}}

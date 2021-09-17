@@ -8,37 +8,36 @@ tags:
 translation_of: Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters
 original_slug: Web/CSS/CSS_Lists/Compteurs_CSS
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Les <strong>compteurs CSS</strong> sont des variables dont les valeurs sont incrémentées par les règles CSS et qui permettent de savoir combien de fois elles sont utilisées. Cela permet par exemple d'adapter la mise en forme du contenu en fonction de son emplacement dans le document.</p>
+Les **compteurs CSS** sont des variables dont les valeurs sont incrémentées par les règles CSS et qui permettent de savoir combien de fois elles sont utilisées. Cela permet par exemple d'adapter la mise en forme du contenu en fonction de son emplacement dans le document.
 
-<p>La valeur d'un compteur peut être manipulée grâce aux propriétés {{cssxref("counter-reset")}}. {{cssxref("counter-increment")}} et on peut les afficher sur la page grâce aux fonctions <code>counter()</code> et <code>counters()</code> dans la propriété {{cssxref("content")}}.</p>
+La valeur d'un compteur peut être manipulée grâce aux propriétés {{cssxref("counter-reset")}}. {{cssxref("counter-increment")}} et on peut les afficher sur la page grâce aux fonctions `counter()` et `counters()` dans la propriété {{cssxref("content")}}.
 
-<h2 id="Utiliser_les_compteurs">Utiliser les compteurs</h2>
+## Utiliser les compteurs
 
-<h3 id="Manipuler_la_valeur_d'un_compteur">Manipuler la valeur d'un compteur</h3>
+### Manipuler la valeur d'un compteur
 
-<p>Pour utiliser un compteur CSS, il faut d'abord réinitialiser sa valeur (0 par défaut) à l'aide de {{cssxref("counter-reset")}}. Pour incrémenter un compteur initialisé, on peut utiliser {{cssxref("counter-increment")}}. Attention le nom du compteur ne peut pas être <code>none</code>, <code>inherit</code> ou <code>initial</code>.</p>
+Pour utiliser un compteur CSS, il faut d'abord réinitialiser sa valeur (0 par défaut) à l'aide de {{cssxref("counter-reset")}}. Pour incrémenter un compteur initialisé, on peut utiliser {{cssxref("counter-increment")}}. Attention le nom du compteur ne peut pas être `none`, `inherit` ou `initial`.
 
-<h3 id="Afficher_un_compteur">Afficher un compteur</h3>
+### Afficher un compteur
 
-<p>Pour ajouter un compteur au contenu d'un élément, il faut utiliser la fonction {{cssxref("counter")}} ou {{cssxref("counters")}} dans une propriété {{cssxref("content")}}.</p>
+Pour ajouter un compteur au contenu d'un élément, il faut utiliser la fonction {{cssxref("counter")}} ou {{cssxref("counters")}} dans une propriété {{cssxref("content")}}.
 
-<p>La fonction <code>counter()</code> prend deux formes : <code>counter(nom)</code> ou <code>counter(nom, style)</code>. Le texte ainsi généré est celui du compteur le plus proche avec ce nom. Le contenu est mis en forme avec le style indiqué (par défaut, c'est <code>decimal</code>).</p>
+La fonction `counter()` prend deux formes : `counter(nom)` ou `counter(nom, style)`. Le texte ainsi généré est celui du compteur le plus proche avec ce nom. Le contenu est mis en forme avec le style indiqué (par défaut, c'est `decimal`).
 
-<p>La fonction <code>counters()</code> prend également deux formes : <code>counters(nom, chaine)</code> ou <code>counters(nom, chaine style)</code>. Le texte généré aura la valeur de l'ensemble des compteurs présents dans la portée du pseudo-élément (du plus loin au plus proche), séparés par la chaîne de caractères passée en argument. Les compteurs sont mis en forme avec le style indiqué (par défaut, c'est <code>decimal</code>).</p>
+La fonction `counters()` prend également deux formes : `counters(nom, chaine)` ou `counters(nom, chaine style)`. Le texte généré aura la valeur de l'ensemble des compteurs présents dans la portée du pseudo-élément (du plus loin au plus proche), séparés par la chaîne de caractères passée en argument. Les compteurs sont mis en forme avec le style indiqué (par défaut, c'est `decimal`).
 
-<h3 id="Exemple_simple">Exemple simple</h3>
+### Exemple simple
 
-<p>Dans l'exemple qui suit, la feuille de style CSS préfixe chaque titre de niveau 3 avec « Section &lt;la valeur du compteur&gt; : ».</p>
+Dans l'exemple qui suit, la feuille de style CSS préfixe chaque titre de niveau 3 avec « Section \<la valeur du compteur> : ».
 
-<div class="note">
-<p><strong>Note :</strong> La fonction {{cssxref("counter()")}} et la fonction {{cssxref("counters()")}} peuvent toutes les deux prendre un dernier argument qui correspond au style de liste utilisé (par défaut, c'est <code>decimal</code>).</p>
-</div>
+> **Note :** La fonction {{cssxref("counter()")}} et la fonction {{cssxref("counters()")}} peuvent toutes les deux prendre un dernier argument qui correspond au style de liste utilisé (par défaut, c'est `decimal`).
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">body {
+```css
+body {
   counter-reset: section;                    /* On initialise le compteur à 0 */
 }
 
@@ -46,25 +45,28 @@ h3::before {
   counter-increment: section;                /* On incrémente le compteur section */
   content: "Section " counter(section) " : "; /* On affiche le compteur */
 }
-</pre>
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;h3&gt;Introduction&lt;/h3&gt;
-&lt;h3&gt;Corps&lt;/h3&gt;
-&lt;h3&gt;Conclusion&lt;/h3&gt;</pre>
+```html
+<h3>Introduction</h3>
+<h3>Corps</h3>
+<h3>Conclusion</h3>
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Utiliser_les_compteurs", 300, 150)}}</p>
+{{EmbedLiveSample("Utiliser_les_compteurs", 300, 150)}}
 
-<h2 id="Imbriquer_des_compteurs">Imbriquer des compteurs</h2>
+## Imbriquer des compteurs
 
-<p>Un compteur CSS est particulièrement utile lorsqu'il s'agit de gérer les listes générées dynamiquement. En utilisant la fonction {{cssxref("counters","counters()")}}, on peut insérer une chaîne de caractères entre les différents niveaux des compteurs imbriqués.</p>
+Un compteur CSS est particulièrement utile lorsqu'il s'agit de gérer les listes générées dynamiquement. En utilisant la fonction {{cssxref("counters","counters()")}}, on peut insérer une chaîne de caractères entre les différents niveaux des compteurs imbriqués.
 
-<h3 id="CSS_2">CSS</h3>
+### CSS
 
-<pre class="brush: css">ol {
+```css
+ol {
   counter-reset: section;                /* On crée une nouvelle instance du
                                             compteur section avec chaque ol */
   list-style-type: none;
@@ -75,75 +77,58 @@ li::before {
                                             instance du compteur */
   content: counters(section,".") " ";    /* On ajoute la valeur de toutes les
                                             instances séparées par ".". */
-                                         /* Si on doit supporter &lt; IE8 il faudra
+                                         /* Si on doit supporter < IE8 il faudra
                                             faire attention à ce qu'il n'y ait
                                             aucun blanc après ',' */
 }
-</pre>
+```
 
-<h3 id="HTML_2">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ol&gt;
-  &lt;li&gt;item&lt;/li&gt;          &lt;!-- 1     --&gt;
-  &lt;li&gt;item               &lt;!-- 2     --&gt;
-    &lt;ol&gt;
-      &lt;li&gt;item&lt;/li&gt;      &lt;!-- 2.1   --&gt;
-      &lt;li&gt;item&lt;/li&gt;      &lt;!-- 2.2   --&gt;
-      &lt;li&gt;item           &lt;!-- 2.3   --&gt;
-        &lt;ol&gt;
-          &lt;li&gt;item&lt;/li&gt;  &lt;!-- 2.3.1 --&gt;
-          &lt;li&gt;item&lt;/li&gt;  &lt;!-- 2.3.2 --&gt;
-        &lt;/ol&gt;
-        &lt;ol&gt;
-          &lt;li&gt;item&lt;/li&gt;  &lt;!-- 2.3.1 --&gt;
-          &lt;li&gt;item&lt;/li&gt;  &lt;!-- 2.3.2 --&gt;
-          &lt;li&gt;item&lt;/li&gt;  &lt;!-- 2.3.3 --&gt;
-        &lt;/ol&gt;
-      &lt;/li&gt;
-      &lt;li&gt;item&lt;/li&gt;      &lt;!-- 2.4   --&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;item&lt;/li&gt;          &lt;!-- 3     --&gt;
-  &lt;li&gt;item&lt;/li&gt;          &lt;!-- 4     --&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-  &lt;li&gt;item&lt;/li&gt;          &lt;!-- 1     --&gt;
-  &lt;li&gt;item&lt;/li&gt;          &lt;!-- 2     --&gt;
-&lt;/ol&gt;</pre>
+```html
+<ol>
+  <li>item</li>          <!-- 1     -->
+  <li>item               <!-- 2     -->
+    <ol>
+      <li>item</li>      <!-- 2.1   -->
+      <li>item</li>      <!-- 2.2   -->
+      <li>item           <!-- 2.3   -->
+        <ol>
+          <li>item</li>  <!-- 2.3.1 -->
+          <li>item</li>  <!-- 2.3.2 -->
+        </ol>
+        <ol>
+          <li>item</li>  <!-- 2.3.1 -->
+          <li>item</li>  <!-- 2.3.2 -->
+          <li>item</li>  <!-- 2.3.3 -->
+        </ol>
+      </li>
+      <li>item</li>      <!-- 2.4   -->
+    </ol>
+  </li>
+  <li>item</li>          <!-- 3     -->
+  <li>item</li>          <!-- 4     -->
+</ol>
+<ol>
+  <li>item</li>          <!-- 1     -->
+  <li>item</li>          <!-- 2     -->
+</ol>
+```
 
-<h3 id="Résultat_2">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Imbriquer_des_compteurs", 250, 350)}}</p>
+{{EmbedLiveSample("Imbriquer_des_compteurs", 250, 350)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Lists", "#auto-numbering", "CSS Counters")}}</td>
-   <td>{{Spec2("CSS3 Lists")}}</td>
-   <td>Aucune modification.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1", "generate.html#counters", "CSS Counters")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                             | Commentaires         |
+| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName("CSS3 Lists", "#auto-numbering", "CSS Counters")}}     | {{Spec2("CSS3 Lists")}} | Aucune modification. |
+| {{SpecName("CSS2.1", "generate.html#counters", "CSS Counters")}} | {{Spec2("CSS2.1")}}         | Définition initiale. |
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("counter-reset")}}</li>
- <li>{{cssxref("counter-set")}}</li>
- <li>{{cssxref("counter-increment")}}</li>
- <li>{{cssxref("@counter-style")}}</li>
-</ul>
+- {{cssxref("counter-reset")}}
+- {{cssxref("counter-set")}}
+- {{cssxref("counter-increment")}}
+- {{cssxref("@counter-style")}}

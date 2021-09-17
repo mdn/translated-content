@@ -9,19 +9,20 @@ tags:
   - Transformations CSS
 translation_of: Web/CSS/transform-style
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propriété <strong><code>transform-style</code></strong> définit si les éléments-fils d'un éléments sont positionnés dans l'espace tridimensionnel ou s'ils sont aplatis dans le plan de l'élément.</p>
+La propriété **`transform-style`** définit si les éléments-fils d'un éléments sont positionnés dans l'espace tridimensionnel ou s'ils sont aplatis dans le plan de l'élément.
 
-<div>{{EmbedInteractiveExample("pages/css/transform-style.html")}}</div>
+{{EmbedInteractiveExample("pages/css/transform-style.html")}}
 
-<p>S'ils sont aplanis, les éléments-fils n'auront pas d'espace tridimensionnel propre.</p>
+S'ils sont aplanis, les éléments-fils n'auront pas d'espace tridimensionnel propre.
 
-<p>Cette propriété n'est pas héritée et doit donc être définie sur tous les descendants de l'éléments qui ne sont pas des feuilles (autrement dit des descendants qui n'ont aucun fils).</p>
+Cette propriété n'est pas héritée et doit donc être définie sur tous les descendants de l'éléments qui ne sont pas des feuilles (autrement dit des descendants qui n'ont aucun fils).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Avec un mot-clé */
+```css
+/* Avec un mot-clé */
 transform-style: preserve-3d;
 transform-style: flat;
 
@@ -29,48 +30,31 @@ transform-style: flat;
 transform-style: inherit;
 transform-style: initial;
 transform-style: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>flat</code></dt>
- <dd>Indique que les fils de l'éléments sont positionnés dans le plan de l'élément.</dd>
- <dt><code>preserve-3d</code></dt>
- <dd>Indique que les fils de l'élément ciblé doivent être positionnés dans l'espace tridimensionnel.</dd>
-</dl>
+- `flat`
+  - : Indique que les fils de l'éléments sont positionnés dans le plan de l'élément.
+- `preserve-3d`
+  - : Indique que les fils de l'élément ciblé doivent être positionnés dans l'espace tridimensionnel.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Transforms 2', '#transform-style-property', 'transform-style')}}</td>
-   <td>{{Spec2('CSS Transforms 2')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | État                                     | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | -------------------- |
+| {{SpecName('CSS Transforms 2', '#transform-style-property', 'transform-style')}} | {{Spec2('CSS Transforms 2')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.transform-style")}}</p>
+{{Compat("css.properties.transform-style")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Transforms/Utilisation_des_transformations_CSS">Utiliser les transformations CSS</a></li>
-</ul>
+- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_Transforms/Utilisation_des_transformations_CSS)

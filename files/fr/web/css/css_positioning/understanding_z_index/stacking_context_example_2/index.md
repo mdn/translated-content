@@ -8,42 +8,35 @@ tags:
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2
 original_slug: Web/CSS/Comprendre_z-index/Exemple_2
 ---
-<div>{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Exemple_1","Web/CSS/Comprendre_z-index/Exemple_3", "Web/CSS/Comprendre_z-index")}}</div>
+{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Exemple_1","Web/CSS/Comprendre_z-index/Exemple_3", "Web/CSS/Comprendre_z-index")}}
 
-<h2 id="Deuxième_exemple">Deuxième exemple</h2>
+## Deuxième exemple
 
-<p>Ce deuxième exemple est très simple, mais il est essentiel à la compréhension du concept de <em>contexte d'empilement</em>. Nous avons les 4 mêmes blocs que l'exemple précédent, mais maintenant, nous appliquons des propriétés {{cssxref("z-index")}} aux deux niveaux de la hiérarchie.</p>
+Ce deuxième exemple est très simple, mais il est essentiel à la compréhension du concept de _contexte d'empilement_. Nous avons les 4 mêmes blocs que l'exemple précédent, mais maintenant, nous appliquons des propriétés {{cssxref("z-index")}} aux deux niveaux de la hiérarchie.
 
-<p>{{ EmbedLiveSample('Exemple', '352', '270') }}</p>
+{{ EmbedLiveSample('Exemple', '352', '270') }}
 
-<p>Vous pouvez voir que le bloc <em>DIV #2</em> (z-index : 2) est au dessus du bloc <em>DIV #3</em> (z-index : 1), parce qu'ils appartiennent tout les deux au même contexte d'empilement (celui de la racine), donc les valeurs de <code>z-index</code> régissent l'empilement des éléments.</p>
+Vous pouvez voir que le bloc _DIV #2_ (z-index : 2) est au dessus du bloc _DIV #3_ (z-index : 1), parce qu'ils appartiennent tout les deux au même contexte d'empilement (celui de la racine), donc les valeurs de `z-index` régissent l'empilement des éléments.
 
-<p>Ce qui peut apparaitre comme étrange, c'est que le bloc <em>DIV #2</em> (z-index : 2) est au dessus du bloc <em>DIV #4</em> (z-index : 10), malgré leurs valeurs de <code>z-index</code>. La raison est qu'ils n'appartiennent pas au même contexte d'empilement. Le bloc <em>DIV #4</em> appartient au contexte d'empilement créé par le bloc <em>DIV #3</em>, et, comme expliqué précédemment, le bloc <em>DIV #3</em> (et tout son contenu) est au dessous du bloc <em>DIV #2</em>.</p>
+Ce qui peut apparaitre comme étrange, c'est que le bloc _DIV #2_ (z-index : 2) est au dessus du bloc _DIV #4_ (z-index : 10), malgré leurs valeurs de `z-index`. La raison est qu'ils n'appartiennent pas au même contexte d'empilement. Le bloc _DIV #4_ appartient au contexte d'empilement créé par le bloc _DIV #3_, et, comme expliqué précédemment, le bloc _DIV #3_ (et tout son contenu) est au dessous du bloc _DIV #2_.
 
-<p>Pour mieux comprendre la situation, voici la hiérarchie du contexte d'empilement :</p>
+Pour mieux comprendre la situation, voici la hiérarchie du contexte d'empilement :
 
-<ul>
- <li>Contexte d'empilement racine
-  <ul>
-   <li>DIV #2 (z-index 2)</li>
-   <li>DIV #3 (z-index 1)
-    <ul>
-     <li>DIV #4 (z-index 10)</li>
-    </ul>
-   </li>
-  </ul>
- </li>
-</ul>
+- Contexte d'empilement racine
 
-<div class="note">
-  <p><strong>Note :</strong> Il est important de se souvenir qu'en général, la hiérarchie HTML est différente de la hiérarchie du contexte d'empilement. Dans la hiérarchie du contexte d'empilement, les éléments qui ne créent pas un contexte d'empilement sont regroupés avec leur parents.</p>
-</div>
+  - DIV #2 (z-index 2)
+  - DIV #3 (z-index 1)
 
-<h2 id="Exemple">Exemple</h2>
+    - DIV #4 (z-index 10)
 
-<h3 id="CSS">CSS</h3>
+> **Note :** Il est important de se souvenir qu'en général, la hiérarchie HTML est différente de la hiérarchie du contexte d'empilement. Dans la hiérarchie du contexte d'empilement, les éléments qui ne créent pas un contexte d'empilement sont regroupés avec leur parents.
 
-<pre class="brush: css">div {
+## Exemple
+
+### CSS
+
+```css
+div {
   font: 12px Arial;
 }
 
@@ -94,35 +87,36 @@ span.bold {
   background-color: #ddddff;
   text-align: left;
   padding-left: 10px;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;br/&gt;
+```html
+<br/>
 
-&lt;div id="div1"&gt;
-  &lt;br/&gt;&lt;span class="bold"&gt;DIV #1&lt;/span&gt;
-  &lt;br/&gt;position: relative;
-  &lt;div id="div2"&gt;
-    &lt;br/&gt;&lt;span class="bold"&gt;DIV #2&lt;/span&gt;
-    &lt;br/&gt;position: absolute;
-    &lt;br/&gt;z-index: 2;
-  &lt;/div&gt;
-&lt;/div&gt;
+<div id="div1">
+  <br/><span class="bold">DIV #1</span>
+  <br/>position: relative;
+  <div id="div2">
+    <br/><span class="bold">DIV #2</span>
+    <br/>position: absolute;
+    <br/>z-index: 2;
+  </div>
+</div>
 
-&lt;br/&gt;
+<br/>
 
-&lt;div id="div3"&gt;
-  &lt;br/&gt;&lt;span class="bold"&gt;DIV #3&lt;/span&gt;
-  &lt;br/&gt;position: relative;
-  &lt;br/&gt;z-index: 1;
-  &lt;div id="div4"&gt;
-    &lt;br/&gt;&lt;span class="bold"&gt;DIV #4&lt;/span&gt;
-    &lt;br/&gt;position: absolute;
-    &lt;br/&gt;z-index: 10;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+<div id="div3">
+  <br/><span class="bold">DIV #3</span>
+  <br/>position: relative;
+  <br/>z-index: 1;
+  <div id="div4">
+    <br/><span class="bold">DIV #4</span>
+    <br/>position: absolute;
+    <br/>z-index: 10;
+  </div>
+</div>
+```
 
-
-<div>{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Exemple_1","Web/CSS/Comprendre_z-index/Exemple_3", "Web/CSS/Comprendre_z-index")}}</div>
+{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Exemple_1","Web/CSS/Comprendre_z-index/Exemple_3", "Web/CSS/Comprendre_z-index")}}

@@ -7,17 +7,18 @@ tags:
   - Reference
 translation_of: Web/CSS/flex-wrap
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>flex-wrap</code></strong> indique si les éléments flexibles sont contraints à être disposés sur une seule ligne ou s'ils peuvent être affichés sur plusieurs lignes avec un retour automatique. Si le retour à la ligne est autorisé, la propriété permet également de contrôler la direction dans laquelle les lignes sont empilées.</p>
+La propriété **`flex-wrap`** indique si les éléments flexibles sont contraints à être disposés sur une seule ligne ou s'ils peuvent être affichés sur plusieurs lignes avec un retour automatique. Si le retour à la ligne est autorisé, la propriété permet également de contrôler la direction dans laquelle les lignes sont empilées.
 
-<div>{{EmbedInteractiveExample("pages/css/flex-wrap.html")}}</div>
+{{EmbedInteractiveExample("pages/css/flex-wrap.html")}}
 
-<p>Pour plus d'informations, voir la page <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Utiliser les boîtes flexibles (<em>flexbox</em>) CSS</a>.</p>
+Pour plus d'informations, voir la page [Utiliser les boîtes flexibles (_flexbox_) CSS](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 flex-wrap: nowrap; /* Valeur par défaut */
 flex-wrap: wrap;
 flex-wrap: wrap-reverse;
@@ -26,54 +27,54 @@ flex-wrap: wrap-reverse;
 flex-wrap: inherit;
 flex-wrap: initial;
 flex-wrap: unset;
-</pre>
+```
 
-<p>La propriété <code>flex-wrap</code> peut être défini grâce à l'un des mots-clés suivants.</p>
+La propriété `flex-wrap` peut être défini grâce à l'un des mots-clés suivants.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>nowrap</code></dt>
- <dd>Les éléments flexibles sont disposés sur une seule ligne. Cela peut entraîner un dépassement du conteneur. La ligne <strong>cross-start</strong> est équivalente à <strong>start</strong> ou à <strong>before</strong> selon la valeur de {{cssxref("flex-direction")}}. Cette valeur est la valeur par défaut.</dd>
- <dt><code>wrap</code></dt>
- <dd>Les éléments flexibles sont disposé sur plusieurs lignes. La ligne <strong>cross-start</strong> est équivalente à  <strong>start</strong> ou <strong>before</strong> en fonction de la valeur de <code>flex-direction</code> et la ligne <strong>cross-end</strong> est à l'opposée <strong>cross-start</strong>.</dd>
- <dt><code>wrap-reverse</code></dt>
- <dd>Se comporte comme <code>wrap</code> mais <strong>cross-start</strong> et <strong>cross-end</strong> sont permutées.</dd>
-</dl>
+- `nowrap`
+  - : Les éléments flexibles sont disposés sur une seule ligne. Cela peut entraîner un dépassement du conteneur. La ligne **cross-start** est équivalente à **start** ou à **before** selon la valeur de {{cssxref("flex-direction")}}. Cette valeur est la valeur par défaut.
+- `wrap`
+  - : Les éléments flexibles sont disposé sur plusieurs lignes. La ligne **cross-start** est équivalente à  **start** ou **before** en fonction de la valeur de `flex-direction` et la ligne **cross-end** est à l'opposée **cross-start**.
+- `wrap-reverse`
+  - : Se comporte comme `wrap` mais **cross-start** et **cross-end** sont permutées.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
-<p>{{csssyntax}}</p>
+{{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;h4&gt;Un exemple de flex-wrap:wrap &lt;/h4&gt;
-&lt;div class="contenu"&gt;
-  &lt;div class="rouge"&gt;1&lt;/div&gt;
-  &lt;div class="vert"&gt;2&lt;/div&gt;
-  &lt;div class="bleu"&gt;3&lt;/div&gt;
-&lt;/div&gt;
+```html
+<h4>Un exemple de flex-wrap:wrap </h4>
+<div class="contenu">
+  <div class="rouge">1</div>
+  <div class="vert">2</div>
+  <div class="bleu">3</div>
+</div>
 
-&lt;h4&gt;Un exemple de flex-wrap:nowrap &lt;/h4&gt;
-&lt;div class="contenu1"&gt;
-  &lt;div class="rouge"&gt;1&lt;/div&gt;
-  &lt;div class="vert"&gt;2&lt;/div&gt;
-  &lt;div class="bleu"&gt;3&lt;/div&gt;
-&lt;/div&gt;
+<h4>Un exemple de flex-wrap:nowrap </h4>
+<div class="contenu1">
+  <div class="rouge">1</div>
+  <div class="vert">2</div>
+  <div class="bleu">3</div>
+</div>
 
-&lt;h4&gt;Un exemple de flex-wrap:wrap-reverse &lt;/h4&gt;
-&lt;div class="contenu2"&gt;
-  &lt;div class="rouge"&gt;1&lt;/div&gt;
-  &lt;div class="vert"&gt;2&lt;/div&gt;
-  &lt;div class="bleu"&gt;3&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+<h4>Un exemple de flex-wrap:wrap-reverse </h4>
+<div class="contenu2">
+  <div class="rouge">1</div>
+  <div class="vert">2</div>
+  <div class="bleu">3</div>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.contenu,
+```css
+.contenu,
 .contenu1,
 .contenu2 {
     color: #fff;
@@ -111,41 +112,25 @@ flex-wrap: unset;
     display: flex;
     flex-wrap: wrap-reverse;
 }
+```
 
-</pre>
+### Résultat
 
-<h3 id="Résultat">Résultat</h3>
+{{EmbedLiveSample('Examples', '700px', '700px', '', 'Web/CSS/flex-wrap')}}
 
-<p>{{EmbedLiveSample('Examples', '700px', '700px', '', 'Web/CSS/flex-wrap')}}</p>
+## Spécifications
 
-<h2 id="Spécifications">Spécifications</h2>
+| Spécification                                                                        | État                             | Commentaires |
+| ------------------------------------------------------------------------------------ | -------------------------------- | ------------ |
+| {{SpecName('CSS3 Flexbox', '#flex-wrap-property', 'flex-wrap')}} | {{Spec2('CSS3 Flexbox')}} |              |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th>Spécification</th>
-   <th>État</th>
-   <th>Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Flexbox', '#flex-wrap-property', 'flex-wrap')}}</td>
-   <td>{{Spec2('CSS3 Flexbox')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{cssinfo}}
 
-<p>{{cssinfo}}</p>
+## Compatibilité des navigateurs
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+{{Compat("css.properties.flex-wrap")}}
 
-<p>{{Compat("css.properties.flex-wrap")}}</p>
+## Voir aussi
 
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>Guide sur les boîtes flexibles : <em><a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">Les concepts de bases</a></em></li>
- <li>Guide sur les boîtes flexibles : <em><a href="/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items">Maîtriser le retour à la ligne des éléments flexibles</a></em></li>
-</ul>
+- Guide sur les boîtes flexibles : _[Les concepts de bases](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
+- Guide sur les boîtes flexibles : _[Maîtriser le retour à la ligne des éléments flexibles](/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items)_

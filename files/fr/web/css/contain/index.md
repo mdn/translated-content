@@ -8,11 +8,12 @@ tags:
   - Reference
 translation_of: Web/CSS/contain
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propriété CSS <strong><code>contain</code></strong> permet d'indiquer qu'un élément, ainsi que son contenu, sont, autant que possible, indépendants du reste de l'arbre du document. Cela permet au navigateur de recalculer la disposition, la mise en forme, la taille, les <em>peintures</em> ou toute combinaison de ces éléments pour une zone donnée du DOM plutôt que pour la page complète.</p>
+La propriété CSS **`contain`** permet d'indiquer qu'un élément, ainsi que son contenu, sont, autant que possible, indépendants du reste de l'arbre du document. Cela permet au navigateur de recalculer la disposition, la mise en forme, la taille, les _peintures_ ou toute combinaison de ces éléments pour une zone donnée du DOM plutôt que pour la page complète.
 
-<pre class="brush: css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 contain: none;
 contain: strict;
 contain: content;
@@ -25,72 +26,51 @@ contain: paint;
 contain: inherit;
 contain: initial;
 contain: unset;
-</pre>
+```
 
-<p>Cette propriété s'avère utile pour les pages qui contiennent de nombreux composants indépendants et permet de limiter la portée des règles sur le reste de la page.</p>
+Cette propriété s'avère utile pour les pages qui contiennent de nombreux composants indépendants et permet de limiter la portée des règles sur le reste de la page.
 
-<div class="note">
-<p><strong>Note :</strong> Lorsqu'elle est appliquée avec une valeur <code>paint</code>, <code>strict</code> ou <code>content</code>, cette propriété crée :</p>
+> **Note :** Lorsqu'elle est appliquée avec une valeur `paint`, `strict` ou `content`, cette propriété crée :
+>
+> - un nouveau [bloc englobant](/fr/docs/Web/CSS/A_Propos_Du_Bloc_Conteneur) (le bloc servant de référence pour les éléments fils dont la position sera absolue ou `fixed`)
+> - un nouveau [contexte d'empilement](/fr/docs/Web/CSS/Comprendre_z-index/Empilement_de_couches)
+> - un nouveau [contexte de formatage de bloc](/fr/docs/Web/CSS/Block_formatting_context).
 
-<ul>
- <li>un nouveau <a href="/fr/docs/Web/CSS/A_Propos_Du_Bloc_Conteneur">bloc englobant</a> (le bloc servant de référence pour les éléments fils dont la position sera absolue ou <code>fixed</code>)</li>
- <li>un nouveau <a href="/fr/docs/Web/CSS/Comprendre_z-index/Empilement_de_couches">contexte d'empilement</a></li>
- <li>un nouveau <a href="/fr/docs/Web/CSS/Block_formatting_context">contexte de formatage de bloc</a>.</li>
-</ul>
-</div>
+## Syntaxe
 
-<h2 id="Syntaxe">Syntaxe</h2>
+### Valeurs
 
-<h3 id="Valeurs">Valeurs</h3>
+- `none`
+  - : L'élément est affiché normalement, aucun confinement n'est appliqué.
+- `strict`
+  - : Toutes les règles possibles de confinement à l'exception de `style` sont appliquées. Cela correspond à `contain: size layout paint`.
+- `content`
+  - : Toutes les règles de confinement, à l'exception de celles pour `size` et `style`, sont appliquées à l'élément. Cela est équivalent à `contain: layout paint`.
+- `size`
+  - : Cette valeur indique que l'élément peut être dimensionné sans avoir à examiner les éléments descendants pour les modifications de la taille.
+- `layout`
+  - : Cette valeur indique qu'aucun élément en dehors de l'élément, ne peut impacter sa disposition interne et réciproquement.
+- `style`
+  - : Cette valeur indique que les propriétés ayant un effet sur un un élément et ses descendants voire plus sont bien limitées à l'élément englobant.
+- `paint`
+  - : Cette valeur indique que les éléments descendants de l'élément ne sont pas affichés en dehors de ses limites. Si un élément est en dehors de l'écran ou n'est pas visible, cette valeur assure que les éléments descendants ne sont pas visibles non plus.
 
-<dl>
- <dt><code>none</code></dt>
- <dd>L'élément est affiché normalement, aucun confinement n'est appliqué.</dd>
- <dt><code>strict</code></dt>
- <dd>Toutes les règles possibles de confinement à l'exception de <code>style</code> sont appliquées. Cela correspond à <code>contain: size layout paint</code>.</dd>
- <dt><code>content</code></dt>
- <dd>Toutes les règles de confinement, à l'exception de celles pour <code>size</code> et <code>style</code>, sont appliquées à l'élément. Cela est équivalent à <code>contain: layout paint</code>.</dd>
- <dt><code>size</code></dt>
- <dd>Cette valeur indique que l'élément peut être dimensionné sans avoir à examiner les éléments descendants pour les modifications de la taille.</dd>
- <dt><code>layout</code></dt>
- <dd>Cette valeur indique qu'aucun élément en dehors de l'élément, ne peut impacter sa disposition interne et réciproquement.</dd>
- <dt><code>style</code></dt>
- <dd>Cette valeur indique que les propriétés ayant un effet sur un un élément et ses descendants voire plus sont bien limitées à l'élément englobant.</dd>
- <dt><code>paint</code></dt>
- <dd>Cette valeur indique que les éléments descendants de l'élément ne sont pas affichés en dehors de ses limites. Si un élément est en dehors de l'écran ou n'est pas visible, cette valeur assure que les éléments descendants ne sont pas visibles non plus.</dd>
-</dl>
-
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Containment')}}</td>
-   <td>{{Spec2('CSS Containment')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                            | État                                 | Commentaires         |
+| ---------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName('CSS Containment')}} | {{Spec2('CSS Containment')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.contain")}}</p>
+{{Compat("css.properties.contain")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>La propriété CSS {{cssxref("position")}}</li>
-</ul>
+- La propriété CSS {{cssxref("position")}}

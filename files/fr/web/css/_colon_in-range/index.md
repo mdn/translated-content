@@ -7,32 +7,33 @@ tags:
   - Reference
 translation_of: Web/CSS/:in-range
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <strong><code>:in-range</code></strong> cible un élément {{htmlelement("input")}} lorsque sa valeur courante est comprise dans l'intervalle défini par les attributs {{htmlattrxref("min", "input")}} et {{htmlattrxref("max","input")}}.</p>
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:in-range`** cible un élément {{htmlelement("input")}} lorsque sa valeur courante est comprise dans l'intervalle défini par les attributs {{htmlattrxref("min", "input")}} et {{htmlattrxref("max","input")}}.
 
-<pre class="brush: css no-line-numbers">/* Cible n'importe quel élément &lt;input&gt;   */
+```css
+/* Cible n'importe quel élément <input>   */
 /* qui possède un intervalle et pour le-  */
 /* quel la valeur est dans cet intervalle */
 input:in-range {
   background-color: rgba(0, 255, 0, 0.25);
-}</pre>
+}
+```
 
-<p>Cette pseudo-classe s'avère utile lorsqu'on souhaite fournir une indication visuelle quand la valeur est en dehors de la fourchette autorisée.</p>
+Cette pseudo-classe s'avère utile lorsqu'on souhaite fournir une indication visuelle quand la valeur est en dehors de la fourchette autorisée.
 
-<div class="note">
-  <p><strong>Note :</strong> Cette pseudo-classe ne s'applique qu'aux éléments qui ont des limites de valeurs (autrement dit la valeur doit être comprise dans un intervalle donné). Sans ces limitations, l'élément ne pourra pas être vu comme <em>dans l'intervalle</em> ou <em>en dehors de l'intervalle</em>.</p>
-</div>
+> **Note :** Cette pseudo-classe ne s'applique qu'aux éléments qui ont des limites de valeurs (autrement dit la valeur doit être comprise dans un intervalle donné). Sans ces limitations, l'élément ne pourra pas être vu comme _dans l'intervalle_ ou _en dehors de l'intervalle_.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">li {
+```css
+li {
   list-style: none;
   margin-bottom: 1em;
 }
@@ -51,54 +52,38 @@ input:in-range + label::after {
 }
 input:out-of-range + label::after {
   content:' non autorisée !';
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html; highlight:[3]">&lt;form action="" id="form1"&gt;
-  &lt;ul&gt;Les valeurs entre 1 et 10 sont valides.
-    &lt;li&gt;
-      &lt;input id="valeur1" name="valeur1" type="number" placeholder="de 1 à 10" min="1" max="10" value="12"&gt;
-      &lt;label for="valeur1"&gt;Votre valeur est &lt;/label&gt;
-    &lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/form&gt;</pre>
+```html
+<form action="" id="form1">
+  <ul>Les valeurs entre 1 et 10 sont valides.
+    <li>
+      <input id="valeur1" name="valeur1" type="number" placeholder="de 1 à 10" min="1" max="10" value="12">
+      <label for="valeur1">Votre valeur est </label>
+    </li>
+  </ul>
+</form>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<div>{{EmbedLiveSample('Exemples',600,140)}}</div>
+{{EmbedLiveSample('Exemples',600,140)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Etat</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('HTML WHATWG', 'scripting.html#selector-in-range', ':in-range')}}</td>
-   <td>{{Spec2('HTML WHATWG')}}</td>
-   <td>Définition de la correspondance entre <code>:in-range</code> et les éléments HTML.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#in-range-pseudo', ':in-range')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                        | Etat                                 | Commentaires                                                            |
+| ---------------------------------------------------------------------------------------------------- | ------------------------------------ | ----------------------------------------------------------------------- |
+| {{SpecName('HTML WHATWG', 'scripting.html#selector-in-range', ':in-range')}} | {{Spec2('HTML WHATWG')}}     | Définition de la correspondance entre `:in-range` et les éléments HTML. |
+| {{SpecName('CSS4 Selectors', '#in-range-pseudo', ':in-range')}}                 | {{Spec2('CSS4 Selectors')}} | Définition initiale.                                                    |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.in-range")}}</p>
+{{Compat("css.selectors.in-range")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref(":out-of-range")}}</li>
- <li><a href="/fr/docs/Learn/Forms/Form_validation">Guide de validation pour les données de formulaire</a></li>
-</ul>
+- {{cssxref(":out-of-range")}}
+- [Guide de validation pour les données de formulaire](/fr/docs/Learn/Forms/Form_validation)

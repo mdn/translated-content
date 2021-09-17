@@ -7,15 +7,16 @@ tags:
   - Reference
 translation_of: Web/CSS/scrollbar-width
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propriété <strong><code>scrollbar-width</code></strong> permet à un auteur de définir l'épaisseur maximale à utiliser pour la barre de défilement si celle-ci est affichée.</p>
+La propriété **`scrollbar-width`** permet à un auteur de définir l'épaisseur maximale à utiliser pour la barre de défilement si celle-ci est affichée.
 
-<p>{{EmbedInteractiveExample("pages/css/scrollbar-width.html")}}</p>
+{{EmbedInteractiveExample("pages/css/scrollbar-width.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 scrollbar-width: auto;
 scrollbar-width: thin;
 scrollbar-width: none;
@@ -24,91 +25,86 @@ scrollbar-width: none;
 scrollbar-width: inherit;
 scrollbar-width: initial;
 scrollbar-width: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;scrollbar-width&gt;</code></dt>
- <dd>Une valeur qui définit l'épaisseur de la barre de défilement. Cette valeur est une longueur (cf. {{cssxref("&lt;length&gt;")}}) positive ou bien un mot-clé. Si c'est un mot-clé, ce dernier doit avoir l'une des valeurs suivantes :
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <td><code>auto</code></td>
-    <td>La largeur par défaut, fournie par le système, pour la barre de défilement.</td>
-   </tr>
-   <tr>
-    <td><code>thin</code></td>
-    <td>Une variante plus fine de la barre de défilement plus fine dans le cas des plateformes qui fournissent une telle option ou une barre de défilement avec une largeur moindre que la largeur par défaut du système.</td>
-   </tr>
-   <tr>
-    <td><code>none</code></td>
-    <td>Aucune barre de défilement n'est affichée mais on peut toujours faire défiler l'élément.</td>
-   </tr>
-  </tbody>
- </table>
+- `<scrollbar-width>`
 
- <div class="note">
- <p><strong>Note :</strong> Toute valeur de <code>scrollbar-width</code> doit être appliquée sur l'élément racine de la zone d'affichage (<em>viewport</em>) par les agents utilisateur.</p>
- </div>
+  - : Une valeur qui définit l'épaisseur de la barre de défilement. Cette valeur est une longueur (cf. {{cssxref("&lt;length&gt;")}}) positive ou bien un mot-clé. Si c'est un mot-clé, ce dernier doit avoir l'une des valeurs suivantes :
 
- <div class="note">
- <p><strong>Note :</strong> L'utilisation des longueurs pour <code>scrollbar-width</code> est une fonctionnalité qui sera potentiellement abandonnée de la spécification (voir <a href="https://github.com/w3c/csswg-drafts/issues/1958">l'<em>issue</em> 1958</a>).</p>
- </div>
- </dd>
-</dl>
+    <table class="standard-table">
+      <tbody>
+        <tr>
+          <td><code>auto</code></td>
+          <td>
+            La largeur par défaut, fournie par le système, pour la barre de
+            défilement.
+          </td>
+        </tr>
+        <tr>
+          <td><code>thin</code></td>
+          <td>
+            Une variante plus fine de la barre de défilement plus fine dans le cas
+            des plateformes qui fournissent une telle option ou une barre de
+            défilement avec une largeur moindre que la largeur par défaut du
+            système.
+          </td>
+        </tr>
+        <tr>
+          <td><code>none</code></td>
+          <td>
+            Aucune barre de défilement n'est affichée mais on peut toujours faire
+            défiler l'élément.
+          </td>
+        </tr>
+      </tbody>
+    </table>
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+    > **Note :** Toute valeur de `scrollbar-width` doit être appliquée sur l'élément racine de la zone d'affichage (_viewport_) par les agents utilisateur.
+
+    > **Note :** L'utilisation des longueurs pour `scrollbar-width` est une fonctionnalité qui sera potentiellement abandonnée de la spécification (voir [l'_issue_ 1958](https://github.com/w3c/csswg-drafts/issues/1958)).
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">.scroller {
+```css
+.scroller {
   width: 300px;
   height: 100px;
   overflow-y: scroll;
   scrollbar-width: thin;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="scroller"&gt;Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.&lt;/div&gt;</pre>
+```html
+<div class="scroller">Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic. Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Scrollbars", "#scrollbar-width", "scrollbar-width")}}</td>
-   <td>{{Spec2("CSS Scrollbars")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                                 | Commentaires         |
+| -------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName("CSS Scrollbars", "#scrollbar-width", "scrollbar-width")}} | {{Spec2("CSS Scrollbars")}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.scrollbar-width")}}</p>
+{{Compat("css.properties.scrollbar-width")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{CSSxRef("-ms-overflow-style")}}</li>
- <li>{{CSSxRef("::-webkit-scrollbar")}}</li>
-</ul>
+- {{CSSxRef("-ms-overflow-style")}}
+- {{CSSxRef("::-webkit-scrollbar")}}

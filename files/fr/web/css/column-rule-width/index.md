@@ -7,21 +7,22 @@ tags:
   - Reference
 translation_of: Web/CSS/column-rule-width
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>column-rule-width</code></strong> permet de définir la largeur du trait tracé entre les colonnes lorsqu'on utilise une disposition en colonnes.</p>
+La propriété **`column-rule-width`** permet de définir la largeur du trait tracé entre les colonnes lorsqu'on utilise une disposition en colonnes.
 
-<div>{{EmbedInteractiveExample("pages/css/column-rule-width.html")}}</div>
+{{EmbedInteractiveExample("pages/css/column-rule-width.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 column-rule-width: thin;
 column-rule-width: medium;
 column-rule-width: thick;
 
 /* Valeurs de longueurs */
-/* Type &lt;length&gt;        */
+/* Type <length>        */
 column-rule-width: 1px;
 column-rule-width: 2.5em;
 
@@ -29,36 +30,37 @@ column-rule-width: 2.5em;
 column-rule-width: inherit;
 column-rule-width: initial;
 column-rule-width: unset;
-</pre>
+```
 
-<p>La propriété <code>column-rule-width</code> est définie grâce à une valeur de type <code>&lt;br-width&gt;</code>.</p>
+La propriété `column-rule-width` est définie grâce à une valeur de type `<br-width>`.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;br-width&gt;</code></dt>
- <dd>Une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) ou un mot-clé parmi <code>thin</code>, <code>medium</code> ou <code>thick</code> qui décrit l'épaisseur du trait séparant deux colonnes. C'est le type de valeur qui sera également utilisé pour la propriété {{cssxref("border-width")}}.</dd>
-</dl>
+- `<br-width>`
+  - : Une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) ou un mot-clé parmi `thin`, `medium` ou `thick` qui décrit l'épaisseur du trait séparant deux colonnes. C'est le type de valeur qui sera également utilisé pour la propriété {{cssxref("border-width")}}.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">.exemple {
+```css
+.exemple {
   border: 10px solid #000000;
   columns:3;
   column-rule-width: thick;
   column-rule-color: blue;
   column-rule-style: dashed;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class=exemple&gt;
+```html
+<p class=exemple>
   « Mais alors, » pensa Alice, « ne serai-je donc
   jamais plus vieille que je ne le suis maintenant ?
   D’un côté cela aura ses avantages, ne jamais être
@@ -69,33 +71,21 @@ column-rule-width: unset;
   « Comment pourriez-vous apprendre des leçons ici ?
   Il y a à peine de la place pour vous, et il n’y en
   a pas du tout pour vos livres de leçons. »
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Multicol', '#crw', 'column-rule-width')}}</td>
-   <td>{{Spec2('CSS3 Multicol')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | État                                 | Commentaires         |
+| ---------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName('CSS3 Multicol', '#crw', 'column-rule-width')}} | {{Spec2('CSS3 Multicol')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.column-rule-width")}}</p>
+{{Compat("css.properties.column-rule-width")}}

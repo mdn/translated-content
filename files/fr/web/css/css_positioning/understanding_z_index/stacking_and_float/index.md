@@ -12,62 +12,58 @@ tags:
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_and_float
 original_slug: Web/CSS/Comprendre_z-index/Empilement_et_float
 ---
-<div>{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Empilement_sans_z-index","Web/CSS/Comprendre_z-index/Ajout_de_z-index", "Web/CSS/Comprendre_z-index")}}</div>
+{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Empilement_sans_z-index","Web/CSS/Comprendre_z-index/Ajout_de_z-index", "Web/CSS/Comprendre_z-index")}}
 
-<h2 id="L'empilement_et_les_éléments_flottants">L'empilement et les éléments flottants</h2>
+## L'empilement et les éléments flottants
 
-<p>Pour les blocs flottants, l'ordre d'empilement est légèrement différent. Les blocs flottants sont disposés entre les blocs non positionnés et les blocs positionnés. Voici l'ordre d'empilement :</p>
+Pour les blocs flottants, l'ordre d'empilement est légèrement différent. Les blocs flottants sont disposés entre les blocs non positionnés et les blocs positionnés. Voici l'ordre d'empilement :
 
-<ol>
- <li>L'arrière-plan et les bordures de l'élément racine du document</li>
- <li>Les blocs qui descendent les uns des autres et qui sont situés dans le flux normal, dans l'ordre dans lequel ils apparaissent (pour HTML) ;</li>
- <li>Les blocs flottants ;</li>
- <li>Les éléments enfants positionnés, dans leur ordre d'apparence (pour HTML).</li>
-</ol>
+1.  L'arrière-plan et les bordures de l'élément racine du document
+2.  Les blocs qui descendent les uns des autres et qui sont situés dans le flux normal, dans l'ordre dans lequel ils apparaissent (pour HTML) ;
+3.  Les blocs flottants ;
+4.  Les éléments enfants positionnés, dans leur ordre d'apparence (pour HTML).
 
-<p>En fait, comme on le voit avec l'exemple ci-après, l'arrière-plan et la bordure du bloc non positionné (DIV n°4) ne sont pas impactés par les blocs flottants alors que le contenu est affecté. Il s'agit du comportement standard de la propriété CSS {{cssxref("float")}}.</p>
+En fait, comme on le voit avec l'exemple ci-après, l'arrière-plan et la bordure du bloc non positionné (DIV n°4) ne sont pas impactés par les blocs flottants alors que le contenu est affecté. Il s'agit du comportement standard de la propriété CSS {{cssxref("float")}}.
 
-<p>Ce comportement peut être expliqué en améliorant la liste précédente :</p>
+Ce comportement peut être expliqué en améliorant la liste précédente :
 
-<ol>
- <li>L'arrière-plan et les bordures de l'élément racine ;</li>
- <li>Les blocs enfants dans le flux normal, dans leur ordre d'apparence (en HTML) ;</li>
- <li>Les blocs flottants ;</li>
- <li>Les éléments « en-ligne » enfants dans le flux normal ;</li>
- <li>Les éléments enfants positionnés, dans leur ordre d'apparence (en HTML).</li>
-</ol>
+1.  L'arrière-plan et les bordures de l'élément racine ;
+2.  Les blocs enfants dans le flux normal, dans leur ordre d'apparence (en HTML) ;
+3.  Les blocs flottants ;
+4.  Les éléments « en-ligne » enfants dans le flux normal ;
+5.  Les éléments enfants positionnés, dans leur ordre d'apparence (en HTML).
 
-<div class="note">
-  <p><strong>Note :</strong> Dans l'exemple qui suit, tous les blocs sont transparents, excepté celui qui n'est pas positionné, montrant ainsi l'ordre d'empilement. Si l'on réduit l'opacité du bloc non positionné (DIV #4), il se produit quelque chose d'étrange : l'arrière-plan et la bordure de cet élément se placent par dessus les blocs flottants et les blocs positionnés. Il s'agit d'une interprétation particulière des spécifications CSS : l'application de l'opacité crée un nouveau contexte d'empilement (voir l'article : <a href="https://philipwalton.com/articles/what-no-one-told-you-about-z-index/">What No One Told You About Z-Index</a> de Philip Walton ou son excellente traduction de Vincent De Oliveira, <a href="https://iamvdo.me/blog/comprendre-z-index-et-les-contextes-dempilement">Ce que personne ne vous a dit sur z-index</a> et, bien-sûr, la <a href="https://www.w3.org/TR/CSS2/zindex.html">spécification</a>).</p>
-</div>
+> **Note :** Dans l'exemple qui suit, tous les blocs sont transparents, excepté celui qui n'est pas positionné, montrant ainsi l'ordre d'empilement. Si l'on réduit l'opacité du bloc non positionné (DIV #4), il se produit quelque chose d'étrange : l'arrière-plan et la bordure de cet élément se placent par dessus les blocs flottants et les blocs positionnés. Il s'agit d'une interprétation particulière des spécifications CSS : l'application de l'opacité crée un nouveau contexte d'empilement (voir l'article : [What No One Told You About Z-Index](https://philipwalton.com/articles/what-no-one-told-you-about-z-index/) de Philip Walton ou son excellente traduction de Vincent De Oliveira, [Ce que personne ne vous a dit sur z-index](https://iamvdo.me/blog/comprendre-z-index-et-les-contextes-dempilement) et, bien-sûr, la [spécification](https://www.w3.org/TR/CSS2/zindex.html)).
 
-<p>{{EmbedLiveSample("Code_source_de_l’exemple", 600, 250)}}</p>
+{{EmbedLiveSample("Code_source_de_l’exemple", 600, 250)}}
 
-<h2 id="Code_source_de_l'exemple">Code source de l'exemple</h2>
+## Code source de l'exemple
 
-<h3 id="HTML"><strong>HTML</strong></h3>
+### **HTML**
 
-<pre class="brush: html">&lt;div id="abs1"&gt;
-  &lt;b&gt;DIV #1&lt;/b&gt;&lt;br /&gt;position: absolute;&lt;/div&gt;
+```html
+<div id="abs1">
+  <b>DIV #1</b><br />position: absolute;</div>
 
-&lt;div id="flo1"&gt;
-  &lt;b&gt;DIV #2&lt;/b&gt;&lt;br /&gt;float: left;&lt;/div&gt;
+<div id="flo1">
+  <b>DIV #2</b><br />float: left;</div>
 
-&lt;div id="flo2"&gt;
-  &lt;b&gt;DIV #3&lt;/b&gt;&lt;br /&gt;float: right;&lt;/div&gt;
+<div id="flo2">
+  <b>DIV #3</b><br />float: right;</div>
 
-&lt;br /&gt;
+<br />
 
-&lt;div id="sta1"&gt;
-  &lt;b&gt;DIV #4&lt;/b&gt;&lt;br /&gt;no positioning&lt;/div&gt;
+<div id="sta1">
+  <b>DIV #4</b><br />no positioning</div>
 
-&lt;div id="abs2"&gt;
-  &lt;b&gt;DIV #5&lt;/b&gt;&lt;br /&gt;position: absolute;&lt;/div&gt;
-</pre>
+<div id="abs2">
+  <b>DIV #5</b><br />position: absolute;</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   padding: 10px;
   text-align: center;
 }
@@ -120,17 +116,16 @@ b {
   left: 100px;
   border: 1px dashed #990;
   background-color: #fdd;
-}</pre>
+}
+```
 
-<h2 id="Voir_aussi"><strong>Voir aussi</strong></h2>
+## **Voir aussi**
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index">L'empilement sans z-index</a> : Règles d'empilement par défaut</li>
- <li><a href="/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index">Ajouter z-index</a> : Utiliser z-index pour modifier l'empilement par défaut</li>
- <li><a href="/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context">L'empilement de couches</a> : Remarques sur l'empilement de couches</li>
- <li><a href="/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1">Exemple d'empilement n°1</a> : Hiérarchie HTML à 2 niveaux, z-index sur le dernier niveau</li>
- <li><a href="/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2">Exemple d'empilement n°2</a> : Hiérarchie HTML à 2 niveaux, z-index sur tous les éléments</li>
- <li><a href="/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3">Exemple d'empilement n°3</a> : Hiérarchie HTML à 3 niveaux, z-index sur le deuxième niveau</li>
-</ul>
+- [L'empilement sans z-index](/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index) : Règles d'empilement par défaut
+- [Ajouter z-index](/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index) : Utiliser z-index pour modifier l'empilement par défaut
+- [L'empilement de couches](/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context) : Remarques sur l'empilement de couches
+- [Exemple d'empilement n°1](/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_1) : Hiérarchie HTML à 2 niveaux, z-index sur le dernier niveau
+- [Exemple d'empilement n°2](/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_2) : Hiérarchie HTML à 2 niveaux, z-index sur tous les éléments
+- [Exemple d'empilement n°3](/fr/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_context_example_3) : Hiérarchie HTML à 3 niveaux, z-index sur le deuxième niveau
 
-<div>{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Empilement_sans_z-index","Web/CSS/Comprendre_z-index/Ajout_de_z-index", "Web/CSS/Comprendre_z-index")}}</div>
+{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Empilement_sans_z-index","Web/CSS/Comprendre_z-index/Ajout_de_z-index", "Web/CSS/Comprendre_z-index")}}

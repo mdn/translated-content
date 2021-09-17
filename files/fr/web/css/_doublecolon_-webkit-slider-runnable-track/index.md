@@ -1,33 +1,31 @@
 ---
 title: '::-webkit-slider-runnable-track'
-slug: 'Web/CSS/::-webkit-slider-runnable-track'
+slug: Web/CSS/::-webkit-slider-runnable-track
 tags:
   - CSS
   - Non-standard
   - Pseudo-element
   - Reference
-translation_of: 'Web/CSS/::-webkit-slider-runnable-track'
+translation_of: Web/CSS/::-webkit-slider-runnable-track
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>Le pseudo-élément <strong><code>::-webkit-slider-runnable-track</code></strong> représente la piste utilisée par un élément {{HTMLElement("input")}} de type <code>"range"</code> (cf. {{HTMLElement("input/range", '&lt;input type="range"&gt;')}}).</p>
+Le pseudo-élément **`::-webkit-slider-runnable-track`** représente la piste utilisée par un élément {{HTMLElement("input")}} de type `"range"` (cf. {{HTMLElement("input/range", '&lt;input type="range"&gt;')}}).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink et ne fait partie d'aucune spécification.</p>
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink et ne fait partie d'aucune spécification.
 
-<p>{{Compat("css.selectors.-webkit-slider-runnable-track")}}</p>
+## Compatibilité des navigateurs
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+{{Compat("css.selectors.-webkit-slider-runnable-track")}}
 
-<ul>
- <li>{{cssxref("::-webkit-slider-thumb")}}</li>
- <li>Similar pseudo-elements used by other browsers:
-  <ul>
-   <li>{{cssxref("::-ms-track")}}</li>
-   <li>{{cssxref("::-moz-range-track")}}</li>
-  </ul>
- </li>
- <li><a href="https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/">CSS-Tricks : Gérer des champs <code>input</code> de type <code>range</code> de façon compatible entre les navigateurs (en anglais)</a></li>
-</ul>
+## Voir aussi
+
+- {{cssxref("::-webkit-slider-thumb")}}
+- Similar pseudo-elements used by other browsers:
+
+  - {{cssxref("::-ms-track")}}
+  - {{cssxref("::-moz-range-track")}}
+
+- [CSS-Tricks : Gérer des champs `input` de type `range` de façon compatible entre les navigateurs (en anglais)](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)

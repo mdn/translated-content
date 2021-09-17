@@ -8,11 +8,12 @@ tags:
   - Reference
 translation_of: Web/CSS/hanging-punctuation
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propriété <strong><code>hanging-punctuation</code></strong> indique si un signe de ponctuation se situant au début ou à la fin d'une ligne de texte doit rester sur cette ligne, quitte à sortir de la boîte qui représente la ligne.</p>
+La propriété **`hanging-punctuation`** indique si un signe de ponctuation se situant au début ou à la fin d'une ligne de texte doit rester sur cette ligne, quitte à sortir de la boîte qui représente la ligne.
 
-<pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 hanging-punctuation: none;
 hanging-punctuation: first;
 hanging-punctuation: last;
@@ -34,52 +35,46 @@ hanging-punctuation: first allow-end last;
 hanging-punctuation: inherit;
 hanging-punctuation: initial;
 hanging-punctuation: unset;
-</pre>
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Cette propriété peut être définie grâce à une, deux ou trois valeurs :</p>
+Cette propriété peut être définie grâce à une, deux ou trois valeurs :
 
-<ul>
- <li>Avec une valeur : on utilisera l'un des mots-clés de la liste ci-après</li>
- <li>Avec deux valeurs :
-  <ul>
-   <li>le mot-clé <code>first</code> avec un des mots-clés parmi : <code>last</code>, <code>allow-end</code> ou <code>force-end</code></li>
-   <li>ou le mot-clé <code>last</code> avec un des mots-clés parmi : <code>last</code>, <code>allow-end</code> ou <code>force-end</code></li>
-  </ul>
- </li>
- <li>Avec trois valeurs :
-  <ul>
-   <li><code>first</code>, <code>allow-end</code> et <code>last</code></li>
-   <li>ou <code>first</code>, <code>force-end</code> et <code>last</code></li>
-  </ul>
- </li>
-</ul>
+- Avec une valeur : on utilisera l'un des mots-clés de la liste ci-après
+- Avec deux valeurs :
 
-<h3 id="Valeurs">Valeurs</h3>
+  - le mot-clé `first` avec un des mots-clés parmi : `last`, `allow-end` ou `force-end`
+  - ou le mot-clé `last` avec un des mots-clés parmi : `last`, `allow-end` ou `force-end`
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Aucun caractère ne reste suspendu sur la ligne.</dd>
- <dt><code>first</code></dt>
- <dd>Une parenthèse ou des guillemets ouvrants au début de la première ligne d'un texte restent sur la ligne.</dd>
- <dt><code>last</code></dt>
- <dd>Une parenthèse ou des guillemets fermants à la fin de la dernière ligne d'un texte restent sur la ligne.</dd>
- <dt><code>force-end</code></dt>
- <dd>Un point ou une virgule en fin de ligne restera sur cette ligne.</dd>
- <dt><code>allow-end</code></dt>
- <dd>Un point ou une virgule en fin de ligne restera sur cette ligne si la justification du texte ne laisse pas l'espace nécessaire.</dd>
-</dl>
+- Avec trois valeurs :
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+  - `first`, `allow-end` et `last`
+  - ou `first`, `force-end` et `last`
+
+### Valeurs
+
+- `none`
+  - : Aucun caractère ne reste suspendu sur la ligne.
+- `first`
+  - : Une parenthèse ou des guillemets ouvrants au début de la première ligne d'un texte restent sur la ligne.
+- `last`
+  - : Une parenthèse ou des guillemets fermants à la fin de la dernière ligne d'un texte restent sur la ligne.
+- `force-end`
+  - : Un point ou une virgule en fin de ligne restera sur cette ligne.
+- `allow-end`
+  - : Un point ou une virgule en fin de ligne restera sur cette ligne si la justification du texte ne laisse pas l'espace nécessaire.
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;
+```html
+<p>
    Lorem ipsum dolor sit amet, consectetur
    adipiscing elit. Curabitur dignissim nunc
    mauris, et sollicitudin est scelerisque
@@ -88,40 +83,30 @@ hanging-punctuation: unset;
    ornare commodo sodales. Class aptent
    taciti sociosqu ad litora torquent per
    conubia nostra, per inceptos himenaeos.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   hanging-punctuation: first;
   margin: .5rem;
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemple')}}</p>
+{{EmbedLiveSample('Exemple')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Text', '#hanging-punctuation-property', 'hanging-punctuation')}}</td>
-   <td>{{Spec2('CSS3 Text')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | État                         | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------ | ---------------------------- | -------------------- |
+| {{SpecName('CSS3 Text', '#hanging-punctuation-property', 'hanging-punctuation')}} | {{Spec2('CSS3 Text')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.hanging-punctuation")}}</p>
+{{Compat("css.properties.hanging-punctuation")}}

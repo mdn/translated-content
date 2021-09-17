@@ -9,19 +9,20 @@ tags:
 translation_of: Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images
 original_slug: Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété CSS {{cssxref("background-size")}} permet d'ajuster la taille des images utilisées en arrière-plan et de remplacer le comportement par défaut qui consiste à créer un carrelage de l'image à sa pleine grandeur. Il est ainsi possible d'agrandir ou de rapetisser l'image.</p>
+La propriété CSS {{cssxref("background-size")}} permet d'ajuster la taille des images utilisées en arrière-plan et de remplacer le comportement par défaut qui consiste à créer un carrelage de l'image à sa pleine grandeur. Il est ainsi possible d'agrandir ou de rapetisser l'image.
 
-<h2 id="Carreler_une_image_de_grande_taille">Carreler une image de grande taille</h2>
+## Carreler une image de grande taille
 
-<p>Prenons une image de grande taille (par exemple l'ancien logo de Firefox en 2485x2340px). On souhaite la carreler en quatre copies de 300x300 px, comme dans l'image suivante.</p>
+Prenons une image de grande taille (par exemple l'ancien logo de Firefox en 2485x2340px). On souhaite la carreler en quatre copies de 300x300 px, comme dans l'image suivante.
 
-<p><img alt="" src="logo-quantum.9c5e96634f92.png"></p>
+![](logo-quantum.9c5e96634f92.png)
 
-<p>On peut utiliser la feuille de style CSS suivante pour obtenir l'effet voulu :</p>
+On peut utiliser la feuille de style CSS suivante pour obtenir l'effet voulu :
 
-<pre class="brush: css">.square {
+```css
+.square {
   width: 300px;
   height: 300px;
   background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
@@ -30,28 +31,30 @@ original_slug: Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images
   font-size: 16px;
   background-size: 150px;
 }
-</pre>
+```
 
-<p>On notera que, dans l'exemple précédent, une seule valeur avait été précisée pour {{cssxref("background-size")}} : 150 px. Dans ce cas, cette valeur est utilisée pour la largeur et la hauteur est alors fixée à <code>auto</code>.</p>
+On notera que, dans l'exemple précédent, une seule valeur avait été précisée pour {{cssxref("background-size")}} : 150 px. Dans ce cas, cette valeur est utilisée pour la largeur et la hauteur est alors fixée à `auto`.
 
-<h2 id="Étirer_une_image">Étirer une image</h2>
+## Étirer une image
 
-<p>Il est aussi possible de spécifier, respectivement, la largeur et la hauteur de l'image, comme dans l'exemple suivant, où la taille de l'image est imposée à 300x150 px.</p>
+Il est aussi possible de spécifier, respectivement, la largeur et la hauteur de l'image, comme dans l'exemple suivant, où la taille de l'image est imposée à 300x150 px.
 
-<pre class="brush:css">background-size: 300px 150px;
-</pre>
+```css
+background-size: 300px 150px;
+```
 
-<p>L'image suivante montre le résultat obtenu.</p>
+L'image suivante montre le résultat obtenu.
 
-<p><img alt="Logo de Firefox étité" src="s.codepen.io_richienb_debug_lonxgp_pnkvygvggyxa.png"></p>
+![Logo de Firefox étité](s.codepen.io_richienb_debug_lonxgp_pnkvygvggyxa.png)
 
-<h2 id="Agrandir_une_image">Agrandir une image</h2>
+## Agrandir une image
 
-<p>On peut agrandir une image en arrière-plan. À l'image suivante, une favicône de 32x32 px est agrandie à 300x300 px.</p>
+On peut agrandir une image en arrière-plan. À l'image suivante, une favicône de 32x32 px est agrandie à 300x300 px.
 
-<p><img alt="Logo MDN à l'échelle" src="favicon57.de33179910ae.1.1.png"></p>
+![Logo MDN à l'échelle](favicon57.de33179910ae.1.1.png)
 
-<pre class="brush: css">.square2 {
+```css
+.square2 {
   width: 300px;
   height: 300px;
   background-image: url(favicon.png);
@@ -60,57 +63,62 @@ original_slug: Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images
   text-shadow: white 0px 0px 2px;
   font-size: 16px;
 }
-</pre>
+```
 
-<p>On remarque que la feuille de style utilisée est identique à la précédente, sauf en ce qui concerne le nom de l'image.</p>
+On remarque que la feuille de style utilisée est identique à la précédente, sauf en ce qui concerne le nom de l'image.
 
-<h2 id="Valeurs_spéciales_contain_et_cover">Valeurs spéciales : <code>contain</code> et <code>cover</code></h2>
+## Valeurs spéciales : `contain` et `cover`
 
-<p>En plus de {{cssxref("&lt;length&gt;")}}, la propriété CSS {{cssxref("background-size")}} permet d'employer deux autres valeurs : <code>contain</code> et <code>cover</code>. </p>
+En plus de {{cssxref("&lt;length&gt;")}}, la propriété CSS {{cssxref("background-size")}} permet d'employer deux autres valeurs : `contain` et `cover`.
 
-<h3 id="contain"><code>contain</code></h3>
+### `contain`
 
-<p>La valeur <code>contain</code> spécifie les dimensions de l'image d'arrière-plan de manière à ce que sa largeur et sa hauteur soient aussi grandes que possible, tout en conservant l'image à l'intérieur de son élément conteneur. Ainsi, l'image ne peut déborder de son élément conteneur.</p>
+La valeur `contain` spécifie les dimensions de l'image d'arrière-plan de manière à ce que sa largeur et sa hauteur soient aussi grandes que possible, tout en conservant l'image à l'intérieur de son élément conteneur. Ainsi, l'image ne peut déborder de son élément conteneur.
 
-<p>Essayez de redimensionner la fenêtre de votre navigateur afin de voir la valeur <code>contain</code> en action (Votre navigateur doit supporter la mise à l'échelle d'images d'arrière-plan).</p>
+Essayez de redimensionner la fenêtre de votre navigateur afin de voir la valeur `contain` en action (Votre navigateur doit supporter la mise à l'échelle d'images d'arrière-plan).
 
-<p>{{EmbedLiveSample("contain", "100%", "220")}}</p>
+{{EmbedLiveSample("contain", "100%", "220")}}
 
-<pre class="brush:html">&lt;div class="bgSizeContain"&gt;
-  &lt;p&gt;Redimensionnez la fenêtre de votre navigateur.&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="bgSizeContain">
+  <p>Redimensionnez la fenêtre de votre navigateur.</p>
+</div>
+```
 
-<pre class="brush:css">.bgSizeContain {
+```css
+.bgSizeContain {
   height: 200px;
   background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
   background-size: contain;
   border: 2px solid darkgray;
   color: #000; text-shadow: 1px 1px 0 #fff;
-}</pre>
+}
+```
 
-<h3 id="cover"><code>cover</code></h3>
+### `cover`
 
-<p>La valeur <code>cover</code> assure que l'image d'arrière-plan soit aussi petite que possible, tout en maintenant ses dimensions plus grandes ou égales à la taille de l'élément conteneur. L'échelle entre la largeur et la hauteur est maintenue.</p>
+La valeur `cover` assure que l'image d'arrière-plan soit aussi petite que possible, tout en maintenant ses dimensions plus grandes ou égales à la taille de l'élément conteneur. L'échelle entre la largeur et la hauteur est maintenue.
 
-<p>{{EmbedLiveSample("cover", "100%", "220")}}</p>
+{{EmbedLiveSample("cover", "100%", "220")}}
 
-<p>Cet exemple utilise le document HTML et la feuille de style suivants :</p>
+Cet exemple utilise le document HTML et la feuille de style suivants :
 
-<pre class="brush:html">&lt;div class="bgSizeCover"&gt;
-  &lt;p&gt;Redimensionnez la fenêtre de votre navigateur.&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="bgSizeCover">
+  <p>Redimensionnez la fenêtre de votre navigateur.</p>
+</div>
+```
 
-<pre class="brush:css">.bgSizeCover {
+```css
+.bgSizeCover {
   height: 200px;
   background-image: url(https://www.mozilla.org/media/img/logos/firefox/logo-quantum.9c5e96634f92.png);
   background-size: cover;
   border: 2px solid darkgray;
   color: #000; text-shadow: 1px 1px 0 #fff;
-</pre>
+```
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("background-size")}}</li>
- <li>{{cssxref("background")}}</li>
-</ul>
+- {{cssxref("background-size")}}
+- {{cssxref("background")}}

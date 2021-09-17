@@ -7,25 +7,26 @@ tags:
   - Reference
 translation_of: Web/CSS/grid-row-end
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>grid-row-end</code></strong> définit la position de la fin d'un élément de la grille dans une zone donnée ou sur un fragment de ligne donné.</p>
+La propriété **`grid-row-end`** définit la position de la fin d'un élément de la grille dans une zone donnée ou sur un fragment de ligne donné.
 
-<div>{{EmbedInteractiveExample("pages/css/grid-row-end.html")}}</div>
+{{EmbedInteractiveExample("pages/css/grid-row-end.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 grid-row-end: auto;
 
-/* Valeurs &lt;custom-ident&gt; */
+/* Valeurs <custom-ident> */
 grid-row-end: somegridarea;
 
-/* Valeurs &lt;integer&gt; + &lt;custom-ident&gt; */
+/* Valeurs <integer> + <custom-ident> */
 grid-row-end: 2;
 grid-row-end: somegridarea 4;
 
-/* Valeurs span + &lt;integer&gt; + &lt;custom-ident&gt; */
+/* Valeurs span + <integer> + <custom-ident> */
 grid-row-end: span 3;
 grid-row-end: span somegridarea;
 grid-row-end: 5 somegridarea span;
@@ -34,49 +35,54 @@ grid-row-end: 5 somegridarea span;
 grid-row-end: inherit;
 grid-row-end: initial;
 grid-row-end: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Un mot-clé qui indique que la propriété ne contribue pas au placement de l'objet sur la grille. Par défaut, la taille du fragment allouée vaut <code>1</code> s'il n'y a pas d'autres contraintes.</dd>
- <dt><code>&lt;custom-ident&gt;</code></dt>
- <dd>S'il existe une ligne nommée '&lt;custom-ident&gt;-end', cela placera l'élément sur la première ligne correspondante..
- <div class="note"><p><strong>Note :</strong> Les noms de zones génèrent automatiquement les noms de lignes sous cette forme. Ainsi, <code>grid-row-end: foo;</code> permettra de désigner l'extrêmité (à la fin) de la zone nommée (sauf si une autre ligne a explicitement été nommée avec <code>foo-end</code>).</p></div>
+- `auto`
+  - : Un mot-clé qui indique que la propriété ne contribue pas au placement de l'objet sur la grille. Par défaut, la taille du fragment allouée vaut `1` s'il n'y a pas d'autres contraintes.
+- `<custom-ident>`
 
- <p>Si aucune zone ne correspond, la valeur est traitée comme la combinaison de l'entier 1 et de <code>&lt;custom-ident&gt;</code> (cf. définition suivante).</p>
+  - : S'il existe une ligne nommée '\<custom-ident>-end', cela placera l'élément sur la première ligne correspondante..
 
- <p><code>&lt;custom-ident</code><code>&gt;</code> ne peut pas prendre la valeur <code>span</code>.</p>
- </dd>
- <dt><code>&lt;integer&gt; &amp;&amp; &lt;custom-ident&gt;?</code></dt>
- <dd>Contribue au placement de l'élément sur la n-ième ligne. Si une valeur négative est fournie, les lignes correspondantes sont comptées depuis la dernière. Si un nom est fourni pour &lt;custom-ident&gt;, seules les lignes avec ce nom sont comptées. S'il n'y a pas suffisamment de lignes avec ce nom, on considère que toutes les lignes sont intitulées avec ce nom afin de trouver une position.
- <p>Un entier nul ne peut pas être utilisé (la règle est invalide).</p>
- </dd>
- <dt><code>span &amp;&amp; [ &lt;integer&gt; || &lt;custom-ident&gt; ]</code></dt>
- <dd>Un fragment de grille est utilisé pour le placement de l'élément sur la grille afin que le début de la ligne pour l'élément de la grille soit placé à n lignes du bord situé au début.
- <p>Si un nom fourni pour &lt;custom-ident&gt;, seules les lignes ayant ce nom seront comptées. S'il n'y a pas suffisamment de lignes existantes avec ce nom, tout les lignes implicites du côté de la grille explicite et qui correspondent à la direction de la recherche seront comptées afin de placer ce fragment.</p>
+    > **Note :** Les noms de zones génèrent automatiquement les noms de lignes sous cette forme. Ainsi, `grid-row-end: foo;` permettra de désigner l'extrêmité (à la fin) de la zone nommée (sauf si une autre ligne a explicitement été nommée avec `foo-end`).
 
- <p>Si &lt;integer&gt; est absent, la valeur par défaut sera 1. Les entiers négatifs ou nuls ne sont pas autorisés.</p>
- </dd>
-</dl>
+    Si aucune zone ne correspond, la valeur est traitée comme la combinaison de l'entier 1 et de `<custom-ident>` (cf. définition suivante).
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+    ` <custom-ident``> ` ne peut pas prendre la valeur `span`.
+
+- `<integer> && <custom-ident>?`
+
+  - : Contribue au placement de l'élément sur la n-ième ligne. Si une valeur négative est fournie, les lignes correspondantes sont comptées depuis la dernière. Si un nom est fourni pour \<custom-ident>, seules les lignes avec ce nom sont comptées. S'il n'y a pas suffisamment de lignes avec ce nom, on considère que toutes les lignes sont intitulées avec ce nom afin de trouver une position.
+
+    Un entier nul ne peut pas être utilisé (la règle est invalide).
+
+- `span && [ <integer> || <custom-ident> ]`
+
+  - : Un fragment de grille est utilisé pour le placement de l'élément sur la grille afin que le début de la ligne pour l'élément de la grille soit placé à n lignes du bord situé au début.
+
+    Si un nom fourni pour \<custom-ident>, seules les lignes ayant ce nom seront comptées. S'il n'y a pas suffisamment de lignes existantes avec ce nom, tout les lignes implicites du côté de la grille explicite et qui correspondent à la direction de la recherche seront comptées afin de placer ce fragment.
+
+    Si \<integer> est absent, la valeur par défaut sera 1. Les entiers négatifs ou nuls ne sont pas autorisés.
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;div class="box1"&gt;One&lt;/div&gt;
-  &lt;div class="box2"&gt;Two&lt;/div&gt;
-  &lt;div class="box3"&gt;Three&lt;/div&gt;
-  &lt;div class="box4"&gt;Four&lt;/div&gt;
-  &lt;div class="box5"&gt;Five&lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">Three</div>
+  <div class="box4">Four</div>
+  <div class="box5">Five</div>
+</div>
+```
 
-<pre class="brush: css">.wrapper {
+```css
+.wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: 100px;
@@ -94,9 +100,10 @@ grid-row-end: unset;
   grid-row-start: 3;
   grid-row-end: 5;
 }
-</pre>
+```
 
-<pre class="brush: css hidden">* {box-sizing: border-box;}
+```css hidden
+* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -104,7 +111,7 @@ grid-row-end: unset;
   background-color: #fff4e6;
 }
 
-.wrapper &gt; div {
+.wrapper > div {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -118,43 +125,28 @@ grid-row-end: unset;
   background-color: #fff9db;
   padding: 1em;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('Exemples', '230', '420')}}</p>
+{{EmbedLiveSample('Exemples', '230', '420')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Grid", "#propdef-grid-row-end", "grid-row-end")}}</td>
-   <td>{{Spec2("CSS3 Grid")}}</td>
-   <td>Définition initiale</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                         | Commentaires        |
+| ---------------------------------------------------------------------------------------- | ---------------------------- | ------------------- |
+| {{SpecName("CSS3 Grid", "#propdef-grid-row-end", "grid-row-end")}} | {{Spec2("CSS3 Grid")}} | Définition initiale |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.grid-row-end")}}</p>
+{{Compat("css.properties.grid-row-end")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("grid-row-start")}}</li>
- <li>{{cssxref("grid-row")}}</li>
- <li>{{cssxref("grid-column-start")}}</li>
- <li>{{cssxref("grid-column-end")}}</li>
- <li>{{cssxref("grid-column")}}</li>
- <li><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">Guide : Placer les éléments d'une grille sur les lignes</a></li>
- <li>Tutoriel vidéo : <a href="https://gridbyexample.com/video/series-line-based-placement/">le placement des éléments d'une grille sur les lignes (en anglais)</a></li>
-</ul>
+- {{cssxref("grid-row-start")}}
+- {{cssxref("grid-row")}}
+- {{cssxref("grid-column-start")}}
+- {{cssxref("grid-column-end")}}
+- {{cssxref("grid-column")}}
+- [Guide : Placer les éléments d'une grille sur les lignes](/fr/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid)
+- Tutoriel vidéo : [le placement des éléments d'une grille sur les lignes (en anglais)](https://gridbyexample.com/video/series-line-based-placement/)

@@ -7,11 +7,12 @@ tags:
   - Reference
 translation_of: Web/CSS/font-stretch
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>font-stretch</code></strong> permet de choisir entre la forme normale, condensée ou étendue d'une police.</p>
+La propriété **`font-stretch`** permet de choisir entre la forme normale, condensée ou étendue d'une police.
 
-<pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 font-stretch: ultra-condensed;
 font-stretch: extra-condensed;
 font-stretch: condensed;
@@ -31,185 +32,185 @@ font-stretch: 200%;
 font-stretch: inherit;
 font-stretch: initial;
 font-stretch: unset;
-</pre>
+```
 
-<p>Certaines polices possèdent différentes fontes pour lesquelles les caractères sont plus étroits (fontes <em>condensées</em>) et d'autres pour lesquelles les caractères sont plus amples (fontes <em>étendues</em>).</p>
+Certaines polices possèdent différentes fontes pour lesquelles les caractères sont plus étroits (fontes _condensées_) et d'autres pour lesquelles les caractères sont plus amples (fontes _étendues_).
 
-<p><code>font-stretch</code> permet de choisir entre les versions condensées ou étendues d'une police. Si la police utilisée ne possède pas de fonte utilisant cet axe de variation, elle n'aura aucun effet.</p>
+`font-stretch` permet de choisir entre les versions condensées ou étendues d'une police. Si la police utilisée ne possède pas de fonte utilisant cet axe de variation, elle n'aura aucun effet.
 
-<p>Voir la section ci-après qui illustre l'effet de cette propriété sur certaines polices.</p>
+Voir la section ci-après qui illustre l'effet de cette propriété sur certaines polices.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Cette propriété peut être définie avec un mot-clé ou avec une valeur exprimée en pourcentages (cf. {{cssxref("&lt;percentage&gt;")}}).</p>
+Cette propriété peut être définie avec un mot-clé ou avec une valeur exprimée en pourcentages (cf. {{cssxref("&lt;percentage&gt;")}}).
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Permet de choisir une fonte normale.</dd>
- <dt><code>semi-condensed</code>, <code>condensed</code>, <code>extra-condensed</code>, <code>ultra-condensed</code></dt>
- <dd>Permet de choisir une fonte plus resserrée que la normale, <code>ultra-condensed</code> correspond à la forme la plus condensée.</dd>
- <dt><code>semi-expanded</code>, <code>expanded</code>, <code>extra-expanded</code>, <code>ultra-expanded</code></dt>
- <dd>Permet de choisir une fonte plus étendue que la normale, <code>ultra-expanded</code> correspond à la forme la plus étirée.</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>Une valeur de type {{cssxref("&lt;percentage&gt;")}} entre 50% et 200% qui permet de définir la largeur de la police. Les valeurs négatives ne sont pas autorisées pour cette  propriété.</dd>
-</dl>
+- `normal`
+  - : Permet de choisir une fonte normale.
+- `semi-condensed`, `condensed`, `extra-condensed`, `ultra-condensed`
+  - : Permet de choisir une fonte plus resserrée que la normale, `ultra-condensed` correspond à la forme la plus condensée.
+- `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`
+  - : Permet de choisir une fonte plus étendue que la normale, `ultra-expanded` correspond à la forme la plus étirée.
+- `<percentage>`
+  - : Une valeur de type {{cssxref("&lt;percentage&gt;")}} entre 50% et 200% qui permet de définir la largeur de la police. Les valeurs négatives ne sont pas autorisées pour cette  propriété.
 
-<p>Dans les anciennes versions de la spécification de <code>font-stretch</code>, seuls les mots-clés étaient acceptés comme valeurs. Avec la spécification <em>CSS Fonts</em> de niveau 4, cette propriété peut également être définie avec un pourcentage. Cela permet d'obtenir un contrôle plus fin sur la largeur. Attention toutefois à la compatibilité car certains navigateurs ne prennent pas encore en charge cette fonctionnalité (cf. la section en fin d'article).</p>
+Dans les anciennes versions de la spécification de `font-stretch`, seuls les mots-clés étaient acceptés comme valeurs. Avec la spécification _CSS Fonts_ de niveau 4, cette propriété peut également être définie avec un pourcentage. Cela permet d'obtenir un contrôle plus fin sur la largeur. Attention toutefois à la compatibilité car certains navigateurs ne prennent pas encore en charge cette fonctionnalité (cf. la section en fin d'article).
 
+### Correspondance entre les mots-clés et les valeurs numériques
 
-
-<h3 id="Correspondance_entre_les_mots-clés_et_les_valeurs_numériques">Correspondance entre les mots-clés et les valeurs numériques</h3>
-
-<p>Le tableau suivant indique les correspondances entre les valeurs sous la forme de mots-clés et celles exprimées en pourcentages :</p>
+Le tableau suivant indique les correspondances entre les valeurs sous la forme de mots-clés et celles exprimées en pourcentages :
 
 <table class="fullwidth-table standard-table">
- <thead>
-  <tr>
-   <th scope="col">Mot-clé</th>
-   <th scope="col">Pourcentage</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>ultra-condensed</code></td>
-   <td>50%</td>
-  </tr>
-  <tr>
-   <td><code>extra-condensed</code></td>
-   <td>62.5%</td>
-  </tr>
-  <tr>
-   <td><code>condensed</code></td>
-   <td>75%</td>
-  </tr>
-  <tr>
-   <td><code>semi-condensed</code></td>
-   <td>87.5%</td>
-  </tr>
-  <tr>
-   <td><code>normal</code></td>
-   <td>100%</td>
-  </tr>
-  <tr>
-   <td><code>semi-expanded</code></td>
-   <td>112.5%</td>
-  </tr>
-  <tr>
-   <td><code>expanded</code></td>
-   <td>125%</td>
-  </tr>
-  <tr>
-   <td><code>extra-expanded</code></td>
-   <td>150%</td>
-  </tr>
-  <tr>
-   <td><code>ultra-expanded</code></td>
-   <td>200%</td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Mot-clé</th>
+      <th scope="col">Pourcentage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>ultra-condensed</code></td>
+      <td>50%</td>
+    </tr>
+    <tr>
+      <td><code>extra-condensed</code></td>
+      <td>62.5%</td>
+    </tr>
+    <tr>
+      <td><code>condensed</code></td>
+      <td>75%</td>
+    </tr>
+    <tr>
+      <td><code>semi-condensed</code></td>
+      <td>87.5%</td>
+    </tr>
+    <tr>
+      <td><code>normal</code></td>
+      <td>100%</td>
+    </tr>
+    <tr>
+      <td><code>semi-expanded</code></td>
+      <td>112.5%</td>
+    </tr>
+    <tr>
+      <td><code>expanded</code></td>
+      <td>125%</td>
+    </tr>
+    <tr>
+      <td><code>extra-expanded</code></td>
+      <td>150%</td>
+    </tr>
+    <tr>
+      <td><code>ultra-expanded</code></td>
+      <td>200%</td>
+    </tr>
+  </tbody>
 </table>
 
-<h3 id="Sélection_de_la_fonte">Sélection de la fonte</h3>
+### Sélection de la fonte
 
-<p>La fonte sélectionnée pour une valeur <code>font-stretch</code> dépend des fontes prises en charge par la police. Si la police ne fournit pas de fonte qui corresponde à la valeur exacte, le navigateur utilisera une fonte condensée si la valeur est inférieure à 100% et une fonte étendue si la valeur est supérieure à 100%.</p>
+La fonte sélectionnée pour une valeur `font-stretch` dépend des fontes prises en charge par la police. Si la police ne fournit pas de fonte qui corresponde à la valeur exacte, le navigateur utilisera une fonte condensée si la valeur est inférieure à 100% et une fonte étendue si la valeur est supérieure à 100%.
 
-<p>Le tableau qui suit illustre l'effet des différents pourcentage avec deux polices possédant différentes fontes :</p>
+Le tableau qui suit illustre l'effet des différents pourcentage avec deux polices possédant différentes fontes :
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="row"></th>
-   <th scope="col">50%</th>
-   <th scope="col">62.5%</th>
-   <th scope="col">75%</th>
-   <th scope="col">87.5%</th>
-   <th scope="col">100%</th>
-   <th scope="col">112.5%</th>
-   <th scope="col">125%</th>
-   <th scope="col">150%</th>
-   <th scope="col">200%</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <th scope="row">Helvetica Neue</th>
-   <td><img alt="" src="screenshot_2018-06-06_example_page.png"></td>
-   <td><img alt="" src="screenshot_2018-06-06_example_page.png"></td>
-   <td><img alt="" src="screenshot_2018-06-06_example_page.png"></td>
-   <td><img alt="" src="screenshot_2018-06-06_example_page.png"></td>
-   <td><img alt="" src="screenshot_2018-06-06_example_page1.png"></td>
-   <td><img alt="" src="screenshot_2018-06-06_example_page1.png"></td>
-   <td><img alt="" src="screenshot_2018-06-06_example_page1.png"></td>
-   <td><img alt="" src="screenshot_2018-06-06_example_page1.png"></td>
-   <td><img alt="" src="screenshot_2018-06-06_example_page1.png"></td>
-  </tr>
-  <tr>
-   <th scope="row">League Mono Variable</th>
-   <td><img alt="" src="screenshot_2018-06-06_example_page.png"></td>
-   <td><img alt="" src="screenshot_2018-06-06_example_page1.png"></td>
-   <td><img alt="" src="screenshot_2018-06-06_example_page2.png"></td>
-   <td><img alt="" src="screenshot_2018-06-06_example_page3.png"></td>
-   <td><img alt="" src="l-100.png"></td>
-   <td><img alt="" src="l-112.5.png"></td>
-   <td><img alt="" src="l-125.png"></td>
-   <td><img alt="" src="l-150.png"></td>
-   <td><img alt="" src="l-200.png"></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="row"></th>
+      <th scope="col">50%</th>
+      <th scope="col">62.5%</th>
+      <th scope="col">75%</th>
+      <th scope="col">87.5%</th>
+      <th scope="col">100%</th>
+      <th scope="col">112.5%</th>
+      <th scope="col">125%</th>
+      <th scope="col">150%</th>
+      <th scope="col">200%</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Helvetica Neue</th>
+      <td><img alt="" src="screenshot_2018-06-06_example_page.png" /></td>
+      <td><img alt="" src="screenshot_2018-06-06_example_page.png" /></td>
+      <td><img alt="" src="screenshot_2018-06-06_example_page.png" /></td>
+      <td><img alt="" src="screenshot_2018-06-06_example_page.png" /></td>
+      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
+      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
+      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
+      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
+      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
+    </tr>
+    <tr>
+      <th scope="row">League Mono Variable</th>
+      <td><img alt="" src="screenshot_2018-06-06_example_page.png" /></td>
+      <td><img alt="" src="screenshot_2018-06-06_example_page1.png" /></td>
+      <td><img alt="" src="screenshot_2018-06-06_example_page2.png" /></td>
+      <td><img alt="" src="screenshot_2018-06-06_example_page3.png" /></td>
+      <td><img alt="" src="l-100.png" /></td>
+      <td><img alt="" src="l-112.5.png" /></td>
+      <td><img alt="" src="l-125.png" /></td>
+      <td><img alt="" src="l-150.png" /></td>
+      <td><img alt="" src="l-200.png" /></td>
+    </tr>
+  </tbody>
 </table>
 
-<ul>
- <li>Helvetica Neue est installée par défaut sur macOS et possède une seule fonte condensée en plus de la fonte normale. On voit dans ce tableau que les valeurs de <code>font-stretch</code> inférieures à 100% utilisent une fonte condensée alors que les autres valeurs utilisent la fonte normale.</li>
- <li><a href="https://tylerfinck.com/leaguemonovariable/">League Mono Variable</a> est une police variable qui offre plusieurs variantes de fontes sur cet axe et on peut alors observer les variations de <code>font-stretch</code> selon les pourcentages choisis.</li>
-</ul>
+- Helvetica Neue est installée par défaut sur macOS et possède une seule fonte condensée en plus de la fonte normale. On voit dans ce tableau que les valeurs de `font-stretch` inférieures à 100% utilisent une fonte condensée alors que les autres valeurs utilisent la fonte normale.
+- [League Mono Variable](https://tylerfinck.com/leaguemonovariable/) est une police variable qui offre plusieurs variantes de fontes sur cet axe et on peut alors observer les variations de `font-stretch` selon les pourcentages choisis.
 
-<p>Pour les polices variables TrueType ou OpenType, c'est l'axe de variation <code>wdth</code> qui implémente ces largeurs variables.</p>
+Pour les polices variables TrueType ou OpenType, c'est l'axe de variation `wdth` qui implémente ces largeurs variables.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Avec_un_mot-clé">Avec un mot-clé</h3>
+### Avec un mot-clé
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p class="stretch"&gt;Le texte est plus étiré.&lt;/p&gt;
-&lt;p class="condensed"&gt;Le texte est plus resserré.&lt;/div&gt;</pre>
+```html
+<p class="stretch">Le texte est plus étiré.</p>
+<p class="condensed">Le texte est plus resserré.</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.stretch {
+```css
+.stretch {
   font-stretch: extra-expanded;
 }
 
 .condensed {
   font-stretch: condensed;
-}</pre>
+}
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('Avec_un_mot-clé', '500')}}</p>
+{{EmbedLiveSample('Avec_un_mot-clé', '500')}}
 
-<h3 id="Avec_un_pourcentage">Avec un pourcentage</h3>
+### Avec un pourcentage
 
-<p>Note : cet exemple ne fonctionnera uniquement avec les navigateurs qui prennent en charge les valeurs <code>&lt;percentage&gt;</code>.</p>
+Note : cet exemple ne fonctionnera uniquement avec les navigateurs qui prennent en charge les valeurs `<percentage>`.
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="container"&gt;
-  &lt;p class="condensed"&gt;an elephantine lizard&lt;/p&gt;
-  &lt;p class="normal"&gt;an elephantine lizard&lt;/p&gt;
-  &lt;p class="expanded"&gt;an elephantine lizard&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="container">
+  <p class="condensed">an elephantine lizard</p>
+  <p class="normal">an elephantine lizard</p>
+  <p class="expanded">an elephantine lizard</p>
+</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">/*
+```css
+/*
 Cet exemple utilise la police League Mono Variable, développée par
 Tyler Finck (https://www.tylerfinck.com/) et utilisée ici selon
 la licence SIL Open Font, Version 1.1 :
@@ -240,43 +241,23 @@ http://scripts.sil.org/cms/scripts/page.php?item_id=OFL_web
 .expanded {
   font-stretch: 200%;
 }
+```
 
-</pre>
+#### Résultat
 
-<h4 id="Résultat_2">Résultat</h4>
+{{EmbedLiveSample("Avec_un_pourcentage", 1200, 250, "", "", "example-outcome-frame")}}
 
-<p>{{EmbedLiveSample("Avec_un_pourcentage", 1200, 250, "", "", "example-outcome-frame")}}</p>
+## Spécifications
 
-<h2 id="Spécifications">Spécifications</h2>
+| Spécification                                                                            | État                             | Commentaires                                                 |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------ |
+| {{SpecName('CSS4 Fonts', '#propdef-font-stretch', 'font-stretch')}} | {{Spec2('CSS4 Fonts')}} | Ajout des valeurs `<percentage>` pour les polices variables. |
+| {{SpecName('CSS3 Fonts', '#propdef-font-stretch', 'font-stretch')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale.                                         |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Fonts', '#propdef-font-stretch', 'font-stretch')}}</td>
-   <td>{{Spec2('CSS4 Fonts')}}</td>
-   <td>Ajout des valeurs <code>&lt;percentage&gt;</code> pour les polices variables.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#propdef-font-stretch', 'font-stretch')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+> **Note :** La propriété CSS `font-stretch` fut d'abord définie par CSS 2, mais elle a été abandonnée avec CSS 2.1 par manque d'implémentation. Elle fut redéfinie avec CSS 3.
 
-<div class="note">
-<p><strong>Note :</strong> La propriété CSS <code>font-stretch</code> fut d'abord définie par CSS 2, mais elle a été abandonnée avec CSS 2.1 par manque d'implémentation. Elle fut redéfinie avec CSS 3.</p>
-</div>
+{{cssinfo}}
 
-<p>{{cssinfo}}</p>
+## Compatibilité des navigateurs
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<p>{{Compat("css.properties.font-stretch")}}</p>
+{{Compat("css.properties.font-stretch")}}

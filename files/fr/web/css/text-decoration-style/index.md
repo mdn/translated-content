@@ -7,23 +7,22 @@ tags:
   - Reference
 translation_of: Web/CSS/text-decoration-style
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>text-decoration-style</code></strong> définit le style appliqué sur les lignes visées par {{cssxref("text-decoration-line")}}. Le style s'applique à toutes les lignes définies avec <code>text-decoration-line</code>.</p>
+La propriété **`text-decoration-style`** définit le style appliqué sur les lignes visées par {{cssxref("text-decoration-line")}}. Le style s'applique à toutes les lignes définies avec `text-decoration-line`.
 
-<div class="note">
-<p><strong>Note :</strong> Il n'existe pas de méthode permettant de mettre en forme les lignes décorées différemment les unes des autres.</p>
-</div>
+> **Note :** Il n'existe pas de méthode permettant de mettre en forme les lignes décorées différemment les unes des autres.
 
-<div>{{EmbedInteractiveExample("pages/css/text-decoration-style.html")}}</div>
+{{EmbedInteractiveExample("pages/css/text-decoration-style.html")}}
 
-<p>Si la mise en forme appliquée possède une sémantique forte (par exemple barrer le texte pour indiquer qu'il a été supprimé), on recommande aux auteurs d'utiliser les balises HTML associées si elles existent (par exemple {{HTMLElement("del")}} ou {{HTMLElement("s")}}). Les navigateurs peuvent parfois désactiver la mise en forme et ces éléments permettent de conserver la sémantique du contenu quoi qu'il arrive.</p>
+Si la mise en forme appliquée possède une sémantique forte (par exemple barrer le texte pour indiquer qu'il a été supprimé), on recommande aux auteurs d'utiliser les balises HTML associées si elles existent (par exemple {{HTMLElement("del")}} ou {{HTMLElement("s")}}). Les navigateurs peuvent parfois désactiver la mise en forme et ces éléments permettent de conserver la sémantique du contenu quoi qu'il arrive.
 
-<p>La propriété raccourcie {{cssxref("text-decoration")}} permet de paramétrer cette propriété et d'autres propriétés associées aux décorations.</p>
+La propriété raccourcie {{cssxref("text-decoration")}} permet de paramétrer cette propriété et d'autres propriétés associées aux décorations.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css no-line-numbers">/* Valeurs avec des mots-clés */
+```css
+/* Valeurs avec des mots-clés */
 text-decoration-style: solid;
 text-decoration-style: double;
 text-decoration-style: dotted;
@@ -34,32 +33,31 @@ text-decoration-style: wavy;
 text-decoration-style: inherit;
 text-decoration-style: initial;
 text-decoration-style: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>solid</code></dt>
- <dd>Dessine une ligne.</dd>
- <dt><code>double</code></dt>
- <dd>Dessine une double-ligne.</dd>
- <dt><code>dotted</code></dt>
- <dd>Dessiner une ligne avec des points.</dd>
- <dt><code>dashed</code></dt>
- <dd>Dessine une ligne avec des tirets.</dd>
- <dt><code>wavy</code></dt>
- <dd>Dessine une ligne ondulée.</dd>
-</dl>
+- `solid`
+  - : Dessine une ligne.
+- `double`
+  - : Dessine une double-ligne.
+- `dotted`
+  - : Dessiner une ligne avec des points.
+- `dashed`
+  - : Dessine une ligne avec des tirets.
+- `wavy`
+  - : Dessine une ligne ondulée.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.exemple {
+```css
+.exemple {
   -moz-text-decoration-line: underline;
   -moz-text-decoration-style: wavy;
   -moz-text-decoration-color: red;
@@ -70,44 +68,30 @@ text-decoration-style: unset;
   text-decoration-style: wavy;
   text-decoration-color: red;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="exemple"&gt;Et voilà le résultat.&lt;/p&gt;
-</pre>
+```html
+<p class="exemple">Et voilà le résultat.</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples')}}</p>
+{{EmbedLiveSample('Exemples')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Text Decoration', '#text-decoration-style', 'text-decoration-style')}}</td>
-   <td>{{Spec2('CSS3 Text Decoration')}}</td>
-   <td>Définition initiale. La propriété {{cssxref("text-decoration")}} n'était pas une propriété raccourcie auparavant.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | État                                         | Commentaires                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS3 Text Decoration', '#text-decoration-style', 'text-decoration-style')}} | {{Spec2('CSS3 Text Decoration')}} | Définition initiale. La propriété {{cssxref("text-decoration")}} n'était pas une propriété raccourcie auparavant. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.text-decoration-style")}}</p>
+{{Compat("css.properties.text-decoration-style")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>La propriété raccourcie {{cssxref("text-decoration")}} qui permet, entre autres, de paramétrer <code>text-decoration-style</code>.</li>
-</ul>
+- La propriété raccourcie {{cssxref("text-decoration")}} qui permet, entre autres, de paramétrer `text-decoration-style`.

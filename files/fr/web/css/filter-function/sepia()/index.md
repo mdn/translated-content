@@ -8,31 +8,29 @@ tags:
   - Reference
 translation_of: Web/CSS/filter-function/sepia()
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p>La fonction CSS <strong><code>sepia()</code></strong> convertit une image en sépia, lui donnant un aspect plus jaune/marron, voire vielli. Le résultat obtenu est une valeur de type {{cssxref("&lt;filter-function&gt;")}}.</p>
+La fonction CSS **`sepia()`** convertit une image en sépia, lui donnant un aspect plus jaune/marron, voire vielli. Le résultat obtenu est une valeur de type {{cssxref("&lt;filter-function&gt;")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/function-sepia.html")}}</div>
+{{EmbedInteractiveExample("pages/css/function-sepia.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">sepia(<em>multiplicateur</em>)</pre>
+    sepia(multiplicateur)
 
-<h3 id="Paramètres">Paramètres</h3>
+### Paramètres
 
-<dl>
- <dt><code>multiplicateur</code></dt>
- <dd>L'intensité de la conversion indiquée sous la forme d'un nombre ({{cssxref("&lt;number&gt;")}}) ou d'un pourcentage ({{cssxref("&lt;percentage&gt;")}}). Une valeur de <code>100%</code> permttra d'obtenir une image complètement sépia tandis qu'une valeur de <code>0%</code> laissera l'image inchangée. Les valeurs entre <code>0%</code> et <code>100%</code> représenteront des conversions proportionnelles. Lors d'une interpolation, la valeur par défaut sera <code>0</code>.</dd>
-</dl>
+- `multiplicateur`
+  - : L'intensité de la conversion indiquée sous la forme d'un nombre ({{cssxref("&lt;number&gt;")}}) ou d'un pourcentage ({{cssxref("&lt;percentage&gt;")}}). Une valeur de `100%` permttra d'obtenir une image complètement sépia tandis qu'une valeur de `0%` laissera l'image inchangée. Les valeurs entre `0%` et `100%` représenteront des conversions proportionnelles. Lors d'une interpolation, la valeur par défaut sera `0`.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: css">sepia(0);     /* Aucun effet */
+```css
+sepia(0);     /* Aucun effet */
 sepia(.65);   /* 65% de sépia */
-sepia(100%);  /* Complètement sépia */</pre>
+sepia(100%);  /* Complètement sépia */
+```
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("&lt;filter-function&gt;")}}</li>
-</ul>
+- {{cssxref("&lt;filter-function&gt;")}}

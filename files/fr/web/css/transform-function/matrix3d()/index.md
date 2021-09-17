@@ -7,57 +7,76 @@ tags:
   - Transformations CSS
 translation_of: Web/CSS/transform-function/matrix3d()
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La fonction <strong><code>matrix3d()</code></strong> décrit une transformation en trois dimensions sous la forme d'une matrice homogène (4x4). Les 16 paramètres passés à la fonction sont listés par ligne puis par colonne. Le résultat de cette fonction est une valeur de type {{cssxref("&lt;transform-function&gt;")}}.</p>
+La fonction **`matrix3d()`** décrit une transformation en trois dimensions sous la forme d'une matrice homogène (4x4). Les 16 paramètres passés à la fonction sont listés par ligne puis par colonne. Le résultat de cette fonction est une valeur de type {{cssxref("&lt;transform-function&gt;")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">matrix3d(<var>a1</var>, <var>b1</var>, <var>c1</var>, <var>d1</var>, <var>a2</var>, <var>b2</var>, <var>c2</var>, <var>d2</var>, <var>a3</var>, <var>b3</var>, <var>c3</var>, <var>d3</var>, <var>a4</var>, <var>b4</var>, <var>c4</var>, <var>d4</var>)</pre>
+    matrix3d(a1, b1, c1, d1, a2, b2, c2, d2, a3, b3, c3, d3, a4, b4, c4, d4)
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><var>a1</var> <var>b1</var> <var>c1</var> <var>d1</var> <var>a2</var> <var>b2</var> <var>c2</var> <var>d2</var> <var>a3</var> <var>b3</var> <var>c3</var> <var>d3</var> <var>d4</var></dt>
- <dd>Des valeurs de type {{cssxref("&lt;number&gt;")}} qui sont les coefficients de la matrice définissant la transformation linéaire.</dd>
- <dt><code>a4</code> <code>b4<em> </em>c4</code></dt>
- <dd>Les coefficients de type {{cssxref("&lt;number&gt;")}} qui définissent la translation à appliquer.</dd>
-</dl>
+- _a1_ _b1_ _c1_ _d1_ _a2_ _b2_ _c2_ _d2_ _a3_ _b3_ _c3_ _d3_ _d4_
+  - : Des valeurs de type {{cssxref("&lt;number&gt;")}} qui sont les coefficients de la matrice définissant la transformation linéaire.
+- `a4` `b4 c4`
+  - : Les coefficients de type {{cssxref("&lt;number&gt;")}} qui définissent la translation à appliquer.
 
-<div class="note">
-  <p><strong>Note :</strong> Jusqu'à Firefox 16, Gecko permettait d'utiliser des valeurs {{cssxref("&lt;length&gt;")}} pour les coefficients <code>a4</code>, <code>b4</code> et <code>c4</code>.</p>
-</div>
+> **Note :** Jusqu'à Firefox 16, Gecko permettait d'utiliser des valeurs {{cssxref("&lt;length&gt;")}} pour les coefficients `a4`, `b4` et `c4`.
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
-   <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
-   <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
-   <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td colspan="2" rowspan="2">Cette transformation s'applique dans l'espace (3D) et ne peut pas être représentée en deux dimensions.</td>
-   <td colspan="1" rowspan="2">Les matrices exprimées avec des coordonnées cartésiennes ne permettent pas de représenter des transformations 3D affines car les translations ne sont pas des transformations linéaires.</td>
-   <td colspan="1" rowspan="2"><math><mfenced><mtable><mtr><mtd>a1</mtd><mtd>a2</mtd><mtd>a3</mtd><mtd>a4</mtd></mtr><mtr><mtd>b1</mtd><mtd>b2</mtd><mtd>b3</mtd><mtd>b4</mtd></mtr><mtr><mtd>c1</mtd><mtd>c2</mtd><mtd>c3</mtd><mtd>c4</mtd></mtr><mtr><mtd>d1</mtd><mtd>d2</mtd><mtd>d3</mtd><mtd>d4</mtd></mtr></mtable> </mfenced> </math></td>
-  </tr>
- </tbody>
+  <thead>
+    <tr>
+      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>2</sup></th>
+      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>2</sup></th>
+      <th scope="col">Coordonnées cartésiennes sur ℝ<sup>3</sup></th>
+      <th scope="col">Coordonnées homogènes sur ℝℙ<sup>3</sup></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="2" rowspan="2">
+        Cette transformation s'applique dans l'espace (3D) et ne peut pas être
+        représentée en deux dimensions.
+      </td>
+      <td colspan="1" rowspan="2">
+        Les matrices exprimées avec des coordonnées cartésiennes ne permettent
+        pas de représenter des transformations 3D affines car les translations
+        ne sont pas des transformations linéaires.
+      </td>
+      <td colspan="1" rowspan="2">
+        <math
+          ><mfenced
+            ><mtable
+              ><mtr><mtd>a1</mtd><mtd>a2</mtd><mtd>a3</mtd><mtd>a4</mtd></mtr
+              ><mtr><mtd>b1</mtd><mtd>b2</mtd><mtd>b3</mtd><mtd>b4</mtd></mtr
+              ><mtr><mtd>c1</mtd><mtd>c2</mtd><mtd>c3</mtd><mtd>c4</mtd></mtr
+              ><mtr
+                ><mtd>d1</mtd><mtd>d2</mtd><mtd>d3</mtd><mtd>d4</mtd></mtr
+              ></mtable
+            ></mfenced
+          ></math
+        >
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Exemple_simple">Exemple simple</h3>
+### Exemple simple
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;p&gt;toto&lt;/p&gt;
-&lt;p class="transformation"&gt;truc&lt;/p&gt;</pre>
+```html
+<p>toto</p>
+<p class="transformation">truc</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   width: 50px;
   height: 50px;
   background-color: teal;
@@ -67,26 +86,28 @@ translation_of: Web/CSS/transform-function/matrix3d()
   transform: matrix3d(0.87,-0.5,0.00,0,0.50,0.87,0.00,0,0,0,1,0,0,0,0,1);
   background-color: blue;
 }
-</pre>
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Exemple_simple","100%","200")}}</p>
+{{EmbedLiveSample("Exemple_simple","100%","200")}}
 
-<h3 id="Translation_et_homothétie_matricielle">Translation et homothétie matricielle</h3>
+### Translation et homothétie matricielle
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="foo"&gt;
+```html
+<div class="foo">
  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
  Quos quaerat sit soluta, quisquam exercitationem delectus qui unde in facere
  necessitatibus aut quia porro dolorem nesciunt enim, at consequuntur aliquam esse?
-&lt;/div&gt;
-</pre>
+</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">html {
+```css
+html {
   width: 100%;
 }
 body {
@@ -146,39 +167,25 @@ body {
       50,100,0,1.1
     )
   }
-}</pre>
+}
+```
 
-<h4 id="Résultat_2">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('Translation_et_homothétie_matricielle', '100%', '400px')}}</p>
+{{EmbedLiveSample('Translation_et_homothétie_matricielle', '100%', '400px')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Transforms 2", "#funcdef-matrix3d", "matrix3d()")}}</td>
-   <td>{{Spec2("CSS Transforms 2")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                                     | Commentaires         |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName("CSS Transforms 2", "#funcdef-matrix3d", "matrix3d()")}} | {{Spec2("CSS Transforms 2")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>Voir la page sur le type de donnée <code><a href="/fr/docs/Web/CSS/transform-function#compatibilité_des_navigateurs">&lt;transform-function&gt;</a></code> pour les informations de compatibilité associées.</p>
+Voir la page sur le type de donnée [`<transform-function>`](/fr/docs/Web/CSS/transform-function#compatibilité_des_navigateurs) pour les informations de compatibilité associées.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("transform")}}</li>
- <li>{{cssxref("&lt;transform-function&gt;")}}</li>
- <li><a href="https://dev.opera.com/articles/understanding-the-css-transforms-matrix/">Comprendre les matrices de transformations CSS (en anglais)</a></li>
-</ul>
+- {{cssxref("transform")}}
+- {{cssxref("&lt;transform-function&gt;")}}
+- [Comprendre les matrices de transformations CSS (en anglais)](https://dev.opera.com/articles/understanding-the-css-transforms-matrix/)

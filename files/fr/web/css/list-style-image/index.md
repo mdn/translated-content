@@ -7,21 +7,18 @@ tags:
   - Reference
 translation_of: Web/CSS/list-style-image
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>list-style-image</code></strong> définit l'image utilisée comme puce devant les <a href="fr/HTML/%c3%89l%c3%a9ment/li">éléments de listes</a>. On peut également utiliser la propriété raccourcie {{cssxref("list-style")}}.</p>
+La propriété **`list-style-image`** définit l'image utilisée comme puce devant les [éléments de listes](fr/HTML/%c3%89l%c3%a9ment/li). On peut également utiliser la propriété raccourcie {{cssxref("list-style")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/list-style-image.html")}}</div>
+{{EmbedInteractiveExample("pages/css/list-style-image.html")}}
 
+> **Note :** Cette propriété s'applique aux éléments d'une liste (c'est-à-dire aux éléments pour lesquels {{cssxref("display")}}` : list-item``; `}}). Par défaut, cela inclut les éléments {{HTMLElement("li")}}. Cette propriété peut être héritée par les éléments et si on veut donc gérer une liste de façon uniforme, on pourra appliquer la propriété à l'élément parent (qui correspond en général à {{HTMLElement("ol")}} ou à {{HTMLElement("ul")}}).
 
+## Syntaxe
 
-<div class="note">
-<p><strong>Note :</strong> Cette propriété s'applique aux éléments d'une liste (c'est-à-dire aux éléments pour lesquels {{cssxref("display")}}<code>: list-item</code><code>;</code>}}). Par défaut, cela inclut les éléments {{HTMLElement("li")}}. Cette propriété peut être héritée par les éléments et si on veut donc gérer une liste de façon uniforme, on pourra appliquer la propriété à l'élément parent (qui correspond en général à {{HTMLElement("ol")}} ou à {{HTMLElement("ul")}}).</p>
-</div>
-
-<h2 id="Syntaxe">Syntaxe</h2>
-
-<pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé*/
+```css
+/* Valeurs avec un mot-clé*/
 list-style-image: none;
 
 /*  Valeurs pointant vers une image */
@@ -31,76 +28,58 @@ list-style-image: url('starsolid.gif');
 list-style-image: inherit;
 list-style-image: initial;
 list-style-image: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>url</code></dt>
- <dd>Emplacement de l'image à utiliser comme puce (cf. {{cssxref("&lt;url&gt;")}} pour plus de détails sur les valeurs possibles pour ce type).</dd>
- <dt><code>none</code></dt>
- <dd>Aucune image ne sera utilisée comme puce. Si cette valeur est définie, le marqueur défini avec {{cssxref("list-style-type")}} sera utilisé à la place.</dd>
-</dl>
+- `url`
+  - : Emplacement de l'image à utiliser comme puce (cf. {{cssxref("&lt;url&gt;")}} pour plus de détails sur les valeurs possibles pour ce type).
+- `none`
+  - : Aucune image ne sera utilisée comme puce. Si cette valeur est définie, le marqueur défini avec {{cssxref("list-style-type")}} sera utilisé à la place.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">ul {
+```css
+ul {
   list-style-image: url("https://mdn.mozillademos.org/files/11981/starsolid.gif");
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ul&gt;
-    &lt;li&gt;Élément 1&lt;/li&gt;
-    &lt;li&gt;Élément 2&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
-
-<h3 id="Résultat">Résultat</h3>
-
-<p>{{EmbedLiveSample('Exemple')}}</p>
-
-<h2 id="Spécifications">Spécifications</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Lists', '#propdef-list-style-image', 'list-style-image')}}</td>
-   <td>{{Spec2('CSS3 Lists')}}</td>
-   <td>Propriété étendue pour supporter n'importe quel type {{cssxref("&lt;image&gt;")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'generate.html#propdef-list-style-image', 'list-style-image')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
-
-<p>{{cssinfo}}</p>
-
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<p>{{Compat("css.properties.list-style-image")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
+```html
 <ul>
- <li>{{cssxref("list-style")}}</li>
- <li>{{cssxref("list-style-type")}}</li>
- <li>{{cssxref("list-style-position")}}</li>
- <li>La fonction {{cssxref("url()", "url()")}}</li>
+    <li>Élément 1</li>
+    <li>Élément 2</li>
 </ul>
+```
+
+### Résultat
+
+{{EmbedLiveSample('Exemple')}}
+
+## Spécifications
+
+| Spécification                                                                                                    | État                             | Commentaires                                                                               |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------ |
+| {{SpecName('CSS3 Lists', '#propdef-list-style-image', 'list-style-image')}}             | {{Spec2('CSS3 Lists')}} | Propriété étendue pour supporter n'importe quel type {{cssxref("&lt;image&gt;")}}. |
+| {{SpecName('CSS2.1', 'generate.html#propdef-list-style-image', 'list-style-image')}} | {{Spec2('CSS2.1')}}         | Définition initiale.                                                                       |
+
+{{cssinfo}}
+
+## Compatibilité des navigateurs
+
+{{Compat("css.properties.list-style-image")}}
+
+## Voir aussi
+
+- {{cssxref("list-style")}}
+- {{cssxref("list-style-type")}}
+- {{cssxref("list-style-position")}}
+- La fonction {{cssxref("url()", "url()")}}

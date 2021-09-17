@@ -7,15 +7,16 @@ tags:
   - Reference
 translation_of: Web/CSS/background-position
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>background-position</code></strong> permet de définir la position initiale, relative à l'origine définie par {{cssxref("background-origin")}}, pour chaque image d'arrière-plan.</p>
+La propriété **`background-position`** permet de définir la position initiale, relative à l'origine définie par {{cssxref("background-origin")}}, pour chaque image d'arrière-plan.
 
-<div>{{EmbedInteractiveExample("pages/css/background-position.html")}}</div>
+{{EmbedInteractiveExample("pages/css/background-position.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css no-line-numbers">/* Valeurs utilisant un mot-clé */
+```css
+/* Valeurs utilisant un mot-clé */
 background-position: top;
 background-position: bottom;
 background-position: left;
@@ -23,11 +24,11 @@ background-position: right;
 background-position: center;
 
 /* Valeurs proportionnelles à la boîte */
-/* Type &lt;percentage&gt;                   */
+/* Type <percentage>                   */
 background-position: 25% 75%;
 
 /* Valeurs de longueur */
-/* Type &lt;length&gt;       */
+/* Type <length>       */
 background-position: 0 0;
 background-position: 1cm 2cm;
 background-position: 10ch 8em;
@@ -45,63 +46,57 @@ background-position: top right 10px;
 background-position: inherit;
 background-position: initial;
 background-position: unset;
-</pre>
+```
 
-<p>La propriété <code>background-position</code> peut être définie grâce à une ou plusieurs valeurs <code><a href="#&lt;position>">&lt;position&gt;</a></code>, séparées par des virgules.</p>
+La propriété `background-position` peut être définie grâce à une ou plusieurs valeurs [`<position>`](#<position>), séparées par des virgules.
 
-<h3 id="Values">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;position&gt;</code></dt>
- <dd>Une valeur {{cssxref("&lt;position&gt;")}}. Une position définit un couple de coordonnées XY qui permet de placer un objet par rapport aux bords de la boîte d'un élément. Une position peut être définie avec une ou deux valeurs.La première correspond à la position horizontale et la seconde à la position verticale.
- <p><strong>Définition avec une valeur :</strong> la valeur peut être :</p>
+- `<position>`
 
- <ul>
-  <li>Le mot-clé <code>center</code> qui centre l'image.</li>
-  <li>Un mot-clé parmi <code>top</code>, <code>left</code>, <code>bottom</code>, <code>right</code>. Ce mot-clé indique le bord par rapport auquel placer l'élément. Pour l'autre dimension, on utilisera la moitié de la boîte (50%).</li>
-  <li>Une longeur ({{cssxref("&lt;length&gt;")}}) ou un pourcentage ({{cssxref("&lt;percentage&gt;")}}). Cette valeur définit l'abscisse du point par rapport au bord gauche. L'ordonnée est fixée à 50%.</li>
- </ul>
+  - : Une valeur {{cssxref("&lt;position&gt;")}}. Une position définit un couple de coordonnées XY qui permet de placer un objet par rapport aux bords de la boîte d'un élément. Une position peut être définie avec une ou deux valeurs.La première correspond à la position horizontale et la seconde à la position verticale.
 
- <p><strong>Définition avec deux valeurs :</strong> la première valeur définit l'abscisse (la coordonnée horizontale X) et la seconde définit l'ordonnée (la coordonnée verticale Y). Chaque valeur peut être :</p>
+    **Définition avec une valeur :** la valeur peut être :
 
- <ul>
-  <li>Un des mots-clés parmi <code>top</code>, <code>left</code>, <code>bottom</code>, <code>right</code>. Si <code>left</code> ou <code>right</code> est utilisé, la valeur définit l'abscisse et l'autre définira l'ordonnée. Si <code>top</code> ou <code>bottom</code> est indiqué, cette valeur définira l'ordonnée et l'autre valeur définira X.</li>
-  <li>Une valeur de longueur ({{cssxref("&lt;length&gt;")}}) ou un pourcentage ({{cssxref("&lt;percentage&gt;")}}). Si l'autre valeur vaut <code>left</code> ou <code>right</code>, cette valeur définira l'ordonnée par rapport au bord haut. Si l'autre valeur est <code>top</code> ou <code>bottom</code>,  cette valeur définira l'abscisse relativement au bord gauche. Si les deux valeurs sont des longueurs ou des pourcentages, la première définira l'abscisse et la seconde l'ordonnée.</li>
- </ul>
+    - Le mot-clé `center` qui centre l'image.
+    - Un mot-clé parmi `top`, `left`, `bottom`, `right`. Ce mot-clé indique le bord par rapport auquel placer l'élément. Pour l'autre dimension, on utilisera la moitié de la boîte (50%).
+    - Une longeur ({{cssxref("&lt;length&gt;")}}) ou un pourcentage ({{cssxref("&lt;percentage&gt;")}}). Cette valeur définit l'abscisse du point par rapport au bord gauche. L'ordonnée est fixée à 50%.
 
- <p>On notera que :</p>
+    **Définition avec deux valeurs :** la première valeur définit l'abscisse (la coordonnée horizontale X) et la seconde définit l'ordonnée (la coordonnée verticale Y). Chaque valeur peut être :
 
- <ul>
-  <li>si une valeur est <code>top</code> ou <code>bottom</code>, la seconde ne peut pas être <code>top</code> ou <code>bottom</code>.</li>
-  <li>si une valeur est <code>left</code> ou <code>right</code>, la seconde ne peut pas être <code>left</code> ou <code>right</code>.</li>
- </ul>
+    - Un des mots-clés parmi `top`, `left`, `bottom`, `right`. Si `left` ou `right` est utilisé, la valeur définit l'abscisse et l'autre définira l'ordonnée. Si `top` ou `bottom` est indiqué, cette valeur définira l'ordonnée et l'autre valeur définira X.
+    - Une valeur de longueur ({{cssxref("&lt;length&gt;")}}) ou un pourcentage ({{cssxref("&lt;percentage&gt;")}}). Si l'autre valeur vaut `left` ou `right`, cette valeur définira l'ordonnée par rapport au bord haut. Si l'autre valeur est `top` ou `bottom`,  cette valeur définira l'abscisse relativement au bord gauche. Si les deux valeurs sont des longueurs ou des pourcentages, la première définira l'abscisse et la seconde l'ordonnée.
 
- <p>Autrement dit "<code>top top"</code> ou "<code>left right</code>" seront considérées comme invalides.</p>
+    On notera que :
 
- <p><strong>À propos des pourcentages :</strong> lorsqu'on exprime un décalage en pourcentage, ce dernier est relatif au conteneur. Ainsi, une valeur de 0% indiquera que le côté gauche (ou haut) du bord de l'image est aligné avec le bord gauche (ou haut) du conteneur. Une valeur de 100% indiquera que le côté droit (ou bas) de l'image d'arrière-plan est alignée avec le bord droit (ou bas) du conteneur. Une valeur de 50% permettra de centrer l'image.</p>
+    - si une valeur est `top` ou `bottom`, la seconde ne peut pas être `top` ou `bottom`.
+    - si une valeur est `left` ou `right`, la seconde ne peut pas être `left` ou `right`.
 
- <p>Autrement dit, lorsqu'on utilise un pourcentage, celui-ci s'inscrit dans la formule suivante :</p>
+    Autrement dit "`top top"` ou "`left right`" seront considérées comme invalides.
 
- <p><code>(largeur conteneur - largeur image) * (position en %) = (décalage horizontal)</code><br>
-  <code>(hauteur conteneur - hauteur image) * (position en %) = (décalage vertical)</code>.</p>
+    **À propos des pourcentages :** lorsqu'on exprime un décalage en pourcentage, ce dernier est relatif au conteneur. Ainsi, une valeur de 0% indiquera que le côté gauche (ou haut) du bord de l'image est aligné avec le bord gauche (ou haut) du conteneur. Une valeur de 100% indiquera que le côté droit (ou bas) de l'image d'arrière-plan est alignée avec le bord droit (ou bas) du conteneur. Une valeur de 50% permettra de centrer l'image.
 
- <p>On notera donc que si l'image d'arrière-plan a les mêmes dimensions que le conteneur, les valeurs en pourcentage pour <code>background-position</code> n'auront aucun effet. Il faudra utiliser des valeurs absolues pour décaler l'image.</p>
- </dd>
-</dl>
+    Autrement dit, lorsqu'on utilise un pourcentage, celui-ci s'inscrit dans la formule suivante :
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+    `(largeur conteneur - largeur image) * (position en %) = (décalage horizontal)`
+    `(hauteur conteneur - hauteur image) * (position en %) = (décalage vertical)`.
+
+    On notera donc que si l'image d'arrière-plan a les mêmes dimensions que le conteneur, les valeurs en pourcentage pour `background-position` n'auront aucun effet. Il faudra utiliser des valeurs absolues pour décaler l'image.
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Exemples_utilisant_plusieurs_images">Exemples utilisant plusieurs images</h3>
+### Exemples utilisant plusieurs images
 
-<p>Dans cet exemple, on a trois éléments jaunes qui ont chacun une étoile située différemment. Le rectangle final possède deux images d'arrière-plan, chacune à une position différente.</p>
+Dans cet exemple, on a trois éléments jaunes qui ont chacun une étoile située différemment. Le rectangle final possède deux images d'arrière-plan, chacune à une position différente.
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: #FFEE99;
   background-repeat: no-repeat;
   width: 300px;
@@ -127,66 +122,44 @@ L'ordre est le même entre background-image et -position.
                        url("https://mdn.mozillademos.org/files/7693/catfront.png");
   background-position: 0px 0px,
                        center;
-}</pre>
+}
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="exemple_un"&gt;Premier exemple&lt;/div&gt;
-&lt;div class="exemple_deux"&gt;Deuxième exemple&lt;/div&gt;
-&lt;div class="exemple_trois"&gt;Troisième exemple&lt;/div&gt;</pre>
+```html
+<div class="exemple_un">Premier exemple</div>
+<div class="exemple_deux">Deuxième exemple</div>
+<div class="exemple_trois">Troisième exemple</div>
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample('Exemples', 420, 200)}}</p>
+{{EmbedLiveSample('Exemples', 420, 200)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Backgrounds', '#background-position', 'background-position')}}</td>
-   <td>{{Spec2('CSS3 Backgrounds')}}</td>
-   <td>La gestion de plusieurs arrières-plans a été ajoutée. La syntaxe avec quatre valeurs a été ajoutée. La définition des valeurs en pourcentages a été modifiée pour correspondre aux implémentations.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'colors.html#propdef-background-position', 'background-position')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Cette spécification permet de mélanger les valeurs qui sont des mots-clés, les valeurs de type {{cssxref("&lt;length&gt;")}} et {{cssxref("&lt;percentage&gt;")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#background-position', 'background-position')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | État                                     | Commentaires                                                                                                                                                                                        |
+| -------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS3 Backgrounds', '#background-position', 'background-position')}}             | {{Spec2('CSS3 Backgrounds')}} | La gestion de plusieurs arrières-plans a été ajoutée. La syntaxe avec quatre valeurs a été ajoutée. La définition des valeurs en pourcentages a été modifiée pour correspondre aux implémentations. |
+| {{SpecName('CSS2.1', 'colors.html#propdef-background-position', 'background-position')}} | {{Spec2('CSS2.1')}}                 | Cette spécification permet de mélanger les valeurs qui sont des mots-clés, les valeurs de type {{cssxref("&lt;length&gt;")}} et {{cssxref("&lt;percentage&gt;")}}.            |
+| {{SpecName('CSS1', '#background-position', 'background-position')}}                             | {{Spec2('CSS1')}}                 | Définition initiale.                                                                                                                                                                                |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.background-position")}}</p>
+{{Compat("css.properties.background-position")}}
 
-<h3 id="Notes_relatives_à_Quantum_CSS">Notes relatives à Quantum CSS</h3>
+### Notes relatives à Quantum CSS
 
-<ul>
- <li>Un bug de Gecko empêche la transition de <code>background-position</code> entre deux valeurs qui contiennent différents nombres de valeurs {{cssxref("&lt;position&gt;")}} (par exemple <code>background-position: 10px 10px;</code> d'une part et <code>background-position: 20px 20px, 30px 30px;</code> d'autre part) (cf. {{bug(1390446)}}). Le nouveau moteur CSS de Firefox (appelé <a href="https://wiki.mozilla.org/Quantum">Quantum CSS</a> ou <a href="https://wiki.mozilla.org/Quantum/Stylo">Stylo</a>, prévu pour Firefox 57) corrige ce problème.</li>
-</ul>
+- Un bug de Gecko empêche la transition de `background-position` entre deux valeurs qui contiennent différents nombres de valeurs {{cssxref("&lt;position&gt;")}} (par exemple `background-position: 10px 10px;` d'une part et `background-position: 20px 20px, 30px 30px;` d'autre part) (cf. {{bug(1390446)}}). Le nouveau moteur CSS de Firefox (appelé [Quantum CSS](https://wiki.mozilla.org/Quantum) ou [Stylo](https://wiki.mozilla.org/Quantum/Stylo), prévu pour Firefox 57) corrige ce problème.
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds">Gérer plusieurs arrières-plans</a></li>
- <li>{{cssxref("background-position-x")}}</li>
- <li>{{cssxref("background-position-y")}}</li>
- <li>{{cssxref("background-position-inline")}}</li>
- <li>{{cssxref("background-position-block")}}</li>
- <li>{{cssxref("transform-origin")}}</li>
-</ul>
+- [Gérer plusieurs arrières-plans](/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- {{cssxref("background-position-x")}}
+- {{cssxref("background-position-y")}}
+- {{cssxref("background-position-inline")}}
+- {{cssxref("background-position-block")}}
+- {{cssxref("transform-origin")}}

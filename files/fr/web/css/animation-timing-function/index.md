@@ -7,17 +7,18 @@ tags:
   - Reference
 translation_of: Web/CSS/animation-timing-function
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <code><strong>animation-timing-function</strong></code> définit la façon dont une animation CSS doit se dérouler au fur et à mesure de chaque cycle. Cette propriété prendra comme valeurs une ou plusieurs fonctions {{cssxref("easing-function")}}.</p>
+La propriété **`animation-timing-function`** définit la façon dont une animation CSS doit se dérouler au fur et à mesure de chaque cycle. Cette propriété prendra comme valeurs une ou plusieurs fonctions {{cssxref("easing-function")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/animation-timing-function.html")}}</div>
+{{EmbedInteractiveExample("pages/css/animation-timing-function.html")}}
 
-<p>Généralement, on pourra utiliser la propriété raccourcie {{cssxref("animation")}} pour définir l'ensemble des propriétés liées à une animation.</p>
+Généralement, on pourra utiliser la propriété raccourcie {{cssxref("animation")}} pour définir l'ensemble des propriétés liées à une animation.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 animation-timing-function: ease;
 animation-timing-function: ease-in;
 animation-timing-function: ease-out;
@@ -45,80 +46,77 @@ animation-timing-function: ease, step-start, cubic-bezier(0.1, 0.7, 1.0, 0.1);
 animation-timing-function: inherit;
 animation-timing-function: initial;
 animation-timing-function: unset;
-</pre>
+```
 
-<p>Pour les animations cadencées (<em>keyframed</em>), la fonction s'applique entre chaque étape (ou <em><a href="/fr/docs/Web/CSS/@keyframes">keyframes</a></em>) plutôt que sur l'animation dans son ensemble. Autrement dit, la fonction de <em>timing</em> est appliquée au début et à la fin de l'étape de l'animation.</p>
+Pour les animations cadencées (_keyframed_), la fonction s'applique entre chaque étape (ou _[keyframes](/fr/docs/Web/CSS/@keyframes)_) plutôt que sur l'animation dans son ensemble. Autrement dit, la fonction de _timing_ est appliquée au début et à la fin de l'étape de l'animation.
 
-<p>Une fonction de progression pour une animation qui est définie pour une étape sera appliquée à cette étape en particulier. Si aucune fonction n'est définie pour l'étape, ce sera la fonction de progression de toute l'animation qui sera utilisée.</p>
+Une fonction de progression pour une animation qui est définie pour une étape sera appliquée à cette étape en particulier. Si aucune fonction n'est définie pour l'étape, ce sera la fonction de progression de toute l'animation qui sera utilisée.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;timing-function&gt;</code></dt>
- <dd>Chaque valeur {{cssxref("easing-function")}} représente une fonction temporelle à rattacher à une animation définie grâce à {{cssxref("animation-name")}}.
- <p>Les valeurs avec des mots-clés (<code>ease</code>, <code>linear</code>, <code>ease-in-out</code>, etc.) correspondent à une courbe de Bézier cubique fixe avec quatre valeurs prédéfinies; La fonction <code>cubic-bezier()</code> permet de paramétrer une courbe spécifique. Les fonctions en escalier permettent de diviser l'animation en intervalles de même durée.</p>
+- `<timing-function>`
 
- <dl>
-  <dt><code>ease</code></dt>
-  <dd>Correspond à <code>cubic-bezier(0.25, 0.1, 0.25, 1.0)</code> : c'est la valeur par défaut, la vitesse de l'animation augmente au milieu de celle-ci puis ralentit à la fin.</dd>
-  <dt><code>linear</code></dt>
-  <dd>Correspond à <code>cubic-bezier(0.0, 0.0, 1.0, 1.0)</code> : l'animation s'effectue à vitesse constante.</dd>
-  <dt><code>ease-in</code></dt>
-  <dd>Correspond à <code>cubic-bezier(0.42, 0, 1.0, 1.0)</code> : l'animation commence doucement puis la vitesse augmente jusqu'à ce qu'elle soit terminée.</dd>
-  <dt><code>ease-out</code></dt>
-  <dd>Correspond à <code>cubic-bezier(0, 0, 0.58, 1.0)</code> : l'animation commence rapidement puis ralentit jusqu'à la fin.</dd>
-  <dt><code>ease-in-out</code></dt>
-  <dd>Correspond à <code>cubic-bezier(0.42, 0, 0.58, 1.0)</code> : l'animation commence lentement, accèlere puis ralentit à nouveau avant la fin.</dd>
-  <dt><code>cubic-bezier(p1, p2, p3, p4)</code></dt>
-  <dd>Une courbe de Bézier paramétrable à l'aide de quatre coefficient compris entre 0 et 1.</dd>
-  <dt><code>steps( n, &lt;jumpterm&gt;)</code></dt>
-  <dd>L'animation s'effectue selon <em>n</em> étapes de durées égales. Ainsi, si n vaut 5, l'animation se composera de cinq paliers. Selon la valeur du paramètre <em>jumpterm</em>, ces paliers se trouveront entre 0%, 20%, 40%, 60% et 80%, ou entre 20%, 40%, 60%, 80% et 100%, or ou inclueront également 0% et 100% (soit 0%, 25%, 50%, 75% et 100%) :
-  <dl>
-   <dt><code>jump-start</code></dt>
-   <dd>La fonction est continue à gauche et le premier saut se produit au début de l'animation.</dd>
-   <dt><code>jump-end</code></dt>
-   <dd>La fonction est continue à droite et le dernier saut se produit à la fin de l'animation.</dd>
-   <dt><code>jump-none</code></dt>
-   <dd>Il n'y a aucune rupture au début ou à la fin. Il y a un palier constant après 0% et un palier constant avant 100% (chacun durant 1/n).</dd>
-   <dt><code>jump-both</code></dt>
-   <dd>Une pause est présente aux niveaux 0% et 100%, ce qui ajoute un niveau pendant l'animation.</dd>
-   <dt><code>start</code></dt>
-   <dd>Identique à <code>jump-start.</code></dd>
-   <dt><code>end</code></dt>
-   <dd>Identique à <code>jump-end.</code></dd>
-  </dl>
-  </dd>
-  <dt><code>step-start</code></dt>
-  <dd>Synonyme de <code>steps(1, jump-start)</code></dd>
-  <dt><code>step-end</code></dt>
-  <dd>Synonyme de <code>steps(1, jump-end)</code></dd>
- </dl>
- </dd>
-</dl>
+  - : Chaque valeur {{cssxref("easing-function")}} représente une fonction temporelle à rattacher à une animation définie grâce à {{cssxref("animation-name")}}.
 
-<div class="note">
-<p><strong>Note :</strong> Lorsqu'on définit plusieurs valeurs, séparées par des virgules, sur une propriété <code>animation-*</code>, elles seront affectées selon leur ordre aux différentes animations listées par  {{cssxref("animation-name")}}. Si le nombre de valeurs n'est pas le même que le nombre d'animation, voir <a href="/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations#utiliser_plusieurs_valeurs_pour_diff%c3%a9rentes_animations">Paramétrer plusieurs valeurs de propriétés pour les animations</a>.</p>
-</div>
+    Les valeurs avec des mots-clés (`ease`, `linear`, `ease-in-out`, etc.) correspondent à une courbe de Bézier cubique fixe avec quatre valeurs prédéfinies; La fonction `cubic-bezier()` permet de paramétrer une courbe spécifique. Les fonctions en escalier permettent de diviser l'animation en intervalles de même durée.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+    - `ease`
+      - : Correspond à `cubic-bezier(0.25, 0.1, 0.25, 1.0)` : c'est la valeur par défaut, la vitesse de l'animation augmente au milieu de celle-ci puis ralentit à la fin.
+    - `linear`
+      - : Correspond à `cubic-bezier(0.0, 0.0, 1.0, 1.0)` : l'animation s'effectue à vitesse constante.
+    - `ease-in`
+      - : Correspond à `cubic-bezier(0.42, 0, 1.0, 1.0)` : l'animation commence doucement puis la vitesse augmente jusqu'à ce qu'elle soit terminée.
+    - `ease-out`
+      - : Correspond à `cubic-bezier(0, 0, 0.58, 1.0)` : l'animation commence rapidement puis ralentit jusqu'à la fin.
+    - `ease-in-out`
+      - : Correspond à `cubic-bezier(0.42, 0, 0.58, 1.0)` : l'animation commence lentement, accèlere puis ralentit à nouveau avant la fin.
+    - `cubic-bezier(p1, p2, p3, p4)`
+      - : Une courbe de Bézier paramétrable à l'aide de quatre coefficient compris entre 0 et 1.
+    - `steps( n, <jumpterm>)`
+
+      - : L'animation s'effectue selon _n_ étapes de durées égales. Ainsi, si n vaut 5, l'animation se composera de cinq paliers. Selon la valeur du paramètre _jumpterm_, ces paliers se trouveront entre 0%, 20%, 40%, 60% et 80%, ou entre 20%, 40%, 60%, 80% et 100%, or ou inclueront également 0% et 100% (soit 0%, 25%, 50%, 75% et 100%) :
+
+        - `jump-start`
+          - : La fonction est continue à gauche et le premier saut se produit au début de l'animation.
+        - `jump-end`
+          - : La fonction est continue à droite et le dernier saut se produit à la fin de l'animation.
+        - `jump-none`
+          - : Il n'y a aucune rupture au début ou à la fin. Il y a un palier constant après 0% et un palier constant avant 100% (chacun durant 1/n).
+        - `jump-both`
+          - : Une pause est présente aux niveaux 0% et 100%, ce qui ajoute un niveau pendant l'animation.
+        - `start`
+          - : Identique à `jump-start.`
+        - `end`
+          - : Identique à `jump-end.`
+
+    - `step-start`
+      - : Synonyme de `steps(1, jump-start)`
+    - `step-end`
+      - : Synonyme de `steps(1, jump-end)`
+
+> **Note :** Lorsqu'on définit plusieurs valeurs, séparées par des virgules, sur une propriété `animation-*`, elles seront affectées selon leur ordre aux différentes animations listées par  {{cssxref("animation-name")}}. Si le nombre de valeurs n'est pas le même que le nombre d'animation, voir [Paramétrer plusieurs valeurs de propriétés pour les animations](/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations#utiliser_plusieurs_valeurs_pour_diff%c3%a9rentes_animations).
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<div>
-<h3 id="Courbes_de_Bézier_cubiques">Courbes de Bézier cubiques</h3>
+### Courbes de Bézier cubiques
 
-<pre class="brush:html hidden">&lt;div class="parent"&gt;
-  &lt;div class="ease"&gt;ease&lt;/div&gt;
-  &lt;div class="easein"&gt;ease-in&lt;/div&gt;
-  &lt;div class="easeout"&gt;ease-out&lt;/div&gt;
-  &lt;div class="easeinout"&gt;ease-in-out&lt;/div&gt;
-  &lt;div class="linear"&gt;linear&lt;/div&gt;
-  &lt;div class="cb"&gt;cubic-bezier(0.2,-2,0.8,2)&lt;/div&gt;
-&lt;/div&gt;</pre>
+```html hidden
+<div class="parent">
+  <div class="ease">ease</div>
+  <div class="easein">ease-in</div>
+  <div class="easeout">ease-out</div>
+  <div class="easeinout">ease-in-out</div>
+  <div class="linear">linear</div>
+  <div class="cb">cubic-bezier(0.2,-2,0.8,2)</div>
+</div>
+```
 
-<pre class="brush:css hidden">.parent &gt; div[class] {
+```css hidden
+.parent > div[class] {
     animation-name: changeme;
     animation-duration: 10s;
     animation-iteration-count: infinite;
@@ -140,9 +138,10 @@ animation-timing-function: unset;
       border: 1px solid orange;
    }
 }
-</pre>
+```
 
-<pre class="brush: css">.ease {
+```css
+.ease {
    animation-timing-function: ease;
 }
 .easein {
@@ -159,26 +158,28 @@ animation-timing-function: unset;
 }
 .cb {
    animation-timing-function: cubic-bezier(0.2,-2,0.8,2);
-}</pre>
+}
+```
 
-<div>{{EmbedLiveSample("Courbes_de_Bézier_cubiques")}}</div>
+{{EmbedLiveSample("Courbes_de_Bézier_cubiques")}}
+
+### Fonctions en escalier
+
+```html hidden
+<div class="parent">
+  <div class="jump-start">jump-start</div>
+  <div class="jump-end">jump-end</div>
+  <div class="jump-both">jump-both</div>
+  <div class="jump-none">jump-none</div>
+  <div class="start">start</div>
+  <div class="end">end</div>
+  <div class="step-start">step-start</div>
+  <div class="step-end">step-end</div>
 </div>
+```
 
-<div>
-<h3 id="Fonctions_en_escalier">Fonctions en escalier</h3>
-
-<pre class="brush:html hidden">&lt;div class="parent"&gt;
-  &lt;div class="jump-start"&gt;jump-start&lt;/div&gt;
-  &lt;div class="jump-end"&gt;jump-end&lt;/div&gt;
-  &lt;div class="jump-both"&gt;jump-both&lt;/div&gt;
-  &lt;div class="jump-none"&gt;jump-none&lt;/div&gt;
-  &lt;div class="start"&gt;start&lt;/div&gt;
-  &lt;div class="end"&gt;end&lt;/div&gt;
-  &lt;div class="step-start"&gt;step-start&lt;/div&gt;
-  &lt;div class="step-end"&gt;step-end&lt;/div&gt;
-&lt;/div&gt;</pre>
-
-<pre class="brush:css hidden">.parent &gt; div[class] {
+```css hidden
+.parent > div[class] {
     animation-name: changeme;
     animation-duration: 10s;
     animation-iteration-count: infinite;
@@ -200,9 +201,10 @@ animation-timing-function: unset;
       border: 1px solid orange;
    }
 }
-</pre>
+```
 
-<pre class="brush: css">.jump-start {
+```css
+.jump-start {
    animation-timing-function: steps(5, jump-start);
 }
 .jump-end {
@@ -225,40 +227,25 @@ animation-timing-function: unset;
 }
 .step-end {
    animation-timing-function: step-end;
-}</pre>
+}
+```
 
-<div>{{EmbedLiveSample("Fonctions_en_escalier")}}</div>
-</div>
+{{EmbedLiveSample("Fonctions_en_escalier")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Animations', '#animation-timing-function', 'animation-timing-function')}}</td>
-   <td>{{Spec2('CSS3 Animations')}}</td>
-   <td>Définition initiale..</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | État                                 | Commentaires          |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------ | --------------------- |
+| {{SpecName('CSS3 Animations', '#animation-timing-function', 'animation-timing-function')}} | {{Spec2('CSS3 Animations')}} | Définition initiale.. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.animation-timing-function")}}</p>
+{{Compat("css.properties.animation-timing-function")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations" title="CSS developer guide about CSS animations">Utiliser les animations CSS</a></li>
- <li>{{cssxref('easing-function')}}</li>
- <li>L'API JavaScript {{domxref("AnimationEvent")}}</li>
-</ul>
+- [Utiliser les animations CSS](/fr/docs/Web/CSS/CSS_Animations/Using_CSS_animations "CSS developer guide about CSS animations")
+- {{cssxref('easing-function')}}
+- L'API JavaScript {{domxref("AnimationEvent")}}

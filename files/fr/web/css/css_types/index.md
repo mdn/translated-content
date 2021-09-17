@@ -10,92 +10,69 @@ tags:
 translation_of: Web/CSS/CSS_Types
 original_slug: Web/CSS/Types_CSS
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Le module <strong><em>CSS basic data types</em></strong> définit les différents types de données CSS qui permettent de définir les types de valeurs (mots-clés et unités) acceptées par les différentes propriétés et fonctions. Lorsqu'on utilise une notation formelle, les types de données sont représentés par un mot-clé entre chevrons (&lt; &gt;).</p>
+Le module **_CSS basic data types_** définit les différents types de données CSS qui permettent de définir les types de valeurs (mots-clés et unités) acceptées par les différentes propriétés et fonctions. Lorsqu'on utilise une notation formelle, les types de données sont représentés par un mot-clé entre chevrons (< >).
 
-<div class="note">
-<p><strong>Note :</strong> Les types de donnée CSS sont un type spécial de <a href="https://www.w3.org/TR/css3-values/#component-types">composant de type de valeur</a>.</p>
-</div>
+> **Note :** Les types de donnée CSS sont un type spécial de [composant de type de valeur](https://www.w3.org/TR/css3-values/#component-types).
 
-<h2 id="Référence">Référence</h2>
+## Référence
 
-<ul>
- <li>{{cssxref("&lt;angle&gt;")}}</li>
- <li>{{cssxref("&lt;angle-percentage&gt;")}}</li>
- <li>{{cssxref("&lt;angular-color-hint&gt;")}}</li>
- <li>{{cssxref("&lt;angular-color-stop&gt;")}}</li>
- <li>{{cssxref("&lt;attr-fallback&gt;")}}</li>
- <li>{{cssxref("&lt;attr-name&gt;")}}</li>
- <li>{{cssxref("&lt;basic-shape&gt;")}}</li>
- <li>{{cssxref("&lt;blend-mode&gt;")}}</li>
- <li>{{cssxref("&lt;calc-product&gt;")}}</li>
- <li>{{cssxref("&lt;calc-sum&gt;")}}</li>
- <li>{{cssxref("&lt;calc-value&gt;")}}</li>
- <li>{{cssxref("&lt;color&gt;")}}</li>
- <li>{{cssxref("&lt;color-stop&gt;")}}</li>
- <li>{{cssxref("&lt;color-stop-angle&gt;")}}</li>
- <li>{{cssxref("&lt;counter-style&gt;")}}</li>
- <li>{{cssxref("&lt;custom-ident&gt;")}}</li>
- <li>{{cssxref("&lt;dimension&gt;")}}</li>
- <li>{{cssxref("&lt;filter-function&gt;")}}</li>
- <li>{{cssxref("&lt;flex&gt;")}}</li>
- <li>{{cssxref("&lt;frequency&gt;")}}</li>
- <li>{{cssxref("&lt;frequency-percentage&gt;")}}</li>
- <li>{{cssxref("&lt;gradient&gt;")}}</li>
- <li>{{cssxref("&lt;ident&gt;")}}</li>
- <li>{{cssxref("&lt;image&gt;")}}</li>
- <li>{{cssxref("&lt;integer&gt;")}}</li>
- <li>{{cssxref("&lt;length&gt;")}}</li>
- <li>{{cssxref("&lt;length-percentage&gt;")}}</li>
- <li>{{cssxref("&lt;number&gt;")}}</li>
- <li>{{cssxref("&lt;number-percentage&gt;")}}</li>
- <li>{{cssxref("&lt;percentage&gt;")}}</li>
- <li>{{cssxref("&lt;position&gt;")}}</li>
- <li>{{cssxref("&lt;quote&gt;")}}</li>
- <li>{{cssxref("&lt;ratio&gt;")}}</li>
- <li>{{cssxref("&lt;resolution&gt;")}}</li>
- <li>{{cssxref("&lt;shape-box&gt;")}}</li>
- <li>{{cssxref("&lt;shape-radius&gt;")}}</li>
- <li>{{cssxref("&lt;string&gt;")}}</li>
- <li>{{cssxref("&lt;time&gt;")}}</li>
- <li>{{cssxref("&lt;time-percentage&gt;")}}</li>
- <li>{{cssxref("easing-function")}}</li>
- <li>{{cssxref("&lt;toggle-value&gt;")}}</li>
- <li>{{cssxref("&lt;transform-function&gt;")}}</li>
- <li>{{cssxref("&lt;type-or-unit&gt;")}}</li>
- <li>{{cssxref("&lt;url&gt;")}}</li>
- <li>{{cssxref("&lt;url-modifier&gt;")}}</li>
- <li>{{cssxref("&lt;zero&gt;")}}</li>
-</ul>
+- {{cssxref("&lt;angle&gt;")}}
+- {{cssxref("&lt;angle-percentage&gt;")}}
+- {{cssxref("&lt;angular-color-hint&gt;")}}
+- {{cssxref("&lt;angular-color-stop&gt;")}}
+- {{cssxref("&lt;attr-fallback&gt;")}}
+- {{cssxref("&lt;attr-name&gt;")}}
+- {{cssxref("&lt;basic-shape&gt;")}}
+- {{cssxref("&lt;blend-mode&gt;")}}
+- {{cssxref("&lt;calc-product&gt;")}}
+- {{cssxref("&lt;calc-sum&gt;")}}
+- {{cssxref("&lt;calc-value&gt;")}}
+- {{cssxref("&lt;color&gt;")}}
+- {{cssxref("&lt;color-stop&gt;")}}
+- {{cssxref("&lt;color-stop-angle&gt;")}}
+- {{cssxref("&lt;counter-style&gt;")}}
+- {{cssxref("&lt;custom-ident&gt;")}}
+- {{cssxref("&lt;dimension&gt;")}}
+- {{cssxref("&lt;filter-function&gt;")}}
+- {{cssxref("&lt;flex&gt;")}}
+- {{cssxref("&lt;frequency&gt;")}}
+- {{cssxref("&lt;frequency-percentage&gt;")}}
+- {{cssxref("&lt;gradient&gt;")}}
+- {{cssxref("&lt;ident&gt;")}}
+- {{cssxref("&lt;image&gt;")}}
+- {{cssxref("&lt;integer&gt;")}}
+- {{cssxref("&lt;length&gt;")}}
+- {{cssxref("&lt;length-percentage&gt;")}}
+- {{cssxref("&lt;number&gt;")}}
+- {{cssxref("&lt;number-percentage&gt;")}}
+- {{cssxref("&lt;percentage&gt;")}}
+- {{cssxref("&lt;position&gt;")}}
+- {{cssxref("&lt;quote&gt;")}}
+- {{cssxref("&lt;ratio&gt;")}}
+- {{cssxref("&lt;resolution&gt;")}}
+- {{cssxref("&lt;shape-box&gt;")}}
+- {{cssxref("&lt;shape-radius&gt;")}}
+- {{cssxref("&lt;string&gt;")}}
+- {{cssxref("&lt;time&gt;")}}
+- {{cssxref("&lt;time-percentage&gt;")}}
+- {{cssxref("easing-function")}}
+- {{cssxref("&lt;toggle-value&gt;")}}
+- {{cssxref("&lt;transform-function&gt;")}}
+- {{cssxref("&lt;type-or-unit&gt;")}}
+- {{cssxref("&lt;url&gt;")}}
+- {{cssxref("&lt;url-modifier&gt;")}}
+- {{cssxref("&lt;zero&gt;")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Values')}}</td>
-   <td>{{Spec2('CSS4 Values')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Values')}}</td>
-   <td>{{Spec2('CSS3 Values')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                        | État                             | Commentaires         |
+| ------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName('CSS4 Values')}} | {{Spec2('CSS4 Values')}} |                      |
+| {{SpecName('CSS3 Values')}} | {{Spec2('CSS3 Values')}} | Définition initiale. |
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Values_and_Units">Unités et valeurs CSS</a></li>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/Values_and_units">Introduction à CSS : les valeurs et les unités</a></li>
-</ul>
+- [Unités et valeurs CSS](/fr/docs/Web/CSS/CSS_Values_and_Units)
+- [Introduction à CSS : les valeurs et les unités](/en-US/docs/Learn/CSS/Building_blocks/Values_and_units)

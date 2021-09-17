@@ -7,30 +7,33 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/monochrome
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong><code>monochrome</code></strong> est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui peut être utilisée afin d'appliquer des styles en fonction du nombre de bits par pixel utilisés pour le tampon d'affichage monochrome de l'appareil.</p>
+**`monochrome`** est une caractéristique média CSS (cf. {{cssxref("@media")}}) qui peut être utilisée afin d'appliquer des styles en fonction du nombre de bits par pixel utilisés pour le tampon d'affichage monochrome de l'appareil.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>La caractéristique <code>monochrome</code> est un entier (type {{cssxref("&lt;integer&gt;")}})) dont la valeur correspond au nombre de bits par pixel utilisés pour le tampon d'affichage monochrome de l'appareil. Si l'appareil n'est pas monochrome, cela vaudra 0. Cette caractéristique est une caractéristique d'intervalle ce qui signifie qu'on peut également utiliser les variantes préfixées <strong><code>min-monochrome</code></strong> et <strong><code>max-monochrome</code></strong> afin de cibler les règles en fonction d'un minimum ou d'un maximum.</p>
+La caractéristique `monochrome` est un entier (type {{cssxref("&lt;integer&gt;")}})) dont la valeur correspond au nombre de bits par pixel utilisés pour le tampon d'affichage monochrome de l'appareil. Si l'appareil n'est pas monochrome, cela vaudra 0. Cette caractéristique est une caractéristique d'intervalle ce qui signifie qu'on peut également utiliser les variantes préfixées **`min-monochrome`** et **`max-monochrome`** afin de cibler les règles en fonction d'un minimum ou d'un maximum.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="mono"&gt;
+```html
+<p class="mono">
   Votre appareil prend en charge les
   pixels monochrome !
-&lt;/p&gt;
-&lt;p class="no-mono"&gt;
+</p>
+<p class="no-mono">
   Votre appareil ne prend pas en charge
   les pixels monochromes.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p {
+```css
+p {
   display: none;
 }
 
@@ -48,36 +51,20 @@ translation_of: Web/CSS/@media/monochrome
     display: block;
     color: #ee3636;
   }
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Media Queries', '#monochrome', 'monochrome')}}</td>
-   <td>{{Spec2('CSS4 Media Queries')}}</td>
-   <td>La valeur peut désormais être négative, auquel cas cela correspond à un booléen faux.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Media Queries', '#monochrome', 'monochrome')}}</td>
-   <td>{{Spec2('CSS3 Media Queries')}}</td>
-   <td>Définition initiale. La valeur ne doit pas être négative.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                                     | Commentaires                                                                          |
+| ------------------------------------------------------------------------------------ | ---------------------------------------- | ------------------------------------------------------------------------------------- |
+| {{SpecName('CSS4 Media Queries', '#monochrome', 'monochrome')}} | {{Spec2('CSS4 Media Queries')}} | La valeur peut désormais être négative, auquel cas cela correspond à un booléen faux. |
+| {{SpecName('CSS3 Media Queries', '#monochrome', 'monochrome')}} | {{Spec2('CSS3 Media Queries')}} | Définition initiale. La valeur ne doit pas être négative.                             |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.at-rules.media.monochrome")}}</p>
+{{Compat("css.at-rules.media.monochrome")}}

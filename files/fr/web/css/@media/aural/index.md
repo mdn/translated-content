@@ -8,35 +8,18 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/aural
 ---
-<div>{{CSSRef}}{{obsolete_header("6.0")}} {{deprecated_header}}</div>
+{{CSSRef}}{{obsolete_header("6.0")}} {{deprecated_header}}
 
-<p>Un <a href="/fr/docs/Web/CSS/@media#Groupes_de_médias">groupe de médias</a> défini par les standards <a href="/fr/docs/Web/CSS">CSS</a>.</p>
+Un [groupe de médias](/fr/docs/Web/CSS/@media#Groupes_de_médias) défini par les standards [CSS](/fr/docs/Web/CSS).
 
-<div class="note">
-<p><strong>Note :</strong> Ce groupe de médias n'a jamais été complètement implémenté dans Gecko et a été supprimé dans {{Gecko("6.0")}}. C'est le type de média <a href="/fr/docs/Web/CSS/@media#speech">speech</a> qui le remplace.</p>
-</div>
+> **Note :** Ce groupe de médias n'a jamais été complètement implémenté dans Gecko et a été supprimé dans {{Gecko("6.0")}}. C'est le type de média [speech](/fr/docs/Web/CSS/@media#speech) qui le remplace.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><a href="https://www.w3.org/TR/CSS2/aural.html#q19.0">CSS Level 2</a></td>
-   <td>Dépréciation</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                              | État         | Commentaires         |
+| ---------------------------------------------------------- | ------------ | -------------------- |
+| [CSS Level 2](https://www.w3.org/TR/CSS2/aural.html#q19.0) | Dépréciation | Définition initiale. |
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/@media">@media</a></li>
-</ul>
+- [@media](/fr/docs/Web/CSS/@media)

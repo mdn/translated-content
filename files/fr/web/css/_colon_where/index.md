@@ -1,50 +1,35 @@
 ---
 title: ':where()'
-slug: 'Web/CSS/:where'
+slug: Web/CSS/:where
 tags:
   - CSS
   - Experimental
   - Pseudo-classe
   - Reference
   - Sélecteur
-translation_of: 'Web/CSS/:where'
+translation_of: Web/CSS/:where
 ---
-<div>{{CSSRef}}{{Draft}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{Draft}}{{SeeCompatTable}}
 
-<p>La pseudo-classe fonctionnelle <strong><code>:where()</code></strong> prend comme argument une liste de sélecteurs et cible tout élément qui peut être sélectionné par l'un des sélecteurs de la liste.</p>
+La pseudo-classe fonctionnelle **`:where()`** prend comme argument une liste de sélecteurs et cible tout élément qui peut être sélectionné par l'un des sélecteurs de la liste.
 
-<p>La différence entre <code>:where()</code> et {{CSSxRef(":is", ":is()")}} est la suivante : <code>:where()</code> aura toujours <a href="/fr/docs/Apprendre/CSS/Introduction_à_CSS/La_cascade_et_l_héritage#Spécificité">une spécificité</a> nulle tandis que <code>:is()</code> prend la spécificité du sélecteur passé en argument le plus spécifique.</p>
+La différence entre `:where()` et {{CSSxRef(":is", ":is()")}} est la suivante : `:where()` aura toujours [une spécificité](/fr/docs/Apprendre/CSS/Introduction_à_CSS/La_cascade_et_l_héritage#Spécificité) nulle tandis que `:is()` prend la spécificité du sélecteur passé en argument le plus spécifique.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
 {{CSSSyntax}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#zero-matches", ":where()")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | État                                 | Commentaires         |
+| -------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName("CSS4 Selectors", "#zero-matches", ":where()")}} | {{Spec2("CSS4 Selectors")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.where")}}</p>
+{{Compat("css.selectors.where")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{CSSxRef(":is", ":is()")}} {{Experimental_Inline}}</li>
- <li><a href="/fr/docs/Web/Web_Components">Les composants web</a></li>
-</ul>
+- {{CSSxRef(":is", ":is()")}} {{Experimental_Inline}}
+- [Les composants web](/fr/docs/Web/Web_Components)

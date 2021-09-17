@@ -8,73 +8,52 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Counter_Styles
 ---
-<div>{{cssref}}</div>
+{{cssref}}
 
-<p><em><strong>CSS Counter Styles</strong></em> est un module CSS qui permet de définir ses propres styles pour les compteurs utilisés dans les listes numérotées.</p>
+**_CSS Counter Styles_** est un module CSS qui permet de définir ses propres styles pour les compteurs utilisés dans les listes numérotées.
 
-<h2 id="Référence">Référence</h2>
+## Référence
 
-<h3 id="Propriétés">Propriétés</h3>
+### Propriétés
 
-<ul>
- <li>{{cssxref("counter-increment")}}</li>
- <li>{{cssxref("counter-reset")}}</li>
-</ul>
+- {{cssxref("counter-increment")}}
+- {{cssxref("counter-reset")}}
 
-<h3 id="Règles">Règles @</h3>
+### Règles @
 
-<ul>
-  <li>{{cssxref("@counter-style")}}
-  <ul>
-   <li>{{cssxref("@counter-style/system","system")}}</li>
-   <li>{{cssxref("@counter-style/additive-symbols", "additive-symbols")}}</li>
-   <li>{{cssxref("@counter-style/negative", "negative")}}</li>
-   <li>{{cssxref("@counter-style/prefix", "prefix")}}</li>
-   <li>{{cssxref("@counter-style/suffix", "suffix")}}</li>
-   <li>{{cssxref("@counter-style/range", "range")}}</li>
-   <li>{{cssxref("@counter-style/pad", "pad")}}</li>
-   <li>{{cssxref("@counter-style/speak-as", "speak-as")}}</li>
-   <li>{{cssxref("@counter-style/fallback", "fallback")}}</li>
-  </ul>
-  </li>
-</ul>
+- {{cssxref("@counter-style")}}
 
-<h2 id="Guides">Guides</h2>
+  - {{cssxref("@counter-style/system","system")}}
+  - {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}
+  - {{cssxref("@counter-style/negative", "negative")}}
+  - {{cssxref("@counter-style/prefix", "prefix")}}
+  - {{cssxref("@counter-style/suffix", "suffix")}}
+  - {{cssxref("@counter-style/range", "range")}}
+  - {{cssxref("@counter-style/pad", "pad")}}
+  - {{cssxref("@counter-style/speak-as", "speak-as")}}
+  - {{cssxref("@counter-style/fallback", "fallback")}}
 
-<dl>
- <dt><a href="/fr/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">Manipuler les compteurs CSS</a></dt>
- <dd>Cet article décrit comment utiliser les compteurs CSS afin de numéroter des éléments HTML et de réaliser des comptages complexes.</dd>
-</dl>
+## Guides
 
-<h2 id="Spécifications">Spécifications</h2>
+- [Manipuler les compteurs CSS](/fr/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
+  - : Cet article décrit comment utiliser les compteurs CSS afin de numéroter des éléments HTML et de réaliser des comptages complexes.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Counter Styles')}}</td>
-   <td>{{Spec2('CSS3 Counter Styles')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+## Spécifications
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+| Spécification                                    | État                                         | Commentaires         |
+| ------------------------------------------------ | -------------------------------------------- | -------------------- |
+| {{SpecName('CSS3 Counter Styles')}} | {{Spec2('CSS3 Counter Styles')}} | Définition initiale. |
 
-<h3 id="counter-style"><code>@counter-style</code></h3>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.at-rules.counter-style")}}</p>
+### `@counter-style`
 
-<h3 id="counter-increment"><code>counter-increment</code></h3>
+{{Compat("css.at-rules.counter-style")}}
 
-<p>{{Compat("css.properties.counter-increment")}}</p>
+### `counter-increment`
 
-<h3 id="counter-reset"><code>counter-reset</code></h3>
+{{Compat("css.properties.counter-increment")}}
 
-<p>{{Compat("css.properties.counter-reset")}}</p>
+### `counter-reset`
+
+{{Compat("css.properties.counter-reset")}}

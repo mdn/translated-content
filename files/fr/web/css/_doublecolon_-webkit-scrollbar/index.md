@@ -1,38 +1,35 @@
 ---
 title: '::-webkit-scrollbar'
-slug: 'Web/CSS/::-webkit-scrollbar'
+slug: Web/CSS/::-webkit-scrollbar
 tags:
   - CSS
   - Non-standard
   - Pseudo-element
   - Reference
-translation_of: 'Web/CSS/::-webkit-scrollbar'
+translation_of: Web/CSS/::-webkit-scrollbar
 ---
-<div>{{Draft}}{{CSSRef}}{{Non-standard_header}}</div>
+{{Draft}}{{CSSRef}}{{Non-standard_header}}Le pseudo-élément **`::-webkit-scrollbar`** permet de modifier le style de la barre de défilement associée à un élément. Il s'agit d'un pseudo-élément propriétaire, uniquement disponible pour les navigateurs WebKit.
 
-<div>Le pseudo-élément <code><strong>::-webkit-scrollbar</strong></code> permet de modifier le style de la barre de défilement associée à un élément. Il s'agit d'un pseudo-élément propriétaire, uniquement disponible pour les navigateurs WebKit.</div>
-
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
 {{CSSSyntax}}
 
-<h2 id="Sélecteurs_de_scrollbars">Sélecteurs de <em>scrollbars</em></h2>
+## Sélecteurs de _scrollbars_
 
-<p>You can use the following pseudo elements to customize various parts of the scrollbar for webkit browsers:</p>
+You can use the following pseudo elements to customize various parts of the scrollbar for webkit browsers:
 
-<ul>
- <li><code>::-webkit-scrollbar</code> — la barre entière.</li>
- <li><code>::-webkit-scrollbar-button</code> — les boutons de la barre de défilement (les flèches vers le bas ou le haut)</li>
- <li><code>::-webkit-scrollbar-thumb</code> — l'emplacement qui permet de déplacer la barre de défilement.</li>
- <li><code>::-webkit-scrollbar-track</code> — la piste (la zone de progression) de la barre de défilement</li>
- <li><code>::-webkit-scrollbar-track-piece</code> — la partie de la piste qui n'est pas couverte par le bouton de la barre de défilement.</li>
- <li><code>::-webkit-scrollbar-corner</code> — le coin inférieur de la barre où les barres horizontales et verticales se rencontrent.</li>
- <li><code>::-webkit-resizer</code> — le bouton qui apparaît dans le coin inférieur de certains éléments et qui permet de les redimensionner.</li>
-</ul>
+- `::-webkit-scrollbar` — la barre entière.
+- `::-webkit-scrollbar-button` — les boutons de la barre de défilement (les flèches vers le bas ou le haut)
+- `::-webkit-scrollbar-thumb` — l'emplacement qui permet de déplacer la barre de défilement.
+- `::-webkit-scrollbar-track` — la piste (la zone de progression) de la barre de défilement
+- `::-webkit-scrollbar-track-piece` — la partie de la piste qui n'est pas couverte par le bouton de la barre de défilement.
+- `::-webkit-scrollbar-corner` — le coin inférieur de la barre où les barres horizontales et verticales se rencontrent.
+- `::-webkit-resizer` — le bouton qui apparaît dans le coin inférieur de certains éléments et qui permet de les redimensionner.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: css">.visible-scrollbar, .invisible-scrollbar, .mostly-customized-scrollbar {
+```css
+.visible-scrollbar, .invisible-scrollbar, .mostly-customized-scrollbar {
   display: block;
   width: 10em;
   overflow: auto;
@@ -53,9 +50,10 @@ translation_of: 'Web/CSS/::-webkit-scrollbar'
 .mostly-customized-scrollbar::-webkit-scrollbar-thumb {
     background: #000;
 }
-</pre>
+```
 
-<pre class="brush: html">&lt;div class="visible-scrollbar"&gt;
+```html
+<div class="visible-scrollbar">
   Etiam sagittis sem sed lacus laoreet, eu fermentum eros auctor.
   Proin at nulla elementum, consectetur ex eget, commodo ante.
   Sed eros mi, bibendum ut dignissim et, maximus eget nibh. Phasellus
@@ -67,54 +65,52 @@ translation_of: 'Web/CSS/::-webkit-scrollbar'
   amet faucibus. Curabitur nibh justo, faucibus sed velit cursus,
   mattis cursus dolor. Pellentesque id pretium est. Quisque
   convallis nisi a diam malesuada mollis. Aliquam at enim ligula.
-&lt;/div&gt;
-&lt;div class="invisible-scrollbar"&gt;Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword&lt;/div&gt;
-&lt;div class="mostly-customized-scrollbar"&gt;Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword&lt;br&gt;
-And pretty tall&lt;br&gt;
-thing with weird scrollbars.&lt;br&gt;
-Who thought scrollbars could be made weeeeird?&lt;/div&gt;
-</pre>
+</div>
+<div class="invisible-scrollbar">Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword</div>
+<div class="mostly-customized-scrollbar">Thisisaveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerylongword<br>
+And pretty tall<br>
+thing with weird scrollbars.<br>
+Who thought scrollbars could be made weeeeird?</div>
+```
 
-<p>{{EmbedLiveSample('Exemples')}}</p>
+{{EmbedLiveSample('Exemples')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink et ne fait partie d'aucune spécification.</p>
+Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink et ne fait partie d'aucune spécification.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<h3 id="-webkit-scrollbar"><code>::-webkit-scrollbar</code></h3>
+### `::-webkit-scrollbar`
 
-<p>{{Compat("css.selectors.-webkit-scrollbar")}}</p>
+{{Compat("css.selectors.-webkit-scrollbar")}}
 
-<h3 id="-webkit-scrollbar-button"><code>::-webkit-scrollbar-button</code></h3>
+### `::-webkit-scrollbar-button`
 
-<p>{{Compat("css.selectors.-webkit-scrollbar-button")}}</p>
+{{Compat("css.selectors.-webkit-scrollbar-button")}}
 
-<h3 id="-webkit-scrollbar-thumb"><code>::-webkit-scrollbar-thumb</code></h3>
+### `::-webkit-scrollbar-thumb`
 
-<p>{{Compat("css.selectors.-webkit-scrollbar-thumb")}}</p>
+{{Compat("css.selectors.-webkit-scrollbar-thumb")}}
 
-<h3 id="-webkit-scrollbar-track"><code>::-webkit-scrollbar-track</code></h3>
+### `::-webkit-scrollbar-track`
 
-<p>{{Compat("css.selectors.-webkit-scrollbar-track")}}</p>
+{{Compat("css.selectors.-webkit-scrollbar-track")}}
 
-<h3 id="-webkit-scrollbar-track-piece"><code>::-webkit-scrollbar-track-piece</code></h3>
+### `::-webkit-scrollbar-track-piece`
 
-<p>{{Compat("css.selectors.-webkit-scrollbar-track-piece")}}</p>
+{{Compat("css.selectors.-webkit-scrollbar-track-piece")}}
 
-<h3 id="-webkit-scrollbar-corner"><code>::-webkit-scrollbar-corner</code></h3>
+### `::-webkit-scrollbar-corner`
 
-<p>{{Compat("css.selectors.-webkit-scrollbar-corner")}}</p>
+{{Compat("css.selectors.-webkit-scrollbar-corner")}}
 
-<h3 id="-webkit-resizer"><code>::-webkit-resizer</code></h3>
+### `::-webkit-resizer`
 
-<p>{{Compat("css.selectors.-webkit-resizer")}}</p>
+{{Compat("css.selectors.-webkit-resizer")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Billet du blog WebKit <a href="https://webkit.org/blog/363/styling-scrollbars/">sur la mise en forme des barres de défilement</a></li>
- <li>{{cssxref('-ms-overflow-style')}}</li>
- <li>{{CSSxRef("scrollbar-width")}}</li>
-</ul>
+- Billet du blog WebKit [sur la mise en forme des barres de défilement](https://webkit.org/blog/363/styling-scrollbars/)
+- {{cssxref('-ms-overflow-style')}}
+- {{CSSxRef("scrollbar-width")}}

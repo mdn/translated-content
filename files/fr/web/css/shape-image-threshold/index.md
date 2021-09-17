@@ -8,44 +8,44 @@ tags:
   - Reference
 translation_of: Web/CSS/shape-image-threshold
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>shape-image-threshold</code></strong> définit le seuil, en terme de canal alpha, à utiliser pour extraire la forme d'une image. Cette forme pourra être utilisée pour {{cssxref("shape-outside")}}.</p>
+La propriété **`shape-image-threshold`** définit le seuil, en terme de canal alpha, à utiliser pour extraire la forme d'une image. Cette forme pourra être utilisée pour {{cssxref("shape-outside")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/shape-image-threshold.html")}}</div>
+{{EmbedInteractiveExample("pages/css/shape-image-threshold.html")}}
 
-<p>Touts les pixels dont la composante alpha est supérieure à ce seuil seront retenus pour délimiter les contours de la formes. Une valeur de 0.5 indiquera par exemple qu'on prend la forme qui englobe tous les pixels dont l'opacité est supérieure à 50%.</p>
+Touts les pixels dont la composante alpha est supérieure à ce seuil seront retenus pour délimiter les contours de la formes. Une valeur de 0.5 indiquera par exemple qu'on prend la forme qui englobe tous les pixels dont l'opacité est supérieure à 50%.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Quantité seuil  */
-/* Valeur &lt;number&gt; */
+```css
+/* Quantité seuil  */
+/* Valeur <number> */
 shape-image-threshold: 0.7;
 
 /* Valeurs globales */
 shape-image-threshold: inherit;
 shape-image-threshold: initial;
 shape-image-threshold: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;number&gt;</code></dt>
- <dd>Un nombre ({{cssxref("&lt;number&gt;")}}) représentant le seuil utilisé pour extraire une forme d'une image. La forme est définie par les pixels dont la valeur du canal alpha est supérieur au seuil indiqué. Un seuil qui est inférieur à 0.0 (transparence totale) ou supérieur à 1.0 (opacité totale) sera ramené dans cet intervalle.</dd>
-</dl>
+- `<number>`
+  - : Un nombre ({{cssxref("&lt;number&gt;")}}) représentant le seuil utilisé pour extraire une forme d'une image. La forme est définie par les pixels dont la valeur du canal alpha est supérieur au seuil indiqué. Un seuil qui est inférieur à 0.0 (transparence totale) ou supérieur à 1.0 (opacité totale) sera ramené dans cet intervalle.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans cet exemple, on utilise un bloc {{HTMLElement("div")}} pour y afficher une image d'arrière-plan avec un dégradé. On retrouve ce dégradé dans une forme CSS avec la propriété <code>shape-outside</code> et on utilise <code>shape-image-threshold</code> afin de ne retenir que les pixels dont l'opacité est supérieure ou égale à 20% pour délimiter la forme.</p>
+Dans cet exemple, on utilise un bloc {{HTMLElement("div")}} pour y afficher une image d'arrière-plan avec un dégradé. On retrouve ce dégradé dans une forme CSS avec la propriété `shape-outside` et on utilise `shape-image-threshold` afin de ne retenir que les pixels dont l'opacité est supérieure ou égale à 20% pour délimiter la forme.
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">#gradient-shape {
+```css
+#gradient-shape {
   width: 150px;
   height: 150px;
   float: left;
@@ -54,13 +54,15 @@ shape-image-threshold: unset;
   shape-outside: linear-gradient(30deg, black, transparent 80%,
       transparent);
   shape-image-threshold: 0.2;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="gradient-shape"&gt;&lt;/div&gt;
+```html
+<div id="gradient-shape"></div>
 
-&lt;p&gt;
+<p>
   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel at commodi
   voluptates enim, distinctio officia. Saepe optio accusamus doloribus sint
   facilis itaque ab nulla, dolor molestiae assumenda cum sit placeat
@@ -71,43 +73,29 @@ shape-image-threshold: unset;
   nisi soluta? Totam inventore ea eum sed velit et eligendi suscipit
   accusamus iusto dolore, at provident eius alias maxime pariatur non
   deleniti ipsum sequi rem eveniet laboriosam magni expedita?
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', "600px", "230px")}}</p>
+{{EmbedLiveSample('Exemples', "600px", "230px")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Shapes', '#shape-image-threshold-property', 'shape-image-threshold')}}</td>
-   <td>{{Spec2('CSS Shapes')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                        | Statut                           | Commentaires         |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('CSS Shapes', '#shape-image-threshold-property', 'shape-image-threshold')}} | {{Spec2('CSS Shapes')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.shape-image-threshold")}}</p>
+{{Compat("css.properties.shape-image-threshold")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Shapes">Les formes CSS</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes">Un aperçu des formes CSS</a></li>
- <li>{{cssxref("&lt;basic-shape&gt;")}}</li>
- <li>{{cssxref("shape-outside")}}</li>
- <li>{{cssxref("shape-margin")}}</li>
-</ul>
+- [Les formes CSS](/fr/docs/Web/CSS/CSS_Shapes)
+- [Un aperçu des formes CSS](/fr/docs/Web/CSS/CSS_Shapes/Overview_of_CSS_Shapes)
+- {{cssxref("&lt;basic-shape&gt;")}}
+- {{cssxref("shape-outside")}}
+- {{cssxref("shape-margin")}}

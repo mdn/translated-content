@@ -8,11 +8,12 @@ tags:
   - Reference
 translation_of: Web/CSS/mask-size
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propriété <strong><code>mask-size</code></strong> définit les dimensions des images utilisées comme masques. La taille de l'image peut être contrainte, partiellement ou complètement, afin de conserver ses proportions intrinsèques.</p>
+La propriété **`mask-size`** définit les dimensions des images utilisées comme masques. La taille de l'image peut être contrainte, partiellement ou complètement, afin de conserver ses proportions intrinsèques.
 
-<pre class="brush: css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 mask-size: cover;
 mask-size: contain;
 
@@ -43,70 +44,61 @@ mask-size: 6px, auto, contain;
 mask-size: inherit;
 mask-size: initial;
 mask-size: unset;
-</pre>
+```
 
-<div class="note">
-  <p><strong>Note :</strong> Si la valeur de cette propriété n'est pas définie avec la propriété raccourcie {{cssxref("mask")}} et que celle-ci est appliquée après <code>mask-size</code>, la valeur sera réinitialisée avec sa valeur initiale à cause de la propriété raccourcie.</p>
-</div>
+> **Note :** Si la valeur de cette propriété n'est pas définie avec la propriété raccourcie {{cssxref("mask")}} et que celle-ci est appliquée après `mask-size`, la valeur sera réinitialisée avec sa valeur initiale à cause de la propriété raccourcie.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Une ou plusieurs valeurs <code>&lt;bg-size&gt;</code>, séparées par des virgules. Une valeur <code>&lt;bg-size&gt;</code> peut être définie de trois façons :</p>
+Une ou plusieurs valeurs `<bg-size>`, séparées par des virgules. Une valeur `<bg-size>` peut être définie de trois façons :
 
-<ul>
- <li>avec le mot-clé <code><a href="#contain">contain</a></code></li>
- <li>avec le mot-clé <code><a href="#cover">cover</a></code></li>
- <li>avec des valeurs pour la hauteur et la largeur.</li>
-</ul>
+- avec le mot-clé [`contain`](#contain)
+- avec le mot-clé [`cover`](#cover)
+- avec des valeurs pour la hauteur et la largeur.
 
-<p>Pour indiquer une taille avec une largeur et une hauteur, il est possible de fournir une ou deux valeurs :</p>
+Pour indiquer une taille avec une largeur et une hauteur, il est possible de fournir une ou deux valeurs :
 
-<ul>
- <li>Si une seule valeur est fournie, elle servira à définir la largeur, la hauteur vaudra alors <code>auto</code></li>
- <li>Si deux valeurs sont fournies, la première définira la largeur et la seonde définira la hauteur.</li>
-</ul>
+- Si une seule valeur est fournie, elle servira à définir la largeur, la hauteur vaudra alors `auto`
+- Si deux valeurs sont fournies, la première définira la largeur et la seonde définira la hauteur.
 
-<p>Chaque valeur peut être une longueur (<code>&lt;length&gt;</code>), un pourcentage (<code>&lt;percentage&gt;</code>) ou <code>auto</code>.</p>
+Chaque valeur peut être une longueur (`<length>`), un pourcentage (`<percentage>`) ou `auto`.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>&lt;length&gt;</code></dt>
- <dd>Une valeur de longueur (type {{cssxref("&lt;length&gt;")}} qui redimensionne l'image avec la longueur indiquée dans l'axe correspondant. Les longueurs négatives ne sont pas autorisées.</dd>
- <dt><code>&lt;percentage&gt;</code></dt>
- <dd>Une valeur de pourcentage ({{cssxref("&lt;percentage&gt;")}} qui indique le redimensionnement à appliquer dans l'axe correspondant à partir de l'origine définie par {{cssxref("mask-origin")}} par rapport à la taille  de la zone du masque. Par défaut, cette zone contient la boîte de contenu et la boîte de remplissage (<em>padding</em>) (on peut modifier cette zone pour choisir les boîtes concernées). Les valeurs négatives ne sont pas autorisées.</dd>
- <dt><code>auto</code></dt>
- <dd>Un mot-clé qui permet de redimensionner l'image du masque dans l'axe correspondant tout en conservant ses proportions.</dd>
- <dt><code>contain</code></dt>
- <dd>Un mot-clé qui redimensionne l'image afin qu'elle soit aussi grande que possible et conserve ses proportions tout en étant contenue dans le contenur. Par défaut, l'image est centrée sauf si {{cssxref("mask-position")}} indique un autre paramètre.</dd>
- <dt><code>cover</code></dt>
- <dd>Un mot-clé qui se comporte à l'inverse de <code>contain</code>. L'image est agrandie autant que possible et ses proportions sont conservées et elle couvre toute la surface du conteneur, si les dimensions du conteneur sont différentes, l'image est rognée sur les côtés (haut et bas ou droite et gauche).</dd>
-</dl>
+- `<length>`
+  - : Une valeur de longueur (type {{cssxref("&lt;length&gt;")}} qui redimensionne l'image avec la longueur indiquée dans l'axe correspondant. Les longueurs négatives ne sont pas autorisées.
+- `<percentage>`
+  - : Une valeur de pourcentage ({{cssxref("&lt;percentage&gt;")}} qui indique le redimensionnement à appliquer dans l'axe correspondant à partir de l'origine définie par {{cssxref("mask-origin")}} par rapport à la taille  de la zone du masque. Par défaut, cette zone contient la boîte de contenu et la boîte de remplissage (_padding_) (on peut modifier cette zone pour choisir les boîtes concernées). Les valeurs négatives ne sont pas autorisées.
+- `auto`
+  - : Un mot-clé qui permet de redimensionner l'image du masque dans l'axe correspondant tout en conservant ses proportions.
+- `contain`
+  - : Un mot-clé qui redimensionne l'image afin qu'elle soit aussi grande que possible et conserve ses proportions tout en étant contenue dans le contenur. Par défaut, l'image est centrée sauf si {{cssxref("mask-position")}} indique un autre paramètre.
+- `cover`
+  - : Un mot-clé qui se comporte à l'inverse de `contain`. L'image est agrandie autant que possible et ses proportions sont conservées et elle couvre toute la surface du conteneur, si les dimensions du conteneur sont différentes, l'image est rognée sur les côtés (haut et bas ou droite et gauche).
 
-<p>L'interprétation des valeurs se fera en fonction des dimensions intrinsèques de l'image (sa hauteur et sa largeur) et de ses proportions intrinsèques (le ratio entre la largeur et la hauteur). Une image matricielle (<em>bitmap</em>) possèdera toujours des dimensions intrinsèques et des proportions intrinsèques. Une image vectorielle pourra avoir des dimensions intrinsèques (et donc, <em>de facto</em>, des proportions intrinsèques) ou également n'avoir qu'une ou aucune dimension intrinsèque et des proportions intrinsèques ou non. Les gradients sont considérés comme des images sans dimensions ni proportions intrinsèques.</p>
+L'interprétation des valeurs se fera en fonction des dimensions intrinsèques de l'image (sa hauteur et sa largeur) et de ses proportions intrinsèques (le ratio entre la largeur et la hauteur). Une image matricielle (_bitmap_) possèdera toujours des dimensions intrinsèques et des proportions intrinsèques. Une image vectorielle pourra avoir des dimensions intrinsèques (et donc, _de facto_, des proportions intrinsèques) ou également n'avoir qu'une ou aucune dimension intrinsèque et des proportions intrinsèques ou non. Les gradients sont considérés comme des images sans dimensions ni proportions intrinsèques.
 
-<p>La taille de l'image affichée pour le masque est calculée de la façon suivante :</p>
+La taille de l'image affichée pour le masque est calculée de la façon suivante :
 
-<dl>
- <dt>Si les deux composants de <code>mask-size</code> sont définis et sont différents de <code>auto</code> :</dt>
- <dd>L'image est affichée avec la taille indiquée.</dd>
- <dt>Si <code>mask-size</code> vaut <code>contain</code> ou <code>cover</code> :</dt>
- <dd>L'image est affichée en conservant ses proportions avec la plus grande taille possible pour être contenue ou couvrire toute la zone du masque. Si l'image ne possède pas de proportions intrinsèques, sa taille d'affichage sera la taille de la zone du masque.</dd>
- <dt>Si <code>mask-size</code> vaut <code>auto</code> ou <code>auto auto </code>:</dt>
- <dd>Si l'image possède deux dimensions intrinsèques, elle sera affichée avec cette taille. Si elle ne possède pas de dimensions intrinsèques ni de proportions intrinsèques, elle sera affichée à la taille de la zone du masque. Si elle n'a aucune dimension intrinsèque mais possède des proportions intrinsèques elle sera affichée comme si <code>contain</code> avait été utilisé. Si l'image possède une dimension intrinsèque et des proportions intrinsèques, sa taille sera déterminée grâce à ses informations. Si l'image possède une dimension intrinsèque mais aucune proportion intrinsèque, la dimension connue sera utilisée pour cet axe et la seconde sera celle de la zone pour le masque.</dd>
- <dt>Si <code>mask-size</code> possède un composant <code>auto</code> et un autre composant différent de <code>auto</code> :</dt>
- <dd>Si l'image possède des proportions intrinsèques, elle sera affichée avec la dimension connue et la deuxième sera calculée à partir de la proportion. Si l'image ne possède pas de proportions intrinsèques, la valeur définie sera utilisée pour l'axe correspondant et pour l'autre axe, on utilisera la dimension intrinsèque si elle est connue, sinon, on utilisera la dimension (sur cet axe) de la zone du masque.</dd>
-</dl>
+- Si les deux composants de `mask-size` sont définis et sont différents de `auto` :
+  - : L'image est affichée avec la taille indiquée.
+- Si `mask-size` vaut `contain` ou `cover` :
+  - : L'image est affichée en conservant ses proportions avec la plus grande taille possible pour être contenue ou couvrire toute la zone du masque. Si l'image ne possède pas de proportions intrinsèques, sa taille d'affichage sera la taille de la zone du masque.
+- Si `mask-size` vaut `auto` ou `auto auto `:
+  - : Si l'image possède deux dimensions intrinsèques, elle sera affichée avec cette taille. Si elle ne possède pas de dimensions intrinsèques ni de proportions intrinsèques, elle sera affichée à la taille de la zone du masque. Si elle n'a aucune dimension intrinsèque mais possède des proportions intrinsèques elle sera affichée comme si `contain` avait été utilisé. Si l'image possède une dimension intrinsèque et des proportions intrinsèques, sa taille sera déterminée grâce à ses informations. Si l'image possède une dimension intrinsèque mais aucune proportion intrinsèque, la dimension connue sera utilisée pour cet axe et la seconde sera celle de la zone pour le masque.
+- Si `mask-size` possède un composant `auto` et un autre composant différent de `auto` :
+  - : Si l'image possède des proportions intrinsèques, elle sera affichée avec la dimension connue et la deuxième sera calculée à partir de la proportion. Si l'image ne possède pas de proportions intrinsèques, la valeur définie sera utilisée pour l'axe correspondant et pour l'autre axe, on utilisera la dimension intrinsèque si elle est connue, sinon, on utilisera la dimension (sur cet axe) de la zone du masque.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.exemple {
+```css
+.exemple {
   height: 100px;
   width: 100px;
   background-color: rgb(128,128,128);
@@ -117,37 +109,27 @@ mask-size: unset;
   -webkit-mask-size: auto 50%;
   mask-size: auto 50%;
 
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="exemple"&gt;&lt;/div&gt;</pre>
+```html
+<div class="exemple"></div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples",200,200)}}</p>
+{{EmbedLiveSample("Exemples",200,200)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Masks", "#the-mask-size", "mask-size")}}</td>
-   <td>{{Spec2("CSS Masks")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                | État                         | Commentaires         |
+| ---------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName("CSS Masks", "#the-mask-size", "mask-size")}} | {{Spec2("CSS Masks")}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.mask-size")}}</p>
+{{Compat("css.properties.mask-size")}}

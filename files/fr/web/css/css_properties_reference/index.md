@@ -5,313 +5,85 @@ tags:
   - CSS
 translation_of: Web/CSS/CSS_Properties_Reference
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<h2 id="Référence_des_propriétés_CSS_usuelles">Référence des propriétés CSS usuelles</h2>
+## Référence des propriétés CSS usuelles
 
-<p>Voici ci-dessous une liste simple des propriétés CSS les plus fréquemment utilisées avec leur équivalent en notation DOM,  habituellement utilisée avec JavaScript :</p>
+Voici ci-dessous une liste simple des propriétés CSS les plus fréquemment utilisées avec leur équivalent en notation DOM,  habituellement utilisée avec JavaScript :
 
-<div class="note">
-  <p><strong>Note :</strong>  Cette liste n'est pas exhaustive. Pour davantage de propriétés CSS, voir <a href="/fr/docs/Web/CSS/Reference">la référence CSS</a> et <a href="/fr/docs/Web/CSS/Mozilla_Extensions">les extensions CSS spécifiques à Mozilla</a>.</p>
-</div>
+> **Note :**  Cette liste n'est pas exhaustive. Pour davantage de propriétés CSS, voir [la référence CSS](/fr/docs/Web/CSS/Reference) et [les extensions CSS spécifiques à Mozilla](/fr/docs/Web/CSS/Mozilla_Extensions).
 
-<table>
- <thead>
-  <tr>
-   <th scope="col"><strong>CSS</strong></th>
-   <th scope="col"><strong>JavaScript</strong></th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>background</code></td>
-   <td><code>background</code></td>
-  </tr>
-  <tr>
-   <td><code>background-attachment</code></td>
-   <td><code>backgroundAttachment</code></td>
-  </tr>
-  <tr>
-   <td><code>background-color</code></td>
-   <td><code>backgroundColor</code></td>
-  </tr>
-  <tr>
-   <td><code>background-image</code></td>
-   <td><code>backgroundImage</code></td>
-  </tr>
-  <tr>
-   <td><code>background-position</code></td>
-   <td><code>backgroundPosition</code></td>
-  </tr>
-  <tr>
-   <td><code>background-repeat</code></td>
-   <td><code>backgroundRepeat</code></td>
-  </tr>
-  <tr>
-   <td><code>border</code></td>
-   <td><code>border</code></td>
-  </tr>
-  <tr>
-   <td><code>border-bottom</code></td>
-   <td><code>borderBottom</code></td>
-  </tr>
-  <tr>
-   <td><code>border-bottom-color</code></td>
-   <td><code>borderBottomColor</code></td>
-  </tr>
-  <tr>
-   <td><code>border-bottom-style</code></td>
-   <td><code>borderBottomStyle</code></td>
-  </tr>
-  <tr>
-   <td><code>border-bottom-width</code></td>
-   <td><code>borderBottomWidth</code></td>
-  </tr>
-  <tr>
-   <td><code>border-color</code></td>
-   <td><code>borderColor</code></td>
-  </tr>
-  <tr>
-   <td><code>border-left</code></td>
-   <td><code>borderLeft</code></td>
-  </tr>
-  <tr>
-   <td><code>border-left-color</code></td>
-   <td><code>borderLeftColor</code></td>
-  </tr>
-  <tr>
-   <td><code>border-left-style</code></td>
-   <td><code>borderLeftStyle</code></td>
-  </tr>
-  <tr>
-   <td><code>border-left-width</code></td>
-   <td><code>borderLeftWidth</code></td>
-  </tr>
-  <tr>
-   <td><code>border-right</code></td>
-   <td><code>borderRight</code></td>
-  </tr>
-  <tr>
-   <td><code>border-right-color</code></td>
-   <td><code>borderRightColor</code></td>
-  </tr>
-  <tr>
-   <td><code>border-right-style</code></td>
-   <td><code>borderRightStyle</code></td>
-  </tr>
-  <tr>
-   <td><code>border-right-width</code></td>
-   <td><code>borderRightWidth</code></td>
-  </tr>
-  <tr>
-   <td><code>border-style</code></td>
-   <td><code>borderStyle</code></td>
-  </tr>
-  <tr>
-   <td><code>border-top</code></td>
-   <td><code>borderTop</code></td>
-  </tr>
-  <tr>
-   <td><code>border-top-color</code></td>
-   <td><code>borderTopColor</code></td>
-  </tr>
-  <tr>
-   <td><code>border-top-style</code></td>
-   <td><code>borderTopStyle</code></td>
-  </tr>
-  <tr>
-   <td><code>border-top-width</code></td>
-   <td><code>borderTopWidth</code></td>
-  </tr>
-  <tr>
-   <td><code>border-width</code></td>
-   <td><code>borderWidth</code></td>
-  </tr>
-  <tr>
-   <td><code>clear</code></td>
-   <td><code>clear</code></td>
-  </tr>
-  <tr>
-   <td><code>clip</code></td>
-   <td><code>clip</code></td>
-  </tr>
-  <tr>
-   <td><code>color</code></td>
-   <td><code>color</code></td>
-  </tr>
-  <tr>
-   <td><code>cursor</code></td>
-   <td><code>cursor</code></td>
-  </tr>
-  <tr>
-   <td><code>display</code></td>
-   <td><code>display</code></td>
-  </tr>
-  <tr>
-   <td><code>filter</code></td>
-   <td><code>filter</code></td>
-  </tr>
-  <tr>
-   <td><code>float</code></td>
-   <td><code>cssFloat</code></td>
-  </tr>
-  <tr>
-   <td><code>font</code></td>
-   <td><code>font</code></td>
-  </tr>
-  <tr>
-   <td><code>font-family</code></td>
-   <td><code>fontFamily</code></td>
-  </tr>
-  <tr>
-   <td><code>font-size</code></td>
-   <td><code>fontSize</code></td>
-  </tr>
-  <tr>
-   <td><code>font-variant</code></td>
-   <td><code>fontVariant</code></td>
-  </tr>
-  <tr>
-   <td><code>font-weight</code></td>
-   <td><code>fontWeight</code></td>
-  </tr>
-  <tr>
-   <td><code>height</code></td>
-   <td><code>height</code></td>
-  </tr>
-  <tr>
-   <td><code>left</code></td>
-   <td><code>left</code></td>
-  </tr>
-  <tr>
-   <td><code>letter-spacing</code></td>
-   <td><code>letterSpacing</code></td>
-  </tr>
-  <tr>
-   <td><code>line-height</code></td>
-   <td><code>lineHeight</code></td>
-  </tr>
-  <tr>
-   <td><code>list-style</code></td>
-   <td><code>listStyle</code></td>
-  </tr>
-  <tr>
-   <td><code>list-style-image</code></td>
-   <td><code>listStyleImage</code></td>
-  </tr>
-  <tr>
-   <td><code>list-style-position</code></td>
-   <td><code>listStylePosition</code></td>
-  </tr>
-  <tr>
-   <td><code>list-style-type</code></td>
-   <td><code>listStyleType</code></td>
-  </tr>
-  <tr>
-   <td><code>margin</code></td>
-   <td><code>margin</code></td>
-  </tr>
-  <tr>
-   <td><code>margin-bottom</code></td>
-   <td><code>marginBottom</code></td>
-  </tr>
-  <tr>
-   <td><code>margin-left</code></td>
-   <td><code>marginLeft</code></td>
-  </tr>
-  <tr>
-   <td><code>margin-right</code></td>
-   <td><code>marginRight</code></td>
-  </tr>
-  <tr>
-   <td><code>margin-top</code></td>
-   <td><code>marginTop</code></td>
-  </tr>
-  <tr>
-   <td><code>overflow</code></td>
-   <td><code>overflow</code></td>
-  </tr>
-  <tr>
-   <td><code>padding</code></td>
-   <td><code>padding</code></td>
-  </tr>
-  <tr>
-   <td><code>padding-bottom</code></td>
-   <td><code>paddingBottom</code></td>
-  </tr>
-  <tr>
-   <td><code>padding-left</code></td>
-   <td><code>paddingLeft</code></td>
-  </tr>
-  <tr>
-   <td><code>padding-right</code></td>
-   <td><code>paddingRight</code></td>
-  </tr>
-  <tr>
-   <td><code>padding-top</code></td>
-   <td><code>paddingTop</code></td>
-  </tr>
-  <tr>
-   <td><code>page-break-after</code></td>
-   <td><code>pageBreakAfter</code></td>
-  </tr>
-  <tr>
-   <td><code>page-break-before</code></td>
-   <td><code>pageBreakBefore</code></td>
-  </tr>
-  <tr>
-   <td><code>position</code></td>
-   <td><code>position</code></td>
-  </tr>
-  <tr>
-   <td><code>stroke-dasharray</code></td>
-   <td><code>strokeDasharray</code></td>
-  </tr>
-  <tr>
-   <td><code>stroke-dashoffset</code></td>
-   <td><code>strokeDashoffset</code></td>
-  </tr>
-  <tr>
-   <td><code>stroke-width</code></td>
-   <td><code>strokeWidth</code></td>
-  </tr>
-  <tr>
-   <td><code>text-align</code></td>
-   <td><code>textAlign</code></td>
-  </tr>
-  <tr>
-   <td><code>text-decoration</code></td>
-   <td><code>textDecoration</code></td>
-  </tr>
-  <tr>
-   <td><code>text-indent</code></td>
-   <td><code>textIndent</code></td>
-  </tr>
-  <tr>
-   <td><code>text-transform</code></td>
-   <td><code>textTransform</code></td>
-  </tr>
-  <tr>
-   <td><code>top</code></td>
-   <td><code>top</code></td>
-  </tr>
-  <tr>
-   <td><code>vertical-align</code></td>
-   <td><code>verticalAlign</code></td>
-  </tr>
-  <tr>
-   <td><code>visibility</code></td>
-   <td><code>visibility</code></td>
-  </tr>
-  <tr>
-   <td><code>width</code></td>
-   <td><code>width</code></td>
-  </tr>
-  <tr>
-   <td><code>z-index</code></td>
-   <td><code>zIndex</code></td>
-  </tr>
- </tbody>
-</table>
-
-<p> </p>
+| **CSS**                 | **JavaScript**         |
+| ----------------------- | ---------------------- |
+| `background`            | `background`           |
+| `background-attachment` | `backgroundAttachment` |
+| `background-color`      | `backgroundColor`      |
+| `background-image`      | `backgroundImage`      |
+| `background-position`   | `backgroundPosition`   |
+| `background-repeat`     | `backgroundRepeat`     |
+| `border`                | `border`               |
+| `border-bottom`         | `borderBottom`         |
+| `border-bottom-color`   | `borderBottomColor`    |
+| `border-bottom-style`   | `borderBottomStyle`    |
+| `border-bottom-width`   | `borderBottomWidth`    |
+| `border-color`          | `borderColor`          |
+| `border-left`           | `borderLeft`           |
+| `border-left-color`     | `borderLeftColor`      |
+| `border-left-style`     | `borderLeftStyle`      |
+| `border-left-width`     | `borderLeftWidth`      |
+| `border-right`          | `borderRight`          |
+| `border-right-color`    | `borderRightColor`     |
+| `border-right-style`    | `borderRightStyle`     |
+| `border-right-width`    | `borderRightWidth`     |
+| `border-style`          | `borderStyle`          |
+| `border-top`            | `borderTop`            |
+| `border-top-color`      | `borderTopColor`       |
+| `border-top-style`      | `borderTopStyle`       |
+| `border-top-width`      | `borderTopWidth`       |
+| `border-width`          | `borderWidth`          |
+| `clear`                 | `clear`                |
+| `clip`                  | `clip`                 |
+| `color`                 | `color`                |
+| `cursor`                | `cursor`               |
+| `display`               | `display`              |
+| `filter`                | `filter`               |
+| `float`                 | `cssFloat`             |
+| `font`                  | `font`                 |
+| `font-family`           | `fontFamily`           |
+| `font-size`             | `fontSize`             |
+| `font-variant`          | `fontVariant`          |
+| `font-weight`           | `fontWeight`           |
+| `height`                | `height`               |
+| `left`                  | `left`                 |
+| `letter-spacing`        | `letterSpacing`        |
+| `line-height`           | `lineHeight`           |
+| `list-style`            | `listStyle`            |
+| `list-style-image`      | `listStyleImage`       |
+| `list-style-position`   | `listStylePosition`    |
+| `list-style-type`       | `listStyleType`        |
+| `margin`                | `margin`               |
+| `margin-bottom`         | `marginBottom`         |
+| `margin-left`           | `marginLeft`           |
+| `margin-right`          | `marginRight`          |
+| `margin-top`            | `marginTop`            |
+| `overflow`              | `overflow`             |
+| `padding`               | `padding`              |
+| `padding-bottom`        | `paddingBottom`        |
+| `padding-left`          | `paddingLeft`          |
+| `padding-right`         | `paddingRight`         |
+| `padding-top`           | `paddingTop`           |
+| `page-break-after`      | `pageBreakAfter`       |
+| `page-break-before`     | `pageBreakBefore`      |
+| `position`              | `position`             |
+| `stroke-dasharray`      | `strokeDasharray`      |
+| `stroke-dashoffset`     | `strokeDashoffset`     |
+| `stroke-width`          | `strokeWidth`          |
+| `text-align`            | `textAlign`            |
+| `text-decoration`       | `textDecoration`       |
+| `text-indent`           | `textIndent`           |
+| `text-transform`        | `textTransform`        |
+| `top`                   | `top`                  |
+| `vertical-align`        | `verticalAlign`        |
+| `visibility`            | `visibility`           |
+| `width`                 | `width`                |
+| `z-index`               | `zIndex`               |

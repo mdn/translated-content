@@ -8,17 +8,18 @@ tags:
   - Reference
 translation_of: Web/CSS/isolation
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>isolation</code></strong> indique que l'élément crée un nouveau contexte d'empilement (<em>stacking context</em>).</p>
+La propriété **`isolation`** indique que l'élément crée un nouveau contexte d'empilement (_stacking context_).
 
-<div>{{EmbedInteractiveExample("pages/css/isolation.html")}}</div>
+{{EmbedInteractiveExample("pages/css/isolation.html")}}
 
-<p>Cette propriété s'avère particulièrement utile avec {{cssxref("mix-blend-mode")}} afin de ne mélanger que l'arrière plan d'un contexte d'empilement particulier.</p>
+Cette propriété s'avère particulièrement utile avec {{cssxref("mix-blend-mode")}} afin de ne mélanger que l'arrière plan d'un contexte d'empilement particulier.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs avec mots-clés */
+```css
+/* Valeurs avec mots-clés */
 isolation: auto;
 isolation: isolate;
 
@@ -26,28 +27,27 @@ isolation: isolate;
 isolation: inherit;
 isolation: initial;
 isolation: unset;
-</pre>
+```
 
-<p>La propriété <code>isolation</code> est définie avec l'un des mots-clés suivants.</p>
+La propriété `isolation` est définie avec l'un des mots-clés suivants.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Un mot-clé qui indique qu'un nouveau contexte d'empilement doit être créé uniquement si une propriété appliquée à l'élément le rend nécessaire.</dd>
- <dt><code>isolate</code></dt>
- <dd>Un mot-clé qui indique qu'un nouveau contexte d'empilement doit être créé.</dd>
-</dl>
+- `auto`
+  - : Un mot-clé qui indique qu'un nouveau contexte d'empilement doit être créé uniquement si une propriété appliquée à l'élément le rend nécessaire.
+- `isolate`
+  - : Un mot-clé qui indique qu'un nouveau contexte d'empilement doit être créé.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.a {
+```css
+.a {
   background-color: rgb(0,255,0);
 }
 #b {
@@ -66,53 +66,40 @@ isolation: unset;
 }
 #e {
   isolation: isolate;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="b" class="a"&gt;
-  &lt;div id="d"&gt;
-    &lt;div class="a c"&gt;auto&lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div id="e"&gt;
-    &lt;div class="a c"&gt;isolate&lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div id="b" class="a">
+  <div id="d">
+    <div class="a c">auto</div>
+  </div>
+  <div id="e">
+    <div class="a c">isolate</div>
+  </div>
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', 230, 230)}}</p>
+{{EmbedLiveSample('Exemples', 230, 230)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Compositing', '#isolation', 'Isolation')}}</td>
-   <td>{{Spec2('Compositing')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                            | État                             | Commentaires         |
+| ------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName('Compositing', '#isolation', 'Isolation')}} | {{Spec2('Compositing')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.isolation")}}</p>
+{{Compat("css.properties.isolation")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("&lt;blend-mode&gt;")}}</li>
- <li>{{cssxref("mix-blend-mode")}}</li>
- <li>{{cssxref("background-blend-mode")}}</li>
-</ul>
+- {{cssxref("&lt;blend-mode&gt;")}}
+- {{cssxref("mix-blend-mode")}}
+- {{cssxref("background-blend-mode")}}

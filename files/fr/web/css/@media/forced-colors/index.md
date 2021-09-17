@@ -7,78 +7,59 @@ tags:
   - Reference
 translation_of: Web/CSS/@media/forced-colors
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}{{draft}}</div>
+{{CSSRef}}{{SeeCompatTable}}{{draft}}
 
-<p>La <a href="/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries#Caractéristiques_média_(media_features)">caractéristique média</a> <strong><code>forced-colors</code></strong> est utilisée afin de détecter si l'utilisateur a choisi une palette de couleur restreinte via le navigateur ou l'agent utilisateur.</p>
+La [caractéristique média](</fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries#Caractéristiques_média_(media_features)>) **`forced-colors`** est utilisée afin de détecter si l'utilisateur a choisi une palette de couleur restreinte via le navigateur ou l'agent utilisateur.
 
-<div class="note">
-<p><strong>Note :</strong> Cette fonctionnalité n'est pas encore implémentée par aucun agent utilisateur</p>
-</div>
+> **Note :** Cette fonctionnalité n'est pas encore implémentée par aucun agent utilisateur
 
-<h2 id="Valeurs">Valeurs</h2>
+## Valeurs
 
-<dl>
- <dt><code><dfn>none</dfn></code></dt>
- <dd>La palette de couleur n'est pas restreinte.</dd>
- <dt><code>active</code></dt>
- <dd>La palette de couleur est restreinte et c'est l'agent utilisateur qui fournira la palette utilisable via un système de mots-clés de couleurs CSS systèmes. La valeur de <code>prefers-color-scheme</code> sera également mise à jour afin que les auteurs puissent adapter la page.</dd>
-</dl>
+- `none`
+  - : La palette de couleur n'est pas restreinte.
+- `active`
+  - : La palette de couleur est restreinte et c'est l'agent utilisateur qui fournira la palette utilisable via un système de mots-clés de couleurs CSS systèmes. La valeur de `prefers-color-scheme` sera également mise à jour afin que les auteurs puissent adapter la page.
 
-<h2 id="Préférences_utilisateur">Préférences utilisateur</h2>
+## Préférences utilisateur
 
-<p>À l'heure actuelle, aucun agent utilisateur n'implémente cette fonctionnalité bien que de nombreux systèmes d'exploitation prennent en charge ce type de paramètre.</p>
+À l'heure actuelle, aucun agent utilisateur n'implémente cette fonctionnalité bien que de nombreux systèmes d'exploitation prennent en charge ce type de paramètre.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Dans cet exemple, les couleurs utilisées par défaut sont exotiques voire illisibles. On tire ici parti d'une requête média pour utiliser une palette restreinte de l'agent utilisateur.</p>
+Dans cet exemple, les couleurs utilisées par défaut sont exotiques voire illisibles. On tire ici parti d'une requête média pour utiliser une palette restreinte de l'agent utilisateur.
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre>&lt;div class="colors"&gt;quelques couleurs étranges&lt;/div&gt;
-</pre>
+    <div class="colors">quelques couleurs étranges</div>
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre>.colors {
-  background-color: red;
-  color: grey;
-}
+    .colors {
+      background-color: red;
+      color: grey;
+    }
 
-@media (forced-colors: active) {
-  .colors {
-    background-color: white;
-    color: black;
-  }
-}
-</pre>
+    @media (forced-colors: active) {
+      .colors {
+        background-color: white;
+        color: black;
+      }
+    }
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS5 Media Queries', '#forced-colors', 'forced-colors')}}</td>
-   <td>{{Spec2('CSS5 Media Queries')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                                     | Commentaires         |
+| -------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName('CSS5 Media Queries', '#forced-colors', 'forced-colors')}} | {{Spec2('CSS5 Media Queries')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Array.sort")}}</p>
+{{Compat("javascript.builtins.Array.sort")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<p>{QuickLinksWithSubpages("/fr/docs/Web/CSS/@media/")}}</p>
+{QuickLinksWithSubpages("/fr/docs/Web/CSS/@media/")}}

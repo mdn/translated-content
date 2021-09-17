@@ -7,13 +7,14 @@ tags:
   - Reference
 translation_of: Web/CSS/font-variant-position
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>font-variant-position</code></strong> permet d'utiliser des glyphes de plus petite taille positionnés en exposant ou en indice par rapport à la ligne de base utilisée (qui reste la même).</p>
+La propriété **`font-variant-position`** permet d'utiliser des glyphes de plus petite taille positionnés en exposant ou en indice par rapport à la ligne de base utilisée (qui reste la même).
 
-<p>Généralement, les glyphes utilisés sont ceux utilisés pour les éléments HTML {{HTMLElement("sub")}} et {{HTMLElement("sup")}}.</p>
+Généralement, les glyphes utilisés sont ceux utilisés pour les éléments HTML {{HTMLElement("sub")}} et {{HTMLElement("sup")}}.
 
-<pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 font-variant-position: normal;
 font-variant-position: sub;
 font-variant-position: super;
@@ -22,72 +23,61 @@ font-variant-position: super;
 font-variant-position: inherit;
 font-variant-position: initial;
 font-variant-position: unset;
-</pre>
+```
 
-<p>Lorsque ces glyphes alternatifs sont activés, si un caractère de l'ensemble concerné ne possède pas de glyphe correspondant, l'ensemble des caractères est affiché avec une méthode de secours qui synthétise ces glyphes.</p>
+Lorsque ces glyphes alternatifs sont activés, si un caractère de l'ensemble concerné ne possède pas de glyphe correspondant, l'ensemble des caractères est affiché avec une méthode de secours qui synthétise ces glyphes.
 
-<p>Ces glyphes alternatifs possèdent la même boîte em et la même ligne de base que le reste du texte. La modification est purement graphique et il n'y a pas d'impact sur la hauteur de ligne ou sur les autres caractéristiques liées aux boîtes.</p>
+Ces glyphes alternatifs possèdent la même boîte em et la même ligne de base que le reste du texte. La modification est purement graphique et il n'y a pas d'impact sur la hauteur de ligne ou sur les autres caractéristiques liées aux boîtes.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>La valeur de cette propriété est définie grâce à l'un des mots-clés définis ci-après.</p>
+La valeur de cette propriété est définie grâce à l'un des mots-clés définis ci-après.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>normal</code></dt>
- <dd>Les glyphes alternatifs sont désactivés.</dd>
- <dt><code>sub</code></dt>
- <dd>Ce mot-clé permet d'utiliser les glyphes utilisés en indice.</dd>
- <dt><code>super</code></dt>
- <dd>Ce mot-clé permet d'utiliser les glyphes utilisés en exposant.</dd>
-</dl>
+- `normal`
+  - : Les glyphes alternatifs sont désactivés.
+- `sub`
+  - : Ce mot-clé permet d'utiliser les glyphes utilisés en indice.
+- `super`
+  - : Ce mot-clé permet d'utiliser les glyphes utilisés en exposant.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">.exemple {
+```css
+.exemple {
   font-variant-position: super;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt; Alice &lt;span class="exemple"&gt;ne s’était pas fait le moindre mal.&lt;/span&gt;
+```html
+<p> Alice <span class="exemple">ne s’était pas fait le moindre mal.</span>
     Vite elle se remet sur ses pieds et regarde en l’air ; mais tout
     est noir là-haut. Elle voit devant elle un long passage et le Lapin
     Blanc qui court à toutes jambes.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Fonts', '#propdef-font-variant-position', 'font-variant-position')}}</td>
-   <td>{{Spec2('CSS3 Fonts')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                             | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('CSS3 Fonts', '#propdef-font-variant-position', 'font-variant-position')}} | {{Spec2('CSS3 Fonts')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.font-variant-position")}}</p>
+{{Compat("css.properties.font-variant-position")}}

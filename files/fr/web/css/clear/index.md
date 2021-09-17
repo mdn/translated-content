@@ -7,32 +7,32 @@ tags:
   - Reference
 translation_of: Web/CSS/clear
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>clear</code></strong> indique si un élément peut être situé à côté d'éléments <a href="/fr/docs/Web/CSS/float">flottants</a> qui le précèdent ou s'il doit être déplacé vers le bas pour être en dessous de ces éléments. La propriété <code>clear</code> s'applique aux éléments flottants comme aux éléments non-flottants.</p>
+La propriété **`clear`** indique si un élément peut être situé à côté d'éléments [flottants](/fr/docs/Web/CSS/float) qui le précèdent ou s'il doit être déplacé vers le bas pour être en dessous de ces éléments. La propriété `clear` s'applique aux éléments flottants comme aux éléments non-flottants.
 
-<div>{{EmbedInteractiveExample("pages/css/clear.html")}}</div>
+{{EmbedInteractiveExample("pages/css/clear.html")}}
 
-<p>Lorsqu'elle est appliquée aux blocs non-flottants, elle déplace <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">le bord de la bordure</a> de l'élément sous <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">le bord de la marge</a> de tous les éléments flottants concernés. Il y aura<a href="/fr/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing"> fusion des marges (<em>margin collapsing</em>)</a> verticales entre l'élément flottant et le bloc non-flottant mais pas entre les élément flottants.</p>
+Lorsqu'elle est appliquée aux blocs non-flottants, elle déplace [le bord de la bordure](/en-US/docs/Learn/CSS/Building_blocks/The_box_model) de l'élément sous [le bord de la marge](/en-US/docs/Learn/CSS/Building_blocks/The_box_model) de tous les éléments flottants concernés. Il y aura[ fusion des marges (_margin collapsing_)](/fr/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) verticales entre l'élément flottant et le bloc non-flottant mais pas entre les élément flottants.
 
-<p>Lorsqu'elle est appliquée aux éléments flottants, elle déplace <a href="/fr/Apprendre/CSS/Les_bases/Le_mod%C3%A8le_de_bo%C3%AEte">le bord de la marge</a> de l'élément sous <a href="/fr/Apprendre/CSS/Les_bases/Le_mod%C3%A8le_de_bo%C3%AEte">le bord de la marge</a> de tous les éléments flottants concernés. Cela impacte la position des éléments flottants suivants car ceux-ci ne peuvent pas être situés plus haut que les éléments flottants qui les précèdent.</p>
+Lorsqu'elle est appliquée aux éléments flottants, elle déplace [le bord de la marge](/fr/Apprendre/CSS/Les_bases/Le_mod%C3%A8le_de_bo%C3%AEte) de l'élément sous [le bord de la marge](/fr/Apprendre/CSS/Les_bases/Le_mod%C3%A8le_de_bo%C3%AEte) de tous les éléments flottants concernés. Cela impacte la position des éléments flottants suivants car ceux-ci ne peuvent pas être situés plus haut que les éléments flottants qui les précèdent.
 
-<p>Les éléments flottants qui sont dégagés sont les éléments flottants précédant l'élément ciblé, au sein de du <a href="/fr/docs/Web/Guide/CSS/Block_formatting_context">même contexte de formatage</a>.</p>
+Les éléments flottants qui sont dégagés sont les éléments flottants précédant l'élément ciblé, au sein de du [même contexte de formatage](/fr/docs/Web/Guide/CSS/Block_formatting_context).
 
-<div class="note">
-<p><strong>Note :</strong> Si un élément ne contient que des éléments flottants, sa hauteur sera nulle. Si on souhaite redimensionner l'élément afin qu'il contienne tous les éléments flottants à l'intérieur, on peut faire flotter ce conteneur ou utiliser <code>clear</code> sur un pseudo-élément remplacé {{cssxref("::after")}}.</p>
+> **Note :** Si un élément ne contient que des éléments flottants, sa hauteur sera nulle. Si on souhaite redimensionner l'élément afin qu'il contienne tous les éléments flottants à l'intérieur, on peut faire flotter ce conteneur ou utiliser `clear` sur un pseudo-élément remplacé {{cssxref("::after")}}.
+>
+> ```css
+> #conteneur::after {
+>    content: "";
+>    display: block;
+>    clear: both;
+> }
+> ```
 
-<pre class="brush: css">#conteneur::after {
-   content: "";
-   display: block;
-   clear: both;
-}
-</pre>
-</div>
+## Syntaxe
 
-<h2 id="Syntaxe">Syntaxe</h2>
-
-<pre class="brush: css">/* Valeurs avec mot-clé */
+```css
+/* Valeurs avec mot-clé */
 clear: none;
 clear: left;
 clear: right;
@@ -44,45 +44,45 @@ clear: inline-end;
 clear: inherit;
 clear: initial;
 clear: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Un mot-clé qui indique que l'élément n'est pas déplacé vers le bas pour dégager le flottement.</dd>
- <dt><code>left</code></dt>
- <dd>Un mot-clé qui indique que l'élément est déplacé vers le bas afin de dégager les flottements à gauche.</dd>
- <dt><code>right</code></dt>
- <dd>Un mot-clé qui indique que l'élément est déplacé vers le bas afin de dégager les flottements à droite.</dd>
- <dt><code>both</code></dt>
- <dd>Un mot-clé qui indique que l'élément est déplacé vers le bas afin de dégager les flottements à gauche et à droite.</dd>
- <dt><code>inline-start</code></dt>
- <dd>Un mot-clé qui indique que l'élément est déplacé vers le bas pour dégager le contenu vers le début du bloc englobant. Autrement dit, cela dégage à gauche pour les scripts de gauche à droite (<em>LTR</em> pour <em>left to right</em>) et dégage à droite pour les scripts de droite à gauche (<em>RTL</em> pour <em>droite à gauche</em>).</dd>
- <dt><code>inline-end</code></dt>
- <dd>Un mot-clé qui indique que l'élément est déplacé vers le bas pour dégager le contenu du côté de la fin du bloc englobant. Autrement dit, cela dégage à droite pour les scripts de gauche à droite (<em>LTR</em> pour <em>left to right</em>) et dégage à gauche pour les scripts de droite à gauche (<em>RTL</em> pour <em>droite à gauche</em>).</dd>
-</dl>
+- `none`
+  - : Un mot-clé qui indique que l'élément n'est pas déplacé vers le bas pour dégager le flottement.
+- `left`
+  - : Un mot-clé qui indique que l'élément est déplacé vers le bas afin de dégager les flottements à gauche.
+- `right`
+  - : Un mot-clé qui indique que l'élément est déplacé vers le bas afin de dégager les flottements à droite.
+- `both`
+  - : Un mot-clé qui indique que l'élément est déplacé vers le bas afin de dégager les flottements à gauche et à droite.
+- `inline-start`
+  - : Un mot-clé qui indique que l'élément est déplacé vers le bas pour dégager le contenu vers le début du bloc englobant. Autrement dit, cela dégage à gauche pour les scripts de gauche à droite (_LTR_ pour _left to right_) et dégage à droite pour les scripts de droite à gauche (_RTL_ pour _droite à gauche_).
+- `inline-end`
+  - : Un mot-clé qui indique que l'élément est déplacé vers le bas pour dégager le contenu du côté de la fin du bloc englobant. Autrement dit, cela dégage à droite pour les scripts de gauche à droite (_LTR_ pour _left to right_) et dégage à gauche pour les scripts de droite à gauche (_RTL_ pour _droite à gauche_).
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="clear_left"><code>clear: left</code></h3>
+### `clear: left`
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;p class="black"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.&lt;/p&gt;
-  &lt;p class="red"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;
-  &lt;p class="left"&gt;Ce paragraphe est dégagé à gauche.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+  <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+  <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+  <p class="left">Ce paragraphe est dégagé à gauche.</p>
+</div>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.wrapper{
+```css
+.wrapper{
   border:1px solid black;
   padding:10px;
 }
@@ -106,24 +106,26 @@ clear: unset;
 p {
   width: 50%;
 }
-</pre>
+```
 
-<p>{{EmbedLiveSample('clear_left','100%','250')}}</p>
+{{EmbedLiveSample('clear_left','100%','250')}}
 
-<h3 id="clear_right"><code>clear: right</code></h3>
+### `clear: right`
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;p class="black"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.&lt;/p&gt;
-  &lt;p class="red"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit.&lt;/p&gt;
-  &lt;p class="right"&gt;Ce paragraphe est dégagé à droite.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+  <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+  <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+  <p class="right">Ce paragraphe est dégagé à droite.</p>
+</div>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.wrapper{
+```css
+.wrapper{
   border:1px solid black;
   padding:10px;
 }
@@ -146,24 +148,27 @@ p {
 }
 p {
   width: 50%;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('clear_right','100%','250')}}</p>
+{{EmbedLiveSample('clear_right','100%','250')}}
 
-<h3 id="clear_both"><code>clear: both</code></h3>
+### `clear: both`
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="wrapper"&gt;
-  &lt;p class="black"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor. Fusce pulvinar lacus ac dui.&lt;/p&gt;
-  &lt;p class="red"&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.&lt;/p&gt;
-  &lt;p class="both"&gt;Ce paragraphe est dégagé de chaque côté.&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div class="wrapper">
+  <p class="black">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor. Fusce pulvinar lacus ac dui.</p>
+  <p class="red">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus sit amet diam. Duis mattis varius dui. Suspendisse eget dolor.</p>
+  <p class="both">Ce paragraphe est dégagé de chaque côté.</p>
+</div>
+```
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.wrapper{
+```css
+.wrapper{
   border:1px solid black;
   padding:10px;
 }
@@ -186,47 +191,25 @@ p {
 }
 p {
   width: 45%;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample('clear_both','100%','300')}}</p>
+{{EmbedLiveSample('clear_both','100%','300')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Logical Properties', '#float-clear', 'float and clear')}}</td>
-   <td>{{Spec2('CSS Logical Properties')}}</td>
-   <td>Ajout des valeurs <code>inline-start</code> et <code>inline-end</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visuren.html#flow-control', 'clear')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Pas de modification significative, clarification de certains détails.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#clear', 'clear')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | État                                             | Commentaires                                                          |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------ | --------------------------------------------------------------------- |
+| {{SpecName('CSS Logical Properties', '#float-clear', 'float and clear')}} | {{Spec2('CSS Logical Properties')}} | Ajout des valeurs `inline-start` et `inline-end`                      |
+| {{SpecName('CSS2.1', 'visuren.html#flow-control', 'clear')}}                 | {{Spec2('CSS2.1')}}                         | Pas de modification significative, clarification de certains détails. |
+| {{SpecName('CSS1', '#clear', 'clear')}}                                             | {{Spec2('CSS1')}}                         | Définition initiale.                                                  |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.clear")}}</p>
+{{Compat("css.properties.clear")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">Le modèle de boîtes</a></li>
-</ul>
+- [Le modèle de boîtes](/en-US/docs/Learn/CSS/Building_blocks/The_box_model)

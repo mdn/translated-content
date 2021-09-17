@@ -9,24 +9,25 @@ tags:
   - Reference
 translation_of: Web/CSS/min-inline-size
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propriété <strong><code>min-inline-size</code></strong> définit la taille minimale horizontale ou verticale d'un élément en ligne (<em>inline</em>) selon le mode d'écriture utilisé. Cette propriété « logique » correspond à la propriété {{cssxref("min-width")}} ou {{cssxref("min-height")}} selon la valeur utilisée pour {{cssxref("writing-mode")}}.</p>
+La propriété **`min-inline-size`** définit la taille minimale horizontale ou verticale d'un élément en ligne (_inline_) selon le mode d'écriture utilisé. Cette propriété « logique » correspond à la propriété {{cssxref("min-width")}} ou {{cssxref("min-height")}} selon la valeur utilisée pour {{cssxref("writing-mode")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/min-inline-size.html")}}</div>
+{{EmbedInteractiveExample("pages/css/min-inline-size.html")}}
 
-<p>Si le mode d'écriture est orienté verticalement, <code>min-inline-size</code> fait référence à la hauteur minimale de l'élément. Sinon, elle fait référence à la largeur minimale de l'élément.  to the minimal height of the element, otherwise it relates to the minimal width of the element. La propriété {{cssxref("min-block-size")}} peut être utilisée pour les blocs.</p>
+Si le mode d'écriture est orienté verticalement, `min-inline-size` fait référence à la hauteur minimale de l'élément. Sinon, elle fait référence à la largeur minimale de l'élément.  to the minimal height of the element, otherwise it relates to the minimal width of the element. La propriété {{cssxref("min-block-size")}} peut être utilisée pour les blocs.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs de longueur */
-/* Type &lt;length&gt;       */
+```css
+/* Valeurs de longueur */
+/* Type <length>       */
 min-inline-size: 100px;
 min-inline-size: 5em;
 
 /* Valeurs proportionnelles à la */
 /* largeur du bloc englobant     */
-/* Type &lt;percentage&gt;             */
+/* Type <percentage>             */
 min-inline-size: 10%;
 
 /* Valeurs avec un mot-clé */
@@ -39,69 +40,56 @@ min-inline-size: fill-available;
 min-inline-size: inherit;
 min-inline-size: initial;
 min-inline-size: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<p>La propriété <code>min-inline-size</code> peut prendre les mêmes valeurs que les propriétés {{cssxref("min-width")}} ou {{cssxref("min-height")}}.</p>
+La propriété `min-inline-size` peut prendre les mêmes valeurs que les propriétés {{cssxref("min-width")}} ou {{cssxref("min-height")}}.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.exemple {
+```css
+.exemple {
   writing-mode: vertical-rl;
   background-color: yellow;
   block-size: 5%;
   min-inline-size: 200px;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="exemple"&gt;Texte d'exemple&lt;/p&gt;
-</pre>
+```html
+<p class="exemple">Texte d'exemple</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Statut</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-min-inline-size", "min-inline-size")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | Statut                                           | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
+| {{SpecName("CSS Logical Properties", "#propdef-min-inline-size", "min-inline-size")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.min-inline-size")}}</p>
+{{Compat("css.properties.min-inline-size")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Les propriétés physiques correspondantes
-  <ul>
-   <li>{{cssxref("min-width")}}</li>
-   <li>{{cssxref("min-height")}}</li>
-  </ul>
- </li>
- <li>{{cssxref("writing-mode")}}</li>
-</ul>
+- Les propriétés physiques correspondantes
+
+  - {{cssxref("min-width")}}
+  - {{cssxref("min-height")}}
+
+- {{cssxref("writing-mode")}}

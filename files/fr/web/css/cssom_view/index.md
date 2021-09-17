@@ -9,44 +9,27 @@ tags:
   - Reference
 translation_of: Web/CSS/CSSOM_View
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><em><strong>CSSOM View</strong></em> (ou <strong>Vue CSSOM</strong>) est un module de la spécification CSS qui définit comment manipuler la vue d'un document et notamment le comportement lors du défilement (<em>scrolling</em>).</p>
+**_CSSOM View_** (ou **Vue CSSOM**) est un module de la spécification CSS qui définit comment manipuler la vue d'un document et notamment le comportement lors du défilement (_scrolling_).
 
-<h2 id="Référence">Référence</h2>
+## Référence
 
-<h3 id="Propriétés">Propriétés</h3>
+### Propriétés
 
-<ul>
- <li>{{cssxref("scroll-behavior")}}</li>
-</ul>
+- {{cssxref("scroll-behavior")}}
 
-<h2 id="Guide">Guide</h2>
+## Guide
 
-<dl>
- <dt><a href="/fr/docs/Web/CSS/CSSOM_View/Systèmes_de_coordonnées">Les systèmes de coordonnées</a></dt>
- <dd>Un guide à propos des différents systèmes de coordonnées permettant de définir une position dans un contexte d'affichage : que ce soit un écran, une zone d'affichage, un appareil mobile ou bien une position sur une feuille de papier lors de l'impression.</dd>
-</dl>
+- [Les systèmes de coordonnées](/fr/docs/Web/CSS/CSSOM_View/Systèmes_de_coordonnées)
+  - : Un guide à propos des différents systèmes de coordonnées permettant de définir une position dans un contexte d'affichage : que ce soit un écran, une zone d'affichage, un appareil mobile ou bien une position sur une feuille de papier lors de l'impression.
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSSOM View')}}</td>
-   <td>{{Spec2('CSSOM View')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                        | État                             | Commentaires         |
+| ------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName('CSSOM View')}} | {{Spec2('CSSOM View')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.scroll-behavior")}}</p>
+{{Compat("css.properties.scroll-behavior")}}

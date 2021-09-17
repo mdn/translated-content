@@ -1,32 +1,30 @@
 ---
 title: '::-moz-page-sequence'
-slug: 'Web/CSS/::-moz-page-sequence'
+slug: Web/CSS/::-moz-page-sequence
 tags:
   - CSS
   - Non-standard
   - Pseudo-element
   - Reference
-translation_of: 'Web/CSS/::-moz-page-sequence'
+translation_of: Web/CSS/::-moz-page-sequence
 ---
-<div>{{CSSRef}}{{non-standard_header}}</div>
+{{CSSRef}}{{non-standard_header}}
 
-<p>Le pseudo-élément <code>::-moz-page-sequence</code>, spécifique à Mozilla, représente l'arrière-plan du document lors de la prévisualisation avant une impression.</p>
+Le pseudo-élément `::-moz-page-sequence`, spécifique à Mozilla, représente l'arrière-plan du document lors de la prévisualisation avant une impression.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
 {{CSSSyntax}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Ce pseudo-élément est un pseudo-élément propriétaire lié à Gecko/Mozilla et ne fait partie d'aucune spécification.</p>
+Ce pseudo-élément est un pseudo-élément propriétaire lié à Gecko/Mozilla et ne fait partie d'aucune spécification.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.-moz-page-sequence")}}</p>
+{{Compat("css.selectors.-moz-page-sequence")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("::-moz-page")}}</li>
- <li>{{cssxref("::-moz-scrolled-page-sequence")}}</li>
-</ul>
+- {{cssxref("::-moz-page")}}
+- {{cssxref("::-moz-scrolled-page-sequence")}}

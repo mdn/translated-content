@@ -10,28 +10,27 @@ tags:
   - 'valeur par défaut : center'
 translation_of: Web/CSS/transform-origin
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>transform-origin</code></strong> permet de modifier l'origine du repère pour les opérations de transformation d'un élément.</p>
+La propriété **`transform-origin`** permet de modifier l'origine du repère pour les opérations de transformation d'un élément.
 
-<div>{{EmbedInteractiveExample("pages/css/transform-origin.html")}}</div>
+{{EmbedInteractiveExample("pages/css/transform-origin.html")}}
 
-<p>Par exemple, l'origine par défaut pour la fonction <code>rotate()</code> est le centre de la rotation. Cette propriété est utilisée en :</p>
+Par exemple, l'origine par défaut pour la fonction `rotate()` est le centre de la rotation. Cette propriété est utilisée en :
 
-<ol>
- <li>Translatant l'élément avec l'opposé de la valeur fournie</li>
- <li>Appliquant la transformation souhaitée sur l'élément</li>
- <li>Translatant l'élément avec la valeur fournie pour cette propriété.</li>
-</ol>
+1.  Translatant l'élément avec l'opposé de la valeur fournie
+2.  Appliquant la transformation souhaitée sur l'élément
+3.  Translatant l'élément avec la valeur fournie pour cette propriété.
 
-<p>Les valeurs qui ne sont pas définies explicitement sont réinitialisées avec les valeurs correspondantes.</p>
+Les valeurs qui ne sont pas définies explicitement sont réinitialisées avec les valeurs correspondantes.
 
-<p>Par défaut, l'origine d'une transformation est <code>center</code>.</p>
+Par défaut, l'origine d'une transformation est `center`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css no-line-numbers">/* Utilisation d'une seule valeur */
-transform-origin: 2px<em>;</em>
+```css
+/* Utilisation d'une seule valeur */
+transform-origin: 2px;
 transform-origin: bottom;
 
 /* x-offset y-offset */
@@ -68,198 +67,167 @@ transform-origin: bottom right 2cm;
 transform-origin: inherit;
 transform-origin: initial;
 transform-origin: unset;
-</pre>
+```
 
-<p>La propriété <code>transform-origin</code> peut être définie en utiisant une, deux ou trois valeurs.</p>
+La propriété `transform-origin` peut être définie en utiisant une, deux ou trois valeurs.
 
-<ul>
- <li>Avec une valeur, celle-ci doit être :
-  <ul>
-   <li>Une longueur (type {{cssxref("&lt;length&gt;")}})</li>
-   <li>Un pourcentage (type {{cssxref("&lt;percentage&gt;")}}</li>
-   <li>Un mot-clé parmi <code>left</code>, <code>center</code>, <code>right</code>, <code>top</code>, <code>bottom</code>.</li>
-  </ul>
- </li>
- <li>Avec deux valeurs
-  <ul>
-   <li>La première valeur doit être une longueur (type {{cssxref("&lt;length&gt;")}}), un pourcentage (type {{cssxref("&lt;percentage&gt;")}} ou un mot-clé parmi <code>left</code>, <code>center</code>, <code>right</code></li>
-   <li>La seconde valeur doit être une longueur (type {{cssxref("&lt;length&gt;")}}), un pourcentage (type {{cssxref("&lt;percentage&gt;")}} ou un mot-clé parmi <code>top</code>, <code>center</code>, <code>bottom</code>.</li>
-  </ul>
- </li>
- <li>Avec trois valeurs
-  <ul>
-   <li>Les deux premières valeurs doivent être structurées comme la syntaxe avec deux valeurs</li>
-   <li>La troisième valeur doit être une longueur (type {{cssxref("length")}}</li>
-  </ul>
- </li>
-</ul>
+- Avec une valeur, celle-ci doit être :
 
-<h3 id="Valeur">Valeur</h3>
+  - Une longueur (type {{cssxref("&lt;length&gt;")}})
+  - Un pourcentage (type {{cssxref("&lt;percentage&gt;")}}
+  - Un mot-clé parmi `left`, `center`, `right`, `top`, `bottom`.
 
-<dl>
- <dt><code>x-offset</code></dt>
- <dd>Une valeur du type {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} qui décrit la distance, depuis le bord gauche de la boîte, à laquelle l'origine de la transformation sera placée.</dd>
- <dt><code>offset-keyword</code></dt>
- <dd>Un mot-clé parmi <code>left</code>, <code>right</code>, <code>top</code>, <code>bottom</code> ou <code>center</code> qui décrit le décalage correspondant.</dd>
- <dt><code>y-offset</code></dt>
- <dd>Une valeur du type {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} qui décrit la distance, depuis le bord haut de la boîte, à laquelle l'origine de la transformation sera placée.</dd>
- <dt><code>x-offset-keyword</code></dt>
- <dd>Un mot-clé parmi <code>left</code>, <code>right</code> ou <code>center</code> qui décrit la distance, depuis le bord gauche de la boîte, à laquelle l'origine de la transformation sera placée.</dd>
- <dt><code>y-offset-keyword</code></dt>
- <dd>Un mot-clé parmi <code>top</code>, <code>bottom</code> ou <code>center</code> qui décrit la distance, depuis le bord haut de la boîte, à laquelle l'origine de la transformation sera placée.</dd>
- <dt><code>z-offset</code></dt>
- <dd>Une valeur du type {{cssxref("&lt;length&gt;")}} (et jamais une valeur du type {{cssxref("&lt;percentage&gt;")}}, sinon la déclaration serait invalide) qui décrit la distance, depuis l'œil de l'utilisateur, de l'origine de la transformation sur l'axe de profondeur (z)..</dd>
-</dl>
+- Avec deux valeurs
 
-<p>Les mots-clés sont des raccourcis qui correspondent aux valeurs {{cssxref("&lt;percentage&gt;")}} suivantes :</p>
+  - La première valeur doit être une longueur (type {{cssxref("&lt;length&gt;")}}), un pourcentage (type {{cssxref("&lt;percentage&gt;")}} ou un mot-clé parmi `left`, `center`, `right`
+  - La seconde valeur doit être une longueur (type {{cssxref("&lt;length&gt;")}}), un pourcentage (type {{cssxref("&lt;percentage&gt;")}} ou un mot-clé parmi `top`, `center`, `bottom`.
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Mot-clé</th>
-   <th scope="col">Valeur</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td><code>left</code></td>
-   <td><code>0%</code></td>
-  </tr>
-  <tr>
-   <td><code>center</code></td>
-   <td><code>50%</code></td>
-  </tr>
-  <tr>
-   <td><code>right</code></td>
-   <td><code>100%</code></td>
-  </tr>
-  <tr>
-   <td><code>top</code></td>
-   <td><code>0%</code></td>
-  </tr>
-  <tr>
-   <td><code>bottom</code></td>
-   <td><code>100%</code></td>
-  </tr>
- </tbody>
-</table>
+- Avec trois valeurs
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+  - Les deux premières valeurs doivent être structurées comme la syntaxe avec deux valeurs
+  - La troisième valeur doit être une longueur (type {{cssxref("length")}}
+
+### Valeur
+
+- `x-offset`
+  - : Une valeur du type {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} qui décrit la distance, depuis le bord gauche de la boîte, à laquelle l'origine de la transformation sera placée.
+- `offset-keyword`
+  - : Un mot-clé parmi `left`, `right`, `top`, `bottom` ou `center` qui décrit le décalage correspondant.
+- `y-offset`
+  - : Une valeur du type {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} qui décrit la distance, depuis le bord haut de la boîte, à laquelle l'origine de la transformation sera placée.
+- `x-offset-keyword`
+  - : Un mot-clé parmi `left`, `right` ou `center` qui décrit la distance, depuis le bord gauche de la boîte, à laquelle l'origine de la transformation sera placée.
+- `y-offset-keyword`
+  - : Un mot-clé parmi `top`, `bottom` ou `center` qui décrit la distance, depuis le bord haut de la boîte, à laquelle l'origine de la transformation sera placée.
+- `z-offset`
+  - : Une valeur du type {{cssxref("&lt;length&gt;")}} (et jamais une valeur du type {{cssxref("&lt;percentage&gt;")}}, sinon la déclaration serait invalide) qui décrit la distance, depuis l'œil de l'utilisateur, de l'origine de la transformation sur l'axe de profondeur (z)..
+
+Les mots-clés sont des raccourcis qui correspondent aux valeurs {{cssxref("&lt;percentage&gt;")}} suivantes :
+
+| Mot-clé  | Valeur |
+| -------- | ------ |
+| `left`   | `0%`   |
+| `center` | `50%`  |
+| `right`  | `100%` |
+| `top`    | `0%`   |
+| `bottom` | `100%` |
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<p>Voir la page sur <a href="/fr/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms">l'utilisation des transformations CSS</a> pour des exemples supplémentaires.</p>
+Voir la page sur [l'utilisation des transformations CSS](/fr/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms) pour des exemples supplémentaires.
 
-<h3 id="a_demonstration_of_various_transform_values">Illustrations des différentes valeurs de transform</h3>
+### Illustrations des différentes valeurs de transform
 
-<p>Cet exemple illustre ce que donnent les différentes valeurs de <code>transform-origin</code> pour différentes fonctions de transformation.</p>
+Cet exemple illustre ce que donnent les différentes valeurs de `transform-origin` pour différentes fonctions de transformation.
 
-<pre class="brush: html hidden">
-&lt;div class="container"&gt;
+```html hidden
+<div class="container">
 
-&lt;div class="example"&gt;
-  &lt;div class="box box1"&gt;&amp;nbsp;&lt;/div&gt;
-  &lt;div class="box original"&gt;&amp;nbsp;&lt;/div&gt;
-&lt;/div&gt;
+<div class="example">
+  <div class="box box1">&nbsp;</div>
+  <div class="box original">&nbsp;</div>
+</div>
 
-&lt;pre&gt;
+<pre>
 transform: none;
-&lt;/pre&gt;
-
-&lt;div class="example"&gt;
-  &lt;div class="box box2"&gt;&amp;nbsp;&lt;/div&gt;
-  &lt;div class="box original"&gt;&amp;nbsp;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;pre&gt;
-transform: rotate(30deg);
-&lt;/pre&gt;
-
-&lt;div class="example"&gt;
-  &lt;div class="box box3"&gt;&amp;nbsp;&lt;/div&gt;
-  &lt;div class="box original"&gt;&amp;nbsp;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;pre&gt;
-transform: rotate(30deg);
-transform-origin: 0 0;
-&lt;/pre&gt;
-
-&lt;div class="example"&gt;
-  &lt;div class="box box4"&gt;&amp;nbsp;&lt;/div&gt;
-  &lt;div class="box original"&gt;&amp;nbsp;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;pre&gt;
-transform: rotate(30deg);
-transform-origin: 100% 100%;
-&lt;/pre&gt;
-
-&lt;div class="example"&gt;
-  &lt;div class="box box5"&gt;&amp;nbsp;&lt;/div&gt;
-  &lt;div class="box original"&gt;&amp;nbsp;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;pre&gt;
-transform: rotate(30deg);
-transform-origin: -1em -3em;
-&lt;/pre&gt;
-
-&lt;div class="example"&gt;
-  &lt;div class="box box6"&gt;&amp;nbsp;&lt;/div&gt;
-  &lt;div class="box original"&gt;&amp;nbsp;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;pre&gt;
-transform: scale(1.7);
-&lt;/pre&gt;
-
-&lt;div class="example"&gt;
-  &lt;div class="box box7"&gt;&amp;nbsp;&lt;/div&gt;
-  &lt;div class="box original"&gt;&amp;nbsp;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;pre&gt;
-transform: scale(1.7);
-transform-origin: 0 0;
-&lt;/pre&gt;
-
-&lt;div class="example"&gt;
-  &lt;div class="box box8"&gt;&amp;nbsp;&lt;/div&gt;
-  &lt;div class="box original"&gt;&amp;nbsp;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;pre&gt;
-transform: scale(1.7);
-transform-origin: 100% -30%;
-&lt;/pre&gt;
-
-&lt;div class="example"&gt;
-  &lt;div class="box box9"&gt;&amp;nbsp;&lt;/div&gt;
-  &lt;div class="box original"&gt;&amp;nbsp;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;pre&gt;
-transform: skewX(50deg);
-transform-origin: 100% -30%;
-&lt;/pre&gt;
-
-&lt;div class="example"&gt;
-  &lt;div class="box box10"&gt;&amp;nbsp;&lt;/div&gt;
-  &lt;div class="box original"&gt;&amp;nbsp;&lt;/div&gt;
-&lt;/div&gt;
-
-&lt;pre&gt;
-transform: skewY(50deg);
-transform-origin: 100% -30%;
-&lt;/pre&gt;
-
-&lt;/div&gt;
 </pre>
 
-<pre class="brush: css hidden">
+<div class="example">
+  <div class="box box2">&nbsp;</div>
+  <div class="box original">&nbsp;</div>
+</div>
+
+<pre>
+transform: rotate(30deg);
+</pre>
+
+<div class="example">
+  <div class="box box3">&nbsp;</div>
+  <div class="box original">&nbsp;</div>
+</div>
+
+<pre>
+transform: rotate(30deg);
+transform-origin: 0 0;
+</pre>
+
+<div class="example">
+  <div class="box box4">&nbsp;</div>
+  <div class="box original">&nbsp;</div>
+</div>
+
+<pre>
+transform: rotate(30deg);
+transform-origin: 100% 100%;
+</pre>
+
+<div class="example">
+  <div class="box box5">&nbsp;</div>
+  <div class="box original">&nbsp;</div>
+</div>
+
+<pre>
+transform: rotate(30deg);
+transform-origin: -1em -3em;
+</pre>
+
+<div class="example">
+  <div class="box box6">&nbsp;</div>
+  <div class="box original">&nbsp;</div>
+</div>
+
+<pre>
+transform: scale(1.7);
+</pre>
+
+<div class="example">
+  <div class="box box7">&nbsp;</div>
+  <div class="box original">&nbsp;</div>
+</div>
+
+<pre>
+transform: scale(1.7);
+transform-origin: 0 0;
+</pre>
+
+<div class="example">
+  <div class="box box8">&nbsp;</div>
+  <div class="box original">&nbsp;</div>
+</div>
+
+<pre>
+transform: scale(1.7);
+transform-origin: 100% -30%;
+</pre>
+
+<div class="example">
+  <div class="box box9">&nbsp;</div>
+  <div class="box original">&nbsp;</div>
+</div>
+
+<pre>
+transform: skewX(50deg);
+transform-origin: 100% -30%;
+</pre>
+
+<div class="example">
+  <div class="box box10">&nbsp;</div>
+  <div class="box original">&nbsp;</div>
+</div>
+
+<pre>
+transform: skewY(50deg);
+transform-origin: 100% -30%;
+</pre>
+
+</div>
+```
+
+```css hidden
 .container {
   display: grid;
   grid-template-columns: 200px 100px;
@@ -331,39 +299,23 @@ transform-origin: 100% -30%;
   transform: skewY(50deg);
   transform-origin: 100% -30%;
 }
+```
 
-</pre>
+{{EmbedLiveSample('a_demonstration_of_various_transform_values', '', 1350) }}
 
-<p>{{EmbedLiveSample('a_demonstration_of_various_transform_values', '', 1350) }}</p>
+## Spécifications
 
-<h2 id="Spécifications">Spécifications</h2>
+| Spécification                                                                                                | État                                 | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | -------------------- |
+| {{SpecName('CSS3 Transforms', '#transform-origin-property', 'transform-origin')}} | {{Spec2('CSS3 Transforms')}} | Définition initiale. |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Transforms', '#transform-origin-property', 'transform-origin')}}</td>
-   <td>{{Spec2('CSS3 Transforms')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+{{cssinfo}}
 
-<p>{{cssinfo}}</p>
+## Compatibilité des navigateurs
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+{{Compat("css.properties.transform-origin")}}
 
-<p>{{Compat("css.properties.transform-origin")}}</p>
+## Voir aussi
 
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms">Utiliser les transformations CSS</a></li>
- <li><a href="https://css-tricks.com/almanac/properties/t/transform-origin/">https://css-tricks.com/almanac/properties/t/transform-origin/</a></li>
-</ul>
+- [Utiliser les transformations CSS](/fr/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- <https://css-tricks.com/almanac/properties/t/transform-origin/>

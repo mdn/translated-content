@@ -7,100 +7,102 @@ tags:
 translation_of: Web/CSS/CSS_Background_and_Borders/Border-radius_generator
 original_slug: Web/CSS/CSS_Background_and_Borders/Border-radius_generator
 ---
-<p>Cet outil peut être utilisé afin de générer du code pour la propriété {{cssxref("border-radius")}}.</p>
+Cet outil peut être utilisé afin de générer du code pour la propriété {{cssxref("border-radius")}}.
 
-<h2>border-radius-generator</h2>
+## border-radius-generator
 
-<pre class="brush: html hidden">&lt;div id="container"&gt;
-    &lt;div class="group section"&gt;
-        &lt;div id="preview" class="col span_12"&gt;
-            &lt;div id="subject"&gt;
-                &lt;div id="top-left" class="radius-container"
-                    data-X="left" data-Y="top"&gt;
-                &lt;/div&gt;
-                &lt;div id="top-right" class="radius-container"
-                    data-X="right" data-Y="top"&gt;
-                &lt;/div&gt;
-                &lt;div id="bottom-right" class="radius-container"
-                    data-X="right" data-Y="bottom"&gt;
-                &lt;/div&gt;
-                &lt;div id="bottom-left" class="radius-container"
-                    data-X="left" data-Y="bottom"&gt;
-                &lt;/div&gt;
+```html hidden
+<div id="container">
+    <div class="group section">
+        <div id="preview" class="col span_12">
+            <div id="subject">
+                <div id="top-left" class="radius-container"
+                    data-X="left" data-Y="top">
+                </div>
+                <div id="top-right" class="radius-container"
+                    data-X="right" data-Y="top">
+                </div>
+                <div id="bottom-right" class="radius-container"
+                    data-X="right" data-Y="bottom">
+                </div>
+                <div id="bottom-left" class="radius-container"
+                    data-X="left" data-Y="bottom">
+                </div>
 
-                &lt;div id="radius-ui-sliders"&gt;
-                    &lt;div id="tlr" class="ui-input-slider" data-topic="top-left"
-                         data-unit=" px" data-sensivity="2"&gt;&lt;/div&gt;
+                <div id="radius-ui-sliders">
+                    <div id="tlr" class="ui-input-slider" data-topic="top-left"
+                         data-unit=" px" data-sensivity="2"></div>
 
-                    &lt;div id="tlw" class="ui-input-slider" data-topic="top-left-w"
-                         data-unit=" px" data-sensivity="2"&gt;&lt;/div&gt;
+                    <div id="tlw" class="ui-input-slider" data-topic="top-left-w"
+                         data-unit=" px" data-sensivity="2"></div>
 
-                    &lt;div id="tlh" class="ui-input-slider" data-topic="top-left-h"
-                        data-unit=" px" data-sensivity="2"&gt;&lt;/div&gt;
+                    <div id="tlh" class="ui-input-slider" data-topic="top-left-h"
+                        data-unit=" px" data-sensivity="2"></div>
 
-                    &lt;div id="trr" class="ui-input-slider" data-topic="top-right"
-                         data-unit=" px" data-sensivity="2"&gt;&lt;/div&gt;
+                    <div id="trr" class="ui-input-slider" data-topic="top-right"
+                         data-unit=" px" data-sensivity="2"></div>
 
-                    &lt;div id="trw" class="ui-input-slider" data-topic="top-right-w"
-                         data-unit=" px" data-sensivity="2"&gt;&lt;/div&gt;
+                    <div id="trw" class="ui-input-slider" data-topic="top-right-w"
+                         data-unit=" px" data-sensivity="2"></div>
 
-                    &lt;div id="trh" class="ui-input-slider" data-topic="top-right-h"
-                        data-unit=" px" data-sensivity="2"&gt;&lt;/div&gt;
+                    <div id="trh" class="ui-input-slider" data-topic="top-right-h"
+                        data-unit=" px" data-sensivity="2"></div>
 
-                    &lt;div id="brr" class="ui-input-slider" data-topic="bottom-right"
-                         data-unit=" px" data-sensivity="2"&gt;&lt;/div&gt;
+                    <div id="brr" class="ui-input-slider" data-topic="bottom-right"
+                         data-unit=" px" data-sensivity="2"></div>
 
-                    &lt;div id="brw" class="ui-input-slider" data-topic="bottom-right-w"
-                         data-unit=" px" data-sensivity="2"&gt;&lt;/div&gt;
+                    <div id="brw" class="ui-input-slider" data-topic="bottom-right-w"
+                         data-unit=" px" data-sensivity="2"></div>
 
-                    &lt;div id="brh" class="ui-input-slider" data-topic="bottom-right-h"
-                        data-unit=" px" data-sensivity="2"&gt;&lt;/div&gt;
+                    <div id="brh" class="ui-input-slider" data-topic="bottom-right-h"
+                        data-unit=" px" data-sensivity="2"></div>
 
-                    &lt;div id="blr" class="ui-input-slider" data-topic="bottom-left"
-                         data-unit=" px" data-sensivity="2"&gt;&lt;/div&gt;
+                    <div id="blr" class="ui-input-slider" data-topic="bottom-left"
+                         data-unit=" px" data-sensivity="2"></div>
 
-                    &lt;div id="blw" class="ui-input-slider" data-topic="bottom-left-w"
-                         data-unit=" px" data-sensivity="2"&gt;&lt;/div&gt;
+                    <div id="blw" class="ui-input-slider" data-topic="bottom-left-w"
+                         data-unit=" px" data-sensivity="2"></div>
 
-                    &lt;div id="blh" class="ui-input-slider" data-topic="bottom-left-h"
-                        data-unit=" px" data-sensivity="2"&gt;&lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div id="controls" class="group section"&gt;
+                    <div id="blh" class="ui-input-slider" data-topic="bottom-left-h"
+                        data-unit=" px" data-sensivity="2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="controls" class="group section">
 
-        &lt;div class="group section"&gt;
-            &lt;div id="dimensions"&gt;
-                &lt;div class="ui-input-slider" data-topic="width" data-info="width"
-                     data-unit=" px" data-min="150" data-max="700" data-sensivity="1"&gt;&lt;/div&gt;
+        <div class="group section">
+            <div id="dimensions">
+                <div class="ui-input-slider" data-topic="width" data-info="width"
+                     data-unit=" px" data-min="150" data-max="700" data-sensivity="1"></div>
 
-                &lt;div class="ui-input-slider" data-topic="height" data-info="height"
-                    data-unit=" px" data-min="75" data-max="350" data-sensivity="1"&gt;&lt;/div&gt;
-            &lt;/div&gt;
+                <div class="ui-input-slider" data-topic="height" data-info="height"
+                    data-unit=" px" data-min="75" data-max="350" data-sensivity="1"></div>
+            </div>
 
-            &lt;div id="output"&gt;&lt;/div&gt;
-        &lt;/div&gt;
+            <div id="output"></div>
+        </div>
 
-        &lt;div class="group section"&gt;
-            &lt;div id="radius-lock"&gt;
-                &lt;div class="info"&gt; Coins arrondis &lt;/div&gt;
-                &lt;div class="ui-checkbox" data-topic='top-left'&gt;&lt;/div&gt;
-                &lt;div class="ui-checkbox" data-topic='top-right'&gt;&lt;/div&gt;
-                &lt;div class="ui-checkbox" data-topic='bottom-right'&gt;&lt;/div&gt;
-                &lt;div class="ui-checkbox" data-topic='bottom-left'&gt;&lt;/div&gt;
-            &lt;/div&gt;
+        <div class="group section">
+            <div id="radius-lock">
+                <div class="info"> Coins arrondis </div>
+                <div class="ui-checkbox" data-topic='top-left'></div>
+                <div class="ui-checkbox" data-topic='top-right'></div>
+                <div class="ui-checkbox" data-topic='bottom-right'></div>
+                <div class="ui-checkbox" data-topic='bottom-left'></div>
+            </div>
 
-            &lt;div id="unit-selection"&gt;
-                &lt;div class="info"&gt; Unités pour la bordure &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
+            <div id="unit-selection">
+                <div class="info"> Unités pour la bordure </div>
+            </div>
+        </div>
 
-    &lt;/div&gt;
-&lt;/div&gt;
-</pre>
+    </div>
+</div>
+```
 
-<pre class="brush: css hidden">/*  GRID OF TEN
+```css hidden
+/*  GRID OF TEN
  * ========================================================================== */
 
 .span_12 {
@@ -214,7 +216,7 @@ original_slug: Web/CSS/CSS_Background_and_Borders/Border-radius_generator
 
 /* Input Slider */
 
-.ui-input-slider &gt; input {
+.ui-input-slider > input {
 	margin: 0;
 	padding: 0;
 	width: 50px;
@@ -283,11 +285,11 @@ original_slug: Web/CSS/CSS_Background_and_Borders/Border-radius_generator
 	user-select: none;
 }
 
-.ui-checkbox &gt; input {
+.ui-checkbox > input {
  	display: none;
 }
 
-.ui-checkbox &gt; label {
+.ui-checkbox > label {
 	font-size: 12px;
 	padding: 0.333em 1.666em 0.5em;
 	height: 1em;
@@ -315,11 +317,11 @@ original_slug: Web/CSS/CSS_Background_and_Borders/Border-radius_generator
 	background-position: center right 10px;
 }
 
-.ui-checkbox &gt; label:hover {
+.ui-checkbox > label:hover {
 	cursor: pointer;
 }
 
-.ui-checkbox &gt; input:checked + label {
+.ui-checkbox > input:checked + label {
 	background-image: url("https://mdn.mozillademos.org/files/5681/checked.png");
 	background-color: #379B4A;
 }
@@ -741,7 +743,7 @@ body {
 	position: absolute;
 }
 
-#radius-lock .ui-checkbox &gt; label {
+#radius-lock .ui-checkbox > label {
 	height: 20px;
 	width: 34px;
 	padding: 0;
@@ -809,11 +811,10 @@ body {
 
 	float: right;
 }
+```
 
-
-</pre>
-
-<pre class="brush: js hidden"><code class="language-js">'use strict';
+```js hidden
+'use strict';
 
 
 /**
@@ -892,12 +893,12 @@ var InputSliderManager = (function InputSliderManager() {
 		var sensivity = node.getAttribute('data-sensivity') | 0;
 
 		this.min = min;
-		this.max = max &gt; 0 ? max : 100;
+		this.max = max > 0 ? max : 100;
 		this.step = step === 0 ? 1 : step;
 		this.topic = topic;
 		this.node = node;
 		this.unit = unit;
-		this.sensivity = sensivity &gt; 0 ? sensivity : 5;
+		this.sensivity = sensivity > 0 ? sensivity : 5;
 
 		var input = new InputComponent(this);
 		var slider_left  = new SliderComponent(this, -1);
@@ -928,13 +929,13 @@ var InputSliderManager = (function InputSliderManager() {
 		if (slider === undefined)
 			return;
 
-		if (value &gt; slider.max) value = slider.max;
-		if (value &lt; slider.min)	value = slider.min;
+		if (value > slider.max) value = slider.max;
+		if (value < slider.min)	value = slider.min;
 
 		slider.value = value;
 		slider.node.setAttribute('data-value', value);
 
-		if (send_notify !== undefined &amp;&amp; send_notify === false) {
+		if (send_notify !== undefined && send_notify === false) {
 			slider.input.value = value + slider.unit;
 			return;
 		}
@@ -993,7 +994,7 @@ var InputSliderManager = (function InputSliderManager() {
 	var init = function init() {
 		var elem = document.querySelectorAll('.ui-input-slider');
 		var size = elem.length;
-		for (var i = 0; i &lt; size; i++)
+		for (var i = 0; i < size; i++)
 			new InputSlider(elem[i]);
 	}
 
@@ -1083,14 +1084,14 @@ var ButtonManager = (function CheckBoxManager() {
 	}
 
 	var notify = function notify() {
-		for (var i = 0; i &lt; subscribers[this.topic].length; i++)
+		for (var i = 0; i < subscribers[this.topic].length; i++)
 			subscribers[this.topic][i](this.checkbox.checked);
 	}
 
 	var init = function init() {
 		var elem = document.querySelectorAll('.ui-checkbox');
 		var size = elem.length;
-		for (var i = 0; i &lt; size; i++)
+		for (var i = 0; i < size; i++)
 			new CheckBox(elem[i]);
 	}
 
@@ -1269,10 +1270,10 @@ var BorderRadius = (function BorderRadius() {
 			this.setUnitR(e.target.value | 0);
 		}.bind(this));
 
-		if (x === 'left' &amp;&amp; y == 'top') handle.className = 'handle handle-top-left'
-		if (x === 'right' &amp;&amp; y == 'top') handle.className = 'handle handle-top-right';
-		if (x === 'right' &amp;&amp; y == 'bottom') handle.className = 'handle handle-bottom-right';
-		if (x === 'left' &amp;&amp; y == 'bottom') 	handle.className = 'handle handle-bottom-left';
+		if (x === 'left' && y == 'top') handle.className = 'handle handle-top-left'
+		if (x === 'right' && y == 'top') handle.className = 'handle handle-top-right';
+		if (x === 'right' && y == 'bottom') handle.className = 'handle handle-bottom-right';
+		if (x === 'left' && y == 'bottom') 	handle.className = 'handle handle-bottom-left';
 
 		handle.addEventListener("mousedown", function(e) {
 			active = true;
@@ -1419,7 +1420,7 @@ var BorderRadius = (function BorderRadius() {
 		var valueX = Math.round(this.width / 2);
 		var valueY = Math.round(this.height / 2);
 
-		if (valueX === valueY &amp;&amp; this.unitX === this.unitY)
+		if (valueX === valueY && this.unitX === this.unitY)
 			return valueX + unitX;
 
 		return valueX + unitX + ' ' + valueY + unitY;
@@ -1456,8 +1457,8 @@ var BorderRadius = (function BorderRadius() {
 
 		if (this.rounded === true) {
 			this.size += this.resizeX * deltaX + this.resizeY * deltaY;
-			if (this.size &lt; 0)	this.size = 0;
-			if (this.size &gt; this.maxR)	this.size = this.maxR;
+			if (this.size < 0)	this.size = 0;
+			if (this.size > this.maxR)	this.size = this.maxR;
 			this.updateRadius();
 			this.updateBorderRadius();
 			return;
@@ -1465,15 +1466,15 @@ var BorderRadius = (function BorderRadius() {
 
 		if (deltaX) {
 			this.width += this.resizeX * deltaX;
-			if (this.width &lt; 0)	this.width = 0;
-			if (this.width &gt; this.maxW)	this.width = this.maxW;
+			if (this.width < 0)	this.width = 0;
+			if (this.width > this.maxW)	this.width = this.maxW;
 			this.updateWidth();
 		}
 
 		if (deltaY) {
 			this.height += this.resizeY * deltaY;
-			if (this.height &lt; 0) this.height = 0;
-			if (this.height &gt; this.maxH)	this.height = this.maxH;
+			if (this.height < 0) this.height = 0;
+			if (this.height > this.maxH)	this.height = this.maxH;
 			this.updateHeight();
 		}
 
@@ -1498,7 +1499,7 @@ var BorderRadius = (function BorderRadius() {
 			var left = (pwidth - value) / 2;
 			subject.style.width = value + "px";
 
-			for (var i = 0; i &lt; 4; i++)
+			for (var i = 0; i < 4; i++)
 				radius_containers[i].updateUnits(0);
 		}
 
@@ -1508,7 +1509,7 @@ var BorderRadius = (function BorderRadius() {
 			subject.style.height = value + "px";
 			subject.style.top = top - border_width + "px";
 
-			for (var i = 0; i &lt; 4; i++)
+			for (var i = 0; i < 4; i++)
 				radius_containers[i].updateUnits(1);
 		}
 
@@ -1554,7 +1555,7 @@ var BorderRadius = (function BorderRadius() {
 
 			var elem = document.querySelectorAll('.radius-container');
 			var size = elem.length;
-			for (var i = 0; i &lt; size; i++)
+			for (var i = 0; i < size; i++)
 				radius_containers[i] = new RadiusContainer(elem[i]);
 
 			InputSliderManager.subscribe("width", updateUIWidth);
@@ -1586,8 +1587,6 @@ var BorderRadius = (function BorderRadius() {
 	}
 
 })();
+```
 
-
-</code></pre>
-
-<p>{{EmbedLiveSample('border-radius-generator', '100%', '800px', '')}}</p>
+{{EmbedLiveSample('border-radius-generator', '100%', '800px', '')}}

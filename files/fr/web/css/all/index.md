@@ -7,63 +7,64 @@ tags:
   - Reference
 translation_of: Web/CSS/all
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La <a href="/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies">propriété raccourcie</a> <code><strong>all</strong></code> permet de réinitialiser toutes les propriétés, à l'exception de {{cssxref("unicode-bidi")}} et {{cssxref("direction")}}, avec leurs valeurs initiales, héritées ou qui proviennent d'une autre feuille de style.</p>
+La [propriété raccourcie](/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies) **`all`** permet de réinitialiser toutes les propriétés, à l'exception de {{cssxref("unicode-bidi")}} et {{cssxref("direction")}}, avec leurs valeurs initiales, héritées ou qui proviennent d'une autre feuille de style.
 
-<div>{{EmbedInteractiveExample("pages/css/all.html")}}</div>
+{{EmbedInteractiveExample("pages/css/all.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs globales */
+```css
+/* Valeurs globales */
 all: initial;
 all: inherit;
 all: unset;
 
 /* Héritage et cascade CSS : Niveau 4 */
 all: revert;
-</pre>
+```
 
-<p>La propriété <code>all</code> est définie avec un des mots-clés globaux de CSS. On notera que la valeur de cette propriété n'a pas d'impact sur les propriétés {{cssxref("unicode-bidi")}} et {{cssxref("direction")}}.</p>
+La propriété `all` est définie avec un des mots-clés globaux de CSS. On notera que la valeur de cette propriété n'a pas d'impact sur les propriétés {{cssxref("unicode-bidi")}} et {{cssxref("direction")}}.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>initial</code></dt>
- <dd>Voir {{cssxref("initial")}}. Ce mot-clé indique que toutes les propriétés qui sont définies pour l'élément auquel s'applique <code>all</code> (ou qu'il hérite de cette valeur via un élément parent) devront prendre leurs valeurs initiales.</dd>
- <dt><code>inherit</code></dt>
- <dd>Voir {{cssxref("inherit")}}. Ce mot-clé indique que toutes les propriétés qui sont définies pour l'élément auquel s'applique <code>all</code> (ou qu'il hérite de cette valeur via un élément parent) devront prendre les valeurs héritées (c'est-à-dire celles définies pour le parent de l'élément).</dd>
- <dt><code>unset</code></dt>
- <dd>Voir {{cssxref("unset")}}. Ce mot-clé indique que toutes les propriétés qui s'appliquent à l'élément ou à son parent prendront la valeur déclarée pour le parent si elles peuvent être héritées ou la valeur initiale sinon.</dd>
- <dt><code>revert</code></dt>
- <dd>Voir {{cssxref("revert")}}. Si la valeur obtenue dans la cascade est le mot-clé <code>revert</code>, le comportement obtenu sera différent selon l'origine de la déclaration :
- <dl>
-  <dt>La déclaration provient de l'agent utilisateur :</dt>
-  <dd>Synonyme de <code>unset</code>.</dd>
-  <dt>La déclaration provient de l'utilisateur :</dt>
-  <dd>Le moteur remonte <a href="/fr/docs/Apprendre/CSS/Introduction_%C3%A0_CSS/La_cascade_et_l_h%C3%A9ritage">la cascade</a> au niveau de l'agent utilisateur afin de calculer la valeur comme si aucune règle n'était appliquée par le document ou par l'utilisateur.</dd>
-  <dt>La déclaration provient de l'auteur (du document)</dt>
-  <dd>Le moteur remonte <a href="/fr/docs/Apprendre/CSS/Introduction_%C3%A0_CSS/La_cascade_et_l_h%C3%A9ritage">la cascade</a> au niveau de l'utilisateur afin de calculer la valeur comme si aucune règle ne provenait du document pour cette propriété.Cette origine inclue <a href="https://www.w3.org/TR/css-cascade-4/#origin">les origines des surcharges DOM et des animations</a>.</dd>
- </dl>
- </dd>
-</dl>
+- `initial`
+  - : Voir {{cssxref("initial")}}. Ce mot-clé indique que toutes les propriétés qui sont définies pour l'élément auquel s'applique `all` (ou qu'il hérite de cette valeur via un élément parent) devront prendre leurs valeurs initiales.
+- `inherit`
+  - : Voir {{cssxref("inherit")}}. Ce mot-clé indique que toutes les propriétés qui sont définies pour l'élément auquel s'applique `all` (ou qu'il hérite de cette valeur via un élément parent) devront prendre les valeurs héritées (c'est-à-dire celles définies pour le parent de l'élément).
+- `unset`
+  - : Voir {{cssxref("unset")}}. Ce mot-clé indique que toutes les propriétés qui s'appliquent à l'élément ou à son parent prendront la valeur déclarée pour le parent si elles peuvent être héritées ou la valeur initiale sinon.
+- `revert`
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+  - : Voir {{cssxref("revert")}}. Si la valeur obtenue dans la cascade est le mot-clé `revert`, le comportement obtenu sera différent selon l'origine de la déclaration :
+
+    - La déclaration provient de l'agent utilisateur :
+      - : Synonyme de `unset`.
+    - La déclaration provient de l'utilisateur :
+      - : Le moteur remonte [la cascade](/fr/docs/Apprendre/CSS/Introduction_%C3%A0_CSS/La_cascade_et_l_h%C3%A9ritage) au niveau de l'agent utilisateur afin de calculer la valeur comme si aucune règle n'était appliquée par le document ou par l'utilisateur.
+    - La déclaration provient de l'auteur (du document)
+      - : Le moteur remonte [la cascade](/fr/docs/Apprendre/CSS/Introduction_%C3%A0_CSS/La_cascade_et_l_h%C3%A9ritage) au niveau de l'utilisateur afin de calculer la valeur comme si aucune règle ne provenait du document pour cette propriété.Cette origine inclue [les origines des surcharges DOM et des animations](https://www.w3.org/TR/css-cascade-4/#origin).
+
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;blockquote id="quote"&gt;
+```html
+<blockquote id="quote">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-&lt;/blockquote&gt;
-Phasellus eget velit sagittis.</pre>
+</blockquote>
+Phasellus eget velit sagittis.
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">body {
+```css
+body {
   font-size: small;
   background-color: #F0F0F0;
   color: blue;
@@ -73,90 +74,91 @@ blockquote {
   background-color: skyblue;
   color: red;
 }
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<h4 id="Pas_de_propriété_all">Pas de propriété <code>all</code></h4>
+#### Pas de propriété `all`
 
-<pre class="brush: html hidden">&lt;blockquote id="quote"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/blockquote&gt; Phasellus eget velit sagittis.</pre>
+```html hidden
+<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+```
 
-<pre class="brush: css hidden">body { font-size: small; background-color: #F0F0F0; color:blue; }
-blockquote { background-color: skyblue;  color: red; }</pre>
+```css hidden
+body { font-size: small; background-color: #F0F0F0; color:blue; }
+blockquote { background-color: skyblue;  color: red; }
+```
+
 {{EmbedLiveSample("ex0", "200", "125")}}
 
-<p>L'élément {{HTMLElement("blockquote")}} utilise la mise en forme par défaut du navigateur avec un arrière-plan spécifique et une couleur pour le texte. L'élément se comporte comme un élément de bloc : le texte qui suit est placé en dessous.</p>
+L'élément {{HTMLElement("blockquote")}} utilise la mise en forme par défaut du navigateur avec un arrière-plan spécifique et une couleur pour le texte. L'élément se comporte comme un élément de bloc : le texte qui suit est placé en dessous.
 
-<h4 id="allunset"><code>all:unset</code></h4>
+#### `all:unset`
 
-<pre class="brush: html hidden">&lt;blockquote id="quote"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/blockquote&gt; Phasellus eget velit sagittis.</pre>
+```html hidden
+<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+```
 
-<pre class="brush: css hidden">body { font-size: small; background-color: #F0F0F0; color:blue; }
+```css hidden
+body { font-size: small; background-color: #F0F0F0; color:blue; }
 blockquote { background-color: skyblue;  color: red; }
-blockquote { all: unset; }</pre>
+blockquote { all: unset; }
+```
+
 {{EmbedLiveSample("ex1", "200", "125")}}
 
-<p>L'élément {{HTMLElement("blockquote")}} n'utilise pas la mise en forme par défaut du naivgateur, c'est un élément en ligne (<em>inline</em>) (sa valeur initiale), la valeur de {{cssxref("background-color")}} est <code>transparent</code> (la valeur initiale), mais {{cssxref("font-size")}} vaut toujours <code>small</code> (valeur héritée) et {{cssxref("color")}} vaut (valeur héritée).</p>
+L'élément {{HTMLElement("blockquote")}} n'utilise pas la mise en forme par défaut du naivgateur, c'est un élément en ligne (_inline_) (sa valeur initiale), la valeur de {{cssxref("background-color")}} est `transparent` (la valeur initiale), mais {{cssxref("font-size")}} vaut toujours `small` (valeur héritée) et {{cssxref("color")}} vaut (valeur héritée).
 
-<h4 id="allinitial"><code>all:initial</code></h4>
+#### `all:initial`
 
-<pre class="brush: html hidden">&lt;blockquote id="quote"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/blockquote&gt; Phasellus eget velit sagittis.</pre>
+```html hidden
+<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+```
 
-<pre class="brush: css hidden">body { font-size: small; background-color: #F0F0F0; color:blue; }
+```css hidden
+body { font-size: small; background-color: #F0F0F0; color:blue; }
 blockquote { background-color: skyblue;  color: red; }
-blockquote { all: initial; }</pre>
+blockquote { all: initial; }
+```
+
 {{EmbedLiveSample("ex2", "200", "125")}}
 
-<p>L'élément {{HTMLElement("blockquote")}} n'utilise pas la mise en forme par défaut du navigateur, c'est un élément en ligne (sa valeur initiale). La propriété {{cssxref("background-color")}} vaut <code>transparent</code> (sa valeur initiale), {{cssxref("font-size")}} vaut <code>normal</code> (valeur initiale) et {{cssxref("color")}} vaut <code>black</code> (sa valeur initiale).</p>
+L'élément {{HTMLElement("blockquote")}} n'utilise pas la mise en forme par défaut du navigateur, c'est un élément en ligne (sa valeur initiale). La propriété {{cssxref("background-color")}} vaut `transparent` (sa valeur initiale), {{cssxref("font-size")}} vaut `normal` (valeur initiale) et {{cssxref("color")}} vaut `black` (sa valeur initiale).
 
-<h4 id="allinherit"><code>all:inherit</code></h4>
+#### `all:inherit`
 
-<pre class="brush: html hidden">&lt;blockquote id="quote"&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/blockquote&gt; Phasellus eget velit sagittis.</pre>
+```html hidden
+<blockquote id="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</blockquote> Phasellus eget velit sagittis.
+```
 
-<pre class="brush: css hidden">body { font-size: small; background-color: #F0F0F0; color:blue; }
+```css hidden
+body { font-size: small; background-color: #F0F0F0; color:blue; }
 blockquote { background-color: skyblue; color: red; }
-blockquote { all: inherit; }</pre>
+blockquote { all: inherit; }
+```
+
 {{EmbedLiveSample("ex3", "200", "125")}}
 
-<p>L'élément {{HTMLElement("blockquote")}} n'utilise pas la mise en forme par défaut du navigateur, c'est un élément de bloc (valeur héritée depuis l'élément englobant {{HTMLElement("div")}}), {{cssxref("background-color")}} vaut <code>#F0F0F0</code> (valeur héritée), {{cssxref("font-size")}} vaut <code>small</code> (valeur héritée) et {{cssxref("color")}} vaut <code>blue</code> (valeur héritée).</p>
+L'élément {{HTMLElement("blockquote")}} n'utilise pas la mise en forme par défaut du navigateur, c'est un élément de bloc (valeur héritée depuis l'élément englobant {{HTMLElement("div")}}), {{cssxref("background-color")}} vaut `#F0F0F0` (valeur héritée), {{cssxref("font-size")}} vaut `small` (valeur héritée) et {{cssxref("color")}} vaut `blue` (valeur héritée).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Cascade', '#all-shorthand', 'all')}}</td>
-   <td>{{Spec2('CSS4 Cascade')}}</td>
-   <td>Ajout de la valeur <code>revert</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Cascade', '#all-shorthand', 'all')}}</td>
-   <td>{{Spec2('CSS3 Cascade')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                            | État                             | Commentaires                 |
+| ------------------------------------------------------------------------ | -------------------------------- | ---------------------------- |
+| {{SpecName('CSS4 Cascade', '#all-shorthand', 'all')}} | {{Spec2('CSS4 Cascade')}} | Ajout de la valeur `revert`. |
+| {{SpecName('CSS3 Cascade', '#all-shorthand', 'all')}} | {{Spec2('CSS3 Cascade')}} | Définition initiale.         |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.all")}}</p>
+{{Compat("css.properties.all")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<p>Les mots-clés indiquant des valeurs globales pour CSS :</p>
+Les mots-clés indiquant des valeurs globales pour CSS :
 
-<ul>
- <li>{{cssxref("initial")}},</li>
- <li>{{cssxref("inherit")}},</li>
- <li>{{cssxref("unset")}},</li>
- <li>{{cssxref("revert")}}.</li>
-</ul>
+- {{cssxref("initial")}},
+- {{cssxref("inherit")}},
+- {{cssxref("unset")}},
+- {{cssxref("revert")}}.

@@ -8,102 +8,71 @@ tags:
   - Reference
 translation_of: Web/CSS/CSS_Display
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p><strong>L'affichage CSS</strong> (<em>CSS Display) </em>est un module CSS qui définit la façon dont l'arbre des boîtes pour la mise en forme est généré à partir de l'arbre des éléments du document et qui définit les propriétés qui le contrôlent.</p>
+**L'affichage CSS** (_CSS Display)_ est un module CSS qui définit la façon dont l'arbre des boîtes pour la mise en forme est généré à partir de l'arbre des éléments du document et qui définit les propriétés qui le contrôlent.
 
-<h2 id="Référence">Référence</h2>
+## Référence
 
-<h3 id="Propriétés_CSS">Propriétés CSS</h3>
+### Propriétés CSS
 
-<ul>
- <li>{{cssxref("display")}}</li>
-</ul>
+- {{cssxref("display")}}
 
-<h3 id="Types_de_donnée_CSS">Types de donnée CSS</h3>
+### Types de donnée CSS
 
-<ul>
- <li>{{CSSxRef("&lt;display-outside&gt;")}}</li>
- <li>{{CSSxRef("&lt;display-inside&gt;")}}</li>
- <li>{{CSSxRef("&lt;display-listitem&gt;")}}</li>
- <li>{{CSSxRef("&lt;display-box&gt;")}}</li>
- <li>{{CSSxRef("&lt;display-internal&gt;")}}</li>
- <li>{{CSSxRef("&lt;display-legacy&gt;")}}</li>
-</ul>
+- {{CSSxRef("&lt;display-outside&gt;")}}
+- {{CSSxRef("&lt;display-inside&gt;")}}
+- {{CSSxRef("&lt;display-listitem&gt;")}}
+- {{CSSxRef("&lt;display-box&gt;")}}
+- {{CSSxRef("&lt;display-internal&gt;")}}
+- {{CSSxRef("&lt;display-legacy&gt;")}}
 
-<h2 id="Guides">Guides</h2>
+## Guides
 
-<h3 id="Disposition_en_flux_(display_block_display_inline)">Disposition en flux (<code>display: block</code>, <code>display: inline</code>)</h3>
+### Disposition en flux (`display: block`, `display: inline`)
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow">Les dispositions de bloc et en ligne dans le flux normal</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow">La disposition en flux et les dépassements</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes">La disposition en flux et les modes d'écriture</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained">Explications sur les contextes de formatage</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow">Être ou non dans le flux</a></li>
-</ul>
+- [Les dispositions de bloc et en ligne dans le flux normal](/fr/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow)
+- [La disposition en flux et les dépassements](/fr/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Overflow)
+- [La disposition en flux et les modes d'écriture](/fr/docs/Web/CSS/CSS_Flow_Layout/Flow_Layout_and_Writing_Modes)
+- [Explications sur les contextes de formatage](/fr/docs/Web/CSS/CSS_Flow_Layout/Formatting_Contexts_Explained)
+- [Être ou non dans le flux](/fr/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow)
 
-<h3 id="Les_boîtes_flexibles_(display_flex)">Les boîtes flexibles (<code>display: flex</code>)</h3>
+### Les boîtes flexibles (`display: flex`)
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Concepts_de_base_flexbox">Concepts de base des boîtes flexibles</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligner_des_éléments_dans_un_conteneur_flexible">Aligner des objets dans un conteneur flexible</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Contrôler_les_proportions_des_boîtes_flexibles_le_long_de_l_axe_principal">Contrôler les proportions des objets flexibles le long de l'axe principal</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins"><em>Mixins</em> Flexbox pour les différents navigateurs</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Maîtriser_passage_à_la_ligne_des_éléments_flexibles">Maîtriser le passage à la ligne des objets flexibles</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordonner_éléments_flexibles">Ordonner les objets flexibles</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Liens_entre_flexbox_et_les_autres_dispositions">Les relations entre les boîtes flexibles et les autres méthodes de disposition</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Rétrocompatibilite_de_flexbox">La rétrocompatiblité des boîtes flexibles</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Cas_utilisation_flexbox">Les cas d'usage type pour les boîtes flexibles</a></li>
-</ul>
+- [Concepts de base des boîtes flexibles](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Concepts_de_base_flexbox)
+- [Aligner des objets dans un conteneur flexible](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligner_des_éléments_dans_un_conteneur_flexible)
+- [Contrôler les proportions des objets flexibles le long de l'axe principal](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Contrôler_les_proportions_des_boîtes_flexibles_le_long_de_l_axe_principal)
+- [_Mixins_ Flexbox pour les différents navigateurs](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins)
+- [Maîtriser le passage à la ligne des objets flexibles](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Maîtriser_passage_à_la_ligne_des_éléments_flexibles)
+- [Ordonner les objets flexibles](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Ordonner_éléments_flexibles)
+- [Les relations entre les boîtes flexibles et les autres méthodes de disposition](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Liens_entre_flexbox_et_les_autres_dispositions)
+- [La rétrocompatiblité des boîtes flexibles](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Rétrocompatibilite_de_flexbox)
+- [Les cas d'usage type pour les boîtes flexibles](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Cas_utilisation_flexbox)
 
-<h3 id="Les_grilles_CSS_(display_grid)">Les grilles CSS (<code>display: grid</code>)</h3>
+### Les grilles CSS (`display: grid`)
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base">Concepts de base des grilles</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Modèle_de_grille_et_autres_modèles_de_disposition">Les relations entre les grilles et les autres méthodes de disposition</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_une_grille_CSS">Le placement sur les lignes</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille">Les modèles de zone de grilles</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_grille">Les dispositions utilisant les lignes nommées</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS">Le placement automatique dans les grilles</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_CSS">L'alignement des boîtes dans les grilles</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d_écriture">Les grilles, les valeurs logiques et les modes d'écriture</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_et_l_accessibilité">Les grilles et l'accessibilité</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_et_l_amélioration_progressive">Les grilles et l'amélioration progressive</a></li>
- <li><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Construire_des_dispositions_courantes_avec_des_grilles_CSS">Réaliser des dispositions courantes à l'aide de grilles</a></li>
-</ul>
+- [Concepts de base des grilles](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base)
+- [Les relations entre les grilles et les autres méthodes de disposition](/fr/docs/Web/CSS/CSS_Grid_Layout/Modèle_de_grille_et_autres_modèles_de_disposition)
+- [Le placement sur les lignes](/fr/docs/Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_une_grille_CSS)
+- [Les modèles de zone de grilles](/fr/docs/Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille)
+- [Les dispositions utilisant les lignes nommées](/fr/docs/Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_grille)
+- [Le placement automatique dans les grilles](/fr/docs/Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS)
+- [L'alignement des boîtes dans les grilles](/fr/docs/Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_CSS)
+- [Les grilles, les valeurs logiques et les modes d'écriture](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d_écriture)
+- [Les grilles et l'accessibilité](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_et_l_accessibilité)
+- [Les grilles et l'amélioration progressive](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_et_l_amélioration_progressive)
+- [Réaliser des dispositions courantes à l'aide de grilles](/fr/docs/Web/CSS/CSS_Grid_Layout/Construire_des_dispositions_courantes_avec_des_grilles_CSS)
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Display', '#the-display-properties', 'display')}}</td>
-   <td>{{Spec2('CSS3 Display')}}</td>
-   <td>Ajout des valeurs <code>run-in</code>, <code>flow</code>, <code>flow-root</code>, <code>contents</code> et de la syntaxe avec plusieurs mots-clés.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visuren.html#display-prop', 'display')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Ajout des valeurs pour les tableaux et ajout de <code>inline-block</code>.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS1', '#display', 'display')}}</td>
-   <td>{{Spec2('CSS1')}}</td>
-   <td>Spécification initiale. Valeurs de base : <code>none</code>, <code>block</code>, <code>inline</code> et <code>list-item</code>.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                             | Commentaires                                                                                           |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| {{SpecName('CSS3 Display', '#the-display-properties', 'display')}} | {{Spec2('CSS3 Display')}} | Ajout des valeurs `run-in`, `flow`, `flow-root`, `contents` et de la syntaxe avec plusieurs mots-clés. |
+| {{SpecName('CSS2.1', 'visuren.html#display-prop', 'display')}}     | {{Spec2('CSS2.1')}}         | Ajout des valeurs pour les tableaux et ajout de `inline-block`.                                        |
+| {{SpecName('CSS1', '#display', 'display')}}                                 | {{Spec2('CSS1')}}         | Spécification initiale. Valeurs de base : `none`, `block`, `inline` et `list-item`.                    |
 
-<p>En plus du module de spécification <em>CSS Display</em> de niveau 3, d'autres modules de spécifications définissent le comportement à avoir selon les différentes valeurs de <code>display</code>.</p>
+En plus du module de spécification _CSS Display_ de niveau 3, d'autres modules de spécifications définissent le comportement à avoir selon les différentes valeurs de `display`.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.display", 10)}}</p>
+{{Compat("css.properties.display", 10)}}

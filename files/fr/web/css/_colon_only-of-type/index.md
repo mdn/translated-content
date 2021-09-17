@@ -1,35 +1,36 @@
 ---
 title: ':only-of-type'
-slug: 'Web/CSS/:only-of-type'
+slug: Web/CSS/:only-of-type
 tags:
   - CSS
   - Pseudo-classe
   - Reference
-translation_of: 'Web/CSS/:only-of-type'
+translation_of: Web/CSS/:only-of-type
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La <a href="/fr/docs/Web/CSS/Pseudo-classes">pseudo-classe</a> <strong><code>:only-of-type</code></strong> CSS permet de cibler un élément qui ne possède aucun nœud frère du même type pour un même élément parent (par exemple, sélectionner le seul élément {{HTMLElement("em")}} d'un {{HTMLElement("dd")}}).</p>
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:only-of-type`** CSS permet de cibler un élément qui ne possède aucun nœud frère du même type pour un même élément parent (par exemple, sélectionner le seul élément {{HTMLElement("em")}} d'un {{HTMLElement("dd")}}).
 
-<pre class="brush: css no-line-numbers">/* Cible un élément &lt;p&gt; si celui-ci est le */
+```css
+/* Cible un élément <p> si celui-ci est le */
 /* seul paragraphe de son élément parent   */
 p:only-of-type {
   background-color: lime;
-}</pre>
+}
+```
 
-<div class="note">
-  <p><strong>Note :</strong> Dans la version initiale de la spécification (CSS3), l'élément ciblé devait avoir un parent, ce n'est plus nécessaire depuis (spécification pour les sélecteurs de CSS4).</p>
-</div>
+> **Note :** Dans la version initiale de la spécification (CSS3), l'élément ciblé devait avoir un parent, ce n'est plus nécessaire depuis (spécification pour les sélecteurs de CSS4).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">li li {
+```css
+li li {
   list-style-type : disc;
 }
 
@@ -37,76 +38,59 @@ li:only-of-type {
   color: #6699ff;
   font-style: italic;
   list-style-type: square;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ol&gt;
-  &lt;li&gt;Premier
-    &lt;ul&gt;
-      &lt;li&gt;Ceci est l'unique li&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Deuxième
-    &lt;ul&gt;
-      &lt;li&gt;Cette liste a deux éléments&lt;/li&gt;
-      &lt;li&gt;Cette liste a deux éléments&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Troisième
-    &lt;ul&gt;
-      &lt;li&gt;Cette liste a trois éléments&lt;/li&gt;
-      &lt;li&gt;Cette liste a trois éléments&lt;/li&gt;
-      &lt;li&gt;Cette liste a trois éléments&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-&lt;ol&gt;
-  &lt;li&gt;Une seule liste imbriquée
-    &lt;ul&gt;Avec
-      &lt;li&gt;Un seul item&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-</pre>
+```html
+<ol>
+  <li>Premier
+    <ul>
+      <li>Ceci est l'unique li</li>
+    </ul>
+  </li>
+  <li>Deuxième
+    <ul>
+      <li>Cette liste a deux éléments</li>
+      <li>Cette liste a deux éléments</li>
+    </ul>
+  </li>
+  <li>Troisième
+    <ul>
+      <li>Cette liste a trois éléments</li>
+      <li>Cette liste a trois éléments</li>
+      <li>Cette liste a trois éléments</li>
+    </ul>
+  </li>
+</ol>
+<ol>
+  <li>Une seule liste imbriquée
+    <ul>Avec
+      <li>Un seul item</li>
+    </ul>
+  </li>
+</ol>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', '100%', 150)}}</p>
+{{EmbedLiveSample('Exemples', '100%', 150)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#only-of-type-pseudo', ':only-of-type')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>L'élément ciblé ne doit pas nécessairement avoir un élément parent.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#only-of-type-pseudo', ':only-of-type')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                    | État                                 | Commentaires                                                        |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------- |
+| {{SpecName('CSS4 Selectors', '#only-of-type-pseudo', ':only-of-type')}} | {{Spec2('CSS4 Selectors')}} | L'élément ciblé ne doit pas nécessairement avoir un élément parent. |
+| {{SpecName('CSS3 Selectors', '#only-of-type-pseudo', ':only-of-type')}} | {{Spec2('CSS3 Selectors')}} | Définition initiale.                                                |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.only-of-type")}}</p>
+{{Compat("css.selectors.only-of-type")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref(":only-child")}}</li>
- <li>{{cssxref(":nth-of-type")}}</li>
- <li>{{cssxref(":first-of-type")}}</li>
- <li>{{cssxref(":last-of-type")}}</li>
-</ul>
+- {{cssxref(":only-child")}}
+- {{cssxref(":nth-of-type")}}
+- {{cssxref(":first-of-type")}}
+- {{cssxref(":last-of-type")}}

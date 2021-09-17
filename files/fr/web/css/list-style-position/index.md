@@ -7,27 +7,23 @@ tags:
   - Reference
 translation_of: Web/CSS/list-style-position
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>list-style-position</code></strong> permet de définir la position du marqueur (cf. {{cssxref("::marker")}} de liste par rapport à la boîte principale.</p>
+La propriété **`list-style-position`** permet de définir la position du marqueur (cf. {{cssxref("::marker")}} de liste par rapport à la boîte principale.
 
-<div>{{EmbedInteractiveExample("pages/css/list-style-position.html")}}</div>
+{{EmbedInteractiveExample("pages/css/list-style-position.html")}}
 
-<p>Pour définir cette propriété, on pourra aussi utiliser la propriété raccourcie {{cssxref("list-style")}}.</p>
+Pour définir cette propriété, on pourra aussi utiliser la propriété raccourcie {{cssxref("list-style")}}.
 
-<div class="note">
-<p><strong>Note :</strong>
+> **Note :**
+>
+> - Cette propriété s'applique aux éléments d'une liste (c'est-à-dire aux éléments pour lesquels {{cssxref("display")}}` : list-item``; `). [Par défaut](https://www.w3.org/TR/html5/rendering.html#lists), cela inclut les éléments {{HTMLElement("li")}}. Cette propriété peut être héritée par les éléments et si on veut donc gérer une liste de façon uniforme, on pourra appliquer la propriété à l'élément parent (qui correspond en général à {{HTMLElement("ol")}} ou à {{HTMLElement("ul")}}).
+> - Une différence de comportement existe entre les navigateurs lorsqu'un élément de bloc est placé en premier au sein d'un élément de liste avec `list-style-position: inside`. Chrome et Safari placent l'élément sur la même ligne que la boîte du marqueur. En revanche, Firefox, Internet Explorer et Opera placent l'élément sur la ligne suivante. Voir {{bug("36854")}} pour plus d'informations.
 
-<ul>
- <li>Cette propriété s'applique aux éléments d'une liste (c'est-à-dire aux éléments pour lesquels {{cssxref("display")}}<code>: list-item</code><code>;</code>). <a href="https://www.w3.org/TR/html5/rendering.html#lists">Par défaut</a>, cela inclut les éléments {{HTMLElement("li")}}. Cette propriété peut être héritée par les éléments et si on veut donc gérer une liste de façon uniforme, on pourra appliquer la propriété à l'élément parent (qui correspond en général à {{HTMLElement("ol")}} ou à {{HTMLElement("ul")}}).</li>
- <li>Une différence de comportement existe entre les navigateurs lorsqu'un élément de bloc est placé en premier au sein d'un élément de liste avec <code>list-style-position: inside</code>. Chrome et Safari placent l'élément sur la même ligne que la boîte du marqueur. En revanche, Firefox, Internet Explorer et Opera placent l'élément sur la ligne suivante. Voir {{bug("36854")}} pour plus d'informations.</li>
-</ul>
-</p>
-</div>
+## Syntaxe
 
-<h2 id="Syntaxe">Syntaxe</h2>
-
-<pre class="brush:css no-line-numbers">/* Valeurs avec mot-clé */
+```css
+/* Valeurs avec mot-clé */
 list-style-position: inside;
 list-style-position: outside;
 
@@ -35,28 +31,27 @@ list-style-position: outside;
 list-style-position: inherit;
 list-style-position: initial;
 list-style-position: unset;
-</pre>
+```
 
-<p>La propriété <code>list-style-position</code> est définie avec l'un des mots-clés suivants.</p>
+La propriété `list-style-position` est définie avec l'un des mots-clés suivants.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>inside</code></dt>
- <dd>La boîte du marqueur ({{cssxref("::marker")}}) est la première boîte en ligne (<em>inline</em>) de la boîte principale. Le contenu de l'élément sera appliqué à la suite de la boîte du marqueur.</dd>
- <dt><code>outside</code></dt>
- <dd>La boîte du marqueur ({{cssxref("::marker")}}) est en dehors de la boîte principale.</dd>
-</dl>
+- `inside`
+  - : La boîte du marqueur ({{cssxref("::marker")}}) est la première boîte en ligne (_inline_) de la boîte principale. Le contenu de l'élément sera appliqué à la suite de la boîte du marqueur.
+- `outside`
+  - : La boîte du marqueur ({{cssxref("::marker")}}) est en dehors de la boîte principale.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css;">.one {
+```css
+.one {
   list-style:square inside;
 }
 
@@ -68,68 +63,52 @@ list-style-position: unset;
 .three {
   list-style-image: url("https://mdn.mozillademos.org/files/11979/starsolid.gif");
   list-style-position: inherit;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;ul class="one"&gt; Liste 1
-  &lt;li&gt;Élément 1-1&lt;/li&gt;
-  &lt;li&gt;Élément 1-2&lt;/li&gt;
-  &lt;li&gt;Élément 1-3&lt;/li&gt;
-  &lt;li&gt;Élément 1-4&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul class="two"&gt; Liste 2
-  &lt;li&gt;Élément 2-1&lt;/li&gt;
-  &lt;li&gt;Élément 2-2&lt;/li&gt;
-  &lt;li&gt;Élément 2-3&lt;/li&gt;
-  &lt;li&gt;Élément 2-4&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul class="three"&gt; Liste 3
-  &lt;li&gt;Élément 3-1&lt;/li&gt;
-  &lt;li&gt;Élément 3-2&lt;/li&gt;
-  &lt;li&gt;Élément 3-3&lt;/li&gt;
-  &lt;li&gt;Élément 3-4&lt;/li&gt;
-&lt;/ul&gt;</pre>
-
-<h3 id="Résultat">Résultat</h3>
-
-<p>{{EmbedLiveSample("Exemples","200","420")}}</p>
-
-<h2 id="Spécifications">Spécifications</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Lists', '#list-style-position-property', 'list-style-position')}}</td>
-   <td>{{Spec2('CSS3 Lists')}}</td>
-   <td>Aucun changement.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'generate.html#propdef-list-style-position', 'list-style-position')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
-
-<p>{{cssinfo}}</p>
-
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<p>{{Compat("css.properties.list-style-position")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li>{{cssxref("list-style")}}</li>
- <li>{{cssxref("list-style-type")}}</li>
- <li>{{cssxref("list-style-image")}}</li>
- <li>{{cssxref("::marker")}}</li>
+```html
+<ul class="one"> Liste 1
+  <li>Élément 1-1</li>
+  <li>Élément 1-2</li>
+  <li>Élément 1-3</li>
+  <li>Élément 1-4</li>
 </ul>
+<ul class="two"> Liste 2
+  <li>Élément 2-1</li>
+  <li>Élément 2-2</li>
+  <li>Élément 2-3</li>
+  <li>Élément 2-4</li>
+</ul>
+<ul class="three"> Liste 3
+  <li>Élément 3-1</li>
+  <li>Élément 3-2</li>
+  <li>Élément 3-3</li>
+  <li>Élément 3-4</li>
+</ul>
+```
+
+### Résultat
+
+{{EmbedLiveSample("Exemples","200","420")}}
+
+## Spécifications
+
+| Spécification                                                                                                            | État                             | Commentaires         |
+| ------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName('CSS3 Lists', '#list-style-position-property', 'list-style-position')}}             | {{Spec2('CSS3 Lists')}} | Aucun changement.    |
+| {{SpecName('CSS2.1', 'generate.html#propdef-list-style-position', 'list-style-position')}} | {{Spec2('CSS2.1')}}         | Définition initiale. |
+
+{{cssinfo}}
+
+## Compatibilité des navigateurs
+
+{{Compat("css.properties.list-style-position")}}
+
+## Voir aussi
+
+- {{cssxref("list-style")}}
+- {{cssxref("list-style-type")}}
+- {{cssxref("list-style-image")}}
+- {{cssxref("::marker")}}

@@ -8,28 +8,27 @@ tags:
   - Reference
 translation_of: Web/CSS/-webkit-overflow-scrolling
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>La propriété <strong><code>-webkit-overflow-scrolling</code></strong> permet de contrôler si l'appareil tactile utilise l'inertie pour faire défiler l'élément visé par la déclaration.</p>
+La propriété **`-webkit-overflow-scrolling`** permet de contrôler si l'appareil tactile utilise l'inertie pour faire défiler l'élément visé par la déclaration.
 
-<h2 id="Valeurs">Valeurs</h2>
+## Valeurs
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>Le défilement « normal » est utilisé : le défilement s'arrête dès que le doigt ne touche plus l'écran.</dd>
- <dt><code>touch</code></dt>
- <dd>Le défilement simule une certaine inertie : le contenu continue à défiler légèrement après que le toucher soit fini. La vitesse et la durée du défilement sont proportionnelles à la vitesse de déplacement du doigt sur l'écran. Cela crée un nouveau contexte d'empilement.</dd>
-</dl>
+- `auto`
+  - : Le défilement « normal » est utilisé : le défilement s'arrête dès que le doigt ne touche plus l'écran.
+- `touch`
+  - : Le défilement simule une certaine inertie : le contenu continue à défiler légèrement après que le toucher soit fini. La vitesse et la durée du défilement sont proportionnelles à la vitesse de déplacement du doigt sur l'écran. Cela crée un nouveau contexte d'empilement.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   width: 100%;
   overflow: auto;
 }
@@ -47,38 +46,39 @@ p {
 
 .scroll-auto {
   -webkit-overflow-scrolling: auto; /* on arrête le défilement immédiatement */
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="scroll-touch"&gt;
-  &lt;p&gt;
+```html
+<div class="scroll-touch">
+  <p>
     Ce paragraphe a un défilement inertiel.
-  &lt;/p&gt;
-&lt;/div&gt;
-&lt;div class="scroll-auto"&gt;
-  &lt;p&gt;
+  </p>
+</div>
+<div class="scroll-auto">
+  <p>
      Pas celui-ci.
-  &lt;/p&gt;
-&lt;/div&gt;</pre>
+  </p>
+</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples')}}</p>
+{{EmbedLiveSample('Exemples')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne fait partie d'aucune spécification. Elle est documentée dans <a href="https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/css/property/-webkit-overflow-scrolling">la référence CSS de Safari</a>.</p>
+Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne fait partie d'aucune spécification. Elle est documentée dans [la référence CSS de Safari](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/css/property/-webkit-overflow-scrolling).
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.-webkit-overflow-scrolling")}}</p>
+{{Compat("css.properties.-webkit-overflow-scrolling")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="https://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/">L'article de CSS-Tricks sur cette fonctionnalité, avec une démonstration (en anglais)</a></li>
- <li><a href="https://www.smashingmagazine.com/2018/08/scroll-bouncing-websites/">Article de Smashing Magazine (en anglais) : décrire l'effet du rebondissement du scroll et le fonctionnement dans les différents navigateurs</a></li>
-</ul>
+- [L'article de CSS-Tricks sur cette fonctionnalité, avec une démonstration (en anglais)](https://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/)
+- [Article de Smashing Magazine (en anglais) : décrire l'effet du rebondissement du scroll et le fonctionnement dans les différents navigateurs](https://www.smashingmagazine.com/2018/08/scroll-bouncing-websites/)

@@ -1,60 +1,61 @@
 ---
 title: forced-color-adjust
 slug: Web/CSS/forced-color-adjust
+translation_of: Web/CSS/forced-color-adjust
 browser-compat: css.properties.forced-color-adjust
-translation_of: 'Web/CSS/forced-color-adjust'
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété CSS <strong><code>forced-color-adjust</code></strong> permet aux auteurs de ne pas activer les modes de couleurs forcées sur certains éléments. Cela restaure la possibilité de contrôler ces valeurs en CSS.</p>
+La propriété CSS **`forced-color-adjust`** permet aux auteurs de ne pas activer les modes de couleurs forcées sur certains éléments. Cela restaure la possibilité de contrôler ces valeurs en CSS.
 
-<h2 id="syntax">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css">forced-color-adjust: auto;
+```css
+forced-color-adjust: auto;
 forced-color-adjust: none;
 
 /* Valeurs globales */
 forced-color-adjust: inherit;
 forced-color-adjust: initial;
 forced-color-adjust: revert;
-forced-color-adjust: unset;</pre>
+forced-color-adjust: unset;
+```
 
-<p>La valeur de la propriété <code>forced-color-adjust</code> doit être l'un des mots-clés suivants.</p>
+La valeur de la propriété `forced-color-adjust` doit être l'un des mots-clés suivants.
 
-<h3 id="values">Valeurs</h3>
+### Valeurs
 
-<dl>
-	<dt><code>auto</code></dt>
-	<dd>En mode de couleurs forcées, les couleurs de l'élément sont définies par l'{{Glossary("user agent", "agent utilisateur")}}. C'est la valeur par défaut.</dd>
-	<dt><code><strong>none</strong></code></dt>
-	<dd>Même en mode de couleurs forcées, les couleurs de l'élément ne sont pas automatiquement définies par l'{{Glossary("user agent", "agent utilisateur")}}.</dd>
-</dl>
+- `auto`
+  - : En mode de couleurs forcées, les couleurs de l'élément sont définies par l'{{Glossary("user agent", "agent utilisateur")}}. C'est la valeur par défaut.
+- **`none`**
+  - : Même en mode de couleurs forcées, les couleurs de l'élément ne sont pas automatiquement définies par l'{{Glossary("user agent", "agent utilisateur")}}.
 
-<h2 id="usage_notes">Notes d'utilisation</h2>
+## Notes d'utilisation
 
-<p>Cette propriété ne devrait être utilisée que pour faire des modifications qui prendront en charge les pré-requis de couleurs et de contrastes. Par exemple, si vous savez que les optimisations de couleur faites par l'{{Glossary("user agent", "agent utilisateur")}} conduisent à une mauvaise expérience en mode contrasté ou en mode sombre. L'utilisation de cette propriété vous permettra alors de modifier le résultat dans ce mode pour proposer une meilleure expérience. <strong>Elle ne devrait pas être utilisée dans le but d'empêcher les choix de l'utilisateur d'être respectés</strong>.</p>
+Cette propriété ne devrait être utilisée que pour faire des modifications qui prendront en charge les pré-requis de couleurs et de contrastes. Par exemple, si vous savez que les optimisations de couleur faites par l'{{Glossary("user agent", "agent utilisateur")}} conduisent à une mauvaise expérience en mode contrasté ou en mode sombre. L'utilisation de cette propriété vous permettra alors de modifier le résultat dans ce mode pour proposer une meilleure expérience. **Elle ne devrait pas être utilisée dans le but d'empêcher les choix de l'utilisateur d'être respectés**.
 
-<p>Cette propriété est une version standard de la propriété <a href="https://docs.microsoft.com/en-us/previous-versions/hh771863%28v%3dvs.85%29"><code>-ms-high-contrast-adjust</code> (en anglais)</a>. La propriété préfixée peut être utilisée pour obtenir un résultat similaire sur Internet Explorer 10 et sur les versions EdgeHTML de Microsoft Edge.</p>
+Cette propriété est une version standard de la propriété [`-ms-high-contrast-adjust` (en anglais)](https://docs.microsoft.com/en-us/previous-versions/hh771863%28v%3dvs.85%29). La propriété préfixée peut être utilisée pour obtenir un résultat similaire sur Internet Explorer 10 et sur les versions EdgeHTML de Microsoft Edge.
 
-<h2 id="formal_definition">Définition formelle</h2>
+## Définition formelle
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="formal_syntax">Syntaxe formelle</h2>
+## Syntaxe formelle
 
-<p>{{csssyntax}}</p>
+{{csssyntax}}
 
-<h2 id="examples">Exemples</h2>
+## Exemples
 
-<h3 id="preserving_colors">Préserver les couleurs</h3>
+### Préserver les couleurs
 
-<p>Dans l'exemple ci-dessous, la première boîte utilise le jeu de couleur définit par l'utilisateur. Par exemple, dans le mode à forts contrastes sombre de Windows, cela donnera du texte blanc sur fond noir. La seconde boîte conservera quant à elle les couleurs du site définies par la classe <code>.box</code>.</p>
+Dans l'exemple ci-dessous, la première boîte utilise le jeu de couleur définit par l'utilisateur. Par exemple, dans le mode à forts contrastes sombre de Windows, cela donnera du texte blanc sur fond noir. La seconde boîte conservera quant à elle les couleurs du site définies par la classe `.box`.
 
-<p>En utilisant la fonctionnalité média <code><a href="/fr/docs/Web/CSS/@media/forced-colors">forced-colors</a></code>, vous pouvez ajouter n'importe qu'elle autre optimisation pour le mode de couleurs forcées aux côtés de la propriété <code>forced-color-adjust</code>.</p>
+En utilisant la fonctionnalité média [`forced-colors`](/fr/docs/Web/CSS/@media/forced-colors), vous pouvez ajouter n'importe qu'elle autre optimisation pour le mode de couleurs forcées aux côtés de la propriété `forced-color-adjust`.
 
-<h4 id="css">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.box {
+```css
+.box {
   border: 5px solid grey;
   background-color: #ccc;
   width: 300px;
@@ -66,36 +67,40 @@ forced-color-adjust: unset;</pre>
   .forced {
     forced-color-adjust: none;
   }
-}</pre>
+}
+```
 
-<h4 id="html">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div class="box"&gt;
-  &lt;p&gt;Voici une boîte qui utilisera vos préférences de couleurs.&lt;/p&gt;
-&lt;/div&gt;
+```html
+<div class="box">
+  <p>Voici une boîte qui utilisera vos préférences de couleurs.</p>
+</div>
 
-&lt;div class="box forced"&gt;
-  &lt;p&gt;Voici une boîte qui conservera les couleurs définies par le site.&lt;/p&gt;
-&lt;/div&gt;</pre>
+<div class="box forced">
+  <p>Voici une boîte qui conservera les couleurs définies par le site.</p>
+</div>
+```
 
-<h4 id="result">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("preserving_colors", 640, 260)}}</p>
+{{EmbedLiveSample("preserving_colors", 640, 260)}}
 
-<img src="windows-high-contrast.jpg" alt="L'exemple présenté ci-dessus affiche la première boîte avec un arrière-plan noir et la seconde avec un arrière-plan gris définit en CSS.">
+![L'exemple présenté ci-dessus affiche la première boîte avec un arrière-plan noir et la seconde avec un arrière-plan gris définit en CSS.](windows-high-contrast.jpg)
 
-<h2 id="specifications">Spécifications</h2>
+## Spécifications
 
-<p>{{Specifications}}</p>
+{{Specifications}}
 
-<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat}}</p>
+{{Compat}}
 
-<h2 id="see_also">Voir aussi</h2>
+## Voir aussi
 
-<ul>
-    <li><a href="/fr/docs/Web/HTML/Applying_color">Appliquer des couleurs sur des éléments HTML grâce à CSS</a></li>
-    <li><a href="https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/"><i lang="en">Styling for Windows high contrast with standards for forced colors</i> (en anglais)</a></li>
-	<li>{{cssxref("color-adjust")}}</li>
-</ul>
+- [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/HTML/Applying_color)
+- <i lang="en">Styling for Windows high contrast with standards for forced colors</i>
+
+  [<i lang="en">Styling for Windows high contrast with standards for forced colors</i> (en anglais)](https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/)
+
+- {{cssxref("color-adjust")}}

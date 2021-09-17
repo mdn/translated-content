@@ -9,72 +9,58 @@ tags:
 translation_of: Web/CSS/General_sibling_combinator
 original_slug: Web/CSS/Sélecteurs_de_voisins_généraux
 ---
-<div>{{CSSRef("Selectors")}}</div>
+{{CSSRef("Selectors")}}
 
-<p>Le combinateur <code>~</code> permet de séparer deux sélecteurs et de cibler un élément si celui-ci correspond au second sélecteur et est précédé (mais pas forcément voisin immédiat) d'un autre élément correspondant au premier sélecteur qui partage le même parent. Les deux éléments sont des fils d'un même parent {{domxref("Element")}}, voisins immédiats ou pas.</p>
+Le combinateur `~` permet de séparer deux sélecteurs et de cibler un élément si celui-ci correspond au second sélecteur et est précédé (mais pas forcément voisin immédiat) d'un autre élément correspondant au premier sélecteur qui partage le même parent. Les deux éléments sont des fils d'un même parent {{domxref("Element")}}, voisins immédiats ou pas.
 
-<pre class="brush: css no-line-numbers">/* Parmi tous les éléments &lt;img&gt;, cibler tous
-   éléments &lt;p&gt; qui les suivent. */
+```css
+/* Parmi tous les éléments <img>, cibler tous
+   éléments <p> qui les suivent. */
 img ~ p {
   color: red;
-}</pre>
+}
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox">premier_element ~ second_element { <em>propriétés de style</em> }
-</pre>
+    premier_element ~ second_element { propriétés de style }
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">p ~ span {
+```css
+p ~ span {
   color: red;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;span&gt;Ici, ce n'est pas rouge.&lt;/span&gt;
-&lt;p&gt;Voici un paragraphe.&lt;/p&gt;
-&lt;code&gt;Un peu de code.&lt;/code&gt;
-&lt;span&gt;Et un autre span.&lt;/span&gt;
-&lt;code&gt;Encore du code&lt;/code&gt;
-&lt;span&gt;Ici aussi, c'est rouge&lt;/span&gt;</pre>
+```html
+<span>Ici, ce n'est pas rouge.</span>
+<p>Voici un paragraphe.</p>
+<code>Un peu de code.</code>
+<span>Et un autre span.</span>
+<code>Encore du code</code>
+<span>Ici aussi, c'est rouge</span>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples', 280, 120)}}</p>
+{{EmbedLiveSample('Exemples', 280, 120)}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#general-sibling-combinators', 'following-sibling combinator')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Ce combinateur est renommé en « <em>subsequent-sibling combinator</em> ».</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#general-sibling-combinators', 'general sibling combinator')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                                | État                                 | Commentaires                                                       |
+| ---------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ | ------------------------------------------------------------------ |
+| {{SpecName('CSS4 Selectors', '#general-sibling-combinators', 'following-sibling combinator')}} | {{Spec2('CSS4 Selectors')}} | Ce combinateur est renommé en « _subsequent-sibling combinator_ ». |
+| {{SpecName('CSS3 Selectors', '#general-sibling-combinators', 'general sibling combinator')}} | {{Spec2('CSS3 Selectors')}} | Définition initiale.                                               |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.general_sibling")}}</p>
+{{Compat("css.selectors.general_sibling")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="/fr/docs/Web/CSS/Sélecteur_de_voisin_direct">Sélecteur de voisin direct</a></li>
-</ul>
+- [Sélecteur de voisin direct](/fr/docs/Web/CSS/Sélecteur_de_voisin_direct)

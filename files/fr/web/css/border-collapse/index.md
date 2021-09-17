@@ -7,19 +7,20 @@ tags:
   - Reference
 translation_of: Web/CSS/border-collapse
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>border-collapse</code></strong> détermine si les bordures d'un tableau sont séparées ou fusionnées. Quand elles sont séparées, chaque cellule du tableau a ses propres bordures, distinctes. Quand elles sont fusionnées, les bordures des cellules sont partagées.</p>
+La propriété **`border-collapse`** détermine si les bordures d'un tableau sont séparées ou fusionnées. Quand elles sont séparées, chaque cellule du tableau a ses propres bordures, distinctes. Quand elles sont fusionnées, les bordures des cellules sont partagées.
 
-<div>{{EmbedInteractiveExample("pages/css/border-collapse.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-collapse.html")}}
 
-<p>Le modèle des <em>bordures séparées</em> est celui qui est traditionnellement utilisé par HTML. Les cellules adjacente ont des bordures distinctes et la distance entre ces bordures est définie par la propriété {{cssxref("border-spacing")}}.</p>
+Le modèle des _bordures séparées_ est celui qui est traditionnellement utilisé par HTML. Les cellules adjacente ont des bordures distinctes et la distance entre ces bordures est définie par la propriété {{cssxref("border-spacing")}}.
 
-<p>Le modèle des <em>bordures fusionnées</em> permet que les cellules adjacentes partagent leurs bordures. Lorsqu'on utilise ce modèle, les valeurs <code>inset</code> et <code>outset</code> de {{cssxref("border-style")}} se comportent respectivement comme <code>groove</code> et <code>ridge</code>.</p>
+Le modèle des _bordures fusionnées_ permet que les cellules adjacentes partagent leurs bordures. Lorsqu'on utilise ce modèle, les valeurs `inset` et `outset` de {{cssxref("border-style")}} se comportent respectivement comme `groove` et `ridge`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 border-collapse: collapse;
 border-collapse: separate;
 
@@ -27,28 +28,27 @@ border-collapse: separate;
 border-collapse: inherit;
 border-collapse: initial;
 border-collapse: unset;
-</pre>
+```
 
-<p>La propriété <code>border-collapse</code> est définie avec un seul mot-clé parmi ceux définis ci-après.</p>
+La propriété `border-collapse` est définie avec un seul mot-clé parmi ceux définis ci-après.
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>collapse</code></dt>
- <dd>Un mot-clé qui indique que le modèle des bordures fusionnées doit être utilisé.</dd>
- <dt><code>separate</code></dt>
- <dd>Un mot-clé qui indique que le modèle des bordures séparées doit être utilisé. C'est la valeur par défaut.</dd>
-</dl>
+- `collapse`
+  - : Un mot-clé qui indique que le modèle des bordures fusionnées doit être utilisé.
+- `separate`
+  - : Un mot-clé qui indique que le modèle des bordures séparées doit être utilisé. C'est la valeur par défaut.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.collapse {
+```css
+.collapse {
   border-collapse: collapse;
 }
 .separate {
@@ -71,78 +71,66 @@ table th, table td {
 .wk { border-color: gold blue; }
 .ch { border-color: red yellow green blue; }
 .bk { border-color: navy blue teal aqua; }
-.op { border-color: red; }</pre>
+.op { border-color: red; }
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;table class="separate"&gt;
-  &lt;caption&gt;&lt;code&gt;border-collapse: separate&lt;/code&gt;&lt;/caption&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;&lt;th&gt;Navigateur&lt;/th&gt; &lt;th&gt;Moteur de rendu&lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;&lt;td class="fx"&gt;Firefox&lt;/td&gt; &lt;td class="gk"&gt;Gecko&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;&lt;td class="ie"&gt;Internet Explorer&lt;/td&gt; &lt;td class="tr"&gt;Trident&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;&lt;td class="sa"&gt;Safari&lt;/td&gt; &lt;td class="wk"&gt;Webkit&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;&lt;td class="ch"&gt;Chrome&lt;/td&gt; &lt;td class="bk"&gt;Blink&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;&lt;td class="op"&gt;Opera&lt;/td&gt; &lt;td class="bk"&gt;Blink&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;table class="collapse"&gt;
-  &lt;caption&gt;&lt;code&gt;border-collapse: collapse&lt;/code&gt;&lt;/caption&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;&lt;th&gt;Navigateur&lt;/th&gt; &lt;th&gt;Moteur de rendu&lt;/th&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;&lt;td class="fx"&gt;Firefox&lt;/td&gt; &lt;td class="gk"&gt;Gecko&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;&lt;td class="ie"&gt;Internet Explorer&lt;/td&gt; &lt;td class="tr"&gt;Trident&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;&lt;td class="sa"&gt;Safari&lt;/td&gt; &lt;td class="wk"&gt;Webkit&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;&lt;td class="ch"&gt;Chrome&lt;/td&gt; &lt;td class="bk"&gt;Blink&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;&lt;td class="op"&gt;Opera&lt;/td&gt; &lt;td class="bk"&gt;Blink&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</pre>
-
-<h3 id="Résultat">Résultat</h3>
-
-<p>{{EmbedLiveSample('Exemples', 400, 300)}}</p>
-
-<h2 id="Spécifications">Spécifications</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'tables.html#borders', 'border-collapse')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
+```html
+<table class="separate">
+  <caption><code>border-collapse: separate</code></caption>
+  <tbody>
+    <tr><th>Navigateur</th> <th>Moteur de rendu</th>
+    </tr>
+    <tr><td class="fx">Firefox</td> <td class="gk">Gecko</td>
+    </tr>
+    <tr><td class="ie">Internet Explorer</td> <td class="tr">Trident</td>
+    </tr>
+    <tr><td class="sa">Safari</td> <td class="wk">Webkit</td>
+    </tr>
+    <tr><td class="ch">Chrome</td> <td class="bk">Blink</td>
+    </tr>
+    <tr><td class="op">Opera</td> <td class="bk">Blink</td>
+    </tr>
+  </tbody>
 </table>
+<table class="collapse">
+  <caption><code>border-collapse: collapse</code></caption>
+  <tbody>
+    <tr><th>Navigateur</th> <th>Moteur de rendu</th>
+    </tr>
+    <tr><td class="fx">Firefox</td> <td class="gk">Gecko</td>
+    </tr>
+    <tr><td class="ie">Internet Explorer</td> <td class="tr">Trident</td>
+    </tr>
+    <tr><td class="sa">Safari</td> <td class="wk">Webkit</td>
+    </tr>
+    <tr><td class="ch">Chrome</td> <td class="bk">Blink</td>
+    </tr>
+    <tr><td class="op">Opera</td> <td class="bk">Blink</td>
+    </tr>
+  </tbody>
+</table>
+```
 
-<p>{{cssinfo}}</p>
+### Résultat
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+{{EmbedLiveSample('Exemples', 400, 300)}}
 
-<p>{{Compat("css.properties.border-collapse")}}</p>
+## Spécifications
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+| Spécification                                                                        | État                     | Commentaires         |
+| ------------------------------------------------------------------------------------ | ------------------------ | -------------------- |
+| {{SpecName('CSS2.1', 'tables.html#borders', 'border-collapse')}} | {{Spec2('CSS2.1')}} | Définition initiale. |
 
-<ul>
- <li>{{cssxref("border-spacing")}}</li>
- <li>{{cssxref("border-style")}}</li>
- <li>L'élément HTML {{HTMLElement("table")}} impacté <code>border-collapse</code>.</li>
-</ul>
+{{cssinfo}}
+
+## Compatibilité des navigateurs
+
+{{Compat("css.properties.border-collapse")}}
+
+## Voir aussi
+
+- {{cssxref("border-spacing")}}
+- {{cssxref("border-style")}}
+- L'élément HTML {{HTMLElement("table")}} impacté `border-collapse`.

@@ -8,85 +8,65 @@ tags:
   - Type
 translation_of: Web/CSS/shape
 ---
-<div>{{CSSRef}}{{deprecated_header}}</div>
+{{CSSRef}}{{deprecated_header}}
 
-<p>Le type de donnée CSS <strong><code>&lt;shape&gt;</code></strong> permet de représenter des formes. Ces formes (ou régions) sont utilisées pour définir les parties d'un élément sur lesquelles des propriétés comme {{cssxref("clip")}} s'appliquent. Ce type de donnée a été déprécié pour être remplacé par {{cssxref("&lt;basic-shape&gt;")}}.</p>
+Le type de donnée CSS **`<shape>`** permet de représenter des formes. Ces formes (ou régions) sont utilisées pour définir les parties d'un élément sur lesquelles des propriétés comme {{cssxref("clip")}} s'appliquent. Ce type de donnée a été déprécié pour être remplacé par {{cssxref("&lt;basic-shape&gt;")}}.
 
-<div class="note">
-<p><strong>Note :</strong> <code>&lt;shape&gt;</code> et <code>rect()</code> fonctionnent avec la propriété {{cssxref("clip")}} qui a été dépréciée pour être remplacée par {{cssxref("clip-path")}}. Il est donc préférable d'utiliser cette dernière si possible avec une valeur de type {{cssxref("&lt;basic-shape&gt;")}} à la place.</p>
-</div>
+> **Note :** `<shape>` et `rect()` fonctionnent avec la propriété {{cssxref("clip")}} qui a été dépréciée pour être remplacée par {{cssxref("clip-path")}}. Il est donc préférable d'utiliser cette dernière si possible avec une valeur de type {{cssxref("&lt;basic-shape&gt;")}} à la place.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Les valeurs de type <code>&lt;shape&gt;</code> sont construites grâce à la notation fonctionnelle <code>rect()</code> qui permet de créer une zone en forme de rectangle.</p>
+Les valeurs de type `<shape>` sont construites grâce à la notation fonctionnelle `rect()` qui permet de créer une zone en forme de rectangle.
 
-<pre class="syntaxbox">rect(<em>haut</em>, <em>droite</em>, <em>bas</em>, <em>gauche</em>)
-</pre>
+    rect(haut, droite, bas, gauche)
 
-<h4 id="Valeurs">Valeurs</h4>
+#### Valeurs
 
-<p><img alt="rect.png" src="rect.png"></p>
+![rect.png](rect.png)
 
-<dl>
- <dt><code><em>haut</em></code></dt>
- <dd>Une valeur de type {{cssxref("&lt;length&gt;")}} qui représente le décalage entre le côté haut du rectangle et le côté haut de la bordure de l'élément.</dd>
-</dl>
+- `haut`
+  - : Une valeur de type {{cssxref("&lt;length&gt;")}} qui représente le décalage entre le côté haut du rectangle et le côté haut de la bordure de l'élément.
 
-<dl>
- <dt><code><em>droite</em></code></dt>
- <dd>Une valeur de type {{cssxref("&lt;length&gt;")}} qui représente le décalage entre le côté droit du rectangle et le côté gauche de la bordure de l'élément.</dd>
-</dl>
+<!---->
 
-<dl>
- <dt><code><em>bas</em></code></dt>
- <dd>Une valeur de type {{cssxref("&lt;length&gt;")}} qui représente le décalage entre le côté bas du rectangle et le côté haut de la bordure de l'élément.</dd>
-</dl>
+- `droite`
+  - : Une valeur de type {{cssxref("&lt;length&gt;")}} qui représente le décalage entre le côté droit du rectangle et le côté gauche de la bordure de l'élément.
 
-<dl>
- <dt><code><em>gauche</em></code></dt>
- <dd>Une valeur de type {{cssxref("&lt;length&gt;")}} qui représente le décalage entre le côté gauche du rectangle et le côté gauche de la bordure de l'élément.</dd>
-</dl>
+<!---->
 
-<h2 id="Interpolation">Interpolation</h2>
+- `bas`
+  - : Une valeur de type {{cssxref("&lt;length&gt;")}} qui représente le décalage entre le côté bas du rectangle et le côté haut de la bordure de l'élément.
 
-<p>Les valeurs de type <code>&lt;shape&gt;</code> sont des rectangles qui peuvent être interpolées lors des animations. Pour ces valeurs, l'interpolation s'effectue en interpolant chacune des valeurs <code>haut</code>, <code>droite</code>, <code>bas</code> et <code>gauche</code> comme des nombres réels (à virgule flottante). La vitesse de l'interpolation est définie grâce à <a href="/fr/docs/Web/CSS/easing-function">la fonction de temporisation</a> associée à l'animation.</p>
+<!---->
 
-<h2 id="Exemples">Exemples</h2>
+- `gauche`
+  - : Une valeur de type {{cssxref("&lt;length&gt;")}} qui représente le décalage entre le côté gauche du rectangle et le côté gauche de la bordure de l'élément.
 
-<h3 id="exemple_illustrant_un_usage_correct_de_la_fonction_rect">Exemple illustrant un usage correct de la fonction rect()</h3>
+## Interpolation
 
-<pre class="brush: css">
+Les valeurs de type `<shape>` sont des rectangles qui peuvent être interpolées lors des animations. Pour ces valeurs, l'interpolation s'effectue en interpolant chacune des valeurs `haut`, `droite`, `bas` et `gauche` comme des nombres réels (à virgule flottante). La vitesse de l'interpolation est définie grâce à [la fonction de temporisation](/fr/docs/Web/CSS/easing-function) associée à l'animation.
+
+## Exemples
+
+### Exemple illustrant un usage correct de la fonction rect()
+
+```css
 img.clip04 {
   clip: rect(10px, 20px, 20px, 10px);
 }
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'visufx.html#value-def-shape', '&lt;shape&gt;')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Définition avec la propriété {{cssxref("clip")}}.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                     | Commentaires                                           |
+| -------------------------------------------------------------------------------------------- | ------------------------ | ------------------------------------------------------ |
+| {{SpecName('CSS2.1', 'visufx.html#value-def-shape', '&lt;shape&gt;')}} | {{Spec2('CSS2.1')}} | Définition avec la propriété {{cssxref("clip")}}. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.types.shape")}}</p>
+{{Compat("css.types.shape")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("clip")}}</li>
- <li>La fonction spécifique à Gecko {{cssxref("-moz-image-rect()")}}</li>
-</ul>
+- {{cssxref("clip")}}
+- La fonction spécifique à Gecko {{cssxref("-moz-image-rect()")}}

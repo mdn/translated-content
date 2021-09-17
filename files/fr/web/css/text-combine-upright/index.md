@@ -8,13 +8,14 @@ tags:
   - Reference
 translation_of: Web/CSS/text-combine-upright
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>text-combine-upright</code></strong> définit comment intégrer une combinaison de plusieurs caractères dans l'espace normalement alloué à un seul caractère. Si la combinaison obtenue est plus large qu'<code>1em</code>, l'agent utilisateur devra compresser le contenu afin qu'il tienne sur <code>1em</code>. La combinaison est ensuite manipulée comme un seul glyphe pour la disposition et pour la décoration. Enfin, cette propriété n'a d'effet que sur les modes d'écriture verticaux.</p>
+La propriété **`text-combine-upright`** définit comment intégrer une combinaison de plusieurs caractères dans l'espace normalement alloué à un seul caractère. Si la combinaison obtenue est plus large qu'`1em`, l'agent utilisateur devra compresser le contenu afin qu'il tienne sur `1em`. La combinaison est ensuite manipulée comme un seul glyphe pour la disposition et pour la décoration. Enfin, cette propriété n'a d'effet que sur les modes d'écriture verticaux.
 
-<p>Cela permet d'obtenir un effet appelé tate-chū-yoko (縦中横) en japonais ou 直書橫向 en chinois.</p>
+Cela permet d'obtenir un effet appelé tate-chū-yoko (縦中横) en japonais ou 直書橫向 en chinois.
 
-<pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 text-combine-upright: none;
 text-combine-upright: all;
 
@@ -31,90 +32,74 @@ text-combine-upright: digits 4;
 text-combine-upright: inherit;
 text-combine-upright: initial;
 text-combine-upright: unset;
-</pre>
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>none</code></dt>
- <dd>Aucun traitement particulier n'est appliqué.</dd>
- <dt><code>all</code></dt>
- <dd>L'agent utilisateur tente de compresser tous les caractères consécutifs dans une même boîte afin qu'ils occupent l'espace d'un seul caractère sur l'axe vertical de la boîte.</dd>
- <dt><code>digits &lt;n&gt;?</code></dt>
- <dd>L'agent utilisateur tente d'afficher une suite de chiffres ASCII (U+0030–U+0039) avec au plus n caractères afin que cette suite occupe l'espace d'un seul caractère sur l'axe vertical de la boîte. La valeur par défaut (lorsque l'entier n'est pas indiqué) vaut 2. Les entiers en dehors de l'intervalle <code>[2;4]</code> sont considérés comme invalides.</dd>
-</dl>
+- `none`
+  - : Aucun traitement particulier n'est appliqué.
+- `all`
+  - : L'agent utilisateur tente de compresser tous les caractères consécutifs dans une même boîte afin qu'ils occupent l'espace d'un seul caractère sur l'axe vertical de la boîte.
+- `digits <n>?`
+  - : L'agent utilisateur tente d'afficher une suite de chiffres ASCII (U+0030–U+0039) avec au plus n caractères afin que cette suite occupe l'espace d'un seul caractère sur l'axe vertical de la boîte. La valeur par défaut (lorsque l'entier n'est pas indiqué) vaut 2. Les entiers en dehors de l'intervalle `[2;4]` sont considérés comme invalides.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Exemple_avec_digits">Exemple avec <code>digits</code></h3>
+### Exemple avec `digits`
 
-<p>Utiliser <code>digit</code><code>s</code> nécessite moins de règles et déclarations mais n'est pas encore largement pris en charge par les navigateurs.</p>
+Utiliser ` digit``s ` nécessite moins de règles et déclarations mais n'est pas encore largement pris en charge par les navigateurs.
 
-<pre class="brush: html">&lt;p lang="ja" class="exempleText"&gt;平成20年4月16日に&lt;/p&gt;
-</pre>
+```html
+<p lang="ja" class="exempleText">平成20年4月16日に</p>
+```
 
-<pre class="brush: css">.exempleText {
+```css
+.exempleText {
   writing-mode: vertical-lr;
   text-combine-upright: digits 2;
   font: 36px serif;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Exemple_avec_digits", 100, 350, "https://mdn.mozillademos.org/files/12127/tate-chu-yoko.png")}}</p>
+{{EmbedLiveSample("Exemple_avec_digits", 100, 350, "https://mdn.mozillademos.org/files/12127/tate-chu-yoko.png")}}
 
-<h3 id="Exemple_avec_all">Exemple avec <code>all</code></h3>
+### Exemple avec `all`
 
-<p>Pour utiliser <code>all</code>, on devra baliser chaque fragment de texte horizontal mais cette valeur est actuellement mieux prise en charge que <code>digits</code>.</p>
+Pour utiliser `all`, on devra baliser chaque fragment de texte horizontal mais cette valeur est actuellement mieux prise en charge que `digits`.
 
-<pre class="brush: html">&lt;p lang="zh-Hant"&gt;民國&lt;span class="num"&gt;105&lt;/span
-&gt;年&lt;span class="num"&gt;4&lt;/span
-&gt;月&lt;span class="num"&gt;29&lt;/span&gt;日&lt;/p&gt;
-</pre>
+```html
+<p lang="zh-Hant">民國<span class="num">105</span
+>年<span class="num">4</span
+>月<span class="num">29</span>日</p>
+```
 
-<pre class="brush: css">html { writing-mode: vertical-rl; font: 24px serif }
+```css
+html { writing-mode: vertical-rl; font: 24px serif }
 .num { text-combine-upright: all }
-</pre>
+```
 
-<p>{{EmbedLiveSample("Exemple_avec_all", 250, 300, "https://mdn.mozillademos.org/files/13096/text-combine-upright-all.png")}}</p>
+{{EmbedLiveSample("Exemple_avec_all", 250, 300, "https://mdn.mozillademos.org/files/13096/text-combine-upright-all.png")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Writing Modes", "#propdef-text-combine-upright", "text-combine-upright")}}</td>
-   <td>{{Spec2("CSS3 Writing Modes")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS4 Writing Modes", "#propdef-text-combine-upright", "text-combine-upright")}}</td>
-   <td>{{Spec2("CSS4 Writing Modes")}}</td>
-   <td>Ajout de la valeur <code>digits</code>.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                            | État                                     | Commentaires                 |
+| ------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------- | ---------------------------- |
+| {{SpecName("CSS3 Writing Modes", "#propdef-text-combine-upright", "text-combine-upright")}} | {{Spec2("CSS3 Writing Modes")}} | Définition initiale.         |
+| {{SpecName("CSS4 Writing Modes", "#propdef-text-combine-upright", "text-combine-upright")}} | {{Spec2("CSS4 Writing Modes")}} | Ajout de la valeur `digits`. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.text-combine-upright")}}</p>
+{{Compat("css.properties.text-combine-upright")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("writing-mode")}},</li>
- <li>{{cssxref("text-orientation")}}</li>
-</ul>
+- {{cssxref("writing-mode")}},
+- {{cssxref("text-orientation")}}

@@ -7,15 +7,16 @@ tags:
   - Reference
 translation_of: Web/CSS/image-rendering
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>image-rendering</code></strong> fournit une indication au navigateur à propos de l'algorithme qui devrait être utilisé pour redimensionner les images. Elle s'applique à l'élément visé, aux images fournies via les autres propriétés CSS et aux éléments fils.</p>
+La propriété **`image-rendering`** fournit une indication au navigateur à propos de l'algorithme qui devrait être utilisé pour redimensionner les images. Elle s'applique à l'élément visé, aux images fournies via les autres propriétés CSS et aux éléments fils.
 
-<p>L'agent utilisateur redimensionnera une image si l'auteur de la page indique des dimensions différentes que la taille naturelle de l'image ou si l'utilisateur interagit en zoomant par exemple. Cette propriété n'a aucun effet sur les images qui ne sont pas redimensionnées. Si, par exemple, la taille naturelle de l'image est <code>100px</code> par <code>100px</code> et que l'auteur indique les dimensions <code>200px</code> par <code>200px</code> (ou <code>50px</code> par <code>50px</code>), l'image sera agrandie (ou réduite) aux nouvelles dimensions via l'algorithme indiqué. Le redimensionnement peut aussi avoir lieu suite aux interactions utilisateurs (avec un zoom par exemple).</p>
+L'agent utilisateur redimensionnera une image si l'auteur de la page indique des dimensions différentes que la taille naturelle de l'image ou si l'utilisateur interagit en zoomant par exemple. Cette propriété n'a aucun effet sur les images qui ne sont pas redimensionnées. Si, par exemple, la taille naturelle de l'image est `100px` par `100px` et que l'auteur indique les dimensions `200px` par `200px` (ou `50px` par `50px`), l'image sera agrandie (ou réduite) aux nouvelles dimensions via l'algorithme indiqué. Le redimensionnement peut aussi avoir lieu suite aux interactions utilisateurs (avec un zoom par exemple).
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/*Valeurs avec un mot-clé*/
+```css
+/*Valeurs avec un mot-clé*/
 image-rendering: auto;
 image-rendering: crisp-edges;
 image-rendering: pixelated;
@@ -24,36 +25,33 @@ image-rendering: pixelated;
 image-rendering: inherit;
 image-rendering: initial;
 image-rendering: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code><strong>auto</strong></code></dt>
- <dd>L'image devrait être redimensionnée grâce à un algorithme qui optimise l'apparence de l'image. Les algorithmes de redimensionnement « doux » comme l'interpolation bilinéaire, sont acceptables. Ces algorithmes sont destinés à être utilisés sur des images comme des photos. Depuis la version 1.9 (Firefox 3.0), Gecko utilise un algorithme de rééchantillonnage bilinéaire.</dd>
- <dt><code><strong>crisp-edges</strong></code></dt>
- <dd>L'algorithme utilisé doit avant tout préserver le contraste et les bords de l'image, il ne doit pas ajouter de couleur intermédiaire ou de flou. Cette valeur est conçue pour être utilisée sur du <em>pixel art</em>. Les algorithmes éligibles sont par exemple l'interpolation au plus proche voisin, les familles d'algorithmes 2×SaI et <a href="https://en.wikipedia.org/wiki/Hqx">hqx</a>.</dd>
- <dt><code>high-quality</code>{{Experimental_inline}}</dt>
- <dd>Cette valeur est proche de <code>smooth</code> mais favorise un redimensionnement avec une qualité élevée. Si les ressources du système sont limitées, ce sont les images ciblées avec <code>high-quality</code> qui devraient être priorisées par rapport aux autres s'il est nécessaire de dégrader la qualité.</dd>
- <dt><code><strong>pixelated</strong></code></dt>
- <dd>Lorsque l'image est agrandie c'est l'algorithme « du plus proche voisin » qui doit être utilisé afin que l'image apparaisse comme composée de grands pixels. Lorsque l'image est réduite, le comportement est le même que <code>auto</code>.</dd>
- <dt><code>smooth</code>{{Experimental_inline}}</dt>
- <dd>L'algorithme utilisé pour le redimensionnement doit maximiser l'apparence de l'image. Les algorithmes qui adoucissent les couleurs (ex. l'interpolation bilinéaire) sont acceptables. Cette valeur est destinée aux images telles que les photos.</dd>
-</dl>
+- **`auto`**
+  - : L'image devrait être redimensionnée grâce à un algorithme qui optimise l'apparence de l'image. Les algorithmes de redimensionnement « doux » comme l'interpolation bilinéaire, sont acceptables. Ces algorithmes sont destinés à être utilisés sur des images comme des photos. Depuis la version 1.9 (Firefox 3.0), Gecko utilise un algorithme de rééchantillonnage bilinéaire.
+- **`crisp-edges`**
+  - : L'algorithme utilisé doit avant tout préserver le contraste et les bords de l'image, il ne doit pas ajouter de couleur intermédiaire ou de flou. Cette valeur est conçue pour être utilisée sur du _pixel art_. Les algorithmes éligibles sont par exemple l'interpolation au plus proche voisin, les familles d'algorithmes 2×SaI et [hqx](https://en.wikipedia.org/wiki/Hqx).
+- `high-quality`{{Experimental_inline}}
+  - : Cette valeur est proche de `smooth` mais favorise un redimensionnement avec une qualité élevée. Si les ressources du système sont limitées, ce sont les images ciblées avec `high-quality` qui devraient être priorisées par rapport aux autres s'il est nécessaire de dégrader la qualité.
+- **`pixelated`**
+  - : Lorsque l'image est agrandie c'est l'algorithme « du plus proche voisin » qui doit être utilisé afin que l'image apparaisse comme composée de grands pixels. Lorsque l'image est réduite, le comportement est le même que `auto`.
+- `smooth`{{Experimental_inline}}
+  - : L'algorithme utilisé pour le redimensionnement doit maximiser l'apparence de l'image. Les algorithmes qui adoucissent les couleurs (ex. l'interpolation bilinéaire) sont acceptables. Cette valeur est destinée aux images telles que les photos.
 
-<div class="note">
-  <p><strong>Note :</strong> Les valeurs <code>optimizeQuality</code> et <code>optimizeSpeed</code> qui étaient présentes dans un brouillon de la spécification (et qui provenaient de la spécification équivalente pour SVG) sont synonymes respectifs de <code>smooth</code> et <code>pixelated</code>.</p>
-</div>
+> **Note :** Les valeurs `optimizeQuality` et `optimizeSpeed` qui étaient présentes dans un brouillon de la spécification (et qui provenaient de la spécification équivalente pour SVG) sont synonymes respectifs de `smooth` et `pixelated`.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.pixels_petits {
+```css
+.pixels_petits {
   height: 50px;
   width: 50px;
 }
@@ -74,54 +72,38 @@ image-rendering: unset;
 .contraste {
   image-rendering: crisp-edges;
 }
-</pre>
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p&gt;Avec &lt;code&gt;auto&lt;/code&gt; :&lt;/p&gt;
-&lt;img class="pixels_petits defaut" alt="damier" src="https://mdn.mozillademos.org/files/2766/squares.gif"/&gt;
-&lt;img class="pixels_grands defaut" alt="damier" src="https://mdn.mozillademos.org/files/2766/squares.gif"/&gt;
-&lt;img class="chapeau_petit defaut" alt="chapeau" src="https://mdn.mozillademos.org/files/2767/hut.jpg"/&gt;
+```html
+<p>Avec <code>auto</code> :</p>
+<img class="pixels_petits defaut" alt="damier" src="https://mdn.mozillademos.org/files/2766/squares.gif"/>
+<img class="pixels_grands defaut" alt="damier" src="https://mdn.mozillademos.org/files/2766/squares.gif"/>
+<img class="chapeau_petit defaut" alt="chapeau" src="https://mdn.mozillademos.org/files/2767/hut.jpg"/>
 
-&lt;p&gt;Avec &lt;code&gt;crisp-edges&lt;/code&gt; :&lt;/p&gt;
-&lt;img class="pixels_petits contraste" alt="damier" src="https://mdn.mozillademos.org/files/2766/squares.gif"/&gt;
-&lt;img class="pixels_grands contraste" alt="damier" src="https://mdn.mozillademos.org/files/2766/squares.gif"/&gt;
-&lt;img class="chapeau_petit contraste" alt="chapeau" src="https://mdn.mozillademos.org/files/2767/hut.jpg"/&gt;
-</pre>
+<p>Avec <code>crisp-edges</code> :</p>
+<img class="pixels_petits contraste" alt="damier" src="https://mdn.mozillademos.org/files/2766/squares.gif"/>
+<img class="pixels_grands contraste" alt="damier" src="https://mdn.mozillademos.org/files/2766/squares.gif"/>
+<img class="chapeau_petit contraste" alt="chapeau" src="https://mdn.mozillademos.org/files/2767/hut.jpg"/>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples","100%","100%")}}</p>
+{{EmbedLiveSample("Exemples","100%","100%")}}
 
-<div class="note">
-<p><strong>Note :</strong> En pratique, les règles <code>pixelated</code> et <code>crisp-edges</code> peuvent être combinées en cas de besoin (l'une pouvant combler les éventuelles manques de l'autre et <em>vice versa</em>). Si besoin, un {{HTMLElement("canvas")}} peut fournir <a href="http://phrogz.net/tmp/canvas_image_zoom.html">une alternative pour les valeurs <code>crisp-edge</code> et <code>optimize-contrast</code></a> via la manipulation manuelle des données de l'image ou avec <code><a href="/fr/docs/Web/API/CanvasRenderingContext2D/imageSmoothingEnabled">imageSmoothingEnabled</a></code>.</p>
-</div>
+> **Note :** En pratique, les règles `pixelated` et `crisp-edges` peuvent être combinées en cas de besoin (l'une pouvant combler les éventuelles manques de l'autre et _vice versa_). Si besoin, un {{HTMLElement("canvas")}} peut fournir [une alternative pour les valeurs `crisp-edge` et `optimize-contrast`](http://phrogz.net/tmp/canvas_image_zoom.html) via la manipulation manuelle des données de l'image ou avec [`imageSmoothingEnabled`](/fr/docs/Web/API/CanvasRenderingContext2D/imageSmoothingEnabled).
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Images', '#the-image-rendering', 'image-rendering')}}</td>
-   <td>{{Spec2('CSS3 Images')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                | État                             | Commentaires         |
+| -------------------------------------------------------------------------------------------- | -------------------------------- | -------------------- |
+| {{SpecName('CSS3 Images', '#the-image-rendering', 'image-rendering')}} | {{Spec2('CSS3 Images')}} | Définition initiale. |
 
-<div class="note">
-<p><strong>Note :</strong> Cette valeur était, initialement, proche de la propriété SVG <code>image-rendering</code>. Cependant, ces valeurs ont « divergé » et sont assez différentes désormais.</p>
-</div>
+> **Note :** Cette valeur était, initialement, proche de la propriété SVG `image-rendering`. Cependant, ces valeurs ont « divergé » et sont assez différentes désormais.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.image-rendering")}}</p>
+{{Compat("css.properties.image-rendering")}}

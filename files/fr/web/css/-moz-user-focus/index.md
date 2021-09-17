@@ -8,11 +8,12 @@ tags:
   - Reference
 translation_of: Web/CSS/-moz-user-focus
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>La propriété <strong><code>-moz-user-focus</code></strong> est utilisée pour indiquer si l'élément peut recevoir le focus.</p>
+La propriété **`-moz-user-focus`** est utilisée pour indiquer si l'élément peut recevoir le focus.
 
-<pre class="brush:css">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 -moz-user-focus: normal;
 -moz-user-focus: ignore;
 
@@ -20,56 +21,53 @@ translation_of: Web/CSS/-moz-user-focus
 -moz-user-focus: inherit;
 -moz-user-focus: initial;
 -moz-user-focus: unset;
-</pre>
+```
 
-<p>En utilisant la valeur <code>ignore</code>, on peut désactiver la prise de focus sur l'élément (l'utilisateur ne pourra pas activer l'élément) et l'élément sera sauté lors de la navigation à la tabulation.</p>
+En utilisant la valeur `ignore`, on peut désactiver la prise de focus sur l'élément (l'utilisateur ne pourra pas activer l'élément) et l'élément sera sauté lors de la navigation à la tabulation.
 
-<div class="note">
-  <p><strong>Note :</strong> Cette propriété ne fonctionne pas pour les éléments XUL {{XULElem("textbox")}} car l'élément <code>textbox</code> en tant que tel ne reçoit jamais le focus. À la place, XBL crée un élément HTML {{HTMLElement("input")}} anonyme à l'intérieur du <code>textbox</code> et que l'élément reçoit le focus. On peut empêcher le <code>textbox</code> de prendre le focus clavier en passant son index de tabulation à <code>-1</code>, pour l'empêcher de prendre le focus souris, on pourra utiliser les événements <code>mousedown</code>.</p>
-</div>
+> **Note :** Cette propriété ne fonctionne pas pour les éléments XUL {{XULElem("textbox")}} car l'élément `textbox` en tant que tel ne reçoit jamais le focus. À la place, XBL crée un élément HTML {{HTMLElement("input")}} anonyme à l'intérieur du `textbox` et que l'élément reçoit le focus. On peut empêcher le `textbox` de prendre le focus clavier en passant son index de tabulation à `-1`, pour l'empêcher de prendre le focus souris, on pourra utiliser les événements `mousedown`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>ignore</code></dt>
- <dd>L'élément n'accepte pas le focus (au clavier ou au pointeur) et sera sauté lors de la navigation à la tabulation.</dd>
- <dt><code>normal</code></dt>
- <dd>L'élément peut recevoir le focus normalement.</dd>
-</dl>
+- `ignore`
+  - : L'élément n'accepte pas le focus (au clavier ou au pointeur) et sera sauté lors de la navigation à la tabulation.
+- `normal`
+  - : L'élément peut recevoir le focus normalement.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush:html">&lt;input class="ignored" value="L'utilisateur ne peut pas placer le focus sur cet élément."&gt;
-</pre>
+```html
+<input class="ignored" value="L'utilisateur ne peut pas placer le focus sur cet élément.">
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush:css">.ignored {
+```css
+.ignored {
   -moz-user-focus: ignore;
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<p>Cette propriété est une propriété propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification. Une propriété similaire : <code>user-focus</code> a été <a href="https://www.w3.org/TR/2000/WD-css3-userint-20000216">proposée pour des brouillons de l'ancienne spécifications CSS3 pour les interfaces utilisateurs</a> mais a été rejetée par le groupe de travail.</p>
+Cette propriété est une propriété propriétaire liée à Gecko/Mozilla et ne fait partie d'aucune spécification. Une propriété similaire : `user-focus` a été [proposée pour des brouillons de l'ancienne spécifications CSS3 pour les interfaces utilisateurs](https://www.w3.org/TR/2000/WD-css3-userint-20000216) mais a été rejetée par le groupe de travail.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.-moz-user-focus")}}</p>
+{{Compat("css.properties.-moz-user-focus")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref("-moz-user-input")}}</li>
- <li>{{cssxref("-moz-user-modify")}}</li>
- <li>{{cssxref("-moz-user-select")}}</li>
-</ul>
+- {{cssxref("-moz-user-input")}}
+- {{cssxref("-moz-user-modify")}}
+- {{cssxref("-moz-user-select")}}

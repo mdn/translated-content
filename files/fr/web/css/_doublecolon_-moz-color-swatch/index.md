@@ -1,58 +1,54 @@
 ---
 title: '::-moz-color-swatch'
-slug: 'Web/CSS/::-moz-color-swatch'
+slug: Web/CSS/::-moz-color-swatch
 tags:
   - CSS
   - Non-standard
   - Pseudo-element
   - Reference
-translation_of: 'Web/CSS/::-moz-color-swatch'
+translation_of: Web/CSS/::-moz-color-swatch
 ---
-<div>{{CSSRef}}{{Non-standard_header}}</div>
+{{CSSRef}}{{Non-standard_header}}
 
-<p>Le <a href="/fr/docs/Web/CSS/Pseudo-elements">pseudo-élément</a> <strong><code>::-moz-color-swatch</code></strong> est <a href="/fr/docs/Web/CSS/Extensions_Mozilla">un pseudo-élément spécifique à Mozilla</a> qui représente la couleur sélectionnée d'un élément {{HTMLElement("input")}} avec <code>type="color"</code>.</p>
+Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) **`::-moz-color-swatch`** est [un pseudo-élément spécifique à Mozilla](/fr/docs/Web/CSS/Extensions_Mozilla) qui représente la couleur sélectionnée d'un élément {{HTMLElement("input")}} avec `type="color"`.
 
-<div class="note">
-<p><strong>Note :</strong> Utiliser <code>::-moz-color-swatch</code> sur tout autre élément qu'un  <code>&lt;input type="color"&gt;</code> n'aura aucun effet.</p>
-</div>
+> **Note :** Utiliser `::-moz-color-swatch` sur tout autre élément qu'un  `<input type="color">` n'aura aucun effet.
 
-<h2 id="Syntax">Syntax</h2>
+## Syntax
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;input type="color" value="#de2020"/&gt;
-</pre>
+```html
+<input type="color" value="#de2020"/>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">input[type=color]::-moz-color-swatch {
+```css
+input[type=color]::-moz-color-swatch {
   border-radius: 10px;
   border-style: none;
 }
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", 300, 50)}}</p>
+{{EmbedLiveSample("Exemples", 300, 50)}}
 
-<h2 id="Specifications">Specifications</h2>
+## Specifications
 
-<p>Ce pseudo-élément est spécifique à Gecko et ne fait partie d'aucune spécification.</p>
+Ce pseudo-élément est spécifique à Gecko et ne fait partie d'aucune spécification.
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.-moz-color-swatch")}}</p>
+{{Compat("css.selectors.-moz-color-swatch")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Les pseudo-éléments semblables utilisés par les autres navigateurs :
-  <ul>
-   <li>{{cssxref("::-webkit-color-swatch")}} pris en charge par WebKit et Blink (utilisés par Safari, Chrome et Opera)</li>
-  </ul>
- </li>
-</ul>
+- Les pseudo-éléments semblables utilisés par les autres navigateurs :
+
+  - {{cssxref("::-webkit-color-swatch")}} pris en charge par WebKit et Blink (utilisés par Safari, Chrome et Opera)

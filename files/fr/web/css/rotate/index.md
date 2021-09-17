@@ -7,13 +7,14 @@ tags:
   - Reference
 translation_of: Web/CSS/rotate
 ---
-<div>{{CSSRef}}{{seecompattable}}</div>
+{{CSSRef}}{{seecompattable}}
 
-<p>La propriété <strong><code>rotate</code></strong> permet d'indiquer des rotations individuellement et indépendamment de la propriété {{cssxref("transform")}}. Cela peut être utile pour la construction d'une interface utilisateur et évite d'avoir à se souvenir de l'ordre exact des fonctions de transformations à indiquer pour <code>transform</code>.</p>
+La propriété **`rotate`** permet d'indiquer des rotations individuellement et indépendamment de la propriété {{cssxref("transform")}}. Cela peut être utile pour la construction d'une interface utilisateur et évite d'avoir à se souvenir de l'ordre exact des fonctions de transformations à indiquer pour `transform`.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 rotate: none;
 
 /* Valeur angulaire */
@@ -27,36 +28,38 @@ rotate: y 0.25turn;
 rotate: z 1.57rad;
 
 /* Un vector et l'angle associé */
-rotate: 1 1 1 90deg;</pre>
+rotate: 1 1 1 90deg;
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt>Valeur angulaire</dt>
- <dd>Une valeur {{cssxref("&lt;angle&gt;")}} qui indique l'angle à utiliser, autour de l'axe Z, pour tourner les éléments. Cela est équivalent à la fonction <code>rotate()</code>.</dd>
- <dt>Le nom de l'axe et l'angle associé</dt>
- <dd>Le nom de l'axe par rapport auquel on souhaite effectuer la rotation (<code>"x"</code>, "<code>y</code>" ou "<code>z"</code>), puis une valeur {{cssxref("&lt;angle&gt;")}} qui indique l'angle à appliquer pour la rotation. Cela est équivalent à l'une des fonctions <code>rotateX()</code>/<code>rotateY()</code>/<code>rotateZ()</code>.</dd>
- <dt>Un vecteur et l'angle associé</dt>
- <dd>Trois nombres (valeurs {{cssxref("&lt;number&gt;")}}) qui représentent une vecteur centré sur l'origine qui définit la ligne autour de laquelle on souhaite faire tourner l'élément puis une valeur {{cssxref("&lt;angle&gt;")}} qui indique l'angle de rotation. Cela est équivalent à la fonction <code>rotate3d()</code>.</dd>
- <dt><code>none</code></dt>
- <dd>Cette valeur indique qu'aucune rotation ne devrait être appliquée.</dd>
-</dl>
+- Valeur angulaire
+  - : Une valeur {{cssxref("&lt;angle&gt;")}} qui indique l'angle à utiliser, autour de l'axe Z, pour tourner les éléments. Cela est équivalent à la fonction `rotate()`.
+- Le nom de l'axe et l'angle associé
+  - : Le nom de l'axe par rapport auquel on souhaite effectuer la rotation (`"x"`, "`y`" ou "`z"`), puis une valeur {{cssxref("&lt;angle&gt;")}} qui indique l'angle à appliquer pour la rotation. Cela est équivalent à l'une des fonctions `rotateX()`/`rotateY()`/`rotateZ()`.
+- Un vecteur et l'angle associé
+  - : Trois nombres (valeurs {{cssxref("&lt;number&gt;")}}) qui représentent une vecteur centré sur l'origine qui définit la ligne autour de laquelle on souhaite faire tourner l'élément puis une valeur {{cssxref("&lt;angle&gt;")}} qui indique l'angle de rotation. Cela est équivalent à la fonction `rotate3d()`.
+- `none`
+  - : Cette valeur indique qu'aucune rotation ne devrait être appliquée.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="rotate"&gt;Rotation&lt;/p&gt;
-&lt;/div&gt;</pre>
+```html
+<div>
+  <p class="rotate">Rotation</p>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">* {
+```css
+* {
   box-sizing: border-box;
 }
 
@@ -84,41 +87,27 @@ p {
 
 div:hover .rotate {
   rotate: 1 -0.5 1 180deg;
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample('Exemples')}}</p>
+{{EmbedLiveSample('Exemples')}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS Transforms 2', '#individual-transforms', 'individual transforms')}}</td>
-   <td>{{Spec2('CSS Transforms 2')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                                     | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | -------------------- |
+| {{SpecName('CSS Transforms 2', '#individual-transforms', 'individual transforms')}} | {{Spec2('CSS Transforms 2')}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.rotate")}}</p>
+{{Compat("css.properties.rotate")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{cssxref('translate')}}</li>
- <li>{{cssxref('scale')}}</li>
- <li>{{cssxref('transform')}}</li>
-</ul>
+- {{cssxref('translate')}}
+- {{cssxref('scale')}}
+- {{cssxref('transform')}}

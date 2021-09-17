@@ -9,71 +9,72 @@ tags:
 translation_of: Web/CSS/Attribute_selectors
 original_slug: Web/CSS/Sélecteurs_d_attribut
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Les sélecteurs d'attribut permettent de cibler un élément selon la présence d'un attribut ou selon la valeur donnée d'un attribut.</p>
+Les sélecteurs d'attribut permettent de cibler un élément selon la présence d'un attribut ou selon la valeur donnée d'un attribut.
 
-<pre class="brush: css no-line-numbers">/* Les éléments &lt;a&gt; avec un attribut title */
+```css
+/* Les éléments <a> avec un attribut title */
 a[title] {
   color: purple;
 }
 
-/* Les éléments &lt;a&gt; avec un href qui correspond */
+/* Les éléments <a> avec un href qui correspond */
 /* à "https://example.org" */
 a[href="https://example.org"] {
   color: green;
 }
 
-/* Les éléments &lt;a&gt; dont href contient "example" */
+/* Les éléments <a> dont href contient "example" */
 a[href*="example"] {
   font-size: 2em;
 }
 
-/* Les éléments &lt;a&gt; dont href finit par ".org" */
+/* Les éléments <a> dont href finit par ".org" */
 a[href$=".org"] {
   font-style: italic;
 }
 
-/* Les éléments &lt;a&gt; dont l'attribut class contient le mot logo */
+/* Les éléments <a> dont l'attribut class contient le mot logo */
 /* comportement identique à a.logo */
 a[class~="logo"] {
   padding: 2px;
-}</pre>
+}
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<dl>
- <dt><code>[<em>attr</em>]</code></dt>
- <dd>Permet de cibler un élément qui possède un attribut <code>attr</code>.</dd>
- <dt><code>[<em>attr</em>=<em>valeur</em>]</code></dt>
- <dd>Permet de cibler un élément qui possède un attribut <code>attr</code> dont la valeur est exactement <code>valeur</code>.</dd>
- <dt><code>[<em>attr</em>~=<em>valeur</em>]</code></dt>
- <dd>Permet de cibler un élément qui possède un attribut <code>attr</code> dont la valeur est <code>valeur</code>. Cette forme permet de fournir une liste de valeurs, séparées par des blancs, à tester. Si au moins une de ces valeurs est égale à celle de l'attribut, l'élément sera ciblé.</dd>
- <dt><code>[<em>attr</em>|=<em>valeur</em>]</code></dt>
- <dd>Permet de cibler un élément qui possède un attribut <code>attr</code> dont la valeur est exactement <code>valeur</code> ou dont la valeur commence par <code>valeur</code> suivi immédiatement d'un tiret (U+002D). Cela peut notamment être utilisé pour effectuer des correspondances avec des codes de langues.</dd>
- <dt><code>[<em>attr</em>^=<em>valeur</em>]</code></dt>
- <dd>Permet de cibler un élément qui possède un attribut <code>attr</code> dont la valeur commence par <code>valeur</code>.</dd>
- <dt><code>[<em>attr</em>$=<em>valeur</em>]</code></dt>
- <dd>Permet de cibler un élément qui possède un attribut <code>attr</code> dont la valeur se termine par <code>valeur</code>.</dd>
- <dt><code>[<em>attr</em>*=<em>valeur</em>]</code></dt>
- <dd>Permet de cibler un élément qui possède un attribut <code>attr</code> et dont la valeur contient au moins une occurrence de <code>valeur</code> dans la chaîne de caractères.</dd>
- <dt><code>[<em>attr</em> <em>operateur</em> <em>valeur</em> i]</code></dt>
- <dd>On peut ajouter un <code>i</code> (ou <code>I</code>) avant le crochet de fin. Dans ce cas, la casse ne sera pas prise en compte (pour les caractères contenus sur l'intervalle ASCII).</dd>
- <dt><code>[attr operateur valeur s]</code> {{experimental_inline}}</dt>
- <dd>Ajouter un <code>s</code> (ou <code>S</code>) avant le crochet fermant permettra d'effectuer une comparaison de valeur sensible à la casse (pour les caractères ASCII).</dd>
-</dl>
+- `[attr]`
+  - : Permet de cibler un élément qui possède un attribut `attr`.
+- `[attr=valeur]`
+  - : Permet de cibler un élément qui possède un attribut `attr` dont la valeur est exactement `valeur`.
+- `[attr~=valeur]`
+  - : Permet de cibler un élément qui possède un attribut `attr` dont la valeur est `valeur`. Cette forme permet de fournir une liste de valeurs, séparées par des blancs, à tester. Si au moins une de ces valeurs est égale à celle de l'attribut, l'élément sera ciblé.
+- `[attr|=valeur]`
+  - : Permet de cibler un élément qui possède un attribut `attr` dont la valeur est exactement `valeur` ou dont la valeur commence par `valeur` suivi immédiatement d'un tiret (U+002D). Cela peut notamment être utilisé pour effectuer des correspondances avec des codes de langues.
+- `[attr^=valeur]`
+  - : Permet de cibler un élément qui possède un attribut `attr` dont la valeur commence par `valeur`.
+- `[attr$=valeur]`
+  - : Permet de cibler un élément qui possède un attribut `attr` dont la valeur se termine par `valeur`.
+- `[attr*=valeur]`
+  - : Permet de cibler un élément qui possède un attribut `attr` et dont la valeur contient au moins une occurrence de `valeur` dans la chaîne de caractères.
+- `[attr operateur valeur i]`
+  - : On peut ajouter un `i` (ou `I`) avant le crochet de fin. Dans ce cas, la casse ne sera pas prise en compte (pour les caractères contenus sur l'intervalle ASCII).
+- `[attr operateur valeur s]` {{experimental_inline}}
+  - : Ajouter un `s` (ou `S`) avant le crochet fermant permettra d'effectuer une comparaison de valeur sensible à la casse (pour les caractères ASCII).
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{CSSSyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Liens">Liens</h3>
+### Liens
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">a {
+```css
+a {
   color: blue;
 }
 
@@ -102,26 +103,30 @@ a[href*="cAsE" s] {
 /* Liens qui finissent ".org" */
 a[href$=".org"] {
   color: red;
-}</pre>
+}
+```
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;&lt;a href="#internal"&gt;Lien interne&lt;a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="http://example.com"&gt;Lien d'exemple&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="#InSensitive"&gt;Lien interne insensible à la casse&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="http://example.org"&gt;Lien vers example.org&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul>
+  <li><a href="#internal">Lien interne<a></li>
+  <li><a href="http://example.com">Lien d'exemple</a></li>
+  <li><a href="#InSensitive">Lien interne insensible à la casse</a></li>
+  <li><a href="http://example.org">Lien vers example.org</a></li>
+</ul>
+```
 
-<h4 id="Résultat">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Liens")}}</p>
+{{EmbedLiveSample("Liens")}}
 
-<h3 id="Langues">Langues</h3>
+### Langues
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">/* Tous les éléments divs avec un attribut `lang` seront en gras. */
+```css
+/* Tous les éléments divs avec un attribut `lang` seront en gras. */
 div[lang] {
   font-weight: bold;
 }
@@ -149,30 +154,32 @@ div[lang|="zh"] {
 div[data-lang="zh-TW"] {
   color: purple;
 }
-</pre>
+```
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div lang="en-us en-gb en-au en-nz"&gt;Hello World!&lt;/div&gt;
-&lt;div lang="pt"&gt;Olá Mundo!&lt;/div&gt;
-&lt;div lang="zh-CN"&gt;世界您好！&lt;/div&gt;
-&lt;div lang="zh-TW"&gt;世界您好！&lt;/div&gt;
-&lt;div data-lang="zh-TW"&gt;世界您好！&lt;/div&gt;
-</pre>
+```html
+<div lang="en-us en-gb en-au en-nz">Hello World!</div>
+<div lang="pt">Olá Mundo!</div>
+<div lang="zh-CN">世界您好！</div>
+<div lang="zh-TW">世界您好！</div>
+<div data-lang="zh-TW">世界您好！</div>
+```
 
-<h4 id="Résultat_2">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Langues")}}</p>
+{{EmbedLiveSample("Langues")}}
 
-<h3 id="Listes_ordonnées">Listes ordonnées</h3>
+### Listes ordonnées
 
-<p>{{SeeCompatTable}}</p>
+{{SeeCompatTable}}
 
-<p>La spécification HTML indique que l'attribut {{htmlattrxref("type", "input")}} doit être testé sans sensibilité à la casse car il est généralement utilisé avec l'élément {{HTMLElement("input")}}. Si on souhaite utiliser un sélecteur d'attribut avec {{htmlattrxref("type", "ol")}} d'une liste ordonnée ({{HTMLElement("ol")}}), cela ne fonctionnera pas sans le modificateur de sensibilité à la casse.</p>
+La spécification HTML indique que l'attribut {{htmlattrxref("type", "input")}} doit être testé sans sensibilité à la casse car il est généralement utilisé avec l'élément {{HTMLElement("input")}}. Si on souhaite utiliser un sélecteur d'attribut avec {{htmlattrxref("type", "ol")}} d'une liste ordonnée ({{HTMLElement("ol")}}), cela ne fonctionnera pas sans le modificateur de sensibilité à la casse.
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css">/* Les types de liste devront être utilisé avec le
+```css
+/* Les types de liste devront être utilisé avec le
    marqueur pour la casse vu les spécifications HTML */
 ol[type="a"] {
   list-style-type: lower-alpha;
@@ -187,56 +194,36 @@ ol[type="a" s] {
 ol[type="A" s] {
   list-style-type: upper-alpha;
   background: lime;
-}</pre>
+}
+```
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html;">&lt;ol type="A"&gt;
-  &lt;li&gt;Liste d'exemple&lt;/li&gt;
-&lt;/ol&gt;</pre>
+```html
+<ol type="A">
+  <li>Liste d'exemple</li>
+</ol>
+```
 
-<h4 id="Résultat_3">Résultat</h4>
+#### Résultat
 
-<p>{{EmbedLiveSample("Listes_ordonnées")}}</p>
+{{EmbedLiveSample("Listes_ordonnées")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Selectors', '#attribute-selectors', 'attribute selectors')}}</td>
-   <td>{{Spec2('CSS4 Selectors')}}</td>
-   <td>Ajout du modification pour la sélection des valeurs d'attribut ASCII insensible à la casse.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Selectors', '#attribute-selectors', 'attribute selectors')}}</td>
-   <td>{{Spec2('CSS3 Selectors')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'selector.html#attribute-selectors', 'attribute selectors')}}</td>
-   <td>{{Spec2('CSS2.1')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                | État                                 | Commentaires                                                                                |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------------------------------------- |
+| {{SpecName('CSS4 Selectors', '#attribute-selectors', 'attribute selectors')}}     | {{Spec2('CSS4 Selectors')}} | Ajout du modification pour la sélection des valeurs d'attribut ASCII insensible à la casse. |
+| {{SpecName('CSS3 Selectors', '#attribute-selectors', 'attribute selectors')}}     | {{Spec2('CSS3 Selectors')}} |                                                                                             |
+| {{SpecName('CSS2.1', 'selector.html#attribute-selectors', 'attribute selectors')}} | {{Spec2('CSS2.1')}}             | Définition initiale.                                                                        |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.selectors.attribute")}}</p>
+{{Compat("css.selectors.attribute")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{CSSxRef("attr")}}</li>
- <li>Sélectionner un élément : {{domxref("Document.querySelector()")}}, {{domxref("DocumentFragment.querySelector()")}} ou {{domxref("Element.querySelector()")}}</li>
- <li>Sélectionner l'ensemble des éléments correspondants : {{domxref("Document.querySelectorAll()")}}, {{domxref("DocumentFragment.querySelectorAll()")}} ou {{domxref("Element.querySelectorAll()")}}</li>
- <li>Ces méthodes sont implémentées sur le <em>mixin</em> {{domxref("ParentNode")}}, voir {{domxref("ParentNode.querySelector()")}} et {{domxref("ParentNode.querySelectorAll()")}}</li>
-</ul>
+- {{CSSxRef("attr")}}
+- Sélectionner un élément : {{domxref("Document.querySelector()")}}, {{domxref("DocumentFragment.querySelector()")}} ou {{domxref("Element.querySelector()")}}
+- Sélectionner l'ensemble des éléments correspondants : {{domxref("Document.querySelectorAll()")}}, {{domxref("DocumentFragment.querySelectorAll()")}} ou {{domxref("Element.querySelectorAll()")}}
+- Ces méthodes sont implémentées sur le _mixin_ {{domxref("ParentNode")}}, voir {{domxref("ParentNode.querySelector()")}} et {{domxref("ParentNode.querySelectorAll()")}}

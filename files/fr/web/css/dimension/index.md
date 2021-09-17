@@ -7,68 +7,45 @@ tags:
   - Type
 translation_of: Web/CSS/dimension
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Le type de donnée <strong><code>&lt;dimension&gt;</code></strong> représente une valeur de type {{CSSxRef("&lt;number&gt;")}} directement suivie d'une unité : par exemple <code>10px</code>.</p>
+Le type de donnée **`<dimension>`** représente une valeur de type {{CSSxRef("&lt;number&gt;")}} directement suivie d'une unité : par exemple `10px`.
 
-<p>CSS utilise des dimensions pour définir des distances (type {{CSSxRef("&lt;length&gt;")}}), des durées (type {{CSSxRef("&lt;time&gt;")}}), des fréquences (type {{CSSxRef("&lt;frequency&gt;")}}), des résolutions (type {{CSSxRef("&lt;resolution&gt;")}}) ainsi que d'autres quantités.</p>
+CSS utilise des dimensions pour définir des distances (type {{CSSxRef("&lt;length&gt;")}}), des durées (type {{CSSxRef("&lt;time&gt;")}}), des fréquences (type {{CSSxRef("&lt;frequency&gt;")}}), des résolutions (type {{CSSxRef("&lt;resolution&gt;")}}) ainsi que d'autres quantités.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>La syntaxe d'une valeur de type <code>&lt;dimension&gt;</code> est un nombre (valeur de type {{CSSxRef("&lt;number&gt;")}}) immédiatement suivi d'une unité représentée par son identifiant. Les identifiants utilisés pour les unités sont insensibles à la casse.</p>
+La syntaxe d'une valeur de type `<dimension>` est un nombre (valeur de type {{CSSxRef("&lt;number&gt;")}}) immédiatement suivi d'une unité représentée par son identifiant. Les identifiants utilisés pour les unités sont insensibles à la casse.
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="Dimensions_valides">Dimensions valides</h3>
+### Dimensions valides
 
-<pre class="brush:css example-good">12px      12 pixels
+```css example-good
+12px      12 pixels
 1rem      1 rem
 1.2pt     1.2 points
 2200ms    2200 millisecondes
 200hz     200 Hertz
 200Hz     200 Hertz (les unités sont insensibles à la casse)
-</pre>
+```
 
-<h3 id="Dimensions_invalides">Dimensions invalides</h3>
+### Dimensions invalides
 
-<pre class="brush:css example-bad">12 px       L'unité doit immédiatement être indiquée après le nombre
+```css example-bad
+12 px       L'unité doit immédiatement être indiquée après le nombre
 12"px"      Les unités sont des identifiants et ne doivent pas être entourées de quotes
-</pre>
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Values", "#dimensions", "&lt;dimension&gt;")}}</td>
-   <td>{{Spec2("CSS4 Values")}}</td>
-   <td>Adds <code>cap</code>, <code>ic</code>, <code>lh</code>, <code>rlh</code>, <code>vi</code>, <code>vb</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS3 Values", "#dimensions", "&lt;dimension&gt;")}}</td>
-   <td>{{Spec2("CSS3 Values")}}</td>
-   <td>Adds <code>ch</code>, <code>rem</code>, <code>vw</code>, <code>vw</code>, <code>vmin</code>,<code> vmax</code>, <code>Q</code></td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1", "syndata.html#numbers", "&lt;dimension&gt;")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td>Defined under Numbers and Length</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS1", "", "&lt;dimension&gt;")}}</td>
-   <td>{{Spec2("CSS1")}}</td>
-   <td>Initial definition under "length units"</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                            | État                             | Commentaires                                      |
+| ---------------------------------------------------------------------------------------- | -------------------------------- | ------------------------------------------------- |
+| {{SpecName("CSS4 Values", "#dimensions", "&lt;dimension&gt;")}}     | {{Spec2("CSS4 Values")}} | Adds `cap`, `ic`, `lh`, `rlh`, `vi`, `vb`         |
+| {{SpecName("CSS3 Values", "#dimensions", "&lt;dimension&gt;")}}     | {{Spec2("CSS3 Values")}} | Adds `ch`, `rem`, `vw`, `vw`, `vmin`,` vmax`, `Q` |
+| {{SpecName("CSS2.1", "syndata.html#numbers", "&lt;dimension&gt;")}} | {{Spec2("CSS2.1")}}         | Defined under Numbers and Length                  |
+| {{SpecName("CSS1", "", "&lt;dimension&gt;")}}                             | {{Spec2("CSS1")}}         | Initial definition under "length units"           |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.types.dimension")}}</p>
+{{Compat("css.types.dimension")}}

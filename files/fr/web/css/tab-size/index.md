@@ -8,17 +8,18 @@ tags:
   - Reference
 translation_of: Web/CSS/tab-size
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propriété<strong> <code>tab-size</code></strong> permet d'adapter la largeur utilisée pour représenter le caractère de tabulation (<code>U+0009</code>).</p>
+La propriété** `tab-size`** permet d'adapter la largeur utilisée pour représenter le caractère de tabulation (`U+0009`).
 
-<pre class="brush:css no-line-numbers">/* Valeurs entières */
-/* Type &lt;integer&gt;   */
+```css
+/* Valeurs entières */
+/* Type <integer>   */
 tab-size: 4;
 tab-size: 0;
 
 /* Valeurs de longueurs */
-/* Type &lt;length&gt;        */
+/* Type <length>        */
 tab-size: 10px;
 tab-size: 2em;
 
@@ -26,71 +27,57 @@ tab-size: 2em;
 tab-size: inherit;
 tab-size: initial;
 tab-size: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt>{{cssxref("&lt;integer&gt;")}}</dt>
- <dd>Le nombre d'espaces qu'occupe une tabulation. La valeur doit être positive.</dd>
- <dt>{{cssxref("&lt;length&gt;")}}</dt>
- <dd>La largeur de la tabulation. La valeur doit être positive.</dd>
-</dl>
+- {{cssxref("&lt;integer&gt;")}}
+  - : Le nombre d'espaces qu'occupe une tabulation. La valeur doit être positive.
+- {{cssxref("&lt;length&gt;")}}
+  - : La largeur de la tabulation. La valeur doit être positive.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;pre class="exemple"&gt;
+```html
+<pre class="exemple">
 	print "tabulation avant"
     print "4 espaces avant"
   print "2 espaces avant"
-&lt;/pre&gt;</pre>
+</pre>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.exemple {
+```css
+.exemple {
   tab-size: 5;
 }
-</pre>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples","100%","100%")}}</p>
+{{EmbedLiveSample("Exemples","100%","100%")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS3 Text', '#tab-size-property', 'tab-size')}}</td>
-   <td>{{Spec2('CSS3 Text')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                    | État                         | Commentaires         |
+| -------------------------------------------------------------------------------- | ---------------------------- | -------------------- |
+| {{SpecName('CSS3 Text', '#tab-size-property', 'tab-size')}} | {{Spec2('CSS3 Text')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.tab-size")}}</p>
+{{Compat("css.properties.tab-size")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li><a href="http://lists.w3.org/Archives/Public/www-style/2008Dec/0009.html">Contrôler la taille du caractère de tabulation (U+0009)</a>, un e-mail d'Anne van Kesteren pour le CSSWG afin de proposer la standardisation de cette propriété (en anglais).</li>
-</ul>
+- [Contrôler la taille du caractère de tabulation (U+0009)](http://lists.w3.org/Archives/Public/www-style/2008Dec/0009.html), un e-mail d'Anne van Kesteren pour le CSSWG afin de proposer la standardisation de cette propriété (en anglais).

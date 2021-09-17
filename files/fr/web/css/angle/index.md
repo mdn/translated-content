@@ -7,88 +7,84 @@ tags:
   - Type
 translation_of: Web/CSS/angle
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Le type de données CSS <strong><code>&lt;angle&gt;</code></strong> permet de représenter des angles exprimés en degrés, radians, grades ou tours. Les angles positifs sont des angles allant dans le sens horaire et les valeurs négatives sont des angles allant dans le sens anti-horaire. Les angles sont par exemples utilisés pour les transformations CSS ({{cssxref("transform")}}) ou les dégradés ({{cssxref("&lt;gradient&gt;")}}).</p>
+Le type de données CSS **`<angle>`** permet de représenter des angles exprimés en degrés, radians, grades ou tours. Les angles positifs sont des angles allant dans le sens horaire et les valeurs négatives sont des angles allant dans le sens anti-horaire. Les angles sont par exemples utilisés pour les transformations CSS ({{cssxref("transform")}}) ou les dégradés ({{cssxref("&lt;gradient&gt;")}}).
 
-<div>{{EmbedInteractiveExample("pages/css/type-angle.html")}}</div>
+{{EmbedInteractiveExample("pages/css/type-angle.html")}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Pour exprimer une valeur de ce type, on utilisera une valeur de type {{cssxref("&lt;number&gt;")}} (un nombre), immédiatement suivie d'une unité <code>deg</code>, <code>grad</code>, <code>rad</code> ou <code>turn</code>. Comme pour les autres dimensions présentes en CSS, il n'y a pas d'espace entre le littéral réservé à l'unité et le nombre qui indique la mesure de l'angle. L'unité est facultative pour la valeur <code>0</code> (bien qu'il soit recommandé d'écrire une unité pour des raisons de lisibilité et de cohérence). Il est possible d'utiliser un signe <code>+</code> ou <code>-</code> en préfixe.</p>
+Pour exprimer une valeur de ce type, on utilisera une valeur de type {{cssxref("&lt;number&gt;")}} (un nombre), immédiatement suivie d'une unité `deg`, `grad`, `rad` ou `turn`. Comme pour les autres dimensions présentes en CSS, il n'y a pas d'espace entre le littéral réservé à l'unité et le nombre qui indique la mesure de l'angle. L'unité est facultative pour la valeur `0` (bien qu'il soit recommandé d'écrire une unité pour des raisons de lisibilité et de cohérence). Il est possible d'utiliser un signe `+` ou `-` en préfixe.
 
-<p>Pour les propriétés statiques et pour une unité donnée, un même angle pourra être représenté par plusieurs valeurs, ainsi <code>90deg</code>, <code>-270deg</code>, <code>1turn</code> et <code>4turn</code> représentent le même angle. En revanche, pour les propriétés dynamiques (par exemple {{cssxref("transition")}} sur {{cssxref("transform")}}), l'effet obtenu sera différent.</p>
+Pour les propriétés statiques et pour une unité donnée, un même angle pourra être représenté par plusieurs valeurs, ainsi `90deg`, `-270deg`, `1turn` et `4turn` représentent le même angle. En revanche, pour les propriétés dynamiques (par exemple {{cssxref("transition")}} sur {{cssxref("transform")}}), l'effet obtenu sera différent.
 
-<h3 id="Unités">Unités</h3>
+### Unités
 
-<p>Pour représenter une valeur dans le type <code>&lt;angle&gt;</code>, on pourra utiliser les unités suivantes :</p>
+Pour représenter une valeur dans le type `<angle>`, on pourra utiliser les unités suivantes :
 
-<dl>
- <dt><code>deg</code></dt>
- <dd>Cette unité permet de représenter un angle exprimé en <a href="https://fr.wikipedia.org/wiki/Degr%C3%A9_(angle)">degrés</a>. Un cercle complet correspondra à <code>360deg</code>. Voici des valeurs pour l'exemple : <code>0deg</code>, <code>90deg</code>,<code> 360deg</code>.</dd>
- <dt><code>grad</code></dt>
- <dd>Cette unité permet de représenter un angle exprimé en <a href="https://fr.wikipedia.org/wiki/Grade_(angle)">grades</a>. Un cercle complet correspondra à <code>400grad</code>. Voici des valeurs pour l'exemple : <code>0grad</code>, <code>100grad</code>,<code> 400grad</code>.</dd>
- <dt><code>rad</code></dt>
- <dd>Cette unité permet de représenter un angle exprimé en <a href="https://fr.wikipedia.org/wiki/Radian">radians</a>. Un cercle complet correspondra à 2π radians (soit environ <code>6.2832rad</code>). Un radian correspond à 180/π degrés. Voici des valeurs pour l'exemple : <code>0rad</code>, <code>1.0708rad</code>,<code> 6.2832rad</code>.</dd>
- <dt><code>turn</code></dt>
- <dd>Cette unité représente le nombre de tours qu'effectue l'angle. Un cercle complet correspondra à <code>1turn</code>. Voici des valeurs pour l'exemple : <code>0turn</code>, <code>0.25turn</code>,<code> 1turn</code>.</dd>
-</dl>
+- `deg`
+  - : Cette unité permet de représenter un angle exprimé en [degrés](<https://fr.wikipedia.org/wiki/Degr%C3%A9_(angle)>). Un cercle complet correspondra à `360deg`. Voici des valeurs pour l'exemple : `0deg`, `90deg`,` 360deg`.
+- `grad`
+  - : Cette unité permet de représenter un angle exprimé en [grades](<https://fr.wikipedia.org/wiki/Grade_(angle)>). Un cercle complet correspondra à `400grad`. Voici des valeurs pour l'exemple : `0grad`, `100grad`,` 400grad`.
+- `rad`
+  - : Cette unité permet de représenter un angle exprimé en [radians](https://fr.wikipedia.org/wiki/Radian). Un cercle complet correspondra à 2π radians (soit environ `6.2832rad`). Un radian correspond à 180/π degrés. Voici des valeurs pour l'exemple : `0rad`, `1.0708rad`,` 6.2832rad`.
+- `turn`
+  - : Cette unité représente le nombre de tours qu'effectue l'angle. Un cercle complet correspondra à `1turn`. Voici des valeurs pour l'exemple : `0turn`, `0.25turn`,` 1turn`.
 
-<p>Même si toutes les unités exprimeront une valeur nulle identique, l'unité <strong>doit</strong><strong> être indiquée</strong> afin de lever l'ambiguïté entre un angle et une valeur de longueur (type {{cssxref("&lt;length&gt;")}}).</p>
+Même si toutes les unités exprimeront une valeur nulle identique, l'unité **doit** **être indiquée** afin de lever l'ambiguïté entre un angle et une valeur de longueur (type {{cssxref("&lt;length&gt;")}}).
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
 <table>
- <tbody>
-  <tr>
-   <td><img src="angle90.png"></td>
-   <td>
-    <p>Un angle droit orienté dans le sens horaire : <code>90deg = 100grad = 0.25turn ≈ 1.5708rad</code></p>
-   </td>
-  </tr>
-  <tr>
-   <td><img src="angle180.png"></td>
-   <td>Un angle plat orienté dans le sens horaire : <code>180deg = 200grad = 0.5turn ≈ 3.1416rad</code></td>
-  </tr>
-  <tr>
-   <td><img src="angleminus90.png"></td>
-   <td>Un angle droit orienté dans le sens anti-horaire : <code>-90deg = -100grad = -0.25turn ≈ -1.5708rad</code></td>
-  </tr>
-  <tr>
-   <td><img src="angle0.png"></td>
-   <td>
-    <p>Un angle nul : <code>0 = 0deg = 0grad = 0turn = 0rad</code></p>
-
-    <div class="note"><p><strong>Note :</strong>Si, dans l'absolu, on peut exprimer la valeur nulle sans unité, il est fortement recommandé d'indiquer l'unité afin de lever toute ambiguïté possible entre les angles et les longueurs.</p></div>
-   </td>
-  </tr>
- </tbody>
+  <tbody>
+    <tr>
+      <td><img src="angle90.png" /></td>
+      <td>
+        <p>
+          Un angle droit orienté dans le sens horaire :
+          <code>90deg = 100grad = 0.25turn ≈ 1.5708rad</code>
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td><img src="angle180.png" /></td>
+      <td>
+        Un angle plat orienté dans le sens horaire :
+        <code>180deg = 200grad = 0.5turn ≈ 3.1416rad</code>
+      </td>
+    </tr>
+    <tr>
+      <td><img src="angleminus90.png" /></td>
+      <td>
+        Un angle droit orienté dans le sens anti-horaire :
+        <code>-90deg = -100grad = -0.25turn ≈ -1.5708rad</code>
+      </td>
+    </tr>
+    <tr>
+      <td><img src="angle0.png" /></td>
+      <td>
+        <p>Un angle nul : <code>0 = 0deg = 0grad = 0turn = 0rad</code></p>
+        <div class="note">
+          <p>
+            <strong>Note :</strong>Si, dans l'absolu, on peut exprimer la valeur
+            nulle sans unité, il est fortement recommandé d'indiquer l'unité
+            afin de lever toute ambiguïté possible entre les angles et les
+            longueurs.
+          </p>
+        </div>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Values', '#angles', '&lt;angle&gt;')}}</td>
-   <td>{{Spec2('CSS4 Values')}}</td>
-   <td> </td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Values', '#angles', '&lt;angle&gt;')}}</td>
-   <td>{{Spec2('CSS3 Values')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                            | État                             | Commentaires         |
+| ------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName('CSS4 Values', '#angles', '&lt;angle&gt;')}} | {{Spec2('CSS4 Values')}} |                      |
+| {{SpecName('CSS3 Values', '#angles', '&lt;angle&gt;')}} | {{Spec2('CSS3 Values')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.types.angle")}}</p>
+{{Compat("css.types.angle")}}

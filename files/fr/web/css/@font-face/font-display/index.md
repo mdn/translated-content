@@ -8,83 +8,70 @@ tags:
   - Reference
 translation_of: Web/CSS/@font-face/font-display
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>La propriété <strong><code>font-display</code></strong> détermine la façon dont une fonte est affichée selon qu'elle ait été chargée et prête à être utilisée.</p>
+La propriété **`font-display`** détermine la façon dont une fonte est affichée selon qu'elle ait été chargée et prête à être utilisée.
 
-<h2 id="Le_déroulement_de_l'affichage_d'une_police">Le déroulement de l'affichage d'une police</h2>
+## Le déroulement de l'affichage d'une police
 
-<p>La gestion d'une fonte de caractères s'effectue selon trois périodes distinctes dont la première commence lorsque l'agent utilisateur tente de télécharger une fonte.</p>
+La gestion d'une fonte de caractères s'effectue selon trois périodes distinctes dont la première commence lorsque l'agent utilisateur tente de télécharger une fonte.
 
-<dl>
- <dt>Période 1 : Blocage des fontes</dt>
- <dd>Si la fonte n'est pas chargée, tout élément utilisant cette fonte doit être rendu avec une fonte alternative invisible. Si la fonte est chargée correctement pendant cette période, elle est utilisée normalement.</dd>
- <dt>Période 2 : Échange des fontes</dt>
- <dd>Si la fonte n'est pas chargée, tout élément utilisant cette fonte doit utiliser une fonte alternative visible. Si la fonte est chargée correctement pendant cette période, elle est utilisée normalement.</dd>
- <dt>Période 3 : Échec du chargement des fontes</dt>
- <dd>Si la fonte n'est pas chargée, l'agent utilisateur considère qu'il y a eu un échec du chargement et utilise la fonte alternative disponible.</dd>
-</dl>
+- Période 1 : Blocage des fontes
+  - : Si la fonte n'est pas chargée, tout élément utilisant cette fonte doit être rendu avec une fonte alternative invisible. Si la fonte est chargée correctement pendant cette période, elle est utilisée normalement.
+- Période 2 : Échange des fontes
+  - : Si la fonte n'est pas chargée, tout élément utilisant cette fonte doit utiliser une fonte alternative visible. Si la fonte est chargée correctement pendant cette période, elle est utilisée normalement.
+- Période 3 : Échec du chargement des fontes
+  - : Si la fonte n'est pas chargée, l'agent utilisateur considère qu'il y a eu un échec du chargement et utilise la fonte alternative disponible.
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush: css;">/* Valeurs avec un mot-clé */
+```css
+/* Valeurs avec un mot-clé */
 font-display: auto;
 font-display: block;
 font-display: swap;
 font-display: fallback;
-font-display: optional;</pre>
+font-display: optional;
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<dl>
- <dt><code>auto</code></dt>
- <dd>La stratégie d'affichage de la fonte est définie par l'agent utilisateur.</dd>
- <dt><code>block</code></dt>
- <dd>La période de blocage est courte et est suivi d'une période d'échange infinie.</dd>
- <dt><code>swap</code></dt>
- <dd>La période de blocage est extrêmement courte et est suivie par une période d'échange infinie.</dd>
- <dt><code>fallback</code></dt>
- <dd>La période de blocage est extrêmement courte et est suivie par une courte période d'échange.</dd>
- <dt><code>optional</code></dt>
- <dd>La période de blocage est extrêmement courte et il n'y a pas de période d'échange.</dd>
-</dl>
+- `auto`
+  - : La stratégie d'affichage de la fonte est définie par l'agent utilisateur.
+- `block`
+  - : La période de blocage est courte et est suivi d'une période d'échange infinie.
+- `swap`
+  - : La période de blocage est extrêmement courte et est suivie par une période d'échange infinie.
+- `fallback`
+  - : La période de blocage est extrêmement courte et est suivie par une courte période d'échange.
+- `optional`
+  - : La période de blocage est extrêmement courte et il n'y a pas de période d'échange.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<pre class="brush: css">@font-face {
+```css
+@font-face {
   font-family: FonteExemple;
   src: url(/chemin/vers/fonts/examplefont.woff) format('woff'),
        url(/chemin/vers/fonts/examplefont.eot) format('eot');
   font-weight: 400;
   font-style: normal;
   font-display: fallback;
-}</pre>
+}
+```
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS4 Fonts', '#font-display-desc', 'font-display')}}</td>
-   <td>{{Spec2('CSS4 Fonts')}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                        | État                             | Commentaires         |
+| ------------------------------------------------------------------------------------ | -------------------------------- | -------------------- |
+| {{SpecName('CSS4 Fonts', '#font-display-desc', 'font-display')}} | {{Spec2('CSS4 Fonts')}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.at-rules.font-face.font-display")}}</p>
+{{Compat("css.at-rules.font-face.font-display")}}

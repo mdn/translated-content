@@ -8,89 +8,78 @@ tags:
 translation_of: Web/CSS/Column_combinator
 original_slug: Web/CSS/Combinateur_colonne
 ---
-<div>{{CSSRef("Selectors")}}{{Draft}}{{SeeCompatTable}}</div>
+{{CSSRef("Selectors")}}{{Draft}}{{SeeCompatTable}}
 
-<p>Le <strong>combinateur de colonne</strong> (<code>||</code>) est placé entre deux sélecteurs CSS. Les éléments ciblés sont ceux ciblés par le deuxième sélecteur et qui appartiennent à un élément en colonne qui correspond au premier sélecteur.</p>
+Le **combinateur de colonne** (`||`) est placé entre deux sélecteurs CSS. Les éléments ciblés sont ceux ciblés par le deuxième sélecteur et qui appartiennent à un élément en colonne qui correspond au premier sélecteur.
 
-<pre class="brush: css no-line-numbers">/* Les cellules de tableaux qui appartiennent */
+```css
+/* Les cellules de tableaux qui appartiennent */
 /* à la colonne "selected" */
 col.selected || td {
   background: gray;
 }
-</pre>
+```
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="syntaxbox"><var>column-selector</var> || <var>cell-selector</var> {
-  <var>/* propriétés pour le style */</var>
-}
-</pre>
+    column-selector || cell-selector {
+      /* propriétés pour le style */
+    }
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;table border="1"&gt;
-  &lt;colgroup&gt;
-    &lt;col span="2"/&gt;
-    &lt;col class="selected"/&gt;
-  &lt;/colgroup&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;A
-      &lt;td&gt;B
-      &lt;td&gt;C
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td colspan="2"&gt;D&lt;/td&gt;
-      &lt;td&gt;E&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;F&lt;/td&gt;
-      &lt;td colspan="2"&gt;G&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</pre>
+```html
+<table border="1">
+  <colgroup>
+    <col span="2"/>
+    <col class="selected"/>
+  </colgroup>
+  <tbody>
+    <tr>
+      <td>A
+      <td>B
+      <td>C
+    </tr>
+    <tr>
+      <td colspan="2">D</td>
+      <td>E</td>
+    </tr>
+    <tr>
+      <td>F</td>
+      <td colspan="2">G</td>
+    </tr>
+  </tbody>
+</table>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">col.selected || td {
+```css
+col.selected || td {
   background: gray;
   color: white;
   font-weight: bold;
-}</pre>
+}
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", "100%")}}</p>
+{{EmbedLiveSample("Exemples", "100%")}}
 
-<h2 id="Spécifications">Spécifications</h2>
+## Spécifications
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS4 Selectors", "#the-column-combinator", "column combinator")}}</td>
-   <td>{{Spec2("CSS4 Selectors")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                            | État                                 | Commentaires         |
+| -------------------------------------------------------------------------------------------------------- | ------------------------------------ | -------------------- |
+| {{SpecName("CSS4 Selectors", "#the-column-combinator", "column combinator")}} | {{Spec2("CSS4 Selectors")}} | Définition initiale. |
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("javascript.builtins.Array.sort")}}</p>
+{{Compat("javascript.builtins.Array.sort")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{HTMLElement("col")}}</li>
- <li>{{HTMLElement("colgroup")}}</li>
- <li>{{CSSxRef("grid")}}</li>
-</ul>
+- {{HTMLElement("col")}}
+- {{HTMLElement("colgroup")}}
+- {{CSSxRef("grid")}}

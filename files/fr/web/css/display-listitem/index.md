@@ -7,56 +7,53 @@ tags:
   - Type de donnée
 translation_of: Web/CSS/display-listitem
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p>Le mot-clé <code>list-item</code> permet à un élément de générer un pseudo-élément <code>::marker</code>  dont le contenu  est défini par les propriétés {{cssxref("list-style")}} (pour afficher une puce par exemple) avec une boîte principale du type indiquée pour organiser le contenu de l'élément.</p>
+Le mot-clé `list-item` permet à un élément de générer un pseudo-élément `::marker`  dont le contenu  est défini par les propriétés {{cssxref("list-style")}} (pour afficher une puce par exemple) avec une boîte principale du type indiquée pour organiser le contenu de l'élément.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<p>Une valeur <code>list-item</code> indiquera à l'élément de se comporter comme un élément d'une liste. Cette valeur peut être utilisée avec les propriétés {{CSSxRef("list-style-type")}} et {{CSSxRef("list-style-position")}}.</p>
+Une valeur `list-item` indiquera à l'élément de se comporter comme un élément d'une liste. Cette valeur peut être utilisée avec les propriétés {{CSSxRef("list-style-type")}} et {{CSSxRef("list-style-position")}}.
 
-<div class="note">
-<p><strong>Note :</strong> Pour les navigateurs qui prennent en charge la syntaxe avec deux valeurs, si aucune valeur pour le mode intérieur n'est indiquée, sa valeur par défaut sera <code>flow</code>. Si aucune valeur n'est fournie pour le mode extérieur, la boîte principale aura un mode extérieur <code>block</code>.</p>
-</div>
+> **Note :** Pour les navigateurs qui prennent en charge la syntaxe avec deux valeurs, si aucune valeur pour le mode intérieur n'est indiquée, sa valeur par défaut sera `flow`. Si aucune valeur n'est fournie pour le mode extérieur, la boîte principale aura un mode extérieur `block`.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{CSSSyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.fausse-liste {
+```css
+.fausse-liste {
   display: list-item;
   list-style-position: inside;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div class="fausse-liste"&gt;Je vais m'afficher comme un élément de liste&lt;/div&gt;
-</pre>
+```html
+<div class="fausse-liste">Je vais m'afficher comme un élément de liste</div>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples", "100%", 150)}}</p>
+{{EmbedLiveSample("Exemples", "100%", 150)}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<h3 id="Prise_en_charge_de_list-item">Prise en charge de <code>list-item</code></h3>
+### Prise en charge de `list-item`
 
-<p>{{Compat("css.properties.display.list-item", 10)}}</p>
+{{Compat("css.properties.display.list-item", 10)}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>{{CSSxRef("display")}}
-  <ul>
-   <li>{{CSSxRef("&lt;display-outside&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-inside&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-internal&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-box&gt;")}}</li>
-   <li>{{CSSxRef("&lt;display-legacy&gt;")}}</li>
-  </ul>
- </li>
-</ul>
+- {{CSSxRef("display")}}
+
+  - {{CSSxRef("&lt;display-outside&gt;")}}
+  - {{CSSxRef("&lt;display-inside&gt;")}}
+  - {{CSSxRef("&lt;display-internal&gt;")}}
+  - {{CSSxRef("&lt;display-box&gt;")}}
+  - {{CSSxRef("&lt;display-legacy&gt;")}}

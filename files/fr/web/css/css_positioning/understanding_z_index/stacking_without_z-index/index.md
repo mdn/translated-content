@@ -9,53 +9,49 @@ tags:
 translation_of: Web/CSS/CSS_Positioning/Understanding_z_index/Stacking_without_z-index
 original_slug: Web/CSS/Comprendre_z-index/Empilement_sans_z-index
 ---
-<div>{{PreviousMenuNext("","Web/CSS/Comprendre_z-index/Empilement_et_float", "Web/CSS/Comprendre_z-index")}}</div>
+{{PreviousMenuNext("","Web/CSS/Comprendre_z-index/Empilement_et_float", "Web/CSS/Comprendre_z-index")}}
 
-<h2 id="Empilement_sans_z-index">Empilement sans <code>z-index</code></h2>
+## Empilement sans `z-index`
 
-<p>Lorsqu’aucun élément n'a de {{cssxref("z-index")}} définis, tous les éléments sont empilés dans cet ordre (de bas en haut) :</p>
+Lorsqu’aucun élément n'a de {{cssxref("z-index")}} définis, tous les éléments sont empilés dans cet ordre (de bas en haut) :
 
-<ol>
- <li>Arrière-plans et bordures de l'élément racine</li>
- <li>Blocs enfants dans le flux normal, dans leur ordre d'apparition (en HTML)</li>
- <li>Éléments enfants positionnés, dans leur ordre d'apparition (en HTML)</li>
-</ol>
+1.  Arrière-plans et bordures de l'élément racine
+2.  Blocs enfants dans le flux normal, dans leur ordre d'apparition (en HTML)
+3.  Éléments enfants positionnés, dans leur ordre d'apparition (en HTML)
 
-<p>On gardera à l'esprit que, lorsque la propriété {{cssxref("order")}} modifie l'ordre visuel des conteneurs flexibles ({{cssxref("flex")}}), cela modifie également l'ordre du contexte d'empilement.</p>
+On gardera à l'esprit que, lorsque la propriété {{cssxref("order")}} modifie l'ordre visuel des conteneurs flexibles ({{cssxref("flex")}}), cela modifie également l'ordre du contexte d'empilement.
 
-<p>Dans l'exemple suivant, les blocs en position absolue et relative sont correctement positionnés et dimensionnés pour illustrer les règles d'empilement. L'opacité a été réduite pour rendre les éléments transparents et faciliter ainsi la visualisation des superpositions.</p>
+Dans l'exemple suivant, les blocs en position absolue et relative sont correctement positionnés et dimensionnés pour illustrer les règles d'empilement. L'opacité a été réduite pour rendre les éléments transparents et faciliter ainsi la visualisation des superpositions.
 
-<div class="note">
-<p><strong>Note :</strong>
-<ul>
- <li>Dans un groupe d'éléments sans aucune propriété <code>z-index</code>, tel que les blocs positionnés (DIV #1 à #4) dans l'exemple, l'ordre d'empilement des éléments est celui de leur ordre dans la hiérarchie HTML, quelle que soit leur position.</li>
- <li>Les blocs standards (DIV #5) dans le flux normal, sans aucune propriété de positionnement, sont toujours rendus avant les éléments positionnés, et apparaissent en dessous de ces derniers, même s'ils interviennent plus tard dans la hiérarchie HTML.</li>
- <li><strong>Attention</strong> : en copiant-collant le code ci-dessous, l'exemple ne fonctionnera pas pour le DIV#5 à cause de la propriété d'opacité qui lui a été affecté. Il apparaîtra donc au dessus des autres blocs.</li>
-</ul>
-</p>
-</div>
+> **Note :**
+>
+> - Dans un groupe d'éléments sans aucune propriété `z-index`, tel que les blocs positionnés (DIV #1 à #4) dans l'exemple, l'ordre d'empilement des éléments est celui de leur ordre dans la hiérarchie HTML, quelle que soit leur position.
+> - Les blocs standards (DIV #5) dans le flux normal, sans aucune propriété de positionnement, sont toujours rendus avant les éléments positionnés, et apparaissent en dessous de ces derniers, même s'ils interviennent plus tard dans la hiérarchie HTML.
+> - **Attention** : en copiant-collant le code ci-dessous, l'exemple ne fonctionnera pas pour le DIV#5 à cause de la propriété d'opacité qui lui a été affecté. Il apparaîtra donc au dessus des autres blocs.
 
-<p>{{EmbedLiveSample("Exemple", 600, 400)}}</p>
+{{EmbedLiveSample("Exemple", 600, 400)}}
 
-<h2 id="Exemple">Exemple</h2>
+## Exemple
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div id="abs1" class="absolute"&gt;
-  &lt;b&gt;DIV #1&lt;/b&gt;&lt;br /&gt;position: absolute;&lt;/div&gt;
-&lt;div id="rel1" class="relative"&gt;
-  &lt;b&gt;DIV #2&lt;/b&gt;&lt;br /&gt;position: relative;&lt;/div&gt;
-&lt;div id="rel2" class="relative"&gt;
-  &lt;b&gt;DIV #3&lt;/b&gt;&lt;br /&gt;position: relative;&lt;/div&gt;
-&lt;div id="abs2" class="absolute"&gt;
-  &lt;b&gt;DIV #4&lt;/b&gt;&lt;br /&gt;position: absolute;&lt;/div&gt;
-&lt;div id="sta1" class="static"&gt;
-  &lt;b&gt;DIV #5&lt;/b&gt;&lt;br /&gt;position: static;&lt;/div&gt;
-</pre>
+```html
+<div id="abs1" class="absolute">
+  <b>DIV #1</b><br />position: absolute;</div>
+<div id="rel1" class="relative">
+  <b>DIV #2</b><br />position: relative;</div>
+<div id="rel2" class="relative">
+  <b>DIV #3</b><br />position: relative;</div>
+<div id="abs2" class="absolute">
+  <b>DIV #4</b><br />position: absolute;</div>
+<div id="sta1" class="static">
+  <b>DIV #5</b><br />position: static;</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">b {
+```css
+b {
   font-family: sans-serif;
 }
 
@@ -114,6 +110,6 @@ div {
   background-color: #ffc;
   margin: 0px 50px 0px 50px;
 }
-</pre>
+```
 
-<div>{{PreviousMenuNext("","Web/CSS/Comprendre_z-index/Empilement_et_float", "Web/CSS/Comprendre_z-index")}}</div>
+{{PreviousMenuNext("","Web/CSS/Comprendre_z-index/Empilement_et_float", "Web/CSS/Comprendre_z-index")}}

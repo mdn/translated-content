@@ -9,25 +9,26 @@ tags:
   - Reference
 translation_of: Web/CSS/block-size
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}{{SeeCompatTable}}
 
-<p>La propriété <strong><code>block-size</code></strong> est une propriété <em>logique</em> qui permet de définir la taille de l'élément dans la direction orthogonale au sens de lecture. Selon la valeur de la propriété {{cssxref("writing-mode")}}, elle correspondra à la propriété physique {{cssxref("width")}} ou {{cssxref("height")}}.</p>
+La propriété **`block-size`** est une propriété _logique_ qui permet de définir la taille de l'élément dans la direction orthogonale au sens de lecture. Selon la valeur de la propriété {{cssxref("writing-mode")}}, elle correspondra à la propriété physique {{cssxref("width")}} ou {{cssxref("height")}}.
 
-<div>{{EmbedInteractiveExample("pages/css/block-size.html")}}</div>
+{{EmbedInteractiveExample("pages/css/block-size.html")}}
 
-<p>Si le mode d'écriture est vertical, la valeur de <code>block-size</code> fera référence à la largeur de l'élément et sinon, elle fera référence à sa hauteur.</p>
+Si le mode d'écriture est vertical, la valeur de `block-size` fera référence à la largeur de l'élément et sinon, elle fera référence à sa hauteur.
 
-<p>L'autre propriété logique permettant de définir la dimension sur l'autre axe est {{cssxref("inline-size")}}.</p>
+L'autre propriété logique permettant de définir la dimension sur l'autre axe est {{cssxref("inline-size")}}.
 
-<h2 id="Syntaxe">Syntaxe</h2>
+## Syntaxe
 
-<pre class="brush:css no-line-numbers">/* Valeurs de longueur */
-/* Type &lt;length&gt;       */
+```css
+/* Valeurs de longueur */
+/* Type <length>       */
 block-size: 300px;
 block-size: 25em;
 
 /* Valeurs proportionnelles */
-/* Type &lt;percentage&gt;        */
+/* Type <percentage>        */
 block-size: 75%;
 
 /* Valeurs avec un mot-clé */
@@ -43,63 +44,51 @@ block-size: auto;
 block-size: inherit;
 block-size: initial;
 block-size: unset;
-</pre>
+```
 
-<h3 id="Valeurs">Valeurs</h3>
+### Valeurs
 
-<p>La propriété <code>block-size</code> peut prendre les mêmes valeurs que {{cssxref("width")}} et {{cssxref("height")}}.</p>
+La propriété `block-size` peut prendre les mêmes valeurs que {{cssxref("width")}} et {{cssxref("height")}}.
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+### Syntaxe formelle
 
 {{csssyntax}}
 
-<h2 id="Exemples">Exemples</h2>
+## Exemples
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">.exemple {
+```css
+.exemple {
   writing-mode: vertical-rl;
   background-color: yellow;
   block-size: 200px;
-}</pre>
+}
+```
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;p class="exemple"&gt;Texte d'exemple&lt;/p&gt;
-</pre>
+```html
+<p class="exemple">Texte d'exemple</p>
+```
 
-<h3 id="Résultat">Résultat</h3>
+### Résultat
 
-<p>{{EmbedLiveSample("Exemples")}}</p>
+{{EmbedLiveSample("Exemples")}}
 
-<h2 id="Spécification">Spécification</h2>
+## Spécification
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">État</th>
-   <th scope="col">Commentaires</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#logical-dimension-properties", "block-size")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>Définition initiale.</td>
-  </tr>
- </tbody>
-</table>
+| Spécification                                                                                                    | État                                             | Commentaires         |
+| ---------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | -------------------- |
+| {{SpecName("CSS Logical Properties", "#logical-dimension-properties", "block-size")}} | {{Spec2("CSS Logical Properties")}} | Définition initiale. |
 
-<p>{{cssinfo}}</p>
+{{cssinfo}}
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+## Compatibilité des navigateurs
 
-<p>{{Compat("css.properties.block-size")}}</p>
+{{Compat("css.properties.block-size")}}
 
-<h2 id="Voir_aussi">Voir aussi</h2>
+## Voir aussi
 
-<ul>
- <li>Les propriétés physiques correspondantes : {{cssxref("width")}} et {{cssxref("height")}}</li>
- <li>{{cssxref("writing-mode")}}</li>
-</ul>
+- Les propriétés physiques correspondantes : {{cssxref("width")}} et {{cssxref("height")}}
+- {{cssxref("writing-mode")}}
