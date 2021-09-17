@@ -178,7 +178,7 @@ touch src/components/Todo.js</pre>
 
 <pre class="brush: js">&lt;input id="todo-0" type="checkbox" defaultChecked={props.completed} /&gt;</pre>
 
-<p>此時你的瀏覽器應該更新顯示被選中的<code>Eat</code>：</p>
+<p>此時瀏覽器應該會顯示已被選取的<code>Eat</code>：</p>
 
 <p><img alt="Our todo list app, now with differing checked states - some checkboxes are checked, others not" src="todo-list-differing-checked-states.png"></p>
 
@@ -205,9 +205,9 @@ touch src/components/Todo.js</pre>
 
 <h2 id="So_far_so_good">到目前為止，一切還算順利？</h2>
 
-<p>目前我們很好地使用了React，但還可以做得更好！我們的程式碼有重複的部分。渲染<code>&lt;Todo /&gt;</code>元件的程式碼有三行幾乎相同，它們只有一個差異：每個prop的值不同。</p>
+<p>目前我們很好地使用了React，但還可以做得更好！現在程式碼還有重複的部分。渲染<code>&lt;Todo /&gt;</code>元件的程式碼有三行幾乎相同，它們只有一個差異：每個prop的值不同。</p>
 
-<p>我們可以使用JavaScript的核心功能之一——迭代（iteration）來清理（clean up）程式碼。要使用迭代，首先應該重新考慮我們的任務。</p>
+<p>我們可以使用JavaScript的核心功能之一——迭代（iteration）來清理（clean up）程式碼。要使用迭代，我們應該回頭檢視目前的任務項目。</p>
 
 <h2 id="Tasks_as_data">將任務們轉換成數據資料</h2>
 
