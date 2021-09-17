@@ -358,13 +358,13 @@ article {
 
 <pre class="brush: html notranslate">&lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;</pre>
 
-<p>This is the <a href="/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">viewport meta tag</a> — it exists as a way control how mobile browsers render content. This is needed because by default, most mobile browsers lie about their viewport width. Non-responsive sites commonly look really bad when rendered in a narrow viewport, so mobile browsers usually render the site with a viewport width wider than the real device width by default (usually 960 pixels), and then shrink the rendered result so that it fits in the display.</p>
+<p>This is the <a href="/ja/docs/Mozilla/Mobile/Viewport_meta_tag">viewport meta tag</a> — it exists as a way control how mobile browsers render content. This is needed because by default, most mobile browsers lie about their viewport width. Non-responsive sites commonly look really bad when rendered in a narrow viewport, so mobile browsers usually render the site with a viewport width wider than the real device width by default (usually 960 pixels), and then shrink the rendered result so that it fits in the display.</p>
 
 <p>This is all well and good, but it means that responsive sites are not going to work as expected. If the viewport width is reported as 960 pixels, then mobile layouts (for example created using a media query of <code>@media screen and (max-width: 600px) { ... }</code>) are not going to render as expected.</p>
 
 <p>To remedy this, including a viewport meta tag like the one above on your page tells the browser "don't render the content with a 960 pixel viewport — render it using the real device width instead, and set a default initial scale level for better consistency." The media queries will then kick in as expected.</p>
 
-<p>There are a number of other options you can put inside the <code>content</code> attribute of the viewport meta tag — see <a href="/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">Using the viewport meta tag to control layout on mobile browsers</a> for more details.</p>
+<p>There are a number of other options you can put inside the <code>content</code> attribute of the viewport meta tag — see <a href="/ja/docs/Mozilla/Mobile/Viewport_meta_tag">Using the viewport meta tag to control layout on mobile browsers</a> for more details.</p>
 
 <h2 id="Do_you_really_need_a_media_query" name="Do_you_really_need_a_media_query">メディアクエリーが本当に必要ですか？</h2>
 
@@ -415,7 +415,7 @@ article {
 
 <h2 id="Test_your_skills!">Test your skills!</h2>
 
-<p>You've reached the end of this article, but can you remember the most important information? You can find a test to verify that you've retained this information before you move on — see <a href="/en-US/docs/Learn/CSS/CSS_layout/rwd_skills">Test your skills: Responsive Web Design</a>.</p>
+<p>You've reached the end of this article, but can you remember the most important information? You can find a test to verify that you've retained this information before you move on — see <a href="/ja/docs/Learn/CSS/CSS_layout/rwd_skills">Test your skills: Responsive Web Design</a>.</p>
 
 <h2 id="Summary" name="Summary">まとめ</h2>
 

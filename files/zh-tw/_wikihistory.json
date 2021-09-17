@@ -3654,7 +3654,7 @@
       "orinx"
     ]
   },
-  "Web/API/File/fileName": {
+  "Web/API/File/name": {
     "modified": "2019-03-23T22:06:22.686Z",
     "contributors": [
       "lynn456"
