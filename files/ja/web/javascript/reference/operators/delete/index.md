@@ -1,100 +1,104 @@
 ---
-title: delete
+title: delete 演算子
 slug: Web/JavaScript/Reference/Operators/delete
 tags:
   - JavaScript
-  - Memory Management
+  - 言語機能
+  - メモリーー管理
   - Object
   - Operator
-  - Property
-  - Reference
-  - Release
+  - リファレンス
+  - 解放
   - Unary
   - delete
+browser-compat: javascript.operators.delete
 translation_of: Web/JavaScript/Reference/Operators/delete
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p><span class="seoSummary">JavaScript の <strong><code>delete</code> 演算子</strong>は、オブジェクトからプロパティを削除します。同じプロパティへの参照がそれ以上保持されない場合は、自動的に解放されます。</span></p>
+JavaScript の **`delete` 演算子**は、オブジェクトからプロパティを削除します。同じプロパティへの参照がそれ以上保持されていない場合は、自動的に解放されます。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-deleteoperator.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-deleteoperator.html")}}
 
+## 構文
 
+```js
+delete expression
+```
 
-<h2 id="構文">構文</h2>
+`expression` は下記のように、[プロパティ](/ja/docs/Glossary/property/JavaScript)への参照として評価されるべきものです。
 
-<pre class="syntaxbox notranslate">delete <em>expression</em> </pre>
+```js
+delete object.property
+delete object['property']
+```
 
-<p><em>expression</em> には、プロパティへの参照になる式を置きます。例えば:</p>
+### 引数
 
-<pre class="syntaxbox notranslate">delete <em>object.property</em>
-delete <em>object</em>['<em>property</em>']</pre>
+- `object`
+  - : オブジェクト名、またはオブジェクトとして評価される式です。
+- `property`
+  - : 削除するプロパティです。
 
-<h3 id="引数">引数</h3>
+### 返値
 
-<dl>
- <dt><code>object</code></dt>
- <dd>オブジェクト名、またはオブジェクトとして評価される式</dd>
- <dt><code>property</code></dt>
- <dd>削除するプロパティです。</dd>
-</dl>
+プロパティが{{jsxref("Object.hasOwnProperty", "自分自身の", "", 1)}}{{jsxref("Errors/Cant_delete",
+	"構成不可", "", 1)}}のプロパティであった場合、 strict モードでなければ `false` を返します。それ以外の場合は `true` を返します。
 
-<h3 id="戻り値">戻り値</h3>
+### 例外
 
-<p>非 strict モードでは、プロパティが編集不可の場合、false が返ります。その他の場合すべてで <code>true</code> が返ります。</p>
+[strict モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)では、プロパティが編集不可の場合、{{jsxref("TypeError")}} が発生します。
 
-<h3 id="例外">例外</h3>
+## 解説
 
-<p><a href="/ja/docs/Web/JavaScript/Reference/Functions_and_function_scope/Strict_mode">strict モード</a> では、プロパティが編集不可の場合、{{jsxref("Global_objects/SyntaxError")}} をスローします。</p>
+一般的に信じられていることとは異なり (おそらく [C++ における delete](https://docs.microsoft.com/en-us/cpp/cpp/delete-operator-cpp?view=vs-2019) のような他のプログラミング言語の影響ですが)、`delete` 演算子は、直接的にメモリーを解放することは**ありません**。メモリーの管理は参照が切れることで間接的に行われます。詳細は[メモリー管理](/ja/docs/Web/JavaScript/Memory_Management)を参照してください。
 
-<h2 id="説明">説明</h2>
+**`delete`** 演算子は指定したプロパティをオブジェクトから取り除きます。削除に成功すると `true` を返し、そうでなければ `false` を返します。
 
-<p>一般的に信じられていることとは異なり、<code>delete</code> 演算子は、直接的にメモリを開放することは<strong>ありません</strong>。メモリの管理は参照が切れることで間接的に行われます。詳細は <a href="/ja/docs/Web/JavaScript/Memory_Management">memory management</a> をご覧ください。</p>
+ただし、次のようなシナリオを考慮することが重要です。
 
-<p><code><strong>delete</strong></code> 演算子は指定したプロパティをオブジェクトから取り除きます。削除に成功すると <code>true</code> を返し、そうでなければ <code>false</code> を返します。しかし、次のシナリオを考慮することが重要です:</p>
+- 削除しようとしたプロパティが存在しない場合、`delete` は何もせずに `true` を返します。
+- そのオブジェクトのプロトタイプチェーンに同名のプロパティが存在する場合、削除後はプロトタイプチェーンのプロパティをオブジェクトが使うようになります (つまり、`delete` は自身のプロパティにのみ効果があります)。
+- グローバルスコープや関数スコープから {{jsxref("Statements/var","var")}} で宣言されたプロパティは削除できません。
 
-<ul>
- <li>削除しようとしたプロパティが存在しない場合、<code>delete</code> は何の効果もなく、<code>true</code> を返します。</li>
- <li>同様の名前のプロパティがオブジェクトのプロトタイプチェーンに存在する場合、削除後はプロトタイプチェーンのプロパティをオブジェクトが使うようになります (つまり、<code>delete</code> 自身のプロパティにのみ効果があります)。</li>
- <li>グローバルスコープや関数スコープから {{jsxref("Statements/var","var")}} で宣言されたプロパティは削除できません。
-  <ul>
-   <li>そのため、<code>delete</code> はグローバルスコープ内の関数を削除できません (関数定義の一部であるか関数式の一部であるかにかかわらず)。</li>
-   <li>(グローバルスコープを除く) オブジェクトの一部である関数は <code>delete</code> で削除できます。</li>
-  </ul>
- </li>
- <li>{{jsxref("Statements/let","let")}} や {{jsxref("Statements/const","const")}} で宣言された任意のプロパティはそれらが宣言されたスコープから削除できません。</li>
- <li>編集不可能なプロパティは削除できません。これには {{jsxref("Math")}} や {{jsxref("Array")}}、{{jsxref("Object")}} のようなビルトインオブジェクトのプロパティや {{jsxref("Object.defineProperty()")}} のようなメソッドで編集不可として生成されたプロパティが含まれます。</li>
-</ul>
+  - そのため、`delete` はグローバルスコープ内の関数を削除できません (関数定義の一部であるか関数式の一部であるかにかかわらず)。
+  - (グローバルスコープを除く) オブジェクトの一部である関数は `delete` で削除できます。
 
-<p>次のスニペットがシンプルな例です:</p>
+- {{jsxref("Statements/let","let")}} や {{jsxref("Statements/const","const")}} で宣言された任意のプロパティはそれらが宣言されたスコープから削除できません。
+- 編集不可能なプロパティは削除できません。これには {{jsxref("Math")}} や {{jsxref("Array")}}、{{jsxref("Object")}} のような組み込みオブジェクトのプロパティや {{jsxref("Object.defineProperty()")}} のようなメソッドで編集不可として生成されたプロパティが含まれます。
 
-<pre class="brush: js notranslate">var Employee = {
+次のスニペットがシンプルな例です。
+
+```js
+var Employee = {
   age: 28,
   name: 'abc',
   designation: 'developer'
 }
 
-console.log(delete Employee.name);   // returns true
-console.log(delete Employee.age);    // returns true
+console.log(delete Employee.name);   // true を返す
+console.log(delete Employee.age);    // true を返す
 
 // When trying to delete a property that does
 // not exist, true is returned
-console.log(delete Employee.salary); // returns true
-</pre>
+console.log(delete Employee.salary); // true を返す
+```
 
-<h3 id="編集不可のプロパティ"><strong>編集不可のプロパティ</strong></h3>
+### 編集不可のプロパティ
 
-<p>プロパティが編集不可に設定されているとき、<code>delete</code> は何の効果もなく、<code>false</code> を返します。strict モードでは、これは <code>SyntaxError</code> を生成します。</p>
+プロパティが編集不可に設定されているとき、`delete` は何もせずに `false` を返します。strict モードでは、これは `TypeError` を生成します。
 
-<pre class="brush: js notranslate">var Employee = {};
+```js
+var Employee = {};
 Object.defineProperty(Employee, 'name', {configurable: false});
 
-console.log(delete Employee.name);  // returns false
-</pre>
+console.log(delete Employee.name);  // false を返す
+```
 
-<p>{{jsxref("Statements/var","var")}} や {{jsxref("Statements/let","let")}}、{{jsxref("Statements/const","const")}} は、<code>delete</code> 演算子で削除できない編集不可のプロパティを生成します:</p>
+{{jsxref("Statements/var","var")}} や {{jsxref("Statements/let","let")}}、{{jsxref("Statements/const","const")}} は、`delete` 演算子で削除できない編集不可のプロパティを生成します:
 
-<pre class="brush: js notranslate">var nameOther = 'XYZ';
+```js
+var nameOther = 'XYZ';
 
 // We can access this global property using:
 Object.getOwnPropertyDescriptor(window, 'nameOther');
@@ -102,55 +106,55 @@ Object.getOwnPropertyDescriptor(window, 'nameOther');
 // output: Object {value: "XYZ",
 //                  writable: true,
 //                  enumerable: true,
-//                  <strong>configurable: false</strong>}
+//                  configurable: false}
 
 // Since "nameOther" is added using with the
 // var keyword, it is marked as "non-configurable"
 
-delete nameOther;   // return false</pre>
+delete nameOther;   // return false
+```
 
-<p>strict モードでは、例外が発生します。</p>
+strict モードでは、例外が発生します。
 
-<h3 id="Strict_vs._非_strict_モード"><strong>Strict vs. 非 strict モード</strong></h3>
+### strict モードとそれ以外の違い
 
-<p>strict モードのとき、変数や関数の引数、関数名への参照に直接 <code>delete</code> が使われた場合、{{jsxref("SyntaxError")}} をスローします。</p>
+strict モードのとき、`delete` が変数や関数の引数、関数名への直接参照に使われた場合、{{jsxref("SyntaxError")}} が発生します。したがって、 strict モードでエラーが発生することを防ぐためには、 `delete` 演算子を `delete object.property` または `delete object['property']` の形で使用する必要があります。
 
-<p><code>var</code> で宣言された変数は編集不可に設定されます。次の例では、<code>salary</code> は編集不可で削除できません。非 strict モードでは、<code>delete</code> 演算子は <code>false</code> を返します。</p>
+```js
+Object.defineProperty(globalThis, 'variable1', { value: 10, configurable: true, });
+Object.defineProperty(globalThis, 'variable2', { value: 10, configurable: false, });
 
-<pre class="brush: js notranslate">function Employee() {
-  delete salary;
-  var salary;
+// strict モードでは SyntaxError
+console.log(delete variable1); // true
+
+// strict モードでは SyntaxError
+console.log(delete variable2); // false
+```
+
+```js
+function func(param) {
+  // strict モードでは SyntaxError
+  console.log(delete param); // false
 }
 
-Employee();
-</pre>
+// strict モードでは SyntaxError
+console.log(delete func); // false
+```
 
-<p>strict モードで同じコードがどのように振る舞うか見てみましょう。<code>false</code> を返す代わりに、ステートメントは <code>SyntaxError</code> を発生させます。</p>
+### ブラウザーの互換性の注意
 
-<pre class="brush: js notranslate">"use strict";
+ECMAScript はオブジェクトに対して反復処理を行った時の順序を実装系依存であるとしているにもかかわらず、主要なブラウザーはいずれも、(少なくともプロトタイプ上にないプロパティについては) 最初に追加されたプロパティを最初に処理する順序に対応しているようです。しかし Internet Explorer では、プロパティに対して `delete` を用いたときにややこしい結果になることがあり、これが他のブラウザーが単純なオブジェクトを整列された連想配列のように用いることの障害になります。Internet Explorer では、プロパティの*値*を `undefined` に設定しようとしたとき、後から同じ名前で再びプロパティを追加すると、そのプロパティは*元の*場所で処理されるようになります。削除済みのプロパティを再度追加した場合に予想されるような、最後の場所ではありません。
 
-function Employee() {
-  delete salary;  // SyntaxError
-  var salary;
-}
+複数のブラウザーで同じ連想配列を使用したい場合は、可能であれば {{jsxref("Map")}} を使用してください。または、2 つに分けた配列 (片方はキー、もう片方は値) やプロパティを一つだけ持ったオブジェクトの配列を構築するなどの方法でこの構造をシミュレーションしてください。
 
-// Similarly, any direct access to a function
-// with delete will raise a SyntaxError
+## 例
 
-function DemoFunction() {
-  //some code
-}
-
-delete DemoFunction; // SyntaxError
-</pre>
-
-<h2 id="例">例</h2>
-
-<pre class="brush: js notranslate">// creates the property adminName on the global scope
+```js
+// adminName プロパティをグローバルスコープに生成
 adminName = 'xyz';
 
-// creates the property empCount on the global scope
-// Since we are using var, this is marked as non-configurable. The same is true of let and const.
+// empCount プロパティをグローバルスコープに生成
+// var を使用しているため、これは構成不可となります。 let や const でも同じことになります。
 var empCount = 43;
 
 EmployeeDetails = {
@@ -159,41 +163,42 @@ EmployeeDetails = {
   designation: 'Developer'
 };
 
-// adminName is a property of the global scope.
-// It can be deleted since it is created without var.
-// Therefore, it is configurable.
-delete adminName;       // returns true
+// adminName はグローバルスコープのプロパティです。
+// var を使用せずに生成されたため、構成可能になっているので
+// 削除することができます。
+delete adminName;       // true を返す
 
-// On the contrary, empCount is not configurable,
-// since var was used.
-delete empCount;       // returns false
+// 対照的に、 empCount は var が使用されたので
+// 構成可能ではありません。
+delete empCount;       // false を返す
 
-// delete can be used to remove properties from objects
-delete EmployeeDetails.name; // returns true
+// delete を使用してオブジェクトからプロパティを削除することができます。
+delete EmployeeDetails.name; // true を返す
 
-<strong>// </strong>Even when the property does not exists, it returns "true"
-delete EmployeeDetails.salary; // returns true
+// プロパティが存在しない場合であっても、 delete は "true" を返します。
+delete EmployeeDetails.salary; // true を返す
 
-// delete does not affect built-in static properties
-delete Math.PI; // returns false
+// delete は組み込み静的プロパティには効果がありません。
+delete Math.PI; // false を返す
 
-// EmployeeDetails is a property of the global scope.
-// Since it defined without "var", it is marked configurable
-delete EmployeeDetails;   // returns true
+// EmployeeDetails はグローバルスコープのプロパティです。
+// "var" を使用せずに定義されたため、構成可能となっています。
+delete EmployeeDetails;   // true を返す
 
 function f() {
   var z = 44;
 
-  // delete doesn't affect local variable names
-  delete z;     // returns false
+  // delete はローカル変数名には効果がありません。
+  delete z;     // false を返す
 }
-</pre>
+```
 
-<h3 id="delete_とプロトタイプチェーン"><code>delete</code> とプロトタイプチェーン</h3>
+### `delete` とプロトタイプチェーン
 
-<p>次の例では、 <span id="result_box" lang="ja"><span>プロトタイプチェーンで同じ名前のプロパティを使用できる間に、オブジェクトの独自のプロパティを削除します</span></span> :</p>
+次の例では、プロトタイプチェーン上に同じ名前を持つプロパティがある場合に、オブジェクトの自身のプロパティを削除しています。
 
-<pre class="brush: js notranslate">function Foo() {
+```js
+function Foo() {
   this.bar = 10;
 }
 
@@ -201,96 +206,69 @@ Foo.prototype.bar = 42;
 
 var foo = new Foo();
 
-// Returns true, since the own property
-// has been deleted on the foo object
-delete foo.bar;
+// foo.bar は自身のプロパティに関連付けられて
+// います。
+console.log(foo.bar); // 10
 
-// foo.bar is still available, since it
-// is available in the prototype chain.
-console.log(foo.bar);
+// foo オブジェクトにある自身のプロパティを
+// 削除します。
+delete foo.bar; // true を返す
 
-// We delete the property on the prototype
-delete Foo.prototype.bar;
+// foo.bar がプロトタイプチェーン上でまだ
+// 利用できます。
+console.log(foo.bar); // 42
 
-// logs "undefined" since the property
-// is no longer inherited
-console.log(foo.bar);           </pre>
+// プロトタイプ上のプロパティを削除します。
+delete Foo.prototype.bar; // true を返す
 
-<h3 id="配列の要素の削除"><strong>配列の要素の削除</strong></h3>
+// "bar" プロパティは Foo 上で削除されたので
+// 継承されなくなりました。
+console.log(foo.bar); // undefined
+```
 
-<p>配列の要素を削除したとき、配列の長さは影響を受けません。これは配列の最後の要素を削除しても保持されます。</p>
+### 配列の要素の削除
 
-<p><code>delete</code> 演算子が配列の要素を削除すると、要素はもはや配列からなくなります。 次の例では、<code>trees[3]</code> が <code>delete</code> で削除されます。</p>
+配列の要素を削除したとき、配列の `length` は影響を受けません。これは配列の最後の要素を削除しても保持されます。
 
-<pre class="brush: js notranslate">var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+`delete` 演算子が配列の要素を削除すると、要素は配列からなくなります。 次の例では、`trees[3]` が `delete` で削除されます。
+
+```js
+var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 delete trees[3];
 if (3 in trees) {
-    // this does not get executed
-}</pre>
+    // これは実行されない
+}
+```
 
-<p>配列の要素を存在させたいが値が未定義の場合、<code>delete</code> 演算子の代わりに <code>undefined</code> 値を用います。次の例では、<code>trees[3]</code> は undefined が割り当てられていますが、配列の要素はまだ存在しています:</p>
+ある配列の要素を存在したまま未定義の値としたい場合は、`delete` 演算子の代わりに `undefined` 値を使用してください。次の例では、`trees[3]` に `undefined` を割り当てていますが、配列のその要素は存在したままです。
 
-<pre class="brush: js notranslate">var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+```js
+var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 trees[3] = undefined;
 if (3 in trees) {
-    // this gets executed
-}</pre>
+    // これは実行される
+}
+```
 
-<p>代わりに、配列の内容を変更して配列要素を削除する場合は、<code>{{jsxref("Array.splice", "splice")}}</code> メソッドを使用します。次の例では、{{jsxref("Array.splice", "splice")}} を使用して配列から <code>trees[3]</code> が削除されます:</p>
+代わりに、配列の内容を変更して配列要素を削除したい場合は、`{{jsxref("Array.splice()", "splice()")}}` メソッドを使用してください。次の例では、{{jsxref("Array.splice()", "splice()")}} を使用して配列から `trees[3]` を削除しています。
 
-<pre class="brush: js notranslate">var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
+```js
+var trees = ['redwood', 'bay', 'cedar', 'oak', 'maple'];
 trees.splice(3,1);
 console.log(trees); // ["redwood", "bay", "cedar", "maple"]
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-   <th scope="col">ステータス</th>
-   <th scope="col">コメント</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-delete-operator', 'The delete Operator')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-delete-operator', 'The delete Operator')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES5.1', '#sec-11.4.1', 'The delete Operator')}}</td>
-   <td>{{Spec2('ES5.1')}}</td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES1', '#sec-11.4.1', 'The delete Operator')}}</td>
-   <td>{{Spec2('ES1')}}</td>
-   <td>初期定義。JavaScript 1.2 で実装。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザー実装状況">ブラウザー実装状況</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("javascript.operators.delete")}}</p>
-
-<h2 id="クロスブラウザーの問題点">クロスブラウザーの問題点</h2>
-
-<p>ECMAScript はオブジェクトのイテレーション順を実装系依存であるとしているにもかかわらず、すべての主要なブラウザーはイテレーション順を、(少なくともプロトタイプ上にないプロパティについて) 最初に追加されたプロパティを最初に持ち出す方式に基づいてサポートしているように見受けられます。ところが Internet Explorer ではプロパティに対して <code>delete</code> を用いたときに、他のブラウザーが単純なオブジェクトを整列された連想配列のように用いることを妨げる、ややこしい動作になる場合があります。Internet Explorer では、プロパティの<em>値</em>が実際 undefined に設定されているとき、後から同じ名前で再びプロパティを追加すると、そのプロパティは<em>元の</em>場所でイテレートされるようになるでしょう。削除済みのプロパティを再度追加した場合に期待するであろう、イテレーション順の最後ではありません。</p>
-
-<p>クロスブラウザー環境で整列された連想配列をしたい場合は、可能であれば {{jsxref("Map")}} を使用してください。または、2 つに分けた配列 (片方はキー、もう片方は値) やプロパティをひとつ持つオブジェクトの配列などで構造をシミュレートしてください。</p>
-
-<h2 id="関連項目">関連項目</h2>
-
-<ul>
- <li><a href="http://perfectionkills.com/understanding-delete/">In depth analysis on delete</a></li>
- <li>{{jsxref("Reflect.deleteProperty()")}}</li>
- <li>{{jsxref("Map.prototype.delete()")}}</li>
-</ul>
+- [In depth analysis on
+  delete](http://perfectionkills.com/understanding-delete/)
+- {{jsxref("Reflect.deleteProperty()")}}
+- {{jsxref("Map.prototype.delete()")}}
