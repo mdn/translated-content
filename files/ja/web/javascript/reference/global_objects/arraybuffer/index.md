@@ -15,7 +15,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 
 **`ArrayBuffer`** オブジェクトは、一般的な固定長の生のバイナリーデータバッファーを表現するために使用します。
 
-`ArrayBuffer` はバイトの配列で、他の言語ではよく「バイト配列」と呼ばれます。`ArrayBuffer` の内容を直接操作することはできません。代わりに、バッファーを特定の形式で表現する[型付き配列オブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)または {{jsxref("DataView")}} オブジェクトのいずれか作成して、バッファーの内容を読み書きします。
+`ArrayBuffer` はバイトの配列で、他の言語ではよく「バイト配列」と呼ばれます。`ArrayBuffer` の内容を直接操作することはできません。代わりに、バッファーを特定の形式で表現する[型付き配列オブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)または {{jsxref("DataView")}} オブジェクトのいずれかを作成して、バッファーの内容を読み書きします。
 
 [`ArrayBuffer()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/ArrayBuffer) コンストラクターは、指定した長さの `ArrayBuffer` をバイト単位で作成します。既存のデータから、たとえば、[Base64](/ja/docs/Glossary/Base64) 文字列や[ローカルファイルから](/ja/docs/Web/API/FileReader/readAsArrayBuffer)から配列バッファーを取得することもできます。
 
