@@ -2739,9 +2739,7 @@
 /ja/docs/MDN/Contribute/Structures/Live_samples/Simple_live_sample_demo	/ja/docs/orphaned/MDN/Structures/Live_samples/Simple_live_sample_demo
 /ja/docs/MDN/Contribute/Structures/Macros	/ja/docs/MDN/Structures/Macros
 /ja/docs/MDN/Contribute/Structures/Macros/Commonly-used_macros	/ja/docs/MDN/Structures/Macros/Commonly-used_macros
-/ja/docs/MDN/Contribute/Structures/Macros/Commonly-used_macros/creating_templates_for_multi-languages	/ja/docs/orphaned/MDN/Structures/Macros/Commonly-used_macros/creating_templates_for_multi-languages
 /ja/docs/MDN/Contribute/Structures/Macros/Project:Custom_Templates	/ja/docs/MDN/Structures/Macros/Commonly-used_macros
-/ja/docs/MDN/Contribute/Structures/Macros/Project:Custom_Templates/creating_templates_for_multi-languages	/ja/docs/orphaned/MDN/Structures/Macros/Commonly-used_macros/creating_templates_for_multi-languages
 /ja/docs/MDN/Contribute/Structures/Page_types	/ja/docs/MDN/Structures/Page_types
 /ja/docs/MDN/Contribute/Structures/Page_types/API_event_subpage_template	/ja/docs/MDN/Structures/Page_types/API_event_subpage_template
 /ja/docs/MDN/Contribute/Structures/Page_types/API_method_subpage_template	/ja/docs/MDN/Structures/Page_types/API_method_subpage_template
@@ -2763,7 +2761,6 @@
 /ja/docs/MDN/Structures/API_references/API_reference_sidebars	/ja/docs/MDN/Contribute/Howto/Write_an_API_reference/Sidebars
 /ja/docs/MDN/Structures/API_references/What_does_an_API_reference_need	/ja/docs/orphaned/MDN/Structures/API_references/What_does_an_API_reference_need
 /ja/docs/MDN/Structures/Live_samples/Simple_live_sample_demo	/ja/docs/orphaned/MDN/Structures/Live_samples/Simple_live_sample_demo
-/ja/docs/MDN/Structures/Macros/Commonly-used_macros/creating_templates_for_multi-languages	/ja/docs/orphaned/MDN/Structures/Macros/Commonly-used_macros/creating_templates_for_multi-languages
 /ja/docs/MDN/Tools/Document_parameters	/ja/docs/MDN/Tools/Unsupported_GET_API
 /ja/docs/MDN/User_guide	/ja/docs/MDN/Tools
 /ja/docs/MDN/User_guide/Linking_to_MDN	/ja/docs/orphaned/MDN/About/Linking_to_MDN
