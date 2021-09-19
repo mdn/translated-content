@@ -696,7 +696,7 @@
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Array/length	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/length
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Array/map	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Array/pop	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/pop
-/ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Array/prototype	/ja/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Array/prototype
+/ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Array/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Array/push	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/push
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Array/reverse	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse
 /ja/docs/Core_JavaScript_1.5_Reference/Global_Objects/Array/shift	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/shift
@@ -937,7 +937,7 @@
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:length	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/length
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:map	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:pop	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/pop
-/ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:prototype	/ja/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Array/prototype
+/ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:push	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/push
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:reverse	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse
 /ja/docs/Core_JavaScript_1.5_Reference:Global_Objects:Array:shift	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/shift
@@ -2259,7 +2259,7 @@
 /ja/docs/JavaScript/Reference/Global_Objects/Array/map-redirect-1	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 /ja/docs/JavaScript/Reference/Global_Objects/Array/pop	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/pop
 /ja/docs/JavaScript/Reference/Global_Objects/Array/pop-redirect-1	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/pop
-/ja/docs/JavaScript/Reference/Global_Objects/Array/prototype	/ja/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Array/prototype
+/ja/docs/JavaScript/Reference/Global_Objects/Array/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array
 /ja/docs/JavaScript/Reference/Global_Objects/Array/push	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/push
 /ja/docs/JavaScript/Reference/Global_Objects/Array/push-redirect-1	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/push
 /ja/docs/JavaScript/Reference/Global_Objects/Array/reduce	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
@@ -4159,7 +4159,7 @@
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Array/flatten	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/flat
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Array/index	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array
 /ja/docs/Web/JavaScript/Reference/Global_Objects/Array/input	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array
-/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype	/ja/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Array/prototype
+/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array
 /ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer/prototype	/ja/docs/Web/JavaScript/Reference/Global_objects/ArrayBuffer
 /ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBufferView_temp	/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 /ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer_temp	/ja/docs/Web/JavaScript/Reference/Global_objects/ArrayBuffer
@@ -4681,7 +4681,7 @@
 /ja/docs/dummySlug/Reference/Global_Objects/Array/length	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/length
 /ja/docs/dummySlug/Reference/Global_Objects/Array/map	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/map
 /ja/docs/dummySlug/Reference/Global_Objects/Array/pop	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/pop
-/ja/docs/dummySlug/Reference/Global_Objects/Array/prototype	/ja/docs/orphaned/Web/JavaScript/Reference/Global_Objects/Array/prototype
+/ja/docs/dummySlug/Reference/Global_Objects/Array/prototype	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array
 /ja/docs/dummySlug/Reference/Global_Objects/Array/push	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/push
 /ja/docs/dummySlug/Reference/Global_Objects/Array/reduce	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
 /ja/docs/dummySlug/Reference/Global_Objects/Array/reduceRight	/ja/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight
