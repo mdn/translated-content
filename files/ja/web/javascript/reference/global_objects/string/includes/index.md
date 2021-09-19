@@ -7,65 +7,54 @@ tags:
   - Prototype
   - Reference
   - String
+  - Polyfill
+browser-compat: javascript.builtins.String.includes
 translation_of: Web/JavaScript/Reference/Global_Objects/String/includes
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>includes()</code></strong> メソッドは、1 つの文字列を別の文字列の中に見出すことができるかどうかを判断し、必要に応じて <code>true</code> か <code>false</code> を返します。</p>
+**`includes()`** メソッドは、1 つの文字列を別の文字列の中に見出すことができるかどうかを判断し、必要に応じて `true` か `false` を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/string-includes.html", "shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/string-includes.html", "shorter")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+includes(searchString)
+includes(searchString, position)
+```
 
-<pre class="syntaxbox"><var>str</var>.includes(<var>searchString</var>[, <var>position</var>])</pre>
+## 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `searchString`
+  - : `str` 内で検索される文字列。
+- `position` {{optional_inline}}
+  - : 文字列内で `searchString` を検索し始める位置です。 (既定値は 0 です。)
 
-<dl>
- <dt><code><var>searchString</var></code></dt>
- <dd><code><var>str</var></code> 内で検索される文字列。</dd>
- <dt><code><var>position</var></code> {{optional_inline}}</dt>
- <dd>文字列内で <code>searchString</code> を検索し始める位置。既定値は 0 です。</dd>
-</dl>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+文字列が検索値を含んでいれば、**`true`**。含んでいれば、**`false`**。
 
-<p>文字列が検索値を含む場合、<strong><code>true</code></strong>。含まなければ、<strong><code>false</code></strong>。</p>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+このメソッドで、ある文字列が別な文字列の中に含まれているかどうかを判断することができます。
 
-<p>このメソッドによってある文字列内に別の文字列を含んでいるかどうか判断できます。</p>
+### 大文字・小文字の区別
 
-<h3 id="Case-sensitivity" name="Case-sensitivity">大文字・小文字の区別</h3>
+`includes()` メソッドは大文字と小文字が区別します。例えば、次のコードでは `false` を返します。
 
-<p><code>includes()</code> メソッドは大文字と小文字が区別します。例えば、次のコードでは <code>false</code> を返します:</p>
+```js
+'Blue Whale'.includes('blue')  // false を返す
+```
 
-<pre class="brush: js">'Blue Whale'.includes('blue')  // returns false
-</pre>
+## ポリフィル
 
-<h2 id="Examples" name="Examples">例</h2>
+このメソッドは ECMAScript 2015 で追加されました。まだ、すべての JavaScript の実装で利用できるとは限りません。
 
-<h3 id="Using_includes" name="Using_includes"><code>includes()</code>を使う</h3>
+しかしながら、このメソッドを簡単に代替できます。
 
-<pre class="brush: js">const str = 'To be, or not to be, that is the question.'
-
-console.log(str.includes('To be'))        // true
-console.log(str.includes('question'))     // true
-console.log(str.includes('nonexistent'))  // false
-console.log(str.includes('To be', 1))     // false
-console.log(str.includes('TO BE'))        // false
-console.log(str.includes(''))             // true
-</pre>
-
-<h2 id="Polyfill" name="Polyfill">ポリフィル</h2>
-
-<p>このメソッドは ECMAScript 2015 で追加されました。まだ、すべての JavaScript の実装で利用できるとは限りません。</p>
-
-<p>しかしながら、このメソッドを簡単にエミュレートできます。</p>
-
-<pre class="brush: js">if (!String.prototype.includes) {
+```js
+if (!String.prototype.includes) {
   String.prototype.includes = function(search, start) {
     'use strict';
 
@@ -76,46 +65,37 @@ console.log(str.includes(''))             // true
     return this.indexOf(search, start) !== -1;
   };
 }
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 例
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.includes', 'String.prototype.includes')}}</td>
-  </tr>
- </tbody>
-</table>
+### `includes()` の使用
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+```js
+const str = 'To be, or not to be, that is the question.'
 
-<p>{{Compat("javascript.builtins.String.includes")}}</p>
+console.log(str.includes('To be'))        // true
+console.log(str.includes('question'))     // true
+console.log(str.includes('nonexistent'))  // false
+console.log(str.includes('To be', 1))     // false
+console.log(str.includes('TO BE'))        // false
+console.log(str.includes(''))             // true
+```
 
-<h2 id="String.prototype.contains">String.prototype.contains</h2>
+## 仕様書
 
-<p>Firefox 18–39 では、このメソッドの名称は <code>contains()</code> でした。以下の理由により、 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1102219">bug 1102219</a> で <code>includes()</code> に名称が変更されました。</p>
+{{Specifications}}
 
-<p><a href="https://bugzilla.mozilla.org/show_bug.cgi?id=789036">報告</a>されたところによると、 MooTools 1.2 を使用したいくつかのウェブサイトが Firefox 17 で壊れました。この版の MooTools は、 <code>String.prototype.contains()</code> が存在するかどうか調べ、存在しない場合は MooTools が独自の関数を追加するようになっています。</p>
+## ブラウザーの互換性
 
-<p>この関数が Firefox 17 で導入されたことで、このチェックの動作が変わり、 MooTools の <code>String.prototype.contains()</code> の実装に基づくコードが壊れることになりました。結果的に、 Firefox 17 では実装が<a href="https://hg.mozilla.org/releases/mozilla-aurora/rev/086db97198a8">無効化</a>され、 <code>String.prototype.contains()</code> が利用できるようになったのは一つ後のバージョンである Firefox 18 で、 <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=789036#c32">MooTools への働きかけ</a>によって <a href="http://mootools.net/blog/2013/02/19/mootools-1-2-6-released">MooTools バージョン 1.2.6 がリリース</a>されてからでした。</p>
+{{Compat}}
 
-<p>MooTools 1.3 では <code>String.prototype.contains()</code> を強制的に自分自身のものに強制したため、これに依存するウェブサイトは壊れません。しかし、このメソッドに対する <a href="http://mootools.net/core/docs/1.3.2/Types/String#String-method:-contains">MooTools 1.3 のシグニチャ</a> と ECMAScript 2015 のシグニチャでは (第 2 引数に) 違いがあることに注意して下さい。後に、 <a href="https://github.com/mootools/mootools-core/blob/master/Docs/Types/String.md#note">MooTools 1.5 以降で ES2015 仕様に一致させるためにシグニチャを変更しました。</a></p>
+## 関連情報
 
-<p>Firefox 48 で、<code>String.prototype.contains()</code> は削除されました。 <code>String.prototype.includes()</code> だけを使用してください。</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{jsxref("Array.prototype.includes()")}}</li>
- <li>{{jsxref("TypedArray.prototype.includes()")}}</li>
- <li>{{jsxref("String.prototype.indexOf()")}}</li>
- <li>{{jsxref("String.prototype.lastIndexOf()")}}</li>
- <li>{{jsxref("String.prototype.startsWith()")}}</li>
- <li>{{jsxref("String.prototype.endsWith()")}}</li>
-</ul>
+- `String.prototype.includes` のポリフィルは [`core-js`](https://github.com/zloirock/core-js#ecmascript-string-and-regexp) で利用できます
+- {{jsxref("Array.prototype.includes()")}}
+- {{jsxref("TypedArray.prototype.includes()")}}
+- {{jsxref("String.prototype.indexOf()")}}
+- {{jsxref("String.prototype.lastIndexOf()")}}
+- {{jsxref("String.prototype.startsWith()")}}
+- {{jsxref("String.prototype.endsWith()")}}
