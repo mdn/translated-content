@@ -47,13 +47,13 @@ translation_of: Web/API/Cache/match
 <p><strong>Note</strong>: <code>Cache.match()</code> est quasiment identique à {{domxref("Cache.matchAll()")}}, si ce n'est qu'elle est résolue en <code>response[0]</code> (la première réponse qui matche) plutôt que <code>response[]</code> (un tableau de toutes les réponses qui matchent).</p>
 </div>
 
-<h2 id="Exemples" style="line-height: 30px; font-size: 2.14285714285714rem;">Exemples</h2>
+<h2 id="Exemples">Exemples</h2>
 
 <p>Cet exemple est extrait de l'exemple <a href="https://github.com/GoogleChrome/samples/blob/gh-pages/service-worker/custom-offline-page/service-worker.js">Page hors ligne custom</a> (<a href="https://googlechrome.github.io/samples/service-worker/custom-offline-page/index.html">demo</a>).</p>
 
 <p>L'exemple suivant se sert d'un cache pour fournir les données demandées même quand une requête échoue. Une clause <code>catch()</code> est déclenchée quand l'appel à <code>fetch()</code> lève une exception. A l'intérieur de la clause <code>catch()</code>, <code>match()</code> est utilisée to pour retourner la réponse appropriée.</p>
 
-<p>Dans cet exemple, nous avons décidé que seul les documents HTML récupérés via le verbe HTTP GET seront mis en cache. Si notre condition <code>if()</code> est false, le gestionnaire fetch n'intercepte pas la requête. Si d'autres gestionnaires fetch sont enregistrés, ils ont une occasion d'appeler <code>event.respondWith()</code>. Si aucun gestionnaire fetch ne décide d'appeler <code>event.respondWith()</code>, la requête sera gérée par le navigateur comme si les service workers n'avaient pas existé. Si <code style="font-style: normal; line-height: 19.0909080505371px;">fetch()</code> retourne une réponse HTTP valide avec un code réponse dans les 4xx ou 5xx, la clause <code style="font-style: normal; line-height: 19.0909080505371px;">catch()</code> ne sera PAS appelée. </p>
+<p>Dans cet exemple, nous avons décidé que seul les documents HTML récupérés via le verbe HTTP GET seront mis en cache. Si notre condition <code>if()</code> est false, le gestionnaire fetch n'intercepte pas la requête. Si d'autres gestionnaires fetch sont enregistrés, ils ont une occasion d'appeler <code>event.respondWith()</code>. Si aucun gestionnaire fetch ne décide d'appeler <code>event.respondWith()</code>, la requête sera gérée par le navigateur comme si les service workers n'avaient pas existé. Si <code>fetch()</code> retourne une réponse HTTP valide avec un code réponse dans les 4xx ou 5xx, la clause <code>catch()</code> ne sera PAS appelée. </p>
 
 <pre class="brush: js">self.addEventListener('fetch', function(event) {
   // We only want to call event.respondWith() if this is a GET request for an HTML document.

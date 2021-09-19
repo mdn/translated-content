@@ -136,7 +136,7 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.mozGetUserMedia || 
 
 <p>Selon le type de connexion, vous devez passer des options.</p>
 
-<pre class="brush: js" lang="javascript">var options = {
+<pre class="brush: js">var options = {
     optional: [
         {DtlsSrtpKeyAgreement: true},
         {RtpDataChannels: true}
@@ -151,7 +151,7 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.mozGetUserMedia || 
 
 <p>Après avoir créé la connexion et en passant par les serveurs STUN et TURN disponibles, un événement sera déclenché une fois que le framework ICE aura trouvé certains « candidats » qui permettront de vous connecter avec un pair. Ceci est reconnu comme étant un candidat ICE et exécute une fonction de rappel sur PeerConnection#onicecandidate.</p>
 
-<pre class="brush: js" lang="javascript">pc.onicecandidate = function (e) {
+<pre class="brush: js">pc.onicecandidate = function (e) {
     // candidate exists in e.candidate
     if (e.candidate == null) { return }
     send("icecandidate", JSON.stringify(e.candidate));
@@ -170,7 +170,7 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.mozGetUserMedia || 
 
 <p>La structure de la base de données ressemble à ceci :</p>
 
-<pre class="brush: js" lang="json">{
+<pre class="brush: js">{
     "": {
         "candidate:": …
         "offer": …
@@ -186,7 +186,7 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.mozGetUserMedia || 
 
 <p>Un échange nécessite une offre d'un pair, alors l'autre pair doit recevoir l'offre et offrir en retour une réponse.</p>
 
-<pre class="brush: js" lang="javascript">pc.createOffer(function (offer) {
+<pre class="brush: js">pc.createOffer(function (offer) {
     pc.setLocalDescription(offer);
 
     send("offer", JSON.stringify(offer));
@@ -196,7 +196,7 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.mozGetUserMedia || 
 
 <p>S'il y avait un problème lors de la génération d’une offre, cette méthode sera exécutée avec les détails de l'erreur comme premier argument.</p>
 
-<pre class="brush: js" lang="javascript">var errorHandler = function (err) {
+<pre class="brush: js">var errorHandler = function (err) {
     console.error(err);
 };</pre>
 
@@ -204,7 +204,7 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.mozGetUserMedia || 
 
 <p>Options pour l'offre SDP.</p>
 
-<pre class="brush: js" lang="javascript">var constraints = {
+<pre class="brush: js">var constraints = {
     mandatory: {
         OfferToReceiveAudio: true,
         OfferToReceiveVideo: true
@@ -219,7 +219,7 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.mozGetUserMedia || 
 
 <p>Une réponse SDP est comme une offre, mais est une réponse ; un peu comme répondre au téléphone. Nous pouvons seulement émettre une réponse qu’après avoir reçu une offre.</p>
 
-<pre class="brush: js" lang="javascript">recv("offer", function (offer) {
+<pre class="brush: js">recv("offer", function (offer) {
     offer = new SessionDescription(JSON.parse(offer))
     pc.setRemoteDescription(offer);
 
@@ -236,7 +236,7 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.mozGetUserMedia || 
 
 <p><em>Note: Au moment de l’écriture de cet article, l'interopérabilité entre Chrome et Firefox n'est pas possible avec DataChannels. Chrome prend en charge un protocole similaire mais privé et soutiendra le protocole standard bientôt.</em></p>
 
-<pre class="brush: js" lang="javascript">var channel = pc.createDataChannel(channelName, channelOptions);</pre>
+<pre class="brush: js">var channel = pc.createDataChannel(channelName, channelOptions);</pre>
 
 <p>L'auteur de l'offre doit être le pair qui crée le canal. Le répondeur recevra le canal dans le rappel (callback) <code>ondatachannel</code> dans le PeerConnection. Vous devez appeler <code>createDataChannel()</code> une fois avant de créer l'offre.</p>
 
@@ -246,7 +246,7 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.mozGetUserMedia || 
 
 <h3 id="channelOptions"><strong><code>channelOptions</code></strong></h3>
 
-<pre class="brush: js" lang="javascript">var channelOptions = {};</pre>
+<pre class="brush: js">var channelOptions = {};</pre>
 
 <p>Ces options ne sont pas bien supportées sur Chrome donc vous pouvez laisser ça vide pour l'instant. Vérifiez le <a href="http://dev.w3.org/2011/webrtc/editor/webrtc.html#attributes-7">RFC</a> pour plus d'informations sur les options.</p>
 
@@ -260,13 +260,13 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.mozGetUserMedia || 
 
 <p>Exécuté s'il y a une erreur de création de la connexion. Le premier argument est un objet d'erreur.</p>
 
-<pre class="brush: js" lang="javascript">channel.onerror = function (err) {
+<pre class="brush: js">channel.onerror = function (err) {
     console.error("Channel Error:", err);
 };</pre>
 
 <h4 id="onmessage"><strong><code>onmessage</code></strong></h4>
 
-<pre class="brush: js" lang="javascript">channel.onmessage = function (e) {
+<pre class="brush: js">channel.onmessage = function (e) {
     console.log("Got message:", e.data);
 }</pre>
 
@@ -280,7 +280,7 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.mozGetUserMedia || 
 
 <p>Si vous êtes le créateur du canal(l'auteur de l'offre), vous pouvez lier des événements directement à la DataChannel que vous avez créé avec <code>createChannel</code>. Si vous êtes l'auteur de la réponse, vous devez utiliser le callback <code>ondatachannel</code> dans le PeerConnection afin d'accéder au même canal.</p>
 
-<pre class="brush: js" lang="javascript">pc.ondatachannel = function (e) {
+<pre class="brush: js">pc.ondatachannel = function (e) {
     e.channel.onmessage = function () { … };
 };</pre>
 
@@ -288,7 +288,7 @@ navigator.getUserMedia = navigator.getUserMedia || navigator.mozGetUserMedia || 
 
 <h4 id="send"><strong><code>send()</code></strong></h4>
 
-<pre class="brush: js" lang="javascript">channel.send("Hi Peer!");</pre>
+<pre class="brush: js">channel.send("Hi Peer!");</pre>
 
 <p>Cette méthode vous permet d'envoyer des données directement au pair! Incroyable. Vous devez envoyer un String, Blob, ArrayBuffer ou ArrayBufferView, alors assurez-vous de "stringifier" les objets.</p>
 
@@ -313,7 +313,7 @@ navigator.getUserMedia(mediaOptions, function (stream) {
 
 <p>Les contraintes sur les types de médias que vous souhaitez renvoyer de l'utilisateur.</p>
 
-<pre class="brush: js" lang="javascript">var mediaOptions = {
+<pre class="brush: js">var mediaOptions = {
     video: true,
     audio: true
 };</pre>
@@ -330,7 +330,7 @@ navigator.getUserMedia(mediaOptions, function (stream) {
 
 <p>Ajoute le flux de <code>getUserMedia</code> au PeerConnection.</p>
 
-<pre class="brush: js" lang="javascript">pc.addStream(stream);</pre>
+<pre class="brush: js">pc.addStream(stream);</pre>
 
 <h4 id="onaddstream"><strong><code>onaddstream</code></strong></h4>
 

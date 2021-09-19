@@ -24,10 +24,10 @@ translation_of: Web/API/Element/insertAdjacentHTML
 </dl>
 
 <ul>
- <li><code style="color: red;">'beforebegin'</code> : Avant l'<code>element</code>  lui-même.</li>
- <li><code style="color: green;">'afterbegin'</code> : Juste à l'intérieur de l'<code>element</code> , avant son premier enfant.</li>
- <li><code style="color: blue;">'beforeend'</code> : Juste à l'intérieur de l'<code>element</code> , après son dernier enfant.</li>
- <li><code style="color: magenta;">'afterend'</code> : Après <code>element</code> lui-même.</li>
+ <li><code>'beforebegin'</code> : Avant l'<code>element</code>  lui-même.</li>
+ <li><code>'afterbegin'</code> : Juste à l'intérieur de l'<code>element</code> , avant son premier enfant.</li>
+ <li><code>'beforeend'</code> : Juste à l'intérieur de l'<code>element</code> , après son dernier enfant.</li>
+ <li><code>'afterend'</code> : Après <code>element</code> lui-même.</li>
 </ul>
 
 <dl>
@@ -37,17 +37,14 @@ translation_of: Web/API/Element/insertAdjacentHTML
 
 <h3 id="Visualisation_des_noms_de_position">Visualisation des noms de position</h3>
 
-<div class="wp_syntax">
-<div class="code">
-<pre>&lt;!-- <strong><code style="color: red;">beforebegin</code></strong> --&gt;
-<code style="font-weight: bold;">&lt;p&gt;</code>
-  &lt;!-- <strong><code style="color: green;">afterbegin</code></strong> --&gt;
+
+<pre>&lt;!-- beforebegin --&gt;
+&lt;p&gt;
+  &lt;!-- afterbegin --&gt;
   foo
-  &lt;!-- <strong><code style="color: blue;">beforeend</code></strong> --&gt;
-<code style="font-weight: bold;">&lt;/p&gt;</code>
-&lt;!-- <strong><code style="color: magenta;">afterend</code></strong> --&gt;</pre>
-</div>
-</div>
+  &lt;!-- beforeend --&gt;
+&lt;/p&gt;
+&lt;!-- afterend --&gt;</pre>
 
 <div class="note"><strong>Note :</strong> Les positions <code>beforebegin</code> et <code>afterend</code> ne fonctionnent que si le noeud est un arbre et a un élément parent.</div>
 

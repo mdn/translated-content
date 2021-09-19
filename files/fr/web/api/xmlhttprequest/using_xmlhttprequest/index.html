@@ -29,7 +29,7 @@ oReq.send();</pre>
 
 <h2 id="Types_de_requêtes">Types de requêtes</h2>
 
-<p>Une demande faite via XMLHttpRequest peut récupérer les données dans l'une des deux façons, de manière asynchrone ou synchrone. Le type de demande est dictée par l'argument optionnel async (le troisième argument) qui est mis sur la méthode <a href="/en-US/docs/DOM/XMLHttpRequest#open()">open()</a> XMLHttpRequest (). Si cet argument est true ou non spécifié, l'objet XMLHttpRequest est traitée de manière asynchrone, sinon le processus est effectué de façon synchrone. Une discussion détaillée et des démonstrations de ces deux types de demandes peuvent être trouvés sur la page des <a href="/en-US/docs/DOM/XMLHttpRequest/Synchronous_and_Asynchronous_Requests" style="text-decoration: underline;">requêtes synchrones et asynchrones</a>. En général, vous devriez rarement, voire jamais, utiliser requêtes synchrones.</p>
+<p>Une demande faite via XMLHttpRequest peut récupérer les données dans l'une des deux façons, de manière asynchrone ou synchrone. Le type de demande est dictée par l'argument optionnel async (le troisième argument) qui est mis sur la méthode <a href="/en-US/docs/DOM/XMLHttpRequest#open()">open()</a> XMLHttpRequest (). Si cet argument est true ou non spécifié, l'objet XMLHttpRequest est traitée de manière asynchrone, sinon le processus est effectué de façon synchrone. Une discussion détaillée et des démonstrations de ces deux types de demandes peuvent être trouvés sur la page des <a href="/en-US/docs/DOM/XMLHttpRequest/Synchronous_and_Asynchronous_Requests">requêtes synchrones et asynchrones</a>. En général, vous devriez rarement, voire jamais, utiliser requêtes synchrones.</p>
 
 <div class="note"><strong>Note:</strong> A partir de Gecko 30.0 {{ geckoRelease("30.0") }}, les requêtes synchrones sur le processus principal ont été dépréciées en raison de l'effet négatif sur l'expérience utilisateur.</div>
 
@@ -181,7 +181,7 @@ function loadEnd(e) {
 
 <h3 id="Rien_de_plus_que_XMLHttpRequest">Rien de plus que <code>XMLHttpRequest</code></h3>
 
-<p>Envoyer des formulaires sans l'API <a href="/en-US/docs/DOM/XMLHttpRequest/FormData"><code>FormData</code></a> ne demande rien de plus, si ce n'est l'API <a href="/en-US/docs/DOM/FileReader" style="line-height: 1.5;"><code style="font-size: 14px;">FileReader</code></a>, mais seulement <strong style="line-height: 1.5;">si vous voulez envoyer un fichier ou plus</strong>.</p>
+<p>Envoyer des formulaires sans l'API <a href="/en-US/docs/DOM/XMLHttpRequest/FormData"><code>FormData</code></a> ne demande rien de plus, si ce n'est l'API <a href="/en-US/docs/DOM/FileReader"><code >FileReader</code></a>, mais seulement <strong>si vous voulez envoyer un fichier ou plus</strong>.</p>
 
 <h4 id="Une_brève_introduction_au_méthodes_de_submission">Une brève introduction au méthodes de submission</h4>
 
@@ -194,7 +194,7 @@ function loadEnd(e) {
  <li>en utilisant la méthode <code>GET</code> (dans ce cas, l'attribut <code>enctype</code> sera ignoré).</li>
 </ul>
 
-<p>Maintenant, considérons qu'on envoie un formulaire contenant seulement deux champs, nommées <code style="font-size: 14px;">foo</code> et <code style="font-size: 14px;">baz</code>. Si vous utilisez la méthode <code style="font-size: 14px;">POST</code>, le serveur va recevoir une chaîne similaire à l'un des trois suivantes, en fonction de l'encodage que vous utilisez :</p>
+<p>Maintenant, considérons qu'on envoie un formulaire contenant seulement deux champs, nommées <code >foo</code> et <code >baz</code>. Si vous utilisez la méthode <code >POST</code>, le serveur va recevoir une chaîne similaire à l'un des trois suivantes, en fonction de l'encodage que vous utilisez :</p>
 
 <ul>
  <li>
@@ -216,7 +216,7 @@ The second line.</pre>
  <li>
   <p>Méthode: <code>POST</code>; Encodage: <code>multipart/form-data</code>:</p>
 
-  <pre style="height: 100px; overflow: auto;">Content-Type: multipart/form-data; boundary=---------------------------314911788813839
+  <pre>Content-Type: multipart/form-data; boundary=---------------------------314911788813839
 
 -----------------------------314911788813839
 Content-Disposition: form-data; name="foo"
@@ -240,7 +240,7 @@ The second line.
 
 <p>Tout celà est fait automatiquement par le serveur quand vous envoyez un {{ HTMLElement("form") }}. Mais si vous voulez faire la même chose en utilisant JavaScript vous devez <em>tout</em> dire à l'interprète. Pour celà, la manière d'envoyer des formulaires en <em>pure</em> AJAX est trop compliquée pour être expliquée ici. Pour cette raison, nous avons posté un <strong>framework complet (mais tout de  même didactique)</strong>, qui est capable d'utiliser les quatres méthodes de <em>submit</em> , et aussi de <strong>transférer des fichiers</strong>:</p>
 
-<div style="height: 400px; margin-bottom: 12px; overflow: auto;">
+
 <pre class="brush: html">&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -483,7 +483,6 @@ var AJAXSubmit = (function () {
 
 &lt;/body&gt;
 &lt;/html&gt;</pre>
-</div>
 
 <p>Pour le tester, créez une page nommée <strong>register.php</strong> (qui est l'attribut <code>action</code> des formulaires d'exemple) et mettez y ce contenu <em>minimaliste</em>:</p>
 
@@ -526,7 +525,6 @@ print_r($_FILES);
 
 <p>Le constructeur de <a href="/en-US/docs/DOM/XMLHttpRequest/FormData"><code>FormData</code></a> vous permet de compiler des paires de clé/valeur à envoyer via <code>XMLHttpRequest</code>. Il est principalement prévu pour être utilisé dans l'envoi de formulaires, mais il peut être utilisé indépendemment des formulaires dans le but de transmettre des données associées. Les données transmises sont de même format que la méthode <code>submit()</code> d'un formulaire utiliserait pour envoyer les données si l'encodage du formulaire était configuré à "multipart/form-data". Les objets FormData peuvent être utilisés de nombreuses manières avec XMLHttpRequest. Pour des exemples et des explications sur la manière d'utiliser FormData avec une XMLHttpRequest, jettez un oeil sur la page <a href="/en-US/docs/DOM/XMLHttpRequest/FormData/Using_FormData_Objects">Utiliser les Objets FormData</a>. Pour des raisons didactiques seulement, nous postons ici <strong>une</strong> <strong>traduction</strong> <strong><a href="#A_little_vanilla_framework">du précédent exemple</a> transformé pour utiliser l'API <code>FormData</code></strong>. Notez la brièveté du code :</p>
 
-<div style="height: 400px; margin-bottom: 12px; overflow: auto;">
 <pre class="brush: html">&lt;!doctype html&gt;
 &lt;html&gt;
 &lt;head&gt;
@@ -642,7 +640,6 @@ function AJAXSubmit (oFormElement) {
 
 &lt;/body&gt;
 &lt;/html&gt;</pre>
-</div>
 
 <div class="note"><strong>Note:</strong> Comme déjà dit, les objets<strong> {{domxref("FormData")}} ne sont pas des objets <a href="/en-US/docs/JavaScript/Reference/Global_Objects/JSON/stringify">chainifiables</a></strong>. Si vous voulez chainifier les données soumises, utilisez <a href="#A_little_vanilla_framework">l'exemple précédent en <em>pure</em>-AJAX</a>. Notez également que, bien que dans cet exemple il y a quelques champs <code>file</code> {{ HTMLElement("input") }}, <strong>quand vous soumettez un formulaire via l'API <code>FormData</code> vous n'avez pas besoin d'utiliser l'API <a href="/en-US/docs/DOM/FileReader"><code>FileReader</code></a> également </strong>: les fichiers sont automatiquement chargés et transférés.</div>
 
@@ -691,7 +688,7 @@ ifHasChanged("mapage.html", function (nModif, nVisit) {
   alert("La page '" + this.filepath + "' a été changée le " + (new Date(nModif)).toLocaleString() + "!");
 });</pre>
 
-<p>Si vous voulez savoir <strong>si la <em>page courante</em> a changée</strong>, lisez l'article à propos de la propriété <a href="/en-US/docs/Web/API/document.lastModified" style="line-height: 1.5;"><code style="font-size: 14px;">document.lastModified</code></a>.</p>
+<p>Si vous voulez savoir <strong>si la <em>page courante</em> a changée</strong>, lisez l'article à propos de la propriété <a href="/en-US/docs/Web/API/document.lastModified"><code >document.lastModified</code></a>.</p>
 
 <h2 id="Cross-site_XMLHttpRequest">Cross-site XMLHttpRequest</h2>
 
@@ -724,7 +721,7 @@ oReq.send(null);</pre>
 
 <h3 id="XMLHttpRequests_stoppées">XMLHttpRequests stoppées</h3>
 
-<p>Si vous vous retrouvez avec une XMLHttpRequest ayant <code style="font-size: 14px;">status=0</code> et <code style="font-size: 14px;">statusText=null</code>, cela signifie que la requête n'a pas été autorisée à être effectuée. Elle a été <code style="font-size: 14px;"><a href="http://www.w3.org/TR/XMLHttpRequest/#dom-xmlhttprequest-unsent">UNSENT</a></code>. Une cause probable est lorsque <a href="http://www.w3.org/TR/XMLHttpRequest/#xmlhttprequest-origin" style="line-height: 1.5; text-decoration: underline; outline: dotted 1px; outline-offset: 0pt;">l'origine <code style="font-size: 14px;">XMLHttpRequest</code> </a> (lors de la création de l'objet XMLHttpRequest) a changé quand l'objet XMLHttpRequest est déjà open(). Ce cas peut se produire par exemple lorsque l'on a une XMLHttpRequest qui est lancée sur un évènement onunload d'une fenêtre: l'objet XMLHttpRequest est en fait créé lorsque la fenêtre sur le point de se fermer est toujours là, et la demande est envoyée (c'est à dire open()) lorsque cette fenêtre a perdu son focus et une autre fenêtre a potentiellement pris le focus. La manière d'éviter ce problème est de fixer un écouteur sur l'évènement "activate" de la nouvelle fenêtre qui se lance quand l'ancienne fenêtre a son événement "unload" lancé.</p>
+<p>Si vous vous retrouvez avec une XMLHttpRequest ayant <code >status=0</code> et <code >statusText=null</code>, cela signifie que la requête n'a pas été autorisée à être effectuée. Elle a été <code ><a href="http://www.w3.org/TR/XMLHttpRequest/#dom-xmlhttprequest-unsent">UNSENT</a></code>. Une cause probable est lorsque <a href="http://www.w3.org/TR/XMLHttpRequest/#xmlhttprequest-origin">l'origine <code >XMLHttpRequest</code> </a> (lors de la création de l'objet XMLHttpRequest) a changé quand l'objet XMLHttpRequest est déjà open(). Ce cas peut se produire par exemple lorsque l'on a une XMLHttpRequest qui est lancée sur un évènement onunload d'une fenêtre: l'objet XMLHttpRequest est en fait créé lorsque la fenêtre sur le point de se fermer est toujours là, et la demande est envoyée (c'est à dire open()) lorsque cette fenêtre a perdu son focus et une autre fenêtre a potentiellement pris le focus. La manière d'éviter ce problème est de fixer un écouteur sur l'évènement "activate" de la nouvelle fenêtre qui se lance quand l'ancienne fenêtre a son événement "unload" lancé.</p>
 
 <h2 id="Utiliser_XMLHttpRequest_depuis_un_module_JavaScript_un_composant_XPCOM">Utiliser XMLHttpRequest depuis un module JavaScript / un composant XPCOM</h2>
 

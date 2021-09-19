@@ -6,8 +6,7 @@ tags:
 translation_of: Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ
 original_slug: FAQ_sur_les_transformations_XSL_dans_Mozilla
 ---
-<p>
-</p>
+
 <h4 id="Pourquoi_ma_feuille_de_style_ne_s.27applique_pas_.3F"> Pourquoi ma feuille de style ne s'applique pas ? </h4>
 <p>Vérifiez que le type MIME du document source et de la feuille de style est bien un type MIME XML, à savoir <code>text/xml</code> ou <code>application/xml</code>. L'espace de nommage XSLT est <code>http://www.w3.org/1999/XSL/Transform</code>. Utilisez l'instruction de traitement <code>&lt;?xml-stylesheet ?&gt;</code> plutôt que l'élément non standard <code>xml:stylesheet</code>. Le problème le plus courant est la gestion du type MIME. Pour savoir quel type MIME est envoyé par votre serveur, consultez les Informations sur la page, utilisez une extension telle que <a href="http://livehttpheaders.mozdev.org/">LiveHTTPHeaders (en)</a> ou un gestionnaire de téléchargements comme wget. Mozilla ne chargera pas les feuilles de style XSLT depuis un domaine différent pour des raisons de sécurité.
 </p>
@@ -47,15 +46,3 @@ original_slug: FAQ_sur_les_transformations_XSL_dans_Mozilla
 <h4 id="Comment_compiler_une_version_autonome_de_TransforMiiX_.3F"> Comment compiler une version autonome de TransforMiiX ? </h4>
 <p>Voir l'article sur <a href="fr/Compilation_de_TransforMiiX">Compilation de TransforMiiX</a>.
 </p>
-<div class="originaldocinfo">
-<h2 id="Informations_sur_le_document_original"> Informations sur le document original </h2>
-<ul><li> Auteur(s) : Axel Hecht
-</li><li> Dernière mise à jour : 2 février 2005
-</li><li> Copyright : Portions of this content are © 1998–2006 by individual mozilla.org contributors; content available under a Creative Commons license
-</li></ul>
-</div>
-<p>Interwiki Languages Links
-</p>
-<div class="noinclude">
-</div>
-{{ languages( { "en": "en/XSL_Transformations_in_Mozilla_FAQ", "ja": "ja/XSL_Transformations_in_Mozilla_FAQ" } ) }}

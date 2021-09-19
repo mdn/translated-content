@@ -70,7 +70,7 @@ var request = window.indexedDB.open("MyTestDatabase", 3);
 
 <p>Vous avez vu ? Ouvrir une base de données est comme n'importe quelle autre opération — vous avez juste à le "demander".</p>
 
-<p>La requête "open" n'ouvre pas la base de données ni ne démarre une transaction aussitôt. L'appel de la fonction <code>open()</code> retourne un objet <a href="/en-US/docs/IndexedDB/IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a> avec un résultat  (success) ou une valeur d'erreur qui permet de la gérer comme un évènement. La plupart des autres fonctions asynchrones dans IndexedDB fonctionnent de la même façon ; Elles retournent un objet <a href="/en-US/docs/IndexedDB/IDBRequest"><code style="font-size: 14px; color: rgb(51, 51, 51);">IDBRequest</code></a> avec le résultat ou une erreur. Le résultat de la fonction "open" est une instance de <code style="font-size: 14px; color: rgb(51, 51, 51);"><a href="/en-US/docs/IndexedDB/IDBDatabase">IDBDatabase</a></code>.</p>
+<p>La requête "open" n'ouvre pas la base de données ni ne démarre une transaction aussitôt. L'appel de la fonction <code>open()</code> retourne un objet <a href="/en-US/docs/IndexedDB/IDBOpenDBRequest"><code>IDBOpenDBRequest</code></a> avec un résultat  (success) ou une valeur d'erreur qui permet de la gérer comme un évènement. La plupart des autres fonctions asynchrones dans IndexedDB fonctionnent de la même façon ; Elles retournent un objet <a href="/en-US/docs/IndexedDB/IDBRequest"><code>IDBRequest</code></a> avec le résultat ou une erreur. Le résultat de la fonction "open" est une instance de <code><a href="/en-US/docs/IndexedDB/IDBDatabase">IDBDatabase</a></code>.</p>
 
 <p>Le second paramètre de la méthode open est la version de la base de données. La version de la base détermine le schéma de celle-ci — Les objets stockés dans la base de données et leur structure. Si la base de données n'existe pas déjà, elle est créée via l'opération <code>open()</code>, puis, un événement <code>onupgradeneeded</code> est déclenché et vous créez le schéma de la base dans le gestionnaire pour cet événement. Si la base de données existe, mais que vous spécifiez un numéro de version plus élevé, un événement <code>onupgradeneeded</code> est déclenché  immédiatement, vous permettant de mettre à jour le schéma dans son gestionnaire – plus d'informations dans <a href="#Updating_the_version_of_the_database">Updating the version of the database</a> plus bas et la page référence {{ domxref("IDBFactory.open") }}.</p>
 
@@ -122,7 +122,7 @@ request.onsuccess = function(event) {
 
 <h3 id="Créer_ou_mettre_à_jour_une_version_de_base_de_données">Créer ou mettre à jour une version de base de données</h3>
 
-<p>Lorsque vous créez une nouvelle base de données, ou que vous augmentez le numéro de version d'une base existante (en spécifiant un numéro de version supérieur à celui que vous aviez auparavant, lors de {{ anch("Ouvrir une base de données") }}), l'évènement <code style="font-size: 14px; color: rgb(51, 51, 51);">onupgradeneeded</code> sera déclenché et un objet <code>IDBVersionChangeEvent</code> sera passé à un évènement <code>onversionchange</code> dans <code>request.result</code> (la variable <code>db</code> dans l'exemple). Dans le gestionnaire d’évènement <code>upgradeneeded</code>, vous devez créer les objets de stockage requis pour cette version de base :</p>
+<p>Lorsque vous créez une nouvelle base de données, ou que vous augmentez le numéro de version d'une base existante (en spécifiant un numéro de version supérieur à celui que vous aviez auparavant, lors de {{ anch("Ouvrir une base de données") }}), l'évènement <code>onupgradeneeded</code> sera déclenché et un objet <code>IDBVersionChangeEvent</code> sera passé à un évènement <code>onversionchange</code> dans <code>request.result</code> (la variable <code>db</code> dans l'exemple). Dans le gestionnaire d’évènement <code>upgradeneeded</code>, vous devez créer les objets de stockage requis pour cette version de base :</p>
 
 <pre class="brush:js;">// Cet évènement est seulement implémenté dans des navigateurs récents
 request.onupgradeneeded = function(event) {
@@ -1318,7 +1318,7 @@ input {
  <li><a href="http://www.w3.org/TR/IndexedDB/">Indexed Database API Specification</a></li>
  <li><a href="/en-US/docs/IndexedDB/Using_IndexedDB_in_chrome">Using IndexedDB in chrome</a></li>
  <li><a href="/en-US/docs/Web/API/IndexedDB_API/Using_JavaScript_Generators_in_Firefox">Using JavaScript generators in Firefox</a></li>
- <li>IndexedDB <a class="link-https" href="https://mxr.mozilla.org/mozilla-central/find?text=&amp;string=dom%2FindexedDB%2F.*%5C.idl&amp;regexp=1">interface files</a> dans le code source de Firefox</li>
+ <li>IndexedDB <a href="https://mxr.mozilla.org/mozilla-central/find?text=&amp;string=dom%2FindexedDB%2F.*%5C.idl&amp;regexp=1">interface files</a> dans le code source de Firefox</li>
 </ul>
 
 <p>Tutoriels :</p>

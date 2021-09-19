@@ -27,7 +27,7 @@ translation_of: Web/API/Document/getElementsByTagNameNS
  <li><code>name</code> est, soit le nom local des éléments à rechercher, soit la valeur spéciale <code>"*"</code> pour tous les éléments (voir <code><a href="/en/DOM/Node.localName">element.localName</a></code>).</li>
 </ul>
 
-<div class="note"><strong>Note :</strong> Tandis que la spécification W3C indique que les <code>elements</code> sont des <code>NodeList</code>, cette méthode renvoie une {{domxref("HTMLCollection")}} dans Gecko et Internet Explorer. Opera retourne une <code>NodeList</code>, mais avec une méthode implémentée <code>namedItem</code>, ce qui la rend similaire à une <code>HTMLCollection</code>. À partir de Janvier 2012, dans les navigateurs WebKit seulement, la valeur retournée est une pure <code>NodeList</code>. Voir <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=14869">bug 14869</a> pour plus de détails.</div>
+<div class="note"><strong>Note :</strong> Tandis que la spécification W3C indique que les <code>elements</code> sont des <code>NodeList</code>, cette méthode renvoie une {{domxref("HTMLCollection")}} dans Gecko et Internet Explorer. Opera retourne une <code>NodeList</code>, mais avec une méthode implémentée <code>namedItem</code>, ce qui la rend similaire à une <code>HTMLCollection</code>. À partir de Janvier 2012, dans les navigateurs WebKit seulement, la valeur retournée est une pure <code>NodeList</code>. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=14869">bug 14869</a> pour plus de détails.</div>
 
 <h2 id="Example">Exemple</h2>
 
@@ -37,7 +37,7 @@ translation_of: Web/API/Document/getElementsByTagNameNS
 
 <p>Pour utiliser l'exemple suivant, il suffit de le copier/coller dans un nouveau fichier enregistré avec l'extension .xhtml.</p>
 
-<pre href="http://www.w3.org/1999/xhtml" rel="freelink">http://www.w3.org/1999/xhtml</a>"&gt;
+<pre>http://www.w3.org/1999/xhtml</a>"&gt;
 
 &lt;head&gt;
 &lt;title&gt;getElementsByTagNameNS example&lt;/title&gt;
@@ -46,7 +46,7 @@ translation_of: Web/API/Document/getElementsByTagNameNS
 
 function getAllParaElems()
 {
-  var allParas = document.getElementsByTagNameNS("<a href="http://www.w3.org/1999/xhtml" rel="freelink">http://www.w3.org/1999/xhtml</a>", "p");
+  var allParas = document.getElementsByTagNameNS("<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>", "p");
 
   var num = allParas.length;
 
@@ -57,7 +57,7 @@ function getAllParaElems()
 function div1ParaElems()
 {
   var div1 = document.getElementById("div1")
-  var div1Paras = div1.getElementsByTagNameNS("<a href="http://www.w3.org/1999/xhtml" rel="freelink">http://www.w3.org/1999/xhtml</a>", "p");
+  var div1Paras = div1.getElementsByTagNameNS("<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>", "p");
 
   var num = div1Paras.length;
 
@@ -68,7 +68,7 @@ function div1ParaElems()
 function div2ParaElems()
 {
   var div2 = document.getElementById("div2")
-  var div2Paras = div2.getElementsByTagNameNS("<a href="http://www.w3.org/1999/xhtml" rel="freelink">http://www.w3.org/1999/xhtml</a>", "p");
+  var div2Paras = div2.getElementsByTagNameNS("<a href="http://www.w3.org/1999/xhtml">http://www.w3.org/1999/xhtml</a>", "p");
 
   var num = div2Paras.length;
 

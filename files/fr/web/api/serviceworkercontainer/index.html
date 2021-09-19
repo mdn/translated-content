@@ -13,7 +13,7 @@ translation_of: Web/API/ServiceWorkerContainer
 
 <dl>
  <dt>{{domxref("ServiceWorkerContainer.controller")}} {{readonlyinline}}</dt>
- <dd>Retourne un objet {{domxref("ServiceWorker")}} si son état est <code>activated</code> (le même objet retourné par {{domxref("ServiceWorkerRegistration.active")}}). Cette propriété retourne <code style="font-style: normal;">null</code> si la requête est un rechargement forcé (<em>Majuscule</em> + rechargement) ou si il n'y a pas de worker actif.</dd>
+ <dd>Retourne un objet {{domxref("ServiceWorker")}} si son état est <code>activated</code> (le même objet retourné par {{domxref("ServiceWorkerRegistration.active")}}). Cette propriété retourne <code>null</code> si la requête est un rechargement forcé (<em>Majuscule</em> + rechargement) ou si il n'y a pas de worker actif.</dd>
 </dl>
 
 <dl>
@@ -38,9 +38,9 @@ translation_of: Web/API/ServiceWorkerContainer
  <dt>{{domxref("ServiceWorkerContainer.register", "ServiceWorkerContainer.register()")}} </dt>
  <dd>Crée ou met à jour un {{domxref("ServiceWorkerRegistration")}} pour un <code>scriptURL</code> donné.</dd>
  <dt>{{domxref("ServiceWorkerContainer.getRegistration()")}}</dt>
- <dd>Récupère un objet {{domxref("ServiceWorkerRegistration")}} dont l’URL de la portée correspond à l’URL du document fourni.  Si la méthode ne peut retourner un {{domxref("ServiceWorkerRegistration")}}, elle retourne une <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" style="text-decoration: underline;"><code>Promise</code></a>. </dd>
+ <dd>Récupère un objet {{domxref("ServiceWorkerRegistration")}} dont l’URL de la portée correspond à l’URL du document fourni.  Si la méthode ne peut retourner un {{domxref("ServiceWorkerRegistration")}}, elle retourne une <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>. </dd>
  <dt>{{domxref("ServiceWorkerContainer.getRegistrations()")}}</dt>
- <dd>Retourne tous les  {{domxref("ServiceWorkerRegistration")}} associés à un <code>ServiceWorkerContainer</code> dans un tableau. Si la méthode ne peut retourner les {{domxref("ServiceWorkerRegistration")}}, elle retourne une <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" style="text-decoration: underline;"><code>Promise</code></a>. </dd>
+ <dd>Retourne tous les  {{domxref("ServiceWorkerRegistration")}} associés à un <code>ServiceWorkerContainer</code> dans un tableau. Si la méthode ne peut retourner les {{domxref("ServiceWorkerRegistration")}}, elle retourne une <a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"><code>Promise</code></a>. </dd>
 </dl>
 
 <h2 id="Exemples">Exemples</h2>

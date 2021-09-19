@@ -65,7 +65,7 @@ Connection: Upgrade
 
 </strong></pre>
 
-<p>En sus, le serveur peut décider de proposer des extensions de protocoles ou des sous-protocoles à cet instant ; voir <a href="#Miscellaneous">Miscellaneous</a> pour les détails. L'entête Sec-WebSocket-Accept nous intéresse ici : le serveur doit la former depuis l'entête Sec-WebSocket-Key envoyée précédemment par le client. Pour l'obtenir, vous devez concaténater (<em>rassembler</em>) la valeur de <em>Sec-WebSocket-Key</em> et "<em>258EAFA5-E914-47DA-95CA-C5AB0DC85B11</em>" (valeur fixée par défaut : c'est une "<a href="https://en.wikipedia.org/wiki/Magic_string" style="line-height: 1.5em;">magic string</a>") puis procéder au hash par la méthode <a href="https://en.wikipedia.org/wiki/SHA-1" style="line-height: 1.5em;">SHA-1</a> du résultat et retourner le format au format <a href="https://en.wikipedia.org/wiki/Base64" style="line-height: 1.5em;">base64</a>. </p>
+<p>En sus, le serveur peut décider de proposer des extensions de protocoles ou des sous-protocoles à cet instant ; voir <a href="#Miscellaneous">Miscellaneous</a> pour les détails. L'entête Sec-WebSocket-Accept nous intéresse ici : le serveur doit la former depuis l'entête Sec-WebSocket-Key envoyée précédemment par le client. Pour l'obtenir, vous devez concaténater (<em>rassembler</em>) la valeur de <em>Sec-WebSocket-Key</em> et "<em>258EAFA5-E914-47DA-95CA-C5AB0DC85B11</em>" (valeur fixée par défaut : c'est une "<a href="https://en.wikipedia.org/wiki/Magic_string">magic string</a>") puis procéder au hash par la méthode <a href="https://en.wikipedia.org/wiki/SHA-1">SHA-1</a> du résultat et retourner le format au format <a href="https://en.wikipedia.org/wiki/Base64">base64</a>. </p>
 
 <div class="note">
 <p><strong>Pour information / pour mémoire :</strong> Ce processus qui peut paraître inutilement complexe, permet de certifier que le serveur et le client sont bien sur une base WebSocket et non une requête HTTP  (qui serait alors mal interprétée). </p>
@@ -93,7 +93,7 @@ Connection: Upgrade
 
 <p>Chaque trame (dans un sens ou dans un autre) suit le schéma suivant : </p>
 
-<pre style="float: left; margin-right: 20px;"> <strong>0</strong>               <strong>1</strong>               <strong>2</strong>               3
+<pre> <strong>0</strong>               <strong>1</strong>               <strong>2</strong>               3
  0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7 0 1 2 3 4 5 6 7
 +-+-+-+-+-------+-+-------------+-------------------------------+
 |F|R|R|R| opcode|M| Payload len |    Extended payload length    |
@@ -158,7 +158,7 @@ for (var i = 0; i &lt; ENCODED.length; i++) {
 
 <p>Souvenez-vous de l'intérêt de l'opcode et ce qu'il implique dans l'échange des trames. Pour <em>0x1 </em>c'est du texte, pour <em>0x2 </em>des données binaires, etc. Toutefois pour <em>0x0</em>, la frame est dite "continue" (elle s'ajoute à la précédente). En voici un exemple plus clair, où il y a en réalité deux textes de message (sur 4 trames différentes) : </p>
 
-<pre style="font-size: 14px;"><strong>Client:</strong> FIN=1, opcode=0x1, msg="hello"
+<pre><strong>Client:</strong> FIN=1, opcode=0x1, msg="hello"
 <strong>Server:</strong> <em>(process complete message immediately) </em>Hi.
 <strong>Client:</strong> FIN=0, opcode=0x1, msg="and a"
 <strong>Server:</strong> <em>(listening, new message containing text started)</em>

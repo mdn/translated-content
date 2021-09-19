@@ -5,7 +5,7 @@ translation_of: Web/API/ServiceWorkerRegistration/active
 ---
 <div>{{SeeCompatTable}}{{APIRef("Service Workers API")}}</div>
 
-<p>La propriété <strong><code>active</code></strong> de l’interface {{domxref("ServiceWorkerRegistration")}} retourne un <em>service worker</em> dont le {{domxref("ServiceWorker.state")}} est <code style="font-style: normal;">activating</code> ou <code style="font-style: normal;">activated</code>. Cette propriété est initialement définie à <code style="font-style: normal;">null</code>.</p>
+<p>La propriété <strong><code>active</code></strong> de l’interface {{domxref("ServiceWorkerRegistration")}} retourne un <em>service worker</em> dont le {{domxref("ServiceWorker.state")}} est <code>activating</code> ou <code>activated</code>. Cette propriété est initialement définie à <code>null</code>.</p>
 
 <p>Un <em>worker</em> actif contrôle un {{domxref("ServiceWorkerClient")}} si l’URL du client appartient au domaine de l’inscription (l’option <code>scope</code> définie lorsque {{domxref("ServiceWorkerContainer.register")}} est initialement appelé.)</p>
 
@@ -15,14 +15,14 @@ translation_of: Web/API/ServiceWorkerRegistration/active
 
 <h2 id="Syntax">Syntaxe</h2>
 
-<pre class="syntaxbox" style="font-size: 14px;">sw = ServiceWorker.active
+<pre class="syntaxbox">sw = ServiceWorker.active
 </pre>
 
 <h3 id="Valeur">Valeur</h3>
 
 <p>Un objet {{domxref("ServiceWorker")}}, si le <em>worker</em> est actuellement dans un état <code>activating</code> ou <code>activated</code>.</p>
 
-<h2 id="Spécifications" style="line-height: 30px; font-size: 2.14285714285714rem;">Spécifications</h2>
+<h2 id="Spécifications">Spécifications</h2>
 
 <div> </div>
 

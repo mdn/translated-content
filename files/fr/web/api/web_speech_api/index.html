@@ -11,15 +11,15 @@ translation_of: Web/API/Web_Speech_API
 ---
 <div>{{DefaultAPISidebar("Web Speech API")}}{{seecompattable}}</div>
 
-<p>L'API <em lang="en">Web Speech</em> permet d'intégrer des données liées à la voix dans des applications web. L'API <em lang="en">Web Speech</em> se compose de deux parties : <em lang="en">SpeechSynthesis</em> (synthèse vocale) et <em lang="en">SpeechRecognition</em> (reconnaissance vocale asynchrone).</p>
+<p>L'API <i lang="en">Web Speech</i> permet d'intégrer des données liées à la voix dans des applications web. L'API <i lang="en">Web Speech</i> se compose de deux parties : <i lang="en">SpeechSynthesis</i> (synthèse vocale) et <i lang="en">SpeechRecognition</i> (reconnaissance vocale asynchrone).</p>
 
 <h2 id="Concepts_et_usages_de_lAPI_Web_Speech">Concepts et usages de l'API Web Speech</h2>
 
-<p>L'API <em lang="en">Web Speech</em> rend les applications web capables de manipuler des données liées à la voix. Cette API se compose de deux parties :</p>
+<p>L'API <i lang="en">Web Speech</i> rend les applications web capables de manipuler des données liées à la voix. Cette API se compose de deux parties :</p>
 
 <ul>
- <li>La reconnaissance vocale (<em lang="en">Speech recognition</em>) est accessible via l'interface {{domxref("SpeechRecognition")}} qui fournit la capacité de reconnaitre la voix dans une source audio (normalement grâce à l'outil par défaut de reconnaissance vocale de l'appareil) et de réagir de façon pertinente. En général, on utilisera le constructeur de l'interface pour créer un nouvel objet {{domxref("SpeechRecognition")}} qui a un nombre de gestionnaires d'événements disponibles pour détecter lorsque de la parole arrive dans le micro de l'appareil. L'interface {{domxref("SpeechGrammar")}} représente un conteneur pour une série de règles de grammaire que votre application devrait reconnaître. La grammaire est définie en utilisant <a href="http://www.w3.org/TR/jsgf/">JSpeech Grammar Format</a> (<strong>JSGF</strong>).</li>
- <li>La synthèse vocale (<em lang="en">Speech synthesis</em>) est disponible via l'interface {{domxref("SpeechSynthesis")}}, un composant qui permet aux programmes de vocaliser leur contenu textuel (normalement grâce au synthétiseur vocal par défaut de l'appareil). Differents types de voix sont disponibles dans les objets {{domxref("SpeechSynthesisVoice")}}, et les différentes parties de texte à vocaliser sont interprétés par les objets {{domxref("SpeechSynthesisUtterance")}}. On peut les faire vocaliser en les passant à la méthode {{domxref("SpeechSynthesis.speak()")}}.</li>
+ <li>La reconnaissance vocale (<i lang="en">Speech recognition</i>) est accessible via l'interface {{domxref("SpeechRecognition")}} qui fournit la capacité de reconnaitre la voix dans une source audio (normalement grâce à l'outil par défaut de reconnaissance vocale de l'appareil) et de réagir de façon pertinente. En général, on utilisera le constructeur de l'interface pour créer un nouvel objet {{domxref("SpeechRecognition")}} qui a un nombre de gestionnaires d'événements disponibles pour détecter lorsque de la parole arrive dans le micro de l'appareil. L'interface {{domxref("SpeechGrammar")}} représente un conteneur pour une série de règles de grammaire que votre application devrait reconnaître. La grammaire est définie en utilisant <a href="http://www.w3.org/TR/jsgf/">JSpeech Grammar Format</a> (<strong>JSGF</strong>).</li>
+ <li>La synthèse vocale (<i lang="en">Speech synthesis</i>) est disponible via l'interface {{domxref("SpeechSynthesis")}}, un composant qui permet aux programmes de vocaliser leur contenu textuel (normalement grâce au synthétiseur vocal par défaut de l'appareil). Differents types de voix sont disponibles dans les objets {{domxref("SpeechSynthesisVoice")}}, et les différentes parties de texte à vocaliser sont interprétés par les objets {{domxref("SpeechSynthesisUtterance")}}. On peut les faire vocaliser en les passant à la méthode {{domxref("SpeechSynthesis.speak()")}}.</li>
 </ul>
 
 <p>Pour plus de détails concernant ces fonctionnalités, voir <a href="/fr/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API">Using the Web Speech API.</a></p>
@@ -90,11 +90,11 @@ translation_of: Web/API/Web_Speech_API
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 
-<h3 id="SpeechRecognition"><em lang="en"><code>SpeechRecognition</code></em></h3>
+<h3 id="SpeechRecognition"><i lang="en"><code>SpeechRecognition</code></i></h3>
 
 <p>{{Compat("api.SpeechRecognition", 0)}}</p>
 
-<h3 id="SpeechSynthesis"><em lang="en"><code>SpeechSynthesis</code></em></h3>
+<h3 id="SpeechSynthesis"><i lang="en"><code>SpeechSynthesis</code></i></h3>
 
 <p>{{Compat("api.SpeechSynthesis", 0)}}</p>
 

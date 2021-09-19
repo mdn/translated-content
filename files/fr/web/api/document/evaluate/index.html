@@ -25,7 +25,7 @@ translation_of: Web/API/Document/evaluate
 
 <ul>
  <li><code>xpathExpression</code> est une chaîne de caractères représentant le XPath à évaluer.</li>
- <li><code>contextNode</code> spécifie le noeud de contexte pour la requête (voir <a href="http://www.w3.org/TR/xpath" rel="freelink">XPath specification</a>) . Il est courant de transmettre un document en tant que nœud de contexte.</li>
+ <li><code>contextNode</code> spécifie le noeud de contexte pour la requête (voir <a href="http://www.w3.org/TR/xpath">XPath specification</a>) . Il est courant de transmettre un document en tant que nœud de contexte.</li>
  <li><code>namespaceResolver</code> est une fonction qui recevra tous les préfixes d'espace de noms et devrait renvoyer une chaîne représentant l'URI de l'espace de noms associé à ce préfixe. Il sera utilisé pour résoudre les préfixes dans le XPath lui-même, afin qu'ils puissent être mis en correspondance avec le document. <code>null</code> est commun pour les documents HTML ou lorsque aucun préfixe d'espace de noms n'est utilisé.</li>
  <li><code>resultType</code> est un nombre entier qui correspond au type de résultat <code>XPathResult</code> à retourner. Utilisez des <a href="#Types_de_resultats">propriétés de constantes nommées</a>, comme <code>XPathResult.ANY_TYPE</code>  du constructeur de XPathResult , lequel correspond à un nombre entier compris entre 0 et 9.</li>
  <li><code>result</code> est un <code>XPathResult</code> existant à utiliser pour les résultats.  <code>null</code> est le plus commun et va créer un nouveau XPathResult</li>

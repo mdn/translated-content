@@ -14,7 +14,7 @@ original_slug: Web/Guide/API/Gamepad
 <p>L'API Gamepad introduit de nouveaux évènements à l'objet {{ domxref("Window") }} pour lire l'état des contrôleurs. En plus de ces événements, l'API ajoute aussi un objet {{ domxref("Gamepad") }} que vous pouvez utiliser pour récupérer l'état d'un contrôleur connecté, et une méthode {{ domxref("navigator.getGamepads") }} que vous pouvez utiliser pour obtenir la liste des contrôleurs connus par la page.</p>
 <h2 id="conntecting">Connexion au contrôleur</h2>
 <p>Lorsqu'un nouveau contrôleur est connecté à l'ordinateur, la page active reçoit tout d'abord un événement {{ domxref("Window.gamepadconnected") }}. Si un contrôleur est déjà connecté lorsque la page termine de charger, l'événement {{ domxref("Window.gamepadconnected") }} est envoyé à la page active lorsque l'utilisateur appuie sur un bouton ou bouge un axe.</p>
-<div class="geckoVersionNote">
+<div>
  <p>Dans Firefox, les contrôleurs ne sont rendus visibles à une page que lorsque l'utilisateur s'en sert alors que cette page est active. Cela permet d'éviter que les contrôleurs soient utilisés pour identifier l'utilisateur. Dès lors qu'un contrôleur a été utilisé, les autres contrôleurs connectés seront rendus visibles automatiquement.</p>
 </div>
 <p>Vous pouvez utiliser {{ domxref("Window.gamepadconnected") }} ainsi :</p>

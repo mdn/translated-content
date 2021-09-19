@@ -75,9 +75,9 @@ ul.addEventListener('click', hide, false);</pre>
 
 <h2 id="Notes_concernant_la_compatibilité">Notes concernant la compatibilité</h2>
 
-<p>Sur IE6-8, le modèle d'événement est différent. Les écouteurs sont attachés avec la méthode non standard <code>{{domxref('EventTarget.attachEvent')}}</code> . Dans ce modèle, l'objet événement a une propriété  <code>{{domxref('Event.srcElement')}}</code>, à la place de la propriété <code>target</code>, avec la même sémantique que <code style="font-style: normal; line-height: 1.5;">event.target</code>.</p>
+<p>Sur IE6-8, le modèle d'événement est différent. Les écouteurs sont attachés avec la méthode non standard <code>{{domxref('EventTarget.attachEvent')}}</code> . Dans ce modèle, l'objet événement a une propriété  <code>{{domxref('Event.srcElement')}}</code>, à la place de la propriété <code>target</code>, avec la même sémantique que <code>event.target</code>.</p>
 
-<pre class="brush: js" style="font-size: 14px;">function hide(e) {
+<pre class="brush: js">function hide(e) {
   // Support IE6-8
   var target = e.target || e.srcElement;
   target.style.visibility = 'hidden';

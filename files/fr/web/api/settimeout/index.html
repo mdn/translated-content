@@ -262,7 +262,7 @@ window.setTimeout("console.log('Coucou monde !');", 500);
 
 <p>Dans les navigateurs récents les appels à <code>setTimeout()/</code>{{domxref("WindowOrworkerGlobalScope.setInterval","setInterval()")}} possèdent au plus une précision de 4ms lorsque plusieurs appels imbriqués sont réalisés. Par exemple :</p>
 
-<pre class="brush: js" id="ct-0">function cb() { f(); setTimeout(cb, 0); }
+<pre class="brush: js">function cb() { f(); setTimeout(cb, 0); }
 setTimeout(cb, 0);</pre>
 
 <pre class="brush: js">setInterval(f, 0);</pre>

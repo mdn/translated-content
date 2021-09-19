@@ -14,7 +14,7 @@ translation_of: Web/API/HTMLElement/click
 <h2 id="Notes">Notes</h2>
 <p>Lorsque la méthode <code>click</code> est utilisée sur des éléments où elle est gérée (par exemple un {{HTMLElement("input")}}), elle déclenche également l'évènement <code>click</code> de l'élément qui se propagera aux éléments situés plus haut dans l'arbre du document (ou la chaîne évènementielle) et déclenchera aussi leurs évènements <code>click</code>. Cependant, la propagation d'un évènement <code>click</code> ne déclenchera pas la navigation à partir d'un élément {{HTMLElement("a")}} comme si un vrai clic de souris avait été reçu.</p>
 <p>Au moment où sont écrites ces lignes (Opera Next est à la version 12.11), la méthode <code>click</code> d'Opera <strong>sera ignorée silencieusement</strong>, si executée sur un élément {{HTMLElement("input")}} avec un type "file", et une propriété <a href="/fr/docs/CSS">CSS</a> {{cssxref('display')}} à "none".</p>
-<div class="geckoVersionNote">
+<div>
  <p>{{gecko_callout_heading("5.0")}}</p>
  <p>Avant Gecko 5.0 {{geckoRelease("5.0")}}, Gecko supportait la méthode <code>click</code> qu'avec des éléments {{HTMLElement("input")}} de type
   <i>

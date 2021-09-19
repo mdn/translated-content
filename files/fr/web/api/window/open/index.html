@@ -30,7 +30,7 @@ translation_of: Web/API/Window/open
 
 <dl>
  <dt><code>strWindowName</code></dt>
- <dd>Il s'agit de la chaîne d'identification de la nouvelle fenêtre. Celle-ci peut être utilisée pour être la cible de liens et de formulaires lorsque l'attribut <code>target</code> d'un élément <code style="font-size: 1em;">&lt;a&gt;</code> ou d'un élément <code style="font-size: 1em;">&lt;form&gt;</code> est spécifié. Cette chaîne ne peut contenir d'espaces. <var>strWindowName</var> ne spécifie pas le titre de la fenêtre, juste son nom interne.</dd>
+ <dd>Il s'agit de la chaîne d'identification de la nouvelle fenêtre. Celle-ci peut être utilisée pour être la cible de liens et de formulaires lorsque l'attribut <code>target</code> d'un élément <code>&lt;a&gt;</code> ou d'un élément <code>&lt;form&gt;</code> est spécifié. Cette chaîne ne peut contenir d'espaces. <var>strWindowName</var> ne spécifie pas le titre de la fenêtre, juste son nom interne.</dd>
 </dl>
 
 <dl>
@@ -89,7 +89,7 @@ function openRequestedPopup() {
 
 <p><a href="#Note_sur_les_corrections_d.27erreurs_de_position_et_de_dimension">Note sur les corrections d'erreurs de position et de dimension</a></p>
 
-<div class="bug">{{bug(176320) }}</div>
+<p>{{bug(176320) }}</p>
 
 <p><a href="#Note_sur_les_priorit.C3.A9s">Note sur les priorités</a></p>
 
@@ -179,9 +179,7 @@ function openRequestedPopup() {
  <dd>Les utilisateurs de Mozilla et Firefox peuvent obliger les nouvelles fenêtres à toujours afficher la barre d'adresse en positionnant <code>dom.disable_window_open_feature.location</code> à <var>true</var> dans <kbd>about:config</kbd> ou dans leur <a href="http://www.mozilla.org/support/firefox/edit#user">fichier user.js</a>.</dd>
  <dd>Notez qu'Internet Explorer 7 force la présence de la barre d'adresse : « Nous pensons que la barre d'adresse est aussi importante pour les utilisateurs <strong>à voir dans les fenêtres pop-up</strong>. Une barre d'adresse manquante crée une opportunité pour un fraudeur de contrefaire une adresse. Pour aider à contrer cela, <strong>IE7 va afficher une barre d'adresse sur toutes les fenêtres de navigation pour aider les utilisateurs à voir où ils sont</strong>. » provenant de <a href="http://blogs.msdn.com/ie/archive/2005/11/21.aspx">Better Website Identification</a>.</dd>
  <dd>Il est également dans les intentions de Mozilla de forcer la présence de la Barre d'adresse dans une prochaine version de Firefox :</dd>
- <dd>
- <div class="bug">{{bug(337344) }}</div>
- </dd>
+ <dd>{{bug(337344) }}</dd>
 </dl>
 
 <dl>
@@ -470,7 +468,7 @@ de Firefox&lt;/a&gt;&lt;/p&gt;
 
 <dl>
  <dt>Comment redimensionner une fenêtre en fonction de son contenu ?</dt>
- <dd>Ce n'est pas faisable de manière fiable, car les utilisateurs peuvent empêcher la fenêtre d'être redimensionnée en décochant la case <code style="white-space: normal;">Édition/Préférences/Avancé/Scripts &amp; plugins/Autoriser les scripts à/ Déplacer ou redimensionner des fenêtres existantes</code> dans Mozilla ou <code style="white-space: normal;">Outils/Options/Contenu/Activer JavaScript/Bouton Avancé/Déplacer ou redimensionner des fenêtres existantes</code> dans Firefox, ou en positionnant <code>dom.disable_window_move_resize</code> à <var>true</var> dans <kbd>about:config</kbd> ou encore en éditant leur <a href="http://www.mozilla.org/support/firefox/edit#user">fichier user.js</a>.</dd>
+ <dd>Ce n'est pas faisable de manière fiable, car les utilisateurs peuvent empêcher la fenêtre d'être redimensionnée en décochant la case <code>Édition/Préférences/Avancé/Scripts &amp; plugins/Autoriser les scripts à/ Déplacer ou redimensionner des fenêtres existantes</code> dans Mozilla ou <code>Outils/Options/Contenu/Activer JavaScript/Bouton Avancé/Déplacer ou redimensionner des fenêtres existantes</code> dans Firefox, ou en positionnant <code>dom.disable_window_move_resize</code> à <var>true</var> dans <kbd>about:config</kbd> ou encore en éditant leur <a href="http://www.mozilla.org/support/firefox/edit#user">fichier user.js</a>.</dd>
 </dl>
 
 <dl>
@@ -508,7 +506,7 @@ de Firefox&lt;/a&gt;&lt;/p&gt;
 <dl>
  <dt>Je n'arrive pas à accéder aux propriétés de la nouvelle fenêtre secondaire. J'obtiens toujours une erreur dans la console JavaScript disant « Erreur : uncaught exception: Permission denied to get property &lt;property_name or method_name&gt; ». Pourquoi cela ?</dt>
  <dd>Ceci est causé par la restriction de sécurité des scripts entre domaines (aussi appelée<em>Same Origin Policy</em> , « Politique de même origine »). Un script chargé dans une fenêtre (ou cadre) d'une origine donnée (nom de domaine) <strong>ne peut pas obtenir ou modifier</strong> des propriétés d'une autre fenêtre (ou cadre) ou les propriétés d'aucun de ses objets HTML si celle-ci provient d'une autre origine distincte (nom de domaine). C'est pourquoi, avant d'exécuter un script se référant à une fenêtre secondaire depuis la fenêtre principale, le navigateur vérifiera que la fenêtre secondaire possède le même nom de domaine.</dd>
- <dd>Plus d'informations à propos de la restriction de sécurité des scripts entre domaines : <a href="http://www.mozilla.org/projects/security/components/same-origin.html" rel="freelink">http://www.mozilla.org/projects/secu...me-origin.html</a></dd>
+ <dd>Plus d'informations à propos de la restriction de sécurité des scripts entre domaines : <a href="http://www.mozilla.org/projects/security/components/same-origin.html">http://www.mozilla.org/projects/secu...me-origin.html</a></dd>
 </dl>
 
 <h3 id="Probl.C3.A8mes_d.27utilisabilit.C3.A9">Problèmes d'utilisabilité</h3>
@@ -522,7 +520,7 @@ de Firefox&lt;/a&gt;&lt;/p&gt;
 </ul>
 
 <ul>
- <li>Il existe à présent <a class="link-https" href="https://addons.update.mozilla.org/extensions/showlist.php?application=mozilla&amp;category=Tabbed+Browsing&amp;numpg=50&amp;os=windows&amp;version=auto-detect&amp;submit=Update">plusieurs extensions à Mozilla</a> (comme Multizilla) et <a class="link-https" href="https://addons.update.mozilla.org/extensions/showlist.php?application=firefox&amp;version=1.0+&amp;os=Windows&amp;category=Tabbed%20Browsing">à Firefox</a> (comme <a class="link-https" href="https://addons.update.mozilla.org/extensions/moreinfo.php?application=firefox&amp;version=1.0%20&amp;os=Windows&amp;category=Tabbed%20Browsing&amp;numpg=10&amp;id=158">Tabbrowser preferences</a>), fonctionnalités et préférences avancées basées sur la navigation par onglets, sur la conversion des appels à window.open() en ouvertures d'onglets, et sur la neutralisation des appels à window.open(). En particulier, afin de neutraliser l'ouverture de nouvelles fenêtres non demandées (souvent présentés comme bloquant les fenêtre popups non sollicitées ou les ouvertures automatiques de fenêtres par des scripts). Parmi ces fonctionnalités qu'on peut retrouver dans des extensions, il y a l'ouverture d'un lien dans une nouvelle fenêtre ou non, dans la même fenêtre, dans un nouvel onglet ou non, en arrière-plan ou non. Coder sans réfléchir pour ouvrir de nouvelles fenêtres n'est plus assuré de succès, ne pourra pas se faire par la force, et dans le cas où l'auteur Web y parvient, ne fera qu'ennuyer la majorité des utilisateurs.</li>
+ <li>Il existe à présent <a href="https://addons.update.mozilla.org/extensions/showlist.php?application=mozilla&amp;category=Tabbed+Browsing&amp;numpg=50&amp;os=windows&amp;version=auto-detect&amp;submit=Update">plusieurs extensions à Mozilla</a> (comme Multizilla) et <a href="https://addons.update.mozilla.org/extensions/showlist.php?application=firefox&amp;version=1.0+&amp;os=Windows&amp;category=Tabbed%20Browsing">à Firefox</a> (comme <a href="https://addons.update.mozilla.org/extensions/moreinfo.php?application=firefox&amp;version=1.0%20&amp;os=Windows&amp;category=Tabbed%20Browsing&amp;numpg=10&amp;id=158">Tabbrowser preferences</a>), fonctionnalités et préférences avancées basées sur la navigation par onglets, sur la conversion des appels à window.open() en ouvertures d'onglets, et sur la neutralisation des appels à window.open(). En particulier, afin de neutraliser l'ouverture de nouvelles fenêtres non demandées (souvent présentés comme bloquant les fenêtre popups non sollicitées ou les ouvertures automatiques de fenêtres par des scripts). Parmi ces fonctionnalités qu'on peut retrouver dans des extensions, il y a l'ouverture d'un lien dans une nouvelle fenêtre ou non, dans la même fenêtre, dans un nouvel onglet ou non, en arrière-plan ou non. Coder sans réfléchir pour ouvrir de nouvelles fenêtres n'est plus assuré de succès, ne pourra pas se faire par la force, et dans le cas où l'auteur Web y parvient, ne fera qu'ennuyer la majorité des utilisateurs.</li>
 </ul>
 
 <ul>
@@ -590,10 +588,10 @@ de Firefox&lt;/a&gt;&lt;/p&gt;
    <td class="header" colspan="4">Exemples de curseurs et icônes « Nouvelle fenêtre »</td>
   </tr>
   <tr>
-   <td style="width: 25%;"></td>
-   <td style="width: 25%;"></td>
-   <td style="width: 25%;"></td>
-   <td style="width: 25%;"></td>
+   <td></td>
+   <td></td>
+   <td></td>
+   <td></td>
   </tr>
   <tr>
    <td></td>

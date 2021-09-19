@@ -24,10 +24,10 @@ translation_of: Web/API/Element/insertAdjacentText
  <dt>position</dt>
  <dd>Une {{domxref("DOMString")}} (<em>chaîne de caractères</em>) représentant la position par rapport à l'<code>element</code> ; elle doit être l'une des chaînes suivantes :
  <ul>
-  <li><code style="color: red;">'beforebegin'</code> : avant l'<code>element</code> lui-même ;</li>
-  <li><code style="color: green;">'afterbegin'</code><code style="color: green;"> </code>: à l'intérieur de l'<code>element</code>, avant son premier enfant ;</li>
-  <li><code style="color: blue;">'beforeend'</code> : à l'intérieur de l'<code>element</code>, avant son dernier enfant ;</li>
-  <li><code style="color: magenta;">'afterend'</code> : après l'<code>element</code> lui-même.</li>
+  <li><code>'beforebegin'</code> : avant l'<code>element</code> lui-même ;</li>
+  <li><code>'afterbegin'</code> : à l'intérieur de l'<code>element</code>, avant son premier enfant ;</li>
+  <li><code>'beforeend'</code> : à l'intérieur de l'<code>element</code>, avant son dernier enfant ;</li>
+  <li><code>'afterend'</code> : après l'<code>element</code> lui-même.</li>
  </ul>
  </dd>
  <dt>element</dt>
@@ -57,13 +57,13 @@ translation_of: Web/API/Element/insertAdjacentText
 
 <h3 id="Visualisation_des_noms_de_position">Visualisation des noms de position</h3>
 
-<pre>&lt;!-- <strong><code style="color: red;">beforebegin</code></strong> --&gt;
-<code style="font-weight: bold;">&lt;p&gt;</code>
-&lt;!-- <strong><code style="color: green;">afterbegin</code></strong> --&gt;
+<pre>&lt;!-- beforebegin --&gt;
+&lt;p&gt;
+&lt;!-- afterbegin> --&gt;
 machin
-&lt;!-- <strong><code style="color: blue;">beforeend</code></strong> --&gt;
-<code style="font-weight: bold;">&lt;/p&gt;</code>
-&lt;!-- <strong><code style="color: magenta;">afterend</code></strong> --&gt;</pre>
+&lt;!-- beforeend --&gt;
+&lt;/p&gt;
+&lt;!-- afterend --&gt;</pre>
 
 <div class="note"><strong>Note :</strong> Les positions <code>beforebegin</code> et <code>afterend</code> ne fonctionnent que si le noeud est dans l'arbre et possède un élément parent.</div>
 

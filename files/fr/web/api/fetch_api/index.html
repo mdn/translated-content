@@ -9,9 +9,9 @@ translation_of: Web/API/Fetch_API
 
 <h2 id="Concepts_et_usage">Concepts et usage</h2>
 
-<p>Fetch fournit une définition générique des objets {{domxref("Request")}} et {{domxref("Response")}} (et d'autres choses impliquées par les requêtes réseau). Ainsi il sera possible de les utiliser dès que nécessaire à l'avenir, même si c'est dans le cadre de <em lang="en">service workers</em>, de l'API Cache ou d'autres mécanismes similaires qui manipulent ou modifient des requêtes et des réponses, ou n'importe quelle situation qui pourrait requérir que vous génériez vos propres réponses au moyen d'un programme.</p>
+<p>Fetch fournit une définition générique des objets {{domxref("Request")}} et {{domxref("Response")}} (et d'autres choses impliquées par les requêtes réseau). Ainsi il sera possible de les utiliser dès que nécessaire à l'avenir, même si c'est dans le cadre de <i>service workers</i>, de l'API Cache ou d'autres mécanismes similaires qui manipulent ou modifient des requêtes et des réponses, ou n'importe quelle situation qui pourrait requérir que vous génériez vos propres réponses au moyen d'un programme.</p>
 
-<p>Elle fournit également une définition pour des concepts associés tels que CORS et la sémantique de l'en-tête HTTP <em lang="en">origin</em>, supplantant les définitions précédemment proposées ailleurs.</p>
+<p>Elle fournit également une définition pour des concepts associés tels que CORS et la sémantique de l'en-tête HTTP <i>origin</i>, supplantant les définitions précédemment proposées ailleurs.</p>
 
 <p>Pour effectuer une requête et obtenir une ressource, utilisez la méthode {{domxref("GlobalFetch.fetch")}}. Elle est implémentée dans de multiples interfaces, et en particulier dans {{domxref("Window")}} et {{domxref("WorkerGlobalScope")}}. Ce qui la rend disponible de la même manière dans tout contexte où vous souhaiteriez récupérer des ressources.</p>
 
@@ -19,7 +19,7 @@ translation_of: Web/API/Fetch_API
 
 <p>Une fois que la {{domxref("Response")}} a été retournée, il y a un ensemble de méthodes disponibles pour déterminer ce que doit être le contenu du corps et comment il doit être manipulé (voir {{domxref("Body")}}.)</p>
 
-<p>Vous pourriez créer une requête et une réponse directement en utilisant les constructeurs {{domxref("Request.Request","Request()")}} et {{domxref("Response.Response","Response()")}}, même s'il est improbable que vous procédiez ainsi. Il est plus probable cependant que leur création résulte des actions d'une autre API (par exemple, {{domxref("FetchEvent.respondWith")}} des <em lang="en">service workers</em>).</p>
+<p>Vous pourriez créer une requête et une réponse directement en utilisant les constructeurs {{domxref("Request.Request","Request()")}} et {{domxref("Response.Response","Response()")}}, même s'il est improbable que vous procédiez ainsi. Il est plus probable cependant que leur création résulte des actions d'une autre API (par exemple, {{domxref("FetchEvent.respondWith")}} des <i>service workers</i>).</p>
 
 <div class="note">
 <p><strong>Remarque </strong>: pour en savoir plus sur l'utilisation des fonctionnalités de l'API Fetch et en approfondir les concepts, consulter respectivement <a href="/en-US/docs/Web/API/Fetch_API/Using_Fetch">Utiliser Fetch</a> et <a href="/en-US/docs/Web/API/Fetch_API/Basic_concepts">Fetch, les concepts de base</a>.</p>

@@ -39,11 +39,11 @@ translation_of: Web/API/Element/mouseenter_event
 
 <p>Bien que {{domxref("Element/mouseover_event", "mouseover")}} soit similaire, <code>mouseenter</code> est différent et ne remonte pas dans le DOM et qu'il n'est pas envoyé aux descendants lorsque le pointeur passe d'un descendant à l'élément.</p>
 
-<div style="column-width: 455px; border: 1px solid; padding: 5px; margin-bottom: 10px;">
-<div style="text-align: center;"><img src="/@api/deki/files/5908/=mouseenter.png"></div>
+<div>
+<div><img src="/@api/deki/files/5908/=mouseenter.png"></div>
 <code>mouseenter</code> est envoyé à chaque élément de la hiérarchie lorsqu'on rentre sur eux. Voici comment 4 évènements sont envoyés aux éléments lorsque le pointeur atteint le texte.
 
-<div style="text-align: center;"><img src="/@api/deki/files/5909/=mouseover.png"></div>
+<div><img src="/@api/deki/files/5909/=mouseover.png"></div>
 Un seul évènement <code>mouseover</code> est envoyé depuis l'élément le plus profond du DOM puis remonte le DOM jusqu'à être annulé ou à atteindre la racine.</div>
 
 <p>Avec des hiérarchies profondes, le nombre d'évènements <code>mouseenter</code> envoyé peut être important et entraîner des problèmes de performances. Dans ce cas, mieux vaut écouter les évènements <code>mouseover</code>.</p>
