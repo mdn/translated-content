@@ -3,81 +3,76 @@ title: String.prototype.match()
 slug: Web/JavaScript/Reference/Global_Objects/String/match
 tags:
   - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Regular Expressions
-  - String
   - メソッド
+  - プロトタイプ
+  - リファレンス
   - 正規表現
+  - String
+browser-compat: javascript.builtins.String.match
 translation_of: Web/JavaScript/Reference/Global_Objects/String/match
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><strong><code>match()</code></strong> メソッドは、<a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions">正規表現</a>に対する<em>文字列</em>のマッチングの結果を受け取ります。</p>
+**`match()`** メソッドは、[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_Expressions)に対する*文字列*の照合結果を受け取ります。
 
-<div>{{EmbedInteractiveExample("pages/js/string-match.html", "shorter")}}</div>
+{{EmbedInteractiveExample("pages/js/string-match.html", "shorter")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+match(regexp)
+```
 
-<pre class="syntaxbox"><var>str</var>.match(<var>regexp</var>)</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `regexp`
 
-<dl>
- <dt><code><var>regexp</var></code></dt>
- <dd>正規表現オブジェクトです。</dd>
- <dd><code><var>regexp</var></code> が <code>RegExp</code> ではないオブジェクトであった場合、 {{jsxref("RegExp")}} への暗黙的な変換が <code>new RegExp(<var>regexp</var>)</code> を使用して行われます。</dd>
- <dd>一切引数を与えずに <code>match()</code> メソッドを使った場合、空の文字列 1 つを持つ {{jsxref("Array")}}、 <code>[""]</code> が得られます。</dd>
-</dl>
+  - : 正規表現オブジェクトです。
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+    `regexp` が `RegExp` ではないオブジェクトであった場合、暗黙的に {{jsxref("RegExp")}} への変換が `new RegExp(regexp)` を使用して行われます。
 
-<p>グローバル (<code>g</code>) フラグの有無によって内容が変わる {{jsxref("Array")}} を返します。一致するものが見つからなかった場合は {{jsxref("null")}} を返します。</p>
+    一切引数を与えずに `match()` メソッドを使った場合、空の文字列 1 つを持つ {{jsxref("Array")}}、 `[""]` が得られます。
 
-<ul>
- <li><code>g</code> フラグがあった場合は、正規表現全体に一致したすべての結果を返しますが、キャプチャグループは返しません。</li>
- <li><code>g</code> フラグがなかった場合、最初に完全に一致したものと、それに関するキャプチャグループを返します。この場合、返される要素には下記の追加のプロパティが存在します。</li>
-</ul>
+### 返値
 
-<h4 id="Additional_properties" name="Additional_properties">追加のプロパティ</h4>
+{{jsxref("Array")}} を返します。これはグローバル (`g`) フラグの有無によって内容が変わります。一致するものが見つからなかった場合は {{jsxref("null")}} を返します。
 
-<p>上記の説明にある通り、結果は追加のプロパティを含むことがあります。</p>
+- `g` フラグがあった場合は、正規表現全体に一致したすべての結果を返しますが、キャプチャグループは返しません。
+- `g` フラグがなかった場合、最初に完全に一致したものと、それに関するキャプチャグループを返します。この場合、返される要素には下記の追加のプロパティが存在します。
 
-<dl>
- <dt><code>groups</code></dt>
- <dd>名前付きキャプチャグループのオブジェクトで、キーは名前、値はキャプチャグループ、または名前付きキャプチャグループが定義されていない場合は {{jsxref("undefined")}} です。詳細は<a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges">グループと範囲</a>を見てください。</dd>
- <dt><code>index</code></dt>
- <dd>結果が見つかった検索のインデックスです。</dd>
- <dt><code>input</code></dt>
- <dd>検索された文字列のコピーです。</dd>
-</dl>
+#### 追加のプロパティ
 
-<h2 id="Description" name="Description">解説</h2>
+上記の説明にある通り、結果は追加のプロパティを含むことがあります。
 
-<p>正規表現が <code>g</code> フラグを含んでいない場合、 <code>str.match()</code> は {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}} と同じ結果を返します。</p>
+- `groups`
+  - : 名前付きキャプチャグループのオブジェクトで、キーは名前、値はキャプチャグループ、または名前付きキャプチャグループが定義されていない場合は {{jsxref("undefined")}} です。詳細は[グループと範囲](/ja/docs/Web/JavaScript/Guide/Regular_Expressions/Groups_and_Ranges)を参照してください。
+- `index`
+  - : 結果が見つかった検索のインデックスです。
+- `input`
+  - : 検索された文字列のコピーです。
 
-<h3 id="Other_methods" name="Other_methods">その他のメソッド</h3>
+## 解説
 
-<ul>
- <li>ある文字列が正規表現 {{jsxref("RegExp")}} に一致するかどうかを知る必要がある場合は、 {{jsxref("RegExp.prototype.test()", "RegExp.test()")}} を使用してください。</li>
- <li>一番最初に一致したものだけが欲しい場合、代わりに {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}} を使ったほうが良いかもしれません。</li>
- <li>キャプチャグループを取得する場合でグローバルフラグが設定されていた場合は、 {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}} を使用してください。</li>
-</ul>
+正規表現に `g` フラグが付いていない場合、 `str.match()` は {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}} と同じ結果を返します。
 
-<h2 id="Examples" name="Examples">例</h2>
+### その他のメソッド
 
-<h3 id="Using_match" name="Using_match">match() の使用</h3>
+- ある文字列が正規表現 {{jsxref("RegExp")}} に一致するかどうかを知る必要がある場合は、 {{jsxref("RegExp.prototype.test()", "RegExp.test()")}} を使用してください。
+- 一番最初に一致したものだけが欲しい場合、代わりに {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}} を使ったほうが良いかもしれません。
+- キャプチャグループを取得する場合でグローバルフラグが設定されていた場合は、 {{jsxref("RegExp.prototype.exec()", "RegExp.exec()")}} を使用してください。
 
-<p>以下の例において、 <code>match()</code> は '<code>Chapter</code>' とそれに続く 1 桁以上の数字、それに続く 0 回以上の小数点と数字を見つけるために使われています。</p>
+## 例
 
-<p>正規表現が <code>i</code> フラグを含んでいるので、大文字と小文字の違いは無視されます。</p>
+### match() の使用
 
-<pre class="brush: js">let str = 'For more information, see Chapter 3.4.5.1';
-let re = /see (chapter \d+(\.\d)*)/i;
-let found = str.match(re);
+以下の例において、 `match()` は '`Chapter`' とそれに続く 1 桁以上の数字、それに続く 0 回以上の小数点と数字を見つけるために使われています。
+
+正規表現が `i` フラグを含んでいるので、大文字と小文字の違いは無視されます。
+
+```js
+const str = 'For more information, see Chapter 3.4.5.1';
+const re = /see (chapter \d+(\.\d)*)/i;
+const found = str.match(re);
 
 console.log(found);
 
@@ -87,100 +82,80 @@ console.log(found);
 //        index: 22,
 //        input: 'For more information, see Chapter 3.4.5.1' ]
 
-// 'see Chapter 3.4.5.1' is the whole match.
-// 'Chapter 3.4.5.1' was captured by '(chapter \d+(\.\d)*)'.
-// '.1' was the last value captured by '(\.\d)'.
-// The 'index' property (22) is the zero-based index of the whole match.
-// The 'input' property is the original string that was parsed.</pre>
+// 'see Chapter 3.4.5.1' は一致するもの全体です。
+// 'Chapter 3.4.5.1' は '(chapter \d+(\.\d)*)' でキャプチャされたものです。
+// '.1' は '(\.\d)' でキャプチャされた最後の値です。
+// 'index' プロパティ (22) はゼロから始まる一致した位置です。
+// 'input' プロパティは解釈された元の文字列です。
+```
 
-<h3 id="Using_global_and_ignore_case_flags_with_match" name="Using_global_and_ignore_case_flags_with_match">match() での g と i フラグの使用</h3>
+### match() での g と i フラグの使用
 
-<p>以下の例は、 g と i フラグを <code>match()</code> で使用した実例です。 <code>A</code> から <code>E</code> までと、 <code>a</code> から <code>e</code> までのすべての文字が返され、それぞれが配列の個々の要素に入ります。</p>
+以下の例は、 g と i フラグを `match()` で使用した実例です。 `A` から `E` までと、 `a` から `e` までのすべての文字が返され、それぞれが配列の個々の要素に入ります。
 
-<pre class="brush: js">let str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-let regexp = /[A-E]/gi;
-let matches_array = str.match(regexp);
+```js
+const str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+const regexp = /[A-E]/gi;
+const matches_array = str.match(regexp);
 
 console.log(matches_array);
 // ['A', 'B', 'C', 'D', 'E', 'a', 'b', 'c', 'd', 'e']
-</pre>
+```
 
-<div class="blockIndicator note">
-<p><strong>メモ:</strong> {{jsxref("String.prototype.matchAll()")}} と<a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions#Advanced_Searching_With_Flags">フラグを用いた高度な検索</a>も参照してください。</p>
-</div>
+> **Note:** {{jsxref("String.prototype.matchAll()")}} と[フラグを用いた高度な検索](/ja/docs/Web/JavaScript/Guide/Regular_Expressions#advanced_searching_with_flags)も参照してください。
 
-<h3 id="Using_named_capturing_groups" name="Using_named_capturing_groups">名前付きキャプチャグループの使用</h3>
 
-<p>名前付きキャプチャグループに対応しているブラウザーでは、次のコードは "<code>fox</code>" または "<code>cat</code>" を "<code>animal</code>" という名前のグループに入れます。</p>
+### 名前付きキャプチャグループの使用
 
-<pre class="brush: js">let paragraph = 'The quick brown fox jumps over the lazy dog. It barked.';
+名前付きキャプチャグループに対応しているブラウザーでは、次のコードは "`fox`" または "`cat`" を "`animal`" という名前のグループに入れます。
 
-let capturingRegex = /(?&lt;animal&gt;fox|cat) jumps over/;
-found = paragraph.match(capturingRegex);
+```js
+const paragraph = 'The quick brown fox jumps over the lazy dog. It barked.';
+
+const capturingRegex = /(?<animal>fox|cat) jumps over/;
+const found = paragraph.match(capturingRegex);
 console.log(found.groups); // {animal: "fox"}
-</pre>
+```
 
-<h3 id="Using_match_with_no_parameter" name="Using_match()_with_no_parameter">引数なしの match() の使用</h3>
+### 引数なしの match() の使用
 
-<pre class="brush: js">let str = "Nothing will come of nothing.";
+```js
+const str = "Nothing will come of nothing.";
 
-str.match();   // returns [""]</pre>
+str.match();   // returns [""]
+```
 
-<h3 id="A_non-RegExp_object_as_the_parameter" name="A_non-RegExp_object_as_the_parameter">RegExp ではないオブジェクトを引数にする</h3>
+### RegExp ではないオブジェクトを引数にする
 
-<p>引数 <code><var>regexp</var></code> が文字列または数値である場合、暗黙に <code>new RegExp(<var>regexp</var>)</code> を使用して {{jsxref("RegExp")}} に変換されます。</p>
+引数 `regexp` が文字列または数値である場合、暗黙に `new RegExp(regexp)` を使用して {{jsxref("RegExp")}} に変換されます。
 
-<p>正の符号がついた正の数であった場合、 <code>RegExp()</code> は正の符号を無視します。</p>
+正の符号がついた正の数であった場合、 `RegExp()` は正の符号を無視します。
 
-<pre class="brush: js">let str1 = "NaN means not a number. Infinity contains -Infinity and +Infinity in JavaScript.",
+```js
+const str1 = "NaN means not a number. Infinity contains -Infinity and +Infinity in JavaScript.",
     str2 = "My grandfather is 65 years old and My grandmother is 63 years old.",
     str3 = "The contract was declared null and void.";
-str1.match("number");   // "number" is a string. returns ["number"]
-str1.match(NaN);        // the type of NaN is the number. returns ["NaN"]
-str1.match(Infinity);   // the type of Infinity is the number. returns ["Infinity"]
-str1.match(+Infinity);  // returns ["Infinity"]
-str1.match(-Infinity);  // returns ["-Infinity"]
-str2.match(65);         // returns ["65"]
-str2.match(+65);        // A number with a positive sign. returns ["65"]
-str3.match(null);       // returns ["null"]</pre>
+str1.match("number");   // "number" は文字列です。 ["number"] を返します。
+str1.match(NaN);        // NaN の型は数値です。 ["NaN"] を返します。
+str1.match(Infinity);   // Infinity の方は数値です。 ["Infinity"] を返します。
+str1.match(+Infinity);  // ["Infinity"] を返します
+str1.match(-Infinity);  // ["-Infinity"] を返します
+str2.match(65);         // ["65"] を返します
+str2.match(+65);        // 正の符号が付いた数値です。 ["65"] を返します
+str3.match(null);       // ["null"] を返します。
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.match', 'String.prototype.match')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<h3 id="Basic_support_for_match" name="Basic_support_for_match"><code>match()</code> の基本対応</h3>
+{{Compat}}
 
-<p>{{Compat("javascript.builtins.String.match")}}</p>
+## 関連情報
 
-<h3 id="Support_for_named_capture_groups" name="Support_for_named_capture_groups">名前付きキャプチャグループの対応</h3>
-
-<p>{{Compat("javascript.builtins.RegExp.named_capture_groups")}}</p>
-
-<h2 id="Firefox-specific_notes" name="Firefox-specific_notes">Firefox 特有のメモ</h2>
-
-<ul>
- <li>標準外の第二引数 <code>flags</code> が Firefox のみで <code><var>str</var>.match(<var>regexp, flags</var>)</code> のように使用できました。 Firefox 49 以降では削除されています。</li>
- <li>Firefox 27 において、このメソッドは ECMAScript 仕様書に合うように調整されました。 <code>match()</code> がグローバルの正規表現で呼び出された場合、 {{jsxref("RegExp.lastIndex")}} プロパティは (もしあれば) <code>0</code> にリセットされるようになりました (<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=501739">bug 501739</a>)。</li>
-</ul>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{jsxref("String.prototype.matchAll()")}}</li>
- <li>{{jsxref("RegExp")}}</li>
- <li>{{jsxref("RegExp.prototype.exec()")}}</li>
- <li>{{jsxref("RegExp.prototype.test()")}}</li>
-</ul>
+- {{jsxref("String.prototype.matchAll()")}}
+- {{jsxref("RegExp")}}
+- {{jsxref("RegExp.prototype.exec()")}}
+- {{jsxref("RegExp.prototype.test()")}}
