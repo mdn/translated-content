@@ -191,7 +191,7 @@ function App(props) {
 }
 ```
 
-이제 `public/index.html`을 열고 [`<title>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/title) 요소의 텍스트를 `TodoMatic`으로 바꾸세요. 이렇게 하면 우리의 애플리케이션 상단의 [`<h1>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements)과 일치할 겁니다.
+이제 `public/index.html`을 열고 [`<title>`](/en-US/docs/Web/HTML/Element/title) 요소의 텍스트를 `TodoMatic`으로 바꾸세요. 이렇게 하면 우리의 애플리케이션 상단의 [`<h1>`](/en-US/docs/Web/HTML/Element/Heading_Elements)과 일치할 겁니다.
 
 ```js
 <title>TodoMatic</title>
@@ -203,10 +203,10 @@ function App(props) {
 
 예쁘지 않고 아무런 기능도 갖추지 않았지만, 괜찮습니다! 곧 꾸밀 거니까요. 우선, JSX가 user story에 어떻게 대응하는지 살펴봅시다:
 
-- 새로운 태스크를 쓰기 위한 [`<input type="text">`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/text)와 폼(form)을 제출하기 위한 버튼을 가진 [`<form>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form) 요소가 있습니다.
+- 새로운 태스크를 쓰기 위한 [`<input type="text">`](/en-US/docs/Web/HTML/Element/input/text)와 폼(form)을 제출하기 위한 버튼을 가진 [`<form>`](/en-US/docs/Web/HTML/Element/form) 요소가 있습니다.
 - 태스크를 필터링하기 위한 여러 개의 버튼이 있습니다.
 - 태스크가 몇 개 남아있는지 알려주는 헤딩(heading)이 있습니다.
-- 순서가 매겨지지 않은 세 개의 태스크가 있습니다. 각각의 태스크는 리스트 아이템([`<li>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li))이며, 편집하거나 삭제하기 위한 버튼과 완료를 표시할 체크 박스를 가지고 있습니다.
+- 순서가 매겨지지 않은 세 개의 태스크가 있습니다. 각각의 태스크는 리스트 아이템([`<li>`](/en-US/docs/Web/HTML/Element/li))이며, 편집하거나 삭제하기 위한 버튼과 완료를 표시할 체크 박스를 가지고 있습니다.
 
 폼은 태스크를 *만들* 수 있게 해줍니다; 버튼들은 태스크들을 *필터링할* 수 있게 해줍니다; 헤딩과 리스트는 태스크들을 *읽을* 수 있게 해줍니다. 태스크를 *편집하는* UI는 현재는 없습니다. 이것도 괜찮습니다 – 나중에 만들 거니까요.
 
@@ -228,7 +228,7 @@ function App(props) {
 
 클래스 `visually-hidden`는 아직 CSS를 연결하지 않았으므로 아직 아무런 이펙트도 없습니다. 제대로 스타일을 설정하면 이 클래스를 가진 모든 요소가 시력이 정상인 사용자에게는 숨겨지며 스크린 리더 사용자에게만 보입니다 — 이 단어들은 시력이 정상인 사용자들에게 필요하지 않기 때문입니다; 단어들은 추가적인 시각적 맥락(visual context)을 가지고 있지 않은 스크린 리더 사용자들에게 버튼이 무엇을 하는지 더 많은 정보를 제공합니다.
 
-아래에서 [`<ul>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul) 요소를 찾을 수 있을 겁니다.
+아래에서 [`<ul>`](/en-US/docs/Web/HTML/Element/ul) 요소를 찾을 수 있을 겁니다.
 
 ```js
 <ul
