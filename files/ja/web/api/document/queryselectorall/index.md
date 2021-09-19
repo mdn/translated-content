@@ -3,176 +3,146 @@ title: Document.querySelectorAll()
 slug: Web/API/Document/querySelectorAll
 tags:
   - API
-  - CSS Selectors
+  - CSS セレクター
   - DOM
   - Document
   - Finding Elements
   - Locating Elements
-  - Method
-  - Reference
+  - メソッド
+  - リファレンス
   - Searching Elements
   - Selecting Elements
-  - Selectors
+  - セレクター
   - querySelectorAll
-  - メソッド
+browser-compat: api.Document.querySelectorAll
 translation_of: Web/API/Document/querySelectorAll
 ---
-<div>{{APIRef("DOM")}}</div>
+{{APIRef("DOM")}}
 
-<p>{{domxref("Document")}} の <code><strong>querySelectorAll()</strong></code> メソッドは、与えられた CSS セレクターに一致する文書中の要素のリストを示す静的な (生きていない) {{domxref("NodeList")}} を返します。</p>
+{{domxref("Document")}} の **`querySelectorAll()`** メソッドは、与えられた CSS セレクターに一致する文書中の要素のリストを示す静的な (ライブではない) {{domxref("NodeList")}} を返します。
 
-<div class="note">
-<p><strong>メモ:</strong> このメソッドは {{domxref("ParentNode")}} ミックスインの {{domxref("ParentNode.querySelectorAll", "querySelectorAll()")}} メソッドを元に実装されています。</p>
-</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+elementList = parentNode.querySelectorAll(selectors);
+```
 
-<pre class="syntaxbox"><var>elementList</var> = <em>parentNode</em>.querySelectorAll(<var>selectors</var>);
-</pre>
+### 引数
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+- `selectors`
+  - : {{domxref("DOMString")}} で、照合対象となる 1 つまたは複数のセレクターを含みます。この文字列は妥当な [CSS セレクター](/ja/docs/Web/CSS/CSS_Selectors)でなければならず、そうでない場合は `SyntaxError` 例外が発生します。セレクターの仕様と要素の識別の詳細は、[セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)を参照してください。複数のセレクターは、カンマで区切って指定することができます。
 
-<dl>
- <dt><code>selectors</code></dt>
- <dd>マッチのための 1 つまたは複数のセレクターを含む {{domxref("DOMString")}}。この文字列は妥当な <a href="/ja/docs/Web/CSS/CSS_Selectors">CSS セレクター</a>でなければならず、そうでない場合は <code>SyntaxError</code> 例外がスローされます。セレクターの仕様と要素の識別の詳細は、<a href="/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors">セレクターを使用した DOM 要素の指定</a>を参照してください。複数のセレクターを指定する際は、カンマで区切ります。</dd>
-</dl>
+> **Note:** 標準の CSS 構文に含まれない文字は、バックスラッシュ文字を使ってエスケープしなければなりません。 JavaScript でもバックスラッシュによるエスケープが使われているため、これらの文字を使った文字列リテラルを記述する際は、特に注意する必要があります。詳細は[特殊文字のエスケープ](/ja/docs/Web/API/Document/querySelector#特殊文字のエスケープ)を参照してください。
 
-<div class="note">
-<p><strong>メモ:</strong> 標準の CSS 構文の一部ではない文字は、バックスラッシュ文字を使ってエスケープしなければなりません。 JavaScript でもバックスラッシュによるエスケープが使われているため、これらの文字を使った文字列リテラルを記述する際は、特に注意する必要があります。詳細は {{anch("Escaping special characters")}} を参照してください。</p>
-</div>
+### 返値
 
-<h3 id="Return_value" name="Return_value">返値</h3>
+ライブではない {{domxref("NodeList")}} で、指定されたセレクターの少なくとも 1 つに一致する要素ごとに {{domxref("Element")}} を一つずつ含みます。または一致するものがなければ空の {{domxref("NodeList")}} です。
 
-<p>指定されたセレクターの少なくとも一つに一致する要素ごとに {{domxref("Element")}} を一つずつ含む、生きていない {{domxref("NodeList")}}、または一致するものがなければ空の {{domxref("NodeList")}} です。</p>
+> **Note:** 指定された `selectors` が [CSS 擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を含む場合、返されるリストは常に空になります。
 
-<div class="note">
-<p><strong>メモ:</strong> 指定された <code>selectors</code> が <a href="/ja/docs/Web/CSS/Pseudo-elements">CSS 擬似要素</a>を含む場合、返されるリストは常に空になります。</p>
-</div>
+### 例外
 
-<h3 id="Exceptions" name="Exceptions">例外</h3>
+- `SyntaxError`
+  - : 指定された `selectors` の構文が妥当ではない場合です。
 
-<dl>
- <dt><code>SyntaxError</code></dt>
- <dd>指定された <code>selectors</code> の構文が妥当ではない。</dd>
-</dl>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### 一致するもののリストの入手
 
-<h3 id="Obtaining_a_list_of_matches" name="Obtaining_a_list_of_matches">一致のリストの入手</h3>
+文書内のすべての {{HTMLElement("p")}} 要素の {{domxref("NodeList")}} を入手します。
 
-<p>文書内のすべての {{HTMLElement("p")}} 要素の {{domxref("NodeList")}} を入手します。</p>
+```js
+const matches = document.querySelectorAll("p");
+```
 
-<pre class="brush: js">var matches = document.querySelectorAll("p");</pre>
+次の例では、文書内にあるすべての {{HTMLElement("div")}} 要素のうち、 `note` または `alert` のいずれかのクラスを持つものリストを返します。
 
-<p>次の例では、文書内にある <code>note</code> または <code>alert</code> のいずれかのクラスを持つ、すべての {{HTMLElement("div")}} 要素のリストを返します。</p>
+```js
+const matches = document.querySelectorAll("div.note, div.alert");
+```
 
-<pre class="brush: js">var matches = document.querySelectorAll("div.note, div.alert");
-</pre>
+次に、 `<p>` 要素ののうち直近の親要素が `test` という ID を持つコンテナー内に位置し、直接の親要素が `highlighted` クラスを持つ {{HTMLElement("div")}} であるリストを取得します。
 
-<p>次に、 <code>test</code> という ID を持つコンテナ内に位置し、直接の親要素が <code>highlighted</code> クラスを持つ {{HTMLElement("div")}} である、<code>&lt;p&gt;</code> 要素のリストを取得します。</p>
+```js
+const container = document.querySelector("#test");
+const matches = container.querySelectorAll("div.highlighted > p");
+```
 
-<pre class="brush: js">var container = document.querySelector("#test");
-var matches = container.querySelectorAll("div.highlighted &gt; p");</pre>
+次の例では[属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)を使用しており、 `data-src` という名前の属性を持つ、文書内の {{HTMLElement("iframe")}} 要素のリストを返します。
 
-<p>次の例では<a href="/ja/docs/Web/CSS/Attribute_selectors">属性セレクター</a>を使用しており、 <code>data-src</code> という名前の属性を持つ、文書内の {{HTMLElement("iframe")}} 要素のリストを返します。</p>
+```js
+const matches = document.querySelectorAll("iframe[data-src]");
+```
 
-<pre class="brush: js">var matches = document.querySelectorAll("iframe[data-src]");</pre>
+次の例では、ID が `userlist` の要素の中にあり、`data-active` 属性を持ち、その値が `1` であるリスト項目のリストを返すため、属性セレクターが使用されています。
 
-<p>次の例では、ID が <code>"userlist"</code> の要素の中にあり、<code>"data-active"</code> 属性を持ち、その値が <code>"1"</code> であるリスト項目のリストを返すため、属性セレクターが使用されています。</p>
+```js
+const container = document.querySelector("#userlist");
+const matches = container.querySelectorAll("li[data-active='1']");
+```
 
-<pre class="brush: js">var container = document.querySelector("#userlist");
-var matches = container.querySelectorAll("li[data-active='1']");</pre>
+### 一致したリストへのアクセス
 
-<h3 id="Accessing_the_matches" name="Accessing_the_matches">一致したリストへのアクセス</h3>
+いったん、一致した要素の {{domxref("NodeList")}} が返されると、それをちょうど配列のように見ることができます。配列が空である (`length` プロパティが 0 である) 場合は、一致がなかったということです。
 
-<p>一旦、一致した要素の {{domxref("NodeList")}} が返されると、それをちょうど配列のように試すことができます。配列が空である (<code>length</code> プロパティが 0 である) 場合は、一致がなかったということです。</p>
+それ以外の場合は、単純に標準の配列表記を使って、リストの内容にアクセスすることができます。次のように、任意の一般的なループ処理を使うことができます。
 
-<p>それ以外の場合は、単純に標準の配列表記を使って、リストの内容にアクセスすることができます。次のように、任意の一般的なループ処理を使うことができます。</p>
-
-<pre class="brush: js">var highlightedItems = userList.querySelectorAll(".highlighted");
+```js
+const highlightedItems = userList.querySelectorAll(".highlighted");
 
 highlightedItems.forEach(function(userItem) {
   deleteUser(userItem);
-});</pre>
+});
+```
 
-<h2 id="User_notes" name="User_notes">ユーザーのメモ</h2>
+## ユーザーのメモ
 
-<p>querySelectorAll() は、最も一般的な JavaScript DOM ライブラリと異なる動作を持ち、意図しない結果をもたらすことがあります。</p>
+`querySelectorAll()` は、最も一般的な JavaScript DOM ライブラリーと異なる動作を持ち、意図しない結果をもたらすことがあります。
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<p>次の、入れ子になった 3 つの {{HTMLElement("div")}} ブロックを持つ HTML について検討します。</p>
+次の、入れ子になった 3 つの {{HTMLElement("div")}} ブロックを持つ HTML について検討します。
 
-<pre class="brush: html">&lt;div class="outer"&gt;
-  &lt;div class="select"&gt;
-    &lt;div class="inner"&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</pre>
+```html
+<div class="outer">
+  <div class="select">
+    <div class="inner">
+    </div>
+  </div>
+</div>
+```
 
-<h3 id="JavaScript">JavaScript</h3>
+### JavaScript
 
-<pre class="brush: js">var select = document.querySelector('.select');
-var inner = select.querySelectorAll('.outer .inner');
+```js
+const select = document.querySelector('.select');
+const inner = select.querySelectorAll('.outer .inner');
 inner.length; // 1 です。0 ではありません!
-</pre>
+```
 
-<p>この例では、<code>"select"</code> class を持つ <code>&lt;div&gt;</code> の文脈で <code>".outer .inner"</code> を選択するとき、<code>.outer</code> が基準となる要素（<code>.select</code> で検索される）の子孫ではないにもかかわらず、<code>".inner"</code> class を持つ要素が見つけられています。<code>querySelectorAll()</code> はデフォルトでは、セレクターの最後の要素が検索スコープに含まれているかどうかのみ検証します。</p>
+この例で、`.outer .inner` を`<div>` に `select` クラスがついたコンテキストで選択する場合、`.outer` が検索が行われる基底要素 (`.select`) の子孫ではないにもかかわらず、`.inner` クラスの要素が見つかります。既定では、`querySelectorAll()` はセレクターの最後の要素のみを、検索スコープ内にあるかどうか検証します。
 
-<p>{{cssxref(":scope")}} 擬似クラスを使うと、基準となる要素の子孫だけが一致するようになり、期待される挙動を取り戻すことができます。</p>
+{{cssxref(":scope")}} 擬似クラスを使うと、基準となる要素の子孫だけが一致するようになり、期待される挙動を取り戻すことができます。
 
-<pre class="brush: js">var select = document.querySelector('.select');
-var inner = select.querySelectorAll(':scope .outer .inner');
+```js
+const select = document.querySelector('.select');
+const inner = select.querySelectorAll(':scope .outer .inner');
 inner.length; // 0
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("DOM WHATWG", "#dom-parentnode-queryselectorall", "ParentNode.querySelectorAll()")}}</td>
-   <td>{{Spec2("DOM WHATWG")}}</td>
-   <td>Living standard</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("Selectors API Level 2", "#dom-parentnode-queryselectorall", "ParentNode.querySelectorAll()")}}</td>
-   <td>{{Spec2("Selectors API Level 2")}}</td>
-   <td>変更なし</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("DOM4", "#dom-parentnode-queryselectorall", "ParentNode.querySelectorAll()")}}</td>
-   <td>{{Spec2("DOM4")}}</td>
-   <td>初回定義</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("Selectors API Level 1", "#interface-definitions", "document.querySelector()")}}</td>
-   <td>{{Spec2("Selectors API Level 1")}}</td>
-   <td>独自の定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("api.Document.querySelectorAll")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors">セレクターを使用した DOM 要素の指定</a></li>
- <li>CSS ガイドの<a href="/ja/docs/Web/CSS/Attribute_selectors">属性セレクター</a></li>
- <li>MDN 学習エリアの<a href="/ja/docs/Learn/CSS/Introduction_to_CSS/Attribute_selectors">属性セレクター</a></li>
- <li>{{domxref("Element.querySelector()")}} および {{domxref("Element.querySelectorAll()")}}</li>
- <li>{{domxref("Document.querySelector()")}}</li>
- <li>{{domxref("DocumentFragment.querySelector()")}} および {{domxref("DocumentFragment.querySelectorAll()")}}</li>
- <li>{{domxref("ParentNode.querySelector()")}} および {{domxref("ParentNode.querySelectorAll()")}}</li>
- <li><a href="/ja/docs/Code_snippets/QuerySelector"><code>querySelector()</code> のコードスニペット</a></li>
-</ul>
+- [セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- CSS ガイドの[[属性セレクター]](/ja/docs/Web/CSS/Attribute_selectors)
+- MDN 学習領域の[[属性セレクター]](/ja/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+- {{domxref("Element.querySelector()")}} および {{domxref("Element.querySelectorAll()")}}
+- {{domxref("Document.querySelector()")}}
+- {{domxref("DocumentFragment.querySelector()")}} および {{domxref("DocumentFragment.querySelectorAll()")}}

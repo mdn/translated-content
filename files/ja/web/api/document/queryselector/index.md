@@ -15,57 +15,51 @@ tags:
 translation_of: Web/API/Document/querySelector
 browser-compat: api.Document.querySelector
 ---
-<div>{{ApiRef("DOM")}}</div>
+{{ApiRef("DOM")}}
 
-<p>{{domxref("Document")}} の <code><strong>querySelector()</strong></code> メソッドは、指定されたセレクターまたはセレクターのグループに一致する、文書内の最初の {{domxref("Element")}} を返します。一致するものが見つからない場合は <code>null</code> を返します。</p>
+{{domxref("Document")}} の **`querySelector()`** メソッドは、指定されたセレクターまたはセレクターのグループに一致する、文書内の最初の {{domxref("Element")}} を返します。一致するものが見つからない場合は `null` を返します。
 
-<div class="note">
-<p><strong>メモ</strong>: 比較処理は、文書マークアップにおける最初の要素を経由して文書ノードの深さ優先前順走査 (depth-first pre-order traversal) を使用して実行され、子ノードのカウント順で順次ノードを反復して行われます。</p>
-</div>
+> **Note:** 照合処理は、文書マークアップにおける最初の要素を経由して文書ノードの深さ優先前順走査 (depth-first pre-order traversal) を使用して実行され、子ノードのカウント順で順次ノードを反復して行われます。
 
-<h2 id="Syntax">構文</h2>
+## 構文
 
-<pre class="syntaxbox"><var>element</var> = document.querySelector(<var>selectors</var>);
-</pre>
+```js
+element = document.querySelector(selectors);
+```
 
-<h3 id="Parameters">引数</h3>
+### 引数
 
-<dl>
-  <dt><var>selectors</var></dt>
-  <dd>1 つまたは複数のセレクターを含む {{domxref("DOMString")}}。この文字列は妥当な CSS セレクターでなければならず、そうでない場合は <code>SyntaxError</code> が発生します。セレクターとその管理の方法の詳細について、<a href="/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors">セレクターを使用した DOM 要素の指定</a>を参照してください。</dd>
-</dl>
+- _selectors_
+  - : {{domxref("DOMString")}} で、照合する 1 つ以上のセレクターを設定します。この文字列は妥当な CSS セレクターでなければなりません。そうでない場合は `SyntaxError` が発生します。セレクターとその管理の方法の詳細について、[セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)を参照してください。
 
-<div class="note">
-<p><strong>メモ:</strong> 標準の CSS 構文に含まれない文字は、バックスラッシュ文字を使ってエスケープしなければなりません。JavaScript でもバックスラッシュのエスケープが使われているため、これらの文字を使った文字列リテラルを記述する際は、特に注意する必要があります。詳細は{{anch("Escaping special characters", "特殊文字のエスケープ")}}を参照してください。</p>
-</div>
+> **Note:** 標準の CSS 構文に含まれない文字は、バックスラッシュ文字を使ってエスケープしなければなりません。 JavaScript でもバックスラッシュによるエスケープが使われているため、これらの文字を使った文字列リテラルを記述する際は、特に注意する必要があります。詳細は[特殊文字のエスケープ](/ja/docs/Web/API/Document/querySelector#特殊文字のエスケープ)を参照してください。
 
-<h3 id="Return_value">返値</h3>
+### 返値
 
-<p>文書内で指定された <a href="/ja/docs/Web/CSS/CSS_Selectors">CSS セレクター</a>に最初に一致する要素を示す {{domxref("Element")}} オブジェクト、もしくは、一致する要素がない場合は <code>null</code> を返します。</p>
+{{domxref("Element")}} オブジェクトで、文書内で指定された [CSS セレクター](/ja/docs/Web/CSS/CSS_Selectors)に最初に一致する要素を示すオブジェクト、もしくは、一致する要素がない場合は `null` を返します。
 
-<p>指定されたセレクターに一致するすべての要素のリストが必要な場合は、代わりに {{domxref("Document.querySelectorAll", "querySelectorAll()")}} を使用してください。</p>
+指定されたセレクターに一致するすべての要素のリストが必要な場合は、代わりに {{domxref("Document.querySelectorAll", "querySelectorAll()")}} を使用してください。
 
-<h3 id="Exceptions">例外</h3>
+### 例外
 
-<dl>
-  <dt><code>SyntaxError</code></dt>
-  <dd>指定された <var>selectors</var> の構文が妥当ではない。</dd>
-</dl>
+- `SyntaxError`
+  - : 指定された _selectors_ の構文が妥当ではない。
 
-<h2 id="Usage_notes">使用上のメモ</h2>
+## 使用上のメモ
 
-<p>指定されたセレクターが、誤って文書内で複数回使われている ID に一致する場合は、その ID を持つ最初の要素が返されます。</p>
+指定されたセレクターが、誤って文書内で複数回使われている ID に一致する場合は、その ID を持つ最初の要素が返されます。
 
-<p><a href="/ja/docs/Web/CSS/Pseudo-elements">CSS 擬似要素</a>は <a href="https://www.w3.org/TR/selectors-api/#grammar">Selectors API</a> で策定されている通り、何も要素を返しません。</p>
+[CSS 擬似要素](/ja/docs/Web/CSS/Pseudo-elements)は [Selectors API](https://www.w3.org/TR/selectors-api/#grammar) で策定されている通り、何も要素を返しません。
 
-<h3 id="Escaping_special_characters">特殊文字のエスケープ</h3>
+### 特殊文字のエスケープ
 
-<p>標準の CSS の構文に従っていない ID やセレクター (例えば、コロンやスペースを不適切に使用しているもの) で一致させるためには、バックスラッシュ ("<code>\</code>") でその文字をエスケープしなければなりません。バックスラッシュは JavaScript のエスケープ文字でもあるので、文字列リテラルを入力する場合、それを <em>2 回</em>エスケープする必要があります (1 回目は JavaScript の文字列のため、2 回目は <code>querySelector()</code> のため)。</p>
+標準の CSS の構文に従っていない ID やセレクター (例えば、コロンや空白を不適切に使用しているもの) に一致させるためには、バックスラッシュ ("`\`") でその文字をエスケープしなければなりません。バックスラッシュは JavaScript のエスケープ文字でもあるので、文字列リテラルを入力する場合、それを *2 回*エスケープする必要があります (1 回目は JavaScript の文字列のため、2 回目は `querySelector()` のため)。
 
-<pre class="brush: html">&lt;div id="foo\bar"&gt;&lt;/div&gt;
-&lt;div id="foo:bar"&gt;&lt;/div&gt;
+```html
+<div id="foo\bar"></div>
+<div id="foo:bar"></div>
 
-&lt;script&gt;
+<script>
   console.log('#foo\bar');               // "#fooar" (\b はバックスペース制御文字)
   document.querySelector('#foo\bar');    // いずれにも一致しない
 
@@ -75,45 +69,48 @@ browser-compat: api.Document.querySelector
 
   document.querySelector('#foo:bar');    // いずれにも一致しない
   document.querySelector('#foo\\:bar');  // 2番目の div に一致する
-&lt;/script&gt;</pre>
+</script>
+```
 
-<h2 id="Example">例</h2>
+## 例
 
-<h3 id="Finding_the_first_element_matching_a_class">あるクラスに一致する最初の要素を探索する</h3>
+### あるクラスに一致する最初の要素を探索する
 
-<p>次の例は、クラス "<code>myclass</code>" を持つ文書内の要素の内、最初のものを返します。</p>
+次の例は、クラス "`myclass`" を持つ文書内の要素の内、最初のものを返します。
 
-<pre class="brush: js">var el = document.querySelector(".myclass");
-</pre>
+```js
+var el = document.querySelector(".myclass");
+```
 
-<h3 id="A_more_complex_selector">より複雑なセレクター</h3>
+### より複雑なセレクター
 
-<p>セレクターは、次の例で示しているように、実に力強いものになり得ます。ここでは、文書内でクラスが "user-panel main" である {{HTMLElement("div")}} (<code>&lt;div class="user-panel main"&gt;</code>) の中にある、"login" という名前を持つ最初の {{HTMLElement("input")}} 要素 (<code>&lt;input name="login"/&gt;</code>) が返されます。</p>
+セレクターは、次の例で示しているように、実に力強いものになり得ます。ここでは、文書内で {{HTMLElement("input")}} に "login" という名前の付いた最初のもの (`<input name="login"/>`) のうち、 {{HTMLElement("div")}} でクラスが "user-panel main" (`<div class="user-panel main">`) の中にあるものが返されます。
 
-<pre class="brush: js">var el = document.querySelector("div.user-panel.main input[name='login']");
-</pre>
+```js
+var el = document.querySelector("div.user-panel.main input[name='login']");
+```
 
-<h3 id="Negation">否定</h3>
+### 否定
 
-<p>すべての CSS セレクター文字列が正しい場合、セレクターを否定することもできます。</p>
+すべての CSS セレクター文字列が妥当な場合、セレクターを否定することもできます。
 
-<pre class="brush: js">var el = document.querySelector("div.user-panel:not(.main) input[name='login']");</pre>
+```js
+var el = document.querySelector("div.user-panel:not(.main) input[name='login']");
+```
 
-<p>これで、input 要素のうち親に <code>user-panel</code> クラスのついた div があるものの、<code>main</code> クラスがないものを 1 つ選択します。</p>
+これで、input 要素のうち親に `user-panel` クラスのついた div があるものの、`main` クラスがないものを 1 つ選択します。
 
-<h2 id="Specifications">仕様書</h2>
+## 仕様書
 
 {{Specifications}}
 
-<h2 id="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<div>{{Compat}}</div>
+{{Compat}}
 
-<h2 id="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
-  <li><a href="/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors">セレクターを使用した DOM 要素の指定</a></li>
-  <li>{{domxref("Element.querySelector()")}}</li>
-  <li>{{domxref("Document.querySelectorAll()")}}</li>
-  <li>{{domxref("Element.querySelectorAll()")}}</li>
-</ul>
+- [セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- {{domxref("Element.querySelector()")}}
+- {{domxref("Document.querySelectorAll()")}}
+- {{domxref("Element.querySelectorAll()")}}
