@@ -8,161 +8,139 @@ tags:
   - Prototype
   - Reference
   - String
+browser-compat: javascript.builtins.String.localeCompare
 translation_of: Web/JavaScript/Reference/Global_Objects/String/localeCompare
 ---
-<div>{{JSRef("Global_Objects", "String")}}</div>
+{{JSRef}}
 
-<p><strong><code>localeCompare()</code></strong> メソッドは参照文字列がソート順で引数で与えられた文字列と大なり、小なり、等しいとなるかどうかを示す数値を返します。</p>
+**`localeCompare()`** メソッドは、参照先の文字列が整列順で与えられた文字列より前に来るか、後に来るか、同じであるかを示す数値を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/string-localecompare.html")}}</div>
+{{EmbedInteractiveExample("pages/js/string-localecompare.html")}}
 
+新しい `locales` と `options` 引数を使用すると、アプリケーションが整列順で使用される言語を指定し、関数の動作をカスタマイズすることができます。古い実装では、`locales` および `options` 引数は無視され、使用されるロケールと整列順は完全に実装依存になります。
 
+## 構文
 
-<p>新しい<code>locales</code> と <code>options</code> 引数によってアプリケーションはソート順で使われる言語を指定し関数の振る舞いをカスタマイズできます。古い実装では、<code>locales</code>引数と<code>options</code>引数は無視されます。使用されるローケルとソート順は完全に実装依存しています。</p>
+```js
+referenceStr.localeCompare(compareString)
+referenceStr.localeCompare(compareString, locales)
+referenceStr.localeCompare(compareString, locales, options)
+```
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+### 引数
 
-<pre class="syntaxbox notranslate"><code><var>referenceStr</var>.localeCompare(<var>compareString</var>[, <var>locales</var>[, <var>options</var>]])</code></pre>
+- `compareString`
+  - : この文字列と比較される文字列です。
+- `locales` および `options`
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+  - : これらの引数は関数の動作をカスタマイズし、アプリケーションが使用すべき書式化の習慣を持つ言語を決めることができます。 `locales` および `options` 引数を無視する実装においては、使用されるロケールと返却される文字列の書式は完全に実装依存となります。
 
-<dl>
- <dt><code><var>compareString</var></code></dt>
- <dd>
- <p><code><var>referenceStr</var></code> と比較される文字列。</p>
- </dd>
- <dt><code><var>locales</var></code> 、 <code><var>options</var></code></dt>
- <dd>
- <p>これらの引数は関数の振る舞いをカスタマイズし、使用されるべきフォーマット規約の言語をアプリケーションに決めさせます。引数 <code><var>locales</var></code> 、 <code><var>options</var></code> を無視する実装においては、使用されるロケールと返却される文字列の書式は完全に実装依存となります。</p>
+    これらの引数の詳細および使用方法については [`Intl.Collator()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator)を参照してください。
 
- <p>これらのパラメーターの詳細及び使用方法については <a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/Collator/Collator"><code>Intl.Collator()</code> コンストラクター</a> を見てください。</p>
- </dd>
-</dl>
+### 返値
 
-<div>{{page('/docs/Web/JavaScript/Reference/Global_Objects/Collator', 'Parameters')}}</div>
+`referenceStr` が `compareString` より前に出現するものである場合は**負**の数です。 `referenceStr` が `compareString` より後に出現するものである場合は**正**の数です。等しい場合は `0` です。
 
-<div>
-<h3 id="戻り値">戻り値</h3>
+## 解説
 
-<p><code><var>referenceStr</var></code> が <code><var>compareString</var></code> より前に出現する場合は負数、 <code><var>referenceStr</var></code> が <code><var>compareString</var></code> より後に出現する場合は正数、等しい場合は 0 。</p>
-</div>
+`referenceStr` が `compareString` より前に来るか、後に来るか、あるいは等しいかを示す整数を返します。
 
-<h2 id="Description" name="Description">説明</h2>
+- `referenceStr` が `compareString` より前に出現するものである場合は負の数
+- `referenceStr` が `compareString` より後に出現するものである場合は正の数
+- 等しい場合は `0`
 
-<p><code><var>referenceStr</var></code> が <code><var>compareString</var></code> より辞書順で先に来るか、後に来るか、あるいは等しいかを示す整数を返します。</p>
+> **Warning:** 返値が正確な `-1` または `1` であると思わないでください。
+>
+> 結果の負の整数と正の整数は、ブラウザー間 (およびブラウザーのバージョン間) で異なります。これは W3C の仕様が負の値か正の値かとだけ指定しているためです。ブラウザーによっては `-2` や `2` を、あるいは他の負の値、正の値を返却するかもしれません。
 
-<ul>
- <li><code><var>referenceStr</var></code> が <code><var>compareString</var></code> より先に出現する場合は負数</li>
- <li><code><var>referenceStr</var></code> が <code><var>compareString</var></code> より後に出現する場合は正数</li>
- <li>等しい場合は <code>0</code></li>
-</ul>
+## 性能
 
-<div class="blockIndicator warning">
-<p><strong>戻り値が厳密に -1 や 1 であると考えないように</strong></p>
+巨大な配列のソートなど大量の文字列を比較する場合は {{jsxref("Global_Objects/Collator", "Intl.Collator")}} オブジェクトを作成し、 {{jsxref("Collator.prototype.compare", "compare")}} プロパティで提供される関数を使うことをお勧めします。
 
-<p>負数と正数が結果としてどんな数値になるかはブラウザー間（及びブラウザーのバージョン間）で異なります。これは W3C の仕様が負の値か正の値かとだけ指定しているためです。ブラウザーによっては<code>-2</code> や <code>2</code> を、あるいはまた別の負の値、正の値を返却するかもしれません。</p>
-</div>
+## 例
 
-<h2 id="パフォーマンス">パフォーマンス</h2>
+### `localeCompare()` の使用
 
-<p>巨大な配列のソートなど大量の文字列を比較する場合は {{jsxref("Global_Objects/Collator", "Intl.Collator")}} オブジェクトを作成し、 {{jsxref("Collator.prototype.compare", "compare")}} プロパティで提供される関数を利用すると良いでしょう。</p>
+```js
+// 文字 "a" は "c" は負の数になります
+'a'.localeCompare('c'); // -2 や -1 （あるいはまた別の負の数）
 
-<h2 id="Examples" name="Examples">例</h2>
-
-<h3 id="Example_Using_localeCompare" name="Example:_Using_localeCompare"><code>localeCompare()</code>を使う</h3>
-
-<pre class="brush: js notranslate">// 文字 "a" は "c" は負数になります
-'a'.localeCompare('c'); // -2 や -1 （あるいはまた別の負数）
-
-// 単語 "check" はアルファベット順に "against" より後ろなので正数になります
-'check'.localeCompare('against'); // 2 や -1 （あるいはまた別の正数）
+// 単語 "check" はアルファベット順に "against" より後ろなので正の数になります
+'check'.localeCompare('against'); // 2 や -1 （あるいはまた別の正の数）
 
 // "a" と"a" は等しいので自然数 0 になります
 'a'.localeCompare('a'); // 0
-</pre>
+```
 
-<h3 id="配列のソート">配列のソート</h3>
+### 配列の並べ替え
 
-<p><code>localeCompare()</code> は case-insensitive な配列のソートを行います。</p>
+`localeCompare()` で、大文字小文字の違いを無視した配列の並べ替えができます。
 
-<pre class="notranslate">let items = ['réservé', 'Premier', 'Cliché', 'communiqué', 'café', 'Adieu'];
-items.sort( (a, b) =&gt; a.localeCompare(b, 'fr', {ignorePunctuation: true}));
+```js
+let items = ['réservé', 'Premier', 'Cliché', 'communiqué', 'café', 'Adieu'];
+items.sort( (a, b) => a.localeCompare(b, 'fr', {ignorePunctuation: true}));
 // ['Adieu', 'café', 'Cliché', 'communiqué', 'Premier', 'réservé']
-</pre>
+```
 
-<h3 id="Example_Checking_for_support_for_locales_and_options_arguments" name="Example:_Checking_for_support_for_locales_and_options_arguments">拡張された引数をブラウザーがサポートしているか調べる</h3>
+### 拡張引数をブラウザーが対応しているか調べる
 
-<p>引数 <code><var>locales</var></code> と <code><var>options</var></code> はすべてのプラウザでまだサポートされていません。</p>
+`locales` と `options` の引数は、まだすべてのブラウザーで対応しているわけではありません。
 
-<p>実装がこれらをサポートしているか調べるため引数  <code>"i"</code> （不正な言語タグが除外される要件）を利用し、例外 {{jsxref("RangeError")}} を調べます。</p>
+実装がこれらに対応しているか調べるには、引数 `"i"` (不正な言語タグが除外される要件) を使用して、例外 {{jsxref("RangeError")}} を調べてください。
 
-<pre class="brush: js notranslate">function localeCompareSupportsLocales() {
+```js
+function localeCompareSupportsLocales() {
   try {
-    'a'.localeCompare​('b', 'i');
+    'foo'.localeCompare('bar', 'i');
   } catch (e) {
-    return e​.name === 'RangeError';
+    return e.name === 'RangeError';
   }
   return false;
 }
-</pre>
+```
 
-<h3 id="Example_Using_locales" name="Example:_Using_locales"><code>locales</code>を使う</h3>
+### `locales` の使用
 
-<p><code>localeCompare()</code>によって得られる結果は言語間で違います。アプリケーションのユーザインターフェイスで使用される言語のソート順を得るために、 <code>locales</code>引数を使用してその言語(そしておそらくいくつかのフォールバック言語)を指定していることを確かめて下さい。:</p>
+`localeCompare()` によって得られる結果は言語間で異なります。アプリケーションのユーザーインターフェイスで使用される言語の整列順を得るには、 `locales` 引数を使用してその言語 (そしてできればいくつかの代替言語) を指定していることを確かめて下さい。
 
-<pre class="brush: js notranslate">console.log('ä'.localeCompare('z', 'de')); // 負数: ドイツ語で ä は a に分類される
-console.log('ä'.localeCompare('z', 'sv')); // 正数: スウェーデン語では ä は z の後になる
-</pre>
+```js
+console.log('ä'.localeCompare('z', 'de')); // 負の数: ドイツ語で ä は a に分類される
+console.log('ä'.localeCompare('z', 'sv')); // 正の数: スウェーデン語では ä は z の後になる
+```
 
-<h3 id="Example_Using_options" name="Example:_Using_options"><code>options</code>を使う</h3>
+### `options` の使用
 
-<p><code>localeCompare()</code>によって得られる結果は<code>options</code>引数を使用することによってカスタマイズできます。:</p>
+`localeCompare()` によって得られる結果は、 `options` 引数を使用することによってカスタマイズできます。:
 
-<pre class="brush: js notranslate">// ドイツ語では ä の base letter は a
+```js
+// ドイツ語では ä の base letter は a
 console.log('ä'.localeCompare('a', 'de', { sensitivity: 'base' })); // 0
 
-// スウェーデン語では ä と a は異なる base letters
-console.log('ä'.localeCompare('a', 'sv', { sensitivity: 'base' })); // a positive value
-</pre>
+// スウェーデン語では ä と a は base letter が異なる
+console.log('ä'.localeCompare('a', 'sv', { sensitivity: 'base' })); // 正の値
+```
 
-<h3 id="数字のソート">数字のソート</h3>
+### 数値の並べ替え
 
-<pre class="brush: js notranslate">// デフォルトでは "2" &gt; "10"
-console.log(<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">"2".localeCompare("10")</span></span></span>); // 1
+```js
+// 既定では "2" > "10"
+console.log("2".localeCompare("10")); // 1
 
-// オプションを使った数字
-console.log(<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">"2".localeCompare("10", undefined, {numeric: true})</span></span></span>); // -1
+// options を使用した数値
+console.log("2".localeCompare("10", undefined, {numeric: true})); // -1
 
-// ロケールタグを使った数字
-console.log(<span class="message-body-wrapper"><span class="message-flex-body"><span class="devtools-monospace message-body">"2".localeCompare("10", "en-u-kn-true")</span></span></span>); // -1
-</pre>
+// ロケールタグを使用した数値
+console.log("2".localeCompare("10", "en-u-kn-true")); // -1
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table>
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-string.prototype.localecompare', 'String.prototype.localeCompare')}}</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#sup-String.prototype.localeCompare', 'String.prototype.localeCompare')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザ実装状況">ブラウザ実装状況</h2>
+## ブラウザーの互換性
 
-<div>
-<p>{{Compat("javascript.builtins.String.localeCompare")}}</p>
-</div>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>{{jsxref("Global_Objects/Collator", "Intl.Collator")}}</li>
-</ul>
+- {{jsxref("Global_Objects/Collator", "Intl.Collator")}}
