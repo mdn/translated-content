@@ -109,13 +109,13 @@ var float64 = new Float64Array(2);
 float64[0] = 42;
 console.log(float64[0]); // 42
 console.log(float64.length); // 2
-console.log(float64.BYTES_PER_ELEMENT); // 4
+console.log(float64.BYTES_PER_ELEMENT); // 8
 
 // 配列から
 var arr = new Float64Array([21,31]);
 console.log(arr[1]); // 31
 
-// From another TypedArray
+// 他の TypedArray から
 var x = new Float64Array([21, 31]);
 var y = new Float64Array(x);
 console.log(y[0]); // 21
