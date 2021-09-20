@@ -15,8 +15,6 @@ translation_of: Web/CSS/line-height
 
 <div>{{EmbedInteractiveExample("pages/css/line-height.html")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="brush:css">/* Valeur avec un mot-clé */
@@ -55,13 +53,13 @@ line-height: unset;
 <h3 id="Valeurs">Valeurs</h3>
 
 <dl>
- <dt><a id="normal" name="normal"><code>normal</code></a></dt>
+ <dt><code>normal</code></dt>
  <dd>Le comportement dépend de l'agent utilisateur. Pour les navigateurs de bureau, l'agent utilisateur prend généralement une valeur environ égale à 1.2  selon la valeur de <code>font-family</code>.</dd>
- <dt><a id="number" name="number"><code>&lt;number&gt;</code></a></dt>
+ <dt><code>&lt;number&gt;</code></dt>
  <dd>La valeur utilisée est <strong>sans unité</strong> (type {{cssxref("&lt;number&gt;")}}) et correspond à un facteur multiplicateur de la taille de fonte utilisée. La valeur calculée est la même que celle définie avec <code>&lt;number&gt;</code>. Dans la plupart des cas, c'est la méthode qu'on privilégiera pour définir <code>line-height</code> et éviter les effets de l'héritage.</dd>
- <dt><a id="length" name="length"><code>&lt;length&gt;</code></a></dt>
+ <dt><code>&lt;length&gt;</code></dt>
  <dd>La valeur de longueur (type {{cssxref("&lt;length&gt;")}}) est utilisée pour calculer la hauteur de la boîte de la ligne. Les différentes unités qui peuvent être utilisées sont décrites avec la page {{cssxref("&lt;length&gt;")}}. Les valeurs exprimées en <code>em</code> peuvent produire des résultats inattendus.</dd>
- <dt><a id="percentage" name="percentage"><code>&lt;percentage&gt;</code></a></dt>
+ <dt><code>&lt;percentage&gt;</code></dt>
  <dd>La valeur exprimée est relative à la taille de fonte utilisée pour l'élément. La valeur calculée sera le pourcentage (type {{cssxref("&lt;percentage&gt;")}}) indiqué, multiplié par la taille calculée de la police de l'élément. Voir la section Notes pour plus de précisions sur le comportement de ce type et des valeurs exprimées en <code>em</code>.</dd>
  <dt><code>-moz-block-height</code> {{non-standard_inline}}</dt>
  <dd>La hauteur de la ligne correspond à la hauteur du contenu pour le bloc courant.</dd>

@@ -101,7 +101,7 @@ translation_of: Web/HTML/Element/script
   <li><code>no-referrer-when-downgrade</code> (既定値): {{HTTPHeader("Referer")}} ヘッダーは、{{Glossary("origin", "オリジン")}}に {{Glossary("TLS")}} ({{Glossary("HTTPS")}}) がない場合には送信しません。</li>
   <li><code>origin</code>: 送信するリファラーを、参照しているページのオリジン ({{Glossary("protocol", "スキーム")}}、{{Glossary("host", "ホスト")}}、{{Glossary("port", "ポート番号")}}) のみに制限します。</li>
   <li><code>origin-when-cross-origin</code>: 異なるオリジンへの移動ではリファラーをスキーム、ホスト、ポート番号に制限します。同一オリジンへの移動では、リファラーのパスも含めます。</li>
-  <li><code>same-origin</code>: リファラーは<a href="/en-US/docs/Web/Security/Same-origin_policy">同一オリジン</a>には送信しますが、オリジン間リクエストにはリファラー情報を含めません。</li>
+  <li><code>same-origin</code>: リファラーは<a href="/ja/docs/Web/Security/Same-origin_policy">同一オリジン</a>には送信しますが、オリジン間リクエストにはリファラー情報を含めません。</li>
   <li><code>strict-origin</code>: プロトコルのセキュリティ水準が同等 (例えば HTTPS→HTTPS) である場合は文書のオリジンのみをリファラーとして送信しますが、宛先の安全性がより低い場合 (例えば HTTPS→HTTP) には送信しません。</li>
   <li><code>strict-origin-when-cross-origin</code>: 同一オリジンのリクエストを行う際は URL 全体を送信しますが、プロトコルのセキュリティ水準が同等 (例えば HTTPS→HTTPS) である場合は文書のオリジンのみをリファラーとして送信し、宛先の安全性がより低い場合 (例えば HTTPS→HTTP) にはヘッダーを送信しません。</li>
   <li><code>unsafe-url</code>: リファラーはオリジン<em>および</em>パスを含みます (ただし、<a href="/ja/docs/Web/API/HTMLHyperlinkElementUtils/hash">フラグメント</a>、<a href="/ja/docs/Web/API/HTMLHyperlinkElementUtils/password">パスワード</a>、<a href="/ja/docs/Web/API/HTMLHyperlinkElementUtils/username">ユーザー名</a>は含めません)。これはオリジンやパスの情報が TLS で保護されたリソースからセキュアでない生成元へ漏えいしますので、安全ではありません。</li>

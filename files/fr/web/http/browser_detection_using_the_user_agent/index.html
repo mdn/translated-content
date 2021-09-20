@@ -14,7 +14,7 @@ original_slug: Web/HTTP/Detection_du_navigateur_en_utilisant_le_user_agent
 <p>Les navigateurs et les standards ne sont cependant pas parfaits, il reste certains cas limites pour lesquels connaître le navigateur utilisé peut s'avérer utile. Utiliser le User-Agent dans ce but paraît simple mais le faire de manière fiable est en réalité très difficile. Ce document va vous guider pour lire le User-Agent aussi précisément que possible.</p>
 
 <div class="note">
-<p>Il est important de rappeler que contrôler le contenu du User-Agent est rarement une bonne idée. Il est presque toujours possible de trouver une solution plus générique et compatible avec un plus grand nombre de navigateurs et d'appareils !</p>
+<p><strong>Note :</strong> Il est important de rappeler que contrôler le contenu du User-Agent est rarement une bonne idée. Il est presque toujours possible de trouver une solution plus générique et compatible avec un plus grand nombre de navigateurs et d'appareils !</p>
 </div>
 
 <h2 id="A_prendre_en_compte_avant_d'identifier_le_navigateur">A prendre en compte avant d'identifier le navigateur</h2>
@@ -58,13 +58,13 @@ original_slug: Web/HTTP/Detection_du_navigateur_en_utilisant_le_user_agent
 
 <p>Faites aussi attention à ne pas utiliser une expression régulière trop simple sur le nom du navigateur car le User-Agent contient d'autres chaînes de caractères ne respectant pas le format clé/valeur. Par exemple, le User-Agent de Safari et Chrome contient une chaîne "like Gecko".</p>
 
-<table style="height: 585px; width: 852px;">
+<table>
  <thead>
   <tr>
-   <th scope="col"> </th>
+   <th scope="col">Moteur</th>
    <th scope="col">Doit contenir</th>
    <th scope="col">Ne doit pas contenir</th>
-   <th scope="col"> </th>
+   <th scope="col">Notes</th>
   </tr>
  </thead>
  <tbody>
@@ -101,15 +101,15 @@ original_slug: Web/HTTP/Detection_du_navigateur_en_utilisant_le_user_agent
   <tr>
    <td>Opera</td>
    <td>
-    <p>OPR/xyz <sup>[1]</sup></p>
+    <p>OPR/xyz></p>
 
-    <p>Opera/xyz <sup>[2]</sup></p>
+    <p>Opera/xyz</p>
    </td>
    <td> </td>
    <td>
-    <p><sup>[1]</sup>  Opera 15+ (moteur de rendu Blink) </p>
+    <p>Opera 15+ (moteur de rendu Blink)</p>
 
-    <p><sup>[2]</sup><span style="line-height: 1.5;"> Opera 12- (moteur de rendu Presto)</span></p>
+    <p>Opera 12- (moteur de rendu Presto)</p>
    </td>
   </tr>
   <tr>
@@ -135,12 +135,12 @@ original_slug: Web/HTTP/Detection_du_navigateur_en_utilisant_le_user_agent
 
 <p>Il y a cinq principaux moteurs de rendu : Trident, Gecko, Presto, Blink et Webkit. Puisque détecter le nom du moteur de rendu est courant, d'autres noms sont ajoutés dans beaucoup d'autres User-Agents. Il est donc important de faire attention aux faux positifs lorsqu'on cherche à détecter le moteur de rendu.</p>
 
-<table style="width: 100%;">
+<table>
  <thead>
   <tr>
-   <th scope="col"> </th>
+   <th scope="col">Moteur</th>
    <th scope="col">Doit contenir</th>
-   <th scope="col"> </th>
+   <th scope="col">Ne doit pas contenir</th>
   </tr>
  </thead>
  <tbody>
@@ -206,7 +206,7 @@ original_slug: Web/HTTP/Detection_du_navigateur_en_utilisant_le_user_agent
   <tr>
    <td>Mozilla (Gecko, Firefox)</td>
    <td><a href="/en-US/docs/Gecko_user_agent_string_reference">Chaîne <strong>Mobile</strong> ou <strong>Tablet</strong></a> dans le commentaire</td>
-   <td>Mozilla/5.0 (Android; Mobile; rv:13.0) Gecko/13.0<span class="Object" id="OBJ_PREFIX_DWT935_com_zimbra_ymaps"><span class="Object" id="OBJ_PREFIX_DWT936_com_zimbra_ymaps"> Firefox/13.0</span></span></td>
+   <td>Mozilla/5.0 (Android; Mobile; rv:13.0) Gecko/13.0 Firefox/13.0</td>
   </tr>
   <tr>
    <td>Basé sur WebKit (Android, Safari)</td>
@@ -221,10 +221,10 @@ original_slug: Web/HTTP/Detection_du_navigateur_en_utilisant_le_user_agent
   <tr>
    <td>Basé sur Presto (Opera 12-)</td>
    <td>
-    <p><a href="http://my.opera.com/community/openweb/idopera/" style="line-height: 1.5;">Chaîne <strong>Opera Mobi/xyz</strong></a><span style="line-height: 1.5;"> dans le commentaire (Opera 12-)</span></p>
+    <p><a href="http://my.opera.com/community/openweb/idopera/">Chaîne <strong>Opera Mobi/xyz</strong></a> dans le commentaire (Opera 12-)</p>
    </td>
    <td>
-    <p><span style="line-height: 1.5;">Opera/9.80 (Android 2.3.3; Linux; Opera Mobi/ADR-1111101157; U; es-ES) Presto/2.9.201 Version/11.50</span></p>
+    <p>Opera/9.80 (Android 2.3.3; Linux; Opera Mobi/ADR-1111101157; U; es-ES) Presto/2.9.201 Version/11.50</p>
    </td>
   </tr>
   <tr>

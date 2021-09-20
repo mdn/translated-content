@@ -17,68 +17,25 @@ translation_of: Web/CSS/@media/aspect-ratio
 
 <h2 id="Exemples">Exemples</h2>
 
-<div class="note">
-<p><strong>Note :</strong> L'exemple suivant est contenu dans un élément {{HTMLElement("iframe")}} et crée donc sa propre zone d'affichage (<em>viewport</em>), vous pouvez redimensionner l'<code>iframe</code> afin d'observer l'effet d'<code>aspect-ratio</code>.</p>
-</div>
+<h3 id="exemples_de_valeurs_pour_aspect-ratio">Exemples de valeurs pour aspect-ratio</h3>
 
-<h3 id="HTML">HTML</h3>
-
-<pre class="brush: html">&lt;label id="wf" for="w"&gt;width:165&lt;/label&gt;
-&lt;input id="w" name="w" type="range" min="100" max="250" step="5" value="165"&gt;
-&lt;label id="hf" for="w"&gt;height:165&lt;/label&gt;
-&lt;input id="h" name="h" type="range" min="100" max="250" step="5" value="165"&gt;
-
-&lt;iframe id="outer" src="data:text/html,
-  &lt;style&gt;
-    @media (min-aspect-ratio: 8/5) {
-      div {
-        background: %239af;
-      }
-    }
-    @media (max-aspect-ratio: 3/2) {
-      div {
-        background: %239ff;
-      }
-    }
-    @media (aspect-ratio: 1/1) {
-      div {
-        background: %23f9a;
-      }
-    }
-  &lt;/style&gt;
-  &lt;div id='inner'&gt;
-    Vous pouvez redimensionner le viewport en largeur
-    et en hauteur pour voir l'effet.
-  &lt;/div&gt;
-"&gt;
-
-&lt;/iframe&gt;
+<pre class="brush: css">
+aspect-ratio: 1 / 1;
+aspect-ratio: 16 / 9;
 </pre>
 
-<h3 id="CSS">CSS</h3>
+<h2 id="Correspondance_entre_width_et_height_et_aspect-ratio">Correspondance entre width et height et aspect-ratio</h2>
 
-<pre class="brush: css">iframe{
-  display:block;
+<p>Les navigateurs ont ajouté une propriété <code>aspect-ratio</code> interne qui s'applique aux <a href="/fr/docs/Web/CSS/Replaced_element">éléments remplacés</a> et aux autres éléments associés qui acceptent des attributs <code>width</code> et <code>height</code>. Celle-ci apparaît dans la feuille de style interne de l'agent utilisateur.</p>
+
+<p>Pour Firefox, la feuille de style interne ressemble à :</p>
+
+<pre class="brush: css">
+img, input[type="image"], video, embed, iframe, marquee, object, table {
+  aspect-ratio: attr(width) / attr(height);
 }</pre>
 
-<h3 id="JavaScript">JavaScript</h3>
-
-<pre class="brush: js">outer.style.width=outer.style.height="165px"
-
-w.onchange=w.oninput=function(){
-  outer.style.width=w.value+"px"
-  wf.textContent="width:"+w.value
-}
-h.onchange=h.oninput=function(){
-  outer.style.height=h.value+"px"
-  hf.textContent="height:"+h.value
-}</pre>
-
-<h3 id="Résultat">Résultat</h3>
-
-<div style="overflow: auto;">
-<p>{{EmbedLiveSample('Exemples')}}</p>
-</div>
+<p>Pour en savoir plus, vous pouvez consulter <a href="https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/">Définir la hauteur et largeur des images redevient important (en anglais)</a>.</p>
 
 <h2 id="Spécifications">Spécifications</h2>
 

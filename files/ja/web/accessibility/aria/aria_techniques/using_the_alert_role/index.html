@@ -104,19 +104,12 @@ document.getElementById("formInstruction").setAttribute("role", "alert");</pre>
 <pre class="brush: js">// removing the 'hidden' class makes the element visible, which will make the screen reader announce the alert:
 document.getElementById("expirationWarning").className = ""; </pre>
 
-<h4 id="実施例">実施例:</h4>
-
-<ul>
- <li><a class="external" href="http://www.oaa-accessibility.org/example/1/">Alert role example using an ARIA alert box</a></li>
- <li><a class="external" href="http://www.oaa-accessibility.org/examplep/alertdialog1/">Alert example using a modal ARIA dialog box</a></li>
-</ul>
-
 <h3 id="注記">注記 </h3>
 
 <ul>
  <li>要素でのアラートロールの使用は要素が <code>aria-live="assertive"</code> を持っていることを意味します。</li>
  <li>アラートロールは静的な文章のためにのみ使用されるべきです。アラートロールが使用された要素はフォーカスを受け取ることができず、スクリーンリーダーはキーボードフォーカスが現在位置している場所にかかわらずに自動的にアラートをアナウンスするかもしれません。</li>
- <li>もしアラートが双方向のコントロール (ユーザが問題を修正できるフォームコントロールや、アラートを破棄する "OK" ボタンなど) を提供する場合、<a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role" title="Using the alert role">アラートダイアログ</a>ロールを代わりに使用するべきです。 </li>
+ <li>もしアラートが双方向のコントロール (ユーザが問題を修正できるフォームコントロールや、アラートを破棄する "OK" ボタンなど) を提供する場合、<a href="/ja/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role" title="Using the alert role">アラートダイアログ</a>ロールを代わりに使用するべきです。 </li>
 </ul>
 
 <h3 id="使用される_ARIA_属性">使用される ARIA 属性</h3>
@@ -128,8 +121,8 @@ document.getElementById("expirationWarning").className = ""; </pre>
 <h3 id="関連_ARIA_技術">関連 ARIA 技術</h3>
 
 <ul>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role" title="en/ARIA/ARIA_Techniques/Using_the_alertdialog_role">Using the alertdialog role</a></li>
- <li><a href="/en/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_property" title="Using the aria-invalid property">Using the aria-invalid property</a></li>
+ <li><a href="/ja/Accessibility/ARIA/ARIA_Techniques/Using_the_alertdialog_role" title="en/ARIA/ARIA_Techniques/Using_the_alertdialog_role">Using the alertdialog role</a></li>
+ <li><a href="/ja/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-invalid_property" title="Using the aria-invalid property">Using the aria-invalid property</a></li>
 </ul>
 
 <h3 id="互換性">互換性</h3>

@@ -14,8 +14,6 @@ translation_of: Web/CSS/filter-function/drop-shadow()
 
 <div>{{EmbedInteractiveExample("pages/css/function-drop-shadow.html")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <p>En pratique, une ombre portée correspond à une version floutée et décalée du masque alpha de l'image, dessiné dans une couleur donnée et fusionné sous l'image.</p>
 
 <div class="note">
@@ -24,7 +22,7 @@ translation_of: Web/CSS/filter-function/drop-shadow()
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox notranslate">drop-shadow(<em>décalage-x</em>, <em>décalage-y</em>, <em>rayon-flou</em>, <em>rayon-étalement</em>, <em>couleur</em>)</pre>
+<pre class="syntaxbox">drop-shadow(<em>décalage-x</em>, <em>décalage-y</em>, <em>rayon-flou</em>, <em>rayon-étalement</em>, <em>couleur</em>)</pre>
 
 <p>La fonction <code>drop-shadow()</code> accepte un paramètre de type <code>&lt;shadow&gt;</code> (défini avec la propriété {{cssxref("box-shadow")}}), mais où le mot-clé <code>inset</code> n'est pas autorisé.</p>
 
@@ -36,9 +34,9 @@ translation_of: Web/CSS/filter-function/drop-shadow()
  <dt><code>rayon-flou</code> {{optional_inline}}</dt>
  <dd>Une longueur ({{cssxref("&lt;length&gt;")}}) qui représente le rayon du flou. Plus la valeur est élevée, plus l'ombre sera grande et floue. La valeur par défaut est <code>0</code> ce qui correspond à un contour net, sans flou. Il n'est pas possible d'utiliser des valeurs négatives</dd>
  <dt><code>rayon-étalement</code>{{optional_inline}}</dt>
- <dd>Le rayon d'étalement de l'ombre, défini sous la forme d'une longueur ({{cssxref("&lt;length&gt;")}}). Les valeurs positives permettent d'avoir une ombre plus grande et plus étendue et les valeurs négatives permettent de réduire la zone d'ombre. La valeur par défaut est <code>0</code> : l'ombre a alors la même taille que l'image.</dd>
- <dd>
- <div class="warning"><strong>Attention !</strong> Chrome et Safari (basés sur WebKit) ne prennent pas en charge ce paramètre. S'il est utilisé, l'effet ne sera pas applique du tout.</div>
+ <dd>Le rayon d'étalement de l'ombre, défini sous la forme d'une longueur ({{cssxref("&lt;length&gt;")}}). Les valeurs positives permettent d'avoir une ombre plus grande et plus étendue et les valeurs négatives permettent de réduire la zone d'ombre. La valeur par défaut est <code>0</code> : l'ombre a alors la même taille que l'image.
+ <div class="warning">
+   <p><strong>Attention :</strong> Chrome et Safari (basés sur WebKit) ne prennent pas en charge ce paramètre. S'il est utilisé, l'effet ne sera pas applique du tout.</p></div>
  </dd>
  <dt><code>couleur</code>{{optional_inline}}</dt>
  <dd>La couleur de l'ombre, indiquée sous la forme d'une valeur {{cssxref("&lt;color&gt;")}}. La valeur par défaut dépend du navigateur. Pour Firefox et Internet Explorer, c'est la valeur de la propriété {{cssxref("color")}} qui sera utilisée alors que les navigateurs basés sur WebKit utiliseront une ombre transparente par défaut.</dd>
@@ -46,7 +44,7 @@ translation_of: Web/CSS/filter-function/drop-shadow()
 
 <h2 id="Exemples">Exemples</h2>
 
-<pre class="brush: css notranslate">/* Une ombre noire avec un flou de 10px de rayon. */
+<pre class="brush: css">/* Une ombre noire avec un flou de 10px de rayon. */
 drop-shadow(16px 16px 10px black)
 
 /* Une ombre rouge avec un flou de 1rem de rayon et de .3rem d'étalement */

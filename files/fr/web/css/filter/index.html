@@ -15,8 +15,6 @@ translation_of: Web/CSS/filter
 
 <div>{{EmbedInteractiveExample("pages/css/filter.html")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="brush:css">/* URL vers un filtre SVG */
@@ -101,8 +99,7 @@ img {
 <pre class="brush: css">filter: blur(5px)
 </pre>
 
-<div id="blur_example" class="hidden">
-<pre class="brush: html">  &lt;table class="standard-table"&gt;
+<pre class="brush: html hidden">  &lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style="text-align: left;" scope="col"&gt;Original image&lt;/th&gt;
@@ -126,7 +123,7 @@ img {
   &lt;/tbody&gt;
 &lt;/table&gt;</pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   height:100%;
 }
 body {
@@ -168,18 +165,17 @@ table.standard-table td {
   height:100%;
 }
 </pre>
-</div>
 
-<pre class="brush: html line-numbers  language-html">&lt;svg style="position: absolute; top: -99999px" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: svg">&lt;svg style="position: absolute; top: -99999px" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;filter id="svgBlur" x="-5%" y="-5%" width="110%" height="110%"&gt;
     &lt;feGaussianBlur in="SourceGraphic" stdDeviation="5"/&gt;
   &lt;/filter&gt;
 &lt;/svg&gt;</pre>
 
-<p>{{EmbedLiveSample('blur_example','100%','236px','')}}</p>
+<p>{{EmbedLiveSample('blur','100%','236px','')}}</p>
 
-<div class="blockIndicator note">
-<p><strong>Note :</strong> Voir {{cssxref("filter-function/blur", "blur()")}} pour plus d'informations.</p>
+<div class="note">
+<p><strong>Note :</strong> Voir {{cssxref("filter-function/blur()", "blur()")}} pour plus d'informations.</p>
 </div>
 
 <h3 id="brightness"><code>brightness()</code></h3>
@@ -188,7 +184,7 @@ table.standard-table td {
 
 <pre class="brush: css">filter: brightness(0.5)</pre>
 
-<pre class="brush: html line-numbers  language-html">&lt;svg style="position: absolute; top: -99999px" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: svg">&lt;svg style="position: absolute; top: -99999px" xmlns="http://www.w3.org/2000/svg"&gt;
  &lt;filter id="brightness"&gt;
     &lt;feComponentTransfer&gt;
         &lt;feFuncR type="linear" slope="[amount]"/&gt;
@@ -198,8 +194,7 @@ table.standard-table td {
   &lt;/filter&gt;
 &lt;/svg&gt;</pre>
 
-<div id="brightness_example" class="hidden">
-<pre class="brush: html">&lt;table class="standard-table"&gt;
+<pre class="brush: html hidden">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style="text-align: left;" scope="col"&gt;Original image&lt;/th&gt;
@@ -228,7 +223,7 @@ table.standard-table td {
 &lt;/table&gt;
 </pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   height:100%;
 }
 body {
@@ -272,12 +267,11 @@ table.standard-table td {
   height:100%;
 }
 </pre>
-</div>
 
-<p>{{EmbedLiveSample('brightness_example','100%','231px','')}}</p>
+<p>{{EmbedLiveSample('brightness','100%','231px','')}}</p>
 
-<div class="blockIndicator note">
-<p><strong>Note :</strong> Voir {{cssxref("filter-function/brightness", "brightness()")}} pour plus d'informations.</p>
+<div class="note">
+<p><strong>Note :</strong> Voir {{cssxref("filter-function/brightness()", "brightness()")}} pour plus d'informations.</p>
 </div>
 
 <h3 id="contrast"><code>contrast()</code></h3>
@@ -287,7 +281,7 @@ table.standard-table td {
 <pre class="brush: css">filter: contrast(200%)
 </pre>
 
-<pre class="brush: html line-numbers  language-html">&lt;svg style="position: absolute; top: -99999px" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: svg">&lt;svg style="position: absolute; top: -99999px" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;filter id="contrast"&gt;
     &lt;feComponentTransfer&gt;
       &lt;feFuncR type="linear" slope="[amount]" intercept="-(0.5 * [amount]) + 0.5"/&gt;
@@ -297,8 +291,7 @@ table.standard-table td {
   &lt;/filter&gt;
 &lt;/svg&gt;</pre>
 
-<div id="contrast_example" class="hidden">
-<pre class="brush: html">&lt;table class="standard-table"&gt;
+<pre class="brush: html hidden">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style="text-align: left;" scope="col"&gt;Original image&lt;/th&gt;
@@ -327,7 +320,7 @@ table.standard-table td {
 &lt;/table&gt;
 </pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   height:100%;
 }
 body {
@@ -371,12 +364,11 @@ table.standard-table td {
   height:100%;
 }
 </pre>
-</div>
 
-<p>{{EmbedLiveSample('contrast_example','100%','203px','')}}</p>
+<p>{{EmbedLiveSample('contrast','100%','203px','')}}</p>
 
-<div class="blockIndicator note">
-<p><strong>Note :</strong> Voir {{cssxref("filter-function/contrast", "contrast()")}} pour plus d'informations.</p>
+<div class="note">
+<p><strong>Note :</strong> Voir {{cssxref("filter-function/contrast()", "contrast()")}} pour plus d'informations.</p>
 </div>
 
 <h3 id="drop-shadow"><code>drop-shadow()</code></h3>
@@ -390,15 +382,14 @@ table.standard-table td {
  <dt><code>&lt;blur-radius&gt;</code> <small>(optionnel)</small></dt>
  <dd>Une troisième valeur de type {{cssxref("&lt;length&gt;")}}. Plus la valeur sera grande, plus le flou sera important (l'ombre sera plus grande et moins prononcée). Les valeurs négatives ne sont pas autorisée. La valeur par défaut est <code>0</code>, le bord de l'ombre sera droit.</dd>
  <dt><code>&lt;spread-radius&gt;</code> <small>(optionnel)</small></dt>
- <dd>Un quatrième valeur de type {{cssxref("&lt;length&gt;")}}. Des valeurs positives agrandiront l'ombre et les valeurs négatives réduiront l'ombre. La valeur par défaut est <code>0</code> (l'ombre aura la même taille que l'élément). </dd>
- <dd>Note: Webkit, and maybe other browsers, do not support this 4th length; it will not render if added.</dd>
+ <dd>Un quatrième valeur de type {{cssxref("&lt;length&gt;")}}. Des valeurs positives agrandiront l'ombre et les valeurs négatives réduiront l'ombre. La valeur par défaut est <code>0</code> (l'ombre aura la même taille que l'élément). Note: Webkit, and maybe other browsers, do not support this 4th length; it will not render if added.</dd>
  <dt><code>&lt;color&gt;</code> <small>(optionnel)</small></dt>
  <dd>Voir {{cssxref("&lt;color&gt;")}} pour les mots-clés et notations possibles. Si ce paramètre n'est pas défini, la couleur choisie dépendra du navigateur. Pour Gecko (Firefox), Presto (Opera) et Trident (Internet Explorer), la valeur de la propriété {{cssxref("color")}} est utilisée. Pour WebKit, si la couleur est absente, l'ombre sera transparente (donc inutile).</dd>
 </dl>
 
 <pre class="brush: css">filter: drop-shadow(16px 16px 10px black)</pre>
 
-<pre class="brush: html line-numbers  language-html">&lt;svg style="position: absolute; top: -999999px" xmlns="http://www.w3.org/2000/svg"&gt;
+<pre class="brush: svg">&lt;svg style="position: absolute; top: -999999px" xmlns="http://www.w3.org/2000/svg"&gt;
  &lt;filter id="drop-shadow"&gt;
     &lt;feGaussianBlur in="SourceAlpha" stdDeviation="[radius]"/&gt;
     &lt;feOffset dx="[offset-x]" dy="[offset-y]" result="offsetblur"/&gt;
@@ -411,8 +402,7 @@ table.standard-table td {
   &lt;/filter&gt;
 &lt;/svg&gt;</pre>
 
-<div id="shadow_example" class="hidden">
-<pre class="brush: html">&lt;table class="standard-table"&gt;
+<pre class="brush: html hidden">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style="text-align: left;" scope="col"&gt;Original image&lt;/th&gt;
@@ -462,7 +452,7 @@ table.standard-table td {
 &lt;/table&gt;
 </pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   height:100%;
 }
 body {
@@ -519,12 +509,11 @@ table.standard-table td {
   height:100%;
 }
 </pre>
-</div>
 
-<p>{{EmbedLiveSample('shadow_example','100%','300px','')}}</p>
+<p>{{EmbedLiveSample('drop-shadow','100%','300px','')}}</p>
 
-<div class="blockIndicator note">
-<p><strong>Note :</strong> Voir {{cssxref("filter-function/drop-shadow", "drop-shadow()")}} pour plus d'informations.</p>
+<div class="note">
+<p><strong>Note :</strong> Voir {{cssxref("filter-function/drop-shadow()", "drop-shadow()")}} pour plus d'informations.</p>
 </div>
 
 <h3 id="grayscale"><code>grayscale()</code></h3>
@@ -533,8 +522,7 @@ table.standard-table td {
 
 <pre class="brush: css">filter: grayscale(100%)</pre>
 
-<div id="grayscale_example" class="hidden">
-<pre class="brush: html">&lt;table class="standard-table"&gt;
+<pre class="brush: html hidden">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style="text-align: left;" scope="col"&gt;Original image&lt;/th&gt;
@@ -563,7 +551,7 @@ table.standard-table td {
 &lt;/table&gt;
 </pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   height:100%;
 }
 body {
@@ -607,12 +595,11 @@ table.standard-table td {
   height:100%;
 }
 </pre>
-</div>
 
-<p>{{EmbedLiveSample('grayscale_example','100%','209px','')}}</p>
+<p>{{EmbedLiveSample('grayscale','100%','209px','')}}</p>
 
-<div class="blockIndicator note">
-<p><strong>Note :</strong> Voir {{cssxref("filter-function/grayscale", "grayscale()")}} pour plus d'informations.</p>
+<div class="note">
+<p><strong>Note :</strong> Voir {{cssxref("filter-function/grayscale()", "grayscale()")}} pour plus d'informations.</p>
 </div>
 
 <h3 id="hue-rotate"><code>hue-rotate()</code></h3>
@@ -621,8 +608,7 @@ table.standard-table td {
 
 <pre class="brush: css">filter: hue-rotate(90deg)</pre>
 
-<div id="huerotate_example" class="hidden">
-<pre class="brush: html">&lt;table class="standard-table"&gt;
+<pre class="brush: html hidden">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style="text-align: left;" scope="col"&gt;Original image&lt;/th&gt;
@@ -648,7 +634,7 @@ table.standard-table td {
 &lt;/table&gt;
 </pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   height:100%;
 }
 body {
@@ -700,10 +686,10 @@ table.standard-table td {
   &lt;filter /&gt;
 &lt;/svg&gt;</pre>
 
-<p>{{EmbedLiveSample('huerotate_example','100%','221px','')}}</p>
+<p>{{EmbedLiveSample('hue-rotate','100%','221px','')}}</p>
 
-<div class="blockIndicator note">
-<p><strong>Note :</strong> Voir {{cssxref("filter-function/hue-rotate", "hue-rotate()")}} pour plus d'informations.</p>
+<div class="note">
+<p><strong>Note :</strong> Voir {{cssxref("filter-function/hue-rotate()", "hue-rotate()")}} pour plus d'informations.</p>
 </div>
 
 <h3 id="invert"><code>invert()</code></h3>
@@ -712,8 +698,7 @@ table.standard-table td {
 
 <pre class="brush: css">filter: invert(100%)</pre>
 
-<div id="invert_example" class="hidden">
-<pre class="brush: html">&lt;table class="standard-table"&gt;
+<pre class="brush: html hidden">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style="text-align: left;" scope="col"&gt;Original image&lt;/th&gt;
@@ -742,7 +727,7 @@ table.standard-table td {
 &lt;/table&gt;
 </pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   height:100%;
 }
 body {
@@ -786,12 +771,11 @@ table.standard-table td {
   height:100%;
 }
 </pre>
-</div>
 
-<p>{{EmbedLiveSample('invert_example','100%','407px','')}}</p>
+<p>{{EmbedLiveSample('invert','100%','407px','')}}</p>
 
-<div class="blockIndicator note">
-<p><strong>Note :</strong> Voir {{cssxref("filter-function/invert", "invert()")}} pour plus d'informations.</p>
+<div class="note">
+<p><strong>Note :</strong> Voir {{cssxref("filter-function/invert()", "invert()")}} pour plus d'informations.</p>
 </div>
 
 <h3 id="opacity"><code>opacity()</code></h3>
@@ -800,8 +784,7 @@ table.standard-table td {
 
 <pre class="brush: css">filter: opacity(50%)</pre>
 
-<div id="opacity_example" class="hidden">
-<pre class="brush: html">&lt;table class="standard-table"&gt;
+<pre class="brush: html hidden">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style="text-align: left;" scope="col"&gt;Original image&lt;/th&gt;
@@ -828,7 +811,7 @@ table.standard-table td {
 &lt;/table&gt;
 </pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   height:100%;
 }
 body {
@@ -872,12 +855,11 @@ table.standard-table td {
   height:100%;
 }
 </pre>
-</div>
 
-<p>{{EmbedLiveSample('opacity_example','100%','210px','')}}</p>
+<p>{{EmbedLiveSample('opacity','100%','210px','')}}</p>
 
-<div class="blockIndicator note">
-<p><strong>Note :</strong> Voir {{cssxref("filter-function/opacity", "opacity()")}} pour plus d'informations.</p>
+<div class="note">
+<p><strong>Note :</strong> Voir {{cssxref("filter-function/opacity()", "opacity()")}} pour plus d'informations.</p>
 </div>
 
 <h3 id="saturate"><code>saturate()</code></h3>
@@ -886,8 +868,7 @@ table.standard-table td {
 
 <pre class="brush: css">filter: saturate(200%)</pre>
 
-<div id="saturate_example" class="hidden">
-<pre class="brush: html">&lt;table class="standard-table"&gt;
+<pre class="brush: html hidden">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style="text-align: left;" scope="col"&gt;Original image&lt;/th&gt;
@@ -913,7 +894,7 @@ table.standard-table td {
 &lt;/table&gt;
 </pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   height:100%;
 }
 body {
@@ -957,12 +938,11 @@ table.standard-table td {
   height:100%;
 }
 </pre>
-</div>
 
-<p>{{EmbedLiveSample('saturate_example','100%','332px','')}}</p>
+<p>{{EmbedLiveSample('saturate','100%','332px','')}}</p>
 
-<div class="blockIndicator note">
-<p><strong>Note :</strong> Voir {{cssxref("filter-function/saturate", "saturate()")}} pour plus d'informations.</p>
+<div class="note">
+<p><strong>Note :</strong> Voir {{cssxref("filter-function/saturate()", "saturate()")}} pour plus d'informations.</p>
 </div>
 
 <h3 id="sepia"><code>sepia()</code></h3>
@@ -971,8 +951,7 @@ table.standard-table td {
 
 <pre class="brush: css">filter: sepia(100%)</pre>
 
-<div id="sepia_example" class="hidden">
-<pre class="brush: html">&lt;table class="standard-table"&gt;
+<pre class="brush: html hidden">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style="text-align: left;" scope="col"&gt;Original image&lt;/th&gt;
@@ -1001,7 +980,7 @@ table.standard-table td {
 &lt;/table&gt;
 </pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   height:100%;
 }
 body {
@@ -1045,12 +1024,11 @@ table.standard-table td {
   height:100%;
 }
 </pre>
-</div>
 
-<p>{{EmbedLiveSample('sepia_example','100%','229px','')}}</p>
+<p>{{EmbedLiveSample('sepia','100%','229px','')}}</p>
 
-<div class="blockIndicator note">
-<p><strong>Note :</strong> Voir {{cssxref("filter-function/sepia", "sepia()")}} pour plus d'informations.</p>
+<div class="note">
+<p><strong>Note :</strong> Voir {{cssxref("filter-function/sepia()", "sepia()")}} pour plus d'informations.</p>
 </div>
 
 <h2 id="Enchaîner_les_fonctions">Enchaîner les fonctions</h2>
@@ -1059,8 +1037,7 @@ table.standard-table td {
 
 <pre class="brush: css">filter: contrast(175%) brightness(103%)</pre>
 
-<div id="combination()" class="hidden">
-<pre class="brush: html">&lt;table class="standard-table"&gt;
+<pre class="brush: html hidden">&lt;table class="standard-table"&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th style="text-align: left;" scope="col"&gt;Original image&lt;/th&gt;
@@ -1078,7 +1055,7 @@ table.standard-table td {
 &lt;/table&gt;
 </pre>
 
-<pre class="brush: css">html {
+<pre class="brush: css hidden">html {
   height:100%;
 }
 body {
@@ -1123,7 +1100,6 @@ table.standard-table td {
   height:100%;
 }
 </pre>
-</div>
 
 <p>{{EmbedLiveSample('Enchaîner_les_fonctions','100%','209px','')}}</p>
 

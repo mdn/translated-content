@@ -262,7 +262,7 @@ debuggerClient.attachConsole(tab.consoleActor, listeners, onAttachConsole)
 
 <h2 id="ページエラー">ページエラー</h2>
 
-<p>ページエラーは <a href="/ja/docs/XPCOM_Interface_Reference/nsIConsoleService" title="/en-US/docs/XPCOM_Interface_Reference/nsIConsoleService"><code>nsIConsoleService</code></a> から発生します。許可される各ページエラーは <a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/nsIScriptError" title="/en-US/docs/XPCOM_Interface_Reference/nsIScriptError"><code>nsIScriptError</code></a> オブジェクトです。</p>
+<p>ページエラーは <a href="/ja/docs/XPCOM_Interface_Reference/nsIConsoleService" title="/en-US/docs/XPCOM_Interface_Reference/nsIConsoleService"><code>nsIConsoleService</code></a> から発生します。許可される各ページエラーは <a href="/ja/docs/XPCOM_Interface_Reference/nsIScriptError" title="/en-US/docs/XPCOM_Interface_Reference/nsIScriptError"><code>nsIScriptError</code></a> オブジェクトです。</p>
 
 <p><code>pageError</code> パケットは次のとおりです。</p>
 
@@ -302,7 +302,7 @@ debuggerClient.attachConsole(tab.consoleActor, listeners, onAttachConsole)
 <p>Firefox 23以前は、プロトコルを通じてJavaScriptオブジェクトを操作するために、別のアクタ<code>(WebConsoleObjectActor</code>)を使用しました。<a href="https://bugzilla.mozilla.org/show_bug.cgi?id=783499">bug 783499</a>では、デバッガから<code>ObjectActor</code>を再利用するためにいくつかの変更を行いました。</p>
 </div>
 
-<p>コンソール API メッセージは <a href="https://developer.mozilla.org/en-US/docs/XPCOM_Interface_Reference/nsIObserverService" title="/en-US/docs/XPCOM_Interface_Reference/nsIObserverService"><code>nsIObserverService</code></a> を経由します。コンソールオブジェクトの実装は <a href="http://mxr.mozilla.org/mozilla-central/source/dom/base/ConsoleAPI.js"><code>dom/base/ConsoleAPI.js</code></a> にあります。</p>
+<p>コンソール API メッセージは <a href="/ja/docs/XPCOM_Interface_Reference/nsIObserverService" title="/en-US/docs/XPCOM_Interface_Reference/nsIObserverService"><code>nsIObserverService</code></a> を経由します。コンソールオブジェクトの実装は <a href="http://mxr.mozilla.org/mozilla-central/source/dom/base/ConsoleAPI.js"><code>dom/base/ConsoleAPI.js</code></a> にあります。</p>
 
 <p>サーバーで受信したコンソールメッセージごとに、次の <code>consoleAPICall</code> パケットをクライアントに送信します。</p>
 
