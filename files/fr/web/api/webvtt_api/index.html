@@ -179,11 +179,11 @@ video::cue(b) {
 &lt;/video&gt;
 </pre>
 
-<h3 id="Dans_le_fichier_WebVTT">Dans le fichier WebVTT</h3>
+<h3 id="Within_the_WebVTT_file_itself">Within the WebVTT file itself</h3>
 
 <p>You can also define the style directly in the WebVTT file. In this case, you insert your CSS rules into the file with each rule preceded by the string <code>"STYLE"</code> all by itelf on a line of text, as shown below:</p>
 
-<pre class="notranslate">WEBVTT
+<pre class="brush: plain">WEBVTT
 
 STYLE
 ::cue {
@@ -206,7 +206,7 @@ NOTE style blocks cannot appear after the first cue.</pre>
 
 <p>We can also use identifiers inside WebVTT file, which can be used for defining a new style for some particular cues in the file. The example where we wanted the transcription text to be red highlighted and the other part to remain normal, we can define it as follows using CSS. Where it must be noted that the CSS uses escape sequences the way they are used in HTML pages:</p>
 
-<pre class="notranslate">WEBVTT
+<pre class="brush: plain">WEBVTT
 
 1
 00:00.000 --&gt; 00:02.000
@@ -222,7 +222,7 @@ Transcrit par Célestes™
 
 <p>Positioning of text tracks is also supported, by including positioning information after the timings in a cue, as seen below (see {{anch("Cue settings")}} for more information):</p>
 
-<pre class="notranslate">WEBVTT
+<pre class="brush: plain">WEBVTT
 
 00:00:00.000 --&gt; 00:00:04.000 position:10%,line-left align:left size:35%
 Where did he go?
@@ -233,7 +233,7 @@ I think he went down this lane.
 00:00:04.000 --&gt; 00:00:06.500 position:45%,line-right align:center size:35%
 What are you waiting for?</pre>
 
-<h2 id="Les_répliques_WebVTT">Les répliques WebVTT</h2>
+<h2 id="WebVTT_cues">WebVTT cues</h2>
 
 <p>A cue is a single subtitle block that has a single start time, end time, and textual payload. Example 6 consists of the header, a blank line, and then five cues separated by blank lines. A cue consists of five components:</p>
 
@@ -241,13 +241,13 @@ What are you waiting for?</pre>
  <li>An optional cue identifier followed by a newline.</li>
  <li>Cue timings.</li>
  <li>Optional cue settings with at least one space before the first and between each setting.</li>
- <li>One or more newlines.</li>
+ <li>A single newline.</li>
  <li>The cue payload text.</li>
 </ul>
 
-<h5 id="Exemple_7_-_Exemple_de_réplique">Exemple 7 - Exemple de réplique</h5>
+<h5 id="Example_7_-_Example_of_a_cue">Example 7 - Example of a cue</h5>
 
-<pre class="eval">1 - Title Crawl
+<pre class="brush: plain">1 - Title Crawl
 00:00:05.000 --&gt; 00:00:10.000 line:0 position:20% size:60% align:start
 Some time ago in a place rather distant....</pre>
 
@@ -257,11 +257,11 @@ Some time ago in a place rather distant....</pre>
 
 <h5 id="Example_8_-_Cue_identifier_from_Example_7">Example 8 - Cue identifier from Example 7</h5>
 
-<pre class="eval">1 - Title Crawl</pre>
+<pre class="brush: plain">1 - Title Crawl</pre>
 
 <h5 id="Example_9_-_Common_usage_of_identifiers">Example 9 - Common usage of identifiers</h5>
 
-<pre class="eval">WEBVTT
+<pre class="brush: plain">WEBVTT
 
 1
 00:00:22.230 --&gt; 00:00:24.606
@@ -323,7 +323,7 @@ Third
    <li>Must be between 00 and 59 inclusive.</li>
   </ul>
  </li>
- <li><code>ttt</code> is miliseconds.
+ <li><code>ttt</code> is milliseconds.
   <ul>
    <li>Must be between 000 and 999 inclusive.</li>
   </ul>
@@ -332,20 +332,20 @@ Third
 
 <h5 id="Example_10_-_Basic_cue_timing_examples">Example 10 - Basic cue timing examples</h5>
 
-<pre class="eval">00:22.230 --&gt; 00:24.606
-00:30.739 --&gt; 00:00:34.074
-00:00:34.159 --&gt; 00:35.743
+<pre class="brush: plain">00:00:22.230 --&gt; 00:00:24.606
+00:00:30.739 --&gt; 00:00:34.074
+00:00:34.159 --&gt; 00:00:35.743
 00:00:35.827 --&gt; 00:00:40.122</pre>
 
 <h5 id="Example_11_-_Overlapping_cue_timing_examples">Example 11 - Overlapping cue timing examples</h5>
 
-<pre class="eval">00:00:00.000 --&gt; 00:00:10.000
+<pre class="brush: plain">00:00:00.000 --&gt; 00:00:10.000
 00:00:05.000 --&gt; 00:01:00.000
 00:00:30.000 --&gt; 00:00:50.000</pre>
 
 <h5 id="Example_12_-_Non-overlapping_cue_timing_examples">Example 12 - Non-overlapping cue timing examples</h5>
 
-<pre class="eval">00:00:00.000 --&gt; 00:00:10.000
+<pre class="brush: plain">00:00:00.000 --&gt; 00:00:10.000
 00:00:10.000 --&gt; 00:01:00.581
 00:01:00.581 --&gt; 00:02:00.100
 00:02:01.000 --&gt; 00:02:01.000</pre>
@@ -536,7 +536,7 @@ Third
      <td>top</td>
     </tr>
     <tr>
-     <th><code>align:middle</code></th>
+     <th><code>align:center</code></th>
      <td>centred horizontally</td>
      <td>centred vertically</td>
      <td>centred vertically</td>
@@ -556,7 +556,7 @@ Third
 
 <p>The first line demonstrates no settings. The second line might be used to overlay text on a sign or label. The third line might be used for a title. The last line might be used for an Asian language.</p>
 
-<pre class="eval">00:00:05.000 --&gt; 00:00:10.000
+<pre class="brush: plain">00:00:05.000 --&gt; 00:00:10.000
 00:00:05.000 --&gt; 00:00:10.000 line:63% position:72% align:start
 00:00:05.000 --&gt; 00:00:10.000 line:0 position:20% size:60% align:start
 00:00:05.000 --&gt; 00:00:10.000 vertical:rt line:-1 align:end
@@ -564,7 +564,7 @@ Third
 
 <h3 id="Cue_payload">Cue payload</h3>
 
-<p>The payload is where the main information or content is located. In normal usage the payload contains the subtitles to be displayed. The payload text may contain newlines but it cannot contain a blank line, which is equivalent to two consecutive newlines. A blank line signifies the end of a cue.</p>
+<p>The payload is where the main information or content is located. In normal usage the payload contains the subtitles to be displayed. The payload text may contain newlines but it cannot contain a blank line, which is equivalent to two consecutive newlines. A blank line signifies the end of a cue.</p>
 
 <p>A cue text payload cannot contain the string "<code>--&gt;"</code>, the ampersand character (&amp;), or the less-than sign (&lt;). Instead use the escape sequence "&amp;amp;" for ampersand and "&amp;lt;" for less-than. It is also recommended that you use the greater-than escape sequence "&amp;gt;" instead of the greater-than character (&gt;) to avoid confusion with tags. If you are using the WebVTT file for metadata these restrictions do not apply.</p>
 
@@ -609,7 +609,7 @@ Third
   </tr>
   <tr>
    <td>Non-breaking space</td>
-   <td><code> </code></td>
+   <td><code> </code></td>
    <td><code>&amp;nbsp;</code></td>
   </tr>
  </tbody>
@@ -623,13 +623,13 @@ Third
  <li><strong>Timestamp tag</strong>
 
   <ul>
-   <li>The timestamp must be greater that the cue's start timestamp, greater than any previous timestamp in the cue payload, and less than the cue's end timestamp. The <em>active text</em> is the text between the timestamp and the next timestamp or to the end of the payload if there is not another timestamp in the payload. Any text before the <em>active text</em> in the payload is <em>previous text</em> . Any text beyond the <em>active text</em> is <em>future text</em> . This enables karaoke style captions.</li>
+   <li>The timestamp must be greater that the cue's start timestamp, greater than any previous timestamp in the cue payload, and less than the cue's end timestamp. The <em>active text</em> is the text between the timestamp and the next timestamp or to the end of the payload if there is not another timestamp in the payload. Any text before the <em>active text</em> in the payload is <em>previous text</em> . Any text beyond the <em>active text</em> is <em>future text</em> . This enables karaoke style captions.</li>
   </ul>
 
   <div>
   <h5 id="Example_12_-_Karaoke_style_text">Example 12 - Karaoke style text</h5>
 
-  <pre class="eval">1
+  <pre class="brush: plain">1
 00:16.500 --&gt; 00:18.500
 When the moon &lt;00:17.500&gt;hits your eye
 
@@ -645,7 +645,7 @@ That's &lt;00:00:21.000&gt;amore
  </li>
 </ul>
 
-<p>The following tags are the HTML tags allowed in a cue and require opening and closing tags (e.g., <code>&lt;b&gt;text&lt;/b&gt;</code>).</p>
+<p>The following tags are the HTML tags allowed in a cue and require opening and closing tags (e.g., <code>&lt;b&gt;text&lt;/b&gt;</code>).</p>
 
 <ul>
  <li><strong>Class tag</strong> (<code>&lt;c&gt;&lt;/c&gt;</code>)
@@ -657,7 +657,7 @@ That's &lt;00:00:21.000&gt;amore
   <div>
   <h5 id="Example_14_-_Class_tag">Example 14 - Class tag</h5>
 
-  <pre class="notranslate">&lt;c.classname&gt;text&lt;/c&gt;</pre>
+  <pre class="brush: html">&lt;c.classname&gt;text&lt;/c&gt;</pre>
   </div>
  </li>
  <li><strong>Italics tag</strong> (<code>&lt;i&gt;&lt;/i&gt;</code>)
@@ -668,7 +668,7 @@ That's &lt;00:00:21.000&gt;amore
   <div>
   <h5 id="Example_15_-_Italics_tag">Example 15 - Italics tag</h5>
 
-  <pre class="notranslate">&lt;i&gt;text&lt;/i&gt;</pre>
+  <pre class="brush: html">&lt;i&gt;text&lt;/i&gt;</pre>
   </div>
  </li>
  <li><strong>Bold tag</strong> (<code>&lt;b&gt;&lt;/b&gt;</code>)
@@ -679,7 +679,7 @@ That's &lt;00:00:21.000&gt;amore
   <div>
   <h5 id="Example_16_-_Bold_tag">Example 16 - Bold tag</h5>
 
-  <pre class="notranslate">&lt;b&gt;text&lt;/b&gt;</pre>
+  <pre class="brush: html">&lt;b&gt;text&lt;/b&gt;</pre>
   </div>
  </li>
  <li><strong>Underline tag</strong> (<code>&lt;u&gt;&lt;/u&gt;</code>)
@@ -690,29 +690,29 @@ That's &lt;00:00:21.000&gt;amore
   <div>
   <h5 id="Example_17_-_Underline_tag">Example 17 - Underline tag</h5>
 
-  <pre class="notranslate">&lt;u&gt;text&lt;/u&gt;</pre>
+  <pre class="brush: html">&lt;u&gt;text&lt;/u&gt;</pre>
   </div>
  </li>
  <li><strong>Ruby tag</strong> (<code>&lt;ruby&gt;&lt;/ruby&gt;</code>)
   <ul>
-   <li>Used with ruby text tags to display <a href="http://en.wikipedia.org/wiki/Ruby_character">ruby characters</a> (i.e., small annotative characters above other characters).</li>
+   <li>Used with ruby text tags to display <a href="https://en.wikipedia.org/wiki/Ruby_character">ruby characters</a> (i.e., small annotative characters above other characters).</li>
   </ul>
 
   <div>
   <h5 id="Example_18_-_Ruby_tag">Example 18 - Ruby tag</h5>
 
-  <pre class="notranslate">&lt;ruby&gt;WWW&lt;rt&gt;World Wide Web&lt;/rt&gt;oui&lt;rt&gt;yes&lt;/rt&gt;&lt;/ruby&gt;</pre>
+  <pre class="brush: html">&lt;ruby&gt;WWW&lt;rt&gt;World Wide Web&lt;/rt&gt;oui&lt;rt&gt;yes&lt;/rt&gt;&lt;/ruby&gt;</pre>
   </div>
  </li>
  <li><strong>Ruby text tag</strong> (<code>&lt;rt&gt;&lt;/rt&gt;</code>)
   <ul>
-   <li>Used with ruby tags to display <a href="http://en.wikipedia.org/wiki/Ruby_character">ruby characters</a> (i.e., small annotative characters above other characters).</li>
+   <li>Used with ruby tags to display <a href="https://en.wikipedia.org/wiki/Ruby_character">ruby characters</a> (i.e., small annotative characters above other characters).</li>
   </ul>
 
   <div>
   <h5 id="Example_19_-_Ruby_text_tag">Example 19 - Ruby text tag</h5>
 
-  <pre class="notranslate">&lt;ruby&gt;WWW&lt;rt&gt;World Wide Web&lt;/rt&gt;oui&lt;rt&gt;yes&lt;/rt&gt;&lt;/ruby&gt;</pre>
+  <pre class="brush: html">&lt;ruby&gt;WWW&lt;rt&gt;World Wide Web&lt;/rt&gt;oui&lt;rt&gt;yes&lt;/rt&gt;&lt;/ruby&gt;</pre>
   </div>
  </li>
  <li><strong>Voice tag</strong> (<code>&lt;v&gt;&lt;/v&gt;</code>)
@@ -723,64 +723,18 @@ That's &lt;00:00:21.000&gt;amore
   <div>
   <h5 id="Example_20_-_Voice_tag">Example 20 - Voice tag</h5>
 
-  <pre class="notranslate">&lt;v Bob&gt;text&lt;/v&gt;</pre>
+  <pre class="brush: html">&lt;v Bob&gt;text&lt;/v&gt;</pre>
   </div>
  </li>
 </ul>
-
-<h2 id="Interfaces">Interfaces</h2>
-
-<p>There are two interfaces or APIs used in WebVTT which are:</p>
-
-<h3 id="VTTCue_interface">VTTCue interface</h3>
-
-<p>It is used for providing an interface in Document Object Model API, where different attributes supported by it can be used to prepare and alter the cues in number of ways.</p>
-
-<p>Constructor is the first point for starting the Cue which is defined using the default constructor VTTCue(startTime, endTime, text) where starting time, ending time and text for cue can be adjusted. After that we can set the region for that particular cue to which this cue belongs using cue.region. Vertical, horizontal, line, lineAlign, Position, positionAlign, text, size and Align can be used to alter the cue and its formation, just like we can alter the objects form, shape and visibility in HTML using CSS. But the VTTCue interface is within the WebVTT provides the vast range of adjustment variables which can be used directly to alter the Cue. Following interface can be used to expose WebVTT cues in DOM API:</p>
-
-<pre class="idl def">enum <dfn>AutoKeyword</dfn> { <dfn>"auto"</dfn> };
-enum <dfn>DirectionSetting</dfn> { <dfn>""</dfn> /* horizontal */, <dfn>"rl"</dfn>, <dfn>"lr"</dfn> };
-enum <dfn>LineAlignSetting</dfn> { <dfn>"start"</dfn>, <dfn>"center"</dfn>, <dfn>"end"</dfn> };
-enum <dfn>PositionAlignSetting</dfn> { <dfn>"line-left"</dfn>, <dfn>"center"</dfn>, <dfn>"line-right"</dfn>, <dfn>"auto"</dfn> };
-enum <dfn>AlignSetting</dfn> { <dfn>"start"</dfn>, <dfn>"center"</dfn>, <dfn>"end"</dfn>, <dfn>"left"</dfn>, <dfn>"right"</dfn> };
-[<a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttcue-vttcue" id="ref-for-dom-vttcue-vttcue-1">Constructor</a>(double <dfn>startTime</dfn>, double <dfn>endTime</dfn>, DOMString <dfn>text</dfn>)]
-interface <dfn>VTTCue</dfn> : <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#texttrackcue">TextTrackCue</a> {
-  attribute <a href="https://w3c.github.io/webvtt/#vttregion" id="ref-for-vttregion-1">VTTRegion</a>? <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttcue-region" id="ref-for-dom-vttcue-region-1">region</a>;
-  attribute <a href="https://w3c.github.io/webvtt/#enumdef-directionsetting" id="ref-for-enumdef-directionsetting-1">DirectionSetting</a> <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttcue-vertical" id="ref-for-dom-vttcue-vertical-1">vertical</a>;
-  attribute boolean <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttcue-snaptolines" id="ref-for-dom-vttcue-snaptolines-2">snapToLines</a>;
-  attribute (double or <a href="https://w3c.github.io/webvtt/#enumdef-autokeyword" id="ref-for-enumdef-autokeyword-1">AutoKeyword</a>) <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttcue-line" id="ref-for-dom-vttcue-line-2">line</a>;
-  attribute <a href="https://w3c.github.io/webvtt/#enumdef-linealignsetting" id="ref-for-enumdef-linealignsetting-1">LineAlignSetting</a> <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttcue-linealign" id="ref-for-dom-vttcue-linealign-1">lineAlign</a>;
-  attribute (double or <a href="https://w3c.github.io/webvtt/#enumdef-autokeyword" id="ref-for-enumdef-autokeyword-2">AutoKeyword</a>) <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttcue-position" id="ref-for-dom-vttcue-position-1">position</a>;
-  attribute <a href="https://w3c.github.io/webvtt/#enumdef-positionalignsetting" id="ref-for-enumdef-positionalignsetting-1">PositionAlignSetting</a> <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttcue-positionalign" id="ref-for-dom-vttcue-positionalign-1">positionAlign</a>;
-  attribute double <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttcue-size" id="ref-for-dom-vttcue-size-1">size</a>;
-  attribute <a href="https://w3c.github.io/webvtt/#enumdef-alignsetting" id="ref-for-enumdef-alignsetting-1">AlignSetting</a> <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttcue-align" id="ref-for-dom-vttcue-align-1">align</a>;
-  attribute DOMString <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttcue-text" id="ref-for-dom-vttcue-text-1">text</a>;
-  <a href="https://dom.spec.whatwg.org/#documentfragment">DocumentFragment</a> <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttcue-getcueashtml" id="ref-for-dom-vttcue-getcueashtml-2">getCueAsHTML</a>();
-};</pre>
-
-<h3 id="VTTRegion_interface">VTTRegion interface</h3>
-
-<p>This is the second interface in WebVTT API.</p>
-
-<p>The new keyword can be used for defining a new VTTRegion object which can then be used for containing the multiple cues. There are several properties of VTTRegion which are width, lines, regionAnchorX, RegionAnchorY, viewportAnchorX, viewportAnchorY and scroll that can be used to specify the look and feel of this VTT region. The interface code is given below which can be used to expose the WebVTT regions in DOM API:</p>
-
-<pre class="idl def">enum <dfn>ScrollSetting</dfn> { <dfn>""</dfn> /* none */, <dfn>"up"</dfn> };
-[<a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttregion-vttregion" id="ref-for-dom-vttregion-vttregion-1">Constructor</a>]
-interface <dfn>VTTRegion</dfn> {
-  attribute double <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttregion-width" id="ref-for-dom-vttregion-width-1">width</a>;
-  attribute long <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttregion-lines" id="ref-for-dom-vttregion-lines-1">lines</a>;
-  attribute double <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttregion-regionanchorx" id="ref-for-dom-vttregion-regionanchorx-1">regionAnchorX</a>;
-  attribute double <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttregion-regionanchory" id="ref-for-dom-vttregion-regionanchory-1">regionAnchorY</a>;
-  attribute double <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttregion-viewportanchorx" id="ref-for-dom-vttregion-viewportanchorx-1">viewportAnchorX</a>;
-  attribute double <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttregion-viewportanchory" id="ref-for-dom-vttregion-viewportanchory-1">viewportAnchorY</a>;
-  attribute <a href="https://w3c.github.io/webvtt/#enumdef-scrollsetting" id="ref-for-enumdef-scrollsetting-1">ScrollSetting</a> <a class="idl-code" href="https://w3c.github.io/webvtt/#dom-vttregion-scroll" id="ref-for-dom-vttregion-scroll-1">scroll</a>;
-};</pre>
 
 <h2 id="Methods_and_properties">Methods and properties</h2>
 
 <p>The methods used in WebVTT are those which are used to alter the cue or region as the attributes for both interfaces are different. We can categorize them for better understanding relating to each interface in WebVTT:</p>
 
-<h3 id="VTTCue">VTTCue</h3>
+<ul>
+ <li>
+  <h3 id="VTTCue">VTTCue</h3>
 
   <ul>
    <li>The methods which are available in this interface are:
@@ -794,8 +748,9 @@ interface <dfn>VTTRegion</dfn> {
     </ul>
    </li>
   </ul>
-
-<h3 id="VTTRegion">VTTRegion</h3>
+ </li>
+ <li>
+  <h3 id="VTTRegion">VTTRegion</h3>
 
   <ul>
    <li>The methods used for region are listed below along with description of their functionality:
@@ -805,7 +760,8 @@ interface <dfn>VTTRegion</dfn> {
     </ul>
    </li>
   </ul>
-
+ </li>
+</ul>
 
 <h2 id="Tutorial_on_how_to_write_a_WebVTT_file">Tutorial on how to write a WebVTT file</h2>
 
@@ -813,17 +769,17 @@ interface <dfn>VTTRegion</dfn> {
 
 <ol>
  <li>Open a notepad.</li>
- <li>The first line of WebVTT is standardized similar in the way some other languages require you to put headers as the file starts to indicate the file type. One the very first line you have to write.</li>
+ <li>The first line of WebVTT is standardized similar to the way some other languages require you to put headers as the file starts to indicate the file type. On the very first line you have to write:</li>
 </ol>
 
-<pre class="notranslate">WEBVTT</pre>
+<pre class="brush: plain">WEBVTT</pre>
 
-<p>      3. Leave the second line blank, and on the third line the time for first cue is to be specified. For example, for a first cue starting at time 1 second and ending at 5 seconds, it is written as:</p>
+<p>      3. Leave the second line blank, and on the third line the time for first cue is to be specified. For example, for a first cue starting at time 1 second and ending at 5 seconds, it is written as:</p>
 
-<pre class="notranslate">00:01.000 --&gt; 00:05.000</pre>
+<pre class="brush: plain">00:01.000 --&gt; 00:05.000</pre>
 
 <ol>
- <li>On the next line you can write the caption for this cue which will run from 1<sup>st</sup> second to the 5<sup>th</sup> second, inclusive.</li>
+ <li>On the next line you can write the caption for this cue which will run from the first second to the fifth second, inclusive.</li>
  <li>Following the similar steps, a complete WebVTT file for specific video or audio file can be made.</li>
 </ol>
 
@@ -833,7 +789,7 @@ interface <dfn>VTTRegion</dfn> {
 
 <p>It is one of the good features supported by WebVTT is the localization and use of class elements which can be used in same way they are used in HTML and CSS to classify the style for particular type of objects, but here these are used for styling and classifying the Cues as shown below:</p>
 
-<pre class="notranslate">WEBVTT
+<pre class="brush: plain">WEBVTT
 
 04:02.500 --&gt; 04:05.000
 J’ai commencé le basket à l'âge de 13, 14 ans
@@ -854,24 +810,20 @@ Sur les &lt;i.foreignphrase&gt;&lt;lang en&gt;playground&lt;/lang&gt;&lt;/i&gt;,
 
 <p>Where p and a are the tags which are used in HTML for paragraph and link, respectively and they can be replaced by identifiers which are used for Cues in WebVTT file.</p>
 
-<h2 id="Spécifications">Spécifications</h2>
+<h2 id="Specifications">Specifications</h2>
 
-<table class="standard-table">
+<table>
  <tbody>
   <tr>
    <th>Specification</th>
-   <th>Status</th>
-   <th>Comment</th>
   </tr>
   <tr>
-   <td>{{SpecName("WebVTT")}}</td>
-   <td>{{Spec2("WebVTT")}}</td>
-   <td>Définition initiales</td>
+   <td><a href="https://w3c.github.io/webvtt/">WebVTT: The Web Video Text Tracks Format</a></td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
+<h2 id="Browser_compatibility">Browser compatibility</h2>
 
 <h3 id="VTTCue_interface_2"><code>VTTCue</code> interface</h3>
 

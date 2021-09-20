@@ -182,7 +182,7 @@ gl.bufferData(gl.ARRAY_BUFFER, buffer, gl.STATIC_DRAW);
 
 <p>Ensuite, nous spécifions la disposition en mémoire du tampon de tableaux, soit en définissant nous-mêmes l'indice :</p>
 
-<pre class="brush: js,">// Décrire la disposition du tampon :
+<pre class="brush: js">// Décrire la disposition du tampon :
 //1. position, non normalisé
 gl.vertexAttribPointer(0, 3, gl.FLOAT, false, 20, 0);
 gl.enableVertexAttribArray(0);
@@ -204,7 +204,7 @@ gl.linkProgram(shaderProgram);
 
 <p>soit en utilisant l'indice fourni par la carte graphique, au lieu de le définir nous-mêmes ; cela évite la réédition des liens du programme shader.</p>
 
-<pre class="brush: js,">const positionLoc = gl.getAttribLocation(shaderProgram, 'position');
+<pre class="brush: js">const positionLoc = gl.getAttribLocation(shaderProgram, 'position');
 gl.vertexAttribPointer(positionLoc, 3, gl.FLOAT, false, 20, 0);
 gl.enableVertexAttribArray(positionLoc);
 

@@ -9,23 +9,23 @@ original_slug: Web/Events/copy
 <h2 id="Informations_générales">Informations générales</h2>
 
 <dl>
- <dt style="float: left; text-align: right; width: 120px;">Spécification</dt>
- <dd style="margin: 0 0 0 120px;"><a href="https://www.w3.org/TR/clipboard-apis/#the-copy-action">Clipboard</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">Interface</dt>
- <dd style="margin: 0 0 0 120px;">{{domxref("ClipboardEvent")}}</dd>
- <dt style="float: left; text-align: right; width: 120px;">Propagation</dt>
- <dd style="margin: 0 0 0 120px;">Oui</dd>
- <dt style="float: left; text-align: right; width: 120px;">Annulable</dt>
- <dd style="margin: 0 0 0 120px;">Oui</dd>
- <dt style="float: left; text-align: right; width: 120px;">Cible</dt>
- <dd style="margin: 0 0 0 120px;">{{domxref("Element")}}: L'élément ayant le focus (pour les éléments {{domxref("HTMLElement.contentEditable", "contentEditable")}} - l'élément contenant le début de la sélection), ou l'élément {{HTMLElement("body")}}</dd>
- <dt style="float: left; text-align: right; width: 120px;">Action par défaut</dt>
- <dd style="margin: 0 0 0 120px;">Voir ce-dessous</dd>
+ <dt>Spécification</dt>
+ <dd><a href="https://www.w3.org/TR/clipboard-apis/#the-copy-action">Clipboard</a></dd>
+ <dt>Interface</dt>
+ <dd>{{domxref("ClipboardEvent")}}</dd>
+ <dt>Propagation</dt>
+ <dd>Oui</dd>
+ <dt>Annulable</dt>
+ <dd>Oui</dd>
+ <dt>Cible</dt>
+ <dd>{{domxref("Element")}}: L'élément ayant le focus (pour les éléments {{domxref("HTMLElement.contentEditable", "contentEditable")}} - l'élément contenant le début de la sélection), ou l'élément {{HTMLElement("body")}}</dd>
+ <dt>Action par défaut</dt>
+ <dd>Voir ce-dessous</dd>
 </dl>
 
 <p>Un gestionnaire de cet événement peut modifier l'objet {{domxref("ClipboardEvent.clipboardData")}} en appellant {{domxref("DataTransfer.setData", "setData(format, data)")}}:</p>
 
-<pre class="javascript">document.addEventListener('copy', function(e){
+<pre class="brush: js">document.addEventListener('copy', function(e){
     e.clipboardData.setData('text/plain', 'Hello, world!');
     e.clipboardData.setData('text/html', '&lt;b&gt;Hello, world!&lt;/b&gt;');
     e.preventDefault(); // We want our data, not data from any selection, to be written to the clipboard

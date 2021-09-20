@@ -25,7 +25,7 @@ var getAllKeysRequest = <em>IDBIndex</em>.getAllKeys(<em>requete</em>, <em>quant
  <dt><code>requete</code> {{optional_inline}}</dt>
  <dd>Une clé ou un intervalle de clé ({{domxref("IDBKeyRange")}}) qui identifie les clés qu'on souhaite récupérer. Si cette valeur vaut {{jsxref("null")}} ou est absente, le navigateur utilisera un intervalle de clé sans limite.</dd>
  <dt><code>quantite</code> {{optional_inline}}</dt>
- <dd>Le nombre d'enregistrements qu'on souhaite obtenir. Si cette quantité est supérieure au nombre d'enregistrements récupérés par la requête, le navigateur ne récupèrera que le premier élément. Si elle est négative ou supérieure à <code>2<sup>32</sup>-1</code>, une exception {{jsxref("TypeError")}} sera levée.</dd>
+ <dd>Le nombre d'enregistrements qu'on souhaite obtenir. Si cette quantité est supérieure au nombre d'enregistrements récupérés par la requête, le navigateur ne récupèrera que le premier élément. Si elle est négative ou supérieure à <code>2^32-1</code>, une exception {{jsxref("TypeError")}} sera levée.</dd>
 </dl>
 
 <h3 id="Valeur_de_retour">Valeur de retour</h3>
@@ -54,7 +54,7 @@ var getAllKeysRequest = <em>IDBIndex</em>.getAllKeys(<em>requete</em>, <em>quant
   </tr>
   <tr>
    <td>{{jsxref("TypeError")}}</td>
-   <td>Le paramètre <code>quantite</code> n'est pas compris entre <code>0</code> et <code>2<sup>32</sup>-1</code></td>
+   <td>Le paramètre <code>quantite</code> n'est pas compris entre <code>0</code> et <code>2^32-1</code></td>
   </tr>
  </tbody>
 </table>
