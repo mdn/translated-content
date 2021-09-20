@@ -13,8 +13,8 @@ translation_of: Web/API/CustomEvent/initCustomEvent
 
 <p>Les évènements initialisés par ce moyen doivent être créés avec la méthode {{domxref("Document.createEvent()")}}. Cette méthode doit être appelée pour définir l'évènement avant son envoi en utilisant {{domxref("EventTarget.dispatchEvent()") }}. Une fois l'évènement envoyé, la méthode ne fait rien.</p>
 
-<div class="note">
-<p><strong>N'utilisez plus cette méthode car elle est dépréciée.</strong></p>
+<div class="warning">
+<p><strong>Attention :</strong> N'utilisez plus cette méthode car elle est dépréciée.</p>
 
 <p>À la place, utilisez les constructeurs d'évènements spécifiques comme {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}. La page <a href="/fr/docs/Web/Guide/DOM/Events/Creating_and_triggering_events">Création et déclenchement d'évènements</a> donne plus d'informations sur la façon de les utiliser.</p>
 </div>

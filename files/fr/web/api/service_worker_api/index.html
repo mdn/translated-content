@@ -26,11 +26,11 @@ translation_of: Web/API/Service_Worker_API
 <p>Les service workers fonctionnent uniquement sur HTTPS, pour des raisons de sécurité. Laisser des requêtes réseau modifiées sans défense face aux attaques de l'homme du milieu est une bien mauvaise chose.</p>
 
 <div class="note">
-<p><strong>Remarque </strong>: les service workers ont rallié à eux des tentatives précédemment effectuées dans les mêmes domaines comme l'API <a href="http://alistapart.com/article/application-cache-is-a-douchebag">AppCache</a> parce qu'ils ne présument pas de ce que vous essayez de faire et ainsi s'interrompent quand ces suppositions ne sont pas tout à fait exactes; tout peut faire l'objet d'un contrôle d'une granularité très fine.</p>
+<p><strong>Note :</strong> les service workers ont rallié à eux des tentatives précédemment effectuées dans les mêmes domaines comme l'API <a href="http://alistapart.com/article/application-cache-is-a-douchebag">AppCache</a> parce qu'ils ne présument pas de ce que vous essayez de faire et ainsi s'interrompent quand ces suppositions ne sont pas tout à fait exactes; tout peut faire l'objet d'un contrôle d'une granularité très fine.</p>
 </div>
 
 <div class="note">
-<p><strong>Remarque </strong>: les service workers font un usage intensif des <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">promesses</a>, comme généralement ils sont en attente de réponses, auxquelles ils réagissent alors différemment en cas de succès ou en cas d'erreur. L'architecture des promesses est idéale dans ces situations.</p>
+<p><strong>Note :</strong> les service workers font un usage intensif des <a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">promesses</a>, comme généralement ils sont en attente de réponses, auxquelles ils réagissent alors différemment en cas de succès ou en cas d'erreur. L'architecture des promesses est idéale dans ces situations.</p>
 </div>
 
 <h3 id="Enregistrement">Enregistrement</h3>
@@ -64,7 +64,7 @@ translation_of: Web/API/Service_Worker_API
 <p>Votre service worker peut répondre aux requêtes en utilisant l'événement {{domxref("FetchEvent")}}. Vous pouvez modifier la réponse à ces requêtes de la manière que vous souhaitez, en utilisant la méthode {{domxref("FetchEvent.respondWith") }}.</p>
 
 <div class="note">
-<p><strong>Remarque </strong>: Parce que <code>oninstall</code>/<code>onactivate</code> pourraient prendre du temps à s'exécuter, la spec service worker fournit une méthode <code>waitUntil</code> qui, lorsque <code>oninstall</code> ou <code>onactivate</code> sont appelées, passe une promesse. Les événements fonctionnels ne sont pas envoyés au service worker tant que la promesse n'a pas été résolue avec succès.</p>
+<p><strong>Note :</strong> Parce que <code>oninstall</code>/<code>onactivate</code> pourraient prendre du temps à s'exécuter, la spec service worker fournit une méthode <code>waitUntil</code> qui, lorsque <code>oninstall</code> ou <code>onactivate</code> sont appelées, passe une promesse. Les événements fonctionnels ne sont pas envoyés au service worker tant que la promesse n'a pas été résolue avec succès.</p>
 </div>
 
 <p>Pour un tutoriel complet qui montre comment réaliser un premier exemple basique, il est conseillé de lire <a href="/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers">Utiliser les Services Workers</a>.</p>
@@ -166,7 +166,7 @@ translation_of: Web/API/Service_Worker_API
 
 <ul>
  <li><a href="https://serviceworke.rs">ServiceWorker Cookbook</a></li>
- <li><a href="/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers" lang="fr">Utilisation des Service Workers</a></li>
+ <li><a href="/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers">Utilisation des Service Workers</a></li>
  <li><a href="https://github.com/mdn/sw-test">Exemple basique de Service workers</a></li>
  <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Is ServiceWorker ready?</a></li>
  <li><a href="/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise">Promises</a></li>

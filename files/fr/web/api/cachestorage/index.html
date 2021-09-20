@@ -19,7 +19,8 @@ translation_of: Web/API/CacheStorage
 
 <ul>
  <li>Fournit un répertoire principal de tous les caches nommés qui peut être accessible par un {{domxref("ServiceWorker")}} ou un autre type de travailleur ou portée de {{domxref("window")}} (vous n'êtes pas limité à l'utiliser uniquement avec des Service Workers, même si la spécification {{SpecName("Service Workers")}} le définit).
-  <div class="note"><strong>Note </strong>: <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1026063">Chrome et Safari n'exposent que "CacheStorage" au contexte fenêtré sur HTTPS</a> <sup>(EN)</sup>. {{domxref("window.caches")}} sera indéfinie, à moins qu'un certificat SSL ne soit configuré.</div>
+  <div class="note">
+    <p><strong>Note :</strong> <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1026063">Chrome et Safari n'exposent que "CacheStorage" au contexte fenêtré sur HTTPS</a> <sup>(EN)</sup>. {{domxref("window.caches")}} sera indéfinie, à moins qu'un certificat SSL ne soit configuré.</p></div>
  </li>
  <li>Maintient une correspondance entre les noms des chaînes de caractères et les objets {{domxref("Cache")}} correspondants.</li>
 </ul>
@@ -30,9 +31,13 @@ translation_of: Web/API/CacheStorage
 
 <p>Vous pouvez accéder à <code>CacheStorage</code> via la propriété globale {{domxref("WindowOrWorkerGlobalScope.caches", "caches")}}.</p>
 
-<div class="note"><strong>Note</strong>: CacheStorage échouera systématiquement avec une <code>SecurityError</code> sur les domaines non certifiés (i.e. ceux qui n'utilisent pas HTTPS, bien que cette définition risque de devenir plus complexe dans le future). Pendant vos tests vous pouvez contourner ce comportement en cochant l'option "Enable Service Workers over HTTP (when toolbox is open)" dans les options Firefox Devtools / le menu gear.</div>
+<div class="note">
+  <p><strong>Note :</strong> CacheStorage échouera systématiquement avec une <code>SecurityError</code> sur les domaines non certifiés (i.e. ceux qui n'utilisent pas HTTPS, bien que cette définition risque de devenir plus complexe dans le future). Pendant vos tests vous pouvez contourner ce comportement en cochant l'option "Enable Service Workers over HTTP (when toolbox is open)" dans les options Firefox Devtools / le menu gear.</p>
+</div>
 
-<div class="note"><strong>Note</strong>: {{domxref("CacheStorage.match()")}} est une méthode de convenance. Il est possible d'implémenter une fonctionnalité équivalente pour matcher une entrée de cache en appelant {{domxref("CacheStorage.open()")}}, puis en retournant {{domxref("CacheStorage.keys()")}}, et en matchant les entrées voulues avec {{domxref("CacheStorage.match()")}}.</div>
+<div class="note">
+  <p><strong>Note :</strong> {{domxref("CacheStorage.match()")}} est une méthode de convenance. Il est possible d'implémenter une fonctionnalité équivalente pour matcher une entrée de cache en appelant {{domxref("CacheStorage.open()")}}, puis en retournant {{domxref("CacheStorage.keys()")}}, et en matchant les entrées voulues avec {{domxref("CacheStorage.match()")}}.</p>
+</div>
 
 <h2 id="Méthodes">Méthodes</h2>
 

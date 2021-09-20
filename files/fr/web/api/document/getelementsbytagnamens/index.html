@@ -27,7 +27,9 @@ translation_of: Web/API/Document/getElementsByTagNameNS
  <li><code>name</code> est, soit le nom local des éléments à rechercher, soit la valeur spéciale <code>"*"</code> pour tous les éléments (voir <code><a href="/en/DOM/Node.localName">element.localName</a></code>).</li>
 </ul>
 
-<div class="note"><strong>Note :</strong> Tandis que la spécification W3C indique que les <code>elements</code> sont des <code>NodeList</code>, cette méthode renvoie une {{domxref("HTMLCollection")}} dans Gecko et Internet Explorer. Opera retourne une <code>NodeList</code>, mais avec une méthode implémentée <code>namedItem</code>, ce qui la rend similaire à une <code>HTMLCollection</code>. À partir de Janvier 2012, dans les navigateurs WebKit seulement, la valeur retournée est une pure <code>NodeList</code>. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=14869">bug 14869</a> pour plus de détails.</div>
+<div class="note">
+  <p><strong>Note :</strong> Tandis que la spécification W3C indique que les <code>elements</code> sont des <code>NodeList</code>, cette méthode renvoie une {{domxref("HTMLCollection")}} dans Gecko et Internet Explorer. Opera retourne une <code>NodeList</code>, mais avec une méthode implémentée <code>namedItem</code>, ce qui la rend similaire à une <code>HTMLCollection</code>. À partir de Janvier 2012, dans les navigateurs WebKit seulement, la valeur retournée est une pure <code>NodeList</code>. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=14869">bug 14869</a> pour plus de détails.</p>
+</div>
 
 <h2 id="Example">Exemple</h2>
 

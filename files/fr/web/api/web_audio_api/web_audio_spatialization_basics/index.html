@@ -23,7 +23,7 @@ translation_of: Web/API/Web_Audio_API/Web_audio_spatialization_basics
 <p>Dans cet article nous allons nous concentrer sur la position de l'auditeur et du panoramique, tous deux paramétrés à l'aide de la méthode <code>setPosition(). </code>Celle-co accepte trois valeurs qui correspondent à X, Y, et Z dans un système de coordonnées cartésien.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Trouver les bonnes valeurs pour que le cas d'utilisation fonctionne bien et semble réaliste n'est pas toujours évident et peur prendre du temps, et il faut souvent continuer à modifier les valeurs par la suite. Nous discuterons ceci plus en détail en parcourant le code qui suit.</p>
+<p><strong>Note :</strong> Trouver les bonnes valeurs pour que le cas d'utilisation fonctionne bien et semble réaliste n'est pas toujours évident et peur prendre du temps, et il faut souvent continuer à modifier les valeurs par la suite. Nous discuterons ceci plus en détail en parcourant le code qui suit.</p>
 </div>
 
 <p>Les autres options  disponibles, que nous ne traiterons pas ici, sont :</p>
@@ -41,7 +41,7 @@ translation_of: Web/API/Web_Audio_API/Web_audio_spatialization_basics
  <img alt="a minimal UI with a portable stereo in the center of it, and buttons marked play, stop, left arrow, right arrow, zoom in and zoom out. It says Room of Metal at the top." src="https://mdn.mozillademos.org/files/8141/room-of-metal.png" style="display: block; height: 298px; margin: 0px auto; width: 640px;"></p>
 
 <div class="note">
-<p><strong>Note</strong>: You can see this example <a href="https://mdn.github.io/webaudio-examples/panner-node/">running live</a>, and <a href="https://github.com/mdn/panner-node">view the source code</a>.</p>
+<p><strong>Note :</strong> You can see this example <a href="https://mdn.github.io/webaudio-examples/panner-node/">running live</a>, and <a href="https://github.com/mdn/panner-node">view the source code</a>.</p>
 </div>
 
 <p>Let's walk through the code and see how this was actually done.</p>
@@ -263,7 +263,5 @@ zoomOutButton.onmouseup = function () {
 <p>As you can see, the actual panner code is pretty simple — specify the positions, and the browser takes care of the rest. It is working out the surrounding code, and the values to use for positioning, which takes a bit more time.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You are probably thinking "why didn't you move the listener and keep the panner still instead: surely that is a bit more obvious?" Well, perhaps, but we felt that since the panner has more methods and properties available to it, moving it would allow more control in the long term.</p>
+<p><strong>Note :</strong> You are probably thinking "why didn't you move the listener and keep the panner still instead: surely that is a bit more obvious?" Well, perhaps, but we felt that since the panner has more methods and properties available to it, moving it would allow more control in the long term.</p>
 </div>
-
-<p> </p>

@@ -11,8 +11,8 @@ translation_of: Web/API/URL/createObjectURL
 
 <p>{{AvailableInWorkers}}</p>
 
-<div class="blockIndicator note">
-<p><strong>Note :</strong> Cette fonctionnalité n'est pas disponible dans les <a href="/fr/docs/Web/API/ServiceWorker">Service Workers</a> à cause de possible fuite mémoire.</p>
+<div class="note">
+<p><strong>Note :</strong> Cette fonctionnalité n'est pas disponible dans les <a href="/fr/docs/Web/API/ServiceWorker">Service Workers</a> à cause de possible fuite mémoire.</p>
 </div>
 
 <h2 id="Syntax">Syntaxe</h2>
@@ -50,7 +50,7 @@ translation_of: Web/API/URL/createObjectURL
 <p>Dans d’anciennes versions de la spécification de Media Source, attacher un flux à un élément {{HTMLElement("video")}} requiérait de créer une URL d’objet pour le {{domxref("MediaStream")}}. Cela n’est plus nécessaire, et les navigateurs cessent progressivement de supporter cette pratique.</p>
 
 <div class="warning">
-<p><strong>Important :</strong> si vous avez toujours du code qui repose sur {{domxref("URL.createObjectURL")}} pour attacher des flux à des éléments média, vous devez mettre à jour votre code pour attacher simplement {{domxref("HTMLMediaElement.srcObject", "srcObject")}} directement au <code>MediaStream</code>.</p>
+<p><strong>Attention :</strong> si vous avez toujours du code qui repose sur {{domxref("URL.createObjectURL")}} pour attacher des flux à des éléments média, vous devez mettre à jour votre code pour attacher simplement {{domxref("HTMLMediaElement.srcObject", "srcObject")}} directement au <code>MediaStream</code>.</p>
 </div>
 
 <h2 id="Browser_Compatibility">Spécifications</h2>

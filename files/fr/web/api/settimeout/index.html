@@ -34,7 +34,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/setTimeout
 </dl>
 
 <div class="note">
-<p><strong>Note</strong> : La première syntaxe utilisant les paramètres supplémentaires ne fonctionne pas pour Internet Explorer 9 et les versions antérieures. Si vous souhaitez obtenir cette fonctionnalité pour ce navigateur, vous devrez utiliser une prothèse, <a href="#polyfill">voir ci-après</a>.</p>
+<p><strong>Note :</strong> La première syntaxe utilisant les paramètres supplémentaires ne fonctionne pas pour Internet Explorer 9 et les versions antérieures. Si vous souhaitez obtenir cette fonctionnalité pour ce navigateur, vous devrez utiliser une prothèse, <a href="#polyfill">voir ci-après</a>.</p>
 </div>
 
 <h3 id="Valeur_de_retour">Valeur de retour</h3>
@@ -85,7 +85,7 @@ function clearAlert() {
 <p><strong>Note :</strong> Voir aussi les exemples pour <a href="/fr/docs/Web/API/WindowOrWorkerGlobalScope/clearTimeout#Exemples"><code>clearTimeout()</code></a>.</p>
 </div>
 
-<h2 id="Prothèse_d'émulation_(polyfill)"><a>Prothèse d'émulation (<em>polyfill</em>)</a></h2>
+<h2 id="Prothèse_d'émulation_(polyfill)">Prothèse d'émulation (<em>polyfill</em>)</h2>
 
 <p>S'il vous faut passer un ou plusieurs arguments à la fonction de rappel tout en prenant en charge Internet Explorer 9 et les versions antérieures, vous pouvez utiliser cette prothèse qui ajoute la prise en charge des paramètres additionnels :</p>
 
@@ -217,7 +217,9 @@ setTimeout.call(monTableau, monTableau.maMéthode, 2500, 2);
 
 <h3 id="Solutions_éventuelles">Solutions éventuelles</h3>
 
-<p class="note"><strong>Note</strong>: JavaScript 1.8.5 introduced the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">Function.prototype.bind()</a></code> method to set the value of <code>this</code> for all calls to a given function. This can avoid having to use a wrapper function to set the value of <code>this</code> in a callback.</p>
+<div class="note">
+  <p><strong>Note :</strong> JavaScript 1.8.5 introduced the <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind">Function.prototype.bind()</a></code> method to set the value of <code>this</code> for all calls to a given function. This can avoid having to use a wrapper function to set the value of <code>this</code> in a callback.</p>
+</div>
 
 <p>Exemple d'utilisation :</p>
 
@@ -274,11 +276,11 @@ setTimeout(cb, 0);</pre>
 <p>Pour implémenter un minuteur de 0ms, on pourra utiliser {{domxref("window.postMessage()")}}.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Le délai minimal est géré dans Firefox via une préférence : <code>dom.min_timeout_value</code>.</p>
+<p><strong>Note :</strong> Le délai minimal est géré dans Firefox via une préférence : <code>dom.min_timeout_value</code>.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong> : Cette durée de 4 ms est <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers">définie dans la spécification HTML5</a> et est la même dans l'ensemble des navigateurs à partir de 2010. Avant {{geckoRelease("5.0")}}, la valeur minimale pour les appels imbriqués était 10ms.</p>
+<p><strong>Note :</strong> Cette durée de 4 ms est <a href="http://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#timers">définie dans la spécification HTML5</a> et est la même dans l'ensemble des navigateurs à partir de 2010. Avant {{geckoRelease("5.0")}}, la valeur minimale pour les appels imbriqués était 10ms.</p>
 </div>
 
 <h4 id="Précision_minimale_des_minuteurs_pour_les_onglets_inactifs_plus_de_1000ms">Précision minimale des minuteurs pour les onglets inactifs : plus de 1000ms</h4>

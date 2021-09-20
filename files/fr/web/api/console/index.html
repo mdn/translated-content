@@ -167,16 +167,18 @@ console.info("My first car was a", car, ". The object is: ", someObject);</pre>
 <div> </div>
 
 <div class="note">
-<p> <strong>Note :</strong> Un certain nombre de propriétés CSS sont supportées par ce style; vous devriez expérimenter et voir lesquels s'avèrent utiles.</p>
+<p><strong>Note :</strong> Un certain nombre de propriétés CSS sont supportées par ce style; vous devriez expérimenter et voir lesquels s'avèrent utiles.</p>
 </div>
 
 <p>{{h3_gecko_minversion("Using groups in the console", "9.0")}}</p>
 
 <p>Vous pouvez utiliser des groupes imbriqués pour vous aider à vous repérer dans l'affichage. Pour créer un nouveau bloc, appelez <code>console.group()</code>. La méthode <code>console.groupCollapsed()</code> est similaire, mais elle crée un bloc qui sera réduit.</p>
 
-<div class="note"><strong>Note  :</strong> "Collapsed groups" ne sont pas supportés pour l'instant dans Gecko; La méthode <code>groupCollapsed()</code> est la même que <code>group()</code> en ce moment.</div>
+<div class="note">
+  <p><strong>Note :</strong> "Collapsed groups" ne sont pas supportés pour l'instant dans Gecko; La méthode <code>groupCollapsed()</code> est la même que <code>group()</code> en ce moment.</p>
+</div>
 
-<p class="note">Pour quitter le groupe dans lequel on est, appeler <code>console.groupEnd()</code>. Par exemple, examinez ce code :</p>
+<p>Pour quitter le groupe dans lequel on est, appeler <code>console.groupEnd()</code>. Par exemple, examinez ce code :</p>
 
 <pre class="brush: js">console.log("This is the outer level");
 console.group();
@@ -211,7 +213,9 @@ console.timeEnd("answer time");
 
 <p>Notez que le nom du chronomètre est affiché deux fois, à son départ et quand il se termine.</p>
 
-<div class="note"><strong>Note:</strong> Il est important de noter que si vous vous servez de ceci pour enregistrer les durées du traffic réseau, le chronomètre renverra le temps total d'échanges, alors que les durées affichées dans l'onglet network représente seulement la durée à la réception du header. Si vous avez activer l'enregistrement de réponse du body, le temps listé pour la réponse du header et du body devrait correspondre à ce qu'affiche la sortie de la console.</div>
+<div class="note">
+  <p><strong>Note:</strong> Il est important de noter que si vous vous servez de ceci pour enregistrer les durées du traffic réseau, le chronomètre renverra le temps total d'échanges, alors que les durées affichées dans l'onglet network représente seulement la durée à la réception du header. Si vous avez activer l'enregistrement de réponse du body, le temps listé pour la réponse du header et du body devrait correspondre à ce qu'affiche la sortie de la console.</p>
+</div>
 
 <h3 id="Traces_d'appel">Traces d'appel</h3>
 

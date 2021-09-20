@@ -97,13 +97,17 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Formes_géométriques
 
 <p>La première étape pour créer un trajet est d'appeler <code>beginPath()</code>. En interne, les trajets sont stockés comme une liste de sous-trajets (lignes, arcs, etc) qui ensemble réalisent une forme. Chaque fois que cette méthode est appelée, la liste est remise à zéro, et nous pouvons commencer à dessiner de nouvelles formes.</p>
 
-<div class="note"><strong>Note :</strong> lorsque le trajet en cours est vide, par exemple immédiatement après avoir appelé <code>beginPath()</code>, ou sur un canvas nouvellement créé, la première instruction de construction de trajet est toujours traitée comme un <code>moveTo()</code>, indépendamment de ce qu'elle est en réalité. Pour cette raison, il sera pratiquement toujours souhaitable d'indiquer la position de départ après la réinitialisation d'un trajet.</div>
+<div class="note">
+  <p><strong>Note :</strong> Lorsque le trajet en cours est vide, par exemple immédiatement après avoir appelé <code>beginPath()</code>, ou sur un canvas nouvellement créé, la première instruction de construction de trajet est toujours traitée comme un <code>moveTo()</code>, indépendamment de ce qu'elle est en réalité. Pour cette raison, il sera pratiquement toujours souhaitable d'indiquer la position de départ après la réinitialisation d'un trajet.</p>
+</div>
 
 <p>La deuxième étape est d'appeler les méthodes qui indiquent effectivement les sous-trajets à dessiner. Nous verrons ces méthodes bientôt.</p>
 
 <p>La troisième méthode, optionnelle, est l'appel à <code>closePath()</code>. Cette méthode essaye de fermer la forme géométrique en dessinant une ligne droite depuis le point courant jusqu'au début du trajet. Si la forme a déjà été fermée ou s'il n'y a qu'un seul point dans la liste, cette fonction ne fait rien.</p>
 
-<div class="note"><strong>Note :</strong> quand vous appelez <code>fill()</code>, toutes les formes ouvertes sont automatiquement fermées, ainsi vous n'avez pas à appeler <code>closePath()</code>. Ce n'est <strong>pas</strong> le cas quand vous appelez <code>stroke()</code>.</div>
+<div class="note">
+  <p><strong>Note :</strong> Quand vous appelez <code>fill()</code>, toutes les formes ouvertes sont automatiquement fermées, ainsi vous n'avez pas à appeler <code>closePath()</code>. Ce n'est <strong>pas</strong> le cas quand vous appelez <code>stroke()</code>.</p>
+</div>
 
 <h3 id="Dessin_dun_triangle">Dessin d'un triangle</h3>
 
@@ -179,7 +183,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Formes_géométriques
 <p>Si vous voulez voir les lignes d'interconnexion, vous pouvez enlever les lignes qui appellent <code>moveTo()</code>.</p>
 
 <div class="note">
-<p><strong>Note :</strong> pour en savoir plus sur la fonction <code>arc()</code>, voir la section {{anch("Arcs")}} ci-dessous.</p>
+<p><strong>Note :</strong> Pour en savoir plus sur la fonction <code>arc()</code>, voir la section {{anch("Arcs")}} ci-dessous.</p>
 </div>
 
 <h3 id="Les_lignes">Les lignes</h3>
@@ -245,7 +249,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Formes_géométriques
 <p>Regardons plus en détail la méthode <code>arc</code>, qui prend six paramètres : <code>x</code> et <code>y</code> sont les coordonnées du centre du cercle sur lequel l'arc doit être tracé. <code>rayon</code> se passe d'explication. Les paramètres <code>angleInitial et</code> <code>angleFinal</code> définissent en radians les points de départ et d'arrivée de l'arc, le long de la courbe du cercle. Ceux-ci sont mesurés à partir de l'axe des x. Le paramètre <code>antihoraire</code> est une valeur booléenne qui, lorsque <code>true</code>, dessine l'arc dans le sens antihoraire, sinon, l'arc est dessiné dans le sens horaire.</p>
 
 <div class="note">
-<p><strong>Note </strong>: les angles dans la fonction <code>arc</code> sont mesurés en radians, et non en degrés. Pour convertir des degrés en radians, vous pouvez utiliser l'expression JavaScript suivante : <code>radians = (Math.PI/180)*degres</code>.</p>
+<p><strong>Note :</strong> Les angles dans la fonction <code>arc</code> sont mesurés en radians, et non en degrés. Pour convertir des degrés en radians, vous pouvez utiliser l'expression JavaScript suivante : <code>radians = (Math.PI/180)*degres</code>.</p>
 </div>
 
 <p>L'exemple suivant est un peu plus complexe que ceux que nous avons vus plus haut. Il dessine 12 arcs différents, avec des angles et des remplissages différents.</p>
@@ -257,7 +261,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Formes_géométriques
 <p>L'instruction pour le paramètre <code>antihoraire</code> a pour résultat que la première et de la troisième ligne sont dessinées comme des arcs de sens horaire, et que la deuxième et quatrième sont dessinées comme des arcs de sens antihoraire. Enfin, l'instruction <code>if</code> fait des arcs filaires dans la moité supérieure, et des arcs remplis dans la moitié inférieure.</p>
 
 <div class="note">
-<p><strong>Note :</strong> cet exemple requiert canevas légèrement plus large que les autres sur cette page : 150 x 200 pixels.</p>
+<p><strong>Note :</strong> Cet exemple requiert canevas légèrement plus large que les autres sur cette page : 150 x 200 pixels.</p>
 </div>
 
 <pre class="brush: html hidden">&lt;html&gt;

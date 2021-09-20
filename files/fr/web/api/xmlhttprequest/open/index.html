@@ -7,7 +7,9 @@ translation_of: Web/API/XMLHttpRequest/open
 
 <p>La méthode <code><strong>open()</strong></code> de {{domxref("XMLHttpRequest")}} instancie une nouvelle requête ou réinitialise un déjà existante.</p>
 
-<div class="note"><strong>Note:</strong> Appeler cette méthode pour une requête déjà active (pour laquelle une méthode <code>open()</code> a déjà été appelée) est équivalent à appeler  {{domxref("XMLHttpRequest.abort", "abort()")}}.</div>
+<div class="note">
+  <p><strong>Note :</strong> Appeler cette méthode pour une requête déjà active (pour laquelle une méthode <code>open()</code> a déjà été appelée) est équivalent à appeler  {{domxref("XMLHttpRequest.abort", "abort()")}}.</p>
+</div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
@@ -26,7 +28,9 @@ translation_of: Web/API/XMLHttpRequest/open
  <dd>Une {{domxref("DOMString")}} représentant l'URL à laquelle envoyer la requête.</dd>
  <dt><code>async</code> {{optional_inline}}</dt>
  <dd>Un booléen optionnel par défaut à <code>true</code>, indiquant s'il faut, ou pas, traiter la requête en asynchrone.  Si la valeur est à <code>false</code>, la méthode <code>send()</code> ne retourne rien tant qu'elle n'a pas reçu la réponse. Si la valeur est à  <code>true</code>, une notification de transaction complétée est fournie en utilisant un gestionnaire d'évènements. Le paramètre doit être sur "true" si l'attribut <code>multipart</code> est sur "true" aussi ou une exception sera levée.
- <div class="note"><strong>Note:</strong> Les requêtes asynchrones sur le "thread" principal peuvent facilement dérouter l'utilisateur et devraient être évitées; En fait, de nombreux navigateurs ont un support XHR obsolète sur la totalité du "thread" principal. Les requêtes synchrones sont acceptées dans  {{domxref("Worker")}}s.</div>
+ <div class="note">
+  <p><strong>Note :</strong> Les requêtes asynchrones sur le "thread" principal peuvent facilement dérouter l'utilisateur et devraient être évitées; En fait, de nombreux navigateurs ont un support XHR obsolète sur la totalité du "thread" principal. Les requêtes synchrones sont acceptées dans  {{domxref("Worker")}}.</p>
+ </div>
  </dd>
  <dt><code>user</code> {{optional_inline}}</dt>
  <dd>Le nom de l'utilisateur, optionnel, à utiliser dans un but d'authentification. Sa valeur par défaut est <code>null</code>.</dd>

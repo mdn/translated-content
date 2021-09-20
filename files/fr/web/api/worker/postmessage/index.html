@@ -21,10 +21,9 @@ translation_of: Web/API/Worker/postMessage
  <dt><em>transferList</em> {{optional_inline}}</dt>
  <dd>Un tableau optionnel d'objets {{domxref("Transferable")}} desquels on doit transférer la propriété. Si la propriété d'un objet est transférée, il devient inutilisable (<em>neutralisé</em>) pour le contexte émétteur et devient disponible uniquement pour le worker auquel cela a été envoyé.</dd>
  <dd>Seulement des objets de types {{domxref("MessagePort")}}, {{domxref("ArrayBuffer")}} ou {{domxref("ImageBitmap")}} peuvent être transférés. <code>null</code> n'est pas une valeur accéptée pour <code>transfer</code>.</dd>
- <dt>
- <h3 id="Retour">Retour</h3>
- </dt>
 </dl>
+
+<h3 id="Retour">Retour</h3>
 
 <p>Vide.</p>
 
@@ -46,8 +45,8 @@ second.onchange = function() {
 
 <p>Pour l'exemple en entier, voir <a href="https://github.com/mdn/simple-web-worker">Basic dedicated worder example</a> (<a href="http://mdn.github.io/simple-web-worker/">démonstration</a>).</p>
 
-<div class="blockIndicator note">
-<p><strong>Remarque:</strong> <code>postMessage()</code> peut n'envoyer qu'un objet à la fois. Comme ci-dessus, si vous voulez envoyez plusieurs valeurs, vous pouvez utiliser un tableau.</p>
+<div class="note">
+<p><strong>Note :</strong> <code>postMessage()</code> peut n'envoyer qu'un objet à la fois. Comme ci-dessus, si vous voulez envoyez plusieurs valeurs, vous pouvez utiliser un tableau.</p>
 </div>
 
 <h3 id="Exemple_de_transfert">Exemple de transfert</h3>

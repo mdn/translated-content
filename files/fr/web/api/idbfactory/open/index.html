@@ -43,12 +43,14 @@ var <em>IDBOpenDBRequest</em> = <em>indexedDB</em>.open(<em>nom</em>, <em>versio
 <dl>
  <dt><code>options</code> (<code>version</code> et <code>storage</code>) {{optional_inline}} {{deprecated_inline}}</dt>
  <dd>Dans Gecko, à partir de <a href="/fr/Firefox/Releases/26">la version 26</a>, il est possible de passer en paramètre un objet <code>options</code> non standard, qui contienne le numéro de version de la base de données (équivalent donc au paramètre <code>version</code> définit ci-avant), et également une valeur <code>storage</code> qui décrit si on souhaite utiliser un stockage permanent (avec la valeur <code>persistent</code>) ou un stockage temporaire (avec la valeur <code>temporary</code>).
- <div class="warning"><strong>Attention :</strong> l’attribut <code>storage</code> est déprécié et sera prochainement retiré de Gecko. Vous devriez utiliser {{domxref("StorageManager.persist()")}} à la place pour obtenir un stockage persistant.</div>
+ <div class="warning">
+  <p><strong>Attention :</strong> l’attribut <code>storage</code> est déprécié et sera prochainement retiré de Gecko. Vous devriez utiliser {{domxref("StorageManager.persist()")}} à la place pour obtenir un stockage persistant.</p>
+ </div>
  </dd>
 </dl>
 
 <div class="note">
-<p><strong>Note :</strong> Vous pouvez consulter l'article <a href="/fr/docs/Web/API/API_IndexedDB/Browser_storage_limits_and_eviction_criteria">les limites de stockage du navigateur et les critères d'éviction</a> pour en savoir plus sur les différents types de stockage disponibles et la façon dont Firefox gère les données côté client.</p>
+<p><strong>Note :</strong> Vous pouvez consulter l'article <a href="/fr/docs/Web/API/API_IndexedDB/Browser_storage_limits_and_eviction_criteria">les limites de stockage du navigateur et les critères d'éviction</a> pour en savoir plus sur les différents types de stockage disponibles et la façon dont Firefox gère les données côté client.</p>
 </div>
 
 <h3 id="Valeur_de_retour">Valeur de retour</h3>

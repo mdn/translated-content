@@ -14,7 +14,9 @@ original_slug: Web/API/Element/innertHTML
 
 <p>La propriété <strong><code>Element.innerHTML</code></strong> de {{domxref("Element")}} récupère ou définit la syntaxe HTML décrivant les descendants de l'élément.</p>
 
-<div class="note"><strong>Note: </strong>Si un nœud {{HTMLElement("div")}}, {{HTMLElement("span")}}, ou {{HTMLElement("noembed")}} a un sous-nœud de type texte contenant les caractères <code>(&amp;), (&lt;),</code> ou <code>(&gt;)</code>, <code>innerHTML</code> renverra à la place les chaînes suivantes : <code>"&amp;amp;"</code>, <code>"&amp;lt;"</code> et <code>"&amp;gt;"</code> respectivement. Utilisez {{domxref("Node.textContent")}} pour obtenir une copie exacte du contenu de ces nœuds.</div>
+<div class="note">
+  <p><strong>Note :</strong> Si un nœud {{HTMLElement("div")}}, {{HTMLElement("span")}}, ou {{HTMLElement("noembed")}} a un sous-nœud de type texte contenant les caractères <code>(&amp;), (&lt;),</code> ou <code>(&gt;)</code>, <code>innerHTML</code> renverra à la place les chaînes suivantes : <code>"&amp;amp;"</code>, <code>"&amp;lt;"</code> et <code>"&amp;gt;"</code> respectivement. Utilisez {{domxref("Node.textContent")}} pour obtenir une copie exacte du contenu de ces nœuds.</p>
+</div>
 
 <p>Pour insérer le HTML dans le document, plutôt que de remplacer le contenu d'un élément, utilisez la méthode {{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}}.</p>
 
@@ -179,7 +181,7 @@ boxElem.addEventListener("mouseleave", logEvent);</pre>
 
 <table class="standard-table">
  <thead>
-  <tr style="background-color: rgb(255, 204, 255);">
+  <tr>
    <th scope="col">Spécification</th>
    <th scope="col">Statut</th>
    <th scope="col">Commentaire</th>

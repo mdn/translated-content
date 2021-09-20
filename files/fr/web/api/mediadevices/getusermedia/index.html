@@ -10,7 +10,7 @@ translation_of: Web/API/MediaDevices/getUserMedia
 <p>Il renvoie un  {{jsxref("Promise")}}  qui est résolu avec succès si l'utilisateur donne son autorisation;   {{domxref("MediaStream")}}  est fourni à ce moment-là.  Si l'utilisateur refuse ou si le média correspondant n'est pas disponible, le  {{jsxref("Promise")}}  est rejetée avec respectivement <code>PermissionDeniedError</code> ou <code>NotFoundError</code>.</p>
 
 <div class="note">
-<p>Il est possible que le  {{jsxref("Promise")}}  renvoyé ne soit <em>ni</em> résolu ni rejeté, car l'utilisateur n'est pas tenu de faire un choix. .</p>
+<p><strong>Note :</strong> Il est possible que le  {{jsxref("Promise")}}  renvoyé ne soit <em>ni</em> résolu ni rejeté, car l'utilisateur n'est pas tenu de faire un choix. .</p>
 </div>
 
 <p>Généralement, vous accédez à l'objet  {{domxref("MediaDevices")}}  avec  {{domxref("navigator.mediaDevices")}}  , comme ceci:</p>
@@ -107,7 +107,7 @@ translation_of: Web/API/MediaDevices/getUserMedia
  <dd>Bien que l'utilisateur et le système d'exploitation aient tous deux accédé à l'équipement matériel, et qu'aucun problème de matériel ne causerait un <code>NotReadableError</code> , un problème s'est produit, ce qui a empêché l'utilisation du périphérique.</dd>
  <dt><code>NotAllowedError</code></dt>
  <dd>L'utilisateur a spécifié que l'instance de navigation actuelle n'a pas accès au périphérique;  Ou l'utilisateur a refusé l'accès pour la session en cours;  Ou l'utilisateur a refusé tout l'accès aux périphériques multimédias utilisateurs dans le monde entier.
- <div class="note">Les versions plus anciennes de la spécification ont utilisé <code>SecurityError</code> pour cela à la place;  <code>SecurityError</code> a pris une nouvelle signification.</div>
+ <div class="note"><p><strong>Note :</strong> Les versions plus anciennes de la spécification ont utilisé <code>SecurityError</code> pour cela à la place;  <code>SecurityError</code> a pris une nouvelle signification.</p></div>
  </dd>
  <dt><code>NotFoundError</code></dt>
  <dd>Aucune piste multimédia du type spécifié n'a été trouvée satisfaisant les contraintes données.</dd>
@@ -115,7 +115,7 @@ translation_of: Web/API/MediaDevices/getUserMedia
  <dd>Bien que l'utilisateur ait autorisé l'utilisation des appareils correspondants, une erreur matérielle s'est produite sur le système d'exploitation, le navigateur ou le niveau de la page Web qui a empêché l'accès au périphérique.</dd>
  <dt><code>OverConstrainedError</code></dt>
  <dd>Aucun dispositif candidat répondant aux critères demandés.  L'erreur est un objet de type <code>OverconstrainedError</code> et possède une propriété de <code>constraint</code> dont la valeur de chaîne est le nom d'une contrainte impossible à honorer et une propriété <code>message</code> contenant une chaîne lisible par l'homme expliquant le problème.
- <div class="note">Étant donné que cette erreur peut se produire même lorsque l'utilisateur n'a pas encore autorisé l'utilisation du périphérique sous-jacent, il peut être utilisé comme surface d'empreinte digitale.</div>
+ <div class="note"><p><strong>Note :</strong> Étant donné que cette erreur peut se produire même lorsque l'utilisateur n'a pas encore autorisé l'utilisation du périphérique sous-jacent, il peut être utilisé comme surface d'empreinte digitale.</p></div>
  </dd>
  <dt><code>SecurityError</code></dt>
  <dd>Le support multimédia utilisateur est désactivé sur le  {{domxref("Document")}}  sur lequel <code>getUserMedia()</code> été appelé.  Le mécanisme par lequel le support média utilisateur est activé/désactivé est laissé à la discrétion de l'utilisateur.</dd>

@@ -11,7 +11,9 @@ translation_of: Web/API/window/requestAnimationFrame
 
 <p>La méthode <strong><code>window.requestAnimationFrame()</code></strong> notifie le navigateur que vous souhaitez exécuter une animation et demande que celui-ci exécute une fonction spécifique de mise à jour de l'animation, avant le prochain rafraîchissement du navigateur. Cette méthode prend comme argument un callback qui sera appelé avant le rafraîchissement du navigateur.</p>
 
-<div class="note"><strong>Note:</strong> Si vous souhaitez animer une nouvelle frame durant le prochain repaint, votre callback doit appeler la méthode <code>requestAnimationFrame()</code>.</div>
+<div class="note">
+  <p><strong>Note :</strong> Si vous souhaitez animer une nouvelle frame durant le prochain repaint, votre callback doit appeler la méthode <code>requestAnimationFrame()</code>.</p>
+</div>
 
 <p>Vous devez appeler cette méthode dès que vous êtes prêt à rafraîchir votre animation. La fonction contenant l'animation doit être appelée avant que le navigateur n'effectue un nouveau rafraîchissement . En moyenne, le callback sera appelé 60 fois par seconde, cela dépendra de la fréquence de rafraîchissement de votre écran, conformément aux recommandations de la W3C. Cette fréquence peut être inférieure si plusieurs onglets sont ouverts simultanément.</p>
 

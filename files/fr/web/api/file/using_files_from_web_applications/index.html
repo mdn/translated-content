@@ -35,7 +35,7 @@ translation_of: Web/API/File/Using_files_from_web_applications
 var </code>fichierSelectionne <code>= $('#input')[0].files[0];</code></pre>
 
 <div class="note">
-<p>Si vous rencontrez une erreur "<code>files is undefined</code>" : vous n'avez pas sélectionné le bon élément HTML, en oubliant qu'un sélecteur jQuery renvoie une liste d'éléments DOM correspondants. Récupérez l'élément DOM pour appeler sa méthode "<code>files</code>".</p>
+<p><strong>Note :</strong> Si vous rencontrez une erreur "<code>files is undefined</code>" : vous n'avez pas sélectionné le bon élément HTML, en oubliant qu'un sélecteur jQuery renvoie une liste d'éléments DOM correspondants. Récupérez l'élément DOM pour appeler sa méthode "<code>files</code>".</p>
 </div>
 
 <h2 id="Accéder_au(x)_fichier(s)_sélectionné(s)_sur_un_événement_change">Accéder au(x) fichier(s) sélectionné(s) sur un événement <em>change</em></h2>
@@ -387,7 +387,7 @@ function handleFiles(files) {
 </ol>
 
 <div class="note">
-<p><strong>Note :</strong> la méthode non standard <code>sendAsBinary</code> utilisée dans l'exemple ci-dessus est obsolète depuis Gecko 31 {{ geckoRelease(31) }} ; utilisez plutôt la méthode standard <code>send(Blob data)</code>. </p>
+<p><strong>Note :</strong> la méthode non standard <code>sendAsBinary</code> utilisée dans l'exemple ci-dessus est obsolète depuis Gecko 31 {{ geckoRelease(31) }} ; utilisez plutôt la méthode standard <code>send(Blob data)</code>. </p>
 </div>
 
 <h3 id="Gérer_le_processus_de_téléchargement_d'un_fichier_de_manière_asynchrone">Gérer le processus de téléchargement d'un fichier de manière asynchrone</h3>

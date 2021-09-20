@@ -17,7 +17,9 @@ original_slug: Explorer_un_tableau_HTML_avec_des_interfaces_DOM_et_JavaScript
 
 <p>Cet article propose une vue d'ensemble de certaines méthodes DOM Level 1 fondamentales et la façon de les utiliser depuis JavaScript. Vous y apprendrez à créer, accéder, contrôler et supprimer dynamiquement des éléments HTML. Les méthodes DOM décrites ne sont pas spécifiques au HTML et s'appliquent également au XML. Les exemples fonctionneront dans tous les navigateurs offrant le support complet du DOM niveau 1, ce qui est le cas de tous les navigateurs basés sur Mozilla comme Firefox ou Netscape. Les morceaux de code de ce document fonctionneront également dans Internet Explorer 5.</p>
 
-<div class="note">Les méthodes décrites ici font partie de la spécification Document Object Model level 1 (Core). DOM level 1 comprend des méthodes destinées à l'accès et à la manipulation des documents (DOM 1 core) ainsi que des méthodes spécifiques aux documents HTML (DOM 1 HTML).</div>
+<div class="note">
+  <p><strong>Note :</strong>Les méthodes décrites ici font partie de la spécification Document Object Model level 1 (Core). DOM level 1 comprend des méthodes destinées à l'accès et à la manipulation des documents (DOM 1 core) ainsi que des méthodes spécifiques aux documents HTML (DOM 1 HTML).</p>
+</div>
 
 <h2 id="Overview_of_Sample1.html">Exemple: Création d'un tableau HTML dynamiquement (<code>Sample1.html</code>)</h2>
 
@@ -182,7 +184,9 @@ original_slug: Explorer_un_tableau_HTML_avec_des_interfaces_DOM_et_JavaScript
 
 <p><img alt="Image:sample2b2.jpg" src="/@api/deki/files/835/=Sample2b2.jpg"></p>
 
-<div class="note">L'utilisation de <code>createTextNode</code> et de <code>appendChild</code> permet aisément d'ajouter un espace entre ces deux mots. Notez cependant que la méthode <code>appendChild</code> ajoute le nouvel enfant à la suite de ceux déjà présents, à la manière de « world » placé après « hello ». Pour ajouter un nœud texte entre « hello » et « world » (par exemple un espace), utilisez <code>insertBefore</code> à la place de <code>appendChild</code>.</div>
+<div class="note">
+  <p><strong>Note :</strong>L'utilisation de <code>createTextNode</code> et de <code>appendChild</code> permet aisément d'ajouter un espace entre ces deux mots. Notez cependant que la méthode <code>appendChild</code> ajoute le nouvel enfant à la suite de ceux déjà présents, à la manière de « world » placé après « hello ». Pour ajouter un nœud texte entre « hello » et « world » (par exemple un espace), utilisez <code>insertBefore</code> à la place de <code>appendChild</code>.</p>
+</div>
 
 <h3 id="Cr.C3.A9ation_de_nouveaux_.C3.A9l.C3.A9ments_avec_l.27objet_document_et_la_m.C3.A9thode_createElement.28....29">Création de nouveaux éléments avec l'objet document et la méthode <code>createElement(...)</code></h3>
 
@@ -230,7 +234,9 @@ body.appendChild(nouveauNoeudBALISEP);
 
 <p>Le code source qui suit est un exemple commenté qui crée le tableau de Exemple1.</p>
 
-<div class="note">Il y a une ligne de code supplémentaire à la fin de la fonction <code>start()</code>, qui définit la propriété bordure du tableau en employant la méthode <code>setAttribute</code>. <code>setAttribute</code> utilise deux arguments : le nom de l'attribut et sa valeur, et permet de définir n'importe quelle propriété de n'importe quel élément.</div>
+<div class="note">
+  <p><strong>Note :</strong> Il y a une ligne de code supplémentaire à la fin de la fonction <code>start()</code>, qui définit la propriété bordure du tableau en employant la méthode <code>setAttribute</code>. <code>setAttribute</code> utilise deux arguments : le nom de l'attribut et sa valeur, et permet de définir n'importe quelle propriété de n'importe quel élément.</p>
+</div>
 
 <pre>&lt;head&gt;
 &lt;title&gt;Code de démonstration - Explorer un tableau HTML avec des interfaces DOM et JavaScript&lt;/title&gt;
@@ -282,7 +288,9 @@ body.appendChild(nouveauNoeudBALISEP);
 
 <p>Cet exemple présente deux nouveaux attributs DOM. D'abord, l'attribut <code>childNodes</code> qui est utilisé pour récupérer la liste des nœuds enfants de <code>cel</code>. A la différence de <code>getElementsByTagName</code>, la liste renvoyée par <code>childNodes</code> comporte tous les enfants sans considération de type. Une fois la liste obtenue, la méthode <code>{{ mediawiki.external('x') }}</code> est employée pour sélectionner l'élément enfant désiré. Dans cet exemple, le nœud texte de la seconde cellule de la seconde ligne du tableau est enregistré dans <code>celtext</code>. Ensuite, un nouveau nœud texte contenant les données de <code>celtext</code> est greffé en tant qu'enfant sur l'élément &lt;body&gt;.</p>
 
-<div class="note">Si l'objet est un nœud texte, vous pouvez récupérer le texte qu'il contient en employant l'attribut <code>data</code>.</div>
+<div class="note">
+  <p><strong>Note :</strong> Si l'objet est un nœud texte, vous pouvez récupérer le texte qu'il contient en employant l'attribut <code>data</code>.</p>
+</div>
 
 <pre class="brush:js">mybody = document.getElementsByTagName("body")[0];
 mytable = mybody.getElementsByTagName("table")[0];

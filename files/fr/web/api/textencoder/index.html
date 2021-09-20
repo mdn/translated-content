@@ -14,12 +14,12 @@ translation_of: Web/API/TextEncoder
 
 <p><code><strong>TextEncoder</strong></code> prend un flux de points de code en entrée et émet un flux d'octets. Pour une bibliothèque non native plus extensible, voir <a href="/en-US/Add-ons/Code_snippets/StringView"><code>StringView</code> – une représentation des chaînes de caractères proche de celle de C basée sur les tableaux typés</a>.</p>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: Firefox, Chrome et Opera ont pour habitude de supporter les types d'encodage autres que <code>utf-8</code> (tels que <code>utf-16</code>, <code>iso-8859-2</code>, <code>koi8</code>, <code>cp1261</code>, et <code>gbk</code>). À partir de Firefox 48 ({{bug(1257877)}}), Chrome 54 (<a href="https://www.chromestatus.com/feature/5630760492990464">ticket</a>) et Opera 41, aucun type d'encodage autre que <code>utf-8</code> n'est disponible, de manière à être en accord avec la <a href="https://www.w3.org/TR/encoding/#dom-textencoder">spécification</a>. Dans tous les cas, passer un type d'encodage au constructeur sera ignoré et un TextEncoder utf-8 sera créé (le {{DOMxRef("TextDecoder")}} permet toujours d'autres types pour le décodage).</p>
+<div class="note">
+<p><strong>Note :</strong> Firefox, Chrome et Opera ont pour habitude de supporter les types d'encodage autres que <code>utf-8</code> (tels que <code>utf-16</code>, <code>iso-8859-2</code>, <code>koi8</code>, <code>cp1261</code>, et <code>gbk</code>). À partir de Firefox 48 ({{bug(1257877)}}), Chrome 54 (<a href="https://www.chromestatus.com/feature/5630760492990464">ticket</a>) et Opera 41, aucun type d'encodage autre que <code>utf-8</code> n'est disponible, de manière à être en accord avec la <a href="https://www.w3.org/TR/encoding/#dom-textencoder">spécification</a>. Dans tous les cas, passer un type d'encodage au constructeur sera ignoré et un TextEncoder utf-8 sera créé (le {{DOMxRef("TextDecoder")}} permet toujours d'autres types pour le décodage).</p>
 </div>
 
-<div class="blockIndicator note">
-<p><strong>Note</strong>: Il y a une prothèse d'émulation d'implantation pour supporter tous les encodages hérités dans <a href="https://github.com/inexorabletash/text-encoding">GitHub</a>.</p>
+<div class="note">
+<p><strong>Note :</strong> Il y a une prothèse d'émulation d'implantation pour supporter tous les encodages hérités dans <a href="https://github.com/inexorabletash/text-encoding">GitHub</a>.</p>
 </div>
 
 <h2 id="Constructeur">Constructeur</h2>

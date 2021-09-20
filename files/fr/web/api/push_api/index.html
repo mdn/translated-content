@@ -16,13 +16,13 @@ translation_of: Web/API/Push_API
 <p>L' <strong>API Push </strong> donne aux applications web la possibilité de recevoir des messages qui leur sont poussés depuis un serveur, qu'il s'agisse ou non d'une application active au premier plan, ou même actuellement chargée, sur un agent utilisateur. Ceci permet aux développeurs de délivrer des notifications asynchrones et des mises-à-jour aux utilisateurs qui le choisissent, entrainant un meilleur engagement [de l'utilisateur] avec du nouveau contenu au moment opportun.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Cette documentation couvre les spécifications W3C de l'API Push; si vous recherchez la documentation du système propriétaire de Push de Firefox OS, merci de vous reporter à <a href="/fr/docs/Web/API/Simple_Push_API">Simple Push</a>.</p>
+<p><strong>Note :</strong> Cette documentation couvre les spécifications W3C de l'API Push; si vous recherchez la documentation du système propriétaire de Push de Firefox OS, merci de vous reporter à <a href="/fr/docs/Web/API/Simple_Push_API">Simple Push</a>.</p>
 </div>
 
 <h2 id="Concepts_et_usages_de_Push">Concepts et usages de Push</h2>
 
 <div class="warning">
-<p>Lors de la mise en œuvre des abonnements PushManager, il est d'une importance vitale de se protéger contre les problèmes de CSRF/XSRF dans votre application. Voir les articles suivants pour plus d'informations :</p>
+<p><strong>Attention :</strong> Lors de la mise en œuvre des abonnements PushManager, il est d'une importance vitale de se protéger contre les problèmes de CSRF/XSRF dans votre application. Voir les articles suivants pour plus d'informations :</p>
 
 <ul>
  <li><a href="https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html">Feuille de prévention contre les Cross-Site Request Forgery (CSRF)</a><sup> (en)</sup></li>
@@ -41,11 +41,11 @@ translation_of: Web/API/Push_API
 <p>Activer un service worker pour délivrer un message Push peut accroître l'utilisation des ressources, particulièrement de la batterie. Les différents navigateurs ont des régimes différents pour gèrer ça — Il n'y a pas de mécanisme standard. Firefox permet à un nombre limité (quota) de messages Push d'être envoyé à une application, cependant les messages Push qui générent les notifications sont exempts de cette limite. La limite est rafraichie chaque fois que le site est visité. En comparaison, Chrome n'applique pas de limites mais nécessite que chaque message Push lance une notification pour pouvoir être affiché.</p>
 
 <div class="note">
-<p><strong>Note</strong>: comme pour Gecko 44, le quota de messages Push par application n'est pas incrémenté quand une nouvelle notification se lance et qu'une autre est déjà visible, pendant une période de 3 secondes. Cela permet de gèrer le cas où une rafale de messages Push est reçue et qu'ils n'afficheraient pas tous une notification.</p>
+<p><strong>Note :</strong> Comme pour Gecko 44, le quota de messages Push par application n'est pas incrémenté quand une nouvelle notification se lance et qu'une autre est déjà visible, pendant une période de 3 secondes. Cela permet de gèrer le cas où une rafale de messages Push est reçue et qu'ils n'afficheraient pas tous une notification.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: Chrome nécessite actuellement de configurer un projet sur <a href="https://developers.google.com/cloud-messaging/">Google Cloud Messaging</a> pour envoyer des messages Push et utilise le numero du projet associé ainsi que la clé durant l'envoi des messages Push. Il requiert aussi un manifeste applicatif avec des paramètres spéciaux pour utiliser ce service. Nous espérons que cette restriction sera supprimée dans le futur..</p>
+<p><strong>Note :</strong>: Chrome nécessite actuellement de configurer un projet sur <a href="https://developers.google.com/cloud-messaging/">Google Cloud Messaging</a> pour envoyer des messages Push et utilise le numero du projet associé ainsi que la clé durant l'envoi des messages Push. Il requiert aussi un manifeste applicatif avec des paramètres spéciaux pour utiliser ce service. Nous espérons que cette restriction sera supprimée dans le futur..</p>
 </div>
 
 <h2 id="Interfaces">Interfaces</h2>

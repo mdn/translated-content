@@ -8,7 +8,7 @@ translation_of: Web/API/IDBObjectStore/createIndex
 <p>La méthode <strong><code>createIndex()</code></strong> de l'interface {{domxref("IDBObjectStore")}} met en place sur le magasin d'objet {{domxref("IDBObjectStore","relié")}} un nouvel index et en renvoie l'{{domxref("IDBIndex","accès")}}.</p>
 
 <div class="note">
-<p>Note: cette méthode ne peut être appelé que si la transaction de l'accès au magasin d'objet est en mode VersionChange.</p>
+<p><strong>Note :</strong> Cette méthode ne peut être appelé que si la transaction de l'accès au magasin d'objet est en mode VersionChange.</p>
 </div>
 
 <p>{{AvailableInWorkers}}</p>
@@ -72,7 +72,7 @@ translation_of: Web/API/IDBObjectStore/createIndex
  <dd>Cette {{domxref("DOMException","exeption")}} si la {{domxref("IDBTransaction","transaction")}} dont dépend cet {{domxref("IDBObjectStore","accès")}} au magasin d'objet n'est pas en {{domxref("IDBTransaction.mode","mode")}} <code>versionchange</code>.</dd>
  <dt><code>TransactionInactiveError</code></dt>
  <dd>Cette {{domxref("DOMException","exeption")}} si la {{domxref("IDBTransaction","transaction")}} de l'{{domxref("IDBObjectStore","accès")}} au magasin d’objet est inactive.
- <p href="https://bugzilla.mozilla.org/show_bug.cgi?id=1176165">bug 1176165</a> ).</p>
+ <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1176165">bug 1176165</a> ).
  </dd>
  <dt><code>ConstraintError</code></dt>
  <dd>Cette {{domxref("DOMException","exeption")}} si un index avec le même nom (case sensible) existe déjà sur le magasin d'objet.</dd>
@@ -128,7 +128,9 @@ DBOpenRequest.onupgradeneeded = function(event) {
 };
 </pre>
 
-<p class="note">Pour un exemple de travail complet, voir notre <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>).</p>
+<div class="note">
+  <p><strong>Note :</strong> Pour un exemple de travail complet, voir notre <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>).</p>
+</div>
 
 <h2 id="Spécifications">Spécifications</h2>
 

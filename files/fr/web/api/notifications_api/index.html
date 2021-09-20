@@ -21,8 +21,8 @@ translation_of: Web/API/Notifications_API
   // wait for permission
 })</pre>
 
-<div class="blockIndicator note">
-<p>Il ne s'agit pas seulement d'une bonne pratique - vous ne devriez pas envoyer de spam aux utilisateurs avec des notifications qu'ils n'acceptent pas - mais les navigateurs suivants interdiront explicitement les notifications non déclenchées en réponse à un geste de l'utilisateur. Firefox le fait déjà depuis la version 72, par exemple.</p>
+<div class="note">
+<p><strong>Note :</strong> Il ne s'agit pas seulement d'une bonne pratique - vous ne devriez pas envoyer de spam aux utilisateurs avec des notifications qu'ils n'acceptent pas - mais les navigateurs suivants interdiront explicitement les notifications non déclenchées en réponse à un geste de l'utilisateur. Firefox le fait déjà depuis la version 72, par exemple.</p>
 </div>
 
 <p>Cela créera une boîte de dialogue, proche de cette apparence:</p>
@@ -32,7 +32,7 @@ translation_of: Web/API/Notifications_API
 <p>De là, l'utilisateur peut choisir d'autoriser les notifications de cette origine ou de les bloquer. Une fois le choix effectué, le paramètre persistera généralement pour la session en cours.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Depuis Firefox 44, les autorisations pour les notifications et le push ont été fusionnées. Si l'autorisation est accordée pour les notifications, le push sera également activé.</p>
+<p><strong>Note :</strong> Depuis Firefox 44, les autorisations pour les notifications et le push ont été fusionnées. Si l'autorisation est accordée pour les notifications, le push sera également activé.</p>
 </div>
 
 <p>Ensuite, une nouvelle notification est créée à l'aide du constructeur {{domxref ("Notification.Notification", "Notification ()")}}. Auquel on doit passé un titre en argument et il peut éventuellement recevoir un objet d'options pour personnalisés la notification, telles que la direction du texte, le corps du texte, l'icône à afficher, le son de notification à lire, etc.</p>
@@ -40,7 +40,7 @@ translation_of: Web/API/Notifications_API
 <p>En outre, la spécification de l'API Notifications spécifie un certain nombre d'ajouts à l'<a href="/fr/docs/Web/API/ServiceWorker_API">API ServiceWorker</a>, pour permettre aux service worker de déclencher des notifications.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Pour en savoir plus sur l'utilisation des notifications dans votre propre application, lisez <a href="/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API">Utilisation de l'API Notifications</a>.</p>
+<p><strong>Note :</strong> Pour en savoir plus sur l'utilisation des notifications dans votre propre application, lisez <a href="/fr/docs/Web/API/Notifications_API/Using_the_Notifications_API">Utilisation de l'API Notifications</a>.</p>
 </div>
 
 <h2 id="Les_interfaces_de_Notifications">Les interfaces de Notifications</h2>

@@ -17,7 +17,7 @@ original_slug: NavigatorUserMedia.getUserMedia
 <p>Si ce dernier l'autorise, un {{domxref("MediaStream")}} est transmis au callback spécifié, il contient les pistes audio et/ou vidéo des entrées autorisées. Si l'utilisateur refuse l'accès, que le périphérique n'existe pas, ou qu'une erreur quelconque se produit, le callback d'erreur est alors exécuté avec comme paramètre un objet {{domxref("MediaStreamError")}}, il décrit l'erreur qui vient de se produire. Si l'utilisateur ne fait aucun choix, aucun callback n'est exécuté.</p>
 
 <div class="note">
-<p>Il s'agit d'une ancienne méthode, veuillez utiliser la méthode {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}} à la place. Bien qu'elle ne soit pas techniquement obsolète, l'utilisation de callbacks l'est, les spécifications encouragent fortamment l'utilisation de la nouvelle version avec {{jsxref("promise", "promesses")}}.</p>
+<p><strong>Note :</strong> Il s'agit d'une ancienne méthode, veuillez utiliser la méthode {{domxref("MediaDevices.getUserMedia", "navigator.mediaDevices.getUserMedia()")}} à la place. Bien qu'elle ne soit pas techniquement obsolète, l'utilisation de callbacks l'est, les spécifications encouragent fortamment l'utilisation de la nouvelle version avec {{jsxref("promise", "promesses")}}.</p>
 </div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
@@ -116,8 +116,8 @@ if (navigator.getUserMedia) {
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 
-<div class="notecard warning">
-  <p>Le nouveau code doit utiliser {{domxref("Navigator.mediaDevices.getUserMedia()")}} à la place.</p>
+<div class="warning">
+  <p><strong>Attention :</strong> Le nouveau code doit utiliser {{domxref("Navigator.mediaDevices.getUserMedia()")}} à la place.</p>
 </div>
 
 <p>{{Compat("api.Navigator.getUserMedia")}}</p>

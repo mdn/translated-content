@@ -10,11 +10,11 @@ translation_of: Web/API/Window/openDialog
 ---
 <p>{{ ApiRef() }}</p>
 
-<p><code">window.openDialog</code> est une extension à <a href="/fr/DOM/window.open">window.open()</a>. Elle s'utilise de la même manière, excepté qu'elle peut prendre plusieurs paramètres optionnels après<code">windowFeatures</code>, et que<code">windowFeatures</code> est traîté différemment.</p>
+<p><code>window.openDialog</code> est une extension à <a href="/fr/DOM/window.open">window.open()</a>. Elle s'utilise de la même manière, excepté qu'elle peut prendre plusieurs paramètres optionnels après<code>windowFeatures</code>, et que<code>windowFeatures</code> est traîté différemment.</p>
 
-<p>Les paramètres optionnels, si présents, seront regroupés dans un objet JavaScript Array et seront accessibles depuis la nouvelle fenêtre par la propriété <code>window.arguments</code>. Ils sont accessibles depuis les scripts de la fenêtre à tout moment, notamment lors du traitement d'un évênement<code">load</code> . Ces paramètres peuvent donc être utilisés pour passer des arguments à une boîte de dialogue, et pour les récupérer ensuite.</p>
+<p>Les paramètres optionnels, si présents, seront regroupés dans un objet JavaScript Array et seront accessibles depuis la nouvelle fenêtre par la propriété <code>window.arguments</code>. Ils sont accessibles depuis les scripts de la fenêtre à tout moment, notamment lors du traitement d'un évênement<code>load</code> . Ces paramètres peuvent donc être utilisés pour passer des arguments à une boîte de dialogue, et pour les récupérer ensuite.</p>
 
-<p>Notez que l'appel à la méthode<code">openDialog()</code> se termine immédiatement. Si vous souhaitez le bloquer jusqu'à ce que l'utilisateur ferme la boîte de dialogue, utilisez la valeur<code">modal</code> pour le paramètre f<code">eatures</code>. En conséquence, l'utilisateur ne pourra pas interagir avec la fenêtre parente jusqu'à ce qu'il ferme la boîte de dialogue modale.</p>
+<p>Notez que l'appel à la méthode<code>openDialog()</code> se termine immédiatement. Si vous souhaitez le bloquer jusqu'à ce que l'utilisateur ferme la boîte de dialogue, utilisez la valeur<code>modal</code> pour le paramètre f<code>eatures</code>. En conséquence, l'utilisateur ne pourra pas interagir avec la fenêtre parente jusqu'à ce qu'il ferme la boîte de dialogue modale.</p>
 
 <h3 id="Syntax">Syntaxe</h3>
 
@@ -52,15 +52,15 @@ translation_of: Web/API/Window/openDialog
 
 <h4 id="Default_behaviour">Comportement</h4>
 
-<p>La méthode<code>window.openDialog()</code> traite l'absence du paramètre<code>features</code> de la même manière que<a href="/fr/DOM/window.open">window.open()</a> (une chaîne vide désactive toutes les fonctionnalités) excepté pour<code>chrome</code> et<code>dialog</code> qui sont activés par défaut et peuvent être explicitement désactivées par "<code">chrome=no</code>".</p>
+<p>La méthode<code>window.openDialog()</code> traite l'absence du paramètre<code>features</code> de la même manière que<a href="/fr/DOM/window.open">window.open()</a> (une chaîne vide désactive toutes les fonctionnalités) excepté pour<code>chrome</code> et<code>dialog</code> qui sont activés par défaut et peuvent être explicitement désactivées par "<code>chrome=no</code>".</p>
 
 <h4 id="Passing_extra_parameters_to_the_dialog">Passage de paramètres supplémentaires</h4>
 
-<p>Pour passer des paramètres supplémentaires à la boîte de dialogue, vous pouvez simplement les ajouter après le paramètre f<code">eatures</code> :</p>
+<p>Pour passer des paramètres supplémentaires à la boîte de dialogue, vous pouvez simplement les ajouter après le paramètre f<code>eatures</code> :</p>
 
 <pre class="brush: js">openDialog("http://example.tld/zzz.xul", "dlg", "", "pizza", 6.98);</pre>
 
-<p>Ces paramètres seront ensuite regroupés dans une propriété <code">arguments</code> de type<a href="/en/Core_JavaScript_1.5_Reference/Global_Objects/Array">Array</a>, et cette propriété sera ajoutée à la nouvelle boîte de dialogue.</p>
+<p>Ces paramètres seront ensuite regroupés dans une propriété <code>arguments</code> de type<a href="/en/Core_JavaScript_1.5_Reference/Global_Objects/Array">Array</a>, et cette propriété sera ajoutée à la nouvelle boîte de dialogue.</p>
 
 <p>Pour accéder à ces paramètres depuis un script de la boîte de dialogue, utilisez le procédé suivant :</p>
 
@@ -71,14 +71,14 @@ var price = window.arguments[1];</pre>
 
 <h4 id="Returning_values_from_the_dialog">Retourner des arguments depuis la boîte de dialogue</h4>
 
-<p>Depuis que<code"><a href="/fr/DOM/window.close">window.close()</a></code> efface toutes les propriétés associées à la boîte de dialogue (c'est-à-dire les variables spécifiées depuis le code JavaScript chargé depuis la boîte de dialogue), il n'est pas possible de retourner des valeur après la fermeture de la boîte de dialogue en utilisant des variables globales (ou toute autre méthode).</p>
+<p>Depuis que<code><a href="/fr/DOM/window.close">window.close()</a></code> efface toutes les propriétés associées à la boîte de dialogue (c'est-à-dire les variables spécifiées depuis le code JavaScript chargé depuis la boîte de dialogue), il n'est pas possible de retourner des valeur après la fermeture de la boîte de dialogue en utilisant des variables globales (ou toute autre méthode).</p>
 
-<p>Pour pouvoir retourner des valeurs à la fenêtre parente, vous devez passer un objet via les paramètres supplémentaires. Vous pouvez ensuite accéder à cet objet depuis la boîte de dialogue et modifier ces propriétés, dont les données que vous souhaiter conserver après l'appel à la méthode<code">window.close()</code>.</p>
+<p>Pour pouvoir retourner des valeurs à la fenêtre parente, vous devez passer un objet via les paramètres supplémentaires. Vous pouvez ensuite accéder à cet objet depuis la boîte de dialogue et modifier ces propriétés, dont les données que vous souhaiter conserver après l'appel à la méthode<code>window.close()</code>.</p>
 
 <pre class="brush: js">var retVals = { address: null, delivery: null };
 openDialog("http://example.tld/zzz.xul", "dlg", "modal", "pizza", 6.98, retVals);</pre>
 
-<p>Si vous modifiez les propriétés de l'objet<code">retVals</code> depuis la boîte de dialogue comme décrit précédemment, vous pouvez y accéder via le tableau<code">retVals</code> après l'appel à <code">openDialog()</code>.</p>
+<p>Si vous modifiez les propriétés de l'objet<code>retVals</code> depuis la boîte de dialogue comme décrit précédemment, vous pouvez y accéder via le tableau<code>retVals</code> après l'appel à <code>openDialog()</code>.</p>
 
 <p>Depuis la boîte de dialogue, vous pouvez modifier les propriétés comme suit :</p>
 

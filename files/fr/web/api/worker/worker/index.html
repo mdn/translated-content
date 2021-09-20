@@ -11,7 +11,7 @@ translation_of: Web/API/Worker/Worker
 <p>Le constructeur <code><strong>Worker()</strong></code> crée un objet {{domxref("Worker")}} qui exécute le script à l'URL spécifiée. Ce script doit obéir à la <a href="/en/Same_origin_policy_for_JavaScript">same-origin policy</a>.</p>
 
 <div class="note">
-<p><strong>Remarque </strong>: il y a un désaccord entre les éditeurs de navigateur sur la question de savoir si une donnée URI relève ou non de la même origine. Bien que Gecko 10.0 {{ geckoRelease("10.0") }} et suivant accepte les données URIs, ce n'est pas le cas dans tous les autres navigateurs.</p>
+<p><strong>Note :</strong> il y a un désaccord entre les éditeurs de navigateur sur la question de savoir si une donnée URI relève ou non de la même origine. Bien que Gecko 10.0 {{ geckoRelease("10.0") }} et suivant accepte les données URIs, ce n'est pas le cas dans tous les autres navigateurs.</p>
 </div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
@@ -75,12 +75,10 @@ first.onchange = function() {
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 
-
-
 <p>{{Compat("api.Worker.Worker")}}</p>
 
 <div class="blockIndicator note">
-<p><strong>Remarque:</strong> Un navigateur peut indiquer avoir un support complet de <code>Worker()</code> même s'il ne supporte pas les fichiers worker écrit comme des modules. À partir du premier août 2019, aucun navigateur n'est connu pour avoir un support en production des fichiers <em>worker</em> écrit comme des modules. Sans ces suppports, les fichiers <em>workers</em> écrit sous forme de module et les modules utilisés dans les workers doivent être transpilés ou convertis en non-module pour être utilisables.</p>
+<p><strong>Note :</strong> Un navigateur peut indiquer avoir un support complet de <code>Worker()</code> même s'il ne supporte pas les fichiers worker écrit comme des modules. À partir du premier août 2019, aucun navigateur n'est connu pour avoir un support en production des fichiers <em>worker</em> écrit comme des modules. Sans ces suppports, les fichiers <em>workers</em> écrit sous forme de module et les modules utilisés dans les workers doivent être transpilés ou convertis en non-module pour être utilisables.</p>
 </div>
 
 <h2 id="Voir_aussi">Voir aussi</h2>

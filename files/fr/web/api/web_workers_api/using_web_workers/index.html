@@ -20,7 +20,7 @@ original_slug: Web/API/Web_Workers_API/Utilisation_des_web_workers
 <p>Le contexte du <em>worker</em> est représenté par un objet {{domxref("DedicatedWorkerGlobalScope")}} pour les <em>workers</em> dédiés et par un objet {{domxref("SharedWorkerGlobalScope")}} sinon. Un <em>worker</em> dédié est uniquement accessible au travers du script qui l'a déclenché tandis qu'un <em>worker</em> partagé peut être utilisé par différents scripts.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Voir <a href="/fr/docs/Web/API/Web_Workers_API">la page d'entrée pour l'API Web Workers</a> pour consulter la documentation de référence sur les <em>workers</em> et d'autres guides.</p>
+<p><strong>Note :</strong> Voir <a href="/fr/docs/Web/API/Web_Workers_API">la page d'entrée pour l'API Web Workers</a> pour consulter la documentation de référence sur les <em>workers</em> et d'autres guides.</p>
 </div>
 
 <p>Il est possible d'exécuter n'importe quel code JavaScript dans le <em>thread</em> du <em>worker</em>, à l'exception des méthodes de manipulation du DOM ou de certaines propriétés et méthodes rattachées à {{domxref("window")}}. On notera cependant qu'on peut tout à fait utiliser certaines API rendues disponibles via <code>window</code> comme les <a href="/fr/docs/Web/API/WebSockets_API">WebSockets</a>, les API de stockage de données telles que <a href="/fr/docs/Web/API/API_IndexedDB">IndexedDB</a>. Pour plus de détails, voir <a href="/fr/docs/Web/API/Worker/Functions_and_classes_available_to_workers">les fonctions et classes disponibles au sein des <em>workers</em></a>.</p>
@@ -87,9 +87,13 @@ deuxiemeNombre.onchange = function() {
 
 <p>Ici, nous récupérons les données grâce à l'attribut <code>data</code> de l'évènement et nous mettons à jour le contenu du paragraphe avec l'attribut <code>textContent</code> de l'élément. Ainsi, l'utilisateur peut visualiser le résultat du calcul.</p>
 
-<div class="note"><strong>Note :</strong> On notera que <code>onmessage</code> et <code>postMessage()</code> doivent être rattachés à un objet <code>Worker</code> lorsqu'ils sont utilisés depuis le <em>thread</em> principal (ici, c'était <code>monWorker</code>) mais pas lorsqu'ils sont employés depuis le <em>worker</em>. En effet, dans le <em>worker</em>, c'est le <em>worker</em> qui constitue la portée globale et qui met à disposition ces méthodes.</div>
+<div class="note">
+  <p><strong>Note :</strong> On notera que <code>onmessage</code> et <code>postMessage()</code> doivent être rattachés à un objet <code>Worker</code> lorsqu'ils sont utilisés depuis le <em>thread</em> principal (ici, c'était <code>monWorker</code>) mais pas lorsqu'ils sont employés depuis le <em>worker</em>. En effet, dans le <em>worker</em>, c'est le <em>worker</em> qui constitue la portée globale et qui met à disposition ces méthodes.</p>
+</div>
 
-<div class="note"><strong>Note :</strong> Lorsqu'un message est envoyé d'un <em>thread</em> à l'autre, ses données sont copiées. Elles ne sont pas partagées. Voir <a href="#échange">ci-après</a> pour plus d'explications à ce sujet.</div>
+<div class="note">
+  <p><strong>Note :</strong> Lorsqu'un message est envoyé d'un <em>thread</em> à l'autre, ses données sont copiées. Elles ne sont pas partagées. Voir <a href="#échange">ci-après</a> pour plus d'explications à ce sujet.</p>
+</div>
 
 <h3 id="Clôturer_un_worker">Clôturer un <em>worker</em></h3>
 
@@ -131,7 +135,9 @@ importScripts('//example.com/hello.js'); /* importe un script d'une autre origin
 
 <p>Lors d'un import, le navigateur chargera chacun des scripts puis l'exécutera. Chaque script pourra ainsi mettre à disposition des objets globaux qui pourront être utilisés par le <em>worker</em>. Si le script ne peut pas être chargé, une exception <code>NETWORK_ERROR</code> sera levée et le code assicé ne sera pas exécuté. Le code exécuté précédemment (y compris celui-ci reporté à l'aide de {{domxref("window.setTimeout()")}}) continuera cependant d'être fonctionnel. Les déclarations de fonction situées <strong>après</strong> <code>importScripts()</code> sont également exécutées car évaluées avant le reste du code.</p>
 
-<div class="note"><strong>Note :</strong> Les scripts peuvent être téléchargés dans n'importe quel ordre mais ils seront exécutés dans l'ordre des arguments passés à <code>importScripts()</code> . Cet exécution est effectuée de façon synchrone et <code>importScripts()</code> ne rendra pas la main tant que l'ensemble des scripts n'auront pas été chargés et exécutés.</div>
+<div class="note">
+  <p><strong>Note :</strong> Les scripts peuvent être téléchargés dans n'importe quel ordre mais ils seront exécutés dans l'ordre des arguments passés à <code>importScripts()</code> . Cet exécution est effectuée de façon synchrone et <code>importScripts()</code> ne rendra pas la main tant que l'ensemble des scripts n'auront pas été chargés et exécutés.</p>
+</div>
 
 <h2 id="Les_workers_partagés">Les <em>workers</em> partagés</h2>
 

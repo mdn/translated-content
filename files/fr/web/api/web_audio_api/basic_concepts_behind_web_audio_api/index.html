@@ -61,7 +61,7 @@ translation_of: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 <p>Lorsqu'un noeud de mémoire tampon est lu, on entend d'abord la trame la trame la plus à gauche, puis celle qui la suit à droite, etc. Dans le cas de la stéréo, on entend les deux canaux en même temps. Les trames d'échantillon sont très utiles, car elles représentent le temps indépendamment du nombre de canaux.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Pour obtenir le temps en secondes à partir du nombre de trames, diviser le nombre de trames par le taux d'échantillonage. Pour obtenir le nombre de trames à partir du nombre d'échantillons, diviser le nombre d'échantillons par le nombre de canaux.</p>
+<p><strong>Note :</strong> Pour obtenir le temps en secondes à partir du nombre de trames, diviser le nombre de trames par le taux d'échantillonage. Pour obtenir le nombre de trames à partir du nombre d'échantillons, diviser le nombre d'échantillons par le nombre de canaux.</p>
 </div>
 
 <p>Voici quelques exemples simples:</p>
@@ -70,7 +70,7 @@ translation_of: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
 var memoireTampon = contexte.createBuffer(2, 22050, 44100);</pre>
 
 <div class="note">
-<p><strong>Note</strong>: <strong>44,100 <a href="https://en.wikipedia.org/wiki/Hertz">Hz</a></strong> (que l'on peut aussi écrire <strong>44.1 kHz</strong>) est un <a href="https://en.wikipedia.org/wiki/Sampling_frequency">taux d'échantillonage</a> couramment utilisé. Pourquoi 44.1kHz ?<br>
+<p><strong>Note :</strong> <strong>44,100 <a href="https://en.wikipedia.org/wiki/Hertz">Hz</a></strong> (que l'on peut aussi écrire <strong>44.1 kHz</strong>) est un <a href="https://en.wikipedia.org/wiki/Sampling_frequency">taux d'échantillonage</a> couramment utilisé. Pourquoi 44.1kHz ?<br>
  <br>
  D'abord, parce ce que le <a href="https://en.wikipedia.org/wiki/Hearing_range">champ auditif</a> qui peut être perçu par des oreilles humaines se situe à peu près entre 20 Hz et 20,000 Hz, et que selon le <a href="https://en.wikipedia.org/wiki/Nyquist%E2%80%93Shannon_sampling_theorem">théorème d'échantillonage de Nyquist–Shannon</a> la fréquence d'échantillonage doit être supérieure à deux fois la fréquence maximum que l'on souhaite reproduire; le taux d'échantillonage doit donc être supérieur à 40 kHz.<br>
  <br>
@@ -85,7 +85,7 @@ var memoireTampon = context.createBuffer(1, 22050, 22050);</pre>
 <p>Ce code génère une mémoire tampon mono (un seul canal) qui, lorsqu'elle est lue dans un AudioContext à 44100Hzz, est automatiquement *rééchantillonnée* à 44100Hz (et par conséquent produit 44100 trames), et dure 1.0 seconde: 44100 frames / 44100Hz = 1 seconde.</p>
 
 <div class="note">
-<p><strong>Note</strong>: le rééchantillonnage audio est très similaire à la redimension d'une image : imaginons que vous ayiez une image de 16 x 16, mais que vous vouliez remplir une surface de 32x32: vous la redimensionnez (rééchantillonnez). Le résultat est de qualité inférieure (il peut être flou ou crénelé, en fonction de l'algorithme de redimensionnement), mais cela fonctionne, et l'image redimensionnée prend moins de place que l'originale. C'est la même chose pour le rééchantillonnage audio — vous gagnez de la place, mais en pratique il sera difficle de reproduire correctement des contenus de haute fréquence (c'est-à-dire des sons aigus).</p>
+<p><strong>Note :</strong> le rééchantillonnage audio est très similaire à la redimension d'une image : imaginons que vous ayiez une image de 16 x 16, mais que vous vouliez remplir une surface de 32x32: vous la redimensionnez (rééchantillonnez). Le résultat est de qualité inférieure (il peut être flou ou crénelé, en fonction de l'algorithme de redimensionnement), mais cela fonctionne, et l'image redimensionnée prend moins de place que l'originale. C'est la même chose pour le rééchantillonnage audio — vous gagnez de la place, mais en pratique il sera difficle de reproduire correctement des contenus de haute fréquence (c'est-à-dire des sons aigus).</p>
 </div>
 
 <h3 id="Mémoire_tampon_linéaire_ou_entrelacée">Mémoire tampon linéaire ou entrelacée</h3>
@@ -311,7 +311,7 @@ var memoireTampon = context.createBuffer(1, 22050, 22050);</pre>
 </dl>
 
 <div class="note">
-<p><strong>Note</strong>: Pour plus d'informations, voir notre article <a href="/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API">Visualizations with Web Audio API</a>.</p>
+<p><strong>Note :</strong> Pour plus d'informations, voir notre article <a href="/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API">Visualizations with Web Audio API</a>.</p>
 </div>
 
 <h2 id="Spatialisations">Spatialisations</h2>
@@ -331,7 +331,7 @@ var memoireTampon = context.createBuffer(1, 22050, 22050);</pre>
 <p><img alt="On voit la position d'un auditeur, ainsi que les vecteurs de direction haut et de face qui forment un angle de 90°" src="https://mdn.mozillademos.org/files/12497/listener.svg" style="height: 249px; width: 720px;"></p>
 
 <div class="note">
-<p><strong>Note</strong>: For more information, see our <a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">Web audio spatialization basics</a> article.</p>
+<p><strong>Note :</strong> For more information, see our <a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">Web audio spatialization basics</a> article.</p>
 </div>
 
 <h2 id="Fan-in_et_Fan-out">Fan-in et Fan-out</h2>

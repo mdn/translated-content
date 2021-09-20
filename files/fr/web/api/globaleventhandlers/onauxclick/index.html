@@ -14,8 +14,8 @@ translation_of: Web/API/GlobalEventHandlers/onauxclick
 
 <p>L'événement <code>auxclick</code> est déclenché lorsqu'un bouton non principal a été enfoncé sur un périphérique d'entrée (par exemple, la molette de la souris). Il se déclenche après les événements {{event("mousedown")}} et {{event("mouseup")}}, dans cet ordre.</p>
 
-<div class="blockIndicator note">
-<p><strong>Note:</strong> Les fournisseurs de navigateurs implémentent cette propriété dans le cadre d'un plan visant à améliorer la compatibilité en ce qui concerne le comportement des boutons. Plus précisément, le comportement des événements est mis à jour afin que {{Event ("click")}} ne se déclenche que pour les clics sur le bouton principal (par exemple, le bouton gauche de la souris), tandis que {{Event ("auxclick")}} se déclenche pour le bouton non principal. Historiquement, {{Event("click")}} s'est généralement déclenché pour le clic de n'importe quel bouton d'entrée de périphérique, bien que le comportement du navigateur soit quelque peu incohérent.</p>
+<div class="note">
+<p><strong>Note :</strong> Les fournisseurs de navigateurs implémentent cette propriété dans le cadre d'un plan visant à améliorer la compatibilité en ce qui concerne le comportement des boutons. Plus précisément, le comportement des événements est mis à jour afin que {{Event ("click")}} ne se déclenche que pour les clics sur le bouton principal (par exemple, le bouton gauche de la souris), tandis que {{Event ("auxclick")}} se déclenche pour le bouton non principal. Historiquement, {{Event("click")}} s'est généralement déclenché pour le clic de n'importe quel bouton d'entrée de périphérique, bien que le comportement du navigateur soit quelque peu incohérent.</p>
 </div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
@@ -51,7 +51,7 @@ button.onauxclick = function() {
 }</pre>
 
 <div class="note">
-<p><strong>Note</strong>: Si vous utilisez une souris à trois boutons, vous remarquerez que le gestionnaire<code> onauxclick</code> est exécuté lorsque l'un des boutons non gauche de la souris est cliqué.</p>
+<p><strong>Note :</strong> Si vous utilisez une souris à trois boutons, vous remarquerez que le gestionnaire<code> onauxclick</code> est exécuté lorsque l'un des boutons non gauche de la souris est cliqué.</p>
 </div>
 
 <h2 id="Spécifications">Spécifications</h2>

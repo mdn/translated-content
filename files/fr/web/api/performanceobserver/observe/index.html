@@ -31,7 +31,9 @@ translation_of: Web/API/PerformanceObserver/observe
       <li><code>type</code> : Une <a href="/fr/docs/Web/API/DOMString"><code>DOMString</code></a> unique spécifiant exactement un type d'entrée de performance à observer. Ne peut pas être utilisé avec l'option <code>entryTypes</code>.</li>
       <li><code>buffered</code> : Un indicateur booléen pour indiquer si les entrées en mémoire tampon doivent être mises en file d'attente dans la mémoire tampon de l'observateur. Ne doit être utilisé qu'avec l'option « <code>type</code> ».</li>
     </ul>
-    <p class="notecard note">Voir <a href="/fr/docs/Web/API/PerformanceEntry/entryType"><code>PerformanceEntry.entryType</code></a> pour une liste des noms de types d'entrées de performance valides. Les types non reconnus sont ignorés, bien que le navigateur puisse afficher un message d'avertissement sur la console pour aider les développeurs à déboguer leur code. Si aucun type valide n'est trouvé, <code>observe()</code> n'a aucun effet.</p>
+    <div class="note">
+      <p><strong>Note :</strong>Voir <a href="/fr/docs/Web/API/PerformanceEntry/entryType"><code>PerformanceEntry.entryType</code></a> pour une liste des noms de types d'entrées de performance valides. Les types non reconnus sont ignorés, bien que le navigateur puisse afficher un message d'avertissement sur la console pour aider les développeurs à déboguer leur code. Si aucun type valide n'est trouvé, <code>observe()</code> n'a aucun effet.</p>
+    </div>
   </dd>
 </dl>
 

@@ -17,10 +17,8 @@ translation_of: Web/API/AudioBufferSourceNode/playbackRate
 source.playbackRate.value = 1.25; // proportion : 25% plus rapide que la vitesse normale
 </pre>
 
-<div class="syntaxbox">
 <div class="note">
-<p><strong>Note</strong>: Bien que le <code>AudioParam</code> renvoyé soit en lecture seule, la valeur qu'il représente ne l'est pas.</p>
-</div>
+<p><strong>Note :</strong> Bien que le <code>AudioParam</code> renvoyé soit en lecture seule, la valeur qu'il représente ne l'est pas.</p>
 </div>
 
 <h3 id="Valeur">Valeur</h3>
@@ -40,7 +38,7 @@ source.playbackRate.value = 1.25; // proportion : 25% plus rapide que la vitesse
 <p>Dans cet exemple, la fonction {{domxref("AudioContext.decodeAudioData")}} est utilisée pour décoder une piste audio et la mettre dans un {{domxref("AudioBufferSourceNode")}}. L'interface fournit deux boutons pour démarrer et arrêter la lecture, et des sliders pour modifier les propriétés <code>playbackRate</code>, <code>loopStart</code> et <code>loopEnd</code> à la volée.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Voir <a href="http://mdn.github.io/decode-audio-data/"> l'exemple complet</a> et <a href="https://github.com/mdn/decode-audio-data">son code source</a>.</p>
+<p><strong>Note :</strong> Voir <a href="http://mdn.github.io/decode-audio-data/"> l'exemple complet</a> et <a href="https://github.com/mdn/decode-audio-data">son code source</a>.</p>
 </div>
 
 <pre class="brush: html">&lt;input class="playback-rate-control" type="range" min="0.25" max="3" step="0.05" value="1"&gt;

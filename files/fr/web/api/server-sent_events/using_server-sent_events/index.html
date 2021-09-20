@@ -51,8 +51,8 @@ translation_of: Web/API/Server-sent_events/Using_server-sent_events
 
 <p>Ce fragment de code est similaire au précédent, mais sera appelé automatiquement si le serveur envoie un message dont le champ <code>event</code> est <code>ping</code> ; il analysera alors le JSON dans le champ <code>data</code> et l'affichera.</p>
 
-<div class="notecard warning">
-  <p><strong>Lorsque HTTP/2 n'est pas utilisé</strong>, les évènements serveurs sont limités par le nombre maximal de connexion ouvertes, notamment quand on a plusieurs onglets ouverts. La limite est fixée <em>par le navigateur</em> et vaut 6 pour chaque origine (voir les bugs <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=275955">Chrome</a> et <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=906896">Firefox</a>). On pourra avoir 6 connexions pour les évènements serveurs parmi tous les onglets ouverts sur <code>www.example1.com</code>, 6 autres pour tous les onglets sur <code>www.example2.com</code> (voir cette réponse <a href="https://stackoverflow.com/a/5326159/1905229">Stack Overflow</a>). Avec HTTP/2, le nombre de flux HTTP simultanés est négocié entre le serveur et le client et vaut 100 par défaut.</p>
+<div class="warning">
+  <p><strong>Attention :</strong> <strong>Lorsque HTTP/2 n'est pas utilisé</strong>, les évènements serveurs sont limités par le nombre maximal de connexion ouvertes, notamment quand on a plusieurs onglets ouverts. La limite est fixée <em>par le navigateur</em> et vaut 6 pour chaque origine (voir les bugs <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=275955">Chrome</a> et <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=906896">Firefox</a>). On pourra avoir 6 connexions pour les évènements serveurs parmi tous les onglets ouverts sur <code>www.example1.com</code>, 6 autres pour tous les onglets sur <code>www.example2.com</code> (voir cette réponse <a href="https://stackoverflow.com/a/5326159/1905229">Stack Overflow</a>). Avec HTTP/2, le nombre de flux HTTP simultanés est négocié entre le serveur et le client et vaut 100 par défaut.</p>
 </div>
 
 <h2 id="sending_events_from_the_server">Envoyer un évènement depuis le serveur</h2>
@@ -99,7 +99,7 @@ while (true) {
 <p>La boucle s'exécute indépendamment du statut de la connexion, on a donc une vérification pour terminer l'exécution si la connexion a été terminée.</p>
 
 <div class="note">
-<p><strong>Note :</strong> Vous pouvez trouver un exemple complet utilisant le code ci-dessus sur GitHub : voir <a href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">Démonstration d'évènements serveur avec PHP.</a></p>
+<p><strong>Note :</strong> Vous pouvez trouver un exemple complet utilisant le code ci-dessus sur GitHub : voir <a href="https://github.com/mdn/dom-examples/tree/master/server-sent-events">Démonstration d'évènements serveur avec PHP.</a></p>
 </div>
 
 <h2 id="error_handling">Gestion des erreurs</h2>
@@ -122,7 +122,7 @@ while (true) {
 <p>Le flux d'évènements est un simple flux de données de texte, qui doit être encodé en <a href="/fr/docs/Glossary/UTF-8">UTF-8</a>. Les messages dans le flux d'évènements sont séparés par une paire de sauts de ligne. Un caractère deux-points « : » en début de ligne représente un commentaire, et est ignoré.</p>
 
 <div class="note">
-<p><strong>Note :</strong> Une ligne de commentaire peut être utilisée pour empêcher les connexions d'expirer. Un serveur peut envoyer périodiquement des commentaires afin de garder la connexion ouverte.</p>
+<p><strong>Note :</strong> Une ligne de commentaire peut être utilisée pour empêcher les connexions d'expirer. Un serveur peut envoyer périodiquement des commentaires afin de garder la connexion ouverte.</p>
 </div>
 
 <p>Chaque message consiste en une ou plusieurs lignes de texte décrivant les champs de ce message. Chaque champ est représenté par le nom du champ, suivi d'un « : », suivi des données de texte pour la valeur de ce champ.</p>
@@ -145,7 +145,7 @@ while (true) {
 <p>Tous les autres noms de champs sont ignorés.</p>
 
 <div class="note">
-<p><strong>Note :</strong> Si une ligne ne contient aucun caractère deux-points, la ligne entière est considérée comme le nom du champ, avec un contenu vide.</p>
+<p><strong>Note :</strong> Si une ligne ne contient aucun caractère deux-points, la ligne entière est considérée comme le nom du champ, avec un contenu vide.</p>
 </div>
 
 <h3 id="examples">Exemples</h3>

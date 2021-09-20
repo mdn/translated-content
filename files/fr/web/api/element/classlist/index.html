@@ -34,7 +34,7 @@ translation_of: Web/API/Element/classList
  <dt><strong>item</strong>( Number )</dt>
  <dd>Renvoie la position d'une classe dans une collection.</dd>
  <dt><strong>toggle</strong>( String [, force] )</dt>
- <dd>Si un seul argument est présent : change la présence d'une classe dans la liste. Si la classe existe, alors la <u>supprime</u> et renvoie <code>false</code>, dans le cas inverse, <u>ajoute</u> cette classe et retourne <code>true</code>.<br>
+ <dd>Si un seul argument est présent : change la présence d'une classe dans la liste. Si la classe existe, alors la supprime et renvoie <code>false</code>, dans le cas inverse, ajoute cette classe et retourne <code>true</code>.<br>
  Si le second argument est présent : Si l'argument <code>force</code> est à <code>true</code>, ajoute cette classe, si l'argument est à <code>false</code>, la supprime.</dd>
  <dt>contains( String )</dt>
  <dd>Vérifie si la classe spécifiée est présente dans la liste des classes attribuées à cet élément.</dd>
@@ -78,7 +78,7 @@ div.classList.remove(...cls);
 div.classList.replace("foo", "bar");</pre>
 
 <div class="note">
-<p class="brush: js">Les versions de Firefox antérieures à la 26 n'implémentent pas l'utilisation de plusieurs arguments dans les méthodes add/remove/toggle. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=814014">https://bugzilla.mozilla.org/show_bug.cgi?id=814014</a></p>
+<p><strong>Note :</strong> Les versions de Firefox antérieures à la 26 n'implémentent pas l'utilisation de plusieurs arguments dans les méthodes add/remove/toggle. Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=814014">https://bugzilla.mozilla.org/show_bug.cgi?id=814014</a></p>
 </div>
 
 <h2 id="Prothèse_démulation">Prothèse d'émulation</h2>

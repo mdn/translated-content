@@ -43,8 +43,8 @@ translation_of: Web/API/SubtleCrypto/digest
 
 <p>Cet algorithme est spécifié dans <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</a>, section 6.1, et produit un résultat de 160 bits de long.</p>
 
-<div class="blockIndicator warning">
-<p><strong>Avertissement:</strong> Cet algorithme est maintenant considérer comme vulnérable et ne doit pas être utilisé pour des applications cryptographiques.</p>
+<div class="warning">
+<p><strong>Attention :</strong> Cet algorithme est maintenant considérer comme vulnérable et ne doit pas être utilisé pour des applications cryptographiques.</p>
 </div>
 
 <h3 id="SHA-256">SHA-256</h3>
@@ -59,8 +59,8 @@ translation_of: Web/API/SubtleCrypto/digest
 
 <p>Cet algorithme est spécifié dans <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</a>, section 6.4, et produit un résultat de 512 bits de long.</p>
 
-<div class="blockIndicator note">
-<p>Indice: Si vous cherchez à créer un condensé pour authentifié un message (<a href="/fr/docs/Glossary/HMAC">HMAC</a>), vous aurez plutôt besoin de <a href="/en-US/docs/Web/API/SubtleCrypto/sign#HMAC">SubtleCrypto.sign()</a>.</p>
+<div class="note">
+<p><strong>Note :</strong> Si vous cherchez à créer un condensé pour authentifié un message (<a href="/fr/docs/Glossary/HMAC">HMAC</a>), vous aurez plutôt besoin de <a href="/en-US/docs/Web/API/SubtleCrypto/sign#HMAC">SubtleCrypto.sign()</a>.</p>
 </div>
 
 <h2 id="Exemples">Exemples</h2>
@@ -119,12 +119,10 @@ console.log(digestHex);
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 
-
-
 <p>{{Compat("api.SubtleCrypto.digest")}}</p>
 
-<div class="blockIndicator note">
-<p> Dans Chrome 60, une fonctionnalité a été ajoutée qui désactive <strong>crypto.subtle</strong> pour les connexions non TLS.</p>
+<div class="note">
+<p><strong>Note :</strong> Dans Chrome 60, une fonctionnalité a été ajoutée qui désactive <strong>crypto.subtle</strong> pour les connexions non TLS.</p>
 </div>
 
 <h2 id="Voir_aussi">Voir aussi</h2>

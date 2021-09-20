@@ -15,7 +15,8 @@ translation_of: Web/API/IDBTransaction/oncomplete
 <div class="note">
 <p><strong>Note :</strong> Depuis Firefox 40, les transactions IndexedDB diminuent en efficacité pour gagner en efficience (voir {{Bug ( "1112702")}}). Auparavant, dans une transaction en <code><a href="#const_read_write">readwrite</a></code>, l'événement <code>complete</code> était déclenché seulement lorsque toutes les données étaient écrites sur le disque. Maintenant, l'événement <code>complete</code> est déclenché après que l'OS ai envoyé l'ordre d'écrire les données, mais potentiellement avant qu'elles aient été écrites sur le disque. L'événement <code>complete</code> peut ainsi être déclenché plus rapidement qu'auparavant. Cependant, il existe une chance infime pour que l'ensemble de la transaction soit perdue si le système d'exploitation plante ou s'il y a une perte de courant avant que les données aient été écrites sur le disque. Étant donné que ces événements catastrophiques sont rares, la plupart des utilisateurs ne devraient pas avoir à s'en préoccuper davantage.</p>
 
-<p class="warning">Si vous devez vous assurer de l'efficacité d'une transaction pour une raison quelconque (par exemple, vous stockez des données critiques qui ne peuvent être recalculé plus tard), vous pouvez forcer l'enregistrement complet sur disque avant de déclencher l'événement <code>complete</code> en utilisant le mode <code>readwriteflush</code> (non-standard) expérimental (cf. {{domxref("IDBDatabase.transaction")}} ). Ce mode expérimentale ne peut être utilisé que si la préférence<code> dom.indexedDB.experimental </code> pref est réglée sur <code> true</code> dans <code> about: config</code>.</p>
+<div class="warning">
+  <p><strong>Attention :</strong> Si vous devez vous assurer de l'efficacité d'une transaction pour une raison quelconque (par exemple, vous stockez des données critiques qui ne peuvent être recalculé plus tard), vous pouvez forcer l'enregistrement complet sur disque avant de déclencher l'événement <code>complete</code> en utilisant le mode <code>readwriteflush</code> (non-standard) expérimental (cf. {{domxref("IDBDatabase.transaction")}} ). Ce mode expérimentale ne peut être utilisé que si la préférence<code> dom.indexedDB.experimental </code> pref est réglée sur <code> true</code> dans <code> about: config</code>.</p>
 </div>
 
 <p>{{AvailableInWorkers}}</p>
@@ -77,7 +78,9 @@ function addData() {
  };
 </pre>
 
-<p class="note">Pour un exemple de travail complet, voir notre application <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">exemple <em>live</em> disponible</a>).</p>
+<div class="note">
+  <p><strong>Note :</strong>Pour un exemple de travail complet, voir notre application <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">exemple <em>live</em> disponible</a>).</p>
+</div>
 
 <h2 id="Spécifications">Spécifications</h2>
 

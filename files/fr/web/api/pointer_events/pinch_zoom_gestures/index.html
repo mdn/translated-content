@@ -15,7 +15,7 @@ original_slug: Web/API/Pointer_events/gestes_pincer_zoom
 <p>Cet exemple montre comment détecter les gestes de <em>pinch/zoom</em> (pincer/zoomer), en utilisant les {{domxref("Pointer_events","événements de pointeur")}} pour détecter si l'utilisateur bouge deux pointeurs plus proches ou plus loin l'un de l'autre. </p>
 
 <div class="note">
-<p><strong>Note</strong>: Une version <em>en direct</em> de cette application est disponible sur <a href="https://mdn.github.io/dom-examples/pointerevents/Pinch_zoom_gestures.html">Github</a>. Le <a href="https://github.com/mdn/dom-examples/blob/master/pointerevents/Pinch_zoom_gestures.html">code source est également disponible sur Github</a>; les pull requests et <a href="https://github.com/mdn/dom-examples/issues">bug reports</a> sont les bienvenus.</p>
+<p><strong>Note :</strong> Une version <em>en direct</em> de cette application est disponible sur <a href="https://mdn.github.io/dom-examples/pointerevents/Pinch_zoom_gestures.html">Github</a>. Le <a href="https://github.com/mdn/dom-examples/blob/master/pointerevents/Pinch_zoom_gestures.html">code source est également disponible sur Github</a>; les pull requests et <a href="https://github.com/mdn/dom-examples/issues">bug reports</a> sont les bienvenus.</p>
 </div>
 
 <h2 id="Exemple">Exemple</h2>
@@ -151,7 +151,9 @@ var prevDiff = -1;
 
 <p>Cette application utilise un élément {{HTMLElement("div")}} comme zone de toucher et fournit des boutons pour activer et nettoyer les logs.</p>
 
-<p class="note">Pour empêcher que le comportement par défaut du navigateur au toucher surcharge le gestionnaire de l'application, la propriété {{cssxref("touch-action")}} est appliquée à l'élément {{HTMLElement("body")}}.</p>
+<div class="note">
+  <p><strong>Note :</strong> Pour empêcher que le comportement par défaut du navigateur au toucher surcharge le gestionnaire de l'application, la propriété {{cssxref("touch-action")}} est appliquée à l'élément {{HTMLElement("body")}}.</p>
+</div>
 
 <pre class="brush: html">&lt;body onload="init();" style="touch-action:none"&gt;
  &lt;div id="target"&gt;Touchez l'écran avec deux pointeurs, puis pincez ou étirez.&lt;br/&gt;

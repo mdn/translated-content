@@ -95,7 +95,7 @@ original_slug: WebRTC/Prendre_des_photos_avec_la_webcam
       height = 0;</pre>
 <p>Afin d'éviter les variables globales, on encapsule le script dans une fonction anonyme. Nous capturons les éléments du HTML dont nous avons besoin et nous définissons une largeur de vidéo à 320 et une hauteur à 0. La hauteur appropriée sera calculée plus tard.</p>
 <div class="warning">
- <p>À l'heure actuelle, il y a une différence dans les tailles de vidéo offertes par getUserMedia. Firefox Nightly utilise une résolution de 352x288 alors que Opera et Chrome utilisent une résolution de 640x400. Celà changera dans le futur, mais redimensionner avec le rapport comme nous le faisons nous épargnera des mauvaises surprises.</p>
+ <p><strong>Attention :</strong> À l'heure actuelle, il y a une différence dans les tailles de vidéo offertes par getUserMedia. Firefox Nightly utilise une résolution de 352x288 alors que Opera et Chrome utilisent une résolution de 640x400. Celà changera dans le futur, mais redimensionner avec le rapport comme nous le faisons nous épargnera des mauvaises surprises.</p>
 </div>
 <h3 id="Obtenir_la_vidéo">Obtenir la vidéo</h3>
 <p>Maintenant, nous devons récupérer la vidéo de la webcam. Pour l'instant c'est préfixé par les différents navigateurs, nous devons donc tester quelle forme est supportée:</p>

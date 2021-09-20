@@ -144,7 +144,9 @@ translation_of: Web/API/DataTransfer
 
 <p>L'état du curseur au cours d'un glisser. Cette propriété est surtout utilisée pour contrôler le curseur au cours d'un glisser d'onglet.</p>
 
-<div class="note"><strong>Note:</strong> Cette méthode n'est actuellement implémentée que sur Windows.</div>
+<div class="note">
+  <p><strong>Note :</strong> Cette méthode n'est actuellement implémentée que sur Windows.</p>
+</div>
 
 <h4 id="Valeurs_possibles">Valeurs possibles</h4>
 
@@ -155,25 +157,33 @@ translation_of: Web/API/DataTransfer
  <dd>Utilise le comportement par défaut de Gecko, qui consiste à utiliser une flèche pour curseur au cours d'un glisser.</dd>
 </dl>
 
-<div class="note"><strong>Note:</strong> Si vous spécifiez une valeur autre que "default", "auto" est supposé.</div>
+<div class="note">
+  <p><strong>Note :</strong> Si vous spécifiez une valeur autre que "default", "auto" est supposé.</p>
+</div>
 
 <h3 id="mozItemCount.28.29">mozItemCount</h3>
 
 <p>Le nombre d'éléments glissés.</p>
 
-<div class="note"><strong>Note:</strong> Cette propriété est  spécifique a Gecko.</div>
+<div class="note">
+  <p><strong>Note :</strong> Cette propriété est  spécifique a Gecko.</p>
+</div>
 
 <h3 id="mozSourceNode">mozSourceNode</h3>
 
 <p>le {{ domxref("Node") }} au dessus duquel le curseur de la souris se trouvait lorsque le bouton a été pressé pour initialiser le glisser. Cette valeur est nulle pour un glisser externe, ou si l'appelant ne peut pas accéder au nœud.</p>
 
-<div class="note"><strong>Note:</strong> Cette propriété est  spécifique a Gecko.</div>
+<div class="note">
+  <p><strong>Note :</strong> Cette propriété est  spécifique a Gecko.</p>
+</div>
 
 <h3 id="mozItemCount.28.29">mozUserCancelled</h3>
 
 <p>Cette propriété s'applique uniquement à l'événement <code>dragend</code>, et est positionnée à <code>true</code> si l'utilisateur a annulé le glisser en appuyant sur la touche échappe. Elle est positionnée à <code>false</code> dans les autres cas, y compris si le glisser a échoué pour toute autre raison, par exemple en raison d'un déposer sur un emplacement non valide. Cette propriété n'est pas encore implémenté sous Linux.</p>
 
-<div class="note"><strong>Note:</strong> Cette propriété est  spécifique a Gecko.</div>
+<div class="note">
+  <p><strong>Note :</strong> Cette propriété est  spécifique a Gecko.</p>
+</div>
 
 <h2 id="Methods">Methods</h2>
 
@@ -186,7 +196,7 @@ translation_of: Web/API/DataTransfer
  );
 </pre>
 
-<h6 id="Parameters_addElement">Parametres</h6>
+<h4 id="Parameters_addElement">Parametres</h4>
 
 <dl>
  <dt><code>element </code></dt>
@@ -202,7 +212,7 @@ translation_of: Web/API/DataTransfer
  );
 </pre>
 
-<h6 id="Parameters_clearData">Parametres</h6>
+<h4 id="Parameters_clearData">Parametres</h4>
 
 <dl>
  <dt><code>type </code></dt>
@@ -220,7 +230,7 @@ translation_of: Web/API/DataTransfer
  );
 </pre>
 
-<h6 id="Parameters_getData">Parametres</h6>
+<h4 id="Parameters_getData">Parametres</h4>
 
 <dl>
  <dt><code>type </code></dt>
@@ -237,7 +247,7 @@ translation_of: Web/API/DataTransfer
  );
 </pre>
 
-<h6 id="Parameters_setData">Parametres</h6>
+<h4 id="Parameters_setData">Parametres</h4>
 
 <dl>
  <dt><code>type </code></dt>
@@ -261,7 +271,7 @@ translation_of: Web/API/DataTransfer
  );
 </pre>
 
-<h6 id="Parameters_setDragImage">Parametres</h6>
+<h4 id="Parameters_setDragImage">Parametres</h4>
 
 <dl>
  <dt><code>image </code></dt>
@@ -281,7 +291,9 @@ translation_of: Web/API/DataTransfer
  Si la liste <code>format</code> est vide, alors les données associées à tous les formats sont supprimées. Si le format n'est pas trouvé, alors cette méthode n'a aucun effet.<br>
   </p>
 
-<div class="note">Note: Cette méthode est spécifique à Gecko.</div>
+<div class="note">
+  <p><strong>Note :</strong> Cette méthode est spécifique à Gecko.</p>
+</div>
 
 <pre class="eval"> void mozClearDataAt(
    [optional] in String type,
@@ -289,7 +301,7 @@ translation_of: Web/API/DataTransfer
  );
 </pre>
 
-<h6 id="Parameters_mozClearDataAt">Parametres</h6>
+<h4 id="Parameters_mozClearDataAt">Parametres</h4>
 
 <dl>
  <dt><code>type </code></dt>
@@ -302,7 +314,9 @@ translation_of: Web/API/DataTransfer
 
 <p>Récupère les données associées au format donné pour un élément à l'index spécifié, ou null si elle n'existe pas. L'indice devrait être compris entre zéro et le nombre d'éléments moins un.</p>
 
-<div class="note"><strong>Note:</strong> Cette méthode est spécifique à Gecko.</div>
+<div class="note">
+  <p><strong>Note :</strong> Cette méthode est spécifique à Gecko.</p>
+</div>
 
 <pre class="eval"> nsIVariant mozGetDataAt(
    [optional] in String type,
@@ -310,7 +324,7 @@ translation_of: Web/API/DataTransfer
  );
 </pre>
 
-<h6 id="Parameters_mozClearDataAt">Parametres</h6>
+<h4 id="Parameters_mozClearDataAt">Parametres</h4>
 
 <dl>
  <dt><code>type </code></dt>
@@ -327,7 +341,9 @@ translation_of: Web/API/DataTransfer
  <br>
  La donnée doit être une chaîne, ou un type primitif booléen, ou un type numérique (qui sera converti en une chaîne), ou une <a href="/fr/docs/XPCOM_Interface_Reference/nsISupports">nsISupports</a>.</p>
 
-<div class="note"><strong>Note:</strong> Cette méthode est spécifique à Gecko.</div>
+<div class="note">
+  <p><strong>Note :</strong> Cette méthode est spécifique à Gecko.</p>
+</div>
 
 <pre class="eval"> void mozSetDataAt(
    [optional] in String type,
@@ -336,7 +352,7 @@ translation_of: Web/API/DataTransfer
  );
 </pre>
 
-<h6 id="Parameters_mozSetDataAt">Parametres</h6>
+<h4 id="Parameters_mozSetDataAt">Parametres</h4>
 
 <dl>
  <dt><code>type </code></dt>
@@ -351,14 +367,16 @@ translation_of: Web/API/DataTransfer
 
 <p>Contient une liste des types de format des données qui sont stockées pour un élément à l'index spécifié. Si l'index n'est pas dans compris entre 0 et le nombre d'éléments moins un, une liste de chaîne vide est retournée.</p>
 
-<div class="note"><strong>Note:</strong> Cette méthode est spécifique à Gecko.</div>
+<div class="note">
+  <p><strong>Note :</strong> Cette méthode est spécifique à Gecko.</p>
+</div>
 
 <pre class="eval"> nsIVariant mozTypesAt(
    in unsigned long index
  );
 </pre>
 
-<h6 id="Parameters_mozTypesAt">Parameters</h6>
+<h4 id="Parameters_mozTypesAt">Parameters</h4>
 
 <dl>
  <dt><code>index </code></dt>

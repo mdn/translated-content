@@ -26,11 +26,11 @@ translation_of: Web/API/Web_Storage_API
 <p>Ces mécanismes sont disponibles via les propriétés {{domxref("Window.sessionStorage")}} et {{domxref("Window.localStorage")}} (pour être plus précis, pour le support des navigateurs, l'objet <code>Window</code> implemente le <code>WindowLocalStorage</code> et l'object <code>WindowSessionStorage</code>, dont les propriétés <code>localStorage</code> et <code>sessionStorage</code> dépendent) — L'appel de l'une de ces propriétés va créer une instance de l'objet {{domxref("Storage")}},  à travers de laquelle les éléments de données peuvent être définis, récupérés et éliminés. Un objet de stockage différent est utilisé pour le sessionStorage et le localStorage pour chaque origine — ils fonctionnent et sont contrôlés séparément.</p>
 
 <div class="note">
-<p><strong>Note</strong>: À partir de Firefox 45, lorsque le navigateur se bloque / redémarre, la quantité de données sauvegardées par origine est limitée à 10 Mo. Cela a été mis en place pour éviter les problèmes de mémoire causés par une utilisation excessive du stockage Web.</p>
+<p><strong>Note :</strong> À partir de Firefox 45, lorsque le navigateur se bloque / redémarre, la quantité de données sauvegardées par origine est limitée à 10 Mo. Cela a été mis en place pour éviter les problèmes de mémoire causés par une utilisation excessive du stockage Web.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: L'accès au Web Storage à partir d'iframes externes est interdit si l'utilisateur a <a href="https://support.mozilla.org/en-US/kb/disable-third-party-cookies">désactivé les cookies tierce-partie</a> (Firefox a adopté ce comportement à partir de la <a href="/en-US/docs/Mozilla/Firefox/Releases/43">version 43</a> et suivantes.)</p>
+<p><strong>Note :</strong> L'accès au Web Storage à partir d'iframes externes est interdit si l'utilisateur a <a href="https://support.mozilla.org/en-US/kb/disable-third-party-cookies">désactivé les cookies tierce-partie</a> (Firefox a adopté ce comportement à partir de la <a href="/en-US/docs/Mozilla/Firefox/Releases/43">version 43</a> et suivantes.)</p>
 </div>
 
 <div class="note">

@@ -22,7 +22,7 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
  La première tentative— AppCache — semblait être une bonne idée parce qu'elle permettait de spécifier les ressources à mettre en cache de manière très simple. Cependant, elle faisait beaucoup de suppositions sur la manière de le mettre en place et échouait implacablement si votre application ne se pliait pas exactement à ces suppositions. Lisez <a href="http://alistapart.com/article/application-cache-is-a-douchebag">Application Cache is a Douchebag</a> de Jake Archibald pour plus de détails.</p>
 
 <div class="note">
-<p><strong>Remarque </strong>: à partir de Firefox 44, lorsque <a href="/fr/docs/Web/HTML/Utiliser_Application_Cache">AppCache</a> est utilisé pour fournir un support déconnecté à une page, un message d'avertissement est alors affiché dans la console pour signaler aux développeurs d'utiliser plutôt les <a href="/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers">Service workers</a> ({{bug("1204581")}}.)</p>
+<p><strong>Note :</strong> à partir de Firefox 44, lorsque <a href="/fr/docs/Web/HTML/Utiliser_Application_Cache">AppCache</a> est utilisé pour fournir un support déconnecté à une page, un message d'avertissement est alors affiché dans la console pour signaler aux développeurs d'utiliser plutôt les <a href="/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers">Service workers</a> ({{bug("1204581")}}.)</p>
 </div>
 
 <p>Les service workers devraient finalement résoudre ces problèmes. La syntaxe du service Worker est plus complexe que celle de l'AppCache, mais en contrepartie vous pouvez utiliser JavaScript pour contrôler les comportements induits par votre cache local avec une granularité beaucoup plus fine, vous permettant ainsi d'adresser ce problème et beaucoup d'autres. Avec l'aide d'un Service Worker, vous pouvez facilement configurer une application pour d'abord utiliser des ressources mises en cache, fournissant ainsi une première expérience par défaut même en mode déconnecté, avant de récupérer davantage de données depuis le réseau (principe connu généralement sous le nom de <a href="http://offlinefirst.org/">Offline First</a>). Cette façon de faire est déjà disponible avec les applications natives, ce qui est l'une des raisons principales de la préférence accordée à ces applications plutôt qu'aux applications web.</p>
@@ -87,7 +87,7 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
  Alternativement, on pourrait faire notre propre promesse pour gérer ce genre de cas. (Voir l'exemple du <a href="https://github.com/mdn/promises-test">test de promesses</a> pour le code source, ou <a href="https://mdn.github.io/promises-test/">le voir fonctionner en direct</a>.)</p>
 
 <div class="note">
-<p><strong>Remarque </strong>: la mise en place d'un véritable service worker utiliserait la mise en cache et onfetch plutôt que l'API obsolète XMLHttpRequest. Ces fonctionnalités ne sont pas utilisées ici afin de se concentrer sur la compréhension des promesses.</p>
+<p><strong>Note :</strong> la mise en place d'un véritable service worker utiliserait la mise en cache et onfetch plutôt que l'API obsolète XMLHttpRequest. Ces fonctionnalités ne sont pas utilisées ici afin de se concentrer sur la compréhension des promesses.</p>
 </div>
 
 <pre class="brush: js">function imgLoad(url) {
@@ -132,12 +132,12 @@ imgLoad('myLittleVader.jpg').then(function(response) {
 <p>Le tout se déroule de manière asynchrone.</p>
 
 <div class="note">
-<p><strong>Remarque </strong>: il est possible d'assembler des appels de promesse, par exemple:<br>
+<p><strong>Note :</strong> il est possible d'assembler des appels de promesse, par exemple:<br>
  <code>myPromise().then(success, failure).then(success).catch(failure);</code></p>
 </div>
 
 <div class="note">
-<p><strong>Remarque </strong>: pour en savoir plus sur les promesses, consulter l'excellent article de Jake Archibald <a href="http://www.html5rocks.com/en/tutorials/es6/promises/">JavaScript Promises: there and back again</a>.</p>
+<p><strong>Note :</strong> pour en savoir plus sur les promesses, consulter l'excellent article de Jake Archibald <a href="http://www.html5rocks.com/en/tutorials/es6/promises/">JavaScript Promises: there and back again</a>.</p>
 </div>
 
 <h2 id="Démo_de_service_workers">Démo de service workers</h2>
@@ -186,11 +186,11 @@ imgLoad('myLittleVader.jpg').then(function(response) {
  Un seul service worker peut contrôler de nombreuses pages. Chaque fois qu'une page au sein du scope est chargée, le service worker est installé et opère sur la page. Attention, il faut faire un usage prudent des variables globales dans le script du service worker : chaque page ne dispose pas de son propre et unique worker.</p>
 
 <div class="note">
-<p><strong>Remarque </strong>: un service worker fonctionne comme un serveur proxy, permettant de modifier les requêtes et les réponses, de les remplacer par des éléments de son propre cache, et bien plus.</p>
+<p><strong>Note :</strong> un service worker fonctionne comme un serveur proxy, permettant de modifier les requêtes et les réponses, de les remplacer par des éléments de son propre cache, et bien plus.</p>
 </div>
 
 <div class="note">
-<p><strong>Remarque </strong>: une chose importante à savoir au sujet des service workers est que si la détection de fonctionnalité est utilisée comme ci-dessus, les navigateurs qui ne supportent pas les service workers peuvent simplement utiliser l'application de la manière normalement attendue. De plus, si vous utilisez AppCache et SW sur une page, les navigateurs qui ne supportent pas SW mais supportent AppCache l'utiliseront, et les navigateurs qui supportent les deux ignoreront AppCache au profit de SW.</p>
+<p><strong>Note :</strong> une chose importante à savoir au sujet des service workers est que si la détection de fonctionnalité est utilisée comme ci-dessus, les navigateurs qui ne supportent pas les service workers peuvent simplement utiliser l'application de la manière normalement attendue. De plus, si vous utilisez AppCache et SW sur une page, les navigateurs qui ne supportent pas SW mais supportent AppCache l'utiliseront, et les navigateurs qui supportent les deux ignoreront AppCache au profit de SW.</p>
 </div>
 
 <h4 id="Pourquoi_mon_service_worker_échoue_à_senregistrer">Pourquoi mon service worker échoue à s'enregistrer ?</h4>
@@ -210,7 +210,7 @@ imgLoad('myLittleVader.jpg').then(function(response) {
  L'événement install est déclenché lorsqu'une installation se termine avec succès. L'événement install est généralement utilisé pour remplir le cache local du navigateur avec les ressources nécessaires pour faire fonctionner l'application en mode déconnecté. A cet effet, la toute nouvelle API de stockage est utilisée — {{domxref("cache")}} — un espace global au niveau du service worker qui permet de stocker les ressources fournies par les réponses, et indexées par leurs requêtes. Cette API fonctionne d'une manière similaire au cache standard du navigateur, mais le cache demeure spécifique au domaine. Il persiste jusqu'à ce qu'il en soit décidé autrement — de nouveau, le contrôle reste total.</p>
 
 <div class="note">
-<p><strong>Remarque </strong>: L'API Cache n'est pas supportée par tous les navigateurs. (Voir la section {{anch("Compatibilité des navigateurs")}} pour plus d'informations.) Pour l'utiliser à l'heure actuelle, on peut envisager un polyfill comme celui fournit par la <a href="https://github.com/Polymer/topeka/blob/master/sw.js">démo Topeka de Google</a>, ou peut-être stocker les ressources dans <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>.</p>
+<p><strong>Note :</strong> L'API Cache n'est pas supportée par tous les navigateurs. (Voir la section {{anch("Compatibilité des navigateurs")}} pour plus d'informations.) Pour l'utiliser à l'heure actuelle, on peut envisager un polyfill comme celui fournit par la <a href="https://github.com/Polymer/topeka/blob/master/sw.js">démo Topeka de Google</a>, ou peut-être stocker les ressources dans <a href="/en-US/docs/Web/API/IndexedDB_API">IndexedDB</a>.</p>
 </div>
 
 <p>Commençons cette section par l'examen d'un exemple de code — c'est le <a href="https://github.com/mdn/sw-test/blob/gh-pages/sw.js#L1-L18">premier bloc présent dans le service worker</a>:</p>
@@ -242,11 +242,11 @@ imgLoad('myLittleVader.jpg').then(function(response) {
 </ol>
 
 <div class="note">
-<p><strong>Remarque </strong>: <a href="/fr/docs/Web/API/Web_Storage_API">localStorage</a> fonctionne de la même façon que le cache du service worker, mais de manière synchrone, et il n'est donc pas autorisé dans les service workers.</p>
+<p><strong>Note :</strong> <a href="/fr/docs/Web/API/Web_Storage_API">localStorage</a> fonctionne de la même façon que le cache du service worker, mais de manière synchrone, et il n'est donc pas autorisé dans les service workers.</p>
 </div>
 
 <div class="note">
-<p><strong>Remarque </strong>: <a href="/fr/docs/Web/API/API_IndexedDB">IndexedDB</a> peut être utilisé dans un service worker pour le stockage des donnés si nécessaire.</p>
+<p><strong>Note :</strong> <a href="/fr/docs/Web/API/API_IndexedDB">IndexedDB</a> peut être utilisé dans un service worker pour le stockage des donnés si nécessaire.</p>
 </div>
 
 <h3 id="Réponses_personnalisées_aux_requêtes">Réponses personnalisées aux requêtes</h3>
@@ -436,7 +436,7 @@ event.request.body</pre>
 <p>Firefox a aussi commencé à implanter quelques outils utiles concernant les service workers :</p>
 
 <ul>
- <li>Consulter <a>about:serviceworkers</a> pour voir quels SWs sont enregistrés et les mettre à jour ou les supprimer.</li>
+ <li>Consulter about:serviceworkers pour voir quels SWs sont enregistrés et les mettre à jour ou les supprimer.</li>
  <li>Lors de tests, il est possible de contourner la restriction HTTPS en cochant l'option "Activer les Service Workers via HTTP (lorsque la boîte à outils est ouverte)" dans les options des outils de développement de Firefox (la roue dentée dans le menu.)</li>
 </ul>
 

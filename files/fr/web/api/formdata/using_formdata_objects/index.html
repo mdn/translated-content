@@ -37,7 +37,9 @@ request.open("POST", "http://foo.com/submitform.php");
 request.send(formData);
 </pre>
 
-<div class="note"><strong>Remarque :</strong> les champs « userfile » et « webmasterfile » contiennent tous deux un fichier. Le numéro attribué au champ « accountnum » est immédiatement converti en chaîne par la méthode <a href="/en/DOM/XMLHttpRequest/FormData#append()"><code>FormData.append()</code></a> (la valeur du champ peut être un objet {{ domxref("Blob") }}, {{ domxref("File") }} ou une chaîne : <strong>s’il ne s’agit ni d’un objet Blob, ni d’un objet File, la valeur est convertie en chaîne</strong>).</div>
+<div class="note">
+  <p><strong>Note :</strong> Les champs « userfile » et « webmasterfile » contiennent tous deux un fichier. Le numéro attribué au champ « accountnum » est immédiatement converti en chaîne par la méthode <a href="/en/DOM/XMLHttpRequest/FormData#append()"><code>FormData.append()</code></a> (la valeur du champ peut être un objet {{ domxref("Blob") }}, {{ domxref("File") }} ou une chaîne : <strong>s’il ne s’agit ni d’un objet Blob, ni d’un objet File, la valeur est convertie en chaîne</strong>).</p>
+</div>
 
 <p>Dans cet exemple, une instance <code>FormData</code> contenant les valeurs des champs « username », « accountnum », « userfile » et « webmasterfile » est créée, puis la méthode <code>XMLHttpRequest</code> <a href="/en/DOM/XMLHttpRequest#send()"><code>send()</code></a> est utilisée pour envoyer les données du formulaire. Le champ « webmasterfile » est un objet {{domxref("Blob")}}. Un objet <code>Blob</code> représente un objet-fichier de données brutes immuables. Les Blobs représentent des données qui ne sont pas nécessairement dans un format JavaScript natif. L’interface {{ domxref("File") }} se base sur l’objet <code>Blob</code>, elle en hérite les fonctionnalités et les étend pour prendre en charge les fichiers du système de l’utilisateur. Pour construire un <code>Blob</code>, vous pouvez invoquer le {{domxref("Blob.Blob","constructeur Blob()")}}.</p>
 
@@ -109,7 +111,7 @@ form.addEventListener('submit', function(ev) {
 </pre>
 
 <div class="note">
-<p><strong>Remarque </strong>: si vous passez une référence dans le formulaire, la méthode spécifiée dans ce dernier sera utilisée au lieu de celle définie dans l’appel de la méthode open().</p>
+<p><strong>Note :</strong> Si vous passez une référence dans le formulaire, la méthode spécifiée dans ce dernier sera utilisée au lieu de celle définie dans l’appel de la méthode open().</p>
 </div>
 
 <p>Vous pouvez également ajouter un objet {{ domxref("File") }} ou {{ domxref("Blob") }} directement dans l’objet {{ domxref("FormData") }} :</p>

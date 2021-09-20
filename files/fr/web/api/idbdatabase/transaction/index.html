@@ -56,7 +56,7 @@ var transaction = db.transaction('my-store-name');</pre>
     <td>
      <p>Si vous devez vous assurer de l'efficacité d'une transaction pour une raison quelconque (par exemple, vous stockez des données critiques qui ne peuvent être recalculées plus tard), vous pouvez forcer l’enregistrement complet sur disque avant de déclencher l’événement <code>complete</code> en utilisant le mode <code>readwriteflush</code> (non standard) expérimental ( voir {{domxref("IDBDatabase.transaction")}} ). C'est expérimental, et ne peut être utilisé que si le <code> dom.indexedDB.experimental </code> pref est réglé sur <code> true </code> dans <code> about:config.</code></p>
 
-     <p class="note">Depuis Firefox 40, les transactions IndexedDB diminuent en efficacité pour gagner en efficience (voir {{Bug ( "1112702")}}.) Auparavant, dans une transaction en <code><a href="#const_read_write">readwrite</a></code> l'événement complete était déclanché seulement lorsque toutes les données étaient écrites sur le disque. Maintenant l'événement <code>complete</code> est déclenché après que l'OS ai envoyé l'ordre d'écrire les données, mais potentiellement avant qu'elles aient été écrites sur le disque. L'événement <code>complete</code> peut ainsi se déclancher plus rapidement qu'auparavant, cependant, il existe une chance infime pour que l'ensemble de la transaction soit perdue si le système d'exploitation plante ou s'il y a une perte de courant avant que les données aient été écites sur le disque. Étant donné que ces événements catastrophiques sont rares la plupart des utilisateurs ne devraient pas avoir à s'en préoccuper davantage.</p>
+     <div class="note"><p><strong>Note :</strong> Depuis Firefox 40, les transactions IndexedDB diminuent en efficacité pour gagner en efficience (voir {{Bug ( "1112702")}}.) Auparavant, dans une transaction en <code><a href="#const_read_write">readwrite</a></code> l'événement complete était déclanché seulement lorsque toutes les données étaient écrites sur le disque. Maintenant l'événement <code>complete</code> est déclenché après que l'OS ai envoyé l'ordre d'écrire les données, mais potentiellement avant qu'elles aient été écrites sur le disque. L'événement <code>complete</code> peut ainsi se déclancher plus rapidement qu'auparavant, cependant, il existe une chance infime pour que l'ensemble de la transaction soit perdue si le système d'exploitation plante ou s'il y a une perte de courant avant que les données aient été écites sur le disque. Étant donné que ces événements catastrophiques sont rares la plupart des utilisateurs ne devraient pas avoir à s'en préoccuper davantage.</p></div>
     </td>
    </tr>
   </tbody>
@@ -121,7 +121,8 @@ transaction.onerror = function(event) {
 var objectStore = transaction.objectStore("toDoList");
 // etc.</pre>
 
-<p class="note">Pour un exemple de travail complet, voir notre <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>).</p>
+<div class="note"><p><strong>Note :</strong>Pour un exemple de travail complet, voir notre <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>).</p>
+</div>
 
 <h2 id="Spécification">Spécification</h2>
 
