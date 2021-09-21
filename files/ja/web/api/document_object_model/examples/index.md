@@ -1,22 +1,25 @@
 ---
-title: 例
+title: DOM を使用したウェブと XML の開発の例
 slug: Web/API/Document_Object_Model/Examples
 tags:
   - DOM
-  - DOM Reference
+  - DOM リファレンス
 translation_of: Web/API/Document_Object_Model/Examples
 ---
-<div>
- {{ApiRef}}</div>
-<p>この章では、DOM を利用したウェブと XML 開発のより長い例をいくつか紹介します。可能な限りこれらの例ではドキュメントオブジェクトを操作する上でよく用いられる API や技法や JavaScript のパターンを利用しています。</p>
-<h2 id="Example_1.3A_height_and_width" name="Example_1.3A_height_and_width">例 1: 高さと幅</h2>
-<p>以下では、画像の大きさを変えるにあたって、<code>height</code> と <code>width</code> プロパティを使っている例を示します。</p>
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
+{{DefaultAPISidebar("DOM")}}
 
-&lt;head&gt;
-&lt;title&gt;width/height example&lt;/title&gt;
-&lt;script&gt;
+この章では、DOM を利用したウェブと XML 開発のより長い例をいくつか紹介します。可能な限りこれらの例ではドキュメントオブジェクトを操作する上でよく用いられる API や技法や JavaScript のパターンを利用しています。
+
+## 例 1: 高さと幅
+
+以下の例は、様々な寸法の画像について、`height` と `width` プロパティを使用しています。
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>width/height example</title>
+<script>
 function init() {
   var arrImages = new Array(3);
 
@@ -25,133 +28,155 @@ function init() {
   arrImages[2] = document.getElementById("image3");
 
   var objOutput = document.getElementById("output");
-  var strHtml = "&lt;ul&gt;";
+  var strHtml = "<ul>";
 
-  for (var i = 0; i &lt; arrImages.length; i++) {
-    strHtml += "&lt;li&gt;image" + (i+1) +
-               ": height=" + arrImages[i].height +
-               ", width=" + arrImages[i].width +
-               ", style.height=" + arrImages[i].style.height +
-               ", style.width=" + arrImages[i].style.width +
-               "&lt;\/li&gt;";
+  for (var i = 0; i < arrImages.length; i++) {
+    strHtml += "<li>image" + (i+1) +
+            ": height=" + arrImages[i].height +
+            ", width=" + arrImages[i].width +
+            ", style.height=" + arrImages[i].style.height +
+            ", style.width=" + arrImages[i].style.width +
+            "<\/li>";
   }
 
-  strHtml += "&lt;\/ul&gt;";
+  strHtml += "<\/ul>";
+
   objOutput.innerHTML = strHtml;
 }
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body onload="init();"&gt;
+</script>
+</head>
+<body onload="init();">
 
-&lt;p&gt;Image 1: no height, width, or style
-  &lt;img id="image1" src="http://www.mozilla.org/images/mozilla-banner.gif"&gt;
-&lt;/p&gt;
+<p>Image 1: no height, width, or style
+  <img id="image1" src="http://www.mozilla.org/images/mozilla-banner.gif">
+</p>
 
-&lt;p&gt;Image 2: height="50", width="500", but no style
-  &lt;img id="image2" src="http://www.mozilla.org/images/mozilla-banner.gif"
-   height="50" width="500"&gt;
-&lt;/p&gt;
+<p>Image 2: height="50", width="500", but no style
+  <img id="image2"
+       src="http://www.mozilla.org/images/mozilla-banner.gif"
+       height="50" width="500">
+</p>
 
-&lt;p&gt;Image 3: no height, width, but style="height: 50px; width: 500px;"
-  &lt;img id="image3" src="http://www.mozilla.org/images/mozilla-banner.gif"
-   style="height: 50px; width: 500px;"&gt;
-&lt;/p&gt;
+<p>Image 3: no height, width, but style="height: 50px; width: 500px;"
+  <img id="image3"
+       src="http://www.mozilla.org/images/mozilla-banner.gif"
+       style="height: 50px; width: 500px;">
+</p>
 
-&lt;div id="output"&gt; &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
-<p><code>height</code> と <code>width</code> は <code>OBJECT</code> と <code>APPLET</code> 要素のプロパティでもあります。</p>
-<h2 id="Example_2.3A_Image_Attributes" name="Example_2.3A_Image_Attributes">例 2: イメージの属性</h2>
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
+<div id="output"> </div>
+</body>
+</html>
+```
 
-&lt;head&gt;
-&lt;title&gt;Modifying an image border&lt;/title&gt;
-&lt;script&gt;
+## 例 2: 画像の属性
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Modifying an image border</title>
+
+<script>
 function setBorderWidth(width) {
   document.getElementById("img1").style.borderWidth = width + "px";
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body&gt;
-&lt;p&gt;
-  &lt;img id="img1" src="image1.gif" style="border: 5px solid green;" width="100"
-   height="100" alt="border test"&gt;
-&lt;/p&gt;
+<body>
+<p>
+  <img id="img1"
+       src="image1.gif"
+       style="border: 5px solid green;"
+       width="100" height="100" alt="border test">
+</p>
 
-&lt;form name="FormName"&gt;
-  &lt;p&gt;&lt;input type="button" value="Make border 20px-wide"
-   onclick="setBorderWidth(20);"&gt; &lt;input type="button" value="Make border 5px-wide"
-   onclick="setBorderWidth(5);"&gt;&lt;/p&gt;
-&lt;/form&gt;
+<form name="FormName">
+  <input type="button" value="Make border 20px-wide" onclick="setBorderWidth(20);" />
+  <input type="button" value="Make border 5px-wide"  onclick="setBorderWidth(5);" />
+</form>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
-<h2 id="Example_3.3A_Manipulating_Styles" name="Example_3.3A_Manipulating_Styles">例 3: スタイルを操作する</h2>
-<p>この簡単なサンプルでは、HTML のパラグラフ (p) 要素の基本的ないくつかのスタイルプロパティは、DOM から検索設定される要素のスタイルオブジェクトとそのオブジェクトの CSS スタイルプロパティを使って、アクセスされます。この場合は、個々のスタイルが直接操作されています。次の例 (例 4 を参照) では、スタイルシートとそのルールを使用して、全ドキュメントに対してスタイルを変更することができます。</p>
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
+</body>
+</html>
+```
 
-&lt;head&gt;
-&lt;title&gt;Changing color and font-size example&lt;/title&gt;
-&lt;script&gt;
+## 例 3: スタイルの操作
+
+この簡単な例では、HTML の段落要素のいくつかの基本的なスタイルプロパティに、要素上のスタイルオブジェクトと、DOM から取得したり設定したりできるそのオブジェクトの CSS スタイルプロパティを使ってアクセスしています。この例では、個々のスタイルを直接操作しています。次の例 (例 4 参照) では、スタイルシートとそのルールを使って、文書全体のスタイルを変更することができます。
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Changing color and font-size example</title>
+
+<script>
 function changeText() {
   var p = document.getElementById("pid");
+
   p.style.color = "blue"
   p.style.fontSize = "18pt"
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
+<body>
 
-&lt;body&gt;
+<p id="pid" onclick="window.location.href = 'http://www.cnn.com/';">linker</p>
 
-&lt;p id="pid"
-  onclick="window.location.href = 'http://www.cnn.com/';"&gt;linker&lt;/p&gt;
-&lt;form&gt;
+<form>
+  <p><input value="rec" type="button" onclick="changeText();" /></p>
+</form>
 
-&lt;p&gt;&lt;input value="rec" type="button" onclick="changeText();"&gt;&lt;/p&gt;
+</body>
+</html>
+```
 
-&lt;/form&gt;
+## 例 4: スタイルシートの使用
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
-<h2 id="Example_4.3A_Using_Stylesheets" name="Example_4.3A_Using_Stylesheets">例 4: スタイルシートを利用する</h2>
-<p>document オブジェクト上の styleSheets プロパティは、その document に読み込まれたスタイルシートの一覧を返します。このページの例に示されているように、stylesheet、style、CSSRule オブジェクトを利用して、これらのスタイルシートとそのルールに個別にアクセスが可能です。そしてこの例では、すべてのスタイル・ルールのセレクタ (selector) がコンソールへ表示されます。</p>
-<pre class="brush:js">var ss = document.styleSheets;
+{{domxref("document")}} オブジェクト上の {{domxref("document.styleSheets", "styleSheets")}} プロパティは、その文書に読み込まれたスタイルシートの一覧を返します。このページの例に示されているように、stylesheet、style、{{domxref("CSSRule")}} オブジェクトを利用して、これらのスタイルシートとその規則に個別にアクセスが可能です。そしてこの例では、すべてのスタイル規則のセレクターがコンソールへ表示されます。
 
-for(var i = 0; i &lt; ss.length; i++) {
-  for(var j = 0; j &lt; ss[i].cssRules.length; j++) {
+```js
+var ss = document.styleSheets;
+
+for(var i = 0; i < ss.length; i++) {
+  for(var j = 0; j < ss[i].cssRules.length; j++) {
     dump( ss[i].cssRules[j].selectorText + "\n" );
   }
-}</pre>
-<p>以下の 3 つのルールが定義される単一のスタイルシートが附属されているドキュメント用に対して:</p>
-<pre class="brush:css">body { background-color: darkblue; }
+}
+```
+
+以下の 3 つの規則が定義される単一のスタイルシートが附属されているドキュメント用に対して、
+
+```css
+body { background-color: darkblue; }
 p { font-face: Arial; font-size: 10pt; margin-left: .125in; }
 #lumpy { display: none; }
-</pre>
-<p>このスクリプトは以下の項目を表示します:</p>
-<pre>BODY
-P
-#LUMPY
-</pre>
-<h2 id="Example_5.3A_Event_Propagation" name="Example_5.3A_Event_Propagation">例 5: イベント伝播 (propagation)</h2>
-<p>この例は DOM でイベントが発生したときの対処方法を、ごく単純化して紹介します。下記の HTML 文書の BODY が読み込まれる時、イベントリスナーが TABLE の第 1 行を使って登録されます。イベントリスナーは関数 stopEvent を実行することでイベントを処理します。この関数は、table の一番下のセルの値を変更します。</p>
-<p>しかし、stopEvent はまたイベントオブジェクトのメソッド {{domxref("event.stopPropagation")}} を呼出します。このメソッドはイベントが発生してこれ以上 DOM に入り込むのを防止します。テーブル自体は、クリックされた時、メッセージを表示する必要のある {{domxref("element.onclick","onclick")}} イベントハンドラを備えています。しかし stopEvent メソッドは伝播を停止していますので、テーブル内のデータが更新された後では、イベントは効率的に終了し、これを確認するための警告ダイアログが表示されます。</p>
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;title&gt;Event Propagation&lt;/title&gt;
+```
 
-&lt;style&gt;
+このスクリプトは以下の項目を表示します。
+
+    BODY
+    P
+    #LUMPY
+
+## 例 5: イベント伝播 (propagation)
+
+この例は DOM でイベントが発生したときの対処方法を、ごく単純化して紹介します。下記の HTML 文書の BODY が読み込まれる時、イベントリスナーが TABLE の第 1 行を使って登録されます。イベントリスナーは関数 stopEvent を実行することでイベントを処理します。この関数は、table の一番下のセルの値を変更します。
+
+しかし、stopEvent はまたイベントオブジェクトのメソッド {{domxref("event.stopPropagation")}} を呼び出します。このメソッドはイベントが発生してこれ以上 DOM に入り込むのを防止します。テーブル自体は、クリックされた時、メッセージを表示する必要のある {{domxref("GlobalEventHandlers.onclick","onclick")}} イベントハンドラーを備えています。しかし stopEvent メソッドは伝播を停止していますので、テーブル内のデータが更新された後では、イベントは効率的に終了し、これを確認するための警告ダイアログが表示されます。
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Event Propagation</title>
+
+<style>
 #t-daddy { border: 1px solid red }
 #c1 { background-color: pink; }
-&lt;/style&gt;
+</style>
 
-&lt;script&gt;
+<script>
 function stopEvent(ev) {
   c2 = document.getElementById("c2");
   c2.innerHTML = "hello";
@@ -165,38 +190,43 @@ function load() {
   elem = document.getElementById("tbl1");
   elem.addEventListener("click", stopEvent, false);
 }
-&lt;/script&gt;
-&lt;/head&gt;
+</script>
+</head>
 
-&lt;body onload="load();"&gt;
+<body onload="load();">
 
-&lt;table id="t-daddy" onclick="alert('hi');"&gt;
- &lt;tr id="tbl1"&gt;
-  &lt;td id="c1"&gt;one&lt;/td&gt;
- &lt;/tr&gt;
- &lt;tr&gt;
-  &lt;td id="c2"&gt;two&lt;/td&gt;
- &lt;/tr&gt;
-&lt;/table&gt;
+<table id="t-daddy" onclick="alert('hi');">
+  <tr id="tbl1">
+    <td id="c1">one</td>
+  </tr>
+  <tr>
+    <td id="c2">two</td>
+  </tr>
+</table>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
-<h2 id="Example_6.3A_getComputedStyle" name="Example_6.3A_getComputedStyle">例 6: getComputedStyle</h2>
-<p>この例は、要素の <code>style</code> 属性あるいは JavaScript (例: <code>elt.style.backgroundColor="rgb(173, 216, 230)"</code>) で設定されていないスタイルを取得する {{domxref("window.getComputedStyle")}} メソッドの使用方法を示します。JavaScript で設定されていないケースは、もっと直接的な <a href="/ja/docs/Web/API/element.style">elt.style</a> プロパティを使って取得可能です。そのプロパティは <a href="/ja/docs/Web/API/CSS">DOM CSS プロパティリスト</a> に一覧となっています。</p>
-<p><code>getComputedStyle()</code> は <code>ComputedCSSStyleDeclaration</code> オブジェクトを返し、下記のサンプルにあるように、このオブジェクトの　<code>getPropertyValue()</code> メソッドによって個々のスタイルプロパティを参照できます。</p>
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
+</body>
+</html>
+```
 
-&lt;head&gt;
-&lt;title&gt;getComputedStyle example&lt;/title&gt;
+## 例 6: getComputedStyle
 
-&lt;script&gt;
+この例は、{{domxref("window.getComputedStyle")}} メソッドを使用して要素の `style` 属性あるいは JavaScript (例: `elt.style.backgroundColor="rgb(173, 216, 230)"`) で設定されていないスタイルを取得する方法を示します。後者の種類のスタイルは、もっと直接的な {{domxref("HTMLElement.style", "elt.style")}} プロパティを使って取得でき、そのプロパティは [DOM CSS プロパティ一覧](/ja/docs/Web/CSS/Reference)に挙げられています。
+
+`getComputedStyle()` は {{domxref("CSSStyleDeclaration")}} オブジェクトを返し、下記のサンプルにあるように、このオブジェクトの {{domxref("CSSStyleDeclaration.getPropertyValue()", "getPropertyValue()")}} メソッドによって個々のスタイルプロパティを参照できます。
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>getComputedStyle example</title>
+
+<script>
 function cStyles() {
   var RefDiv = document.getElementById("d1");
-
   var txtHeight = document.getElementById("t1");
   var h_style = document.defaultView.getComputedStyle(RefDiv, null).getPropertyValue("height");
+
   txtHeight.value = h_style;
 
   var txtWidth = document.getElementById("t2");
@@ -209,113 +239,138 @@ function cStyles() {
 
   txtBackgroundColor.value = b_style;
 }
-&lt;/script&gt;
+</script>
 
-&lt;style&gt;
-#d1 { margin-left: 10px; background-color: rgb(173, 216, 230);
-height: 20px; max-width: 20px; }
-&lt;/style&gt;
+<style>
+#d1 {
+  margin-left: 10px;
+  background-color: rgb(173, 216, 230);
+  height: 20px;
+  max-width: 20px;
+}
+</style>
 
-&lt;/head&gt;
+</head>
 
-&lt;body&gt;
+<body>
 
-&lt;div id="d1"&gt;&amp;nbsp;&lt;/div&gt;
+<div id="d1">&nbsp;</div>
 
-&lt;form action=""&gt;
-&lt;p&gt;&lt;button type="button" onclick="cStyles();"&gt;getComputedStyle&lt;/button&gt;
-  height&lt;input id="t1" type="text" value="1"&gt;
-  max-width&lt;input id="t2" type="text" value="2"&gt;
-  bg-color&lt;input id="t3" type="text" value="3"&gt;&lt;/p&gt;
-&lt;/form&gt;
+<form action="">
+  <p>
+    <button type="button" onclick="cStyles();">getComputedStyle</button>
+    height<input id="t1" type="text" value="1" />
+    max-width<input id="t2" type="text" value="2" />
+    bg-color<input id="t3" type="text" value="3" />
+  </p>
+</form>
 
-&lt;/body&gt;
-&lt;/html&gt;
-</pre>
-<h2 id="Example_7.3A_Displaying_Event_Object_Properties" name="Example_7.3A_Displaying_Event_Object_Properties">例 7: イベントオブジェクトのプロパティを表示する</h2>
-<p>この例では、DOM メソッドを使って、 {{domxref("window.onload")}} <a href="/ja/docs/Web/API/event">event</a> オブジェクトのプロパティとそれらの値をすべて表として表示しています。また、オブジェクトのプロパティを反復し、それらの値を取得するために、for...in ループを使った役に立つテクニックをお見せします。</p>
-<p>イベントオブジェクトのプロパティはブラウザによって大きく異なります。<a href="http://www.w3.org/TR/DOM-Level-2-Events/events.html">W3C DOM 2 Events 仕様書</a> に標準のプロパティが載っていますが、多くのブラウザはこれらを大幅に拡張しています。</p>
-<p>以下のコードをテキストファイルとして保存し、様々なブラウザで読み込ませてみてください。プロパティの数や名称が異なることに驚かれることでしょう。ページにいくつか要素を追加して、異なるイベントハンドラからこの関数を呼び出してみるのも良いでしょう。</p>
-<pre class="brush:html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;title&gt;Show Event properties&lt;/title&gt;
+</body>
+</html>
+```
 
-&lt;style&gt;
-table {border-collapse: collapse;}
-thead {font-weight: bold;}
-td {padding: 2px 10px 2px 10px;}
-.odd {background-color: #efdfef;}
-.even {background-color: #ffffff;}
-&lt;/style&gt;
+## 例 7: イベントオブジェクトのプロパティの表示
 
-&lt;script&gt;
+この例では、DOM メソッドを使って、 {{domxref("GlobalEventHandlers.onload")}} [イベント](/ja/docs/Web/API/Event)オブジェクトのプロパティとそれらの値をすべて表として表示しています。また、オブジェクトのプロパティを反復し、それらの値を取得するために、for...in ループを使った役に立つテクニックをお見せします。
+
+イベントオブジェクトのプロパティはブラウザーによって大きく異なります。 [WHATWG DOM Standard](https://dom.spec.whatwg.org) に標準のプロパティが載っていますが、多くのブラウザーはこれらを大幅に拡張しています。
+
+以下のコードをテキストファイルとして保存し、様々なブラウザーで読み込ませてみてください。プロパティの数や名称が異なることに驚かれることでしょう。ページにいくつか要素を追加して、異なるイベントハンドラーからこの関数を呼び出してみるのも良いでしょう。
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Show Event properties</title>
+
+<style>
+table { border-collapse: collapse; }
+thead { font-weight: bold; }
+td { padding: 2px 10px 2px 10px; }
+
+.odd { background-color: #efdfef; }
+.even { background-color: #ffffff; }
+</style>
+
+<script>
 
 function showEventProperties(e) {
-  function addCell(row, text) {
-    var cell = row.insertCell(-1);
-    cell.appendChild(document.createTextNode(text));
-  }
+  function addCell(row, text) {
+    var cell = row.insertCell(-1);
+    cell.appendChild(document.createTextNode(text));
+  }
 
-  var e = e || window.event;
-  document.getElementById('eventType').innerHTML = e.type;
+  var e = e || window.event;
+  document.getElementById('eventType').innerHTML = e.type;
 
-  var table = document.createElement('table');
-  var thead = table.createTHead();
-  var row = thead.insertRow(-1);
-  var lableList = ['#', 'Property', 'Value'];
-  var len = lableList.length;
+  var table = document.createElement('table');
+  var thead = table.createTHead();
+  var row = thead.insertRow(-1);
+  var labelList = ['#', 'Property', 'Value'];
+  var len = labelList.length;
 
-  for (var i = 0; i &lt; len; i++) {
-    addCell(row, lableList[i]);
-  }
+  for (var i=0; i<len; i++) {
+    addCell(row, labelList[i]);
+  }
 
-  var tbody = document.createElement('tbody');
-  table.appendChild(tbody);
+  var tbody = document.createElement('tbody');
+  table.appendChild(tbody);
 
-  for (var p in e) {
-    row = tbody.insertRow(-1);
-    row.className = (row.rowIndex % 2)? 'odd':'even';
-    addCell(row, row.rowIndex);
-    addCell(row, p);
-    addCell(row, e[p]);
-  }
+  for (var p in e) {
+    row = tbody.insertRow(-1);
+    row.className = (row.rowIndex % 2)? 'odd':'even';
+    addCell(row, row.rowIndex);
+    addCell(row, p);
+    addCell(row, e[p]);
+  }
 
-  document.body.appendChild(table);
+  document.body.appendChild(table);
 }
 
 window.onload = function(event){
-  showEventProperties(event);
+  showEventProperties(event);
 }
-&lt;/script&gt;
+</script>
+</head>
 
-&lt;h1&gt;Properties of the DOM &lt;span id="eventType"&gt;&lt;/span&gt; Event Object&lt;/h1&gt;
-</pre>
-<h2 id="Example_8.3A_Using_the_DOM_Table_Interface" name="Example_8.3A_Using_the_DOM_Table_Interface">例 8: DOM のテーブルインタフェースを使用する</h2>
-<p>DOM の HTMLTableElement インタフェースによって、テーブルを生成、操作するための便利なメソッドがいくつか提供されています。よく利用される 2 つのメソッドは <code><a href="/ja/docs/Web/API/table.insertRow">table.insertRow</a></code> と <code><a href="/ja/docs/Web/API/table/row.insertCell">row.insertCell</a></code> です。</p>
-<p>以下の例では、既存のテーブルに行といくつかのセルを追加しています。</p>
-<pre class="brush:html">&lt;table id="table0"&gt;
-  &lt;tr&gt;
-    &lt;td&gt;Row 0 Cell 0&lt;/td&gt;
-    &lt;td&gt;Row 0 Cell 1&lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/table&gt;
+<body>
+<h1>Properties of the DOM <span id="eventType"></span> Event Object</h1>
+</body>
 
-&lt;script&gt;
+</html>
+```
+
+## 例 8: DOM のテーブルインタフェースの使用
+
+DOM の {{domxref("HTMLTableElement")}} インタフェースで、テーブルを生成、操作するための便利なメソッドがいくつか提供されています。よく利用される 2 つのメソッドは {{domxref("HTMLTableElement.insertRow")}} と {{domxref("HTMLTableRowElement.insertCell")}} です。
+
+以下の例では、既存のテーブルに行といくつかのセルを追加しています。
+
+```html
+<table id="table0">
+ <tr>
+  <td>Row 0 Cell 0</td>
+  <td>Row 0 Cell 1</td>
+ </tr>
+</table>
+
+<script>
 var table = document.getElementById('table0');
 var row = table.insertRow(-1);
 var cell,
     text;
 
-for (var i = 0; i &lt; 2; i++) {
+for (var i = 0; i < 2; i++) {
   cell = row.insertCell(-1);
   text = 'Row ' + row.rowIndex + ' Cell ' + i;
   cell.appendChild(document.createTextNode(text));
 }
-&lt;/script&gt;
-</pre>
-<h3 id="Notes" name="Notes">注記</h3>
-<ul>
- <li>テーブルの {{domxref("element.innerHTML","innerHTML")}} プロパティは、テーブル全体あるいはセルの内容を記述するために使うことはできますが、テーブルを操作するために使うべきではありません。</li>
- <li>DOM Core メソッドの {{domxref("document.createElement")}} と {{domxref("Node.appendChild")}} を使って行とセルを生成する場合、他のブラウザでは table 要素に直接追加できる (行は最後の tbody 要素に追加される) のに対して、IE ではそれらを tbody 要素に対して追加する必要があります。</li>
- <li><a href="/ja/docs/Web/API/HTMLTableElement#Methods">table interface</a> には、この他にも、テーブルを生成したり操作するのに利用できる多くの便利なメソッドがあります。</li>
-</ul>
+</script>
+```
+
+### メモ
+
+- テーブルの {{domxref("element.innerHTML","innerHTML")}} プロパティは、テーブル全体あるいはセルの内容を記述するために使うことはできますが、テーブルを操作するために使うべきではありません。
+- DOM Core メソッドの {{domxref("document.createElement")}} と {{domxref("Node.appendChild")}} を使って行とセルを生成する場合、他のブラウザーでは table 要素に直接追加できる (行は最後の {{HTMLElement("tbody")}} 要素に追加される) のに対して、IE ではそれらを `<tbody>` 要素に対して追加する必要があります。
+- [`HTMLTableElement` インターフェイス](/ja/docs/Web/API/HTMLTableElement#methods)には、この他にも、テーブルを生成したり操作するのに利用できる多くの便利なメソッドがあります。
