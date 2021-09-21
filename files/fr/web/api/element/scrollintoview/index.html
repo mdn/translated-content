@@ -19,14 +19,11 @@ element.scrollIntoView(<var>alignToTop</var>); // Paramètre booléen
 element.scrollIntoView(<var>scrollIntoViewOptions</var>); // Paramètre d'objet
 </pre>
 
-<dl>
- <dt>
- <h3 id="Paramètres">Paramètres</h3>
- </dt>
- <dt><code>alignToTop</code> {{ optional_inline() }}</dt>
- <dd>
- <p>est une valeur {{jsxref("Boolean")}} optionnelle qui :</p>
+<h3 id="Paramètres">Paramètres</h3>
 
+<dl>
+ <dt><code>alignToTop</code> {{ optional_inline() }}</dt>
+ <dd><p>est une valeur {{jsxref("Boolean")}} optionnelle qui :</p>
  <ul>
   <li>si elle vaut <code>true</code> (<em>vrai</em>), aligne l'élément avec le haut de la zone visible de l'ancêtre défilable. Correspond à <code>scrollIntoViewOptions: {block: "start", inline: "nearest"}</code>. C'est la valeur par défaut.</li>
   <li>Si elle vaut <code>false</code> (<em>faux</em>), celui-ci sera aligné en bas de la zone visible de l'ancêtre défilable. Correspond à <code>scrollIntoViewOptions: {block: "end", inline: "nearest"}</code>.</li>

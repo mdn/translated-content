@@ -46,22 +46,18 @@ translation_of: Web/API/KeyboardEvent
  <dt>{{domxref("KeyboardEvent.altKey")}} {{Readonlyinline}}</dt>
  <dd>Returne un {{jsxref("Boolean")}} qui est <code>true</code> si la touche <kbd>Alt</kbd> (<kbd>Option</kbd> ou <kbd>⌥</kbd> sous OS X) était active quand l'évènement touche a été généré.</dd>
  <dt>{{domxref("KeyboardEvent.char")}} {{Non-standard_inline}}{{Deprecated_inline}}{{Readonlyinline}}</dt>
- <dd>Renvoie une {{domxref("DOMString")}} représentant la valeur de caractère de la touche. Si la touche correspond à un caractère imprimable, cette valeur est une chaîne Unicode non vide contenant ce caractère. Si la touche n'a pas de représentation imprimable, il s'agit d'une chaîne vide.</dd>
- <dd>
+ <dd><p>Renvoie une {{domxref("DOMString")}} représentant la valeur de caractère de la touche. Si la touche correspond à un caractère imprimable, cette valeur est une chaîne Unicode non vide contenant ce caractère. Si la touche n'a pas de représentation imprimable, il s'agit d'une chaîne vide.</p>
  <div class="note">
  <p><strong>Note :</strong> si la touche est utilisée comme une macro insérant plusieurs caractères, la valeur de cet attribut est la chaîne entière, pas seulement le premier caractère.</p>
  </div>
- </dd>
- <dd>
  <div class="warning">
- <p><strong>Avertissement :</strong> cela a été supprimé des DOM Level 3 Events. C'est pris en charge uniquement sur IE9 + et Microsoft Edge.</p>
+ <p><strong>Attention :</strong> cela a été supprimé des DOM Level 3 Events. C'est pris en charge uniquement sur IE9 + et Microsoft Edge.</p>
  </div>
  </dd>
  <dt>{{domxref("KeyboardEvent.charCode")}} {{Deprecated_inline}}{{Readonlyinline}}</dt>
- <dd>Retourne un {{jsxref ("Number")}} représentant le numéro de référence Unicode de la touche ; cet attribut est utilisé uniquement par l'événement <code>keypress</code>. Pour les touches dont l'attribut <code>char</code> contient plusieurs caractères, il s'agit de la valeur Unicode du premier caractère de cet attribut. Dans Firefox 26, cela retourne des codes pour les caractères imprimables.</dd>
- <dd>
+ <dd><p>Retourne un {{jsxref ("Number")}} représentant le numéro de référence Unicode de la touche ; cet attribut est utilisé uniquement par l'événement <code>keypress</code>. Pour les touches dont l'attribut <code>char</code> contient plusieurs caractères, il s'agit de la valeur Unicode du premier caractère de cet attribut. Dans Firefox 26, cela retourne des codes pour les caractères imprimables.</p>
  <div class="warning">
- <p><strong>Avertissement :</strong> cet attribut est obsolète : vous devriez utiliser {{domxref("KeyboardEvent.key")}} à la place, si disponible.</p>
+ <p><strong>Attention :</strong> cet attribut est obsolète : vous devriez utiliser {{domxref("KeyboardEvent.key")}} à la place, si disponible.</p>
  </div>
  </dd>
  <dt>{{domxref("KeyboardEvent.code")}} {{Readonlyinline}}</dt>
@@ -73,18 +69,18 @@ translation_of: Web/API/KeyboardEvent
  <dt>{{domxref("KeyboardEvent.key")}} {{Readonlyinline}}</dt>
  <dd>Retourne une {{domxref ("DOMString")}} représentant la valeur de touche de la touche représentée par l'événement.</dd>
  <dt>{{domxref("KeyboardEvent.keyCode")}} {{deprecated_inline}}{{Readonlyinline}}</dt>
- <dd>Retourne un {{jsxref("Number")}} représentant un code numérique dépendant du système et de l'implémentation, identifiant la valeur non modifiée de la touche pressée.
- <div class="warning"><strong>Avertissement : </strong>cet attribut est obsolète. vous devriez utiliser {{domxref("KeyboardEvent.key")}} à la place, si disponible.</div>
+ <dd><p>Retourne un {{jsxref("Number")}} représentant un code numérique dépendant du système et de l'implémentation, identifiant la valeur non modifiée de la touche pressée.</p>
+ <div class="warning"><p><strong>Attention :</strong> cet attribut est obsolète. vous devriez utiliser {{domxref("KeyboardEvent.key")}} à la place, si disponible.</p></div>
  </dd>
  <dt>{{domxref("KeyboardEvent.keyIdentifier")}} {{Non-standard_inline}}{{deprecated_inline}}{{Readonlyinline}}</dt>
  <dd>Cette propriété n'est pas standard et a été abandonnée en faveur de {{domxref("KeyboardEvent.key")}}. Elle faisait partie d'une ancienne version de DOM Level 3 Events.</dd>
  <dt>{{domxref("KeyboardEvent.keyLocation")}} {{Non-standard_inline}}{{deprecated_inline}}{{Readonlyinline}}</dt>
  <dd>C'est un alias obsolète non standard pour {{domxref("KeyboardEvent.location")}}. Il faisait partie d'une ancienne version de DOM Level 3 Events.</dd>
  <dt>{{domxref("KeyboardEvent.locale")}} {{Readonlyinline}}</dt>
- <dd>Retourne une {{domxref("DOMString")}} représentant une chaîne de paramètres régionaux indiquant les paramètres régionaux pour lesquels le clavier est configuré. Cela peut être une chaîne vide si le navigateur ou l'appareil ne connaît pas les paramètres régionaux du clavier.
- <div class="note"><strong>Note :</strong> cela ne décrit pas les paramètres régionaux des données entrées. Un utilisateur peut utiliser une disposition du clavier donnée, tout en saisissant du texte dans une autre langue.</div>
+ <dd><p>Retourne une {{domxref("DOMString")}} représentant une chaîne de paramètres régionaux indiquant les paramètres régionaux pour lesquels le clavier est configuré. Cela peut être une chaîne vide si le navigateur ou l'appareil ne connaît pas les paramètres régionaux du clavier.</p>
+ <div class="note"><p><strong>Note :</strong> cela ne décrit pas les paramètres régionaux des données entrées. Un utilisateur peut utiliser une disposition du clavier donnée, tout en saisissant du texte dans une autre langue.</p></div>
  </dd>
- <dt>{{domxref("KeyboardEvent.location")}}<a> {{Readonlyinline}}</a></dt>
+ <dt>{{domxref("KeyboardEvent.location")}}{{Readonlyinline}}</dt>
  <dd>Retourne un {{jsxref ("Number")}} représentant l'emplacement de la touche du clavier ou tout autre dispositif d'entrée.</dd>
  <dt>{{domxref("KeyboardEvent.metaKey")}} {{Readonlyinline}}</dt>
  <dd>Retourne un {{jsxref("Boolean")}} qui est <code>true</code> si la touche <kbd>Meta</kbd> (sur les claviers Mac, la touche <kbd>⌘ Command</kbd> ; sur les claviers Windows, la touche Windows (<kbd>⊞</kbd>)) était active quand l'évènement touche a été généré.</dd>
@@ -93,8 +89,8 @@ translation_of: Web/API/KeyboardEvent
  <dt>{{domxref("KeyboardEvent.shiftKey")}} {{Readonlyinline}}</dt>
  <dd>Retourne un {{jsxref("Boolean")}} qui est <code>true</code> si la touche <kbd>Shift</kbd> était active quand l'évènement touche a été généré.</dd>
  <dt>{{domxref("KeyboardEvent.which")}} {{deprecated_inline}}{{Readonlyinline}}</dt>
- <dd>Retourne un {{jsxref("Number")}} représentant un code numérique dépendant du système et de l'implémentation, identifiant la valeur non modifiée de la touche pressée ; c'est généralement le même que <code>keyCode</code>.
- <div class="warning"><strong>Avertissement :</strong> cet attribut est obsolète ; vous devriez utiliser {{domxref("KeyboardEvent.key")}} à la place, si disponible.</div>
+ <dd><p>Retourne un {{jsxref("Number")}} représentant un code numérique dépendant du système et de l'implémentation, identifiant la valeur non modifiée de la touche pressée ; c'est généralement le même que <code>keyCode</code>.</p>
+ <div class="warning"><p><strong>Attention :</strong> cet attribut est obsolète ; vous devriez utiliser {{domxref("KeyboardEvent.key")}} à la place, si disponible.</p></div>
  </dd>
 </dl>
 

@@ -26,7 +26,7 @@ translation_of: Web/API/Clients/matchAll
 
 <dl>
  <dt><code>options</code></dt>
- <dd>L'objet <code>option</code> vous permet de définir les options pour l'opération. Les options disponibles sont :
+ <dd><p>L'objet <code>option</code> vous permet de définir les options pour l'opération. Les options disponibles sont :</p>
  <ul>
   <li><code>includeUncontrolled</code>: Un {{domxref("Boolean")}} — défini à <code>true</code>, l'opération retournera tous les services worker clients qui sont de la même origine que le service worker courant. Sinon, elle ne retournera que le service worker client controllé par le service worker courant. La valeur par défaut est <code>false</code>.</li>
   <li><code>type</code>: Défini le type de client que vous voulez observer. Les types disponibles sont <code>window</code>, <code>worker</code>, <code>sharedworker</code>, et <code>all</code>. La valeur par défaut est <code>all</code>.</li>
@@ -36,9 +36,7 @@ translation_of: Web/API/Clients/matchAll
 
 <h3 id="Valeur_de_retour">Valeur de retour</h3>
 
-<dl>
- <dd>Une  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promesse</a></code> qui se résout avec un tableau d'objets {{domxref("Client")}}.</dd>
-</dl>
+<p>Une  <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promesse</a></code> qui se résout avec un tableau d'objets {{domxref("Client")}}.</p>
 
 <h2 id="Exemples">Exemples</h2>
 

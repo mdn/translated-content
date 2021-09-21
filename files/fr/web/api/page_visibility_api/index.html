@@ -108,25 +108,16 @@ if (typeof document.addEventListener === "undefined" || typeof document.hidden =
 <h2 id="Propriétés">Propriétés</h2>
 
 <dl>
- <dt>
- <p>{{domxref("document.hidden")}} Read only </p>
- </dt>
- <dd>
- <p>Retourne <code>true</code> si la page est dans un état considéré comme masqué à l’utilisateur, et <code>false</code> dans le cas contraire.</p>
- </dd>
- <dt>
- <p>{{domxref("document.visibilityState")}} Read only </p>
- </dt>
- <dd>
- <p>Une <code>string</code> représentant l’état de visibilité du document. Valeurs possibles :</p>
-
+ <dt>{{domxref("document.hidden")}}</dt>
+ <dd><p>Retourne <code>true</code> si la page est dans un état considéré comme masqué à l’utilisateur, et <code>false</code> dans le cas contraire.</p></dd>
+ <dt>{{domxref("document.visibilityState")}}</dt>
+ <dd><p>Une <code>string</code> représentant l’état de visibilité du document. Valeurs possibles :</p>
  <ul>
   <li><code>visible</code> : le contenu de la page peut être au moins partiellement visible. En pratique, cela signifie que la page est l’onglet actif d’une fenêtre non minimisée.</li>
   <li><code>hidden</code> : le contenu de la page n’est pas visible pour l’utilisateur. En pratique, cela signifie que le document est soit dans un onglet en arrière-plan, soit dans une fenêtre minimizée ; ou bien que l’écran de verrouillage de l’OS est actif.</li>
   <li><code>prerender</code> : le contenu de la page est en train d’être précalculé et n’est pas visible pour l’utilisateur (il est considéré masqué pour <code>document.hidden</code>). Le document peut être dans cet état initialement, mais ne passera jamais à cet état depuis une autre valeur. Note : le support des navigateurs est optionnel.</li>
   <li><code>unloaded</code> : la page est en train d’être déchargée de la mémoire. Note : le support des navigateurs est optionnel.</li>
  </ul>
-
  <pre class="brush: js">//startSimulation and pauseSimulation defined elsewhere
 function handleVisibilityChange() {
   if (document.hidden) {
@@ -135,16 +126,10 @@ function handleVisibilityChange() {
     startSimulation();
   }
 }
-
 document.addEventListener("visibilitychange", handleVisibilityChange, false);
-</pre>
- </dd>
- <dt>
- <p>{{domxref("document.onvisibilitychange")}}</p>
- </dt>
- <dd>
- <p>Un {{event("Event_handlers", "event handler")}} représentant le code à appeler quand l’évènement {{event("visibilitychange")}} est émis.</p>
- </dd>
+</pre></dd>
+ <dt>{{domxref("document.onvisibilitychange")}}</dt>
+ <dd>Un {{event("Event_handlers", "event handler")}} représentant le code à appeler quand l’évènement {{event("visibilitychange")}} est émis.</dd>
 </dl>
 
 <h2 id="Specifications">Spécifications</h2>

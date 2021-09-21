@@ -30,7 +30,7 @@ translation_of: Web/API/Cache/matchAll
  <dt>request</dt>
  <dd>La {{domxref("Request", "Requête")}} à trouver dans le {{domxref("Cache")}}.</dd>
  <dt>options {{optional_inline}}</dt>
- <dd>Un objet d'options vous permettant de définir des options de contrôle spécifiques pour la correspondance effectuée. Les options disponibles sont les suivantes :
+ <dd><p>Un objet d'options vous permettant de définir des options de contrôle spécifiques pour la correspondance effectuée. Les options disponibles sont les suivantes :</p>
  <ul>
   <li><code>ignoreSearch</code>: Un {{domxref("Boolean")}} qui spécifie si le matching doit ignorer ou non la query string dans l'url.  Si mis à <code>true</code>, la partie <code>?value=bar</code> de l'url <code>http://foo.com/?value=bar</code> sera ignorée lors du matching. Est à <code>false</code> par défaut.</li>
   <li><code>ignoreMethod</code>: Un {{domxref("Boolean")}} qui, quand mis à <code>true</code>, empêche les opérations de matching de valider la méthode <code>HTTP</code> de la {{domxref("Request", "Requête")}} (en temps normal, seules <code>GET</code> et <code>HEAD</code> sont autorisées.) Est à  <code>false</code> par défaut.</li>

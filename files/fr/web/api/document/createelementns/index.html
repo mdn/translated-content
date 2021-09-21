@@ -29,15 +29,12 @@ translation_of: Web/API/Document/createElementNS
  <dt><code>qualifiedName</code></dt>
  <dd>est une chaîne de caractères qui spécifie le type de l'élément à créer. La propriété <a href="/fr/docs/Web/API/Node/nodeName">nodeName</a> de l'élément créé est initialisée avec la valeur de <code>qualifiedName</code></dd>
  <dt><code>Options </code>Facultatif</dt>
- <dd>Un objet facultatif <code>ElementCreationOptions</code> contient une propriété unique nommée <code>is</code>, dont la valeur est le nom de la balise pour un élément personnalisé défini précédemment à l'aide de  <code>customElements.define()</code> . Pour la rétro-compatibilité avec les versions précédentes de la <a href="https://www.w3.org/TR/custom-elements/">spécification des éléments personnalisés</a>, quelques navigateurs vous permettront de passer ici une chaîne de caractères à la place d'un objet, pour laquelle la valeur est un nom d'élément personnalisé. Voir  <a href="https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml">Extending native HTML elements</a>  pour plus d'informations sur la façon d'utiliser ce paramètre.</dd>
- <dd>Le nouvel élément recevra un attribut <code>is</code> dont la valeur est le nom de la balise de l'élément personnalisé. Les éléments personnalisés sont une fonctionnalité expérimentale disponible uniquement dans certains navigateurs.</dd>
+ <dd><p>Un objet facultatif <code>ElementCreationOptions</code> contient une propriété unique nommée <code>is</code>, dont la valeur est le nom de la balise pour un élément personnalisé défini précédemment à l'aide de  <code>customElements.define()</code> . Pour la rétro-compatibilité avec les versions précédentes de la <a href="https://www.w3.org/TR/custom-elements/">spécification des éléments personnalisés</a>, quelques navigateurs vous permettront de passer ici une chaîne de caractères à la place d'un objet, pour laquelle la valeur est un nom d'élément personnalisé. Voir  <a href="https://developers.google.com/web/fundamentals/primers/customelements/#extendhtml">Extending native HTML elements</a>  pour plus d'informations sur la façon d'utiliser ce paramètre. Le nouvel élément recevra un attribut <code>is</code> dont la valeur est le nom de la balise de l'élément personnalisé. Les éléments personnalisés sont une fonctionnalité expérimentale disponible uniquement dans certains navigateurs.</p></dd>
 </dl>
 
 <h3 id="Valeur_de_retour">Valeur de retour</h3>
 
-<dl>
- <dd>Le nouvel <code><a href="/fr/docs/Web/API/Element">element</a></code>.</dd>
-</dl>
+<p>Le nouvel <code><a href="/fr/docs/Web/API/Element">element</a></code>.</p>
 
 <h2 id="Example">URI d'espaces de nom valides</h2>
 

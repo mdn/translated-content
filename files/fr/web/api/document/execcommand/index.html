@@ -56,169 +56,100 @@ translation_of: Web/API/Document/execCommand
 
 <dl>
   <dt><code>backColor</code></dt>
-  <dd>Modifie la couleur d'arrière-plan du document. Avec le mode <code>styleWithCss</code>
-    cela affecte la couleur d'arrière-plan du bloc englobant. Une chaîne de caractères décrivant
-    une valeur {{cssxref("&lt;color&gt;")}} doit être passée en argument.
-    On notera qu'Internet Explorer utilise ceci pour la couleur d'arrière-plan du texte.</dd>
+  <dd><p>Modifie la couleur d'arrière-plan du document. Avec le mode <code>styleWithCss</code> cela affecte la couleur d'arrière-plan du bloc englobant. Une chaîne de caractères décrivant une valeur {{cssxref("&lt;color&gt;")}} doit être passée en argument. On notera qu'Internet Explorer utilise ceci pour la couleur d'arrière-plan du texte.</p></dd>
   <dt><code>bold</code></dt>
-  <dd>Active ou désactive la mise en gras pour la sélection ou à partir du point d'insertion
-    Internet Explorer utilise la balise {{HTMLElement("strong")}} plutôt que {{HTMLElement("b")}}.</dd>
+  <dd><p>Active ou désactive la mise en gras pour la sélection ou à partir du point d'insertion Internet Explorer utilise la balise {{HTMLElement("strong")}} plutôt que {{HTMLElement("b")}}.</p></dd>
   <dt><code>ClearAuthenticationCache</code></dt>
-  <dd>Supprime toutes les informations d'authentification (<i>credentials</i>) du cache.</dd>
+  <dd><p>Supprime toutes les informations d'authentification <i>credentials</i>) du cache.</p></dd>
   <dt><code>contentReadOnly</code></dt>
-  <dd>Rend le contenu du document en lecture seule ou éditable en fonction du booléen passé
-    en argument (n'est pas pris en charge par Internet Explorer)</dd>
+  <dd><p>Rend le contenu du document en lecture seule ou éditable en fonction du booléen passé en argument (n'est pas pris en charge par Internet Explorer)</p></dd>
   <dt><code>copy</code></dt>
-  <dd>Copie la sélection courante vers le presse-papier. Les conditions pour obtenir ce 
-    comportement peuvent varier d'un navigateur à l'autre. Veuillez voir le tableau de
-    compatibilité ci-après.</dd>
+  <dd><p>Copie la sélection courante vers le presse-papier. Les conditions pour obtenir ce comportement peuvent varier d'un navigateur à l'autre. Veuillez voir le tableau de compatibilité ci-après.</p></dd>
   <dt><code>createLink</code></dt>
-  <dd>Crée un hyperlien à partir de la sélection (sous réserve qu'il y en ait une). Une 
-    chaîne de caractères formant un URI est nécessaire comme argument afin de fournir
-    la valeur de l'attribut <code>href</code>. L'URI doit contenir au moins un caractère
-    (qui peut être un blanc). (Internet Explorer créera un lien avec une valeur 
-    <code>null</code>.)</dd>
+  <dd><p>Crée un hyperlien à partir de la sélection (sous réserve qu'il y en ait une). Une chaîne de caractères formant un URI est nécessaire comme argument afin de fournir la valeur de l'attribut <code>href</code>. L'URI doit contenir au moins un caractère (qui peut être un blanc). (Internet Explorer créera un lien avec une valeur <code>null</code>.)</p></dd>
   <dt><code>cut</code></dt>
-  <dd>Coupe le contenu de la sélection courante et le copie dans le presse-papier.
-    Les conditions pour obtenir ce comportement peuvent varier d'un navigateur à l'autre.
-    Veuillez voir le tableau de compatibilité ci-après.</dd>
+  <dd><p>Coupe le contenu de la sélection courante et le copie dans le presse-papier. Les conditions pour obtenir ce comportement peuvent varier d'un navigateur à l'autre. Veuillez voir le tableau de compatibilité ci-après.</p></dd>
   <dt><code>decreaseFontSize</code></dt>
-  <dd>Ajoute une balise {{HTMLElement("small")}} autour de la sélection ou au point
-    d'insertion. (Non pris en charge par Internet Explorer.)</dd>
+  <dd><p>Ajoute une balise {{HTMLElement("small")}} autour de la sélection ou au point  d'insertion. (Non pris en charge par Internet Explorer.)</p></dd>
   <dt><code>defaultParagraphSeparator</code></dt>
-  <dd>Modifie le séparateur de paragraphe utilisé lorsque de nouveaux paragraphes sont
-    créés dans les zones de texte éditables. Voir <a
-      href="/fr/docs/Web/Guide/HTML/Editable_content#differences_in_markup_generation">
-      Différences dans la génération du balisage</a> pour plus de détails.</dd>
+  <dd><p>Modifie le séparateur de paragraphe utilisé lorsque de nouveaux paragraphes sont créés dans les zones de texte éditables. Voir <a href="/fr/docs/Web/Guide/HTML/Editable_content#differences_in_markup_generation"> Différences dans la génération du balisage</a> pour plus de détails.</p></dd>
   <dt><code>delete</code></dt>
-  <dd>Supprimer la sélection courante.</dd>
+  <dd><p>Supprimer la sélection courante.</p></dd>
   <dt><code>enableAbsolutePositionEditor</code></dt>
-  <dd>Active ou désactive la poignée qui permet de déplacer les éléments positionnés de
-    façon absolue. Celle-ci est désactivée par défaut depuis Firefox 64 ({{bug(1490641)}}).
-  </dd>
+  <dd><p>Active ou désactive la poignée qui permet de déplacer les éléments positionnés de façon absolue. Celle-ci est désactivée par défaut depuis Firefox 64 ({{bug(1490641)}}).</p></dd>
   <dt><code>enableInlineTableEditing</code></dt>
-  <dd>Active ou désactive les contrôles pour l'insertion ou la suppression des lignes ou
-    colonnes de tableau. Les contrôles sont désactivés par défaut depuis Firefox 64
-    ({{bug(1490641)}}).</dd>
+  <dd><p>Active ou désactive les contrôles pour l'insertion ou la suppression des lignes ou colonnes de tableau. Les contrôles sont désactivés par défaut depuis Firefox 64 ({{bug(1490641)}}).</p></dd>
   <dt><code>enableObjectResizing</code></dt>
-  <dd>Active ou désactive les contrôles permettant de redimensionner les images, tableaux
-    ou les éléments positionnés de façon absolue. Les poignées sont désactivées par défaut
-    depuis Firefox 64 ({{bug(1490641)}}).</dd>
+  <dd><p>Active ou désactive les contrôles permettant de redimensionner les images, tableaux ou les éléments positionnés de façon absolue. Les poignées sont désactivées par défaut depuis Firefox 64 ({{bug(1490641)}}).</p></dd>
   <dt><code>fontName</code></dt>
-  <dd>Modifie le nom de la police pour la sélection ou à partir du point d'insertion. La
-    valeur fournie en argument doit être un nom de police (ex. <code>"Arial"</code>).</dd>
+  <dd><p>Modifie le nom de la police pour la sélection ou à partir du point d'insertion. La valeur fournie en argument doit être un nom de police (ex. <code>"Arial"</code>).</p></dd>
   <dt><code>fontSize</code></dt>
-  <dd>Modifie la taille de la police pour la sélection ou à partir du point d'insertion.
-    La valeur fournie en argument doit être un entier compris entre 1 et 7.</dd>
+  <dd><p>Modifie la taille de la police pour la sélection ou à partir du point d'insertion. La valeur fournie en argument doit être un entier compris entre 1 et 7.</p></dd>
   <dt><code>foreColor</code></dt>
-  <dd>Modifie la couleur de la police pour la sélection ou à partir du point d'insertion.
-    La valeur passée en argument doit être une chaîne de caractères décrivant une couleur
-    exprimée en notation hexadécimale.</dd>
+  <dd><p>Modifie la couleur de la police pour la sélection ou à partir du point d'insertion. La valeur passée en argument doit être une chaîne de caractères décrivant une couleur exprimée en notation hexadécimale.</p></dd>
   <dt><code>formatBlock</code></dt>
-  <dd>Ajoute un élément HTML de bloc autour de la ligne contenant la sélection courante et
-    remplace l'éventuel élément de bloc englobant s'il en existe un (pour Firefox,
-    {{HTMLElement("blockquote")}} fera exception et englobera n'importe quel bloc). 
-    L'argument passé doit être un nom de balise. Tous les éléments de bloc peuvent en
-    théorie être utilisés. (Internet Explorer et Edge ne prennent en charge que les
-    balises <code>H1</code><code>H6</code>, <code>ADDRESS</code>, et <code>PRE</code> qui
-    doivent être passées entre chevrons : <code>"&lt;H1&gt;"</code>.)</dd>
+  <dd><p>Ajoute un élément HTML de bloc autour de la ligne contenant la sélection courante et remplace l'éventuel élément de bloc englobant s'il en existe un (pour Firefox, {{HTMLElement("blockquote")}} fera exception et englobera n'importe quel bloc). L'argument passé doit être un nom de balise. Tous les éléments de bloc peuvent en théorie être utilisés. (Internet Explorer et Edge ne prennent en charge que les balises <code>H1</code><code>H6</code>, <code>ADDRESS</code>, et <code>PRE</code> qui doivent être passées entre chevrons : <code>"&lt;H1&gt;"</code>.)</p></dd>
   <dt><code>forwardDelete</code></dt>
-  <dd>Supprime un caractère à la position du curseur. Le comportement obtenu est le même
-    que lorsqu'on appuie sur la touche <kbd>Suppr</kbd> d'un clavier Windows.</dd>
+  <dd><p>Supprime un caractère à la position du curseur. Le comportement obtenu est le même que lorsqu'on appuie sur la touche <kbd>Suppr</kbd> d'un clavier Windows.</p></dd>
   <dt><code>heading</code></dt>
-  <dd>Ajoute un élément de titre autour de la sélection ou au niveau du point d'insertion.
-    L'argument doit être le nom d'une balise de titre (<code>"H1"</code> à <code>"H6"</code>).
-    (Non pris en charge par Internet Explorer et Safari.)</dd>
+  <dd><p>Ajoute un élément de titre autour de la sélection ou au niveau du point d'insertion. L'argument doit être le nom d'une balise de titre (<code>"H1"</code> à <code>"H6"</code>). (Non pris en charge par Internet Explorer et Safari.)</p></dd>
   <dt><code>hiliteColor</code></dt>
-  <dd>Modifie la couleur d'arrière-plan pour la sélection ou à partir du point d'insertion.
-    La valeur passée en argument doit être une chaîne de caractères définissant une couleur
-    et <code>useCSS</code> doit valoir <code>true</code>. (Non pris en charge par Internet
-    Explorer.)</dd>
+  <dd><p>Modifie la couleur d'arrière-plan pour la sélection ou à partir du point d'insertion. La valeur passée en argument doit être une chaîne de caractères définissant une couleur  et <code>useCSS</code> doit valoir <code>true</code>. (Non pris en charge par Internet Explorer.)</p></dd>
   <dt><code>increaseFontSize</code></dt>
-  <dd>Ajoute une balise {{HTMLElement("big")}} autour de la sélection ou à partir du point
-    d'insertion. (Non pris en charge par Internet Explorer).</dd>
+  <dd><p>Ajoute une balise {{HTMLElement("big")}} autour de la sélection ou à partir du point d'insertion. (Non pris en charge par Internet Explorer).</p></dd>
   <dt><code>indent</code></dt>
-  <dd>Augmente l'indentation de la ligne contenant la sélection ou le point d'insertion.
-    Pour Firefox, si la sélection s'étend sur plusieurs lignes ayant différents niveaux
-    d'indentation, seules les lignes les moins indentées seront décalées.</dd>
+  <dd><p>Augmente l'indentation de la ligne contenant la sélection ou le point d'insertion. Pour Firefox, si la sélection s'étend sur plusieurs lignes ayant différents niveaux d'indentation, seules les lignes les moins indentées seront décalées.</p></dd>
   <dt><code>insertBrOnReturn</code></dt>
-  <dd>Contrôle si la touche <kbd>Entrée</kbd> insère un élément {{HTMLElement("br")}} ou
-    si le bloc courant est scindé en deux. (Non pris en charge par Internet Explorer.)</dd>
+  <dd><p>Contrôle si la touche <kbd>Entrée</kbd> insère un élément {{HTMLElement("br")}} ou si le bloc courant est scindé en deux. (Non pris en charge par Internet Explorer.)</p></dd>
   <dt><code>insertHorizontalRule</code></dt>
-  <dd>Insère un élément {{HTMLElement("hr")}} au point d'insertion ou remplace la
-    sélection courante par cet élément.</dd>
+  <dd><p>Insère un élément {{HTMLElement("hr")}} au point d'insertion ou remplace la  sélection courante par cet élément.</p></dd>
   <dt><code>insertHTML</code></dt>
-  <dd>Insère un élément au point d'insertion en supprimant la sélection. Une chaîne de 
-    caractères HTML valide doit être fournie en argument. (Non pris en charge par Internet
-    Explorer.)</dd>
+  <dd><p>Insère un élément au point d'insertion en supprimant la sélection. Une chaîne de caractères HTML valide doit être fournie en argument. (Non pris en charge par Internet Explorer.)</p></dd>
   <dt><code>insertImage</code></dt>
-  <dd>Insère une image au point d'insertion en supprimant la sélection. L'argument doit
-    être une chaîne de caractères indiquant l'URL à utiliser pour l'attribut
-    <code>src</code> de l'image. Les prérequis de cette valeur sont les mêmes que pour
-    <code>createLink</code>.</dd>
+  <dd><p>Insère une image au point d'insertion en supprimant la sélection. L'argument doit être une chaîne de caractères indiquant l'URL à utiliser pour l'attribut <code>src</code> de l'image. Les prérequis de cette valeur sont les mêmes que pour <code>createLink</code>.</p></dd>
   <dt><code>insertOrderedList</code></dt>
-  <dd>Crée une <a href="/fr/docs/Web/HTML/Element/ol">liste numérotée ordonnée</a> pour la
-    sélection ou à partir du point d'insertion.</dd>
+  <dd><p>Crée une <a href="/fr/docs/Web/HTML/Element/ol">liste numérotée ordonnée</a> pour la sélection ou à partir du point d'insertion.</p></dd>
   <dt><code>insertUnorderedList</code></dt>
-  <dd>Crée une <a href="/fr/docs/Web/HTML/Element/ul">liste non-ordonnée</a> pour la
-    sélection ou à partir du point d'insertion.</dd>
+  <dd><p>Crée une <a href="/fr/docs/Web/HTML/Element/ul">liste non-ordonnée</a> pour la sélection ou à partir du point d'insertion.</p></dd>
   <dt><code>insertParagraph</code></dt>
-  <dd>Insère un <a href="/fr/docs/Web/HTML/Element/p">paragraphe</a> autour de la sélection
-    pour la ligne courante. (Internet Explorer insère un paragraphe au point d'insertion 
-    et supprime la sélection.)</dd>
+  <dd><p>Insère un <a href="/fr/docs/Web/HTML/Element/p">paragraphe</a> autour de la sélection pour la ligne courante. (Internet Explorer insère un paragraphe au point d'insertion et supprime la sélection.)</p></dd>
   <dt><code>insertText</code></dt>
-  <dd>Insère le texte indiqué au point d'insertion (quitte à supprimer l'éventuelle
-    sélection courante).</dd>
+  <dd><p>Insère le texte indiqué au point d'insertion (quitte à supprimer l'éventuelle sélection courante).</p></dd>
   <dt><code>italic</code></dt>
-  <dd>Active ou désactive la mise en italique pour la sélection ou à partir du point
-    d'insertion. (Internet Explorer utilisera l'élément {{HTMLElement("em")}} plutôt que
-    {{HTMLElement("i")}}.)</dd>
+  <dd><p>Active ou désactive la mise en italique pour la sélection ou à partir du point d'insertion. (Internet Explorer utilisera l'élément {{HTMLElement("em")}} plutôt que {{HTMLElement("i")}}.)</p></dd>
   <dt><code>justifyCenter</code></dt>
-  <dd>Centre la sélection ou le point d'insertion.</dd>
+  <dd><p>Centre la sélection ou le point d'insertion.</p></dd>
   <dt><code>justifyFull</code></dt>
-  <dd>Justifie la sélection ou le point d'insertion.</dd>
+  <dd><p>Justifie la sélection ou le point d'insertion.</p></dd>
   <dt><code>justifyLeft</code></dt>
-  <dd>Justifie à gauche la sélection ou le point d'insertion.</dd>
+  <dd><p>Justifie à gauche la sélection ou le point d'insertion.</p></dd>
   <dt><code>justifyRight</code></dt>
-  <dd>Justifie à droite la sélection ou le point d'insertion.</dd>
+  <dd><p>Justifie à droite la sélection ou le point d'insertion.</p></dd>
   <dt><code>outdent</code></dt>
-  <dd>Effectue un retrait d'indentation pour la ligne courante.</dd>
+  <dd><p>Effectue un retrait d'indentation pour la ligne courante.</p></dd>
   <dt><code>paste</code></dt>
-  <dd>Colle le contenu du presse-papier au point d'insertion (et remplace éventuellement
-    la sélection actuelle). Fonctionnalité désactivée pour le contenu web.</dd>
+  <dd><p>Colle le contenu du presse-papier au point d'insertion (et remplace éventuellement la sélection actuelle). Fonctionnalité désactivée pour le contenu web.</p></dd>
   <dt><code>redo</code></dt>
-  <dd>Rejoue l'action annulée par la précédente commande <code>undo</code>.</dd>
+  <dd><p>Rejoue l'action annulée par la précédente commande <code>undo</code>.</p></dd>
   <dt><code>removeFormat</code></dt>
-  <dd>Supprime toute mise en forme pour la sélection courante.</dd>
+  <dd><p>Supprime toute mise en forme pour la sélection courante.</p></dd>
   <dt><code>selectAll</code></dt>
-  <dd>Sélectionne l'ensemble du contenu de la région éditable.</dd>
+  <dd><p>Sélectionne l'ensemble du contenu de la région éditable.</p></dd>
   <dt><code>strikeThrough</code></dt>
-  <dd>Active ou désactive la rayure de la sélection ou à partir d'un point d'insertion.</dd>
+  <dd><p>Active ou désactive la rayure de la sélection ou à partir d'un point d'insertion.</p></dd>
   <dt><code>subscript</code></dt>
-  <dd>Active ou désactive <a href="/fr/docs/Web/HTML/Element/sub">la mise en indice</a>
-    pour la sélection ou au point d'insertion</dd>
+  <dd><p>Active ou désactive <a href="/fr/docs/Web/HTML/Element/sub">la mise en indice</a> pour la sélection ou au point d'insertion</p></dd>
   <dt><code>superscript</code></dt>
-  <dd>Active ou désactive <a href="/fr/docs/Web/HTML/Element/sup">la mise en exposant</a>
-    pour la sélection ou au point d'insertion</dd>
+  <dd><p>Active ou désactive <a href="/fr/docs/Web/HTML/Element/sup">la mise en exposant</a> pour la sélection ou au point d'insertion</p></dd>
   <dt><code>underline</code></dt>
-  <dd>Active ou désactive <a href="/fr/docs/Web/HTML/Element/u">le soulignement</a> pour
-    la sélection ou au point d'insertion.</dd>
+  <dd><p>Active ou désactive <a href="/fr/docs/Web/HTML/Element/u">le soulignement</a> pour la sélection ou au point d'insertion.</p></dd>
   <dt><code>undo</code></dt>
-  <dd>Annule la dernière commande exécutée.</dd>
+  <dd><p>Annule la dernière commande exécutée.</p></dd>
   <dt><code>unlink</code></dt>
-  <dd>Retire l'<a href="/fr/docs/Web/HTML/Element/a">ancre</a> de l'hyperlien sélectionné.
-  </dd>
+  <dd><p>Retire l'<a href="/fr/docs/Web/HTML/Element/a">ancre</a> de l'hyperlien sélectionné.</p></dd>
   <dt><code>useCSS</code> {{Deprecated_inline}}</dt>
-  <dd>Active/désactive l'utilisation de balises HTML ou de CSS pour le balisage généré. La
-    valeur de l'argument doit être un booléen.</dd>
-  <dd>Note : cet argument possède une logique inversée (<code>false</code> permet
-    d'utiliser CSS et <code>true</code> permet d'utiliser HTML). Cette valeur n'est pas
-    prise en charge par Internet Explorer et a été dépréciée en faveur de
-    <code>styleWithCSS</code>.</dd>
-  <dt><code>styleWithCSS</code></dt>
-  <dd>Remplace la commande <code>useCSS</code>. <code>true</code> modifie/génère des
-    attributs <code>style</code> dans le balisage tandis que <code>false</code> génère des
-    éléments HTML de présentation.</dd>
+  <dd><p>Active/désactive l'utilisation de balises HTML ou de CSS pour le balisage généré. La valeur de l'argument doit être un booléen. Note : cet argument possède une logique inversée (<code>false</code> permet d'utiliser CSS et <code>true</code> permet d'utiliser HTML). Cette valeur n'est pas prise en charge par Internet Explorer et a été dépréciée en faveur de <code>styleWithCSS</code>.</p></dd>  <dt><code>styleWithCSS</code></dt>
+  <dd><p>Remplace la commande <code>useCSS</code>. <code>true</code> modifie/génère des attributs <code>style</code> dans le balisage tandis que <code>false</code> génère des éléments HTML de présentation.</p></dd>
 </dl>
 
 <h2 id="Example">Exemple</h2>

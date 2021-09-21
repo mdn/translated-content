@@ -19,8 +19,8 @@ translation_of: Web/API/Worker/postMessage
  <dt><em>aMessage</em></dt>
  <dd>L'objet à envoyer au worker; il va être dans le champ de donnée <code>data</code> dans l'évènement délivré au gestonnaire d'évènement {{domxref("Worker.onmessage")}}. Cette donnée peut être de n'importe quelle valeur ou un objet JavaScript pris en charge par l'algorithme de <a href="/fr/docs/Web/API/Web_Workers_API/algorithme_clonage_structure">clone structuré</a>, qui inclut les références cycliques.</dd>
  <dt><em>transferList</em> {{optional_inline}}</dt>
- <dd>Un tableau optionnel d'objets {{domxref("Transferable")}} desquels on doit transférer la propriété. Si la propriété d'un objet est transférée, il devient inutilisable (<em>neutralisé</em>) pour le contexte émétteur et devient disponible uniquement pour le worker auquel cela a été envoyé.</dd>
- <dd>Seulement des objets de types {{domxref("MessagePort")}}, {{domxref("ArrayBuffer")}} ou {{domxref("ImageBitmap")}} peuvent être transférés. <code>null</code> n'est pas une valeur accéptée pour <code>transfer</code>.</dd>
+ <dd><p>Un tableau optionnel d'objets {{domxref("Transferable")}} desquels on doit transférer la propriété. Si la propriété d'un objet est transférée, il devient inutilisable (<em>neutralisé</em>) pour le contexte émétteur et devient disponible uniquement pour le worker auquel cela a été envoyé.</p>
+ <p>Seulement des objets de types {{domxref("MessagePort")}}, {{domxref("ArrayBuffer")}} ou {{domxref("ImageBitmap")}} peuvent être transférés. <code>null</code> n'est pas une valeur accéptée pour <code>transfer</code>.</p></dd>
 </dl>
 
 <h3 id="Retour">Retour</h3>
