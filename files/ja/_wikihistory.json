@@ -21368,12 +21368,6 @@
       "ikohs"
     ]
   },
-  "Web/API/ScrollToOptions": {
-    "modified": "2020-10-15T22:32:16.096Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "Web/API/Selection": {
     "modified": "2019-03-23T23:48:10.878Z",
     "contributors": [
@@ -48622,6 +48616,12 @@
       "mfuji09",
       "fscholz",
       "ethertank"
+    ]
+  },
+  "conflicting/Web/API/Window/scroll": {
+    "modified": "2020-10-15T22:32:16.096Z",
+    "contributors": [
+      "mfuji09"
     ]
   },
   "conflicting/Web/API/XRInputSource/handedness": {
