@@ -13,7 +13,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
 
 <p>{{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_une_grille_CSS", "Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_grille","Web/CSS/CSS_Grid_Layout")}}</p>
 
-<p>Dans <a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Placer_les_éléments_sur_les_lignes_d_une_grille_CSS">le guide précédent</a>, on a étudié les lignes formées par une grille et comment positionner des objets sur ces lignes. Lorsqu'on utilise une grille CSS, on a toujours ces lignes et celles-ci permettent d'avoir une disposition simple. Toutefois, il existe une autre méthode de disposition avec les grilles, qu'on peut utiliser seule ou combinée avec les lignes. Avec cette méthode, on place les éléments sur des <em>zones</em> de la grille. Nous allons voir dans ce guide comment cela fonctionne voire comment on peut faire de l'ASCII-art en CSS avec les grilles !</p>
+<p>Dans <a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Line-based_Placement_with_CSS_Grid">le guide précédent</a>, on a étudié les lignes formées par une grille et comment positionner des objets sur ces lignes. Lorsqu'on utilise une grille CSS, on a toujours ces lignes et celles-ci permettent d'avoir une disposition simple. Toutefois, il existe une autre méthode de disposition avec les grilles, qu'on peut utiliser seule ou combinée avec les lignes. Avec cette méthode, on place les éléments sur des <em>zones</em> de la grille. Nous allons voir dans ce guide comment cela fonctionne voire comment on peut faire de l'ASCII-art en CSS avec les grilles !</p>
 
 <h2 id="Donner_un_nom_à_une_zone_de_grille">Donner un nom à une zone de grille</h2>
 
@@ -26,7 +26,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
 
 <p>Ici, on définit les quatre lignes qui entourent la zone en question :</p>
 
-<p><img alt="The Grid Area defined by lines" src="https://mdn.mozillademos.org/files/14667/4_Area.png" style="height: 354px; width: 951px;"></p>
+<p><img alt="The Grid Area defined by lines" src="4_area.png"></p>
 
 <p>On peut également définir une zone en lui donnant un nom puis en définissant l'emplacement de cette zone grâce à la propriété {{cssxref("grid-template-areas")}}. Vous pouvez choisir les noms de vos zones, on peut par exemple créer une disposition avec quatre zones :</p>
 
@@ -37,11 +37,10 @@ original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
  <li>Le contenu principale (<em>content</em>)</li>
 </ul>
 
-<p><img alt="An image showing a simple two column layout with header and footer" src="https://mdn.mozillademos.org/files/14669/4_Layout.png" style="height: 397px; width: 900px;"></p>
+<p><img alt="An image showing a simple two column layout with header and footer" src="4_layout.png"></p>
 
 <p>Avec {{cssxref("grid-area")}}, on affecte un nom à chacune de ces zones. Pour le moment, aucune disposition n'a été créée mais on a des noms qu'on pourra utiliser dans notre disposition :</p>
 
-<div id="Grid_Area_1">
 <pre class="brush: css">.header {
   grid-area: hd;
 }
@@ -69,8 +68,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -88,7 +86,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;div class="header"&gt;En-tête&lt;/div&gt;
@@ -97,8 +94,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
   &lt;div class="footer"&gt;Pied de page&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<p>{{EmbedLiveSample('Grid_Area_1', '300', '330')}}</p>
-</div>
+<p>{{EmbedLiveSample("Donner_un_nom_à_une_zone_de_grille", '300', '330')}}</p>
 
 <p>Grâce à cette méthode, il n'est pas nécessaire de gérer chacun des éléments individuellement. Tout est organisé au travers du conteneur. La disposition est décrite grâce à la propriété {{cssxref("grid-template-areas")}}.</p>
 
@@ -120,8 +116,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -139,7 +134,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -159,7 +153,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
   &lt;div class="footer"&gt;Pied de page&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<p>{{EmbedLiveSample('Laisser_une_cellule_vide', '300', '330')}}</p>
+<p>{{EmbedLiveSample("Laisser_une_cellule_vide", '300', '330')}}</p>
 
 <p>Si on veut que la disposition soit bien représentée, on peut utiliser plusieurs points. Tant que ceux-ci ne sont pas séparés par un espace, ils compteront pour une seule cellule. Dans le cas d'une disposition complexe, cela permet d'avoir des lignes et colonnes clairement alignées, y compris dans la règle CSS.</p>
 
@@ -183,8 +177,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -202,7 +195,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -215,16 +207,14 @@ original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="wrapper"&gt;
+<pre class="brush: html hidden">&lt;div class="wrapper"&gt;
   &lt;div class="header"&gt;En-tête&lt;/div&gt;
   &lt;div class="sidebar"&gt;Barre latérale&lt;/div&gt;
   &lt;div class="content"&gt;Contenu&lt;/div&gt;
   &lt;div class="footer"&gt;Pied de page&lt;/div&gt;
 &lt;/div&gt;</pre>
-</div>
 
-<p>{{EmbedLiveSample('Occuper_plusieurs_cellules', '300', '330')}}</p>
+<p>{{EmbedLiveSample("Occuper_plusieurs_cellules", '300', '330')}}</p>
 
 <p>La valeur utilisée pour {{cssxref("grid-template-areas")}} doit obligatoirement décrire une grille complète, sinon elle est considérée invalide et la propriété est ignorée. Cela signifie qu'il faut le même nombre de cellules pour chaque ligne (si une cellule est vide, on l'indiquera avec un point). Si des zones ne sont pas rectangulaires, cela sera également considéré comme invalide.</p>
 
@@ -236,8 +226,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
 
 <p>Pour la disposition vue précédemment, on définit ici une disposition par défaut sur une seule colonne pour les affichages étroits. On a donc une seule piste sur laquelle s'empilent les objets :</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -255,7 +244,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.header {
   grid-area: hd;
@@ -302,14 +290,12 @@ original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;div class="wrapper"&gt;
+<pre class="brush: html hidden">&lt;div class="wrapper"&gt;
   &lt;div class="header"&gt;En-tête&lt;/div&gt;
   &lt;div class="sidebar"&gt;Barre latérale&lt;/div&gt;
   &lt;div class="content"&gt;Contenu&lt;/div&gt;
   &lt;div class="footer"&gt;Pied de page&lt;/div&gt;
 &lt;/div&gt;</pre>
-</div>
 
 <p>{{EmbedLiveSample("Redéfinir_une_grille_avec_des_media_queries", '550', '330')}}</p>
 
@@ -317,15 +303,16 @@ original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
 
 <p>La plupart des exemples illustrent une utilisation de la grille pour la disposition principale de la page. Toutefois, une grille peut également être utile pour les petits éléments. {{cssxref("grid-template-areas")}} est assez pratique car elle permet de voir facilement à quoi ressemblera l'élément.</p>
 
+<h3 id="Exemple_d'objet_média">Exemple d'objet média</h3>
+
 <p>Dans l'exemple qui suit, on crée un objet « media » qui servira de composant pour afficher un media (une image par exemple) d'un côté et un texte de l'autre. On pourra ainsi voir l'effet obtenu en changeant la disposition avec l'image à droite ou à gauche.</p>
 
-<p><img alt="Images showing an example media object design" src="https://mdn.mozillademos.org/files/14671/4_Media_objects.png" style="height: 432px; width: 800px;"></p>
+<p><img alt="Images showing an example media object design" src="4_media_objects.png"></p>
 
 <p>Ici, la grille se compose de deux pistes en colonnes. La colonne pour l'image est dimensionnée avec <code>1fr</code> et celle pour le texte reçoit <code>3fr</code>. Si on souhaitait utiliser une largeur fixe pour l'image, on aurait pu utiliser des pixels pour définir la taille de la colonne et utiliser <code>1fr</code> pour la zone du texte. Cette colonne de <code>1fr</code> aurait alors occupé le reste de l'espace.</p>
 
 <p>Pour la zone dédiée à l'image, on crée une zone de grille intitulée <code>img</code> et pour le texte, on crée une seconde zone intitulée <code>content</code>. Ensuite, on utilise ces noms pour créer l'organisation via la propriété <code>grid-template-areas</code>.</p>
 
-<div id="Media_1">
 <pre class="brush: css">* {box-sizing: border-box;}
 
 .media {
@@ -361,14 +348,12 @@ original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
   &lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<p>{{EmbedLiveSample('Media_1', '300', '200')}}</p>
-</div>
+<p>{{EmbedLiveSample("Exemple_d'objet_média", '300', '200')}}</p>
 
 <h3 id="Afficher_l'image_de_l'autre_côté">Afficher l'image de l'autre côté</h3>
 
 <p>Si on a besoin d'afficher l'image d l'autre côté, il suffit de redéfinir une grille pour laquelle la piste qui mesure <code>1fr</code> est en dernier et d'échanger les valeurs dans {{cssxref("grid-template-areas")}}.</p>
 
-<div id="Media_2">
 <pre class="brush: css">* {box-sizing: border-box;}
 
 .media {
@@ -409,8 +394,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
   &lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<p>{{EmbedLiveSample('Media_2', '300', '200') }}</p>
-</div>
+<p>{{EmbedLiveSample("Afficher_l'image_de_l'autre_côté", '300', '200') }}</p>
 
 <h2 id="Les_propriétés_raccourcies_pour_les_grilles_CSS">Les propriétés raccourcies pour les grilles CSS</h2>
 
@@ -463,7 +447,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Définir_des_zones_sur_une_grille
  <li>{{cssxref("grid-auto-flow")}}</li>
 </ul>
 
-<p>Cette propriété réinitialise également la propriété {{cssxref("grid-gap")}} avec la valeur <code>0</code> mais, en revanche, elle ne permet pas de définir des espaces.</p>
+<p>Cette propriété réinitialise également la propriété {{cssxref("gap")}} avec la valeur <code>0</code> mais, en revanche, elle ne permet pas de définir des espaces.</p>
 
 <p>On peut utiliser la même syntaxe qu'avec {{cssxref("grid-template")}} mais attention, cela réinitialisera les valeurs des autres propriétés :</p>
 

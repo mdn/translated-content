@@ -14,7 +14,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
 
 <p>{{PreviousMenuNext("Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS", "Web/CSS/CSS_Grid_Layout/Les_grilles_CSS_les_valeurs_logiques_les_modes_d_écriture","Web/CSS/CSS_Grid_Layout")}}</p>
 
-<p>Si vous connaissez <a href="/fr/docs/Web/CSS/Disposition_des_boîtes_flexibles_CSS">les boîtes flexibles (flexbox)</a> vous savez déjà comment aligner les éléments flexibles à l'intérieur d'un conteneur flexible. Ces propriétés d'alignement, initialement spécifiée dans la spécification des boîtes flexibles, sont désormais spécifiées dans une nouvelle spécification <a href="https://drafts.csswg.org/css-align/">Box Alignment Level 3</a>. Cette spécification détaille le fonctionnement de l'alignement pour les différentes méthodes de disposition.</p>
+<p>Si vous connaissez <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout">les boîtes flexibles (flexbox)</a> vous savez déjà comment aligner les éléments flexibles à l'intérieur d'un conteneur flexible. Ces propriétés d'alignement, initialement spécifiée dans la spécification des boîtes flexibles, sont désormais spécifiées dans une nouvelle spécification <a href="https://drafts.csswg.org/css-align/">Box Alignment Level 3</a>. Cette spécification détaille le fonctionnement de l'alignement pour les différentes méthodes de disposition.</p>
 
 <p>Chaque méthode de disposition qui implémente cette nouvelle spécification se comportera légèrement différemment selon les différences de contraintes et de fonctionnalités (et aussi selon le comportement historique). On ne pourra donc pas avoir un alignement exactement homogène. La spécification pour l'alignement des boîtes détaille le fonctionnement de chaque méthode mais malheureusement, à l'heure actuelle, aucun navigateur ne prend en charge cette spécification. À l'heure actuelle, les navigateurs respectent les règles de cette spécification pour l'alignement et la répartition de l'espace lorsqu'on utilise une disposition en grille. Dans cet article, nous verrons comment celles-ci fonctionnent. On retrouvera de nombreux points communs avec les boîtes flexibles pour le fonctionnement de ces propriétés et valeurs. Toutefois, les grilles fonctionnant sur deux axes et les boîtes flexibles sur un seul, il faudra faire attention à quelques différences. Commençons par analyser les deux axes utilisés lorsqu'il s'agit d'aligner des objets sur une grille.</p>
 
@@ -22,17 +22,19 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
 
 <p>Lorsqu'on manipule une grille, on dispose  de deux axes sur lesquels aligner les objets. L'axe de bloc et l'axe en ligne. L'axe de bloc est l'axe selon lequel les blocs sont disposés quand on a une disposition en bloc (<em>block layout</em>). Par exemple, si on a deux paragraphes sur une page, par défaut, ils s'affichent l'un en dessous de l'autre.</p>
 
-<p><img src="https://mdn.mozillademos.org/files/14725/7_Block_Axis.png" style="height: 306px; width: 940px;"></p>
+<p><img src="7_block_axis.png"></p>
 
 <p><strong>L'axe en ligne est orthogonal à l'axe de bloc. C'est la direction selon laquelle progresse le texte.</strong></p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14773/7_Inline_Axis.png" style="height: 306px; width: 940px;"></p>
+<p><img alt="" src="7_inline_axis.png"></p>
 
 <p>Grâce aux propriétés et à leurs valeurs, nous serons en mesure d'aligner le contenu de la grillle par rapport à ces deux axes.</p>
 
 <h2 id="Aligner_des_objets_sur_laxe_de_bloc_block_axis">Aligner des objets sur l'axe de bloc (<em>block axis</em>)</h2>
 
 <p>Les propriétés {{cssxref("align-self")}} et {{cssxref("align-items")}} permettent de contrôler l'alignement selon l'axe de bloc. Lorsqu'on utilise ces propriétés, on modifie l'alignement de l'objet au sein de la zone de grille sur laquelle il est placé.</p>
+
+<h3 id="utiliser_align-items">Utiliser align-items</h3>
 
 <p>Dans l'exemple suivant, on a quatre zones sur la grille. On peut utiliser la propriété {{cssxref("align-items")}} sur le conteneur de la grille afin d'aligner les objets avec l'une des valeurs suivantes :</p>
 
@@ -48,9 +50,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
  <li><code>last baseline</code></li>
 </ul>
 
-<div id="alignment_1">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -66,7 +66,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -102,18 +101,17 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
 &lt;/div&gt;
 </pre>
 
-<p>{{EmbedLiveSample('alignment_1', '500', '450')}}</p>
-</div>
+<p>{{EmbedLiveSample('utiliser_align-items', '500', '450')}}</p>
 
 <p>Lorsqu'on utilise <code>align-self: start</code>, la hauteur de chaque <code>&lt;div&gt;</code> sera déterminée par le contenu du <code>&lt;div&gt;</code>. En revanche, si on n'utilise pas {{cssxref("align-self")}}, chaque <code>&lt;div&gt;</code> sera étiré afin de remplir la zone de la grille.</p>
 
 <p>La propriété {{cssxref("align-items")}} définit en fait la valeur de la propriété {{cssxref("align-self")}} pour tous les éléments fils de la grille. Cela signifie qu'on peut avoir un réglage plus fin sur chacun des objets de la grille en utilisant <code>align-self</code> pour les objets.</p>
 
+<h3 id="utiliser_align-self">Utiliser align-self</h3>
+
 <p>Dans le prochain exemple, on utilise la propriété <code>align-self</code> afin d'illustrer les différentes valeurs pour l'alignement. La première zone illustre le comportement par défaut pour <code>align-self</code> : l'objet est étiré. Le deuxième objet utilise la valeur <code>start</code>, le troisième utilise <code>end</code> et le quatrième utilise <code>center</code>.</p>
 
-<div id="alignment_2">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -129,7 +127,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -167,8 +164,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
 &lt;/div&gt;
 </pre>
 
-<p>{{EmbedLiveSample('alignment_2', '500', '450')}}</p>
-</div>
+<p>{{EmbedLiveSample('utiliser_align-self', '500', '450')}}</p>
 
 <h3 id="Gestion_des_objets_avec_un_ratio_intrinsèque">Gestion des objets avec un ratio intrinsèque</h3>
 
@@ -196,9 +192,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
 
 <p>Là encore, la valeur par défaut <code>stretch</code> pour les objets qui n'ont pas de ratio intrinsèque. Cela signifie que, par défaut, les objets de la grille couvriront l'ensemble de la zone de grille sur laquelle ils sont placés. Dans l'exemple qui suit, le premier objet illustre cet alignement par défaut.</p>
 
-<div id="alignment_3">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -214,7 +208,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -251,9 +244,8 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
   &lt;div class="item4"&gt;Objet 4&lt;/div&gt;
 &lt;/div&gt;
 </pre>
-
+Justifier_les_objets_sur_laxe_en_ligne_inline_axis
 <p>{{EmbedLiveSample('alignment_3', '500', '450')}}</p>
-</div>
 
 <p>Comme pour {{cssxref("align-self")}} et {{cssxref("align-items")}}, on peut utiliser la propriété {{cssxref("justify-items")}} sur le conteneur de la grille afin de régler la valeur de {{cssxref("justify-self")}} pour l'ensemble des objets de la grille.</p>
 
@@ -267,9 +259,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
 
 <p>En combinant les propriétés <code>align-</code><code>*</code> et <code>justify-*</code>, on peut facilement centrer un objet sur sa zone de grille.</p>
 
-<div id="alignment_4">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -285,7 +275,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -308,8 +297,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
 &lt;/div&gt;
 </pre>
 
-<p>{{EmbedLiveSample('alignment_4', '500', '480')}}</p>
-</div>
+<p>{{EmbedLiveSample('Centrer_un_objet_sur_une_zone', '500', '480')}}</p>
 
 <h2 id="Aligner_les_pistes_dune_grille_sur_laxe_de_bloc">Aligner les pistes d'une grille sur l'axe de bloc</h2>
 
@@ -337,9 +325,9 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
 
 <p>La propriété <code>align-content</code> s'applique sur le conteneur de la grille car elle porte sur l'ensemble de la grille. Pour une disposition en grille, la valeur par défaut est <code>start</code> : cela indique que les pistes commencent à partir du coin en haut à gauche de la grille.</p>
 
-<div id="alignment_5">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<h3 id="alignement_par_defaut">Alignement par défaut</h3>
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -355,7 +343,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -391,14 +378,13 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
 &lt;/div&gt;
 </pre>
 
-<p>{{EmbedLiveSample('alignment_5', '500', '520')}}</p>
-</div>
+<p>{{EmbedLiveSample('alignement_par_defaut', '500', '520')}}</p>
+
+<h3 id="align-content_end">Utiliser align-content: end</h3>
 
 <p>Si on ajoute <code>align-content</code> avec la valeur <code>end</code> sur le conteneur, les pistes seront déplacées à la fin du conteneur selon l'axe des colonnes.</p>
 
-<div id="alignment_6">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -414,7 +400,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -451,14 +436,13 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
 &lt;/div&gt;
 </pre>
 
-<p>{{EmbedLiveSample('alignment_6', '500', '520')}}</p>
-</div>
+<p>{{EmbedLiveSample('align-content_end', '500', '520')}}</p>
+
+<h3 id="align-content_end_space-between">Utiliser align-content: space-between</h3>
 
 <p>Pour cette propriété, on peut également utiliser des valeurs qu'on manipule avec les boîtes flexibles : <code>space-between</code>, <code>space-around</code> et <code>space-evenly</code> qui permettent de répartir l'espace. Si on utilise {{cssxref("align-content")}} avec <code>space-between</code> pour notre exemple, on voit alors que les éléments sont espacés de façon équitable.</p>
 
-<div id="alignment_7">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -474,7 +458,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -511,14 +494,13 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
 &lt;/div&gt;
 </pre>
 
-<p>{{EmbedLiveSample('alignment_7', '500', '1570')}}</p>
-</div>
+<p>{{EmbedLiveSample('align-content_end_space-between', '500', '1570')}}</p>
 
 <p>On notera qu'en utilisant ces valeurs pour répartir l'espace, cela peut agrandir les objets de la grille. Si un objet s'étale sur plusieurs pistes, un espace sera ajouté entre chaque piste afin que l'objet qui doit être agrandi puisse absorber cet espace. Aussi, si vous choisissez d'utiliser ces valeurs, assurez-vous que le contenu des pistes puisse absorber cet espace supplémentaire ou que les propriétés d'alignement les renvoient au début de la piste plutôt que de les étirer.</p>
 
 <p>Dans l'image qui suit, on a a placé une grille en utilisant <code>align-content: start</code> et une autre grille qui utilise <code>align-content: space-between</code>. On peut voir la façon dont les objets 1 et 2 (qui s'étalent sur deux lignes) ont gagné en hauteur pour combler l'espace entre les pistes.</p>
 
-<p><img src="https://mdn.mozillademos.org/files/14729/7_space-between.png" style="height: 534px; width: 1030px;"></p>
+<p><img src="7_space-between.png"></p>
 
 <h2 id="Justifier_les_pistes_sur_laxe_des_lignes">Justifier les pistes sur l'axe des lignes</h2>
 
@@ -526,9 +508,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
 
 <p>Avec le même exemple, on utilise {{cssxref("justify-content")}} avec la valeur <code>space-around</code>. Là encore, les pistes qui s'étalent sur plus d'une colonne gagnent en largeur.</p>
 
-<div id="alignment_8">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -544,7 +524,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -582,8 +561,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
 &lt;/div&gt;
 </pre>
 
-<p>{{EmbedLiveSample('alignment_8', '500', '500')}}</p>
-</div>
+<p>{{EmbedLiveSample('Justifier_les_pistes_sur_laxe_des_lignes', '500', '500')}}</p>
 
 <h2 id="Alignement_et_marges_automatiques">Alignement et marges automatiques</h2>
 
@@ -591,9 +569,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
 
 <p>Dans l'exemple qui suit, pour l'objet 1, on utilise une marge à gauche avec <code>auto</code>. On peut alors voir le contenu poussé à droite de la zone (la marge à gauche occupant le plus d'espace possible).</p>
 
-<div id="alignment_9">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -609,7 +585,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -646,12 +621,11 @@ original_slug: Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_C
 &lt;/div&gt;
 </pre>
 
-<p>{{EmbedLiveSample('alignment_9', '500', '500')}}</p>
-</div>
+<p>{{EmbedLiveSample('Alignement_et_marges_automatiques', '500', '500')}}</p>
 
 <p>On peut voir comment l'objet est aligné grâce à <a href="/fr/docs/Tools/Page_Inspector/How_to/Examine_grid_layouts">l'outil de mise en évidence des grilles dans Firefox</a>.</p>
 
-<p><img src="https://mdn.mozillademos.org/files/14731/7_auto_margins.png" style="height: 1000px; width: 1000px;"></p>
+<p><img src="7_auto_margins.png"></p>
 
 <h2 id="Lalignement_et_les_modes_décriture">L'alignement et les modes d'écriture</h2>
 

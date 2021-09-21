@@ -64,7 +64,7 @@ translation_of: Web/CSS/@supports
 <pre class="brush:css">@supports not ( not ( transform-origin: 2px ) ) { }
 @supports (display: grid) and ( not (display: inline-grid) ) { }</pre>
 
-<div class="note style-wrap">
+<div class="note">
 <p><strong>Note :</strong> Au niveau le plus haut, il n'est pas nécessaire d'encadrer l'opérateur <code>not</code> entre parenthèses. Si on souhaite le combiner avec d'autres opérateurs comme <code>and</code> ou <code>or</code>, il faudra utiliser des parenthèses.</p>
 </div>
 
@@ -98,8 +98,8 @@ translation_of: Web/CSS/@supports
 <pre class="brush:css">@supports ( transform-style: preserve-3d ) or (( -moz-transform-style: preserve-3d ) or
           (( -o-transform-style: preserve-3d ) or ( -webkit-transform-style: preserve-3d  ))) { }</pre>
 
-<div class="note style-wrap">
-<p><strong>Note</strong> : Lorsqu'on utilise à la fois l'opérateur <code>and</code> et l'opérateur <code>or</code>, il devient nécessaire d'utiliser des parenthèses pour que l'ordre d'application des opérateurs soit défini. Si on n'utilise pas de parenthèses, la condition sera considérée comme invalide et l'ensemble de la règle @ sera ignorée.</p>
+<div class="note">
+<p><strong>Note :</strong> Lorsqu'on utilise à la fois l'opérateur <code>and</code> et l'opérateur <code>or</code>, il devient nécessaire d'utiliser des parenthèses pour que l'ordre d'application des opérateurs soit défini. Si on n'utilise pas de parenthèses, la condition sera considérée comme invalide et l'ensemble de la règle @ sera ignorée.</p>
 </div>
 
 <h3 id="Syntaxe_formelle">Syntaxe formelle</h3>

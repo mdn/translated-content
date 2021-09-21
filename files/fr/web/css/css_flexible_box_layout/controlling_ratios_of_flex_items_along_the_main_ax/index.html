@@ -16,7 +16,7 @@ original_slug: >-
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary">Dans ce guide, nous verrons les trois propriétés appliquées aux éléments flexibles qui permettent de contrôler leurs tailles et flexibilités le long de l'axe principal : {{cssxref("flex-grow")}}, {{cssxref("flex-shrink")}} et {{cssxref("flex-basis")}}. Comprendre le fonctionnement de ces propriétés est primordial pour maîtriser les boîtes flexibles.</p>
+<p>Dans ce guide, nous verrons les trois propriétés appliquées aux éléments flexibles qui permettent de contrôler leurs tailles et flexibilités le long de l'axe principal : {{cssxref("flex-grow")}}, {{cssxref("flex-shrink")}} et {{cssxref("flex-basis")}}. Comprendre le fonctionnement de ces propriétés est primordial pour maîtriser les boîtes flexibles.</p>
 
 <h2 id="Un_premier_aperçu">Un premier aperçu</h2>
 
@@ -35,7 +35,7 @@ original_slug: >-
 }
 </pre>
 
-<p>Dans l'article sur <a href="/fr/docs/Web/CSS/Disposition_flexbox_CSS/Concepts_de_base_flexbox">les concepts de base relatifs aux boîtes flexibles</a>, nous avons pu introduire ces propriétés. Ici, nous les étudierons en profondeur afin de comprendre comment le navigateur les interprète.</p>
+<p>Dans l'article sur <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox">les concepts de base relatifs aux boîtes flexibles</a>, nous avons pu introduire ces propriétés. Ici, nous les étudierons en profondeur afin de comprendre comment le navigateur les interprète.</p>
 
 <h2 id="Les_concepts_majeurs_relatifs_à_l'axe_principal">Les concepts majeurs relatifs à l'axe principal</h2>
 
@@ -55,7 +55,7 @@ original_slug: >-
 
 <p>Si votre navigateur ne prend pas en charge ces mots-clés, les paragraphes seront affichés normalement. La capture d'écran qui suit illustre le résultat obtenu avec un navigateur compatible :</p>
 
-<p><img alt="Le premier paragraphe est aussi large que le plus long mot qu'il contient alors que le second est étendu sur une seule ligne et dépasse." src="https://mdn.mozillademos.org/files/15658/ratios-size.png" style="display: block; height: 558px; margin: 0px auto; width: 1520px;"></p>
+<p><img alt="Le premier paragraphe est aussi large que le plus long mot qu'il contient alors que le second est étendu sur une seule ligne et dépasse." src="ratios-size.png"></p>
 
 <p>Pour la suite de cet article, gardez à l'esprit l'impact de <code>min-content</code> et <code>max-content</code> lorsque nous verrons les propriétés <code>flex-grow</code> et <code>flex-shrink</code>.</p>
 
@@ -63,11 +63,11 @@ original_slug: >-
 
 <p>Pour étudier ces propriétés, nous devons définir le concept d'<strong>espace libre positif et négatif</strong>. Lorsqu'un conteneur flexible possède un espace libre positif, il dispose de plus d'espace qu'il n'est nécessaire pour afficher les éléments flexibles qu'il contient. Si on a, par exemple, un conteneur dont la largeur mesure 500 pixels, la propriété {{cssxref("flex-direction")}} qui vaut <code>row</code> et trois éléments qui mesurent chacun 100 pixels, il reste alors 200 pixels d'espace libre positif qui pourrait être réparti entre les éléments si on le souhaitait.</p>
 
-<p><img alt="Une image illustrant l'espace restant après que les éléments aient été affichés." src="https://mdn.mozillademos.org/files/15654/Basics7.png" style="display: block; height: 198px; margin: 0px auto; width: 528px;"></p>
+<p><img alt="Une image illustrant l'espace restant après que les éléments aient été affichés." src="basics7.png"></p>
 
 <p>L'espace libre négatif est l'espace supplémentaire qui aurait été nécessaire pour contenir tous les éléments à l'intérieur du conteneur flexible. Si on dispose d'un conteneur dont la largeur mesure 500 pixels et trois éléments flexibles dont chacun mesure 200, l'espace total occupé mesure 600 pixels et on a donc 100 pixels d'espace libre négatif. Cet espace pourrait être retiré des éléments afin qu'ils soient contenus dans le conteneur.</p>
 
-<p><img alt="Les objets dépassent du conteneur." src="https://mdn.mozillademos.org/files/15655/ratios1.png" style="display: block; height: 198px; margin: 0px auto; width: 634px;"></p>
+<p><img alt="Les objets dépassent du conteneur." src="ratios1.png"></p>
 
 <p>C'est cette distribution de l'espace libre qu'il est nécessaire de comprendre afin d'étudier les différentes propriétés relatives aux propriétés flexibles.</p>
 
@@ -101,11 +101,11 @@ original_slug: >-
 
 <p>Dans ce cas, <code>flex-basis</code> vaut <code>auto</code> et les objets n'ont pas de largeur explicite définie : ils sont donc dimensionnés automatiquement. Cela signifie que la boîte flexible utilisera la taille <code>max-content</code> des éléments. Après avoir disposé les objets, il reste de l'espace libre dans le conteneur flexible (ce qui correspond à la zone hachurée de la figure suivante) :</p>
 
-<p><img alt="Une image illustrant l'espace libre positif avec une zone hachurée." src="https://mdn.mozillademos.org/files/15656/ratios2.png" style="display: block; height: 100px; margin: 0px auto; width: 634px;"></p>
+<p><img alt="Une image illustrant l'espace libre positif avec une zone hachurée." src="ratios2.png"></p>
 
 <p>On utilise ici une valeur <code>flex-basis</code> égale à la taille du contenu, l'espace disponible qui peut être distribué est donc égal à la taille du conteneur (ici sa largeur) moins la taille des éléments. Cet espace est partagé équitablement entre les différents objets. Ainsi, l'objet le plus grand finira avec une taille plus grande, car sa taille de départ est plus importante bien que la même quantité d'espace restant ait été affectée aux autres objets :</p>
 
-<p><img alt="L'espace positif est réparti entre les éléments." src="https://mdn.mozillademos.org/files/15657/ratios3.png" style="display: block; height: 100px; margin: 0px auto; width: 634px;"></p>
+<p><img alt="L'espace positif est réparti entre les éléments." src="ratios3.png"></p>
 
 <p>Si on souhaite obtenir trois objets de la même taille alors qu'ils ont des tailles initiales différentes, on pourra utiliser :</p>
 
@@ -197,6 +197,6 @@ original_slug: >-
 
 <h3 id="Les_autres_façons_de_distribuer_l'espace">Les autres façons de distribuer l'espace</h3>
 
-<p>Si on ne souhaite pas ajouter d'espace aux objets, on pourra tout aussi bien répartir cet espace libre entre les objets ou autour grâce aux propriétés d'alignement vu dans <a href="/fr/docs/Web/CSS/Disposition_flexbox_CSS/Aligner_des_éléments_dans_un_conteneur_flexible">le guide sur l'alignement</a>. La propriété {{cssxref("justify-content")}} permettra de répartir cet espace entre les objets ou autour d'eux. Les marges automatiques peuvent être utilisées sur les objets flexibles afin d'absorber l'espace et de créer des gouttières entre ces objets.</p>
+<p>Si on ne souhaite pas ajouter d'espace aux objets, on pourra tout aussi bien répartir cet espace libre entre les objets ou autour grâce aux propriétés d'alignement vu dans <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">le guide sur l'alignement</a>. La propriété {{cssxref("justify-content")}} permettra de répartir cet espace entre les objets ou autour d'eux. Les marges automatiques peuvent être utilisées sur les objets flexibles afin d'absorber l'espace et de créer des gouttières entre ces objets.</p>
 
 <p>Tout ces outils relatifs aux boîtes flexibles vous permettent d'accomplir la plupart des dispositions et n'auront plus de secret au fur et à mesure de vos essais et expérimentations.</p>

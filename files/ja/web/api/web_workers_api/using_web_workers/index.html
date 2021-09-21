@@ -213,7 +213,7 @@ importScripts('//example.com/hello.js'); /* 他のオリジンのスクリプト
 
 <pre class="brush: plain">Content-Security-Policy: script-src 'self'</pre>
 
-<p>特に、これは <code><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code> を使用したスクリプトを防ぎます。しかし、スクリプトがワーカーを構築した場合、ワーカーのコンテキストで実行中のコードは <code>eval()</code> を使用することができます。</p>
+<p>特に、これは <code><a href="/ja/docs/Web/JavaScript/Reference/Global_Objects/eval">eval()</a></code> を使用したスクリプトを防ぎます。しかし、スクリプトがワーカーを構築した場合、ワーカーのコンテキストで実行中のコードは <code>eval()</code> を使用することができます。</p>
 
 <p>ワーカーのコンテンツセキュリティポリシーを指定するには、ワーカースクリプト自身が配信されたリクエストの <a href="/ja/docs/Web/HTTP/Headers/Content-Security-Policy">Content-Security-Policy</a> レスポンスヘッダーで設定してください。</p>
 

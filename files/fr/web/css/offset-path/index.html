@@ -13,13 +13,11 @@ translation_of: Web/CSS/offset-path
 
 <div>{{EmbedInteractiveExample("pages/css/offset-path.html")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuer à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <p>Cette propriété sert à définir un chemin qu'un élément va suivre lors d'une animation.</p>
 
 <p>La position exacte de l'élément sur ce tracé est déterminée grâce à la propriété {{cssxref("offset-distance")}}. Le tracé d'un mouvement peut être défini grâce à un chemin ou à plusieurs chemins successifs ou encore grâce à la géométrie d'une forme. Chaque forme ou chemin doit définir une position initiale pour la valeur calculée <code>0</code> de {{cssxref("offset-distance")}} ainsi qu'une direction initiale qui définit la rotation de l'objet dans sa position initiale.</p>
 
-<div class="blockIndicator note">
+<div class="note">
 <p><strong>Note :</strong> Dans des versions antérieures des spécifications, cette propriété était intitulée <code>motion-path</code>. Le nom a été modifié en <code>offset-path</code> afin de décrire un chemin statique plutôt qu'un chemin en mouvement.</p>
 </div>
 
@@ -52,7 +50,9 @@ offset-path: unset;
 
 <h3 id="Valeurs">Valeurs</h3>
 
-<div class="warning"><strong>Attention !</strong> À l'heure actuelle, seule la notation <code>path()</code> est prise en charge par les navigateurs.</div>
+<div class="warning">
+  <p><strong>Attention :</strong> À l'heure actuelle, seule la notation <code>path()</code> est prise en charge par les navigateurs.</p>
+</div>
 
 <dl>
  <dt><code>ray()</code></dt>
@@ -60,8 +60,7 @@ offset-path: unset;
  <dt><code>url()</code></dt>
  <dd>Cette notation fonctionnelle permet de faire référence à l'identifiant d'une forme SVG : <code>circle</code>, <code>ellipse</code>, <code>line</code>, <code>path</code>, <code>polygon</code>, <code>polyline</code> ou <code>rect</code> et d'utiliser la géométrie de la forme visée pour construire le chemin.</dd>
  <dt><code>&lt;basic-shape&gt;</code></dt>
- <dd>Cette valeur indique une <a href="/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes">forme CSS</a> en utilisant les notations fonctionnelles <code>circle()</code>, <code>ellipse()</code>, <code>inset()</code>, <code>polygon()</code> ou <code>path()</code>.</dd>
- <dd>
+ <dd>Cette valeur indique une <a href="/en-US/docs/Web/CSS/CSS_Shapes/Basic_Shapes">forme CSS</a> en utilisant les notations fonctionnelles <code>circle()</code>, <code>ellipse()</code>, <code>inset()</code>, <code>polygon()</code> ou <code>path()</code>.
  <dl>
   <dt><code>path()</code></dt>
   <dd>Une chaîne de caractères qui définit un chemin avec la syntaxe des coordonnées SVG. À l'heure actuelle (16 novembre 2018), c'est la seule valeur qui est prise en charge.</dd>
@@ -77,7 +76,7 @@ offset-path: unset;
 
 <h2 id="Exemples">Exemples</h2>
 
-<p>L'exemple qui suit est tiré de <a href="http://codepen.io/ericwilligers/pen/bwVkNa">cette démo présente sur CodePen</a>. Le code SVG dessine la forme d'une maison avec une cheminée. Les propriétés <code>offset-path</code> utilisées permettent de déplacer l'icône (des ciseaux) autour de la maison. On notera que la pseudo-classe <code>:path()</code> est utilisée avec <code>offset-path</code> et que le document SVG contient <code>&lt;path&gt;</code>. Si on compare ces deux données, on verra qu'elles sont identiques.</p>
+<p>L'exemple qui suit est tiré de <a href="https://codepen.io/ericwilligers/pen/bwVkNa">cette démo présente sur CodePen</a>. Le code SVG dessine la forme d'une maison avec une cheminée. Les propriétés <code>offset-path</code> utilisées permettent de déplacer l'icône (des ciseaux) autour de la maison. On notera que la pseudo-classe <code>:path()</code> est utilisée avec <code>offset-path</code> et que le document SVG contient <code>&lt;path&gt;</code>. Si on compare ces deux données, on verra qu'elles sont identiques.</p>
 
 <h3 id="CSS">CSS</h3>
 

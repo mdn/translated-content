@@ -8,7 +8,7 @@ tags:
 translation_of: Web/HTTP/Public_Key_Pinning
 original_slug: Web/Security/Public_Key_Pinning
 ---
-<p class="summary"><span class="seoSummary">L'extention <strong>Public Key Pinning pour HTTP</strong> (HPKP) est une fonctionnalité de sécurité qui dit au client web d'associer une clé publique cryptographique avec un certain serveur web pour éviter les attaques <a href="https://fr.wikipedia.org/wiki/Attaque_de_l%27homme_du_milieu">MITM</a> avec des certificats contrefaits.</span></p>
+<p>L'extention <strong>Public Key Pinning pour HTTP</strong> (HPKP) est une fonctionnalité de sécurité qui dit au client web d'associer une clé publique cryptographique avec un certain serveur web pour éviter les attaques <a href="https://fr.wikipedia.org/wiki/Attaque_de_l%27homme_du_milieu">MITM</a> avec des certificats contrefaits.</p>
 
 <div class="note">
 <p><strong>Note :</strong> La Public Key Pinning décrite ici est différente du limité <a href="http://monica-at-mozilla.blogspot.de/2014/08/firefox-32-supports-public-key-pinning.html">preload list based key pinning</a> introduit dans Firefox 32.</p>
@@ -18,7 +18,9 @@ original_slug: Web/Security/Public_Key_Pinning
 
 <p>HPKP est une technique qui s'appuie sur la confiance au premier accès (TOFU, <em>Trust on First Use</em>). La première fois un serveur web dit au client en utilisant l'en-tête HTTP HPKP quelles clés publiques lui appartiennent, le client sauvegarde cette information pour une période de temps donnée. Quand le client visite le serveur à nouveau, il s'attend à un certificat contenant une clé publique dont l'empreinte est sauvegardée. Si le serveur présente une clé publique inconnue, le client doit présenter un avertissement à l'utilisateur.</p>
 
-<p class="note">Firefox (and Chrome) <strong>désactivent la vérification de l'épinglage</strong> lorsqu'un site épinglé présentent une chaine de certificats qui se termine par <strong>un certificat racine installé par l'utilisateur</strong> (et non un certificat racine de base).</p>
+<div class="notecard note">
+  <p><strong>Note :</strong> Firefox (et Chrome) <strong>désactivent la vérification de l'épinglage</strong> lorsqu'un site épinglé présentent une chaine de certificats qui se termine par <strong>un certificat racine installé par l'utilisateur</strong> (et non un certificat racine de base).</p>
+</div>
 
 <h2 id="Activer_HPKP">Activer HPKP</h2>
 
@@ -51,8 +53,6 @@ original_slug: Web/Security/Public_Key_Pinning
 </ul>
 </div>
 
-<p id="sect1"> </p>
-
 <h3 id="Extraire_la_clé_publique_encodé_en_Base64">Extraire la clé publique encodé en Base64</h3>
 
 <p>En premier, vous devez extraire la clé publique depuis votre fichier de certificats ou de clés puis l'encoder en base 64.</p>
@@ -80,7 +80,7 @@ original_slug: Web/Security/Public_Key_Pinning
 <p>Les étapes concrètes nécessaires pour délivrer l'en-tête HPKP dépendent du serveur web que vous utilisez.</p>
 
 <div class="note">
-<p><strong>Note:</strong> Ces exemples utilisent un a max-age de deux mois et incluent aussi tous les sous-domaines. Il est conseillé de vérifier que cela convient à votre serveur.</p>
+<p><strong>Note :</strong> Ces exemples utilisent un a max-age de deux mois et incluent aussi tous les sous-domaines. Il est conseillé de vérifier que cela convient à votre serveur.</p>
 </div>
 
 <p>Inclure une ligne similaire à votre configuration activera HPKP, en remplaçant les valeurs en pointillé des lignes <code>pin-sha256="..." </code>:</p>

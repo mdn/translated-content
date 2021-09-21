@@ -106,8 +106,8 @@ document.body.appendChild(templateContent);</pre>
 <p>これからのコードは {{htmlelement("slot")}} を {{htmlelement("template")}} と共に使用する方法の例です。以下の2点を目指す JavaScript です。</p>
 
 <ul>
- <li><a href="/en-US/docs/Web/API/ShadowRoot">shadow root</a> の中で <strong><code>&lt;element-details&gt;</code></strong> 要素を <a href="/en-US/docs/Web/HTML/Element/slot#named-slot">slot</a> を用いて作ること。</li>
- <li><strong><code>&lt;element-details&gt;</code></strong> 要素を、その <a href="/en-US/docs/Web/API/ShadowRoot">shadow root</a> と一緒にレンダリングされるように作ること。つまり、要素の内容が <a href="/en-US/docs/Web/HTML/Element/slot#named-slot">slots</a> の中身に代入されるようになります。</li>
+ <li><a href="/ja/docs/Web/API/ShadowRoot">shadow root</a> の中で <strong><code>&lt;element-details&gt;</code></strong> 要素を <a href="/ja/docs/Web/HTML/Element/slot#named-slot">slot</a> を用いて作ること。</li>
+ <li><strong><code>&lt;element-details&gt;</code></strong> 要素を、その <a href="/ja/docs/Web/API/ShadowRoot">shadow root</a> と一緒にレンダリングされるように作ること。つまり、要素の内容が <a href="/ja/docs/Web/HTML/Element/slot#named-slot">slots</a> の中身に代入されるようになります。</li>
 </ul>
 
 <p>{{htmlelement("slot")}} 要素は {{htmlelement("template")}} 要素なしで使用することが可能です。例えば、 {{HTMLElement("div")}} 要素の中で宣言しても Shadow DOM で使用した場合と同様にプレースホルダーとしての役割は果たします。しかし、{{HTMLElement("template")}} 要素の中で使用する方がより一般的で実用的です。</p>
@@ -120,7 +120,7 @@ document.body.appendChild(templateContent);</pre>
 
 <h3 id="template_をスロットと共に作る">template をスロットと共に作る</h3>
 
-<p>まず最初に{{htmlelement("template")}} 要素の中に {{htmlelement("slot")}} 要素を作成し、新しい "element-details-template" と名付けた<a href="/en-US/docs/Web/API/DocumentFragment">フラグメント</a>を作ります。</p>
+<p>まず最初に{{htmlelement("template")}} 要素の中に {{htmlelement("slot")}} 要素を作成し、新しい "element-details-template" と名付けた<a href="/ja/docs/Web/API/DocumentFragment">フラグメント</a>を作ります。</p>
 
 <pre class="brush: html">&lt;template id="element-details-template"&gt;
   &lt;style&gt;
@@ -160,12 +160,12 @@ document.body.appendChild(templateContent);</pre>
    <li><code>&lt;slot name="attributes"&gt;</code></li>
   </ul>
  </li>
- <li>{{HTMLElement("template")}} の中で各 <a href="/en-US/docs/Web/HTML/Element/slot#named-slot">slot</a> は{{HTMLElement("details")}} 要素の中に実装されています。</li>
+ <li>{{HTMLElement("template")}} の中で各 <a href="/ja/docs/Web/HTML/Element/slot#named-slot">slot</a> は{{HTMLElement("details")}} 要素の中に実装されています。</li>
 </ul>
 
 <h3 id="&lt;template>_から_&lt;element-details>_要素を作る">&lt;template&gt; から &lt;element-details&gt; 要素を作る</h3>
 
-<p>次に <strong><code>&lt;element-details&gt;</code></strong> と名付けた新しいカスタム要素を作りましょう。 上で確認した簡単な例と同様に、{{DOMXref("Element.attachShadow")}} を利用してカスタム要素に <a href="/en-US/docs/Web/API/ShadowRoot">shadow root</a> を追加します。</p>
+<p>次に <strong><code>&lt;element-details&gt;</code></strong> と名付けた新しいカスタム要素を作りましょう。 上で確認した簡単な例と同様に、{{DOMXref("Element.attachShadow")}} を利用してカスタム要素に <a href="/ja/docs/Web/API/ShadowRoot">shadow root</a> を追加します。</p>
 
 <pre class="brush: js">customElements.define('element-details',
   class extends HTMLElement {
@@ -208,9 +208,9 @@ document.body.appendChild(templateContent);</pre>
 <p>このコードについて以下の点に注意してください。</p>
 
 <ul>
- <li>２つの <strong><code>&lt;element-details&gt;</code></strong> 要素が使用されており、いずれも {{htmlattrxref("slot")}} 属性を <code>"element-name"</code> および <code>"description"</code> と指定することで対応する <a href="/en-US/docs/Web/HTML/Element/slot#named-slot">slot</a> を参照しています。</li>
- <li>1つ目の <strong><code>&lt;element-details&gt;</code></strong> 要素でのみ <code>"attributes"</code> と名付けられた <a href="/en-US/docs/Web/HTML/Element/slot#named-slot">slot</a> を参照しています。2個目の <code><strong>&lt;element-details</strong>&gt;</code> 要素では参照していません。</li>
- <li>1つ目の <code>&lt;<strong>element-details&gt;</strong></code> 要素は {{HTMLElement("dl")}} 要素を用いて <code>"attributes"</code> と名付けられた <a href="/en-US/docs/Web/HTML/Element/slot#named-slot">slot</a> を参照しています。</li>
+ <li>２つの <strong><code>&lt;element-details&gt;</code></strong> 要素が使用されており、いずれも {{htmlattrxref("slot")}} 属性を <code>"element-name"</code> および <code>"description"</code> と指定することで対応する <a href="/ja/docs/Web/HTML/Element/slot#named-slot">slot</a> を参照しています。</li>
+ <li>1つ目の <strong><code>&lt;element-details&gt;</code></strong> 要素でのみ <code>"attributes"</code> と名付けられた <a href="/ja/docs/Web/HTML/Element/slot#named-slot">slot</a> を参照しています。2個目の <code><strong>&lt;element-details</strong>&gt;</code> 要素では参照していません。</li>
+ <li>1つ目の <code>&lt;<strong>element-details&gt;</strong></code> 要素は {{HTMLElement("dl")}} 要素を用いて <code>"attributes"</code> と名付けられた <a href="/ja/docs/Web/HTML/Element/slot#named-slot">slot</a> を参照しています。</li>
 </ul>
 
 <h3 id="スタイルを追加する">スタイルを追加する</h3>
@@ -236,11 +236,11 @@ document.body.appendChild(templateContent);</pre>
 <p>以下のことに着目してください。</p>
 
 <ul>
- <li>ドキュメント内で <strong><code>&lt;element-details&gt;</code></strong> 要素のインスタンスは {{HTMLElement("details")}} 要素を直接使用しませんが、 <a href="/en-US/docs/Web/API/ShadowRoot">shadow root</a> が {{HTMLElement("details")}} を生成することでレンダリングされます。</li>
- <li>レンダリングされた {{HTMLElement("details")}} の出力結果で、<strong><code>&lt;element-details&gt;</code></strong> 要素のコンテンツは <a href="/en-US/docs/Web/API/ShadowRoot">shadow root</a> から<a href="/en-US/docs/Web/HTML/Element/slot#named-slot">名前付きスロット</a>を埋め込みます。言い換えれば、<strong><code>&lt;element-details&gt;</code></strong> 要素のDOMツリーは <a href="/en-US/docs/Web/API/ShadowRoot">shadow root</a> のコンテンツと共に構成されます。</li>
- <li>両方の <strong><code>&lt;element-details&gt;</code></strong> 要素おいて、<code>"attributes"</code> 名前付きスロットが配置される前に、 <a href="/en-US/docs/Web/API/ShadowRoot">shadow root</a> から自動的に <strong>Attributes </strong>見出しは自動的に追加されます。</li>
- <li>最初の <strong><code>&lt;element-details&gt;</code></strong> は <a href="/en-US/docs/Web/API/ShadowRoot">shadow root</a> から<a href="/en-US/docs/Web/HTML/Element/slot#named-slot">名前付きスロット</a>を明示的に参照している {{HTMLElement("dl")}} 要素を持つため、{{HTMLElement("dl")}} のコンテンツは  <a href="/en-US/docs/Web/API/ShadowRoot">shadow root</a> から <code>"attributes"</code> <a href="/en-US/docs/Web/HTML/Element/slot#named-slot">名前付きスロット</a>を置き換えています。</li>
- <li>二つ目の <strong><code>&lt;element-details&gt;</code></strong> は <a href="/en-US/docs/Web/API/ShadowRoot">shadow root</a> から<a href="/en-US/docs/Web/HTML/Element/slot#named-slot">名前付きスロット</a>を明示的に参照していないため、<a href="/en-US/docs/Web/HTML/Element/slot#named-slot">名前付きスロット</a>のコンテンツは <a href="/en-US/docs/Web/API/ShadowRoot">shadow root</a> のデフォルトのコンテンツが埋め込まれます。</li>
+ <li>ドキュメント内で <strong><code>&lt;element-details&gt;</code></strong> 要素のインスタンスは {{HTMLElement("details")}} 要素を直接使用しませんが、 <a href="/ja/docs/Web/API/ShadowRoot">shadow root</a> が {{HTMLElement("details")}} を生成することでレンダリングされます。</li>
+ <li>レンダリングされた {{HTMLElement("details")}} の出力結果で、<strong><code>&lt;element-details&gt;</code></strong> 要素のコンテンツは <a href="/ja/docs/Web/API/ShadowRoot">shadow root</a> から<a href="/ja/docs/Web/HTML/Element/slot#named-slot">名前付きスロット</a>を埋め込みます。言い換えれば、<strong><code>&lt;element-details&gt;</code></strong> 要素のDOMツリーは <a href="/ja/docs/Web/API/ShadowRoot">shadow root</a> のコンテンツと共に構成されます。</li>
+ <li>両方の <strong><code>&lt;element-details&gt;</code></strong> 要素おいて、<code>"attributes"</code> 名前付きスロットが配置される前に、 <a href="/ja/docs/Web/API/ShadowRoot">shadow root</a> から自動的に <strong>Attributes </strong>見出しは自動的に追加されます。</li>
+ <li>最初の <strong><code>&lt;element-details&gt;</code></strong> は <a href="/ja/docs/Web/API/ShadowRoot">shadow root</a> から<a href="/ja/docs/Web/HTML/Element/slot#named-slot">名前付きスロット</a>を明示的に参照している {{HTMLElement("dl")}} 要素を持つため、{{HTMLElement("dl")}} のコンテンツは  <a href="/ja/docs/Web/API/ShadowRoot">shadow root</a> から <code>"attributes"</code> <a href="/ja/docs/Web/HTML/Element/slot#named-slot">名前付きスロット</a>を置き換えています。</li>
+ <li>二つ目の <strong><code>&lt;element-details&gt;</code></strong> は <a href="/ja/docs/Web/API/ShadowRoot">shadow root</a> から<a href="/ja/docs/Web/HTML/Element/slot#named-slot">名前付きスロット</a>を明示的に参照していないため、<a href="/ja/docs/Web/HTML/Element/slot#named-slot">名前付きスロット</a>のコンテンツは <a href="/ja/docs/Web/API/ShadowRoot">shadow root</a> のデフォルトのコンテンツが埋め込まれます。</li>
 </ul>
 
 <div class="hidden">

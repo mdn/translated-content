@@ -14802,24 +14802,6 @@
       "souta"
     ]
   },
-  "Web/API/File/fileName": {
-    "modified": "2020-09-25T16:45:23.436Z",
-    "contributors": [
-      "silverskyvicto",
-      "mfuji09",
-      "fscholz",
-      "ethertank"
-    ]
-  },
-  "Web/API/File/fileSize": {
-    "modified": "2020-09-25T16:46:05.461Z",
-    "contributors": [
-      "silverskyvicto",
-      "mfuji09",
-      "fscholz",
-      "ethertank"
-    ]
-  },
   "Web/API/File/getAsBinary": {
     "modified": "2019-11-18T15:13:21.722Z",
     "contributors": [
@@ -21384,12 +21366,6 @@
     "modified": "2019-03-23T22:35:37.748Z",
     "contributors": [
       "ikohs"
-    ]
-  },
-  "Web/API/ScrollToOptions": {
-    "modified": "2020-10-15T22:32:16.096Z",
-    "contributors": [
-      "mfuji09"
     ]
   },
   "Web/API/Selection": {
@@ -31197,6 +31173,71 @@
       "wizAmit",
       "slayslot",
       "fscholz",
+      "ethertank",
+      "sosleepy"
+    ]
+  },
+  "Web/CSS/gradient/conic-gradient()": {
+    "modified": "2020-11-05T10:00:21.729Z",
+    "contributors": [
+      "chrisdavidmills",
+      "mfuji09"
+    ]
+  },
+  "Web/CSS/gradient/linear-gradient()": {
+    "modified": "2020-11-16T08:57:22.063Z",
+    "contributors": [
+      "chrisdavidmills",
+      "mfuji09",
+      "SphinxKnight",
+      "Sebastianz",
+      "Simplexible",
+      "wizAmit",
+      "slayslot",
+      "prayash",
+      "ethertank",
+      "sosleepy",
+      "Level",
+      "FredB"
+    ]
+  },
+  "Web/CSS/gradient/radial-gradient()": {
+    "modified": "2020-11-18T14:42:27.892Z",
+    "contributors": [
+      "chrisdavidmills",
+      "mfuji09",
+      "Sebastianz",
+      "wizAmit",
+      "slayslot",
+      "dskmori",
+      "ethertank",
+      "sosleepy",
+      "Level",
+      "FredB"
+    ]
+  },
+  "Web/CSS/gradient/repeating-linear-gradient()": {
+    "modified": "2020-11-18T14:46:06.699Z",
+    "contributors": [
+      "chrisdavidmills",
+      "mfuji09",
+      "Sebastianz",
+      "Prinz_Rana",
+      "wizAmit",
+      "prayash",
+      "ethertank",
+      "sosleepy"
+    ]
+  },
+  "Web/CSS/gradient/repeating-radial-gradient()": {
+    "modified": "2020-11-18T14:47:38.855Z",
+    "contributors": [
+      "chrisdavidmills",
+      "mfuji09",
+      "Sebastianz",
+      "Simplexible",
+      "Prinz_Rana",
+      "mrstork",
       "ethertank",
       "sosleepy"
     ]
@@ -48559,6 +48600,30 @@
       "silverskyvicto"
     ]
   },
+  "conflicting/Web/API/Blob/size": {
+    "modified": "2020-09-25T16:46:05.461Z",
+    "contributors": [
+      "silverskyvicto",
+      "mfuji09",
+      "fscholz",
+      "ethertank"
+    ]
+  },
+  "conflicting/Web/API/File/name": {
+    "modified": "2020-09-25T16:45:23.436Z",
+    "contributors": [
+      "silverskyvicto",
+      "mfuji09",
+      "fscholz",
+      "ethertank"
+    ]
+  },
+  "conflicting/Web/API/Window/scroll": {
+    "modified": "2020-10-15T22:32:16.096Z",
+    "contributors": [
+      "mfuji09"
+    ]
+  },
   "conflicting/Web/API/XRInputSource/handedness": {
     "modified": "2020-12-06T13:23:10.937Z",
     "contributors": [
@@ -48625,13 +48690,6 @@
       "wbamberg",
       "hamasaki",
       "Potappo"
-    ]
-  },
-  "orphaned/Map": {
-    "modified": "2019-03-23T23:22:54.998Z",
-    "contributors": [
-      "wbamberg",
-      "ledsun"
     ]
   },
   "orphaned/Microsummary_XML_grammar_reference": {
@@ -48930,16 +48988,6 @@
       "mikamikuh"
     ]
   },
-  "orphaned/Web/API/Navigator/registerContentHandler": {
-    "modified": "2020-10-15T21:15:53.115Z",
-    "contributors": [
-      "mfuji09",
-      "fscholz",
-      "jsx",
-      "ethertank",
-      "Potappo"
-    ]
-  },
   "orphaned/Web/API/NavigatorConcurrentHardware": {
     "modified": "2020-10-15T22:16:01.086Z",
     "contributors": [
@@ -49039,21 +49087,6 @@
       "Wind1808"
     ]
   },
-  "orphaned/Web/API/TypeInfo": {
-    "modified": "2020-08-15T13:22:42.886Z",
-    "contributors": [
-      "eltociear"
-    ]
-  },
-  "orphaned/Web/API/UserProximityEvent/near": {
-    "modified": "2020-10-15T21:22:30.707Z",
-    "contributors": [
-      "YujiSoftware",
-      "fscholz",
-      "AshfaqHossain",
-      "ethertank"
-    ]
-  },
   "orphaned/Web/API/Window/getAttention": {
     "modified": "2019-03-23T23:51:10.969Z",
     "contributors": [
@@ -49081,12 +49114,6 @@
       "Wind1808"
     ]
   },
-  "orphaned/Web/CSS/@media/Index": {
-    "modified": "2019-03-18T21:22:31.321Z",
-    "contributors": [
-      "mfuji09"
-    ]
-  },
   "orphaned/Web/CSS/@media/scan": {
     "modified": "2020-10-15T22:06:00.879Z",
     "contributors": [
@@ -49103,78 +49130,6 @@
     "modified": "2020-10-15T22:06:39.164Z",
     "contributors": [
       "mfuji09"
-    ]
-  },
-  "orphaned/Web/CSS/Index": {
-    "modified": "2019-01-16T21:57:06.536Z",
-    "contributors": [
-      "mfuji09",
-      "Marsf"
-    ]
-  },
-  "orphaned/Web/CSS/conic-gradient()": {
-    "modified": "2020-11-05T10:00:21.729Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09"
-    ]
-  },
-  "orphaned/Web/CSS/linear-gradient()": {
-    "modified": "2020-11-16T08:57:22.063Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "SphinxKnight",
-      "Sebastianz",
-      "Simplexible",
-      "wizAmit",
-      "slayslot",
-      "prayash",
-      "ethertank",
-      "sosleepy",
-      "Level",
-      "FredB"
-    ]
-  },
-  "orphaned/Web/CSS/radial-gradient()": {
-    "modified": "2020-11-18T14:42:27.892Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "Sebastianz",
-      "wizAmit",
-      "slayslot",
-      "dskmori",
-      "ethertank",
-      "sosleepy",
-      "Level",
-      "FredB"
-    ]
-  },
-  "orphaned/Web/CSS/repeating-linear-gradient()": {
-    "modified": "2020-11-18T14:46:06.699Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "Sebastianz",
-      "Prinz_Rana",
-      "wizAmit",
-      "prayash",
-      "ethertank",
-      "sosleepy"
-    ]
-  },
-  "orphaned/Web/CSS/repeating-radial-gradient()": {
-    "modified": "2020-11-18T14:47:38.855Z",
-    "contributors": [
-      "chrisdavidmills",
-      "mfuji09",
-      "Sebastianz",
-      "Simplexible",
-      "Prinz_Rana",
-      "mrstork",
-      "ethertank",
-      "sosleepy"
     ]
   },
   "orphaned/Web/CSS/transform-function/translateX": {
@@ -49403,12 +49358,6 @@
     "contributors": [
       "morinokami",
       "silverskyvicto"
-    ]
-  },
-  "orphaned/Web/HTTP/Headers/Index": {
-    "modified": "2019-03-18T21:26:05.914Z",
-    "contributors": [
-      "mfuji09"
     ]
   },
   "orphaned/Web/JavaScript/Guide/Core_Language_Features": {

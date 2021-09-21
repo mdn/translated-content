@@ -9,7 +9,8 @@ translation_of: Web/HTTP/Cookies
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p class="summary"><span class="seoSummary">Un cookie HTTP (cookie web, cookie de navigateur) est un petit ensemble de données qu'un serveur envoie au navigateur web de l'utilisateur. Le navigateur peut alors le stocker localement, puis le renvoyer à la prochaine requête vers le même serveur. Typiquement, cette méthode est utilisée par le serveur pour déterminer si deux requêtes proviennent du même navigateur </span>— pour exemple pour garder un utilisateur connecté. Les cookies permettent de conserver de l'information en passant par le procotole HTTP qui est lui "sans état".</p>
+<p>Un cookie HTTP (cookie web, cookie de navigateur) est un petit ensemble de données qu'un serveur envoie au navigateur web de l'utilisateur. Le navigateur peut alors le stocker localement, puis le renvoyer à la prochaine requête vers le même serveur. Typiquement, cette méthode est utilisée par le serveur pour déterminer si deux requêtes proviennent du même navigateur.</p>
+<p>Cela permet, par exemple, de garder un utilisateur connecté. Les cookies permettent de conserver de l'information en passant par le procotole HTTP qui est lui "sans état".</p>
 
 <p>Les cookies sont utilisés pour 3 raisons principales :</p>
 
@@ -25,7 +26,7 @@ translation_of: Web/HTTP/Cookies
 <p>Les cookies étaient auparavant utilisés pour le stockage côté client. C'était légitime lorsque les cookies étaient la seule manière de stocker des données côté client, mais il est aujourd'hui recommandé de préférer les APIs modernes de stockage. Les cookies sont envoyés avec chaque requête, ils peuvent donc avoir un impact négatif sur les performances (particulièrement pour des connexions mobiles). Les APIs modernes de stockage côté client sont l'<a href="/fr/docs/Web/API/Web_Storage_API" title="DOM Storage">API Web storage</a> (<code>localStorage</code> et <code>sessionStorage</code>) et <a href="/fr/docs/Web/API/API_IndexedDB">IndexedDB</a>.</p>
 
 <div class="note">
-<p>Pour voir les cookies stockés (et d'autres stockages que le navigateur peut conserver), vous ouvrez l'<a href="/fr/docs/Outils/Inspecteur_de_stockage">Inspecteur de stockage</a> des Outils Développeur et sélectionnez Cookies dans l'onglet stockage (pour Firefox).</p>
+<p><strong>Note :</strong> Pour voir les cookies stockés (et d'autres stockages que le navigateur peut conserver), vous ouvrez l'<a href="/fr/docs/Outils/Inspecteur_de_stockage">Inspecteur de stockage</a> des Outils Développeur et sélectionnez Cookies dans l'onglet stockage (pour Firefox).</p>
 </div>
 
 <h2 id="Création_de_cookies">Création de cookies</h2>
@@ -38,14 +39,15 @@ translation_of: Web/HTTP/Cookies
 
 <pre class="syntaxbox">Set-Cookie: &lt;nom-du-cookie&gt;=&lt;valeur-du-cookie&gt;</pre>
 
-<div class="note"><strong>Note :</strong> Voici comme utiliser l'en-tête <code>Set-Cookie</code> dans divers langages de programmation côté serveur :
-
-<ul>
- <li><a href="https://secure.php.net/manual/en/function.setcookie.php">PHP</a></li>
- <li><a href="https://nodejs.org/dist/latest-v8.x/docs/api/http.html#http_response_setheader_name_value">Node.JS</a></li>
- <li><a href="https://docs.python.org/3/library/http.cookies.html">Python</a></li>
- <li><a href="http://api.rubyonrails.org/classes/ActionDispatch/Cookies.html">Ruby on Rails</a></li>
-</ul>
+<div class="note">
+  <p><strong>Note :</strong> Voici comme utiliser l'en-tête <code>Set-Cookie</code> dans divers langages de programmation côté serveur :
+    <ul>
+    <li><a href="https://secure.php.net/manual/en/function.setcookie.php">PHP</a></li>
+    <li><a href="https://nodejs.org/dist/latest-v8.x/docs/api/http.html#http_response_setheader_name_value">Node.JS</a></li>
+    <li><a href="https://docs.python.org/3/library/http.cookies.html">Python</a></li>
+    <li><a href="http://api.rubyonrails.org/classes/ActionDispatch/Cookies.html">Ruby on Rails</a></li>
+    </ul>
+  </p>
 </div>
 
 <p>Exemple de réponse HTTP complète:</p>
@@ -57,7 +59,7 @@ Set-Cookie: tasty_cookie=strawberry
 
 [contenu de la page]</pre>
 
-<p id="The_client_sends_back_to_the_server_its_cookies_previously_stored">Maintenant, à chaque requête vers le serveur, le navigateur va renvoyer au serveur tous les cookies stockés, avec l'entête {{HTTPHeader("Cookie")}}:</p>
+<p>Maintenant, à chaque requête vers le serveur, le navigateur va renvoyer au serveur tous les cookies stockés, avec l'entête {{HTTPHeader("Cookie")}}:</p>
 
 <pre>GET /sample_page.html HTTP/1.1
 Host: www.example.org
@@ -74,7 +76,7 @@ Cookie: yummy_cookie=choco; tasty_cookie=strawberry</pre>
 <pre>Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;</pre>
 
 <div class="note">
-<p><strong>Note</strong>: Quand une date d'expiration est définie, le temps et l'heure définis sont relatifs au client auquel le cookie est envoyé, et non au serveur.</p>
+<p><strong>Note :</strong> Quand une date d'expiration est définie, le temps et l'heure définis sont relatifs au client auquel le cookie est envoyé, et non au serveur.</p>
 </div>
 
 <h3 id="Cookies_Secure_et_HttpOnly">Cookies <code>Secure</code> et <code>HttpOnly</code></h3>
@@ -117,7 +119,7 @@ console.log(document.cookie);
 <h2 id="Sécurité">Sécurité</h2>
 
 <div class="note">
-<p>Les informations confidentielles ou sensibles ne devraient jamais être stockée ou transmises avec les Cookies HTTP, car le mécanisme entier est intrinsèquement insécurisé.</p>
+<p><strong>Note :</strong> Les informations confidentielles ou sensibles ne devraient jamais être stockée ou transmises avec les Cookies HTTP, car le mécanisme entier est intrinsèquement insécurisé.</p>
 </div>
 
 <h3 id="Piratage_de_session_et_XSS">Piratage de session et XSS</h3>

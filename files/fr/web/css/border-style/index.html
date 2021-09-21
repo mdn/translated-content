@@ -11,9 +11,7 @@ translation_of: Web/CSS/border-style
 
 <p>La propriété CSS <strong><code>border-style</code></strong> est une <a href="/fr/docs/Web/CSS/Propri%C3%A9t%C3%A9s_raccourcies">propriété raccourcie</a> qui permet de définir le style des lignes utilisées pour les bordures des quatre côtés de la boîte d'un élément.</p>
 
-<div>{{EmbedInteractiveExample("pages/css/border-style.html")}}</div>
-
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
+<div>{{EmbedInteractiveExample("pages/css/border-style.html")}}</div
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
@@ -44,7 +42,9 @@ border-style: initial;
 border-style: unset;
 </pre>
 
-<div class="note"><strong>Note :</strong> La valeur par défaut de <code>border-style</code> est <code>none</code>. Cela signifie que si on modifie {{cssxref("border-width")}} et {{cssxref("border-color")}}, on ne verra pas la bordure tant que cette propriété n'est pas différente de <code>none</code> ou de <code>hidden</code>.</div>
+<div class="note">
+  <p><strong>Note :</strong> La valeur par défaut de <code>border-style</code> est <code>none</code>. Cela signifie que si on modifie {{cssxref("border-width")}} et {{cssxref("border-color")}}, on ne verra pas la bordure tant que cette propriété n'est pas différente de <code>none</code> ou de <code>hidden</code>.</p>
+</div>
 
 <p>La propriété <code>border-style</code> peut être définie avec une, deux, trois ou quatre valeurs :</p>
 
@@ -73,65 +73,38 @@ border-style: unset;
    </tr>
    <tr>
     <td><code>hidden</code></td>
-    <td>
-     <div style="border-width: 3px; border-style: hidden; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;"> </div>
-    </td>
     <td>L'effet obtenu est le même qu'avec <code>none</code> : aucune bordure n'est affichée. Dans ce cas, sauf si une image d'arrière-plan est définie, la valeur calculée de {{cssxref("border-width")}} sera <code>0</code>, même si cette dernière indique une autre valeur. Lorsqu'utilisée sur une cellule d'un tableau avec la fusion des bordures, <code>hidden</code> a la plus haute priorité et donc si une autre bordure est définie et fusionne avec celle-ci, aucune ne sera  affichée.</td>
    </tr>
    <tr>
     <td><code>dotted</code></td>
-    <td>
-     <div style="border-width: 3px; border-style: dotted; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;"> </div>
-    </td>
     <td>Affiche une série de points ronds. L'espace entre ces points n'est pas défini par la spécification et est donc laissé à l'implémentation. Le rayon des points correspond à la moitié de {{cssxref("border-width")}}.</td>
    </tr>
    <tr>
     <td><code>dashed</code></td>
-    <td>
-     <div style="border-width: 3px; border-style: dashed; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;"> </div>
-    </td>
     <td>Affiche une série de tirets. La taille de ces tirets n'est pas définie par la spécification et est laissée à l'implémentation.</td>
    </tr>
    <tr>
     <td><code>solid</code></td>
-    <td>
-     <div style="border-width: 3px; border-style: solid; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;"> </div>
-    </td>
     <td>Affiche une ligne droite continue.</td>
    </tr>
    <tr>
     <td><code>double</code></td>
-    <td>
-     <div style="border-width: 3px; border-style: double; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;"> </div>
-    </td>
     <td>Deux lignes droites sont affichées dont la somme des épaisseurs correspond à la valeur fournie par {{cssxref("border-width")}}.</td>
    </tr>
    <tr>
     <td><code>groove</code></td>
-    <td>
-     <div style="border-width: 3px; border-style: groove; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;"> </div>
-    </td>
     <td>La bordure crée un effet 3D donnant l'impression qu'elle a été gravée dans le document. On obtient un effet opposé à <code>ridge</code>.</td>
    </tr>
    <tr>
     <td><code>ridge</code></td>
-    <td>
-     <div style="border-width: 3px; border-style: ridge; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;"> </div>
-    </td>
     <td>La bordure crée un effet 3D donnant l'impression que la bordure ressort du document. L'effet obtenu est opposé à celui obtenu avec <code>groove</code>.</td>
    </tr>
    <tr>
     <td><code>inset</code></td>
-    <td>
-     <div style="border-width: 3px; border-style: inset; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;"> </div>
-    </td>
     <td>La bordure crée un effet 3D qui donne l'impression que la boîte est renfoncée dans le document (l'effet obtenu est opposé à celui obtenu avec <code>outset</code>). Lorsqu'elle est appliquée sur une cellule de tableau et que {{cssxref("border-collapse")}} vaut <code>collapsed</code>, cette valeur se comporte comme <code>groove</code>.</td>
    </tr>
    <tr>
     <td><code>outset</code></td>
-    <td>
-     <div style="border-width: 3px; border-style: outset; margin: 0.5em; width: 3em; height: 3em; background-color: palegreen;"> </div>
-    </td>
     <td>
      <p>La bordure crée un effet 3D qui fait ressortir la boîte (l'effet est opposé à <code>inset</code>). Lorsqu'elle est utilisé sur une cellule de tableau avec {{cssxref("border-collapse")}} qui vaut <code>collapsed</code>, cette valeur se comporte comme <code>ridge</code>.</p>
     </td>
