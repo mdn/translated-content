@@ -8,7 +8,7 @@
 
 ## 리뷰어 지침
 
-1. 최대 2주 이내에 모든 pull 요청을 검토하고 조치한다.
+1. 최대 2주 이내에 모든 pull request를 검토하고 조치한다.
 2. [MDN ko locale Markdown 번역에 대한 일반 지침](https://github.com/mdn/translated-content/blob/main/docs/ko/markdown-guide.md)과 [MDN 번역 콘텐츠에 대한 일반 지침](https://github.com/mdn/translated-content/blob/main/docs/ko/translation-guide.md)을 숙지한다.
 3. [용어 지침](https://github.com/mdn/translated-content/blob/main/docs/ko/translation-guide.md#%EC%9A%A9%EC%96%B4-%EC%A7%80%EC%B9%A8)을 숙지하여 일관된 용어를 사용한다.
 
