@@ -1457,6 +1457,7 @@
 /zh-CN/docs/Web/API/Screen.pixelDepth	/zh-CN/docs/Web/API/Screen/pixelDepth
 /zh-CN/docs/Web/API/Screen.width	/zh-CN/docs/Web/API/Screen/width
 /zh-CN/docs/Web/API/Screen_Capture_API/使用屏幕捕获API	/zh-CN/docs/Web/API/Screen_Capture_API/Using_Screen_Capture
+/zh-CN/docs/Web/API/ScrollToOptions	/zh-CN/docs/conflicting/Web/API/Window/scroll
 /zh-CN/docs/Web/API/Selection.addRange	/zh-CN/docs/Web/API/Selection/addRange
 /zh-CN/docs/Web/API/Selection.anchorNode	/zh-CN/docs/Web/API/Selection/anchorNode
 /zh-CN/docs/Web/API/Selection.focusNode	/zh-CN/docs/Web/API/Selection/focusNode
