@@ -14,9 +14,24 @@
 
 ## yari-content-ko 팀 지침
 
-4. 1개월 이내에 실행 가능한 모든 문제를 분류하고 수정한다.
-5. MDN의 Tier 1 콘텐츠를 en-US 버전과 동기화된 상태로 유지하는데 매주 조금의 진전을 보인다.
+1. 1개월 이내에 실행 가능한 모든 문제를 분류하고 수정한다.
+2. MDN의 Tier 1 콘텐츠를 en-US 버전과 동기화된 상태로 유지하는데 매주 조금의 진전을 보인다.
+
+## Hall of Fame
+
+### 과거 구성원
+
+- [@cos18](https://github.com/cos18)
+
+### 현재 구성원
+
+- [@yechoi42](https://github.com/yechoi42)
+- [@GwangYeol-Im](https://github.com/GwangYeol-Im)
+- [@pje1740](https://github.com/pje1740)
+- [@nKiNk](https://github.com/nKiNk)
+- [@yujo11](https://github.com/yujo11)
+- [@hochan222](https://github.com/hochan222)
 
 ## 참고 사항
 
-- [mozilla mdn chat](https://chat.mozilla.org/#/room/#mdn:mozilla.org) 채널에서 질문 및 토론할 수 있습니다.
+- [mozilla mdn chat](https://chat.mozilla.org/#/room/#mdn:mozilla.org) 채널 및 [yari-content-ko](https://github.com/orgs/mdn/teams/yari-content-ko)에서 질문 및 토론을 할 수 있습니다.
