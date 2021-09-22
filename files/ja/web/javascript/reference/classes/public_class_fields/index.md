@@ -7,22 +7,15 @@ tags:
   - Language feature
 translation_of: Web/JavaScript/Reference/Classes/Public_class_fields
 ---
-<div>{{JsSidebar("Classes")}}</div>
+{{JsSidebar("Classes")}}
 
-<div class="note">
-<p><strong>このページは、実験的な機能について説明しています。</strong></p>
+パブリックフィールドは、静的なものもインスタンスのものも書き込み可能、列挙可能、構成可能です。そのため、プライベートなものとは異なり、プロトタイプの継承に参加します。
 
-<p>パブリックフィールド宣言とプライベートフィールド宣言の両方は、JavaScript の標準化委員会である <a href="https://tc39.github.io/beta/">TC39</a> で提案された<a href="https://github.com/tc39/proposal-class-fields">実験的な機能(ステージ 3)</a>です。</p>
+## 構文
 
-<p>ブラウザーのサポートは限られていますが、<a href="https://babeljs.io/">Babel</a> のようなシステムではビルドステップを経て機能を利用することができます。下記の<a href="#ブラウザーの互換性">互換性情報</a>を参照してください。</p>
-</div>
-
-<p>パブリックスタティックフィールドとパブリックインスタンスフィールドは、書き込み可能、列挙可能、設定可能なプロパティです。そのため、プライベートとは異なり、プロトタイプの継承に参加します。</p>
-
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="syntaxbox notranslate">class ClassWithInstanceField {
-  instanceField = 'instance field'
+```js
+class ClassWithInstanceField {
+  instanceField = 'instance field'
 }
 
 class ClassWithStaticField {
@@ -30,154 +23,171 @@ class ClassWithStaticField {
 }
 
 class ClassWithPublicInstanceMethod {
-  publicMethod() {
-    return 'hello world'
-  }
+  publicMethod() {
+    return 'hello world'
+  }
 }
-</pre>
+```
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Public_static_fields" name="Public_static_fields">パブリックスタティックフィールド</h3>
+### パブリック静的フィールド
 
-<p>パブリックスタティックフィールドは、すべてのクラスインスタンスを作成するのではなく、クラスごとに一度だけフィールドが存在するようにしたい場合に役立ちます。これは、キャッシュや固定設定、その他インスタンス間で複製する必要のないデータなどに便利です。</p>
+パブリック静的フィールドは、フィールドがすべてのクラスインスタンスではなく、クラスごとに一つだけ存在するようにしたい場合に役立ちます。これは、キャッシュや固定設定、その他のインスタンス間で複製する必要のないデータなどに便利です。
 
-<p>パブリックスタティックフィールドは、<code>static</code> キーワードを使用して宣言されます。これらは、クラスの評価時に{{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}} を使用してコンストラクタに追加され、その後はコンストラクタからアクセスします。</p>
+パブリック静的フィールドは、`static` キーワードを使用して宣言されます。これらは、クラスの評価時に{{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}} を使用してコンストラクターに追加され、その後はコンストラクターからアクセスします。
 
-<pre class="brush: js notranslate">class ClassWithStaticField {
-  static staticField = 'static field'
+```js
+class ClassWithStaticField {
+  static staticField = 'static field'
 }
 
 console.log(ClassWithStaticField.staticField)
-// expected output: "static field"​
-</pre>
+// 期待される結果: "static field"​
+```
 
-<p>初期化子のないフィールドは <code>undefined</code> に初期化されます。</p>
+初期化子のないフィールドは `undefined` に初期化されます。
 
-<pre class="brush: js notranslate">class ClassWithStaticField {
-  static staticField
+```js
+class ClassWithStaticField {
+  static staticField
 }
 
 console.assert(ClassWithStaticField.hasOwnProperty('staticField'))
 console.log(ClassWithStaticField.staticField)
-// expected output: "undefined"</pre>
+// 期待される結果: "undefined"
+```
 
-<p>パブリックスタティックフィールドはサブクラスを再初期化しませんが、プロトタイプチェーンを介してアクセスすることができます。</p>
+パブリック静的フィールドはサブクラスでは再初期化されませんが、プロトタイプチェーンを介してアクセスすることができます。
 
-<pre class="brush: js notranslate">class ClassWithStaticField {
-  static baseStaticField = 'base field'
+```js
+class ClassWithStaticField {
+  static baseStaticField = 'base field'
 }
 
 class SubClassWithStaticField extends ClassWithStaticField {
-  static subStaticField = 'sub class field'
+  static subStaticField = 'sub class field'
 }
 
 console.log(SubClassWithStaticField.subStaticField)
-// expected output: "sub class field"
+// 期待される結果: "sub class field"
 
 console.log(SubClassWithStaticField.baseStaticField)
-// expected output: "base field"</pre>
+// 期待される結果: "base field"
+```
 
-<p>フィールドを初期化する場合、<code>this</code> はクラスのコンストラクタを参照します。また、名前で参照し、スーパークラスのコンストラクタが存在する場合は <code>super</code> を使用してスーパークラスのコンストラクタを取得することもできます (存在する場合)。</p>
+フィールドを初期化するとき、`this` はそのクラスのコンストラクターを参照します。名前で参照することもできますし、`super` を使用するとスーパークラスのコンストラクターを (存在する場合は) 取得することもできます。
 
-<pre class="brush: js notranslate">class ClassWithStaticField {
-  static baseStaticField = 'base static field'
-  static anotherBaseStaticField = this.baseStaticField
+```js
+class ClassWithStaticField {
+  static baseStaticField = 'base static field'
+  static anotherBaseStaticField = this.baseStaticField
 
-  static baseStaticMethod() { return 'base static method output' }
+  static baseStaticMethod() { return 'base static method output' }
 }
 
 class SubClassWithStaticField extends ClassWithStaticField {
-  static subStaticField = super.baseStaticMethod()
+  static subStaticField = super.baseStaticMethod()
 }
 
 console.log(ClassWithStaticField.anotherBaseStaticField)
-// expected output: "base static field"
+// 期待される結果: "base static field"
 
 console.log(SubClassWithStaticField.subStaticField)
-// expected output: "base static method output"
-</pre>
+// 期待される結果: "base static method output"
+```
 
-<h3 id="Public_instance_fields" name="Public_instance_fields">パブリックインスタンスフィールド</h3>
+### パブリックインスタンスフィールド
 
-<p>パブリックインスタンスフィールドは、作成されたクラスのすべてのインスタンスに存在します。パブリックフィールドを宣言することで、フィールドが常に存在していることを確認でき、クラスの定義がより自己文書化されます。</p>
+パブリックインスタンスフィールドは、作成されたクラスのすべてのインスタンスに存在します。パブリックフィールドを宣言することで、フィールドが常に存在していることを確認でき、クラス定義がより自己文書化されます。
 
-<p>パブリック インスタンスフィールドは、ベースクラスの構築時（コンストラクタ本体が実行される前）、またはサブクラスの <code>super()</code> が返された直後のいずれかに {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}} で追加されます。</p>
+パブリックインスタンスフィールドは、基底クラスの構築時 (コンストラクター本体が実行される前)、またはサブクラスの `super()` が返された直後のいずれかに {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}} で追加されます。
 
-<pre class="brush: js notranslate">class ClassWithInstanceField {
+```js
+class ClassWithInstanceField {
   instanceField = 'instance field'
 }
 
 const instance = new ClassWithInstanceField()
 console.log(instance.instanceField)
-// expected output: "instance field"</pre>
+// 期待される結果: "instance field"
+```
 
-<p>初期化子のないフィールドは <code>undefined</code> に初期化されます。</p>
+初期化子のないフィールドは `undefined` に初期化されます。
 
-<pre class="brush: js notranslate">class ClassWithInstanceField {
-  instanceField
+```js
+class ClassWithInstanceField {
+  instanceField
 }
 
 const instance = new ClassWithInstanceField()
 console.assert(instance.hasOwnProperty('instanceField'))
 console.log(instance.instanceField)
-// expected output: "undefined"</pre>
+// 期待される結果: "undefined"
+```
 
-<p>プロパティと同様に、フィールド名を計算することができます。</p>
+プロパティと同様に、フィールド名を計算することができます。
 
-<pre class="brush: js notranslate">const PREFIX = 'prefix'
+```js
+const PREFIX = 'prefix'
 
 class ClassWithComputedFieldName {
-    [`${PREFIX}Field`] = 'prefixed field'
+    [`${PREFIX}Field`] = 'prefixed field'
 }
 
 const instance = new ClassWithComputedFieldName()
 console.log(instance.prefixField)
-// expected output: "prefixed field"</pre>
+// 期待される結果: "prefixed field"
+```
 
-<p>フィールドを初期化する場合、<code>this</code> は構築中のクラスインスタンスを参照します。パブリックインスタンスメソッドと同じように、サブクラスにいる場合は <code>super</code> を使って superclass プロトタイプにアクセスできます。</p>
+フィールドを初期化する場合、`this` は構築中のクラスインスタンスを参照します。パブリックインスタンスメソッドと同じように、サブクラスにいる場合は `super` を使ってスーパークラスのプロトタイプにアクセスできます。
 
-<pre class="brush: js notranslate">class ClassWithInstanceField {
-  baseInstanceField = 'base field'
-  anotherBaseInstanceField = this.baseInstanceField
-  baseInstanceMethod() { return 'base method output' }
+```js
+class ClassWithInstanceField {
+  baseInstanceField = 'base field'
+  anotherBaseInstanceField = this.baseInstanceField
+  baseInstanceMethod() { return 'base method output' }
 }
 
 class SubClassWithInstanceField extends ClassWithInstanceField {
-  subInstanceField = super.baseInstanceMethod()
+  subInstanceField = super.baseInstanceMethod()
 }
 
 const base = new ClassWithInstanceField()
 const sub = new SubClassWithInstanceField()
 
 console.log(base.anotherBaseInstanceField)
-// expected output: "base field"
+// 期待される結果: "base field"
 
 console.log(sub.subInstanceField)
-// expected output: "base method output"</pre>
+// 期待される結果: "base method output"
+```
 
-<h3 id="Public_methods" name="Public_methods">パブリックメソッド</h3>
+### パブリックメソッド
 
-<h4 id="Public_static_methods" name="Public_static_methods">パブリックスタティックメソッド</h4>
+#### パブリック静的メソッド
 
-<p><code><strong>static</strong></code> キーワードは、クラスのスタティックメソッドを定義します。スタティックメソッドは、クラスのインスタンスでは呼び出されません。代わりに、クラス自体から呼び出されます。これらは、オブジェクトを作成したり、クローンを作成したりするユーティリティ関数であることが多いです。</p>
+**`static`** キーワードで、クラスの静的メソッドを定義します。静的メソッドは、クラスのインスタンスでは呼び出されません。代わりに、クラス自体から呼び出されます。これらの多くは、オブジェクトを作成したり、クローンを作成したりするようなユーティリティ関数です。
 
-<pre class="brush: js notranslate">class ClassWithStaticMethod {
+```js
+class ClassWithStaticMethod {
   static staticMethod() {
     return 'static method has been called.';
   }
 }
 
 console.log(ClassWithStaticMethod.staticMethod());
-// expected output: "static method has been called."</pre>
+// 期待される結果: "static method has been called."
+```
 
-<p>スタティックメソッドは、クラスの評価時に {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}} を使用してクラスのコンストラクタに追加されます。これらのメソッドは書き込み可能、列挙不可、設定可能です。</p>
+静的メソッドは、クラスの評価時に {{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}} を使用してクラスのコンストラクターに追加されます。これらのメソッドは書き込み可能、列挙不可、設定可能です。
 
-<h4 id="Public_instance_methods" name="Public_instance_methods">パブリックインスタンスメソッド</h4>
+#### パブリックインスタンスメソッド
 
-<p>パブリックインスタンスメソッドはその名の通り、クラスインスタンスで利用できるメソッドです。</p>
+パブリックインスタンスメソッドはその名の通り、クラスインスタンスで利用できるメソッドです。
 
-<pre class="brush: js notranslate">class ClassWithPublicInstanceMethod {
+```js
+class ClassWithPublicInstanceMethod {
   publicMethod() {
     return 'hello world'
   }
@@ -185,83 +195,75 @@ console.log(ClassWithStaticMethod.staticMethod());
 
 const instance = new ClassWithPublicInstanceMethod()
 console.log(instance.publicMethod())
-// expected output: "hello worl​d"</pre>
+// 期待される結果: "hello worl​d"
+```
 
-<p>パブリックインスタンスメソッドは、{{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}} を使用して、クラスの評価時にクラスプロトタイプに追加されます。これらのメソッドは書き込み可能、列挙不可、設定可能です。</p>
+パブリックインスタンスメソッドは、{{jsxref("Global_Objects/Object/defineProperty", "Object.defineProperty()")}} を使用して、クラスの評価時にクラスプロトタイプに追加されます。これらのメソッドは書き込み可能、列挙不可、設定可能です。
 
-<p>ジェネレーター関数、async、非同期ジェネレーター関数を利用することができます。</p>
+ジェネレーター関数、非同期関数、非同期ジェネレーター関数を利用することができます。
 
-<pre class="brush: js notranslate">class ClassWithFancyMethods {
+```js
+class ClassWithFancyMethods {
   *generatorMethod() { }
   async asyncMethod() { }
   async *asyncGeneratorMethod() { }
-}</pre>
+}
+```
 
-<p>インスタンスメソッドの中では、<code>this</code> はインスタンス自体を指します。サブクラスでは、<code>super</code> を使用してスーパークラスのプロトタイプにアクセスし、スーパークラスからメソッドを呼び出すことができます。</p>
+インスタンスメソッドの中では、`this` はインスタンス自体を指します。サブクラスでは、`super` を使用してスーパークラスのプロトタイプにアクセスし、そのスーパークラスからメソッドを呼び出すことができます。
 
-<pre class="brush: js notranslate">class BaseClass {
-  msg = 'hello world'
-  basePublicMethod() {
-    return this.msg
-  }
+```js
+class BaseClass {
+  msg = 'hello world'
+  basePublicMethod() {
+    return this.msg
+  }
 }
 
 class SubClass extends BaseClass {
-  subPublicMethod() {
-    return super.basePublicMethod()
-  }
+  subPublicMethod() {
+    return super.basePublicMethod()
+  }
 }
 
 const instance = new SubClass()
 console.log(instance.subPublicMethod())
-// expected output: "hello worl​d"
-</pre>
+// 期待される結果: "hello worl​d"
+```
 
-<p>ゲッターとセッターは、クラスのプロパティにバインドする特別なメソッドで、そのプロパティがアクセスされたり設定されたりしたときに呼び出されます。<a href="/ja/docs/Web/JavaScript/Reference/Functions/get">get</a> および <a href="/ja/docs/Web/JavaScript/Reference/Functions/set">set</a> 構文を使用して、パブリックインスタンスのゲッターまたはセッターを宣言します。</p>
+ゲッターとセッターは、クラスのプロパティにバインドする特別なメソッドで、そのプロパティがアクセスされたり設定されたりしたときに呼び出されます。[get](/ja/docs/Web/JavaScript/Reference/Functions/get) および [set](/ja/docs/Web/JavaScript/Reference/Functions/set) 構文を使用して、パブリックインスタンスのゲッターまたはセッターを宣言します。
 
-<pre class="brush: js notranslate">class ClassWithGetSet {
-  #msg = 'hello world'
-  get msg() {
-    return this.#msg
-  }
-  set msg(x) {
-    this.#msg = `hello ${x}`
-  }
+```js
+class ClassWithGetSet {
+  #msg = 'hello world'
+  get msg() {
+    return this.#msg
+  }
+  set msg(x) {
+    this.#msg = `hello ${x}`
+ }
 }
 
 const instance = new ClassWithGetSet()
 console.log(instance.msg)
-// expected output: "hello worl​d"
+// 期待される結果: "hello worl​d"
 
 instance.msg = 'cake'
 console.log(instance.msg)
-// expected output: "hello cake"
-</pre>
+// 期待される結果: "hello cake"
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
+{{Specifications("javascript.classes")}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('Public and private instance fields', '#prod-FieldDefinition', 'FieldDefinition')}}</td>
-  </tr>
- </tbody>
-</table>
+## ブラウザーの互換性
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザー実装状況</h2>
+{{Compat("javascript.classes")}}
 
+## 関連情報
 
-
-<p>{{Compat("javascript.classes.public_class_fields")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li><a href="https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html">The Semantics of All JS Class Elements</a></li>
-</ul>
+- [The
+  Semantics of All JS Class Elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html)
+- [Public and private class fields](https://v8.dev/features/class-fields)
+  v8.dev site の記事
