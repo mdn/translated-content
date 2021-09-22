@@ -3,8 +3,9 @@ title: content
 slug: Web/CSS/content
 tags:
   - CSS
+  - CSS カウンター
   - CSS プロパティ
-  - CSS 生成コンテンツ
+  - 生成コンテンツ
   - Reference
 translation_of: Web/CSS/content
 ---
