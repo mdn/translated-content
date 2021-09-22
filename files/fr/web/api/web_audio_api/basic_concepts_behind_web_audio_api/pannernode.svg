@@ -42,4 +42,4 @@
 	<text transform="matrix(1 0 0 1 413.3945 251.167)" font-family="'ArialMT'" font-size="12">Vecteur indiquant la direction vers laquelle pointe le PannerNode</text>
 	<text transform="matrix(1 0 0 1 31.2979 73.417)" font-family="'ArialMT'" font-size="12">Vecteur de positionnement plaçant la source dans l’espace </text>
 </g>
-<script xmlns=""/></svg>
+</svg>
