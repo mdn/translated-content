@@ -7,31 +7,34 @@ tags:
   - CSS プロパティ
   - 生成コンテンツ
   - Reference
+  - recipe:css-property
+browser-compat: css.properties.content
 translation_of: Web/CSS/content
 ---
-<div>{{CSSRef}}</div>
+{{CSSRef}}
 
-<p class="summary"><a href="/ja/docs/Web/CSS">CSS</a> の <strong><code>content</code></strong> プロパティは、要素を生成された値で置き換えます。 <code>content</code> プロパティを使用して挿入されたオブジェクトは、<em>無名の<a href="/ja/docs/Web/CSS/Replaced_element">置換要素</a></em>になります。</p>
+**`content`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ある要素を生成された値で置き換えます。 `content` プロパティを使用して挿入されたオブジェクトは、**無名の[置換要素](/ja/docs/Web/CSS/Replaced_element)** になります。
 
-<pre class="brush:css no-line-numbers">/* 他の値と組み合わせることができないキーワード */
+```css
+/* 他の値と組み合わせることができないキーワード */
 content: normal;
 content: none;
 
-/* <a href="/ja/docs/Web/CSS/image">&lt;image&gt;</a> 値 */
+/* <image> 値 */
 content: url("http://www.example.com/test.png");
 content: linear-gradient(#e66465, #9198e5);
 
-/* 生成コンテンツの代替テキスト、第3水準の仕様書で追加 */
+/* 生成コンテンツの代替テキスト、レベル 3 の仕様書で追加 */
 content: url("http://www.example.com/test.png") / "This is the alt text";
 
-/* 以下の値は ::before および ::after を使用して生成されたコンテンツにのみ適用 */
-
-/* &lt;string&gt; 値 */
+/* <string> 値 */
 content: "prefix";
 
-/* &lt;counter&gt; 値 */
+/* <counter> 値、任意で <list-style-type> */
 content: counter(chapter_counter);
+content: counter(chapter_counter, upper-roman);
 content: counters(section_counter, ".");
+content: counters(section_counter, ".", decimal-leading-zero);
 
 /* HTML 属性値にリンクした attr() 値 */
 content: attr(value string);
@@ -43,77 +46,90 @@ content: no-open-quote;
 content: no-close-quote;
 
 /* normal と none を除き、複数の値が同時に使用可 */
-content: open-quote chapter_counter;
+content: open-quote counter(chapter_counter);
 
 /* グローバル値 */
 content: inherit;
 content: initial;
+content: revert;
 content: unset;
-</pre>
+```
 
-<p>{{cssinfo}}</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+### 値
 
-<h3 id="Values" name="Values">値</h3>
+- `none`
+  - : 擬似要素に適用された場合は、その擬似要素は生成されません。要素に適用された場合は、この値は効果がありません。
+- `normal`
+  - : `::before` および `::after` 擬似要素では `none` として計算されます。
+- {{cssxref("&lt;string&gt;")}}
+  - : 要素の「代替テキスト」を指定します。この値は任意の数のテキスト文字です。ラテン文字以外は Unicode エスケープシーケンスを使用してエンコードする必要があります。例えば、 `\000A9` は著作権記号を表します。
+- {{cssxref("&lt;image&gt;")}}
+  - : {{cssxref("&lt;image&gt;")}} です。 {{cssxref("url()")}} または {{cssxref("&lt;gradient&gt;")}} データ型、または {{cssxref("element()", "element()")}} 関数で定義されるウェブページの一部です。
+- {{cssxref("counter()")}}
 
-<dl>
- <dt><code>none</code></dt>
- <dd>擬似要素は生成されません。</dd>
- <dt><code>normal</code></dt>
- <dd><code>:before</code> および <code>:after</code> 擬似要素では <code>none</code> として計算されます。</dd>
- <dt>{{cssxref("&lt;string&gt;")}}</dt>
- <dd>要素の「代替テキスト」を指定します。この値は任意の数のテキスト文字です。ラテン文字以外は Unicode エスケープシーケンスを使用してエンコードする必要があります。例えば、 <code>\000A9</code> は著作権記号を表します。</dd>
- <dt>{{cssxref("&lt;image&gt;")}}</dt>
- <dd>{{cssxref("&lt;url&gt;")}} または {{cssxref("&lt;gradient&gt;")}} データ型で示された {{cssxref("&lt;image&gt;")}}、または表示するコンテンツを記述する {{cssxref("element", "element()")}} 関数で定義されたウェブページの一部です。</dd>
- <dt>{{cssxref("&lt;counter&gt;")}}</dt>
- <dd><a href="/ja/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">CSS カウンター</a>の値で、通常は数値です。 {{cssxref("counter")}} または {{cssxref("counters")}} 関数を使用して表示することができます。</dd>
- <dd>
- <p>{{cssxref("counter")}} 関数には、 'counter(<var>名前</var>)' または 'counter(<var>名前</var>, <var>スタイル</var>)' の二つの形式があります。生成されるテキストは、その擬似要素のスコープにおけるその名前の最も内側のカウンターです。指定されたスタイルで整形されます (<code>decimal</code> が既定値です)。</p>
+  - : [CSS カウンター](/ja/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)の値で、通常は {{cssxref("&lt;counter-reset&gt;")}} および {{cssxref("&lt;counter-increment&gt;")}} プロパティで定義され、計算によって生み出される数値です。 {{cssxref("counter()")}} または {{cssxref("counters()")}} 関数を使用して表示することができます。
 
- <p>{{cssxref("counters")}} 関数も、 'counters(<var>名前</var>, <var>文字列</var>)' または 'counters(<var>名前</var>, <var>文字列</var>, <var>スタイル</var>)' の二つの形式があります。生成されるテキストは、その擬似要素のスコープにおけるその名前のすべてのカウンターの値であり、外側から内側に向けて、指定された文字列で区切られます。カウンターは指定されたスタイルで表示されます(<code>decimal</code> が既定値です)。</p>
- </dd>
- <dt><code>attr(x)</code></dt>
- <dd>要素の属性の値 <em>x</em> を文字列として返します。属性 <em>x</em> が存在しない場合は、空文字列が返されます。属性名の大文字と小文字が区別されるかどうかは、文書の言語に依存します。</dd>
- <dt><code>open-quote</code> | <code>close-quote</code></dt>
- <dd>これらの値は {{cssxref("quotes")}} プロパティの対応する文字列に置き換えられます。</dd>
- <dt><code>no-open-quote</code> | <code>no-close-quote</code></dt>
- <dd>内容はありませんが、引用符の入れ子の階層を増加 (または減少) させます。</dd>
-</dl>
+    {{cssxref("counter()")}} 関数には、 'counter(_名前_)' または 'counter(_名前_, スタイル)' の二つの形式があります。生成されるテキストは、その擬似要素のスコープにおけるその名前の最も内側のカウンターです。{{cssxref("&lt;list-style-type&gt;")}} で指定されたスタイルで整形されます (`decimal` が既定値です)。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+    {{cssxref("counters()")}} 関数も、 'counters(_名前_, _文字列_)' または 'counters(_名前_, _文字列_, _スタイル_)' の二つの形式があります。生成されるテキストは、その擬似要素のスコープにおけるその名前のすべてのカウンターの値であり、外側から内側に向けて、指定された文字列で区切られます。カウンターは指定されたスタイルで表示されます(`decimal` が既定値です)。
+ 
+- `attr(x)`
+  - : 要素の属性の値 `x` を文字列として返します。属性 `x` が存在しない場合は、空文字列が返されます。属性名の大文字と小文字が区別されるかどうかは、文書の言語に依存します。
+- `open-quote` | `close-quote`
+  - : これらの値は {{cssxref("quotes")}} プロパティの対応する文字列に置き換えられます。
+- `no-open-quote` | `no-close-quote`
+  - : 内容はありませんが、引用符の入れ子の階層を増加 (または減少) させます。
+
+## アクセシビリティの考慮
+
+CSS で生成されるコンテンツは、 [DOM](/ja/docs/Web/API/Document_Object_Model/Introduction) には含まれません。そのため、これは[アクセシビリティツリー](/ja/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis)では表現されず、支援技術とブラウザーの組み合わせによってはアナウンスされないことがあります。そのコンテンツがページの目的を理解する上で重要な情報を含んでいるのであれば、メイン文書に含めたほうが適切です。
+
+- [Accessibility support for CSS generated content – Tink](https://tink.uk/accessibility-support-for-css-generated-content/)
+- [WCAG の解説、ガイドライン 1.3 – MDN](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.3_%e2%80%94_create_content_that_can_be_presented_in_different_ways)
+- [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
+
+## 公式定義
+
+{{cssinfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Headings_and_quotes" name="Headings_and_quotes">見出しと引用符</h3>
+<h3 id="Headings_and_quotes">見出しと引用符</h3>
 
-<p>この例では引用部分の周りに引用符を挿入し、見出しの前に "Chapter" の語を追加します。</p>
+この例では引用部分の周りに引用符を挿入し、見出しの前に "Chapter" の語を追加します。
 
-<h4 id="HTML">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;h1&gt;5&lt;/h1&gt;
-&lt;p&gt;According to Sir Tim Berners-Lee,
-  &lt;q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet"&gt;I was
+```html
+<h1>5</h1>
+<p>According to Sir Tim Berners-Lee,
+  <q cite="http://www.w3.org/People/Berners-Lee/FAQ.html#Internet">I was
     lucky enough to invent the Web at the time when the Internet
-    already existed - and had for a decade and a half.&lt;/q&gt;
+    already existed - and had for a decade and a half.</q>
   We must understand that there is nothing fundamentally wrong
   with building on the contributions of others.
-&lt;/p&gt;
+</p>
 
-&lt;h1&gt;6&lt;/h1&gt;
-&lt;p&gt;According to the Mozilla Manifesto,
-  &lt;q cite="http://www.mozilla.org/en-US/about/manifesto/"&gt;Individuals
+<h1>6</h1>
+<p>According to the Mozilla Manifesto,
+  <q cite="http://www.mozilla.org/en-US/about/manifesto/">Individuals
     must have the ability to shape the Internet and
-    their own experiences on the Internet.&lt;/q&gt;
+    their own experiences on the Internet.</q>
   Therefore, we can infer that contributing to the open web
   can protect our own individual experiences on it.
-&lt;/p&gt;</pre>
+</p>
+```
 
-<h4 id="CSS">CSS</h4>
+#### CSS
 
-<pre class="brush: css">q {
+```css
+q {
   color: blue;
 }
 
@@ -127,77 +143,89 @@ q::after {
 
 h1::before  {
   content: "Chapter ";  /* 最後の空白は、追加コンテンツと
-                           残りのコンテンツの間を隔てる
+                           残りのコンテンツの間を区切る
                            ものです */
-}</pre>
+}
+```
 
-<h4 id="Result" name="Result">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample('Headings_and_quotes', '100%', 200)}}</p>
+<p>{{EmbedLiveSample('Headings_and_quotes', '100%', 200)}}
 
-<h3 id="Image_combined_with_text" name="Image_combined_with_text">テキストと組み合わせる画像</h3>
+<h3 id="Image_combined_with_text">テキストと組み合わせる画像</h3>
 
-<p>この例はリンクの前に画像を挿入します。画像が見つからなければ、代わりにテキストを挿入します。</p>
+この例はリンクの前に画像を挿入します。画像が見つからなければ、代わりにテキストを挿入します。
 
-<h4 id="HTML_2">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;a href="http://www.mozilla.org/en-US/"&gt;Mozilla Home Page&lt;/a&gt;</pre>
+```html
+<a href="https://www.mozilla.org/en-US/">Mozilla Home Page</a>
+```
 
-<h4 id="CSS_2">CSS</h4>
+#### CSS
 
-<pre class="brush: css">a::before {
-  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") " MOZILLA: ";
+```css
+a::before {
+  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") / " MOZILLA: ";
   font: x-small Arial, sans-serif;
   color: gray;
-}</pre>
+}
+```
 
-<h4 id="Result_2" name="Result_2">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample('Image_combined_with_text', '100%', 60)}}</p>
+{{EmbedLiveSample('Image_combined_with_text', '100%', 60)}}
 
-<h3 id="Targeting_classes" name="Targeting_classes">クラスのターゲッティング</h3>
+<h3 id="Targeting_classes">クラスのターゲッティング</h3>
 
-<p>この例はリストの特定の項目の後に追加のテキストを挿入します。</p>
+この例はリストの特定の項目の後に追加のテキストを挿入します。
 
-<h4 id="HTML_3">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;h2&gt;Paperback Best Sellers&lt;/h2&gt;
-&lt;ol&gt;
-  &lt;li&gt;Political Thriller&lt;/li&gt;
-  &lt;li class="new-entry"&gt;Halloween Stories&lt;/li&gt;
-  &lt;li&gt;My Biography&lt;/li&gt;
-  &lt;li class="new-entry"&gt;Vampire Romance&lt;/li&gt;
-&lt;/ol&gt;</pre>
+```html
+<h2>Paperback Best Sellers</h2>
+<ol>
+  <li>Political Thriller</li>
+  <li class="new-entry">Halloween Stories</li>
+  <li>My Biography</li>
+  <li class="new-entry">Vampire Romance</li>
+</ol>
+```
 
-<h4 id="CSS_3">CSS</h4>
+#### CSS
 
-<pre class="brush: css">.new-entry::after {
+```css
+.new-entry::after {
   content: " New!";  /* 先頭の空白は、追加コンテンツと
-                        残りのコンテンツの間を隔てる
+                        残りのコンテンツの間を区切る
                         ものです */
   color: red;
-}</pre>
+}
+```
 
-<h4 id="Result_3" name="Result_3">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample('Targeting_classes', '100%', 160)}}</p>
+{{EmbedLiveSample('Targeting_classes', '100%', 160)}}
 
-<h3 id="Images_and_element_attributes" name="Images_and_element_attributes">画像および要素の属性</h3>
+<h3 id="Images_and_element_attributes">画像および要素の属性</h3>
 
-<p>この例はそれぞれのリンクの前に画像を挿入し、後に <code>id</code> 属性を追加します。</p>
+この例はそれぞれのリンクの前に画像を挿入し、後に `id` 属性を追加します。
 
-<h4 id="HTML_4">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;ul&gt;
-  &lt;li&gt;&lt;a id="moz" href="http://www.mozilla.org/"&gt;
-    Mozilla Home Page&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a id="mdn" href="https://developer.mozilla.org/"&gt;
-    Mozilla Developer Network&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</pre>
+```html
+<ul>
+  <li><a id="moz" href="https://www.mozilla.org/">
+    Mozilla Home Page</a></li>
+  <li><a id="mdn" href="https://developer.mozilla.org/">
+    Mozilla Developer Network</a></li>
+</ul>
+```
 
-<h4 id="CSS_4">CSS</h4>
+#### CSS
 
-<pre class="brush: css">a {
+```css
+a {
   text-decoration: none;
   border-bottom: 3px dotted navy;
 }
@@ -207,89 +235,61 @@ a::after {
 }
 
 #moz::before {
-  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") ;
+  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico");
 }
 
 #mdn::before {
-  content: url("https://mdn.mozillademos.org/files/7691/mdn-favicon16.png") ;
+  content: url("mdn-favicon16.png");
 }
 
 li {
   margin: 1em;
 }
-</pre>
+```
 
-<h4 id="Result_4" name="Result_4">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample('Images_and_element_attributes', '100%', 160)}}</p>
+{{EmbedLiveSample('Images_and_element_attributes', '100%', 160)}}
 
-<h3 id="Element_replacement" name="Element_replacement">要素の置き換え</h3>
+<h3 id="Element_replacement">要素の置き換え</h3>
 
-<p>この例は要素の内容を画像で置き換えます。要素の内容を {{cssxref("&lt;url&gt;")}} または {{cssxref("&lt;image&gt;")}} の値のどちらかで置き換えることができます。 <code>::before</code> または <code>::after</code> で追加された内容は、要素の中身が置き換えられるときは生成されません。</p>
+この例は、要素の内容を画像で置き換えます。要素の内容を {{cssxref("url()")}} または {{cssxref("&lt;image&gt;")}} の値のどちらかで置き換えることができます。 `::before` または `::after` で追加された内容は、要素の中身が置き換えられるときは生成されません。
 
-<h4 id="HTML_5">HTML</h4>
+#### HTML
 
-<pre class="brush: html">&lt;div id="replaced"&gt;Mozilla&lt;/div&gt;
-</pre>
+```html
+<div id="replaced">Mozilla</div>
+```
 
-<h4 id="CSS_5">CSS</h4>
+#### CSS
 
-<pre class="brush: css">#replaced {
-  content: url("https://mdn.mozillademos.org/files/12668/MDN.svg");
+```css
+#replaced {
+  content: url("mdn.svg");
 }
 
 #replaced::after { /* 要素の置換に対応している場合は表示されない */
   content: " (" attr(id) ")";
-}</pre>
+}
+```
 
-<h4 id="Result_5" name="Result_5">結果</h4>
+#### 結果
 
-<p>{{EmbedLiveSample('Element_replacement', '100%', 200)}}</p>
+{{EmbedLiveSample('Element_replacement', '100%', 200)}}
 
-<h2 id="Accessibility_concerns" name="Accessibility_concerns">アクセシビリティの考慮事項</h2>
+## 仕様書
 
-<p>CSS の生成コンテンツは <a href="/ja/docs/Web/API/Document_Object_Model/Introduction">DOM</a> に含まれません。そのため、<a href="/ja/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs">アクセシビリティツリー</a>に現れず、支援技術とブラウザーの組み合わせによってはアナウンスされません。コンテンツがページの目的を理解する上で重要な情報を持つのであれば、文書本体に含めた方が適切です。</p>
+{{Specifications}}
 
-<ul>
- <li><a href="https://tink.uk/accessibility-support-for-css-generated-content/">Accessibility support for CSS generated content – Tink</a></li>
- <li><a href="/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways">WCAG ガイドライン 1.3 の解説 – MDN</a></li>
- <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0</a></li>
-</ul>
+## ブラウザーの互換性
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+{{Compat}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS3 Content", "#content-property", "content")}}</td>
-   <td>{{Spec2("CSS3 Content")}}</td>
-   <td>代替テキストの対応を追加</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("CSS2.1", "generate.html#content", "content")}}</td>
-   <td>{{Spec2("CSS2.1")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+## 関連情報
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
-
-<p>{{Compat("css.properties.content")}}</p>
-
-<h2 id="See_also" name="See_also">関連情報</h2>
-
-<ul>
- <li>{{Cssxref("::after")}}</li>
- <li>{{Cssxref("::before")}}</li>
- <li>{{Cssxref("::marker")}}</li>
- <li>{{Cssxref("quotes")}}</li>
- <li>{{cssxref("url()", "url()")}} 関数</li>
-</ul>
+- [置換要素](/ja/docs/Web/CSS/Replaced_element)
+- {{Cssxref("::after")}}
+- {{Cssxref("::before")}}
+- {{Cssxref("::marker")}}
+- {{Cssxref("quotes")}}
+- {{cssxref("url()", "url()")}} 関数
