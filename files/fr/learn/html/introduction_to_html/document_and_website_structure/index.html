@@ -15,16 +15,16 @@ translation_of: Learn/HTML/Introduction_to_HTML/Document_and_website_structure
 original_slug: Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure
 ---
 <div>{{LearnSidebar}}<br>
-{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/formatage-avance-texte", "Apprendre/HTML/Introduction_à_HTML/Debugging_HTML","Apprendre/HTML/Introduction_à_HTML")}}<br>
- </div>
+{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Advanced_text_formatting", "Apprendre/HTML/Introduction_à_HTML/Debugging_HTML","Apprendre/HTML/Introduction_à_HTML")}}<br>
+ </div>
 
-<p class="summary">De même que HTML est utilisé pour définir les diverses parties indépendantes d'une page (comme un « paragraphe » ou une « image »), HTML l'est pour définir des zones de votre site web (comme l'« en‑tête », le « menu de navigation », le « contenu principal », etc.). Cet article détaille la structure d'un site simple et l'écriture du HTML correspondant.</p>
+<p class="summary">De même que HTML est utilisé pour définir les diverses parties indépendantes d'une page (comme un « paragraphe » ou une « image »), HTML l'est pour définir des zones de votre site web (comme l'« en‑tête », le « menu de navigation », le « contenu principal », etc.). Cet article détaille la structure d'un site simple et l'écriture du HTML correspondant.</p>
 
 <table class="learn-box standard-table">
  <tbody>
   <tr>
    <th scope="row">Prérequis :</th>
-   <td>Être familiarisé avec les bases du HTML, traitées à la page <a href="https://developer.mozilla.org/fr/docs/Apprendre/HTML/Introduction_%C3%A0_HTML/Getting_started">Commencer avec le HTML</a> et du formatage de texte HTML, décrit dans les <a href="https://developer.mozilla.org/fr/Apprendre/HTML/Introduction_à_HTML/HTML_text_fundamentals">Fondamentaux du texte HTML</a>. Comment fonctionnent les liens hyperlinks , comme décrit dans <a href="/fr/docs/Apprendre/HTML/Introduction_%C3%A0_HTML/Creating_hyperlinks">Création d'hyperliens</a>.</td>
+   <td>Être familiarisé avec les bases du HTML, traitées à la page <a href="/fr/docs/Apprendre/HTML/Introduction_%C3%A0_HTML/Getting_started">Commencer avec le HTML</a> et du formatage de texte HTML, décrit dans les <a href="/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">Fondamentaux du texte HTML</a>. Comment fonctionnent les liens hyperlinks , comme décrit dans <a href="/fr/docs/Apprendre/HTML/Introduction_%C3%A0_HTML/Creating_hyperlinks">Création d'hyperliens</a>.</td>
   </tr>
   <tr>
    <th scope="row">Objectif :</th>
@@ -45,7 +45,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/Document_and_website_structur
  <dt>Barre de navigation</dt>
  <dd>Elle fait le lien vers les principales parties du site ; d'habitude, elle est présentée sous forme de boutons de menu, de liens ou d'onglets. Comme l'en‑tête, la barre de navigation reste souvent cohérente d'une page à l'autre — avoir une navigation destructurée ne peut conduire qu'à de la confusion et la frustation pour le lecteur. Beaucoup de créateurs de site considèrent la barre de navigation partie de l'en‑tête et non comme un composant individuel, mais ce n'est pas une exigence. En fait certains soutiennent également que le fait d'avoir les deux séparés est préférable pour l'accessibilité, car les lecteurs d'écran lisent mieux les deux éléments s'ils sont séparés.</dd>
  <dt>Contenu principal</dt>
- <dd>Une grande zone au centre contenant la majeure partie du contenu unique de la dite page web, par ex. la vidéo à regarder, ou le corps de l'article à parcourir, ou la carte à lire, ou les dernières nouvelles etc. C'est la partie du site  variable de page en page.</dd>
+ <dd>Une grande zone au centre contenant la majeure partie du contenu unique de la dite page web, par ex. la vidéo à regarder, ou le corps de l'article à parcourir, ou la carte à lire, ou les dernières nouvelles etc. C'est la partie du site variable de page en page.</dd>
  <dt>Barre latérale</dt>
  <dd>
  <p>Quelques informations autour du sujet, liens, citations, annonces, etc. Habituellement c'est contextuel au contenu principal (par exemple sur une page d'informations, la barre latérale peut contenir la biographie de l'auteur, ou des liens vers des articles connexes) mais il y a aussi des cas où vous trouverez des éléments récurrents comme un système de navigation secondaire.</p>
@@ -56,7 +56,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/Document_and_website_structur
  Un « site web typique » pourrait ressembler à quelque chose comme ceci :</dd>
 </dl>
 
-<p><img alt="un exemple simple de structure de site Web comportant un titre principal, un menu de navigation, un contenu principal, une barre latérale et un pied de page." src="https://mdn.mozillademos.org/files/15971/ecran.png" style="display: block; height: 855px; margin: 0px auto; width: 1298px;"></p>
+<p><img alt="un exemple simple de structure de site Web comportant un titre principal, un menu de navigation, un contenu principal, une barre latérale et un pied de page." src="ecran.png" style="display: block; margin: 0px auto;"></p>
 
 <h2 id="HTML_pour_structurer_un_contenu">HTML pour structurer un contenu</h2>
 
@@ -68,7 +68,7 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/Document_and_website_structur
 <p><strong>Note </strong>: Les daltoniens représentent environ <a href="http://www.color-blindness.com/2006/04/28/colorblind-population/">8% de la population mondiale</a> ou, en d'autres termes, environ 1 homme sur 12 et 1 femme sur 200 sont daltoniens. Les personnes aveugles et malvoyantes représentent environ 4 à 5 % de la population mondiale (en 2012, il y avait <a href="https://fr.wikipedia.org/wiki/D%C3%A9ficience_visuelle">285 millions de personnes aveugles et malvoyantes</a> dans le monde, alors que la population totale était <a href="https://fr.wikipedia.org/wiki/Population_mondiale">d'environ 7 milliards </a>d'habitants).</p>
 </div>
 
-<p>Dans votre code HTML, vous pouvez marquer des sections de contenu selon leur fonction — vous pouvez utiliser des éléments qui représentent sans ambiguïté les sections de contenu décrites ci-dessus, et les technologies d'assistance comme les lecteurs d'écran peuvent reconnaître ces éléments et vous aider avec des tâches comme « trouver la navigation principale » ou « trouver le contenu principal ». Comme nous l'avons mentionné plus tôt dans le cours, le fait de <a href="https://developer.mozilla.org/fr/Apprendre/HTML/Introduction_à_HTML/HTML_text_fundamentals#Why_do_we_need_structure">ne pas utiliser la bonne structure d'éléments et la bonne sémantique pour le bon travail a un certain nombre de conséquences</a>.</p>
+<p>Dans votre code HTML, vous pouvez marquer des sections de contenu selon leur fonction — vous pouvez utiliser des éléments qui représentent sans ambiguïté les sections de contenu décrites ci-dessus, et les technologies d'assistance comme les lecteurs d'écran peuvent reconnaître ces éléments et vous aider avec des tâches comme « trouver la navigation principale » ou « trouver le contenu principal ». Comme nous l'avons mentionné plus tôt dans le cours, le fait de <a href="/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#why_do_we_need_structure">ne pas utiliser la bonne structure d'éléments et la bonne sémantique pour le bon travail a un certain nombre de conséquences</a>.</p>
 
 <p>Pour mettre en œuvre le marquage sémantique, HTML fournit des balises dédiées que vous pourrez utiliser pour représenter ces parties, par exemple :</p>
 
@@ -169,21 +169,21 @@ original_slug: Apprendre/HTML/Introduction_à_HTML/Document_and_website_structur
 
 <h2 id="Plus_de_détails_à_propos_des_éléments_de_mise_en_page">Plus de détails à propos des éléments de mise en page</h2>
 
-<p>La compréhension détaillée de la signification globale de tous les éléments de la mise en page HTML est importante — vous l'acquerrez au fur et à mesure avec l'expérience dans le développement web. Vous pouvez trouver beaucoup de détails en parcourant la <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element">référence aux éléments HTML</a>. Pour l'instant, il convient de bien comprendre les principales définitions :</p>
+<p>La compréhension détaillée de la signification globale de tous les éléments de la mise en page HTML est importante — vous l'acquerrez au fur et à mesure avec l'expérience dans le développement web. Vous pouvez trouver beaucoup de détails en parcourant la <a href="/fr/docs/Web/HTML/Element">référence aux éléments HTML</a>. Pour l'instant, il convient de bien comprendre les principales définitions :</p>
 
 <ul>
  <li>{{HTMLElement('main')}} est relatif au contenu <em>unique de la page</em>. N'utilisez <code>&lt;main&gt;</code> que une seule fois par page et placez-le directement à l'intérieur de l'élement {{HTMLElement('body')}}. Idéalement, il ne devrait pas être imbriqué dans d'autres éléments.</li>
  <li>{{HTMLElement('article')}} entoure un bloc de contenu en relation constituant en soi une unité de sens pris isolément par rapport au reste de la page (par ex. un unique billet de blog.)</li>
- <li>{{HTMLElement('section')}} ressemble à <code>&lt;article&gt;</code>, mais sert plutôt à contenir une partie isolée de la page constituant un élément de fonctionnalité en soi (par ex. une petite carte ou un ensemble d'intitulés d'article ou de résumés). Il est considéré de bonne pratique de commencer chaque section par un <code><a href="/en-US/Learn/HTML/Howto/Set_up_a_proper_title_hierarchy">heading</a></code> ; notez également que vous pouvez fractionner un <code>&lt;article&gt;</code> en plusieurs <code>&lt;section&gt;</code> ou bien des  <code>&lt;section&gt;</code> en divers <code>&lt;article&gt;</code>, selon le contexte.</li>
+ <li>{{HTMLElement('section')}} ressemble à <code>&lt;article&gt;</code>, mais sert plutôt à contenir une partie isolée de la page constituant un élément de fonctionnalité en soi (par ex. une petite carte ou un ensemble d'intitulés d'article ou de résumés). Il est considéré de bonne pratique de commencer chaque section par un <code><a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">heading</a></code> ; notez également que vous pouvez fractionner un <code>&lt;article&gt;</code> en plusieurs <code>&lt;section&gt;</code> ou bien des <code>&lt;section&gt;</code> en divers <code>&lt;article&gt;</code>, selon le contexte.</li>
  <li>{{HTMLElement('aside')}} contient les composantes non directement liées au contenu principal mais pouvant fournir des informations supplémentaires indirectement en relation avec ce dernier (entrées de glossaire, biographie de l'auteur, liens connexes, etc).</li>
- <li>{{HTMLElement('header')}} représente un groupe de contenus introductoires. Enfant de {{HTMLElement('body')}}, il définit l'en-tête général de la page web, mais enfant de {{HTMLElement('article')}} ou {{HTMLElement('section')}} il définit un en‑tête propre à cette section (ne confondez pas <a href="/fr/Apprendre/HTML/Introduction_à_HTML/The_head_metadata_in_HTML#Ajouter un titre">titles et headings</a>).</li>
+ <li>{{HTMLElement('header')}} représente un groupe de contenus introductoires. Enfant de {{HTMLElement('body')}}, il définit l'en-tête général de la page web, mais enfant de {{HTMLElement('article')}} ou {{HTMLElement('section')}} il définit un en‑tête propre à cette section (ne confondez pas <a href="/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#ajouter%20un%20titre">titles et headings</a>).</li>
  <li>{{HTMLElement('nav')}} contient les éléments principaux de navigation pour la page. Les liens secondaires, etc., n'entrent pas dans la navigation.</li>
  <li>{{HTMLElement('footer')}} représente un groupe de contenu de fin pour une page.</li>
 </ul>
 
 <h3 id="Enveloppes_non‑sémantiques">Enveloppes non‑sémantiques</h3>
 
-<p>Parfois, vous êtes dans la situation où vous ne trouvez pas  l'élément sémantique idéal pour regrouper certaines entités ou envelopper certains contenus. D'autres fois, vous souhaitez simplement regrouper un ensemble d'éléments pour en faire une entité unique pour des {{glossary("CSS")}} ou des {{glossary("JavaScript")}}. Pour de tels cas, HTML met à votre disposition les éléments {{HTMLElement("div")}} et {{HTMLElement("span")}}}. Utilisez‑les de préférence avec un attribut {{htmlattrxref('class')}} approprié, en quelque sorte étiquetez‑les pour pouvoir les cibler plus facilement.</p>
+<p>Parfois, vous êtes dans la situation où vous ne trouvez pas l'élément sémantique idéal pour regrouper certaines entités ou envelopper certains contenus. D'autres fois, vous souhaitez simplement regrouper un ensemble d'éléments pour en faire une entité unique pour des {{glossary("CSS")}} ou des {{glossary("JavaScript")}}. Pour de tels cas, HTML met à votre disposition les éléments {{HTMLElement("div")}} et {{HTMLElement("span")}}}. Utilisez‑les de préférence avec un attribut {{htmlattrxref('class')}} approprié, en quelque sorte étiquetez‑les pour pouvoir les cibler plus facilement.</p>
 
 <p>{{HTMLElement("span")}} est un élément en ligne non-semantique ; vous l'utiliserez seulement si vous ne trouvez pas de meilleur élément de sémantique textuelle pour envelopper votre contenu, ou bien si vous ne voulez pas ajouter de signification particulière. Par exemple :</p>
 
@@ -193,7 +193,7 @@ alors qu'il titubait en travers de la porte &lt;span class="editor-note"&gt;
 
 <p>Dans ce cas, la note du rédacteur est simplement supposée fournir une indication supplémentaire pour le metteur en scène de la pièce ; elle n'est pas censée avoir une signification sémantique supplémentaire. Pour les utilisateurs malvoyants, les CSS seraient peut-être utilisés pour distancer légèrement la note du texte principal.</p>
 
-<p>{{HTMLElement("div")}} est un élément de niveau bloc non-semantique ; vous l'utiliserez seulement si vous ne trouvez pas de meilleur bloc de sémantique à utiliser, ou bien si vous ne voulez pas ajouter de signification particulière. Par exemple, imaginez un widget de panier d'achat que vous pourriez choisir d'afficher à n'importe quel moment sur un site de commerce électronique :</p>
+<p>{{HTMLElement("div")}} est un élément de niveau bloc non-semantique ; vous l'utiliserez seulement si vous ne trouvez pas de meilleur bloc de sémantique à utiliser, ou bien si vous ne voulez pas ajouter de signification particulière. Par exemple, imaginez un widget de panier d'achat que vous pourriez choisir d'afficher à n'importe quel moment sur un site de commerce électronique :</p>
 
 <pre class="brush: html">&lt;div class="panier"&gt;
   &lt;h2&gt;Panier d'achat&lt;/h2&gt;
@@ -226,7 +226,7 @@ Qui aimait écrire du HTML&lt;br&gt;
 Mais ses structures et sémantiques affligeantes&lt;br&gt;
 rendaient de ses marquages la lecture inélégante.&lt;/p&gt;</pre>
 
-<p>Sans éléments <code>&lt;br&gt;</code>, le paragraphe serait rendu par une seule longue ligne (comme précisé plus haut dans ce cours, <a href="/en-US/Learn/HTML/Introduction_to_HTML/Getting_started#Whitespace_in_HTML">HTML ignore la plupart des blancs</a>) ; avec des &lt;br&gt; dans le code, voici le rendu de ce qui précède :</p>
+<p>Sans éléments <code>&lt;br&gt;</code>, le paragraphe serait rendu par une seule longue ligne (comme précisé plus haut dans ce cours, <a href="/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#whitespace_in_html">HTML ignore la plupart des blancs</a>) ; avec des &lt;br&gt; dans le code, voici le rendu de ce qui précède :</p>
 
 <p>Il y avait une fois une fille nommée Nell<br>
  Qui aimait écrire du HTML<br>
@@ -251,11 +251,11 @@ rendaient de ses marquages la lecture inélégante.&lt;/p&gt;</pre>
 <p>Une fois planifié le contenu d'une simple page Web, l'étape logique suivante est d'essayer de déterminer le contenu que vous voulez mettre sur le site Web en entier, les pages dont vous avez besoin et la façon dont elles doivent être organisées et les liens les unes vers les autres pour la meilleure expérience utilisateur possible. C'est ce qu'on appelle {{glossary("Information architecture")}} (architecture de l'information). Dans un grand site web complexe, beaucoup de planification peut entrer dans ce processus, mais pour un simple site Web de quelques pages, cela peut être assez simple et amusant !</p>
 
 <ol>
- <li>Gardez à l'esprit que vous aurez quelques éléments communs à la plupart des pages (sinon à toutes) — comme le menu de navigation et le contenu du pied de page. Si votre site est destiné à une entreprise, par exemple, c'est une bonne idée d'avoir les informations de contact dans le pied de page de chaque page. Notez ce que vous voulez avoir en commun dans chaque page. <img alt="les caractéristiques communes du site de voyage pour aller sur chaque page : titre et logo, contact, copyright, termes et conditions, choix de la langue, politique d'accessibilité." src="https://mdn.mozillademos.org/files/15972/fr_commun.png" style="border-style: solid; border-width: 1px; display: block; height: 375px; margin: 0px auto; width: 600px;"></li>
- <li>Ensuite, dessinez une esquisse de ce à quoi vous voudriez que la structure de chaque page ressemble (elle pourrait ressembler à notre simple site Web ci-dessus.) Notez ce que chaque bloc va être. <img alt="Un diagramme simple d'une structure d'exemple de site, avec un en-tête, une zone de contenu principal, deux barres latérales optionnelles et un pied de page." src="https://mdn.mozillademos.org/files/15973/fr-structure.png" style="border-style: solid; border-width: 1px; display: block; height: 232px; margin: 0px auto; width: 600px;"></li>
- <li>Maintenant, faites un remue-méninges sur tous les autres contenus (qui ne sont pas communs à toutes les pages) que vous voulez avoir sur votre site Web - écrivez une grande liste. <img alt="Une longue liste de toutes les fonctionnalités que nous pourrions mettre sur notre site de voyage, de la recherche, aux offres spéciales et aux informations spécifiques à chaque pays." src="https://mdn.mozillademos.org/files/15974/fr-liste.png" style="border-style: solid; border-width: 1px; display: block; height: 718px; margin: 0px auto; width: 600px;"></li>
- <li>Ensuite, essayez de trier tous ces éléments de contenu par groupes, pour vous donner une idée des parties qui pourraient aller ensemble sur diverses pages. C'est très similaire à une technique appelée {{glossary("Card sorting","Tri de cartes")}}.<img alt="Les articles qui devraient apparaître sur un site de vacances triés en 5 catégories : Recherche, spéciaux, informations spécifiques au pays, résultats de la recherche et choses à acheter." src="https://mdn.mozillademos.org/files/15975/fr-tri.png" style="border-style: solid; border-width: 1px; display: block; height: 625px; margin: 0px auto; width: 600px;"></li>
- <li>Essayez maintenant d'esquisser un plan de site grossier — entourez d'un cercle chaque page de votre site et tracez des flèches pour montrer les flux de travail typiques entre pages. La page d'accueil sera probablement au centre et en lien vers la plupart sinon la totalité des autres ; la plupart des pages d'un petit site devraient être disponibles à partir de la navigation principale, bien qu'il y ait des exceptions. Vous voudrez peut-être aussi ajouter des notes sur la présentation des choses. <img alt="Une carte du site montrant la page d'accueil, la page du pays, les résultats de recherche, la page spéciale, la page de paiement et la page d'achat." src="https://mdn.mozillademos.org/files/15976/fr-map.png" style="border-style: solid; border-width: 1px; display: block; height: 885px; margin: 0px auto; width: 600px;"></li>
+ <li>Gardez à l'esprit que vous aurez quelques éléments communs à la plupart des pages (sinon à toutes) — comme le menu de navigation et le contenu du pied de page. Si votre site est destiné à une entreprise, par exemple, c'est une bonne idée d'avoir les informations de contact dans le pied de page de chaque page. Notez ce que vous voulez avoir en commun dans chaque page. <img alt="les caractéristiques communes du site de voyage pour aller sur chaque page : titre et logo, contact, copyright, termes et conditions, choix de la langue, politique d'accessibilité." src="fr_commun.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
+ <li>Ensuite, dessinez une esquisse de ce à quoi vous voudriez que la structure de chaque page ressemble (elle pourrait ressembler à notre simple site Web ci-dessus.) Notez ce que chaque bloc va être. <img alt="Un diagramme simple d'une structure d'exemple de site, avec un en-tête, une zone de contenu principal, deux barres latérales optionnelles et un pied de page." src="fr-structure.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
+ <li>Maintenant, faites un remue-méninges sur tous les autres contenus (qui ne sont pas communs à toutes les pages) que vous voulez avoir sur votre site Web - écrivez une grande liste. <img alt="Une longue liste de toutes les fonctionnalités que nous pourrions mettre sur notre site de voyage, de la recherche, aux offres spéciales et aux informations spécifiques à chaque pays." src="fr-liste.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
+ <li>Ensuite, essayez de trier tous ces éléments de contenu par groupes, pour vous donner une idée des parties qui pourraient aller ensemble sur diverses pages. C'est très similaire à une technique appelée {{glossary("Card sorting","Tri de cartes")}}.<img alt="Les articles qui devraient apparaître sur un site de vacances triés en 5 catégories : Recherche, spéciaux, informations spécifiques au pays, résultats de la recherche et choses à acheter." src="fr-tri.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
+ <li>Essayez maintenant d'esquisser un plan de site grossier — entourez d'un cercle chaque page de votre site et tracez des flèches pour montrer les flux de travail typiques entre pages. La page d'accueil sera probablement au centre et en lien vers la plupart sinon la totalité des autres ; la plupart des pages d'un petit site devraient être disponibles à partir de la navigation principale, bien qu'il y ait des exceptions. Vous voudrez peut-être aussi ajouter des notes sur la présentation des choses. <img alt="Une carte du site montrant la page d'accueil, la page du pays, les résultats de recherche, la page spéciale, la page de paiement et la page d'achat." src="fr-map.png" style="border-style: solid; border-width: 1px; display: block; margin: 0px auto;"></li>
 </ol>
 
 <h3 id="Apprentissage_actif_créez_la_cartographie_de_votre_propre_site">Apprentissage actif : créez la cartographie de votre propre site</h3>
@@ -273,7 +273,7 @@ rendaient de ses marquages la lecture inélégante.&lt;/p&gt;</pre>
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines">Using HTML sections and outlines </a>: Guide avancé des éléments de la sémantique et des algorithmes descriptifs du HTML5.</li>
+ <li><a href="/en-US/docs/Web/HTML/Element/Heading_Elements">Using HTML sections and outlines </a>: Guide avancé des éléments de la sémantique et des algorithmes descriptifs du HTML5.</li>
 </ul>
 
 <p>{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Advanced_text_formatting", "Apprendre/HTML/Introduction_à_HTML/Debugging_HTML", "Apprendre/HTML/Introduction_à_HTML")}}</p>
@@ -281,13 +281,13 @@ rendaient de ses marquages la lecture inélégante.&lt;/p&gt;</pre>
 <h2 id="Dans_ce_module">Dans ce module</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Getting_started">Commencer avec le HTML</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/The_head_metadata_in_HTML">Qu'y-a-t-il dans l'en-tête ? Métadonnées en HTML</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/HTML_text_fundamentals">Fondamentaux du texte HTML</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Creating_hyperlinks">Création d'hyperliens</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/formatage-avance-texte">Formatage avancé du texte</a></li>
+ <li><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started">Commencer avec le HTML</a></li>
+ <li><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">Qu'y-a-t-il dans l'en-tête ? Métadonnées en HTML</a></li>
+ <li><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">Fondamentaux du texte HTML</a></li>
+ <li><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">Création d'hyperliens</a></li>
+ <li><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting">Formatage avancé du texte</a></li>
  <li>Structure de Site Web et de document</li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Debugging_HTML">Déboguer de l'HTML</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Marking_up_a_letter">Faire une lettre</a></li>
- <li><a href="https://developer.mozilla.org/fr/Apprendre/HTML/Introduction_%C3%A0_HTML/Structuring_a_page_of_content">Structurer une page de contenu</a></li>
+ <li><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML">Déboguer de l'HTML</a></li>
+ <li><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter">Faire une lettre</a></li>
+ <li><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content">Structurer une page de contenu</a></li>
 </ul>
