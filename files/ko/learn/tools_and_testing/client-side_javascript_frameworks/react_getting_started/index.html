@@ -39,21 +39,22 @@ tags:
 
 <p>공식 소개문구에 명시되어 있듯이, <a href="https://reactjs.org/">React</a>는 유저 인터페이스를 만드는데 사용되는 라이브러리입니다. React는 프레임워크가 아닐뿐더러, 웹 환경에만 국한된 도구도 아닙니다. 특정 환경에 렌더링되기 위해서는 다른 라이브러리들이 함께 사용되는데, 예를 들어 모바일 애플리케이션을 빌드하는데 사용되는 <a href="https://reactnative.dev/">React Native</a>, 가상현실 애플리케이션을 빌드하는데 사용되는 <a href="https://facebook.github.io/react-360/">React 360</a>가 있고, 그 외에도 다양한 환경에서 활용이 가능합니다.</p>
 
-<p>To build for the web, developers use React in tandem with <a href="https://reactjs.org/docs/react-dom.html">ReactDOM</a>. React and ReactDOM are often discussed in the same spaces as — and utilized to solve the same problems as — other true web development frameworks. When we refer to React as a "framework", we’re working with that colloquial understanding.</p>
+<p>웹 환경에서 개발자들은 React와 <a href="https://reactjs.org/docs/react-dom.html">ReactDOM</a>을 함께 사용합니다. React와 ReactDOM은 종종 다른 진짜 웹 개발 프레임워크들과 같이 이야기되고, 그것들과 동일한 문제를 해결하기 위해 사용됩니다. 보통 React를 "프레임워크"라고 지칭할 때는, 그와 같은 맥락에서 이야기하는 것입니다.</p>
 
-<p>React's primary goal is to minimize the bugs that occur when developers are building UIs. It does this through the use of components — self-contained, logical pieces of code that describe a portion of the user interface. These components can be composed together to create a full UI, and React abstracts away much of the rendering work, leaving you to concentrate on the UI design.</p>
+<p>React의 주된 목적은 개발자들이 UI를 개발할 때 발생하는 버그들을 최소화하는 것입니다. 이를 위해 React는 컴포넌트들을 사용하는데, 컴포넌트란 유저 인터페이스의 각 부분을 나타내는 독립적이고 논리적인 코드 조각들을 의미합니다. 이 컴포넌트들이 모여 전체 UI를 이룰 때 발생하는 렌더링 작업의 대부분은 React가 추상화해 처리함으로써 개발자들로 하여금 UI 디자인에 집중할 수 있도록 도와줍니다.</p>
 
-<h2 id="Use_cases">Use cases</h2>
+<h2 id="Use_cases">React 활용 방법</h2>
 
-<p>Unlike the other frameworks covered in this module, React does not enforce strict rules around code conventions or file organization. This allows teams to set conventions that work best for them, and to adopt React in any way they would like to. React can handle a single button, a few pieces of an interface, or an app's entire user interface.</p>
+<p>이 모듈에서 다루는 다른 프레임워크들과는 달리, React는 코드 컨벤션이나 파일 구성을 강제하는 규칙을 가지고 있지 않습니다. 따라서 React를 사용하는 팀들은 그들에게 가장 적합한 나름의 규칙들을 정할 수 있고, 원하는 
+ 방향대로 React를 사용할 수 있습니다. React는 단 하나의 버튼을 위해서 사용될 수도 있고, 몇개의 인터페이스나 애플리케이션 전체 UI를 위해 쓰일 수도 있습니다.</p>
 
-<p>While React <em>can</em> be used for <a href="https://reactjs.org/docs/add-react-to-a-website.html">small pieces of an interface</a>, it's not as easy to "drop into" an application as a library like jQuery, or even a framework like Vue — it is more approachable when you build your entire app with React.</p>
+<p>물론 React가 <a href="https://reactjs.org/docs/add-react-to-a-website.html">몇 개의 작은 인터페이스들</a>을 위해 사용될 <em>수도</em> 있긴 하지만, 이처럼 jQuery나 Vue와 같은 방식으로 한 애플리케이션에 React를 조금 끼워넣는 것은 그다지 좋은 방법이 아닙니다. React는 애플리케이션 전체를 개발하는데에 사용되는 것이 더 적절합니다.</p>
 
-<p>In addition, many of the developer-experience benefits of a React app, such as writing interfaces with JSX, require a compilation process. Adding a compiler like Babel to a website makes the code on it run slowly, so developers often set up such tooling with a build step. React arguably has a heavy tooling requirement, but it can be learned.</p>
+<p>덧붙이자면, 좋은 개발자 경험을 가져다주는 JSX와 같은 기능들을 위해 React 애플리케이션은 별도의 컴파일 과정을 필요로 합니다. 그러나 Babel과 같은 컴파일러를 웹사이트에 추가하는 것은 코드의 동작을 느리게하는 요인이 되기 때문에, 개발자들은 보통 이를 빌드하는 단계에서 설정합니다. React는 분명 무거운 도구들을 필요로하지만, 이것들은 충분히 학습할 수 있습니다.</p>
 
-<p>This article is going to focus on the use case of using React to render the entire user interface of an application, using tooling provided by Facebook’s own <a href="https://create-react-app.dev/">create-react-app</a> tool.</p>
+<p>이 글에서는 Facebook에서 자체적으로 개발하여 제공하는 <a href="https://create-react-app.dev/">create-react-app</a>를 이용해 애플리케이션 전체의 UI를 렌더링하는 방식으로 사용되는 React에 대해 다룰 것입니다.</p>
 
-<h2 id="How_does_React_use_JavaScript">How does React use JavaScript?</h2>
+<h2 id="How_does_React_use_JavaScript">React는 JavaScript를 어떻게 사용하나요?</h2>
 
 <p>React utilizes features of modern JavaScript for many of its patterns. Its biggest departure from JavaScript comes with the use of <a href="https://reactjs.org/docs/introducing-jsx.html">JSX</a> syntax. JSX extends JavaScript's syntax so that HTML-like code can live alongside it. For example:</p>
 
