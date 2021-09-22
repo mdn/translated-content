@@ -11,9 +11,9 @@ translation_of: Web/API/URL/URL
 ---
 <div>{{APIRef("URL API")}}</div>
 
-<p>Конструктор <code><strong>URL()</strong></code> возвращает вновь созданный  {{domxref("URL")}} объект отражающий URL определяемый параметрами.</p>
+<p>Конструктор <code><strong>URL()</strong></code> возвращает вновь созданный  {{domxref("URL")}} объект, отражающий URL, определяемый параметрами.</p>
 
-<p>If the given base URL or the resulting URL are not valid URLs, the JavaScript {{jsxref("TypeError")}} exception is thrown.</p>
+<p>Если предоставленный базовый URL-адрес или итоговый URL-адрес не является валидным, то будет сгенерировано JavaScript исключение {{jsxref("TypeError")}}.</p>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -27,13 +27,13 @@ const url = new URL(url [, base])
 
 <dl>
  <dt><code>url</code></dt>
- <dd>A {{domxref("USVString")}} or any other object with a <a href="/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#stringifiers">stringifier</a> — including, for example, an {{htmlelement("a")}} or {{htmlelement("area")}} element — that represents an absolute or relative URL. If <code>url</code> is a relative URL, <code>base</code> is required, and will be used as the base URL. If <code>url</code> is an absolute URL, a given <code>base</code> will be ignored.</dd>
+ <dd>Строка типа {{domxref("USVString")}} или любой объект, который может быть <a href="/en-US/docs/MDN/Contribute/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#stringifiers">преобразован в строку</a>, включая, например, элементы {{htmlelement("a")}} и {{htmlelement("area")}}, представляющие абсолютный и относительный URL-адрес соответственно. Если <code>url</code> это относительный URL-адрес, то параметр <code>base</code> становится обязательным, так как он будет использован в качестве базового URL-адреса. Если же <code>url</code> — абсолютный URL-адрес, то значение параметра <code>base</code> будет проигнорировано.</dd>
  <dt><code>base</code> {{optional_inline}}</dt>
- <dd>A {{domxref("USVString")}} representing the base URL to use in cases where <code>url</code> is a relative URL. If not specified, it defaults to <code>undefined</code>.</dd>
+ <dd>Строка типа {{domxref("USVString")}}. Используется в качестве базового адреса, когда <code>url</code> это относительный URL-адрес. Значение по умолчанию: <code>undefined</code>.</dd>
 </dl>
 
 <div class="notecard note">
-  <p><strong>Note:</strong> The <code>url</code> and <code>base</code> arguments will each be stringified from whatever value you pass, just like with other Web APIs that accept {{domxref("USVString")}}. In particular, you can use an existing {{domxref("URL")}} object for either argument, and it will stringify to the object's {{domxref("URL.href", "href")}} property.</p>
+  <p><strong>Примечание:</strong> Как и в случае с любым другим Web API, которое принимает на вход строку типа {{domxref("USVString")}}, аргументы <code>url</code> и <code>base</code> будут преобразованы в строку независимо от исходного типа переданного значения. В частности, вы можете использовать существующий {{domxref("URL")}} объект в качестве аргумента и он будет преобразован в строку значение которой равно значению свойства {{domxref("URL.href", "href")}} переданного объекта.</p>
 </div>
 
 <h3 id="Исключения">Исключения</h3>
@@ -42,14 +42,14 @@ const url = new URL(url [, base])
   <table>
     <thead>
       <tr>
-        <th>Exception</th>
-        <th>Explanation</th>
+        <th>Исключение</th>
+        <th>Объяснение</th>
       </tr>
     </thead>
     <tbody>
       <tr>
         <td>{{jsxref("TypeError")}}</td>
-        <td><code>url</code> (in the case of absolute URLs) or <code>base</code> + <code>url</code> (in the case of relative URLs) is not a valid URL.</td>
+        <td><code>url</code> (в случае с абсолютным URL-адресом) или <code>base</code> + <code>url</code> (в случае с относительным URL-адресом) является невалидным URL-адресом.</td>
       </tr>
     </tbody>
   </table>
@@ -58,7 +58,7 @@ const url = new URL(url [, base])
 <h2 id="Примеры">Примеры</h2>
 
 <pre class="brush: js">
-// Base urls
+// Базовые URL-адреса
 let m = 'https://developer.mozilla.org';
 let a = new URL("/", m);                                // => 'https://developer.mozilla.org/'
 let b = new URL(m);                                     // => 'https://developer.mozilla.org/'
@@ -71,12 +71,12 @@ let d = new URL('/en-US/docs', b);                     // => 'https://developer.
         new URL('/en-US/docs', "https://developer.mozilla.org/fr-FR/toto");
                                                         // => 'https://developer.mozilla.org/en-US/docs'
 
-        new URL('/en-US/docs', '');                    // Raises a TypeError exception as '' is not a valid URL
-        new URL('/en-US/docs');                        // Raises a TypeError exception as '/en-US/docs' is not a valid URL
+        new URL('/en-US/docs', '');                    // Генерирует TypeError исключение так как '' не является валидным URL-адресом
+        new URL('/en-US/docs');                        // Генерирует TypeError исключение так как '/en-US/docs' не является валидным URL-адресом
         new URL('http://www.example.com', );           // => 'http://www.example.com/'
         new URL('http://www.example.com', b);          // => 'http://www.example.com/'
 
-        new URL("//foo.com", "https://example.com")    // => 'https://foo.com' (see relative URLs)
+        new URL("//foo.com", "https://example.com")    // => 'https://foo.com' (см. относительные URL-адреса)
 </pre>
 
 <h2 id="Спецификации">Спецификации</h2>
@@ -91,7 +91,7 @@ let d = new URL('/en-US/docs', b);                     // => 'https://developer.
 
 <div>
   <ul>
-    <li>A polyfill of <code>URL</code> is available in <a href="https://github.com/zloirock/core-js#url-and-urlsearchparams">core-js</a></li>
-    <li>The interface it belongs to: {{domxref("URL")}}.</li>
+    <li>Полифил для <code>URL</code> доступен в <a href="https://github.com/zloirock/core-js#url-and-urlsearchparams">core-js</a></li>
+    <li>Этот интерфейс принадлежит: {{domxref("URL")}}.</li>
    </ul>
 </div>
