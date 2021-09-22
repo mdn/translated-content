@@ -240,7 +240,27 @@ customElements.define('word-count', WordCount, { extends: 'p' });</pre
 
 <pre class="brush: html">&lt;p is="word-count"&gt;&lt;/p&gt;</pre>
 
-<h2 id="Especificaciones">especificações</h2>
+<h3>Criando elemento que desativa a capacidade de utilizar attach no shadow root</h3>
+
+<p>
+    Se a classe usada para o elemento contém a propriedade estática `disabledFeatures` retornando a string "shadow" isso fará com que {{domxref("Element.attachShadow()")}} retorne um
+    {{domxref("DOMException")}} `NotSupportedError`.
+</p>
+
+<pre class="brush: js">
+    class PopUpInfo extends HTMLElement {
+        static get disabledFeatures() { return ['shadow']; }
+      
+        constructor() {
+          super();
+      
+          var shadow = this.attachShadow({mode: 'open'});
+          // isso fará com que um erro seja lançado quando o elemento for definido.
+        }
+      }
+</pre>
+
+<h2 id="Especificaciones">Especificações</h2>
 
 <table class="standard-table">
     <tbody>
