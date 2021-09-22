@@ -132,11 +132,11 @@ original_slug: HTML/Manipulating_video_using_canvas
 
 <p>Quand la routine est appelée, l'élément vidéo affiche les données de la plus récente image de la vidéo, ce qui ressemble à :</p>
 
-<p><img alt="video.png" src="/@api/deki/files/3282/=video.png" style="height: 192px; width: 320px;"></p>
+<p><img src="video.png"></p>
 
 <p>À la seconde ligne, cette image est copiée dans le contexte graphique <code>ctx1</code> du premier élément <code>canvas</code>, en spécifiant ses hauteur et largeur, définies plus tôt (soit, réduites de moitié). Notez que c'est très simplement que vous passez les données de l'élément vidéo à afficher dans le contexte graphique avec la méthode <code>drawImage()</code>. Voici ce que cela donne :</p>
 
-<p><img alt="sourcectx.png" src="/@api/deki/files/3284/=sourcectx.png" style="height: 96px; width: 160px;"></p>
+<p><img src="sourcectx.png"></p>
 
 <p>La ligne 3 extrait une copie des données graphiques brutes pour l'image courante de la vidéo en appelant la méthode <code>getImageData() </code>sur le premier contexte. Cela fournit des données brutes d'image pixel 32 bits que nous pouvons ensuite manipuler. La ligne 4 calcule le nombre de pixels de l'image en divisant la taille totale des données d'image du cadre par quatre.</p>
 
@@ -146,7 +146,7 @@ original_slug: HTML/Manipulating_video_using_canvas
 
 <p>L'image résultante ressemble à ceci :</p>
 
-<p><img alt="output.png" src="/@api/deki/files/3283/=output.png" style="height: 96px; width: 161px;"></p>
+<p><img src="output.png"></p>
 
 <p>Cela se fait de façon répétée au fur et à mesure que la vidéo est lue, de sorte que, image après image, la vidéo est traitée et affichée avec l'effet de chrominance.</p>
 

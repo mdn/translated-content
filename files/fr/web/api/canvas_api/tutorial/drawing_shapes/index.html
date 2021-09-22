@@ -18,7 +18,9 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Formes_géométriques
 
 <h2 id="La_grille">La grille</h2>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/224/Canvas_default_grid.png" style="float: right; height: 220px; width: 220px;">Avant de pouvoir commencer à dessiner, il nous faut parler de la grille ou <strong>système de coordonnées</strong>. Notre schéma HTML de la page précédente avait un élément canevas large de 150 pixels et haut de 150 pixels. À droite, vous voyez ce canevas avec la grille par défaut superposée. Normalement, 1 unité dans la grille correspond à 1 pixel sur le canevas. L'origine de cette grille est positionnée dans le coin <em>supérieur gauche</em> de coordonnées (0, 0). Tous les éléments sont placés relativement à cette origine. Ainsi, le coin supérieur gauche du carré bleu est à <code>x</code> pixels à partir de la gauche et à <code>y</code> pixels à partir du haut, aux coordonnées (x, y). Plus loin dans ce tutoriel, nous verrons comment déplacer l'origine à une position différente, faire pivoter la grille ou même la mettre à l'échelle ; mais pour l'instant, nous nous en tiendrons aux valeurs par défaut.</p>
+<p>Avant de pouvoir commencer à dessiner, il nous faut parler de la grille ou <strong>système de coordonnées</strong>. Notre schéma HTML de la page précédente avait un élément canevas large de 150 pixels et haut de 150 pixels. À droite, vous voyez ce canevas avec la grille par défaut superposée. Normalement, 1 unité dans la grille correspond à 1 pixel sur le canevas. L'origine de cette grille est positionnée dans le coin <em>supérieur gauche</em> de coordonnées (0, 0). Tous les éléments sont placés relativement à cette origine. Ainsi, le coin supérieur gauche du carré bleu est à <code>x</code> pixels à partir de la gauche et à <code>y</code> pixels à partir du haut, aux coordonnées (x, y). Plus loin dans ce tutoriel, nous verrons comment déplacer l'origine à une position différente, faire pivoter la grille ou même la mettre à l'échelle ; mais pour l'instant, nous nous en tiendrons aux valeurs par défaut.</p>
+
+<img alt="" src="canvas_default_grid.png">
 
 <h2 id="Dessin_de_rectangles">Dessin de rectangles</h2>
 
@@ -61,7 +63,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Formes_géométriques
 
 <p>Le résultat de cet exemple est montré ci-dessous.</p>
 
-<p>{{EmbedLiveSample("Exemple_de_forme_rectangulaire", 160, 160, "https://mdn.mozillademos.org/files/245/Canvas_rect.png")}}</p>
+<p>{{EmbedLiveSample("Exemple_de_forme_rectangulaire", 160, 160, "canvas_rect.png")}}</p>
 
 <p>La fonction <code>fillRect()</code> dessine un grand carré noir de 100 pixels de côté. La fonction <code>clearRect()</code> efface ensuite un carré de 60x60 pixels, et finalement, la fonction <code>strokeRect()</code> est appelée pour créer un contour rectangulaire de 50x50 pixels dans l'espace effacé.</p>
 
@@ -136,7 +138,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Formes_géométriques
 
 <p>Le résultat ressemble à :</p>
 
-<p>{{EmbedLiveSample("Dessin_d'un_triangle", 110, 110, "https://mdn.mozillademos.org/files/9847/triangle.png")}}</p>
+<p>{{EmbedLiveSample("Dessin_d'un_triangle", 110, 110, "triangle.png")}}</p>
 
 <h3 id="Déplacement_du_stylo">Déplacement du stylo</h3>
 
@@ -178,7 +180,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Formes_géométriques
 
 <p>Le résultat ressemble à ce qui suit :</p>
 
-<p>{{EmbedLiveSample("Déplacement_du_stylo", 160, 160, "https://mdn.mozillademos.org/files/252/Canvas_smiley.png")}}</p>
+<p>{{EmbedLiveSample("Déplacement_du_stylo", 160, 160, "canvas_smiley.png")}}</p>
 
 <p>Si vous voulez voir les lignes d'interconnexion, vous pouvez enlever les lignes qui appellent <code>moveTo()</code>.</p>
 
@@ -231,7 +233,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Formes_géométriques
 
 <p>Il commence par appeler <code>beginPath()</code> pour démarrer un nouveau trajet de forme. Nous utilisons ensuite la méthode <code>moveTo()</code> pour déplacer le point de départ à la position désirée. En dessous, deux lignes sont dessinées, qui constituent deux côtés du triangle.</p>
 
-<p>{{EmbedLiveSample("Les_lignes", 160, 160, "https://mdn.mozillademos.org/files/238/Canvas_lineTo.png")}}</p>
+<p>{{EmbedLiveSample("Les_lignes", 160, 160, "canvas_lineto.png")}}</p>
 
 <p>Vous remarquerez la différence entre le triangle plein et le filaire. Cela, comme mentionné précédemment, vient du fait que les formes sont automatiquement fermées lorsqu'un trajet est rempli, mais pas lorsqu'elles sont dessinées au trait. Si nous avions omis le <code>closePath()</code> pour le triangle filaire, seules deux lignes auraient été tracées, et non pas un triangle complet.</p>
 
@@ -299,7 +301,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Formes_géométriques
 }
 </pre>
 
-<p>{{EmbedLiveSample("Les_arcs", 160, 210, "https://mdn.mozillademos.org/files/204/Canvas_arc.png")}}</p>
+<p>{{EmbedLiveSample("Les_arcs", 160, 210, "canvas_arc.png")}}</p>
 
 <h3 id="Les_courbes_quadratiques_et_de_Bézier">Les courbes quadratiques et de Bézier</h3>
 
@@ -312,7 +314,9 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Formes_géométriques
  <dd>Dessine une courbe de Bézier cubique depuis la position courante du stylo jusqu'au point spécifié par <code>x</code> et <code>y</code>, en utilisant les points de contrôle (<code>cp1x</code>, <code>cp1y</code>) et (<code>cp2x</code>, <code>cp2y</code>).</dd>
 </dl>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/223/Canvas_curves.png" style="float: right; height: 190px; width: 190px;">La différence entre ces deux méthodes est mieux décrite par l'image à droite. Une courbe quadratique de Bézier a un point de départ et un point d'arrivée (points bleus), et seulement un <strong>point de contrôle</strong> (indiqué par le point rouge), tandis qu'une courbe de Bézier cubique utilise deux points de contrôle.</p>
+<p>La différence entre ces deux méthodes est mieux décrite par l'image à droite. Une courbe quadratique de Bézier a un point de départ et un point d'arrivée (points bleus), et seulement un <strong>point de contrôle</strong> (indiqué par le point rouge), tandis qu'une courbe de Bézier cubique utilise deux points de contrôle.</p>
+
+<p><img alt="" src="canvas_curves.png"></p>
 
 <p>Les paramètres <code>x</code> et <code>y</code> de ces deux méthodes sont les coordonnées du point d'arrivée. <code>cp1x</code> et <code>cp1y</code> sont les coordonnées du premier point de contrôle, et  <code>cp2x</code> et <code>cp2y</code> sont les coordonnées du second point de contrôle.</p>
 
@@ -350,7 +354,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Formes_géométriques
 }
 </pre>
 
-<p>{{EmbedLiveSample("Courbes_de_Bézier_quadratiques", 160, 160, "https://mdn.mozillademos.org/files/243/Canvas_quadratic.png")}}</p>
+<p>{{EmbedLiveSample("Courbes_de_Bézier_quadratiques", 160, 160, "canvas_quadratic.png")}}</p>
 
 <h4 id="Les_courbes_de_Bézier_cubiques">Les courbes de Bézier cubiques</h4>
 
@@ -382,7 +386,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Formes_géométriques
 }
 </pre>
 
-<p>{{EmbedLiveSample("Les_courbes_de_Bézier_cubiques", 160, 160, "https://mdn.mozillademos.org/files/207/Canvas_bezier.png")}}</p>
+<p>{{EmbedLiveSample("Les_courbes_de_Bézier_cubiques", 160, 160, "canvas_bezier.png")}}</p>
 
 <h3 id="Rectangles">Rectangles</h3>
 
@@ -551,7 +555,7 @@ new Path2D(d);    // trajet depuis des données de trajet SVG</code></pre>
   }
 }</pre>
 
-<p>{{EmbedLiveSample("Exemple_de_Path2D", 130, 110, "https://mdn.mozillademos.org/files/9851/path2d.png")}}</p>
+<p>{{EmbedLiveSample("Exemple_de_Path2D", 130, 110, "path2d.png")}}</p>
 
 <h3 id="Utilisation_de_trajets_SVG">Utilisation de trajets SVG</h3>
 

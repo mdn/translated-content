@@ -69,7 +69,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Pixel_manipulation_with_canvas
 </pre>
 
 <pre class="notranslate"><code>var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+img.src = './assets/rhino.jpg';
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 img.onload = function() {
@@ -117,7 +117,7 @@ canvas.addEventListener('mousemove', pick);</code></pre>
 </pre>
 
 <pre class="brush: js">var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+img.src = './assets/rhino.jpg';
 img.onload = function() {
   dessiner(this);
 };
@@ -183,7 +183,7 @@ function dessiner(img) {
 </pre>
 
 <pre class="brush: js hidden">var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';
+img.src = './assets/rhino.jpg';
 img.onload = function() {
   draw(this);
 };

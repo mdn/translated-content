@@ -30,7 +30,7 @@ translation_of: Web/API/Console/table
 
 console.table(["apples", "oranges", "bananas"]);</pre>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/8567/console-table-array.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="console-table-array.png"></p>
 
 <pre class="brush: js">// un objet dont les propriétés sont des chaînes de caractères
 
@@ -43,7 +43,7 @@ var me = new Person("John", "Smith");
 
 console.table(me);</pre>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/8559/console-table-simple-object.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="" src="console-table-simple-object.png"></p>
 
 <h3 id="Collections_de_données_composées">Collections de données composées</h3>
 
@@ -54,7 +54,7 @@ console.table(me);</pre>
 var people = [["John", "Smith"], ["Jane", "Doe"], ["Emily", "Jones"]]
 console.table(people);</pre>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/8561/console-table-array-of-array.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="Un tableau qui affiche un tableau de tableaux" src="console-table-array-of-array.png"></p>
 
 <pre class="brush: js">// un tableau d'objets
 
@@ -71,7 +71,7 @@ console.table([john, jane, emily]);</pre>
 
 <p>Notez que si le tableau contient des objets, alors les colonnes seront nommées avec les noms des propriétés.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/8563/console-table-array-of-objects.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="Un tableau qui affiche un tableau d'objets" src="console-table-array-of-objects.png"></p>
 
 <pre class="brush: js">// un objet contenant des propriétés qui sont des objets
 
@@ -83,7 +83,7 @@ family.daughter = new Person("Emily", "Smith");
 
 console.table(family);</pre>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/8565/console-table-object-of-objects.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="Un tableau affichant des objets composés d'objets" src="console-table-object-of-objects.png"></p>
 
 <h3 id="Restreindre_les_colonnes_affichées">Restreindre les colonnes affichées</h3>
 
@@ -102,7 +102,7 @@ var emily = new Person("Emily", "Jones");
 
 console.table([john, jane, emily], ["firstName"]);</pre>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/8569/console-table-array-of-objects-firstName-only.png" style="display: block; margin-left: auto; margin-right: auto;"></p>
+<p><img alt="Un tableau affichant un tableau d'objets dont la sortie est filtrée" src="console-table-array-of-objects-firstname-only.png"></p>
 
 <h3 id="Ordonner_les_colonnes">Ordonner les colonnes</h3>
 

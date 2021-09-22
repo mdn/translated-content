@@ -41,8 +41,6 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
 
 <h2 id="Architecture_de_base">Architecture de base</h2>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/8241/flowchart-production-version.png" style="float: right; height: 600px; margin-left: 20px; width: 300px;"></p>
-
 <p>Avec les service workers, les étapes suivantes sont généralement observées pour une configuration simple :</p>
 
 <ol>
@@ -54,6 +52,8 @@ translation_of: Web/API/Service_Worker_API/Using_Service_Workers
  <li>L'étape suivante est l'activation. Lorsque le service worker est installé, il reçoit alors un événement activate. L'utilité première de <code>onactivate</code> est de nettoyer les ressources utilisées dans les versions précédentes du script du Service Worker.</li>
  <li>Le Service Worker contrôle désormais les pages, mais seulement celles ouvertes après que le <code>register()</code> ait réussi. Ainsi un document à sa création s'accompagne ou non d'un Service Worker et conserve cet état tout au long de sa durée de vie. Ainsi les documents devront être rechargés pour réellement être contrôlés.</li>
 </ol>
+
+<p><img alt="" src="sw-lifecycle.png"></p>
 
 <h3 id="Promesses">Promesses</h3>
 
@@ -144,10 +144,9 @@ imgLoad('myLittleVader.jpg').then(function(response) {
 
 <p>Pour illustrer quelques principes de base de l'enregistrement et de l'installation d'un service worker, voici une simple démo appelée <a href="https://github.com/mdn/sw-test">sw-test</a>, qui présente juste une galerie d'images Star wars Lego. Elle utilise une fonction pilotée par une promesse pour lire les données d'une image à partir d'un objet JSON et charger les images en utilisant Ajax, avant d'afficher les images en bas de page. Les choses restent statiques et simples pour le moment. Elle enregistre aussi, installe et active un service worker, et lorsque la spécification est davantage supportée par les navigateurs, elle met en cache tous les fichiers requis pour un fonctionnement déconnecté !</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/8243/demo-screenshot.png" style="display: block; height: 410px; margin: 0px auto; width: 480px;"><br>
- <br>
- <br>
- Vous pouvez consulter le <a href="https://github.com/mdn/sw-test/">code source sur GitHub</a>, et <a href="https://mdn.github.io/sw-test/">voir l'exemple en direct</a>. Le bout de code qui sera appelé est la promesse (voir <a href="https://github.com/mdn/sw-test/blob/gh-pages/app.js#L17-L42">app.js lines 17-42</a>), qui est une version modifiée du code présenté ci-dessus, dans la <a href="https://github.com/mdn/promises-test">démo du test de promesses</a>. Il en diffère de la façon suivante :</p>
+<p><img alt="" src="demo-screenshot.png"></p>
+
+<p>Vous pouvez consulter le <a href="https://github.com/mdn/sw-test/">code source sur GitHub</a>, et <a href="https://mdn.github.io/sw-test/">voir l'exemple en direct</a>. Le bout de code qui sera appelé est la promesse (voir <a href="https://github.com/mdn/sw-test/blob/gh-pages/app.js#L17-L42">app.js lines 17-42</a>), qui est une version modifiée du code présenté ci-dessus, dans la <a href="https://github.com/mdn/promises-test">démo du test de promesses</a>. Il en diffère de la façon suivante :</p>
 
 <ol>
  <li>Dans l'original, on considère l'URL d'une image à charger. Dans cette version, on passe un fragment JSON contenant toutes les données d'une seule image (voir à quoi il ressemble dans <a href="https://github.com/mdn/sw-test/blob/gh-pages/image-list.js">image-list.js</a>). C'est parce que toutes les données pour que chaque promesse soit résolue doivent être passées avec la promesse, que c'est asynchrone. Si l'on passe juste l'url, et si l'on essaie alors d'accéder aux autres éléments dans le JSON séparément lorsqu'on itère plus tard avec la boucle <code>for()</code>, cela ne marchera pas, puisque la promesse ne se résolvera pas en même temps que les itérations sont faites (c'est un mécanisme synchrone.)</li>

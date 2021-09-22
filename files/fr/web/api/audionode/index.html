@@ -9,7 +9,8 @@ translation_of: Web/API/AudioNode
 
 <p>{{InheritanceDiagram}}</p>
 
-<p><img alt="AudioNodes participating in an AudioContext create a audio routing graph." src="https://mdn.mozillademos.org/files/9713/WebAudioBasics.png" style="display: block; height: 230px; margin: 0px auto; width: 677px;"></p>
+<p><img alt="Des objets AudioNode participant à un objet AudioContext pour créer un graphe de routage audio." src="webaudiobasics.png"></p>
+
 
 <p>Un <code>AudioNode</code> a des entrées et sorties, chacune avec un certain nombre de <em>canaux</em>.<em> </em>Un <code>AudioNode</code> avec zero entrée et une ou plusieurs sorties est appelée un <em> noeud source</em>. Le traitement exact varie d'un <code>AudioNode</code> à l'autre; en général un noeud lit l'entrée, réalise un traitement, et génère de nouvelles valeurs pour la sortie, ou laisse simplement l'entrée traverser (par exemple dans le cas de l'{{domxref("AnalyserNode")}}, où le résultat du traitment du traitement est accessible à part).</p>
 

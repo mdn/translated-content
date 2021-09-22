@@ -20,11 +20,11 @@ translation_of: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
  <li>Connection des sources aux effets, et des effets à la sortie.</li>
 </ol>
 
-<p><img alt="Diagramme simple composé de trois rectangles intitulés Sources, Effets et Sortie, reliés par des flèches, de gauche à droite, qui indiquent le sens du flux d'informations audio." src="https://mdn.mozillademos.org/files/12525/webaudioAPI.svg" style="display: block; height: 143px; margin: 0px auto; width: 643px;"></p>
+<p><img alt="Diagramme simple composé de trois rectangles intitulés Sources, Effets et Sortie, reliés par des flèches, de gauche à droite, qui indiquent le sens du flux d'informations audio." src="webaudioapi_en.svg"></p>
 
 <p>Chaque entrée ou sortie est composée de plusieurs <strong>canaux, </strong>chacun correspondant à une configuration audio spécifique. Tout type de canal discret est supporté, y compris <em>mono</em>, <em>stereo</em>, <em>quad</em>, <em>5.1</em>, etc.</p>
 
-<p><img alt="Diagramme qui montre comment les AudioNodes sont reliés par leurs entrées et sorties, et la configuration des canaux à l'intérieur de ces entrées/sorties." src="https://mdn.mozillademos.org/files/12235/audionodes.svg" style="display: block; height: 360px; margin: 0px auto; width: 630px;"></p>
+<p><img alt="Diagramme qui montre comment les AudioNodes sont reliés par leurs entrées et sorties, et la configuration des canaux à l'intérieur de ces entrées/sorties." src="audionodes.svg"></p>
 
 <p>Les sources audio peuvent être de provenance variée :</p>
 
@@ -56,7 +56,7 @@ translation_of: Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API
  <li>le stéréo aura 88200 échantillons, et 44100 trames. Sa propriété <code>length</code> vaudra aussi 44100, puisqu'elle correspond au nombre de trames.</li>
 </ul>
 
-<p><img alt="Le diagramme montre une succession de tames dans un buffer audio. Comme le buffer est composé de deux canaux (stéréo), chaque trame contient deux échantillons." src="https://mdn.mozillademos.org/files/12489/sampleframe.svg" style="height: 110px; width: 622px;"></p>
+<p><img alt="Le diagramme montre une succession de tames dans un buffer audio. Comme le buffer est composé de deux canaux (stéréo), chaque trame contient deux échantillons." src="sampleframe.svg"></p>
 
 <p>Lorsqu'un noeud de mémoire tampon est lu, on entend d'abord la trame la trame la plus à gauche, puis celle qui la suit à droite, etc. Dans le cas de la stéréo, on entend les deux canaux en même temps. Les trames d'échantillon sont très utiles, car elles représentent le temps indépendamment du nombre de canaux.</p>
 
@@ -289,7 +289,7 @@ var memoireTampon = context.createBuffer(1, 22050, 22050);</pre>
 
 <p>Une visualisation audio consiste en général à utiliser un flux de données audio dans le temps (souvent des informations de gain ou de fréquence) pour générer un affichage graphique (comme un graphe). La Web Audio API possède un {{domxref("AnalyserNode")}} qui n'altère pas le signal audio qui le traverse, permettant de générer des données qui peuvent être utilisées par une technologie de visualisation telle que {{htmlelement("canvas")}}.</p>
 
-<p><img alt="Le noeud permet de récupérer la fréquence et le domaine temporel en utilisant FFT, et ce sans modifier le flux audio" src="https://mdn.mozillademos.org/files/12493/fttaudiodata.svg" style="height: 206px; width: 693px;"></p>
+<p><img alt="Le noeud permet de récupérer la fréquence et le domaine temporel en utilisant FFT, et ce sans modifier le flux audio" src="fttaudiodata.svg"></p>
 
 <p>On peut accéder aux données en utilisant les méthodes suivantes:</p>
 
@@ -322,13 +322,13 @@ var memoireTampon = context.createBuffer(1, 22050, 22050);</pre>
 <p>La position du panoramique est décrite avec des coodonnées cartésiennes selon la règle de la main droite, son mouvement à l'aide d'un vecteur de vélocité (nécessaire pour la création d'effets Doppler) et sa direction avec un cone de direction. Le cone peut être très large, par exemple dans le cas de sources omnidirectionnelles.</p>
 </div>
 
-<p><img alt="Le PannerNode donne la position dans l'espace, la vélocité et la direction d'un signal donné" src="https://mdn.mozillademos.org/files/12495/pannernode.svg" style="height: 340px; width: 799px;"></p>
+<p><img alt="Le PannerNode donne la position dans l'espace, la vélocité et la direction d'un signal donné" src="pannernode.svg"></p>
 
 <div>
 <p>La position de l'auditeur est décrite avec des coodonnées cartésiennes selon la règle de la main droite,  son mouvement à l'aide d'un vecteur de vélocité et la direction vers laquelle elle pointe en utilisant deux vecteurs de direction : haut et face. Ceux-ci définissent respectivement la direction vers laquelle pointent le haut de la tête et le bout du nez de l'auditeur, et forment un angle droit entre eux.</p>
 </div>
 
-<p><img alt="On voit la position d'un auditeur, ainsi que les vecteurs de direction haut et de face qui forment un angle de 90°" src="https://mdn.mozillademos.org/files/12497/listener.svg" style="height: 249px; width: 720px;"></p>
+<p><img alt="On voit la position d'un auditeur, ainsi que les vecteurs de direction haut et de face qui forment un angle de 90°" src="listener.svg"></p>
 
 <div class="note">
 <p><strong>Note :</strong> For more information, see our <a href="/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics">Web audio spatialization basics</a> article.</p>
@@ -338,8 +338,8 @@ var memoireTampon = context.createBuffer(1, 22050, 22050);</pre>
 
 <p>En audio, <strong>fan-in</strong> désigne le processus par lequel un {{domxref("ChannelMergerNode")}} prend une série d'entrées mono entrée et restitue un seul signal multi-canaux :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12505/fanin.svg" style="height: 258px; width: 325px;"></p>
+<p><img alt="" src="fanin.svg"></p>
 
 <p><strong>Fan-out</strong> désigne le processus opposé, par lequel un {{domxref("ChannelSplitterNode")}} prend une source multi-canaux en entrée et restitue plusieurs signaux mono en sortie:</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/12507/fanout.svg" style="height: 258px; width: 325px;"></p>
+<p><img alt="" src="fanout.svg"></p>

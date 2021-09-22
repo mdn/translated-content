@@ -69,9 +69,9 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Animations_basiques
 var moon = new Image();
 var earth = new Image();
 function init(){
-  sun.src = 'https://mdn.mozillademos.org/files/1456/Canvas_sun.png';
-  moon.src = 'https://mdn.mozillademos.org/files/1443/Canvas_moon.png';
-  earth.src = 'https://mdn.mozillademos.org/files/1429/Canvas_earth.png';
+  sun.src = 'canvas_sun.png';
+  moon.src = 'canvas_moon.png';
+  earth.src = 'canvas_earth.png';
   window.requestAnimationFrame(draw);
 }
 
@@ -116,7 +116,7 @@ init();
 
 <pre class="brush: html hidden">&lt;canvas id="canvas" width="300" height="300"&gt;&lt;/canvas&gt;</pre>
 
-<p>{{EmbedLiveSample("Un_système_terrestre_animé", "310", "310", "https://mdn.mozillademos.org/files/202/Canvas_animation1.png")}}</p>
+<p>{{EmbedLiveSample("Un_système_terrestre_animé", "310", "310", "canvas_animation1.png")}}</p>
 
 <h2 id="Une_horloge_animée">Une horloge animée</h2>
 
@@ -223,7 +223,7 @@ window.requestAnimationFrame(clock);</pre>
 
 <pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
-<p>{{EmbedLiveSample("Une_horloge_animée", "180", "180", "https://mdn.mozillademos.org/files/203/Canvas_animation2.png")}}</p>
+<p>{{EmbedLiveSample("Une_horloge_animée", "180", "180", "canvas_animation2.png")}}</p>
 
 <h2 id="Un_panorama_défilant_en_boucle">Un panorama défilant en boucle</h2>
 
@@ -234,7 +234,7 @@ window.requestAnimationFrame(clock);</pre>
 // Variables utilisateur - les personnaliser pour changer l'image qui défile, ses
 // directions, et la vitesse.
 
-img.src = 'https://mdn.mozillademos.org/files/4553/Capitan_Meadows,_Yosemite_National_Park.jpg';
+img.src = 'capitan_meadows_yosemite_national_park.jpg';
 var CanvasXSize = 800;
 var CanvasYSize = 200;
 var speed = 30; // plus elle est basse, plus c'est rapide
