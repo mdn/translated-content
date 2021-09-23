@@ -10,7 +10,7 @@ tags:
   - HTTP アクセス制御
   - Security
   - XMLHttpRequest
-  - 'l10n:priority'
+  - l10n:priority
   - オリジン間リソース共有
   - セキュリティ
   - 同一オリジンポリシー
@@ -24,7 +24,7 @@ translation_of: Web/HTTP/CORS
 
 <p>セキュリティ上の理由から、ブラウザーは、スクリプトによって開始されるオリジン間 HTTP リクエストを制限しています。例えば、 <code>XMLHttpRequest</code>や <a href="/ja/docs/Web/API/Fetch_API">Fetch API</a> は<ruby><a href="/ja/docs/Web/Security/Same-origin_policy">同一オリジンポリシー</a><rp> (</rp><rt>same-origin policy</rt><rp>) </rp></ruby>に従います。つまり、これらの API を使用するウェブアプリケーションは、そのアプリケーションが読み込まれたのと同じオリジンに対してのみリソースのリクエストを行うことができ、それ以外のオリジンの場合は正しい CORS ヘッダーを含んでいることが必要です。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/14295/CORS_principle.png" style="height: 643px; width: 925px;"></p>
+<p><img alt="" src="cors_principle.png"></p>
 
 <p>CORS の仕組みは、安全なオリジン間のリクエストとブラウザー・サーバー間のデータ転送を支援します。最近のブラウザーは CORS を <code>XMLHttpRequest</code> や <a href="/ja/docs/Web/API/Fetch_API">Fetch</a> などの API で使用して、オリジン間 HTTP リクエストのリスクの緩和に役立てています。</p>
 
@@ -32,7 +32,7 @@ translation_of: Web/HTTP/CORS
 
 <p>誰もが読むべきです。</p>
 
-<p>もっと具体的に言えば、この記事は<strong>ウェブ管理者</strong>、<strong>サーバー開発者</strong>、<strong>フロントエンド開発者</strong>向けです。最近のブラウザーはヘッダーやポリシーの強制を含む、オリジン間共有のクライアント側コンポーネントを扱います。しかし CORS 標準は、サーバーが新たなリクエストヘッダーやレスポンスヘッダーを扱わなければならないことを示しています。サーバー開発者向けには、<a href="/ja/docs/Web/HTTP/Server-Side_Access_Control">サーバーの観点によるオリジン間共有 (PHP コードスニペット付き)</a> についての議論を合わせてお読みください。</p>
+<p>もっと具体的に言えば、この記事は<strong>ウェブ管理者</strong>、<strong>サーバー開発者</strong>、<strong>フロントエンド開発者</strong>向けです。最近のブラウザーはヘッダーやポリシーの強制を含む、オリジン間共有のクライアント側コンポーネントを扱います。しかし CORS 標準は、サーバーが新たなリクエストヘッダーやレスポンスヘッダーを扱わなければならないことを示しています。サーバー開発者向けには、<a href="/ja/docs/Web/HTTP/CORS">サーバーの観点によるオリジン間共有 (PHP コードスニペット付き)</a> についての議論を合わせてお読みください。</p>
 
 <h2 id="What_requests_use_CORS" name="What_requests_use_CORS">CORS を使用したリクエストとは</h2>
 
@@ -60,11 +60,11 @@ translation_of: Web/HTTP/CORS
 
 <p>オリジン間リソース共有がどのように動作するかを説明する3つのシナリオを示します。これらの例はすべて {{domxref("XMLHttpRequest")}} を用いており、対応しているブラウザーにおいて、サイトをまたいでアクセスすることができます。</p>
 
-<p>サーバー側から見たオリジン間リソース共有の説明 (PHP のコードスニペットを含む) は <a class="internal" href="/ja/docs/Web/HTTP/Server-Side_Access_Control">Server-Side Access Control (CORS)</a> の記事にあります。</p>
+<p>サーバー側から見たオリジン間リソース共有の説明 (PHP のコードスニペットを含む) は <a class="internal" href="/ja/docs/Web/HTTP/CORS">Server-Side Access Control (CORS)</a> の記事にあります。</p>
 
 <h3 id="Simple_requests" name="Simple_requests">単純リクエスト</h3>
 
-<p>リクエストによっては <a href="#Preflighted_requests">CORS プリフライト</a>を引き起こさないものがあります。これをこの記事では<em>「単純リクエスト」</em>と呼んでいますが、 (CORS を定義している) {{SpecName('Fetch')}} 仕様書ではこの用語を使用していません。 「単純リクエスト」は、<strong>以下のすべての条件を満たす</strong>ものです。</p>
+<p>リクエストによっては <a href="#preflighted_requests">CORS プリフライト</a>を引き起こさないものがあります。これをこの記事では<em>「単純リクエスト」</em>と呼んでいますが、 (CORS を定義している) {{SpecName('Fetch')}} 仕様書ではこの用語を使用していません。 「単純リクエスト」は、<strong>以下のすべての条件を満たす</strong>ものです。</p>
 
 <ul>
  <li>許可されているメソッドのうちの一つであること。
@@ -119,7 +119,7 @@ xhr.send();
 
 <p>これは、特権を扱うために CORS ヘッダーを使用して、クライアントとサーバーの間で簡単なデータ交換を行います。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/17214/simple-req-updated.png" style="height: 490px; width: 1023px;"></p>
+<p><img alt="" src="simple-req-updated.png"></p>
 
 <p>この場合、ブラウザーがサーバーに何を送信し、サーバーが何を返すかを見てみましょう。</p>
 
@@ -154,7 +154,7 @@ Content-Type: application/xml
 
 <h3 id="Preflighted_requests" name="Preflighted_requests">プリフライトリクエスト</h3>
 
-<p><a href="#Simple_requests">「単純リクエスト」 (前述)</a> とは異なり、「プリフライト」リクエストは始めに {{HTTPMethod("OPTIONS")}} メソッドによる HTTP リクエストを他のドメインにあるリソースに向けて送り、実際のリクエストを送信しても安全かどうかを確かめます。サイト間リクエストがユーザーデータに影響を与える可能性があるような場合に、このようにプリフライトを行います。</p>
+<p><a href="#simple_requests">「単純リクエスト」 (前述)</a> とは異なり、「プリフライト」リクエストは始めに {{HTTPMethod("OPTIONS")}} メソッドによる HTTP リクエストを他のドメインにあるリソースに向けて送り、実際のリクエストを送信しても安全かどうかを確かめます。サイト間リクエストがユーザーデータに影響を与える可能性があるような場合に、このようにプリフライトを行います。</p>
 
 <p>以下は、プリフライトが行われるリクエストの例です。</p>
 
@@ -168,7 +168,7 @@ xhr.send('&lt;person&gt;&lt;name&gt;Arun&lt;/name&gt;&lt;/person&gt;');
 
 <p>上記の例では、 <code>POST</code> で送信する XML の本体を作成しています。また、標準外の <code>X-PINGOTHER</code> HTTP リクエストヘッダーを設定しています。このようなヘッダーは HTTP/1.1 プロトコルに含まれていませんが、ウェブアプリケーションでは一般的に便利なものです。リクエストで <code>Content-Type</code> に <code>application/xml</code> を使用しており、かつカスタムヘッダーを設定しているため、このリクエストではプリフライトを行います。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/17268/preflight_correct.png" style="height: 1076px; width: 1024px;"></p>
+<p><img alt="" src="preflight_correct.png"></p>
 
 <div class="blockIndicator note">
 <p><strong>注</strong>: 後述するように、実際の <code>POST</code> リクエストには <code>Access-Control-Request-*</code> ヘッダーが含まれず、 <code>OPTIONS</code> リクエストのみで必要になります。</p>
@@ -273,13 +273,13 @@ Access-Control-Max-Age: 86400</pre>
 
 <ul>
  <li>サーバー側の振る舞いを変更して、プリフライトが発生しないようにするか、リダイレクトが発生しないようにする</li>
- <li>リクエストをプリフライトを起こさない<a href="#Simple_requests">単純リクエスト</a>などに変更する</li>
+ <li>リクエストをプリフライトを起こさない<a href="#simple_requests">単純リクエスト</a>などに変更する</li>
 </ul>
 
 <p>これらの変更ができない場合は、次のような別な方法があります。</p>
 
 <ol>
- <li><a href="#Simple_requests">単純リクエスト</a>を行い (Fetch API の {{domxref("Response.url")}} または {{domxref("XMLHttpRequest.responseURL")}} を使用して)、実際のプリフライトリクエストが転送される先を特定する。</li>
+ <li><a href="#simple_requests">単純リクエスト</a>を行い (Fetch API の {{domxref("Response.url")}} または {{domxref("XMLHttpRequest.responseURL")}} を使用して)、実際のプリフライトリクエストが転送される先を特定する。</li>
  <li>最初のステップの <code>Response.url</code> または <code>XMLHttpRequest.responseURL</code> で得た URL を使用して、もう一つのリクエスト (「本当の」リクエスト) を行う。</li>
 </ol>
 
@@ -305,7 +305,7 @@ function callOtherDomain() {
 
 <p>7行目で、クッキー付きで呼び出しを行うために {{domxref("XMLHttpRequest")}} に設定する必要があるフラグ、 <code>withCredentials</code> という真偽値型の値を示しています。既定では、クッキーなしで呼び出しが行われます。これは単純な <code>GET</code> リクエストなのでプリフライトは行いませんが、ブラウザーは {{HTTPHeader("Access-Control-Allow-Credentials")}}<code>: true</code> ヘッダーを持たないレスポンスを<strong>拒否</strong>し、ウェブコンテンツを呼び出すレスポンスを作成<strong>しない</strong>でしょう。</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/17213/cred-req-updated.png" style="height: 490px; width: 1023px;"></p>
+<p><img alt="" src="cred-req-updated.png"></p>
 
 <p>以下はクライアントとサーバーとの間のやりとりの例です。</p>
 
@@ -404,7 +404,7 @@ Vary: Origin</pre>
 <pre class="brush: none notranslate">Access-Control-Allow-Credentials: true
 </pre>
 
-<p><a class="internal" href="#Requests_with_credentials">資格情報付きのリクエスト</a>は前に説明したとおりです。</p>
+<p><a class="internal" href="#requests_with_credentials">資格情報付きのリクエスト</a>は前に説明したとおりです。</p>
 
 <h3 id="Access-Control-Allow-Methods">Access-Control-Allow-Methods</h3>
 
@@ -413,11 +413,11 @@ Vary: Origin</pre>
 <pre class="brush: none notranslate">Access-Control-Allow-Methods: &lt;method&gt;[, &lt;method&gt;]*
 </pre>
 
-<p>ブラウザーにこのヘッダーを送信する例を含む、プリフライトリクエストの例は <a class="internal" href="#Preflighted_requests">前述のとおりです</a>。</p>
+<p>ブラウザーにこのヘッダーを送信する例を含む、プリフライトリクエストの例は <a class="internal" href="#preflighted_requests">前述のとおりです</a>。</p>
 
 <h3 id="Access-Control-Allow-Headers">Access-Control-Allow-Headers</h3>
 
-<p>{{HTTPHeader("Access-Control-Allow-Headers")}} ヘッダーは、実際のリクエストでどの HTTP ヘッダーを使用できるかを示すために、<a class="internal" href="#Preflighted_requests">プリフライトリクエスト</a>のレスポンスで使用します。</p>
+<p>{{HTTPHeader("Access-Control-Allow-Headers")}} ヘッダーは、実際のリクエストでどの HTTP ヘッダーを使用できるかを示すために、<a class="internal" href="#preflighted_requests">プリフライトリクエスト</a>のレスポンスで使用します。</p>
 
 <pre class="brush: none notranslate">Access-Control-Allow-Headers: &lt;header-name&gt;[, &lt;header-name&gt;]*
 </pre>
@@ -446,7 +446,7 @@ Vary: Origin</pre>
 <pre class="brush: none notranslate">Access-Control-Request-Method: &lt;method&gt;
 </pre>
 
-<p>使用例は<a class="internal" href="#Preflighted_requests">前出のとおりです</a>。</p>
+<p>使用例は<a class="internal" href="#preflighted_requests">前出のとおりです</a>。</p>
 
 <h3 id="Access-Control-Request-Headers">Access-Control-Request-Headers</h3>
 
@@ -455,7 +455,7 @@ Vary: Origin</pre>
 <pre class="brush: none notranslate">Access-Control-Request-Headers: &lt;field-name&gt;[, &lt;field-name&gt;]*
 </pre>
 
-<p>使用例は <a class="internal" href="#Preflighted_requests">前出のとおりです</a>。</p>
+<p>使用例は <a class="internal" href="#preflighted_requests">前出のとおりです</a>。</p>
 
 <h2 id="Specifications" name="Specifications">仕様書</h2>
 
