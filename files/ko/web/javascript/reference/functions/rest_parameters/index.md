@@ -1,31 +1,34 @@
 ---
-title: Rest 파라미터
+title: 나머지 매개변수
 slug: Web/JavaScript/Reference/Functions/rest_parameters
 tags:
   - Functions
   - JavaScript
-  - Rest
-  - Rest parameters
+  - Language feature
+  - Reference
+browser-compat: javascript.functions.rest_parameters
 translation_of: Web/JavaScript/Reference/Functions/rest_parameters
 ---
-<div>{{jsSidebar("Functions")}}</div>
+{{jsSidebar("Functions")}}
 
-<p><strong>Rest 파라미터</strong> 구문은 정해지지 않은 수(an indefinite number, 부정수) 인수를 배열로 나타낼 수 있게 합니다.</p>
+**나머지 매개변수** 구문을 사용하면 함수가 정해지지 않은 수의 매개변수를 배열로 받을 수 있습니다. JavaScript에서 [가변항 함수](https://en.wikipedia.org/wiki/Variadic_function)를 표현할 때 사용합니다.
 
-<p>{{EmbedInteractiveExample("pages/js/functions-restparameters.html")}}</p>
+{{EmbedInteractiveExample("pages/js/functions-restparameters.html")}}
 
-<h2 id="구문">구문</h2>
+## 구문
 
-<pre class="brush: js">function f(a, b, ...theArgs) {
+```js
+function f(a, b, ...theArgs) {
   // ...
 }
-</pre>
+```
 
-<h2 id="설명">설명</h2>
+## 설명
 
-<p>함수의 마지막 파라미터의 앞에 <code>...</code> 를 붙여 (사용자가 제공한) 모든 나머지 인수를 "표준" 자바스크립트 배열로 대체합니다. 마지막 파라미터만 "Rest 파라미터" 가 될 수 있습니다.</p>
+함수의 마지막 매개변수 앞에 "`...`"(세 개의 U+002E FULL STOP 문자)를 붙이면 (사용자가 제공한) 모든 후속 매개변수를 [표준 JavaScript 배열](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array)에 넣도록 지정합니다. 마지막 매개변수만 나머지 매개변수로 설정할 수 있습니다.
 
-<pre class="brush: js">function myFun(a, b, ...manyMoreArgs) {
+```js
+function myFun(a, b, ...manyMoreArgs) {
   console.log("a", a);
   console.log("b", b);
   console.log("manyMoreArgs", manyMoreArgs);
@@ -33,181 +36,181 @@ translation_of: Web/JavaScript/Reference/Functions/rest_parameters
 
 myFun("one", "two", "three", "four", "five", "six");
 
-// Console Output:
+// 콘솔 출력:
 // a, one
 // b, two
-// manyMoreArgs, [three, four, five, six]</pre>
+// manyMoreArgs, [three, four, five, six]
+```
 
-<p> </p>
+### 빠른 참조
 
-<h3 id="Rest_파라미터_및_arguments_객체간_차이">Rest 파라미터 및 <code>arguments</code> 객체간 차이</h3>
+함수 정의에는 하나의 `...`만 존재할 수 있습니다.
 
-<p>Rest 파라미터와 <a href="/ko/docs/Web/JavaScript/Reference/Functions/arguments"><code>arguments</code></a> 객체 사이에 세 가지 주요 차이점이 있습니다:</p>
+```js example-bad
+foo(...one, ...wrong, ...wrong)
+```
 
-<ul>
- <li>Rest 파라미터는 구분된 이름(예, 함수 표현에 정식으로 정의된 것)이 주어지지 않은 유일한 대상인 반면, <code>arguments</code> 객체는 함수로 전달된 모든 인수를 포함합니다.</li>
- <li><code>arguments</code> 객체는 실제 배열이 아니고 rest 파라미터는 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Array"><code>Array</code></a> 인스턴스로, <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/sort"><code>sort</code></a>, <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/map"><code>map</code></a>, <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach"><code>forEach</code></a> 또는 <a href="/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/pop"><code>pop</code></a> 같은 메서드가 바로 인스턴스에 적용될 수 있음을 뜻합니다.</li>
- <li>즉 <code>arguments</code> 객체는 자체에 특정 추가 기능이 있습니다 (<code>callee</code> 속성처럼).</li>
-</ul>
+나머지 매개변수는 반드시 함수 정의의 마지막 매개변수여야 합니다.
 
-<h3 id="arguments에서_배열까지">arguments에서 배열까지</h3>
+```js example-bad
+foo(...wrong, arg2, arg3)
+```
 
-<p>Rest 파라미터는 인수에 의해 유발된 상용구(boilerplate) 코드를 줄이기 위해 도입되었습니다.</p>
+```js example-good
+foo(arg1, arg2, ...correct)
+```
 
-<pre class="brush: js">// Rest 파라미터 이전에, "arguments" 는 다음을 사용해 일반적인 배열로 변환될 수 있음
+### 나머지 매개변수와 `arguments` 객체의 차이
 
+나머지 매개변수와 {{jsxref("Functions/arguments", "arguments")}} 객체 사이에는 세 개의 주요 차이가 있습니다.
+
+- `arguments` 객체는 **실제 배열이 아닙니다**. 그러나 나머지 매개변수는 {{jsxref("Array")}} 인스턴스이므로 {{jsxref("Array.sort", "sort")}}, {{jsxref("Array.map", "map")}}, {{jsxref("Array.forEach", "forEach")}}, {{jsxref("Array.pop", "pop")}} 등의 메서드를 직접 적용할 수 있습니다.
+- `arguments` 객체는 `callee` 속성과 같은 추가 기능을 포함합니다.
+- `...restParam`은 후속 매개변수만 배열에 포함하므로 `...restParam` **이전**에 직접 정의한 매개변수는 포함하지 않습니다. 그러나 `arguments` 객체는, `...restParam`의 각 항목까지 더해 모든 매개변수를 포함합니다.
+
+### 인수에서 배열로
+
+나머지 매개변수는 다수의 인수를 배열로 변환하는 과정의 보일러플레이트 코드를 줄이기 위해 도입됐습니다.
+
+```js
+// 나머지 매개변수 이전에 "arguments"를 일반 배열로 변환하던 방법
 function f(a, b) {
-
-  var normalArray = Array.prototype.slice.call(arguments);
+  let normalArray = Array.prototype.slice.call(arguments)
   // -- 또는 --
-  var normalArray = [].slice.call(arguments);
+  let normalArray = [].slice.call(arguments)
   // -- 또는 --
-  var normalArray = Array.from(arguments);
+  let normalArray = Array.from(arguments)
 
-  var first = normalArray.shift(); // OK, 첫 번째 인수를 반환
-  var first = arguments.shift(); // ERROR (arguments 가 일반적인 배열이 아님)
-
+  let first = normalArray.shift()  // 동작, 첫 번째 매개변수 반환
+  let first = arguments.shift()    // 오류, arguments는 실제 배열이 아님
 }
 
-// 이제 rest 파라미터를 사용해 쉽게 일반적인 배열에 접근할 수 있음
+// 이제는 나머지 매개변수를 사용해 쉽게 배열로 가져올 수 있음
 
 function f(...args) {
-  var normalArray = args;
-  var first = normalArray.shift(); // OK, 첫 번째 인수를 반환
-}</pre>
+  let normalArray = args
+  let first = normalArray.shift() // 동작, 첫 번째 매개변수 반환
+}
+```
 
-<h3 id="Rest_파라미터_해체">Rest 파라미터 해체</h3>
+## 예제
 
-<p>Rest 파라미터는 해체될 수 있습니다(배열로만). 이는 데이터가 구분된 변수로 해체될 수 있음을 의미합니다. <a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">구조 분해 할당</a> 문서를 보세요.</p>
+### 나머지 매개변수 사용하기
 
-<pre class="brush: js">function f(...[a, b, c]) {
-  return a + b + c;
+아래 예제에서, 첫 번째 인수는 `a`, 두 번째 인수는 `b`로 맵핑되므로 이 두 개의 인수는 일반적인 방법으로 사용할 수 있습니다.
+
+그러나 세 번째 인수인 `manyMoreArgs`는 셋, 넷, 다섯, 여섯, ... n번째 인수까지, 사용자가 제공한 만큼의 인수를 포함한 배열입니다.
+
+```js
+function myFun(a, b, ...manyMoreArgs) {
+  console.log("a", a)
+  console.log("b", b)
+  console.log("manyMoreArgs", manyMoreArgs)
 }
 
-f(1)          // NaN (b 와 c 는 undefined)
-f(1, 2, 3)    // 6
-f(1, 2, 3, 4) // 6 (4번 째 파라미터는 해체되지 않음)</pre>
+myFun("one", "two", "three", "four", "five", "six")
 
-<h2 id="예제">예제</h2>
+// a, "one"
+// b, "two"
+// manyMoreArgs, ["three", "four", "five", "six"] <-- 배열임에 주목
+```
 
-<p>이 예제에서, 첫 번째 인수는 <code>"a"</code>, 두 번째 인수는 <code>"b"</code> 로 매핑되어, 일반적인 유명 인수와 같이 사용됩니다. 반면에 3번 째 인수 <code>"manyMoreArgs"</code> 는 사용자가 포함시킨 인수를 포함하는 배열이 됩니다.</p>
+매개변수를 세 개만 제공하더라도 마지막 인수는 여전히 배열인 것을 확인할 수 있습니다.
 
-<pre class="brush: js">function myFun(a, b, ...manyMoreArgs) {
-  console.log("a", a);
-  console.log("b", b);
-  console.log("manyMoreArgs", manyMoreArgs);
+```js
+// 위에 정의한 함수를 그대로 사용
+
+myFun("one", "two", "three")
+
+// a, "one"
+// b, "two"
+// manyMoreArgs, ["three"] <-- 요소가 하나지만 여전히 배열임
+```
+
+그리고 아래에선 매개변수를 두 개만 제공했지만, `manyMoreArgs`는 여전히 (빈) 배열입니다.
+
+```js
+// 위에 정의한 함수를 그대로 사용
+
+myFun("one", "two")
+
+// a, "one"
+// b, "two"
+// manyMoreArgs, [] <-- 여전히 배열
+```
+
+### 매개변수 길이
+
+`theArgs`가 배열이므로, `length` 속성을 사용하면 길이를 알아낼 수 있습니다.
+
+```js
+function fun1(...theArgs) {
+  console.log(theArgs.length)
 }
 
-myFun("one", "two", "three", "four", "five", "six");
+fun1()         // 0
+fun1(5)        // 1
+fun1(5, 6, 7)  // 3
+```
 
-// a, one
-// b, two
-// manyMoreArgs, [three, four, five, six]</pre>
+### 나머지 매개변수를 일반 매개변수와 함께 사용하기
 
-<p>아래를 보면, 하나의 값만 있더라도 마지막 인수는 여전히 배열을 갖습니다.</p>
+이 예제에서는 첫 번째 이후의 모든 매개변수를 배열에 모은 후, 각각의 값을 첫 번째 매개변수로 곱한 결과를 반환합니다.
 
-<pre class="brush: js">// 위 예제와 동일한 함수 정의를 사용
-
-myFun("one", "two", "three");
-
-// a, one
-// b, two
-// manyMoreArgs, [three]</pre>
-
-<p>아래를 보면, 3번 째 인수가 제공되지 않더라도, "manyMoreArgs" 는 여전히 배열입니다(비어있긴하지만).</p>
-
-<pre class="brush: js">// 위 예제와 동일한 함수 정의를 사용
-
-myFun("one", "two");
-
-// a, one
-// b, two
-// manyMoreArgs, []</pre>
-
-<p><code>theArgs</code> 가 배열이므로, <code>length</code> 프로퍼티를 사용해 엘리먼트의 수를 얻을 수 있습니다.</p>
-
-<pre class="brush: js">function fun1(...theArgs) {
-  console.log(theArgs.length);
+```js
+function multiply(multiplier, ...theArgs) {
+  return theArgs.map(element => {
+    return multiplier * element
+  })
 }
 
-fun1();  // 0
-fun1(5); // 1
-fun1(5, 6, 7); // 3</pre>
+let arr = multiply(2, 15, 25, 42)
+console.log(arr)  // [30, 50, 84]
+```
 
-<p>다음 예제에서, rest 파라미터는 첫 번째 인수 다음의 모든 인수를 배열로 모으는데 사용됩니다. 각각은 첫 번째 파라미터와 곱해져 배열로 반환됩니다.</p>
+### 나머지 매개변수는 실제 배열, `arguments`는 유사 배열
 
-<pre class="brush: js">function multiply(multiplier, ...theArgs) {
-  return theArgs.map(function(element) {
-    return multiplier * element;
-  });
+나머지 매개변수에서는 {{jsxref("Array")}} 메서드를 사용할 수 있지만, `arguments` 객체에서는 사용할 수 없습니다.
+
+```js
+function sortRestArgs(...theArgs) {
+  let sortedArgs = theArgs.sort()
+  return sortedArgs
 }
 
-var arr = multiply(2, 1, 2, 3);
-console.log(arr); // [2, 4, 6]</pre>
-
-<p><code>Array</code> 메소드는 rest 파라미터에서 사용될 수 있지만, <code>arguments</code> 객체에서는 그렇지 않습니다.</p>
-
-<pre class="brush: js">function sortRestArgs(...theArgs) {
-  var sortedArgs = theArgs.sort();
-  return sortedArgs;
-}
-
-console.log(sortRestArgs(5, 3, 7, 1)); // 1, 3, 5, 7
+console.log(sortRestArgs(5, 3, 7, 1)) // 1, 3, 5, 7
 
 function sortArguments() {
-  var sortedArgs = arguments.sort();
-  return sortedArgs; // this will never happen
+  let sortedArgs = arguments.sort()
+  return sortedArgs
 }
 
+console.log(sortArguments(5, 3, 7, 1))
+// TypeError 발생 (arguments.sort is not a function)
+```
 
-console.log(sortArguments(5, 3, 7, 1)); // TypeError (arguments.sort is not a function)</pre>
+`arguments` 객체에 `Array` 메서드를 사용하려면 우선 `arguments`를 실제 배열로 변환해야 합니다.
 
-<p><code>arguments</code> 객체에서 <code>Array</code> 메소드를 사용하려면, 이를 먼저 실제 배열로 변환해야합니다.</p>
-
-<pre class="brush: js">function sortArguments() {
-  var args = Array.from(arguments);
-  var sortedArgs = args.sort();
-  return sortedArgs;
+```js
+function sortArguments() {
+  let args = Array.from(arguments)
+  let sortedArgs = args.sort()
+  return sortedArgs
 }
-console.log(sortArguments(5, 3, 7, 1)); // 1, 3, 5, 7
-</pre>
+console.log(sortArguments(5, 3, 7, 1))  // 1, 3, 5, 7
+```
 
-<h2 id="명세">명세</h2>
+## Specifications
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">명세</th>
-   <th scope="col">상태</th>
-   <th scope="col">설명</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ES6', '#sec-function-definitions', 'Function Definitions')}}</td>
-   <td>{{Spec2('ES6')}}</td>
-   <td>초기 정의.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-function-definitions', 'Function Definitions')}}</td>
-   <td>{{Spec2('ESDraft')}}</td>
-   <td> </td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="브라우저_호환성">브라우저 호환성</h2>
+## Browser compatibility
 
-<p> </p>
+{{Compat}}
 
-<p>{{Compat("javascript.functions.rest_parameters")}}</p>
+## 함께 보기
 
-<h2 id="함께_보기">함께 보기</h2>
-
-<ul>
- <li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax">Spread 문법</a> (또한 ‘<code>...</code>’)</li>
- <li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/arguments">Arguments 객체</a></li>
- <li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></li>
- <li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions">함수</a></li>
- <li><a href="http://wiki.ecmascript.org/doku.php?id=harmony:rest_parameters">Original proposal at ecmascript.org</a></li>
- <li><a href="http://javascriptweblog.wordpress.com/2011/01/18/javascripts-arguments-object-and-beyond/">JavaScript arguments object and beyond</a></li>
- <li><a href="https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment">구조 분해 할당</a></li>
-</ul>
+- [전개 구문](/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax) (같은 '`...`' 사용)
+- [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [`arguments` 객체](/ko/docs/Web/JavaScript/Reference/Functions/arguments)
+- {{jsxref("Array")}}
