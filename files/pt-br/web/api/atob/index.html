@@ -1,17 +1,19 @@
 ---
-title: WindowBase64.atob()
+title: atob()
 slug: Web/API/atob
 tags:
   - API
-  - Referencia
-  - WindowBase64
-  - metodo
+  - Window
+  - Método
+  - Encodificação
+  - Decodificação
+  - Base64
 translation_of: Web/API/WindowOrWorkerGlobalScope/atob
 original_slug: Web/API/WindowOrWorkerGlobalScope/atob
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p>A função <strong><code>WindowBase64.atob()</code></strong> decodifica uma string de dados que foi codificada através da codificação base-64. Você pode usar o método {{domxref("WindowBase64.btoa","window.btoa()")}} para codificar e transmitir dados que, se não codificados, podem causar problemas de comunicação. Após transmití-los pode-se usar o método <code>window.atob()</code> para decodificar os dados novamente. Por exemplo, você pode codificar, transmitir,  e decodificar caracteres de controle como valores ASCII de 0 a 31.</p>
+<p>A função <strong><code>atob()</code></strong> decodifica uma string de dados que foi codificada através da codificação <a href="https://developer.mozilla.org/en-US/docs/Glossary/Base64">Base64</a>. Você pode usar o método {{domxref("btoa","window.btoa()")}} para codificar e transmitir dados que, se não codificados, podem causar problemas de comunicação. Após transmití-los pode-se usar o método <code>window.atob()</code> para decodificar os dados novamente. Por exemplo, você pode codificar, transmitir,  e decodificar caracteres de controle como valores ASCII de 0 a 31.</p>
 
 <p>Para utilizar com strings Unicode ou UTF-8, veja <a href="/en-US/docs/Web/JavaScript/Base64_encoding_and_decoding#The_.22Unicode_Problem.22">esta nota em <em>Base64 encoding and decoding</em></a> e <a href="/en-US/docs/Web/API/window.btoa#Unicode_Strings">essa nota em <code>window.btoa()</code></a>.</p>
 
@@ -21,10 +23,10 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/atob
 
 <h2 id="Exemplo">Exemplo</h2>
 
-<pre class="brush:js">var <em>dadoCodificado </em>= window.btoa("Olá, mundo"); // codifica a string
+<pre class="brush:js">var <em>dadoCodificado</em> = window.btoa("Olá, mundo"); // codifica a string
 var dadoDecodificado = window.atob(<em>dadoCodificado</em>); // decodifica a string</pre>
 
-<h2 id="Especificações">Especificações</h2>
+<h2 id="Especificacoes">Especificações</h2>
 
 <table class="standard-table">
  <thead>
@@ -36,19 +38,9 @@ var dadoDecodificado = window.atob(<em>dadoCodificado</em>); // decodifica a str
  </thead>
  <tbody>
   <tr>
-   <td>{{SpecName('HTML WHATWG', '#dom-windowbase64-atob', 'WindowBase64.atob()')}}</td>
+   <td>{{SpecName('HTML WHATWG', '#dom-windowbase64-atob', 'atob()')}}</td>
    <td>{{Spec2('HTML WHATWG')}}</td>
    <td>Nenhuma mudança desde a última versão, {{SpecName("HTML5.1")}}.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName('HTML5.1', '#dom-windowbase64-atob', 'WindowBase64.atob()')}}</td>
-   <td>{{Spec2('HTML5.1')}}</td>
-   <td>Versão de {{SpecName("HTML WHATWG")}}. Nenhuma mudança.</td>
-  </tr>
-  <tr>
-   <td>{{SpecName("HTML5 W3C", "#dom-windowbase64-atob", "WindowBase64.atob()")}}</td>
-   <td>{{Spec2('HTML5 W3C')}}</td>
-   <td>Versão de {{SpecName("HTML WHATWG")}}. Criação do <code>WindowBase64</code> (antes as propriedades ficavam no target).</td>
   </tr>
  </tbody>
 </table>
@@ -63,7 +55,7 @@ var dadoDecodificado = window.atob(<em>dadoCodificado</em>); // decodifica a str
 
 <p>[2] A partir do <a href="/en-US/Firefox/Releases/27/Site_Compatibility">Firefox 27</a>, <code>atob()</code> ignora todos os caracteres de espaço no argumento para seguir as últimas especificações do HTML5. ({{bug(711180)}})</p>
 
-<h2 id="Veja_também">Veja também</h2>
+<h2 id="Veja_tambem">Veja também</h2>
 
 <ul>
  <li><a href="/Web/API/WindowBase64/Base64_encoding_and_decoding">Base64 encoding and decoding</a></li>
