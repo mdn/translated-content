@@ -2,58 +2,69 @@
 title: Intl.Locale() コンストラクター
 slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale
 tags:
-  - Constructor
+  - コンストラクター
+  - 国際化
   - Intl
   - JavaScript
-  - Locale
-  - Reference
-  - コンストラクター
   - ロケール
+  - Reference
+browser-compat: javascript.builtins.Intl.Locale.Locale
 translation_of: Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale
 ---
-<div>{{JSRef}}</div>
+{{JSRef}}
 
-<p><span class="seoSummary"><strong><code>Intl.Locale</code></strong> コンストラクターは、 Intl オブジェクトの標準組み込みプロパティで、 Unicode ロケール識別子を表します。</span></p>
+**`Intl.Locale`** コンストラクターは、 Intl オブジェクトの標準組み込みプロパティで、 Unicode ロケール識別子を表します。
 
-<div>{{EmbedInteractiveExample("pages/js/intl-locale.html")}}</div>
+{{EmbedInteractiveExample("pages/js/intl-locale.html")}}
 
-<h2 id="Syntax" name="Syntax">構文</h2>
 
-<pre class="syntaxbox">new Intl.Locale(<var>tag</var> [, <var>options</var>])</pre>
+## 構文
 
-<h3 id="Parameters" name="Parameters">引数</h3>
+```js
+new Intl.Locale(tag)
+new Intl.Locale(tag, options)
+```
 
-<dl>
- <dt><code><var>tag</var></code></dt>
- <dd>Unicode ロケール識別子の文字列です。</dd>
- <dt><code><var>options</var></code></dt>
- <dd>ロケールの構成を含むオブジェクトです。キーは Unicode ロケールタグで、値は有効な Unicode タグ値です。</dd>
-</dl>
+### 引数
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+- `tag`
+  - : Unicode ロケール識別子の文字列です。
+- `options`
+  - : ロケールの構成を含むオブジェクトです。キーは Unicode ロケールタグで、値は有効な Unicode タグ値です。
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ES Int Draft', '#sec-intl-locale-constructor')}}</td>
-  </tr>
- </tbody>
-</table>
+## 例
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+### 基本的な使用
 
-<div>
-<p>{{Compat("javascript.builtins.Intl.Locale.Locale")}}</p>
-</div>
+もっとも単純なものでは、{{jsxref("Intl/Locale/Locale", "Intl.Locale")}} コンストラクターはロケール識別子の文字列を引数に取ります。
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+```js
+let us = new Intl.Locale('en-US');
+```
 
-<ul>
- <li><a href="https://github.com/zbraniecki/Intl.js/tree/intllocale">The Intl.Locale Polyfill</a></li>
- <li><a href="https://www.unicode.org/reports/tr35/#Canonical_Unicode_Locale_Identifiers">Unicode locale identifiers spec</a></li>
-</ul>
+### Locale コンストラクターに options オブジェクトを渡して使用
+
+コンストラクターには、オプションで構成オブジェクトの引数を取ることができ、そこに複数の拡張型を指定することができます。たとえば、設定オブジェクトの [`hourCycle`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle) プロパティに任意の時間周期を設定し、それをコンストラクターに渡します。
+
+```js
+let locale = new Intl.Locale("en-US", { hourCycle: "h12" });
+console.log(locale.hourCycle); // Prints "h12"
+```
+
+## ポリフィル
+
+[formatjs Intl.Locale
+polyfill](https://formatjs.io/docs/polyfills/intl-locale)
+
+## 仕様書
+
+{{Specifications}}
+
+## ブラウザーの互換性
+
+{{Compat}}
+
+## 関連情報
+
+- {{jsxref("Intl.Collator")}}
+- [Unicode ロケール識別子の仕様書](https://www.unicode.org/reports/tr35/#Canonical_Unicode_Locale_Identifiers)
