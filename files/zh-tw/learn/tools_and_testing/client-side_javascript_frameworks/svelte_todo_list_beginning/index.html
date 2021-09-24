@@ -133,9 +133,9 @@ export default app</pre>
 
 <p><img alt="basic component rendering which a title that says 'Svelte to-do list'" src="02-todos-component-rendered.png" style="border-style: solid; border-width: 1px; display: block; margin: 0 auto;"></p>
 
-<h2 id="Adding_static_markup">Adding static markup</h2>
+<h2 id="Adding_static_markup">加上靜態標記</h2>
 
-<p>For the moment we will start with a static markup representation of our app, so you can see what it will look like. Copy and paste the following into our <code>Todos.svelte</code> component file, replacing the existing content:</p>
+<p>我們將會從應用程式的靜態標記表示開始，所以你將會看到它長什麼樣子。複製並貼上下面內容至<code>Todos.svelte</code>元件檔案以取代現有內容：</p>
 
 <pre class="brush: html">&lt;!-- Todos.svelte --&gt;
 &lt;div class="todoapp stack-large"&gt;
@@ -258,27 +258,27 @@ export default app</pre>
 
 &lt;/div&gt;</pre>
 
-<p>Check the rendered out again, and you'll see something like this:</p>
+<p>再次確認已經渲染出來的畫面，你應該會看到如下樣子：</p>
 
 <p><img alt="A todo list app, but unstyled, with a title of `what needs to be done`, inputs, checkboxes, etc." src="03-unstyled-todo-app.png" style="border-style: solid; border-width: 1px;"></p>
 
-<p>The HTML markup above is not very nicely styled and it's also functionally useless. Nevertheless, let's have a look at the markup and see how it relates to our desired features:</p>
+<p>上面HTML標記的樣式並不是那麼好看，而且也沒有實際功能。儘管如此，接著來看看它和我們想要的功能如何關聯起來：</p>
 
 <ul>
- <li>A label and a text box for entering new tasks.</li>
- <li>Three buttons to filter by task status.</li>
- <li>A label showing the total number of tasks and the completed tasks.</li>
- <li>An unordered list, which holds a list item for each task.</li>
- <li>When the task is being edited, the list item has an input and two button to cancel or save modifications.</li>
- <li>If the task is not being edited, there's a checkbox to set the completed status, and two buttons to edit or delete the task.</li>
- <li>Finally there are two buttons to check/uncheck all task and to remove completed tasks.</li>
+ <li>一個標籤和一個輸入框用來輸入新任務。</li>
+ <li>三個按鈕則依據狀態來過濾任務。</li>
+ <li>一個標籤用來顯示任務總數及已完成任務數量。</li>
+ <li>一個無順序清單，其中包含每一個任務項目。</li>
+ <li>編輯任務時，清單項目會有輸入框和兩個按鈕去取消或儲存變更。</li>
+ <li>如果任務處於非編輯狀態時，會有勾選框可以去設定已完成狀態和兩個按鈕去編輯或刪除任務。</li>
+ <li>最後有兩個按鈕可以去勾選/不勾選所有任務和刪除已完成的那些任務。</li>
 </ul>
 
-<p>In subsequent articles we'll get all these features working, and more besides.</p>
+<p>隨後的文章我們會逐一將這些功能完善，以及除此之外的功能等等。</p>
 
-<h3 id="Accessibility_features_of_the_todo_list">Accessibility features of the todo list</h3>
+<h3 id="Accessibility_features_of_the_todo_list">待辦清單的無障礙特徵</h3>
 
-<p>You may notice some unusual attributes here. For example:</p>
+<p>你可能有注意到一些特殊的屬性。例如：</p>
 
 <pre class="brush: html">&lt;button class="btn toggle-btn" aria-pressed="true"&gt;
   &lt;span class="visually-hidden"&gt;Show&lt;/span&gt;
@@ -286,19 +286,19 @@ export default app</pre>
   &lt;span class="visually-hidden"&gt;tasks&lt;/span&gt;
 &lt;/button&gt;</pre>
 
-<p>Here, <code>aria-pressed</code> tells assistive technology (like screen readers) that the button can be in one of two states: <code>pressed</code> or <code>unpressed</code>. Think of these as analogs for on and off. Setting a value of <code>true</code> means that the button is pressed by default.</p>
+<p>在這裡，<code>aria-pressed</code>告訴輔助技術（像是螢幕閱讀器）按鈕可以是兩狀態其中之一：<code>pressed</code>或<code>unpressed</code>。可以想像類似於開關狀態。設定數值為<code>true</code>時，意謂著按鈕預設是被按下的。</p>
 
-<p>The class <code>visually-hidden</code> has no effect yet, because we have not included any CSS. Once we have put our styles in place, though, any element with this class will be hidden from sighted users and still available to screen reader users — this is because these words are not needed by sighted users; they are there to provide more information about what the button does for screenreader users that do not have the extra visual context to help them.</p>
+<p><code>visually-hidden</code>類別現在還沒有效果，因為我們還沒引入任何CSS。一旦引入我們的樣式後，對於可以看見的使用者們會隱藏那些具有此類別的元素並仍能夠讓那些螢幕閱讀器使用者來使用——這是因為這些文字並不需要給可以看見的使用者看到；它們提供更多資訊讓那些螢幕閱讀器使用者了解按鈕實際可以做什麼，而不需要借助一些額外的視覺環境來幫助他們。</p>
 
-<p>Further down, you can find the following <code>&lt;ul&gt;</code> element:</p>
+<p>在往下看一點，你可以找到如下<code>&lt;ul&gt;</code>元素：</p>
 
 <pre class="brush: html">&lt;ul role="list" className="todo-list stack-large" aria-labelledby="list-heading"&gt;</pre>
 
-<p>The <code>role</code> attribute helps assistive technology explain what kind of semantic value an element has — or what its purpose is. A <code>&lt;ul&gt;</code> is treated like a list by default, but the styles we're about to add will break that functionality. This role will restore the "list" meaning to the <code>&lt;ul&gt;</code>  element. If you want to learn more about why this is necessary, you can check out Scott O'Hara’s article, “Fixing Lists”.</p>
+<p><code>role</code>屬性則幫助輔助技術去解釋元素具有什麼種類的語義數值——或它的目的。預設情況下，<code>&lt;ul&gt;</code>會被視為清單，但在加上樣式之後會破壞原有性質。明確定義規則為「list」將能復原<code>&lt;ul&gt;</code>元素本身意義。假如你想要知道更多為什麼需要明確定義的話，可以去參考Scott O'Hara’s的「Fixing Lists」文章。</p>
 
-<p>The <code>aria-labelledby</code> attribute tells assistive technologies that we're treating our <code>&lt;h2&gt;</code> with an <code>id</code> of <code>list-heading</code> as the label that describes the purpose of the list beneath it. Making this association gives the list a more informative context, which could help screen reader users better understand the purpose of it.</p>
+<p><code>aria-labelledby</code>屬性則告訴輔助技術，我們把<code>&lt;h2&gt;</code>且<code>id</code>為<code>list-heading</code>作為描述下面清單用途的標籤。建立這種關聯為清單提供更多上下文資訊，這可以幫助螢幕閱讀器使用者更好地去了解它的目的。</p>
 
-<p>This seems like a good time to talk about how Svelte deals with accessibility; let's do that now.</p>
+<p>這似乎是討論Svelte如何處理無障礙性的好時機；讓我們繼續看下去。</p>
 
 <h2 id="Svelte_accessibility_support">Svelte accessibility support</h2>
 
