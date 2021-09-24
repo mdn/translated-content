@@ -23181,13 +23181,6 @@
       "FEhaoxinjie"
     ]
   },
-  "Web/API/Window/minimize": {
-    "modified": "2019-01-16T17:02:20.467Z",
-    "contributors": [
-      "teoli",
-      "ziyunfei"
-    ]
-  },
   "Web/API/Window/moveBy": {
     "modified": "2019-03-23T23:10:30.097Z",
     "contributors": [
@@ -47335,6 +47328,13 @@
       "aokihu",
       "zhengzong.fu",
       "Carrie zhxj"
+    ]
+  },
+  "conflicting/Web/API/Window": {
+    "modified": "2019-01-16T17:02:20.467Z",
+    "contributors": [
+      "teoli",
+      "ziyunfei"
     ]
   },
   "conflicting/Web/API/Window/localStorage": {
