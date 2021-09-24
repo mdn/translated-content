@@ -11,10 +11,10 @@ original_slug: Web/CSS/CSS_Fonts/Guide_polices_variables
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary"><strong>Les polices variables</strong> sont une évolution de la spécification OpenType et qui permet d'activer différentes variations d'une police dans un seul fichier plutôt que d'avoir différents fichiers pour chaque taille, graisse ou style. En CSS, on peut accéder à l'ensemble des variations en utilisant une seule référence {{cssxref("@font-face")}}. Dans cet article, nous verrons tout ce qu'il faut savoir pour commencer à utiliser les polices variables.</p>
+<p><strong>Les polices variables</strong> sont une évolution de la spécification OpenType et qui permet d'activer différentes variations d'une police dans un seul fichier plutôt que d'avoir différents fichiers pour chaque taille, graisse ou style. En CSS, on peut accéder à l'ensemble des variations en utilisant une seule référence {{cssxref("@font-face")}}. Dans cet article, nous verrons tout ce qu'il faut savoir pour commencer à utiliser les polices variables.</p>
 
 <div class="warning">
-<p><strong>Attention !  </strong>Afin d'utiliser les polices variables, il faut s'assurer que son système d'exploitation est à jour. Pour les systèmes basés sur GNU/Linux, il faut la version la plus récente de Linux Freetype. Pour macOS, les versions antérieures à 10.13 ne prennent pas en charge les polices variables. Si votre système d'exploitation n'est pas à jour ou ne prend pas en charge les polices variables, vous ne pourrez pas en bénéficier sur le Web ou dans les outils de développement Firefox par exemple.</p>
+<p><strong>Attention :</strong> Afin d'utiliser les polices variables, il faut s'assurer que son système d'exploitation est à jour. Pour les systèmes basés sur GNU/Linux, il faut la version la plus récente de Linux Freetype. Pour macOS, les versions antérieures à 10.13 ne prennent pas en charge les polices variables. Si votre système d'exploitation n'est pas à jour ou ne prend pas en charge les polices variables, vous ne pourrez pas en bénéficier sur le Web ou dans les outils de développement Firefox par exemple.</p>
 </div>
 
 <h2 id="Qu'est-ce_qu'une_police_variable">Qu'est-ce qu'une police variable ?</h2>
@@ -71,7 +71,7 @@ original_slug: Web/CSS/CSS_Fonts/Guide_polices_variables
   <p><code>wght</code> correspondra à l'axe enregistré du même nom et <code>GRAD</code> à un axe spécifique.</p>
  </li>
  <li>
-  <p>Si on a défini des valeurs avec <code>font-variation-settings</code> et qu'on souhaite changer une de ces valeurs, il sera nécessaire de redéclarer l'ensemble des valeurs (de la même façon qu'on doit redéclarer l'ensemble des caractéristiques OpenType avec {{cssxref("font-feature-settings")}}). Il est possible de contourner cet écueil en utilisant <a href="/fr/docs/Web/CSS/Les_variables_CSS">des propriétés CSS personnalisées</a> pour les valeurs individuelles et en modifiant uniquement la valeur d'une des propriétés personnalisée (cf. l'exemple en fin d'article).</p>
+  <p>Si on a défini des valeurs avec <code>font-variation-settings</code> et qu'on souhaite changer une de ces valeurs, il sera nécessaire de redéclarer l'ensemble des valeurs (de la même façon qu'on doit redéclarer l'ensemble des caractéristiques OpenType avec {{cssxref("font-feature-settings")}}). Il est possible de contourner cet écueil en utilisant <a href="/fr/docs/Web/CSS/Using_CSS_custom_properties">des propriétés CSS personnalisées</a> pour les valeurs individuelles et en modifiant uniquement la valeur d'une des propriétés personnalisée (cf. l'exemple en fin d'article).</p>
  </li>
 </ol>
 

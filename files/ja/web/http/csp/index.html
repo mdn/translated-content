@@ -32,7 +32,7 @@ translation_of: Web/HTTP/CSP
 
 <h3 id="Mitigating_packet_sniffing_attacks" name="Mitigating_packet_sniffing_attacks">パケット盗聴攻撃の軽減</h3>
 
-<p>取得するコンテンツのドメインを制限することに加えて、サーバーは通信に使うプロトコルを指定することも可能です。例えば、 (セキュリティの観点からはこれが理想的ですが) すべてのコンテンツを HTTPS で取得されるようにサーバーから指定することが出来ます。データ通信におけるセキュリティ戦略を完全なものとするには、HTTPS 通信を強制するだけではなく、すべての <a href="https://developer.mozilla.org/ja/docs/Web/HTTP/Cookies">Cookie に secure フラグ</a> を付けたり、HTTP ページから対応する HTTPS ページへの自動リダイレクトを整備することも必要です。また、ブラウザーが暗号化された通信路のみを用いてサイトに接続することを保証するため、{{HTTPHeader("Strict-Transport-Security")}} HTTP ヘッダーを利用することも可能です。</p>
+<p>取得するコンテンツのドメインを制限することに加えて、サーバーは通信に使うプロトコルを指定することも可能です。例えば、 (セキュリティの観点からはこれが理想的ですが) すべてのコンテンツを HTTPS で取得されるようにサーバーから指定することが出来ます。データ通信におけるセキュリティ戦略を完全なものとするには、HTTPS 通信を強制するだけではなく、すべての <a href="/ja/docs/Web/HTTP/Cookies">Cookie に secure フラグ</a> を付けたり、HTTP ページから対応する HTTPS ページへの自動リダイレクトを整備することも必要です。また、ブラウザーが暗号化された通信路のみを用いてサイトに接続することを保証するため、{{HTTPHeader("Strict-Transport-Security")}} HTTP ヘッダーを利用することも可能です。</p>
 
 <h2 id="Using_CSP" name="Using_CSP">CSP の適用</h2>
 

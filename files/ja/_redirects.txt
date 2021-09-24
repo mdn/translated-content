@@ -1138,8 +1138,8 @@
 /ja/docs/DOM/EventTarget.addEventListener	/ja/docs/Web/API/EventTarget/addEventListener
 /ja/docs/DOM/EventTarget.dispatchEvent	/ja/docs/Web/API/EventTarget/dispatchEvent
 /ja/docs/DOM/EventTarget.removeEventListener	/ja/docs/Web/API/EventTarget/removeEventListener
-/ja/docs/DOM/File.fileName	/ja/docs/Web/API/File/fileName
-/ja/docs/DOM/File.fileSize	/ja/docs/Web/API/File/fileSize
+/ja/docs/DOM/File.fileName	/ja/docs/conflicting/Web/API/File/name
+/ja/docs/DOM/File.fileSize	/ja/docs/conflicting/Web/API/Blob/size
 /ja/docs/DOM/File.getAsBinary	/ja/docs/Web/API/File/getAsBinary
 /ja/docs/DOM/File.getAsText	/ja/docs/Web/API/File/getAsText
 /ja/docs/DOM/File.lastModifiedDate	/ja/docs/Web/API/File/lastModifiedDate
@@ -2770,7 +2770,7 @@
 /ja/docs/MDN_at_ten	/ja/docs/MDN/At_ten
 /ja/docs/MDN_at_ten/Contributing_to_MDN	/ja/docs/MDN/Contribute
 /ja/docs/MDN_at_ten/History_of_MDN	/ja/docs/MDN/At_ten/History_of_MDN
-/ja/docs/Map	/ja/docs/orphaned/Map
+/ja/docs/Map	/ja/docs/Web/JavaScript/Reference/Global_Objects/Map
 /ja/docs/MathML	/ja/docs/Web/MathML
 /ja/docs/MathML/Element	/ja/docs/Web/MathML/Element
 /ja/docs/MathML/Element/math	/ja/docs/Web/MathML/Element/math
@@ -3087,13 +3087,15 @@
 /ja/docs/Web/API/EventTarget.removeEventListener	/ja/docs/Web/API/EventTarget/removeEventListener
 /ja/docs/Web/API/EventTarget/attachEvent	/ja/docs/Web/API/EventTarget/addEventListener
 /ja/docs/Web/API/FetchEvent_clone	/ja/docs/Web/API/FetchEvent
-/ja/docs/Web/API/File.fileName	/ja/docs/Web/API/File/fileName
-/ja/docs/Web/API/File.fileSize	/ja/docs/Web/API/File/fileSize
+/ja/docs/Web/API/File.fileName	/ja/docs/conflicting/Web/API/File/name
+/ja/docs/Web/API/File.fileSize	/ja/docs/conflicting/Web/API/Blob/size
 /ja/docs/Web/API/File.getAsBinary	/ja/docs/Web/API/File/getAsBinary
 /ja/docs/Web/API/File.getAsText	/ja/docs/Web/API/File/getAsText
 /ja/docs/Web/API/File.name	/ja/docs/Web/API/File/name
 /ja/docs/Web/API/File.size	/ja/docs/Web/API/Blob/size
 /ja/docs/Web/API/File.type	/ja/docs/Web/API/Blob/type
+/ja/docs/Web/API/File/fileName	/ja/docs/conflicting/Web/API/File/name
+/ja/docs/Web/API/File/fileSize	/ja/docs/conflicting/Web/API/Blob/size
 /ja/docs/Web/API/File/size	/ja/docs/Web/API/Blob/size
 /ja/docs/Web/API/Geolocation.clearWatch	/ja/docs/Web/API/Geolocation/clearWatch
 /ja/docs/Web/API/Geolocation.getCurrentPosition	/ja/docs/Web/API/Geolocation/getCurrentPosition
@@ -3240,6 +3242,7 @@
 /ja/docs/Web/API/Response/useFinalURL	/ja/docs/orphaned/Web/API/Response/useFinalURL
 /ja/docs/Web/API/SVGTests	/ja/docs/orphaned/Web/API/SVGTests
 /ja/docs/Web/API/SVGTransformable	/ja/docs/orphaned/Web/API/SVGTransformable
+/ja/docs/Web/API/ScrollToOptions	/ja/docs/conflicting/Web/API/Window/scroll
 /ja/docs/Web/API/ServiceWorker_API	/ja/docs/Web/API/Service_Worker_API
 /ja/docs/Web/API/ServiceWorker_API/Using_Service_Workers	/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers
 /ja/docs/Web/API/Slotable	/ja/docs/Web/API/Element

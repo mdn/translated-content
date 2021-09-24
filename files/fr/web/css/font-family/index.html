@@ -13,17 +13,16 @@ translation_of: Web/CSS/font-family
 
 <div>{{EmbedInteractiveExample("pages/css/font-family.html")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <p>Les valeurs sont séparées par des virgules, indiquant chacune une police alternative. Le moteur choisira la première valeur pour laquelle la police correspondante est installée sur l'ordinateur ou qui peut être téléchargée via la règle @ {{cssxref("@font-face")}} définie.</p>
 
 <p>Pour fixer <code>font-family</code> et d'autres propriétés liées aux polices de caractères, on pourra utiliser la propriété raccourcie {{cssxref("font")}}.</p>
 
 <p>Les auteurs doivent toujours inclure une famille de police générique dans cette liste car il n'y a aucune certitude qu'une police donnée aura été installée sur l'ordinateur ni qu'elle pourra être téléchargée grâce à {{cssxref("@font-face")}}. L'utilisation d'une famille de police générique permet au navigateur d'utiliser une police acceptable en recours si besoin.</p>
 
-<div class="note"><strong>Note :</strong> La propriété <code>font-family</code> définit une liste de police, ordonnée par priorité, de la plus haute à la plus basse. La sélection de la police ne se fait pas pour l'ensemble du texte mais<strong> caractère par caractère</strong>. Ainsi si une police ne dispose pas du caractère à représenter, ce sera la police suivante qui sera utilisée pour représenter le caractère. Pour Internet Explorer, cela ne fonctionne pas avec la version 6 et les version antérieures.<br>
-<br>
-Les propriétés {{cssxref("font-style")}}, {{cssxref("font-variant")}} et {{cssxref("font-size")}} permettront d'influencer le choix en fonction du style, de la variante ou de la taille disponible parmi les polices de la liste.</div>
+<div class="note">
+  <p><strong>Note :</strong> La propriété <code>font-family</code> définit une liste de police, ordonnée par priorité, de la plus haute à la plus basse. La sélection de la police ne se fait pas pour l'ensemble du texte mais<strong> caractère par caractère</strong>. Ainsi si une police ne dispose pas du caractère à représenter, ce sera la police suivante qui sera utilisée pour représenter le caractère. Pour Internet Explorer, cela ne fonctionne pas avec la version 6 et les version antérieures.</p>
+  <p>Les propriétés {{cssxref("font-style")}}, {{cssxref("font-variant")}} et {{cssxref("font-size")}} permettront d'influencer le choix en fonction du style, de la variante ou de la taille disponible parmi les polices de la liste.</p>
+</div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
@@ -57,9 +56,9 @@ font-family: unset;
 <h3 id="Valeurs">Valeurs</h3>
 
 <dl>
- <dt><a id="family-name" name="family-name"><code>&lt;family-name&gt;</code></a></dt>
+ <dt><code>&lt;family-name&gt;</code></dt>
  <dd>Le nom d'une famille de polices ; par exemple « Times » ou « Helvetica » sont des noms de famille de polices. Les noms de familles qui comportent des blancs doivent être encadrées par des doubles quotes (").</dd>
- <dt><a id="generic-name" name="generic-name"><code>&lt;generic-name&gt;</code></a></dt>
+ <dt><code>&lt;generic-name&gt;</code></dt>
  <dd>
  <p>Les noms de famille génériques sont utilisés comme mécanisme de secours pour conserver l'intention de mise en forme de l'auteur lorsqu'aucune des polices indiquées n'est disponible. Les noms de famille génériques sont des mots-clés et ne doivent pas être encadrés par des doubles quotes. Un nom de famille générique devrait être utilisé comme dernier élément de la liste des noms. Les mots-clés suivants sont définis :</p>
 

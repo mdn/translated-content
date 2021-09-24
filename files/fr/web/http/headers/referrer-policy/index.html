@@ -16,7 +16,7 @@ translation_of: Web/HTTP/Headers/Referrer-Policy
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><span class="seoSummary">L'en-tête {{glossary("HTTP header")}} <strong><code>Referrer-Policy</code></strong> contrôle la quantité d'<a href="/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns">informations sur le référent (referrer)</a> (envoyées par l'en-tête {{HTTPHeader("Referer")}}) incluses dans la requête.</span></p>
+<p>L'en-tête {{glossary("HTTP header")}} <strong><code>Referrer-Policy</code></strong> contrôle la quantité d'<a href="/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns">informations sur le référent (referrer)</a> (envoyées par l'en-tête {{HTTPHeader("Referer")}}) incluses dans la requête.</p>
 
 <table class="properties">
  <tbody>
@@ -33,11 +33,11 @@ translation_of: Web/HTTP/Headers/Referrer-Policy
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<div class="blockIndicator note">
-<p>Le nom originel de l'en-tête, {{HTTPHeader("Referer")}}, est une faute de frappe du mot anglais "referrer". L'en-tête <code>Referrer-Policy</code> ne comporte pas cette erreur.</p>
+<div class="note">
+<p><strong>Note :</strong> Le nom originel de l'en-tête, {{HTTPHeader("Referer")}}, est une faute de frappe du mot anglais "referrer". L'en-tête <code>Referrer-Policy</code> ne comporte pas cette erreur.</p>
 </div>
 
-<pre class="syntaxbox notranslate">Referrer-Policy: no-referrer
+<pre class="syntaxbox">Referrer-Policy: no-referrer
 Referrer-Policy: no-referrer-when-downgrade
 Referrer-Policy: origin
 Referrer-Policy: origin-when-cross-origin
@@ -54,7 +54,9 @@ Referrer-Policy: unsafe-url
  <dd>L'en-tête {{HTTPHeader("Referer")}} sera entièrement omis. Aucune information sur le référent ne sera envoyée avec les requêtes.</dd>
  <dt><code>no-referrer-when-downgrade</code> (default)</dt>
  <dd>C'est le comportement par défaut si aucune valeur n'est spécifiée ou quelle celle donnée est invalide. L'{{glossary("origin")}}, le {{glossary("path")}}, et la {{glossary("querystring")}} de l'URL sont envoyés comme référent quand le niveau de sécurité du protocole reste le même (HTTP vers HTTP, HTTPS vers HTTPS) ou s'améliore (HTTP vers HTTPS) mais ne sont pas envoyés quand si la destination est moins sécurisée (HTTPS vers HTTP).
- <div class="note">Les navigateurs tentent d'adopter une valeur par défaut plus stricte, précisément <code>strict-origin-when-cross-origin</code> (voir <a href="https://github.com/whatwg/fetch/pull/952">https://github.com/whatwg/fetch/pull/952</a>), envisagez d'utiliser cette valeur (ou une autre encore plus stricte) si possible si vous définissez la valeur de Referrer-Policy.</div>
+  <div class="note">
+   <p><strong>Note :</strong> Les navigateurs tentent d'adopter une valeur par défaut plus stricte, précisément <code>strict-origin-when-cross-origin</code> (voir <a href="https://github.com/whatwg/fetch/pull/952">https://github.com/whatwg/fetch/pull/952</a>), envisagez d'utiliser cette valeur (ou une autre encore plus stricte) si possible si vous définissez la valeur de Referrer-Policy.</p>
+  </div>
  </dd>
  <dt><code>origin</code></dt>
  <dd>N'envoie que l'{{glossary("origin")}} du document comme référent.<br>
@@ -69,8 +71,8 @@ Referrer-Policy: unsafe-url
  <dd>Envoie l'origine, le chemin et les paramètres de requête pour les requêtes de même origine, n'envoie que l'origine quand le niveau de sécurité du protocole reste le même pour les requêtes vers des adresses externes (HTTPS vers HTTPS) et n'envoie rien si la destination est moins sécurisée (HTTPS vers HTTP).</dd>
  <dt><code>unsafe-url</code></dt>
  <dd>Envoie l'origine, le chemin et les paramètres de requête pour toutes les requêtes sans tenir compte du niveau de sécurité.
- <div class="blockIndicator warning">
- <p>Cette valeur divulgera des informations potentiellement confidentielles de la part des URL de ressources HTTPS vers des origines non sécurisées. Considérez les conséquences de ce paramétrage avant de vous en servir.</p>
+ <div class="warning">
+ <p><strong>Attention :</strong> Cette valeur divulgera des informations potentiellement confidentielles de la part des URL de ressources HTTPS vers des origines non sécurisées. Considérez les conséquences de ce paramétrage avant de vous en servir.</p>
  </div>
  </dd>
 </dl>
@@ -79,18 +81,18 @@ Referrer-Policy: unsafe-url
 
 <p>Vous pouvez aussi définir des règles de référent au sein d'HTML. Par exemple, vous pouvez définir la règle de référent pour le document entier avec un élément {{HTMLElement("meta")}} dont le <a href="/en-US/docs/Web/HTML/Element/meta#attr-name">name</a> est <code>referrer</code> :</p>
 
-<pre class="brush: html notranslate">&lt;meta name="referrer" content="origin"&gt;</pre>
+<pre class="brush: html">&lt;meta name="referrer" content="origin"&gt;</pre>
 
 <p>Ou le définit pour des requêtes spécifiques avec l'attribut <code>referrerpolicy</code> sur les éléments {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("img")}}, {{HTMLElement("iframe")}}, {{HTMLElement("script")}}, ou {{HTMLElement("link")}} :</p>
 
-<pre class="brush: html notranslate">&lt;a href="http://example.com" referrerpolicy="origin"&gt;</pre>
+<pre class="brush: html">&lt;a href="http://example.com" referrerpolicy="origin"&gt;</pre>
 
 <p>Autrement, une <a href="/en-US/docs/Web/HTML/Link_types">relation de lien</a> définie à <code>noreferrer</code> sur un élément <code>a</code>, <code>area</code>, ou <code>link</code> peut être défini :</p>
 
-<pre class="brush: html notranslate">&lt;a href="http://example.com" rel="noreferrer"&gt;</pre>
+<pre class="brush: html">&lt;a href="http://example.com" rel="noreferrer"&gt;</pre>
 
-<div class="blockIndicator warning">
-<p>Comme vu précédemment, la relation de lien <code>noreferrer</code> s'écrit sans trait d'union. Toutefois, quand la règle de référent est spécifiée pour le document entier avec un élément {{HTMLElement("meta")}}, il faut mettre le trait d'union : <code>&lt;meta name="referrer" content="no-referrer"&gt;</code>.</p>
+<div class="warning">
+<p><strong>Attention :</strong> Comme vu précédemment, la relation de lien <code>noreferrer</code> s'écrit sans trait d'union. Toutefois, quand la règle de référent est spécifiée pour le document entier avec un élément {{HTMLElement("meta")}}, il faut mettre le trait d'union : <code>&lt;meta name="referrer" content="no-referrer"&gt;</code>.</p>
 </div>
 
 <h2 id="Intégration_avec_CSS">Intégration avec CSS</h2>
@@ -206,11 +208,13 @@ Referrer-Policy: unsafe-url
 
 <p>Si vous voulez spécifier une règle à appliquer par défaut dans les où la règle voulue n'est pas supportée par les navigateurs, utilisez un liste de valeurs séparées par des virgules avec la règle voulue fournie en dernière position :</p>
 
-<pre class="notranslate">Referrer-Policy: no-referrer, strict-origin-when-cross-origin</pre>
+<pre>Referrer-Policy: no-referrer, strict-origin-when-cross-origin</pre>
 
 <p>Ici, <code>no-referrer</code> ne sera utilisée que si <code>strict-origin-when-cross-origin</code> n'est pas supportée par le navigateur.</p>
 
-<p class="note">Spécifier plusieurs valeurs n'est supporté que dans l'en-tête HTTP <code>Referrer-Policy</code> et non dans l'attribut <code>referrerpolicy</code>.</p>
+<div class="notecard note">
+  <p><strong>Note :</strong> Spécifier plusieurs valeurs n'est supporté que dans l'en-tête HTTP <code>Referrer-Policy</code> et non dans l'attribut <code>referrerpolicy</code>.</p>
+</div>
 
 <h2 id="Spécifications">Spécifications</h2>
 
@@ -234,8 +238,9 @@ Referrer-Policy: unsafe-url
 <p>{{Compat("http.headers.Referrer-Policy")}}</p>
 
 <div class="note">
+  <p><strong>Note :</strong></p>
 <ul>
- <li>Version 53 et plus, Gecko offre la possibilité aux utilisateurs de définir leur valeur par défaut de <code>Referrer-Policy</code> dans <code>about:config</code>, l'option s'appelant <span class="quote"> <code>network.http.referer.userControlPolicy</code>.</span></li>
+ <li>Version 53 et plus, Gecko offre la possibilité aux utilisateurs de définir leur valeur par défaut de <code>Referrer-Policy</code> dans <code>about:config</code>, l'option s'appelant  <code>network.http.referer.userControlPolicy</code>.</li>
  <li>Version 59 et plus (Voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=587523">#587523</a>), il a été remplacé par <code>network.http.referer.defaultPolicy</code> et <code>network.http.referer.defaultPolicy.pbmode</code>.</li>
 </ul>
 
@@ -254,7 +259,7 @@ Referrer-Policy: unsafe-url
 <ul>
  <li>{{interwiki("wikipedia", "HTTP_referer", "HTTP referer on Wikipedia")}}</li>
  <li>En utilisant <a href="/en-US/docs/Web/API/Fetch_API">Fetch</a> : {{domxref("Request.referrerPolicy")}}</li>
- <li>La directive obsolète {{HTTPHeader("Content-Security-Policy/referrer", "referrer")}} {{Obsolete_Inline}} de l'en-tête <span style="white-space: nowrap;">{{HTTPHeader("Content-Security-Policy")}}</span>.</li>
+ <li>La directive obsolète {{HTTPHeader("Content-Security-Policy/referrer", "referrer")}} {{Obsolete_Inline}} de l'en-tête {{HTTPHeader("Content-Security-Policy")}}.</li>
  <li><a href="/en-US/docs/Web/Security/Same-origin_policy">Same-origin policy</a></li>
  <li>
   <p><a href="https://blog.mozilla.org/security/2015/01/21/meta-referrer/">Tighter Control Over Your Referrers – Mozilla Security Blog</a></p>

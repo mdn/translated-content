@@ -14,8 +14,6 @@ translation_of: Web/CSS/grid-auto-columns
 
 <div>{{EmbedInteractiveExample("pages/css/grid-auto-columns.html")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <p>Si un élément de la grille est positionné sur une colonne dont la taille n'est pas explicitement définie avec {{cssxref("grid-template-columns")}}, une piste implicite est créée pour contenir l'élément. Cela peut se produire lorsqu'on positionne un élément sur une ligne inexistante ou lorsque l'algorithme de placement automatique ajoute des colonnes supplémentaires.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
@@ -84,9 +82,7 @@ grid-auto-columns: unset;
  <dt><code>fit-content(argument)</code></dt>
  <dd>Cette notation représente la formule <code>min(max-content, max(auto, argument))</code> qui est calculée de façon semblable à <code>auto</code>, sauf qu'ici, la taille de la piste est écrétée à <em>argument</em> s'i elle est plus grande que le minimum <code>auto</code>.</dd>
  <dt><code>auto</code></dt>
- <dd>Un mot-clé qui est identique au contenu maximal si c'est un maximum. Si c'est un minimum, il représente la plus grande des plus petites tailles (définie par {{cssxref("min-width")}}/{{cssxref("min-height")}})) des objets de la grilles qui occupe cette piste de la grille.</dd>
- <dd>
- <p class="note"><strong>Note :</strong> Les pistes de taille <code>auto</code> (et uniquement celles-ci) peuvent être étirées grâce aux propriétés {{cssxref("align-content")}} et {{cssxref("justify-content")}}.</p>
+ <dd>Un mot-clé qui est identique au contenu maximal si c'est un maximum. Si c'est un minimum, il représente la plus grande des plus petites tailles (définie par {{cssxref("min-width")}}/{{cssxref("min-height")}})) des objets de la grilles qui occupe cette piste de la grille. <div class="note"><p><strong>Note :</strong> Les pistes de taille <code>auto</code> (et uniquement celles-ci) peuvent être étirées grâce aux propriétés {{cssxref("align-content")}} et {{cssxref("justify-content")}}.</p></div>
  </dd>
 </dl>
 
@@ -98,7 +94,7 @@ grid-auto-columns: unset;
 
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css; highlight[6]">#grid {
+<pre class="brush: css">#grid {
   width: 100px;
   display: grid;
   grid-template-areas: "a a";
@@ -153,6 +149,6 @@ grid-auto-columns: unset;
  <li>{{cssxref("grid-auto-rows")}}</li>
  <li>{{cssxref("grid-auto-flow")}}</li>
  <li>{{cssxref("grid")}}</li>
- <li><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Placement_automatique_sur_une_grille_CSS#Dimensionner_les_lignes_de_la_grille_implicite">Guide : le placement automatique sur la grille - dimensionner les lignes de la grille implicite</a></li>
- <li>Tutoriel vidéo : <a href="http://gridbyexample.com/video/series-auto-placement-order/">Introduction au placement automatique sur la grille et à l'ordre des éléments (en anglais)</a></li>
+ <li><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout#dimensionner_les_lignes_de_la_grille_implicite">Guide : le placement automatique sur la grille - dimensionner les lignes de la grille implicite</a></li>
+ <li>Tutoriel vidéo : <a href="https://gridbyexample.com/video/series-auto-placement-order/">Introduction au placement automatique sur la grille et à l'ordre des éléments (en anglais)</a></li>
 </ul>

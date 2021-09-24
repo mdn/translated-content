@@ -10,7 +10,7 @@ translation_of: Web/HTTP/Headers/Set-Cookie/SameSite
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><span class="seoSummary">L'attribut <strong><code>SameSite</code></strong> de l'en-tête de réponse HTTP {{HTTPHeader("Set-Cookie")}} vous permet de déclarer si vos cookies doivent être restreints au site visité, à des tiers, ou à des sous-domaines du site actuel. </span></p>
+<p>L'attribut <strong><code>SameSite</code></strong> de l'en-tête de réponse HTTP {{HTTPHeader("Set-Cookie")}} vous permet de déclarer si vos cookies doivent être restreints au site visité, à des tiers, ou à des sous-domaines du site actuel.</p>
 
 <h2 id="Valeurs">Valeurs</h2>
 
@@ -45,11 +45,11 @@ translation_of: Web/HTTP/Headers/Set-Cookie/SameSite
 
 <p>Cet alerte apparaît dans les cas où des cookies requièrent l'attribut <code>SameSite=None</code> et ne sont pas marqués <code>Secure</code>, étant donc refusés par le navigateur.</p>
 
-<pre class="example-bad notranslate">Set-Cookie: flavor=choco; SameSite=None</pre>
+<pre class="example-bad">Set-Cookie: flavor=choco; SameSite=None</pre>
 
 <p>Pour corriger cette erreur, vous devez ajouter l'attribut <code>Secure</code> à vos cookies marqués avec l'attribut <code>SameSite=None</code>.</p>
 
-<pre class="example-good notranslate">Set-Cookie: flavor=choco; SameSite=None; <strong>Secure</strong></pre>
+<pre class="example-good">Set-Cookie: flavor=choco; SameSite=None; <strong>Secure</strong></pre>
 
 <p>Un cookie <code>Secure</code> ne sera envoyé au serveur que par le biais de requêtes utilisant le protocole HTTPS. Il est à noter que les sites non sécurisés (<code>http:</code>) ne peuvent pas être marqués <code>Secure</code>.</p>
 
@@ -64,15 +64,15 @@ translation_of: Web/HTTP/Headers/Set-Cookie/SameSite
 
 <p>Cette alerte apparait car la stratégie de <code>SameSite</code> pour le cookie n'a pas été spécifiée explicitement :</p>
 
-<pre class="example-bad notranslate">Set-Cookie: flavor=choco</pre>
+<pre class="example-bad">Set-Cookie: flavor=choco</pre>
 
 <p>Même si vous pouvez compter sur la valeur par défaut <code>SameSite=Lax</code> des navigateurs récents, vous devriez tout de même spécifier la stratégie à appliquer pour ce cookie afin de communiquer clairement votre intention. Cela améliorera également l'expérience sur les autres navigateurs si ceux-ci n'utilisent pas encore la valeur par défaut <code>Lax</code>.</p>
 
-<pre class="example-good notranslate">Set-Cookie: flavor=choco; <strong>SameSite=Lax</strong></pre>
+<pre class="example-good">Set-Cookie: flavor=choco; <strong>SameSite=Lax</strong></pre>
 
 <h2 id="Exemples"><strong>Exemples</strong></h2>
 
-<pre class="notranslate">RewriteEngine on
+<pre>RewriteEngine on
 RewriteBase "/"
 RewriteCond "%{HTTP_HOST}"       "^example\.org$" [NC]
 RewriteRule "^(.*)"              "https://www.example.org/index.html" [R=301,L,QSA]

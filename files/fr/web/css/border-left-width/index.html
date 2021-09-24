@@ -13,8 +13,6 @@ translation_of: Web/CSS/border-left-width
 
 <div>{{EmbedInteractiveExample("pages/css/border-left-width.html")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="brush:css no-line-numbers">/* Une valeur de longueur */
@@ -39,31 +37,11 @@ border-left-width: unset;
 <dl>
  <dt><code>&lt;br-width&gt;</code></dt>
  <dd>Une valeur de longueur ({{cssxref("&lt;length&gt;")}}) positive ou un mot-clé qui indique l'épaisseur de la bordure pour le côté gauche de la boîte. Si la valeur est un mot-clé, ce doit être l'une des valeurs suivantes :
- <table class="standard-table">
-  <tbody>
-   <tr>
-    <td><code>thin</code></td>
-    <td>
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-left-style: solid; border-left-width: thin; background-color: palegreen;"> </div>
-    </td>
-    <td>Une bordure fine.</td>
-   </tr>
-   <tr>
-    <td><code>medium</code></td>
-    <td>
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-left-style: solid; border-left-width: medium; background-color: palegreen;"> </div>
-    </td>
-    <td>Une bordure moyenne.</td>
-   </tr>
-   <tr>
-    <td><code>thick</code></td>
-    <td>
-     <div style="margin: 0.5em; width: 3em; height: 3em; border-left-style: solid; border-left-width: thick; background-color: palegreen;"> </div>
-    </td>
-    <td>Une bordure épaisse.</td>
-   </tr>
-  </tbody>
- </table>
+  <ul>
+    <li><code>thin</code> (fin)</li>
+    <li><code>medium</code> (intermédiaire)</li>
+    <li><code>thick</code> (épais)</li>
+  </ul>
  La spécification ne précise pas de façon exacte l'épaisseur correspondant à chacun de ces mots-clés (c'est donc à chaque implémentation de choisir). La spécification requiert toutefois que l'inégalité suivante soit respectée <code>thin ≤ medium ≤ thick</code> et que ces valeurs soient constantes pour un même document<code>.</code></dd>
 </dl>
 

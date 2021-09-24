@@ -14,7 +14,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Ordonner_éléments_flexibles
 ---
 <p>{{CSSRef}}</p>
 
-<p class="summary">Les nouvelles méthodes de disposition telles que les boîtes flexibles (<em>flexbox</em>) et la grille CSS (<em>CSS Grid</em>) apportent la possibilité de contrôler l'ordre du contenu. Dans cet article, nous verrons comment changer l'ordre visuel du contenu grâce aux boîtes flexibles. Nous examinerons également les conséquences de cette réorganisation du point de vue de l'accessibilité.</p>
+<p>Les nouvelles méthodes de disposition telles que les boîtes flexibles (<em>flexbox</em>) et la grille CSS (<em>CSS Grid</em>) apportent la possibilité de contrôler l'ordre du contenu. Dans cet article, nous verrons comment changer l'ordre visuel du contenu grâce aux boîtes flexibles. Nous examinerons également les conséquences de cette réorganisation du point de vue de l'accessibilité.</p>
 
 <h2 id="Inverser_l'affichage_des_éléments">Inverser l'affichage des éléments</h2>
 
@@ -29,19 +29,19 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Ordonner_éléments_flexibles
 
 <p>Les deux premières valeurs permettent de conserver l'ordre des éléments tels qu'ils apparaissent dans le document source et de les afficher les uns à la suite des autres à partir de la ligne du début.</p>
 
-<p><img alt="Les objets sont affichés sur une ligne horizontale qui commence à gauche." src="https://mdn.mozillademos.org/files/15649/Basics1.png" style="display: flex; height: 152px; margin: 0px auto; width: 522px;"></p>
+<p><img alt="Les objets sont affichés sur une ligne horizontale qui commence à gauche." src="basics1.png"></p>
 
-<p><img alt="Les objets sont affichés sur une colonne qui commence en haut." src="https://mdn.mozillademos.org/files/15650/align10.png" style="display: flex; height: 273px; margin: 0px auto; width: 709px;"></p>
+<p><img alt="Les objets sont affichés sur une colonne qui commence en haut." src="align10.png"></p>
 
 <p>Les deux valeurs suivantes inversent l'ordre des éléments en échangeant les lignes de début et de fin.</p>
 
-<p><img alt="Les éléments sont affichés dans l'ordre inverse et commencent à droite." src="https://mdn.mozillademos.org/files/15651/align9.png" style="display: flex; height: 152px; margin: 0px auto; width: 631px;"></p>
+<p><img alt="Les éléments sont affichés dans l'ordre inverse et commencent à droite." src="align9.png"></p>
 
-<p><img alt="Les éléments sont affichés en colonne et dans l'ordre inverse, ils commencent par le bas." src="https://mdn.mozillademos.org/files/15652/align11.png" style="display: flex; height: 273px; margin: 0px auto; width: 709px;"></p>
+<p><img alt="Les éléments sont affichés en colonne et dans l'ordre inverse, ils commencent par le bas." src="align11.png"></p>
 
 <p>Rappelons ici que les lignes de début et de fin sont liées aux modes d'écritures. Les exemples en lignes ci-avant illustrent comment <code>row</code> et <code>row-reverse</code> fonctionnent dans une langue qui s'écrit de gauche à droite (le français par exemple). Si on travaille avec une langue écrite de droite à gauche (l'arabe par exemple), <code>row</code> correspondrait au côté droit et  <code>row-reverse</code> au côté gauche.</p>
 
-<p><img alt="Des conteneurs flexibles avec des lettres arabes illustrant comment le contenu commence à droite normalement et commence à gauche lorsqu'on utilise row-reverse." src="https://mdn.mozillademos.org/files/15647/order-rtl.png" style="display: flex; height: 302px; margin: 0px auto; width: 528px;"></p>
+<p><img alt="Des conteneurs flexibles avec des lettres arabes illustrant comment le contenu commence à droite normalement et commence à gauche lorsqu'on utilise row-reverse." src="order-rtl.png"></p>
 
 <p>Cette méthode peut donc sembler efficace pour afficher des éléments dans un ordre inversé. Toutefois, il faut garder à l'esprit que seul l'<em>affichage</em> est inversé. Sur ce sujet, la spécification explique :</p>
 
@@ -58,7 +58,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Ordonner_éléments_flexibles
 </blockquote>
 
 <div class="note">
-<p><strong>Note </strong>: Pendant plusieurs années, Firefox possédait un bug avec lequel il essayait de suivre l'ordre visuel plutôt que l'ordre de la source, à la différence des autres navigateurs. Ce bug a été corrigé. Il faut toujours considérer l'ordre des éléments dans le document source comme étant l'ordre logique, tous les agents utilisateurs modernes respectent la spécification à cet égard.</p>
+<p><strong>Note :</strong> Pendant plusieurs années, Firefox possédait un bug avec lequel il essayait de suivre l'ordre visuel plutôt que l'ordre de la source, à la différence des autres navigateurs. Ce bug a été corrigé. Il faut toujours considérer l'ordre des éléments dans le document source comme étant l'ordre logique, tous les agents utilisateurs modernes respectent la spécification à cet égard.</p>
 </div>
 
 <p>Dans l'exemple qui suit, nous avons ajouté une mise en forme sur le focus afin que vous puissiez voir quel lien est actif lorsque vous naviguez au clavier. Si vous modifier la valeur de <code>flex-direction</code>, vous pouvez voir que la navigation au clavier continue de suivre l'ordre dans lequel les éléments sont écrits dans le document source.</p>
@@ -93,7 +93,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Ordonner_éléments_flexibles
  <li>Quatrième élément selon la source : <code>order: 3</code></li>
 </ul>
 
-<p><img alt="Les éléments contiennent un nombre qui illustre leur ordre selon la source et on peut voir que leur ordre visuel a été réarrangé." src="https://mdn.mozillademos.org/files/15653/order-property.png" style="display: flex; height: 100px; margin: 0px auto; width: 634px;"></p>
+<p><img alt="Les éléments contiennent un nombre qui illustre leur ordre selon la source et on peut voir que leur ordre visuel a été réarrangé." src="order-property.png"></p>
 
 <p>Vous pouvez manipuler les valeurs dans l'exemple qui suit afin de voir comment l'ordre est modifié. Essayez également de modifier la valeur de <code>flex-direction</code> pour utiliser <code>row-reverse</code> — la ligne de début est inversée et l'ordre des éléments commence à partir du côté opposé.</p>
 
@@ -119,7 +119,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Ordonner_éléments_flexibles
 
 <ul>
  <li><a href="https://tink.uk/flexbox-the-keyboard-navigation-disconnect/">Une déconnexion entre les boîtes flexibles et la navigation au clavier (en anglais)</a></li>
- <li><a href="http://adrianroselli.com/2015/10/html-source-order-vs-css-display-order.html">L'ordre de la source HTML vs l'ordre d'affichage CSS (en anglais)</a></li>
+ <li><a href="https://adrianroselli.com/2015/10/html-source-order-vs-css-display-order.html">L'ordre de la source HTML vs l'ordre d'affichage CSS (en anglais)</a></li>
  <li><a href="https://alastairc.ac/2017/06/the-responsive-order-conflict">Le conflit entre l'ordre <em>responsive</em> et le focus clavier (en anglais)</a></li>
 </ul>
 
@@ -129,7 +129,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Ordonner_éléments_flexibles
 
 <p>Prenons comme exemple une disposition avec des cartes dont chacune contient une nouvelle. Le titre de la nouvelle est l'élément qui doit être mis en avant et celui sur lequel l'utilisateur doit arriver s'il navigue au clavier à la recherche d'un contenu à lire. Chaque carte possède également une date de façon à obtenir un <em>design</em> comme celui-ci.</p>
 
-<p><img alt="Un composant avec une date, un titre puis un contenu." src="https://mdn.mozillademos.org/files/15648/order-card.png" style="height: 400px; width: 618px;"></p>
+<p><img alt="Un composant avec une date, un titre puis un contenu." src="order-card.png"></p>
 
 <p>Visuellement, la date apparaît au-dessus du titre. Toutefois, si la carte était lue par un lecteur d'écran, on préfèrerait que le titre soit annoncé en premier puis que soit ensuite lue la date de publication. Pour ce faire, on peut utiliser la propriété <code>order</code>.</p>
 

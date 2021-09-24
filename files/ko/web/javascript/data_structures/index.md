@@ -89,13 +89,13 @@ Infinity
 
 ### BigInt type
 
-The {{jsxref("BigInt")}} type is a numeric primitive in JavaScript that can represent integers with arbitrary precision. With `BigInt`s, you can safely store and operate on large integers even beyond the safe integer limit for `Number`s.
+[BigInt](/ko/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 타입은 임의 정밀도로 정수를 나타낼 수 있는 자바스크립트의 숫자 원시 형식이다. `BigInt`를 사용하면 `Number`의 정수 한계를 넘어서는 큰 정수도 안전하게 저장 및 연산할 수 있다.
 
-A `BigInt` is created by appending `n` to the end of an integer or by calling the constructor.
+`BigInt`는 정수 끝에 `n`을 추가하거나 생성자를 호출하여 생성된다.
 
-You can obtain the safest value that can be incremented with `Number`s by using the constant {{jsxref("Number.MAX_SAFE_INTEGER")}}. With the introduction of `BigInt`s, you can operate with numbers beyond the {{jsxref("Number.MAX_SAFE_INTEGER")}}.
+`BigInt`의 도입으로, 다음의 [Number.MAX_SAFE_INTEGER](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)로 작업할 수 있으며 상수 [Number.MAX_SAFE_INTEGER](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)를 사용하여 숫자로 증가시킬 수 있는 가장 안전한 값을 얻을 수 있다.
 
-This example demonstrates, where incrementing the {{jsxref("Number.MAX_SAFE_INTEGER")}} returns the expected result:
+이 예제는 [Number.MAX_SAFE_INTEGER](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number/MAX_SAFE_INTEGER)를 증가시키면 예상 결과가 반환된다는 것을 보여준다:
 
 ```js
 > const x = 2n ** 53n;
@@ -104,11 +104,11 @@ This example demonstrates, where incrementing the {{jsxref("Number.MAX_SAFE_INTE
 9007199254740993n
 ```
 
-You can use the operators `+`, `*`, `-`, `**`, and `%` with `BigInt`s—just like with `Number`s. A `BigInt` is not strictly equal to a `Number`, but it is loosely so.
+산술 연산자 `+`, `*`, `-`, `**` 및 `%`를 `BigInt`에서도 사용할 수 있다. `BigInt`는 정확히 `Number`와 같지는 않으나 대략적으로는 같다.
 
-A `BigInt` behaves like a `Number` in cases where it is converted to `Boolean`: `if`, `||`, `&&`, `Boolean`, `!`.
+`BigInt`는 `if`, `||`, `&&,` `Boolean`, `!`와 같이 `Boolean 타입`으로 변환되는 경우 `Number`처럼 작동한다.
 
-`BigInt`s cannot be operated on interchangeably with `Number`s. Instead a {{jsxref("TypeError")}} will be thrown.
+`BigInt`는 `Number`로 교체할 수 없으며 [TypeError](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypeError)가 발생한다.
 
 ### String 타입
 
@@ -145,77 +145,26 @@ Symbol 은 ECMAScript 6 에서 추가되었다. Symbol은 **유일**하고 **변
 
 두 종류의 객체 속성이 있는데, 이들은 종류에 따라 특성값들을 가질 수 있다. 데이터 (data) 속성과 접근자 (accessor) 속성이 그것이다.
 
-> **Note:** Each property has corresponding *attributes.* Attributes are used internally by the JavaScript engine, so you cannot directly access them. That's why attributes are listed in double square brackets, rather than single.
+> **Note:** 각 프로퍼티에는 `특성들`이 있다. 특성은 자바스크립트 엔진에서 내부적으로 사용되므로 사용자가 직접 액세스할 수 없다. 그렇기 때문에 속성이 단일 대괄호가 아닌 이중 대괄호로 나열된다.
 >
-> See {{jsxref("Object.defineProperty()")}} to learn more.
+> 더 알아보려면 [Object.defineProperty()](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)를 확인하자.
 
 #### 데이터 속성 (Data property)
 
 키에 값을 연결하고, 아래와 같은 특성들 (attribute) 이 있다.
 
-<table class="standard-table">
-  <caption>
-    Attributes of a data property
-  </caption>
-  <thead>
-    <tr>
-      <th scope="col">Attribute</th>
-      <th scope="col">Type</th>
-      <th scope="col">Description</th>
-      <th scope="col">Default value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>[[Value]]</td>
-      <td>Any JavaScript type</td>
-      <td>The value retrieved by a get access of the property.</td>
-      <td><code>undefined</code></td>
-    </tr>
-    <tr>
-      <td>[[Writable]]</td>
-      <td>Boolean</td>
-      <td>
-        If <code>false</code>, the property's [[Value]] cannot be changed.
-      </td>
-      <td><code>false</code></td>
-    </tr>
-    <tr>
-      <td>[[Enumerable]]</td>
-      <td>Boolean</td>
-      <td>
-        <p>
-          If <code>true</code>, the property will be enumerated in
-          <a href="/en-US/docs/Web/JavaScript/Reference/Statements/for...in"
-            >for...in</a
-          >
-          loops.<br />See also
-          <a
-            href="/en-US/docs/Web/JavaScript/Enumerability_and_ownership_of_properties"
-            >Enumerability and ownership of properties</a
-          >.
-        </p>
-      </td>
-      <td><code>false</code></td>
-    </tr>
-    <tr>
-      <td>[[Configurable]]</td>
-      <td>Boolean</td>
-      <td>
-        If <code>false</code>, the property cannot be deleted, cannot be changed
-        to an accessor property, and attributes other than [[Value]] and
-        [[Writable]] cannot be changed.
-      </td>
-      <td><code>false</code></td>
-    </tr>
-  </tbody>
-</table>
+|Attribute|Type|Description|Default value|
+|---------|----|-----------|-------------|
+|[[Value]]|Any<br>JavaScript<br>type|액세스로 검색된 값의 속성을 가져온다.|`undefined`|
+|[[Writable]]|Boolean|만약 `false` 라면, 속성의 [[Value]] 를 변경할 수 없다.|`false`|
+|[[Enumerable]]|Boolean|만약 `true`이면, 이 속성은 [for...in](/ko/docs/Web/JavaScript/Reference/Statements/for...in)로 루프에서 열거될 수 있다.<br>참고 : [Enumerability and ownership of properties](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)|`false`|
+|[[Configurable]]|Boolean|만약 `false` 라면, 속성을 삭제하거나 접근자 속성으로 변경할 수 없으며, [[Value]] 와 [[Writable]] 특성 외에는 변경할 수 없다.|`false`|
 
 | Attribute  | Type    | Description                                           |
 | ---------- | ------- | ----------------------------------------------------- |
-| Read-only  | Boolean | Reversed state of the ES5 [[Writable]] attribute.     |
-| DontEnum   | Boolean | Reversed state of the ES5 [[Enumerable]] attribute.   |
-| DontDelete | Boolean | Reversed state of the ES5 [[Configurable]] attribute. |
+| Read-only  | Boolean | ES5의 [[Writable]] 특성으로 변경되었다.           |
+| DontEnum   | Boolean | ES5의 [[Enumerable]] 특성으로 변경되었다.         |
+| DontDelete | Boolean | ES5의 [[Configurable]] 특성으로 변경되었다.       |
 
 #### 접근자 속성 (Accessor property)
 
@@ -225,7 +174,7 @@ Symbol 은 ECMAScript 6 에서 추가되었다. Symbol은 **유일**하고 **변
 | ---------------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------- |
 | [[Get]]          | Function 객체 혹은 `undefined` | 이 속성의 값에 접근할 때마다, 인자 목록 없이 함수가 호출되고, 함수의 반환된 값으로 속성값을 가져온다. 같이보기 [`get`](/ko/docs/Web/JavaScript/Reference/Functions/get).               | `undefined`   |
 | [[Set]]          | Function 객체 혹은 `undefined` | 이 속성의 값이 바뀌려고 할 때마다, 할당된 값을 인자로 함수가 호출된다. 같이보기 [`set`](/ko/docs/Web/JavaScript/Reference/Functions/set). | `undefined`   |
-| [[Enumerable]]   | Boolean                        | 만약 `true`이면, 이 속성은, [for...in](/ko/docs/Web/JavaScript/Reference/Statements/for...in)로 루프에서 열거될 수 있다.loops.                                                                                                | `false`       |
+| [[Enumerable]]   | Boolean                        | 만약 `true`이면, 이 속성은, [for...in](/ko/docs/Web/JavaScript/Reference/Statements/for...in)로 루프에서 열거될 수 있다.                                                                                                | `false`       |
 | [[Configurable]] | Boolean                        | 만약 `false`이면, 이 속성은 제거될 수 없고, 데이터 속성을 수정할 수 없다.                                                                                                         | `false`       |
 
 ### "Normal" objects, and functions

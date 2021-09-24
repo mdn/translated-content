@@ -13,8 +13,6 @@ translation_of: Web/CSS/visibility
 
 <div>{{EmbedInteractiveExample("pages/css/visibility.html")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <div class="note">
 <p><strong>Note :</strong> Afin de cacher un élément et de le retirer de la disposition du document, on utilisera plutôt la propriété {{cssxref("display")}} avec la valeur <code>none</code>.</p>
 </div>
@@ -40,9 +38,10 @@ visibility: unset;
  <dt><code>visible</code></dt>
  <dd>La valeur par défaut, la boîte est visible.</dd>
  <dt><code>hidden</code></dt>
- <dd>La boîte est invisible (totalement transparente, rien n'est dessiné) mais continue d'avoir un impact sur la disposition. Les fils de l'élément seront visibles s'ils ont <code>visibility:visible</code>. L'élément ne pourra plus recevoir le focus (cf. <a href="/fr/docs/Web/HTML/Attributs_universels/tabindex">la navigation au clavier avec les tabulations</a>).</dd>
+ <dd>La boîte est invisible (totalement transparente, rien n'est dessiné) mais continue d'avoir un impact sur la disposition. Les fils de l'élément seront visibles s'ils ont <code>visibility:visible</code>. L'élément ne pourra plus recevoir le focus (cf. <a href="/fr/docs/Web/HTML/Global_attributes/tabindex">la navigation au clavier avec les tabulations</a>).</dd>
  <dt><code>collapse</code></dt>
  <dd>
+  <p>Le mot-clé <code>collapse</code> a différents effets selon les éléments :</p>
  <ul>
   <li>Pour les lignes, les colonnes, les groupes de lignes et les groupes de colonnes d'un tableau, les éléments sont masqués et l'espace occupé est retiré (comme si on avait appliqué <code>{{cssxref("display")}}: none</code> aux colonnes/lignes du tableau). La taille des autres lignes et colonnes continue d'être calculée comme si les lignes et colonnes masquées étaient présentes. Cela a été conçu afin de pouvoir retirer rapidement des lignes et/ou des colonnes sans avoir à recalculer les dimensions pour l'ensemble du tableau.</li>
   <li>Les éléments flexibles sont masqués et l'espace qu'ils auraient occupé est retiré.</li>
@@ -131,7 +130,7 @@ p.coucou {
 
 <h2 id="Accessibilité">Accessibilité</h2>
 
-<p>Utiliser la propriété <code>visibility</code> avec la valeur <code>hidden</code> retirera l'objet de <a href="/fr/docs/Learn/Accessibility/What_is_accessibility#Accessibility_APIs">l'arbre d'accessibilité</a>. Les éléments ciblés, ainsi que leurs éléments descendants ne seront plus annoncés par les lecteurs d'écran.</p>
+<p>Utiliser la propriété <code>visibility</code> avec la valeur <code>hidden</code> retirera l'objet de <a href="/fr/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis">l'arbre d'accessibilité</a>. Les éléments ciblés, ainsi que leurs éléments descendants ne seront plus annoncés par les lecteurs d'écran.</p>
 
 <h2 id="Notes">Notes</h2>
 

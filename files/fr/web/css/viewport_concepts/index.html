@@ -10,7 +10,7 @@ original_slug: Web/CSS/Concepts_viewport
 ---
 <p>{{CSSRef}}</p>
 
-<p class="summary">Dans cet article, nous définirons le concept de <em>viewport</em> ou de zone d'affichage, les différences entre la zone d'affichage visuelle et la zone d'affichage pour la disposition. Nous verrons également ce que signifie la zone d'affichage pour CSS, SVG et pour les appareils mobiles.</p>
+<p>Dans cet article, nous définirons le concept de <em>viewport</em> ou de zone d'affichage, les différences entre la zone d'affichage visuelle et la zone d'affichage pour la disposition. Nous verrons également ce que signifie la zone d'affichage pour CSS, SVG et pour les appareils mobiles.</p>
 
 <h2 id="Qu'est-ce_qu'une_zone_d'affichage_(viewport)">Qu'est-ce qu'une zone d'affichage (<em>viewport</em>) ?</h2>
 
@@ -143,7 +143,9 @@ body &gt; footer {
 
 <p>Il existe une grande variété de tailles et de proportions pour les appareils mobiles. La zone d'affichage d'un navigateur mobile est la zone de la fenêtre sur laquelle le contenu web peut être consulté et cette zone n'a pas nécessairement la même taille que la page affichée. Les navigateurs mobiles affichent les pages sur une zone d'affichage virtuelle (mesurant généralement 960px) plus large que l'écran puis réduisent le résultat afin que l'utilisateur puisse voir l'ensemle du document. L'utilisateur peut alors se déplacer ou zoomer au doigt pour accéder aux différentes zones de la page. Ainsi, si un appareil mobile a un écran large de 320px, un site web pourra être affiché selon une zone d'affichage virtuelle sur 960px puis réduit afin de pouvoir s'inscrire dans l'espace large de 320px. Le résultat ainsi obtenu risque peu d'être lisible. Pour indiquer à un navigateur mobile d'utiliser la largeur de la zone d'affichage réelle plutôt que la largeur virtuelle de 960px, on pourra placer la balise <code>&lt;meta&gt;</code> suivante :</p>
 
-<pre class="brush: html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>meta</span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>viewport<span class="punctuation token">"</span></span> <span class="attr-name token">content</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>width<span class="punctuation token">=</span>device-width<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html">
+&lt;meta name="viewport" content="width=device-width"&gt;
+</pre>
 
 <p>La propriété <code>width</code> contrôle la taille de la zone d'affichage et on l'utilisera généralement avec <code>device-width</code> qui correspond à la largeur de l'écran, exprimée en pixels CSS, avec un zoom de 100%. Il est possible d'utiliser d'autres propriétés comme <code>maximum-scale</code>, <code>minimum-scale</code> et <code>user-scalable</code> afin de contrôler si l'utilisateur peut zoomer/dézoomer sur la page mais les valeurs par défaut restent les meilleures en termes d'accessibilité et d'ergonomie et ne seront pas plus abordées ici par souci de concision.</p>
 

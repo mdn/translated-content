@@ -13,15 +13,15 @@ translation_of: Web/CSS/background-image
 
 <div>{{EmbedInteractiveExample("pages/css/background-image.html")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <p>Les images sont dessinées les unes au-dessus des autres. La première image indiquée est dessinée comme étant la plus proche de l'utilisateur.</p>
 
 <p>Les bordures de l'élément sont dessinés par-dessus l'arrière-plan et la couleur {{cssxref("background-color")}} est dessinée sous l'arrière-plan. La position et les limites de chaque image sont gérées grâce aux propriétés {{cssxref("background-clip")}} et {{cssxref("background-origin")}}.</p>
 
 <p>Si une image donnée ne peut pas être chargée (par exemple lorsqu'il est impossible de charger un fichier via l'URI indiquée), les navigateurs considèreront la valeur comme <code>none</code>.</p>
 
-<div class="note"><strong>Note :</strong> Même si les images sont opaques et que les couleurs ne seront pas affichées de façon normale, les développeurs doivent toujours définir une couleur d'arrière-plan via {{cssxref("background-color")}} au cas où les images ne peuvent être chargées.</div>
+<div class="note">
+  <p><strong>Note :</strong> Même si les images sont opaques et que les couleurs ne seront pas affichées de façon normale, les développeurs doivent toujours définir une couleur d'arrière-plan via {{cssxref("background-color")}} au cas où les images ne peuvent être chargées.</p>
+</div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
@@ -155,7 +155,7 @@ div {
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Images/Sprites_CSS">Implémenter des sprites en CSS</a></li>
+ <li><a href="/fr/docs/Web/CSS/CSS_Images/Implementing_image_sprites_in_CSS">Implémenter des sprites en CSS</a></li>
  <li>{{HTMLElement("img")}},</li>
  <li>{{cssxref("&lt;image&gt;")}},</li>
  <li>{{cssxref("&lt;gradient&gt;")}},</li>
@@ -163,7 +163,7 @@ div {
  <li>{{cssxref("radial-gradient")}},</li>
  <li>{{cssxref("repeating-linear-gradient")}},</li>
  <li>{{cssxref("repeating-radial-gradient")}},</li>
- <li>{{cssxref("element")}},</li>
+ <li>{{cssxref("element()")}},</li>
  <li>{{cssxref("_image", "image()")}},</li>
  <li>{{cssxref("image-set")}},</li>
  <li>{{cssxref("url","url()")}}</li>

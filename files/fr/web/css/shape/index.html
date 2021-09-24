@@ -25,7 +25,7 @@ translation_of: Web/CSS/shape
 
 <h4 id="Valeurs">Valeurs</h4>
 
-<p><img alt="rect.png" class="internal rwrap" src="/@api/deki/files/5730/=rect.png" style="float: right;"></p>
+<p><img alt="rect.png" src="rect.png"></p>
 
 <dl>
  <dt><code><em>haut</em></code></dt>
@@ -49,29 +49,17 @@ translation_of: Web/CSS/shape
 
 <h2 id="Interpolation">Interpolation</h2>
 
-<p>Les valeurs de type <code>&lt;shape&gt;</code> sont des rectangles qui peuvent être interpolées lors des animations. Pour ces valeurs, l'interpolation s'effectue en interpolant chacune des valeurs <code>haut</code>, <code>droite</code>, <code>bas</code> et <code>gauche</code> comme des nombres réels (à virgule flottante). La vitesse de l'interpolation est définie grâce à <a href="/fr/docs/Web/CSS/timing-function">la fonction de temporisation</a> associée à l'animation.</p>
+<p>Les valeurs de type <code>&lt;shape&gt;</code> sont des rectangles qui peuvent être interpolées lors des animations. Pour ces valeurs, l'interpolation s'effectue en interpolant chacune des valeurs <code>haut</code>, <code>droite</code>, <code>bas</code> et <code>gauche</code> comme des nombres réels (à virgule flottante). La vitesse de l'interpolation est définie grâce à <a href="/fr/docs/Web/CSS/easing-function">la fonction de temporisation</a> associée à l'animation.</p>
 
 <h2 id="Exemples">Exemples</h2>
 
-<h3 id="CSS">CSS</h3>
+<h3 id="exemple_illustrant_un_usage_correct_de_la_fonction_rect">Exemple illustrant un usage correct de la fonction rect()</h3>
 
-<pre class="brush:css">.exemple {
-   position: absolute;
-   top: 0px;
-   left: 360px;
-   clip: rect(0px, 175px, 113px, 0px);
+<pre class="brush: css">
+img.clip04 {
+  clip: rect(10px, 20px, 20px, 10px);
 }
 </pre>
-
-<h3 id="HTML">HTML</h3>
-
-<pre class="brush: html">&lt;p&gt;
-  &lt;img class="exemple" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Rogné en haut à gauche"&gt;
-&lt;/p&gt;</pre>
-
-<h3 id="Résultat">Résultat</h3>
-
-<p>{{EmbedLiveSample("Exemples","120","120")}}</p>
 
 <h2 id="Spécifications">Spécifications</h2>
 

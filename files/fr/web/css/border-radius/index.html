@@ -14,11 +14,9 @@ translation_of: Web/CSS/border-radius
 
 <div>{{EmbedInteractiveExample("pages/css/border-radius.html")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <p>La courbure s'applique à l'arrière-plan (défini avec la propriété {{cssxref("background")}}) même si l'élément n'a aucune bordure. Le rognage de l'arrière plan s'applique sur la boîte définie par {{cssxref("background-clip")}}.</p>
 
-<p>Cette propriété est une <a href="/fr/docs/Web/CSS/Propriétés_raccourcies">propriété raccourcie</a> qui permet de définir :</p>
+<p>Cette propriété est une <a href="/fr/docs/Web/CSS/Shorthand_properties">propriété raccourcie</a> qui permet de définir :</p>
 
 <ul>
  <li>{{cssxref("border-top-left-radius")}},</li>
@@ -29,7 +27,9 @@ translation_of: Web/CSS/border-radius
 
 <p>La propriété <code>border-radius</code> ne s'applique pas aux tableaux lorsque {{cssxref("border-collapse")}} vaut <code>collapse</code>.</p>
 
-<div class="note"><strong>Note :</strong> Comme pour les autres propriétés raccourcies, il n'est pas possible d'hériter de valeurs individuelles (par exemple (<code>border-radius:0 0 inherit inherit</code> pour surcharger les définitions existantes). Si on souhaite avoir un comportement de ce type, on devra utiliser les propriétés détaillées.</div>
+<div class="note">
+  <p><strong>Note :</strong> Comme pour les autres propriétés raccourcies, il n'est pas possible d'hériter de valeurs individuelles (par exemple (<code>border-radius:0 0 inherit inherit</code> pour surcharger les définitions existantes). Si on souhaite avoir un comportement de ce type, on devra utiliser les propriétés détaillées.</p>
+</div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
@@ -94,46 +94,46 @@ border-radius: unset;
  <tbody>
   <tr>
    <td style="vertical-align: top;">Une seule valeur</td>
-   <td><img alt="all-corner.png" class="default internal" src="/@api/deki/files/6138/=all-corner.png"></td>
+   <td><img src="all-corner.png"></td>
    <td style="vertical-align: top;">Une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) ou un pourcentage (type {{cssxref("&lt;percentage&gt;")}}) qui indique le rayon à utiliser pour chaque coin lorsqu'on utilise une seule valeur dans la déclaration.</td>
   </tr>
   <tr>
    <td style="vertical-align: top;">Deux valeurs (coin en haut à gauche et en bas à droite)</td>
-   <td><img alt="top-left-bottom-right.png" class="default internal" src="/@api/deki/files/6141/=top-left-bottom-right.png"></td>
+   <td><img src="top-left-bottom-right.png"></td>
    <td style="vertical-align: top;">Une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) ou un pourcentage (type {{cssxref("&lt;percentage&gt;")}}) qui indique le rayon de courbure à utiliser pour le coin en haut à gauche et le coin en bas à droite de la boîte de bordure lorsqu'on utilise deux valeurs dans la déclaration.</td>
   </tr>
   <tr>
    <td style="vertical-align: top;">Coin en haut à droite et en bas à gauche (syntaxe à deux et trois valeurs)</td>
-   <td><img alt="top-right-bottom-left.png" class="default internal" src="/@api/deki/files/6143/=top-right-bottom-left.png"></td>
+   <td><img src="top-right-bottom-left.png"></td>
    <td style="vertical-align: top;">Une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) ou un pourcentage (type {{cssxref("&lt;percentage&gt;")}}) qui indique le rayon de courbure à utiliser pour le coin en haut à droite et le coin en bas à gauche de la boîte de bordure lorsqu'on utilise deux ou trois valeurs dans la déclaration.</td>
   </tr>
   <tr>
    <td style="vertical-align: top;">Coin en haut à gauche</td>
-   <td><img alt="top-left.png" class="default internal" src="/@api/deki/files/6142/=top-left.png"></td>
+   <td><img src="top-left.png"></td>
    <td style="vertical-align: top;">Une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) ou un pourcentage (type {{cssxref("&lt;percentage&gt;")}}) qui indique le rayon de courbure à utiliser pour le coin en haut à gauche de l'élément. Cette valeur est utilisée lorsqu'on utilise la syntaxe avec trois ou quatre valeurs.</td>
   </tr>
   <tr>
    <td style="vertical-align: top;">Coin en haut à droite</td>
-   <td style="margin-left: 2px;"><img alt="top-right.png" class="default internal" src="/@api/deki/files/6144/=top-right.png"></td>
+   <td style="margin-left: 2px;"><img src="top-right.png"></td>
    <td style="vertical-align: top;">Une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) ou un pourcentage (type {{cssxref("&lt;percentage&gt;")}}) qui indique le rayon de courbure à utiliser pour le coin en haut à droite de l'élément. Cette valeur est utilisée lorsqu'on utilise la syntaxe avec quatre valeurs.</td>
   </tr>
   <tr>
    <td style="vertical-align: top;">Coin en bas à droite</td>
-   <td style="margin-left: 2px;"><img alt="bottom-rigth.png" class="default internal" src="/@api/deki/files/6140/=bottom-rigth.png"></td>
+   <td style="margin-left: 2px;"><img src="bottom-rigth.png"></td>
    <td style="vertical-align: top;">Une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) ou un pourcentage (type {{cssxref("&lt;percentage&gt;")}}) qui indique le rayon de courbure à utiliser pour le coin en bas à droite de l'élément. Cette valeur est utilisée lorsqu'on utilise la syntaxe avec trois ou quatre valeurs.</td>
   </tr>
   <tr>
    <td style="vertical-align: top;">Coin en bas à gauche</td>
-   <td><img alt="bottom-left.png" class="default internal" src="/@api/deki/files/6139/=bottom-left.png"></td>
+   <td><img src="bottom-left.png"></td>
    <td style="vertical-align: top;">Une valeur de longueur (type {{cssxref("&lt;length&gt;")}}) ou un pourcentage (type {{cssxref("&lt;percentage&gt;")}}) qui indique le rayon de courbure à utiliser pour le coin en bas à gauche de l'élément. Cette valeur est utilisée lorsqu'on utilise la syntaxe avec quatre valeurs.</td>
   </tr>
  </tbody>
 </table>
 
 <dl>
- <dt><a id="length" name="length"><code>&lt;length&gt;</code></a></dt>
+ <dt><code>&lt;length&gt;</code></dt>
  <dd>Cette valeur indique la mesure du rayon de courbure du cercle ou la mesure du demi grand axe ou du demi petit axe de l'ellipse traduisant la courbure. Cette valeur peut être exprimée avec les différentes unités de {{cssxref("&lt;length&gt;")}}. Les valeurs négatives sont considérées comme invalides.</dd>
- <dt><a id="percentage" name="percentage"><code>&lt;percentage&gt;</code></a></dt>
+ <dt><code>&lt;percentage&gt;</code></dt>
  <dd>Cette valeur traduit la mesure du rayon de courbure (elliptique ou circulaire) exprimée en pourcentages par rapport à la taille de la boîte. Les rayons verticaux sont donc proportionnels à la hauteur de la boîte et les rayons horizontaux proportionnels à la largeur de la boîte. Les valeurs négatives sont considérées comme invalides. Voir {{cssxref("&lt;percentage&gt;")}} pour plus de détails.</dd>
 </dl>
 
