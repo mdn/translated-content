@@ -444,7 +444,7 @@
 /zh-CN/docs/DOM/window.frameElement	/zh-CN/docs/Web/API/Window/frameElement
 /zh-CN/docs/DOM/window.length	/zh-CN/docs/Web/API/Window/length
 /zh-CN/docs/DOM/window.location	/zh-CN/docs/Web/API/Window/location
-/zh-CN/docs/DOM/window.minimize	/zh-CN/docs/Web/API/Window/minimize
+/zh-CN/docs/DOM/window.minimize	/zh-CN/docs/conflicting/Web/API/Window
 /zh-CN/docs/DOM/window.moveTo	/zh-CN/docs/Web/API/Window/moveTo
 /zh-CN/docs/DOM/window.mozAnimationStartTime	/zh-CN/docs/Web/API/Window/mozAnimationStartTIme
 /zh-CN/docs/DOM/window.navigator	/zh-CN/docs/Web/API/Window/navigator
@@ -1524,7 +1524,7 @@
 /zh-CN/docs/Web/API/Window.length	/zh-CN/docs/Web/API/Window/length
 /zh-CN/docs/Web/API/Window.location	/zh-CN/docs/Web/API/Window/location
 /zh-CN/docs/Web/API/Window.matchMedia	/zh-CN/docs/Web/API/Window/matchMedia
-/zh-CN/docs/Web/API/Window.minimize	/zh-CN/docs/Web/API/Window/minimize
+/zh-CN/docs/Web/API/Window.minimize	/zh-CN/docs/conflicting/Web/API/Window
 /zh-CN/docs/Web/API/Window.moveBy	/zh-CN/docs/Web/API/Window/moveBy
 /zh-CN/docs/Web/API/Window.moveTo	/zh-CN/docs/Web/API/Window/moveTo
 /zh-CN/docs/Web/API/Window.mozAnimationStartTime	/zh-CN/docs/Web/API/Window/mozAnimationStartTIme
@@ -1560,6 +1560,7 @@
 /zh-CN/docs/Web/API/Window/btoa	/zh-CN/docs/Web/API/btoa
 /zh-CN/docs/Web/API/Window/caches	/zh-CN/docs/Web/API/caches
 /zh-CN/docs/Web/API/Window/clearInterval	/zh-CN/docs/Web/API/clearInterval
+/zh-CN/docs/Web/API/Window/minimize	/zh-CN/docs/conflicting/Web/API/Window
 /zh-CN/docs/Web/API/Window/onbeforeunload	/zh-CN/docs/Web/API/WindowEventHandlers/onbeforeunload
 /zh-CN/docs/Web/API/Window/onhashchange	/zh-CN/docs/Web/API/WindowEventHandlers/onhashchange
 /zh-CN/docs/Web/API/Window/onpopstate	/zh-CN/docs/Web/API/WindowEventHandlers/onpopstate
