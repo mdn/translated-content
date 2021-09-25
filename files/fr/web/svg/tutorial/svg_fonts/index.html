@@ -12,8 +12,9 @@ original_slug: Web/SVG/Tutoriel/polices_SVG
 
 <p>Lorsque SVG a été spécifié, le support des polices d'écriture pour le web n'était pas répandu dans les navigateurs. Comme l'accès au fichier de la police adéquate est cependant crucial pour afficher correctement le texte, une technologie de description des polices a été ajoutée à SVG pour offrir cette capacité. Elle n'a pas été conçue pour la compatibilité avec d'autres formats tels que le PostScript ou OTF, mais plutôt comme un moyen simple d'intégration des informations des glyphes en SVG lors de l'affichage.</p>
 
-<div class="note"><strong>Les Polices d'écritures SVG sont actuellement supportées uniquement sur Safari et le navigateur Android.</strong><br>
-Internet Explorer <a href="http://blogs.msdn.com/b/ie/archive/2010/08/04/html5-modernized-fourth-ie9-platform-preview-available-for-developers.aspx">n'a pas envisagé de les implémenter</a>, la fonctionnalité a été <a href="https://www.chromestatus.com/feature/5930075908210688">supprimée de Chrome 38</a> (et Opera 25) et Firefox a <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=119490">reporté sa mise en œuvre indéfiniment</a> pour se concentrer sur <a href="/en/WOFF" title="en/About WOFF">WOFF</a>. Cependant, d'autres outils comme le plugin <a class="external" href="http://www.adobe.com/svg/viewer/install/">Adobe SVG Viewer</a>, Batik et des modèles de document d'Inkscape supportent l'incorporation des Police d'écriture SVG.</div>
+<div class="note">
+  <p><strong>Note :</strong> Les Polices d'écritures SVG sont actuellement supportées uniquement sur Safari et le navigateur Android. Internet Explorer <a href="http://blogs.msdn.com/b/ie/archive/2010/08/04/html5-modernized-fourth-ie9-platform-preview-available-for-developers.aspx">n'a pas envisagé de les implémenter</a>, la fonctionnalité a été <a href="https://www.chromestatus.com/feature/5930075908210688">supprimée de Chrome 38</a> (et Opera 25) et Firefox a <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=119490">reporté sa mise en œuvre indéfiniment</a> pour se concentrer sur <a href="/en/WOFF" title="en/About WOFF">WOFF</a>. Cependant, d'autres outils comme le plugin <a class="external" href="http://www.adobe.com/svg/viewer/install/">Adobe SVG Viewer</a>, Batik et des modèles de document d'Inkscape supportent l'incorporation des Police d'écriture SVG.</p>
+</div>
 
 <p>La base pour définir une police SVG est l'élément {{ SVGElement("font") }}.</p>
 
@@ -21,7 +22,7 @@ Internet Explorer <a href="http://blogs.msdn.com/b/ie/archive/2010/08/04/html5-m
 
 <p>Quelques ingrédients sont nécessaires pour intégrer une police en SVG. Prenons un exemple de déclaration (celle <a class="external" href="http://www.w3.org/TR/SVG/fonts.html#FontElement">de la spécification</a>), et expliquons-en les détails.</p>
 
-<pre class="line-numbers  language-html"><code class="language-html">&lt;font id="Font1" horiz-adv-x="1000"&gt;
+<pre class="brush: html">&lt;font id="Font1" horiz-adv-x="1000"&gt;
   &lt;font-face font-family="Super Sans" font-weight="bold" font-style="normal"
       units-per-em="1000" cap-height="600" x-height="400"
       ascent="700" descent="300"
@@ -34,7 +35,7 @@ Internet Explorer <a href="http://blogs.msdn.com/b/ie/archive/2010/08/04/html5-m
   &lt;glyph unicode="!" horiz-adv-x="300"&gt;&lt;!-- Outline of exclam. pt. glyph --&gt;&lt;/glyph&gt;
   &lt;glyph unicode="@"&gt;&lt;!-- Outline of @ glyph --&gt;&lt;/glyph&gt;
   &lt;!-- more glyphs --&gt;
-&lt;/font&gt;</code></pre>
+&lt;/font&gt;</pre>
 
 <p>Nous commençons avec l'élement {{ SVGElement("font") }}. Il contient un attribut id, ce qui permet de le référencer via une URI (voir plus bas). L'attribut <code>horiz-adv-x</code> définit sa largeur moyenne, comparée aux définitions des autres glyphes individules. La valeur 1000 définit une valeur raisonnable. Plusieurs autres attributs associés précisent l'affichage de la boite qui encapsule le glyphe.</p>
 
@@ -48,30 +49,26 @@ Internet Explorer <a href="http://blogs.msdn.com/b/ie/archive/2010/08/04/html5-m
 
 <p>There are two further elements that can be defined inside <code>font</code>: {{ SVGElement("hkern") }} and {{ SVGElement("vkern") }}. Each carries references to at least two characters (attributes <code>u1</code> and <code>u2</code>) and an attribute <code>k</code> that determines how much the distance between those characters should be decreased. The below example instructs user agents to place the "A" and "V" characters closer together the standard distance between characters.</p>
 
-<pre class="line-numbers  language-html"><code class="language-html">&lt;hkern u1="A" u2="V" k="20" /&gt;</code></pre>
+<pre class="brush: html">&lt;hkern u1="A" u2="V" k="20" /&gt;</pre>
 
 <h2 id="Référencer_une_police">Référencer une police</h2>
 
 <p>Lorsque vous avez mis en place votre déclaration de police comme décrit ci-dessus, vous pouvez utiliser un simple attribut <code>font-family</code> pour réellement appliquer la police à un texte SVG:</p>
 
-<pre class="line-numbers  language-html"><code class="language-html">&lt;font&gt;
+<pre class="brush: html">&lt;font&gt;
   &lt;font-face font-family="Super Sans" /&gt;
   &lt;!-- ... --&gt;
 &lt;/font&gt;
 
-&lt;text font-family="Super Sans"&gt;My text uses Super Sans&lt;/text&gt;</code></pre>
+&lt;text font-family="Super Sans"&gt;My text uses Super Sans&lt;/text&gt;</pre>
 
 <p>Cependant, vous êtes libre de combiner plusieurs méthodes pour une plus grande liberté de où et comment définir la police.</p>
 
 <h3 id="Option_Utiliser_le_CSS_font-face">Option: Utiliser le CSS @font-face</h3>
 
-<p> </p>
-
 <p>Vous pouvez utiliser <code>@font-face</code> pour les polices externes de référence :</p>
 
-<p> </p>
-
-<pre class="line-numbers  language-html"><code class="language-html">&lt;font id="Super_Sans"&gt;
+<pre class="brush: html">&lt;font id="Super_Sans"&gt;
   &lt;!-- ... --&gt;
 &lt;/font&gt;
 
@@ -82,26 +79,19 @@ Internet Explorer <a href="http://blogs.msdn.com/b/ie/archive/2010/08/04/html5-m
 }
 &lt;/style&gt;
 
-&lt;text font-family="Super Sans"&gt;My text uses Super Sans&lt;/text&gt;</code></pre>
+&lt;text font-family="Super Sans"&gt;My text uses Super Sans&lt;/text&gt;</pre>
 
 <h3 id="Option_Référencer_une_police_externe">Option: Référencer une police externe</h3>
 
-<p> </p>
-
 <p>L'élément mentionné <code>font-face-uri</code> vous permet de référencer une police externe, permettant donc une plus grande réutilisabilité :</p>
 
-<p> </p>
 
-<pre class="line-numbers  language-html"><code class="language-html">&lt;font&gt;
+<pre class="brush: html">&lt;font&gt;
   &lt;font-face font-family="Super Sans"&gt;
     &lt;font-face-src&gt;
       &lt;font-face-uri xlink:href="fonts.svg#Super_Sans" /&gt;
     &lt;/font-face-src&gt;
   &lt;/font-face&gt;
-&lt;/font&gt;</code></pre>
+&lt;/font&gt;</pre>
 
-<article class="approved">
-<div class="boxed translate-rendered text-content">
 <p>{{ PreviousNext("Web/SVG/Tutoriel/filtres","Web/SVG/Tutoriel/SVG_Image_Tag") }}</p>
-</div>
-</article>

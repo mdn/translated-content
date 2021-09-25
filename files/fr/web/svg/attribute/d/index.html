@@ -52,7 +52,9 @@ translation_of: Web/SVG/Attribute/d
 
 <h2 id="glyph">glyph</h2>
 
-<p class="warning"><strong>Attention :</strong> Depuis SVG2, {{SVGElement('glyph')}} est dépréciée et ne doit plus être utilisé.</p>
+<div class="warning">
+  <p><strong>Attention :</strong> Depuis SVG2, {{SVGElement('glyph')}} est dépréciée et ne doit plus être utilisé.</p>
+</div>
 
 <p>Pour un {{SVGElement('glyph')}}, <code>d</code> est une chaîne de caractères qui contient une série de commandes de tracé qui définissent la forme du contour de la glyphe.</p>
 
@@ -73,11 +75,15 @@ translation_of: Web/SVG/Attribute/d
  </tbody>
 </table>
 
-<p class="note"><strong>Note :</strong> Le point d'origine (coordonnée <code>0,0</code>) est généralement le point du <em>coin en haut à gauche</em> du context. Néanmoins, l'élément {{SVGElement("glyph")}} a son point d'origine dans le coin en bas à gauche de son enveloppe.</p>
+<div class="note">
+  <p><strong>Note :</strong> Le point d'origine (coordonnée <code>0,0</code>) est généralement le point du <em>coin en haut à gauche</em> du context. Néanmoins, l'élément {{SVGElement("glyph")}} a son point d'origine dans le coin en bas à gauche de son enveloppe.</p>
+</div>
 
 <h2 id="missing-glyph">missing-glyph</h2>
 
-<p class="warning"><strong>Attention :</strong> Depuis SVG2, {{SVGElement('missing-glyph')}} est dépréciée et ne doit plus être utilisé.</p>
+<div class="warning">
+  <p><strong>Attention :</strong> Depuis SVG2, {{SVGElement('missing-glyph')}} est dépréciée et ne doit plus être utilisé.</p>
+</div>
 
 <p>Pour un {{SVGElement('missing-glyph')}}, <code>d</code> est une chaîne de caractères qui contient une série de commandes de tracé qui définissent la forme du contour de la glyphe.</p>
 
@@ -112,7 +118,9 @@ translation_of: Web/SVG/Attribute/d
  <li>Fermer le chemin (ClosePath)</li>
 </ul>
 
-<p class="note"><strong>Note:</strong> Les commandes sont sensibles à la casse; une commande en majuscule attend des positions absolues en arguments, alors qu'une commande en minuscule attend des points relatifs à la position actuelle du point.</p>
+<div class="note">
+  <p><strong>Note:</strong> Les commandes sont sensibles à la casse; une commande en majuscule attend des positions absolues en arguments, alors qu'une commande en minuscule attend des points relatifs à la position actuelle du point.</p>
+</div>
 
 <p>Il est toujours possible de spécifier une valeur négative en argument d'une commande : des angles négatifs pointeront dans une direction vers le sens inverse des aiguilles d'une montre; des positions <code>x</code> et <code>y</code> seront interprétées commandes coordonnées négatives; des valeurs <code>x</code> négatives se déplaceront vers la gauche; et des valeurs <code>y</code> négatives se déplaceront vers le haut.</p>
 
@@ -153,17 +161,15 @@ translation_of: Web/SVG/Attribute/d
 
 <p>Les courbes cubiques de Bézier suivent le même principe mais avec deux points de contrôle. La syntaxe de ces courbes est <code>C c1x, c1y c2x, c2y x, y</code> ou <code>c dc1x, dc1y dc2x, dc2y dx, dy</code>.</p>
 
-<div>
+
 
 
 <p>Pour réaliser des chaînes de courbes de Bézier "adoucies", il est possible d'utiliser les commandes T et S. Leur syntaxe est plus simple que les autres commandes Curveto car elles estiment que le premier point de contrôle est le symétrique du point de contrôle précédent par rapport au point terminal de la courbe précédente, ou que c'est le point précédent lui-même s'il n'y a pas eu de courbe tracée directement avant. La syntaxe de T est <code>T x, y</code> ou <code>t dx, dy</code> pour un point d'arrivée de position absolue ou relatives et sert à créer des courbes quadratiques de Bézier. S sert donc à faire des courbes cubiques de Bézier avec la syntaxe <code>S cx, cy x, y</code> ou <code>s dcx,dcy dx,dy</code>, où (d)cx indique le second point de contrôle.</p>
 
 <p>Finalement, toutes les commandes de courbes de Bézier peuvent servir de "polybézier" en spécifiant tous les paramètres successivement après la commande initiale. En conséquence, les deux commandes suivantes sont équivalentes en résultat :</p>
 
-<div class="geckoVersionNote">
 <p><code>&lt;path d="c 50, 0 50, 100 100, 100 50, 0 50, -100 100, -100" /&gt;<br>
  &lt;path d="c 50, 0 50, 100 100, 100 c 50, 0 50, -100 100, -100" /&gt;</code></p>
-</div>
 
 <h2 id="Arcto">Arcto</h2>
 
@@ -176,7 +182,6 @@ translation_of: Web/SVG/Attribute/d
 <h2 id="ClosePath_(fermer_un_chemin)">ClosePath (fermer un chemin)</h2>
 
 <p>L'instruction ClosePath trace simplement une ligne droite de la position actuelle jusqu'au point initial de la courbe. C'est l'instruction la plus simple puisqu'elle n'attend aucun argument. Il n'y a pas de différence entre la version majuscule ("Z") et la version minuscule ("z").</p>
-</div>
 
 <h2 id="Éléments">Éléments</h2>
 
@@ -192,4 +197,3 @@ translation_of: Web/SVG/Attribute/d
 <h2 id="Notes">Notes</h2>
 
 <p>Le point d'origine (de coordonnées 0,0) est habituellement le <strong>coin supérieur gauche</strong> du contexte. Cependant, l'élément {{SVGElement("glyph")}} a son origine dans le <strong>coin inférieur gauche</strong> de la boîte contenant son caractère.</p>
-</div>

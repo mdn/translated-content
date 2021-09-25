@@ -10,7 +10,9 @@ translation_of: Web/SVG/Attribute/stroke-opacity
 
 <p>L'attribut <strong><code>stroke-opacity</code></strong> définit l'opacité du contour (<em>couleur</em>, <em>dégradé</em>, <em>motif</em>, etc) appliqué à une forme SVG.</p>
 
-<p class="note"><strong>Note:</strong> <code>stroke-opacity</code> étant un attribut de présentation, il peut être utilisé comme propriété CSS.</p>
+<div class="note">
+  <p><strong>Note :</strong> <code>stroke-opacity</code> étant un attribut de présentation, il peut être utilisé comme propriété CSS.</p>
+</div>
 
 <p>Cet attribut peut être appliqué à tous les éléments, en revanche il n'aura d'effet que sur les éléments suivants: {{SVGElement('altGlyph')}}, {{SVGElement('circle')}}, {{SVGElement('ellipse')}}, {{SVGElement('path')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('text')}}, {{SVGElement('textPath')}}, {{SVGElement('tref')}}, et {{SVGElement('tspan')}}</p>
 
@@ -56,7 +58,9 @@ translation_of: Web/SVG/Attribute/stroke-opacity
  </tbody>
 </table>
 
-<p class="note"><strong>Note:</strong> SVG2 introduit les valeurs en pourcentage pour <code>stroke-opacity</code>, Cependant, ce n'est pas souvent pris en charge. pour le moment (<em>voir {{anch("Compatibilité des navigateurs")}} ci-dessous</em>), il est par conséquent recommendé d'utiliser les valeurs de l'intervalle <code>[0-1]</code>.</p>
+<div class="note">
+  <p><strong>Note :</strong> SVG2 introduit les valeurs en pourcentage pour <code>stroke-opacity</code>, Cependant, ce n'est pas souvent pris en charge. pour le moment (<em>voir {{anch("Compatibilité des navigateurs")}} ci-dessous</em>), il est par conséquent recommendé d'utiliser les valeurs de l'intervalle <code>[0-1]</code>.</p>
+</div>
 
 <p>Il est important de savoir que le contour recouvre partiellement le remplissage d'une forme. Ainsi, un contour avec une opacité différente de 1 affichera partiellement le remplissage du dessous. Pour éviter cet effet, il est possible d'appliquer une opacité globale avec l'attribut {{SVGAttr('opacity')}} ou placer le contour derrière le remplissage avec {{SVGAttr('paint-order')}}.</p>
 

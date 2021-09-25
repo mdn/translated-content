@@ -126,7 +126,7 @@ window.addEventListener('load', drawSvg);
 
 <p>Maintenant, parce le contenu du motif utilise le même système d'unité que le motif, le motif redimensionne automatiquement son contenu. Cela contraste avec le système "userSpaceOnUse" par défaut, où lorsque le motif change le taille, le contenu garde la même taille.</p>
 
-<h6 id="code_jouable_2">Code jouable 2</h6>
+<h3 id="code_jouable_2">Code jouable 2</h3>
 
 <pre class="brush: html hidden">&lt;svg width="600" height="200" xmlns="http://www.w3.org/2000/svg" id="svg" class="playable-svg"&gt;
   &lt;defs&gt;
@@ -182,7 +182,9 @@ window.addEventListener('load', drawSvg);
 
 <p>{{ EmbedLiveSample('code_jouable_2','220','350') }}</p>
 
-<p class="note"><strong>Note</strong>: Dans Gecko, les cercles semblent avoir du mal à être dessinés si le rayon est inférieur à 0.075 (on ignore s'il s'agit d'un bug de l'élément pattern ou non). Pour contourner ce problème, il est probablement préférable d'éviter de dessiner des cercles dans des unités "objectBoundingBox".</p>
+<div class="note">
+  <p><strong>Note :</strong> Dans Gecko, les cercles semblent avoir du mal à être dessinés si le rayon est inférieur à 0.075 (on ignore s'il s'agit d'un bug de l'élément pattern ou non). Pour contourner ce problème, il est probablement préférable d'éviter de dessiner des cercles dans des unités "objectBoundingBox".</p>
+</div>
 
 <h2 id="Unités_du_motif_userSpaceOnUse">Unités du motif: userSpaceOnUse</h2>
 
@@ -197,7 +199,7 @@ window.addEventListener('load', drawSvg);
 
 <p>Bien sûr, cela veut dire que le motif ne sera pas mis à l'échelle si vous modifiez la taille de l'objet ultérieurement.</p>
 
-<h3 name="exemple_jouable_3">Exemple jouable</h6>
+<h3>Exemple jouable</h3>
 
 <pre class="brush: html hidden">&lt;svg width="600" height="200" xmlns="http://www.w3.org/2000/svg" id="svg" class="playable-svg"&gt;
   &lt;defs&gt;
