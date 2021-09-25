@@ -3,8 +3,8 @@ title: 加算 (+)
 slug: Web/JavaScript/Reference/Operators/Addition
 tags:
   - JavaScript
-  - Language feature
-  - Operator
+  - 言語機能
+  - 演算子
   - Reference
 browser-compat: javascript.operators.addition
 translation_of: Web/JavaScript/Reference/Operators/Addition
