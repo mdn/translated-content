@@ -38,7 +38,7 @@ original_slug: Web/SVG/Tutoriel/Paths
 
 <p>Dans l’exemple suivant, on se place au point (10, 10). Notez cependant qu'à ce stade rien n'est dessiné, on a manuellement ajouté un cercle pour indiquer la position:</p>
 
-<p><img alt="" class="internal" src="/@api/deki/files/45/=Blank_Path_Area.png" style="float: right;"></p>
+<p><img alt="" src="blank_path_area.png"></p>
 
 <pre class="brush: xml">&lt;svg width="200" height="200" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;path d="M10 10"/&gt;
@@ -62,7 +62,7 @@ V y (ou v dy)
 
 <p>Afin de commencer facilement, nous allons dessiner une forme simple, un rectangle (qu'on aurait aussi pu dessiner avec un élément <code>&lt;rect&gt;</code>). Il est composé uniquement de lignes horizontales et verticales :</p>
 
-<p><img alt="" class="internal" src="/@api/deki/files/292/=Path_Line_Commands.png" style="float: right;"></p>
+<p><img alt="" src="path_line_commands.png"></p>
 
 <pre class="brush: xml">&lt;svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;path d="M10 10 H 90 V 90 H 10 L 10 10"/&gt;
@@ -116,7 +116,7 @@ V y (ou v dy)
 
 <p>Les points de contrôle décrivent, pour faire simple, la pente de la courbe pour le point de départ et pour le point d'arrivée. La fonction Bézier crée ensuite une courbe lisse faisant le lien entre la pente que vous avez établie au début de votre ligne, et celle à l’autre extrémité.</p>
 
-<p><img alt="Cubic Bézier Curves with grid" class="internal" src="https://mdn.mozillademos.org/files/10401/Cubic_Bezier_Curves_with_grid.png" style="float: right; height: 160px; width: 190px;"></p>
+<p><img src="shortcut_cubic_bézier_with_grid.png"></p>
 
 <pre class="brush: xml">&lt;svg width="190" height="160" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;path d="M10 10 C 20 20, 40 20, 50 10" stroke="black" fill="transparent"/&gt;
@@ -151,7 +151,7 @@ V y (ou v dy)
 
 <p>Un exemple de cette syntaxe est montré ci-dessous. Dans la figure associée, les points de contrôle spécifiés sont indiqués en rouge, et le point de contrôle inféré, en bleu.</p>
 
-<p><img alt="ShortCut_Cubic_Bezier_with_grid.png" class="internal" src="https://mdn.mozillademos.org/files/10405/ShortCut_Cubic_Bezier_with_grid.png" style="float: right; height: 160px; width: 190px;"></p>
+<p><img src="shortcut_cubic_bézier_with_grid.png"></p>
 
 <pre class="brush: xml">&lt;svg width="190" height="160" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;path d="M10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80" stroke="black" fill="transparent"/&gt;
@@ -166,7 +166,8 @@ V y (ou v dy)
 
 <p>(x1 y1) est la position du point de contrôle, et (x y) est le point d’arrivée de la courbe.</p>
 
-<p><img alt="Quadratic Bézier with grid" class="internal" src="https://mdn.mozillademos.org/files/10403/Quadratic_Bezier_with_grid.png" style="float: right; height: 160px; width: 190px;"></p>
+<p><img alt="courbe de Bézier quadratique avec une grille" src="quadratic_bézier_with_grid.png"></p>
+
 
 <pre class="brush: xml">&lt;svg width="190" height="160" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;path d="M10 80 Q 95 10 180 80" stroke="black" fill="transparent"/&gt;
@@ -185,7 +186,8 @@ V y (ou v dy)
   <p><strong>Note :</strong> Ce raccourci fonctionne uniquement si la commande précédente est une commande <code>Q</code> ou <code>T</code>. Dans le cas contraire, le point de contrôle est considéré comme le même que le point précédent, et vous ne dessinerez que des lignes.</p>
 </div>
 
-<p><img alt="Shortcut_Quadratic_Bezier_with_grid.png" class="internal" src="https://mdn.mozillademos.org/files/10407/Shortcut_Quadratic_Bezier_with_grid.png" style="float: right; height: 158px; width: 188px;"></p>
+<p><img src="shortcut_quadratic_bézier_with_grid.png"></p>
+
 
 <pre class="brush: xml">&lt;svg width="190" height="160" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;path d="M10 80 Q 52.5 10, 95 80 T 180 80" stroke="black" fill="transparent"/&gt;
@@ -207,7 +209,7 @@ a rx ry x-axis-rotation large-arc-flag sweep-flag dx dy
 
 <p><code>x-axis-rotation</code> décrit la rotation de l’arc. Il s’explique plus facilement avec un exemple:</p>
 
-<p><img alt="SVGArcs_XAxisRotation_with_grid" class="internal" src="https://mdn.mozillademos.org/files/10409/SVGArcs_XAxisRotation_with_grid.png" style="float: right; height: 201px; width: 200px;"></p>
+<p><img alt="SVGArcs_XAxisRotation_with_grid" src="svgarcs_xaxisrotation_with_grid.png"></p>
 
 <pre class="brush: xml">&lt;svg width="320" height="320" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;line x1="10" y1="315" x2="315" y2="10" stroke="black" stroke-width="2" /&gt;
@@ -304,7 +306,7 @@ a rx ry x-axis-rotation large-arc-flag sweep-flag dx dy
 
 <p>L’exemple ci-dessous montre les quatre combinaisons possibles avec <code>sweep-flag</code> et <code>large-arc-flag</code>:</p>
 
-<p><img alt="" class="internal" src="/@api/deki/files/345/=SVGArcs_Flags.png" style="float: right;"></p>
+<p><img alt="" src="svgarcs_flags.png"></p>
 
 <pre class="brush: xml">&lt;svg width="325" height="325" xmlns="http://www.w3.org/2000/svg"&gt;
   &lt;path d="M80 80
