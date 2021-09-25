@@ -2,21 +2,21 @@
 title: 除算代入 (/=)
 slug: Web/JavaScript/Reference/Operators/Division_assignment
 tags:
-  - Assignment operator
+  - 代入演算子
   - JavaScript
-  - Language feature
-  - Operator
+  - 言語機能
+  - 演算子
   - Reference
   - 代入演算子
   - 演算子
   - 言語機能
 translation_of: Web/JavaScript/Reference/Operators/Division_assignment
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>除算代入演算子 (<code>/=</code>) は変数を右オペランドの値で除算し、結果をその変数に代入するものです。</p>
+除算代入演算子 (`/=`) は変数を右オペランドの値で除算し、結果をその変数に代入するものです。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-division-assignment.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-division-assignment.html")}}
 
 <div class="hidden">このデモのソースファイルは GitHub リポジトリーに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
 
@@ -51,7 +51,7 @@ bar /= 0     // Infinity</pre>
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>{{Compat("javascript.operators.division_assignment")}}</p>
+{{Compat("javascript.operators.division_assignment")}}
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 

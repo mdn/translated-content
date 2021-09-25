@@ -2,21 +2,21 @@
 title: ビット論理和代入 (|=)
 slug: Web/JavaScript/Reference/Operators/Bitwise_OR_assignment
 tags:
-  - Assignment operator
+  - 代入演算子
   - Deprecated
   - JavaScript
-  - Language feature
-  - Operator
+  - 言語機能
+  - 演算子
   - Reference
   - 代入演算子
   - 演算子
 translation_of: Web/JavaScript/Reference/Operators/Bitwise_OR_assignment
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>ビット論理和代入演算子 (<code>|=</code>) は、両方のオペランドの二進表現を使用し、これらにビット単位の OR 演算を行って、結果を変数に代入します。</p>
+ビット論理和代入演算子 (`|=`) は、両方のオペランドの二進表現を使用し、これらにビット単位の OR 演算を行って、結果を変数に代入します。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-bitwise-or-assignment.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-bitwise-or-assignment.html")}}
 
 <div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただける場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
 
@@ -53,12 +53,12 @@ a |= 2; // 7
 
 <h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
 
-<p>{{Compat("javascript.operators.bitwise_or_assignment")}}</p>
+{{Compat("javascript.operators.bitwise_or_assignment")}}
 
 <h2 id="See_also" name="See_also">関連情報</h2>
 
 <ul>
  <li><a href="/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment">ビット演算子ガイド</a></li>
  <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_OR">ビット論理和演算子</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment">論理和代入 (<code>||=</code>)</a></li>
+ <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment">論理和代入 (`||=`)</a></li>
 </ul>

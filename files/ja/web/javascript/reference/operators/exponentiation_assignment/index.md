@@ -2,29 +2,29 @@
 title: べき乗代入 (**=)
 slug: Web/JavaScript/Reference/Operators/Exponentiation_assignment
 tags:
-  - Assignment operator
+  - 代入演算子
   - JavaScript
-  - Language feature
-  - Operator
+  - 言語機能
+  - 演算子
   - Reference
 translation_of: Web/JavaScript/Reference/Operators/Exponentiation_assignment
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>べき乗代入演算子 (<code>**=</code>) は、変数の値を右辺のオペランドでべき乗します。</p>
+べき乗代入演算子 (`**=`) は、変数の値を右辺のオペランドでべき乗します。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-exponentiation-assignment.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-exponentiation-assignment.html")}}
 
 <div></div>
 
 
 
-<h2 id="構文">構文</h2>
+## 構文
 
 <pre class="syntaxbox notranslate"><strong>Operator:</strong> x **= y
 <strong>Meaning:</strong>  x  = x ** y</pre>
 
-<h2 id="例">例</h2>
+## 例
 
 <h3 id="べき乗代入の仕様">べき乗代入の仕様</h3>
 
@@ -51,7 +51,7 @@ bar **= 'foo' // NaN</pre>
 
 
 
-<p>{{Compat("javascript.operators.exponentiation_assignment")}}</p>
+{{Compat("javascript.operators.exponentiation_assignment")}}
 
 <h2 id="関連項目">関連項目</h2>
 

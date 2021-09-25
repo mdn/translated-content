@@ -2,29 +2,29 @@
 title: ビット排他的論理和代入 (^=)
 slug: Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment
 tags:
-  - Assignment operator
+  - 代入演算子
   - JavaScript
-  - Language feature
-  - Operator
+  - 言語機能
+  - 演算子
   - Reference
 translation_of: Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>ビット排他的論理和代入演算子 (<code>^=</code>) は、両方のオペランドのバイナリ表現を使用し、それらに対してビット単位の XOR 演算を実行し、結果を変数に代入します。</p>
+ビット排他的論理和代入演算子 (`^=`) は、両方のオペランドのバイナリ表現を使用し、それらに対してビット単位の XOR 演算を実行し、結果を変数に代入します。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-bitwise-xor-assignment.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-bitwise-xor-assignment.html")}}
 
 <div></div>
 
 
 
-<h2 id="構文">構文</h2>
+## 構文
 
 <pre class="syntaxbox notranslate"><strong>Operator:</strong> x ^= y
 <strong>Meaning:</strong>  x  = x ^ y</pre>
 
-<h2 id="例">例</h2>
+## 例
 
 <h3 id="ビット排他的論理和代入の使用">ビット排他的論理和代入の使用</h3>
 
@@ -61,7 +61,7 @@ console.log(b); // 00000000000000000000000000000101
 
 
 
-<p>{{Compat("javascript.operators.bitwise_xor_assignment")}}</p>
+{{Compat("javascript.operators.bitwise_xor_assignment")}}
 
 <h2 id="関連項目">関連項目</h2>
 

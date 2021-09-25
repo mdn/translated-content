@@ -2,29 +2,29 @@
 title: 加算代入 (+=)
 slug: Web/JavaScript/Reference/Operators/Addition_assignment
 tags:
-  - Assignment operator
+  - 代入演算子
   - JavaScript
-  - Language feature
-  - Operator
+  - 言語機能
+  - 演算子
   - Reference
 translation_of: Web/JavaScript/Reference/Operators/Addition_assignment
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>加算代入演算子 (<code>+=</code>) は、右辺のオペランドの値を変数に加算し、結果を変数に代入します。 2つのオペランドの型は、加算代入演算子の動作を決定します。加算もしくは連結が可能です。</p>
+加算代入演算子 (`+=`) は、右辺のオペランドの値を変数に加算し、結果を変数に代入します。 2つのオペランドの型は、加算代入演算子の動作を決定します。加算もしくは連結が可能です。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-addition-assignment.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-addition-assignment.html")}}
 
 <div></div>
 
 
 
-<h2 id="構文">構文</h2>
+## 構文
 
 <pre class="syntaxbox notranslate"><strong>Operator:</strong> x += y
 <strong>Meaning:</strong>  x  = x + y</pre>
 
-<h2 id="例">例</h2>
+## 例
 
 <h3 id="加算代入の使用">加算代入の使用</h3>
 
@@ -68,7 +68,7 @@ foo += 'bar' // "foobar"</pre>
 
 
 
-<p>{{Compat("javascript.operators.addition_assignment")}}</p>
+{{Compat("javascript.operators.addition_assignment")}}
 
 <h2 id="関連項目">関連項目</h2>
 

@@ -2,33 +2,33 @@
 title: ビット論理積代入 (&=)
 slug: Web/JavaScript/Reference/Operators/Bitwise_AND_assignment
 tags:
-  - Assignment operator
+  - 代入演算子
   - JavaScript
-  - Language feature
-  - Operator
+  - 言語機能
+  - 演算子
   - Reference
   - 代入演算子
   - 演算子
   - 言語機能
 translation_of: Web/JavaScript/Reference/Operators/Bitwise_AND_assignment
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>ビット論理積代入演算子 (<code>&amp;=</code>) は、両方のオペランドのバイナリ表現を使用し、それらに対してビット単位の AND 演算を実行して、結果を変数に代入します。</p>
+ビット論理積代入演算子 (`&amp;=`) は、両方のオペランドのバイナリ表現を使用し、それらに対してビット単位の AND 演算を実行して、結果を変数に代入します。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-bitwise-and-assignment.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-bitwise-and-assignment.html")}}
 
 <div></div>
 
 
 
-<h2 id="構文">構文</h2>
+## 構文
 
 <pre class="syntaxbox notranslate"><strong>Operator:</strong> x &amp;= y
 <strong>Meaning:</strong>  x  = x &amp; y
 </pre>
 
-<h2 id="例">例</h2>
+## 例
 
 <h3 id="ビット論理積代入の使用">ビット論理積代入の使用</h3>
 
@@ -54,7 +54,7 @@ a &amp;= 2; // 0</pre>
 
 
 
-<p>{{Compat("javascript.operators.bitwise_and_assignment")}}</p>
+{{Compat("javascript.operators.bitwise_and_assignment")}}
 
 <h2 id="関連項目">関連項目</h2>
 
