@@ -34,7 +34,7 @@ original_slug: Introduction_to_using_XPath_in_JavaScript
  <li><code>namespaceResolver</code>: <code>xpathExpression</code> に含まれるあらゆる名前空間接頭辞を渡され、その接頭辞に対応する名前空間 URI を表す文字列を返す関数です。この関数により、 XPath 式で使われている接頭辞と文書内で使われている接頭辞が異なっていたとしてもそれを変換することが可能になります。この関数は次のいずれかです。
 
   <ul>
-   <li><code><a href="http://www.xulplanet.com/references/objref/XPathEvaluator.html">XPathEvaluator</a></code> オブジェクトの <code><a href="ja/DOM/document.createNSResolver">createNSResolver</a></code> メソッドにより<a href="#implementing_a_default_namespace_resolver">作成された</a>もの。ほとんどの場合はこれを使うべきでしょう。</li>
+   <li><code><a href="http://www.xulplanet.com/references/objref/XPathEvaluator.html">XPathEvaluator</a></code> オブジェクトの <code><a href="/ja/DOM/document.createNSResolver">createNSResolver</a></code> メソッドにより<a href="#implementing_a_default_namespace_resolver">作成された</a>もの。ほとんどの場合はこれを使うべきでしょう。</li>
    <li>HTML 文書の場合や、名前空間接頭辞が使われていない場合は <code>null</code> 。<code>xpathExpression</code> に名前空間接頭辞が含まれている場合に null を使うと、 <code>DOMException</code> が<code>NAMESPACE_ERR</code> コードと共に投げられるので注意してください。</li>
    <li>ユーザー定義のカスタム関数。詳しくは付録の<a href="#implementing_a_user_defined_namespace_resolver">ユーザー定義名前空間リゾルバーの使用</a>の節を参照してください。</li>
   </ul>
@@ -248,7 +248,7 @@ while (thisHeading) {
 &lt;/people&gt;
 </pre>
 
-<p>拡張機能内で XML 文書の内容を取得できるようにするため、<code><a href="ja/XMLHttpRequest">XMLHttpRequest</a></code> オブジェクトを作成して文書を同期的に読み込みます。変数 <code>xmlDoc</code> には文書が <code><a href="ja/XMLDocument">XMLDocument</a></code> オブジェクトとして格納されるので、それに対して <code>evaluate</code> メソッドを使う事ができます。</p>
+<p>拡張機能内で XML 文書の内容を取得できるようにするため、<code><a href="/ja/XMLHttpRequest">XMLHttpRequest</a></code> オブジェクトを作成して文書を同期的に読み込みます。変数 <code>xmlDoc</code> には文書が <code><a href="/ja/XMLDocument">XMLDocument</a></code> オブジェクトとして格納されるので、それに対して <code>evaluate</code> メソッドを使う事ができます。</p>
 
 <p>拡張機能の xul/js 文書で使用する JavaScript は以下の通りです。</p>
 

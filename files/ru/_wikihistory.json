@@ -7980,12 +7980,6 @@
       "Lambrusco.pro"
     ]
   },
-  "Web/API/File/fileName": {
-    "modified": "2019-03-23T22:09:17.877Z",
-    "contributors": [
-      "Ferguse"
-    ]
-  },
   "Web/API/File/getAsDataURL": {
     "modified": "2019-03-23T22:18:17.148Z",
     "contributors": [
@@ -24188,6 +24182,12 @@
     "modified": "2019-03-23T22:07:41.302Z",
     "contributors": [
       "paulvoloschuk"
+    ]
+  },
+  "conflicting/Web/API/File/name": {
+    "modified": "2019-03-23T22:09:17.877Z",
+    "contributors": [
+      "Ferguse"
     ]
   },
   "conflicting/Web/API/Geolocation": {

@@ -18,7 +18,7 @@ original_slug: Web/CSS/Comprendre_z-index/Exemple_3
 
 <p>Si les trois niveaux du menu se chevauchent partiellement, alors la gestion de l'empilement peut devenir problématique.</p>
 
-<p><img alt="Figure 7 : Exemple de contexte d'empilement 3" class="internal" src="/@api/deki/files/1456/=Understanding_zindex_07.png"></p>
+<p>{{ EmbedLiveSample('Exemple', '320', '330') }}</p>
 
 <p>Le menu de premier niveau est positionné relativement, ainsi aucun contexte d'empilement n'est créé.</p>
 
@@ -54,7 +54,10 @@ original_slug: Web/CSS/Comprendre_z-index/Exemple_3
 
 <p>On peut contourner ce problème en supprimant le chevauchement entre les différents niveaux du menu, ou en utilisant des valeurs de <code>z-index</code> individuelles (et différentes) assignées à l'aide de sélecteurs d'<em>id</em> plutôt que des sélecteurs de classe ou encore en aplatissant la hiérarchie HTML.</p>
 
-<div class="note"><strong>Note :</strong> Dans le code source, vous remarquerez que les menus de deuxième et troisième niveaux sont construits à l'aide de plusieurs boîtes <em>DIV</em> contenues dans un élément positionné en absolu. Ceci sert à les grouper et à les positionner en une seule fois.</div>
+<div class="note">
+  <p><strong>Note :</strong> Dans le code source, vous remarquerez que les menus de deuxième et troisième niveaux sont construits à l'aide de plusieurs boîtes <em>DIV</em> contenues dans un élément positionné en absolu. Ceci sert à les grouper et à les positionner en une seule fois.
+  </p>
+</div>
 
 <h2 id="Exemple">Exemple</h2>
 
@@ -154,8 +157,5 @@ div.lev3 {
 &lt;/div&gt;
 </pre>
 
-<h3 id="Résultat">Résultat</h3>
-
-<p>{{EmbedLiveSample("Exemple")}}</p>
 
 <div>{{PreviousMenuNext("Web/CSS/Comprendre_z-index/Exemple_2","", "Web/CSS/Comprendre_z-index")}}</div>

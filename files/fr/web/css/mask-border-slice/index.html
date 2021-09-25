@@ -14,14 +14,14 @@ translation_of: Web/CSS/mask-border-slice
 
 <p>Cette découpe permet d'obtenir neuf régions au total : quatre pour les coins, quatre pour les côtés et une région pour le centre. Cette découpe est effectuée selon 4 lignes qui sont écartées d'une certaine distance des bords de l'image.</p>
 
-<p><a href="/files/3814/border-image-slice.png"><img alt="The nine regions defined by the border-image or border-image-slice properties" src="/files/3814/border-image-slice.png" style="margin: 1px; padding: 1em; width: 460px;"></a></p>
+<p><a href="border-image-slice.png"><img alt="The nine regions defined by the border-image or border-image-slice properties" src="border-image-slice.png"></a></p>
 
 <p>Le diagramme ci-avant illustre l'emplacement de chaque région.</p>
 
 <ul>
- <li>Les zones de 1 à 4 sont <a id="corner-regions" name="corner-regions">les zones aux coins</a>. Chacune sera utilisée une seule fois pour construire les coins de l'image du masque.</li>
- <li>Les zones 5 à 8 sont <a id="edge-regions" name="edge-regions">les zones de côtés</a>. Ces zones peuvent être <a href="/fr/docs/Web/CSS/mask-border-repeat">répétées, redimensionnées, ou modifiées</a> afin que le masque de bordule final aient les mêmes dimensions que l'élément.</li>
- <li>La zone 9 est  <a id="middle-region" name="middle-region">la zone centrale</a>. Par défaut, elle n'est pas utilisée mais elle pourra être utilisée comme image d'arrière-plan si le mot-clé <code>fill</code> est utilisé.</li>
+ <li>Les zones de 1 à 4 sont les zones aux coins. Chacune sera utilisée une seule fois pour construire les coins de l'image du masque.</li>
+ <li>Les zones 5 à 8 sont les zones de côtés. Ces zones peuvent être <a href="/fr/docs/Web/CSS/mask-border-repeat">répétées, redimensionnées, ou modifiées</a> afin que le masque de bordule final aient les mêmes dimensions que l'élément.</li>
+ <li>La zone 9 est la zone centrale. Par défaut, elle n'est pas utilisée mais elle pourra être utilisée comme image d'arrière-plan si le mot-clé <code>fill</code> est utilisé.</li>
 </ul>
 
 <p>Les propriétés {{cssxref("mask-border-repeat")}}, {{cssxref("mask-border-width")}} et  {{cssxref("mask-border-outset")}} déterminent la façon dont ces régions sont utilisées pour construire le masque final.</p>
@@ -103,5 +103,5 @@ mask-border-slice: unset;
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="/fr/docs/Web/CSS/Propriétés_raccourcies#Quelques_cas_aux_limites_épineux">Description illustrée de la syntaxe pouvant couvrir de 1 à 4 valeurs</a></li>
+ <li><a href="/fr/docs/Web/CSS/Shorthand_properties#quelques_cas_aux_limites_%c3%a9pineux">Description illustrée de la syntaxe pouvant couvrir de 1 à 4 valeurs</a></li>
 </ul>
