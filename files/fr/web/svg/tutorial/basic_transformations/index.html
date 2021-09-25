@@ -23,9 +23,9 @@ original_slug: Web/SVG/Tutoriel/Transformations_de_base
 
 <p>{{ EmbedLiveSample('two_blocks', '30', '10') }}</p>
 
-<p><span id="result_box" lang="fr"><span class="hps">Toutes les transformations</span> <span class="hps">suivantes</span> <span class="hps">sont résumées</span> <span class="hps">dans l'attribut</span> <code><span class="hps">transform</span></code> <span class="hps">de l'élément</span><span>.</span> <span class="hps">Les transformations peuvent</span> <span class="hps">être mises les unes à la suite des autres,</span> <span class="hps">tout simplement</span> <span class="hps">en les écrivant toutes dans cet attribut</span><span>,</span> <span class="hps">séparées par des espaces</span><span>.</span></span></p>
+<p>Toutes les transformations suivantes sont résumées dans l'attribut <code>transform</code> de l'élément. Les transformations peuvent être mises les unes à la suite des autres, tout simplement en les écrivant toutes dans cet attribut, séparées par des espaces.</p>
 
-<h2 id="Translation"><span lang="fr"><span>Translation</span></span></h2>
+<h2 id="Translation">Translation</h2>
 
 <p>Il peut être nécessaire de décaler un élément, même s'il est possible de définir sa position dans ses attributs. Pour ce faire, la fonction <code>translate()</code> est parfaite.</p>
 
@@ -55,9 +55,9 @@ original_slug: Web/SVG/Tutoriel/Transformations_de_base
 
 <p>Les transformations peuvent être concaténées, séparées par des espaces. Par exemple, <code>translate()</code> et <code>rotate()</code> sont couramment utilisées ensemble:</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>svg</span> <span class="attr-name token">width</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>40<span class="punctuation token">"</span></span> <span class="attr-name token">height</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>50<span class="punctuation token">"</span></span><span class="language-css style-attr token"><span class="attr-name token"> <span class="attr-name token">style</span></span><span class="punctuation token">="</span><span class="attr-value token"><span class="property token">background-color</span><span class="punctuation token">:</span><span class="hexcode token">#bff</span><span class="punctuation token">;</span></span><span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>rect</span> <span class="attr-name token">x</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>0<span class="punctuation token">"</span></span> <span class="attr-name token">y</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>0<span class="punctuation token">"</span></span> <span class="attr-name token">width</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>10<span class="punctuation token">"</span></span> <span class="attr-name token">height</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>10<span class="punctuation token">"</span></span> <span class="attr-name token">transform</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>translate(30,40) rotate(45)<span class="punctuation token">"</span></span> <span class="punctuation token">/&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>svg</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;svg width="40" height="50" style="background-color:#bff;"&gt;
+    &lt;rect x="0" y="0" width="10" height="10" transform="translate(30,40) rotate(45)" /&gt;
+&lt;/svg&gt;</code></pre>
 
 <p>{{ EmbedLiveSample('Transformations_multiples', '40', '50') }}</p>
 
@@ -79,7 +79,7 @@ original_slug: Web/SVG/Tutoriel/Transformations_de_base
 
 <p>Voici un <a href="/en-US/docs/Web/SVG/Attribute/transform#General_Transformation">exemple concret sur la documentation de transformation SVG</a>. Pour plus de renseignements, veuillez vous référer à <a class="external" href="http://www.w3.org/TR/SVG/coords.html#TransformMatrixDefined">la page de recommandation SVG</a>.</p>
 
-<h2 class="editable" id="Effets_sur_les_systèmes_de_coordonnées"><span>Effets sur les systèmes de coordonnées</span></h2>
+<h2 class="editable" id="Effets_sur_les_systèmes_de_coordonnées">Effets sur les systèmes de coordonnées</h2>
 
 <p>Quand vous utilisez une transformation, vous définissez un nouveau système de coordonnées dans l'élément que vous transformez. Cela signifie que vous appliquez la transformation à tous les attributs de l'élément transformé et donc que cet élément n'est plus dans une carte de pixel d'échelle 1:1. Cette carte est également déplacée, déformée, agrandie ou réduite selon la transformation qui lui est appliquée.</p>
 
@@ -90,13 +90,13 @@ original_slug: Web/SVG/Tutoriel/Transformations_de_base
 &lt;/svg&gt;
 </pre>
 
-<p>Cet exemple aura pour résultat un rectangle de 100 par 100 pixels.<span id="result_box" lang="fr"><span class="hps"> Les</span> <span class="hps">effets</span> <span class="hps">les plus étonnants</span> <span class="hps">apparaissent</span> <span class="hps">lorsque vous utilisez</span> <span class="hps">des attributs tels que</span> <code><span class="hps">userSpaceOnUse</span></code><span>.</span></span></p>
+<p>Cet exemple aura pour résultat un rectangle de 100 par 100 pixels. Les effets les plus étonnants apparaissent lorsque vous utilisez des attributs tels que <code>userSpaceOnUse</code>.</p>
 
 <p>{{ EmbedLiveSample('Effets_sur_les_systèmes_de_coordonnées', '100', '100') }}</p>
 
-<h2 id="Embarquer_du_SVG_dans_SVG"><span lang="fr"><span>Embarquer du SVG dans SVG</span></span></h2>
+<h2 id="Embarquer_du_SVG_dans_SVG">Embarquer du SVG dans SVG</h2>
 
-<p>Par opposition au HTML, le SVG peut embarquer d'autres éléments <code>svg</code> déclarés de manière tout à fait transparente. <span id="result_box" lang="fr"><span class="hps">De cette façon,</span> <span class="hps">vous pouvez</span><span class="hps"> très simplement</span><span class="hps"> créer</span> <span class="hps">de nouveaux</span> <span class="hps">systèmes de coordonnées</span> <span class="hps">en utilisant</span> <code><span class="hps">viewBox</span></code><span>, <code>width</code></span> <span class="hps">et <code>height</code></span> <span class="hps">de l'élément</span> <code>svg</code><span>.</span></span></p>
+<p>Par opposition au HTML, le SVG peut embarquer d'autres éléments <code>svg</code> déclarés de manière tout à fait transparente. De cette façon, vous pouvez très simplement créer de nouveaux systèmes de coordonnées en utilisant <code>viewBox</code>, <code>width</code> et <code>height</code> de l'élément <code>svg</code>.</p>
 
 <pre class="brush: html">&lt;svg xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
   &lt;svg width="100" height="100" viewBox="0 0 50 50"&gt;
@@ -111,4 +111,4 @@ original_slug: Web/SVG/Tutoriel/Transformations_de_base
 
 <p>{{ PreviousNext("Web/SVG/Tutoriel/Texts", "Web/SVG/Tutoriel/Découpages_et_masquages") }}</p>
 
-<p><span class="comment">Interwiki Languages Links</span></p>
+<p>Interwiki Languages Links</p>

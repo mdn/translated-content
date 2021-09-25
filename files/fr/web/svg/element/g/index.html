@@ -16,16 +16,16 @@ translation_of: Web/SVG/Element/g
 
 <div id="Exemple">
 
-<pre class="brush: css hidden"><code class="language-css"><span class="selector token">html,body,svg </span><span class="punctuation token">{</span> <span class="property token">height</span><span class="punctuation token">:</span><span class="number token">100%</span> <span class="punctuation token">}</span></code></pre>
+<pre class="brush: css hidden"><code class="language-css">html,body,svg { height:100% }</code></pre>
 
 
-<pre class="brush: html; highlight[4] line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>svg</span> <span class="attr-name token">viewBox</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>0 0 100 100<span class="punctuation token">"</span></span> <span class="attr-name token">xmlns</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>http://www.w3.org/2000/svg<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="comment token">&lt;!-- Les enfants de g héritent de ses attributs de présentation --&gt;</span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>g</span> <span class="attr-name token">fill</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>white<span class="punctuation token">"</span></span> <span class="attr-name token">stroke</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>green<span class="punctuation token">"</span></span> <span class="attr-name token">stroke-width</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>5<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>circle</span> <span class="attr-name token">cx</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>40<span class="punctuation token">"</span></span> <span class="attr-name token">cy</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>40<span class="punctuation token">"</span></span> <span class="attr-name token">r</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>25<span class="punctuation token">"</span></span> <span class="punctuation token">/&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>circle</span> <span class="attr-name token">cx</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>60<span class="punctuation token">"</span></span> <span class="attr-name token">cy</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>60<span class="punctuation token">"</span></span> <span class="attr-name token">r</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>25<span class="punctuation token">"</span></span> <span class="punctuation token">/&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>g</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>svg</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html; highlight[4] line-numbers  language-html"><code class="language-html">&lt;svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"&gt;
+  &lt;!-- Les enfants de g héritent de ses attributs de présentation --&gt;
+  &lt;g fill="white" stroke="green" stroke-width="5"&gt;
+    &lt;circle cx="40" cy="40" r="25" /&gt;
+    &lt;circle cx="60" cy="60" r="25" /&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;</code></pre>
 </div>
 
 <p>{{EmbedLiveSample('Exemple', 100, '100%')}}</p>

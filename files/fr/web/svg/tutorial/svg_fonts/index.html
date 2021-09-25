@@ -21,20 +21,20 @@ Internet Explorer <a href="http://blogs.msdn.com/b/ie/archive/2010/08/04/html5-m
 
 <p>Quelques ingrédients sont nécessaires pour intégrer une police en SVG. Prenons un exemple de déclaration (celle <a class="external" href="http://www.w3.org/TR/SVG/fonts.html#FontElement">de la spécification</a>), et expliquons-en les détails.</p>
 
-<pre class="line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>font</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>Font1<span class="punctuation token">"</span></span> <span class="attr-name token">horiz-adv-x</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>1000<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>font-face</span> <span class="attr-name token">font-family</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>Super Sans<span class="punctuation token">"</span></span> <span class="attr-name token">font-weight</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>bold<span class="punctuation token">"</span></span> <span class="attr-name token">font-</span><span class="language-css style-attr token"><span class="attr-name token"><span class="attr-name token">style</span></span><span class="punctuation token">="</span><span class="attr-value token">normal</span><span class="punctuation token">"</span></span>
-      <span class="attr-name token">units-per-em</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>1000<span class="punctuation token">"</span></span> <span class="attr-name token">cap-height</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>600<span class="punctuation token">"</span></span> <span class="attr-name token">x-height</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>400<span class="punctuation token">"</span></span>
-      <span class="attr-name token">ascent</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>700<span class="punctuation token">"</span></span> <span class="attr-name token">descent</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>300<span class="punctuation token">"</span></span>
-      <span class="attr-name token">alphabetic</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>0<span class="punctuation token">"</span></span> <span class="attr-name token">mathematical</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>350<span class="punctuation token">"</span></span> <span class="attr-name token">ideographic</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>400<span class="punctuation token">"</span></span> <span class="attr-name token">hanging</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>500<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>font-face-src</span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>font-face-name</span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>Super Sans Bold<span class="punctuation token">"</span></span><span class="punctuation token">/&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>font-face-src</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>font-face</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>missing-glyph</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>path</span> <span class="attr-name token">d</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>M0,0h200v200h-200z<span class="punctuation token">"</span></span><span class="punctuation token">/&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>missing-glyph</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>glyph</span> <span class="attr-name token">unicode</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>!<span class="punctuation token">"</span></span> <span class="attr-name token">horiz-adv-x</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>300<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="comment token">&lt;!-- Outline of exclam. pt. glyph --&gt;</span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>glyph</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>glyph</span> <span class="attr-name token">unicode</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>@<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="comment token">&lt;!-- Outline of @ glyph --&gt;</span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>glyph</span><span class="punctuation token">&gt;</span></span>
-  <span class="comment token">&lt;!-- more glyphs --&gt;</span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>font</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="line-numbers  language-html"><code class="language-html">&lt;font id="Font1" horiz-adv-x="1000"&gt;
+  &lt;font-face font-family="Super Sans" font-weight="bold" font-style="normal"
+      units-per-em="1000" cap-height="600" x-height="400"
+      ascent="700" descent="300"
+      alphabetic="0" mathematical="350" ideographic="400" hanging="500"&gt;
+    &lt;font-face-src&gt;
+      &lt;font-face-name name="Super Sans Bold"/&gt;
+    &lt;/font-face-src&gt;
+  &lt;/font-face&gt;
+  &lt;missing-glyph&gt;&lt;path d="M0,0h200v200h-200z"/&gt;&lt;/missing-glyph&gt;
+  &lt;glyph unicode="!" horiz-adv-x="300"&gt;&lt;!-- Outline of exclam. pt. glyph --&gt;&lt;/glyph&gt;
+  &lt;glyph unicode="@"&gt;&lt;!-- Outline of @ glyph --&gt;&lt;/glyph&gt;
+  &lt;!-- more glyphs --&gt;
+&lt;/font&gt;</code></pre>
 
 <p>Nous commençons avec l'élement {{ SVGElement("font") }}. Il contient un attribut id, ce qui permet de le référencer via une URI (voir plus bas). L'attribut <code>horiz-adv-x</code> définit sa largeur moyenne, comparée aux définitions des autres glyphes individules. La valeur 1000 définit une valeur raisonnable. Plusieurs autres attributs associés précisent l'affichage de la boite qui encapsule le glyphe.</p>
 
@@ -48,18 +48,18 @@ Internet Explorer <a href="http://blogs.msdn.com/b/ie/archive/2010/08/04/html5-m
 
 <p>There are two further elements that can be defined inside <code>font</code>: {{ SVGElement("hkern") }} and {{ SVGElement("vkern") }}. Each carries references to at least two characters (attributes <code>u1</code> and <code>u2</code>) and an attribute <code>k</code> that determines how much the distance between those characters should be decreased. The below example instructs user agents to place the "A" and "V" characters closer together the standard distance between characters.</p>
 
-<pre class="line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>hkern</span> <span class="attr-name token">u1</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>A<span class="punctuation token">"</span></span> <span class="attr-name token">u2</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>V<span class="punctuation token">"</span></span> <span class="attr-name token">k</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>20<span class="punctuation token">"</span></span> <span class="punctuation token">/&gt;</span></span></code></pre>
+<pre class="line-numbers  language-html"><code class="language-html">&lt;hkern u1="A" u2="V" k="20" /&gt;</code></pre>
 
 <h2 id="Référencer_une_police">Référencer une police</h2>
 
 <p>Lorsque vous avez mis en place votre déclaration de police comme décrit ci-dessus, vous pouvez utiliser un simple attribut <code>font-family</code> pour réellement appliquer la police à un texte SVG:</p>
 
-<pre class="line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>font</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>font-face</span> <span class="attr-name token">font-family</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>Super Sans<span class="punctuation token">"</span></span> <span class="punctuation token">/&gt;</span></span>
-  <span class="comment token">&lt;!-- ... --&gt;</span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>font</span><span class="punctuation token">&gt;</span></span>
+<pre class="line-numbers  language-html"><code class="language-html">&lt;font&gt;
+  &lt;font-face font-family="Super Sans" /&gt;
+  &lt;!-- ... --&gt;
+&lt;/font&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>text</span> <span class="attr-name token">font-family</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>Super Sans<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>My text uses Super Sans<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>text</span><span class="punctuation token">&gt;</span></span></code></pre>
+&lt;text font-family="Super Sans"&gt;My text uses Super Sans&lt;/text&gt;</code></pre>
 
 <p>Cependant, vous êtes libre de combiner plusieurs méthodes pour une plus grande liberté de où et comment définir la police.</p>
 
@@ -71,18 +71,18 @@ Internet Explorer <a href="http://blogs.msdn.com/b/ie/archive/2010/08/04/html5-m
 
 <p> </p>
 
-<pre class="line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>font</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>Super_Sans<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="comment token">&lt;!-- ... --&gt;</span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>font</span><span class="punctuation token">&gt;</span></span>
+<pre class="line-numbers  language-html"><code class="language-html">&lt;font id="Super_Sans"&gt;
+  &lt;!-- ... --&gt;
+&lt;/font&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>style</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>text/css<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="language-css style token">
-<span class="atrule token"><span class="rule token">@font-face</span></span> <span class="punctuation token">{</span>
-  <span class="property token">font-family</span><span class="punctuation token">:</span> <span class="string token">"Super Sans"</span><span class="punctuation token">;</span>
-  <span class="property token">src</span><span class="punctuation token">:</span> <span class="token url">url(#Super_Sans)</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span>
-</span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>style</span><span class="punctuation token">&gt;</span></span>
+&lt;style type="text/css"&gt;
+@font-face {
+  font-family: "Super Sans";
+  src: url(#Super_Sans);
+}
+&lt;/style&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>text</span> <span class="attr-name token">font-family</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>Super Sans<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>My text uses Super Sans<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>text</span><span class="punctuation token">&gt;</span></span></code></pre>
+&lt;text font-family="Super Sans"&gt;My text uses Super Sans&lt;/text&gt;</code></pre>
 
 <h3 id="Option_Référencer_une_police_externe">Option: Référencer une police externe</h3>
 
@@ -92,13 +92,13 @@ Internet Explorer <a href="http://blogs.msdn.com/b/ie/archive/2010/08/04/html5-m
 
 <p> </p>
 
-<pre class="line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>font</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>font-face</span> <span class="attr-name token">font-family</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>Super Sans<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>font-face-src</span><span class="punctuation token">&gt;</span></span>
-      <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>font-face-uri</span> <span class="attr-name token"><span class="namespace token">xlink:</span>href</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>fonts.svg#Super_Sans<span class="punctuation token">"</span></span> <span class="punctuation token">/&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>font-face-src</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>font-face</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>font</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="line-numbers  language-html"><code class="language-html">&lt;font&gt;
+  &lt;font-face font-family="Super Sans"&gt;
+    &lt;font-face-src&gt;
+      &lt;font-face-uri xlink:href="fonts.svg#Super_Sans" /&gt;
+    &lt;/font-face-src&gt;
+  &lt;/font-face&gt;
+&lt;/font&gt;</code></pre>
 
 <article class="approved">
 <div class="boxed translate-rendered text-content">
