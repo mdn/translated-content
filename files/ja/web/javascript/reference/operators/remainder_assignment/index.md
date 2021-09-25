@@ -7,6 +7,7 @@ tags:
   - 言語機能
   - 演算子
   - Reference
+browser-compat: javascript.operators.remainder_assignment
 translation_of: Web/JavaScript/Reference/Operators/Remainder_assignment
 ---
 {{jsSidebar("Operators")}}
@@ -15,48 +16,34 @@ translation_of: Web/JavaScript/Reference/Operators/Remainder_assignment
 
 {{EmbedInteractiveExample("pages/js/expressions-remainder-assignment.html")}}
 
-<div></div>
-
-
-
 ## 構文
 
-<pre class="syntaxbox notranslate"><strong>Operator:</strong> x %= y
-<strong>Meaning:</strong>  x  = x % y</pre>
+```js
+x %= y // x = x % y
+```
 
 ## 例
 
-<h3 id="剰余代入の使用">剰余代入の使用</h3>
+### 剰余代入の使用
 
-<pre class="brush: js notranslate">// 以下の変数を想定
+```js
+// 以下の変数を想定
 //  bar = 5
 
 bar %= 2     // 1
 bar %= 'foo' // NaN
-bar %= 0     // NaN</pre>
+bar %= 0     // NaN
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-assignment-operators', 'Assignment operators')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザーの互換性">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-{{Compat("javascript.operators.remainder_assignment")}}
-
-<h2 id="関連項目">関連項目</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment">代入演算子</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Remainder">剰余演算子</a></li>
-</ul>
+- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment)
+- [剰余演算子](/ja/docs/Web/JavaScript/Reference/Operators/Remainder)
