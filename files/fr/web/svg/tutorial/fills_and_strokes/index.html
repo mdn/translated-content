@@ -40,7 +40,7 @@ original_slug: Web/SVG/Tutoriel/Fills_and_Strokes
 
 <p>Le second attribut affectant le contour est la propriété <code>stroke-linecap</code>. Elle contrôle la forme des fins de ligne. Dans l'image ci-dessous, le chemin est dessiné en rose et le contour en noir.</p>
 
-<p><img alt="" class="internal" src="svg_stroke_linecap_example.png"></p>
+<p><img alt="" src="svg_stroke_linecap_example.png"></p>
 
 <pre class="brush:html;">&lt;svg width="160" height="140" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
   &lt;line x1="40" x2="120" y1="20" y2="20"
@@ -92,7 +92,7 @@ original_slug: Web/SVG/Tutoriel/Fills_and_Strokes
 
 <p>Finalement, vous pouvez également créer des lignes pointillées en spécifiant l'attribut <code>stroke-dasharray</code>.</p>
 
-<p><img alt="" class="internal" src="svg_stroke_dasharray_example.png"></p>
+<p><img alt="" src="svg_stroke_dasharray_example.png"></p>
 
 <pre class="brush:html;">&lt;svg width="200" height="150" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
   &lt;path d="M 10 75 Q 50 10 100 75 T 190 75" stroke="black"
@@ -126,7 +126,7 @@ original_slug: Web/SVG/Tutoriel/Fills_and_Strokes
 <p>En plus de définir des attributs sur des objets, vous pouvez également utiliser CSS pour styliser les remplissages et les contours. Tous les attributs ne peuvent pas être définis via CSS. Ceux qui traitent le remplissage et le contour le sont généralement, <code>fill</code>, <code>stroke</code>, <code>stroke-dasharray</code>, etc... peuvent donc être définis de cette manière. Les attributs tels que <code>width</code>, <code>height</code>, ou les commandes des paths, ne peuvent pas être définis par CSS. Le plus simple est de tester pour découvrir ce qui est disponible et ce qui ne l'est pas.</p>
 
 <div class="note">
-  <p><strong>Note :</strong> La <a class="external" href="http://www.w3.org/TR/SVG/propidx.html">spécification SVG</a> décide strictement entre les attributs qui sont des <em>propriétés</em> et les autres. Les premiers peuvent être modifiés avec CSS, les derniers non.</p>
+  <p><strong>Note :</strong> La <a href="http://www.w3.org/TR/SVG/propidx.html">spécification SVG</a> décide strictement entre les attributs qui sont des <em>propriétés</em> et les autres. Les premiers peuvent être modifiés avec CSS, les derniers non.</p>
 </div>
 
 <h4 id="En_ligne">En ligne</h4>
@@ -138,7 +138,7 @@ original_slug: Web/SVG/Tutoriel/Fills_and_Strokes
 
 <h4 id="Dans_un_section_style">Dans un section style</h4>
 
-<p>Sinon, il peut être déplacé vers une section <code>style</code>. Au lieu de l'insérer dans une section <code>&lt;head&gt;</code> comme vous le feriez en HTML, on la place dans la zone <a href="/en/SVG/Element/defs" title="en/SVG/Element/defs"><code>&lt;defs&gt;</code></a> du SVG. <code>&lt;defs&gt;</code> (abbréviation de definitions) est l'endroit où vous placez les éléments qui n'apparaissent pas dans le SVG directement, mais qui sont utilisés par les autres éléments.</p>
+<p>Sinon, il peut être déplacé vers une section <code>style</code>. Au lieu de l'insérer dans une section <code>&lt;head&gt;</code> comme vous le feriez en HTML, on la place dans la zone <a href="/fr/SVG/Element/defs" title="en/SVG/Element/defs"><code>&lt;defs&gt;</code></a> du SVG. <code>&lt;defs&gt;</code> (abbréviation de definitions) est l'endroit où vous placez les éléments qui n'apparaissent pas dans le SVG directement, mais qui sont utilisés par les autres éléments.</p>
 
 <pre class="brush:xml;">&lt;?xml version="1.0" standalone="no"?&gt;
 &lt;svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" version="1.1"&gt;
@@ -163,7 +163,7 @@ original_slug: Web/SVG/Tutoriel/Fills_and_Strokes
 
 <h4 id="Dans_un_fichier_externe">Dans un fichier externe</h4>
 
-<p>Ou vous pouvez spécifier une feuille de style externe pour vos règles CSS avec la <a class="external" href="http://www.w3.org/TR/xml-stylesheet/">syntaxe XML pour les stylesheets</a>:</p>
+<p>Ou vous pouvez spécifier une feuille de style externe pour vos règles CSS avec la <a href="http://www.w3.org/TR/xml-stylesheet/">syntaxe XML pour les stylesheets</a>:</p>
 
 <pre class="brush:xml;">&lt;?xml version="1.0" standalone="no"?&gt;
 &lt;?xml-stylesheet type="text/css" href="style.css"?&gt;
