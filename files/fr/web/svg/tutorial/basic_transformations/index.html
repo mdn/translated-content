@@ -55,9 +55,9 @@ original_slug: Web/SVG/Tutoriel/Transformations_de_base
 
 <p>Les transformations peuvent être concaténées, séparées par des espaces. Par exemple, <code>translate()</code> et <code>rotate()</code> sont couramment utilisées ensemble:</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;svg width="40" height="50" style="background-color:#bff;"&gt;
+<pre class="brush: html">&lt;svg width="40" height="50" style="background-color:#bff;"&gt;
     &lt;rect x="0" y="0" width="10" height="10" transform="translate(30,40) rotate(45)" /&gt;
-&lt;/svg&gt;</code></pre>
+&lt;/svg&gt;</pre>
 
 <p>{{ EmbedLiveSample('Transformations_multiples', '40', '50') }}</p>
 
@@ -79,7 +79,7 @@ original_slug: Web/SVG/Tutoriel/Transformations_de_base
 
 <p>Voici un <a href="/en-US/docs/Web/SVG/Attribute/transform#General_Transformation">exemple concret sur la documentation de transformation SVG</a>. Pour plus de renseignements, veuillez vous référer à <a class="external" href="http://www.w3.org/TR/SVG/coords.html#TransformMatrixDefined">la page de recommandation SVG</a>.</p>
 
-<h2 class="editable" id="Effets_sur_les_systèmes_de_coordonnées">Effets sur les systèmes de coordonnées</h2>
+<h2 id="Effets_sur_les_systèmes_de_coordonnées">Effets sur les systèmes de coordonnées</h2>
 
 <p>Quand vous utilisez une transformation, vous définissez un nouveau système de coordonnées dans l'élément que vous transformez. Cela signifie que vous appliquez la transformation à tous les attributs de l'élément transformé et donc que cet élément n'est plus dans une carte de pixel d'échelle 1:1. Cette carte est également déplacée, déformée, agrandie ou réduite selon la transformation qui lui est appliquée.</p>
 
