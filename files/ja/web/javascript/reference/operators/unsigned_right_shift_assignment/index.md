@@ -7,55 +7,42 @@ tags:
   - 言語機能
   - 演算子
   - Reference
+browser-compat: javascript.operators.unsigned_right_shift_assignment
 translation_of: Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment
 ---
 {{jsSidebar("Operators")}}
 
-符号なし右シフト代入演算子 (<em>`&gt;&gt;&gt;=`</em>) は、指定された量のビットを右に移動し、結果を変数に割り当てます。
+符号なし右シフト代入演算子 (_`>>>=`_) は、指定された数だけビットを右に移動し、結果を変数に代入します。
 
 {{EmbedInteractiveExample("pages/js/expressions-unsigned-right-shift-assignment.html")}}
 
-<div></div>
-
-
-
 ## 構文
 
-<pre class="syntaxbox notranslate"><strong>Operator:</strong> x &gt;&gt;&gt;= y
-<strong>Meaning:</strong>  x    = x &gt;&gt;&gt; y</pre>
+```js
+x >>>= y // x = x >>> y
+```
 
 ## 例
 
-<h3 id="符号なし右シフト代入の使用">符号なし右シフト代入の使用</h3>
+### 符号なし右シフト代入の使用
 
-<pre class="brush: js notranslate">let a = 5; //   (00000000000000000000000000000101)
-a &gt;&gt;&gt;= 2;  // 1 (00000000000000000000000000000001)
+```js
+let a = 5; //   (00000000000000000000000000000101)
+a >>>= 2;  // 1 (00000000000000000000000000000001)
 
 let b = -5; // (-00000000000000000000000000000101)
-b &gt;&gt;&gt;= 2;   // 1073741822 (00111111111111111111111111111110)</pre>
+b >>>= 2;   // 1073741822 (00111111111111111111111111111110)
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-assignment-operators', 'Assignment operators')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザーの互換性">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-{{Compat("javascript.operators.unsigned_right_shift_assignment")}}
-
-<h2 id="関連項目">関連項目</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment">代入演算子</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift">符号なし右シフト演算子</a></li>
-</ul>
+- [JavaScript ガイドの代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#assignment)
+- [符号なし右シフト演算子](/ja/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)
