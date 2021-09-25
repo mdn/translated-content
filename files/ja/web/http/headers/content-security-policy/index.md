@@ -12,7 +12,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>HTTP の <strong><code>Content-Security-Policy</code></strong> レスポンスヘッダーは、ウェブサイト管理者が、あるページにユーザーエージェントが読み込みを許可されたリソースを管理できるようにします。いくつかの例外を除いて、大半のポリシーにはサーバーオリジンとスクリプトエンドポイントの指定を含んでいます。これはクロスサイトスクリプティング攻撃 ({{Glossary("XSS")}}) を防ぐのに役立ちます。</p>
+<p>HTTP の <strong><code>Content-Security-Policy</code></strong> レスポンスヘッダーは、ウェブサイト管理者が、あるページにユーザーエージェントが読み込みを許可されたリソースを管理できるようにします。いくつかの例外を除いて、大半のポリシーにはサーバーオリジンとスクリプトエンドポイントの指定を含んでいます。これはクロスサイトスクリプティング攻撃 ({{Glossary("Cross-site_scripting")}}) を防ぐのに役立ちます。</p>
 
 <p>より詳細な情報は、 <a href="/ja/docs/Web/HTTP/CSP">Content Security Policy (CSP)</a> の入門記事を参照してください。</p>
 
