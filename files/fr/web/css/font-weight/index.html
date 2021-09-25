@@ -13,8 +13,6 @@ translation_of: Web/CSS/font-weight
 
 <div>{{EmbedInteractiveExample("pages/css/font-weight.html")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé */
@@ -142,7 +140,7 @@ font-weight: unset;
  </tbody>
 </table>
 
-<h3 id="Correspondance_entre_les_valeurs_numériques_et_les_noms_communément_utilisés"><a id="communs" name="communs">Correspondance entre les valeurs numériques et les noms communément utilisés</a></h3>
+<h3 id="Correspondance_entre_les_valeurs_numériques_et_les_noms_communément_utilisés">Correspondance entre les valeurs numériques et les noms communément utilisés</h3>
 
 <p>Les valeurs allant de 100 à 900 correspondent environ aux noms suivants, communément utilisés pour désigner les variantes de fonte, selon la graisse, d'une même police (<em>NdT : les noms sont laissés en anglais car généralement utilisés tels quels</em>) :</p>
 
@@ -205,11 +203,10 @@ font-weight: unset;
 
 <p>Pour que l'exemple suivant fonctionne, il est nécessaire d'utiliser un navigateur qui prend en charge la spécification <em>CSS Fonts</em> de niveau 4.</p>
 
-<div>{{EmbedLiveSample("variable-font-example", 1200, 180, "", "", "example-outcome-frame")}}</div>
+<div>{{EmbedLiveSample("Polices_variables", 1200, 180, "", "", "example-outcome-frame")}}</div>
 
 <h4 id="HTML">HTML</h4>
 
-<div id="variable-font-example">
 <pre class="brush: html">&lt;header&gt;
     &lt;input type="range" id="weight" name="weight" min="1" max="1000" /&gt;
     &lt;label for="weight"&gt;Weight&lt;/label&gt;
@@ -249,8 +246,7 @@ label {
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: css">html, body {
+<pre class="brush: css hidden">html, body {
   max-height: 100vh;
   max-width: 100vw;
   overflow: hidden;
@@ -274,7 +270,6 @@ header {
   margin-bottom: 0;
 }
 </pre>
-</div>
 
 <h4 id="JavaScript">JavaScript</h4>
 
@@ -291,7 +286,6 @@ weightInput.addEventListener('input', update);
 
 update();
 </pre>
-</div>
 
 <h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
 
@@ -339,10 +333,10 @@ span {
 
 <h2 id="Accessibilité">Accessibilité</h2>
 
-<p>Pour les personnes ayant une vision faible, il peut être extrêmement difficile de lire un texte avec <code>font-weight</code> qui vaut <code>100</code> ou <code>200</code>, notamment <a href="/fr/docs/Web/CSS/color#Accessibilité">si le contraste entre le texte et l'arrière-plan est faible</a>.</p>
+<p>Pour les personnes ayant une vision faible, il peut être extrêmement difficile de lire un texte avec <code>font-weight</code> qui vaut <code>100</code> ou <code>200</code>, notamment <a href="/fr/docs/Web/CSS/color#accessibilité">si le contraste entre le texte et l'arrière-plan est faible</a>.</p>
 
 <ul>
- <li><a href="/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">Comprendre les règles WCAG 1.4</a></li>
+ <li><a href="/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">Comprendre les règles WCAG 1.4</a></li>
  <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html" rel="noopener"><em>Understanding Success Criterion 1.4.8 - W3C Understanding WCAG 2.0</em> (en anglais)</a></li>
 </ul>
 

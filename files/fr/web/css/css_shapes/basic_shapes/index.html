@@ -10,7 +10,7 @@ original_slug: Web/CSS/CSS_Shapes/Formes_simples
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary">Les formes CSS peuvent être définies grâce au type {{cssxref("&lt;basic-shape&gt;")}}. Dans ce guide, nous verrons les différentes valeurs utilisables avec ce type et leur fonctionnement. Ces formes peuvent par exemple décrire des cercles simples voire des polygones complexes.</p>
+<p>Les formes CSS peuvent être définies grâce au type {{cssxref("&lt;basic-shape&gt;")}}. Dans ce guide, nous verrons les différentes valeurs utilisables avec ce type et leur fonctionnement. Ces formes peuvent par exemple décrire des cercles simples voire des polygones complexes.</p>
 
 <p>Avant d'étudier ces formes dans le détail, attardons nous sur deux notions qui permettent de construire les formes :</p>
 
@@ -27,11 +27,11 @@ original_slug: Web/CSS/CSS_Shapes/Formes_simples
 
 <h2 id="La_boîte_de_référence">La boîte de référence</h2>
 
-<p>La boîte de référence définit le système de coordonnées de chaque forme. Nous avons déjà abordé cette boîte <a href="/en-US/docs/Web/CSS/CSS_Shapes/Shapes_From_Box_Values">dans le guide sur la création de formes à partir des boîtes</a> où nous avons directement utilisé la boîte de référence afin de créer une forme.</p>
+<p>La boîte de référence définit le système de coordonnées de chaque forme. Nous avons déjà abordé cette boîte <a href="/en-US/docs/Web/CSS/CSS_Shapes/From_box_values">dans le guide sur la création de formes à partir des boîtes</a> où nous avons directement utilisé la boîte de référence afin de créer une forme.</p>
 
 <p>L'inspecteur des formes CSS de Firefox affiche la boîte de référence lorsqu'on inspecte une forme. Dans la capture d'écran suivante, on a créé un cercle avec <code>shape-outside: circle(50%)</code>, l'élément flottant possède 20 pixels de remplissage avec la bordure et la marge. On voit que l'inspecteur affiche ces boîtes de référence. Lorsqu'on utilise une forme basique, la boîte de référence utilisée par défaut est la boîte des marges. Dans la capture d'écran, on voit que la forme est définie relativement aux boîtes du <a href="/fr/docs/Web/CSS/Mod%C3%A8le_de_bo%C3%AEte_CSS">modèle de boîtes</a>.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15904/shapes-reference-box.png" style="height: 840px; width: 1536px;"></p>
+<p><img alt="" src="shapes-reference-box.png"></p>
 
 <p>La boîte de référence qu'on veut utiliser peut être ajoutée après la définition de la forme simple. Autrement dit, le comportement obtenu par défaut est équivalent à l'écriture de .</p>
 
@@ -115,13 +115,13 @@ original_slug: Web/CSS/CSS_Shapes/Formes_simples
 
 <p>Lorsqu'on a décrit les boîtes de référence ci-avant, on a vu que la boîte de marge pourra rogner la forme. Pour observer cet effet, on peut déplacer le centre du cercle vers le contenu en utilisant la valeur 60% pour la position. Le centre du cercle est alors plus près du contenu et la forme du cercle pourrait dépasser la boîte de marge. La forme est donc rognée et on voit alors un aplat.</p>
 
-<pre class="brush: css"><code>img {
+<pre class="brush: css">img {
   float: left;
   shape-outside: circle(50% at 60%);
 }
-</code></pre>
+</pre>
 
-<p><img alt="The circle shape is clipped by the margin box" src="https://mdn.mozillademos.org/files/15903/shapes-circle-clipped.png" style="height: 602px; width: 1536px;"></p>
+<p><img alt="The circle shape is clipped by the margin box" src="shapes-circle-clipped.png"></p>
 
 <h2 id="ellipse()"><code>ellipse()</code></h2>
 
@@ -145,6 +145,6 @@ original_slug: Web/CSS/CSS_Shapes/Formes_simples
 
 <p>L'inspecteur de formes Firefox s'avère très utile pour créer une forme de polygone. La capture d'écran qui suit illustre la forme dessinée dans l'outil.</p>
 
-<p><img alt="The polygon basic shape, highlighted with the Shapes Inspector." src="https://mdn.mozillademos.org/files/15902/shapes-polygon.png" style="height: 540px; width: 1524px;"></p>
+<p><img alt="The polygon basic shape, highlighted with the Shapes Inspector." src="shapes-polygon.png"></p>
 
-<p>Une autre ressource qui peut s'avérer utile sur ces sujets est <a href="http://bennettfeely.com/clippy/">Clippy</a> : cet outil permet de créer des formes pour <code>clip-path</code>. Or, les formes utilisées pour <code>clip-path</code> sont les mêmes que pour les formes simples.</p>
+<p>Une autre ressource qui peut s'avérer utile sur ces sujets est <a href="https://bennettfeely.com/clippy/">Clippy</a> : cet outil permet de créer des formes pour <code>clip-path</code>. Or, les formes utilisées pour <code>clip-path</code> sont les mêmes que pour les formes simples.</p>

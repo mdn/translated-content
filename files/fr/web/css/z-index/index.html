@@ -13,8 +13,6 @@ translation_of: Web/CSS/z-index
 
 <div>{{EmbedInteractiveExample("pages/css/z-index.html")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <p>Pour les boîtes positionnées (celles pour lesquelles <code>position</code> est différent de <code>static</code>), la propriété <code>z-index</code> définit :</p>
 
 <ol>
@@ -50,9 +48,9 @@ z-index: unset;
 <h3 id="Valeurs">Valeurs</h3>
 
 <dl>
- <dt><a id="auto" name="auto"><code>auto</code></a></dt>
+ <dt><code>auto</code></dt>
  <dd>La boîte ne crée pas de nouveau contexte d'empilement. Le niveau d'empilement de la boîte dans le contexte d'empilement courant est le même que celui de la boîte parente.</dd>
- <dt><a id="integer" name="integer"><code>&lt;integer&gt;</code></a></dt>
+ <dt><code>&lt;integer&gt;</code></dt>
  <dd>L'entier fourni (type {{cssxref("&lt;integer&gt;")}}) sera le niveau de la boîte dans la pile d'empilement pour le contexte d'empilement courant. La boîte crée un nouveau contexte d'empilement pour lequel son niveau est <code>0</code>. Cela signifie que les index z des descendants ne sont pas comparés à ceux des éléments en dehors de l'élément.</dd>
 </dl>
 

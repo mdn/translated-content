@@ -143,7 +143,7 @@ Le résultat de l'évaluation fournie par un opérateur d'égalité est toujours
 - [`!=`](/fr/docs/Web/JavaScript/Reference/Operators/Inequality)
   - : L'opérateur d'inégalité.
 - [`===`](/fr/docs/Web/JavaScript/Reference/Operators/Strict_equality)
-  - : L'opérateur d'identité.
+  - : L'opérateur d'égalité stricte.
 - [`!==`](/fr/docs/Web/JavaScript/Reference/Operators/Strict_inequality)
   - : L'opérateur d'inégalité stricte.
 

@@ -14,8 +14,6 @@ translation_of: Web/CSS/transition-delay
 
 <div>{{EmbedInteractiveExample("pages/css/transition-delay.html")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <p>Cette durée peut être nulle, positive ou négative :</p>
 
 <ul>
@@ -52,275 +50,75 @@ transition-delay: unset;
 
 <h2 id="Exemples">Exemples</h2>
 
-<div>
-<div id="delay_0_5s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-delay: 0.5s</code></p>
+<h3 id="exemple_illustrant_differentes_temporisations">Exemple illustrant différentes temporisations</h3>
 
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
+<h4>HTML</h4>
 
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
+<pre class="brush:html">
+  &lt;div class="box delay-1"&gt;0,5 secondes&lt;/div&gt;
+
+  &lt;div class="box delay-2"&gt;2 secondes&lt;/div&gt;
+
+  &lt;div class="box delay-3"&gt;4 secondes&lt;/div&gt;
+
+  &lt;button id="change"&gt;Changer&lt;/button&gt;
+</pre>
+
+<h4>CSS</h4>
+
+<pre class="brush:css;">
 .box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:0.5s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:0.5s;
-    transition-timing-function: linear;
+  margin: 20px;
+  padding: 10px;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  font-size: 18px;
+  transition-property: background-color font-size transform color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 3s;
 }
-.box1{
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-     -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:0.5s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:0.5s;
-    transition-timing-function: linear;
+
+.transformed-state {
+  transform: rotate(270deg);
+  background-color: blue;
+  color: yellow;
+  font-size: 12px;
+  transition-property: background-color font-size transform color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 3s;
+}
+
+.delay-1 {
+  transition-delay: 0.5s;
+}
+
+.delay-2 {
+  transition-delay: 2s;
+}
+
+.delay-3 {
+  transition-delay: 4s;
 }
 </pre>
 
-<pre class="brush:js">function updateTransition() {
-  var el = document.querySelector("div.box");
+<h4>JavaScript</h4>
 
-  if (el) {
-    el.className = "box1";
-  } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
+<pre class="brush:js">function change() {
+  const elements = document.querySelectorAll("div.box");
+  for (let element of elements) {
+    element.classList.toggle("transformed-state");
   }
-
-  return el;
 }
 
-var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
-</div>
-
-<div>{{EmbedLiveSample("delay_0_5s",275,150)}}</div>
-</div>
-
-<div id="delay_1s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-delay: 1s</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-     -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:1s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:1s;
-    transition-timing-function: linear;
-}
-.box1{
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:1s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:1s;
-    transition-timing-function: linear;
-}
+const changeButton = document.querySelector("#change");
+changeButton.addEventListener("click", change);
 </pre>
 
-<pre class="brush:js">function updateTransition() {
-  var el = document.querySelector("div.box");
+<h4>Résultat</h4>
 
-  if (el) {
-    el.className = "box1";
-  } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
-  }
-
-  return el;
-}
-
-var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
-</div>
-
-<div>{{EmbedLiveSample("delay_1s",275,150)}}</div>
-</div>
-
-<div id="delay_2s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-delay: 2s</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:2s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:2s;
-    transition-timing-function: linear;
-}
-.box1{
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:2s;
-    -webkit-transition-timing-function: linear;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:2s;
-    transition-timing-function: linear;
-}
-</pre>
-
-<pre class="brush:js">function updateTransition() {
-  var el = document.querySelector("div.box");
-
-  if (el) {
-    el.className = "box1";
-  } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
-  }
-
-  return el;
-}
-
-var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
-</div>
-
-<div>{{EmbedLiveSample("delay_2s",275,150)}}</div>
-</div>
-
-<div id="delay_4s" style="width: 251px; display: inline-block; margin-right: 1px; margin-bottom: 1px;">
-<p><code>transition-delay: 4s</code></p>
-
-<div class="hidden">
-<pre class="brush:html"> &lt;div class="parent"&gt;
-  &lt;div class="box"&gt;Lorem&lt;/div&gt;
-&lt;/div&gt;
-  </pre>
-
-<pre class="brush:css;">.parent { width: 250px; height:125px;}
-.box {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    font-size: 20px;
-    left: 0px;
-    top: 0px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:4s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:4s;
-    transition-timing-function: ease-in-out;
-}
-.box1{
-    width: 50px;
-    height: 50px;
-    background-color: blue;
-    color: yellow;
-    font-size: 18px;
-    left: 150px;
-    top:25px;
-    position:absolute;
-    -webkit-transition-property: width height background-color font-size left top color;
-    -webkit-transition-duration:2s;
-    -webkit-transition-delay:4s;
-    -webkit-transition-timing-function: ease-in-out;
-    transition-property: width height background-color font-size left top color;
-    transition-duration:2s;
-    transition-delay:4s;
-    transition-timing-function: ease-in-out;
-}
-</pre>
-
-<pre class="brush:js">function updateTransition() {
-  var el = document.querySelector("div.box");
-
-  if (el) {
-    el.className = "box1";
-  } else {
-    el = document.querySelector("div.box1");
-    el.className = "box";
-  }
-
-  return el;
-}
-
-var intervalID = window.setInterval(updateTransition, 7000);
-</pre>
-</div>
-
-<div>{{EmbedLiveSample("delay_4s",275,150)}}</div>
-</div>
-</div>
+<div>{{EmbedLiveSample("exemple_illustrant_differentes_temporisations",275,200)}}</div>
 
 <h2 id="Spécifications">Spécifications</h2>
 

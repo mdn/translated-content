@@ -14,8 +14,6 @@ translation_of: Web/CSS/clip-path
 
 <div>{{EmbedInteractiveExample("pages/css/clip-path.html")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <div class="note">
 <p><strong>Note :</strong> La propriété <code>clip-path</code> remplace la propriété {{cssxref("clip")}} désormais dépréciée.</p>
 </div>
@@ -98,8 +96,7 @@ clip-path: unset;
 
 <h3 id="Comparaison_entre_HTML_et_SVG">Comparaison entre HTML et SVG</h3>
 
-<div class="hidden" id="clip-path">
-<pre class="brush: html">&lt;svg class="defs"&gt;
+<pre class="brush: html hidden">&lt;svg class="defs"&gt;
   &lt;defs&gt;
     &lt;clipPath id="myPath" clipPathUnits="objectBoundingBox"&gt;
       &lt;path d="M0.5,1 C0.5,1,0,0.7,0,0.3 A0.25,0.25,1,1,1,0.5,0.3 A0.25,0.25,1,1,1,1,0.3 C1,0.7,0.5,1,0.5,1 Z" /&gt;
@@ -518,9 +515,8 @@ svg text {
 svg text.em {
   font-style: italic;
 }</pre>
-</div>
 
-<p>{{EmbedLiveSample("clip-path", "100%", 800, "", "", "example-outcome-frame")}}</p>
+<p>{{EmbedLiveSample("Comparaison_entre_HTML_et_SVG", "100%", 800, "", "", "example-outcome-frame")}}</p>
 
 <h3 id="Exemple_complet">Exemple complet</h3>
 
@@ -556,15 +552,11 @@ svg text.em {
 }
 </pre>
 
-<div class="hidden">
-<h4 id="JavaScript">JavaScript</h4>
-
-<pre class="brush: js">var clipPathSelect = document.getElementById("clipPath");
+<pre class="brush: js hidden">var clipPathSelect = document.getElementById("clipPath");
 clipPathSelect.addEventListener("change", function (evt) {
   document.getElementById("clipped").style.clipPath = evt.target.value;
 });
 </pre>
-</div>
 
 <h4 id="Résultat">Résultat</h4>
 

@@ -15,7 +15,7 @@ translation_of: Web/HTTP/Redirections
 
 <p>En HTTP, une redirection est déclenchée par le serveur en envoyant des réponses spéciales à une requête : <em>les redirections</em>. Les redirections HTTP sont des réponses avec un code d'état de <code>3xx</code>. Un navigateur, lorsqu'il reçoit une réponse de redirection, utilise la nouvelle URL fournie et la charge immédiatement : la plupart du temps, la redirection est transparente pour l'utilisateur, si ce n'est un petit impact de performance.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/13785/HTTPRedirect.png"></p>
+<p><img alt="" src="httpredirect.png"></p>
 
 <p>Il existe plusieurs types de redirections et elles se répartissent en trois catégories : les redirections permanentes, les temporaires et les spéciales.</p>
 
@@ -37,7 +37,7 @@ translation_of: Web/HTTP/Redirections
    <td><code>301</code></td>
    <td><code>Moved Permanently</code></td>
    <td>Requêtes {{HTTPMethod("GET")}} inchangées.<br>
-    Les autres peuvent être changés ou non en {{HTTPMethod("GET")}}.<sup><a href="#attr1">[1]</a></sup></td>
+    Les autres peuvent être changés ou non en {{HTTPMethod("GET")}}.</td>
    <td>Réorganisation d'un site Web.</td>
   </tr>
   <tr>
@@ -49,7 +49,7 @@ translation_of: Web/HTTP/Redirections
  </tbody>
 </table>
 
-<p><a id="attr1" name="attr1"></a>[1] La spécification n'avait pas l'intention de permettre des changements de méthode, mais il y a en pratique des agents utilisateurs qui le font. <code>308</code> a été créé pour supprimer l'ambiguïté du comportement lors de l'utilisation de méthodes autres que <code>GET</code>.</p>
+<p>La spécification n'avait pas l'intention de permettre des changements de méthode, mais il y a en pratique des agents utilisateurs qui le font. <code>308</code> a été créé pour supprimer l'ambiguïté du comportement lors de l'utilisation de méthodes autres que <code>GET</code>.</p>
 
 <h3 id="Redirections_temporaires">Redirections temporaires</h3>
 
@@ -69,7 +69,7 @@ translation_of: Web/HTTP/Redirections
    <td><code>302</code></td>
    <td><code>Found</code></td>
    <td>Requêtes {{HTTPMethod("GET")}} inchangées.<br>
-    Les autres peuvent être changés ou non en {{HTTPMethod("GET")}}.<sup><a href="#attr2">[2]</a></sup></td>
+    Les autres peuvent être changés ou non en {{HTTPMethod("GET")}}.</td>
    <td>La page Web n'est temporairement pas disponible pour des raisons qui n'ont pas été imprévues. De cette façon, les moteurs de recherche ne mettent pas à jour leurs liens.</td>
   </tr>
   <tr>
@@ -88,7 +88,7 @@ translation_of: Web/HTTP/Redirections
  </tbody>
 </table>
 
-<p><a id="attr2" name="attr2"></a>[2] La spécification n'avait pas l'intention de permettre des changements de méthode, mais il y a en pratique des agents utilisateurs qui le font. <code>307</code> a été créé pour supprimer l'ambiguïté du comportement lors de l'utilisation de méthodes autres que <code>GET</code></p>
+<p>La spécification n'avait pas l'intention de permettre des changements de méthode, mais il y a en pratique des agents utilisateurs qui le font. <code>307</code> a été créé pour supprimer l'ambiguïté du comportement lors de l'utilisation de méthodes autres que <code>GET</code></p>
 
 <h3 id="Redirections_spéciales">Redirections spéciales</h3>
 
@@ -134,7 +134,7 @@ translation_of: Web/HTTP/Redirections
 <p>Bien entendu, cette méthode ne fonctionne qu'avec des pages HTML (ou similaires) et ne peut être utilisée pour des images ou tout autre type de contenu.</p>
 
 <div class="note">
-<p>Notez que ces redirections cassent le bouton de retour dans un navigateur : vous pouvez revenir à une page avec cet en-tête mais mais vous serez de nouveau instantanément rediriger.</p>
+<p><strong>Note :</strong> Ces redirections cassent le bouton de retour dans un navigateur : vous pouvez revenir à une page avec cet en-tête mais mais vous serez de nouveau instantanément rediriger.</p>
 </div>
 
 <h3 id="Redirections_JavaScript">Redirections JavaScript</h3>
@@ -178,7 +178,7 @@ translation_of: Web/HTTP/Redirections
 <p>Lorsque vous restructurez des sites Web, les URL des ressources changent. Même si vous pouvez mettre à jour les liens internes de votre site Web pour qu'ils correspondent au nouveau schéma de nommage, vous n'avez aucun contrôle sur les URL utilisées par les ressources externes. Vous ne voulez pas briser ces liens, car ils vous apportent des utilisateurs précieux (et aident votre référencement), donc vous configurez des redirections depuis les anciennes URL vers les nouvelles.</p>
 
 <div class="note">
-<p>Même si cette technique fonctionne également pour les liens internes, vous devriez éviter d'avoir des redirections internes. Une redirection a un coût significatif sur les performances (car une requête HTTP supplémentaire est faite) et si vous pouvez l'éviter en corrigeant les liens internes, vous devez corriger ces liens.</p>
+<p><strong>Note :</strong> Même si cette technique fonctionne également pour les liens internes, vous devriez éviter d'avoir des redirections internes. Une redirection a un coût significatif sur les performances (car une requête HTTP supplémentaire est faite) et si vous pouvez l'éviter en corrigeant les liens internes, vous devez corriger ces liens.</p>
 </div>
 
 <h3 id="Réponses_temporaires_aux_requêtes_non_sécurisées">Réponses temporaires aux requêtes non sécurisées</h3>
@@ -249,7 +249,7 @@ rewrite ^/images/(.*)$ http://images.example.com/$1 permanent;
 
 <p>Parfois, le serveur ne le détecte pas : une boucle de redirection peut s'étendre sur plusieurs serveurs qui n'ont pas une vue globale de ce qui se passe. Dans ce cas, les navigateurs le détecteront et afficheront un message d'erreur. Firefox affichera:</p>
 
-<pre class="bz_comment_text" id="comment_text_0">Firefox a détecté que le serveur redirige la demande pour cette adresse d'une manière qui n'aboutira pas.
+<pre>Firefox a détecté que le serveur redirige la demande pour cette adresse d'une manière qui n'aboutira pas.
 </pre>
 
 <p>tandis que Chrome affichera:</p>

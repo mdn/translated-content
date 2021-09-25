@@ -11,14 +11,14 @@ original_slug: Web/CSS/CSS_Fonts/Guide_caractéristiques_police_OpenType
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary">Les caractéristiques de police ou variantes font référence à différents glyphes ou styles de caractère contenus dans une police OpenType. Cela inclut notamment les ligatures (des caractères spéciaux qui permettent de combiner des caractères entre eux comme œ qui est la ligature entre o et e), le crénage (<em>kerning</em> en anglais) qui définit l'espacement entre certaines lettres, les fractions et styles numériques, etc. Toutes ces caractéristiques sont des caractéristiques OpenType Features et peuvent être utilisées sur le Web grâce à certaines propriétés spécifiques qui permettent un contrôle de bas niveau comme {{cssxref("font-feature-settings")}}. Dans cet article, nous verrons tout ce qu'il faut savoir pour manipuler les caractéristiques OpenType avec  CSS.</p>
+<p>Les caractéristiques de police ou variantes font référence à différents glyphes ou styles de caractère contenus dans une police OpenType. Cela inclut notamment les ligatures (des caractères spéciaux qui permettent de combiner des caractères entre eux comme œ qui est la ligature entre o et e), le crénage (<em>kerning</em> en anglais) qui définit l'espacement entre certaines lettres, les fractions et styles numériques, etc. Toutes ces caractéristiques sont des caractéristiques OpenType Features et peuvent être utilisées sur le Web grâce à certaines propriétés spécifiques qui permettent un contrôle de bas niveau comme {{cssxref("font-feature-settings")}}. Dans cet article, nous verrons tout ce qu'il faut savoir pour manipuler les caractéristiques OpenType avec  CSS.</p>
 
 <p>Pour certaines polices, une ou plusieurs caractéristiques sont activées par défaut (le crénage et les ligatures classiques sont souvent activées par exemple). D'autres caractéristiques sont inactives et peuvent être activées par choix dans certaines situations.</p>
 
 <p>En plus des caractéristiques communément utilisées telles que les ligatures ou <a href="https://fr.wikipedia.org/wiki/Chiffres_elz%C3%A9viriens">les chiffres elzéviriens</a>, il existe d'autres caractéristiques spécifiques telles que les ensembles stylistiques, les ensembles alternatifs voire des ensembles avec des altérations spécifiques pour une langue donnée. Pour ce dernier cas, ces altérations sont nécessaires à l'expression correcte du langage et il s'agit donc d'une caractéristique qui dépasse largement l'aspect purement stylistique d'autres caractéristiques.</p>
 
 <div class="warning">
-<p><strong>Attention !</strong> Il existe de nombreuses propriétés CSS qui permettent de manipuler les caractéristiques de police. Cependant, la plupart ne sont pas encore complètement implémentées ni prises en charge de façon homogène. Nous les verrons dans cet article mais il faudra la plupart du temps utiliser {{cssxref("font-feature-settings")}} pour les définir à un plus bas niveau. Il est possible d'écrire du CSS qui gère ces deux cas mais c'est plus laborieux. Mais lorsqu'on utilise <code>font-feature-settings</code> pour chaque caractéristique, il est nécessaire de réécrire la chaîne entière même si on ne souhaite changer qu'une caractéristique.</p>
+<p><strong>Attention :</strong> Il existe de nombreuses propriétés CSS qui permettent de manipuler les caractéristiques de police. Cependant, la plupart ne sont pas encore complètement implémentées ni prises en charge de façon homogène. Nous les verrons dans cet article mais il faudra la plupart du temps utiliser {{cssxref("font-feature-settings")}} pour les définir à un plus bas niveau. Il est possible d'écrire du CSS qui gère ces deux cas mais c'est plus laborieux. Mais lorsqu'on utilise <code>font-feature-settings</code> pour chaque caractéristique, il est nécessaire de réécrire la chaîne entière même si on ne souhaite changer qu'une caractéristique.</p>
 </div>
 
 <h2 id="Découvrir_la_disponibilité_des_caractéristiques_pour_certaines_polices">Découvrir la disponibilité des caractéristiques pour certaines polices</h2>
@@ -38,7 +38,7 @@ original_slug: Web/CSS/CSS_Fonts/Guide_caractéristiques_police_OpenType
 <p>Bien qu'aucune de ces caractéristiques ne soit critique pour l'utilisabilité d'un site, chacune d'elle peut rendre un site plus lisible voire raffiné</p>
 
 <blockquote>
-<p>Les caractéristiques OpenType ressemblent à des compartiments secrets : en les déverouillant, une police peut évoluer de façon subtile ou complète. Toutes les caractéristiques OpenType ne doivent pas être utilisées tout le temps mais certaines d'entre elles sont majeures pour obtenir une typographie de premier rang. <cite><em>Tim Brown, Directeur de la typographie chez Adobe</em>.</cite></p>
+<p>Les caractéristiques OpenType ressemblent à des compartiments secrets : en les déverouillant, une police peut évoluer de façon subtile ou complète. Toutes les caractéristiques OpenType ne doivent pas être utilisées tout le temps mais certaines d'entre elles sont majeures pour obtenir une typographie de premier rang. <em>Tim Brown, Directeur de la typographie chez Adobe</em>.</p>
 </blockquote>
 
 <h3 id="Au-delà_du_style_le_contenu_même">Au-delà du style : le contenu même</h3>
@@ -153,7 +153,7 @@ original_slug: Web/CSS/CSS_Fonts/Guide_caractéristiques_police_OpenType
 
 <h2 id="Utiliser_font-feature-settings">Utiliser <code>font-feature-settings</code></h2>
 
-<p>La propriété {{cssxref("font-feature-settings")}} permet d'utiliser une syntaxe « bas niveau » qui permet un accès explicite à chaque caractéristique OpenType disponible. On dispose ainsi d'un contrôle accru mais on perd l'héritage et il faut tout redéclarer à chaque fois qu'on souhaite modifier une caractéristique (sauf à utiliser <a href="/en-US/docs/Web/CSS/Using_CSS_variables">des propriétés CSS personnalisées</a> afin de définir les valeurs). Aussi, mieux vaut utiliser les propriétés standards lorsque c'est possible.</p>
+<p>La propriété {{cssxref("font-feature-settings")}} permet d'utiliser une syntaxe « bas niveau » qui permet un accès explicite à chaque caractéristique OpenType disponible. On dispose ainsi d'un contrôle accru mais on perd l'héritage et il faut tout redéclarer à chaque fois qu'on souhaite modifier une caractéristique (sauf à utiliser <a href="/en-US/docs/Web/CSS/Using_CSS_custom_properties">des propriétés CSS personnalisées</a> afin de définir les valeurs). Aussi, mieux vaut utiliser les propriétés standards lorsque c'est possible.</p>
 
 <p>Il existe une myriade de caractéristiques possibles. Vous pouvez en voir quelques exemples ici et il existe plusieurs ressources pour en exploiter d'autres.</p>
 
@@ -170,10 +170,10 @@ original_slug: Web/CSS/CSS_Fonts/Guide_caractéristiques_police_OpenType
   font-feature-settings: "liga" 0, "dlig" 0;
 }</pre>
 
-<h4 class="brush: css" id="En_savoir_plus_sur_les_codes_des_caractéristiques_font-feature-settings">En savoir plus sur les codes des caractéristiques <code>font-feature-settings</code></h4>
+<h4 id="En_savoir_plus_sur_les_codes_des_caractéristiques_font-feature-settings">En savoir plus sur les codes des caractéristiques <code>font-feature-settings</code></h4>
 
 <ul>
- <li class="brush: css"><a href="https://sparanoid.com/lab/opentype-features/">Une démonstration des caractéristiques OpenType</a></li>
+ <li><a href="https://sparanoid.com/lab/opentype-features/">Une démonstration des caractéristiques OpenType</a></li>
  <li><a href="https://en.wikipedia.org/wiki/List_of_typographic_features">La liste des caractéristiques OpenType sur Wikipédia</a></li>
 </ul>
 

@@ -1,72 +1,61 @@
 ---
-title: close
+title: 'WebSocket : évènement close'
 slug: Web/API/WebSocket/close_event
+browser-compat: api.WebSocket.close_event
 translation_of: Web/API/WebSocket/close_event
 ---
-<p>Le gestionnaire de fermuture (<strong>close</strong>) est exécuté lorsqu'une connexion avec un socket Web est fermée.</p>
+<div>{{APIRef}}</div>
 
-<h2 id="Informations_générales">Informations générales</h2>
+<p>L'évènement <code>close</code> est déclenché lorsqu'une connexion avec une <code>WebSocket</code> est fermée.</p>
 
-<dl>
- <dt style="float: left; text-align: right; width: 120px;">Spécification</dt>
- <dd style="margin: 0 0 0 120px;"><a class="external" href="http://www.w3.org/TR/websockets/">WebSocket</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">Interface</dt>
- <dd style="margin: 0 0 0 120px;">Event</dd>
- <dt style="float: left; text-align: right; width: 120px;">Propagation</dt>
- <dd style="margin: 0 0 0 120px;">Non</dd>
- <dt style="float: left; text-align: right; width: 120px;">Annulable</dt>
- <dd style="margin: 0 0 0 120px;">Non</dd>
- <dt style="float: left; text-align: right; width: 120px;">Cible</dt>
- <dd style="margin: 0 0 0 120px;"><a href="/en-US/docs/WebSockets/WebSockets_reference/WebSocket" title="/en-US/docs/WebSockets/WebSockets_reference/WebSocket">WebSocket</a></dd>
- <dt style="float: left; text-align: right; width: 120px;">Action par défaut</dt>
- <dd style="margin: 0 0 0 120px;">Aucune</dd>
-</dl>
-
-<h2 id="Propriétés">Propriétés</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Property</th>
-   <th scope="col">Type</th>
-   <th scope="col">Description</th>
-  </tr>
- </thead>
+<table class="properties">
  <tbody>
   <tr>
-   <td><code>target</code> {{readonlyInline}}</td>
-   <td>{{domxref("EventTarget")}}</td>
-   <td>The event target (the topmost target in the DOM tree).</td>
+   <th scope="row">Bouillonne/Remonte</th>
+   <td>Non</td>
   </tr>
   <tr>
-   <td><code>type</code> {{readonlyInline}}</td>
-   <td>{{domxref("DOMString")}}</td>
-   <td>The type of event.</td>
+   <th scope="row">Annulable</th>
+   <td>Non</td>
   </tr>
   <tr>
-   <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event normally bubbles or not.</td>
+   <th scope="row">Interface</th>
+   <td><a href="/fr/docs/Web/API/CloseEvent"><code>CloseEvent</code></a></td>
   </tr>
   <tr>
-   <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td>{{jsxref("Boolean")}}</td>
-   <td>Whether the event is cancellable or not.</td>
+   <th scope="row">Propriété de gestionnaire d'évènement correspondante</th>
+   <td><a href="/fr/docs/Web/API/WebSocket/onclose"><code>onclose</code></a></td>
   </tr>
  </tbody>
 </table>
 
-<h2 id="Evénements_liés">Evénements liés</h2>
+<h2 id="examples">Exemples</h2>
+
+<p>On peut vouloir savoir lorsque la connexion a été fermée afin de mettre à jour l'interface utilisateur ou, éventuellement, pour sauvegarder des données à propos de la connexion. Soit une variable <code>socketExemple</code> qui fait référence à une connexion WebSocket ouverte, le fragment de code suivant gère la situation où la socket a été fermée :</p>
+
+<pre class="brush: js">socketExemple.addEventListener('close', (event) =&gt; {
+  console.log('La connexion a été fermée avec succès.');
+});</pre>
+
+<p>On peut effectuer les mêmes actions avec la propriété de gestion d'évènement correspondante :</p>
+
+<pre class="brush: js">socketExemple.onclose = function (event) {
+  console.log('La connexion a été fermée avec succès.');
+};</pre>
+
+<h2 id="specifications">Spécifications</h2>
+
+<p>{{Specifications}}</p>
+
+<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
+
+<p>{{Compat}}</p>
+
+<h2 id="Voir aussi">Voir aussi</h2>
 
 <ul>
- <li>{{event("open")}}</li>
- <li>{{event("close")}}</li>
- <li>{{event("error")}}</li>
- <li>{{event("message")}}</li>
-</ul>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
-
-<ul>
- <li><a href="/fr/docs/WebSockets/Writing_WebSocket_client_applications">Ecrire des applications client WebSocket</a></li>
+ <li><a href="/fr/docs/Web/API/WebSocket/error_event">WebSocket : évènement <code>error</code></a></li>
+ <li><a href="/fr/docs/Web/API/WebSocket/message_event">WebSocket : évènement <code>message</code></a></li>
+ <li><a href="/fr/docs/Web/API/WebSocket/open_event">WebSocket : évènement <code>open</code></a></li>
+ <li><a href="/fr/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications">Écrire des applications clientes WebSocket</a></li>
 </ul>

@@ -20,7 +20,9 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/object-src
 
 <p>Pour définir des types autorisés pour les éléments {{HTMLElement("object")}}, {{HTMLElement("embed")}} et {{HTMLElement("applet")}}, voir la directive {{CSP("plugin-types")}}.</p>
 
-<p class="note">Les éléments contrôlés par <code>object-src</code> sont considérés peut-être par coïcidence comme des éléments HTML du passé et ne recevront de nouvelles fonctionnalités normalisées (comme les attributs de sécurité <code>sandbox</code> et <code>allow</code> pour <code>&lt;iframe&gt;</code>). De ce fait, il est <a href="https://csp.withgoogle.com/docs/strict-csp.html">recommandé</a> de restreindre cette directive, c'est-à-dire la définir explicitement à <code>object-src 'none'</code> dans la mesure du possible.</p>
+<div class="notecard note">
+  <p><strong>Note :</strong> Les éléments contrôlés par <code>object-src</code> sont considérés peut-être par coïcidence comme des éléments HTML du passé et ne recevront de nouvelles fonctionnalités normalisées (comme les attributs de sécurité <code>sandbox</code> et <code>allow</code> pour <code>&lt;iframe&gt;</code>). De ce fait, il est <a href="https://csp.withgoogle.com/docs/strict-csp.html">recommandé</a> de restreindre cette directive, c'est-à-dire la définir explicitement à <code>object-src 'none'</code> dans la mesure du possible.</p>
+</div>
 
 <table class="properties">
  <tbody>
@@ -43,7 +45,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/object-src
 
 <p>Une ou plusieurs sources peuvent être autorisées pour cette directive :</p>
 
-<pre class="syntaxbox notranslate">Content-Security-Policy: object-src &lt;source&gt;;
+<pre class="syntaxbox">Content-Security-Policy: object-src &lt;source&gt;;
 Content-Security-Policy: object-src &lt;source&gt; &lt;source&gt;;
 </pre>
 
@@ -57,11 +59,11 @@ Content-Security-Policy: object-src &lt;source&gt; &lt;source&gt;;
 
 <p>Soit cet en-tête CSP :</p>
 
-<pre class="brush: bash notranslate">Content-Security-Policy: object-src https://example.com/</pre>
+<pre class="brush: bash">Content-Security-Policy: object-src https://example.com/</pre>
 
 <p>Ces éléments {{HTMLElement("object")}}, {{HTMLElement("embed")}} et {{HTMLElement("applet")}} seront bloqués et ne se chargeront pas :</p>
 
-<pre class="brush: html notranslate">&lt;embed src="https://not-example.com/flash"&gt;&lt;/embed&gt;
+<pre class="brush: html">&lt;embed src="https://not-example.com/flash"&gt;&lt;/embed&gt;
 &lt;object data="https://not-example.com/plugin"&gt;&lt;/object&gt;
 &lt;applet archive="https://not-example.com/java"&gt;&lt;/applet&gt;</pre>
 

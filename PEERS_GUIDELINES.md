@@ -54,7 +54,6 @@ The review teams for each locale are:
 [@yari-content-ko](https://github.com/orgs/mdn/teams/yari-content-ko)
   team, which consists of:
   - [@yechoi42](https://github.com/yechoi42)
-  - [@cos18](https://github.com/cos18)
   - [@GwangYeol-Im](https://github.com/GwangYeol-Im)
   - [@pje1740](https://github.com/pje1740)
   - [@nKiNk](https://github.com/nKiNk)

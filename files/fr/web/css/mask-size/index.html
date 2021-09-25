@@ -45,7 +45,9 @@ mask-size: initial;
 mask-size: unset;
 </pre>
 
-<div class="note"><strong>Note :</strong> Si la valeur de cette propriété n'est pas définie avec la propriété raccourcie {{cssxref("mask")}} et que celle-ci est appliquée après <code>mask-size</code>, la valeur sera réinitialisée avec sa valeur initiale à cause de la propriété raccourcie.</div>
+<div class="note">
+  <p><strong>Note :</strong> Si la valeur de cette propriété n'est pas définie avec la propriété raccourcie {{cssxref("mask")}} et que celle-ci est appliquée après <code>mask-size</code>, la valeur sera réinitialisée avec sa valeur initiale à cause de la propriété raccourcie.</p>
+</div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
@@ -75,9 +77,9 @@ mask-size: unset;
  <dd>Une valeur de pourcentage ({{cssxref("&lt;percentage&gt;")}} qui indique le redimensionnement à appliquer dans l'axe correspondant à partir de l'origine définie par {{cssxref("mask-origin")}} par rapport à la taille  de la zone du masque. Par défaut, cette zone contient la boîte de contenu et la boîte de remplissage (<em>padding</em>) (on peut modifier cette zone pour choisir les boîtes concernées). Les valeurs négatives ne sont pas autorisées.</dd>
  <dt><code>auto</code></dt>
  <dd>Un mot-clé qui permet de redimensionner l'image du masque dans l'axe correspondant tout en conservant ses proportions.</dd>
- <dt><a><code>contain</code></a></dt>
+ <dt><code>contain</code></dt>
  <dd>Un mot-clé qui redimensionne l'image afin qu'elle soit aussi grande que possible et conserve ses proportions tout en étant contenue dans le contenur. Par défaut, l'image est centrée sauf si {{cssxref("mask-position")}} indique un autre paramètre.</dd>
- <dt><a id="cover"><code>cover</code></a></dt>
+ <dt><code>cover</code></dt>
  <dd>Un mot-clé qui se comporte à l'inverse de <code>contain</code>. L'image est agrandie autant que possible et ses proportions sont conservées et elle couvre toute la surface du conteneur, si les dimensions du conteneur sont différentes, l'image est rognée sur les côtés (haut et bas ou droite et gauche).</dd>
 </dl>
 

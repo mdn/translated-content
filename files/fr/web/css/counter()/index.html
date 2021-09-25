@@ -10,7 +10,7 @@ translation_of: Web/CSS/counter()
 ---
 <div>{{CSSRef}}</div>
 
-<p>La fonction CSS <code><strong>counter</strong></code><strong><code>()</code></strong> renvoie une chaîne de caractères qui représente la valeur courante du compteur nommé (dont le nom est passé en argument). Elle est généralement utilisée pour construire un <a href="/fr/docs/Web/CSS/Pseudo-éléments">pseudo-élément</a> mais elle peut tout à fait être utilisée à n'importe quel endroit où une valeur {{cssxref("&lt;string&gt;")}} est attendue.</p>
+<p>La fonction CSS <code><strong>counter</strong></code><strong><code>()</code></strong> renvoie une chaîne de caractères qui représente la valeur courante du compteur nommé (dont le nom est passé en argument). Elle est généralement utilisée pour construire un <a href="/fr/docs/Web/CSS/Pseudo-elements">pseudo-élément</a> mais elle peut tout à fait être utilisée à n'importe quel endroit où une valeur {{cssxref("&lt;string&gt;")}} est attendue.</p>
 
 <pre class="notranslate">/* Usage simple */
 counter(nomcompteur);
@@ -18,12 +18,12 @@ counter(nomcompteur);
 /* Modifier le type d'affichage du compteur */
 counter(nomcompteur, upper-roman)</pre>
 
-<p>Un <a href="/fr/docs/Web/CSS/CSS_Lists/Compteurs_CSS">compteur</a> CSS n'a aucun effet visible en lui-même. C'est la fonction <code>counter()</code> (ainsi que <code>counters()</code>) qui permet d'utiliser la chaîne de caractère ou l'image résultante.</p>
+<p>Un <a href="/fr/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">compteur</a> CSS n'a aucun effet visible en lui-même. C'est la fonction <code>counter()</code> (ainsi que <code>counters()</code>) qui permet d'utiliser la chaîne de caractère ou l'image résultante.</p>
 
-<div class="blockIndicator note">
-<p><strong>Note  :</strong> La fonction <code>counter()</code> peut être utilisée avec n'importe quelle propriété CSS mais la prise en charge des propriétés autres que {{CSSxRef("content")}} reste expérimentale et la prise en charge du paramètre « type ou unité » est hétérogène.</p>
+<div class="note">
+<p><strong>Note :</strong> La fonction <code>counter()</code> peut être utilisée avec n'importe quelle propriété CSS mais la prise en charge des propriétés autres que {{CSSxRef("content")}} reste expérimentale et la prise en charge du paramètre « type ou unité » est hétérogène.</p>
 
-<p>Veillez à consulter <a href="#Browser_compatibility">le tableau de compatibilité des navigateurs</a> avant d'utiliser ces fonctionnalités en production.</p>
+<p>Veillez à consulter <a href="#browser_compatibility">le tableau de compatibilité des navigateurs</a> avant d'utiliser ces fonctionnalités en production.</p>
 </div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
@@ -33,8 +33,8 @@ counter(nomcompteur, upper-roman)</pre>
 <dl>
  <dt>{{cssxref("&lt;custom-ident&gt;")}}</dt>
  <dd>Un nom identifiant le compteur (sensible à la casse). C'est le même nom qui pourra être utilisé avec {{cssxref("counter-reset")}} et  {{cssxref("counter-increment")}}. Le nom ne peut pas commencer avec deux tirets et ne peut pas être l'un des mots-clés <code>none</code>, <code>unset</code>, <code>initial</code> ou <code>inherit</code>.</dd>
- <dt><code style="white-space: nowrap;">&lt;counter-style&gt;</code></dt>
- <dd>Un nom de style de compteur ou une fonction <code><a href="/fr/docs/Web/CSS/symbols">symbols()</a></code>. Le nom d'un style de compteur peut indiquer un compteur <a href="/fr/docs/Web/CSS/list-style-type#Valeurs">alphabétique, numérique, symbolique ou encore utilisant un système de numération asiatique ou éthiopien</a> ou un autre <a href="/fr/docs/Web/CSS/CSS_Counter_Styles">style de compteur prédéfini</a>. Si cette valeur n'est pas fournie, le style par défaut est décimal.</dd>
+ <dt><code>&lt;counter-style&gt;</code></dt>
+ <dd>Un nom de style de compteur ou une fonction <a href="/fr/docs/Web/CSS/symbols()"><code>symbols()</code></a>. Le nom d'un style de compteur peut indiquer un compteur <a href="/fr/docs/Web/CSS/list-style-type#valeurs">alphabétique, numérique, symbolique ou encore utilisant un système de numération asiatique ou éthiopien</a> ou un autre <a href="/fr/docs/Web/CSS/CSS_Counter_Styles">style de compteur prédéfini</a>. Si cette valeur n'est pas fournie, le style par défaut est décimal.</dd>
  <dt><code>none</code></dt>
  <dd>Représente la chaîne de caractère vide.</dd>
 </dl>
@@ -49,7 +49,7 @@ counter(nomcompteur, upper-roman)</pre>
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html; notranslate">&lt;ol&gt;
+<pre class="brush: html;">&lt;ol&gt;
   &lt;li&gt;&lt;/li&gt;
   &lt;li&gt;&lt;/li&gt;
   &lt;li&gt;&lt;/li&gt;
@@ -57,7 +57,7 @@ counter(nomcompteur, upper-roman)</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css; highlight[2] notranslate">ol {
+<pre class="brush: css">ol {
   counter-reset: listCounter;
 }
 li {
@@ -76,7 +76,7 @@ li::after {
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;ol&gt;
+<pre class="brush: html">&lt;ol&gt;
   &lt;li&gt;&lt;/li&gt;
   &lt;li&gt;&lt;/li&gt;
   &lt;li&gt;&lt;/li&gt;
@@ -84,7 +84,7 @@ li::after {
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">ol {
+<pre class="brush: css">ol {
   counter-reset: count;
 }
 
@@ -132,9 +132,9 @@ li::after {
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Lists/Compteurs_CSS">Utiliser les compteurs CSS</a></li>
+ <li><a href="/fr/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">Utiliser les compteurs CSS</a></li>
  <li>{{cssxref("counter-reset")}}</li>
  <li>{{cssxref("counter-increment")}}</li>
  <li>{{cssxref("@counter-style")}}</li>
- <li>La fonction CSS <code><a href="/fr/docs/Web/CSS/counters">counters()</a></code></li>
+ <li>La fonction CSS <code><a href="/fr/docs/Web/CSS/counters()">counters()</a></code></li>
 </ul>

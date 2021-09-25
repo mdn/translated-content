@@ -1,38 +1,44 @@
 ---
 title: Date.prototype.toLocaleTimeString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
-tags:
-  - Date
-  - Internationalisation
-  - JavaScript
-  - Méthode
-  - Prototype
-  - Reference
-  - i18n
 translation_of: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
 original_slug: Web/JavaScript/Reference/Objets_globaux/Date/toLocaleTimeString
+browser-compat: javascript.builtins.Date.toLocaleTimeString
 ---
 {{JSRef}}
 
-La méthode **`toLocaleTimeString()`** renvoie une chaine de caractères correspondant à l'heure dans la date, exprimée selon une locale. Les arguments `locales` et `options` permettent aux applications de définir le langage utilisé pour les conventions de format et permettent de personnaliser le comportement de la fonction. Les anciennes implémentations ignorent ces arguments, la locale utilisée et le format de la chaine dépendent uniquement de l'implémentation.
+La méthode **`toLocaleTimeString()`** renvoie une chaine de caractères correspondant à l'heure dans la date, exprimée selon une localisation. Les arguments `locales` (définissant la localisation) et `options` permettent aux applications de définir le langage utilisé pour les conventions de format et permettent de personnaliser le comportement de la fonction. 
+
+Les anciennes implémentations ignorent ces arguments, la locale utilisée et le format de la chaine dépendent uniquement de l'implémentation.
 
 {{EmbedInteractiveExample("pages/js/date-tolocaletimestring.html")}}
 
 ## Syntaxe
 
-    dateObj.toLocaleTimeString([locales [, options]])
+```js
+toLocaleTimeString()
+toLocaleTimeString(locales)
+toLocaleTimeString(locales, options)
+```
 
 ### Paramètres
 
-Voir le tableau de [compatibilité des navigateurs](#compat "#Compatibilit.C3.A9_des_navigateurs") afin de déterminer quels navigateurs respectent les arguments `locales` et `options` ainsi que l'exemple [Vérifier le support des arguments `locales` et `options`](#check) qui permet de détecter cette fonctionnalité.
+Les arguments `locales` et `options` adaptent le comportement de la fonction et permettent aux applications de définir quelles conventions de formatage linguistiques devraient être utilisées. Pour les anciennes implémentations qui ignoraient les arguments `locales` et
+`options`, les `locales` et le format de la chaîne renvoyée dépendent uniquement de l'implémentation.
 
-{{page('fr/docs/Web/JavaScript/Reference/Objets_globaux/DateTimeFormat','Param.C3.A8tres')}}
+Voir la page du constructeur [`Intl.DateTimeFormat()`](/fr/docs/Web/JavaScript/Reference/Intl/DateTimeFormat/DateTimeFormat) pour plus de détails sur ces paramètres et comment les utiliser.
 
-La valeur par défaut de chacun des composants de la date vaut {{jsxref("undefined")}}, si les propriétés `hour`, `minute`, `second` sont toutes `undefined`, on suppose alors que `hour`, `minute`, et `second` sont "numeric".
+La valeur par défaut de chacun des composants de date/heure vaut [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined), si les propriétés `hour`, `minute`, `second` sont toutes `undefined`, on suppose alors que `hour`, `minute`, et `second` sont "numeric".
 
 ### Valeur de retour
 
 Une chaîne de caractères qui représente l'heure de la date indiquée selon des conventions de locales spécifiques.
+
+## Performances
+
+Lorsqu'on formate un grand nombre de dates, mieux vaudra créer un objet 
+[`Intl.DateTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) et utiliser la fonction fournie par sa propriété [`format`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat/format)
+property.
 
 ## Exemples
 
@@ -48,21 +54,6 @@ var date = new Date(Date.UTC(2012, 11, 12, 3, 0, 0));
 // pour la locale, et le fuseau horaire
 console.log(date.toLocaleTimeString());
 // → "04:00:00" si exécuté dans une locale fr et le fuseau horaire CEST
-```
-
-### Vérifier le support des arguments `locales` et `options`
-
-Les arguments `locales` et `options` ne sont pas encore supportés par tous les navigateurs. Afin de vérifier si l'implementation utilisée les supporte, vous pouvez utiliser le pré-requis suivant : les locales incorrectes sont rejetées avec une exception` RangeError` :
-
-```js
-function toLocaleTimeStringSupportsLocales() {
-    try {
-        new Date().toLocaleTimeString("i");
-    } catch (e) {
-        return e​.name === "RangeError";
-    }
-    return false;
-}
 ```
 
 ### Utiliser `locales`
@@ -114,30 +105,18 @@ console.log(date.toLocaleTimeString("en-US", {hour12: false}));
 // → "19:00:00"
 ```
 
-## Performance
-
-Pour formater de nombreuses dates, il est préférable de créer un objet {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}} et d'utiliser la fonction fournie par sa propriété {{jsxref("DateTimeFormat.prototype.format", "format")}}.
-
 ## Spécifications
 
-| Spécification                                                                                                                                    | État                             | Commentaires                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- | ----------------------------------------------------- |
-| {{SpecName('ES3')}}                                                                                                                         | {{Spec2('ES3')}}             | Définition initiale. Implémentée avec JavaScript 1.0. |
-| {{SpecName('ES5.1', '#sec-15.9.5.7', 'Date.prototype.toLocaleTimeString')}}                                             | {{Spec2('ES5.1')}}         |                                                       |
-| {{SpecName('ES6', '#sec-date.prototype.tolocalestring', 'Date.prototype.toLocaleTimeString')}}                     | {{Spec2('ES6')}}             |                                                       |
-| {{SpecName('ESDraft', '#sec-date.prototype.tolocalestring', 'Date.prototype.toLocaleTimeString')}}             | {{Spec2('ESDraft')}}     |                                                       |
-| {{SpecName('ES Int 1.0', '#sec-13.3.3', 'Date.prototype.toLocaleTimeString')}}                                         | {{Spec2('ES Int 1.0')}} | Définition des arguments `locales` et `options`.      |
-| {{SpecName('ES Int 2.0', '#sec-13.3.3', 'Date.prototype.toLocaleTimeString')}}                                         | {{Spec2('ES Int 2.0')}} |                                                       |
-| {{SpecName('ES Int Draft', '#sec-Date.prototype.toLocaleTimeString', 'Date.prototype.toLocaleTimeString')}} | {{Spec2('ES Int Draft')}} |                                                       |
+{{Specifications}}
 
 ## Compatibilité des navigateurs
 
-{{Compat("javascript.builtins.Date.toLocaleTimeString")}}
+{{Compat}}
 
 ## Voir aussi
 
-- {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
-- {{jsxref("Date.prototype.toLocaleDateString()")}}
-- {{jsxref("Date.prototype.toLocaleString()")}}
-- {{jsxref("Date.prototype.toTimeString()")}}
-- {{jsxref("Date.prototype.toString()")}}
+- [`Intl.DateTimeFormat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)
+- [`Date.prototype.toLocaleDateString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString)
+- [`Date.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString)
+- [`Date.prototype.toTimeString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toTimeString)
+- [`Date.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/toString)

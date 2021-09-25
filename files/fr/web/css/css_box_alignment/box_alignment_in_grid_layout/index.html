@@ -11,7 +11,7 @@ original_slug: Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_grille
 ---
 <div>{{CSSRef}}</div>
 
-<p class="summary">Le module de spécification <em><a href="/fr/docs/Web/CSS/CSS_Box_Alignment">Box Alignment</a></em> détaille le fonctionnement de l'alignement selon les différentes méthodes de disposition. Dans cet article, nous verrons comment fonctionne l'alignement des boîtes avec <a href="/fr/docs/Web/CSS/CSS_Grid_Layout">les grilles CSS</a>. Cette page détaille les aspects spécifiques relatifs à l'alignement et aux grilles. Pour une description générale des fonctionnalités communes pour les différentes dispositions, voir <a href="/fr/docs/Web/CSS/CSS_Box_Alignment">la page principale sur cette spécification</a>.</p>
+<p>Le module de spécification <em><a href="/fr/docs/Web/CSS/CSS_Box_Alignment">Box Alignment</a></em> détaille le fonctionnement de l'alignement selon les différentes méthodes de disposition. Dans cet article, nous verrons comment fonctionne l'alignement des boîtes avec <a href="/fr/docs/Web/CSS/CSS_Grid_Layout">les grilles CSS</a>. Cette page détaille les aspects spécifiques relatifs à l'alignement et aux grilles. Pour une description générale des fonctionnalités communes pour les différentes dispositions, voir <a href="/fr/docs/Web/CSS/CSS_Box_Alignment">la page principale sur cette spécification</a>.</p>
 
 <h2 id="Exemple_simple">Exemple simple</h2>
 
@@ -25,7 +25,7 @@ original_slug: Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_grille
 
 <p>L'axe en ligne correspond à l'axe selon lequel les mots d'une phrase sont écrits pour le mode d'écriture utilisé. Ainsi, pour une langue écrite horizontalement (comme le français ou l'arabe), l'axe en ligne sera horizontal. Pour les modes d'écriture verticaux, cet axe sera vertica.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15962/Inline_Axis.png" style="height: 306px; width: 940px;"></p>
+<p><img alt="" src="inline_axis.png"></p>
 
 <p>Pour aligner des éléments selon l'axe en ligne, on utilisera les propriétés commençant par <code>justify-</code> : {{cssxref("justify-content")}}, {{cssxref("justify-items")}} et {{cssxref("justify-self")}}.</p>
 
@@ -33,7 +33,7 @@ original_slug: Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_grille
 
 <p>Pour aligner des éléments sur l'axe de bloc, on utilisera les propriétés commençant par <code>align-</code> : {{cssxref("align-content")}}, {{cssxref("align-items")}} et {{cssxref("align-self")}}.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/15961/Block_Axis.png" style="height: 306px; width: 940px;"></p>
+<p><img alt="" src="block_axis.png"></p>
 
 <h2 id="Alignement_individuel">Alignement individuel</h2>
 
@@ -66,12 +66,12 @@ original_slug: Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_grille
  <li>{{cssxref("row-gap")}}</li>
  <li>{{cssxref("column-gap")}}</li>
  <li>{{cssxref("gap")}}</li>
- <li>{{cssxref("grid-row-gap")}}</li>
+ <li>{{cssxref("row-gap")}}</li>
  <li>{{cssxref("grid-column-gap")}}</li>
- <li>{{cssxref("grid-gap")}}</li>
+ <li>{{cssxref("gap")}}</li>
 </ul>
 
-<p>La spécification sur les grilles contenaient initialement les définitions des propriétés {{cssxref("grid-row-gap")}}, {{cssxref("grid-column-gap")}} et {{cssxref("grid-gap")}}. Les définitions de ces propriétés ont depuis été déplacées dans le module de spécification <em>Box Alignment</em> et ont respectivement été renommées en {{cssxref("row-gap")}}, {{cssxref("column-gap")}} et {{cssxref("gap")}}. Ainsi, elles peuvent être utilisées pour d'autres méthodes de disposition où les gouttières sont pertinentes.</p>
+<p>La spécification sur les grilles contenaient initialement les définitions des propriétés {{cssxref("row-gap")}}, {{cssxref("grid-column-gap")}} et {{cssxref("gap")}}. Les définitions de ces propriétés ont depuis été déplacées dans le module de spécification <em>Box Alignment</em> et ont respectivement été renommées en {{cssxref("row-gap")}}, {{cssxref("column-gap")}} et {{cssxref("gap")}}. Ainsi, elles peuvent être utilisées pour d'autres méthodes de disposition où les gouttières sont pertinentes.</p>
 
 <p>À l'heure actuelle (juin 2018), seul Microsoft Edge prend en charge les versions non-préfixées pour ces propriétés. Il vaut donc mieux utiliser les deux versions (avec puis sans préfixe <code>grid-</code>) afin d'assurer une meilleure compatibilité.</p>
 
@@ -79,7 +79,6 @@ original_slug: Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_grille
 
 <h3 id="Propriétés_CSS">Propriétés CSS</h3>
 
-<div class="index">
 <ul>
  <li>{{cssxref("justify-content")}}</li>
  <li>{{cssxref("align-content")}}</li>
@@ -94,21 +93,18 @@ original_slug: Web/CSS/CSS_Box_Alignment/Alignement_boîtes_disposition_grille
  <li>{{cssxref("column-gap")}}</li>
  <li>{{cssxref("gap")}}</li>
 </ul>
-</div>
 
 <h3 id="Termes_du_glossaire">Termes du glossaire</h3>
 
-<div class="index">
 <ul>
- <li><a href="/fr/docs/Glossaire/Axe_transversal">Axe secondaire</a></li>
- <li><a href="/fr/docs/Glossaire/Axe_principal">Axe principal</a></li>
+ <li><a href="/fr/docs/Glossary/Cross_Axis">Axe secondaire</a></li>
+ <li><a href="/fr/docs/Glossary/Main_Axis">Axe principal</a></li>
 </ul>
-</div>
 
 <h2 id="Guides">Guides</h2>
 
 <ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_CSS">Aligner les boîtes dans une disposition en grille</a></li>
+ <li><a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">Aligner les boîtes dans une disposition en grille</a></li>
 </ul>
 
 <h2 id="Ressources_externes">Ressources externes</h2>

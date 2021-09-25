@@ -11,13 +11,13 @@ original_slug: Web/HTTP/Aperçu
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p class="summary"><strong>HTTP</strong> est un {{glossary("protocole")}} qui permet de récupérer des ressources telles que des documents HTML. Il est à la base de tout échange de données sur le Web. C'est un protocole de type client-serveur, ce qui signifie que les requêtes sont initiées par le destinataire (qui est généralement un navigateur web). Un document complet est construit à partir de différents sous-documents qui sont récupérés, par exemple du texte, des descriptions de mise en page, des images, des vidéos, des scripts et bien plus.</p>
+<p><strong>HTTP</strong> est un {{glossary("protocole")}} qui permet de récupérer des ressources telles que des documents HTML. Il est à la base de tout échange de données sur le Web. C'est un protocole de type client-serveur, ce qui signifie que les requêtes sont initiées par le destinataire (qui est généralement un navigateur web). Un document complet est construit à partir de différents sous-documents qui sont récupérés, par exemple du texte, des descriptions de mise en page, des images, des vidéos, des scripts et bien plus.</p>
 
-<p><img alt="Un document web se compose de différentes ressources" src="https://mdn.mozillademos.org/files/13677/Fetching_a_page.png" style="height: 319px; width: 545px;"></p>
+<p><img alt="Un document web se compose de différentes ressources" src="fetching_a_page.png"></p>
 
 <p>Les clients et serveurs communiquent par l'échange de messages individuels (en opposition à un flux de données). Les messages envoyés par le client, généralement un navigateur web, sont appelés des <em>requêtes</em> et les messages renvoyés par le serveur sont appelés <em>réponses</em>.</p>
 
-<p><img alt="HTTP est un protocole de la couche d'application fonctionnant au-dessus de TCP (pour la couche de transport) et IP (pour la couche réseau). HTTP est en dessous de la couche de présentation." src="https://mdn.mozillademos.org/files/13673/HTTP%20&amp;%20layers.png" style="float: left; height: 299px; padding-bottom: 15px; padding-right: 20px; width: 418px;"> Conçu au début des années 1990, HTTP est un protocole extensible qui a évolué au cours du temps. C'est un protocole de <a href="https://fr.wikipedia.org/wiki/Couche_application">la couche application</a> dont les données transitent via {{glossary("TCP")}} ou à travers une connexion TCP chiffrée avec {{glossary("TLS")}}. En théorie, tout protocole de transport fiable pourrait être utilisé. En raison de son extensibilité, il n'est pas seulement utilisé pour récupérer des documents, mais aussi pour des images, des vidéos ou bien pour renvoyer des contenus vers des serveurs, comme des résultats de formulaires HTML. HTTP peut aussi être utilisé pour récupérer des parties de documents pour mettre à jour à la demande des pages web.</p>
+<p><img alt="HTTP est un protocole de la couche d'application fonctionnant au-dessus de TCP (pour la couche de transport) et IP (pour la couche réseau). HTTP est en dessous de la couche de présentation." src="http-layers.png"> Conçu au début des années 1990, HTTP est un protocole extensible qui a évolué au cours du temps. C'est un protocole de <a href="https://fr.wikipedia.org/wiki/Couche_application">la couche application</a> dont les données transitent via {{glossary("TCP")}} ou à travers une connexion TCP chiffrée avec {{glossary("TLS")}}. En théorie, tout protocole de transport fiable pourrait être utilisé. En raison de son extensibilité, il n'est pas seulement utilisé pour récupérer des documents, mais aussi pour des images, des vidéos ou bien pour renvoyer des contenus vers des serveurs, comme des résultats de formulaires HTML. HTTP peut aussi être utilisé pour récupérer des parties de documents pour mettre à jour à la demande des pages web.</p>
 
 <h2 id="Composants_des_systèmes_basés_sur_HTTP">Composants des systèmes basés sur HTTP</h2>
 
@@ -25,7 +25,7 @@ original_slug: Web/HTTP/Aperçu
 
 <p>Chaque requête individuelle est envoyée au serveur, qui la traite et fournit une <em>réponse</em>. Entre cette requête et la réponse se trouve de nombreuses entités qu'on désignera de façon générique sous le terme {{glossary("Proxy", "proxies")}}. Celles-ci exécutent différentes opérations et agissent comme passerelles ou comme {{glossary("Cache", "caches")}} par exemple.</p>
 
-<p><img alt="chaîne client serveur" src="https://mdn.mozillademos.org/files/13679/Client-server-chain.png"></p>
+<p><img alt="chaîne client serveur" src="client-server-chain.png"></p>
 
 <p>En réalité, il y a plus d'un ordinateur entre un navigateur et le serveur qui traite la requête : il y a les routeurs, les modems et bien plus. Grâce à la construction en couche du Web, ces intermédiaires sont cachés dans les couches réseau et transport. HTTP est bâti sur la couche applicative. Bien qu'elles puissent s'avérer importantes lorsqu'il s'agit de diagnostiquer des problèmes réseau, les couches inférieures ne sont pas pertinentes ici pour décrire HTTP.</p>
 
@@ -107,12 +107,12 @@ original_slug: Web/HTTP/Aperçu
 <ol>
  <li>Il ouvre une connexion TCP : la connexion TCP va être utilisée pour envoyer une ou plusieurs requêtes et pour recevoir une réponse. Le client peut ouvrir une nouvelle connexion, réutiliser une connexion existante ou ouvrir plusieurs connexions TCP vers le serveur.</li>
  <li>Il envoie un message HTTP : les messages HTTP (avant HTTP/2) sont lisibles par les humains. Avec HTTP/2, ces simples messages sont en-capsulés dans des trames, rendant la lecture directe impossible, mais le principe reste le même.
-  <pre class="line-numbers  language-html notranslate">GET / HTTP/1.1
+  <pre>GET / HTTP/1.1
 Host: developer.mozilla.org
 Accept-Language: fr</pre>
  </li>
  <li>Il lit la réponse envoyée par le serveur :
-  <pre class="line-numbers  language-html notranslate">HTTP/1.1 200 OK
+  <pre>HTTP/1.1 200 OK
 Date: Sat, 09 Oct 2010 14:28:02 GMT
 Server: Apache
 Last-Modified: Tue, 01 Dec 2009 20:18:22 GMT
@@ -138,7 +138,7 @@ Content-Type: text/html
 
 <p>Un exemple de requête HTTP :</p>
 
-<p><img alt="Une requête HTTP basique" src="https://mdn.mozillademos.org/files/13687/HTTP_Request.png" style="height: 336px; width: 693px;"></p>
+<p><img alt="Une requête HTTP basique" src="http_request.png"></p>
 
 <p>Une requête comprend les éléments suivants :</p>
 
@@ -154,7 +154,7 @@ Content-Type: text/html
 
 <p>Un exemple de réponse :</p>
 
-<p><img alt="une réponse HTTP" src="https://mdn.mozillademos.org/files/13691/HTTP_Response.png" style="height: 494px; width: 758px;"></p>
+<p><img alt="une réponse HTTP" src="http_response.png"></p>
 
 <p>Une réponse comprend les éléments suivants:</p>
 

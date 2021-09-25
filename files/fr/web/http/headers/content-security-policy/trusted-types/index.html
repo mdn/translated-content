@@ -14,13 +14,13 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/trusted-types
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p>La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <code><strong>trusted-types</strong></code> {{experimental_inline}} informe l'agent utilisateur qu'il faut restreindre la création de règles Trusted Types (fonctions qui créent des valeurs typées non <span>falsifiables, dans le but de les passer au puits XSS du DOM au lieu de chaines de caractères).</span></p>
+<p>La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <code><strong>trusted-types</strong></code> {{experimental_inline}} informe l'agent utilisateur qu'il faut restreindre la création de règles Trusted Types (fonctions qui créent des valeurs typées non falsifiables, dans le but de les passer au puits XSS du DOM au lieu de chaines de caractères).</p>
 
-<p><span>Conjointement à la directive <code><strong><a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for">require-trusted-types-for</a></strong></code>, cette directive permet aux auteurs de définir des règles empêchant d'injecter des données dans le</span><span> DOM et donc de réduire la fenêtre de tir pour les attaques XSS sur le DOM à quelques pans isolés de la base de code d'une application, facilitant donc son contrôle et sa relecture.</span> Cette directive déclare une liste de permissions de noms de règles de Trusted Types créée avec <code>TrustedTypes.createPolicy</code> à partir de l'API Trusted Types.</p>
+<p>Conjointement à la directive <a href="/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for"><code>require-trusted-types-for</code></a>, cette directive permet aux auteurs de définir des règles empêchant d'injecter des données dans le DOM et donc de réduire la fenêtre de tir pour les attaques XSS sur le DOM à quelques pans isolés de la base de code d'une application, facilitant donc son contrôle et sa relecture. Cette directive déclare une liste de permissions de noms de règles de Trusted Types créée avec <code>TrustedTypes.createPolicy</code> à partir de l'API Trusted Types.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="notranslate">Content-Security-Policy: trusted-types;
+<pre>Content-Security-Policy: trusted-types;
 Content-Security-Policy: trusted-types 'none';
 Content-Security-Policy: trusted-types &lt;policyName&gt;;
 Content-Security-Policy: trusted-types &lt;policyName&gt; &lt;policyName&gt; 'allow-duplicates';
@@ -39,11 +39,11 @@ Content-Security-Policy: trusted-types &lt;policyName&gt; &lt;policyName&gt; 'al
 
 <p>Soit l'en-tête CSP :</p>
 
-<pre class="notranslate">Content-Security-Policy: trusted-types foo bar 'allow-duplicates';</pre>
+<pre>Content-Security-Policy: trusted-types foo bar 'allow-duplicates';</pre>
 
 <p>Ce code génèrera une erreur car une des règles créées a un nom non autorisé :</p>
 
-<pre class="brush: js notranslate">if (typeof trustedTypes !== 'undefined') {
+<pre class="brush: js">if (typeof trustedTypes !== 'undefined') {
   const policyFoo = trustedTypes.createPolicy('foo', {});
   const policyFoo2 = trustedTypes.createPolicy('foo', {});
   const policyBaz = trustedTypes.createPolicy('baz', {}); // Throws and dispatches a SecurityPolicyViolationEvent.

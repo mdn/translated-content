@@ -13,8 +13,6 @@ translation_of: Web/CSS/transition-timing-function
 
 <div>{{EmbedInteractiveExample("pages/css/transition-timing-function.html")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <p>Cette courbe d'accelération est définie en utilisant une {{cssxref("&lt;timing-function&gt;")}} pour chacune des propriétés à animer.</p>
 
 <p>Il est possible de définir plusieurs fonctions de temporisation dans une même déclaration ; chacune sera appliquée à la propriété correspondante listée avec la propriété {{cssxref("transition-property")}}, qui agit comme liste maîtresse :</p>
@@ -112,8 +110,7 @@ transition-timing-function: unset;
 <div>
 <h3 id="Courbes_de_Bézier_cubiques">Courbes de Bézier cubiques</h3>
 
-<div class="hidden">
-<pre class="brush:html">&lt;div class="parent"&gt;
+<pre class="brush:html hidden">&lt;div class="parent"&gt;
   &lt;div class="ease"&gt;ease&lt;/div&gt;
   &lt;div class="easein"&gt;ease-in&lt;/div&gt;
   &lt;div class="easeout"&gt;ease-out&lt;/div&gt;
@@ -122,7 +119,7 @@ transition-timing-function: unset;
   &lt;div class="cb"&gt;cubic-bezier(0.2,-2,0.8,2)&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush:css;">.parent {}
+<pre class="brush:css hidden">.parent {}
 .parent &gt; div[class] {
     width: 12em;
     min-width: 12em;
@@ -144,7 +141,7 @@ transition-timing-function: unset;
 }
 </pre>
 
-<pre class="brush:js">function updateTransition() {
+<pre class="brush:js hidden">function updateTransition() {
   var els = document.querySelectorAll(".parent &gt; div[class]");
   for(var c = els.length, i = 0; i &lt; c; i++) {
      els[i].classList.toggle("box1");
@@ -153,7 +150,6 @@ transition-timing-function: unset;
 
 var intervalID = window.setInterval(updateTransition, 10000);
 </pre>
-</div>
 
 <pre class="brush: css">.ease {
    transition-timing-function: ease;
@@ -180,8 +176,7 @@ var intervalID = window.setInterval(updateTransition, 10000);
 <div>
 <h3 id="Fonctions_en_créneaux">Fonctions en créneaux</h3>
 
-<div class="hidden">
-<pre class="brush:html">&lt;div class="parent"&gt;
+<pre class="brush:html hidden">&lt;div class="parent"&gt;
   &lt;div class="jump-start"&gt;jump-start&lt;/div&gt;
   &lt;div class="jump-end"&gt;jump-end&lt;/div&gt;
   &lt;div class="jump-both"&gt;jump-both&lt;/div&gt;
@@ -190,7 +185,7 @@ var intervalID = window.setInterval(updateTransition, 10000);
   &lt;div class="step-end"&gt;step-end&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<pre class="brush:css;">.parent {}
+<pre class="brush:css hidden">.parent {}
 .parent &gt; div[class] {
     width: 12em;
     min-width: 12em;
@@ -212,7 +207,7 @@ var intervalID = window.setInterval(updateTransition, 10000);
 }
 </pre>
 
-<pre class="brush:js">function updateTransition() {
+<pre class="brush:js hidden">function updateTransition() {
   var els = document.querySelectorAll(".parent &gt; div[class]");
   for(var c = els.length, i = 0; i &lt; c; i++) {
      els[i].classList.toggle("box1");
@@ -221,7 +216,6 @@ var intervalID = window.setInterval(updateTransition, 10000);
 
 var intervalID = window.setInterval(updateTransition, 10000);
 </pre>
-</div>
 
 <pre class="brush: css">.jump-start {
    transition-timing-function: steps(5, jump-start);
