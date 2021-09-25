@@ -36,7 +36,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/prefetch-src
 
 <p>Une ou plusieurs sources peuvent être autorisées pour cette directive :</p>
 
-<pre class="syntaxbox notranslate">Content-Security-Policy: prefetch-src &lt;source&gt;;
+<pre class="syntaxbox">Content-Security-Policy: prefetch-src &lt;source&gt;;
 Content-Security-Policy: prefetch-src &lt;source&gt; &lt;source&gt;;
 </pre>
 
@@ -50,12 +50,12 @@ Content-Security-Policy: prefetch-src &lt;source&gt; &lt;source&gt;;
 
 <p>Soit cet en-tête CSP :</p>
 
-<pre class="notranslate">Content-Security-Policy: prefetch-src https://example.com/
+<pre>Content-Security-Policy: prefetch-src https://example.com/
 </pre>
 
 <p>Les requêtes émises par ce code généreront des erreurs de réseau puisque les URL demandées ne correspondant pas à la liste de permissions de la directive <code>prefetch-src</code> :</p>
 
-<pre class="notranslate">&lt;link rel="prefetch" src="https://example.org/"&gt;&lt;/link&gt;
+<pre>&lt;link rel="prefetch" src="https://example.org/"&gt;&lt;/link&gt;
 &lt;link rel="prerender" src="https://example.org/"&gt;&lt;/link&gt;</pre>
 
 <h2 id="Spécification">Spécification</h2>

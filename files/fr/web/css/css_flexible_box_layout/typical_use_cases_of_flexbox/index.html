@@ -11,11 +11,11 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Cas_utilisation_flexbox
 ---
 <p>{{CSSRef}}</p>
 
-<p class="summary">Dans ce guide, nous verrons quels sont les cas d'utilisation classiques pour les boîtes flexibles et lorsque cette méthode est plus pertinente qu'une autre méthode de disposition.</p>
+<p>Dans ce guide, nous verrons quels sont les cas d'utilisation classiques pour les boîtes flexibles et lorsque cette méthode est plus pertinente qu'une autre méthode de disposition.</p>
 
 <h2 id="Pourquoi_choisir_les_boîtes_flexibles">Pourquoi choisir les boîtes flexibles ?</h2>
 
-<p>Dans un monde où la compatibilité entre navigateurs serait un lointain souvenir, on pourrait choisir d'utiliser les boîtes flexibles lorsqu'on souhaite organiser un ensemble d'élément dans une direction ou dans une autre. Lorsqu'on place les éléments, on souhaite contrôler les dimensions de ces éléments dans cette direction ou contrôler l'espacement ainsi créé entre les éléments. C'est ce pourquoi les boîtes flexibles ont été conçues. Vous pouvez approfondir les différences entre les boîtes flexibles et la disposition en grille CSS avec <a href="/fr/docs/Web/CSS/Disposition_flexbox_CSS/Liens_entre_flexbox_et_les_autres_dispositions">l'article sur les relations entre <em>flexbox</em> et les autres méthodes de disposition</a> où nous voyons comment s'inscrivent les boîtes flexibles dans le paysage de CSS.</p>
+<p>Dans un monde où la compatibilité entre navigateurs serait un lointain souvenir, on pourrait choisir d'utiliser les boîtes flexibles lorsqu'on souhaite organiser un ensemble d'élément dans une direction ou dans une autre. Lorsqu'on place les éléments, on souhaite contrôler les dimensions de ces éléments dans cette direction ou contrôler l'espacement ainsi créé entre les éléments. C'est ce pourquoi les boîtes flexibles ont été conçues. Vous pouvez approfondir les différences entre les boîtes flexibles et la disposition en grille CSS avec <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods">l'article sur les relations entre <em>flexbox</em> et les autres méthodes de disposition</a> où nous voyons comment s'inscrivent les boîtes flexibles dans le paysage de CSS.</p>
 
 <p>Dans la réalité, on utilise souvent les boîtes flexibles pour créer des organisations qu'il serait plus pertinent de construire avec une disposition en grille et pour lesquelles les boîtes flexibles sont une méthode de recours et offrent une certaine capacité d'alignement. Sur ce deuxième aspect, cela pourra évoluer lorsque l'alignement des boîtes sera implémenté dans la disposition en bloc. Dans ce guide, nous verrons quels sont les cas classiques où on utilise les boîtes flexibles aujourd'hui.</p>
 
@@ -27,7 +27,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Cas_utilisation_flexbox
 
 <h3 id="L'espace_distribué_en_dehors_des_éléments">L'espace distribué en dehors des éléments</h3>
 
-<p>Pour répartir l'espace entre les éléments ou autour d'eux, on pourra utiliser les propriétés d'alignement des boîtes flexibles et la propriété {{cssxref("justify-content")}}. Vous pouvez approfondir cette propriété avec le guide <a href="/fr/docs/Web/CSS/Disposition_flexbox_CSS/Aligner_des_éléments_dans_un_conteneur_flexible">Aligner des objets dans un conteneur flexible</a>, qui décrit comment aligner des objets sur l'axe principal.</p>
+<p>Pour répartir l'espace entre les éléments ou autour d'eux, on pourra utiliser les propriétés d'alignement des boîtes flexibles et la propriété {{cssxref("justify-content")}}. Vous pouvez approfondir cette propriété avec le guide <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container">Aligner des objets dans un conteneur flexible</a>, qui décrit comment aligner des objets sur l'axe principal.</p>
 
 <p>Dans l'exemple qui suit, on affiche les éléments en utilisant leur taille naturelle et on écrit <code>justify-content: space-between</code> afin de répartir l'espace équitablement entre chaque élément. Cette répartition de l'espace peut être modifiée en utilisant la valeur <code>space-around</code> ou, lorsqu'elle est prise en charge, la valeur <code>space-evenly</code>. On peut également utiliser <code>flex-start</code> afin de placer l'espace après les éléments ou encore <code>flex-end</code> pour placer l'espace avant les éléments voire <code>center</code> afin de centrer les éléments.</p>
 
@@ -35,7 +35,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Cas_utilisation_flexbox
 
 <h3 id="L'espace_distribué_au_sein_des_éléments">L'espace distribué au sein des éléments</h3>
 
-<p>On pourrait aussi répartir cet espace disponible afin d'agrandir les éléments plutôt que de les espacer. Dans ce cas, on utilisera les propriétés  {{cssxref("flex")}} afin de permettre aux éléments de grandir/rétrécir proportionnellement les uns aux autres, comme nous avons pu le détailler dans <a href="/fr/docs/Web/CSS/Disposition_flexbox_CSS/Contrôler_les_proportions_des_boîtes_flexibles_le_long_de_l_axe_principal">Contrôler les proportions des éléments flexibles le long de l'axe principal</a>.</p>
+<p>On pourrait aussi répartir cet espace disponible afin d'agrandir les éléments plutôt que de les espacer. Dans ce cas, on utilisera les propriétés  {{cssxref("flex")}} afin de permettre aux éléments de grandir/rétrécir proportionnellement les uns aux autres, comme nous avons pu le détailler dans <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">Contrôler les proportions des éléments flexibles le long de l'axe principal</a>.</p>
 
 <p>Si on souhaite que tous les éléments de la barre aient la même largeur, on utilisera <code>flex: auto</code> qui correspond à la notation raccourcie de <code>flex: 1 1 auto</code> — tous les objets grandissent et rétrécissent de la même façon à partir d'une taille de base automatique. Cela signifie que le plus grand élément occupera plus d'espace.</p>
 
@@ -47,7 +47,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Cas_utilisation_flexbox
 
 <p>Une autre façon d'aligner les éléments le long de l'axe principal consiste à utiliser des marges automatiques. Cela permet d'obtenir une barre où une partie des éléments sont alignés à gauche alors qu'un second groupe est aligné à droite.</p>
 
-<p>Dans l'exemple qui suit, on utilise la technique des marges automatiques détaillée dans <a href="/fr/docs/Web/CSS/Disposition_flexbox_CSS/Aligner_des_éléments_dans_un_conteneur_flexible#Utiliser_les_marges_automatiques_pour_aligner_sur_l'axe_principal">Utiliser les marges automatiques pour l'alignement sur l'axe principal</a>. Les éléments sont alignés le long de l'axe principal avec <code>flex-start</code>, ce qui correspond au comportement initial (par défaut) des boîtes flexibles, et on affecte une marge automatique à gauche pour les éléments qu'on souhaite aligner à droite. Dans le code de l'exemple, vous pouvez déplacer la classe pour l'appliquer sur un autre élément afin de voir comment la césure se déplace.</p>
+<p>Dans l'exemple qui suit, on utilise la technique des marges automatiques détaillée dans <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container#utiliser_les_marges_automatiques_pour_aligner_sur_l'axe_principal">Utiliser les marges automatiques pour l'alignement sur l'axe principal</a>. Les éléments sont alignés le long de l'axe principal avec <code>flex-start</code>, ce qui correspond au comportement initial (par défaut) des boîtes flexibles, et on affecte une marge automatique à gauche pour les éléments qu'on souhaite aligner à droite. Dans le code de l'exemple, vous pouvez déplacer la classe pour l'appliquer sur un autre élément afin de voir comment la césure se déplace.</p>
 
 <p>Dans cet exemple, on utilise également des marges sur les éléments flexibles afin de créer des gouttières entre les éléments ainsi qu'une marge négative sur le conteneur afin que les éléments aux extrémités soient bien alignés sur les bords gauche et droit. Tant que les propriétés <code>gap</code> de la spécification sur l'alignement des boîtes (<em>Box Alignment</em>) ne sont pas implémentées pour les boîtes flexibles, il nous faut utiliser les marges de cette façon si on souhaite créer une gouttière entre les éléments.</p>
 
@@ -67,7 +67,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Cas_utilisation_flexbox
 
 <p>Qu'on utilise les boîtes flexibles ou les grilles CSS afin d'organiser une liste de cartes, ces méthodes fonctionnent uniquement sur les éléments fils directs du conteneur flexible ou du conteneur de grille. Cela signifie que si on dispose d'une quantité de contenu variable, la carte s'étirera sur toute la hauteur de la grille ou sur toute la hauteur du conteneur flexible. Tout le contenu à l'intérieur utilise une disposition en bloc classique qui signifie que le pied de page d'une carte avec moins de contenu sera plus haut que celui d'une carte disposant de plus de contenu pour lequel le pied est bien aligné en bas de la carte.</p>
 
-<p><img alt="Deux composants &quot;carte&quot; montrant que l'élément contenant le texte ne s'étire pas." src="https://mdn.mozillademos.org/files/15669/flex-cards.png" style="height: 626px; width: 964px;"></p>
+<p><img alt="Deux composants &quot;carte&quot; montrant que l'élément contenant le texte ne s'étire pas." src="flex-cards.png"></p>
 
 <p>On peut résoudre ce problème avec les boîtes flexibles. Pour commencer, on transforme la carte en conteneur flexible avec {{cssxref("flex-direction")}}<code>: column</code>. Ensuite, on affecte un coefficient <code>flex: 1</code> à la zone du contenu (ce qui correspond à la notation raccourcie <code>flex: 1 1 0</code>) : l'élément pourra s'étirer ou se rétrécir avec une base <code>0</code>. Comme c'est le seul élément de la carte qui peut grandir, il occupera tout l'espace encore disponible dans le conteneur flexible et poussera le pied en bas de carte. Dans l'exemple qui suit, si on retire la propriété <code>flex</code>, on peut voir le pied remonter pour être inscrit directement après le contenu.</p>
 
@@ -103,7 +103,7 @@ original_slug: Web/CSS/CSS_Flexible_Box_Layout/Cas_utilisation_flexbox
   flex: 1;
 }</pre>
 
-<p>On pourrait aussi utiliser différents coefficients {{cssxref("flex-grow")}} pour chaque côté. Utiliser <code>flex: 1</code> pour le côté avec l'image et <code>flex: 3</code> pour le côté avec la description signifierait qu'ils partiraient tous les deux avec une base <code>flex-basis</code>  <code>0</code> et que l'espace serait distribué dans des proportions différentes correspondantes aux valeurs de <code>flex-grow</code>. Les propriétés flexibles que nous utilisons ici sont décrites en détail dans le guide <a href="/fr/docs/Web/CSS/Disposition_flexbox_CSS/Contrôler_les_proportions_des_boîtes_flexibles_le_long_de_l_axe_principal">Contrôler les proportions des éléments flexibles le long de l'axe principal</a>.</p>
+<p>On pourrait aussi utiliser différents coefficients {{cssxref("flex-grow")}} pour chaque côté. Utiliser <code>flex: 1</code> pour le côté avec l'image et <code>flex: 3</code> pour le côté avec la description signifierait qu'ils partiraient tous les deux avec une base <code>flex-basis</code>  <code>0</code> et que l'espace serait distribué dans des proportions différentes correspondantes aux valeurs de <code>flex-grow</code>. Les propriétés flexibles que nous utilisons ici sont décrites en détail dans le guide <a href="/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax">Contrôler les proportions des éléments flexibles le long de l'axe principal</a>.</p>
 
 <pre class="brush: css">.media .content {
   flex: 3;

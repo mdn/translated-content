@@ -83,13 +83,13 @@ translation_of: Web/HTTP/Headers
 
 <dl>
  <dt>{{HTTPHeader("Accept-CH")}} {{experimental_inline}}</dt>
- <dd>les serveurs peuvent informer de leur niveau de support pour les Client Hints en utilisant l'en-tête <code>Accept-CH</code> ou en HTML avec l'élément <code>&lt;meta&gt;</code> ayant l'attribut <code>http-equiv</code> (<a href="https://httpwg.org/http-extensions/client-hints.html#HTML5"><cite>[HTML5]</cite></a>).</dd>
+ <dd>les serveurs peuvent informer de leur niveau de support pour les Client Hints en utilisant l'en-tête <code>Accept-CH</code> ou en HTML avec l'élément <code>&lt;meta&gt;</code> ayant l'attribut <code>http-equiv</code> (<a href="https://httpwg.org/http-extensions/client-hints.html#HTML5">[HTML5]</a>).</dd>
  <dt>{{HTTPHeader("Accept-CH-Lifetime")}} {{experimental_inline}}</dt>
- <dd>les serveurs peuvent demander au client de mémoriser l'ensemble des Client Hints que le serveur supporte pour une période de temps donnée, afin de permettre la livraison de Client Hints sur les requêtes suivantes vers l'origine du serveur (<a href="https://httpwg.org/http-extensions/client-hints.html#RFC6454"><cite>[RFC6454]</cite></a>).</dd>
+ <dd>les serveurs peuvent demander au client de mémoriser l'ensemble des Client Hints que le serveur supporte pour une période de temps donnée, afin de permettre la livraison de Client Hints sur les requêtes suivantes vers l'origine du serveur (<a href="https://httpwg.org/http-extensions/client-hints.html#RFC6454">[RFC6454]</a>).</dd>
  <dt>{{HTTPHeader("Content-DPR")}} {{experimental_inline}}</dt>
  <dd>un nombre indiquant le rapport entre le nombre de pixels physiques et le nombre de pixels CSS de l'image réponse sélectionnée.</dd>
  <dt>{{HTTPHeader("DPR")}} {{experimental_inline}}</dt>
- <dd>un nombre indiquant le Device Pixel Ratio (DPR) actuel du client, qui est le rapport du nombre de pixels physiques sur le nombre de pixels CSS (Section 5.2 of <a href="https://httpwg.org/http-extensions/client-hints.html#CSSVAL"><cite>[CSSVAL]</cite></a>) de la zone d'affichage (Section 9.1.1 of <a href="https://httpwg.org/http-extensions/client-hints.html#CSS2"><cite>[CSS2]</cite></a>) sur l'appareil.</dd>
+ <dd>un nombre indiquant le Device Pixel Ratio (DPR) actuel du client, qui est le rapport du nombre de pixels physiques sur le nombre de pixels CSS (Section 5.2 of <a href="https://httpwg.org/http-extensions/client-hints.html#CSSVAL">[CSSVAL]</a>) de la zone d'affichage (Section 9.1.1 of <a href="https://httpwg.org/http-extensions/client-hints.html#CSS2">[CSS2]</a>) sur l'appareil.</dd>
  <dt>{{HTTPHeader("Device-Memory")}} {{experimental_inline}}</dt>
  <dd>faisant techniquement partie de l'API Device Memory, cet en-tête représente la quantité approximative de mémoire vive dont le client dispose.</dd>
  <dt>{{HTTPHeader("Early-Data")}} {{experimental_inline}}</dt>
@@ -97,11 +97,9 @@ translation_of: Web/HTTP/Headers
  <dt>{{HTTPHeader("Save-Data")}} {{experimental_inline}}</dt>
  <dd>booléen indiquant les préférences de l'agent utilisateur pour réduire la quantité de données transmises.</dd>
  <dt>{{HTTPHeader("Viewport-Width")}} {{experimental_inline}}</dt>
- <dd>la largeur de la zone d'affichage, soit le nombre de pixels CSS. La valeur fournise est arrondie au plus grand proche supérieur.</dd>
- <dd>Si <code>Viewport-Width</code> apparait dans un message plus d'une fois, la dernière valeur écrase toutes les valeurs précédentes.</dd>
+ <dd>la largeur de la zone d'affichage, soit le nombre de pixels CSS. La valeur fournise est arrondie au plus grand proche supérieur. Si <code>Viewport-Width</code> apparait dans un message plus d'une fois, la dernière valeur écrase toutes les valeurs précédentes.</dd>
  <dt>{{HTTPHeader("Width")}} {{experimental_inline}}</dt>
- <dd>l'en-tête de requête <code>Width</code> représente la largeur de la ressource voulue en nombre de pixels physiques. La valeur fournise est arrondie au plus proche entier supérieur.</dd>
- <dd>Si la largeur de la ressource voulue est inconnue quand la requête ou la ressource n'a pas de largeur d'affichage, l'en-tête <code>Width</code> peut être omise. Si <code>Width</code> apparait dans un message plus d'une fois, la dernière valeur écrase toutes les valeurs précédentes.</dd>
+ <dd>l'en-tête de requête <code>Width</code> représente la largeur de la ressource voulue en nombre de pixels physiques. La valeur fournise est arrondie au plus proche entier supérieur. Si la largeur de la ressource voulue est inconnue quand la requête ou la ressource n'a pas de largeur d'affichage, l'en-tête <code>Width</code> peut être omise. Si <code>Width</code> apparait dans un message plus d'une fois, la dernière valeur écrase toutes les valeurs précédentes.</dd>
 </dl>
 
 <h2 id="Conditionnels">Conditionnels</h2>

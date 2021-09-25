@@ -11,7 +11,7 @@ translation_of: 'Web/CSS/::before'
 
 <p><strong><code>::before</code></strong> crée un <a href="/fr/docs/Web/CSS/Pseudo-éléments">pseudo-élément</a> qui sera le premier enfant de l'élément ciblé. Généralement utilisé pour ajouter du contenu esthétique à un élément via la propriété CSS {{cssxref("content")}}. Par défaut, l'élément créé est de type en-ligne (<em>inline</em>).</p>
 
-<pre class="brush:css no-line-numbers notranslate">/* On ajoute un coeur avant les liens */
+<pre class="brush:css no-line-numbers">/* On ajoute un coeur avant les liens */
 a::before {
   content: "♥";
 }
@@ -35,11 +35,11 @@ a::before {
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;q&gt;Quelques guillemets&lt;/q&gt;, dit-il, &lt;q&gt;sont mieux que pas du tout&lt;/q&gt;</pre>
+<pre class="brush: html">&lt;q&gt;Quelques guillemets&lt;/q&gt;, dit-il, &lt;q&gt;sont mieux que pas du tout&lt;/q&gt;</pre>
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">q::before {
+<pre class="brush: css">q::before {
   content: "«";
   color: blue;
 }
@@ -58,11 +58,11 @@ q::after {
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;span class="ribbon"&gt;Observez où est placée la boite orange.&lt;/span&gt;</pre>
+<pre class="brush: html">&lt;span class="ribbon"&gt;Observez où est placée la boite orange.&lt;/span&gt;</pre>
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">.ribbon {
+<pre class="brush: css">.ribbon {
   background-color: #5BC8F7;
 }
 
@@ -83,7 +83,7 @@ q::after {
 
 <h4 id="HTML_3">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;ul&gt;
+<pre class="brush: html">&lt;ul&gt;
   &lt;li&gt;Acheter du lait&lt;/li&gt;
   &lt;li&gt;Promener le chien&lt;/li&gt;
   &lt;li&gt;Faire de l'exercice&lt;/li&gt;
@@ -95,7 +95,7 @@ q::after {
 
 <h4 id="CSS_3">CSS</h4>
 
-<pre class="brush: css notranslate">li {
+<pre class="brush: css">li {
   list-style-type: none;
   position: relative;
   margin: 1px;
@@ -124,7 +124,7 @@ li.done::before {
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js notranslate">var list = document.querySelector('ul');
+<pre class="brush: js">var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
   if( ev.target.tagName === 'LI') {
      ev.target.classList.toggle('done');

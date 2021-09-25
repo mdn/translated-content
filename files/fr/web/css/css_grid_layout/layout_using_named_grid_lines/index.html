@@ -19,9 +19,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_gril
 
 <p>Lorsqu'on définit une grille avec <code>grid-template-rows</code> et <code>grid-template-columns</code>, on peut donner des noms aux lignes (toutes ou seulement quelques unes). Pour illustrer ce point, nous allons reprendre la disposition utilisée dans l'article sur le placement sur les lignes. Cette fois, nous allons utiliser des lignes avec des noms.</p>
 
-<div id="example_named_lines">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -37,7 +35,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_gril
   color: #d9480f;
 }
 </pre>
-</div>
 
 <p>Lorsqu'on définit la grille, on nomme les lignes entre crochets. Ces noms peuvent être n'importe quelle valeur. Ici, on définit un nom pour le début et la fin du conteneur, pour les lignes et pour les colonnes. On définit les blocs du centres (ici <code>content-start</code> et <code>content-end</code>), à la fois pour les lignes et pour les colonnes. Il n'est pas nécessaire de nommer toutes les lignes de la grille, on peut très bien uniquement nommer celles qui sont importantes.</p>
 
@@ -79,8 +76,8 @@ original_slug: Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_gril
 &lt;/div&gt;
 </pre>
 
-<p>{{EmbedLiveSample('example_named_lines', '500', '330')}}</p>
-</div>
+<p>{{EmbedLiveSample("Nommer_des_lignes_lorsqu'on_définit_une_grille", '500', '330')}}</p>
+
 
 <p>Tout le reste continue de fonctionner de la même façon. Vous pouvez aussi utiliser des noms et des numéros. Le nommage des lignes est utile lorsqu'on souhaite créer une disposition <em>responsive</em> où on redéfinit la grille plutôt que d'avoir à redéfinir la position du contenu en changeant les numéros de lignes dans les <em>media queries</em>.</p>
 
@@ -94,9 +91,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_gril
 
 <p>Bien qu'on puisse choisir n'importe quel nom (avec les contraintes qu'on vient d'énoncer), si on utilise les suffixes <code>-start</code> et <code>-end</code> pour désigner les lignes qui entourent une zone (comme dans l'exemple ci-avant), la grille créera automatiquement une zone nommée avec le nom utilisé devant ces suffixes. Si on reprend l'exemple précédent où on utilise <code>content-start</code> et <code>content-end</code> pour les lignes et pour les colonnes, cela signifie qu'on a, implicitement, une zone de grille intitulée <code>content</code> qu'on peut également manipuler</p>
 
-<div id="implicit_areas_from_lines">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -112,7 +107,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_gril
   color: #d9480f;
 }
 </pre>
-</div>
 
 <p>On utilise les mêmes définitions qu'avant mais cette fois, nous allons placer un objet dans la zone intitulée <code>content</code>.</p>
 
@@ -133,8 +127,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_gril
 &lt;/div&gt;
 </pre>
 
-<p>{{EmbedLiveSample('implicit_areas_from_lines', '500', '330')}}</p>
-</div>
+<p>{{EmbedLiveSample("Définir_des_zones_de_grilles_implicites_à_l'aide_de_lignes_nommées", '500', '330')}}</p>
 
 <p>Il n'est pas nécessaire de définir l'emplacement de cette zone avec <code>grid-template-areas</code> car les lignes suffisent à créer la zone et à la placer.</p>
 
@@ -166,13 +159,11 @@ original_slug: Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_gril
 
 <p>Dans l'image qui suit, on peut voir l'emplacement de ces lignes. Certaines lignes peuvent avoir deux noms (par exemple, <code>sd-end</code> et <code>main-start</code> font référence à la même ligne verticale).</p>
 
-<p><img alt="An image showing the implicit line names created by our grid areas." src="https://mdn.mozillademos.org/files/14699/5_multiple_lines_from_areas.png" style="height: 396px; width: 1140px;"></p>
+<p><img alt="An image showing the implicit line names created by our grid areas." src="5_multiple_lines_from_areas.png"></p>
 
 <p>On peut positionner <code>overlay</code> grâce à ces lignes implicites, de la même façon qu'on aurait positionner un objet avec des lignes créées explicitement :</p>
 
-<div id="implicit_lines_from_area">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -188,7 +179,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_gril
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -231,8 +221,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_gril
 &lt;/div&gt;
 </pre>
 
-<p>{{EmbedLiveSample('implicit_lines_from_area', '500', '330')}}</p>
-</div>
+<p>{{EmbedLiveSample("Définir_des_lignes_implicites_à_l'aide_de_zones_nommées", '500', '330')}}</p>
 
 <p>Grâce à tout ça, on voit qu'on peut créer des lignes à partir de zones nommées et créer des zones à partir de lignes nommées. Aussi, mieux vaut prendre le temps de réfléchir aux noms utilisés lorsqu'on définit un grille. En effet, plus les noms utilisés seront clairs, plus la maintenance et le travail d'équipe seront simplifiés.</p>
 
@@ -240,11 +229,11 @@ original_slug: Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_gril
 
 <p>Si vous souhaitez que chaque ligne ait un nom différent, il faudra alors définir la piste de façon détaillée et non utiliser la syntaxe avec <code>repeat()</code> car il faut préciser le nom de la ligne entre crochets lorsqu'on définit les pistes. Si vous utilisez la syntaxe avec <code>repeat()</code>, vous obtiendrez plusieurs lignes avec le même nom… ce qui peut également être utile.</p>
 
+<h3 id="une_grille_à_12_colonnes_avec_repeat">Une grille à 12 colonnes avec repeat()</h3>
+
 <p>Dans l'exemple qui suit, nous allons créer une grille avec douze colonnes de même largeur. Avant de définir la taille d'une piste pour la colonne (<code>1fr</code>), on définit un nom : <code>[col-start]</code>. Cela signifie qu'on aura une grille avec 12 colonnes, toutes intitulées <code>col-start</code> et qui mesureront chacune <code>1fr</code> de large.</p>
 
-<div id="multiple_lines_same_name">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -260,7 +249,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_gril
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -286,12 +274,13 @@ original_slug: Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_gril
   &lt;div class="item2"&gt;Je vais de col-start 7 et je m'étends sur 3 lignes&lt;/div&gt;
 &lt;/div&gt;</pre>
 
-<p>{{EmbedLiveSample('multiple_lines_same_name', '500', '330')}}</p>
-</div>
+<p>{{EmbedLiveSample("une_grille_à_12_colonnes_avec_repeat", '500', '330')}}</p>
 
 <p>Si vous observez cette disposition grâce à l'outil de mise en évidence des grilles dans Firefox, vous verrez les différentes lignes et le placement des éléments sur ces lignes :</p>
 
-<p><img alt="The 12 column grid with items placed. The Grid Highlighter shows the position of the lines." src="https://mdn.mozillademos.org/files/14695/5_named_lines1.png" style="height: 156px; width: 1958px;"></p>
+<p><img alt="The 12 column grid with items placed. The Grid Highlighter shows the position of the lines." src="5_named_lines1.png"></p>
+
+<h3 id="Définir_des_lignes_nommées_avec_une_liste_de_piste">Définir des lignes nommées avec une liste de piste</h3>
 
 <p>La syntaxe <code>repeat()</code> permet également d'utiliser une liste de plusieurs pistes et pas uniquement une seule piste. Dans la règle qui suit, on crée une grille composée de huit pistes qui commence par une colonne plus étroite (<code>1fr</code>), intitulée <code>col1-start</code>, et qui est suivie par une colonne plus large (<code>3fr</code>), intitulée <code>col2-start</code>.</p>
 
@@ -316,9 +305,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_gril
 
 <p>Si vous utilisez une liste de pistes, vous pouvez utiliser le mot-clé <code>span</code> pour indiquer le nombre de lignes à occuper mais aussi pour indiquer le nombre de lignes à occuper qui ont un nom donné.</p>
 
-<div id="span_line_number">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -334,7 +321,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_gril
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -355,14 +341,14 @@ original_slug: Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_gril
 &lt;/div&gt;
 </pre>
 
-<p>{{EmbedLiveSample('span_line_number', '500', '330')}}</p>
-</div>
+<p>{{EmbedLiveSample('Définir_des_lignes_nommées_avec_une_liste_de_piste', '500', '330')}}</p>
+
+<h3 id="cadre_d_une_grille_à_12_colonnes">Cadre d'une grille à 12 colonnes</h3>
 
 <p>Avec ces trois derniers articles, nous avons vu de nombreuses façons qui permettaient de placer des objets sur une grille. Cela peut sembler un peu trop inutilement compliqué mais il faut garder à l'esprit que toutes ne sont pas obligatoirement nécessaires. Dans la pratique, utiliser des zones nommés pour des dispositions simples permet d'avoir une représentation visuelle simple et de déplacer les différents objets facilement sur la grille.</p>
 
 <p>Si on travaille avec une disposition sur plusieurs colonnes (comme celles utilisées dans ces derniers exemples), les lignes nommées feront parfaitement l'affaire. Si vous prenez par exemple des <em>frameworks</em> tels que Foundation ou Bootstrap, ceux-ci fonctionnent sur une grille avec 12 colonnes. Le <em>framework</em> importe ensuite le code nécessaire aux différents calculs afin de s'assurer que l'ensemble des colonnes fasse 100%. En utilisant une grille CSS, le seule code nécessaire pour obtenir un tel <em>framework</em> se résume à :</p>
 
-<div class="three_column">
 <pre class="brush: css">.wrapper {
   display: grid;
   grid-gap: 10px;
@@ -372,8 +358,7 @@ original_slug: Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_gril
 
 <p>On peut alors utiliser ce modèle pour mettre en forme notre page. Par exemple, on peut créer une disposition avec trois colonnes, un en-tête et un pied de page avec les règles suivantes :</p>
 
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -389,7 +374,6 @@ original_slug: Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_gril
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;header class="main-header"&gt;Je suis l'en-tête&lt;/header&gt;
@@ -420,12 +404,12 @@ original_slug: Web/CSS/CSS_Grid_Layout/Utiliser_des_lignes_nommées_sur_une_gril
 }
 </pre>
 
-<p>{{EmbedLiveSample('three_column', '500', '330')}}</p>
+<p>{{ EmbedLiveSample('cadre_d_une_grille_à_12_colonnes', '500', '330') }}</p>
 
 <p>Là encore, l'outil de mise en évidence de la grille permet de voir comment le placement fonctionne :</p>
 
-<p><img alt="The layout with the grid highlighted." src="https://mdn.mozillademos.org/files/14697/5_named_lines2.png" style="height: 378px; width: 1958px;"></p>
-</div>
+<p><img alt="The layout with the grid highlighted." src="5_named_lines2.png"></p>
+
 
 <p>Et voilà tout ce dont on a besoin. Aucun calcul compliqué, la grille a automatiquement retiré la gouttière de 10 pixels avant d'affecter l'espace aux pistes qui mesurent <code>1fr</code>. Lorsque vous construirez vos propres disposition, vous serez plus à l'aise avec la syntaxe et utiliserez les techniques qui sont les plus pertinentes pour vos projets. Essayez de construire cetaines dispositions classiques avec des différentes méthodes, vous deviendrez plus efficaces pour manipuler les grilles CSS. Dans le prochain guide, nous verrons comment la grille peut placer des objets automatiquement, sans même avoir besoin d'utiliser les propriétés de placement !</p>
 

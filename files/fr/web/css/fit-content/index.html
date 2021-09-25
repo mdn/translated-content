@@ -23,7 +23,7 @@ fit-content(100ch)
 fit-content(40%)
 </pre>
 
-<p>Cette fonction peut être utilisée pour définir la taille d'une piste via les propriétés relatives aux grilles CSS où la taille maximale est définie par <code><a href="/fr/docs/Web/CSS/grid-template-columns#max-content">max-content</a></code> et où la taille minimale est définie par <code><a href="/fr/docs/Web/CSS/grid-template-columns#auto">auto</a></code> et qui est calculée de façon similaire à <code>auto</code> (i.e. <code><a href="/fr/docs/Web/CSS/minmax">minmax(auto, max-content)</a></code>), sauf que la taille de la piste est ramenée à <var>argument</var> si celui-ci est supérieur à <code>auto</code>.</p>
+<p>Cette fonction peut être utilisée pour définir la taille d'une piste via les propriétés relatives aux grilles CSS où la taille maximale est définie par <code><a href="/fr/docs/Web/CSS/grid-template-columns#max-content">max-content</a></code> et où la taille minimale est définie par <code><a href="/fr/docs/Web/CSS/grid-template-columns#auto">auto</a></code> et qui est calculée de façon similaire à <code>auto</code> (i.e. <code><a href="/fr/docs/Web/CSS/minmax()">minmax(auto, max-content)</a></code>), sauf que la taille de la piste est ramenée à <var>argument</var> si celui-ci est supérieur à <code>auto</code>.</p>
 
 <p>Elle peut également être utilisée pour définir la taille d'une boîte avec {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}} et {{cssxref("max-height")}} où la taille maximale fait référence à la taille maximale du contenu et où la taille minimale fait référence à la taille minimale du contenu.</p>
 
@@ -35,8 +35,7 @@ fit-content(40%)
  <dt><code>&lt;length&gt;</code></dt>
  <dd>Une longueur (valeur de type {{cssxref("&lt;length&gt;")}}) exprimée de façon absolue.</dd>
  <dt><code>&lt;percentage&gt;</code></dt>
- <dd>Un pourcentage (valeur de type {{cssxref("&lt;percentage&gt;")}}) relatif à l'espace disponible sur l'axe indiqué (la hauteur ou la largeur).</dd>
- <dd>Pour les propriétés qui concernent les grilles, le pourcentage est relative à la dimension en ligne du conteneur de la grille pour les pistes qui sont disposées en colonnes et à la dimension en block pour les pistes qui sont disposées en lignes. Sinon, le pourcentage est relatif à la dimension en ligne ou en bloc selon le mode d'écriture utilisé.</dd>
+ <dd>Un pourcentage (valeur de type {{cssxref("&lt;percentage&gt;")}}) relatif à l'espace disponible sur l'axe indiqué (la hauteur ou la largeur). Pour les propriétés qui concernent les grilles, le pourcentage est relative à la dimension en ligne du conteneur de la grille pour les pistes qui sont disposées en colonnes et à la dimension en block pour les pistes qui sont disposées en lignes. Sinon, le pourcentage est relatif à la dimension en ligne ou en bloc selon le mode d'écriture utilisé.</dd>
 </dl>
 
 <h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
@@ -47,7 +46,7 @@ fit-content(40%)
 
 <h3 id="CSS">CSS</h3>
 
-<pre class="brush: css; highlight[3]">#container {
+<pre class="brush: css">#container {
   display: grid;
   grid-template-columns: fit-content(300px) fit-content(300px) 1fr;
   grid-gap: 5px;

@@ -9,11 +9,9 @@ translation_of: Web/CSS/text-transform
 ---
 <div>{{CSSRef}}</div>
 
-<p>La propriété <strong><code>text-transform</code></strong> définit la façon d'utiliser les lettres capitales pour le texte d'un élément. Cela permet que le texte soit écrit uniquement en majuscules, minuscules ou que chaque mot commence par une capitale. Cela permet également d'améliorer la lisibilité pour les textes avec des annotations <a href="/fr/docs/HTML/Element/ruby">Ruby</a>.</p>
+<p>La propriété <strong><code>text-transform</code></strong> définit la façon d'utiliser les lettres capitales pour le texte d'un élément. Cela permet que le texte soit écrit uniquement en majuscules, minuscules ou que chaque mot commence par une capitale. Cela permet également d'améliorer la lisibilité pour les textes avec des annotations <a href="/fr/docs/Web/HTML/Element/ruby">Ruby</a>.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/text-transform.html")}}</div>
-
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
 
 <p>La propriété <code>text-transform</code> gère les différences liées aux langues, par exemple :</p>
 
@@ -33,7 +31,7 @@ translation_of: Web/CSS/text-transform
  <li>En gaëlique (ga), une lettre qui préfixe un mot doit rester en minuscule lorsqu'on capitalise toutes les lettres. Ainsi, en appliquant <code>text-transform: uppercase</code> à <code>ar aon tslí</code>, on obtiendra <code>AR AON tSLÍ</code> et non <code>AR AON TSLÍ</code>. Dans certains cas, un trait d'union peut être retiré lors du passage en majuscules : <code>an t-uisce</code> deviendra <code>AN tUISCE </code>(le trait-d'union sera bien réinséré avec <code>text-transform: lowercase</code>)</li>
 </ul>
 
-<p>La langue d'un document HTML est définie par l'attribut XML <code>xml:lang</code>, qui a la priorité sur l'attribut global <code><a href="/fr/docs/Web/HTML/Attributs_globaux/lang">lang</a></code>.</p>
+<p>La langue d'un document HTML est définie par l'attribut XML <code>xml:lang</code>, qui a la priorité sur l'attribut global <code><a href="/fr/docs/Web/HTML/Global_attributes/lang">lang</a></code>.</p>
 
 <p>Le support de ces différents cas peut varier d'un navigateur à un autre. Pour plus de détails, <a href="#compat">voir le tableau de compatibilité des navigateurs</a>.</p>
 
@@ -60,7 +58,7 @@ text-transform: unset;
  <dd>
  <p>En utilisant ce mot-clé, la première lettre de chaque mot sera affichée en capitale. Les autres caractères ne seront pas modifiés et conserveront ainsi la forme originale, contenue dans le texte de l'élément. Ici, une lettre peut être n'importe quel caractère Unicode qui fait partie des catégories génériques Lettre. Cela exclue donc les symboles de ponctuations qui peuvent être utilisés en début de mot.</p>
 
- <p class="note">Le mot-clé capitalize n'était pas complètement spécifié avec CSS 1 et CSS 2.1. Il y avait certaines différences entre les navigateurs : Firefox considèrait que - et _ étaient des lettres ; Webkit et Gecko considéraient que les symboles lettrés comme ⓐ étaient de vraies lettres ; Internet Explorer 9 était le plus proche de la définition donnée par CSS2 mais il y avait certains cas étranges. Grâce à CSS Text Level 3, ces ambiguités sont levées. Dans le tableau, la ligne capitalize traduit le support de cette spécification.</p>
+ <div class="note"><p><strong>Note :</strong> Le mot-clé capitalize n'était pas complètement spécifié avec CSS 1 et CSS 2.1. Il y avait certaines différences entre les navigateurs : Firefox considèrait que - et _ étaient des lettres ; Webkit et Gecko considéraient que les symboles lettrés comme ⓐ étaient de vraies lettres ; Internet Explorer 9 était le plus proche de la définition donnée par CSS2 mais il y avait certains cas étranges. Grâce à CSS Text Level 3, ces ambiguités sont levées. Dans le tableau, la ligne capitalize traduit le support de cette spécification.</p></div>
  </dd>
  <dt><code>uppercase</code></dt>
  <dd>En utilisant ce mot-clé, tous les caractères seront écrits en capitales.</dd>
@@ -143,7 +141,7 @@ p.full-size-kana {
 <p>De grandes portions de texte utilisant <code>text-transform</code> avec la valeur <code>uppercase</code> peuvent être difficilement lisibles par les personnes dyslexiques ou souffrant de problèmes cognitifs.</p>
 
 <ul>
- <li><a href="/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">Comprendre les règles WCAG 1.4</a></li>
+ <li><a href="/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background">Comprendre les règles WCAG 1.4</a></li>
  <li><a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html" rel="noopener"><em>Understanding Success Criterion 1.4.8 | W3C Understanding WCAG 2.0</em> (en anglais)</a></li>
 </ul>
 
@@ -178,7 +176,7 @@ p.full-size-kana {
 
 <p>{{cssinfo}}</p>
 
-<h2 id="Compatibilité_des_navigateurs"><a id="compat" name="compat">Compatibilité des navigateurs</a></h2>
+<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 
 <p>{{Compat("css.properties.text-transform")}}</p>
 

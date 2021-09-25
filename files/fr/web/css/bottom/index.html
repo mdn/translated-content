@@ -11,9 +11,7 @@ translation_of: Web/CSS/bottom
 
 <p>La propriété <strong><code>bottom</code></strong> contribue à la définition de l'emplacement vertical des <a href="/fr/docs/Web/CSS/position">éléments positionnés</a>. Elle n'a aucun effet pour les éléments non-positionnés.</p>
 
-<div>{{EmbedInteractiveExample("pages/css/bottom.html")}}</div>
-
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
+<div>{{EmbedInteractiveExample("pages/css/bottom.html")}}</div
 
 <p>Pour les <strong>éléments positionnés de façon absolue</strong>, c'est-à-dire ceux dont la valeur de la propriété {{cssxref("position")}} vaut <code>absolute</code> ou <code>fixed</code>, la propriété <code>bottom</code> définit la distance entre le bord bas de la marge de l'élément et le bord bas du bloc qui contient l'élément.</p>
 
@@ -50,17 +48,17 @@ bottom: unset;
  <dt><code>&lt;length&gt;</code></dt>
  <dd>Une longueur (type {{cssxref("&lt;length&gt;")}} qui représente :
  <ul>
-  <li>La distance depuis le bord bas du bloc englobant pour <strong>les éléments positionnés de façon absolue</strong></li>
-  <li>Le décalage avec lequel l'élément est déplacé au-dessus de sa position normale dans le flux pour pour <strong>les éléments positionnés de façon relative </strong>.</li>
+  <li>La distance depuis le bord bas du bloc englobant pour les éléments positionnés de façon absolue</li>
+  <li>Le décalage avec lequel l'élément est déplacé au-dessus de sa position normale dans le flux pour pour les éléments positionnés de façon relative.</li>
  </ul>
  </dd>
  <dt><code>&lt;percentage&gt;</code></dt>
  <dd>Une valeur de pourcentage (type {{cssxref("&lt;percentage&gt;")}} exprimée par rapport à la hauteur du bloc englobant.</dd>
  <dt><code>auto</code></dt>
- <dd>
+ <dd> Indique pour :
  <ul>
-  <li>Pour <strong>les éléments positionnés de façon absolue :</strong> la position de l'élément se base sur la propriété {{cssxref("top")}} et <code>height: auto</code> est traitée comme une hauteur basée sur la taille du contenu</li>
-  <li>Pour <strong>les éléments positionnés de façon relative :</strong> le décalage avec lequel l'élément est déplacé est construit à partir de la propriété {{cssxref("top")}} et si celle-ci vaut également <code>auto</code>, l'élément n'est pas déplacé verticalement.</li>
+  <li>Les éléments positionnés de façon absolue : la position de l'élément se base sur la propriété {{cssxref("top")}} et <code>height: auto</code> est traitée comme une hauteur basée sur la taille du contenu</li>
+  <li>Les éléments positionnés de façon relative : le décalage avec lequel l'élément est déplacé est construit à partir de la propriété {{cssxref("top")}} et si celle-ci vaut également <code>auto</code>, l'élément n'est pas déplacé verticalement.</li>
  </ul>
  </dd>
  <dt><code>inherit</code></dt>
