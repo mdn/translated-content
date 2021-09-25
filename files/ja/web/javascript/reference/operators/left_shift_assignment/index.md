@@ -2,29 +2,29 @@
 title: 左シフト代入 (<<=)
 slug: Web/JavaScript/Reference/Operators/Left_shift_assignment
 tags:
-  - Assignment operator
+  - 代入演算子
   - JavaScript
-  - Language feature
-  - Operator
+  - 言語機能
+  - 演算子
   - Reference
 translation_of: Web/JavaScript/Reference/Operators/Left_shift_assignment
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>左シフト代入演算子 (<code>&lt;&lt;=</code>) は、指定された量のビットを左に移動し、結果を変数に代入します。</p>
+左シフト代入演算子 (`&lt;&lt;=`) は、指定された量のビットを左に移動し、結果を変数に代入します。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-left-shift-assignment.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-left-shift-assignment.html")}}
 
 <div></div>
 
 
 
-<h2 id="構文">構文</h2>
+## 構文
 
 <pre class="syntaxbox notranslate"><strong>Operator:</strong> x &lt;&lt;= y
 <strong>Meaning:</strong>  x   = x &lt;&lt; y</pre>
 
-<h2 id="例">例</h2>
+## 例
 
 <h3 id="左シフト代入の使用">左シフト代入の使用</h3>
 
@@ -51,7 +51,7 @@ bar &lt;&lt;= 2; // 20
 
 
 
-<p>{{Compat("javascript.operators.left_shift_assignment")}}</p>
+{{Compat("javascript.operators.left_shift_assignment")}}
 
 <h2 id="関連項目">関連項目</h2>
 

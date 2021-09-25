@@ -2,29 +2,29 @@
 title: 右シフト代入 (>>=)
 slug: Web/JavaScript/Reference/Operators/Right_shift_assignment
 tags:
-  - Assignment operator
+  - 代入演算子
   - JavaScript
-  - Language feature
-  - Operator
+  - 言語機能
+  - 演算子
   - Reference
 translation_of: Web/JavaScript/Reference/Operators/Right_shift_assignment
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>右シフト代入演算子 (<code>&gt;&gt;=</code>) は、指定された量のビットを右に移動し、結果を変数に代入します。</p>
+右シフト代入演算子 (`&gt;&gt;=`) は、指定された量のビットを右に移動し、結果を変数に代入します。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-right-shift-assignment.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-right-shift-assignment.html")}}
 
 <div></div>
 
 
 
-<h2 id="構文">構文</h2>
+## 構文
 
 <pre class="syntaxbox notranslate"><strong>Operator:</strong> x &gt;&gt;= y
 <strong>Meaning:</strong>  x   = x &gt;&gt; y</pre>
 
-<h2 id="例">例</h2>
+## 例
 
 <h3 id="右シフト代入の使用">右シフト代入の使用</h3>
 
@@ -51,7 +51,7 @@ b &gt;&gt;= 2;  // -2 (-00000000000000000000000000000010)</pre>
 
 
 
-<p>{{Compat("javascript.operators.right_shift_assignment")}}</p>
+{{Compat("javascript.operators.right_shift_assignment")}}
 
 <h2 id="関連項目">関連項目</h2>
 
