@@ -103,7 +103,7 @@ const parsedUrl = new URL(window.location.href);
 console.log(parsedUrl.searchParams.get("id")); // "123"
 ```
 
-Метод {{domxref("URL.toString", "toString()")}} лишь возвращает значение свойства {{domxref("URL.href", "href")}}. Благодаря этому, конструктор `URL` можно использовать непосредственно для нормализации и кодирования URL-адреса.
+Метод {{domxref("URL.toString", "toString()")}} лишь возвращает значение свойства {{domxref("URL.href", "href")}}. Благодаря этому, конструктор `URL` можно использовать для нормализации и кодирования URL-адреса.
 
 ```js
 const response = await fetch(new URL('http://www.example.com/démonstration.html'));
