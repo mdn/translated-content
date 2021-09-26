@@ -26,7 +26,7 @@ translation_of: Web/API/URL
 ## Конструктор
 
 - {{domxref("URL.URL", "new URL()")}}
-  - : Создает и возвращает объект URL из указанного абсолютного адреса или пути и базового адреса.
+  - : Создаёт и возвращает объект URL из указанного абсолютного адреса или пути и базового адреса.
 
 ## Свойства
 
@@ -65,7 +65,7 @@ translation_of: Web/API/URL
 ## Статические методы
 
 - {{domxref("URL.createObjectURL", "createObjectURL()")}}
-  - : Возвращает строку типа {{domxref("DOMString")}}, содержащую уникальный URL-адрес `Blob` объекта. Этот адрес предоставляет из себя строку с `blob:` в качестве схемы, за которой идет строка однозначно идентифицирующая `Blob` объект в браузере.
+  - : Возвращает строку типа {{domxref("DOMString")}}, содержащую уникальный URL-адрес `Blob` объекта. Этот адрес предоставляет из себя строку с `blob:` в качестве схемы, за которой идёт строка однозначно идентифицирующая `Blob` объект в браузере.
 - {{domxref("URL.revokeObjectURL", "revokeObjectURL()")}}
   - : Отменяет URL созданный при помощи {{domxref("URL.createObjectURL()")}}.
 
@@ -93,9 +93,9 @@ url.pathname = 'démonstration.html';
 console.log(url.href); // "http://www.example.com/d%C3%A9monstration.html"
 ```
 
-Для работы с параметрами запроса можно использовать интерфейс {{domxref("URLSearchParams")}}.
+Интерфейс {{domxref("URLSearchParams")}} можно использовать для работы с параметрами запроса.
 
-Чтобы получить параметры запроса текущего URL-адреса можно сделать следующее:
+Например, следующим образом можно получить параметры запроса URL-адреса текущей веб-страницы:
 
 ```js
 // https://some.site/?id=123
@@ -103,7 +103,7 @@ const parsedUrl = new URL(window.location.href);
 console.log(parsedUrl.searchParams.get("id")); // "123"
 ```
 
-Метод {{domxref("URL.toString", "toString()")}} всего лишь возвращает значение свойства {{domxref("URL.href", "href")}}, и как результат, конструктор `URL` можно использовать непосредственно для нормализации и кодирования URL-адреса.
+Метод {{domxref("URL.toString", "toString()")}} лишь возвращает значение свойства {{domxref("URL.href", "href")}}. Благодаря этому, конструктор `URL` можно использовать непосредственно для нормализации и кодирования URL-адреса.
 
 ```js
 const response = await fetch(new URL('http://www.example.com/démonstration.html'));
