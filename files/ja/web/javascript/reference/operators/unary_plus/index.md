@@ -3,78 +3,68 @@ title: 単項プラス (+)
 slug: Web/JavaScript/Reference/Operators/Unary_plus
 tags:
   - JavaScript
-  - Language feature
-  - Operator
+  - 言語機能
+  - 演算子
   - Reference
+browser-compat: javascript.operators.unary_plus
 translation_of: Web/JavaScript/Reference/Operators/Unary_plus
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>単項プラス演算子 (<code>+</code>) は、オペランドの前に置かれ、そのオペランドを評価し、それが数値以外の場合は数値に変換します。</p>
+<p>単項プラス演算子 (`+`) は、オペランドの前に置かれ、そのオペランドを評価し、それが数値以外の場合は数値に変換します。</p>
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-unary-plus.html", "taller")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-unary-plus.html", "taller")}}
 
+## 構文
 
+```js
++x
+```
 
-<h2 id="例">例</h2>
+## 解説
 
-<pre class="syntaxbox notranslate"><strong>Operator:</strong> +<var>x</var>
-</pre>
+単項マイナス (`-`) も非数値を数値に変換できますが、単項プラスは数値に対して他の演算を行わないため、非数値を数値に変換する最も高速で好ましい方法です。これは、整数や浮動小数点の文字列表現や、非文字列値である `true`、`false`、`null` を変換することができます。10 進数と 16 進数 (接頭辞 0x) の両形式の整数と負の数 (ただし 16 進数を除く) に対応しています。BigInt 値に対してこの演算子を使用すると TypeError が発生します。特定の値を解析できない場合は、{{jsxref("NaN")}} と評価されます。</p>
 
-<h2 id="説明">説明</h2>
+## 例
 
-<p>単項マイナス (<code>-</code>) も非数値を数値に変換できますが、単項プラスは数値に対して他の演算を行わないため、非数値を数値に変換する最も高速で好ましい方法です。これは、整数や浮動小数点の文字列表現や、非文字列値である <code>true</code>、<code>false</code>、<code>null</code> を変換することができます。10進数と16進数（接頭辞 0x）の両形式の整数と負の数（16進数の負の数はサポートされていません）がサポートされています。BigInt 値に対してこの演算子を使用すると TypeError がスローされます。特定の値を解析できない場合は、{{jsxref("NaN")}} と評価されます。</p>
+### 数値での使い方
 
-<h2 id="例_2">例</h2>
-
-<h3 id="数値での使い方">数値での使い方</h3>
-
-<pre class="brush: js notranslate">const x = 1;
+```js
+const x = 1;
 const y = -1;
 
 console.log(+x);
 // 1
 console.log(+y);
-// -1</pre>
+// -1
+```
 
-<h3 id="数値以外での使い方">数値以外での使い方</h3>
+### 数値以外での使い方
 
-<pre class="brush: js notranslate">+true  // 1
+```js
++true  // 1
 +false // 0
 +null  // 0
 +function(val){ return val } // NaN
 +1n    //  BigInt 値は数値に変換できないためエラーになります
-</pre>
+```
 
-<h2 id="仕様">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-unary-plus-operator', 'Unary plus operator')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="ブラウザの互換性">ブラウザの互換性</h2>
+## ブラウザーの互換性
 
+{{Compat}}
 
+## 関連情報
 
-<p>{{Compat("javascript.operators.unary_plus")}}</p>
-
-<h2 id="関連情報">関連情報</h2>
-
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Addition">加算演算子</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Subtraction">減算演算子</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Division">除算演算子</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Multiplication">乗算演算子</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Remainder">剰余演算子</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Exponentiation">べき乗演算子</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Increment">インクリメント演算子</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Decrement">デクリメント演算子</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Unary_negation">単項マイナス演算子</a></li>
-</ul>
+- [加算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Addition)
+- [減算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [除算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Division)
+- [乗算演算子](/ja/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [剰余演算子](/ja/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [べき乗演算子](/ja/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [インクリメント演算子](/ja/docs/Web/JavaScript/Reference/Operators/Increment)
+- [デクリメント演算子](/ja/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [単項マイナス演算子](/ja/docs/Web/JavaScript/Reference/Operators/Unary_negation)
