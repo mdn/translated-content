@@ -12,16 +12,16 @@ tags:
   - instructions
 translation_of: Web/API/Document/createProcessingInstruction
 ---
-<p id="Summary">{{APIRef("DOM")}}</p>
+<div>{{APIRef("DOM")}}</div>
 
 <p><code>createProcessingInstruction()</code> crée un nouveau noeud d'instruction de traitement et le renvoie.</p>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
 <pre class="eval"><em>Processing instruction node</em> = document.createProcessingInstruction(target, data)
 </pre>
 
-<h3 id="Parameters" name="Parameters">Paramètres</h3>
+<h3 id="Parameters">Paramètres</h3>
 
 <ul>
  <li><code>Processing Instruction node</code> est un noeud {{domxref("ProcessingInstruction")}}.</li>
@@ -29,7 +29,7 @@ translation_of: Web/API/Document/createProcessingInstruction
  <li><code>data</code> est une string (<em>chaîne de caractères</em>) contenant les données à ajouter aux données du noeud.</li>
 </ul>
 
-<h3 id="Notes" name="Notes">Exceptions</h3>
+<h3 id="Notes">Exceptions</h3>
 
 <dl>
  <dt><code>NOT_SUPPORTED_ERR</code></dt>
@@ -38,7 +38,7 @@ translation_of: Web/API/Document/createProcessingInstruction
  <dd>Lancée si vous essayez d'ajouter une cible d'instruction de traitement invalide (ce devrait être le cas avec le nom XML et toutes les combinaisons des lettres "xml"), ou si la séquence d'instructions de traitement de fermeture ("?&gt;") est ajoutée aux données. Les données fournies par l'utilisateur ne peuvent donc pas être utilisées en toute sécurité sans échappement ou autres moyens de faire face à de telles situations.</dd>
 </dl>
 
-<h2 id="Example" name="Example">Exemple</h2>
+<h2 id="Example">Exemple</h2>
 
 <pre>var docu = new DOMParser().parseFromString('&lt;xml&gt;&lt;/xml&gt;',  "application/xml")
 
@@ -50,6 +50,6 @@ alert(new XMLSerializer().serializeToString(docu));
 // Affiche: &lt;?xml-stylesheet href="mycss.css" type="text/css"?&gt;&lt;xml/&gt;
 </pre>
 
-<h2 id="Specification" name="Specification">Spécifications</h2>
+<h2 id="Specification">Spécifications</h2>
 
-<p><a class="external" href="http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-document-createprocessinginstruction">DOM 4: createProcessingInstruction</a></p>
+<p><a href="http://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-document-createprocessinginstruction">DOM 4: createProcessingInstruction</a></p>

@@ -37,7 +37,7 @@ translation_of: Web/API/NodeFilter/acceptNode
 
 <p>La fonction doit renvoyer <code>NodeFilter.FILTER_ACCEPT</code> qui pousse le TreeWalker à renvoyer le noeud, <code>NodeFilter.FILTER_REJECT</code> qui contraint le TreeWalker à ignorer le sous-arbre entier ou <code>NodeFilter.FILTER_SKIP</code>.</p>
 
-<p><span id="result_box" lang="fr"><span>Le navigateur ne fournit aucun objet implémentant cette méthode.</span></span> C'est l'utilisateur qui doit écrire un objet implémentant l'interface {{domxref("NodeFilter")}}, adapter la méthode <code>acceptNode()</code> à ses besoins et l'utiliser avec un objet {{domxref("TreeWalker")}} ou {{domxref("NodeIterator")}}.</p>
+<p>Le navigateur ne fournit aucun objet implémentant cette méthode. C'est l'utilisateur qui doit écrire un objet implémentant l'interface {{domxref("NodeFilter")}}, adapter la méthode <code>acceptNode()</code> à ses besoins et l'utiliser avec un objet {{domxref("TreeWalker")}} ou {{domxref("NodeIterator")}}.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
@@ -81,7 +81,7 @@ while ((node = iterator.nextNode())) {
 }
 </pre>
 
-<h2 id="Specification" name="Specification">Spécifications</h2>
+<h2 id="Specification">Spécifications</h2>
 
 <table class="standard-table">
  <tbody>
@@ -114,7 +114,3 @@ while ((node = iterator.nextNode())) {
 <ul>
  <li>L'interface à laquelle elle appartient : {{domxref("NodeFilter")}}.</li>
 </ul>
-
-<dl>
- <dt> </dt>
-</dl>

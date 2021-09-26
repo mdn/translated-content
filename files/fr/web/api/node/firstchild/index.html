@@ -13,11 +13,11 @@ translation_of: Web/API/Node/firstChild
 
 <p>La propriété en lecture seule <strong><code>Node.firstChild</code> r</strong>envoie le premier nœud enfant de l'arbre ou <code>null</code> s'il n'en a pas. Si le noeud est un <code>Document</code> , il renvoie le premier noeud de la liste de ses enfants directs.</p>
 
-<h2 id="Syntaxe" name="Syntaxe">Syntaxe</h2>
+<h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="syntaxbox">var <var>childNode</var> = <var>node</var>.firstChild;</pre>
 
-<h2 id="Exemple" name="Exemple">Exemple</h2>
+<h2 id="Exemple">Exemple</h2>
 
 <p>Cet exemple montre l'utilisation de <code>firstChild</code> et la manière dont les nœuds d'espaces peuvent interférer.</p>
 
@@ -31,7 +31,7 @@ translation_of: Web/API/Node/firstChild
 &lt;/script&gt;
 </pre>
 
-<p>Dans le code ci-dessus, la <a href="https://developer.mozilla.org/fr/docs/Web/API/Console">console</a> affichera « #text » car un nœud texte a été inséré pour préserver les blancs entre la fin des balises ouvrantes &lt;p&gt; et &lt;span&gt;. <strong>Tout</strong> <a href="https://developer.mozilla.org/fr/docs/Gestion_des_espaces_dans_le_DOM">espace</a> provoquera l'insertion d'un nœud <code>#text</code> , qu'il s'agisse d'un simple espace ou de plusieurs, de retours à la ligne, tabulations, etc.</p>
+<p>Dans le code ci-dessus, la <a href="/fr/docs/Web/API/Console">console</a> affichera « #text » car un nœud texte a été inséré pour préserver les blancs entre la fin des balises ouvrantes &lt;p&gt; et &lt;span&gt;. <strong>Tout</strong> <a href="/fr/docs/Gestion_des_espaces_dans_le_DOM">espace</a> provoquera l'insertion d'un nœud <code>#text</code> , qu'il s'agisse d'un simple espace ou de plusieurs, de retours à la ligne, tabulations, etc.</p>
 
 <p>Un autre nœud <code>#text</code> est inséré entre les balises de fermeture &lt;/span&gt; et &lt;/p&gt;.</p>
 
@@ -85,8 +85,4 @@ translation_of: Web/API/Node/firstChild
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 
-
-
 <p>{{Compat("api.Node.firstChild")}}</p>
-
-<div id="compat-desktop"> </div>

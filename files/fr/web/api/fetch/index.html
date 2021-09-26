@@ -16,7 +16,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
 ---
 <p>{{APIRef("Fetch")}}</p>
 
-<p><span class="seoSummary">La méthode <code><strong>fetch()</strong></code> du mixin {{domxref("WindowOrWorkerGlobalScope")}} démarre le chargement d'une ressource sur le réseau et retourne une promesse qui est résolue dès que la réponse est disponible. La promesse résoud l'objet {{domxref("Response")}} représentant la réponse de votre requête. Cette promesse n'échoue pas en cas d'erreur HTTP, elle n'échoue que sur les problèmes de réseau. Vous devez utiliser un gestionnaire <code>then</code> pour identifier les erreurs HTTP.</span></p>
+<p>La méthode <code><strong>fetch()</strong></code> du mixin {{domxref("WindowOrWorkerGlobalScope")}} démarre le chargement d'une ressource sur le réseau et retourne une promesse qui est résolue dès que la réponse est disponible. La promesse résoud l'objet {{domxref("Response")}} représentant la réponse de votre requête. Cette promesse n'échoue pas en cas d'erreur HTTP, elle n'échoue que sur les problèmes de réseau. Vous devez utiliser un gestionnaire <code>then</code> pour identifier les erreurs HTTP.</p>
 
 <p><code>WindowOrWorkerGlobalScope</code> est aussi bien implémenté par {{domxref("Window")}} que par {{domxref("WorkerGlobalScope")}}, ce qui signifie que la méthode <code>fetch()</code> est disponible dans la plupart des cas où vous pourriez en avoir besoin.</p>
 
@@ -25,12 +25,12 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
 <p>La méthode <code>fetch()</code> est contrôlée par la directive <code>connect-src</code> de l'entête <a href="/fr/docs/Web/HTTP/Headers/Content-Security-Policy">Content Security Policy</a> plutôt que par la directive de la ressource qui est récupérée.</p>
 
 <div class="note">
-<p>Les paramètres de la méthode <code>fetch()</code> sont identiques à ceux du contructeur d'une {{domxref("Request.Request","Request()")}}.</p>
+<p><strong>Note :</strong> Les paramètres de la méthode <code>fetch()</code> sont identiques à ceux du contructeur d'une {{domxref("Request.Request","Request()")}}.</p>
 </div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox notranslate">const <em>fetchResponsePromise</em> = Promise&lt;Response&gt; fetch(<em>entrée</em>[, <em>init</em>]);</pre>
+<pre class="syntaxbox">const <em>fetchResponsePromise</em> = Promise&lt;Response&gt; fetch(<em>entrée</em>[, <em>init</em>]);</pre>
 
 <h3 id="Paramètres">Paramètres</h3>
 
@@ -75,7 +75,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
     <dd>Spécifie la valeur de l'entête HTTP referer. Cela peut être <code>no-referrer</code>, <code>no-referrer-when-downgrade</code>, <code>origin</code>, <code>origin-when-cross-origin</code> ou <code>unsafe-url</code>.</dd>
 
     <dt><code>integrity</code></dt>
-    <dd>Contient la valeur de <a href="https://developer.mozilla.org/fr/docs/Web/Security/Subresource_Integrity">l'intégrité de la sous-ressource</a> de la requête (par exemple, <code>sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=</code>).</dd>
+    <dd>Contient la valeur de <a href="/fr/docs/Web/Security/Subresource_Integrity">l'intégrité de la sous-ressource</a> de la requête (par exemple, <code>sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=</code>).</dd>
 
     <dt><code>keepalive</code></dt>
     <dd>Peut être utilisée pour autoriser la requête à se poursuivre après la fermeture de la page. Une requête avec ce paramètre est équivalente à l'API {{domxref("Navigator.sendBeacon()")}}.</dd>
@@ -103,7 +103,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/fetch
 
 <p>Dans notre <a href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-request">exemple de requête avec fetch</a> (voir <a href="http://mdn.github.io/fetch-examples/fetch-request/">cet exemple en direct</a>) nous créons une nouvelle {{domxref("Request")}} avec le constructeur correspondant, puis on l'envoie en appellant <code>fetch()</code>. Comme nous récupérons une image, nous utilisons la méthode {{domxref("Body.blob()")}} sur la réponse pour lui donner le bon type MIME pour qu'elle soit gérée correctement, puis l'on crée l'URL correspondant à cet objet et on l'affiche dans un élément {{htmlelement("img")}}.</p>
 
-<pre class="brush: js notranslate">const monImage = document.querySelector('img');
+<pre class="brush: js">const monImage = document.querySelector('img');
 
 let maRequete = new Request('fleurs.jpg');
 
@@ -121,7 +121,7 @@ fetch(maRequete)
 
 <p>Dans notre <a href="https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-with-init-then-request">exemple fetch avec initialisation et requête</a> (voir <a href="http://mdn.github.io/fetch-examples/fetch-with-init-then-request/">cet exemple en direct</a>) nous faisons la même chose à la différence que nous passons aussi un objet d'initalisation à la méthode <code>fetch</code> :</p>
 
-<pre class="brush: js notranslate">const monImage = document.querySelector('img');
+<pre class="brush: js">const monImage = document.querySelector('img');
 
 let mesEntetes = new Headers();
 mesEntetes.append('Content-Type', 'image/jpeg');
@@ -139,11 +139,11 @@ fetch(maRequete, monInit).then(function(reponse) {
 
 <p>Notez que vous pouvez aussi passer l'objet d'initialisation au constructeur de la requête pour obtenir le même effet, par exemple :</p>
 
-<pre class="brush: js notranslate">let maRequete = new Request('fleurs.jpg', monInit);</pre>
+<pre class="brush: js">let maRequete = new Request('fleurs.jpg', monInit);</pre>
 
 <p>Vous pouvez aussi utiliser un objet litéral comme en-têtes dans votre objet d'initalisation.</p>
 
-<pre class="brush: js notranslate">const monInit = { method: 'GET',
+<pre class="brush: js">const monInit = { method: 'GET',
                headers: {
                    'Content-Type': 'image/jpeg'
                },

@@ -11,11 +11,11 @@ translation_of: Web/API/WindowEventHandlers/onpopstate
 
 <p>Un gestionnaire d'évènement pour l'évènement <code>popstate</code> de la fenêtre.</p>
 
-<p><span style="line-height: inherit;">L'évènement <code>popstate</code></span> est envoyé à la fenêtre à chaque fois que l'entrée actuelle de l'historique change avec 2 autres entrées du même document. Si l'entrée actuelle a été créée en appelant <code>history.pushState()</code> ou a été modifiée en appelant <code>history.replaceState()</code>, la propriété <font face="Courier New, Andale Mono, monospace">state</font> de l'évènement <code>popstate</code> contient une copie de l'objet d'entrée de l'historique.</p>
+<p>L'évènement <code>popstate</code> est envoyé à la fenêtre à chaque fois que l'entrée actuelle de l'historique change avec 2 autres entrées du même document. Si l'entrée actuelle a été créée en appelant <code>history.pushState()</code> ou a été modifiée en appelant <code>history.replaceState()</code>, la propriété state de l'évènement <code>popstate</code> contient une copie de l'objet d'entrée de l'historique.</p>
 
 <p>Sachez qu'appeler <code>history.pushState()</code> ou <code>history.replaceState()</code> ne déclenchera pas l'évènement <code>popstate</code>. Cet évènement n'est déclenché que par une action utilisateur telle que cliquer sur le bouton Retour (ou appeler <code>history.back()</code>, en JavaScript). L'évènement n'est déclenché que pour la navigation entre deux entrées du même document.</p>
 
-<h3 id="Syntax" name="Syntax">Syntaxe</h3>
+<h3 id="Syntax">Syntaxe</h3>
 
 <pre class="eval">window.onpopstate = <em>funcRef</em>;
 </pre>
@@ -26,7 +26,7 @@ translation_of: Web/API/WindowEventHandlers/onpopstate
 
 <h3 id="Lévènement_popstate">L'évènement popstate</h3>
 
-<p>Par exemple, une page à l'adresse <a class="external" href="http://example.com/example.html" rel="freelink">http://example.com/example.html</a> exécutant le code suivant générera les alertes suivantes:</p>
+<p>Par exemple, une page à l'adresse <a href="http://example.com/example.html">http://example.com/example.html</a> exécutant le code suivant générera les alertes suivantes:</p>
 
 <pre class="brush: js">window.onpopstate = function(event) {
   alert("adresse: " + document.location + ", état: " + JSON.stringify(event.state));
@@ -39,20 +39,20 @@ history.back(); // affiche "adresse: http://example.com/example.html, état: nul
 history.go(2);  // affiche "adresse: http://example.com/example.html?page=3, état: {"page":3}
 </pre>
 
-<p>Même si l'entrée originelle (de <a class="external" href="http://example.com/example.html" rel="freelink">http://example.com/example.html</a>) n'a aucun objet d'état associé, l'évènement <code>popstate</code> est toujours déclenché lorsque l'entrée est activée après un deuxième appel à <code>history.back()</code>.</p>
+<p>Même si l'entrée originelle (de <a href="http://example.com/example.html">http://example.com/example.html</a>) n'a aucun objet d'état associé, l'évènement <code>popstate</code> est toujours déclenché lorsque l'entrée est activée après un deuxième appel à <code>history.back()</code>.</p>
 
-<h3 id="Specification" name="Specification">Spécification</h3>
+<h3 id="Specification">Spécification</h3>
 
 <ul>
- <li><a class="external" href="http://www.whatwg.org/specs/web-apps/current-work/#handler-window-onpopstate">HTML5 popstate event</a></li>
+ <li><a href="http://www.whatwg.org/specs/web-apps/current-work/#handler-window-onpopstate">HTML5 popstate event</a></li>
 </ul>
 
 <h3 id="Lire_également">Lire également</h3>
 
 <ul>
  <li>{{ domxref("window.history") }}</li>
- <li><a href="/fr/docs/DOM/manipuler_lhistorique_du_navigateur" title="/fr/docs/DOM/manipuler_lhistorique_du_navigateur">Manipuler l'historique du navigateur</a></li>
- <li><a href="/fr/docs/DOM/Manipulating_the_browser_history/Example" title="/fr/docs/DOM/Manipulating_the_browser_history/Example">Exemple de navigation en Ajax</a></li>
+ <li><a href="/fr/docs/DOM/manipuler_lhistorique_du_navigateur">Manipuler l'historique du navigateur</a></li>
+ <li><a href="/fr/docs/DOM/Manipulating_the_browser_history/Example">Exemple de navigation en Ajax</a></li>
 </ul>
 
 <p>{{ languages( {"zh-cn": "zh-cn/DOM/window.onpopstate" } ) }}</p>

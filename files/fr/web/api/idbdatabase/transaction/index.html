@@ -19,18 +19,14 @@ translation_of: Web/API/IDBDatabase/transaction
 
 <dl>
  <dt>storeNames</dt>
- <dd>un tableau de noms de magasins d'objets entrant dans le cadre de cette transaction. Indique seulement les magasins d'objets dont on a besoin.<br>
- Si l’on n’a besoin que d’un seul magasin d'objet, on peut simplement passer son nom. Les lignes suivantes sont équivalentes :
+ <dd><p>un tableau de noms de magasins d'objets entrant dans le cadre de cette transaction. Indique seulement les magasins d'objets dont on a besoin. Si l’on n’a besoin que d’un seul magasin d'objet, on peut simplement passer son nom. Les lignes suivantes sont équivalentes :</p>
  <pre class="brush: js">var transaction = db.transaction(['my-store-name']);
 var transaction = db.transaction('my-store-name');</pre>
- Pour utiliser tous les magasins d'objets de la base de donnée, on peut appeler la methode {{domxref("IDBDatabase.objectStoreNames")}}:
-
+ <p>Pour utiliser tous les magasins d'objets de la base de donnée, on peut appeler la methode {{domxref("IDBDatabase.objectStoreNames")}}:</p>
  <pre class="brush:js;">var transaction = db.transaction(db.objectStoreNames);</pre>
- Passer un tableau vide lèvera une exception.</dd>
+ <p>Passer un tableau vide lèvera une exception.</p></dd>
  <dt>mode {{optional_inline}}</dt>
- <dd>
- <p>Le {{domxref("IDBTransactionMode","mode")}} d’{{domxref("IDBObjectStore","accès aux magasins d'objets")}} à la base de données (par default <code>readonly</code>):</p>
-
+ <dd><p>Le {{domxref("IDBTransactionMode","mode")}} d’{{domxref("IDBObjectStore","accès aux magasins d'objets")}} à la base de données (par default <code>readonly</code>):</p>
  <table class="standard-table">
   <thead>
    <tr>
@@ -40,32 +36,30 @@ var transaction = db.transaction('my-store-name');</pre>
   </thead>
   <tbody>
    <tr>
-    <td id="readonly"><code>readonly</code></td>
+    <td><code>readonly</code></td>
     <td>permet de prendre des objets dans les magasins d'objets, de lire les index et de faire des curseurs.</td>
    </tr>
    <tr>
-    <td id="readwrite"><code>readwrite</code></td>
+    <td><code>readwrite</code></td>
     <td>Permet en plus de que l'on peut faire en readonly, d’ajouter et mettre à jour des objets dans les magasins d'objets.</td>
    </tr>
-   <tr id="versionchange">
+   <tr>
     <td><code>versionchange</code></td>
     <td>Permet toute les opérations, y compris celles qui suppriment ou ajoutent des {{domxref("IDBOjectStore","magasins d'objets")}} ou des {{domxref("IDBIndex","index")}}. Ce mode met à jour le numéro de version de la base de données, il se sert au début de {{domxref ("IDBDatabase.setVersion")}}. Les {{domxref("IDBTransaction","transactions")}} dans ce mode ne peuvent pas fonctionner en même temps que d'autres.</td>
    </tr>
    <tr>
-    <td id="readwriteflush "><code>readwriteflush</code></td>
+    <td><code>readwriteflush</code></td>
     <td>
      <p>Si vous devez vous assurer de l'efficacité d'une transaction pour une raison quelconque (par exemple, vous stockez des données critiques qui ne peuvent être recalculées plus tard), vous pouvez forcer l’enregistrement complet sur disque avant de déclencher l’événement <code>complete</code> en utilisant le mode <code>readwriteflush</code> (non standard) expérimental ( voir {{domxref("IDBDatabase.transaction")}} ). C'est expérimental, et ne peut être utilisé que si le <code> dom.indexedDB.experimental </code> pref est réglé sur <code> true </code> dans <code> about:config.</code></p>
 
-     <p class="note">Depuis Firefox 40, les transactions IndexedDB diminuent en efficacité pour gagner en efficience (voir {{Bug ( "1112702")}}.) Auparavant, dans une transaction en <code><a href="#const_read_write">readwrite</a></code> l'événement complete était déclanché seulement lorsque toutes les données étaient écrites sur le disque. Maintenant l'événement <code>complete</code> est déclenché après que l'OS ai envoyé l'ordre d'écrire les données, mais potentiellement avant qu'elles aient été écrites sur le disque. L'événement <code>complete</code> peut ainsi se déclancher plus rapidement qu'auparavant, cependant, il existe une chance infime pour que l'ensemble de la transaction soit perdue si le système d'exploitation plante ou s'il y a une perte de courant avant que les données aient été écites sur le disque. Étant donné que ces événements catastrophiques sont rares la plupart des utilisateurs ne devraient pas avoir à s'en préoccuper davantage.</p>
+     <div class="note"><p><strong>Note :</strong> Depuis Firefox 40, les transactions IndexedDB diminuent en efficacité pour gagner en efficience (voir {{Bug ( "1112702")}}.) Auparavant, dans une transaction en <code><a href="#const_read_write">readwrite</a></code> l'événement complete était déclanché seulement lorsque toutes les données étaient écrites sur le disque. Maintenant l'événement <code>complete</code> est déclenché après que l'OS ai envoyé l'ordre d'écrire les données, mais potentiellement avant qu'elles aient été écrites sur le disque. L'événement <code>complete</code> peut ainsi se déclancher plus rapidement qu'auparavant, cependant, il existe une chance infime pour que l'ensemble de la transaction soit perdue si le système d'exploitation plante ou s'il y a une perte de courant avant que les données aient été écites sur le disque. Étant donné que ces événements catastrophiques sont rares la plupart des utilisateurs ne devraient pas avoir à s'en préoccuper davantage.</p></div>
     </td>
    </tr>
   </tbody>
  </table>
- {{note("Pour éviter des pertes de performance, n’utilisez le mode <code>readwrite</code> que si vous avez effectivement besoin d’écrire ou de mettre à jour des données sur la base.")}} Si on a besoin d’accéder à un magasin d'objets pour écrire ou mettre à jour des enregistrement, on utilise la sytaxe:
-
+ <p>Pour éviter des pertes de performance, n’utilisez le mode <code>readwrite</code> que si vous avez effectivement besoin d’écrire ou de mettre à jour des données sur la base.")}} Si on a besoin d’accéder à un magasin d'objets pour écrire ou mettre à jour des enregistrement, on utilise la sytaxe:</p>
  <pre class="brush:js">var transaction = db.transaction('monMagasin','readwrite');</pre>
  </dd>
- <dd> </dd>
 </dl>
 
 <h2 id="Renvoie">Renvoie</h2>
@@ -121,7 +115,8 @@ transaction.onerror = function(event) {
 var objectStore = transaction.objectStore("toDoList");
 // etc.</pre>
 
-<p class="note">Pour un exemple de travail complet, voir notre <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>).</p>
+<div class="note"><p><strong>Note :</strong>Pour un exemple de travail complet, voir notre <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>).</p>
+</div>
 
 <h2 id="Spécification">Spécification</h2>
 
@@ -153,5 +148,5 @@ var objectStore = transaction.objectStore("toDoList");
  <li>{{domxref("IDBKeyRange","Définir l'intervalle des clés")}}</li>
  <li>{{domxref("IDBObjectStore","Accès aux magasins d'objets")}}</li>
  <li>{{domxref("IDBCursor","Utiliser les curseur")}}</li>
- <li>Exemple de référence: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+ <li>Exemple de référence: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>

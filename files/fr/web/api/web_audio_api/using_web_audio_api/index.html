@@ -3,9 +3,8 @@ title: Utiliser la Web Audio API
 slug: Web/API/Web_Audio_API/Using_Web_Audio_API
 translation_of: Web/API/Web_Audio_API/Using_Web_Audio_API
 ---
-<div class="summary">
-<p><span class="seoSummary">La <a href="/en-US/docs/Web_Audio_API">Web Audio API</a> offre un méchanisme à la fois simple et puissant pour implémenter et manipuler le contenu audio dans une application web. Elle permet de manipuler mixages audio, effets, balance, etc. Cet article donne les bases pour l'utiliser, à travers quelques exemples simples..</span></p>
-</div>
+
+<p>La <a href="/en-US/docs/Web_Audio_API">Web Audio API</a> offre un méchanisme à la fois simple et puissant pour implémenter et manipuler le contenu audio dans une application web. Elle permet de manipuler mixages audio, effets, balance, etc. Cet article donne les bases pour l'utiliser, à travers quelques exemples simples.</p>
 
 <div>
 <p>La Web Audio API ne vient pas remplacer l'élément <a href="/en-US/docs/Web/HTML/Element/audio">&lt;audio&gt;</a>, mais plutôt le compléter, de même que l'API Canvas 2D coexiste avec l'élément <a href="/en-US/docs/Web/HTML/Element/Img">&lt;video&gt;</a>. Si vous avez seulement besoin de contrôler la lecture d'un fichier audio, &lt;audio&gt; est probablement une meilleure solution, plus rapide. Si vous voulez procéder à un traitement audio plus complexe et à la lecture d'une source, la Web Audio API offre davantage de possibilités en termes de puissance et de contrôle.</p>
@@ -19,16 +18,12 @@ translation_of: Web/API/Web_Audio_API/Using_Web_Audio_API
 
 <p>Notre premier exemple est <a href="http://github.com/mdn/voice-change-o-matic">Voice-change-O-matic</a>, une application web de déformation de la voix, qui permet de choisir différents effets et modes de visualisation. Cette application est rudimentaire, mais elle permet de montrer l'utilisation de plusieurs fonctionnalités de la Web Audio API combinées ensemble  (<a href="http://mdn.github.io/voice-change-o-matic/">run the Voice-change-O-matic live</a>).</p>
 
-<p><img alt="A UI with a sound wave being shown, and options for choosing voice effects and visualizations." src="https://mdn.mozillademos.org/files/7921/voice-change-o-matic.png" style="display: block; height: 500px; margin: 0px auto; width: 640px;"></p>
-
-<p>Un autre exemple pour illustrer la Web Audio API est le <a href="http://mdn.github.io/violent-theremin/">Violent Theremin</a>, une application simple qui permet de changer le pitch et le volume d'un son en fonction du déplacement de la souris. Elle génère également des animations psychédéliques (<a href="https://github.com/mdn/violent-theremin">see Violent Theremin source code</a>).</p>
-
-<p><img alt="A page full of rainbow colours, with two buttons labeled Clear screen and mute. " src="https://mdn.mozillademos.org/files/7919/violent-theremin.png" style="display: block; height: 458px; margin: 0px auto; width: 640px;"></p>
+<p><img alt="Une boîte à rythme avec des contrôles pour la lecture, le volume et le pan" src="boombox.png"></p>
 
 <h2 id="Concepts_de_base">Concepts de base</h2>
 
 <div class="note">
-<p><strong>Note</strong>: la plupart des extraits de code dans cette section viennent de l'exemple <a href="https://github.com/mdn/violent-theremin">Violent Theremin</a>.</p>
+<p><strong>Note :</strong> la plupart des extraits de code dans cette section viennent de l'exemple <a href="https://github.com/mdn/violent-theremin">Violent Theremin</a>.</p>
 </div>
 
 <p>La Web Audio API impliqe de réaliser les opérations de traitement audio dans un <strong>contexte audio</strong>, et elle a été conçue pour permettre le <strong>routage modulaire</strong>. Les opérations de traitement de base sont réalisées par des <strong> noeuds audio</strong>, qui sont reliés entre eux pour former un<strong> graphe de routage audio</strong>. Plusieurs sources — avec différentes configuration de canaux — peuvent cohabiter dans un seul contexte. Ce design modulaire offre la flexibilité nécessaire pour créer des fonctions complexes avec des effets dynamiques.</p>
@@ -51,7 +46,7 @@ translation_of: Web/API/Web_Audio_API/Using_Web_Audio_API
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: On peut créer plusieurs contextes audio dans le même document, bien que ce soit probablement superflu dans la plupart des cas.</p>
+<p><strong>Note :</strong> On peut créer plusieurs contextes audio dans le même document, bien que ce soit probablement superflu dans la plupart des cas.</p>
 </div>
 
 <p>Il faut rajouter une version préfixée pour les navigateurs Webkit/Blink browsers, tout en conservant la version non préfixée pour Firefox (desktop/mobile/OS). Ce qui donne :</p>
@@ -60,7 +55,7 @@ translation_of: Web/API/Web_Audio_API/Using_Web_Audio_API
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: <span style="line-height: 1.5;">Safari risque de planter si l'objet </span><code style="line-height: 1.5; font-style: normal;">window</code><span style="line-height: 1.5;"> n'est pas explicitement mentionné lors de la création d'un contexte audio</span></p>
+<p><strong>Note :</strong> Safari risque de planter si l'objet <code>window</code> n'est pas explicitement mentionné lors de la création d'un contexte audio</p>
 </div>
 
 <h3 id="Création_d'une_source_audio">Création d'une source audio</h3>
@@ -71,7 +66,7 @@ translation_of: Web/API/Web_Audio_API/Using_Web_Audio_API
  <li>générées en JavaScript par un noeud audio tel qu'un oscillateur. Pour créer un {{domxref("OscillatorNode")}} on utilise la méthode {{domxref("AudioContext.createOscillator")}}.</li>
  <li>créées à partir de données PCM brutes: le contexte audio a des méthodes pour décoder lesformats supportés; voir {{ domxref("AudioContext.createBuffer()") }}, {{domxref("AudioContext.createBufferSource()")}}, et {{domxref("AudioContext.decodeAudioData()")}}.</li>
  <li>récupérées dans des élements HTML tels que {{HTMLElement("video")}} ou {{HTMLElement("audio")}}: voir {{domxref("AudioContext.createMediaElementSource()")}}.</li>
- <li>prises dans un <a href="/en-US/docs/WebRTC" title="/en-US/docs/WebRTC">WebRTC</a> {{domxref("MediaStream")}} comme une webcam ou un microphone. Voir {{ domxref("AudioContext.createMediaStreamSource()") }}.</li>
+ <li>prises dans un <a href="/en-US/docs/WebRTC">WebRTC</a> {{domxref("MediaStream")}} comme une webcam ou un microphone. Voir {{ domxref("AudioContext.createMediaStreamSource()") }}.</li>
 </ul>
 
 <p>Pour notre exemple nous nous contenterons de créer un oscillateur pour générer un son simple comme source, et un noeud de gain pour contrôler le volume:</p>
@@ -81,11 +76,11 @@ var noeudGain = contexteAudio.createGain();
 </pre>
 
 <div class="note">
-<p><strong>Note</strong>: Pour jouer un fichier audio directement, il faut charger le fichier en XHR, le décoder en mémoire tampon, puis associer le tampon à une source. Voir l'exemple <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L48-L68">Voice-change-O-matic</a>.</p>
+<p><strong>Note :</strong> Pour jouer un fichier audio directement, il faut charger le fichier en XHR, le décoder en mémoire tampon, puis associer le tampon à une source. Voir l'exemple <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L48-L68">Voice-change-O-matic</a>.</p>
 </div>
 
 <div class="note">
-<p><strong>Note</strong>: Scott Michaud a écrit la librairie <a href="https://github.com/ScottMichaud/AudioSampleLoader">AudioSampleLoader</a>, très pratique pour charger et décoder un ou plusieurs extraits audio. Elle peut aider à simplifier le processus de chargement XHR / mémoire tampon décrit dans la note précédente.</p>
+<p><strong>Note :</strong> Scott Michaud a écrit la librairie <a href="https://github.com/ScottMichaud/AudioSampleLoader">AudioSampleLoader</a>, très pratique pour charger et décoder un ou plusieurs extraits audio. Elle peut aider à simplifier le processus de chargement XHR / mémoire tampon décrit dans la note précédente.</p>
 </div>
 
 <h3 id="Lien_entre_les_noeuds_source_et_destination">Lien entre les noeuds source et destination</h3>
@@ -111,10 +106,12 @@ noeudGain.connect(contexteAudio.destination);
 
 <p>Ce code créerait le graphe audio suivant :</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/7949/voice-change-o-matic-graph.png" style="display: block; height: 563px; margin: 0px auto; width: 232px;">Il est possible de connecter plusieurs noeuds à un seul noeud, par exemple pour mixer plusieurs sources ensemble, et les passer dans un seul noeud d'effet, tel qu'un noeud de gain.</p>
+<p><img alt="Un graphe audio avec un élément audio source connecté à la destination par défaut" src="graph1.jpg"></p>
+
+<p>Il est possible de connecter plusieurs noeuds à un seul noeud, par exemple pour mixer plusieurs sources ensemble, et les passer dans un seul noeud d'effet, tel qu'un noeud de gain.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Depuis Firefox 32, les outils de développement intégrés incluent un <a href="/en-US/docs/Tools/Web_Audio_Editor">éditeur audio</a>,  très utile pour débugger les graphes audio.</p>
+<p><strong>Note :</strong> Depuis Firefox 32, les outils de développement intégrés incluent un <a href="/en-US/docs/Tools/Web_Audio_Editor">éditeur audio</a>,  très utile pour débugger les graphes audio.</p>
 </div>
 
 <h3 id="Lecture_du_son_et_définition_du_pitch">Lecture du son et définition du pitch</h3>

@@ -21,7 +21,7 @@ translation_of: Web/API/Client
 
 <dl>
  <dt>{{domxref("Client.postMessage()")}}</dt>
- <dd>Permet à un service worker d'envoyer un message au <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerClient" title="The ServiceWorker interface of the ServiceWorker API provides a reference to a service worker. Multiple browsing contexts (e.g. pages, workers, etc.) can be associated with the same service worker, each through a unique ServiceWorker object.">ServiceWorkerClient</a></code>.</dd>
+ <dd>Permet à un service worker d'envoyer un message au <code><a href="/en-US/docs/Web/API/ServiceWorkerClient">ServiceWorkerClient</a></code>.</dd>
 </dl>
 
 <h2 id="Propriétés">Propriétés</h2>
@@ -41,7 +41,7 @@ translation_of: Web/API/Client
 
 <p>Ce message est contenu dans une promesse qui est résolue si la réponse ne contient pas d'erreur et est rejetée avec une erreur.</p>
 
-<pre class="brush: js notranslate">// client service worker (par exemple un document)
+<pre class="brush: js">// client service worker (par exemple un document)
 function sendMessage(message) {
   return new Promise(function(resolve, reject) {
     // Notez que c'est la version du ServiceWorker.postMessage
@@ -86,7 +86,7 @@ self.addEventListener("message", function(e) {
  <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Utiliser les Service Workers</a></li>
  <li><a href="https://github.com/mdn/sw-test">Exemple simple de service workers</a></li>
  <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Est ce que le ServiceWorker est prêt ?</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promesses</a></li>
+ <li><a href="/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promesses</a></li>
  <li><a href="/en-US/docs/Web/Guide/Performance/Using_web_workers">Utilisation performante des web workers</a></li>
  <li><a href="/en-US/docs/Web/API/Channel_Messaging_API">Channel Messaging API</a></li>
 </ul>

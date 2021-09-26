@@ -10,20 +10,20 @@ translation_of: Web/API/Document/getElementsByClassName
 ---
 <p>{{APIRef("DOM")}}</p>
 
-<p><span id="result_box" lang="fr"><span>Renvoie un objet de type tableau de tous les éléments enfants qui ont tous les noms de classe donnés.</span> <span>Lorsqu'il est appelé sur l'objet document, le document complet est recherché, y compris le nœud racine.</span> <span>Vous pouvez également appeler {{domxref ("Element.getElementsByClassName", "getElementsByClassName ()")}} sur n'importe quel élément;</span> <span>il retournera uniquement les éléments qui sont les descendants de l'élément racine spécifié avec les noms de classes donnés.</span></span></p>
+<p>Renvoie un objet de type tableau de tous les éléments enfants qui ont tous les noms de classe donnés. Lorsqu'il est appelé sur l'objet document, le document complet est recherché, y compris le nœud racine. Vous pouvez également appeler {{domxref ("Element.getElementsByClassName", "getElementsByClassName ()")}} sur n'importe quel élément; il retournera uniquement les éléments qui sont les descendants de l'élément racine spécifié avec les noms de classes donnés.</p>
 
-<h2 id="Syntaxe" name="Syntaxe">Syntaxe</h2>
+<h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="syntaxbox"><var>var elements</var> = document.getElementsByClassName(<em>names</em>); // or:
 <var>var elements</var> = rootElement.getElementsByClassName(<em>names</em>);</pre>
 
 <ul>
- <li><var>elements</var> <span id="result_box" lang="fr"><span>est une {{domxref ("HTMLCollection")}} des éléments trouvés.</span></span></li>
+ <li><var>elements</var> est une {{domxref ("HTMLCollection")}} des éléments trouvés.</li>
  <li><var>names</var> est une chaîne représentant le nom de la classe des éléments à trouver.</li>
- <li><span id="result_box" lang="fr"><span>getElementsByClassName peut être appelé sur n'importe quel élément, pas seulement sur le document.</span> <span>L'élément sur lequel il est appelé sera utilisé comme racine de la recherche.</span></span></li>
+ <li>getElementsByClassName peut être appelé sur n'importe quel élément, pas seulement sur le document. L'élément sur lequel il est appelé sera utilisé comme racine de la recherche.</li>
 </ul>
 
-<h2 id="Exemples" name="Exemples">Exemples</h2>
+<h2 id="Exemples">Exemples</h2>
 
 <p>Trouve tous les éléments ayant la classe « test » :</p>
 
@@ -40,43 +40,43 @@ translation_of: Web/API/Document/getElementsByClassName
 <pre class="eval"> document.getElementById('main').getElementsByClassName('test')
 </pre>
 
-<p><span id="result_box" lang="fr"><span>Nous pouvons également utiliser les méthodes de Array.prototype sur toute {{domxref ("HTMLCollection")}} en passant HTMLCollection comme valeur de la méthode.</span> <span>Ici, nous allons trouver tous les éléments div qui ont une classe de 'test':</span></span></p>
+<p>Nous pouvons également utiliser les méthodes de Array.prototype sur toute {{domxref ("HTMLCollection")}} en passant HTMLCollection comme valeur de la méthode. Ici, nous allons trouver tous les éléments div qui ont une classe de 'test':</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> testElements <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementsByClassName</span><span class="punctuation token">(</span><span class="string token">'test'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="keyword token">var</span> testDivs <span class="operator token">=</span> Array<span class="punctuation token">.</span>prototype<span class="punctuation token">.</span>filter<span class="punctuation token">.</span><span class="function token">call</span><span class="punctuation token">(</span>testElements<span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span>testElement<span class="punctuation token">)</span><span class="punctuation token">{</span>
-    <span class="keyword token">return</span> testElement<span class="punctuation token">.</span>nodeName <span class="operator token">===</span> <span class="string token">'DIV'</span><span class="punctuation token">;</span>
-<span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js">var testElements = document.getElementsByClassName('test');
+var testDivs = Array.prototype.filter.call(testElements, function(testElement){
+    return testElement.nodeName === 'DIV';
+});</pre>
 
-<p><span class="comment">XXX writeme == Notes == Une méthode semblable existe pour &lt;code&gt;Element&lt;/code&gt;</span></p>
+<p>XXX writeme == Notes == Une méthode semblable existe pour &lt;code&gt;Element&lt;/code&gt;</p>
 
-<h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification"><span class="short_text" id="result_box" lang="fr"><span>Obtenir la classe  des éléments test</span></span></h2>
+<h2 id="Sp.C3.A9cification">Obtenir la classe  des éléments test</h2>
 
-<p><span id="result_box" lang="fr"><span>C'est la méthode d'opération la plus couramment utilisée</span></span>.</p>
+<p>C'est la méthode d'opération la plus couramment utilisée.</p>
 
-<pre class="line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>!doctype</span> <span class="attr-name token">html</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>html</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>head</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>meta</span> <span class="attr-name token">charset</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>UTF-8<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>title</span><span class="punctuation token">&gt;</span></span>Document<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>title</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>head</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>body</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>parent-id<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-        <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>hello word1<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-        <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span> <span class="attr-name token">class</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>test<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>hello word2<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-        <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span> <span class="punctuation token">&gt;</span></span>hello word3<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-        <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>hello word4<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span><span class="punctuation token">&gt;</span></span><span class="language-javascript script token">
-        <span class="keyword token">var</span> parentDOM <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">"parent-id"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+<pre class="brush: html">&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="parent-id"&gt;
+        &lt;p&gt;hello word1&lt;/p&gt;
+        &lt;p class="test"&gt;hello word2&lt;/p&gt;
+        &lt;p &gt;hello word3&lt;/p&gt;
+        &lt;p&gt;hello word4&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;script&gt;
+        var parentDOM = document.getElementById("parent-id");
 
-        <span class="keyword token">var</span> test<span class="operator token">=</span>parentDOM<span class="punctuation token">.</span><span class="function token">getElementsByClassName</span><span class="punctuation token">(</span><span class="string token">"test"</span><span class="punctuation token">)</span><span class="punctuation token">;</span><span class="comment token">//test is not target element</span>
-        console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>test<span class="punctuation token">)</span><span class="punctuation token">;</span><span class="comment token">//HTMLCollection[1]</span>
+        var test=parentDOM.getElementsByClassName("test");//test is not target element
+        console.log(test);//HTMLCollection[1]
 
-        <span class="keyword token">var</span> testTarget<span class="operator token">=</span>parentDOM<span class="punctuation token">.</span><span class="function token">getElementsByClassName</span><span class="punctuation token">(</span><span class="string token">"test"</span><span class="punctuation token">)</span><span class="punctuation token">[</span><span class="number token">0</span><span class="punctuation token">]</span><span class="punctuation token">;</span><span class="comment token">//here , this element is target</span>
-        console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>testTarget<span class="punctuation token">)</span><span class="punctuation token">;</span><span class="comment token">//&lt;p class="test"&gt;hello word2&lt;/p&gt;</span>
-    </span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>body</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>html</span><span class="punctuation token">&gt;</span></span></code></pre>
+        var testTarget=parentDOM.getElementsByClassName("test")[0];//here , this element is target
+        console.log(testTarget);//&lt;p class="test"&gt;hello word2&lt;/p&gt;
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 
@@ -85,8 +85,8 @@ translation_of: Web/API/Document/getElementsByClassName
 
 
 
-<h2 id="Specification" name="Specification">Spécification</h2>
+<h2 id="Specification">Spécification</h2>
 
 <ul>
- <li><a href="https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-document-getelementsbyclassname" title="https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-document-getelementsbyclassname"><span class="external external-icon">W3C: getElementsByClassName</span></a></li>
+ <li><a href="https://dvcs.w3.org/hg/domcore/raw-file/tip/Overview.html#dom-document-getelementsbyclassname">W3C: getElementsByClassName</a></li>
 </ul>

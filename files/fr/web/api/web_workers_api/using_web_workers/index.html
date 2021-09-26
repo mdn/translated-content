@@ -11,7 +11,7 @@ original_slug: Web/API/Web_Workers_API/Utilisation_des_web_workers
 ---
 <div>{{DefaultAPISidebar("Web Workers API")}}</div>
 
-<p><span class="seoSummary">Les <em>Web Workers</em> sont un outil permettant au contenu web d'exécuter des scripts dans des tâches (<em>threads</em>) d'arrière-plan. Le <em>thread</em> associé au <em>worker</em> peut réaliser des tâches sans qu'il y ait d'interférence avec l'interface utilisateur. De plus, les <em>web workers</em> peuvent réaliser des opérations d'entrée/sortie grâce à <code><a class="internal" href="/fr/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> (bien que les attributs <code>responseXML</code> et <code>channel</code> soient nécessairement vides dans ces cas). Une fois créé, un <em>worker</em> peut envoyer des messages au code JavaScript qui l'a créé. De même, le script initial peut envoyer des messages au <em>worker</em>. Cette communication s'effectue grâce à des gestionnaires d'évènements.</span> Dans cet article, nous verrons une introduction à l'utilisation des <em>web workers</em>.</p>
+<p>Les <em>Web Workers</em> sont un outil permettant au contenu web d'exécuter des scripts dans des tâches (<em>threads</em>) d'arrière-plan. Le <em>thread</em> associé au <em>worker</em> peut réaliser des tâches sans qu'il y ait d'interférence avec l'interface utilisateur. De plus, les <em>web workers</em> peuvent réaliser des opérations d'entrée/sortie grâce à <code><a href="/fr/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code> (bien que les attributs <code>responseXML</code> et <code>channel</code> soient nécessairement vides dans ces cas). Une fois créé, un <em>worker</em> peut envoyer des messages au code JavaScript qui l'a créé. De même, le script initial peut envoyer des messages au <em>worker</em>. Cette communication s'effectue grâce à des gestionnaires d'évènements. Dans cet article, nous verrons une introduction à l'utilisation des <em>web workers</em>.</p>
 
 <h2 id="LAPI_Web_Workers">L'API Web Workers</h2>
 
@@ -20,14 +20,14 @@ original_slug: Web/API/Web_Workers_API/Utilisation_des_web_workers
 <p>Le contexte du <em>worker</em> est représenté par un objet {{domxref("DedicatedWorkerGlobalScope")}} pour les <em>workers</em> dédiés et par un objet {{domxref("SharedWorkerGlobalScope")}} sinon. Un <em>worker</em> dédié est uniquement accessible au travers du script qui l'a déclenché tandis qu'un <em>worker</em> partagé peut être utilisé par différents scripts.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Voir <a href="/fr/docs/Web/API/Web_Workers_API">la page d'entrée pour l'API Web Workers</a> pour consulter la documentation de référence sur les <em>workers</em> et d'autres guides.</p>
+<p><strong>Note :</strong> Voir <a href="/fr/docs/Web/API/Web_Workers_API">la page d'entrée pour l'API Web Workers</a> pour consulter la documentation de référence sur les <em>workers</em> et d'autres guides.</p>
 </div>
 
 <p>Il est possible d'exécuter n'importe quel code JavaScript dans le <em>thread</em> du <em>worker</em>, à l'exception des méthodes de manipulation du DOM ou de certaines propriétés et méthodes rattachées à {{domxref("window")}}. On notera cependant qu'on peut tout à fait utiliser certaines API rendues disponibles via <code>window</code> comme les <a href="/fr/docs/Web/API/WebSockets_API">WebSockets</a>, les API de stockage de données telles que <a href="/fr/docs/Web/API/API_IndexedDB">IndexedDB</a>. Pour plus de détails, voir <a href="/fr/docs/Web/API/Worker/Functions_and_classes_available_to_workers">les fonctions et classes disponibles au sein des <em>workers</em></a>.</p>
 
 <p>Les données sont échangées entre le <em>thread</em> du <em>worker</em> et le <em>thread</em> principal par l'intermédiaire de messages. Chaque partie peut envoyer des messages à l'aide de la méthode <code>postMessage()</code> et réagir aux messages reçus grâce au gestionnaire d'évènement <code>onmessage</code> (le message sera contenu dans l'attribut <code>data</code> de l'évènement {{event("Message")}} associé). Les données sont copiées dans le message, elles ne sont pas partagées.</p>
 
-<p>Les <em>workers</em> peuvent également déclencher la création d'autres <em>workers</em> tant que ceux-ci restent hébergés sur la même origine que la page parente. De plus, les <em>workers</em> pourront utiliser <a class="internal" href="/fr/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a> pour effectuer des opérations réseau mais les attributs <code>responseXML</code> et <code>channel</code> de <code>XMLHttpRequest</code> renverront nécessairement <code>null</code>.</p>
+<p>Les <em>workers</em> peuvent également déclencher la création d'autres <em>workers</em> tant que ceux-ci restent hébergés sur la même origine que la page parente. De plus, les <em>workers</em> pourront utiliser <a href="/fr/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a> pour effectuer des opérations réseau mais les attributs <code>responseXML</code> et <code>channel</code> de <code>XMLHttpRequest</code> renverront nécessairement <code>null</code>.</p>
 
 <h2 id="Les_workers_dédiés">Les <em>workers</em> dédiés</h2>
 
@@ -47,10 +47,9 @@ original_slug: Web/API/Web_Workers_API/Utilisation_des_web_workers
 
 <p>La création d'un nouveau <em>worker</em> est assez simple. On appellera le constructeur {{domxref("Worker.Worker", "Worker()")}} en indiquant l'URI du script à exécuter dans le <em>thread</em> associé au <em>worker</em> (<a href="https://github.com/mdn/simple-web-worker/blob/gh-pages/main.js">main.js</a>) :</p>
 
-<div style="overflow: hidden;">
+
 <pre class="brush: js">var monWorker = new Worker('worker.js');
 </pre>
-</div>
 
 <h3 id="Envoyer_des_messages_au_worker_et_y_réagir">Envoyer des messages au <em>worker</em> et y réagir</h3>
 
@@ -88,9 +87,13 @@ deuxiemeNombre.onchange = function() {
 
 <p>Ici, nous récupérons les données grâce à l'attribut <code>data</code> de l'évènement et nous mettons à jour le contenu du paragraphe avec l'attribut <code>textContent</code> de l'élément. Ainsi, l'utilisateur peut visualiser le résultat du calcul.</p>
 
-<div class="note"><strong>Note :</strong> On notera que <code>onmessage</code> et <code>postMessage()</code> doivent être rattachés à un objet <code>Worker</code> lorsqu'ils sont utilisés depuis le <em>thread</em> principal (ici, c'était <code>monWorker</code>) mais pas lorsqu'ils sont employés depuis le <em>worker</em>. En effet, dans le <em>worker</em>, c'est le <em>worker</em> qui constitue la portée globale et qui met à disposition ces méthodes.</div>
+<div class="note">
+  <p><strong>Note :</strong> On notera que <code>onmessage</code> et <code>postMessage()</code> doivent être rattachés à un objet <code>Worker</code> lorsqu'ils sont utilisés depuis le <em>thread</em> principal (ici, c'était <code>monWorker</code>) mais pas lorsqu'ils sont employés depuis le <em>worker</em>. En effet, dans le <em>worker</em>, c'est le <em>worker</em> qui constitue la portée globale et qui met à disposition ces méthodes.</p>
+</div>
 
-<div class="note"><strong>Note :</strong> Lorsqu'un message est envoyé d'un <em>thread</em> à l'autre, ses données sont copiées. Elles ne sont pas partagées. Voir <a href="#échange">ci-après</a> pour plus d'explications à ce sujet.</div>
+<div class="note">
+  <p><strong>Note :</strong> Lorsqu'un message est envoyé d'un <em>thread</em> à l'autre, ses données sont copiées. Elles ne sont pas partagées. Voir <a href="#échange">ci-après</a> pour plus d'explications à ce sujet.</p>
+</div>
 
 <h3 id="Clôturer_un_worker">Clôturer un <em>worker</em></h3>
 
@@ -104,7 +107,7 @@ deuxiemeNombre.onchange = function() {
 
 <p>Lorsqu'une erreur d'exécution se produit avec le <em>worker</em>, son gestionnaire d'évènement <code>onerror</code> est appelé et reçoit un évènement <code>error</code> qui implémente l'interface <code>ErrorEvent</code>.</p>
 
-<p>Cet évènement ne bouillonne (<em>bubble</em>) pas et peut être annulé. Pour empêcher les conséquences par défaut, on pourra utiliser la méthode <a class="internal" href="/fr/docs/Web/API/Event/preventDefault"> <code>preventDefault()</code></a> rattachée à l'évènement d'erreur.</p>
+<p>Cet évènement ne bouillonne (<em>bubble</em>) pas et peut être annulé. Pour empêcher les conséquences par défaut, on pourra utiliser la méthode <a href="/fr/docs/Web/API/Event/preventDefault"> <code>preventDefault()</code></a> rattachée à l'évènement d'erreur.</p>
 
 <p>L'évènement décrivant l'erreur possède notamment trois propriétés intéressantes :</p>
 
@@ -132,7 +135,9 @@ importScripts('//example.com/hello.js'); /* importe un script d'une autre origin
 
 <p>Lors d'un import, le navigateur chargera chacun des scripts puis l'exécutera. Chaque script pourra ainsi mettre à disposition des objets globaux qui pourront être utilisés par le <em>worker</em>. Si le script ne peut pas être chargé, une exception <code>NETWORK_ERROR</code> sera levée et le code assicé ne sera pas exécuté. Le code exécuté précédemment (y compris celui-ci reporté à l'aide de {{domxref("window.setTimeout()")}}) continuera cependant d'être fonctionnel. Les déclarations de fonction situées <strong>après</strong> <code>importScripts()</code> sont également exécutées car évaluées avant le reste du code.</p>
 
-<div class="note"><strong>Note :</strong> Les scripts peuvent être téléchargés dans n'importe quel ordre mais ils seront exécutés dans l'ordre des arguments passés à <code>importScripts()</code> . Cet exécution est effectuée de façon synchrone et <code>importScripts()</code> ne rendra pas la main tant que l'ensemble des scripts n'auront pas été chargés et exécutés.</div>
+<div class="note">
+  <p><strong>Note :</strong> Les scripts peuvent être téléchargés dans n'importe quel ordre mais ils seront exécutés dans l'ordre des arguments passés à <code>importScripts()</code> . Cet exécution est effectuée de façon synchrone et <code>importScripts()</code> ne rendra pas la main tant que l'ensemble des scripts n'auront pas été chargés et exécutés.</p>
+</div>
 
 <h2 id="Les_workers_partagés">Les <em>workers</em> partagés</h2>
 
@@ -215,9 +220,7 @@ Pour appliquer une règle de sécurité au <em>worker</em>, il faudra fournir un
 <br>
 Si l'origine du script du <em>worker</em> est un identifiant global unique (si son URL utilise le schéma <code>data://</code> ou <code>blob://</code> par exemple), le <em>worker</em> héritera du CSP associé au document responsable de sa création.</div>
 
-<div></div>
-
-<h2 id="Échanger_des_données_avec_les_workers_plus_de_détails"><a id="échange" name="échange">Échanger des données avec les <em>workers</em> : plus de détails</a></h2>
+<h2 id="Échanger_des_données_avec_les_workers_plus_de_détails">Échanger des données avec les <em>workers</em> : plus de détails</h2>
 
 <p>Les données échangées entre le document principal et les <em>workers</em> sont <strong>copiées</strong> et non partagées. Lorsqu'ils sont envoyés au <em>worker</em>, les objets sont sérialisés (puis désérialisés à leur réception). La page et le <em>worker</em> <strong>ne partagent pas le même exemplaire </strong>et on a donc deux versions d'une part et d'autre. La plupart des navigateurs implémentent cette approche avec <a href="/fr/docs/Web/API/Web_Workers_API/algorithme_clonage_structure">une clonage structurel</a>.</p>
 

@@ -19,7 +19,9 @@ translation_of: Web/API/Blob
 <p><strong>Note :</strong> La méthode <code>slice()</code> utilisait auparavant un deuxième argument qui indiquait le nombre d'octets à copier dans le nouveau blob. Si on utilisait un couple de valeur <code>début + longueur</code> qui dépassait la taille du blob source, le blob qui était renvoyé contenait les données à partir de l'indice de début et jusuq'à la fin du blob.</p>
 </div>
 
-<div class="note"><strong>Note :</strong> La méthode <code>slice()</code> doit être utilisée avec certains préfixes sur certaines versions de navigateurs : <code>blob.mozSlice()</code> pour Firefox 12 et antérieur, <code>blob.webkitSlice()</code> dans Safari. Un ancienne version de <code>slice()</code> sans préfixes avait une sémantique différente et est désormais obsolète. La prise en charge de <code>blob.mozSlice()</code> a été abandonnée avec Firefox 30.</div>
+<div class="note">
+  <p><strong>Note :</strong> La méthode <code>slice()</code> doit être utilisée avec certains préfixes sur certaines versions de navigateurs : <code>blob.mozSlice()</code> pour Firefox 12 et antérieur, <code>blob.webkitSlice()</code> dans Safari. Un ancienne version de <code>slice()</code> sans préfixes avait une sémantique différente et est désormais obsolète. La prise en charge de <code>blob.mozSlice()</code> a été abandonnée avec Firefox 30.</p>
+</div>
 
 <h2 id="Constructeur">Constructeur</h2>
 

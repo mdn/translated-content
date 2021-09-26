@@ -17,17 +17,17 @@ translation_of: Web/API/Document/forms
 <p><strong>Note :</strong> De même, vous pouvez accéder à une liste des éléments d'entrée utilisateur d'un formulaire à l'aide de la propriété {{domxref ("HTMLFormElement.elements")}}.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
 <pre class="syntaxbox"><var>collection</var> = document.forms;</pre>
 
-<h3 id="Example" name="Example">Valeur</h3>
+<h3 id="Example">Valeur</h3>
 
 <p>Un objet {{domxref("HTMLCollection")}} listant tous les formulaires du document. Chaque élément de la collection est un {{domxref("HTMLFormElement")}} représentant un seul élément <code>&lt;form&gt;</code>.</p>
 
-<h2 id="Example" name="Example">Exemples</h2>
+<h2 id="Example">Exemples</h2>
 
-<h3 id="Example" name="Example">Récupérer les informations d'un formulaire</h3>
+<h3 id="Example">Récupérer les informations d'un formulaire</h3>
 
 <pre class="brush:html">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -60,31 +60,31 @@ translation_of: Web/API/Document/forms
 var selectFormElement = document.forms[index].elements[index];
 </pre>
 
-<h3 id="Specification" name="Specification">Accéder aux formulaires nommés</h3>
+<h3 id="Specification">Accéder aux formulaires nommés</h3>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="doctype token">&lt;!DOCTYPE html&gt;</span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>html</span> <span class="attr-name token">lang</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>en<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>head</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>title</span><span class="punctuation token">&gt;</span></span>document.forms example<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>title</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>head</span><span class="punctuation token">&gt;</span></span>
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;title&gt;document.forms example&lt;/title&gt;
+&lt;/head&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>body</span><span class="punctuation token">&gt;</span></span>
+&lt;body&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>form</span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>login<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>email<span class="punctuation token">"</span></span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>email<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">name</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>password<span class="punctuation token">"</span></span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>password<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>button</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>submit<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Log in<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>button</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>form</span><span class="punctuation token">&gt;</span></span>
+&lt;form name="login"&gt;
+  &lt;input name="email" type="email"&gt;
+  &lt;input name="password" type="password"&gt;
+  &lt;button type="submit"&gt;Log in&lt;/button&gt;
+&lt;/form&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span><span class="punctuation token">&gt;</span></span><span class="language-javascript script token">
-  <span class="keyword token">var</span> loginForm <span class="operator token">=</span> document<span class="punctuation token">.</span>forms<span class="punctuation token">.</span>login<span class="punctuation token">;</span> <span class="comment token">// Ou document.forms['login']</span>
-  loginForm<span class="punctuation token">.</span>elements<span class="punctuation token">.</span>email<span class="punctuation token">.</span>placeholder <span class="operator token">=</span> <span class="string token">'test@example.com'</span><span class="punctuation token">;</span>
-  loginForm<span class="punctuation token">.</span>elements<span class="punctuation token">.</span>password<span class="punctuation token">.</span>placeholder <span class="operator token">=</span> <span class="string token">'password'</span><span class="punctuation token">;</span>
-</span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>body</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>html</span><span class="punctuation token">&gt;</span></span></code></pre>
+&lt;script&gt;
+  var loginForm = document.forms.login; // Ou document.forms['login']
+  loginForm.elements.email.placeholder = 'test@example.com';
+  loginForm.elements.password.placeholder = 'password';
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
 
-<h2 id="Specification" name="Specification">Spécifications</h2>
+<h2 id="Specification">Spécifications</h2>
 
 <table class="standard-table">
  <thead>
@@ -108,9 +108,9 @@ var selectFormElement = document.forms[index].elements[index];
  </tbody>
 </table>
 
-<h2 id="See_Also" name="See_Also">Voir aussi</h2>
+<h2 id="See_Also">Voir aussi</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/fr/docs/Web/Guide/HTML/Formulaires">Formulaires HTML</a></li>
+ <li><a href="/fr/docs/Web/Guide/HTML/Formulaires">Formulaires HTML</a></li>
  <li>{{HTMLElement("form")}} et l'interface {{domxref("HTMLFormElement")}}</li>
 </ul>

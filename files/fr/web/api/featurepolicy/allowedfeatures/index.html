@@ -11,16 +11,16 @@ translation_of: Web/API/FeaturePolicy/allowedFeatures
 ---
 <p>{{APIRef("Feature Policy API")}}{{SeeCompatTable}}</p>
 
-<p><span class="seoSummary">La méthode <strong><code>allowedFeatures()</code></strong> de l'interface {{DOMxRef("FeaturePolicy")}} retourne la liste des noms des directives de fonctionnalités permises par ce Feature Policy. Elle permet l'introspection de directives spécifiques du Feature Policy sur lequel la méthode est appelée. Ainsi, la méthode <code>allowedFeatures()</code> retourne un sous-ensemble de la liste des noms de directives retournée par {{DOMxRef("FeaturePolicy.features", "features()")}}.</span></p>
+<p>La méthode <strong><code>allowedFeatures()</code></strong> de l'interface {{DOMxRef("FeaturePolicy")}} retourne la liste des noms des directives de fonctionnalités permises par ce Feature Policy. Elle permet l'introspection de directives spécifiques du Feature Policy sur lequel la méthode est appelée. Ainsi, la méthode <code>allowedFeatures()</code> retourne un sous-ensemble de la liste des noms de directives retournée par {{DOMxRef("FeaturePolicy.features", "features()")}}.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox notranslate">const permissions = <em>FeaturePolicy</em>.allowedFeatures()
+<pre class="syntaxbox">const permissions = <em>FeaturePolicy</em>.allowedFeatures()
 </pre>
 
 <h3 id="Paramètres">Paramètres</h3>
 
-<p id="Feature_name">Aucun.</p>
+<p>Aucun.</p>
 
 <h3 id="Valeur_de_retour">Valeur de retour</h3>
 
@@ -30,7 +30,7 @@ translation_of: Web/API/FeaturePolicy/allowedFeatures
 
 <p>L'exemple suivant affiche toutes les directives permises pour le présent document. Notez que ces fonctionnalités pourraient être restreintes par l'API Permissions, si l'utilisateur n'a pas encore accordé les droits correspondants.</p>
 
-<pre class="brush: js notranslate">// D'abord, récupère l'objet Feature Policy
+<pre class="brush: js">// D'abord, récupère l'objet Feature Policy
 const featurePolicy = document.featurePolicy
 
 // Puis demande la liste des foncitonnalités permises

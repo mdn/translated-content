@@ -6,9 +6,7 @@ tags:
   - DOM
 translation_of: Web/API/Web_Workers_API
 ---
-<article class="approved">
-<header>{{DefaultAPISidebar("Web Workers API")}}</header>
-</article>
+<div>{{DefaultAPISidebar("Web Workers API")}}</div>
 
 <p>Les <strong>Web Workers</strong> sont un mécanisme grâce auquel les instructions d'un script peuvent être exécutés dans un thread en arrière-plan séparé du thread d'exécution principal d'une application web. Cela a pour avantage qu'un traitement laborieux peut être réalisé dans un thread séparé, permettant au thread principal (généralement l'interface utilisateur) de fonctionner sans blocage ni ralentissement.</p>
 
@@ -20,7 +18,7 @@ translation_of: Web/API/Web_Workers_API
 
 <p>Les données sont envoyées entre les workers et le thread principal au moyen d'un sytème de messages — des deux côtés les messages sont envoyés en utilisant la méthode <code>postMessage()</code>, et la réponse leur parvient au moyen du gestionnaire d'événement <code>onmessage</code> (le message est contenu dans l'attribut <code>data</code> de l'événement {{event("Message")}}.) Les données sont copiées plutôt que partagées.</p>
 
-<p>Les workers peuvent à leur tour engendrer de nouveaux workers, aussi longtemps que ces workers partagent la même origine que la page parente.  De plus, les workers peuvent utiliser <a class="internal" href="/fr/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a> pour les E/S réseau, à l'exception que les attributs <code>responseXML</code> et <code>channel</code> de <code>XMLHttpRequest</code> retournent toujours <code>null</code>.</p>
+<p>Les workers peuvent à leur tour engendrer de nouveaux workers, aussi longtemps que ces workers partagent la même origine que la page parente.  De plus, les workers peuvent utiliser <a href="/fr/docs/Web/API/XMLHttpRequest"><code>XMLHttpRequest</code></a> pour les E/S réseau, à l'exception que les attributs <code>responseXML</code> et <code>channel</code> de <code>XMLHttpRequest</code> retournent toujours <code>null</code>.</p>
 
 <p>En plus des workers dédiés, il y a d'autres types de worker :</p>
 
@@ -31,8 +29,8 @@ translation_of: Web/API/Web_Workers_API
  <li>Les <a href="/fr/docs/Web/API/Web_Audio_API#Audio_Workers">Audio Workers</a> donne la possibilité d'effectuer directement dans le contexte d'un worker web un traitement audio scripté.</li>
 </ul>
 
-<div class="blockIndicator note">
-<p>Remarque: Selon les <a href="https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2">Spécifications de Web Worker</a>, les erreurs dans les workers ne devraient pas déborder (voir {{bug(1188141)}}). Cela a été implémenté dans Firefox 42.</p>
+<div class="note">
+<p><strong>Note :</strong> Selon les <a href="https://html.spec.whatwg.org/multipage/workers.html#runtime-script-errors-2">Spécifications de Web Worker</a>, les erreurs dans les workers ne devraient pas déborder (voir {{bug(1188141)}}). Cela a été implémenté dans Firefox 42.</p>
 </div>
 
 <h2 id="Les_interfaces_Web_Worker">Les interfaces Web Worker</h2>

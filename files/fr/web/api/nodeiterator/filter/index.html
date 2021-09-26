@@ -16,12 +16,12 @@ translation_of: Web/API/NodeIterator/filter
 
 <p>Lors de la création du {{domxref("NodeIterator")}}, l'objet filtre est transmis en 3ème paramètre et l'objet méthode <code>acceptNode(<em>node</em>)</code> est appelé sur chaque noeud pour déterminer s'il doit ou non l'accepter. Cette fonction doit renvoyer la constante <code>NodeFilter.FILTER_ACCEPT</code> quand le noeud doit être accepté et <code>NodeFilter.FILTER_REJECT</code> s'il doit être rejeté.</p>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
 <pre class="syntaxbox"><em>nodeFilter</em> = <em>nodeIterator</em>.filter;
 </pre>
 
-<h2 id="Example" name="Example">Exemple</h2>
+<h2 id="Example">Exemple</h2>
 
 <pre class="brush: js">var nodeIterator = document.createNodeIterator(
     document.body,

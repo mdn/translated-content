@@ -12,32 +12,31 @@ translation_of: Web/API/Node/isSupported
 
 <p>La méthode <code><strong>Node.isSupported()</strong></code> renvoie une marque  {{domxref("Boolean","booléenne")}} contenant le résultat du test par lequel est vérifié si une implémentation DOM prend en charge une fonctionnalité spécifique et si celle-ci est supportée par un noeud spécifique.</p>
 
-<h3 id="Syntaxe" name="Syntaxe">Syntaxe</h3>
+<h3 id="Syntaxe">Syntaxe</h3>
 
 <pre class="syntaxbox"><em>boolValue</em> = <em>element</em>.isSupported(<em>feature</em>, <em>version</em>)</pre>
 
+<h3 id="Paramètres">Paramètres</h3>
+
 <dl>
- <dt>
- <h3 id="Paramètres">Paramètres</h3>
- </dt>
  <dt><code>feature</code></dt>
- <dd>est une  {{domxref("DOMString")}} (<em>chaîne de caractères</em>) contenant le nom de la fonctionnalité à tester. C'est le même nom qui peut être passé à la méthode <code>hasFeature</code> de <a href="https://developer.mozilla.org/fr/docs/Web/API/Document/implementation">DOMImplementation</a>. Les valeurs possibles définies dans la spécification DOM core sont listées dans la section <a class="external" href="http://www.w3.org/TR/DOM-Level-2-Core/introduction.html#ID-Conformance">Conformance</a> de DOM Level 2.</dd>
+ <dd>est une  {{domxref("DOMString")}} (<em>chaîne de caractères</em>) contenant le nom de la fonctionnalité à tester. C'est le même nom qui peut être passé à la méthode <code>hasFeature</code> de <a href="/fr/docs/Web/API/Document/implementation">DOMImplementation</a>. Les valeurs possibles définies dans la spécification DOM core sont listées dans la section <a href="http://www.w3.org/TR/DOM-Level-2-Core/introduction.html#ID-Conformance">Conformance</a> de DOM Level 2.</dd>
  <dt><code>version</code></dt>
  <dd>est une  {{domxref("DOMString")}} (<em>chaîne de caractères</em>) contenant le numéro de version de la fonctionnalité à tester. En DOM Level 2, première version, il s'agit de la chaîne « <code>2.0</code> ». Si la version n'est pas spécifiée, la gestion de n'importe quelle version de la fonctionnalité suffira pour que soit renvoyée la valeur <code>true</code>.</dd>
 </dl>
 
-<h2 id="Exemple" name="Exemple">Exemple</h2>
+<h2 id="Exemple">Exemple</h2>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>div</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>doc<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>div</span><span class="punctuation token">&gt;</span></span>
+<pre class="brush: html">&lt;div id="doc"&gt;
+&lt;/div&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span><span class="punctuation token">&gt;</span></span><span class="language-javascript script token">
- <span class="comment token">// Obtenir un élément et vérifier pour voir s'il est pris en charge par les modules HTML DOM2.</span>
- <span class="keyword token">var</span> main <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">'doc'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
- <span class="keyword token">var</span> output <span class="operator token">=</span> main<span class="punctuation token">.</span><span class="function token">isSupported</span><span class="punctuation token">(</span><span class="string token">'HTML'</span><span class="punctuation token">,</span> <span class="string token">'2.0'</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-</span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span></code></pre>
+&lt;script&gt;
+ // Obtenir un élément et vérifier pour voir s'il est pris en charge par les modules HTML DOM2.
+ var main = document.getElementById('doc');
+ var output = main.isSupported('HTML', '2.0');
+&lt;/script&gt;</pre>
 
-<h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Spécifications</h2>
+<h2 id="Sp.C3.A9cification">Spécifications</h2>
 
 <p> </p>
 

@@ -10,7 +10,7 @@ translation_of: Web/API/BatteryManager/chargingTime
 <p>Indique le temps, en secondes, qu'il reste jusqu'à que la batterie soit rechargée.</p>
 
 <div class="note">
-<p>Même si le temps retourné devrait être précis à la seconde, les navigateurs arrondissent cette valeur (typiquement à 15 minutes près) afin de limiter l'identification et le suivi des utilisateurs.</p>
+<p><strong>Note :</strong> Même si le temps retourné devrait être précis à la seconde, les navigateurs arrondissent cette valeur (typiquement à 15 minutes près) afin de limiter l'identification et le suivi des utilisateurs.</p>
 </div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
@@ -19,7 +19,7 @@ translation_of: Web/API/BatteryManager/chargingTime
 
 <p><code>time</code> est le temps restant en secondes jusqu'à que <code><em>battery</em></code>, qui est un objet de type {{domxref("BatteryManager")}}, soit rechargée, ou vaut 0 si la batterie est déjà rechargée. Si la batterie est en décharge, la variable vaut <code><a href="/en-US/docs/JavaScript/Reference/Global_Objects/Infinity">Infinity</a></code>.</p>
 
-<h2 id="Example" name="Example">Exemple</h2>
+<h2 id="Example">Exemple</h2>
 
 <h3 id="Code_HTML">Code HTML</h3>
 
@@ -28,7 +28,7 @@ translation_of: Web/API/BatteryManager/chargingTime
 
 <h3 id="Code_JavaScript">Code JavaScript</h3>
 
-<pre class="brush: js; highlight:[3]">navigator.getBattery().then(function(battery) {
+<pre class="brush: js">navigator.getBattery().then(function(battery) {
 
    var time = battery.chargingTime;
 

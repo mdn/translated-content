@@ -17,7 +17,7 @@ translation_of: Web/API/XMLHttpRequest/send
 ---
 <div>{{APIRef('XMLHttpRequest')}}</div>
 
-<p><span class="seoSummary">La méthode  {{domxref("XMLHttpRequest")}} <code><strong>send()</strong></code> envoie la requête au serveur.  Si la requête est asynchrone (elle l'est par défaut), la méthode envoie un retour dés que la requête est partie et le résultat est intégré en utilisant les évènements.</span>En cas de requête synchrone, elle ne renvoie rien tant que la réponse n'est pas retournée.</p>
+<p>La méthode  {{domxref("XMLHttpRequest")}} <code><strong>send()</strong></code> envoie la requête au serveur.  Si la requête est asynchrone (elle l'est par défaut), la méthode envoie un retour dés que la requête est partie et le résultat est intégré en utilisant les évènements. En cas de requête synchrone, elle ne renvoie rien tant que la réponse n'est pas retournée.</p>
 
 <p><code>send()</code> accepte un paramètre optionnel qui qui vous permet de spécifier le corps de la requête; c'est principalement utilisé pour les requêtes comme  {{HTTPMethod("PUT")}}. Si la méthode est {{HTTPMethod("GET")}} ou {{HTTPMethod("HEAD")}}, le paramètre <code>body</code> est ignoré et le corps de la requête est fixé à <code>null</code>.</p>
 
@@ -25,7 +25,7 @@ translation_of: Web/API/XMLHttpRequest/send
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox notranslate"><var>XMLHttpRequest</var>.send(<var>body</var>)
+<pre class="syntaxbox"><var>XMLHttpRequest</var>.send(<var>body</var>)
 </pre>
 
 <h3 id="Paramètres">Paramètres</h3>
@@ -70,7 +70,7 @@ translation_of: Web/API/XMLHttpRequest/send
 
 <h2 id="Exemple_GET">Exemple: GET</h2>
 
-<pre class="brush: js notranslate"><code>var xhr = new XMLHttpRequest();
+<pre class="brush: js"><code>var xhr = new XMLHttpRequest();
 xhr.open('GET', '/server', true);
 
 xhr.onload = function () {
@@ -86,7 +86,7 @@ xhr.send(null);
 
 <h2 id="Example_POST">Example: POST</h2>
 
-<pre class="brush: js notranslate"><code>var xhr = new XMLHttpRequest();
+<pre class="brush: js"><code>var xhr = new XMLHttpRequest();
 xhr.open("POST", '/server', true);
 
 //Envoie les informations du header adaptées avec la requête
@@ -128,6 +128,6 @@ xhr.send("foo=bar&amp;lorem=ipsum");
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest">L'utilisation de XMLHttpRequest</a></li>
+ <li><a href="/fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest">L'utilisation de XMLHttpRequest</a></li>
  <li><a href="/en-US/docs/Web/API/XMLHttpRequest/HTML_in_XMLHttpRequest">HTML dans XMLHttpRequest</a></li>
 </ul>

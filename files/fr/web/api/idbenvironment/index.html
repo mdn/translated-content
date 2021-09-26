@@ -11,7 +11,7 @@ translation_of: Web/API/IDBEnvironment
 <div>{{APIRef}}</div>
 
 <div class="warning">
-<p><strong>Important :</strong> À partir de Firefox 52, la propriété définie dans ce <em>mixin</em> a été déplacée vers {{domxref("WindowOrWorkerGlobalScope")}} et d'autres navigateurs implémenteront également cette décision. Voir {{domxref("WindowOrWorkerGlobalScope")}} pour des informations à jour.</p>
+<p><strong>Attention :</strong> À partir de Firefox 52, la propriété définie dans ce <em>mixin</em> a été déplacée vers {{domxref("WindowOrWorkerGlobalScope")}} et d'autres navigateurs implémenteront également cette décision. Voir {{domxref("WindowOrWorkerGlobalScope")}} pour des informations à jour.</p>
 </div>
 
 <p>L'utilitaire <strong><code>IDBEnvironment</code></strong>, lié à l'interface <a href="/fr/docs/Web/API/API_IndexedDB">IndexedDB API</a>, contient la propriété <code>indexedDB</code> qui permet d'accéder aux fonctionnalités de l'API IndexedDB. C'est l'interface de haut niveau implémentée par les objets {{domxref("window")}} et {{domxref("Worker")}}.</p>
@@ -29,7 +29,7 @@ translation_of: Web/API/IDBEnvironment
 
 <p>Dans le fragment de code suivant, on crée une requête asynchrone sur une base de données et on utilise le gestionnaire d'évènements <code>onsuccess</code> de la requête :</p>
 
-<pre class="brush: js;highlight:[3]">var db;
+<pre class="brush: js">var db;
 function openDB() {
  var DBOpenRequest = window.indexedDB.open("toDoList");
  DBOpenRequest.onsuccess = function(e) {
@@ -74,5 +74,5 @@ function openDB() {
  <li>Définir un intervalle de clés : {{domxref("IDBKeyRange")}}</li>
  <li>Récupérer et modifier les données : {{domxref("IDBObjectStore")}}</li>
  <li>Utiliser les curseurs {{domxref("IDBCursor")}}</li>
- <li>Exemple de référence : <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="https://mdn.github.io/to-do-notifications/">exemple <em>live</em></a>).</li>
+ <li>Exemple de référence : <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">exemple <em>live</em></a>).</li>
 </ul>

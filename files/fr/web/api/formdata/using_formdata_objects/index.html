@@ -12,7 +12,7 @@ tags:
 translation_of: Web/API/FormData/Using_FormData_Objects
 original_slug: Web/API/FormData/Utilisation_objets_FormData
 ---
-<p class="summary">L’objet <code><a href="/en-US/docs/Web/API/FormData">FormData</a></code> vous permet de compiler un ensemble de paires clé/valeur à envoyer à l’aide de l’API <code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code>. Il est principalement destiné à l’envoi de données de formulaire, mais il peut également être utilisé indépendamment des formulaires pour transmettre des données indexées. Le format des données transmises est le même que celui qu’utiliserait la méthode {{domxref("HTMLFormElement.submit","submit()")}} du formulaire pour envoyer les données si l’encodage de ce dernier était défini sur <code>multipart/form-data</code>.</p>
+<p>L’objet <code><a href="/en-US/docs/Web/API/FormData">FormData</a></code> vous permet de compiler un ensemble de paires clé/valeur à envoyer à l’aide de l’API <code><a href="/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a></code>. Il est principalement destiné à l’envoi de données de formulaire, mais il peut également être utilisé indépendamment des formulaires pour transmettre des données indexées. Le format des données transmises est le même que celui qu’utiliserait la méthode {{domxref("HTMLFormElement.submit","submit()")}} du formulaire pour envoyer les données si l’encodage de ce dernier était défini sur <code>multipart/form-data</code>.</p>
 
 <h2 id="Création_intégrale_d’un_objet_FormData">Création intégrale d’un objet FormData</h2>
 
@@ -37,9 +37,11 @@ request.open("POST", "http://foo.com/submitform.php");
 request.send(formData);
 </pre>
 
-<div class="note"><strong>Remarque :</strong> les champs « userfile » et « webmasterfile » contiennent tous deux un fichier. Le numéro attribué au champ « accountnum » est immédiatement converti en chaîne par la méthode <a href="/en/DOM/XMLHttpRequest/FormData#append()" title="en/XMLHttpRequest/FormData#append()"><code>FormData.append()</code></a> (la valeur du champ peut être un objet {{ domxref("Blob") }}, {{ domxref("File") }} ou une chaîne : <strong>s’il ne s’agit ni d’un objet Blob, ni d’un objet File, la valeur est convertie en chaîne</strong>).</div>
+<div class="note">
+  <p><strong>Note :</strong> Les champs « userfile » et « webmasterfile » contiennent tous deux un fichier. Le numéro attribué au champ « accountnum » est immédiatement converti en chaîne par la méthode <a href="/en/DOM/XMLHttpRequest/FormData#append()"><code>FormData.append()</code></a> (la valeur du champ peut être un objet {{ domxref("Blob") }}, {{ domxref("File") }} ou une chaîne : <strong>s’il ne s’agit ni d’un objet Blob, ni d’un objet File, la valeur est convertie en chaîne</strong>).</p>
+</div>
 
-<p>Dans cet exemple, une instance <code>FormData</code> contenant les valeurs des champs « username », « accountnum », « userfile » et « webmasterfile » est créée, puis la méthode <code>XMLHttpRequest</code> <a href="/en/DOM/XMLHttpRequest#send()" title="en/XMLHttpRequest#send()"><code>send()</code></a> est utilisée pour envoyer les données du formulaire. Le champ « webmasterfile » est un objet {{domxref("Blob")}}. Un objet <code>Blob</code> représente un objet-fichier de données brutes immuables. Les Blobs représentent des données qui ne sont pas nécessairement dans un format JavaScript natif. L’interface {{ domxref("File") }} se base sur l’objet <code>Blob</code>, elle en hérite les fonctionnalités et les étend pour prendre en charge les fichiers du système de l’utilisateur. Pour construire un <code>Blob</code>, vous pouvez invoquer le {{domxref("Blob.Blob","constructeur Blob()")}}.</p>
+<p>Dans cet exemple, une instance <code>FormData</code> contenant les valeurs des champs « username », « accountnum », « userfile » et « webmasterfile » est créée, puis la méthode <code>XMLHttpRequest</code> <a href="/en/DOM/XMLHttpRequest#send()"><code>send()</code></a> est utilisée pour envoyer les données du formulaire. Le champ « webmasterfile » est un objet {{domxref("Blob")}}. Un objet <code>Blob</code> représente un objet-fichier de données brutes immuables. Les Blobs représentent des données qui ne sont pas nécessairement dans un format JavaScript natif. L’interface {{ domxref("File") }} se base sur l’objet <code>Blob</code>, elle en hérite les fonctionnalités et les étend pour prendre en charge les fichiers du système de l’utilisateur. Pour construire un <code>Blob</code>, vous pouvez invoquer le {{domxref("Blob.Blob","constructeur Blob()")}}.</p>
 
 <h2 id="Récupération_d’un_objet_FormData_dans_un_formulaire_HTML">Récupération d’un objet FormData dans un formulaire HTML</h2>
 
@@ -109,7 +111,7 @@ form.addEventListener('submit', function(ev) {
 </pre>
 
 <div class="note">
-<p><strong>Remarque </strong>: si vous passez une référence dans le formulaire, la méthode spécifiée dans ce dernier sera utilisée au lieu de celle définie dans l’appel de la méthode open().</p>
+<p><strong>Note :</strong> Si vous passez une référence dans le formulaire, la méthode spécifiée dans ce dernier sera utilisée au lieu de celle définie dans l’appel de la méthode open().</p>
 </div>
 
 <p>Vous pouvez également ajouter un objet {{ domxref("File") }} ou {{ domxref("Blob") }} directement dans l’objet {{ domxref("FormData") }} :</p>
@@ -134,7 +136,7 @@ $.ajax({
 
 <h2 id="Envoi_de_formulaires_et_de_fichiers_via_AJAX_sans_objet_FormData">Envoi de formulaires et de fichiers via AJAX <em>sans</em> objet <code>FormData</code></h2>
 
-<p>Si vous voulez en savoir plus sur la sérialisation des données  et l’envoi d’un formulaire via <a href="/en-US/docs/AJAX" title="/en-US/docs/AJAX">AJAX</a> <em>sans</em> utiliser d’objets FormData, consultez <a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files" title="/en-US/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files">ce paragraph</a>e.</p>
+<p>Si vous voulez en savoir plus sur la sérialisation des données  et l’envoi d’un formulaire via <a href="/en-US/docs/AJAX">AJAX</a> <em>sans</em> utiliser d’objets FormData, consultez <a href="/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files">ce paragraph</a>e.</p>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 

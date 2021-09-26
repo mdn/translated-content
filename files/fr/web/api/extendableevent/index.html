@@ -21,7 +21,7 @@ browser-compat: api.ExtendableEvent
 <p>Si <a href="/fr/docs/Web/API/ExtendableEvent/waitUntil"><code>waitUntil()</code></a> est appelé en dehors du gestionnaire <code>ExtendableEvent</code>, le navigateur doit lever une exception <code>InvalidStateError</code> ; notez que plusieurs appels vont s'empiler, et que les promesses de résultat seront ajoutées à la liste des <a href="https://slightlyoff.github.io/ServiceWorker/spec/service_worker/index.html#dfn-extend-lifetime-promises">promesses à vie étendue</a>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Le comportement décrit dans le paragraphe précédent a été corrigé dans Firefox 43 (voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1180274">le bug 1180274</a>).</p>
+<p><strong>Note :</strong> Le comportement décrit dans le paragraphe précédent a été corrigé dans Firefox 43 (voir <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1180274">le bug 1180274</a>).</p>
 </div>
 
 <p>Cette interface hérite de l'interface <a href="/fr/docs/Web/API/Event"><code>Event</code></a>.</p>
@@ -29,7 +29,7 @@ browser-compat: api.ExtendableEvent
 <p>{{InheritanceDiagram(700, 60, 20)}}</p>
 
 <div class="note">
-<p><strong>Note</strong>: Cette interface est disponible seulement quand la portée globale est <a href="/fr/docs/Web/API/ServiceWorkerGlobalScope"><code>ServiceWorkerGlobalScope</code></a>. Elle n'est pas disponible quand c'est un objet <a href="/fr/docs/Web/API/Window"><code>Window</code></a> ou un autre type de worker.</p>
+<p><strong>Note :</strong> Cette interface est disponible seulement quand la portée globale est <a href="/fr/docs/Web/API/ServiceWorkerGlobalScope"><code>ServiceWorkerGlobalScope</code></a>. Elle n'est pas disponible quand c'est un objet <a href="/fr/docs/Web/API/Window"><code>Window</code></a> ou un autre type de worker.</p>
 </div>
 
 <h2 id="constructor">Constructeur</h2>
@@ -85,7 +85,9 @@ self.addEventListener('install', function(event) {
   );
 });</pre>
 
-<div class="note"><strong>Important</strong> : Au moment du chargement des ressources, il est très important d'utiliser <code>{mode: 'no-cors'}</code> s'il y a une chance que la ressource soit servie depuis un serveur qui ne supporte pas le <a href="http://en.wikipedia.org/wiki/Cross-origin_resource_sharing">CORS</a>. Dans cet exemple, <a href="https://www.chromium.org">www.chromium.org</a> ne prend pas en charge le CORS.</div>
+<div class="warning">
+  <p><strong>Attention :</strong> Au moment du chargement des ressources, il est très important d'utiliser <code>{mode: 'no-cors'}</code> s'il y a une chance que la ressource soit servie depuis un serveur qui ne supporte pas le <a href="http://en.wikipedia.org/wiki/Cross-origin_resource_sharing">CORS</a>. Dans cet exemple, <a href="https://www.chromium.org">www.chromium.org</a> ne prend pas en charge le CORS.</p>
+</div>
 
 <h2 id="specifications">Spécifications</h2>
 

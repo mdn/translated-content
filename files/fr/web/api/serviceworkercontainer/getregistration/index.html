@@ -9,7 +9,7 @@ translation_of: Web/API/ServiceWorkerContainer/getRegistration
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox notranslate"><em>serviceWorkerContainer</em>.getRegistration(<em>scope</em>).then(function(<em>serviceWorkerRegistration</em>) { ... });</pre>
+<pre class="syntaxbox"><em>serviceWorkerContainer</em>.getRegistration(<em>scope</em>).then(function(<em>serviceWorkerRegistration</em>) { ... });</pre>
 
 <h3 id="Paramètres">Paramètres</h3>
 
@@ -24,7 +24,7 @@ translation_of: Web/API/ServiceWorkerContainer/getRegistration
 
 <h2 id="Exemple">Exemple</h2>
 
-<pre class="brush: js notranslate">navigator.serviceWorker.getRegistration('/app').then(function(registration) {
+<pre class="brush: js">navigator.serviceWorker.getRegistration('/app').then(function(registration) {
   if(registration){
     document.querySelector('#status').textContent = 'ServiceWorkerRegistration found.';
   }

@@ -12,9 +12,9 @@ translation_of: Web/API/Window
 ---
 <p>{{APIRef}}</p>
 
-<p><span class="seoSummary">L'objet <code>window</code> représente une fenêtre contenant un document DOM ; la propriété <code>document</code> pointe vers le <a href="/fr-FR/docs/DOM/document">document DOM</a> chargé dans cette fenêtre.</span> Une fenêtre pour un document donné peut être obtenue en utilisant la propriété {{Domxref("document.defaultView")}}.</p>
+<p>L'objet <code>window</code> représente une fenêtre contenant un document DOM ; la propriété <code>document</code> pointe vers le <a href="/fr-FR/docs/DOM/document">document DOM</a> chargé dans cette fenêtre. Une fenêtre pour un document donné peut être obtenue en utilisant la propriété {{Domxref("document.defaultView")}}.</p>
 
-<p>Cette section fournit une brève référence pour toutes les méthodes, propriétés et événements disponibles via l'objet DOM <code>window</code>. L'objet <code>window</code> implémente l'interface <code>Window</code>, qui à son tour hérite de l'interface <code><a href="http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView">AbstractView</a></code>. Certaines fonctions globales supplémentaires, espaces de noms, objets, interfaces et constructeurs, non typiquement associés à la fenêtre, mais disponibles sur celle-ci, sont répertoriés dans la <a href="/fr-FR/docs/JavaScript/Reference">Référence JavaScript</a> et la <a href="/fr-FR/docs/Web/API/Document_Object_Model" title="/fr-FR/docs/Web/API/Document_Object_Model">Référence DOM</a>.</p>
+<p>Cette section fournit une brève référence pour toutes les méthodes, propriétés et événements disponibles via l'objet DOM <code>window</code>. L'objet <code>window</code> implémente l'interface <code>Window</code>, qui à son tour hérite de l'interface <code><a href="http://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView">AbstractView</a></code>. Certaines fonctions globales supplémentaires, espaces de noms, objets, interfaces et constructeurs, non typiquement associés à la fenêtre, mais disponibles sur celle-ci, sont répertoriés dans la <a href="/fr-FR/docs/JavaScript/Reference">Référence JavaScript</a> et la <a href="/fr-FR/docs/Web/API/Document_Object_Model">Référence DOM</a>.</p>
 
 <p>Dans un navigateur utilisant des onglets, comme Firefox, chaque onglet contient son propre objet <code>window</code> (et si vous écrivez une extension, la fenêtre du navigateur elle-même est un objet <code>window</code> séparé — consultez <a href="/fr/docs/Mozilla/Working_with_windows_in_chrome_code#Fen.C3.AAtres_de_contenu">Travailler avec des fenêtres dans du code chrome</a> pour plus d'informations). C'est-à-dire que l'objet <code>window</code> n'est pas partagé entre les onglets dans la même fenêtre. Certaines méthodes, notamment {{ Domxref("window.resizeTo") }} et {{ Domxref("window.resizeBy") }}, s'appliquent à la fenêtre entière et non à l'onglet spécifique auquel l'objet <code>window</code> appartient. En général, ce qui ne peut raisonnablement pas concerner un onglet se rapporte à la fenêtre à la place.</p>
 
@@ -36,7 +36,7 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.controllers")}}{{non-standard_inline}}{{ReadOnlyInline}}</dt>
  <dd>Renvoie les objets du contrôleur XUL pour la fenêtre chrome en cours.</dd>
  <dt>{{domxref("Window.customElements")}}{{ReadOnlyInline}}</dt>
- <dd>renvoie une référence à l'objet {{domxref("CustomElementRegistry")}}, qui peut être utilisée pour enregistrer de nouveaux <a href="https://developer.mozilla.org/fr-FR/docs/Web/Web_Components/Using_custom_elements">éléments personnalisés</a> et obtenir des informations à propos d'éléments personnalisés précédemment enregistrés.</dd>
+ <dd>renvoie une référence à l'objet {{domxref("CustomElementRegistry")}}, qui peut être utilisée pour enregistrer de nouveaux <a href="/fr-FR/docs/Web/Web_Components/Using_custom_elements">éléments personnalisés</a> et obtenir des informations à propos d'éléments personnalisés précédemment enregistrés.</dd>
  <dt>{{domxref("Window.crypto")}} {{readOnlyInline}}</dt>
  <dd>Retourne l'objet crypto du navigateur.</dd>
  <dt>{{domxref("Window.defaultStatus")}} {{Obsolete_inline("gecko23")}}</dt>
@@ -183,102 +183,55 @@ translation_of: Web/API/Window
  <dd>Renvoie l'origine de l'objet global, sérialisé comme une chaîne. (Cela ne semble pas encore être implémenté dans aucun navigateur.)</dd>
 </dl>
 
-<h2 id="M.C3.A9thodes" name="M.C3.A9thodes">Méthodes</h2>
+<h2 id="M.C3.A9thodes">Méthodes</h2>
 
 <p><em>Cette interface hérite des méthodes de l'interface {{domxref("EventTarget")}} et implémente les méthodes de {{domxref("WindowOrWorkerGlobalScope")}} et {{domxref("EventTarget")}}.</em></p>
 
 <dl>
  <dt>{{domxref("Window.alert()")}}</dt>
  <dd>Affiche une boîte de message d'alerte.</dd>
-</dl>
-
-<p><span class="comment">base64 func <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=287112" rel="freelink">https://bugzilla.mozilla.org/show_bug.cgi?id=287112</a> (see last comments) <a class="link-https" href="https://bugzilla.mozilla.org/show_bug.cgi?id=123003" rel="freelink">https://bugzilla.mozilla.org/show_bug.cgi?id=123003</a> <a class="external" href="http://lxr.mozilla.org/seamonkey/source/dom/src/base/nsGlobalWindow.cpp#4946" rel="freelink">http://lxr.mozilla.org/seamonkey/sou...indow.cpp#4946</a></span></p>
-
-<dl>
  <dt>{{domxref("Window.back()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
  <dd>Recule d'une page dans l'historique de la fenêtre.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.blur()")}}</dt>
  <dd>Déplace la focalisation hors de la fenêtre.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.cancelAnimationFrame()")}} {{experimental_inline}}</dt>
  <dd>Vous permet d'annuler un rappel précédemment planifié avec {{domxref("Window.requestAnimationFrame")}}.</dd>
  <dt>{{domxref("Window.cancelIdleCallback()")}} {{experimental_inline}}</dt>
  <dd>Vous permet d'annuler un rappel précédemment planifié avec {{domxref("Window.requestIdleCallback")}}.</dd>
  <dt>{{domxref("Window.captureEvents()")}} {{Deprecated_inline}}</dt>
  <dd>Enregistre la fenêtre pour qu'elle capture tous les évènements du type spécifié.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.clearImmediate()")}}</dt>
  <dd>Annule l'exécution répétée définie en utilisant <code>setImmediate</code>.</dd>
  <dt>{{domxref("Window.close()")}}</dt>
  <dd>Ferme la fenêtre en cours.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.confirm()")}}</dt>
  <dd>Affiche une boîte de dialogue avec un message auquel l'utilisateur doit répondre.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.disableExternalCapture()")}} {{obsolete_inline(24)}}</dt>
  <dd>{{todo("NeedsContents")}}</dd>
  <dt>{{domxref("Window.dispatchEvent()")}}</dt>
  <dd>Utilisé pour déclencher un évènement.</dd>
  <dt>{{domxref("Window.dump()")}} {{Non-standard_inline}}</dt>
  <dd>Écrit un message à la console.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.enableExternalCapture()")}} {{obsolete_inline(24)}}</dt>
  <dd>{{todo("NeedsContents")}}</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.find()")}}</dt>
  <dd>Recherche la chaîne de caractères donnée dans une fenêtre.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.focus()")}}</dt>
  <dd>Donne la focalisation à la fenêtre en cours.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.forward()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
  <dd>Avance la fenêtre d'un document dans l'historique.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.getAttention()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
  <dd>Fait flasher l'icône de l'application.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.getAttentionWithCycleCount()")}}</dt>
  <dd>{{todo("NeedsContents")}}</dd>
  <dt>{{domxref("Window.getComputedStyle()")}}</dt>
  <dd>Récupère un style calculé pour l'élément donné. Un style calculé indique les valeurs de toutes les propriétés CSS de l'élément.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.getDefaultComputedStyle()")}} {{Non-standard_inline}}</dt>
  <dd>Récupère le style calculé par défaut pour l'élément indiqué, en ignorant les feuilles de style d'auteur.</dd>
  <dt>{{domxref("Window.getSelection()")}}</dt>
  <dd>Renvoie l'objet de sélection représentant les éléments sélectionnés.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.home()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
  <dd>Renvoie le navigateur à la page d'accueil.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.matchMedia()")}} {{gecko_minversion_inline("6.0")}}</dt>
  <dd>Renvoie un objet {{domxref("MediaQueryList")}} représentant la chaîne d'interrogation de média spécifiée.</dd>
  <dt>{{domxref("Window.maximize()")}}</dt>
@@ -287,90 +240,42 @@ translation_of: Web/API/Window
  <dd>Minimize la fenêtre.</dd>
  <dt>{{domxref("Window.moveBy()")}}</dt>
  <dd>Déplace la fenêtre en cours de la quantité indiquée.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.moveTo()")}}</dt>
  <dd>Déplace la fenêtre vers les coordonnées spécifiées.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.open()")}}</dt>
  <dd>Ouvre une nouvelle fenêtre.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.openDialog()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
  <dd>Ouvre une nouvelle fenêtre de dialogue.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.postMessage()")}}</dt>
  <dd>Fournit un moyen sécurisé pour une fenêtre d'envoyer une chaîne de données à une autre fenêtre, qui n'a pas besoin d'être dans le même domaine que la première.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.prompt()")}}</dt>
  <dd>Ouvre la boîte de dialogue d'impression du document en cours.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.prompt()")}}</dt>
  <dd>Renvoie le texte saisi par l'utilisateur dans une boîte de dialogue à invite.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.releaseEvents()")}} {{Non-standard_inline}} {{Deprecated_inline}}</dt>
  <dd>Annule la capture des évènements d'un certain type par la fenêtre.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.requestAnimationFrame()")}} {{gecko_minversion_inline("2.0")}}</dt>
  <dd>Indique au navigateur qu'une animation est en cours, en demandant au navigateur de planifier une redessinage de la fenêtre lors de l'image d'animation suivante.</dd>
  <dt>{{domxref("Window.requestIdleCallback()")}}  {{experimental_inline}}</dt>
  <dd>Active la planification de tâches pendant les périodes d'inactivité du navigateur.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.resizeBy()")}}</dt>
  <dd>Redimensionne la fenêtre en cours d'une certaine quantité.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.resizeTo()")}}</dt>
  <dd>Redimensionne dynamiquement la fenêtre.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.restore()")}} {{Non-standard_inline}} {{obsolete_inline}}</dt>
  <dd>{{todo("NeedsContents")}}</dd>
  <dt>{{domxref("Window.routeEvent()")}} {{obsolete_inline(24)}}</dt>
  <dd>{{todo("NeedsContents")}}</dd>
  <dt>{{domxref("Window.scroll()")}}</dt>
  <dd>Fait défiler la fenêtre à un endroit particulier dans le document.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.scrollBy()")}}</dt>
  <dd>Fait défiler le document dans la fenêtre de la quantité indiquée.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.scrollByLines()")}} {{Non-standard_inline}}</dt>
  <dd>Fait défiler le document du nombre de lignes indiqué.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.scrollByPages()")}} {{Non-standard_inline}}</dt>
  <dd>Fait défiler le document en cours du nombre de pages indiqué.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.scrollTo()")}}</dt>
  <dd>Fait défiler à un jeu de coordonnées particulier dans le document.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.setCursor()")}} {{Non-standard_inline}} (top-level XUL windows only)</dt>
  <dd>Change le curseur pour la fenêtre en cours.</dd>
  <dt>{{domxref("Window.setImmediate()")}}</dt>
@@ -379,19 +284,15 @@ translation_of: Web/API/Window
  <dd>Inverse la possibilité pour un utilisateur de redimensionner une fenêtre.</dd>
  <dt>{{domxref("Window.sizeToContent()")}} {{Non-standard_inline}}</dt>
  <dd>Dimensionne la fenêtre en fonction de son contenu.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.stop()")}}</dt>
  <dd>Cette méthode arrête le chargement de la fenêtre.</dd>
-</dl>
-
-<dl>
  <dt>{{domxref("Window.updateCommands()")}} {{Non-standard_inline}}</dt>
  <dd>Met à jour l'état des commandes de la fenêtre chrome en cours (IU).</dd>
- <dt>
- <h3 id="Méthodes_implémentées_depuis_ailleurs">Méthodes implémentées depuis ailleurs</h3>
- </dt>
+</dl>
+
+<h3 id="Méthodes_implémentées_depuis_ailleurs">Méthodes implémentées depuis ailleurs</h3>
+
+<dl>
  <dt>{{domxref("EventTarget.addEventListener()")}}</dt>
  <dd>Enregistre un gestionnaire d'événement pour un type d'événement spécifique dans la fenêtre.</dd>
  <dt>{{domxref("WindowOrWorkerGlobalScope.atob()")}}</dt>
@@ -412,14 +313,16 @@ translation_of: Web/API/Window
  <dd>Planifie une fonction à exécuter à chaque fois qu'un nombre donné de millisecondes s'est écoulé.</dd>
  <dt>{{domxref("WindowOrWorkerGlobalScope.setTimeout()")}}</dt>
  <dd>Planifie une fonction à exécuter dans un laps de temps donné.</dd>
- <dt>
- <h3 id="Méthodes_obsolètes">Méthodes obsolètes</h3>
- </dt>
+</dl>
+
+<h3 id="Méthodes_obsolètes">Méthodes obsolètes</h3>
+
+<dl>
  <dt>{{domxref("Window.showModalDialog()")}} {{obsolete_inline}}</dt>
  <dd>Affiche un dialogue modal. <strong>Cette méthode a été complètement supprimée dans Chrome 43, et dans Firefox 55</strong>.</dd>
 </dl>
 
-<h2 id=".C3.89v.C3.A8nements" name=".C3.89v.C3.A8nements">Gestionnaires d'évènements</h2>
+<h2 id=".C3.89v.C3.A8nements">Gestionnaires d'évènements</h2>
 
 <p>Ce sont des propriétés de l'objet window qui peuvent être définies pour établir des gestionnaires d'événements pour les différentes choses qui peuvent se produire dans la fenêtre et qui pourraient être intéressantes.</p>
 
@@ -631,7 +534,7 @@ translation_of: Web/API/Window
 
 <h2 id="Constructeurs">Constructeurs</h2>
 
-<p>Voir aussi les <a href="/fr-FR/docs/DOM/DOM_Reference" title="/en-US/docs/DOM/DOM_Reference">Interfaces DOM</a>.</p>
+<p>Voir aussi les <a href="/fr-FR/docs/DOM/DOM_Reference">Interfaces DOM</a>.</p>
 
 <dl>
  <dt>{{domxref("DOMParser")}}</dt>
@@ -647,7 +550,7 @@ translation_of: Web/API/Window
  <dt>{{domxref("Window.XMLSerializer")}}</dt>
  <dd>{{todo("NeedsContents")}}</dd>
  <dt>{{domxref("Worker")}}</dt>
- <dd>Used for creating a <a href="https://developer.mozilla.org/en-US/docs/DOM/Using_web_workers">Web worker</a></dd>
+ <dd>Used for creating a <a href="/en-US/docs/DOM/Using_web_workers">Web worker</a></dd>
  <dt>{{domxref("Window.XPCNativeWrapper")}}</dt>
  <dd>{{todo("NeedsContents")}}</dd>
  <dt>{{domxref("Window.XPCSafeJSObjectWrapper")}}</dt>

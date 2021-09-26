@@ -11,15 +11,13 @@ translation_of: Web/API/GlobalEventHandlers/onabort
 ---
 <div>{{ ApiRef("HTML DOM") }}</div>
 
-<h2 id="Summary" name="Summary">Sommaire</h2>
-
 <p>Un gestionnaire d'évènement pour interrompre les événements envoyés à la fenêtre. (non disponible sur Firefox 2 ou Safari).</p>
 
 <p>Bien que le <a href="https://html.spec.whatwg.org/multipage/browsing-the-web.html#abort-a-document">standard pour l'abandon d'un chargement de document</a> soit défini, le problème HTML N° 3525 suggère que les navigateurs ne déclenchent pas pour l'instant l'événement "abort" sur une <code>window</code> qui déclencherait un appel à <code>onabort</code>.</p>
 
 <p>À FAIRE : définir ce qu'est "interrompre" : fermer la fenêtre via le gestionnaire de fenêtre ? Arrêter le chargement de la page ? Par quels moyens et pour quelles raisons (utilisateur, réseau/serveur) ? À quelle étape cela devrait-il se déclencher / être capturé ? Pour IE, onabort est seulement disponible pour les balises <code>img</code>.</p>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
 <pre class="syntaxbox">window.onabort =<em> refFonc</em>
 </pre>
@@ -28,15 +26,15 @@ translation_of: Web/API/GlobalEventHandlers/onabort
  <li><code>refFonc</code> : référence à une fonction</li>
 </ul>
 
-<h2 id="Example" name="Example">Exemple</h2>
+<h2 id="Example">Exemple</h2>
 
 <pre class="brush:js">window.onabort = function() {
   alert("Chargement interrompu.");
 }</pre>
 
-<h2 id="Specification" name="Specification">Spécification</h2>
+<h2 id="Specification">Spécification</h2>
 
-<table class="spectable standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="col">Spécification</th>

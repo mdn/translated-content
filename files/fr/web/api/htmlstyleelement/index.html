@@ -6,7 +6,7 @@ tags:
 translation_of: Web/API/HTMLStyleElement
 ---
 <p>{{ ApiRef() }}</p>
-<h3 id="Notes" name="Notes">Notes</h3>
+<h3 id="Notes">Notes</h3>
 <p>Consultez les pages suivantes pour plus d'informations sur certains des objets utilisés pour manipuler les propriétés CSS depuis le DOM :</p>
 <ul>
  <li><a href="fr/DOM/element.style">L'objet DOM element.style</a></li>
@@ -14,7 +14,7 @@ translation_of: Web/API/HTMLStyleElement
  <li><a href="fr/DOM/cssRule">L'objet DOM cssRule</a></li>
  <li><a href="fr/DOM/CSS">La liste des propriétés DOM CSS</a></li>
 </ul>
-<h3 id="Informations_.C3.A0_d.C3.A9placer_vers_d.27autres_pages" name="Informations_.C3.A0_d.C3.A9placer_vers_d.27autres_pages">Informations à déplacer vers d'autres pages</h3>
+<h3 id="Informations_.C3.A0_d.C3.A9placer_vers_d.27autres_pages">Informations à déplacer vers d'autres pages</h3>
 <p>L'objet basique <code>style</code> explose les interfaces <code>StyleSheet</code> et <code>CSSStyleSheet</code> de la spécification
  <i>
   DOM Level 2 Style</i>
@@ -66,7 +66,7 @@ function resetStyle(elemId) {
 &lt;/html&gt;
 </pre>
 <p>La méthode <code>getComputedStyle()</code> de l'objet <code>document.defaultView</code> renvoie tous les styles qui ont finalement été calculés pour un élément. Consultez l'<a href="fr/R%c3%a9f%c3%a9rence_du_DOM_Gecko/Exemples#Exemple_6_:_getComputedStyle">exemple 6 : getComputedStyle</a> dans le chapitre des exemples pour plus d'informations sur l'utilisation de cette méthode.</p>
-<h3 id="L.27objet_DOM_style" name="L.27objet_DOM_style">L'objet DOM style</h3>
+<h3 id="L.27objet_DOM_style">L'objet DOM style</h3>
 <p>L'objet <code>style</code> représente une règle de style individuelle. Contrairement aux règles individuelles disponibles depuis la collection <code><a href="fr/DOM/document.styleSheets">document.styleSheets</a></code>, on accède à l'objet depuis l'objet <code>document</code> ou depuis les éléments auxquels ce style est appliqué. Il représente les styles
  <i>
   in-line</i>
@@ -98,7 +98,7 @@ el.setAttribute("style", "background-color:darkblue;");
 </pre>
 <p><br>
  Soyez cependant conscient que <code>setAttribute</code> écrasera toute propriété de style qui pourrait déjà avoir été définie dans l'objet style de cet élément. Si l'élément « un-element » ci-dessus avait déjà un attribut indiquant par exemple <code>style="font-size: 18px"</code>, cette valeur serait supprimée par l'utilisation de <code>setAttribute</code>.</p>
-<h5 id="Propri.C3.A9t.C3.A9s" name="Propri.C3.A9t.C3.A9s">Propriétés</h5>
+<h5 id="Propri.C3.A9t.C3.A9s">Propriétés</h5>
 <dl>
  <dt>
   <a href="fr/DOM/style.media">style.media</a></dt>
@@ -109,7 +109,3 @@ el.setAttribute("style", "background-color:darkblue;");
  <dd>
   renvoie le type de style appliqué par cette règle.</dd>
 </dl>
-<p> </p>
-<div class="noinclude">
-  </div>
-<p>{{ languages( { "en": "en/DOM/style", "es": "es/DOM/style", "pl": "pl/DOM/style" } ) }}</p>

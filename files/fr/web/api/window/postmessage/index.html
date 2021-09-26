@@ -13,26 +13,26 @@ translation_of: Web/API/Window/postMessage
 
 <div></div>
 
-<p>La méthode <strong><code>window.postMessage</code></strong> permet une communication inter-domaine en toute sécurité. Normalement, les scripts de différentes pages sont autorisés à accéder les uns aux autres si et seulement si les pages depuis lesquelles ils sont exécutés ont des URL de même <a href="/en-US/docs/Glossary/Origin">origine</a>, c'est-à-dire avec le même protocole (généralement <code>http</code> ou <code>https</code>), le même numéro de port (<code>80</code> étant le port par défaut pour  <code>http</code>), et le même nom d'hôte (à condition que <a href="/en-US/docs/DOM/document.domain" title="DOM/document.domain">document.domain</a> soit initialisé à la même valeur par les deux pages). <code>window.postMessage</code> fournit un mécanisme contrôlé pour contourner cette restriction d'une manière sécurisée si bien utilisée.</p>
+<p>La méthode <strong><code>window.postMessage</code></strong> permet une communication inter-domaine en toute sécurité. Normalement, les scripts de différentes pages sont autorisés à accéder les uns aux autres si et seulement si les pages depuis lesquelles ils sont exécutés ont des URL de même <a href="/en-US/docs/Glossary/Origin">origine</a>, c'est-à-dire avec le même protocole (généralement <code>http</code> ou <code>https</code>), le même numéro de port (<code>80</code> étant le port par défaut pour  <code>http</code>), et le même nom d'hôte (à condition que <a href="/en-US/docs/DOM/document.domain">document.domain</a> soit initialisé à la même valeur par les deux pages). <code>window.postMessage</code> fournit un mécanisme contrôlé pour contourner cette restriction d'une manière sécurisée si bien utilisée.</p>
 
 <p>La méthode <code>window.postMessage</code>, quand elle est appelée, provoque l'envoi d'un {{domxref("MessageEvent")}} à la fenêtre ciblée une fois que tout script en attente a terminé son exécution (par exemple, les gestionnaires d'évènements restants si <code>window.postMessage</code> est appelée depuis un gestionnaire d'évènement, des timeouts en attente enregistrées auparavant, etc.) Le {{domxref("MessageEvent")}} est de type <code>message</code>, a une propriété <code>data</code> qui est initialisée à la valeur du premier argument passé à<code> window.postMessage</code>, une propriété <code>origin</code> correspondant à l'origine du document principal de la fenêtre appelant <code>window.postMessage</code> au moment où <code>window.postMessage</code> a été appelée, et une propriété <code>source</code> qui est la fenêtre depuis laquelle <code>window.postMessage</code> est appelée. (les autres propriétés standard d'évènement sont présentes avec leurs valeurs attendues).</p>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
 <pre class="syntaxbox"><em>otherWindow</em>.postMessage(<em>message</em>, <em>targetOrigin</em>, [<em>transfer</em>]);</pre>
 
 <dl>
  <dt><code><em>otherWindow</em></code></dt>
- <dd>Une référence à une autre fenêtre ; une telle référence peut être obtenue, par exemple, <em>via</em> la propriété <code>contentWindow</code> d'un élément <code>iframe</code>, l'objet retourné par <a href="/fr/docs/DOM/window.open" title="DOM/window.open">window.open</a>, ou par index nommé ou numérique de <a href="/fr/docs/Web/API/window.frames" title="DOM/window.frames">window.frames</a>.</dd>
+ <dd>Une référence à une autre fenêtre ; une telle référence peut être obtenue, par exemple, <em>via</em> la propriété <code>contentWindow</code> d'un élément <code>iframe</code>, l'objet retourné par <a href="/fr/docs/DOM/window.open">window.open</a>, ou par index nommé ou numérique de <a href="/fr/docs/Web/API/window.frames">window.frames</a>.</dd>
  <dt><code><em>message</em></code></dt>
- <dd>La donnée à envoyer à l'autre fenêtre. Elle est sérialisée en utilisant <a href="/fr/docs/Web/Guide/API/DOM/The_structured_clone_algorithm" title="DOM/The structured clone algorithm">l'algorithme de clônage structuré</a>. Cela signifie que vous pouvez passer sereinement une large variété d'objets de données à la fenêtre de destination sans avoir à les sérialiser vous-mêmes. [1]</dd>
+ <dd>La donnée à envoyer à l'autre fenêtre. Elle est sérialisée en utilisant <a href="/fr/docs/Web/Guide/API/DOM/The_structured_clone_algorithm">l'algorithme de clônage structuré</a>. Cela signifie que vous pouvez passer sereinement une large variété d'objets de données à la fenêtre de destination sans avoir à les sérialiser vous-mêmes. [1]</dd>
  <dt><code><em>targetOrigin</em></code></dt>
  <dd>Indique quelle doit être l'origine de <code>otherWindow</code> pour l'évènement à envoyer, soit comme la chaîne littérale <code>"*"</code> (signifiant pas de préférence) soit comme une URI. Si, au moment où l'évènement est inscrit pour être envoyé, le protocole, le nom d'hôte ou le port du document de <code>otherWindow</code> ne correspond pas à ceux contenus dans <code>targetOrigin</code>,  l'évènement ne sera pas envoyé ; il ne le sera que si les trois correspondent. Ce mécanisme permet de contrôler où les messages sont envoyés ; par exemple, si <code>postMessage</code> était utilisé pour transmettre un mot de passe, il serait absolument vital que cet argument soit une URI dont l'origine est la même que le récepteur prévu du message contenant le mot de passe, afin de prévenir l'interception du mot de passe par une tierce-partie malicieuse. <strong>Fournissez toujours une <code>targetOrigin</code> spécifique, jamais <code>*</code>, si vous savez où le document de l'autre fenêtre est censé se trouver. Ne pas fournir une cible spécifique expose les données que vous envoyez à tout site malicieux à l'écoute.</strong></dd>
  <dt><code><em><strong>transfer</strong></em></code> {{optional_Inline}}</dt>
  <dd>Séquence d'objets {{domxref("Transferable")}} qui sera transmise avec le message. La possession de ces objets est cédée à la destination et ils ne sont plus utilisables du côté de l'expéditeur.</dd>
 </dl>
 
-<h2 id="The_dispatched_event" name="The_dispatched_event">L'évènement envoyé</h2>
+<h2 id="The_dispatched_event">L'évènement envoyé</h2>
 
 <p><code>otherWindow</code> peut surveiller les messages envoyés en exécutant le JavaScript suivant :</p>
 
@@ -53,23 +53,23 @@ function receiveMessage(event)
  <dt><code>data</code></dt>
  <dd>L'objet passé depuis l'autre fenêtre.</dd>
  <dt><code>origin</code></dt>
- <dd>L'<a href="/en-US/docs/Origin" title="Origin">origine</a> de la fenêtre qui a envoyé le message au moment où <code>postMessage</code> a été appelée. Des exemples typiques d'origines sont <code><span class="nowiki">https://example.org</span></code> (sous-entendu port <code>443</code>), <code><span class="nowiki">http://example.net</span></code> (sous-entendu port <code>80</code>), et <code><span class="nowiki">http://example.com:8080</span></code>. Notez qu'il n'est pas garanti que cette origine soit l'origine actuelle ou future de cette fenêtre, qui peut avoir été naviguée vers une adresse différente depuis l'appel à <code>postMessage</code>.</dd>
+ <dd>L'<a href="/en-US/docs/Origin">origine</a> de la fenêtre qui a envoyé le message au moment où <code>postMessage</code> a été appelée. Des exemples typiques d'origines sont <code>https://example.org</code> (sous-entendu port <code>443</code>), <code>http://example.net</code> (sous-entendu port <code>80</code>), et <code>http://example.com:8080</code>. Notez qu'il n'est pas garanti que cette origine soit l'origine actuelle ou future de cette fenêtre, qui peut avoir été naviguée vers une adresse différente depuis l'appel à <code>postMessage</code>.</dd>
  <dt><code>source</code></dt>
- <dd>Une référence à l'objet <code><a href="/fr/docs/DOM/window" title="DOM/window">window</a></code> qui a envoyé le message ; vous pouvez utiliser ceci pour établir une communication dans les deux sens entre deux fenêtres ayant différentes origines.</dd>
+ <dd>Une référence à l'objet <code><a href="/fr/docs/DOM/window">window</a></code> qui a envoyé le message ; vous pouvez utiliser ceci pour établir une communication dans les deux sens entre deux fenêtres ayant différentes origines.</dd>
 </dl>
 
 <dl>
 </dl>
 
-<h2 id="Security_concerns" name="Security_concerns">Précautions de sécurité</h2>
+<h2 id="Security_concerns">Précautions de sécurité</h2>
 
 <p><strong>Si vous ne prévoyez pas de recevoir de messages depuis d'autres sites, n'ajoutez pas de gestionnaire d'évènement pour les évènements <code>message</code>.</strong> C'est un moyen sûr d'éviter les problèmes de sécurité.</p>
 
-<p>Si vous prévoyez de recevoir des messages depuis d'autres sites, <strong>vérifiez toujours l'identité de l'expéditeur</strong> à l'aide des propriétés <code>origin</code> et si possible <code>source</code>. Toute fenêtre (y compris, par exemple, <code><span class="nowiki">http://evil.example.com</span></code>) peut envoyer un message à toute autre fenêtre, et vous n'avez aucune garantie qu'un expéditeur inconnu ne va pas envoyer de message malicieux. Cependant, même si vous vérifiez l'identité, vous devriez <strong>toujours vérifier la syntaxe du message reçu</strong>. Dans le cas contraire, une faille de sécurité dans le site auquel vous faites confiance peut ouvrir une vulnérabilité XSS dans votre propre site.</p>
+<p>Si vous prévoyez de recevoir des messages depuis d'autres sites, <strong>vérifiez toujours l'identité de l'expéditeur</strong> à l'aide des propriétés <code>origin</code> et si possible <code>source</code>. Toute fenêtre (y compris, par exemple, <code>http://evil.example.com</code>) peut envoyer un message à toute autre fenêtre, et vous n'avez aucune garantie qu'un expéditeur inconnu ne va pas envoyer de message malicieux. Cependant, même si vous vérifiez l'identité, vous devriez <strong>toujours vérifier la syntaxe du message reçu</strong>. Dans le cas contraire, une faille de sécurité dans le site auquel vous faites confiance peut ouvrir une vulnérabilité XSS dans votre propre site.</p>
 
 <p><strong>Spécifiez toujours explicitement une origine de destination, jamais <code>*</code>, quand vous utilisez <code>postMessage</code> pour envoyer des données à d'autres fenêtres.</strong> Un site malicieux peut changer l'adresse de la fenêtre à votre insu, et ainsi intercepter les données envoyées à l'aide de <code>postMessage</code>.</p>
 
-<h2 id="Example" name="Example">Exemple</h2>
+<h2 id="Example">Exemple</h2>
 
 <pre class="brush: js">/*
  * Dans les scripts de la fenêtre A, avec A sur &lt;http://example.com:8080&gt;:
@@ -126,7 +126,7 @@ function receiveMessage(event)
 window.addEventListener("message", receiveMessage, false);
 </pre>
 
-<h3 id="Notes" name="Notes">Notes</h3>
+<h3 id="Notes">Notes</h3>
 
 <p>Toute fenêtre peut accéder à cette méthode sur toute autre fenêtre, à tout moment, peu importe l'adresse du document dans la fenêtre, pour y envoyer un message. Par conséquent, tout gestionnaire d'évènement utilisé pour recevoir des messages <strong>doit</strong> d'abord vérifier l'identité de l'expéditeur du message, en utilisant les propriétés <code>origin</code> et si possible <code>source</code>. Cela ne peut pas être minimisé : <strong>ne pas vérifier les propriétés <code>origin</code> et si possible <code>source</code> permet des attaques inter-site.</strong></p>
 
@@ -173,7 +173,7 @@ window.addEventListener("message", receiveMessage, false);
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="/en-US/docs/DOM/document.domain" title="DOM/document.domain">Document.domain</a></li>
- <li><a href="/en-US/docs/Web/API/CustomEvent" title="/en-US/docs/Web/API/CustomEvent">CustomEvent</a></li>
- <li><a href="/en-US/docs/Code_snippets/Interaction_between_privileged_and_non-privileged_pages" title="/en-US/docs/Code_snippets/Interaction_between_privileged_and_non-privileged_pages">Interaction entre les pages privilégiées et non privilégiées</a></li>
+ <li><a href="/en-US/docs/DOM/document.domain">Document.domain</a></li>
+ <li><a href="/en-US/docs/Web/API/CustomEvent">CustomEvent</a></li>
+ <li><a href="/en-US/docs/Code_snippets/Interaction_between_privileged_and_non-privileged_pages">Interaction entre les pages privilégiées et non privilégiées</a></li>
 </ul>

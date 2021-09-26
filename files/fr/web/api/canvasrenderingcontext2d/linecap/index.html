@@ -34,7 +34,7 @@ translation_of: Web/API/CanvasRenderingContext2D/lineCap
 
 <h2 id="Exemples">Exemples</h2>
 
-<h3 id="Using_the_lineCap_property" name="Using_the_lineCap_property">Utilisation de la propriété <code>lineCap</code></h3>
+<h3 id="Using_the_lineCap_property">Utilisation de la propriété <code>lineCap</code></h3>
 
 <p>Il ne s'agit que d'un fragment de code simple utilisant la propriété lineCap pour dessiner des lignes avec des extrémités arrondies.</p>
 
@@ -45,7 +45,7 @@ translation_of: Web/API/CanvasRenderingContext2D/lineCap
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js; highlight[7]">var canevas = document.getElementById('canevas');
+<pre class="brush: js">var canevas = document.getElementById('canevas');
 var ctx = canevas.getContext('2d');
 
 ctx.beginPath();
@@ -58,10 +58,9 @@ ctx.stroke();
 
 <p>Modifiez le code ci-dessous et voyez vos modifications mises à jour en direct dans le canvas :</p>
 
-<div class="hidden">
-<h6 id="Playable_code" name="Playable_code">Playable code</h6>
+<h4 id="code_jouable">Code jouable</h4>
 
-<pre class="brush: html">&lt;canvas id="canevas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html hidden">&lt;canvas id="canevas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
   &lt;input id="modifier" type="button" value="Modifier" /&gt;
   &lt;input id="effacer" type="button" value="Effacer" /&gt;
@@ -75,7 +74,7 @@ ctx.lineTo(100, 100);
 ctx.stroke();&lt;/textarea&gt;
 </pre>
 
-<pre class="brush: js">var canevas = document.getElementById('canevas');
+<pre class="brush: js hidden">var canevas = document.getElementById('canevas');
 var ctx = canevas.getContext('2d');
 var zoneTexte = document.getElementById('code');
 var effacer = document.getElementById('effacer');
@@ -99,11 +98,10 @@ modifier.addEventListener('click', function() {
 zoneTexte.addEventListener('input', dessinerCanevas);
 window.addEventListener('load', dessinerCanevas);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+<p>{{ EmbedLiveSample('code_jouable', 700, 360) }}</p>
 
-<h3 id="A_lineCap_example" name="A_lineCap_example">Un exemple de <code>lineCap</code></h3>
+<h3 id="A_lineCap_example">Un exemple de <code>lineCap</code></h3>
 
 <p>Dans cet exemple, trois lignes sont dessinées, chacune avec une valeur différente pour la propriété <code>lineCap</code>. Deux guides pour voir les différences exactes entre les trois ont été ajoutés. Chacune de ces lignes commence et se termine exactement sur ces guides.</p>
 
@@ -133,11 +131,9 @@ for (var i = 0; i &lt; lineCap.length; i++) {
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canevas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
-</div>
+<pre class="brush: html hidden">&lt;canvas id="canevas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
-<p>{{EmbedLiveSample("A_lineCap_example", "180", "180", "https://mdn.mozillademos.org/files/236/Canvas_linecap.png")}}</p>
+<p>{{EmbedLiveSample("A_lineCap_example", "180", "180", "canvas_linecap.png")}}</p>
 
 <h2 id="Spécifications">Spécifications</h2>
 

@@ -7,7 +7,7 @@ translation_of: Web/API/HTMLCanvasElement
 ---
 <div>{{ApiRef}}</div>
 
-<p>L'interface <strong><code><span>HTMLCanvasElement</span></code></strong> fournit un ensemble de propriétés et de méthodes pour manipuler la disposition et la représentation des éléments canvas. L'interface <code>HTMLCanvasElement</code> hérite également des propriétés et des méthodes de l'interface {{domxref("HTMLElement")}}.</p>
+<p>L'interface <strong><code>HTMLCanvasElement</code></strong> fournit un ensemble de propriétés et de méthodes pour manipuler la disposition et la représentation des éléments canvas. L'interface <code>HTMLCanvasElement</code> hérite également des propriétés et des méthodes de l'interface {{domxref("HTMLElement")}}.</p>
 
 <h2 id="Propriétés">Propriétés</h2>
 
@@ -111,7 +111,9 @@ translation_of: Web/API/HTMLCanvasElement
    <td><code>void mozFetchAsStream(in {{interface("nsIInputStreamCallback")}} callback, [optional] in DOMString type)</code> {{non-standard_inline}}</td>
    <td><code>void</code></td>
    <td>Crée un nouveau flux d'entrée qui, quand il est prêt, fournit le contenu du canvas en tant que données d'image. Quand le nouveau flux est prêt, la fonction de rappel spécifiée {{ifmethod("nsIInputStreamCallback", "onInputStreamReady")}} est appelée. Si <code>type</code> n'est pas précisée, Le format de l'image est <code>image/png.</code>
-    <div class="note"><strong>Note:</strong> Cette méthode ne peut être utilisée que depuis le code chrome.</div>
+    <div class="note">
+      <p><strong>Note :</strong> Cette méthode ne peut être utilisée que depuis le code chrome.</p>
+    </div>
    </td>
   </tr>
  </tbody>

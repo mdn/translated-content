@@ -11,7 +11,7 @@ translation_of: Web/API/Document/dragover_event
 
 <dl>
  <dt style="float: left; text-align: right; width: 120px;">Interface</dt>
- <dd style="margin: 0 0 0 120px;"><a class="new" href="https://developer.mozilla.org/fr/docs/Web/API/DragEvent" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>DragEvent</code></a></dd>
+ <dd style="margin: 0 0 0 120px;"><a href="/fr/docs/Web/API/DragEvent"><code>DragEvent</code></a></dd>
  <dt style="float: left; text-align: right; width: 120px;">Propagation</dt>
  <dd style="margin: 0 0 0 120px;">Oui</dd>
  <dt style="float: left; text-align: right; width: 120px;">Annulable</dt>
@@ -35,28 +35,28 @@ translation_of: Web/API/Document/dragover_event
  <tbody>
   <tr>
    <td><code>target</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/EventTarget" title="EventTarget is an interface implemented by objects that can receive events and may have listeners for them."><code>EventTarget</code></a></td>
+   <td><a href="/en-US/docs/Web/API/EventTarget"><code>EventTarget</code></a></td>
    <td>The element that was underneath the element being dragged.</td>
   </tr>
   <tr>
    <td><code>type</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/DOMString" title="DOMString is a UTF-16 String. As JavaScript already uses such strings, DOMString is mapped directly to a String."><code>DOMString</code></a></td>
+   <td><a href="/en-US/docs/Web/API/DOMString"><code>DOMString</code></a></td>
    <td>The type of event.</td>
   </tr>
   <tr>
    <td><code>bubbles</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/Boolean" title="The Boolean object is an object wrapper for a boolean value."><code>Boolean</code></a></td>
+   <td><a href="/en-US/docs/Web/API/Boolean"><code>Boolean</code></a></td>
    <td>Whether the event normally bubbles or not</td>
   </tr>
   <tr>
    <td><code>cancelable</code> {{readonlyInline}}</td>
-   <td><a href="/en-US/docs/Web/API/Boolean" title="The Boolean object is an object wrapper for a boolean value."><code>Boolean</code></a></td>
+   <td><a href="/en-US/docs/Web/API/Boolean"><code>Boolean</code></a></td>
    <td>Whether the event is cancellable or not?</td>
   </tr>
   <tr>
    <td><code>view</code> {{readonlyInline}}</td>
-   <td><a class="new" href="/en-US/docs/Web/API/WindowProxy" rel="nofollow" title="The documentation about this has not yet been written; please consider contributing!"><code>WindowProxy</code></a></td>
-   <td><a href="/en-US/docs/Web/API/Document/defaultView" title="In browsers, document.defaultView returns the window object associated with a document, or null if none is available."><code>document.defaultView</code></a> (<code>window</code> of the document)</td>
+   <td><a href="/en-US/docs/Web/API/WindowProxy" rel="nofollow"><code>WindowProxy</code></a></td>
+   <td><a href="/en-US/docs/Web/API/Document/defaultView"><code>document.defaultView</code></a> (<code>window</code> of the document)</td>
   </tr>
   <tr>
    <td><code>detail</code> {{readonlyInline}}</td>
@@ -138,86 +138,86 @@ translation_of: Web/API/Document/dragover_event
 
 <h2 id="Exemple">Exemple</h2>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="operator token">&lt;</span>div <span class="keyword token">class</span><span class="operator token">=</span><span class="string token">"dropzone"</span><span class="operator token">&gt;</span>
-  <span class="operator token">&lt;</span>div id<span class="operator token">=</span><span class="string token">"draggable"</span> draggable<span class="operator token">=</span><span class="string token">"true"</span> ondragstart<span class="operator token">=</span><span class="string token">"event.dataTransfer.setData('text/plain',null)"</span><span class="operator token">&gt;</span>
+<pre class="brush: js">&lt;div class="dropzone"&gt;
+  &lt;div id="draggable" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"&gt;
     This div is draggable
-  <span class="operator token">&lt;</span><span class="operator token">/</span>div<span class="operator token">&gt;</span>
-<span class="operator token">&lt;</span><span class="operator token">/</span>div<span class="operator token">&gt;</span>
-<span class="operator token">&lt;</span>div <span class="keyword token">class</span><span class="operator token">=</span><span class="string token">"dropzone"</span><span class="operator token">&gt;</span><span class="operator token">&lt;</span><span class="operator token">/</span>div<span class="operator token">&gt;</span>
-<span class="operator token">&lt;</span>div <span class="keyword token">class</span><span class="operator token">=</span><span class="string token">"dropzone"</span><span class="operator token">&gt;</span><span class="operator token">&lt;</span><span class="operator token">/</span>div<span class="operator token">&gt;</span>
-<span class="operator token">&lt;</span>div <span class="keyword token">class</span><span class="operator token">=</span><span class="string token">"dropzone"</span><span class="operator token">&gt;</span><span class="operator token">&lt;</span><span class="operator token">/</span>div<span class="operator token">&gt;</span>
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="dropzone"&gt;&lt;/div&gt;
+&lt;div class="dropzone"&gt;&lt;/div&gt;
+&lt;div class="dropzone"&gt;&lt;/div&gt;
 
-<span class="operator token">&lt;</span>style<span class="operator token">&gt;</span>
-  #draggable <span class="punctuation token">{</span>
-    width<span class="punctuation token">:</span> 200px<span class="punctuation token">;</span>
-    height<span class="punctuation token">:</span> 20px<span class="punctuation token">;</span>
-    text<span class="operator token">-</span>align<span class="punctuation token">:</span> center<span class="punctuation token">;</span>
-    background<span class="punctuation token">:</span> white<span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
+&lt;style&gt;
+  #draggable {
+    width: 200px;
+    height: 20px;
+    text-align: center;
+    background: white;
+  }
 
-  <span class="punctuation token">.</span>dropzone <span class="punctuation token">{</span>
-    width<span class="punctuation token">:</span> 200px<span class="punctuation token">;</span>
-    height<span class="punctuation token">:</span> 20px<span class="punctuation token">;</span>
-    background<span class="punctuation token">:</span> blueviolet<span class="punctuation token">;</span>
-    margin<span class="operator token">-</span>bottom<span class="punctuation token">:</span> 10px<span class="punctuation token">;</span>
-    padding<span class="punctuation token">:</span> 10px<span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="operator token">&lt;</span><span class="operator token">/</span>style<span class="operator token">&gt;</span>
+  .dropzone {
+    width: 200px;
+    height: 20px;
+    background: blueviolet;
+    margin-bottom: 10px;
+    padding: 10px;
+  }
+&lt;/style&gt;
 
-<span class="operator token">&lt;</span>script<span class="operator token">&gt;</span>
-  <span class="keyword token">var</span> dragged<span class="punctuation token">;</span>
+&lt;script&gt;
+  var dragged;
 
-  <span class="comment token">/* Les événements sont déclenchés sur les objets glissables */</span>
-  document<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">"drag"</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span> event <span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  /* Les événements sont déclenchés sur les objets glissables */
+  document.addEventListener("drag", function( event ) {
 
-  <span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="keyword token">false</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  }, false);
 
-  document<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">"dragstart"</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span> event <span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="comment token">// Stocke une référence sur l'objet glissable</span>
-      dragged <span class="operator token">=</span> event<span class="punctuation token">.</span>target<span class="punctuation token">;</span>
-      <span class="comment token">// transparence 50%</span>
-      event<span class="punctuation token">.</span>target<span class="punctuation token">.</span>style<span class="punctuation token">.</span>opacity <span class="operator token">=</span> <span class="punctuation token">.</span><span class="number token">5</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="keyword token">false</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  document.addEventListener("dragstart", function( event ) {
+      // Stocke une référence sur l'objet glissable
+      dragged = event.target;
+      // transparence 50%
+      event.target.style.opacity = .5;
+  }, false);
 
-  document<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">"dragend"</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span> event <span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="comment token">// reset de la transparence</span>
-      event<span class="punctuation token">.</span>target<span class="punctuation token">.</span>style<span class="punctuation token">.</span>opacity <span class="operator token">=</span> <span class="string token">""</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="keyword token">false</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  document.addEventListener("dragend", function( event ) {
+      // reset de la transparence
+      event.target.style.opacity = "";
+  }, false);
 
-  <span class="comment token">/* Les événements sont déclenchés sur les cibles du drop */</span>
-  document<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">"dragover"</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span> event <span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="comment token">// Empêche default d'autoriser le drop</span>
-      event<span class="punctuation token">.</span><span class="function token">preventDefault</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="keyword token">false</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  /* Les événements sont déclenchés sur les cibles du drop */
+  document.addEventListener("dragover", function( event ) {
+      // Empêche default d'autoriser le drop
+      event.preventDefault();
+  }, false);
 
-  document<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">"dragenter"</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span> event <span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="comment token">// Met en surbrillance la cible de drop potentielle lorsque l'élément glissable y entre</span>
-      <span class="keyword token">if</span> <span class="punctuation token">(</span> event<span class="punctuation token">.</span>target<span class="punctuation token">.</span>className <span class="operator token">==</span> <span class="string token">"dropzone"</span> <span class="punctuation token">)</span> <span class="punctuation token">{</span>
-          event<span class="punctuation token">.</span>target<span class="punctuation token">.</span>style<span class="punctuation token">.</span>background <span class="operator token">=</span> <span class="string token">"purple"</span><span class="punctuation token">;</span>
-      <span class="punctuation token">}</span>
+  document.addEventListener("dragenter", function( event ) {
+      // Met en surbrillance la cible de drop potentielle lorsque l'élément glissable y entre
+      if ( event.target.className == "dropzone" ) {
+          event.target.style.background = "purple";
+      }
 
-  <span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="keyword token">false</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  }, false);
 
-  document<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">"dragleave"</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span> event <span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="comment token">// reset de l'arrière-plan des potentielles cible du drop lorsque les éléments glissables les quittent </span>
-      <span class="keyword token">if</span> <span class="punctuation token">(</span> event<span class="punctuation token">.</span>target<span class="punctuation token">.</span>className <span class="operator token">==</span> <span class="string token">"dropzone"</span> <span class="punctuation token">)</span> <span class="punctuation token">{</span>
-          event<span class="punctuation token">.</span>target<span class="punctuation token">.</span>style<span class="punctuation token">.</span>background <span class="operator token">=</span> <span class="string token">""</span><span class="punctuation token">;</span>
-      <span class="punctuation token">}</span>
+  document.addEventListener("dragleave", function( event ) {
+      // reset de l'arrière-plan des potentielles cible du drop lorsque les éléments glissables les quittent 
+      if ( event.target.className == "dropzone" ) {
+          event.target.style.background = "";
+      }
 
-  <span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="keyword token">false</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+  }, false);
 
-  document<span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">"drop"</span><span class="punctuation token">,</span> <span class="keyword token">function</span><span class="punctuation token">(</span> event <span class="punctuation token">)</span> <span class="punctuation token">{</span>
-      <span class="comment token">// Empêche l'action par défaut (ouvrir comme lien pour certains éléments)</span>
-      event<span class="punctuation token">.</span><span class="function token">preventDefault</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-      <span class="comment token">// Déplace l'élément traîné vers la cible du drop sélectionnée</span>
-      <span class="keyword token">if</span> <span class="punctuation token">(</span> event<span class="punctuation token">.</span>target<span class="punctuation token">.</span>className <span class="operator token">==</span> <span class="string token">"dropzone"</span> <span class="punctuation token">)</span> <span class="punctuation token">{</span>
-          event<span class="punctuation token">.</span>target<span class="punctuation token">.</span>style<span class="punctuation token">.</span>background <span class="operator token">=</span> <span class="string token">""</span><span class="punctuation token">;</span>
-          dragged<span class="punctuation token">.</span>parentNode<span class="punctuation token">.</span><span class="function token">removeChild</span><span class="punctuation token">(</span> dragged <span class="punctuation token">)</span><span class="punctuation token">;</span>
-          event<span class="punctuation token">.</span>target<span class="punctuation token">.</span><span class="function token">appendChild</span><span class="punctuation token">(</span> dragged <span class="punctuation token">)</span><span class="punctuation token">;</span>
-      <span class="punctuation token">}</span>
+  document.addEventListener("drop", function( event ) {
+      // Empêche l'action par défaut (ouvrir comme lien pour certains éléments)
+      event.preventDefault();
+      // Déplace l'élément traîné vers la cible du drop sélectionnée
+      if ( event.target.className == "dropzone" ) {
+          event.target.style.background = "";
+          dragged.parentNode.removeChild( dragged );
+          event.target.appendChild( dragged );
+      }
 
-  <span class="punctuation token">}</span><span class="punctuation token">,</span> <span class="keyword token">false</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-<span class="operator token">&lt;</span><span class="operator token">/</span>script<span class="operator token">&gt;</span></code></pre>
+  }, false);
+&lt;/script&gt;</pre>
 
 <h2 id="Spécifications">Spécifications</h2>
 

@@ -13,7 +13,7 @@ translation_of: Web/API/Element/tagName
 
 <p>Renvoie le nom de l'étiquette de l'élément sur lequel elle est appelée. Si l'élément est une {{HTMLElement("img")}}, sa propriété <code>tagName</code> est <code>"IMG"</code> (pour les documents HTML, elle peut être différente pour les documents XML et XHTML).</p>
 
-<h2 id="Syntaxe" name="Syntaxe">Syntaxe</h2>
+<h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="syntaxbox"><em>elementName</em> = element.tagName;
 </pre>
@@ -37,12 +37,12 @@ translation_of: Web/API/Element/tagName
 
 <h3 id="Contenu_JavaScript">Contenu JavaScript</h3>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> span <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">"naissance"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>span<span class="punctuation token">.</span>tagName<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js">var span = document.getElementById("naissance");
+console.log(span.tagName);</pre>
 
-<p>En XHTML (ou tout autre format XML), <span id="result_box" lang="fr"><span>la casse d'origine sera conservée, de sorte que <code>"span"</code> sera affiché dans le cas où le nom de l'étiquette d'origine a été créé en minuscules.</span> <span>En HTML, <code>"SPAN"</code> serait affiché à la place quelle que soit la casse utilisée lors de la création du document original.</span></span></p>
+<p>En XHTML (ou tout autre format XML), la casse d'origine sera conservée, de sorte que <code>"span"</code> sera affiché dans le cas où le nom de l'étiquette d'origine a été créé en minuscules. En HTML, <code>"SPAN"</code> serait affiché à la place quelle que soit la casse utilisée lors de la création du document original.</p>
 
-<h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Spécifications</h2>
+<h2 id="Sp.C3.A9cification">Spécifications</h2>
 
 <table class="standard-table">
  <tbody>

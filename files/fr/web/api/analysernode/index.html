@@ -13,12 +13,12 @@ translation_of: Web/API/AnalyserNode
 
 <p>Il a exactement une entrée et une sortie. Le noeud fonctionne même si la sortie n'est pas connectée.</p>
 
-<p><img alt="Without modifying the audio stream, the node allows to get the frequency and time-domain data associated to it, using a FFT." src="https://mdn.mozillademos.org/files/12968/fttaudiodata.svg"></p>
+<p><img alt="Sans modifier le flux audio, le nœud permet d'obtenir la fréquence et les données temporelles associées en utilisant une transformée de Fourier rapide." src="fttaudiodata_en.svg"></p>
 
 <table class="properties">
  <tbody>
   <tr>
-   <th scope="row">N<dfn>ombre d'entrées</dfn></th>
+   <th scope="row"><dfn>Nombre d'entrées</dfn></th>
    <td><code>1</code></td>
   </tr>
   <tr>
@@ -94,12 +94,12 @@ translation_of: Web/API/AnalyserNode
 <h2 id="Exemples">Exemples</h2>
 
 <div class="note">
-<p><strong>Note</strong>: Voir <a href="/fr/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API">Visualisations avec la Web Audio API</a> pour plus d'informations.</p>
+<p><strong>Note :</strong>: Voir <a href="/fr/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API">Visualisations avec la Web Audio API</a> pour plus d'informations.</p>
 </div>
 
 <p>L'exemple suivant montre comment créer simplement un  <code>AnalyserNode</code> avec {{domxref("AudioContext")}}, puis utiliser  {{domxref("window.requestAnimationFrame()","requestAnimationFrame")}} et {{htmlelement("canvas")}} pour collecter les données temporelles et dessiner un oscilloscope en sortie. Pour des exemples plus complets, voir notre démo <a href="https://mdn.github.io/voice-change-o-matic/">Voice-change-O-matic</a>  (et en particulier <a href="https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205">app.js lines 128–205</a>).</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
+<pre class="brush: js">var contexteAudio = new (window.AudioContext || window.webkitAudioContext)();
 var analyseur = contexteAudio.createAnalyser();
 
   ...
@@ -110,8 +110,7 @@ var tableauDonnees = new Uint8Array(tailleMemoireTampon);
 analyseur.getByteTimeDomainData(tableauDonnees);
 
 // dessine un oscilloscope de la source audio
-</code>
-<code class="language-js">var canvas = document.getElementById("oscilloscope");
+var canvas = document.getElementById("oscilloscope");
 var contexteCanvas = canvas.getContext("2d");
 
 function dessiner() {
@@ -149,7 +148,7 @@ function dessiner() {
       contexteCanvas.stroke();
     };
 
-    dessiner();</code></pre>
+    dessiner();</pre>
 
 <h2 id="Spécifications">Spécifications</h2>
 

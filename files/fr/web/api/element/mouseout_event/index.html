@@ -12,7 +12,7 @@ translation_of: Web/API/Element/mouseout_event
 ---
 <div>{{APIRef}}</div>
 
-<p><span class="seoSummary">L'évènement <strong><code>mouseout</code></strong> est déclenché à partir d'un {{domxref("Element")}} lorsqu'un dispositif de pointage (ex. une souris) déplace le curseur en dehors de l'élément ou de l'un de ses fils.</span> <code>mouseout</code> est également apporté à un élément si le curseur se déplace dans un élément fils car l'élément fils peut masquer la zone visible de l'élément.</p>
+<p>L'évènement <strong><code>mouseout</code></strong> est déclenché à partir d'un {{domxref("Element")}} lorsqu'un dispositif de pointage (ex. une souris) déplace le curseur en dehors de l'élément ou de l'un de ses fils. <code>mouseout</code> est également apporté à un élément si le curseur se déplace dans un élément fils car l'élément fils peut masquer la zone visible de l'élément.</p>
 
 <table class="properties">
  <tbody>
@@ -37,7 +37,7 @@ translation_of: Web/API/Element/mouseout_event
 
 <h2 id="Exemples">Exemples</h2>
 
-<p>Dans l'exemple suivant, on illustre la différence entre <code>mouseout</code> et <a href="/fr/docs/Web/API/Element/mouseleave_event" title="/en/Mozilla_event_reference/mouseleave"><code>mouseleave</code></a>. Ce dernier est ajouté à {{HTMLElement("ul")}} pour colorer la liste en violet lorsque la souris quitte <code>&lt;ul&gt;</code>. <code>mouseout</code> est ajouté à la liste pour colorer l'élément ciblé en orange lorsque la souris le quitte.</p>
+<p>Dans l'exemple suivant, on illustre la différence entre <code>mouseout</code> et <a href="/fr/docs/Web/API/Element/mouseleave_event"><code>mouseleave</code></a>. Ce dernier est ajouté à {{HTMLElement("ul")}} pour colorer la liste en violet lorsque la souris quitte <code>&lt;ul&gt;</code>. <code>mouseout</code> est ajouté à la liste pour colorer l'élément ciblé en orange lorsque la souris le quitte.</p>
 
 <p>En essayant cet exemple, vous pourrez voir que <code>mouseout</code> est envoyé aux éléments individuels de la liste tandis que <code>mouseleave</code> est géré sur la liste entière. Cela provient de la hiérarchie des éléments et du fait que les éléments de la liste "masquent" la liste sous-jacente.</p>
 

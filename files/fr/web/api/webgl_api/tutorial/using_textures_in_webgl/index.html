@@ -15,7 +15,9 @@ original_slug: Web/API/WebGL_API/Tutorial/Utiliser_les_textures_avec_WebGL
 
 <p>La première chose à faire est d'ajouter le code pour charger les textures. Dans notre cas, nous utiliserons une texture unique, appliquée à chacune des six faces de notre cube en rotation ; mais la même technique peut être utilisée un nombre quelconque de textures.</p>
 
-<div class="note"><strong>Note :</strong> il est important de noter que le chargement des textures suit les <a href="/fr-FR/docs/Web/HTTP/CORS" title="en/HTTP access control">règles inter-domaines</a> ; donc vous pouvez seulement charger des textures depuis les sites pour lesquels votre contenu a l'approbation CORS. Voir les textures inter-domaines ci-dessous pour plus de détails.</div>
+<div class="note">
+  <p><strong>Note :</strong> il est important de noter que le chargement des textures suit les <a href="/fr-FR/docs/Web/HTTP/CORS">règles inter-domaines</a> ; donc vous pouvez seulement charger des textures depuis les sites pour lesquels votre contenu a l'approbation CORS. Voir les textures inter-domaines ci-dessous pour plus de détails.</p>
+</div>
 
 <p>Le code qui charge la texture ressemble à ce qui suit : </p>
 
@@ -258,7 +260,7 @@ function drawScene(gl, programInfo, buffers, texture, deltaTime) {</code></pre>
 
 <h2 id="Textures_inter-domaines">Textures inter-domaines</h2>
 
-<p>Le chargement des textures WebGL est soumis aux contrôles d'accès inter-domaines. Pour que votre contenu puisse charger une texture d'un autre domaine, une approbation CORS doit être obtenue. Voir le <a href="https://developer.mozilla.org/fr/docs/HTTP/Access_control_CORS">Contrôle d'accès HTTP</a> pour plus de détails sur CORS.</p>
+<p>Le chargement des textures WebGL est soumis aux contrôles d'accès inter-domaines. Pour que votre contenu puisse charger une texture d'un autre domaine, une approbation CORS doit être obtenue. Voir le <a href="/fr/docs/HTTP/Access_control_CORS">Contrôle d'accès HTTP</a> pour plus de détails sur CORS.</p>
 
 <p>Voir cet <a href="http://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/">article sur hacks.mozilla.org</a> pour une explication de l'utilisation des images approuvées CORS comme textures WebGL, avec <a href="http://people.mozilla.org/~bjacob/webgltexture-cors-js.html">un exemple complet</a>.</p>
 

@@ -11,7 +11,7 @@ tags:
   - évènements
 translation_of: Web/API/MouseEvent
 ---
-<p id="Sommaire">{{APIRef("DOM Events")}}</p>
+<p>{{APIRef("DOM Events")}}</p>
 
 <p>L'interface <strong><code>MouseEvent</code></strong> représente les événements qui se produisent lors d'une interaction de l'utilisateur avec un appareil de pointage (tel qu'une souris). Les événements communs utilisant cette interface incluent {{event("click")}}, {{event("dblclick")}}, {{event("mouseup")}} et {{event("mousedown")}}.</p>
 
@@ -85,7 +85,7 @@ translation_of: Web/API/MouseEvent
  <dd>Alias pour {{domxref("MouseEvent.clientY")}}.</dd>
 </dl>
 
-<h2 id="Constantes"><span class="hidden"> </span><span class="hidden"> </span>Constantes</h2>
+<h2 id="Constantes">Constantes</h2>
 
 <dl>
  <dt>{{domxref("MouseEvent.WEBKIT_FORCE_AT_MOUSE_DOWN")}} {{non-standard_inline}}{{readonlyinline}}</dt>
@@ -109,26 +109,26 @@ translation_of: Web/API/MouseEvent
 
 <p>Cet exemple illustre la simulation d'un clic (générant par programmation un événement click) sur une case à cocher en utilisant les méthodes DOM.</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">function</span> <span class="function token">simulateClick</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-  <span class="keyword token">var</span> evt <span class="operator token">=</span> <span class="keyword token">new</span> <span class="class-name token">MouseEvent</span><span class="punctuation token">(</span><span class="string token">"click"</span><span class="punctuation token">,</span> <span class="punctuation token">{</span>
-    bubbles<span class="punctuation token">:</span> <span class="keyword token">true</span><span class="punctuation token">,</span>
-    cancelable<span class="punctuation token">:</span> <span class="keyword token">true</span><span class="punctuation token">,</span>
-    view<span class="punctuation token">:</span> window
-  <span class="punctuation token">}</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="keyword token">var</span> cb <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">"checkbox"</span><span class="punctuation token">)</span><span class="punctuation token">;</span> <span class="comment token">//élément pour cliquer</span>
-  <span class="keyword token">var</span> canceled <span class="operator token">=</span> <span class="operator token">!</span>cb<span class="punctuation token">.</span><span class="function token">dispatchEvent</span><span class="punctuation token">(</span>evt<span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="keyword token">if</span><span class="punctuation token">(</span>canceled<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    <span class="comment token">// Un gestionnaire appelé preventDefault</span>
-    <span class="function token">alert</span><span class="punctuation token">(</span><span class="string token">"canceled"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="punctuation token">{</span>
-    <span class="comment token">// Aucun des gestionnaires n'est appelé preventDefault</span>
-    <span class="function token">alert</span><span class="punctuation token">(</span><span class="string token">"not canceled"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-<span class="punctuation token">}</span>
-document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">"button"</span><span class="punctuation token">)</span><span class="punctuation token">.</span><span class="function token">addEventListener</span><span class="punctuation token">(</span><span class="string token">'click'</span><span class="punctuation token">,</span> simulateClick<span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js">function simulateClick() {
+  var evt = new MouseEvent("click", {
+    bubbles: true,
+    cancelable: true,
+    view: window
+  });
+  var cb = document.getElementById("checkbox"); //élément pour cliquer
+  var canceled = !cb.dispatchEvent(evt);
+  if(canceled) {
+    // Un gestionnaire appelé preventDefault
+    alert("canceled");
+  } else {
+    // Aucun des gestionnaires n'est appelé preventDefault
+    alert("not canceled");
+  }
+}
+document.getElementById("button").addEventListener('click', simulateClick);</pre>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>label</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>checkbox<span class="punctuation token">"</span></span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>checkbox<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span> Checked<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>label</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>button</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>button<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Click me<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>button</span><span class="punctuation token">&gt;</span></span></code></pre>
+<pre class="brush: html">&lt;p&gt;&lt;label&gt;&lt;input type="checkbox" id="checkbox"&gt; Checked&lt;/label&gt;
+&lt;p&gt;&lt;button id="button"&gt;Click me&lt;/button&gt;</pre>
 
 <p>Cliquez sur le bouton pour voir comment l'exemple fonctionne :</p>
 

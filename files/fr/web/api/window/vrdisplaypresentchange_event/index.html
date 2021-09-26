@@ -40,7 +40,7 @@ translation_of: Web/API/Window/vrdisplaypresentchange_event
 
 <p>Vous pouvez utiliser l'événement <code>vrdisplaypresentchange</code> dans une méthode <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> :</p>
 
-<pre class="brush: js notranslate">window.addEventListener('vrdisplaypresentchange', function() {
+<pre class="brush: js">window.addEventListener('vrdisplaypresentchange', function() {
   if(vrDisplay.isPresenting) {
     info.textContent = "L'affichage a commencé à présenter.";
   } else {
@@ -51,7 +51,7 @@ translation_of: Web/API/Window/vrdisplaypresentchange_event
 
 <p>Ou utilisez la propriété de gestionnaire d'événements <code><a href="/en-US/docs/Web/API/Window/onvrdisplaypresentchange">onvrdisplaypresentchange</a></code> :</p>
 
-<pre class="brush: js notranslate">window.onvrdisplaypresentchange = function() {
+<pre class="brush: js">window.onvrdisplaypresentchange = function() {
   if(vrDisplay.isPresenting) {
     info.textContent = "L'affichage a commencé à présenter.";
   } else {

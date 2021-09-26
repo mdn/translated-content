@@ -16,10 +16,7 @@ original_slug: Web/Guide/DOM/Events/Touch_events
 <dl>
  <dt>Surface</dt>
  <dd>La surface tactile. Cela peut être un écran ou un trackpad.</dd>
-</dl>
-
-<dl>
- <dt><strong style="font-weight: bold;">Point de toucher (<em>Touch point</em>)</strong></dt>
+ <dt>Point de toucher (<em>Touch point</em>)</dt>
  <dd>Le point de contact avec la surface. Cela peut être un doigt ou un stylet (ou un coude, une oreille, un nez... enfin il y a quand même des chances que cela soit un doigt).</dd>
 </dl>
 
@@ -40,7 +37,9 @@ original_slug: Web/Guide/DOM/Events/Touch_events
 
 <p>Cet exemple permet de gérer un toucher multiple (plusieurs contacts simultanés), permettant ainsi à l'utilisateur de dessiner dans un {{ HTMLElement("canvas") }} avec plusieurs doigts. Cela ne fonctionne qu'avec les navigateurs supportant les interactions tactiles.</p>
 
-<div class="note"><strong>Note :</strong> Le texte qui suit utilisera le terme de « doigt » pour désigner le point de toucher entre l'utilisateur et la surface. Bien entendu, cela est transposable avec une autre méthode de toucher (stylet...).</div>
+<div class="note">
+  <p><strong>Note :</strong> Le texte qui suit utilisera le terme de « doigt » pour désigner le point de toucher entre l'utilisateur et la surface. Bien entendu, cela est transposable avec une autre méthode de toucher (stylet...).</p>
+</div>
 
 <h3 id="Initialiser_les_gestionnaires_d'événements">Initialiser les gestionnaires d'événements</h3>
 
@@ -112,7 +111,7 @@ original_slug: Web/Guide/DOM/Events/Touch_events
 
 <p>Cela permet d'obtenir les précédentes coordonnées pour chaque toucher et ainsi d'utiliser la méthode adaptée pour dessiner le segment reliant les deux positions.</p>
 
-<p>Une fois le segment dessiné, on appelle <a href="/fr/JavaScript/Reference/Global_Objects/Array/splice" title="en/JavaScript/Reference/Global Objects/Array/splice"><code>Array.splice()</code></a> pour remplacer les informations précédentes sur les points de toucher par les informations courantes contenues dans le tableau <code>ongoingTouches</code>.</p>
+<p>Une fois le segment dessiné, on appelle <a href="/fr/JavaScript/Reference/Global_Objects/Array/splice"><code>Array.splice()</code></a> pour remplacer les informations précédentes sur les points de toucher par les informations courantes contenues dans le tableau <code>ongoingTouches</code>.</p>
 
 <h3 id="Gérer_la_fin_d'un_toucher">Gérer la fin d'un toucher</h3>
 
@@ -139,7 +138,7 @@ original_slug: Web/Guide/DOM/Events/Touch_events
 }
 </pre>
 
-<p>Cette fonction ressemble beaucoup à la précédente sauf qu'ici en appelant <a href="/en/JavaScript/Reference/Global_Objects/Array/splice" title="en/JavaScript/Reference/Global Objects/Array/splice"><code>Array.splice()</code></a>, on retire simplement l'ancien point sans ajouter un point mis à jour. On arrête donc de « suivre » ce point.</p>
+<p>Cette fonction ressemble beaucoup à la précédente sauf qu'ici en appelant <a href="/en/JavaScript/Reference/Global_Objects/Array/splice"><code>Array.splice()</code></a>, on retire simplement l'ancien point sans ajouter un point mis à jour. On arrête donc de « suivre » ce point.</p>
 
 <h3 id="Gérer_l'annulation_d'un_toucher">Gérer l'annulation d'un toucher</h3>
 
@@ -205,7 +204,7 @@ original_slug: Web/Guide/DOM/Events/Touch_events
   if (evt.touches.length &gt; 1 || (evt.type == "touchend" &amp;&amp; evt.touches.length &gt; 0))
     return;
 
-  var newEvt = <a href="https://developer.mozilla.org/en/DOM/document.createEvent" rel="internal" title="en/DOM/document.createEvent">document.createEvent</a>("MouseEvents");
+  var newEvt = document.createEvent("MouseEvents");
   var type = null;
   var touch = null;
   switch (event.type) {
@@ -213,10 +212,10 @@ original_slug: Web/Guide/DOM/Events/Touch_events
     case "touchmove":  type = "mousemove"; touch = event.changedTouches[0];
     case "touchend":   type = "mouseup"; touch = event.changedTouches[0];
   }
-  newEvt.<strong>initMouseEvent</strong>(type, true, true, event.<code><a href="https://developer.mozilla.org/en/DOM/event.originalTarget" rel="custom">originalTarget</a>.ownerDocument.defaultView</code>, 0,
+  newEvt.initMouseEvent(type, true, true, event.originalTarget.ownerDocument.defaultView, 0,
     touch.screenX, touch.screenY, touch.clientX, touch.clientY,
     evt.ctrlKey, evt.altKey, evt.shirtKey, evt.metaKey, 0, null);
-  event.<code><a href="https://developer.mozilla.org/en/DOM/event.originalTarget" rel="custom">originalTarget</a></code>.<a href="https://developer.mozilla.org/en/DOM/element.dispatchEvent" rel="internal" title="en/DOM/element.dispatchEvent">dispatchEvent</a>(newEvt);
+  event.originalTarget.dispatchEvent(newEvt);
 }
 </pre>
 
@@ -231,16 +230,14 @@ original_slug: Web/Guide/DOM/Events/Touch_events
 
 <p>{{Compat("api.Touch")}}</p>
 
-<div id="compat-mobile"> </div>
-
 <h3 id="Notes_relatives_à_Gecko">Notes relatives à Gecko</h3>
 
 <p>Le paramètre <code>dom.w3c_touch_events.enabled</code> peut être utilisé avec ses trois états pour désactiver (0), activer (1) et détecter automatiquement (2) le support des événements tactiles. La valeur par défaut est la détection automatique (2). Une fois que le paramètre a été changé, il est nécessaire de redémarrer le navigateur.</p>
 
-<div class="geckoVersionNote" style="">
 <p>{{ gecko_callout_heading("12.0") }}</p>
 
 <p>Avant Gecko 12.0 {{ geckoRelease("12.0") }}, Gecko ne supportait pas les contacts multiples simultanés. Seul un toucher à la fois était supporté.</p>
-</div>
 
-<div class="note"><strong>Note : </strong>Avant Gecko 6.0 {{ geckoRelease("6.0") }}, Gecko permettait d'utiliser une <a href="/en/DOM/Touch_events_(Mozilla_experimental)" title="en/DOM/Touch events (Mozilla experimental)">API propriétaire pour les événements tactile.</a> Cette API est maintenant dépréciée, celle-ci doit être utilisée à la place.</div>
+<div class="note">
+  <p><strong>Note :</strong> Avant Gecko 6.0 {{ geckoRelease("6.0") }}, Gecko permettait d'utiliser une <a href="/en/DOM/Touch_events_(Mozilla_experimental)">API propriétaire pour les événements tactile.</a> Cette API est maintenant dépréciée, celle-ci doit être utilisée à la place.</p>
+</div>

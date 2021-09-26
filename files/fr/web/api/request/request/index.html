@@ -121,13 +121,11 @@ var maRequete = new Request('fleurs.jpg', monInit);
 
 <p>Vous pouvez aussi passer un objet {{domxref("Request")}} au constructeur <code>Request()</code> pour créer une copie de la Request (c'est similaire au fait d'appeler la méthode {{domxref("Request.clone","clone()")}}).</p>
 
-<div class="codehilite" style="background: #f0f3f3;">
-<pre style="line-height: 125%;">var copie = new Request(maRequete);
+<pre>var copie = new Request(maRequete);
 </pre>
-</div>
 
 <div class="note">
-<p><strong>Note</strong> : Cette dernière utilisation n'est probablement utile que dans <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorkers</a>.</p>
+<p><strong>Note :</strong> Cette dernière utilisation n'est probablement utile que dans <a href="/en-US/docs/Web/API/ServiceWorker_API">ServiceWorkers</a>.</p>
 </div>
 
 <h2 id="Spécifications">Spécifications</h2>

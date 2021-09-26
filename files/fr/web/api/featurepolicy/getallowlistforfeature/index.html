@@ -10,11 +10,11 @@ translation_of: Web/API/FeaturePolicy/getAllowlistForFeature
 ---
 <div>{{APIRef("Feature Policy API")}}{{SeeCompatTable}}</div>
 
-<p><span class="seoSummary">La méthode <strong><code>getAllowlistForFeature()</code></strong> de {{DOMxRef("FeaturePolicy")}} permet d'obtenir la liste des permissions associée à une fonctionnalité pour ce Feature Policy.</span></p>
+<p>La méthode <strong><code>getAllowlistForFeature()</code></strong> de {{DOMxRef("FeaturePolicy")}} permet d'obtenir la liste des permissions associée à une fonctionnalité pour ce Feature Policy.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox notranslate">const listePermissions = <em>FeaturePolicy</em>.getAllowlistForFeature(&lt;fonctionnalité&gt;)
+<pre class="syntaxbox">const listePermissions = <em>FeaturePolicy</em>.getAllowlistForFeature(&lt;fonctionnalité&gt;)
 </pre>
 
 <h3 id="Parameter">Parameter</h3>
@@ -35,7 +35,7 @@ translation_of: Web/API/FeaturePolicy/getAllowlistForFeature
 
 <p>Cet exemple affiche toutes les origines à qui la directive Feature Policy permet d'utiliser l'API Camera (appareil photo). Notez que l'API Camera pourrait être restreinte par l'API Permissions si l'utilisateur n'a pas encore accordé la permission.</p>
 
-<pre class="brush: js notranslate">// D'abord, récupère l'objet Feature Policy
+<pre class="brush: js">// D'abord, récupère l'objet Feature Policy
 const featurePolicy = document.featurePolicy
 
 // Puis demande la liste pour la fonctionnalité "camera"

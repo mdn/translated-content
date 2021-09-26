@@ -30,7 +30,7 @@ translation_of: Web/API/Document/transitionend_event
 
 <p>L’évènement <code>transitionend</code> est émis dans les deux directions : quand la transition se termine vers l’état modifié, et quand elle est complètement retournée à l’état par défaut ou non modifié. S’il n’y a pas de délai ou de durée de transition, si les deux sont 0 s ou ne sont pas déclarés, il n’y a pas de transition, et aucun évènement de transition n’est émis. Si l’évènement <code>transitioncancel</code> est émis, l’évènement <code>transitionend</code> ne se produira pas.</p>
 
-<p>La cible originale pour cet évènement est l’<code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element">Element</a></code> sur lequel la transition est appliquée. Vous pouvez écouter cet évènement sur l’interface <code>Window</code> pour le gérer durant les phases de capture ou de bouillonnement. Pour plus de détails sur cet évènement, veuillez consulter la page <a href="/fr/docs/Web/Events/transitionend">HTMLElement: transitionend</a>.</p>
+<p>La cible originale pour cet évènement est l’<code><a href="/en-US/docs/Web/API/Element">Element</a></code> sur lequel la transition est appliquée. Vous pouvez écouter cet évènement sur l’interface <code>Window</code> pour le gérer durant les phases de capture ou de bouillonnement. Pour plus de détails sur cet évènement, veuillez consulter la page <a href="/fr/docs/Web/Events/transitionend">HTMLElement: transitionend</a>.</p>
 
 <h2 id="Exemples">Exemples</h2>
 
@@ -40,13 +40,13 @@ translation_of: Web/API/Document/transitionend_event
   console.log('Transition terminée');
 });</pre>
 
-<p>La même chose, mais en utilisant la propriété <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/ontransitionend">ontransitionend</a></code> au lieu de <code>addEventListener()</code> :</p>
+<p>La même chose, mais en utilisant la propriété <code><a href="/en-US/docs/Web/API/GlobalEventHandlers/ontransitionend">ontransitionend</a></code> au lieu de <code>addEventListener()</code> :</p>
 
 <pre class="brush: js">document.ontransitionend = () =&gt; {
   console.log('Transition terminée');
 };</pre>
 
-<p><a href="/en-US/docs/Web/API/HTMLElement/transitionend_event#Live_example" lang="en-US">Voir un exemple en direct sur cet évènement.</a></p>
+<p><a href="/en-US/docs/Web/API/HTMLElement/transitionend_event#Live_example">Voir un exemple en direct sur cet évènement.</a></p>
 
 <h2 id="Spécifications">Spécifications</h2>
 
@@ -77,7 +77,7 @@ translation_of: Web/API/Document/transitionend_event
  <li>Le gestionnaire d’évènement {{domxref("GlobalEventHandlers.ontransitionend")}}</li>
  <li>L’interface {{domxref("TransitionEvent")}}</li>
  <li>Les propriétés CSS : {{cssxref("transition")}}, {{cssxref("transition-delay")}}, {{cssxref("transition-duration")}}, {{cssxref("transition-property")}}, {{cssxref("transition-timing-function")}}</li>
- <li>Des évènements associés : <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/transitionrun_event">transitionrun</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/transitionstart_event">transitionstart</a></code>, <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/transitioncancel_event">transitioncancel</a></code></li>
- <li>Cet évènement sur les cibles <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement">HTMLElement</a></code> : <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/transitionend_event">transitionend</a></code></li>
- <li>Cet évènement sur les cibles <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window">Window</a></code> : <code><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/transitionend_event">transitionend</a></code></li>
+ <li>Des évènements associés : <code><a href="/en-US/docs/Web/API/Document/transitionrun_event">transitionrun</a></code>, <code><a href="/en-US/docs/Web/API/Document/transitionstart_event">transitionstart</a></code>, <code><a href="/en-US/docs/Web/API/Document/transitioncancel_event">transitioncancel</a></code></li>
+ <li>Cet évènement sur les cibles <code><a href="/en-US/docs/Web/API/HTMLElement">HTMLElement</a></code> : <code><a href="/en-US/docs/Web/API/HTMLElement/transitionend_event">transitionend</a></code></li>
+ <li>Cet évènement sur les cibles <code><a href="/en-US/docs/Web/API/Window">Window</a></code> : <code><a href="/en-US/docs/Web/API/Window/transitionend_event">transitionend</a></code></li>
 </ul>

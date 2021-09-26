@@ -13,7 +13,7 @@ translation_of: Web/API/ExtendableMessageEvent/ports
 ---
 <p>{{APIRef("Service Workers API")}}{{SeeCompatTable}}</p>
 
-<p>La propriété en lecture seule <font face="Consolas, Liberation Mono, Courier, monospace"><strong>ports</strong></font> de l'interface {{domxref("ExtendableMessageEvent")}} retourne un tableau contenant les objects {{domxref("MessagePort")}} représentants les ports associés aux canaux de messages associés (le canal du message est envoyé).</p>
+<p>La propriété en lecture seule <strong>ports</strong> de l'interface {{domxref("ExtendableMessageEvent")}} retourne un tableau contenant les objects {{domxref("MessagePort")}} représentants les ports associés aux canaux de messages associés (le canal du message est envoyé).</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
@@ -25,7 +25,7 @@ translation_of: Web/API/ExtendableMessageEvent/ports
 
 <h2 id="Exemples">Exemples</h2>
 
-<p>Le code suivant est utilisé, dans un service worker, pour répondre à un message push en envoyant les données reçues par le  <a href="https://developer.mozilla.org/fr/docs/Web/API/PushMessageData" title="Cette documentation n'a pas encore été rédigée, vous pouvez aider en contribuant !"><code>PushMessageData</code></a> au contexte principale, via le <a href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API">canal de messages</a>. L'objet événement de <code>onmessage</code> sera un <code>ExtendableMessageEvent.</code></p>
+<p>Le code suivant est utilisé, dans un service worker, pour répondre à un message push en envoyant les données reçues par le  <a href="/fr/docs/Web/API/PushMessageData"><code>PushMessageData</code></a> au contexte principale, via le <a href="/en-US/docs/Web/API/Channel_Messaging_API">canal de messages</a>. L'objet événement de <code>onmessage</code> sera un <code>ExtendableMessageEvent.</code></p>
 
 <pre class="brush: js">var port;
 
@@ -68,8 +68,8 @@ self.onmessage = function(e) {
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Utilisation des Service Workers</a></li>
+ <li><a href="/en-US/docs/Web/API/ServiceWorker_API/Using_Service_Workers">Utilisation des Service Workers</a></li>
  <li><a href="https://github.com/mdn/sw-test">Exemple simple des service workers</a></li>
  <li><a href="https://jakearchibald.github.io/isserviceworkerready/">Est-ce que les service workers sont prêts ?</a></li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Channel_Messaging_API">Canal de messages</a></li>
+ <li><a href="/en-US/docs/Web/API/Channel_Messaging_API">Canal de messages</a></li>
 </ul>

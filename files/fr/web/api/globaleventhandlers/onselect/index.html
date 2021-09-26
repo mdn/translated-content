@@ -15,9 +15,9 @@ translation_of: Web/API/GlobalEventHandlers/onselect
 
 <p>L'événement <code>select</code> n'est déclenché qu'après que du texte à l'intérieur d'un <code>{{HtmlElement('input/text', '&lt;input type="text"&gt;')}}</code> ou d'un {{HtmlElement("textarea")}} a été sélectionné.</p>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
-<pre class="syntaxbox notranslate"><em>target</em>.onselect = <em>functionRef</em>;
+<pre class="syntaxbox"><em>target</em>.onselect = <em>functionRef</em>;
 </pre>
 
 <h3 id="Valeur">Valeur</h3>
@@ -30,12 +30,12 @@ translation_of: Web/API/GlobalEventHandlers/onselect
 
 <h3 id="HTML">HTML</h3>
 
-<pre class="brush: html notranslate">&lt;textarea&gt;Essayez de sélectionner du texte dans cet élément.&lt;/textarea&gt;
+<pre class="brush: html">&lt;textarea&gt;Essayez de sélectionner du texte dans cet élément.&lt;/textarea&gt;
 &lt;p id="log"&gt;&lt;/p&gt;</pre>
 
 <h3 id="JavaScript">JavaScript</h3>
 
-<pre class="brush: js notranslate">function enregistrerSelection(event) {
+<pre class="brush: js">function enregistrerSelection(event) {
   const log = document.getElementById('log');
   const selection = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd);
   log.textContent = `Vous avez sélectionné : ${selection}`;
@@ -48,9 +48,9 @@ textarea.onselect = enregistrerSelection;</pre>
 
 <p>{{EmbedLiveSample("Examples")}}</p>
 
-<h2 id="Specification" name="Specification">Spécification</h2>
+<h2 id="Specification">Spécification</h2>
 
-<table class="spectable standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="col">Spécification</th>

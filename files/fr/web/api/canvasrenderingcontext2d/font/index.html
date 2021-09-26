@@ -11,7 +11,7 @@ translation_of: Web/API/CanvasRenderingContext2D/font
 ---
 <div>{{APIRef}}</div>
 
-<p>La propriété <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.font</code></strong><code> de l'API</code> Canvas 2D API spécifie le style de texte à utiliser pour dessiner du texte. Cette chaîne utilise la même syntaxe que le spécificateur de <a href="/fr-FR/docs/Web/CSS/font" title="fr/CSS/font">police CSS</a>. La police par défaut est 10px sans-serif.</p>
+<p>La propriété <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.font</code></strong><code> de l'API</code> Canvas 2D API spécifie le style de texte à utiliser pour dessiner du texte. Cette chaîne utilise la même syntaxe que le spécificateur de <a href="/fr-FR/docs/Web/CSS/font">police CSS</a>. La police par défaut est 10px sans-serif.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
@@ -47,10 +47,9 @@ ctx.strokeText('Hello world', 50, 100);
 
 <p>Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel dans le canevas :</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
+<h4 id="code_jouable">Code jouable</h4>
 
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
   &lt;input id="edit" type="button" value="Edit" /&gt;
   &lt;input id="reset" type="button" value="Reset" /&gt;
@@ -60,7 +59,7 @@ ctx.font = '48px serif';
 ctx.strokeText('Hello world', 50, 100);&lt;/textarea&gt;
 </pre>
 
-<pre class="brush: js">var canvas = document.getElementById('canvas');
+<pre class="brush: js hidden">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
@@ -84,9 +83,8 @@ edit.addEventListener('click', function() {
 textarea.addEventListener('input', drawCanvas);
 window.addEventListener('load', drawCanvas);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+<p>{{ EmbedLiveSample('code_jouable', 700, 360) }}</p>
 
 <h3 id="Chargement_de_polices_avec_l'API_CSS_Font_Loading">Chargement de polices avec l'API CSS Font Loading</h3>
 

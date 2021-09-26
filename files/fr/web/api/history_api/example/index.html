@@ -5,9 +5,10 @@ translation_of: Web/API/History_API/Example
 original_slug: Web/Guide/DOM/Manipuler_historique_du_navigateur/Example
 ---
 <p>Voici un exemple de site web AJAX composé uniquement de trois pages (<em>page_un.php</em>, <em>page_deux.php</em> et <em>page_trois.php</em>). Pour tester cet exemple, merci de créer les fichiers suivants :</p>
+
 <p><strong>page_un.php</strong>:</p>
-<div style="height: 400px; margin-bottom: 12px; overflow: auto;">
-  <pre class="brush: php">&lt;?php
+
+<pre class="brush: php">&lt;?php
     $page_title = "Page un";
 
     $as_json = false;
@@ -51,10 +52,10 @@ original_slug: Web/Guide/DOM/Manipuler_historique_du_navigateur/Example
     }
 ?&gt;
 </pre>
-</div>
+
 <p><strong>page_deux.php</strong>:</p>
-<div style="height: 400px; margin-bottom: 12px; overflow: auto;">
-  <pre class="brush: php">&lt;?php
+
+<pre class="brush: php">&lt;?php
     $page_title = "Page deux";
 
     $as_json = false;
@@ -98,10 +99,10 @@ original_slug: Web/Guide/DOM/Manipuler_historique_du_navigateur/Example
     }
 ?&gt;
 </pre>
-</div>
+
 <p><strong>page_trois.php</strong>:</p>
-<div style="height: 400px; margin-bottom: 12px; overflow: auto;">
-  <pre class="brush: php">&lt;?php
+
+<pre class="brush: php">&lt;?php
     $page_title = "Page trois";
     $page_content = "&lt;p&gt;Ceci est le contenu de la &lt;strong&gt;page_trois.php&lt;/strong&gt;. Ce contenu est stocké dans une variable PHP.&lt;/p&gt;";
 
@@ -136,8 +137,9 @@ original_slug: Web/Guide/DOM/Manipuler_historique_du_navigateur/Example
     }
 ?&gt;
 </pre>
-</div>
+
 <p><strong>css/style.css</strong>:</p>
+
 <pre class="brush: css">#ajax-loader {
     position: fixed;
     display: table;
@@ -175,8 +177,8 @@ original_slug: Web/Guide/DOM/Manipuler_historique_du_navigateur/Example
 &lt;link rel="stylesheet" href="css/style.css" /&gt;
 </pre>
 <p><strong>js/ajax_nav.js</strong>:</p>
-<div style="height: 400px; margin-bottom: 12px; overflow: auto;">
-  <pre class="brush: js">"use strict";
+
+<pre class="brush: js">"use strict";
 
 var ajaxRequest = new (function () {
 
@@ -382,10 +384,12 @@ var ajaxRequest = new (function () {
 
 })();
 </pre>
+
+<div class="note">
+  <p><strong>Note :</strong> <a href="/en/JavaScript/Reference/Statements/const"><code>const</code></a> (instruction de constante) <strong>ne fait pas partie de ECMAScript 5</strong>. Il est supporté dans Firefox et Chrome (V8) et partiellement supporté dans Opera 9+ et Safari. <strong>Il n'est pas supporté dans Internet Explorer 6-9, ou dans la version de prévisualisation de Internet Explorer 10</strong>. <a href="/en/JavaScript/Reference/Statements/const"><code>const</code></a> sera défini par ECMAScript 6, mais avec une sémantique différente. Proches des variables déclarées avec l'instruction <a href="/en/JavaScript/Reference/Statements/let"><code>let</code></a>, les constantes déclarées avec <a href="/en/JavaScript/Reference/Statements/const"><code>const</code></a> seront limitées en portée. <strong>Nous ne l'avons utilisé que pour des raisons pédagogiques, si vous souhaitez une compatibilité maximale de ce code, merci de remplacer les références à </strong><strong><a href="/en/JavaScript/Reference/Statements/const"><code>const</code></a> par des instructions <a href="/en/JavaScript/Reference/Statements/var"><code>var</code></a>.</strong>
+  </p>
 </div>
-<div class="note" id="const_compatibility">
-  <strong>Note:</strong> <a href="/en/JavaScript/Reference/Statements/const" title="en/JavaScript/Reference/Statements/const"><code>const</code></a> (instruction de constante) <strong>ne fait pas partie de ECMAScript 5</strong>. Il est supporté dans Firefox et Chrome (V8) et partiellement supporté dans Opera 9+ et Safari. <strong>Il n'est pas supporté dans Internet Explorer 6-9, ou dans la version de prévisualisation de Internet Explorer 10</strong>. <a href="/en/JavaScript/Reference/Statements/const" title="en/JavaScript/Reference/Statements/const"><code>const</code></a> sera défini par ECMAScript 6, mais avec une sémantique différente. Proches des variables déclarées avec l'instruction <a href="/en/JavaScript/Reference/Statements/let" title="en/JavaScript/Reference/Statements/let"><code>let</code></a>, les constantes déclarées avec <a href="/en/JavaScript/Reference/Statements/const" title="en/JavaScript/Reference/Statements/const"><code>const</code></a> seront limitées en portée. <strong>Nous ne l'avons utilisé que pour des raisons pédagogiques, si vous souhaitez une compatibilité maximale de ce code, merci de remplacer les références à </strong><strong><a href="/en/JavaScript/Reference/Statements/const" title="en/JavaScript/Reference/Statements/const"><code>const</code></a> par des instructions <a href="/en/JavaScript/Reference/Statements/var" title="en/JavaScript/Reference/Statements/var"><code>var</code></a>.</strong></div>
-<p>Pour plus d'informations, voyez : <a href="/fr/docs/DOM/manipuler_lhistorique_du_navigateur" title="/fr/docs/DOM/manipuler_lhistorique_du_navigateur">Manipuler l'historique du navigateur</a>.</p>
+<p>Pour plus d'informations, voyez : <a href="/fr/docs/DOM/manipuler_lhistorique_du_navigateur">Manipuler l'historique du navigateur</a>.</p>
 <h2 id="Lire_également">Lire également</h2>
 <ul>
   <li>{{ domxref("window.history") }}</li>

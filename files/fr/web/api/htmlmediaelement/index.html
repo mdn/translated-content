@@ -22,10 +22,9 @@ translation_of: Web/API/HTMLMediaElement
  <dt>{{domxref("HTMLMediaElement.audioTracks")}}</dt>
  <dd>est une {{domxref("AudioTrackList")}} qui liste les objets {{domxref("AudioTrack")}} (<em>pistes audio</em>) contenus dans l'élément.</dd>
  <dt>{{domxref("HTMLMediaElement.autoplay")}}</dt>
- <dd>est un {{jsxref("Boolean")}} qui reflète l'attribut HTML {{htmlattrxref("autoplay","video")}}, indiquant si la lecture doit commencer automatiquement dès que suffisamment de médias sont disponibles pour le faire sans interruption.</dd>
- <dd>
+ <dd><p>est un {{jsxref("Boolean")}} qui reflète l'attribut HTML {{htmlattrxref("autoplay","video")}}, indiquant si la lecture doit commencer automatiquement dès que suffisamment de médias sont disponibles pour le faire sans interruption.</p>
  <div class="note">
- <p>Les sites qui lisent automatiquement l'audio (ou les vidéos avec une piste audio) peuvent être désagréables pour les utilisateurs, il faut donc l'éviter autant que possible. Si vous devez offrir la fonctionnalité de lecture automatique, vous devez la faire activer (par un utilisateur qui la lance expréssement). Cependant, cela peut être utile lors de la création d'éléments média dont la source sera définie ultérieurement, sous le contrôle de l'utilisateur.</p>
+ <p><strong>Note :</strong> Les sites qui lisent automatiquement l'audio (ou les vidéos avec une piste audio) peuvent être désagréables pour les utilisateurs, il faut donc l'éviter autant que possible. Si vous devez offrir la fonctionnalité de lecture automatique, vous devez la faire activer (par un utilisateur qui la lance expréssement). Cependant, cela peut être utile lors de la création d'éléments média dont la source sera définie ultérieurement, sous le contrôle de l'utilisateur.</p>
  </div>
  </dd>
  <dt>{{domxref("HTMLMediaElement.buffered")}}{{readonlyinline}}</dt>
@@ -37,7 +36,7 @@ translation_of: Web/API/HTMLMediaElement
  <dt>{{domxref("HTMLMediaElement.controlsList")}} {{readonlyinline}}</dt>
  <dd>renvoie une {{domxref("DOMTokenList")}} qui aide l'agent utilisateur à sélectionner les contrôles à afficher sur l'élément du média chaque fois que l'agent utilisateur affiche son propre jeu de contrôles. La <code>DOMTokenList</code> prend une ou plusieurs des trois valeurs possibles : <code>nodownload</code>, <code>nofullscreen</code> et <code>noremoteplayback</code>.</dd>
  <dt>{{domxref("HTMLMediaElement.crossOrigin")}}</dt>
- <dd>est une {{domxref("DOMString")}} (<em>chaîne de caractères</em>) indiquant les <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Reglages_des_attributs_CORS">règlages CORS</a> pour cet élément de média.</dd>
+ <dd>est une {{domxref("DOMString")}} (<em>chaîne de caractères</em>) indiquant les <a href="/fr/docs/Web/HTML/Reglages_des_attributs_CORS">règlages CORS</a> pour cet élément de média.</dd>
  <dt>{{domxref("HTMLMediaElement.currentSrc")}}{{readonlyinline}}</dt>
  <dd>Renvoie une {{domxref("DOMString")}} (<em>chaîne de caractères</em>) avec l'URL absolue de la ressource de média choisie.</dd>
  <dt>{{domxref("HTMLMediaElement.currentTime")}}</dt>
@@ -101,9 +100,9 @@ translation_of: Web/API/HTMLMediaElement
  <dt>{{domxref("HTMLMediaElement.textTracks")}}{{readonlyinline}}</dt>
  <dd>Renvoie la liste d'objets {{domxref("TextTrack")}} (<em>piste de texte</em>) contenus dans l'élément.</dd>
  <dt>{{domxref("HTMLMediaElement.videoTracks")}}{{readonlyinline}}</dt>
- <dd>Renvoie la liste d'objets {{domxref("VideoTrack")}} (<em>pistes vidéo</em>) contenus dans l'élément.
+ <dd><p>Renvoie la liste d'objets {{domxref("VideoTrack")}} (<em>pistes vidéo</em>) contenus dans l'élément.</p>
  <div class="note">
- <p><strong>Note : </strong>Gecko ne prend en charge que la lecture d'une seule piste et l'analyse des métadonnées des pistes n'est disponible que pour les médias avec le format de conteneur Ogg.</p>
+ <p><strong>Note :</strong> Gecko ne prend en charge que la lecture d'une seule piste et l'analyse des métadonnées des pistes n'est disponible que pour les médias avec le format de conteneur Ogg.</p>
  </div>
  </dd>
  <dt>{{domxref("HTMLMediaElement.volume")}}</dt>
@@ -163,7 +162,7 @@ translation_of: Web/API/HTMLMediaElement
  <dt>{{domxref("HTMLMediaElement.pause()")}}</dt>
  <dd>met en pause la lecture du média.</dd>
  <dt>{{domxref("HTMLMediaElement.play()")}}</dt>
- <dd><span class="short_text" id="result_box" lang="fr"><span>commence la lecture du média.</span></span></dd>
+ <dd>commence la lecture du média.</dd>
  <dt>{{domxref("HTMLMediaElement.seekToNextFrame()")}} {{non-standard_inline}} {{experimental_inline}}</dt>
  <dd>cherche l'image suivante dans les médias. Cette méthode expérimentale non standard permet de conduire manuellement la lecture et le rendu des médias à une vitesse personnalisée, ou de se déplacer dans le média image par image pour effectuer un filtrage ou d'autres opérations.</dd>
  <dt>{{domxref("HTMLMediaElement.setMediaKeys()")}} {{experimental_inline}}</dt>
@@ -230,9 +229,9 @@ translation_of: Web/API/HTMLMediaElement
  </li>
  <li>Articles
   <ul>
-   <li><a class="internal" href="https://developer.mozilla.org/fr/Apprendre/HTML/Multimedia_and_embedding/Contenu_audio_et_video">Contenu audio et video</a></li>
-   <li><a class="internal" href="https://developer.mozilla.org/fr/docs/Web/HTML/Formats_pour_audio_video">Formats pris en charge par <code>audio</code> et <code>video</code></a></li>
-   <li><a href="https://developer.mozilla.org/fr/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
+   <li><a href="/fr/Apprendre/HTML/Multimedia_and_embedding/Contenu_audio_et_video">Contenu audio et video</a></li>
+   <li><a href="/fr/docs/Web/HTML/Formats_pour_audio_video">Formats pris en charge par <code>audio</code> et <code>video</code></a></li>
+   <li><a href="/fr/docs/Web/API/Web_Audio_API">Web Audio API</a></li>
   </ul>
  </li>
 </ul>

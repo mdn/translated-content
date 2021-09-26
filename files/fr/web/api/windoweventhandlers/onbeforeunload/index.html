@@ -3,11 +3,11 @@ title: window.onbeforeunload
 slug: Web/API/WindowEventHandlers/onbeforeunload
 translation_of: Web/API/WindowEventHandlers/onbeforeunload
 ---
-<h2 id="Sommaire" name="Sommaire">Résumé</h2>
+<h2 id="Sommaire">Résumé</h2>
 
 <p>Le gestionnaire d'événement <code><strong>WindowEventHandlers.onbeforeunload</strong></code> contient le code exécuté lorsque l'évènement {{event("beforeunload")}} est envoyé. Cet événement se déclenche lorsque la fenêtre est sur le point de recharger ses ressources.</p>
 
-<h2 id="Syntaxe" name="Syntaxe">Syntaxe</h2>
+<h2 id="Syntaxe">Syntaxe</h2>
 
 <pre class="brush: html">&lt;element beforeunload="funcRef(event);" /&gt;</pre>
 
@@ -19,7 +19,7 @@ translation_of: Web/API/WindowEventHandlers/onbeforeunload
  <li>funcRef : Référence à une fonction appelée lorsque l'évènement se déclenche</li>
 </ul>
 
-<h2 id="Exemple" name="Exemple">Exemple</h2>
+<h2 id="Exemple">Exemple</h2>
 
 <pre class="brush: js">window.onbeforeunload = function (e) {
   var e = e || window.event;
@@ -34,7 +34,7 @@ translation_of: Web/API/WindowEventHandlers/onbeforeunload
 };
 </pre>
 
-<h2 id="EventProperty" name="EventProperty">Propriétés de l'objet <strong>event</strong></h2>
+<h2 id="EventProperty">Propriétés de l'objet <strong>event</strong></h2>
 
 <pre>returnValue</pre>
 
@@ -46,4 +46,4 @@ translation_of: Web/API/WindowEventHandlers/onbeforeunload
 
 <p>L'évènement 'onbeforeunload' a été introduit par Microsoft dans IE4 et s'est généralisé dans tous les navigateurs.</p>
 
-<p><a class="external" href="http://msdn.microsoft.com/en-us/library/ms536907%28VS.85%29.aspx" title="MSDN—onbeforeunload Event">MSDN—onbeforeunload Event</a></p>
+<p><a href="http://msdn.microsoft.com/en-us/library/ms536907%28VS.85%29.aspx">MSDN—onbeforeunload Event</a></p>

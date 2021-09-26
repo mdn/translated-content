@@ -17,16 +17,16 @@ translation_of: Web/API/BatteryManager/level
 
 <p>La valeur <code>1.0</code> est aussi retournée si le système n'est pas capable de déterminer son niveau de charge ou si le système n'est pas alimenté par une batterie.</p>
 
-<h2 id="Example" name="Example">Exemple</h2>
+<h2 id="Example">Exemple</h2>
 
 <h3 id="Code_HTML">Code HTML</h3>
 
-<pre class="brush: html  language-html">&lt;div id="level"&gt;(niveau de batterie inconnu)&lt;/div&gt;<code class="language-html">
-</code></pre>
+<pre class="brush: html">&lt;div id="level"&gt;(niveau de batterie inconnu)&lt;/div&gt;
+</pre>
 
 <h3 id="Code_JavaScript">Code JavaScript</h3>
 
-<pre class="brush: js;  highlight:[3]">navigator.getBattery().then(function(battery) {
+<pre class="brush: js;">navigator.getBattery().then(function(battery) {
 
     var level = battery.level;
 

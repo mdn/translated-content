@@ -12,20 +12,20 @@ translation_of: Web/API/Window/clearImmediate
 
 <p>Cette méthode efface l'action spécifiée par {{DOMxRef("window.setImmediate")}}.</p>
 
-<div class="blockIndicator note">
-<p>Cette méthode ne devrait pas devenir standard et n'est implémentée que par les versions récentes d'Internet Explorer et de Node.js 0.10+. Il rencontre la résistance à la fois de <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=686201" title="https://bugzilla.mozilla.org/show_bug.cgi?id=686201">Gecko</a> (Firefox) et <a href="http://code.google.com/p/chromium/issues/detail?id=146172" title="http://code.google.com/p/chromium/issues/detail?id=146172">Webkit</a> (Google/Apple).</p>
+<div class="note">
+<p><strong>Note :</strong> Cette méthode ne devrait pas devenir standard et n'est implémentée que par les versions récentes d'Internet Explorer et de Node.js 0.10+. Il rencontre la résistance à la fois de <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=686201">Gecko</a> (Firefox) et <a href="http://code.google.com/p/chromium/issues/detail?id=146172">Webkit</a> (Google/Apple).</p>
 </div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox notranslate"><var>window</var>.clearImmediate( <var>immediateID</var> )
+<pre class="syntaxbox"><var>window</var>.clearImmediate( <var>immediateID</var> )
 </pre>
 
 <p>où immediateID est un ID retourné par {{DOMxRef("window.setImmediate")}}.</p>
 
 <h2 id="Exemples">Exemples</h2>
 
-<pre class="brush: js notranslate">let immediateID = setImmediate(() =&gt; {
+<pre class="brush: js">let immediateID = setImmediate(() =&gt; {
   // Exécute du code
 }
 
@@ -47,9 +47,8 @@ document.getElementById("bouton")
  </thead>
  <tbody>
   <tr>
-   <td><a class="external" href="https://w3c.github.io/setImmediate/#si-setImmediate" hreflang="en" lang="en">Efficient Script Yielding<br>
-    <small lang="en-US">The definition of '<code>setImmediate</code>' in that specification.</small></a></td>
-   <td><span class="spec-ED">Editor's Draft</span></td>
+   <td><a href="https://w3c.github.io/setImmediate/#si-setImmediate">Efficient Script Yielding La définition de <code>setImmediate</code> dans cette spécification.</a></td>
+   <td>Editor's Draft</td>
    <td>Initial definition.</td>
   </tr>
  </tbody>

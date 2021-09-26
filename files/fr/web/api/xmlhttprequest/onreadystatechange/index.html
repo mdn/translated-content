@@ -5,13 +5,13 @@ translation_of: Web/API/XMLHttpRequest/onreadystatechange
 ---
 <div>{{APIRef}}</div>
 
-<p>Un <a href="/en-US/docs/Web/API/EventHandler" title="A possible way to get notified of Events of a particular type (such as click) for a given object is to specify an event handler using:"><code>EventHandler</code></a> qui réagit aux changements de <code>readyState</code>. Le callback est appelé dans le contexte du thread de rendu. La propriété <strong><code>XMLHttpRequest.onreadystatechange</code></strong>  contient le gestionnaire d'évènement appelé lorsque l'évènement {{event("readystatechange")}} est déclenché, soit chaque fois que la propriété {{domxref("XMLHttpRequest.readyState", "readyState")}} de {{domxref("XMLHttpRequest")}} est modifiée.</p>
+<p>Un <a href="/en-US/docs/Web/API/EventHandler"><code>EventHandler</code></a> qui réagit aux changements de <code>readyState</code>. Le callback est appelé dans le contexte du thread de rendu. La propriété <strong><code>XMLHttpRequest.onreadystatechange</code></strong>  contient le gestionnaire d'évènement appelé lorsque l'évènement {{event("readystatechange")}} est déclenché, soit chaque fois que la propriété {{domxref("XMLHttpRequest.readyState", "readyState")}} de {{domxref("XMLHttpRequest")}} est modifiée.</p>
 
 <div class="warning">
-<p><strong>Attention:</strong> Ne doit pas être utilisé avec des requêtes synchrone ni avec du code natif.</p>
+<p><strong>Attention :</strong> Ne doit pas être utilisé avec des requêtes synchrone ni avec du code natif.</p>
 </div>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
 <pre class="syntaxbox"><em>XMLHttpRequest</em>.onreadystatechange = <em>callback</em>;</pre>
 
@@ -21,7 +21,7 @@ translation_of: Web/API/XMLHttpRequest/onreadystatechange
  <li><code><em>callback</em></code> est la fonction exécutée lorsque <code>readyState</code> change.</li>
 </ul>
 
-<h2 id="Example" name="Example">Exemple</h2>
+<h2 id="Example">Exemple</h2>
 
 <pre class="brush: js">var xhr = new XMLHttpRequest(),
     method = "GET",

@@ -42,7 +42,7 @@ translation_of: Web/API/CanvasRenderingContext2D/scale
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js; highlight:[4]">var canvas = document.getElementById('canvas');
+<pre class="brush: js">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 ctx.scale(10, 3);
@@ -54,10 +54,9 @@ ctx.setTransform(1, 0, 0, 1, 0, 0);
 
 <p>Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel dans le canevas :</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
+<h4 id="code_jouable">Code jouable</h4>
 
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
   &lt;input id="edit" type="button" value="Edit" /&gt;
   &lt;input id="reset" type="button" value="Reset" /&gt;
@@ -68,7 +67,7 @@ ctx.fillRect(10,10,10,10);
 ctx.setTransform(1, 0, 0, 1, 0, 0);&lt;/textarea&gt;
 </pre>
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+<pre class="brush: js hidden">var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -92,18 +91,16 @@ edit.addEventListener("click", function() {
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+<p>{{ EmbedLiveSample('code_jouable', 700, 360) }}</p>
 
 <h3 id="Utilisation_de_scale_pour_un_retournement_horizontal_ou_vertical">Utilisation de <code>scale</code> pour un retournement horizontal ou vertical</h3>
 
 <p>Vous pouvez utiliser <code>ctx.scale(-1, 1)</code> pour retourner le contexte horizontalement et <code>ctx.scale(1, -1) </code>pour le retourner verticalement.</p>
 
-<div class="hidden">
-<h6 id="Playable_code2">Playable code2</h6>
+<h4 id="code_jouable_2">Code jouable 2</h4>
 
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
   &lt;input id="edit" type="button" value="Edit" /&gt;
   &lt;input id="reset" type="button" value="Reset" /&gt;
@@ -115,7 +112,7 @@ ctx.fillText("Hello world!", -320, 120);
 ctx.setTransform(1, 0, 0, 1, 0, 0);&lt;/textarea&gt;
 </pre>
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+<pre class="brush: js hidden">var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -139,9 +136,8 @@ edit.addEventListener("click", function() {
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code2', 700, 360) }}</p>
+<p>{{ EmbedLiveSample('code_jouable_2', 700, 360) }}</p>
 
 <h2 id="Spécifications">Spécifications</h2>
 

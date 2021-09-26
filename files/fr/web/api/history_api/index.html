@@ -49,7 +49,9 @@ original_slug: Web/Guide/DOM/Manipuler_historique_du_navigateur
 <pre class="brush: js">var numberOfEntries = window.history.length;
 </pre>
 
-<div class="note"><strong>Note:</strong> Internet Explorer supporte le passage d'une URL sous forme de chaîne de caractères comme paramètre de la méthode <code>go()</code>; ce comportement est non standard et non supporté par Gecko.</div>
+<div class="note">
+  <p><strong>Note :</strong> Internet Explorer supporte le passage d'une URL sous forme de chaîne de caractères comme paramètre de la méthode <code>go()</code>; ce comportement est non standard et non supporté par Gecko.</p>
+</div>
 
 <h2 id="Ajouter_et_modifier_des_entrées_de_l'historique">Ajouter et modifier des entrées de l'historique</h2>
 
@@ -57,21 +59,21 @@ original_slug: Web/Guide/DOM/Manipuler_historique_du_navigateur
 
 <p>HTML5 a introduit les méthodes <a href="/fr/docs/Web/Guide/DOM/Manipuler_historique_du_navigateur#La_méthode_pushState()">history.pushState()</a> et <a href="/fr/docs/Web/Guide/DOM/Manipuler_historique_du_navigateur#La_méthode_replaceState()">history.replaceState()</a>, qui permettent, respectivement, d'ajouter et de modifier des entrées de l'historique. Ces méthodes fonctionnent conjointement avec l'événement <a href="/fr/docs/Web/API/WindowEventHandlers/onpopstate">onpopstate</a>.</p>
 
-<p>L'utilisation de <code>history.pushState()</code> change le référent créé habituellement dans l'en-tête HTTP pour les objets <a href="/en/DOM/XMLHttpRequest" title="en/XMLHttpRequest"><code>XMLHttpRequest</code></a>, chaque fois que son état a été changé. Le référent sera l'URL de la page dont l'objet window est <code>this</code> au moment de la création de l'objet <a href="/en/DOM/XMLHttpRequest" title="en/XMLHttpRequest"><code>XMLHttpRequest</code></a>.</p>
+<p>L'utilisation de <code>history.pushState()</code> change le référent créé habituellement dans l'en-tête HTTP pour les objets <a href="/en/DOM/XMLHttpRequest"><code>XMLHttpRequest</code></a>, chaque fois que son état a été changé. Le référent sera l'URL de la page dont l'objet window est <code>this</code> au moment de la création de l'objet <a href="/en/DOM/XMLHttpRequest"><code>XMLHttpRequest</code></a>.</p>
 
-<h3 id="Exemple_de_la_méthode_pushState()"><a id="Exemple de la méthode pushState()" name="Exemple de la méthode pushState()"></a>Exemple de la méthode pushState()</h3>
+<h3 id="Exemple_de_la_méthode_pushState()">Exemple de la méthode pushState()</h3>
 
-<p>Supposons que <span class="nowiki">http://mozilla.org/foo.html</span> exécute la séquence JavaScript suivante :</p>
+<p>Supposons que http://mozilla.org/foo.html exécute la séquence JavaScript suivante :</p>
 
 <pre class="brush: js">var stateObj = { foo: "bar" };
 history.pushState(stateObj, "page 2", "bar.html");
 </pre>
 
-<p>Cela va provoquer l'apparition dans la barre de navigation de <span class="nowiki">http://mozilla.org/bar.html</span>, mais ne provoquera pas le chargement effectif de <code>bar.html</code> ni même le test d'existence de <code>bar.html</code>.</p>
+<p>Cela va provoquer l'apparition dans la barre de navigation de http://mozilla.org/bar.html, mais ne provoquera pas le chargement effectif de <code>bar.html</code> ni même le test d'existence de <code>bar.html</code>.</p>
 
-<p>Supposons à présent que l'utilisateur accède à la page <span class="nowiki">http://google.com</span>, puis clique sur l'icône "Recul". La barre de navigation va alors afficher <span class="nowiki">http://mozilla.org/bar.html</span>, et si vous lisez l'<code>history.state</code>, vous obtiendrez le <code>stateObj</code>.  L'événement <code>popstate</code> ne sera pas lancé car la page a été rechargée. La page elle-même ressemblera à <code>bar.html</code>.</p>
+<p>Supposons à présent que l'utilisateur accède à la page http://google.com, puis clique sur l'icône "Recul". La barre de navigation va alors afficher http://mozilla.org/bar.html, et si vous lisez l'<code>history.state</code>, vous obtiendrez le <code>stateObj</code>.  L'événement <code>popstate</code> ne sera pas lancé car la page a été rechargée. La page elle-même ressemblera à <code>bar.html</code>.</p>
 
-<p>Si on clique à nouveau sur Recul, l'URL de la barre de navigation va se changer en <span class="nowiki">http://mozilla.org/foo.html</span> et le document va recevoir un autre événement <code>popstate</code>, qui comportera, cette fois, un état null. Dans ce cas aussi, revenir en arrière ne modifie pas le contenu du document par rapport à ce qu'il était à l'étape précédente, cela bien qu'il ait pu être mis à jour manuellement sur réception de l'événement <code>popstate</code>.</p>
+<p>Si on clique à nouveau sur Recul, l'URL de la barre de navigation va se changer en http://mozilla.org/foo.html et le document va recevoir un autre événement <code>popstate</code>, qui comportera, cette fois, un état null. Dans ce cas aussi, revenir en arrière ne modifie pas le contenu du document par rapport à ce qu'il était à l'étape précédente, cela bien qu'il ait pu être mis à jour manuellement sur réception de l'événement <code>popstate</code>.</p>
 
 <h3 id="La_méthode_pushState()">La méthode pushState()</h3>
 
@@ -90,7 +92,9 @@ history.pushState(stateObj, "page 2", "bar.html");
  </li>
 </ul>
 
-<div class="note"><strong>Note :</strong> Dans Gecko 2.0 {{ geckoRelease("2.0") }} jusqu'à Gecko 5.0 {{ geckoRelease("5.0") }}, l'objet fourni est sérialisé en utilisant JSON. À partir de  Gecko 6.0 {{ geckoRelease("6.0") }}, l'objet est sérialisé à l'aide de<a href="/en/DOM/The_structured_clone_algorithm" title="en/DOM/The structured clone algorithm"> "structured clone algorithm"</a> qui autorise, en particulier, la sérialisation d'arbres récursifs cycliques. Cela permet de passer de façon sûre une plus grande diversité d'objets.</div>
+<div class="note">
+  <p><strong>Note :</strong> Dans Gecko 2.0 {{ geckoRelease("2.0") }} jusqu'à Gecko 5.0 {{ geckoRelease("5.0") }}, l'objet fourni est sérialisé en utilisant JSON. À partir de  Gecko 6.0 {{ geckoRelease("6.0") }}, l'objet est sérialisé à l'aide de<a href="/en/DOM/The_structured_clone_algorithm"> "structured clone algorithm"</a> qui autorise, en particulier, la sérialisation d'arbres récursifs cycliques. Cela permet de passer de façon sûre une plus grande diversité d'objets.</p>
+</div>
 
 <p>On peut assimiler l'appel à <code>pushState()</code> à l'affectation <code>window.location = "#foo"</code>, en cela que l'un comme l'autre auront pour effet de créer et déclencher une autre entrée de l'historique associée au document courant. Mais <code>pushState()</code> a quelques avantages :</p>
 
@@ -102,7 +106,7 @@ history.pushState(stateObj, "page 2", "bar.html");
 
 <p>Notez que <code>pushState()</code> n'entraîne jamais le déclenchement d'un événement <code>hashchange</code>, même si la nouvelle URL diffère de l'ancienne seulement par son hash.</p>
 
-<p>Dans un document <a href="https://developer.mozilla.org/fr/docs/Mozilla/Tech/XUL">XUL</a> elle crée l'élément XUL spécifié.</p>
+<p>Dans un document <a href="/fr/docs/Mozilla/Tech/XUL">XUL</a> elle crée l'élément XUL spécifié.</p>
 
 <p>Dans d'autres documents, elle crée un élément avec l'URI d'espace de nom <code>null</code>. </p>
 
@@ -112,18 +116,20 @@ history.pushState(stateObj, "page 2", "bar.html");
 
 <p><code>replaceState()</code> est particulièrement utile si vous désirez mettre à jour l'objet état ou l'URL de l'entrée courante de l'historique en réponse à une action de l'utilisateur.</p>
 
-<div class="note"><strong>Note :</strong> Dans Gecko 2.0 {{ geckoRelease("2.0") }} jusqu'à Gecko 5.0 {{ geckoRelease("5.0") }}, l'objet transmis est sérialisé avec JSON. À partir de  Gecko 6.0 {{ geckoRelease("6.0") }}, l'objet est sérialisé à l'aide de<a href="/en/DOM/The_structured_clone_algorithm" title="en/DOM/The structured clone algorithm"> "structured clone algorithm"</a> qui autorise, en particulier, la sérialisation d'arbres récursifs cycliques. Cela permet de passer de façon sûre une plus grande diversité d'objets.</div>
+<div class="note">
+  <p><strong>Note :</strong> Dans Gecko 2.0 {{ geckoRelease("2.0") }} jusqu'à Gecko 5.0 {{ geckoRelease("5.0") }}, l'objet transmis est sérialisé avec JSON. À partir de  Gecko 6.0 {{ geckoRelease("6.0") }}, l'objet est sérialisé à l'aide de<a href="/en/DOM/The_structured_clone_algorithm"> "structured clone algorithm"</a> qui autorise, en particulier, la sérialisation d'arbres récursifs cycliques. Cela permet de passer de façon sûre une plus grande diversité d'objets.</p>
+</div>
 
 <h3 id="Exemple_de_la_méthode_replaceState()">Exemple de la méthode replaceState()</h3>
 
-<p><span id="result_box" lang="fr"><span>Supposons que http://mozilla.org/foo.html exécute le code JavaScript suivant :</span></span></p>
+<p>Supposons que http://mozilla.org/foo.html exécute le code JavaScript suivant :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="keyword token">var</span> stateObj <span class="operator token">=</span> <span class="punctuation token">{</span> foo<span class="punctuation token">:</span> <span class="string token">"bar"</span> <span class="punctuation token">}</span><span class="punctuation token">;</span>
-history<span class="punctuation token">.</span><span class="function token">pushState</span><span class="punctuation token">(</span>stateObj<span class="punctuation token">,</span> <span class="string token">"page 2"</span><span class="punctuation token">,</span> <span class="string token">"bar.html"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js">var stateObj = { foo: "bar" };
+history.pushState(stateObj, "page 2", "bar.html");</pre>
 
 <p>L'explication des deux lignes ci-dessus peut être trouvée dans la section "<a href="#">Exemple de la méthode pushState()</a>". Supposons ensuite que http://mozilla.org/bar.html exécute le code JavaScript suivant :</p>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">history<span class="punctuation token">.</span><span class="function token">replaceState</span><span class="punctuation token">(</span>stateObj<span class="punctuation token">,</span> <span class="string token">"page 3"</span><span class="punctuation token">,</span> <span class="string token">"bar2.html"</span><span class="punctuation token">)</span><span class="punctuation token">;</span></code></pre>
+<pre class="brush: js">history.replaceState(stateObj, "page 3", "bar2.html");</pre>
 
 <p>Cela entraînera l'affichage de la barre d'URL http://mozilla.org/bar2.html, mais le navigateur ne chargera pas <code>bar2.html</code> ou même vérifiera que <code>bar2.html</code> existe.</p>
 
@@ -137,7 +143,7 @@ history<span class="punctuation token">.</span><span class="function token">push
 
 <h3 id="Lire_l'état_courant">Lire l'état courant</h3>
 
-<p>Quand votre page est chargée, il se pourrait qu'elle ait un objet état non nul. Cela peut se produire, par exemple, si la page fixe un objet état (avec  <code>pushState()</code> ou <code>replaceState()</code>) et qu'ensuite l'utilisateur redémarre le navigateur.  Quand votre page sera rechargée, elle recevra l'événement  <span style="font-family: courier new;">onload</span><span style="font-family: helvetica;"> , mais pas l'événement <span style="font-family: courier new;">popstate</span>.</span>  Néanmoins, si vous lisez la propriété <span style="font-family: courier new;">history.state</span>, vous récupèrerez l'objet état que vous auriez obtenu si un événement <span style="font-family: courier new;">popstate</span> avait été déclenché.</p>
+<p>Quand votre page est chargée, il se pourrait qu'elle ait un objet état non nul. Cela peut se produire, par exemple, si la page fixe un objet état (avec  <code>pushState()</code> ou <code>replaceState()</code>) et qu'ensuite l'utilisateur redémarre le navigateur.  Quand votre page sera rechargée, elle recevra l'événement  onload , mais pas l'événement popstate.  Néanmoins, si vous lisez la propriété history.state, vous récupèrerez l'objet état que vous auriez obtenu si un événement popstate avait été déclenché.</p>
 
 <p>Vous pouvez lire l'état de l'entrée courante de l'historique sans devoir attendre un événement <code>popstate</code> en utilisant la propriété <code>history.state</code> comme ceci :</p>
 
@@ -146,7 +152,7 @@ history<span class="punctuation token">.</span><span class="function token">push
 
 <h2 id="Exemples">Exemples</h2>
 
-<p>Pour un exemple comple de site web AJAX, vous pouvez voir : <a href="https://developer.mozilla.org/fr/docs/Web/Guide/DOM/Manipuler_historique_du_navigateur/Example" title="/en-US/docs/Web/Guide/API/DOM/Manipulating_the_browser_history/Example">Exemple de navigation en Ajax</a>.</p>
+<p>Pour un exemple comple de site web AJAX, vous pouvez voir : <a href="/fr/docs/Web/Guide/DOM/Manipuler_historique_du_navigateur/Example">Exemple de navigation en Ajax</a>.</p>
 
 <h2 id="Spécifications">Spécifications</h2>
 

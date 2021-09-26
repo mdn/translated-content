@@ -12,7 +12,7 @@ translation_of: Web/API/PerformanceNavigationTiming
 ---
 <p>{{APIRef("Navigation Timing")}}{{SeeCompatTable}}</p>
 
-<p class="summary">L'interface <strong><code>PerformanceNavigationTiming</code></strong> fournit des méthodes et des propriétés pour stocker et récupérer des métriques concernant les événements de navigation de document du navigateur. Par exemple, cette interface peut être utilisée pour déterminer le temps nécessaire au chargement ou au déchargement d'un document.</p>
+<p>L'interface <strong><code>PerformanceNavigationTiming</code></strong> fournit des méthodes et des propriétés pour stocker et récupérer des métriques concernant les événements de navigation de document du navigateur. Par exemple, cette interface peut être utilisée pour déterminer le temps nécessaire au chargement ou au déchargement d'un document.</p>
 
 <p>{{InheritanceDiagram}}</p>
 
@@ -54,8 +54,7 @@ translation_of: Web/API/PerformanceNavigationTiming
   <dt><a href="/fr/docs/Web/API/PerformanceNavigationTiming/loadEventStart"><code>PerformanceNavigationTiming.loadEventStart</code></a> {{readonlyInline}} {{Experimental_Inline}}</dt>
   <dd>Un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> représentant la valeur temporelle égale à l'heure précédant immédiatement l'événement de chargement du document actuel.</dd>
   <dt><a href="/fr/docs/Web/API/PerformanceNavigationTiming/redirectCount"><code>PerformanceNavigationTiming.redirectCount</code></a> {{readonlyInline}} {{Experimental_Inline}}</dt>
-  <dd>Un nombre représentant le nombre de redirections, depuis la dernière navigation sans redirection, dans le contexte de navigation actuel.</dd>
-  <dd>S'il n'y a pas eu de redirection, ou si la redirection provenait d'une autre origine, et que cette origine ne permet pas que ses informations temporelles soient exposées à l'origine actuelle, la valeur sera 0.</dd>
+  <dd>Un nombre représentant le nombre de redirections, depuis la dernière navigation sans redirection, dans le contexte de navigation actuel. S'il n'y a pas eu de redirection, ou si la redirection provenait d'une autre origine, et que cette origine ne permet pas que ses informations temporelles soient exposées à l'origine actuelle, la valeur sera 0.</dd>
   <dt><a href="/fr/docs/Web/API/PerformanceNavigationTiming/requestStart"><code>PerformanceNavigationTiming.requestStart</code></a> {{readonlyInline}} {{Experimental_Inline}}</dt>
   <dd>Un <a href="/fr/docs/Web/API/DOMHighResTimeStamp"><code>DOMHighResTimeStamp</code></a> représentant le moment immédiatement avant que l'agent utilisateur ne commence à demander la ressource au serveur, ou aux caches d'application pertinents ou aux ressources locales.</dd>
   <dt><a href="/fr/docs/Web/API/PerformanceNavigationTiming/responseStart"><code>PerformanceNavigationTiming.responseStart</code></a> {{readonlyInline}} {{Experimental_Inline}}</dt>

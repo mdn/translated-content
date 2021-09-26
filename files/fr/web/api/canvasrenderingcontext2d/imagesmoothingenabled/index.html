@@ -28,82 +28,47 @@ translation_of: Web/API/CanvasRenderingContext2D/imageSmoothingEnabled
  <dd>Un {{jsxref("Boolean")}} indiquant de lisser les images ou non.</dd>
 </dl>
 
-<h2 id="Exemples">Exemples</h2>
+<h2 id="exemples">exemples</h2>
 
-<h3 id="Using_the_globalAlpha_property" name="Using_the_globalAlpha_property">Utilisation de la propriété <code>imageSmoothingEnabled</code></h3>
+<h3 id="désactiver_le_lissage_d_image">Désactiver le lissage d'image</h3>
 
-<p>Ceci est juste un simple fragment de code utilisant la propriété <code>imageSmoothingEnabled</code> sur une image mise à l'échelle.</p>
+<p>Dans cet exemple, on compare trois images. La première image est dessinée avec sa taille naturelle, la deuxième est élargie pour obtenir 3 fois la taille originale et le lissage est activée, la troisième est élargie pour obtenir 3 fois la taille originale et le lissage est désactivé.</p>
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html">&lt;canvas id="canevas"&gt;&lt;/canvas&gt;
+<pre class="brush: html">&lt;canvas id="canvas" width="460" height="210"&gt;&lt;/canvas&gt;
 </pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js; highlight[7-10]">var canevas = document.getElementById('canevas');
-var ctx = canevas.getContext('2d');
+<pre class="brush: js;">const canvas = document.getElementById('canvas');
 
-var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
+const ctx = canvas.getContext('2d');
+ctx.font = '16px sans-serif';
+ctx.textAlign = 'center';
+
+const img = new Image();
+img.src = 'https://interactive-examples.mdn.mozilla.net/media/examples/star.png';
 img.onload = function() {
- ctx.mozImageSmoothingEnabled = false;
- ctx.webkitImageSmoothingEnabled = false;
- ctx.msImageSmoothingEnabled = false;
- ctx.imageSmoothingEnabled = false;
- ctx.drawImage(img, 0, 0, 400, 200);
+  const w = img.width,
+        h = img.height;
+
+  ctx.fillText('Source', w * .5, 20);
+  ctx.drawImage(img, 0, 24, w, h);
+
+  ctx.fillText('Smoothing = TRUE', w * 2.5, 20);
+  ctx.imageSmoothingEnabled = true;
+  ctx.drawImage(img, w, 24, w * 3, h * 3);
+
+  ctx.fillText('Smoothing = FALSE', w * 5.5, 20);
+  ctx.imageSmoothingEnabled = false;
+  ctx.drawImage(img, w * 4, 24, w * 3, h * 3);
 };
 </pre>
 
-<p>Modifiez le code ci-dessous et voyez vos changements mis à jour en direct dans le canevas :</p>
+<h4 id="résultat">Résultat</h4>
 
-<div class="hidden">
-<h6 id="Playable_code" name="Playable_code">Code jouable</h6>
-
-<pre class="brush: html">&lt;canvas id="canevas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
-&lt;div class="<code>playable-buttons</code>"&gt;
-  &lt;input id="modifier" type="button" value="Modifier" /&gt;
-  &lt;input id="effacer" type="button" value="Effacer" /&gt;
-&lt;/div&gt;
-&lt;textarea id="code" class="<code>playable-code</code>" style="height:140px;"&gt;
-var img = new Image();
-img.src = 'https://mdn.mozillademos.org/files/222/Canvas_createpattern.png';
-img.onload = function() {
- ctx.mozImageSmoothingEnabled = false;
- ctx.webkitImageSmoothingEnabled = false;
- ctx.msImageSmoothingEnabled = false;
- ctx.imageSmoothingEnabled = false;
- ctx.drawImage(img, 0, 0, 400, 200);
-};&lt;/textarea&gt;
-</pre>
-
-<pre class="brush: js">var canevas = document.getElementById('canevas');
-var ctx = canevas.getContext('2d');
-var textarea = document.getElementById('code');
-var effacer = document.getElementById('effacer');
-var modifier = document.getElementById('modifier');
-var code = textarea.value;
-
-function dessinerCanevas() {
-  ctx.clearRect(0, 0, canevas.width, canevas.height);
-  eval(textarea.value);
-}
-
-effacer.addEventListener('click', function() {
-  textarea.value = code;
-  dessinerCanevas();
-});
-
-modifier.addEventListener('click', function() {
-  textarea.focus();
-})
-
-textarea.addEventListener('input', dessinerCanevas);
-window.addEventListener('load', dessinerCanevas);
-</pre>
-</div>
-
-<p>{{ EmbedLiveSample('Playable_code', 700, 400) }}</p>
+<p>{{ EmbedLiveSample('désactiver_le_lissage_d_image', 700, 240) }}</p>
 
 <h2 id="Spécifications">Spécifications</h2>
 

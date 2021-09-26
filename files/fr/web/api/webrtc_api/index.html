@@ -16,7 +16,8 @@ translation_of: Web/API/WebRTC_API
 ---
 <div>{{APIRef("WebRTC")}}</div>
 
-<p><span class="seoSummary"><strong>WebRTC</strong> (Web Real-Time Communications) est une technologie qui permet aux applications et sites web de capturer et éventuellement de diffuser des médias audio et/ou vidéo, ainsi que d'échanger des données arbitraires entre les navigateurs sans passer par un intermédiaire.</span> L'ensemble de normes qui comprend WebRTC permet de partager des données et d'effectuer des téléconférences peer-to-peer, sans exiger que l'utilisateur installe des plug-ins ou tout autre logiciel tiers.</p>
+<p><strong>WebRTC</strong> (Web Real-Time Communications) est une technologie qui permet aux applications et sites web de capturer et éventuellement de diffuser des médias audio et/ou vidéo, ainsi que d'échanger des données arbitraires entre les navigateurs sans passer par un intermédiaire.</p>
+<p>L'ensemble de normes qui comprend WebRTC permet de partager des données et d'effectuer des téléconférences peer-to-peer, sans exiger que l'utilisateur installe des plug-ins ou tout autre logiciel tiers.</p>
 
 <p>WebRTC se compose de plusieurs API et protocoles interdépendants qui fonctionnent ensemble pour y parvenri. La documentation que vous trouverez ici vous aidera à comprendre les principes de base de WebRTC, comment configurer et utiliser les connexions de données et multimédias, et plus encore.</p>
 
@@ -70,12 +71,12 @@ translation_of: Web/API/WebRTC_API
  <dt>{{domxref("RTCTrackEvent")}}</dt>
  <dd>Indique qu'un nouvel {{domxref("MediaStreamTrack")}} entrant a été créé et qu'un objet {{domxref("RTCRtpReceiver")}} associé a été ajouté à l'objet {{domxref("RTCPeerConnection")}}.</dd>
  <dt>{{domxref("RTCConfiguration")}}</dt>
- <dd>Utilisé pour fournir des options de configuration pour un <a href="/fr/docs/Web/API/RTCPeerConnection" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a>.</dd>
+ <dd>Utilisé pour fournir des options de configuration pour un <a href="/fr/docs/Web/API/RTCPeerConnection"><code>RTCPeerConnection</code></a>.</dd>
 </dl>
 
 <dl>
  <dt>{{domxref("RTCSctpTransport")}}</dt>
- <dd>Fournit des informations qui décrivent un transport Stream Control Transmission Protocol (<strong>{{Glossary("SCTP")}}</strong>) et fournit aussi un moeyn d'accéder au transport Datagram Transport Layer Security (<strong>{{Glossary("DTLS")}}</strong>) sur lequel les paquets SCTP pour tous les canaux de données d'un <a href="/fr/docs/Web/API/RTCPeerConnection" title="The RTCPeerConnection interface represents a WebRTC connection between the local computer and a remote peer. It provides methods to connect to a remote peer, maintain and monitor the connection, and close the connection once it's no longer needed."><code>RTCPeerConnection</code></a> sont envoyés et reçus.</dd>
+ <dd>Fournit des informations qui décrivent un transport Stream Control Transmission Protocol (<strong>{{Glossary("SCTP")}}</strong>) et fournit aussi un moeyn d'accéder au transport Datagram Transport Layer Security (<strong>{{Glossary("DTLS")}}</strong>) sur lequel les paquets SCTP pour tous les canaux de données d'un <a href="/fr/docs/Web/API/RTCPeerConnection"><code>RTCPeerConnection</code></a> sont envoyés et reçus.</dd>
 </dl>
 
 <h3 id="Identité_et_sécurité">Identité et sécurité</h3>
@@ -143,24 +144,24 @@ translation_of: Web/API/WebRTC_API
 <h4 id="Protocoles_propres_au_WebRTC">Protocoles propres au WebRTC</h4>
 
 <ul>
- <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-alpn/"><cite>Négociation de protocole de couche application pour les communications Web en temps réel</cite></a></li>
- <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-audio/"><cite>Codec audio WebRTC et exigences de traitement</cite></a></li>
- <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-channel/"><cite>Canaux de données RTCWeb</cite></a></li>
- <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-protocol/"><cite>Protocole de canal de données RTCWeb</cite></a></li>
- <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-rtp-usage/"><cite>Communication Web en temps réel (WebRTC): transport multimédia et utilisation de RTP</cite></a></li>
- <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-security-arch/"><cite>Architecture de sécurité WebRTC</cite></a></li>
- <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-transports/"><cite>Transports pour RTCWEB</cite></a></li>
+ <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-alpn/">Négociation de protocole de couche application pour les communications Web en temps réel</a></li>
+ <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-audio/">Codec audio WebRTC et exigences de traitement</a></li>
+ <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-channel/">Canaux de données RTCWeb</a></li>
+ <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-data-protocol/">Protocole de canal de données RTCWeb</a></li>
+ <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-rtp-usage/">Communication Web en temps réel (WebRTC): transport multimédia et utilisation de RTP</a></li>
+ <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-security-arch/">Architecture de sécurité WebRTC</a></li>
+ <li><a href="http://datatracker.ietf.org/doc/draft-ietf-rtcweb-transports/">Transports pour RTCWEB</a></li>
 </ul>
 
 <h4 id="Protocoles_de_support_associés">Protocoles de support associés</h4>
 
 <ul>
  <li><a href="https://tools.ietf.org/html/rfc5245">Établissement de connectivité interactif (ICE): un protocole pour la traversée du traducteur d'adresses réseau (NAT) pour le protocole offre / réponse</a></li>
- <li><a href="https://tools.ietf.org/html/rfc5389"><cite>Utilitaires de traversée de session pour NAT (STUN)</cite></a></li>
- <li><a href="https://tools.ietf.org/html/rfc7064"><cite>Schéma d'URI pour les utilitaires de traversée de session pour le protocole NAT (STUN)</cite></a></li>
- <li><a href="https://tools.ietf.org/html/rfc7065"><cite>Traversée à l'aide de relais autour des identificateurs de ressources uniformes NAT (TURN)</cite></a></li>
- <li><a href="https://tools.ietf.org/html/rfc3264"><cite>Un modèle d'offre / réponse avec protocole de description de session (SDP)</cite></a></li>
- <li><a href="https://datatracker.ietf.org/doc/draft-ietf-tram-turn-third-party-authz/"><cite>Extension des utilitaires de traversée de session pour NAT (STUN) pour l'autorisation de tiers</cite></a></li>
+ <li><a href="https://tools.ietf.org/html/rfc5389">Utilitaires de traversée de session pour NAT (STUN)</a></li>
+ <li><a href="https://tools.ietf.org/html/rfc7064">Schéma d'URI pour les utilitaires de traversée de session pour le protocole NAT (STUN)</a></li>
+ <li><a href="https://tools.ietf.org/html/rfc7065">Traversée à l'aide de relais autour des identificateurs de ressources uniformes NAT (TURN)</a></li>
+ <li><a href="https://tools.ietf.org/html/rfc3264">Un modèle d'offre / réponse avec protocole de description de session (SDP)</a></li>
+ <li><a href="https://datatracker.ietf.org/doc/draft-ietf-tram-turn-third-party-authz/">Extension des utilitaires de traversée de session pour NAT (STUN) pour l'autorisation de tiers</a></li>
 </ul>
 
 <h2 id="Spécifications">Spécifications</h2>
@@ -194,7 +195,7 @@ translation_of: Web/API/WebRTC_API
 
 <p>En plus de ces spécifications définissant l'API nécessaire pour utiliser WebRTC, il existe plusieurs protocoles, répertoriés sous <a href="#Protocols">ressources</a>.</p>
 
-<h2 class="Related_Topics" id="Voir_aussi">Voir aussi</h2>
+<h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
  <li>{{domxref("MediaDevices")}}</li>

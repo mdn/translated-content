@@ -9,13 +9,13 @@ translation_of_original: Web/API/Element.onresize
 ---
 <p>{{ ApiRef() }}</p>
 
-<h3 id="R.C3.A9sum.C3.A9" name="R.C3.A9sum.C3.A9">Résumé</h3>
+<h3 id="R.C3.A9sum.C3.A9">Résumé</h3>
 
 <p>La propriété <strong>onresize</strong> renvoie le code de gestion <code>onresize</code> de l'élément. Il sert également à définir le code devant s'exécuter lorsqu'un évènement de redimensionnement survient.</p>
 
 <p>Seul l'objet <var>window</var> possède un évènement <code>onresize</code>.</p>
 
-<h3 id="Syntaxe" name="Syntaxe">Syntaxe</h3>
+<h3 id="Syntaxe">Syntaxe</h3>
 
 <pre class="eval">// attribue une fonction anonyme à onresize
 window.onresize = function(){alert('Redimensionnement de la fenêtre')}
@@ -31,7 +31,7 @@ alert(window.onresize);
 
 <p>Un évènement onresize employé avec des cadres sera lancé à chaque fois que le cadre sera redimensionné soit directement, soit comme résultant du redimensionnement de la fenêtre.</p>
 
-<h3 id="Exemple" name="Exemple">Exemple</h3>
+<h3 id="Exemple">Exemple</h3>
 
 <pre>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
  "http://www.w3.org/TR/html4/strict.dtd"&gt;
@@ -56,11 +56,11 @@ window.onresize = sayHi;
 &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<h3 id="Notes" name="Notes">Notes</h3>
+<h3 id="Notes">Notes</h3>
 
 <p>Un attribut onresize peut être placé sur n'importe quel élément, mais seul l'objet <code>window</code> possède un évènement sur le redimensionnement. Le rédimensionnement d'autres éléments (par exemple, la modification de la largeur ou de la hauteur d'un élément img par un script) ne lancera aucun évènement de redimensionnement.</p>
 
-<h3 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Spécification</h3>
+<h3 id="Sp.C3.A9cification">Spécification</h3>
 
 <p>{{ DOM0() }}</p>
 

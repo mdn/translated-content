@@ -16,11 +16,11 @@ translation_of: Web/API/PerformanceTiming/domInteractive
 ---
 <p>{{APIRef("Navigation Timing")}}</p>
 
-<div class="notecard deprecated">
+<div class="warning">
   <p><strong>Attention :</strong> Cette interface est dépréciée dans la spécification <a href="https://w3c.github.io/navigation-timing/#obsolete">Navigation Timing Level 2</a>. Veuillez utiliser la propriété <a href="/fr/docs/Web/API/PerformanceNavigationTiming/domInteractive"><code>PerformanceNavigationTiming.domInteractive</code></a> de l'interface <a href="/fr/docs/Web/API/PerformanceNavigationTiming"><code>PerformanceNavigationTiming</code></a> à la place.</p>
 </div>
 
-<p class="summary">L'ancienne propriété en lecture seule <code><strong>domInteractive</code></strong> retourne un <code>unsigned long long</code> représentant le moment, en millisecondes depuis l'époque UNIX, où le parseur a terminé son travail sur le document principal, c'est-à-dire lorsque son <a href="/fr/docs/Web/API/Document/readyState"><code>Document.readyState</code></a> passe à <code>"interactive"</code> et que l'événement <a href="/fr/docs/Web/API/Document/readystatechange_event"><code>readystatechange</code></a> correspondant est lancé.</p>
+<p>L'ancienne propriété en lecture seule <code><strong>domInteractive</code></strong> retourne un <code>unsigned long long</code> représentant le moment, en millisecondes depuis l'époque UNIX, où le parseur a terminé son travail sur le document principal, c'est-à-dire lorsque son <a href="/fr/docs/Web/API/Document/readyState"><code>Document.readyState</code></a> passe à <code>"interactive"</code> et que l'événement <a href="/fr/docs/Web/API/Document/readystatechange_event"><code>readystatechange</code></a> correspondant est lancé.</p>
 
 <p>Cette propriété peut être utilisée pour mesurer la vitesse de chargement des sites Web que les utilisateurs <em>ressentent</em>. Néanmoins, il y a quelques mises en garde qui se produisent si des scripts bloquent le rendu et ne sont pas chargés de manière asynchrone ou avec des polices Web personnalisées. <a href="http://www.stevesouders.com/blog/2015/08/07/dominteractive-is-it-really/">Vérifiez si vous êtes dans l'un de ces cas</a> avant d'utiliser cette propriété comme un proxy pour l'expérience utilisateur de la vitesse de chargement d'un site Web.</p>
 

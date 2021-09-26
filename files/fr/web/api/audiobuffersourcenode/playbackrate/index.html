@@ -6,7 +6,7 @@ translation_of: Web/API/AudioBufferSourceNode/playbackRate
 <p>{{ APIRef("Web Audio API") }}</p>
 
 <div>
-<p>La propriété <code>playbackRate</code> de l'interface {{ domxref("AudioBufferSourceNode") }} est un {{domxref("AudioParam")}} de type <a href="https://developer.mozilla.org/en-US/docs/DOM/AudioParam#k-rate">k-rate</a> qui définit la vitesse à laquelle le contenu audio sera lu.</p>
+<p>La propriété <code>playbackRate</code> de l'interface {{ domxref("AudioBufferSourceNode") }} est un {{domxref("AudioParam")}} de type <a href="/en-US/docs/DOM/AudioParam#k-rate">k-rate</a> qui définit la vitesse à laquelle le contenu audio sera lu.</p>
 </div>
 
 <p>Une valeur de 1.0 (c'est ) indique que le son doit être lu à la vitesse de son taux d'échantillonnage, une valeur inférieure qu'il doit être lu plus lentement, et une valeur supérieure plus rapidement. la valeur par défaut est <code>1.0</code>. Pour toute autre valeur l'<code>AudioBufferSourceNode</code> rééchantillone le son avant de l'envoyer vers la sortie.</p>
@@ -17,10 +17,8 @@ translation_of: Web/API/AudioBufferSourceNode/playbackRate
 source.playbackRate.value = 1.25; // proportion : 25% plus rapide que la vitesse normale
 </pre>
 
-<div class="syntaxbox">
 <div class="note">
-<p><strong>Note</strong>: Bien que le <code>AudioParam</code> renvoyé soit en lecture seule, la valeur qu'il représente ne l'est pas.</p>
-</div>
+<p><strong>Note :</strong> Bien que le <code>AudioParam</code> renvoyé soit en lecture seule, la valeur qu'il représente ne l'est pas.</p>
 </div>
 
 <h3 id="Valeur">Valeur</h3>
@@ -40,14 +38,14 @@ source.playbackRate.value = 1.25; // proportion : 25% plus rapide que la vitesse
 <p>Dans cet exemple, la fonction {{domxref("AudioContext.decodeAudioData")}} est utilisée pour décoder une piste audio et la mettre dans un {{domxref("AudioBufferSourceNode")}}. L'interface fournit deux boutons pour démarrer et arrêter la lecture, et des sliders pour modifier les propriétés <code>playbackRate</code>, <code>loopStart</code> et <code>loopEnd</code> à la volée.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Voir <a class="external external-icon" href="http://mdn.github.io/decode-audio-data/"> l'exemple complet</a> et <a class="external external-icon" href="https://github.com/mdn/decode-audio-data">son code source</a>.</p>
+<p><strong>Note :</strong> Voir <a href="http://mdn.github.io/decode-audio-data/"> l'exemple complet</a> et <a href="https://github.com/mdn/decode-audio-data">son code source</a>.</p>
 </div>
 
 <pre class="brush: html">&lt;input class="playback-rate-control" type="range" min="0.25" max="3" step="0.05" value="1"&gt;
 &lt;span class="playback-rate-value"&gt;1.0&lt;/span&gt;
 </pre>
 
-<pre class="brush: js;highlight[15]">function getData() {
+<pre class="brush: js">function getData() {
   source = contexteAudio.createBufferSource();
   requete = new XMLHttpRequest();
 

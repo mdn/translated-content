@@ -26,7 +26,9 @@ translation_of: Web/API/IDBTransaction/error
 
 <p>Cette propriété vaut <code>null</code> si la transaction n'est pas terminée ou qu'elle est terminée avec succès ou qu'elle a été annulée avec la méthode {{domxref("IDBTransaction.abort","abort")}}.</p>
 
-<p class="note"><strong>Note :</strong> Dans Chrome 48+ cette propriété renvoie une exception {{domxref ("DOMException")}} parce que le type {{domxref("DOMError")}} a été retiré de la norme DOM.</p>
+<div class="note">
+  <p><strong>Note :</strong> Dans Chrome 48+ cette propriété renvoie une exception {{domxref ("DOMException")}} parce que le type {{domxref("DOMError")}} a été retiré de la norme DOM.</p>
+</div>
 
 <h2 id="Exemples">Exemples</h2>
 
@@ -77,7 +79,9 @@ function addData() {
  };
  </pre>
 
-<p class="note"><strong>Note :</strong> pour un exemple fonctionnel complet, voir notre <a href="https://github.com/mdn/to-do-notifications/">application To-do</a> (<a href="https://mdn.github.io/to-do-notifications/">exemple</a>).</p>
+<div class="note">
+  <p><strong>Note :</strong> pour un exemple fonctionnel complet, voir notre <a href="https://github.com/mdn/to-do-notifications/">application To-do</a> (<a href="https://mdn.github.io/to-do-notifications/">exemple</a>).</p>
+</div>
 
 <h2 id="Spécifications">Spécifications</h2>
 
@@ -109,5 +113,5 @@ function addData() {
  <li>Définir un intervalle de clés : {{domxref("IDBKeyRange")}}</li>
  <li>Récupérer et modifier les données : {{domxref("IDBObjectStore")}}</li>
  <li>Utiliser les curseurs {{domxref("IDBCursor")}}</li>
- <li>Exemple de référence : <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="https://mdn.github.io/to-do-notifications/">exemple <em>live</em></a>).</li>
+ <li>Exemple de référence : <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">exemple <em>live</em></a>).</li>
 </ul>

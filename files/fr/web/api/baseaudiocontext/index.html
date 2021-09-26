@@ -13,7 +13,7 @@ translation_of: Web/API/BaseAudioContext
 ---
 <div>{{APIRef("Web Audio API")}}</div>
 
-<p class="summary"><span class="seoSummary">L'interface <code>BaseAudioContext</code> agit comme une définition de base pour les graphiques de traitement audio en ligne et hors ligne, comme représenté par {{domxref("AudioContext")}} et {{domxref("OfflineAudioContext")}} respectivement.</span> Vous n'utiliseriez pas <code>BaseAudioContext</code> directement — vous utiliseriez ses fonctionnalités via l'une de ces deux interfaces héréditaires.</p>
+<p>L'interface <code>BaseAudioContext</code> agit comme une définition de base pour les graphiques de traitement audio en ligne et hors ligne, comme représenté par {{domxref("AudioContext")}} et {{domxref("OfflineAudioContext")}} respectivement. Vous n'utiliseriez pas <code>BaseAudioContext</code> directement — vous utiliseriez ses fonctionnalités via l'une de ces deux interfaces héréditaires.</p>
 
 <p>Un <code>BaseAudioContext</code> peut être une cible d'événements, il implémente donc l'interface {{domxref("EventTarget")}}.</p>
 
@@ -31,7 +31,7 @@ translation_of: Web/API/BaseAudioContext
  <dt>{{domxref("BaseAudioContext.listener")}} {{readonlyInline}}</dt>
  <dd>Renvoie l'objet {{domxref("AudioListener")}}, utilisé pour la spatialisation 3D.</dd>
  <dt>{{domxref("BaseAudioContext.sampleRate")}} {{readonlyInline}}</dt>
- <dd>Renvoie un float représentant la fréquence d'échantillonnage (en échantillons par seconde) utilisée par tous les <span class="tlid-translation translation" lang="fr"><span title="">nœuds dans ce contexte.</span></span> La fréquence d'échantillonnage d'un {{domxref("AudioContext")}} ne peut pas être modifiée.</dd>
+ <dd>Renvoie un float représentant la fréquence d'échantillonnage (en échantillons par seconde) utilisée par tous les nœuds dans ce contexte. La fréquence d'échantillonnage d'un {{domxref("AudioContext")}} ne peut pas être modifiée.</dd>
  <dt>{{domxref("BaseAudioContext.state")}} {{readonlyInline}}</dt>
  <dd>Renvoie l'état actuel de l'<code>AudioContext</code>.</dd>
 </dl>
@@ -94,11 +94,11 @@ translation_of: Web/API/BaseAudioContext
 
 <p>Déclaration de context audio de base:</p>
 
-<pre class="brush: js notranslate">var audioCtx = new AudioContext();</pre>
+<pre class="brush: js">var audioCtx = new AudioContext();</pre>
 
 <p>Variante de nagivateur croisé:</p>
 
-<pre class="brush: js notranslate">var AudioContext = window.AudioContext || window.webkitAudioContext;
+<pre class="brush: js">var AudioContext = window.AudioContext || window.webkitAudioContext;
 var audioCtx = new AudioContext();
 
 var oscillatorNode = audioCtx.createOscillator();
@@ -129,7 +129,7 @@ var finish = audioCtx.destination;
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 
-<ul style="margin-left: 40px;">
+<ul>
  <li><a href="/en-US/docs/Web_Audio_API/Using_Web_Audio_API">Utilisation de l'API Web Audio</a></li>
  <li>{{domxref("AudioContext")}}</li>
  <li>{{domxref("OfflineAudioContext")}}</li>

@@ -46,7 +46,7 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/btoa
 </em>var donneesDecodees = window.atob(donneesEncodees); // décode la chaîne
 </pre>
 
-<h2 id="Notes" name="Notes">Notes</h2>
+<h2 id="Notes">Notes</h2>
 
 <p>Vous pouvez utiliser cette méthode pour encoder des données qui, autrement, pourraient engendrer des problèmes de communication, les transmettre et utiliser alors la méthode {{domxref("WindowOrWorkerGlobalScope.atob","atob()")}} pour décoder les données à nouveau. Par exemple, vous pouvez encoder des caractères de contrôle tels que les valeurs ASCII de 0 à 31.</p>
 
@@ -56,9 +56,9 @@ original_slug: Web/API/WindowOrWorkerGlobalScope/btoa
 
 <p>Dans la plupart des navigateurs, l'appel de <code>btoa()</code> sur une chaîne Unicode engendrera une exception <code>InvalidCharacterError</code>.</p>
 
-<p>Une option est d'échapper tous les caractères étendus, de telle sorte que la chaîne que vous voulez en fait encoder soit une représentation ASCII de l'original. Voyez cet exemple, noté par <a href="http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html" title="http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html">Johan Sundström</a> :</p>
+<p>Une option est d'échapper tous les caractères étendus, de telle sorte que la chaîne que vous voulez en fait encoder soit une représentation ASCII de l'original. Voyez cet exemple, noté par <a href="http://ecmanaut.blogspot.com/2006/07/encoding-decoding-utf8-in-javascript.html">Johan Sundström</a> :</p>
 
-<pre id="txt"><code>// Chaîne ucs-2 en ascii encodé en base64
+<pre><code>// Chaîne ucs-2 en ascii encodé en base64
 function uena(chn) {
     return window.btoa(unescape(encodeURIComponent(chn)));
 }
@@ -73,7 +73,7 @@ aenu('4pyTIMOgIGxhIG1vZGU='); // "✓ à la mode"
 uena('I \u2661 Unicode!'); // SSDimaEgVW5pY29kZSE=
 aenu('SSDimaEgVW5pY29kZSE='); // "I ♡ Unicode!"</code></pre>
 
-<p>Une solution meilleure, plus fiable et moins coûteuse consiste à <a href="https://developer.mozilla.org/fr/docs/D%C3%A9coder_encoder_en_base64">utiliser des tableaux typés pour faire la conversion</a>.</p>
+<p>Une solution meilleure, plus fiable et moins coûteuse consiste à <a href="/fr/docs/D%C3%A9coder_encoder_en_base64">utiliser des tableaux typés pour faire la conversion</a>.</p>
 
 <h2 id="Spécifications">Spécifications</h2>
 
@@ -116,8 +116,8 @@ aenu('SSDimaEgVW5pY29kZSE='); // "I ♡ Unicode!"</code></pre>
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">Base64 encoding and decoding</a></li>
- <li><a href="https://developer.mozilla.org/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">Les URL de <code>données</code></a></li>
+ <li><a href="/en-US/docs/Web/API/WindowBase64/Base64_encoding_and_decoding">Base64 encoding and decoding</a></li>
+ <li><a href="/fr/docs/Web/HTTP/Basics_of_HTTP/Data_URIs">Les URL de <code>données</code></a></li>
  <li>{{domxref("WindowOrWorkerGlobalScope.atob","atob()")}}</li>
- <li><a href="https://developer.mozilla.org/en-US/docs/Components.utils.importGlobalProperties">Components.utils.importGlobalProperties</a></li>
+ <li><a href="/en-US/docs/Components.utils.importGlobalProperties">Components.utils.importGlobalProperties</a></li>
 </ul>
