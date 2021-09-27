@@ -16,7 +16,7 @@ translation_of: Web/API/Window/close
 <p>Cette méthode est uniquement autorisée à être appelée pour des fenêtres qui ont été ouvertes par un script à l'aide de la méthode <a href="fr/DOM/window.open">window.open</a>. Si la fenêtre n'a pas été ouverte par un script, l'erreur suivante apparaît dans la console JavaScript : <code>Scripts may not close windows that were not opened by script.</code></p>
 <h4 id="Exemples">Exemples</h4>
 <h5 id="Fermeture_d.27une_fen.C3.AAtre_ouverte_avec_window.open.28.29">Fermeture d'une fenêtre ouverte avec window.open()</h5>
-<pre>&lt;script type="text/javascript"&gt;
+<pre class="brush: html">&lt;script type="text/javascript"&gt;
 // Variable globale pour stocker une référence vers la fenêtre ouverte
 var fenetreOuverte;
 
@@ -31,7 +31,7 @@ function fermerFenetreOuverte()
 &lt;/script&gt;
 </pre>
 <h5 id="Fermeture_de_la_fen.C3.AAtre_courante">Fermeture de la fenêtre courante</h5>
-<pre>&lt;script type="text/javascript"&gt;
+<pre class="brush: html">&lt;script type="text/javascript"&gt;
 function fermerFenetreCourante()
 {
   window.close();

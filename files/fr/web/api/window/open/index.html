@@ -174,7 +174,7 @@ function openRequestedPopup() {
 
 <p>Exemple :</p>
 
-<pre>&lt;script type="text/javascript"&gt;
+<pre class="brush: html">&lt;script type="text/javascript"&gt;
 var WindowObjectReference; // variable globale
 
 function openRequestedPopup() {
@@ -189,7 +189,7 @@ function openRequestedPopup() {
 
 <h3 id="Bonnes_pratiques">Bonnes pratiques</h3>
 
-<pre>&lt;script type="text/javascript"&gt;
+<pre class="brush: html">&lt;script type="text/javascript"&gt;
 var WindowObjectReference = null; // variable globale
 
 function openFFPromotionPopup() {
@@ -228,7 +228,7 @@ l'adoption de Firefox&lt;/a&gt;&lt;/p&gt;
 
 <p>Vous pouvez également paramétriser la fonction pour la rendre polyvalente, fonctionnelle dans plus de situations, et donc réutilisable dans d'autres scripts et pages Web :</p>
 
-<pre>&lt;script type="text/javascript"&gt;
+<pre class="brush: html">&lt;script type="text/javascript"&gt;
 var WindowObjectReference = null; // variable globale
 
 function openRequestedPopup(strUrl, strWindowName) {
@@ -248,7 +248,7 @@ function openRequestedPopup(strUrl, strWindowName) {
 
 <p>Vous pouvez également ne permettre à cette fonction que d'ouvrir une seule fenêtre secondaire et de la réutiliser pour d'autres liens de cette manière :</p>
 
-<pre>&lt;script type="text/javascript"&gt;
+<pre class="brush: html">&lt;script type="text/javascript"&gt;
 var WindowObjectReference = null; // variable globale
 var PreviousUrl; /* variable globale qui stockera l'URL actuellement
                     chargée dans la fenêtre secondaire */
@@ -412,7 +412,7 @@ de Firefox&lt;/a&gt;&lt;/p&gt;
 
 <p>Dans les cas où <code>left</code> et <code>screenX</code> (et/ou <code>top</code> et <code>screenY</code>) ont des valeurs contradictoires, <code>left</code> et <code>top</code> ont priorité sur <code>screenX</code> et <code>screenY</code> respectivement. Si <code>left</code> et <code>screenX</code> (et/ou <code>top</code> et <code>screenY</code>) sont définies dans la liste <var>strWindowFeatures</var>, les valeurs <code>left</code> (et/ou <code>top</code>) seront reconnues et utilisées. Dans l'exemple suivant, la nouvelle fenêtre sera positionnée à 100 pixels du bord gauche de la zone de travail des applications du système d'exploitation de l'utilisateur, et non à 200 pixels.</p>
 
-<pre>&lt;script type="text/javascript"&gt;
+<pre class="brush: html">&lt;script type="text/javascript"&gt;
 WindowObjectReference = window.open("http://www.lemonde.fr/",
            "NomDeLaFenetreLeMonde",
            "left=100,screenX=200,resizable,scrollbars,status");
@@ -423,7 +423,7 @@ WindowObjectReference = window.open("http://www.lemonde.fr/",
 
 <p><code>outerWidth</code> a priorité sur <code>width</code>, et <code>width</code> a priorité sur <code>innerWidth</code>. <code>outerHeight</code> a priorité sur <code>height</code> et <code>height</code> a priorité sur <code>innerHeight</code>. Dans l'exemple suivant, les navigateurs basés sur Mozilla créeront une nouvelle fenêtre avec une taille extérieure (outerWidth) de 600 pixels de large et ignoreront la requête d'une largeur (width) de 500 pixels ainsi que celle d'une taille intérieure (innerWidth) de 400 pixels.</p>
 
-<pre>&lt;script type="text/javascript"&gt;
+<pre class="brush: html">&lt;script type="text/javascript"&gt;
 WindowObjectReference = window.open("http://www.wwf.org/",
            "NomDeLaFenetreWWF",
            "outerWidth=600,width=500,innerWidth=400,resizable,scrollbars,status");

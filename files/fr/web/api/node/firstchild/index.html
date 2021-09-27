@@ -21,7 +21,7 @@ translation_of: Web/API/Node/firstChild
 
 <p>Cet exemple montre l'utilisation de <code>firstChild</code> et la manière dont les nœuds d'espaces peuvent interférer.</p>
 
-<pre>&lt;p id="para-01"&gt;
+<pre class="brush: html">&lt;p id="para-01"&gt;
   &lt;span&gt;Premier span&lt;/span&gt;
 &lt;/p&gt;
 
@@ -37,7 +37,7 @@ translation_of: Web/API/Node/firstChild
 
 <p>Si ces espaces sont retirés du code source, les nœuds <code>#text</code> n'apparaîtront plus et l'élément span deviendra le premier enfant du paragraphe.</p>
 
-<pre>&lt;p id="para-01"&gt;&lt;span&gt;Premier span&lt;/span&gt;&lt;/p&gt;
+<pre class="brush: html">&lt;p id="para-01"&gt;&lt;span&gt;Premier span&lt;/span&gt;&lt;/p&gt;
 
 &lt;script type="text/javascript"&gt;
   var p01 = document.getElementById('para-01');
