@@ -300,20 +300,20 @@ export default app</pre>
 
 <p>這似乎是討論Svelte如何處理無障礙性的好時機；讓我們繼續看下去。</p>
 
-<h2 id="Svelte_accessibility_support">Svelte accessibility support</h2>
+<h2 id="Svelte_accessibility_support">Svelte無障礙性支援</h2>
 
-<p>Svelte has a special emphasis on accessibility. The intention is to encourage developers to write more accessible code "by default". Being a compiler, Svelte can statically analyze our HTML templates to provide accessibility warnings when components are being compiled.</p>
+<p>Svelte特別重視無障礙性。目的是鼓勵開發人員盡可能預設地寫出無障礙程式碼。作為編譯器，Svelte能靜態地分析我們的HTML範本，而當元件被編譯後，就能提出一些無障礙警示。</p>
 
-<p>Accessibility (shortened to a11y) isn't always easy to get right, but Svelte will help by warning you if you write inaccessible markup.</p>
+<p>無障礙性（縮寫為a11y）不總是容易正確，但Svelte將會協助並警示你，假如你寫出了不易訪問的標記。</p>
 
-<p>For example, if we add an <code>&lt;img&gt;</code> element to our <code>todos.svelte</code> component without its corresponding <code>alt</code> prop:</p>
+<p>舉例來說，假如我們新增<code>&lt;img&gt;</code>元素至我們的<code>todos.svelte</code>元件，但沒有對應的<code>alt</code>屬性時：</p>
 
 <pre class="brush: html">&lt;h1&gt;Svelte To-Do list&lt;/h1&gt;
 
 &lt;img height="32" width="88" src="https://www.w3.org/WAI/wcag2A"&gt;
 </pre>
 
-<p>The compiler will issue the following warning:</p>
+<p>編譯器將會報出下列警示：</p>
 
 <pre class="brush: bash">(!) Plugin svelte: A11y: &lt;img&gt; element should have an alt attribute
 src/components/Todos.svelte
@@ -325,21 +325,21 @@ created public/build/bundle.js in 220ms
 
 [2020-07-15 04:07:43] waiting for changes...</pre>
 
-<p>Moreover, our editor can display this warning even before calling the compiler:</p>
+<p>此外，在我們呼叫編譯器之前，編輯器也會顯示這個警示：</p>
 
 <p><img alt="A code editor window showing an image tag, with a popup error message saying that the element should have an alt attribute" src="04-svelte-accessibility-support.png"></p>
 
-<p>You can tell Svelte to ignore this warning for the next block of markup with a <a href="https://svelte.dev/docs#Comments">comment</a> beginning with <code>svelte-ignore</code>, like this:</p>
+<p>你可以使用以<code>svelte-ignore</code>開頭的<a href="https://svelte.dev/docs#Comments">註解</a>，來告訴Svelte去忽略下一個標記區塊的警示，像是如下：</p>
 
 <pre class="brush: html">&lt;!-- svelte-ignore a11y-missing-attribute --&gt;
 &lt;img height="32" width="88" src="https://www.w3.org/WAI/wcag2A"&gt;
 </pre>
 
 <div class="notecard note">
-<p><strong>Note</strong>: With VSCode you can automatically add this ignore comment by clicking on the <em>Quick fix...</em> link or pressing <kbd>Ctrl</kbd> + <kbd>.</kbd>.</p>
+<p><strong>注意</strong>：透過VSCode你可以點擊<em>Quick fix...</em>連結或按<kbd>Ctrl</kbd> + <kbd>.</kbd>來自動地加上這個ignore註解。</p>
 </div>
 
-<p>If you want to globally disable this warning you can add this <code>onwarn</code> handler to your <code>rollup.config.js</code> file inside the configuration for the <code>Svelte</code> plugin, like this:</p>
+<p>假如你想要全域地關閉這個警示，可以在你的<code>rollup.config.js</code>檔案中調整<code>Svelte</code>外掛組態並補上這個<code>onwarn</code>處理器即可，像是如下：</p>
 
 <pre class="brush: js">plugins: [
   svelte({
@@ -363,13 +363,13 @@ created public/build/bundle.js in 220ms
 ]
 </pre>
 
-<p>By design, these warnings are implemented in the compiler itself, and not as a plug-in that you may choose to add to your project. The idea is to check for a11y issues in your markup by default and let you opt-out of specific warnings.</p>
+<p>在設計上，這些警示被實現於編譯器本身，而不是你可以選擇性加入專案的外掛。理念是建立在預設會檢查你的標記有無a11y問題並讓你可以選擇排除特定警示。</p>
 
 <div class="notecard note">
-<p><strong>Note</strong>: you should only disable these warnings if you have good reasons to do so, for example while building a quick prototype. It's important to be a good web citizen and make your pages accessible to the broadest possible userbase.</p>
+<p><strong>注意</strong>：假如你有足夠充分的理由，則可以先停用這些警示，例如當你在快速建構原型時。成為一個優秀的網路公民並讓你的頁面盡可能廣泛地被用戶訪問是很重要的。</p>
 </div>
 
-<p>The accessibility rules checked by Svelte are taken from <a href="https://github.com/jsx-eslint/eslint-plugin-jsx-a11y#supported-rules">eslint-plugin-jsx-a11y</a>, a plugin for eslint that provides static checks for many accessibility rules on JSX elements. Svelte aims to implement all of them in its compiler, and most of them have already been ported to Svelte. On GitHub you can see <a href="https://github.com/sveltejs/svelte/issues/820">which accessibility checks are still missing</a>. You can check the meaning of each rule by clicking on its link.</p>
+<p>Svelte則透過<a href="https://github.com/jsx-eslint/eslint-plugin-jsx-a11y#supported-rules">eslint-plugin-jsx-a11y</a>來檢查這些無障礙性規則，它是提供在JSX元素上許多無障礙性規則靜態檢查的一個eslint外掛。Svelte企圖將它們全部實現於編譯器中，而大部分都已經移植至Svelte中。在GitHub中你還可以看到<a href="https://github.com/sveltejs/svelte/issues/820">仍缺少哪些無障礙檢核</a>。你可以點擊連結來了解每一條規則代表什麼意思。</p>
 
 <h2 id="Styling_our_markup">Styling our markup</h2>
 
