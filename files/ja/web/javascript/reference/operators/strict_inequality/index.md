@@ -3,44 +3,48 @@ title: 厳密不等価 (!==)
 slug: Web/JavaScript/Reference/Operators/Strict_inequality
 tags:
   - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-  - 演算子
   - 言語機能
+  - 演算子
+  - Reference
+browser-compat: javascript.operators.strict_inequality
 translation_of: Web/JavaScript/Reference/Operators/Strict_inequality
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>厳密不等価演算子 (<code>!==</code>) は、二つのオペランドが等しくないことを検査し、論理値で結果を返します <a href="/ja/docs/Web/JavaScript/Reference/Operators/Inequality">不等価</a>演算子とは異なり、厳密不等価演算子はオペランドの型が異なる場合、常に異なると判断します。</p>
+厳密不等価演算子 (`!==`) は、2 つのオペランドが等しくないことを検査し、論理値で結果を返します。[不等価](/ja/docs/Web/JavaScript/Reference/Operators/Inequality)演算子とは異なり、厳密不等価演算子はオペランドの型が異なる場合、常に異なると判断します。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-strict-equality.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-strict-inequality.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+x !== y
+```
 
-<pre class="syntaxbox notranslate">x !== y</pre>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+厳密不等価演算子は、オペランドが等しくないことを検査します。これは[厳密等価](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality)演算子の逆に当たるので、以下の 2 行は常に同じ結果になります。
 
-<p>厳密不等価演算子は、オペランドが等しくないことを検査します。これは<a href="/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality">厳密等価</a>演算子の逆に当たるので、以下の2行は常に同じ結果を生み出します。</p>
+```js
+x !== y
 
-<pre class="brush: js notranslate">x !== y
+!(x === y)
+```
 
-!(x === y)</pre>
+比較アルゴリズムの詳細については、[厳密等価](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality)演算子のページを参照して下さい。
 
-<p>比較アルゴリズムの詳細については、<a href="/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality">厳密等価</a>演算子のページをご覧ください。</p>
+厳密等価演算子と同様に、厳密不等価演算子はオペランドの型が異なると、常に異なるものと見なします。
 
-<p>厳密等価演算子とと同様に、厳密不等価演算子はオペランドの型が異なると、常に異なるものと見なします。</p>
+```js
+3 !== "3"; // true
+```
 
-<pre class="brush: js notranslate">3 !== "3"; // true</pre>
+## 例
 
-<h2 id="Examples" name="Examples">例</h2>
+### オペランドが同じ型である場合の比較
 
-<h3 id="Comparing_operands_of_the_same_type" name="Comparing_operands_of_the_same_type">オペランドが同じ型である場合の比較</h3>
-
-<pre class="brush: js notranslate">console.log("hello" !== "hello");   // false
+```js
+console.log("hello" !== "hello");   // false
 console.log("hello" !== "hola");    // true
 
 console.log(3 !== 3);               // false
@@ -49,19 +53,23 @@ console.log(3 !== 4);               // true
 console.log(true !== true);         // false
 console.log(true !== false);        // true
 
-console.log(null !== null);         // false</pre>
+console.log(null !== null);         // false
+```
 
-<h3 id="Comparing_operands_of_different_types" name="Comparing_operands_of_different_types">オペランドが異なる方である場合の比較</h3>
+### オペランドが異なる型である場合の比較
 
-<pre class="brush: js notranslate">console.log("3" !== 3);           // true
+```js
+console.log("3" !== 3);           // true
 
 console.log(true !== 1);          // true
 
-console.log(null !== undefined);  // true</pre>
+console.log(null !== undefined);  // true
+```
 
-<h3 id="オブジェクトの比較">オブジェクトの比較</h3>
+### オブジェクトの比較
 
-<pre class="brush: js notranslate">const object1 = {
+```js
+const object1 = {
   name: "hello"
 }
 
@@ -70,31 +78,19 @@ const object2 = {
 }
 
 console.log(object1 !== object2);  // true
-console.log(object1 !== object1);  // false</pre>
+console.log(object1 !== object1);  // false
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-equality-operators', 'Equality operators')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.operators.strict_inequality")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Equality">等価演算子</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Inequality">不等価演算子</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality">厳密等価演算子</a></li>
-</ul>
+- [等価演算子](/ja/docs/Web/JavaScript/Reference/Operators/Equality)
+- [不等価演算子](/ja/docs/Web/JavaScript/Reference/Operators/Inequality)
+- [厳密等価演算子](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality)

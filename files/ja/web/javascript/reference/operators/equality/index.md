@@ -3,85 +3,87 @@ title: 等価 (==)
 slug: Web/JavaScript/Reference/Operators/Equality
 tags:
   - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-  - 演算子
   - 言語機能
+  - 演算子
+  - Reference
+browser-compat: javascript.operators.equality
 translation_of: Web/JavaScript/Reference/Operators/Equality
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>等価演算子 (<code>==</code>) は、二つのオペランドが等しいことを検査し、論理値で結果を返します <a href="/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality">厳密等価</a>演算子とは異なり、オペランドの型が異なる場合には型の変換を試みてから比較を行います。</p>
+等価演算子 (`==`) は、二つのオペランドが等しいことを検査し、論理値で結果を返します。[厳密等価](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality)演算子とは異なり、オペランドの型が異なる場合には型の変換を試みてから比較を行います。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-equality.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-equality.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+x == y
+```
 
-<pre class="syntaxbox notranslate">x == y
-</pre>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+等価演算子 (`==` および `!=`) は、[抽象等価比較アルゴリズム](https://www.ecma-international.org/ecma-262/5.1/#sec-11.9.3)を使用して 2 つのオペランドを比較します。これは、およそ次のようにまとめることができます。
 
-<p>等価演算子 (<code>==</code> および <code>!=</code>) は、<a href="http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.3">抽象等価比較アルゴリズム</a>を使用して二つのオペランドを比較します。これは、およそ次のようにまとめることができます。</p>
+- 両方のオペランドがオブジェクトである場合、同じオブジェクトを指している場合に限り `true` を返します。
+- 一方のオペランドが `null` で、もう一方が `undefined` であった場合は `true` を返します。
+- オペランドの型が異なる場合は、比較前に同じ型に変換を試みます。
 
-<ul>
- <li>両方のオペランドがオブジェクトである場合、同じオブジェクトを指している場合に限り <code>true</code> を返します。</li>
- <li>一方のオペランドが <code>null</code> で、もう一方が <code>undefined</code> であった場合は <code>true</code> を返します。</li>
- <li>オペランドの型が異なる場合は、比較前に同じ型に変換を試みます。
-  <ul>
-   <li>数値と文字列を比較する場合、文字列を数値に変換しようとします。</li>
-   <li>一方のオペランドが <code>Boolean</code> である場合、その Boolean のオペランドが <code>true</code> である場合は 1 に、 <code>false</code> である場合は +0 に変換します。</li>
-   <li>オペランドのうちの1つがオブジェクトで、もう一方が数値または文字列である場合は、そのオブジェクトの <code>valueOf()</code> および <code>toString()</code> メソッドを使用してプリミティブに変換しようとします。</li>
-  </ul>
- </li>
- <li>オペランドが同じ型である場合は、次のよう比較します。
-  <ul>
-   <li><code>String</code>: 両方のオペランドが同じ文字を同じ順序で持っている場合のみ、 <code>true</code> を返します。</li>
-   <li><code>Number</code>: 数値型は同じ値の数値である場合のみ、 <code>true</code> を返します。 <code>+0</code> と <code>-0</code> は同じ値と見なされます。一方のオペランドが <code>NaN</code> である場合は <code>false</code> を返します。</li>
-   <li><code>Boolean</code>: 両方のオペランドが共に <code>true</code> であるか、共に <code>false</code> である場合のみ <code>true</code> になります。</li>
-  </ul>
- </li>
-</ul>
+  - 数値と文字列を比較する場合、文字列を数値に変換しようとします。
+  - 一方のオペランドが論理値である場合、その論理値のオペランドが `true` である場合は 1 に、 `false` である場合は +0 に変換します。
+  - オペランドのうちの一方がオブジェクトで、もう一方が数値または文字列である場合は、そのオブジェクトの `valueOf()` および `toString()` メソッドを使用してプリミティブに変換を試みます。
 
-<p>この演算子と<a href="/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality">厳密等価</a> (<code>===</code>) 演算子の最も顕著な違いは、厳密等価演算子が型変換を試みない点です。厳密等価演算は、オペランドの型が異なる場合は常に異なるものと見なします。</p>
+- オペランドが同じ型である場合は、次のよう比較します。
 
-<h2 id="Examples" name="Examples">例</h2>
+  - 文字列型: 両方のオペランドが同じ文字を同じ順序で持っている場合のみ、 `true` を返します。
+  - 数値型: 両方のオペランドが同じ値を持っている場合のみ、 `true` を返します。 `+0` と `-0` は同じ値と見なされます。一方のオペランドが `NaN` である場合は `false` を返します。
+  - 論理型: 両方のオペランドが共に `true` であるか、共に `false` である場合のみ `true` になります。
 
-<h3 id="Comparison_with_no_type_conversion" name="Comparison_with_no_type_conversion">型変換がない場合の比較</h3>
+この演算子と[厳密等価](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality) (`===`) 演算子の最も顕著な違いは、厳密等価演算子が型変換を試みない点です。厳密等価演算は、オペランドの型が異なる場合は常に異なるものと見なします。
 
-<pre class="brush: js notranslate">1 == 1;              // true
-"hello" == "hello";  // true</pre>
+## 例
 
-<h3 id="Comparison_with_type_conversion" name="Comparison_with_type_conversion">型変換がある場合の比較</h3>
+### 型変換がない場合の比較
 
-<pre class="brush: js notranslate">"1" ==  1;            // true
+```js
+1 == 1;              // true
+"hello" == "hello";  // true
+```
+
+### 型変換がある場合の比較
+
+```js
+"1" ==  1;            // true
 1 == "1";             // true
 0 == false;           // true
 0 == null;            // false
 0 == undefined;       // false
+0 == !!null;          // true (論理 NOT 演算子を参照)
+0 == !!undefined;     // true (論理 NOT 演算子を参照)
 null == undefined;    // true
 
 const number1 = new Number(3);
 const number2 = new Number(3);
 number1 == 3;         // true
-number1 == number2;   // false</pre>
+number1 == number2;   // false
+```
 
-<h3 id="オブジェクトの比較">オブジェクトの比較</h3>
+### オブジェクトの比較
 
-<pre class="brush: js notranslate">const object1 = {"key": "value"}
+```js
+const object1 = {"key": "value"}
 const object2 = {"key": "value"};
 
 object1 == object2 // false
-object2 == object2 // true</pre>
+object2 == object2 // true
+```
 
-<h3 id="Comparing_strings_and_String_objects" name="Comparing_strings_and_String_objects">文字列と String オブジェクトの比較</h3>
+### 文字列と String オブジェクトの比較
 
-<p><code>new String()</code> を使用して構築された文字列はオブジェクトであることに注意してください。文字列リテラルとの比較を行うと、 <code>String</code> オブジェクトは文字列リテラルに変換され、その中身が比較されます。ただし、両方のオペランドが <code>String</code> オブジェクトであった場合は、オブジェクトとして比較され、同じオブジェクトを参照している場合だけ比較に成功します。</p>
+`new String()` を使用して構築された文字列はオブジェクトであることに注意してください。文字列リテラルとの比較を行うと、 `String` オブジェクトは文字列リテラルに変換され、その中身が比較されます。ただし、両方のオペランドが `String` オブジェクトであった場合は、オブジェクトとして比較され、同じオブジェクトを参照している場合だけ比較に成功します。
 
-<pre class="brush: js notranslate">const string1 = "hello";
+```js
+const string1 = "hello";
 const string2 = String("hello");
 const string3 = new String("hello");
 const string4 = new String("hello");
@@ -90,37 +92,27 @@ console.log(string1 == string2); // true
 console.log(string1 == string3); // true
 console.log(string2 == string3); // true
 console.log(string3 == string4); // false
-console.log(string4 == string4); // true</pre>
+console.log(string4 == string4); // true
+```
 
-<h3 id="Comparing_Dates_and_strings" name="Comparing_Dates_and_strings">Date と文字列の比較</h3>
+### Date と文字列の比較
 
-<pre class="brush: js notranslate">const d = new Date('December 17, 1995 03:24:00');
+```js
+const d = new Date('December 17, 1995 03:24:00');
 const s = d.toString(); // for example: "Sun Dec 17 1995 03:24:00 GMT-0800 (Pacific Standard Time)"
-console.log(d == s);    //true</pre>
+console.log(d == s);    //true
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-equality-operators', 'Equality operators')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.operators.strict_inequality")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Inequality">不等価演算子</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality">厳密等価演算子</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Strict_inequality">厳密不等価演算子</a></li>
-</ul>
+- [不等価演算子](/ja/docs/Web/JavaScript/Reference/Operators/Inequality)
+- [厳密等価演算子](/ja/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+- [厳密不等価演算子](/ja/docs/Web/JavaScript/Reference/Operators/Strict_inequality)
