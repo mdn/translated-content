@@ -2,76 +2,64 @@
 title: 符号なし右シフト (>>>)
 slug: Web/JavaScript/Reference/Operators/Unsigned_right_shift
 tags:
-  - Bitwise operator
+  - ビット演算子
   - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-  - 演算子
   - 言語機能
+  - 演算子
+  - Reference
+browser-compat: javascript.operators.unsigned_right_shift
 translation_of: Web/JavaScript/Reference/Operators/Unsigned_right_shift
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p><strong>符号なし右シフト演算子 (<code>&gt;&gt;&gt;</code>)</strong> (ゼロ埋め右シフト) は、1つ目のオペランドを指定されたビット数だけ右にずらします。右にずらしてあふれたビットは廃棄されます。0のビットが左からずれて入ります。符号ビットは <code>0</code> になりますので、結果は負の数にはなりません。他のビット毎演算子とは異なり、ゼロ埋め右シフトは符号なし32ビット整数を返します。</p>
+**符号なし右シフト演算子 (`>>>`)** (ゼロ埋め右シフト) は、1つ目のオペランドを指定されたビット数だけ右にずらします。右にずらしてあふれたビットは廃棄されます。0 のビットが左からずれて入ります。符号ビットは `0` になりますので、結果は負の数にはなりません。他のビット毎演算子とは異なり、ゼロ埋め右シフトは符号なし 32 ビット整数を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-unsigned-right-shift.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-unsigned-right-shift.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただける場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+a >>> b
+```
 
-<pre class="syntaxbox notranslate"><code><var>a</var> &gt;&gt;&gt; <var>b</var></code>
-</pre>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+この演算子は、1 つ目のオペランドを指定されたビット数だけ右にずらします。右にずらしてあふれたビットは廃棄されます。0 のビットが左からずれて入ります。符号ビットは `0` になりますので、結果は負の数にはなりません。他のビット毎演算子とは異なり、ゼロ埋め右シフトは符号なし 32 ビット整数を返します。
 
-<p>この演算子は、1つ目のオペランドを指定されたビット数だけ右にずらします。右にずらしてあふれたビットは廃棄されます。0のビットが左からずれて入ります。符号ビットは <code>0</code> になりますので、結果は負の数にはなりません。他のビット毎演算子とは異なり、ゼロ埋め右シフトは符号なし32ビット整数を返します。</p>
+負の数ではない場合、ゼロ埋め右シフトと符号保存右シフトは同じ結果をになります。例えば、 `9 >>> 2` は 2 となり、 `9 >> 2` と同じになります。
 
-<p>負の数ではない場合、ゼロ埋め右シフトと符号保存右シフトは同じ結果をになります。例えば、 <code>9 &gt;&gt;&gt; 2</code> は 2 となり、 <code>9 &gt;&gt; 2</code> と同じになります。</p>
+```js
+.     9 (10 進数): 00000000000000000000000000001001 (2 進数)
+                   --------------------------------
+9 >>> 2 (10 進数): 00000000000000000000000000000010 (2 進数) = 2 (10 進数)
+```
 
-<pre class="brush: js notranslate">.     9 (10進数): 00000000000000000000000000001001 (2進数)
-                  --------------------------------
-9 &gt;&gt;&gt; 2 (10進数): 00000000000000000000000000000010 (2進数) = 2 (10進数)
-</pre>
+しかし、これは負の数の場合は当てはまりません。例えば、 `-9 >>> 2` は 1073741821 になり、 `-9 >> 2` とは異なります (`-3` になる)。
 
-<p>しかし、これは負の数の場合は当てはまりません。例えば、 <code>-9 &gt;&gt;&gt; 2</code> は 1073741821 になり、 <code>-9 &gt;&gt; 2</code> (<code>-3</code> になる) とは異なります。</p>
-
-<pre class="brush: js notranslate">.     -9 (10進数): 11111111111111111111111111110111 (2進数)
+```js
+.     -9 (10 進数): 11111111111111111111111111110111 (2 進数)
                     --------------------------------
--9 &gt;&gt;&gt; 2 (10進数): 00111111111111111111111111111101 (2進数) = 1073741821 (10進数)
-</pre>
+-9 >>> 2 (10 進数): 00111111111111111111111111111101 (2 進数) = 1073741821 (10 進数)
+```
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_unsigned_right_shift" name="Using_unsigned_right_shift">符号なし右シフトの使用</h3>
+### 符号なし右シフトの使用
 
-<pre class="brush: js notranslate"> 9 &gt;&gt;&gt; 2; // 2
--9 &gt;&gt;&gt; 2; // 1073741821
-</pre>
+```js
+ 9 >>> 2; // 2
+-9 >>> 2; // 1073741821
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-bitwise-shift-operators', 'Bitwise Shift Operators')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.operators.unsigned_right_shift")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise">代入演算子</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment">符号なし右シフト代入演算子</a></li>
-</ul>
+- [ビット演算子 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise)
+- [符号なし右シフト代入演算子](/ja/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift_assignment)

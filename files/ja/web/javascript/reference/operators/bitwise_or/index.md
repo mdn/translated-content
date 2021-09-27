@@ -2,113 +2,78 @@
 title: ビット論理和 (|)
 slug: Web/JavaScript/Reference/Operators/Bitwise_OR
 tags:
-  - Bitwise operator
+  - ビット演算子
   - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-  - 演算子
   - 言語機能
+  - 演算子
+  - Reference
+browser-compat: javascript.operators.bitwise_or
 translation_of: Web/JavaScript/Reference/Operators/Bitwise_OR
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p>ビット論理和演算子 (<code>|</code>) は、両方のオペランドの対応するビットのどちらか一方が <code>1</code> である位置のビットで <code>1</code> を返します。</p>
+ビット論理和演算子 (`|`) は、両方のオペランドの対応するビットのどちらか一方が `1` である位置のビットで `1` を返します。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-bitwise-or.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-bitwise-or.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただける場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+a | b
+```
 
-<pre class="syntaxbox notranslate"><code><var>a</var> | <var>b</var></code>
-</pre>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+オペランドは 32 ビットの整数値に変換され、ビット (ゼロまたは 1) の並びによって表現されます。32 ビットを超える数値は最上位のビットが破棄されます。例えば、次の 32 ビットを超える整数は 32 ビット整数に変換されます。
 
-<p>オペランドは32ビットの整数値に変換され、ビット (ゼロまたは1) の並びによって表現されます。32ビットを超える数値は最上位のビットが破棄されます。例えば、次の32ビットを超える整数は32ビット整数に変換されます。</p>
+```js
+変換前: 11100110111110100000000000000110000000000001
+変換後:             10100000000000000110000000000001
+```
 
-<pre class="brush: js notranslate">変換前: 11100110111110100000000000000110000000000001
-変換後:             10100000000000000110000000000001</pre>
+第 1 オペランドの各ビットは、第 2 オペランドの対応するビットと組みになります。*第 1 ビット*は*第 1 ビット*へ、*第 2 ビット*は*第 2 ビット*へ、という具合にです。
 
-<p>第1オペランドの各ビットは、第2オペランドの対応するビットと組み合わせになります。<em>第1ビット</em>は<em>第1ビット</em>へ、<em>第2ビット</em>は<em>第2ビット</em>へ、という具合にです。</p>
+この演算子は各ビットの組み合わせに適用され、結果はビット単位で構築されます。
 
-<p>この演算子は各ビットの組み合わせに適用され、結果はビット単位で構築されます。</p>
+OR 演算の真理値表は次のようになります。
 
-<p>OR 演算の真理値表は次のようになります。</p>
+| a   | b   | a OR b |
+| --- | --- | ------ |
+| 0   | 0   | 0      |
+| 0   | 1   | 1      |
+| 1   | 0   | 1      |
+| 1   | 1   | 1      |
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th class="header" scope="col">a</th>
-   <th class="header" scope="col">b</th>
-   <th class="header" scope="col">a OR b</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>0</td>
-   <td>0</td>
-   <td>0</td>
-  </tr>
-  <tr>
-   <td>0</td>
-   <td>1</td>
-   <td>1</td>
-  </tr>
-  <tr>
-   <td>1</td>
-   <td>0</td>
-   <td>1</td>
-  </tr>
-  <tr>
-   <td>1</td>
-   <td>1</td>
-   <td>1</td>
-  </tr>
- </tbody>
-</table>
-
-<pre class="brush: js notranslate">.    9 (10進数) = 00000000000000000000000000001001 (2進数)
-    14 (10進数) = 00000000000000000000000000001110 (2進数)
+```js
+.    9 (10 進数) = 00000000000000000000000000001001 (2 進数)
+    14 (10 進数) = 00000000000000000000000000001110 (2 進数)
                    --------------------------------
-14 | 9 (10進数) = 00000000000000000000000000001111 (2進数) = 15 (10進数)
-</pre>
+14 | 9 (10 進数) = 00000000000000000000000000001111 (2 進数) = 15 (10 進数)
+```
 
-<p>ある数 <code><var>x</var></code> と <code>0</code> のビット論理和は <code><var>x</var></code> になります。</p>
+ある数 `x` と `0` のビット論理和は `x` になります。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_bitwise_OR" name="Using_bitwise_OR">ビット論理和の使用</h3>
+### ビット論理和の使用
 
-<pre class="brush: js notranslate">// 9  (00000000000000000000000000001001)
+```js
+// 9  (00000000000000000000000000001001)
 // 14 (00000000000000000000000000001110)
 
 14 | 9;
-// 15 (00000000000000000000000000001111)</pre>
+// 15 (00000000000000000000000000001111)
+```
 
-<h2 id="Specifications" name="Specifications">仕様</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#prod-BitwiseORExpression', 'Bitwise OR expression')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.operators.bitwise_or")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise">ビット演算子ガイド</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment">ビット論理和代入演算子</a></li>
-</ul>
+- [ビット演算子 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise)
+- [ビット論理和代入演算子](/ja/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)
