@@ -143,7 +143,7 @@ gl.uniformMatrix4fv(nUniform, false, new WebGLFloatArray(normalMatrix.flatten())
 
 <p>Le fragment shader a maintenant besoin d'être mis à jour en prenant en compte la quantité de lumière calculée précédemment par le vertex shader:</p>
 
-<pre class="brush: js">&lt;script id="shader-fs" type="x-shader/x-fragment"&gt;
+<pre class="brush: html">&lt;script id="shader-fs" type="x-shader/x-fragment"&gt;
   varying highp vec2 vTextureCoord;
   varying highp vec3 vLighting;
 

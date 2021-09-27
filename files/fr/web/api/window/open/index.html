@@ -59,7 +59,7 @@ function openRequestedPopup() {
 <p>Si une fenêtre du nom <var>strWindowName</var> existe déjà, alors, au lieu d'ouvrir une nouvelle fenêtre, <var>strUrl</var> est chargée dans cette fenêtre existante. Dans ce cas, la valeur renvoyée par la méthode est la fenêtre existante, et <var>strWindowFeatures</var> est ignorée. Fournir une chaîne vide pour <var>strUrl</var> est une manière d'obtenir une référence à une fenêtre ouverte par son nom sans en changer l'adresse. Si vous désirez ouvrir une nouvelle fenêtre à chaque appel de <code>window.open()</code>, il faut utiliser la nom réservé <var>_blank</var> pour <var>strWindowName</var>.</p>
 
 <div class="note">
-<p><strong>Note :</strong> À propos de l'utilisation de window.open pour ré-ouvrir ou donner le focus à une fenêtre existante portant un nom connu du domaine : Cette fonctionalité n'est pas valide pour tous les navigateurs et qui plus est avec des comportement variables. Firefox (50.0.1) fonctionne comme il est décrit ici : depuis le même domaine+port la ré-exécution de window.open avec le même nom va accéder à la fenêtre précédemment ouverte.  Google Chrome (55.0.2883.87 m ) pour sa part ne l'exécutera qu'à partir du même parent (nommé "opener", comme si les fenêtres étaient créées avec une dépendance et uniquement avec window.open). Il s'agit là d'une limitation considérable ce qui génère une incroyable complexité de développement parfois sans issue. Firefox récupère le handle vers toutes les fenêtres du domaine dont le nom est connu, ce qui permet d'accéder à leur données, mais il ne peut exécuter une commande HTMLElement.focus() vers l'une quelconque de ces fenêtres, ce qui interdit de réouvrir la fenêtre pourtant connue comme active. Pour sa part Chrome peut redonner le focus à une fenêtre (onglet) enfant mais l'opération est impossible entre frères et depuis l'enfant vers le parent. Quant aux autres fenêtres du même domaine (même famille ?) non ouvertes avec window.open elles sont inconnues et<code> window.open('',&lt;name&gt;,'')</code> ouvrira alors des doublons. La fonction <code>hw=window.open('',strWindowName<strong> </strong> ,'')</code> est pourtant la seule qui permette de récupérer un handle en connaissant un nom et théoriquement éviter la création de doublons, mais pour l'instant, 22/02/2017, les différences de comportement des navigateurs ne permettent de l'utiliser que de manière partielle dans des cas très restreints.</p>
+<p><strong>Note :</strong> À propos de l'utilisation de <code>window.open</code> pour ré-ouvrir ou donner le focus à une fenêtre existante portant un nom connu du domaine : Cette fonctionalité n'est pas valide pour tous les navigateurs et qui plus est avec des comportement variables. Firefox (50.0.1) fonctionne comme il est décrit ici : depuis le même domaine+port la ré-exécution de window.open avec le même nom va accéder à la fenêtre précédemment ouverte.  Google Chrome (55.0.2883.87 m ) pour sa part ne l'exécutera qu'à partir du même parent (nommé "opener", comme si les fenêtres étaient créées avec une dépendance et uniquement avec <code>window.open</code>). Il s'agit là d'une limitation considérable ce qui génère une incroyable complexité de développement parfois sans issue. Firefox récupère le handle vers toutes les fenêtres du domaine dont le nom est connu, ce qui permet d'accéder à leur données, mais il ne peut exécuter une commande <code>HTMLElement.focus()</code> vers l'une quelconque de ces fenêtres, ce qui interdit de réouvrir la fenêtre pourtant connue comme active. Pour sa part Chrome peut redonner le focus à une fenêtre (onglet) enfant mais l'opération est impossible entre frères et depuis l'enfant vers le parent. Quant aux autres fenêtres du même domaine (même famille ?) non ouvertes avec <code>window.open</code> elles sont inconnues et<code> window.open('',&lt;name&gt;,'')</code> ouvrira alors des doublons. La fonction <code>hw=window.open('',strWindowName<strong> </strong> ,'')</code> est pourtant la seule qui permette de récupérer un handle en connaissant un nom et théoriquement éviter la création de doublons, mais pour l'instant, 22/02/2017, les différences de comportement des navigateurs ne permettent de l'utiliser que de manière partielle dans des cas très restreints.</p>
 </div>
 
 <p><var>strWindowFeatures</var> est une chaîne optionnelle contenant une liste, séparée par des virgules, de fonctionnalités demandées pour la nouvelle fenêtre. Après qu'une fenêtre soit ouverte, vous ne pouvez pas utiliser JavaScript pour changer ses fonctionnalités et ses barres d'outils. Si <var>strWindowName</var> ne spécifie pas une fenêtre existante et si vous ne fournissez pas le paramètre <var>strWindowFeatures</var> (ou si celui-ci est une chaîne vide), la nouvelle fenêtre secondaire comportera les barres d'outils par défaut de la fenêtre principale.</p>
@@ -174,7 +174,7 @@ function openRequestedPopup() {
 
 <p>Exemple :</p>
 
-<pre>&lt;script type="text/javascript"&gt;
+<pre class="brush: html">&lt;script type="text/javascript"&gt;
 var WindowObjectReference; // variable globale
 
 function openRequestedPopup() {
@@ -189,7 +189,7 @@ function openRequestedPopup() {
 
 <h3 id="Bonnes_pratiques">Bonnes pratiques</h3>
 
-<pre>&lt;script type="text/javascript"&gt;
+<pre class="brush: html">&lt;script type="text/javascript"&gt;
 var WindowObjectReference = null; // variable globale
 
 function openFFPromotionPopup() {
@@ -228,7 +228,7 @@ l'adoption de Firefox&lt;/a&gt;&lt;/p&gt;
 
 <p>Vous pouvez également paramétriser la fonction pour la rendre polyvalente, fonctionnelle dans plus de situations, et donc réutilisable dans d'autres scripts et pages Web :</p>
 
-<pre>&lt;script type="text/javascript"&gt;
+<pre class="brush: html">&lt;script type="text/javascript"&gt;
 var WindowObjectReference = null; // variable globale
 
 function openRequestedPopup(strUrl, strWindowName) {
@@ -248,7 +248,7 @@ function openRequestedPopup(strUrl, strWindowName) {
 
 <p>Vous pouvez également ne permettre à cette fonction que d'ouvrir une seule fenêtre secondaire et de la réutiliser pour d'autres liens de cette manière :</p>
 
-<pre>&lt;script type="text/javascript"&gt;
+<pre class="brush: html">&lt;script type="text/javascript"&gt;
 var WindowObjectReference = null; // variable globale
 var PreviousUrl; /* variable globale qui stockera l'URL actuellement
                     chargée dans la fenêtre secondaire */
@@ -308,11 +308,11 @@ de Firefox&lt;/a&gt;&lt;/p&gt;
  <dt>Comment ouvrir une ressource référencée par un lien dans un nouvel onglet ? ou dans un onglet spécifique ?</dt>
  <dd>Pour l'instant, ce n'est pas possible. Seul l'utilisateur peut modifier ses préférences avancées pour faire cela. <a href="http://kmeleon.sourceforge.net/">K-meleon 1.1</a>, un navigateur basé sur Mozilla, donne un contrôle et un pouvoir complet à l'utilisateur sur la manière dont les liens sont ouverts. Certaines extensions avancées donnent également à Mozilla et Firefox un grand pouvoir concernant la manière dont les ressources référencées sont chargées. Dans quelques années, la <a href="http://www.w3.org/TR/2004/WD-css3-hyperlinks-20040224/#target0">propriété target du module CSS3 hyperlien</a> pourrait être implémentée (si le module CSS3 Hyperlink tel qu'il existe à présent est approuvé). Même si cela se fait et lorsque cela se produira, attendez-vous à ce que les développeurs de navigateurs utilisant des onglets donnent un pouvoir de veto à l'utilisateur et un contrôle total de la façon dont les liens peuvent ouvrir des pages Web. La façon d'ouvrir un lien devrait toujours être entièrement sous le contrôle de l'utilisateur.</dd>
  <dt>Comment savoir si une fenêtre que j'ai ouverte l'est toujours ?</dt>
- <dd>Vous pouvez tester l'existence de la référence à l'objet window, qui est la valeur renvoyée en cas de succès de l'appel à window.open(), et vérifier ensuite que la valeur renvoyée par <var>WindowObjectReference</var>.closed est bien <var>false</var>.</dd>
+ <dd>Vous pouvez tester l'existence de la référence à l'objet <code>window</code>, qui est la valeur renvoyée en cas de succès de l'appel à <code>window.open()</code>, et vérifier ensuite que la valeur renvoyée par <var>WindowObjectReference</var>.closed est bien <var>false</var>.</dd>
  <dt>Comment savoir si ma fenêtre a été bloquée par un bloqueur de popups ?</dt>
  <dd>Avec les bloqueurs de popups intégrés dans Mozilla/Firefox et Internet Explorer 6 SP2, il est possible de vérifier la valeur renvoyée par <code>window.open()</code> : elle sera <var>null</var> si la fenêtre n'a pas été autorisée à s'ouvrir. Cependant, pour la plupart des autres bloqueurs de popups, il n'existe pas de manière fiable.</dd>
  <dt>Quelle est la relation JavaScript entre la fenêtre principale et la fenêtre secondaire ?</dt>
- <dd>La valeur renvoyée par la méthode window.open() est la propriété <a href="fr/DOM/window.opener">opener</a>. La variable <var>WindowObjectReference</var> lie la fenêtre principale (opener) à la fenêtre secondaire qu'elle a ouverte, tandis que le mot-clé <code>opener</code> liera la fenêtre secondaire à sa fenêtre principale (celle qui a déclenché son ouverture).</dd>
+ <dd>La valeur renvoyée par la méthode <code>window.open()</code> est la propriété <a href="fr/DOM/window.opener">opener</a>. La variable <var>WindowObjectReference</var> lie la fenêtre principale (opener) à la fenêtre secondaire qu'elle a ouverte, tandis que le mot-clé <code>opener</code> liera la fenêtre secondaire à sa fenêtre principale (celle qui a déclenché son ouverture).</dd>
  <dt>Je n'arrive pas à accéder aux propriétés de la nouvelle fenêtre secondaire. J'obtiens toujours une erreur dans la console JavaScript disant « Erreur : uncaught exception: Permission denied to get property &lt;property_name or method_name&gt; ». Pourquoi cela ?</dt>
  <dd><p>Ceci est causé par la restriction de sécurité des scripts entre domaines (aussi appelée<em>Same Origin Policy</em> , « Politique de même origine »). Un script chargé dans une fenêtre (ou cadre) d'une origine donnée (nom de domaine) <strong>ne peut pas obtenir ou modifier</strong> des propriétés d'une autre fenêtre (ou cadre) ou les propriétés d'aucun de ses objets HTML si celle-ci provient d'une autre origine distincte (nom de domaine). C'est pourquoi, avant d'exécuter un script se référant à une fenêtre secondaire depuis la fenêtre principale, le navigateur vérifiera que la fenêtre secondaire possède le même nom de domaine. Plus d'informations à propos de la restriction de sécurité des scripts entre domaines : <a href="http://www.mozilla.org/projects/security/components/same-origin.html">http://www.mozilla.org/projects/secu...me-origin.html</a></p></dd>
 </dl>
@@ -321,11 +321,11 @@ de Firefox&lt;/a&gt;&lt;/p&gt;
 
 <h4 id=".C3.89vitez_de_recourir_.C3.A0_window.open.28.29">Évitez de recourir à <code>window.open()</code></h4>
 
-<p>De manière générale, il est préférable d'éviter d'utiliser window.open() pour plusieurs raisons :</p>
+<p>De manière générale, il est préférable d'éviter d'utiliser <code>window.open()</code> pour plusieurs raisons :</p>
 
 <ul>
  <li>Tous les navigateurs basés sur Mozilla offrent la navigation par onglets, et il s'agit du mode préféré pour ouvrir des ressources référencées… pas seulement dans le cas des navigateurs basés sur Mozilla, mais dans tous les autres navigateurs offrant la navigation par onglets. En d'autres mots, les utilisateurs de navigateurs utilisant des onglets préfèrent ouvrir des onglets que des fenêtres dans la plupart des situations. Ce type de navigateur gagne rapidement en popularité depuis plusieurs années et cette tendance ne semble pas près de s'arrêter. La version 7 d'Internet Explorer sortie en octobre 2006 propose également la navigation par onglets.</li>
- <li>Il existe à présent <a href="https://addons.update.mozilla.org/extensions/showlist.php?application=mozilla&amp;category=Tabbed+Browsing&amp;numpg=50&amp;os=windows&amp;version=auto-detect&amp;submit=Update">plusieurs extensions à Mozilla</a> (comme Multizilla) et <a href="https://addons.update.mozilla.org/extensions/showlist.php?application=firefox&amp;version=1.0+&amp;os=Windows&amp;category=Tabbed%20Browsing">à Firefox</a> (comme <a href="https://addons.update.mozilla.org/extensions/moreinfo.php?application=firefox&amp;version=1.0%20&amp;os=Windows&amp;category=Tabbed%20Browsing&amp;numpg=10&amp;id=158">Tabbrowser preferences</a>), fonctionnalités et préférences avancées basées sur la navigation par onglets, sur la conversion des appels à window.open() en ouvertures d'onglets, et sur la neutralisation des appels à window.open(). En particulier, afin de neutraliser l'ouverture de nouvelles fenêtres non demandées (souvent présentés comme bloquant les fenêtre popups non sollicitées ou les ouvertures automatiques de fenêtres par des scripts). Parmi ces fonctionnalités qu'on peut retrouver dans des extensions, il y a l'ouverture d'un lien dans une nouvelle fenêtre ou non, dans la même fenêtre, dans un nouvel onglet ou non, en arrière-plan ou non. Coder sans réfléchir pour ouvrir de nouvelles fenêtres n'est plus assuré de succès, ne pourra pas se faire par la force, et dans le cas où l'auteur Web y parvient, ne fera qu'ennuyer la majorité des utilisateurs.</li>
+ <li>Il existe à présent <a href="https://addons.update.mozilla.org/extensions/showlist.php?application=mozilla&amp;category=Tabbed+Browsing&amp;numpg=50&amp;os=windows&amp;version=auto-detect&amp;submit=Update">plusieurs extensions à Mozilla</a> (comme Multizilla) et <a href="https://addons.update.mozilla.org/extensions/showlist.php?application=firefox&amp;version=1.0+&amp;os=Windows&amp;category=Tabbed%20Browsing">à Firefox</a> (comme <a href="https://addons.update.mozilla.org/extensions/moreinfo.php?application=firefox&amp;version=1.0%20&amp;os=Windows&amp;category=Tabbed%20Browsing&amp;numpg=10&amp;id=158">Tabbrowser preferences</a>), fonctionnalités et préférences avancées basées sur la navigation par onglets, sur la conversion des appels à <code>window.open()</code> en ouvertures d'onglets, et sur la neutralisation des appels à <code>window.open()</code>. En particulier, afin de neutraliser l'ouverture de nouvelles fenêtres non demandées (souvent présentés comme bloquant les fenêtre popups non sollicitées ou les ouvertures automatiques de fenêtres par des scripts). Parmi ces fonctionnalités qu'on peut retrouver dans des extensions, il y a l'ouverture d'un lien dans une nouvelle fenêtre ou non, dans la même fenêtre, dans un nouvel onglet ou non, en arrière-plan ou non. Coder sans réfléchir pour ouvrir de nouvelles fenêtres n'est plus assuré de succès, ne pourra pas se faire par la force, et dans le cas où l'auteur Web y parvient, ne fera qu'ennuyer la majorité des utilisateurs.</li>
  <li>Les nouvelles fenêtres peuvent avoir leur barre de menu, leurs barres de défilement, leur barre d'état, leur redimensionnabilité etc. désactivées. Ceci n'est pas possible avec de nouveaux onglets. Par conséquent, de nombreux utilisateurs préfèrent utiliser des onglets étant donné que l'interface de leur navigateur est laissée intacte et reste stable.</li>
  <li>L'ouverture de nouvelles fenêtres, même avec leurs fonctionnalités réduites, utilise des ressources système considérables sur l'ordinateur de l'utilisateur (processeur, mémoire RAM) et met en jeu une grande quantité de code à exécuter (gestion de la sécurité, de la mémoire, diverses options de code parfois assez complexes, la construction du cadre de la fenêtre, des barres d'outils de la fenêtre, son positionnement et sa taille, etc.). L'ouverture de nouveaux onglets demande nettement moins de ressources système et est plus rapide à exécuter que d'ouvrir de nouvelles fenêtres.</li>
 </ul>
@@ -412,7 +412,7 @@ de Firefox&lt;/a&gt;&lt;/p&gt;
 
 <p>Dans les cas où <code>left</code> et <code>screenX</code> (et/ou <code>top</code> et <code>screenY</code>) ont des valeurs contradictoires, <code>left</code> et <code>top</code> ont priorité sur <code>screenX</code> et <code>screenY</code> respectivement. Si <code>left</code> et <code>screenX</code> (et/ou <code>top</code> et <code>screenY</code>) sont définies dans la liste <var>strWindowFeatures</var>, les valeurs <code>left</code> (et/ou <code>top</code>) seront reconnues et utilisées. Dans l'exemple suivant, la nouvelle fenêtre sera positionnée à 100 pixels du bord gauche de la zone de travail des applications du système d'exploitation de l'utilisateur, et non à 200 pixels.</p>
 
-<pre>&lt;script type="text/javascript"&gt;
+<pre class="brush: html">&lt;script type="text/javascript"&gt;
 WindowObjectReference = window.open("http://www.lemonde.fr/",
            "NomDeLaFenetreLeMonde",
            "left=100,screenX=200,resizable,scrollbars,status");
@@ -423,7 +423,7 @@ WindowObjectReference = window.open("http://www.lemonde.fr/",
 
 <p><code>outerWidth</code> a priorité sur <code>width</code>, et <code>width</code> a priorité sur <code>innerWidth</code>. <code>outerHeight</code> a priorité sur <code>height</code> et <code>height</code> a priorité sur <code>innerHeight</code>. Dans l'exemple suivant, les navigateurs basés sur Mozilla créeront une nouvelle fenêtre avec une taille extérieure (outerWidth) de 600 pixels de large et ignoreront la requête d'une largeur (width) de 500 pixels ainsi que celle d'une taille intérieure (innerWidth) de 400 pixels.</p>
 
-<pre>&lt;script type="text/javascript"&gt;
+<pre class="brush: html">&lt;script type="text/javascript"&gt;
 WindowObjectReference = window.open("http://www.wwf.org/",
            "NomDeLaFenetreWWF",
            "outerWidth=600,width=500,innerWidth=400,resizable,scrollbars,status");
@@ -459,21 +459,21 @@ WindowObjectReference = window.open("http://www.wwf.org/",
 
 <h4 id="Note_sur_les_probl.C3.A8mes_de_s.C3.A9curit.C3.A9_li.C3.A9s_.C3.A0_la_pr.C3.A9sence_de_la_barre_d.27.C3.A9tat">Note sur les problèmes de sécurité liés à la présence de la barre d'état</h4>
 
-<p>Dans Internet Explorer 6 pour XP SP2, pour les fenêtres ouvertes à l'aide de window.open() :</p>
+<p>Dans Internet Explorer 6 pour XP SP2, pour les fenêtres ouvertes à l'aide de <code>window.open()</code> :</p>
 
 <blockquote>
-<p>« Pour les fenêtres ouvertes à l'aide de window.open() :<br>
+<p>« Pour les fenêtres ouvertes à l'aide de <code>window.open()</code> :<br>
  Attendez-vous à ce que la barre d'état soit présente, et codez en conséquence. <strong>La barre d'état sera activée par défaut</strong> et fait entre 20 et 25 pixels de haut. (...) »<br>
  citation de <a href="http://msdn.microsoft.com/security/productinfo/xpsp2/default.aspx?pull=/library/en-us/dnwxp/html/xpsp2web.asp#xpsp_topic5">Fine-Tune Your Web Site for Windows XP Service Pack 2, Browser Window Restrictions in XP SP2</a></p>
 </blockquote>
 
 <blockquote>
-<p>« (...) les fenêtres créées à l'aide de la méthode window.open() peuvent être appelées par des scripts et utilisées pour imiter une fausse interface utilisateur ou bureau, ou pour masquer des informations ou des activités malveillantes en dimensionnant la fenêtre de manière à rendre la barre d'état invisible.<br>
+<p>« (...) les fenêtres créées à l'aide de la méthode <code>window.open()</code> peuvent être appelées par des scripts et utilisées pour imiter une fausse interface utilisateur ou bureau, ou pour masquer des informations ou des activités malveillantes en dimensionnant la fenêtre de manière à rendre la barre d'état invisible.<br>
  Les fenêtres d'Internet Explorer fournissent des informations de sécurité visibles par l'utilisateur pour l'aider à identifier avec certitude la source de la page et le niveau de sécurité de la communication avec cette page. Lorsque ces éléments ne sont pas visibles, les utilisateurs peuvent penser qu'ils sont sur une page plus digne de confiance ou interagissent avec un processus système alors qu'il sont en train d'interagir avec un hôte malveillant. (...)<br>
  <strong>Les fenêtres lancées par des scripts seront affichées entièrement, avec la barre de titre d'Internet Explorer et sa barre d'état.</strong> (...)<br>
  Gestion de la barre d'état d'Internet Explorer par les scripts<br>
  Description détaillée<br>
- <strong>Internet Explorer a été modifié pour ne désactiver la barre d'état pour aucune fenêtre. La barre d'état est toujours visible pour toutes les fenêtres d'Internet Explorer.</strong> (...) Sans ce changement, les fenêtres créées à l'aide de la méthode window.open() peuvent être appelées par des scripts et imiter une fausse interface utilisateur ou bureau, ou pour masquer des informations importantes pour l'utilisateur.<br>
+ <strong>Internet Explorer a été modifié pour ne désactiver la barre d'état pour aucune fenêtre. La barre d'état est toujours visible pour toutes les fenêtres d'Internet Explorer.</strong> (...) Sans ce changement, les fenêtres créées à l'aide de la méthode <code>window.open()</code> peuvent être appelées par des scripts et imiter une fausse interface utilisateur ou bureau, ou pour masquer des informations importantes pour l'utilisateur.<br>
  La barre d'état est une fonction de sécurité des fenêtres d'Internet Explorer qui fournissent à l'utilisateur des informations sur les zones de sécurité. Cette zone ne peut pas être imitée (...)"<br>
  citation de <a href="http://www.microsoft.com/technet/prodtechnol/winxppro/maintain/sp2brows.mspx#ECAA">Changes to Functionality in Microsoft Windows XP Service Pack 2, Internet Explorer Window Restrictions</a></p>
 </blockquote>
@@ -483,7 +483,7 @@ WindowObjectReference = window.open("http://www.wwf.org/",
 <p>Dans Internet Explorer 6 pour XP SP2 :</p>
 
 <ul>
- <li>« window.open() avec fullscreen=yes donnera à présent une fenêtre maximisée, et non une fenêtre en mode kiosque. »</li>
+ <li>« <code>window.open()</code> avec fullscreen=yes donnera à présent une fenêtre maximisée, et non une fenêtre en mode kiosque. »</li>
  <li>« La définition de la spécification de fullscreen=yes est modifiée pour signifier "afficher la fenêtre maximisée," ce qui gardera la barre de titre, la barre d'adresse et la barre d'état visibles. »</li>
 </ul>
 
