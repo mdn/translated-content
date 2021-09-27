@@ -2,76 +2,64 @@
 title: 右シフト (>>)
 slug: Web/JavaScript/Reference/Operators/Right_shift
 tags:
-  - Bitwise operator
+  - ビット演算子
   - JavaScript
-  - Language feature
-  - Operator
-  - Reference
-  - 演算子
   - 言語機能
+  - 演算子
+  - Reference
+browser-compat: javascript.operators.right_shift
 translation_of: Web/JavaScript/Reference/Operators/Right_shift
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p><strong>右シフト演算子 (<code>&gt;&gt;</code>)</strong> (ゼロ埋め右シフト) は、1つ目のオペランドを指定されたビット数だけ右にずらします。右にずらしてあふれたビットは廃棄されます。最も左のビットをコピーしながらずれて入ります。最も左のビットが以前の最も左のビットと同じになるため、符号ビット (最も左のビット) は変化しません。よって「符号維持」という名前です。</p>
+**右シフト演算子 (`>>`)** は、1つ目のオペランドを指定されたビット数だけ右にずらします。右にずらしてあふれたビットは廃棄されます。最も左のビットをコピーしながらずれて入ります。最も左のビットが以前の最も左のビットと同じになるため、符号ビット (最も左のビット) は変化しません。よって「符号維持」という名前です。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-right-shift.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-right-shift.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただける場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+a >> b
+```
 
-<pre class="syntaxbox notranslate"><code><var>a</var> &gt;&gt; <var>b</var></code>
-</pre>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+この演算子は、1 つ目のオペランドを指定されたビット数だけ右にずらします。右にずらしてあふれたビットは廃棄されます。最も左のビットをコピーしながらずれて入ります。最も左のビットが以前の最も左のビットと同じになるため、符号ビット (最も左のビット) は変化しません。よって「符号維持」という名前です。
 
-<p>この演算子は、1つ目のオペランドを指定されたビット数だけ右にずらします。右にずらしてあふれたビットは廃棄されます。最も左のビットをコピーしながらずれて入ります。最も左のビットが以前の最も左のビットと同じになるため、符号ビット (最も左のビット) は変化しません。よって「符号維持」という名前です。</p>
+例えば、 `9 >> 2` は 2 となります。
 
-<p>例えば、 <code>9 &gt;&gt;&gt; 2</code> は 2 となります。</p>
-
-<pre class="brush: js notranslate">.     9 (10進数): 00000000000000000000000000001001 (2進数)
+```js
+.    9 (10 進数): 00000000000000000000000000001001 (2 進数)
                   --------------------------------
-9 &gt;&gt;&gt; 2 (10進数): 00000000000000000000000000000010 (2進数) = 2 (10進数)
-</pre>
+9 >> 2 (10 進数): 00000000000000000000000000000010 (2 進数) = 2 (10 進数)
+```
 
-<p>同様に、 <code>-9 &gt;&gt; 2</code> は符号が保存されるため、 <code>-3</code> になります。</p>
+同様に、 `-9 >> 2` は符号が保存されるため、 `-3` になります。
 
-<pre class="brush: js notranslate">.     -9 (10進数): 11111111111111111111111111110111 (2進数)
+```js
+.    -9 (10 進数): 11111111111111111111111111110111 (2 進数)
                    --------------------------------
--9 &gt;&gt; 2 (10進数):  11111111111111111111111111111101 (2進数) = -3 (10進数)
-</pre>
+-9 >> 2 (10 進数): 11111111111111111111111111111101 (2 進数) = -3 (10 進数)
+```
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_right_shift" name="Using_right_shift">右シフトの使用</h3>
+### 右シフトの使用
 
-<pre class="brush: js notranslate"> 9 &gt;&gt; 2; //  2
--9 &gt;&gt; 2; // -3
-</pre>
+```js
+ 9 >> 2; //  2
+-9 >> 2; // -3
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-bitwise-shift-operators', 'Bitwise Shift Operators')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.operators.right_shift")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise">JavaScript ガイドのビット毎演算子</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment">右シフト代入演算子</a></li>
-</ul>
+- [ビット演算子 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise)
+- [右シフト代入演算子](/ja/docs/Web/JavaScript/Reference/Operators/Right_shift_assignment)

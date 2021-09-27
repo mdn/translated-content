@@ -2,74 +2,60 @@
 title: 左シフト (<<)
 slug: Web/JavaScript/Reference/Operators/Left_shift
 tags:
-  - Bitwise operator
-  - JavaScript
-  - Language feature
-  - Operator
-  - Reference
   - ビット演算子
-  - 演算子
+  - JavaScript
   - 言語機能
+  - 演算子
+  - Reference
+browser-compat: javascript.operators.left_shift
 translation_of: Web/JavaScript/Reference/Operators/Left_shift
 ---
-<div>{{jsSidebar("Operators")}}</div>
+{{jsSidebar("Operators")}}
 
-<p><strong>左シフト演算子 (<code>&lt;&lt;</code>)</strong>は、1つ目のオペランドを指定されたビット数だけ左にずらします。左にずらしてあふれたビットは廃棄されます。0のビットが右からずれて入ります。</p>
+**左シフト演算子 (`<<`)** は、1 つ目のオペランドを指定されたビット数だけ左にずらします。左にずらしてあふれたビットは廃棄されます。0 のビットが右からずれて入ります。
 
-<div>{{EmbedInteractiveExample("pages/js/expressions-left-shift.html")}}</div>
+{{EmbedInteractiveExample("pages/js/expressions-left-shift.html")}}
 
-<div class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力していただける場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</div>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+```js
+a << b
+```
 
-<pre class="syntaxbox notranslate"><code><var>a</var> &lt;&lt; <var>b</var></code>
-</pre>
+## 解説
 
-<h2 id="Description" name="Description">解説</h2>
+この演算子は、1 つ目のオペランドを指定されたビット数だけ左にずらします。左にずらしてあふれたビットは廃棄されます。 0 のビットが右からずれて入ります。
 
-<p>この演算子は、1つ目のオペランドを指定されたビット数だけ左にずらします。左にずらしてあふれたビットは廃棄されます。0のビットが右からずれて入ります。</p>
+例えば `9 << 2` は 36 になります。
 
-<p>例えば <code>9 &lt;&lt; 2</code> は 36 になります。</p>
-
-<pre class="brush: js notranslate">.    9 (10進数): 00000000000000000000000000001001 (2進数)
+```js
+.    9 (10 進数): 00000000000000000000000000001001 (2 進数)
                   --------------------------------
-9 &lt;&lt; 2 (10進数): 00000000000000000000000000100100 (2進数) = 36 (10進数)
-</pre>
+9 << 2 (10 進数): 00000000000000000000000000100100 (2 進数) = 36 (10 進数)
+```
 
-<p>任意の数 <code>x</code> を <code>y</code> ビット分だけ左にビット単位にずらすと、 <code>x * 2 ** y</code> になります。<br>
- ですから、例えば <code>9 &lt;&lt; 3</code> は <code>9 * (2 ** 3) = 9 * (8) = 72</code> になります。</p>
+任意の数 `x` を `y` ビット分だけ左にビット単位にずらすと、 `x * 2 ** y` になります。
+ ですから、例えば `9 << 3` は `9 * (2 ** 3) = 9 * (8) = 72` になります。
 
-<h2 id="Examples" name="Examples">例</h2>
+## 例
 
-<h3 id="Using_left_shift" name="Using_left_shift">左シフトの使用</h3>
+### 左シフトの使用
 
-<pre class="brush: js notranslate">9 &lt;&lt; 3; // 72
+```js
+9 << 3; // 72
 
 // 9 * (2 ** 3) = 9 * (8) = 72
-</pre>
+```
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-bitwise-shift-operators', 'Bitwise Shift Operators')}}</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("javascript.operators.left_shift")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li><a href="/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#Bitwise">JavaScript ガイドのビット毎演算子</a></li>
- <li><a href="/ja/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment">左シフト代入演算子</a></li>
-</ul>
+- [ビット演算子 (JavaScript ガイド)](/ja/docs/Web/JavaScript/Guide/Expressions_and_Operators#bitwise)
+- [左シフト代入演算子](/ja/docs/Web/JavaScript/Reference/Operators/Left_shift_assignment)
