@@ -41541,13 +41541,6 @@
       "Zecat"
     ]
   },
-  "Web/Web_Components/HTML_Imports": {
-    "modified": "2020-10-15T22:12:01.555Z",
-    "contributors": [
-      "ledenis",
-      "ylerjen"
-    ]
-  },
   "Web/Web_Components/Using_custom_elements": {
     "modified": "2019-03-18T21:38:08.858Z",
     "contributors": [
@@ -44069,6 +44062,13 @@
       "chrisdavidmills",
       "Hell_Carlito",
       "JeffD"
+    ]
+  },
+  "conflicting/Web/Web_Components": {
+    "modified": "2020-10-15T22:12:01.555Z",
+    "contributors": [
+      "ledenis",
+      "ylerjen"
     ]
   },
   "conflicting/Web/XPath/Introduction_to_using_XPath_in_JavaScript": {

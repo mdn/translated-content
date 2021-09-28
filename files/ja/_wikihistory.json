@@ -47585,12 +47585,6 @@
       "maybe"
     ]
   },
-  "Web/Web_Components/HTML_Imports": {
-    "modified": "2020-10-15T22:23:11.378Z",
-    "contributors": [
-      "reodog"
-    ]
-  },
   "Web/Web_Components/Using_custom_elements": {
     "modified": "2020-01-11T10:20:01.300Z",
     "contributors": [
@@ -48634,6 +48628,12 @@
     "modified": "2020-12-08T09:23:22.538Z",
     "contributors": [
       "Wind1808"
+    ]
+  },
+  "conflicting/Web/Web_Components": {
+    "modified": "2020-10-15T22:23:11.378Z",
+    "contributors": [
+      "reodog"
     ]
   },
   "orphaned/Building_a_Mozilla_Distribution": {

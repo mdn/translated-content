@@ -675,6 +675,7 @@
 /ru/docs/Web/WebGL/Animating_objects_with_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL
 /ru/docs/Web/WebGL/Getting_started_with_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
 /ru/docs/Web/WebGL/Using_shaders_to_apply_color_in_WebGL	/ru/docs/Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
+/ru/docs/Web/Web_Components/HTML_Imports	/ru/docs/conflicting/Web/Web_Components
 /ru/docs/Web/Web_Components/Использование_пользовательских_элементов	/ru/docs/Web/Web_Components/Using_custom_elements
 /ru/docs/Web/XPath/Funkcje	/ru/docs/Web/XPath/Functions
 /ru/docs/Web/XPath/Funkcje/floor	/ru/docs/Web/XPath/Functions/floor
