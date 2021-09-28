@@ -4385,6 +4385,7 @@
 /ja/docs/Web/WebGL/Using_textures_in_WebGL	/ja/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 /ja/docs/Web/WebGL/WebGL_best_practices	/ja/docs/Web/API/WebGL_API/WebGL_best_practices
 /ja/docs/Web/Web_Components/Custom_Elements	/ja/docs/Web/Web_Components/Using_custom_elements
+/ja/docs/Web/Web_Components/HTML_Imports	/ja/docs/conflicting/Web/Web_Components
 /ja/docs/Web/Web_Components/Status_in_Firefox	/ja/docs/orphaned/Web/Web_Components/Status_in_Firefox
 /ja/docs/Web/XSLT/Elements	/ja/docs/Web/XSLT/Element
 /ja/docs/Web/XSLT/Elements/apply-imports	/ja/docs/Web/XSLT/Element/apply-imports

@@ -23845,12 +23845,6 @@
       "Kalita-Roman"
     ]
   },
-  "Web/Web_Components/HTML_Imports": {
-    "modified": "2019-03-18T21:40:10.986Z",
-    "contributors": [
-      "PaulineNemchak"
-    ]
-  },
   "Web/Web_Components/Using_custom_elements": {
     "modified": "2020-01-05T09:04:07.966Z",
     "contributors": [
@@ -24695,6 +24689,12 @@
     "contributors": [
       "chrisdavidmills",
       "ruslan_g02"
+    ]
+  },
+  "conflicting/Web/Web_Components": {
+    "modified": "2019-03-18T21:40:10.986Z",
+    "contributors": [
+      "PaulineNemchak"
     ]
   },
   "orphaned/Glossary/Polifill": {
