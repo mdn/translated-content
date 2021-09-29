@@ -4,60 +4,69 @@ slug: Web/CSS/border-inline-end-style
 tags:
   - CSS
   - CSS Logical Property
-  - CSS Property
   - CSS プロパティ
-  - CSS 論理的プロパティ
-  - Experimental
+  - 実験的
   - Reference
   - border-inline
   - border-inline-end
   - border-inline-end-style
   - border-inline-style
+  - recipe:css-property
+browser-compat: css.properties.border-inline-end-style
 translation_of: Web/CSS/border-inline-end-style
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}
 
-<p><strong><code>border-inline-end-style</code></strong> は <a href="/ja/docs/Web/CSS" title="CSS">CSS</a> のプロパティで、要素の論理的なインライン方向の終端側の境界のスタイルを定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界のスタイルに対応付けられます。これは {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}}, {{cssxref("border-left-style")}} の何れかに対応し、どれに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。</p>
+**`border-inline-end-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なインライン方向の終端側の境界のスタイルを定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界のスタイルに対応付けられます。これは {{cssxref("border-top-style")}}、{{cssxref("border-right-style")}}、{{cssxref("border-bottom-style")}}、{{cssxref("border-left-style")}} の何れかに対応し、どれに対応するかは {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} で定義された値によって決まります。
 
-<div>{{EmbedInteractiveExample("pages/css/border-inline-end-style.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-inline-end-style.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+## 構文
 
-<h2 id="Syntax" name="Syntax">構文</h2>
-
-<pre class="brush:css no-line-numbers">/* &lt;'border-style'&gt; 値 */
+```css
+/* <'border-style'> 値 */
 border-inline-end-style: dashed;
 border-inline-end-style: dotted;
 border-inline-end-style: groove;
-</pre>
 
-<p>関連するプロパティとしては、 {{cssxref("border-inline-start-style")}}, {{cssxref("border-inline-start-style")}}, {{cssxref("border-inline-end-style")}} が要素の他の境界のスタイルを定義します。</p>
+/* グローバル値 */
+border-inline-end-style: inherit;
+border-inline-end-style: initial;
+border-inline-end-style: revert;
+border-inline-end-style: unset;
+```
 
-<p>{{cssinfo}}</p>
+関連するプロパティとしては、 {{cssxref("border-block-start-style")}}、{{cssxref("border-block-end-style")}}、{{cssxref("border-inline-start-style")}} が要素の他の境界のスタイルを定義します。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<dl>
- <dt><code>&lt;'border-style'&gt;</code></dt>
- <dd>境界のスタイルです。 {{cssxref("border-style")}} を参照してください。</dd>
-</dl>
+- `<'border-style'>`
+  - : 境界のスタイルです。 {{cssxref("border-style")}} を参照してください。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 公式定義
+
+{{CSSInfo}}
+
+### 形式文法
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">例</h2>
+<h2 id="Examples">例</h2>
 
-<h3 id="HTML">HTML</h3>
+### inline-end-style の設定
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+#### HTML
 
-<h3 id="CSS">CSS</h3>
+```html
+<div>
+  <p class="exampleText">Example text</p>
+</div>
+```
 
-<pre class="brush: css">div {
+#### CSS
+
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -67,36 +76,22 @@ border-inline-end-style: groove;
   writing-mode: vertical-lr;
   border: 5px solid blue;
   border-inline-end-style: dashed;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Example", 140, 140)}}</p>
+#### 結果
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+{{EmbedLiveSample("Examples", 140, 140)}}
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-border-inline-end-style", "border-block-end-style")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+## 仕様書
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+{{Specifications}}
 
-<p>{{Compat("css.properties.border-block-end-style")}}</p>
+## ブラウザーの互換性
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+{{Compat}}
 
-<ul>
- <li>このプロパティは {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}}, {{cssxref("border-left-style")}} のうちの1つに対応付けられます</li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+## 関連情報
+
+- このプロパティは {{cssxref("border-top-style")}}、{{cssxref("border-right-style")}}、{{cssxref("border-bottom-style")}}、{{cssxref("border-left-style")}} のうちの 1 つに対応付けられます
+- {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}

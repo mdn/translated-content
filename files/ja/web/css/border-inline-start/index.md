@@ -4,68 +4,83 @@ slug: Web/CSS/border-inline-start
 tags:
   - CSS
   - CSS Logical Property
-  - CSS Property
   - CSS プロパティ
-  - CSS 論理的プロパティ
-  - Experimental
+  - 実験的
   - Reference
   - border-inline
   - border-inline-start
   - border-inline-start-color
   - border-inline-start-style
   - border-inline-start-width
+  - recipe:css-shorthand-property
+browser-compat: css.properties.border-inline-start
 translation_of: Web/CSS/border-inline-start
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}
 
-<p><strong><code>border-inline-start</code></strong> は <a href="/ja/docs/Web/CSS" title="CSS">CSS</a> のプロパティで、個々の論理的なインライン方向の先頭側境界のプロパティ値を、スタイルシート内の単一の場所で設定するための<a href="/ja/docs/Web/CSS/Shorthand_properties">一括指定プロパティ</a>です。</p>
+**`border-inline-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、個々の論理的なインライン方向の先頭側境界のプロパティ値を、スタイルシート内の単一の場所で設定するための[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)です。
 
-<div>{{EmbedInteractiveExample("pages/css/border-inline-start.html")}}</div>
+{{EmbedInteractiveExample("pages/css/border-inline-start.html")}}
 
-<p class="hidden">このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> をクローンしてプルリクエストを送信してください。</p>
+## 構成要素のプロパティ
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+このプロパティは以下の CSS プロパティの一括指定です。
 
-<pre class="brush:css no-line-numbers">border-inline-start: 1px;
+- [`border-inline-start-color`](/ja/docs/Web/CSS/border-inline-start-color)
+- [`border-inline-start-style`](/ja/docs/Web/CSS/border-inline-start-style)
+- [`border-inline-start-width`](/ja/docs/Web/CSS/border-inline-start-width)
+
+## 構文
+
+```css
+border-inline-start: 1px;
 border-inline-start: 2px dotted;
 border-inline-start: medium dashed green;
-</pre>
 
-<p><code>border-inline-start</code> は1つ以上の {{cssxref("border-inline-start-width")}}, {{cssxref("border-inline-start-style")}}, {{cssxref("border-inline-start-color")}} の値の組み合わせを使用することができます。対応付けられる物理的な境界は、書字方向やテキストの向きによって決まります。これは {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, {{cssxref("border-left")}} の何れかに対応し、どれに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。</p>
+/* グローバル値 */
+border-inline-start: inherit;
+border-inline-start: initial;
+border-inline-start: revert;
+border-inline-start: unset;
+```
 
-<p>関連するプロパティとしては、 {{cssxref("border-block-start")}}, {{cssxref("border-block-end")}}, {{cssxref("border-inline-end")}} が要素の他の境界を定義します。</p>
+対応付けられる物理的な境界は、書字方向やテキストの向きによって決まります。これは {{cssxref("border-top")}}、{{cssxref("border-right")}}、{{cssxref("border-bottom")}}、{{cssxref("border-left")}} の何れかに対応し、どれに対応するかは {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} で定義された値によって決まります。
 
-<p>{{cssinfo}}</p>
+関連するプロパティとしては、 {{cssxref("border-block-start")}}、{{cssxref("border-block-end")}}、{{cssxref("border-inline-end")}} が要素の他の境界を定義します。
 
-<h3 id="Values" name="Values">値</h3>
+### 値
 
-<p><code>border-inline-start</code> は以下の値の内の1つ以上を任意の順序で指定します。</p>
+`border-inline-start` は以下の値の内の 1 つ以上を任意の順序で指定します。
 
-<dl>
- <dt><code>&lt;'border-width'&gt;</code></dt>
- <dd>境界の幅です。 {{cssxref("border-width")}} を参照してください。</dd>
- <dt><code>&lt;'border-style'&gt;</code></dt>
- <dd>境界線のスタイルです。 {{cssxref("border-style")}} を参照してください。</dd>
- <dt><code>&lt;'color'&gt;</code></dt>
- <dd>境界の色です。 {{cssxref("color")}} を参照してください。</dd>
-</dl>
+- `<'border-width'>`
+  - : 境界の幅です。 {{cssxref("border-width")}} を参照してください。
+- `<'border-style'>`
+  - : 境界線のスタイルです。 {{cssxref("border-style")}} を参照してください。
+- `<'color'>`
+  - : 境界の色です。 {{cssxref("color")}} を参照してください。
 
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 公式定義
+
+{{CSSInfo}}
+
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Example" name="Example">例</h2>
+<h2 id="Examples">例</h2>
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exampleText">Example text</p>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -74,36 +89,20 @@ border-inline-start: medium dashed green;
 .exampleText {
   writing-mode: vertical-rl;
   border-inline-start: 5px dashed blue;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Example", 140, 140)}}</p>
+{{EmbedLiveSample("Examples", 140, 140)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-border-inline-start", "border-inline-start")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>初回定義</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.border-inline-start")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>このプロパティは {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, {{cssxref("border-left")}} のうちの一つに対応付けられます。</li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- このプロパティは {{cssxref("border-top")}}、{{cssxref("border-right")}}、{{cssxref("border-bottom")}}、{{cssxref("border-left")}} のうちの 1 つに対応付けられます。
+- {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}

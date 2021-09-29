@@ -4,52 +4,58 @@ slug: Web/CSS/border-inline-style
 tags:
   - CSS
   - CSS Logical Property
-  - CSS Property
   - CSS プロパティ
-  - CSS 論理的プロパティ
-  - Experimental
+  - 実験的
   - Reference
+  - recipe:css-property
+browser-compat: css.properties.border-inline-style
 translation_of: Web/CSS/border-inline-style
 ---
-<div>{{CSSRef}}{{SeeCompatTable}}</div>
+{{CSSRef}}
 
-<p><strong><code>border-inline-style</code></strong> は <a href="/ja/docs/Web/CSS" title="CSS">CSS</a> のプロパティで、要素の論理的なインライン方向の境界のスタイルを、要素の書字方向やテキストの向きに応じて物理的な境界のスタイルに割り当てて定義します。これは {{cssxref("border-top-style")}} および {{cssxref("border-bottom-style")}}、または {{cssxref("border-left-style")}} および {{cssxref("border-right-style")}} プロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に応じて対応します。</p>
+**`border-inline-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なインライン方向の境界のスタイルを定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界のスタイルに対応付けられます。これは {{cssxref("border-top-style")}} と {{cssxref("border-bottom-style")}}、または {{cssxref("border-left-style")}} と {{cssxref("border-right-style")}} の組み合わせのどちらかに対応し、どちらに対応するかは {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} で定義された値によって決まります。
 
-<pre class="brush:css no-line-numbers">/* &lt;'border-style'&gt; の値 */
+{{EmbedInteractiveExample("pages/css/border-inline-style.html")}}
+
+他の方向の境界スタイルについては {{cssxref("border-block-style")}} で設定することができ、これは {{cssxref("border-block-start-style")}} および {{cssxref("border-block-end-style")}} を設定することができます。
+
+## 構文
+
+```css
+/* <'border-style'> の値 */
 border-inline-style: dashed;
 border-inline-style: dotted;
+border-inline-style: revert;
 border-inline-style: groove;
-</pre>
+```
 
-<p>他の方向の境界スタイルは {{cssxref("border-block-style")}} で設定することができ、これは {{cssxref("border-block-start-style")}} および {{cssxref("border-block-end-style")}} を定義します。</p>
+### 値
 
-<p>{{cssinfo}}</p>
+- `<'border-style'>`
+  - : 境界線のスタイルです。 {{ cssxref("border-style") }} を参照してください。
 
-<h2 id="Syntax" name="Syntax">構文</h2>
+## 公式定義
 
-<h3 id="Values" name="Values">値</h3>
+{{CSSInfo}}
 
-<dl>
- <dt><code>&lt;'border-style'&gt;</code></dt>
- <dd>境界線のスタイルです。 {{ cssxref("border-style") }} を参照してください。</dd>
-</dl>
-
-<h3 id="Formal_syntax" name="Formal_syntax">形式文法</h3>
+## 形式文法
 
 {{csssyntax}}
 
-<h2 id="Examples" name="Examples">例</h2>
+<h2 id="Examples">例</h2>
 
-<h3 id="HTML">HTML</h3>
+### HTML
 
-<pre class="brush: html">&lt;div&gt;
-  &lt;p class="exampleText"&gt;Example text&lt;/p&gt;
-&lt;/div&gt;
-</pre>
+```html
+<div>
+  <p class="exampleText">Example text</p>
+</div>
+```
 
-<h3 id="CSS">CSS</h3>
+### CSS
 
-<pre class="brush: css">div {
+```css
+div {
   background-color: yellow;
   width: 120px;
   height: 120px;
@@ -59,36 +65,20 @@ border-inline-style: groove;
   writing-mode: vertical-lr;
   border: 5px solid blue;
   border-inline-style: dashed;
-}</pre>
+}
+```
 
-<p>{{EmbedLiveSample("Example", 140, 140)}}</p>
+{{EmbedLiveSample("Examples", 140, 140)}}
 
-<h2 id="Specifications" name="Specifications">仕様書</h2>
+## 仕様書
 
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">仕様書</th>
-   <th scope="col">状態</th>
-   <th scope="col">備考</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName("CSS Logical Properties", "#propdef-border-inline-style", "border-inline-style")}}</td>
-   <td>{{Spec2("CSS Logical Properties")}}</td>
-   <td>初回定義。</td>
-  </tr>
- </tbody>
-</table>
+{{Specifications}}
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">ブラウザーの互換性</h2>
+## ブラウザーの互換性
 
-<p>{{Compat("css.properties.border-inline-style")}}</p>
+{{Compat}}
 
-<h2 id="See_also" name="See_also">関連情報</h2>
+## 関連情報
 
-<ul>
- <li>このプロパティは物理的な境界のプロパティ {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}}, {{cssxref("border-left-style")}} のうちの一つに割り当てられます。</li>
- <li>{{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}</li>
-</ul>
+- このプロパティは物理的な境界のプロパティ {{cssxref("border-top-style")}}、{{cssxref("border-right-style")}}、{{cssxref("border-bottom-style")}}、{{cssxref("border-left-style")}} のうちの 1 つに対応します
+- {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}
