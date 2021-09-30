@@ -6738,12 +6738,6 @@
       "perrucho"
     ]
   },
-  "Web/API/Window/performance": {
-    "modified": "2019-03-23T22:44:28.136Z",
-    "contributors": [
-      "augustoclaro"
-    ]
-  },
   "Web/API/Window/popstate_event": {
     "modified": "2019-04-26T08:34:23.645Z",
     "contributors": [
@@ -7006,6 +7000,12 @@
     "modified": "2019-03-23T22:06:21.567Z",
     "contributors": [
       "dowgssss"
+    ]
+  },
+  "Web/API/performance_property": {
+    "modified": "2019-03-23T22:44:28.136Z",
+    "contributors": [
+      "augustoclaro"
     ]
   },
   "Web/API/setInterval": {

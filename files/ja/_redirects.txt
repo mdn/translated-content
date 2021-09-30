@@ -3299,6 +3299,7 @@
 /ja/docs/Web/API/Window/onmouseup	/ja/docs/Web/API/GlobalEventHandlers/onmouseup
 /ja/docs/Web/API/Window/onreset	/ja/docs/Web/API/GlobalEventHandlers/onreset
 /ja/docs/Web/API/Window/onresize	/ja/docs/Web/API/GlobalEventHandlers/onresize
+/ja/docs/Web/API/Window/performance	/ja/docs/Web/API/performance_property
 /ja/docs/Web/API/Window/restore	/ja/docs/Web/API/Window/moveTo
 /ja/docs/Web/API/Window/setInterval	/ja/docs/Web/API/setInterval
 /ja/docs/Web/API/Window/setTimeout	/ja/docs/Web/API/setTimeout

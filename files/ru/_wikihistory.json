@@ -5553,6 +5553,12 @@
       "MuradAz"
     ]
   },
+  "Web/API/Animation/startTime": {
+    "modified": "2020-10-15T22:21:33.446Z",
+    "contributors": [
+      "lastshipsails"
+    ]
+  },
   "Web/API/AnimationEvent": {
     "modified": "2019-03-23T22:27:52.691Z",
     "contributors": [
@@ -11342,12 +11348,6 @@
       "ekirpichyov"
     ]
   },
-  "Web/API/Window/mozAnimationStartTime": {
-    "modified": "2020-10-15T22:21:33.446Z",
-    "contributors": [
-      "lastshipsails"
-    ]
-  },
   "Web/API/Window/name": {
     "modified": "2019-03-23T22:51:25.153Z",
     "contributors": [
@@ -11396,12 +11396,6 @@
     "contributors": [
       "skip405",
       "olehrgf"
-    ]
-  },
-  "Web/API/Window/performance": {
-    "modified": "2019-03-18T21:36:16.802Z",
-    "contributors": [
-      "Demjan"
     ]
   },
   "Web/API/Window/popstate_event": {
@@ -11926,6 +11920,12 @@
       "102",
       "teoli",
       "fsanano"
+    ]
+  },
+  "Web/API/performance_property": {
+    "modified": "2019-03-18T21:36:16.802Z",
+    "contributors": [
+      "Demjan"
     ]
   },
   "Web/API/setInterval": {

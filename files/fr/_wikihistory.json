@@ -11567,6 +11567,12 @@
       "GrandSchtroumpf"
     ]
   },
+  "Web/API/Animation/startTime": {
+    "modified": "2020-10-15T22:33:31.316Z",
+    "contributors": [
+      "Voulto"
+    ]
+  },
   "Web/API/AnimationEvent": {
     "modified": "2020-11-16T08:35:46.188Z",
     "contributors": [
@@ -21098,12 +21104,6 @@
   },
   "Web/API/Window/messageerror_event": {
     "modified": "2020-10-15T22:33:50.217Z",
-    "contributors": [
-      "Voulto"
-    ]
-  },
-  "Web/API/Window/mozAnimationStartTime": {
-    "modified": "2020-10-15T22:33:31.316Z",
     "contributors": [
       "Voulto"
     ]

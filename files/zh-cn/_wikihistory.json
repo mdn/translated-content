@@ -7575,6 +7575,14 @@
       "Geolage"
     ]
   },
+  "Web/API/Animation/startTime": {
+    "modified": "2019-03-23T23:39:18.582Z",
+    "contributors": [
+      "teoli",
+      "khalid32",
+      "ziyunfei"
+    ]
+  },
   "Web/API/AnimationEvent": {
     "modified": "2019-03-23T23:02:22.417Z",
     "contributors": [
@@ -13398,12 +13406,6 @@
     "contributors": [
       "teoli",
       "ziyunfei"
-    ]
-  },
-  "Web/API/File/size": {
-    "modified": "2019-03-18T21:27:15.606Z",
-    "contributors": [
-      "levo2165"
     ]
   },
   "Web/API/File/type": {
@@ -23191,14 +23193,6 @@
       "ziyunfei"
     ]
   },
-  "Web/API/Window/mozAnimationStartTIme": {
-    "modified": "2019-03-23T23:39:18.582Z",
-    "contributors": [
-      "teoli",
-      "khalid32",
-      "ziyunfei"
-    ]
-  },
   "Web/API/Window/mozInnerScreenX": {
     "modified": "2019-03-23T22:07:48.096Z",
     "contributors": [
@@ -23415,14 +23409,6 @@
       "teoli",
       "khalid32",
       "ziyunfei"
-    ]
-  },
-  "Web/API/Window/performance": {
-    "modified": "2019-08-22T06:18:57.970Z",
-    "contributors": [
-      "vebuqi",
-      "xgqfrms-GitHub",
-      "AceMood"
     ]
   },
   "Web/API/Window/personalbar": {
@@ -24706,6 +24692,14 @@
     "modified": "2019-03-23T22:03:28.077Z",
     "contributors": [
       "xgqfrms-GitHub"
+    ]
+  },
+  "Web/API/performance_property": {
+    "modified": "2019-08-22T06:18:57.970Z",
+    "contributors": [
+      "vebuqi",
+      "xgqfrms-GitHub",
+      "AceMood"
     ]
   },
   "Web/API/queueMicrotask": {
@@ -46937,6 +46931,12 @@
     "contributors": [
       "teoli",
       "ziyunfei"
+    ]
+  },
+  "conflicting/Web/API/Blob/size_3e7c15d3e7851172bb4623d0237d8c9e": {
+    "modified": "2019-03-18T21:27:15.606Z",
+    "contributors": [
+      "levo2165"
     ]
   },
   "conflicting/Web/API/Canvas_API/Tutorial": {

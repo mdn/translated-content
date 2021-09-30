@@ -24779,12 +24779,6 @@
       "mfuji09"
     ]
   },
-  "Web/API/Window/performance": {
-    "modified": "2020-10-15T22:08:48.553Z",
-    "contributors": [
-      "silverskyvicto"
-    ]
-  },
   "Web/API/Window/personalbar": {
     "modified": "2019-03-23T23:50:07.790Z",
     "contributors": [
@@ -26308,6 +26302,12 @@
     "modified": "2020-10-15T22:08:52.985Z",
     "contributors": [
       "k-kuwahara"
+    ]
+  },
+  "Web/API/performance_property": {
+    "modified": "2020-10-15T22:08:48.553Z",
+    "contributors": [
+      "silverskyvicto"
     ]
   },
   "Web/API/setInterval": {
