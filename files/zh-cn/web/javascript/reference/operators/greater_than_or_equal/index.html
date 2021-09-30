@@ -1,34 +1,32 @@
 ---
-title: 大于或等于
+title: 大于等于（>=）
 slug: Web/JavaScript/Reference/Operators/Greater_than_or_equal
 translation_of: Web/JavaScript/Reference/Operators/Greater_than_or_equal
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p>The greater than or equal operator (<code>&gt;=</code>) returns <code>true</code> if the left operand is greater than or equal to the right operand, and <code>false</code> otherwise.</p>
+<p>大于等于运算符（<code>&gt;=</code>）在左边的操作数大于或等于右边的操作数时返回 <code>true</code>，否则返回 <code>false</code>。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-greater-than-or-equal.html")}}</div>
 
-
-
-<h2 id="Syntax">Syntax</h2>
+<h2 id="语法">语法</h2>
 
 <pre class="syntaxbox notranslate"> x &gt;= y</pre>
 
-<h2 id="Description">Description</h2>
+<h2 id="描述">描述</h2>
 
-<p>The operands are compared using the <a class="external external-icon" href="https://tc39.es/ecma262/#sec-abstract-relational-comparison" rel="noopener">Abstract Relational Comparison</a> algorithm. See the documentation for the <a href="/en-US/docs/Web/JavaScript/Reference/Operators/Less_than">Less than</a> operator for a summary of this algorithm.</p>
+<p>操作数之间按照 <a class="external external-icon" href="https://tc39.es/ecma262/#sec-abstract-relational-comparison" rel="noopener">Abstract Relational Comparison</a> 算法进行比较。进一步了解该算法，请参考 <a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Less_than">小于运算符</a>的相关文档.</p>
 
-<h2 id="Examples">Examples</h2>
+<h2 id="例子">例子</h2>
 
-<h3 id="String_to_string_comparison">String to string comparison</h3>
+<h3 id="字符串间的比较">字符串间的比较</h3>
 
 <pre class="brush: js notranslate">console.log("a" &gt;= "b");     // false
 console.log("a" &gt;= "a");     // true
 console.log("a" &gt;= "3");     // true
 </pre>
 
-<h3 id="String_to_number_comparison">String to number comparison</h3>
+<h3 id="字符串与数字的比较">字符串与数字的比较</h3>
 
 <pre class="brush: js notranslate">console.log("5" &gt;= 3);       // true
 console.log("3" &gt;= 3);       // true
@@ -37,19 +35,19 @@ console.log("3" &gt;= 5);       // false
 console.log("hello" &gt;= 5);   // false
 console.log(5 &gt;= "hello");   // false</pre>
 
-<h3 id="Number_to_Number_comparison">Number to Number comparison</h3>
+<h3 id="数字间的比较">数字间的比较</h3>
 
 <pre class="brush: js notranslate">console.log(5 &gt;= 3);         // true
 console.log(3 &gt;= 3);         // true
 console.log(3 &gt;= 5);         // false</pre>
 
-<h3 id="Number_to_BigInt_comparison">Number to BigInt comparison</h3>
+<h3 id="数字与BigInt数据的比较<">数字与 BigInt 数据的比较</h3>
 
 <pre class="brush: js notranslate">console.log(5n &gt;= 3);        // true
 console.log(3 &gt;= 3n);        // true
 console.log(3 &gt;= 5n);        // false</pre>
 
-<h3 id="Comparing_Boolean_null_undefined_NaN">Comparing Boolean, null, undefined, NaN</h3>
+<h3 id="Boolean_null_undefined_NaN的比较">Boolean, null, undefined, NaN 的比较</h3>
 
 <pre class="brush: js notranslate">console.log(true &gt;= false);  // true
 console.log(true &gt;= true);   // true
@@ -67,29 +65,27 @@ console.log(3 &gt;= undefined); // false
 console.log(3 &gt;= NaN);       // false
 console.log(NaN &gt;= 3);       // false</pre>
 
-<h2 id="Specifications">Specifications</h2>
+<h2 id="相关规范">相关规范</h2>
 
 <table class="standard-table">
- <tbody>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-relational-operators', 'Relational operators')}}</td>
-  </tr>
- </tbody>
+    <tbody>
+        <tr>
+            <th scope="col">规范</th>
+        </tr>
+        <tr>
+            <td>{{SpecName('ESDraft', '#sec-relational-operators', 'Relational operators')}}</td>
+        </tr>
+    </tbody>
 </table>
 
-<h2 id="Browser_compatibility">Browser compatibility</h2>
-
-
+<h2 id="浏览器兼容性">浏览器兼容性</h2>
 
 <p>{{Compat("javascript.operators.greater_than_or_equal")}}</p>
 
-<h2 id="See_also">See also</h2>
+<h2 id="参见">参见</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Greater_than">Greater than operator</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Less_than">Less than operator</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal">Less than or equal operator</a></li>
+    <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Greater_than">大于运算符</a></li>
+    <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Less_than">小于运算符</a></li>
+    <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Less_than_or_equal">小于等于运算符</a></li>
 </ul>

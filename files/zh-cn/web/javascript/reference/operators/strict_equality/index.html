@@ -1,11 +1,11 @@
 ---
-title: Strict equality (===)
+title: 全等（===）
 slug: Web/JavaScript/Reference/Operators/Strict_equality
 translation_of: Web/JavaScript/Reference/Operators/Strict_equality
 ---
 <div>{{jsSidebar("Operators")}}</div>
 
-<p>全等运算符 (===) 会检查它的两个操作数是否相等，并且返回一个布尔值结果。与相等运算符不同，全等运算符总是认为不同类型的操作数是不同的。</p>
+<p>全等运算符 (===) 会检查它的两个操作数是否相等，并且返回一个布尔值结果。与<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality">等于运算符</a>不同，全等运算符总是认为不同类型的操作数是不同的。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/expressions-strict-equality.html")}}</div>
 
@@ -20,20 +20,20 @@ translation_of: Web/JavaScript/Reference/Operators/Strict_equality
 <p>全等运算符（<code>===</code>和 <code>!==</code>）使用<a class="external external-icon" href="http://www.ecma-international.org/ecma-262/5.1/#sec-11.9.6" rel="noopener">全等比较算法</a>来比较两个操作数。</p>
 
 <ul>
- <li>如果操作数的类型不同，则返回 <code>false</code>。</li>
- <li>如果两个操作数都是对象，只有当它们指向同一个对象时才返回 <code>true</code>。</li>
- <li>如果两个操作数都为 <code>null</code>，或者两个操作数都为 <code>undefined</code>，返回 <code>true</code>。</li>
- <li>如果两个操作数有任意一个为 <code>NaN</code>，返回 <code>false</code>。</li>
- <li>否则，比较两个操作数的值：
-  <ul>
-   <li>数字类型必须拥有相同的数值。<code>+0</code> 和 <code>-0</code> 会被认为是相同的值。</li>
-   <li>字符串类型必须拥有相同顺序的相同字符。</li>
-   <li>布尔运算符必须同时为 <code>true</code> 或同时为 <code>false</code>。</li>
-  </ul>
- </li>
+    <li>如果操作数的类型不同，则返回 <code>false</code>。</li>
+    <li>如果两个操作数都是对象，只有当它们指向同一个对象时才返回 <code>true</code>。</li>
+    <li>如果两个操作数都为 <code>null</code>，或者两个操作数都为 <code>undefined</code>，返回 <code>true</code>。</li>
+    <li>如果两个操作数有任意一个为 <code>NaN</code>，返回 <code>false</code>。</li>
+    <li>否则，比较两个操作数的值：
+        <ul>
+            <li>数字类型必须拥有相同的数值。<code>+0</code> 和 <code>-0</code> 会被认为是相同的值。</li>
+            <li>字符串类型必须拥有相同顺序的相同字符。</li>
+            <li>布尔运算符必须同时为 <code>true</code> 或同时为 <code>false</code>。</li>
+        </ul>
+    </li>
 </ul>
 
-<p>全等运算符与<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality">相等运算符</a>（<code>==</code>）最显著的区别是，如果操作数的类型不同，<code>== </code>运算符会在比较之前尝试将它们转换为相同的类型。</p>
+<p>全等运算符与<a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality">等于运算符</a>（<code>==</code>）最显著的区别是，如果操作数的类型不同，<code>==</code>运算符会在比较之前尝试将它们转换为相同的类型。</p>
 
 <h2 id="例子">例子</h2>
 
@@ -71,31 +71,29 @@ const object2 = {
 console.log(object1 === object2);  // false
 console.log(object1 === object1);  // true</pre>
 
-<h2 id="Specifications">Specifications</h2>
+<h2 id="相关规范">相关规范</h2>
 
 <table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Specification</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('ESDraft', '#sec-equality-operators', 'Equality operators')}}</td>
-  </tr>
- </tbody>
+    <thead>
+        <tr>
+            <th scope="col">规范</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{SpecName('ESDraft', '#sec-equality-operators', 'Equality operators')}}</td>
+        </tr>
+    </tbody>
 </table>
 
 <h2 id="浏览器兼容性">浏览器兼容性</h2>
 
-
-
 <p>{{Compat("javascript.operators.strict_equality")}}</p>
 
-<h2 id="See_also">See also</h2>
+<h2 id="参见">参见</h2>
 
 <ul>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Equality">Equality operator</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Inequality">Inequality operator</a></li>
- <li><a href="/en-US/docs/Web/JavaScript/Reference/Operators/Strict_inequality">Strict inequality operator</a></li>
+    <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality">等于运算符</a></li>
+    <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Inequality">不等运算符</a></li>
+    <li><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_inequality">不全等运算符</a></li>
 </ul>
