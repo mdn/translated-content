@@ -54,7 +54,7 @@ translation_of: Mozilla/Add-ons/WebExtensions/API/tabs/executeScript
  <dd>
  <dl class="reference-values">
   <dt><code>allFrames</code> {{optional_inline}}</dt>
-  <dd><code>boolean</code>. Si <code>true</code>, le code sera injecté dans toutes les images de la page courante. Si <code>true</code> et <code>frameId</code> est défini, alors il y aura une erreur, frameId et allFrames sont mutuellement exclusifs. Si c'est <code>false</code>, le code n'est injecté que dans le cadre supérieur. La valeur par défaut est <code>false</code>.</dd>
+  <dd><code>boolean</code>. Si <code>true</code>, le code sera injecté dans toutes les cadres de la page courante. Si <code>true</code> et <code>frameId</code> est défini, alors il y aura une erreur, frameId et allFrames sont mutuellement exclusifs. Si c'est <code>false</code>, le code n'est injecté que dans le cadre supérieur. La valeur par défaut est <code>false</code>.</dd>
   <dt><code>code </code>{{optional_inline}}</dt>
   <dd><code>string</code>. Code à injecter, sous la forme d’une chaine de texte. <strong>Attention :</strong> n’utilisez pas cette propriété pour interpoler des données non sûres dans JavaScript, car cela pourrait introduire une faille de sécurité.</dd>
   <dt><code>file</code> {{optional_inline}}</dt>
