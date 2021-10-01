@@ -9,17 +9,15 @@ translation_of: Web/CSS/outline-style
 ---
 <div>{{CSSRef}}</div>
 
-<p>La propriété <strong><code>outline-style</code></strong> permet de définir la mise en forme utilisée pour dessiner la bordure d'un élément. Cette bordure est dessinée autour de <a href="/fr/Apprendre/CSS/Les_bases/Le_modèle_de_boîte">la boîte de bordure</a> et peut être utilisée afin de faire ressortir l'élément.</p>
+<p>La propriété <strong><code>outline-style</code></strong> permet de définir la mise en forme utilisée pour dessiner la bordure d'un élément. Cette bordure est dessinée autour de <a href="/en-US/docs/Learn/CSS/Building_blocks/The_box_model">la boîte de bordure</a> et peut être utilisée afin de faire ressortir l'élément.</p>
 
 <div>{{EmbedInteractiveExample("pages/css/outline-style.html")}}</div>
-
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
 
 <p>Cette propriété est synthétisée grâce à la propriété {{cssxref("outline")}} qui regroupe outline-style, {{cssxref("outline-width")}} et {{cssxref("outline-color")}}.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="brush:css no-line-numbers notranslate">/* Valeurs avec un mot-clé */
+<pre class="brush:css no-line-numbers">/* Valeurs avec un mot-clé */
 outline-style: auto;
 outline-style: none;
 outline-style: dotted;
@@ -72,7 +70,7 @@ outline-style: unset;
 
 <h4 id="CSS">CSS</h4>
 
-<pre class="brush: css notranslate">.exemple-groove {
+<pre class="brush: css">.exemple-groove {
   outline-style: groove;
   outline-color: red;
   outline-width: 2px;
@@ -86,7 +84,7 @@ outline-style: unset;
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;p class="exemple-groove"&gt;Ça c'est le groove&lt;/p&gt;
+<pre class="brush: html">&lt;p class="exemple-groove"&gt;Ça c'est le groove&lt;/p&gt;
 &lt;p class="exemple-outset"&gt;Et ça c'est outset&lt;/p&gt;
 </pre>
 
@@ -94,13 +92,13 @@ outline-style: unset;
 
 <p>{{EmbedLiveSample("Exemple_simple","100%","100%")}}</p>
 
-<h3 id="Example_0_-_auto" name="Example_0_-_auto">Utilisation de la valeur <code>auto</code></h3>
+<h3 id="utilisation_de_la_valeur_auto">Utilisation de la valeur auto</h3>
 
 <p>La valeur <code>auto</code> indique une bordure sur mesure selon l'interface du système d'exploitation ou de l'agent utilisateur.</p>
 
 <h4 id="CSS_2">CSS</h4>
 
-<pre class="brush: css notranslate">.auto {
+<pre class="brush: css">.auto {
   outline-style: auto; /* same result as "outline: auto" */
 }
 
@@ -109,7 +107,7 @@ outline-style: unset;
 
 <h4 id="HTML_2">HTML</h4>
 
-<pre class="brush: html notranslate">&lt;div&gt;
+<pre class="brush: html">&lt;div&gt;
   &lt;p class="auto"&gt;Outline Demo&lt;/p&gt;
 &lt;/div&gt; </pre>
 

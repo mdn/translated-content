@@ -3,9 +3,7 @@ title: Web audio spatialization basics
 slug: Web/API/Web_Audio_API/Web_audio_spatialization_basics
 translation_of: Web/API/Web_Audio_API/Web_audio_spatialization_basics
 ---
-<div class="summary">
-<p><span class="seoSummary">En plus de sa grande variété de fonctionnalités et d'options, la Web Audio API permet aussi d'émuler la différence dans l'écoute d'un son lorsqu'un auditeur se déplace par rapport à une source, par exemple un panoramique lorsqu'il se déplace de gauche à droite de la source. On parle alors de spatialisation. Cet article expose les notions de base pour implémenter ce type de système.</span></p>
-</div>
+<p>En plus de sa grande variété de fonctionnalités et d'options, la Web Audio API permet aussi d'émuler la différence dans l'écoute d'un son lorsqu'un auditeur se déplace par rapport à une source, par exemple un panoramique lorsqu'il se déplace de gauche à droite de la source. On parle alors de spatialisation. Cet article expose les notions de base pour implémenter ce type de système.</p>
 
 <p>Le cas d'utilisation le plus simple est la simulation des altérations d'un son de façon réaliste pour imaginer comment une source se comportera pour un personnage qui se déplace dans un environnement 3D.</p>
 
@@ -18,14 +16,10 @@ translation_of: Web/API/Web_Audio_API/Web_audio_spatialization_basics
  <li>L'objet {{ domxref("PannerNode") }} représente la position dans l'espace 3D d'une source audio; on le crée avec la méthode {{ domxref("AudioContext.createPanner()") }}. On peut paramétrer un certain nombre d'options comme la position, l'orientation, la vitesse, et l'angle s'un cône qui indique dans quelle direction le son peut être entendu (s'il n'est pas omnidirectionnel).</li>
 </ol>
 
-<p>Vous devez créer et paramétrer ces deux objects, et le navigateur fait le reste er génère le rendu audio. Le diagramme ci-dessous montre les différentes choses qui peuvent être contrôlés pour un {{ domxref("PannerNode") }}.</p>
-
-<p><img alt="The PannerNode brings a spatial position and velocity and a directionality for a given signal." src="https://mdn.mozillademos.org/files/5087/WebAudioPannerNode.png" style="display: block; height: 228px; margin: 0px auto; width: 568px;"></p>
-
 <p>Dans cet article nous allons nous concentrer sur la position de l'auditeur et du panoramique, tous deux paramétrés à l'aide de la méthode <code>setPosition(). </code>Celle-co accepte trois valeurs qui correspondent à X, Y, et Z dans un système de coordonnées cartésien.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Trouver les bonnes valeurs pour que le cas d'utilisation fonctionne bien et semble réaliste n'est pas toujours évident et peur prendre du temps, et il faut souvent continuer à modifier les valeurs par la suite. Nous discuterons ceci plus en détail en parcourant le code qui suit.</p>
+<p><strong>Note :</strong> Trouver les bonnes valeurs pour que le cas d'utilisation fonctionne bien et semble réaliste n'est pas toujours évident et peur prendre du temps, et il faut souvent continuer à modifier les valeurs par la suite. Nous discuterons ceci plus en détail en parcourant le code qui suit.</p>
 </div>
 
 <p>Les autres options  disponibles, que nous ne traiterons pas ici, sont :</p>
@@ -38,12 +32,10 @@ translation_of: Web/API/Web_Audio_API/Web_audio_spatialization_basics
 
 <h2 id="A_simple_demo_Room_of_metal">A simple demo: Room of metal</h2>
 
-<p>In our demo, you can move left and right past a 2.5D stereo that can be made to play a groovy tune, and you can also move towards the stereo. As you move left and right, the tune will pan to emulate how the tune will sound as you change your position proportional to the sound source. When you zoom in and out, the sound will get louder and quieter to suit.<br>
- <br>
- <img alt="a minimal UI with a portable stereo in the center of it, and buttons marked play, stop, left arrow, right arrow, zoom in and zoom out. It says Room of Metal at the top." src="https://mdn.mozillademos.org/files/8141/room-of-metal.png" style="display: block; height: 298px; margin: 0px auto; width: 640px;"></p>
+<p>In our demo, you can move left and right past a 2.5D stereo that can be made to play a groovy tune, and you can also move towards the stereo. As you move left and right, the tune will pan to emulate how the tune will sound as you change your position proportional to the sound source. When you zoom in and out, the sound will get louder and quieter to suit.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You can see this example <a href="https://mdn.github.io/webaudio-examples/panner-node/">running live</a>, and <a href="https://github.com/mdn/panner-node">view the source code</a>.</p>
+<p><strong>Note :</strong> You can see this example <a href="https://mdn.github.io/webaudio-examples/panner-node/">running live</a>, and <a href="https://github.com/mdn/panner-node">view the source code</a>.</p>
 </div>
 
 <p>Let's walk through the code and see how this was actually done.</p>
@@ -262,12 +254,8 @@ zoomOutButton.onmouseup = function () {
   window.cancelAnimationFrame(zoomOutLoop);
 }</pre>
 
-<h2 id="Summary">Summary</h2>
-
 <p>As you can see, the actual panner code is pretty simple — specify the positions, and the browser takes care of the rest. It is working out the surrounding code, and the values to use for positioning, which takes a bit more time.</p>
 
 <div class="note">
-<p><strong>Note</strong>: You are probably thinking "why didn't you move the listener and keep the panner still instead: surely that is a bit more obvious?" Well, perhaps, but we felt that since the panner has more methods and properties available to it, moving it would allow more control in the long term.</p>
+<p><strong>Note :</strong> You are probably thinking "why didn't you move the listener and keep the panner still instead: surely that is a bit more obvious?" Well, perhaps, but we felt that since the panner has more methods and properties available to it, moving it would allow more control in the long term.</p>
 </div>
-
-<p> </p>

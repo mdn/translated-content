@@ -3654,7 +3654,7 @@
       "orinx"
     ]
   },
-  "Web/API/File/fileName": {
+  "Web/API/File/name": {
     "modified": "2019-03-23T22:06:22.686Z",
     "contributors": [
       "lynn456"
@@ -4722,18 +4722,6 @@
       "mfuji09"
     ]
   },
-  "Web/API/WindowOrWorkerGlobalScope/btoa": {
-    "modified": "2020-10-15T22:35:15.820Z",
-    "contributors": [
-      "evo938evo938"
-    ]
-  },
-  "Web/API/WindowOrWorkerGlobalScope/setInterval": {
-    "modified": "2020-10-15T22:29:07.467Z",
-    "contributors": [
-      "chrischi0922s"
-    ]
-  },
   "Web/API/XMLHttpRequest": {
     "modified": "2020-10-15T21:21:13.079Z",
     "contributors": [
@@ -4806,6 +4794,12 @@
       "jackblackevo"
     ]
   },
+  "Web/API/btoa": {
+    "modified": "2020-10-15T22:35:15.820Z",
+    "contributors": [
+      "evo938evo938"
+    ]
+  },
   "Web/API/console/assert": {
     "modified": "2020-10-15T22:03:27.482Z",
     "contributors": [
@@ -4820,6 +4814,12 @@
       "bros0215",
       "SphinxKnight",
       "Shiyou"
+    ]
+  },
+  "Web/API/setInterval": {
+    "modified": "2020-10-15T22:29:07.467Z",
+    "contributors": [
+      "chrischi0922s"
     ]
   },
   "Web/API/window/requestAnimationFrame": {
@@ -5382,7 +5382,7 @@
       "yutzuch"
     ]
   },
-  "Web/Demos_of_open_web_technologies": {
+  "Web/Demos": {
     "modified": "2019-03-23T22:08:13.863Z",
     "contributors": [
       "h223449961",

@@ -11,7 +11,7 @@ translation_of: Web/API/WebGLRenderingContext/vertexAttribPointer
 ---
 <div>{{APIRef("WebGL")}}</div>
 
-<p class="summary">La méthode <strong><code>WebGLRenderingContext.vertexAttribPointer()</code> </strong>de l'<a href="/fr-FR/docs/Web/API/WebGL_API">API WebGL</a> spécifie la disposition en mémoire de l'objet de tampon vertex. Elle doit être appelée une fois pour chaque attribut de sommet.</p>
+<p>La méthode <strong><code>WebGLRenderingContext.vertexAttribPointer()</code> </strong>de l'<a href="/fr-FR/docs/Web/API/WebGL_API">API WebGL</a> spécifie la disposition en mémoire de l'objet de tampon vertex. Elle doit être appelée une fois pour chaque attribut de sommet.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
@@ -124,18 +124,18 @@ translation_of: Web/API/WebGLRenderingContext/vertexAttribPointer
 
 <p>sera stocké dans le tampon des tableaux comme suit :</p>
 
-<table style="width: auto;">
+<table>
  <tbody>
   <tr>
-   <td style="background-color: #ccf;">00 00 80 3F</td>
-   <td style="background-color: #ddf;">00 00 00 40</td>
-   <td style="background-color: #ccf;">00 00 0C 3F</td>
-   <td style="background-color: #cfc;">7F</td>
-   <td style="background-color: #dfd;">00</td>
-   <td style="background-color: #cfc;">00</td>
-   <td style="background-color: #dfd;">00</td>
-   <td style="background-color: #fcc;">7F FF</td>
-   <td style="background-color: #fdd;">3F FF</td>
+   <td>00 00 80 3F</td>
+   <td>00 00 00 40</td>
+   <td>00 00 0C 3F</td>
+   <td>7F</td>
+   <td>00</td>
+   <td>00</td>
+   <td>00</td>
+   <td>7F FF</td>
+   <td>3F FF</td>
   </tr>
  </tbody>
 </table>
@@ -182,7 +182,7 @@ gl.bufferData(gl.ARRAY_BUFFER, buffer, gl.STATIC_DRAW);
 
 <p>Ensuite, nous spécifions la disposition en mémoire du tampon de tableaux, soit en définissant nous-mêmes l'indice :</p>
 
-<pre class="brush: js, highlight:[3, 6, 9]">// Décrire la disposition du tampon :
+<pre class="brush: js">// Décrire la disposition du tampon :
 //1. position, non normalisé
 gl.vertexAttribPointer(0, 3, gl.FLOAT, false, 20, 0);
 gl.enableVertexAttribArray(0);
@@ -204,7 +204,7 @@ gl.linkProgram(shaderProgram);
 
 <p>soit en utilisant l'indice fourni par la carte graphique, au lieu de le définir nous-mêmes ; cela évite la réédition des liens du programme shader.</p>
 
-<pre class="brush: js, highlight:[2, 6, 10]">const positionLoc = gl.getAttribLocation(shaderProgram, 'position');
+<pre class="brush: js">const positionLoc = gl.getAttribLocation(shaderProgram, 'position');
 gl.vertexAttribPointer(positionLoc, 3, gl.FLOAT, false, 20, 0);
 gl.enableVertexAttribArray(positionLoc);
 

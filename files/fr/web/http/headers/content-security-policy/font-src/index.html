@@ -38,7 +38,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/font-src
 
 <p>Une ou plusieurs sources peuvent être autorisées pour cette directive :</p>
 
-<pre class="syntaxbox notranslate">Content-Security-Policy: font-src &lt;source&gt;;
+<pre class="syntaxbox">Content-Security-Policy: font-src &lt;source&gt;;
 Content-Security-Policy: font-src &lt;source&gt; &lt;source&gt;;
 </pre>
 
@@ -52,11 +52,11 @@ Content-Security-Policy: font-src &lt;source&gt; &lt;source&gt;;
 
 <p>Soit cet en-tête CSP :</p>
 
-<pre class="brush: bash notranslate">Content-Security-Policy: font-src https://example.com/</pre>
+<pre class="brush: bash">Content-Security-Policy: font-src https://example.com/</pre>
 
 <p>Cette définition de police sera bloquée et ne se chargera pas :</p>
 
-<pre class="brush: html notranslate">&lt;style&gt;
+<pre class="brush: html">&lt;style&gt;
   @font-face {
     font-family: "MyFont";
     src: url("https://not-example.com/font");

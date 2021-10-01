@@ -18,7 +18,7 @@ translation_of: Web/API/CanvasRenderingContext2D/getImageData
 
 <p>La méthode <code><strong>CanvasRenderingContext2D</strong></code><strong><code>.getImageData()</code></strong> de l'API Canvas 2D retourne un  objet {{domxref("ImageData")}} représentant les données de pixels sous-jacentes pour la zone du canevas désigné par le rectangle qui commence aux positions <em>(sx, sy)</em> et qui possède des attributs : <em>largeur (sw</em>) et <em>hauteur</em> (<em>sh)</em>. Cette méthode n'est pas affectée par la matrice de transformation du canevas.</p>
 
-<p><span id="result_box" lang="fr"><span>Les pixels en dehors de la zone de canevas sont présents sous forme de valeurs noires transparentes dans les données d'image renvoyées.</span></span></p>
+<p>Les pixels en dehors de la zone de canevas sont présents sous forme de valeurs noires transparentes dans les données d'image renvoyées.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
@@ -53,7 +53,7 @@ translation_of: Web/API/CanvasRenderingContext2D/getImageData
 
 <h3 id="Utilisation_de_la_méthode_getImageData">Utilisation de la méthode  <code>getImageData</code></h3>
 
-<p>Ceci est juste un petit exemple qui utilise la méthode getImageData. Pour plus d'informations, visitez  <a href="https://developer.mozilla.org/fr/docs/Tutoriel_canvas/Pixel_manipulation_with_canvas">Manipulation de pixels avec canvas</a> et l'objet {{domxref("ImageData")}}.</p>
+<p>Ceci est juste un petit exemple qui utilise la méthode getImageData. Pour plus d'informations, visitez  <a href="/fr/docs/Tutoriel_canvas/Pixel_manipulation_with_canvas">Manipulation de pixels avec canvas</a> et l'objet {{domxref("ImageData")}}.</p>
 
 <h4 id="HTML">HTML</h4>
 
@@ -62,7 +62,7 @@ translation_of: Web/API/CanvasRenderingContext2D/getImageData
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js; highlight:[6]">var canvas = document.getElementById('canvas');
+<pre class="brush: js">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 ctx.rect(10, 10, 100, 100);
 ctx.fill();
@@ -95,7 +95,7 @@ console.log(ctx.getImageData(50, 50, 100, 100));
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><span class="short_text" id="result_box" lang="fr"><span>L'interface le définissant</span></span> : {{domxref("CanvasRenderingContext2D")}}.</li>
+ <li>L'interface le définissant : {{domxref("CanvasRenderingContext2D")}}.</li>
  <li>{{domxref("ImageData")}}</li>
- <li><a href="https://developer.mozilla.org/fr/docs/Tutoriel_canvas/Pixel_manipulation_with_canvas">Manipulation de pixels avec canvas</a></li>
+ <li><a href="/fr/docs/Tutoriel_canvas/Pixel_manipulation_with_canvas">Manipulation de pixels avec canvas</a></li>
 </ul>

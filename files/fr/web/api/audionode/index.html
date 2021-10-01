@@ -9,17 +9,18 @@ translation_of: Web/API/AudioNode
 
 <p>{{InheritanceDiagram}}</p>
 
-<p><img alt="AudioNodes participating in an AudioContext create a audio routing graph." src="https://mdn.mozillademos.org/files/9713/WebAudioBasics.png" style="display: block; height: 230px; margin: 0px auto; width: 677px;"></p>
+<p><img alt="Des objets AudioNode participant à un objet AudioContext pour créer un graphe de routage audio." src="webaudiobasics.png"></p>
+
 
 <p>Un <code>AudioNode</code> a des entrées et sorties, chacune avec un certain nombre de <em>canaux</em>.<em> </em>Un <code>AudioNode</code> avec zero entrée et une ou plusieurs sorties est appelée un <em> noeud source</em>. Le traitement exact varie d'un <code>AudioNode</code> à l'autre; en général un noeud lit l'entrée, réalise un traitement, et génère de nouvelles valeurs pour la sortie, ou laisse simplement l'entrée traverser (par exemple dans le cas de l'{{domxref("AnalyserNode")}}, où le résultat du traitment du traitement est accessible à part).</p>
 
 <p>Plusieurs noeuds peuvent être reliés dans un <em>graphe de traitement</em>. Un tel graphe est contenu dans un {{domxref("AudioContext")}}. Chaque <code>AudioNode</code> fait partie d'exactement un contexte. Les noeuds de traitement héritent des  propriétés et méthodse d'<code>AudioNode</code>, mais définissent aussi leurs propres fonctionnalités par dessus. Pour plus de détails, voir les pages individuelles liées sur la page d'accueil <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a>.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Un <code>AudioNode</code> peut être la cible d'évènements, et implémente donc l'interface {{domxref("EventTarget")}}.</p>
+<p><strong>Note :</strong> Un <code>AudioNode</code> peut être la cible d'évènements, et implémente donc l'interface {{domxref("EventTarget")}}.</p>
 </div>
 
-<h2 id="Propriétés" style="">Propriétés</h2>
+<h2 id="Propriétés">Propriétés</h2>
 
 <dl>
  <dt>{{domxref("AudioNode.context")}} {{readonlyInline}}</dt>
@@ -61,9 +62,9 @@ translation_of: Web/API/AudioNode
 
 <h2 id="Exemple">Exemple</h2>
 
-<p>Ce simple extrait de code illustre la creation de quelques noeuds audio, et la façon dont les propriétés et méthodes <code>AudioNode</code> peuvent être utilisées. Vous pouvez trouver d'autres exemples sur n'importe lequel des exemples liés sur la page <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> (par exemple <a href="https://github.com/mdn/violent-theremin">Violent Theremin</a>.)<span class="p"> </span></p>
+<p>Ce simple extrait de code illustre la creation de quelques noeuds audio, et la façon dont les propriétés et méthodes <code>AudioNode</code> peuvent être utilisées. Vous pouvez trouver d'autres exemples sur n'importe lequel des exemples liés sur la page <a href="/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> (par exemple <a href="https://github.com/mdn/violent-theremin">Violent Theremin</a>.) </p>
 
-<pre class="brush: js;highlight[8,9,11,12,13,14]">var AudioContext = window.AudioContext || window.webkitAudioContext;
+<pre class="brush: js">var AudioContext = window.AudioContext || window.webkitAudioContext;
 
 var audioCtx = new AudioContext();
 

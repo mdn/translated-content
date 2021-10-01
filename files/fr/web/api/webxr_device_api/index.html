@@ -13,7 +13,9 @@ translation_of: Web/API/WebXR_Device_API
 ---
 <p>{{DefaultAPISidebar("WebXR Device API")}}</p>
 
-<p><span class="seoSummary"><strong>WebXR</strong> est un ensemble de standards utilisés pour supporter le rendu de scènes 3D vers du matériel conçu pour présenter des mondes virtuels (<strong>Réalité Virtuelle</strong>, ou <strong>VR</strong>), ou pour ajouter des contenus graphiques dans le monde réel, (<strong>Réalité Augmentée</strong>, ou <strong>AR</strong>).</span> L'<strong>API de périphérique WebXR </strong>implémente le coeur des fonctionnalités WebXR, gère la sélection de périphériques de sortie, affiche la scène 3D sur le périphérique choisi à la fréquence d'images appropriée, et gère les vecteurs de mouvement créés en utilisant les contrôleurs d'entrée.</p>
+<p><strong>WebXR</strong> est un ensemble de standards utilisés pour supporter le rendu de scènes 3D vers du matériel conçu pour présenter des mondes virtuels (<strong>Réalité Virtuelle</strong>, ou <strong>VR</strong>), ou pour ajouter des contenus graphiques dans le monde réel, (<strong>Réalité Augmentée</strong>, ou <strong>AR</strong>).</p>
+
+<p>L'<strong>API de périphérique WebXR </strong>implémente le coeur des fonctionnalités WebXR, gère la sélection de périphériques de sortie, affiche la scène 3D sur le périphérique choisi à la fréquence d'images appropriée, et gère les vecteurs de mouvement créés en utilisant les contrôleurs d'entrée.</p>
 
 <p>Les périphèriques compatibles WebXR comprennent les casques 3D entièrement immersifs avec le suivi du mouvement et de l'orientation, les lunettes qui supperposent des contenus graphiques par dessus la scène du monde réel au travers des images, et les smartphones qui augmentent la realité en capturant le monde via une camera et en qui augmentent la scène avec des images générées par ordinateur.</p>
 
@@ -29,10 +31,6 @@ translation_of: Web/API/WebXR_Device_API
 <p>Au niveau le plus basique, une scène est présentée en 3D en calculant la perspective à appliquer à la scène dans le but de l'afficher du point de vue de chacun des yeux de l'utilisateur en calculant la position de chaque oeil et en affichant la scène de cette position, regardant dans la même direction que l'utilisateur. Ces deux images sont conçuent à l'intérieur d'une seule mémoire tampon, avec l'image de rendu pour l'oeil gauche dans la partie gauche et l'image de rendu de l'oeil droit dans la partie droite de la mémoire tampon. Une fois que les perspectives des deux yeux sur la scène ont été conçues, la mémoire résultante est délivrée au périphérique WebXR pour être présentée à l'utilisateur via son casque ou tout autre périphérique d'affichage approprié.</p>
 
 <h2 id="Les_concepts_et_lutilisation_des_périphériques_WebXR">Les concepts et l'utilisation des périphériques WebXR</h2>
-
-<figure style="background: #eee; padding: 0.5em; border: 1px solid #aaa; border-radius: 1em; max-width: 20em; margin-bottom: 1em; margin-right: 2em; float: left;">
-<figcaption><strong>Exemple de configuration matérielle WebXR</strong></figcaption>
-<img alt='Sketch of a person in a chair with wearing goggles labelled "Head mounted display (HMD)" facing a monitor with a webcam labeled "Position sensor"' src="https://mdn.mozillademos.org/files/11035/hw-setup.png"></figure>
 
 <p>Alors que l'ancienne <a href="/en-US/docs/Web/API/WebVR_API">WebVR API</a> avait été conçue uniquement pour le support de la réalité virtuelle (VR), l'API WebXR supporte à la fois la VR et la réalité augmentée (AR) sur le web. Le support pour la fonctionnalité de réalité augmentée est ajouté par le module WebXR Augmented Reality.</p>
 
@@ -94,7 +92,7 @@ translation_of: Web/API/WebXR_Device_API
  <dt>{{domxref("XRReferenceSpaceEvent")}}</dt>
  <dd>Envoyé lorsque l'état d'un {{domxref ("XRReferenceSpace")}} change.</dd>
  <dt>{{domxref("XRSessionEvent")}}</dt>
- <dd>Envoyé pour indiquer que l'état d'un {{domxref ("XRSession")}} a changé. <s>Par exemple, si la position et/ou l'orientation </s></dd>
+ <dd>Envoyé pour indiquer que l'état d'un {{domxref ("XRSession")}} a changé. Par exemple, si la position et/ou l'orientation</dd>
 </dl>
 
 <h2 id="Extensions_de_lAPI_WebGL">Extensions de l'API WebGL</h2>

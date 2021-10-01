@@ -15,7 +15,7 @@ translation_of: Web/API/IDBDatabase
 <p>{{AvailableInWorkers}}</p>
 
 <div class="note">
-<p><strong>Note : </strong>Tout ce qui est fait dans une base de données indexée s'inscrit dans le contexte d'une transaction qui représente un interaction avec les données dans la base. Tout les objets de l'interface IndexedDB (incluant les accès aux magasins d'objets, indexes et curseurs) sont liés à une transaction en particulier. Aussi, on ne peut pas exécuter une commande, accéder aux données ou ouvrir quoi que ce soit, en dehors d'une transaction.</p>
+<p><strong>Note :</strong> Tout ce qui est fait dans une base de données indexée s'inscrit dans le contexte d'une transaction qui représente un interaction avec les données dans la base. Tout les objets de l'interface IndexedDB (incluant les accès aux magasins d'objets, indexes et curseurs) sont liés à une transaction en particulier. Aussi, on ne peut pas exécuter une commande, accéder aux données ou ouvrir quoi que ce soit, en dehors d'une transaction.</p>
 </div>
 
 <h2 id="Méthodes">Méthodes</h2>
@@ -53,14 +53,13 @@ translation_of: Web/API/IDBDatabase
  <dd>S’exécute au déclenchement de l'événement <code>error</code> quand la connexion à la base de donnée échoue.</dd>
  <dt>{{domxref("IDBDatabase.onversionchange")}}</dt>
  <dd>S’exécute au déclenchement de l'événement <code>versionchange</code> quand la structure de la base de donnée change (l'événement {{domxref("IDBOpenDBRequest.onupgradeneeded")}} ou {{domxref("IDBFactory.deleteDatabase")}} à été demandé ailleurs (probablement dans une autre fenêtre ou onglet sur le même ordinateur). Cela est différent de la transaction correspondant à un changement de version (cf. {{domxref("IDBVersionChangeEvent")}}) mais les concepts sont liés.</dd>
- <dt>
- <h2 id="Exemples">Exemples</h2>
- </dt>
 </dl>
+
+<h2 id="Exemples">Exemples</h2>
 
 <p>Dans le fragment de code suivant, on ouvre une base de données de façon asynchrone avec {{domxref("IDBFactory")}} puis on gère les cas de succès et d'erreur avant de créer un nouveau magasin d'objet au cas où une mise à jour est nécessaire ({{domxref("IDBdatabase")}}). Pour étudier un exemple complet et fonctionnel, voir notre application <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">voir l'exemple <em>live</em></a>).</p>
 
-<pre class="brush: js;highlight:[13,24,26,27,28,32]">// On ouvre la base de données
+<pre class="brush: js">// On ouvre la base de données
   var DBOpenRequest = window.indexedDB.open("toDoList", 4);
 
   // On ajoute les deux gestionnaires d'événements

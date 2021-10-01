@@ -7,7 +7,7 @@ translation_of: Web/API/Window/getComputedStyle
 
 <h2 id="Résumé">Résumé</h2>
 
-<p><code>La méthode window.getComputedStyle() </code>donne la  <a href="/en/CSS/used_value" title="https://developer.mozilla.org/en/CSS/used_value">valeur calculée finale</a> de toutes les propriétés CSS sur un élément.</p>
+<p><code>La méthode window.getComputedStyle() </code>donne la  <a href="/en/CSS/used_value">valeur calculée finale</a> de toutes les propriétés CSS sur un élément.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
@@ -20,9 +20,11 @@ translation_of: Web/API/Window/getComputedStyle
  <dd>Chaîne de caractère spécifiant le pseudo-élément à cibler. Doit être <code>null</code> (ou non spécifiée) pour les éléments communs.</dd>
 </dl>
 
-<div class="note"><strong>Note:</strong> Avant Gecko 2.0 {{ geckoRelease("2.0") }}, le paramètre <code>pseudoElt</code> était obligatoire. Aucun autre navigateur majeur ne requiert que ce paramètre soit renseigné si il est null. Gecko a été modifié pour se comporter comme les autres navigateurs.</div>
+<div class="note">
+  <p><strong>Note :</strong> Avant Gecko 2.0 {{ geckoRelease("2.0") }}, le paramètre <code>pseudoElt</code> était obligatoire. Aucun autre navigateur majeur ne requiert que ce paramètre soit renseigné si il est null. Gecko a été modifié pour se comporter comme les autres navigateurs.</p>
+</div>
 
-<p>La valeur de retour <code>style</code> est un objet <a href="/en/DOM/CSSStyleDeclaration" title="en/DOM/CSSStyleDeclaration"><code>CSSStyleDeclaration</code></a>.</p>
+<p>La valeur de retour <code>style</code> est un objet <a href="/en/DOM/CSSStyleDeclaration"><code>CSSStyleDeclaration</code></a>.</p>
 
 <h2 id="Exemple">Exemple</h2>
 
@@ -33,7 +35,7 @@ var style = window.getComputedStyle(elem1, null);
 // var style = document.defaultView.getComputedStyle(elem1, null);
 </pre>
 
-<pre class="brush: js">&lt;style&gt;
+<pre class="brush: html">&lt;style&gt;
  #elem-container{
    position: absolute;
    left:     100px;
@@ -55,21 +57,21 @@ var style = window.getComputedStyle(elem1, null);
 &lt;/script&gt;
 </pre>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js"><span class="function token">function dumpComputedStyles</span><span class="punctuation token">(</span>elem<span class="punctuation token">,</span>prop<span class="punctuation token">)</span> <span class="punctuation token">{</span>
+<pre class="brush: js">function dumpComputedStyles(elem,prop) {
 
-  <span class="keyword token">var</span> cs <span class="operator token">=</span> window<span class="punctuation token">.</span><span class="function token">getComputedStyle</span><span class="punctuation token">(</span>elem<span class="punctuation token">,</span><span class="keyword token">null</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="keyword token">if</span> <span class="punctuation token">(</span>prop<span class="punctuation token">)</span> <span class="punctuation token">{</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>prop<span class="operator token">+</span><span class="string token">" : "</span><span class="operator token">+</span>cs<span class="punctuation token">.</span><span class="function token">getPropertyValue</span><span class="punctuation token">(</span>prop<span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-    <span class="keyword token">return</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
-  <span class="keyword token">var</span> len <span class="operator token">=</span> cs<span class="punctuation token">.</span>length<span class="punctuation token">;</span>
-  <span class="keyword token">for</span> <span class="punctuation token">(</span><span class="keyword token">var</span> i<span class="operator token">=</span><span class="number token">0</span><span class="punctuation token">;</span>i<span class="operator token">&lt;</span>len<span class="punctuation token">;</span>i<span class="operator token">++</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
+  var cs = window.getComputedStyle(elem,null);
+  if (prop) {
+    console.log(prop+" : "+cs.getPropertyValue(prop));
+    return;
+  }
+  var len = cs.length;
+  for (var i=0;i&lt;len;i++) {
 
-    <span class="keyword token">var</span> style <span class="operator token">=</span> cs<span class="punctuation token">[</span>i<span class="punctuation token">]</span><span class="punctuation token">;</span>
-    console<span class="punctuation token">.</span><span class="function token">log</span><span class="punctuation token">(</span>style<span class="operator token">+</span><span class="string token">" : "</span><span class="operator token">+</span>cs<span class="punctuation token">.</span><span class="function token">getPropertyValue</span><span class="punctuation token">(</span>style<span class="punctuation token">)</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-  <span class="punctuation token">}</span>
+    var style = cs[i];
+    console.log(style+" : "+cs.getPropertyValue(style));
+  }
 
-<span class="punctuation token">}</span></code></pre>
+}</pre>
 
 <h2 id="Description">Description</h2>
 

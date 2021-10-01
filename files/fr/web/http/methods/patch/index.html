@@ -50,7 +50,7 @@ original_slug: Web/HTTP/Méthode/PATCH
 
 <h3 id="Requête">Requête</h3>
 
-<pre class="line-numbers  language-html">PATCH /file.txt HTTP/1.1
+<pre>PATCH /file.txt HTTP/1.1
 Host: www.example.com
 Content-Type: application/example
 If-Match: "e0023aa4e"
@@ -62,7 +62,7 @@ Content-Length: 100
 
 <p>Une requête traitée avec succès retourne une réponse accompagnée d'un code de réponse {{HTTPStatus("204")}}. Dans ce cas-ci, la réponse ne contient un corps de message.</p>
 
-<pre class="newpage">HTTP/1.1 204 No Content
+<pre>HTTP/1.1 204 No Content
 Content-Location: /file.txt
 ETag: "e0023aa4f"</pre>
 

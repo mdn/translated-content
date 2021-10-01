@@ -13,7 +13,7 @@ translation_of: Web/API/Window/sessionStorage
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="brush: js notranslate">// Enregistrer des données dans sessionStorage
+<pre class="brush: js">// Enregistrer des données dans sessionStorage
 sessionStorage.setItem('clé', 'valeur');
 
 // Récupérer des données depuis sessionStorage
@@ -34,11 +34,11 @@ sessionStorage.clear();</code>
 
 <p>L'exemple de code suivant accède à l'objet de stockage de session associé au domaine actuel et y ajoute une donnée à l'aide de {{domxref("Storage.setItem()")}}.</p>
 
-<pre class="brush: js notranslate">sessionStorage.setItem('myCat', 'Tom');</pre>
+<pre class="brush: js">sessionStorage.setItem('myCat', 'Tom');</pre>
 
 <p>L'exemple suivant sauvegarde automatiquement le contenu d'un champ textuel. Si la page est accidentellement rafraîchie, le contenu du champ est restauré de sorte qu'aucune saisie n'est perdue.</p>
 
-<pre class="brush: js notranslate">// Récupération du champ à enregistrer
+<pre class="brush: js">// Récupération du champ à enregistrer
 var champ = document.getElementById("champ");
 
 // Vérification de l'existence d'une donnée enregistrée auparavant
@@ -55,7 +55,7 @@ champ.addEventListener("change", function() {
 });</pre>
 
 <div class="note">
-<p><strong>Note</strong>: Veuillez vous référer à l'article <a href="/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Utilisation de l'API Web Storage</a> pour des exemples plus complets.</p>
+<p><strong>Note :</strong> Veuillez vous référer à l'article <a href="/fr/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API">Utilisation de l'API Web Storage</a> pour des exemples plus complets.</p>
 </div>
 
 <h2 id="Spécifications">Spécifications</h2>
@@ -79,7 +79,7 @@ champ.addEventListener("change", function() {
 
 <p>{{Compat("api.Window.sessionStorage")}}</p>
 
-<p>Chaque navigateur attribue des capacités de stockage limitées pour <code>localStorage</code> et <code>sessionStorage</code>. Vous en trouverez certaines dans ce <a class="external" href="http://dev-test.nemikor.com/web-storage/support-test/">récapitulatif de tests des capacités de stockage attribuées en fonction du navigateur</a>.</p>
+<p>Chaque navigateur attribue des capacités de stockage limitées pour <code>localStorage</code> et <code>sessionStorage</code>. Vous en trouverez certaines dans ce <a href="http://dev-test.nemikor.com/web-storage/support-test/">récapitulatif de tests des capacités de stockage attribuées en fonction du navigateur</a>.</p>
 
 <h2 id="Voir_aussi">Voir aussi</h2>
 

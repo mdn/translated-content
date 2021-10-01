@@ -12,7 +12,7 @@ translation_of: Web/API/PerformanceElementTiming/naturalWidth
 ---
 <div>{{APIRef("Element Timing API")}}</div>
 
-<p class="summary">La propriété en lecture seule <strong><code>naturalWidth</code></strong> de l'interface <a href="/fr/docs/Web/API/PerformanceElementTiming"><code>PerformanceElementTiming</code></a> renvoie la largeur intrinsèque de l'élément image.</p>
+<p>La propriété en lecture seule <strong><code>naturalWidth</code></strong> de l'interface <a href="/fr/docs/Web/API/PerformanceElementTiming"><code>PerformanceElementTiming</code></a> renvoie la largeur intrinsèque de l'élément image.</p>
 <h2 id="Syntax">Syntax</h2>
 
 <pre class="brush:js">var <var>width</var> = <var>PerformanceElementTiming</var>.naturalWidth;</pre>
@@ -35,7 +35,9 @@ translation_of: Web/API/PerformanceElementTiming/naturalWidth
 });
 observer.observe({ entryTypes: ["element"] });</pre>
 
-<p class="notecard note">Cet exemple utilise l'interface <a href="/fr/docs/Web/API/PerformanceObserver"><code>PerformanceObserver</code></a> pour créer une liste d'événements de mesure des performances. Dans notre cas, nous observons l'élément <a href="/fr/docs/Web/API/PerformanceEntry/entryType"><code>PerformanceEntry.entryType</code></a> afin d'utiliser l'interface <code>PerformanceElementTiming</code>.</p>
+<div class="note">
+  <p><strong>Note :</strong> Cet exemple utilise l'interface <a href="/fr/docs/Web/API/PerformanceObserver"><code>PerformanceObserver</code></a> pour créer une liste d'événements de mesure des performances. Dans notre cas, nous observons l'élément <a href="/fr/docs/Web/API/PerformanceEntry/entryType"><code>PerformanceEntry.entryType</code></a> afin d'utiliser l'interface <code>PerformanceElementTiming</code>.</p>
+</div>
 
 <h2 id="Specifications">Specifications</h2>
 

@@ -30,7 +30,7 @@ translation_of: Web/HTTP/CORS/Errors/CORSMIssingAllowCredentials
 <ul>
  <li>リクエストが {{domxref("XMLHttpRequest")}} を用いて発行されている場合は、 {{domxref("XMLHttpRequest.withCredentials", "withCredentials")}} に <code>true</code> を設定しないよう確認してください。</li>
  <li><a href="/ja/docs/Web/API/Server-sent_events">Server-sent event</a> を使用している場合は、 {{domxref("EventSource.withCredentials")}} が <code>false</code> (既定値) であることを確認してください。</li>
- <li><a href="/en-US/docs/Web/API/Fetch_API">Fetch API</a> を使用している場合は、 {{domxref("Request.credentials")}} が <code>"omit"</code> であることを確認してください。</li>
+ <li><a href="/ja/docs/Web/API/Fetch_API">Fetch API</a> を使用している場合は、 {{domxref("Request.credentials")}} が <code>"omit"</code> であることを確認してください。</li>
 </ul>
 
 <p>サーバーの構成を変更してこのエラーを除去するには、サーバーの構成で <code>Access-Control-Allow-Credentials</code> ヘッダーの値に <code>true</code> を設定するよう調整してください。</p>

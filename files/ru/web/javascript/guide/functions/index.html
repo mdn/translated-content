@@ -526,7 +526,7 @@ myConcat('. ', 'sage', 'basil', 'oregano', 'pepper', 'parsley');
 
 <h2 id="Параметры_функции"><a id="definition" name="definition"></a>Параметры функции</h2>
 
-<p>Начиная с ECMAScript 2015 появились два новых вида параметров: параметры по умолчанию (<em>default parameters</em>) и оставшиеся параметры (<em>rest parameters</em>).</p>
+<p>Начиная с ECMAScript 2015 появились два новых вида параметров: параметры по умолчанию (<em>default parameters</em>) и остаточные параметры (<em>rest parameters</em>).</p>
 
 <h3 id="Параметры_по_умолчанию_Default_parameters">Параметры по умолчанию (Default parameters)</h3>
 
@@ -552,9 +552,9 @@ multiply(5); // 5</pre>
 
 <p>Для более детального рассмотрения ознакомьтесь с <a href="/ru/docs/Web/JavaScript/Reference/Functions/Default_parameters">параметрами по умолчанию</a>.</p>
 
-<h3 id="Оставшиеся_параметры_Rest_parameters">Оставшиеся параметры (Rest parameters)</h3>
+<h3 id="Остаточные_параметры_Rest_parameters">Остаточные параметры (Rest parameters)</h3>
 
-<p><a href="/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">Оставшиеся параметры</a> предоставляют нам массив неопределённых аргументов. В примере мы используем оставшиеся параметры, чтобы собрать аргументы с индексами со 2-го до последнего. Затем мы умножим каждый из них на значение первого аргумента. В этом примере используется стрелочная функция (<u><em><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow functions</a>)</em></u>, о которой будет рассказано в следующей секции.</p>
+<p><a href="/ru/docs/Web/JavaScript/Reference/Functions/Rest_parameters">Остаточные параметры</a> предоставляют нам массив неопределённых аргументов. В примере мы используем остаточные параметры, чтобы собрать аргументы с индексами со 2-го до последнего. Затем мы умножим каждый из них на значение первого аргумента. В этом примере используется стрелочная функция (<u><em><a href="https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow functions</a>)</em></u>, о которой будет рассказано в следующей секции.</p>
 
 <pre class="brush: js">function multiply(multiplier, ...theArgs) {
   return theArgs.map(x =&gt; multiplier * x);

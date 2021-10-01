@@ -1,0 +1,220 @@
+---
+title: 'ARIA: listbox role'
+slug: Web/Accessibility/ARIA/Roles/listbox_role
+tags:
+  - ARIA
+  - 可访问性
+  - 无障碍
+translation_of: Web/Accessibility/ARIA/Roles/listbox_role
+---
+<p><code>listbox</code> 角色用于列表，用户可以从中选择一个或多个静态选项，并且与 HTML {{HTMLElement("select")}} 元素不同，它可能包含图像。</p>
+
+<h2 id="Description">描述</h2>
+
+<p><code>listbox</code> 角色用于标识创建列表的元素，用户可以从中选择一个或多个静态选项，类似于 HTML {{HTMLElement("select")}} 元素。与 {{HTMLElement("select")}} 不同，<code>listbox</code> 可以包含图像。<code>listbox</code> 的每个子项都应该有一个 <a href="https://www.w3.org/TR/2010/WD-wai-aria-20100916/roles#option"><code>option</code></a> role。</p>
+
+<p>强烈建议使用 HTML {{HTMLElement("select")}} 元素，如果只能选择一个选项，则使用一组单选按钮，如果可以选择多个选项，则使用一组复选框，因为有很多键盘交互来管理所有后代的焦点和原生 HTML 元素为您提供相关的功能。</p>
+
+<p>具有 <code>listbox</code> 角色的元素含有隐式的 <code>aria-orientation</code> 和 <code>vertical</code> 值。</p>
+
+<p>当一个列表被 tab 聚焦到时，如果没有其他内容，将会选择列表中的第一项。可以用 Up/Down 方向键在列表中导航，按 Shift + Up/Down 方向键将移动并扩展选择。键入一个或多个字母将在列表项中导航（相同的字母指向以那个开头的每个选项，不同的字母指向以整个字符串开头的第一个选项）。如果当前选项有关联的菜单， Shift+F10 将启动该菜单。如果项目可被勾选，Space 可用于切换 <a href="https://www.w3.org/TR/wai-aria-practices/#checkbox"><code>checkbox</code></a> role。对于可选择的列表项，Space 切换它们的选择，Shift+Space 可用于选择连续的项目，Ctrl+方向键 移动而不选择， Ctrl+Space 可用于选择非连续的项目。建议使用 checkbox、link 或其他方法来选择所有项目，为此可以使用 Ctrl+A 作为快捷键。</p>
+
+<p>当 listbox 角色被添加到元素中，或含有它的元素变得可见时，屏幕阅读器会在 listbox 获得焦点时读出它的 label 和 role。如果列表中的 option 或选项获得焦点，则接下来会读出它，如果屏幕阅读器支持，则会在列表中指示选项的位置。当焦点在列表中移动时，屏幕阅读器会读出相关选项。</p>
+
+<h3 id="Associated_ARIA_roles_states_and_properties">相关的 ARIA 角色、状态和属性</h3>
+
+<h4 id="Associated_Roles">相关角色</h4>
+
+<dl>
+  <dt><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/option_role">option</a></dt>
+  <dd>需要一个或多个嵌套的 <code>option</code>。 所有被选择的选项都含有 <code>aria-selected</code> 且值为 <code>true</code>。所有未选中的选项都含有 <code>aria-selected</code> 且值为 <code>false</code>。 如果某个选项不可选择，<code>aria-selected</code> 会被忽略。</dd>
+  <dt><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/List_role">list</a></dt>
+  <dd>包含 <code>listitem</code> 元素的部分</dd>
+</dl>
+
+<h4 id="States_and_Properties">状态和属性</h4>
+
+<dl>
+  <dt>aria-activedescendant</dt>
+  <dd>保存 listbox 中当前活动元素的 <code>id</code> 字符串。如果这是一个 option 元素，那么这将是最近与之交互选项的 <code>id</code>，无论该选项是否具有值为 <code>true</code> 的 <code>aria-selected</code>。即使在多选列表框中，也只会有一个 <code>id</code>。如果 <code>id</code> 不引用 listbox 的 DOM 后代，则 <code>id</code> 必须包含在 <code>aria-owns</code> 属性中的 ID 中。</dd>
+  <dt>aria-owns</dt>
+  <dd>这是一个以空格分隔的元素 ID 列表，它们不是 listbox 的 DOM 子元素。此处列出的 ID 也不能列在任何其他元素的 <code>aria-owns</code> 属性中。</dd>
+  <dt>aria-multiselectable</dt>
+  <dd>如果用户可以选择多个选项，则存在并设置为 <code>true</code>。如果设置为 <code>true</code>，<em>每个</em> 可选的选项都应包含 <code>aria-selected</code> 属性并设置为 <code>true</code> 或 <code>false</code>。 <em>不可选</em>的选项<em>不应该</em>具有<code>aria-selected</code>属性。</dd>
+  <dd>如果值为 <code>false</code> 或被省略，那么仅当前选中的选项（如果有任何选项被选中）才需要<code>aria-selected</code>属性，而且必须设置为<code>true</code>。</dd>
+  <dt>aria-required</dt>
+  <dd>一个布尔属性，指示必须选择具有非空字符串值的选项。</dd>
+  <dt>aria-readonly</dt>
+  <dd>用户无法更改选择或取消选择，但 listbox 是可操作的。</dd>
+  <dt>aria-label</dt>
+  <dd>一个可供人类阅读的字符串，用于标识 listbox。如果有可见标签，则应使用 <code>aria-labelledby</code> 来引用该标签。</dd>
+  <dt>aria-labelledby</dt>
+  <dd>标识以空格分隔的元素 ID 列表中的一个或多个可见元素，这些元素标识 listbox。如果没有可见标签，则应该使用 <code>aria-label</code> 来包含标签。 （注意：带有两个 L 的 "labelled" 是基于辅助功能 API 约定的正确拼写。）</dd>
+  <dt>aria-roledescription</dt>
+  <dd>一个可供人类阅读的字符串，可以更清楚地标识 listbox 的作用。屏幕阅读器通常会在阅读标签（如果存在）后向用户阅读此值，而不是说 “listbox”。</dd>
+</dl>
+
+<p>（有关更多详细信息以及 ARIA 状态和属性的完整列表，请参阅 <a href="https://www.w3.org/TR/wai-aria-1.1/#listbox">ARIA <code>listbox</code> (role)</a> 文档。 )</p>
+
+<h3 id="Keyboard_interactions">键盘交互</h3>
+
+<ul>
+  <li>当单选 listbox 获得焦点时：
+    <ul>
+      <li>如果在 listbox 获得焦点之前没有选择任何选项，则第一个选项将获得焦点。（可选）可以自动选择第一个选项。</li>
+      <li>如果在列表框获得焦点之前选择了一个选项，则焦点将设置在所选选项上。</li>
+    </ul>
+  </li>
+  <li>当多选 listbox 获得焦点时：
+    <ul>
+      <li>如果在列表框获得焦点之前没有选择任何选项，则焦点将设置在第一个选项上，并且选择状态不会自动更改。</li>
+      <li>如果在列表框获得焦点之前选择了一个或多个选项，则焦点将设置在列表中选定的第一个选项上。</li>
+    </ul>
+  </li>
+  <li><kbd>Down Arrow</kbd>: 将焦点移至下一个选项。（可选）在单选 listbox 中，选中的值也可以随焦点移动。</li>
+  <li><kbd>Up Arrow</kbd>: 将焦点移至上一个选项。（可选）在单选 listbox 中，选中的值也可以随焦点移动。</li>
+  <li><kbd>Home</kbd> (可选): 将焦点移至第一个选项。（可选）在单选列表框中，选中的值也可以随焦点移动。对于超过五个选项的列表，强烈建议支持此键。</li>
+  <li><kbd>End</kbd> (可选): 将焦点移至最后一个选项。（可选）在单选列表框中，选中的值也可以随焦点移动。对于超过五个选项的列表，强烈建议支持此键。</li>
+  <li>建议所有 listbox 都预先输入，尤其是那些有七个以上选项的列表框：
+    <ul>
+      <li>键入字符时：焦点移至名称符合键入的字符开头的一项。</li>
+      <li>快速连续键入多个字符时：焦点移至名称符合键入的字符串开头的一项。</li>
+    </ul>
+  </li>
+  <li><strong>多项选择</strong>: 作者可以实现两种交互模型中的任何一种来支持多选：推荐模型，不需要用户在导航列表时按住修饰键，例如 <kbd>Shift</kbd> 或 <kbd>Control</kbd> 或者需要在导航时按住修饰键以避免丢失选择状态的替代模型。
+    <ul>
+      <li>推荐的选择模型——不需要按住修饰键：
+        <ul>
+          <li><kbd>Space</kbd>: 更改焦点选项的选择状态。</li>
+          <li><kbd>Shift + Down Arrow</kbd> （可选）: 将焦点移动并切换到下一个选项的选定状态。</li>
+          <li><kbd>Shift + Up Arrow</kbd> （可选）: 将焦点移动并切换到上一个选项的选定状态。</li>
+          <li><kbd>Shift + Space</kbd> （可选）: 选择从最近选择的项目到焦点项目的连续项目。</li>
+          <li><kbd>Control + Shift + Home</kbd> （可选）: 选择焦点选项和直到第一个选项的所有选项。 （可选）将焦点移至第一个选项。</li>
+          <li><kbd>Control + Shift + End</kbd> （可选）: 选择焦点选项和直到最后一个选项的所有选项。 （可选）将焦点移到最后一个选项。</li>
+          <li><kbd>Control + A</kbd> （可选）: 选择列表中的所有选项。（可选）如果选择了所有选项，它也可以取消选择所有选项。</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="Required_JavaScript_features">所需的 JavaScript 功能</h3>
+
+<h4 id="selecting_an_option_in_a_single_select_listbox">在单选 listbox 中选择一个选项</h4>
+
+<p>当用户选择一个选项时，必须发生以下情况：</p>
+
+<ol>
+  <li>取消选择先前选择的选项，将 aria-selected 设置为 false，或完全删除该属性，将新未选择的选项的外观更改为未选择的。</li>
+  <li>选择新选择的选项，在该选项上设置 aria-selected="true" 并将新选择的选项的外观更改为选中。</li>
+  <li>将列表框上的 <code>aria-activedescendant</code> 值更新为新选择的选项的 id</li>
+  <li>可视化处理选项的丢焦、聚焦和选定状态</li>
+</ol>
+
+<h4 id="Toggling_the_state_of_an_option_in_a_multi_select_listbox">在多选列表框中切换选项的状态</h4>
+
+<p>当用户点击一个选项、聚焦在一个选项时按下 <kbd>Space</kbd>或者以其他方式切换一个选项的状态，必须发生以下情况：</p>
+
+<ol>
+  <li>切换当前聚焦选项的 aria-selected 状态，如果它是 false，则将 aria-selected 的状态更改为 true，如果为 true，则将其更改为 false。</li>
+  <li>更改选项的外观以反映其选定状态</li>
+  <li>将列表框上的 aria-activedescendant 值更新为用户刚刚与之交互的选项的 id，即使他们将选项切换为取消选择。</li>
+</ol>
+
+<div class="notecard note">
+  <p>ARIA 使用的第一原则是您可以使用具有内置语义和行为的原生功能，而不是重新利用元素并<strong>添加</strong> ARIA角色、状态或属性使其可访问。含有后代 {{HTMLElement("option")}} 元素的 {{HTMLElement("select")}} 元素带有所有需要的交互的原生处理方法。</p>
+</div>
+
+<h2 id="Examples">例子</h2>
+
+<h4 id="Example_1_A_single_select_listbox_that_uses_aria-activedescendant">例子 1: 使用 aria-activedescendant 的单个选择列表框</h4>
+
+<p>下面的代码片段显示了如何将列表框角色直接添加到 html 源代码中。</p>
+
+<pre class="brush: html">&lt;p id="listbox1label" role="label"&gt;Select a color:&lt;/p&gt;
+&lt;div role="listbox" tabindex="0" id="listbox1" aria-labelledby="listbox1label"
+  onclick="return listItemClick(event);"
+  onkeydown="return listItemKeyEvent(event);"
+  onkeypress="return listItemKeyEvent(event);"
+  aria-activedescendant="listbox1-1"&gt;
+    &lt;div role="option" id="listbox1-1" class="selected" aria-selected="true"&gt;Green&lt;/div&gt;
+    &lt;div role="option" id="listbox1-2"&gt;Orange&lt;/div&gt;
+    &lt;div role="option" id="listbox1-3"&gt;Red&lt;/div&gt;
+    &lt;div role="option" id="listbox1-4"&gt;Blue&lt;/div&gt;
+    &lt;div role="option" id="listbox1-5"&gt;Violet&lt;/div&gt;
+    &lt;div role="option" id="listbox1-6"&gt;Periwinkle&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<p>使用原生的 HTML {{HTMLElement("select")}} 和 {{HTMLElement("label")}} 元素可以更简单。</p>
+
+<pre class="brush: html">&lt;label for="listbox1"&gt;Select a color:&lt;/label&gt;
+&lt;select id="listbox1"&gt;
+   &lt;option selected&gt;Green&lt;/option&gt;
+   &lt;option&gt;Orange&lt;/option&gt;
+   &lt;option&gt;Red&lt;/option&gt;
+   &lt;option&gt;Blue&lt;/option&gt;
+   &lt;option&gt;Violet&lt;/option&gt;
+   &lt;option&gt;Periwinkle&lt;/option&gt;
+&lt;/select&gt;</pre>
+
+<h4 id="More_examples">更多例子</h4>
+
+<ul>
+  <li><a href="https://w3c.github.io/aria-practices/examples/listbox/listbox-scrollable.html">可滚动的 listbox 示例</a>: 滚动显示更多选项的单选 listbox，类似于 HTML <code>select</code> 的 <code>size</code> 属性大于 1。</li>
+  <li><a href="https://w3c.github.io/aria-practices/examples/listbox/listbox-collapsible.html">可折叠下拉 listbox 示例</a>: 激活时展开的单选可折叠 listbox，类似于 HTML <code>select</code> 并且属性 <code>size="1"</code>。</li>
+  <li><a href="https://w3c.github.io/aria-practices/examples/listbox/listbox-rearrangeable.html">具有可重新排列选项的 listbox 示例</a>: 带有可以添加、移动和删除选项的附带工具栏的单选和多选 listbox 的示例。</li>
+</ul>
+
+<h2 id="Best_practices">最佳实践</h2>
+
+<ul>
+  <li>为了便于键盘访问，作者应该对这个角色的所有后代进行 <a href="https://www.w3.org/TR/wai-aria-1.1/#managingfocus">焦点管理</a></li>
+  <li>建议作者在列表未聚焦时使用不同的样式进行选择，例如非活动选项通常以较浅的背景颜色显示。</li>
+  <li>如果 listbox 不是另一个组件的一部分，那么它应该具有 <code>aria-labelledby</code> 属性。</li>
+  <li>如果一个或多个条目不是 listbox 的 DOM 子项，则需要设置额外的 <code>aria-*</code> 属性（参见 <a href="https://www.w3.org/TR/wai-aria-practices/#listbox_div">ARIA Best Practices</a>)。</li>
+  <li>如果有理由 <a href="https://www.w3.org/TR/wai-aria-1.1/#aria-expanded">展开</a> 列表框，<a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a> 角色可能更合适。</li>
+</ul>
+
+<h2 id="Specifications">规范</h2>
+
+<table>
+  <tbody>
+  <tr>
+    <th scope="col">规范</th>
+    <th scope="col">状态</th>
+  </tr>
+  <tr>
+    <td>{{SpecName("ARIA","#listbox","ARIA listbox role")}}</td>
+    <td>{{Spec2('ARIA')}}</td>
+  </tr>
+  <tr>
+    <td>{{SpecName("ARIA Authoring Practices","#Listbox","Listbox Role")}}</td>
+    <td>{{Spec2('ARIA Authoring Practices')}}</td>
+  </tr>
+  </tbody>
+</table>
+
+<h2 id="Screen_reader_support">屏幕阅读器支持</h2>
+
+<p>TBD</p>
+
+<h2 id="See_also">另见</h2>
+
+<ul>
+  <li>{{HTMLElement("select")}} 元素</li>
+  <li>{{HTMLElement("label")}} 元素</li>
+  <li>{{HTMLElement("option")}} 元素</li>
+  <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/combobox_role">ARIA: <code>combobox</code> 角色</a></li>
+  <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/option_role">ARIA: <code>option</code> 角色</a></li>
+  <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/List_role">ARIA: <code>list</code> 角色</a></li>
+  <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles/Listitem_role">ARIA: <code>listitem</code> 角色</a></li>
+  <li><a href="https://www.w3.org/TR/wai-aria-practices/#Listbox">ARIA Best Practices – Listbox</a></li>
+  <li><a href="https://www.w3.org/TR/wai-aria-1.1/#listbox">ARIA Role Model – Listbox</a></li>
+</ul>
+
+<section id="Quick_links">
+  <ol>
+    <li><a href="/zh-CN/docs/Web/Accessibility/ARIA/Roles"><strong>WAI-ARIA roles</strong></a>{{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}</li>
+  </ol>
+</section>

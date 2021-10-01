@@ -52,7 +52,7 @@ translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 
 <h4 id="Простые_контролы">Простые контролы</h4>
 
-<p>Чтобы сделать простой виджет доступным через клавишу Tab, задайте <code>tabindex="0"</code> на HTML элементах {{HTMLElement("div")}} или {{HTMLElement("span")}}, из которых он состоит. Ниже представлен пример эмулирования чекбоксов. Вместо элементов input в примере используется {{HTMLElement("span")}}.</p>
+<p>Чтобы сделать простой виджет доступным через клавишу Tab, задайте <code>tabindex="0"</code> на HTML-элементах {{HTMLElement("div")}} или {{HTMLElement("span")}}, из которых он состоит. Ниже представлен пример эмулирования чекбоксов. Вместо элементов input в примере используется {{HTMLElement("span")}}.</p>
 
 <p><em>Пример 1: Простой виджет, эмулирующий работу чекбосов путём смены изображений. Виджет использует tabindex, чтобы обеспечить доступ с клавиатуры.</em></p>
 
@@ -154,7 +154,7 @@ translation_of: Web/Accessibility/Keyboard-navigable_JavaScript_widgets
 
 <p>Эта техника позволяет объединить  каждый отдельно взятый обработчик  событий в контейнер графического элемента и использовать  <code>aria-activedescendent</code> для слежения за "виртуальным" фокусом . (Для получения более подробной информации относительно ARIA обратите внимание на  <a href="/ru/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets">обзор доступных веб-приложений и виджетов </a>.)</p>
 
-<p>The <code>aria-activedescendant</code> property identifies the ID of the descendent element that currently has the virtual focus. The event handler on the container must respond to key and mouse events by updating the value of <code>aria-activedescendant</code> and ensuring that the current item is styled appropriately (for example, with a border or background color). See the source code of this <a href="https://www.oaa-accessibility.org/example/28/">ARIA radiogroup example</a> for a direct illustration of how this works.</p>
+<p>The <code>aria-activedescendant</code> property identifies the ID of the descendent element that currently has the virtual focus. The event handler on the container must respond to key and mouse events by updating the value of <code>aria-activedescendant</code> and ensuring that the current item is styled appropriately (for example, with a border or background color).</p>
 
 <h5 id="Tips">Tips</h5>
 

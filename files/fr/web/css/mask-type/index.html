@@ -41,111 +41,65 @@ mask-type: unset;
 
 <h2 id="Exemples">Exemples</h2>
 
-<p>Prenons comme masque le rectangle suivant :</p>
+<h3 id="setting_an_alpha_mask">Définir un masque alpha</h3>
 
-<pre class="brush: html">&lt;rect x="10" y="10" width="80" height="80"
-    fill="red" fill-opacity="0.7" /&gt;</pre>
+<h4 id="HTML">HTML</h4>
 
-<div class="hidden">
-<h3 id="mask">mask</h3>
-
-<pre class="brush: html">&lt;svg width="100" height="100"&gt;
-  &lt;rect x="10" y="10" width="80" height="80"
-      fill="red" fill-opacity="0.7"/&gt;
+<pre class="brush: html">&lt;div class="redsquare"&gt;&lt;/div&gt;
+&lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0"&gt;
+  &lt;defs&gt;
+    &lt;mask id="m" maskContentUnits="objectBoundingBox"
+      style="mask-type:alpha"&gt;
+      &lt;rect x=".1" y=".1" width=".8" height=".8"
+          fill="red" fill-opacity="0.7"/&gt;
+    &lt;/mask&gt;
+  &lt;/defs&gt;
 &lt;/svg&gt;</pre>
-</div>
 
-<div>Le voici : {{EmbedLiveSample('mask', '100%', '100')}}</div>
-
-<p>Appliquons le à cette boîte :</p>
-
-<div class="hidden">
-<h3 id="box">box</h3>
+<h4 id="CSS">CSS</h4>
 
 <pre class="brush: css">.redsquare {
   height: 100px;
   width: 100px;
   background-color: rgb(128, 128, 128);
   border: solid 1px black;
-}
-</pre>
+  mask: url("#m");
+}</pre>
+
+<h4 id="result">Résultat</h4>
+
+<p>{{EmbedLiveSample('setting_an_alpha_mask', '100%', '102')}}</p>
+
+<h3 id="setting_a_luminance_mask">Définir un masque de luminance</h3>
+
+<h4 id="HTML_2">HTML</h4>
 
 <pre class="brush: html">&lt;div class="redsquare"&gt;&lt;/div&gt;
-</pre>
-</div>
-
-<div>{{EmbedLiveSample('box', '100%', '120')}}</div>
-
-<p>Voici le résultat, si votre navigateur prend en charge cette propriété, avec les deux valeurs de <code>mask-type</code> appliquée à l'élément {{SVGElement("mask")}}, on aura deux carrés différents :</p>
-
-<table class="standard-table">
- <tbody>
-  <tr>
-   <td><code>mask-type: alpha;</code></td>
-   <td><code>mask-type: luminance;</code></td>
-  </tr>
-  <tr>
-   <td>
-    <div class="hidden" id="maskalpha">
-    <pre class="brush: html">
-&lt;div class="redsquare"&gt;&lt;/div&gt;
 &lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0"&gt;
   &lt;defs&gt;
     &lt;mask id="m" maskContentUnits="objectBoundingBox"
-        style="mask-type:alpha"&gt;
+      style="mask-type:luminance"&gt;
       &lt;rect x=".1" y=".1" width=".8" height=".8"
           fill="red" fill-opacity="0.7"/&gt;
     &lt;/mask&gt;
   &lt;/defs&gt;
-&lt;/svg&gt;
-</pre>
+&lt;/svg&gt;</pre>
 
-    <pre class="brush: css">
-.redsquare {
+<h4 id="CSS_2">CSS</h4>
+
+<pre class="brush: css">.redsquare {
   height: 100px;
   width: 100px;
   background-color: rgb(128, 128, 128);
   border: solid 1px black;
   mask: url("#m");
-}
-</pre>
-    </div>
+}</pre>
 
-    <div>{{EmbedLiveSample('maskalpha', '100%', '102')}}</div>
-   </td>
-   <td>
-    <div class="hidden" id="maskluminance">
-    <pre class="brush: html">
-&lt;div class="redsquare"&gt;&lt;/div&gt;
-&lt;svg version="1.1" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink" width="0" height="0"&gt;
-  &lt;defs&gt;
-    &lt;mask id="m" maskContentUnits="objectBoundingBox"
-        style="mask-type:luminance"&gt;
-      &lt;rect x=".1" y=".1" width=".8" height=".8"
-          fill="red" fill-opacity="0.7"/&gt;
-    &lt;/mask&gt;
-  &lt;/defs&gt;
-&lt;/svg&gt;
-</pre>
+<h4 id="result_2">Result</h4>
 
-    <pre class="brush: css">
-.redsquare {
-  height: 100px;
-  width: 100px;
-  background-color: rgb(128, 128, 128);
-  border: solid 1px black;
-  mask: url("#m");
-}
-</pre>
-    </div>
-
-    <div>{{EmbedLiveSample('maskluminance', '100%', '102')}}</div>
-   </td>
-  </tr>
- </tbody>
-</table>
+<p>{{EmbedLiveSample('setting_a_luminance_mask', '100%', '102')}}</p>
 
 <h2 id="Spécifications">Spécifications</h2>
 

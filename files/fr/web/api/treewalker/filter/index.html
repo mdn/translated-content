@@ -15,12 +15,12 @@ translation_of: Web/API/TreeWalker/filter
 
 <p>Lors de la création du <code>TreeWalker</code>, l'objet filtre est transmis comme 3ème paramètre et sa méthode {{domxref("NodeFilter.acceptNode()")}} est appelée sur tous les noeuds pour déterminer s'il doit ou non l'accepter.</p>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
 <pre class="syntaxbox"><em>nodeFilter</em> = <em>treeWalker</em>.filter;
 </pre>
 
-<h2 id="Example" name="Example">Exemple</h2>
+<h2 id="Example">Exemple</h2>
 
 <pre class="brush: js">var treeWalker = document.createTreeWalker(
     document.body,
@@ -31,7 +31,7 @@ translation_of: Web/API/TreeWalker/filter
 nodeFilter = treeWalker.filter; // document.body dans ce cas
 </pre>
 
-<h2 id="Specification" name="Specification">Spécifications</h2>
+<h2 id="Specification">Spécifications</h2>
 
 <table class="standard-table">
  <tbody>

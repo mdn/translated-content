@@ -13,8 +13,6 @@ translation_of: Web/CSS/background-size
 
 <div>{{EmbedInteractiveExample("pages/css/background-size.html")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuez à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
-
 <div class="note">
 <p><strong>Note :</strong> L'espace qui n'est pas rempli par l'image d'arrière-plan aura la couleur définie par la propriété {{cssxref("background-color")}}. De plus, la couleur d'arrière-plan sera visible si l'image d'arrière-plan est transparente.</p>
 </div>
@@ -65,15 +63,15 @@ background-size: unset;
 <h3 id="Valeurs">Valeurs</h3>
 
 <dl>
- <dt id="contain"><code>contain</code></dt>
+ <dt><code>contain</code></dt>
  <dd>Un mot-clé qui redimensionne l'image afin qu'elle soit la plus grande possible et que l'image conserve ses proportions. L'image est contrainte dans le conteneur. Les zones éventuellement vide sont remplies avec la couleur d'arrière-plan (définie grâce à {{cssxref("background-color")}}). Par défaut, l'image est centrée sauf si {{cssxref("background-position")}} a été modifiée.</dd>
- <dt id="cover"><code>cover</code></dt>
+ <dt><code>cover</code></dt>
  <dd>Un mot-clé dont le comportement est opposé à celui de <code>contain</code>. L'image est redimensionnée pour être aussi grande que possible et pour conserver ses proportions. L'image couvre toute la largeur ou la hauteur du conteneur et les parties qui dépassent sont rognées si les proportions du conteneur sont différentes (il n'y aucun espace libre sur lequel on verrait la couleur d'arrière-plan).</dd>
- <dt id="auto"><code>auto</code></dt>
+ <dt><code>auto</code></dt>
  <dd>Un mot-clé qui redimensionne l'image d'arrière-plan afin que ses proportions soient conservées.</dd>
- <dt id="length"><code>&lt;length&gt;</code></dt>
+ <dt><code>&lt;length&gt;</code></dt>
  <dd>Une valeur de type {{cssxref("&lt;length&gt;")}} qui redimensionne l'image afin que celle-ci occupe la longueur indiquée dans la dimension concernée. Les valeurs négatives ne sont pas autorisées.</dd>
- <dt id="percentage"><code>&lt;percentage&gt;</code></dt>
+ <dt><code>&lt;percentage&gt;</code></dt>
  <dd>Une valeur de type {{cssxref("&lt;percentage&gt;")}} qui redimensionne l'image d'arrière-plan proportionnellement à la taille de la zone dédiée à l'arrière-plan, définie via {{cssxref("background-origin")}}. Par défaut, cette zone correspond à la boîte de contenu et de remplissage (<em>padding</em>) mais peut être modifiée pour contenir uniquement la boîte de contenu ou, à l'inverse, les boîtes de contenu, remplissage et marge. Si la propriété {{cssxref("background-attachment")}} vaut <code>fixed</code>, la zone de positionnement de l'arrière-plan sera la fenêtre du navigateur (sans les barres de défilement). Les valeurs négatives ne sont pas autorisées.</dd>
 </dl>
 
@@ -98,13 +96,10 @@ background-size: unset;
 
 <p>Selon le caractère intrinsèque ou non des dimensions et des proportions, la taille d'affichage de l'image d'arrière-plan est calculée de la façon suivante :</p>
 
-<dl>
- <dt>Si les deux composants de <code>background-size</code> sont définis et qu'aucun ne vaut <code>auto</code> :</dt>
- <dd>L'image utilise la taille définie.</dd>
- <dt>Si <code>background-size</code> vaut <code>contain</code> ou <code>cover</code> :</dt>
- <dd>L'image est affichée et ses proportions sont conservées pour que l'image soit contenue dans la zone ou la recouvre complètement. Si l'image ne possède pas de proportions intrinsèques; elle est affichée avec la taille de la zone de positionnement de l'arrière-plan.</dd>
- <dt>Si <code>background-size</code> vaut <code>auto</code> ou <code>auto auto</code> :</dt>
- <dd>
+<ul>
+ <li><p>Si les deux composants de <code>background-size</code> sont définis et qu'aucun ne vaut <code>auto</code> : L'image utilise la taille définie.</p></li>
+ <li><p>Si <code>background-size</code> vaut <code>contain</code> ou <code>cover</code> : L'image est affichée et ses proportions sont conservées pour que l'image soit contenue dans la zone ou la recouvre complètement. Si l'image ne possède pas de proportions intrinsèques; elle est affichée avec la taille de la zone de positionnement de l'arrière-plan.</p></li>
+ <li><p>Si <code>background-size</code> vaut <code>auto</code> ou <code>auto auto</code> :</p>
  <ul>
   <li>Si l'image possède deux dimensions intrinsèques, c'est cette taille qui est utilisée.</li>
   <li>Si elle ne possède pas de dimension intrinsèque ni de proportion intrinsèque, elle est affichée avec la taille de la zone dédiée à l'arrière-plan.</li>
@@ -112,21 +107,18 @@ background-size: unset;
   <li>Si l'image possède une dimension intrinsèque et une proportion, elle est affichée avec cette dimension et cette proportion.</li>
   <li>Si l'image possède une dimension intrinsèque mais aucune proportion, elle sera affichée avec la dimension intrinsèque et l'autre dimension suivra la taille de la zone pour l'arrière-plan.</li>
  </ul>
- </dd>
- <dd>
- <div class="note"><strong>Note :</strong> Les images SVG peuvent contenir un attribut <code><a href="/fr/docs/Web/SVG/Attribute/preserveAspectRatio">preserveAspectRatio</a></code> pour lequel la valeur par défaut est équivalente à <code>contain</code>. Pour Firefox 43, à la différence de Chrome 52, une valeur explicite pour <code>background-size</code> permet d'ignorer <code>preserveAspectRatio</code>.</div>
- </dd>
- <dt>Si <code>background-size</code> possède une composante <code>auto</code> et que l'autre composante est différente de <code>auto</code> :</dt>
- <dd>
+ <div class="note"><p><strong>Note :</strong> Les images SVG peuvent contenir un attribut <code><a href="/fr/docs/Web/SVG/Attribute/preserveAspectRatio">preserveAspectRatio</a></code> pour lequel la valeur par défaut est équivalente à <code>contain</code>. Pour Firefox 43, à la différence de Chrome 52, une valeur explicite pour <code>background-size</code> permet d'ignorer <code>preserveAspectRatio</code>.</p></div>
+</li>
+ <li><p>Si <code>background-size</code> possède une composante <code>auto</code> et que l'autre composante est différente de <code>auto</code> :</p>
  <ul>
   <li>Si l'image possède une proportion intrinsèque, elle sera affichée avec la dimension indiquée et la deuxième sera calculée grâce à la proportion.</li>
   <li>Si l'image ne possède aucune proportion intrinsèque, la dimension indiquée sera utilisée pour la dimension concernée et on utilisera la dimension intrinsèque de l'image pour l'autre axe si elle existe. Sinon, on prendra la dimension de la zone de l'arrière-plan pour cet axe.</li>
  </ul>
- </dd>
-</dl>
+ </li>
+</ul>
 
 <div class="note">
-<p><strong>Note : </strong>Le dimensionnement des images d'arrière-plan qui sont des images vectorielles sans dimension ou proportion intrinsèque n'est pas implémenté par l'ensemble des navigateur. Attention à bien vérifier le résultat obtenu dans les différents navigateurs par rapport aux règles émises ci-avant.</p>
+<p><strong>Note :</strong> Le dimensionnement des images d'arrière-plan qui sont des images vectorielles sans dimension ou proportion intrinsèque n'est pas implémenté par l'ensemble des navigateur. Attention à bien vérifier le résultat obtenu dans les différents navigateurs par rapport aux règles émises ci-avant.</p>
 </div>
 
 <h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
@@ -258,7 +250,7 @@ background-size: unset;
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Scaling_background_images">Redimensionner les images d'arrière-plan</a></li>
- <li><a href="/fr/docs/Web/CSS/Redimensionnement_arrière-plans_SVG">Redimensionner les arrière-plans SVG</a></li>
+ <li><a href="/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Resizing_background_images">Redimensionner les images d'arrière-plan</a></li>
+ <li><a href="/fr/docs/Web/CSS/Scaling_of_SVG_backgrounds">Redimensionner les arrière-plans SVG</a></li>
  <li>{{cssxref("object-fit")}}</li>
 </ul>

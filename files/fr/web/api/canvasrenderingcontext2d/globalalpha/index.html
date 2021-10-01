@@ -31,7 +31,7 @@ translation_of: Web/API/CanvasRenderingContext2D/globalAlpha
 
 <h2 id="Exemples">Exemples</h2>
 
-<h3 id="Using_the_globalAlpha_property" name="Using_the_globalAlpha_property">Utilisation de la propriété <code>globalAlpha</code></h3>
+<h3 id="Using_the_globalAlpha_property">Utilisation de la propriété <code>globalAlpha</code></h3>
 
 <p>Il s'agit seulement d'un simple fragment de code utilisant la propriété <code>globalAlpha</code> pour dessiner deux rectangles semi-transparents.</p>
 
@@ -42,7 +42,7 @@ translation_of: Web/API/CanvasRenderingContext2D/globalAlpha
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js; highlight[4]">var canevas = document.getElementById('canevas');
+<pre class="brush: js">var canevas = document.getElementById('canevas');
 var ctx = canevas.getContext('2d');
 
 ctx.globalAlpha = 0.5;
@@ -56,10 +56,9 @@ ctx.fillRect(50, 50, 100, 100);
 
 <p>Modifiez le code ci-dessous et voyez vos modifications mises à jour en direct dans le canevas :</p>
 
-<div class="hidden">
-<h6 id="Playable_code" name="Playable_code">Playable code</h6>
+<h4 id="code_jouable">Code jouable</h4>
 
-<pre class="brush: html">&lt;canvas id="canevas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html hidden">&lt;canvas id="canevas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
   &lt;input id="modifier" type="button" value="Modifier" /&gt;
   &lt;input id="effacement" type="button" value="Effacement" /&gt;
@@ -74,7 +73,7 @@ ctx.fillStyle = 'red';
 ctx.fillRect(50, 50, 100, 100);&lt;/textarea&gt;
 </pre>
 
-<pre class="brush: js">var canevas = document.getElementById('canevas');
+<pre class="brush: js hidden">var canevas = document.getElementById('canevas');
 var ctx = canevas.getContext('2d');
 var zoneTexte = document.getElementById('code');
 var effacement = document.getElementById('effacement');
@@ -98,11 +97,10 @@ modifier.addEventListener('click', function() {
 zoneTexte.addEventListener('input', dessinerCanevas);
 window.addEventListener('load', dessinerCanevas);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 380) }}</p>
+<p>{{ EmbedLiveSample('code_jouable', 700, 380) }}</p>
 
-<h3 id="A_globalAlpha_example" name="A_globalAlpha_example">Un exemple de <code>globalAlpha</code></h3>
+<h3 id="A_globalAlpha_example">Un exemple de <code>globalAlpha</code></h3>
 
 <p>Dans cet exemple, un arrière-plan de quatre carrés de différentes couleurs est dessiné. Au dessus, se trouve un ensemble de cercles semi-transparents. La propriété globalAlpha est définie à 0,2, valeur qui sera utilisée pour toutes les formes à partir de ce point. Chaque étape de la boucle <code>for</code> dessine un ensemble de cercles de rayons croissants. Le résultat final est un dégradé radial. En superposant toujours plus de cercles les uns sur les autres, la transparence des cercles déjà dessinés est réduite. En augmentant le nombre d'étapes et, concrètement, en dessinant davantage de cercles, l'arrière-plan disparaitra complètement du centre de l'image.</p>
 
@@ -130,11 +128,9 @@ for (i = 0; i &lt; 7; i++){
 }
 </pre>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canevas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
-</div>
+<pre class="brush: html hidden">&lt;canvas id="canevas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
-<p>{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "https://mdn.mozillademos.org/files/232/Canvas_globalalpha.png")}}</p>
+<p>{{EmbedLiveSample("A_globalAlpha_example", "180", "180", "canvas_globalalpha.png")}}</p>
 
 <h2 id="Spécifications">Spécifications</h2>
 

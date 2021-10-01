@@ -39,7 +39,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/manifest-src
 
 <p>Une ou plusieurs sources peuvent être autorisées pour cette directive :</p>
 
-<pre class="syntaxbox notranslate">Content-Security-Policy: manifest-src &lt;source&gt;;
+<pre class="syntaxbox">Content-Security-Policy: manifest-src &lt;source&gt;;
 Content-Security-Policy: manifest-src &lt;source&gt; &lt;source&gt;;
 </pre>
 
@@ -53,11 +53,11 @@ Content-Security-Policy: manifest-src &lt;source&gt; &lt;source&gt;;
 
 <p>Soit cet en-tête CSP :</p>
 
-<pre class="brush: bash notranslate">Content-Security-Policy: manifest-src https://example.com/</pre>
+<pre class="brush: bash">Content-Security-Policy: manifest-src https://example.com/</pre>
 
 <p>Cet élément {{HTMLElement("link")}} sera bloqué et ne se chargera pas :</p>
 
-<pre class="brush: html notranslate">&lt;link rel="manifest" href="https://not-example.com/manifest"&gt;</pre>
+<pre class="brush: html">&lt;link rel="manifest" href="https://not-example.com/manifest"&gt;</pre>
 
 <h2 id="Spécifications">Spécifications</h2>
 

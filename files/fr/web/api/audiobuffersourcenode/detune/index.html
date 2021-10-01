@@ -16,7 +16,7 @@ translation_of: Web/API/AudioBufferSourceNode/detune
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="brush: js"><code class="language-js"><span class="keyword token">var</span> source <span class="operator token">=</span> contexteAudio<span class="punctuation token">.</span><span class="function token">createBufferSource<span class="punctuation token">(</span></span><span class="punctuation token">)</span><span class="punctuation token">;</span></code>
+<pre class="brush: js">var source = contexteAudio.createBufferSource();
 source.detune.value = 100; // valeur en cents</pre>
 
 <div class="note">
@@ -29,7 +29,7 @@ source.detune.value = 100; // valeur en cents</pre>
 
 <h2 id="Exemple">Exemple</h2>
 
-<pre class="brush: js;highlight[9]">var audioCtx = new AudioContext();
+<pre class="brush: js">var audioCtx = new AudioContext();
 
 var nbChan = 2;
 var nbFrames = audioCtx.sampleRate * 2.0;

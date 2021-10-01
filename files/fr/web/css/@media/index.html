@@ -1,29 +1,22 @@
 ---
 title: '@media'
 slug: Web/CSS/@media
-tags:
-  - CSS
-  - Reference
-  - Règle @
+browser-compat: css.at-rules.media
 translation_of: Web/CSS/@media
 ---
 <div>{{CSSRef}}</div>
 
-<p>La <a href="/fr/docs/Web/CSS/R%C3%A8gles_@">règle @</a> <strong><code>@media</code></strong> permet d'associer un ensemble d'instructions imbriquées (délimité par des accolades) avec une condition définie par une <a href="/fr/docs/Web/CSS/Media_queries">requête média</a>. La règle <code>@media</code> peut être utilisé au niveau le plus haut de la feuille de style et également <a href="/fr/docs/Web/CSS/Règles_@#Les_règles_de_groupe_conditionnelles">à l'intérieur d'un groupe de règles conditionnel</a>.</p>
+<p>La <a href="/fr/docs/Web/CSS/At-rule">règle @</a> <strong><code>@media</code></strong> permet d'appliquer une partie d'une feuille de styles en fonction du résultat d'une ou plusieurs <a href="/fr/docs/Web/CSS/Media_Queries">requêtes média (<i lang="en">media queries</i>)</a>. Grâce à cette règle, on peut indiquer une requête média et un ensemble de règles CSS qui s'appliquent uniquement si la requête média est vérifiée pour l'appareil, le contexte avec lequel le contenu est consulté.</p>
 
-<pre class="brush: css no-line-numbers">@media (max-width: 600px) {
-  .sidebar {
-    display: none;
-  }
-}</pre>
+<div class="note">
+  <p><strong>Note :</strong> Il est possible de manipuler la règle @ <code>@media</code> via le CSSOM (et JavaScript) grâce à l'interface <a href="/fr/docs/Web/API/CSSMediaRule"><code>CSSMediaRule</code></a>.</p>
+</div>
 
-<p>Il est possible de manipuler la règle @ <code>@media</code> via le CSSOM (et JavaScript) notamment grâce à l'interface {{domxref("CSSMediaRule")}}.</p>
+<h2 id="syntax">Syntaxe</h2>
 
-<h2 id="Syntaxe">Syntaxe</h2>
+<p>Une requête média (type <code>&lt;media-query&gt;</code>) est composée d'un type de média (optionnel) et/ou de différentes caractéristiques relatives au média. Une requête média peut être imbriquée dans une autre <a href="/fr/docs/Web/CSS/At-rule#les_r%c3%a8gles_de_groupe_conditionnelles">règle conditionnelle</a>.</p>
 
-<p>Une requête média (type <code>&lt;media-query&gt;</code>) est composée d'un type de média (optionnel) et/ou de différentes caractéristiques relatives au média. Une requête média peut être imbriquée dans une autre <a href="/fr/docs/Web/CSS/Règles_@#Les_règles_de_groupe_conditionnelles">règle conditionnelle</a>.</p>
-
-<pre class="brush: css no-line-numbers">/* Au niveau le plus haut du code */
+<pre class="brush: css">/* Au niveau le plus haut du code */
 @media screen and (min-width: 900px) {
   article {
     padding: 1rem 3rem;
@@ -40,17 +33,37 @@ translation_of: Web/CSS/@media
 }
 </pre>
 
-<p>Pour plus d'informations sur la syntaxe des requêtes média, voir <a href="/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries">Utiliser les requêtes média</a>.</p>
+<p>Pour plus d'informations sur la syntaxe des requêtes média, voir <a href="/fr/docs/Web/CSS/Media_Queries/Using_media_queries">Utiliser les requêtes média</a>.</p>
 
-<h3 id="Syntaxe_formelle">Syntaxe formelle</h3>
+<h2 id="description">Description</h2>
 
-{{csssyntax}}
+<h3 id="media_types">Types de média</h3>
 
-<h2 id="Les_caractéristiques_média">Les caractéristiques média</h2>
+<p>{{page("/fr/docs/Web/CSS/Media_Queries/Using_media_queries","media_types")}}</p>
 
-<p>{{page("/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries","Caractéristiques_média_(media_features)")}}</p>
+<h3 id="media_features">Caractéristiques de média</h3>
 
-<h2 id="Exemples">Exemples</h2>
+<p>{{page("/fr/docs/Web/CSS/Media_Queries/Using_media_queries","media_features")}}</p>
+
+<h2 id="accessibility_concerns">Accessibilité</h2>
+
+<p>Pour une meilleure interaction, notamment avec les personnes qui zooment sur une page pour accroître la taille du texte ou qui définissent une taille de police par défaut pour l'ensemble du navigateur, on utilisera l'unité <code><a href="/fr/docs/Web/CSS/length#em">em</a></code> comme valeur pour <a href="/fr/docs/Web/CSS/Media_Queries/Using_media_queries">les requêtes média</a> lorsqu'il faut utiliser une longueur (<a href="/fr/docs/Web/CSS/&lt;length&gt;"><code>&lt;length&gt;</code></a>).</p>
+
+<p>Les unités <code><a href="/fr/docs/Learn/CSS/Building_blocks/Values_and_units#longueur_et_taille">em</a></code> et <code><a href="/fr/docs/Learn/CSS/Building_blocks/Values_and_units#longueur_et_taille">px</a></code> sont toutes les deux valides mais <code><a href="/fr/docs/Learn/CSS/Building_blocks/Values_and_units#longueur_et_taille">em</a></code> s'adapte mieux quand la taille de la police du navigateur a été ajustée.</p>
+
+<p>On privilégiera, autant que possible, les requêtes média de la spécification de niveau 4 afin d'améliorer l'ergonomie. On pourra, par exemple, se baser sur <a href="/fr/docs/Web/CSS/@media/prefers-reduced-motion"><code>prefers-reduced-motion</code> afin de détecter si l'utilisateur souhaite minimiser les animations ou les déplacements</a>.</p>
+
+<h2 id="security">Sécurité</h2>
+
+<p>Les requêtes média fournissent des informations quant aux capacités de l'appareil avec lequel on navigue. L'ensemble de ces capacités peut être détourné afin de construire une empreinte qui identifie l'appareil ou le catégorise de façon non-désirée.</p>
+
+<p>Pour ces raisons, un navigateur peut choisir de mentir sur les valeurs renvoyées afin de contourner ce pistage. Ainsi, si la détection d'empreinte numérique est désactivée dans Firefox, la plupart des caractéristiques média renverront leurs valeurs par défaut afin d'éviter leur utilisation pour du pistage.</p>
+
+<h3 id="formal_syntax">Syntaxe formelle</h3>
+
+<p>{{csssyntax}}</p>
+
+<h2 id="examples">Exemples</h2>
 
 <pre class="brush: css">@media print {
   body { font-size: 10pt }
@@ -81,73 +94,19 @@ translation_of: Web/CSS/@media
 }
 </pre>
 
-<p>Pour plus d'exemples, voir <a href="/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries">Utiliser les requêtes média</a>.</p>
+<p>Pour plus d'exemples, voir <a href="/fr/docs/Web/CSS/Media_Queries/Using_media_queries">Utiliser les requêtes média</a>.</p>
 
-<h2 id="Accessibilité">Accessibilité</h2>
+<h2 id="specifications">Spécifications</h2>
 
-<p>Pour une meilleure interaction, notamment avec les personnes qui zooment sur une page pour accroître la taille du texte ou qui définissent une taille de police par défaut pour l'ensemble du navigateur, on utilisera l'unité <code><a href="/fr/docs/Web/CSS/length#em">em</a></code> comme valeur pour <a href="/fr/docs/Web/CSS/Requêtes_média/Utiliser_les_Media_queries">les requêtes média</a> lorsqu'il faut utiliser une longueur ({{cssxref("&lt;length&gt;")}}).</p>
+<p>{{Specifications}}</p>
 
-<p>Les unités <code><a href="/fr/Apprendre/CSS/Introduction_à_CSS/Values_and_units#Longueur_et_taille">em</a></code> et <code><a href="/fr/Apprendre/CSS/Introduction_à_CSS/Values_and_units#Longueur_et_taille">px</a></code> sont toutes les deux valides mais <code><a href="/fr/Apprendre/CSS/Introduction_à_CSS/Values_and_units#Longueur_et_taille">em</a></code> s'adapte mieux quand la taille de la police du navigateur a été ajustée.</p>
+<h2 id="browser_compatibility">Compatibilité des navigateurs</h2>
 
-<p>On privilégiera, autant que possible, les requêtes média de la spécification de niveau 4 afin d'améliorer l'ergonomie. On pourra, par exemple, se baser sur <a href="/fr/docs/Web/CSS/@media/prefers-reduced-motion"><code>prefers-reduced-motion</code> afin de détecter si l'utilisateur souhaite minimiser les animations ou les déplacements</a>.</p>
+<p>{{Compat}}</p>
 
-<h2 id="Sécurité">Sécurité</h2>
-
-<p>Les requêtes média fournissent des informations quant aux capacités de l'appareil avec lequel on navigue. L'ensemble de ces capacités peut être détourné afin de construire une empreinte qui identifie l'appareil ou le catégorise de façon indésirée.</p>
-
-<p>Pour ces raisons, un navigateur peut choisir de mentir sur les valeurs renvoyées afin de contourner ce pistage. Ainsi, si la détection d'empreinte numérique est désactivée dans Firefox, la plupart des caractéristiques média renverront leurs valeurs par défaut afin d'éviter leur utilisation pour du pistage.</p>
-
-<h2 id="Spécifications">Spécifications</h2>
-
-<table class="standard-table">
- <thead>
-  <tr>
-   <th scope="col">Spécification</th>
-   <th scope="col">Commentaires</th>
-   <th scope="col">Retours</th>
-  </tr>
- </thead>
- <tbody>
-  <tr>
-   <td>{{SpecName('CSS5 Media Queries', '#at-media5', '@media')}}</td>
-   <td>Réintègre <code>light-level</code>, <code>inverted-colors</code> et les requêtes média personnalisées qui avaient été retirées la spécification de niveau 4.<br>
-    Ajout des caractéristiques média <code>prefers-reduced-motion</code>, <code>prefers-reduced-transparency</code>, <code>prefers-contrast</code> et <code>prefers-color-scheme</code>.</td>
-   <td><a href="https://github.com/w3c/csswg-drafts/issues"><em>Issues</em> GitHub pour les brouillons du groupe de travail CSS (en anglais)</a></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Conditional', '#at-media', '@media')}}</td>
-   <td>Définition de la syntaxe de base pour la règle <code>@media</code>.</td>
-   <td><a href="https://github.com/w3c/csswg-drafts/issues"><em>Issues</em> GitHub pour les brouillons du groupe de travail CSS (en anglais)</a></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS4 Media Queries', '#media', '@media')}}</td>
-   <td>
-    <p>Ajout des caractéristiques média <code>scripting</code>, <code>pointer</code>, <code>hover</code>, <code>update</code>, <code>overflow-block</code> et <code>overflow-inline</code>.<br>
-     Dépréciation de l'ensemble des types de média à l'exception de <code>screen</code>, <code>print</code>, <code>speech</code> et <code>all</code>.<br>
-     La syntaxe est rendue plus flexible avec l'ajout (entre autres) du mot-clé <code>or</code>.</p>
-   </td>
-   <td><a href="https://github.com/w3c/csswg-drafts/issues"><em>Issues</em> GitHub pour les brouillons du groupe de travail CSS (en anglais)</a></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS3 Media Queries', '#media0', '@media')}}</td>
-   <td></td>
-   <td></td>
-  </tr>
-  <tr>
-   <td>{{SpecName('CSS2.1', 'media.html#at-media-rule', '@media')}}</td>
-   <td>Définition initiale.</td>
-   <td></td>
-  </tr>
- </tbody>
-</table>
-
-<h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
-
-<p>{{Compat("css.at-rules.media")}}</p>
-
-<h2 id="Voir_aussi">Voir aussi</h2>
+<h2 id="see_also">Voir aussi</h2>
 
 <ul>
- <li><a href="/fr/docs/Web/CSS/Media_queries">Les requêtes média</a></li>
- <li>L'interface CSSOM {{domxref("CSSMediaRule")}} qui est associée avec cette règle @.</li>
+  <li><a href="/fr/docs/Web/CSS/Media_Queries/Using_media_queries">Utiliser les requêtes média</a></li>
+ <li>L'interface CSSOM <a href="/fr/docs/Web/API/CSSMediaRule"><code>CSSMediaRule</code></a> qui est associée avec cette règle @.</li>
 </ul>

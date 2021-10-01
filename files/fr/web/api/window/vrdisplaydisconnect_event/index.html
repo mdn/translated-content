@@ -40,14 +40,14 @@ translation_of: Web/API/Window/vrdisplaydisconnect_event
 
 <p>Vous pouvez utiliser l'événement <code>vrdisplaydisconnect</code> dans une méthode <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> :</p>
 
-<pre class="brush: js notranslate">window.addEventListener('vrdisplaydisconnect', function() {
+<pre class="brush: js">window.addEventListener('vrdisplaydisconnect', function() {
   info.textContent = 'Affichage déconnecté';
   reportDisplays();
 });</pre>
 
 <p>Ou utilisez la propriété du gestionnaire d'événements <code><a href="/en-US/docs/Web/API/Window/onvrdisplaydisconnect">onvrdisplaydisconnect</a></code> :</p>
 
-<pre class="brush: js notranslate">window.onvrdisplaydisconnect = function() {
+<pre class="brush: js">window.onvrdisplaydisconnect = function() {
   info.textContent = 'Affichage déconnecté';
   reportDisplays();
 );</pre>

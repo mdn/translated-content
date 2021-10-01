@@ -11,7 +11,7 @@ translation_of: Web/API/SubtleCrypto/digest
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox notranslate">const digest = <em>crypto</em><code>.subtle.digest(<em>algorithm</em>, <em>data</em>)</code>;
+<pre class="syntaxbox">const digest = <em>crypto</em><code>.subtle.digest(<em>algorithm</em>, <em>data</em>)</code>;
 </pre>
 
 <h3 id="Paramètres">Paramètres</h3>
@@ -43,8 +43,8 @@ translation_of: Web/API/SubtleCrypto/digest
 
 <p>Cet algorithme est spécifié dans <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</a>, section 6.1, et produit un résultat de 160 bits de long.</p>
 
-<div class="blockIndicator warning">
-<p><strong>Avertissement:</strong> Cet algorithme est maintenant considérer comme vulnérable et ne doit pas être utilisé pour des applications cryptographiques.</p>
+<div class="warning">
+<p><strong>Attention :</strong> Cet algorithme est maintenant considérer comme vulnérable et ne doit pas être utilisé pour des applications cryptographiques.</p>
 </div>
 
 <h3 id="SHA-256">SHA-256</h3>
@@ -59,8 +59,8 @@ translation_of: Web/API/SubtleCrypto/digest
 
 <p>Cet algorithme est spécifié dans <a href="https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf">FIPS 180-4</a>, section 6.4, et produit un résultat de 512 bits de long.</p>
 
-<div class="blockIndicator note">
-<p>Indice: Si vous cherchez à créer un condensé pour authentifié un message (<a href="/fr/docs/Glossary/HMAC">HMAC</a>), vous aurez plutôt besoin de <a href="/en-US/docs/Web/API/SubtleCrypto/sign#HMAC">SubtleCrypto.sign()</a>.</p>
+<div class="note">
+<p><strong>Note :</strong> Si vous cherchez à créer un condensé pour authentifié un message (<a href="/fr/docs/Glossary/HMAC">HMAC</a>), vous aurez plutôt besoin de <a href="/en-US/docs/Web/API/SubtleCrypto/sign#HMAC">SubtleCrypto.sign()</a>.</p>
 </div>
 
 <h2 id="Exemples">Exemples</h2>
@@ -69,7 +69,7 @@ translation_of: Web/API/SubtleCrypto/digest
 
 <p>Cet exemple encode un message, puis calcule le condensé avec SHA-256, enfin affiche la longueur du résultat.</p>
 
-<pre class="brush: js notranslate">const text = 'Un obscur message venant du le système S-K, votre majesté. Ses habitants le nomment la planète Terre.';
+<pre class="brush: js">const text = 'Un obscur message venant du le système S-K, votre majesté. Ses habitants le nomment la planète Terre.';
 
 async function digestMessage(message) {
   const encoder = new TextEncoder();
@@ -86,7 +86,7 @@ console.log(digestBuffer.byteLength);
 
 <p>Le condensé est retourné sous forme d'un <code>ArrayBuffer</code>, mais la comparaison et l'affichage se fait souvent avec des chaînes hexadécimales. Cet exemple calcule un condensé puis converti l'<code>ArrayBuffer</code> vers une chaîne hexadécimale.</p>
 
-<pre class="brush: js notranslate">const text = 'Un obscur message venant du le système S-K, votre majesté. Ses habitants le nomment la planète Terre.';
+<pre class="brush: js">const text = 'Un obscur message venant du le système S-K, votre majesté. Ses habitants le nomment la planète Terre.';
 
 async function digestMessage(message) {
   const msgUint8 = new TextEncoder().encode(message);                           // encode comme (utf-8) Uint8Array
@@ -119,12 +119,10 @@ console.log(digestHex);
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 
-
-
 <p>{{Compat("api.SubtleCrypto.digest")}}</p>
 
-<div class="blockIndicator note">
-<p> Dans Chrome 60, une fonctionnalité a été ajoutée qui désactive <strong>crypto.subtle</strong> pour les connexions non TLS.</p>
+<div class="note">
+<p><strong>Note :</strong> Dans Chrome 60, une fonctionnalité a été ajoutée qui désactive <strong>crypto.subtle</strong> pour les connexions non TLS.</p>
 </div>
 
 <h2 id="Voir_aussi">Voir aussi</h2>

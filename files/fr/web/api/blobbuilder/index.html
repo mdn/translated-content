@@ -12,7 +12,9 @@ translation_of: Web/API/BlobBuilder
 
 <p>L'interface <code>BlobBuilder</code> fournit une manière simple de construire des objets {{domxref("Blob")}}. Il suffit de créer un <code>BlobBuilder</code> et de lui ajouter des données  en appellant la méthode {{manch("append")}}. Une fois finalisé, l'appel à la méthode {{manch("getBlob")}} permet de récupérer un {{domxref("Blob")}} contenant les données envoyées au constructeur dudit Blob.</p>
 
-<div class="note"><strong>Note:</strong> L'interface <code>BlobBuilder</code> est désormais déconseillé (deprecated) au profit du nouveau constructeur {{domxref('Blob')}}.</div>
+<div class="note">
+  <p><strong>Note:</strong> L'interface <code>BlobBuilder</code> est désormais déconseillé (deprecated) au profit du nouveau constructeur {{domxref('Blob')}}.</p>
+</div>
 
 <h2 id="Aperçu_des_méthodes">Aperçu des méthodes</h2>
 
@@ -57,7 +59,7 @@ void append(
 );
 </pre>
 
-<h6 id="Paramètres">Paramètres</h6>
+<h4 id="Paramètres">Paramètres</h4>
 
 <dl>
  <dt><code>data</code></dt>
@@ -75,14 +77,14 @@ void append(
 );
 </pre>
 
-<h6 id="Paramètres_2">Paramètres</h6>
+<h4 id="Paramètres_2">Paramètres</h4>
 
 <dl>
  <dt>contentType {{optional_inline}}</dt>
  <dd>Le type MIME des données  retournées par le {{domxref("Blob")}}. Ce sera la valeur de la propriété 'type' de l'objet <code>Blob</code>.</dd>
 </dl>
 
-<h6 id="Valeur_de_retour">Valeur de retour</h6>
+<h4 id="Valeur_de_retour">Valeur de retour</h4>
 
 <p>Un objet {{domxref("Blob")}} contenant toutes les données passées en argument de chaque appel à  {{manch("append")}} depuis la création du <code>BlobBuilder</code>. Cela remet aussi à zéro (reset) le <code>BlobBuilder</code> de tel sorte que le prochain appel à {{manch("append")}} démarrera la création d'un nouveau blob vierge.</p>
 
@@ -96,7 +98,7 @@ void append(
 );
 </pre>
 
-<h6 id="Paramètres_3">Paramètres</h6>
+<h4 id="Paramètres_3">Paramètres</h4>
 
 <dl>
  <dt>name</dt>
@@ -105,7 +107,7 @@ void append(
  <dd>Le type MIME des données  retournées par le {{domxref("File")}}. Ce sera la valeur de la propriété 'type' de l'objet <code>File</code>.</dd>
 </dl>
 
-<h6 id="Valeur_deretour">Valeur deretour</h6>
+<h4 id="Valeur_deretour">Valeur deretour</h4>
 
 <p>Un objet {{domxref("File")}}.</p>
 

@@ -58,7 +58,7 @@ translation_of: Web/HTTP/Headers/Feature-Policy
  <dt>{{httpheader('Feature-Policy/autoplay','autoplay')}}</dt>
  <dd>現在の文書で {{domxref("HTMLMediaElement")}} インターフェイスがメディアの自動再生をリクエストすることを無効にするかどうかを制御します。このポリシーが有効であり、ユーザーによる操作がなかった場合、 {{domxref("HTMLMediaElement.play()")}} が返す {{jsxref("Promise")}} が {{domxref("DOMException")}} で拒否されます。 {{HTMLELement("audio")}} および {{HTMLElement("video")}} 要素の <code>autoplay</code> 属性は無視されます。</dd>
  <dt>{{httpheader('Feature-Policy/battery','battery')}}</dt>
- <dd><a href="/docs/Web/API/Battery_Status_API">Battery Status API</a> の使用を許可するかどうかを制御します。このポリシーが無効になっている場合、 {{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}} が返す {{JSxRef("Promise")}} は {{Exception("NotAllowedError")}} の {{DOMxRef("DOMException")}} で拒否されます。</dd>
+ <dd><a href="/ja/docs/Web/API/Battery_Status_API">Battery Status API</a> の使用を許可するかどうかを制御します。このポリシーが無効になっている場合、 {{DOMxRef("Navigator.getBattery","Navigator.getBattery()")}} が返す {{JSxRef("Promise")}} は {{Exception("NotAllowedError")}} の {{DOMxRef("DOMException")}} で拒否されます。</dd>
  <dt>{{httpheader('Feature-Policy/camera', 'camera')}}</dt>
  <dd>現在の文書が動画入力機器を使用することを許可するかどうかを制御します。このポリシーが無効であれば、 {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} が返す {{jsxref("Promise")}} が {{Exception("NotAllowedError")}} の {{DOMxRef("DOMException")}} で拒否されます。</dd>
  <dt>{{HTTPHeader('Feature-Policy/display-capture', 'display-capture')}}</dt>

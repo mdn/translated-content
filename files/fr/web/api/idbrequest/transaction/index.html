@@ -7,7 +7,9 @@ translation_of: Web/API/IDBRequest/transaction
 
 <p>La propriété <strong><code>transaction</code></strong> de l'interface IDBRequest renvoie la {{domxref("IDBTransaction","transaction")}} dans laquelle on fait la requête.La propriètè peut renvoiyer <code>null</code> si requête se fait sans transaction, comme un objet IDBRequest renvoyé par {{domxref("IDBFactory.open")}} dans ce cas on est juste connecté à la base de données.</p>
 
-<p class="note"> Durant la gestion d'un événement {{domxref("IDBOpenDBRequest.onupgradeneeded", "upgradeneeded")}} qui met à jour la version de la base de données, la propriété <strong><code>transaction</code></strong> doit être une {{domxref("IDBTransaction","transaction")}} ouverte en {{domxref("IDBTransaction.mode", "mode")}} <code>"versionchange"</code>, on peut alors accéder aux {{domxref("IDBObjectStore","magasins d'objets")}} et {{domxref("IDBIndex","index")}} ou annulé la mise à niveau. Après quoi, la propriété <strong><code>transaction</code></strong> renverra encore <code>null</code>.</p>
+<div class="note">
+  <p><strong>Note :</strong> Durant la gestion d'un événement {{domxref("IDBOpenDBRequest.onupgradeneeded", "upgradeneeded")}} qui met à jour la version de la base de données, la propriété <strong><code>transaction</code></strong> doit être une {{domxref("IDBTransaction","transaction")}} ouverte en {{domxref("IDBTransaction.mode", "mode")}} <code>"versionchange"</code>, on peut alors accéder aux {{domxref("IDBObjectStore","magasins d'objets")}} et {{domxref("IDBIndex","index")}} ou annulé la mise à niveau. Après quoi, la propriété <strong><code>transaction</code></strong> renverra encore <code>null</code>.</p>
+</div>
 
 <p>{{AvailableInWorkers}}</p>
 
@@ -109,5 +111,5 @@ openRequest.onsuccess = function() {
  <li>Setting a range of keys: {{domxref("IDBKeyRange")}}</li>
  <li>Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}</li>
  <li>Using cursors: {{domxref("IDBCursor")}}</li>
- <li>Reference example: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+ <li>Reference example: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>

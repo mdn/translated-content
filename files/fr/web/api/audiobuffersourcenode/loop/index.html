@@ -19,7 +19,7 @@ translation_of: Web/API/AudioBufferSourceNode/loop
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="brush: js;highlight[2]">var source = audioCtx.createBufferSource();
+<pre class="brush: js">var source = audioCtx.createBufferSource();
 source.loop = true;
 </pre>
 
@@ -34,10 +34,10 @@ source.loop = true;
 <p>Dans cet exemple, la fonction {{domxref("AudioContext.decodeAudioData")}} est utilisée pour décoder une piste audio et la placer dans un {{domxref("AudioBufferSourceNode")}}. Les boutons mis à disposition permettent de lire et d'arrêter la lecture audio, et un slider est utilisé pour changer la valeur de <code>playbackRate</code> en temps réel. Quand la lecture est terminée, elle boucle.</p>
 
 <div class="note">
-<p><strong>Note</strong>: Vous pouvez <a class="external external-icon" href="http://mdn.github.io/decode-audio-data/">essayer un exemple live</a> (or <a class="external external-icon" href="https://github.com/mdn/decode-audio-data">voir la source</a>.)</p>
+<p><strong>Note :</strong> Vous pouvez <a href="http://mdn.github.io/decode-audio-data/">essayer un exemple live</a> (or <a href="https://github.com/mdn/decode-audio-data">voir la source</a>.)</p>
 </div>
 
-<pre class="brush: js;highlight[17]">function getData() {
+<pre class="brush: js">function getData() {
   source = audioCtx.createBufferSource();
   request = new XMLHttpRequest();
 

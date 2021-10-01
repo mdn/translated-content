@@ -11,7 +11,7 @@ translation_of: Web/JavaScript/Reference/Global_Objects/Promise/catch
 ---
 <div>{{JSRef}}</div>
 
-<p><code><strong>catch()</strong></code> メソッドは <code>Promise</code> を返しますが、拒絶された場合のみ扱います。 {{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}} の呼び出しと同じ動作をします (実際、 <code>obj.catch(onRejected)</code> の呼び出しは内部的に <code>obj.then(undefined, onRejected)</code> を呼び出しています)。つまり、返値を <code>undefined</code> にフォールバックしたい場合でも、 <code>onRejected</code> 関数を提供する必要があります。 - 例えば、 <code>obj.catch(() =&gt; {})</code> のようにします。</p>
+<p><code><strong>catch()</strong></code> メソッドは <code>Promise</code> を返しますが、拒否された場合のみ扱います。 {{jsxref("Promise.then", "Promise.prototype.then(undefined, onRejected)")}} の呼び出しと同じ動作をします (実際、 <code>obj.catch(onRejected)</code> の呼び出しは内部的に <code>obj.then(undefined, onRejected)</code> を呼び出しています)。つまり、返値を <code>undefined</code> にフォールバックしたい場合でも、 <code>onRejected</code> 関数を提供する必要があります。 - 例えば、 <code>obj.catch(() =&gt; {})</code> のようにします。</p>
 
 <div>{{EmbedInteractiveExample("pages/js/promise-catch.html")}}</div>
 
@@ -33,9 +33,9 @@ p.catch(function(<var>reason</var>) {
  <dd><code>Promise</code> が失敗した時に呼び出される {{jsxref("Function")}} です。この関数は一つの引数を持ちます。
  <dl>
   <dt><code><var>reason</var></code></dt>
-  <dd>拒絶された理由です。</dd>
+  <dd>拒否された理由です。</dd>
  </dl>
- <code>catch()</code> で返される Promise は、 <code><var>onRejected</var></code> がエラーを発生させた場合、または返される Promise それ自体が拒絶された場合は、拒絶となります。それ以外の場合は、解決となります。</dd>
+ <code>catch()</code> で返される Promise は、 <code><var>onRejected</var></code> がエラーを発生させた場合、または返される Promise それ自体が拒否された場合は、拒否となります。それ以外の場合は、解決となります。</dd>
 </dl>
 
 <h3 id="Return_value" name="Return_value">返値</h3>
@@ -76,7 +76,7 @@ Promise.resolve().catch(function XXX(){});
 
 <h2 id="Description" name="Description">解説</h2>
 
-<p><code>catch</code> メソッドは複合したプロミスの複合のエラー処理に使用されます。これは {{jsxref("Promise")}} を返しますので、姉妹メソッドである {{jsxref("Promise.then", "then()")}} と同様の方法で<a href="/en-US/docs/Web/JavaScript/Guide/Using_promises#Chaining_after_a_catch">チェーン可能</a>です。</p>
+<p><code>catch</code> メソッドは複合したプロミスの複合のエラー処理に使用されます。これは {{jsxref("Promise")}} を返しますので、姉妹メソッドである {{jsxref("Promise.then", "then()")}} と同様の方法で<a href="/ja/docs/Web/JavaScript/Guide/Using_promises#Chaining_after_a_catch">チェーン可能</a>です。</p>
 
 <h2 id="Examples" name="Examples">例</h2>
 

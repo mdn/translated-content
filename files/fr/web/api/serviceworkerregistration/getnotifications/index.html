@@ -15,11 +15,11 @@ translation_of: Web/API/ServiceWorkerRegistration/getNotifications
 ---
 <div>{{APIRef("Service Workers API")}}</div>
 
-<p><span class="seoSummary">La méthode <strong><code>getNotifications()</code></strong> de l'interface {{domxref ("ServiceWorkerRegistration")}} renvoie une liste des notifications dans l'ordre dans lequel elles ont été créées à partir de l'origine actuelle via l'enregistrement actuel du service worker. Les origines peuvent avoir de nombreuses inscriptions de service worker actives mais de portée différente. Les notifications créées par un service worker sur la même origine ne seront pas disponibles pour les autres services workers actifs sur la même origine.</span></p>
+<p>La méthode <strong><code>getNotifications()</code></strong> de l'interface {{domxref ("ServiceWorkerRegistration")}} renvoie une liste des notifications dans l'ordre dans lequel elles ont été créées à partir de l'origine actuelle via l'enregistrement actuel du service worker. Les origines peuvent avoir de nombreuses inscriptions de service worker actives mais de portée différente. Les notifications créées par un service worker sur la même origine ne seront pas disponibles pour les autres services workers actifs sur la même origine.</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox notranslate"><em>s​erviceWorkerRegistration</em>.getNotifications(<em>options</em>)
+<pre class="syntaxbox"><em>s​erviceWorkerRegistration</em>.getNotifications(<em>options</em>)
 .then(function(<em>notificationsList</em>) { ... })</pre>
 
 <h3 id="Paramétres">Paramétres</h3>
@@ -39,7 +39,7 @@ translation_of: Web/API/ServiceWorkerRegistration/getNotifications
 
 <h2 id="Exemple">Exemple</h2>
 
-<pre class="brush: js notranslate">navigator.serviceWorker.register('sw.js')
+<pre class="brush: js">navigator.serviceWorker.register('sw.js')
 
 const options = { tag: 'user_alerts' }
 

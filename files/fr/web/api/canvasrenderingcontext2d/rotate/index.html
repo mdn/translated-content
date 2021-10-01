@@ -18,7 +18,7 @@ translation_of: Web/API/CanvasRenderingContext2D/rotate
 <pre class="syntaxbox">void <var><em>ctx</em>.rotate(angle);</var>
 </pre>
 
-<p><img alt="" class="internal" src="https://mdn.mozillademos.org/files/233/Canvas_grid_rotate.png" style="float: right;"></p>
+<p><img alt="" src="canvas_grid_rotate.png"></p>
 
 <h3 id="Paramètres">Paramètres</h3>
 
@@ -42,7 +42,7 @@ translation_of: Web/API/CanvasRenderingContext2D/rotate
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js; highlight:[4]">var canvas = document.getElementById('canvas');
+<pre class="brush: js">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 ctx.rotate(45 * Math.PI / 180);
@@ -54,10 +54,9 @@ ctx.setTransform(1, 0, 0, 1, 0, 0);
 
 <p>Modifiez le code ci-dessous et voyez vos changements mis à jour en temps réel dans le canevas:</p>
 
-<div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
+<h4 id="code_jouable">Code jouable</h4>
 
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
   &lt;input id="edit" type="button" value="Edit" /&gt;
   &lt;input id="reset" type="button" value="Reset" /&gt;
@@ -68,7 +67,7 @@ ctx.fillRect(70,0,100,30);
 ctx.setTransform(1, 0, 0, 1, 0, 0);&lt;/textarea&gt;
 </pre>
 
-<pre class="brush: js">var canvas = document.getElementById("canvas");
+<pre class="brush: js hidden">var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 var textarea = document.getElementById("code");
 var reset = document.getElementById("reset");
@@ -92,9 +91,8 @@ edit.addEventListener("click", function() {
 textarea.addEventListener("input", drawCanvas);
 window.addEventListener("load", drawCanvas);
 </pre>
-</div>
 
-<p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
+<p>{{ EmbedLiveSample('code_jouable', 700, 360) }}</p>
 
 <h2 id="Spécifications">Spécifications</h2>
 

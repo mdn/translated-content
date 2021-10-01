@@ -28,9 +28,8 @@ translation_of: Web/API/IntersectionObserver/thresholds
 
 <p>Si aucune option <code>threshold</code> n'est fournie lors de l'instanciation avec <code>IntersectionObserver()</code>, la valeur par défaut de <code>thresholds</code> est définie à <code>[0]</code>.</p>
 
-<div class="notecard warning">
-  <p><b>Attention !</b></p>
-  <p>Bien que l'objet d'<code>options</code> qu'on peut spécifier à la création d'un <a href="/fr/docs/Web/API/IntersectionObserver"><code>IntersectionObserver</code></a> possède une propriété champ nommée <a href="/fr/docs/Web/API/IntersectionObserver/IntersectionObserver"><code>threshold</code></a>, cette propriété-ci s'appelle <code>thresholds</code> (avec un « s » supplémentaire donc). <em>Cela peut porter à confusion</em>. Si vous utilisez <code>thresholds</code> par erreur comme nom pour la propriété de l'objet <code>options</code>, le tableau porté par <code>thresholds</code> va se retrouver égal à <code>[0.0]</code>, ce qui n'est probablement pas ce à quoi vous vous attendiez. Le déboguage n'en sera que plus chaotique.</p>
+<div class="warning">
+  <p><strong>Attention :</strong> Bien que l'objet d'<code>options</code> qu'on peut spécifier à la création d'un <a href="/fr/docs/Web/API/IntersectionObserver"><code>IntersectionObserver</code></a> possède une propriété champ nommée <a href="/fr/docs/Web/API/IntersectionObserver/IntersectionObserver"><code>threshold</code></a>, cette propriété-ci s'appelle <code>thresholds</code> (avec un « s » supplémentaire donc). <em>Cela peut porter à confusion</em>. Si vous utilisez <code>thresholds</code> par erreur comme nom pour la propriété de l'objet <code>options</code>, le tableau porté par <code>thresholds</code> va se retrouver égal à <code>[0.0]</code>, ce qui n'est probablement pas ce à quoi vous vous attendiez. Le déboguage n'en sera que plus chaotique.</p>
 </div>
 
 <h2 id="specifications">Spécifications</h2>

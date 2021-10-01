@@ -15,28 +15,28 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content
 ---
 <div>{{HTTPSidebar}}</div>
 
-<p><span class="seoSummary">La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <code><strong>block-all-mixed-content</strong></code> bloque le chargement de ressources via HTTP lorsque la page utilise HTTPS.</span></p>
+<p>La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) <code><strong>block-all-mixed-content</strong></code> bloque le chargement de ressources via HTTP lorsque la page utilise HTTPS.</p>
 
 <p>Toutes les requêtes vers des <a href="/fr/docs/Sécurité/MixedContent">contenus mixtes</a> sont alors bloquées, y compris les ressources actives et passives. Cela s'applique aussi aux documents {{HTMLElement("iframe")}}, assurant que la page est complètement protégée contre les contenus mixtes.</p>
 
-<div class="blockIndicator note">
-<p>Note : La directive {{CSP("upgrade-insecure-requests")}} est évaluée avant <code>block-all-mixed-content</code>. Si elle est définie, alors <code>block-all-mixed-content</code> n'est pas nécessaire, à moins que vous souhaitiez forcer HTTPS sur les anciens navigateurs qui ne le font pas après une redirection vers HTTP.</p>
+<div class="note">
+<p><strong>Note :</strong> La directive {{CSP("upgrade-insecure-requests")}} est évaluée avant <code>block-all-mixed-content</code>. Si elle est définie, alors <code>block-all-mixed-content</code> n'est pas nécessaire, à moins que vous souhaitiez forcer HTTPS sur les anciens navigateurs qui ne le font pas après une redirection vers HTTP.</p>
 </div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox notranslate">Content-Security-Policy: block-all-mixed-content;</pre>
+<pre class="syntaxbox">Content-Security-Policy: block-all-mixed-content;</pre>
 
 <h2 id="Exemples">Exemples</h2>
 
-<pre class="notranslate">Content-Security-Policy: block-all-mixed-content;
+<pre>Content-Security-Policy: block-all-mixed-content;
 
 &lt;meta http-equiv="Content-Security-Policy" content="block-all-mixed-content"&gt;
 </pre>
 
 <p>Pour interdire l'usage de HTTP de manière plus fine, vous pouvez aussi configurer individuellement chaque directive sur <code>https:</code>. Par exemple, pour interdire les images HTTP non sécurisées :</p>
 
-<pre class="notranslate">Content-Security-Policy: img-src https:</pre>
+<pre>Content-Security-Policy: img-src https:</pre>
 
 <h2 id="Spécifications">Spécifications</h2>
 

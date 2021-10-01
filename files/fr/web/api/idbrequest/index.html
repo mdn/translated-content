@@ -64,7 +64,7 @@ translation_of: Web/API/IDBRequest
 
 <p>Dans l'exemple suivant, on ouvre une base de données et on fait une requête. Les gestionnaires d'événement <code>{{domxref("IDBRequest.onsuccess","onsuccess")}}</code> et <code>{{domxref("IDBRequest","onerror")}}</code> sont inclus. Pour un exemple de travail complet, voir notre application <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">voir l'exemple en direct</a>).</p>
 
-<pre class="brush: js notranslate">var db;
+<pre class="brush: js">var db;
 
 // Ouvre une base de données.
 var DBOpenRequest = window.indexedDB.open("toDoList", 4);
@@ -104,7 +104,7 @@ DBOpenRequest.onsuccess = function(event) {
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilité avec les navigateurs</h2>
+<h2 id="Browser_compatibility">Compatibilité avec les navigateurs</h2>
 
 <div>
 <div>
@@ -125,5 +125,5 @@ DBOpenRequest.onsuccess = function(event) {
  <li>Définir un intervalle de clés: {{domxref("IDBKeyRange")}}</li>
  <li>Récupérer et modifier vos données: {{domxref("IDBObjectStore")}}</li>
  <li>utiliser les curseurs: {{domxref("IDBCursor")}}</li>
- <li>Exemple de référence: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+ <li>Exemple de référence: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>

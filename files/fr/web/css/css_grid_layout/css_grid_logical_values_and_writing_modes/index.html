@@ -42,7 +42,7 @@ original_slug: >-
 
 <p>Cela peut devenir un problème lorsqu'on développe un site qui doit fonctionner avec plusieurs langues dont certaines sont écrites de droite à gauche et non de gauche à droite. Les navigateurs savent plutôt bien gérer les différentes directions d'écriture. Dans l'exemple qui suit, on a deux paragraphes. Pour le deuxième, aucune propriété {{cssxref("text-align")}} n'est utilisée, alors que pour le second, on utilise <code>text-align</code> avec <code>left</code> et on ajoute <code>dir="rtl"</code> sur l'élément HTML ce qui a pour effet de changer la direction d'écriture. On peut voir que, dans le second paragraphe, la direction change et le texte est écrit de droite à gauche. Dans le premier cependant, avec <code>text-align value: left</code>, l'alignement reste à gauche.</p>
 
-<p><img alt="A simple example of text direction." src="https://mdn.mozillademos.org/files/14733/8_direction_simple_example.png" style="height: 354px; width: 1136px;"></p>
+<p><img alt="A simple example of text direction." src="8_direction_simple_example.png"></p>
 
 <p>Cela illustre un problème fréquent avec les propriétés et valeurs physiques en CSS : elles empêchent le navigateur de passer correctement d'un mode d'écriture à l'autre.</p>
 
@@ -54,7 +54,7 @@ original_slug: >-
 
 <p>Lorsqu'on commence à travailler avec les propriétés logiques plutôt qu'avec les propriétés physiques, on cesse de voir le monde comme un espace qui va de gauche à droite et de haut en bas. Il faut de nouveaux axes de références : l'axe de bloc (<em>block axis</em> en anglais) et l'axe en ligne (<em>inline axis</em>). Le premier est l'axe orthogonal au sens d'écriture et le second est l'axe dans lequel on écrit. Ces axes <em>logiques</em> sont très utiles et on comprend mieux leurs rôles sur la grille.</p>
 
-<p><img alt="An image showing the default direction of the Block and Inline Axes." src="https://mdn.mozillademos.org/files/14735/8-horizontal-tb.png" style="height: 256px; width: 500px;"></p>
+<p><img alt="An image showing the default direction of the Block and Inline Axes." src="8-horizontal-tb.png"></p>
 
 <h2 id="Les_modes_d'écriture_CSS">Les modes d'écriture CSS</h2>
 
@@ -74,9 +74,7 @@ original_slug: >-
 
 <p>Sur le Web, c'est la valeur <code>horizontal-tb</code> qui est la valeur par défaut pour le texte. C'est dans cette direction que vous lisez cet article. Les autres valeurs changeront la façon dont le texte est écrit sur le document et correspondent aux modes d'écriture utilisés dans d'autres langues. Dans l'exemple qui suit, on a deux paragraphes, le premier utilise la valeur par défaut <code>horizontal-tb</code> et le second utilise la valeur <code>vertical-rl</code>. Dans ce deuxième mode, le texte est toujours écrit de gauche à droite mais la direction du texte est verticale. Dans ce deuxième paragraphe, l'axe en ligne (<em>inline</em>) est donc l'axe vertical.</p>
 
-<div id="writing_1">
-<div class="hidden">
-<pre class="brush: css">.wrapper &gt; p {
+<pre class="brush: css hidden">.wrapper &gt; p {
   border: 2px solid #ffa94d;
   border-radius: 5px;
   background-color: #ffd8a8;
@@ -86,7 +84,6 @@ original_slug: >-
   max-width: 300px;
 }
 </pre>
-</div>
 
 <pre class="brush: html">&lt;div class="wrapper"&gt;
   &lt;p style="writing-mode: horizontal-tb"&gt;Mon mode d'écriture est celui par défaut &lt;code&gt;horizontal-tb&lt;/code&gt;&lt;/p&gt;
@@ -94,18 +91,17 @@ original_slug: >-
 &lt;/div&gt;
 </pre>
 
-<p>{{EmbedLiveSample('writing_1', '500', '420')}}</p>
-</div>
+<p>{{EmbedLiveSample("writing-mode", '500', '420')}}</p>
 
 <h2 id="La_gestion_des_modes_d'écriture_avec_une_grille">La gestion des modes d'écriture avec une grille</h2>
 
 <p>Si on reprend l'exemple avec la grille, on comprend mieux l'effet du changement du mode d'écriture qui change les axes logiques.</p>
 
+<h3 id="Mode_d'écriture_par_défaut">Mode d'écriture par défaut</h3>
+
 <p>Dans le prochain exemple, la grille possède trois colonnes et deux lignes. Cela signifie qu'il y a trois pistes qui traversent l'axe de bloc. Avec le mode d'écriture par défaut, la grille commence par placer les objets en haut à gauche  en remplissant les trois cellules sur la première ligne avant de passer à la suivante, en formant une nouvelle ligne, etc.</p>
 
-<div id="writing_2">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -121,7 +117,6 @@ original_slug: >-
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   display: grid;
@@ -140,14 +135,13 @@ original_slug: >-
 &lt;/div&gt;
 </pre>
 
-<p>{{EmbedLiveSample('writing_2', '500', '330')}}</p>
-</div>
+<p>{{EmbedLiveSample("Mode_d'écriture_par_défaut", '500', '330')}}</p>
+
+<h3 id="definir_writing-mode">Définir writing-mode</h3>
 
 <p>Si on ajoute <code>writing-mode: vertical-lr</code> au conteneur de la grille, on peut voir que les axes logiques s'appliquent désormais dans une autre direction. L'axe de bloc (aussi appelé l'axe des colonnes pour la grille) s'étend maintenant de gauche à droite et l'axe en ligne court verticalement.</p>
 
-<div id="writing_3">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -163,7 +157,6 @@ original_slug: >-
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   writing-mode: vertical-lr;
@@ -183,10 +176,9 @@ original_slug: >-
 &lt;/div&gt;
 </pre>
 
-<p>{{EmbedLiveSample('writing_3', '500', '330')}}</p>
-</div>
+<p>{{EmbedLiveSample("definir_writing-mode", '500', '330')}}</p>
 
-<p><img alt="A image showing the direction of Block and Inline when writing-mode is vertical-lr" src="https://mdn.mozillademos.org/files/14737/8-vertical-lr.png" style="height: 360px; width: 257px;"></p>
+<p><img alt="A image showing the direction of Block and Inline when writing-mode is vertical-lr" src="8-vertical-lr.png"></p>
 
 <h2 id="L'utilisation_de_valeurs_logiques_pour_l'alignement">L'utilisation de valeurs logiques pour l'alignement</h2>
 
@@ -194,9 +186,7 @@ original_slug: >-
 
 <p>Dans le prochain exemple, on aligne des objets dans une grille pour laquelle <code>writing-mode: vertical-lr</code>. Les valeurs <code>start</code> et <code>end</code> fonctionnent de la même façon qu'avec le mode d'écriture par défaut mais, parce qu'elles sont logiques, on voit que la grille est bien renversée.</p>
 
-<div id="writing_4">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -212,7 +202,6 @@ original_slug: >-
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   writing-mode: vertical-lr;
@@ -248,8 +237,7 @@ original_slug: >-
 &lt;/div&gt;
 </pre>
 
-<p>{{EmbedLiveSample('writing_4', '500', '330')}}</p>
-</div>
+<p>{{EmbedLiveSample("L'utilisation_de_valeurs_logiques_pour_l'alignement", '500', '330')}}</p>
 
 <p>Si vous souhaitez voir l'effet obtenu avec une écriture verticale de haut en bas et de droite à gauche, il suffit de passer de <code>vertical-lr</code> à <code>vertical-rl</code> pour changer de mode d'écriture.</p>
 
@@ -269,9 +257,9 @@ original_slug: >-
  <li>L'objet 3 commence à la colonne 1 et s'étend jusqu'à la troisième colonne.</li>
 </ul>
 
-<div id="writing_5">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<h3 id="placement_sur_les_lignes_pour_du_texte_de_gauche_à_droite">Placement sur les lignes pour du texte de gauche à droite</h3>
+
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -314,14 +302,13 @@ original_slug: >-
 &lt;/div&gt;
 </pre>
 
-<p>{{EmbedLiveSample('writing_5', '500', '330')}}</p>
-</div>
+<p>{{EmbedLiveSample("placement_sur_les_lignes_pour_du_texte_de_gauche_à_droite", '500', '330')}}</p>
+
+<h3 id="placement_sur_les_lignes_pour_du_texte_de_droite_à_gauche">Placement sur les lignes pour du texte de droite à gauche</h3>
 
 <p>Si on ajoute alors la propriété {{cssxref("direction")}} avec la valeur <code>rtl</code> pour le conteneur de la grille, la colonne 1 sera la plus à droite et la colonne 1 sera à gauche.</p>
 
-<div id="writing_6">
-<div class="hidden">
-<pre class="brush: css">* {box-sizing: border-box;}
+<pre class="brush: css hidden">* {box-sizing: border-box;}
 
 .wrapper {
   border: 2px solid #f76707;
@@ -337,7 +324,6 @@ original_slug: >-
   color: #d9480f;
 }
 </pre>
-</div>
 
 <pre class="brush: css">.wrapper {
   direction: rtl;
@@ -365,8 +351,7 @@ original_slug: >-
 &lt;/div&gt;
 </pre>
 
-<p>{{EmbedLiveSample('writing_6', '500', '330')}}</p>
-</div>
+<p>{{EmbedLiveSample("placement_sur_les_lignes_pour_du_texte_de_droite_à_gauche", '500', '330')}}</p>
 
 <p>On voit ici que si on change la direction du texte pour la page ou pour une partie de la page : la disposition change selon lees numéros de lignes. Si on ne veut pas que les lignes bougent, on pourra utiliser des lignes nommées pour éviter cet effet.</p>
 
@@ -398,7 +383,6 @@ original_slug: >-
 
 <p>Les modes d'écritures permettent d'afficher les documents en respectant les règles d'affichage de la langue utilisé. On peut également les utiliser afin de créer des effets stylistiques. Dans l'exemple ci-après, on a une grille avec du texte et des liens qui seront affichés verticalement, à côté du texte.</p>
 
-<div id="writing_7">
 <pre class="brush: css">.wrapper {
   display: grid;
   grid-gap: 20px;
@@ -435,12 +419,11 @@ original_slug: >-
 &lt;/div&gt;
 </pre>
 
-<p>{{EmbedLiveSample('writing_7', '500', '330')}}</p>
-</div>
+<p>{{EmbedLiveSample("Utiliser_des_modes_d'écriture_hybrides_et_les_grilles_CSS", '500', '330')}}</p>
 
 <h2 id="Les_valeurs_physiques_et_les_grilles_CSS">Les valeurs physiques et les grilles CSS</h2>
 
-<p>On rencontre souvent les propriétés physiques lorsqu'on construit un site web et, bien que la grille et les propriétés logiques permettent de respecter les modes d'écriture, il existe certains effets qui ne peuvent être obtenus qu'avec des propriétés et des valeurs physiques. Dans le guide sur <a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Alignement_des_boîtes_avec_les_grilles_CSS">l'alignement des boîtes et les grilles</a>, nous avons vu comment utiliser les marges automatiques sur les zones d'une grille. Utiliser les marges automatiques pour contraindre le placement d'un élément est une astuce qu'on rencontre aussi avec les boîtes flexibles mais cela couple la disposition avec l'espace physique.</p>
+<p>On rencontre souvent les propriétés physiques lorsqu'on construit un site web et, bien que la grille et les propriétés logiques permettent de respecter les modes d'écriture, il existe certains effets qui ne peuvent être obtenus qu'avec des propriétés et des valeurs physiques. Dans le guide sur <a href="/fr/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout">l'alignement des boîtes et les grilles</a>, nous avons vu comment utiliser les marges automatiques sur les zones d'une grille. Utiliser les marges automatiques pour contraindre le placement d'un élément est une astuce qu'on rencontre aussi avec les boîtes flexibles mais cela couple la disposition avec l'espace physique.</p>
 
 <p>Si on utilise le positionnement absolu dans une zone d'une grille, là encore, on utilisera des décalages physiques pour décaler l'élément au sein de la zone. Dans ces cas, il faut être conscient du couplage qu'on ajoute avec l'espace physique et comprendre qu'il faudra adapter la feuille de style si on veut par exemple passer d'un mode <code>ltr</code> à un mode <code>rtl</code>.</p>
 

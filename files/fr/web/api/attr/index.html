@@ -21,25 +21,25 @@ translation_of: Web/API/Attr
  <dt>{{domxref("Attr.name", "name")}} {{readOnlyInline}}</dt>
  <dd>Le nom de l'attribut.</dd>
  <dt>{{domxref("Attr.namespaceURI", "namespaceURI")}} {{readOnlyInline}}</dt>
- <dd>Une {{domxref("DOMString","Chaîne de caractères")}} <span id="result_box" lang="fr"><span>représentant l'URI de l'espace nom de l'attribut ou <code>null</code> s'il n'y a pas d'espace nom.</span></span></dd>
+ <dd>Une {{domxref("DOMString","Chaîne de caractères")}} représentant l'URI de l'espace nom de l'attribut ou <code>null</code> s'il n'y a pas d'espace nom.</dd>
  <dt>{{domxref("Attr.localName", "localName")}} {{readOnlyInline}}</dt>
- <dd>Une {{domxref("DOMString","Chaîne de caractères")}} représentant <span class="short_text" id="result_box" lang="fr"><span>la partie locale du nom qualifié de l'attribut.</span></span></dd>
+ <dd>Une {{domxref("DOMString","Chaîne de caractères")}} représentant la partie locale du nom qualifié de l'attribut.</dd>
  <dt>{{domxref("Attr.prefix", "prefix")}} {{readOnlyInline}}</dt>
- <dd>Une {{domxref("DOMString","Chaîne de caractères")}} représentant <span id="result_box" lang="fr"><span> le préfixe de l'espace nom de l'attribut, ou <code>null</code> si aucun préfixe n'est spécifié.</span></span></dd>
+ <dd>Une {{domxref("DOMString","Chaîne de caractères")}} représentant  le préfixe de l'espace nom de l'attribut, ou <code>null</code> si aucun préfixe n'est spécifié.</dd>
  <dt>{{domxref("Attr.ownerElement", "ownerElement")}} {{readOnlyInline}}</dt>
  <dd>L'élément contenant l'attribut.</dd>
 </dl>
 
 <div class="note">
-<p><strong>Note :</strong> DOM Niveau 4 <span class="short_text" id="result_box" lang="fr"><span>a supprimé cette propriété</span></span> . <span id="result_box" lang="fr"><span>L'hypothèse était que puisque nous obtenons un objet Attr d'un</span></span> {{domxref("Element")}}, nous devrions déjà connaître les éléments associés.<br>
- <span class="short_text" id="result_box" lang="fr"><span>Comme cela n'est pas vrai quand les objets</span></span> <code>Attr</code>  sont retournés par {{domxref("Document.evaluate")}}, <span class="short_text" id="result_box" lang="fr"><span>le DOM Living Standard a réintroduit la propriété.</span></span></p>
+<p><strong>Note :</strong> DOM Niveau 4 a supprimé cette propriété . L'hypothèse était que puisque nous obtenons un objet Attr d'un {{domxref("Element")}}, nous devrions déjà connaître les éléments associés.<br>
+ Comme cela n'est pas vrai quand les objets <code>Attr</code>  sont retournés par {{domxref("Document.evaluate")}}, le DOM Living Standard a réintroduit la propriété.</p>
 
-<p><span class="short_text" id="result_box" lang="fr"><span>Gecko affiche une note de dépréciation à partir de</span></span> Gecko 7.0 {{geckoRelease("7.0")}}. Cette note a été supprimée dans Gecko 49.0 {{geckoRelease("49.0")}}.</p>
+<p>Gecko affiche une note de dépréciation à partir de Gecko 7.0 {{geckoRelease("7.0")}}. Cette note a été supprimée dans Gecko 49.0 {{geckoRelease("49.0")}}.</p>
 </div>
 
 <dl>
  <dt>{{domxref("Attr.specified", "specified")}} {{readOnlyInline}}</dt>
- <dd><span id="result_box" lang="fr"><span>Cette propriété renvoie toujours la valeur <code>true</code>.</span> <span>À l'origine, elle renvoyait true si l'attribut était explicitement spécifié dans le code source ou par un script, et <code>false</code> si sa valeur provenait de la valeur par défaut définie dans la DTD du document.</span></span></dd>
+ <dd>Cette propriété renvoie toujours la valeur <code>true</code>. À l'origine, elle renvoyait true si l'attribut était explicitement spécifié dans le code source ou par un script, et <code>false</code> si sa valeur provenait de la valeur par défaut définie dans la DTD du document.</dd>
  <dt>{{domxref("Attr.value", "Value")}}</dt>
  <dd>La valeur de l'attribut.</dd>
 </dl>
@@ -50,7 +50,7 @@ translation_of: Web/API/Attr
 <p>Cette modification est implémentée dans Chrome depuis la version 46.0 et Firefox à partir de la version 48.0.</p>
 </div>
 
-<h2 id="Propriétés_et_méthodes_dépréciées"><span class="short_text" id="result_box" lang="fr"><span class="hps">Propriétés et méthodes</span> <span class="hps">dépréciées</span></span></h2>
+<h2 id="Propriétés_et_méthodes_dépréciées">Propriétés et méthodes dépréciées</h2>
 
 <p>Les propriétés suivantes ont été dépréciées. Si elle est disponible, la méthode ou propriété de remplacement appropriée est fournie.</p>
 
@@ -62,7 +62,7 @@ translation_of: Web/API/Attr
  <dt><code>firstChild </code> {{obsolete_inline(14)}}</dt>
  <dd>Cette propriété retourne désormais toujours <code>NULL</code>.</dd>
  <dt><code>isId</code> {{readOnlyInline}}</dt>
- <dd><span id="result_box" lang="fr"><span>Indique si l'attribut est un "attribut ID".</span> <span>Un "attribut ID" étant un attribut dont la valeur devrait être unique dans un document DOM.</span> <span>En HTML DOM, "id" est le seul attribut ID, mais les documents XML peuvent en définir d'autres.</span> <span>Qu'un attribut soit unique ou non est souvent déterminé par</span></span>  un {{Glossary("DTD")}}  ou une autre description de schéma.</dd>
+ <dd>Indique si l'attribut est un "attribut ID". Un "attribut ID" étant un attribut dont la valeur devrait être unique dans un document DOM. En HTML DOM, "id" est le seul attribut ID, mais les documents XML peuvent en définir d'autres. Qu'un attribut soit unique ou non est souvent déterminé par  un {{Glossary("DTD")}}  ou une autre description de schéma.</dd>
  <dt><code>lastChild </code> {{obsolete_inline(14)}}</dt>
  <dd>Cette propriété retourne désormais toujours <code>NULL</code>.</dd>
  <dt><code>nextSibling</code></dt>
@@ -80,7 +80,7 @@ translation_of: Web/API/Attr
  <dt><code>previousSibling</code></dt>
  <dd>Cette propriété retourne désormais toujours NULL.</dd>
  <dt><code>schemaTypeInfo</code> {{obsolete_inline}} {{readOnlyInline}}</dt>
- <dd><span id="result_box" lang="fr"><span>Les informations de type associées à cet attribut.</span> <span>Bien que l'information de type contenue dans cet attribut soit garantie après le chargement du document ou l'appel de</span></span> {{domxref("Document.normalizeDocument")}}, cette propriété <span id="result_box" lang="fr"><span>peut ne pas être fiable si le nœud a été déplacé.</span></span></dd>
+ <dd>Les informations de type associées à cet attribut. Bien que l'information de type contenue dans cet attribut soit garantie après le chargement du document ou l'appel de {{domxref("Document.normalizeDocument")}}, cette propriété peut ne pas être fiable si le nœud a été déplacé.</dd>
  <dt><code>specified</code></dt>
  <dd>Cette propriété retourne désormais toujours true.</dd>
  <dt><code>textContent</code></dt>

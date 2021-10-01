@@ -17,12 +17,12 @@ translation_of: Web/API/NodeIterator/previousNode
 
 <p>Dans les navigateurs anciens, comme spécifié dans les anciennes version des spécifications, la méthode pouvait déclencher une <code>INVALID_STATE_ERR</code> {{domxref("DOMException")}} si elle était appelée après la méthode {{domxref("NodeIterator.detach()")}}. Les navigateurs récents ne lancent rien.</p>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
 <pre class="syntaxbox"><em>node</em> = <em>nodeIterator</em>.previousNode();
 </pre>
 
-<h2 id="Example" name="Example">Exemple</h2>
+<h2 id="Example">Exemple</h2>
 
 <pre class="brush: js">var nodeIterator = document.createNodeIterator(
     document.body,
@@ -34,7 +34,7 @@ currentNode = nodeIterator.nextNode(); // renvoie le noeud suivant
 previousNode = nodeIterator.previousNode(); // même résultat, puisque nous sommes retournés au noeud précédent
 </pre>
 
-<h2 id="Specification" name="Specification">Spécifications</h2>
+<h2 id="Specification">Spécifications</h2>
 
 <table class="standard-table">
  <tbody>

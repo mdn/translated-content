@@ -19,13 +19,12 @@ original_slug: WebRTC/MediaStream_API
 
 <p>Un {{domxref("MediaStream")}} consiste en zéro ou plus objets {{domxref("MediaStreamTrack")}}, représentant différentes <strong>pistes</strong> audio ou vidéos. Chaque {{domxref("MediaStreamTrack")}} peut avoir un ou plusieurs <strong>canal</strong>. Le canal représente la plus petite unité d'un flux média, tel un signal audio d'un haut-parleur, séparé en <em>gauche</em> et <em>droite</em> sur une piste audio en stéréo.</p>
 
-<p><code><font face="Lucida Grande, Lucida Sans Unicode, DejaVu Sans, Lucida, Arial, Helvetica, sans-serif">Les objets </font></code> {{domxref("MediaStream")}} ont une seule <strong>entrée </strong>et une seule <strong>sortie</strong>. Un objet {{domxref("MediaStream")}} généré par <a href="/en-US/docs/WebRTC/navigator.getUserMedia">getUserMedia()</a> est dit <em>local</em>, et sa source d'entrée provient de l'une des caméra ou microphone de l'utilisateur. Un objet {{domxref("MediaStream")}} non local peut représenter un média tel que {{HTMLElement("video")}} ou {{HTMLElement("audio")}}, un flux provenant du réseau et obtenu via l'API WebRTC <a href="/en-US/docs/WebRTC/PeerConnection_API">PeerConnection</a>, ou un flux créé en utilisant l'API <a href="/en-US/docs/Web_Audio_API">Web Audio</a> {{domxref("MediaStreamAudioSourceNode")}}. La sortie d'un objet {{domxref("MediaStream")}} est liée à un <strong>consommateur</strong>. Elle peut-être un élément média tel que {{HTMLElement("audio")}} ou {{HTMLElement("video")}}, l'API WebRTC <a href="/en-US/docs/WebRTC/PeerConnection_API">PeerConnection</a> ou l'<a href="/en-US/docs/Web_Audio_API">API Web Audio</a> {{domxref("MediaStreamAudioDestinationNode")}}.</p>
+<p><code>Les objets </code> {{domxref("MediaStream")}} ont une seule <strong>entrée </strong>et une seule <strong>sortie</strong>. Un objet {{domxref("MediaStream")}} généré par <a href="/en-US/docs/WebRTC/navigator.getUserMedia">getUserMedia()</a> est dit <em>local</em>, et sa source d'entrée provient de l'une des caméra ou microphone de l'utilisateur. Un objet {{domxref("MediaStream")}} non local peut représenter un média tel que {{HTMLElement("video")}} ou {{HTMLElement("audio")}}, un flux provenant du réseau et obtenu via l'API WebRTC <a href="/en-US/docs/WebRTC/PeerConnection_API">PeerConnection</a>, ou un flux créé en utilisant l'API <a href="/en-US/docs/Web_Audio_API">Web Audio</a> {{domxref("MediaStreamAudioSourceNode")}}. La sortie d'un objet {{domxref("MediaStream")}} est liée à un <strong>consommateur</strong>. Elle peut-être un élément média tel que {{HTMLElement("audio")}} ou {{HTMLElement("video")}}, l'API WebRTC <a href="/en-US/docs/WebRTC/PeerConnection_API">PeerConnection</a> ou l'<a href="/en-US/docs/Web_Audio_API">API Web Audio</a> {{domxref("MediaStreamAudioDestinationNode")}}.</p>
 
 <h2 id="Interfaces">Interfaces</h2>
 
 <p>Dans ces articles de référence, on trouvera les informations fondamentales sur les différentes interfaces qui composent l'API <em>Media Capture and Streams API</em>.</p>
 
-<div class="index">
 <ul>
  <li>{{domxref("BlobEvent")}}</li>
  <li>{{domxref("CanvasCaptureMediaStreamTrack")}}</li>
@@ -47,13 +46,11 @@ original_slug: WebRTC/MediaStream_API
  <li>{{domxref("OverconstrainedError")}}</li>
  <li>{{domxref("URL")}}</li>
 </ul>
-</div>
 
 <p>Les premières versions de la spécification pour Media Capture and Streams API incluaient des interfaces séparées <code>AudioStreamTrack</code> et <code>VideoStreamTrack</code>, chacunes basées sur {{domxref("MediaStreamTrack")}} et qui représentaient des types de flux différents. Celles-ci n'existent plus et il faut utiliser <code>MediaStreamTrack</code> directement à la place.</p>
 
 <h2 id="Évènements">Évènements</h2>
 
-<div class="index">
 <ul>
  <li>{{event("addtrack")}}</li>
  <li>{{event("ended")}}</li>
@@ -63,7 +60,6 @@ original_slug: WebRTC/MediaStream_API
  <li>{{event("started")}}</li>
  <li>{{event("unmuted")}}</li>
 </ul>
-</div>
 
 <h2 id="Guides_et_tutorials">Guides et tutorials</h2>
 
@@ -80,7 +76,7 @@ original_slug: WebRTC/MediaStream_API
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="/fr/docs/Web/API/WebRTC_API" title="/en-US/docs/WebRTC">WebRTC</a> - la page d'introduction à l'API</li>
+ <li><a href="/fr/docs/Web/API/WebRTC_API">WebRTC</a> - la page d'introduction à l'API</li>
  <li>{{domxref("mediaDevices.getUserMedia()")}}</li>
  <li><a href="/fr/docs/Web/API/WebRTC_API/Taking_still_photos">Prendre des clichés avec WebRTC</a> : un tutoriel/une démonstration sur l'utilisation de <code>getUserMedia()</code>.</li>
 </ul>

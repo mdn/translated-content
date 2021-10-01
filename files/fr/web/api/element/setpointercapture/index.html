@@ -16,12 +16,14 @@ translation_of: Web/API/Element/setPointerCapture
 
 <p><strong><code>setPointerCapture()</code></strong> est la méthode de l'interface {{domxref("Element")}} utilisée pour désigner un élément spécifique comme <em>cible de capture</em> de{{domxref("PointerEvent", "évènements de pointeur")}} futurs. Les évènements subséquents du pointeur seront reciblés sur l'élément jusqu'à la libération de la capture (via {{domxref("Element.releasePointerCapture")}}).</p>
 
-<div class="note">Lorque la capture du pointeur est définie, les évènements {{domxref("PointerEvent.pointerover","pointerover")}}, {{domxref("PointerEvent.pointerout","pointerout")}} {{domxref("PointerEvent.pointerenter","pointerenter")}} et {{domxref("PointerEvent.pointerleave","pointerleave")}} sont uniquement générés lors du franchissement de la limite de l'élément dont la capture est définie, car les autres éléments ne peuvent plus être ciblés par le pointeur. Cela a pour effet de supprimer ces événements sur tous les autres éléments.</div>
+<div class="note">
+  <p><strong>Note :</strong> Lorque la capture du pointeur est définie, les évènements {{domxref("PointerEvent.pointerover","pointerover")}}, {{domxref("PointerEvent.pointerout","pointerout")}} {{domxref("PointerEvent.pointerenter","pointerenter")}} et {{domxref("PointerEvent.pointerleave","pointerleave")}} sont uniquement générés lors du franchissement de la limite de l'élément dont la capture est définie, car les autres éléments ne peuvent plus être ciblés par le pointeur. Cela a pour effet de supprimer ces événements sur tous les autres éléments.</p>
+</div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox">targetElement.<em>setPointerCapture</em>(pointerId);
-</pre>
+<pre class="syntaxbox">.<em>setPointerCapture</em>(pointerId);
+</pre>targetElement
 
 <h3 id="Arguments">Arguments</h3>
 
@@ -36,7 +38,7 @@ translation_of: Web/API/Element/setPointerCapture
 
 <h2 id="Exemple">Exemple</h2>
 
-<pre class="brush: js">&lt;html&gt;
+<pre class="brush: html">&lt;html&gt;
 &lt;script&gt;
 function downHandler(ev) {
  var el=document.getElementById("target");

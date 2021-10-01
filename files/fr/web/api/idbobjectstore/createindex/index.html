@@ -8,14 +8,14 @@ translation_of: Web/API/IDBObjectStore/createIndex
 <p>La méthode <strong><code>createIndex()</code></strong> de l'interface {{domxref("IDBObjectStore")}} met en place sur le magasin d'objet {{domxref("IDBObjectStore","relié")}} un nouvel index et en renvoie l'{{domxref("IDBIndex","accès")}}.</p>
 
 <div class="note">
-<p>Note: cette méthode ne peut être appelé que si la transaction de l'accès au magasin d'objet est en mode VersionChange.</p>
+<p><strong>Note :</strong> Cette méthode ne peut être appelé que si la transaction de l'accès au magasin d'objet est en mode VersionChange.</p>
 </div>
 
 <p>{{AvailableInWorkers}}</p>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="brush: js" style="font-size: 14px;">objectStore.createIndex(nomIndex, nomCle, parametresIndexOptionnel);</pre>
+<pre class="brush: js">objectStore.createIndex(nomIndex, nomCle, parametresIndexOptionnel);</pre>
 
 <h2 id="Paramètres">Paramètres</h2>
 
@@ -47,7 +47,7 @@ translation_of: Web/API/IDBObjectStore/createIndex
    <tr>
     <td><code>locale</code></td>
     <td>
-     <p>Actuellement uniquement dans Firefox 43+ , cela vous permet de spécifier des paramètres de localisation pour l'index. Toutes les opérations de tri effectuées sur les données via des intervalle de clé obéirons aux règles locales de tri (voir <a href="https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#Locale-aware_sorting">trie dans localisation courante</a>, en). Vous pouvez spécifier sa valeur de trois façons différentes:</p>
+     <p>Actuellement uniquement dans Firefox 43+ , cela vous permet de spécifier des paramètres de localisation pour l'index. Toutes les opérations de tri effectuées sur les données via des intervalle de clé obéirons aux règles locales de tri (voir <a href="/en-US/docs/Web/API/IndexedDB_API/Using_IndexedDB#Locale-aware_sorting">trie dans localisation courante</a>, en). Vous pouvez spécifier sa valeur de trois façons différentes:</p>
 
      <ul>
       <li><code>string</code>: une chaîne de caractère contenant le code de la localisation , par exemple 'fr' ou <code>'en-US'</code>.</li>
@@ -72,7 +72,7 @@ translation_of: Web/API/IDBObjectStore/createIndex
  <dd>Cette {{domxref("DOMException","exeption")}} si la {{domxref("IDBTransaction","transaction")}} dont dépend cet {{domxref("IDBObjectStore","accès")}} au magasin d'objet n'est pas en {{domxref("IDBTransaction.mode","mode")}} <code>versionchange</code>.</dd>
  <dt><code>TransactionInactiveError</code></dt>
  <dd>Cette {{domxref("DOMException","exeption")}} si la {{domxref("IDBTransaction","transaction")}} de l'{{domxref("IDBObjectStore","accès")}} au magasin d’objet est inactive.
- <p class="note">Dans les versions de Firefox antérieur à 41, une <code>InvalidStateError</code> est levé dans ce cas aussi, ce qui est trompeur. Cela a été corrigé (voir <a class="external external-icon" href="https://bugzilla.mozilla.org/show_bug.cgi?id=1176165" title="FIXED: Fix error codes for {create,delete}{ObjectStore,Index}">bug 1176165</a> ).</p>
+ <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1176165">bug 1176165</a> ).
  </dd>
  <dt><code>ConstraintError</code></dt>
  <dd>Cette {{domxref("DOMException","exeption")}} si un index avec le même nom (case sensible) existe déjà sur le magasin d'objet.</dd>
@@ -128,7 +128,9 @@ DBOpenRequest.onupgradeneeded = function(event) {
 };
 </pre>
 
-<p class="note">Pour un exemple de travail complet, voir notre <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>).</p>
+<div class="note">
+  <p><strong>Note :</strong> Pour un exemple de travail complet, voir notre <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> app (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>).</p>
+</div>
 
 <h2 id="Spécifications">Spécifications</h2>
 
@@ -147,7 +149,7 @@ DBOpenRequest.onupgradeneeded = function(event) {
  </tbody>
 </table>
 
-<h2 id="Browser_compatibility" name="Browser_compatibility">Compatibilité avec les navigateurs</h2>
+<h2 id="Browser_compatibility">Compatibilité avec les navigateurs</h2>
 
 <p>{{Compat("api.IDBObjectStore.createIndex")}}</p>
 
@@ -160,5 +162,5 @@ DBOpenRequest.onupgradeneeded = function(event) {
  <li>{{domxref("IDBKeyRange","Définir l'intervalle des clés")}}</li>
  <li>{{domxref("IDBObjectStore","Accès aux magasins d'objets")}}</li>
  <li>{{domxref("IDBCursor","Utiliser les curseur")}}</li>
- <li>Exemple de référence: <a class="external" href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a class="external" href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
+ <li>Exemple de référence: <a href="https://github.com/mdn/to-do-notifications/tree/gh-pages">To-do Notifications</a> (<a href="http://mdn.github.io/to-do-notifications/">view example live</a>.)</li>
 </ul>

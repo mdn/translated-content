@@ -30,7 +30,7 @@ var <em>IDBObjectStore</em> = <em>request</em>.source;
 
 <p>Dans l'exemple qui suit, on récupère un enregistrement avec un titre donné depuis un magasin d'objets. Ensuite, on met à jour une des propriétés de cet enregistrement et on met à jour le magasin d'objets en insérant cet objet modifié. Lors de cette deuxième requête, on affiche la source dans la console. Pour consulter un exemple fonctionnel complet, vous pouvez vous référer à notre application <a href="https://github.com/mdn/to-do-notifications/">To-do Notifications</a> (<a href="https://mdn.github.io/to-do-notifications/">cf. l'exemple <em>live</em></a>).</p>
 
-<pre class="brush: js;highlight:[11]">var title = "Walk dog";
+<pre class="brush: js">var title = "Walk dog";
 
 // On ouvre une transaction
 var objectStore = db.transaction(['toDoList'], "readwrite").objectStore('toDoList');

@@ -16,7 +16,7 @@ translation_of: Web/API/Document/readyState
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
-<pre class="syntaxbox notranslate">var <var>string</var> = <var>document</var>.readyState;
+<pre class="syntaxbox">var <var>string</var> = <var>document</var>.readyState;
 </pre>
 
 <h3 id="Valeurs">Valeurs</h3>
@@ -32,11 +32,11 @@ translation_of: Web/API/Document/readyState
  <dd>Le document et toutes les sous-ressources ont été chargés, et {{event("load")}} a été émis.</dd>
 </dl>
 
-<h2 id="Exemples"><span>Exemples</span></h2>
+<h2 id="Exemples">Exemples</h2>
 
 <h3 id="Différents_états_de_chargement">Différents états de chargement</h3>
 
-<pre class="brush: js notranslate"><span>switch (document.readyState) {
+<pre class="brush: js">switch (document.readyState) {
   case "loading":
     // Encore en chargement.
     break;
@@ -50,12 +50,12 @@ translation_of: Web/API/Document/readyState
     // La page est pleinement chargée.
     console.log("The first CSS rule is: " + document.styleSheets[0].cssRules[0].cssText);
     break;
-}</span>
+}
 </pre>
 
 <h3 id="readystatechange_comme_alternative_à_DOMContentLoaded">readystatechange comme alternative à  DOMContentLoaded</h3>
 
-<pre class="brush:js notranslate">// alternative à DOMContentLoaded
+<pre class="brush:js">// alternative à DOMContentLoaded
 document.onreadystatechange = function () {
   if (document.readyState == "interactive") {
     initApplication();
@@ -64,7 +64,7 @@ document.onreadystatechange = function () {
 
 <h3 id="readystatechange_comme_alternative_à_load">readystatechange comme alternative à load</h3>
 
-<pre class="brush: js notranslate">// alternative à load
+<pre class="brush: js">// alternative à load
 document.onreadystatechange = function () {
   if (document.readyState == "complete") {
     initApplication();
@@ -73,7 +73,7 @@ document.onreadystatechange = function () {
 
 <h3 id="readystatechange_comme_event_listener_pour_insérer_ou_modifier_le_DOM_avant_DOMContentLoaded">readystatechange comme event listener pour insérer ou modifier le DOM avant DOMContentLoaded</h3>
 
-<pre class="brush: js notranslate">// Modification du document &lt;body&gt; dès que possible en utilisant un script externe
+<pre class="brush: js">// Modification du document &lt;body&gt; dès que possible en utilisant un script externe
 var bootstrap = function(evt){
   if (evt.target.readyState === "interactive") { initLoader(); }
   else if (evt.target.readyState === "complete") { initApp(); }
@@ -83,7 +83,7 @@ document.addEventListener('readystatechange', bootstrap, false);
 
 <h2 id="Spécifications">Spécifications</h2>
 
-<table class="spectable standard-table">
+<table class="standard-table">
  <tbody>
   <tr>
    <th scope="col">Spécifications</th>
@@ -110,11 +110,7 @@ document.addEventListener('readystatechange', bootstrap, false);
 
 <h2 id="Compatibilité_des_navigateurs">Compatibilité des navigateurs</h2>
 
-
-
 <div>{{Compat("api.Document.readyState")}}</div>
-
-<div id="compat-desktop"></div>
 
 <p>[1] Ne supporte que 'complete'. Opera Presto notifie 'complete' seulement après l'événement 'load' (dans un ordre incorrect par rapport à la spécification du standard HTML5).</p>
 

@@ -15,9 +15,7 @@ translation_of: Web/API/Fetch_API/Using_Fetch
 ---
 <p>{{DefaultAPISidebar("Fetch API")}}</p>
 
-<div class="summary">
 <p>L'<a href="/fr/docs/Web/API/Fetch_API">API Fetch</a> fournit une interface JavaScript pour l'accès et la manipulation des parties de la pipeline HTTP, comme les requêtes et les réponses. Cela fournit aussi une méthode globale {{domxref("GlobalFetch.fetch","fetch()")}} qui procure un moyen facile et logique de récupérer des ressources à travers le réseau de manière asynchrone.</p>
-</div>
 
 <p>Ce genre de fonctionnalité était auparavant réalisé avec {{domxref("XMLHttpRequest")}}. Fetch fournit une meilleure alternative qui peut être utilisée facilement par d’autres technologies comme {{domxref("ServiceWorker_API", "Service Workers")}}. Fetch fournit aussi un endroit unique et logique pour la définition d'autres concepts liés à HTTP comme CORS et les extensions d'HTTP.</p>
 
@@ -25,10 +23,10 @@ translation_of: Web/API/Fetch_API/Using_Fetch
 
 <p>Le support de Fetch est à ses débuts, mais les choses progressent. Il a été activé par défaut sur Firefox 39 et supérieur, et sur Chrome 42 et supérieur.</p>
 
-<p>Si vous souhaitez l'utiliser maintenant, il y a un <a class="external" href="https://github.com/github/fetch">polyfill Fetch</a> disponible qui recrée la fonctionnalité pour les navigateurs qui ne le supportent pas. Gardez à l'esprit qu'il est au stade expérimental et pas encore complètement fonctionnel.</p>
+<p>Si vous souhaitez l'utiliser maintenant, il y a un <a href="https://github.com/github/fetch">polyfill Fetch</a> disponible qui recrée la fonctionnalité pour les navigateurs qui ne le supportent pas. Gardez à l'esprit qu'il est au stade expérimental et pas encore complètement fonctionnel.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Certaines préoccupations ont été soulevées sur le fait que la <a class="external" href="https://fetch.spec.whatwg.org/">spécification de Fetch</a> est en contradition avec la <a class="external" href="https://streams.spec.whatwg.org/">spécification de Streams</a>; cependant, les prévisions montrent une intention d'intégrer Streams avec Fetch: pour plus d'informations reportez vous à <a class="external" href="https://github.com/yutakahirano/fetch-with-streams/">Fetch API integrated with Streams</a>.</p>
+<p><strong>Note :</strong> Certaines préoccupations ont été soulevées sur le fait que la <a href="https://fetch.spec.whatwg.org/">spécification de Fetch</a> est en contradition avec la <a href="https://streams.spec.whatwg.org/">spécification de Streams</a>; cependant, les prévisions montrent une intention d'intégrer Streams avec Fetch: pour plus d'informations reportez vous à <a href="https://github.com/yutakahirano/fetch-with-streams/">Fetch API integrated with Streams</a>.</p>
 </div>
 
 <h2 id="Détection_de_la_fonctionnalité">Détection de la fonctionnalité</h2>
@@ -63,7 +61,7 @@ fetch('flowers.jpg')
 <p>Bien sûr, il s'agit seulement d'une réponse HTTP, pas exactement de l'image. Pour extraire le contenu de l'image de la réponse, nous utilisons la méthode {{domxref("Body.blob","blob()")}} (définie sur le mixin {{domxref("Body")}}, qui est implémenté autant par les objets {{domxref("Request")}} que par les objets {{domxref("Response")}}).</p>
 
 <div class="note">
-<p><strong>Note </strong>: Le mixin Body a aussi des méthodes similaires pour extraire d'autres types contenu ; pour plus d'informations regardez la section {{anch("Corps")}}.</p>
+<p><strong>Note :</strong> Le mixin Body a aussi des méthodes similaires pour extraire d'autres types contenu ; pour plus d'informations regardez la section {{anch("Corps")}}.</p>
 </div>
 
 <p>Un objet <code>objectURL</code> est ensuite créé à partir du {{domxref("Blob")}} extrait, puis est inseré dans {{domxref("img")}}.</p>
@@ -141,7 +139,7 @@ fetch(myRequest,myInit)
 <p>C'est très pratique, si le corps de la requête et de la réponse ne sont utilisés qu'une fois seulement. Cette manière de faire une copie permet de ré-utiliser la requête/réponse, en changeant juste les options du <code>init</code> si nécessaire.</p>
 
 <div class="note">
-<p><strong>Note </strong>: Il y a aussi une méthode {{domxref("Request.clone","clone()")}} qui créer une copie. <span id="result_box" lang="fr"><span>Cela a</span> <span>une sémantique légèrement différente</span> <span>à l'autre</span> <span>méthode de copie</span></span>— La première va échouer si l'ancien corps de la requête a déjà été lu (même pour copier une réponse), alors qu'avec <code>clone()</code> non.</p>
+<p><strong>Note :</strong> Il y a aussi une méthode {{domxref("Request.clone","clone()")}} qui créer une copie. Cela a une sémantique légèrement différente à l'autre méthode de copie— La première va échouer si l'ancien corps de la requête a déjà été lu (même pour copier une réponse), alors qu'avec <code>clone()</code> non.</p>
 </div>
 
 <h2 id="En-têtes_Headers">En-têtes (Headers)</h2>
@@ -214,7 +212,7 @@ try {
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: Vous ne pouvez pas ajouter ou définir sur une requête protegée une en-tête <code>Content-Length</code>. De manière similaire, ajouter <code>Set-Cookie</code> dans l'en-tête de réponse n'est pas autorisé: les ServiceWorkers ne sont pas autorisés à gérer des cookies via des réponses synthétisées.</p>
+<p><strong>Note :</strong> Vous ne pouvez pas ajouter ou définir sur une requête protegée une en-tête <code>Content-Length</code>. De manière similaire, ajouter <code>Set-Cookie</code> dans l'en-tête de réponse n'est pas autorisé: les ServiceWorkers ne sont pas autorisés à gérer des cookies via des réponses synthétisées.</p>
 </div>
 
 <h2 id="Réponses">Réponses</h2>
@@ -242,7 +240,7 @@ addEventListener('fetch', function(event) {
 </ul>
 
 <div class="note">
-<p><strong>Note</strong>: La méthode statique {{domxref("Response.error","error()")}} retourne simplement une réponse d'erreur. De manière similaire, {{domxref("Response.redirect","redirect()")}} retourne une réponse de redirection vers une URL spécifique. Elles sont aussi pertinentes pour les Service Workers.</p>
+<p><strong>Note :</strong> La méthode statique {{domxref("Response.error","error()")}} retourne simplement une réponse d'erreur. De manière similaire, {{domxref("Response.redirect","redirect()")}} retourne une réponse de redirection vers une URL spécifique. Elles sont aussi pertinentes pour les Service Workers.</p>
 </div>
 
 <h2 id="Corps">Corps</h2>
@@ -301,14 +299,12 @@ fetch("/login", {
 
 <p>{{Compat("api.WindowOrWorkerGlobalScope.fetch")}}</p>
 
-<div id="compat-mobile"></div>
-
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
  <li><a href="/fr/docs/Web/API/ServiceWorker_API">API ServiceWorker</a></li>
  <li><a href="/fr/docs/Web/HTTP/Access_control_CORS">HTTP access control (CORS)</a></li>
  <li><a href="/fr/docs/Web/HTTP">HTTP</a></li>
- <li><a class="external" href="https://github.com/github/fetch">Polyfill pour Fetch</a></li>
- <li><a class="external" href="https://github.com/mdn/fetch-examples/">Exemples de Fetch sur Github</a></li>
+ <li><a href="https://github.com/github/fetch">Polyfill pour Fetch</a></li>
+ <li><a href="https://github.com/mdn/fetch-examples/">Exemples de Fetch sur Github</a></li>
 </ul>

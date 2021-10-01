@@ -15,7 +15,7 @@ translation_of: Web/API/VideoTrack
 ---
 <div>{{APIRef("HTML DOM")}}</div>
 
-<p><span class="seoSummary">L'interface {{domxref("VideoTrack")}} représente une seule piste vidéo d'un élément {{HTMLElement("video")}}.</span> L'utilisation la plus courante à un objet <code>VideoTrack</code> est de basculer sa propriété {{domxref("VideoTrack.selected", "selected")}} afin d'en faire la piste vidéo active pour l'élément {{HTMLElement("video")}}.</p>
+<p>L'interface {{domxref("VideoTrack")}} représente une seule piste vidéo d'un élément {{HTMLElement("video")}}. L'utilisation la plus courante à un objet <code>VideoTrack</code> est de basculer sa propriété {{domxref("VideoTrack.selected", "selected")}} afin d'en faire la piste vidéo active pour l'élément {{HTMLElement("video")}}.</p>
 
 <h2 id="Propriétés">Propriétés</h2>
 
@@ -38,7 +38,7 @@ translation_of: Web/API/VideoTrack
 
 <p>Pour obtenir un <code>VideoTrack</code> pour un élément multimédia donné, utilisez la propriété {{domxref("HTMLMediaElement.videoTracks", "videoTracks")}}, qui renvoie un objet {{domxref("VideoTrackList")}} à partir duquel vous pouvez obtenir les pistes individuelles contenues dans le média:</p>
 
-<pre class="brush: js notranslate">var el = document.querySelector("video");
+<pre class="brush: js">var el = document.querySelector("video");
 var tracks = el.videoTracks;
 </pre>
 
@@ -46,11 +46,11 @@ var tracks = el.videoTracks;
 
 <p>Ce premier exemple obtient la première piste vidéo sur le média:</p>
 
-<pre class="brush: js notranslate">var firstTrack = tracks[0];</pre>
+<pre class="brush: js">var firstTrack = tracks[0];</pre>
 
 <p>L'exemple suivant parcourt toutes les pistes vidéo du média, activant la première piste vidéo qui est dans la langue préférée de l'utilisateur (tirée d'une variable <code>userLanguage</code>).</p>
 
-<pre class="brush: js notranslate">for (var i = 0; i &lt; tracks.length; i++) {
+<pre class="brush: js">for (var i = 0; i &lt; tracks.length; i++) {
   if (tracks[i].language === userLanguage) {
     tracks[i].selected = true;
     break;

@@ -11,9 +11,9 @@ translation_of: Web/API/Element/attributes
 ---
 <p>{{ APIRef("DOM") }}</p>
 
-<p>La propriété <strong><code>Element.attributes</code></strong> renvoie une collection des noeuds d'attribut enregistrés dans le noeud spécifié. Il est une {{domxref("NamedNodeMap")}}, pas un tableau (<em>Array</em>), aussi il n'a pas de méthodes  {{jsxref("Array")}} et l'index de noeud {{domxref("Attr")}} peuvent différer entre les navigateurs. <span id="result_box" lang="fr"><span>Pour être plus précis, les <code>attributs</code> sont une paire clé / valeur de chaînes représentant toutes les informations concernant cet attribut.</span></span></p>
+<p>La propriété <strong><code>Element.attributes</code></strong> renvoie une collection des noeuds d'attribut enregistrés dans le noeud spécifié. Il est une {{domxref("NamedNodeMap")}}, pas un tableau (<em>Array</em>), aussi il n'a pas de méthodes  {{jsxref("Array")}} et l'index de noeud {{domxref("Attr")}} peuvent différer entre les navigateurs. Pour être plus précis, les <code>attributs</code> sont une paire clé / valeur de chaînes représentant toutes les informations concernant cet attribut.</p>
 
-<h2 id="Syntaxe_et_valeurs" name="Syntaxe_et_valeurs">Syntaxe</h2>
+<h2 id="Syntaxe_et_valeurs">Syntaxe</h2>
 
 <pre class="syntaxbox">var <em>attr</em> =<em> element</em>.attributes;
 </pre>
@@ -29,50 +29,50 @@ var attr = para.attributes;
 
 <h3 id="Énumération_des_attributs_d'éléments">Énumération des attributs d'éléments</h3>
 
-<p><span id="result_box" lang="fr"><span>L'indexation numérique est utile pour parcourir tous les attributs d'un élément.</span><br>
- <span>L'exemple suivant parcourt les nœuds d'attribut de l'élément du document avec l'ID "paragraph" et imprime la valeur de chaque attribut.</span></span></p>
+<p>L'indexation numérique est utile pour parcourir tous les attributs d'un élément.<br>
+ L'exemple suivant parcourt les nœuds d'attribut de l'élément du document avec l'ID "paragraph" et imprime la valeur de chaque attribut.</p>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html"><span class="doctype token">&lt;!DOCTYPE html&gt;</span>
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>html</span><span class="punctuation token">&gt;</span></span>
+&lt;html&gt;
 
- <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>head</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>title</span><span class="punctuation token">&gt;Exemple d'attributs</span></span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>title</span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>script</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>text/javascript<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span><span class="language-javascript script token">
-   <span class="keyword token">function</span> <span class="function token">listAttributes</span><span class="punctuation token">(</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-     <span class="keyword token">var</span> paragraph <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">"paragraph"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
-     <span class="keyword token">var</span> result <span class="operator token">=</span> document<span class="punctuation token">.</span><span class="function token">getElementById</span><span class="punctuation token">(</span><span class="string token">"result"</span><span class="punctuation token">)</span><span class="punctuation token">;</span>
+ &lt;head&gt;
+  &lt;title&gt;Exemple d'attributs&lt;/title&gt;
+  &lt;script type="text/javascript"&gt;
+   function listAttributes() {
+     var paragraph = document.getElementById("paragraph");
+     var result = document.getElementById("result");
 
-     <span class="comment token">// D'abord, vérifier que le "paragraph" a quelques attributs    </span>
-     <span class="keyword token">if</span> <span class="punctuation token">(</span>paragraph<span class="punctuation token">.</span><span class="function token">hasAttributes</span><span class="punctuation token">(</span><span class="punctuation token">)</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-       <span class="keyword token">var</span> attrs <span class="operator token">=</span> paragraph<span class="punctuation token">.</span>attributes<span class="punctuation token">;</span>
-       <span class="keyword token">var</span> output <span class="operator token">=</span> <span class="string token">""</span><span class="punctuation token">;</span>
-       <span class="keyword token">for</span><span class="punctuation token">(</span><span class="keyword token">var</span> i <span class="operator token">=</span> attrs<span class="punctuation token">.</span>length <span class="operator token">-</span> <span class="number token">1</span><span class="punctuation token">;</span> i <span class="operator token">&gt;=</span> <span class="number token">0</span><span class="punctuation token">;</span> i<span class="operator token">--</span><span class="punctuation token">)</span> <span class="punctuation token">{</span>
-         output <span class="operator token">+</span><span class="operator token">=</span> attrs<span class="punctuation token">[</span>i<span class="punctuation token">]</span><span class="punctuation token">.</span>name <span class="operator token">+</span> <span class="string token">"-&gt;"</span> <span class="operator token">+</span> attrs<span class="punctuation token">[</span>i<span class="punctuation token">]</span><span class="punctuation token">.</span>value<span class="punctuation token">;</span>
-       <span class="punctuation token">}</span>
-       result<span class="punctuation token">.</span>value <span class="operator token">=</span> output<span class="punctuation token">;</span>
-     <span class="punctuation token">}</span> <span class="keyword token">else</span> <span class="punctuation token">{</span>
-       result<span class="punctuation token">.</span>value <span class="operator token">=</span> <span class="string token">"No attributes to show"</span><span class="punctuation token">;</span>
-     <span class="punctuation token">}</span>
-   <span class="punctuation token">}</span>
-  </span><span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>script</span><span class="punctuation token">&gt;</span></span>
- <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>head</span><span class="punctuation token">&gt;</span></span>
+     // D'abord, vérifier que le "paragraph" a quelques attributs    
+     if (paragraph.hasAttributes()) {
+       var attrs = paragraph.attributes;
+       var output = "";
+       for(var i = attrs.length - 1; i &gt;= 0; i--) {
+         output += attrs[i].name + "-&gt;" + attrs[i].value;
+       }
+       result.value = output;
+     } else {
+       result.value = "No attributes to show";
+     }
+   }
+  &lt;/script&gt;
+ &lt;/head&gt;
 
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>body</span><span class="punctuation token">&gt;</span></span>
- <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>paragraph<span class="punctuation token">"</span></span><span class="language-css style-attr token"><span class="attr-name token"> <span class="attr-name token">style</span></span><span class="punctuation token">="</span><span class="attr-value token"><span class="property token">color</span><span class="punctuation token">:</span> green<span class="punctuation token">;</span></span><span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>Sample Paragraph<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
- <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>form</span> <span class="attr-name token">action</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span><span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>p</span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>button<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>Show first attribute name and value<span class="punctuation token">"</span></span>
-      <span class="attr-name token">onclick</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>listAttributes();<span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-    <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;</span>input</span> <span class="attr-name token">id</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>result<span class="punctuation token">"</span></span> <span class="attr-name token">type</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span>text<span class="punctuation token">"</span></span> <span class="attr-name token">value</span><span class="attr-value token"><span class="punctuation token">=</span><span class="punctuation token">"</span><span class="punctuation token">"</span></span><span class="punctuation token">&gt;</span></span>
-  <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>p</span><span class="punctuation token">&gt;</span></span>
- <span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>form</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>body</span><span class="punctuation token">&gt;</span></span>
-<span class="tag token"><span class="tag token"><span class="punctuation token">&lt;/</span>html</span><span class="punctuation token">&gt;</span></span></code></pre>
+&lt;body&gt;
+ &lt;p id="paragraph" &gt;Sample Paragraph&lt;/p&gt;
+ &lt;form action=""&gt;
+  &lt;p&gt;
+    &lt;input type="button" value="Show first attribute name and value"
+      onclick="listAttributes();"&gt;
+    &lt;input id="result" type="text" value=""&gt;
+  &lt;/p&gt;
+ &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
 
 <p> </p>
 
-<h2 id="Sp.C3.A9cification" name="Sp.C3.A9cification">Spécifications</h2>
+<h2 id="Sp.C3.A9cification">Spécifications</h2>
 
 <table class="standard-table">
  <tbody>
@@ -112,5 +112,5 @@ var attr = para.attributes;
 
 <ul>
  <li>{{domxref("NamedNodeMap")}}, l'interface de l'objet retourné</li>
- <li><span id="result_box" lang="fr"><span>Considérations de compatibilité entre navigateurs : sur</span></span> <a class="external external-icon" href="http://www.quirksmode.org/dom/w3c_core.html#attributes" title="http://www.quirksmode.org/dom/w3c_core.html#attributes">quirksmode</a> (en)</li>
+ <li>Considérations de compatibilité entre navigateurs : sur <a href="http://www.quirksmode.org/dom/w3c_core.html#attributes">quirksmode</a> (en)</li>
 </ul>

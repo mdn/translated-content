@@ -13,12 +13,12 @@ translation_of: Web/API/TreeWalker/lastChild
 
 <p>La méthode <strong><code>TreeWalker.lastChild()</code></strong> déplace le {{domxref("Node")}} courant au dernier enfant <em>visible</em> du noeud courant et renvoie l'enfant trouvé. Il déplace aussi le noeud courant vers cet enfant. Si aucun enfant n'existe, elle retourne <code>null</code> et le noeud courant reste inchangé.</p>
 
-<h2 id="Syntax" name="Syntax">Syntaxe</h2>
+<h2 id="Syntax">Syntaxe</h2>
 
 <pre class="syntaxbox"><em>node</em> = <em>treeWalker</em>.lastChild();
 </pre>
 
-<h2 id="Example" name="Example">Exemple</h2>
+<h2 id="Example">Exemple</h2>
 
 <pre class="brush: js">var treeWalker = document.createTreeWalker(
     document.body,
@@ -29,7 +29,7 @@ translation_of: Web/API/TreeWalker/lastChild
 var node = treeWalker.lastChild(); // renvoie le dernier enfant visible de l'élément racine
 </pre>
 
-<h2 id="Specification" name="Specification">Spécifications</h2>
+<h2 id="Specification">Spécifications</h2>
 
 <table class="standard-table">
  <tbody>

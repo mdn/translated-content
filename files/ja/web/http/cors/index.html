@@ -50,7 +50,7 @@ translation_of: Web/HTTP/CORS
 
 <h2 id="Functional_overview" name="Functional_overview">機能概要</h2>
 
-<p>オリジン間リソース共有の仕様は、ウェブブラウザーから情報を読み取ることを許可されているオリジンをサーバーが記述することができる、新たな <a href="/ja/docs/Web/HTTP/Headers">HTTP ヘッダー</a>を追加することで作用します。加えて仕様書では、サーバーの情報に副作用を引き起こすことがある HTTP のリクエストメソッド (特に {{HTTPMethod("GET")}} 以外の HTTP メソッドや、特定の <a href="/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME タイプ</a>を伴う {{HTTPMethod("POST")}}) のために、ブラウザーが HTTP の {{HTTPMethod("OPTIONS")}} リクエストメソッドを用いて、あらかじめリクエストの「プリフライト」 (サーバーから対応するメソッドの一覧を収集すること) を行い、サーバーの「認可」のもとに実際のリクエストを送信することを指示しています。サーバーはリクエスト時に「資格情報」 (<a href="/ja/docs/Web/HTTP/Cookies">Cookie</a> や <a href="/en-US/docs/Web/HTTP/Authentication">HTTP 認証</a> など) を送信するべきかをクライアントに伝えることもできます。</p>
+<p>オリジン間リソース共有の仕様は、ウェブブラウザーから情報を読み取ることを許可されているオリジンをサーバーが記述することができる、新たな <a href="/ja/docs/Web/HTTP/Headers">HTTP ヘッダー</a>を追加することで作用します。加えて仕様書では、サーバーの情報に副作用を引き起こすことがある HTTP のリクエストメソッド (特に {{HTTPMethod("GET")}} 以外の HTTP メソッドや、特定の <a href="/ja/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME タイプ</a>を伴う {{HTTPMethod("POST")}}) のために、ブラウザーが HTTP の {{HTTPMethod("OPTIONS")}} リクエストメソッドを用いて、あらかじめリクエストの「プリフライト」 (サーバーから対応するメソッドの一覧を収集すること) を行い、サーバーの「認可」のもとに実際のリクエストを送信することを指示しています。サーバーはリクエスト時に「資格情報」 (<a href="/ja/docs/Web/HTTP/Cookies">Cookie</a> や <a href="/ja/docs/Web/HTTP/Authentication">HTTP 認証</a> など) を送信するべきかをクライアントに伝えることもできます。</p>
 
 <p>CORS は様々なエラーで失敗することがありますが、セキュリティ上の理由から、エラーについて <em>JavaScript から知ることができない</em>よう定められています。コードからはエラーが発生したということしか分かりません。何が悪かったのかを具体的に知ることができる唯一の方法は、ブラウザーのコンソールで詳細を見ることです。</p>
 
@@ -60,7 +60,7 @@ translation_of: Web/HTTP/CORS
 
 <p>オリジン間リソース共有がどのように動作するかを説明する3つのシナリオを示します。これらの例はすべて {{domxref("XMLHttpRequest")}} を用いており、対応しているブラウザーにおいて、サイトをまたいでアクセスすることができます。</p>
 
-<p>サーバー側から見たオリジン間リソース共有の説明 (PHP のコードスニペットを含む) は <a class="internal" href="/en-US/docs/Web/HTTP/Server-Side_Access_Control">Server-Side Access Control (CORS)</a> の記事にあります。</p>
+<p>サーバー側から見たオリジン間リソース共有の説明 (PHP のコードスニペットを含む) は <a class="internal" href="/ja/docs/Web/HTTP/Server-Side_Access_Control">Server-Side Access Control (CORS)</a> の記事にあります。</p>
 
 <h3 id="Simple_requests" name="Simple_requests">単純リクエスト</h3>
 

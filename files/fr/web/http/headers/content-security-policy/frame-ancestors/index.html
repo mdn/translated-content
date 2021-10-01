@@ -43,7 +43,7 @@ translation_of: Web/HTTP/Headers/Content-Security-Policy/frame-ancestors
 
 <p>Une ou plusieurs sources peuvent être autorisées pour cette directive :</p>
 
-<pre class="syntaxbox notranslate">Content-Security-Policy: frame-ancestors &lt;source&gt;;
+<pre class="syntaxbox">Content-Security-Policy: frame-ancestors &lt;source&gt;;
 Content-Security-Policy: frame-ancestors &lt;source&gt; &lt;source&gt;;
 </pre>
 
@@ -52,7 +52,7 @@ Content-Security-Policy: frame-ancestors &lt;source&gt; &lt;source&gt;;
 <p>La &lt;source&gt; peut être une des suivantes :</p>
 
 <div class="note">
-<p>The <code>frame-ancestors</code> directive’s syntax is similar to a source list of other directives (e.g. {{CSP("default-src")}}), but doesn't allow <code>'unsafe-eval'</code> or <code>'unsafe-inline'</code> for example. It will also not fall back to a <code>default-src</code> setting. Only the sources listed below are allowed:</p>
+<p><strong>Note :</strong> The <code>frame-ancestors</code> directive’s syntax is similar to a source list of other directives (e.g. {{CSP("default-src")}}), but doesn't allow <code>'unsafe-eval'</code> or <code>'unsafe-inline'</code> for example. It will also not fall back to a <code>default-src</code> setting. Only the sources listed below are allowed:</p>
 </div>
 
 <dl>
@@ -65,8 +65,8 @@ Content-Security-Policy: frame-ancestors &lt;source&gt; &lt;source&gt;;
   <li><code>https://store.example.com</code>: correspondra à toutes les tentatives d'accès à store.example.com via le protocole <code>https:</code>.</li>
  </ul>
 
- <div class="blockIndicator warning">
- <p>Si aucun schéma d'URL n'est spécifié comme <code>host-source</code> et que l'{{HTMLElement("iframe")}} est chargée via une URL <code>https:</code>, la page chargeant l'iframe doit aussi être chargée en <code>https:</code>, selon la spécification du W3C sur <a href="https://w3c.github.io/webappsec-csp/2/#match-source-expression">les correspondances de valeurs de sources</a>.</p>
+ <div class="warning">
+ <p><strong>Attention :</strong> Si aucun schéma d'URL n'est spécifié comme <code>host-source</code> et que l'{{HTMLElement("iframe")}} est chargée via une URL <code>https:</code>, la page chargeant l'iframe doit aussi être chargée en <code>https:</code>, selon la spécification du W3C sur <a href="https://w3c.github.io/webappsec-csp/2/#match-source-expression">les correspondances de valeurs de sources</a>.</p>
  </div>
  </dd>
  <dt>&lt;scheme-source&gt;</dt>
@@ -86,7 +86,7 @@ Content-Security-Policy: frame-ancestors &lt;source&gt; &lt;source&gt;;
 
 <h2 id="Exemples">Exemples</h2>
 
-<pre class="brush: bash notranslate">Content-Security-Policy: frame-ancestors 'none';
+<pre class="brush: bash">Content-Security-Policy: frame-ancestors 'none';
 
 Content-Security-Policy: frame-ancestors 'self' https://www.example.org;</pre>
 

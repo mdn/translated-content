@@ -26,39 +26,38 @@ translation_of: Web/API/CanvasRenderingContext2D/arc
  <dd>La position en y du centre de l'arc.</dd>
  <dt><code>radius</code><em> (rayon)</em></dt>
  <dd>Le rayon de l'arc.</dd>
- <dt><code>startAngle</code> <em>(<font face="Consolas, Liberation Mono, Courier, monospace">angle départ)</font></em></dt>
+ <dt><code>startAngle</code> <em>(angle départ)</em></dt>
  <dd>La valeur de l'angle avec laquelle démarre l'arc de cercle, mesurée dans le sens horaire à partir de l'axe x positif et exprimé en radians.</dd>
  <dt><code>endAngle</code> <em>(angle fin)</em></dt>
  <dd>La valeur de l'angle avec laquelle se finit l'arc de cercle, mesurée dans le sens horaire à partir de l'axe x positif et exprimé en radians.</dd>
- <dt><code>anticlockwise</code><em> (<font face="Consolas, Liberation Mono, Courier, monospace">sens anti-horaire)</font></em> {{optional_inline}}</dt>
+ <dt><code>anticlockwise</code><em> (sens anti-horaire)</em> {{optional_inline}}</dt>
  <dd>Un {{jsxref("Booléen")}} facultatif qui, si à <code>true</code><em>(vrai),</em> indique que l'arc sera dessiné dans le sens inverse des aiguilles d'une montre entre les deux angles. Par défaut, la valeur est le sens des aiguilles d'une montre.</dd>
 </dl>
 
 <h2 id="Exemples">Exemples</h2>
 
-<h3 id="Using_the_arc_method" name="Using_the_arc_method">En utilisant la méthode <code>arc</code> </h3>
+<h3 id="Using_the_arc_method">En utilisant la méthode <code>arc</code> </h3>
 
 <p>Voici un code simple permettant de dessiner un cercle .</p>
 
 <h4 id="HTML">HTML</h4>
 
-<pre class="brush: html line-numbers  language-html"><code class="language-html">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</code></pre>
+<pre class="brush: html line-numbers">&lt;canvas id="canvas"&gt;&lt;/canvas&gt;</pre>
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var canvas = document.getElementById('canvas');
+<pre class="brush: js">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 ctx.beginPath();
 ctx.arc(75, 75, 50, 0, 2 * Math.PI);
-ctx.stroke();</code></pre>
+ctx.stroke();</pre>
 
 <p>Modifiez le code ci-dessous et voyez les changements en direct sur le canvas :</p>
 
-<div class="hidden">
-<h6 id="Playable_code" name="Playable_code">Playable code</h6>
+<h4 id="code_jouable">Code jouable</h4>
 
-<pre class="brush: html">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="400" height="200" class="playable-canvas"&gt;&lt;/canvas&gt;
 &lt;div class="playable-buttons"&gt;
   &lt;input id="edit" type="button" value="Edit" /&gt;
   &lt;input id="reset" type="button" value="Reset" /&gt;
@@ -97,20 +96,15 @@ window.addEventListener("load", drawCanvas);
 
 <p>{{ EmbedLiveSample('Playable_code', 700, 360) }}</p>
 
-<h3 id="Different_shapes_demonstrated" name="Different_shapes_demonstrated">Exemple avec différentes formes</h3>
+<h3 id="Different_shapes_demonstrated">Exemple avec différentes formes</h3>
 
 <p>Dans cet exemple, plusieurs formes différentes sont dessinées, afin de montrer les possibilités offertes par <code>arc()</code>.</p>
 
-<div class="hidden">
-<h6 id="HTML_2">HTML</h6>
 
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="200"&gt;&lt;/canvas&gt;
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="200"&gt;&lt;/canvas&gt;
 </pre>
 
-<h6 id="JavaScript_2">JavaScript</h6>
-</div>
-
-<pre class="brush: js line-numbers  language-js"><code class="language-js">var canvas = document.getElementById('canvas');
+<pre class="brush: js">var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 // Draw shapes
@@ -132,9 +126,9 @@ for (var i = 0; i &lt; 4; i++) {
       ctx.stroke();
     }
   }
-}</code></pre>
+}</pre>
 
-<p>{{ EmbedLiveSample('Different_shapes_demonstrated', 160, 210, "https://mdn.mozillademos.org/files/204/Canvas_arc.png") }}</p>
+<p>{{ EmbedLiveSample('Different_shapes_demonstrated', 160, 210, "canvas_arc.png") }}</p>
 
 <h2 id="Spécifications">Spécifications</h2>
 
@@ -163,7 +157,7 @@ for (var i = 0; i &lt; 4; i++) {
 
 <ul>
  <li>Le paramètre <code>anticlockwise</code> est optionnel,</li>
- <li>Une valeur négative pour le rayon lance une erreur de type {{domxref("DOMError", "IndexSizeError")}} ( <span>"L'index ou la taille est négatif ou supérieur à la valeur autorisée" ).</span></li>
+ <li>Une valeur négative pour le rayon lance une erreur de type {{domxref("DOMError", "IndexSizeError")}} ( "L'index ou la taille est négatif ou supérieur à la valeur autorisée" ).</li>
 </ul>
 
 <h2 id="Voir_aussi">Voir aussi</h2>

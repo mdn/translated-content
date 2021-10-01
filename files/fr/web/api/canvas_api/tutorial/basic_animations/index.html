@@ -13,13 +13,11 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Animations_basiques
 ---
 <div>{{CanvasSidebar}} {{PreviousNext("Web/API/Canvas_API/Tutorial/Compositing", "Tutoriel_canvas/Advanced_animations")}}</div>
 
-<div class="summary">
 <p>Avec l'utilisation en Javascript du composant {{HTMLElement("canvas")}}, il est très simple de créer des animations (interactives). Ce chapitre décrit comment créer quelques animations basiques.</p>
-</div>
 
 <p>La plus grosse limitation est sans doute qu'une fois qu'une forme est dessinée, elle reste telle quelle. Si on a besoin de la déplacer, il faut la redessiner avec ce qui était dessiné avant. Cela peut prendre beaucoup de temps de redessiner des images complexes et les performances dépendront beaucoup de la vitesse de l'ordinateur qui exécute cet affichage.</p>
 
-<h2 id="Basic_animation_steps" name="Basic_animation_steps">Les étapes d'une animation basique</h2>
+<h2 id="Basic_animation_steps">Les étapes d'une animation basique</h2>
 
 <p>Voici les étapes à suivre à chaque image dessinée (frame) :</p>
 
@@ -34,7 +32,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Animations_basiques
   Si l'état du canevas a été sauvegardé, vous  restaurez cet état avant le prochain rendu.</li>
 </ol>
 
-<h2 id="Controlling_an_animation" name="Controlling_an_animation">Contrôle d'une animation</h2>
+<h2 id="Controlling_an_animation">Contrôle d'une animation</h2>
 
 <p>Les formes sont dessinées en utilisant soit les méthodes du canevas directement soit en appelant des fonctions personnalisées. Dans des conditions normales, on ne voit le résultat des opérations sur le canevas que quand le script a terminé son exécution. Cela signifie qu'il n'est pas possible de créer une animation avec une boucle <code>for</code>.</p>
 
@@ -60,20 +58,20 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Animations_basiques
 <p>Dans les exemples suivants, nous utiliserons {{domxref("window.requestAnimationFrame()")}} pour contrôler les animations. Cette technique est plus fluide et plus efficace, elle appelle les opérations de rendu quand le système est prêt à dessiner l'image. Dans des conditions idéales, la fonction est alors lancée 60 fois par seconde, mais la fréquence sera réduite si l'animation se passe dans un onglet non visible.</p>
 
 <div class="note">
-<p>Pour plus d'informations sur la boucle d'animation, plus spécialement pour les jeux, rendez-vous sur l'article <a href="https://developer.mozilla.org/fr/docs/Jeux/Anatomie">L'anatomie d'un jeu vidéo</a> dans notre section <a href="https://developer.mozilla.org/fr/docs/Jeux">Développement de jeux vidéo</a>.</p>
+<p><strong>Note :</strong> Pour plus d'informations sur la boucle d'animation, plus spécialement pour les jeux, rendez-vous sur l'article <a href="/fr/docs/Jeux/Anatomie">L'anatomie d'un jeu vidéo</a> dans notre section <a href="/fr/docs/Jeux">Développement de jeux vidéo</a>.</p>
 </div>
 
 <h2 id="Un_système_terrestre_animé">Un système terrestre animé</h2>
 
 <p>Cette exemple anime un petit modèle de notre système terrestre.</p>
 
-<pre class="brush: js notranslate">var sun = new Image();
+<pre class="brush: js">var sun = new Image();
 var moon = new Image();
 var earth = new Image();
 function init(){
-  sun.src = 'https://mdn.mozillademos.org/files/1456/Canvas_sun.png';
-  moon.src = 'https://mdn.mozillademos.org/files/1443/Canvas_moon.png';
-  earth.src = 'https://mdn.mozillademos.org/files/1429/Canvas_earth.png';
+  sun.src = 'canvas_sun.png';
+  moon.src = 'canvas_moon.png';
+  earth.src = 'canvas_earth.png';
   window.requestAnimationFrame(draw);
 }
 
@@ -116,17 +114,15 @@ function draw() {
 init();
 </pre>
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="300" height="300"&gt;&lt;/canvas&gt;</pre>
-</div>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="300" height="300"&gt;&lt;/canvas&gt;</pre>
 
-<p>{{EmbedLiveSample("Un_système_terrestre_animé", "310", "310", "https://mdn.mozillademos.org/files/202/Canvas_animation1.png")}}</p>
+<p>{{EmbedLiveSample("Un_système_terrestre_animé", "310", "310", "canvas_animation1.png")}}</p>
 
 <h2 id="Une_horloge_animée">Une horloge animée</h2>
 
 <p>Cette exemple dessine une horloge animée qui affiche l'heure actuelle.</p>
 
-<pre class="brush: js notranslate">function clock(){
+<pre class="brush: js">function clock(){
   var now = new Date();
   var ctx = document.getElementById('canvas').getContext('2d');
   ctx.save();
@@ -225,22 +221,20 @@ init();
 
 window.requestAnimationFrame(clock);</pre>
 
-<div class="hidden">
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
-</div>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
-<p>{{EmbedLiveSample("Une_horloge_animée", "180", "180", "https://mdn.mozillademos.org/files/203/Canvas_animation2.png")}}</p>
+<p>{{EmbedLiveSample("Une_horloge_animée", "180", "180", "canvas_animation2.png")}}</p>
 
 <h2 id="Un_panorama_défilant_en_boucle">Un panorama défilant en boucle</h2>
 
-<p>Dans cet exemple, un panorama défile de la gauche vers la droite et recommence. Nous utilisons une <a href="http://commons.wikimedia.org/wiki/File:Capitan_Meadows,_Yosemite_National_Park.jpg" title="http://commons.wikimedia.org/wiki/File:Capitan_Meadows,_Yosemite_National_Park.jpg">image du parc Yosemite National</a> récupérée sur Wikimedia, vous pouvez utiliser une autre image de votre choix qui est plus grande que le canevas.</p>
+<p>Dans cet exemple, un panorama défile de la gauche vers la droite et recommence. Nous utilisons une <a href="http://commons.wikimedia.org/wiki/File:Capitan_Meadows,_Yosemite_National_Park.jpg">image du parc Yosemite National</a> récupérée sur Wikimedia, vous pouvez utiliser une autre image de votre choix qui est plus grande que le canevas.</p>
 
-<pre class="brush: js notranslate">var img = new Image();
+<pre class="brush: js">var img = new Image();
 
 // Variables utilisateur - les personnaliser pour changer l'image qui défile, ses
 // directions, et la vitesse.
 
-img.src = 'https://mdn.mozillademos.org/files/4553/Capitan_Meadows,_Yosemite_National_Park.jpg';
+img.src = 'capitan_meadows_yosemite_national_park.jpg';
 var CanvasXSize = 800;
 var CanvasYSize = 200;
 var speed = 30; // plus elle est basse, plus c'est rapide
@@ -324,16 +318,16 @@ function draw() {
 
 <p>En dessous, vous trouvez l'élément {{HTMLElement("canvas")}} avec l'image qui défile. Notez que les dimensions de largeur et de hauteur spécifiées doivent correspondre aux valeurs des variables <code>CanvasXZSize</code> et <code>CanvasYSize</code> dans le code JavaScript.</p>
 
-<pre class="brush: html notranslate">&lt;canvas id="canvas" width="800" height="200"&gt;&lt;/canvas&gt;</pre>
+<pre class="brush: html">&lt;canvas id="canvas" width="800" height="200"&gt;&lt;/canvas&gt;</pre>
 
 <p>{{EmbedLiveSample("Un_panorama_défilant_en_boucle", "830", "230")}}</p>
 
-<h2 id="Other_examples" name="Other_examples">Autres exemples</h2>
+<h2 id="Other_examples">Autres exemples</h2>
 
 <dl>
- <dt><a href="https://developer.mozilla.org/fr/docs/Un_raycaster_basique_avec_canvas" title="/en-US/docs/Web/Guide/HTML/A_basic_ray-caster">Un raycaster basique avec canvas</a></dt>
+ <dt><a href="/fr/docs/Un_raycaster_basique_avec_canvas">Un raycaster basique avec canvas</a></dt>
  <dd>Un bon exemple d'animation contrôlée par le clavier.</dd>
- <dt><a href="https://developer.mozilla.org/fr/docs/Tutoriel_canvas/Advanced_animations">Animations avancées</a></dt>
+ <dt><a href="/fr/docs/Tutoriel_canvas/Advanced_animations">Animations avancées</a></dt>
  <dd>Nous nous attarderons sur quelques techniques d'animation et de gestion de physique avancées dans le prochain châpitre.</dd>
 </dl>
 

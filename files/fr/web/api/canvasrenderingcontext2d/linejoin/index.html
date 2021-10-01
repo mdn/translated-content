@@ -29,7 +29,7 @@ translation_of: Web/API/CanvasRenderingContext2D/lineJoin
 
 <p>Il y a trois valeurs possibles pour cette propriété: <code>"round"</code>, <code>"bevel"</code> et <code>"miter"</code>. Celle par défaut est <code>"miter"</code>.</p>
 
-<p><img alt="" src="https://mdn.mozillademos.org/files/237/Canvas_linejoin.png" style="float: right; height: 190px; width: 190px;"></p>
+<p><img alt="" src="canvas_linejoin.png"></p>
 
 <dl>
  <dt><code>"round"</code> (rond)</dt>
@@ -53,7 +53,7 @@ translation_of: Web/API/CanvasRenderingContext2D/lineJoin
 
 <h4 id="JavaScript">JavaScript</h4>
 
-<pre class="brush: js; highlight[5]">const canvas = document.getElementById('canvas');
+<pre class="brush: js">const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 ctx.lineWidth = 20;
@@ -74,9 +74,7 @@ ctx.stroke();
 
 <p>L'exemple dessine 3 tracés différents, illustrant chacune des trois valeurs de <code>lineJoin</code>.</p>
 
-<div class="hidden">
-<pre class="brush: html">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
-</div>
+<pre class="brush: html hidden">&lt;canvas id="canvas" width="150" height="150"&gt;&lt;/canvas&gt;</pre>
 
 <pre class="brush: js">var ctx = document.getElementById('canvas').getContext('2d');
 var lineJoin = ['round', 'bevel', 'miter'];
@@ -94,7 +92,7 @@ for (let i = 0; i &lt; lineJoin.length; i++) {
 }
 </pre>
 
-<p>{{EmbedLiveSample("Comparison_of_line_joins", "180", "180", "https://mdn.mozillademos.org/files/237/Canvas_linejoin.png")}}</p>
+<p>{{EmbedLiveSample("Comparison_of_line_joins", "180", "180", "canvas_linejoin.png")}}</p>
 
 <h2 id="Spécifications">Spécifications</h2>
 

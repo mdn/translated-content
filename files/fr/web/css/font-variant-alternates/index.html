@@ -48,19 +48,20 @@ font-variant-alternates: unset;
  <dd>Ce mot-clé désactive l'utilisation de tels glyphes alternatifs.</dd>
  <dt><code>historical-forms</code></dt>
  <dd>Ce mot-clé active l'affichage de formes historiques, c'est-à-dire des glyphes communs par le passé qui ne sont plus utilisés aujourd'hui. Cette valeur correspond à la valeur OpenType <code>hist</code>.</dd>
- <dt><code><a name="stylistic()"></a>stylistic()</code></dt>
+ <dt><code>stylistic()</code></dt>
  <dd>Cette fonction active l'affichage de formes stylistiques alternatives. Le paramètre passé à la fonction est un nom spécifique à la fonte associé à un nombre. Elle correspond à la valeur OpenType <code>salt</code>, par exemple <code>salt 2</code>.</dd>
- <dt><code><a name="styleset()"></a>styleset()</code></dt>
+ <dt><code>styleset()</code></dt>
  <dd>Cette fonction active l'utilisation d'un ensemble de caractères d'un style alternatif. Le paramètre est un nom spécifique à la fonte, associé à un nombre. Elle correspond à la valeur OpenType <code>ssXY</code> (par exemple <code>ss02</code>).</dd>
- <dt><code><a name="character-variant()"></a>character-variant()</code></dt>
+ <dt><code>character-variant()</code></dt>
  <dd>Cette fonction active l'utilisation d'un ensemble de caractères stylistiques alternatifs. Elle est semblable à <code>styleset()</code> mais n'implique pas de cohérence entre les différents caractères. Avec cette valeur, les différents caractères peuvent avoir un style indépendant qui peut ne pas être cohérent. Le paramètre passé à la fonction est un nom lié à la fonte auquel est associé un nombre. Elle correspond à la valeur OpenType <code>cvXY</code> (par exemple <code>cv02</code>).</dd>
- <dt><code><a name="swash()"></a>swash()</code></dt>
+ <dt><code>swash()</code></dt>
  <dd>Cette fonction active l'affichage des glypes <a href="https://fr.wikipedia.org/wiki/Lettre_orn%C3%A9e">pour les lettres ornées</a>. Le paramètre passé à la fonction est un nom lié à la fonte auquel est associé un nombre. Elle correspond aux valeurs OpenType <code>swsh</code> et <code>cswh</code> (par exemple <code>swsh 2</code> ou <code>cswh 2</code>).</dd>
- <dt><code><a name="ornaments()"></a>ornaments()</code></dt>
+ <dt><code>ornaments()</code></dt>
  <dd>Cette fonction active l'affichage des ornements tels que les <a href="https://fr.wikipedia.org/wiki/Fleuron_(typographie)">fleurons</a> et autres casseaux. Le paramètre passé à la fonction est un nom lié à la fonte auquel est associé un nombre. Cette valeur correspond à la valeur OpenType <code>ornm</code> (par exemple <code>ornm 2</code>).
- <div class="note"><strong>Note : </strong>afin de préserver la sémantique de la fonte, les fondeurs sont invités à ne pas créer de casseaux qui correspondent aux caractères Unicode déjà définis comme variantes d'ornement pour la puce  (U+2022). De nombreuses fontes passent outre cette règle et perdent ainsi en qualité.</div>
+ <div class="note">
+   <p><strong>Note :</strong> afin de préserver la sémantique de la fonte, les fondeurs sont invités à ne pas créer de casseaux qui correspondent aux caractères Unicode déjà définis comme variantes d'ornement pour la puce (U+2022). De nombreuses fontes passent outre cette règle et perdent ainsi en qualité.</p></div>
  </dd>
- <dt><code><a name="annotation()"></a>annotation()</code></dt>
+ <dt><code>annotation()</code></dt>
  <dd>Cette fonction active l'affichage des annotations (telles que les chiffres entourés ou les caractères inversés). Le paramètre est un nom lié à la fonte auquel est associé un nombre. Cette valeur correspond à la valeur OpenType <code>nalt</code> (par exemple <code>nalt 2</code>).</dd>
 </dl>
 

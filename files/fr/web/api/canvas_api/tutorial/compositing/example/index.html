@@ -21,7 +21,7 @@ original_slug: Web/API/Canvas_API/Tutoriel_canvas/Composition/Example
 
 <p>Ce code configure les valeurs globales utilisées par le reste du programme.</p>
 
-<pre class="brush: js notranslate">var canvas1 = document.createElement("canvas");
+<pre class="brush: js">var canvas1 = document.createElement("canvas");
 var canvas2 = document.createElement("canvas");
 var gco = [ 'source-over','source-in','source-out','source-atop',
             'destination-over','destination-in','destination-out','destination-atop',
@@ -65,7 +65,7 @@ var height = 340;
 
 <p>Quand la page se charge, le code suivant s'exécute pour configurer et exécuter l'exemple:</p>
 
-<pre class="brush: js notranslate">window.onload = function() {
+<pre class="brush: js">window.onload = function() {
     // lum en sRGB
     var lum = {
         r: 0.33,
@@ -86,7 +86,7 @@ var height = 340;
 
 <p>Et dans le code suivant, <code>runComposite()</code> gère la majeure partie du travail, en s'appuyant sur un certain nombre de fonctions utilitaires pour faire les parties difficiles.</p>
 
-<pre class="brush: js notranslate">function createCanvas() {
+<pre class="brush: js">function createCanvas() {
     var canvas = document.createElement("canvas");
     canvas.style.background = "url("+op_8x8.data+")";
     canvas.style.border = "1px solid #000";
@@ -162,7 +162,7 @@ function runComposite() {
 
 <p>Notre programme repose sur un certain nombbre de fonctions utilitaires:</p>
 
-<pre class="brush: js notranslate">var lightMix = function() {
+<pre class="brush: js">var lightMix = function() {
     var ctx = canvas2.getContext("2d");
     ctx.save();
     ctx.globalCompositeOperation = "lighter";
@@ -186,7 +186,7 @@ function runComposite() {
 };
 </pre>
 
-<pre class="brush: js notranslate">var colorSphere = function(element) {
+<pre class="brush: js">var colorSphere = function(element) {
     var ctx = canvas1.getContext("2d");
     var width = 360;
     var halfWidth = width / 2;
@@ -218,7 +218,7 @@ function runComposite() {
 };
 </pre>
 
-<pre class="brush: js notranslate">// HSV (1978) = H: Hue / S: Saturation / V: Value
+<pre class="brush: js">// HSV (1978) = H: Hue / S: Saturation / V: Value
 Color = {};
 Color.HSV_RGB = function (o) {
     var H = o.H / 360,

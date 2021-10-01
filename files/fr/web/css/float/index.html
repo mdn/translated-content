@@ -9,22 +9,19 @@ translation_of: Web/CSS/float
 ---
 <div>{{CSSRef}}</div>
 
-<p>La propriété <strong><code>float</code></strong> indique qu'un élément doit être retiré du flux normal et doit être placé sur le côté droit ou sur le côté gauche de son conteneur. Le texte et les autres éléments en ligne (<em>inline</em>) entoureront alors l'élément flottant. L'élément est retiré du flux normal de la page mais s'inscrit toujours dans le flux (contrairement au <a href="/fr/docs/Web/CSS/position#Positionnement_absolu">positionnement absolu</a>).</p>
+<p>La propriété <strong><code>float</code></strong> indique qu'un élément doit être retiré du flux normal et doit être placé sur le côté droit ou sur le côté gauche de son conteneur. Le texte et les autres éléments en ligne (<em>inline</em>) entoureront alors l'élément flottant. L'élément est retiré du flux normal de la page mais s'inscrit toujours dans le flux (contrairement au <a href="/fr/docs/Web/CSS/position#positionnement_absolu">positionnement absolu</a>).</p>
 
 <div>{{EmbedInteractiveExample("pages/css/float.html")}}</div>
 
-<p class="hidden">Le code source de cet exemple interactif est disponible dans un dépôt GitHub. Si vous souhaitez contribuer à ces exemples, n'hésitez pas à cloner <a href="https://github.com/mdn/interactive-examples">https://github.com/mdn/interactive-examples</a> et à envoyer une <em>pull request</em> !</p>
+<p>Un <strong>élément flottant</strong> est un élément pour lequel <a href="/fr/docs/Web/CSS/computed_value">la valeur calculée</a> de <code>float</code> est différente de <code>none</code>.</p>
 
-<p>Un <strong>élément flottant</strong> est un élément pour lequel <a href="/fr/docs/Web/CSS/Valeur_calculée">la valeur calculée</a> de <code>float</code> est différente de <code>none</code>.</p>
-
-<div id="float">
 <p><code>float</code> implique l'utilisation d'une disposition en bloc, cette propriété modifie donc la valeur de {{cssxref("display")}} dans certains cas :</p>
 
 <table class="standard-table">
  <thead>
   <tr>
-   <th scope="col"><a href="/fr/docs/Web/CSS/Valeur_spécifiée">Valeur spécifiée</a></th>
-   <th scope="col"><a href="/fr/docs/Web/CSS/Valeur_calculée">Valeur calculée</a></th>
+   <th scope="col"><a href="/fr/docs/Web/CSS/specified_value">Valeur spécifiée</a></th>
+   <th scope="col"><a href="/fr/docs/Web/CSS/computed_value">Valeur calculée</a></th>
   </tr>
  </thead>
  <tbody>
@@ -87,7 +84,9 @@ translation_of: Web/CSS/float
  </tbody>
 </table>
 
-<div class="note"><strong>Note : </strong>Si vous utilisez cette propriété via JavaScript, comme propriété de l'objet {{domxref("HTMLElement.style")}}, la plupart des navigateurs récents permettra d'utiliser <code>float</code> mais il faudra utiliser <code>cssFloat</code> (attention à la casse) pour les navigateurs plus anciens. Pour Internet Explorer 8 et les versions antérieures, elle était appelée <code>styleFloat</code>. Le terme <code>float</code> étant réservé en JavaScript, ce cas de figure était une exception à la règle qui définit que le nom de la propriété DOM est une version <a href="https://fr.wikipedia.org/wiki/CamelCase">CamelCase</a> de la propriété CSS construite avec des tirets. De même, <code>class</code> sera échappée en <code>className</code> et le <code>for</code> des éléments &lt;label&gt; sera converti en <code>htmlFor</code>).</div>
+<div class="note">
+  <p><strong>Note :</strong>Si vous utilisez cette propriété via JavaScript, comme propriété de l'objet {{domxref("HTMLElement.style")}}, la plupart des navigateurs récents permettra d'utiliser <code>float</code> mais il faudra utiliser <code>cssFloat</code> (attention à la casse) pour les navigateurs plus anciens. Pour Internet Explorer 8 et les versions antérieures, elle était appelée <code>styleFloat</code>. Le terme <code>float</code> étant réservé en JavaScript, ce cas de figure était une exception à la règle qui définit que le nom de la propriété DOM est une version <a href="https://fr.wikipedia.org/wiki/CamelCase">CamelCase</a> de la propriété CSS construite avec des tirets. De même, <code>class</code> sera échappée en <code>className</code> et le <code>for</code> des éléments &lt;label&gt; sera converti en <code>htmlFor</code>).</p>
+</div>
 
 <h2 id="Syntaxe">Syntaxe</h2>
 
@@ -155,7 +154,7 @@ h4 {
 
 <p>Dans l'image suivante, on voit trois carrés rouges. Deux flottent à gauche et un flotte à droite. On voit que le deuxième carré à gauche est placé à droite du premier. Si on ajoutait d'autres carrés, ils s'empileraient sur la gauche jusqu'à remplir le conteneur, ensuite, on passerait sur une autre ligne.</p>
 
-<p><img src="/@api/deki/files/4927/=floats.png" style="height: 248px; width: 729px;"></p>
+<p><img src="floats.png"></p>
 
 <h2 id="Dégager_des_éléments_du_flottement">Dégager des éléments du flottement</h2>
 
@@ -166,14 +165,15 @@ h4 {
 <pre class="brush:css">h2.deuxiemeTitre { clear: both; }
 </pre>
 
-<p>Cela dit, cette méthode fonctionne uniquement s'il n'y a pas d'autres éléments dans le même <a href="/fr/docs/Web/CSS/Block_formatting_context" rel="internal">contexte de formatage de bloc</a> pour lesquels on voudrait que l'élément apparaisse à droite. Par exemple, si l'élément <code>H2</code> est entourée de barres latérales à gauche et à droite et qu'on utilise <code>clear</code>, le titre apparaîtra alors en bas, sous les barres, plutôt qu'entre elles.</p>
+<p>Cela dit, cette méthode fonctionne uniquement s'il n'y a pas d'autres éléments dans le même <a href="/fr/docs/Web/Guide/CSS/Block_formatting_context">contexte de formatage de bloc</a> pour lesquels on voudrait que l'élément apparaisse à droite. Par exemple, si l'élément <code>H2</code> est entourée de barres latérales à gauche et à droite et qu'on utilise <code>clear</code>, le titre apparaîtra alors en bas, sous les barres, plutôt qu'entre elles.</p>
 
 <p>Aussi, si on ne peut pas dégager un élément, on peut limiter le formatage en bloc au conteneur des éléments flottants. Pour reprendre l'exemple précédent, on voit que toutes les boîtes rouges sont dans un élément {{HTMLElement("p")}}. On peut alors utiliser {{cssxref("overflow")}} avec <code>hidden</code> ou <code>auto</code> afin que l'élément s'agrandisse pour les contenir, sans les faire tomber en bas :</p>
 
 <pre class="brush:css">p.avecBoitesRouges { overflow: hidden; height: auto; }
 </pre>
 
-<div class="note"><strong>Note :</strong> En utilisant <code>overflow</code>: <code>scroll</code> on contiendra également les éléments fils flottants mais cela affichera des barres de défilement quelle que soit la hauteur du contenu. Ici, nous utilisons <code>auto</code> pour <code>height</code> afin d'indiquer que le conteneur doit s'agrandir si nécessaire.</div>
+<div class="note">
+  <p><strong>Note :</strong> En utilisant <code>overflow</code>: <code>scroll</code> on contiendra également les éléments fils flottants mais cela affichera des barres de défilement quelle que soit la hauteur du contenu. Ici, nous utilisons <code>auto</code> pour <code>height</code> afin d'indiquer que le conteneur doit s'agrandir si nécessaire.</p></div>
 
 <h2 id="Spécifications">Spécifications</h2>
 
@@ -218,6 +218,5 @@ h4 {
 <h2 id="Voir_aussi">Voir aussi</h2>
 
 <ul>
- <li><a href="/fr/docs/Web/CSS/Block_formatting_context">Le contexte de formatage des blocs</a></li>
+ <li><a href="/fr/docs/Web/Guide/CSS/Block_formatting_context">Le contexte de formatage des blocs</a></li>
 </ul>
-</div>

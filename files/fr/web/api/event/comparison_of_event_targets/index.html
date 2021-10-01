@@ -10,7 +10,7 @@ original_slug: Web/API/Event/Comparaison_des_cibles_d_évènements
 ---
 <p>{{ ApiRef() }}</p>
 
-<h3 id="Event_targets" name="Event_targets">Cibles d'évènements</h3>
+<h3 id="Event_targets">Cibles d'évènements</h3>
 
 <p>Il est facile de s'interroger sur la cible à examiner lors de l'écriture d'un gestionnaire d'événements. Cet article devrait clarifier l'utilisation des propriétés de la cible.</p>
 
@@ -24,8 +24,8 @@ original_slug: Web/API/Event/Comparaison_des_cibles_d_évènements
    <th>Objectif</th>
   </tr>
   <tr>
-   <td><a href="/en/DOM/event.target" title="en/DOM/event.target">event.target</a></td>
-   <td><a class="external" href="http://www.w3.org/TR/DOM-Level-2/events.html#Events-interface">DOM Event Interface</a></td>
+   <td><a href="/en/DOM/event.target">event.target</a></td>
+   <td><a href="http://www.w3.org/TR/DOM-Level-2/events.html#Events-interface">DOM Event Interface</a></td>
    <td>
     <p>L'élément DOM sur le côté gauche de l'appel qui a déclenché cet événement, par exemple :</p>
 
@@ -35,36 +35,36 @@ original_slug: Web/API/Event/Comparaison_des_cibles_d_évènements
    </td>
   </tr>
   <tr>
-   <td><a href="/en/DOM/event.currentTarget" title="en/DOM/event.currentTarget">event.currentTarget</a></td>
-   <td><a class="external" href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-interface">DOM Event Interface</a></td>
-   <td>La <a class="external" href="http://www.w3.org/TR/DOM-Level-2/events.html#Events-EventTarget"><code>EventTarget</code></a> (<em>cible d'évènement</em>) que les <a class="external" href="http://www.w3.org/TR/DOM-Level-2/events.html#Events-EventListener"><code>EventListeners</code></a> traitent actuellement. Au fur et à mesure de la capture et de la diffusion des évènements, cette valeur change.</td>
+   <td><a href="/en/DOM/event.currentTarget">event.currentTarget</a></td>
+   <td><a href="https://www.w3.org/TR/DOM-Level-2/events.html#Events-interface">DOM Event Interface</a></td>
+   <td>La <a href="http://www.w3.org/TR/DOM-Level-2/events.html#Events-EventTarget"><code>EventTarget</code></a> (<em>cible d'évènement</em>) que les <a href="http://www.w3.org/TR/DOM-Level-2/events.html#Events-EventListener"><code>EventListeners</code></a> traitent actuellement. Au fur et à mesure de la capture et de la diffusion des évènements, cette valeur change.</td>
   </tr>
   <tr>
-   <td><a href="/en/DOM/event.relatedTarget" title="en/DOM/event.relatedTarget">event.relatedTarget</a></td>
-   <td><a class="external" href="http://www.w3.org/TR/DOM-Level-2/events.html#Events-MouseEvent">DOM MouseEvent Interface</a></td>
+   <td><a href="/en/DOM/event.relatedTarget">event.relatedTarget</a></td>
+   <td><a href="http://www.w3.org/TR/DOM-Level-2/events.html#Events-MouseEvent">DOM MouseEvent Interface</a></td>
    <td>Identifie une cible secondaire pour l'évènement.</td>
   </tr>
   <tr>
-   <td><a href="/en/DOM/event.explicitOriginalTarget" title="en/DOM/event.explicitOriginalTarget">event.explicitOriginalTarget</a></td>
+   <td><a href="/en/DOM/event.explicitOriginalTarget">event.explicitOriginalTarget</a></td>
    <td>{{ Source("/dom/public/idl/events/nsIDOMNSEvent.idl", "nsIDOMNSEvent.idl") }}</td>
    <td>{{ Non-standard_inline() }} Si l'évènement a été reciblé pour quelque raison autre que  un passage de limite anonyme, il sera défini sur la cible avant le reciblage. Par exemple, les évènements de souris sont reciblés vers leur noeud parent quand ils surviennent sur des noeuds de texte ({{ Bug("185889") }}), et, dans ce cas, <code>.target</code> affichera le parent <code>.explicitOriginalTarget</code> et le noeud de texte.<br>
     Contrairement à <code>.originalTarget</code>, <code>.explicitOriginalTarget</code> n'aura jamais de contenu anonyme.</td>
   </tr>
   <tr>
-   <td><a href="/en/DOM/event.originalTarget" title="en/DOM/event.originalTarget">event.originalTarget</a></td>
+   <td><a href="/en/DOM/event.originalTarget">event.originalTarget</a></td>
    <td>{{ Source("/dom/public/idl/events/nsIDOMNSEvent.idl", "nsIDOMNSEvent.idl") }}</td>
-   <td>{{ Non-standard_inline() }} La cible originale de l'évènement, avant tout reciblage. Voir <a href="/en-US/docs/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting" title="en/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting">Anonymous Content#Event_Flow_and_Targeting</a> pour plus de détails.</td>
+   <td>{{ Non-standard_inline() }} La cible originale de l'évènement, avant tout reciblage. Voir <a href="/en-US/docs/XBL/XBL_1.0_Reference/Anonymous_Content#Event_Flow_and_Targeting">Anonymous Content#Event_Flow_and_Targeting</a> pour plus de détails.</td>
   </tr>
  </tbody>
 </table>
 
-<h3 id="Use_of_explicitOriginalTarget_and_originalTarget" name="Use_of_explicitOriginalTarget_and_originalTarget">Utilisation de <code>explicitOriginalTarget</code> et <code>originalTarget</code></h3>
+<h3 id="Use_of_explicitOriginalTarget_and_originalTarget">Utilisation de <code>explicitOriginalTarget</code> et <code>originalTarget</code></h3>
 
 <p>Problème : Seulement disponible dans un navigateur basé sur Mozilla ? Problème : Convient uniquement aux développeurs d'extensions ?</p>
 
-<h3 id="Examples" name="Examples">Exemples</h3>
+<h3 id="Examples">Exemples</h3>
 
-<pre>&lt;!DOCTYPE html&gt;
+<pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -130,7 +130,7 @@ original_slug: Web/API/Event/Comparaison_des_cibles_d_évènements
 &lt;/body&gt;
 &lt;/html&gt;</pre>
 
-<h3 id="Use_of_target_and_relatedTarget" name="Use_of_target_and_relatedTarget">Utilisation de <code>target</code> et <code>relatedTarget</code></h3>
+<h3 id="Use_of_target_and_relatedTarget">Utilisation de <code>target</code> et <code>relatedTarget</code></h3>
 
 <p>La propriété <code>relatedTarget</code> (<em>cible associée</em>) pour l'évènement <code>mouseover</code>  détient le noeud que la souris avait précédemment atteint. Pour l'évènement <code>mouseout</code>, il détient le noeud que la souris a déplacé à.</p>
 
@@ -138,8 +138,8 @@ original_slug: Web/API/Event/Comparaison_des_cibles_d_évènements
  <tbody>
   <tr>
    <th>Type d'évènement</th>
-   <th><a href="/en/DOM/event.target" title="en/DOM/event.target">event.target</a></th>
-   <th><a href="/en/DOM/event.relatedTarget" title="en/DOM/event.relatedTarget">event.relatedTarget</a></th>
+   <th><a href="/en/DOM/event.target">event.target</a></th>
+   <th><a href="/en/DOM/event.relatedTarget">event.relatedTarget</a></th>
   </tr>
   <tr>
    <td><code>mouseover</code></td>
@@ -156,7 +156,7 @@ original_slug: Web/API/Event/Comparaison_des_cibles_d_évènements
 
 <p>Problème : A également besoin de descriptions sur les évènements <code>dragenter</code> et <code>dragexit</code>.</p>
 
-<h4 id="Example" name="Example">Exemple</h4>
+<h4 id="Example">Exemple</h4>
 
 <pre class="eval">&lt;hbox id="outer"&gt;
   &lt;hbox id="inner"

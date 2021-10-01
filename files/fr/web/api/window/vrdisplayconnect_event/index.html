@@ -40,14 +40,14 @@ translation_of: Web/API/Window/vrdisplayconnect_event
 
 <p>Vous pouvez utiliser l'événement <code>vrdisplayconnect</code> dans une méthode <code><a href="/en-US/docs/Web/API/EventTarget/addEventListener">addEventListener</a></code> :</p>
 
-<pre class="brush: js notranslate">window.addEventListener('vrdisplayconnect', function() {
+<pre class="brush: js">window.addEventListener('vrdisplayconnect', function() {
   info.textContent = 'Affichage connecté.';
   reportDisplays();
 });</pre>
 
 <p>Ou utilisez la propriété du gestionnaire d'événements <code><a href="/en-US/docs/Web/API/Window/onvrdisplayconnect">onvrdisplayconnect</a></code> :</p>
 
-<pre class="brush: js notranslate">window.onvrdisplayconnect = function() {
+<pre class="brush: js">window.onvrdisplayconnect = function() {
   info.textContent = 'Affichage connecté.';
   reportDisplays();
 };</pre>
