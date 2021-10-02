@@ -148,35 +148,37 @@ translation_of: Web/HTML/Element/input/checkbox
 
 <p>Dans cet exemple, l'état <code>indeterminate</code> est utilisé afin d'indiquer qu'on possède certains ingrédients mais pas suffisamment pour une recette.</p>
 
-<pre class="brush: js notranslate" id="line1"><span>  var overall = document.querySelector('input[id="EnchTbl"]');
-  var ingredients = document.querySelectorAll('ul input');
+<pre class="brush: js">
+var overall = document.querySelector('input[id="EnchTbl"]');
+var ingredients = document.querySelectorAll('ul input');
 
-  overall.addEventListener('click', function(e) {
-    e.preventDefault();
-  });
+overall.addEventListener('click', function(e) {
+  e.preventDefault();
+});
 
-  for(var i = 0; i </span><span>&lt; </span><span>ingredients.length; i++) {
-    ingredients[i].addEventListener('click', updateDisplay);
+for(var i = 0; i &lt; ingredients.length; i++) {
+  ingredients[i].addEventListener('click', updateDisplay);
+}
+
+function updateDisplay() {
+  var checkedCount = 1;
+  for(var i = 0; i &lt; ingredients.length; i++) {
+    if(ingredients[i].checked) {
+      checkedCount++;
+    }
   }
-
-  function updateDisplay() {
-    var checkedCount = 1;
-    for(var i = 0; i </span><span>&lt; </span><span>ingredients.length; i++) {
-      if(ingredients[i].checked) {
-        checkedCount++;
-      }
-    }
-    if(checkedCount === 0) {
-      overall.checked = false;
-      overall.indeterminate = false;
-    } else if(checkedCount </span><span>===</span><span> ingredients.length) {
-      overall.checked = true;
-      overall.indeterminate = false;
-    } else {
-      overall.checked = false;
-      overall.indeterminate = true;
-    }
-  }</span></pre>
+  if(checkedCount === 0) {
+    overall.checked = false;
+    overall.indeterminate = false;
+  } else if(checkedCount === ingredients.length) {
+    overall.checked = true;
+    overall.indeterminate = false;
+  } else {
+    overall.checked = false;
+    overall.indeterminate = true;
+  }
+}
+</pre>
 
 <p>{{EmbedGHLiveSample("learning-area/html/forms/indeterminate-example/index.html", '100%', 200)}}</p>
 
