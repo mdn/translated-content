@@ -1,5 +1,5 @@
 ---
-title: 有用的字符串方法
+title: 字符串的一些实用方法
 slug: Learn/JavaScript/First_steps/Useful_string_methods
 tags:
   - JavaScript
@@ -19,16 +19,16 @@ translation_of: Learn/JavaScript/First_steps/Useful_string_methods
 <p class="summary">现在我们学习基本的字符串语法, 让我们开始思考一下我们可以对内置方法的字符串做什么有用的操作，例如查找文本字符串的长度，加入和分割字符串， 将字符串中的一个字符替换为另一个字符。</p>
 
 <table class="learn-box standard-table">
- <tbody>
-  <tr>
-   <th scope="row">前提：</th>
-   <td>基本的电脑知识， 对HTML和CSS有一定的了解，最好是懂一点javascript知识。</td>
-  </tr>
-  <tr>
-   <th scope="row">目的:</th>
-   <td>明白字符串这个对象，学会使用字符串的基本方法去处理字符串</td>
-  </tr>
- </tbody>
+  <tbody>
+   <tr>
+    <th scope="row">前提：</th>
+    <td>基本的电脑知识， 对HTML和CSS有一定的了解，最好是懂一点javascript知识。</td>
+   </tr>
+   <tr>
+    <th scope="row">目的:</th>
+    <td>明白字符串这个对象，学会使用字符串的基本方法去处理字符串</td>
+   </tr>
+  </tbody>
 </table>
 
 <h2 id="把字符串当作对象">把字符串当作对象</h2>
@@ -44,9 +44,9 @@ translation_of: Learn/JavaScript/First_steps/Useful_string_methods
 <p>现在我们在控制台中加些示例 ，我们已经提供了以下示例（你可在单独打开控制台标签或窗口，或者选择使用<a href="/zh-CN/docs/Learn/Discover_browser_developer_tools">浏览器开发者控制台</a>）</p>
 
 <div class="hidden">
-<h6 id="Hidden_code">Hidden code</h6>
+    <h6 id="Hidden_code">Hidden code</h6>
 
-<pre class="brush: html">&lt;!DOCTYPE html&gt;
+    <pre class="brush: html">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;meta charset="utf-8"&gt;
@@ -162,7 +162,7 @@ browserType.length;</pre>
 
 <h3 id="检索特定字符串字符">检索特定字符串字符</h3>
 
-<p>在相关的注释中，您可以使用方括号表示法返回字符串中的任何字符 - 这意味着您可以在变量名的末尾包含方括号（[ ]）。 在方括号内，您可以包含要返回的字符的编号，例如，您要检索第一个字母，可以这样做：</p>
+<p>在相关的注释中，您可以使用<strong>方括号</strong>表示法返回字符串中的任何字符 - 这意味着您可以在变量名的末尾包含方括号（<code>[ ]</code>）。 在方括号内，您可以包含要返回的字符的编号，例如，您要检索第一个字母，可以这样做：</p>
 
 <pre class="brush: js">browserType[0];</pre>
 
@@ -175,32 +175,35 @@ browserType.length;</pre>
 <h3 id="在字符串中查找子字符串并提取它">在字符串中查找子字符串并提取它</h3>
 
 <ol>
- <li>有时候你会想要找出一个较小的字符串是否存在于一个较大的字符串中（我们通常会说一个字符串中存在一个子字符串）。 这可以使用{{jsxref("String.prototype.indexOf()","indexOf()")}}方法来完成，该方法需要一个{{glossary("parameter")}} — 你想要搜索的子字符串。 尝试以下：
-  <pre class="brush: js">browserType.indexOf('zilla');</pre>
-  结果是2，因为子字符串“zilla”从“mozilla”内的位置2（0，1，2 —— 所以从第3个字符）开始。 这样的代码可以用来过滤字符串。 例如，假设我们有一个Web地址列表，但我们只想打印出包含“mozilla”的那些地址。</li>
+    <li>有时候你会想要找出一个较小的字符串是否存在于一个较大的字符串中（我们通常会说一个字符串中存在一个子字符串）。 这可以使用{{jsxref("String.prototype.indexOf()","indexOf()")}}方法来完成，该方法需要一个{{glossary("parameter")}} — 你想要搜索的子字符串。 尝试以下：
+        <pre class="brush: js">browserType.indexOf('zilla');</pre> 结果是2，因为子字符串“zilla”从“mozilla”内的位置2（0，1，2 —— 所以从第3个字符）开始。 这样的代码可以用来过滤字符串。 例如，假设我们有一个Web地址列表，但我们只想打印出包含“mozilla”的那些地址。</li>
 </ol>
 
 <ol start="2">
- <li>这可以用另一种可能更有效的方式来实现。 尝试以下：
-  <pre class="brush: js">browserType.indexOf('vanilla');</pre>
-  这应该会得到 <code>-1</code> 的结果 —— 当在主字符串中找不到子字符串（在本例中为“vanilla”）时将返回 <code>-1</code>。<br>
-  <br>
-  您可以使用它来查找不包含子串“mozilla”的所有字符串实例，或者如果使用否定运算符，请执行以下操作。 你可以这样做：
-  <pre class="brush: js">if(browserType.indexOf('mozilla') !== -1) {
-  // do stuff with the string
-}</pre>
- </li>
- <li>当你知道字符串中的子字符串开始的位置，以及想要结束的字符时，{{jsxref("String.prototype.slice()", "slice()")}}可以用来提取 它。 尝试以下：
-  <pre class="brush: js">browserType.slice(0,3);</pre>
-  这时返回"moz"——第一个参数是开始提取的字符位置，第二个参数是提取的最后一个字符的后一个位置。所以提取从第一个位置开始，直到但不包括最后一个位置。（此例中）你也可以说第二个参数等于被返回的字符串的长度。<br>
-   </li>
- <li>此外，如果您知道要在某个字符之后提取字符串中的所有剩余字符，则不必包含第二个参数，而只需要包含要从中提取的字符位置 字符串中的其余字符。 尝试以下：
-  <pre class="brush: js">browserType.slice(2);</pre>
-  这返回“zilla” —— 这是因为2的字符位置是字母z，并且因为没有包含第二个参数，所以返回的子字符串是字符串中的所有剩余字符。</li>
+    <li>这可以用另一种可能更有效的方式来实现。 尝试以下：
+        <pre class="brush: js">browserType.indexOf('vanilla');</pre> 这应该会得到 <code>-1</code> 的结果 —— 当在主字符串中找不到子字符串（在本例中为“vanilla”）时将返回 <code>-1</code>。<br>
+        <br> 您可以使用它来查找不包含子串“mozilla”的所有字符串实例，或者如果使用否定运算符，请执行以下操作。 你可以这样做：
+        <pre class="brush: js">if(browserType.indexOf('mozilla') !== -1) {
+  // 如果这个字符串不包含 'mozilla'
+  // 那么就去做些什么
+}
+
+if(browserType.indexOf('mozilla') !== -1) {
+  // 如果这个字符串包含 'mozilla'
+  // 那么就去做些什么
+}
+</pre>
+    </li>
+    <li>当你知道字符串中的子字符串开始的位置，以及想要结束的字符时，{{jsxref("String.prototype.slice()", "slice()")}}可以用来提取 它。 尝试以下：
+        <pre class="brush: js">browserType.slice(0,3);</pre> 这时返回"moz"——第一个参数是开始提取的字符位置，第二个参数是提取的最后一个字符的后一个位置。所以提取从第一个位置开始，直到但不包括最后一个位置。（此例中）你也可以说第二个参数等于被返回的字符串的长度。
+        <br>
+    </li>
+    <li>此外，如果您知道要在某个字符之后提取字符串中的所有剩余字符，则不必包含第二个参数，而只需要包含要从中提取的字符位置 字符串中的其余字符。 尝试以下：
+        <pre class="brush: js">browserType.slice(2);</pre> 这返回“zilla” —— 这是因为2的字符位置是字母z，并且因为没有包含第二个参数，所以返回的子字符串是字符串中的所有剩余字符。</li>
 </ol>
 
 <div class="note">
-<p><strong>Note: </strong><code>slice()</code>的第二个参数是可选的 ：如果没有传入这个参数，分片结束位置会在原始字符串的末尾。这个方法也有其他的选项；学习{{jsxref("String.prototype.slice()", "slice()")}}这页，来看看你还能发现什么其他作用。</p>
+    <p><strong>Note: </strong><code>slice()</code>的第二个参数是可选的 ：如果没有传入这个参数，分片结束位置会在原始字符串的末尾。这个方法也有其他的选项；学习{{jsxref("String.prototype.slice()", "slice()")}}这页，来看看你还能发现什么其他作用。</p>
 </div>
 
 <h3 id="转换大小写">转换大小写</h3>
@@ -234,15 +237,15 @@ radData.toUpperCase();</pre>
 <p>在第一个练习中，我们将简单介绍一下 - 我们有一系列的问候卡片消息，但我们希望对它们进行排序，以列出圣诞消息。 我们希望您在 <code>if(...)</code> 结构中填写条件测试，以测试每个字符串，并将其打印在列表中，如果它是圣诞消息。</p>
 
 <ol>
- <li>首先考虑一下如何测试每种情况下的消息是否为圣诞消息。 所有这些消息中都有什么字符串，您可以使用什么方法来测试是否存在？</li>
- <li>然后，您需要编写<em> 操作数1 操作符 操作数2</em> 形式的条件测试。 左边的东西等于右边的东西吗？ 或者在这种情况下，方法调用在左边返回的结果在右边？</li>
- <li>提示：在这种情况下，测试方法调用是否不等于某个结果可能更有用。</li>
+    <li>首先考虑一下如何测试每种情况下的消息是否为圣诞消息。 所有这些消息中都有什么字符串，您可以使用什么方法来测试是否存在？</li>
+    <li>然后，您需要编写<em> 操作数1 操作符 操作数2</em> 形式的条件测试。 左边的东西等于右边的东西吗？ 或者在这种情况下，方法调用在左边返回的结果在右边？</li>
+    <li>提示：在这种情况下，测试方法调用是否不等于某个结果可能更有用。</li>
 </ol>
 
 <div class="hidden">
-<h6 id="Playable_code">Playable code</h6>
+    <h6 id="Playable_code">Playable code</h6>
 
-<pre class="brush: html">&lt;div class="output" style="min-height: 125px;"&gt;
+    <pre class="brush: html">&lt;div class="output" style="min-height: 125px;"&gt;
 
 &lt;ul&gt;
 
@@ -278,7 +281,7 @@ for (var i = 0; i &lt; greetings.length; i++) {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+    <pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -311,20 +314,20 @@ window.addEventListener('load', updateCode);
 <p>在这个练习中，我们有英国城市的名字，但是这个大写字母都搞砸了。 我们希望你改变它们，使它们都是小写字母，除了首字母。 一个很好的方法是：</p>
 
 <ol>
- <li>将输入变量中包含的整个字符串转换为小写，并将其存储在新变量中。</li>
- <li>在此新变量中获取字符串的第一个字母并将其存储在另一个变量中。</li>
- <li>将此最新变量用作子字符串，将小写字符串的第一个字母从小写更改为大写。 将此替换过程的结果存储在另一个新变量中。</li>
- <li>让 <code>result</code> 变量的值与最终结果相等，而不是使用 <code>input</code> 变量。</li>
+    <li>将输入变量中包含的整个字符串转换为小写，并将其存储在新变量中。</li>
+    <li>在此新变量中获取字符串的第一个字母并将其存储在另一个变量中。</li>
+    <li>将此最新变量用作子字符串，将小写字符串的第一个字母从小写更改为大写。 将此替换过程的结果存储在另一个新变量中。</li>
+    <li>让 <code>result</code> 变量的值与最终结果相等，而不是使用 <code>input</code> 变量。</li>
 </ol>
 
 <div class="note">
-<p><strong>Note</strong>: 一个提示 - 字符串方法的参数不必是字符串文字; 它们也可以是变量，甚至是在其上调用方法的变量。</p>
+    <p><strong>Note</strong>: 一个提示 - 字符串方法的参数不必是字符串文字; 它们也可以是变量，甚至是在其上调用方法的变量。</p>
 </div>
 
 <div class="hidden">
-<h6 id="Playable_code_2">Playable code 2</h6>
+    <h6 id="Playable_code_2">Playable code 2</h6>
 
-<pre class="brush: html">&lt;div class="output" style="min-height: 125px;"&gt;
+    <pre class="brush: html">&lt;div class="output" style="min-height: 125px;"&gt;
 
 &lt;ul&gt;
 
@@ -353,7 +356,7 @@ for(var i = 0; i &lt; cities.length; i++) {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+    <pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -394,17 +397,17 @@ window.addEventListener('load', updateCode);
 <p>我们建议这样做：</p>
 
 <ol>
- <li>提取三个字母的站代码并将其存储在一个新的变量中。</li>
- <li>查找分号的字符索引号。</li>
- <li>使用分号字符索引号作为参考点提取人可读的站名，并将其存储在新变量中。</li>
- <li>连接两个新的变量和一个字符串文字，使最终的字符串。</li>
- <li>将 <code>result</code> 变量的值更改为等于最终的字符串，而不是 <code>input</code>。</li>
+    <li>提取三个字母的站代码并将其存储在一个新的变量中。</li>
+    <li>查找分号的字符索引号。</li>
+    <li>使用分号字符索引号作为参考点提取人可读的站名，并将其存储在新变量中。</li>
+    <li>连接两个新的变量和一个字符串文字，使最终的字符串。</li>
+    <li>将 <code>result</code> 变量的值更改为等于最终的字符串，而不是 <code>input</code>。</li>
 </ol>
 
 <div class="hidden">
-<h6 id="Playable_code_3">Playable code 3</h6>
+    <h6 id="Playable_code_3">Playable code 3</h6>
 
-<pre class="brush: html">&lt;div class="output" style="min-height: 125px;"&gt;
+    <pre class="brush: html">&lt;div class="output" style="min-height: 125px;"&gt;
 
 &lt;ul&gt;
 
@@ -438,7 +441,7 @@ for (var i = 0; i &lt; stations.length; i++) {
 &lt;/div&gt;
 </pre>
 
-<pre class="brush: js">var textarea = document.getElementById('code');
+    <pre class="brush: js">var textarea = document.getElementById('code');
 var reset = document.getElementById('reset');
 var solution = document.getElementById('solution');
 var code = textarea.value;
@@ -467,8 +470,26 @@ window.addEventListener('load', updateCode);
 
 <p>{{ EmbedLiveSample('Playable_code_3', '100%', 485) }}</p>
 
+<h2 id="做个测验！">做个测验！</h2>
+
+<p>你已经到达了这篇文章的结尾了，但你能记得最重要的信息吗？<br> 在继续学习前，你可以参与一些进一步的练习，来检测你是否掌握运用这些知识 — 查看 <a href="/en-US/docs/Learn/JavaScript/First_steps/Test_your_skills:_Strings">Test your skills: Strings</a>.</p>
+
 <h2 id="结论">结论</h2>
 
 <p>你不能逃避的事实是在编程中处理单词和句子是非常重要的——特别是在JavaScript中，因为网站都是关于与人沟通的。 本文已经给出了您现在需要了解的关于操作字符串的基础知识。这将在未来进入更复杂的主题时为您服务。 接下来，我们将在短期内研究我们需要关注的最后一个主要的数据类型——数组。</p>
 
 <p>{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}</p>
+
+<h2 id="本章目录">本章目录</h2>
+
+<ul>
+  <li><a href="/zh-CN/docs/Learn/JavaScript/First_steps/What_is_JavaScript">JavaScript 是什么？</a></li>
+  <li><a href="/zh-CN/docs/Learn/JavaScript/First_steps/A_first_splash">JavaScript 初体验</a></li>
+  <li><a href="/zh-CN/docs/Learn/JavaScript/First_steps/What_went_wrong">哪里出错了？JavaScript 疑难解答</a></li>
+  <li><a href="/zh-CN/docs/Learn/JavaScript/First_steps/Variables">存储你需要的信息 — 变量</a></li>
+  <li><a href="/zh-CN/docs/Learn/JavaScript/First_steps/Math">JavaScript 中的基础数学 — 数字和运算符</a></li>
+  <li><a href="/zh-CN/docs/Learn/JavaScript/First_steps/Strings">文本处理 — JavaScript 中的字符串</a></li>
+  <li><a href="/zh-CN/docs/Learn/JavaScript/First_steps/Useful_string_methods">字符串的一些实用方法</a></li>
+  <li><a href="/zh-CN/docs/Learn/JavaScript/First_steps/Arrays">数组</a></li>
+  <li><a href="/zh-CN/docs/Learn/JavaScript/First_steps/Silly_story_generator">课程评估：笑话机</a></li>
+</ul>
